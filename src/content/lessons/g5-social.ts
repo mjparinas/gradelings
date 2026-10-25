@@ -859,6 +859,18 @@ export const lessons: GradeLessons = {
     ["Banks lend money.", "A home loan is called a mortgage."],
     "a bank",
   ),
+  "social/ca-g7-west-african-life": lesson(
+    ["Many West Africans lived in extended families, with several generations close together.", "Labour specialization means people do different jobs and trade. Cities like Timbuktu, Djenné and Gao grew on the Niger and Saharan routes.", "Arabic became a language of records, trade and Islamic scholarship, especially in Timbuktu."],
+    "What does labour specialization mean?",
+    ["One person can’t make everything well.", "People do different jobs and trade what they make."],
+    "people do different jobs and trade with each other",
+  ),
+  "social/ca-g8-divided-nation": lesson(
+    ["As the country grew, North and South argued over whether slavery would spread to new lands.", "The Compromise of 1850 made California a free state and passed a stronger Fugitive Slave Act, forcing free states to help return people who escaped.", "Frederick Douglass escaped slavery and became a famous speaker and writer against it."],
+    "What did the Fugitive Slave Act of 1850 require?",
+    ["It was part of the Compromise of 1850.", "It was about people who escaped slavery.", "People in free states had to help return them."],
+    "people in free states had to help return people who had escaped slavery",
+  ),
   // Missouri (us-mo)
   "social/wa-g8-reconstruction": lesson(
     ["Reconstruction (1865–1877) rebuilt the South and brought Southern states back into the Union.", "The Reconstruction Amendments: the 13th ended slavery, the 14th made formerly enslaved people citizens, and the 15th protected the vote for Black men.", "After 1877, many of these rights were rolled back by Jim Crow laws."],

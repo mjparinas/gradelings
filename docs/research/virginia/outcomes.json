@@ -1,0 +1,2562 @@
+{
+ "k/math": [
+  {
+   "idx": "K.NS.1",
+   "content": "The student will utilize flexible counting strategies to determine and describe quantities up to 100."
+  },
+  {
+   "idx": "K.NS.2",
+   "content": "The student will identify, represent, and compare quantities up to 30."
+  },
+  {
+   "idx": "K.CE.1",
+   "content": "The student will model and solve single-step contextual problems using addition and subtraction with whole numbers within 10."
+  },
+  {
+   "idx": "K.MG.1",
+   "content": "The student will reason mathematically by making direct comparisons between two objects or events using the attributes of length, height, weight, volume, and time."
+  },
+  {
+   "idx": "K.MG.2",
+   "content": "The student will identify, describe, name, compare, and construct plane figures (circles, triangles, squares, and rectangles)."
+  },
+  {
+   "idx": "K.MG.3",
+   "content": "The student will describe the units of time represented in a calendar."
+  },
+  {
+   "idx": "K.PS.1",
+   "content": "The student will apply the data cycle (pose questions; collect or acquire data; organize and represent data; and analyze data and communicate results) with a focus on object graphs and picture graphs."
+  },
+  {
+   "idx": "K.PFA.1",
+   "content": "The student will identify, describe, extend, and create simple repeating patterns using various representations."
+  }
+ ],
+ "k/language": [
+  {
+   "idx": "K.FFR.1",
+   "content": "Print Concepts: The student will apply knowledge of how print is organized and read."
+  },
+  {
+   "idx": "K.FFR.2",
+   "content": "Phonological and Phonemic Awareness: The student will orally identify and produce various phonemes (individual sounds) within words to develop phonemic awareness in support of decoding (reading) and encoding (spelling)."
+  },
+  {
+   "idx": "K.FFR.3",
+   "content": "Phonics and Word Analysis: The student will apply phonetic principles to read and spell words. A. Identify capital and lowercase letters of the alphabet. B. Identify common letter-sound correspondences. C. Discriminate between long and short sounds with common spellings for the five major vowels with open and closed syllables (e.g., short /e/ as in “pet”, long /e/ as in “he”). D. Demonstrate knowl"
+  },
+  {
+   "idx": "K.DSR.1",
+   "content": "The student will build knowledge and comprehension skills from reading and listening to a range of texts. This includes fluently reading decodable sentences and gathering evidence from content-rich texts (through read alouds) on topics to gain purposeful knowledge and vocabulary."
+  },
+  {
+   "idx": "K.RV",
+   "content": "The student will systematically build vocabulary and word knowledge based on kindergarten content and texts heard."
+  },
+  {
+   "idx": "K.RV.1",
+   "content": "Vocabulary Development and Word Analysis A. Discuss meanings of words from a variety of texts and experiences. B. Ask questions about words not understood. C. Use vocabulary from across content areas. D. Identify the purpose of simple reference materials (e.g., pictures, dictionary, digital dictionary). E. Increase and develop breadth of vocabulary knowledge by listening to high quality, complex t"
+  },
+  {
+   "idx": "K.RL",
+   "content": "The student will use textual evidence to demonstrate comprehension and build knowledge from a variety of literary texts heard, to include fantasy, humor, fable/fairy tale, realistic fiction, historical fiction, and folklore/tall tale."
+  },
+  {
+   "idx": "K.RL.1",
+   "content": "Key Ideas and Plot Details"
+  },
+  {
+   "idx": "K.RL.2",
+   "content": "Craft and Style"
+  },
+  {
+   "idx": "K.RL.3",
+   "content": "Integration of Concepts"
+  },
+  {
+   "idx": "K.RI",
+   "content": "The student will use textual evidence to demonstrate comprehension and build knowledge from a variety of informational texts heard."
+  },
+  {
+   "idx": "K.RI.1",
+   "content": "Key Ideas and Confirming Details"
+  },
+  {
+   "idx": "K.RI.2",
+   "content": "Craft and Style"
+  },
+  {
+   "idx": "K.RI.3",
+   "content": "Integration of Concepts"
+  },
+  {
+   "idx": "K.FFW",
+   "content": "The student will print legibly in manuscript."
+  },
+  {
+   "idx": "K.FFW.1",
+   "content": "Handwriting"
+  },
+  {
+   "idx": "K.FFW.2",
+   "content": "Spelling"
+  },
+  {
+   "idx": "K.W",
+   "content": "The student will write in a variety of forms, linked to kindergarten content and texts."
+  },
+  {
+   "idx": "K.W.1",
+   "content": "Modes and Purposes for Writing"
+  },
+  {
+   "idx": "K.W.2",
+   "content": "Organization and Composition"
+  },
+  {
+   "idx": "K.W.3",
+   "content": "Usage and Mechanics"
+  },
+  {
+   "idx": "K.LU",
+   "content": "The student will use the conventions of Standard English when speaking and writing, differentiating between contexts that call for formal English and situations where informal discourse is more appropriate."
+  },
+  {
+   "idx": "K.LU.1",
+   "content": "Grammar"
+  },
+  {
+   "idx": "K.LU.2",
+   "content": "Mechanics"
+  },
+  {
+   "idx": "K.C",
+   "content": "The student will develop effective oral communication and collaboration skills to build a community of learners that process, understand, and interpret content together."
+  },
+  {
+   "idx": "K.C.1",
+   "content": "Communication, Listening, and Collaboration A. Participate in a range of collaborative discussions (one-on-one, in groups, and teacher-led) on kindergarten topics and texts. This includes:"
+  },
+  {
+   "idx": "K.C.2",
+   "content": "Speaking and Presentation of Ideas"
+  },
+  {
+   "idx": "K.C.3",
+   "content": "Integrating Multimodal Literacies **Standards related to Integrating Multimodal Literacies are introduced in Grade Three."
+  },
+  {
+   "idx": "K.C.4",
+   "content": "Examining Media Messages **Standards related to Examining Media Messages are introduced in Grade Four."
+  },
+  {
+   "idx": "K.R",
+   "content": "The student will conduct research and listen to a series of conceptually related texts on selected topics to build knowledge on grade-level topics or solve problems using available resources."
+  },
+  {
+   "idx": "K.R.1",
+   "content": "Evaluation and Synthesis of Information A. With prompting and support, generate a topic of interest and question to explore a given topic. B. With prompting and support, find information on the topic from pictures, texts, people or provided sources. C. With prompting and support, use drawing, writing, or dictation to record facts and information collected from the research. D. With prompting and s"
+  }
+ ],
+ "k/science": [
+  {
+   "idx": "K.1",
+   "content": "The student will demonstrate an understanding of scientific and engineering practices by"
+  },
+  {
+   "idx": "K.2",
+   "content": "The student will investigate and understand that pushes and pulls affect the motion of objects."
+  },
+  {
+   "idx": "K.3",
+   "content": "The student will investigate and understand that physical properties of an object can be described. Properties include"
+  },
+  {
+   "idx": "K.4",
+   "content": "The student will investigate and understand that water is important in our daily lives and has properties."
+  },
+  {
+   "idx": "K.5",
+   "content": "The student will investigate and understand that senses allow humans to seek, find, take in, and react or respond to different information."
+  },
+  {
+   "idx": "K.6",
+   "content": "The student will investigate and understand that there are differences between living organisms and nonliving objects."
+  },
+  {
+   "idx": "K.7",
+   "content": "The student will investigate and understand that plants and animals have basic needs and life processes."
+  },
+  {
+   "idx": "K.8",
+   "content": "The student will investigate and understand that light influences temperature on Earth’s surfaces and can cause shadows."
+  },
+  {
+   "idx": "K.9",
+   "content": "The student will investigate and understand that there are patterns in nature. Key patterns include"
+  },
+  {
+   "idx": "K.10",
+   "content": "The student will investigate and understand that change occurs over time. Key ideas include"
+  },
+  {
+   "idx": "K.11",
+   "content": "The student will investigate and understand that humans use resources. Key ideas include"
+  }
+ ],
+ "k/social": [
+  {
+   "idx": "K.1",
+   "content": "The student will apply history and social science skills to practice citizenship in the classroom by"
+  },
+  {
+   "idx": "K.2",
+   "content": "The student will apply history and social science skills to explain how communities honor state and national traditions and recognize designated Virginia holidays including, but not limited to"
+  },
+  {
+   "idx": "K.3",
+   "content": "The student will apply history and social science skills to define patriotism and explain how communities express patriotism by"
+  },
+  {
+   "idx": "K.4",
+   "content": "The student will apply history and social science skills to recognize Virginia’s earliest communities by"
+  },
+  {
+   "idx": "K.5",
+   "content": "The student will apply history and social science skills to understand and explain what makes communities unique by"
+  },
+  {
+   "idx": "K.6",
+   "content": "The student will apply history and social science skills to describe the relative location of people, places, and objects by using positional words including, but not limited to near/far, over/under, above/below, left/right, behind/in front, next to, and between."
+  },
+  {
+   "idx": "K.7",
+   "content": "The student will apply history and social science skills to demonstrate an understanding of maps and globes by"
+  },
+  {
+   "idx": "K.8",
+   "content": "The student will apply history and social science skills to demonstrate an understanding of primary economic principles by"
+  }
+ ],
+ "1/math": [
+  {
+   "idx": "1.NS.1",
+   "content": "The student will utilize flexible counting strategies to determine and describe quantities up to 120."
+  },
+  {
+   "idx": "1.NS.2",
+   "content": "The student will represent, compare, and order quantities up to 120."
+  },
+  {
+   "idx": "1.NS.3",
+   "content": "The student will use mathematical reasoning and justification to solve contextual problems that involve partitioning models into two and four equal-sized parts."
+  },
+  {
+   "idx": "1.CE.1",
+   "content": "The student will recall with automaticity addition and subtraction facts within 10 and represent, solve, and justify solutions to single-step problems, including those in context, using addition and subtraction with whole numbers within 20."
+  },
+  {
+   "idx": "1.MG.1",
+   "content": "The student will reason mathematically using nonstandard units to measure and compare objects by length, weight, and volume."
+  },
+  {
+   "idx": "1.MG.2",
+   "content": "The student will describe, sort, draw, and name plane figures (circles, triangles, squares, and rectangles), and compose larger plane figures by combining simple plane figures."
+  },
+  {
+   "idx": "1.MG.3",
+   "content": "The student will demonstrate an understanding of the concept of passage of time (to the nearest hour and half-hour) and the calendar."
+  },
+  {
+   "idx": "1.PS.1",
+   "content": "The student will apply the data cycle (pose questions; collect or acquire data; organize and represent data; and analyze data and communicate results) with a focus on object graphs, picture graphs, and tables."
+  },
+  {
+   "idx": "1.PFA.1",
+   "content": "The student will identify, describe, extend, create, and transfer repeating patterns and increasing patterns using various representations."
+  }
+ ],
+ "1/language": [
+  {
+   "idx": "1.FFR.2",
+   "content": "Phonological and Phonemic Awareness: The student will orally identify and produce various phonemes (individual sounds) within words to develop phonemic awareness in support of decoding (reading) and encoding (spelling). A. Isolate sounds in four and five phoneme words. B. Demonstrate ability to blend words with four and five phonemes, including words with consonant digraphs (e.g., th, sh, ch, wh) "
+  },
+  {
+   "idx": "1.FFR.3",
+   "content": "Phonics and Word Analysis: The student will apply phonetic principles to read and spell words. A. Decode and encode words with short vowels to include blends with digraphs, closed syllables (CVC, CCVC, CVCC, CCVCC). B. Decode and encode words with long vowels, open syllables, (CV, CCV) and vowel- consonant-e (CVCE, CCVCE). C. Use letter-sound correspondences to decode words containing common vowel"
+  },
+  {
+   "idx": "1.DSR",
+   "content": "The student will build knowledge and comprehension skills from reading and listening to a range of challenging, content-rich texts. This includes fluently reading decodable texts and gathering evidence from reading widely (through content-rich read alouds) on topics to gain purposeful knowledge and vocabulary. A. Use knowledge of letter-sound correspondences to read a variety of decodable and grad"
+  },
+  {
+   "idx": "1.RV",
+   "content": "The student will systematically build vocabulary and word knowledge based on grade- one content and texts heard or read."
+  },
+  {
+   "idx": "1.RV.1",
+   "content": "Vocabulary Development and Word Analysis A. Discuss meanings of words in context from a variety of texts. B. Identify antonyms and synonyms of familiar words to deepen understanding of word meaning and relationships. C. Ask for the meaning of unknown words and make connections to familiar words. D. Use vocabulary across content areas. E. Determine the meaning of an unknown word using frequently oc"
+  },
+  {
+   "idx": "1.RL",
+   "content": "The student will use textual evidence to demonstrate comprehension and build knowledge from a variety of literary texts heard or read including fantasy, humor, fable/fairy tale, realistic fiction, historical fiction, and folklore/tall tale."
+  },
+  {
+   "idx": "1.RL.1",
+   "content": "Key Ideas and Plot Details A. Retell familiar stories sequentially and demonstrate an understanding of the story structure, the central message or lesson, and the details. B. Identify the elements of a familiar story, including the characters, setting, and important events (e.g., conflict and resolution). C. Ask and answer literal (who, what, when, where) or inferential (how, why) questions about "
+  },
+  {
+   "idx": "1.RL.2",
+   "content": "Craft and Style **Standards that address Craft and Style are introduced in Grade Three."
+  },
+  {
+   "idx": "1.RL.3",
+   "content": "Integration of Concepts A. Set a purpose for reading by providing a guiding question, activating prior (experience) and background (content) knowledge. B. Make connections between characters, settings, and major events in stories heard, using key details. C. Compare and contrast the adventures or experiences of characters in stories heard, using key details."
+  },
+  {
+   "idx": "1.RI",
+   "content": "The student will use textual evidence to demonstrate comprehension and build knowledge from a variety of informational texts heard or read."
+  },
+  {
+   "idx": "1.RI.1",
+   "content": "Key Ideas and Confirming Details A. Ask and answer literal (who, what, when, where) and inferential (why, how) questions about what is read, including demonstrating an understanding of the main topics. B. Identify the main idea and supporting details of a text. C. Explain the difference between facts and opinions in a text."
+  },
+  {
+   "idx": "1.RI.2",
+   "content": "Craft and Style A. Identify and use common text features to gain information: table of contents, headings, bolded words, and pictures, captions, and diagrams. B. Distinguish between information provided by pictures or other illustrations and information provided by the words in a text."
+  },
+  {
+   "idx": "1.RI.3",
+   "content": "Integration of Concepts A. Identify basic similarities in and differences between two texts on the same topic. B. Describe the connection between two individuals, events, ideas, or pieces of information in a text."
+  },
+  {
+   "idx": "1.FFW",
+   "content": "The student will print legibly in manuscript."
+  },
+  {
+   "idx": "1.FFW.1",
+   "content": "Handwriting A. Use functional pencil grasp for letter formation. B. Accurately and automatically form all capital and lowercase letters and numbers using manuscript letter formation. C. Accurately and automatically apply spaces between written words in phrases or sentence- level writing."
+  },
+  {
+   "idx": "1.FFW.2",
+   "content": "Spelling A. Use phoneme-grapheme (sound/symbol) correspondence to encode (spell) single-syllable words containing closed syllables (cvc, ccvc, cvcc, and ccvcc), open syllables (cv, ccv), vowel-consonant-e (cvce, ccvce). B. Encode (spell) 2-syllable words (e.g., pancake) following basic patterns by breaking the words into syllables. C. Encode (spell) unfamiliar words by recognizing and applying tau"
+  },
+  {
+   "idx": "1.W",
+   "content": "The student will write in a variety of forms for diverse audiences and purposes linked to grade one content and texts."
+  },
+  {
+   "idx": "1.W.1",
+   "content": "Modes and Purposes for Writing A. Use a combination of drawing, dictating, and writing to recount two or more sequenced events or experiences and include details about the events and characters. B. Use a combination of drawing, dictating, and writing to compose informative/expository texts that name a topic and supply some facts about the topic."
+  },
+  {
+   "idx": "1.W.2",
+   "content": "Organization and Composition A. With guidance and support, use a variety of prewriting activities, such as brainstorming, drawing and graphic organizers, to generate ideas and draft writing or dictation. This includes:"
+  },
+  {
+   "idx": "1.W.3",
+   "content": "Usage and Mechanics A. With guidance and support from adults, edit writing for conventions e.g., spelling, capitalization, usage, punctuation). (See Language Usage for grade level expectations)."
+  },
+  {
+   "idx": "1.LU",
+   "content": "The student will use conventions of Standard English when speaking and writing, differentiating between contexts that call for formal English and situations where informal discourse is more appropriate."
+  },
+  {
+   "idx": "1.LU.1",
+   "content": "Grammar"
+  },
+  {
+   "idx": "1.LU.2",
+   "content": "Mechanics"
+  },
+  {
+   "idx": "1.C",
+   "content": "The student will develop effective oral communication and collaboration skills to build a community of learners that process, understand, and interpret content together."
+  },
+  {
+   "idx": "1.C.1",
+   "content": "Communication, Listening, and Collaboration A. Participate in a range of collaborative discussions (one-on-one, in groups, and teacher-led) on grade one topics and texts. This includes:"
+  },
+  {
+   "idx": "1.C.2",
+   "content": "Speaking and Presentation of Ideas A. Describe people, places, things, and events with relevant details and using appropriate vocabulary. B. Speak audibly with appropriate pacing, prosody, and voice level. C. Participate in a variety of oral language activities, including choral speaking and recitation of short poems, rhymes, songs, and stories with repeated patterns and refrains. D. Retell, creat"
+  },
+  {
+   "idx": "1.C.3",
+   "content": "Integrating Multimodal Literacies **Standards related to Integrating Multimodal Literacies are introduced in Grade Two."
+  },
+  {
+   "idx": "1.C.4",
+   "content": "Examining Media Messages **Standards related to Examining Media Messages are introduced in Grade Four."
+  },
+  {
+   "idx": "1.R",
+   "content": "The student will conduct research and listen to a series of conceptually related texts on selected topics to build knowledge on grade-level topics or solve problems using available resources."
+  },
+  {
+   "idx": "1.R.1",
+   "content": "Evaluation and Synthesis of Information A. With prompting and support, generate research questions related to a given topic. B. Locate and collect information related to the given topic from pictures, texts, people, or provided sources. C. Use templates to organize the information collected (e.g., charts, graphs)."
+  }
+ ],
+ "1/science": [
+  {
+   "idx": "1.1",
+   "content": "The student will demonstrate an understanding of scientific and engineering practices by"
+  },
+  {
+   "idx": "1.2",
+   "content": "The student will investigate and understand that objects can move in different ways."
+  },
+  {
+   "idx": "1.3",
+   "content": "The student will investigate and understand that objects are made from materials that can be described by their physical properties."
+  },
+  {
+   "idx": "1.4",
+   "content": "The student will investigate and understand that plants have basic life needs and functional parts that allow them to survive."
+  },
+  {
+   "idx": "1.5",
+   "content": "The student will investigate and understand that animals, including humans, have basic life needs that allow them to survive."
+  },
+  {
+   "idx": "1.6",
+   "content": "The student will investigate and understand that there is a relationship between the sun and Earth."
+  },
+  {
+   "idx": "1.7",
+   "content": "The student will investigate and understand that there are weather and seasonal changes."
+  },
+  {
+   "idx": "1.8",
+   "content": "The student will investigate and understand that natural resources can be used responsibly."
+  }
+ ],
+ "1/social": [
+  {
+   "idx": "1.1",
+   "content": "The student will apply history and social science skills to practice citizenship in the classroom by"
+  },
+  {
+   "idx": "1.2",
+   "content": "The student will apply history and social science skills to explain how communities honor local and national traditions and recognize designated Virginia holidays including, but not limited to"
+  },
+  {
+   "idx": "1.3",
+   "content": "The student will apply history and social science skills to describe the symbols and traditions that honor and foster patriotism in the United States by"
+  },
+  {
+   "idx": "1.4",
+   "content": "The student will apply history and social science skills to understand Virginia’s history by"
+  },
+  {
+   "idx": "1.5",
+   "content": "The student will apply history and social science skills to describe contributions of Virginia’s diverse people and the stories of changemakers in the history of Virginia and their contributions to our Commonwealth including, but not limited to"
+  },
+  {
+   "idx": "1.6",
+   "content": "The student will apply history and social science skills to develop geographic skills by"
+  },
+  {
+   "idx": "1.7",
+   "content": "The student will apply history and social science skills to connect geography to historic events of Virginia and the United States by"
+  },
+  {
+   "idx": "1.8",
+   "content": "The student will apply history and social science skills to explain how individuals make economic choices to meet their basic needs by"
+  }
+ ],
+ "2/math": [
+  {
+   "idx": "2.NS.1",
+   "content": "The student will utilize flexible counting strategies to determine and describe quantities up to 200."
+  },
+  {
+   "idx": "2.NS.2",
+   "content": "The student will demonstrate an understanding of the ten-to-one relationships of the base 10 number system to represent, compare, and order whole numbers up to 999."
+  },
+  {
+   "idx": "2.NS.3",
+   "content": "The student will use mathematical reasoning and justification to solve contextual problems that involve partitioning models into equal-sized parts (halves, fourths, eighths, thirds, and sixths)."
+  },
+  {
+   "idx": "2.NS.4",
+   "content": "The student will solve problems that involve counting and representing money amounts up to $2.00."
+  },
+  {
+   "idx": "2.CE.1",
+   "content": "The student will recall with automaticity addition and subtraction facts within 20 and estimate, represent, solve, and justify solutions to single-step and multistep problems, including those in context, using addition and subtraction with whole numbers where addends or minuends do not exceed 100."
+  },
+  {
+   "idx": "2.MG.1",
+   "content": "The student will reason mathematically using standard units (U.S. Customary) with appropriate tools to estimate, measure, and compare objects by length, weight, and liquid volume to the nearest whole unit."
+  },
+  {
+   "idx": "2.MG.2",
+   "content": "The student will demonstrate an understanding of the concept of time to the nearest five minutes, using analog and digital clocks."
+  },
+  {
+   "idx": "2.MG.3",
+   "content": "The student will identify, describe, and create plane figures (including circles, triangles, squares, and rectangles) that have at least one line of symmetry and explain its relationship with congruency."
+  },
+  {
+   "idx": "2.MG.4",
+   "content": "The student will describe, name, compare, and contrast plane and solid figures (circles/spheres, squares/cubes, and rectangles/rectangular prisms)."
+  },
+  {
+   "idx": "2.PS.1",
+   "content": "The student will apply the data cycle (pose questions; collect or acquire data; organize and represent data; and analyze data and communicate results) with a focus on pictographs and bar graphs."
+  },
+  {
+   "idx": "2.PFA.1",
+   "content": "The student will describe, extend, create, and transfer repeating and increasing patterns (limited to addition of whole numbers) using various representations."
+  }
+ ],
+ "2/language": [
+  {
+   "idx": "2.FFR.2",
+   "content": "Phonological and Phonemic Awareness: The student will orally identify and produce various phonemes (individual sounds) within words to develop phonemic awareness in support of decoding (reading) and encoding (spelling). A. Isolate sounds in four and five phoneme words. B. Demonstrate the ability to blend words with four and five phonemes, including words with consonant digraphs (e.g., th, sh, ch) "
+  },
+  {
+   "idx": "2.FFR.3",
+   "content": "Phonics and Word Analysis: The student will apply phonetic principles to read and spell words. A. Decode and encode words with short vowels to include blends, digraphs, and trigraphs in closed syllables (CVC, CCVC, CVCC, CCVCC, and CCVCCC) and open syllables (CV, CCV). B. Decode and encode words with vowel teams and r-controlled vowels. C. Use knowledge of syllabication and syllable types to decod"
+  },
+  {
+   "idx": "2.DSR",
+   "content": "The student will build knowledge and comprehension skills from reading and listening to a range of challenging, content-rich texts. This includes fluently reading and"
+  },
+  {
+   "idx": "2.RV.1",
+   "content": "Vocabulary Development and Word Analysis A. Discuss meanings of new words or phrases acquired through conversations and literature. B. Use vocabulary across content areas. C. Determine the meaning of an unknown word using frequently occurring root words and inflectional affixes (e.g. -s, -ing, - ed). D. Use the context of a sentence to apply knowledge of homophones. E. Apply knowledge of morpholog"
+  },
+  {
+   "idx": "2.RL",
+   "content": "The student will use textual evidence to demonstrate comprehension and build knowledge from a variety of grade-level complex literary texts heard or read to include fantasy, humor, fable/fairy tale, realistic fiction, historical fiction, and folklore/tall tale, with a focus on fables/fairytales from a variety of cultures."
+  },
+  {
+   "idx": "2.RL.1",
+   "content": "Key Ideas and Plot Details A. Retell stories sequentially, including their overall structure, essential story events, and the central message, lesson, or moral. B. Identify a story’s central conflict using events from the plot as evidence. C. Describe character’s attributes (e.g., traits, motivations, or feelings) and how they respond to major events and challenges. D. Generate predictions about s"
+  },
+  {
+   "idx": "2.RL.2",
+   "content": "Craft and Style **Standards that address Craft and Style begin in Grade Three."
+  },
+  {
+   "idx": "2.RL.3",
+   "content": "Integration of Concepts A. Set a purpose for reading by providing guiding questions, activating prior (experience) and background (content) knowledge. B. Recognize dialogue in text and explain how it can reveal characters’ thoughts and perspectives. C. Compare and contrast characters, settings, and plots in two versions of the same story from different cultures (e.g., Cinderella stories)."
+  },
+  {
+   "idx": "2.RI",
+   "content": "The student will use textual evidence to demonstrate and build knowledge from a variety of grade level complex informational texts heard or read."
+  },
+  {
+   "idx": "2.RI.1",
+   "content": "Key Ideas and Confirming Details A. Ask and answer literal and inferential questions (who, what, where, when, how, and why) about key details in a text. B. Retell key details of texts that demonstrate an understanding of the main topics of texts. C. Differentiate facts from opinions within a text."
+  },
+  {
+   "idx": "2.RI.2",
+   "content": "Craft and Style A. Use text features (table of contents, headings, pictures, captions, maps, and charts) to preview, set a purpose for reading and gain information. B. Identify the main purpose of a text, including what the author wants to answer, explain, or describe."
+  },
+  {
+   "idx": "2.RI.3",
+   "content": "Integration of Concepts"
+  },
+  {
+   "idx": "2.FFW",
+   "content": "The student will print legibly in manuscript and cursive while applying grade level word knowledge to spell words correctly."
+  },
+  {
+   "idx": "2.FFW.1",
+   "content": "Handwriting A. Maintain legible printing and begin to make the transition to cursive. B. Begin to write capital and lowercase letters of the alphabet in cursive. C. Begin to sign his/her first and last names."
+  },
+  {
+   "idx": "2.FFW.2",
+   "content": "Spelling A. Use phoneme-grapheme (sound/symbol correspondence to encode (spell) single-syllable words containing closed syllables (cvc, ccvc, cvcc, and ccvcc), open syllables (cv, ccv), vowel-consonant-e (cvce, ccvce), vowel teams, and r-controlled vowels. B. Use phoneme-grapheme (sound/symbol) correspondence to encode (spell) multisyllabic words. C. Use phoneme/grapheme (sound/symbol) corresponde"
+  },
+  {
+   "idx": "2.W",
+   "content": "The student will write in a variety of forms for diverse audiences and purposes, linked to grade two content and texts."
+  },
+  {
+   "idx": "2.W.1",
+   "content": "Modes and Purposes for Writing A. Write narratives that recount a well-elaborated event or short sequence of events and include details about the events and characters and use of time-related words to signal the event sequence. B. Write informative/explanatory texts that introduce a topic and develop the ideas with facts and examples. C. Write opinion pieces on topics or texts that support a point"
+  },
+  {
+   "idx": "2.W.2",
+   "content": "Organization and Composition A. Engage in writing as a process to plan writing based on purpose and genre. This includes:"
+  },
+  {
+   "idx": "2.W.3",
+   "content": "Usage and Mechanics A. With guidance and support from adults, develop and strengthen writing as needed by revising for quality of ideas, organization, sentence fluency, and word choice. B. With guidance and support from adults, edit writing for conventions (e.g., spelling, capitalization, usage, punctuation). (See Language Usage for grade level expectations)."
+  },
+  {
+   "idx": "2.LU",
+   "content": "The student will use conventions of Standard English when speaking and writing, differentiating between contexts that call for formal English and situations where informal discourse is more appropriate."
+  },
+  {
+   "idx": "2.LU.1",
+   "content": "Grammar A. Produce and expand complete sentences, both simple and compound. B. Use indefinite (e.g., anybody, anything) reflexive (e.g., yourself, herself) pronouns. C. Form and use regular and frequently occurring irregular plural nouns (e.g., men, teeth). D. Use frequently occurring conjunctions to signal simple relationships (e.g., and, but, or, so, because). E. Use proper verb tense, including"
+  },
+  {
+   "idx": "2.LU.2",
+   "content": "Mechanics A. Identify statements, questions, and commands and use correct ending punctuation (e.g., period, question mark, and exclamation points). B. Use commas in salutation and closing of a letter. C. Generalize learned spelling patterns when writing words."
+  },
+  {
+   "idx": "2.C",
+   "content": "The student will develop effective oral communication and collaboration skills to build a community of learners that process, understand, and interpret content together."
+  },
+  {
+   "idx": "2.C.1",
+   "content": "Communication, Listening, and Collaboration A. Participate in a range of collaborative discussions (one-on-one, in groups, and teacher-led) on grade two topics and texts. This includes:"
+  },
+  {
+   "idx": "2.C.2",
+   "content": "Speaking and Presentation of Ideas A. Use topic specific language and vocabulary to communicate ideas."
+  },
+  {
+   "idx": "2.C.3",
+   "content": "Integrating Multimodal Literacies A. Create a simple presentation using multimodal tools that enhance the topic or presentation."
+  },
+  {
+   "idx": "2.C.4",
+   "content": "Examining Media Messages **Standards related to Examining Media Messages are introduced in Grade Four."
+  },
+  {
+   "idx": "2.R",
+   "content": "The student will conduct research and read or listen to a series of conceptually related texts on selected topics to build knowledge on grade-level topics or solve problems using available resources."
+  },
+  {
+   "idx": "2.R.1",
+   "content": "Evaluation and Synthesis of Information A. Identify a topic and generate questions to explore the topic. B. Locate information in reference texts, electronic resources, interviews, or provided sources. C. Use templates to organize the information collected (e.g., charts, graphs). D. Record information on sources using own words, organizing evidence into provided categories. E. Share information or"
+  }
+ ],
+ "2/science": [
+  {
+   "idx": "2.1",
+   "content": "The student will demonstrate an understanding of scientific and engineering practices by"
+  },
+  {
+   "idx": "2.2",
+   "content": "The student will investigate and understand that different types of forces may cause an object’s motion to change."
+  },
+  {
+   "idx": "2.3",
+   "content": "The student will investigate and understand that matter can exist in different phases."
+  },
+  {
+   "idx": "2.4",
+   "content": "The student will investigate and understand that plants and animals undergo a series of orderly changes as they grow and develop."
+  },
+  {
+   "idx": "2.5",
+   "content": "The student will investigate and understand that living things are part of a system."
+  },
+  {
+   "idx": "2.6",
+   "content": "The student will investigate and understand that there are different types of weather on Earth."
+  },
+  {
+   "idx": "2.7",
+   "content": "The student will investigate and understand that weather patterns and seasonal changes affect plants, animals, and their surroundings."
+  },
+  {
+   "idx": "2.8",
+   "content": "The student will investigate and understand that plants are important natural resources."
+  }
+ ],
+ "2/social": [
+  {
+   "idx": "2.1",
+   "content": "The student will apply history and social science skills to distinguish between the rights and responsibilities that individuals have in the United States including, but not limited to"
+  },
+  {
+   "idx": "2.2",
+   "content": "The student will apply history and social science skills to understand citizenship by"
+  },
+  {
+   "idx": "2.3",
+   "content": "The student will apply history and social science skills to explain how communities honor local and national traditions and recognize designated Virginia holidays including, but not limited to"
+  },
+  {
+   "idx": "2.4",
+   "content": "The student will apply history and social science skills to recognize state and national symbols including, but not limited to"
+  },
+  {
+   "idx": "2.5",
+   "content": "The student will use history and social science skills to identify the geographic location, use of resources, and contributions of Indigenous people past and present, including"
+  },
+  {
+   "idx": "2.6",
+   "content": "The student will use history and social science skills to identify the geographic location, use of resources, and contributions of European explorers, and their influence on the development of North America including, but not limited to the English, French, and Spanish."
+  },
+  {
+   "idx": "2.7",
+   "content": "The student will apply history and social science skills to describe the revolutionaries who fought for America’s freedom (1764–1781) including, but not limited to"
+  },
+  {
+   "idx": "2.8",
+   "content": "The student will apply history and social science skills to understand the principles of American democracy and relate them to the founding of the nation by"
+  },
+  {
+   "idx": "2.9",
+   "content": "The student will apply history and social science skills to understand key events in United States history including, but not limited to"
+  },
+  {
+   "idx": "2.10",
+   "content": "The student will describe the contributions and roles of changemakers in United States history including, but not limited to"
+  },
+  {
+   "idx": "2.11",
+   "content": "The student will apply history and social science skills to develop geographic mapping skills using world maps and globes by"
+  },
+  {
+   "idx": "2.12",
+   "content": "The student will apply history and social science skills to connect geography to landmarks and historic events including, but not limited to"
+  },
+  {
+   "idx": "2.13",
+   "content": "The student will apply history and social science skills to understand basic economic principles by"
+  }
+ ],
+ "3/math": [
+  {
+   "idx": "3.NS.1",
+   "content": "The student will use place value understanding to read, write, and determine the place and value of each digit in a whole number, up to six digits, with and without models."
+  },
+  {
+   "idx": "3.NS.2",
+   "content": "The student will demonstrate an understanding of the base 10 system to compare and order whole numbers up to 9,999."
+  },
+  {
+   "idx": "3.NS.3",
+   "content": "The student will use mathematical reasoning and justification to represent and compare fractions (proper and improper) and mixed numbers with denominators of 2, 3, 4, 5, 6, 8, and 10), including those in context."
+  },
+  {
+   "idx": "3.NS.4",
+   "content": "The student will solve problems, including those in context, that involve counting, comparing, representing, and making change for money amounts up to $5.00."
+  },
+  {
+   "idx": "3.CE.1",
+   "content": "The student will estimate, represent, solve, and justify solutions to single-step and multistep problems, including those in context, using addition and subtraction with whole numbers where addends and minuends do not exceed 1,000."
+  },
+  {
+   "idx": "3.CE.2",
+   "content": "The student will recall with automaticity multiplication and division facts through 10 × 10; and represent, solve, and justify solutions to single-step contextual problems using multiplication and division with whole numbers."
+  },
+  {
+   "idx": "3.MG.1",
+   "content": "The student will reason mathematically using standard units (U.S. Customary and metric) with appropriate tools to estimate and measure objects by length, weight/mass, and liquid volume to the nearest half or whole unit."
+  },
+  {
+   "idx": "3.MG.2",
+   "content": "The student will use multiple representations to estimate and solve problems, including those in context, involving area and perimeter (in both U.S. Customary and metric units)."
+  },
+  {
+   "idx": "3.MG.3",
+   "content": "The student will demonstrate an understanding of the concept of time to the nearest minute and solve single-step contextual problems involving elapsed time in one-hour increments within a 12-hour period."
+  },
+  {
+   "idx": "3.MG.4",
+   "content": "The student will identify, describe, classify, compare, combine, and subdivide polygons."
+  },
+  {
+   "idx": "3.PS.1",
+   "content": "The student will apply the data cycle (formulate questions; collect or acquire data; organize and represent data; and analyze data and communicate results) with a focus on pictographs and bar graphs."
+  },
+  {
+   "idx": "3.PFA.1",
+   "content": "The student will identify, describe, extend, and create increasing and decreasing patterns (limited to addition and subtraction of whole numbers), including those in context, using various representations."
+  }
+ ],
+ "3/language": [
+  {
+   "idx": "3.FFR.3",
+   "content": "Phonics and Word Recognition: The student will apply grade level phonics and word analysis skills to decode (read) unfamiliar words in grade level text. A. Decode and encode words with vowel teams and r-controlled vowels. B. Use knowledge of syllabication and syllable types to decode and encode words. C. Use knowledge of affixes (e.g., suffixes, prefixes) to decode and encode words. D. Read grade-"
+  },
+  {
+   "idx": "3.DSR",
+   "content": "The student will build knowledge and comprehension skills from reading and listening to a range of challenging, content-rich texts. This includes fluently reading and gathering evidence from grade-level complex texts and reading widely on topics to gain purposeful knowledge and vocabulary, and using reading strategies when comprehension breaks down. A. Read a variety of grade-level complex texts w"
+  },
+  {
+   "idx": "3.RV",
+   "content": "The student will systematically build vocabulary and word knowledge based on grade- three content and texts read or heard."
+  },
+  {
+   "idx": "3.RV.1",
+   "content": "Vocabulary Development and Word Analysis A. Develop general academic language and content specific vocabulary by listening to, reading, and discussing a variety of texts relevant to a grade three topic or subject area. B. Discuss meanings of complex words and phrases acquired through conversations and literature. C. Determine the meaning of complex words using frequently occurring root words and i"
+  },
+  {
+   "idx": "3.RL",
+   "content": "The student will use textual evidence to demonstrate comprehension and build knowledge from a variety of grade-level complex literary texts read to include fantasy, humor, fable/fairy tale, realistic fiction, historical fiction, biography, autobiography, and folklore/tall tale, with a focus on folklore and tall tales."
+  },
+  {
+   "idx": "3.RL.1",
+   "content": "Key Ideas and Plot Details A. Identify thematic topics of stories (e.g. friendship, survival, determination) and the lessons learned. B. Identify the central conflict and resolution using events from the plot to summarize the text. C. Describe a character’s attributes, including their traits, motivations, or feelings and how they develop throughout the text."
+  },
+  {
+   "idx": "3.RL.2",
+   "content": "Craft and Style A. Discuss how an author uses characters and settings to advance the plot. B. Identify and explain how an author uses sensory language (e.g., sights, sounds, smells, and tastes) to impact a reader’s understanding of characters, settings, and plot events. C. Identify the narrator of a story and the speaker of a poem. D. Identify the characteristics of different genres."
+  },
+  {
+   "idx": "3.RL.3",
+   "content": "Integration of Concepts A. Set a purpose for reading by looking at the illustrations and activating prior (experience) and background (content) knowledge. B. Compare and contrast details in paired literary and informational nonfiction texts including their treatment of similar themes, topics, and patterns of events. C. Compare and contrast the themes, settings, and plots of stories written by the "
+  },
+  {
+   "idx": "3.RI",
+   "content": "The student will use textual evidence to demonstrate comprehension and build knowledge from grade-level complex informational texts read."
+  },
+  {
+   "idx": "3.RI.1",
+   "content": "Key Ideas and Confirming Details A. Determine the main idea of multi-paragraph texts as well as specific paragraphs within them. B. Summarize texts using language that pertains to time, sequence, and cause and effect, referring to historical events, scientific ideas, or steps in technical procedures."
+  },
+  {
+   "idx": "3.RI.2",
+   "content": "Craft and Style A. Describe major structural differences between the organizational patterns of different informational texts (e.g., cause/effect, comparison/contrast, problem/solution, description, sequence, and chronological order) and how they support a reader’s understanding of the text. B. Use text features and search tools (e.g., sidebars, hyperlink) to locate and gain information efficientl"
+  },
+  {
+   "idx": "3.RI.3",
+   "content": "Integration of Concepts A. Use prior (experience) and background (content) knowledge as context for new learning. B. Compare and contrast the most important points and key details presented in two texts on the same topic. C. Describe the connection between a series of historical events, scientific ideas or concepts, or steps in technical procedures in a text. D. Demonstrate comprehension by writin"
+  },
+  {
+   "idx": "3.FFW",
+   "content": "The student will print legibly in manuscript and cursive while applying grade level word knowledge to spell words correctly."
+  },
+  {
+   "idx": "3.FFW.1",
+   "content": "Handwriting A. Maintain legible printing. B. Write capital and lowercase letters of the alphabet using correct letter formation in cursive. C. Sign his/her first and last name. D. Form cursive letters with flow from one letter to the next within names and words."
+  },
+  {
+   "idx": "3.FFW.2",
+   "content": "Spelling A. Use phoneme-grapheme correspondence to encode (spell) multisyllabic words. B. Use common affixes to encode (spell) words. C. Use phoneme/grapheme (sound/symbol) correspondences to encode (spell) grade-level high-frequency words with automaticity and accuracy."
+  },
+  {
+   "idx": "3.W",
+   "content": "The student will compose various works for diverse audiences and purposes, linked to grade three content and texts."
+  },
+  {
+   "idx": "3.W.1",
+   "content": "Modes and Purposes for Writing A. Recognize different forms of writing (narrative, expository, and opinion) have distinctive patterns of organization to support their purpose. B. Write personal or fictional narratives that organize event sequences that unfold naturally. C. Write informative/explanatory texts to examine a topic that develops the topic with facts and details. D. Write opinion pieces"
+  },
+  {
+   "idx": "3.W.2",
+   "content": "Organization and Composition A. Engage in writing as a process to compose a well-developed paragraph. This includes:"
+  },
+  {
+   "idx": "3.W.3",
+   "content": "Usage and Mechanics A. With guidance and support from peers and adults, develop and strengthen writing as needed by revising for quality of ideas, organization, sentence fluency, and word choice. B. With guidance and support from peers and adults, edit writing for format and conventions such as capitalization, usage, punctuation, and spelling. (See Language Usage for grade- level expectations)."
+  },
+  {
+   "idx": "3.LU",
+   "content": "The student will use the conventions of Standard English when speaking and writing, differentiating between contexts that call for formal English and situations where informal discourse is more appropriate."
+  },
+  {
+   "idx": "3.LU.1",
+   "content": "Grammar A. Produce, expand, and rearrange simple and compound sentences when speaking and writing. B. Distinguish between complete and incomplete sentences. C. Form and use comparative and superlative adjectives when speaking and writing. D. Form and use regular and irregular verbs when speaking and writing. E. Use subject-verb agreement in simple sentences. F. Eliminate double negatives when spea"
+  },
+  {
+   "idx": "3.LU.2",
+   "content": "Mechanics A. Use commas in series, dates, addresses, and in greetings and closings of letters. B. Use apostrophes to form contractions and frequently occurring possessions in writing. C. Capitalize holidays, names, and places. D. Use learned spelling patterns when writing words, including high frequency words and grade level word analysis knowledge. E. Consult reference materials, including beginn"
+  },
+  {
+   "idx": "3.C",
+   "content": "The student will develop effective oral communication and collaboration skills to build a community of learners that process, understand, and interpret content together."
+  },
+  {
+   "idx": "3.C.1",
+   "content": "Communication, Listening, and Collaboration A. Participate in a range of collaborative discussions (one-on-one, in groups, and teacher-led) on grade three topics and texts. This includes:"
+  },
+  {
+   "idx": "3.C.2",
+   "content": "Speaking and Presentation of Ideas A. Report orally on a topic or text, tell a story, or recount an experience in an organized manner. This includes:"
+  },
+  {
+   "idx": "3.C.3",
+   "content": "Integrating Multimodal Literacies A. Create a simple presentation using multimodal tools that enhance the topic and/or presentation."
+  },
+  {
+   "idx": "3.C.4",
+   "content": "Examining Media Messages **Standards that address Examining Media Messages begin in Grade Four."
+  },
+  {
+   "idx": "3.R",
+   "content": "The student will conduct research and read or listen to a series of conceptually related texts on selected topics to build knowledge on grade-three content and texts, solve problems and support cross-curricular learning."
+  },
+  {
+   "idx": "3.R.1",
+   "content": "Evaluation and Synthesis of Information A. Identify a topic and generate questions that explore the topic. B. Locate information in reference texts, electronic resources, provided sources, or through interviews and take brief notes on sources. C. Organize evidence into relevant categories, recognizing that some sources may be more reliable than others. D. Organize and share information orally, in "
+  }
+ ],
+ "3/science": [
+  {
+   "idx": "3.1",
+   "content": "The student will demonstrate an understanding of scientific and engineering practices by"
+  },
+  {
+   "idx": "3.2",
+   "content": "The student will investigate and understand that the direction and size of force affect the motion of an object."
+  },
+  {
+   "idx": "3.3",
+   "content": "The student will investigate and understand how materials interact with water."
+  },
+  {
+   "idx": "3.4",
+   "content": "The student will investigate and understand that adaptations allow organisms to satisfy life needs and respond to the environment."
+  },
+  {
+   "idx": "3.5",
+   "content": "The student will investigate and understand that aquatic and terrestrial ecosystems support a diversity of organisms."
+  },
+  {
+   "idx": "3.6",
+   "content": "The student will investigate and understand that soil is important in ecosystems."
+  },
+  {
+   "idx": "3.7",
+   "content": "The student will investigate and understand that there is a water cycle and water is important to life on Earth."
+  },
+  {
+   "idx": "3.8",
+   "content": "The student will investigate and understand that natural events and humans influence ecosystems."
+  }
+ ],
+ "3/social": [
+  {
+   "idx": "3.1",
+   "content": "The student will apply history and social science skills to define citizenship and explain the rights and responsibilities of United States citizenship by"
+  },
+  {
+   "idx": "3.2",
+   "content": "The student will apply history and social science skills to locate and describe major geographic features of Africa, Antarctica, Asia, Australia, Europe, North America, and South America by"
+  },
+  {
+   "idx": "3.3",
+   "content": "The student will apply history and social science skills to describe major geographic features of ancient societies on a world map by"
+  },
+  {
+   "idx": "3.4",
+   "content": "The student will apply history and social science skills to describe the geographic, political, economic, and social structures and innovations of ancient Egypt by"
+  },
+  {
+   "idx": "3.5",
+   "content": "The student will apply history and social science skills to describe the geographic, political, economic, and social structures and innovations of ancient China by"
+  },
+  {
+   "idx": "3.6",
+   "content": "The student will apply history and social science skills to describe the geographic, political, economic, and social structures and innovations of ancient Greece by"
+  },
+  {
+   "idx": "3.7",
+   "content": "The student will apply history and social science skills to describe the geographic, political, economic, and social structures and innovations of ancient Rome by"
+  },
+  {
+   "idx": "3.8",
+   "content": "The student will apply history and social science skills to describe the geographic, political, economic, and social structures and innovations of the ancient empire of Mali by"
+  },
+  {
+   "idx": "3.9",
+   "content": "The student will apply history and social science skills to explain the basic structure of the United States government by"
+  },
+  {
+   "idx": "3.10",
+   "content": "The student will apply history and social science skills to explain basic economic principles by"
+  }
+ ],
+ "4/math": [
+  {
+   "idx": "4.NS.1",
+   "content": "The student will use place value understanding to read, write, and identify the place and value of each digit in a nine-digit whole number."
+  },
+  {
+   "idx": "4.NS.2",
+   "content": "The student will demonstrate an understanding of the base 10 system to compare and order whole numbers up to seven digits."
+  },
+  {
+   "idx": "4.NS.3",
+   "content": "The student will use mathematical reasoning and justification to represent, compare, and order fractions (proper, improper, and mixed numbers with denominators 12 or less), with and without models."
+  },
+  {
+   "idx": "4.NS.4",
+   "content": "The student will use mathematical reasoning and justification to represent, compare, and order decimals through thousandths, with and without models."
+  },
+  {
+   "idx": "4.NS.5",
+   "content": "The student will reason about the relationship between fractions and decimals (limited to halves, fourths, fifths, tenths, and hundredths) to identify and represent equivalencies."
+  },
+  {
+   "idx": "4.CE.1",
+   "content": "The student will estimate, represent, solve, and justify solutions to single-step and multistep problems, including those in context, using addition and subtraction with whole numbers."
+  },
+  {
+   "idx": "4.CE.2",
+   "content": "The student will estimate, represent, solve, and justify solutions to single-step and multistep problems, including those in context, using multiplication with whole numbers, and single-step problems, including those in context, using division with whole numbers; and recall with automaticity the multiplication facts through 12 × 12 and the corresponding division facts."
+  },
+  {
+   "idx": "4.CE.3",
+   "content": "The student will estimate, represent, solve, and justify solutions to single-step problems, including those in context, using addition and subtraction of fractions (proper, improper, and mixed numbers with like denominators of 2, 3, 4, 5, 6, 8, 10, and 12), with and without models; and solve single-step contextual problems involving multiplication of a whole number (12 or less) and a unit fraction"
+  },
+  {
+   "idx": "4.CE.4",
+   "content": "The student will estimate, represent, solve, and justify solutions to single-step and multistep problems, including those in context, using addition and subtraction of decimals through the thousandths, with and without models."
+  },
+  {
+   "idx": "4.MG.1",
+   "content": "The student will reason mathematically to solve problems, including those in context, that involve length, weight/mass, and liquid volume using U.S. Customary and metric units."
+  },
+  {
+   "idx": "4.MG.2",
+   "content": "The student will solve single-step and multistep contextual problems involving elapsed time (limited to hours and minutes within a 12-hour period)."
+  },
+  {
+   "idx": "4.MG.3",
+   "content": "The student will use multiple representations to develop and use formulas to solve problems, including those in context, involving area and perimeter limited to rectangles and squares (in both U.S. Customary and metric units)."
+  },
+  {
+   "idx": "4.MG.4",
+   "content": "The student will identify, describe, and draw points, rays, line segments, angles, and lines, including intersecting, parallel, and perpendicular lines."
+  },
+  {
+   "idx": "4.MG.5",
+   "content": "The student will classify and describe quadrilaterals (parallelograms, rectangles, squares, rhombi, and/or trapezoids) using specific properties and attributes."
+  },
+  {
+   "idx": "4.MG.6",
+   "content": "The student will identify, describe, compare, and contrast plane and solid figures according to their characteristics (number of angles, vertices, edges, and the number and shape of faces), with and without models."
+  },
+  {
+   "idx": "4.PS.1",
+   "content": "The student will apply the data cycle (formulate questions; collect or acquire data; organize and represent data; and analyze data and communicate results) with a focus on line graphs."
+  },
+  {
+   "idx": "4.PS.2",
+   "content": "The student will model and determine the probability of an outcome of a simple event."
+  },
+  {
+   "idx": "4.PFA.1",
+   "content": "The student will identify, describe, extend, and create increasing and decreasing patterns (limited to addition, subtraction, and multiplication of whole numbers), including those in context, using various representations."
+  }
+ ],
+ "4/language": [
+  {
+   "idx": "4.FFR.3",
+   "content": "Phonics and Word Analysis: The student will apply grade level phonics and word analysis skills to decode (read) unfamiliar words in grade level text. A. Use knowledge of syllabication and syllable types to decode and encode words. B. Use knowledge of morphology (suffixes, prefixes, root/base) to decode words. C. Read grade-level high-frequency words, including decodable and irregular words, with a"
+  },
+  {
+   "idx": "4.DSR",
+   "content": "The student will build knowledge and comprehension skills from reading a range of challenging, content-rich texts. This includes fluently reading and gathering evidence from grade-level complex texts, reading widely on topics to gain purposeful knowledge and vocabulary, and using reading strategies when comprehension breaks down. A. Read a variety of grade-level complex texts with accuracy, automa"
+  },
+  {
+   "idx": "4.RV",
+   "content": "The student will systematically build vocabulary and word knowledge based on grade- four content and texts."
+  },
+  {
+   "idx": "4.RV.1",
+   "content": "Vocabulary Development and Word Analysis A. Develop general academic language and content specific vocabulary by listening to, reading, and discussing a variety of texts relevant to a grade four topic or subject area. B. Discuss meanings of complex words and phrases acquired through conversations and literature. C. Determine the meaning of complex words using frequently occurring root words and in"
+  },
+  {
+   "idx": "4.RL",
+   "content": "The student will use textual evidence to demonstrate comprehension and build knowledge from a variety of grade-level complex literary texts read to include fantasy, humor, poetry, realistic fiction, historical fiction, biography, autobiography, and folklore/tall tales, with a focus on poetry, realistic fiction, and historical fiction."
+  },
+  {
+   "idx": "4.RL.1",
+   "content": "Key Ideas and Plot Details A. Summarize the theme of stories, dramas, or poetry, including the thematic topic (e.g., courage, loyalty, family) and how characters respond to challenges. B. Describe the central conflict and explain the resolution using an understanding of text structure and events from the plot as evidence. C. Analyze characters in-depth, drawing on specific details from the text, i"
+  },
+  {
+   "idx": "4.RL.2",
+   "content": "Craft and Style A. Determine how an author uses language (dialogue, sensory language, and dialect), characters, and settings to advance the plot. B. Identify the characteristics of different genres of literary texts (e.g., drama, poems, stories) and refer to the structural elements of each. C. Identify the narrator of a story and the speaker of a poem. D. Differentiate between first-and third-pers"
+  },
+  {
+   "idx": "4.RL.3",
+   "content": "Integration of Concepts A. Set a purpose for reading by activating prior (experience) and background (content) knowledge. B. Compare and contrast details in paired literary and informational nonfiction texts including their treatment of similar themes, topics, and patterns of events. C. Explain the overall structure of stories, poems, and plays and how each successive part builds on earlier sectio"
+  },
+  {
+   "idx": "4.RI",
+   "content": "The student will use textual evidence to demonstrate comprehension and build knowledge from grade-level complex informational texts read."
+  },
+  {
+   "idx": "4.RI.1",
+   "content": "Key Ideas and Confirming Details A. Summarize the main idea of multi-paragraph texts and the specific paragraphs within them, explaining how key details support the main ideas. B. Summarize events, procedures, ideas, or concepts in historical, scientific, or technical texts, including what happened and why. C. Distinguish between fact and opinion and explain how an author uses reasons and evidence"
+  },
+  {
+   "idx": "4.RI.2",
+   "content": "Craft and Style A. Explain how authors select an organizational pattern (e.g., cause/effect, comparison/contrast, problem/solution) using transitional words and phrases to support their purpose and a reader’s understanding of the text. B. Apply knowledge of text features and search tools in multiple print and digital sources to locate and categorize information efficiently and gain meaning. C. Exp"
+  },
+  {
+   "idx": "4.RI.3",
+   "content": "Integration of Concepts A. Use prior (experience) and background (content) knowledge as context for new learning. B. Compare and contrast multiple accounts of the same event or topic and describe the differences in focus and the information provided. C. Describe the relationships between a series of historical events, scientific concepts, or steps in technical procedures using words that pertain t"
+  },
+  {
+   "idx": "4.FFW",
+   "content": "The student will print legibly in manuscript and cursive while applying grade level word knowledge to spell words correctly."
+  },
+  {
+   "idx": "4.FFW.1",
+   "content": "Handwriting A. Maintain legible printing. B. Maintain legible cursive. C. Sign his/her first and last name."
+  },
+  {
+   "idx": "4.FFW.2",
+   "content": "Spelling A. Use combined knowledge of all letter-sound correspondences, syllabication patterns, and morphology (e.g., roots and affixes) to spell accurately. B. Use phoneme/grapheme (sound/symbol) correspondences to decode (read) and encode (spell) grade-level high-frequency words with automaticity and accuracy. Writing"
+  },
+  {
+   "idx": "4.W",
+   "content": "The student will compose various works for diverse audiences and purposes, linked to grade four content and texts."
+  },
+  {
+   "idx": "4.W.1",
+   "content": "Modes and Purposes for Writing A. Recognize different forms of writing (narrative, expository, and persuasive) have distinctive patterns of organization to support their purpose."
+  },
+  {
+   "idx": "4.W.2",
+   "content": "Organization and Composition"
+  },
+  {
+   "idx": "4.W.3",
+   "content": "Usage and Mechanics A. With guidance and support from peers and adults, develop and strengthen writing as needed by revising for quality of ideas, organization, sentence fluency, and word choice. B. Self-and peer-edit the writing for capitalization, spelling, punctuation, sentence structure, paragraphing, and Standard English (See Language Usage for grade level expectations)."
+  },
+  {
+   "idx": "4.LU",
+   "content": "The student will use the conventions of Standard English when speaking and writing, differentiating between contexts that call for formal English and situations where informal discourse is more appropriate."
+  },
+  {
+   "idx": "4.LU.1",
+   "content": "Grammar A. Produce, expand, and rearrange simple and compound sentences, including prepositional phrases, when speaking and writing. B. Use coordinating (e.g., and, but), subordinating (e.g., although, because) conjunctions to join words and phrases in a sentence. C. Use adjectives to compare and describe noun or noun phrases with specificity when speaking and writing. D. Use modal words (e.g., ca"
+  },
+  {
+   "idx": "4.LU.2",
+   "content": "Mechanics A. Use commas in series, dates, addresses, and letters in writing. B. Use commas and quotation marks to indicate dialogue in writing. C. Use apostrophes to form contractions and to show possession in writing. D. Use conventional spelling for high-frequency and other studied words and grade level word analysis knowledge. E. Consult reference materials to check and correct spelling."
+  },
+  {
+   "idx": "4.C",
+   "content": "The student will develop effective oral communication and collaboration skills to build a community of learners that process, understand, and interpret content together."
+  },
+  {
+   "idx": "4.C.1",
+   "content": "Communication, Listening, and Collaboration A. Participate in a range of sustained collaborative discussions with diverse partners on grade four topics and texts. This includes:"
+  },
+  {
+   "idx": "4.C.2",
+   "content": "Speaking and Presentation of Ideas A. Report orally on a topic or text, tell a story, or recount an experience in an organized manner. This includes:"
+  },
+  {
+   "idx": "4.C.3",
+   "content": "Integrating Multimodal Literacies A. Select, organize, and create engaging presentations that include multimedia components and visual displays. B. Strategically use two or more interdependent modes of communication to convey the intended message and enhance the development of main ideas or themes."
+  },
+  {
+   "idx": "4.C.4",
+   "content": "Examining Media Messages A. Differentiate between auditory, visual, and written media messages (e.g., videos, podcasts, print advertisements) and their purposes (to explain, to inform, to persuade). B. Compare and contrast how ideas and topics are depicted (e.g., animation, famous images and words, music and sound, photo-editing) in a variety of media and formats."
+  },
+  {
+   "idx": "4.R",
+   "content": "The student will conduct research and read a series of conceptually related texts on selected topics to build knowledge on grade-four content and texts, solve problems, and support cross-curricular learning."
+  },
+  {
+   "idx": "4.R.1",
+   "content": "Evaluation and Synthesis of Information A. Construct and formulate questions about a topic. B. Identify search terms to locate information on the topic and gather relevant information from various print and digital sources. C. Organize and synthesize information from the print and digital resources determining the relevance and reliability of the information gathered. D. Develop notes that include"
+  }
+ ],
+ "4/science": [
+  {
+   "idx": "4.1",
+   "content": "The student will demonstrate an understanding of scientific and engineering practices by"
+  },
+  {
+   "idx": "4.2",
+   "content": "The student will investigate and understand that plants and animals have structures that distinguish them from one another and play vital roles in their ability to survive."
+  },
+  {
+   "idx": "4.3",
+   "content": "The student will investigate and understand that organisms, including humans, interact with one another and with the nonliving components in the ecosystem."
+  },
+  {
+   "idx": "4.4",
+   "content": "The student will investigate and understand that weather conditions and phenomena affect ecosystems and can be predicted."
+  },
+  {
+   "idx": "4.5",
+   "content": "The student will investigate and understand that the planets have characteristics and a specific place in the solar system."
+  },
+  {
+   "idx": "4.6",
+   "content": "The student will investigate and understand that there are relationships among Earth, the moon, and the sun. Key relationships include"
+  },
+  {
+   "idx": "4.7",
+   "content": "The student will investigate and understand that the ocean environment has characteristics. Key characteristics include"
+  },
+  {
+   "idx": "4.8",
+   "content": "The student will investigate and understand that Virginia has important natural resources. Key resources include"
+  }
+ ],
+ "4/social": [
+  {
+   "idx": "VS.1",
+   "content": "The student will apply history and social science skills to explain the relationship between physical geography and the lives of Virginia’s peoples, past and present by"
+  },
+  {
+   "idx": "VS.2",
+   "content": "The student will apply history and social science skills to describe the Indigenous nations of Virginia past and present by"
+  },
+  {
+   "idx": "VS.3",
+   "content": "The student will apply history and social science skills to explain the causes and effects of events associated with the first permanent English settlement in North America by"
+  },
+  {
+   "idx": "VS.4",
+   "content": "The student will apply history and social science skills to understand life in the Virginia colony by"
+  },
+  {
+   "idx": "VS.5",
+   "content": "The student will apply history and social science skills to explain Virginia and Virginians’ role during the American Revolution by"
+  },
+  {
+   "idx": "VS.6",
+   "content": "The student will apply history and social science skills to explain the establishment and growth of the new American nation with emphasis on the role of Virginians and events in Virginia during the 18th and 19th centuries by"
+  },
+  {
+   "idx": "VS.7",
+   "content": "The students will apply history and social science skills to understand the key people, events, and issues of the Civil War and Virginia’s role by"
+  },
+  {
+   "idx": "VS.8",
+   "content": "The student will apply history and social science skills to explain the reconstruction of Virginia following the Civil War by"
+  },
+  {
+   "idx": "VS.9",
+   "content": "The student will apply history and social science skills to understand the ways in which Virginia became interconnected and diverse by"
+  },
+  {
+   "idx": "VS.10",
+   "content": "The student will apply history and social science skills to understand the role Virginians played in American history during World War I and World War II by a. examining how key leaders and citizens prepared for wartime; and b. describing the contributions made by military veterans and Medal of Honor recipients."
+  },
+  {
+   "idx": "VS.11",
+   "content": "The student will apply history and social science skills to understand the Civil Rights Movement in Virginia by"
+  },
+  {
+   "idx": "VS.12",
+   "content": "The student will use history and social science skills to recognize why Virginia is known as the “Mother of Presidents.”"
+  },
+  {
+   "idx": "VS.13",
+   "content": "The student will apply history and social science skills to explain Virginia’s role in the global economy in the 21st century by"
+  }
+ ],
+ "5/math": [
+  {
+   "idx": "5.NS.1",
+   "content": "The student will use reasoning and justification to identify and represent equivalency between fractions (with denominators that are thirds, eighths, and factors of 100) and decimals; and compare and order sets of fractions (proper, improper, and/or mixed numbers having denominators of 12 or less) and decimals (through thousandths)."
+  },
+  {
+   "idx": "5.NS.2",
+   "content": "The student will demonstrate an understanding of prime and composite numbers, and determine the prime factorization of a whole number up to 100."
+  },
+  {
+   "idx": "5.CE.1",
+   "content": "The student will estimate, represent, solve, and justify solutions to single-step and multistep contextual problems using addition, subtraction, multiplication, and division with whole numbers."
+  },
+  {
+   "idx": "5.CE.2",
+   "content": "The student will estimate, represent, solve, and justify solutions to single-step and multistep problems, including those in context, using addition and subtraction of fractions with like and unlike denominators (with and without models), and solve single-step contextual problems involving multiplication of a whole number and a proper fraction, with models."
+  },
+  {
+   "idx": "5.CE.3",
+   "content": "The student will estimate, represent, solve, and justify solutions to single-step and multistep problems, including those in context, using addition, subtraction, multiplication, and division with decimal numbers."
+  },
+  {
+   "idx": "5.CE.4",
+   "content": "The student will simplify numerical expressions with whole numbers using the order of operations."
+  },
+  {
+   "idx": "5.MG.1",
+   "content": "The student will reason mathematically to solve problems, including those in context, that involve length, mass, and liquid volume using metric units."
+  },
+  {
+   "idx": "5.MG.2",
+   "content": "The student will use multiple representations to solve problems, including those in context, involving perimeter, area, and volume."
+  },
+  {
+   "idx": "5.MG.3",
+   "content": "The student will classify and measure angles and triangles, and solve problems, including those in context."
+  },
+  {
+   "idx": "5.PS.1",
+   "content": "The student will apply the data cycle (formulate questions; collect or acquire data; organize and represent data; and analyze data and communicate results) with a focus on line plots (dot plots) and stem-and-leaf plots."
+  },
+  {
+   "idx": "5.PS.2",
+   "content": "The student will solve contextual problems using measures of center and the range."
+  },
+  {
+   "idx": "5.PS.3",
+   "content": "The student will determine the probability of an outcome by constructing a model of a sample space and using the Fundamental (Basic) Counting Principle."
+  },
+  {
+   "idx": "5.PFA.1",
+   "content": "The student will identify, describe, extend, and create increasing and decreasing patterns with whole numbers, fractions, and decimals, including those in context, using various representations."
+  },
+  {
+   "idx": "5.PFA.2",
+   "content": "The student will investigate and use variables in contextual problems."
+  }
+ ],
+ "5/language": [
+  {
+   "idx": "5.FFR.3",
+   "content": "Phonics and Word Analysis: The student will apply grade level phonics and word analysis skills to decode (read) unfamiliar words in grade level text. A. Use knowledge of syllabication and syllable types to decode and encode words. B. Use knowledge of morphology (suffixes, prefixes, root/base) to decode words. C. Read grade-level high-frequency words, including decodable and irregular words, with a"
+  },
+  {
+   "idx": "5.DSR",
+   "content": "The student will build knowledge and comprehension skills from reading a range of challenging, content-rich texts. This includes fluently reading and gathering evidence from grade-level complex texts, reading widely on topics to gain purposeful knowledge and vocabulary, and using reading strategies when comprehension breaks down. A. Read a variety of grade-level complex texts with accuracy, automa"
+  },
+  {
+   "idx": "5.RV",
+   "content": "The student will systematically build vocabulary and word knowledge based on grade- five content and texts."
+  },
+  {
+   "idx": "5.RV.1",
+   "content": "Vocabulary Development and Word Analysis A. Develop general academic language and content specific vocabulary by listening to, reading, and discussing a variety of grade-five texts and topics. B. Discuss meanings of complex words and phrases acquired through conversations and literature. C. Determine the meaning of complex words using frequently occurring root words and inflectional affixes (e.g.,"
+  },
+  {
+   "idx": "5.RL",
+   "content": "The student will use textual evidence to demonstrate comprehension and build knowledge from a variety of grade-level complex literary texts read to include poetry, fantasy, humor, mystery, adventure, realistic fiction, historical fiction, and folklore/tall tales, with a focus on fantasy."
+  },
+  {
+   "idx": "5.RL.1",
+   "content": "Key Ideas and Plot Details A. Summarize the story or play, including the overarching theme and lessons learned, and explain how they are developed or conveyed through specific details. B. Describe plots in stories as a sequence of events that develops the central conflict and resolution, including initiating events, climax, and resolution. C. Explain how events from the plot cause the character(s)"
+  },
+  {
+   "idx": "5.RL.2",
+   "content": "Craft and Style A. Describe how an author develops a character through what characters say, think, do, and how other characters respond. B. Analyze the author’s use of language (e.g., synonyms, figurative language, sensory words, dialogue, dialect) and their impact on understanding characters, setting, and plot events. C. Analyze how the characteristics of a poem and the author’s use of patterns o"
+  },
+  {
+   "idx": "5.RL.3",
+   "content": "Integration of Concepts A. Set a purpose for reading by activating prior (experience) and background (content) knowledge. B. Compare and contrast the point of view from which different stories are narrated, including the difference between first-and third-person narratives. C. Compare and contrast details in paired literary and informational nonfiction texts including their treatment of similar th"
+  },
+  {
+   "idx": "5.RI",
+   "content": "The student will use textual evidence to demonstrate comprehension and build knowledge from grade-level complex informational texts read."
+  },
+  {
+   "idx": "5.RI.1",
+   "content": "Key Ideas and Confirming Details A. Summarize the main ideas of texts and specific paragraphs within them, including how they are developed through the details. B. Summarize events, procedures, ideas, or concepts in historical, scientific, or technical texts, including what happened, how, and why. C. Describe how an author uses reasons, evidence, and opinions to support points in a text, by identi"
+  },
+  {
+   "idx": "5.RI.2",
+   "content": "Craft and Style A. Describe the overall organization patterns of texts (e.g., cause/effect, comparison/contrast, problem/solution, description, sequence, and chronological) and how each successive part builds on earlier sections, using available transitional words and phrases. B. Examine text features and search tools in multiple print and digital sources to evaluate and gain meaning from the info"
+  },
+  {
+   "idx": "5.RI.3",
+   "content": "Integration of Concepts A. Use prior (experience) and background (content) knowledge as context for new learning. B. Analyze multiple accounts of the same event or topic, noting important similarities and differences in the point of view they represent. C. Explain the relationships or interactions between two or more individuals, events, procedures, ideas, or concepts in a historical, scientific, "
+  },
+  {
+   "idx": "5.FFW",
+   "content": "The student will print legibly in manuscript and cursive while applying grade level word knowledge to spell words correctly."
+  },
+  {
+   "idx": "5.FFW.1",
+   "content": "Handwriting A. Maintain legible printing. B. Maintain legible cursive. C. Sign first and last name."
+  },
+  {
+   "idx": "5.FFW.2",
+   "content": "Spelling A. Use combined knowledge of all letter-sound correspondences, syllabication patterns, and morphology (e.g., roots and affixes) to spell accurately. B. Use phoneme-grapheme (sound/symbol) correspondences to decode (read) and encode (spell) grade-level high-frequency words with automaticity and accuracy."
+  },
+  {
+   "idx": "5.W",
+   "content": "The student will compose various works for diverse audiences and purposes, linked to grade five content and texts."
+  },
+  {
+   "idx": "5.W.1",
+   "content": "Modes and Purposes for Writing"
+  },
+  {
+   "idx": "5.W.2",
+   "content": "Organization and Composition A. Engage in writing as a process to compose well-developed paragraphs. This includes:"
+  },
+  {
+   "idx": "5.W.3",
+   "content": "Usage and Mechanics A. With guidance and support from peers and adults, develop and strengthen writing as needed by revising for quality of ideas, organization, sentence fluency, and precise word choice. B. Self-and peer-edit the writing for capitalization, spelling, punctuation, sentence structures, paragraphing, and Standard English (See Language Usage for grade level expectations)."
+  },
+  {
+   "idx": "5.LU",
+   "content": "The student will use the conventions of Standard English when speaking and writing, differentiating between contexts that call for formal English and situations where informal discourse is more appropriate."
+  },
+  {
+   "idx": "5.LU.1",
+   "content": "Grammar A. Expand, combine, and reduce sentences for meaning, reader/listener interest, and style. B. Use adverbs to express time, frequency, degree, and level of certainty when speaking and writing. C. Use interjections, prepositional phrases, and coordinating and subordinating conjunctions in writing to join words and phrases in a sentence. D. Recognize and correct inappropriate shifts in verb t"
+  },
+  {
+   "idx": "5.LU.2",
+   "content": "Mechanics A. Use commas correctly in compound sentences. B. Use colons to separate hours and minutes and to introduce a list. C. Use a hyphen to divide words at the end of a line in writing. D. Use spelling patterns and generalizations (e.g., word families, syllable patterns, ending rules) when pronouncing and writing words. E. Consult reference materials to check and correct spelling."
+  },
+  {
+   "idx": "5.C",
+   "content": "The student will develop effective oral communication and collaboration skills to build a community of learners that process, understand, and interpret content together."
+  },
+  {
+   "idx": "5.C.1",
+   "content": "Communication, Listening, and Collaboration A. Prepare for and participate in a range of sustained collaborative discussions with diverse partners on grade five topics and texts. This includes:"
+  },
+  {
+   "idx": "5.C.2",
+   "content": "Speaking and Presentation of Ideas A. Report orally on a topic or text or present an opinion in an organized manner. This includes:"
+  },
+  {
+   "idx": "5.C.3",
+   "content": "Integrating Multimodal Literacies"
+  },
+  {
+   "idx": "5.C.4",
+   "content": "Examining Media Messages A. Deconstruct various types of media to identify the characteristics and determine the effectiveness of the intended messages. B. Identify the purpose, intended audience, and credibility of information (e.g., auditory, visual, and written media messages) being presented. C. Compare and contrast techniques used in a variety of media messages (e.g., animation, famous images"
+  },
+  {
+   "idx": "5.R",
+   "content": "The student will conduct research and read a series of conceptually related texts on selected topics to build knowledge on grade-five content and texts, solve problems, and support cross-curricular learning."
+  },
+  {
+   "idx": "5.R.1",
+   "content": "Evaluation and Synthesis of Information A. Formulate questions that help narrow the topic and revise questions as needed based on research. B. Identify search terms to locate information and gather relevant information from various print and digital sources to address the research. C. Organize and synthesize information from the print and digital resources, evaluating their relevance, reliability,"
+  }
+ ],
+ "5/science": [
+  {
+   "idx": "5.1",
+   "content": "The student will demonstrate an understanding of scientific and engineering practices by"
+  },
+  {
+   "idx": "5.2",
+   "content": "The student will investigate and understand that energy can take many forms."
+  },
+  {
+   "idx": "5.3",
+   "content": "The student will investigate and understand that there is a relationship between force and energy of moving objects."
+  },
+  {
+   "idx": "5.4",
+   "content": "The student will investigate and understand that electrical energy is transmitted and used in daily life."
+  },
+  {
+   "idx": "5.5",
+   "content": "The student will investigate and understand that sound can be produced and transmitted."
+  },
+  {
+   "idx": "5.6",
+   "content": "The student will investigate and understand that visible light has certain characteristics and behaves in predictable ways."
+  },
+  {
+   "idx": "5.7",
+   "content": "The student will investigate and understand that matter has properties and interactions."
+  },
+  {
+   "idx": "5.8",
+   "content": "The student will investigate and understand that Earth constantly changes. Key ideas include"
+  },
+  {
+   "idx": "5.9",
+   "content": "The student will investigate and understand that the conservation of energy resources is important."
+  }
+ ],
+ "5/social": [
+  {
+   "idx": "USI.1",
+   "content": "The student will apply history and social science skills to understand the geography of North America by"
+  },
+  {
+   "idx": "USI.2",
+   "content": "The student will apply history and social science skills to describe how early cultures developed throughout North America by"
+  },
+  {
+   "idx": "USI.3",
+   "content": "The student will apply history and social science skills to explain European exploration and colonization in North America by"
+  },
+  {
+   "idx": "USI.4",
+   "content": "The student will apply history and social science skills to understand how the Western Hemisphere impacted West Africa by"
+  },
+  {
+   "idx": "USI.5",
+   "content": "The student will apply history and social science skills to explain the social, political, religious, economic, and geographic factors that shaped colonial America by"
+  },
+  {
+   "idx": "USI.6",
+   "content": "The student will apply history and social science skills to explain the American Revolution by"
+  },
+  {
+   "idx": "USI.7",
+   "content": "The student will apply history and social science skills to describe the challenges faced by the new nation by"
+  },
+  {
+   "idx": "USI.8",
+   "content": "The student will apply history and social science skills to explain westward expansion and reform in America from 1801 to 1861 by"
+  },
+  {
+   "idx": "USI.9",
+   "content": "The student will apply history and social science skills to understand the cause, major events, and effects of the Civil War by"
+  }
+ ],
+ "6/math": [
+  {
+   "idx": "6.NS.1",
+   "content": "The student will reason and use multiple strategies to express equivalency, compare, and order numbers written as fractions, mixed numbers, decimals, and percents."
+  },
+  {
+   "idx": "6.NS.2",
+   "content": "The student will reason and use multiple strategies to represent, compare, and order integers."
+  },
+  {
+   "idx": "6.NS.3",
+   "content": "The student will recognize and represent patterns with whole number exponents and perfect squares."
+  },
+  {
+   "idx": "6.CE.1",
+   "content": "The student will estimate, demonstrate, solve, and justify solutions to problems using operations with fractions and mixed numbers, including those in context."
+  },
+  {
+   "idx": "6.CE.2",
+   "content": "The student will estimate, demonstrate, solve, and justify solutions to problems using operations with integers, including those in context."
+  },
+  {
+   "idx": "6.MG.1",
+   "content": "The student will identify the characteristics of circles and solve problems, including those in context, involving circumference and area."
+  },
+  {
+   "idx": "6.MG.2",
+   "content": "The student will reason mathematically to solve problems, including those in context, that involve the area and perimeter of triangles and parallelograms."
+  },
+  {
+   "idx": "6.MG.3",
+   "content": "The student will describe the characteristics of the coordinate plane and graph ordered pairs."
+  },
+  {
+   "idx": "6.MG.4",
+   "content": "The student will determine congruence of segments, angles, and polygons."
+  },
+  {
+   "idx": "6.PS.1",
+   "content": "The student will apply the data cycle (formulate questions; collect or acquire data; organize and represent data; and analyze data and communicate results) with a focus on circle graphs."
+  },
+  {
+   "idx": "6.PS.2",
+   "content": "The student will represent the mean as a balance point and determine the effect on statistical measures when a data point is added, removed, or changed."
+  },
+  {
+   "idx": "6.PFA.1",
+   "content": "The student will use ratios to represent relationships between quantities, including those in context."
+  },
+  {
+   "idx": "6.PFA.2",
+   "content": "The student will identify and represent proportional relationships between two quantities, including those in context (unit rates are limited to positive values)."
+  },
+  {
+   "idx": "6.PFA.3",
+   "content": "The student will write and solve one-step linear equations in one variable, including contextual problems that require the solution of a one-step linear equation in one variable."
+  },
+  {
+   "idx": "6.PFA.4",
+   "content": "The student will represent a contextual situation using a linear inequality in one variable with symbols and graphs on a number line."
+  }
+ ],
+ "6/language": [
+  {
+   "idx": "6.DSR",
+   "content": "The student will build knowledge and comprehension skills from reading a range of challenging, content-rich texts. This includes fluently reading and gathering evidence from grade-level complex texts, reading widely on topics to gain purposeful knowledge and vocabulary, and using reading strategies when comprehension breaks down. A. Read a variety of grade-level complex text with accuracy, automat"
+  },
+  {
+   "idx": "6.RV",
+   "content": "The student will systematically build vocabulary and word knowledge based on grade six content and texts."
+  },
+  {
+   "idx": "6.RV.1",
+   "content": "Vocabulary Development and Word Analysis A. Develop and accurately use general academic language and content-specific vocabulary by listening to, reading, and discussing a variety of grade-six texts and topics. B. Use context and sentence structure to determine multiple meanings of words and clarify the meanings of unfamiliar words and phrases. C. Apply knowledge of Greek and Latin roots and affix"
+  },
+  {
+   "idx": "6.RL",
+   "content": "The student will use textual evidence to demonstrate comprehension and build knowledge from a variety of grade-level complex literary texts read to include short stories, literary nonfiction, novels, poetry, and drama."
+  },
+  {
+   "idx": "6.RL.1",
+   "content": "Key Ideas and Plot Details"
+  },
+  {
+   "idx": "6.RL.2",
+   "content": "Craft and Style A. Describe the poetic elements in prose and poetry (e.g., rhyme, rhythm, repetition, alliteration, and onomatopoeia) and their intended impact on the reader. B. Explain elements of author’s style as purposeful choices (e.g., imagery, figurative language, and word choice) to develop tone. C. Explain how an author develops the point of view (e.g., first-person, third person limited,"
+  },
+  {
+   "idx": "6.RL.3",
+   "content": "Integration of Concepts A. Describe how the interactions between individuals, settings, events, and ideas within a text influence one another. B. Compare and contrast details in two or more paired literary fiction and nonfiction texts on the same topic or with similar themes, including how chapters, scenes, or stanzas work together to provide the overall structure of each text."
+  },
+  {
+   "idx": "6.RI",
+   "content": "The student will use textual evidence to demonstrate comprehension and build knowledge from grade-level complex informational texts read."
+  },
+  {
+   "idx": "6.RI.1",
+   "content": "Key Ideas and Confirming Details A. Summarize texts, including their main idea(s) and how they are developed with specific details. B. Describe how a key individual, event or idea is introduced, illustrated, and elaborated in historical, scientific, or technical texts (e.g., through examples or anecdotes). C. Trace the argument and specific claims in texts, distinguishing claims that are supported"
+  },
+  {
+   "idx": "6.RI.2",
+   "content": "Craft and Style"
+  },
+  {
+   "idx": "6.RI.3",
+   "content": "Integration of Concepts A. Describe ideas within and between selections including how specific sentences, paragraphs, or sections contribute to the development of ideas. B. Compare and contrast one author’s presentation of ideas or events with another’s, identifying where the texts agree or disagree."
+  },
+  {
+   "idx": "6.W",
+   "content": "The student will compose various works for diverse audiences and purposes, linked to grade six content and texts."
+  },
+  {
+   "idx": "6.W.1",
+   "content": "Modes and Purposes for Writing A. Write narratives to entertain, to share a personal experience, or to alter an existing story that uses narrative techniques to develop the characters, event(s), and experience(s). B. Write expository texts to examine a topic or concept, logically conveying ideas and information using text structures such as description, comparison, or cause-effect to create cohesi"
+  },
+  {
+   "idx": "6.W.2",
+   "content": "Organization and Composition A. Generate and organize ideas using the writing process (planning, drafting, revising, editing) to develop multi-paragraph texts. This includes:"
+  },
+  {
+   "idx": "6.W.3",
+   "content": "Usage and Mechanics A. Revise writing for clarity of content, word choice, sentence variety, and transition among paragraphs. B. Self-and peer-edit for capitalization, spelling, punctuation, sentence structure, paragraphing, and Standard English (See Language Usage for grade level expectations)."
+  },
+  {
+   "idx": "6.LU",
+   "content": "The student will use the conventions of Standard English when speaking and writing, differentiating between contexts that call for formal English and situations where informal discourse is more appropriate."
+  },
+  {
+   "idx": "6.LU.1",
+   "content": "Grammar A. Construct simple, compound, and complex sentences to communicate ideas clearly and add variety to writing. B. Use pronoun-antecedent agreement, including indefinite and reflexive pronouns when speaking and writing. C. Use adverbs to modify verbs, adjectives, and other adverbs to express manner, place, time, frequency, degree, and level of certainty precisely when speaking and writing. D"
+  },
+  {
+   "idx": "6.LU.2",
+   "content": "Mechanics A. Construct complete sentences with appropriate punctuation, avoiding comma splices and run-ons in writing. B. Use and punctuate dialogue and direct quotations appropriately in writing. C. Recognize and consistently spell frequently used words accurately. D. Consult reference materials to check and correct spelling."
+  },
+  {
+   "idx": "6.C",
+   "content": "The student will develop effective oral communication and collaboration skills to build a community of learners that process, understand, and interpret content together."
+  },
+  {
+   "idx": "6.C.1",
+   "content": "Communication, Listening, and Collaboration"
+  },
+  {
+   "idx": "6.C.2",
+   "content": "Speaking and Presentation of Ideas A. Report orally on a topic or present an opinion. This includes:"
+  },
+  {
+   "idx": "6.C.3",
+   "content": "Integrating Multimodal Literacies A. Use media and visual literacy skills to select, organize, and create multimodal content that articulates the purpose of the presentation, using two or more communication modes to make meaning (e.g., still or moving images, gestures, spoken language, and written language). B. Craft and publish audience-specific media messages that present claims and findings in "
+  },
+  {
+   "idx": "6.C.4",
+   "content": "Examining Media Messages A. Interpret information presented in diverse media formats and explain how it contributes to the topic. B. Explain how media messages are intentionally constructed to impact a specific audience. C. Explain the characteristics and analyze the effectiveness of a variety of media messages by considering the results and/or impact on the intended audience."
+  },
+  {
+   "idx": "6.R",
+   "content": "The student will conduct research and read a series of conceptually related texts on selected topics to build knowledge on grade-six content and texts, solve problems, and support cross-curricular learning."
+  },
+  {
+   "idx": "6.R.1",
+   "content": "Evaluation and Synthesis of Information A. Formulate appropriately narrow questions about a research topic and refocus the inquiry when appropriate. B. Collect information from multiple sources, using search terms effectively. C. Organize and synthesize information from multiple sources (primary, secondary, digital, and print) evaluating the relevance, usefulness, validity, and credibility of each"
+  }
+ ],
+ "6/science": [
+  {
+   "idx": "6.1",
+   "content": "The student will demonstrate an understanding of scientific and engineering practices by"
+  },
+  {
+   "idx": "6.2",
+   "content": "The student will investigate and understand that the solar system is organized and the various bodies in the solar system interact."
+  },
+  {
+   "idx": "6.3",
+   "content": "The student will investigate and understand that there is a relationship between the sun, Earth, and the moon."
+  },
+  {
+   "idx": "6.4",
+   "content": "The student will investigate and understand that there are basic sources of energy and that energy can be transformed."
+  },
+  {
+   "idx": "6.5",
+   "content": "The student will investigate and understand that all matter is composed of atoms."
+  },
+  {
+   "idx": "6.6",
+   "content": "The student will investigate and understand that water has unique physical properties and has a role in the natural and human-made environment. Key ideas include"
+  },
+  {
+   "idx": "6.7",
+   "content": "The student will investigate and understand that air has properties and that Earth’s atmosphere has structure and is dynamic."
+  },
+  {
+   "idx": "6.8",
+   "content": "The student will investigate and understand that land and water have roles in watershed systems."
+  },
+  {
+   "idx": "6.9",
+   "content": "The student will investigate and understand that humans affect the environment, and individuals can influence public policy decisions related to energy and the environment."
+  }
+ ],
+ "6/social": [
+  {
+   "idx": "USII.1",
+   "content": "The student will apply history and social science skills to examine westward expansion after the mid-19th century by"
+  },
+  {
+   "idx": "USII.2",
+   "content": "The student will apply history and social science skills to understand the ongoing effects of Reconstruction on American life after the mid-19th century by"
+  },
+  {
+   "idx": "USII.3",
+   "content": "The student will apply history and social science skills to understand how industrialization changed life in rural and urban America after the Civil War by"
+  },
+  {
+   "idx": "USII.4",
+   "content": "The student will apply history and social science skills to explain the changing role of the United States from the late 19th century through World War I by"
+  },
+  {
+   "idx": "USII.5",
+   "content": "The student will apply history and social science skills to understand the social, political, economic, and technological changes of the early 20th century by"
+  },
+  {
+   "idx": "USII.6",
+   "content": "The student will apply history and social science skills to understand the major causes and events of World War II and the effects of America’s role by"
+  },
+  {
+   "idx": "USII.7",
+   "content": "The student will apply history and social science skills to understand the transformation of U.S. foreign policy between the end of World War II and the new millennium by"
+  },
+  {
+   "idx": "USII.8",
+   "content": "The student will apply history and social science skills to analyze the key changing patterns of society during the second half of the 20th and early 21st centuries by"
+  },
+  {
+   "idx": "USII.9",
+   "content": "The student will apply history and social science skills by"
+  }
+ ],
+ "7/math": [
+  {
+   "idx": "7.NS.1",
+   "content": "The student will investigate and describe the concept of exponents for powers of ten and compare and order numbers greater than zero written in scientific notation."
+  },
+  {
+   "idx": "7.NS.2",
+   "content": "The student will reason and use multiple strategies to compare and order rational numbers."
+  },
+  {
+   "idx": "7.NS.3",
+   "content": "The student will recognize and describe the relationship between square roots and perfect squares."
+  },
+  {
+   "idx": "7.CE.1",
+   "content": "The student will estimate, solve, and justify solutions to multistep contextual problems involving operations with rational numbers."
+  },
+  {
+   "idx": "7.CE.2",
+   "content": "The student will solve problems, including those in context, involving proportional relationships."
+  },
+  {
+   "idx": "7.MG.1",
+   "content": "The student will investigate and determine the volume formula for right cylinders and the surface area formulas for rectangular prisms and right cylinders and apply the formulas in context."
+  },
+  {
+   "idx": "7.MG.2",
+   "content": "The student will solve problems and justify relationships of similarity using proportional reasoning."
+  },
+  {
+   "idx": "7.MG.3",
+   "content": "The student will compare and contrast quadrilaterals based on their properties and determine unknown side lengths and angle measures of quadrilaterals."
+  },
+  {
+   "idx": "7.MG.4",
+   "content": "The student will apply dilations of polygons in the coordinate plane."
+  },
+  {
+   "idx": "7.PS.1",
+   "content": "The student will use statistical investigation to determine the probability of an event and investigate and describe the difference between the experimental and theoretical probability."
+  },
+  {
+   "idx": "7.PS.2",
+   "content": "The student will apply the data cycle (formulate questions; collect or acquire data; organize and represent data; and analyze data and communicate results) with a focus on histograms."
+  },
+  {
+   "idx": "7.PFA.1",
+   "content": "The student will investigate and analyze proportional relationships between two quantities using verbal descriptions, tables, equations in y = mx form, and graphs, including problems in context."
+  },
+  {
+   "idx": "7.PFA.2",
+   "content": "The student will simplify numerical expressions, simplify and generate equivalent algebraic expressions in one variable, and evaluate algebraic expressions for given replacement values of the variables."
+  },
+  {
+   "idx": "7.PFA.3",
+   "content": "The student will write and solve two-step linear equations in one variable, including problems in context, that require the solution of a two-step linear equation in one variable."
+  },
+  {
+   "idx": "7.PFA.4",
+   "content": "The student will write and solve one- and two-step linear inequalities in one variable, including problems in context, that require the solution of a one- and two-step linear inequality in one variable."
+  }
+ ],
+ "7/language": [
+  {
+   "idx": "7.DSR",
+   "content": "The student will build knowledge and comprehension skills from reading a range of challenging, content-rich texts. This includes fluently reading and gathering evidence from grade-level complex texts, reading widely on topics to gain purposeful knowledge and vocabulary, and using reading strategies when comprehension breaks down. A. Read a variety of grade-level complex text with accuracy, automat"
+  },
+  {
+   "idx": "7.RV",
+   "content": "The student will systematically build vocabulary and word knowledge based on grade seven content and texts."
+  },
+  {
+   "idx": "7.RV.1",
+   "content": "Vocabulary Development and Word Analysis"
+  },
+  {
+   "idx": "7.RL",
+   "content": "The student will use textual evidence to demonstrate comprehension and build knowledge from a variety of grade-level complex literary texts read to include short stories, literary nonfiction, novels, poetry, and drama."
+  },
+  {
+   "idx": "7.RL.1",
+   "content": "Key Ideas and Plot Details A. Describe stated or implied themes of texts and analyze their development throughout the texts using specific details. B. Analyze how the central conflict and key elements (e.g., exposition, initiating event, rising action, climax, falling action, and resolution) impact plot development. C. Explain how static and dynamic characters and the roles of protagonist and anta"
+  },
+  {
+   "idx": "7.RL.2",
+   "content": "Craft and Style A. Analyze how elements of authors’ styles (e.g., word choice, dialogue, form, voice, rhyme, rhythm, and/or sound devices) contribute to meaning in various forms of prose and poetry. B. Analyze how the elements of an author’s style (e.g., word choice, sentence structure, dialogue, figurative language, imagery) are used to influence and develop tone. C. Explain how an author develop"
+  },
+  {
+   "idx": "7.RL.3",
+   "content": "Integration of Concepts A. Explain how particular elements of stories or dramas interact including how settings shape and influence characters and plot. B. Compare and contrast texts in different forms or genres (e.g., stories and poems; historical novels and fantasy stories) in terms of their approaches to similar themes and topics."
+  },
+  {
+   "idx": "7.RI",
+   "content": "The student will use textual evidence to demonstrate comprehension and build knowledge from grade-level complex informational texts read."
+  },
+  {
+   "idx": "7.RI.1",
+   "content": "Key Ideas and Confirming Details A. Create a main idea statement and provide an accurate summary of how key events or ideas develop through the text. B. Analyze how the author unfolds a perspective or series of ideas or events in historical, scientific, or technical texts, including the order in which the points are made and how they are introduced and developed. C. Trace the argument and specific"
+  },
+  {
+   "idx": "7.RI.2",
+   "content": "Craft and Style A. Analyze how an author uses text features (e.g., boldface and italics; type set in color; underlining; indentation; sidebars; illustrations, graphics and photographs; headings and subheadings; footnotes and annotations) to enhance and support the reader’s comprehension. B. Analyze how an author’s word choice, organizational pattern, and language structure impact the author’s purp"
+  },
+  {
+   "idx": "7.RI.3",
+   "content": "Integration of Concepts A. Analyze ideas within and between selections including how specific sentences, paragraphs, or sections contribute to the development and meaning of ideas. B. Compare and contrast how two or more authors writing about the same topic shape their presentations or viewpoints of key information by emphasizing different facts, opinions, and reasoning."
+  },
+  {
+   "idx": "7.W",
+   "content": "The student will compose various works for diverse audiences and purposes, linked to grade seven content and texts."
+  },
+  {
+   "idx": "7.W.1",
+   "content": "Modes and Purposes for Writing A. Write narratives to develop real or imagined experiences or to alter an existing text, using a variety of precise words and phrases and transitional words to develop the characters, convey sequence, and signal shifts from one timeframe or setting to another. B. Write expository texts to examine a topic or concept that develops the focus with relevant facts, defini"
+  },
+  {
+   "idx": "7.W.2",
+   "content": "Organization and Composition"
+  },
+  {
+   "idx": "7.W.3",
+   "content": "Usage and Mechanics A. Revise writing for clarity of content, word choice, sentence variety, and transition among paragraphs. B. Self-and peer-edit writing for capitalization, spelling, punctuation, sentence structure, paragraphing, and Standard English (See Language Usage for grade level expectations)."
+  },
+  {
+   "idx": "7.LU",
+   "content": "The student will use the conventions of Standard English when speaking and writing, differentiating between contexts that call for formal English and situations where informal discourse is more appropriate."
+  },
+  {
+   "idx": "7.LU.1",
+   "content": "Grammar A. Construct simple, compound, complex, and compound-complex sentences to communicate ideas clearly and add variety to writing. B. Recognize and use pronoun-antecedent agreement, including indefinite, reflexive, and relative pronouns, when speaking and writing. C. Use specific adjectives and adverbs to enhance speech and writing. D. Arrange phrases and clauses within a sentence and apply a"
+  },
+  {
+   "idx": "7.LU.2",
+   "content": "Mechanics A. Construct complete sentence with appropriate punctuation, avoiding comma splices and run-ons in writing. B. Use and punctuate dialogue and direct quotations appropriately in writing. C. Recognize and consistently spell frequently used words accurately."
+  },
+  {
+   "idx": "7.C",
+   "content": "The student will develop effective oral communication and collaboration skills to build a community of learners that process, understand, and interpret content together."
+  },
+  {
+   "idx": "7.C.1",
+   "content": "Communication, Listening, and Collaboration A. Facilitate and contribute to a range of sustained collaborative discussions with diverse partners on grade seven topics and texts. This includes:"
+  },
+  {
+   "idx": "7.C.2",
+   "content": "Speaking and Presentation of Ideas A. Report orally on a topic or text or present an opinion. This includes:"
+  },
+  {
+   "idx": "7.C.3",
+   "content": "Integrating Multimodal Literacies A. Use medial and visual literacy skills to select, organize, and create multimodal content that articulates and enhances the purpose of the presentation using two or more communication"
+  },
+  {
+   "idx": "7.C.4",
+   "content": "Examining Media Messages A. Explain persuasive/informative techniques used in media to sway the audience (e.g., innuendo, card stacking, bandwagon, and appeal to emotions). B. Analyze media messages for facts, opinions, persuasive messages, word choice, and viewpoint. C. Compare and contrast the effectiveness of techniques in auditory, visual, and written media messages (e.g., authorship, format, "
+  },
+  {
+   "idx": "7.R",
+   "content": "The student will conduct research and read a series of conceptually related texts on selected topics to build knowledge on grade seven content and texts, solve problems, and support cross-curricular learning."
+  },
+  {
+   "idx": "7.R.1",
+   "content": "Evaluation and Synthesis of Information A. Formulate questions about a research topic, broadening or narrowing the inquiry as necessary. B. Collect, organize, and synthesize information from multiple sources using various notetaking formats. C. Evaluate and analyze the relevance, validity, and credibility of each source (primary, secondary, digital, and print), determining what information to incl"
+  }
+ ],
+ "7/science": [
+  {
+   "idx": "LS.1",
+   "content": "The student will demonstrate an understanding of scientific and engineering practices by"
+  },
+  {
+   "idx": "LS.2",
+   "content": "The student will investigate and understand that all living things are composed of one or more cells that support life processes, as described by the cell theory. Key ideas include"
+  },
+  {
+   "idx": "LS.3",
+   "content": "The student will investigate and understand that there are levels of structural organization in living things."
+  },
+  {
+   "idx": "LS.4",
+   "content": "The student will investigate and understand that there are chemical processes of energy transfer which are important for life."
+  },
+  {
+   "idx": "LS.5",
+   "content": "The student will investigate and understand that biotic and abiotic factors affect an ecosystem."
+  },
+  {
+   "idx": "LS.6",
+   "content": "The student will investigate and understand that populations in a biological community interact and are interdependent."
+  },
+  {
+   "idx": "LS.7",
+   "content": "The student will investigate and understand that adaptations support an organism’s survival in an ecosystem."
+  },
+  {
+   "idx": "LS.8",
+   "content": "The student will investigate and understand that ecosystems, communities, populations, and organisms are dynamic and change over time."
+  },
+  {
+   "idx": "LS.9",
+   "content": "The student will investigate and understand that relationships exist between ecosystem dynamics and human activity."
+  },
+  {
+   "idx": "LS.10",
+   "content": "The student will investigate and understand that organisms reproduce and transmit genetic information to new generations."
+  },
+  {
+   "idx": "LS.11",
+   "content": "The student will investigate and understand that populations of organisms can change over time."
+  }
+ ],
+ "7/social": [
+  {
+   "idx": "CE.1",
+   "content": "The student will apply history and social science skills to explain the foundations of the American constitutional democracy by"
+  },
+  {
+   "idx": "CE.2",
+   "content": "The student will apply history and social science skills to analyze how American constitutional government functions at the national level by"
+  },
+  {
+   "idx": "CE.3",
+   "content": "The student will apply history and social science skills to analyze how constitutional government functions at the state level by"
+  },
+  {
+   "idx": "CE.4",
+   "content": "The student will apply history and social science skills to analyze American constitutional government at the local level by"
+  },
+  {
+   "idx": "CE.5",
+   "content": "The student will apply history and social science skills to explain the judicial systems established by the Constitution of Virginia and the Constitution of the United States by"
+  },
+  {
+   "idx": "CE.6",
+   "content": "The student will apply history and social science skills to define citizenship by"
+  },
+  {
+   "idx": "CE.7",
+   "content": "The student will apply history and social science skills that exhibit effective and respectful participation in civic life including, but not limited to civility, trustworthiness and honesty, courtesy, respect for the rights of others, personal responsibility, military service, self-reliance, hard work, respect for the law, patriotism, and service in one’s community."
+  },
+  {
+   "idx": "CE.8",
+   "content": "The student will apply history and social science skills to examine the political process at the local, state, and national levels of government by"
+  },
+  {
+   "idx": "CE.9",
+   "content": "The student will apply history and social science skills to explain the role of the media and social media as well as its influence on local, state, and national levels of government by"
+  },
+  {
+   "idx": "CE.10",
+   "content": "The student will apply history and social science skills to analyze the role of public participation in American civic life by"
+  },
+  {
+   "idx": "CE.11",
+   "content": "The student will apply history and social science skills to analyze how economic decisions are made in the marketplace and in daily life by"
+  },
+  {
+   "idx": "CE.12",
+   "content": "The student will apply history and social science skills to describe the United States economy by"
+  },
+  {
+   "idx": "CE.13",
+   "content": "The student will apply history and social science skills to analyze the role of government in the United States economy by"
+  },
+  {
+   "idx": "CE.14",
+   "content": "The student will apply history and social science skills to explain career opportunities and understand the fundamentals of personal finance by"
+  }
+ ],
+ "8/math": [
+  {
+   "idx": "8.NS.1",
+   "content": "The student will compare and order real numbers and determine the relationships between real numbers."
+  },
+  {
+   "idx": "8.NS.2",
+   "content": "The student will investigate and describe the relationship between the subsets of the real number system."
+  },
+  {
+   "idx": "8.CE.1",
+   "content": "The student will estimate and apply proportional reasoning and computational procedures to solve contextual problems."
+  },
+  {
+   "idx": "8.MG.1",
+   "content": "The student will use the relationships among pairs of angles that are vertical angles, adjacent angles, supplementary angles, and complementary angles to determine the measure of unknown angles."
+  },
+  {
+   "idx": "8.MG.2",
+   "content": "The student will investigate and determine the surface area of square-based pyramids and the volume of cones and square-based pyramids."
+  },
+  {
+   "idx": "8.MG.3",
+   "content": "The student will apply translations and reflections to polygons in the coordinate plane."
+  },
+  {
+   "idx": "8.MG.4",
+   "content": "The student will apply the Pythagorean Theorem to solve problems involving right triangles, including those in context."
+  },
+  {
+   "idx": "8.MG.5",
+   "content": "The student will solve area and perimeter problems involving composite plane figures, including those in context."
+  },
+  {
+   "idx": "8.PS.1",
+   "content": "The student will use statistical investigation to determine the probability of independent and dependent events, including those in context."
+  },
+  {
+   "idx": "8.PS.2",
+   "content": "The student will apply the data cycle (formulate questions; collect or acquire data; organize and represent data; and analyze data and communicate results) with a focus on boxplots."
+  },
+  {
+   "idx": "8.PS.3",
+   "content": "The student will apply the data cycle (formulate questions; collect or acquire data; organize and represent data; and analyze data and communicate results) with a focus on scatterplots."
+  },
+  {
+   "idx": "8.PFA.1",
+   "content": "The student will represent, simplify, and generate equivalent algebraic expressions in one variable."
+  },
+  {
+   "idx": "8.PFA.2",
+   "content": "The student will determine whether a given relation is a function and determine the domain and range of a function."
+  },
+  {
+   "idx": "8.PFA.3",
+   "content": "The student will represent and solve problems, including those in context, by using linear functions and analyzing their key characteristics (the value of the y-intercept (b) and the coordinates of the ordered pairs in graphs will be limited to integers)."
+  },
+  {
+   "idx": "8.PFA.4",
+   "content": "The student will write and solve multistep linear equations in one variable, including problems in context that require the solution of a multistep linear equation in one variable."
+  },
+  {
+   "idx": "8.PFA.5",
+   "content": "The student will write and solve multistep linear inequalities in one variable, including problems in context that require the solution of a multistep linear inequality in one variable."
+  }
+ ],
+ "8/language": [
+  {
+   "idx": "8.DSR",
+   "content": "The student will build knowledge and comprehension skills from reading a range of challenging, content-rich texts. This includes fluently reading and gathering evidence from grade-level complex texts, reading widely on topics to gain purposeful knowledge and vocabulary, and using reading strategies when comprehension breaks down. A. Read a variety of grade-level complex text with accuracy, automat"
+  },
+  {
+   "idx": "8.RV",
+   "content": "The student will systematically build vocabulary and word knowledge based on grade eight content and texts."
+  },
+  {
+   "idx": "8.RV.1",
+   "content": "Vocabulary Development and Word Analysis A. Develop and accurately use general and academic language and content-specific vocabulary by listening to, reading, and discussing a variety of grade-eight texts and topics. B. Use context (e.g., the overall meaning of a sentence or paragraph; a word’s position or function in a sentence) to determine the meaning of words or phrases. C. Apply knowledge of "
+  },
+  {
+   "idx": "8.RL",
+   "content": "The student will use textual evidence to demonstrate comprehension and build knowledge from a variety of grade-level complex literary texts read to include short stories, literary nonfiction, novels, poetry, and drama."
+  },
+  {
+   "idx": "8.RL.1",
+   "content": "Key Ideas and Plot Details A. Analyze and explain the development of theme(s) over the course of texts and their relationship to the characters, settings, plots, and overall messages. B. Explain how different plot patterns (e.g., comedy, drama, tragedy) and subplots create meaning and examine their influence on characters, theme, pacing, and point of view. C. Justify the decisions and actions of d"
+  },
+  {
+   "idx": "8.RL.2",
+   "content": "Craft and Style A. Interpret the meaning and analyze the impact of poetic elements in prose and poetry (e.g., rhyme, rhythm, repetition, alliteration, and onomatopoeia) on the reader. B. Analyze how the elements of an author’s style (e.g., dialogue, sentence structure and word choices) are used to influence and develop tone and voice. C. Analyze how an author develops and contrasts the points of v"
+  },
+  {
+   "idx": "8.RL.3",
+   "content": "Integration of Concepts A. Compare and contrast the structure of two or more stories, poems, and plays and analyze how the differing structure of each literary text contributes to its meaning and style. B. Compare and contrast fictional portrayals of a time, place, or character with historical accounts of the same period as a means of understanding how authors of fiction use or alter history. C. C"
+  },
+  {
+   "idx": "8.RI",
+   "content": "The student will use textual evidence to demonstrate comprehension and build knowledge from grade-level complex informational texts read."
+  },
+  {
+   "idx": "8.RI.1",
+   "content": "Key Ideas and Confirming Details"
+  },
+  {
+   "idx": "8.RI.2",
+   "content": "Craft and Style A. Evaluate an author’s use of text features (e.g., boldface and italics; type set in color; underlining; indentation; sidebars; illustrations, graphics, and photographs; headings and subheadings; footnotes and annotations) to enhance and support the reader’s comprehension. B. Analyze how an author’s word choice, organizational pattern, language structure, viewpoints, and qualifica"
+  },
+  {
+   "idx": "8.RI.3",
+   "content": "Integration of Concepts A. Analyze ideas within and between selections including how specific sentences, paragraphs, sections, and text features contribute to the development and refinement of the ideas presented. B. Compare and contrast how two or more authors present conflicting information on the same topic by assessing where the texts disagree in reasoning and evidence."
+  },
+  {
+   "idx": "8.W",
+   "content": "The student will compose various works for diverse audiences and purposes, linked to grade eight content and texts."
+  },
+  {
+   "idx": "8.W.1",
+   "content": "Modes and Purposes for Writing A. Write narratives to develop real or imagined experiences or to alter an existing text, using well-structured event sequences, precise words and phrases, and transitional words to develop the characters, convey sequence, and capture the action. B. Write expository texts to examine a topic or concept that conveys ideas and information by maintaining a clear focus wi"
+  },
+  {
+   "idx": "8.W.2",
+   "content": "Organization and Composition A. Generate and organize ideas using the writing process (planning, drafting, revising, editing) to develop multi-paragraph texts. This includes:"
+  },
+  {
+   "idx": "8.W.3",
+   "content": "Usage and Mechanics A. Revise writing for clarity of content, word choice, sentence variety, and transition among paragraphs. B. Self-and peer-edit writing for capitalization, spelling, punctuation, sentence structure, paragraphing, and Standard English (See Language Usage for grade level expectations)."
+  },
+  {
+   "idx": "8.LU",
+   "content": "The student will use the conventions of Standard English when speaking and writing, differentiating between contexts that call for formal English and situations where informal discourse is more appropriate."
+  },
+  {
+   "idx": "8.LU.1",
+   "content": "Grammar A. Construct simple, compound, complex, and compound-complex sentences to communicate ideas clearly and add variety to writing."
+  },
+  {
+   "idx": "8.LU.2",
+   "content": "Mechanics A. Construct complete sentences with appropriate punctuation, avoiding comma splices and run-ons in writing. B. Use and punctuate dialogue and direct quotations appropriately in writing. C. Recognize and consistently spell frequently used words accurately. D. Consult reference materials to check and correct spelling."
+  },
+  {
+   "idx": "8.C",
+   "content": "The student will develop effective oral communication and collaboration skills to build a community of learners that process, understand, and interpret content together."
+  },
+  {
+   "idx": "8.C.1",
+   "content": "Communication, Listening, and Collaboration A. Facilitate and contribute to a range of sustained collaborative discussions with diverse partners on grade eight topics and texts. This includes:"
+  },
+  {
+   "idx": "8.C.2",
+   "content": "Speaking and Presentation of Ideas A. Deliver collaborative and individual formal and informal interactive presentations This includes:"
+  },
+  {
+   "idx": "8.C.3",
+   "content": "Integrating Multimodal Literacies A. Plan and present a multimodal presentation that"
+  },
+  {
+   "idx": "8.C.4",
+   "content": "Examining Media Messages A. Examine how the media can influence beliefs, behaviors, and interpretations by using persuasive techniques (e.g., name calling, innuendo, glittering generalities, card stacking, bandwagon, testimonials, appeal to prestige, snobbery or plain folks, appeal to emotions). B. Analyze how similar information is presented in diverse media formats by examining electronic, print"
+  },
+  {
+   "idx": "8.R",
+   "content": "The student will conduct research and read a series of conceptually related texts on selected topics to build knowledge on grade-eight content and texts, solve problems, and support cross-curricular learning."
+  },
+  {
+   "idx": "8.R.1",
+   "content": "Evaluation and Synthesis of Information A. Formulate and revise questions about a research topic, broadening or narrowing the inquiry as necessary. B. Collect, organize, and synthesize information from multiple sources using various notetaking formats."
+  }
+ ],
+ "8/science": [
+  {
+   "idx": "PS.1",
+   "content": "The student will demonstrate an understanding of scientific and engineering practices by"
+  },
+  {
+   "idx": "PS.2",
+   "content": "The student will investigate and understand that matter is composed of atoms."
+  },
+  {
+   "idx": "PS.3",
+   "content": "The student will investigate and understand that matter has properties and is conserved in chemical and physical processes."
+  },
+  {
+   "idx": "PS.4",
+   "content": "The student will investigate and understand that the periodic table is a model used to organize elements based on their atomic structure. Key uses include"
+  },
+  {
+   "idx": "PS.5",
+   "content": "The student will investigate and understand that energy is conserved. Key ideas include"
+  },
+  {
+   "idx": "PS.6",
+   "content": "The student will investigate and understand that waves are important in the movement of energy."
+  },
+  {
+   "idx": "PS.7",
+   "content": "The student will investigate and understand that electromagnetic radiation has characteristics."
+  },
+  {
+   "idx": "PS.8",
+   "content": "The student will investigate and understand that work, force, and motion are related."
+  },
+  {
+   "idx": "PS.9",
+   "content": "The student will investigate and understand that there are basic principles of electricity and magnetism."
+  }
+ ],
+ "8/social": [
+  {
+   "idx": "WG.1",
+   "content": "The student will apply history and social science skills to explain how geographic information and geospatial tools are used to make decisions by"
+  },
+  {
+   "idx": "WG.2",
+   "content": "The student will apply history and social science skills to evaluate the significance of natural, human, and capital resources by"
+  },
+  {
+   "idx": "WG.3",
+   "content": "The student will analyze the characteristics of the regions of the United States and Canada by"
+  },
+  {
+   "idx": "WG.4",
+   "content": "The student will analyze the characteristics of the regions of Latin America and the Caribbean by"
+  },
+  {
+   "idx": "WG.5",
+   "content": "The students will analyze the characteristics of the regions of Europe by"
+  },
+  {
+   "idx": "WG.6",
+   "content": "The student will analyze the characteristics of the regions of Russia and Central Asia by"
+  },
+  {
+   "idx": "WG.7",
+   "content": "The student will analyze the characteristics of the regions of sub-Saharan Africa by"
+  },
+  {
+   "idx": "WG.8",
+   "content": "The student will analyze the characteristics of the regions of North Africa and Southwest Asia by"
+  },
+  {
+   "idx": "WG.9",
+   "content": "The student will analyze the characteristics of the regions of South Asia and Southeast Asia by"
+  },
+  {
+   "idx": "WG.10",
+   "content": "The student will analyze the characteristics of the East Asian region by"
+  },
+  {
+   "idx": "WG.11",
+   "content": "The student will analyze the characteristics of the Australian and Pacific Islands regions by"
+  },
+  {
+   "idx": "WG.12",
+   "content": "The student will apply social science skills to understand the distribution, growth rates, and characteristics of human population by"
+  },
+  {
+   "idx": "WG.13",
+   "content": "The student will apply history and social science skills to understand population and migration by"
+  },
+  {
+   "idx": "WG.14",
+   "content": "The student will apply history and social science skills to determine cultural patterns and interactions across time and place by"
+  },
+  {
+   "idx": "WG.15",
+   "content": "The student will apply history and social science skills to analyze the patterns of rural and urban migration and development by"
+  },
+  {
+   "idx": "WG.16",
+   "content": "The student will apply history and social science skills to understand the impact of the growing interdependence of the world by"
+  },
+  {
+   "idx": "WG.17",
+   "content": "The student will apply history and social science skills to analyze strategic geographic features and resources by"
+  }
+ ],
+ "9/math": [
+  {
+   "idx": "A.EO.1",
+   "content": "The student will represent verbal quantitative situations algebraically and evaluate these expressions for given replacement values of the variables."
+  },
+  {
+   "idx": "A.EO.2",
+   "content": "The student will perform operations on and factor polynomial expressions in one variable."
+  },
+  {
+   "idx": "A.EO.3",
+   "content": "The student will derive and apply the laws of exponents."
+  },
+  {
+   "idx": "A.EO.4",
+   "content": "The student will simplify and determine equivalent radical expressions involving square roots of whole numbers and cube roots of integers."
+  },
+  {
+   "idx": "A.EI.1",
+   "content": "The student will represent, solve, explain, and interpret the solution to multistep linear equations and inequalities in one variable and literal equations for a specified variable."
+  },
+  {
+   "idx": "A.EI.2",
+   "content": "The student will represent, solve, explain, and interpret the solution to a system of two linear equations, a linear inequality in two variables, or a system of two linear inequalities in two variables."
+  },
+  {
+   "idx": "A.EI.3",
+   "content": "The student will represent, solve, and interpret the solution to a quadratic equation in one variable."
+  },
+  {
+   "idx": "A.F.1",
+   "content": "The student will investigate, analyze, and compare linear functions algebraically and graphically, and model linear relationships."
+  },
+  {
+   "idx": "A.F.2",
+   "content": "The student will investigate, analyze, and compare characteristics of functions, including quadratic, and exponential functions, and model quadratic and exponential relationships."
+  },
+  {
+   "idx": "A.ST.1",
+   "content": "The student will apply the data cycle (formulate questions; collect or acquire data; organize and represent data; and analyze data and communicate results) with a focus on representing bivariate data in scatterplots and determining the curve of best fit using linear and quadratic functions."
+  }
+ ],
+ "9/language": [
+  {
+   "idx": "9.DSR",
+   "content": "The student will build knowledge and comprehension skills from reading a range of challenging, content-rich texts. This includes fluently reading and gathering evidence from grade-level complex texts, reading widely on topics to gain purposeful knowledge and vocabulary, and using reading strategies when comprehension breaks down. A. Read a variety of grade-level complex text with accuracy, automat"
+  },
+  {
+   "idx": "9.RV",
+   "content": "The student will systematically build vocabulary and word knowledge based on grade nine content and texts."
+  },
+  {
+   "idx": "9.RV.1",
+   "content": "Vocabulary Development and Word Analysis A. Develop and accurately use general academic and content-specific vocabulary through reading, discussing, and writing about grade-level texts and topics. B. Use context and sentence structure to clarify the literal and figurative meanings of words and phrases. C. Use structural analysis of roots, affixes, and etymology to explain the meanings of unfamilia"
+  },
+  {
+   "idx": "9.RL",
+   "content": "The student will use textual evidence to demonstrate comprehension and build knowledge from a variety of grade-level complex literary texts read to include narratives, literary nonfiction, poetry, and drama."
+  },
+  {
+   "idx": "9.RL.1",
+   "content": "Key Ideas and Plot Details A. Explain stated or implied themes, analyzing their development over the course of texts, and the relationship of characters, setting, and plot to those themes."
+  },
+  {
+   "idx": "9.RL.2",
+   "content": "Craft and Style A. Analyze the use of rhyme, rhythm, sound, imagery, and other literary devices in poetry to convey a message and elicit a reader’s emotions. B. Explain how an author’s specific word choices, syntax, tone, and voice shape the meaning of the text. C. Explain the point of view and distinguish between what is implied or intended because of the use of hyperbole, irony, sarcasm, and und"
+  },
+  {
+   "idx": "9.RL.3",
+   "content": "Integration of Concepts A. Describe how the historical or social function of a text depends on its context (e.g., cultural, situational, historical, geographical). B. Explain the relationships between and among particular literary elements of a story or play, including how the setting shapes the plot and characters."
+  },
+  {
+   "idx": "9.RI",
+   "content": "The student will use textual evidence to demonstrate comprehension and build knowledge from grade-level complex informational texts read."
+  },
+  {
+   "idx": "9.RI.1",
+   "content": "Key Ideas and Confirming Details A. Analyze the development of main ideas over the course of texts, including how they emerge, are shaped, and are refined by specific details to help reveal the author’s intended purpose for writing. B. Explain the purpose and interpret the use of data and information in maps, charts, graphs, timelines, tables, and diagrams in informational, historical, scientific,"
+  },
+  {
+   "idx": "9.RI.2",
+   "content": "Craft and Style A. Compare characteristics of expository, technical, and persuasive texts, including their differences in purpose, format, and text structure."
+  },
+  {
+   "idx": "9.RI.3",
+   "content": "Integration of Concepts A. Compare the perspectives and viewpoints of two or more authors regarding their treatment of the same or similar topics, including the details they include and emphasize in their respective accounts as well as the impact of each author’s qualifications. B. Evaluate the clarity and accuracy of information found in informational texts, corroborating or challenging conclusio"
+  },
+  {
+   "idx": "9.W",
+   "content": "The student will write in various forms for diverse audiences and purposes linked to grade nine content and texts with an emphasis on expository and persuasive writing."
+  },
+  {
+   "idx": "9.W.1",
+   "content": "Modes and Purposes for Writing A. Write extended pieces that:"
+  },
+  {
+   "idx": "9.W.2",
+   "content": "Organization and Composition A. Plan and organize writing to address a specific audience and purpose using the writing process (planning, drafting, revising, editing). This includes:"
+  },
+  {
+   "idx": "9.W.3",
+   "content": "Usage and Mechanics A. Revise writing for clarity of content, accuracy, and adequate elaboration. B. Use peer- and self-evaluation to edit writing for clarity and quality of information, addressing strengths and making suggestions regarding how writing might be improved. C. Edit writing for appropriate conventions, style, and language (See Language Usage for grade level expectations)."
+  },
+  {
+   "idx": "9.LU",
+   "content": "The student will use the conventions of Standard English when speaking and writing, differentiating between contexts that call for formal English and situations where informal discourse is more appropriate."
+  },
+  {
+   "idx": "9.LU.1",
+   "content": "Grammar A. Use parallel structure across sentences and paragraphs to link and compare/contrast ideas in writing and speaking. B. Craft and apply a variety of sentence structures to infuse sentence variety in writing. C. Use and apply the active and passive voice as appropriate when speaking and writing. D. Use appositives and main and subordinate clauses to convey and clarify a message when speaki"
+  },
+  {
+   "idx": "9.LU.2",
+   "content": "Mechanics A. Use commas and semicolons to distinguish and divide main and subordinate clauses to link two or more closely related independent clauses when writing. B. Apply a style manual, such as that of the Modern Language Association (MLA) or the American Psychological Association (APA) to apply rules for citing sources. C. Spell correctly, consulting reference materials to check as needed."
+  },
+  {
+   "idx": "9.C",
+   "content": "The student will develop effective oral communication and collaboration skills to build a community of learners that process, understand, and interpret content together."
+  },
+  {
+   "idx": "9.C.1",
+   "content": "Communication, Listening, and Collaboration A. Facilitate and contribute to a range of sustained collaborative discussions with diverse partners on grade nine topics and texts. This includes:"
+  },
+  {
+   "idx": "9.C.2",
+   "content": "Speaking and Presentation of Ideas A. Report orally on a topic or text or present an opinion. This includes:"
+  },
+  {
+   "idx": "9.C.3",
+   "content": "Integrating Multimodal Literacies A. Make strategic use of multimodal tools. B. Monitor, analyze, and use multiple streams of simultaneous information. C. Create media messages for diverse audiences and purposes."
+  },
+  {
+   "idx": "9.C.4",
+   "content": "Examining Media Messages A. Determine the purpose of the media message and its effect on the audience. B. Analyze the persuasive techniques used in diverse media formats (e.g., name calling, innuendo, glittering generalities, card stacking, bandwagon, testimonials, appeal to prestige, snobbery or plain folks, appeal to emotion). C. Evaluate the credibility, word choice, viewpoints, and bias in med"
+  },
+  {
+   "idx": "9.R",
+   "content": "The student will conduct research and read a series of conceptually related texts on selected topics to build knowledge on grade-nine content, texts and areas prompted by student interest."
+  },
+  {
+   "idx": "9.R.1",
+   "content": "Evaluation and Synthesis of Information A. Formulate and revise questions about a research topic, broadening or narrowing the inquiry as necessary. B. Gather and organize information from various sources, including internet resources, electronic databases, and other technology. C. Analyze and evaluate the primary and secondary sources gathered for their credibility, reliability, accuracy, and usef"
+  }
+ ],
+ "9/science": [
+  {
+   "idx": "BIO.1",
+   "content": "The student will demonstrate an understanding of scientific and engineering practices by"
+  },
+  {
+   "idx": "BIO.2",
+   "content": "The student will investigate and understand that chemical and biochemical processes are essential for life."
+  },
+  {
+   "idx": "BIO.3",
+   "content": "The student will investigate and understand that cells have structure and function."
+  },
+  {
+   "idx": "BIO.4",
+   "content": "The student will investigate and understand that bacteria and viruses affect living systems."
+  },
+  {
+   "idx": "BIO.5",
+   "content": "The student will investigate and understand that there are common mechanisms for inheritance."
+  },
+  {
+   "idx": "BIO.6",
+   "content": "The student will investigate and understand that modern classification systems can be used as organizational tools for scientists in the study of organisms. Key ideas include"
+  },
+  {
+   "idx": "BIO.7",
+   "content": "The student will investigate and understand that populations change through time."
+  },
+  {
+   "idx": "BIO.8",
+   "content": "The student will investigate and understand that there are dynamic equilibria within populations, communities, and ecosystems."
+  },
+  {
+   "idx": "ES.1",
+   "content": "The student will demonstrate an understanding of scientific and engineering practices by"
+  },
+  {
+   "idx": "ES.2",
+   "content": "The student will demonstrate an understanding that there are scientific concepts related to the origin and evolution of the universe."
+  },
+  {
+   "idx": "ES.3",
+   "content": "The student will investigate and understand that Earth is unique in our solar system."
+  },
+  {
+   "idx": "ES.4",
+   "content": "The student will investigate and understand that there are major rock-forming and ore minerals."
+  },
+  {
+   "idx": "ES.5",
+   "content": "The student will investigate and understand that igneous, metamorphic, and sedimentary rocks can transform."
+  },
+  {
+   "idx": "ES.6",
+   "content": "The student will investigate and understand that resource use is complex. Key ideas include"
+  },
+  {
+   "idx": "ES.7",
+   "content": "The student will investigate and understand that plate tectonic theory explains Earth’s internal and external geologic processes."
+  },
+  {
+   "idx": "ES.8",
+   "content": "The student will investigate and understand that freshwater resources influence and are influenced by geologic processes and human activity."
+  },
+  {
+   "idx": "ES.9",
+   "content": "The student will investigate and understand that many aspects of the history and evolution of Earth and life can be inferred by studying rocks and fossils. Key ideas include"
+  },
+  {
+   "idx": "ES.10",
+   "content": "The student will investigate and understand that oceans are complex, dynamic systems and are subject to long- and short-term variations."
+  },
+  {
+   "idx": "ES.11",
+   "content": "The student will investigate and understand that the atmosphere is a complex, dynamic system and is subject to long-and short-term variations. Key ideas include"
+  },
+  {
+   "idx": "ES.12",
+   "content": "The student will investigate and understand that Earth’s weather and climate are the result of the interaction of the sun’s energy with the atmosphere, oceans, and the land."
+  }
+ ],
+ "9/social": [
+  {
+   "idx": "WHI.1",
+   "content": "The student will apply history and social science skills to describe the period from the Paleolithic era into the Neolithic era by"
+  },
+  {
+   "idx": "WHI.2",
+   "content": "The student will apply history and social science skills to describe early societies in the Fertile Crescent by"
+  },
+  {
+   "idx": "WHI.3",
+   "content": "The students will apply history and social science skills to describe ancient Asian societies by"
+  },
+  {
+   "idx": "WHI.4",
+   "content": "The student will apply history and social science skills to understand Persia and Greece by"
+  },
+  {
+   "idx": "WHI.5",
+   "content": "The student will apply history and social science skills to understand Rome and the Byzantine Empire by"
+  },
+  {
+   "idx": "WHI.6",
+   "content": "The student will apply history and social science skills to understand Islamic societies by"
+  },
+  {
+   "idx": "WHI.7",
+   "content": "The student will apply history and social science skills to understand the civilizations of China in the Middle Ages by"
+  },
+  {
+   "idx": "WHI.8",
+   "content": "The student will apply history and social science skills to describe the sub-Saharan civilizations of Ghana and Mali in medieval Africa by"
+  },
+  {
+   "idx": "WHI.9",
+   "content": "The student will apply history and social science skills to understand the civilizations of medieval Japan by"
+  },
+  {
+   "idx": "WHI.10",
+   "content": "The student will apply history and social science skills to understand the civilizations of medieval Europe by"
+  },
+  {
+   "idx": "WHI.11",
+   "content": "The student will apply history and social science skills to analyze the conflict and cooperation between the papacy and European monarchs by"
+  },
+  {
+   "idx": "WHI.12",
+   "content": "The student will apply history and social science skills to understand the Mesoamerican and Andean civilizations by"
+  },
+  {
+   "idx": "WHI.13",
+   "content": "The student will apply history and social science skills to understand the factors contributing to the European Renaissance by"
+  }
+ ]
+}

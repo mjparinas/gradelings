@@ -626,6 +626,12 @@ export const lessons: GradeLessons = {
     ["Herons can't make their own food.", "They eat other animals."],
     "consumers",
   ),
+  "science/va-g5-energy-resources": lesson(
+    ["Renewable resources, like sunlight and wind, won't run out.", "Nonrenewable resources, like oil and coal, will run out.", "Solar panels use sunlight and wind turbines use wind to make electricity.", "Dams make electricity but can block fish like salmon."],
+    "Gasoline comes from oil. Is it renewable?",
+    ["Oil took millions of years to form.", "It will run out."],
+    "no, it is nonrenewable",
+  ),
   // Missouri (us-mo)
   "science/mo-g5-sun-stars": lesson(
     ["The sun looks brighter than other stars because it is much closer to Earth.", "Far-off headlights look dim and near ones bright: distance works the same way for stars.", "Earth spins once about every 24 hours, giving day and night.", "The North Star seems to stay still because it is almost straight above Earth's axis."],

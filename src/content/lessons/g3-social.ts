@@ -920,6 +920,24 @@ export const lessons: GradeLessons = {
     ["It is not the mayor or the president.", "The state leader is elected by all of Indiana."],
     "the governor",
   ),
+  "social/va-g3-citizens": lesson(
+    ["Good citizens are honest, fair and helpful.", "A local public issue is a problem that affects people in the community.", "Primary sources are from the time, like old photos. Timelines show order."],
+    "Which is a primary source about your town’s past: an old photo of Main Street, or a new textbook?",
+    ["A primary source was made at the time.", "The old photo was taken back then."],
+    "an old photo of Main Street",
+  ),
+  "social/va-g3-government": lesson(
+    ["Rules and laws keep people safe and fair. The Constitution is the country’s highest law.", "Government has three branches: one makes laws, one carries them out, one judges them.", "Cities and counties make local laws. People can speak at council meetings."],
+    "A city sets a speed limit near schools. What kind of law is it?",
+    ["The city made it.", "Laws made by a city or county are local laws."],
+    "a local law",
+  ),
+  "social/va-g3-mali": lesson(
+    ["Mali was a rich empire in West Africa, along the Niger River.", "Traders swapped gold from the south for salt from the Sahara.", "Timbuktu was a city of trade and learning, and Mansa Musa was a famous ruler."],
+    "What two goods were traded most in Mali?",
+    ["One came from mines in the south.", "One came from the desert and kept food safe."],
+    "gold and salt",
+  ),
   // Missouri (us-mo)
   "social/mo-g3-missouri-map": lesson(
     ["Missouri is in the middle of the United States and touches eight states.", "The Mississippi River is its eastern border; the Missouri River crosses the state.", "Jefferson City is the capital. Kansas City and St. Louis are its biggest cities."],

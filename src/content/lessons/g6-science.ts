@@ -777,6 +777,18 @@ export const lessons: GradeLessons = {
     ["Tape stores an analog wave.", "Each copy adds noise."],
     "noise is added with each copy",
   ),
+  "science/va-g6-seasons-tides": lesson(
+    ["Earth's axis is tilted about 23.5°. Without the tilt there would be almost no seasons.", "When a hemisphere tilts toward the Sun, sunlight hits more directly and it has summer.", "Earth orbits the Sun about every 365 days.", "The Moon's and Sun's gravity pull on the oceans to make tides."],
+    "When the Northern Hemisphere tilts toward the Sun, what season does it have?",
+    ["Tilted toward the Sun means more direct sunlight.", "More direct sunlight means summer."],
+    "summer",
+  ),
+  "science/va-g6-watersheds": lesson(
+    ["A watershed is all the land that drains into one body of water.", "Most of Virginia drains to the Chesapeake Bay, an estuary. Some drains to the Gulf of Mexico or straight to the Atlantic Ocean.", "Pollution and sediment on land wash into streams, so caring for land protects the water."],
+    "Why does mud washing into a river harm underwater grasses?",
+    ["Mud makes the water cloudy.", "Plants need sunlight to grow."],
+    "It blocks the sunlight they need.",
+  ),
   // Missouri (us-mo)
   "science/mo-g6-weather": lesson(
     ["Evaporation: liquid water becomes vapour. Condensation: vapour cools into cloud droplets.", "Humidity is the amount of water vapour in the air.", "Warm, moist air from the Gulf meets cold, dry air from Canada over the middle of the country.", "Where those air masses meet, warm air is pushed up, cools and makes storms, including the thunderstorms Missouri gets in spring."],

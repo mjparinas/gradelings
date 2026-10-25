@@ -584,6 +584,12 @@ export const lessons: GradeLessons = {
     ["Those are cold temperatures."],
     "winter",
   ),
+  "science/water-world": lesson(
+    ["The sun warms water, and it rises into the air.", "The water forms clouds of tiny drops, then falls as rain or snow.", "The water flows back to lakes and oceans, and the cycle starts again."],
+    "What comes right after clouds form in the water cycle?",
+    ["Clouds hold tiny drops of water.", "When the drops get heavy, they fall."],
+    "rain or snow falls",
+  ),
   // Missouri (us-mo)
   "science/mo-g3-weather-climate": lesson(
     ["Weather is what the air is like today. Climate is the usual weather over many years.", "Read temperature and rain data for each season.", "Mountains get the most snow in winter."],
