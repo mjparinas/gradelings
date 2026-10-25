@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { adoptersOf } from "../adopters";
 import { COURSES } from "../all";
 import { FRAMEWORKS, getFramework, UPCOMING_FRAMEWORKS } from "../frameworks";
 import { localeOf, questionText } from "../locale";
@@ -66,7 +67,8 @@ describe("Colorado", () => {
       expect.arrayContaining(["co-g1-colorado-symbols", "co-g4-first-peoples", "co-g4-governing-colorado", "co-g8-westward", "co-g9-governing-colorado"]),
     );
     for (const { u, key } of own) {
-      expect(Object.keys(u.standards), `${key} carries only Colorado standards`).toEqual(["us-co"]);
+      // Frameworks that copy Colorado's units (their contract's adoptsFrom) add their own standards to them.
+      expect(Object.keys(u.standards).filter((f) => !adoptersOf("us-co").includes(f)), `${key} carries only Colorado standards`).toEqual(["us-co"]);
       expect(["math", "language", "social", "science"], `${key} is a core subject`).toContain(key.split("/")[1]);
     }
   });
