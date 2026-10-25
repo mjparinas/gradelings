@@ -626,4 +626,10 @@ export const lessons: GradeLessons = {
     ["Herons can't make their own food.", "They eat other animals."],
     "consumers",
   ),
+  "science/va-g5-energy-resources": lesson(
+    ["Renewable resources, like sunlight and wind, won't run out.", "Nonrenewable resources, like oil and coal, will run out.", "Solar panels use sunlight and wind turbines use wind to make electricity.", "Dams make electricity but can block fish like salmon."],
+    "Gasoline comes from oil. Is it renewable?",
+    ["Oil took millions of years to form.", "It will run out."],
+    "no, it is nonrenewable",
+  ),
 };

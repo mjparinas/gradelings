@@ -638,4 +638,28 @@ export const lessons: GradeLessons = {
     ["He lived in Indianapolis.", "His home is still there."],
     "Indiana",
   ),
+  "social/va-g2-difference-makers": lesson(
+    ["Difference makers solve problems and help others.", "Ask: what problem did they help solve?", "Dr. Charles Drew found ways to store blood. Dolores Huerta organized farm workers."],
+    "Which word describes a person who keeps trying?",
+    ["They don't give up.", "That is being determined."],
+    "determined",
+  ),
+  "social/va-g2-first-peoples": lesson(
+    ["Indigenous peoples lived across America long before Europeans came.", "Each region shaped how a nation lived: forests, plains, deserts or coasts.", "Virginia recognizes eleven tribes today, such as the Pamunkey, and they are living communities."],
+    "Why did nations in different regions live in different ways?",
+    ["Think about what was nearby.", "People used the trees, animals, water and soil of their land."],
+    "They used what their land gave them.",
+  ),
+  "social/va-g2-explorers-founders": lesson(
+    ["Explorers sailed to the Americas hoping for riches and new trade routes.", "In the American Revolution, the colonies fought for freedom from Great Britain.", "Founders such as George Washington, Thomas Jefferson and Benjamin Franklin helped start the new nation."],
+    "Who is called the Father of our Country?",
+    ["He led the army in the Revolution.", "He became the first president."],
+    "George Washington",
+  ),
+  "social/va-g2-nation-landmarks": lesson(
+    ["Thirteen colonies joined to form the United States.", "The nation grew: the Louisiana Purchase (1803) doubled its size.", "Landmarks like the Lincoln Memorial and the Statue of Liberty honor people and ideas."],
+    "Which country sold the Louisiana Purchase to the United States?",
+    ["It happened in 1803.", "Napoleon sold the land."],
+    "France",
+  ),
 };

@@ -686,4 +686,22 @@ export const lessons: GradeLessons = {
     ["Roots hold soil in place.", "A bare hill has nothing to hold the soil."],
     "the bare hillside",
   ),
+  "science/va-g4-seasons-moon": lesson(
+    ["The seasons repeat every year: spring, summer, fall, winter.", "Days have the most daylight in summer and the least in winter, around December.", "The Moon's main phases repeat about every month: new, first quarter, full, third quarter."],
+    "Which main phase comes after the full moon?",
+    ["Order: new → first quarter → full → third quarter.", "After the full moon comes the third quarter."],
+    "third quarter moon",
+  ),
+  "science/va-g4-ocean": lesson(
+    ["The ocean floor has a continental shelf, a steep slope and a deep, flat abyssal plain.", "Tides rise and fall about twice a day, pulled by the moon.", "Estuaries, like the Chesapeake Bay, mix fresh river water with salt water."],
+    "What is an estuary?",
+    ["Rivers flow into the sea.", "Fresh water mixes with salt water."],
+    "where fresh river water mixes with salt water",
+  ),
+  "science/va-g4-virginia-resources": lesson(
+    ["Virginia's natural resources include forests, water, soil, wildlife and minerals.", "Some energy, like solar and wind, is renewable. Coal and natural gas are not.", "Using resources wisely keeps them for the future."],
+    "Is solar power renewable or nonrenewable?",
+    ["Ask: will it run out?", "The sun keeps shining every day."],
+    "renewable",
+  ),
 };

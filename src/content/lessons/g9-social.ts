@@ -1220,4 +1220,58 @@ export const lessons: GradeLessons = {
     ["It is the next best choice you gave up.", "You gave up the pay from the shift."],
     "the pay from the shift you didn't work",
   ),
+  "social/ca-g6-ancient-india": lesson(
+    ["The Indo-Aryans brought a language that became Sanskrit; their ways blended with earlier ones.", "The caste system divided society; Brahmins were priests and teachers.", "Epics: the Ramayana tells of Rama and Sita; the Bhagavad Gita is part of the Mahabharata. The Maurya Empire united much of India."],
+    "What were Brahmins?",
+    ["They were the top group in the caste system.", "They led worship and taught."],
+    "priests and teachers",
+  ),
+  "social/ca-g6-greek-world": lesson(
+    ["Greeks lived by the sea and traded across the Aegean and Mediterranean.", "Myths: Poseidon ruled the sea; Achilles' heel means a weak spot.", "Thinkers: Socrates taught Plato, who founded the Academy; Hippocrates is the father of medicine. Plays were in open-air theatres."],
+    "Hippocrates is known as the father of what?",
+    ["Doctors still take an oath named after him.", "He studied illness and healing."],
+    "medicine",
+  ),
+  "social/ca-g6-pharaohs-persia-alexander": lesson(
+    ["Ramses the Great built huge temples, like Abu Simbel. Cyrus the Great founded the Persian Empire.", "At Thermopylae (480 BCE), Spartans held off a huge Persian army.", "Alexander spread Greek culture to Egypt and India, creating Hellenistic culture. The Library of Alexandria collected scrolls."],
+    "Who founded the Persian Empire?",
+    ["He conquered many kingdoms in the 500s BCE.", "He is called “the Great”."],
+    "Cyrus the Great",
+  ),
+  "social/ca-g6-qin-and-han": lesson(
+    ["Mountains and rivers made China hard to govern because travel was slow.", "Confucius taught that rulers should lead by good example. The Qin united China; the Han ruled for 400 years.", "Under the Han, Buddhism came from India along the Silk Road; monks translated texts. The White Horse Temple is one of the first."],
+    "How did Confucius say a ruler should govern?",
+    ["Confucius valued respect and good behaviour.", "People follow a leader who acts well."],
+    "by setting a good example",
+  ),
+  "social/ca-g6-roman-empire": lesson(
+    ["Rome beat Carthage in three Punic Wars, then grew into an empire from Britain to Egypt and the Middle East.", "The Pax Romana was about 200 years of peace.", "Legacies: Latin (the root of Spanish, French, Italian and many English words), roads, aqueducts and law."],
+    "Rome fought the Punic Wars against which city?",
+    ["It was a powerful trading city in North Africa.", "Hannibal led its army across the Alps."],
+    "Carthage",
+  ),
+  "social/ca-g7-imperial-china": lesson(
+    ["The Tang and Song dynasties grew more rice, built busy cities like Hangzhou and traded widely.", "Chinese inventions include paper, printing, gunpowder and the magnetic compass.", "Scholar-officials, chosen by Confucian exams, ran the government. Under Mongol rule they lost much of that role."],
+    "What were educated men who passed the exams and served in government called?",
+    ["They studied Confucian learning for the exams.", "Then they served the emperor as officials."],
+    "scholar-officials",
+  ),
+  "social/ca-g7-renaissance-cities": lesson(
+    ["Florence and Venice grew rich from banking and trade. The Medici paid artists and scholars.", "Marco Polo’s book made Europeans curious about Asia; silk, spices and porcelain came west.", "Renaissance advances came in art, science, mapmaking, engineering and writing, like Shakespeare’s plays."],
+    "How did Florence grow rich?",
+    ["Florence had powerful banking families.", "It also made and traded fine wool cloth."],
+    "banking and the wool cloth trade",
+  ),
+  "social/ca-g7-west-african-life": lesson(
+    ["Many West Africans lived in extended families, with several generations close together.", "Labour specialization means people do different jobs and trade. Cities like Timbuktu, Djenné and Gao grew on the Niger and Saharan routes.", "Arabic became a language of records, trade and Islamic scholarship, especially in Timbuktu."],
+    "What does labour specialization mean?",
+    ["One person can’t make everything well.", "People do different jobs and trade what they make."],
+    "people do different jobs and trade with each other",
+  ),
+  "social/wa-g6-mesopotamia-egypt": lesson(
+    ["A civilization is a complex society with cities, government, jobs and often writing.", "Mesopotamia grew between the Tigris and Euphrates. Egypt grew along the Nile.", "Mesopotamians wrote in cuneiform and had Hammurabi’s Code. Egyptians used hieroglyphs."],
+    "Why was writing laws down, as in Hammurabi’s Code, important?",
+    ["Before, rules could change from person to person.", "Written laws let everyone know the same rules."],
+    "people could know the rules and they applied the same way",
+  ),
 };
