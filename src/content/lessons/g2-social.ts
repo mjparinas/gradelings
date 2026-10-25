@@ -745,4 +745,23 @@ export const lessons: GradeLessons = {
     ["Find column B first.", "Then go to row 3."],
     "column B, then row 3",
   ),
+  // Tennessee
+  "social/tn-g2-tennessee-neighbors": lesson(
+    ["Tennessee shares borders with eight states, more than almost any other state.", "Kentucky and Virginia are north; Georgia, Alabama and Mississippi are south.", "North Carolina is east, and Arkansas and Missouri are across the Mississippi River to the west."],
+    "Which river forms Tennessee's western border?",
+    ["Look at the far west of a map of Tennessee.", "The longest river in the country runs there."],
+    "the Mississippi River",
+  ),
+  "social/tn-g2-constitutions-branches": lesson(
+    ["A constitution is a plan for government. The United States and Tennessee each have one.", "Government has three branches: one makes laws, one carries them out, and one judges them.", "Congress makes national laws. The General Assembly makes Tennessee's laws."],
+    "Which branch of government makes the laws?",
+    ["Think of who writes and votes on new laws.", "Congress and the General Assembly do that."],
+    "the legislative branch",
+  ),
+  "social/tn-g2-monuments-symbols": lesson(
+    ["Monuments and symbols help us remember people and ideas.", "The Statue of Liberty stands for freedom. The bald eagle is a national symbol.", "Tennessee's State Capitol in Nashville is a symbol of the state."],
+    "What does the Statue of Liberty stand for?",
+    ["It welcomed people arriving by ship.", "She holds a torch high."],
+    "freedom",
+  ),
 };

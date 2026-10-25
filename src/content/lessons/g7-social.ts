@@ -1406,4 +1406,5 @@ export const lessons: GradeLessons = {
     ["Shinto shrines are often in natural places, marked by a torii gate.", "They honour kami, the spirits in nature and special places."],
     "kami, the spirits in nature and special places",
   ),
+  // Tennessee
 };

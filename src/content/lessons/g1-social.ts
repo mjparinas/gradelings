@@ -529,4 +529,23 @@ export const lessons: GradeLessons = {
     ["A mayor leads one town or city.", "The governor leads the state."],
     "the governor",
   ),
+  // Tennessee
+  "social/tn-g1-tennessee-map": lesson(
+    ["A map shows places from above. Tennessee is a state in the United States.", "Nashville is the capital of Tennessee.", "The Mississippi River is Tennessee's border on the west."],
+    "What is the capital of Tennessee?",
+    ["The capital is where the state government meets.", "It is in the middle of the state."],
+    "Nashville",
+  ),
+  "social/tn-g1-tennessee-symbols": lesson(
+    ["Symbols stand for a place. Tennessee has a state flag, bird and flower.", "The state bird is the mockingbird. The state flower is the iris.", "Tennessee's nickname is the Volunteer State."],
+    "What is Tennessee's state bird?",
+    ["It is a bird that copies other birds' songs.", "Its name has the word mock in it."],
+    "the mockingbird",
+  ),
+  "social/tn-g1-leaders-holidays": lesson(
+    ["Holidays help us remember people and events.", "On Independence Day, July 4, we remember 1776.", "Leaders like Abraham Lincoln and Martin Luther King Jr. worked for fairness."],
+    "Which holiday is on July 4?",
+    ["It is the country's birthday.", "Families watch fireworks."],
+    "Independence Day",
+  ),
 };

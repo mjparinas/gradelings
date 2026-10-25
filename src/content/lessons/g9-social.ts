@@ -1495,4 +1495,11 @@ export const lessons: GradeLessons = {
     ["In many states, voters elect judges or the governor appoints them.", "In South Carolina, the General Assembly votes on them."],
     "elected by the General Assembly",
   ),
+  // Tennessee
+  "social/tn-g9-governing-tennessee": lesson(
+    ["Tennessee has two US senators and nine US representatives.", "The General Assembly has a 33-member Senate and a 99-member House; the governor leads the executive.", "Tennessee has 95 counties, plus city and metro governments that get their powers from the state."],
+    "How many counties does Tennessee have?",
+    ["It is close to 100.", "The state has 95."],
+    "95",
+  ),
 };

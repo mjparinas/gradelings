@@ -811,4 +811,29 @@ export const lessons: GradeLessons = {
     ["Roots hold soil in place.", "A bare hill has nothing to hold the soil."],
     "the bare hillside",
   ),
+  // Tennessee
+  "science/tn-g4-fossils": lesson(
+    ["Fossils are remains or traces of living things from long ago.", "Most are found in sedimentary rock. Amber can hold an insect.", "Fossils tell about past places: seashells on dry land mean sea once covered it."],
+    "Fossil seashells are found on a hill. What does that tell us?",
+    ["Seashells come from animals that live in the sea."],
+    "the land was once covered by sea",
+  ),
+  "science/tn-g4-rocks-erosion": lesson(
+    ["Weathering breaks rock. Erosion moves it. Deposition drops it in a new place.", "Water, wind and ice all cause erosion. Wind shapes sand dunes.", "Plants hold soil, so bare slopes wash away faster.", "In rock layers, the oldest layer is usually at the bottom."],
+    "A river slows down and drops sand at its mouth. What is this called?",
+    ["Dropping sediment in a new place is deposition."],
+    "deposition",
+  ),
+  "science/tn-g4-earth-hazards": lesson(
+    ["Maps show patterns: mountains form long chains, and many volcanoes and earthquakes are along plate edges.", "West Tennessee lies on the New Madrid Seismic Zone, where strong earthquakes shook the land in 1811 and 1812.", "In a strong earthquake, drop, cover and hold on. In a tornado, go to a low inside room."],
+    "A tornado warning sounds. Where should you go?",
+    ["Tornado winds break windows.", "A low room with no windows is safest."],
+    "a low inside room with no windows",
+  ),
+  "science/tn-g4-energy-resources": lesson(
+    ["Renewable resources, like sunlight and wind, won't run out.", "Nonrenewable resources, like oil, coal and natural gas, will run out.", "Burning fossil fuels puts pollution and carbon dioxide into the air.", "Solar panels use sunlight, wind turbines use wind and dams use moving water."],
+    "Gasoline is made from oil. Is it renewable?",
+    ["Oil formed from ancient living things over millions of years.", "We use it much faster than it forms, so it will run out."],
+    "no, it is nonrenewable",
+  ),
 };

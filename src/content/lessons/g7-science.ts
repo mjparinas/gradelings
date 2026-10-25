@@ -805,4 +805,11 @@ export const lessons: GradeLessons = {
     ["A landslide happens in minutes.", "Mountain building takes millions of years."],
     "fast",
   ),
+  // Tennessee
+  "science/tn-g7-growth": lesson(
+    ["Sexual reproduction needs two parents and makes varied young. Asexual needs one parent and makes copies.", "Growing a plant from a cutting or a runner is asexual.", "Bright petals and nectar attract pollinators. Some animals build nests and care for young.", "Genes and the environment, like water and sunlight, both affect growth."],
+    "A new plant grows from a piece of a stem. Sexual or asexual reproduction?",
+    ["Only one parent plant is involved.", "One parent means asexual."],
+    "asexual",
+  ),
 };

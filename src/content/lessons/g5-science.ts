@@ -751,4 +751,41 @@ export const lessons: GradeLessons = {
     ["A hawk is a consumer and a fern is a producer.", "A mushroom breaks down dead matter."],
     "a mushroom",
   ),
+  // Tennessee
+  "science/phase-changes": lesson(
+    ["Matter can be a solid, a liquid or a gas.", "Adding heat melts a solid, or evaporates a liquid into a gas (vapour).", "Taking heat away condenses a gas into a liquid, or freezes a liquid into a solid.", "The water cycle uses these changes: evaporation, condensation, then rain or snow."],
+    "Drops form on the outside of a cold glass. Is heat being added or taken away?",
+    ["Water vapour in the air touches the cold glass.", "It cools and condenses into liquid drops, so heat is taken away."],
+    "taken away",
+  ),
+  "science/forces-at-work": lesson(
+    ["Gravity is a force of attraction between objects that have mass.", "Mass is the amount of matter. Weight is the pull of gravity on that mass.", "Friction slows sliding objects. Rough surfaces like carpet give more friction.", "Air resistance slows light, spread-out objects like feathers. Unbalanced forces change motion."],
+    "A puck slides on ice, wood and carpet. Where does it slow down fastest?",
+    ["Rougher surfaces make more friction.", "Carpet is the roughest."],
+    "on carpet",
+  ),
+  "science/sense-and-respond": lesson(
+    ["Your senses notice things. Nerves carry messages to your brain, and your brain tells your body what to do.", "A reflex is a quick response, like pulling your hand from something hot.", "Plants respond too: they bend toward light."],
+    "A plant bends toward a window. What is it responding to?",
+    ["Sunlight comes through the window."],
+    "light",
+  ),
+  "science/ny-g8-space": lesson(
+    ["The Moon’s phases depend on how much of its lit half we see.", "Seasons come from Earth’s tilt. Tides come mostly from the Moon’s gravity.", "A solar eclipse is the Moon between the Sun and Earth; a lunar eclipse is Earth between the Sun and Moon."],
+    "The Moon passes between the Sun and Earth. What happens?",
+    ["The Moon blocks the Sun’s light.", "That is a solar eclipse."],
+    "a solar eclipse",
+  ),
+  "science/tn-g5-gravity": lesson(
+    ["Gravity is a force that pulls objects toward each other.", "Earth's gravity pulls everything toward its centre, everywhere on Earth.", "That's why balls fall back down, water flows downhill and the oceans stay on Earth."],
+    "You throw a ball straight up. What happens next, and why?",
+    ["Earth's gravity keeps pulling the ball toward Earth's centre."],
+    "it comes back down because of gravity",
+  ),
+  "science/tn-g5-sun-stars": lesson(
+    ["The sun looks bright because it is the closest star to Earth.", "Earth spins once a day, so the sun rises in the east and sets in the west.", "Shadows point away from the sun: west in the morning, shortest around noon.", "Days in Tennessee are longest in June and shortest in December."],
+    "In the evening the sun is in the west. Which way does your shadow point?",
+    ["Shadows point away from the sun.", "Away from west is east."],
+    "east",
+  ),
 };

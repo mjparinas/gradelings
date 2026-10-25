@@ -666,4 +666,29 @@ export const lessons: GradeLessons = {
     ["It talks about many winters, not one day.", "A pattern over many years is climate."],
     "climate",
   ),
+  // Tennessee
+  "science/changing-materials": lesson(
+    ["Cutting, bending, melting and freezing change size, shape or state. It is still the same material.", "Cooking, burning and rusting make a new material.", "Ask: can it go back the way it was?"],
+    "Toasting bread: same material or a new one?",
+    ["Toast can't turn back into soft bread.", "Heat made something new."],
+    "a new one",
+  ),
+  "science/ny-g4-engineering-design": lesson(
+    ["Criteria tell engineers what a design must do to succeed.", "Constraints are limits, like time, cost or materials.", "Test a design, find what failed and improve it.", "Share designs and compare them to choose the one that best meets the criteria."],
+    "A water filter must make muddy water clear. Is that a criterion or a constraint?",
+    ["It says what the filter must do to succeed."],
+    "a criterion",
+  ),
+  "science/tn-g3-weather-climate": lesson(
+    ["Weather is what the air is like today. Climate is the usual weather over many years.", "Read weather data for patterns, like warm highs in summer.", "Climates differ: rainy, desert, polar."],
+    "“It rains a lot every winter.” Weather or climate?",
+    ["It describes a pattern year after year."],
+    "climate",
+  ),
+  "science/tn-g3-earth-hazards": lesson(
+    ["Maps show where hazards happen, like volcanoes and earthquakes along plate edges.", "A storm surge is ocean water pushed onto land by a big storm.", "Signs show tsunami routes to higher ground. Sensors on volcanoes warn people early.", "Sand dunes and sea walls help protect coasts."],
+    "Hurricane winds push ocean water onto a city's streets. What is this called?",
+    ["The storm pushes sea water up onto the land."],
+    "a storm surge",
+  ),
 };

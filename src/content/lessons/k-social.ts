@@ -369,4 +369,11 @@ export const lessons: GradeLessons = {
     ["It is the state we live in.", "Its capital is Boston."],
     "Massachusetts",
   ),
+  // Tennessee
+  "social/tn-k-flags-and-leaders": lesson(
+    ["A flag stands for a place. Tennessee's flag has three white stars.", "The President leads the country. The governor leads Tennessee.", "We say the Pledge of Allegiance to the United States flag."],
+    "Who leads the state of Tennessee?",
+    ["The President leads the whole country.", "A state has its own leader."],
+    "the governor",
+  ),
 };

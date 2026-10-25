@@ -788,4 +788,29 @@ export const lessons: GradeLessons = {
     ["The eras go Paleozoic, Mesozoic, Cenozoic.", "The latest is the Cenozoic."],
     "the Cenozoic Era",
   ),
+  // Tennessee
+  "science/tn-g8-plate-tectonics": lesson(
+    ["Earth has a crust, mantle, outer core and a solid inner core of iron and nickel.", "Convergent boundaries collide, divergent ones pull apart, transform ones slide past each other.", "In an earthquake: drop, cover and hold on. Near the coast, go to high ground after strong shaking."],
+    "Two plates pull apart and new crust forms. Which type of boundary is this?",
+    ["“Diverge” means to move apart."],
+    "divergent",
+  ),
+  "science/tn-g8-space": lesson(
+    ["The Moon’s phases come from how much of its lit side we see as it orbits Earth.", "Seasons happen because Earth’s axis is tilted. The hemisphere tilted toward the Sun has summer.", "Gravity holds the solar system and galaxies together. Our galaxy is the Milky Way."],
+    "In June the Northern Hemisphere tilts toward the Sun. What season does it have?",
+    ["Tilting toward the Sun gives more direct light.", "More direct light means summer."],
+    "summer",
+  ),
+  "science/tn-g8-earth-history": lesson(
+    ["In undisturbed rock layers, the oldest are at the bottom (superposition).", "An index fossil lived for a short time over a wide area, so it dates layers.", "Homologous structures, like a human arm and a bat wing, show shared ancestors."],
+    "Why is an index fossil useful?",
+    ["It was around only briefly but in many places.", "Finding it dates the rock layer."],
+    "it lived for a short time over a wide area",
+  ),
+  "science/tn-g8-earth-surface": lesson(
+    ["Matching coastlines, fossils and rocks on far-apart continents show they were once joined.", "Plates pull apart at mid-ocean ridges and collide to build mountains, such as the ancient Appalachians.", "Some changes are sudden (earthquakes); others take millions of years (mountain building)."],
+    "Is a landslide a fast or a very slow change to Earth’s surface?",
+    ["A landslide happens in minutes.", "Mountain building takes millions of years."],
+    "fast",
+  ),
 };
