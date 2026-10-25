@@ -9,6 +9,6 @@ export const contract: FrameworkContract = {
   cite: codeCite(OUTCOMES, "Massachusetts"),
   // "ma-g", not "ma-": Core French already has a unit called "ma-classe". Kindergarten units are "ma-gk-".
   ownPrefix: "ma-g",
-  ownSharedWith: [],
+  adoptsFrom: ["us-ca", "us-ga", "ca-nb", "us-al", "ca-mb", "us-tx", "us-or", "us-ny", "us-wa"],
   plan: PLAN,
 };

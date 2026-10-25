@@ -17,6 +17,7 @@ export const manifest = defineFramework({
     "9": () => import("./g9"),
   },
   guides: () => import("./guides").then((m) => m.MISSOURI_GUIDES),
+  schools: () => import("./schools").then((m) => m.SCHOOLS),
   // Missouri: no French subject (see docs/research/missouri/README.md).
   french: { immersion: [], "core-french": [] },
 });

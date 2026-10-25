@@ -1,6 +1,7 @@
 // @vitest-environment jsdom
 import { render, screen, within } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
+import { FRAMEWORKS } from "@/content/frameworks";
 import { FREE_UNITS_PER_COURSE, PRICES_BY_CURRENCY, TRIAL_DAYS } from "@/lib/plan";
 import Home from "./page";
 
@@ -39,35 +40,12 @@ describe("home page", () => {
     const coverage = screen.getByRole("heading", { name: "Matched to your province or state" }).closest("section")!;
     expect(within(coverage).getByRole("heading", { name: "Canada" })).toBeInTheDocument();
     expect(within(coverage).getByRole("heading", { name: "United States" })).toBeInTheDocument();
-    expect(within(coverage).getByRole("link", { name: "Washington" }).getAttribute("href")).toMatch(/^\/curriculum\/washington\/?$/);
-    expect(within(coverage).getByRole("link", { name: "Oregon" }).getAttribute("href")).toMatch(/^\/curriculum\/oregon\/?$/);
-    expect(within(coverage).getByRole("link", { name: "California" }).getAttribute("href")).toMatch(/^\/curriculum\/california\/?$/);
-    expect(within(coverage).getByRole("link", { name: "Texas" }).getAttribute("href")).toMatch(/^\/curriculum\/texas\/?$/);
-    expect(within(coverage).getByRole("link", { name: "New York" }).getAttribute("href")).toMatch(/^\/curriculum\/new-york\/?$/);
-    expect(within(coverage).getByRole("link", { name: "Maine" }).getAttribute("href")).toMatch(/^\/curriculum\/maine\/?$/);
-    expect(within(coverage).getByRole("link", { name: "Minnesota" }).getAttribute("href")).toMatch(/^\/curriculum\/minnesota\/?$/);
-    expect(within(coverage).getByRole("link", { name: "Alaska" }).getAttribute("href")).toMatch(/^\/curriculum\/alaska\/?$/);
-    expect(within(coverage).getByRole("link", { name: "Alabama" }).getAttribute("href")).toMatch(/^\/curriculum\/alabama\/?$/);
-    expect(within(coverage).getByRole("link", { name: "Arizona" }).getAttribute("href")).toMatch(/^\/curriculum\/arizona\/?$/);
-    expect(within(coverage).getByRole("link", { name: "Arkansas" }).getAttribute("href")).toMatch(/^\/curriculum\/arkansas\/?$/);
-    expect(within(coverage).getByRole("link", { name: "Florida" }).getAttribute("href")).toMatch(/^\/curriculum\/florida\/?$/);
-    expect(within(coverage).getByRole("link", { name: "Illinois" }).getAttribute("href")).toMatch(/^\/curriculum\/illinois\/?$/);
-    expect(within(coverage).getByRole("link", { name: "Colorado" }).getAttribute("href")).toMatch(/^\/curriculum\/colorado\/?$/);
-    expect(within(coverage).getByRole("link", { name: "Pennsylvania" }).getAttribute("href")).toMatch(/^\/curriculum\/pennsylvania\/?$/);
-    expect(within(coverage).getByRole("link", { name: "Georgia" }).getAttribute("href")).toMatch(/^\/curriculum\/georgia\/?$/);
-    expect(within(coverage).getByRole("link", { name: "Ohio" }).getAttribute("href")).toMatch(/^\/curriculum\/ohio\/?$/);
-    expect(within(coverage).getByRole("link", { name: "New Jersey" }).getAttribute("href")).toMatch(/^\/curriculum\/new-jersey\/?$/);
-    expect(within(coverage).getByRole("link", { name: "Missouri" }).getAttribute("href")).toMatch(/^\/curriculum\/missouri\/?$/);
-    expect(within(coverage).getByRole("link", { name: "Indiana" }).getAttribute("href")).toMatch(/^\/curriculum\/indiana\/?$/);
-    expect(within(coverage).getByRole("link", { name: "Virginia" }).getAttribute("href")).toMatch(/^\/curriculum\/virginia\/?$/);
-    expect(coverage.textContent).toContain("Canadian provinces and territories and 28 US states");
-    expect(within(coverage).getByRole("link", { name: "North Carolina" }).getAttribute("href")).toMatch(/^\/curriculum\/north-carolina\/?$/);
-    expect(within(coverage).getByRole("link", { name: "Massachusetts" }).getAttribute("href")).toMatch(/^\/curriculum\/massachusetts\/?$/);
-    expect(within(coverage).getByRole("link", { name: "Maryland" }).getAttribute("href")).toMatch(/^\/curriculum\/maryland\/?$/);
-    expect(within(coverage).getByRole("link", { name: "South Carolina" }).getAttribute("href")).toMatch(/^\/curriculum\/south-carolina\/?$/);
-    expect(within(coverage).getByRole("link", { name: "Wisconsin" }).getAttribute("href")).toMatch(/^\/curriculum\/wisconsin\/?$/);
-    expect(within(coverage).getByRole("link", { name: "Tennessee" }).getAttribute("href")).toMatch(/^\/curriculum\/tennessee\/?$/);
-    expect(within(coverage).getByRole("link", { name: "Michigan" }).getAttribute("href")).toMatch(/^\/curriculum\/michigan\/?$/);
+    // Every offered framework has a link to its curriculum page, whichever states exist.
+    for (const f of FRAMEWORKS) {
+      expect(within(coverage).getByRole("link", { name: f.region }).getAttribute("href"), f.region).toMatch(new RegExp(`^/curriculum/${f.slug}/?$`));
+    }
+    const usStates = FRAMEWORKS.filter((f) => f.country === "US").length;
+    expect(coverage.textContent).toContain(`Canadian provinces and territories and ${usStates} US states`);
     const faq = screen.getByRole("heading", { name: "Questions from parents" }).closest("section")!;
     expect(faq.textContent).toContain(PRICES_BY_CURRENCY.USD.month.label);
     expect(faq.textContent).toContain("Washington");

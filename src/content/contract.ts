@@ -24,8 +24,12 @@ export interface FrameworkContract {
   cite: ((c: Citation) => string[]) | null;
   /** Units written for this framework have ids starting with this ("wa-"). */
   ownPrefix?: string;
-  /** Other frameworks allowed to use this framework's own units (Oregon, California, New York, Texas, Maine, Minnesota, Alaska, Alabama, Arizona, Arkansas, Florida, Illinois, Colorado, Pennsylvania, Georgia, Ohio, New Jersey, Indiana, Virginia, Missouri, North Carolina, Massachusetts, Maryland, South Carolina, Wisconsin, Tennessee and Michigan adopt Washington's). */
-  ownSharedWith?: FrameworkId[];
+  /**
+   * The frameworks whose own units (the ones with their `ownPrefix`) this framework may use. It is kept here, with the
+   * framework that does the borrowing, so a new state lists what it borrows in its own file and no other state's
+   * contract has to change.
+   */
+  adoptsFrom?: FrameworkId[];
   /** Places a unit borrowed from another framework must not name, so no other province's names reach this one's classrooms. */
   foreign?: RegExp;
   /**

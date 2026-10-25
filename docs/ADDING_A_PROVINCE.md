@@ -1,6 +1,6 @@
 # Adding a province or state
 
-Everything that differs by jurisdiction lives in its own folder, `src/content/<name>/`, described by a manifest (`manifest.ts`) and listed with one line in `src/content/registry.ts`. No screen changes are needed.
+Everything that differs by jurisdiction lives in its own folder, `src/content/<name>/`, described by a manifest (`manifest.ts`) and listed with one import and one line in `src/content/registry.ts` (both lists alphabetical, so parallel state PRs rarely collide). No screen changes are needed.
 
 1. **Framework.** Create `src/content/<name>/framework.ts` exporting a `Framework` (the type is in `src/content/frameworks.ts`): id, slug, `curriculumName`, grades, subjects offered, report-card scale and guide, and the scoring scheme.
 2. **Official standards.** Everything the research used goes in `docs/research/<name>/`, committed, so it can be checked again after the website changes or the document is taken down:
@@ -22,8 +22,12 @@ Everything that differs by jurisdiction lives in its own folder, `src/content/<n
    - **Share cards:** check the guide and unit cards for the region read well (`ogText.ts`).
    - **Site-wide copy:** search for every hand-written list of regions, scales or prices and add the new one: help FAQs (`src/app/help/faqs.ts`), comparison pages (`src/content/compare.ts`), home and pricing pages, metadata, manifest and terms. Prefer reading names from `FRAMEWORKS` (`regionList`, `listRegions`).
    - **A new country** also needs its currency and prices (`plan.ts`), a spelling and number layer (`src/content/locale.ts`), grade wording (`gradeLabel`), its privacy and consent rules on `/privacy/` and in `docs/school/`, and comparison-page facts for its families (prices in its currency, its app store).
-   - Anything not done goes in the PR description and under Open items in AGENTS.md.
-7. **Lock it.** Run `npm run curriculum:lock` to write `src/content/locks/<id>.json` and record its download sizes. Only the new framework's lock (and `sizes.json`) should change; if another framework's lock changes, the new content reached into it.
+   - **School privacy:** a `schools.ts` in the folder (`SCHOOLS`, wired as `schools` in the manifest) is the paragraph `/privacy/` shows for the region's schools; add the matching bullet to `docs/frameworks/<slug>.md` under Schools.
+   - **Contract:** in the new `contract.ts`, `adoptsFrom` lists the frameworks whose own units it borrows. No other framework's contract changes.
+   - **Decisions and known gaps** go in `docs/frameworks/<slug>.md` (copy `docs/frameworks/us-state-template.md`), not in AGENTS.md.
+   - **Lessons** for its own units are attached inside its folder with `withLessons`, not appended to the shared `src/content/lessons/` files.
+   - Anything not done goes in the PR description and in the framework's Known gaps.
+7. **Lock it.** Run `npm run curriculum:lock` to write `src/content/locks/<id>.json` and record its download sizes. It writes `locks/<id>.json`, `locks/dates/<id>.json` and `locks/sizes/<id>.json`. Only the new framework's three files should change; if another framework's lock changes, the new content reached into it.
 8. **Run** `npm test`, `npm run lint`, `npx tsc --noEmit`, `npm run build`, and the e2e scripts in AGENTS.md.
 
 Progress is shared across frameworks for shared unit ids, so a child who switches province keeps the progress they earned on units both provinces teach.

@@ -8,6 +8,6 @@ const OUTCOMES = research<Record<string, { idx: string }[]>>("missouri/outcomes.
 export const contract: FrameworkContract = {
   cite: codeCite(OUTCOMES, "Missouri"),
   ownPrefix: "mo-",
-  ownSharedWith: [],
+  adoptsFrom: ["us-ca", "us-ga", "ca-nb", "us-al", "us-fl", "ca-ns", "ca-mb", "us-tx", "us-or", "us-ny", "us-wa", "us-me"],
   plan: PLAN,
 };

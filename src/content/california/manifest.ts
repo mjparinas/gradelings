@@ -17,6 +17,7 @@ export const manifest = defineFramework({
     "9": () => import("./g9"),
   },
   guides: () => import("./guides").then((m) => m.CALIFORNIA_GUIDES),
+  schools: () => import("./schools").then((m) => m.SCHOOLS),
   // California: no French subject (see docs/research/california/README.md).
   french: { immersion: [], "core-french": [] },
 });
