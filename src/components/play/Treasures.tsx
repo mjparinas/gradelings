@@ -8,6 +8,7 @@ import { useDerived } from "@/lib/store";
 import { useBand } from "../band";
 import { Page } from "../ui";
 import { RewardCard } from "./FamilyCards";
+import { FestivalCard } from "./FestivalCard";
 import { BackButton } from "./Practice";
 
 interface Treasure {
@@ -59,6 +60,7 @@ export function Treasures() {
           </div>
         ))}
       </div>
+      <FestivalCard />
       <RewardCard />
     </Page>
   );
