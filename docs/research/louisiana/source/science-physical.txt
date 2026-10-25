@@ -1,0 +1,567 @@
+                                                                                                                                                                          PS
+                                                                                                                                                             HS-PS1-1
+
+
+MATTER AND ITS INTERACTIONS
+                                                          Use the periodic table as a model to predict the relative properties of elements based on the patterns of electrons
+            Performance Expectation                       in the outermost energy level and the composition of the nucleus of atoms.
+
+                                                          Physical Science: Examples of properties that could be predicted from patterns could include metals, nonmetals,
+                                                          metalloids, number of valence electrons, types of bonds formed, or atomic mass. Emphasis is on main group elements.
+             Clarification Statement                      Chemistry: Examples of properties that could be predicted from patterns could include reactivity of metals, types of
+                                                          bonds formed, numbers of bonds formed, atomic radius, atomic mass, or reactions with oxygen. Emphasis is on main
+                                                          group elements and qualitative understanding of the relative trends of ionization energy and electronegativity.
+
+
+        Science & Engineering Practices                                  Disciplinary Core Ideas                                     Crosscutting Concepts
+1. Asking questions and defining problems                 STRUCTURE AND PROPERTIES OF MATTER                          PATTERNS
+2. Developing and using models: Modeling in 9–12          Each atom has a charged substructure consisting of          Different patterns may be observed at each of the
+   builds on K–8 experiences and progresses to using,     a nucleus, which is made of protons and neutrons,           scales at which a system is studied and can provide
+   synthesizing, and developing models to predict         surrounded by electrons. (HS.PS1A.a)                        evidence for causality in explanations of phenomena.
+   and show relationships among variables between         The periodic table orders elements horizontally by the
+   systems and their components in the natural and        number of protons in the atom’s nucleus and places
+   designed worlds.                                       those with similar chemical properties in columns. The
+ • Develop, revise, and/or use a model based on evidence repeating patterns of this table reflect patterns of outer
+   to illustrate and/or predict the relationships between electron states.(HS.PS1A.b)
+   systems or between components of a system.             TYPES OF INTERACTIONS
+3. Planning and carrying out investigations               Attraction and repulsion between electric charges at
+4. Analyzing and interpreting data                        the atomic scale explain the structure, properties, and
+                                                          transformations of matter, as well as the contact forces
+5. Using mathematical and computational thinking          between material objects.(HS.PS2B.c)
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                 1
+                                                                                                                                                                    MARCH 2017
+                                                                                                                                                                                 PS
+                                                                                                                                                                  HS-PS1-2
+
+
+MATTER AND ITS INTERACTIONS
+                                                                 Construct and revise an explanation for the outcome of a simple chemical reaction based on the outermost
+             Performance Expectation                             electron states of atoms, trends in the periodic table, and knowledge of the patterns of chemical properties.
+                                                                 Physical Science: Examples of chemical reactions could include the reaction of sodium and chlorine, carbon and
+                                                                 oxygen, or hydrogen and oxygen. Reaction classification includes synthesis, decomposition, single displacement,
+                                                                 double displacement, and acid-base.
+              Clarification Statement
+                                                                 Chemistry: Examples of chemical reactions could include the reaction of sodium and chlorine, carbon and oxygen,
+                                                                 or carbon and hydrogen. Reaction classification aids in the prediction of products (e.g. synthesis, decomposition,
+                                                                 single displacement, double displacement, and acid-base).
+
+
+         Science & Engineering Practices                                       Disciplinary Core Ideas                                     Crosscutting Concepts
+1. Asking questions and defining problems                        STRUCTURE AND PROPERTIES OF MATTER                           PATTERNS
+2. Developing and using models                                   The periodic table orders elements horizontally by the       Different patterns may be observed at each of the
+3. Planning and carrying out investigations                      number of protons in the atom’s nucleus and places           scales at which a system is studied and can provide
+4. Analyzing and interpreting data                               those with similar chemical properties in columns. The       evidence for causality in explanations of phenomena.
+5. Using mathematical and computational thinking                 repeating patterns of this table reflect patterns of outer
+6. Constructing explanations and designing                       electron states. (HS.PS1A.b)
+   solutions: Constructing explanations (science) and            CHEMICAL REACTIONS
+   designing solutions (engineering) in 9–12 builds on           The fact that atoms are conserved, together with
+   K–8 experiences and progresses to explanations                knowledge of the chemical properties of the elements
+   and designs that are supported by multiple and                involved, can be used to describe and predict chemical
+   independent student-generated sources of evidence             reactions. (HS.PS1B.c)
+   consistent with scientific ideas, principles, and theories.
+ • Construct and revise an explanation based on valid
+   and reliable evidence obtained from a variety of
+   sources (including students’ own investigations,
+   models, theories, simulations, peer review) and the
+   assumption that theories and laws that describe the
+   natural world operate today as they did in the past
+   and will continue to do so in the future.
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+                                                                                                                                                                                     2
+                                                                                                                                                                         MARCH 2017
+                                                                                                                                                                          PS
+                                                                                                                                                            HS-PS1-7
+
+
+MATTER AND ITS INTERACTIONS
+                                                               Use mathematical representations to support the claim that atoms, and therefore mass, are conserved during a
+             Performance Expectation                           chemical reaction.
+                                                               Physical Science: Emphasis is on using mathematical ideas to communicate the relationship between masses of
+                                                               reactants and products as well as balancing chemical equations.
+                                                               Chemistry: Emphasis is on using mathematical ideas as they relate to stoichiometry to communicate the
+              Clarification Statement                          proportional relationships between masses of atoms in the reactants and the products, and the translation of
+                                                               these relationships to the macroscopic scale using the mole as the conversion from the atomic to the macroscopic
+                                                               scale. Emphasis is on assessing students’ use of mathematical thinking and not on memorization and rote
+                                                               application of problem-solving techniques.
+
+
+         Science & Engineering Practices                                    Disciplinary Core Ideas                                   Crosscutting Concepts
+1. Asking questions and defining problems                      CHEMICAL REACTIONS                                       ENERGY AND MATTER
+2. Developing and using models                                 The fact that atoms are conserved, together with         The total amount of energy and matter in closed
+                                                               knowledge of the chemical properties of the elements     systems is conserved.
+3. Planning and carrying out investigations                    involved, can be used to describe and predict chemical
+4. Analyzing and interpreting data                             reactions. (HS.PS1B.c)
+5. Using mathematics and computational thinking:
+   Using mathematics and computational thinking:
+   Mathematical and computational thinking in 9-12 builds
+   on K-8 experiences and progresses to using algebraic
+   thinking and analysis, a range of linear and nonlinear
+   functions, including, computational tools for statistical
+   analysis to analyze, represent, and model data. Simple
+   computational simulations are created and used based
+   on mathematical models of basic assumptions
+ • Use mathematical, computational, and/or algorithmic
+   representations of phenomena or design solutions to
+   describe and/or support claims and/or explanations.
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+                                                                                                                                                                                  3
+                                                                                                                                                                   MARCH 2017
+                                                                                                                                                                         PS
+                                                                                                                                                            HS-PS1-8
+
+
+MATTER AND ITS INTERACTIONS
+                                                            Develop models to illustrate the changes in the composition of the nucleus of the atom and the energy released
+            Performance Expectation                         during the processes of fission, fusion, and radioactive decay.
+
+                                                            Physical Science: Emphasis is only on simple qualitative models, such as pictures or diagrams, and on the scale
+                                                            of energy released in nuclear processes relative to other kinds of transformations.  Radioactive decay focus is on
+                                                            its relationship to half-life.
+             Clarification Statement
+                                                            Chemistry: Emphasis is on simple qualitative models, such as pictures or diagrams, and on the scale of energy
+                                                            released in nuclear processes relative to other kinds of transformations. Emphasis is on alpha, beta, and gamma
+                                                            radioactive decays.
+
+
+        Science & Engineering Practices                                   Disciplinary Core Ideas                                    Crosscutting Concepts
+1. Asking questions and defining problems                   NUCLEAR PROCESSES                                           ENERGY AND MATTER
+2. Developing and using models: Modeling in 9–12            Nuclear processes, including fusion, fission, and           In nuclear processes, atoms are not conserved, but the
+   builds on K–8 experiences and progresses to using,       radioactive decays of unstable nuclei, involve release or   total number of protons plus neutrons is conserved.
+   synthesizing, and developing models to predict           absorption of energy. The total number of neutrons plus
+   and show relationships among variables between           protons does not change in any nuclear process.
+   systems and their components in the natural and          (HS.PS1C.a)
+   designed world(s).
+ • Develop, revise, and/or use a model based on evidence
+   to illustrate and/or predict the relationships between
+   systems or between components of a system.
+3. Planning and carrying out investigations
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                 4
+                                                                                                                                                                    MARCH 2017
+                                                                                                                                                                          PS
+                                                                                                                                                             HS-PS2-1
+
+
+MOTION AND STABILITY: FORCES AND INTERACTIONS
+                                                           Analyze data to support the claim that Newton’s second law of motion describes the mathematical relationship
+            Performance Expectation                        among the net force on a macroscopic object, its mass, and its acceleration.
+
+                                                           Physical Science: Examples of data could include tables or graphs of position or velocity as a function of time for
+                                                           objects subject to a net unbalanced force, such as a falling object, an object rolling down a ramp, or a moving object
+                                                           being pulled by a constant force. Emphasis is on one-dimensional motion and macroscopic objects moving at non-
+                                                           relativistic speeds.
+             Clarification Statement
+                                                           Physics: Examples of data could include tables or graphs of position or velocity as a function of time for objects
+                                                           subject to a net unbalanced force, such as a falling object, an object rolling down a ramp, or a moving object being
+                                                           pulled by a constant force. Emphasis is on kinematics, one-dimensional motion, two-dimensional motion, and
+                                                           macroscopic objects moving at non-relativistic speeds.
+
+
+        Science & Engineering Practices                                  Disciplinary Core Ideas                                     Crosscutting Concepts
+1. Asking questions and defining problems                  FORCES AND MOTION                                           CAUSE AND EFFECT
+2. Developing and using models                             Newton’s second law accurately predicts changes in the      Empirical evidence is required to differentiate between
+                                                           motion of macroscopic objects. (HS.PS2.A.a)                 cause and correlation and make claims about specific
+3. Planning and carrying out investigations                                                                            causes and effects.
+4. Analyzing and interpreting data: Analyzing data in
+   9-12 builds on K-8 experiences and progresses to
+   introducing more detailed statistical analysis, the
+   comparison of data sets for consistency, and the use
+   of models to generate and analyze data.
+ • Analyze data using tools, technologies, and/or
+   models (e.g., computational, mathematical) in
+   order to make valid and reliable scientific claims or
+   determine an optimal design solution.
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+                                                                                                                                                                                  5
+                                                                                                                                                                    MARCH 2017
+                                                                                                                                                                            PS
+                                                                                                                                                               HS-PS2-2
+
+
+MOTION AND STABILITY: FORCES AND INTERACTIONS
+                                                            Use mathematical representations to support the claim that the total momentum of a system of objects is
+            Performance Expectation                         conserved when there is no net force on the system.
+
+                                                            Physical Science: Emphasis is on calculating momentum and the qualitative meaning of conservation of
+                                                            momentum.
+             Clarification Statement
+                                                            Physics: Emphasis is on the quantitative conservation of momentum in interactions and the qualitative meaning of
+                                                            this principle as well as systems of two macroscopic bodies moving in one dimension.
+
+
+        Science & Engineering Practices                                    Disciplinary Core Ideas                                      Crosscutting Concepts
+1. Asking questions and defining problems                   FORCES AND MOTION                                              SYSTEMS AND SYSTEM MODELS
+2. Developing and using models                              Momentum is defined for a particular frame of                  When investigating or describing a system, the
+                                                            reference; it is the mass times the velocity of the object.    boundaries and initial conditions of the system need to
+3. Planning and carrying out investigations                 In any system, total momentum is always conserved.             be defined and their inputs and outputs analyzed and
+4. Analyzing and interpreting data                          (HS.PS2A.b)                                                    described using models.
+5. Using mathematics and computational thinking:            If a system interacts with objects outside itself, the total
+   Mathematical and computational thinking in 9-12          momentum of the system can change; however, any
+   builds on K-8 experiences and progresses to using        such change is balanced by changes in the momentum
+   algebraic thinking and analysis, a range of linear and   of objects outside the system. (HS.PS2A.c)
+   nonlinear functions, including, computational tools
+   for statistical analysis to analyze, represent, and
+   model data. Simple computational simulations are
+   created and used based on mathematical models of
+   basic assumptions.
+ • Use mathematical, computational, and/or algorithmic
+   representations of phenomena or design solutions to
+   describe and/or support claims and/or explanations.
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+                                                                                                                                                                                     6
+                                                                                                                                                                       MARCH 2017
+                                                                                                                                                                                 PS
+                                                                                                                                                                   HS-PS2-3
+
+
+MOTION AND STABILITY: FORCES AND INTERACTIONS
+                                                                 Apply scientific and engineering ideas to design, evaluate, and refine a device that minimizes the force on a
+             Performance Expectation                             macroscopic object during a collision.
+                                                                 Physical Science: Examples of evaluation and refinement could include determining the success of a device at
+                                                                 protecting an object from damage such as, but not limited to, impact resistant packaging and modifying the design
+                                                                 to improve it. Emphasis is on qualitative evaluations.
+              Clarification Statement                            Physics: Examples of evaluation and refinement could include determining the success of the device at protecting
+                                                                 an object from damage and modifying the design to improve it by applying the impulse-momentum theorem.
+                                                                 Examples of a device could include a football helmet or an airbag. Emphasis is on qualitative evaluations and/or
+                                                                 algebraic manipulations.
+
+
+         Science & Engineering Practices                                        Disciplinary Core Ideas                                      Crosscutting Concepts
+1. Asking questions and defining problems                        FORCES AND MOTION                                              CAUSE AND EFFECT
+2. Developing and using models                                   If a system interacts with objects outside itself, the total   Systems can be designed to cause a desired effect.
+                                                                 momentum of the system can change; however, any
+3. Planning and carrying out investigations                      such change is balanced by changes in the momentum
+4. Analyzing and interpreting data                               of objects outside the system. (HS.PS2A.c)
+5. Using mathematics and computational thinking                  DEFINING AND DELIMITING ENGINEERING PROBLEMS
+6. Constructing explanations and designing                       Criteria and constraints also include satisfying any
+   solutions: Constructing explanations (science) and            requirements set by society, such as taking issues of risk
+   designing solutions (engineering) in 9–12 builds on           mitigation into account, and they should be quantified
+   K–8 experiences and progresses to explanations                to the extent possible and stated in such a way that one
+   and designs that are supported by multiple and                can tell if a given design meets them. (HS.ETS1A.a)
+   independent student-generated sources of evidence
+   consistent with scientific ideas, principles, and theories.   OPTIMIZING THE DESIGN SOLUTION
+                                                                 Criteria may need to be broken down into simpler ones
+ • Design, evaluate, and/or refine a solution to a               that can be approached systematically, and decisions
+   complex real-world problem, based on scientific               about the priority of certain criteria over others (trade-
+   knowledge, student-generated sources of evidence,             offs) may be needed. (HS.ETS1C.a)
+   prioritized criteria, and tradeoff considerations.
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+                                                                                                                                                                                     7
+                                                                                                                                                                           MARCH 2017
+                                                                                                                                                                           PS
+                                                                                                                                                              HS-PS2-5
+
+
+MOTION AND STABILITY: FORCES AND INTERACTIONS
+                                                              Plan and conduct an investigation to provide evidence that an electric current can produce a magnetic field and
+             Performance Expectation                          that a changing magnetic field can produce an electric current.
+                                                              Physical Science: Emphasis is on designing and conducting investigations including evaluating simple series and
+                                                              parallel circuits. Qualitative evidence is used to explain the relationship between a current-carrying wire and a
+                                                              magnetic compass.
+
+              Clarification Statement                         Physics: Evidence of changes within a circuit can be represented numerically, graphically, or algebraically using
+                                                              Ohm’s law. Emphasis is on designing and conducting investigations using qualitative evidence to determine the
+                                                              relationship between electric current and magnetic fields. Examples of evidence can include movement of a
+                                                              magnetic compass needle when placed in the vicinity of a current-carrying wire, and a magnet passing through a
+                                                              coil that turns on the light of a Faraday flashlight.
+
+
+         Science & Engineering Practices                                    Disciplinary Core Ideas                                     Crosscutting Concepts
+1. Asking questions and defining problems                     TYPES OF INTERACTIONS                                       CAUSE AND EFFECT
+2. Developing and using models                                Forces that act over a distance are explained by fields     Empirical evidence is required to differentiate between
+3. Planning and carrying out Investigations: Planning         (gravitational, electric, and magnetic) permeating space    cause and correlation and make claims about specific
+   and carrying out investigations to answer questions        that can transfer energy through space. Magnets or          causes and effects.
+   or test solutions to problems in 9-12 builds on K-8        electric currents cause magnetic fields; electric charges
+   experiences and progresses to include investigations       or changing magnetic fields cause electric fields.
+   that provide evidence for and test conceptual,             (HS.PS2B.b)
+   mathematical, physical, and empirical models.              DEFINITIONS OF ENERGY
+ • Plan and conduct an investigation individually and         “Electrical energy” may mean energy stored in a battery
+   collaboratively to produce data to serve as the basis      or energy transmitted by electric currents. (HS.PS3A.d)
+   for evidence, and in the design: decide on types,
+   how much, and accuracy of data needed to produce
+   reliable measurements and consider limitations on
+   the precision of the data (e.g., number of trials, cost,
+   risk, time), and refine the design accordingly.
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+                                                                                                                                                                                    8
+                                                                                                                                                                      MARCH 2017
+                                                                                                                                                                       PS
+                                                                                                                                                          HS-PS3-2
+
+
+ENERGY
+                                                           Develop and use models to illustrate that energy at the macroscopic scale can be accounted for as a combination
+            Performance Expectation                        of energy associated with the motions of particles/objects and energy associated with the relative positions of
+                                                           particles/objects.
+                                                           Physical Science: Examples of phenomena at the macroscopic scale could include the conversion of potential
+                                                           energy to kinetic and thermal energy. Examples of models could include diagrams, drawings, descriptions, and
+                                                           computer simulations.
+             Clarification Statement
+                                                           Physics: Examples of phenomena at the macroscopic scale could include the conversion of potential energy to
+                                                           kinetic and thermal energy, and the energy stored between two electrically-charged plates. Examples of models
+                                                           could include diagrams, drawings, descriptions, and computer simulations.
+
+
+        Science & Engineering Practices                                  Disciplinary Core Ideas                                     Crosscutting Concepts
+1. Asking questions and defining problems                 DEFINITIONS OF ENERGY                                         ENERGY AND MATTER
+2. Developing and using models: Developing and using      Energy is a quantitative property of a system that            Energy cannot be created or destroyed—it only moves
+   models: Modeling in 9-12 builds on K-8 experiences     depends on the motion and interactions of matter and          between one place and another place, between objects
+   and progresses to using, synthesizing, and developing radiation within that system. There is a single quantity       and/or fields, or between systems.
+   models to predict and show relationships among         called energy. A system’s total energy is conserved, even
+   variables between systems and their components in as, within the system, energy is continually transferred
+   the natural and designed world(s)                      from one object to another and between its various
+                                                          possible forms. (HS.PS3A.a)
+ • Develop, revise, and/or use a model based on evidence
+   to illustrate and/or predict the relationships between At the macroscopic scale, energy manifests itself in
+   systems or between components of a system.             multiple ways, such as in motion, sound, light, and
+                                                          thermal energy. (HS.PS3A.b)
+3. Planning and carrying out Investigations
+                                                          These relationships are better understood at the
+4. Analyzing and interpreting data                        microscopic scale, at which all of the different
+5. Using mathematics and computational thinking           manifestations of energy can be modeled as a
+                                                          combination of energy associated with the motion of
+6. Constructing explanations and designing solutions
+                                                          particles and energy associated with the configuration
+7. Engaging in argument from evidence                     (relative position of the particles). In some cases the
+8. Obtaining, evaluating, and communicating information relative position energy can be thought of as stored in
+                                                          fields (which mediate interactions between particles). This
+                                                          last concept includes radiation, a phenomenon in which
+                                                          energy stored in fields moves across space. (HS.PS3A.c)
+
+                                                                                                                                                                               9
+                                                                                                                                                                  MARCH 2017
+                                                                                                                                                                                          PS
+                                                                                                                                                                           HS-PS3-3
+
+
+ENERGY
+             Performance Expectation                             Design, build, and refine a device that works within given constraints to convert one form of energy into another form of energy.
+                                                                 Physical Science: Emphasis is on qualitative evaluations of devices. Constraints could include use of renewable
+                                                                 energy forms and efficiency. Emphasis is on devices constructed with teacher approved materials. Examples of
+                                                                 devices can be drawn from chemistry or physics clarification statements below.
+                                                                 Chemistry: Emphasis is on both qualitative and quantitative evaluations of devices. Constraints could include use
+                                                                 of renewable energy forms and efficiency. Focus of quantitative evaluations is limited to total output for a given
+              Clarification Statement                            input. Emphasis is on devices constructed with teacher approved materials. Examples of devices in chemistry
+                                                                 could include hot/cold packs and batteries.
+                                                                 Physics: Emphasis is on both qualitative and quantitative evaluations of devices. Constraints could include use of
+                                                                 renewable energy forms and efficiency. Focus of quantitative evaluations is limited to total output for a given input.
+                                                                 Emphasis is on devices constructed with teacher approved materials. Examples of devices in physics could include
+                                                                 Rube Goldberg devices, wind turbines, solar cells, solar ovens, and electric motors.
+
+
+         Science & Engineering Practices                                        Disciplinary Core Ideas                                           Crosscutting Concepts
+1. Asking questions and defining problems                        DEFINITIONS OF ENERGY                                            ENERGY AND MATTER
+2. Developing and using models                                   At the macroscopic scale, energy manifests itself in             Changes of energy and matter in a system can be
+3. Planning and carrying out Investigations                      multiple ways, such as in motion, sound, light, and              described in terms of energy and matter flows into, out
+4. Analyzing and interpreting data                               thermal energy. (HS.PS3A.b)                                      of, and within that system.
+5. Using mathematics and computational thinking
+                                                                 ENERGY IN CHEMICAL PROCESSES
+6. Constructing explanations and designing                       Although energy cannot be destroyed, it can be
+   solutions: Constructing explanations (science) and            converted to other forms—for example, to thermal
+   designing solutions (engineering) in 9–12 builds on           energy in the surrounding environment. (HS.PS3D.a)
+   K–8 experiences and progresses to explanations
+   and designs that are supported by multiple and                DEFINING AND DELIMITING ENGINEERING PROBLEMS
+   independent student-generated sources of evidence             Criteria and constraints also include satisfying any
+   consistent with scientific ideas, principles, and theories.   requirements set by society, such as taking issues of risk
+ • Design, evaluate, and/or refine a solution to a               mitigation into account, and they should be quantified
+   complex real-world problem, based on scientific               to the extent possible and stated in such a way that one
+   knowledge, student-generated sources of evidence,             can tell if a given design meets them. (HS.ETS1A.a)
+   prioritized criteria, and tradeoff considerations.
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+                                                                                                                                                                                              10
+                                                                                                                                                                                    MARCH 2017
+                                                                                                                                                                          PS
+                                                                                                                                                            HS-PS3-4
+
+
+ENERGY
+                                                              Plan and conduct an investigation to provide evidence that the transfer of thermal energy when two components
+             Performance Expectation                          of different temperature are combined within a closed system results in a more uniform energy distribution among
+                                                              the components in the system (second law of thermodynamics).
+                                                              Physical Science, Physics and Chemistry: Emphasis is on analyzing data from student investigations and using
+                                                              mathematical thinking appropriate to the subject to describe the energy changes quantitatively and conceptually.
+              Clarification Statement                         Examples of investigations could include mixing liquids at different initial temperatures or adding objects at
+                                                              different temperatures to water.
+
+
+         Science & Engineering Practices                                   Disciplinary Core Ideas                                    Crosscutting Concepts
+1. Asking questions and defining problems                     CONSERVATION OF ENERGY AND ENERGY TRANSFER                 SYSTEMS AND SYSTEM MODELS
+2. Developing and using models                                Energy cannot be created or destroyed, but it can be       When investigating or describing a system, the
+                                                              transported from one place to another, transformed into    boundaries and initial conditions of the system need to
+3. Planning and carrying out Investigations: Planning         other forms, and transferred between systems.              be defined and their inputs and outputs analyzed and
+   and carrying out investigations to answer questions        (HS.PS3B.b)                                                described using models.
+   (science) or test solutions to problems (engineering)
+   in 9-12 builds on K-8 experiences and progresses           Uncontrolled systems always evolve toward more stable
+   to include investigations that provide evidence for        states--that is, toward more uniform energy distribution
+   and test conceptual, mathematical, physical, and           (e.g., water flows downhill, objects hotter than their
+   empirical models.                                          surrounding environment cool down). (HS.PS3B.e)
+
+ • Plan and conduct an investigation individually and         ENERGY IN CHEMICAL PROCESSES AND
+   collaboratively to produce data to serve as the basis      EVERYDAY LIFE
+   for evidence, and in the design: decide on types,          Although energy cannot be destroyed, it can be
+   how much, and accuracy of data needed to produce           converted to less useful other forms—for example, to
+   reliable measurements and consider limitations on          thermal energy in the surrounding environment.
+   the precision of the data (e.g., number of trials, cost,   (HS.PS3D.a)
+   risk, time), and refine the design accordingly.
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+                                                                                                                                                                                 11
+                                                                                                                                                                     MARCH 2017
+                                                                                                                                                                          PS
+                                                                                                                                                            HS-PS3-5
+
+
+ENERGY
+                                                            Develop and use a model of two objects interacting through electric or magnetic fields to illustrate the forces
+            Performance Expectation                         between objects and the changes in energy of the objects due to the interaction.
+
+                                                            Physical Science: Examples of models could include drawings, diagrams, simulations and texts, such as what
+                                                            happens when two charged objects or two magnetic poles are near each other.
+             Clarification Statement
+                                                            Physics: Examples of models could include drawings, diagrams, and texts, such as drawings of what happens when
+                                                            two charges of opposite polarity are near each other.
+
+
+        Science & Engineering Practices                                   Disciplinary Core Ideas                                    Crosscutting Concepts
+1. Asking questions and defining problems                   RELATIONSHIP BETWEEN ENERGY AND FORCES                     CAUSE AND EFFECT
+2. Developing and using models: Modeling in 9-12            When two objects interacting through a field change        Cause and effect relationships can be suggested and
+   builds on K-8 experiences and progresses to using        relative position, the energy stored in the field is       predicted for complex natural and human designed
+   synthesizing and developing models to predict            changed. (HS.PS3C.a)                                       systems by examining what is known about smaller
+   and show relationships among variables between                                                                      scale mechanisms within the system.
+   systems and their components in the natural and
+   designed world(s).
+ • Develop, revise, and/or use a model based on evidence
+   to illustrate and/or predict the relationships between
+   systems or between components of a system.
+3. Planning and carrying out investigations
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                              12
+                                                                                                                                                                    MARCH 2017
+                                                                                                                                                                        PS
+                                                                                                                                                           HS-PS4-1
+
+
+WAVES AND THEIR APPLICATIONS
+                                                            Use mathematical representations to support a claim regarding relationships among the frequency, wavelength,
+            Performance Expectation                         and speed of waves traveling in various media.
+
+                                                            Physical Science: Emphasis is on describing waves both qualitatively and quantitatively. Qualitative focus includes
+                                                            standard repeating waves and transmission/absorption of electromagnetic waves/radiation.
+             Clarification Statement                        Physics: Examples of data could include electromagnetic radiation traveling through a vacuum and glass, sound
+                                                            waves traveling through air and water, and seismic waves traveling through the Earth. Emphasis is on algebraic
+                                                            relationships and describing those relationships qualitatively.
+
+
+        Science & Engineering Practices                                   Disciplinary Core Ideas                                   Crosscutting Concepts
+1. Asking questions and defining problems                   WAVE PROPERTIES                                           CAUSE AND EFFECT
+2. Developing and using models: Modeling in 9-12            The wavelength and frequency of a wave are related to     Empirical evidence is required to differentiate between
+   builds on K-8 experiences and progresses to using        one another by the speed of travel of the wave, which     cause and correlation and make claims about specific
+   synthesizing and developing models to predict            depends on the type of wave and the medium through        causes and effects.
+   and show relationships among variables between           which it is passing. (HS.PS4A.a)
+   systems and their components in the natural and
+   designed world(s).
+ • Develop, revise, and/or use a model based on evidence
+   to illustrate and/or predict the relationships between
+   systems or between components of a system.
+3. Planning and carrying out investigations
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                             13
+                                                                                                                                                                   MARCH 2017
+                                                                                                                                                                              PS
+                                                                                                                                                                HS-PS4-4
+
+
+WAVES AND THEIR APPLICATIONS
+                                                              Evaluate the validity and reliability of claims in published materials regarding the effects that different frequencies
+            Performance Expectation                           of electromagnetic radiation have when absorbed by matter.
+
+                                                              Emphasis is on the idea that photons associated with different frequencies of light have different energies, and
+                                                              the damage to living tissue from electromagnetic radiation depends on the energy of the radiation. Examples of
+              Clarification Statement                         published materials could include trade books, magazines, web resources, videos, and other passages that may
+                                                              reflect bias. Emphasis is on qualitative descriptions.
+
+
+         Science & Engineering Practices                                    Disciplinary Core Ideas                                      Crosscutting Concepts
+1. Asking questions and defining problems                     ELECTROMAGNETIC RADIATION                                    CAUSE AND EFFECT
+2. Developing and using models                                When light or longer wavelength electromagnetic              Cause and effect relationships can be suggested and
+                                                              radiation is absorbed in matter, it is generally converted   predicted for complex natural and human designed
+3. Planning and carrying out investigations                   into thermal energy (heat). Shorter wavelength               systems by examining what is known about smaller
+4. Analyzing and interpreting data                            electromagnetic radiation (ultraviolet, X-rays, gamma        scale mechanisms within the system.
+                                                              rays) can ionize atoms and cause damage to living cells.
+5. Using mathematics and computational thinking
+                                                              (HS.PS4B.b)
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating
+   information in 9–12 builds on K–8 experiences and
+   progresses to evaluating the validity and reliability of
+   the claims, methods, and designs.
+ • Evaluate the validity and reliability of and/or
+   synthesize multiple claims, methods, and/or designs
+   that appear in scientific and technical texts or media
+   reports, verifying the data when possible.
+
+
+
+
+                                                                                                                                                                                   14
+                                                                                                                                                                         MARCH 2017
+

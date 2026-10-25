@@ -1,0 +1,763 @@
+                                                                                                                                                                         8
+                                                                                                                                                      8-MS-PS1-1
+
+
+MATTER AND ITS INTERACTIONS
+            Performance Expectation                        Develop models to describe the atomic composition of simple molecules and extended structures.
+
+
+                                                           Emphasis is on developing models of molecules that vary in complexity. Examples of extended structures could
+                                                           include minerals such as but not limited to halite, agate, calcite, or sapphire. Examples of molecular-level models
+             Clarification Statement                       could include drawings, 3-D models, or computer representations showing different molecules with different types
+                                                           of atoms.
+
+
+        Science & Engineering Practices                                  Disciplinary Core Ideas                                   Crosscutting Concepts
+1. Asking questions (for science) and defining problems     STRUCTURE AND PROPERTIES OF MATTER                       SCALE, PROPORTION, AND QUANTITY
+   (for engineering)                                        Substances are made from different types of atoms,       Time, space, and energy phenomena can be observed at
+2. Developing and using models: Modeling in 6–8 builds      which combine with one another in various ways.          various scales using models to study systems that are
+   on K–5 experiences and progresses to developing,         Atoms form molecules that range in size from two to      too large or too small.
+   using and revising models to describe, test, and predict thousands of atoms. (MS.PS1A.a)
+   more abstract phenomena and design systems.              Solids may be formed from molecules, or they may
+ • Develop and/or use a model to predict and/or             be extended structures with repeating subunits (e.g.,
+   describe phenomena.                                      crystals). (MS.PS1A.e)
+
+3. Planning and carrying out investigations
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                 1
+                                                                                                                                                                  MARCH 2017
+                                                                                                                                                                       8
+                                                                                                                                                   8-MS-PS1-3
+
+
+MATTER AND ITS INTERACTIONS
+                                                        Gather and make sense of information to describe that synthetic materials come from natural resources and
+            Performance Expectation                     impact society.
+
+                                                        Emphasis is on natural resources that undergo a chemical process to form synthetic materials. These natural
+             Clarification Statement                    resources may or may not be pure substances. Examples of new materials could include new medicine, foods, or
+                                                        alternative fuels, and focus is on qualitative as opposed to quantitative information.
+
+
+        Science & Engineering Practices                               Disciplinary Core Ideas                                    Crosscutting Concepts
+1. Asking questions and defining problems               STRUCTURE AND PROPERTIES OF MATTER                         STRUCTURE AND FUNCTION
+2. Developing and using models                          Each pure substance has characteristic physical and        Structures can be designed to serve particular functions
+                                                        chemical properties (for any bulk quantity under given     by taking into account properties of different materials,
+3. Planning and carrying out investigations             conditions) under normal conditions that can be used to    and how materials can be shaped and used.
+4. Analyzing and interpreting data                      identify it. (MS.PS1A.b)
+5. Using mathematics and computational thinking         CHEMICAL REACTIONS
+6. Constructing explanations and designing solutions    Substances react chemically in characteristic ways. In a
+                                                        chemical process, the atoms that make up the original
+7. Engaging in argument from evidence
+                                                        substances are regrouped into different molecules, and
+8. Obtaining, evaluating, and communicating             these new substances have different properties from
+   information: Obtaining, evaluating, and              those of the reactants. (MS.PS1B.a)
+   communicating information in 6–8 builds on K–5
+   experiences and progresses to evaluating the merit
+   and validity of ideas and methods.
+ • Gather, read, and synthesize information from
+   multiple appropriate sources and assess the
+   credibility, accuracy, and possible bias of each
+   publication and methods used, and describe how
+   they are supported or not supported by evidence.
+
+
+
+
+                                                                                                                                                                           2
+                                                                                                                                                                MARCH 2017
+                                                                                                                                                                          8
+                                                                                                                                                     8-MS-PS1-6
+
+
+MATTER AND ITS INTERACTIONS
+                                                           Undertake a design project to construct, test, and modify a device that either releases or absorbs thermal energy
+            Performance Expectation                        by chemical processes.
+
+                                                           Emphasis is on the design, controlling the transfer of energy to the environment, and modification of a device using
+                                                           factors such as type and concentration of a substance. Examples of designs could involve chemical reactions such
+             Clarification Statement                       as dissolving ammonium chloride, calcium chloride or a citric acid and baking soda (sodium bicarbonate) reaction in
+                                                           order to warm or cool an object.
+
+
+        Science & Engineering Practices                                  Disciplinary Core Ideas                                    Crosscutting Concepts
+1. Asking questions (for science) and defining problems    CHEMICAL REACTIONS                                         ENERGY AND MATTER: FLOWS, CYCLES,
+   (for engineering)                                       Some chemical reactions release energy (exothermic         AND CONSERVATION
+2. Developing and using models                             reactions), others store energy (endothermic reactions).   The transfer of energy can be tracked as energy flows
+                                                           (MS.PS1B.c)                                                through a designed or natural system.
+3. Planning and carrying out investigations
+4. Analyzing and interpreting data                         OPTIMIZING THE DESIGN SOLUTION
+                                                           Although one design may not perform the best across
+5. Using mathematics and computational thinking            all tests, identifying the characteristics of the design
+6. Constructing explanations and designing solutions:      that performs best in each test can provide useful
+   Constructing explanations and designing solutions       information for the redesign process-that is, some of
+   in 6–8 builds on K– 5 experiences and progresses to     those characteristics may be incorporated into the new
+   include designing solutions supported by multiple       design. (MS.ETS 1.C.a)
+   sources of evidence consistent with scientific ideas,
+   principles, and theories.
+ • Undertake a design project, engaging in the design
+   cycle, to construct and/or implement a solution that
+   meets specific design criteria and constraints.
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                               3
+                                                                                                                                                                  MARCH 2017
+                                                                                                                                                                                     8
+                                                                                                                                                               8-MS-PS3-3
+
+
+ENERGY
+                                                                 Apply scientific principles to design, construct, and test a device that either minimizes or maximizes thermal
+             Performance Expectation                             energy transfer.
+
+                                                                 Emphasis is on the ability to maximize or minimize thermal energy transfer as it relates to devices used when an area
+              Clarification Statement                            loses electricity after a natural disaster. Examples of devices could include an insulated box or a solar cooker. Testing
+                                                                 of the device relies on performance and not direct calculation of the total amount of thermal energy transferred.
+
+
+         Science & Engineering Practices                                       Disciplinary Core Ideas                                       Crosscutting Concepts
+1. Asking questions (for science) and defining problems          DEFINITIONS OF ENERGY                                         ENERGY AND MATTER: FLOWS, CYCLES,
+   (for engineering)                                             Temperature is a measure of the average kinetic energy;       AND CONSERVATION
+2. Developing and using models                                   the relationship between the temperature and the total        The transfer of energy can be tracked as energy flows
+                                                                 energy of the system depends on the types, states, and        through a designed or natural system.
+3. Planning and carrying out investigations                      amounts of matter present. (MS.PS3A.d)
+4. Analyzing and interpreting data                               CONSERVATION OF ENERGY AND ENERGY TRANSFER
+5. Using mathematics and computational thinking                  Energy is spontaneously transferred out of hotter
+                                                                 regions or objects and into colder ones. (MS.PS3B.c)
+6. Constructing explanations and designing solutions:
+   Constructing explanations and designing solutions             DEFINING AND DELIMITING AN ENGINEERING PROBLEM
+   in 6–8 builds on K– 5 experiences and progresses              The more precisely a design task’s criteria and
+   to include constructing explanations and designing            constraints can be defined, the more likely it is that the
+   solutions supported by multiple sources of evidence           designed solution will be successful. Specification of
+   consistent with scientific ideas, principles, and theories.   constraints includes consideration of scientific principles
+                                                                 and other relevant knowledge that is likely to limit
+ • Apply scientific ideas, principles, and/or evidence to
+                                                                 possible solutions.(MS.ETS1A.a)
+   construct, revise and/or use an explanation for real-
+   world phenomena, examples, or events.                A solution needs to be tested,to prove the validity of the
+                                                        design and then modified on the basis of the test results
+7. Engaging in argument from evidence
+                                                        in order to improve it. There are systematic processes for
+8. Obtaining, evaluating, and communicating information evaluating solutions with respect to how well they meet
+                                                        the criteria and constraints of a problem. Sometimes parts
+                                                        of different solutions can be combined to create a solution
+                                                        that is better than any of its predecessors. Models of all
+                                                        kinds are important for testing solutions.(MS.ETS1B.a)
+
+                                                                                                                                                                                             4
+                                                                                                                                                                              MARCH 2017
+                                                                                                                                                                              8
+                                                                                                                                                        8-MS-PS3-5
+
+
+ENERGY
+                                                            Construct, use, and present arguments to support the claim that when the kinetic energy of an object changes,
+            Performance Expectation                         energy is transferred to or from the object.
+
+                                                            Examples of empirical evidence used in arguments could include an inventory or other representation of the energy
+             Clarification Statement                        (i.e. mechanical, thermal, or other forms of energy) before and after the transfer in the form of temperature changes
+                                                            or motion of object. This does not include the quantification of the energy transferred in the system.
+
+
+        Science & Engineering Practices                                   Disciplinary Core Ideas                                      Crosscutting Concepts
+1. Asking questions and defining problems                   CONSERVATION OF ENERGY AND ENERGY TRANSFER                  ENERGY AND MATTER
+2. Developing and using models                              When the kinetic energy of an object changes, there         Energy may take different forms (e.g. energy in fields,
+                                                            is inevitably some other change in energy at the same       thermal energy, energy of motion).
+3. Planning and carrying out investigations                 time. (MS.PS3B.a)
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence: Engaging
+   in argument from evidence in 6–8 builds on K–5
+   experiences and progresses to constructing a
+   convincing argument that supports or refutes claims
+   for either explanations or solutions about the natural
+   and designed world(s).
+ • Construct, use, and/or present an oral and written
+   argument supported by empirical evidence
+   and scientific reasoning to support or refute an
+   explanation or a model for a phenomenon or a
+   solution to a problem.
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                    5
+                                                                                                                                                                      MARCH 2017
+                                                                                                                                                                             8
+                                                                                                                                                      8-MS-ESS1-4
+
+
+EARTH’S PLACE IN THE UNIVERSE
+                                                             Construct a scientific explanation based on evidence from rock strata for how the geologic time scale is used to
+            Performance Expectation                          organize Earth’s geologic history.
+
+                                                             Emphasis is on analyses of rock formations and fossils they contain to establish relative ages of major events in
+                                                             Earth’s history. Major events could include the formation of mountain chains and ocean basins, adaptation and
+             Clarification Statement                         extinction of particular living organisms, volcanic eruptions, periods of massive glaciation, and the development
+                                                             of watersheds and rivers through glaciation and water erosion. The events in Earth’s history happened in the past
+                                                             continue today. Scientific explanations can include models.
+
+
+        Science & Engineering Practices                                    Disciplinary Core Ideas                                     Crosscutting Concepts
+1. Asking questions and defining problems                    THE HISTORY OF PLANET EARTH                                SCALE, PROPORTION, AND QUANTITY
+2. Developing and using models                               The geologic time scale interpreted from rock strata       Time, space, and energy phenomena can be observed at
+                                                             provides a way to organize Earth’s history. Analyses of    various scales using models to study systems that are
+3. Planning and carrying out investigations                  rock strata and the fossil record provide only relative    too large or too small.
+4. Analyzing and interpreting data                           dates, not an absolute scale. (MS.ESS1C.a)
+5. Using mathematics and computational thinking              Scientists use data from radioactive dating techniques
+                                                             to estimate the age of Earth’s materials. (MS.ESS1C.b)
+6. Constructing explanations and designing solutions:
+   Constructing explanations and designing solutions in 6–
+   8 builds on K–5 experiences and progresses to include
+   constructing explanations and designing solutions
+   supported by multiple sources of evidence consistent
+   with scientific ideas, principles, and theories.
+ • Construct a scientific explanation based on valid and
+   reliable evidence obtained from sources (including
+   the students’ own experiments) and the assumption
+   that theories and laws that describe the natural
+   world operate today as they did in the past and will
+   continue to do so in the future.
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+                                                                                                                                                                                 6
+                                                                                                                                                                      MARCH 2017
+                                                                                                                                                                             8
+                                                                                                                                                    8-MS-ESS2-1
+
+
+EARTH’S SYSTEMS
+            Performance Expectation                        Develop a model to describe the cycling of Earth’s materials and the flow of energy that drives this process.
+
+
+
+                                                           Emphasis is on the processes of melting, crystallization, weathering, deformation, and sedimentation, which act
+             Clarification Statement                       together to form minerals and rocks through the cycling of Earth’s materials.
+
+
+
+        Science & Engineering Practices                                  Disciplinary Core Ideas                                    Crosscutting Concepts
+1. Asking questions (for science) and defining problems    EARTH’S MATERIALS AND SYSTEMS                              STABILITY AND CHANGE
+   (for engineering)                                       All Earth processes are the result of energy flowing and   Explanations of stability and change in natural or
+2. Developing and using models: Modeling in 6-8 builds     matter cycling within and among the planet’s systems.      designed systems can be constructed by examining
+   on K-5 experiences and progresses to developing, using, This energy is derived from the sun and Earth’s hot        the changes over time and forces at different scales,
+   and revising models to describe, test, and predict more interior. The energy that flows and matter that cycles     including the atomic scale.
+   abstract phenomena and design systems.                  produce chemical and physical changes in Earth’s
+                                                           materials and living organisms. (MS.ESS2A.a)
+ • Develop and/or use a model to predict and/or
+   describe phenomena.
+3. Planning and carrying out investigations
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                              7
+                                                                                                                                                                   MARCH 2017
+                                                                                                                                                                                 8
+                                                                                                                                                         8-MS-ESS2-2
+
+
+EARTH’S SYSTEMS
+                                                                 Construct an explanation based on evidence for how geoscience processes have changed Earth’s surface at varying
+             Performance Expectation                             time and spatial scales.
+                                                                 Emphasis is on how processes change Earth’s surface at time and spatial scales that can be large (such as slow
+                                                                 plate motions or the uplift of a large mountain ranges) or small (such as rapid landslides on microscopic geochemical
+                                                                 reactions), and how many geosciences processes usually behave gradually but are punctuated by catastrophic events
+              Clarification Statement                            (such as earthquakes, volcanoes, and meteor impacts). Examples of geoscience processes include surface weathering
+                                                                 and deposition by the movements of water, ice, and wind. Emphasis is on geoscience processes that shape local
+                                                                 geographic features, where appropriate.
+
+
+         Science & Engineering Practices                                       Disciplinary Core Ideas                                    Crosscutting Concepts
+1. Asking questions (for science) and defining problems          EARTH’S MATERIALS AND SYSTEMS                              SCALE, PROPORTION, AND QUANTITY
+   (for engineering)                                             The planet’s systems interact over scales that range       Time, space, and energy phenomena can be observed at
+2. Developing and using models                                   from microscopic to global in size, and they operate       various scales using models to study systems that are
+                                                                 over fractions of a second to billions of years. These     too large or too small.
+3. Planning and carrying out investigations                      interactions have shaped Earth’s history and will
+4. Analyzing and interpreting data                               determine its future. (MS.ESS2A.b)
+5. Using mathematics and computational thinking                  THE ROLE OF WATER IN EARTH’S
+6. Constructing explanations and designing solutions:            SURFACE PROCESSES
+   Constructing explanations and designing solutions             Water’s movements—both on the land and
+   in 6–8 builds on K– 5 experiences and progresses              underground—cause weathering and erosion, which
+   to include constructing explanations and designing            change the land’s surface features and create
+   solutions supported by multiple sources of evidence           underground formations. (MS.ESS2C.e)
+   consistent with scientific ideas, principles, and theories.
+ • Construct a scientific explanation based on valid and
+   reliable evidence obtained from sources (including
+   the students’ own experiments) and the assumption
+   that theories and laws that describe the natural
+   world operate today as they did in the past and will
+   continue to do so in the future.
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+                                                                                                                                                                                     8
+                                                                                                                                                                         MARCH 2017
+                                                                                                                                                                                 8
+                                                                                                                                                         8-MS-ESS2-3
+
+
+EARTH’S SYSTEMS
+                                                              Analyze and interpret data on the distribution of fossils and rocks, continental shapes, and sea floor structures to
+            Performance Expectation                           provide evidence of the past plate motions.
+
+
+                                                              Examples of data include similarities of rock and fossil types on different continents, the shapes of the continents
+              Clarification Statement                         (including continental shelves), and the locations of ocean structures (such as ridges, fracture zones, and trenches).
+
+
+
+         Science & Engineering Practices                                    Disciplinary Core Ideas                                       Crosscutting Concepts
+1. Asking questions (for science) and defining problems       THE HISTORY OF PLANET EARTH                                  PATTERNS
+   (for engineering)                                          Tectonic processes continually generate new ocean sea        Patterns in rates of change and other numerical
+2. Developing and using models                                floor at ridges and destroy old sea floor at trenches.       relationships can provide information about natural and
+                                                              (MS.ESS1C.c)                                                 human designed systems.
+3. Planning and carrying out investigations
+4. Analyzing and interpreting data: Analyzing data            PLATE TECTONICS AND LARGE-SCALE
+   in 6-8 builds on K-5 experiences and progresses to         SYSTEM INTERACTIONS
+   extending quantitative analysis to investigations,         Maps of ancient land and water patterns, based on
+   distinguishing between correlation and causation, and      investigations of rocks and fossils, make clear how
+   basic statistical techniques of data and error analysis.   Earth’s plates have moved great distances, collided, and
+                                                              spread apart. (MS.ESS2B.a)
+ • Analyze and interpret data to provide evidence
+   for phenomena.
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                       9
+                                                                                                                                                                          MARCH 2017
+                                                                                                                                                                                  8
+                                                                                                                                                           8-MS-ESS3-1
+
+
+EARTH AND HUMAN ACTIVITY
+                                                                 Construct a scientific explanation based on evidence for how the uneven distributions of Earth’s mineral, energy,
+             Performance Expectation                             and groundwater resources are the result of past and current geoscience processes.
+                                                                 Emphasis is on how these resources are limited and typically non-renewable, and how their distributions are
+                                                                 significantly changing as a result of removal by humans. Examples of uneven distributions of resources as a result
+              Clarification Statement                            of past processes include but are not limited to petroleum (locations of the burial of organic marine sediments
+                                                                 and subsequent geologic traps), metal ores (locations of past volcanic and hydrothermal activity associated with
+                                                                 subduction zones), and soil (locations of active weathering and/or deposition of rock).
+
+
+         Science & Engineering Practices                                       Disciplinary Core Ideas                                     Crosscutting Concepts
+1. Asking questions (for science) and defining problems          NATURAL RESOURCES                                         CAUSE AND EFFECT
+   (for engineering)                                             Humans depend on Earth’s land, ocean, atmosphere,         Cause and effect relationships may be used to predict
+2. Developing and using models                                   and biosphere for many different resources. Minerals,     phenomena in natural or designed systems.
+                                                                 fresh water, and biosphere resources are limited, and
+3. Planning and carrying out investigations                      many are not renewable or replaceable over human
+4. Analyzing and interpreting data                               lifetimes. These resources are distributed unevenly
+                                                                 around the planet as a result of past geologic processes.
+5. Using mathematics and computational thinking
+                                                                 (MS.ESS3A.a)
+6. Constructing explanations and designing solutions:
+   Constructing explanations and designing solutions             LOUISIANA’S NATURAL RESOURCES
+   in 6–8 builds on K–5 experiences and progresses               Non-renewable resources such as our state’s fossil fuels
+   to include constructing explanations and designing            are vast but limited. (MS.EVS1A.b)
+   solutions supported by multiple sources of evidence
+   consistent with scientific ideas, principles, and theories.
+ • Construct a scientific explanation based on valid and
+   reliable evidence obtained from sources (including
+   the students’ own experiments) and the assumption
+   that theories and laws that describe the natural
+   world operate today as they did in the past and will
+   continue to do so in the future.
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+                                                                                                                                                                                      10
+                                                                                                                                                                          MARCH 2017
+                                                                                                                                                                                   8
+                                                                                                                                                          8-MS-ESS3-2
+
+
+EARTH AND HUMAN ACTIVITY
+                                                              Analyze and interpret data on natural hazards to forecast future catastrophic events and inform the development
+            Performance Expectation                           of technologies to mitigate their effects.
+
+                                                              Emphasis is on how some natural hazards, such as volcanic eruptions and severe weather, are preceded by phenomena
+                                                              that allow for reliable predictions, but others, such as earthquakes, occur suddenly and with no notice, and thus are not
+                                                              yet predictable. Examples of natural hazards can be taken from interior processes (such as earthquakes and volcanic
+              Clarification Statement                         eruptions), surface processes (such as mass wasting and tsunamis), or severe weather events (such as hurricanes,
+                                                              tornadoes, and floods). Examples of data can include the locations, magnitudes, and frequencies of the natural hazards.
+                                                              Examples of technologies can be global (such as satellite systems to monitor hurricanes or forest fires) or local (such as
+                                                              building basements in tornado-prone regions or reservoirs to mitigate droughts).
+
+
+         Science & Engineering Practices                                     Disciplinary Core Ideas                                       Crosscutting Concepts
+1. Asking questions (for science) and defining problems       NATURAL HAZARDS                                               PATTERNS
+   (for engineering)                                          Mapping the history of natural hazards in a region,           Graphs, charts, and images can be used to identify
+2. Developing and using models                                combined with an understanding of related geologic            patterns in data.
+                                                              forces can help forecast the locations and likelihoods of
+3. Planning and carrying out investigations                   future events. (MS.ESS3B.a)
+4. Analyzing and interpreting data: Analyzing data in
+   6–8 builds on K–5 experiences and progresses to
+   extending quantitative analysis to investigations,
+   distinguishing between correlation and causation, and
+   basic statistical techniques of data and error analysis.
+ • Analyze and interpret data to provide evidence
+   for phenomena.
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                      11
+                                                                                                                                                                           MARCH 2017
+                                                                                                                                                                                      8
+                                                                                                                                                             8-MS-ESS3-3
+
+
+EARTH AND HUMAN ACTIVITY
+             Performance Expectation                             Apply scientific principles to design a method for monitoring and minimizing human impact on the environment.
+
+
+                                                                 Examples of the design process may include examining human environmental impacts, assessing the kinds of
+                                                                 solutions that are feasible, and designing and evaluating solutions that could reduce that impact. Examples of human
+              Clarification Statement                            impacts may include water usage (such as the withdrawal of water from streams and aquifers or the construction
+                                                                 of dams and levees), land usage (such as urban development, agriculture, or the removal of wetlands), and pollution
+                                                                 (such as of the air, water, or land).
+
+
+         Science & Engineering Practices                                       Disciplinary Core Ideas                                        Crosscutting Concepts
+1. Asking questions (for science) and defining problems          HUMAN IMPACTS ON EARTH’S SYSTEMS                               CAUSE AND EFFECT
+   (for engineering)                                             Human activities, globally and locally, have significantly     Relationships can be classified as causal or correlational,
+2. Developing and using models                                   altered the biosphere, sometimes damaging or                   and correlation does not necessarily imply causation.
+                                                                 destroying natural habitats and causing the extinction
+3. Planning and carrying out investigations                      of other species. But changes to Earth’s environments
+4. Analyzing and interpreting data                               can have different impacts (negative and positive) for
+                                                                 different living things. (MS.ESS3C.a)
+5. Using mathematics and computational thinking
+                                                                 Typically as human populations and per-capita consumption
+6. Constructing explanations and designing solutions:
+                                                                 of natural resources increase, so do the negative impacts
+   Constructing explanations and designing solutions
+                                                                 on Earth unless the activities and technologies involved are
+   in 6–8 builds on K– 5 experiences and progresses
+                                                                 engineered otherwise. (MS.ESS3C.b)
+   to include constructing explanations and designing
+   solutions supported by multiple sources of evidence  DEVELOPING POSSIBLE SOLUTIONS
+   consistent with scientific ideas, principles, and theories.
+                                                        A solution needs to be tested to prove the validity of
+ • Apply scientific ideas or principles to design,      the design and then modified on the basis of the test
+   construct, and/or test a design of an object, tool,  results in order to improve it. There are systematic
+   process or system.                                   processes for evaluating solutions with respect to
+                                                        how well they meet the criteria and constraints of a
+7. Engaging in argument from evidence
+                                                        problem. Sometimes parts of different solutions can be
+8. Obtaining, evaluating, and communicating information combined to create a solution that is better than any of
+                                                        its predecessors. Models of all kinds are important for
+                                                        testing solutions. (ETS.MS.1B.a)
+
+
+                                                                                                                                                                                         12
+                                                                                                                                                                               MARCH 2017
+                                                                                                                                                                            8
+                                                                                                                                                        8-MS-LS1-4
+
+
+FROM MOLECULES TO ORGANISMS: STRUCTURES AND PROCESSES
+                                                            Construct and use argument(s) based on empirical evidence and scientific reasoning to support an explanation
+            Performance Expectation                         for how characteristic animal behaviors and specialized plant structures affect the probability of survival and
+                                                            successful reproduction of animals and plants respectively.
+                                                            Examples of behaviors that affect the probability of animal reproduction could include nest building to protect
+                                                            young from cold, herding of animals to protect young from predators, or vocalization of animals and colorful
+                                                            plumage to attract mates for breeding. Examples of animal behaviors that affect the probability of plant
+             Clarification Statement                        reproduction could include transferring pollen or seeds or creating conditions for seed germination and growth.
+                                                            Examples of plant structures could include bright flowers attracting butterflies that transfer pollen, flower nectar
+                                                            and odors that attract insects that transfer pollen, or hard shells on nuts that squirrels bury.
+
+
+        Science & Engineering Practices                                   Disciplinary Core Ideas                                     Crosscutting Concepts
+1. Asking questions and defining problems                   GROWTH AND DEVELOPMENT OF ORGANISMS                      CAUSE AND EFFECT
+2. Developing and using models                              Animals engage in characteristic behaviors that increase Phenomena may have more than one cause, and some
+                                                            the odds of reproduction. (MS.LS1B.c)                    cause and effect relationships in systems can only be
+3. Planning and carrying out investigations                                                                          described using probability.
+                                                            Plants (flowering and non-flowering) reproduce in a
+4. Analyzing and interpreting data                          variety of ways, sometimes depending on animal behavior
+5. Using mathematics and computational thinking             and specialized features for reproduction. (MS.LS1B.d)
+6. Constructing explanations and designing solutions        Group behavior has evolved because membership can
+                                                            increase the chances of survival for individuals and their
+7. Engaging in argument from evidence: Engaging
+                                                            genetic relatives. (MS.LS2D.a)
+   in argument from evidence in 6–8 builds on K–5
+   experiences and progresses to constructing a
+   convincing argument that supports or refutes claims
+   for either explanations or solutions about the natural
+   and designed world(s).
+ • Construct, use, and/or present an oral and written
+   argument supported by empirical evidence
+   and scientific reasoning to support or refute an
+   explanation or a model for a phenomenon or a
+   solution to a problem.
+8. Obtaining, evaluating, and communicating information
+
+
+                                                                                                                                                                               13
+                                                                                                                                                                     MARCH 2017
+                                                                                                                                                                                  8
+                                                                                                                                                             8-MS-LS1-5
+
+
+FROM MOLECULES TO ORGANISMS: STRUCTURES AND PROCESSES
+                                                           Construct a scientific explanation based on evidence for how environmental and genetic factors influence the
+            Performance Expectation                        growth of organisms.
+
+                                                           Examples of local environmental conditions could include availability of food, light, space, and water. Examples of
+                                                           genetic factors could include large breed cattle and species of grass affecting growth of organisms. Examples of
+             Clarification Statement                       evidence could include drought decreasing plant growth, fertilizer increasing plant growth, different varieties of plant
+                                                           seeds growing at different rates in different conditions, or fish growing larger in large ponds than they do in small ponds.
+
+
+        Science & Engineering Practices                                   Disciplinary Core Ideas                                        Crosscutting Concepts
+1. Asking questions and defining problems                  GROWTH AND DEVELOPMENT OF ORGANISMS                            CAUSE AND EFFECT
+2. Developing and using models                             Genetic factors as well as local conditions affect the         Phenomena may have more than one cause, and some
+                                                           growth of the adult plant. (MS.LS1B.e)                         cause and effect relationships in systems can only be
+3. Planning and carrying out investigations                                                                               described using probability.
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions:
+   Constructing explanations (science) and designing
+   solutions (engineering) in 6–8 builds on K– 5
+   experiences and progresses to include constructing
+   explanations and designing solutions supported
+   by multiple sources of evidence consistent with
+   scientific ideas, principles, and theories.
+ • Construct a scientific explanation based on valid and
+   reliable evidence obtained from sources (including
+   the students’ own experiments) and the assumption
+   that theories and laws that describe the natural
+   world operate today as they did in the past and will
+   continue to do so in the future.
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+                                                                                                                                                                                     14
+                                                                                                                                                                          MARCH 2017
+                                                                                                                                                                              8
+                                                                                                                                                         8-MS-LS3-1
+
+
+HEREDITY: INHERITANCE AND VARIATION OF TRAITS
+                                                          Develop and use a model to describe why structural changes to genes (mutations) located on chromosomes may
+            Performance Expectation                       affect proteins and may result in harmful, beneficial, or neutral effects to the structure and function of the organism.
+
+                                                          Emphasis is on conceptual understanding that changes in genetic material may result in making different
+             Clarification Statement                      proteins. Examples include radiation treated plants, genetically modified organisms (e.g. roundup resistant crops,
+                                                          bioluminescence), or mutations both harmful and beneficial.
+
+
+        Science & Engineering Practices                                 Disciplinary Core Ideas                                       Crosscutting Concepts
+1. Asking questions and defining problems                  INHERITANCE OF TRAITS                                       STRUCTURE AND FUNCTION
+2. Developing and using models: Modeling in 6-8 builds     Genes are located in the chromosomes of cells, with         Complex and microscopic structures and systems
+   on K-5 experiences and progresses to developing, using, each chromosome pair containing two variants (alleles)      can be visualized, modeled, and used to describe how
+   and revising models to describe, test, and predict more of each of many distinct genes. Each distinct gene          their function depends on the shapes, composition,
+   abstract phenomena and design systems.                  chiefly controls the production of specific proteins,       and relationships among its parts; therefore, complex
+                                                           which in turn affects the traits of the individual.         natural and designed structures/systems can be
+ • Develop and/or use a model to predict and/or            (MS.LS3A.a)                                                 analyzed to determine how they function.
+   describe phenomena.
+                                                           Changes (mutations) to genes can result in changes to
+3. Planning and carrying out investigations                proteins, which can affect the structures and functions
+4. Analyzing and interpreting data                         of the organism and thereby change traits. (MS.LS3A.b)
+5. Using mathematics and computational thinking           VARIATION OF TRAITS
+6. Constructing explanations and designing solutions      In addition to variations that arise from sexual
+                                                          reproduction, genetic information can be altered
+7. Engaging in argument from evidence
+                                                          because of mutations. Though rare, mutations may
+8. Obtaining, evaluating, and communicating               result in changes to the structure and function of
+   information                                            proteins. Some changes are beneficial, others harmful,
+                                                          and some neutral to the organism. (MS.LS3B.b)
+
+
+
+
+                                                                                                                                                                                15
+                                                                                                                                                                      MARCH 2017
+                                                                                                                                                                              8
+                                                                                                                                                          8-MS-LS4-1
+
+
+BIOLOGICAL EVOLUTION: UNITY AND DIVERSITY
+                                                              Analyze and interpret data for patterns in the fossil record that document the existence, diversity, extinction, and
+            Performance Expectation                           change of life forms throughout the history of life on Earth under the assumption that natural laws operate today as
+                                                              in the past.
+
+                                                              Emphasis is on finding patterns of changes in the level of complexity of anatomical structures in organisms and the
+              Clarification Statement                         chronological order of fossil appearance in the rock layers.
+
+
+
+         Science & Engineering Practices                                    Disciplinary Core Ideas                                     Crosscutting Concepts
+1. Asking questions and defining problems                     EVIDENCE OF COMMON ANCESTRY AND DIVERSITY PATTERNS
+2. Developing and using models                                The collection of fossils and their placement in         Graphs, charts, and images can be used to identify
+                                                              chronological order (e.g., through the location of the   patterns in data.
+3. Planning and carrying out investigations                   sedimentary layers in which they are found or through
+4. Analyzing and interpreting data: Analyzing data            radioactive dating) is known as the fossil record. It
+   in 6-8 builds on K-5 experiences and progresses to         documents the existence, diversity, extinction, and
+   extending quantitative analysis to investigations,         change of many life forms throughout the history of life
+   distinguishing between correlation and causation, and      on Earth. (MS.LS4A.a)
+   basic statistical techniques of data and error analysis.
+ • Analyze and interpret data to determine similarities
+   and differences in findings.
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                 16
+                                                                                                                                                                       MARCH 2017
+                                                                                                                                                                          8
+                                                                                                                                                     8-MS-LS4-2
+
+
+BIOLOGICAL EVOLUTION: UNITY AND DIVERSITY
+                                                            Apply scientific ideas to construct an explanation for the anatomical similarities and differences among modern
+            Performance Expectation                         organisms and between modern and fossil organisms to infer evolutionary relationships.
+
+
+                                                            Emphasis is on explanations of the evolutionary relationships among organisms in terms of similarity or differences
+             Clarification Statement                        of the gross appearance of anatomical structures.
+
+
+
+        Science & Engineering Practices                                   Disciplinary Core Ideas                                   Crosscutting Concepts
+1. Asking questions and defining problems                   EVIDENCE OF COMMON ANCESTRY AND DIVERSITY PATTERNS
+2. Developing and using models                              Anatomical similarities and differences between           Patterns can be used to identify cause and
+                                                            various organisms living today and between them and       effect relationships.
+3. Planning and carrying out investigations                 organisms in the fossil record, enable the reconstruction
+4. Analyzing and interpreting data                          of evolutionary history and the inference of lines of
+                                                            evolutionary descent. (MS.LS4A.b)
+5. Using mathematics and computational thinking
+                                                            Comparison of the embryological development of
+6. Constructing explanations and designing solutions:
+                                                            different species also reveals similarities that show
+   Constructing explanations (science) and designing
+                                                            relationships not evident in the fully-formed anatomy.
+   solutions (engineering) in 6–8 builds on K– 5
+                                                            (MS.LS4A.c)
+   experiences and progresses to include constructing
+   explanations and designing solutions supported
+   by multiple sources of evidence consistent with
+   scientific ideas, principles, and theories.
+ • Apply scientific ideas, principles, and/or evidence to
+   construct, revise and/or use an explanation for real-
+   world phenomena, examples, or events.
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                              17
+                                                                                                                                                                   MARCH 2017
+                                                                                                                                                                               8
+                                                                                                                                                       8-MS-LS4-3
+
+
+BIOLOGICAL EVOLUTION: UNITY AND DIVERSITY
+                                                              Analyze displays of pictorial data to compare patterns of similarities in the embryological development across
+            Performance Expectation                           multiple species to identify relationships not evident in the fully formed anatomy.
+
+
+                                                              Emphasis is on inferring general patterns of relatedness among embryos of different organisms by comparing the
+              Clarification Statement                         macroscopic appearance of diagrams or pictures.
+
+
+
+         Science & Engineering Practices                                    Disciplinary Core Ideas                                   Crosscutting Concepts
+1. Asking questions and defining problems                     EVIDENCE OF COMMON ANCESTRY AND DIVERSITY PATTERNS
+2. Developing and using models                                Anatomical similarities and differences between           Graphs, charts, and images can be used to identify
+                                                              various organisms living today and between them and       patterns in data.
+3. Planning and carrying out investigations                   organisms in the fossil record, enable the reconstruction
+4. Analyzing and interpreting data: Analyzing data            of evolutionary history and the inference of lines of
+   in 6-8 builds on K-5 experiences and progresses to         evolutionary descent. (MS.LS4A.b)
+   extending quantitative analysis to investigations,         Comparison of the embryological development of
+   distinguishing between correlation and causation, and      different species also reveals similarities that show
+   basic statistical techniques of data and error analysis.   relationships not evident in the fully-formed anatomy.
+ • Construct, analyze, and/or interpret graphical             (MS.LS4A.c)
+   displays of data and/or large data sets to identify
+   linear and nonlinear relationships.
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                               18
+                                                                                                                                                                     MARCH 2017
+                                                                                                                                                                          8
+                                                                                                                                                    8-MS-LS4-6
+
+
+BIOLOGICAL EVOLUTION: UNITY AND DIVERSITY
+                                                           Use mathematical representations to support explanations of how natural selection may lead to increases and
+            Performance Expectation                        decreases of specific traits in populations of species over time.
+
+                                                           Emphasis is on using mathematical models, probability statements, and proportional reasoning to support
+             Clarification Statement                       explanations of trends in changes to populations over time. Students should be able to explain trends in data for
+                                                           the number of individuals with specific traits changing over time.
+
+
+        Science & Engineering Practices                                  Disciplinary Core Ideas                                    Crosscutting Concepts
+1. Asking questions and defining problems                  ADAPTATION                                                  CAUSE AND EFFECT
+2. Developing and using models                             Adaptation by natural selection acting over generations     Phenomena may have more than one cause, and some
+                                                           is one important process by which populations change        cause and effect relationships in systems can only be
+3. Planning and carrying out investigations                over time in response to changes in environmental           described using probability.
+4. Analyzing and interpreting data                         conditions. Traits that support successful survival and
+                                                           reproduction in the new environment tend to become
+5. Using mathematics and computational thinking:
+                                                           more common; those that do not become less common.
+   Mathematical and computational thinking in 6-8 builds
+                                                           Thus, the distribution of traits in a population changes.
+   on K-5 experiences and progresses to identifying
+                                                           (MS.LS4C.a)
+   patterns in large data sets and using mathematical
+   concepts to support explanations and arguments.
+ • Use mathematical representations to describe and/or
+   support scientific conclusions and design solutions.
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                               19
+                                                                                                                                                                  MARCH 2017
+

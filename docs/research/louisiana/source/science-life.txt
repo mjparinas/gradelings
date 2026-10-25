@@ -1,0 +1,852 @@
+                                                                                                                                                                              LS
+                                                                                                                                                                  HS-LS1-1
+
+
+FROM MOLECULES TO ORGANISMS: STRUCTURES AND PROCESSES
+                                                                 Construct an explanation based on evidence for how the structure of DNA determines the structure of proteins
+             Performance Expectation                             which carry out the essential functions of life through systems of specialized cells.
+
+                                                                 Emphasis is on the conceptual understanding that DNA sequences determine the amino acid sequence and
+              Clarification Statement                            thus protein structure. Students can produce scientific writing, or presentations, and/or physical models that
+                                                                 communicate constructed explanations.
+
+
+         Science & Engineering Practices                                       Disciplinary Core Ideas                                    Crosscutting Concepts
+1. Asking questions and defining problems                        STRUCTURE AND FUNCTION                                     STRUCTURE AND FUNCTION
+2. Developing and using models                                   Systems of specialized cells within organisms help them    Investigating or designing new systems or structures
+                                                                 perform the essential functions of life. (HS.LS1A.a)       requires a detailed examination of the properties
+3. Planning and carrying out investigations                                                                                 of different materials, the structures of different
+                                                                 All cells contain genetic information in the form of DNA
+4. Analyzing and interpreting data                               molecules. Genes are regions in the DNA that contain       components, and connections of components to reveal
+                                                                 the instructions that code for the formation of proteins   its function and/or solve a problem.
+5. Using mathematics and computational thinking
+                                                                 which carry out the essential functions of life.
+6. Constructing explanations and designing
+                                                                 (HS.LS1A.c)
+   solutions: Constructing explanations (science) and
+   designing solutions (engineering) in 9–12 builds on
+   K–8 experiences and progresses to explanations
+   and designs that are supported by multiple and
+   independent student-generated sources of evidence
+   consistent with scientific ideas, principles, and theories.
+ • Construct and revise an explanation based on valid
+   and reliable evidence obtained from a variety of
+   sources (including students’ own investigations,
+   models, theories, simulations, peer review) and the
+   assumption that theories and laws that describe the
+   natural world operate today as they did in the past
+   and will continue to do so in the future.
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+                                                                                                                                                                                   1
+                                                                                                                                                                         MARCH 2017
+                                                                                                                                                                          LS
+                                                                                                                                                             HS-LS1-2
+
+
+FROM MOLECULES TO ORGANISMS: STRUCTURES AND PROCESSES
+                                                            Develop and use a model to illustrate the hierarchical organization of interacting systems that provide specific
+            Performance Expectation                         functions within multicellular organisms.
+
+                                                            Emphasis is on functions at the organism system level such as nutrient uptake, water delivery, or organism
+                                                            movement in response to neural stimuli. An example of an interacting system could be an artery depending on the
+             Clarification Statement                        proper function of elastic tissue and smooth muscle to regulate and deliver the proper amount of blood within the
+                                                            circulatory system.
+
+
+        Science & Engineering Practices                                   Disciplinary Core Ideas                                    Crosscutting Concepts
+1. Asking questions and defining problems                   STRUCTURE AND FUNCTION                                     SYSTEMS AND SYSTEM MODELS
+2. Developing and using models: Modeling in 9-12            Multicellular organisms have a hierarchical structural     Models (e.g., physical, mathematical, computer models)
+   builds on K-8 experiences and progresses to using        organization, in which any one system is made up of        can be used to simulate systems and interactions—
+   synthesizing and developing models to predict            numerous parts and is itself a component of the next       including energy, matter, and information flows—within
+   and show relationships among variables between           level. (HS.LS1A.b)                                         and between systems at different scales.
+   systems and their components in the natural and
+   designed world(s).
+ • Develop, revise, and/or use a model based on evidence
+   to illustrate and/or predict the relationships between
+   systems or between components of a system.
+3. Planning and carrying out investigations
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                2
+                                                                                                                                                                    MARCH 2017
+                                                                                                                                                                             LS
+                                                                                                                                                                HS-LS1-3
+
+
+FROM MOLECULES TO ORGANISMS: STRUCTURES AND PROCESSES
+                                                              Plan and conduct an investigation to provide evidence that feedback mechanisms maintain homeostasis in
+             Performance Expectation                          living organisms.
+
+
+                                                              Examples of investigations could include heart rate responses to exercise, stomate responses to moisture and
+              Clarification Statement                         temperature, root development in response to water levels, or cell response to hypertonic and hypotonic environments.
+
+
+
+         Science & Engineering Practices                                    Disciplinary Core Ideas                                     Crosscutting Concepts
+1. Asking questions and defining problems                     STRUCTURE AND FUNCTION                                      STABILITY AND CHANGE
+2. Developing and using models                                Feedback mechanisms maintain a living system’s              Feedback (negative or positive) can stabilize or
+                                                              internal conditions within certain limits and mediate       destabilize a system.
+3. Planning and carrying out investigations: Planning         behaviors, allowing the organism to remain alive and
+   and carrying out investigations to answer questions        functional even as external conditions change within
+   or test solutions to problems in 9-12 builds on K-8        some range. Feedback mechanisms can promote
+   experiences and progresses to include investigations       (through positive feedback) or inhibit (through negative
+   that provide evidence for and test conceptual,             feedback) activities within an organism to maintain
+   mathematical, physical, and empirical models.              homeostasis. (HS.LS1A.d)
+ • Plan and conduct an investigation individually and
+   collaboratively to produce data to serve as the basis
+   for evidence, and in the design: decide on types,
+   how much, and accuracy of data needed to produce
+   reliable measurements and consider limitations on
+   the precision of the data (e.g., number of trials, cost,
+   risk, time), and refine the design accordingly.
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+                                                                                                                                                                                      3
+                                                                                                                                                                       MARCH 2017
+                                                                                                                                                                             LS
+                                                                                                                                                                HS-LS1-4
+
+
+FROM MOLECULES TO ORGANISMS: STRUCTURES AND PROCESSES
+            Performance Expectation                        Use a model to illustrate the role of the cell cycle and differentiation in producing and maintaining complex organisms.
+
+
+
+                                                           Emphasis is on conceptual understanding that mitosis passes on genetically identical materials via replication, not
+             Clarification Statement                       on the details of each phase in mitosis.
+
+
+
+        Science & Engineering Practices                                  Disciplinary Core Ideas                                       Crosscutting Concepts
+1. Asking questions and defining problems                  GROWTH AND DEVELOPMENT OF ORGANISMS                           SYSTEMS AND SYSTEM MODELS
+2. Developing and using models: Modeling in 9-12           In multicellular organisms the cell cycle is necessary        Models (e.g., physical, mathematical, computer models)
+   builds on K-8 experiences and progresses to using       for growth, maintenance and repair of multicellular           can be used to simulate systems and interactions—
+   synthesizing and developing models to predict           organisms. Disruptions in the cell cycles of mitosis and      including energy, matter, and information flows—within
+   and show relationships among variables between          meiosis can lead to diseases such as cancer. (HS.LS1B.a)      and between systems at different scales.
+   systems and their components in the natural and        The organism begins as a single cell (fertilized egg)
+   designed world(s).                                     that divides successively to produce many cells, with
+ • Develop, revise, and/or use a model based on evidence each parent cell passing identical genetic material (two
+   to illustrate and/or predict the relationships between variants of each chromosome pair) to both daughter
+   systems or between components of a system.             cells. (HS.LS1B.b)
+
+3. Planning and carrying out investigations               Cellular division and differentiation (stem cell) produce
+                                                          and maintain a complex organism, composed of
+4. Analyzing and interpreting data                        systems of tissues and organs that work together to
+5. Using mathematics and computational thinking           meet the needs of the whole organism. (HS.LS1B.c)
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                      4
+                                                                                                                                                                        MARCH 2017
+                                                                                                                                                                        LS
+                                                                                                                                                            HS-LS1-5
+
+
+FROM MOLECULES TO ORGANISMS: STRUCTURES AND PROCESSES
+            Performance Expectation                         Use a model to illustrate how photosynthesis transforms light energy into stored chemical energy.
+
+
+                                                            Emphasis is on illustrating inputs and outputs of matter, the transfer and transformation of energy in
+             Clarification Statement                        photosynthesis by plants, and other photosynthesizing organisms. Examples of models could include diagrams,
+                                                            chemical equations, conceptual models, and/or laboratory investigations.
+
+
+        Science & Engineering Practices                                  Disciplinary Core Ideas                                    Crosscutting Concepts
+1. Asking questions and defining problems                   ORGANIZATION FOR MATTER AND ENERGY FLOW                    ENERGY AND MATTER
+2. Developing and using models: Modeling in 9-12            IN ORGANISMS                                               Changes of energy and matter in a system can be
+   builds on K-8 experiences and progresses to using        The process of photosynthesis converts light energy to     described in terms of energy and matter flows into, out
+   synthesizing and developing models to predict            stored chemical energy by converting carbon dioxide        of, and within that system.
+   and show relationships among variables between           plus water into sugars plus released oxygen. (HS.LS1C.a)
+   systems and their components in the natural and
+   designed world
+ • Develop, revise, and/or use a model based on evidence
+   to illustrate and/or predict the relationships between
+   systems or between components of a system.
+3. Planning and carrying out investigations
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                 5
+                                                                                                                                                                   MARCH 2017
+                                                                                                                                                                             LS
+                                                                                                                                                                HS-LS1-6
+
+
+FROM MOLECULES TO ORGANISMS: STRUCTURES AND PROCESSES
+                                                                 Construct and revise an explanation based on evidence for how carbon, hydrogen, and oxygen from sugar
+             Performance Expectation                             molecules may combine with other elements to form amino acids and/or other large carbon-based molecules.
+                                                                 Emphasis is on students constructing explanations for how sugar molecules are formed through photosynthesis
+                                                                 and the components of the reaction (i.e. carbon, hydrogen, oxygen). This hydrocarbon backbone is used to make
+              Clarification Statement                            amino acids and other carbon-based molecules that can be assembled (anabolism) into larger molecules (such as
+                                                                 proteins or DNA). Examples of models could include diagrams, chemical equations, or conceptual models.
+
+
+         Science & Engineering Practices                                      Disciplinary Core Ideas                                    Crosscutting Concepts
+1. Asking questions and defining problems                        ORGANIZATION FOR MATTER AND ENERGY FLOW                    ENERGY AND MATTER
+2. Developing and using models                                   IN ORGANISMS                                               Changes of energy and matter in a system can be
+3. Planning and carrying out investigations                      The process of photosynthesis converts light energy to     described in terms of energy and matter flows into, out
+4. Analyzing and interpreting data                               stored chemical energy by converting carbon dioxide        of, and within that system.
+5. Using mathematics and computational thinking                  plus water into sugars plus released oxygen. (HS.LS1C.a)
+6. Constructing explanations and designing                       The sugar molecules thus formed contain carbon,
+   solutions: Constructing explanations (science) and            hydrogen, and oxygen: their hydrocarbon backbones
+   designing solutions (engineering) in 9–12 builds on           are used to make amino acids and other carbon-based
+   K–8 experiences and progresses to explanations                molecules that can be assembled into larger molecules
+   and designs that are supported by multiple and                (such as proteins or DNA) used, for example, to form
+   independent student-generated sources of evidence             new cells. (HS.LS1C.b)
+   consistent with scientific ideas, principles, and theories.
+ • Construct and revise an explanation based on valid
+   and reliable evidence obtained from a variety of
+   sources (including students’ own investigations,
+   models, theories, simulations, peer review) and the
+   assumption that theories and laws that describe
+   the natural world operate today as they did in the
+   past and will continue to do so in the future, and the
+   assumption that theories and laws that describe the
+   natural world operate today as they did in the past
+   and will continue to do so in the future.
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+                                                                                                                                                                                      6
+                                                                                                                                                                        MARCH 2017
+                                                                                                                                                                      LS
+                                                                                                                                                          HS-LS1-7
+
+
+FROM MOLECULES TO ORGANISMS: STRUCTURES AND PROCESSES
+                                                          Use a model to illustrate that cellular respiration is a chemical process whereby the bonds of food molecules and
+            Performance Expectation                       oxygen molecules are broken and the bonds in new compounds are formed, resulting in a net transfer of energy.
+
+                                                          Emphasis is on the conceptual understanding of the inputs and outputs of the processes of aerobic and anaerobic
+             Clarification Statement                      cellular respiration. Examples of models could include diagrams, chemical equations, conceptual models and/or
+                                                          laboratory investigations.
+
+
+        Science & Engineering Practices                                 Disciplinary Core Ideas                                   Crosscutting Concepts
+1. Asking questions and defining problems                 ORGANIZATION FOR MATTER AND ENERGY FLOW                   ENERGY AND MATTER
+2. Developing and using models: Modeling in 9-12          IN ORGANISMS                                              Energy cannot be created or destroyed—it only moves
+   builds on K-8 experiences and progresses to using      As matter and energy flow through different               between one place and another place, between objects
+   synthesizing and developing models to predict          organizational levels of living systems, chemical         and/or fields, or between systems.
+   and show relationships among variables between         elements are recombined in different ways to form
+   systems and their components in the natural and        different products. (HS.LS1C.c)
+   designed world(s).                                     As a result of these chemical reactions, energy is
+ • Develop, revise, and/or use a model based on evidence transferred from one system of interacting molecules
+   to illustrate and/or predict the relationships between to another. Cellular respiration is a chemical process
+   systems or between components of a system.             in which the bonds of food molecules and oxygen
+                                                          molecules are broken and new compounds are
+3. Planning and carrying out investigations               formed that can transport energy to muscles. Cellular
+4. Analyzing and interpreting data                        respiration also releases the energy needed to maintain
+                                                          body temperature despite ongoing energy transfer to
+5. Using mathematics and computational thinking
+                                                          the surrounding environment. (HS.LS1C.d)
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                              7
+                                                                                                                                                                 MARCH 2017
+                                                                                                                                                                        LS
+                                                                                                                                                            HS-LS1-8
+
+
+FROM MOLECULES TO ORGANISMS: STRUCTURES AND PROCESSES
+                                                           Obtain, evaluate, and communicate information about (1) viral and bacterial reproduction and adaptation, (2) the
+            Performance Expectation                        body’s primary defenses against infection, and (3) how these features impact the design of effective treatment.
+
+                                                           Emphasis is on the speed of reproduction which produces many generations in a short time, allowing for rapid
+             Clarification Statement                       adaptation, the role of antibodies in the body’s immune response to infection and how vaccination protects an
+                                                           individual from infectious disease.
+
+
+        Science & Engineering Practices                                  Disciplinary Core Ideas                                      Crosscutting Concepts
+1. Asking questions and defining problems                  PUBLIC HEALTH                                                 SCALE, PROPORTION, AND QUANTITY
+2. Developing and using models                             Viruses are obligate intracellular parasites that replicate   The significance of a phenomenon is dependent on the
+                                                           using a cell’s protein expression mechanisms. (HS.LS1E.a)     scale, proportion, and quantity at which it occurs.
+3. Planning and carrying out investigations
+                                                           Vaccines provide immunity to infections by exposing
+4. Analyzing and interpreting data                         the immune system to antigens before infection which
+5. Using mathematics and computational thinking            decreases the immune system’s response time. Some
+                                                           vaccines may require more than one dose. (HS.LS1E.b)
+6. Constructing explanations and designing solutions
+                                                           Antibiotics are effective treatments against most
+7. Engaging in argument from evidence
+                                                           bacterial infections. Some bacteria may develop
+8. Obtaining, evaluating, and communicating                resistance to these treatments. (HS.LS1E.c)
+   information: Obtaining, evaluating, and
+                                                           Microorganisms can cause diseases and can provide
+   communicating information in 9–12 builds on K–8
+                                                           beneficial services. Microorganisms live in a variety
+   experiences and progresses to evaluating the validity
+                                                           of environments as both parasites and free-living
+   and reliability of the claims, methods, and designs.
+                                                           organisms. (HS.LS1E.d)
+ • Critically read scientific literature adapted for
+                                                        Microorganisms can reproduce quickly. (HS.LS1E.e)
+   classroom use to determine the central ideas or
+   conclusions and/or to obtain scientific and/or
+   technical information to summarize complex evidence,
+   concepts, processes, or information by presenting
+   them in simpler but still accurate terms.
+
+
+
+
+                                                                                                                                                                                8
+                                                                                                                                                                   MARCH 2017
+                                                                                                                                                                         LS
+                                                                                                                                                             HS-LS2-1
+
+
+ECOSYSTEMS: INTERACTIONS, ENERGY AND DYNAMICS
+                                                              Use mathematical and/or computational representations to support explanations of factors that affect carrying
+            Performance Expectation                           capacity, biodiversity and populations of ecosystems at different scales.
+
+                                                              Emphasis is on quantitative analysis and comparison of the relationships among interdependent factors including
+              Clarification Statement                         boundaries, resources, climate and competition. Examples of mathematical comparisons could include graphs,
+                                                              charts, histograms, or population changes gathered from simulations or historical data sets.
+
+
+         Science & Engineering Practices                                    Disciplinary Core Ideas                                   Crosscutting Concepts
+1. Asking questions and defining problems                     INTERDEPENDENT RELATIONSHIPS IN ECOSYSTEMS SCALE, PROPORTION, AND QUANTITY
+2. Developing and using models                                Ecosystems have carrying capacities, which are limits        The significance of a phenomenon is dependent on the
+                                                              to the numbers of organisms and populations they can         scale, proportion, and quantity at which it occurs.
+3. Planning and carrying out investigations                   support. These limits result from such factors as the
+4. Analyzing and interpreting data                            availability of living and nonliving resources and from
+                                                              such challenges as predation, competition, and disease
+5. Using mathematics and computational thinking:
+                                                              that affect biodiversity, including genetic diversity within
+   Mathematical and computational thinking in 9-12
+                                                              a population and species diversity within an ecosystem.
+   builds on K-8 experiences and progresses to using
+                                                              Organisms would have the capacity to produce
+   algebraic thinking and analysis, a range of linear and
+                                                              populations of great size were it not for the fact that
+   nonlinear functions (e.g. trigonometric, exponential
+                                                              environments and resources are finite. This fundamental
+   and logarithmic) and computational tools for statistical
+                                                              tension affects the abundance (number of individuals) of
+   analysis to analyze, represent, and model data. Simple
+                                                              species in any given ecosystem. (HS.LS2A.a)
+   computational simulations are created and used based
+   on mathematical models of basic assumptions.               Human activity directly and indirectly affect biodiversity
+                                                              and ecosystem health (e.g., habitat fragmentation,
+ • Use mathematical, computational, and/or algorithmic
+                                                              introduction of nonnative or invasive species,
+   representations of phenomena or design solutions to
+                                                              overharvesting, pollution and climate change).
+   describe and/or support claims and/or explanations.
+                                                              (HS.LS2A.b)
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                  9
+                                                                                                                                                                    MARCH 2017
+                                                                                                                                                                          LS
+                                                                                                                                                             HS-LS2-4
+
+
+ECOSYSTEMS: INTERACTIONS, ENERGY AND DYNAMICS
+                                                              Use mathematical representations to support claims for the cycling of matter and flow of energy among organisms
+            Performance Expectation                           in an ecosystem.
+
+                                                              Emphasis is on using a mathematical model of stored energy in biomass to describe the transfer of energy from
+                                                              one trophic level to another and that matter and energy are conserved as matter cycles and energy flows through
+              Clarification Statement                         ecosystems. Emphasis is on atoms and molecules such as carbon, oxygen, hydrogen and nitrogen being conserved
+                                                              as they move through an ecosystem.
+
+
+         Science & Engineering Practices                                    Disciplinary Core Ideas                                     Crosscutting Concepts
+1. Asking questions and defining problems                     CYCLES OF MATTER AND ENERGY TRANSFER                         ENERGY AND MATTER: FLOWS, CYCLES,
+2. Developing and using models                                IN ECOSYSTEMS                                                AND CONSERVATION
+                                                              Energy is inefficiently transferred from one trophic level   Energy cannot be created or destroyed—it only moves
+3. Planning and carrying out investigations                   to another that affect the relative number of organisms      between one place and another place, between objects
+4. Analyzing and interpreting data                            that can be supported at each trophic level and              and/or fields, or between systems.
+                                                              necessitates a constant input of energy from sunlight or
+5. Using mathematics and computational thinking:
+                                                              inorganic compounds from the environment.
+   Mathematical and computational thinking in 9-12
+                                                              (HS.LS2B.b)
+   builds on K-8 experiences and progresses to using
+   algebraic thinking and analysis, a range of linear and     Photosynthesis, cellular respiration, decomposition
+   nonlinear functions (e.g. trigonometric, exponential       and combustion are important components of the
+   and logarithmic) and computational tools for statistical   carbon cycle, in which carbon is exchanged among the
+   analysis to analyze, represent, and model data. Simple     biosphere, atmosphere, hydrosphere, and geosphere
+   computational simulations are created and used based       through chemical, physical, geological, and biological
+   on mathematical models of basic assumptions.               processes. (HS.LS2B.c)
+ • Use mathematical, computational, and/or algorithmic        Photosynthesis, chemosynthesis, aerobic and anaerobic
+   representations of phenomena or design solutions to        respiration and cellular respiration (including anaerobic
+   describe and/or support claims and/or explanations.        processes) provide most of the energy for life processes.
+                                                              Environmental conditions restrict which and when
+6. Constructing explanations and designing solutions
+                                                              reactions can occur. (HS.LS2B.a) (suggested extension)
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+                                                                                                                                                                             10
+                                                                                                                                                                     MARCH 2017
+                                                                                                                                                                           LS
+                                                                                                                                                             HS-LS2-6
+
+
+ECOSYSTEMS: INTERACTIONS, ENERGY AND DYNAMICS
+                                                           Evaluate the claims, evidence and reasoning that the complex interactions in ecosystems maintain relatively consistent
+            Performance Expectation                        numbers and types of organisms in stable conditions, but changing conditions may result in a new ecosystem.
+
+                                                           Examples of changes in ecosystem conditions could include modest biological or physical changes, such as
+                                                           moderate hunting or a seasonal flood and extreme changes, such as volcanic eruption or sea level rise. Emphasis
+             Clarification Statement                       should be on describing drivers of ecosystem stability and change, not on the organismal mechanisms of responses
+                                                           and interactions.
+
+
+        Science & Engineering Practices                                  Disciplinary Core Ideas                                      Crosscutting Concepts
+1. Asking questions and defining problems                     ECOSYSTEM DYNAMICS, FUNCTIONING,                           STABILITY AND CHANGE
+2. Developing and using models                                AND   RESILIENCE                                           Much of science deals with constructing explanations of
+                                                              The dynamic interactions within an ecosystem can           how things change and how they remain stable.
+3. Planning and carrying out investigations                   keep its numbers and types of organisms relatively
+4. Analyzing and interpreting data                            constant over long periods of time under stable
+                                                              conditions. If a modest biological or physical disturbance
+5. Using mathematics and computational thinking
+                                                              to an ecosystem occurs, it may return to its more or
+6. Constructing explanations and designing solutions          less original status (i.e., the ecosystem is resilient),
+7. Engaging in argument from evidence: Engaging               as opposed to becoming a very different ecosystem.
+   in argument from evidence in 9–12 builds on K–8            Extreme fluctuations in conditions or the size of any
+   experiences and progresses to using appropriate and        population, however, can challenge the functioning
+   sufficient evidence and scientific reasoning to defend of ecosystems in terms of resources and habitat
+   and critique claims and explanations about the natural availability and may result in new ecosystems.
+   and designed world(s). Arguments may also come             (HS.LS2C.a)
+   from current scientific or historical episodes in science.
+ • Evaluate the claims, evidence, and/or reasoning
+   behind currently accepted explanations or solutions
+   to determine the merits of arguments.
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                11
+                                                                                                                                                                     MARCH 2017
+                                                                                                                                                                                   LS
+                                                                                                                                                                      HS-LS2-7
+
+
+ECOSYSTEMS: INTERACTIONS, ENERGY AND DYNAMICS
+             Performance Expectation                             Design, evaluate, and refine a solution for reducing the impacts of human activities on the environment and biodiversity.
+
+
+
+              Clarification Statement                            Examples of human activities can include urbanization, building dams, or dissemination of invasive species.
+
+
+
+
+         Science & Engineering Practices                                                Disciplinary Core Ideas                                      Crosscutting Concepts
+1. Asking questions and defining problems                        ECOSYSTEM DYNAMICS, FUNCTIONING,                                              STABILITY AND CHANGE
+2. Developing and using models                                   AND RESILIENCE                                                                Much of science deals with constructing
+                                                                 Ecosystems with a greater biodiversity tend to have a greater resistance      explanations of how things change and
+3. Planning and carrying out investigations                      and resilience to change. Moreover, anthropogenic changes (induced            how they remain stable.
+4. Analyzing and interpreting data                               by human activity) in the environment—including habitat destruction,
+                                                                 pollution, introduction of invasive species, overexploitation, and climate
+5. Using mathematics and computational thinking
+                                                                 change—can disrupt an ecosystem and threaten the survival of some
+6. Constructing explanations and designing                       species. (HS.LS2C.b)
+   solutions: Constructing explanations (science) and
+                                                                 BIODIVERSITY AND HUMANS
+   designing solutions (engineering) in 9–12 builds on
+                                                                 Biodiversity is increased by the formation of new species (speciation)
+   K–8 experiences and progresses to explanations
+                                                                 and decreased by the loss of species (extinction). Humans depend
+   and designs that are supported by multiple and
+                                                                 on the living world for the resources and other benefits provided
+   independent student-generated sources of evidence
+                                                                 by biodiversity. Human activity is also having adverse impacts
+   consistent with scientific ideas, principles, and theories.
+                                                                 on biodiversity through overpopulation, overexploitation, habitat
+ • Design, evaluate, and/or refine a solution to a               destruction, pollution, introduction of invasive species, and climate
+   complex real-world problem, based on scientific               change. Thus, sustaining biodiversity so that ecosystem functioning and
+   knowledge, student-generated sources of evidence,             productivity are maintained is essential to supporting and enhancing
+   prioritized criteria, and tradeoff considerations.            life on Earth. Sustaining biodiversity also aids humanity by preserving
+7. Engaging in argument from evidence                            landscapes of recreational or inspirational value. (HS.LS4D.a)
+8. Obtaining, evaluating, and communicating information DEVELOPING POSSIBLE SOLUTIONS
+                                                        When evaluating solutions it is important to take into account a range
+                                                        of constraints including cost, safety, reliability and aesthetics and to
+                                                        consider social, cultural and environmental impacts. (HS.ETS1B.a)
+
+                                                                                                                                                                                        12
+                                                                                                                                                                              MARCH 2017
+                                                                                                                                                                            LS
+                                                                                                                                                               HS-LS3-1
+
+
+HEREDITY: INHERITANCE AND VARIATION OF TRAITS
+                                                           Formulate, refine, and evaluate questions to clarify relationships about the role of DNA and chromosomes in
+            Performance Expectation                        coding the instructions for characteristic traits passed from parents to offspring.
+
+                                                           Emphasis should be on traits including completely dominant, codominant, incompletely dominant, and sex-linked
+             Clarification Statement                       traits (e.g., pedigrees, karyotypes, genetic disorders, Punnett squares). Examples do not need to include dihybrid
+                                                           crosses.
+
+
+        Science & Engineering Practices                                  Disciplinary Core Ideas                                    Crosscutting Concepts
+1. Asking questions and defining problems: Asking          STRUCTURE AND FUNCTION                                       CAUSE AND EFFECT
+   questions (science) and defining problems               All cells contain genetic information in the form of DNA     Empirical evidence is required to differentiate
+   (engineering) in 9–12 builds on K–8 experiences and     molecules. Genes are regions in the DNA that contain the     between cause and correlation and make claims
+   progresses to formulating, refining, and evaluating     instructions that code for the formation of proteins which   about specific causes and effects.
+   empirically testable questions and design problems      carry out the essential functions of life. (HS.LS1A.c)
+   using models and simulations.
+                                                           INHERITANCE OF TRAITS
+ • Ask questions that arise from examining models or a     Each chromosome consists of a single very long DNA
+   theory, to clarify and/or seek additional information   molecule, and each gene on the chromosome is a
+   and relationships.                                      particular segment of that DNA. The instructions for
+2. Developing and using models                             forming species’ characteristics are carried in DNA. All
+3. Planning and carrying out investigations                cells in an organism have the same genetic content, but
+                                                           the genes used (expressed) by the cell may be regulated
+4. Analyzing and interpreting data                         in different ways. Not all DNA codes for a protein; some
+5. Using mathematics and computational thinking            segments of DNA are involved in regulatory or structural
+                                                           functions, and some have no as-yet known function.
+6. Constructing explanations and designing solutions
+                                                           (HS.LS3A.a)
+7. Engaging in argument from evidence
+                                                        In Mendel’s model of inheritance an organism’s
+8. Obtaining, evaluating, and communicating information phenotype is determined by the combined expression
+                                                        of two inherited versions they have for each gene.
+                                                        However, most traits follow more complex patterns
+                                                        of inheritance such as traits that are codominant,
+                                                        incomplete dominant, and polygenic. (HS.LS3A.b)
+
+
+                                                                                                                                                                                13
+                                                                                                                                                                      MARCH 2017
+                                                                                                                                                                               LS
+                                                                                                                                                                HS-LS3-2
+
+
+HEREDITY: INHERITANCE AND VARIATION OF TRAITS
+                                                                Make and defend a claim based on evidence that inheritable genetic variations may result from: (1) new genetic
+             Performance Expectation                            combinations through meiosis, (2) viable errors occurring during replication, and/or (3) mutations caused by
+                                                                environmental factors.
+
+                                                                Emphasis is on using data to support arguments for the way variation occurs. Claims should not include the
+              Clarification Statement                           phases of meiosis or the biochemical mechanisms of specific steps in the process.
+
+
+
+         Science & Engineering Practices                                      Disciplinary Core Ideas                                   Crosscutting Concepts
+1. Asking questions and defining problems                       VARIATION OF TRAITS                                          CAUSE AND EFFECT
+2. Developing and using models                                  In sexual reproduction, chromosomes can sometimes            Empirical evidence is required to differentiate
+                                                                swap sections or cross over during the process of meiosis    between cause and correlation and make claims
+3. Planning and carrying out investigations                     (cell division), thereby creating new genetic combinations   about specific causes and effects.
+4. Analyzing and interpreting data                              and thus more genetic variation. Although DNA
+                                                                replication is tightly regulated and remarkably accurate,
+5. Using mathematics and computational thinking
+                                                                errors do occur and result in mutations, which are also
+6. Constructing explanations and designing solutions            a source of genetic variation. Environmental factors can
+7. Engaging in argument from evidence: Engaging                 also cause mutations in genes, and viable mutations are
+   in argument from evidence in 9–12 builds on K–8              inherited. (HS.LS3B.a)
+   experiences and progresses to using appropriate and          Mutations may occur due to errors during DNA replication
+   sufficient evidence and scientific reasoning to defend       and/or environmental factors. In general, only mutations
+   and critique claims and explanations about the natural       that occur in gametes (sperm and egg) can be passed
+   and designed world(s). Arguments may also come               to offspring. Genes have variations (alleles) that code
+   from current scientific or historical episodes in science.   for specific variants of a protein (or RNA), and therefore
+ • Make and defend a claim based on evidence about              specific traits of an individual. (HS.LS3B.b)
+   the natural world or the effectiveness of a design   Environmental factors also affect expression of traits,
+   solution that reflects scientific knowledge and      and hence affect the probability of occurrences of traits in
+   student-generated evidence.                          a population. Thus the variation and distribution of traits
+8. Obtaining, evaluating, and communicating information observed depends on both genetic and environmental
+                                                        factors. (HS.LS3B.c)
+
+
+
+
+                                                                                                                                                                                 14
+                                                                                                                                                                        MARCH 2017
+                                                                                                                                                                                 LS
+                                                                                                                                                                    HS-LS3-3
+
+
+HEREDITY: INHERITANCE AND VARIATION OF TRAITS
+                                                                 Apply concepts of statistics and probability to explain the variation and distribution of expressed traits in
+             Performance Expectation                             a population.
+
+
+                                                                 Emphasis is on distribution and variation of traits in a population and the use of mathematics (e.g., calculations
+              Clarification Statement                            of frequencies in Punnett squares, graphical representations) to describe the distribution.
+
+
+
+         Science & Engineering Practices                                       Disciplinary Core Ideas                                    Crosscutting Concepts
+1. Asking questions and defining problems                        VARIATION OF TRAITS                                          SCALE, PROPORTION AND QUANTITY
+2. Developing and using models                                   In sexual reproduction, chromosomes can sometimes            Algebraic thinking is used to examine scientific data
+                                                                 swap sections or cross over during the process of            and predict the effect of a change in one variable on
+3. Planning and carrying out investigations                      meiosis (cell division), thereby creating new genetic        another (e.g., linear growth vs. exponential growth).
+4. Analyzing and interpreting data: Analyzing data in            combinations and thus more genetic variation. Although
+   9-12 builds on K-8 experiences and progresses to              DNA replication is tightly regulated and remarkably
+   introducing more detailed statistical analysis, the           accurate, errors do occur and result in mutations, which
+   comparison of data sets for consistency, and the use          are also a source of genetic variation. Environmental
+   of models to generate and analyze data.                       factors can also cause mutations in genes, and viable
+                                                                 mutations are inherited. (HS.LS3B.a)
+ • Apply concepts of statistics and probability (e.g.,
+   determining function fits to data and correlation             Mutations may occur due to errors during DNA
+   coefficient for linear or nonlinear fits) to scientific and   replication and/or caused by environmental factors. In
+   engineering questions and problems, using digital             general, only mutations that occur in gametes (sperm
+   tools when feasible.                                          and egg) can be passed to offspring. Genes have
+                                                                 variations (alleles) that code for specific variants of
+5. Using mathematics and computational thinking
+                                                                 a protein (or RNA), and therefore specific traits of an
+6. Constructing explanations and designing solutions             individual. (HS.LS3B.b)
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                      15
+                                                                                                                                                                            MARCH 2017
+                                                                                                                                                                         LS
+                                                                                                                                                             HS-LS4-1
+
+
+BIOLOGICAL EVOLUTION: UNITY AND DIVERSITY
+                                                             Analyze and interpret scientific information that common ancestry and biological evolution are supported by
+            Performance Expectation                          multiple lines of empirical evidence.
+
+                                                             Emphasis is on a conceptual understanding of the role each line of evidence (e.g., similarities in DNA
+             Clarification Statement                         sequences, order of appearance of structure during embryological development, cladograms, homologous and
+                                                             vestigial structures, fossil records) demonstrates as related to common ancestry and biological evolution.
+
+
+        Science & Engineering Practices                                   Disciplinary Core Ideas                                  Crosscutting Concepts
+1. Asking questions and defining problems                    EVIDENCE OF COMMON ANCESTRY AND DIVERSITY                  PATTERNS
+2. Developing and using models                               Genetic information provides evidence of evolution.        Different patterns may be observed at each of the
+                                                             DNA sequences vary among species, but there are            scales at which a system is studied and can provide
+3. Planning and carrying out investigations                  many overlaps; in fact, the ongoing branching that         evidence for causality in explanations of phenomena.
+4. Analyzing and interpreting data: Analyzing data in        produces multiple lines of descent can be inferred by
+   9-12 builds on K-8 experiences and progresses to          comparing the DNA sequences of different organisms.
+   introducing more detailed statistical analysis, the       Such information is also derivable from the similarities
+   comparison of data sets for consistency, and the use      and differences in amino acid sequences and from
+   of models to generate and analyze data.                   observable anatomical and embryological evidence.
+                                                             (HS.LS4A.a)
+ • Compare and contrast various types of data sets
+   (e.g., self-generated, archival) to examine consistency
+   of measurements and observations.
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                               16
+                                                                                                                                                                    MARCH 2017
+                                                                                                                                                                                  LS
+                                                                                                                                                                   HS-LS4-2
+
+
+BIOLOGICAL EVOLUTION: UNITY AND DIVERSITY
+                                                                 Construct an explanation based on evidence that biological diversity is influenced by (1) the potential for a
+                                                                 species to increase in number, (2) the heritable genetic variation of individuals in a species due to mutation and
+             Performance Expectation                             sexual reproduction, (3) competition for limited resources, and (4) the proliferation of those organisms that are
+                                                                 better able to survive and reproduce in the environment.
+                                                                 Emphasis is on using evidence to explain the influence each of the four factors has on number of organisms,
+                                                                 behaviors, morphology, or physiology in terms of ability to compete for limited resources and subsequent
+              Clarification Statement                            survival of individuals and adaptation of species. Examples of evidence could include mathematical models
+                                                                 such as simple distribution graphs or proportional reasoning.
+
+
+         Science & Engineering Practices                                        Disciplinary Core Ideas                                    Crosscutting Concepts
+1. Asking questions and defining problems                        NATURAL SELECTION                                              CAUSE AND EFFECT
+2. Developing and using models                                   Natural selection occurs only if there is both (1) variation   Empirical evidence is required to differentiate
+3. Planning and carrying out investigations                      in the genetic information between organisms in a              between cause and correlation and make claims
+4. Analyzing and interpreting data                               population e.g. mutations and sexual reproduction              about specific causes and effects.
+5. Using mathematics and computational thinking                  and (2) variation in the expression of that genetic
+6. Constructing explanations and designing                       information—that is, trait variation—that leads
+   solutions: Constructing explanations (science) and            to differences in performance among individuals.
+   designing solutions (engineering) in 9–12 builds on           Natural selection leads to populations that have
+   K–8 experiences and progresses to explanations                more individuals with behavioral, anatomical, and
+   and designs that are supported by multiple and                physiological adaptations. (HS.LS4B.a)
+   independent student-generated sources of evidence             The traits that positively affect survival are more likely
+   consistent with scientific ideas, principles, and theories.   to be reproduced, and thus are more common in the
+ • Construct and revise an explanation based on valid            population. (HS.LS4B.c)
+   and reliable evidence obtained from a variety of
+   sources (including students’ own investigations,
+   models, theories, simulations, peer review) and the
+   assumption that theories and laws that describe the
+   natural world operate today as they did in the past
+   and will continue to do so in the future.
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+                                                                                                                                                                                      17
+                                                                                                                                                                           MARCH 2017
+                                                                                                                                                                               LS
+                                                                                                                                                                  HS-LS4-3
+
+
+BIOLOGICAL EVOLUTION: UNITY AND DIVERSITY
+                                                                 Apply concepts of statistics and probability to support explanations that populations of organisms adapt when
+             Performance Expectation                             an advantageous heritable trait increases in proportion to organisms lacking this trait.
+
+
+                                                                 Emphasis is on analyzing shifts in numerical distribution of traits and using these shifts as evidence to support
+              Clarification Statement                            explanations for adaptations. Explanations could include basic statistical or graphical analysis.
+
+
+
+         Science & Engineering Practices                                            Disciplinary Core Ideas                                   Crosscutting Concepts
+1. Asking questions and defining problems                        NATURAL SELECTION                                                      PATTERNS
+2. Developing and using models                                   Natural selection occurs only if there is both (1) variation in        Different patterns may be observed at
+                                                                 the genetic information between organisms in a population              each of the scales at which a system is
+3. Planning and carrying out investigations                      e.g. mutations and sexual reproduction and (2) variation in the        studied and can provide evidence for
+4. Analyzing and interpreting data: Analyzing data in            expression of that genetic information—that is, trait variation—that   causality in explanations of phenomena.
+   9-12 builds on K-8 experiences and progresses to              leads to differences in performance among individuals. Natural
+   introducing more detailed statistical analysis, the           selection leads to populations that have more individuals with
+   comparison of data sets for consistency, and the use          behavioral, anatomical, and physiological adaptations. (HS.LS4B.a)
+   of models to generate and analyze data.                       The traits that positively affect survival are more likely to be
+ • Apply concepts of statistics and probability (e.g.,           reproduced, and thus are more common in the population. (HS.LS4B.c)
+   determining function fits to data and correlation
+                                                        ADAPTATION
+   coefficient for linear or nonlinear fits) to scientific and
+   engineering questions and problems, using digital    Natural selection leads to adaptation, that is, to a population
+   tools when feasible.                                 dominated by organisms that are anatomically, behaviorally, and
+                                                        physiologically well suited to survive and reproduce in a specific
+5. Using mathematics and computational thinking         environment. That is, the differential survival and reproduction of
+6. Constructing explanations and designing solutions    organisms in a population that have an advantageous heritable
+                                                        trait leads to an increase in the proportion of individuals in future
+7. Engaging in argument from evidence
+                                                        generations that have the trait and to a decrease in the proportion
+8. Obtaining, evaluating, and communicating information of individuals that do not. (HS.LS4C.a)
+                                                                 Adaptation also means that the distribution of traits in a
+                                                                 population can change when conditions change. (HS.LS4C.b)
+
+
+
+                                                                                                                                                                                     18
+                                                                                                                                                                          MARCH 2017
+                                                                                                                                                                                   LS
+                                                                                                                                                                   HS-LS4-4
+
+
+BIOLOGICAL EVOLUTION: UNITY AND DIVERSITY
+                                                                 Construct an explanation based on evidence for how natural selection and other mechanisms lead to genetic
+             Performance Expectation                             changes in populations.
+
+                                                                 Emphasis is on using data to provide evidence for how specific biotic and abiotic differences in ecosystems (such
+              Clarification Statement                            as ranges of seasonal temperature, long-term climate change, acidity, light, geographic barriers, or evolution of
+                                                                 other organisms) contribute to a change in gene frequency over time, leading to adaptation of populations.
+
+
+         Science & Engineering Practices                                               Disciplinary Core Ideas                                     Crosscutting Concepts
+1. Asking questions and defining problems                        NATURAL SELECTION                                                             CAUSE AND EFFECT
+2. Developing and using models                                   Natural selection occurs only if there is both (1) variation in the genetic   Empirical evidence is required to
+                                                                 information between organisms in a population e.g. mutations and              differentiate between cause and
+3. Planning and carrying out investigations                      sexual reproduction and (2) variation in the expression of that genetic       correlation and make claims about
+4. Analyzing and interpreting data                               information—that is, trait variation—that leads to differences in             specific causes and effects.
+                                                                 performance among individuals. Natural selection leads to populations
+5. Using mathematics and computational thinking
+                                                                 that have more individuals with behavioral, anatomical, and
+6. Constructing explanations and designing                       physiological adaptations. (HS.LS4B.a)
+   solutions: Constructing explanations (science) and
+                                                                 Genetic drift and gene flow can lead to genetic changes in populations,
+   designing solutions (engineering) in 9–12 builds on
+                                                                 not adaptations. (HS.LS4B.b)
+   K–8 experiences and progresses to explanations
+   and designs that are supported by multiple and                ADAPTATION
+   independent student-generated sources of evidence             Natural selection leads to adaptation, that is, to a population dominated
+   consistent with scientific ideas, principles, and theories.   by organisms that are anatomically, behaviorally, and physiologically
+                                                                 well suited to survive and reproduce in a specific environment. That is,
+ • Construct and revise an explanation based on valid
+                                                                 the differential survival and reproduction of organisms in a population
+   and reliable evidence obtained from a variety of
+                                                                 that have an advantageous heritable trait leads to an increase in the
+   sources (including students’ own investigations,
+                                                                 proportion of individuals in future generations that have the trait and to
+   models, theories, simulations, peer review) and the
+                                                                 a decrease in the proportion of individuals that do not. (HS.LS4C.a)
+   assumption that theories and laws that describe the
+   natural world operate today as they did in the past  Changes in the physical environment, whether naturally occurring
+   and will continue to do so in the future.            or human induced, have thus contributed to the expansion of some
+                                                        species, the emergence of new distinct species as populations diverge
+7. Engaging in argument from evidence
+                                                        under different conditions, and the decline–and sometimes the
+8. Obtaining, evaluating, and communicating information extinction–of some species. (HS.LS4C.c)
+
+                                                                                                                                                                                     19
+                                                                                                                                                                           MARCH 2017
+                                                                                                                                                                                 LS
+                                                                                                                                                                  HS-LS4-5
+
+
+BIOLOGICAL EVOLUTION: UNITY AND DIVERSITY
+                                                                Evaluate evidence supporting claims that changes in environmental conditions can affect the distribution of
+             Performance Expectation                            traits in a population causing: (1) increases in the number of individuals of some species, (2) the emergence of
+                                                                new species over time, and (3) the extinction of other species.
+
+                                                                Emphasis is on determining cause and effect relationships for how changes to the environment such as
+              Clarification Statement                           deforestation, overfishing, application of fertilizers, drought, flood, and the rate of change of the environment
+                                                                affect distribution or disappearance of traits in species.
+
+
+         Science & Engineering Practices                                       Disciplinary Core Ideas                                    Crosscutting Concepts
+1. Asking questions and defining problems                       ADAPTATION                                                     CAUSE AND EFFECT
+2. Developing and using models                                  Changes in the physical environment, whether naturally         Empirical evidence is required to differentiate
+                                                                occurring or human induced, have thus contributed to           between cause and correlation and make claims
+3. Planning and carrying out investigations                     the expansion of some species, the emergence of new            about specific causes and effects.
+4. Analyzing and interpreting data                              distinct species as populations diverge under different
+                                                                conditions, and the decline–and sometimes the
+5. Using mathematics and computational thinking
+                                                                extinction–of some species. (HS.LS4C.c)
+6. Constructing explanations and designing solutions
+                                                                Species become extinct because they can no longer
+7. Engaging in argument from evidence: Engaging                 survive and reproduce in their altered environment. If
+   in argument from evidence in 9–12 builds on K–8              members cannot adjust to change that is too fast or
+   experiences and progresses to using appropriate and          drastic, the opportunity for the species’ evolution is lost.
+   sufficient evidence and scientific reasoning to defend       (HS.LS4C.d)
+   and critique claims and explanations about the natural
+   and designed world(s). Arguments may also come
+   from current scientific or historical episodes in science.
+ • Evaluate the claims, evidence, and/or reasoning
+   behind currently accepted explanations or solutions
+   to determine the merits of arguments.
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                    20
+                                                                                                                                                                          MARCH 2017
+

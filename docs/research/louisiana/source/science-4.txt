@@ -1,0 +1,530 @@
+                                                                                                                                                                             4
+                                                                                                                                                                4-PS3-1
+
+
+ENERGY
+            Performance Expectation                        Use evidence to construct an explanation relating the speed of an object to the energy of that object.
+
+
+
+             Clarification Statement                       Relating the speed of an object to the energy of the object does not require calculation of the object’s speed.
+
+
+
+
+        Science & Engineering Practices                                  Disciplinary Core Ideas                                     Crosscutting Concepts
+1. Asking questions and defining problems                  DEFINITIONS OF ENERGY                                       ENERGY AND MATTER
+2. Developing and using models                             The faster a given object is moving, the more energy it     Energy can be transferred in various ways and
+                                                           possesses. (UE.PS3A.a)                                      between objects.
+3. Planning and carrying out Investigations
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions:
+   Constructing explanations (science) and designing
+   solutions (engineering) in 3–5 builds on K–2
+   experiences and progresses to the use of evidence in
+   constructing explanations that specify variables that
+   describe and predict phenomena and in designing
+   multiple solutions to design problems
+ • Use evidence (e.g., measurements, observations,
+   patterns) to construct or support an explanation or
+   design a solution to a problem.
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                 1
+                                                                                                                                                                    MARCH 2017
+                                                                                                                                                                             4
+                                                                                                                                                                  4-PS3-2
+
+
+ENERGY
+                                                               Make observations to provide evidence that energy can be transferred from place to place by sound, light, heat,
+             Performance Expectation                           and electric currents.
+
+
+
+              Clarification Statement                          When energy is transferred it may change forms such as when light from the sun warms a window pane.
+
+
+
+
+         Science & Engineering Practices                                     Disciplinary Core Ideas                                     Crosscutting Concepts
+1. Asking questions and defining problems                      DEFINITIONS OF ENERGY                                        ENERGY AND MATTER
+2. Developing and using models                                 Energy can be moved from place to place by moving            Energy can be transferred in various ways and
+                                                               objects or through sound, light, or electric currents.       between objects.
+3. Planning and carrying out Investigations: Planning          (UE.PS3A.b)
+   and carrying out investigations to answer questions
+   (science) or test solutions (engineering) to problems       CONSERVATION OF ENERGY AND ENERGY TRANSFER
+   in 3–5 builds on K–2 experiences and progresses to          Energy is present whenever there are moving objects,
+   include investigations that control variables and provide   sound, light, or heat. When objects collide, energy can
+   evidence to support explanations or design solutions.       be transferred from one object to another, thereby
+ • Make observations and/or measurements to                    changing their motion. In such collisions, some energy
+   produce data to serve as the basis for evidence for an      is typically also transferred to the surrounding air; as a
+   explanation of a phenomenon or test a design solution.      result, the air gets heated and sound is produced.
+                                                               (UE.PS3B.a)
+4. Analyzing and interpreting data
+                                                               Light also transfers energy from place to place.
+5. Using mathematics and computational thinking                (UE.PS3B.b)
+6. Constructing explanations and designing solutions    Energy can also be transferred from place to place by
+7. Engaging in argument from evidence                   electric currents, which can then be used locally to
+                                                        produce motion, sound, heat, or light. The currents may
+8. Obtaining, evaluating, and communicating information
+                                                        have been produced to begin with by transforming the
+                                                        energy of motion into electrical energy. (UE.PS3B.c)
+
+
+
+
+                                                                                                                                                                                 2
+                                                                                                                                                                       MARCH 2017
+                                                                                                                                                                        4
+                                                                                                                                                             4-PS3-3
+
+
+ENERGY
+            Performance Expectation                       Ask questions and predict outcomes about the changes in energy that occur when objects collide.
+
+
+
+                                                          Emphasis is on the change in the energy due to the change in speed, not on the forces, as objects interact.
+             Clarification Statement                      Quantitative measurements of energy are not included.
+
+
+
+        Science & Engineering Practices                                 Disciplinary Core Ideas                                     Crosscutting Concepts
+1. Asking questions and defining problems: Asking         DEFINITIONS OF ENERGY                                        ENERGY AND MATTER
+   questions (science) and defining problems              Energy can be moved from place to place by moving            Energy can be transferred in various ways and
+   (engineering) in 3–5 builds on K–2 experiences and     objects or through sound, light, or electric currents.       between objects.
+   progresses to specifying qualitative relationships.    (UE.PS3A.b)
+ • Ask questions that can be investigated and predict     CONSERVATION OF ENERGY AND ENERGY TRANSFER
+   reasonable outcomes based on patterns such as          Energy is present whenever there are moving objects,
+   cause and effect relationships.                        sound, light, or heat. When objects collide, energy can
+2. Developing and using models                            be transferred from one object to another, thereby
+3. Planning and carrying out Investigations               changing their motion. In such collisions, some energy
+                                                          is typically also transferred to the surrounding air; as a
+4. Analyzing and interpreting data                        result, the air gets heated and sound is produced.
+5. Using mathematics and computational thinking           (UE.PS3B.a)
+6. Constructing explanations and designing solutions      RELATIONSHIP BETWEEN ENERGY AND FORCES
+7. Engaging in argument from evidence                     When objects collide, the contact forces transfer energy
+                                                          so as to change the objects’ motions. (UE.PS3C.a)
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                          3
+                                                                                                                                                                  MARCH 2017
+                                                                                                                                                                            4
+                                                                                                                                                               4-PS3-4
+
+
+ENERGY
+            Performance Expectation                        Apply scientific ideas to design, test, and refine a device that converts energy from one form to another.
+
+
+                                                           Examples of devices could include electric circuits that convert electrical energy into motion energy of a vehicle,
+             Clarification Statement                       light, or sound and a passive solar heater that converts light into heat. Example of constraints could include the
+                                                           materials, cost, or time to design the device.
+
+
+        Science & Engineering Practices                                  Disciplinary Core Ideas                                     Crosscutting Concepts
+1. Asking questions and defining problems                  CONSERVATION OF ENERGY AND ENERGY TRANSFER ENERGY AND MATTER
+2. Developing and using models                             Energy can also be transferred from place to place by   Energy can be transferred in various ways and
+                                                           electric currents, which can then be used locally to    between objects.
+3. Planning and carrying out Investigations                produce motion, sound, heat, or light. The currents may
+4. Analyzing and interpreting data                         have been produced to begin with by transforming the
+                                                           energy of motion into electrical energy. (UE.PS3B.c)
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions:      ENERGY IN CHEMICAL PROCESSES AND
+   Constructing explanations (science) and designing       EVERYDAY LIFE
+   solutions (engineering) in 3–5 builds on K–2            The expression “produce energy” typically refers to
+   experiences and progresses to the use of evidence in    the conversion of stored energy into a desired form for
+   constructing explanations that specify variables that   practical use. (UE.PS3D.a)
+   describe and predict phenomena and in designing
+   multiple solutions to design problems.                  OPTIMIZING THE DESIGN SOLUTION
+                                                           Different solutions need to be tested in order to
+ • Apply scientific ideas to solve design problems.        determine which of them best solves the problem, given
+7. Engaging in argument from evidence                      the criteria and the constraints. (UE.ETS1C.a)
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                 4
+                                                                                                                                                                    MARCH 2017
+                                                                                                                                                                       4
+                                                                                                                                                           4-PS4-1
+
+
+WAVES AND THEIR APPLICATIONS IN TECHNOLOGIES FOR INFORMATION TRANSFER
+                                                          Develop a model of waves to describe patterns in terms of amplitude and wavelength and to show that waves can
+            Performance Expectation                       cause objects to move.
+
+                                                          Examples of models could include diagrams, analogies, or physical models using wire to illustrate wavelength
+                                                          and amplitude of waves. Examples of wave patterns could include the vibrating patterns associated with sound
+             Clarification Statement                      or the vibrating patterns of seismic waves produced by earthquakes. Does not include interference effects,
+                                                          electromagnetic waves, non-periodic waves, or quantitative models of amplitude and wavelength.
+
+
+        Science & Engineering Practices                                 Disciplinary Core Ideas                                  Crosscutting Concepts
+1. Asking questions and defining problems                 WAVE PROPERTIES                                           PATTERNS
+2. Developing and using models: Modeling in 3–5           Waves, which are regular patterns of motion, can be       Similarities and differences in patterns can be used to
+   builds on K–2 experiences and progresses to building   made in water by disturbing the surface. When waves       sort, classify, communicate and analyze simple rates of
+   and revising simple models and using models to         move across the surface of deep water, the water goes     change for natural phenomena and designed products.
+   represent events and design solutions.                 up and down in place; it does not move in the direction
+                                                          of the wave except when the water meets the beach.
+ • Develop a model using an analogy, example, or          (UE.PS4A.a)
+   abstract representation to describe a scientific
+   principle or design solution.                          Waves of the same type can differ in amplitude (height
+                                                          of the wave) and wavelength (spacing between wave
+3. Planning and carrying out Investigations               peaks). (UE.PS4A.b)
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                              5
+                                                                                                                                                               MARCH 2017
+                                                                                                                                                                            4
+                                                                                                                                                               4-PS4-2
+
+
+WAVES AND THEIR APPLICATIONS IN TECHNOLOGIES FOR INFORMATION TRANSFER
+            Performance Expectation                       Develop a model to describe that light reflecting from objects and entering the eye allows objects to be seen.
+
+
+                                                          Develop a model to make sense of a phenomenon involving the relationship between light reflection and visibility
+             Clarification Statement                      of objects. In the model, identify the relevant components including light and its source, objects, the path that light
+                                                          follows, and the eye.
+
+
+        Science & Engineering Practices                                 Disciplinary Core Ideas                                      Crosscutting Concepts
+1. Asking questions and defining problems                 ELECTROMAGNETIC RADIATION                                   CAUSE AND EFFECT
+2. Developing and using models: Modeling in 3–5           An object can be seen when light reflected from its         Cause and effect relationships are routinely identified,
+   builds on K–2 experiences and progresses to building   surface enters the eyes. (UE.PS4B.a)                        tested, and used to explain change.
+   and revising simple models and using models to
+   represent events and design solutions.
+ • Develop and/or use models to describe and/or
+   predict phenomena.
+3. Planning and carrying out investigations
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                 6
+                                                                                                                                                                     MARCH 2017
+                                                                                                                                                                                     4
+                                                                                                                                                                          4-LS1-1
+
+
+FROM MOLECULES TO ORGANISMS: STRUCTURE AND PROCESSES
+                                                              Construct an argument that plants and animals have internal and external structures that function to support
+            Performance Expectation                           survival, growth, behavior, and reproduction.
+
+
+
+              Clarification Statement                         Examples of structures could include thorns, stems, roots, colored petals, heart, stomach, lung, brain, shells, fur or skin.
+
+
+
+
+        Science & Engineering Practices                                      Disciplinary Core Ideas                                        Crosscutting Concepts
+1. Asking questions and defining problems                     STRUCTURE AND FUNCTION                                         SYSTEMS AND SYSTEM MODELS
+2. Developing and using models                                Plants and animals have both internal and external             A system can be described in terms of its components
+                                                              structures that serve various functions in growth,             and their interactions.
+3. Planning and carrying out investigations                   survival, behavior, and reproduction. (UE.LS1A.a)
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence: Engaging in
+   argument from evidence in 3–5 builds on K–2 experiences
+   and progresses to critiquing the scientific explanations
+   or solutions proposed by peers by citing relevant
+   evidence about the natural and designed world(s).
+ • Construct and/or support an argument with
+   evidence, data, and/or a model.
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                             7
+                                                                                                                                                                             MARCH 2017
+                                                                                                                                                                            4
+                                                                                                                                                               4-LS1-2
+
+
+FROM MOLECULES TO ORGANISMS: STRUCTURE AND PROCESSES
+                                                           Construct an explanation to describe how animals receive different types of information through their senses,
+            Performance Expectation                        process the information in their brains, and respond to the information in different ways.
+
+
+                                                           Emphasis is on systems of information transfer. Responses could include animals running from predators, animals
+             Clarification Statement                       returning to breeding grounds, animals scavenging for food, or humans responding to stimuli.
+
+
+
+        Science & Engineering Practices                                  Disciplinary Core Ideas                                    Crosscutting Concepts
+1. Asking questions and defining problems                  INFORMATION PROCESSING                                     CAUSE AND EFFECT
+2. Developing and using models                             Different sense receptors are specialized for particular   Events that occur together with regularity might or
+                                                           kinds of information, which then may be processed          might not be a cause and effect relationship.
+3. Planning and carrying out Investigations                by the animal’s brain. Animals are able to use their
+4. Analyzing and interpreting data                         perceptions and memories to guide their actions.
+                                                           (UE.LS1D.a)
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions:
+   Constructing explanations (science) and designing
+   solutions (engineering) in 3–5 builds on K–2
+   experiences and progresses to the use of evidence in
+   constructing explanations that specify variables that
+   describe and predict phenomena and in designing
+   multiple solutions to design problems.
+ • Construct an explanation of observed relationships
+   (e.g., the distribution of plants in the back yard).
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                            8
+                                                                                                                                                                  MARCH 2017
+                                                                                                                                                                           4
+                                                                                                                                                              4-ESS1-1
+
+
+EARTH’S PLACE IN THE UNIVERSE
+                                                           Identify evidence from patterns in rock formations and fossils in rock layers to support an explanation for changes
+            Performance Expectation                        in landforms over time.
+
+                                                           Examples of evidence from patterns could include rock layers with marine shell fossils above rock layers with plant
+                                                           fossils and no shells, indicating a change from land to water over time, and a canyon with different rock layers in
+             Clarification Statement                       the walls and a river in the bottom, indicating that over time a river cut through the rock. Does not include specific
+                                                           knowledge of the mechanism of rock formation or memorization of specific rock formation and layers.
+
+
+        Science & Engineering Practices                                  Disciplinary Core Ideas                                     Crosscutting Concepts
+1. Asking questions and defining problems                  THE HISTORY OF PLANET EARTH                                 PATTERNS
+2. Developing and using models                             Local, regional, and global patterns of rock formations     Patterns can be used as evidence to support an
+                                                           reveal changes over time due to Earth’s forces such as      explanation.
+3. Planning and carrying out investigations                earthquakes and volcanoes. The presence and location
+4. Analyzing and interpreting data                         of certain fossil types indicate the order in which rock
+                                                           layers were formed. (UE.ESS1C.a)
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions:
+   Constructing explanations (science) and designing
+   solutions (engineering) in 3–5 builds on K–2
+   experiences and progresses to the use of evidence in
+   constructing explanations that specify variables that
+   describe and predict phenomena and in designing
+   multiple solutions to design problems
+ • Identify the evidence that supports particular points
+   in an explanation.
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                 9
+                                                                                                                                                                    MARCH 2017
+                                                                                                                                                                               4
+                                                                                                                                                                 4-ESS2-1
+
+
+EARTH’S SYSTEM
+                                                             Plan and conduct investigations on the effects of water, ice, wind, and vegetation on the relative rate of weathering
+            Performance Expectation                          and erosion.
+
+                                                             Examples of variables to test could include angle of slope in the downhill movement of water, amount of
+              Clarification Statement                        vegetation, speed of wind, relative rate of deposition, cycles of freezing and thawing of water, cycles of heating and
+                                                             cooling, and volume of water flow.
+
+
+        Science & Engineering Practices                                     Disciplinary Core Ideas                                     Crosscutting Concepts
+1. Asking questions and defining problems                    EARTH MATERIALS AND SYSTEMS                                  CAUSE AND EFFECT
+2. Developing and using models                               Rainfall helps to shape the land and affects the types       Cause and effect relationships are routinely identified,
+                                                             of living things found in a region. Water, ice, wind, living tested, and used to explain change.
+3. Planning and carrying out investigations: Planning        organisms, and gravity break rocks, soils, and sediments
+   and carrying out investigations to answer questions       into smaller particles and move them around.
+   (science) or test solutions (engineering) to problems     (UE.ESS2A.a)
+   in 3-5 builds on K-2 experiences and progresses to
+   include investigations that control variables and provide BIOGEOLOGY
+   evidence to support explanations or design solutions.     Living things affect the physical characteristics of their
+ • Plan and conduct an investigation collaboratively to      environment. (UE.ESS2E.a)
+   produce data to serve as the basis for evidence, using
+   fair tests in which variables are controlled and the
+   number of trials considered.
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                 10
+                                                                                                                                                                       MARCH 2017
+                                                                                                                                                                         4
+                                                                                                                                                          4-ESS2-2
+
+
+EARTH’S SYSTEM
+            Performance Expectation                       Analyze and interpret data from maps to describe patterns of Earth’s features.
+
+
+
+                                                          Maps can include topographic maps of Earth’s land and ocean floor, as well as maps of the locations of mountains,
+             Clarification Statement                      continental boundaries, volcanoes, and earthquakes.
+
+
+
+        Science & Engineering Practices                                Disciplinary Core Ideas                                    Crosscutting Concepts
+1. Asking questions and defining problems                 PLATE TECTONICS AND LARGE-SCALE                           PATTERNS
+2. Developing and using models                            SYSTEM INTERACTIONS                                       Patterns can be used as evidence to support an explanation.
+                                                          The locations of mountain ranges, deep ocean trenches,
+3. Planning and carrying out investigations               ocean floor structures, earthquakes, and volcanoes
+4. Analyzing and interpreting data: Analyzing data in     occur in patterns. Most earthquakes and volcanoes
+   3–5 builds on K–2 experiences and progresses to        occur in bands that are often along the boundaries
+   introducing quantitative approaches to collecting      between continents and oceans. Major mountain chains
+   data and conducting multiple trials of qualitative     form inside continents or near their edges. Maps can
+   observations. When possible and feasible, digital      help locate the different land and water features of
+   tools should be used.                                  Earth. (UE.ESS2B.a)
+ • Analyze and interpret data to make sense of
+   phenomena using logical reasoning.
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                             11
+                                                                                                                                                                  MARCH 2017
+                                                                                                                                                                            4
+                                                                                                                                                             4-ESS2-3
+
+
+EARTH’S SYSTEM
+                                                          Ask questions that can be investigated and predict reasonable outcomes about how living things affect the physical
+            Performance Expectation                       characteristics of their environment.
+
+                                                          Investigations include making observations in various habitats in real life or virtual circumstances. Living things
+             Clarification Statement                      could include animals such as beavers, crawfish, armadillos, nutria, gophers, and plants such as kudzu, water
+                                                          hyacinth, and Chinese tallow.
+
+
+        Science & Engineering Practices                                 Disciplinary Core Ideas                                      Crosscutting Concepts
+1. Asking questions and defining problems: Asking         BIOGEOLOGY                                                   CAUSE AND EFFECT
+   questions (science) and defining problems              Living things affect the physical characteristics of their   Cause and effect relationships are routinely identified,
+   (engineering) in 3–5 builds on K–2 experiences and     environment. (UE.ESS2E.a)                                    tested, and used to explain change.
+   progresses to specifying qualitative relationships.
+ • Ask questions that can be investigated and predict
+   reasonable outcomes based on patterns such as
+   cause and effect relationships.
+2. Developing and using models
+3. Planning and carrying out Investigations
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                12
+                                                                                                                                                                    MARCH 2017
+                                                                                                                                                                        4
+                                                                                                                                                          4-ESS3-1
+
+
+EARTH AND HUMAN ACTIVITY
+                                                        Obtain and combine information to describe that energy and fuels are derived from renewable and non-renewable
+            Performance Expectation                     resources and how their uses affect the environment.
+
+                                                        Examples of renewable energy resources could include wind energy, hydroelectric energy, and solar energy; non-
+             Clarification Statement                    renewable energy resources are fossil fuels. Examples of environmental effects could include loss of habitat due to
+                                                        dams, loss of habitat due to surface mining, and air pollution from burning fossil fuels.
+
+
+        Science & Engineering Practices                               Disciplinary Core Ideas                                    Crosscutting Concepts
+1. Asking questions and defining problems               NATURAL RESOURCES                                          CAUSE AND EFFECT
+2. Developing and using models                          Energy and fuels (fossil fuels, wind energy, solar energy, Cause and effect relationships are routinely identified,
+                                                        hydroelectric energy) that humans use are derived from tested, and used to explain change.
+3. Planning and carrying out Investigations             natural sources, and their use affects the environment in
+4. Analyzing and interpreting data                      multiple ways. Some resources are renewable over time,
+                                                        and others are not. (UE.ESS3A.a)
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating
+   information: Obtaining, evaluating, and
+   communicating information in 3–5 builds on K–2
+   experiences and progresses to evaluating the merit
+   and accuracy of ideas and methods.
+ • Obtain and combine information from books and/
+   or other reliable media to explain phenomena or
+   solutions to a design problem.
+
+
+
+
+                                                                                                                                                                          13
+                                                                                                                                                                MARCH 2017
+                                                                                                                                                                         4
+                                                                                                                                                          4-ESS3-2
+
+
+EARTH AND HUMAN ACTIVITY
+            Performance Expectation                        Generate and compare multiple solutions to reduce the impacts of natural Earth processes on humans.
+
+
+
+                                                           Examples of solutions could include designing flood, wind, or earthquake resistant structures and models to
+             Clarification Statement                       prevent soil erosion.
+
+
+
+        Science & Engineering Practices                                  Disciplinary Core Ideas                                   Crosscutting Concepts
+1. Asking questions and defining problems                  NATURAL HAZARDS                                          CAUSE AND EFFECT
+2. Developing and using models                             A variety of natural hazards result from natural         Cause and effect relationships are routinely identified,
+                                                           processes. Humans cannot eliminate natural hazards       tested, and used to explain change.
+3. Planning and carrying out Investigations                but can take steps to reduce their impacts. (UE.ESS3B.a)
+4. Analyzing and interpreting data
+                                                           DEVELOPING POSSIBLE SOLUTIONS TO
+5. Using mathematics and computational thinking            ENGINEERING PROBLEMS
+6. Constructing explanations and designing solutions:      Testing a solution involves investigating how well it
+   Constructing explanations (science) and designing       performs under a range of likely conditions.
+   solutions (engineering) in 3–5 builds on K–2            (UE.ETS1B.d)
+   experiences and progresses to the use of evidence in
+   constructing explanations that specify variables that
+   describe and predict phenomena and in designing
+   multiple solutions to design problems.
+ • Generate and compare multiple solutions to a
+   problem based on how well they meet the criteria
+   and constraints of the design solution.
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                           14
+                                                                                                                                                                  MARCH 2017
+
