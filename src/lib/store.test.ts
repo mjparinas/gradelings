@@ -16,6 +16,7 @@ import { dayKey, type AppEvent, type ChildSettings, type FamilyInfo, type Profil
 import { MAX_CHILDREN, TRIAL_DAYS } from "./plan";
 import { STRETCH_QUEST, STRETCH_REWARD } from "./goal";
 import { setRemoteFlags } from "./remoteFlags";
+import { SEASON_REWARD } from "./seasons";
 import { derivedFor, eventsFor, TEST_COINS, useStore } from "./store";
 import { schoolYearOf } from "./schoolYear";
 
@@ -236,6 +237,48 @@ describe("logging practice", () => {
     expect(bonus).toEqual([expect.objectContaining({ reward: STRETCH_REWARD, day: today })]);
     st().log([answer(true, 60_000)]);
     expect(st().events.filter((e) => e.type === "quest" && e.quest === STRETCH_QUEST)).toHaveLength(1);
+  });
+
+  it("says when a festival sticker is found and adds the coins once the festival page is full", () => {
+    vi.useFakeTimers({ toFake: ["Date"] });
+    try {
+      vi.setSystemTime(new Date("2026-10-20T12:00:00"));
+      const id = st().addProfile(child);
+      // Five earlier festival days with a flawless lesson and answers in three subjects.
+      const earlier = ["2026-10-01", "2026-10-03", "2026-10-06", "2026-10-09", "2026-10-12"].flatMap((day, i): AppEvent[] => {
+        const t = new Date(`${day}T12:00:00`).getTime();
+        return [
+          { id: `s${i}`, profileId: id, t, type: "session", mode: "practice", scope: "mix", total: 5, correct: 5, ms: 60_000 },
+          ...["math", "science", "social"].flatMap((subject, j) =>
+            Array.from({ length: 4 }, (_, k): AppEvent => ({ id: `a${i}${j}${k}`, profileId: id, t: t + 1 + j * 10 + k, type: "answer", unit: `2/${subject}/u`, correct: true, attempts: 1, revealed: false, ms: 3000, mode: "practice" })),
+          ),
+        ];
+      });
+      useStore.setState({ events: earlier, toasts: [] });
+      st().log([{ type: "session", mode: "practice", scope: "mix", total: 5, correct: 4, ms: 60_000 }]);
+      const claim = st().events.filter((e) => e.type === "quest" && e.quest === "s-leaf");
+      expect(claim).toEqual([expect.objectContaining({ day: "2026-10-01", reward: SEASON_REWARD })]);
+      expect(st().toasts.map((t) => t.title)).toEqual(expect.arrayContaining(["New Leaf Festival sticker!", "Leaf Festival page full!"]));
+      st().log([{ type: "session", mode: "practice", scope: "mix", total: 5, correct: 4, ms: 60_000 }]);
+      expect(st().events.filter((e) => e.type === "quest" && e.quest === "s-leaf")).toHaveLength(1);
+      expect(st().events.some((e) => e.type === "trophy" && e.trophy === "season-1")).toBe(true);
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it("gives nothing for festivals while they are switched off", () => {
+    vi.useFakeTimers({ toFake: ["Date"] });
+    try {
+      vi.setSystemTime(new Date("2026-10-20T12:00:00"));
+      setRemoteFlags({ flags: { "seasonal-events": false }, variants: {} });
+      st().addProfile(child);
+      st().log([{ type: "session", mode: "practice", scope: "mix", total: 5, correct: 5, ms: 60_000 }]);
+      expect(st().toasts.some((t) => t.title.includes("Festival"))).toBe(false);
+    } finally {
+      setRemoteFlags({ flags: {}, variants: {} });
+      vi.useRealTimers();
+    }
   });
 
   it("toasts can be dismissed one at a time", () => {

@@ -288,6 +288,13 @@ const math: GradeLessons = {
     ["2 × 2 × 2 = 8."],
     "8",
   ),
+  // Tennessee
+  "math/dependent-events": lesson(
+    ["Independent events do not change each other's chances.", "Dependent events do: drawing without putting back changes what is left.", "Multiply the chances of each step."],
+    "A bag has 3 red and 2 blue marbles. You draw two red without putting any back. What is the probability?",
+    ["First red: 3/5.", "Second red, 2 left of 4: 2/4.", "3/5 × 2/4 = 6/20 = 3/10."],
+    "3/10",
+  ),
 };
 
 // Math lessons ship with the grade. The other subjects' lessons are a second download, fetched once the grade is in.

@@ -1,0 +1,243 @@
+~tate of 'Qrenne.s.see
+PUBLIC CHAPTER NO. 757
+HOUSE BILL NO. 1931
+By Representatives Mark White, Hardaway, Turner, Byrd, Camper
+Substituted for: Senate Bill No. 1900
+By Senator Dickerson
+
+AN ACT to amend Tennessee Code Annotated, Title 49, relative to student privacy.
+WHEREAS, schools across the nation have undergone a technological revolution, and
+are bringing a range of beneficial online services and technologies into the classroom that
+operate in "the cloud"; and
+WHEREAS, this proliferation of online services and technologies has led to the collection
+of large amounts of data by the technology companies that provide such services; and
+WHEREAS, nationwide, stakeholders have voiced concerns about the sufficiency of
+safeguards in place to prevent technology companies from using data about K-12 students for
+commercial purposes that have no relationship to education; and
+WHEREAS, parents are overwhelmingly opposed to companies using student data for
+commercial purposes unrelated to education and are joined by advocacy groups and academics
+in calls for new regulations to protect student privacy and increased enforcement against
+vendors; and
+WHEREAS, federal laws governing the protection of student data have failed to address
+the upsurge of cloud computing technology with significant gaps within both the Family
+Educational Rights and Privacy Act (FERPA) and the Children's Online Privacy Protection Act
+(COPPA) that can enable cloud computing providers to misuse student data for commercial
+purposes unrelated to education, such as advertising; and
+WHEREAS, to safeguard student privacy, many states are enacting legislation to ensure
+that technology companies who are invited into schools will use data about students for
+authorized educational purposes, and not for targeted advertising or creating student profiles for
+non-educational purposes; and
+WHEREAS, the State of Tennessee addressed student privacy by enacting the Data
+Accessibility, Transparency and Accountability Act in 2014 that dealt with the collection of
+student data by school systems and the use of student data by school systems and their
+vendors, but did not fully address operators of online services and educational technologies
+using student information for commercial purposes; and
+WHEREAS, now the State of Tennessee must further address student privacy concerns
+relating to online services and must strengthen trust in educational technologies by eliminating
+commercial practices that do not belong in the classroom, yet allow use of student data to
+provide personalized learning and develop new educational technologies that can improve
+education and help students learn; now, therefore,
+BE IT ENACTED BY THE GENERAL ASSEMBLY OF THE STATE OF TENNESSEE:
+SECTION 1. This act shall be known and may be cited as the "Student Online Personal
+Protection Act".
+SECTION 2. Tennessee Code Annotated, Section 49-1-702, is amended by adding the
+following language as new, appropriately designated subdivisions:
+
+HB 1931
+
+( ) "Covered information" means personally identifiable information or material, or
+information that is linked to personally identifiable information or material, in any media
+or format that is not publicly available and is:
+(A) Created by or provided to an operator by a student, or the student's
+parent or legal guardian, in the course of the student's, parent's, or legal
+guardian's use of the operator's site, service, or application for K-12 school
+purposes;
+(B) Created by or provided to an operator by an employee or agent of a
+K-12 school or an LEA for K-12 school purposes; or
+(C) Gathered by an operator through the operation of its site, service, or
+application for K-12 school purposes and personally identifies a student;
+() "Interactive computer service" means any information service, system, or access
+software provider that provides or enables computer access by multiple users to a computer
+server, including specifically a service or system that provides access to the Internet and
+such systems operated or services offered by libraries or educational institutions;
+( ) "K-12 school" means a school that offers any of the grades kindergarten
+through twelve (K-12) and is operated by an LEA;
+( ) "K-12 school purposes" means purposes that are directed by or that
+customarily take place at the direction of a K-12 school, teacher, or LEA or that aid in the
+administration of school activities, including, but not limited to, instruction in the
+classroom or at home, administrative activities, and collaboration among students,
+school personnel, or parents, or are otherwise for the use and benefit of the school;
+( ) "Operator'' means, to the extent that it is operating in this capacity, the
+operator of an Internet web site, online service, online application, or mobile application
+with actual knowledge that the site, service, or application is used primarily for K-12
+school purposes and is designed and marketed for K-12 school purposes;
+( ) "Persistent unique identifier'' means a unique reference number used as an
+identifier in computer software that is stored across different usage sessions;
+( ) "Targeted advertising" means presenting advertisements to a student where
+advertisements are selected based on information obtained or inferred over time from
+that student's online behavior, usage of applications, or covered information. "Targeted
+advertising" does not include advertising to a student at an online location based upon
+that student's current visit to that location, or in response to that student's request for
+information or feedback, without the retention of that student's online activities or
+requests over time for the purpose of targeting subsequent advertisements;
+SECTION 3. Tennessee Code Annotated, Title 49, Chapter 1, Part 7, is amended by
+adding the following language as a new, appropriately designated section:
+(a) An operator shall not knowingly:
+(1) Engage in targeted advertising on the operator's site, service, or
+application, or target advertising on any other site, service, or application if the
+targeting of the advertising is based on any information, including covered
+information and persistent unique identifiers, that the operator has acquired
+because of the use of that operator's site, service, or application for K-12 school
+purposes;
+(2) Use information, including persistent unique identifiers, created or
+gathered by the operator's site, service, or application, to amass a profile about a
+student except in furtherance of K-12 school purposes. As used in this
+subdivision (a)(2) and subdivision (d)(2), "amass a profile" does not include the
+collection and retention of account information that remains under the control of
+the student, the student's parent or guardian, or the K-12 school;
+
+2
+
+HB 1931
+
+(3) Sell or rent a student's information, including covered information. This
+subdivision (a)(3) does not apply to the purchase, merger, or other type of
+acquisition of an operator by another entity, if the operator or successor entity
+complies with this section regarding previously acquired student information; or
+(4) Except as otherwise provided in subsection (d), disclose covered
+information unless the disclosure is made:
+(A) In furtherance of the K-12 school purpose of the site, service,
+or application, if the recipient of the covered information disclosed under
+this subdivision (a)(4)(A) does not further disclose the information unless
+done to allow or improve operability and functionality of the operator's
+site, service, or application;
+(B) To ensure legal and regulatory compliance or protect against
+liability;
+(C) To respond to or participate in the judicial process;
+(D) To protect the safety or integrity of users of the site or others
+or the security of the site, service, or application;
+(E) For a school, educational, or employment purpose requested
+by the student or the student's parent or guardian; provided, that the
+information is not used or further disclosed for any other purpose; or
+(F) To a third party, if the operator contractually prohibits the third
+party from using any covered information for any purpose other than
+providing the contracted service to or on behalf of the operator, prohibits
+the third party from disclosing any covered information provided by the
+operator with subsequent third parties, and requires the third party to
+implement and maintain reasonable security procedures and practices.
+(b) Nothing in subsection (a) shall prohibit the operator's use of information for
+maintaining, developing, supporting, improving, or diagnosing the operator's site,
+service, or application.
+(c) An operator shall:
+(1) Implement and maintain reasonable security procedures and practices
+appropriate to the nature of the covered information, designed to protect that
+covered information from unauthorized access, destruction, use, modification, or
+disclosure; and
+(2) Delete within a reasonable time period a student's covered information
+if the K-12 school or LEA requests deletion of covered information under the
+control of the K-12 school or LEA, unless a student or parent or legal guardian
+consents to the maintenance of the covered information.
+(d) An operator may use or disclose covered information of a student:
+(1) If federal or state law requires the operator to disclose the information,
+and the operator complies with the requirements of federal or state law in
+protecting and disclosing that information;
+(2) For legitimate research purposes as required by state or federal law
+and subject to the restrictions under applicable state or federal law or as allowed
+by state or federal law and under the direction of a K-12 school, LEA, or the
+department of education, if covered information is not used for advertising or to
+amass a profile on the student for purposes other than K-12 school purposes; or
+(3) To the department, an LEA, or a K-12 school for K-12 school
+purposes, as permitted by state or federal law.
+
+3
+
+HB 1931
+
+(e) An operator is not prohibited from:
+(1) Using covered information to improve educational products if that
+information is not associated with an identified student within the operator's site,
+service, or application or other sites, services, or applications owned by the
+operator;
+(2) Using covered information that is not associated with an identified
+student to demonstrate the effectiveness of the operator's products or services,
+including in its marketing;
+(3) Sharing covered information that is not associated with an identified
+student for the development and improvement of educational sites, services, or
+applications;
+(4) Using recommendation engines to recommend to a student:
+(A) Additional content relating to an educational, other learning, or
+employment opportunity purpose within an online site, service, or
+application if the recommendation is not determined in whole or in part by
+payment or other consideration from a third party; or
+(B) Additional services relating to an educational, other learning,
+or employment opportunity purpose within an online site, service, or
+application if the recommendation is not determined in whole or in part by
+payment or other consideration from a third party; or
+(5) Responding to a student's request for information or for feedback
+without the information or response being determined in whole or in part by
+payment or other consideration from a third party.
+(f) This section does not:
+
+(1) Limit the authority of a law enforcement agency to obtain any content
+or information from an operator as authorized by law or under a court order;
+(2) Limit the ability of an operator to use student data, including covered
+information, for adaptive learning or customized student learning purposes;
+(3) Apply to general audience Internet web sites, general audience online
+services, general audience online applications, or general audience mobile
+applications, even if login credentials created for an operator's site, service, or
+application may be used to access those general audience sites, services, or
+applications;
+(4) Limit service providers from providing Internet connectivity to schools
+or students and their families;
+(5) Prohibit an operator of a web site, online service, online application, or
+mobile application from marketing educational products directly to parents if the
+marketing did not result from the use of covered information obtained by the
+operator through the provision of services covered under this section;
+(6) Impose a duty upon a provider of an electronic store, gateway,
+marketplace, or other means of purchasing or downloading software or
+applications to review or enforce compliance with this section on those
+applications or software;
+(7) Impose a duty upon a provider of an interactive computer service to
+review or enforce compliance with this section by third-party content providers; or
+(8) Prohibit students from downloading, exporting, transferring, saving, or
+maintaining their own student data or documents.
+
+4
+
+HB 1931
+
+(g)
+(1) Any violation of this section shall be construed to constitute an unfair
+or deceptive act or practice affecting the conduct of trade or commerce under the
+Tennessee Consumer Protection Act of 1977, compiled in title 47, chapter 18,
+part 1, and shall be enforced solely by the attorney general and reporter in the
+attorney general's discretion. The attorney general and reporter shall have the
+authority to conduct civil investigations and bring civil actions, as provided in § 86-109 and title 8, chapter 6, part 4; and§§ 47-18-106 and 47-18-108.
+(2) In an action brought by the attorney general under this chapter, the
+court may award or impose any relief available under the Tennessee Consumer
+Protection Act of 1977.
+SECTION 4. This act shall take effect July 1, 2016, the public welfare requiring it.
+
+5
+
+HOUSE BILL NO.
+
+1931
+
+PASSED:~~M~ar_c_h~3_0~,2_0_1_6__~~~~
+
+BETH HARWELL, SPEAKEI<
+HOUSE OF REPRESENTATIVES
+
+RAi'!.SEY
+E SENATE
+
+APPROVED t h i s ~ day of
+
+pr
+
+~,i I
+
+2016
+
+

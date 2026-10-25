@@ -1,0 +1,130 @@
+import type { Unit } from "../../types";
+import { bankUnit, type Q } from "../own";
+import { timelineUnit, type Dated } from "./kit";
+
+// Wisconsin Grade 8 social studies: Wisconsin in United States history from the Northwest Territory to Reconstruction
+// (SS.Hist1 to SS.Hist4), with a timeline, and the United States and Wisconsin constitutions (SS.PS1 to SS.PS3). First
+// Nations content is light, in the present tense, with removal told plainly and nothing sacred or ceremonial.
+
+const NATION: Q[] = [
+  ["The Northwest Ordinance of 1787 affected the land that became Wisconsin by…", "banning slavery in the Northwest Territory", ["making Wisconsin part of Spain", "creating the state of Wisconsin"], "Wisconsin was the last state carved whole from the Northwest Territory."],
+  ["Even though slavery was banned, some army officers and settlers in early Wisconsin…", "still held enslaved people", ["were all abolitionists", "freed every worker in the country"], "The ban was not always enforced."],
+  ["Dred Scott's lawsuit argued he was free partly because he had lived in…", "Wisconsin Territory, where slavery was banned", ["Great Britain", "Mexico"], "In 1857 the US Supreme Court ruled against him."],
+  ["Wisconsin Territory was created in 1836. At first it also included what is now…", "Minnesota and Iowa", ["Ohio and Indiana", "Texas and Kansas"], "Iowa was split off in 1838."],
+  ["Wisconsin's first proposed state constitution, written in 1846, was…", "rejected by voters", ["approved at once", "never voted on"], "A second constitution was approved in 1848."],
+  ["Wisconsin became the 30th state in…", "1848", ["1836", "1861"], "It entered as a free state."],
+  ["In 1849, Wisconsin voters approved a referendum to…", "let Black men vote", ["move the capital", "allow slavery"], "Officials said it had failed until a court case in 1866."],
+  ["Ezekiel Gillespie, a Black Milwaukee man, went to court in 1866 and won…", "the right to vote for Black men in Wisconsin", ["a seat in Congress", "a gold mine"], "The Wisconsin Supreme Court ruled the 1849 vote had passed."],
+  ["In 1854, Joshua Glover, a freedom seeker, was captured near Racine under the…", "Fugitive Slave Act", ["Northwest Ordinance", "Homestead Act"], "The law forced people in free states to help return freedom seekers."],
+  ["What happened after Joshua Glover was jailed in Milwaukee?", "a crowd freed him and he escaped to Canada", ["he was made governor", "he joined the army that day"], "Sherman Booth helped lead the crowd."],
+  ["In Ableman v. Booth (1859), the US Supreme Court ruled that…", "states could not overrule the federal Fugitive Slave Act", ["slavery was banned everywhere", "Wisconsin was not a state"], "Wisconsin's court had said the law was unconstitutional."],
+  ["In 1854, people meeting in Ripon to oppose the Kansas-Nebraska Act helped start the…", "Republican Party", ["Democratic Party", "Whig Party"], "They opposed spreading slavery into new territories."],
+  ["The Kansas-Nebraska Act of 1854 let settlers…", "vote on whether to allow slavery", ["vote for President early", "own land for free"], "This idea was called popular sovereignty."],
+  ["About how many Wisconsin soldiers served in the Union army?", "about 90,000", ["about 900", "about 9 million"], "That was a large share of the state's young men."],
+  ["The Iron Brigade, with several Wisconsin regiments, was known for…", "hard fighting at battles such as Gettysburg", ["building canals", "never fighting"], "It suffered some of the heaviest losses of the war."],
+  ["Old Abe was a bald eagle carried into battle by…", "the 8th Wisconsin regiment", ["the British army", "the US Navy"], "He became a famous symbol of the state."],
+  ["Cordelia Harvey, widow of a Wisconsin governor, convinced President Lincoln to…", "build army hospitals in the North", ["end the war at once", "move the capital to Madison"], "Harvey Hospital opened in Madison."],
+  ["In 1862, people in Port Washington rioted against…", "the military draft", ["the railroad", "the end of slavery"], "Not everyone in Wisconsin supported the war."],
+  ["In 1850, US officials tried to move Lake Superior Ojibwe bands west by sending them to Sandy Lake, where…", "about 400 people died from hunger and illness", ["they found gold", "they were given new farms"], "The tragedy led Chief Buffalo to protest in Washington, D.C."],
+  ["The 1854 Treaty of La Pointe gave Ojibwe bands…", "permanent reservations in Wisconsin", ["no land at all", "the city of Madison"], "Several of today's Ojibwe reservations come from it."],
+  ["The 13th Amendment…", "abolished slavery", ["gave women the vote", "created an income tax"], "It was ratified in 1865."],
+  ["The 14th Amendment promised…", "citizenship and equal protection of the laws", ["the right to bear arms", "an end to Prohibition"], "It was ratified in 1868."],
+  ["The 15th Amendment said the right to vote could not be denied because of…", "race", ["age", "income"], "It was ratified in 1870."],
+  ["Why did the Kansas-Nebraska Act anger many people in Wisconsin?", "it could open new territories to slavery", ["it closed all railroads", "it raised taxes on wheat"], "It broke the Missouri Compromise line.", true],
+  ["Why did the Glover case matter to the nation?", "it showed a free state resisting a federal slavery law", ["it ended the Civil War", "it made Wisconsin a slave state"], "It raised questions about states' rights and federal power.", true],
+  ["Why might a Milwaukee newspaper and a Southern newspaper describe Glover's rescue differently?", "each wrote for readers with different views on slavery", ["they were identical", "only one newspaper existed"], "Check a source's audience and point of view.", true],
+  ["A letter from a Wisconsin soldier is useful to historians because…", "it shows one person's experience of the war", ["it covers every battle", "it has no point of view"], "Every primary source has a perspective.", true],
+  ["How was the fight for Black voting rights in Wisconsin like later civil rights struggles?", "people used courts and votes to win rights they had been denied", ["it had nothing to do with rights", "it ended all discrimination"], "Compare the past with the present.", true],
+];
+
+const EVENTS: readonly Dated[] = [
+  ["The Declaration of Independence is signed", 1776],
+  ["The Northwest Ordinance bans slavery in the territory", 1787],
+  ["The Bill of Rights is ratified", 1791],
+  ["The Louisiana Purchase", 1803],
+  ["The Missouri Compromise", 1820],
+  ["The Indian Removal Act is passed", 1830],
+  ["The Black Hawk War", 1832],
+  ["Wisconsin Territory is created", 1836],
+  ["The Mexican-American War begins", 1846],
+  ["Wisconsin becomes the 30th state", 1848],
+  ["The Sandy Lake Tragedy", 1850],
+  ["Joshua Glover is rescued; the Republican Party is founded in Ripon", 1854],
+  ["The Dred Scott decision", 1857],
+  ["Ableman v. Booth is decided", 1859],
+  ["Lincoln is elected President", 1860],
+  ["The Civil War begins", 1861],
+  ["The Emancipation Proclamation takes effect", 1863],
+  ["The Civil War ends and the 13th Amendment is ratified", 1865],
+  ["Ezekiel Gillespie wins Black men the vote in Wisconsin", 1866],
+  ["The 14th Amendment is ratified", 1868],
+  ["The 15th Amendment is ratified", 1870],
+  ["Reconstruction ends", 1877],
+];
+
+const TIMELINE_ITEMS: Q[] = [
+  ["How many years passed between the Declaration of Independence and Wisconsin statehood?", "72", ["62", "82"], "1848 − 1776 = 72."],
+  ["Which came first, the Missouri Compromise or the Kansas-Nebraska Act?", "the Missouri Compromise", ["the Kansas-Nebraska Act", "they happened the same year"], "1820 comes before 1854."],
+  ["The years 1861 to 1865 are the years of the…", "Civil War", ["American Revolution", "War of 1812"], "It began at Fort Sumter."],
+  ["Reconstruction is the period after the Civil War, from 1865 to about…", "1877", ["1820", "1900"], "Federal troops left the South in 1877."],
+  ["Which happened during Reconstruction?", "the 14th Amendment was ratified", ["the Bill of Rights was ratified", "Wisconsin became a state"], "Reconstruction ran from 1865 to 1877.", true],
+  ["How many years after the 1849 referendum did Ezekiel Gillespie's case win Black men the vote in Wisconsin?", "17", ["7", "27"], "1866 − 1849 = 17.", true],
+];
+
+const CONSTITUTIONS: Q[] = [
+  ["The US Constitution begins with the words…", "We the People", ["When in the Course", "Four score and seven"], "This part is the Preamble."],
+  ["The Preamble explains…", "the goals of the Constitution", ["the names of the states", "how to amend it"], "Justice, domestic tranquility, the common defense…"],
+  ["The first ten amendments are called the…", "Bill of Rights", ["Articles of Confederation", "Federalist Papers"], "They were ratified in 1791."],
+  ["Which branch makes federal laws?", "Congress", ["the President", "the Supreme Court"], "Article I sets it up."],
+  ["Which branch carries out federal laws?", "the executive branch, led by the President", ["Congress", "the courts"], "Article II sets it up."],
+  ["Which branch decides what laws mean?", "the judicial branch", ["the executive branch", "Congress"], "Article III sets it up."],
+  ["Checks and balances means…", "each branch can limit the others", ["one branch has all the power", "states check the President"], "A veto is one check."],
+  ["Federalism means power is shared between…", "the national and state governments", ["Congress and the courts only", "cities and counties only"], "Wisconsin has its own constitution too."],
+  ["The Declaration of Independence says people have the right to…", "life, liberty and the pursuit of happiness", ["free land and gold", "a king"], "Thomas Jefferson wrote most of it."],
+  ["Wisconsin's constitution was adopted in…", "1848", ["1970", "1776"], "It is still in use today."],
+  ["How many constitutions has Wisconsin had?", "one", ["four", "ten"], "It has been amended many times instead of replaced."],
+  ["Article I of the Wisconsin Constitution is its…", "Declaration of Rights", ["list of counties", "tax code"], "Like the US Bill of Rights, it protects rights."],
+  ["The Wisconsin Constitution has always said there shall be no…", "slavery in the state", ["schools in the state", "elections in the state"], "Wisconsin entered the Union as a free state."],
+  ["Wisconsin's lawmaking branch is the…", "Legislature", ["Congress", "Cabinet"], "It meets in Madison."],
+  ["The Wisconsin Constitution sets up how many branches of government?", "three", ["two", "five"], "Legislative, executive and judicial."],
+  ["To change the Wisconsin Constitution, an amendment must pass…", "two Legislatures in a row and then win a vote of the people", ["the governor alone", "one city council"], "Voters have the final say."],
+  ["The Wisconsin Constitution says the state must provide…", "free public schools", ["free cars", "a state army"], "Article X is about education."],
+  ["Which right is in the First Amendment?", "freedom of speech", ["the right to a jury in civil cases", "protection from cruel punishment"], "It also protects religion, press, assembly and petition."],
+  ["The rule of law means…", "everyone, including leaders, must follow the law", ["leaders are above the law", "laws apply only to children"], "No one is above the law."],
+  ["How can the US Constitution be amended?", "two-thirds of Congress proposes and three-fourths of states ratify", ["the President signs a paper", "one state votes"], "It is hard to change on purpose.", true],
+  ["Why did the framers include a way to amend the Constitution?", "so it could change as the country changed", ["to make it easier to ignore", "because they forgot things"], "There are 27 amendments.", true],
+  ["The US Constitution is the supreme law of the land. That means…", "state laws can't conflict with it", ["states can ignore it", "it applies only to Washington, D.C."], "This is the supremacy clause.", true],
+  ["Ableman v. Booth is an example of…", "the supremacy clause limiting a state court", ["a state seceding", "a governor's veto"], "The US Supreme Court overruled Wisconsin's court.", true],
+  ["Why do both Wisconsin and the United States have a list of rights in their constitutions?", "to limit what government can do to people", ["to give government unlimited power", "to list holidays"], "Rights protect individuals from government.", true],
+];
+
+export const SOCIAL_8: Unit[] = [
+  bankUnit({
+    id: "wi-g8-wisconsin-and-nation",
+    title: "Wisconsin and the Nation",
+    emoji: "🎖️",
+    blurb: "From statehood to Reconstruction",
+    parentNote: "Wisconsin in United States history from the Northwest Ordinance to Reconstruction: Wisconsin Territory and Dred Scott, statehood, Joshua Glover and Ableman v. Booth, the founding of the Republican Party in Ripon, the Sandy Lake Tragedy, Wisconsin in the Civil War, Black voting rights and the Reconstruction amendments.",
+    standards: ["SS.Hist1.a.m; SS.Hist1.b.m; SS.Hist3.a.m; SS.Hist4.d.m", "causes, effects and perspectives in the history of Wisconsin and the United States, and how sources show them"],
+    items: NATION,
+  }),
+  timelineUnit({
+    id: "wi-g8-us-timeline",
+    title: "From Independence to Reconstruction",
+    emoji: "📜",
+    blurb: "Put the nation's and Wisconsin's big moments in order",
+    parentNote: "Ordering events in United States and Wisconsin history from 1776 to 1877 (the founding, expansion, Wisconsin statehood, the road to the Civil War, the war and Reconstruction) and working out how far apart they are.",
+    standards: ["SS.Hist2.a.m; SS.Hist2.b.m; SS.Hist2.c.m", "change and continuity, and causes and effects, in the history of Wisconsin and the United States"],
+    events: EVENTS,
+    items: TIMELINE_ITEMS,
+  }),
+  bankUnit({
+    id: "wi-g8-constitutions",
+    title: "Two Constitutions",
+    emoji: "⚖️",
+    blurb: "The US and Wisconsin constitutions",
+    parentNote: "The Declaration of Independence, the US Constitution (Preamble, branches, checks and balances, federalism, amendments and the Bill of Rights) and the Wisconsin Constitution of 1848 (its Declaration of Rights, its ban on slavery, free public schools and how it is amended).",
+    standards: ["SS.PS1.a.m; SS.PS2.a.m; SS.PS3.c.m", "the rule of law, the rights and limits in the Constitution and the Bill of Rights, and the powers of state and national government"],
+    items: CONSTITUTIONS,
+  }),
+];

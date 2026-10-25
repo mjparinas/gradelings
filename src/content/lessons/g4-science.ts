@@ -583,6 +583,12 @@ export const lessons: GradeLessons = {
     ["Windows can break and fly.", "Go low, to a basement or an inside room."],
     "a basement or inside room",
   ),
+  "science/md-g4-earth-hazards": lesson(
+    ["Maps show patterns: volcanoes and earthquakes line up where Earth's plates meet.", "Hazards like hurricanes, floods and tornadoes can't be stopped, but harm can be reduced.", "Sirens, levees, strong buildings and safe places all help."],
+    "A tornado warning sounds. Where is the safest place in a house?",
+    ["Windows can break and fly.", "Go low, to a basement or an inside room."],
+    "a basement or inside room",
+  ),
   "science/nj-g4-earth-hazards": lesson(
     ["Maps show patterns: volcanoes and earthquakes line up where Earth's plates meet.", "Hazards like hurricanes, floods and earthquakes can't be stopped, but harm can be reduced.", "Warnings, dunes, raised homes and strong buildings all help."],
     "A hurricane is coming to the shore. What is one way to reduce harm?",
@@ -595,6 +601,12 @@ export const lessons: GradeLessons = {
     ["The wind keeps blowing.", "It will not run out, so it is renewable."],
     "renewable",
   ),
+  "science/md-g4-energy-resources": lesson(
+    ["Energy comes from natural resources.", "Renewable resources like wind, sunlight and moving water don't run out.", "Fossil fuels like coal take millions of years to form, and burning them adds pollution."],
+    "Is wind blowing off Maryland's ocean coast renewable or nonrenewable?",
+    ["The wind keeps blowing.", "It will not run out, so it is renewable."],
+    "renewable",
+  ),
   "science/nj-g4-energy-resources": lesson(
     ["Energy comes from natural resources.", "Renewable resources like wind, sunlight and moving water don't run out.", "Fossil fuels like natural gas take millions of years to form, and burning them adds pollution."],
     "Is sunlight on New Jersey's solar panels renewable or nonrenewable?",
@@ -603,6 +615,12 @@ export const lessons: GradeLessons = {
   ),
   "science/il-g4-rocks-erosion": lesson(
     ["Weathering breaks rock. Erosion moves it. Running water moves the most.", "Glaciers scrape and carry rock. Roots growing in cracks can split rock.", "Over a very long time, erosion can carve deep canyons.", "Plants and their roots slow erosion on a hillside."],
+    "Which hillside erodes faster in heavy rain: a bare one or a grassy one?",
+    ["Roots hold soil in place.", "A bare hill has nothing to hold the soil."],
+    "the bare hillside",
+  ),
+  "science/md-g4-rocks-erosion": lesson(
+    ["Weathering breaks rock. Erosion moves it. Running water moves the most.", "Waves wear away cliffs along the bay. Roots growing in cracks can split rock.", "Over a very long time, erosion can carve deep canyons.", "Plants and their roots slow erosion on a hillside."],
     "Which hillside erodes faster in heavy rain: a bare one or a grassy one?",
     ["Roots hold soil in place.", "A bare hill has nothing to hold the soil."],
     "the bare hillside",
@@ -703,5 +721,137 @@ export const lessons: GradeLessons = {
     "Which hillside erodes faster in heavy rain: a bare one or a grassy one?",
     ["Roots hold soil in place.", "A bare hill has nothing to hold the soil."],
     "the bare hillside",
+  ),
+  "science/va-g4-seasons-moon": lesson(
+    ["The seasons repeat every year: spring, summer, fall, winter.", "Days have the most daylight in summer and the least in winter, around December.", "The Moon's main phases repeat about every month: new, first quarter, full, third quarter."],
+    "Which main phase comes after the full moon?",
+    ["Order: new → first quarter → full → third quarter.", "After the full moon comes the third quarter."],
+    "third quarter moon",
+  ),
+  "science/va-g4-ocean": lesson(
+    ["The ocean floor has a continental shelf, a steep slope and a deep, flat abyssal plain.", "Tides rise and fall about twice a day, pulled by the moon.", "Estuaries, like the Chesapeake Bay, mix fresh river water with salt water."],
+    "What is an estuary?",
+    ["Rivers flow into the sea.", "Fresh water mixes with salt water."],
+    "where fresh river water mixes with salt water",
+  ),
+  "science/va-g4-virginia-resources": lesson(
+    ["Virginia's natural resources include forests, water, soil, wildlife and minerals.", "Some energy, like solar and wind, is renewable. Coal and natural gas are not.", "Using resources wisely keeps them for the future."],
+    "Is solar power renewable or nonrenewable?",
+    ["Ask: will it run out?", "The sun keeps shining every day."],
+    "renewable",
+  ),
+  // Missouri (us-mo)
+  "science/mb-speed-and-motion": lesson(
+    ["Speed is how far something travels in a certain time.", "Things keep doing what they are doing until a force acts on them.", "Friction slows things down. Rough grass has more friction than smooth ice."],
+    "A runner goes 10 km in one hour. A walker goes 5 km. Who is faster?",
+    ["Both took one hour.", "10 km is farther than 5 km."],
+    "the runner",
+  ),
+  "science/mb-friction-5": lesson(
+    ["Friction is a force from surfaces rubbing. It slows things and makes heat.", "Smooth or oiled surfaces reduce friction, like wax on sled runners.", "Rough surfaces add friction, like sand on ice.", "Simple machines make work easier by changing a force's size or direction. An axe blade is a wedge."],
+    "Why do people put oil on a bike chain?",
+    ["Oil makes the parts slide past each other smoothly.", "That means less rubbing."],
+    "to reduce friction",
+  ),
+  "science/mo-g4-rocks-erosion": lesson(
+    ["Weathering breaks rock. Erosion moves it. Running water moves the most.", "Glaciers scrape and carry rock. Roots growing in cracks can split rock.", "Over a very long time, erosion can carve deep canyons.", "Plants and their roots slow erosion on a hillside."],
+    "Which hillside erodes faster in heavy rain: a bare one or a grassy one?",
+    ["Roots hold soil in place.", "A bare hill has nothing to hold the soil."],
+    "the bare hillside",
+  ),
+  "science/mo-g4-earth-hazards": lesson(
+    ["Many earthquakes and volcanoes happen along the edges of Earth's plates.", "The New Madrid Seismic Zone in southeast Missouri has had strong earthquakes, so Missouri schools practice too.", "During an earthquake: drop, cover and hold on.", "Floods and tornadoes are hazards in Missouri; people prepare with warnings and plans."],
+    "The ground starts shaking at school. What should you do?",
+    ["Get low so you don't fall.", "Get under a desk and hold on until it stops."],
+    "drop, cover and hold on",
+  ),
+
+  // North Carolina's units (us-nc).
+  "science/pe-magnets-static-3": lesson(
+    ["Magnets attract iron and steel. Like poles push apart. Opposite poles pull together.", "A magnet's force can pass through thin things, like paper.", "A compass uses a magnet to find direction. Static electricity makes a balloon stick to a wall."],
+    "Two magnets snap together. Are the ends alike or opposite poles?",
+    ["Like poles push apart.", "Opposite poles pull together."],
+    "opposite poles",
+  ),
+  "science/rock-cycle": lesson(
+    ["Igneous rock forms when magma or lava cools.", "Sedimentary rock forms when pieces from weathering and erosion settle in layers and press together.", "Metamorphic rock forms when heat and pressure change a rock.", "The rock cycle has no start: any rock can become any other type."],
+    "Lava from a volcano cools and hardens. Which kind of rock forms?",
+    ["Lava is melted rock.", "Rock that forms from cooled melted rock is igneous."],
+    "igneous",
+  ),
+  "science/tx-g5-conservation": lesson(
+    ["Using natural resources can harm land, water and air, but good designs reduce the harm.", "Farmers rotate crops and plant cover crops to keep soil healthy.", "Carpooling burns less fuel. Recycling aluminum saves energy.", "Proper trash disposal keeps litter from hurting animals and water."],
+    "How does carpooling help the environment?",
+    ["Fewer cars make the trip.", "That burns less fuel and makes less pollution."],
+    "less fuel and less air pollution",
+  ),
+  "science/nc-g4-earth-changes": lesson(
+    ["Some changes to Earth's surface are fast, like earthquakes, landslides and floods.", "Others are slow, like weathering (breaking rock) and erosion (carrying pieces away) over many years.", "Plant roots, sea oats on dunes and walls can slow erosion."],
+    "Waves slowly move sand along a beach over many years. Fast or slow change?",
+    ["Many years is a long time.", "That is a slow change."],
+    "slow",
+  ),
+  "science/nc-g4-earth-and-moon": lesson(
+    ["Earth spins on its axis once a day, giving us day and night.", "The moon reflects sunlight. As it orbits Earth, we see different phases: new, crescent, quarter, gibbous and full.", "The phases repeat about every month."],
+    "Which phase comes after the full moon: new moon or third quarter?",
+    ["The order is new, first quarter, full, third quarter.", "After the full moon comes the third quarter."],
+    "third quarter",
+  ),
+  // Massachusetts (us-ma)
+  "science/ma-g4-rocks-erosion": lesson(
+    ["Weathering breaks rock. Erosion moves it. Running water moves the most.", "Glaciers scraped across New England, carrying rocks and leaving hills and boulders.", "Rock layers and fossils show how a place has changed over time.", "Plants and their roots slow erosion on a hillside."],
+    "Which hillside erodes faster in heavy rain: a bare one or a grassy one?",
+    ["Roots hold soil in place.", "A bare hill has nothing to hold the soil."],
+    "the bare hillside",
+  ),
+  // South Carolina (us-sc)
+  "science/sc-g4-rocks-erosion": lesson(
+    ["Weathering breaks rock. Erosion moves it. Running water moves the most.", "Glaciers scrape and carry rock. Roots growing in cracks can split rock.", "Over a very long time, erosion can carve deep canyons.", "Plants and their roots slow erosion on a hillside."],
+    "Which hillside erodes faster in heavy rain: a bare one or a grassy one?",
+    ["Roots hold soil in place.", "A bare hill has nothing to hold the soil."],
+    "the bare hillside",
+  ),
+  "science/wi-g4-earth-hazards": lesson(
+    ["Maps show patterns: volcanoes and earthquakes line up where Earth's plates meet.", "Hazards like tornadoes, floods and earthquakes can't be stopped, but harm can be reduced.", "Sirens, levees, strong buildings and safe places all help."],
+    "A tornado warning sounds. Where is the safest place in a house?",
+    ["Windows can break and fly.", "Go low, to a basement or an inside room."],
+    "a basement or inside room",
+  ),
+  "science/wi-g4-energy-resources": lesson(
+    ["Energy comes from natural resources.", "Renewable resources like wind, sunlight and moving water don't run out.", "Fossil fuels like coal take millions of years to form, and burning them adds pollution."],
+    "Is wind blowing across a Wisconsin farm renewable or nonrenewable?",
+    ["The wind keeps blowing.", "It will not run out, so it is renewable."],
+    "renewable",
+  ),
+  "science/wi-g4-rocks-erosion": lesson(
+    ["Weathering breaks rock. Erosion moves it. Running water moves the most.", "Glaciers scrape and carry rock. Roots growing in cracks can split rock.", "Over a very long time, erosion can carve deep canyons.", "Plants and their roots slow erosion on a hillside."],
+    "Which hillside erodes faster in heavy rain: a bare one or a grassy one?",
+    ["Roots hold soil in place.", "A bare hill has nothing to hold the soil."],
+    "the bare hillside",
+  ),
+  // Tennessee
+  "science/tn-g4-fossils": lesson(
+    ["Fossils are remains or traces of living things from long ago.", "Most are found in sedimentary rock. Amber can hold an insect.", "Fossils tell about past places: seashells on dry land mean sea once covered it."],
+    "Fossil seashells are found on a hill. What does that tell us?",
+    ["Seashells come from animals that live in the sea."],
+    "the land was once covered by sea",
+  ),
+  "science/tn-g4-rocks-erosion": lesson(
+    ["Weathering breaks rock. Erosion moves it. Deposition drops it in a new place.", "Water, wind and ice all cause erosion. Wind shapes sand dunes.", "Plants hold soil, so bare slopes wash away faster.", "In rock layers, the oldest layer is usually at the bottom."],
+    "A river slows down and drops sand at its mouth. What is this called?",
+    ["Dropping sediment in a new place is deposition."],
+    "deposition",
+  ),
+  "science/tn-g4-earth-hazards": lesson(
+    ["Maps show patterns: mountains form long chains, and many volcanoes and earthquakes are along plate edges.", "West Tennessee lies on the New Madrid Seismic Zone, where strong earthquakes shook the land in 1811 and 1812.", "In a strong earthquake, drop, cover and hold on. In a tornado, go to a low inside room."],
+    "A tornado warning sounds. Where should you go?",
+    ["Tornado winds break windows.", "A low room with no windows is safest."],
+    "a low inside room with no windows",
+  ),
+  "science/tn-g4-energy-resources": lesson(
+    ["Renewable resources, like sunlight and wind, won't run out.", "Nonrenewable resources, like oil, coal and natural gas, will run out.", "Burning fossil fuels puts pollution and carbon dioxide into the air.", "Solar panels use sunlight, wind turbines use wind and dams use moving water."],
+    "Gasoline is made from oil. Is it renewable?",
+    ["Oil formed from ancient living things over millions of years.", "We use it much faster than it forms, so it will run out."],
+    "no, it is nonrenewable",
   ),
 };

@@ -65,6 +65,10 @@ const nextConfig: NextConfig = {
   // (local, CI, other hosts) we don't load it and avoid failed script requests.
   env: { NEXT_PUBLIC_ON_VERCEL: process.env.VERCEL ? "1" : "", NEXT_PUBLIC_BUILD_SHA: buildSha() },
   serverExternalPackages: ["@libsql/client", "libsql"],
+  // CI's Build job sets SKIP_BUILD_TYPECHECK=1 because its Types job already runs the same check
+  // (tsc --noEmit) at the same time, and CI fails if it fails. Every other build, Vercel's included,
+  // still checks types.
+  typescript: { ignoreBuildErrors: process.env.SKIP_BUILD_TYPECHECK === "1" },
   turbopack: {
     // Pin the project root so Turbopack never picks up a lockfile from a parent folder.
     root: path.join(__dirname),

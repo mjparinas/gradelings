@@ -1,0 +1,1511 @@
+{
+ "data": {
+  "cspStatus": {
+   "notes": null,
+   "value": "visible"
+  },
+  "document": {
+   "publicationStatus": "Published",
+   "sourceURL": "https://marylandpublicschools.org/about/documents/dcaa/math/revised/grade-4-mccrs-math-crosswalk-a.pdf",
+   "title": "Grade 4 MCCRS Math Crosswalk"
+  },
+  "educationLevels": [
+   "04"
+  ],
+  "id": "CA1D73F270174D65B2262BCC82463BF9",
+  "jurisdiction": {
+   "id": "49FCDFBD2CF04033A9C347BFA0584DF0",
+   "title": "Maryland"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/4.0/us/",
+   "rightsHolder": "Common Curriculum, Inc.",
+   "title": "CC BY 4.0 US"
+  },
+  "normalizedSubject": null,
+  "standards": {
+   "02A63554F573492E946BC8B85B8BAAD2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "GENERALIZE PLACE VALUE UNDERSTANDING FOR MULTI-DIGIT WHOLE NUMBERS. ",
+    "id": "02A63554F573492E946BC8B85B8BAAD2",
+    "listId": "A",
+    "parentId": "8E144142313443959BF19E397E3CD847",
+    "position": 1001,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.A"
+   },
+   "03666FAA572845E0A33AC25D23ED79F8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1C844555487541A6A9C5658895EF9EA5",
+     "6DF177C5DFD941E09D5B25B6BC0A0B01",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Skip count (2s, 5s, 10s) and apply properties of\noperations (0s, 1s) to derive foundational facts. ",
+    "id": "03666FAA572845E0A33AC25D23ED79F8",
+    "listId": "a",
+    "parentId": "1C844555487541A6A9C5658895EF9EA5",
+    "position": 1026,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.C.7.a"
+   },
+   "0644F3AC1F3247A3ACF8279E341CF7DB": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Geometric Reasoning and Measurement",
+    "id": "0644F3AC1F3247A3ACF8279E341CF7DB",
+    "listId": "",
+    "parentId": null,
+    "position": 1067,
+    "statementLabel": null,
+    "statementNotation": "GR"
+   },
+   "079A576042D74DC8A6B914EA9581D2A5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1CD7413722C7402DA32E2C08D5E9140E",
+     "AB2F90A74C5E4DC29283554D75CA79C2",
+     "FF97E01F219545BDBB6DF740F8740BA5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Create scaled data visualization (e.g. bar graphs\nfor categorical data; line plots with fraction units\nof halves, fourths, and eighths for numerical data)\nto display data to communicate an idea.  ",
+    "id": "079A576042D74DC8A6B914EA9581D2A5",
+    "listId": "a",
+    "parentId": "1CD7413722C7402DA32E2C08D5E9140E",
+    "position": 1083,
+    "statementLabel": null,
+    "statementNotation": "4.DS.A.1.a"
+   },
+   "0905EBB3E07546978E7CB3C2D3EE9C53": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F4C02519A3A94319A39F5B57EFF5C3F6",
+     "71BE1CA339EA42DE81B7A3B0ACF34ADD",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Understand addition and subtraction of fractions\nas joining and separating parts referring to the\nsame whole. ",
+    "id": "0905EBB3E07546978E7CB3C2D3EE9C53",
+    "listId": "a",
+    "parentId": "F4C02519A3A94319A39F5B57EFF5C3F6",
+    "position": 1046,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.E.12.a"
+   },
+   "105AB57893914ECDA375F48568112EE4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "87102FF97995495BB203F8EC892AECDE",
+     "71BE1CA339EA42DE81B7A3B0ACF34ADD",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use understanding of multiplication as equal\ngroups to multiply a fraction by whole number\n(e.g., interpret as b groups of when is\ngreater than or less than 1). ",
+    "id": "105AB57893914ECDA375F48568112EE4",
+    "listId": "c",
+    "parentId": "87102FF97995495BB203F8EC892AECDE",
+    "position": 1053,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.E.13.c"
+   },
+   "10F0A47F470C444EAC2312CB89D6648D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "799694C34A1949DF8FD971BE1465F1B6",
+     "0644F3AC1F3247A3ACF8279E341CF7DB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Draw points, lines, line segments, rays, angles (right,\nacute, obtuse), and perpendicular and parallel lines.\nIdentify these in two-dimensional figures. ",
+    "id": "10F0A47F470C444EAC2312CB89D6648D",
+    "listId": "8",
+    "parentId": "799694C34A1949DF8FD971BE1465F1B6",
+    "position": 1078,
+    "statementLabel": null,
+    "statementNotation": "4.GR.C.8"
+   },
+   "13AEAE0411EC4B3C93BE800DB7F31E31": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A52FEED6F4A94D16AD79AEEDBC180AFF",
+     "0644F3AC1F3247A3ACF8279E341CF7DB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Use the four operations to solve problems in context\ninvolving distances, intervals of time, liquid volumes,\nmasses of objects, and money, including problems\ninvolving common fractions or decimals, and problems\nthat require expressing measurements given in a larger\nunit in terms of a smaller unit. ",
+    "id": "13AEAE0411EC4B3C93BE800DB7F31E31",
+    "listId": "2",
+    "parentId": "A52FEED6F4A94D16AD79AEEDBC180AFF",
+    "position": 1070,
+    "statementLabel": null,
+    "statementNotation": "4.GR.A.2"
+   },
+   "1498A79853924856A576A136658DA23C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9525CFDDB1BD47048186F060F03B4319",
+     "9A39DCE1604B4343A7B679062141582E",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use strategies based on place value (e.g., partial\nquotients) to divide. ",
+    "id": "1498A79853924856A576A136658DA23C",
+    "listId": "b",
+    "parentId": "9525CFDDB1BD47048186F060F03B4319",
+    "position": 1021,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.B.6.b"
+   },
+   "166D549F601549AB8A36042EC5A9D354": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C9BB98D290634E29BC6727F9959979FA",
+     "0644F3AC1F3247A3ACF8279E341CF7DB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Explain that when an angle is decomposed into nonoverlapping parts, the angle measure of the whole is the\nsum of the angle measures of the parts. Solve addition\nand subtraction problems to find unknown angles on a\ndiagram in context (e.g., by using an equation with a\nsymbol for the unknown angle measure). ",
+    "id": "166D549F601549AB8A36042EC5A9D354",
+    "listId": "7",
+    "parentId": "C9BB98D290634E29BC6727F9959979FA",
+    "position": 1076,
+    "statementLabel": null,
+    "statementNotation": "4.GR.B.7"
+   },
+   "16B04B9A39A745B1A61683AA251B9C03": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C9BB98D290634E29BC6727F9959979FA",
+     "0644F3AC1F3247A3ACF8279E341CF7DB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Measure angles in whole-number degrees using a\nprotractor. Estimate and sketch angles of specified\nmeasures. ",
+    "id": "16B04B9A39A745B1A61683AA251B9C03",
+    "listId": "6",
+    "parentId": "C9BB98D290634E29BC6727F9959979FA",
+    "position": 1075,
+    "statementLabel": null,
+    "statementNotation": "4.GR.B.6"
+   },
+   "197CAF1C14D24EED880BCF54F2CCC8FF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "316C990013034EEAACFA0C5308F6F699",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Compare two fractions with different numerators and\ndifferent denominators, understanding that comparisons\nare valid only when the two fractions refer to the same\nwhole.",
+    "id": "197CAF1C14D24EED880BCF54F2CCC8FF",
+    "listId": "10",
+    "parentId": "316C990013034EEAACFA0C5308F6F699",
+    "position": 1039,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.D.10"
+   },
+   "1AB42271F4744208ACC2D2123042347B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C5F85508371746F78B2B122FA047B032",
+     "32F77E7E1AB34F61951C3A1A59EACC1E",
+     "234C441D01DB4CFDBBAC211783F90D42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Assess the reasonableness of answers in terms of\ncontext, including interpreting remainders. ",
+    "id": "1AB42271F4744208ACC2D2123042347B",
+    "listId": "b",
+    "parentId": "C5F85508371746F78B2B122FA047B032",
+    "position": 1066,
+    "statementLabel": null,
+    "statementNotation": "4.AT.A.4.b"
+   },
+   "1C844555487541A6A9C5658895EF9EA5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6DF177C5DFD941E09D5B25B6BC0A0B01",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Recall or quickly derive multiplication and division facts\nwithin 100 (e.g., factors less than or equal to 10 and\nquotients less than are equal to 10).",
+    "id": "1C844555487541A6A9C5658895EF9EA5",
+    "listId": "7",
+    "parentId": "6DF177C5DFD941E09D5B25B6BC0A0B01",
+    "position": 1025,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.C.7"
+   },
+   "1CD7413722C7402DA32E2C08D5E9140E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "AB2F90A74C5E4DC29283554D75CA79C2",
+     "FF97E01F219545BDBB6DF740F8740BA5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Ask and answer questions by collecting, organizing and\nsummarizing data, recognizing the importance of\ncontext when analyzing data. ",
+    "id": "1CD7413722C7402DA32E2C08D5E9140E",
+    "listId": "1",
+    "parentId": "AB2F90A74C5E4DC29283554D75CA79C2",
+    "position": 1082,
+    "statementLabel": null,
+    "statementNotation": "4.DS.A.1"
+   },
+   "1DAFF98BF47440A1A165FF05B3306F0E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "669A0E428F5B4F0180BAED1DEC3686CA",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Express a fraction with a denominator of 10 as an\nequivalent fraction with a denominator of 100 to add two\nfractions with respective denominators of 10 and 100. ",
+    "id": "1DAFF98BF47440A1A165FF05B3306F0E",
+    "listId": "14",
+    "parentId": "669A0E428F5B4F0180BAED1DEC3686CA",
+    "position": 1056,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.F.14"
+   },
+   "234C441D01DB4CFDBBAC211783F90D42": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Algebraic Thinking",
+    "id": "234C441D01DB4CFDBBAC211783F90D42",
+    "listId": "",
+    "parentId": null,
+    "position": 1059,
+    "statementLabel": null,
+    "statementNotation": "AT"
+   },
+   "253795CC0B4C468DB07BA32FAFD90AED": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "669A0E428F5B4F0180BAED1DEC3686CA",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Use decimal notation for fractions with denominators 10\nand 100 (e.g., rewrite 0.62 as or describe a length as\n0.62 meters or locate 0.62 on a number line). ",
+    "id": "253795CC0B4C468DB07BA32FAFD90AED",
+    "listId": "15",
+    "parentId": "669A0E428F5B4F0180BAED1DEC3686CA",
+    "position": 1057,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.F.15"
+   },
+   "28F152CE4B5042B4BE721A0D804E4028": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1CD7413722C7402DA32E2C08D5E9140E",
+     "AB2F90A74C5E4DC29283554D75CA79C2",
+     "FF97E01F219545BDBB6DF740F8740BA5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Compare and contrast different data\nvisualizations of the same data by varying\nattributes (e.g., reordering bars, changing the\nscale) and explain how changing the attributes\naffects the interpretation.",
+    "id": "28F152CE4B5042B4BE721A0D804E4028",
+    "listId": "c",
+    "parentId": "1CD7413722C7402DA32E2C08D5E9140E",
+    "position": 1085,
+    "statementLabel": null,
+    "statementNotation": "4.DS.A.1.c"
+   },
+   "316C990013034EEAACFA0C5308F6F699": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "EXTEND UNDERSTANDING OF FRACTION EQUIVALENCE AND ORDERING.",
+    "id": "316C990013034EEAACFA0C5308F6F699",
+    "listId": "D",
+    "parentId": "8E144142313443959BF19E397E3CD847",
+    "position": 1035,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.D"
+   },
+   "32F77E7E1AB34F61951C3A1A59EACC1E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "234C441D01DB4CFDBBAC211783F90D42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "REPRESENT AND SOLVE PROBLEMS INVOLVING MULTIPLICATION AND DIVISION. ",
+    "id": "32F77E7E1AB34F61951C3A1A59EACC1E",
+    "listId": "A",
+    "parentId": "234C441D01DB4CFDBBAC211783F90D42",
+    "position": 1060,
+    "statementLabel": null,
+    "statementNotation": "4.AT.A"
+   },
+   "33D5AAE45ED04F5FAC4C8CF680795B3F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8EC269E951374404ABCE2EE4B65974F3",
+     "6DF177C5DFD941E09D5B25B6BC0A0B01",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Distinguish between factors and multiples and\nexplain how they relate to a given number.  ",
+    "id": "33D5AAE45ED04F5FAC4C8CF680795B3F",
+    "listId": "c",
+    "parentId": "8EC269E951374404ABCE2EE4B65974F3",
+    "position": 1033,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.C.8.c"
+   },
+   "385C9E7FA24341F28A8201D78BA5FBCD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C9BB98D290634E29BC6727F9959979FA",
+     "0644F3AC1F3247A3ACF8279E341CF7DB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identify angles as geometric figures formed by two rays\nthat share a common endpoint and describe angle size\nas the amount of rotation between the two rays\nmeasured in degrees with reference to a circle.  ",
+    "id": "385C9E7FA24341F28A8201D78BA5FBCD",
+    "listId": "5",
+    "parentId": "C9BB98D290634E29BC6727F9959979FA",
+    "position": 1074,
+    "statementLabel": null,
+    "statementNotation": "4.GR.B.5"
+   },
+   "4076F960BA5D46F7A69AC8678B2C307B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8EC269E951374404ABCE2EE4B65974F3",
+     "6DF177C5DFD941E09D5B25B6BC0A0B01",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify factor pairs for a whole number in the\nrange of 1–100.",
+    "id": "4076F960BA5D46F7A69AC8678B2C307B",
+    "listId": "a",
+    "parentId": "8EC269E951374404ABCE2EE4B65974F3",
+    "position": 1031,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.C.8.a"
+   },
+   "4730F51F2A7348DB84A4E62BD511F3AA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "197CAF1C14D24EED880BCF54F2CCC8FF",
+     "316C990013034EEAACFA0C5308F6F699",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Justify comparisons using representations and\nreasoning. ",
+    "id": "4730F51F2A7348DB84A4E62BD511F3AA",
+    "listId": "c",
+    "parentId": "197CAF1C14D24EED880BCF54F2CCC8FF",
+    "position": 1042,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.D.10.c"
+   },
+   "5130051D2CF24436B29233E314F7B879": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1C844555487541A6A9C5658895EF9EA5",
+     "6DF177C5DFD941E09D5B25B6BC0A0B01",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Derive unknown facts from known facts using\ndouble facts (e.g., to solve 4 × 3, double 3 to get 6\nand double 6 to get 12) to multiply and divide.",
+    "id": "5130051D2CF24436B29233E314F7B879",
+    "listId": "b",
+    "parentId": "1C844555487541A6A9C5658895EF9EA5",
+    "position": 1027,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.C.7.b"
+   },
+   "570141E67B0A408DBF9D6B62FCB4DF66": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1C844555487541A6A9C5658895EF9EA5",
+     "6DF177C5DFD941E09D5B25B6BC0A0B01",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use the inverse relationship between\nmultiplication and division (e.g., think of\nto solve ) to multiply and divide.  ",
+    "id": "570141E67B0A408DBF9D6B62FCB4DF66",
+    "listId": "d",
+    "parentId": "1C844555487541A6A9C5658895EF9EA5",
+    "position": 1029,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.C.7.d"
+   },
+   "594AD40A26274B9C88F1D824AED8C424": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1C844555487541A6A9C5658895EF9EA5",
+     "6DF177C5DFD941E09D5B25B6BC0A0B01",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use properties of operations (e.g., to solve 8 × 7,\nthink of (5 × 7 + (3 × 7)) to multiply.  ",
+    "id": "594AD40A26274B9C88F1D824AED8C424",
+    "listId": "c",
+    "parentId": "1C844555487541A6A9C5658895EF9EA5",
+    "position": 1028,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.C.7.c"
+   },
+   "5C874D7680994ADD8A88D88C88699C9C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9A39DCE1604B4343A7B679062141582E",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Extend place value understanding and basic facts to\nmultiply a multi-digit whole number by a multiple of ten.  ",
+    "id": "5C874D7680994ADD8A88D88C88699C9C",
+    "listId": "4",
+    "parentId": "9A39DCE1604B4343A7B679062141582E",
+    "position": 1013,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.B.4"
+   },
+   "63D9C491F9EE4C97999104D11A23087F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "32F77E7E1AB34F61951C3A1A59EACC1E",
+     "234C441D01DB4CFDBBAC211783F90D42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Interpret a multiplication situation as a comparison (e.g.,\ninterpret 35 = 5 × 7 as a statement that 35 is 5 times as\nmany as 7 and 7 times as many as 5). Represent verbal\nstatements of multiplicative comparisons as\nmultiplication equations. ",
+    "id": "63D9C491F9EE4C97999104D11A23087F",
+    "listId": "1",
+    "parentId": "32F77E7E1AB34F61951C3A1A59EACC1E",
+    "position": 1061,
+    "statementLabel": null,
+    "statementNotation": "4.AT.A.1"
+   },
+   "669A0E428F5B4F0180BAED1DEC3686CA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "UNDERSTAND DECIMAL NOTATION FOR FRACTIONS AND COMPARE DECIMAL FRACTIONS. ",
+    "id": "669A0E428F5B4F0180BAED1DEC3686CA",
+    "listId": "F",
+    "parentId": "8E144142313443959BF19E397E3CD847",
+    "position": 1055,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.F"
+   },
+   "68F7BBDFADF242CDAB126F362BF7A0D0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9525CFDDB1BD47048186F060F03B4319",
+     "9A39DCE1604B4343A7B679062141582E",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use properties of operations and/or the inverse\nrelationship between multiplication and division\nto divide. ",
+    "id": "68F7BBDFADF242CDAB126F362BF7A0D0",
+    "listId": "c",
+    "parentId": "9525CFDDB1BD47048186F060F03B4319",
+    "position": 1022,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.B.6.c"
+   },
+   "6B32A1780E7D4CD9A0C79E0501B4AB32": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "799694C34A1949DF8FD971BE1465F1B6",
+     "0644F3AC1F3247A3ACF8279E341CF7DB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Classify two-dimensional figures based on the presence\nor absence of parallel or perpendicular lines, or the\npresence or absence of angles of a specified size.\nRecognize right triangles as a category and identify right\ntriangles. ",
+    "id": "6B32A1780E7D4CD9A0C79E0501B4AB32",
+    "listId": "9",
+    "parentId": "799694C34A1949DF8FD971BE1465F1B6",
+    "position": 1079,
+    "statementLabel": null,
+    "statementNotation": "4.GR.C.9"
+   },
+   "6C88B05C8CBF4108BA1EF41F470D331B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7CB33978FB72472CA17A602CD8C2D370",
+     "02A63554F573492E946BC8B85B8BAAD2",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Estimate quantities by reasoning about their\nlocation on a number line, their relationship to\nbenchmark numbers, and rounding to any\nplace. ",
+    "id": "6C88B05C8CBF4108BA1EF41F470D331B",
+    "listId": "b",
+    "parentId": "7CB33978FB72472CA17A602CD8C2D370",
+    "position": 1004,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.A.1.b"
+   },
+   "6D7F9025546F490DBD4425786579E3F7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A52FEED6F4A94D16AD79AEEDBC180AFF",
+     "0644F3AC1F3247A3ACF8279E341CF7DB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Apply the relationship between measurement units\nwithin a given measurement system (customary: in, ft, yd,\noz, lb, sec, min, hr; metric: cm, m, km, g, kg, mL, L) to\nconvert measurements from a larger unit to smaller unit. ",
+    "id": "6D7F9025546F490DBD4425786579E3F7",
+    "listId": "1",
+    "parentId": "A52FEED6F4A94D16AD79AEEDBC180AFF",
+    "position": 1069,
+    "statementLabel": null,
+    "statementNotation": "4.GR.A.1"
+   },
+   "6DF177C5DFD941E09D5B25B6BC0A0B01": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "GAIN FAMILIARITY WITH FACTORS AND MULTIPLES.",
+    "id": "6DF177C5DFD941E09D5B25B6BC0A0B01",
+    "listId": "C",
+    "parentId": "8E144142313443959BF19E397E3CD847",
+    "position": 1024,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.C"
+   },
+   "6F414C6C4120425498E0D4116F314A90": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D38FCEAB67F843559E7CD11D2F08FC5C",
+     "9A39DCE1604B4343A7B679062141582E",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use properties of operations (e.g., use doubling\nand halving strategy to think of 12 × 32 as 6 × 64)\nto multiply. ",
+    "id": "6F414C6C4120425498E0D4116F314A90",
+    "listId": "c",
+    "parentId": "D38FCEAB67F843559E7CD11D2F08FC5C",
+    "position": 1017,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.B.5.c"
+   },
+   "6F6363F946D74DA0B70A311F8E0D2814": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BEE1656A5220464EB2251BC908C233C0",
+     "316C990013034EEAACFA0C5308F6F699",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify and generate equivalent fractions using\nrepresentations and the Identity Property of\nMultiplication.  ",
+    "id": "6F6363F946D74DA0B70A311F8E0D2814",
+    "listId": "a",
+    "parentId": "BEE1656A5220464EB2251BC908C233C0",
+    "position": 1037,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.D.9.a"
+   },
+   "71069258DF8244A6B6038EC8650A705D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9A39DCE1604B4343A7B679062141582E",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Fluently add and subtract multi-digit whole numbers\nwithin 1,000,000.",
+    "id": "71069258DF8244A6B6038EC8650A705D",
+    "listId": "3",
+    "parentId": "9A39DCE1604B4343A7B679062141582E",
+    "position": 1008,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.B.3"
+   },
+   "71BE1CA339EA42DE81B7A3B0ACF34ADD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "BUILD FRACTIONS FROM UNIT FRACTIONS BY APPLYING AND EXTENDING PREVIOUS UNDERSTANDINGS OF\nOPERATIONS ON WHOLE NUMBERS.  ",
+    "id": "71BE1CA339EA42DE81B7A3B0ACF34ADD",
+    "listId": "E",
+    "parentId": "8E144142313443959BF19E397E3CD847",
+    "position": 1043,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.E"
+   },
+   "73CE5117441A4D2D9297402B7D1DE139": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7CB33978FB72472CA17A602CD8C2D370",
+     "02A63554F573492E946BC8B85B8BAAD2",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Compare two multi-digit numbers by reasoning\nabout the values of the digits and the location of\nthe numbers on a number line. Record the\nresults of comparisons with the symbols , =, and\n.",
+    "id": "73CE5117441A4D2D9297402B7D1DE139",
+    "listId": "c",
+    "parentId": "7CB33978FB72472CA17A602CD8C2D370",
+    "position": 1005,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.A.1.d"
+   },
+   "78DABB463038425DB33791627A76538A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "71069258DF8244A6B6038EC8650A705D",
+     "9A39DCE1604B4343A7B679062141582E",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use computational strategies (e.g.,\ndecomposition, partials sums) efficiently. ",
+    "id": "78DABB463038425DB33791627A76538A",
+    "listId": "b",
+    "parentId": "71069258DF8244A6B6038EC8650A705D",
+    "position": 1010,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.B.3.b"
+   },
+   "799694C34A1949DF8FD971BE1465F1B6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0644F3AC1F3247A3ACF8279E341CF7DB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "DRAW AND IDENTIFY LINES AND ANGLES AND CLASSIFY SHAPES BY PROPERTIES OF THEIR LINES AND ANGLES. ",
+    "id": "799694C34A1949DF8FD971BE1465F1B6",
+    "listId": "C",
+    "parentId": "0644F3AC1F3247A3ACF8279E341CF7DB",
+    "position": 1077,
+    "statementLabel": null,
+    "statementNotation": "4.GR.C"
+   },
+   "7BB121CA69534F1B8A2C466D48687325": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D38FCEAB67F843559E7CD11D2F08FC5C",
+     "9A39DCE1604B4343A7B679062141582E",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Represent and explain the computation by\nconnecting rectangular arrays, area models,\nand/or equations to the meaning of\nmultiplication.  ",
+    "id": "7BB121CA69534F1B8A2C466D48687325",
+    "listId": "d",
+    "parentId": "D38FCEAB67F843559E7CD11D2F08FC5C",
+    "position": 1018,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.B.5.d"
+   },
+   "7C231F748D804FB982D2850DD5B28367": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "197CAF1C14D24EED880BCF54F2CCC8FF",
+     "316C990013034EEAACFA0C5308F6F699",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Record comparisons with symbols , =, . ",
+    "id": "7C231F748D804FB982D2850DD5B28367",
+    "listId": "b",
+    "parentId": "197CAF1C14D24EED880BCF54F2CCC8FF",
+    "position": 1041,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.D.10.b"
+   },
+   "7CB33978FB72472CA17A602CD8C2D370": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "02A63554F573492E946BC8B85B8BAAD2",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Apply and extend place value understanding to multidigit whole numbers within 1,000,000. ",
+    "id": "7CB33978FB72472CA17A602CD8C2D370",
+    "listId": "1",
+    "parentId": "02A63554F573492E946BC8B85B8BAAD2",
+    "position": 1002,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.A.1"
+   },
+   "7D0E253E895D4815B500254196F1BD75": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9525CFDDB1BD47048186F060F03B4319",
+     "9A39DCE1604B4343A7B679062141582E",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Represent and explain the computation by\nconnecting rectangular arrays, area models,\nand/or equations to the meaning of division.  ",
+    "id": "7D0E253E895D4815B500254196F1BD75",
+    "listId": "d",
+    "parentId": "9525CFDDB1BD47048186F060F03B4319",
+    "position": 1023,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.B.6.d"
+   },
+   "804DADBE0CE041B29231D7CACCE98208": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D38FCEAB67F843559E7CD11D2F08FC5C",
+     "9A39DCE1604B4343A7B679062141582E",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Apply estimation strategies to estimate products. ",
+    "id": "804DADBE0CE041B29231D7CACCE98208",
+    "listId": "a",
+    "parentId": "D38FCEAB67F843559E7CD11D2F08FC5C",
+    "position": 1015,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.B.5.a"
+   },
+   "83E47394D9B54942A2D94229AB985F94": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8EC269E951374404ABCE2EE4B65974F3",
+     "6DF177C5DFD941E09D5B25B6BC0A0B01",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Determine whether a given whole number in the\nrange of 1–100 is a multiple of a one-digit\nnumber. ",
+    "id": "83E47394D9B54942A2D94229AB985F94",
+    "listId": "b",
+    "parentId": "8EC269E951374404ABCE2EE4B65974F3",
+    "position": 1032,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.C.8.b"
+   },
+   "87102FF97995495BB203F8EC892AECDE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "71BE1CA339EA42DE81B7A3B0ACF34ADD",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Apply and extend previous understandings of\nmultiplication to multiply a fraction by a whole number\n( ).  ",
+    "id": "87102FF97995495BB203F8EC892AECDE",
+    "listId": "13",
+    "parentId": "71BE1CA339EA42DE81B7A3B0ACF34ADD",
+    "position": 1050,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.E.13"
+   },
+   "8E144142313443959BF19E397E3CD847": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Number and Operation Sense",
+    "id": "8E144142313443959BF19E397E3CD847",
+    "listId": "",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": null,
+    "statementNotation": "NOS"
+   },
+   "8EC269E951374404ABCE2EE4B65974F3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6DF177C5DFD941E09D5B25B6BC0A0B01",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Explain and apply concepts of factors, multiples, and\nprime and composite numbers for whole numbers in the\nrange of 1-100.",
+    "id": "8EC269E951374404ABCE2EE4B65974F3",
+    "listId": "8",
+    "parentId": "6DF177C5DFD941E09D5B25B6BC0A0B01",
+    "position": 1030,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.C.8"
+   },
+   "93C37B3CF28E4517A626E6CFC0C2DD2E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "669A0E428F5B4F0180BAED1DEC3686CA",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Compare two decimals to hundredths by reasoning\nabout their size. Recognize that comparisons are valid\nonly when the two decimals refer to the same whole.\nRecord the results of comparisons with the symbols , =,\n, and justify the conclusions, (e.g. using a visual model). ",
+    "id": "93C37B3CF28E4517A626E6CFC0C2DD2E",
+    "listId": "16",
+    "parentId": "669A0E428F5B4F0180BAED1DEC3686CA",
+    "position": 1058,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.F.16"
+   },
+   "9525CFDDB1BD47048186F060F03B4319": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9A39DCE1604B4343A7B679062141582E",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Divide whole numbers with up to four-digit dividends\nand one-digit divisors with and without remainders. ",
+    "id": "9525CFDDB1BD47048186F060F03B4319",
+    "listId": "6",
+    "parentId": "9A39DCE1604B4343A7B679062141582E",
+    "position": 1019,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.B.6"
+   },
+   "954D82858D8C46ED90E0549741AEBF95": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1CD7413722C7402DA32E2C08D5E9140E",
+     "AB2F90A74C5E4DC29283554D75CA79C2",
+     "FF97E01F219545BDBB6DF740F8740BA5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Summarize data presented in scaled data\nvisualizations (e.g. bar graphs, line plots) and\ndraw conclusions about the data. ",
+    "id": "954D82858D8C46ED90E0549741AEBF95",
+    "listId": "b",
+    "parentId": "1CD7413722C7402DA32E2C08D5E9140E",
+    "position": 1084,
+    "statementLabel": null,
+    "statementNotation": "4.DS.A.1.b"
+   },
+   "96DE102579664F899818EF21BBCAD8D3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "87102FF97995495BB203F8EC892AECDE",
+     "71BE1CA339EA42DE81B7A3B0ACF34ADD",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Solve problems in context involving\nmultiplication of a fraction by a whole number,\nusing visual fraction models and equations to\nrepresent the problem.  ",
+    "id": "96DE102579664F899818EF21BBCAD8D3",
+    "listId": "d",
+    "parentId": "87102FF97995495BB203F8EC892AECDE",
+    "position": 1054,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.E.13.d"
+   },
+   "9A39DCE1604B4343A7B679062141582E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "USE PLACE VALUE UNDERSTANDING AND PROPERTIES OF OPERATIONS TO PERFORM MULTI-DIGIT ARITHMETIC. ",
+    "id": "9A39DCE1604B4343A7B679062141582E",
+    "listId": "B",
+    "parentId": "8E144142313443959BF19E397E3CD847",
+    "position": 1007,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.B"
+   },
+   "A52FBB86C3644964BAC1C09CAEE781E3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "71069258DF8244A6B6038EC8650A705D",
+     "9A39DCE1604B4343A7B679062141582E",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Apply estimation strategies to estimate sums and\ndifferences. ",
+    "id": "A52FBB86C3644964BAC1C09CAEE781E3",
+    "listId": "a",
+    "parentId": "71069258DF8244A6B6038EC8650A705D",
+    "position": 1009,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.B.3.a"
+   },
+   "A52FEED6F4A94D16AD79AEEDBC180AFF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0644F3AC1F3247A3ACF8279E341CF7DB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "SOLVE PROBLEMS INVOLVING MEASUREMENT CONVERSION, AREA, AND PERIMETER. ",
+    "id": "A52FEED6F4A94D16AD79AEEDBC180AFF",
+    "listId": "A",
+    "parentId": "0644F3AC1F3247A3ACF8279E341CF7DB",
+    "position": 1068,
+    "statementLabel": null,
+    "statementNotation": "4.GR.A"
+   },
+   "A565EA5D7DA148C094CE7C79A8A63B83": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F4C02519A3A94319A39F5B57EFF5C3F6",
+     "71BE1CA339EA42DE81B7A3B0ACF34ADD",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Apply and extend whole number addition and\nsubtraction strategies (e.g. counting on, making a\nwhole, partial sums, compensation, properties of\noperations, the inverse relationship between\naddition and subtraction) to add and subtract\nfractions. ",
+    "id": "A565EA5D7DA148C094CE7C79A8A63B83",
+    "listId": "c",
+    "parentId": "F4C02519A3A94319A39F5B57EFF5C3F6",
+    "position": 1048,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.E.12.c"
+   },
+   "AB2F90A74C5E4DC29283554D75CA79C2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FF97E01F219545BDBB6DF740F8740BA5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "REPRESENT AND INTERPRET DATA. ",
+    "id": "AB2F90A74C5E4DC29283554D75CA79C2",
+    "listId": "A",
+    "parentId": "FF97E01F219545BDBB6DF740F8740BA5",
+    "position": 1081,
+    "statementLabel": null,
+    "statementNotation": "4.DS.A"
+   },
+   "AFE138B08F584853A3427C9A01DD7ADF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "71BE1CA339EA42DE81B7A3B0ACF34ADD",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Apply understanding of a fraction with d >1 as a sum of\nunit fractions ( ) to decompose a fraction (including\nfractions greater than 1) into a sum of fractions with the\nsame denominator in more than one way, recording each\ndecomposition as an equation. Justify decompositions\nusing visual fraction models and equations (e.g.,\nor or or\n). ",
+    "id": "AFE138B08F584853A3427C9A01DD7ADF",
+    "listId": "11",
+    "parentId": "71BE1CA339EA42DE81B7A3B0ACF34ADD",
+    "position": 1044,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.E.11"
+   },
+   "BCAC54120B5F46B49A780A27D6A36E91": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "87102FF97995495BB203F8EC892AECDE",
+     "71BE1CA339EA42DE81B7A3B0ACF34ADD",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Estimate products by reasoning about\nbenchmark numbers and assess reasonableness\nof answers (e.g., will be less than 4 because I\nhave 4 groups of something less than 1). ",
+    "id": "BCAC54120B5F46B49A780A27D6A36E91",
+    "listId": "a",
+    "parentId": "87102FF97995495BB203F8EC892AECDE",
+    "position": 1051,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.E.13.a"
+   },
+   "BEE1656A5220464EB2251BC908C233C0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "316C990013034EEAACFA0C5308F6F699",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Understand and generate equivalent fractions.",
+    "id": "BEE1656A5220464EB2251BC908C233C0",
+    "listId": "9",
+    "parentId": "316C990013034EEAACFA0C5308F6F699",
+    "position": 1036,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.D.9"
+   },
+   "BF782F8C1356431491925900F43B2611": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F4C02519A3A94319A39F5B57EFF5C3F6",
+     "71BE1CA339EA42DE81B7A3B0ACF34ADD",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Solve problems in context involving addition and\nsubtraction of fractions using visual fraction\nmodels and equations to represent the problem. ",
+    "id": "BF782F8C1356431491925900F43B2611",
+    "listId": "d",
+    "parentId": "F4C02519A3A94319A39F5B57EFF5C3F6",
+    "position": 1049,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.E.12.d"
+   },
+   "C3EAAF79A8D44390979E1DA2A54EAE59": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "32F77E7E1AB34F61951C3A1A59EACC1E",
+     "234C441D01DB4CFDBBAC211783F90D42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Distinguish multiplicative comparison from additive\ncomparison. ",
+    "id": "C3EAAF79A8D44390979E1DA2A54EAE59",
+    "listId": "3",
+    "parentId": "32F77E7E1AB34F61951C3A1A59EACC1E",
+    "position": 1063,
+    "statementLabel": null,
+    "statementNotation": "4.AT.A.3"
+   },
+   "C49B095B7FDC4D8D9F455AB3E04A9B78": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "02A63554F573492E946BC8B85B8BAAD2",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Explain that in a multi-digit whole number, a digit in one\nplace represents ten times what it represents in the place\nto its right (e.g., recognize that 700 ÷ 70 = 10 by applying\nconcepts of place value and division).",
+    "id": "C49B095B7FDC4D8D9F455AB3E04A9B78",
+    "listId": "2",
+    "parentId": "02A63554F573492E946BC8B85B8BAAD2",
+    "position": 1006,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.A.2"
+   },
+   "C5F85508371746F78B2B122FA047B032": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "32F77E7E1AB34F61951C3A1A59EACC1E",
+     "234C441D01DB4CFDBBAC211783F90D42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Solve multistep problems in context involving whole\nnumbers and having whole number answers using the\nfour operations, including problems in which remainders\nmust be interpreted. ",
+    "id": "C5F85508371746F78B2B122FA047B032",
+    "listId": "4",
+    "parentId": "32F77E7E1AB34F61951C3A1A59EACC1E",
+    "position": 1064,
+    "statementLabel": null,
+    "statementNotation": "4.AT.A.4"
+   },
+   "C9BB98D290634E29BC6727F9959979FA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0644F3AC1F3247A3ACF8279E341CF7DB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "UNDERSTAND CONCEPTS OF ANGLE AND MEASURE ANGLES. ",
+    "id": "C9BB98D290634E29BC6727F9959979FA",
+    "listId": "B",
+    "parentId": "0644F3AC1F3247A3ACF8279E341CF7DB",
+    "position": 1073,
+    "statementLabel": null,
+    "statementNotation": "4.GR.B"
+   },
+   "CD82A66EE94E4629A1B7F3C6771DCC3A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D38FCEAB67F843559E7CD11D2F08FC5C",
+     "9A39DCE1604B4343A7B679062141582E",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use strategies based on place value (e.g., partial\nproducts) to multiply. ",
+    "id": "CD82A66EE94E4629A1B7F3C6771DCC3A",
+    "listId": "b",
+    "parentId": "D38FCEAB67F843559E7CD11D2F08FC5C",
+    "position": 1016,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.B.5.b"
+   },
+   "CFD0FF7DAE6C40B2AE6A8373B93B9CB7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A52FEED6F4A94D16AD79AEEDBC180AFF",
+     "0644F3AC1F3247A3ACF8279E341CF7DB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Apply the area and perimeter formulas for rectangles in\ncontext, including rectangles with missing dimensions. ",
+    "id": "CFD0FF7DAE6C40B2AE6A8373B93B9CB7",
+    "listId": "3",
+    "parentId": "A52FEED6F4A94D16AD79AEEDBC180AFF",
+    "position": 1071,
+    "statementLabel": null,
+    "statementNotation": "4.GR.A.3"
+   },
+   "D0AC5BF3A3BE4079BE0D2DD0B13D4884": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8EC269E951374404ABCE2EE4B65974F3",
+     "6DF177C5DFD941E09D5B25B6BC0A0B01",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Determine whether a given whole number in the\nrange of 1–100 is prime, composite, or neither. ",
+    "id": "D0AC5BF3A3BE4079BE0D2DD0B13D4884",
+    "listId": "d",
+    "parentId": "8EC269E951374404ABCE2EE4B65974F3",
+    "position": 1034,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.C.8.d"
+   },
+   "D17ED66C5430440CBA6CC948EAFE8E5D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "197CAF1C14D24EED880BCF54F2CCC8FF",
+     "316C990013034EEAACFA0C5308F6F699",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use benchmark numbers (e.g., , 1), common\nnumerators, and common denominators to\ncompare. ",
+    "id": "D17ED66C5430440CBA6CC948EAFE8E5D",
+    "listId": "a",
+    "parentId": "197CAF1C14D24EED880BCF54F2CCC8FF",
+    "position": 1040,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.D.10.a"
+   },
+   "D38FCEAB67F843559E7CD11D2F08FC5C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9A39DCE1604B4343A7B679062141582E",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Multiply a whole number of up to four digits by a onedigit whole number, and multiply two two-digit\nnumbers.",
+    "id": "D38FCEAB67F843559E7CD11D2F08FC5C",
+    "listId": "5",
+    "parentId": "9A39DCE1604B4343A7B679062141582E",
+    "position": 1014,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.B.5"
+   },
+   "D4341675D3244EF895957DD75DA8097B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C5F85508371746F78B2B122FA047B032",
+     "32F77E7E1AB34F61951C3A1A59EACC1E",
+     "234C441D01DB4CFDBBAC211783F90D42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Represent these problems using equations with a\nletter standing for the unknown quantity.  ",
+    "id": "D4341675D3244EF895957DD75DA8097B",
+    "listId": "a",
+    "parentId": "C5F85508371746F78B2B122FA047B032",
+    "position": 1065,
+    "statementLabel": null,
+    "statementNotation": "4.AT.A.4.a"
+   },
+   "D517DC056EC543F3BD8C1AEB6772C209": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "87102FF97995495BB203F8EC892AECDE",
+     "71BE1CA339EA42DE81B7A3B0ACF34ADD",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use understanding of multiplication as equal\ngroups to multiply a unit fraction by whole\nnumber (e.g., interpret as b groups of ). ",
+    "id": "D517DC056EC543F3BD8C1AEB6772C209",
+    "listId": "b",
+    "parentId": "87102FF97995495BB203F8EC892AECDE",
+    "position": 1052,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.E.13.b"
+   },
+   "D57346523D7E4F35AA0D05B3A430C225": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F4C02519A3A94319A39F5B57EFF5C3F6",
+     "71BE1CA339EA42DE81B7A3B0ACF34ADD",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Estimate sums and differences by reasoning\nabout benchmark numbers and assess\nreasonableness of answers (e.g., will be\ngreater than 1 because both fractions are greater\nthan ). ",
+    "id": "D57346523D7E4F35AA0D05B3A430C225",
+    "listId": "b",
+    "parentId": "F4C02519A3A94319A39F5B57EFF5C3F6",
+    "position": 1047,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.E.12.b"
+   },
+   "E47446C4D0D240398B862C224B397E33": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7CB33978FB72472CA17A602CD8C2D370",
+     "02A63554F573492E946BC8B85B8BAAD2",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": " Read and write multi-digit whole numbers using\nbase-ten numerals, number names, and\nexpanded form.",
+    "id": "E47446C4D0D240398B862C224B397E33",
+    "listId": "a",
+    "parentId": "7CB33978FB72472CA17A602CD8C2D370",
+    "position": 1003,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.A.1.a"
+   },
+   "E651A59494E04613829C9E94478F9268": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BEE1656A5220464EB2251BC908C233C0",
+     "316C990013034EEAACFA0C5308F6F699",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Explain why fractions are equivalent ( ). ",
+    "id": "E651A59494E04613829C9E94478F9268",
+    "listId": "b",
+    "parentId": "BEE1656A5220464EB2251BC908C233C0",
+    "position": 1038,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.D.9.b"
+   },
+   "E71BCE053F5249E39B202D4A18492CD2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "71069258DF8244A6B6038EC8650A705D",
+     "9A39DCE1604B4343A7B679062141582E",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use a standard algorithm ",
+    "id": "E71BCE053F5249E39B202D4A18492CD2",
+    "listId": "c",
+    "parentId": "71069258DF8244A6B6038EC8650A705D",
+    "position": 1011,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.B.3.c"
+   },
+   "F2065AE25E8E4C2D904696F74E31A415": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A52FEED6F4A94D16AD79AEEDBC180AFF",
+     "0644F3AC1F3247A3ACF8279E341CF7DB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Relate the area of a triangle to the area of a rectangle\nusing decomposition and visual models. Derive and apply\nthe formula to solve problems in contexts involving\ntriangles positioned within or formed from the\ndecomposition of rectangles",
+    "id": "F2065AE25E8E4C2D904696F74E31A415",
+    "listId": "4",
+    "parentId": "A52FEED6F4A94D16AD79AEEDBC180AFF",
+    "position": 1072,
+    "statementLabel": null,
+    "statementNotation": "4.GR.A.4"
+   },
+   "F4C02519A3A94319A39F5B57EFF5C3F6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "71BE1CA339EA42DE81B7A3B0ACF34ADD",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Apply and extend previous understanding of addition\nand subtraction of whole numbers to add and subtract\nfractions with like denominators.",
+    "id": "F4C02519A3A94319A39F5B57EFF5C3F6",
+    "listId": "12",
+    "parentId": "71BE1CA339EA42DE81B7A3B0ACF34ADD",
+    "position": 1045,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.E.12"
+   },
+   "F6AB0BF2E640444C80A60645B3CA0F3D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9525CFDDB1BD47048186F060F03B4319",
+     "9A39DCE1604B4343A7B679062141582E",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Apply estimation strategies to estimate\nquotients. ",
+    "id": "F6AB0BF2E640444C80A60645B3CA0F3D",
+    "listId": "a",
+    "parentId": "9525CFDDB1BD47048186F060F03B4319",
+    "position": 1020,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.B.6.a"
+   },
+   "FC5313BE8AB340B6B18125CCFA00A159": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "71069258DF8244A6B6038EC8650A705D",
+     "9A39DCE1604B4343A7B679062141582E",
+     "8E144142313443959BF19E397E3CD847"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Determine and explain when a strategy or\nalgorithm is most efficient.  ",
+    "id": "FC5313BE8AB340B6B18125CCFA00A159",
+    "listId": "d",
+    "parentId": "71069258DF8244A6B6038EC8650A705D",
+    "position": 1012,
+    "statementLabel": null,
+    "statementNotation": "4.NOS.B.3.d"
+   },
+   "FF3F9D0A53B9479788E88B8969CC70B9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "32F77E7E1AB34F61951C3A1A59EACC1E",
+     "234C441D01DB4CFDBBAC211783F90D42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Multiply or divide to solve multiplicative comparison\nproblems in context by using drawings and equations\nwith a symbol for the unknown number to represent the\nproblem",
+    "id": "FF3F9D0A53B9479788E88B8969CC70B9",
+    "listId": "2",
+    "parentId": "32F77E7E1AB34F61951C3A1A59EACC1E",
+    "position": 1062,
+    "statementLabel": null,
+    "statementNotation": "4.AT.A.2"
+   },
+   "FF97E01F219545BDBB6DF740F8740BA5": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Reasoning with Data and Statistics",
+    "id": "FF97E01F219545BDBB6DF740F8740BA5",
+    "listId": "",
+    "parentId": null,
+    "position": 1080,
+    "statementLabel": null,
+    "statementNotation": "DS"
+   }
+  },
+  "subject": "Mathematics (2025-)",
+  "title": "Grade 4"
+ }
+}

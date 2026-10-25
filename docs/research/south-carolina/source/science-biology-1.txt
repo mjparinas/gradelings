@@ -1,0 +1,512 @@
+                                                  PRINTABLE BIOLOGY 1 STANDARDS
+
+
+
+                                     From Molecules to Organisms: Structures and Processes (LS1)
+ B-LS1-1. Construct an explanation based on evidence for how the structure of DNA determines the structure of proteins,
+ which carry out the essential functions of life through systems of specialized cells.
+
+ State Assessment Boundary: Assessment does not include identification of specific cell or tissue types, whole body systems, specific protein
+ structures and functions, or the biochemistry of protein synthesis.
+
+    Science and Engineering Practices                        Disciplinary Core Ideas                            Crosscutting Concepts
+ Constructing Explanations and Designing           LS1.A: Structure and Function                     Structure and Function
+ Solutions                                         Systems of specialized cells within organisms     Investigating or designing new systems or
+ Constructing explanations and designing           help them perform the essential functions of      structures requires a detailed examination of
+ solutions in 9-12 builds on K-8 experiences       life. All cells contain genetic information, in   the properties of different materials, the
+ and progresses to explanations and designs        the form of DNA. Genes are specific regions       structures of different components, and
+ that are supported by multiple and                within the extremely large DNA molecules          connections of components to reveal its
+ independent student-generated sources of          that form the chromosomes. Genes contain          function.
+ evidence consistent with scientific ideas,        the instructions that code for the formation of   NRC Framework Link
+ principles, and theories.                         molecules called proteins, which carry out
+                                                   most of the work of cells to perform the
+ Construct an explanation based on valid and       essential functions of life.
+ reliable evidence obtained from a variety of
+ sources (including students’ own                  Proteins provide structural components, serve
+ investigations, models, theories, simulations,    as signaling devices, regulate cell activities,
+ peer review) and the assumption that theories     and determine the performance of cells
+ and laws that describe the natural world          through their enzymatic actions
+                                                   NRC Framework Link
+ operate today as they did in the past and will
+ continue to do so in the future.
+ NRC Framework Link                                LS3.A: Inheritance of Traits
+                                                   The sequence of nucleotides spells out the
+                                                   information in a gene. DNA controls the
+                                                   expression of proteins by being transcribed
+                                                   into a “messenger” RNA, which is translated
+                                                   in turn by the cellular machinery into a
+                                                   protein.
+                                                   NRC Framework Link
+
+South Carolina College- and Career-Ready Science Standards 2021
+Page 170
+                                      From Molecules to Organisms: Structures and Processes (LS1)
+ B-LS1-4. Use a model to illustrate the role of cellular division (mitosis) and differentiation in producing and maintaining
+ complex organisms.
+
+ Clarification Statement: Emphasis is on normal cell division as well as instances in which cell division is uncontrolled (e.g., cancer).
+ State Assessment Boundary: Assessment does not include specific gene control mechanisms or rote memorization of the steps of mitosis.
+
+    Science and Engineering Practices                      Disciplinary Core Ideas                           Crosscutting Concepts
+ Developing and Using Models                     LS1.B: Growth and Development of                 Systems and System Models
+ Modeling in 9-12 builds on K-8 experiences      Organisms                                        Models (e.g., physical, mathematical,
+ and progresses to using, synthesizing, and      In multicellular organisms, individual           computer models) can be used to simulate
+ developing models to predict and show           cells grow and then divide via a process         systems and interactions—including energy,
+ relationships among variables between           called mitosis, thereby allowing the             matter, and information flows—within and
+ systems and their components in the natural     organism to grow (and repair).                   between systems at different scales.
+ and designed worlds.                                                                             NRC Framework Link
+
+                                                 The organism begins as a single cell
+ Use a model based on evidence to illustrate     (fertilized egg) that divides successively to
+ and/or predict the relationships between        produce many cells, with each parent cell
+ systems or between components of a              passing identical genetic material (two
+ system.                                         variants of each chromosome pair) to both
+ NRC Framework Link                              daughter cells.
+
+                                                 Cellular division and differentiation produce
+                                                 and maintain a complex organism, composed
+                                                 of systems of tissues and organs that work
+                                                 together to meet the needs of the whole
+                                                 organism.
+                                                 NRC Framework Link
+
+
+
+
+South Carolina College- and Career-Ready Science Standards 2021
+Page 173
+                                      From Molecules to Organisms: Structures and Processes (LS1)
+ B-LS1-5 Use a model to illustrate how photosynthesis transforms light energy into stored chemical energy.
+
+ Clarification Statement: Emphasis is on explaining inputs and outputs of matter and the transfer and transformation of energy in
+ photosynthesis by plants and other photosynthesizing organisms. Examples of models could include diagrams, chemical equations, and
+ conceptual models.
+ State Assessment Boundary: Assessment does not include specific biochemical steps.
+
+    Science and Engineering Practices                     Disciplinary Core Ideas                         Crosscutting Concepts
+ Developing and Using Models                    LS1.C: Organization for Matter and             Energy and Matter
+ Modeling in 9-12 builds on K-8 experiences     Energy Flow in Organisms                       Changes of energy and matter in a system can
+ and progresses to using, synthesizing, and     The process of photosynthesis converts light   be described in terms of energy and matter
+ developing models to predict and show          energy to stored chemical energy by            flows into, out of, and within that system.
+ relationships among variables between          converting carbon dioxide plus water into      NRC Framework Link
+ systems and their components in the natural    sugars plus released oxygen.
+ and designed worlds.                           NRC Framework Link
+
+
+ Use a model based on evidence to illustrate
+ the relationships between systems or between
+ components of a system.
+ NRC Framework Link
+
+
+
+
+South Carolina College- and Career-Ready Science Standards 2021
+Page 174
+                                       From Molecules to Organisms: Structures and Processes (LS1)
+ B-LS1-6. Construct and revise an explanation based on evidence for how carbon, hydrogen, and oxygen from sugar
+ molecules may combine with other elements to form amino acids and other large carbon-based molecules necessary for
+ essential life processes.
+
+ Clarification Statement: Emphasis is on using evidence from models and simulations to support explanations of how the products of
+ photosynthesis can be used to form the molecules of life.
+ State Assessment Boundary: Assessment does not include the details of the specific chemical reactions or molecular identification of
+ macromolecules.
+
+    Science and Engineering Practices                       Disciplinary Core Ideas                          Crosscutting Concepts
+ Constructing Explanations and Designing          LS1.C: Organization for Matter and              Energy and Matter
+ Solutions                                        Energy Flow in Organisms                        Changes of energy and matter in a system can
+ Constructing explanations and designing          The sugar molecules thus formed contain         be described in terms of energy and matter
+ solutions in 9-12 builds on K-8 experiences      carbon, hydrogen, and oxygen: the               flows into, out of, and within that system.
+ and progresses to explanations and designs       hydrocarbon backbones are used to make          NRC Framework Link
+ that are supported by multiple and               amino acids and other carbon-based molecules
+ independent student-generated sources of         that can be assembled into larger molecules
+ evidence consistent with scientific ideas,       (such as proteins or DNA), used for essential
+ principles, and theories.                        life functions.
+
+ Construct and revise an explanation based on     As matter and energy flow through
+ valid and reliable evidence obtained from a      organizational levels of living systems,
+ variety of sources (including students’ own      chemical elements are recombined to form
+ investigations, models, theories, simulations,   different products.
+ peer review) and the assumption that theories    NRC Framework Link
+ and laws that describe the natural world
+ operate today as they did in the past and will
+ continue to do so in the future.
+ NRC Framework Link
+
+
+
+
+South Carolina College- and Career-Ready Science Standards 2021
+Page 175
+                                       From Molecules to Organisms: Structures and Processes (LS1)
+ B-LS1-7. Use a model to illustrate that cellular respiration is a chemical process whereby the bonds of food molecules are
+ broken and the bonds in new compounds are formed, resulting in a net transfer of energy.
+
+ Clarification Statement: Emphasis is on the conceptual understanding of the inputs and outputs of the processes of aerobic and anaerobic
+ cellular respiration.
+ State Assessment Boundary: Assessment should not include identification of the steps or specific processes involved in cellular respiration
+ nor specific types of fermentation. Assessment should be limited to comparing efficiency of aerobic and anaerobic cellular respiration.
+
+    Science and Engineering Practices                      Disciplinary Core Ideas                            Crosscutting Concepts
+ Developing and Using Models                     LS1.C: Organization for Matter and                Energy and Matter
+ Modeling in 9-12 builds on K-8 experiences      Energy Flow in Organisms                          Energy cannot be created or destroyed—it
+ and progresses to using, synthesizing, and      As matter and energy flow through different       only moves between one place and another
+ developing models to predict and show           organizational levels of living systems,          place, between objects and/or fields, or
+ relationships among variables between           chemical elements are recombined in different     between systems.
+ systems and their components in the natural     ways to form different products.                  NRC Framework Link
+ and designed worlds.                            As a result of these chemical reactions,
+                                                 energy is transferred from one system of
+ Use a model based on evidence to illustrate     interacting molecules to another. Cellular
+ the relationships between systems or between    respiration is a chemical process in which the
+ components of a system.                         bonds of food molecules and oxygen
+ NRC Framework Link
+                                                 molecules are broken, and new compounds
+                                                 are formed that can transport energy to
+                                                 muscles. Cellular respiration also releases the
+                                                 energy needed to maintain body temperature
+                                                 despite ongoing energy transfer to the
+                                                 surrounding environment.
+                                                 Anaerobic cellular respiration follows a
+                                                 different and less efficient chemical pathway
+                                                 to provide energy in cells.
+                                                 NRC Framework Link
+
+
+
+
+South Carolina College- and Career-Ready Science Standards 2021
+Page 176
+                                              Ecosystems: Interactions, Energy, and Dynamics (LS2)
+ B-LS2-1. Use mathematical and/or computational representations to support explanations of biotic and abiotic factors that
+ affect carrying capacity of ecosystems at different scales.
+
+ Clarification Statement: Emphasis is on quantitative analysis and comparison of the relationships among interdependent factors including
+ boundaries, resources, climate, and challenges. Examples of mathematical comparisons could include graphs, charts, histograms, or
+ population changes gathered from simulations and historical data sets. Examples of scales could be a pond versus an ocean.
+ State Assessment Boundary: Assessment does not include deriving mathematical equations to make comparisons.
+
+    Science and Engineering Practices                        Disciplinary Core Ideas                             Crosscutting Concepts
+
+ Using Mathematics and Computational               LS2.A: Interdependent Relationships in             Scale, Proportion, and Quantity
+ Thinking                                          Ecosystems                                         The significance of a phenomenon is
+ Mathematical and computational thinking in        Ecosystems have carrying capacities, which         dependent on the scale, proportion, and
+ 9-12 builds on K-8 experiences and                are limits to the numbers of organisms and         quantity at which it occurs.
+ progresses to using algebraic thinking and        populations they can support. These limits         NRC Framework Link
+
+ analysis, a range of linear and nonlinear         result from such factors as the availability of
+ functions including trigonometric functions,      living and nonliving resources and from such
+ exponentials and logarithms, and                  challenges such as predation, competition, and
+ computational tools for statistical analysis to   disease. Organisms would have the capacity to
+ analyze, represent, and model data. Simple        produce populations of great size were it not
+ computational simulations are created and         for the fact that environments and resources
+ used based on mathematical models of basic        are finite. This fundamental tension affects the
+ assumptions.                                      abundance (number of individuals) of species
+                                                   in any given ecosystem.
+ Use mathematical and/or computational             NRC Framework Link
+ representations of phenomena or design
+ solutions to support explanations.
+ NRC Framework Link
+
+
+
+
+South Carolina College- and Career-Ready Science Standards 2021
+Page 177
+                                            Ecosystems: Interactions, Energy, and Dynamics (LS2)
+ B-LS2-5. Develop a model to illustrate the role of photosynthesis and cellular respiration in the cycling of carbon among the
+ biosphere, atmosphere, hydrosphere, and geosphere.
+
+ Assessment Boundary: Assessment does not include the specific chemical steps of photosynthesis and respiration.
+
+    Science and Engineering Practices                        Disciplinary Core Ideas                         Crosscutting Concepts
+ Developing and Using Models                       LS2.B: Cycles of Matter and Energy             Systems and System Models
+ Modeling in 9-12 builds on K-8 experiences        Transfer in Ecosystems                         Models (e.g., physical, mathematical,
+ and progresses to using, synthesizing, and        Photosynthesis and cellular respiration are    computer models) can be used to simulate
+ developing models to predict and show how         important components of the carbon cycle, in   systems and interactions—including energy,
+ relationships among variables between             which carbon is exchanged among the            matter, and information flows—within and
+ systems and their components in the natural       biosphere, atmosphere, oceans, and geosphere   between systems at different scales.
+ and designed worlds.                              through chemical, physical, geological, and    NRC Framework Link
+                                                   biological processes.
+ Develop a model based on evidence to              NRC Framework Link
+ illustrate the relationships between systems or
+ components of a system.                           PS3.D: Energy in Chemical Processes
+ NRC Framework Link                                and Everyday Life
+                                                   The main way that solar energy is captured
+                                                   and stored on Earth is through the complex
+                                                   chemical process known as photosynthesis.
+                                                   (secondary)
+                                                   NRC Framework Link
+
+
+
+
+South Carolina College- and Career-Ready Science Standards 2021
+Page 182
+This page intentionally blank.
+                                             Ecosystems: Interactions, Energy, and Dynamics (LS2)
+              B-LS2-7. Design, evaluate, and refine a solution for reducing the impacts of human activities on biodiversity
+              and ecosystem health.
+
+    Science and Engineering Practices                       Disciplinary Core Ideas                                  Crosscutting Concepts
+ Constructing Explanations and Designing          LS2.C: Ecosystem Dynamics, Functioning,                 Stability and Change
+ Solutions                                        and Resilience                                          Much of science deals with constructing
+ Constructing explanations and designing          Moreover, anthropogenic changes (induced by             explanations of how things change and how
+ solutions in 9-12 builds on K-8 experiences      human activity) in the environment—                     they remain stable.
+ and progresses to explanations and designs       including habitat destruction, pollution,               NRC Framework Link
+ that are supported by multiple and               introduction of invasive species,
+ independent student-generated sources of         overexploitation, and climate change—can
+ evidence consistent with scientific ideas,       disrupt an ecosystem and threaten the survival
+ principles, and theories.                        of some species.
+                                                  NRC Framework Link
+ Design, evaluate, and refine a solution to a
+ complex real-world problem, based on             LS4.D: Biodiversity and Humans
+ scientific knowledge, student-generated          Biodiversity is increased by the formation of
+ sources of evidence, prioritized criteria, and   new species (speciation) and decreased by the
+ trade off considerations.                        loss of species (extinction). (secondary)
+ NRC Framework Link
+                                                  Humans depend on the living world for the
+                                                  resources and other benefits provided by
+                                                  biodiversity. Human activity is having adverse
+                                                  impacts on biodiversity through
+                                                  overpopulation, overexploitation, habitat
+                                                  destruction, pollution, introduction of invasive
+                                                  species, and climate change. These problems
+                                                  have the potential to cause biological
+                                                  extinctions which result in decreased
+                                                  biodiversity and the effects may be harmful to
+                                                                               (continued on next page)
+
+
+
+South Carolina College- and Career-Ready Science Standards 2021
+Page 184
+                                           LS4.D: Biodiversity and Humans (Cont.)
+                                           humans and other living things. Sustaining
+                                           biodiversity so that ecosystem functioning,
+                                           and productivity are maintained is essential to
+                                           supporting and enhancing life on Earth.
+                                           Sustaining biodiversity also aids humanity by
+                                           preserving landscapes of recreational or
+                                           inspirational value. (secondary)
+                                           NRC Framework Link
+
+
+                                           ETS1.B: Developing Possible Solutions
+                                           When evaluating solutions, it is important to
+                                           take into account a range of constraints
+                                           including cost, safety, reliability and
+                                           aesthetics and to consider social, cultural and
+                                           environmental impacts. (secondary)
+                                           NRC Framework Link
+
+
+
+
+South Carolina College- and Career-Ready Science Standards 2021
+Page 185
+                                              Heredity: Inheritance and Variation of Traits (LS3)
+ B-LS3-2. Make and defend a claim based on evidence that inheritable genetic variations may result from (1) new genetic
+ combinations through meiosis, (2) viable errors occurring during replication, and/or (3) mutations caused by environmental
+ factors.
+
+ Clarification Statement: Emphasis is on using data to support arguments for the way genetic variation occurs.
+ State Assessment Boundary: Assessment does not include the phases of meiosis or the biochemical mechanism of specific steps in the process.
+
+    Science and Engineering Practices                          Disciplinary Core Ideas                            Crosscutting Concepts
+ Engaging in Argument from Evidence                  LS3.B: Variation of Traits                        Cause and Effect
+ Engaging in argument from evidence in 9-12          In sexual reproduction, chromosomes can           Empirical evidence is required to differentiate
+ builds on K-8 experiences and progresses to         sometimes swap sections during the process of     between cause and correlation and make
+ using appropriate and sufficient evidence and       meiosis (cell division), thereby creating new     claims about specific causes and effects.
+ scientific reasoning to defend and critique         genetic combinations and thus more genetic        NRC Framework Link
+ claims and explanations about the natural and       variation. Although DNA replication is tightly
+ designed world(s). Arguments may also come          regulated and remarkably accurate, errors do
+ from current scientific or historical episodes in   occur and result in mutations, which are also a
+ science.                                            source of genetic variation. Environmental
+                                                     factors can also cause mutations in genes, and
+ Make and defend a claim based on evidence           viable mutations are inherited.
+ about the natural world that reflects scientific
+ knowledge, and student-generated evidence.          Environmental factors also affect expression
+ NRC Framework Link                                  of traits, and hence affect the probability of
+                                                     occurrences of traits in a population. Thus,
+                                                     the variation and distribution of traits
+                                                     observed depends on both genetic and
+                                                     environmental factors.
+                                                     NRC Framework Link
+
+
+
+
+South Carolina College- and Career-Ready Science Standards 2021
+Page 188
+                                                Heredity: Inheritance and Variation of Traits (LS3)
+ B-LS3-3. Apply concepts of statistics and probability to explain the variation and distribution of expressed traits in a
+ population.
+
+ Clarification Statement: Emphasis is on the use of mathematics to describe the probability of traits as it relates to genetic and environmental
+ factors in the expression of traits.
+ State Assessment Boundary: Assessment does not include Hardy-Weinberg or Chi-square analysis.
+
+    Science and Engineering Practices                          Disciplinary Core Ideas                           Crosscutting Concepts
+ Analyzing and Interpreting Data                     LS3.B: Variation of Traits                       Scale, Proportion, and Quantity
+ Analyzing data in 9-12 builds on K-8                Environmental factors also affect expression     Algebraic thinking is used to examine
+ experiences and progresses to introducing           of traits, and hence affect the probability of   scientific data and predict the effect of a
+ more detailed statistical analysis, the             occurrences of traits in a population. Thus,     change in one variable on another (e.g., linear
+ comparison of data sets for consistency, and        the variation and distribution of traits         growth vs. exponential growth).
+ the use of models to generate and analyze           observed depends on both genetic and             NRC Framework Link
+ data.                                               environmental factors.
+                                                     NRC Framework Link
+ Apply concepts of statistics and probability
+ (including determining function fits to data,
+ slope, intercept, and correlation coefficient for
+ linear fits) to scientific and engineering
+ questions and problems, using digital tools
+ when feasible.
+ NRC Framework Link
+
+
+
+
+South Carolina College- and Career-Ready Science Standards 2021
+Page 189
+                                                 Biological Evolution: Unity and Diversity (LS4)
+ B-LS4-1. Communicate scientific information that common ancestry and biological evolution are supported by multiple lines
+ of empirical evidence.
+
+ Clarification Statement: Emphasis is on students’ conceptual understanding of the role each line of evidence has relating to common ancestry
+ and biological evolution. Examples of evidence could include similarities in DNA sequences, anatomical structures, and order of appearance
+ of structures in embryological development.
+ State Assessment Boundary: Assessment is limited to conceptual explanations of the evidence for biological evolution and is not extended to
+ the lines of evidence for specific species. Assessment does not include classification of organisms.
+
+    Science and Engineering Practices                       Disciplinary Core Ideas                         Crosscutting Concepts
+ Obtaining, Evaluating, and                       LS4.A: Evidence of Common Ancestry and         Patterns
+ Communicating Information                        Diversity                                      Different patterns may be observed at each of
+ Obtaining, evaluating, and communicating         Genetic information, like the fossil record,   the scales at which a system is studied and
+ information in 9-12 builds on K-8 experiences    provides evidence of evolution. DNA            can provide evidence for causality in
+ and progresses to evaluating the validity and    sequences vary among species, but there are    explanations of phenomena.
+ reliability of the claims, methods, and          many overlaps; notably, the ongoing            NRC Framework Link
+ designs.                                         branching that produces multiple lines of
+                                                  descent can be inferred by comparing the
+ Communicate scientific information (e.g.,        DNA sequences of different organisms. Such
+ about phenomena and/or the process of            information is also derivable from the
+ development and the design and performance       similarities and differences in amino acid
+ of a proposed process or system) in multiple     sequences and from anatomical and
+ formats (including orally, graphically,          embryological evidence.
+ textually, and mathematically).                  NRC Framework Link
+ NRC Framework Link
+
+                                                                ETS2.B: Influence of
+                                                                Engineering, Technology, and
+                                                  Science on Society and the Natural World
+                                                  The understanding of evolutionary
+                                                  relationships has recently been greatly
+                                                  accelerated by using new molecular tools to
+                                                  study biology.
+                                                  NRC Framework Link
+
+South Carolina College- and Career-Ready Science Standards 2021
+Page 190
+                                                  Biological Evolution: Unity and Diversity (LS4)
+ B-LS4-2. Construct an explanation based on evidence that the process of evolution primarily results from four factors:
+ (1) the potential for a species to increase in number, (2) the heritable genetic variation of individuals in a species due to
+ mutation and sexual reproduction, (3) competition for limited resources, and (4) the proliferation of those organisms that
+ are better able to survive and reproduce in the environment.
+
+ Clarification Statement: Emphasis is on using evidence to explain the influence each of the four factors has on the number of organisms,
+ behaviors, morphology, or physiology in terms of ability to compete for limited resources and subsequent survival of individuals and
+ adaptation of species. Examples of evidence could include mathematical models such as simple distribution graphs and proportional
+ reasoning.
+ State Assessment Boundary: Assessment does not include other mechanisms of evolution, such as genetic drift, gene flow through migration,
+ and co-evolution.
+
+    Science and Engineering Practices                       Disciplinary Core Ideas                                 Crosscutting Concepts
+ Constructing Explanations and Designing          LS4.B: Natural Selection                               Cause and Effect
+ Solutions                                        Natural selection occurs only if there is both         Empirical evidence is required to
+ Constructing explanations and designing          (1) variation in the genetic information between       differentiate between cause and correlation
+ solutions in 9-12 builds on K-8 experiences      organisms in a population and (2) variation in         and make claims about specific causes and
+ and progresses to explanations and designs       the expression of that genetic information—that        effects.
+ that are supported by multiple and               is, trait variation—that leads to differences in       NRC Framework Link
+ independent student-generated sources of         performance among individuals.
+                                                  NRC Framework Link
+ evidence consistent with scientific ideas,
+ principles, and theories.                        LS4.C: Adaptation
+                                                  Evolution is driven by the interaction of four
+ Construct an explanation based on valid and      factors: (1) the potential for a species to increase
+ reliable evidence obtained from a variety of     in number, (2) the genetic variation of
+ sources (including students’ own                 individuals in a species due to mutation and
+ investigations, models, theories, simulations,   sexual reproduction, (3) competition for an
+ peer review) and the assumption that theories    environment’s limited supply of the resources
+ and laws that describe the natural world         that individuals need in order to survive and
+ operate today as they did in the past and will   reproduce, and (4) the ensuing proliferation of
+ continue to do so in the future.                 those organisms that are better able to survive
+ NRC Framework Link                               and reproduce in that environment.
+                                                  NRC Framework Link
+
+South Carolina College- and Career-Ready Science Standards 2021
+Page 191
+                                               Biological Evolution: Unity and Diversity (LS4)
+ B-LS4-4. Construct an explanation based on evidence for how natural selection leads to adaptation of populations.
+
+ Clarification Statement: Emphasis is on using data to provide evidence for how specific biotic and abiotic differences in ecosystems (such as
+ ranges of seasonal temperature, long-term climate change, acidity, light, geographic barriers, or evolution of other organisms) contribute to
+ a change in gene frequency over time, leading to adaptation of populations.
+ State Assessment Boundary: Assessment does not include allele frequency calculations.
+
+    Science and Engineering Practices                       Disciplinary Core Ideas                            Crosscutting Concepts
+ Constructing Explanations and Designing          LS4.C: Adaptation                                 Cause and Effect
+ Solutions                                        Natural selection leads to adaptation, that is,   Empirical evidence is required to differentiate
+ Constructing explanations and designing          to a population dominated by organisms that       between cause and correlation and make
+ solutions in 9-12 builds on K-8 experiences      are anatomically, behaviorally, and               claims about specific causes and effects.
+ and progresses to explanations and designs       physiologically well suited to survive and        NRC Framework Link
+ that are supported by multiple and               reproduce in a specific environment. That is,
+ independent student-generated sources of         the differential survival and reproduction of
+ evidence consistent with scientific ideas,       organisms in a population that have an
+ principles, and theories.                        advantageous heritable trait leads to an
+                                                  increase in the proportion of individuals in
+ Construct an explanation based on valid and      future generations that have the trait and to a
+ reliable evidence obtained from a variety of     decrease in the proportion of individuals that
+ sources (including students’ own                 do not.
+ investigations, models, theories, simulations,   NRC Framework Link
+ peer review) and the assumption that theories
+ and laws that describe the natural world
+ operate today as they did in the past and will
+ continue to do so in the future.
+ NRC Framework Link
+
+
+
+
+South Carolina College- and Career-Ready Science Standards 2021
+Page 194
+                                                  Biological Evolution: Unity and Diversity (LS4)
+ B-LS4-5. Evaluate the evidence supporting claims that changes in environmental conditions may result in (1) increases in
+ the number of individuals of some species, (2) the emergence of new species over time, and (3) the extinction of other species.
+
+ Clarification Statement: Emphasis is on determining cause and effect relationships for how changes to the environment such as deforestation,
+ fishing, application of fertilizers, drought, flood, and the rate of change of the environment affect distribution or disappearance of traits in
+ species.
+
+    Science and Engineering Practices                        Disciplinary Core Ideas                            Crosscutting Concepts
+ Engaging in Argument from Evidence                LS4.C: Adaptation                                 Cause and Effect
+ Engaging in argument from evidence in             Changes in the physical environment, whether      Empirical evidence is required to differentiate
+ 9-12 builds on K-8 experiences and                naturally occurring or human induced, have        between cause and correlation and make
+ progresses to using appropriate and sufficient    thus contributed to the expansion of some         claims about specific causes and effects.
+ evidence and scientific reasoning to defend       species, the emergence of new distinct species    NRC Framework Link
+ and critique claims and explanations about the    as populations diverge under different
+ natural and designed world(s). Arguments          conditions, and the decline–and sometimes the
+ may also come from current or historical          extinction–of some species.
+ episodes in science.
+                                                   Species become extinct because they can no
+ Evaluate the evidence behind currently            longer survive and reproduce in their altered
+ accepted explanations or solutions to             environment. If members cannot adjust to
+ determine the merits of arguments.                change that is too fast or drastic, the
+ NRC Framework Link                                opportunity for the species’ evolution is lost.
+                                                   NRC Framework Link
+
+
+
+
+South Carolina College- and Career-Ready Science Standards 2021
+Page 195
+

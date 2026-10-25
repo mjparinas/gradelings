@@ -41,8 +41,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
-    // Supertonic's speech engine, copied from node_modules by scripts/fetch-supertonic.mjs.
-    "public/supertonic/**",
+    // Piper's speech engine, copied from node_modules by scripts/fetch-piper.mjs.
+    "public/piper/**",
   ]),
 ]);
 

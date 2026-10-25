@@ -206,6 +206,14 @@ describe("sync", () => {
     expect(again.events).toHaveLength(2);
   });
 
+  it("keeps opened mystery boxes and drops event types it doesn't know", async () => {
+    const { cookie } = await newAccount("mystery@example.com");
+    const box = { id: "m1", profileId: "pm", type: "mystery", t: Date.now() - 1000, session: "s1" };
+    const odd = { id: "o1", profileId: "pm", type: "lottery", t: Date.now() - 1000 };
+    const res = await (await sync.POST(post("/api/sync/", { cursor: 0, profiles: [profile("pm")], events: [box, odd] }, cookie))).json();
+    expect(res.accepted).toEqual(["m1"]);
+  });
+
   it("names its database so devices can tell when it was replaced", async () => {
     const { cookie } = await newAccount("epoch@example.com");
     const first = await (await sync.POST(post("/api/sync/", {}, cookie))).json();
