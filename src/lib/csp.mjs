@@ -30,7 +30,7 @@ export const HEADER_POLICY = ["frame-ancestors 'none'", "base-uri 'self'", "form
 
 /**
  * `next dev` needs eval and inline code for hot reloading. Never used in production. As a header
- * it also reaches the Supertonic worker, which loads its cached scripts from blob: URLs.
+ * it also reaches the Piper worker, which loads its cached scripts from blob: URLs.
  */
 export const DEV_POLICY = [
   "default-src 'self'",

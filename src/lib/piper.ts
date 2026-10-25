@@ -1,52 +1,68 @@
 "use client";
 
-import manifest from "./supertonic-manifest.json";
+import manifest from "./piper-manifest.json";
 import { isOn } from "./remoteFlags";
 import type { SpeechLanguage } from "./speech";
 
-// Supertonic: a natural-sounding voice that runs on the device, so it works offline and the same on
+// Piper: a natural-sounding voice that runs on the device, so it works offline and the same on
 // every tablet. On by default: the voices download in the background when the app opens, for
 // children with read-aloud on (src/components/VoicePreload.tsx; not on mobile data or Data Saver),
-// while the device voice reads, and Supertonic reads from then on. A parent
+// while the device voice reads, and Piper reads from then on. A parent
 // can switch it off or remove it per device under Account. The files are large (see
-// public/supertonic/{version}/files.json), are served by this site and are kept in their own cache,
+// public/piper/{version}/files.json), are served by this site and are kept in their own cache,
 // which the service worker leaves alone when the app updates.
 
-export const SUPERTONIC_BASE = `/supertonic/${manifest.version}/`;
-export const SUPERTONIC_CACHE = "grademap-supertonic";
-const LIST_URL = `${SUPERTONIC_BASE}files.json`;
-const WORKER_URL = "/supertonic-worker.js";
-const PREF_KEY = "grademap.supertonic";
-// The voices this replaced (Kokoro, and Piper before it) kept their on/off choice and their files under these names.
-const OLD_PREF_KEYS = ["grademap.kokoro", "grademap.piper"];
-const OLD_CACHES = ["grademap-kokoro", "grademap-piper"];
+export const PIPER_BASE = `/piper/${manifest.version}/`;
+export const PIPER_CACHE = "grademap-piper";
+const LIST_URL = `${PIPER_BASE}files.json`;
+const WORKER_URL = "/piper-worker.js";
+const PREF_KEY = "grademap.piper";
+// The voices tried after Piper (Kokoro, then Supertonic) kept their files under these names.
+const OLD_CACHES = ["grademap-kokoro", "grademap-supertonic"];
+// Piper came back as everyone's voice in October 2026, after Kokoro and Supertonic didn't sound as
+// good. Every device's earlier voice choices (an older voice switched on or off, a device voice
+// picked for English or French) are cleared once, so Piper reads; choices made after that stick.
+const RESET_KEY = "grademap.voiceReset";
+const RESET_VERSION = "piper-amy-1";
+const RESET_KEYS = ["grademap.piper", "grademap.supertonic", "grademap.kokoro", "grademap.voice", "grademap.voice.fr"];
 
-export type SupertonicVoiceState = "checking" | "missing" | "downloading" | "ready";
+/** Clears the voice choices saved before Piper came back, once per device (see RESET_KEYS). */
+export function resetOldVoiceChoices() {
+  try {
+    if (localStorage.getItem(RESET_KEY) === RESET_VERSION) return;
+    for (const key of RESET_KEYS) localStorage.removeItem(key);
+    localStorage.setItem(RESET_KEY, RESET_VERSION);
+  } catch {
+    // Private mode: nothing was saved to clear.
+  }
+}
 
-export interface SupertonicState {
-  /** The parent wants read-aloud to use Supertonic on this device. */
+export type PiperVoiceState = "checking" | "missing" | "downloading" | "ready";
+
+export interface PiperState {
+  /** The parent wants read-aloud to use Piper on this device. */
   enabled: boolean;
-  voices: Record<SpeechLanguage, { state: SupertonicVoiceState; loaded: number; total: number; error?: string }>;
+  voices: Record<SpeechLanguage, { state: PiperVoiceState; loaded: number; total: number; error?: string }>;
 }
 
 /** What gets downloaded: the speech engine plus one language's voice (bytes per file). */
-export interface SupertonicFileList {
+export interface PiperFileList {
   version: string;
   engine: Record<string, number>;
   voices: Record<SpeechLanguage, Record<string, number>>;
 }
 
-export const SUPERTONIC_VOICES = manifest.voices as Record<SpeechLanguage, { id: string; lang: string; name: string; credit: string }>;
+export const PIPER_VOICES = manifest.voices as Record<SpeechLanguage, { id: string; name: string; credit: string }>;
 
 /** The files one language needs, as URLs, with their sizes. */
-export function filesFor(list: SupertonicFileList, language: SpeechLanguage): [url: string, bytes: number][] {
-  return [...Object.entries(list.engine), ...Object.entries(list.voices[language] ?? {})].map(([name, bytes]) => [SUPERTONIC_BASE + name, bytes]);
+export function filesFor(list: PiperFileList, language: SpeechLanguage): [url: string, bytes: number][] {
+  return [...Object.entries(list.engine), ...Object.entries(list.voices[language] ?? {})].map(([name, bytes]) => [PIPER_BASE + name, bytes]);
 }
 
 const MAX_CHUNK = 300;
 
-// Supertonic has no sound for many maths and science symbols: it skips them or mumbles ("2 × 4"
-// came out as "two or four"), where device voices say them. So they are put into words first.
+// Piper's phonemizer (eSpeak NG) reads many maths and science symbols oddly or not at all
+// ("3/4" as "three slash four"), where device voices say them. So they are put into words first.
 type Words = Record<SpeechLanguage, string>;
 const SYMBOLS: [RegExp, Words][] = [
   [/≠/g, { en: " does not equal ", fr: " n'égale pas " }],
@@ -86,8 +102,8 @@ function fraction(top: number, bottom: number, language: SpeechLanguage): string
   return ` ${top} ${top === 1 ? name[0] : name[1]} `;
 }
 
-/** Puts the symbols Supertonic can't say into words (only for Supertonic: device voices say them already). */
-export function supertonicText(text: string, language: SpeechLanguage): string {
+/** Puts the symbols Piper can't say into words (only for Piper: device voices say them already). */
+export function piperText(text: string, language: SpeechLanguage): string {
   // Absolute value bars, "|−3|".
   let t = text.replace(/\|([^|]{1,12})\|/g, language === "fr" ? " la valeur absolue de $1 " : " the absolute value of $1 ");
   t = t.replace(/(\d+)\s*\/\s*(\d+)/g, (_, a: string, b: string) => fraction(Number(a), Number(b), language));
@@ -123,11 +139,11 @@ export function splitSentences(text: string): string[] {
 
 // ---- State (per device) ----
 
-const blank = () => ({ state: "checking" as SupertonicVoiceState, loaded: 0, total: 0 });
-let state: SupertonicState = { enabled: false, voices: { en: blank(), fr: blank() } };
+const blank = () => ({ state: "checking" as PiperVoiceState, loaded: 0, total: 0 });
+let state: PiperState = { enabled: false, voices: { en: blank(), fr: blank() } };
 const listeners = new Set<() => void>();
 
-function update(next: Partial<SupertonicState>, language?: SpeechLanguage, voice?: Partial<SupertonicState["voices"]["en"]>) {
+function update(next: Partial<PiperState>, language?: SpeechLanguage, voice?: Partial<PiperState["voices"]["en"]>) {
   state = {
     ...state,
     ...next,
@@ -136,19 +152,15 @@ function update(next: Partial<SupertonicState>, language?: SpeechLanguage, voice
   for (const l of listeners) l();
 }
 
-export function supertonicSupported(): boolean {
+export function piperSupported(): boolean {
   return typeof window !== "undefined" && typeof Worker !== "undefined" && typeof WebAssembly !== "undefined" && "caches" in window && typeof AudioContext !== "undefined";
 }
 
-/** Whether read-aloud should use Supertonic on this device: on unless a parent switched it off. */
+/** Whether read-aloud should use Piper on this device: on unless a parent switched it off. */
 function readEnabled(): boolean {
   try {
-    // A parent who switched an older voice off keeps it off.
-    for (const key of [PREF_KEY, ...OLD_PREF_KEYS]) {
-      const saved = localStorage.getItem(key);
-      if (saved !== null) return saved !== "off";
-    }
-    return true;
+    resetOldVoiceChoices();
+    return localStorage.getItem(PREF_KEY) !== "off";
   } catch {
     // Private mode: nothing saved, so the default.
     return true;
@@ -161,20 +173,20 @@ let checked: Promise<void> | undefined;
 function check(): Promise<void> {
   checked ??= (async () => {
     const enabled = readEnabled();
-    if (!supertonicSupported()) {
+    if (!piperSupported()) {
       update({ enabled: false }, "en", { state: "missing" });
       update({}, "fr", { state: "missing" });
       return;
     }
-    // The older voices' files (about 100 MB each) are no use any more.
+    // The Kokoro and Supertonic files are no use any more.
     for (const old of OLD_CACHES) void caches.delete(old).catch(() => false);
-    const cache = await caches.open(SUPERTONIC_CACHE);
+    const cache = await caches.open(PIPER_CACHE);
     // Files from an older engine or voice version are never used again.
     for (const req of await cache.keys()) {
       const { pathname } = new URL(req.url);
-      if (pathname !== WORKER_URL && !pathname.startsWith(SUPERTONIC_BASE)) await cache.delete(req);
+      if (pathname !== WORKER_URL && !pathname.startsWith(PIPER_BASE)) await cache.delete(req);
     }
-    const list = (await (await cache.match(LIST_URL))?.json().catch(() => undefined)) as SupertonicFileList | undefined;
+    const list = (await (await cache.match(LIST_URL))?.json().catch(() => undefined)) as PiperFileList | undefined;
     for (const language of ["en", "fr"] as const) {
       let ready = false;
       if (list) {
@@ -193,19 +205,20 @@ function check(): Promise<void> {
 }
 
 /** For useSyncExternalStore. */
-export function subscribeSupertonic(listener: () => void): () => void {
+export function subscribePiper(listener: () => void): () => void {
   void check();
   listeners.add(listener);
   return () => listeners.delete(listener);
 }
 
-export function getSupertonicState(): SupertonicState {
+export function getPiperState(): PiperState {
   void check();
   return state;
 }
 
-export function setSupertonicEnabled(on: boolean) {
+export function setPiperEnabled(on: boolean) {
   try {
+    resetOldVoiceChoices();
     localStorage.setItem(PREF_KEY, on ? "on" : "off");
   } catch {
     // Private mode: the choice just won't stick.
@@ -213,43 +226,43 @@ export function setSupertonicEnabled(on: boolean) {
   update({ enabled: on });
 }
 
-// Languages Supertonic failed to read since the page loaded: read-aloud goes straight to the device
-// voice for them, so a device that can't run Supertonic doesn't wait on it for every question.
+// Languages Piper failed to read since the page loaded: read-aloud goes straight to the device
+// voice for them, so a device that can't run Piper doesn't wait on it for every question.
 const failed = new Set<SpeechLanguage>();
 
-/** Read-aloud calls this when Supertonic couldn't play, so the device voice reads from now on. */
-export function markSupertonicFailed(language: SpeechLanguage) {
+/** Read-aloud calls this when Piper couldn't play, so the device voice reads from now on. */
+export function markPiperFailed(language: SpeechLanguage) {
   failed.add(language);
 }
 
 /**
- * False when Supertonic certainly won't read this language (unsupported, switched off, failed, or its
+ * False when Piper certainly won't read this language (unsupported, switched off, failed, or its
  * voice is missing), answered without waiting, so the device voice can start inside the tap: iOS
  * Safari ignores speechSynthesis.speak() called after an await.
  */
-export function supertonicMightSpeak(language: SpeechLanguage): boolean {
-  if (!supertonicSupported() || failed.has(language) || !readEnabled()) return false;
+export function piperMightSpeak(language: SpeechLanguage): boolean {
+  if (!piperSupported() || failed.has(language) || !readEnabled()) return false;
   const voice = state.voices[language].state;
   return voice === "checking" || voice === "ready";
 }
 
-/** True when read-aloud in this language should use Supertonic (waits for the first check). */
-export async function supertonicWanted(language: SpeechLanguage): Promise<boolean> {
+/** True when read-aloud in this language should use Piper (waits for the first check). */
+export async function piperWanted(language: SpeechLanguage): Promise<boolean> {
   await check();
   return state.enabled && !failed.has(language) && state.voices[language].state === "ready";
 }
 
-/** True when Supertonic is on and the English voice is here (for "can this device read aloud?"). */
-export function supertonicCanSpeak(): boolean {
+/** True when Piper is on and the English voice is here (for "can this device read aloud?"). */
+export function piperCanSpeak(): boolean {
   return state.enabled && state.voices.en.state === "ready";
 }
 
 /** How much downloading a language's voice would take, in bytes (undefined offline or if it isn't served). */
-export async function supertonicDownloadBytes(language: SpeechLanguage): Promise<number | undefined> {
+export async function piperDownloadBytes(language: SpeechLanguage): Promise<number | undefined> {
   try {
     const res = await fetch(LIST_URL, { cache: "no-cache" });
     if (!res.ok) return undefined;
-    const list = (await res.json()) as SupertonicFileList;
+    const list = (await res.json()) as PiperFileList;
     const other: SpeechLanguage = language === "en" ? "fr" : "en";
     const engineHere = state.voices[other].state === "ready";
     const voice = Object.values(list.voices[language] ?? {}).reduce((n, b) => n + b, 0);
@@ -260,8 +273,8 @@ export async function supertonicDownloadBytes(language: SpeechLanguage): Promise
   }
 }
 
-/** Downloads the engine and one language's voice into the Supertonic cache, reporting progress. */
-export function downloadSupertonic(language: SpeechLanguage, { quiet = false } = {}): Promise<void> {
+/** Downloads the engine and one language's voice into the Piper cache, reporting progress. */
+export function downloadPiper(language: SpeechLanguage, { quiet = false } = {}): Promise<void> {
   // One download at a time: the two languages share the engine files.
   const run = downloading.then(() => (state.voices[language].state === "ready" ? undefined : fetchVoice(language, quiet)));
   downloading = run.catch(() => undefined);
@@ -277,10 +290,10 @@ async function fetchVoice(language: SpeechLanguage, quiet: boolean): Promise<voi
   try {
     const listRes = await fetch(LIST_URL, { cache: "no-cache" });
     if (!listRes.ok) throw new Error("The voice isn't available right now.");
-    const list = (await listRes.clone().json()) as SupertonicFileList;
+    const list = (await listRes.clone().json()) as PiperFileList;
     const files = filesFor(list, language);
     if (files.length <= Object.keys(list.engine).length) throw new Error("The voice isn't available right now.");
-    const cache = await caches.open(SUPERTONIC_CACHE);
+    const cache = await caches.open(PIPER_CACHE);
     const missing: typeof files = [];
     for (const f of files) if (!(await cache.match(f[0]))) missing.push(f);
     const total = missing.reduce((n, [, bytes]) => n + bytes, 0);
@@ -333,43 +346,43 @@ export function onMeteredConnection(): boolean {
 }
 
 /**
- * Starts downloading a language's voice in the background when Supertonic is on but the voice isn't
+ * Starts downloading a language's voice in the background when Piper is on but the voice isn't
  * here yet (when the app opens and a child has read-aloud on, or when a question is read aloud). Never on mobile data or Data Saver, never when the device is short
  * of space, and not in automated test browsers (each would fetch the whole voice). Read-aloud
  * carries on with the device voice meanwhile. Resolves with whether a download ran.
  */
-export async function autoDownloadSupertonic(language: SpeechLanguage): Promise<boolean> {
-  if (!supertonicSupported() || navigator.webdriver || navigator.onLine === false || onMeteredConnection()) return false;
+export async function autoDownloadPiper(language: SpeechLanguage): Promise<boolean> {
+  if (!piperSupported() || navigator.webdriver || navigator.onLine === false || onMeteredConnection()) return false;
   if (Date.now() - (autoTried[language] ?? -Infinity) < AUTO_RETRY_MS) return false;
-  if (!isOn("supertonic-auto-download")) return false;
+  if (!isOn("piper-auto-download")) return false;
   await check();
   if (!state.enabled || state.voices[language].state !== "missing") return false;
   if (state.voices.en.state === "downloading" || state.voices.fr.state === "downloading") return false;
   autoTried[language] = Date.now();
   try {
     const { quota, usage } = (await navigator.storage?.estimate?.()) ?? {};
-    // Leave plenty of room for lessons and progress (the voice is about 265 MB with the engine and models).
+    // Leave plenty of room for lessons and progress (the voice is about 100 MB with the engine).
     if (quota !== undefined && quota - (usage ?? 0) < 250e6) return false;
   } catch {
     // Can't tell: try anyway; a failed download is cleaned up next time.
   }
-  await downloadSupertonic(language, { quiet: true });
+  await downloadPiper(language, { quiet: true });
   return true;
 }
 
-/** Downloads each language's voice in turn, in the background (see autoDownloadSupertonic). */
-export async function preloadSupertonicVoices(languages: readonly SpeechLanguage[]): Promise<void> {
-  for (const language of languages) await autoDownloadSupertonic(language).catch(() => false);
+/** Downloads each language's voice in turn, in the background (see autoDownloadPiper). */
+export async function preloadPiperVoices(languages: readonly SpeechLanguage[]): Promise<void> {
+  for (const language of languages) await autoDownloadPiper(language).catch(() => false);
 }
 
 /** Removes one language's voice from this device (and the engine once no voice is left). */
-export async function removeSupertonic(language: SpeechLanguage): Promise<void> {
-  const cache = await caches.open(SUPERTONIC_CACHE);
-  const list = (await (await cache.match(LIST_URL))?.json().catch(() => undefined)) as SupertonicFileList | undefined;
+export async function removePiper(language: SpeechLanguage): Promise<void> {
+  const cache = await caches.open(PIPER_CACHE);
+  const list = (await (await cache.match(LIST_URL))?.json().catch(() => undefined)) as PiperFileList | undefined;
   const other: SpeechLanguage = language === "en" ? "fr" : "en";
-  if (!list || state.voices[other].state !== "ready") await caches.delete(SUPERTONIC_CACHE);
-  else for (const name of Object.keys(list.voices[language] ?? {})) await cache.delete(SUPERTONIC_BASE + name);
-  if (language === "en") setSupertonicEnabled(false);
+  if (!list || state.voices[other].state !== "ready") await caches.delete(PIPER_CACHE);
+  else for (const name of Object.keys(list.voices[language] ?? {})) await cache.delete(PIPER_BASE + name);
+  if (language === "en") setPiperEnabled(false);
   update({}, language, { state: "missing", loaded: 0, total: 0, error: undefined });
 }
 
@@ -392,31 +405,31 @@ function getWorker(): Worker {
   return worker;
 }
 
-// If no sound has started by now, Supertonic is treated as failed and the device voice reads instead.
-// Generous, because the first sentence also loads the models (many seconds on an old tablet).
-export const SUPERTONIC_FIRST_AUDIO_MS = 30_000;
+// If no sound has started by now, Piper is treated as failed and the device voice reads instead.
+// Generous, because the first sentence also loads the voice (several seconds on an old tablet).
+export const PIPER_FIRST_AUDIO_MS = 15_000;
 
-/** Stops whatever Supertonic is saying. */
-export function stopSupertonic() {
+/** Stops whatever Piper is saying. */
+export function stopPiper() {
   current?.stop();
   current = undefined;
 }
 
 /**
- * Says `text` with the Supertonic voice for `language`. Resolves when it has finished (or been
+ * Says `text` with the Piper voice for `language`. Resolves when it has finished (or been
  * stopped); rejects if it fails before saying anything, so the caller can use a device voice.
  */
-export function speakSupertonic(text: string, language: SpeechLanguage, rate = 1): Promise<void> {
-  stopSupertonic();
+export function speakPiper(text: string, language: SpeechLanguage, rate = 1): Promise<void> {
+  stopPiper();
   // Created and resumed now, while a tap may still count as the user asking for sound.
   audio ??= new AudioContext();
   if (audio.state === "suspended") void audio.resume();
   const ac = audio;
-  const sentences = splitSentences(supertonicText(text, language));
+  const sentences = splitSentences(piperText(text, language));
   if (sentences.length === 0) return Promise.resolve();
   const id = ++nextId;
   const w = getWorker();
-  const { id: voice, lang } = SUPERTONIC_VOICES[language];
+  const voice = PIPER_VOICES[language].id;
 
   return new Promise<void>((resolve, reject) => {
     let started = false;
@@ -453,7 +466,7 @@ export function speakSupertonic(text: string, language: SpeechLanguage, rate = 1
       if (started) return;
       w.postMessage({ type: "cancel", id });
       end(new Error("The voice took too long to start."));
-    }, SUPERTONIC_FIRST_AUDIO_MS);
+    }, PIPER_FIRST_AUDIO_MS);
     const onMessage = (e: MessageEvent) => {
       const m = e.data;
       if (m?.id !== id || finished) return;
@@ -481,6 +494,6 @@ export function speakSupertonic(text: string, language: SpeechLanguage, rate = 1
     };
     w.addEventListener("message", onMessage);
     w.addEventListener("error", onError);
-    w.postMessage({ type: "speak", id, base: SUPERTONIC_BASE, voice, lang, sentences, rate });
+    w.postMessage({ type: "speak", id, base: PIPER_BASE, voice, sentences, rate });
   });
 }

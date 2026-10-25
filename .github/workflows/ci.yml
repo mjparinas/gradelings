@@ -144,18 +144,18 @@ jobs:
           key: next-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-${{ github.sha }}
           restore-keys: |
             next-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-
-      # The Supertonic voices (about 265 MB from our supertonic-voices release), so each run doesn't download them again.
+      # The Piper voices (about 127 MB from our piper-voices release), so each run doesn't download them again.
       - id: voices
         uses: actions/cache/restore@v6
         with:
-          path: public/supertonic
-          key: supertonic-${{ hashFiles('src/lib/supertonic-manifest.json', 'package-lock.json') }}
+          path: public/piper
+          key: piper-${{ hashFiles('src/lib/piper-manifest.json', 'package-lock.json') }}
       - run: npm run build
       - if: steps.voices.outputs.cache-hit != 'true'
         uses: actions/cache/save@v6
         continue-on-error: true
         with:
-          path: public/supertonic
+          path: public/piper
           key: ${{ steps.voices.outputs.cache-primary-key }}
       # One tar keeps the folder layout exactly as built. The 25 000 prerendered pages are about
       # 5.4 GB and much alike, so zstd with a long window packs them into about 330 MB (the
@@ -258,8 +258,8 @@ jobs:
       # The same voices the build was made with (the offline test downloads one).
       - uses: actions/cache/restore@v6
         with:
-          path: public/supertonic
-          key: supertonic-${{ hashFiles('src/lib/supertonic-manifest.json', 'package-lock.json') }}
+          path: public/piper
+          key: piper-${{ hashFiles('src/lib/piper-manifest.json', 'package-lock.json') }}
           fail-on-cache-miss: true
       - uses: ./.github/actions/browsers
         with:
