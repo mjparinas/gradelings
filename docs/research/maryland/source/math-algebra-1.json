@@ -1,0 +1,1633 @@
+{
+ "data": {
+  "cspStatus": {
+   "notes": null,
+   "value": "visible"
+  },
+  "document": {
+   "publicationStatus": "Published",
+   "sourceURL": "https://marylandpublicschools.org/about/documents/dcaa/math/mccrsm/mccrsm-algebra1-a.pdf",
+   "title": "Algebra I Maryland College and Career Ready Standards for Mathematics"
+  },
+  "educationLevels": [
+   "09",
+   "10",
+   "11",
+   "12"
+  ],
+  "id": "BF1E3F0FBC4346EDADD41938FC09182B",
+  "jurisdiction": {
+   "id": "49FCDFBD2CF04033A9C347BFA0584DF0",
+   "title": "Maryland"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/4.0/us/",
+   "rightsHolder": "Common Curriculum, Inc.",
+   "title": "CC BY 4.0 US"
+  },
+  "normalizedSubject": null,
+  "standards": {
+   "06513DCBD1304ACCB1D8EB49205ECA80": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "623847ED98A948A1A2CC72A5860CACEB",
+     "9367968B418148F394D4A636FB95B824",
+     "8BAB415BE5C64BF1A6CF53E01A378101"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use units as a way to understand problems and to guide the solution of multistep problems; choose and interpret units consistently in formulas; choose and\ninterpret the scale and the origin in graphs and data displays.",
+    "id": "06513DCBD1304ACCB1D8EB49205ECA80",
+    "listId": "1",
+    "parentId": "623847ED98A948A1A2CC72A5860CACEB",
+    "position": 1006,
+    "statementLabel": null,
+    "statementNotation": "N.Q.A.1"
+   },
+   "076E5E49E3E2491B8ADCC39B55A0CAD5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "76327B91F0B54956BBCBC1ED92F37720",
+     "C7A83B2F0BEA40D0B7C6BEA72EF6E8D4",
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Understand that a function from one set (called the domain) to another set\n(called the range) assigns to each element of the domain exactly one element of\nthe range. If f is a function and x is an element of its domain, then 𝑓𝑓(𝑥𝑥) denotes\nthe output of f corresponding to the input x. The graph of f is the graph of the\nequation 𝑦𝑦 = 𝑓𝑓(𝑥𝑥).",
+    "id": "076E5E49E3E2491B8ADCC39B55A0CAD5",
+    "listId": "1",
+    "parentId": "76327B91F0B54956BBCBC1ED92F37720",
+    "position": 1050,
+    "statementLabel": null,
+    "statementNotation": "F.IF.A.1"
+   },
+   "096C2C7C8B2A4B819FCD5CC797BACFB2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9F75169F286B4BF7B6D1F73B43FB99D6",
+     "2E74A62B576C4794B65583C35DEEA872",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Solve systems of linear equations exactly and approximately (e.g., with graphs),\nfocusing on pairs of linear equations in two variables.",
+    "id": "096C2C7C8B2A4B819FCD5CC797BACFB2",
+    "listId": "6",
+    "parentId": "9F75169F286B4BF7B6D1F73B43FB99D6",
+    "position": 1042,
+    "statementLabel": null,
+    "statementNotation": "A.REI.C.6"
+   },
+   "0BA973D489944D5F86864006BFB476AF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EF373BE4BE0748A78BB6E67EC115A2EC",
+     "1AF539D6377A46AA8030EE6FE42965E7",
+     "A8BC83D24B2A4EEDB58966F22F7542EE",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 4,
+    "description": "Use the properties of exponents to transform expressions for exponential\nfunctions. For example, the expression 1.15𝑡𝑡 can be rewritten as\nto reveal the approximate equivalent monthly\ninterest rate if the annual rate is 15%.",
+    "id": "0BA973D489944D5F86864006BFB476AF",
+    "listId": "c",
+    "parentId": "EF373BE4BE0748A78BB6E67EC115A2EC",
+    "position": 1020,
+    "statementLabel": null,
+    "statementNotation": "A.SSE.B.3.c"
+   },
+   "0E31E0CD359F4CDC8AF22F01CBBA9EAE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "390B60E956A541FB9E63B1074465D090",
+     "F438A3E932014DD9AC98BA1112BAA7DE",
+     "A8BC83D24B2A4EEDB58966F22F7542EE",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 4,
+    "description": "Interpret complicated expressions by viewing one or more of their parts as\na single entity. For example, interpret 𝑃𝑃(1 + 𝑟𝑟)𝑛𝑛 as the product of P and a\nfactor not depending on P.",
+    "id": "0E31E0CD359F4CDC8AF22F01CBBA9EAE",
+    "listId": "b",
+    "parentId": "390B60E956A541FB9E63B1074465D090",
+    "position": 1014,
+    "statementLabel": null,
+    "statementNotation": "A.SSE.A.1.b"
+   },
+   "16FE0CF65023404DBABFCACA944BFE0D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2D683D4AE19C463D9F30E7E5F256FE19",
+     "ACB3C50E1B9C4608A8835E7B85243E85",
+     "FA741C26C0474FFDB6560CEA49852C46",
+     "FB0698CD70304705A7A37BF59D80865A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 4,
+    "description": "Informally assess the fit of a function by plotting and analyzing residuals.",
+    "id": "16FE0CF65023404DBABFCACA944BFE0D",
+    "listId": "b",
+    "parentId": "2D683D4AE19C463D9F30E7E5F256FE19",
+    "position": 1084,
+    "statementLabel": null,
+    "statementNotation": "S.ID.B.6.b"
+   },
+   "179A948BA7824A418F3AAD144AF27E8C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8BAB415BE5C64BF1A6CF53E01A378101"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "The Real Number System",
+    "id": "179A948BA7824A418F3AAD144AF27E8C",
+    "listId": "",
+    "parentId": "8BAB415BE5C64BF1A6CF53E01A378101",
+    "position": 1001,
+    "statementLabel": null,
+    "statementNotation": "N.RN"
+   },
+   "1AF539D6377A46AA8030EE6FE42965E7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A8BC83D24B2A4EEDB58966F22F7542EE",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "WRITE EXPRESSIONS IN EQUIVALENT FORMS TO SOLVE PROBLEMS. ",
+    "id": "1AF539D6377A46AA8030EE6FE42965E7",
+    "listId": "B",
+    "parentId": "A8BC83D24B2A4EEDB58966F22F7542EE",
+    "position": 1016,
+    "statementLabel": null,
+    "statementNotation": "A.SSE.B"
+   },
+   "215AC460E94F4097AACF210B89647912": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2E74A62B576C4794B65583C35DEEA872",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "UNDERSTAND SOLVING EQUATIONS AS A PROCESS OF REASONING AND\nEXPLAIN THE REASONING.",
+    "id": "215AC460E94F4097AACF210B89647912",
+    "listId": "A",
+    "parentId": "2E74A62B576C4794B65583C35DEEA872",
+    "position": 1033,
+    "statementLabel": null,
+    "statementNotation": "A.REI.A"
+   },
+   "22F13127EB134D7D97A065E62511FA6E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2E74A62B576C4794B65583C35DEEA872",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "SOLVE EQUATIONS AND INEQUALITIES IN ONE VARIABLE.",
+    "id": "22F13127EB134D7D97A065E62511FA6E",
+    "listId": "B",
+    "parentId": "2E74A62B576C4794B65583C35DEEA872",
+    "position": 1035,
+    "statementLabel": null,
+    "statementNotation": "A.REI.B"
+   },
+   "2D683D4AE19C463D9F30E7E5F256FE19": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ACB3C50E1B9C4608A8835E7B85243E85",
+     "FA741C26C0474FFDB6560CEA49852C46",
+     "FB0698CD70304705A7A37BF59D80865A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Represent data on two quantitative variables on a scatter plot, and describe\nhow the variables are related.",
+    "id": "2D683D4AE19C463D9F30E7E5F256FE19",
+    "listId": "6",
+    "parentId": "ACB3C50E1B9C4608A8835E7B85243E85",
+    "position": 1082,
+    "statementLabel": null,
+    "statementNotation": "S.ID.B.6"
+   },
+   "2E74A62B576C4794B65583C35DEEA872": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Reasoning with Equations and Inequalities",
+    "id": "2E74A62B576C4794B65583C35DEEA872",
+    "listId": "",
+    "parentId": "746FF37B83604A40939C6DF29E49F4F6",
+    "position": 1032,
+    "statementLabel": null,
+    "statementNotation": "A.REI"
+   },
+   "2F12D83340D94B79BC78AFE5F0316E80": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E983A5CE80A54230B68CFF191FD9C03E",
+     "63B966F0A930426B8F605CC6F5CC1535",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Create equations and inequalities in one variable and use them to solve\nproblems. Include equations arising from linear and quadratic functions, and\nsimple rational and exponential functions.",
+    "id": "2F12D83340D94B79BC78AFE5F0316E80",
+    "listId": "1",
+    "parentId": "E983A5CE80A54230B68CFF191FD9C03E",
+    "position": 1028,
+    "statementLabel": null,
+    "statementNotation": "A.CED.A.1"
+   },
+   "31FA2184B010451FAC279FA327470D46": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "84D4C8E8913744B9AACDB42AE57AF8D4",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "PERFORM ARITHMETIC OPERATIONS ON POLYNOMIALS",
+    "id": "31FA2184B010451FAC279FA327470D46",
+    "listId": "A",
+    "parentId": "84D4C8E8913744B9AACDB42AE57AF8D4",
+    "position": 1022,
+    "statementLabel": null,
+    "statementNotation": "A.APR.A"
+   },
+   "369BB40E0EB34E5387D7F4796E3A855D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Linear, Quadratic, and Exponential Models",
+    "id": "369BB40E0EB34E5387D7F4796E3A855D",
+    "listId": "",
+    "parentId": "F34A2B4A1A7D4E5DA51F0D32126F4DC4",
+    "position": 1069,
+    "statementLabel": null,
+    "statementNotation": "F.LE"
+   },
+   "38CA086C8FF24681B5FFD6A5669609B2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "623847ED98A948A1A2CC72A5860CACEB",
+     "9367968B418148F394D4A636FB95B824",
+     "8BAB415BE5C64BF1A6CF53E01A378101"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Define appropriate quantities for the purpose of descriptive modeling. Choose a\nlevel of accuracy appropriate to limitations on measurement when reporting\nquantities.",
+    "id": "38CA086C8FF24681B5FFD6A5669609B2",
+    "listId": "2",
+    "parentId": "623847ED98A948A1A2CC72A5860CACEB",
+    "position": 1007,
+    "statementLabel": null,
+    "statementNotation": "N.Q.A.2"
+   },
+   "390B60E956A541FB9E63B1074465D090": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F438A3E932014DD9AC98BA1112BAA7DE",
+     "A8BC83D24B2A4EEDB58966F22F7542EE",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Interpret expressions that represent a quantity in terms of its context.",
+    "id": "390B60E956A541FB9E63B1074465D090",
+    "listId": "1",
+    "parentId": "F438A3E932014DD9AC98BA1112BAA7DE",
+    "position": 1012,
+    "statementLabel": null,
+    "statementNotation": "A.SSE.A.1"
+   },
+   "449216CE0BEB4ABC80F18E42E8608483": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E3699CFE3B8048C99464D16D98C005B4",
+     "369BB40E0EB34E5387D7F4796E3A855D",
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Interpret the parameters in a linear or exponential function in terms of a\ncontext.",
+    "id": "449216CE0BEB4ABC80F18E42E8608483",
+    "listId": "5",
+    "parentId": "E3699CFE3B8048C99464D16D98C005B4",
+    "position": 1078,
+    "statementLabel": null,
+    "statementNotation": "F.LE.B.5"
+   },
+   "47904F3080F249F1AB38AC170955AC17": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C28D3FAD111749F98E025DE2DD36022A",
+     "FA741C26C0474FFDB6560CEA49852C46",
+     "FB0698CD70304705A7A37BF59D80865A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Distinguish between correlation and causation.",
+    "id": "47904F3080F249F1AB38AC170955AC17",
+    "listId": "9",
+    "parentId": "C28D3FAD111749F98E025DE2DD36022A",
+    "position": 1089,
+    "statementLabel": null,
+    "statementNotation": "S.ID.C.9"
+   },
+   "48C100F6B1CF4FBABC65BC647301D204": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "55B522E7F38E4D7B8418556BF8627687",
+     "84D4C8E8913744B9AACDB42AE57AF8D4",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify zeros of polynomials when suitable factorizations are available, and use\nthe zeros to construct a rough graph of the function defined by the polynomial.",
+    "id": "48C100F6B1CF4FBABC65BC647301D204",
+    "listId": "3",
+    "parentId": "55B522E7F38E4D7B8418556BF8627687",
+    "position": 1025,
+    "statementLabel": null,
+    "statementNotation": "A.APR.B.3"
+   },
+   "5314C6694B614BD0A2525A5C7B2E10C5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2E74A62B576C4794B65583C35DEEA872",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "REPRESENT AND SOLVE EQUATIONS AND INEQUALITIES GRAPHICALLY.",
+    "id": "5314C6694B614BD0A2525A5C7B2E10C5",
+    "listId": "D",
+    "parentId": "2E74A62B576C4794B65583C35DEEA872",
+    "position": 1043,
+    "statementLabel": null,
+    "statementNotation": "A.REI.D"
+   },
+   "55B522E7F38E4D7B8418556BF8627687": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "84D4C8E8913744B9AACDB42AE57AF8D4",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "UNDERSTAND THE RELATIONSHIP BETWEEN ZEROS AND FACTORS OF\nPOLYNOMIALS.  ",
+    "id": "55B522E7F38E4D7B8418556BF8627687",
+    "listId": "B",
+    "parentId": "84D4C8E8913744B9AACDB42AE57AF8D4",
+    "position": 1024,
+    "statementLabel": null,
+    "statementNotation": "A.APR.B"
+   },
+   "57C7089E36B0413DB89A64CF530273F5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CC997859F8F94C0D8AEDE5753D1D3A91",
+     "369BB40E0EB34E5387D7F4796E3A855D",
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Observe using graphs and tables that a quantity increasing exponentially\neventually exceeds a quantity increasing linearly, quadratically, or (more\ngenerally) as a polynomial function.",
+    "id": "57C7089E36B0413DB89A64CF530273F5",
+    "listId": "3",
+    "parentId": "CC997859F8F94C0D8AEDE5753D1D3A91",
+    "position": 1076,
+    "statementLabel": null,
+    "statementNotation": "F.LE.A.3"
+   },
+   "5BAECC4BED724D80904401BF06CFA606": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "215AC460E94F4097AACF210B89647912",
+     "2E74A62B576C4794B65583C35DEEA872",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Explain each step in solving a simple equation as following from the equality of\nnumbers asserted at the previous step, starting from the assumption that the\noriginal equation has a solution. Construct a viable argument to justify a solution\nmethod.",
+    "id": "5BAECC4BED724D80904401BF06CFA606",
+    "listId": "1",
+    "parentId": "215AC460E94F4097AACF210B89647912",
+    "position": 1034,
+    "statementLabel": null,
+    "statementNotation": "A.REI.A.1"
+   },
+   "5C675126D5F24B78AAA93318C7AA6B40": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "76327B91F0B54956BBCBC1ED92F37720",
+     "C7A83B2F0BEA40D0B7C6BEA72EF6E8D4",
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize that sequences are functions, sometimes defined recursively, whose\ndomain is a subset of the integers. For example, the Fibonacci sequence is\ndefined recursively by 𝑓𝑓(0) = 𝑓𝑓(1) = 1, 𝑓𝑓(𝑛𝑛 + 1) = 𝑓𝑓(𝑛𝑛) + 𝑓𝑓(𝑛𝑛 − 1) for\n𝑛𝑛 ≥ 1.",
+    "id": "5C675126D5F24B78AAA93318C7AA6B40",
+    "listId": "3",
+    "parentId": "76327B91F0B54956BBCBC1ED92F37720",
+    "position": 1052,
+    "statementLabel": null,
+    "statementNotation": "F.IF.A.3"
+   },
+   "5DF1F27D130047E0B039D1E0C03FB820": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ADA681F95F724B1AA272562FBE1FD035",
+     "179A948BA7824A418F3AAD144AF27E8C",
+     "8BAB415BE5C64BF1A6CF53E01A378101"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Explain why the sum or product of two rational numbers is rational; that the\nsum of a rational number and an irrational number is irrational; and that the\nproduct of a nonzero rational number and an irrational number is irrational.",
+    "id": "5DF1F27D130047E0B039D1E0C03FB820",
+    "listId": "3",
+    "parentId": "ADA681F95F724B1AA272562FBE1FD035",
+    "position": 1003,
+    "statementLabel": null,
+    "statementNotation": "N.RN.B.3"
+   },
+   "6195EA6F98AD453CA3EA2FC63DD185CF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5314C6694B614BD0A2525A5C7B2E10C5",
+     "2E74A62B576C4794B65583C35DEEA872",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Graph the solutions to a linear inequality in two variables as a half-plane\n(excluding the boundary in the case of a strict inequality), and graph the\nsolution set to a system of linear inequalities in two variables as the intersection\nof the corresponding half-planes.",
+    "id": "6195EA6F98AD453CA3EA2FC63DD185CF",
+    "listId": "12",
+    "parentId": "5314C6694B614BD0A2525A5C7B2E10C5",
+    "position": 1046,
+    "statementLabel": null,
+    "statementNotation": "A.REI.D.12"
+   },
+   "623847ED98A948A1A2CC72A5860CACEB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9367968B418148F394D4A636FB95B824",
+     "8BAB415BE5C64BF1A6CF53E01A378101"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "REASON QUANTITATIVELY AND USE UNITS TO SOLVE PROBLEMS. ",
+    "id": "623847ED98A948A1A2CC72A5860CACEB",
+    "listId": "A",
+    "parentId": "9367968B418148F394D4A636FB95B824",
+    "position": 1005,
+    "statementLabel": null,
+    "statementNotation": "N.Q.A"
+   },
+   "63B966F0A930426B8F605CC6F5CC1535": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Creating Equations",
+    "id": "63B966F0A930426B8F605CC6F5CC1535",
+    "listId": "",
+    "parentId": "746FF37B83604A40939C6DF29E49F4F6",
+    "position": 1026,
+    "statementLabel": null,
+    "statementNotation": "A.CED"
+   },
+   "6AAF706A45C24F89ADD38E947BE2A57F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5314C6694B614BD0A2525A5C7B2E10C5",
+     "2E74A62B576C4794B65583C35DEEA872",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Understand that the graph of an equation in two variables is the set of all its\nsolutions plotted in the coordinate plane, often forming a curve (which could be a\nline).",
+    "id": "6AAF706A45C24F89ADD38E947BE2A57F",
+    "listId": "10",
+    "parentId": "5314C6694B614BD0A2525A5C7B2E10C5",
+    "position": 1044,
+    "statementLabel": null,
+    "statementNotation": "A.REI.D.10"
+   },
+   "7336A8BBD50748DABAE221867500ADD9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "390B60E956A541FB9E63B1074465D090",
+     "F438A3E932014DD9AC98BA1112BAA7DE",
+     "A8BC83D24B2A4EEDB58966F22F7542EE",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 4,
+    "description": "Interpret parts of an expression, such as terms, factors, and coefficients.",
+    "id": "7336A8BBD50748DABAE221867500ADD9",
+    "listId": "a",
+    "parentId": "390B60E956A541FB9E63B1074465D090",
+    "position": 1013,
+    "statementLabel": null,
+    "statementNotation": "A.SSE.A.1.a"
+   },
+   "73503B1AAA164431B12168F3DDC0AD08": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5314C6694B614BD0A2525A5C7B2E10C5",
+     "2E74A62B576C4794B65583C35DEEA872",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Explain why the x-coordinates of the points where the graphs of the equations\n𝑦𝑦 = 𝑓𝑓(𝑥𝑥) and 𝑦𝑦 = 𝑔𝑔(𝑥𝑥) intersect are the solutions of the equation\n𝑓𝑓(𝑥𝑥) = 𝑔𝑔(𝑥𝑥); find the solutions approximately, e.g., using technology to graph\nthe functions, make tables of values, or find successive approximations. Include\ncases where 𝑓𝑓(𝑥𝑥) and/or 𝑔𝑔(𝑥𝑥) are linear, polynomial, rational, absolute value,\nexponential, and logarithmic functions.",
+    "id": "73503B1AAA164431B12168F3DDC0AD08",
+    "listId": "11",
+    "parentId": "5314C6694B614BD0A2525A5C7B2E10C5",
+    "position": 1045,
+    "statementLabel": null,
+    "statementNotation": "A.REI.D.11"
+   },
+   "746FF37B83604A40939C6DF29E49F4F6": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Algebra",
+    "id": "746FF37B83604A40939C6DF29E49F4F6",
+    "listId": "",
+    "parentId": null,
+    "position": 1009,
+    "statementLabel": null,
+    "statementNotation": "A"
+   },
+   "75DFE57CCAA549348506EFFCE278A1DA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "76327B91F0B54956BBCBC1ED92F37720",
+     "C7A83B2F0BEA40D0B7C6BEA72EF6E8D4",
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use function notation, evaluate functions for inputs in their domains, and\ninterpret statements that use function notation in terms of a context.",
+    "id": "75DFE57CCAA549348506EFFCE278A1DA",
+    "listId": "2",
+    "parentId": "76327B91F0B54956BBCBC1ED92F37720",
+    "position": 1051,
+    "statementLabel": null,
+    "statementNotation": "F.IF.A.2"
+   },
+   "76327B91F0B54956BBCBC1ED92F37720": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C7A83B2F0BEA40D0B7C6BEA72EF6E8D4",
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "UNDERSTAND THE CONCEPT OF A FUNCTION AND USE FUNCTION\nNOTATION.",
+    "id": "76327B91F0B54956BBCBC1ED92F37720",
+    "listId": "A",
+    "parentId": "C7A83B2F0BEA40D0B7C6BEA72EF6E8D4",
+    "position": 1049,
+    "statementLabel": null,
+    "statementNotation": "F.IF.A"
+   },
+   "782ACE095CB940CB8C2A7AB2C73160E9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "78D5F0D8EDBE4845859DB0EC97F0CAA5",
+     "C7A83B2F0BEA40D0B7C6BEA72EF6E8D4",
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Graph functions expressed symbolically and show key features of the graph, by\nhand in simple cases and using technology for more complicated cases.",
+    "id": "782ACE095CB940CB8C2A7AB2C73160E9",
+    "listId": "7",
+    "parentId": "78D5F0D8EDBE4845859DB0EC97F0CAA5",
+    "position": 1058,
+    "statementLabel": null,
+    "statementNotation": "F.IF.C.7"
+   },
+   "78D5F0D8EDBE4845859DB0EC97F0CAA5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C7A83B2F0BEA40D0B7C6BEA72EF6E8D4",
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "ANALYZE FUNCTIONS USING DIFFERENT REPRESENTATIONS.",
+    "id": "78D5F0D8EDBE4845859DB0EC97F0CAA5",
+    "listId": "C",
+    "parentId": "C7A83B2F0BEA40D0B7C6BEA72EF6E8D4",
+    "position": 1057,
+    "statementLabel": null,
+    "statementNotation": "F.IF.C"
+   },
+   "7A0C4554BD6C4156B252E5DDFA588B8C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A00D4D988CC84C7E98E249D994BB3091",
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "BUILD A FUNCTION THAT MODELS A RELATIONSHIP BETWEEN TWO\nQUANTITIES.",
+    "id": "7A0C4554BD6C4156B252E5DDFA588B8C",
+    "listId": "A",
+    "parentId": "A00D4D988CC84C7E98E249D994BB3091",
+    "position": 1064,
+    "statementLabel": null,
+    "statementNotation": "F.BF.A"
+   },
+   "7BA8849D856C4AB3AEEF63ACB5C91CFE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C28D3FAD111749F98E025DE2DD36022A",
+     "FA741C26C0474FFDB6560CEA49852C46",
+     "FB0698CD70304705A7A37BF59D80865A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Interpret the slope (rate of change) and the intercept (constant term) of a linear\nmodel in the context of the data.",
+    "id": "7BA8849D856C4AB3AEEF63ACB5C91CFE",
+    "listId": "7",
+    "parentId": "C28D3FAD111749F98E025DE2DD36022A",
+    "position": 1087,
+    "statementLabel": null,
+    "statementNotation": "S.ID.C.7"
+   },
+   "84D4C8E8913744B9AACDB42AE57AF8D4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Arithmetic with Polynomials and Rational Expressions",
+    "id": "84D4C8E8913744B9AACDB42AE57AF8D4",
+    "listId": "",
+    "parentId": "746FF37B83604A40939C6DF29E49F4F6",
+    "position": 1021,
+    "statementLabel": null,
+    "statementNotation": "A.APR"
+   },
+   "8BAB415BE5C64BF1A6CF53E01A378101": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Number and Quantity",
+    "id": "8BAB415BE5C64BF1A6CF53E01A378101",
+    "listId": "",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": null,
+    "statementNotation": "N"
+   },
+   "904CA7B253F048FEBC6F9844B033FA23": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CE7B6D446BCC49C3827EB82F4D0D569D",
+     "A00D4D988CC84C7E98E249D994BB3091",
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify the effect on the graph of replacing 𝑓𝑓(𝑥𝑥) by 𝑓𝑓(𝑥𝑥) + 𝑘𝑘, 𝑘𝑘𝑘𝑘(𝑥𝑥), 𝑓𝑓(𝑘𝑘𝑘𝑘),\nand 𝑓𝑓(𝑥𝑥 + 𝑘𝑘) for specific values of k (both positive and negative); find the value\nof k given the graphs. Experiment with cases and illustrate an explanation of the\neffects on the graph using technology. Include recognizing even and odd\nfunctions from their graphs and algebraic expressions for them.",
+    "id": "904CA7B253F048FEBC6F9844B033FA23",
+    "listId": "3",
+    "parentId": "CE7B6D446BCC49C3827EB82F4D0D569D",
+    "position": 1068,
+    "statementLabel": null,
+    "statementNotation": "F.BF.B.3"
+   },
+   "9367968B418148F394D4A636FB95B824": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8BAB415BE5C64BF1A6CF53E01A378101"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Quantities",
+    "id": "9367968B418148F394D4A636FB95B824",
+    "listId": "",
+    "parentId": "8BAB415BE5C64BF1A6CF53E01A378101",
+    "position": 1004,
+    "statementLabel": null,
+    "statementNotation": "N.Q"
+   },
+   "940F5D1CFFF2420EB276B4C9361CF630": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E983A5CE80A54230B68CFF191FD9C03E",
+     "63B966F0A930426B8F605CC6F5CC1535",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Create equations in two or more variables to represent relationships between\nquantities; graph equations on coordinate axes with labels and scales.",
+    "id": "940F5D1CFFF2420EB276B4C9361CF630",
+    "listId": "2",
+    "parentId": "E983A5CE80A54230B68CFF191FD9C03E",
+    "position": 1029,
+    "statementLabel": null,
+    "statementNotation": "A.CED.A.2"
+   },
+   "95E5A88BA363477DA00C8166D7793F46": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C6B5B7ADAA6440D9BCA411EFD76311F1",
+     "C7A83B2F0BEA40D0B7C6BEA72EF6E8D4",
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Calculate and interpret the average rate of change of a function (presented\nsymbolically or as a table) over a specified interval. Estimate the rate of change\nfrom a graph.",
+    "id": "95E5A88BA363477DA00C8166D7793F46",
+    "listId": "6",
+    "parentId": "C6B5B7ADAA6440D9BCA411EFD76311F1",
+    "position": 1056,
+    "statementLabel": null,
+    "statementNotation": "F.IF.B.6"
+   },
+   "974B60D396C14A509516BDCA44118997": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EF373BE4BE0748A78BB6E67EC115A2EC",
+     "1AF539D6377A46AA8030EE6FE42965E7",
+     "A8BC83D24B2A4EEDB58966F22F7542EE",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 4,
+    "description": "Factor a quadratic expression to reveal the zeros of the function it defines.",
+    "id": "974B60D396C14A509516BDCA44118997",
+    "listId": "a",
+    "parentId": "EF373BE4BE0748A78BB6E67EC115A2EC",
+    "position": 1018,
+    "statementLabel": null,
+    "statementNotation": "A.SSE.B.3.a"
+   },
+   "99616843B3A849DD86DC18314D1C51DC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7A0C4554BD6C4156B252E5DDFA588B8C",
+     "A00D4D988CC84C7E98E249D994BB3091",
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Write a function that describes a relationship between two quantities.",
+    "id": "99616843B3A849DD86DC18314D1C51DC",
+    "listId": "1",
+    "parentId": "7A0C4554BD6C4156B252E5DDFA588B8C",
+    "position": 1065,
+    "statementLabel": null,
+    "statementNotation": "F.BF.A.1"
+   },
+   "99DCFE30B8C1437CB2496F5510D413C7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F438A3E932014DD9AC98BA1112BAA7DE",
+     "A8BC83D24B2A4EEDB58966F22F7542EE",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use the structure of an expression to identify ways to rewrite it. For example,\nsee 𝑥𝑥4 − 𝑦𝑦4 as (𝑥𝑥2)2 − (𝑦𝑦2)2, thus recognizing it as a difference of squares\nthat can be factored as (𝑥𝑥2 − 𝑦𝑦2) (𝑥𝑥2 − 𝑦𝑦2). ",
+    "id": "99DCFE30B8C1437CB2496F5510D413C7",
+    "listId": "2",
+    "parentId": "F438A3E932014DD9AC98BA1112BAA7DE",
+    "position": 1015,
+    "statementLabel": null,
+    "statementNotation": "A.SSE.A.2"
+   },
+   "9A020A174CAD4134ABD4C2D4504D5A36": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C28D3FAD111749F98E025DE2DD36022A",
+     "FA741C26C0474FFDB6560CEA49852C46",
+     "FB0698CD70304705A7A37BF59D80865A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Compute (using technology) and interpret the correlation coefficient of a linear\nfit.",
+    "id": "9A020A174CAD4134ABD4C2D4504D5A36",
+    "listId": "8",
+    "parentId": "C28D3FAD111749F98E025DE2DD36022A",
+    "position": 1088,
+    "statementLabel": null,
+    "statementNotation": "S.ID.C.8"
+   },
+   "9DC73E0C9F5444348CD87E7CEA99FD9F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EF373BE4BE0748A78BB6E67EC115A2EC",
+     "1AF539D6377A46AA8030EE6FE42965E7",
+     "A8BC83D24B2A4EEDB58966F22F7542EE",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 4,
+    "description": "Complete the square in a quadratic expression to reveal the maximum or\nminimum value of the function it defines.",
+    "id": "9DC73E0C9F5444348CD87E7CEA99FD9F",
+    "listId": "b",
+    "parentId": "EF373BE4BE0748A78BB6E67EC115A2EC",
+    "position": 1019,
+    "statementLabel": null,
+    "statementNotation": "A.SSE.B.3.b"
+   },
+   "9F75169F286B4BF7B6D1F73B43FB99D6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2E74A62B576C4794B65583C35DEEA872",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "SOLVE SYSTEMS OF EQUATIONS.",
+    "id": "9F75169F286B4BF7B6D1F73B43FB99D6",
+    "listId": "C",
+    "parentId": "2E74A62B576C4794B65583C35DEEA872",
+    "position": 1040,
+    "statementLabel": null,
+    "statementNotation": "A.REI.C"
+   },
+   "A00D4D988CC84C7E98E249D994BB3091": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Building Functions",
+    "id": "A00D4D988CC84C7E98E249D994BB3091",
+    "listId": "",
+    "parentId": "F34A2B4A1A7D4E5DA51F0D32126F4DC4",
+    "position": 1063,
+    "statementLabel": null,
+    "statementNotation": "F.BF"
+   },
+   "A0EBBAE979104A6C84EFB258E421983A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "22F13127EB134D7D97A065E62511FA6E",
+     "2E74A62B576C4794B65583C35DEEA872",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Solve quadratic equations in one variable.",
+    "id": "A0EBBAE979104A6C84EFB258E421983A",
+    "listId": "4",
+    "parentId": "22F13127EB134D7D97A065E62511FA6E",
+    "position": 1037,
+    "statementLabel": null,
+    "statementNotation": "A.REI.B.4"
+   },
+   "A4ABD51CE9744AEAA295511BFF12291B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B573175398D441F6872EA5DEE38CC47C",
+     "CC997859F8F94C0D8AEDE5753D1D3A91",
+     "369BB40E0EB34E5387D7F4796E3A855D",
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 4,
+    "description": "Recognize situations in which one quantity changes at a constant rate per\nunit interval relative to another.",
+    "id": "A4ABD51CE9744AEAA295511BFF12291B",
+    "listId": "b",
+    "parentId": "B573175398D441F6872EA5DEE38CC47C",
+    "position": 1073,
+    "statementLabel": null,
+    "statementNotation": "F.LE.A.1.b"
+   },
+   "A5D057C32ACB4C78B811EAD0CA087FE3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "78D5F0D8EDBE4845859DB0EC97F0CAA5",
+     "C7A83B2F0BEA40D0B7C6BEA72EF6E8D4",
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Write a function defined by an expression in different but equivalent forms to\nreveal and explain different properties of the function.",
+    "id": "A5D057C32ACB4C78B811EAD0CA087FE3",
+    "listId": "8",
+    "parentId": "78D5F0D8EDBE4845859DB0EC97F0CAA5",
+    "position": 1060,
+    "statementLabel": null,
+    "statementNotation": "F.IF.C.8"
+   },
+   "A5D1136A6F9D4002B18EA9F9B7499385": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A5D057C32ACB4C78B811EAD0CA087FE3",
+     "78D5F0D8EDBE4845859DB0EC97F0CAA5",
+     "C7A83B2F0BEA40D0B7C6BEA72EF6E8D4",
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 4,
+    "description": "Use the process of factoring and completing the square in a quadratic\nfunction to show zeros, extreme values, and symmetry of the graph, and\ninterpret these in terms of a context.",
+    "id": "A5D1136A6F9D4002B18EA9F9B7499385",
+    "listId": "a",
+    "parentId": "A5D057C32ACB4C78B811EAD0CA087FE3",
+    "position": 1061,
+    "statementLabel": null,
+    "statementNotation": "F.IF.C.8.a"
+   },
+   "A86FFF8BF0B842ABAFBC676BF0D63A4B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "623847ED98A948A1A2CC72A5860CACEB",
+     "9367968B418148F394D4A636FB95B824",
+     "8BAB415BE5C64BF1A6CF53E01A378101"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Choose a level of accuracy appropriate to limitations on measurement when\nreporting quantities.",
+    "id": "A86FFF8BF0B842ABAFBC676BF0D63A4B",
+    "listId": "3",
+    "parentId": "623847ED98A948A1A2CC72A5860CACEB",
+    "position": 1008,
+    "statementLabel": null,
+    "statementNotation": "N.Q.A.3"
+   },
+   "A8BC83D24B2A4EEDB58966F22F7542EE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Seeing Structure in Expressions",
+    "id": "A8BC83D24B2A4EEDB58966F22F7542EE",
+    "listId": "",
+    "parentId": "746FF37B83604A40939C6DF29E49F4F6",
+    "position": 1010,
+    "statementLabel": null,
+    "statementNotation": "A.SSE"
+   },
+   "A9890298D43844F6B22B6F1DF5063F1B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C6B5B7ADAA6440D9BCA411EFD76311F1",
+     "C7A83B2F0BEA40D0B7C6BEA72EF6E8D4",
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "For a function that models a relationship between two quantities, interpret key\nfeatures of graphs and tables in terms of the quantities, and sketch graphs\nshowing key features given a verbal description of the relationship. Key features\ninclude: intercepts; intervals where the function is increasing, decreasing,\npositive, or negative; relative maximums and minimums; symmetries; end\nbehavior; and periodicity.",
+    "id": "A9890298D43844F6B22B6F1DF5063F1B",
+    "listId": "4",
+    "parentId": "C6B5B7ADAA6440D9BCA411EFD76311F1",
+    "position": 1054,
+    "statementLabel": null,
+    "statementNotation": "F.IF.B.4"
+   },
+   "ACB3C50E1B9C4608A8835E7B85243E85": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FA741C26C0474FFDB6560CEA49852C46",
+     "FB0698CD70304705A7A37BF59D80865A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "SUMMARIZE, REPRESENT, AND INTERPRET DATA ON TWO CATEGORICAL\nAND QUANTITATIVE VARIABLES.",
+    "id": "ACB3C50E1B9C4608A8835E7B85243E85",
+    "listId": "B",
+    "parentId": "FA741C26C0474FFDB6560CEA49852C46",
+    "position": 1081,
+    "statementLabel": null,
+    "statementNotation": "S.ID.B"
+   },
+   "ADA681F95F724B1AA272562FBE1FD035": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "179A948BA7824A418F3AAD144AF27E8C",
+     "8BAB415BE5C64BF1A6CF53E01A378101"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "USE PROPERTIES OF RATIONAL AND IRRATIONAL NUMBERS.",
+    "id": "ADA681F95F724B1AA272562FBE1FD035",
+    "listId": "B",
+    "parentId": "179A948BA7824A418F3AAD144AF27E8C",
+    "position": 1002,
+    "statementLabel": null,
+    "statementNotation": "N.RN.B"
+   },
+   "AF300A29017C420EB3D54B4446795564": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "22F13127EB134D7D97A065E62511FA6E",
+     "2E74A62B576C4794B65583C35DEEA872",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Solve linear equations and inequalities in one variable, including equations with\ncoefficients represented by letters.",
+    "id": "AF300A29017C420EB3D54B4446795564",
+    "listId": "3",
+    "parentId": "22F13127EB134D7D97A065E62511FA6E",
+    "position": 1036,
+    "statementLabel": null,
+    "statementNotation": "A.REI.B.3"
+   },
+   "B233A94F61194BA3B0A43EF0306E0340": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "782ACE095CB940CB8C2A7AB2C73160E9",
+     "78D5F0D8EDBE4845859DB0EC97F0CAA5",
+     "C7A83B2F0BEA40D0B7C6BEA72EF6E8D4",
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 4,
+    "description": "Graph linear and quadratic functions and show intercepts, maxima, and\nminima.",
+    "id": "B233A94F61194BA3B0A43EF0306E0340",
+    "listId": "a",
+    "parentId": "782ACE095CB940CB8C2A7AB2C73160E9",
+    "position": 1059,
+    "statementLabel": null,
+    "statementNotation": "F.IF.C.7.a"
+   },
+   "B41C9943016441219792B64AE7569C2C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B573175398D441F6872EA5DEE38CC47C",
+     "CC997859F8F94C0D8AEDE5753D1D3A91",
+     "369BB40E0EB34E5387D7F4796E3A855D",
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 4,
+    "description": "Recognize situations in which a quantity grows or decays by a constant\npercent rate per unit interval relative to another.",
+    "id": "B41C9943016441219792B64AE7569C2C",
+    "listId": "c",
+    "parentId": "B573175398D441F6872EA5DEE38CC47C",
+    "position": 1074,
+    "statementLabel": null,
+    "statementNotation": "F.LE.A.1.c"
+   },
+   "B573175398D441F6872EA5DEE38CC47C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CC997859F8F94C0D8AEDE5753D1D3A91",
+     "369BB40E0EB34E5387D7F4796E3A855D",
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Distinguish between situations that can be modeled with linear functions and\nwith exponential functions.",
+    "id": "B573175398D441F6872EA5DEE38CC47C",
+    "listId": "1",
+    "parentId": "CC997859F8F94C0D8AEDE5753D1D3A91",
+    "position": 1071,
+    "statementLabel": null,
+    "statementNotation": "F.LE.A.1"
+   },
+   "C16ADE3FD54342C8AE3A2459B89274E3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "99616843B3A849DD86DC18314D1C51DC",
+     "7A0C4554BD6C4156B252E5DDFA588B8C",
+     "A00D4D988CC84C7E98E249D994BB3091",
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 4,
+    "description": "Determine an explicit expression, a recursive process, or steps for\ncalculation from a context.",
+    "id": "C16ADE3FD54342C8AE3A2459B89274E3",
+    "listId": "a",
+    "parentId": "99616843B3A849DD86DC18314D1C51DC",
+    "position": 1066,
+    "statementLabel": null,
+    "statementNotation": "F.BF.A.1.a"
+   },
+   "C28D3FAD111749F98E025DE2DD36022A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FA741C26C0474FFDB6560CEA49852C46",
+     "FB0698CD70304705A7A37BF59D80865A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "INTERPRET LINEAR MODELS",
+    "id": "C28D3FAD111749F98E025DE2DD36022A",
+    "listId": "C",
+    "parentId": "FA741C26C0474FFDB6560CEA49852C46",
+    "position": 1086,
+    "statementLabel": null,
+    "statementNotation": "S.ID.C"
+   },
+   "C6B5B7ADAA6440D9BCA411EFD76311F1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C7A83B2F0BEA40D0B7C6BEA72EF6E8D4",
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "INTERPRET FUNCTIONS THAT ARISE IN APPLICATIONS IN TERMS OF THE\nCONTEXT.",
+    "id": "C6B5B7ADAA6440D9BCA411EFD76311F1",
+    "listId": "B",
+    "parentId": "C7A83B2F0BEA40D0B7C6BEA72EF6E8D4",
+    "position": 1053,
+    "statementLabel": null,
+    "statementNotation": "F.IF.B"
+   },
+   "C7A83B2F0BEA40D0B7C6BEA72EF6E8D4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Interpreting Functions",
+    "id": "C7A83B2F0BEA40D0B7C6BEA72EF6E8D4",
+    "listId": "",
+    "parentId": "F34A2B4A1A7D4E5DA51F0D32126F4DC4",
+    "position": 1048,
+    "statementLabel": null,
+    "statementNotation": "F.IF"
+   },
+   "CB737F97D3FF4C1D83482DD4DDCC3F29": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E983A5CE80A54230B68CFF191FD9C03E",
+     "63B966F0A930426B8F605CC6F5CC1535",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Rearrange formulas to highlight a quantity of interest, using the same reasoning\nas in solving equations. For example, rearrange Ohm's law V = IR to highlight\nresistance R. ",
+    "id": "CB737F97D3FF4C1D83482DD4DDCC3F29",
+    "listId": "4",
+    "parentId": "E983A5CE80A54230B68CFF191FD9C03E",
+    "position": 1031,
+    "statementLabel": null,
+    "statementNotation": "A.CED.A.4"
+   },
+   "CC997859F8F94C0D8AEDE5753D1D3A91": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "369BB40E0EB34E5387D7F4796E3A855D",
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "CONSTRUCT AND COMPARE LINEAR, QUADRATIC, AND EXPONENTIAL\nMODELS AND SOLVE PROBLEMS.",
+    "id": "CC997859F8F94C0D8AEDE5753D1D3A91",
+    "listId": "A",
+    "parentId": "369BB40E0EB34E5387D7F4796E3A855D",
+    "position": 1070,
+    "statementLabel": null,
+    "statementNotation": "F.LE.A"
+   },
+   "CCE96DB851404DE9B9BCA2962E809F84": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "31FA2184B010451FAC279FA327470D46",
+     "84D4C8E8913744B9AACDB42AE57AF8D4",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Understand that polynomials form a system analogous to the integers, namely,\nthey are closed under the operations of addition, subtraction, and\nmultiplication; add, subtract, and multiply polynomials.",
+    "id": "CCE96DB851404DE9B9BCA2962E809F84",
+    "listId": "1",
+    "parentId": "31FA2184B010451FAC279FA327470D46",
+    "position": 1023,
+    "statementLabel": null,
+    "statementNotation": "A.APR.A.1"
+   },
+   "CE2F6EFBAB0A44958DB6F03A18C6D0D5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B573175398D441F6872EA5DEE38CC47C",
+     "CC997859F8F94C0D8AEDE5753D1D3A91",
+     "369BB40E0EB34E5387D7F4796E3A855D",
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 4,
+    "description": "Prove that linear functions grow by equal differences over equal intervals,\nand that exponential functions grow by equal factors over equal intervals.",
+    "id": "CE2F6EFBAB0A44958DB6F03A18C6D0D5",
+    "listId": "a",
+    "parentId": "B573175398D441F6872EA5DEE38CC47C",
+    "position": 1072,
+    "statementLabel": null,
+    "statementNotation": "F.LE.A.1.a"
+   },
+   "CE7B6D446BCC49C3827EB82F4D0D569D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A00D4D988CC84C7E98E249D994BB3091",
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "BUILD NEW FUNCTIONS FROM EXISTING FUNCTIONS.",
+    "id": "CE7B6D446BCC49C3827EB82F4D0D569D",
+    "listId": "B",
+    "parentId": "A00D4D988CC84C7E98E249D994BB3091",
+    "position": 1067,
+    "statementLabel": null,
+    "statementNotation": "F.BF.B"
+   },
+   "CF9C3175E6094975B7B5A50E0370E8AC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9F75169F286B4BF7B6D1F73B43FB99D6",
+     "2E74A62B576C4794B65583C35DEEA872",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Prove that, given a system of two equations in two variables, replacing one\nequation by the sum of that equation and a multiple of the other produces a\nsystem with the same solutions.",
+    "id": "CF9C3175E6094975B7B5A50E0370E8AC",
+    "listId": "5",
+    "parentId": "9F75169F286B4BF7B6D1F73B43FB99D6",
+    "position": 1041,
+    "statementLabel": null,
+    "statementNotation": "A.REI.C.5"
+   },
+   "CFD9688A51FB47608C9B0B6CECFDEE02": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A0EBBAE979104A6C84EFB258E421983A",
+     "22F13127EB134D7D97A065E62511FA6E",
+     "2E74A62B576C4794B65583C35DEEA872",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 4,
+    "description": "Solve quadratic equations by inspection (e.g., for 𝑥𝑥2 = 49), taking square roots,\ncompleting the square, the quadratic formula and factoring, as appropriate to\nthe initial form of the equation. Recognize when the quadratic formula gives\ncomplex solutions and write them as 𝑎𝑎 ± 𝑏𝑏𝑏𝑏 for real numbers a and b.",
+    "id": "CFD9688A51FB47608C9B0B6CECFDEE02",
+    "listId": "b",
+    "parentId": "A0EBBAE979104A6C84EFB258E421983A",
+    "position": 1039,
+    "statementLabel": null,
+    "statementNotation": "A.REI.B.4.b"
+   },
+   "D37D8B98B5004BE39520A066EC66B2F1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CC997859F8F94C0D8AEDE5753D1D3A91",
+     "369BB40E0EB34E5387D7F4796E3A855D",
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Construct linear and exponential functions, including arithmetic and geometric\nsequences, given a graph, a description of a relationship, or two input-output\npairs (include reading these from a table).",
+    "id": "D37D8B98B5004BE39520A066EC66B2F1",
+    "listId": "2",
+    "parentId": "CC997859F8F94C0D8AEDE5753D1D3A91",
+    "position": 1075,
+    "statementLabel": null,
+    "statementNotation": "F.LE.A.2"
+   },
+   "DEA7B944FC3D4FF7AE6B103B02687020": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A0EBBAE979104A6C84EFB258E421983A",
+     "22F13127EB134D7D97A065E62511FA6E",
+     "2E74A62B576C4794B65583C35DEEA872",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 4,
+    "description": "Use the method of completing the square to transform any quadratic\nequation in x into an equation of the form (𝑥𝑥 − 𝑝𝑝)2 = 𝑞𝑞 that has the same\nsolutions. Derive the quadratic formula from this form.",
+    "id": "DEA7B944FC3D4FF7AE6B103B02687020",
+    "listId": "a",
+    "parentId": "A0EBBAE979104A6C84EFB258E421983A",
+    "position": 1038,
+    "statementLabel": null,
+    "statementNotation": "A.REI.B.4.a"
+   },
+   "E0A06C019EB14CB1BAE58829CF76856A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E983A5CE80A54230B68CFF191FD9C03E",
+     "63B966F0A930426B8F605CC6F5CC1535",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Represent constraints by equations or inequalities, and by systems of equations\nand/or inequalities, and interpret solutions as viable or nonviable options in a\nmodeling context. For example, represent inequalities describing nutritional and\ncost constraints on combinations of different foods.",
+    "id": "E0A06C019EB14CB1BAE58829CF76856A",
+    "listId": "3",
+    "parentId": "E983A5CE80A54230B68CFF191FD9C03E",
+    "position": 1030,
+    "statementLabel": null,
+    "statementNotation": "A.CED.A.3"
+   },
+   "E18104EFD39744639B977C4926E34E0D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "782ACE095CB940CB8C2A7AB2C73160E9",
+     "78D5F0D8EDBE4845859DB0EC97F0CAA5",
+     "C7A83B2F0BEA40D0B7C6BEA72EF6E8D4",
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 4,
+    "description": "Graph square root, cube root, and piecewise-defined functions, including\nstep functions and absolute value functions.",
+    "id": "E18104EFD39744639B977C4926E34E0D",
+    "listId": "b",
+    "parentId": "782ACE095CB940CB8C2A7AB2C73160E9",
+    "position": 1059,
+    "statementLabel": null,
+    "statementNotation": "F.IF.C.7.b"
+   },
+   "E3699CFE3B8048C99464D16D98C005B4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "369BB40E0EB34E5387D7F4796E3A855D",
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "INTERPRET EXPRESSIONS FOR FUNCTIONS IN TERMS OF THE SITUATION THEY\nMODEL.",
+    "id": "E3699CFE3B8048C99464D16D98C005B4",
+    "listId": "B",
+    "parentId": "369BB40E0EB34E5387D7F4796E3A855D",
+    "position": 1077,
+    "statementLabel": null,
+    "statementNotation": "F.LE.B"
+   },
+   "E43C3561B85B4592A85C0AD1053F1B18": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C6B5B7ADAA6440D9BCA411EFD76311F1",
+     "C7A83B2F0BEA40D0B7C6BEA72EF6E8D4",
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Relate the domain of a function to its graph and, where applicable, to the\nquantitative relationship it describes. For example, if the function ℎ(𝑛𝑛) gives the\nnumber of person-hours it takes to assemble n engines in a factory, then the\npositive integers would be an appropriate domain for the function.",
+    "id": "E43C3561B85B4592A85C0AD1053F1B18",
+    "listId": "5",
+    "parentId": "C6B5B7ADAA6440D9BCA411EFD76311F1",
+    "position": 1055,
+    "statementLabel": null,
+    "statementNotation": "F.IF.B.5"
+   },
+   "E946171EA28B4B6FB62D2E3E66FDDDA3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2D683D4AE19C463D9F30E7E5F256FE19",
+     "ACB3C50E1B9C4608A8835E7B85243E85",
+     "FA741C26C0474FFDB6560CEA49852C46",
+     "FB0698CD70304705A7A37BF59D80865A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 4,
+    "description": "Fit a function to the data; use functions fitted to data to solve problems in\nthe context of the data. Use given functions or choose a function suggested\nby the context. Emphasize linear, quadratic, and exponential models. ",
+    "id": "E946171EA28B4B6FB62D2E3E66FDDDA3",
+    "listId": "a",
+    "parentId": "2D683D4AE19C463D9F30E7E5F256FE19",
+    "position": 1083,
+    "statementLabel": null,
+    "statementNotation": "S.ID.B.6.a"
+   },
+   "E983A5CE80A54230B68CFF191FD9C03E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "63B966F0A930426B8F605CC6F5CC1535",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "CREATE EQUATIONS THAT DESCRIBE NUMBERS OR RELATIONSHIPS. ",
+    "id": "E983A5CE80A54230B68CFF191FD9C03E",
+    "listId": "A",
+    "parentId": "63B966F0A930426B8F605CC6F5CC1535",
+    "position": 1027,
+    "statementLabel": null,
+    "statementNotation": "A.CED.A"
+   },
+   "EF373BE4BE0748A78BB6E67EC115A2EC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1AF539D6377A46AA8030EE6FE42965E7",
+     "A8BC83D24B2A4EEDB58966F22F7542EE",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Choose and produce an equivalent form of an expression to reveal and explain\nproperties of the quantity represented by the expression.",
+    "id": "EF373BE4BE0748A78BB6E67EC115A2EC",
+    "listId": "3",
+    "parentId": "1AF539D6377A46AA8030EE6FE42965E7",
+    "position": 1017,
+    "statementLabel": null,
+    "statementNotation": "A.SSE.B.3"
+   },
+   "F0934251CA244085BE394695D41AB743": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "78D5F0D8EDBE4845859DB0EC97F0CAA5",
+     "C7A83B2F0BEA40D0B7C6BEA72EF6E8D4",
+     "F34A2B4A1A7D4E5DA51F0D32126F4DC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Compare properties of two functions each represented in a different way\n(algebraically, graphically, numerically in tables, or by verbal descriptions). For\nexample, given a graph of one quadratic function and an algebraic expression\nfor another, say which has the larger maximum.",
+    "id": "F0934251CA244085BE394695D41AB743",
+    "listId": "9",
+    "parentId": "78D5F0D8EDBE4845859DB0EC97F0CAA5",
+    "position": 1062,
+    "statementLabel": null,
+    "statementNotation": "F.IF.C.9"
+   },
+   "F34A2B4A1A7D4E5DA51F0D32126F4DC4": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Functions",
+    "id": "F34A2B4A1A7D4E5DA51F0D32126F4DC4",
+    "listId": "",
+    "parentId": null,
+    "position": 1047,
+    "statementLabel": null,
+    "statementNotation": "F"
+   },
+   "F34F75517F484A678C6DEA2BB0091D22": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2D683D4AE19C463D9F30E7E5F256FE19",
+     "ACB3C50E1B9C4608A8835E7B85243E85",
+     "FA741C26C0474FFDB6560CEA49852C46",
+     "FB0698CD70304705A7A37BF59D80865A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 4,
+    "description": "Fit a linear function for a scatter plot that suggests a linear association.",
+    "id": "F34F75517F484A678C6DEA2BB0091D22",
+    "listId": "c",
+    "parentId": "2D683D4AE19C463D9F30E7E5F256FE19",
+    "position": 1085,
+    "statementLabel": null,
+    "statementNotation": "S.ID.B.6.c"
+   },
+   "F438A3E932014DD9AC98BA1112BAA7DE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A8BC83D24B2A4EEDB58966F22F7542EE",
+     "746FF37B83604A40939C6DF29E49F4F6"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "INTERPRET THE STRUCTURE OF EXPRESSIONS. ",
+    "id": "F438A3E932014DD9AC98BA1112BAA7DE",
+    "listId": "A",
+    "parentId": "A8BC83D24B2A4EEDB58966F22F7542EE",
+    "position": 1011,
+    "statementLabel": null,
+    "statementNotation": "A.SSE.A"
+   },
+   "FA741C26C0474FFDB6560CEA49852C46": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FB0698CD70304705A7A37BF59D80865A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Interpreting categorical and quantitative data",
+    "id": "FA741C26C0474FFDB6560CEA49852C46",
+    "listId": "",
+    "parentId": "FB0698CD70304705A7A37BF59D80865A",
+    "position": 1080,
+    "statementLabel": null,
+    "statementNotation": "S.ID"
+   },
+   "FB0698CD70304705A7A37BF59D80865A": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Statistics",
+    "id": "FB0698CD70304705A7A37BF59D80865A",
+    "listId": "",
+    "parentId": null,
+    "position": 1079,
+    "statementLabel": null,
+    "statementNotation": "S"
+   }
+  },
+  "subject": "Mathematics (2025-)",
+  "title": "Algebra I"
+ }
+}

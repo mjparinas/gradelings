@@ -6,6 +6,7 @@ import { useFlag } from "@/lib/remoteFlags";
 import { ReportQuestion } from "./ReportQuestion";
 import { reportDetails, type ReportDetails } from "@/lib/questionReport";
 import { SaveProgress } from "./SaveProgress";
+import { MysteryBox } from "./MysteryBox";
 import { LessonBody } from "./LessonScreen";
 import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { getUnitRef } from "@/content";
@@ -738,6 +739,8 @@ function Summary({ plan, results, startDerived }: { plan: Plan; results: Result[
             </p>
           </div>
         )}
+
+        <MysteryBox answers={total} />
 
         {total > 0 && (
           <div className="card w-full p-4 text-left animate-rise-in" style={{ animationDelay: "1.8s" }}>

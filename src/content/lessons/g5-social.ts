@@ -859,6 +859,116 @@ export const lessons: GradeLessons = {
     ["Banks lend money.", "A home loan is called a mortgage."],
     "a bank",
   ),
+  "social/ca-g7-west-african-life": lesson(
+    ["Many West Africans lived in extended families, with several generations close together.", "Labour specialization means people do different jobs and trade. Cities like Timbuktu, Djenné and Gao grew on the Niger and Saharan routes.", "Arabic became a language of records, trade and Islamic scholarship, especially in Timbuktu."],
+    "What does labour specialization mean?",
+    ["One person can’t make everything well.", "People do different jobs and trade what they make."],
+    "people do different jobs and trade with each other",
+  ),
+  "social/ca-g8-divided-nation": lesson(
+    ["As the country grew, North and South argued over whether slavery would spread to new lands.", "The Compromise of 1850 made California a free state and passed a stronger Fugitive Slave Act, forcing free states to help return people who escaped.", "Frederick Douglass escaped slavery and became a famous speaker and writer against it."],
+    "What did the Fugitive Slave Act of 1850 require?",
+    ["It was part of the Compromise of 1850.", "It was about people who escaped slavery.", "People in free states had to help return them."],
+    "people in free states had to help return people who had escaped slavery",
+  ),
+  // Missouri (us-mo)
+  "social/wa-g8-reconstruction": lesson(
+    ["Reconstruction (1865–1877) rebuilt the South and brought Southern states back into the Union.", "The Reconstruction Amendments: the 13th ended slavery, the 14th made formerly enslaved people citizens, and the 15th protected the vote for Black men.", "After 1877, many of these rights were rolled back by Jim Crow laws."],
+    "Which amendment made formerly enslaved people citizens?",
+    ["13th: ended slavery.", "14th: citizenship and equal protection.", "15th: voting regardless of race."],
+    "the 14th",
+  ),
+  "social/ny-g8-city-immigrants": lesson(
+    ["From the 1890s, millions of immigrants came through Ellis Island, and many lived in crowded tenements in New York City.", "Jacob Riis’s 1890 book How the Other Half Lives used photographs to show the hard lives of the poor.", "In 1898 five boroughs joined to form Greater New York City; its first subway opened in 1904. Tammany Hall was a powerful political machine."],
+    "Which five areas joined in 1898 to form Greater New York City?",
+    ["They became the five boroughs.", "Manhattan, Brooklyn and the Bronx are three.", "Queens and Staten Island are the other two."],
+    "Manhattan, Brooklyn, the Bronx, Queens and Staten Island",
+  ),
+  "social/ny-g8-workers-progressives": lesson(
+    ["The Triangle Shirtwaist Factory fire (1911) killed 146 workers, leading to new safety laws.", "Workers formed unions; a strike is when workers stop working until their demands are met.", "Progressives pushed reform: Lewis Hine photographed child labour, and Frances Perkins became the first woman US Secretary of Labor."],
+    "What is a strike?",
+    ["Workers want better pay or conditions.", "They stop working together.", "They return when demands are met."],
+    "when workers stop working until their demands are met",
+  ),
+  "social/al-g9-world-war-ii": lesson(
+    ["War began when Germany invaded Poland on September 1, 1939.", "Turning points: Stalingrad (1942–1943) destroyed a German army; D-Day landed Allies in Normandy on June 6, 1944.", "Civilians suffered bombing and evacuation. The war ended after atomic bombs on Hiroshima and Nagasaki; trials at Nuremberg and Tokyo followed."],
+    "When did World War II begin in Europe?",
+    ["It began with Germany’s invasion of Poland.", "The date was September 1, 1939."],
+    "September 1, 1939",
+  ),
+  "social/ny-g8-postwar-america": lesson(
+    ["After World War II, many families moved to suburbs, and many people moved to the Sun Belt in the South and West.", "As baby boomers retire, more people rely on Social Security and Medicare.", "Environmental problems, like toxic waste at Love Canal, led to action; the EPA was created in 1970 to protect air, water and land."],
+    "Why was the Environmental Protection Agency created in 1970?",
+    ["Pollution was harming air, water and land.", "People wanted the government to act.", "The EPA protects the environment."],
+    "to protect the nation’s air, water and land",
+  ),
+  "social/ny-g8-timeline": lesson(
+    ["Anchor dates: 14th Amendment 1868, 15th Amendment 1870, Ellis Island opens 1892, first NYC subway 1904.", "Germany invades Poland 1939, Sputnik 1957, Voting Rights Act and Medicare 1965, moon landing 1969.", "The Soviet Union breaks up in 1991, and the September 11 attacks are in 2001. Compare years to put events in order."],
+    "Which came first: Sputnik’s launch or the first moon landing?",
+    ["Sputnik: 1957.", "Moon landing: 1969.", "1957 is earlier."],
+    "Sputnik’s launch",
+  ),
+  "social/mo-g5-growing-nation": lesson(
+    ["The Louisiana Purchase (1803) doubled the country; Lewis and Clark explored it to the Pacific.", "In the War of 1812, Americans built factories; the anthem was written; Andrew Jackson won at New Orleans (1815).", "Westward settlement took much land from American Indian nations."],
+    "During which war was “The Star-Spangled Banner” written?",
+    ["Francis Scott Key watched the attack on Fort McHenry in 1814.", "That attack was part of the War of 1812."],
+    "the War of 1812",
+  ),
+  "social/mo-g5-civil-rights": lesson(
+    ["Brown v. Board of Education (1954) ended legal school segregation under the 14th Amendment's equal protection clause.", "Leaders like Martin Luther King Jr. led peaceful protests; in St. Louis, Shelley v. Kraemer (1948) helped end housing rules that kept Black families out.", "Other groups fought for equal rights too: César Chávez and Dolores Huerta organized farm workers."],
+    "Brown v. Board was decided under which amendment?",
+    ["The case was about equal treatment in schools.", "The equal protection clause is in one amendment.", "That is the 14th Amendment."],
+    "the 14th",
+  ),
+  // Massachusetts (us-ma)
+  "social/ma-g5-massachusetts-in-the-nation": lesson(
+    ["Boston's Freedom Trail links places from the Revolution, like Faneuil Hall and the Old North Church.", "Shays' Rebellion (1786–1787) showed the Articles of Confederation were too weak, and led to the Constitution.", "Lowell's textile mills used river power, and their cotton was grown by enslaved people in the South. Massachusetts ended slavery in the 1780s."],
+    "Why did Shays' Rebellion matter to the whole nation?",
+    ["The national government could not stop it.", "Leaders decided to write a stronger plan of government."],
+    "it led to the Constitutional Convention",
+  ),
+  "social/md-g5-maryland-civil-war": lesson(
+    ["Slavery was the central cause of the Civil War.", "Maryland was a border state: it allowed slavery but stayed in the Union. Marylanders fought on both sides.", "The Battle of Antietam in 1862 led to the Emancipation Proclamation. Maryland ended slavery with a new constitution in 1864."],
+    "Why didn't the Emancipation Proclamation free enslaved people in Maryland?",
+    ["It covered only states fighting against the Union.", "Maryland stayed in the Union."],
+    "Maryland was still in the Union",
+  ),
+  "social/md-g5-moving-goods": lesson(
+    ["The National Road (1811) started in Cumberland and led west.", "The B&O Railroad and the C&O Canal both began on July 4, 1828. Trains were faster and ran all year, so the railroad won.", "In 1844, the first long telegraph line sent a message from Washington to Baltimore in minutes."],
+    "Why did the railroad beat the canal?",
+    ["Canals froze in winter, and mules walk slowly.", "Trains were faster and ran all year."],
+    "trains were faster and could run all year",
+  ),
+  "social/md-g5-press-and-institutions": lesson(
+    ["The First Amendment protects freedom of the press, so people can publish news and opinions.", "Maryland newspapers include the Maryland Gazette (1727) and the Afro-American (1892).", "Institutions like schools, HBCUs, libraries and churches help shape ideas about freedom."],
+    "Why does a democracy need a free press?",
+    ["Voters choose leaders.", "They need true information to choose well and to check what leaders do."],
+    "so people can learn the truth and judge their leaders",
+  ),
+  "social/md-g5-civil-rights": lesson(
+    ["Segregation kept people apart by race in schools, restaurants and other places.", "Thurgood Marshall of Baltimore won Murray v. Pearson in 1936 and Brown v. Board of Education in 1954, then became the first Black Supreme Court justice.", "Marylanders like Lillie Carroll Jackson, Juanita Jackson Mitchell and Gloria Richardson fought for equal rights with lawsuits, sit-ins and protests."],
+    "What did Brown v. Board of Education decide?",
+    ["It was about public schools.", "Separate schools for Black and white children were not equal."],
+    "segregated public schools are unconstitutional",
+  ),
+  "social/wa-g8-civil-war": lesson(
+    ["The main cause of the Civil War (1861–1865) was slavery and whether it would spread.", "Southern states seceded and formed the Confederate States of America; the North was the Union. Maryland, a border state, stayed in the Union.", "The war ended when Lee surrendered to Grant at Appomattox Court House, Virginia, in April 1865."],
+    "What did the states that seceded form?",
+    ["To secede means to leave the Union.", "Eleven Southern states left.", "They formed their own government."],
+    "the Confederate States of America",
+  ),
+  "social/md-g5-maryland-constitution": lesson(
+    ["The Articles of Confederation made a weak national government, so delegates wrote the Constitution in 1787.", "Three branches check one another. The Great Compromise made a Senate with two members per state and a House based on population.", "Antifederalists wanted a list of rights, like Maryland's Declaration of Rights, so the Bill of Rights was added in 1791."],
+    "Under the Great Compromise, how many senators does each state get?",
+    ["The Senate gives every state the same number.", "Small states wanted equal votes."],
+    "two",
+  ),
+  "social/md-g5-reconstruction-maryland": lesson(
+    ["After the war, the 13th Amendment ended slavery, the 14th promised equal protection and the 15th protected voting regardless of race.", "The Freedmen's Bureau started schools for freed people, but it had little money and soon closed. Jim Crow laws and voting rules took many rights away.", "Maryland's four public HBCUs (Bowie State, Morgan State, UMES and Coppin State) were founded to educate Black students, many as teachers."],
+    "Which amendment ended slavery?",
+    ["There were three Reconstruction amendments.", "The first of them, in 1865, ended slavery."],
+    "the 13th Amendment",
+  ),
   // South Carolina (us-sc)
   "social/ca-g8-industrial-america": lesson(
     ["After the Civil War, railroads (with land grants), factories and inventions grew fast. Ford’s assembly line made cars faster and cheaper.", "Big businesses became monopolies; the Sherman Antitrust Act (1890) tried to protect competition.", "Immigrants filled crowded tenements; workers formed unions, and farmers backed the Populist Party."],

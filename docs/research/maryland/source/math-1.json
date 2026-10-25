@@ -1,0 +1,1085 @@
+{
+ "data": {
+  "cspStatus": {
+   "notes": null,
+   "value": "visible"
+  },
+  "document": {
+   "publicationStatus": "Published",
+   "sourceURL": "https://marylandpublicschools.org/about/documents/dcaa/math/revised/grade-1-mccrs-math-crosswalk-a.pdf",
+   "title": "Grade 1 MCCRS Math Crosswalk"
+  },
+  "educationLevels": [
+   "01"
+  ],
+  "id": "E5DAAB6E8CA24B3EBA431FDD93B0A8D9",
+  "jurisdiction": {
+   "id": "49FCDFBD2CF04033A9C347BFA0584DF0",
+   "title": "Maryland"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/4.0/us/",
+   "rightsHolder": "Common Curriculum, Inc.",
+   "title": "CC BY 4.0 US"
+  },
+  "normalizedSubject": null,
+  "standards": {
+   "03294EFF0F71425F91C930AB1DEFAC08": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7D8886CBF4154DC79863FD7086CC3AEE",
+     "194CA61A119F4DF4992F2EBD338D25FD"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Determine the unknown whole number in an addition or\nsubtraction equation relating three whole numbers (e.g.,",
+    "id": "03294EFF0F71425F91C930AB1DEFAC08",
+    "listId": "3",
+    "parentId": "7D8886CBF4154DC79863FD7086CC3AEE",
+    "position": 1044,
+    "statementLabel": null,
+    "statementNotation": "1.AT.A.3"
+   },
+   "034FA8CF137645FEAE8A5368C376F660": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ED5E1B2FE9314AB69E3F0334BDA8A85F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "REPRESENT AND INTERPRET DATA.  ",
+    "id": "034FA8CF137645FEAE8A5368C376F660",
+    "listId": "A",
+    "parentId": "ED5E1B2FE9314AB69E3F0334BDA8A85F",
+    "position": 1056,
+    "statementLabel": null,
+    "statementNotation": "1.DS.A"
+   },
+   "06E6372DB73E4263A41F74A6D5E08FA5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7422A81D64AD477B9463468A86B987CE",
+     "2F628CD163064F12AE9C8FC493D7723D",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use properties of operations, and/or the inverse\nrelationship between addition and subtraction to\nadd.",
+    "id": "06E6372DB73E4263A41F74A6D5E08FA5",
+    "listId": "c",
+    "parentId": "7422A81D64AD477B9463468A86B987CE",
+    "position": 1027,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.E.10.c"
+   },
+   "0B1A84365F0D4000885765D013E47A20": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6E92B844570344D48A24EB019D0B4BED",
+     "2F628CD163064F12AE9C8FC493D7723D",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Represent and explain the calculation by\nconnecting the strategy used to the meaning of\nsubtraction.",
+    "id": "0B1A84365F0D4000885765D013E47A20",
+    "listId": "c",
+    "parentId": "6E92B844570344D48A24EB019D0B4BED",
+    "position": 1037,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.E.13.c"
+   },
+   "0E208759719C4390813117E4059F572D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3C7CC555A154423FBC9506BFFB5BD984",
+     "034FA8CF137645FEAE8A5368C376F660",
+     "ED5E1B2FE9314AB69E3F0334BDA8A85F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Summarize the data presented in tally charts\nusing “most,” “least,” “greater than,” “less than,”\nand “equal to”.",
+    "id": "0E208759719C4390813117E4059F572D",
+    "listId": "d",
+    "parentId": "3C7CC555A154423FBC9506BFFB5BD984",
+    "position": 1061,
+    "statementLabel": null,
+    "statementNotation": "1.DS.A.1.d"
+   },
+   "13138F46BD9F490DBD1E4226BF507440": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7D8886CBF4154DC79863FD7086CC3AEE",
+     "194CA61A119F4DF4992F2EBD338D25FD"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Add and subtract within 20 involving situations of adding\nto, taking from, putting together, taking apart, and\ncomparing, with unknowns in all positions (result\nunknown, change unknown, start unknown) by using\nobjects, drawings, and/or equations with a symbol for the\nunknown number to represent the problem.",
+    "id": "13138F46BD9F490DBD1E4226BF507440",
+    "listId": "2",
+    "parentId": "7D8886CBF4154DC79863FD7086CC3AEE",
+    "position": 1043,
+    "statementLabel": null,
+    "statementNotation": "1.AT.A.2"
+   },
+   "194CA61A119F4DF4992F2EBD338D25FD": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Algebraic Thinking",
+    "id": "194CA61A119F4DF4992F2EBD338D25FD",
+    "listId": "",
+    "parentId": null,
+    "position": 1040,
+    "statementLabel": null,
+    "statementNotation": "AT"
+   },
+   "1A8C2890C68945188C6FF4553AC95567": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7422A81D64AD477B9463468A86B987CE",
+     "2F628CD163064F12AE9C8FC493D7723D",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use counting strategies and strategies based on\nplace value (e.g., partial sums, making tens, etc.)\nto add.",
+    "id": "1A8C2890C68945188C6FF4553AC95567",
+    "listId": "b",
+    "parentId": "7422A81D64AD477B9463468A86B987CE",
+    "position": 1026,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.E.10.b"
+   },
+   "1C13427761244439B87E117CFD6D30FD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D8C8149223A04996971BE1B9400A9D4A",
+     "222058CAC1DE43D9AC2A3FBE55A45445"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Tell time in hours, half hours, and quarter hours using a digital\nclock or analog clock. Estimate time intervals (1 hour, 30\nminutes, 15 minutes, 1 minute) for activities (e.g., sharpen\npencil, soccer game, etc).",
+    "id": "1C13427761244439B87E117CFD6D30FD",
+    "listId": "5",
+    "parentId": "D8C8149223A04996971BE1B9400A9D4A",
+    "position": 1053,
+    "statementLabel": null,
+    "statementNotation": "1.GR.C.5"
+   },
+   "21FF22CEE5064351BC7FB32DE76C84FA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "UNDERSTAND EQUAL PARTS OF A WHOLE. ",
+    "id": "21FF22CEE5064351BC7FB32DE76C84FA",
+    "listId": "F",
+    "parentId": "658B537360524454B86A74E1AAC61BF4",
+    "position": 1038,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.F"
+   },
+   "222058CAC1DE43D9AC2A3FBE55A45445": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Geometric Reasoning and Measurement",
+    "id": "222058CAC1DE43D9AC2A3FBE55A45445",
+    "listId": "",
+    "parentId": null,
+    "position": 1045,
+    "statementLabel": null,
+    "statementNotation": "GR"
+   },
+   "25F8872049004187A2F3288DBD9FD4B3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FD958E6DE95B4A88993C4B3B53D5BB1D",
+     "222058CAC1DE43D9AC2A3FBE55A45445"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Distinguish between defining attributes (e.g., triangles\nare closed and three-sided) versus non-defining\nattributes (e.g., color, orientation, overall size).",
+    "id": "25F8872049004187A2F3288DBD9FD4B3",
+    "listId": "3",
+    "parentId": "FD958E6DE95B4A88993C4B3B53D5BB1D",
+    "position": 1050,
+    "statementLabel": null,
+    "statementNotation": "1.GR.B.3"
+   },
+   "29693659502F40D399F9EDEDB98FFB26": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "49E4AEC7ABA54B2EA7E5E7A4A377E03F",
+     "2F628CD163064F12AE9C8FC493D7723D",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use concrete models or drawings to subtract. ",
+    "id": "29693659502F40D399F9EDEDB98FFB26",
+    "listId": "a",
+    "parentId": "49E4AEC7ABA54B2EA7E5E7A4A377E03F",
+    "position": 1031,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.E.12.a"
+   },
+   "2F628CD163064F12AE9C8FC493D7723D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "USE PLACE VALUE UNDERSTANDING AND PROPERTIES TO ADD AND SUBTRACT.  ",
+    "id": "2F628CD163064F12AE9C8FC493D7723D",
+    "listId": "E",
+    "parentId": "658B537360524454B86A74E1AAC61BF4",
+    "position": 1023,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.E"
+   },
+   "34AAA7039EA64A27BDB97F15D2097E5A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7422A81D64AD477B9463468A86B987CE",
+     "2F628CD163064F12AE9C8FC493D7723D",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use concrete models and drawings to add.",
+    "id": "34AAA7039EA64A27BDB97F15D2097E5A",
+    "listId": "a",
+    "parentId": "7422A81D64AD477B9463468A86B987CE",
+    "position": 1025,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.E.10.a"
+   },
+   "37179510F2464CECA9AF96AC46C7EF2E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "682C298B7362489F899A70A802346A05",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Recall or quickly derive addition and subtraction facts\nwithin 20. ",
+    "id": "37179510F2464CECA9AF96AC46C7EF2E",
+    "listId": "9",
+    "parentId": "682C298B7362489F899A70A802346A05",
+    "position": 1018,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.D.9"
+   },
+   "3C7CC555A154423FBC9506BFFB5BD984": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "034FA8CF137645FEAE8A5368C376F660",
+     "ED5E1B2FE9314AB69E3F0334BDA8A85F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Ask and answer questions by collecting, organizing and\nsummarizing data. ",
+    "id": "3C7CC555A154423FBC9506BFFB5BD984",
+    "listId": "1",
+    "parentId": "034FA8CF137645FEAE8A5368C376F660",
+    "position": 1057,
+    "statementLabel": null,
+    "statementNotation": "1.DS.A.1"
+   },
+   "3EA8194A1AB148F3ADC79673F16A5834": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6E92B844570344D48A24EB019D0B4BED",
+     "2F628CD163064F12AE9C8FC493D7723D",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use concrete models or drawings to subtract. ",
+    "id": "3EA8194A1AB148F3ADC79673F16A5834",
+    "listId": "a",
+    "parentId": "6E92B844570344D48A24EB019D0B4BED",
+    "position": 1035,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.E.13.a"
+   },
+   "42018C71B7DF4F32B5534D95ADC6D315": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5DD459D091C743E29AB1ABF460F0E7AF",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Read, write numerals, and represent a number of objects\nwith a written numeral within 120.",
+    "id": "42018C71B7DF4F32B5534D95ADC6D315",
+    "listId": "2",
+    "parentId": "5DD459D091C743E29AB1ABF460F0E7AF",
+    "position": 1005,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.A.2"
+   },
+   "463573F5FB844599A63582E86F9957A1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5DD459D091C743E29AB1ABF460F0E7AF",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Count forward and backward within 120. ",
+    "id": "463573F5FB844599A63582E86F9957A1",
+    "listId": "1",
+    "parentId": "5DD459D091C743E29AB1ABF460F0E7AF",
+    "position": 1002,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.A.1"
+   },
+   "48E825D0BA5B419EBD9F8D3EA868B05E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "49E4AEC7ABA54B2EA7E5E7A4A377E03F",
+     "2F628CD163064F12AE9C8FC493D7723D",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Represent and explain the calculation by\nconnecting the strategy used to the meaning of\nsubtraction.",
+    "id": "48E825D0BA5B419EBD9F8D3EA868B05E",
+    "listId": "c",
+    "parentId": "49E4AEC7ABA54B2EA7E5E7A4A377E03F",
+    "position": 1033,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.E.12.c"
+   },
+   "49E4AEC7ABA54B2EA7E5E7A4A377E03F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2F628CD163064F12AE9C8FC493D7723D",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Subtract a multiple of 10 from another multiple of 10\nwithin 90.",
+    "id": "49E4AEC7ABA54B2EA7E5E7A4A377E03F",
+    "listId": "12",
+    "parentId": "2F628CD163064F12AE9C8FC493D7723D",
+    "position": 1030,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.E.12"
+   },
+   "4B589A0A367C4192A391C65604CDCDD8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ADD4B21795114682A746D57AB1B0209A",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Estimate the location of numbers on a number line by\nreasoning about their relationship to benchmark\nnumbers (e.g. 10, 50, 100).",
+    "id": "4B589A0A367C4192A391C65604CDCDD8",
+    "listId": "6",
+    "parentId": "ADD4B21795114682A746D57AB1B0209A",
+    "position": 1013,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.B.6"
+   },
+   "4C3A911EF1E7499FB48F7676C328D1AB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "49E4AEC7ABA54B2EA7E5E7A4A377E03F",
+     "2F628CD163064F12AE9C8FC493D7723D",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use counting strategies, properties of operations,\nand/or the inverse relationship between addition\nand subtraction to subtract.",
+    "id": "4C3A911EF1E7499FB48F7676C328D1AB",
+    "listId": "b",
+    "parentId": "49E4AEC7ABA54B2EA7E5E7A4A377E03F",
+    "position": 1032,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.E.12.b"
+   },
+   "4E0BA6EE6E2049AAAB9F65889699F560": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "37179510F2464CECA9AF96AC46C7EF2E",
+     "682C298B7362489F899A70A802346A05",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use the doubles to add and subtract (e.g., 6 + 6 =\n12, 14 – 7 = 7, etc.)",
+    "id": "4E0BA6EE6E2049AAAB9F65889699F560",
+    "listId": "d",
+    "parentId": "37179510F2464CECA9AF96AC46C7EF2E",
+    "position": 1022,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.D.9.d"
+   },
+   "52771BAF540045C7BF17421EEE63022A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "37179510F2464CECA9AF96AC46C7EF2E",
+     "682C298B7362489F899A70A802346A05",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use the ten more and ten less strategies to add\nand subtract (including those with a difference\nof 10). ",
+    "id": "52771BAF540045C7BF17421EEE63022A",
+    "listId": "c",
+    "parentId": "37179510F2464CECA9AF96AC46C7EF2E",
+    "position": 1021,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.D.9.c"
+   },
+   "5DD459D091C743E29AB1ABF460F0E7AF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "EXTEND THE COUNT SEQUENCE.",
+    "id": "5DD459D091C743E29AB1ABF460F0E7AF",
+    "listId": "A",
+    "parentId": "658B537360524454B86A74E1AAC61BF4",
+    "position": 1001,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.A"
+   },
+   "60EA6A3CC7C64A93B1C04725E95A7BFA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6E92B844570344D48A24EB019D0B4BED",
+     "2F628CD163064F12AE9C8FC493D7723D",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use counting strategies, properties of operations,\nand/or the inverse relationship between addition\nand subtraction to subtract.",
+    "id": "60EA6A3CC7C64A93B1C04725E95A7BFA",
+    "listId": "b",
+    "parentId": "6E92B844570344D48A24EB019D0B4BED",
+    "position": 1036,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.E.13.b"
+   },
+   "658B537360524454B86A74E1AAC61BF4": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Number and Operation Sense",
+    "id": "658B537360524454B86A74E1AAC61BF4",
+    "listId": "",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": null,
+    "statementNotation": "NOS"
+   },
+   "67ED07693D5E4CB4B978FD1E535ACF29": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "929FC10A6B25475CABDC7435BCA1EF15",
+     "ADD4B21795114682A746D57AB1B0209A",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Compose and decompose two-digit numbers in\nmore than one way (e.g. 46 = 41 + 5 or 46 = 23 +\n23).",
+    "id": "67ED07693D5E4CB4B978FD1E535ACF29",
+    "listId": "c",
+    "parentId": "929FC10A6B25475CABDC7435BCA1EF15",
+    "position": 1010,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.B.3.c"
+   },
+   "682C298B7362489F899A70A802346A05": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "ADD AND SUBTRACT WITHIN 20.",
+    "id": "682C298B7362489F899A70A802346A05",
+    "listId": "D",
+    "parentId": "658B537360524454B86A74E1AAC61BF4",
+    "position": 1017,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.D"
+   },
+   "6BFA35390E0E4D87BA76FF7F9010F22C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "74964E0996C7414AADE85C13036C245B",
+     "222058CAC1DE43D9AC2A3FBE55A45445"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Order three objects by length; compare the lengths of\ntwo objects indirectly by using a third object.",
+    "id": "6BFA35390E0E4D87BA76FF7F9010F22C",
+    "listId": "1",
+    "parentId": "74964E0996C7414AADE85C13036C245B",
+    "position": 1047,
+    "statementLabel": null,
+    "statementNotation": "1.GR.A.1"
+   },
+   "6E92B844570344D48A24EB019D0B4BED": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2F628CD163064F12AE9C8FC493D7723D",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Subtract a 1-digit number from a 2-digit number (without\nregrouping).  ",
+    "id": "6E92B844570344D48A24EB019D0B4BED",
+    "listId": "13",
+    "parentId": "2F628CD163064F12AE9C8FC493D7723D",
+    "position": 1034,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.E.13"
+   },
+   "704BC005686747238926847DB381922D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7422A81D64AD477B9463468A86B987CE",
+     "2F628CD163064F12AE9C8FC493D7723D",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Represent and explain the calculation by\nconnecting the strategy used to the meaning of\naddition. ",
+    "id": "704BC005686747238926847DB381922D",
+    "listId": "d",
+    "parentId": "7422A81D64AD477B9463468A86B987CE",
+    "position": 1028,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.E.10.d"
+   },
+   "732376049C114205B8296FFA9177A201": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C69EB9EE126D4731BAC0B1C10D0168ED",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Apply the Commutative Property of Addition and\nAssociative Property of Addition as a strategy to add.",
+    "id": "732376049C114205B8296FFA9177A201",
+    "listId": "7",
+    "parentId": "C69EB9EE126D4731BAC0B1C10D0168ED",
+    "position": 1015,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.C.7"
+   },
+   "7422A81D64AD477B9463468A86B987CE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2F628CD163064F12AE9C8FC493D7723D",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Add within 100 including adding a two-digit number and\na one-digit number and adding a two-digit number and a\nmultiple of 10. Understand that when adding two-digit\nnumbers, tens are added to tens, ones are added to ones,\nand sometimes it is necessary to compose or decompose\na ten.",
+    "id": "7422A81D64AD477B9463468A86B987CE",
+    "listId": "10",
+    "parentId": "2F628CD163064F12AE9C8FC493D7723D",
+    "position": 1024,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.E.10"
+   },
+   "74964E0996C7414AADE85C13036C245B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "222058CAC1DE43D9AC2A3FBE55A45445"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "MEASURE LENGTHS INDIRECTLY AND BY ITERATIVE LENGTH UNITS. ",
+    "id": "74964E0996C7414AADE85C13036C245B",
+    "listId": "A",
+    "parentId": "222058CAC1DE43D9AC2A3FBE55A45445",
+    "position": 1046,
+    "statementLabel": null,
+    "statementNotation": "1.GR.A"
+   },
+   "75665A1D4FF5444B9D9E1D5DCB61F978": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3C7CC555A154423FBC9506BFFB5BD984",
+     "034FA8CF137645FEAE8A5368C376F660",
+     "ED5E1B2FE9314AB69E3F0334BDA8A85F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Collect and organize categorical data (into up to\nthree categories) using surveys or observations.",
+    "id": "75665A1D4FF5444B9D9E1D5DCB61F978",
+    "listId": "b",
+    "parentId": "3C7CC555A154423FBC9506BFFB5BD984",
+    "position": 1059,
+    "statementLabel": null,
+    "statementNotation": "1.DS.A.1.b"
+   },
+   "766AC82F370E452C9079665CD536DFC9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3C7CC555A154423FBC9506BFFB5BD984",
+     "034FA8CF137645FEAE8A5368C376F660",
+     "ED5E1B2FE9314AB69E3F0334BDA8A85F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Craft a question that can be answered by\ncollecting categorical data. ",
+    "id": "766AC82F370E452C9079665CD536DFC9",
+    "listId": "a",
+    "parentId": "3C7CC555A154423FBC9506BFFB5BD984",
+    "position": 1058,
+    "statementLabel": null,
+    "statementNotation": "1.DS.A.1.a"
+   },
+   "7D8886CBF4154DC79863FD7086CC3AEE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "194CA61A119F4DF4992F2EBD338D25FD"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "SOLVE PROBLEMS INVOLVING ADDITION AND SUBTRACTION.",
+    "id": "7D8886CBF4154DC79863FD7086CC3AEE",
+    "listId": "A",
+    "parentId": "194CA61A119F4DF4992F2EBD338D25FD",
+    "position": 1041,
+    "statementLabel": null,
+    "statementNotation": "1.AT.A"
+   },
+   "8AF700C2447C40458DA3CA1C8AF99CCF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "929FC10A6B25475CABDC7435BCA1EF15",
+     "ADD4B21795114682A746D57AB1B0209A",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describe a given number as the correct number\nof tens and ones (e.g., 14 is one ten and four ones;\n38 is three tens and eight ones).",
+    "id": "8AF700C2447C40458DA3CA1C8AF99CCF",
+    "listId": "b",
+    "parentId": "929FC10A6B25475CABDC7435BCA1EF15",
+    "position": 1009,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.B.3.b"
+   },
+   "8ED1FC3A338A46D581A5E5F71DBEB343": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D8C8149223A04996971BE1B9400A9D4A",
+     "222058CAC1DE43D9AC2A3FBE55A45445"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identify and know the value of coins (penny, nickel, dime, and\nquarter) and bills ($1, $5, $10, and $20).",
+    "id": "8ED1FC3A338A46D581A5E5F71DBEB343",
+    "listId": "6",
+    "parentId": "D8C8149223A04996971BE1B9400A9D4A",
+    "position": 1054,
+    "statementLabel": null,
+    "statementNotation": "1.GR.C.6"
+   },
+   "9116E53A22DF413AA6BEEB71563E349B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ADD4B21795114682A746D57AB1B0209A",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Compare two numbers within 100 by reasoning about\nvalues of tens and ones digits and the location of the\nnumbers on a number line. Record the results of\ncomparisons with the symbols , =, and .",
+    "id": "9116E53A22DF413AA6BEEB71563E349B",
+    "listId": "5",
+    "parentId": "ADD4B21795114682A746D57AB1B0209A",
+    "position": 1012,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.B.5"
+   },
+   "929FC10A6B25475CABDC7435BCA1EF15": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ADD4B21795114682A746D57AB1B0209A",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Extend understanding of 10 as a group, collection, or\nbundle of ten ones, called a “ten,” to compose and\ndecompose two-digit numbers. ",
+    "id": "929FC10A6B25475CABDC7435BCA1EF15",
+    "listId": "3",
+    "parentId": "ADD4B21795114682A746D57AB1B0209A",
+    "position": 1007,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.B.3"
+   },
+   "A446253AE5734AFD88683E04963CA104": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "463573F5FB844599A63582E86F9957A1",
+     "5DD459D091C743E29AB1ABF460F0E7AF",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Skip count forward and backwards by tens.",
+    "id": "A446253AE5734AFD88683E04963CA104",
+    "listId": "b",
+    "parentId": "463573F5FB844599A63582E86F9957A1",
+    "position": 1004,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.A.1.b"
+   },
+   "ADD4B21795114682A746D57AB1B0209A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "UNDERSTAND PLACE VALUE AND REPRESENTATIONS OF NUMBERS. ",
+    "id": "ADD4B21795114682A746D57AB1B0209A",
+    "listId": "B",
+    "parentId": "658B537360524454B86A74E1AAC61BF4",
+    "position": 1006,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.B"
+   },
+   "B4C129DB94304762B59AA15EF6831C32": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2F628CD163064F12AE9C8FC493D7723D",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Given a two-digit number, identify 10 more or 10 less than\nthe given number, without having to count, and explain\nthe reasoning used.",
+    "id": "B4C129DB94304762B59AA15EF6831C32",
+    "listId": "11",
+    "parentId": "2F628CD163064F12AE9C8FC493D7723D",
+    "position": 1029,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.E.11"
+   },
+   "B645F42449C244B6800A162081111E6D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FD958E6DE95B4A88993C4B3B53D5BB1D",
+     "222058CAC1DE43D9AC2A3FBE55A45445"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Compose two-dimensional shapes (rectangles, squares,\ntrapezoids, triangles, half-circles, and quarter-circles) or\nthree-dimensional shapes (cubes, right rectangular\nprisms, right circular cones, and right circular cylinders)\nto create a composite shape, and compose new shapes\nfrom the composite shape.",
+    "id": "B645F42449C244B6800A162081111E6D",
+    "listId": "4",
+    "parentId": "FD958E6DE95B4A88993C4B3B53D5BB1D",
+    "position": 1051,
+    "statementLabel": null,
+    "statementNotation": "1.GR.B.4"
+   },
+   "B7156E679F9947349394623723B0472B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ADD4B21795114682A746D57AB1B0209A",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Represent whole numbers as lengths from 0 on a\nnumber line (horizontal and vertical) with equally spaced\npoints corresponding to whole numbers.",
+    "id": "B7156E679F9947349394623723B0472B",
+    "listId": "4",
+    "parentId": "ADD4B21795114682A746D57AB1B0209A",
+    "position": 1011,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.B.4"
+   },
+   "B93A352006A54C33BCBD0914E4309EC9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "37179510F2464CECA9AF96AC46C7EF2E",
+     "682C298B7362489F899A70A802346A05",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use the make ten strategy to add and subtract\nwith combinations of 10 (e.g., 7 + 3, 6 + 4, 10 – 3,\n10 – 6, etc.).",
+    "id": "B93A352006A54C33BCBD0914E4309EC9",
+    "listId": "b",
+    "parentId": "37179510F2464CECA9AF96AC46C7EF2E",
+    "position": 1020,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.D.9.b"
+   },
+   "C21929AEA72F4F6190DC01D57FF6BECD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C69EB9EE126D4731BAC0B1C10D0168ED",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Use the inverse relationship between addition and\nsubtraction to subtract. ",
+    "id": "C21929AEA72F4F6190DC01D57FF6BECD",
+    "listId": "8",
+    "parentId": "C69EB9EE126D4731BAC0B1C10D0168ED",
+    "position": 1016,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.C.8"
+   },
+   "C69EB9EE126D4731BAC0B1C10D0168ED": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "UNDERSTAND AND APPLY PROPERTIES OF OPERATIONS AND THE RELATIONSHIP BETWEEN ADDITION AND\nSUBTRACTION.",
+    "id": "C69EB9EE126D4731BAC0B1C10D0168ED",
+    "listId": "C",
+    "parentId": "658B537360524454B86A74E1AAC61BF4",
+    "position": 1014,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.C"
+   },
+   "CD884D591DC94B7B80A3A5F85926AAFE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "929FC10A6B25475CABDC7435BCA1EF15",
+     "ADD4B21795114682A746D57AB1B0209A",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Compose and decompose two-digit numbers\ninto tens and ones using objects or drawings, and\nequations (e.g., 10 + 4 = 14; 38 = 30 + 8).",
+    "id": "CD884D591DC94B7B80A3A5F85926AAFE",
+    "listId": "a",
+    "parentId": "929FC10A6B25475CABDC7435BCA1EF15",
+    "position": 1008,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.B.3.a"
+   },
+   "CD99B993AB0C469B96CA4F04B9A1BBF9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "37179510F2464CECA9AF96AC46C7EF2E",
+     "682C298B7362489F899A70A802346A05",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use the count on and count back strategies to\nadd and subtract (e.g., 4 + 1, 7 – 2, etc.). ",
+    "id": "CD99B993AB0C469B96CA4F04B9A1BBF9",
+    "listId": "a",
+    "parentId": "37179510F2464CECA9AF96AC46C7EF2E",
+    "position": 1019,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.D.9.a"
+   },
+   "D4323F264AAF4EFCB2885CC08B34636E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3C7CC555A154423FBC9506BFFB5BD984",
+     "034FA8CF137645FEAE8A5368C376F660",
+     "ED5E1B2FE9314AB69E3F0334BDA8A85F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Represent data by creating tally charts and\npicture graphs. ",
+    "id": "D4323F264AAF4EFCB2885CC08B34636E",
+    "listId": "c",
+    "parentId": "3C7CC555A154423FBC9506BFFB5BD984",
+    "position": 1060,
+    "statementLabel": null,
+    "statementNotation": "1.DS.A.1.c"
+   },
+   "D7AFED4185144A28A0D460E904CE9BAD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "463573F5FB844599A63582E86F9957A1",
+     "5DD459D091C743E29AB1ABF460F0E7AF",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Count forward and backwards by ones starting\nwith any number. ",
+    "id": "D7AFED4185144A28A0D460E904CE9BAD",
+    "listId": "a",
+    "parentId": "463573F5FB844599A63582E86F9957A1",
+    "position": 1003,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.A.1.a"
+   },
+   "D8C8149223A04996971BE1B9400A9D4A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "222058CAC1DE43D9AC2A3FBE55A45445"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "WORK WITH TIME AND MONEY.",
+    "id": "D8C8149223A04996971BE1B9400A9D4A",
+    "listId": "C",
+    "parentId": "222058CAC1DE43D9AC2A3FBE55A45445",
+    "position": 1052,
+    "statementLabel": null,
+    "statementNotation": "1.GR.C"
+   },
+   "D8D7D163B8FC4DD69877BD09793C5300": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7D8886CBF4154DC79863FD7086CC3AEE",
+     "194CA61A119F4DF4992F2EBD338D25FD"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Understand the meaning of the equal sign. Determine if\nequations involving addition and subtraction (on one or\nboth sides of the equal sign) are true or false.",
+    "id": "D8D7D163B8FC4DD69877BD09793C5300",
+    "listId": "1",
+    "parentId": "7D8886CBF4154DC79863FD7086CC3AEE",
+    "position": 1042,
+    "statementLabel": null,
+    "statementNotation": "1.AT.A.1"
+   },
+   "D8FEA89B81614A52B132A138CEECDA13": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "21FF22CEE5064351BC7FB32DE76C84FA",
+     "658B537360524454B86A74E1AAC61BF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Partition circles and rectangles into equal shares (halves\nand fourths) recognizing that decomposing into more\nequal shares creates smaller shares. Determine how\nmany equal shares are needed to make a whole (e.g., two\nhalves).  ",
+    "id": "D8FEA89B81614A52B132A138CEECDA13",
+    "listId": "14",
+    "parentId": "21FF22CEE5064351BC7FB32DE76C84FA",
+    "position": 1039,
+    "statementLabel": null,
+    "statementNotation": "1.NOS.F.14"
+   },
+   "ED5E1B2FE9314AB69E3F0334BDA8A85F": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Reasoning with Data and Statistics",
+    "id": "ED5E1B2FE9314AB69E3F0334BDA8A85F",
+    "listId": "",
+    "parentId": null,
+    "position": 1055,
+    "statementLabel": null,
+    "statementNotation": "DS"
+   },
+   "F733521468214F5D9A6A9FA722FDFCED": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "74964E0996C7414AADE85C13036C245B",
+     "222058CAC1DE43D9AC2A3FBE55A45445"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Use non-standard units (with no gaps or overlaps) to\nmeasure the length of an object to the nearest whole\nunit.",
+    "id": "F733521468214F5D9A6A9FA722FDFCED",
+    "listId": "2",
+    "parentId": "74964E0996C7414AADE85C13036C245B",
+    "position": 1048,
+    "statementLabel": null,
+    "statementNotation": "1.GR.A.2"
+   },
+   "FD958E6DE95B4A88993C4B3B53D5BB1D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "222058CAC1DE43D9AC2A3FBE55A45445"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "REASON WITH SHAPES AND THEIR ATTRIBUTES. ",
+    "id": "FD958E6DE95B4A88993C4B3B53D5BB1D",
+    "listId": "",
+    "parentId": "222058CAC1DE43D9AC2A3FBE55A45445",
+    "position": 1049,
+    "statementLabel": null,
+    "statementNotation": "1.GR.B"
+   }
+  },
+  "subject": "Mathematics (2025-)",
+  "title": "Grade 1"
+ }
+}

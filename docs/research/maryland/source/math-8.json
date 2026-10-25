@@ -1,0 +1,1262 @@
+{
+ "data": {
+  "cspStatus": {
+   "notes": null,
+   "value": "visible"
+  },
+  "document": {
+   "publicationStatus": "Published",
+   "sourceURL": "https://marylandpublicschools.org/about/documents/dcaa/math/revised/grade-8-mccrs-math-crosswalk-a.pdf",
+   "title": "Math 8 Crosswalk"
+  },
+  "educationLevels": [
+   "08"
+  ],
+  "id": "F365C392F37149C8B0AE5E2647ABF5D8",
+  "jurisdiction": {
+   "id": "49FCDFBD2CF04033A9C347BFA0584DF0",
+   "title": "Maryland"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/4.0/us/",
+   "rightsHolder": "Common Curriculum, Inc.",
+   "title": "CC BY 4.0 US"
+  },
+  "normalizedSubject": null,
+  "standards": {
+   "0650C5959CB24738960CF32BC28124B9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A04F87900915416390C9A958C6972776",
+     "2214436D0C21418D997C57B2374781C1",
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Match a linear equation in the form\nto its graph.",
+    "id": "0650C5959CB24738960CF32BC28124B9",
+    "listId": "b",
+    "parentId": "A04F87900915416390C9A958C6972776",
+    "position": 1041,
+    "statementLabel": null,
+    "statementNotation": "8.AT.D.9.b"
+   },
+   "112960673A374FF2A13CEB73E8388F0F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7273B779A8D84144B7A64B8E7E4DDCDF"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "MAKE SENSE OF STATISTICAL INQUIRY. ",
+    "id": "112960673A374FF2A13CEB73E8388F0F",
+    "listId": "A",
+    "parentId": "7273B779A8D84144B7A64B8E7E4DDCDF",
+    "position": 1059,
+    "statementLabel": null,
+    "statementNotation": "8.DS.A"
+   },
+   "16D8ED58150B469093CB1F62C33A2446": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7EB91807D60348858F32FF025172D753",
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Determine whether a relationship is a function by\nanalyzing whether each input is assigned to exactly\none output.",
+    "id": "16D8ED58150B469093CB1F62C33A2446",
+    "listId": "6",
+    "parentId": "7EB91807D60348858F32FF025172D753",
+    "position": 1033,
+    "statementLabel": null,
+    "statementNotation": "8.AT.C.6"
+   },
+   "176180BE699F45698D9CAB071B948F9B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "52410FE1D7B84175BF2A75832557D3FF",
+     "55CCE685B5734D3C982E6BF80370DFF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Use the relationships between supplementary,\ncomplementary, vertical, and adjacent angles to\nwrite and solve equations for an unknown angle.",
+    "id": "176180BE699F45698D9CAB071B948F9B",
+    "listId": "1",
+    "parentId": "52410FE1D7B84175BF2A75832557D3FF",
+    "position": 1048,
+    "statementLabel": null,
+    "statementNotation": "8.GR.A.1"
+   },
+   "1CFD3D3A350C408285A1EFDDF20D632F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7273B779A8D84144B7A64B8E7E4DDCDF"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "MODEL AND ANALYZE PROBABILITY TO INTERPRET CHANCE EVENTS AND MAKE PREDICTIONS. ",
+    "id": "1CFD3D3A350C408285A1EFDDF20D632F",
+    "listId": "C",
+    "parentId": "7273B779A8D84144B7A64B8E7E4DDCDF",
+    "position": 1067,
+    "statementLabel": null,
+    "statementNotation": "8.DS.C"
+   },
+   "1E3855C7B01344569A2DE5B892474703": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "811CAEC64D5F4771BEE19086EBFB7BC1",
+     "24BD3D8EBE9A46EF886AB58EF776A80B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identify a number as irrational when its decimal\nexpansion neither terminates nor repeats, and\nexplain that irrational numbers cannot be expressed\nas the ratio of two integers.",
+    "id": "1E3855C7B01344569A2DE5B892474703",
+    "listId": "1",
+    "parentId": "811CAEC64D5F4771BEE19086EBFB7BC1",
+    "position": 1002,
+    "statementLabel": null,
+    "statementNotation": "8.NOS.A.1"
+   },
+   "2214436D0C21418D997C57B2374781C1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "MODEL WITH FUNCTIONS. ",
+    "id": "2214436D0C21418D997C57B2374781C1",
+    "listId": "D",
+    "parentId": "3D06D68A7BAB4FC598CBCE98306C781F",
+    "position": 1038,
+    "statementLabel": null,
+    "statementNotation": "8.AT.D"
+   },
+   "24BD3D8EBE9A46EF886AB58EF776A80B": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Number and Operation Sense",
+    "id": "24BD3D8EBE9A46EF886AB58EF776A80B",
+    "listId": "",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": null,
+    "statementNotation": "NOS"
+   },
+   "2AB7961E0428477688C2384810805FB2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A6B6A3D14BB14CDA824BA70D61447069",
+     "9EAE0F5074A04EEE9517D2B80D3D4C31",
+     "55CCE685B5734D3C982E6BF80370DFF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use diagrams, examples, or informal\nreasoning to explain the Pythagorean\nTheorem and why it applies to all right\ntriangles. ",
+    "id": "2AB7961E0428477688C2384810805FB2",
+    "listId": "a",
+    "parentId": "A6B6A3D14BB14CDA824BA70D61447069",
+    "position": 1053,
+    "statementLabel": null,
+    "statementNotation": "8.GR.B.4.a"
+   },
+   "2BB54E3755994F53ACD519D6516B016D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "USE PROPORTIONAL RELATIONSHIPS TO REPRESENT AND REASON ABOUT LINEAR EQUATIONS.",
+    "id": "2BB54E3755994F53ACD519D6516B016D",
+    "listId": "A",
+    "parentId": "3D06D68A7BAB4FC598CBCE98306C781F",
+    "position": 1013,
+    "statementLabel": null,
+    "statementNotation": "8.AT.A"
+   },
+   "33DF9BC28C694654BA14772642C0E312": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2214436D0C21418D997C57B2374781C1",
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Describe qualitatively the functional relationship\nbetween two quantities by analyzing a graph (e.g.,\nwhere the function is increasing or decreasing, linear\nor nonlinear). Sketch a graph that exhibits the\nqualitative features of a function based on a narrative\ndescription.",
+    "id": "33DF9BC28C694654BA14772642C0E312",
+    "listId": "11",
+    "parentId": "2214436D0C21418D997C57B2374781C1",
+    "position": 1045,
+    "statementLabel": null,
+    "statementNotation": "8.AT.D.11"
+   },
+   "36767F35590B4D1F90EA88AC3C0C3807": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "66D4D40EE17C43BA9CCE2D7D607DC19B",
+     "5566B66FAA484D40BDECF9855E66A88F",
+     "24BD3D8EBE9A46EF886AB58EF776A80B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Express numbers as a single digit times an\ninteger power of 10 to estimate and compare\nmagnitudes.",
+    "id": "36767F35590B4D1F90EA88AC3C0C3807",
+    "listId": "a",
+    "parentId": "66D4D40EE17C43BA9CCE2D7D607DC19B",
+    "position": 1010,
+    "statementLabel": null,
+    "statementNotation": "8.NOS.B.5.a"
+   },
+   "37CAF632F29745E79157537B6694C56E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EE36D29CD7C942A6936FFCCAD603424B",
+     "5566B66FAA484D40BDECF9855E66A88F",
+     "24BD3D8EBE9A46EF886AB58EF776A80B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Evaluate square roots of perfect squares from\n1 to 100 and cube roots of perfect cubes from\n1 to 125 by inspection.",
+    "id": "37CAF632F29745E79157537B6694C56E",
+    "listId": "b",
+    "parentId": "EE36D29CD7C942A6936FFCCAD603424B",
+    "position": 1008,
+    "statementLabel": null,
+    "statementNotation": "8.NOS.B.4.b"
+   },
+   "3BCF7A1E50E1478AA58FC88DE3F6E184": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A04F87900915416390C9A958C6972776",
+     "2214436D0C21418D997C57B2374781C1",
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Given the graph of a linear function, identify\nthe slope and y-intercept.",
+    "id": "3BCF7A1E50E1478AA58FC88DE3F6E184",
+    "listId": "a",
+    "parentId": "A04F87900915416390C9A958C6972776",
+    "position": 1040,
+    "statementLabel": null,
+    "statementNotation": "8.AT.D.9.a"
+   },
+   "3BE48AB65A564904891B733A791B13B4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "88C38EEE40D44183A06135FE83658216",
+     "9EAE0F5074A04EEE9517D2B80D3D4C31",
+     "55CCE685B5734D3C982E6BF80370DFF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Find the distance between two points in a\ncoordinate system using the Pythagorean\nTheorem.",
+    "id": "3BE48AB65A564904891B733A791B13B4",
+    "listId": "b",
+    "parentId": "88C38EEE40D44183A06135FE83658216",
+    "position": 1057,
+    "statementLabel": null,
+    "statementNotation": "8.GR.B.5.b"
+   },
+   "3C129B443D60432F820FEFF8F9AF9448": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1CFD3D3A350C408285A1EFDDF20D632F",
+     "7273B779A8D84144B7A64B8E7E4DDCDF"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Find probabilities of compound events by\nrepresenting or simulating the sample space or\nsimulating events.",
+    "id": "3C129B443D60432F820FEFF8F9AF9448",
+    "listId": "6",
+    "parentId": "1CFD3D3A350C408285A1EFDDF20D632F",
+    "position": 1069,
+    "statementLabel": null,
+    "statementNotation": "8.DS.C.6"
+   },
+   "3D06D68A7BAB4FC598CBCE98306C781F": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Algebraic Thinking",
+    "id": "3D06D68A7BAB4FC598CBCE98306C781F",
+    "listId": "",
+    "parentId": null,
+    "position": 1012,
+    "statementLabel": null,
+    "statementNotation": "AT"
+   },
+   "41E90497CDEC413AABF19047AAD8D6E8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7EB91807D60348858F32FF025172D753",
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identify whether a function is linear or non-linear\ngiven equations, graphs, or input-output pairs, and\nprovide a justification using reasoning about the\nconstant rate of change and its relationship to\nproportional reasoning.",
+    "id": "41E90497CDEC413AABF19047AAD8D6E8",
+    "listId": "8",
+    "parentId": "7EB91807D60348858F32FF025172D753",
+    "position": 1037,
+    "statementLabel": null,
+    "statementNotation": "8.AT.C.8"
+   },
+   "45C45D981EE24DE6A40341D3A42B0475": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C497C776E29E4F62B9B9EB202912295B",
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Analyze and solve systems of two linear equations in\ntwo variables. ",
+    "id": "45C45D981EE24DE6A40341D3A42B0475",
+    "listId": "5",
+    "parentId": "C497C776E29E4F62B9B9EB202912295B",
+    "position": 1027,
+    "statementLabel": null,
+    "statementNotation": "8.AT.B.5"
+   },
+   "47C37E687CA948599B73D67465966BAB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C497C776E29E4F62B9B9EB202912295B",
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Solve linear inequalities in one variable.",
+    "id": "47C37E687CA948599B73D67465966BAB",
+    "listId": "4",
+    "parentId": "C497C776E29E4F62B9B9EB202912295B",
+    "position": 1024,
+    "statementLabel": null,
+    "statementNotation": "8.AT.B.4"
+   },
+   "482A9F3E418B4CF08E70D22FFDA78A9B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C497C776E29E4F62B9B9EB202912295B",
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Solve linear equations in one variable.",
+    "id": "482A9F3E418B4CF08E70D22FFDA78A9B",
+    "listId": "3",
+    "parentId": "C497C776E29E4F62B9B9EB202912295B",
+    "position": 1021,
+    "statementLabel": null,
+    "statementNotation": "8.AT.B.3"
+   },
+   "497EBBAD7F72402ABDA78DB0DC32C4BE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "47C37E687CA948599B73D67465966BAB",
+     "C497C776E29E4F62B9B9EB202912295B",
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Represent the solution set on a number line\nand describe the set of possible values in the\ncontext of the problem.",
+    "id": "497EBBAD7F72402ABDA78DB0DC32C4BE",
+    "listId": "b",
+    "parentId": "47C37E687CA948599B73D67465966BAB",
+    "position": 1026,
+    "statementLabel": null,
+    "statementNotation": "8.AT.B.4.b"
+   },
+   "52410FE1D7B84175BF2A75832557D3FF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "55CCE685B5734D3C982E6BF80370DFF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "MAKE CONJECTURES ABOUT AND VERIFY GEOMETRIC RELATIONSHIPS. ",
+    "id": "52410FE1D7B84175BF2A75832557D3FF",
+    "listId": "A",
+    "parentId": "55CCE685B5734D3C982E6BF80370DFF4",
+    "position": 1047,
+    "statementLabel": null,
+    "statementNotation": "8.GR.A"
+   },
+   "5316068579204F53B367FB6289F1296F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E3E72EFB4CE44224A88E92259C8C3D8B",
+     "2BB54E3755994F53ACD519D6516B016D",
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Graph proportional relationships and interpret\nthe unit rate as the slope of the graph.",
+    "id": "5316068579204F53B367FB6289F1296F",
+    "listId": "a",
+    "parentId": "E3E72EFB4CE44224A88E92259C8C3D8B",
+    "position": 1015,
+    "statementLabel": null,
+    "statementNotation": "8.AT.A.1.a"
+   },
+   "544C4089BC8A4C55AA613D2B5775F837": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "482A9F3E418B4CF08E70D22FFDA78A9B",
+     "C497C776E29E4F62B9B9EB202912295B",
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Give examples of linear equations in one\nvariable with one solution, infinitely many\nsolutions, or no solution. Justify each example\nby showing how it can be rewritten in an\nequivalent equation in the form x=a, a=a, or a=b\n(where a and b are different rational numbers)\nand explaining what this form reveals about\nthe solution.",
+    "id": "544C4089BC8A4C55AA613D2B5775F837",
+    "listId": "a",
+    "parentId": "482A9F3E418B4CF08E70D22FFDA78A9B",
+    "position": 1022,
+    "statementLabel": null,
+    "statementNotation": "8.AT.B.3.a"
+   },
+   "5566B66FAA484D40BDECF9855E66A88F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "24BD3D8EBE9A46EF886AB58EF776A80B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "REASON WITH EXPONENTS TO EXPRESS AND INTERPRET QUANTITIES.",
+    "id": "5566B66FAA484D40BDECF9855E66A88F",
+    "listId": "B",
+    "parentId": "24BD3D8EBE9A46EF886AB58EF776A80B",
+    "position": 1004,
+    "statementLabel": null,
+    "statementNotation": "8.NOS.B"
+   },
+   "55CCE685B5734D3C982E6BF80370DFF4": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Geometric Reasoning and Measurement",
+    "id": "55CCE685B5734D3C982E6BF80370DFF4",
+    "listId": "",
+    "parentId": null,
+    "position": 1046,
+    "statementLabel": null,
+    "statementNotation": "GR"
+   },
+   "66D4D40EE17C43BA9CCE2D7D607DC19B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5566B66FAA484D40BDECF9855E66A88F",
+     "24BD3D8EBE9A46EF886AB58EF776A80B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Apply scientific notation to represent and compare\nvery large and very small quantities in context, and\nuse technology to compute with numbers in\nscientific notation.",
+    "id": "66D4D40EE17C43BA9CCE2D7D607DC19B",
+    "listId": "5",
+    "parentId": "5566B66FAA484D40BDECF9855E66A88F",
+    "position": 1009,
+    "statementLabel": null,
+    "statementNotation": "8.NOS.B.5"
+   },
+   "6E862FE40BFB4E43AE9E8848F49C540A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "45C45D981EE24DE6A40341D3A42B0475",
+     "C497C776E29E4F62B9B9EB202912295B",
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use structure to determine when a system\nhas no solution, one solution, or infinitely\nmany solutions and justify the conclusion.",
+    "id": "6E862FE40BFB4E43AE9E8848F49C540A",
+    "listId": "c",
+    "parentId": "45C45D981EE24DE6A40341D3A42B0475",
+    "position": 1030,
+    "statementLabel": null,
+    "statementNotation": "8.AT.B.5.c"
+   },
+   "7273B779A8D84144B7A64B8E7E4DDCDF": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Reasoning with Data, Statistics, and Probability",
+    "id": "7273B779A8D84144B7A64B8E7E4DDCDF",
+    "listId": "",
+    "parentId": null,
+    "position": 1058,
+    "statementLabel": null,
+    "statementNotation": "DS"
+   },
+   "7EB91807D60348858F32FF025172D753": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "REASON ABOUT FUNCTIONS. ",
+    "id": "7EB91807D60348858F32FF025172D753",
+    "listId": "C",
+    "parentId": "3D06D68A7BAB4FC598CBCE98306C781F",
+    "position": 1032,
+    "statementLabel": null,
+    "statementNotation": "8.AT.C"
+   },
+   "811CAEC64D5F4771BEE19086EBFB7BC1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "24BD3D8EBE9A46EF886AB58EF776A80B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "REASON WITH IRRATIONAL NUMBERS.",
+    "id": "811CAEC64D5F4771BEE19086EBFB7BC1",
+    "listId": "A",
+    "parentId": "24BD3D8EBE9A46EF886AB58EF776A80B",
+    "position": 1001,
+    "statementLabel": null,
+    "statementNotation": "8.NOS.A"
+   },
+   "8790EC542AE44F368BA94E975B815F6B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E9E6FCC238A14C57A9BA1C81CC5C35B3",
+     "2214436D0C21418D997C57B2374781C1",
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Given two input-output pairs, a graph, a\ntable, or a description of a relationship,\ndetermine the rate of change and initial\nvalue and write the linear equation that\nmodels the situation.",
+    "id": "8790EC542AE44F368BA94E975B815F6B",
+    "listId": "a",
+    "parentId": "E9E6FCC238A14C57A9BA1C81CC5C35B3",
+    "position": 1043,
+    "statementLabel": null,
+    "statementNotation": "8.AT.D.10.a"
+   },
+   "889C36E6263748D9B17BFC93879C666B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7273B779A8D84144B7A64B8E7E4DDCDF"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "DESCRIBE, ANALYZE, AND COMPARE DATA USING VISUAL AND NUMERICAL REPRESENTATIONS TO MODEL SITUATIONS\nAND DRAW INFERENCES. ",
+    "id": "889C36E6263748D9B17BFC93879C666B",
+    "listId": "B",
+    "parentId": "7273B779A8D84144B7A64B8E7E4DDCDF",
+    "position": 1063,
+    "statementLabel": null,
+    "statementNotation": "8.DS.B"
+   },
+   "88C38EEE40D44183A06135FE83658216": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9EAE0F5074A04EEE9517D2B80D3D4C31",
+     "55CCE685B5734D3C982E6BF80370DFF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Apply the Pythagorean Theorem to solve problems in\ncontext.",
+    "id": "88C38EEE40D44183A06135FE83658216",
+    "listId": "5",
+    "parentId": "9EAE0F5074A04EEE9517D2B80D3D4C31",
+    "position": 1055,
+    "statementLabel": null,
+    "statementNotation": "8.GR.B.5"
+   },
+   "8C9591CAA47D4FAD980D83252EA96BF8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E9E6FCC238A14C57A9BA1C81CC5C35B3",
+     "2214436D0C21418D997C57B2374781C1",
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Interpret the rate of change and initial value\nin the context of the problem.",
+    "id": "8C9591CAA47D4FAD980D83252EA96BF8",
+    "listId": "b",
+    "parentId": "E9E6FCC238A14C57A9BA1C81CC5C35B3",
+    "position": 1044,
+    "statementLabel": null,
+    "statementNotation": "8.AT.D.10.b"
+   },
+   "8E53AE924C5C4A7B883F51303DDE4942": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "889C36E6263748D9B17BFC93879C666B",
+     "7273B779A8D84144B7A64B8E7E4DDCDF"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Compare the fit of different linear models shown on\nscatter plots of the same data by describing the\noverall pattern and the closeness of data points to\neach line.",
+    "id": "8E53AE924C5C4A7B883F51303DDE4942",
+    "listId": "3",
+    "parentId": "889C36E6263748D9B17BFC93879C666B",
+    "position": 1065,
+    "statementLabel": null,
+    "statementNotation": "8.DS.B.3"
+   },
+   "911FDC2F3EDE4439AD30DE494E9AB02A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "45C45D981EE24DE6A40341D3A42B0475",
+     "C497C776E29E4F62B9B9EB202912295B",
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Interpret the solution to a system of two\nlinear equations as the point where their\ngraphs intersect and verify that the\ncoordinates of the intersection satisfy both\nequations.",
+    "id": "911FDC2F3EDE4439AD30DE494E9AB02A",
+    "listId": "a",
+    "parentId": "45C45D981EE24DE6A40341D3A42B0475",
+    "position": 1028,
+    "statementLabel": null,
+    "statementNotation": "8.AT.B.5.a"
+   },
+   "92493C2F34F743528B13A262EA7D03B1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E3E72EFB4CE44224A88E92259C8C3D8B",
+     "2BB54E3755994F53ACD519D6516B016D",
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Compare proportional relationships\nrepresented in different forms (e.g., graphs,\nequations, and tables) by analyzing their slopes.  ",
+    "id": "92493C2F34F743528B13A262EA7D03B1",
+    "listId": "b",
+    "parentId": "E3E72EFB4CE44224A88E92259C8C3D8B",
+    "position": 1016,
+    "statementLabel": null,
+    "statementNotation": "8.AT.A.1.b"
+   },
+   "92935720F45B44C294D3B04750DEF000": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3C129B443D60432F820FEFF8F9AF9448",
+     "1CFD3D3A350C408285A1EFDDF20D632F",
+     "7273B779A8D84144B7A64B8E7E4DDCDF"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Determine the probability of a compound\nevent as a fraction of outcomes in the sample\nspace that result in the event.",
+    "id": "92935720F45B44C294D3B04750DEF000",
+    "listId": "b",
+    "parentId": "3C129B443D60432F820FEFF8F9AF9448",
+    "position": 1071,
+    "statementLabel": null,
+    "statementNotation": "8.DS.C.6.b"
+   },
+   "9BB82C8480B048239F45B281F44DCDAB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5566B66FAA484D40BDECF9855E66A88F",
+     "24BD3D8EBE9A46EF886AB58EF776A80B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Know and apply the properties of integer exponents\nto generate equivalent numerical expressions.",
+    "id": "9BB82C8480B048239F45B281F44DCDAB",
+    "listId": "3",
+    "parentId": "5566B66FAA484D40BDECF9855E66A88F",
+    "position": 1005,
+    "statementLabel": null,
+    "statementNotation": "8.NOS.B.3"
+   },
+   "9EAE0F5074A04EEE9517D2B80D3D4C31": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "55CCE685B5734D3C982E6BF80370DFF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "APPLY THE PYTHAGOREAN THEOREM TO REASON ABOUT RIGHT TRIANGLES.  ",
+    "id": "9EAE0F5074A04EEE9517D2B80D3D4C31",
+    "listId": "B",
+    "parentId": "55CCE685B5734D3C982E6BF80370DFF4",
+    "position": 1051,
+    "statementLabel": null,
+    "statementNotation": "8.GR.B"
+   },
+   "9ED179AC8D654AEB84F883C6163DCBA5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "45C45D981EE24DE6A40341D3A42B0475",
+     "C497C776E29E4F62B9B9EB202912295B",
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Model and solve contextual problems using\nsystems of two linear equations.",
+    "id": "9ED179AC8D654AEB84F883C6163DCBA5",
+    "listId": "d",
+    "parentId": "45C45D981EE24DE6A40341D3A42B0475",
+    "position": 1031,
+    "statementLabel": null,
+    "statementNotation": "8.AT.B.5.d"
+   },
+   "A0310ADB5F7F477489C21C5AC293B4AB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "16D8ED58150B469093CB1F62C33A2446",
+     "7EB91807D60348858F32FF025172D753",
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Given a clearly defined set of input-output pairs\nin a table, mapping, or real-world description,\ndetermine whether the relationship is a\nfunction and explain why.",
+    "id": "A0310ADB5F7F477489C21C5AC293B4AB",
+    "listId": "a",
+    "parentId": "16D8ED58150B469093CB1F62C33A2446",
+    "position": 1034,
+    "statementLabel": null,
+    "statementNotation": "8.AT.C.6.a"
+   },
+   "A04F87900915416390C9A958C6972776": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2214436D0C21418D997C57B2374781C1",
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Interpret the graph of a linear function in the form",
+    "id": "A04F87900915416390C9A958C6972776",
+    "listId": "9",
+    "parentId": "2214436D0C21418D997C57B2374781C1",
+    "position": 1039,
+    "statementLabel": null,
+    "statementNotation": "8.AT.D.9"
+   },
+   "A202B7C801374DC2B48DE64BEFB22AFE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "889C36E6263748D9B17BFC93879C666B",
+     "7273B779A8D84144B7A64B8E7E4DDCDF"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Use a provided linear model to make predictions\nbased on bivariate measurement data. Interpret the\nmeaning of the slope and y-intercept in context.",
+    "id": "A202B7C801374DC2B48DE64BEFB22AFE",
+    "listId": "4",
+    "parentId": "889C36E6263748D9B17BFC93879C666B",
+    "position": 1066,
+    "statementLabel": null,
+    "statementNotation": "8.DS.B.4"
+   },
+   "A6B6A3D14BB14CDA824BA70D61447069": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9EAE0F5074A04EEE9517D2B80D3D4C31",
+     "55CCE685B5734D3C982E6BF80370DFF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Understand and reason about the Pythagorean\nTheorem and its extensions.",
+    "id": "A6B6A3D14BB14CDA824BA70D61447069",
+    "listId": "4",
+    "parentId": "9EAE0F5074A04EEE9517D2B80D3D4C31",
+    "position": 1052,
+    "statementLabel": null,
+    "statementNotation": "8.GR.B.4"
+   },
+   "A860A50498B549768DCCEF8C83751E2D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "112960673A374FF2A13CEB73E8388F0F",
+     "7273B779A8D84144B7A64B8E7E4DDCDF"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Evaluate predictions and conclusions drawn from\nbivariate data.",
+    "id": "A860A50498B549768DCCEF8C83751E2D",
+    "listId": "1",
+    "parentId": "112960673A374FF2A13CEB73E8388F0F",
+    "position": 1060,
+    "statementLabel": null,
+    "statementNotation": "8.DS.A.1"
+   },
+   "B0190C8687584E7B8ADA0BF10A08D94D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "45C45D981EE24DE6A40341D3A42B0475",
+     "C497C776E29E4F62B9B9EB202912295B",
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Solve systems of two linear equations by\ngraphing and substitution. When using\ngraphing, find an approximate or exact\nsolution depending on the precision of the\ngraph. Select a method strategically based\non the structure of the system or the context\nof the problem and explain why the method\nis appropriate.",
+    "id": "B0190C8687584E7B8ADA0BF10A08D94D",
+    "listId": "b",
+    "parentId": "45C45D981EE24DE6A40341D3A42B0475",
+    "position": 1029,
+    "statementLabel": null,
+    "statementNotation": "8.AT.B.5.b"
+   },
+   "B32279510F8543BCAE0E67E5BA6D80BA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A860A50498B549768DCCEF8C83751E2D",
+     "112960673A374FF2A13CEB73E8388F0F",
+     "7273B779A8D84144B7A64B8E7E4DDCDF"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Determine whether observed associations in\nsample data justify generalizations about a\nbroader population.",
+    "id": "B32279510F8543BCAE0E67E5BA6D80BA",
+    "listId": "a",
+    "parentId": "A860A50498B549768DCCEF8C83751E2D",
+    "position": 1061,
+    "statementLabel": null,
+    "statementNotation": "8.DS.A.1.a"
+   },
+   "B36613E7C350417BA8246F938DEB83D1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7EB91807D60348858F32FF025172D753",
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Compare the properties (i.e., rate of change,\nintercepts) of two linear functions each represented in a different way (algebraically, graphically,\nnumerically in tables, or by narrative descriptions).  ",
+    "id": "B36613E7C350417BA8246F938DEB83D1",
+    "listId": "7",
+    "parentId": "7EB91807D60348858F32FF025172D753",
+    "position": 1036,
+    "statementLabel": null,
+    "statementNotation": "8.AT.C.7"
+   },
+   "B9AB18DEB053402585AF65074D9CA410": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "66D4D40EE17C43BA9CCE2D7D607DC19B",
+     "5566B66FAA484D40BDECF9855E66A88F",
+     "24BD3D8EBE9A46EF886AB58EF776A80B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use scientific notation to model and\ncompute with real-world quantities, choose\nappropriate units, and interpret their\nmeaning based on the context.",
+    "id": "B9AB18DEB053402585AF65074D9CA410",
+    "listId": "b",
+    "parentId": "66D4D40EE17C43BA9CCE2D7D607DC19B",
+    "position": 1011,
+    "statementLabel": null,
+    "statementNotation": "8.NOS.B.5.b"
+   },
+   "BE19A2AF588243A39BC7018404A7CA5A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "16D8ED58150B469093CB1F62C33A2446",
+     "7EB91807D60348858F32FF025172D753",
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Given a graph, identify input-output pairs and\ndetermine whether the graph represents a\nfunction.",
+    "id": "BE19A2AF588243A39BC7018404A7CA5A",
+    "listId": "b",
+    "parentId": "16D8ED58150B469093CB1F62C33A2446",
+    "position": 1035,
+    "statementLabel": null,
+    "statementNotation": "8.AT.C.6.b"
+   },
+   "BE36F01EF3D94777BF93B723C49C6B29": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "47C37E687CA948599B73D67465966BAB",
+     "C497C776E29E4F62B9B9EB202912295B",
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Solve inequalities including those requiring\nthe use of the distributive property and\ncombining like terms.",
+    "id": "BE36F01EF3D94777BF93B723C49C6B29",
+    "listId": "a",
+    "parentId": "47C37E687CA948599B73D67465966BAB",
+    "position": 1025,
+    "statementLabel": null,
+    "statementNotation": "8.AT.B.4.a"
+   },
+   "BEACB896A4A04DF681E3D7AD6EDCCC55": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "482A9F3E418B4CF08E70D22FFDA78A9B",
+     "C497C776E29E4F62B9B9EB202912295B",
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Solve linear equations in one variable with\nrational number coefficients, including\nequations whose solutions require expanding\nexpressions using the distributive property and\ncombing like terms.",
+    "id": "BEACB896A4A04DF681E3D7AD6EDCCC55",
+    "listId": "b",
+    "parentId": "482A9F3E418B4CF08E70D22FFDA78A9B",
+    "position": 1023,
+    "statementLabel": null,
+    "statementNotation": "8.AT.B.3.b"
+   },
+   "C287227EE6C8413C901A16E59BDB2A51": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1CFD3D3A350C408285A1EFDDF20D632F",
+     "7273B779A8D84144B7A64B8E7E4DDCDF"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Construct a two-way table to organize data on two\ncategorical variables collected from the same\nsubjects. Calculate and interpret relative frequencies\nfor rows and/or columns and use them to describe\npossible associations between the variables.",
+    "id": "C287227EE6C8413C901A16E59BDB2A51",
+    "listId": "5",
+    "parentId": "1CFD3D3A350C408285A1EFDDF20D632F",
+    "position": 1068,
+    "statementLabel": null,
+    "statementNotation": "8.DS.C.5"
+   },
+   "C497C776E29E4F62B9B9EB202912295B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "MAKE SENSE OF AND SOLVE EQUATIONS, INEQUALITIES, AND SYSTEMS OF EQUATIONS.",
+    "id": "C497C776E29E4F62B9B9EB202912295B",
+    "listId": "B",
+    "parentId": "3D06D68A7BAB4FC598CBCE98306C781F",
+    "position": 1020,
+    "statementLabel": null,
+    "statementNotation": "8.AT.B"
+   },
+   "C82A498E50594864BCCD259ED274E2A8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A860A50498B549768DCCEF8C83751E2D",
+     "112960673A374FF2A13CEB73E8388F0F",
+     "7273B779A8D84144B7A64B8E7E4DDCDF"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify limitations or potential bias in data\ncollection or interpretation when analyzing\ntrends in scatter plots.",
+    "id": "C82A498E50594864BCCD259ED274E2A8",
+    "listId": "b",
+    "parentId": "A860A50498B549768DCCEF8C83751E2D",
+    "position": 1062,
+    "statementLabel": null,
+    "statementNotation": "8.DS.A.1.b"
+   },
+   "CFF58FF26837425C95EC01818E687A69": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "52410FE1D7B84175BF2A75832557D3FF",
+     "55CCE685B5734D3C982E6BF80370DFF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Draw or build triangles using tools (ruler, protractor,\ntechnology, or physical manipulatives) given three\nmeasures of angles or sides. Determine whether the\ngiven conditions result in a unique triangle, more\nthan one triangle, or no triangle.",
+    "id": "CFF58FF26837425C95EC01818E687A69",
+    "listId": "2",
+    "parentId": "52410FE1D7B84175BF2A75832557D3FF",
+    "position": 1049,
+    "statementLabel": null,
+    "statementNotation": "8.GR.A.2"
+   },
+   "D70B559DD3FC423589CFFE871408EC3B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EDEE40EA090C4407B80B304F2D8ADA06",
+     "2BB54E3755994F53ACD519D6516B016D",
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use this relationship to write equations of\nlines in the form for lines that pass\nthrough the origin, and in the form\nfor lines that include a vertical shift from the\norigin, where b represents the y-intercept.",
+    "id": "D70B559DD3FC423589CFFE871408EC3B",
+    "listId": "b",
+    "parentId": "EDEE40EA090C4407B80B304F2D8ADA06",
+    "position": 1019,
+    "statementLabel": null,
+    "statementNotation": "8.AT.A.2.b"
+   },
+   "D72D23932DBE4F2EA6B4D64D0DF272BA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EE36D29CD7C942A6936FFCCAD603424B",
+     "5566B66FAA484D40BDECF9855E66A88F",
+     "24BD3D8EBE9A46EF886AB58EF776A80B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use square and cube roots symbols to\nrepresent solutions to equations of the form\nand , where p is a positive rational\nnumber.",
+    "id": "D72D23932DBE4F2EA6B4D64D0DF272BA",
+    "listId": "a",
+    "parentId": "EE36D29CD7C942A6936FFCCAD603424B",
+    "position": 1007,
+    "statementLabel": null,
+    "statementNotation": "8.NOS.B.4.a"
+   },
+   "E1E25AD1EDD9432395BED28CE52FECC5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EDEE40EA090C4407B80B304F2D8ADA06",
+     "2BB54E3755994F53ACD519D6516B016D",
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use proportional reasoning to explain why\nthe slope m is the same between any two\npoints on a non-vertical line by showing that\nthe ratios of vertical change to horizontal\nchange between points are equivalent.",
+    "id": "E1E25AD1EDD9432395BED28CE52FECC5",
+    "listId": "a",
+    "parentId": "EDEE40EA090C4407B80B304F2D8ADA06",
+    "position": 1018,
+    "statementLabel": null,
+    "statementNotation": "8.AT.A.2.a"
+   },
+   "E3E72EFB4CE44224A88E92259C8C3D8B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2BB54E3755994F53ACD519D6516B016D",
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Analyze and compare proportional relationships\nusing slope.",
+    "id": "E3E72EFB4CE44224A88E92259C8C3D8B",
+    "listId": "1",
+    "parentId": "2BB54E3755994F53ACD519D6516B016D",
+    "position": 1014,
+    "statementLabel": null,
+    "statementNotation": "8.AT.A.1"
+   },
+   "E4F4CE3E0D234097914F5467A31C75C6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "889C36E6263748D9B17BFC93879C666B",
+     "7273B779A8D84144B7A64B8E7E4DDCDF"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Construct and interpret scatter plots for bivariate\nmeasurement data to investigate patterns of\nassociation between two quantities. Describe\npatterns such as clustering, outliers, positive or\nnegative association, linear association, and nonlinear\nassociation.",
+    "id": "E4F4CE3E0D234097914F5467A31C75C6",
+    "listId": "2",
+    "parentId": "889C36E6263748D9B17BFC93879C666B",
+    "position": 1064,
+    "statementLabel": null,
+    "statementNotation": "8.DS.B.2"
+   },
+   "E63D0449DB194B758FEC84E5E700E5DD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A6B6A3D14BB14CDA824BA70D61447069",
+     "9EAE0F5074A04EEE9517D2B80D3D4C31",
+     "55CCE685B5734D3C982E6BF80370DFF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use the converse of the Pythagorean\nTheorem to determine whether a set of three\nside lengths forms a right triangle, and\nextend this reasoning to identify whether a triangle is acute or obtuse using Pythagorean\ninequalities. ",
+    "id": "E63D0449DB194B758FEC84E5E700E5DD",
+    "listId": "b",
+    "parentId": "A6B6A3D14BB14CDA824BA70D61447069",
+    "position": 1054,
+    "statementLabel": null,
+    "statementNotation": "8.GR.B.4.b"
+   },
+   "E8D02CE71C9D450DB50A2A329B7F4E21": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "811CAEC64D5F4771BEE19086EBFB7BC1",
+     "24BD3D8EBE9A46EF886AB58EF776A80B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Use rational approximations of irrational numbers to\nestimate their locations on a number line, compare\ntheir size, and apply this understanding to estimate\nthe value of expressions (e.g., ) in context.",
+    "id": "E8D02CE71C9D450DB50A2A329B7F4E21",
+    "listId": "2",
+    "parentId": "811CAEC64D5F4771BEE19086EBFB7BC1",
+    "position": 1003,
+    "statementLabel": null,
+    "statementNotation": "8.NOS.A.2"
+   },
+   "E9E6FCC238A14C57A9BA1C81CC5C35B3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2214436D0C21418D997C57B2374781C1",
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Construct and interpret a linear function to model a\nrelationship between two quantities.",
+    "id": "E9E6FCC238A14C57A9BA1C81CC5C35B3",
+    "listId": "10",
+    "parentId": "2214436D0C21418D997C57B2374781C1",
+    "position": 1042,
+    "statementLabel": null,
+    "statementNotation": "8.AT.D.10"
+   },
+   "EDEE40EA090C4407B80B304F2D8ADA06": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2BB54E3755994F53ACD519D6516B016D",
+     "3D06D68A7BAB4FC598CBCE98306C781F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Use proportional reasoning to identify slope and\nrepresent linear relationships.  ",
+    "id": "EDEE40EA090C4407B80B304F2D8ADA06",
+    "listId": "2",
+    "parentId": "2BB54E3755994F53ACD519D6516B016D",
+    "position": 1017,
+    "statementLabel": null,
+    "statementNotation": "8.AT.A.2"
+   },
+   "EE36D29CD7C942A6936FFCCAD603424B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5566B66FAA484D40BDECF9855E66A88F",
+     "24BD3D8EBE9A46EF886AB58EF776A80B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Use square and cube roots to represent solutions to\nequations and describe numbers. ",
+    "id": "EE36D29CD7C942A6936FFCCAD603424B",
+    "listId": "4",
+    "parentId": "5566B66FAA484D40BDECF9855E66A88F",
+    "position": 1006,
+    "statementLabel": null,
+    "statementNotation": "8.NOS.B.4"
+   },
+   "EF179131B388411691DED5646F5DDD39": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "88C38EEE40D44183A06135FE83658216",
+     "9EAE0F5074A04EEE9517D2B80D3D4C31",
+     "55CCE685B5734D3C982E6BF80370DFF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Determine unknown side lengths in right\ntriangles.",
+    "id": "EF179131B388411691DED5646F5DDD39",
+    "listId": "a",
+    "parentId": "88C38EEE40D44183A06135FE83658216",
+    "position": 1056,
+    "statementLabel": null,
+    "statementNotation": "8.GR.B.5.a"
+   },
+   "F25CC5DE9D2B4E57BF7683D4A26B7182": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "52410FE1D7B84175BF2A75832557D3FF",
+     "55CCE685B5734D3C982E6BF80370DFF4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Use informal arguments to verify that the sum of the\ninterior angles of a triangle is 180 degrees and why an\nexterior angle equals the sum of the two remote\ninterior angles.",
+    "id": "F25CC5DE9D2B4E57BF7683D4A26B7182",
+    "listId": "3",
+    "parentId": "52410FE1D7B84175BF2A75832557D3FF",
+    "position": 1050,
+    "statementLabel": null,
+    "statementNotation": "8.GR.A.3"
+   },
+   "F3FA556F64E7489E83D9318891C97CB6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3C129B443D60432F820FEFF8F9AF9448",
+     "1CFD3D3A350C408285A1EFDDF20D632F",
+     "7273B779A8D84144B7A64B8E7E4DDCDF"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Represent the sample space for a compound\nevent using organized lists, tables, or tree diagrams. Given an event described in\neveryday language, identify the outcomes in\nthe sample space that make up the event. ",
+    "id": "F3FA556F64E7489E83D9318891C97CB6",
+    "listId": "a",
+    "parentId": "3C129B443D60432F820FEFF8F9AF9448",
+    "position": 1070,
+    "statementLabel": null,
+    "statementNotation": "8.DS.C.6.a"
+   }
+  },
+  "subject": "Mathematics (2025-)",
+  "title": "Grade 8"
+ }
+}

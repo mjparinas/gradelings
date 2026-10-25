@@ -36,6 +36,7 @@ const h = vi.hoisted(() => {
   };
 });
 
+vi.mock("./MysteryBox", () => ({ MysteryBox: () => null }));
 vi.mock("@/lib/store", () => {
   const useStore = Object.assign((select: (s: unknown) => unknown) => select({ log: h.log }), { getState: () => ({}) });
   return {

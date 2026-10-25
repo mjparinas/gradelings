@@ -1,0 +1,1585 @@
+{
+ "data": {
+  "cspStatus": {
+   "notes": null,
+   "value": "visible"
+  },
+  "document": {
+   "publicationStatus": "Published",
+   "sourceURL": "https://marylandpublicschools.org/about/documents/dcaa/math/revised/grade-6-mccrs-math-crosswalk-a.pdf",
+   "title": "Grade 6 MCCRS Math Crosswalk"
+  },
+  "educationLevels": [
+   "06"
+  ],
+  "id": "FE5FBDB2728B4CB9B65B420A533582AA",
+  "jurisdiction": {
+   "id": "49FCDFBD2CF04033A9C347BFA0584DF0",
+   "title": "Maryland"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/4.0/us/",
+   "rightsHolder": "Common Curriculum, Inc.",
+   "title": "CC BY 4.0 US"
+  },
+  "normalizedSubject": null,
+  "standards": {
+   "01AD8B0443A641398DDB020ABA83081A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A6907901B0F445BC8531477BD8FBDCD9",
+     "A84C218CFE5343F2A38397F9E15B84C5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Explain how a set of data collected to answer a statistical\nquestion has a distribution which can be described by its\ncenter, spread, and overall shape. ",
+    "id": "01AD8B0443A641398DDB020ABA83081A",
+    "listId": "3",
+    "parentId": "A6907901B0F445BC8531477BD8FBDCD9",
+    "position": 1080,
+    "statementLabel": null,
+    "statementNotation": "6.DS.A.3"
+   },
+   "01B200ED7B1447F59AA68075B71F35D6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B7687A61A8FB42FB8C5F2D3608E190C4",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Intersect perpendicular number lines at the point (0,0) as\nthe x-axis and y-axis to introduce the four quadrants of\nthe Coordinate Plane. Represent points on the plane with\npositive and negative coordinates.",
+    "id": "01B200ED7B1447F59AA68075B71F35D6",
+    "listId": "7",
+    "parentId": "B7687A61A8FB42FB8C5F2D3608E190C4",
+    "position": 1027,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.C.7"
+   },
+   "038958FC1C4648D3AF6107C396C9C475": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2FAC5F6EA11C4DB6814C9BE08DDDA593",
+     "A84C218CFE5343F2A38397F9E15B84C5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Interpret numerical data in plots on a number line,\nincluding line plots, histograms, and box plots.",
+    "id": "038958FC1C4648D3AF6107C396C9C475",
+    "listId": "5",
+    "parentId": "2FAC5F6EA11C4DB6814C9BE08DDDA593",
+    "position": 1083,
+    "statementLabel": null,
+    "statementNotation": "6.DS.B.5"
+   },
+   "0443F498A24A445698C85DEB3CD1B16C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F732CC71C0E2400E88717C2BAAB7067B",
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Write, read, and evaluate expressions in which letters\nstand for numbers.",
+    "id": "0443F498A24A445698C85DEB3CD1B16C",
+    "listId": "6",
+    "parentId": "F732CC71C0E2400E88717C2BAAB7067B",
+    "position": 1049,
+    "statementLabel": null,
+    "statementNotation": "6.AT.B.6"
+   },
+   "062A7462773D4B9396A7698626A8C653": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "27903696740142C5BF261206CEB4817E",
+     "6E5ECC9E41BE4521AF5A134913083BC1",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Express the sum of two whole numbers within\n100 using the distributive property to factor out\nthe common factor of the addends (e.g., express\n36 + 8 as 4(9 + 2)). ",
+    "id": "062A7462773D4B9396A7698626A8C653",
+    "listId": "c",
+    "parentId": "27903696740142C5BF261206CEB4817E",
+    "position": 1020,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.B.4.c"
+   },
+   "0AC57CE23C1849149D04C8734670D7A6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "49E61BC682E74A74B3FCC322098B13D8",
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Solve problems in context by writing and solving\ninequalities and interpreting solution sets in context. ",
+    "id": "0AC57CE23C1849149D04C8734670D7A6",
+    "listId": "10",
+    "parentId": "49E61BC682E74A74B3FCC322098B13D8",
+    "position": 1060,
+    "statementLabel": null,
+    "statementNotation": "6.AT.C.10"
+   },
+   "0D8044E900C64981BFE0EFEC47120757": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "13BC73F1BAEB4CDF9F5ADC3F41877AD1",
+     "6E5ECC9E41BE4521AF5A134913083BC1",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use a standard algorithm to multiply and divide\ndecimals. ",
+    "id": "0D8044E900C64981BFE0EFEC47120757",
+    "listId": "c",
+    "parentId": "13BC73F1BAEB4CDF9F5ADC3F41877AD1",
+    "position": 1015,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.B.3.c"
+   },
+   "0F10832E36F64C2D884BF7614EE407D1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "UNDERSTANDING RATIO CONCEPTS AND USE RATIO REASONING TO SOLVE.",
+    "id": "0F10832E36F64C2D884BF7614EE407D1",
+    "listId": "A",
+    "parentId": "6DA7B3C427254FEAB1D23B6D95C0A1D3",
+    "position": 1038,
+    "statementLabel": null,
+    "statementNotation": "6.AT.A"
+   },
+   "127022D30A5B4B2EBBB40E2FF7AA2EA5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F175F818A88E408FB3431A7B6773CB85",
+     "A283ADC581364EEB8A383C58B1D4A201",
+     "BD9CFD147076480CA702FCA3CC4CE6F8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Apply the formulas and (B is the\narea of the base) to find the volumes of right\nrectangular prisms with fractional edge lengths\nin context.",
+    "id": "127022D30A5B4B2EBBB40E2FF7AA2EA5",
+    "listId": "b",
+    "parentId": "F175F818A88E408FB3431A7B6773CB85",
+    "position": 1073,
+    "statementLabel": null,
+    "statementNotation": "6.GR.A.2.b"
+   },
+   "1347E135F49947DCA4A8CA2876F5AD0D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "APPLY AND EXTEND PREVIOUS UNDERSTANDINGS OF MULTIPLICATION AND DIVISION TO DIVIDE FRACTIONS BY\nFRACTIONS. ",
+    "id": "1347E135F49947DCA4A8CA2876F5AD0D",
+    "listId": "A",
+    "parentId": "209A4334FAF44104BE83F476424FC86A",
+    "position": 1001,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.A"
+   },
+   "13BC73F1BAEB4CDF9F5ADC3F41877AD1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6E5ECC9E41BE4521AF5A134913083BC1",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Fluently multiply and divide multi-digit decimals to the\nthousandths in context. ",
+    "id": "13BC73F1BAEB4CDF9F5ADC3F41877AD1",
+    "listId": "3",
+    "parentId": "6E5ECC9E41BE4521AF5A134913083BC1",
+    "position": 1012,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.B.3"
+   },
+   "1439F730DC3F4C79BF2D5F35B53976EE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D4FD4229061643728B96FFF2D7E7AA7E",
+     "49E61BC682E74A74B3FCC322098B13D8",
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Represent solutions of such equations on a\nnumber line.",
+    "id": "1439F730DC3F4C79BF2D5F35B53976EE",
+    "listId": "c",
+    "parentId": "D4FD4229061643728B96FFF2D7E7AA7E",
+    "position": 1058,
+    "statementLabel": null,
+    "statementNotation": "6.AT.C.8.c"
+   },
+   "17193A6A033442358E69412F49DE1C75": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B7687A61A8FB42FB8C5F2D3608E190C4",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Order and identify the absolute value of rational\nnumbers.",
+    "id": "17193A6A033442358E69412F49DE1C75",
+    "listId": "8",
+    "parentId": "B7687A61A8FB42FB8C5F2D3608E190C4",
+    "position": 1030,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.C.8"
+   },
+   "17F13CAB550C4BD4AB1CC7F0CFEFB69F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3CD3A02A80AE4D389B711D0539C5A426",
+     "1347E135F49947DCA4A8CA2876F5AD0D",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use and connect concrete and visual fraction\nmodels (e.g., linear, regional/area, and set models)\nand equations to divide.",
+    "id": "17F13CAB550C4BD4AB1CC7F0CFEFB69F",
+    "listId": "b",
+    "parentId": "3CD3A02A80AE4D389B711D0539C5A426",
+    "position": 1004,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.A.1.b"
+   },
+   "1A2D47A3D8F7410CA1C81B6332A25E3D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0F10832E36F64C2D884BF7614EE407D1",
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Use ratio and rate reasoning to solve problems in context\nby reasoning about tables of equivalent ratios, tape\ndiagrams, double number lines, or the Coordinate Plane. ",
+    "id": "1A2D47A3D8F7410CA1C81B6332A25E3D",
+    "listId": "3",
+    "parentId": "0F10832E36F64C2D884BF7614EE407D1",
+    "position": 1043,
+    "statementLabel": null,
+    "statementNotation": "6.AT.A.3"
+   },
+   "1C9AB139385A4C32925DB28CC5127341": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "86319DEA85D04EC99EA740711DDD338B",
+     "B7687A61A8FB42FB8C5F2D3608E190C4",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize and locate opposite signs of rational\nnumbers as indicating locations on opposite sides\nof 0 on the number line.",
+    "id": "1C9AB139385A4C32925DB28CC5127341",
+    "listId": "c",
+    "parentId": "86319DEA85D04EC99EA740711DDD338B",
+    "position": 1026,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.C.6.c"
+   },
+   "1FFC8D1BC6A247CFB52E89261BB063B6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "98C30FE709104E84A9722F079075C925",
+     "AD17B49FE0804C6FB3AE0EC6A31FF421",
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Analyze the relationship between the dependent\nand independent variables using graphs and\ntables, and relate these to the equation (e.g., in a\nproblem involving motion at constant speed, list\nand graph ordered pairs of distances and times\nand write the equation d = 65𝑡 to represent the\nrelationship between distance and time).",
+    "id": "1FFC8D1BC6A247CFB52E89261BB063B6",
+    "listId": "b",
+    "parentId": "98C30FE709104E84A9722F079075C925",
+    "position": 1067,
+    "statementLabel": null,
+    "statementNotation": "6.AT.D.11.b"
+   },
+   "20980A0C697343149F1674CCA729A7F5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BFE2AD494FBA4DE3ACA69B4B82F0B34F",
+     "2FAC5F6EA11C4DB6814C9BE08DDDA593",
+     "A84C218CFE5343F2A38397F9E15B84C5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Report the number of observations.",
+    "id": "20980A0C697343149F1674CCA729A7F5",
+    "listId": "a",
+    "parentId": "BFE2AD494FBA4DE3ACA69B4B82F0B34F",
+    "position": 1085,
+    "statementLabel": null,
+    "statementNotation": "6.DS.B.6.a"
+   },
+   "209A4334FAF44104BE83F476424FC86A": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Number and Operation Sense",
+    "id": "209A4334FAF44104BE83F476424FC86A",
+    "listId": "",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": null,
+    "statementNotation": "NOS"
+   },
+   "20E7852562934AD1AFC300D67B60FB56": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0443F498A24A445698C85DEB3CD1B16C",
+     "F732CC71C0E2400E88717C2BAAB7067B",
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify parts of an expression using\nmathematical language (e.g., sum, term, product,\nfactor, quotient, coefficient) and view one or more\nparts of an expression as a single unit (e.g.,\ndescribe the expression 2(8 + 7) as a product of\ntwo factors; view (8 + 7) as both a single unit and a\nsum of two terms). ",
+    "id": "20E7852562934AD1AFC300D67B60FB56",
+    "listId": "b",
+    "parentId": "0443F498A24A445698C85DEB3CD1B16C",
+    "position": 1051,
+    "statementLabel": null,
+    "statementNotation": "6.AT.B.6.b"
+   },
+   "24D3E50888924C9FA1DBB74F13807614": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "98C30FE709104E84A9722F079075C925",
+     "AD17B49FE0804C6FB3AE0EC6A31FF421",
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Write an equation (one-step) to express one\nquantity, thought of as the dependent variable, in\nterms of the other quantity, thought of as the\nindependent variable. ",
+    "id": "24D3E50888924C9FA1DBB74F13807614",
+    "listId": "a",
+    "parentId": "98C30FE709104E84A9722F079075C925",
+    "position": 1066,
+    "statementLabel": null,
+    "statementNotation": "6.AT.D.11.a"
+   },
+   "24E12BFA82FE4FD69577F963DD80484B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B7687A61A8FB42FB8C5F2D3608E190C4",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Use understanding of rational numbers as positive and\nnegative numbers to describe quantities having opposite\ndirections or values (e.g., temperature above/below zero,\nelevation above/below sea level, credits/debits,\npositive/negative electric charge). Use rational numbers\nto represent quantities in context and explain the\nmeaning of 0 in each situation. ",
+    "id": "24E12BFA82FE4FD69577F963DD80484B",
+    "listId": "5",
+    "parentId": "B7687A61A8FB42FB8C5F2D3608E190C4",
+    "position": 1022,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.C.5"
+   },
+   "27903696740142C5BF261206CEB4817E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6E5ECC9E41BE4521AF5A134913083BC1",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identify the common factors and multiples of two whole\nnumbers.",
+    "id": "27903696740142C5BF261206CEB4817E",
+    "listId": "4",
+    "parentId": "6E5ECC9E41BE4521AF5A134913083BC1",
+    "position": 1017,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.B.4"
+   },
+   "27B830F4559C4B5685C86EF329740156": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "17193A6A033442358E69412F49DE1C75",
+     "B7687A61A8FB42FB8C5F2D3608E190C4",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Write, interpret, and explain statements of order\nfor rational numbers in context (e.g., write −3℃ >\n−7℃ to express the fact that −3℃ is warmer than\n−7℃).",
+    "id": "27B830F4559C4B5685C86EF329740156",
+    "listId": "b",
+    "parentId": "17193A6A033442358E69412F49DE1C75",
+    "position": 1032,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.C.8.b"
+   },
+   "285D41909EA14475B40A7949E2152643": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0443F498A24A445698C85DEB3CD1B16C",
+     "F732CC71C0E2400E88717C2BAAB7067B",
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Evaluate expressions given specific values of their\nvariables in context. Include expressions that\ninvolve arithmetic operations and whole number\nexponents. ",
+    "id": "285D41909EA14475B40A7949E2152643",
+    "listId": "c",
+    "parentId": "0443F498A24A445698C85DEB3CD1B16C",
+    "position": 1052,
+    "statementLabel": null,
+    "statementNotation": "6.AT.B.6.c"
+   },
+   "2E485D8453994E68AF971EFE19E3FC24": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0AC57CE23C1849149D04C8734670D7A6",
+     "49E61BC682E74A74B3FCC322098B13D8",
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Represent solutions of such inequalities on a\nnumber line.",
+    "id": "2E485D8453994E68AF971EFE19E3FC24",
+    "listId": "c",
+    "parentId": "0AC57CE23C1849149D04C8734670D7A6",
+    "position": 1063,
+    "statementLabel": null,
+    "statementNotation": "6.AT.C.10.c"
+   },
+   "2EEA8C1EB9D2490E9957FB214A06CF5F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1A2D47A3D8F7410CA1C81B6332A25E3D",
+     "0F10832E36F64C2D884BF7614EE407D1",
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use ratio reasoning to convert measurement\nunits (e.g., money, time, length within the same\nsystem); manipulate and transform units\nappropriately when multiplying or dividing\nquantities. ",
+    "id": "2EEA8C1EB9D2490E9957FB214A06CF5F",
+    "listId": "c",
+    "parentId": "1A2D47A3D8F7410CA1C81B6332A25E3D",
+    "position": 1046,
+    "statementLabel": null,
+    "statementNotation": "6.AT.A.3.c"
+   },
+   "2FAC5F6EA11C4DB6814C9BE08DDDA593": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A84C218CFE5343F2A38397F9E15B84C5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "SUMMARIZE AND DESCRIBE DISTRIBUTIONS",
+    "id": "2FAC5F6EA11C4DB6814C9BE08DDDA593",
+    "listId": "B",
+    "parentId": "A84C218CFE5343F2A38397F9E15B84C5",
+    "position": 1082,
+    "statementLabel": null,
+    "statementNotation": "6.DS.B"
+   },
+   "37966EE2B67545D9A4F4F787CE2EE09F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F732CC71C0E2400E88717C2BAAB7067B",
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Write numerical expressions involving whole number\nexponents and positive rational number bases. Use\ntechnology to evaluate numerical expressions involving\nwhole number exponents and positive rational number\nbases.",
+    "id": "37966EE2B67545D9A4F4F787CE2EE09F",
+    "listId": "5",
+    "parentId": "F732CC71C0E2400E88717C2BAAB7067B",
+    "position": 1048,
+    "statementLabel": null,
+    "statementNotation": "6.AT.B.5"
+   },
+   "3AC9A4CB68314A8DA790AF6D362404F5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B7687A61A8FB42FB8C5F2D3608E190C4",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Solve problems in context by graphing points (with the\nsame first coordinate or the same second coordinate) in\nall four quadrants of the Coordinate Plane.",
+    "id": "3AC9A4CB68314A8DA790AF6D362404F5",
+    "listId": "9",
+    "parentId": "B7687A61A8FB42FB8C5F2D3608E190C4",
+    "position": 1034,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.C.8.9"
+   },
+   "3BF0D143BBC24EEF84618A917A10DBBE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "13BC73F1BAEB4CDF9F5ADC3F41877AD1",
+     "6E5ECC9E41BE4521AF5A134913083BC1",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Determine and explain when a strategy or\nalgorithm is most efficient.",
+    "id": "3BF0D143BBC24EEF84618A917A10DBBE",
+    "listId": "d",
+    "parentId": "13BC73F1BAEB4CDF9F5ADC3F41877AD1",
+    "position": 1016,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.B.3.d"
+   },
+   "3CD3A02A80AE4D389B711D0539C5A426": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1347E135F49947DCA4A8CA2876F5AD0D",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Divide fractions by fractions in context. ",
+    "id": "3CD3A02A80AE4D389B711D0539C5A426",
+    "listId": "1",
+    "parentId": "1347E135F49947DCA4A8CA2876F5AD0D",
+    "position": 1002,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.A.1"
+   },
+   "49E61BC682E74A74B3FCC322098B13D8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "REASON ABOUT AND SOLVE ONE-VARIABLE EQUATIONS AND INEQUALITIES ",
+    "id": "49E61BC682E74A74B3FCC322098B13D8",
+    "listId": "C",
+    "parentId": "6DA7B3C427254FEAB1D23B6D95C0A1D3",
+    "position": 1054,
+    "statementLabel": null,
+    "statementNotation": "6.AT.C"
+   },
+   "55C4E0CDECF14E268781EE936A9ADFA3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A6907901B0F445BC8531477BD8FBDCD9",
+     "A84C218CFE5343F2A38397F9E15B84C5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Recognize a statistical question as one that anticipates\nvariability in the data related to the question and\naccounts for it in the answers (e.g., \"How old am I?\" is not\na statistical question, but \"How old are the students in my\nschool?\" is a statistical question because one anticipates\nvariability in students' ages).",
+    "id": "55C4E0CDECF14E268781EE936A9ADFA3",
+    "listId": "1",
+    "parentId": "A6907901B0F445BC8531477BD8FBDCD9",
+    "position": 1078,
+    "statementLabel": null,
+    "statementNotation": "6.DS.A.1"
+   },
+   "58C568BC69FC4A97A219B8A850937DE2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0F10832E36F64C2D884BF7614EE407D1",
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Find a percent of a quantity in context as a rate per 100\n(e.g., 30% of a quantity means times the quantity),\nincluding finding the whole given a part and the percent,\nby using tables, tape diagrams, and double number lines.",
+    "id": "58C568BC69FC4A97A219B8A850937DE2",
+    "listId": "4",
+    "parentId": "0F10832E36F64C2D884BF7614EE407D1",
+    "position": 1047,
+    "statementLabel": null,
+    "statementNotation": "6.AT.A.4"
+   },
+   "5DC0395EC0F14A55BB12F45115232CA4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6E5ECC9E41BE4521AF5A134913083BC1",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Fluently divide multi-digit numbers. ",
+    "id": "5DC0395EC0F14A55BB12F45115232CA4",
+    "listId": "2",
+    "parentId": "6E5ECC9E41BE4521AF5A134913083BC1",
+    "position": 1007,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.B.2"
+   },
+   "5E47C22E03B74CC384D737E3D059D327": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BFE2AD494FBA4DE3ACA69B4B82F0B34F",
+     "2FAC5F6EA11C4DB6814C9BE08DDDA593",
+     "A84C218CFE5343F2A38397F9E15B84C5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Relate the choice of measures of center and\nvariability to the shape of the data distribution\nand the context in which the data were\ngathered. ",
+    "id": "5E47C22E03B74CC384D737E3D059D327",
+    "listId": "d",
+    "parentId": "BFE2AD494FBA4DE3ACA69B4B82F0B34F",
+    "position": 1088,
+    "statementLabel": null,
+    "statementNotation": "6.DS.B.6.d"
+   },
+   "63FFF02B393A4A15B59CE8B03018E06A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A283ADC581364EEB8A383C58B1D4A201",
+     "BD9CFD147076480CA702FCA3CC4CE6F8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Represent three-dimensional figures (triangular prism,\nrectangular prism, pyramid) using nets made up of\nrectangles and triangles, and use the nets to find the\nsurface area of these figures to solve problems. ",
+    "id": "63FFF02B393A4A15B59CE8B03018E06A",
+    "listId": "4",
+    "parentId": "A283ADC581364EEB8A383C58B1D4A201",
+    "position": 1075,
+    "statementLabel": null,
+    "statementNotation": "6.GR.A.4"
+   },
+   "658049FDEAFD40829DEDACB0FF5FE9E1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0F10832E36F64C2D884BF7614EE407D1",
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Use ratio language in context (e.g., “__ to __,” “for every,”\n“per”) to describe a ratio relationship between two\nquantities, including part to part and part to whole (e.g.,\n\"The ratio of wings to beaks in the bird house at the zoo\nwas 2:1, because for every 2 wings there was 1 beak.\" )",
+    "id": "658049FDEAFD40829DEDACB0FF5FE9E1",
+    "listId": "1",
+    "parentId": "0F10832E36F64C2D884BF7614EE407D1",
+    "position": 1039,
+    "statementLabel": null,
+    "statementNotation": "6.AT.A.1"
+   },
+   "67DBE8DBE53240C29DBBA15EE2F46FD4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "86319DEA85D04EC99EA740711DDD338B",
+     "B7687A61A8FB42FB8C5F2D3608E190C4",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Estimate quantities by reasoning about their\nlocation on a number line, their relationship to\nbenchmark numbers, and by rounding. ",
+    "id": "67DBE8DBE53240C29DBBA15EE2F46FD4",
+    "listId": "a",
+    "parentId": "86319DEA85D04EC99EA740711DDD338B",
+    "position": 1024,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.C.6.a"
+   },
+   "6DA7B3C427254FEAB1D23B6D95C0A1D3": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Algebraic Thinking",
+    "id": "6DA7B3C427254FEAB1D23B6D95C0A1D3",
+    "listId": "",
+    "parentId": null,
+    "position": 1037,
+    "statementLabel": null,
+    "statementNotation": "AT"
+   },
+   "6E5ECC9E41BE4521AF5A134913083BC1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "COMPUTE FLUENTLY WITH MULTI-DIGIT NUMBERS AND FIND COMMON FACTORS AND MULTIPLES. ",
+    "id": "6E5ECC9E41BE4521AF5A134913083BC1",
+    "listId": "B",
+    "parentId": "209A4334FAF44104BE83F476424FC86A",
+    "position": 1006,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.B"
+   },
+   "7047AA428C4949EE86DDA62C203BCB90": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5DC0395EC0F14A55BB12F45115232CA4",
+     "6E5ECC9E41BE4521AF5A134913083BC1",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Determine and explain when a strategy or\nalgorithm is most efficient. ",
+    "id": "7047AA428C4949EE86DDA62C203BCB90",
+    "listId": "d",
+    "parentId": "5DC0395EC0F14A55BB12F45115232CA4",
+    "position": 1011,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.B.2.d"
+   },
+   "73C420B754FC4488A4E0B29E5C0DABCC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D4FD4229061643728B96FFF2D7E7AA7E",
+     "49E61BC682E74A74B3FCC322098B13D8",
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Explain that a variable can represent an unknown\nnumber and use substitution to determine\nwhether a given number makes an equation true.",
+    "id": "73C420B754FC4488A4E0B29E5C0DABCC",
+    "listId": "a",
+    "parentId": "D4FD4229061643728B96FFF2D7E7AA7E",
+    "position": 1056,
+    "statementLabel": null,
+    "statementNotation": "6.AT.C.8.a"
+   },
+   "7DA9112C9C744C81A847563425613A1D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0AC57CE23C1849149D04C8734670D7A6",
+     "49E61BC682E74A74B3FCC322098B13D8",
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Write and solve one-step inequalities of the form\n (using )\nwhere p and q are nonnegative rational numbers. ",
+    "id": "7DA9112C9C744C81A847563425613A1D",
+    "listId": "b",
+    "parentId": "0AC57CE23C1849149D04C8734670D7A6",
+    "position": 1062,
+    "statementLabel": null,
+    "statementNotation": "6.AT.C.10.b"
+   },
+   "7E5BFDE6BD32467196F512E567398834": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "27903696740142C5BF261206CEB4817E",
+     "6E5ECC9E41BE4521AF5A134913083BC1",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify the greatest common factor of two whole\nnumbers within 100.",
+    "id": "7E5BFDE6BD32467196F512E567398834",
+    "listId": "a",
+    "parentId": "27903696740142C5BF261206CEB4817E",
+    "position": 1018,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.B.4.a"
+   },
+   "86319DEA85D04EC99EA740711DDD338B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B7687A61A8FB42FB8C5F2D3608E190C4",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Represent a rational number as a point on vertical or\nhorizontal number lines. Represent points on a number\nline with negative numbers. ",
+    "id": "86319DEA85D04EC99EA740711DDD338B",
+    "listId": "6",
+    "parentId": "B7687A61A8FB42FB8C5F2D3608E190C4",
+    "position": 1023,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.C.6"
+   },
+   "91BF5686C82F40978EBB504E81BCB203": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3CD3A02A80AE4D389B711D0539C5A426",
+     "1347E135F49947DCA4A8CA2876F5AD0D",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Extend estimation strategies to estimate and\nassess the reasonableness of quotients.",
+    "id": "91BF5686C82F40978EBB504E81BCB203",
+    "listId": "a",
+    "parentId": "3CD3A02A80AE4D389B711D0539C5A426",
+    "position": 1003,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.A.1.a"
+   },
+   "91C249411A7F49E78AD56B18A0E079B3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D4FD4229061643728B96FFF2D7E7AA7E",
+     "49E61BC682E74A74B3FCC322098B13D8",
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Write and solve one-step equations of the form\n for cases in which\np, q and x are all nonnegative rational numbers.",
+    "id": "91C249411A7F49E78AD56B18A0E079B3",
+    "listId": "b",
+    "parentId": "D4FD4229061643728B96FFF2D7E7AA7E",
+    "position": 1057,
+    "statementLabel": null,
+    "statementNotation": "6.AT.C.8.b"
+   },
+   "91C4AF89B38645D2853D734C3380FE6C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1A2D47A3D8F7410CA1C81B6332A25E3D",
+     "0F10832E36F64C2D884BF7614EE407D1",
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Plot the pairs of values on the Coordinate Plane\n(in quadrant 1) to represent unit rates and make\nconnections between representations.",
+    "id": "91C4AF89B38645D2853D734C3380FE6C",
+    "listId": "b",
+    "parentId": "1A2D47A3D8F7410CA1C81B6332A25E3D",
+    "position": 1045,
+    "statementLabel": null,
+    "statementNotation": "6.AT.A.3.b"
+   },
+   "9621A55DB6A04718922190F4685BF5CA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1A2D47A3D8F7410CA1C81B6332A25E3D",
+     "0F10832E36F64C2D884BF7614EE407D1",
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Generate, compare and find missing values of\nequivalent ratios and unit rates using multiple\nrepresentations. ",
+    "id": "9621A55DB6A04718922190F4685BF5CA",
+    "listId": "a",
+    "parentId": "1A2D47A3D8F7410CA1C81B6332A25E3D",
+    "position": 1044,
+    "statementLabel": null,
+    "statementNotation": "6.AT.A.3.a"
+   },
+   "98032C6DD04C47FF87C1DE9F89EAE8F1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F9B30C7C8DB6410EAFA35C75F4D777AE",
+     "0F10832E36F64C2D884BF7614EE407D1",
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Solve unit rate problems, for example those\ninvolving unit pricing and constant speed (e.g., “If\nit took 7 hours to mow 4 lawns, then at that rate,\nhow many lawns could be mowed in 35 hours? At\nwhat rate were lawns being mowed?”). ",
+    "id": "98032C6DD04C47FF87C1DE9F89EAE8F1",
+    "listId": "b",
+    "parentId": "F9B30C7C8DB6410EAFA35C75F4D777AE",
+    "position": 1042,
+    "statementLabel": null,
+    "statementNotation": "6.AT.A.2.b"
+   },
+   "98C30FE709104E84A9722F079075C925": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "AD17B49FE0804C6FB3AE0EC6A31FF421",
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Use variables to represent two quantities in context that\nchange in relationship to one another. ",
+    "id": "98C30FE709104E84A9722F079075C925",
+    "listId": "11",
+    "parentId": "AD17B49FE0804C6FB3AE0EC6A31FF421",
+    "position": 1065,
+    "statementLabel": null,
+    "statementNotation": "6.AT.D.11"
+   },
+   "9B9F50AEEB5B4B4D979E90F0CEA610C2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A283ADC581364EEB8A383C58B1D4A201",
+     "BD9CFD147076480CA702FCA3CC4CE6F8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Draw polygons in the Coordinate Plane given coordinates\nfor the vertices; use coordinates to find the length of a\nside joining endpoints with the same first coordinate or\nthe same second coordinate. Apply these techniques in\ncontext.",
+    "id": "9B9F50AEEB5B4B4D979E90F0CEA610C2",
+    "listId": "3",
+    "parentId": "A283ADC581364EEB8A383C58B1D4A201",
+    "position": 1074,
+    "statementLabel": null,
+    "statementNotation": "6.GR.A.3"
+   },
+   "A283ADC581364EEB8A383C58B1D4A201": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BD9CFD147076480CA702FCA3CC4CE6F8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "SOLVE PROBLEMS IN CONTEXT INVOLVING AREA, SURFACE AREA, AND VOLUME",
+    "id": "A283ADC581364EEB8A383C58B1D4A201",
+    "listId": "A",
+    "parentId": "BD9CFD147076480CA702FCA3CC4CE6F8",
+    "position": 1069,
+    "statementLabel": null,
+    "statementNotation": "6.GR.A"
+   },
+   "A6488A7D60A94630B715CF87224DB714": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "27903696740142C5BF261206CEB4817E",
+     "6E5ECC9E41BE4521AF5A134913083BC1",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify the least common multiple of two whole\nnumbers within 12. ",
+    "id": "A6488A7D60A94630B715CF87224DB714",
+    "listId": "b",
+    "parentId": "27903696740142C5BF261206CEB4817E",
+    "position": 1019,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.B.4.b"
+   },
+   "A6907901B0F445BC8531477BD8FBDCD9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A84C218CFE5343F2A38397F9E15B84C5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "EXTEND UNDERSTANDING OF STATISTICAL VARIABILITY",
+    "id": "A6907901B0F445BC8531477BD8FBDCD9",
+    "listId": "A",
+    "parentId": "A84C218CFE5343F2A38397F9E15B84C5",
+    "position": 1077,
+    "statementLabel": null,
+    "statementNotation": "6.DS.A"
+   },
+   "A69A854A42C24454964AFAF793255BA2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3AC9A4CB68314A8DA790AF6D362404F5",
+     "B7687A61A8FB42FB8C5F2D3608E190C4",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Explain that points with the same x-coordinate or\ny-coordinate are located on same vertical or\nhorizontal line respectively. ",
+    "id": "A69A854A42C24454964AFAF793255BA2",
+    "listId": "a",
+    "parentId": "3AC9A4CB68314A8DA790AF6D362404F5",
+    "position": 1035,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.C.8.9.a"
+   },
+   "A7EE6511C1EA45BD8392CC7B9BA445B5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "13BC73F1BAEB4CDF9F5ADC3F41877AD1",
+     "6E5ECC9E41BE4521AF5A134913083BC1",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Extend estimation strategies to estimate and\nassess the reasonableness of products and\nquotients.",
+    "id": "A7EE6511C1EA45BD8392CC7B9BA445B5",
+    "listId": "a",
+    "parentId": "13BC73F1BAEB4CDF9F5ADC3F41877AD1",
+    "position": 1013,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.B.3.a"
+   },
+   "A84C218CFE5343F2A38397F9E15B84C5": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Reasoning with Data and Statistics",
+    "id": "A84C218CFE5343F2A38397F9E15B84C5",
+    "listId": "",
+    "parentId": null,
+    "position": 1076,
+    "statementLabel": null,
+    "statementNotation": "DS"
+   },
+   "ABFFF3C62D904C15938DA03D5BFEB899": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3AC9A4CB68314A8DA790AF6D362404F5",
+     "B7687A61A8FB42FB8C5F2D3608E190C4",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use absolute value to calculate length of vertical\nand horizontal lines on Coordinate Plane. ",
+    "id": "ABFFF3C62D904C15938DA03D5BFEB899",
+    "listId": "b",
+    "parentId": "3AC9A4CB68314A8DA790AF6D362404F5",
+    "position": 1036,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.C.8.9.b"
+   },
+   "AD17B49FE0804C6FB3AE0EC6A31FF421": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "REPRESENT AND ANALYZE QUANTITATIVE RELATIONSHIPS BETWEEN DEPENDENT AND INDEPENDENT VARIABLES ",
+    "id": "AD17B49FE0804C6FB3AE0EC6A31FF421",
+    "listId": "D",
+    "parentId": "6DA7B3C427254FEAB1D23B6D95C0A1D3",
+    "position": 1064,
+    "statementLabel": null,
+    "statementNotation": "6.AT.D"
+   },
+   "AEDFEEDA6DE3434CA4594B3C9C107E14": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "86319DEA85D04EC99EA740711DDD338B",
+     "B7687A61A8FB42FB8C5F2D3608E190C4",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Locate and interpret the positions of rational\nnumbers on a number line. ",
+    "id": "AEDFEEDA6DE3434CA4594B3C9C107E14",
+    "listId": "b",
+    "parentId": "86319DEA85D04EC99EA740711DDD338B",
+    "position": 1025,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.C.6.b"
+   },
+   "B1EBBCB9F4DA4021B305982CA7D01C49": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F175F818A88E408FB3431A7B6773CB85",
+     "A283ADC581364EEB8A383C58B1D4A201",
+     "BD9CFD147076480CA702FCA3CC4CE6F8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "By packing prisms with unit cubes and using\nestimation to show that the volume can be found\nby multiplying the edge lengths of the prism. ",
+    "id": "B1EBBCB9F4DA4021B305982CA7D01C49",
+    "listId": "a",
+    "parentId": "F175F818A88E408FB3431A7B6773CB85",
+    "position": 1072,
+    "statementLabel": null,
+    "statementNotation": "6.GR.A.2.a"
+   },
+   "B26E4481CE944CEFAB8AAD0CF5F220ED": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A283ADC581364EEB8A383C58B1D4A201",
+     "BD9CFD147076480CA702FCA3CC4CE6F8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Find the area of triangles, quadrilaterals, and polygons by\ncomposing into rectangles or decomposing into triangles\nand quadrilaterals to solve problems.",
+    "id": "B26E4481CE944CEFAB8AAD0CF5F220ED",
+    "listId": "1",
+    "parentId": "A283ADC581364EEB8A383C58B1D4A201",
+    "position": 1070,
+    "statementLabel": null,
+    "statementNotation": "6.GR.A.1"
+   },
+   "B4F620C0DBE84235B9DEF1F18B031B22": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "01B200ED7B1447F59AA68075B71F35D6",
+     "B7687A61A8FB42FB8C5F2D3608E190C4",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Locate and interpret the positions of rational\nnumbers on the Coordinate Plane, including how\nchanges in the signs of ordered pairs reflect their\nlocation into different quadrants.",
+    "id": "B4F620C0DBE84235B9DEF1F18B031B22",
+    "listId": "b",
+    "parentId": "01B200ED7B1447F59AA68075B71F35D6",
+    "position": 1029,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.C.7.b"
+   },
+   "B7687A61A8FB42FB8C5F2D3608E190C4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "APPLY AND EXTEND PREVIOUS UNDERSTANDING OF NUMBERS TO THE SYSTEM OF RATIONAL NUMBERS.",
+    "id": "B7687A61A8FB42FB8C5F2D3608E190C4",
+    "listId": "C",
+    "parentId": "209A4334FAF44104BE83F476424FC86A",
+    "position": 1021,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.C"
+   },
+   "BA462D08B2ED43D6BF5404C9C1DC47AB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "13BC73F1BAEB4CDF9F5ADC3F41877AD1",
+     "6E5ECC9E41BE4521AF5A134913083BC1",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Generalize whole number strategies to multiply\nand divide decimals.",
+    "id": "BA462D08B2ED43D6BF5404C9C1DC47AB",
+    "listId": "b",
+    "parentId": "13BC73F1BAEB4CDF9F5ADC3F41877AD1",
+    "position": 1014,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.B.3.b"
+   },
+   "BC27E72044724993A6E2C11AD0C2EFD5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BFE2AD494FBA4DE3ACA69B4B82F0B34F",
+     "2FAC5F6EA11C4DB6814C9BE08DDDA593",
+     "A84C218CFE5343F2A38397F9E15B84C5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Give quantitative measures of center (median\nand/or mean) and variability (interquartile range),\nas well as describing outliers with reference to the\ncontext in which the data were gathered.",
+    "id": "BC27E72044724993A6E2C11AD0C2EFD5",
+    "listId": "c",
+    "parentId": "BFE2AD494FBA4DE3ACA69B4B82F0B34F",
+    "position": 1087,
+    "statementLabel": null,
+    "statementNotation": "6.DS.B.6.c"
+   },
+   "BD9CFD147076480CA702FCA3CC4CE6F8": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Geometric Reasoning and Measurement",
+    "id": "BD9CFD147076480CA702FCA3CC4CE6F8",
+    "listId": "",
+    "parentId": null,
+    "position": 1068,
+    "statementLabel": null,
+    "statementNotation": "GR"
+   },
+   "BFE2AD494FBA4DE3ACA69B4B82F0B34F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2FAC5F6EA11C4DB6814C9BE08DDDA593",
+     "A84C218CFE5343F2A38397F9E15B84C5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Summarize numerical data sets in relation to their\ncontext.",
+    "id": "BFE2AD494FBA4DE3ACA69B4B82F0B34F",
+    "listId": "6",
+    "parentId": "2FAC5F6EA11C4DB6814C9BE08DDDA593",
+    "position": 1084,
+    "statementLabel": null,
+    "statementNotation": "6.DS.B.6"
+   },
+   "C7ECC0846CF44CD49A333126C85004CE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "17193A6A033442358E69412F49DE1C75",
+     "B7687A61A8FB42FB8C5F2D3608E190C4",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use understanding of the absolute value of a\nrational number as its distance from 0 on the\nnumber line to interpret absolute value as\nmagnitude for a positive or negative quantity in\ncontext (e.g., for an account balance of –30 dollars,\nwrite to describe the size of the debt in\ndollars). ",
+    "id": "C7ECC0846CF44CD49A333126C85004CE",
+    "listId": "c",
+    "parentId": "17193A6A033442358E69412F49DE1C75",
+    "position": 1033,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.C.8.c"
+   },
+   "CB5932A2BB1743CAADDEAD70BA093DC3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5DC0395EC0F14A55BB12F45115232CA4",
+     "6E5ECC9E41BE4521AF5A134913083BC1",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use strategies (e.g., partial quotients, inverse\nrelationship between multiplication and division)\nto divide.",
+    "id": "CB5932A2BB1743CAADDEAD70BA093DC3",
+    "listId": "b",
+    "parentId": "5DC0395EC0F14A55BB12F45115232CA4",
+    "position": 1009,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.B.2.b"
+   },
+   "D45041B9D2A244F18D6649CC43AACCF4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BFE2AD494FBA4DE3ACA69B4B82F0B34F",
+     "2FAC5F6EA11C4DB6814C9BE08DDDA593",
+     "A84C218CFE5343F2A38397F9E15B84C5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describe the nature of the attribute under\ninvestigation, including how it was measured and\nits units of measurement.",
+    "id": "D45041B9D2A244F18D6649CC43AACCF4",
+    "listId": "b",
+    "parentId": "BFE2AD494FBA4DE3ACA69B4B82F0B34F",
+    "position": 1086,
+    "statementLabel": null,
+    "statementNotation": "6.DS.B.6.b"
+   },
+   "D4FD4229061643728B96FFF2D7E7AA7E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "49E61BC682E74A74B3FCC322098B13D8",
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Solve problems in context by writing and solving\nequations and interpreting the solutions in context. ",
+    "id": "D4FD4229061643728B96FFF2D7E7AA7E",
+    "listId": "8",
+    "parentId": "49E61BC682E74A74B3FCC322098B13D8",
+    "position": 1055,
+    "statementLabel": null,
+    "statementNotation": "6.AT.C.8"
+   },
+   "D8C35C61E96D4C42831ED1EE6F2B64AC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A6907901B0F445BC8531477BD8FBDCD9",
+     "A84C218CFE5343F2A38397F9E15B84C5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Recognize that a measure of center (median and/or\nmean) for a numerical data set summarizes all the values\nwith a single number, while a measure of variation\ndescribes how its values vary with a single number.",
+    "id": "D8C35C61E96D4C42831ED1EE6F2B64AC",
+    "listId": "4",
+    "parentId": "A6907901B0F445BC8531477BD8FBDCD9",
+    "position": 1081,
+    "statementLabel": null,
+    "statementNotation": "6.DS.A.4"
+   },
+   "DD171A484C1F4BC0B9047CADFCE34BC5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5DC0395EC0F14A55BB12F45115232CA4",
+     "6E5ECC9E41BE4521AF5A134913083BC1",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Extend estimation strategies to estimate and\nassess the reasonableness of quotients. ",
+    "id": "DD171A484C1F4BC0B9047CADFCE34BC5",
+    "listId": "a",
+    "parentId": "5DC0395EC0F14A55BB12F45115232CA4",
+    "position": 1008,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.B.2.a"
+   },
+   "DD6FE3A76CCE4258BA957415E6B320C6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0AC57CE23C1849149D04C8734670D7A6",
+     "49E61BC682E74A74B3FCC322098B13D8",
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Explain that a variable can represent an unknown\nnumber in a set and use substitution to\ndetermine whether a given number in a set\nmakes an inequality true. ",
+    "id": "DD6FE3A76CCE4258BA957415E6B320C6",
+    "listId": "a",
+    "parentId": "0AC57CE23C1849149D04C8734670D7A6",
+    "position": 1061,
+    "statementLabel": null,
+    "statementNotation": "6.AT.C.10.a"
+   },
+   "E2452AAD24274AD69C3B060A2B48C775": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A6907901B0F445BC8531477BD8FBDCD9",
+     "A84C218CFE5343F2A38397F9E15B84C5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Use the language of probability (e.g., likely, unlikely,\ncertain, impossible) to describe the likelihood of possible\noutcomes and to anticipate variability in data collected\nfrom statistical questions. Explain how the likelihood of\noutcomes helps predict which responses may be more or\nless common in the data and justify predictions using\nprobability terms. ",
+    "id": "E2452AAD24274AD69C3B060A2B48C775",
+    "listId": "2",
+    "parentId": "A6907901B0F445BC8531477BD8FBDCD9",
+    "position": 1079,
+    "statementLabel": null,
+    "statementNotation": "6.DS.A.2"
+   },
+   "EA5AC6BE214E45579AE6AA32BCB54802": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0443F498A24A445698C85DEB3CD1B16C",
+     "F732CC71C0E2400E88717C2BAAB7067B",
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Write expressions that record operations with\nnumbers and with letters standing for numbers\n(e.g., express the calculation \"Subtract y from 5\" as\n5 − y). ",
+    "id": "EA5AC6BE214E45579AE6AA32BCB54802",
+    "listId": "a",
+    "parentId": "0443F498A24A445698C85DEB3CD1B16C",
+    "position": 1050,
+    "statementLabel": null,
+    "statementNotation": "6.AT.B.6.a"
+   },
+   "EC06E60274794B089A39ADB4751186B5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "01B200ED7B1447F59AA68075B71F35D6",
+     "B7687A61A8FB42FB8C5F2D3608E190C4",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use understanding of the relationship between\nsigns and value of coordinates in ordered pairs to\nreason about the location of an ordered pair\nwithout plotting.",
+    "id": "EC06E60274794B089A39ADB4751186B5",
+    "listId": "a",
+    "parentId": "01B200ED7B1447F59AA68075B71F35D6",
+    "position": 1028,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.C.7.a"
+   },
+   "F014F70692104513ACA37269D2FAE472": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F9B30C7C8DB6410EAFA35C75F4D777AE",
+     "0F10832E36F64C2D884BF7614EE407D1",
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use unit rate language in the context of a ratio\nrelationship (e.g., “The recipe has a ratio of 3 cups\nof flour to 4 cups of sugar so there is cup of\nflour for each cup of sugar.”)",
+    "id": "F014F70692104513ACA37269D2FAE472",
+    "listId": "a",
+    "parentId": "F9B30C7C8DB6410EAFA35C75F4D777AE",
+    "position": 1041,
+    "statementLabel": null,
+    "statementNotation": "6.AT.A.2.a"
+   },
+   "F0EB39E0372D49CD94F4181000CE1973": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5DC0395EC0F14A55BB12F45115232CA4",
+     "6E5ECC9E41BE4521AF5A134913083BC1",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use a standard algorithm to divide. ",
+    "id": "F0EB39E0372D49CD94F4181000CE1973",
+    "listId": "c",
+    "parentId": "5DC0395EC0F14A55BB12F45115232CA4",
+    "position": 1010,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.B.2.c"
+   },
+   "F121146C291E4ECE89ACD774DF0CDEF2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "49E61BC682E74A74B3FCC322098B13D8",
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Write an inequality of the form 𝑥 > 𝑐 (using )\nrepresent a constraint or condition in context. Recognize\nthat inequalities of this form have infinitely many\nsolutions; represent solutions of such inequalities on\nnumber lines. ",
+    "id": "F121146C291E4ECE89ACD774DF0CDEF2",
+    "listId": "9",
+    "parentId": "49E61BC682E74A74B3FCC322098B13D8",
+    "position": 1059,
+    "statementLabel": null,
+    "statementNotation": "6.AT.C.9"
+   },
+   "F175F818A88E408FB3431A7B6773CB85": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A283ADC581364EEB8A383C58B1D4A201",
+     "BD9CFD147076480CA702FCA3CC4CE6F8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Find the volume of a right rectangular prism with\nfractional edge lengths.",
+    "id": "F175F818A88E408FB3431A7B6773CB85",
+    "listId": "2",
+    "parentId": "A283ADC581364EEB8A383C58B1D4A201",
+    "position": 1071,
+    "statementLabel": null,
+    "statementNotation": "6.GR.A.2"
+   },
+   "F2B3B7C23B9140CBBC9364DD7210ECE6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "17193A6A033442358E69412F49DE1C75",
+     "B7687A61A8FB42FB8C5F2D3608E190C4",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Interpret statements of inequality as statements\nabout the relative position of two numbers on a\nnumber line (e.g., interpret −3 > −7 as a statement\nthat –3 is located to the right of –7 on a horizontal\nnumber line).",
+    "id": "F2B3B7C23B9140CBBC9364DD7210ECE6",
+    "listId": "a",
+    "parentId": "17193A6A033442358E69412F49DE1C75",
+    "position": 1031,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.C.8.a"
+   },
+   "F4D496BCB4F04703831B427E577B41C9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3CD3A02A80AE4D389B711D0539C5A426",
+     "1347E135F49947DCA4A8CA2876F5AD0D",
+     "209A4334FAF44104BE83F476424FC86A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Represent and explain the calculation by\nconnecting fraction models, and/or equations to\nthe meaning of division. ",
+    "id": "F4D496BCB4F04703831B427E577B41C9",
+    "listId": "c",
+    "parentId": "3CD3A02A80AE4D389B711D0539C5A426",
+    "position": 1005,
+    "statementLabel": null,
+    "statementNotation": "6.NOS.A.1.c"
+   },
+   "F732CC71C0E2400E88717C2BAAB7067B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "APPLY AND EXTEND PREVIOUS UNDERSTANDINGS OF ARITHMETIC TO ALGEBRAIC EXPRESSIONS. ",
+    "id": "F732CC71C0E2400E88717C2BAAB7067B",
+    "listId": "B",
+    "parentId": "6DA7B3C427254FEAB1D23B6D95C0A1D3",
+    "position": 1047,
+    "statementLabel": null,
+    "statementNotation": "6.AT.B"
+   },
+   "F9B30C7C8DB6410EAFA35C75F4D777AE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0F10832E36F64C2D884BF7614EE407D1",
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Represent and use unit rates, written as fractions (\n) with whole number numerators and denominators, in\ncontext. ",
+    "id": "F9B30C7C8DB6410EAFA35C75F4D777AE",
+    "listId": "2",
+    "parentId": "0F10832E36F64C2D884BF7614EE407D1",
+    "position": 1040,
+    "statementLabel": null,
+    "statementNotation": "6.AT.A.2"
+   },
+   "FB85F23DDBB141BC9B38BC8D7737B688": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F732CC71C0E2400E88717C2BAAB7067B",
+     "6DA7B3C427254FEAB1D23B6D95C0A1D3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Apply the properties of operations (e.g., distributive,\nassociative, commutative, etc.) to generate equivalent\nalgebraic expressions and to identify when two\nexpressions are equivalent (e.g., apply the distributive\nproperty to the expression 3(2 + 𝑥) to produce the\nequivalent expression 6 + 3𝑥; apply the distributive\nproperty to the expression 24𝑥 +18𝑦 to produce the\nequivalent expression 6(4𝑥 + 3𝑦); apply properties of\noperations to 𝑦 + 𝑦 + 𝑦 to produce the equivalent\nexpression 3y.)",
+    "id": "FB85F23DDBB141BC9B38BC8D7737B688",
+    "listId": "7",
+    "parentId": "F732CC71C0E2400E88717C2BAAB7067B",
+    "position": 1053,
+    "statementLabel": null,
+    "statementNotation": "6.AT.B.7"
+   }
+  },
+  "subject": "Mathematics (2025-)",
+  "title": "Grade 6"
+ }
+}

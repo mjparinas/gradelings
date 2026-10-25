@@ -1,0 +1,176 @@
+{
+ "data": {
+  "cspStatus": {},
+  "document": {
+   "asnIdentifier": "D21255450",
+   "id": "D21255450",
+   "publicationStatus": "Published",
+   "sourceURL": "https://asn.desire2learn.com/resources/D21255450",
+   "title": "Maryland State 6 Core Social Studies Standards (Pre-K-12)",
+   "valid": "2020"
+  },
+  "educationLevels": [
+   "01",
+   "02",
+   "03",
+   "04",
+   "05",
+   "06",
+   "07",
+   "08",
+   "09",
+   "10",
+   "11",
+   "12",
+   "K",
+   "Pre-K"
+  ],
+  "id": "49FCDFBD2CF04033A9C347BFA0584DF0_D21255450_grades-01-02-03-04-05-06-07-08-09-10-11-12-k-pre-k",
+  "jurisdiction": {
+   "id": "49FCDFBD2CF04033A9C347BFA0584DF0",
+   "title": "Maryland"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/3.0/us/",
+   "rightsHolder": "D2L Corporation",
+   "title": "CC BY 3.0 US"
+  },
+  "normalizedSubject": "Social Studies",
+  "standards": {
+   "14BDB715EEEB4548A86D529DC5E39C2B": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21255453",
+    "depth": 0,
+    "description": "Peoples of the Nations and World",
+    "id": "14BDB715EEEB4548A86D529DC5E39C2B",
+    "parentId": null,
+    "position": 3000
+   },
+   "27A86B8315704F5882E23FD3F6500EB7": {
+    "ancestorIds": [
+     "44D1AC7FB9854E3FB48496F6A2544226"
+    ],
+    "asnIdentifier": "S21255458",
+    "depth": 1,
+    "description": "Inquire about decisions made by individuals and groups using economic reasoning in order to understand the historical development and current status of economic principles, institutions, and processes needed to be effective citizens, consumers, and workers participating in local communities, the nation, and the world.",
+    "id": "27A86B8315704F5882E23FD3F6500EB7",
+    "parentId": "44D1AC7FB9854E3FB48496F6A2544226",
+    "position": 8000,
+    "statementLabel": "Standard",
+    "statementNotation": "4.0"
+   },
+   "3339F51002534A3E9D524DAA3AD76AF9": {
+    "ancestorIds": [
+     "B17A157AF42D4598B998BFF40834DC92"
+    ],
+    "asnIdentifier": "S21255460",
+    "depth": 1,
+    "description": "Inquire about significant events, ideas, beliefs, and themes to identify patterns and trends and to analyze how individuals and societies have changed over time to make connections to the present in their communities, Maryland, the United States, and the world.",
+    "id": "3339F51002534A3E9D524DAA3AD76AF9",
+    "parentId": "B17A157AF42D4598B998BFF40834DC92",
+    "position": 10000,
+    "statementLabel": "Standard",
+    "statementNotation": "5.0"
+   },
+   "44D1AC7FB9854E3FB48496F6A2544226": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21255457",
+    "depth": 0,
+    "description": "Economics",
+    "id": "44D1AC7FB9854E3FB48496F6A2544226",
+    "parentId": null,
+    "position": 7000
+   },
+   "548FE075AE69478FA24B3D96C95D09DD": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21255451",
+    "depth": 0,
+    "description": "Civics",
+    "id": "548FE075AE69478FA24B3D96C95D09DD",
+    "parentId": null,
+    "position": 1000
+   },
+   "5D086DA7AE2B43E69A414D14E0AEF967": {
+    "ancestorIds": [
+     "14BDB715EEEB4548A86D529DC5E39C2B"
+    ],
+    "asnIdentifier": "S21255454",
+    "depth": 1,
+    "description": "Inquire about the people of the United States and the world using a historically grounded, multidisciplinary approach in order to recognize multiple narratives and acknowledge the diversity and commonality of the human experience.",
+    "id": "5D086DA7AE2B43E69A414D14E0AEF967",
+    "parentId": "14BDB715EEEB4548A86D529DC5E39C2B",
+    "position": 4000,
+    "statementLabel": "Standard",
+    "statementNotation": "2.0"
+   },
+   "8397242DCC8442FDADC55F5A95BA50AD": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21255461",
+    "depth": 0,
+    "description": "Skills and Processes",
+    "id": "8397242DCC8442FDADC55F5A95BA50AD",
+    "parentId": null,
+    "position": 11000
+   },
+   "AA56AADA48C245179A41BA6665C69873": {
+    "ancestorIds": [
+     "8397242DCC8442FDADC55F5A95BA50AD"
+    ],
+    "asnIdentifier": "S21255462",
+    "depth": 1,
+    "description": "Inquire about civics, geography, economics, history, and people and nations of the world using disciplinary literacy skills and processes to critically evaluate content through a variety of source materials across disciplines and use reading, writing, and other forms of communication to develop, defend, and critique arguments in order to take informed action.",
+    "id": "AA56AADA48C245179A41BA6665C69873",
+    "parentId": "8397242DCC8442FDADC55F5A95BA50AD",
+    "position": 12000,
+    "statementLabel": "Standard",
+    "statementNotation": "6.0"
+   },
+   "B17A157AF42D4598B998BFF40834DC92": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21255459",
+    "depth": 0,
+    "description": "History",
+    "id": "B17A157AF42D4598B998BFF40834DC92",
+    "parentId": null,
+    "position": 9000
+   },
+   "BA637F5D236149F5A2488AA1BDC0F3A3": {
+    "ancestorIds": [
+     "548FE075AE69478FA24B3D96C95D09DD"
+    ],
+    "asnIdentifier": "S21255452",
+    "depth": 1,
+    "description": "Inquire about the historical development of the fundamental concepts and processes of authority, power, and influence with particular emphasis on civic reasoning in order to become informed, responsible citizens, engage in the political process, and contribute to society.",
+    "id": "BA637F5D236149F5A2488AA1BDC0F3A3",
+    "parentId": "548FE075AE69478FA24B3D96C95D09DD",
+    "position": 2000,
+    "statementLabel": "Standard",
+    "statementNotation": "1.0"
+   },
+   "CE93168A27674888A9F82E3048F45773": {
+    "ancestorIds": [
+     "D8BC13A0CD8646DEB161349D3A144AC3"
+    ],
+    "asnIdentifier": "S21255456",
+    "depth": 1,
+    "description": "Inquire about the role of culture, technology, and the environment in the location, distribution, and impact of human activities using geographic tools and spatial thinking in order to demonstrate a significance of place.",
+    "id": "CE93168A27674888A9F82E3048F45773",
+    "parentId": "D8BC13A0CD8646DEB161349D3A144AC3",
+    "position": 6000,
+    "statementLabel": "Standard",
+    "statementNotation": "3.0"
+   },
+   "D8BC13A0CD8646DEB161349D3A144AC3": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21255455",
+    "depth": 0,
+    "description": "Geography",
+    "id": "D8BC13A0CD8646DEB161349D3A144AC3",
+    "parentId": null,
+    "position": 5000
+   }
+  },
+  "subject": "Social Studies (2021-)",
+  "title": "Core Social Studies Standards: Grades Pre-K-12"
+ }
+}
