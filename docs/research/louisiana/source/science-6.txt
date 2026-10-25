@@ -1,0 +1,730 @@
+                                                                                                                                                                    6
+                                                                                                                                                  6-MS-PS1-1
+
+
+MATTER AND ITS INTERACTIONS
+            Performance Expectation                       Develop models to describe the atomic composition of simple molecules and extended structures.
+
+
+                                                          Emphasis is on developing models of molecules that vary in complexity. Examples of simple molecules could
+                                                          include carbon dioxide and water. Examples of extended structures could include sodium chloride or diamonds.
+             Clarification Statement                      Examples of molecular-level models could include drawings, 3-D models, or computer representations showing
+                                                          different molecules with different types of atoms.
+
+
+        Science & Engineering Practices                                 Disciplinary Core Ideas                                 Crosscutting Concepts
+1. Asking questions and defining problems              STRUCTURE AND PROPERTIES OF MATTER                         SCALE, PROPORTION, AND QUANTITY
+2. Developing and using models: Modeling in 6–8 builds Substances are made from different types of atoms,         Time, space, and energy phenomena can be observed at
+   on K–5 and progresses to developing, using and      which combine with one another in various ways.            various scales using models to study systems that are
+   revising models to describe, test, and predict more Atoms form molecules that range in size from two to        too large or too small.
+   abstract phenomena and design systems.              thousands of atoms. (MS.PS1.A.a)
+
+ • Develop and/or use a model to predict and/or           Solids may be formed from molecules, or they may
+   describe phenomena.                                    be extended structures with repeating subunits (e.g.,
+                                                          crystals). (MS.PS1A.e)
+3. Planning and carrying out investigations
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                          1
+                                                                                                                                                             MARCH 2017
+                                                                                                                                                                               6
+                                                                                                                                                            6-MS-PS2-1
+
+
+MOTION AND STABILITY: FORCES AND INTERACTIONS
+             Performance Expectation                             Apply Newton’s Third Law to design a solution to a problem involving the motion of two colliding objects.
+
+
+
+                                                                 Examples of practical problems could include reducing the effects of impact of two objects such as two cars hitting
+              Clarification Statement                            each other, an object hitting a stationary object, or a meteor hitting a spacecraft.
+
+
+
+         Science & Engineering Practices                                       Disciplinary Core Ideas                                     Crosscutting Concepts
+1. Asking questions and defining problems                        FORCES AND MOTION                                            SYSTEMS AND SYSTEM MODELS
+2. Developing and using models                                   For any pair of interacting objects, the force exerted by    Models can be used to represent systems and their
+                                                                 the first object on the second object is equal in strength   interactions—such as inputs, processes and outputs—and
+3. Planning and carrying out investigations                      to the force that the second object exerts on the first,     energy, matter, and information flows within systems.
+4. Analyzing and interpreting data                               but in the opposite direction (Newton’s third law).
+                                                                 (MS.PS2A.a)
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions:            DEVELOPING POSSIBLE SOLUTIONS
+   Constructing explanations (science) and designing             A solution needs to be tested,to prove the validity of
+   solutions (engineering) in 6–8 builds on K–5                  the design and then modified on the basis of the test
+   experiences and progresses to include designing               results in order to improve it. There are systematic
+   solutions supported by multiple sources of evidence           processes for evaluating solutions with respect to
+   consistent with scientific ideas, principles, and theories.   how well they meet the criteria and constraints of a
+                                                                 problem. Sometimes parts of different solutions can be
+ • Apply scientific ideas or principles to design,
+                                                                 combined to create a solution that is better than any of
+   construct, and/or test a design of an object, tool,
+                                                                 its predecessors. Models of all kinds are important for
+   process or system.
+                                                                 testing solutions (MS.ETS1B.a)
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                   2
+                                                                                                                                                                        MARCH 2017
+                                                                                                                                                                                6
+                                                                                                                                                           6-MS-PS2-2
+
+
+MOTION AND STABILITY: FORCES AND INTERACTIONS
+                                                             Plan an investigation to provide evidence that the change in an object’s motion depends on the sum of the forces
+            Performance Expectation                          on the object and the mass of the object.
+
+                                                             Emphasis is on balanced (Newton’s First Law) and unbalanced forces in a system, qualitative comparisons of
+             Clarification Statement                         forces, mass and changes in motion (Newton’s Second Law) in one dimension to a given frame of reference, or
+                                                             specification of units.
+
+
+        Science & Engineering Practices                                     Disciplinary Core Ideas                                       Crosscutting Concepts
+1. Asking questions and defining problems                    FORCES AND MOTION                                              STABILITY AND CHANGE
+2. Developing and using models                               The motion of an object is determined by the sum of the        Explanations of stability and change in natural or
+                                                             forces acting on it; if the total force on the object is not   designed systems can be constructed by examining
+3. Planning and carrying out investigations: Planning        zero, its motion will change. The greater the mass of the      the changes over time and forces at different scales,
+   and carrying out investigations to answer questions       object, the greater the force needed to achieve the same       including atomic scales.
+   (science) or test solutions (engineering) to problems     change in motion. For any given object, a larger force
+   in 6–8 builds on K–5 experiences and progresses to        causes a larger change in motion (acceleration)
+   include investigations that use multiple variables and    (MS.PS2A.b)
+   provide evidence to support explanations or solutions.
+                                                             All positions of objects and the directions of forces
+ • Plan an investigation individually and collaboratively,   and motions must be described in an arbitrarily chosen
+   and in the design: identify independent and               reference frame and arbitrarily chosen units of size.
+   dependent variables and controls, what tools are          In order to share information with other people, these
+   needed to do the gathering, how measurements              choices must also be shared. (MS.PS2A.c)
+   will be recorded, and how many data are needed to
+   support a claim.                                          The motion of an object is dependent upon the
+                                                             reference frame of the observer. The reference frame
+4. Analyzing and interpreting data                           must be shared when discussing the motion of an
+5. Using mathematics and computational thinking              object. (MS.PS2A.d)
+6. Constructing explanations and designing Solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                    3
+                                                                                                                                                                        MARCH 2017
+                                                                                                                                                                          6
+                                                                                                                                                     6-MS-PS2-3
+
+
+MOTION AND STABILITY: FORCES AND INTERACTIONS
+            Performance Expectation                       Ask questions about data to determine the factors that affect the strength of electric and magnetic forces.
+
+
+                                                          Questions about data might require quantitative answers related to proportional reasoning and algebraic thinking.
+                                                          Examples of devices that use electric and magnetic forces could include electromagnets. Examples of data could
+             Clarification Statement                      include the effect of the number of turns of wire on the strength of an electromagnet, or the effect of increasing the
+                                                          number or strength of magnets on the speed of an electric motor.
+
+
+        Science & Engineering Practices                                 Disciplinary Core Ideas                                     Crosscutting Concepts
+1. Asking questions and defining problems: Asking         TYPES OF INTERACTIONS                                        CAUSE AND EFFECT
+   questions (science) and defining problems              Electric and magnetic (electromagnetic) forces can be        Cause and effect relationships may be used to predict
+   (engineering) in grades 6–8 builds from grades         attractive (opposite charges) or repulsive (like charges),   phenomena in natural or designed systems.
+   K–5 experiences and progresses to specifying           have polar charges (north and south poles) and their
+   relationships between variables, and clarifying        sizes depend on the magnitudes of the charges,
+   arguments and making models.                           currents, or magnetic strengths involved and on the
+ • Ask questions that can be investigated within the      distances between the interacting objects. (MS.PS2B.a)
+   scope of the classroom, outdoor environment, and
+   museums and other public facilities with available
+   resources and, when appropriate, frame a hypothesis
+   based on observations and scientific principles.
+2. Developing and using models
+3. Planning and carrying out investigations
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                               4
+                                                                                                                                                                   MARCH 2017
+                                                                                                                                                                          6
+                                                                                                                                                     6-MS-PS2-4
+
+
+MOTION AND STABILITY: FORCES AND INTERACTIONS
+                                                            Construct and present arguments using evidence to support the claim that gravitational interactions are attractive
+            Performance Expectation                         and depend on the masses of interacting objects.
+
+                                                            Examples of evidence for arguments could include data generated from simulations or digital tools and charts
+             Clarification Statement                        displaying mass, strength of interaction, distance from the Sun, or orbital periods of objects within the solar
+                                                            system, not necessarily including Newton’s Law of Gravitation or Kepler’s Laws.
+
+
+        Science & Engineering Practices                                   Disciplinary Core Ideas                                    Crosscutting Concepts
+1. Asking questions and defining problems                   TYPES OF INTERACTIONS                                      SYSTEMS AND SYSTEM MODELS
+2. Developing and using models                              Gravitational forces are always attractive. There is a     Models can be used to represent systems and their
+                                                            gravitational force between any two masses, but it is      interactions—such as inputs, processes and outputs—and
+3. Planning and carrying out investigations                 very small except when one or both of the objects have     energy, matter, and information flows within systems.
+4. Analyzing and interpreting data                          large mass (e.g., Earth and the sun). (MS.PS2B.b)
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence: Engaging
+   in argument from evidence in 6–8 builds from
+   K–5 experiences and progresses to constructing a
+   convincing argument that supports or refutes claims
+   for either explanations or solutions about the natural
+   and designed world(s).
+ • Construct, use, and/or present an oral and written
+   argument supported by empirical evidence
+   and scientific reasoning to support or refute an
+   explanation or a model for a phenomenon or a
+   solution to a problem.
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                              5
+                                                                                                                                                                   MARCH 2017
+                                                                                                                                                                          6
+                                                                                                                                                     6-MS-PS2-5
+
+
+MOTION AND STABILITY: FORCES AND INTERACTIONS
+                                                            Conduct an investigation and evaluate the experimental design to provide evidence that fields exist between
+            Performance Expectation                         objects exerting forces on each other even though the objects are not in contact.
+
+                                                            Examples of this phenomenon could include the interactions of magnets, electrically-charged strips of tape, or
+             Clarification Statement                        electrically-charged pith balls. Examples of investigations could include first-hand experiences or simulations
+                                                            designed to provide qualitative evidence for the existence of fields.
+
+
+        Science & Engineering Practices                                   Disciplinary Core Ideas                                   Crosscutting Concepts
+1. Asking questions and defining problems                   TYPES OF INTERACTIONS                                      CAUSE AND EFFECT
+2. Developing and using models                              Forces that act at a distance (electric, magnetic, and     Cause and effect relationships may be used to predict
+                                                            gravitational) can be explained by fields that extend      phenomena in natural or designed systems.
+3. Planning and carrying out investigations: Planning       through space and can be mapped by their effect on a
+   and carrying out investigations to answer questions      test object (a charged object, or a ball, respectively).
+   (science) or test solutions (engineering) to problems    (MS.PS2B.c)
+   in 6–8 builds on K–5 experiences and progresses to
+   include investigations that use multiple variables and
+   provide evidence to support explanations or solutions.
+ • Conduct an investigation and evaluate the experimental
+   design to produce data to serve as the basis for
+   evidence that can meet the goals of the investigation.
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                               6
+                                                                                                                                                                   MARCH 2017
+                                                                                                                                                                                6
+                                                                                                                                                          6-MS-PS3-1
+
+
+ENERGY
+                                                              Construct and interpret graphical displays of data to describe the relationships of kinetic energy to the mass of an
+            Performance Expectation                           object and to the speed of an object.
+
+                                                              Emphasis is on descriptive relationships between kinetic energy and mass as well as kinetic energy and speed.
+              Clarification Statement                         Examples could include riding a bicycle at different speeds, rolling different masses of rocks downhill, or the
+                                                              impact of a wiffle ball versus a tennis ball.
+
+
+         Science & Engineering Practices                                    Disciplinary Core Ideas                                    Crosscutting Concepts
+1. Asking questions and defining problems                     DEFINITIONS OF ENERGY                                      SCALE, PROPORTION, AND QUANTITY
+2. Developing and using models                                Motion energy is properly called kinetic energy; it is     Proportional relationships (e.g. speed as the ratio of
+                                                              proportional to the mass of the moving object and grows    distance traveled to time taken) among different types
+3. Planning and carrying out investigations                   with the square of its speed. (MS.PS3A.a)                  of quantities provide information about the magnitude
+4. Analyzing and interpreting data: Analyzing data in                                                                    of properties and processes.
+   6–8 builds on K–5 experiences and progresses to
+   extending quantitative analysis to investigations,
+   distinguishing between correlation and causation, and
+   basic statistical techniques of data and error analysis.
+ • Construct, analyze, and/or interpret graphical
+   displays of data and/or large data sets to identify
+   linear and nonlinear relationships.
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                     7
+                                                                                                                                                                      MARCH 2017
+                                                                                                                                                                             6
+                                                                                                                                                       6-MS-PS3-2
+
+
+ENERGY
+                                                            Develop a model to describe that when the arrangement of objects interacting at a distance changes, different
+            Performance Expectation                         amounts of potential energy are stored in the system.
+
+                                                            Emphasis is on relative amounts of potential energy, not on calculations of potential energy. Examples of objects
+                                                            within systems interacting at varying distances could include: the Earth and either a roller coaster cart at varying
+             Clarification Statement                        positions on a hill or objects at varying heights on shelves, changing the direction/orientation of a magnet, or a
+                                                            balloon with static electrical charge being brought closer to a classmate’s hair. Examples of models could include
+                                                            representations, diagrams, pictures, or written descriptions of systems.
+
+
+        Science & Engineering Practices                                    Disciplinary Core Ideas                                    Crosscutting Concepts
+1. Asking questions and defining problems                   DEFINITIONS OF ENERGY                                        SYSTEMS AND SYSTEM MODELS
+2. Developing and using models: Modeling in 6–8 builds      An object or system of objects may also contain stored       Models can be used to represent systems and their
+   on K–5 experiences and progresses to developing,         (potential) energy, depending on their relative positions.   interactions—such as inputs, processes and outputs—and
+   using and revising models to describe, test, and predict (MS.PS3A.b)                                                  energy, matter, and information flows within systems.
+   more abstract phenomena and design systems.              RELATIONSHIP BETWEEN ENERGY AND FORCES
+ • Develop a model to describe unobservable mechanisms. When two objects interact, each one exerts a force on
+3. Planning and carrying out investigations             the other that can cause energy to be transferred to or
+                                                        from the object. (MS.PS3C.a)
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                   8
+                                                                                                                                                                     MARCH 2017
+                                                                                                                                                                          6
+                                                                                                                                                    6-MS-PS4-1
+
+
+WAVES AND THEIR APPLICATIONS IN TECHNOLOGIES FOR INFORMATION TRANSFER
+                                                           Use mathematical representations to describe a simple model for waves that includes how the amplitude of a wave
+            Performance Expectation                        is related to the energy in a wave and how the frequency and wavelength change the expression of the wave.
+
+
+
+             Clarification Statement                       Emphasis is on describing mechanical waves with both qualitative and quantitative thinking.
+
+
+
+
+        Science & Engineering Practices                                  Disciplinary Core Ideas                                  Crosscutting Concepts
+1. Asking questions (for science) and defining problems    WAVE PROPERTIES                                           PATTERNS
+   (for engineering)                                       A simple wave has a repeating pattern with a specific     Graphs, charts, and images can be used to identify
+2. Developing and using models                             wavelength, frequency, and amplitude. (MS.PS4A.a)         patterns in data.
+
+3. Planning and carrying out investigations
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking:
+   Mathematical and computational thinking in 6–8 builds
+   on K–5 experiences and progresses to identifying
+   patterns in large data sets and using mathematical
+   concepts to support explanations and arguments.
+ • Use mathematical representations to describe and/or
+   support scientific conclusions and design solutions.
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                          9
+                                                                                                                                                                MARCH 2017
+                                                                                                                                                                          6
+                                                                                                                                                    6-MS-PS4-2
+
+
+WAVES AND THEIR APPLICATIONS IN TECHNOLOGIES FOR INFORMATION TRANSFER
+                                                          Develop and use a model to describe that waves are refracted, reflected, absorbed, transmitted, or scattered
+            Performance Expectation                       through various materials.
+
+
+                                                          Emphasis is on both light and mechanical waves interacting with various objects such as light striking a mirror or a
+             Clarification Statement                      water wave striking a jetty. Examples of models could include drawings, simulations, or written descriptions.
+
+
+
+        Science & Engineering Practices                                 Disciplinary Core Ideas                                    Crosscutting Concepts
+1. Asking questions (for science) and defining problemsWAVE PROPERTIES                                               STRUCTURE AND FUNCTION
+   (for engineering)                                   A sound wave needs a medium through which it is               Structures can be designed to serve particular functions
+2. Developing and using models: Modeling in 6–8 builds transmitted. (MS.PS4A.b)                                      by taking into account properties of different materials,
+   on K–5 experiences and progresses to developing,                                                                  and how materials can be shaped and used.
+                                                       ELECTROMAGNETIC RADIATION
+   using, and revising models to describe, test, and   When light shines on an object, it is reflected, absorbed,
+   predict more abstract phenomena and design          transmitted, or scattered through the object, depending
+   systems.                                            on the object’s material and the frequency (color) of the
+ • Develop and/or use a model to predict and/or           light. (MS.PS4B.a)
+   describe phenomena.                                    The path that light travels can be traced as straight
+3. Planning and carrying out investigations               lines, except at surfaces between different transparent
+4. Analyzing and interpreting data                        materials (e.g., air and water, air and glass) where the
+                                                          light path bends (Refraction). (MS.PS4B.b)
+5. Using mathematics and computational thinking
+                                                        A wave model of light is useful for explaining brightness,
+6. Constructing explanations and designing solutions    color, and the frequency-dependent bending of light
+7. Engaging in argument from evidence                   at a surface between media. However, because light
+                                                        can travel through a vacuum, it cannot be a mechanical
+8. Obtaining, evaluating, and communicating information
+                                                        wave, like sound or water waves. (MS.PS4B.c)
+
+
+
+
+                                                                                                                                                                            10
+                                                                                                                                                                  MARCH 2017
+                                                                                                                                                                           6
+                                                                                                                                                     6-MS-ESS1-1
+
+
+EARTH’S PLACE IN THE UNIVERSE
+                                                           Develop and use a model of the Earth-sun-moon system to describe the reoccurring patterns of lunar phases,
+            Performance Expectation                        eclipses of the sun and moon, and seasons.
+
+                                                           Earth’s rotation relative to the positions of the moon and sun describes the occurrence of tides; the revolution of
+                                                           Earth around the sun explains the annual cycle of the apparent movement of the constellations in the night sky;
+             Clarification Statement                       the moon’s revolution around Earth explains the cycle of spring/neap tides and the occurrence of eclipses; the
+                                                           moon’s elliptical orbit mostly explains the occurrence of total and annular eclipses. Examples of models can be
+                                                           physical, graphical, or conceptual.
+
+
+        Science & Engineering Practices                                   Disciplinary Core Ideas                                    Crosscutting Concepts
+1. Asking questions and defining problems                    THE UNIVERSE AND ITS STARS                                PATTERNS
+2. Developing and using models: Modeling in 6–8 builds       Patterns of the apparent motion of the sun, the moon,     Patterns can be used to identify cause and
+   on K–5 experiences and progresses to developing,          and stars in the sky can be observed, described,          effect relationships.
+   using, and revising models to describe, test, and predict predicted, and explained with models. (MS.ESS1A.a)
+   more abstract phenomena and design systems.               EARTH AND THE SOLAR SYSTEM
+ • Develop and use a model to describe phenomena           This model of the solar system can explain eclipses
+3. Planning and carrying out investigations                of the Sun and the Moon. Earth’s spin axis is fixed
+                                                           in direction over the short term but tilted relative to
+4. Analyzing and interpreting data                         its orbit around the Sun. The seasons are a result of
+5. Using mathematics and computational thinking            that tilt and are caused by the differential intensity of
+                                                           sunlight on different areas of Earth across the year.
+6. Constructing explanations and designing solutions
+                                                           (MS.ESS1B.b)
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                 11
+                                                                                                                                                                    MARCH 2017
+                                                                                                                                                                          6
+                                                                                                                                                     6-MS-ESS1-2
+
+
+EARTH’S PLACE IN THE UNIVERSE
+            Performance Expectation                         Use a model to describe the role of gravity in the motions within galaxies and the solar system.
+
+
+                                                            Emphasis for the model is on gravity as the force that holds together the solar system and Milky Way galaxy and
+                                                            controls orbital motions within them. Examples of models can be physical (such as the analogy of distance along
+             Clarification Statement                        a football field or computer visualizations of elliptical orbits) or conceptual (such as mathematical proportions
+                                                            relative to the size of familiar objects such as their school or state).
+
+
+        Science & Engineering Practices                                    Disciplinary Core Ideas                                   Crosscutting Concepts
+1. Asking questions and defining problems                    THE UNIVERSE AND ITS STARS                                 SYSTEMS AND MODELS
+2. Developing and using models: Modeling in 6–8 builds       Earth and its solar system are part of the Milky Way       Models (e.g., physical, mathematical, computer
+   on K–5 experiences and progresses to developing,          galaxy, which is one of many galaxies in the universe.     models) can be used to represent systems and their
+   using, and revising models to describe, test, and predict (MS.ESS1A.b)                                               interactions—such as inputs, processes and outputs—and
+   more abstract phenomena and design systems.                                                                          energy, matter, and information flows within systems.
+                                                             EARTH AND THE SOLAR SYSTEM
+ • Develop and/or use a model to predict and/or             The solar system consists of the sun and a collection
+   describe phenomena.                                      of objects, including planets, their natural satellite(s)
+3. Planning and carrying out investigations                 (moons), and asteroids that are held in orbit around the
+                                                            sun by its gravitational pull on them. (MS.ESS1B.a)
+4. Analyzing and interpreting data
+                                                            The solar system appears to have formed from a disk of
+5. Using mathematics and computational thinking             dust and gas, drawn together by gravity. (MS.ESS1B.c)
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                12
+                                                                                                                                                                   MARCH 2017
+                                                                                                                                                                                6
+                                                                                                                                                           6-MS-ESS1-3
+
+
+EARTH’S PLACE IN THE UNIVERSE
+            Performance Expectation                           Analyze and interpret data to determine scale properties of objects in the solar system.
+
+
+                                                              Emphasis is on the analysis of data from Earth-based instruments, space-based telescopes, and spacecraft to
+                                                              determine similarities and differences among solar system objects. Examples of scale properties include the sizes of
+              Clarification Statement                         an object’s layers (such as crust and atmosphere), atmospheric composition, surface features (such as volcanoes), and
+                                                              orbital radius. Examples of data include statistical information, drawings and photographs, and models.
+
+
+         Science & Engineering Practices                                     Disciplinary Core Ideas                                         Crosscutting Concepts
+1. Asking questions and defining problems                     EARTH AND THE SOLAR SYSTEM                                        SCALE, PROPORTION, AND QUANTITY
+2. Developing and using models                                The solar system consists of the sun and a collection of          Time, space, and energy phenomena can be observed at
+                                                              objects, including planets, their natural satellite(s) (moons),   various scales using models to study systems that are
+3. Planning and carrying out investigations                   comets, and asteroids that are held in orbit around the           too large or too small.
+4. Analyzing and interpreting data: Analyzing data            sun by its gravitational pull on them. (MS.ESS1B.a)
+   in 6-8 builds on K-5 experiences and progresses to
+   extending quantitative analysis to investigations,
+   distinguishing between correlation and causation, and
+   basic statistical techniques of data and error analysis.
+ • Analyze and interpret data to determine similarities
+   and differences in findings.
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                  13
+                                                                                                                                                                         MARCH 2017
+                                                                                                                                                                         6
+                                                                                                                                                  6-MS-ESS3-4
+
+
+EARTH AND HUMAN ACTIVITY
+                                                            Construct an argument supported by evidence for how increases in human population and per-capita consumption
+            Performance Expectation                         of natural resources impact Earth’s systems.
+
+                                                            Examples of evidence include grade-appropriate databases on human populations and the rates of consumption
+                                                            of food and natural resources (such as freshwater, mineral, and energy). Examples of impacts can include changes
+             Clarification Statement                        to the appearance, composition, and structure of Earth’s systems as well as the rates at which they change. The
+                                                            consequences of increases in human populations and consumption of natural resources are described by science, but
+                                                            science does not make the decisions.
+
+
+        Science & Engineering Practices                                   Disciplinary Core Ideas                                   Crosscutting Concepts
+1. Asking questions and defining problems                   HUMAN IMPACTS ON EARTH SYSTEMS                             CAUSE AND EFFECT
+2. Developing and using models                              Typically as human populations and per-capita              Cause and effect relationships may be used to predict
+                                                            consumption of natural resources increase, so do the       phenomena in natural or designed systems.
+3. Planning and carrying out investigations                 negative impacts on Earth unless the activities and
+4. Analyzing and interpreting data                          technologies involved are engineered otherwise.
+                                                            (MS.ESS3C.b)
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions        BIOGEOLOGY
+                                                            Living organisms interact with Earth materials resulting
+7. Engaging in argument from evidence: Engaging
+                                                            in changes of the Earth. (MS.ESS2E.a)
+   in argument from evidence in 6-8 builds on K-5
+   experiences and progresses to constructing a             RESOURCE MANAGEMENT FOR LOUISIANA
+   convincing argument that supports or refutes claims      Responsible management of Louisiana’s natural
+   for either explanations or solutions about the natural   resources promotes economic growth, a healthy
+   and designed world(s).                                   environment, and vibrant productive ecosystems.
+ • Construct, use, and/or present an oral and written       (MS.EVS1B.a)
+   argument supported by empirical evidence
+   and scientific reasoning to support or refute an
+   explanation or a model for a phenomenon or a
+   solution to a problem.
+8. Obtaining, evaluating, and communicating information
+
+
+
+                                                                                                                                                                           14
+                                                                                                                                                                  MARCH 2017
+                                                                                                                                                                              6
+                                                                                                                                                         6-MS-LS1-1
+
+
+FROM MOLECULES TO ORGANISMS: STRUCTURES AND PROCESSES
+                                                            Conduct an investigation to provide evidence that living things are made of cells, either one or many different
+            Performance Expectation                         numbers and types.
+
+                                                            Emphasis is on developing evidence that living things are made of cells, distinguishing between living and nonliving
+                                                            things, and understanding that living things may be made of one or many cells, including specialized cells.
+             Clarification Statement                        Examples could include animal cells (blood, muscle, skin, nerve, bone, or reproductive) or plant cells (root, leaf,
+                                                            or reproductive).
+
+
+        Science & Engineering Practices                                   Disciplinary Core Ideas                                    Crosscutting Concepts
+1. Asking questions and defining problems                   STRUCTURE AND FUNCTION                                     SCALE, PROPORTION, AND QUANTITY
+2. Developing and using models                              All living things are made up of cells, which are the      Phenomena that can be observed at one scale may not
+                                                            smallest living unit. An organism may consist of one       be observable at another scale.
+3. Planning and carrying out investigations: Planning       single cell (unicellular) or many different numbers and
+   and carrying out investigations to answer questions      types of cells (multicellular). (MS.LS1A.a)
+   (science) or test solutions (engineering) to problems
+   in 6-8 builds on K-5 experiences and progresses to
+   include investigations that use multiple variables and
+   provide evidence to support explanations or solutions.
+ • Conduct an investigation and/or evaluate and/or
+   revise the experimental design to produce data to
+   serve as the basis for evidence that meet the goals of
+   the investigation.
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                              15
+                                                                                                                                                                    MARCH 2017
+                                                                                                                                                                              6
+                                                                                                                                                          6-MS-LS1-2
+
+
+FROM MOLECULES TO ORGANISMS: STRUCTURES AND PROCESSES
+            Performance Expectation                        Develop and use a model to describe the function of a cell as a whole and ways parts of cells contribute to the function.
+
+
+
+                                                           Emphasis is on the cell functioning as a whole system and the primary role of identified parts of the cell, such as
+             Clarification Statement                       the nucleus, chloroplasts, mitochondria, cell membrane, or cell wall.
+
+
+
+        Science & Engineering Practices                                  Disciplinary Core Ideas                                       Crosscutting Concepts
+1. Asking questions and defining problems                    STRUCTURE AND FUNCTION                                     STRUCTURE AND FUNCTION
+2. Developing and using models: Modeling in 6-8 builds       Within cells, special structures (organelles) are          Complex and microscopic structures and systems
+   on K-5 experiences and progresses to developing,          responsible for particular functions. The cell membrane    can be visualized, modeled, and used to describe how
+   using, and revising models to describe, test, and predict forms the boundary that controls the material(s)           their function depends on the shapes, composition,
+   more abstract phenomena and design systems.               that enter and leave the cells in order to maintain        and relationships among its parts; therefore, complex
+                                                             homeostasis. (MS.LS1A.b)                                   natural and designed structures/systems can be
+ • Develop and/or use a model to predict and/or                                                                         analyzed to determine how they function.
+   describe phenomena.
+3. Planning and carrying out investigations
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                 16
+                                                                                                                                                                       MARCH 2017
+                                                                                                                                                                            6
+                                                                                                                                                         6-MS-LS2-1
+
+
+ECOSYSTEMS: INTERACTIONS, ENERGY, AND DYNAMICS
+                                                              Analyze and interpret data to provide evidence for the effects of resource availability on organisms and populations
+            Performance Expectation                           of organisms in an ecosystem.
+
+
+                                                              Emphasis is on cause and effect relationships between resources and growth of individual organisms and the
+              Clarification Statement                         numbers of organisms in ecosystems during periods of abundant or scarce resources.
+
+
+
+         Science & Engineering Practices                                    Disciplinary Core Ideas                                   Crosscutting Concepts
+1. Asking questions and defining problems                     INTERDEPENDENT RELATIONSHIPS IN ECOSYSTEMS CAUSE AND EFFECT
+2. Developing and using models                                Organisms, and populations of organisms, are         Cause and effect relationships may be used to predict
+                                                              dependent on their environmental interactions both   phenomena in natural or designed systems.
+3. Planning and carrying out investigations                   with other living things and with nonliving factors.
+4. Analyzing and interpreting data: Analyzing data            (MS.LS2A.a)
+   in 6-8 builds on K-5 experiences and progresses to         In any ecosystem, organisms and populations with
+   extending quantitative analysis to investigations,         similar requirements for food, water, oxygen, or other
+   distinguishing between correlation and causation, and      resources may compete with each other for limited
+   basic statistical techniques of data and error analysis.   resources, access to which consequently constrains
+ • Analyze and interpret data to provide evidence             their growth and reproduction. (MS.LS2A.b)
+   for phenomena.                                             Growth of organisms and population increases are
+5. Using mathematics and computational thinking               limited by access to resources. (MS.LS2A.c)
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                               17
+                                                                                                                                                                     MARCH 2017
+                                                                                                                                                                     6
+                                                                                                                                                 6-MS-LS2-2
+
+
+ECOSYSTEMS: INTERACTIONS, ENERGY, AND DYNAMICS
+            Performance Expectation                       Construct an explanation that predicts patterns of interactions among organisms across multiple ecosystems.
+
+
+                                                          Emphasis is on (1) predicting consistent patterns of interactions in different ecosystems and (2) relationships
+             Clarification Statement                      among and between biotic and abiotic components of ecosystems. Examples of types of interactions could include
+                                                          competitive, predatory, mutually beneficial, or other symbiotic relationships.
+
+
+        Science & Engineering Practices                                Disciplinary Core Ideas                                  Crosscutting Concepts
+1. Asking questions and defining problems                 INTERDEPENDENT RELATIONSHIPS IN ECOSYSTEMS PATTERNS
+2. Developing and using models                            Predatory interactions may reduce the number of          Patterns can be used to identify cause and
+                                                          organisms or eliminate whole populations of organisms. effect relationships.
+3. Planning and carrying out investigations               Mutually beneficial interactions, in contrast, may
+4. Analyzing and interpreting data                        become so interdependent that each organism requires
+                                                          the other for survival. Although the species involved in
+5. Using mathematics and computational thinking
+                                                          these competitive, predatory, and mutually beneficial
+6. Constructing explanations and designing solutions:     interactions vary across ecosystems, the patterns of
+   Constructing explanations (science) and designing      interactions of organisms with their environments, both
+   solutions (engineering) in 6–8 builds on K– 5          living and nonliving, are shared. (MS.LS2A.d)
+   experiences and progresses to include constructing
+   explanations and designing solutions supported
+   by multiple sources of evidence consistent with
+   scientific ideas, principles, and theories.
+ • Construct an explanation that includes qualitative
+   or quantitative relationships between variables that
+   predict(s) and/or describe(s) phenomena.
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                        18
+                                                                                                                                                                MARCH 2017
+                                                                                                                                                                         6
+                                                                                                                                                     6-MS-LS2-3
+
+
+ECOSYSTEMS: INTERACTIONS, ENERGY, AND DYNAMICS
+            Performance Expectation                      Develop a model to describe the cycling of matter and flow of energy among living and nonliving parts of an ecosystem.
+
+
+
+                                                         Emphasis is on describing the conservation of matter and flow of energy into and out of various ecosystems, and
+             Clarification Statement                     on defining the boundaries of the system.
+
+
+
+        Science & Engineering Practices                                Disciplinary Core Ideas                                     Crosscutting Concepts
+1. Asking questions and defining problems                CYCLE OF MATTER AND ENERGY TRANSFER                         ENERGY AND MATTER
+2. Developing and using models: Modeling in 6-8          IN ECOSYSTEMS                                               The transfer of energy can be tracked as energy flows
+   builds on K-5 experiences and progresses to           Food webs are models that demonstrate how                   through a designed or natural system.
+   developing, using, and revising models to describe,   matter and energy is transferred between producers,
+   test, and predict more abstract phenomena and         consumers, and decomposers as the three groups
+   design systems.                                       interact within an ecosystem. (MS.LS2B.a)
+
+ • Develop and/or use a model to predict and/or          Transfers of matter into and out of the physical
+   describe phenomena.                                   environment occur at every level. (MS.LS2B.b)
+
+3. Planning and carrying out investigations              Decomposers recycle nutrients from dead plant
+                                                         or animal matter back to the soil in terrestrial
+4. Analyzing and interpreting data                       environments or to the water in aquatic environments.
+5. Using mathematics and computational thinking          (MS.LS2B.c)
+6. Constructing explanations and designing solutions    The atoms that make up the organisms in an ecosystem
+                                                        are cycled repeatedly between the living and nonliving
+7. Engaging in argument from evidence
+                                                        parts of the ecosystem. Geochemical cycles include
+8. Obtaining, evaluating, and communicating information carbon, nitrogen, and the water cycle. (MS.LS2B.d)
+
+
+
+
+                                                                                                                                                                             19
+                                                                                                                                                                  MARCH 2017
+

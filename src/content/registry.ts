@@ -10,6 +10,7 @@ import { manifest as georgia } from "./georgia/manifest";
 import { manifest as britishColumbia } from "./grades/manifest";
 import { manifest as illinois } from "./illinois/manifest";
 import { manifest as indiana } from "./indiana/manifest";
+import { manifest as louisiana } from "./louisiana/manifest";
 import { manifest as maine } from "./maine/manifest";
 import { manifest as manitoba } from "./manitoba/manifest";
 import { manifest as maryland } from "./maryland/manifest";
@@ -61,6 +62,7 @@ const MANIFESTS = [
   britishColumbia,
   illinois,
   indiana,
+  louisiana,
   maine,
   manitoba,
   maryland,
