@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { adoptersOf } from "../adopters";
 import { COURSES } from "../all";
 import { getFramework } from "../frameworks";
 import { GUIDES } from "../guides";
@@ -19,9 +20,9 @@ describe("Prince Edward Island", () => {
   it("adds the Prince Edward Island-only units for Prince Edward Island alone", () => {
     const own = COURSES.flatMap((c) => c.units.filter((u) => u.id.startsWith("pe-")).map((u) => ({ g: c.grade, u })));
     expect(own.length).toBeGreaterThan(10);
-    // Nunavut, New York, Minnesota, Alabama, Arizona, Arkansas, Florida, Pennsylvania and Georgia may copy a unit that names no province (src/content/nunavut/plan.ts,
-    // src/content/new-york/plan/); a copy in the same grade merges into one unit carrying both sets of standards.
-    for (const { g, u } of own) for (const f of Object.keys(u.standards)) expect(["ca-pe", "ca-nu", "us-ny", "us-mn", "us-al", "us-az", "us-ar", "us-fl", "us-pa", "us-ga", "us-nj", "us-in", "us-va"], `${g}/${u.id}`).toContain(f);
+    // Frameworks that copy a unit that names no province (their contract's adoptsFrom) carry their own standards beside Prince Edward Island's;
+    // a copy in the same grade merges into one unit carrying both sets of standards.
+    for (const { g, u } of own) for (const f of Object.keys(u.standards)) expect(["ca-pe", ...adoptersOf("ca-pe")], `${g}/${u.id}`).toContain(f);
     expect(own.filter(({ u }) => u.standards["ca-pe"]).length).toBeGreaterThan(10);
   });
 

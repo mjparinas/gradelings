@@ -13,6 +13,5 @@ export const contract: FrameworkContract = {
     return codes.filter((c) => !official.has(c)).map((c) => `cites ${c}, which is not in Saskatchewan ${grade}/${subject}`);
   },
   ownPrefix: "sk-",
-  ownSharedWith: ["ca-nu"],
   foreign: /Ontario|Queen's Park|EQAO|Upper Canada|Lower Canada/,
 };

@@ -43,10 +43,10 @@ describe.each(REGISTRY.map((m) => [m.framework.name, m] as const))("%s keeps the
   });
 
   it.runIf(contract?.ownPrefix)("uses its own units only where it allows them", () => {
-    const allowed = new Set<string>([m.id, ...(contract.ownSharedWith ?? [])]);
+    const allowed = (f: string) => f === m.id || (contractOf(f)?.adoptsFrom ?? []).includes(m.id);
     const own = COURSES.flatMap((c) => c.units.filter((u) => u.id.startsWith(contract.ownPrefix!)).map((u) => ({ u, key: `${c.grade}/${c.subject}/${u.id}` })));
     expect(own.some(({ u }) => u.standards[m.id]), `${m.id} has units starting ${contract.ownPrefix}`).toBe(true);
-    for (const { u, key } of own) for (const f of Object.keys(u.standards)) expect(allowed.has(f), `${key} is used by ${f}`).toBe(true);
+    for (const { u, key } of own) for (const f of Object.keys(u.standards)) expect(allowed(f), `${key} is used by ${f}, whose contract.ts needs adoptsFrom: ["${m.id}"]`).toBe(true);
   });
 
   it.runIf(contract?.foreign)("never shows another region's names in a unit it borrowed", () => {

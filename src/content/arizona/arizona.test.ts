@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { adoptersOf } from "../adopters";
 import { COURSES } from "../all";
 import { FRAMEWORKS, getFramework, UPCOMING_FRAMEWORKS } from "../frameworks";
 import { localeOf, questionText } from "../locale";
@@ -76,8 +77,8 @@ describe("Arizona", () => {
       expect.arrayContaining(["az-g3-indian-nations", "az-g3-governing-arizona", "az-g9-arizona-constitution", "az-g9-civics-test"]),
     );
     for (const { u, key } of own) {
-      // Florida, Pennsylvania, Indiana and Virginia may copy Arizona's units, so they can carry their own standards beside Arizona's.
-      expect(Object.keys(u.standards).filter((f) => f !== "us-fl" && f !== "us-pa" && f !== "us-in" && f !== "us-va"), `${key} carries only Arizona standards`).toEqual(["us-az"]);
+      // Frameworks that copy Arizona's units (their contract's adoptsFrom) carry their own standards beside Arizona's.
+      expect(Object.keys(u.standards).filter((f) => !adoptersOf("us-az").includes(f)), `${key} carries only Arizona standards`).toEqual(["us-az"]);
     }
   });
 });

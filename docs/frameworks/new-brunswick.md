@@ -1,0 +1,12 @@
+### New Brunswick
+- **Framework `ca-nb`, slug `new-brunswick`**, Kindergarten to Grade 9 for the anglophone sector, in math, language, science, social studies and both French subjects (Immersion Grade 1 to 9, Core French Grade 4 to 9). The curriculum (curriculum.nbed.ca) has no outcome codes, so a unit cites a **strand and big idea** ("Number: Operations", "Wabanaki: Treaty Education"), and the standards text is the skill descriptors. Its `contract.ts` checks every citation against `docs/research/new-brunswick/outcomes.json` (record: `docs/research/new-brunswick/README.md`; rebuild with `fetch.sh` and `build_outcomes.py`, which also writes `src/content/new-brunswick/overall.ts`). French cites strands.
+- **Kindergarten to Grade 5 math is provisional:** the department's new K-2 and 3-5 math documents (August 2026 drafts) exist but are hosted on a staff-only SharePoint (HTTP 403) and have no course-comparison data, so those grades reuse the Grade 6 strands and big ideas. Re-check `docs/research/new-brunswick/README.md` ("Known gaps") for the exact links, and replace the citations once the documents can be read. Don't invent strands.
+- **Kindergarten to Grade 2 science and social studies** are one course, Explore Your World, so units cite its strands.
+- **Report card:** Kindergarten to Grade 8 use the four-point scale (Working below 1, Approaching 2, Meeting 3 or 3+, Excelling 4 or 4+). Grade 9 uses the high school wording (numerical course grades). Same kid labels and "practice, not a report-card mark" rule.
+- **Content:** BC units via `share`, other provinces' units via `adopt(...)` (only where the questions are free of another province's names; its `contract.ts` checks), New Brunswick-only units in `src/content/new-brunswick/` (`nb-` ids, `bankUnit` in `own.ts`, banks in `units/`). Each own bank needs at least 24 distinct items. Helpers are in `kit.ts`.
+- **Parent guides:** French, global competencies (`/guides/new-brunswick/global-competencies/`) and provincial assessments (`/guides/new-brunswick/provincial-assessments/`; schedule changes, so the guide points to the department).
+- **Wabanaki, Acadian and Black Loyalist content** is deliberately light and in the present tense.
+
+## Known gaps
+
+- New Brunswick Kindergarten to Grade 5 math is provisional: the department's new K–2 and 3–5 documents are on a staff-only SharePoint (see `docs/research/new-brunswick/README.md`).

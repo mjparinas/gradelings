@@ -17,6 +17,7 @@ export const manifest = defineFramework({
     "9": () => import("./g9"),
   },
   guides: () => import("./guides").then((m) => m.OHIO_GUIDES),
+  schools: () => import("./schools").then((m) => m.SCHOOLS),
   // Ohio: no French subject (see docs/research/ohio/README.md).
   french: { immersion: [], "core-french": [] },
 });

@@ -22,6 +22,7 @@ export const contract: FrameworkContract = {
       });
   },
   ownPrefix: "nl-",
+  adoptsFrom: ["ca-mb"],
   foreign: /Ontario|Queen's Park|EQAO|Upper Canada|Lower Canada|Saskatchewan|Regina|Alberta|Manitoba|Winnipeg|Nova Scotia|Halifax|New Brunswick|Fredericton|Yukon|Northwest Territories|Nunavut/,
   plan: PLAN,
 };

@@ -20,6 +20,12 @@ export interface GradeModule {
 /** Each grade's download, as a dynamic import so the apps only fetch the grades a child needs. */
 export type GradeLoaders = Record<GradeId, () => Promise<GradeModule>>;
 
+/** One school-privacy paragraph on /privacy/: a bold heading ("Schools in Oregon.") and the text after it. */
+export interface SchoolsNotice {
+  heading: string;
+  text: string;
+}
+
 export interface FrameworkManifest {
   /** The framework's id ("ca-on"). The registry derives FrameworkId from these. */
   id: string;
@@ -34,6 +40,8 @@ export interface FrameworkManifest {
   french: { immersion: GradeId[]; "core-french": GradeId[] };
   /** Other frameworks whose grade files this one's units come from, downloaded with it. */
   depends?: readonly string[];
+  /** What /privacy/ tells this region's schools (the student privacy law that applies, our commitments). Server-only, loaded by the privacy page. */
+  schools?: () => Promise<SchoolsNotice>;
   /** Being built: it has content and tests but no public pages or place in the pickers yet (see UPCOMING_FRAMEWORKS). */
   upcoming?: boolean;
 }

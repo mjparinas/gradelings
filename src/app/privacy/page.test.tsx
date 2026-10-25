@@ -9,8 +9,8 @@ import PrivacyPage from "./page";
 vi.stubEnv("__NEXT_TRAILING_SLASH", "1");
 
 describe("privacy page", () => {
-  it("names every analytics tool in use, including email open and click tracking", () => {
-    render(<PrivacyPage />);
+  it("names every analytics tool in use, including email open and click tracking", async () => {
+    render(await PrivacyPage());
     const page = screen.getByRole("article");
     expect(page).toHaveTextContent("Vercel Web Analytics and Speed Insights");
     // Cloudflare only answers DNS for the domain (proxy off since October 2026), so it counts no visits.
@@ -21,8 +21,8 @@ describe("privacy page", () => {
 });
 
 describe("families in the United States", () => {
-  it("gives the COPPA notice, consent method, rights, storage and complaint route, and the Washington commitments", () => {
-    render(<PrivacyPage />);
+  it("gives the COPPA notice, consent method, rights, storage and complaint route, and the Washington commitments", async () => {
+    render(await PrivacyPage());
     const section = screen.getByRole("heading", { name: "Families in the United States" }).closest("section")!;
     expect(section).toHaveAttribute("id", "united-states");
     for (const text of [

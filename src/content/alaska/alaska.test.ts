@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import outcomes from "../../../docs/research/alaska/outcomes.json";
+import { adoptersOf } from "../adopters";
 import { COURSES } from "../all";
 import { FRAMEWORKS, getFramework, UPCOMING_FRAMEWORKS } from "../frameworks";
 import { localeOf, questionText } from "../locale";
@@ -64,8 +65,8 @@ describe("Alaska", () => {
       expect.arrayContaining(["ak-g3-alaska-native-cultures", "ak-g6-alaska-governments", "ak-g9-alaska-constitution", "ak-g9-land-and-statehood"]),
     );
     for (const { u, key } of own) {
-      // Florida may copy Alaska's units, so it can carry its own standards beside Alaska's.
-      expect(Object.keys(u.standards).filter((f) => f !== "us-fl" && f !== "us-pa" && f !== "us-va"), `${key} carries only Alaska standards`).toEqual(["us-ak"]);
+      // Frameworks that copy Alaska's units (their contract's adoptsFrom) carry their own standards beside Alaska's.
+      expect(Object.keys(u.standards).filter((f) => !adoptersOf("us-ak").includes(f)), `${key} carries only Alaska standards`).toEqual(["us-ak"]);
       expect(["social", "science"], `${key} is a social studies or science unit`).toContain(key.split("/")[1]);
     }
   });

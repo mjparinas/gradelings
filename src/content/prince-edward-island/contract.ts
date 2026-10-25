@@ -14,8 +14,8 @@ export const contract: FrameworkContract = {
       .map((c) => `cites "${c}", which is not in Prince Edward Island ${grade}/${subject}`);
   },
   ownPrefix: "pe-",
+  adoptsFrom: ["ca-mb"],
   // Nunavut may copy a unit that names no province (src/content/nunavut/plan.ts).
-  ownSharedWith: ["ca-nu", "us-ny", "us-mn", "us-al", "us-az", "us-ar", "us-fl", "us-pa", "us-ga", "us-nj", "us-in", "us-va"],
   // Units written for Prince Edward Island may name the Maritime provinces; borrowed units must not name any.
   foreign: /Ontario|Queen's Park|EQAO|Upper Canada|Lower Canada|Saskatchewan|Regina|Alberta|Manitoba|Winnipeg|Nova Scotia|Halifax|New Brunswick|Fredericton|Newfoundland|Yukon|Northwest Territories|Nunavut/,
   plan: PLAN,
