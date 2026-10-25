@@ -1233,18 +1233,99 @@ export const lessons: GradeLessons = {
     ["Ethiopia kept its independence.", "The battle was at Adwa."],
     "Adwa",
   ),
+  "social/az-g8-economy": lesson(
+    ["When the price of a good rises, the quantity demanded usually falls.", "Inflation is when prices across the economy keep rising; unemployment is people who want jobs but can’t find them.", "The Federal Reserve can slow inflation by raising interest rates. The US has a mixed economy."],
+    "What can the Federal Reserve do to slow inflation?",
+    ["Inflation means prices keep rising.", "Higher interest rates make borrowing cost more.", "People spend less, so price rises slow."],
+    "raise interest rates",
+  ),
+  "social/ca-g9-elections": lesson(
+    ["General elections are in November. California uses a top-two primary and mail ballots.", "House seats follow population: California sends 52 members.", "Debates let voters compare ideas. Judge campaign ads by checking claims against independent sources."],
+    "How can a voter judge a campaign ad?",
+    ["Ads are made to persuade.", "Check their claims against reliable, independent sources."],
+    "Check its claims against reliable, independent sources",
+  ),
+  "social/ca-g9-foundations": lesson(
+    ["American government has roots in Greek democracy, the Roman Republic (elected representatives), English rights and Enlightenment ideas.", "Popular sovereignty: the people are the source of power (“We the People”). The Constitution replaced the Articles of Confederation.", "The Founders added checks and balances and federalism because people in power can abuse it."],
+    "What does popular sovereignty mean?",
+    ["“Sovereignty” means the highest power.", "“Popular” means of the people."],
+    "The people are the source of government’s power",
+  ),
+  "social/ca-g9-supreme-court": lesson(
+    ["The president appoints justices with the Senate’s consent.", "Precedent (stare decisis) means following earlier rulings; judicial restraint defers to lawmakers, while activism is readier to overturn.", "Know key cases: Plessy (1896) allowed “separate but equal”; Brown (1954) overturned it; Korematsu (1944) upheld Japanese American removal."],
+    "Who appoints Supreme Court justices?",
+    ["The executive nominates, and the Senate checks.", "The president appoints them with the Senate’s consent."],
+    "the president, with the Senate’s consent",
+  ),
+  "social/wa-g9-government-economy": lesson(
+    ["Governments raise money by taxes (federal: mostly income tax; Washington: mostly sales tax) and spend it on services like schools.", "A deficit is spending more than you take in in a year; debt is what has built up.", "Inflation is a general rise in prices. A recession is when the economy shrinks and jobs are lost."],
+    "What is inflation?",
+    ["Watch what happens to prices over time.", "When most prices keep going up, that is inflation."],
+    "a general rise in prices over time",
+  ),
+  "social/va-g7-governing-virginia": lesson(
+    ["The Constitution of Virginia sets up three branches, like the US Constitution.", "The General Assembly (House of Delegates and Senate) makes laws, the governor carries them out, and courts interpret them.", "The governor serves four years and can't serve two terms in a row."],
+    "How long is a Virginia governor's term?",
+    ["It is the same length as a US president's term.", "Four years."],
+    "four years",
+  ),
+  "social/va-g7-local-government": lesson(
+    ["Virginia's local governments are counties, cities and towns. Independent cities are separate from counties.", "Local governments run schools, police, parks and roads, paid for mostly by property taxes.", "Citizens can take part by voting and speaking at public meetings."],
+    "How do local governments pay for most services?",
+    ["They tax land and buildings.", "These are property taxes."],
+    "property taxes",
+  ),
+  // Missouri (us-mo)
+  "social/ca-g6-greek-world": lesson(
+    ["Greeks lived by the sea and traded across the Aegean and Mediterranean.", "Myths: Poseidon ruled the sea; Achilles' heel means a weak spot.", "Thinkers: Socrates taught Plato, who founded the Academy; Hippocrates is the father of medicine. Plays were in open-air theatres."],
+    "Hippocrates is known as the father of what?",
+    ["Doctors still take an oath named after him.", "He studied illness and healing."],
+    "medicine",
+  ),
+  "social/ny-g9-crusades-plague": lesson(
+    ["In 1095, Pope Urban II called on Christians in Western Europe to begin the First Crusade to control Jerusalem.", "The Reconquista was the effort by Christian kingdoms to take back the Iberian Peninsula from Muslim rulers; it ended in 1492.", "The Black Death, a plague spread along trade routes, killed about a third of Europe’s people in the 1300s."],
+    "Who called for the First Crusade in 1095?",
+    ["The call came from the head of the Church.", "He spoke at Clermont in France.", "He was Pope Urban II."],
+    "Pope Urban II",
+  ),
+
+  // North Carolina's units (us-nc).
+  "social/ny-g5-columbian-exchange": lesson(
+    ["After 1492, plants, animals, people, ideas and diseases crossed the Atlantic: the Columbian Exchange.", "Corn and potatoes went to Europe. Horses, cattle and wheat came to the Americas.", "Diseases killed millions, and more than 12 million Africans were forced across the Atlantic in the Middle Passage."],
+    "Which went from the Americas to Europe: potatoes or horses?",
+    ["Horses came from Europe.", "Potatoes first grew in South America."],
+    "potatoes",
+  ),
+  "social/tx-g6-governments": lesson(
+    ["Limited governments follow laws and protect rights; unlimited ones do not.", "Autocracy is rule by one person; democracy is rule by the people. India is the world's largest democracy.", "Citizens' duties include voting and staying informed. Rights come with responsibilities."],
+    "What is rule by one person called?",
+    ["“Auto” means self.", "One person rules alone."],
+    "autocracy",
+  ),
+  "social/tx-g6-economies": lesson(
+    ["Factors of production: land (resources), labour (work people do) and capital (tools).", "Industries: agricultural (farming), manufacturing (factories), service.", "In free enterprise, private people own most businesses. GDP per capita is GDP divided by population."],
+    "Is a car factory part of agriculture or manufacturing?",
+    ["A factory makes goods from parts.", "Making goods is manufacturing."],
+    "manufacturing",
+  ),
+  "social/al-g9-interwar": lesson(
+    ["After World War I the Ottoman lands were divided; the Sykes-Picot Agreement split them between Britain and France.", "The Great Depression began with the 1929 crash and spread worldwide.", "Dictators rose: Stalin forced collectivization; fascism glorified nation, leader and military (Mussolini invaded Ethiopia in 1935); Hitler took power in 1933."],
+    "In what year did Adolf Hitler become chancellor of Germany?",
+    ["It was during the Great Depression.", "The year was 1933."],
+    "1933",
+  ),
+  "social/al-g9-holocaust": lesson(
+    ["Antisemitism is hatred of or prejudice against Jewish people. The Nazis built on it with lies and propaganda.", "Step by step, rights were taken: the Nuremberg Laws (1935) removed citizenship; then came ghettos and camps such as Dachau (1933).", "Six million Jews were murdered. People who risked their lives to save Jews are honoured as Righteous Among the Nations."],
+    "What did the Nuremberg Laws of 1935 do?",
+    ["They were laws passed by the Nazi government.", "They stripped German Jews of citizenship and rights."],
+    "took away German Jews’ citizenship and rights",
+  ),
   // Massachusetts (us-ma)
   "social/ca-g6-ancient-india": lesson(
     ["The Indo-Aryans brought a language that became Sanskrit; their ways blended with earlier ones.", "The caste system divided society; Brahmins were priests and teachers.", "Epics: the Ramayana tells of Rama and Sita; the Bhagavad Gita is part of the Mahabharata. The Maurya Empire united much of India."],
     "What were Brahmins?",
     ["They were the top group in the caste system.", "They led worship and taught."],
     "priests and teachers",
-  ),
-  "social/ca-g6-greek-world": lesson(
-    ["Greeks lived by the sea and traded across the Aegean and Mediterranean.", "Myths: Poseidon ruled the sea; Achilles' heel means a weak spot.", "Thinkers: Socrates taught Plato, who founded the Academy; Hippocrates is the father of medicine. Plays were in open-air theatres."],
-    "Hippocrates is known as the father of what?",
-    ["Doctors still take an oath named after him.", "He studied illness and healing."],
-    "medicine",
   ),
   "social/ca-g6-qin-and-han": lesson(
     ["Mountains and rivers made China hard to govern because travel was slow.", "Confucius taught that rulers should lead by good example. The Qin united China; the Han ruled for 400 years.", "Under the Han, Buddhism came from India along the Silk Road; monks translated texts. The White Horse Temple is one of the first."],

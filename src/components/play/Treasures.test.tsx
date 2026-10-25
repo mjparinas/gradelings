@@ -5,6 +5,7 @@ import type { AgeBand } from "@/content/types";
 import { BandProvider } from "../band";
 
 const h = vi.hoisted(() => ({ off: new Set<string>(), go: vi.fn() }));
+vi.mock("./FestivalCard", () => ({ FestivalCard: () => <div data-testid="festival-card" /> }));
 vi.mock("@/lib/router", () => ({ go: h.go }));
 vi.mock("@/lib/remoteFlags", () => ({ useIsOn: () => (key: string) => !h.off.has(key) }));
 vi.mock("@/lib/store", () => ({
@@ -36,6 +37,7 @@ describe("Treasures", () => {
   it("shows a promised reward below the chest", () => {
     inBand("little", <Treasures />);
     expect(screen.getByTestId("reward-card")).toBeInTheDocument();
+    expect(screen.getByTestId("festival-card")).toBeInTheDocument();
   });
 
   it("leaves out the screens the admin switched off", () => {

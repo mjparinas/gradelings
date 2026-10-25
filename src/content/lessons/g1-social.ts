@@ -440,6 +440,39 @@ export const lessons: GradeLessons = {
     ["It is named for the first president."],
     "Washington, D.C.",
   ),
+  "social/va-g1-american-symbols": lesson(
+    ["The Pledge of Allegiance is a promise to be loyal.", "Washington, D.C. is the capital of the United States.", "Lincoln helped end slavery. He is on the penny."],
+    "What is the capital of the United States?",
+    ["It is named for the first president."],
+    "Washington, D.C.",
+  ),
+  "social/va-g1-virginia-history": lesson(
+    ["Many people helped build Virginia, long ago and today.", "Chief Powhatan led many towns. Christopher Newport sailed to Jamestown.", "Maggie L. Walker started a bank, and Barbara Johns spoke up for a fair school."],
+    "What did Maggie L. Walker start?",
+    ["She was good with money.", "She started a place to save money."],
+    "a bank",
+  ),
+  "social/va-g1-virginia-land": lesson(
+    ["Virginia has mountains in the west and the Chesapeake Bay in the east.", "Virginia has four seasons, and the weather changes with them.", "People long ago settled by rivers, because ships could sail in."],
+    "What is the big bay in Virginia called?",
+    ["Crabs and oysters live there.", "It is the Chesapeake Bay."],
+    "the Chesapeake Bay",
+  ),
+  // Missouri (us-mo)
+  "social/mo-g1-american-symbols": lesson(
+    ["Symbols stand for our country.", "The bald eagle and the flag are symbols of the United States.", "The Gateway Arch in St. Louis is a Missouri landmark."],
+    "Which bird is a symbol of the United States?",
+    ["It has a white head.", "It is the bald eagle."],
+    "the bald eagle",
+  ),
+
+  // North Carolina's units (us-nc).
+  "social/ca-k-good-citizens": lesson(
+    ["A good citizen follows rules and helps others.", "Breaking a rule has a consequence.", "Honest means telling the truth. Brave means trying."],
+    "Which is a way to be a good citizen at school?",
+    ["Good citizens help others.", "Cleaning up helps the class."],
+    "help clean up",
+  ),
   // Massachusetts (us-ma)
   "social/ma-g1-american-symbols": lesson(
     ["The Pledge of Allegiance is a promise to be loyal.", "Washington, D.C. is the capital of the United States.", "Lincoln helped end slavery. He is on the penny."],

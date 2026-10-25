@@ -6,7 +6,9 @@ import type { Mode } from "./model";
 import { SHOP } from "./shop";
 import { getGame } from "./arcade";
 import { factKnown, factSetsFor, factsIn, type FactSetId } from "./facts";
+import { SURPRISE_STICKERS } from "./mystery";
 import { unitLevel } from "./proficiency";
+import { seasonsFilled } from "./seasons";
 
 // Console-style trophies: bronze, silver, gold and one platinum per grade.
 // Each trophy checks the derived stats; `progress` powers the progress bars
@@ -183,6 +185,24 @@ const STORY_TROPHIES: Trophy[] = [
   { id: "story-sharp", name: "Sharp Reader", description: "Get every question right after 10 different stories.", tier: "silver", icon: "🔎", category: "Stories", progress: count(10, storiesAllRight) },
 ];
 
+/** Mystery boxes and seasonal festivals. Every child can earn them, so they are always shown. */
+const surprisesFound = (d: Derived) => Object.keys(d.surprises).length;
+const SURPRISE_TROPHIES: Trophy[] = [
+  { id: "mystery-1", name: "Surprise!", description: "Open a mystery box after a lesson.", tier: "bronze", icon: "🎁", category: "Collector", progress: count(1, (d) => Object.keys(d.mysteries).length) },
+  { id: "mystery-8", name: "Treasure Hunter", description: "Find 8 different surprise stickers.", tier: "silver", icon: "🗝️", category: "Collector", progress: count(8, surprisesFound) },
+  { id: "mystery-all", name: "Full Set", description: "Find every surprise sticker, rare ones too.", tier: "gold", icon: "🏵️", category: "Collector", progress: count(SURPRISE_STICKERS.length, surprisesFound) },
+  { id: "season-1", name: "Festival Friend", description: "Fill a festival's sticker page.", tier: "silver", icon: "🎉", category: "Journey", progress: count(1, (d) => seasonsFilled(d).length) },
+  {
+    id: "season-4",
+    name: "Four Seasons",
+    description: "Fill the sticker page of all four festivals.",
+    tier: "gold",
+    icon: "🌦️",
+    category: "Journey",
+    progress: count(4, (d) => new Set(seasonsFilled(d).map((k) => k.split("-")[0])).size),
+  },
+];
+
 const subjectCorrect = (subject: SubjectId) => (d: Derived) => d.subjects[subject]?.correct ?? 0;
 
 /** Every subject has its own ladder, so a child who loves science or social studies earns for it too. */
@@ -286,6 +306,7 @@ export const TROPHIES: Trophy[] = [
   { id: "coins-1000", name: "Treasure Hunter", description: "Earn 1,000 coins in total.", tier: "silver", icon: "💰", category: "Collector", progress: count(1000, (d) => d.coinsEarned) },
 
   ...STORY_TROPHIES,
+  ...SURPRISE_TROPHIES,
   ...FRENCH_TROPHIES,
   ...SUBJECT_TROPHIES,
 

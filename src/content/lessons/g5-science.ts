@@ -626,6 +626,57 @@ export const lessons: GradeLessons = {
     ["Herons can't make their own food.", "They eat other animals."],
     "consumers",
   ),
+  "science/va-g5-energy-resources": lesson(
+    ["Renewable resources, like sunlight and wind, won't run out.", "Nonrenewable resources, like oil and coal, will run out.", "Solar panels use sunlight and wind turbines use wind to make electricity.", "Dams make electricity but can block fish like salmon."],
+    "Gasoline comes from oil. Is it renewable?",
+    ["Oil took millions of years to form.", "It will run out."],
+    "no, it is nonrenewable",
+  ),
+  // Missouri (us-mo)
+  "science/mo-g5-sun-stars": lesson(
+    ["The sun looks brighter than other stars because it is much closer to Earth.", "Far-off headlights look dim and near ones bright: distance works the same way for stars.", "Earth spins once about every 24 hours, giving day and night.", "The North Star seems to stay still because it is almost straight above Earth's axis."],
+    "Some stars are bigger than the sun. Why do they look so small?",
+    ["Things far away look dimmer and smaller.", "Those stars are much farther from Earth."],
+    "they are very far away",
+  ),
+  "science/mo-g5-earth-water": lesson(
+    ["The geosphere is rocks and land; the hydrosphere is water; the atmosphere is air; the biosphere is life.", "Most fresh water is frozen in ice caps and glaciers.", "Only a small part of Earth's water is fresh and easy to use.", "Rain and snow in the Great Plains and the Rockies fill the Missouri River, which flows across the state."],
+    "Trees take in water and give off water vapour. Which systems interact?",
+    ["Trees: biosphere. Water: hydrosphere.", "The vapour goes into the air: atmosphere."],
+    "biosphere, hydrosphere and atmosphere",
+  ),
+  "science/mo-g5-ecosystems": lesson(
+    ["Producers make food. Consumers eat other living things.", "Decomposers, like worms and fungi, return nutrients to the soil.", "Matter moves around an ecosystem again and again."],
+    "A bobcat eats rabbits. Is a bobcat a producer or a consumer?",
+    ["A bobcat can't make its own food.", "It eats other animals."],
+    "a consumer",
+  ),
+  "science/mo-g5-gravity": lesson(
+    ["Gravity is a force that pulls objects toward each other.", "Earth's gravity pulls everything toward its centre, everywhere on Earth.", "That's why balls fall back down, water flows downhill and the oceans stay on Earth."],
+    "You throw a ball straight up. What happens next, and why?",
+    ["Earth's gravity keeps pulling the ball toward Earth's centre."],
+    "it comes back down because of gravity",
+  ),
+
+  // North Carolina's units (us-nc).
+  "science/nc-g5-ecosystems": lesson(
+    ["Producers (plants) make food from sunlight. Consumers eat plants or other animals.", "Decomposers, like mushrooms, worms and bacteria, break down dead things and return matter to the soil.", "In an ecosystem, like a salt marsh, every part depends on the others."],
+    "Which is a decomposer: a hawk, a mushroom or a fern?",
+    ["A hawk is a consumer and a fern is a producer.", "A mushroom breaks down dead matter."],
+    "a mushroom",
+  ),
+  "science/nc-g5-water-cycle": lesson(
+    ["The sun warms water, and it evaporates into water vapor. Plants give off water vapor too (transpiration).", "Vapor cools and condenses into clouds, then falls as rain or snow (precipitation).", "Water runs off into rivers and lakes or soaks into the ground, and the cycle repeats."],
+    "Clouds form when water vapor does what?",
+    ["High in the air it is cool.", "Cool vapor condenses into tiny drops."],
+    "cools and condenses",
+  ),
+  "science/nc-g5-ocean-weather": lesson(
+    ["Water heats and cools more slowly than land, so the ocean keeps the coast milder in summer and winter.", "On sunny days, a sea breeze blows from the ocean onto the warmer land.", "The warm Gulf Stream flows past North Carolina, and warm ocean water gives hurricanes their energy."],
+    "Why are winters on the coast milder than in the mountains?",
+    ["The ocean stores heat from summer.", "It slowly releases that heat in winter."],
+    "The ocean releases stored heat.",
+  ),
   // Massachusetts (us-ma)
   "science/ma-g5-earth-water": lesson(
     ["The geosphere is rocks and land; the hydrosphere is water; the atmosphere is air; the biosphere is life.", "Most fresh water is frozen in ice caps and glaciers.", "Only a small part of Earth's water is fresh and easy to use.", "Much of Boston's water comes from the Quabbin Reservoir."],

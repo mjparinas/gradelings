@@ -192,7 +192,8 @@ describe("curriculum locks", () => {
         .map(([g, kb]) => `${f} grade ${g}: ${recorded[f]?.[g] ?? 0} KB recorded, ${kb} KB now`),
     );
     expect(grown, "These downloads grew. Check nothing extra is imported, then run `npm run curriculum:lock` to record the new sizes.").toEqual([]);
-  });
+    // Walks every grade file of every framework, which outgrows the default timeout on a busy CI machine.
+  }, 90_000);
 
   it("samples the same questions twice (generators are repeatable)", () => {
     const units = COURSES.flatMap((c) => c.units).filter((_, i) => i % 25 === 0);

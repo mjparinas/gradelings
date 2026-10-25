@@ -915,6 +915,153 @@ export const lessons: GradeLessons = {
     ["Senate seats are equal for each state.", "House seats depend on how many people live there."],
     "House seats are based on population",
   ),
+  "social/ca-g8-industrial-america": lesson(
+    ["After the Civil War, railroads (with land grants), factories and inventions grew fast. Ford’s assembly line made cars faster and cheaper.", "Big businesses became monopolies; the Sherman Antitrust Act (1890) tried to protect competition.", "Immigrants filled crowded tenements; workers formed unions, and farmers backed the Populist Party."],
+    "What did the Sherman Antitrust Act of 1890 try to do?",
+    ["A monopoly controls a whole industry.", "The law tried to break up monopolies and protect competition."],
+    "break up monopolies and protect competition",
+  ),
+  "social/ny-g8-city-immigrants": lesson(
+    ["From the 1890s, millions of immigrants came through Ellis Island, and many lived in crowded tenements in New York City.", "Jacob Riis’s 1890 book How the Other Half Lives used photographs to show the hard lives of the poor.", "In 1898 five boroughs joined to form Greater New York City; its first subway opened in 1904. Tammany Hall was a powerful political machine."],
+    "Which five areas joined in 1898 to form Greater New York City?",
+    ["They became the five boroughs.", "Manhattan, Brooklyn and the Bronx are three.", "Queens and Staten Island are the other two."],
+    "Manhattan, Brooklyn, the Bronx, Queens and Staten Island",
+  ),
+  "social/ny-g8-civil-rights": lesson(
+    ["Brown v. Board of Education (1954) ended legal school segregation under the 14th Amendment’s equal protection clause.", "Leaders like Martin Luther King Jr. led peaceful protests; Shirley Chisholm of Brooklyn became the first Black woman in Congress in 1968.", "Other groups fought for equal rights too: César Chávez and Dolores Huerta organized farm workers."],
+    "Brown v. Board was decided under which amendment?",
+    ["The case was about equal treatment in schools.", "The equal protection clause is in one amendment.", "That is the 14th Amendment."],
+    "the 14th",
+  ),
+  "social/ny-g8-cold-war": lesson(
+    ["The Cold War was a long rivalry between the US and the Soviet Union, without direct war between them.", "The US followed containment, trying to stop communism spreading, including in Korea and Vietnam. NATO faced the Soviet-led Warsaw Pact.", "The arms race and space race were contests to build more nuclear weapons and reach space first."],
+    "What was the arms race?",
+    ["The US and the Soviet Union did not trust each other.", "Each wanted more power than the other.", "They kept building more nuclear weapons."],
+    "the US and the Soviet Union building more and more nuclear weapons",
+  ),
+  "social/ny-g8-expansion-empire": lesson(
+    ["The US expanded across the Plains, bought Alaska from Russia in 1867 and reached into the Pacific.", "After the Spanish-American War (1898), the US gained Puerto Rico, Guam and the Philippines.", "The Roosevelt Corollary (1904) said the US could act as a police power in Latin America."],
+    "Which lands did the US gain after the Spanish-American War?",
+    ["The war with Spain was in 1898.", "Spain gave up some of its colonies.", "The US gained islands in the Caribbean and the Pacific."],
+    "Puerto Rico, Guam and the Philippines",
+  ),
+  "social/ny-g8-great-depression": lesson(
+    ["The stock market crash of 1929 began the Great Depression, and the Dust Bowl hit farmers on the Plains.", "FDR’s New Deal was a set of programs for relief, recovery and reform. As governor of New York, he had already set up a relief agency.", "Eleanor Roosevelt travelled the country and spoke up for the poor and for civil rights."],
+    "The New Deal had three goals, all starting with R. What were they?",
+    ["Relief helped people in need right away.", "Recovery helped the economy grow again.", "Reform tried to prevent another depression."],
+    "relief, recovery and reform",
+  ),
+  "social/ny-g8-new-era": lesson(
+    ["The Cold War ended when the Soviet Union broke up in 1991.", "On September 11, 2001, terrorist attacks killed nearly 3,000 people.", "Globalization linked the world’s economies; the World Trade Organization, created in 1995, sets rules for trade between nations."],
+    "What does the World Trade Organization do?",
+    ["It was created in 1995.", "Its members are countries.", "It sets rules for trade between them."],
+    "sets rules for trade between nations",
+  ),
+  "social/ny-g8-postwar-america": lesson(
+    ["After World War II, many families moved to suburbs, and many people moved to the Sun Belt in the South and West.", "As baby boomers retire, more people rely on Social Security and Medicare.", "Environmental problems, like toxic waste at Love Canal, led to action; the EPA was created in 1970 to protect air, water and land."],
+    "Why was the Environmental Protection Agency created in 1970?",
+    ["Pollution was harming air, water and land.", "People wanted the government to act.", "The EPA protects the environment."],
+    "to protect the nation’s air, water and land",
+  ),
+  "social/ny-g8-roaring-twenties": lesson(
+    ["The 1920s are called the Roaring Twenties because the economy boomed and new music, fashions and ideas spread.", "In the Great Migration, millions of Black Southerners moved to cities in the North and West.", "The Harlem Renaissance was a burst of Black art, writing and jazz in New York City."],
+    "What was the Great Migration?",
+    ["Many people left the rural South.", "They wanted jobs and to escape Jim Crow laws.", "They moved to cities in the North and West."],
+    "the movement of millions of Black Southerners to northern and western cities",
+  ),
+  "social/ny-g8-workers-progressives": lesson(
+    ["The Triangle Shirtwaist Factory fire (1911) killed 146 workers, leading to new safety laws.", "Workers formed unions; a strike is when workers stop working until their demands are met.", "Progressives pushed reform: Lewis Hine photographed child labour, and Frances Perkins became the first woman US Secretary of Labor."],
+    "What is a strike?",
+    ["Workers want better pay or conditions.", "They stop working together.", "They return when demands are met."],
+    "when workers stop working until their demands are met",
+  ),
+  "social/ny-g8-world-war-i": lesson(
+    ["World War I (1914–1918) had causes such as militarism, alliances, imperialism and nationalism; soldiers fought from trenches.", "The US joined in 1917 after Germany returned to unrestricted submarine warfare, attacking ships near Britain.", "In Schenck v. United States (1919), the Court ruled that speech creating a “clear and present danger” can be limited."],
+    "Why did unrestricted submarine warfare push the US into the war?",
+    ["German submarines would attack any ship near Britain.", "That included American ships.", "Americans were killed, and the US entered the war in 1917."],
+    "Germany would attack American ships.",
+  ),
+  "social/ny-g8-world-war-ii": lesson(
+    ["Totalitarian leaders such as Hitler in Germany and Mussolini in Italy rose to power before World War II.", "The Axis powers were Germany, Italy and Japan. The US entered the war after Japan attacked Pearl Harbor in December 1941.", "On D-Day (6 June 1944) the Allies landed in France. At home, “Rosie the Riveter” stood for women taking factory jobs."],
+    "Which event brought the US into World War II?",
+    ["The war began in Europe in 1939.", "The US stayed out at first.", "Japan attacked Pearl Harbor on December 7, 1941."],
+    "the attack on Pearl Harbor",
+  ),
+  "social/or-g8-reconstruction": lesson(
+    ["Reconstruction (1865–1877) rebuilt the South after the Civil War.", "The 13th Amendment ended slavery, the 14th gave citizenship and equal protection, and the 15th gave Black men the vote.", "After it ended, many of these rights were taken away through poll taxes, literacy tests and violence."],
+    "Which amendment gave Black men the right to vote?",
+    ["The 13th ended slavery and the 14th gave citizenship.", "The voting amendment came next."],
+    "the 15th Amendment",
+  ),
+  "social/wa-g8-westward": lesson(
+    ["Manifest Destiny was the belief that the US was meant to expand across North America.", "Expansion had costs: under Indian removal, the Cherokee, Muscogee (Creek), Choctaw, Chickasaw and Seminole were forced west.", "Many groups moved west for opportunity, like Chinese immigrants who worked in gold fields and built the Central Pacific Railroad."],
+    "What was Manifest Destiny?",
+    ["It was a popular belief in the 1840s.", "People believed the country should grow.", "They thought it was meant to stretch across the continent."],
+    "the belief that the US was meant to expand across North America",
+  ),
+  // Missouri (us-mo)
+  "social/ga-g7-africa": lesson(
+    ["Key features include the Sahara, the Sahel, the Nile and the Congo River.", "Desertification in the Sahel and unsafe water are big environmental issues.", "Many African countries gained independence in the 1950s and 1960s."],
+    "What is desertification?",
+    ["Desert means dry land.", "Land slowly becomes like a desert."],
+    "good land turning into desert",
+  ),
+  "social/ga-g7-southwest-asia": lesson(
+    ["Key features include the Tigris and Euphrates Rivers, the Persian Gulf and the Arabian Peninsula.", "Oil is the region's most important export.", "Water is scarce, so sharing rivers is an important issue."],
+    "What is Southwest Asia's most important export?",
+    ["It is found under the desert and the Gulf.", "It is used for fuel."],
+    "oil",
+  ),
+  "social/ga-g7-southern-eastern-asia": lesson(
+    ["Key features include the Himalayas, the Ganges and the Yangtze Rivers.", "The Ganges is polluted and the Yangtze has huge dams.", "China, India and Japan have large economies."],
+    "Which mountains are the highest in the world?",
+    ["They are in southern Asia.", "Mount Everest is part of them."],
+    "the Himalayas",
+  ),
+  "social/ga-g7-population": lesson(
+    ["Demography is the study of human populations. Population density is how many people live in an area.", "Cities often grow along rivers and coasts for water and trade.", "Push factors drive people away; pull factors draw them. Newcomers keep culture alive with language and festivals."],
+    "Why do cities often grow along rivers and coasts?",
+    ["People need water.", "Rivers and coasts are also routes for trade."],
+    "They offer water and trade routes",
+  ),
+  "social/ga-g7-economies": lesson(
+    ["In a command economy the government decides what to make; in a market economy buyers and sellers do; a mixed economy blends both.", "Exports are sold to other countries; imports are bought from them. A tariff is a tax on imports.", "Comparative advantage: make what you can produce at the lowest opportunity cost, then trade."],
+    "In a command economy, who makes the main decisions about production?",
+    ["“Command” means orders from the top.", "The government gives those orders."],
+    "the government",
+  ),
+  "social/quality-of-life-8": lesson(
+    ["Indicators measure quality of life: life expectancy, literacy rate, infant mortality, and access to clean water and health care.", "High literacy and long life expectancy usually mean higher quality of life; high infant mortality usually means lower.", "To estimate doubling time, divide 70 by the yearly growth rate."],
+    "A population grows by 2% each year. About how many years will it take to double?",
+    ["Doubling time ≈ 70 ÷ growth rate.", "70 ÷ 2 = 35."],
+    "35",
+  ),
+  "social/mo-g6-world-maps": lesson(
+    ["There are 7 continents and 5 oceans. The Atlantic lies between the Americas and Europe and Africa.", "Latitude runs from 0° at the equator to 90° at the poles. Longitude is measured from the prime meridian.", "Every flat map (projection) stretches some places."],
+    "What latitude is the equator?",
+    ["Latitude counts from the middle of the Earth.", "The equator is the starting line."],
+    "0°",
+  ),
+  "social/mo-g6-latin-america": lesson(
+    ["Key features: the Amazon Rainforest, the Andes Mountains and the Atacama Desert.", "Most people speak Spanish, but Brazil speaks Portuguese.", "Issues include rainforest loss in Brazil and air pollution in Mexico City."],
+    "Why is the Amazon Rainforest shrinking?",
+    ["People clear land.", "Trees are cut for farms, ranches, logging and mining."],
+    "people cut and clear it for farms and logging",
+  ),
+  "social/mo-g6-australia": lesson(
+    ["Australia is a country and a continent, with the Great Barrier Reef and the Outback.", "Most Australians live near the coast, where the climate is milder.", "Aboriginal Australians have lived there for tens of thousands of years."],
+    "Why do most Australians live near the coast?",
+    ["The middle is hot and dry.", "The coast has more rain and milder weather."],
+    "the coast has a milder climate and more water",
+  ),
+
+  // North Carolina's units (us-nc).
+  "social/or-g7-african-kingdoms": lesson(
+    ["Ghana, Mali and Songhai grew rich from gold and salt trade across the Sahara. Mansa Musa of Mali went on pilgrimage to Makkah in 1324.", "Swahili city-states like Kilwa and Mombasa traded across the Indian Ocean. Great Zimbabwe, Benin and Ethiopia were also powerful.", "Historians use Arabic writings, griots’ oral histories and archaeology."],
+    "The empire of Mali grew rich from trading what?",
+    ["Mali controlled routes across the Sahara.", "Gold from the south was traded for salt from the desert."],
+    "gold and salt",
+  ),
   // Massachusetts (us-ma)
   "social/al-g7-southwest-asia": lesson(
     ["Assyria built a strong army; Ashurbanipal’s library at Nineveh held thousands of clay tablets in cuneiform.", "Phoenician city-states (Tyre, Sidon, Byblos) were sea traders. Their alphabet became the base of Greek and Latin letters.", "Persia under Cyrus and Darius ruled through satrapies (provinces), with the Royal Road and coins."],
@@ -939,12 +1086,6 @@ export const lessons: GradeLessons = {
     "What was a ziggurat?",
     ["It was a huge building at the centre of a city.", "It rose in steps and had a temple on top."],
     "a stepped temple tower",
-  ),
-  "social/or-g7-african-kingdoms": lesson(
-    ["Ghana, Mali and Songhai grew rich from gold and salt trade across the Sahara. Mansa Musa of Mali went on pilgrimage to Makkah in 1324.", "Swahili city-states like Kilwa and Mombasa traded across the Indian Ocean. Great Zimbabwe, Benin and Ethiopia were also powerful.", "Historians use Arabic writings, griots’ oral histories and archaeology."],
-    "The empire of Mali grew rich from trading what?",
-    ["Mali controlled routes across the Sahara.", "Gold from the south was traded for salt from the desert."],
-    "gold and salt",
   ),
   "social/ma-g6-central-america-caribbean": lesson(
     ["Central America is the isthmus joining North and South America; the Caribbean Sea lies to its east.", "The Panama Canal links the Atlantic and Pacific Oceans.", "A tropical climate, volcanoes and hurricanes shape farming, tourism and where people live."],

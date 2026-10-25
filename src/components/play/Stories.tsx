@@ -27,7 +27,7 @@ import { BackButton } from "./Practice";
 import { QuestionBody } from "./Session";
 
 // The Story Library: short read-along stories grouped around the child's reading level. Each page is read
-// aloud (by the Supertonic voice once it has downloaded) with the sentence being read lit up; a few questions
+// aloud (by the Piper voice once it has downloaded) with the sentence being read lit up; a few questions
 // follow the story. Finishing logs one `story` event; everything else is worked out from it in `derive`.
 
 const TINT = { colour: "#ff7a59", dark: "#d4553a" };

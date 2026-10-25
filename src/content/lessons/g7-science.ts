@@ -705,6 +705,51 @@ export const lessons: GradeLessons = {
     ["More mass means more pull.", "Being closer also means more pull."],
     "when they are more massive and closer",
   ),
+  // Missouri (us-mo)
+  "science/mo-g7-resources": lesson(
+    ["Minerals, energy and water are spread unevenly because of past geologic processes; Missouri has lead deposits in the Ozarks.", "Scientists map hazards such as earthquakes, floods, tornadoes and wildfires.", "Monitoring networks (seismometers, river gauges, weather radar) help warn people early."],
+    "What does a flood hazard map show?",
+    ["Floods cover low land near rivers.", "People need to know where to go."],
+    "areas that could flood and routes to higher ground",
+  ),
+  "science/mo-g7-biodiversity": lesson(
+    ["Biodiversity is the variety of life in an area.", "Ecosystem services include clean water, food and flood protection.", "Protecting Ozark forests, prairies and river wetlands keeps habitat for many species."],
+    "How do wetlands along a river help people?",
+    ["Wetland plants trap dirt.", "They also soak up floodwater."],
+    "by filtering water and holding floodwater",
+  ),
+  "science/mo-g7-earth-surface": lesson(
+    ["Matching coastlines, fossils and rocks on far-apart continents show they were once joined.", "Plates pull apart at mid-ocean ridges and collide to build mountains and volcanoes.", "Some changes are sudden (earthquakes); others take millions of years (mountain building)."],
+    "Is a landslide a fast or a very slow change to Earth's surface?",
+    ["A landslide happens in minutes.", "Mountain building takes millions of years."],
+    "fast",
+  ),
+
+  // North Carolina's units (us-nc).
+  "science/newtons-laws": lesson(
+    ["First law (inertia): an object keeps doing what it's doing unless a force acts on it.", "Second law: net force = mass × acceleration. Force is measured in newtons (N).", "Third law: every action has an equal and opposite reaction.", "Friction is a force that slows things, so a puck slides farther on smooth ice."],
+    "A 30 kg cart speeds up at 2 m/s². What net force acts on it?",
+    ["Force = mass × acceleration.", "30 × 2 = 60."],
+    "60 N",
+  ),
+  "science/ny-g9-climate-systems": lesson(
+    ["Weather is conditions at one time and place; climate is the long-term pattern.", "Greenhouse gases trap heat given off by Earth. Burning fossil fuels adds carbon dioxide.", "Ice cores and glaciers give evidence of past climates."],
+    "“It rained today.” Weather or climate?",
+    ["It describes one day.", "Short-term conditions are weather."],
+    "weather",
+  ),
+  "science/wa-g3-hazards": lesson(
+    ["Weather hazards include floods, strong wind, lightning and heavy snow.", "People design solutions: storm shutters, windbreaks, fish ladders.", "Judge a solution by asking: does it solve the problem?"],
+    "Trees planted in a row to block wind are a…?",
+    ["They break the force of the wind."],
+    "windbreak",
+  ),
+  "science/nc-g7-atmosphere": lesson(
+    ["The air is about 78% nitrogen and 21% oxygen. Almost all weather happens in the lowest layer, the troposphere; the ozone layer is in the stratosphere.", "The sun's energy drives the water cycle, and gravity brings precipitation back down.", "Uneven heating causes convection and global winds, and the jet stream steers storms. Monitoring air quality helps people stay healthy."],
+    "In which layer of the atmosphere does almost all weather happen?",
+    ["It is the lowest layer.", "That layer is the troposphere."],
+    "the troposphere",
+  ),
   // Massachusetts (us-ma)
   "science/ca-g8-population-resources": lesson(
     ["Total resource use = number of people × use per person.", "Using more water, energy, land and materials affects Earth’s systems, such as habitats and clean water.", "Better technology and using less per person can lower the impact."],

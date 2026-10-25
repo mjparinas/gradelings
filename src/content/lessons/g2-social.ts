@@ -638,6 +638,69 @@ export const lessons: GradeLessons = {
     ["He lived in Indianapolis.", "His home is still there."],
     "Indiana",
   ),
+  "social/va-g2-difference-makers": lesson(
+    ["Difference makers solve problems and help others.", "Ask: what problem did they help solve?", "Dr. Charles Drew found ways to store blood. Dolores Huerta organized farm workers."],
+    "Which word describes a person who keeps trying?",
+    ["They don't give up.", "That is being determined."],
+    "determined",
+  ),
+  "social/va-g2-first-peoples": lesson(
+    ["Indigenous peoples lived across America long before Europeans came.", "Each region shaped how a nation lived: forests, plains, deserts or coasts.", "Virginia recognizes eleven tribes today, such as the Pamunkey, and they are living communities."],
+    "Why did nations in different regions live in different ways?",
+    ["Think about what was nearby.", "People used the trees, animals, water and soil of their land."],
+    "They used what their land gave them.",
+  ),
+  "social/va-g2-explorers-founders": lesson(
+    ["Explorers sailed to the Americas hoping for riches and new trade routes.", "In the American Revolution, the colonies fought for freedom from Great Britain.", "Founders such as George Washington, Thomas Jefferson and Benjamin Franklin helped start the new nation."],
+    "Who is called the Father of our Country?",
+    ["He led the army in the Revolution.", "He became the first president."],
+    "George Washington",
+  ),
+  "social/va-g2-nation-landmarks": lesson(
+    ["Thirteen colonies joined to form the United States.", "The nation grew: the Louisiana Purchase (1803) doubled its size.", "Landmarks like the Lincoln Memorial and the Statue of Liberty honor people and ideas."],
+    "Which country sold the Louisiana Purchase to the United States?",
+    ["It happened in 1803.", "Napoleon sold the land."],
+    "France",
+  ),
+  // Missouri (us-mo)
+  "social/mo-g2-missouri-regions": lesson(
+    ["Missouri has regions with different land.", "The Ozarks in the south have hills, forests and springs.", "The north has rolling plains and farms. The Missouri and Mississippi rivers shape the state."],
+    "Which Missouri region has hills, forests and springs?",
+    ["It is in the south of the state.", "It is the Ozarks."],
+    "the Ozarks",
+  ),
+
+  // North Carolina's units (us-nc).
+  "social/ny-g1-american-symbols": lesson(
+    ["The Pledge of Allegiance is a promise to be loyal.", "Washington, D.C. is the capital of the United States.", "Lincoln helped end slavery. He is on the penny."],
+    "What is the capital of the United States?",
+    ["It is named for the first president."],
+    "Washington, D.C.",
+  ),
+  "social/meeting-needs": lesson(
+    ["Everyone needs food, water, shelter and clothing.", "People meet their needs with what their land and weather give them.", "When people can't grow or make something, they trade for it."],
+    "Why do people in very hot places often wear loose, light clothes?",
+    ["Clothing is a need, and it has to suit the weather.", "Loose, light clothes let air move and keep people cool."],
+    "to stay cool in the heat",
+  ),
+  "social/nc-g2-our-government": lesson(
+    ["In a democracy, citizens choose leaders by voting, and leaders must follow the law too.", "The national government has three branches: Congress makes laws, the president carries them out, and the courts decide what laws mean.", "Each branch can check the others, so no one has too much power."],
+    "Which branch decides what a law means?",
+    ["Congress makes laws.", "The president carries them out.", "The courts explain what they mean."],
+    "the courts",
+  ),
+  "social/nc-g2-americans-who-made-a-difference": lesson(
+    ["Many people helped make America fairer: Harriet Tubman led people to freedom, and Susan B. Anthony worked for women's right to vote.", "Martin Luther King Jr. and Rosa Parks worked peacefully for equal rights.", "People of many backgrounds, like Sacagawea and César Chávez, helped shape the country."],
+    "Who worked for women's right to vote?",
+    ["Harriet Tubman led people out of slavery.", "Susan B. Anthony spoke and wrote for women's votes."],
+    "Susan B. Anthony",
+  ),
+  "social/nc-g2-us-geography": lesson(
+    ["Use a compass rose: north is up on most maps, and south is down.", "The Appalachian Mountains are in the east, the Great Plains in the middle and the Rocky Mountains in the west.", "North Carolina is in the Southeast, on the Atlantic coast. Virginia is north of it and South Carolina is south."],
+    "Which ocean is on North Carolina's coast?",
+    ["North Carolina is on the East Coast.", "The ocean to the east is the Atlantic."],
+    "the Atlantic Ocean",
+  ),
   // Massachusetts (us-ma)
   "social/ma-g2-reading-maps": lesson(
     ["The key tells what symbols mean. A title says what the map shows.", "The compass rose shows north, south, east and west, plus in-betweens like northeast.", "Opposites: north–south and east–west."],

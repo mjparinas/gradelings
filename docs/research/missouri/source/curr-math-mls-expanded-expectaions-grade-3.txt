@@ -1,0 +1,283 @@
+                               Grade 3 Grade-Level Expanded Expectations
+                               NUMBER SENSE AND OPERATIONS IN BASE TEN: NBT
+  3.NBT.A        Use place value understanding and properties of operations to perform multi-digit arithmetic.
+                 Round whole numbers to the nearest 10 or                                    The expectation of the student is to use place value understanding to round
+  3.NBT.A.1
+                 100.                                                                        whole numbers to the nearest 10 or 100 in the context of estimation.
+                 Read, write and identify whole numbers                                      The expectation of the student is to read, write and identify multi-digit whole
+  3.NBT.A.2      within 100,000 using base ten numerals,                                     numbers within 100,000 using base ten numerals, number names and
+                 number names and expanded form.                                             expanded notation.
+                                                                                             The expectation of the student is to demonstrate fluency with addition and
+                                                                                             subtraction within 1000. Fluently add and subtract with numbers and results
+                 Demonstrate fluency with addition and                                       within 1000 using strategies and algorithms based on place value, properties
+  3.NBT.A.3
+                 subtraction within 1000.                                                    of operations and/or the relationship between addition and subtraction.
+                                                                                             (Fluency refers to accuracy and efficiency and does not equate to
+                                                                                             memorization.)
+                                                                                             The expectation of the student is to multiply one-digit whole numbers with
+                 Multiply whole numbers by multiples of 10 in
+  3.NBT.A.4                                                                                  multiples of 10 in the range 10-90 (e.g., 9 x 80, 50 x 6) using strategies based
+                 the range 10-90.
+                                                                                             on place value and properties of operations.
+
+                            NUMBER SENSE AND OPERATIONS IN FRACTIONS: NF
+   3.NF.A        Develop understanding of fractions as numbers.
+                 Understand a unit fraction as the quantity                                  The expectation of the student is to understand a unit fraction as the quantity
+   3.NF.A.1      formed by one part when a whole is                                          formed by one part when a whole is partitioned into equal parts. (For
+                 partitioned into equal parts.                                               example, ¼ [1 fourth] represents 1 of the 4 equal parts or ¼ of the whole.)
+
+
+
+                 The Department of Elementary and Secondary Education does not discriminate on the basis of race, color, religion, gender, gender identity, sexual orientation, national origin, age, veteran
+                 status, mental or physical disability, or any other basis prohibited by statute in its programs and activities. Inquiries related to department programs and to the location of services, activities,
+                 and facilities that are accessible by persons with disabilities may be directed to the Jefferson State Office Building, Director of Civil Rights Compliance and MOA Coordinator (Title VI/Title VII/
+                 Title IX/504/ADA/ADAAA/Age Act/GINA/USDA Title VI), 5th Floor, 205 Jefferson Street, P.O. Box 480, Jefferson City, MO 65102-0480; telephone number 573-526-4757 or TTY 800-735-2966;
+                 email civilrights@dese.mo.gov
+GLEs – GRADE 3
+                 Understand that when a whole is partitioned    The expectation of the student is to understand that when a whole is
+                 equally, a fraction can be used to represent a partitioned equally, a fraction can be used to represent a portion of the
+                 portion of the whole.                          whole.
+                    a) Describe the numerator as                   a. The numerator of the fraction represents the number of pieces being
+   3.NF.A.2                                                             considered.
+                        representing the number of pieces
+                        being considered.                          b. The denominator is the number of pieces that make the whole. (For
+                    b) Describe the denominator as the                  example, ¾ [3 fourths] represents 3 pieces that are each ¼ of the
+                        number of pieces that make the whole.           whole.)
+                 Represent fractions on a number line.            The expectation of the student is to understand a fraction as a number on the
+                    a) Understand the whole is the interval       number line; represent fractions on a number line diagram. (Limit to fractions
+                       from 0 to 1.                               with denominators 2, 3, 4, 6 and 8.)
+                    b) Understand the whole is partitioned            a. Understand the whole is the interval from 0 to 1.
+   3.NF.A.3                                                           b. Understand the whole is partitioned into equal parts.
+                       into equal parts.
+                    c) Understand a fraction represents the           c. Understand a fraction represents the endpoint of the length a given
+                       endpoint of the length a given number              number of partitions from 0. (For example, ¾ is located at the end of
+                       of partitions from 0.                              the length that is 3 partitions from 0 when each partition is a fourth.)
+                 Demonstrate that two fractions are equivalent    The expectation of the student is to demonstrate that two fractions are
+   3.NF.A.4      if they are the same size or the same point on   equivalent (equal) if they are the same size or the same point on a number
+                 a number line.                                   line.
+                                                                  The expectation of the student is to use visual models, recognize and
+                 Recognize and generate equivalent fractions
+                                                                  generate simple equivalent fractions. (e.g., ½ = 2/4, 4/6=2/3) Explain why the
+   3.NF.A.5      using visual models, and justify why the
+                                                                  fractions are equivalent. Include fractions that are equal to 1. (e.g., 3/3 = 1)
+                 fractions are equivalent.
+                                                                  (Limit to fractions with denominators 2, 3, 4, 6 and 8.)
+                                                                  The expectation of the student is to compare two fractions with the same
+                 Compare two fractions with the same              numerator or same denominator by reasoning about their size. Record the
+   3.NF.A.6      numerator or denominator using the symbols       results of the comparisons using <, > or = and justify the conclusions by using
+                 >, = or <, and justify the solution.             number lines, manipulative or drawings. (Limit to fractions with
+                                                                  denominators 2, 3, 4, 6 and 8.)
+                 Explain why fraction comparisons are only        The expectation of the student is to explain that fraction comparisons are
+   3.NF.A.7      valid when the two fractions refer to the same   only valid when the two fractions refer to the same whole.
+                 whole.
+
+
+
+GLEs – GRADE 3
+                             RELATIONSHIPS AND ALGEBRAIC THINKING: RA
+   3.RA.A        Represent and solve problems involving multiplication and division.
+                                                                 The expectation of the student is to interpret products of whole numbers.
+   3.RA.A.1      Interpret products of whole numbers.            (e.g., interpret 5 x 7 as the total number of objects in 5 groups of 7 objects
+                                                                 each)
+                                                                 The expectation of the student is to interpret quotients of whole numbers.
+                                                                 [The student should work with situations resulting from both sharing (the
+                                                                 number of groups is known) and measurement (the number in each group is
+                                                                 known) processes.]
+   3.RA.A.2      Interpret quotients of whole numbers.
+                                                                 For example, 56÷8 can be interpreted as:
+                                                                     a. 56 objects being divided into groups with 8 objects each
+                                                                          (measurement) or
+                                                                     b. 56 objects being divided into 8 equal groups (sharing)
+                                                                 The expectation of the student is to describe in words or drawings a problem
+                                                                 that illustrates a multiplication or division situation.
+                                                                 For example:
+                 Describe in words or drawings a problem that
+                                                                     a. “Janet had 3 boxes that each held 5 books” represents “3 x 5”.
+   3.RA.A.3      illustrates a multiplication or division
+                                                                     b. “2 x 4” could be contextualized as “James had 2 boxes with 4 toys in
+                 situation.
+                                                                          each.”
+                                                                     c. “Brad has 30 cookies. He creates piles of 5 cookies” represents “30 ÷
+                                                                          5”.
+                                                                 The expectation of the student is to use multiplication and division within 100
+                 Use multiplication and division within 100 to   to solve word problems in situations involving equal groups, arrays and
+   3.RA.A.4
+                 solve problems.                                 rectangular area. (e.g., by using drawings and/or equations with a symbol for
+                                                                 the unknown number to represent the problem)
+                                                                 The expectation of the student is to determine the unknown number in a
+                 Determine the unknown number in a
+                                                                 multiplication or division equation relating three whole numbers. For
+   3.RA.A.5      multiplication or division equation relating
+                                                                 example, find the unknown number in each of these equations:
+                 three whole numbers.
+                                                                 8 x ? = 48; ?÷ 3 = 5; 6 x 6 = ?; ? = 5 x 7; ? = 24 ÷ 4
+   3.RA.B        Understand properties of multiplication and the relationship between multiplication and division.
+
+
+
+GLEs – GRADE 3
+                                                                   The expectation of the student is to apply appropriate properties of
+                                                                   operations as strategies to multiply and divide. (The student should not be
+                                                                   expected to use the formal names for the properties. Assessment of this
+                                                                   standard may occur throughout the year through teacher observation.)
+                                                                    For example:
+                                                                       a. If 6 x 4 = 24, then 4 x 6 = 24 (Commutative property).
+                 Apply properties of operations as strategies to       b. 3 x 5 x 2 can be found by 3 x 5 = 15 and 15 x 2 = 30 or by 5 x 2 = 10 and
+   3.RA.B.6
+                 multiply and divide.                                      10 x 3 = 30 (Associative property).
+                                                                       c. 7 x 8 can be organized mentally as 5 groups of 8 and 2 more groups of
+                                                                           8, so 5 groups of 8 = 40 and 2 groups of 8 = 16 meaning 7 groups of 8 =
+                                                                           40 + 16 = 56 (Distributive property).
+                                                                       d. 8 x 6 can be thought of as 2 sets of 4 groups of 6, meaning 8 x 6 = 4 x 6
+                                                                           + 4 x 6. (Distributive property).
+
+   3.RA.C        Multiply and divide within 100.
+                 Multiply and divide with numbers and results      The expectation of the student is to multiply and divide with numbers and
+                 within 100 using strategies such as the           results within 100 using strategies such as the relationship between
+   3.RA.C.7      relationship between multiplication and           multiplication and division or properties of operations. Know all products of
+                 division or properties of operations. Know all    two one-digit numbers.
+                 products of two one-digit numbers.
+                                                                   The expectation of the student is to demonstrate fluency with products
+                 Demonstrate fluency with products within          within 100. Know all products of two one-digit numbers. While automaticity
+   3.RA.C.8
+                 100.                                              for basic facts is desired, quick use of mental strategies may suffice. (Fluency
+                                                                   refers to accuracy and efficiency and does not equate to memorization.)
+   3.RA.D        Use the four operations to solve word problems.
+                                                                   The expectation of the student is to write and solve two-step word problems
+                 Write and solve two-step problems involving
+   3.RA.D.9                                                        using any of the four operations. Represent these problems using equations
+                 variables using any of the four operations.
+                                                                   with a letter standing for the unknown quantity.
+                 Interpret the reasonableness of answers using     The expectation of the student is to interpret the reasonableness of answers
+  3.RA.D.10      mental computation and estimation strategies      using mental computation and estimation strategies including rounding.
+                 including rounding.
+
+
+GLEs – GRADE 3
+   3.RA.E        Identify and explain arithmetic patterns.
+                                                                  The expectation of the student is to identify arithmetic patterns (including
+                                                                  patterns in the addition or multiplication table) and explain the patterns using
+                 Identify arithmetic patterns and explain the
+  3.RA.E.11                                                       properties of operations. For example, observe that 4 times a number is
+                 patterns using properties of operations.
+                                                                  always even, explain why 4 times a number can be decomposed into two
+                                                                  equal addends.
+
+                                     GEOMETRY AND MEASUREMENT: GM
+   3.GM.A        Reason with shapes and their attributes.
+                                                                  The expectation of the student is to understand that shapes in different
+                 Understand that shapes in different categories
+                                                                  categories (e.g., rhombuses, rectangles and others) may share attributes
+  3.GM.A.1       may share attributes and that the shared
+                                                                  (e.g., having four sides) and that the shared attributes can define a larger
+                 attributes can define a larger category.
+                                                                  category (e.g., quadrilaterals).
+                 Distinguish rhombuses and rectangles as          The expectation of the student is to distinguish rhombuses and rectangles
+                 examples of quadrilaterals, and draw             (including squares) as examples of quadrilaterals, and draw examples of
+  3.GM.A.2
+                 examples of quadrilaterals that do not belong    quadrilaterals, including those that do not belong to any of these
+                 to these subcategories.                          subcategories.
+                                                                  The expectation of the student is to partition shapes into parts with equal
+                 Partition shapes into parts with equal areas,
+                                                                  areas. Express the area of each part as a unit fraction of the whole. (e.g.,
+  3.GM.A.3       and express the area of each part as a unit
+                                                                  Partition a shape into 4 parts with equal area, and describe the area of each
+                 fraction of the whole.
+                                                                  part as ¼ of the area of the shape.)
+   3.GM.B        Solve problems involving the measurement of time, liquid volumes and weights of objects.
+                                                                  The expectation of the student is to tell and write time to the nearest minute.
+  3.GM.B.4       Tell and write time to the nearest minute.
+                                                                  The expectation of the student is to estimate time intervals in minutes. (e.g.,
+  3.GM.B.5       Estimate time intervals in minutes.              will it take more than 5 minutes or less than 5 minutes to read 5 chapters of a
+                                                                  book)
+
+
+
+
+GLEs – GRADE 3
+                                                                   The expectation of the student is to solve one-step word problems involving
+                                                                   addition and subtraction of minutes using number lines, clock faces or other
+                 Solve problems involving addition and
+  3.GM.B.6                                                         strategies. (e.g., James left home at 1:20 and rode his bike for 30 minutes.
+                 subtraction of minutes.
+                                                                   What time did he stop riding? It took Gerry 25 minutes to walk to school. If he
+                                                                   arrived at 8:40, what time did he leave home?)
+                                                                   The expectation of the student is to choose the appropriate tools and units
+                 Measure or estimate length, liquid volume
+  3.GM.B.7                                                         (metric and customary); estimate and measure the length (no smaller than
+                 and weight of objects.
+                                                                   the nearest centimeter or ¼ inch), liquid volume and weight of given objects.
+                 Use the four operations to solve problems         The expectation of the student is to use the four operations to solve
+  3.GM.B.8       involving lengths, liquid volumes or weights      problems involving lengths (no smaller than the nearest centimeter or ¼ inch),
+                 given in the same units.                          liquid volumes or weights given in the same units.
+   3.GM.C        Understand concepts of area.
+                 Calculate area by using unit squares to cover a   The expectation of the student is to Calculate area by using unit squares to
+  3.GM.C.9
+                 plane figure with no gaps or overlaps.            cover a plane figure with no gaps or overlaps.
+                                                                   The expectation of the student is to use square units to label area
+  3.GM.C.10      Label area measurements with squared units.
+                                                                   measurements. (e.g., square cm. or sq. cm or cm2)
+                 Demonstrate that tiling a rectangle to find the   The expectation of the student is to demonstrate that tiling a rectangle to
+  3.GM.C.11      area and multiplying the side lengths result in   find the area and multiplying the side lengths result in the same value.
+                 the same value.
+                                                               The expectation of the student is to multiply side lengths to find areas of
+                 Multiply whole-number side lengths to solve
+  3.GM.C.12                                                    rectangles with whole-number side lengths and solve problems involving the
+                 problems involving the area of rectangles.
+                                                               area of rectangles.
+                                                               The expectation of the student is to find rectangular arrangements that can
+                 Find rectangular arrangements that can be
+  3.GM.C.13                                                    be formed for a given area. (e.g., an area of 12 sq. cm can be shown as a 3 x 4
+                 formed for a given area.
+                                                               rectangle, a 2 x 6 rectangle or a 1 x 12 rectangle)
+                                                               The expectation of the student is to decompose a rectangle into two smaller
+                                                               rectangles, find the area of each smaller rectangle, and combine the areas to
+                 Decompose a rectangle into smaller rectangles find the area of the original rectangle (Note: This is an application of the
+  3.GM.C.14
+                 to find the area of the original rectangle.   distributive property.) (e.g., a 16 x 5 rectangle could be divided into a 10 x 5
+                                                               rectangle and a 6 x 5 rectangle) The area of the original rectangle can be
+                                                               found by adding 50 + 30.
+   3.GM.D        Understand concepts of perimeter.
+
+GLEs – GRADE 3
+                                                                  The expectation of the student is to solve problems involving perimeters of
+                 Solve problems involving perimeters of
+  3.GM.D.15                                                       polygons including finding the perimeter when given side lengths and finding
+                 polygons.
+                                                                  missing side lengths when given the perimeter.
+                 Understand that rectangles can have equal        The expectation of the student is to understand that rectangles can have
+  3.GM.D.16      perimeters but different areas, or rectangles    equal perimeters but different areas. Understand that rectangles can have
+                 can have equal areas but different perimeters.   equal areas but different perimeters.
+
+                                                DATA AND STATISTICS: DS
+   3.DS.A        Represent and analyze data.
+                                                                  The expectation of the student is to create frequency tables, picture graphs
+                 Create frequency tables, scaled picture graphs
+                                                                  and/or bar graphs to represent a given data set with several categories.
+   3.DS.A.1      and bar graphs to represent a data set with
+                                                                  Include picture graphs in which the symbol used represents more than 1 and
+                 several categories.
+                                                                  bar graphs with the scale marked in intervals greater than 1.
+                 Solve one- and two-step problems using           The expectation of the student is to solve one- and two-step problems using
+   3.DS.A.2      information presented in bar and/or picture      information presented in bar and/or picture graphs. (e.g., “how many more”
+                 graphs.                                          or “how many less”)
+                                                                  The expectation of the student is given a scale marked in appropriate units
+                                                                  (whole numbers, halves and quarters), create a line plot to represent data
+   3.DS.A.3      Create a line plot to represent data.            generated by multiple measures of the same object. (e.g., all students
+                                                                  measured the length of the same table) or by measuring several related
+                                                                  objects (e.g., each student measured his/her own pencil)
+                                                                  The expectation of the student is to use the data shown in a line plot to
+                                                                  generate a set of observations about the data and to answer questions about
+                                                                  the data. (e.g., What do you notice about the data we collected? Why didn’t
+                 Use data shown in a line plot to answer          we all get the same length when we measured our desks? What’s the
+   3.DS.A.4
+                 questions.                                       difference in length between the shortest and longest pencil (if data is
+                                                                  reported to nearest whole number)? How many students have a pencil longer
+                                                                  than 10 cm? What pencil length is most common?) (Formal terms such as
+                                                                  ‘mode’, ‘range’ or ‘maximum’ are not required at this grade level.)
+
+
+
+
+GLEs – GRADE 3
+
