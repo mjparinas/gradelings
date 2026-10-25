@@ -1,0 +1,4782 @@
+{
+ "k/math": [
+  {
+   "idx": "K.MP.1",
+   "kind": "standard",
+   "content": "Make sense of problems and persevere in solving them. Explain the"
+  },
+  {
+   "idx": "K.MP.2",
+   "kind": "standard",
+   "content": "Reason abstractly and quantitatively. Make sense of quantities and"
+  },
+  {
+   "idx": "K.MP.3",
+   "kind": "standard",
+   "content": "Construct viable arguments and critique the reasoning of others."
+  },
+  {
+   "idx": "K.MP.4",
+   "kind": "standard",
+   "content": "Model with mathematics. Identify the mathematical elements of a"
+  },
+  {
+   "idx": "K.MP.5",
+   "kind": "standard",
+   "content": "Use appropriate tools strategically. Consider the tools that are avail-"
+  },
+  {
+   "idx": "K.MP.6",
+   "kind": "standard",
+   "content": "Attend to precision. Communicate precisely to others by crafting care-"
+  },
+  {
+   "idx": "K.MP.7",
+   "kind": "standard",
+   "content": "Look for and make use of structure. Recognize and apply the struc-"
+  },
+  {
+   "idx": "K.MP.8",
+   "kind": "standard",
+   "content": "Look for and express regularity in repeated reasoning. Notice rep-"
+  },
+  {
+   "idx": "K.CC.1",
+   "kind": "standard",
+   "content": "Count to 100 by ones and by tens."
+  },
+  {
+   "idx": "K.CC.2",
+   "kind": "standard",
+   "content": "Count forward beginning from a given number within the known se-"
+  },
+  {
+   "idx": "K.CC.3",
+   "kind": "standard",
+   "content": "Read and write numbers using base ten numerals from 0 to 20."
+  },
+  {
+   "idx": "K.CC.4",
+   "kind": "standard",
+   "content": "Understand the relationship between numbers and quantities; connect"
+  },
+  {
+   "idx": "K.CC.5",
+   "kind": "standard",
+   "content": "Use counting to answer questions about “how many.” For example, 20 or"
+  },
+  {
+   "idx": "K.CC.6",
+   "kind": "standard",
+   "content": "Use matching or counting strategies to identify whether the number"
+  },
+  {
+   "idx": "K.CC.7",
+   "kind": "standard",
+   "content": "Compare two numbers between 1 and 10 presented as written numer-"
+  },
+  {
+   "idx": "K.OA.1",
+   "kind": "standard",
+   "content": "Represent addition and subtraction with objects, fingers, mental im-"
+  },
+  {
+   "idx": "K.OA.2",
+   "kind": "standard",
+   "content": "Solve addition and subtraction word problems within 10. Use objects or"
+  },
+  {
+   "idx": "K.OA.3",
+   "kind": "standard",
+   "content": "Decompose numbers less than or equal to 10 into pairs in more than"
+  },
+  {
+   "idx": "K.OA.4",
+   "kind": "standard",
+   "content": "Make sums of 10 using any number from 1 to 9. For example, 2 + 8 = 10."
+  },
+  {
+   "idx": "K.OA.5",
+   "kind": "standard",
+   "content": "Fluently add and subtract using numbers within 5."
+  },
+  {
+   "idx": "K.NBT.1",
+   "kind": "standard",
+   "content": "Compose and decompose numbers from 11–19 into ten ones and"
+  },
+  {
+   "idx": "K.MD.1",
+   "kind": "standard",
+   "content": "Describe measurable attributes of objects, such as length or weight."
+  },
+  {
+   "idx": "K.MD.2",
+   "kind": "standard",
+   "content": "Directly compare two objects with a measurable attribute in common,"
+  },
+  {
+   "idx": "K.MD.3",
+   "kind": "standard",
+   "content": "Classify objects into given categories; count the numbers of objects in"
+  },
+  {
+   "idx": "K.G.1",
+   "kind": "standard",
+   "content": "Describe objects in the environment using names of shapes, and de-"
+  },
+  {
+   "idx": "K.G.2",
+   "kind": "standard",
+   "content": "Correctly name shapes regardless of their orientations or overall sizes."
+  },
+  {
+   "idx": "K.G.3",
+   "kind": "standard",
+   "content": "Identify shapes as two-dimensional (\"flat\") or three-dimensional"
+  },
+  {
+   "idx": "K.G.4",
+   "kind": "standard",
+   "content": "Analyze, compare, and sort two- and three-dimensional shapes and ob-"
+  },
+  {
+   "idx": "K.G.5",
+   "kind": "standard",
+   "content": "Model and create shapes from components such as sticks and clay balls."
+  },
+  {
+   "idx": "K.G.6",
+   "kind": "standard",
+   "content": "Compose simple shapes to form larger shapes. For example, “Can you"
+  }
+ ],
+ "k/language": [
+  {
+   "idx": "K.SL.1",
+   "kind": "standard",
+   "content": "Participate in a range of conversations with peers and adults,"
+  },
+  {
+   "idx": "K.SL.2",
+   "kind": "standard",
+   "content": "Speak clearly and audibly while expressing thoughts, emo-"
+  },
+  {
+   "idx": "K.SL.3",
+   "kind": "standard",
+   "content": "Use age-appropriate language, grammar, volume, and pro-"
+  },
+  {
+   "idx": "K.R.2",
+   "kind": "standard",
+   "content": "Demonstrate mastery of age-appropriate phonological"
+  },
+  {
+   "idx": "K.R.3",
+   "kind": "standard",
+   "content": "Demonstrate mastery of age-appropriate phonics skills."
+  },
+  {
+   "idx": "K.R.4",
+   "kind": "standard",
+   "content": "Read grade-level text* with accuracy and fluency to support"
+  },
+  {
+   "idx": "K.R.5",
+   "kind": "standard",
+   "content": "With prompting and support, ask and answer questions"
+  },
+  {
+   "idx": "K.R.6",
+   "kind": "standard",
+   "content": "Retell familiar stories. (RL)"
+  },
+  {
+   "idx": "K.R.7",
+   "kind": "standard",
+   "content": "Identify the characters, settings, and important events in a"
+  },
+  {
+   "idx": "K.R.8",
+   "kind": "standard",
+   "content": "Ask and answer questions about unknown words in a text."
+  },
+  {
+   "idx": "K.R.9",
+   "kind": "standard",
+   "content": "Determine or clarify the meaning of multiple-meaning words"
+  },
+  {
+   "idx": "K.W.1",
+   "kind": "standard",
+   "content": "Use a combination of drawing and writing to compose opin-"
+  },
+  {
+   "idx": "K.W.2",
+   "kind": "standard",
+   "content": "Use a combination of drawing and writing to compose infor-"
+  },
+  {
+   "idx": "K.W.3",
+   "kind": "standard",
+   "content": "Use a combination of drawing and writing to compose narra-"
+  },
+  {
+   "idx": "K.W.4",
+   "kind": "standard",
+   "content": "Participate in shared writing projects."
+  },
+  {
+   "idx": "K.W.5",
+   "kind": "standard",
+   "content": "Legibly write all upper- and lowercase manuscript letters."
+  }
+ ],
+ "k/science": [
+  {
+   "idx": "K.2.4",
+   "kind": "standard",
+   "content": "Design and communicate a solution to address the effects that living"
+  },
+  {
+   "idx": "K.1.1",
+   "kind": "standard",
+   "content": "Obtain, evaluate, and communicate information about local,"
+  },
+  {
+   "idx": "K.1.2",
+   "kind": "standard",
+   "content": "Obtain, evaluate, and communicate information on the effect of"
+  },
+  {
+   "idx": "K.1.3",
+   "kind": "standard",
+   "content": "Carry out an investigation using the five senses, to determine the effect"
+  },
+  {
+   "idx": "K.1.4",
+   "kind": "standard",
+   "content": "Design a solution that will reduce the warming effect of sunlight on an"
+  },
+  {
+   "idx": "K.2.1",
+   "kind": "standard",
+   "content": "Obtain, evaluate, and communicate information to describe patterns"
+  },
+  {
+   "idx": "K.2.2",
+   "kind": "standard",
+   "content": "Obtain, evaluate, and communicate information about patterns in"
+  },
+  {
+   "idx": "K.2.3",
+   "kind": "standard",
+   "content": "Obtain, evaluate, and communicate information about how living"
+  },
+  {
+   "idx": "K.3.1",
+   "kind": "standard",
+   "content": "Plan and conduct an investigation to compare the effects of different"
+  },
+  {
+   "idx": "K.3.2",
+   "kind": "standard",
+   "content": "Analyze data to determine how a design solution causes a change"
+  }
+ ],
+ "k/social": [
+  {
+   "idx": "K.1.1",
+   "kind": "standard",
+   "content": "Compare how people lived in earlier times and how their lives"
+  },
+  {
+   "idx": "K.1.2",
+   "kind": "standard",
+   "content": "Use a variety of texts to analyze and retell the stories of a"
+  },
+  {
+   "idx": "K.1.3",
+   "kind": "standard",
+   "content": "Explain how families provide physical, social, and emotional"
+  },
+  {
+   "idx": "K.2.1",
+   "kind": "standard",
+   "content": "Construct a simple map, and explain how the map represents"
+  },
+  {
+   "idx": "K.2.2",
+   "kind": "standard",
+   "content": "Explain how a globe is a model of the Earth."
+  },
+  {
+   "idx": "K.2.3",
+   "kind": "standard",
+   "content": "Recognize and describe geographical features in their commu-"
+  },
+  {
+   "idx": "K.2.4",
+   "kind": "standard",
+   "content": "Describe and use relative location terms of objects (for exam-"
+  },
+  {
+   "idx": "K.3.1",
+   "kind": "standard",
+   "content": "Describe some of the rules students or family members follow"
+  },
+  {
+   "idx": "K.3.2",
+   "kind": "standard",
+   "content": "List and describe the essential qualities needed to learn and"
+  },
+  {
+   "idx": "K.3.3",
+   "kind": "standard",
+   "content": "Identify ways that people work together to build a strong com-"
+  },
+  {
+   "idx": "K.3.4",
+   "kind": "standard",
+   "content": "Explain why national, state, and other symbols and actions"
+  },
+  {
+   "idx": "K.4.1",
+   "kind": "standard",
+   "content": "Make distinctions between basic human needs and individual"
+  },
+  {
+   "idx": "K.4.2",
+   "kind": "standard",
+   "content": "Relate how different types of work can help people and com-"
+  },
+  {
+   "idx": "K.4.3",
+   "kind": "standard",
+   "content": "Identify ways that people use money, including spending, sav-"
+  }
+ ],
+ "1/math": [
+  {
+   "idx": "1.MP.1",
+   "kind": "standard",
+   "content": "Make sense of problems and persevere in solving them. Explain the"
+  },
+  {
+   "idx": "1.MP.2",
+   "kind": "standard",
+   "content": "Reason abstractly and quantitatively. Make sense of quantities and"
+  },
+  {
+   "idx": "1.MP.3",
+   "kind": "standard",
+   "content": "Construct viable arguments and critique the reasoning of others."
+  },
+  {
+   "idx": "1.MP.4",
+   "kind": "standard",
+   "content": "Model with mathematics. Identify the mathematical elements of a"
+  },
+  {
+   "idx": "1.MP.5",
+   "kind": "standard",
+   "content": "Use appropriate tools strategically. Consider the tools that are avail-"
+  },
+  {
+   "idx": "1.MP.6",
+   "kind": "standard",
+   "content": "Attend to precision. Communicate precisely to others by crafting care-"
+  },
+  {
+   "idx": "1.MP.7",
+   "kind": "standard",
+   "content": "Look for and make use of structure. Recognize and apply the struc-"
+  },
+  {
+   "idx": "1.MP.8",
+   "kind": "standard",
+   "content": "Look for and express regularity in repeated reasoning. Notice rep-"
+  },
+  {
+   "idx": "1.OA.1",
+   "kind": "standard",
+   "content": "Use addition and subtraction within 20 to solve word problems involv-"
+  },
+  {
+   "idx": "1.OA.2",
+   "kind": "standard",
+   "content": "Solve word problems that call for addition of three whole numbers"
+  },
+  {
+   "idx": "1.OA.3",
+   "kind": "standard",
+   "content": "Apply properties of operations as strategies to add and subtract. For"
+  },
+  {
+   "idx": "1.OA.4",
+   "kind": "standard",
+   "content": "Understand subtraction as an unknown-addend problem. For example,"
+  },
+  {
+   "idx": "1.OA.5",
+   "kind": "standard",
+   "content": "Relate counting to addition and subtraction. For example, by counting on"
+  },
+  {
+   "idx": "1.OA.6",
+   "kind": "standard",
+   "content": "Add and subtract within 20."
+  },
+  {
+   "idx": "1.OA.7",
+   "kind": "standard",
+   "content": "Understand the meaning of the equal sign, and determine whether"
+  },
+  {
+   "idx": "1.OA.8",
+   "kind": "standard",
+   "content": "Determine the unknown whole number in an addition or subtraction"
+  },
+  {
+   "idx": "1.NBT.1",
+   "kind": "standard",
+   "content": "Count to 120, starting at any number less than 120. In this range, read"
+  },
+  {
+   "idx": "1.NBT.2",
+   "kind": "standard",
+   "content": "Understand that the two digits of a two-digit number represent"
+  },
+  {
+   "idx": "1.NBT.3",
+   "kind": "standard",
+   "content": "Compare two two-digit numbers based on meanings of the tens and"
+  },
+  {
+   "idx": "1.NBT.4",
+   "kind": "standard",
+   "content": "Add within 100, including adding a two-digit number and a one-digit"
+  },
+  {
+   "idx": "1.NBT.5",
+   "kind": "standard",
+   "content": "Given a two-digit number, mentally find 10 more or 10 less than the"
+  },
+  {
+   "idx": "1.NBT.6",
+   "kind": "standard",
+   "content": "Subtract multiples of 10 in the range 10–90 from multiples of 10 in the"
+  },
+  {
+   "idx": "1.MD.1",
+   "kind": "standard",
+   "content": "Order three objects by length; compare the lengths of two objects indi-"
+  },
+  {
+   "idx": "1.MD.2",
+   "kind": "standard",
+   "content": "Express the length of an object as a whole number of length units, by"
+  },
+  {
+   "idx": "1.MD.3",
+   "kind": "standard",
+   "content": "Tell and write time in hours and half-hours using analog and digital"
+  },
+  {
+   "idx": "1.MD.4",
+   "kind": "standard",
+   "content": "Organize, represent, and interpret data with up to three categories; ask"
+  },
+  {
+   "idx": "1.MD.5",
+   "kind": "standard",
+   "content": "Identify the values of pennies, nickels, dimes and quarters, and know"
+  },
+  {
+   "idx": "1.G.1",
+   "kind": "standard",
+   "content": "Distinguish between defining attributes (for example, triangles are closed"
+  },
+  {
+   "idx": "1.G.2",
+   "kind": "standard",
+   "content": "Compose shapes."
+  },
+  {
+   "idx": "1.G.3",
+   "kind": "standard",
+   "content": "Partition circles and rectangles into two and four equal shares; describe"
+  }
+ ],
+ "1/language": [
+  {
+   "idx": "1.SL.1",
+   "kind": "standard",
+   "content": "Participate effectively in a range of conversations with vari-"
+  },
+  {
+   "idx": "1.SL.2",
+   "kind": "standard",
+   "content": "Speak clearly and audibly while expressing thoughts, emo-"
+  },
+  {
+   "idx": "1.SL.3",
+   "kind": "standard",
+   "content": "Use age-appropriate language, grammar, volume, and clear"
+  },
+  {
+   "idx": "1.R.2",
+   "kind": "standard",
+   "content": "Demonstrate mastery of age-appropriate phonological"
+  },
+  {
+   "idx": "1.R.3",
+   "kind": "standard",
+   "content": "Demonstrate mastery of age-appropriate phonics skills."
+  },
+  {
+   "idx": "1.R.4",
+   "kind": "standard",
+   "content": "Read grade-level text* with accuracy and fluency to support"
+  },
+  {
+   "idx": "1.R.5",
+   "kind": "standard",
+   "content": "Ask and answer questions about key details in a text. (RL &"
+  },
+  {
+   "idx": "1.R.6",
+   "kind": "standard",
+   "content": "Read a variety of texts including those from diverse cultures"
+  },
+  {
+   "idx": "1.R.7",
+   "kind": "standard",
+   "content": "Describe characters, settings, and important events in a story"
+  },
+  {
+   "idx": "1.R.8",
+   "kind": "standard",
+   "content": "Identify specific words and phrases that express emotion, ap-"
+  },
+  {
+   "idx": "1.R.9",
+   "kind": "standard",
+   "content": "Determine or clarify the meaning of unknown and multiple-"
+  },
+  {
+   "idx": "1.R.10",
+   "kind": "standard",
+   "content": "Identify a variety of texts and explain the differences be-"
+  },
+  {
+   "idx": "1.W.1",
+   "kind": "standard",
+   "content": "Write opinion pieces that introduce the topic, state an opin-"
+  },
+  {
+   "idx": "1.W.2",
+   "kind": "standard",
+   "content": "Write informative/explanatory pieces that introduce a top-"
+  },
+  {
+   "idx": "1.W.3",
+   "kind": "standard",
+   "content": "Write narrative pieces that retell two or more events. Provide"
+  },
+  {
+   "idx": "1.W.4",
+   "kind": "standard",
+   "content": "Participate in shared research and writing projects."
+  },
+  {
+   "idx": "1.W.5",
+   "kind": "standard",
+   "content": "Legibly write all upper- and lowercase manuscript letters."
+  }
+ ],
+ "1/science": [
+  {
+   "idx": "1.1.1",
+   "kind": "standard",
+   "content": "Obtain, evaluate, and communicate information about the movement"
+  },
+  {
+   "idx": "1.1.2",
+   "kind": "standard",
+   "content": "Obtain, evaluate, and communicate information about the patterns"
+  },
+  {
+   "idx": "1.1.3",
+   "kind": "standard",
+   "content": "Design a device that measures the varying patterns of daylight. Define"
+  },
+  {
+   "idx": "1.2.1",
+   "kind": "standard",
+   "content": "Plan and carry out an investigation to determine the effect of sunlight"
+  },
+  {
+   "idx": "1.2.2",
+   "kind": "standard",
+   "content": "Construct an explanation by observing patterns of external features of"
+  },
+  {
+   "idx": "1.2.3",
+   "kind": "standard",
+   "content": "Obtain, evaluate, and communicate information about the patterns"
+  },
+  {
+   "idx": "1.2.4",
+   "kind": "standard",
+   "content": "Construct an explanation of the patterns in the behaviors of parents and"
+  },
+  {
+   "idx": "1.3.1",
+   "kind": "standard",
+   "content": "Plan and carry out an investigation to show the cause and effect"
+  },
+  {
+   "idx": "1.3.2",
+   "kind": "standard",
+   "content": "Use a model to show the effect of light on objects. Emphasize that"
+  },
+  {
+   "idx": "1.3.3",
+   "kind": "standard",
+   "content": "Plan and carry out an investigation to determine the effect of materials"
+  },
+  {
+   "idx": "1.3.4",
+   "kind": "standard",
+   "content": "Design a device in which the structure of the device uses light or sound"
+  }
+ ],
+ "1/social": [
+  {
+   "idx": "1.1.1",
+   "kind": "standard",
+   "content": "Explain why people may see historical events from different"
+  },
+  {
+   "idx": "1.1.2",
+   "kind": "standard",
+   "content": "Summarize the contributions of a diverse range of histori-"
+  },
+  {
+   "idx": "1.1.3",
+   "kind": "standard",
+   "content": "Use primary sources (for example, artifacts and documents"
+  },
+  {
+   "idx": "1.1.4",
+   "kind": "standard",
+   "content": "Create a primary source to show how their personal histories"
+  },
+  {
+   "idx": "1.2.1",
+   "kind": "standard",
+   "content": "Construct a simple map of a neighborhood, classroom, school,"
+  },
+  {
+   "idx": "1.2.2",
+   "kind": "standard",
+   "content": "Differentiate between natural and engineered geographical"
+  },
+  {
+   "idx": "1.2.3",
+   "kind": "standard",
+   "content": "Use maps and globes to locate their local community, Utah,"
+  },
+  {
+   "idx": "1.2.4",
+   "kind": "standard",
+   "content": "Explain the reasons that people, animals, and goods move."
+  },
+  {
+   "idx": "1.3.1",
+   "kind": "standard",
+   "content": "Compare how classroom rules are similar to laws in the"
+  },
+  {
+   "idx": "1.3.2",
+   "kind": "standard",
+   "content": "Identify the ways that people can function as members of a"
+  },
+  {
+   "idx": "1.3.3",
+   "kind": "standard",
+   "content": "Explain how diverse community groups work together"
+  },
+  {
+   "idx": "1.3.4",
+   "kind": "standard",
+   "content": "Identify the symbols, landmarks, and essential documents of"
+  },
+  {
+   "idx": "1.3.5",
+   "kind": "standard",
+   "content": "Demonstrate characteristics of responsible citizenship (for ex-"
+  },
+  {
+   "idx": "1.4.1",
+   "kind": "standard",
+   "content": "Explain the costs and benefits of spending and saving in order"
+  },
+  {
+   "idx": "1.4.2",
+   "kind": "standard",
+   "content": "Identify ways people make a living in the community."
+  },
+  {
+   "idx": "1.4.3",
+   "kind": "standard",
+   "content": "Identify and explain the roles and contributions of consumers,"
+  }
+ ],
+ "2/math": [
+  {
+   "idx": "2.MP.1",
+   "kind": "standard",
+   "content": "Make sense of problems and persevere in solving them. Explain the"
+  },
+  {
+   "idx": "2.MP.2",
+   "kind": "standard",
+   "content": "Reason abstractly and quantitatively. Make sense of quantities and"
+  },
+  {
+   "idx": "2.MP.3",
+   "kind": "standard",
+   "content": "Construct viable arguments and critique the reasoning of others."
+  },
+  {
+   "idx": "2.MP.4",
+   "kind": "standard",
+   "content": "Model with mathematics. Identify the mathematical elements of a"
+  },
+  {
+   "idx": "2.MP.5",
+   "kind": "standard",
+   "content": "Use appropriate tools strategically. Consider the tools that are avail-"
+  },
+  {
+   "idx": "2.MP.6",
+   "kind": "standard",
+   "content": "Attend to precision. Communicate precisely to others by crafting care-"
+  },
+  {
+   "idx": "2.MP.7",
+   "kind": "standard",
+   "content": "Look for and make use of structure. Recognize and apply the struc-"
+  },
+  {
+   "idx": "2.MP.8",
+   "kind": "standard",
+   "content": "Look for and express regularity in repeated reasoning. Notice repeti-"
+  },
+  {
+   "idx": "2.OA.1",
+   "kind": "standard",
+   "content": "Use addition and subtraction within 100 to solve one- and two-step"
+  },
+  {
+   "idx": "2.OA.2",
+   "kind": "standard",
+   "content": "Fluently add and subtract within 20."
+  },
+  {
+   "idx": "2.OA.3",
+   "kind": "standard",
+   "content": "Determine whether a group of objects (up to 20) has an odd or even"
+  },
+  {
+   "idx": "2.OA.4",
+   "kind": "standard",
+   "content": "Use addition to find the total number of objects arranged in rectangular"
+  },
+  {
+   "idx": "2.NBT.1",
+   "kind": "standard",
+   "content": "Understand that the three digits of a three-digit number represent"
+  },
+  {
+   "idx": "2.NBT.2",
+   "kind": "standard",
+   "content": "Count within 1,000; skip-count by fives, tens, and hundreds."
+  },
+  {
+   "idx": "2.NBT.3",
+   "kind": "standard",
+   "content": "Read and write numbers to 1,000 using base-ten numerals, number"
+  },
+  {
+   "idx": "2.NBT.4",
+   "kind": "standard",
+   "content": "Compare two three-digit numbers based on meanings of the"
+  },
+  {
+   "idx": "2.NBT.5",
+   "kind": "standard",
+   "content": "Fluently add and subtract within 100 using strategies based on"
+  },
+  {
+   "idx": "2.NBT.6",
+   "kind": "standard",
+   "content": "Add up to four two-digit numbers using strategies based on place"
+  },
+  {
+   "idx": "2.NBT.7",
+   "kind": "standard",
+   "content": "Add and subtract within 1,000 using concrete models or drawings"
+  },
+  {
+   "idx": "2.NBT.8",
+   "kind": "standard",
+   "content": "Mentally add 10 or 100 to a given number 100-900, and mentally sub-"
+  },
+  {
+   "idx": "2.NBT.9",
+   "kind": "standard",
+   "content": "Explain why addition and subtraction strategies work, using place"
+  },
+  {
+   "idx": "2.MD.1",
+   "kind": "standard",
+   "content": "Measure the length of an object by selecting and using appropriate"
+  },
+  {
+   "idx": "2.MD.2",
+   "kind": "standard",
+   "content": "Measure the length of an object twice, using length units of different"
+  },
+  {
+   "idx": "2.MD.3",
+   "kind": "standard",
+   "content": "Estimate lengths using units of inches, feet, centimeters, and meters."
+  },
+  {
+   "idx": "2.MD.4",
+   "kind": "standard",
+   "content": "Measure to determine how much longer one object is than another,"
+  },
+  {
+   "idx": "2.MD.5",
+   "kind": "standard",
+   "content": "Use addition and subtraction within 100 to solve word problems"
+  },
+  {
+   "idx": "2.MD.6",
+   "kind": "standard",
+   "content": "Represent whole numbers as lengths from 0 on a number line diagram"
+  },
+  {
+   "idx": "2.MD.7",
+   "kind": "standard",
+   "content": "Tell and write time from analog and digital clocks to the nearest five"
+  },
+  {
+   "idx": "2.MD.8",
+   "kind": "standard",
+   "content": "Solve word problems involving dollar bills, quarters, dimes, nickels,"
+  },
+  {
+   "idx": "2.MD.9",
+   "kind": "standard",
+   "content": "Generate measurement data by measuring lengths of several objects"
+  },
+  {
+   "idx": "2.MD.10",
+   "kind": "standard",
+   "content": "Draw a picture graph and a bar graph (with single-unit scale) to rep-"
+  },
+  {
+   "idx": "2.G.1",
+   "kind": "standard",
+   "content": "Recognize and draw shapes having specified attributes, such as a given"
+  },
+  {
+   "idx": "2.G.2",
+   "kind": "standard",
+   "content": "Partition a rectangle into rows and columns of same-size squares and"
+  },
+  {
+   "idx": "2.G.3",
+   "kind": "standard",
+   "content": "Partition circles and rectangles into two, three, or four equal shares;"
+  }
+ ],
+ "2/language": [
+  {
+   "idx": "2.SL.1",
+   "kind": "standard",
+   "content": "Participate effectively in a range of conversations with vari-"
+  },
+  {
+   "idx": "2.SL.2",
+   "kind": "standard",
+   "content": "Speak clearly and audibly while asking and answering ques-"
+  },
+  {
+   "idx": "2.SL.3",
+   "kind": "standard",
+   "content": "Use age-appropriate language, grammar, volume, and clear"
+  },
+  {
+   "idx": "2.R.2",
+   "kind": "standard",
+   "content": "Demonstrate mastery of age-appropriate phonological aware-"
+  },
+  {
+   "idx": "2.R.3",
+   "kind": "standard",
+   "content": "Demonstrate mastery of age-appropriate phonics skills."
+  },
+  {
+   "idx": "2.R.4",
+   "kind": "standard",
+   "content": "Read grade-level text* with accuracy and fluency to support"
+  },
+  {
+   "idx": "2.R.5",
+   "kind": "standard",
+   "content": "Ask and answer questions such as who, what, where, when,"
+  },
+  {
+   "idx": "2.R.6",
+   "kind": "standard",
+   "content": "Read a variety of texts including those from diverse cultures,"
+  },
+  {
+   "idx": "2.R.7",
+   "kind": "standard",
+   "content": "Describe how characters respond to major events and chal-"
+  },
+  {
+   "idx": "2.R.8",
+   "kind": "standard",
+   "content": "Explain how specific words and phrases express emotion,"
+  },
+  {
+   "idx": "2.R.9",
+   "kind": "standard",
+   "content": "Determine or clarify the meaning of unknown and multiple-"
+  },
+  {
+   "idx": "2.R.10",
+   "kind": "standard",
+   "content": "Describe the overall literary and informational text structure"
+  },
+  {
+   "idx": "2.R.12",
+   "kind": "standard",
+   "content": "Demonstrate understanding of story elements and/or topics"
+  },
+  {
+   "idx": "2.R.14",
+   "kind": "standard",
+   "content": "Compare two or more versions of the same text from differ-"
+  },
+  {
+   "idx": "2.W.1",
+   "kind": "standard",
+   "content": "Write opinion pieces that introduce the topic, state an opin-"
+  },
+  {
+   "idx": "2.W.2",
+   "kind": "standard",
+   "content": "Write informative/explanatory pieces that introduce a topic,"
+  },
+  {
+   "idx": "2.W.3",
+   "kind": "standard",
+   "content": "Write narrative pieces in which they retell an elaborated event"
+  },
+  {
+   "idx": "2.W.4",
+   "kind": "standard",
+   "content": "Participate in shared research and writing projects on a topic."
+  },
+  {
+   "idx": "2.W.5",
+   "kind": "standard",
+   "content": "Fluently write all upper- and lowercase manuscript letters."
+  }
+ ],
+ "2/science": [
+  {
+   "idx": "2.1.1",
+   "kind": "standard",
+   "content": "Develop and use models illustrating the patterns of landforms and"
+  },
+  {
+   "idx": "2.1.2",
+   "kind": "standard",
+   "content": "Construct an explanation about changes in Earth’s surface that happen"
+  },
+  {
+   "idx": "2.1.3",
+   "kind": "standard",
+   "content": "Design solutions to slow or prevent wind or water from changing the"
+  },
+  {
+   "idx": "2.2.1",
+   "kind": "standard",
+   "content": "Obtain, evaluate, and communicate information about patterns"
+  },
+  {
+   "idx": "2.2.2",
+   "kind": "standard",
+   "content": "Plan and carry out an investigation of the structure and function of"
+  },
+  {
+   "idx": "2.2.3",
+   "kind": "standard",
+   "content": "Develop and use a model that mimics the function of an animal"
+  },
+  {
+   "idx": "2.2.4",
+   "kind": "standard",
+   "content": "Design a solution to a human problem by mimicking the structure and"
+  },
+  {
+   "idx": "2.3.1",
+   "kind": "standard",
+   "content": "Plan and carry out an investigation to classify different kinds of"
+  },
+  {
+   "idx": "2.3.2",
+   "kind": "standard",
+   "content": "Construct an explanation showing how the properties of materials"
+  },
+  {
+   "idx": "2.3.3",
+   "kind": "standard",
+   "content": "Develop and use a model to describe how an object, made of a small"
+  },
+  {
+   "idx": "2.3.4",
+   "kind": "standard",
+   "content": "Obtain, evaluate, and communicate information about changes in"
+  }
+ ],
+ "2/social": [
+  {
+   "idx": "2.1.1",
+   "kind": "standard",
+   "content": "Use primary sources (for example, artifacts and documents"
+  },
+  {
+   "idx": "2.1.2",
+   "kind": "standard",
+   "content": "Use primary sources to identify how their community has"
+  },
+  {
+   "idx": "2.1.3",
+   "kind": "standard",
+   "content": "Summarize key ideas included in the Declaration of"
+  },
+  {
+   "idx": "2.1.4",
+   "kind": "standard",
+   "content": "Retell the histories of key people and events connected to"
+  },
+  {
+   "idx": "2.1.5",
+   "kind": "standard",
+   "content": "Identify the achievements of significant Americans, including"
+  },
+  {
+   "idx": "2.2.1",
+   "kind": "standard",
+   "content": "Locate and identify the poles, equator, continents, oceans, the"
+  },
+  {
+   "idx": "2.2.2",
+   "kind": "standard",
+   "content": "Interpret and construct physical maps using the title, key, sym-"
+  },
+  {
+   "idx": "2.2.3",
+   "kind": "standard",
+   "content": "Identify examples of major geographical features in their local"
+  },
+  {
+   "idx": "2.2.4",
+   "kind": "standard",
+   "content": "Describe how location, climate, and physical features affect"
+  },
+  {
+   "idx": "2.2.5",
+   "kind": "standard",
+   "content": "Describe and give examples of interdependent relationships"
+  },
+  {
+   "idx": "2.2.6",
+   "kind": "standard",
+   "content": "Identify natural resources, and cite ways people show steward-"
+  },
+  {
+   "idx": "2.2.7",
+   "kind": "standard",
+   "content": "On a map of the world, locate where their families or other"
+  },
+  {
+   "idx": "2.3.1",
+   "kind": "standard",
+   "content": "Define the essential qualities of good community members"
+  },
+  {
+   "idx": "2.3.2",
+   "kind": "standard",
+   "content": "Describe the rights and responsibilities of citizens in the"
+  },
+  {
+   "idx": "2.3.3",
+   "kind": "standard",
+   "content": "Provide examples of ways in which responsible community"
+  },
+  {
+   "idx": "2.3.4",
+   "kind": "standard",
+   "content": "Consider why it is necessary for cities and towns to have gov-"
+  },
+  {
+   "idx": "2.3.5",
+   "kind": "standard",
+   "content": "Identify current leaders (for example, family, school, commu-"
+  },
+  {
+   "idx": "2.3.6",
+   "kind": "standard",
+   "content": "Identify celebrations and state and national holidays that re-"
+  },
+  {
+   "idx": "2.4.1",
+   "kind": "standard",
+   "content": "Explain the benefits of personal savings."
+  },
+  {
+   "idx": "2.4.2",
+   "kind": "standard",
+   "content": "Explain how scarcity of resources and opportunity cost require"
+  },
+  {
+   "idx": "2.4.3",
+   "kind": "standard",
+   "content": "Describe and compare a variety of services provided by local"
+  },
+  {
+   "idx": "2.4.4",
+   "kind": "standard",
+   "content": "Describe how people can be both producers and consumers"
+  },
+  {
+   "idx": "2.4.5",
+   "kind": "standard",
+   "content": "Identify the specialized work necessary to manufacture, trans-"
+  }
+ ],
+ "3/math": [
+  {
+   "idx": "3.MP.1",
+   "kind": "standard",
+   "content": "Make sense of problems and persevere in solving them. Explain the"
+  },
+  {
+   "idx": "3.MP.2",
+   "kind": "standard",
+   "content": "Reason abstractly and quantitatively. Make sense of quantities and"
+  },
+  {
+   "idx": "3.MP.3",
+   "kind": "standard",
+   "content": "Construct viable arguments and critique the reasoning of others."
+  },
+  {
+   "idx": "3.MP.4",
+   "kind": "standard",
+   "content": "Model with mathematics. Identify the mathematical elements of a"
+  },
+  {
+   "idx": "3.MP.5",
+   "kind": "standard",
+   "content": "Use appropriate tools strategically. Consider the tools that are avail-"
+  },
+  {
+   "idx": "3.MP.6",
+   "kind": "standard",
+   "content": "Attend to precision. Communicate precisely to others by crafting care-"
+  },
+  {
+   "idx": "3.MP.7",
+   "kind": "standard",
+   "content": "Look for and make use of structure. Recognize and apply the struc-"
+  },
+  {
+   "idx": "3.MP.8",
+   "kind": "standard",
+   "content": "Look for and express regularity in repeated reasoning. Notice repeti-"
+  },
+  {
+   "idx": "3.OA.1",
+   "kind": "standard",
+   "content": "Interpret the products of whole numbers, such as interpreting 5 × 7 as"
+  },
+  {
+   "idx": "3.OA.2",
+   "kind": "standard",
+   "content": "Interpret whole-number quotients of whole numbers. For example, in-"
+  },
+  {
+   "idx": "3.OA.3",
+   "kind": "standard",
+   "content": "Use multiplication and division within 100 to solve word problems in"
+  },
+  {
+   "idx": "3.OA.4",
+   "kind": "standard",
+   "content": "Determine the unknown whole number in a multiplication or division"
+  },
+  {
+   "idx": "3.OA.5",
+   "kind": "standard",
+   "content": "Apply properties of operations as strategies to multiply and divide. For"
+  },
+  {
+   "idx": "3.OA.6",
+   "kind": "standard",
+   "content": "Understand division as an unknown-factor problem. Understand the"
+  },
+  {
+   "idx": "3.OA.7",
+   "kind": "standard",
+   "content": "Fluently multiply and divide."
+  },
+  {
+   "idx": "3.OA.8",
+   "kind": "standard",
+   "content": "Solve two-step word problems."
+  },
+  {
+   "idx": "3.OA.9",
+   "kind": "standard",
+   "content": "Identify arithmetic patterns (including patterns in the addition table"
+  },
+  {
+   "idx": "3.NBT.1",
+   "kind": "standard",
+   "content": "Use place value understanding to round whole numbers to the nearest"
+  },
+  {
+   "idx": "3.NBT.2",
+   "kind": "standard",
+   "content": "Fluently add and subtract within 1,000 using strategies and algorithms"
+  },
+  {
+   "idx": "3.NBT.3",
+   "kind": "standard",
+   "content": "Multiply one-digit whole numbers by multiples of 10 in the range 10–90"
+  },
+  {
+   "idx": "3.NF.1",
+   "kind": "standard",
+   "content": "Understand that a unit fraction has a numerator of one and a non-zero"
+  },
+  {
+   "idx": "3.NF.2",
+   "kind": "standard",
+   "content": "Understand a fraction as a number on the number line; represent frac-"
+  },
+  {
+   "idx": "3.NF.3",
+   "kind": "standard",
+   "content": "Explain equivalence of fractions in special cases, and compare fractions"
+  },
+  {
+   "idx": "3.MD.1",
+   "kind": "standard",
+   "content": "Tell and write time to the nearest minute and measure time intervals"
+  },
+  {
+   "idx": "3.MD.2",
+   "kind": "standard",
+   "content": "Measure and estimate liquid volumes and masses of objects using stan-"
+  },
+  {
+   "idx": "3.MD.3",
+   "kind": "standard",
+   "content": "Draw a scaled picture graph and a scaled bar graph to represent a data"
+  },
+  {
+   "idx": "3.MD.4",
+   "kind": "standard",
+   "content": "Generate measurement data by measuring lengths using rulers marked"
+  },
+  {
+   "idx": "3.MD.5",
+   "kind": "standard",
+   "content": "Recognize area as an attribute of plane figures and understand con-"
+  },
+  {
+   "idx": "3.MD.6",
+   "kind": "standard",
+   "content": "Measure area by counting unit squares (square centimeters, square me-"
+  },
+  {
+   "idx": "3.MD.7",
+   "kind": "standard",
+   "content": "Relate area to the operations of multiplication and addition (refer to"
+  },
+  {
+   "idx": "3.MD.8",
+   "kind": "standard",
+   "content": "Solve real-world and mathematical problems involving perimeters of"
+  },
+  {
+   "idx": "3.G.1",
+   "kind": "standard",
+   "content": "Understand that shapes in different categories (for example, rhombuses,"
+  },
+  {
+   "idx": "3.G.2",
+   "kind": "standard",
+   "content": "Partition shapes into parts with equal areas. Express the area of each"
+  }
+ ],
+ "3/language": [
+  {
+   "idx": "3.SL.1",
+   "kind": "standard",
+   "content": "Participate effectively in a range of conversations and collabo-"
+  },
+  {
+   "idx": "3.SL.2",
+   "kind": "standard",
+   "content": "Speak clearly and audibly while asking and answering ques-"
+  },
+  {
+   "idx": "3.SL.3",
+   "kind": "standard",
+   "content": "Use age-appropriate language, grammar, volume, and clear"
+  },
+  {
+   "idx": "3.R.2",
+   "kind": "standard",
+   "content": "Demonstrate mastery of age-appropriate phonological aware-"
+  },
+  {
+   "idx": "3.R.3",
+   "kind": "standard",
+   "content": "Demonstrate mastery of age-appropriate phonics skills."
+  },
+  {
+   "idx": "3.R.4",
+   "kind": "standard",
+   "content": "Read grade-level text* with accuracy and fluency to support"
+  },
+  {
+   "idx": "3.R.5",
+   "kind": "standard",
+   "content": "Ask and answer questions to demonstrate understanding of"
+  },
+  {
+   "idx": "3.R.6",
+   "kind": "standard",
+   "content": "Read a variety of texts including those from diverse cultures,"
+  },
+  {
+   "idx": "3.R.7",
+   "kind": "standard",
+   "content": "Describe characters in a story and explain how their actions"
+  },
+  {
+   "idx": "3.R.8",
+   "kind": "standard",
+   "content": "Determine the meaning of words, phrases, similes, meta-"
+  },
+  {
+   "idx": "3.R.9",
+   "kind": "standard",
+   "content": "Determine or clarify the meaning of unknown and multiple-"
+  },
+  {
+   "idx": "3.R.10",
+   "kind": "standard",
+   "content": "Identify and discuss the structural elements of different types"
+  },
+  {
+   "idx": "3.R.12",
+   "kind": "standard",
+   "content": "Explain how specific illustrations or text features contribute to"
+  },
+  {
+   "idx": "3.R.14",
+   "kind": "standard",
+   "content": "Compare the themes, settings, and plots of stories written"
+  },
+  {
+   "idx": "3.W.1",
+   "kind": "standard",
+   "content": "Write argumentative pieces on topics and/or texts, supporting"
+  },
+  {
+   "idx": "3.W.2",
+   "kind": "standard",
+   "content": "Write informative/explanatory pieces to examine a topic that"
+  },
+  {
+   "idx": "3.W.3",
+   "kind": "standard",
+   "content": "Write narrative pieces to develop real or imagined experi-"
+  },
+  {
+   "idx": "3.W.4",
+   "kind": "standard",
+   "content": "Conduct short research projects to build knowledge about a"
+  },
+  {
+   "idx": "3.W.5",
+   "kind": "standard",
+   "content": "Legibly write all upper- and lowercase cursive and manuscript"
+  }
+ ],
+ "3/science": [
+  {
+   "idx": "3.1.1",
+   "kind": "standard",
+   "content": "Analyze and interpret data to reveal patterns that indicate typical"
+  },
+  {
+   "idx": "3.1.2",
+   "kind": "standard",
+   "content": "Obtain and communicate information to describe climate patterns"
+  },
+  {
+   "idx": "3.1.3",
+   "kind": "standard",
+   "content": "Design a solution that reduces the effects of a weather-related hazard."
+  },
+  {
+   "idx": "3.2.1",
+   "kind": "standard",
+   "content": "Develop and use models to describe changes that organisms go through"
+  },
+  {
+   "idx": "3.2.2",
+   "kind": "standard",
+   "content": "Analyze and interpret data to identify patterns of traits that plants"
+  },
+  {
+   "idx": "3.2.3",
+   "kind": "standard",
+   "content": "Construct an explanation that the environment can affect the traits of an"
+  },
+  {
+   "idx": "3.2.4",
+   "kind": "standard",
+   "content": "Construct an explanation showing how variations in traits and behaviors"
+  },
+  {
+   "idx": "3.2.5",
+   "kind": "standard",
+   "content": "Engage in argument from evidence that in a particular habitat (system)"
+  },
+  {
+   "idx": "3.2.6",
+   "kind": "standard",
+   "content": "Design a solution to a problem caused by a change in the environment"
+  },
+  {
+   "idx": "3.3.1",
+   "kind": "standard",
+   "content": "Plan and carry out investigations that provide evidence of the effects of"
+  },
+  {
+   "idx": "3.3.2",
+   "kind": "standard",
+   "content": "Analyze and interpret data from observations and measurements of"
+  },
+  {
+   "idx": "3.3.3",
+   "kind": "standard",
+   "content": "Construct an explanation that the gravitational force exerted by"
+  },
+  {
+   "idx": "3.3.4",
+   "kind": "standard",
+   "content": "Ask questions to plan and carry out an investigation to determine"
+  },
+  {
+   "idx": "3.3.5",
+   "kind": "standard",
+   "content": "Design a solution to a problem in which a device functions by using"
+  }
+ ],
+ "3/social": [
+  {
+   "idx": "3.1.1",
+   "kind": "standard",
+   "content": "Discuss the basic differences between different forms of gov-"
+  },
+  {
+   "idx": "3.1.2",
+   "kind": "standard",
+   "content": "Explain why the first three words of the United States"
+  },
+  {
+   "idx": "3.1.3",
+   "kind": "standard",
+   "content": "Summarize how the Constitution of the United States is the"
+  },
+  {
+   "idx": "3.1.4",
+   "kind": "standard",
+   "content": "Identify the rights protected by the First Amendment in the Bill"
+  },
+  {
+   "idx": "3.1.5",
+   "kind": "standard",
+   "content": "Explain how the Constitution balances power between the"
+  },
+  {
+   "idx": "3.2.1",
+   "kind": "standard",
+   "content": "Locate their community, city or town, state, country, and conti-"
+  },
+  {
+   "idx": "3.2.2",
+   "kind": "standard",
+   "content": "Describe how geography (that is, physical features and natural"
+  },
+  {
+   "idx": "3.2.3",
+   "kind": "standard",
+   "content": "Define their own cultures or the cultures of their communities"
+  },
+  {
+   "idx": "3.2.4",
+   "kind": "standard",
+   "content": "Evaluate how their community has changed over time"
+  },
+  {
+   "idx": "3.3.1",
+   "kind": "standard",
+   "content": "Analyze how their community has been shaped by the di-"
+  },
+  {
+   "idx": "3.3.2",
+   "kind": "standard",
+   "content": "Reflect upon the processes used to address needs and reach"
+  },
+  {
+   "idx": "3.3.3",
+   "kind": "standard",
+   "content": "Research improvements that have been made in their com-"
+  },
+  {
+   "idx": "3.3.4",
+   "kind": "standard",
+   "content": "Describe some of the civic roles that people fulfill within their"
+  },
+  {
+   "idx": "3.3.5",
+   "kind": "standard",
+   "content": "Explain how their community’s leaders are elected or appoint-"
+  },
+  {
+   "idx": "3.3.6",
+   "kind": "standard",
+   "content": "Describe why governments collect taxes and how they decide"
+  },
+  {
+   "idx": "3.3.7",
+   "kind": "standard",
+   "content": "Discuss how the choices of individuals and leaders affect their"
+  },
+  {
+   "idx": "3.3.8",
+   "kind": "standard",
+   "content": "Collaborate with peers to address a need in their local commu-"
+  },
+  {
+   "idx": "3.4.1",
+   "kind": "standard",
+   "content": "Choose a community outside of the United States. Locate that"
+  },
+  {
+   "idx": "3.4.2",
+   "kind": "standard",
+   "content": "Research the geography (that is, physical features and natural"
+  },
+  {
+   "idx": "3.4.3",
+   "kind": "standard",
+   "content": "Define the cultures of the community they chose in 3.4.1 (for"
+  },
+  {
+   "idx": "3.4.4",
+   "kind": "standard",
+   "content": "Examine the types of government found in the community"
+  },
+  {
+   "idx": "3.4.5",
+   "kind": "standard",
+   "content": "Examine how and why the community they chose in 3.4.1 has"
+  }
+ ],
+ "4/math": [
+  {
+   "idx": "4.MP.1",
+   "kind": "standard",
+   "content": "Make sense of problems and persevere in solving them. Explain the"
+  },
+  {
+   "idx": "4.MP.2",
+   "kind": "standard",
+   "content": "Reason abstractly and quantitatively. Make sense of quantities and"
+  },
+  {
+   "idx": "4.MP.3",
+   "kind": "standard",
+   "content": "Construct viable arguments and critique the reasoning of others."
+  },
+  {
+   "idx": "4.MP.4",
+   "kind": "standard",
+   "content": "Model with mathematics. Identify the mathematical elements of a"
+  },
+  {
+   "idx": "4.MP.5",
+   "kind": "standard",
+   "content": "Use appropriate tools strategically. Consider the tools that are avail-"
+  },
+  {
+   "idx": "4.MP.6",
+   "kind": "standard",
+   "content": "Attend to precision. Communicate precisely to others by crafting care-"
+  },
+  {
+   "idx": "4.MP.7",
+   "kind": "standard",
+   "content": "Look for and make use of structure. Recognize and apply the struc-"
+  },
+  {
+   "idx": "4.MP.8",
+   "kind": "standard",
+   "content": "Look for and express regularity in repeated reasoning. Notice repeti-"
+  },
+  {
+   "idx": "4.OA.1",
+   "kind": "standard",
+   "content": "Interpret a multiplication equation as a comparison (for example, in-"
+  },
+  {
+   "idx": "4.OA.2",
+   "kind": "standard",
+   "content": "Multiply or divide to solve word problems involving multiplicative"
+  },
+  {
+   "idx": "4.OA.3",
+   "kind": "standard",
+   "content": "Solve multi-step word problems posed with whole numbers and having"
+  },
+  {
+   "idx": "4.OA.4",
+   "kind": "standard",
+   "content": "Find all factor pairs for a whole number in the range 1-100. Recognize"
+  },
+  {
+   "idx": "4.OA.5",
+   "kind": "standard",
+   "content": "Generate a number or shape pattern that follows a given rule. Identify"
+  },
+  {
+   "idx": "4.NBT.1",
+   "kind": "standard",
+   "content": "Recognize that in a multi-digit whole number, a digit in one place repre-"
+  },
+  {
+   "idx": "4.NBT.2",
+   "kind": "standard",
+   "content": "Read and write multi-digit whole numbers using base-ten numer-"
+  },
+  {
+   "idx": "4.NBT.3",
+   "kind": "standard",
+   "content": "Use place value understanding to round multi-digit whole numbers to"
+  },
+  {
+   "idx": "4.NBT.4",
+   "kind": "standard",
+   "content": "Fluently add and subtract multi-digit whole numbers using the stan-"
+  },
+  {
+   "idx": "4.NBT.5",
+   "kind": "standard",
+   "content": "Multiply a whole number of up to four digits by a one-digit whole"
+  },
+  {
+   "idx": "4.NBT.6",
+   "kind": "standard",
+   "content": "Find whole-number quotients and remainders with up to four-digit"
+  },
+  {
+   "idx": "4.NF.1",
+   "kind": "standard",
+   "content": "Explain why a fraction a/b is equivalent to a fraction (n x a)/(n x b) by us-"
+  },
+  {
+   "idx": "4.NF.2",
+   "kind": "standard",
+   "content": "Compare two fractions with different numerators and different denomi-"
+  },
+  {
+   "idx": "4.NF.3",
+   "kind": "standard",
+   "content": "Understand a fraction a/b with a >1 as a sum of fractions 1/b. In other"
+  },
+  {
+   "idx": "4.NF.4",
+   "kind": "standard",
+   "content": "Apply and extend previous understandings of multiplication to multiply"
+  },
+  {
+   "idx": "4.NF.5",
+   "kind": "standard",
+   "content": "Express a fraction with denominator 10 as an equivalent fraction with"
+  },
+  {
+   "idx": "4.NF.6",
+   "kind": "standard",
+   "content": "Use decimal notation for fractions with denominators 10 or 100. For ex-"
+  },
+  {
+   "idx": "4.NF.7",
+   "kind": "standard",
+   "content": "Compare two decimals to hundredths by reasoning about their size."
+  },
+  {
+   "idx": "4.MD.1",
+   "kind": "standard",
+   "content": "Know relative sizes of measurement units within each system of units"
+  },
+  {
+   "idx": "4.MD.2",
+   "kind": "standard",
+   "content": "Use the four operations to solve word problems involving distances,"
+  },
+  {
+   "idx": "4.MD.3",
+   "kind": "standard",
+   "content": "Apply the area and perimeter formulas for rectangles in real-world and"
+  },
+  {
+   "idx": "4.MD.4",
+   "kind": "standard",
+   "content": "Make a line plot to display a data set of measurements in fractions of"
+  },
+  {
+   "idx": "4.MD.5",
+   "kind": "standard",
+   "content": "Recognize angles as geometric figures that are formed wherever two"
+  },
+  {
+   "idx": "4.MD.6",
+   "kind": "standard",
+   "content": "Measure angles in whole-number degrees using a protractor. Sketch"
+  },
+  {
+   "idx": "4.MD.7",
+   "kind": "standard",
+   "content": "Recognize angle measure as additive."
+  },
+  {
+   "idx": "4.G.1",
+   "kind": "standard",
+   "content": "Draw points, lines, line segments, rays, angles (right, acute, and obtuse),"
+  },
+  {
+   "idx": "4.G.2",
+   "kind": "standard",
+   "content": "Classify two-dimensional figures based on the presence or absence of"
+  },
+  {
+   "idx": "4.G.3",
+   "kind": "standard",
+   "content": "Recognize a line of symmetry for a two-dimensional figure as a line"
+  }
+ ],
+ "4/language": [
+  {
+   "idx": "4.SL.1",
+   "kind": "standard",
+   "content": "Participate effectively in a range of conversations and collabo-"
+  },
+  {
+   "idx": "4.SL.2",
+   "kind": "standard",
+   "content": "Clearly summarize information presented in various formats"
+  },
+  {
+   "idx": "4.SL.3",
+   "kind": "standard",
+   "content": "Use age-appropriate language, grammar, volume, and clear"
+  },
+  {
+   "idx": "4.R.3",
+   "kind": "standard",
+   "content": "Demonstrate mastery of age-appropriate phonics skills."
+  },
+  {
+   "idx": "4.R.4",
+   "kind": "standard",
+   "content": "Read grade-level text* with accuracy and fluency to support"
+  },
+  {
+   "idx": "4.R.5",
+   "kind": "standard",
+   "content": "Refer to details and evidence in a text when explaining what"
+  },
+  {
+   "idx": "4.R.6",
+   "kind": "standard",
+   "content": "Read a variety of text types, including those from diverse"
+  },
+  {
+   "idx": "4.R.7",
+   "kind": "standard",
+   "content": "Describe in depth a character, setting, or event in a story or"
+  },
+  {
+   "idx": "4.R.8",
+   "kind": "standard",
+   "content": "Determine the meaning of words, phrases, figurative lan-"
+  },
+  {
+   "idx": "4.R.9",
+   "kind": "standard",
+   "content": "Determine or clarify the meaning of unknown and multiple-"
+  },
+  {
+   "idx": "4.R.10",
+   "kind": "standard",
+   "content": "Analyze and discuss the parts of literary text using terms such"
+  },
+  {
+   "idx": "4.R.11",
+   "kind": "standard",
+   "content": "Compare the point of view from which different stories"
+  },
+  {
+   "idx": "4.R.12",
+   "kind": "standard",
+   "content": "Compare a visual or oral presentation of a story or drama"
+  },
+  {
+   "idx": "4.R.14",
+   "kind": "standard",
+   "content": "Compare the treatment of similar themes and topics and"
+  },
+  {
+   "idx": "4.W.1",
+   "kind": "standard",
+   "content": "Write argumentative pieces on topics and/or texts, supporting"
+  },
+  {
+   "idx": "4.W.2",
+   "kind": "standard",
+   "content": "Write informative/explanatory pieces to examine a topic that"
+  },
+  {
+   "idx": "4.W.3",
+   "kind": "standard",
+   "content": "Write narrative pieces to develop real or imagined experi-"
+  },
+  {
+   "idx": "4.W.4",
+   "kind": "standard",
+   "content": "Conduct short research projects to build knowledge through"
+  },
+  {
+   "idx": "4.W.5",
+   "kind": "standard",
+   "content": "Fluently write in cursive and manuscript."
+  }
+ ],
+ "4/science": [
+  {
+   "idx": "4.1.1",
+   "kind": "standard",
+   "content": "Construct an explanation from evidence that plants and animals"
+  },
+  {
+   "idx": "4.1.2",
+   "kind": "standard",
+   "content": "Develop and use a model of a system to describe how animals receive"
+  },
+  {
+   "idx": "4.1.3",
+   "kind": "standard",
+   "content": "Analyze and interpret data from fossils to provide evidence of the"
+  },
+  {
+   "idx": "4.1.4",
+   "kind": "standard",
+   "content": "Engage in argument from evidence based on patterns in rock layers and"
+  },
+  {
+   "idx": "4.2.1",
+   "kind": "standard",
+   "content": "Construct an explanation to describe the cause and effect relationship"
+  },
+  {
+   "idx": "4.2.2",
+   "kind": "standard",
+   "content": "Ask questions and make observations about the changes in energy"
+  },
+  {
+   "idx": "4.2.3",
+   "kind": "standard",
+   "content": "Plan and carry out an investigation to gather evidence from"
+  },
+  {
+   "idx": "4.2.4",
+   "kind": "standard",
+   "content": "Design a device that converts energy from one form to another. Define"
+  },
+  {
+   "idx": "4.3.1",
+   "kind": "standard",
+   "content": "Develop and use a model to describe the regular patterns of waves."
+  },
+  {
+   "idx": "4.3.2",
+   "kind": "standard",
+   "content": "Develop and use a model to describe how visible light waves reflected"
+  },
+  {
+   "idx": "4.3.3",
+   "kind": "standard",
+   "content": "Design a solution to an information transfer problem using wave"
+  },
+  {
+   "idx": "4.4.1",
+   "kind": "standard",
+   "content": "Construct an explanation that differences in the apparent brightness of"
+  },
+  {
+   "idx": "4.4.2",
+   "kind": "standard",
+   "content": "Analyze and interpret data of observable patterns to show that Earth"
+  }
+ ],
+ "4/social": [
+  {
+   "idx": "4.1.1",
+   "kind": "standard",
+   "content": "Use a variety of geographic tools to identify Utah and its sur-"
+  },
+  {
+   "idx": "4.1.2",
+   "kind": "standard",
+   "content": "Examine maps of Utah’s precipitation, temperature, vege-"
+  },
+  {
+   "idx": "4.1.3",
+   "kind": "standard",
+   "content": "Describe how the physical geography of Utah has both nega-"
+  },
+  {
+   "idx": "4.2.1",
+   "kind": "standard",
+   "content": "Use evidence (for example, artifacts, texts, oral traditions,"
+  },
+  {
+   "idx": "4.2.2",
+   "kind": "standard",
+   "content": "Explain the economic concepts of trade, scarcity, and supply"
+  },
+  {
+   "idx": "4.2.3",
+   "kind": "standard",
+   "content": "Use primary and secondary sources to compare important"
+  },
+  {
+   "idx": "4.2.4",
+   "kind": "standard",
+   "content": "Investigate the reasons why early explorers and frontiersmen"
+  },
+  {
+   "idx": "4.3.1",
+   "kind": "standard",
+   "content": "Use primary sources to compare experiences of at least three"
+  },
+  {
+   "idx": "4.3.2",
+   "kind": "standard",
+   "content": "Explain how Utah’s physical geography provided opportunities"
+  },
+  {
+   "idx": "4.3.3",
+   "kind": "standard",
+   "content": "Describe the establishment of communities and the economic"
+  },
+  {
+   "idx": "4.3.4",
+   "kind": "standard",
+   "content": "Identify the political challenges that delayed Utah’s statehood,"
+  },
+  {
+   "idx": "4.3.5",
+   "kind": "standard",
+   "content": "Cite multiple perspectives to explain the historical significance"
+  },
+  {
+   "idx": "4.3.6",
+   "kind": "standard",
+   "content": "Describe how and why humans have changed the physical"
+  },
+  {
+   "idx": "4.3.7",
+   "kind": "standard",
+   "content": "Explain how the creation of the Transcontinental Railroad"
+  },
+  {
+   "idx": "4.4.1",
+   "kind": "standard",
+   "content": "Identify the function and location of state government. Analyze"
+  },
+  {
+   "idx": "4.4.2",
+   "kind": "standard",
+   "content": "Compare the Utah Constitution with the United States"
+  },
+  {
+   "idx": "4.4.3",
+   "kind": "standard",
+   "content": "Identify Utah symbols, their connection to history and geogra-"
+  },
+  {
+   "idx": "4.4.4",
+   "kind": "standard",
+   "content": "Use primary and secondary sources to explain how Utah’s"
+  },
+  {
+   "idx": "4.4.5",
+   "kind": "standard",
+   "content": "Analyze the way local, state, tribal, and federal governments"
+  },
+  {
+   "idx": "4.4.6",
+   "kind": "standard",
+   "content": "Use case studies to explain how national or global events"
+  },
+  {
+   "idx": "4.5.1",
+   "kind": "standard",
+   "content": "Describe sovereignty as it relates to Native American sov-"
+  },
+  {
+   "idx": "4.5.2",
+   "kind": "standard",
+   "content": "Make a case for the lasting historical significance of an event"
+  },
+  {
+   "idx": "4.5.3",
+   "kind": "standard",
+   "content": "Use data and trends to make recommendations for the best"
+  },
+  {
+   "idx": "4.5.4",
+   "kind": "standard",
+   "content": "Explain continuity and change over time by comparing experi-"
+  },
+  {
+   "idx": "4.5.5",
+   "kind": "standard",
+   "content": "After studying examples of individuals or groups making"
+  },
+  {
+   "idx": "4.5.6",
+   "kind": "standard",
+   "content": "Choose one of Utah’s cultural institutions (for example Utah"
+  }
+ ],
+ "5/math": [
+  {
+   "idx": "5.MP.1",
+   "kind": "standard",
+   "content": "Make sense of problems and persevere in solving them. Explain the"
+  },
+  {
+   "idx": "5.MP.2",
+   "kind": "standard",
+   "content": "Reason abstractly and quantitatively. Make sense of quantities and"
+  },
+  {
+   "idx": "5.MP.3",
+   "kind": "standard",
+   "content": "Construct viable arguments and critique the reasoning of others."
+  },
+  {
+   "idx": "5.MP.4",
+   "kind": "standard",
+   "content": "Model with mathematics. Identify the mathematical elements of a"
+  },
+  {
+   "idx": "5.MP.5",
+   "kind": "standard",
+   "content": "Use appropriate tools strategically. Consider the tools that are avail-"
+  },
+  {
+   "idx": "5.MP.6",
+   "kind": "standard",
+   "content": "Attend to precision. Communicate precisely to others by crafting care-"
+  },
+  {
+   "idx": "5.MP.7",
+   "kind": "standard",
+   "content": "Look for and make use of structure. Recognize and apply the struc-"
+  },
+  {
+   "idx": "5.MP.8",
+   "kind": "standard",
+   "content": "Look for and express regularity in repeated reasoning. Notice repeti-"
+  },
+  {
+   "idx": "5.OA.1",
+   "kind": "standard",
+   "content": "Use parentheses, brackets, or braces in numerical expressions, and"
+  },
+  {
+   "idx": "5.OA.2",
+   "kind": "standard",
+   "content": "Write and interpret simple numerical expressions."
+  },
+  {
+   "idx": "5.OA.3",
+   "kind": "standard",
+   "content": "Generate two numerical patterns using two given rules. Identify appar-"
+  },
+  {
+   "idx": "5.NBT.1",
+   "kind": "standard",
+   "content": "Recognize that in a multi-digit number, a digit in one place represents"
+  },
+  {
+   "idx": "5.NBT.2",
+   "kind": "standard",
+   "content": "Explain patterns in the number of zeros of the product when multiply-"
+  },
+  {
+   "idx": "5.NBT.3",
+   "kind": "standard",
+   "content": "Read, write, and compare decimals to thousandths."
+  },
+  {
+   "idx": "5.NBT.4",
+   "kind": "standard",
+   "content": "Use place value understanding to round decimals to any place."
+  },
+  {
+   "idx": "5.NBT.5",
+   "kind": "standard",
+   "content": "Fluently multiply multi-digit whole numbers using the standard"
+  },
+  {
+   "idx": "5.NBT.6",
+   "kind": "standard",
+   "content": "Find whole-number quotients of whole numbers with up to four-digit"
+  },
+  {
+   "idx": "5.NBT.7",
+   "kind": "standard",
+   "content": "Add, subtract, multiply, and divide decimals to hundredths, using"
+  },
+  {
+   "idx": "5.NF.1",
+   "kind": "standard",
+   "content": "Add and subtract fractions with unlike denominators (including mixed"
+  },
+  {
+   "idx": "5.NF.2",
+   "kind": "standard",
+   "content": "Solve real-world problems involving addition and subtraction of frac-"
+  },
+  {
+   "idx": "5.NF.3",
+   "kind": "standard",
+   "content": "Interpret a fraction as division of the numerator by the denominator"
+  },
+  {
+   "idx": "5.NF.4",
+   "kind": "standard",
+   "content": "Apply and extend previous understandings of multiplication to multiply"
+  },
+  {
+   "idx": "5.NF.5",
+   "kind": "standard",
+   "content": "Interpret multiplication as scaling."
+  },
+  {
+   "idx": "5.NF.6",
+   "kind": "standard",
+   "content": "Solve real-world problems involving multiplication of fractions and"
+  },
+  {
+   "idx": "5.NF.7",
+   "kind": "standard",
+   "content": "Apply and extend previous understandings of division to divide unit"
+  },
+  {
+   "idx": "5.MD.1",
+   "kind": "standard",
+   "content": "Convert among different-sized standard measurement units within a"
+  },
+  {
+   "idx": "5.MD.2",
+   "kind": "standard",
+   "content": "Make a line plot to display a data set of measurements in fractions of a"
+  },
+  {
+   "idx": "5.MD.3",
+   "kind": "standard",
+   "content": "Recognize volume as an attribute of solid figures and understand con-"
+  },
+  {
+   "idx": "5.MD.4",
+   "kind": "standard",
+   "content": "Measure volumes by counting unit cubes, using cubic cm, cubic in.,"
+  },
+  {
+   "idx": "5.MD.5",
+   "kind": "standard",
+   "content": "Relate volume to the operations of multiplication and addition and"
+  },
+  {
+   "idx": "5.G.1",
+   "kind": "standard",
+   "content": "Compose and understand the coordinate plane."
+  },
+  {
+   "idx": "5.G.2",
+   "kind": "standard",
+   "content": "Represent real-world and mathematical problems by graphing points"
+  },
+  {
+   "idx": "5.G.3",
+   "kind": "standard",
+   "content": "Understand that attributes belonging to a category of two-dimensional"
+  },
+  {
+   "idx": "5.G.4",
+   "kind": "standard",
+   "content": "Classify two-dimensional figures in a hierarchy based on properties."
+  }
+ ],
+ "5/language": [
+  {
+   "idx": "5.SL.1",
+   "kind": "standard",
+   "content": "Participate effectively in a range of conversations and collabo-"
+  },
+  {
+   "idx": "5.SL.2",
+   "kind": "standard",
+   "content": "Investigate information presented in various formats and me-"
+  },
+  {
+   "idx": "5.SL.3",
+   "kind": "standard",
+   "content": "Use age-appropriate language, grammar, volume, and clear"
+  },
+  {
+   "idx": "5.R.3",
+   "kind": "standard",
+   "content": "Demonstrate mastery of age-appropriate phonics skills."
+  },
+  {
+   "idx": "5.R.4",
+   "kind": "standard",
+   "content": "Read grade-level text* with accuracy and fluency to support"
+  },
+  {
+   "idx": "5.R.5",
+   "kind": "standard",
+   "content": "Identify and refer to evidence from a text when explaining"
+  },
+  {
+   "idx": "5.R.6",
+   "kind": "standard",
+   "content": "Determine the theme or main idea of a text including those"
+  },
+  {
+   "idx": "5.R.7",
+   "kind": "standard",
+   "content": "Compare two characters, settings, or events in a story or"
+  },
+  {
+   "idx": "5.R.8",
+   "kind": "standard",
+   "content": "Determine the meaning of words, phrases, figurative lan-"
+  },
+  {
+   "idx": "5.R.9",
+   "kind": "standard",
+   "content": "Determine or clarify the meaning of unknown and multiple-"
+  },
+  {
+   "idx": "5.R.10",
+   "kind": "standard",
+   "content": "Analyze how a series of chapters, scenes, or stanzas fits to-"
+  },
+  {
+   "idx": "5.R.11",
+   "kind": "standard",
+   "content": "Explain how a narrator’s or speaker’s point of view influences"
+  },
+  {
+   "idx": "5.R.12",
+   "kind": "standard",
+   "content": "Analyze how the visual and multimedia elements contribute"
+  },
+  {
+   "idx": "5.R.14",
+   "kind": "standard",
+   "content": "Compare stories in the same genre on their approaches to"
+  },
+  {
+   "idx": "5.W.1",
+   "kind": "standard",
+   "content": "Write argumentative pieces on topics and/or texts, supporting"
+  },
+  {
+   "idx": "5.W.2",
+   "kind": "standard",
+   "content": "Write informative/explanatory pieces to examine a topic that"
+  },
+  {
+   "idx": "5.W.3",
+   "kind": "standard",
+   "content": "Write narrative pieces to develop real or imagined experi-"
+  },
+  {
+   "idx": "5.W.4",
+   "kind": "standard",
+   "content": "Conduct short research projects to craft an argument or an-"
+  },
+  {
+   "idx": "5.W.5",
+   "kind": "standard",
+   "content": "Fluently write in cursive and manuscript."
+  }
+ ],
+ "5/science": [
+  {
+   "idx": "5.1.1",
+   "kind": "standard",
+   "content": "Analyze and interpret data to describe patterns of Earth’s features."
+  },
+  {
+   "idx": "5.1.2",
+   "kind": "standard",
+   "content": "Use mathematics and computational thinking to compare the quantity"
+  },
+  {
+   "idx": "5.1.3",
+   "kind": "standard",
+   "content": "Ask questions to plan and carry out investigations that provide"
+  },
+  {
+   "idx": "5.1.4",
+   "kind": "standard",
+   "content": "Develop a model to describe interactions between Earth’s systems"
+  },
+  {
+   "idx": "5.1.5",
+   "kind": "standard",
+   "content": "Design solutions to reduce the effects of naturally occurring events"
+  },
+  {
+   "idx": "5.2.1",
+   "kind": "standard",
+   "content": "Develop and use a model to describe that matter is made of particles"
+  },
+  {
+   "idx": "5.2.2",
+   "kind": "standard",
+   "content": "Ask questions to plan and carry out investigations to identify"
+  },
+  {
+   "idx": "5.2.3",
+   "kind": "standard",
+   "content": "Plan and carry out investigations to determine the effect of combining"
+  },
+  {
+   "idx": "5.2.4",
+   "kind": "standard",
+   "content": "Use mathematics and computational thinking to provide evidence that"
+  },
+  {
+   "idx": "5.3.1",
+   "kind": "standard",
+   "content": "Construct an explanation that plants use air, water, and energy"
+  },
+  {
+   "idx": "5.3.2",
+   "kind": "standard",
+   "content": "Obtain, evaluate, and communicate information that animals obtain"
+  },
+  {
+   "idx": "5.3.3",
+   "kind": "standard",
+   "content": "Develop and use a model to describe the movement of matter among"
+  },
+  {
+   "idx": "5.3.4",
+   "kind": "standard",
+   "content": "Evaluate design solutions whose primary function is to conserve Earth’s"
+  }
+ ],
+ "5/social": [
+  {
+   "idx": "5.1.1",
+   "kind": "standard",
+   "content": "Cite examples to illustrate how the physical geography of"
+  },
+  {
+   "idx": "5.1.2",
+   "kind": "standard",
+   "content": "Identify ideas, innovations, and contributions of Native"
+  },
+  {
+   "idx": "5.1.3",
+   "kind": "standard",
+   "content": "Use maps and primary/secondary sources to evaluate the"
+  },
+  {
+   "idx": "5.1.4",
+   "kind": "standard",
+   "content": "Describe how conﬂicts over land, trade, and alliances some-"
+  },
+  {
+   "idx": "5.2.1",
+   "kind": "standard",
+   "content": "Use primary sources to craft an argument representing dif-"
+  },
+  {
+   "idx": "5.2.2",
+   "kind": "standard",
+   "content": "Summarize the most signiﬁcant ideas found in the Declaration"
+  },
+  {
+   "idx": "5.2.3",
+   "kind": "standard",
+   "content": "Explain how the actions of key individuals and groups in-"
+  },
+  {
+   "idx": "5.2.4",
+   "kind": "standard",
+   "content": "Use evidence from primary and secondary sources to craft an"
+  },
+  {
+   "idx": "5.3.1",
+   "kind": "standard",
+   "content": "Use examples from the Constitution to investigate and explain"
+  },
+  {
+   "idx": "5.3.2",
+   "kind": "standard",
+   "content": "Apply the ideals found in the Preamble of the United States"
+  },
+  {
+   "idx": "5.3.3",
+   "kind": "standard",
+   "content": "Explain why the Founders established a compound constitu-"
+  },
+  {
+   "idx": "5.3.4",
+   "kind": "standard",
+   "content": "Explain the signiﬁcance of the Bill of Rights, and identify the"
+  },
+  {
+   "idx": "5.3.5",
+   "kind": "standard",
+   "content": "Investigate how constitutional amendments are passed, and"
+  },
+  {
+   "idx": "5.3.6",
+   "kind": "standard",
+   "content": "Describe the civic duties members of American society have"
+  },
+  {
+   "idx": "5.4.1",
+   "kind": "standard",
+   "content": "Use evidence from multiple perspectives (for example, pi-"
+  },
+  {
+   "idx": "5.4.2",
+   "kind": "standard",
+   "content": "Use primary sources to explain the driving forces for why peo-"
+  },
+  {
+   "idx": "5.4.3",
+   "kind": "standard",
+   "content": "Summarize the impacts of forced relocation and assimilation"
+  },
+  {
+   "idx": "5.4.4",
+   "kind": "standard",
+   "content": "Use primary and secondary sources to compare how differ-"
+  },
+  {
+   "idx": "5.4.5",
+   "kind": "standard",
+   "content": "Explain how the actions of key individuals and groups in-"
+  },
+  {
+   "idx": "5.4.6",
+   "kind": "standard",
+   "content": "Use evidence from primary and secondary sources to craft"
+  },
+  {
+   "idx": "5.4.7",
+   "kind": "standard",
+   "content": "Identify the Civil War’s most important outcomes (for example,"
+  },
+  {
+   "idx": "5.5.1",
+   "kind": "standard",
+   "content": "Compare the motivations for and desired outcomes of U.S."
+  },
+  {
+   "idx": "5.5.2",
+   "kind": "standard",
+   "content": "Compare the motivations for and desired outcomes of the"
+  },
+  {
+   "idx": "5.5.3",
+   "kind": "standard",
+   "content": "Craft an evidence-based argument for why a particular event"
+  },
+  {
+   "idx": "5.5.4",
+   "kind": "standard",
+   "content": "Make an evidence-based claim about the role the United"
+  },
+  {
+   "idx": "5.6.1",
+   "kind": "standard",
+   "content": "Investigate and report on current pressing issues facing the"
+  },
+  {
+   "idx": "5.6.2",
+   "kind": "standard",
+   "content": "Evaluate the methods and impact of individuals and/or groups"
+  },
+  {
+   "idx": "5.6.3",
+   "kind": "standard",
+   "content": "Connect the causes and lasting effects of at least two social"
+  },
+  {
+   "idx": "5.6.4",
+   "kind": "standard",
+   "content": "Research and summarize the accomplishments and contribu-"
+  }
+ ],
+ "6/math": [
+  {
+   "idx": "6.MP.1",
+   "kind": "standard",
+   "content": "Make sense of problems and persevere in solving them. Explain the"
+  },
+  {
+   "idx": "6.MP.2",
+   "kind": "standard",
+   "content": "Reason abstractly and quantitatively. Make sense of the quantities"
+  },
+  {
+   "idx": "6.MP.3",
+   "kind": "standard",
+   "content": "Construct viable arguments and critique the reasoning of others."
+  },
+  {
+   "idx": "6.MP.4",
+   "kind": "standard",
+   "content": "Model with mathematics. Apply mathematics to solve problems aris-"
+  },
+  {
+   "idx": "6.MP.5",
+   "kind": "standard",
+   "content": "Use appropriate tools strategically. Consider the available tools and"
+  },
+  {
+   "idx": "6.MP.6",
+   "kind": "standard",
+   "content": "Attend to precision. Communicate precisely to others. Use explicit"
+  },
+  {
+   "idx": "6.MP.7",
+   "kind": "standard",
+   "content": "Look for and make use of structure. Look closely at mathematical re-"
+  },
+  {
+   "idx": "6.MP.8",
+   "kind": "standard",
+   "content": "Look for and express regularity in repeated reasoning. Notice if rea-"
+  },
+  {
+   "idx": "6.RP.1",
+   "kind": "standard",
+   "content": "Understand the concept of a ratio and use ratio language to describe a"
+  },
+  {
+   "idx": "6.RP.2",
+   "kind": "standard",
+   "content": "Understand the concept of a unit rate a/b associated with a ratio a:b"
+  },
+  {
+   "idx": "6.RP.3",
+   "kind": "standard",
+   "content": "Use ratio and rate reasoning to solve real-world (with a context) and"
+  },
+  {
+   "idx": "6.NS.1",
+   "kind": "standard",
+   "content": "Interpret and compute quotients of fractions."
+  },
+  {
+   "idx": "6.NS.2",
+   "kind": "standard",
+   "content": "Fluently divide multi-digit numbers using the standard algorithm."
+  },
+  {
+   "idx": "6.NS.3",
+   "kind": "standard",
+   "content": "Fluently add, subtract, multiply, and divide multi-digit decimals using"
+  },
+  {
+   "idx": "6.NS.4",
+   "kind": "standard",
+   "content": "Find the greatest common factor of two whole numbers less than or"
+  },
+  {
+   "idx": "6.NS.5",
+   "kind": "standard",
+   "content": "Understand that positive and negative numbers are used together"
+  },
+  {
+   "idx": "6.NS.6",
+   "kind": "standard",
+   "content": "Understand a rational number as a point on the number line. Extend"
+  },
+  {
+   "idx": "6.NS.7",
+   "kind": "standard",
+   "content": "Understand ordering and absolute value of rational numbers."
+  },
+  {
+   "idx": "6.NS.8",
+   "kind": "standard",
+   "content": "Solve real-world and mathematical problems by graphing points in all"
+  },
+  {
+   "idx": "6.EE.1",
+   "kind": "standard",
+   "content": "Write and evaluate numerical expressions involving whole-number"
+  },
+  {
+   "idx": "6.EE.2",
+   "kind": "standard",
+   "content": "Write, read, and evaluate expressions in which letters represent numbers."
+  },
+  {
+   "idx": "6.EE.3",
+   "kind": "standard",
+   "content": "Apply the properties of operations to generate equivalent expressions."
+  },
+  {
+   "idx": "6.EE.4",
+   "kind": "standard",
+   "content": "Identify when two expressions are equivalent. For example, the expressions"
+  },
+  {
+   "idx": "6.EE.5",
+   "kind": "standard",
+   "content": "Understand solving an equation or inequality as a process of answering"
+  },
+  {
+   "idx": "6.EE.6",
+   "kind": "standard",
+   "content": "Use variables to represent numbers and write expressions when solving a"
+  },
+  {
+   "idx": "6.EE.7",
+   "kind": "standard",
+   "content": "Solve real-world and mathematical problems by writing and solving"
+  },
+  {
+   "idx": "6.EE.8",
+   "kind": "standard",
+   "content": "Write an inequality of the form x > c or x < c to represent a constraint or"
+  },
+  {
+   "idx": "6.EE.9",
+   "kind": "standard",
+   "content": "Use variables to represent two quantities in a real-world problem that"
+  },
+  {
+   "idx": "6.G.1",
+   "kind": "standard",
+   "content": "Find the area of right triangles, other triangles, special quadrilaterals,"
+  },
+  {
+   "idx": "6.G.2",
+   "kind": "standard",
+   "content": "Find the volume of a right rectangular prism with appropriate unit frac-"
+  },
+  {
+   "idx": "6.G.3",
+   "kind": "standard",
+   "content": "Draw polygons in the coordinate plane given coordinates for the vertices;"
+  },
+  {
+   "idx": "6.G.4",
+   "kind": "standard",
+   "content": "Represent three-dimensional figures using nets made up of rectangles"
+  },
+  {
+   "idx": "6.SP.1",
+   "kind": "standard",
+   "content": "Recognize a statistical question as one that anticipates variability in the"
+  },
+  {
+   "idx": "6.SP.2",
+   "kind": "standard",
+   "content": "Understand that a set of data collected to answer a statistical question"
+  },
+  {
+   "idx": "6.SP.3",
+   "kind": "standard",
+   "content": "Recognize that a measure of center for a numerical data set summarizes"
+  },
+  {
+   "idx": "6.SP.4",
+   "kind": "standard",
+   "content": "Display numerical data in plots on a number line, including dot plots, his-"
+  },
+  {
+   "idx": "6.SP.5",
+   "kind": "standard",
+   "content": "Summarize numerical data sets in relation to their context, such as by:"
+  }
+ ],
+ "6/language": [
+  {
+   "idx": "6.SL.1",
+   "kind": "standard",
+   "content": "Participate effectively in a range of conversations and collabo-"
+  },
+  {
+   "idx": "6.SL.2",
+   "kind": "standard",
+   "content": "Interpret credible information presented in various formats"
+  },
+  {
+   "idx": "6.SL.3",
+   "kind": "standard",
+   "content": "Use appropriate language, grammar, organization, develop-"
+  },
+  {
+   "idx": "6.R.4",
+   "kind": "standard",
+   "content": "Read grade-level text* with accuracy and fluency to support"
+  },
+  {
+   "idx": "6.R.5",
+   "kind": "standard",
+   "content": "Cite textual evidence to support analysis of what the text says"
+  },
+  {
+   "idx": "6.R.6",
+   "kind": "standard",
+   "content": "When reading texts, including those from diverse cultures,"
+  },
+  {
+   "idx": "6.R.7",
+   "kind": "standard",
+   "content": "Compare two or more characters, settings, or events in a"
+  },
+  {
+   "idx": "6.R.8",
+   "kind": "standard",
+   "content": "Determine the meaning of words and phrases, including figu-"
+  },
+  {
+   "idx": "6.R.9",
+   "kind": "standard",
+   "content": "Determine or clarify the meaning of unknown and multiple-"
+  },
+  {
+   "idx": "6.R.10",
+   "kind": "standard",
+   "content": "Analyze how a sentence, paragraph, stanza, chapter, scene, or"
+  },
+  {
+   "idx": "6.R.11",
+   "kind": "standard",
+   "content": "Explain how an author's perspective develops the point of"
+  },
+  {
+   "idx": "6.R.12",
+   "kind": "standard",
+   "content": "Compare how different mediums, including print and digital"
+  },
+  {
+   "idx": "6.R.14",
+   "kind": "standard",
+   "content": "Compare texts across different mediums or genres in terms"
+  },
+  {
+   "idx": "6.W.1",
+   "kind": "standard",
+   "content": "Write arguments to support claims with clear reasons and"
+  },
+  {
+   "idx": "6.W.2",
+   "kind": "standard",
+   "content": "Write informative/explanatory texts to examine a topic that"
+  },
+  {
+   "idx": "6.W.3",
+   "kind": "standard",
+   "content": "Write narrative texts to develop real or imagined experi-"
+  },
+  {
+   "idx": "6.W.4",
+   "kind": "standard",
+   "content": "Conduct short research projects to craft an argument or an-"
+  }
+ ],
+ "6/science": [
+  {
+   "idx": "6.1.1",
+   "kind": "standard",
+   "content": "Develop and use a model of the Sun-Earth-Moon system to describe"
+  },
+  {
+   "idx": "6.1.2",
+   "kind": "standard",
+   "content": "Develop and use a model to describe the role of gravity and inertia in"
+  },
+  {
+   "idx": "6.1.3",
+   "kind": "standard",
+   "content": "Use computational thinking to analyze data and determine the scale"
+  },
+  {
+   "idx": "6.2.1",
+   "kind": "standard",
+   "content": "Develop models to show that molecules are made of different kinds,"
+  },
+  {
+   "idx": "6.2.2",
+   "kind": "standard",
+   "content": "Develop a model to predict the effect of heat energy on states of matter"
+  },
+  {
+   "idx": "6.2.3",
+   "kind": "standard",
+   "content": "Plan and carry out an investigation to determine the relationship"
+  },
+  {
+   "idx": "6.2.4",
+   "kind": "standard",
+   "content": "Design an object, tool, or process that minimizes or maximizes heat energy"
+  },
+  {
+   "idx": "6.3.1",
+   "kind": "standard",
+   "content": "Develop a model to describe how the cycling of water through Earth’s"
+  },
+  {
+   "idx": "6.3.2",
+   "kind": "standard",
+   "content": "Investigate the interactions between air masses that cause changes in"
+  },
+  {
+   "idx": "6.3.3",
+   "kind": "standard",
+   "content": "Develop and use a model to show how unequal heating of the Earth’s"
+  },
+  {
+   "idx": "6.3.4",
+   "kind": "standard",
+   "content": "Construct an explanation supported by evidence for the role of the"
+  },
+  {
+   "idx": "6.4.1",
+   "kind": "standard",
+   "content": "Analyze data to provide evidence for the effects of resource availability"
+  },
+  {
+   "idx": "6.4.2",
+   "kind": "standard",
+   "content": "Construct an explanation that predicts patterns of interactions among"
+  },
+  {
+   "idx": "6.4.3",
+   "kind": "standard",
+   "content": "Develop a model to describe the cycling of matter and flow of energy"
+  },
+  {
+   "idx": "6.4.4",
+   "kind": "standard",
+   "content": "Construct an argument supported by evidence that the stability of"
+  },
+  {
+   "idx": "6.4.5",
+   "kind": "standard",
+   "content": "Evaluate competing design solutions for preserving ecosystem services"
+  }
+ ],
+ "6/social": [
+  {
+   "idx": "6.1.1",
+   "kind": "standard",
+   "content": "Discern characteristics needed for the transformation from"
+  },
+  {
+   "idx": "6.1.2",
+   "kind": "standard",
+   "content": "Throughout their study of world history, recognize the origins"
+  },
+  {
+   "idx": "6.1.3",
+   "kind": "standard",
+   "content": "Use maps to analyze how physical geography affected the"
+  },
+  {
+   "idx": "6.1.4",
+   "kind": "standard",
+   "content": "Identify some of the economic systems and technologies (for"
+  },
+  {
+   "idx": "6.1.5",
+   "kind": "standard",
+   "content": "Use primary and secondary sources to compare the cultures"
+  },
+  {
+   "idx": "6.1.6",
+   "kind": "standard",
+   "content": "Compare the purposes and functions of early governments"
+  },
+  {
+   "idx": "6.2.1",
+   "kind": "standard",
+   "content": "Summarize key tenets of the major world religions (includ-"
+  },
+  {
+   "idx": "6.2.2",
+   "kind": "standard",
+   "content": "Use primary and secondary sources to explain how the spread"
+  },
+  {
+   "idx": "6.2.3",
+   "kind": "standard",
+   "content": "Identify the most historically signiﬁcant inventions and innova-"
+  },
+  {
+   "idx": "6.2.4",
+   "kind": "standard",
+   "content": "Use maps to trace how geography affected the ability of hu-"
+  },
+  {
+   "idx": "6.2.5",
+   "kind": "standard",
+   "content": "Critique how and why systems of governance took steps to-"
+  },
+  {
+   "idx": "6.2.6",
+   "kind": "standard",
+   "content": "Generalize how the spread of goods and ideas led to the"
+  },
+  {
+   "idx": "6.3.1",
+   "kind": "standard",
+   "content": "Describe how the conditions and motivations of exploration,"
+  },
+  {
+   "idx": "6.3.2",
+   "kind": "standard",
+   "content": "Use maps and other data sets to make inferences about"
+  },
+  {
+   "idx": "6.3.3",
+   "kind": "standard",
+   "content": "Use primary and secondary sources to draw conclusions about"
+  },
+  {
+   "idx": "6.3.4",
+   "kind": "standard",
+   "content": "Explain the causes and effects of at least three events that"
+  },
+  {
+   "idx": "6.3.5",
+   "kind": "standard",
+   "content": "Cite evidence to identify the causes and effects of World War I,"
+  },
+  {
+   "idx": "6.4.1",
+   "kind": "standard",
+   "content": "Use primary and secondary sources to describe the impact"
+  },
+  {
+   "idx": "6.4.2",
+   "kind": "standard",
+   "content": "Summarize the main differences between economic systems"
+  },
+  {
+   "idx": "6.4.3",
+   "kind": "standard",
+   "content": "Determine how human rights and responsibilities around the"
+  },
+  {
+   "idx": "6.4.4",
+   "kind": "standard",
+   "content": "Cite current national and/or global events that exemplify the"
+  }
+ ],
+ "7/math": [
+  {
+   "idx": "7.MP.1",
+   "kind": "standard",
+   "content": "Make sense of problems and persevere in solving them. Explain the"
+  },
+  {
+   "idx": "7.MP.2",
+   "kind": "standard",
+   "content": "Reason abstractly and quantitatively. Make sense of the quantities"
+  },
+  {
+   "idx": "7.MP.3",
+   "kind": "standard",
+   "content": "Construct viable arguments and critique the reasoning of others."
+  },
+  {
+   "idx": "7.MP.4",
+   "kind": "standard",
+   "content": "Model with mathematics. Apply mathematics to solve problems aris-"
+  },
+  {
+   "idx": "7.MP.5",
+   "kind": "standard",
+   "content": "Use appropriate tools strategically. Consider the available tools and"
+  },
+  {
+   "idx": "7.MP.6",
+   "kind": "standard",
+   "content": "Attend to precision. Communicate precisely to others. Use explicit"
+  },
+  {
+   "idx": "7.MP.7",
+   "kind": "standard",
+   "content": "Look for and make use of structure. Look closely at mathematical"
+  },
+  {
+   "idx": "7.MP.8",
+   "kind": "standard",
+   "content": "Look for and express regularity in repeated reasoning. Notice if rea-"
+  },
+  {
+   "idx": "7.RP.1",
+   "kind": "standard",
+   "content": "Compute unit rates associated with ratios of fractions, including ratios of"
+  },
+  {
+   "idx": "7.RP.2",
+   "kind": "standard",
+   "content": "Recognize and represent proportional relationships between quantities."
+  },
+  {
+   "idx": "7.RP.3",
+   "kind": "standard",
+   "content": "Use proportional relationships to solve multi-step ratio and percent prob-"
+  },
+  {
+   "idx": "7.NS.1",
+   "kind": "standard",
+   "content": "Apply and extend previous understandings of addition and subtraction to"
+  },
+  {
+   "idx": "7.NS.2",
+   "kind": "standard",
+   "content": "Apply and extend previous understandings of multiplication and division"
+  },
+  {
+   "idx": "7.NS.3",
+   "kind": "standard",
+   "content": "Solve real-world and mathematical problems involving the four opera-"
+  },
+  {
+   "idx": "7.EE.1",
+   "kind": "standard",
+   "content": "Apply properties of operations as strategies to add, subtract, factor, and"
+  },
+  {
+   "idx": "7.EE.2",
+   "kind": "standard",
+   "content": "Understand that rewriting an expression in different forms in a problem"
+  },
+  {
+   "idx": "7.EE.3",
+   "kind": "standard",
+   "content": "Solve multi-step real-life and mathematical problems posed with positive"
+  },
+  {
+   "idx": "7.EE.4",
+   "kind": "standard",
+   "content": "Use variables to represent quantities in a real-world or mathematical"
+  },
+  {
+   "idx": "7.G.1",
+   "kind": "standard",
+   "content": "Solve problems involving scale drawings of geometric figures, such as"
+  },
+  {
+   "idx": "7.G.2",
+   "kind": "standard",
+   "content": "Draw (freehand, with ruler and protractor, and with technology) geomet-"
+  },
+  {
+   "idx": "7.G.3",
+   "kind": "standard",
+   "content": "Describe the two-dimensional figures that result from slicing three-di-"
+  },
+  {
+   "idx": "7.G.4",
+   "kind": "standard",
+   "content": "Know the formulas for the area and circumference of a circle, and solve"
+  },
+  {
+   "idx": "7.G.5",
+   "kind": "standard",
+   "content": "Use facts about supplementary, complementary, vertical, and adjacent"
+  },
+  {
+   "idx": "7.G.6",
+   "kind": "standard",
+   "content": "Solve real-world and mathematical problems involving area, volume and"
+  },
+  {
+   "idx": "7.SP.1",
+   "kind": "standard",
+   "content": "Understand that statistics can be used to gain information about a popu-"
+  },
+  {
+   "idx": "7.SP.2",
+   "kind": "standard",
+   "content": "Use data from a random sample to draw inferences about a population"
+  },
+  {
+   "idx": "7.SP.3",
+   "kind": "standard",
+   "content": "Informally assess the degree of visual overlap of two numerical data"
+  },
+  {
+   "idx": "7.SP.4",
+   "kind": "standard",
+   "content": "Use measures of center and measures of variability for numerical data"
+  },
+  {
+   "idx": "7.SP.5",
+   "kind": "standard",
+   "content": "Understand that the probability of a chance event is a number between"
+  },
+  {
+   "idx": "7.SP.6",
+   "kind": "standard",
+   "content": "Approximate the probability of a chance event by collecting data on the"
+  },
+  {
+   "idx": "7.SP.7",
+   "kind": "standard",
+   "content": "Develop a probability model and use it to find probabilities of events."
+  },
+  {
+   "idx": "7.SP.8",
+   "kind": "standard",
+   "content": "Find probabilities of compound events using organized lists, tables, tree"
+  }
+ ],
+ "7/language": [
+  {
+   "idx": "7-8.SL.1",
+   "kind": "standard",
+   "content": "Participate effectively in a range of conversations and col-"
+  },
+  {
+   "idx": "7-8.SL.2",
+   "kind": "standard",
+   "content": "Evaluate the credibility of multiple sources of information"
+  },
+  {
+   "idx": "7-8.SL.3",
+   "kind": "standard",
+   "content": "Use appropriate language, grammar, organization, devel-"
+  },
+  {
+   "idx": "7-8.R.4",
+   "kind": "standard",
+   "content": "Read grade-level text* with accuracy and fluency to sup-"
+  },
+  {
+   "idx": "7-8.R.5",
+   "kind": "standard",
+   "content": "Cite textual evidence that supports an analysis of what the"
+  },
+  {
+   "idx": "7-8.R.6",
+   "kind": "standard",
+   "content": "When reading texts, including those from diverse cultures,"
+  },
+  {
+   "idx": "7-8.R.7",
+   "kind": "standard",
+   "content": "Analyze the impact of character and plot development on"
+  },
+  {
+   "idx": "7-8.R.8",
+   "kind": "standard",
+   "content": "Determine the meaning of words and phrases, including"
+  },
+  {
+   "idx": "7-8.R.9",
+   "kind": "standard",
+   "content": "Determine or clarify the meaning of unknown and multi-"
+  },
+  {
+   "idx": "7-8.R.10",
+   "kind": "standard",
+   "content": "Analyze the structure an author uses to organize a text,"
+  },
+  {
+   "idx": "7-8.R.11",
+   "kind": "standard",
+   "content": "Analyze how an author develops and contrasts the points"
+  },
+  {
+   "idx": "7-8.R.12",
+   "kind": "standard",
+   "content": "Compare a text to another text in a different medium"
+  },
+  {
+   "idx": "7-8.R.14",
+   "kind": "standard",
+   "content": "Compare two or more works of fiction with similar themes"
+  },
+  {
+   "idx": "7-8.W.1",
+   "kind": "standard",
+   "content": "Write arguments to support claims with logical reasoning,"
+  },
+  {
+   "idx": "7-8.W.2",
+   "kind": "standard",
+   "content": "Write informative/explanatory texts to examine a topic"
+  },
+  {
+   "idx": "7-8.W.3",
+   "kind": "standard",
+   "content": "Write narrative texts to develop real or imagined experi-"
+  },
+  {
+   "idx": "7-8.W.4",
+   "kind": "standard",
+   "content": "Conduct short research projects to craft an argument, an-"
+  }
+ ],
+ "7/science": [
+  {
+   "idx": "7.1.1",
+   "kind": "standard",
+   "content": "Carry out an investigation which provides evidence that a change in an"
+  },
+  {
+   "idx": "7.1.2",
+   "kind": "standard",
+   "content": "Apply Newton’s Third Law to design a solution to a problem involving"
+  },
+  {
+   "idx": "7.1.3",
+   "kind": "standard",
+   "content": "Construct a model using observational evidence to describe the"
+  },
+  {
+   "idx": "7.1.4",
+   "kind": "standard",
+   "content": "Collect and analyze data to determine the factors that affect the"
+  },
+  {
+   "idx": "7.1.5",
+   "kind": "standard",
+   "content": "Engage in argument from evidence to support the claim that"
+  },
+  {
+   "idx": "7.2.1",
+   "kind": "standard",
+   "content": "Develop a model of the rock cycle to describe the relationship between"
+  },
+  {
+   "idx": "7.2.2",
+   "kind": "standard",
+   "content": "Construct an explanation based on evidence for how processes have"
+  },
+  {
+   "idx": "7.2.3",
+   "kind": "standard",
+   "content": "Ask questions to identify constraints of specific geologic hazards and"
+  },
+  {
+   "idx": "7.2.4",
+   "kind": "standard",
+   "content": "Develop and use a scale model of the matter in the Earth’s interior"
+  },
+  {
+   "idx": "7.2.5",
+   "kind": "standard",
+   "content": "Ask questions and analyze and interpret data about the patterns"
+  },
+  {
+   "idx": "7.2.6",
+   "kind": "standard",
+   "content": "Make an argument from evidence for how the geologic time scale"
+  },
+  {
+   "idx": "7.3.1",
+   "kind": "standard",
+   "content": "Plan and carry out an investigation that provides evidence that the"
+  },
+  {
+   "idx": "7.3.2",
+   "kind": "standard",
+   "content": "Develop and use a model to describe the function of a cell in living"
+  },
+  {
+   "idx": "7.3.3",
+   "kind": "standard",
+   "content": "Construct an explanation using evidence to explain how body systems"
+  },
+  {
+   "idx": "7.4.1",
+   "kind": "standard",
+   "content": "Develop and use a model to explain the effects that different types of"
+  },
+  {
+   "idx": "7.4.2",
+   "kind": "standard",
+   "content": "Obtain, evaluate, and communicate information about specific"
+  },
+  {
+   "idx": "7.4.3",
+   "kind": "standard",
+   "content": "Develop and use a model to describe why genetic mutations may result"
+  },
+  {
+   "idx": "7.4.4",
+   "kind": "standard",
+   "content": "Obtain, evaluate, and communicate information about the"
+  },
+  {
+   "idx": "7.5.1",
+   "kind": "standard",
+   "content": "Construct an explanation that describes how the genetic variation of"
+  },
+  {
+   "idx": "7.5.2",
+   "kind": "standard",
+   "content": "Analyze and interpret data for patterns in the fossil record that"
+  },
+  {
+   "idx": "7.5.3",
+   "kind": "standard",
+   "content": "Construct explanations that describe the patterns of body structure"
+  },
+  {
+   "idx": "7.5.4",
+   "kind": "standard",
+   "content": "Analyze data to compare patterns in the embryological development"
+  }
+ ],
+ "7/social": [
+  {
+   "idx": "UT.1.1",
+   "kind": "standard",
+   "content": "Students will make evidence-based inferences about the complex"
+  },
+  {
+   "idx": "UT.1.2",
+   "kind": "standard",
+   "content": "Students will analyze and explain the interactions and interconnec-"
+  },
+  {
+   "idx": "UT.1.3",
+   "kind": "standard",
+   "content": "Students will explain the economic activity of a prehistoric and/or his-"
+  },
+  {
+   "idx": "UT.1.4",
+   "kind": "standard",
+   "content": "Students will analyze primary and secondary sources to explain causes"
+  },
+  {
+   "idx": "UT.1.5",
+   "kind": "standard",
+   "content": "Students will describe the cultural change and continuity of at least"
+  },
+  {
+   "idx": "UT.2.1",
+   "kind": "standard",
+   "content": "Students will explain the causes and lasting effects of the Mormon mi-"
+  },
+  {
+   "idx": "UT.2.2",
+   "kind": "standard",
+   "content": "Students will compare the causes and lasting effects of various"
+  },
+  {
+   "idx": "UT.2.3",
+   "kind": "standard",
+   "content": "Students will use geographic inquiry to explain patterns in the settle-"
+  },
+  {
+   "idx": "UT.2.4",
+   "kind": "standard",
+   "content": "Students will research multiple perspectives to explain one or more of"
+  },
+  {
+   "idx": "UT.2.5",
+   "kind": "standard",
+   "content": "Students will construct an evidence-based argument to explain how the"
+  },
+  {
+   "idx": "UT.2.6",
+   "kind": "standard",
+   "content": "Students will explain how agriculture, railroads, mining, and industrial-"
+  },
+  {
+   "idx": "UT.2.7",
+   "kind": "standard",
+   "content": "Students will identify the political challenges that delayed Utah’s state-"
+  },
+  {
+   "idx": "UT.2.8",
+   "kind": "standard",
+   "content": "Students will explain how their own connection to Utah is a reflection of"
+  },
+  {
+   "idx": "UT.3.1",
+   "kind": "standard",
+   "content": "Students will identify the civic virtues and principles codified by the"
+  },
+  {
+   "idx": "UT.3.2",
+   "kind": "standard",
+   "content": "Students will use primary sources and/or oral histories to analyze the"
+  },
+  {
+   "idx": "UT.3.3",
+   "kind": "standard",
+   "content": "Students will describe the effects of events, movements, and innova-"
+  },
+  {
+   "idx": "UT.3.4",
+   "kind": "standard",
+   "content": "Students will identify the causes and effects of the Progressive move-"
+  },
+  {
+   "idx": "UT.4.1",
+   "kind": "standard",
+   "content": "Students will evaluate the impact of the Cold War on Utah, such as the"
+  },
+  {
+   "idx": "UT.4.2",
+   "kind": "standard",
+   "content": "Students will make an evidence-based argument regarding the appro-"
+  },
+  {
+   "idx": "UT.4.3",
+   "kind": "standard",
+   "content": "Students will describe the economic ties between Utah communities,"
+  },
+  {
+   "idx": "UT.4.4",
+   "kind": "standard",
+   "content": "Students will use data and other evidence related to a cultural, ethnic, or"
+  },
+  {
+   "idx": "UT.4.5",
+   "kind": "standard",
+   "content": "Students will describe the historic and present management of natural"
+  },
+  {
+   "idx": "UT.4.6",
+   "kind": "standard",
+   "content": "Students will evaluate the impact of tourism on Utah’s economy and"
+  },
+  {
+   "idx": "UT.5.1",
+   "kind": "standard",
+   "content": "Students will select a recent event they think will be worthy of remem-"
+  },
+  {
+   "idx": "UT.5.2",
+   "kind": "standard",
+   "content": "Students will use geographic tools and resources to investigate a cur-"
+  },
+  {
+   "idx": "UT.5.3",
+   "kind": "standard",
+   "content": "Students will use data regarding the key components of Utah’s economy"
+  },
+  {
+   "idx": "UT.5.4",
+   "kind": "standard",
+   "content": "Students will use recent population growth and other demographic"
+  },
+  {
+   "idx": "UT.5.5",
+   "kind": "standard",
+   "content": "Students will research issues of civic importance in which city, county,"
+  }
+ ],
+ "8/math": [
+  {
+   "idx": "8.MP.1",
+   "kind": "standard",
+   "content": "Make sense of problems and persevere in solving them. Explain the"
+  },
+  {
+   "idx": "8.MP.2",
+   "kind": "standard",
+   "content": "Reason abstractly and quantitatively. Make sense of the quantities"
+  },
+  {
+   "idx": "8.MP.3",
+   "kind": "standard",
+   "content": "Construct viable arguments and critique the reasoning of others."
+  },
+  {
+   "idx": "8.MP.4",
+   "kind": "standard",
+   "content": "Model with mathematics. Apply mathematics to solve problems aris-"
+  },
+  {
+   "idx": "8.MP.5",
+   "kind": "standard",
+   "content": "Use appropriate tools strategically. Consider the available tools and"
+  },
+  {
+   "idx": "8.MP.6",
+   "kind": "standard",
+   "content": "Attend to precision. Communicate precisely to others. Use explicit"
+  },
+  {
+   "idx": "8.MP.7",
+   "kind": "standard",
+   "content": "Look for and make use of structure. Look closely at mathematical re-"
+  },
+  {
+   "idx": "8.MP.8",
+   "kind": "standard",
+   "content": "Look for and express regularity in repeated reasoning. Notice if rea-"
+  },
+  {
+   "idx": "8.NS.1",
+   "kind": "standard",
+   "content": "Know that numbers that are not rational are called irrational. Understand"
+  },
+  {
+   "idx": "8.NS.2",
+   "kind": "standard",
+   "content": "Use rational approximations of irrational numbers to compare the size of"
+  },
+  {
+   "idx": "8.NS.3",
+   "kind": "standard",
+   "content": "Understand how to perform operations and simplify radicals with empha-"
+  },
+  {
+   "idx": "8.EE.1",
+   "kind": "standard",
+   "content": "Know and apply the properties of integer exponents to generate equiva-"
+  },
+  {
+   "idx": "8.EE.2",
+   "kind": "standard",
+   "content": "Use square root and cube root symbols to represent solutions to equa-"
+  },
+  {
+   "idx": "8.EE.3",
+   "kind": "standard",
+   "content": "Use numbers expressed in the form of a single digit times an integer"
+  },
+  {
+   "idx": "8.EE.4",
+   "kind": "standard",
+   "content": "Perform operations with numbers expressed in scientific notation, includ-"
+  },
+  {
+   "idx": "8.EE.5",
+   "kind": "standard",
+   "content": "Graph proportional relationships, interpreting the unit rate as the slope"
+  },
+  {
+   "idx": "8.EE.6",
+   "kind": "standard",
+   "content": "Use similar triangles to explain why the slope m is the same between any"
+  },
+  {
+   "idx": "8.EE.7",
+   "kind": "standard",
+   "content": "Solve linear equations and inequalities in one variable."
+  },
+  {
+   "idx": "8.EE.8",
+   "kind": "standard",
+   "content": "Analyze and solve pairs of simultaneous linear equations."
+  },
+  {
+   "idx": "8.F.1",
+   "kind": "standard",
+   "content": "Understand that a function is a rule that assigns to each input exactly one"
+  },
+  {
+   "idx": "8.F.2",
+   "kind": "standard",
+   "content": "Compare properties of two functions, each represented in a different way"
+  },
+  {
+   "idx": "8.F.3",
+   "kind": "standard",
+   "content": "Interpret the equation y = mx + b as defining a linear function whose"
+  },
+  {
+   "idx": "8.F.4",
+   "kind": "standard",
+   "content": "Construct a function to model a linear relationship between two quanti-"
+  },
+  {
+   "idx": "8.F.5",
+   "kind": "standard",
+   "content": "Describe qualitatively the functional relationship between two quantities"
+  },
+  {
+   "idx": "8.G.1",
+   "kind": "standard",
+   "content": "Verify experimentally the properties of rotations, reflections, and"
+  },
+  {
+   "idx": "8.G.2",
+   "kind": "standard",
+   "content": "Understand that a two-dimensional figure is congruent to another if the"
+  },
+  {
+   "idx": "8.G.3",
+   "kind": "standard",
+   "content": "Observe that orientation of the plane is preserved in rotations and trans-"
+  },
+  {
+   "idx": "8.G.4",
+   "kind": "standard",
+   "content": "Understand that a two-dimensional figure is similar to another if the"
+  },
+  {
+   "idx": "8.G.5",
+   "kind": "standard",
+   "content": "Use informal arguments to establish facts about the angle sum and ex-"
+  },
+  {
+   "idx": "8.G.6",
+   "kind": "standard",
+   "content": "Explore and explain proofs of the Pythagorean Theorem and its converse."
+  },
+  {
+   "idx": "8.G.7",
+   "kind": "standard",
+   "content": "Apply the Pythagorean Theorem to determine unknown side lengths in"
+  },
+  {
+   "idx": "8.G.8",
+   "kind": "standard",
+   "content": "Apply the Pythagorean Theorem to find the distance between two points"
+  },
+  {
+   "idx": "8.G.9",
+   "kind": "standard",
+   "content": "Know the formulas for the volumes of cones, cylinders, and spheres, and"
+  },
+  {
+   "idx": "8.SP.1",
+   "kind": "standard",
+   "content": "Construct and interpret scatter plots for bivariate measurement data to"
+  },
+  {
+   "idx": "8.SP.2",
+   "kind": "standard",
+   "content": "Know that straight lines are widely used to model relationships between"
+  },
+  {
+   "idx": "8.SP.3",
+   "kind": "standard",
+   "content": "Use the equation of a linear model to solve problems in the context of"
+  },
+  {
+   "idx": "8.SP.4",
+   "kind": "standard",
+   "content": "Understand that patterns of association can also be seen in bivariate"
+  }
+ ],
+ "8/language": [
+  {
+   "idx": "7-8.SL.1",
+   "kind": "standard",
+   "content": "Participate effectively in a range of conversations and col-"
+  },
+  {
+   "idx": "7-8.SL.2",
+   "kind": "standard",
+   "content": "Evaluate the credibility of multiple sources of information"
+  },
+  {
+   "idx": "7-8.SL.3",
+   "kind": "standard",
+   "content": "Use appropriate language, grammar, organization, devel-"
+  },
+  {
+   "idx": "7-8.R.4",
+   "kind": "standard",
+   "content": "Read grade-level text* with accuracy and fluency to sup-"
+  },
+  {
+   "idx": "7-8.R.5",
+   "kind": "standard",
+   "content": "Cite textual evidence that supports an analysis of what the"
+  },
+  {
+   "idx": "7-8.R.6",
+   "kind": "standard",
+   "content": "When reading texts, including those from diverse cultures,"
+  },
+  {
+   "idx": "7-8.R.7",
+   "kind": "standard",
+   "content": "Analyze the impact of character and plot development on"
+  },
+  {
+   "idx": "7-8.R.8",
+   "kind": "standard",
+   "content": "Determine the meaning of words and phrases, including"
+  },
+  {
+   "idx": "7-8.R.9",
+   "kind": "standard",
+   "content": "Determine or clarify the meaning of unknown and multi-"
+  },
+  {
+   "idx": "7-8.R.10",
+   "kind": "standard",
+   "content": "Analyze the structure an author uses to organize a text,"
+  },
+  {
+   "idx": "7-8.R.11",
+   "kind": "standard",
+   "content": "Analyze how an author develops and contrasts the points"
+  },
+  {
+   "idx": "7-8.R.12",
+   "kind": "standard",
+   "content": "Compare a text to another text in a different medium"
+  },
+  {
+   "idx": "7-8.R.14",
+   "kind": "standard",
+   "content": "Compare two or more works of fiction with similar themes"
+  },
+  {
+   "idx": "7-8.W.1",
+   "kind": "standard",
+   "content": "Write arguments to support claims with logical reasoning,"
+  },
+  {
+   "idx": "7-8.W.2",
+   "kind": "standard",
+   "content": "Write informative/explanatory texts to examine a topic"
+  },
+  {
+   "idx": "7-8.W.3",
+   "kind": "standard",
+   "content": "Write narrative texts to develop real or imagined experi-"
+  },
+  {
+   "idx": "7-8.W.4",
+   "kind": "standard",
+   "content": "Conduct short research projects to craft an argument, an-"
+  }
+ ],
+ "8/science": [
+  {
+   "idx": "8.1.1",
+   "kind": "standard",
+   "content": "Develop a model to describe the scale and proportion of atoms and"
+  },
+  {
+   "idx": "8.1.2",
+   "kind": "standard",
+   "content": "Obtain information about various properties of matter, evaluate"
+  },
+  {
+   "idx": "8.1.3",
+   "kind": "standard",
+   "content": "Plan and conduct an investigation and then analyze and interpret"
+  },
+  {
+   "idx": "8.1.4",
+   "kind": "standard",
+   "content": "Obtain and evaluate information to describe how synthetic materials"
+  },
+  {
+   "idx": "8.1.5",
+   "kind": "standard",
+   "content": "Develop a model that uses computational thinking to illustrate cause"
+  },
+  {
+   "idx": "8.1.6",
+   "kind": "standard",
+   "content": "Develop a model to describe how the total number of atoms does"
+  },
+  {
+   "idx": "8.1.7",
+   "kind": "standard",
+   "content": "Design, construct, and test a device that can affect the rate of a phase"
+  },
+  {
+   "idx": "8.2.1",
+   "kind": "standard",
+   "content": "Use computational thinking to analyze data about the relationship"
+  },
+  {
+   "idx": "8.2.2",
+   "kind": "standard",
+   "content": "Ask questions about how the amount of potential energy varies as dis-"
+  },
+  {
+   "idx": "8.2.3",
+   "kind": "standard",
+   "content": "Engage in argument to identify the strongest evidence that supports the"
+  },
+  {
+   "idx": "8.2.4",
+   "kind": "standard",
+   "content": "Use computational thinking to describe a simple model for waves that"
+  },
+  {
+   "idx": "8.2.5",
+   "kind": "standard",
+   "content": "Develop and use a model to describe the structure of waves and how"
+  },
+  {
+   "idx": "8.2.6",
+   "kind": "standard",
+   "content": "Obtain and evaluate information to communicate the claim that the"
+  },
+  {
+   "idx": "8.3.1",
+   "kind": "standard",
+   "content": "Plan and conduct an investigation and use the evidence to construct"
+  },
+  {
+   "idx": "8.3.2",
+   "kind": "standard",
+   "content": "Develop a model to describe how food is changed through chemical"
+  },
+  {
+   "idx": "8.3.3",
+   "kind": "standard",
+   "content": "Ask questions to obtain, evaluate, and communicate information"
+  },
+  {
+   "idx": "8.4.1",
+   "kind": "standard",
+   "content": "Construct a scientific explanation based on evidence that shows that the"
+  },
+  {
+   "idx": "8.4.2",
+   "kind": "standard",
+   "content": "Engage in argument supported by evidence about the effect of per-"
+  },
+  {
+   "idx": "8.4.3",
+   "kind": "standard",
+   "content": "Design a solution to monitor or mitigate the potential effects of the"
+  },
+  {
+   "idx": "8.4.4",
+   "kind": "standard",
+   "content": "Analyze and interpret data on the factors that change global"
+  },
+  {
+   "idx": "8.4.5",
+   "kind": "standard",
+   "content": "Analyze and interpret patterns of the occurrence of natural hazards"
+  }
+ ],
+ "8/social": [
+  {
+   "idx": "USI.1.1",
+   "kind": "standard",
+   "content": "Students will analyze evidence, including artifacts and other primary"
+  },
+  {
+   "idx": "USI.1.2",
+   "kind": "standard",
+   "content": "Students will compare and evaluate historians’ interpretations of the"
+  },
+  {
+   "idx": "USI.1.3",
+   "kind": "standard",
+   "content": "Students will draw from multiple perspectives and cite evidence to"
+  },
+  {
+   "idx": "USI.1.4",
+   "kind": "standard",
+   "content": "Students will identify how the period of exploration has affected the"
+  },
+  {
+   "idx": "USI.2.1",
+   "kind": "standard",
+   "content": "Students will identify the economic, social, and geographic factors that"
+  },
+  {
+   "idx": "USI.2.2",
+   "kind": "standard",
+   "content": "Students will compare and contrast the economic, political, and social"
+  },
+  {
+   "idx": "USI.2.3",
+   "kind": "standard",
+   "content": "Students will use primary sources as evidence to contrast the daily life"
+  },
+  {
+   "idx": "USI.2.4",
+   "kind": "standard",
+   "content": "Students will explain historic and modern regional differences that"
+  },
+  {
+   "idx": "USI.3.1",
+   "kind": "standard",
+   "content": "Students will use primary sources to identify the significant events,"
+  },
+  {
+   "idx": "USI.3.2",
+   "kind": "standard",
+   "content": "Students will compare and evaluate historians’ interpretations of the"
+  },
+  {
+   "idx": "USI.3.3",
+   "kind": "standard",
+   "content": "Students will use primary sources to compare the contributions of key"
+  },
+  {
+   "idx": "USI.3.4",
+   "kind": "standard",
+   "content": "Students will explain how the ideas and events of the American"
+  },
+  {
+   "idx": "USI.4.1",
+   "kind": "standard",
+   "content": "Students will explain how the ideas, events, and compromises which"
+  },
+  {
+   "idx": "USI.4.2",
+   "kind": "standard",
+   "content": "Students will describe the structure and function of the government"
+  },
+  {
+   "idx": "USI.4.3",
+   "kind": "standard",
+   "content": "Students will use historic case studies and current events to trace how"
+  },
+  {
+   "idx": "USI.4.4",
+   "kind": "standard",
+   "content": "Students will use evidence to explain how the Constitution is a trans-"
+  },
+  {
+   "idx": "USI.5.1",
+   "kind": "standard",
+   "content": "Students will use evidence to document the development and evolu-"
+  },
+  {
+   "idx": "USI.5.2",
+   "kind": "standard",
+   "content": "Students will identify the conditions that gave rise to, and evaluate the"
+  },
+  {
+   "idx": "USI.5.3",
+   "kind": "standard",
+   "content": "Students will use case studies to document the expansion of demo-"
+  },
+  {
+   "idx": "USI.6.1",
+   "kind": "standard",
+   "content": "Students will compare and contrast historians’ interpretations of the"
+  },
+  {
+   "idx": "USI.6.2",
+   "kind": "standard",
+   "content": "Students will use primary sources representing multiple perspectives"
+  },
+  {
+   "idx": "USI.6.3",
+   "kind": "standard",
+   "content": "Students will identify the economic and geographic impact of the ear-"
+  },
+  {
+   "idx": "USI.6.4",
+   "kind": "standard",
+   "content": "Students will make a case for the most significant cultural, political,"
+  },
+  {
+   "idx": "USI.7.1",
+   "kind": "standard",
+   "content": "Students will explain how slavery and other geographic, social, eco-"
+  },
+  {
+   "idx": "USI.7.2",
+   "kind": "standard",
+   "content": "Students will use evidence to interpret the factors that were most sig-"
+  },
+  {
+   "idx": "USI.7.3",
+   "kind": "standard",
+   "content": "Students will compare historians’ interpretations of the compet-"
+  },
+  {
+   "idx": "USI.7.4",
+   "kind": "standard",
+   "content": "Students will use current events to evaluate the implications of the"
+  }
+ ],
+ "9/math": [
+  {
+   "idx": "SI.MP.1",
+   "kind": "standard",
+   "content": "Make sense of problems and persevere in solving them. Explain the"
+  },
+  {
+   "idx": "SI.MP.2",
+   "kind": "standard",
+   "content": "Reason abstractly and quantitatively. Make sense of the quantities"
+  },
+  {
+   "idx": "SI.MP.3",
+   "kind": "standard",
+   "content": "Construct viable arguments and critique the reasoning of others."
+  },
+  {
+   "idx": "SI.MP.4",
+   "kind": "standard",
+   "content": "Model with mathematics. Apply mathematics to solve problems aris-"
+  },
+  {
+   "idx": "SI.MP.5",
+   "kind": "standard",
+   "content": "Use appropriate tools strategically. Consider the available tools and"
+  },
+  {
+   "idx": "SI.MP.6",
+   "kind": "standard",
+   "content": "Attend to precision. Communicate precisely to others. Use explicit"
+  },
+  {
+   "idx": "SI.MP.7",
+   "kind": "standard",
+   "content": "Look for and make use of structure. Look closely at mathemati-"
+  },
+  {
+   "idx": "SI.MP.8",
+   "kind": "standard",
+   "content": "Look for and express regularity in repeated reasoning. Notice if rea-"
+  },
+  {
+   "idx": "N.Q.1",
+   "kind": "standard",
+   "content": "Use units as a way to understand problems and to guide the solution of"
+  },
+  {
+   "idx": "N.Q.2",
+   "kind": "standard",
+   "content": "Define appropriate quantities for the purpose of descriptive modeling."
+  },
+  {
+   "idx": "N.Q.3",
+   "kind": "standard",
+   "content": "Choose a level of accuracy appropriate to limitations on measurement"
+  },
+  {
+   "idx": "A.SSE.1",
+   "kind": "standard",
+   "content": "Interpret linear expressions and exponential expressions with integer"
+  },
+  {
+   "idx": "A.CED.1",
+   "kind": "standard",
+   "content": "Create equations and inequalities in one variable and use them to"
+  },
+  {
+   "idx": "A.CED.2",
+   "kind": "standard",
+   "content": "Create equations in two or more variables to represent relationships"
+  },
+  {
+   "idx": "A.CED.3",
+   "kind": "standard",
+   "content": "Represent constraints by equations or inequalities and by systems of"
+  },
+  {
+   "idx": "A.CED.4",
+   "kind": "standard",
+   "content": "Rearrange formulas to highlight a quantity of interest, using the same"
+  },
+  {
+   "idx": "A.REI.1",
+   "kind": "standard",
+   "content": "Explain each step in solving a linear equation as following from the"
+  },
+  {
+   "idx": "A.REI.3",
+   "kind": "standard",
+   "content": "Solve equations and inequalities in one variable."
+  },
+  {
+   "idx": "A.REI.5",
+   "kind": "standard",
+   "content": "Prove that, given a system of two equations in two variables, replacing"
+  },
+  {
+   "idx": "A.REI.6",
+   "kind": "standard",
+   "content": "Solve systems of linear equations exactly and approximately (numeri-"
+  },
+  {
+   "idx": "A.REI.10",
+   "kind": "standard",
+   "content": "Understand that the graph of an equation in two variables is the set of"
+  },
+  {
+   "idx": "A.REI.11",
+   "kind": "standard",
+   "content": "Explain why the x-coordinates of the points where the graphs of the"
+  },
+  {
+   "idx": "A.REI.12",
+   "kind": "standard",
+   "content": "Graph the solutions to a linear inequality in two variables as a half-"
+  },
+  {
+   "idx": "F.IF.1",
+   "kind": "standard",
+   "content": "Understand that a function from one set (called the domain) to another"
+  },
+  {
+   "idx": "F.IF.2",
+   "kind": "standard",
+   "content": "Use function notation, evaluate functions for inputs in their domains, and"
+  },
+  {
+   "idx": "F.IF.3",
+   "kind": "standard",
+   "content": "Recognize that sequences are functions, sometimes defined recursively,"
+  },
+  {
+   "idx": "F.IF.4",
+   "kind": "standard",
+   "content": "For a function that models a relationship between two quantities, in-"
+  },
+  {
+   "idx": "F.IF.5",
+   "kind": "standard",
+   "content": "Relate the domain of a function to its graph and, where applicable, to the"
+  },
+  {
+   "idx": "F.IF.6",
+   "kind": "standard",
+   "content": "Calculate and interpret the average rate of change of a function (present-"
+  },
+  {
+   "idx": "F.IF.7",
+   "kind": "standard",
+   "content": "Graph functions expressed symbolically and show key features of the"
+  },
+  {
+   "idx": "F.IF.9",
+   "kind": "standard",
+   "content": "C ompare properties of two functions, each represented in a different way"
+  },
+  {
+   "idx": "F.BF.1",
+   "kind": "standard",
+   "content": "Write a function that describes a relationship between two quantities."
+  },
+  {
+   "idx": "F.BF.2",
+   "kind": "standard",
+   "content": "Write arithmetic and geometric sequences both recursively and with an"
+  },
+  {
+   "idx": "F.BF.3",
+   "kind": "standard",
+   "content": "Identify the effect on the graph of replacing f(x) by f(x) + k, for specific"
+  },
+  {
+   "idx": "F.LE.1",
+   "kind": "standard",
+   "content": "Distinguish between situations that can be modeled with linear functions"
+  },
+  {
+   "idx": "F.LE.2",
+   "kind": "standard",
+   "content": "Construct linear and exponential functions, including arithmetic and"
+  },
+  {
+   "idx": "F.LE.3",
+   "kind": "standard",
+   "content": "Observe using graphs and tables that a quantity increasing exponentially"
+  },
+  {
+   "idx": "F.LE.5",
+   "kind": "standard",
+   "content": "Interpret the parameters in a linear or exponential function in terms of a"
+  },
+  {
+   "idx": "G.CO.1",
+   "kind": "standard",
+   "content": "Know precise definitions of angle, circle, perpendicular line, parallel line,"
+  },
+  {
+   "idx": "G.CO.2",
+   "kind": "standard",
+   "content": "Represent transformations in the plane using, for example, transparen-"
+  },
+  {
+   "idx": "G.CO.3",
+   "kind": "standard",
+   "content": "Given a rectangle, parallelogram, trapezoid, or regular polygon, describe"
+  },
+  {
+   "idx": "G.CO.4",
+   "kind": "standard",
+   "content": "Develop definitions of rotations, reflections, and translations in terms of"
+  },
+  {
+   "idx": "G.CO.5",
+   "kind": "standard",
+   "content": "Given a geometric figure and a rotation, reflection, or translation, draw"
+  },
+  {
+   "idx": "G.CO.6",
+   "kind": "standard",
+   "content": "Use geometric descriptions of rigid motions to transform figures and"
+  },
+  {
+   "idx": "G.CO.7",
+   "kind": "standard",
+   "content": "Use the definition of congruence in terms of rigid motions to show that"
+  },
+  {
+   "idx": "G.CO.8",
+   "kind": "standard",
+   "content": "Explain how the criteria for triangle congruence (ASA, SAS, and SSS) fol-"
+  },
+  {
+   "idx": "G.CO.12",
+   "kind": "standard",
+   "content": "Make formal geometric constructions with a variety of tools and"
+  },
+  {
+   "idx": "G.CO.13",
+   "kind": "standard",
+   "content": "Construct an equilateral triangle, a square, and a regular hexagon"
+  },
+  {
+   "idx": "G.GPE.4",
+   "kind": "standard",
+   "content": "Use coordinates to prove simple geometric theorems algebraically. For"
+  },
+  {
+   "idx": "G.GPE.5",
+   "kind": "standard",
+   "content": "Prove the slope criteria for parallel and perpendicular lines; use them"
+  },
+  {
+   "idx": "G.GPE.7",
+   "kind": "standard",
+   "content": "Use coordinates to compute perimeters of polygons and areas of"
+  },
+  {
+   "idx": "S.ID.1",
+   "kind": "standard",
+   "content": "Represent data with plots on the real number line (dot plots, histograms,"
+  },
+  {
+   "idx": "S.ID.2",
+   "kind": "standard",
+   "content": "Use statistics appropriate to the shape of the data distribution to compare"
+  },
+  {
+   "idx": "S.ID.3",
+   "kind": "standard",
+   "content": "Interpret differences in shape, center, and spread in the context of the"
+  },
+  {
+   "idx": "S.ID.6",
+   "kind": "standard",
+   "content": "Represent data on two quantitative variables on a scatter plot, and de-"
+  },
+  {
+   "idx": "S.ID.7",
+   "kind": "standard",
+   "content": "Interpret the slope (rate of change) and the intercept (constant term) of a"
+  },
+  {
+   "idx": "S.ID.8",
+   "kind": "standard",
+   "content": "Compute (using technology) and interpret the correlation coefficient of a"
+  },
+  {
+   "idx": "S.ID.9",
+   "kind": "standard",
+   "content": "Distinguish between correlation and causation."
+  }
+ ],
+ "9/language": [
+  {
+   "idx": "9-10.SL.1",
+   "kind": "standard",
+   "content": "Participate effectively in a range of conversations and col-"
+  },
+  {
+   "idx": "9-10.SL.2",
+   "kind": "standard",
+   "content": "Interpret and evaluate the credibility of multiple sources of"
+  },
+  {
+   "idx": "9-10.SL.3",
+   "kind": "standard",
+   "content": "Use appropriate language, grammar, organization, devel-"
+  },
+  {
+   "idx": "9-10.R.4",
+   "kind": "standard",
+   "content": "Read grade-level text* with accuracy and fluency to sup-"
+  },
+  {
+   "idx": "9-10.R.5",
+   "kind": "standard",
+   "content": "Cite relevant textual evidence to support analysis of what"
+  },
+  {
+   "idx": "9-10.R.6",
+   "kind": "standard",
+   "content": "When reading texts, including those from diverse cultures,"
+  },
+  {
+   "idx": "9-10.R.7",
+   "kind": "standard",
+   "content": "Analyze how plot elements and dialogue interact, shape"
+  },
+  {
+   "idx": "9-10.R.8",
+   "kind": "standard",
+   "content": "Determine the meaning and impact of words and phrases"
+  },
+  {
+   "idx": "9-10.R.9",
+   "kind": "standard",
+   "content": "Determine or clarify the meaning of unknown and multiple-"
+  },
+  {
+   "idx": "9-10.R.10",
+   "kind": "standard",
+   "content": "Analyze and evaluate the effectiveness of the structures an"
+  },
+  {
+   "idx": "9-10.R.11",
+   "kind": "standard",
+   "content": "Analyze how an author’s geographic location, identity or"
+  },
+  {
+   "idx": "9-10.R.12",
+   "kind": "standard",
+   "content": "Compare a text to another text in a different medium ana-"
+  },
+  {
+   "idx": "9-10.R.14",
+   "kind": "standard",
+   "content": "Analyze two or more works of fiction with similar themes or"
+  },
+  {
+   "idx": "9-10.W.1",
+   "kind": "standard",
+   "content": "Write arguments to support claims in an analysis of com-"
+  },
+  {
+   "idx": "9-10.W.2",
+   "kind": "standard",
+   "content": "Write informative/explanatory texts to examine and con-"
+  },
+  {
+   "idx": "9-10.W.3",
+   "kind": "standard",
+   "content": "Write narrative texts to develop real or imagined experi-"
+  },
+  {
+   "idx": "9-10.W.4",
+   "kind": "standard",
+   "content": "Conduct more sustained research projects to craft an argu-"
+  }
+ ],
+ "9/science": [
+  {
+   "idx": "BIO.1.1",
+   "kind": "standard",
+   "content": "Plan and carry out an investigation to analyze and interpret data"
+  },
+  {
+   "idx": "BIO.1.2",
+   "kind": "standard",
+   "content": "Develop and use a model to explain cycling of matter and flow of"
+  },
+  {
+   "idx": "BIO.1.3",
+   "kind": "standard",
+   "content": "Analyze and interpret data to determine the effects of"
+  },
+  {
+   "idx": "BIO.1.4",
+   "kind": "standard",
+   "content": "Develop an argument from evidence for how ecosystems"
+  },
+  {
+   "idx": "BIO.1.5",
+   "kind": "standard",
+   "content": "Design a solution that reduces the impact caused by human"
+  },
+  {
+   "idx": "BIO.2.1",
+   "kind": "standard",
+   "content": "Construct an explanation based on evidence that all organisms"
+  },
+  {
+   "idx": "BIO.2.2",
+   "kind": "standard",
+   "content": "Ask questions to plan and carry out an investigation to determine"
+  },
+  {
+   "idx": "BIO.2.3",
+   "kind": "standard",
+   "content": "Develop and use a model to illustrate the cycling of matter and flow"
+  },
+  {
+   "idx": "BIO.2.4",
+   "kind": "standard",
+   "content": "Plan and carry out an investigation to determine how cells maintain"
+  },
+  {
+   "idx": "BIO.2.5",
+   "kind": "standard",
+   "content": "Construct an explanation about the role of mitosis in the production,"
+  },
+  {
+   "idx": "BIO.2.6",
+   "kind": "standard",
+   "content": "Ask questions to develop an argument for how the structure"
+  },
+  {
+   "idx": "BIO.2.7",
+   "kind": "standard",
+   "content": "Plan and carry out an investigation to provide evidence of"
+  },
+  {
+   "idx": "BIO.3.1",
+   "kind": "standard",
+   "content": "Construct an explanation for how the structure of DNA is replicated,"
+  },
+  {
+   "idx": "BIO.3.2",
+   "kind": "standard",
+   "content": "Use computational thinking and patterns to make predictions"
+  },
+  {
+   "idx": "BIO.3.3",
+   "kind": "standard",
+   "content": "Engage in argument from evidence that inheritable genetic"
+  },
+  {
+   "idx": "BIO.3.4",
+   "kind": "standard",
+   "content": "Plan and carry out an investigation and use computational"
+  },
+  {
+   "idx": "BIO.3.5",
+   "kind": "standard",
+   "content": "Evaluate design solutions where biotechnology was used to identify"
+  },
+  {
+   "idx": "BIO.4.1",
+   "kind": "standard",
+   "content": "Obtain, evaluate, and communicate information to identify the"
+  },
+  {
+   "idx": "BIO.4.2",
+   "kind": "standard",
+   "content": "Construct an explanation based on evidence that natural selection"
+  },
+  {
+   "idx": "BIO.4.3",
+   "kind": "standard",
+   "content": "Analyze and interpret data to identify patterns that explain the claim"
+  },
+  {
+   "idx": "BIO.4.4",
+   "kind": "standard",
+   "content": "Engage in argument from evidence that changes in environmental"
+  },
+  {
+   "idx": "BIO.4.5",
+   "kind": "standard",
+   "content": "Evaluate design solutions that can best solve a real-world problem"
+  },
+  {
+   "idx": "ESS.1.1",
+   "kind": "standard",
+   "content": "Develop a model based on evidence to illustrate the life span of"
+  },
+  {
+   "idx": "ESS.1.2",
+   "kind": "standard",
+   "content": "Construct an explanation of the Big Bang theory based on"
+  },
+  {
+   "idx": "ESS.1.3",
+   "kind": "standard",
+   "content": "Develop a model to illustrate the changes in matter occurring in a"
+  },
+  {
+   "idx": "ESS.1.4",
+   "kind": "standard",
+   "content": "Design a solution to a space exploration challenge by breaking"
+  },
+  {
+   "idx": "ESS.2.1",
+   "kind": "standard",
+   "content": "Analyze and interpret data to construct an explanation for the"
+  },
+  {
+   "idx": "ESS.2.2",
+   "kind": "standard",
+   "content": "Develop and use a model based on evidence of Earth’s interior and"
+  },
+  {
+   "idx": "ESS.2.3",
+   "kind": "standard",
+   "content": "Construct an explanation for how plate tectonics results in patterns"
+  },
+  {
+   "idx": "ESS.2.4",
+   "kind": "standard",
+   "content": "Develop and use a model to illustrate how Earth’s internal and"
+  },
+  {
+   "idx": "ESS.2.5",
+   "kind": "standard",
+   "content": "Engage in argument from evidence for how the simultaneous co-"
+  },
+  {
+   "idx": "ESS.2.6",
+   "kind": "standard",
+   "content": "Evaluate design solutions that reduce the effects of natural disasters"
+  },
+  {
+   "idx": "ESS.3.1",
+   "kind": "standard",
+   "content": "Plan and carry out an investigation of the properties of water and"
+  },
+  {
+   "idx": "ESS.3.2",
+   "kind": "standard",
+   "content": "Construct an explanation of how heat (energy) and water (matter)"
+  },
+  {
+   "idx": "ESS.3.3",
+   "kind": "standard",
+   "content": "Construct an explanation for how energy from the Sun drives"
+  },
+  {
+   "idx": "ESS.3.4",
+   "kind": "standard",
+   "content": "Analyze and interpret patterns in data about the factors influencing"
+  },
+  {
+   "idx": "ESS.3.5",
+   "kind": "standard",
+   "content": "Develop and use a quantitative model to describe the cycling of"
+  },
+  {
+   "idx": "ESS.3.6",
+   "kind": "standard",
+   "content": "Analyze and interpret data from global climate records to illustrate"
+  },
+  {
+   "idx": "ESS.3.7",
+   "kind": "standard",
+   "content": "Engage in argument from evidence to support the claim that one"
+  },
+  {
+   "idx": "ESS.4.1",
+   "kind": "standard",
+   "content": "Construct an explanation for how the availability of natural resources,"
+  },
+  {
+   "idx": "ESS.4.2",
+   "kind": "standard",
+   "content": "Use computational thinking to explain the relationships between"
+  },
+  {
+   "idx": "ESS.4.3",
+   "kind": "standard",
+   "content": "Evaluate design solutions for developing, managing, and utilizing"
+  },
+  {
+   "idx": "ESS.4.4",
+   "kind": "standard",
+   "content": "Evaluate design solutions for a major global or local environmental"
+  }
+ ],
+ "9/social": [
+  {
+   "idx": "WG.1.1",
+   "kind": "standard",
+   "content": "Students will describe the significant forces that influence the physi-"
+  },
+  {
+   "idx": "WG.1.2",
+   "kind": "standard",
+   "content": "Students will identify patterns evident in the geographic distribution of"
+  },
+  {
+   "idx": "WG.1.3",
+   "kind": "standard",
+   "content": "Students will cite evidence of how the distribution of natural resources"
+  },
+  {
+   "idx": "WG.1.4",
+   "kind": "standard",
+   "content": "Students will use geographic reasoning to propose actions that mitigate"
+  },
+  {
+   "idx": "WG.2.1",
+   "kind": "standard",
+   "content": "Students will evaluate the impact of population distribution patterns at"
+  },
+  {
+   "idx": "WG.2.2",
+   "kind": "standard",
+   "content": "Students will explain push and pull factors causing voluntary and invol-"
+  },
+  {
+   "idx": "WG.2.3",
+   "kind": "standard",
+   "content": "Students will investigate the effects of significant patterns of human"
+  },
+  {
+   "idx": "WG.3.1",
+   "kind": "standard",
+   "content": "Students will identify and describe the essential defining characteristics"
+  },
+  {
+   "idx": "WG.3.2",
+   "kind": "standard",
+   "content": "Students will explain how the physical environment influences and is"
+  },
+  {
+   "idx": "WG.3.3",
+   "kind": "standard",
+   "content": "Students will identify how culture influences sense of place, point of"
+  },
+  {
+   "idx": "WG.3.4",
+   "kind": "standard",
+   "content": "Students will identify the causes, methods, and effects for the diffusion"
+  },
+  {
+   "idx": "WG.3.5",
+   "kind": "standard",
+   "content": "Students will explain how the basic tenets of world religions affect the"
+  },
+  {
+   "idx": "WG.3.6",
+   "kind": "standard",
+   "content": "Students will cite examples of how globalization creates challenges and"
+  },
+  {
+   "idx": "WG.3.7",
+   "kind": "standard",
+   "content": "Students will demonstrate an understanding of their own culture’s con-"
+  },
+  {
+   "idx": "WG.4.1",
+   "kind": "standard",
+   "content": "Students will explain why and how people organize into a range of po-"
+  },
+  {
+   "idx": "WG.4.2",
+   "kind": "standard",
+   "content": "Students will describe and explain the role physical and human charac-"
+  },
+  {
+   "idx": "WG.4.3",
+   "kind": "standard",
+   "content": "Students will explain how cooperation and conflict have many causes,"
+  },
+  {
+   "idx": "WG.5.1",
+   "kind": "standard",
+   "content": "Students will explain the essential attributes of a developed economy"
+  },
+  {
+   "idx": "WG.5.2",
+   "kind": "standard",
+   "content": "Students will describe and compare the function and distribution of"
+  },
+  {
+   "idx": "WG.5.3",
+   "kind": "standard",
+   "content": "Students will explain key economic concepts and their implications for"
+  },
+  {
+   "idx": "WG.5.4",
+   "kind": "standard",
+   "content": "Students will cite examples of various levels of economic interdepen-"
+  },
+  {
+   "idx": "WG.5.5",
+   "kind": "standard",
+   "content": "Students will describe the costs, benefits, and sustainability of develop-"
+  }
+ ]
+}

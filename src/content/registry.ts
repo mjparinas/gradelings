@@ -37,6 +37,7 @@ import { manifest as saskatchewan } from "./saskatchewan/manifest";
 import { manifest as southCarolina } from "./south-carolina/manifest";
 import { manifest as tennessee } from "./tennessee/manifest";
 import { manifest as texas } from "./texas/manifest";
+import { manifest as utah } from "./utah/manifest";
 import { manifest as virginia } from "./virginia/manifest";
 import { manifest as washington } from "./washington/manifest";
 import { manifest as wisconsin } from "./wisconsin/manifest";
@@ -91,6 +92,7 @@ const MANIFESTS = [
   southCarolina,
   tennessee,
   texas,
+  utah,
   virginia,
   washington,
   wisconsin,
