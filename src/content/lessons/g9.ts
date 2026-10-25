@@ -379,6 +379,12 @@ const math: GradeLessons = {
     ["x − 3 = 5, so x = 8.", "x − 3 = −5, so x = −2."],
     "x = −2 or x = 8",
   ),
+  "math/md-g9-absolute-value": lesson(
+    ["|x − a| is the distance between x and a on the number line.", "|x − a| = b means x − a = b or x − a = −b, so there are two answers (none if b is negative).", "|x − a| < b means x is between a − b and a + b. |x − a| > b means x is outside them."],
+    "Solve |x − 3| = 5.",
+    ["x − 3 = 5, so x = 8.", "x − 3 = −5, so x = −2."],
+    "x = −2 or x = 8",
+  ),
   "math/nj-g9-absolute-value": lesson(
     ["|x − a| is the distance between x and a on the number line.", "|x − a| = b means x − a = b or x − a = −b, so there are two answers (none if b is negative).", "|x − a| < b means x is between a − b and a + b. |x − a| > b means x is outside them."],
     "Solve |x − 3| = 5.",

@@ -1,0 +1,913 @@
+{
+ "data": {
+  "cspStatus": {},
+  "document": {
+   "asnIdentifier": "D21255207",
+   "id": "D21255207",
+   "publicationStatus": "Published",
+   "sourceURL": "https://marylandpublicschools.org/about/Documents/DCAA/SocialStudies/Framework/Kindergarten.pdf",
+   "title": "Maryland Social Studies Framework: Kindergarten",
+   "valid": "2020"
+  },
+  "educationLevels": [
+   "K"
+  ],
+  "id": "49FCDFBD2CF04033A9C347BFA0584DF0_D21255207_grade-k",
+  "jurisdiction": {
+   "id": "49FCDFBD2CF04033A9C347BFA0584DF0",
+   "title": "Maryland"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/3.0/us/",
+   "rightsHolder": "D2L Corporation",
+   "title": "CC BY 3.0 US"
+  },
+  "normalizedSubject": "Social Studies",
+  "standards": {
+   "06E2619BB9CE4B928F1838C3E1D44AA4": {
+    "ancestorIds": [
+     "7A38777800BC46DAB71CAF62C3F07B9F",
+     "B9A93FB8B9B248649F11E47FE542428C"
+    ],
+    "asnIdentifier": "S21255226",
+    "depth": 2,
+    "description": "exploring how rules support the fundamental values of democracy: freedom, equality, equity, the common good, liberty, and justice.",
+    "id": "06E2619BB9CE4B928F1838C3E1D44AA4",
+    "parentId": "7A38777800BC46DAB71CAF62C3F07B9F",
+    "position": 19000,
+    "statementLabel": "Objective",
+    "statementNotation": "C.3.d"
+   },
+   "0E0E6B9829A3435286AA47F30AC7B9F4": {
+    "ancestorIds": [
+     "275CF56BD5954A76974B3F5F20E5A960",
+     "9644F7317AD340F891617646085608AA"
+    ],
+    "asnIdentifier": "S21255231",
+    "depth": 2,
+    "description": "locating Maryland using cardinal directions on maps, globes, GPS, and/or Google Earth.",
+    "id": "0E0E6B9829A3435286AA47F30AC7B9F4",
+    "parentId": "275CF56BD5954A76974B3F5F20E5A960",
+    "position": 24000,
+    "statementLabel": "Objective",
+    "statementNotation": "G.1.a"
+   },
+   "1A1ED44A18374275800006D5BF7F85BE": {
+    "ancestorIds": [
+     "7BFC6E2E190D49B090F2075EE3BC4F73",
+     "E5CF7C2E5F0E40139CBA236C7A22684B"
+    ],
+    "asnIdentifier": "S21255259",
+    "depth": 2,
+    "description": "describing times when they have traded, the goods or services that were exchanged, and the benefit they got from the trade.",
+    "id": "1A1ED44A18374275800006D5BF7F85BE",
+    "parentId": "7BFC6E2E190D49B090F2075EE3BC4F73",
+    "position": 52000,
+    "statementLabel": "Objective",
+    "statementNotation": "E.3.c"
+   },
+   "1FF8F7DB2D8C42A9BD07A4D3CA112092": {
+    "ancestorIds": [
+     "DD399799F5144CC3910C891061FD59C3"
+    ],
+    "asnIdentifier": "S21255269",
+    "depth": 1,
+    "description": "Analyze life in the past by:",
+    "id": "1FF8F7DB2D8C42A9BD07A4D3CA112092",
+    "parentId": "DD399799F5144CC3910C891061FD59C3",
+    "position": 62000,
+    "statementLabel": "Indicator",
+    "statementNotation": "H.2"
+   },
+   "21F0CCC91AC54FFBA19376C35AAA8B5F": {
+    "ancestorIds": [
+     "9F481297A95949C38C6E8A489B59CF81",
+     "9644F7317AD340F891617646085608AA"
+    ],
+    "asnIdentifier": "S21255239",
+    "depth": 2,
+    "description": "describing why and how people in Maryland protect the environment.",
+    "id": "21F0CCC91AC54FFBA19376C35AAA8B5F",
+    "parentId": "9F481297A95949C38C6E8A489B59CF81",
+    "position": 32000,
+    "statementLabel": "Objective",
+    "statementNotation": "G.2.b"
+   },
+   "275CF56BD5954A76974B3F5F20E5A960": {
+    "ancestorIds": [
+     "9644F7317AD340F891617646085608AA"
+    ],
+    "asnIdentifier": "S21255230",
+    "depth": 1,
+    "description": "Explain how location makes their community special by:",
+    "id": "275CF56BD5954A76974B3F5F20E5A960",
+    "parentId": "9644F7317AD340F891617646085608AA",
+    "position": 23000,
+    "statementLabel": "Indicator",
+    "statementNotation": "G.1"
+   },
+   "2774A30D18DB4F5890DB937C6770F834": {
+    "ancestorIds": [
+     "275CF56BD5954A76974B3F5F20E5A960",
+     "9644F7317AD340F891617646085608AA"
+    ],
+    "asnIdentifier": "S21255236",
+    "depth": 2,
+    "description": "drawing the school's community using bird's eye view that includes important landmarks in a school or community.",
+    "id": "2774A30D18DB4F5890DB937C6770F834",
+    "parentId": "275CF56BD5954A76974B3F5F20E5A960",
+    "position": 29000,
+    "statementLabel": "Objective",
+    "statementNotation": "G.1.f"
+   },
+   "2BBFBBA1C51248C69166DB4ED2532CC6": {
+    "ancestorIds": [
+     "385B6DB5E5C84434B6DB43E953105281",
+     "B9A93FB8B9B248649F11E47FE542428C"
+    ],
+    "asnIdentifier": "S21255217",
+    "depth": 2,
+    "description": "identifying how multiple perspectives and the freedom to express varied opinions in a democratic society can complicate conflict resolution.",
+    "id": "2BBFBBA1C51248C69166DB4ED2532CC6",
+    "parentId": "385B6DB5E5C84434B6DB43E953105281",
+    "position": 10000,
+    "statementLabel": "Objective",
+    "statementNotation": "C.2.b"
+   },
+   "320CAF924A8B459D8309C3F7BC27D9BD": {
+    "ancestorIds": [
+     "7D92C6BAB6574B438385B84F815C76ED",
+     "DD399799F5144CC3910C891061FD59C3"
+    ],
+    "asnIdentifier": "S21255268",
+    "depth": 2,
+    "description": "constructing personal timelines that show events from the past, present, and dreams for the future.",
+    "id": "320CAF924A8B459D8309C3F7BC27D9BD",
+    "parentId": "7D92C6BAB6574B438385B84F815C76ED",
+    "position": 61000,
+    "statementLabel": "Objective",
+    "statementNotation": "H.1.c"
+   },
+   "330DACF116F44668A7D862FDFE9843D2": {
+    "ancestorIds": [
+     "F9B4A98ECE4F4382AC1D10C6A4D04441",
+     "B9A93FB8B9B248649F11E47FE542428C"
+    ],
+    "asnIdentifier": "S21255214",
+    "depth": 2,
+    "description": "analyzing the collective responsibility to protect one another from the infringement upon freedom for others in our community.",
+    "id": "330DACF116F44668A7D862FDFE9843D2",
+    "parentId": "F9B4A98ECE4F4382AC1D10C6A4D04441",
+    "position": 7000,
+    "statementLabel": "Objective",
+    "statementNotation": "C.1.e"
+   },
+   "385B6DB5E5C84434B6DB43E953105281": {
+    "ancestorIds": [
+     "B9A93FB8B9B248649F11E47FE542428C"
+    ],
+    "asnIdentifier": "S21255215",
+    "depth": 1,
+    "description": "Examine the role of compromise by:",
+    "id": "385B6DB5E5C84434B6DB43E953105281",
+    "parentId": "B9A93FB8B9B248649F11E47FE542428C",
+    "position": 8000,
+    "statementLabel": "Indicator",
+    "statementNotation": "C.2"
+   },
+   "39B790E2589445E0A76CF4E029750573": {
+    "ancestorIds": [
+     "7A38777800BC46DAB71CAF62C3F07B9F",
+     "B9A93FB8B9B248649F11E47FE542428C"
+    ],
+    "asnIdentifier": "S21255228",
+    "depth": 2,
+    "description": "evaluating classroom rules for their ability to promote freedom, equality and equity.",
+    "id": "39B790E2589445E0A76CF4E029750573",
+    "parentId": "7A38777800BC46DAB71CAF62C3F07B9F",
+    "position": 21000,
+    "statementLabel": "Objective",
+    "statementNotation": "C.3.f"
+   },
+   "3CA55AD6780D40ADA59EE5A7CC121237": {
+    "ancestorIds": [
+     "7A38777800BC46DAB71CAF62C3F07B9F",
+     "B9A93FB8B9B248649F11E47FE542428C"
+    ],
+    "asnIdentifier": "S21255225",
+    "depth": 2,
+    "description": "explaining why rules are different based on location.",
+    "id": "3CA55AD6780D40ADA59EE5A7CC121237",
+    "parentId": "7A38777800BC46DAB71CAF62C3F07B9F",
+    "position": 18000,
+    "statementLabel": "Objective",
+    "statementNotation": "C.3.c"
+   },
+   "3DF2C704EF9D48DEBB00393D6E2381B3": {
+    "ancestorIds": [
+     "8E5066E88D0A4A56B95F8CF6ECB712EC",
+     "E5CF7C2E5F0E40139CBA236C7A22684B"
+    ],
+    "asnIdentifier": "S21255262",
+    "depth": 2,
+    "description": "inquiring about choices that were made in order for people in their community to have certain jobs and careers.",
+    "id": "3DF2C704EF9D48DEBB00393D6E2381B3",
+    "parentId": "8E5066E88D0A4A56B95F8CF6ECB712EC",
+    "position": 55000,
+    "statementLabel": "Objective",
+    "statementNotation": "E.4.b"
+   },
+   "497C64D3D9FB4235B019604A15BEF396": {
+    "ancestorIds": [
+     "F695DB6CECCA4812A86EE9A50A6474E0",
+     "E5CF7C2E5F0E40139CBA236C7A22684B"
+    ],
+    "asnIdentifier": "S21255252",
+    "depth": 2,
+    "description": "identifying that incentives influence the choices we make.",
+    "id": "497C64D3D9FB4235B019604A15BEF396",
+    "parentId": "F695DB6CECCA4812A86EE9A50A6474E0",
+    "position": 45000,
+    "statementLabel": "Objective",
+    "statementNotation": "E.2.b"
+   },
+   "4AAA7C8336E54C5FB033C8FD37A81741": {
+    "ancestorIds": [
+     "275CF56BD5954A76974B3F5F20E5A960",
+     "9644F7317AD340F891617646085608AA"
+    ],
+    "asnIdentifier": "S21255235",
+    "depth": 2,
+    "description": "describing where places are located in their school community on a map using relative distance and direction, such as near-far, above-below and cardinal directions (north, south, east, and west).",
+    "id": "4AAA7C8336E54C5FB033C8FD37A81741",
+    "parentId": "275CF56BD5954A76974B3F5F20E5A960",
+    "position": 28000,
+    "statementLabel": "Objective",
+    "statementNotation": "G.1.e"
+   },
+   "4B31ABB6146F4B26ABE57E34E5608F43": {
+    "ancestorIds": [
+     "8E5066E88D0A4A56B95F8CF6ECB712EC",
+     "E5CF7C2E5F0E40139CBA236C7A22684B"
+    ],
+    "asnIdentifier": "S21255263",
+    "depth": 2,
+    "description": "identifying the personal characteristics and interests that are needed for certain jobs and careers.",
+    "id": "4B31ABB6146F4B26ABE57E34E5608F43",
+    "parentId": "8E5066E88D0A4A56B95F8CF6ECB712EC",
+    "position": 56000,
+    "statementLabel": "Objective",
+    "statementNotation": "E.4.c"
+   },
+   "55857B9CD51D461FB9E6B74EDF85AA47": {
+    "ancestorIds": [
+     "275CF56BD5954A76974B3F5F20E5A960",
+     "9644F7317AD340F891617646085608AA"
+    ],
+    "asnIdentifier": "S21255232",
+    "depth": 2,
+    "description": "describing the relative location of Maryland by identifying the equator and north and south poles.",
+    "id": "55857B9CD51D461FB9E6B74EDF85AA47",
+    "parentId": "275CF56BD5954A76974B3F5F20E5A960",
+    "position": 25000,
+    "statementLabel": "Objective",
+    "statementNotation": "G.1.b"
+   },
+   "5AB452BA60714DA2BF5EDBC4DCE4E4AB": {
+    "ancestorIds": [
+     "385B6DB5E5C84434B6DB43E953105281",
+     "B9A93FB8B9B248649F11E47FE542428C"
+    ],
+    "asnIdentifier": "S21255218",
+    "depth": 2,
+    "description": "identifying that in the United States, individuals and groups have the ability to address problems in their community.",
+    "id": "5AB452BA60714DA2BF5EDBC4DCE4E4AB",
+    "parentId": "385B6DB5E5C84434B6DB43E953105281",
+    "position": 11000,
+    "statementLabel": "Objective",
+    "statementNotation": "C.2.c"
+   },
+   "5CFE56E3DF454350B32727427CE079EF": {
+    "ancestorIds": [
+     "385B6DB5E5C84434B6DB43E953105281",
+     "B9A93FB8B9B248649F11E47FE542428C"
+    ],
+    "asnIdentifier": "S21255216",
+    "depth": 2,
+    "description": "identifying school or community conflicts that require working with groups to resolve.",
+    "id": "5CFE56E3DF454350B32727427CE079EF",
+    "parentId": "385B6DB5E5C84434B6DB43E953105281",
+    "position": 9000,
+    "statementLabel": "Objective",
+    "statementNotation": "C.2.a"
+   },
+   "60B41B512549433ABFAD95E95B3F937A": {
+    "ancestorIds": [
+     "CF4A57A14C0F46F1B95EDC786B88B49D",
+     "9644F7317AD340F891617646085608AA"
+    ],
+    "asnIdentifier": "S21255243",
+    "depth": 2,
+    "description": "explaining how communication links people to ideas both near and far.",
+    "id": "60B41B512549433ABFAD95E95B3F937A",
+    "parentId": "CF4A57A14C0F46F1B95EDC786B88B49D",
+    "position": 36000,
+    "statementLabel": "Objective",
+    "statementNotation": "G.3.b"
+   },
+   "63AF2C9FD56B4528A4AAF80C8B5C3736": {
+    "ancestorIds": [
+     "F9B4A98ECE4F4382AC1D10C6A4D04441",
+     "B9A93FB8B9B248649F11E47FE542428C"
+    ],
+    "asnIdentifier": "S21255210",
+    "depth": 2,
+    "description": "defining freedom as being able to choose what your life looks like without interference from others.",
+    "id": "63AF2C9FD56B4528A4AAF80C8B5C3736",
+    "parentId": "F9B4A98ECE4F4382AC1D10C6A4D04441",
+    "position": 3000,
+    "statementLabel": "Objective",
+    "statementNotation": "C.1.a"
+   },
+   "64A8078427FE43239F6E197E05E6FB5B": {
+    "ancestorIds": [
+     "C22AB3A4762D4C91803D77DE2AE4A2DD",
+     "E5CF7C2E5F0E40139CBA236C7A22684B"
+    ],
+    "asnIdentifier": "S21255247",
+    "depth": 2,
+    "description": "explaining why people can't have everything they want using classroom and school examples.",
+    "id": "64A8078427FE43239F6E197E05E6FB5B",
+    "parentId": "C22AB3A4762D4C91803D77DE2AE4A2DD",
+    "position": 40000,
+    "statementLabel": "Objective",
+    "statementNotation": "E.1.a"
+   },
+   "65F3DE672CB6429C84B8F1DA508A20A5": {
+    "ancestorIds": [
+     "F695DB6CECCA4812A86EE9A50A6474E0",
+     "E5CF7C2E5F0E40139CBA236C7A22684B"
+    ],
+    "asnIdentifier": "S21255251",
+    "depth": 2,
+    "description": "determining that people make choices because of limited resources.",
+    "id": "65F3DE672CB6429C84B8F1DA508A20A5",
+    "parentId": "F695DB6CECCA4812A86EE9A50A6474E0",
+    "position": 44000,
+    "statementLabel": "Objective",
+    "statementNotation": "E.2.a"
+   },
+   "661A86FA1B5740D1B9472D5252FE45B4": {
+    "ancestorIds": [
+     "7BFC6E2E190D49B090F2075EE3BC4F73",
+     "E5CF7C2E5F0E40139CBA236C7A22684B"
+    ],
+    "asnIdentifier": "S21255258",
+    "depth": 2,
+    "description": "explaining that people benefit when they trade voluntarily.",
+    "id": "661A86FA1B5740D1B9472D5252FE45B4",
+    "parentId": "7BFC6E2E190D49B090F2075EE3BC4F73",
+    "position": 51000,
+    "statementLabel": "Objective",
+    "statementNotation": "E.3.b"
+   },
+   "6F679B6CCBB043F19A25F70D160F7A46": {
+    "ancestorIds": [
+     "F695DB6CECCA4812A86EE9A50A6474E0",
+     "E5CF7C2E5F0E40139CBA236C7A22684B"
+    ],
+    "asnIdentifier": "S21255255",
+    "depth": 2,
+    "description": "identifying the consequences of choices made in their past.",
+    "id": "6F679B6CCBB043F19A25F70D160F7A46",
+    "parentId": "F695DB6CECCA4812A86EE9A50A6474E0",
+    "position": 48000,
+    "statementLabel": "Objective",
+    "statementNotation": "E.2.e"
+   },
+   "7457D179116F47B1ADBF0274FDEFA87F": {
+    "ancestorIds": [
+     "7D92C6BAB6574B438385B84F815C76ED",
+     "DD399799F5144CC3910C891061FD59C3"
+    ],
+    "asnIdentifier": "S21255266",
+    "depth": 2,
+    "description": "analyzing school schedules to determine past, present, and future.",
+    "id": "7457D179116F47B1ADBF0274FDEFA87F",
+    "parentId": "7D92C6BAB6574B438385B84F815C76ED",
+    "position": 59000,
+    "statementLabel": "Objective",
+    "statementNotation": "H.1.a"
+   },
+   "746EB439FDA04EF28552FF478F5EFD17": {
+    "ancestorIds": [
+     "7A38777800BC46DAB71CAF62C3F07B9F",
+     "B9A93FB8B9B248649F11E47FE542428C"
+    ],
+    "asnIdentifier": "S21255227",
+    "depth": 2,
+    "description": "creating a list of rules to support a just classroom.",
+    "id": "746EB439FDA04EF28552FF478F5EFD17",
+    "parentId": "7A38777800BC46DAB71CAF62C3F07B9F",
+    "position": 20000,
+    "statementLabel": "Objective",
+    "statementNotation": "C.3.e"
+   },
+   "75F1FEB46F484F26AC9D7F160CBF767D": {
+    "ancestorIds": [
+     "275CF56BD5954A76974B3F5F20E5A960",
+     "9644F7317AD340F891617646085608AA"
+    ],
+    "asnIdentifier": "S21255234",
+    "depth": 2,
+    "description": "locating key physical features and human-made features in their school community using maps and other geographic tools.",
+    "id": "75F1FEB46F484F26AC9D7F160CBF767D",
+    "parentId": "275CF56BD5954A76974B3F5F20E5A960",
+    "position": 27000,
+    "statementLabel": "Objective",
+    "statementNotation": "G.1.d"
+   },
+   "7A38777800BC46DAB71CAF62C3F07B9F": {
+    "ancestorIds": [
+     "B9A93FB8B9B248649F11E47FE542428C"
+    ],
+    "asnIdentifier": "S21255222",
+    "depth": 1,
+    "description": "Analyze the purpose of rules by:",
+    "id": "7A38777800BC46DAB71CAF62C3F07B9F",
+    "parentId": "B9A93FB8B9B248649F11E47FE542428C",
+    "position": 15000,
+    "statementLabel": "Indicator",
+    "statementNotation": "C.3"
+   },
+   "7BFC6E2E190D49B090F2075EE3BC4F73": {
+    "ancestorIds": [
+     "E5CF7C2E5F0E40139CBA236C7A22684B"
+    ],
+    "asnIdentifier": "S21255256",
+    "depth": 1,
+    "description": "Analyze trade by:",
+    "id": "7BFC6E2E190D49B090F2075EE3BC4F73",
+    "parentId": "E5CF7C2E5F0E40139CBA236C7A22684B",
+    "position": 49000,
+    "statementLabel": "Indicator",
+    "statementNotation": "E.3"
+   },
+   "7D84EBDFE105427983E5C9E39D4791B9": {
+    "ancestorIds": [
+     "C22AB3A4762D4C91803D77DE2AE4A2DD",
+     "E5CF7C2E5F0E40139CBA236C7A22684B"
+    ],
+    "asnIdentifier": "S21255249",
+    "depth": 2,
+    "description": "explaining why natural and human productive resources are limited in schools.",
+    "id": "7D84EBDFE105427983E5C9E39D4791B9",
+    "parentId": "C22AB3A4762D4C91803D77DE2AE4A2DD",
+    "position": 42000,
+    "statementLabel": "Objective",
+    "statementNotation": "E.1.c"
+   },
+   "7D92C6BAB6574B438385B84F815C76ED": {
+    "ancestorIds": [
+     "DD399799F5144CC3910C891061FD59C3"
+    ],
+    "asnIdentifier": "S21255265",
+    "depth": 1,
+    "description": "Analyze change over time in school by:",
+    "id": "7D92C6BAB6574B438385B84F815C76ED",
+    "parentId": "DD399799F5144CC3910C891061FD59C3",
+    "position": 58000,
+    "statementLabel": "Indicator",
+    "statementNotation": "H.1"
+   },
+   "81BBC7DE0E32499B91FF5531469C9418": {
+    "ancestorIds": [
+     "7A38777800BC46DAB71CAF62C3F07B9F",
+     "B9A93FB8B9B248649F11E47FE542428C"
+    ],
+    "asnIdentifier": "S21255223",
+    "depth": 2,
+    "description": "explaining that rules serve to support order and protect individual rights.",
+    "id": "81BBC7DE0E32499B91FF5531469C9418",
+    "parentId": "7A38777800BC46DAB71CAF62C3F07B9F",
+    "position": 16000,
+    "statementLabel": "Objective",
+    "statementNotation": "C.3.a"
+   },
+   "82F3D63AC0E642F48DFD0335644FC199": {
+    "ancestorIds": [
+     "9F481297A95949C38C6E8A489B59CF81",
+     "9644F7317AD340F891617646085608AA"
+    ],
+    "asnIdentifier": "S21255240",
+    "depth": 2,
+    "description": "explaining how people adapt to changes in the environment.",
+    "id": "82F3D63AC0E642F48DFD0335644FC199",
+    "parentId": "9F481297A95949C38C6E8A489B59CF81",
+    "position": 33000,
+    "statementLabel": "Objective",
+    "statementNotation": "G.2.c"
+   },
+   "84F940AA9E7E4753A69CC2A70AF877D5": {
+    "ancestorIds": [
+     "275CF56BD5954A76974B3F5F20E5A960",
+     "9644F7317AD340F891617646085608AA"
+    ],
+    "asnIdentifier": "S21255233",
+    "depth": 2,
+    "description": "identifying continents and oceans near and far from Maryland on maps and on a globe.",
+    "id": "84F940AA9E7E4753A69CC2A70AF877D5",
+    "parentId": "275CF56BD5954A76974B3F5F20E5A960",
+    "position": 26000,
+    "statementLabel": "Objective",
+    "statementNotation": "G.1.c"
+   },
+   "89E0887E71E1455881B2205E58CC83F1": {
+    "ancestorIds": [
+     "C22AB3A4762D4C91803D77DE2AE4A2DD",
+     "E5CF7C2E5F0E40139CBA236C7A22684B"
+    ],
+    "asnIdentifier": "S21255248",
+    "depth": 2,
+    "description": "identifying natural and human productive resources in schools.",
+    "id": "89E0887E71E1455881B2205E58CC83F1",
+    "parentId": "C22AB3A4762D4C91803D77DE2AE4A2DD",
+    "position": 41000,
+    "statementLabel": "Objective",
+    "statementNotation": "E.1.b"
+   },
+   "8E5066E88D0A4A56B95F8CF6ECB712EC": {
+    "ancestorIds": [
+     "E5CF7C2E5F0E40139CBA236C7A22684B"
+    ],
+    "asnIdentifier": "S21255260",
+    "depth": 1,
+    "description": "Analyze choices made regarding career paths by:",
+    "id": "8E5066E88D0A4A56B95F8CF6ECB712EC",
+    "parentId": "E5CF7C2E5F0E40139CBA236C7A22684B",
+    "position": 53000,
+    "statementLabel": "Indicator",
+    "statementNotation": "E.4"
+   },
+   "903E4F861FB7493A80140BA4798B3127": {
+    "ancestorIds": [
+     "1FF8F7DB2D8C42A9BD07A4D3CA112092",
+     "DD399799F5144CC3910C891061FD59C3"
+    ],
+    "asnIdentifier": "S21255271",
+    "depth": 2,
+    "description": "comparing images and text descriptions of schools from the past with today.",
+    "id": "903E4F861FB7493A80140BA4798B3127",
+    "parentId": "1FF8F7DB2D8C42A9BD07A4D3CA112092",
+    "position": 64000,
+    "statementLabel": "Objective",
+    "statementNotation": "H.2.b"
+   },
+   "92F6A14EE15D4C7E8BD3678A74F887F0": {
+    "ancestorIds": [
+     "F695DB6CECCA4812A86EE9A50A6474E0",
+     "E5CF7C2E5F0E40139CBA236C7A22684B"
+    ],
+    "asnIdentifier": "S21255254",
+    "depth": 2,
+    "description": "identifying choices they have made and the incentives that motivated them.",
+    "id": "92F6A14EE15D4C7E8BD3678A74F887F0",
+    "parentId": "F695DB6CECCA4812A86EE9A50A6474E0",
+    "position": 47000,
+    "statementLabel": "Objective",
+    "statementNotation": "E.2.d"
+   },
+   "946E1EE24E2A4C34A62090B949473159": {
+    "ancestorIds": [
+     "7BFC6E2E190D49B090F2075EE3BC4F73",
+     "E5CF7C2E5F0E40139CBA236C7A22684B"
+    ],
+    "asnIdentifier": "S21255257",
+    "depth": 2,
+    "description": "identifying barter as a form of trade.",
+    "id": "946E1EE24E2A4C34A62090B949473159",
+    "parentId": "7BFC6E2E190D49B090F2075EE3BC4F73",
+    "position": 50000,
+    "statementLabel": "Objective",
+    "statementNotation": "E.3.a"
+   },
+   "9644F7317AD340F891617646085608AA": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21255229",
+    "depth": 0,
+    "description": "Geography",
+    "id": "9644F7317AD340F891617646085608AA",
+    "parentId": null,
+    "position": 22000,
+    "statementLabel": "Unit"
+   },
+   "96A30385C4AD43AB9D36F86BB22C4C17": {
+    "ancestorIds": [
+     "1FF8F7DB2D8C42A9BD07A4D3CA112092",
+     "DD399799F5144CC3910C891061FD59C3"
+    ],
+    "asnIdentifier": "S21255270",
+    "depth": 2,
+    "description": "analyzing photographs, images, and text from schools in the past.",
+    "id": "96A30385C4AD43AB9D36F86BB22C4C17",
+    "parentId": "1FF8F7DB2D8C42A9BD07A4D3CA112092",
+    "position": 63000,
+    "statementLabel": "Objective",
+    "statementNotation": "H.2.a"
+   },
+   "9F481297A95949C38C6E8A489B59CF81": {
+    "ancestorIds": [
+     "9644F7317AD340F891617646085608AA"
+    ],
+    "asnIdentifier": "S21255237",
+    "depth": 1,
+    "description": "Analyze the human and environmental interactions in their school community by:",
+    "id": "9F481297A95949C38C6E8A489B59CF81",
+    "parentId": "9644F7317AD340F891617646085608AA",
+    "position": 30000,
+    "statementLabel": "Indicator",
+    "statementNotation": "G.2"
+   },
+   "A03F5426BC884C7CA4FCD346DD6666AB": {
+    "ancestorIds": [
+     "F695DB6CECCA4812A86EE9A50A6474E0",
+     "E5CF7C2E5F0E40139CBA236C7A22684B"
+    ],
+    "asnIdentifier": "S21255253",
+    "depth": 2,
+    "description": "explaining that the consequences of choices lie in the future.",
+    "id": "A03F5426BC884C7CA4FCD346DD6666AB",
+    "parentId": "F695DB6CECCA4812A86EE9A50A6474E0",
+    "position": 46000,
+    "statementLabel": "Objective",
+    "statementNotation": "E.2.c"
+   },
+   "A4F2DEEB32694E78ADD06AE1D1248997": {
+    "ancestorIds": [
+     "9F481297A95949C38C6E8A489B59CF81",
+     "9644F7317AD340F891617646085608AA"
+    ],
+    "asnIdentifier": "S21255238",
+    "depth": 2,
+    "description": "contrasting how regions across Maryland modify their environment to meet changing needs for shelter.",
+    "id": "A4F2DEEB32694E78ADD06AE1D1248997",
+    "parentId": "9F481297A95949C38C6E8A489B59CF81",
+    "position": 31000,
+    "statementLabel": "Objective",
+    "statementNotation": "G.2.a"
+   },
+   "A6E10BB2B50A40F699565AB637A56FB7": {
+    "ancestorIds": [
+     "385B6DB5E5C84434B6DB43E953105281",
+     "B9A93FB8B9B248649F11E47FE542428C"
+    ],
+    "asnIdentifier": "S21255219",
+    "depth": 2,
+    "description": "explaining that individuals and people in authority compromise whenever possible to resolve conflict.",
+    "id": "A6E10BB2B50A40F699565AB637A56FB7",
+    "parentId": "385B6DB5E5C84434B6DB43E953105281",
+    "position": 12000,
+    "statementLabel": "Objective",
+    "statementNotation": "C.2.d"
+   },
+   "A71D133860E140608FA2D9F3EABE89A4": {
+    "ancestorIds": [
+     "F9B4A98ECE4F4382AC1D10C6A4D04441",
+     "B9A93FB8B9B248649F11E47FE542428C"
+    ],
+    "asnIdentifier": "S21255211",
+    "depth": 2,
+    "description": "defining equality as the same freedoms that are held by all people.",
+    "id": "A71D133860E140608FA2D9F3EABE89A4",
+    "parentId": "F9B4A98ECE4F4382AC1D10C6A4D04441",
+    "position": 4000,
+    "statementLabel": "Objective",
+    "statementNotation": "C.1.b"
+   },
+   "A9EE9F92643E4380A24FD2D7B68651B1": {
+    "ancestorIds": [
+     "8E5066E88D0A4A56B95F8CF6ECB712EC",
+     "E5CF7C2E5F0E40139CBA236C7A22684B"
+    ],
+    "asnIdentifier": "S21255261",
+    "depth": 2,
+    "description": "identifying jobs and careers in their community.",
+    "id": "A9EE9F92643E4380A24FD2D7B68651B1",
+    "parentId": "8E5066E88D0A4A56B95F8CF6ECB712EC",
+    "position": 54000,
+    "statementLabel": "Objective",
+    "statementNotation": "E.4.a"
+   },
+   "B9A93FB8B9B248649F11E47FE542428C": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21255208",
+    "depth": 0,
+    "description": "Civics",
+    "id": "B9A93FB8B9B248649F11E47FE542428C",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": "Unit"
+   },
+   "C22AB3A4762D4C91803D77DE2AE4A2DD": {
+    "ancestorIds": [
+     "E5CF7C2E5F0E40139CBA236C7A22684B"
+    ],
+    "asnIdentifier": "S21255246",
+    "depth": 1,
+    "description": "Analyze the role of scarcity in their lives by:",
+    "id": "C22AB3A4762D4C91803D77DE2AE4A2DD",
+    "parentId": "E5CF7C2E5F0E40139CBA236C7A22684B",
+    "position": 39000,
+    "statementLabel": "Indicator",
+    "statementNotation": "E.1"
+   },
+   "C311B5545E9D4113997D6209B68EDAB0": {
+    "ancestorIds": [
+     "F9B4A98ECE4F4382AC1D10C6A4D04441",
+     "B9A93FB8B9B248649F11E47FE542428C"
+    ],
+    "asnIdentifier": "S21255212",
+    "depth": 2,
+    "description": "defining equity as people having what they need to be successful regardless of their identities.",
+    "id": "C311B5545E9D4113997D6209B68EDAB0",
+    "parentId": "F9B4A98ECE4F4382AC1D10C6A4D04441",
+    "position": 5000,
+    "statementLabel": "Objective",
+    "statementNotation": "C.1.c"
+   },
+   "CF4A57A14C0F46F1B95EDC786B88B49D": {
+    "ancestorIds": [
+     "9644F7317AD340F891617646085608AA"
+    ],
+    "asnIdentifier": "S21255241",
+    "depth": 1,
+    "description": "Describe how transportation and communication link people and places by the movement of goods and ideas by:",
+    "id": "CF4A57A14C0F46F1B95EDC786B88B49D",
+    "parentId": "9644F7317AD340F891617646085608AA",
+    "position": 34000,
+    "statementLabel": "Indicator",
+    "statementNotation": "G.3"
+   },
+   "D328FD14820F4A0984F0734B3A960A69": {
+    "ancestorIds": [
+     "F9B4A98ECE4F4382AC1D10C6A4D04441",
+     "B9A93FB8B9B248649F11E47FE542428C"
+    ],
+    "asnIdentifier": "S21255213",
+    "depth": 2,
+    "description": "evaluating how people and institutions have the ability to restrict freedom by making rules in order to promote freedom, equality, and equity.",
+    "id": "D328FD14820F4A0984F0734B3A960A69",
+    "parentId": "F9B4A98ECE4F4382AC1D10C6A4D04441",
+    "position": 6000,
+    "statementLabel": "Objective",
+    "statementNotation": "C.1.d"
+   },
+   "D75ED63457434D7CAA490B15C2F43D7A": {
+    "ancestorIds": [
+     "385B6DB5E5C84434B6DB43E953105281",
+     "B9A93FB8B9B248649F11E47FE542428C"
+    ],
+    "asnIdentifier": "S21255221",
+    "depth": 2,
+    "description": "creating an action plan for how compromise could address a school conflict.",
+    "id": "D75ED63457434D7CAA490B15C2F43D7A",
+    "parentId": "385B6DB5E5C84434B6DB43E953105281",
+    "position": 14000,
+    "statementLabel": "Objective",
+    "statementNotation": "C.2.f"
+   },
+   "DD399799F5144CC3910C891061FD59C3": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21255264",
+    "depth": 0,
+    "description": "History",
+    "id": "DD399799F5144CC3910C891061FD59C3",
+    "parentId": null,
+    "position": 57000,
+    "statementLabel": "Unit"
+   },
+   "E4A7F8C9020640CA966927532BE4EF3A": {
+    "ancestorIds": [
+     "7A38777800BC46DAB71CAF62C3F07B9F",
+     "B9A93FB8B9B248649F11E47FE542428C"
+    ],
+    "asnIdentifier": "S21255224",
+    "depth": 2,
+    "description": "comparing rules at home, school, and community.",
+    "id": "E4A7F8C9020640CA966927532BE4EF3A",
+    "parentId": "7A38777800BC46DAB71CAF62C3F07B9F",
+    "position": 17000,
+    "statementLabel": "Objective",
+    "statementNotation": "C.3.b"
+   },
+   "E5CF7C2E5F0E40139CBA236C7A22684B": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21255245",
+    "depth": 0,
+    "description": "Economics",
+    "id": "E5CF7C2E5F0E40139CBA236C7A22684B",
+    "parentId": null,
+    "position": 38000,
+    "statementLabel": "Unit"
+   },
+   "EB078DCB3C15423CB2461414918507FF": {
+    "ancestorIds": [
+     "CF4A57A14C0F46F1B95EDC786B88B49D",
+     "9644F7317AD340F891617646085608AA"
+    ],
+    "asnIdentifier": "S21255242",
+    "depth": 2,
+    "description": "explaining how transportation links goods and people both near and far.",
+    "id": "EB078DCB3C15423CB2461414918507FF",
+    "parentId": "CF4A57A14C0F46F1B95EDC786B88B49D",
+    "position": 35000,
+    "statementLabel": "Objective",
+    "statementNotation": "G.3.a"
+   },
+   "F176AB4F6A9B4D8DA8841434B8C6BD42": {
+    "ancestorIds": [
+     "1FF8F7DB2D8C42A9BD07A4D3CA112092",
+     "DD399799F5144CC3910C891061FD59C3"
+    ],
+    "asnIdentifier": "S21255272",
+    "depth": 2,
+    "description": "explaining how life today is similar and different than in the past using evidence from a variety of sources.",
+    "id": "F176AB4F6A9B4D8DA8841434B8C6BD42",
+    "parentId": "1FF8F7DB2D8C42A9BD07A4D3CA112092",
+    "position": 65000,
+    "statementLabel": "Objective",
+    "statementNotation": "H.2.c"
+   },
+   "F2CC8991721E405E833AA1814ADEDDA0": {
+    "ancestorIds": [
+     "385B6DB5E5C84434B6DB43E953105281",
+     "B9A93FB8B9B248649F11E47FE542428C"
+    ],
+    "asnIdentifier": "S21255220",
+    "depth": 2,
+    "description": "explore how compromise is used in civic life at home, school, and community.",
+    "id": "F2CC8991721E405E833AA1814ADEDDA0",
+    "parentId": "385B6DB5E5C84434B6DB43E953105281",
+    "position": 13000,
+    "statementLabel": "Objective",
+    "statementNotation": "C.2.e"
+   },
+   "F54C37E886BA4D24815019F7233D5C00": {
+    "ancestorIds": [
+     "CF4A57A14C0F46F1B95EDC786B88B49D",
+     "9644F7317AD340F891617646085608AA"
+    ],
+    "asnIdentifier": "S21255244",
+    "depth": 2,
+    "description": "identifying goods and ideas that make their community special and come from both near and far.",
+    "id": "F54C37E886BA4D24815019F7233D5C00",
+    "parentId": "CF4A57A14C0F46F1B95EDC786B88B49D",
+    "position": 37000,
+    "statementLabel": "Objective",
+    "statementNotation": "G.3.c"
+   },
+   "F695DB6CECCA4812A86EE9A50A6474E0": {
+    "ancestorIds": [
+     "E5CF7C2E5F0E40139CBA236C7A22684B"
+    ],
+    "asnIdentifier": "S21255250",
+    "depth": 1,
+    "description": "Analyze decision making by:",
+    "id": "F695DB6CECCA4812A86EE9A50A6474E0",
+    "parentId": "E5CF7C2E5F0E40139CBA236C7A22684B",
+    "position": 43000,
+    "statementLabel": "Indicator",
+    "statementNotation": "E.2"
+   },
+   "F92976B70F72488AA36525C3FDE501F6": {
+    "ancestorIds": [
+     "7D92C6BAB6574B438385B84F815C76ED",
+     "DD399799F5144CC3910C891061FD59C3"
+    ],
+    "asnIdentifier": "S21255267",
+    "depth": 2,
+    "description": "classifying activities of the day, week, and month according to themes.",
+    "id": "F92976B70F72488AA36525C3FDE501F6",
+    "parentId": "7D92C6BAB6574B438385B84F815C76ED",
+    "position": 60000,
+    "statementLabel": "Objective",
+    "statementNotation": "H.1.b"
+   },
+   "F9B4A98ECE4F4382AC1D10C6A4D04441": {
+    "ancestorIds": [
+     "B9A93FB8B9B248649F11E47FE542428C"
+    ],
+    "asnIdentifier": "S21255209",
+    "depth": 1,
+    "description": "Examine the concept of freedom by:",
+    "id": "F9B4A98ECE4F4382AC1D10C6A4D04441",
+    "parentId": "B9A93FB8B9B248649F11E47FE542428C",
+    "position": 2000,
+    "statementLabel": "Indicator",
+    "statementNotation": "C.1"
+   }
+  },
+  "subject": "Social Studies (2021-)",
+  "title": "Grade K"
+ }
+}

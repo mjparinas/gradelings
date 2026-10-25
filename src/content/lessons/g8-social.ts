@@ -1337,4 +1337,22 @@ export const lessons: GradeLessons = {
     ["Ads are made to persuade.", "Check their claims against reliable, independent sources."],
     "check its claims against reliable, independent sources",
   ),
+  "social/md-g8-maryland-and-nation": lesson(
+    ["Maryland would not approve the Articles of Confederation until other states gave their western lands to the nation. It signed in 1781.", "In McCulloch v. Maryland (1819), the Supreme Court ruled that a state cannot tax the national bank.", "In 1814, Fort McHenry held off the British, and Francis Scott Key wrote the words of the national anthem."],
+    "What did McCulloch v. Maryland decide?",
+    ["Maryland tried to tax a branch of the national bank.", "National law is supreme over state law."],
+    "a state cannot tax the national bank",
+  ),
+  "social/md-g8-slavery-and-resistance": lesson(
+    ["Slavery spread with cotton in the Deep South, and many enslaved Marylanders were sold away from their families.", "Frederick Douglass, Harriet Tubman, Josiah Henson and Henry Highland Garnet were born enslaved in Maryland and fought slavery.", "Reformers also worked for better schools and hospitals, temperance and women's rights."],
+    "Where did Frederick Douglass escape from in 1838?",
+    ["He learned to read there as a boy.", "He disguised himself as a sailor in a port city."],
+    "Baltimore",
+  ),
+  "social/md-g8-us-timeline": lesson(
+    ["A timeline puts events in order, earliest first.", "Years from 1701 to 1800 are the 18th century. Years from 1801 to 1900 are the 19th century.", "To find how far apart two events are, subtract the earlier year from the later one."],
+    "The Declaration was signed in 1776. Fort McHenry was attacked in 1814. How many years apart?",
+    ["Subtract the earlier year.", "1814 − 1776 = 38."],
+    "38 years",
+  ),
 };

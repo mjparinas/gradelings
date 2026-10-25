@@ -1086,4 +1086,28 @@ export const lessons: GradeLessons = {
     ["Compare the years.", "1620 is smaller than 1773."],
     "the Pilgrims' landing",
   ),
+  "social/md-g3-maryland-economy": lesson(
+    ["Goods are things you can touch. Services are work people do for you.", "Maryland's economy includes seafood from the bay, chickens and crops on the Eastern Shore, the Port of Baltimore, tourism and government jobs.", "An entrepreneur starts a business. It can earn a reward, but it is also a risk."],
+    "A waterman catches blue crabs to sell. Is that a good or a service?",
+    ["You can touch a crab.", "Things you can touch are goods."],
+    "a good",
+  ),
+  "social/md-g3-maryland-land": lesson(
+    ["Maryland goes from flat land by the bay and ocean to hills and then mountains in the west.", "The Chesapeake Bay is an estuary, where fresh river water mixes with salt water.", "People change the land. Runoff can harm the bay; trees, oysters and less fertilizer help keep it clean."],
+    "How do oysters help the Chesapeake Bay?",
+    ["Oysters eat by pulling in water.", "They strain out tiny bits as they eat."],
+    "they filter and clean the water",
+  ),
+  "social/md-g3-maryland-government": lesson(
+    ["Government has three branches: legislative (makes laws), executive (carries them out) and judicial (decides what they mean).", "There are three levels: local (a mayor or county), state (the governor and General Assembly in Annapolis) and national (the President and Congress).", "Citizens take part by voting, volunteering and telling leaders what they think."],
+    "Who leads the state of Maryland?",
+    ["A mayor leads a city. The President leads the nation.", "The leader of a state is the governor."],
+    "the governor",
+  ),
+  "social/md-g3-early-maryland": lesson(
+    ["Native nations have lived around the Chesapeake Bay for thousands of years. The Piscataway, Accohannock and Pocomoke are living communities in Maryland today.", "English colonists arrived in 1634 and grew tobacco.", "Indentured servants worked for a few years to pay for their trip, then became free. Enslaved Africans were forced to work for life, and so were their children."],
+    "How was an indentured servant's life different from an enslaved person's?",
+    ["Think about how long each had to work.", "A servant's time had an end. Slavery did not."],
+    "a servant became free after a few years; slavery was for life",
+  ),
 };

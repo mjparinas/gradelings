@@ -927,4 +927,46 @@ export const lessons: GradeLessons = {
     ["The national government could not stop it.", "Leaders decided to write a stronger plan of government."],
     "it led to the Constitutional Convention",
   ),
+  "social/md-g5-maryland-civil-war": lesson(
+    ["Slavery was the central cause of the Civil War.", "Maryland was a border state: it allowed slavery but stayed in the Union. Marylanders fought on both sides.", "The Battle of Antietam in 1862 led to the Emancipation Proclamation. Maryland ended slavery with a new constitution in 1864."],
+    "Why didn't the Emancipation Proclamation free enslaved people in Maryland?",
+    ["It covered only states fighting against the Union.", "Maryland stayed in the Union."],
+    "Maryland was still in the Union",
+  ),
+  "social/md-g5-moving-goods": lesson(
+    ["The National Road (1811) started in Cumberland and led west.", "The B&O Railroad and the C&O Canal both began on July 4, 1828. Trains were faster and ran all year, so the railroad won.", "In 1844, the first long telegraph line sent a message from Washington to Baltimore in minutes."],
+    "Why did the railroad beat the canal?",
+    ["Canals froze in winter, and mules walk slowly.", "Trains were faster and ran all year."],
+    "trains were faster and could run all year",
+  ),
+  "social/md-g5-press-and-institutions": lesson(
+    ["The First Amendment protects freedom of the press, so people can publish news and opinions.", "Maryland newspapers include the Maryland Gazette (1727) and the Afro-American (1892).", "Institutions like schools, HBCUs, libraries and churches help shape ideas about freedom."],
+    "Why does a democracy need a free press?",
+    ["Voters choose leaders.", "They need true information to choose well and to check what leaders do."],
+    "so people can learn the truth and judge their leaders",
+  ),
+  "social/md-g5-civil-rights": lesson(
+    ["Segregation kept people apart by race in schools, restaurants and other places.", "Thurgood Marshall of Baltimore won Murray v. Pearson in 1936 and Brown v. Board of Education in 1954, then became the first Black Supreme Court justice.", "Marylanders like Lillie Carroll Jackson, Juanita Jackson Mitchell and Gloria Richardson fought for equal rights with lawsuits, sit-ins and protests."],
+    "What did Brown v. Board of Education decide?",
+    ["It was about public schools.", "Separate schools for Black and white children were not equal."],
+    "segregated public schools are unconstitutional",
+  ),
+  "social/wa-g8-civil-war": lesson(
+    ["The main cause of the Civil War (1861–1865) was slavery and whether it would spread.", "Southern states seceded and formed the Confederate States of America; the North was the Union. Maryland, a border state, stayed in the Union.", "The war ended when Lee surrendered to Grant at Appomattox Court House, Virginia, in April 1865."],
+    "What did the states that seceded form?",
+    ["To secede means to leave the Union.", "Eleven Southern states left.", "They formed their own government."],
+    "the Confederate States of America",
+  ),
+  "social/md-g5-maryland-constitution": lesson(
+    ["The Articles of Confederation made a weak national government, so delegates wrote the Constitution in 1787.", "Three branches check one another. The Great Compromise made a Senate with two members per state and a House based on population.", "Antifederalists wanted a list of rights, like Maryland's Declaration of Rights, so the Bill of Rights was added in 1791."],
+    "Under the Great Compromise, how many senators does each state get?",
+    ["The Senate gives every state the same number.", "Small states wanted equal votes."],
+    "two",
+  ),
+  "social/md-g5-reconstruction-maryland": lesson(
+    ["After the war, the 13th Amendment ended slavery, the 14th promised equal protection and the 15th protected voting regardless of race.", "The Freedmen's Bureau started schools for freed people, but it had little money and soon closed. Jim Crow laws and voting rules took many rights away.", "Maryland's four public HBCUs (Bowie State, Morgan State, UMES and Coppin State) were founded to educate Black students, many as teachers."],
+    "Which amendment ended slavery?",
+    ["There were three Reconstruction amendments.", "The first of them, in 1865, ended slavery."],
+    "the 13th Amendment",
+  ),
 };
