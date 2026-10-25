@@ -1,0 +1,271 @@
+                                   Grade 6 Grade-Level Expanded Expectations
+                                        RATIOS AND PROPORTIONAL RELATIONSHIPS: RP
+   6.RP.A          Understand and use ratios to solve problems.
+                                                                                                       The expectation for the student is to understand a ratio as a comparison
+                  Understand a ratio as a comparison of two
+   6.RP.A.1                                                                                            of two quantities and represent these comparisons in the form of ratios
+                  quantities and represent these comparisons.
+                                                                                                       and as verbal statements.
+                                                                                                       The expectation for the student is to understand the concept of a unit
+                  Understand the concept of a unit rate associated                                     rate a/b associated with a ratio a:b with b ≠ 0, and describe the meaning
+   6.RP.A.2
+                  with a ratio, and describe the meaning of unit rate.                                 of unit rate in the context of the relationship. (e.g., If a 4 pound bag of
+                                                                                                       apples costs $3, what is the unit rate in price per pound)
+                                                                                                       The expectation for the student is to solve real-world mathematical
+                                                                                                       problems involving ratios and rates utilizing strategies such as tables of
+                                                                                                       equivalent ratios, tape diagrams, bar models, double number line
+                  Solve problems involving ratios and rates.                                           diagrams and/or equations.
+                      a) Create tables of equivalent ratios, find                                          a. Make tables of equivalent ratios, find missing values in the tables
+                         missing values in the tables and plot the                                             and plot the pairs of values on the Cartesian coordinate plane. Use
+                         pairs of values on the Cartesian coordinate                                           tables to compare ratios.
+   6.RP.A.3              plane.                                                                            b. Solve unit rate problems. (e.g., pricing and constant speed)
+                      b) Solve unit rate problems.                                                         c. Calculate a percent of a quantity as a rate per 100; given a
+                      c) Solve percent problems.                                                               percent, solve problems involving finding the whole given a part
+                      d) Convert measurement units within and                                                  and the part given the whole.
+                         between two systems of measurement.                                               d. Convert measurement units within and between two systems of
+                                                                                                               measurements while solving problems. Given a conversion factor
+                                                                                                               such as 1” = 2.54 cm, use ratios to compare sizes of similar figures
+                                                                                                               with different units.
+
+                                                   NUMBER SENSE AND OPERATIONS: NS
+                 The Department of Elementary and Secondary Education does not discriminate on the basis of race, color, religion, gender, gender identity, sexual orientation, national origin, age, veteran status,
+                 mental or physical disability, or any other basis prohibited by statute in its programs and activities. Inquiries related to department programs and to the location of services, activities, and facilities
+GLEs – Grade 6   that are accessible by persons with disabilities may be directed to the Jefferson State Office Building, Director of Civil Rights Compliance and MOA Coordinator (Title VI/Title VII/Title IX/504/ADA/
+                 ADAAA/Age Act/GINA/USDA Title VI), 5th Floor, 205 Jefferson Street, P.O. Box 480, Jefferson City, MO 65102-0480; telephone number 573-526-4757 or TTY 800-735-2966; email
+   6.NS.A        Apply and extend previous understandings of multiplication and division to divide fractions by fractions.
+                                                                     The expectation for the student is to compute and represent quotients of
+                 Compute and interpret quotients of positive         positive fractions.
+                 fractions.                                             a. Compute quotients of fractions divided by fractions.
+   6.NS.A.1
+                     a) Solve problems involving division of            b. Solve word problems involving division of fractions by fractions,
+                         fractions by fractions.                             including reasoning strategies such as using visual fraction models,
+                                                                             area models and/or equations to represent the problem.
+   6.NS.B        Compute with non-negative multi-digit numbers, and find common factors and multiples.
+                                                                     The expectation for the student is to demonstrate fluency with division of
+                 Demonstrate fluency with division of multi-digit
+   6.NS.B.2                                                          multi-digit whole numbers. (Fluency refers to accuracy and efficiency and
+                 whole numbers.
+                                                                     does not equate to memorization.)
+                                                                     The expectation for the student is to demonstrate fluency with addition,
+                 Demonstrate fluency with addition, subtraction,
+   6.NS.B.3                                                          subtraction, multiplication and division of decimals. (Fluency refers to
+                 multiplication and division of decimals.
+                                                                     accuracy and efficiency and does not equate to memorization.)
+                                                                     The expectation for the student is to find common factors and multiples.
+                 Find common factors and multiples.
+                                                                        a. Find common factors and multiples, including the greatest
+                     a) Find the greatest common factor (GCF) and
+                                                                            common factor (GCF) of two whole numbers that are each ≤ 100
+                        the least common multiple (LCM).
+                                                                            and the least common multiple (LCM) of two whole numbers that
+   6.NS.B.4          b) Use the distributive property to express a
+                                                                            are each ≤ 12.
+                        sum of two whole numbers with a common
+                                                                        b. Use the distributive property to express a sum of two whole
+                        factor as a multiple of a sum of two whole
+                                                                            numbers 1–100 with a common factor as a multiple of a sum of
+                        numbers.
+                                                                            two whole numbers. (e.g., 48+24 could be as 24(2+1) or 6(8+4))
+   6.NS.C        Apply and extend previous understandings of numbers to the system of rational numbers.
+                                                                     The expectation for the student is to use positive and negative numbers
+                 Use positive and negative numbers to represent      to represent quantities in real-world contexts, explaining the meaning of
+   6.NS.C.5
+                 quantities.                                         0 in each situation. Understand that positive and negative numbers are
+                                                                     used together to describe quantities that have opposite values.
+                 Locate a rational number as a point on the number   The expectation for the student is to understand a rational number as a
+                 line.                                               point on the number line.
+   6.NS.C.6
+                     a) Locate rational numbers on a horizontal or       a. Locate rational numbers on a horizontal or vertical number line.
+                        vertical number line.                            b. Write, interpret and explain statements of order for rational
+
+GLEs – Grade 6
+                    b) Write, interpret and explain problems of              numbers in mathematical and real-world contexts.
+                       ordering of rational numbers.                      c. Understand that a number and its opposite (additive inverse) are
+                    c) Understand that a number and its opposite             located on opposite sides of zero on the number line. Their sum
+                       (additive inverse) are located on opposite            will always be zero.
+                       sides of zero on the number line.
+                                                                      The expectation for the student is to understand that the absolute value
+                 Understand that the absolute value of a rational     of a rational number is its distance from 0 on the number line; interpret
+   6.NS.C.7
+                 number is its distance from 0 on the number line.    absolute value as magnitude for a positive or negative quantity in a real-
+                                                                      world situation.
+                 Extend prior knowledge to generate equivalent        The expectation for the student is to extend prior knowledge to generate
+                 representations of rational numbers between          equivalent representations of rational numbers between fractions,
+   6.NS.C.8      fractions, decimals and percentages (limited to      decimals and percentages (limited to terminating decimals and/or
+                 terminating decimals and/or benchmark fractions      benchmark fractions of 1/3 and 2/3).
+                 of 1/3 and 2/3).
+
+                           EXPRESSIONS, EQUATIONS AND INEQUALITIES: EEI
+   6.EEI.A       Apply and extend previous understandings of arithmetic to algebraic expressions.
+                 Describe the difference between an expression and The expectation for the student is to describe the difference between an
+   6.EEI.A.1
+                 an equation.                                        expression and an equation.
+                                                                     The expectation for the student is to read, write and evaluate expressions
+                                                                     involving whole number exponents in which letters are used to represent
+                 Create and evaluate expressions involving variables
+                                                                     quantities that are either unknown or that vary.
+                 and whole number exponents.
+                                                                         a. Identify parts of an expression using mathematical terminology.
+                     a) Identify parts of an expression using
+                                                                             (e.g., sum, term, product, factor, quotient, coefficient and
+                        mathematical terminology.
+                                                                             constant)
+                     b) Evaluate expressions at specific values of
+                                                                         b. Evaluate expressions at specific values of their variables. Include
+   6.EEI.A.2            the variables.
+                                                                             expressions that arise from formulas used in real-world problems.
+                     c) Evaluate non-negative rational number
+                                                                         c. Evaluate expressions involving addition, subtraction, multiplication
+                        expressions.
+                                                                             and division of non-negative rational numbers, grouping symbols
+                     d) Write and evaluate algebraic expressions.
+                                                                             and whole-number exponents using the order of operations.
+                     e) Understand the meaning of the variable in
+                                                                         d. Write expressions using variables (letters) to represent quantities
+                        the context of the situation.
+                                                                             in real-world and mathematical problems.
+                                                                         e. Understand the meaning of the variable in the context of the
+
+GLEs – Grade 6
+                                                                                situation. (e.g., express the calculation “Subtract y from 5” as 5 – y)
+
+                                                                        The expectation for the student is to identify and generate equivalent
+                 Identify and generate equivalent algebraic
+   6.EEI.A.3                                                            algebraic expressions using mathematical properties. (e.g., commutative,
+                 expressions using mathematical properties.
+                                                                        associative, distributive)
+   6.EEI.B       Reason about and solve one-variable equations and inequalities.
+                 Use substitution to determine whether a given          The expectation for the student is to use substitution to determine
+   6.EEI.B.4     number in a specified set makes a one-variable         whether a given number in a specified set makes a one-variable equation
+                 equation or inequality true.                           or inequality true.
+                 Understand that if any solutions exist, the solution   The expectation for the student is to understand that if any solutions
+   6.EEI.B.5     set for an equation or inequality consists of values   exist, the solution set for an equation or inequality consists of values that
+                 that make the equation or inequality true.             make the equation or inequality true.
+                                                                        The expectation for the student is to write equations using variables
+                 Write and solve equations using variables to
+                                                                        (letters) to represent quantities in real-world and mathematical
+   6.EEI.B.6     represent quantities, and understand the meaning
+                                                                        situations. Understand the meaning of the variable in the context of the
+                 of the variable in the context of the situation.
+                                                                        situation.
+                                                                        The expectation for the student is to solve one-step linear equations in
+                 Solve one-step linear equations in one variable
+   6.EEI.B.7                                                            one variable involving non-negative rational numbers for real-world and
+                 involving non-negative rational numbers.
+                                                                        mathematical problems.
+                 Recognize that inequalities may have infinitely        The expectation for the student is to recognize that inequalities may have
+                 many solutions.                                        infinitely many solutions.
+                     a) Write an inequality of the form x > c, x < c, x     a. Write an inequality of the form x > c, x < c, x ≥ c or
+   6.EEI.B.8
+                         ≥ c or x ≤ c to represent a constraint or               x ≤ c to represent a constraint or condition in a real-world or
+                         condition.                                              mathematical problem, where c is a constant.
+                     b) Graph the solution set of an inequality.            b. Graph solutions of such inequalities on a number line.
+   6.EEI.C       Represent and analyze quantitative relationships between dependent and independent variables.
+                 Identify and describe relationships between two        The expectation for the student is to identify and describe relationships
+                 variables that change in relationship to one           between two variables that change in relationship to one another. (e.g.,
+                 another.                                               plant growth related to time)
+   6.EEI.C.9
+                     a) Write an equation to express one quantity,         a. Write an equation to express one quantity, the dependent
+                         the dependent variable, in terms of the               variable, in terms of the other quantity, the independent variable.
+                         other quantity, the independent variable.         b. Analyze the relationship between the dependent and independent
+
+GLEs – Grade 6
+                    b) Analyze the relationship between the                    variables using graphs, tables and equations and relate these
+                       dependent and independent variables using               representations to each other.
+                       graphs, tables and equations and relate
+                       these representations to each other.
+
+                                      GEOMETRY AND MEASUREMENT: GM
+  6.GM.A         Solve problems involving area, surface area and volume.
+                 Find the area of polygons by composing or              The expectation for the student is to find the area of polygons by
+  6.GM.A.1       decomposing the shapes into rectangles or              composing or decomposing the shapes into rectangles or triangles and
+                 triangles.                                             apply these techniques to solve real-world problems.
+                                                                        The expectation for the student is to find the volume of right rectangular
+                                                                        prisms.
+                 Find the volume of right rectangular prisms.               a. Understand that the volume of a right rectangular prism can be
+                     a) Understand that the volume of a right                   found by filling the prism with multiple layers of the base.
+                        rectangular prism can be found by filling               Discover that using visual models (e.g., model by packing)
+  6.GM.A.2
+                        the prism with multiple layers of the base.             produces the same volume as using the formulas, whether the
+                     b) Apply V = l * w * h and V = Bh to find the              side lengths are whole or fractional edge lengths.
+                        volume of right rectangular prisms.                 b. Apply V = l * w * h and V = Bh to find the volume of right
+                                                                                rectangular prisms with whole or fractional edges for real-world
+                                                                                and mathematical problems.
+                 Solve problems by graphing points in all four          The expectation for the student is to solve real-world and mathematical
+                 quadrants of the Cartesian coordinate plane.           problems by graphing points in all four quadrants of the Cartesian
+                     a) Understand signs of numbers in ordered          coordinate plane.
+                        pairs as indicating locations in quadrants of       a. Understand signs of numbers in ordered pairs as indicating
+                        the Cartesian coordinate plane                          locations in quadrants of the Cartesian coordinate plane.
+                     b) Recognize that when two ordered pairs               b. Recognize that when two ordered pairs differ only by signs, the
+  6.GM.A.3              differ only by signs, the locations of the              locations of the points are related by reflections across one or
+                        points are related by reflections across one            both axes.
+                        or both axes.                                       c. Include use of coordinates and absolute value to find distances
+                     c) Find distances between points with the                  between points with the same first coordinate or the same second
+                        same first coordinate or the same second                coordinate (length of horizontal or vertical line segments).
+                        coordinate.                                         d. Draw polygons in the Cartesian coordinate plane given
+                     d) Construct polygons in the Cartesian                     coordinates for the vertices.
+
+
+GLEs – Grade 6
+                        coordinate plane.
+
+                                                                        The expectation for the student is to solve real-world and mathematical
+                 Solve problems using nets.
+                                                                        problems using nets.
+                     a) Represent three-dimensional figures using
+                                                                           a. Represent three-dimensional figures using nets made up of
+                        nets made up of rectangles and triangles.
+  6.GM.A.4                                                                     rectangles and triangles.
+                     b) Use nets to find the surface area of three-
+                                                                           b. Use nets to find the surface area of three-dimensional figures
+                        dimensional figures whose sides are made
+                                                                               whose sides are made up of rectangles and triangles and to solve
+                        up of rectangles and triangles.
+                                                                               real-world and mathematical problems.
+
+                          DATA ANALYSIS, STATISTICS AND PROBABILITY: DSP
+  6.DSP.A        Develop understanding of statistical variability.
+                 Recognize a statistical question as one that           The expectation for the student is to recognize a statistical question as
+  6.DSP.A.1      anticipates variability in the data related to the     one that anticipates variability in the data related to the question and
+                 question and accounts for it in the answers.           accounts for it in the answers.
+                 Understand that a set of data collected to answer a    The expectation for the student is to understand that a set of data
+  6.DSP.A.2      statistical question has a distribution which can be   collected to answer a statistical question has a distribution which can be
+                 described by its center, spread and overall shape.     described by its center, spread and overall shape of its representation.
+                 Recognize that a measure of center for a numerical     The expectation for the student is to recognize that a measure of center
+                 data set summarizes all of its values with a single    for a numerical data set summarizes all of its values with a single number,
+  6.DSP.A.3
+                 number, while a measure of variation describes         while a measure of variation describes how its values vary from a single
+                 how its values vary from a single number.              number.
+  6.DSP.B        Summarize and describe distributions.
+                                                                        The expectation for the student is to display and interpret data.
+                 Display and interpret data.                                a. Use dot plots, histograms and box plots to display and interpret
+                     a) Use dot plots, histograms and box plots to              numerical data.
+  6.DSP.B.4
+                        display and interpret numerical data.               b. Create circle graphs and interpret the data in context of real-world
+                     b) Create and interpret circle graphs.                     and mathematical situations using sample sizes which yield whole
+                                                                                number angle measurements. (e.g., sample sizes of 90, 180 or 360)
+                 Summarize numerical data sets in relation to the       The expectation for the student is to summarize numerical data sets in
+  6.DSP.B.5      context.                                               relation to their context by the following:
+                    a) Report the number of observations.                   a. Reporting the number of observations.
+
+GLEs – Grade 6
+                 b) Describe the nature of the attribute under      b. Describing the nature of the attribute under investigation,
+                    investigation, including how it was                including how it was measured and its units of measurement.
+                    measured and its units of measurement.          c. Giving quantitative measures of center (median and/or mean) and
+                 c) Give quantitative measures of center               variability (interquartile range and/or mean absolute deviation), as
+                    (median and/or mean) and variability               well as describing any overall pattern and any striking deviations
+                    (interquartile range and/or mean absolute          from the overall pattern with reference to the context of the data.
+                    deviation), as well as describing any overall   d. Analyze the choice of measures of center and variability to the
+                    pattern and any striking deviations from           shape of the data distribution and the context of the data.
+                    the overall pattern with reference to the
+                    context of the data.
+                 d) Analyze the choice of measures of center
+                    and variability based on the shape of the
+                    data distribution and/or the context of the
+                    data.
+
+
+
+
+GLEs – Grade 6
+

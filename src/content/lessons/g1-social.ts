@@ -403,6 +403,12 @@ export const lessons: GradeLessons = {
     ["Look for the bright red bird.", "It is the northern cardinal."],
     "the cardinal",
   ),
+  "social/wi-g1-wisconsin-symbols": lesson(
+    ["A symbol is a picture or thing that stands for something.", "Wisconsin's state animal is the badger. Its state bird is the robin.", "Madison is the capital. Milwaukee is the biggest city."],
+    "Which animal gives Wisconsin its nickname?",
+    ["Wisconsin is the Badger State.", "The animal is the badger."],
+    "the badger",
+  ),
   "social/nj-g1-new-jersey-symbols": lesson(
     ["A symbol is a picture or thing that stands for something.", "Our state bird is the eastern goldfinch. Our state flower is the violet.", "Trenton is the capital. Newark is the biggest city."],
     "Which yellow bird is New Jersey's state bird?",
@@ -440,13 +446,90 @@ export const lessons: GradeLessons = {
     ["It is named for the first president."],
     "Washington, D.C.",
   ),
-  // Tennessee
+  "social/va-g1-american-symbols": lesson(
+    ["The Pledge of Allegiance is a promise to be loyal.", "Washington, D.C. is the capital of the United States.", "Lincoln helped end slavery. He is on the penny."],
+    "What is the capital of the United States?",
+    ["It is named for the first president."],
+    "Washington, D.C.",
+  ),
+  "social/va-g1-virginia-history": lesson(
+    ["Many people helped build Virginia, long ago and today.", "Chief Powhatan led many towns. Christopher Newport sailed to Jamestown.", "Maggie L. Walker started a bank, and Barbara Johns spoke up for a fair school."],
+    "What did Maggie L. Walker start?",
+    ["She was good with money.", "She started a place to save money."],
+    "a bank",
+  ),
+  "social/va-g1-virginia-land": lesson(
+    ["Virginia has mountains in the west and the Chesapeake Bay in the east.", "Virginia has four seasons, and the weather changes with them.", "People long ago settled by rivers, because ships could sail in."],
+    "What is the big bay in Virginia called?",
+    ["Crabs and oysters live there.", "It is the Chesapeake Bay."],
+    "the Chesapeake Bay",
+  ),
+  // Missouri (us-mo)
+  "social/mo-g1-american-symbols": lesson(
+    ["Symbols stand for our country.", "The bald eagle and the flag are symbols of the United States.", "The Gateway Arch in St. Louis is a Missouri landmark."],
+    "Which bird is a symbol of the United States?",
+    ["It has a white head.", "It is the bald eagle."],
+    "the bald eagle",
+  ),
+
+  // North Carolina's units (us-nc).
   "social/ca-k-good-citizens": lesson(
     ["A good citizen follows rules and helps others.", "Breaking a rule has a consequence.", "Honest means telling the truth. Brave means trying."],
     "Which is a way to be a good citizen at school?",
     ["Good citizens help others.", "Cleaning up helps the class."],
     "help clean up",
   ),
+  // Massachusetts (us-ma)
+  "social/ma-g1-american-symbols": lesson(
+    ["The Pledge of Allegiance is a promise to be loyal.", "Washington, D.C. is the capital of the United States.", "Lincoln helped end slavery. He is on the penny."],
+    "What is the capital of the United States?",
+    ["It is named for the first president."],
+    "Washington, D.C.",
+  ),
+  "social/ma-g1-continents-oceans": lesson(
+    ["Most of Earth is covered by water.", "Big land areas are continents. Big waters are oceans.", "Massachusetts is on the Atlantic Ocean."],
+    "Which ocean is next to Massachusetts?",
+    ["Cape Cod sticks out into it.", "It is east of us."],
+    "the Atlantic Ocean",
+  ),
+  "social/ma-g1-families-near-far": lesson(
+    ["Families are different, here and far away.", "Families celebrate in many ways.", "A family timeline shows events in order."],
+    "Baby, toddler, Grade 1 kid. Which comes last?",
+    ["A baby grows into a toddler.", "A toddler grows into a school kid."],
+    "Grade 1 kid",
+  ),
+  "social/ma-g1-citizens-and-resources": lesson(
+    ["Citizens help their community. They follow rules and take turns.", "Natural resources come from nature, like water, trees and fish.", "People in Massachusetts fish in the ocean and grow cranberries."],
+    "Is a tree a natural resource?",
+    ["Did people make it, or did it grow in nature?", "Trees grow in nature."],
+    "yes",
+  ),
+  "social/md-g1-maryland-symbols": lesson(
+    ["A symbol stands for something special about a place.", "Maryland's bird is the Baltimore oriole. Its flower is the black-eyed Susan.", "Maryland's capital is Annapolis. Its biggest city is Baltimore."],
+    "What is Maryland's state bird?",
+    ["It is orange and black.", "It shares its name with Maryland's biggest city."],
+    "the Baltimore oriole",
+  ),
+  // South Carolina (us-sc)
+  "social/sc-g1-our-state": lesson(
+    ["South Carolina is a state in the United States, on the Atlantic Ocean.", "North Carolina and Georgia are its neighbours. Columbia is the capital.", "Our flag has a palmetto tree and a crescent moon on blue."],
+    "What is the capital city of South Carolina?",
+    ["A capital is where the state's leaders work.", "South Carolina's leaders meet in Columbia."],
+    "Columbia",
+  ),
+  "social/sc-g1-land-and-places": lesson(
+    ["South Carolina has mountains, hills, sandhills and a sandy coast.", "A city is busy and crowded. A farm town in the country is rural.", "Suburbs are the quieter places just outside a city."],
+    "A place with farms and lots of open land is…",
+    ["Cities have many buildings close together.", "Farms and open land are out in the country."],
+    "rural",
+  ),
+  "social/sc-g1-government": lesson(
+    ["Laws are rules that keep people safe and treat everyone fairly.", "A mayor leads a town. The governor leads the whole state.", "Good citizens vote, help others and work together on problems."],
+    "Who leads the whole state of South Carolina?",
+    ["A mayor leads one town or city.", "The governor leads the state."],
+    "the governor",
+  ),
+  // Tennessee
   "social/tn-g1-tennessee-map": lesson(
     ["A map shows places from above. Tennessee is a state in the United States.", "Nashville is the capital of Tennessee.", "The Mississippi River is Tennessee's border on the west."],
     "What is the capital of Tennessee?",

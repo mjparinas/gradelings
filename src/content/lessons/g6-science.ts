@@ -619,6 +619,12 @@ export const lessons: GradeLessons = {
     ["Cold air pushes in behind the front.", "So the temperature drops."],
     "it drops",
   ),
+  "science/md-g6-weather": lesson(
+    ["An air mass is a huge body of air with the same temperature and moisture.", "Where two air masses meet is a front; fronts often bring storms.", "Sunlight drives evaporation, and gravity brings rain and snow back down."],
+    "A cold front passes. What usually happens to the temperature?",
+    ["Cold air pushes in behind the front.", "So the temperature drops."],
+    "it drops",
+  ),
   "science/nj-g6-weather": lesson(
     ["An air mass is a huge body of air with the same temperature and moisture.", "Where two air masses meet is a front; fronts often bring storms.", "Sunlight drives evaporation, and gravity brings rain and snow back down."],
     "A cold front passes. What usually happens to the temperature?",
@@ -630,6 +636,12 @@ export const lessons: GradeLessons = {
     "Why is southern Illinois usually warmer than northern Illinois?",
     ["Think about latitude.", "It is closer to the equator."],
     "it is closer to the equator",
+  ),
+  "science/md-g6-climate": lesson(
+    ["Climate depends on latitude, nearness to large bodies of water, mountains and winds.", "Places near the ocean, like Maryland's coast, have milder winters than high or inland places.", "Greenhouse gases like carbon dioxide trap heat and are warming Earth."],
+    "Why is the Eastern Shore usually warmer in winter than the mountains of Garrett County?",
+    ["Think about height and the ocean.", "Low land near the ocean stays warmer than high mountains."],
+    "it is lower and closer to the ocean",
   ),
   "science/nj-g6-climate": lesson(
     ["Climate depends on latitude, nearness to large bodies of water, mountains and winds.", "The ocean keeps the Jersey Shore milder in winter than the hills of the northwest.", "Greenhouse gases like carbon dioxide trap heat and are warming Earth."],
@@ -643,6 +655,12 @@ export const lessons: GradeLessons = {
     ["There is only one parent.", "The new plant is a copy, so it is asexual."],
     "asexual",
   ),
+  "science/md-g6-growth": lesson(
+    ["Animals use behaviours like songs and nests to help them reproduce.", "Plants use flowers, scents and wind to spread pollen and seeds.", "Growth depends on genes and the environment (water, food, light). Sexual reproduction mixes genes from two parents; asexual makes copies of one."],
+    "A potato grows from a piece of potato. Sexual or asexual reproduction?",
+    ["There is only one parent.", "The new plant is a copy, so it is asexual."],
+    "asexual",
+  ),
   "science/nj-g6-growth": lesson(
     ["Animals use behaviors like songs and nests to help them reproduce.", "Plants use flowers, scents and wind to spread pollen and seeds.", "Growth depends on genes and the environment (water, food, light). Sexual reproduction mixes genes from two parents; asexual makes copies of one."],
     "A potato grows from a piece of potato. Sexual or asexual reproduction?",
@@ -650,6 +668,12 @@ export const lessons: GradeLessons = {
     "asexual",
   ),
   "science/il-g6-design": lesson(
+    ["Criteria are what a solution must do to succeed. Constraints are limits.", "A decision matrix compares designs against the criteria.", "A trade-off is giving up some of one thing to get more of another.", "After a test fails, improve the design and test again."],
+    "A cheaper filter cleans water less well. Choosing it means accepting a… what?",
+    ["You give up some cleaning to save money.", "Giving up one thing for another is a trade-off."],
+    "a trade-off",
+  ),
+  "science/md-g6-design": lesson(
     ["Criteria are what a solution must do to succeed. Constraints are limits.", "A decision matrix compares designs against the criteria.", "A trade-off is giving up some of one thing to get more of another.", "After a test fails, improve the design and test again."],
     "A cheaper filter cleans water less well. Choosing it means accepting a… what?",
     ["You give up some cleaning to save money.", "Giving up one thing for another is a trade-off."],
@@ -777,18 +801,149 @@ export const lessons: GradeLessons = {
     ["Tape stores an analog wave.", "Each copy adds noise."],
     "noise is added with each copy",
   ),
+  "science/va-g6-seasons-tides": lesson(
+    ["Earth's axis is tilted about 23.5°. Without the tilt there would be almost no seasons.", "When a hemisphere tilts toward the Sun, sunlight hits more directly and it has summer.", "Earth orbits the Sun about every 365 days.", "The Moon's and Sun's gravity pull on the oceans to make tides."],
+    "When the Northern Hemisphere tilts toward the Sun, what season does it have?",
+    ["Tilted toward the Sun means more direct sunlight.", "More direct sunlight means summer."],
+    "summer",
+  ),
+  "science/va-g6-watersheds": lesson(
+    ["A watershed is all the land that drains into one body of water.", "Most of Virginia drains to the Chesapeake Bay, an estuary. Some drains to the Gulf of Mexico or straight to the Atlantic Ocean.", "Pollution and sediment on land wash into streams, so caring for land protects the water."],
+    "Why does mud washing into a river harm underwater grasses?",
+    ["Mud makes the water cloudy.", "Plants need sunlight to grow."],
+    "It blocks the sunlight they need.",
+  ),
+  // Missouri (us-mo)
+  "science/mo-g6-weather": lesson(
+    ["Evaporation: liquid water becomes vapour. Condensation: vapour cools into cloud droplets.", "Humidity is the amount of water vapour in the air.", "Warm, moist air from the Gulf meets cold, dry air from Canada over the middle of the country.", "Where those air masses meet, warm air is pushed up, cools and makes storms, including the thunderstorms Missouri gets in spring."],
+    "Why does Missouri get many spring thunderstorms?",
+    ["Warm, moist air and cold, dry air meet there.", "The warm air rises, cools and forms storm clouds."],
+    "warm moist air and cold dry air meet and the warm air rises",
+  ),
+  "science/mo-g6-climate": lesson(
+    ["Climate is the average weather over many years.", "Oceans keep coastal temperatures steady, so places far inland, like Missouri, have hotter summers and colder winters.", "People burn much more fossil fuel than 200 years ago, so there is more CO₂ in the air.", "We can use less energy, like walking short trips, and adapt, like planting shade trees."],
+    "Why does a coastal city have milder winters than a city far inland?",
+    ["Ocean water warms and cools slowly.", "It keeps nearby temperatures steady."],
+    "the ocean keeps temperatures steady",
+  ),
+  "science/mo-g6-growth": lesson(
+    ["Asexual reproduction needs one parent: bacteria splitting, strawberry runners.", "Sexual reproduction needs two parents and creates variation.", "Behaviours like nest building and feeding chicks help young survive.", "Genes and the environment both affect growth: the same plants grow differently in sun and shade."],
+    "Two identical plants grow in sun and in shade and end up different heights. Why?",
+    ["Their genes are the same.", "So the difference comes from where they grew."],
+    "the environment",
+  ),
+  "science/mo-g6-design": lesson(
+    ["Criteria are what a solution must do to succeed. Constraints are limits.", "A decision matrix compares designs against the criteria.", "A trade-off is giving up some of one thing to get more of another.", "After a test fails, improve the design and test again."],
+    "A cheaper filter cleans water less well. Choosing it means accepting a… what?",
+    ["You give up some cleaning to save money.", "Giving up one thing for another is a trade-off."],
+    "a trade-off",
+  ),
+
+  // North Carolina's units (us-nc).
+  "science/heat-transfer-7": lesson(
+    ["Conduction moves heat through touching materials, like a hot pan handle.", "Convection moves heat through flowing liquids or gases, like warm air rising.", "Radiation moves heat as rays with no material needed, like sunlight. Insulators slow heat loss."],
+    "You feel warm sitting near a fire without touching it. Which kind of heat transfer is it?",
+    ["You aren’t touching anything hot.", "The heat travels as rays through the air."],
+    "radiation",
+  ),
+  "science/sound-4": lesson(
+    ["Sound is made by vibrations that travel as waves.", "Pitch is how high or low. Volume is how loud or soft.", "Sound travels through air, water and solids, but not empty space. An echo is sound bouncing back."],
+    "Why do you see lightning before you hear thunder?",
+    ["Both happen at the same time.", "Light reaches you first because it is faster."],
+    "light travels much faster than sound",
+  ),
+  "science/photosynthesis-respiration-9": lesson(
+    ["Photosynthesis (in chloroplasts): carbon dioxide + water + light → glucose + oxygen.", "Cellular respiration (in mitochondria): glucose + oxygen → carbon dioxide + water + energy.", "The products of each are the reactants of the other, which cycles carbon."],
+    "Which process releases oxygen: photosynthesis or respiration?",
+    ["Respiration uses oxygen.", "Photosynthesis gives it off."],
+    "photosynthesis",
+  ),
+  "science/nc-g6-plate-tectonics": lesson(
+    ["Earth's crust is broken into plates that move slowly on the mantle.", "Convergent boundaries collide (building mountains like the Appalachians long ago), divergent ones pull apart, and transform ones slide past each other.", "Most earthquakes and volcanoes happen along plate edges."],
+    "Two plates pull apart and new crust forms. Which kind of boundary is this?",
+    ["“Diverge” means to move apart."],
+    "divergent",
+  ),
+  "science/nc-g6-earth-moon-sun": lesson(
+    ["Earth's tilt causes the seasons: the Northern Hemisphere has summer when it tilts toward the sun.", "The moon's pull causes tides; spring tides happen when the sun, moon and Earth line up.", "In a solar eclipse the moon is between the sun and Earth; in a lunar eclipse Earth is between the sun and the moon."],
+    "During a solar eclipse, which body is in the middle?",
+    ["A solar eclipse blocks the sun from Earth.", "Only the moon can be between them to do that."],
+    "the moon",
+  ),
+  // Massachusetts (us-ma)
+  "science/ca-g8-embryos": lesson(
+    ["Embryos of different species can look alike early on, even when adults look very different.", "Shared features, like early tails and pharyngeal pouches, suggest common ancestry.", "Structures that develop the same way are stronger evidence than look-alike adult parts."],
+    "A human embryo has a tail early on. What does it become in an adult?",
+    ["It shrinks as the embryo grows.", "A small bone remains."],
+    "the tailbone",
+  ),
+  "science/ma-g6-earth-history": lesson(
+    ["Rock layers and fossils order Earth's 4.6-billion-year history; lower layers are older.", "Most of that history is the Precambrian. We live in the Cenozoic Era.", "Homologous structures show that living things share ancestors."],
+    "In which era do we live today?",
+    ["The eras go Paleozoic, Mesozoic, Cenozoic.", "The latest is the Cenozoic."],
+    "the Cenozoic Era",
+  ),
+  // South Carolina (us-sc)
+  "science/sc-g6-weather": lesson(
+    ["Evaporation: liquid water becomes vapour. Condensation: vapour cools into cloud droplets.", "Humidity is the amount of water vapour in the air.", "Air masses are huge bodies of air; where a warm one meets a cold one there is a front, and storms often form.", "Warm, moist air from the Atlantic Ocean and the Gulf brings South Carolina its summer thunderstorms and hurricanes."],
+    "A cold front pushes into warm, moist summer air over South Carolina. What weather is likely?",
+    ["The cold air slides under the warm air and lifts it.", "Rising moist air cools and its water vapour condenses."],
+    "clouds and thunderstorms",
+  ),
+  "science/sc-g6-climate": lesson(
+    ["Climate is the average weather over many years.", "Oceans keep coastal temperatures steady, so coastal cities have mild winters.", "People burn much more fossil fuel than 200 years ago, so there is more CO₂ in the air.", "We can use less energy, like walking short trips, and adapt, like planting shade trees."],
+    "Why does a coastal city have milder winters than a city far inland?",
+    ["Ocean water warms and cools slowly.", "It keeps nearby temperatures steady."],
+    "the ocean keeps temperatures steady",
+  ),
+  "science/sc-g6-plate-tectonics": lesson(
+    ["Earth has a crust, mantle, outer core and a solid inner core of iron and nickel.", "Convergent boundaries collide, divergent ones pull apart, transform ones slide past each other.", "In an earthquake: drop, cover and hold on. Near the coast, go to high ground after strong shaking."],
+    "Two plates pull apart and new crust forms. Which type of boundary is this?",
+    ["“Diverge” means to move apart."],
+    "divergent",
+  ),
+  "science/sc-g6-earth-surface": lesson(
+    ["Rock cycle: igneous from melted rock, sedimentary from layers, metamorphic from heat and pressure.", "Glaciers, rivers and wind reshape land, some fast and some over thousands of years.", "Matching fossils on far-apart continents show they were once joined."],
+    "Rock is changed by heat and pressure deep underground. What kind is it now?",
+    ["Changed rock is metamorphic."],
+    "metamorphic",
+  ),
+  "science/sc-g6-earth-history": lesson(
+    ["Rock layers and fossils order Earth’s 4.6-billion-year history; lower layers are older.", "Most of that history is the Precambrian. We live in the Cenozoic Era.", "Homologous structures show that living things share ancestors."],
+    "In which era do we live today?",
+    ["The eras go Paleozoic, Mesozoic, Cenozoic.", "The latest is the Cenozoic."],
+    "the Cenozoic Era",
+  ),
+  "science/wi-g6-weather": lesson(
+    ["An air mass is a huge body of air with the same temperature and moisture.", "Where two air masses meet is a front; fronts often bring storms.", "Sunlight drives evaporation, and gravity brings rain and snow back down."],
+    "A cold front passes. What usually happens to the temperature?",
+    ["Cold air pushes in behind the front.", "So the temperature drops."],
+    "it drops",
+  ),
+  "science/wi-g6-climate": lesson(
+    ["Climate depends on latitude, nearness to large bodies of water, mountains and winds.", "Places far from oceans, like Wisconsin, have warm summers and cold winters. Lake Michigan and Lake Superior soften the weather near their shores.", "Greenhouse gases like carbon dioxide trap heat and are warming Earth."],
+    "Why is southern Wisconsin usually warmer than northern Wisconsin?",
+    ["Think about latitude.", "It is closer to the equator."],
+    "it is closer to the equator",
+  ),
+  "science/wi-g6-growth": lesson(
+    ["Animals use behaviours like songs and nests to help them reproduce.", "Plants use flowers, scents and wind to spread pollen and seeds.", "Growth depends on genes and the environment (water, food, light). Sexual reproduction mixes genes from two parents; asexual makes copies of one."],
+    "A potato grows from a piece of potato. Sexual or asexual reproduction?",
+    ["There is only one parent.", "The new plant is a copy, so it is asexual."],
+    "asexual",
+  ),
+  "science/wi-g6-design": lesson(
+    ["Criteria are what a solution must do to succeed. Constraints are limits.", "A decision matrix compares designs against the criteria.", "A trade-off is giving up some of one thing to get more of another.", "After a test fails, improve the design and test again."],
+    "A cheaper filter cleans water less well. Choosing it means accepting a… what?",
+    ["You give up some cleaning to save money.", "Giving up one thing for another is a trade-off."],
+    "a trade-off",
+  ),
   // Tennessee
   "science/tn-g6-climate": lesson(
     ["Climate is the average weather of a place over many years.", "Burning fossil fuels adds carbon dioxide, which traps heat. This is the main cause of recent warming.", "As Earth warms, ice melts and seawater expands, so sea level rises.", "Forests help slow climate change because trees take in carbon dioxide."],
     "Why do forests help slow climate change?",
     ["Carbon dioxide traps heat.", "Trees take in carbon dioxide to make food."],
     "trees take in carbon dioxide",
-  ),
-  "science/heat-transfer-7": lesson(
-    ["Conduction moves heat through touching materials, like a hot pan handle.", "Convection moves heat through flowing liquids or gases, like warm air rising.", "Radiation moves heat as rays with no material needed, like sunlight. Insulators slow heat loss."],
-    "You feel warm sitting near a fire without touching it. Which kind of heat transfer is it?",
-    ["You aren’t touching anything hot.", "The heat travels as rays through the air."],
-    "radiation",
   ),
   "science/tn-g6-weather": lesson(
     ["Warm air is less dense, so it rises. Cold air sinks.", "Humidity is the amount of water vapour in the air.", "Water vapour cools and condenses to form clouds.", "Air masses meet at fronts, which bring weather changes. An anemometer measures wind speed."],

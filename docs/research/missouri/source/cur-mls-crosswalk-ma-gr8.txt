@@ -1,0 +1,268 @@
+                                                                            8th Grade Mathematics
+
+
+                  Missouri Learning Standards:                                                               Missouri Learning Standards:
+             Grade-Level Expectations for Mathematics                                                               Mathematics
+   (Adopted April 2016 for implementation in the 2016 – 2017 school year, assessed        (Adopted 2010, transitioning out, assessed through the 2016 – 2017 school year.)
+                     beginning in the 2017 – 2018 school year.)
+    Code                              Adopted Standards                                   Code                                     Current MLS
+8.NS.A          Know that there are numbers that are not rational, and
+                approximate them by rational numbers.
+8.NS.A.1        Explore the real number system.                                       8.NS.A.1         Know that numbers that are not rational are called irrational.
+                a. Know the differences between rational and irrational                                Understand informally that every number has a decimal
+                   numbers.                                                                            expansion; for rational numbers show that the decimal
+                b. Understand that all rational numbers have a decimal                                 expansion repeats eventually, and convert a decimal expansion
+                   expansion that terminates or repeats.                                               which repeats eventually into a rational number.
+                c. Convert decimals which repeat into fractions and fractions
+                   into repeating decimals.
+                d. Generate equivalent representations of rational numbers.
+8.NS.A.2        Estimate the value and compare the size of irrational numbers         8.NS.A.2         Use rational approximations of irrational numbers to compare
+                and approximate their locations on a number line.                                      the size of irrational numbers, locate them approximately on a
+                                                                                                       number line diagram, and estimate the value of expressions (e.g.,
+                                                                                                       π2). For example, by truncating the decimal expansion of √2, show
+                                                                                                       that √2 is between 1 and 2, then between 1.4 and 1.5, and explain
+                                                                                                       how to continue on to get better approximations.
+8.EEI.A         Work with radicals and integer exponents.
+8.EEI.A.1       Know and apply the properties of integer exponents to generate        8.EE.A.1         Know and apply the properties of integer exponents to generate
+                equivalent expressions.                                                                equivalent numerical expressions. For example, 32 × 3-5 = 3-3 =
+                                                                                                       1/33 = 1/27.
+8.EEI.A.2       Investigate concepts of square and cube roots.                        8.EE.A.2         Use square root and cube root symbols to represent solutions to
+                a. Solve equations of the form x2 = p and x3 = p, where p is a                         equations of the form x2 = p and x3 = p, where p is a positive
+                   positive rational number.                                                           rational number. Evaluate square roots of small perfect squares
+                b. Evaluate square roots of perfect squares less than or equal to                      and cube roots of small perfect cubes. Know that √2 is irrational.
+                   625 and cube roots of perfect cubes less than or equal to
+                   1000.
+                c. Recognize that square roots of non-perfect squares are
+                   irrational.
+8.EEI.A.3       Express very large and very small quantities in scientific            8.EE.A.3         Use numbers expressed in the form of a single digit times an
+                notation and approximate how many times larger one is than the                         integer power of 10 to estimate very large or very small
+                other.                                                                                 quantities, and to express how many times as much one is than
+                                                                                                       the other. For example, estimate the population of the United
+                                                                                                       States as 3 times 108 and the population of the world as 7 times
+                                                                                                       109, and determine that the world population is more than 20
+                                                                                                       times larger.
+
+
+
+                                                                                                                                                                             1
+                                                                             8th Grade Mathematics
+                   Missouri Learning Standards:                                                               Missouri Learning Standards:
+              Grade-Level Expectations for Mathematics                                                               Mathematics
+    (Adopted April 2016 for implementation in the 2016 – 2017 school year, assessed        (Adopted 2010, transitioning out, assessed through the 2016 – 2017 school year.)
+                      beginning in the 2017 – 2018 school year.)
+    Code                                Adopted Standards                                  Code                                     Current MLS
+8.EEI.A.4        Use scientific notation to solve problems.                            8.EE.A.4         Perform operations with numbers expressed in scientific
+                 a. Perform operations with numbers expressed in scientific                             notation, including problems where both decimal and scientific
+                    notation, including problems where both decimal and                                 notation are used. Use scientific notation and choose units of
+                    scientific notation are used.                                                       appropriate size for measurements of very large or very small
+                 b. Use scientific notation and choose units of appropriate size                        quantities (e.g., use millimeters per year for seafloor spreading).
+                    for measurements of very large or very small quantities.                            Interpret scientific notation that has been generated by
+                                                                                                        technology
+8.EEI.B          Understand the connections between proportional
+                 relationships, lines and linear equations.
+8.EEI.B.5        Graph proportional relationships.                                     8.EE.B.5         Graph proportional relationships, interpreting the unit rate as
+                 a. Interpret the unit rate as the slope of the graph.                                  the slope of the graph. Compare two different proportional
+                 b. Compare two different proportional relationships.                                   relationships represented in different ways. For example,
+                                                                                                        compare a distance-time graph to a distance-time equation to
+                                                                                                        determine which of two moving objects has greater speed.
+8.EEI.B.6        Apply concepts of slope and y-intercept to graphs, equations and      8.EE.B.6         Use similar triangles to explain why the slope m is the same
+                 proportional relationships.                                                            between any two distinct points on a non-vertical line in the
+                 a. Explain why the slope (m) is the same between any two                               coordinate plane; derive the equation y = mx for a line through
+                    distinct points on a non-vertical line in the Cartesian                             the origin and the equation y = mx + b for a line intercepting the
+                    coordinate plane.                                                                   vertical axis at b.
+                 b. Derive the equation y = mx for a line through the origin and
+                    the equation y = mx + b for a line intercepting the vertical
+                    axis at b.
+8.EEI.C          Analyze and solve linear equations and inequalities and
+                 pairs of simultaneous linear equations.
+8.EEI.C.7        Solve linear equations and inequalities in one variable.              8.EE.C.7         Solve linear equations in one variable.
+                 a. Create and identify linear equations with one solution,                             a. Give examples of linear equations in one variable with one
+                    infinitely many solutions or no solutions.                                             solution, infinitely many solutions, or no solutions. Show
+                 b. Solve linear equations and inequalities with rational number                           which of these possibilities is the case by successively
+                    coefficients, including equations and inequalities whose                               transforming the given equation into simpler forms, until an
+                    solutions require expanding expressions using the                                      equivalent equation of the form x = a, a = a, or a = b results
+                    distributive property and combining like terms.                                        (where a and b are different numbers).
+                                                                                                        b. Solve linear equations with rational number coefficients,
+                                                                                                           including equations whose solutions require expanding
+                                                                                                           expressions using the distributive property and collecting
+                                                                                                           like terms.
+
+
+
+
+                                                                                                                                                                              2
+                                                                            8th Grade Mathematics
+                  Missouri Learning Standards:                                                               Missouri Learning Standards:
+             Grade-Level Expectations for Mathematics                                                               Mathematics
+   (Adopted April 2016 for implementation in the 2016 – 2017 school year, assessed        (Adopted 2010, transitioning out, assessed through the 2016 – 2017 school year.)
+                     beginning in the 2017 – 2018 school year.)
+    Code                               Adopted Standards                                  Code                                    Current MLS
+8.EEI.C.8       Analyze and solve systems of linear equations.                        8.EE.C.8         Analyze and solve pairs of simultaneous linear equations.
+                a. Graph systems of linear equations and recognize the                                 a. Understand that solutions to a system of two linear equations
+                   intersection as the solution to the system.                                            in two variables correspond to points of intersection of their
+                b. Explain why solution(s) to a system of two linear equations                            graphs, because points of intersection satisfy both equations
+                   in two variables correspond to point(s) of intersection of the                         simultaneously.
+                   graphs.                                                                             b. Solve systems of two linear equations in two variables
+                c. Explain why systems of linear equations can have one                                   algebraically, and estimate solutions by graphing the
+                   solution, no solution or infinitely many solutions.                                    equations. Solve simple cases by inspection. For example, 3x +
+                d. Solve systems of two linear equations.                                                 2y = 5 and 3x + 2y = 6 have no solution because 3x + 2y cannot
+                                                                                                          simultaneously be 5 and 6.
+                                                                                                       c. Solve real-world and mathematical problems leading to two
+                                                                                                          linear equations in two variables. For example, given
+                                                                                                          coordinates for two pairs of points, determine whether the line
+                                                                                                          through the first pair of points intersects the line through the
+                                                                                                          second pair.
+8.GM.A          Understand congruence and similarity using physical
+                models, transparencies or geometry software.
+8.GM.A.1        Verify experimentally the congruence properties of rigid              8.G.A.1          Verify experimentally the properties of rotations, reflections,
+                transformations.                                                                       and translations:
+                a. Verify that angle measure, betweeness, collinearity and                             a. Lines are taken to lines, and line segments to line segments of
+                    distance are preserved under rigid transformations.                                    the same length.
+                b. Investigate if orientation is preserved under rigid                                 b. Angles are taken to angles of the same measure.
+                    transformations.                                                                   c. Parallel lines are taken to parallel lines.
+8.GM.A.2        Understand that two-dimensional figures are congruent if a            8.G.A.2          Understand that a two-dimensional figure is congruent to
+                series of rigid transformations can be performed to map the pre­                       another if the second can be obtained from the first by a
+                image to the image.                                                                    sequence of rotations, reflections, and translations; given two
+                a. Describe a possible sequence of rigid transformations                               congruent figures, describe a sequence that exhibits the
+                    between two congruent figures.                                                     congruence between them.
+8.GM.A.3        Describe the effect of dilations, translations, rotations and         8.G.A.3          Describe the effect of dilations, translations, rotations, and
+                reflections on two-dimensional figures using coordinates.                              reflections on two-dimensional figures using coordinates.
+8.GM.A.4        Understand that two-dimensional figures are similar if a series       8.G.A.4          Understand that a two-dimensional figure is similar to another if
+                of transformations (rotations, reflections, translations and                           the second can be obtained from the first by a sequence of
+                dilations) can be performed to map the pre-image to the image.                         rotations, reflections, translations, and dilations; given two
+                a. Describe a possible sequence of transformations between                             similar two-dimensional figures, describe a sequence that
+                    two similar figures.                                                               exhibits the similarity between them.
+
+
+
+
+                                                                                                                                                                             3
+                                                                            8th Grade Mathematics
+                  Missouri Learning Standards:                                                               Missouri Learning Standards:
+             Grade-Level Expectations for Mathematics                                                               Mathematics
+   (Adopted April 2016 for implementation in the 2016 – 2017 school year, assessed        (Adopted 2010, transitioning out, assessed through the 2016 – 2017 school year.)
+                     beginning in the 2017 – 2018 school year.)
+    Code                                Adopted Standards                                 Code                                      Current MLS
+8.GM.A.5        Explore angle relationships and establish informal arguments.         8.G.A.5          Use informal arguments to establish facts about the angle sum
+                a. Derive the sum of the interior angles of a triangle.                                and exterior angle of triangles, about the angles created when
+                b. Explore the relationship between the interior and exterior                          parallel lines are cut by a transversal, and the angle-angle
+                   angles of a triangle.                                                               criterion for similarity of triangles. For example, arrange three
+                c. Construct and explore the angles created when parallel lines                        copies of the same triangle so that the sum of the three angles
+                   are cut by a transversal.                                                           appears to form a line, and give an argument in terms of
+                d. Use the properties of similar figures to solve problems.                            transversals why this is so.
+8.GM.B          Understand and apply the Pythagorean Theorem.
+8.GM.B.6        Use models to demonstrate a proof of the Pythagorean Theorem          8.G.B.6          Explain a proof of the Pythagorean Theorem and its converse.
+                and its converse.
+8.GM.B.7        Use the Pythagorean Theorem to determine unknown side                 8.G.B.7          Apply the Pythagorean Theorem to determine unknown side
+                lengths in right triangles in problems in two- and three-                              lengths in right triangles in real-world and mathematical
+                dimensional contexts.                                                                  problems in two and three dimensions.
+8.GM.B.8        Use the Pythagorean Theorem to find the distance between              8.G.B.8          Apply the Pythagorean Theorem to find the distance between
+                points in a Cartesian coordinate system.                                               two points in a coordinate system.
+8.GM.C          Solve problems involving volume of cones, pyramids and
+                spheres.
+8.GM.C.9        Solve problems involving surface area and volume.                     8.G.C.9          Know the formulas for the volumes of cones, cylinders, and
+                a. Understand the concept of surface area and find surface area                        spheres and use them to solve real-world and mathematical
+                   of pyramids.                                                                        problems.
+                b. Understand the concepts of volume and find the volume of
+                   pyramids, cones and spheres.
+8.DSP.A         Investigate patterns of association in bivariate data.
+8.DSP.A.1       Construct and interpret scatter plots of bivariate measurement        8.SP.A.1         Construct and interpret scatter plots for bivariate measurement
+                data to investigate patterns of association between two                                data to investigate patterns of association between two
+                quantities.                                                                            quantities. Describe patterns such as clustering, outliers, positive
+                                                                                                       or negative association, linear association, and nonlinear
+                                                                                                       association.
+8.DSP.A.2       Generate and use a trend line for bivariate data, and informally      8.SP.A.2         Know that straight lines are widely used to model relationships
+                assess the fit of the line.                                                            between two quantitative variables. For scatter plots that
+                                                                                                       suggest a linear association, informally fit a straight line, and
+                                                                                                       informally assess the model fit by judging the closeness of the
+                                                                                                       data points to the line.
+
+
+
+
+                                                                                                                                                                              4
+                                                                             8th Grade Mathematics
+                   Missouri Learning Standards:                                                               Missouri Learning Standards:
+              Grade-Level Expectations for Mathematics                                                               Mathematics
+    (Adopted April 2016 for implementation in the 2016 – 2017 school year, assessed        (Adopted 2010, transitioning out, assessed through the 2016 – 2017 school year.)
+                      beginning in the 2017 – 2018 school year.)
+    Code                                 Adopted Standards                                 Code                                    Current MLS
+                                                                                       8.SP.A.3         Use the equation of a linear model to solve problems in the
+                                                                                                        context of bivariate measurement data, interpreting the slope
+                                                                                                        and intercept. For example, in a linear model for a biology
+                                                                                                        experiment, interpret a slope of 1.5 cm/hr as meaning that an
+                                                                                                        additional hour of sunlight each day is associated with an
+                                                                                                        additional 1.5 cm in mature plant height.
+8.DSP.A.3        Interpret the parameters of a linear model of bivariate               8.SP.A.3         Use the equation of a linear model to solve problems in the
+                 measurement data to solve problems.                                                    context of bivariate measurement data, interpreting the slope
+                                                                                                        and intercept. For example, in a linear model for a biology
+                                                                                                        experiment, interpret a slope of 1.5 cm/hr as meaning that an
+                                                                                                        additional hour of sunlight each day is associated with an
+                                                                                                        additional 1.5 cm in mature plant height.
+8.DSP.A.4        Understand the patterns of association in bivariate categorical       8.SP.A.4         Understand that patters of association can also be seen in
+                 data displayed in a two-way table.                                                     bivariate categorical data by displaying frequencies and relative
+                 a. Construct and interpret a two-way table summarizing data                            frequencies in a two-way table. Construct and interpret a two-
+                    on two categorical variables collected from the same                                way table summarizing data on two categorical variables
+                    subjects.                                                                           collected from the same subjects. Use relative frequencies
+                 b. Use relative frequencies calculated for rows or columns to                          calculated for rows or columns to describe possible association
+                    describe possible association between the two variables.                            between the two variables. For example, collect data from
+                                                                                                        students in your class on whether or not they have a curfew on
+                                                                                                        school nights whether or not they have assigned chores at home.
+                                                                                                        Is there evidence that those who have a curfew also tend to have
+                                                                                                        chores?
+8.F.A            Define, evaluate and compare functions.
+8.F.A.1          Explore the concept of functions. (The use of function notation is    8.F.A.1          Understand that a function is a rule that assigns to each input
+                 not required.)                                                                         exactly one output. The graph of a function is the set of ordered
+                 a. Understand that a function assigns to each input exactly one                        pairs consisting of an input and the corresponding output.
+                     output.
+                 b. Determine if a relation is a function.
+                 c. Graph a function.
+8.F.A.2          Compare characteristics of two functions each represented in a        8.F.A.2          Compare properties of two functions each represented in a
+                 different way.                                                                         different way (algebraically, graphically, numerically in tables, or
+                                                                                                        by verbal descriptions).For example, given a linear function
+                                                                                                        represented by a table of values and a linear function represented
+                                                                                                        by an algebraic expression, determine which function has the
+                                                                                                        greater rate of change.
+
+
+
+                                                                                                                                                                               5
+                                                                                                8th Grade Mathematics
+                       Missouri Learning Standards:                                                                                           Missouri Learning Standards:
+                  Grade-Level Expectations for Mathematics                                                                                           Mathematics
+      (Adopted April 2016 for implementation in the 2016 – 2017 school year, assessed                                 (Adopted 2010, transitioning out, assessed through the 2016 – 2017 school year.)
+                        beginning in the 2017 – 2018 school year.)
+    Code                                      Adopted Standards                                                      Code                                          Current MLS
+8.F.A.3                Investigate the differences between linear and nonlinear                                  8.F.A.3               Interpret the equation y = mx + b as defining a linear function,
+                       functions.                                                                                                      whose graph is a straight line; give examples of functions that
+                       a. Interpret the equation y = mx + b as defining a linear                                                       are not linear. For example, the function A = s2 giving the area of a
+                          function, whose parameters are the slope (m) and the y-                                                      square as a function of its side length is not linear because its
+                          intercept (b).                                                                                               graph contains the points (1,1), (2,4) and (3,9), which are not on a
+                       b. Recognize that the graph of a linear function has a constant                                                 straight line.
+                          rate of change
+                       c. Give examples of nonlinear functions.
+8.F.B                  Use functions to model relationships between quantities.
+8.F.B.4                Use functions to model linear relationships between quantities.                           8.F.B.4               Construct a function to model a linear relationship between two
+                       a. Explain the parameters of a linear function based on the                                                     quantities. Determine the rate of change and initial value of the
+                          context of a problem.                                                                                        function from a description of a relationship or from two (x, y)
+                       b. Determine the parameters of a linear function.                                                               values, including reading these from a table or from a graph.
+                       c. Determine the x-intercept of a linear function.                                                              Interpret the rate of change and initial value of a linear function
+                                                                                                                                       in terms of the situation it models, and in terms of its graph or a
+                                                                                                                                       table of values.
+8.F.B.5                Describe the functional relationship between two quantities                               8.F.B.5               Describe qualitatively the functional relationship between two
+                       from a graph or a verbal description.                                                                           quantities by analyzing a graph (e.g., where the function is
+                                                                                                                                       increasing or decreasing, linear or nonlinear). Sketch a graph
+                                                                                                                                       that exhibits the qualitative features of a function that has been
+                                                                                                                                       described verbally.
+
+
+
+
+The Department of Elementary and Secondary Education does not discriminate on the basis of race, color, religion, gender, gender identity, sexual orientation, national origin, age, veteran status, mental or physical
+disability, or any other basis prohibited by statute in its programs and activities. Inquiries related to department programs and to the location of services, activities, and facilities that are accessible by persons with
+disabilities may be directed to the Jefferson State Office Building, Director of Civil Rights Compliance and MOA Coordinator (Title VI/Title VII/Title IX/504/ADA/ADAAA/Age Act/GINA/USDA Title VI), 5th Floor, 205
+Jefferson Street, P.O. Box 480, Jefferson City, MO 65102-0480; telephone number 573-526-4757 or TTY 800-735-2966; email civilrights@dese.mo.gov
+
+
+                                                                                                                                                                                                                                6
+

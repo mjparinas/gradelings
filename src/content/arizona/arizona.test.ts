@@ -76,8 +76,8 @@ describe("Arizona", () => {
       expect.arrayContaining(["az-g3-indian-nations", "az-g3-governing-arizona", "az-g9-arizona-constitution", "az-g9-civics-test"]),
     );
     for (const { u, key } of own) {
-      // Florida, Pennsylvania, Indiana and Tennessee may copy Arizona's units, so they can carry their own standards beside Arizona's.
-      expect(Object.keys(u.standards).filter((f) => f !== "us-fl" && f !== "us-pa" && f !== "us-in" && f !== "us-tn"), `${key} carries only Arizona standards`).toEqual(["us-az"]);
+      // Florida, Pennsylvania, Indiana, Virginia, South Carolina, Wisconsin and Tennessee may copy Arizona's units, so they can carry their own standards beside Arizona's.
+      expect(Object.keys(u.standards).filter((f) => f !== "us-fl" && f !== "us-pa" && f !== "us-in" && f !== "us-va" && f !== "us-sc" && f !== "us-wi" && f !== "us-tn"), `${key} carries only Arizona standards`).toEqual(["us-az"]);
     }
   });
 });

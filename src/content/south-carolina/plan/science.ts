@@ -1,0 +1,116 @@
+import type { Entry } from "../kit";
+
+// South Carolina science: the units South Carolina uses from other frameworks, per grade ("<grade>/science"). Codes are
+// the South Carolina College- and Career-Ready Science Standards 2021, which follow the Next Generation Science
+// Standards' performance expectations placed by grade: Kindergarten to Grade 5 by grade ("4-PS3-1"), and middle school by
+// grade too ("6-ESS2-1", "7-PS1-2", "8-PS2-1"): Grade 6 cells, the senses, heat and particles, waves, the rock cycle,
+// plate tectonics, weather and climate; Grade 7 atoms and reactions, energy, photosynthesis, ecosystems and resources;
+// Grade 8 forces and fields, waves and signals, heredity, evolution and space. South Carolina has no separate
+// engineering codes. Grade 9 cites the high school courses a ninth grader may take: Biology 1 ("B-LS1-1"), the end-of-
+// course test, and Chemistry ("C-PS1-1") and Physics ("P-PS2-1"). South Carolina's own units (copies of other states'
+// units with South Carolina questions) are in ../units.
+export const PLAN_SCIENCE: Record<string, Entry[]> = {
+  "k/science": [
+    ["living-things-need", "share", "K-LS1-1", "what plants and animals, including people, need to live and grow"],
+    ["weather-and-seasons", "share", "K-ESS2-1", "observing local weather and its patterns over time"],
+    ["push-and-pull", "share", "K-PS2-1; K-PS2-2", "how pushes and pulls of different strengths change the speed or direction of an object"],
+    ["wa-gk-homes-habitats", "adopt", "K-ESS2-2; K-ESS3-1", "how plants and animals change their surroundings, and where living things find what they need"],
+    ["wa-gk-weather-safety", "adopt", "K-ESS3-2", "weather forecasts and getting ready for severe weather"],
+    ["care-for-earth-ab", "adopt", "K-ESS3-3", "ways people can reduce their impact on the land, water, air and living things"],
+    ["wa-gk-sunlight", "adopt", "K-PS3-1; K-PS3-2", "sunlight warming Earth's surface, and building something that reduces its warming"],
+  ],
+  "1/science": [
+    ["light-and-sound", "share", "1-PS4-1; 1-PS4-2; 1-PS4-3", "vibrations that make sound, seeing objects when light shines on them, and materials that block or let light through"],
+    ["sky-and-seasons", "share", "1-ESS1-1; 1-ESS1-2", "patterns of the sun, moon and stars, and the amount of daylight in different seasons"],
+    ["animal-survival", "share", "1-LS1-1", "how animals use their body parts to survive, grow and meet their needs"],
+    ["wa-g1-parents-young", "adopt", "1-LS1-2; 1-LS3-1", "how parents help their young survive, and how young plants and animals are like their parents"],
+    ["wa-g1-nature-ideas", "adopt", "1-LS1-1", "solving human problems by copying how plants and animals use their parts"],
+    ["wa-g1-plant-parts", "adopt", "1-LS1-1", "how plants use their parts to grow and survive"],
+    ["wa-g1-signals", "adopt", "1-PS4-4", "using light or sound to send a message over a distance"],
+    ["mb-k-sun-and-moon", "adopt", "1-ESS1-1", "patterns in how the sun and moon appear to move across the sky"],
+  ],
+  "2/science": [
+    ["changing-materials", "share", "2-PS1-1; 2-PS1-4", "describing and sorting materials by their properties, and changes from heating and cooling"],
+    ["solids-and-liquids", "share", "2-PS1-4", "changes from heating or cooling that can and cannot be reversed"],
+    ["mixtures-and-materials", "adopt", "2-PS1-1; 2-PS1-2", "classifying materials by their properties and choosing the best material for a job"],
+    ["or-g2-design", "adopt", "2-PS1-3", "building something new from small pieces, and taking it apart to make something else"],
+    ["wa-g2-plant-needs", "adopt", "2-LS2-1; 2-LS2-2", "what plants need to grow, and how animals help spread seeds and pollinate plants"],
+  ],
+  "3/science": [
+    ["wa-g3-survival", "adopt", "3-LS2-1; 3-LS4-2; 3-LS4-3", "how living in groups and differences in traits help animals survive in their habitats"],
+    ["mb-needs-life-cycles", "adopt", "3-LS1-1", "the life cycles of plants and animals"],
+    ["plant-life", "adopt", "3-LS1-1", "the life cycle of flowering plants"],
+    ["wa-g3-traits", "adopt", "3-LS3-1; 3-LS3-2", "traits inherited from parents and traits shaped by the environment"],
+    ["wa-g3-hazards", "adopt", "3-ESS3-1; 3-LS4-4", "designs that reduce the harm of weather hazards, and how changes in a habitat affect what lives there"],
+    ["forces-3", "adopt", "3-PS2-1; 3-PS2-3", "balanced and unbalanced forces, and pushes and pulls between objects that aren't touching"],
+    ["mb-speed-and-motion", "adopt", "3-PS2-1; 3-PS2-2", "how forces change motion, and using patterns of motion to predict what comes next"],
+    ["or-g3-magnet-design", "adopt", "3-PS2-4", "solving a problem with magnets, and testing designs fairly"],
+  ],
+  "4/science": [
+    ["wa-g4-energy-motion", "adopt", "4-PS3-1; 4-PS3-3; 4-PS3-4", "speed and energy, energy in collisions, and devices that change energy from one form to another"],
+    ["mb-energy-senses", "adopt", "4-PS3-2", "energy moving from place to place by sound, light, heat and electric currents"],
+    ["sound-4", "adopt", "4-PS3-2; 4-PS4-1", "sound energy, and the patterns of waves"],
+    ["light-4", "adopt", "4-PS4-2", "how we see objects when light reflects from them into the eye"],
+    ["wa-g4-waves-info", "adopt", "4-PS4-1; 4-PS4-3", "wave patterns, and using patterns to send information"],
+    ["mb-adaptations", "adopt", "4-LS1-1", "the internal and external structures that help plants and animals survive"],
+    ["sense-and-respond", "share", "4-LS1-2", "how animals take in information through their senses and respond"],
+  ],
+  "5/science": [
+    ["states-of-matter-5", "adopt", "5-PS1-1", "matter made of particles too small to see, in solids, liquids and gases"],
+    ["changes-of-state-5", "adopt", "5-PS1-1; 5-PS1-2", "changes of state, and weight staying the same when matter changes"],
+    ["measuring-matter-ab", "adopt", "5-PS1-2; 5-PS1-3", "measuring matter, and identifying materials by their properties"],
+    ["matter-changes-5", "adopt", "5-PS1-4", "whether mixing substances makes a new substance"],
+    ["wa-g5-energy-food", "adopt", "5-LS1-1; 5-PS3-1", "plants getting what they need to grow from air and water, and energy in food that came from the sun"],
+    ["mb-weather-5", "adopt", "5-ESS2-1", "how the land, water, air and living things work together, including in the water cycle"],
+    ["tx-g5-conservation", "adopt", "5-ESS3-1", "ways communities use science to protect Earth's resources and environment"],
+  ],
+  "6/science": [
+    ["body-systems", "share", "6-LS1-3", "how the body is a system of interacting subsystems made of groups of cells"],
+    ["wa-g6-cells", "adopt", "6-LS1-1; 6-LS1-2", "living things made of cells, and the parts of a cell and what they do"],
+    ["nb-senses-6", "adopt", "6-LS1-8", "sensory receptors sending messages to the brain"],
+    ["particles-heat-ab", "adopt", "6-PS1-4", "how adding or removing heat changes particle motion, temperature and state"],
+    ["wa-g6-thermal", "adopt", "6-PS3-3; 6-PS3-4", "designing a device that keeps heat in or out, and how mass and material affect temperature change"],
+    ["light-and-radiation", "adopt", "6-PS4-2", "how light and other waves are reflected, absorbed or passed through materials"],
+    ["rock-cycle", "adopt", "6-ESS2-1", "how rocks form and change in the rock cycle, driven by Earth's heat and the sun"],
+  ],
+  "7/science": [
+    ["atoms-and-elements", "share", "7-PS1-1", "atoms, elements, compounds and molecules"],
+    ["wa-g7-reactions", "adopt", "7-PS1-2; 7-PS1-5; 7-PS1-6", "signs of a chemical reaction, conservation of mass, and devices that release or absorb heat"],
+    ["mixtures", "adopt", "7-PS1-2", "mixtures and solutions, and whether substances react"],
+    ["ca-g7-materials", "adopt", "7-PS1-3", "synthetic materials made from natural resources, and how they affect society"],
+    ["wa-g8-energy", "adopt", "7-PS3-1; 7-PS3-2", "kinetic energy, mass and speed, and potential energy stored when objects interact at a distance"],
+    ["work-energy-8", "adopt", "7-PS3-5", "energy moving to or from an object when its kinetic energy changes"],
+    ["photosynthesis-respiration-9", "adopt", "7-LS1-6; 7-LS1-7", "photosynthesis making food, and cells breaking down food for energy"],
+    ["ca-g7-food-molecules", "adopt", "7-LS1-7", "how food molecules are rearranged to build the body and release energy"],
+    ["ecosystems-7", "adopt", "7-LS2-1; 7-LS2-2", "how resources affect populations, and patterns of interactions among organisms"],
+    ["food-chains-7", "adopt", "7-LS2-3", "the flow of energy and cycling of matter in food chains"],
+    ["cycles-succession-7", "adopt", "7-LS2-3; 7-LS2-4", "matter cycles, and how changes to an ecosystem affect its populations"],
+    ["biodiversity-6", "adopt", "7-LS2-5", "biodiversity and ways to protect ecosystems"],
+    ["ny-g7-resources", "adopt", "7-ESS3-1; 7-ESS3-3", "why Earth's resources are spread unevenly, and monitoring and reducing human impact"],
+    ["ny-g7-people-resources", "adopt", "7-ESS3-4", "how a growing population and more use of resources per person affect Earth's systems"],
+  ],
+  "8/science": [
+    ["nb-motion-forces-8", "adopt", "8-PS2-1; 8-PS2-2", "Newton's laws, and how force and mass change an object's motion"],
+    ["wa-g8-fields", "adopt", "8-PS2-3; 8-PS2-4; 8-PS2-5", "electric and magnetic forces, gravity, and fields acting at a distance"],
+    ["tx-g6-energy-waves", "adopt", "8-PS4-1", "waves, their amplitude and wavelength, and the energy they carry"],
+    ["ny-g8-digital-signals", "adopt", "8-PS4-3", "why digital signals are a more reliable way to send information than analog signals"],
+    ["wa-g8-heredity", "adopt", "8-LS3-1; 8-LS4-5", "how changes to genes can change traits, and choosing traits through breeding and technology"],
+    ["wa-g8-selection", "adopt", "8-LS4-4; 8-LS4-6", "natural selection, and how traits become more or less common in a population"],
+    ["tx-g7-reproduction", "adopt", "8-LS3-2", "why asexual reproduction makes identical offspring and sexual reproduction makes varied offspring"],
+    ["ca-g8-embryos", "adopt", "8-LS4-2", "similar body structures and embryos as evidence of common ancestry"],
+    ["tx-g7-solar-system", "adopt", "8-ESS1-2; 8-ESS1-3", "gravity holding the solar system together, and the scale and features of its planets"],
+  ],
+  "9/science": [
+    ["cells-from-cells", "share", "B-LS1-4", "cell division (mitosis) in growth and repair"],
+    ["tx-b-dna", "adopt", "B-LS1-1; B-LS3-1", "how DNA carries the instructions for making proteins and passes traits on"],
+    ["tx-b-systems", "adopt", "B-LS1-2; B-LS1-3", "organ systems working together, and feedback that keeps the body in balance"],
+    ["photosynthesis-respiration-9", "adopt", "B-LS1-5; B-LS1-7", "photosynthesis storing energy from light, and cellular respiration releasing it"],
+    ["tx-b-inheritance", "adopt", "B-LS3-2; B-LS3-3", "genetic variation from meiosis and mutations, and predicting traits with genetic crosses"],
+    ["tx-b-matter-cycles", "adopt", "B-LS2-5", "the cycling of carbon among living things, air, water and rock"],
+    ["mb-evolution-and-selection", "adopt", "B-LS4-1; B-LS4-2; B-LS4-4", "evidence of common ancestry, and natural selection changing populations"],
+    ["periodic-table-9", "adopt", "C-PS1-1", "using the periodic table to predict the properties of elements"],
+    ["chemical-change-ab", "adopt", "C-PS1-2; C-PS1-7", "chemical reactions, and the conservation of atoms and mass"],
+    ["wa-g9-motion", "adopt", "P-PS2-1; P-PS2-2", "Newton's second law, and momentum in collisions"],
+    ["mb-energy-and-magnetism", "adopt", "P-PS3-1; P-PS2-5", "calculating energy changes, and electric currents and magnetic fields"],
+  ],
+};
