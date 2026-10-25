@@ -724,4 +724,30 @@ export const lessons: GradeLessons = {
     ["A landslide happens in minutes.", "Mountain building takes millions of years."],
     "fast",
   ),
+
+  // North Carolina's units (us-nc).
+  "science/newtons-laws": lesson(
+    ["First law (inertia): an object keeps doing what it's doing unless a force acts on it.", "Second law: net force = mass × acceleration. Force is measured in newtons (N).", "Third law: every action has an equal and opposite reaction.", "Friction is a force that slows things, so a puck slides farther on smooth ice."],
+    "A 30 kg cart speeds up at 2 m/s². What net force acts on it?",
+    ["Force = mass × acceleration.", "30 × 2 = 60."],
+    "60 N",
+  ),
+  "science/ny-g9-climate-systems": lesson(
+    ["Weather is conditions at one time and place; climate is the long-term pattern.", "Greenhouse gases trap heat given off by Earth. Burning fossil fuels adds carbon dioxide.", "Ice cores and glaciers give evidence of past climates."],
+    "“It rained today.” Weather or climate?",
+    ["It describes one day.", "Short-term conditions are weather."],
+    "weather",
+  ),
+  "science/wa-g3-hazards": lesson(
+    ["Weather hazards include floods, strong wind, lightning and heavy snow.", "People design solutions: storm shutters, windbreaks, fish ladders.", "Judge a solution by asking: does it solve the problem?"],
+    "Trees planted in a row to block wind are a…?",
+    ["They break the force of the wind."],
+    "windbreak",
+  ),
+  "science/nc-g7-atmosphere": lesson(
+    ["The air is about 78% nitrogen and 21% oxygen. Almost all weather happens in the lowest layer, the troposphere; the ozone layer is in the stratosphere.", "The sun's energy drives the water cycle, and gravity brings precipitation back down.", "Uneven heating causes convection and global winds, and the jet stream steers storms. Monitoring air quality helps people stay healthy."],
+    "In which layer of the atmosphere does almost all weather happen?",
+    ["It is the lowest layer.", "That layer is the troposphere."],
+    "the troposphere",
+  ),
 };

@@ -729,4 +729,36 @@ export const lessons: GradeLessons = {
     ["Get low so you don't fall.", "Get under a desk and hold on until it stops."],
     "drop, cover and hold on",
   ),
+
+  // North Carolina's units (us-nc).
+  "science/pe-magnets-static-3": lesson(
+    ["Magnets attract iron and steel. Like poles push apart. Opposite poles pull together.", "A magnet's force can pass through thin things, like paper.", "A compass uses a magnet to find direction. Static electricity makes a balloon stick to a wall."],
+    "Two magnets snap together. Are the ends alike or opposite poles?",
+    ["Like poles push apart.", "Opposite poles pull together."],
+    "opposite poles",
+  ),
+  "science/rock-cycle": lesson(
+    ["Igneous rock forms when magma or lava cools.", "Sedimentary rock forms when pieces from weathering and erosion settle in layers and press together.", "Metamorphic rock forms when heat and pressure change a rock.", "The rock cycle has no start: any rock can become any other type."],
+    "Lava from a volcano cools and hardens. Which kind of rock forms?",
+    ["Lava is melted rock.", "Rock that forms from cooled melted rock is igneous."],
+    "igneous",
+  ),
+  "science/tx-g5-conservation": lesson(
+    ["Using natural resources can harm land, water and air, but good designs reduce the harm.", "Farmers rotate crops and plant cover crops to keep soil healthy.", "Carpooling burns less fuel. Recycling aluminum saves energy.", "Proper trash disposal keeps litter from hurting animals and water."],
+    "How does carpooling help the environment?",
+    ["Fewer cars make the trip.", "That burns less fuel and makes less pollution."],
+    "less fuel and less air pollution",
+  ),
+  "science/nc-g4-earth-changes": lesson(
+    ["Some changes to Earth's surface are fast, like earthquakes, landslides and floods.", "Others are slow, like weathering (breaking rock) and erosion (carrying pieces away) over many years.", "Plant roots, sea oats on dunes and walls can slow erosion."],
+    "Waves slowly move sand along a beach over many years. Fast or slow change?",
+    ["Many years is a long time.", "That is a slow change."],
+    "slow",
+  ),
+  "science/nc-g4-earth-and-moon": lesson(
+    ["Earth spins on its axis once a day, giving us day and night.", "The moon reflects sunlight. As it orbits Earth, we see different phases: new, crescent, quarter, gibbous and full.", "The phases repeat about every month."],
+    "Which phase comes after the full moon: new moon or third quarter?",
+    ["The order is new, first quarter, full, third quarter.", "After the full moon comes the third quarter."],
+    "third quarter",
+  ),
 };

@@ -657,4 +657,24 @@ export const lessons: GradeLessons = {
     ["Earth's gravity keeps pulling the ball toward Earth's centre."],
     "it comes back down because of gravity",
   ),
+
+  // North Carolina's units (us-nc).
+  "science/nc-g5-ecosystems": lesson(
+    ["Producers (plants) make food from sunlight. Consumers eat plants or other animals.", "Decomposers, like mushrooms, worms and bacteria, break down dead things and return matter to the soil.", "In an ecosystem, like a salt marsh, every part depends on the others."],
+    "Which is a decomposer: a hawk, a mushroom or a fern?",
+    ["A hawk is a consumer and a fern is a producer.", "A mushroom breaks down dead matter."],
+    "a mushroom",
+  ),
+  "science/nc-g5-water-cycle": lesson(
+    ["The sun warms water, and it evaporates into water vapor. Plants give off water vapor too (transpiration).", "Vapor cools and condenses into clouds, then falls as rain or snow (precipitation).", "Water runs off into rivers and lakes or soaks into the ground, and the cycle repeats."],
+    "Clouds form when water vapor does what?",
+    ["High in the air it is cool.", "Cool vapor condenses into tiny drops."],
+    "cools and condenses",
+  ),
+  "science/nc-g5-ocean-weather": lesson(
+    ["Water heats and cools more slowly than land, so the ocean keeps the coast milder in summer and winter.", "On sunny days, a sea breeze blows from the ocean onto the warmer land.", "The warm Gulf Stream flows past North Carolina, and warm ocean water gives hurricanes their energy."],
+    "Why are winters on the coast milder than in the mountains?",
+    ["The ocean stores heat from summer.", "It slowly releases that heat in winter."],
+    "The ocean releases stored heat.",
+  ),
 };

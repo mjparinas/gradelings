@@ -993,4 +993,36 @@ export const lessons: GradeLessons = {
     ["The Purchase was in 1803.", "Statehood was in 1821."],
     "the Louisiana Purchase",
   ),
+
+  // North Carolina's units (us-nc).
+  "social/communities-compared": lesson(
+    ["Urban communities are cities: many people, buildings and busy streets.", "Rural communities have more open space and fewer people.", "All communities need food, water, shelter and clothing."],
+    "Which place is likely quieter and has more open space?",
+    ["Cities are busy and crowded.", "The countryside has fields and fewer people."],
+    "a rural area",
+  ),
+  "social/nc-g3-nc-regions-communities": lesson(
+    ["North Carolina has three regions: the Coastal Plain in the east, the Piedmont in the middle and the Mountains in the west.", "The land and climate of each region shape how people live and work there.", "Communities can be rural (farms and small towns), suburban or urban (cities)."],
+    "Which region has the beaches and the Outer Banks?",
+    ["The beaches are on the ocean.", "The region by the ocean is the Coastal Plain."],
+    "the Coastal Plain",
+  ),
+  "social/nc-g3-state-local-government": lesson(
+    ["Local government serves a town or county: a mayor and council lead a town, and county commissioners lead a county.", "State government in Raleigh is led by the governor, with the General Assembly making state laws.", "Tribal governments, like the Eastern Band of Cherokee Indians' council, make laws for their nations."],
+    "Who leads a town or city?",
+    ["The governor leads the state.", "A mayor leads a town or city."],
+    "the mayor",
+  ),
+  "social/nc-g3-local-history": lesson(
+    ["Every community has a history you can learn from old photos, maps, letters and stories from older neighbors.", "Primary sources were made at the time; secondary sources were made later by someone studying the past.", "Communities change as people move in, build new things and find new jobs."],
+    "Is a letter written in 1900 a primary or a secondary source?",
+    ["It was written at the time.", "Sources made at the time are primary."],
+    "a primary source",
+  ),
+  "social/nc-g3-local-economy": lesson(
+    ["Producers make goods or provide services; consumers buy and use them.", "Resources like land, workers and tools help a community make things.", "Entrepreneurs start businesses, taking a risk to meet people's needs."],
+    "A baker sells bread. Is the baker a producer or a consumer?",
+    ["The baker makes bread to sell.", "People who make goods are producers."],
+    "a producer",
+  ),
 };

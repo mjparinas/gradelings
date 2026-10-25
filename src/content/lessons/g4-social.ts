@@ -1539,4 +1539,60 @@ export const lessons: GradeLessons = {
     ["Each region has different materials and weather.", "People used what their land gave them."],
     "they used the materials and climate of their region",
   ),
+
+  // North Carolina's units (us-nc).
+  "social/nc-g4-regions": lesson(
+    ["North Carolina's three regions are the Coastal Plain, the Piedmont and the Mountains.", "The Coastal Plain is flat, with sounds and barrier islands; the Piedmont has hills and most big cities; the Mountains have Mount Mitchell.", "Rivers drop at the fall line between the Coastal Plain and the Piedmont, where early mills were built."],
+    "Which region has Charlotte, Raleigh and Greensboro?",
+    ["These are North Carolina's big cities.", "Most big cities are in the Piedmont."],
+    "the Piedmont",
+  ),
+  "social/nc-g4-first-peoples": lesson(
+    ["American Indians have lived in North Carolina for thousands of years, and they live here today.", "North Carolina recognizes eight tribes, including the Eastern Band of Cherokee Indians and the Lumbee Tribe.", "In 1838, most Cherokee people were forced west on the Trail of Tears; some stayed in the mountains. Tribes govern themselves today."],
+    "Which is the largest American Indian tribe in North Carolina?",
+    ["The Lumbee live mostly in Robeson County.", "They are the state's largest tribe."],
+    "the Lumbee Tribe",
+  ),
+  "social/nc-g4-colony": lesson(
+    ["England's first colonies in North America were on Roanoke Island in the 1580s; the 1587 colony became the Lost Colony.", "In 1663 King Charles II gave Carolina to the Lords Proprietors; North Carolina became a royal colony in 1729.", "Settlers came by choice for land; enslaved Africans were brought by force. Regulators protested unfair officials, and Edenton's women boycotted British tea."],
+    "Who was Virginia Dare?",
+    ["She was born on Roanoke Island in 1587.", "She was the first English child born in the Americas."],
+    "the first English child born in the Americas",
+  ),
+  "social/nc-g4-revolution-statehood": lesson(
+    ["The Halifax Resolves (April 12, 1776) made North Carolina the first colony to officially call for independence.", "Patriots won at Moores Creek Bridge in 1776; the British won the field at Guilford Courthouse in 1781 but lost many soldiers.", "North Carolina waited for a Bill of Rights, then joined the Constitution in 1789 as the 12th state."],
+    "Why did North Carolina wait to approve the Constitution?",
+    ["Leaders wanted people's rights written down.", "They waited until a Bill of Rights was promised."],
+    "It wanted a Bill of Rights first.",
+  ),
+  "social/nc-g4-civil-war-reconstruction": lesson(
+    ["Before the Civil War, many Black people in North Carolina were enslaved, and many resisted by escaping or keeping their culture alive.", "North Carolina left the Union in 1861; the war's largest surrender was at Bennett Place, near Durham, in 1865.", "During Reconstruction, freed people built schools and voted, but later laws and violence, like the 1898 Wilmington coup, took rights away."],
+    "What did the Thirteenth Amendment do?",
+    ["It was ratified in 1865, after the war.", "It ended slavery in the United States."],
+    "It ended slavery.",
+  ),
+  "social/nc-g4-modern-nc": lesson(
+    ["In 1903, the Wright brothers made the first powered flight near Kitty Hawk.", "Tobacco, textiles and furniture once led the economy; later, Research Triangle Park and banking in Charlotte grew.", "In 1960, four NC A&T students began the Greensboro sit-ins, a peaceful protest against segregation."],
+    "Where did the Greensboro sit-ins happen?",
+    ["The students sat at a lunch counter that served only white customers.", "It was in Greensboro."],
+    "at a lunch counter in Greensboro",
+  ),
+  "social/nc-g4-state-government": lesson(
+    ["The governor leads the executive branch and is elected every four years.", "The General Assembly (50 senators and 120 House members) makes state laws in Raleigh.", "The courts, led by the North Carolina Supreme Court, decide what laws mean. The state constitution lists rights and responsibilities."],
+    "How many members are in the North Carolina Senate?",
+    ["The House has 120 members.", "The Senate has 50."],
+    "50",
+  ),
+  "social/nc-g4-symbols-identity": lesson(
+    ["State symbols include the cardinal (bird), the dogwood (flower), the pine (tree) and the sweet potato (vegetable).", "The motto “Esse quam videri” means “To be, rather than to seem.” Nicknames are the Tar Heel State and the Old North State.", "Traditions like bluegrass music, clogging, pottery and barbecue are part of the state's identity, and symbols can mean different things to different people."],
+    "What is North Carolina's state bird?",
+    ["It is bright red.", "It is the cardinal."],
+    "the cardinal",
+  ),
+  "social/nc-g4-economy": lesson(
+    ["Scarcity means there isn't enough for everyone, so people must choose. What you give up is the opportunity cost.", "The factors of production are land (natural resources), labor (workers), capital (tools and machines) and entrepreneurs.", "North Carolina's resources shape what it makes: sweet potatoes and hogs on the Coastal Plain, furniture in the Piedmont, Christmas trees in the Mountains."],
+    "A factory's machines are which factor of production?",
+    ["Land is natural resources and labor is workers.", "Tools and machines are capital."],
+    "capital",
+  ),
 };

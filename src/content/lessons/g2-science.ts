@@ -531,4 +531,30 @@ export const lessons: GradeLessons = {
     ["Mountains are high.", "The low land between them is a valley."],
     "valley",
   ),
+
+  // North Carolina's units (us-nc).
+  "science/light-and-sound": lesson(
+    ["The sun and a lamp make their own light.", "A shadow forms when something blocks light.", "Hit a drum harder to make a louder sound."],
+    "What makes a shadow?",
+    ["Light shines on you.", "Your body blocks the light."],
+    "something blocks the light",
+  ),
+  "science/tx-g1-animal-life-cycles": lesson(
+    ["A bird: egg, chick, adult bird.", "A fish: egg, fry, adult fish.", "A mammal is born live and drinks milk."],
+    "Fish life cycle: egg, ___, adult fish.",
+    ["A baby fish is called a fry."],
+    "fry",
+  ),
+  "science/wa-g1-parents-young": lesson(
+    ["Animal parents feed, protect and teach their young.", "Babies look like their parents, but not exactly.", "A baby kangaroo stays safe in its mother's pouch."],
+    "A baby bird chirps with its mouth open. Why?",
+    ["Baby birds can't find food yet.", "They call so a parent feeds them."],
+    "to get food",
+  ),
+  "science/wa-gk-sunlight": lesson(
+    ["Sunlight warms the ground, water and sand.", "Shade blocks the sun and keeps things cooler.", "Hats, umbrellas and trees make shade."],
+    "A rock sits in the sun all day. Does it get warmer or cooler?",
+    ["The sun warms things it shines on."],
+    "warmer",
+  ),
 };

@@ -465,4 +465,12 @@ export const lessons: GradeLessons = {
     ["It has a white head.", "It is the bald eagle."],
     "the bald eagle",
   ),
+
+  // North Carolina's units (us-nc).
+  "social/ca-k-good-citizens": lesson(
+    ["A good citizen follows rules and helps others.", "Breaking a rule has a consequence.", "Honest means telling the truth. Brave means trying."],
+    "Which is a way to be a good citizen at school?",
+    ["Good citizens help others.", "Cleaning up helps the class."],
+    "help clean up",
+  ),
 };
