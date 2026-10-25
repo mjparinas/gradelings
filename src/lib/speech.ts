@@ -3,12 +3,12 @@
 // Read-aloud with the device's own voices (Web Speech API), so it works offline
 // and costs nothing. Voice quality varies hugely between devices, so we rank the
 // installed voices and pick the most natural one; parents can choose another in
-// Settings (saved per device, because every device has different voices). By default the Supertonic
-// voice (src/lib/supertonic.ts) downloads in the background when the app opens for a child with
+// Settings (saved per device, because every device has different voices). By default the Piper
+// voice (src/lib/piper.ts) downloads in the background when the app opens for a child with
 // read-aloud on, or the first time the speaker button is tapped, and then reads instead of the
 // device voice; until it's here, or if it fails, the device voice reads.
 
-import { autoDownloadSupertonic, markSupertonicFailed, supertonicCanSpeak, supertonicMightSpeak, supertonicWanted, speakSupertonic, stopSupertonic } from "./supertonic";
+import { autoDownloadPiper, markPiperFailed, piperCanSpeak, piperMightSpeak, piperWanted, resetOldVoiceChoices, speakPiper, stopPiper } from "./piper";
 
 /** English is the app's language; French is for French Immersion and Core French questions. */
 export type SpeechLanguage = "en" | "fr";
@@ -96,7 +96,7 @@ function hasSynth(): boolean {
 }
 
 export function canSpeak(): boolean {
-  return hasSynth() || (typeof window !== "undefined" && supertonicCanSpeak());
+  return hasSynth() || (typeof window !== "undefined" && piperCanSpeak());
 }
 
 function refresh() {
@@ -130,6 +130,7 @@ export function getVoiceOptions(language: SpeechLanguage = "en"): VoiceOption[] 
 
 export function getVoicePreference(language: SpeechLanguage = "en"): string | null {
   try {
+    resetOldVoiceChoices();
     return localStorage.getItem(prefKey(language));
   } catch {
     return null;
@@ -139,6 +140,7 @@ export function getVoicePreference(language: SpeechLanguage = "en"): string | nu
 /** null = automatic (best available). Saved on this device only. */
 export function setVoicePreference(uri: string | null, language: SpeechLanguage = "en") {
   try {
+    resetOldVoiceChoices();
     if (uri) localStorage.setItem(prefKey(language), uri);
     else localStorage.removeItem(prefKey(language));
   } catch {
@@ -182,12 +184,12 @@ export function forSpeech(text: string, language: SpeechLanguage = "en"): string
 // A touch slower than normal for young listeners.
 const RATE = 0.92;
 
-// Supertonic voices have their own natural pace, a little brisk for beginning readers: Wren (English)
-// is slowed a touch, and Fleur (French) reads as slowly as the device voices.
-export const SUPERTONIC_RATE: Record<SpeechLanguage, number> = { en: 0.9, fr: RATE };
+// Piper voices have their own natural pace. Amy (English) is unhurried already, so slowing her
+// as well made her drag; she reads a bit faster than her natural pace instead.
+export const PIPER_RATE: Record<SpeechLanguage, number> = { en: 1.15, fr: RATE };
 
-// Pauses (such as between a question and its answers) are half as long when Supertonic reads.
-export const SUPERTONIC_PAUSE_SCALE = 0.5;
+// Pauses (such as between a question and its answers) are half as long when Piper reads.
+export const PIPER_PAUSE_SCALE = 0.5;
 
 // Chrome on Android silently drops an utterance spoken straight after cancel(), so there speech
 // waits this long after a cancel. Still well inside the tap's user activation.
@@ -233,16 +235,16 @@ function queue(text: string, voiceUri: string | null | undefined, language: Spee
   // A named voice (the device-voice preview in Settings) always uses that voice.
   if (voiceUri !== undefined) return queueDevice(text, voiceUri, language, onDone);
   // Hearing a question (the speaker button, in any grade) is the moment to fetch that language's voice.
-  void autoDownloadSupertonic(language).catch(() => false);
-  if (!supertonicMightSpeak(language)) return queueDevice(text, voiceUri, language, onDone);
+  void autoDownloadPiper(language).catch(() => false);
+  if (!piperMightSpeak(language)) return queueDevice(text, voiceUri, language, onDone);
   const id = run;
-  void supertonicWanted(language).then((wanted) => {
+  void piperWanted(language).then((wanted) => {
     if (id !== run) return;
     if (!wanted) return queueDevice(text, voiceUri, language, onDone);
-    speakSupertonic(forSpeech(text, language), language, SUPERTONIC_RATE[language]).then(
+    speakPiper(forSpeech(text, language), language, PIPER_RATE[language]).then(
       () => id === run && onDone?.(),
       () => {
-        markSupertonicFailed(language);
+        markPiperFailed(language);
         if (id === run) queueDevice(text, voiceUri, language, onDone);
       },
     );
@@ -286,7 +288,7 @@ function cancelAll() {
   run++;
   clearTimeout(pauseTimer);
   clearTimeout(speakTimer);
-  stopSupertonic();
+  stopPiper();
   if (!hasSynth()) return;
   const synth = window.speechSynthesis;
   // On Android a cancel with nothing playing still swallows the next utterance, so skip it there.
@@ -319,8 +321,8 @@ export function speakSegments(segments: readonly SpeechPiece[], events: SpeechEv
       events.onStart?.(index);
       queue(piece.text, undefined, piece.lang, next);
     };
-    // Supertonic takes a moment to make each piece, so its pauses are shorter to feel the same.
-    const pause = piece.pause && supertonicMightSpeak(piece.lang) ? piece.pause * SUPERTONIC_PAUSE_SCALE : piece.pause;
+    // Piper takes a moment to make each piece, so its pauses are shorter to feel the same.
+    const pause = piece.pause && piperMightSpeak(piece.lang) ? piece.pause * PIPER_PAUSE_SCALE : piece.pause;
     if (pause) pauseTimer = setTimeout(go, pause);
     else go();
   };
@@ -341,9 +343,9 @@ export function previewVoice(uri: string | null, language: SpeechLanguage = "en"
   speak(SAMPLE[language], uri, language);
 }
 
-/** A short sample of the Supertonic voice. Rejects if it can't play, so Settings can say so. */
-export function previewSupertonic(language: SpeechLanguage = "en"): Promise<void> {
+/** A short sample of the Piper voice. Rejects if it can't play, so Settings can say so. */
+export function previewPiper(language: SpeechLanguage = "en"): Promise<void> {
   if (typeof window === "undefined") return Promise.resolve();
   cancelAll();
-  return speakSupertonic(forSpeech(SAMPLE[language], language), language, SUPERTONIC_RATE[language]);
+  return speakPiper(forSpeech(SAMPLE[language], language), language, PIPER_RATE[language]);
 }

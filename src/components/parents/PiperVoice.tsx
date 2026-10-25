@@ -1,64 +1,64 @@
 "use client";
 
 import { useEffect, useState, useSyncExternalStore } from "react";
-import { downloadSupertonic, getSupertonicState, SUPERTONIC_VOICES, supertonicDownloadBytes, supertonicSupported, removeSupertonic, setSupertonicEnabled, subscribeSupertonic, type SupertonicState } from "@/lib/supertonic";
-import { previewSupertonic, stopSpeaking, type SpeechLanguage } from "@/lib/speech";
+import { downloadPiper, getPiperState, PIPER_VOICES, piperDownloadBytes, piperSupported, removePiper, setPiperEnabled, subscribePiper, type PiperState } from "@/lib/piper";
+import { previewPiper, stopSpeaking, type SpeechLanguage } from "@/lib/speech";
 import { useSay } from "@/lib/say";
 import { Switch } from "./common";
 
 const mb = (bytes: number) => `${Math.max(1, Math.round(bytes / 1e6))} MB`;
 
 /**
- * The Supertonic voice for one language on this device. English carries the on/off switch, which is on
+ * The Piper voice for one language on this device. English carries the on/off switch, which is on
  * by default: the voice then downloads by itself in the background for children with read-aloud on.
  */
-export function SupertonicVoice({ language }: { language: SpeechLanguage }) {
-  const supertonic = useSyncExternalStore<SupertonicState | undefined>(subscribeSupertonic, getSupertonicState, () => undefined);
+export function PiperVoice({ language }: { language: SpeechLanguage }) {
+  const piper = useSyncExternalStore<PiperState | undefined>(subscribePiper, getPiperState, () => undefined);
   const [size, setSize] = useState<number>();
   const [previewing, setPreviewing] = useState(false);
   const [previewFailed, setPreviewFailed] = useState(false);
   const say = useSay();
-  const voice = supertonic?.voices[language];
-  const otherReady = supertonic?.voices[language === "en" ? "fr" : "en"].state === "ready";
+  const voice = piper?.voices[language];
+  const otherReady = piper?.voices[language === "en" ? "fr" : "en"].state === "ready";
 
   useEffect(() => {
-    if (voice?.state === "missing") void supertonicDownloadBytes(language).then(setSize);
+    if (voice?.state === "missing") void piperDownloadBytes(language).then(setSize);
   }, [voice?.state, language, otherReady]);
 
-  if (!supertonic || !voice || voice.state === "checking") return null;
-  if (!supertonicSupported()) return language === "en" ? <p className="text-sm text-ink-soft">This browser can&apos;t run the offline voice.</p> : null;
+  if (!piper || !voice || voice.state === "checking") return null;
+  if (!piperSupported()) return language === "en" ? <p className="text-sm text-ink-soft">This browser can&apos;t run the offline voice.</p> : null;
 
   const french = language === "fr";
   // The French voice downloads by itself for a child with read-aloud and French on, so there's no button for it.
   if (french && voice.state === "missing") return null;
   const download = () => {
     // Downloading by hand means the parent wants to hear it.
-    if (!french) setSupertonicEnabled(true);
-    void downloadSupertonic(language);
+    if (!french) setPiperEnabled(true);
+    void downloadPiper(language);
   };
   const toggle = (
     <Switch
       label="Use the offline voice for read-aloud"
-      value={supertonic.enabled}
+      value={piper.enabled}
       onChange={(on) => {
         stopSpeaking();
-        setSupertonicEnabled(on);
+        setPiperEnabled(on);
       }}
       help="On this device only. Turn it off to use the device voice instead."
     />
   );
-  const name = SUPERTONIC_VOICES[language].name;
+  const name = PIPER_VOICES[language].name;
   const preview = () => {
     stopSpeaking();
     setPreviewFailed(false);
     setPreviewing(true);
-    previewSupertonic(language)
+    previewPiper(language)
       .catch(() => setPreviewFailed(true))
       .finally(() => setPreviewing(false));
   };
 
   return (
-    <div className="flex flex-col gap-3 rounded-xl border-2 border-line p-4" data-testid={`supertonic-${language}`}>
+    <div className="flex flex-col gap-3 rounded-xl border-2 border-line p-4" data-testid={`piper-${language}`}>
       <div>
         <h3 className="text-lg font-bold">{french ? "Offline French voice" : "Offline natural voice"}</h3>
         <p className="text-sm text-ink-soft">
@@ -72,7 +72,7 @@ export function SupertonicVoice({ language }: { language: SpeechLanguage }) {
 
       {voice.state === "missing" && (
         <>
-          {supertonic.enabled && (
+          {piper.enabled && (
             <p className="text-sm text-ink-soft">
               {french
                 ? "It downloads by itself for a child with \"Read questions out loud\" and French switched on, when this device isn't on mobile data."
@@ -82,17 +82,17 @@ export function SupertonicVoice({ language }: { language: SpeechLanguage }) {
           <button
             type="button"
             className="self-start rounded-xl bg-[#4f8ef7] px-4 py-2.5 font-bold text-[#0f172a] disabled:opacity-40"
-            disabled={supertonic.voices[french ? "en" : "fr"].state === "downloading"}
+            disabled={piper.voices[french ? "en" : "fr"].state === "downloading"}
             onClick={download}
           >
-            {`⬇ Download ${french ? "French voice" : "voice"}${supertonic.enabled ? " now" : ""}${size ? ` (${mb(size)})` : ""}`}
+            {`⬇ Download ${french ? "French voice" : "voice"}${piper.enabled ? " now" : ""}${size ? ` (${mb(size)})` : ""}`}
           </button>
           {voice.error && (
             <p role="alert" className="text-sm font-semibold text-nudge-dark">
               {voice.error}
             </p>
           )}
-          {!french && !supertonic.enabled && <p className="text-sm text-ink-soft">Best on Wi-Fi. Until it&apos;s downloaded and switched on, read-aloud uses the device voice below.</p>}
+          {!french && !piper.enabled && <p className="text-sm text-ink-soft">Best on Wi-Fi. Until it&apos;s downloaded and switched on, read-aloud uses the device voice below.</p>}
         </>
       )}
 
@@ -118,7 +118,7 @@ export function SupertonicVoice({ language }: { language: SpeechLanguage }) {
             <button type="button" className="rounded-xl bg-[#4f8ef7] px-4 py-2.5 font-bold text-[#0f172a]" onClick={preview} disabled={previewing}>
               {previewing ? "Speaking…" : french ? "▶ Preview French" : "▶ Preview"}
             </button>
-            <button type="button" className="rounded-xl border-2 border-line px-4 py-2.5 font-semibold" onClick={() => void removeSupertonic(language)}>
+            <button type="button" className="rounded-xl border-2 border-line px-4 py-2.5 font-semibold" onClick={() => void removePiper(language)}>
               Remove from this device
             </button>
           </div>
@@ -130,7 +130,8 @@ export function SupertonicVoice({ language }: { language: SpeechLanguage }) {
         </>
       )}
       <p className="text-xs text-ink-soft">
-        {SUPERTONIC_VOICES[language].credit} Speech by <a className="underline" href="https://github.com/supertone-inc/supertonic">Supertonic</a>.
+        {PIPER_VOICES[language].credit} Speech by <a className="underline" href="https://github.com/rhasspy/piper">Piper</a> and{" "}
+        <a className="underline" href="https://github.com/espeak-ng/espeak-ng">eSpeak NG</a> (GPL-3.0).
       </p>
     </div>
   );

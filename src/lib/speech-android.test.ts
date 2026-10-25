@@ -2,14 +2,15 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 // Chrome on Android drops an utterance spoken straight after cancel(), and lists voices whose
 // data isn't downloaded. Device read-aloud has to work around both.
-vi.mock("./supertonic", () => ({
-  supertonicCanSpeak: () => false,
-  supertonicMightSpeak: () => false,
-  supertonicWanted: async () => false,
-  autoDownloadSupertonic: async () => false,
-  markSupertonicFailed: () => {},
-  speakSupertonic: async () => {},
-  stopSupertonic: () => {},
+vi.mock("./piper", () => ({
+  piperCanSpeak: () => false,
+  resetOldVoiceChoices: () => {},
+  piperMightSpeak: () => false,
+  piperWanted: async () => false,
+  autoDownloadPiper: async () => false,
+  markPiperFailed: () => {},
+  speakPiper: async () => {},
+  stopPiper: () => {},
 }));
 
 type Utterance = { text: string; voice?: { voiceURI: string }; lang?: string; onend?: () => void; onerror?: (e: { error: string }) => void };

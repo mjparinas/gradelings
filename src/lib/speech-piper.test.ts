@@ -1,8 +1,8 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-// Read-aloud picks Supertonic when a parent has turned it on and the voice is on this device,
-// and falls back to the device voice when Supertonic can't play.
-const supertonic = vi.hoisted(() => ({
+// Read-aloud picks Piper when a parent has turned it on and the voice is on this device,
+// and falls back to the device voice when Piper can't play.
+const piper = vi.hoisted(() => ({
   wanted: false,
   fail: false,
   spoken: [] as { text: string; lang: string }[],
@@ -11,23 +11,24 @@ const supertonic = vi.hoisted(() => ({
   autoDownloads: [] as string[],
   failed: [] as string[],
 }));
-vi.mock("./supertonic", () => ({
-  supertonicCanSpeak: () => supertonic.wanted,
-  supertonicMightSpeak: (lang: string) => supertonic.wanted && !supertonic.failed.includes(lang),
-  supertonicWanted: async (lang: string) => supertonic.wanted && !supertonic.failed.includes(lang),
-  autoDownloadSupertonic: async (lang: string) => void supertonic.autoDownloads.push(lang),
-  markSupertonicFailed: (lang: string) => void supertonic.failed.push(lang),
-  speakSupertonic: async (text: string, lang: string, rate: number) => {
-    if (supertonic.fail) throw new Error("no wasm");
-    supertonic.spoken.push({ text, lang });
-    supertonic.rates.push(rate);
+vi.mock("./piper", () => ({
+  piperCanSpeak: () => piper.wanted,
+  resetOldVoiceChoices: () => {},
+  piperMightSpeak: (lang: string) => piper.wanted && !piper.failed.includes(lang),
+  piperWanted: async (lang: string) => piper.wanted && !piper.failed.includes(lang),
+  autoDownloadPiper: async (lang: string) => void piper.autoDownloads.push(lang),
+  markPiperFailed: (lang: string) => void piper.failed.push(lang),
+  speakPiper: async (text: string, lang: string, rate: number) => {
+    if (piper.fail) throw new Error("no wasm");
+    piper.spoken.push({ text, lang });
+    piper.rates.push(rate);
   },
-  stopSupertonic: () => void supertonic.stops++,
+  stopPiper: () => void piper.stops++,
 }));
 
 const synthSaid: string[] = [];
 beforeEach(() => {
-  Object.assign(supertonic, { wanted: false, fail: false, spoken: [], rates: [], stops: 0, autoDownloads: [], failed: [] });
+  Object.assign(piper, { wanted: false, fail: false, spoken: [], rates: [], stops: 0, autoDownloads: [], failed: [] });
   synthSaid.length = 0;
   vi.stubGlobal("window", globalThis);
   vi.stubGlobal("navigator", { onLine: true });
@@ -52,66 +53,66 @@ afterEach(() => vi.unstubAllGlobals());
 
 const flush = () => new Promise((r) => setTimeout(r, 0));
 
-describe("read-aloud with the Supertonic voice", () => {
-  it("uses the device voice straight away when Supertonic is off, so it plays inside the tap", async () => {
+describe("read-aloud with the Piper voice", () => {
+  it("uses the device voice straight away when Piper is off, so it plays inside the tap", async () => {
     const { speak } = await import("./speech");
     speak("Seven take away 2¢");
     expect(synthSaid).toEqual(["Seven take away 2 cents"]);
     await flush();
-    expect(supertonic.spoken).toEqual([]);
+    expect(piper.spoken).toEqual([]);
   });
 
-  it("uses Supertonic when it's on, with the same speech clean-up", async () => {
-    supertonic.wanted = true;
+  it("uses Piper when it's on, with the same speech clean-up", async () => {
+    piper.wanted = true;
     const { speak } = await import("./speech");
     speak("3 − 1 = ☐", undefined, "fr");
     await flush();
-    expect(supertonic.spoken).toEqual([{ text: "3 minus 1 = mot manquant", lang: "fr" }]);
+    expect(piper.spoken).toEqual([{ text: "3 minus 1 = mot manquant", lang: "fr" }]);
     expect(synthSaid).toEqual([]);
   });
 
-  it("reads Heart a touch slower than her natural pace, in questions and the Settings preview", async () => {
-    supertonic.wanted = true;
-    const { speak, previewSupertonic } = await import("./speech");
+  it("reads Amy a bit faster than her natural pace, in questions and the Settings preview", async () => {
+    piper.wanted = true;
+    const { speak, previewPiper } = await import("./speech");
     speak("Hello");
     await flush();
-    await previewSupertonic("en");
-    expect(supertonic.rates).toEqual([0.9, 0.9]);
+    await previewPiper("en");
+    expect(piper.rates).toEqual([1.15, 1.15]);
   });
 
-  it("falls back to the device voice when Supertonic can't play", async () => {
-    supertonic.wanted = true;
-    supertonic.fail = true;
+  it("falls back to the device voice when Piper can't play", async () => {
+    piper.wanted = true;
+    piper.fail = true;
     const { speak } = await import("./speech");
     speak("Hello");
     await flush();
     expect(synthSaid).toEqual(["Hello"]);
     // Then the device voice reads straight away, inside the tap, for the rest of the visit.
-    expect(supertonic.failed).toEqual(["en"]);
+    expect(piper.failed).toEqual(["en"]);
     speak("Again");
     expect(synthSaid).toEqual(["Hello", "Again"]);
   });
 
-  it("halves the pause before the answers when Supertonic reads", async () => {
+  it("halves the pause before the answers when Piper reads", async () => {
     vi.useFakeTimers();
     try {
-      supertonic.wanted = true;
+      piper.wanted = true;
       const { speakSegments } = await import("./speech");
       speakSegments([
         { text: "Which is bigger?", lang: "en" },
         { text: "Seven", lang: "en", pause: 600 },
       ]);
       await vi.advanceTimersByTimeAsync(299);
-      expect(supertonic.spoken.map((s) => s.text)).toEqual(["Which is bigger?"]);
+      expect(piper.spoken.map((s) => s.text)).toEqual(["Which is bigger?"]);
       await vi.advanceTimersByTimeAsync(2);
-      expect(supertonic.spoken.map((s) => s.text)).toEqual(["Which is bigger?", "Seven"]);
+      expect(piper.spoken.map((s) => s.text)).toEqual(["Which is bigger?", "Seven"]);
     } finally {
       vi.useRealTimers();
     }
   });
 
   it("says as each piece starts and when the last one ends, for read-along highlighting", async () => {
-    supertonic.wanted = true;
+    piper.wanted = true;
     const { speakSegments } = await import("./speech");
     const started: number[] = [];
     let done = 0;
@@ -123,7 +124,7 @@ describe("read-aloud with the Supertonic voice", () => {
       { onStart: (i) => started.push(i), onDone: () => done++ },
     );
     for (let i = 0; i < 5; i++) await flush();
-    expect(supertonic.spoken.map((s) => s.text)).toEqual(["Ollie is an otter.", "Ollie likes to swim."]);
+    expect(piper.spoken.map((s) => s.text)).toEqual(["Ollie is an otter.", "Ollie likes to swim."]);
     expect(started).toEqual([0, 1]);
     expect(done).toBe(1);
   });
@@ -163,32 +164,32 @@ describe("read-aloud with the Supertonic voice", () => {
     expect(synthSaid).toEqual(["Hello"]);
     speakSegments([{ text: "chat", lang: "fr" }]);
     previewVoice(null);
-    expect(supertonic.autoDownloads).toEqual(["en", "fr"]);
+    expect(piper.autoDownloads).toEqual(["en", "fr"]);
   });
 
   it("previewing a device voice always uses that voice", async () => {
-    supertonic.wanted = true;
+    piper.wanted = true;
     const { previewVoice } = await import("./speech");
     previewVoice(null);
     await flush();
-    expect(supertonic.spoken).toEqual([]);
+    expect(piper.spoken).toEqual([]);
     expect(synthSaid[0]).toMatch(/Ollie the Otter/);
   });
 
-  it("reads each piece of a question in order and stops Supertonic when cancelled", async () => {
-    supertonic.wanted = true;
+  it("reads each piece of a question in order and stops Piper when cancelled", async () => {
+    piper.wanted = true;
     const { speakSegments, stopSpeaking } = await import("./speech");
     speakSegments([
       { text: "Which word means cat?", lang: "en" },
       { text: "chat", lang: "fr" },
     ]);
     for (let i = 0; i < 5; i++) await flush();
-    expect(supertonic.spoken).toEqual([
+    expect(piper.spoken).toEqual([
       { text: "Which word means cat?", lang: "en" },
       { text: "chat", lang: "fr" },
     ]);
-    const before = supertonic.stops;
+    const before = piper.stops;
     stopSpeaking();
-    expect(supertonic.stops).toBe(before + 1);
+    expect(piper.stops).toBe(before + 1);
   });
 });
