@@ -726,4 +726,17 @@ export const lessons: GradeLessons = {
     ["A barber does not make a thing to hold.", "A haircut is a job done for you."],
     "a barber",
   ),
+  // South Carolina (us-sc)
+  "social/sc-g2-american-symbols": lesson(
+    ["Symbols such as the flag, the bald eagle and the Liberty Bell stand for the United States.", "Holidays help us remember people and events, such as Independence Day for July 4, 1776.", "A fact can be checked and proven. An opinion is what someone thinks or feels."],
+    "Is \"The Fourth of July is the best holiday\" a fact or an opinion?",
+    ["Ask: can it be checked and proven true?", "\"Best\" is how someone feels, so it can't be proven."],
+    "an opinion",
+  ),
+  "social/sc-g2-us-land": lesson(
+    ["The United States is in North America, between the Atlantic and Pacific Oceans.", "It has mountains such as the Appalachians and the Rockies, wide plains and long rivers like the Mississippi.", "People often live and work near rivers, coasts and good farmland, and many cultural groups live across the country."],
+    "Why did many towns grow up beside rivers?",
+    ["Rivers give water for drinking and farming.", "Boats could carry people and goods along them."],
+    "for water, farming and travel",
+  ),
 };

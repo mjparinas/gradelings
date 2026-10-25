@@ -969,4 +969,29 @@ export const lessons: GradeLessons = {
     ["There were three Reconstruction amendments.", "The first of them, in 1865, ended slavery."],
     "the 13th Amendment",
   ),
+  // South Carolina (us-sc)
+  "social/ca-g8-industrial-america": lesson(
+    ["After the Civil War, railroads (with land grants), factories and inventions grew fast. Ford’s assembly line made cars faster and cheaper.", "Big businesses became monopolies; the Sherman Antitrust Act (1890) tried to protect competition.", "Immigrants filled crowded tenements; workers formed unions, and farmers backed the Populist Party."],
+    "What did the Sherman Antitrust Act of 1890 try to do?",
+    ["A monopoly controls a whole industry.", "The law tried to break up monopolies and protect competition."],
+    "break up monopolies and protect competition",
+  ),
+  "social/ny-g8-expansion-empire": lesson(
+    ["The US expanded across the Plains, bought Alaska from Russia in 1867 and reached into the Pacific.", "After the Spanish-American War (1898), the US gained Puerto Rico, Guam and the Philippines.", "The Roosevelt Corollary (1904) said the US could act as a police power in Latin America."],
+    "Which lands did the US gain after the Spanish-American War?",
+    ["The war with Spain was in 1898.", "Spain gave up some of its colonies.", "The US gained islands in the Caribbean and the Pacific."],
+    "Puerto Rico, Guam and the Philippines",
+  ),
+  "social/sc-g5-modern-sc": lesson(
+    ["In the early 1900s many South Carolinians worked in textile mills and lived in mill villages.", "The boll weevil ruined cotton crops, and many Black families moved north in the Great Migration.", "Today South Carolina builds cars and airplanes, ships goods through the Port of Charleston, and welcomes many tourists."],
+    "What insect destroyed many South Carolina cotton crops in the 1920s?",
+    ["Farmers depended on cotton.", "A small beetle ate the cotton bolls."],
+    "the boll weevil",
+  ),
+  "social/sc-g5-civil-rights": lesson(
+    ["Under Jim Crow laws, Black and white South Carolinians were kept apart in schools, buses and public places.", "Briggs v. Elliott, from Clarendon County, was one of the cases joined in Brown v. Board of Education (1954), which ended legal school segregation.", "Septima Clark's Citizenship Schools taught people to read so they could register to vote."],
+    "Which South Carolina court case became part of Brown v. Board of Education?",
+    ["Parents in Clarendon County sued over unequal schools.", "Their case was joined with others at the Supreme Court."],
+    "Briggs v. Elliott",
+  ),
 };

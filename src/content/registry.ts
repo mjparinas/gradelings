@@ -34,6 +34,7 @@ import { manifest as missouri } from "./missouri/manifest";
 import { manifest as northCarolina } from "./north-carolina/manifest";
 import { manifest as massachusetts } from "./massachusetts/manifest";
 import { manifest as maryland } from "./maryland/manifest";
+import { manifest as southCarolina } from "./south-carolina/manifest";
 import type { FrameworkManifest } from "./manifest";
 
 // Every province and state, in the order pickers and public pages list them. Each entry is the manifest in that
@@ -78,6 +79,7 @@ export const REGISTRY = [
   northCarolina,
   massachusetts,
   maryland,
+  southCarolina,
 ] as const satisfies readonly FrameworkManifest[];
 
 /** The ids of every framework, offered or still being built. */

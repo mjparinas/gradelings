@@ -1464,4 +1464,11 @@ export const lessons: GradeLessons = {
     ["Maryland has 2 senators and 8 representatives.", "2 + 8 = 10."],
     "10",
   ),
+  // South Carolina (us-sc)
+  "social/sc-g9-sc-government": lesson(
+    ["South Carolina's constitution was written in 1895 and has been amended many times.", "The General Assembly (Senate and House) makes laws; the governor can veto a whole bill or single spending items (line-item veto).", "Unlike most states, the General Assembly elects South Carolina's judges."],
+    "How are most South Carolina judges chosen?",
+    ["In many states, voters elect judges or the governor appoints them.", "In South Carolina, the General Assembly votes on them."],
+    "elected by the General Assembly",
+  ),
 };

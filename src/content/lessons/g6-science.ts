@@ -883,4 +883,35 @@ export const lessons: GradeLessons = {
     ["The eras go Paleozoic, Mesozoic, Cenozoic.", "The latest is the Cenozoic."],
     "the Cenozoic Era",
   ),
+  // South Carolina (us-sc)
+  "science/sc-g6-weather": lesson(
+    ["Evaporation: liquid water becomes vapour. Condensation: vapour cools into cloud droplets.", "Humidity is the amount of water vapour in the air.", "Air masses are huge bodies of air; where a warm one meets a cold one there is a front, and storms often form.", "Warm, moist air from the Atlantic Ocean and the Gulf brings South Carolina its summer thunderstorms and hurricanes."],
+    "A cold front pushes into warm, moist summer air over South Carolina. What weather is likely?",
+    ["The cold air slides under the warm air and lifts it.", "Rising moist air cools and its water vapour condenses."],
+    "clouds and thunderstorms",
+  ),
+  "science/sc-g6-climate": lesson(
+    ["Climate is the average weather over many years.", "Oceans keep coastal temperatures steady, so coastal cities have mild winters.", "People burn much more fossil fuel than 200 years ago, so there is more CO₂ in the air.", "We can use less energy, like walking short trips, and adapt, like planting shade trees."],
+    "Why does a coastal city have milder winters than a city far inland?",
+    ["Ocean water warms and cools slowly.", "It keeps nearby temperatures steady."],
+    "the ocean keeps temperatures steady",
+  ),
+  "science/sc-g6-plate-tectonics": lesson(
+    ["Earth has a crust, mantle, outer core and a solid inner core of iron and nickel.", "Convergent boundaries collide, divergent ones pull apart, transform ones slide past each other.", "In an earthquake: drop, cover and hold on. Near the coast, go to high ground after strong shaking."],
+    "Two plates pull apart and new crust forms. Which type of boundary is this?",
+    ["“Diverge” means to move apart."],
+    "divergent",
+  ),
+  "science/sc-g6-earth-surface": lesson(
+    ["Rock cycle: igneous from melted rock, sedimentary from layers, metamorphic from heat and pressure.", "Glaciers, rivers and wind reshape land, some fast and some over thousands of years.", "Matching fossils on far-apart continents show they were once joined."],
+    "Rock is changed by heat and pressure deep underground. What kind is it now?",
+    ["Changed rock is metamorphic."],
+    "metamorphic",
+  ),
+  "science/sc-g6-earth-history": lesson(
+    ["Rock layers and fossils order Earth’s 4.6-billion-year history; lower layers are older.", "Most of that history is the Precambrian. We live in the Cenozoic Era.", "Homologous structures show that living things share ancestors."],
+    "In which era do we live today?",
+    ["The eras go Paleozoic, Mesozoic, Cenozoic.", "The latest is the Cenozoic."],
+    "the Cenozoic Era",
+  ),
 };

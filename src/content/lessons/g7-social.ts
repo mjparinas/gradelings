@@ -1363,4 +1363,41 @@ export const lessons: GradeLessons = {
     ["Subtract the times.", "5 p.m. is 5 hours after noon."],
     "5 hours",
   ),
+  // South Carolina (us-sc)
+  "social/tx-g6-world-regions": lesson(
+    ["Regions share climate and features: tundra is cold, treeless and frozen underground.", "Population density is how many people live in an area. Migration to cities changes them.", "People modify the environment with dams, farms and clearing forests. Sustainability saves resources for the future."],
+    "What does population density mean?",
+    ["Density is how crowded something is.", "It counts people in a given area."],
+    "how many people live in a given area",
+  ),
+  "social/ny-g5-countries-capitals": lesson(
+    ["North America: Canada, the US, Mexico. Panama connects Central and South America.", "Learn capitals in pairs: Bogotá, Colombia; Kingston, Jamaica; Belmopan, Belize; Georgetown, Guyana.", "Mexico borders the US to the south."],
+    "What is the capital of Colombia?",
+    ["Colombia is in the north of South America.", "Its capital is high in the Andes."],
+    "Bogotá",
+  ),
+  "social/quality-of-life-8": lesson(
+    ["Indicators measure quality of life: life expectancy, literacy rate, infant mortality, and access to clean water and health care.", "High literacy and long life expectancy usually mean higher quality of life; high infant mortality usually means lower.", "To estimate doubling time, divide 70 by the yearly growth rate."],
+    "A population grows by 2% each year. About how many years will it take to double?",
+    ["Doubling time ≈ 70 ÷ growth rate.", "70 ÷ 2 = 35."],
+    "35",
+  ),
+  "social/sc-g7-world-regions": lesson(
+    ["World regions share features like climate, landforms and culture. Know which countries are in which region: India in Asia, New Zealand in Oceania.", "People adapt to climate, like warm clothing and insulated homes in the cold.", "The Ring of Fire around the Pacific has many volcanoes and earthquakes. Trade connects regions."],
+    "The Amazon rainforest is mostly in which country?",
+    ["The Amazon is in South America.", "Most of it lies in the largest South American country."],
+    "Brazil",
+  ),
+  "social/sc-g7-japan": lesson(
+    ["Japan is a chain of mountainous islands with the Pacific Ocean to the east. Mount Fuji is its tallest peak.", "Little flat land meant farming in valleys and lots of fishing.", "Shinto honours kami, spirits in nature; Buddhism and Confucian ideas of family, order and duty also shaped Japanese values."],
+    "Shinto, an old belief in Japan, honours what?",
+    ["Shinto shrines are often in natural places, marked by a torii gate.", "They honour kami, the spirits in nature and special places."],
+    "kami, the spirits in nature and special places",
+  ),
+  "social/sc-g7-americas-geography": lesson(
+    ["The Western Hemisphere is North and South America.", "Big features: the Andes and Rockies, the Amazon rainforest and River, and the Panama Canal.", "A political map shows countries and borders. A physical map shows landforms."],
+    "What is the largest rainforest in the world?",
+    ["It is in South America.", "It is named after a great river."],
+    "the Amazon rainforest",
+  ),
 };

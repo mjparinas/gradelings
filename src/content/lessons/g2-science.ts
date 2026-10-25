@@ -582,4 +582,11 @@ export const lessons: GradeLessons = {
     ["Many years is a long time.", "That is a slow change."],
     "slow",
   ),
+  // South Carolina (us-sc)
+  "science/sc-g2-earth-changes": lesson(
+    ["Some changes are fast, like volcanoes, landslides and floods.", "Some are slow, like wind and water wearing away land over years.", "Plant roots and rock walls help slow these changes."],
+    "Water carves a canyon over many years. Fast or slow?",
+    ["Many years is a long time.", "That is a slow change."],
+    "slow",
+  ),
 };

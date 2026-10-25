@@ -1110,4 +1110,17 @@ export const lessons: GradeLessons = {
     ["Think about how long each had to work.", "A servant's time had an end. Slavery did not."],
     "a servant became free after a few years; slavery was for life",
   ),
+  // South Carolina (us-sc)
+  "social/sc-g3-natural-hazards": lesson(
+    ["A natural hazard is a natural event that can harm people, such as a hurricane, earthquake, flood, tornado or drought.", "Some hazards happen more in certain places: hurricanes along warm coasts, earthquakes where plates meet.", "A disaster plan lists where to go, what to pack and how the family will stay in touch."],
+    "Why are hurricanes more common on the South Carolina coast than in the mountains?",
+    ["Hurricanes form over warm ocean water.", "They lose strength as they move over land."],
+    "The coast is next to warm ocean water that feeds hurricanes.",
+  ),
+  "social/sc-g3-explore-migrate": lesson(
+    ["People explore to find riches, new trade routes and new land, to spread religion, and out of curiosity.", "Migration is moving to live in a new place.", "Push factors make people leave a place; pull factors draw them to a new one."],
+    "A family moves to a new city because a factory there is hiring. Is the job a push or a pull factor?",
+    ["A push factor makes people leave.", "A pull factor draws them to the new place.", "The job draws them in."],
+    "a pull factor",
+  ),
 };

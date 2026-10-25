@@ -1,0 +1,104 @@
+                                                                 Algebra 1 Standards
+
+Mathematical Process Standards
+
+           Standard                                                                      Indicator
+     PROBLEM SOLVING              MPS.PS.1 Make sense of problems and persevere in solving them strategically.
+    REPRESENTATION &              MPS.RC.1 Explain ideas using precise and contextually appropriate mathematical language, tools, and
+     COMMUNICATION                models.
+        CONNECTIONS               MPS.C.1 Demonstrate a deep and flexible conceptual understanding of mathematical ideas, operations,
+                                  and relationships while making real-world connections.
+     ANALYZE & JUSTIFY            MPS.AJ.1 Use critical thinking skills to reason both abstractly and quantitatively.
+ STRUCTURE & PATTERNS             MPS.SP.1 Identify and apply regularity in repeated reasoning to make generalizations.
+
+Data, Probability, and Statistical Reasoning
+A1.DPSR.1. Use statistical reasoning to summarize, represent, and interpret data on two categorical and quantitative variables.
+   Indicator #                                                                Indicator
+ A1.DPSR.1.1         Summarize categorical data in two-way frequency tables, interpret relative frequencies in real-world situations, and
+                     informally determine possible associations and trends in the data.
+ A1.DPSR.1.2         Summarize quantitative data in a table and on a scatterplot and describe how the variables are associated. Limit to
+                     linear data.
+ A1.DPSR.1.3         Find a linear function for a scatterplot that suggests a linear association.
+ A1.DPSR.1.4         For linear associations, use technology to determine the correlation coefficient, evaluate the strength of the association,
+                     and find the line of best fit.
+
+A1.DPSR.2. Analyze and interpret models for two categorical and quantitative variables.
+   Indicator #                                                              Indicator
+ A1.DPSR.2.1         Use two-way frequency tables to make inferences and interpret the data in terms of real-world or mathematical
+                     situations.
+ A1.DPSR.2.2         Interpret the slope and the intercept of a linear model in the context of the data.
+ A1.DPSR.2.3         Use a linear model to interpolate and extrapolate unknown values close to the data set.
+
+Measurement, Geometry, and Spatial Reasoning
+A1.MGSR.1. Use geometric concepts and measurement opportunities to model mathematical and real-world situations.
+   Indicator #                                                           Indicator
+ A1.MGSR.1.1         Identify any limitations specific to a real-world situation.
+
+Numerical Reasoning
+A1.NR.1. Represent all points on the number line as irrational and rational numbers in the real number system.
+   Indicator #                                                                Indicator
+ A1.NR.1.1           Rewrite numerical and algebraic expressions of irrational and rational numbers involving radicals, including addition,
+                     subtraction, multiplication, and division. Limit to square and cube roots.
+
+A1.NR.2. Represent exponents and radical expressions in different ways.
+   Indicator #                                                                      Indicator
+ A1.NR.2.1           Translate between rational exponents and radical expressions of irrational and rational numbers. Use properties of
+                     addition, subtraction, multiplication, and division to simplify radical and rational expressions. Limit to square and cube
+                     roots.
+Patterns, Algebra, and Functional Reasoning
+A1.PAFR.1. Transform and/or solve equations and expressions in one variable that model real-world and mathematical situations, interpret the
+solutions, and determine whether they are reasonable.
+    Indicator #                                                             Indicator
+ A1.PAFR.1.1         Transform an equation in one variable to create new equations that have the same solution as the original and justify the
+                     steps taken.
+ A1.PAFR.1.2         Solve literal equations and formulas for a specified variable including equations and formulas that arise in a variety of
+                     disciplines.
+ A1.PAFR.1.3         Solve mathematical and real-world situations using linear, quadratic, exponential (same bases), and linear absolute value
+                     equations in one variable.
+ A1.PAFR.1.4         Add, subtract, and multiply polynomials with initial terms up to a degree of 2.
+
+A1.PAFR.2. Create, solve, and transform equations and inequalities in two or more variables to represent relationships between quantities and
+graph the equations on coordinate axes using appropriate labels, units, and scales.
+    Indicator #                                                                   Indicator
+ A1.PAFR.2.1           Transform linear, quadratic, exponential, and linear absolute value functions to equivalent forms to identify slope and y-
+                       intercept for linear, vertex, and roots (if any) for quadratic and linear absolute value, and y-intercept for exponential.
+ A1.PAFR.2.2           Solve quadratic equations by completing the square, factoring, and the quadratic formula, explaining the connection
+                       between the zeros of the function derived from the equation, its linear factors (if it factors), the x-intercepts of its graph (if
+                       they exist), and the solutions (if any) to the corresponding quadratic equation.
+ A1.PAFR.2.3           Solve and graph linear, quadratic, exponential, and linear absolute value equations given in tabular, symbolic, and/or
+                       verbal forms using intercepts, domain and range, intervals of increasing and decreasing, vertex (maximum and
+                       minimum), end-behavior, and symmetry, and interpret these in terms of mathematical and real-world situations.
+ A1.PAFR.2.4           Create, solve, and graph linear inequalities in two variables.
+ A1.PAFR.2.5           Write arithmetic and geometric sequences both recursively and with an explicit formula, use them to model situations,
+                       and translate between the two forms.
+ A1.PAFR.2.6           Create symbolic representations of linear and exponential functions, including arithmetic and geometric sequences,
+                       given graphs, verbal descriptions, and tables.
+ A1.PAFR.2.7           Use graphs to obtain exact and/or approximate solutions of equations, inequalities, and systems of linear equations in
+                       two variables (given or obtained by using technology).
+ A1.PAFR.2.8           Solve an equation of the form 𝑓𝑓(𝑥𝑥) = 𝑔𝑔(𝑥𝑥) graphically by identifying the 𝑥𝑥-coordinate(s) of the point(s) of intersection of
+                       the graphs of 𝑦𝑦 = 𝑓𝑓(𝑥𝑥) and 𝑦𝑦 = 𝑔𝑔(𝑥𝑥).
+ A1.PAFR.2.9           Solve systems of linear equations algebraically and graphically.
+ A1.PAFR.2.10          Analyze the growth/decay rate between linear and exponential functions specifically between consecutive integers.
+
+A1.PAFR.3. Represent and interpret functions symbolically and graphically.
+    Indicator #                                                                  Indicator
+ A1.PAFR.3.1          Recognize that 𝑓𝑓(𝑥𝑥) denotes the output of function 𝑓𝑓 that corresponds to the input 𝑥𝑥, and this corresponds to the set of
+                      all the ordered pairs (x, y) that satisfy the equation y = f(x) both tabularly and graphically.
+ A1.PAFR.3.2          Use the definition of a function to analyze the domain and range of a function in relation to its graph, mapping, table,
+                      verbal, and/or symbolic description and, where applicable, using interval and set notation.
+ A1.PAFR.3.3          Translate among graphical, tabular, verbal, and symbolic representations in function notation, to identify intercepts,
+                      intervals where the function is increasing, decreasing, constant, maximums and minimums, and symmetries and
+                      explain their meanings in real-world and mathematical situations.
+ A1.PAFR.3.4          Interpret how lead coefficients impact the shape of a function’s graph.
+
+A1.PAFR.4. Reason with parent functions in varying representations to find families of functions that all have similar distinguishing attributes
+common to the family and use common characteristics to aid in rewriting and identifying linear, linear absolute value, quadratic, and exponential
+functions.
+    Indicator #                                                               Indicator
+ A1.PAFR.4.1          Describe the effect of the transformations 𝑘𝑘𝑘𝑘(𝑥𝑥), 𝑓𝑓(𝑥𝑥)+𝑘𝑘, 𝑓𝑓(𝑥𝑥 − 𝑘𝑘), and combinations of such transformations on the
+                      graph of parent function 𝑦𝑦 = 𝑓𝑓(𝑥𝑥) for any real number 𝑘𝑘; find the value of 𝑘𝑘 given the graphs; and write the equation of a
+                      transformed parent function given its graph.
+ A1.PAFR.4.2          Given a real-world or mathematical situation, determine the parent graph that best models the situation.
+ A1.PAFR.4.3          Given different representations of two different functions, compare key features including intercepts, domain and range,
+                      intervals of increasing and decreasing, constant, average rate of change, and maximum and minimum values.
+

@@ -714,4 +714,23 @@ export const lessons: GradeLessons = {
     ["Earth's gravity keeps pulling the ball toward Earth's centre."],
     "it comes back down because of gravity",
   ),
+  // South Carolina (us-sc)
+  "science/sc-g5-ecosystems": lesson(
+    ["Producers make food. Consumers eat other living things.", "Decomposers, like worms and fungi, return nutrients to the soil.", "Matter moves around an ecosystem again and again."],
+    "Orcas eat salmon. Are orcas producers or consumers?",
+    ["Orcas can't make their own food.", "They eat other animals."],
+    "consumers",
+  ),
+  "science/sc-g5-gravity": lesson(
+    ["Gravity pulls things toward Earth's centre, everywhere on Earth.", "Gravity makes water drop over waterfalls like Niagara Falls and skiers speed up downhill.", "Gravity keeps the oceans on Earth and the moon in orbit around it."],
+    "Which way does gravity pull on a person standing anywhere on Earth?",
+    ["Gravity pulls toward the centre of Earth.", "So it always points down, toward Earth's centre."],
+    "toward Earth's centre",
+  ),
+  "science/sc-g5-day-night": lesson(
+    ["Earth spins once about every 24 hours, giving day and night.", "Earth orbits the sun about once a year.", "The sun seems to rise in the east and set in the west. Shadows are shortest around noon.", "Some stars are bigger than the sun but look tiny because they are very far away."],
+    "How long does Earth take to spin once?",
+    ["One spin gives one day and one night."],
+    "about 24 hours",
+  ),
 };
