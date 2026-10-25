@@ -109,7 +109,7 @@ Each tab has its own address (`/admin/?tab=Funnel`; a family's page is `/admin/?
 `src/server/alerts.ts`. Both go to every admin account (a confirmed email in `ADMIN_EMAILS`) and can be switched off under **Automations**.
 
 - **Alerts** when something goes wrong: a payment fails (`invoice.payment_failed`) or is disputed (`charge.dispute.created`), with a link to the family; the daily job fails or throws; or a System check goes down, and again when it's working again. The same alert goes out at most once every 6 hours.
-- **System watching:** `/api/cron/watch/` (needs `CRON_SECRET` as a bearer token) runs the System checks and alerts on any that changed. The **Uptime** workflow calls it every 15 minutes after a good ping once the GitHub repository secret `CRON_SECRET` is set to the same value as the site's. Without it, only the site-down issue is opened.
+- **System watching:** `/api/cron/watch/` (needs `CRON_SECRET` as a bearer token) runs the System checks and alerts on any that changed. The **Uptime** workflow calls it after a good ping (the schedule is currently off, so only when run by hand) once the GitHub repository secret `CRON_SECRET` is set to the same value as the site's. Without it, only the site-down issue is opened.
 - **Morning digest:** sent with the daily job. The last 24 hours' sign-ups, payments, revenue and cancellations, what waits in **To Do**, and any System problems. Counts only, never children.
 
 ## Automatic nudges
