@@ -781,6 +781,12 @@ export const lessons: GradeLessons = {
     ["The Amazon is in South America.", "Most of it lies in the largest South American country."],
     "Brazil",
   ),
+  "social/md-g6-world-regions": lesson(
+    ["World regions share features like climate, landforms and culture. Know which countries are in which region: India in Asia, New Zealand in Oceania.", "People adapt to climate, like warm clothing and insulated homes in the cold.", "The Ring of Fire around the Pacific has many volcanoes and earthquakes. Trade connects regions."],
+    "The Amazon rainforest is mostly in which country?",
+    ["The Amazon is in South America.", "Most of it lies in the largest South American country."],
+    "Brazil",
+  ),
   "social/nj-g6-world-regions": lesson(
     ["World regions share features like climate, landforms and culture. Know which countries are in which region: India in Asia, New Zealand in Oceania.", "People adapt to climate, like warm clothing and insulated homes in the cold.", "The Ring of Fire around the Pacific has many volcanoes and earthquakes. Trade connects regions."],
     "The Amazon rainforest is mostly in which country?",
@@ -888,6 +894,24 @@ export const lessons: GradeLessons = {
     "Why do most Australians live near the coast?",
     ["The middle is hot and dry.", "The coast has more rain and milder weather."],
     "the coast has a milder climate and more water",
+  ),
+  "social/maps-graphs-8": lesson(
+    ["Use the map scale: multiply the map distance by what 1 cm stands for.", "A choropleth map shades areas to show a rate or density, such as people per square kilometre.", "On a scatter graph, look for a trend: as one value rises, does the other rise or fall?"],
+    "On a map, 1 cm represents 25 km. Two cities are 3 cm apart. How far apart are they?",
+    ["Each centimetre is 25 km.", "3 × 25 = 75."],
+    "75 km",
+  ),
+  "social/mi-g6-landforms-climates": lesson(
+    ["The Western Hemisphere is North and South America.", "Big features: the Andes and Rockies, the Amazon rainforest and River, and the Panama Canal.", "A political map shows countries and borders. A physical map shows landforms."],
+    "What is the largest rainforest in the world?",
+    ["It is in South America.", "It is named after a great river."],
+    "the Amazon rainforest",
+  ),
+  "social/mi-g6-world-regions": lesson(
+    ["World regions share features like climate, landforms and culture. Know which countries are in which region: India in Asia, New Zealand in Oceania.", "People adapt to climate, like warm clothing and insulated homes in the cold.", "The Ring of Fire around the Pacific has many volcanoes and earthquakes. Trade connects regions."],
+    "The Amazon rainforest is mostly in which country?",
+    ["The Amazon is in South America.", "Most of it lies in the largest South American country."],
+    "Brazil",
   ),
   // Indiana (us-in)
   "social/in-g6-indiana-constitution": lesson(
@@ -998,5 +1022,142 @@ export const lessons: GradeLessons = {
     "What was Manifest Destiny?",
     ["It was a popular belief in the 1840s.", "People believed the country should grow.", "They thought it was meant to stretch across the continent."],
     "the belief that the US was meant to expand across North America",
+  ),
+  // Missouri (us-mo)
+  "social/ga-g7-africa": lesson(
+    ["Key features include the Sahara, the Sahel, the Nile and the Congo River.", "Desertification in the Sahel and unsafe water are big environmental issues.", "Many African countries gained independence in the 1950s and 1960s."],
+    "What is desertification?",
+    ["Desert means dry land.", "Land slowly becomes like a desert."],
+    "good land turning into desert",
+  ),
+  "social/ga-g7-southwest-asia": lesson(
+    ["Key features include the Tigris and Euphrates Rivers, the Persian Gulf and the Arabian Peninsula.", "Oil is the region's most important export.", "Water is scarce, so sharing rivers is an important issue."],
+    "What is Southwest Asia's most important export?",
+    ["It is found under the desert and the Gulf.", "It is used for fuel."],
+    "oil",
+  ),
+  "social/ga-g7-southern-eastern-asia": lesson(
+    ["Key features include the Himalayas, the Ganges and the Yangtze Rivers.", "The Ganges is polluted and the Yangtze has huge dams.", "China, India and Japan have large economies."],
+    "Which mountains are the highest in the world?",
+    ["They are in southern Asia.", "Mount Everest is part of them."],
+    "the Himalayas",
+  ),
+  "social/ga-g7-population": lesson(
+    ["Demography is the study of human populations. Population density is how many people live in an area.", "Cities often grow along rivers and coasts for water and trade.", "Push factors drive people away; pull factors draw them. Newcomers keep culture alive with language and festivals."],
+    "Why do cities often grow along rivers and coasts?",
+    ["People need water.", "Rivers and coasts are also routes for trade."],
+    "They offer water and trade routes",
+  ),
+  "social/ga-g7-economies": lesson(
+    ["In a command economy the government decides what to make; in a market economy buyers and sellers do; a mixed economy blends both.", "Exports are sold to other countries; imports are bought from them. A tariff is a tax on imports.", "Comparative advantage: make what you can produce at the lowest opportunity cost, then trade."],
+    "In a command economy, who makes the main decisions about production?",
+    ["“Command” means orders from the top.", "The government gives those orders."],
+    "the government",
+  ),
+  "social/quality-of-life-8": lesson(
+    ["Indicators measure quality of life: life expectancy, literacy rate, infant mortality, and access to clean water and health care.", "High literacy and long life expectancy usually mean higher quality of life; high infant mortality usually means lower.", "To estimate doubling time, divide 70 by the yearly growth rate."],
+    "A population grows by 2% each year. About how many years will it take to double?",
+    ["Doubling time ≈ 70 ÷ growth rate.", "70 ÷ 2 = 35."],
+    "35",
+  ),
+  "social/mo-g6-world-maps": lesson(
+    ["There are 7 continents and 5 oceans. The Atlantic lies between the Americas and Europe and Africa.", "Latitude runs from 0° at the equator to 90° at the poles. Longitude is measured from the prime meridian.", "Every flat map (projection) stretches some places."],
+    "What latitude is the equator?",
+    ["Latitude counts from the middle of the Earth.", "The equator is the starting line."],
+    "0°",
+  ),
+  "social/mo-g6-latin-america": lesson(
+    ["Key features: the Amazon Rainforest, the Andes Mountains and the Atacama Desert.", "Most people speak Spanish, but Brazil speaks Portuguese.", "Issues include rainforest loss in Brazil and air pollution in Mexico City."],
+    "Why is the Amazon Rainforest shrinking?",
+    ["People clear land.", "Trees are cut for farms, ranches, logging and mining."],
+    "people cut and clear it for farms and logging",
+  ),
+  "social/mo-g6-australia": lesson(
+    ["Australia is a country and a continent, with the Great Barrier Reef and the Outback.", "Most Australians live near the coast, where the climate is milder.", "Aboriginal Australians have lived there for tens of thousands of years."],
+    "Why do most Australians live near the coast?",
+    ["The middle is hot and dry.", "The coast has more rain and milder weather."],
+    "the coast has a milder climate and more water",
+  ),
+
+  // North Carolina's units (us-nc).
+  "social/or-g7-african-kingdoms": lesson(
+    ["Ghana, Mali and Songhai grew rich from gold and salt trade across the Sahara. Mansa Musa of Mali went on pilgrimage to Makkah in 1324.", "Swahili city-states like Kilwa and Mombasa traded across the Indian Ocean. Great Zimbabwe, Benin and Ethiopia were also powerful.", "Historians use Arabic writings, griots’ oral histories and archaeology."],
+    "The empire of Mali grew rich from trading what?",
+    ["Mali controlled routes across the Sahara.", "Gold from the south was traded for salt from the desert."],
+    "gold and salt",
+  ),
+  // Massachusetts (us-ma)
+  "social/al-g7-southwest-asia": lesson(
+    ["Assyria built a strong army; Ashurbanipal’s library at Nineveh held thousands of clay tablets in cuneiform.", "Phoenician city-states (Tyre, Sidon, Byblos) were sea traders. Their alphabet became the base of Greek and Latin letters.", "Persia under Cyrus and Darius ruled through satrapies (provinces), with the Royal Road and coins."],
+    "What was the Phoenicians’ greatest gift to later peoples?",
+    ["Phoenicians needed simple writing for trade.", "They used letters for sounds, an alphabet."],
+    "an alphabet of letters for sounds",
+  ),
+  "social/ca-g7-arabia-islam": lesson(
+    ["The Arabian Peninsula, between the Red Sea and the Persian Gulf, is mostly hot desert. Mecca grew on caravan routes.", "Muslims follow the Qur’an and the Sunnah, the example of the Prophet Muhammad’s words and actions. They pray in mosques.", "Muslim rule spread through conquest and treaties and blended many cultures."],
+    "What is the Sunnah?",
+    ["The Qur’an is one source of Islamic belief.", "The other is the example of the Prophet Muhammad’s words and actions."],
+    "the example of the Prophet Muhammad’s words and actions",
+  ),
+  "social/mb-egypt-8": lesson(
+    ["The Nile was Egypt’s lifeline. It flows north to the Mediterranean, and its yearly flood left rich black silt.", "Pharaohs ruled a united Egypt; the Great Pyramid at Giza was built for Pharaoh Khufu.", "Scribes kept records, collected taxes and wrote in hieroglyphs."],
+    "What did the Nile’s yearly flood leave behind?",
+    ["When the water went down, the fields were covered in mud.", "This rich black soil is called silt."],
+    "rich black soil called silt",
+  ),
+  "social/mb-mesopotamia": lesson(
+    ["Mesopotamia is the land between the Tigris and Euphrates. Sumer, in the south, had the first city-states.", "People irrigated fields, built ziggurats (stepped temple towers) and wrote cuneiform on wet clay.", "Their counting by 60 lives on in minutes and angles. Law codes carved on stone made laws known to all."],
+    "What was a ziggurat?",
+    ["It was a huge building at the centre of a city.", "It rose in steps and had a temple on top."],
+    "a stepped temple tower",
+  ),
+  "social/ma-g6-central-america-caribbean": lesson(
+    ["Central America is the isthmus joining North and South America; the Caribbean Sea lies to its east.", "The Panama Canal links the Atlantic and Pacific Oceans.", "A tropical climate, volcanoes and hurricanes shape farming, tourism and where people live."],
+    "Which waterway lets ships cross from the Atlantic to the Pacific without going around South America?",
+    ["It cuts across the narrowest part of Central America.", "It opened in 1914."],
+    "the Panama Canal",
+  ),
+  "social/ma-g6-latin-america": lesson(
+    ["Key features: the Amazon Rainforest, the Andes Mountains and the Atacama Desert.", "Most people speak Spanish, but Brazil speaks Portuguese.", "Issues include rainforest loss in Brazil and air pollution in Mexico City."],
+    "Why is the Amazon Rainforest shrinking?",
+    ["People clear land.", "Trees are cut for farms, ranches, logging and mining."],
+    "people cut and clear it for farms and logging",
+  ),
+  "social/ma-g6-early-americas-africa": lesson(
+    ["Scientists think people reached the Americas more than 15,000 years ago.", "The Olmec carved giant stone heads; the Maya built stone cities and an accurate calendar. Maya people live in Central America today.", "Teotihuacan, in what is now Mexico, was one of the largest cities of the ancient world."],
+    "Which ancient people built pyramid cities such as Tikal and kept an accurate calendar?",
+    ["They lived in Mesoamerica.", "Millions of their descendants live there today."],
+    "the Maya",
+  ),
+  // South Carolina (us-sc)
+  "social/ny-g9-atlantic-world": lesson(
+    ["Sailors used tools like the astrolabe to find their latitude at sea.", "The Columbian Exchange’s deadliest result for Indigenous peoples of the Americas was disease, such as smallpox, which killed millions.", "Most enslaved Africans were forced to work on sugar plantations in Brazil and the Caribbean."],
+    "Which tool helped sailors find their latitude?",
+    ["Latitude tells how far north or south you are.", "Sailors measured the angle of the Sun or stars.", "They used an astrolabe."],
+    "the astrolabe",
+  ),
+  "social/al-g9-imperialism": lesson(
+    ["Imperial powers wanted colonies for raw materials, markets and power. The Berlin Conference set off the Scramble for Africa.", "In a sphere of influence, a foreign power controls trade and investment, as in China. The British East India Company took political control in India.", "People resisted: Ethiopia beat Italy at Adwa (1896); the Indian Rebellion and the Boxer Rebellion."],
+    "Ethiopia defeated Italy in 1896 at which battle?",
+    ["Ethiopia kept its independence.", "The battle was at Adwa."],
+    "Adwa",
+  ),
+  "social/al-g9-world-today": lesson(
+    ["Economies are linked by trade and finance, so a problem in one spreads fast. Multinationals work in many countries; outsourcing moves work abroad.", "Climate change comes mainly from greenhouse gases from burning fossil fuels.", "Deforestation is cutting down large areas of forest, like rainforest."],
+    "What is a multinational corporation?",
+    ["“Multi” means many.", "It is a company that operates in many countries."],
+    "a company that operates in many countries",
+  ),
+  "social/sc-g6-cold-war": lesson(
+    ["After World War II, Churchill said an Iron Curtain divided Europe. The US offered the Truman Doctrine and Marshall Plan; the Soviets answered with COMECON.", "Alliances (NATO and the Warsaw Pact), the Korean War, the Cuban Missile Crisis and arms and space races followed.", "Gorbachev’s glasnost (openness) and perestroika (restructuring) and Poland’s Solidarity helped end it."],
+    "What did the Marshall Plan do?",
+    ["Europe was in ruins after World War II.", "The US gave billions to rebuild Western Europe."],
+    "gave billions of dollars to rebuild Western Europe",
+  ),
+  "social/wi-g6-world-regions": lesson(
+    ["World regions share features like climate, landforms and culture. Know which countries are in which region: India in Asia, New Zealand in Oceania.", "People adapt to climate, like warm clothing and insulated homes in the cold.", "The Ring of Fire around the Pacific has many volcanoes and earthquakes. Trade connects regions."],
+    "The Amazon rainforest is mostly in which country?",
+    ["The Amazon is in South America.", "Most of it lies in the largest South American country."],
+    "Brazil",
   ),
 };

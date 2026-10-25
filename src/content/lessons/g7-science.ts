@@ -583,6 +583,12 @@ export const lessons: GradeLessons = {
     ["Coal forms from buried plants.", "Long ago Illinois was covered by swamps."],
     "it was once covered by swamps",
   ),
+  "science/md-g7-resources": lesson(
+    ["Resources like coal, minerals, soil and water are found where past processes put them.", "So they are spread unevenly around Earth.", "Scientists use data from the past (river levels, radar, quake records) to forecast hazards."],
+    "Why does Western Maryland have coal?",
+    ["Coal forms from buried plants.", "Long ago that area was covered by swamps."],
+    "it was once covered by swamps",
+  ),
   "science/nj-g7-resources": lesson(
     ["Resources like zinc, sand, soil and water are found where past processes put them.", "So they are spread unevenly around Earth.", "Scientists use data from the past (river levels, radar, storm records) to forecast hazards."],
     "Why does South Jersey have so much sand for making glass?",
@@ -595,6 +601,12 @@ export const lessons: GradeLessons = {
     ["Pollinators need flowers for food.", "Native flowers give food and shelter."],
     "planting native flowers",
   ),
+  "science/md-g7-biodiversity": lesson(
+    ["Biodiversity is the variety of life in a place.", "Healthy ecosystems give services like clean water, flood control and pollination.", "Good solutions protect biodiversity, for example restoring oyster reefs and wetlands or stopping invasive species."],
+    "Which helps pollinators more: planting native flowers or paving a field?",
+    ["Pollinators need flowers for food.", "Native flowers give food and shelter."],
+    "planting native flowers",
+  ),
   "science/nj-g7-biodiversity": lesson(
     ["Biodiversity is the variety of life in a place.", "Healthy ecosystems give services like clean water, flood control and pollination.", "Good solutions protect biodiversity, for example protecting the Pinelands or stopping invasive species like the spotted lanternfly."],
     "Which helps pollinators more: planting native flowers or paving a field?",
@@ -602,6 +614,12 @@ export const lessons: GradeLessons = {
     "planting native flowers",
   ),
   "science/il-g7-earth-surface": lesson(
+    ["Matching coastlines, fossils and rocks on far-apart continents show they were once joined.", "Plates pull apart at mid-ocean ridges and collide to build mountains and volcanoes, such as the Himalayas.", "Some changes are sudden (earthquakes); others take millions of years (mountain building)."],
+    "Is a landslide a fast or a very slow change to Earth’s surface?",
+    ["A landslide happens in minutes.", "Mountain building takes millions of years."],
+    "fast",
+  ),
+  "science/md-g7-earth-surface": lesson(
     ["Matching coastlines, fossils and rocks on far-apart continents show they were once joined.", "Plates pull apart at mid-ocean ridges and collide to build mountains and volcanoes, such as the Himalayas.", "Some changes are sudden (earthquakes); others take millions of years (mountain building)."],
     "Is a landslide a fast or a very slow change to Earth’s surface?",
     ["A landslide happens in minutes.", "Mountain building takes millions of years."],
@@ -673,6 +691,24 @@ export const lessons: GradeLessons = {
     ["It was around only briefly but in many places.", "Finding it dates the rock layer."],
     "it lived for a short time over a wide area",
   ),
+  "science/mi-g7-resources": lesson(
+    ["Minerals, energy and water are spread unevenly because of past geologic processes.", "Scientists map hazards such as earthquakes, tsunamis, floods and wildfires.", "Monitoring networks (seismometers, GPS, gas sensors) help warn people early."],
+    "What does a tsunami hazard map show?",
+    ["Tsunamis flood low coastal land.", "People need to know where to go."],
+    "areas that could flood and routes to high ground",
+  ),
+  "science/mi-g7-biodiversity": lesson(
+    ["Biodiversity is the variety of life in an area.", "Ecosystem services include clean water, food and storm protection.", "Protecting kelp forests, wetlands and redwood forests keeps habitat for many species."],
+    "How do coastal wetlands help people?",
+    ["Wetland plants trap dirt.", "They also slow storm waves."],
+    "by filtering water and softening storm waves",
+  ),
+  "science/mi-g7-earth-surface": lesson(
+    ["Matching coastlines, fossils and rocks on far-apart continents show they were once joined.", "Plates pull apart at mid-ocean ridges and collide to build mountains and volcanoes, such as the Cascades.", "Some changes are sudden (earthquakes); others take millions of years (mountain building)."],
+    "Is a landslide a fast or a very slow change to Earth’s surface?",
+    ["A landslide happens in minutes.", "Mountain building takes millions of years."],
+    "fast",
+  ),
   // Indiana (us-in)
 "science/in-g7-resources": lesson(
     ["Minerals, energy and water are spread unevenly because of past geologic processes.", "Scientists map hazards such as earthquakes, tsunamis, floods and wildfires.", "Monitoring networks (seismometers, GPS, gas sensors) help warn people early."],
@@ -704,5 +740,94 @@ export const lessons: GradeLessons = {
     "When is gravity between two objects stronger?",
     ["More mass means more pull.", "Being closer also means more pull."],
     "when they are more massive and closer",
+  ),
+  // Missouri (us-mo)
+  "science/mo-g7-resources": lesson(
+    ["Minerals, energy and water are spread unevenly because of past geologic processes; Missouri has lead deposits in the Ozarks.", "Scientists map hazards such as earthquakes, floods, tornadoes and wildfires.", "Monitoring networks (seismometers, river gauges, weather radar) help warn people early."],
+    "What does a flood hazard map show?",
+    ["Floods cover low land near rivers.", "People need to know where to go."],
+    "areas that could flood and routes to higher ground",
+  ),
+  "science/mo-g7-biodiversity": lesson(
+    ["Biodiversity is the variety of life in an area.", "Ecosystem services include clean water, food and flood protection.", "Protecting Ozark forests, prairies and river wetlands keeps habitat for many species."],
+    "How do wetlands along a river help people?",
+    ["Wetland plants trap dirt.", "They also soak up floodwater."],
+    "by filtering water and holding floodwater",
+  ),
+  "science/mo-g7-earth-surface": lesson(
+    ["Matching coastlines, fossils and rocks on far-apart continents show they were once joined.", "Plates pull apart at mid-ocean ridges and collide to build mountains and volcanoes.", "Some changes are sudden (earthquakes); others take millions of years (mountain building)."],
+    "Is a landslide a fast or a very slow change to Earth's surface?",
+    ["A landslide happens in minutes.", "Mountain building takes millions of years."],
+    "fast",
+  ),
+
+  // North Carolina's units (us-nc).
+  "science/newtons-laws": lesson(
+    ["First law (inertia): an object keeps doing what it's doing unless a force acts on it.", "Second law: net force = mass × acceleration. Force is measured in newtons (N).", "Third law: every action has an equal and opposite reaction.", "Friction is a force that slows things, so a puck slides farther on smooth ice."],
+    "A 30 kg cart speeds up at 2 m/s². What net force acts on it?",
+    ["Force = mass × acceleration.", "30 × 2 = 60."],
+    "60 N",
+  ),
+  "science/ny-g9-climate-systems": lesson(
+    ["Weather is conditions at one time and place; climate is the long-term pattern.", "Greenhouse gases trap heat given off by Earth. Burning fossil fuels adds carbon dioxide.", "Ice cores and glaciers give evidence of past climates."],
+    "“It rained today.” Weather or climate?",
+    ["It describes one day.", "Short-term conditions are weather."],
+    "weather",
+  ),
+  "science/wa-g3-hazards": lesson(
+    ["Weather hazards include floods, strong wind, lightning and heavy snow.", "People design solutions: storm shutters, windbreaks, fish ladders.", "Judge a solution by asking: does it solve the problem?"],
+    "Trees planted in a row to block wind are a…?",
+    ["They break the force of the wind."],
+    "windbreak",
+  ),
+  "science/nc-g7-atmosphere": lesson(
+    ["The air is about 78% nitrogen and 21% oxygen. Almost all weather happens in the lowest layer, the troposphere; the ozone layer is in the stratosphere.", "The sun's energy drives the water cycle, and gravity brings precipitation back down.", "Uneven heating causes convection and global winds, and the jet stream steers storms. Monitoring air quality helps people stay healthy."],
+    "In which layer of the atmosphere does almost all weather happen?",
+    ["It is the lowest layer.", "That layer is the troposphere."],
+    "the troposphere",
+  ),
+  // Massachusetts (us-ma)
+  "science/ca-g8-population-resources": lesson(
+    ["Total resource use = number of people × use per person.", "Using more water, energy, land and materials affects Earth’s systems, such as habitats and clean water.", "Better technology and using less per person can lower the impact."],
+    "A town’s population doubles and each person uses the same water. What happens to total water use?",
+    ["Use per person stays the same.", "Twice the people means twice the water."],
+    "it doubles",
+  ),
+  "science/ma-g7-design": lesson(
+    ["Criteria are what a solution must do to succeed. Constraints are limits.", "A decision matrix compares designs against the criteria.", "A trade-off is giving up some of one thing to get more of another.", "After a test fails, improve the design and test again."],
+    "A cheaper filter cleans water less well. Choosing it means accepting a… what?",
+    ["You give up some cleaning to save money.", "Giving up one thing for another is a trade-off."],
+    "a trade-off",
+  ),
+  "science/ma-g7-earth-surface": lesson(
+    ["Matching coastlines, fossils and rocks on far-apart continents show they were once joined.", "Plates pull apart at mid-ocean ridges and collide to build mountains and volcanoes.", "Some changes are sudden (earthquakes); others take millions of years (mountain building)."],
+    "Is a landslide a fast or a very slow change to Earth's surface?",
+    ["A landslide happens in minutes.", "Mountain building takes millions of years."],
+    "fast",
+  ),
+  "science/wi-g7-resources": lesson(
+    ["Resources like minerals, sand, soil and water are found where past processes put them.", "So they are spread unevenly around Earth.", "Scientists use data from the past (river levels, radar, quake records) to forecast hazards."],
+    "Why does Wisconsin have so much sand and gravel?",
+    ["Think about what covered Wisconsin in the Ice Age.", "Melting glaciers dropped sand and gravel across the land."],
+    "glaciers left it behind",
+  ),
+  "science/wi-g7-biodiversity": lesson(
+    ["Biodiversity is the variety of life in a place.", "Healthy ecosystems give services like clean water, flood control and pollination.", "Good solutions protect biodiversity, for example restoring prairie or stopping invasive species."],
+    "Which helps pollinators more: planting native flowers or paving a field?",
+    ["Pollinators need flowers for food.", "Native flowers give food and shelter."],
+    "planting native flowers",
+  ),
+  "science/wi-g7-earth-surface": lesson(
+    ["Matching coastlines, fossils and rocks on far-apart continents show they were once joined.", "Plates pull apart at mid-ocean ridges and collide to build mountains and volcanoes, such as the Himalayas.", "Some changes are sudden (earthquakes); others take millions of years (mountain building)."],
+    "Is a landslide a fast or a very slow change to Earth’s surface?",
+    ["A landslide happens in minutes.", "Mountain building takes millions of years."],
+    "fast",
+  ),
+  // Tennessee
+  "science/tn-g7-growth": lesson(
+    ["Sexual reproduction needs two parents and makes varied young. Asexual needs one parent and makes copies.", "Growing a plant from a cutting or a runner is asexual.", "Bright petals and nectar attract pollinators. Some animals build nests and care for young.", "Genes and the environment, like water and sunlight, both affect growth."],
+    "A new plant grows from a piece of a stem. Sexual or asexual reproduction?",
+    ["Only one parent plant is involved.", "One parent means asexual."],
+    "asexual",
   ),
 };

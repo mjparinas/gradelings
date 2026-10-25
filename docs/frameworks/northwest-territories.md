@@ -1,4 +1,4 @@
-### Northwest Territories
+# Northwest Territories
 - **Framework `ca-nt`, slug `northwest-territories`**, Kindergarten to Grade 9, including BC's two French subjects. The NWT is replacing the Alberta curriculum with the BC curriculum adapted for the NWT, phased in since 2023 (NWT Education, Culture and Employment, JK-12 Curriculum Renewal; Grades 1 to 9 on it in 2026-27, Kindergarten to Grade 3 as a draft), reporting on BC's four-point proficiency scale. So an NWT course is the matching BC course with a `ca-nt` standards entry (`nwtGrade` in `src/content/nwt/kit.ts`); nothing is copied, and a new BC unit appears for the NWT automatically. Alberta is not used for the NWT.
 - **NWT-only units** live in `src/content/nwt/units/` with `nt-` ids: Our Territory (Grade 3), Dene Kede (Grade 5) and Inuuqatigiit (Grade 6) in social studies. Dene and Inuvialuit content is light and in the present tense. Source and record: `docs/research/northwest-territories/`.
 - **Guides, report-card page and wording** are BC's reworded for the NWT (`NORTHWEST_TERRITORIES` in `nwt/framework.ts`, `NWT_GUIDES` in `nwt/guides.ts`).

@@ -158,6 +158,8 @@ export type AppEvent = EventBase &
     | { type: "trophy"; trophy: string }
     /** A hidden easter egg found (for example "konami"). */
     | { type: "secret"; code: string }
+    /** A mystery box opened at the end of the lesson logged as `session` (its event id). What's inside comes from that id (`mystery.ts`). */
+    | { type: "mystery"; session: string }
     | { type: "buy"; item: string; cost: number }
     | { type: "quest"; quest: string; day: string; reward: number }
     /** The goal a child chose for one day. */

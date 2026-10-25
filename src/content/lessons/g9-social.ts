@@ -1087,7 +1087,19 @@ export const lessons: GradeLessons = {
     ["Congress needs two-thirds.", "Illinois's constitution sets three-fifths."],
     "three-fifths of each house",
   ),
+  "social/wi-g9-governing-wisconsin": lesson(
+    ["Wisconsin's constitution of 1848 is its only one. It is changed when two Legislatures in a row pass an amendment and voters approve it.", "Voters elect six statewide officers, 132 lawmakers and seven Supreme Court justices for ten-year terms.", "The governor's partial veto can strike parts of a spending bill. Two-thirds of the members present in each house can override a veto."],
+    "What must happen before an amendment is added to the Wisconsin Constitution?",
+    ["The Legislature votes twice.", "Then voters have the final say."],
+    "two Legislatures pass it and voters approve it",
+  ),
   "social/il-g9-us-government": lesson(
+    ["Article I sets up Congress, Article II the President and Article III the courts.", "Each branch checks the others: vetoes, overrides, confirmations and judicial review.", "The Bill of Rights and later amendments protect individual rights."],
+    "Which body must confirm a President's nominee to the Supreme Court?",
+    ["The President nominates.", "The Senate confirms."],
+    "the Senate",
+  ),
+  "social/wi-g9-us-government": lesson(
     ["Article I sets up Congress, Article II the President and Article III the courts.", "Each branch checks the others: vetoes, overrides, confirmations and judicial review.", "The Bill of Rights and later amendments protect individual rights."],
     "Which body must confirm a President's nominee to the Supreme Court?",
     ["The President nominates.", "The Senate confirms."],
@@ -1111,6 +1123,12 @@ export const lessons: GradeLessons = {
     ["Divide 72 by the rate.", "72 ÷ 6 = 12."],
     "about 12 years",
   ),
+  "social/wi-g9-personal-finance": lesson(
+    ["Net (take-home) pay = gross pay − what is withheld. Sale price = price − the discount.", "Compound interest earns interest on interest. Rule of 72: years to double ≈ 72 ÷ the rate.", "Pay bills on time for a good credit score; keep an emergency fund; spread risk."],
+    "Using the Rule of 72, about how long does money take to double at 6% a year?",
+    ["Divide 72 by the rate.", "72 ÷ 6 = 12."],
+    "about 12 years",
+  ),
   "social/nj-g9-personal-finance": lesson(
     ["Net (take-home) pay = gross pay − what is withheld. Sale price = price − the discount.", "Compound interest earns interest on interest. Rule of 72: years to double ≈ 72 ÷ the rate.", "Pay bills on time for a good credit score; keep an emergency fund; spread risk."],
     "Using the Rule of 72, about how long does money take to double at 6% a year?",
@@ -1118,6 +1136,12 @@ export const lessons: GradeLessons = {
     "about 12 years",
   ),
   "social/il-g9-economics": lesson(
+    ["When price rises, quantity demanded falls and quantity supplied rises.", "A poor harvest cuts supply and raises the price.", "GDP, inflation and unemployment show how the economy is doing; trade lets countries specialize."],
+    "A drought hurts the corn harvest. What most likely happens to the price of corn?",
+    ["There is less corn to sell.", "Less supply pushes the price up."],
+    "it rises",
+  ),
+  "social/wi-g9-economics": lesson(
     ["When price rises, quantity demanded falls and quantity supplied rises.", "A poor harvest cuts supply and raises the price.", "GDP, inflation and unemployment show how the economy is doing; trade lets countries specialize."],
     "A drought hurts the corn harvest. What most likely happens to the price of corn?",
     ["There is less corn to sell.", "Less supply pushes the price up."],
@@ -1207,6 +1231,36 @@ export const lessons: GradeLessons = {
     ["Lenders want to know if you repay.", "Paying on time matters most."],
     "payment history",
   ),
+  "social/mi-g9-us-government": lesson(
+    ["Separation of powers splits government into three branches: Article I Congress, Article II the president, Article III the courts.", "A president serves 4 years. The House impeaches and the Senate holds the trial.", "Unlike a parliamentary system, the US elects its president separately from Congress."],
+    "Which article of the US Constitution sets up the federal courts?",
+    ["Article I is Congress; Article II the president.", "Article III sets up the courts."],
+    "Article III",
+  ),
+  "social/mi-g9-personal-finance": lesson(
+    ["Net (take-home) pay = gross pay − what is withheld. Sale price = price − the discount.", "Compound interest earns interest on interest. Rule of 72: years to double ≈ 72 ÷ the rate.", "Pay bills on time for a good credit score; keep an emergency fund; spread risk."],
+    "You earn $15 an hour for 20 hours, and 10% is withheld. What is your take-home pay?",
+    ["Gross: $15 × 20 = $300.", "10% of $300 is $30.", "$300 − $30 = $270."],
+    "$270",
+  ),
+  "social/mi-g9-economics": lesson(
+    ["When price rises, quantity demanded falls and quantity supplied rises.", "A poor harvest cuts supply and raises the price.", "Command economies are run by government, market economies by buyers and sellers; most countries, including the US, are mixed."],
+    "A poor wild blueberry harvest would most likely do what to the price?",
+    ["A poor harvest means fewer blueberries to sell.", "Less supply pushes the price up."],
+    "raise it",
+  ),
+  "social/mi-g9-supply-demand": lesson(
+    ["Demand shifts with what buyers want: rain raises demand for umbrellas; a dry summer lowers it.", "Supply shifts with costs: costlier milk cuts ice cream supply; faster machines raise bike supply and lower prices.", "Price too low: shortage = demand − supply. Price too high: surplus = supply − demand."],
+    "At $3, buyers want 80 and sellers offer 30. What happens?",
+    ["Demand is more than supply.", "80 − 30 = 50 more wanted than offered."],
+    "a shortage of 50",
+  ),
+  "social/mi-g9-governing-michigan": lesson(
+    ["Michigan's constitution of 1963 splits power among the Legislature, the governor and the courts.", "The Legislature has a Senate (38 members) and a House (110 members).", "Voters can propose laws and amendments by initiative, reject laws by referendum and remove officials by recall."],
+    "How are Michigan Supreme Court justices chosen?",
+    ["Michigan elects its judges.", "Voters choose them for eight-year terms."],
+    "by the voters",
+  ),
   // Indiana (us-in)
   "social/in-g9-governing-indiana": lesson(
     ["Indiana's General Assembly has 50 senators and 100 representatives.", "A majority of each house can override the governor's veto, which is easier than in Congress.", "Benjamin Harrison, the only president elected from Indiana, won the Electoral College in 1888 with fewer popular votes."],
@@ -1273,5 +1327,209 @@ export const lessons: GradeLessons = {
     "Why was writing laws down, as in Hammurabi’s Code, important?",
     ["Before, rules could change from person to person.", "Written laws let everyone know the same rules."],
     "people could know the rules and they applied the same way",
+  ),
+  // Missouri (us-mo)
+  "social/mo-g9-civics-test": lesson(
+    ["The test asks about the Constitution, the branches, rights and responsibilities, and history.", "The Declaration of Independence announced independence from Great Britain. The Supreme Court is the highest court.", "Voting in federal elections is a right only for citizens; serving on a jury is a responsibility only for citizens."],
+    "Name one responsibility that is only for United States citizens.",
+    ["Everyone must obey laws and pay taxes.", "Only citizens can be called to serve on a jury."],
+    "serving on a jury",
+  ),
+  "social/mo-g9-governing-missouri": lesson(
+    ["Missouri's 1945 constitution sets up the General Assembly (34 senators, 163 representatives), the governor and the courts.", "Under the Missouri Plan, a commission lists judges, the governor picks one and voters later decide whether to keep them.", "Voters can propose laws by initiative petition. Federal law wins when it conflicts with state law."],
+    "Under the Missouri Plan, who first narrows the list of judges?",
+    ["The governor picks from a short list.", "A nonpartisan commission makes that list."],
+    "a nonpartisan commission",
+  ),
+
+  // North Carolina's units (us-nc).
+  "social/nc-g9-nc-government": lesson(
+    ["Federalism divides power between the nation and the states; North Carolina's counties and cities have only the powers the General Assembly gives them.", "Local governments include counties, cities (often council-manager) and special districts.", "North Carolina's courts run from District and Superior Court to the Court of Appeals and the state Supreme Court; federal cases go to federal courts."],
+    "Which North Carolina court hears felony trials?",
+    ["District Court handles misdemeanors and traffic cases.", "Superior Court handles felonies."],
+    "Superior Court",
+  ),
+  "social/nc-g9-money-plan": lesson(
+    ["Gross pay is the full amount earned; net pay is what's left after deductions like taxes and FICA.", "A spending plan lists income and fixed and variable expenses, with money set aside to save.", "Interest and fees add to what things cost, so compare them before you borrow or pay late."],
+    "Gross pay is $1,000 and deductions are $230. What is net pay?",
+    ["Net pay = gross pay − deductions.", "1,000 − 230 = 770."],
+    "$770",
+  ),
+  "social/nc-g9-credit-insurance": lesson(
+    ["Credit lets you borrow now and pay later, usually with interest (shown as the APR).", "Paying on time and using little of your available credit build a good credit score.", "Insurance spreads risk: you pay a premium, and after the deductible, the insurer pays covered costs."],
+    "What is a deductible?",
+    ["You pay a premium to keep a policy.", "The deductible is what you pay before insurance pays."],
+    "the amount you pay before insurance pays",
+  ),
+  "social/nc-g9-economics": lesson(
+    ["Economies can be traditional, command, market or mixed; the United States has a mixed economy.", "GDP, unemployment and inflation rise and fall through the business cycle: expansion, peak, contraction and trough.", "Fiscal policy (Congress and the president: taxes and spending) and monetary policy (the Federal Reserve: interest rates) try to keep the economy steady."],
+    "Who sets monetary policy in the United States?",
+    ["Congress and the president set fiscal policy.", "The Federal Reserve sets monetary policy."],
+    "the Federal Reserve",
+  ),
+  "social/nc-g9-consumer": lesson(
+    ["Advertising and social media try to shape what you buy; sponsored posts must say so.", "Common frauds include phishing, fake prizes, bait-and-switch and pyramid schemes.", "Protect yourself with strong passwords, by checking sellers, paying with protected methods, and reporting scams to the Attorney General or the FTC."],
+    "A caller says you won a prize but must pay a fee first. What is it most likely?",
+    ["Real prizes don't charge winners a fee.", "Asking for payment first is a sign of fraud."],
+    "a scam",
+  ),
+  "social/nc-g9-careers-investing": lesson(
+    ["More education and training usually raise lifetime income, but compare costs, aid and future pay.", "Stocks are shares of ownership, bonds are loans, and mutual and index funds pool many investments.", "Starting early lets compound growth work; diversifying spreads risk."],
+    "By the Rule of 72, how long does money take to double at 8% a year?",
+    ["Divide 72 by the rate.", "72 ÷ 8 = 9."],
+    "about 9 years",
+  ),
+  // Massachusetts (us-ma)
+  "social/ca-g8-civil-war": lesson(
+    ["Fights over slavery grew: “Bleeding Kansas” and the Dred Scott decision (1857).", "Lincoln's election in 1860 led Southern states to secede.", "The Union's Anaconda Plan blockaded ports and the Mississippi; Sherman's March (1864) destroyed Southern resources."],
+    "Whose election in 1860 led Southern states to secede?",
+    ["He opposed slavery spreading into new territories.", "He became the 16th president."],
+    "Abraham Lincoln",
+  ),
+  "social/ca-g8-divided-nation": lesson(
+    ["As the country grew, North and South argued over whether slavery would spread to new lands.", "The Compromise of 1850 made California a free state and passed a stronger Fugitive Slave Act, forcing free states to help return people who escaped.", "Frederick Douglass escaped slavery and became a famous speaker and writer against it."],
+    "What did the Fugitive Slave Act of 1850 require?",
+    ["It was part of the Compromise of 1850.", "It was about people who escaped slavery.", "People in free states had to help return them."],
+    "people in free states had to help return people who had escaped slavery",
+  ),
+  "social/ca-g8-early-republic": lesson(
+    ["The early republic had its own writers: Herman Melville (Moby-Dick), James Fenimore Cooper (The Last of the Mohicans).", "Transcendentalists like Emerson and Thoreau believed in self-reliance and finding truth in nature; Thoreau wrote Walden.", "Treaties often took Native land, such as the Treaty of Fort Jackson (1814), which forced the Muscogee to give up about 23 million acres."],
+    "Thoreau wrote Walden about what?",
+    ["Thoreau was a Transcendentalist.", "He lived for two years in a small cabin.", "It was beside a pond, where he lived simply."],
+    "living simply near a pond",
+  ),
+  "social/ca-g8-industrial-america": lesson(
+    ["After the Civil War, railroads (with land grants), factories and inventions grew fast. Ford’s assembly line made cars faster and cheaper.", "Big businesses became monopolies; the Sherman Antitrust Act (1890) tried to protect competition.", "Immigrants filled crowded tenements; workers formed unions, and farmers backed the Populist Party."],
+    "What did the Sherman Antitrust Act of 1890 try to do?",
+    ["A monopoly controls a whole industry.", "The law tried to break up monopolies and protect competition."],
+    "break up monopolies and protect competition",
+  ),
+  "social/ca-g8-revolutionary-ideas": lesson(
+    ["The Revolution spread new ideas. Jefferson’s Virginia Statute for Religious Freedom (1786) said no one could be forced to attend or pay for a church.", "James Madison helped pass it and later wrote the First Amendment.", "American independence inspired others, like Simón Bolívar in South America. New states wrote their own constitutions."],
+    "Which later document did the Virginia Statute for Religious Freedom help inspire?",
+    ["James Madison helped pass the Statute.", "He later drafted the Bill of Rights.", "Its religious freedom is in the First Amendment."],
+    "the First Amendment",
+  ),
+  "social/ny-g8-expansion-empire": lesson(
+    ["The US expanded across the Plains, bought Alaska from Russia in 1867 and reached into the Pacific.", "After the Spanish-American War (1898), the US gained Puerto Rico, Guam and the Philippines.", "The Roosevelt Corollary (1904) said the US could act as a police power in Latin America."],
+    "Which lands did the US gain after the Spanish-American War?",
+    ["The war with Spain was in 1898.", "Spain gave up some of its colonies.", "The US gained islands in the Caribbean and the Pacific."],
+    "Puerto Rico, Guam and the Philippines",
+  ),
+  "social/ny-g8-workers-progressives": lesson(
+    ["The Triangle Shirtwaist Factory fire (1911) killed 146 workers, leading to new safety laws.", "Workers formed unions; a strike is when workers stop working until their demands are met.", "Progressives pushed reform: Lewis Hine photographed child labour, and Frances Perkins became the first woman US Secretary of Labor."],
+    "What is a strike?",
+    ["Workers want better pay or conditions.", "They stop working together.", "They return when demands are met."],
+    "when workers stop working until their demands are met",
+  ),
+  "social/ny-g8-world-war-i": lesson(
+    ["World War I (1914–1918) had causes such as militarism, alliances, imperialism and nationalism; soldiers fought from trenches.", "The US joined in 1917 after Germany returned to unrestricted submarine warfare, attacking ships near Britain.", "In Schenck v. United States (1919), the Court ruled that speech creating a “clear and present danger” can be limited."],
+    "Why did unrestricted submarine warfare push the US into the war?",
+    ["German submarines would attack any ship near Britain.", "That included American ships.", "Americans were killed, and the US entered the war in 1917."],
+    "Germany would attack American ships.",
+  ),
+  "social/wa-g5-constitution": lesson(
+    ["The Constitution was written in Philadelphia in 1787. It begins “We the People”.", "Three branches: legislative (Congress makes laws), executive (the president carries them out), judicial (courts, including the Supreme Court).", "Each state has 2 senators. The first ten amendments are the Bill of Rights."],
+    "Which branch includes the Supreme Court?",
+    ["Courts decide what laws mean.", "The courts make up the judicial branch."],
+    "judicial",
+  ),
+  "social/wa-g5-revolution": lesson(
+    ["Order: Boston Tea Party (1773), war begins (1775), Declaration of Independence (1776), Saratoga (1777), Yorktown (1781).", "George Washington led the Continental Army. Benjamin Franklin won France as an ally.", "The Declaration says people have rights to life, liberty and the pursuit of happiness."],
+    "Which came first: the Declaration of Independence or the Battle of Yorktown?",
+    ["The Declaration was signed in 1776.", "Yorktown was in 1781."],
+    "the Declaration of Independence",
+  ),
+  "social/wa-g5-road-to-revolution": lesson(
+    ["After 1763, Britain taxed the colonies to pay war debts. Colonists said “No taxation without representation.”", "Protests grew: the Boston Massacre (1770), the Boston Tea Party (1773), then the Intolerable Acts closed Boston's port.", "Patriots wanted change; Loyalists stayed loyal to the king."],
+    "How did Britain punish Boston after the Tea Party?",
+    ["Britain passed harsh laws in 1774.", "They closed Boston's port until the tea was paid for."],
+    "It closed the port with the Intolerable Acts.",
+  ),
+  "social/wa-g8-industry-reform": lesson(
+    ["The Industrial Revolution brought machines and factories that made goods faster, and many immigrants came to work.", "Reformers worked to fix problems: abolitionists worked to end slavery.", "The Declaration of Sentiments (1848, Seneca Falls) demanded equal rights for women, including the vote."],
+    "What did abolitionists work for?",
+    ["To abolish means to end something.", "Abolitionists spoke and wrote against slavery.", "They worked to end it."],
+    "to end slavery",
+  ),
+  "social/wa-g8-westward": lesson(
+    ["Manifest Destiny was the belief that the US was meant to expand across North America.", "Expansion had costs: under Indian removal, the Cherokee, Muscogee (Creek), Choctaw, Chickasaw and Seminole were forced west.", "Many groups moved west for opportunity, like Chinese immigrants who worked in gold fields and built the Central Pacific Railroad."],
+    "What was Manifest Destiny?",
+    ["It was a popular belief in the 1840s.", "People believed the country should grow.", "They thought it was meant to stretch across the continent."],
+    "the belief that the US was meant to expand across North America",
+  ),
+  "social/ma-g9-massachusetts-history": lesson(
+    ["Boston Patriots, such as Samuel Adams and the Sons of Liberty, led protests against British taxes.", "The Lowell mills hired young women and later immigrants; reformers like Horace Mann and Dorothea Dix worked for schools and better care.", "Abolitionists like Garrison and Douglass worked in Massachusetts. The 54th Massachusetts was one of the first Union regiments of Black soldiers."],
+    "Which Massachusetts reformer is known for building free public schools?",
+    ["He was the state's first secretary of education.", "He called education the great equalizer."],
+    "Horace Mann",
+  ),
+  "social/ma-g9-reconstruction": lesson(
+    ["Reconstruction (1865–1877) rebuilt the South and brought Southern states back into the Union.", "The Reconstruction Amendments: the 13th ended slavery, the 14th made formerly enslaved people citizens, and the 15th protected the vote for Black men.", "After 1877, many of these rights were rolled back by Jim Crow laws."],
+    "Which amendment made formerly enslaved people citizens?",
+    ["13th: ended slavery.", "14th: citizenship and equal protection.", "15th: voting regardless of race."],
+    "the 14th",
+  ),
+  "social/ma-g9-city-immigrants": lesson(
+    ["From the 1880s, millions of immigrants came to the United States, many through Ellis Island and through Boston.", "Many lived in crowded city neighborhoods, like Boston's North End, and worked in factories and mills.", "Settlement houses offered classes and help, while some groups, like Boston's Immigration Restriction League, tried to limit immigration."],
+    "Why did many immigrants settle in mill cities like Lawrence and Fall River?",
+    ["Think about what the mills needed.", "The mills needed many workers."],
+    "to find work in the mills",
+  ),
+  "social/md-g9-governing-maryland": lesson(
+    ["Maryland's constitution dates from 1867 and begins with a Declaration of Rights.", "The General Assembly has a Senate (47 members) and a House of Delegates (141 members). The governor leads; the Supreme Court of Maryland is the top court.", "Under federalism, some powers belong to the nation, some to the states and some are shared."],
+    "How many members are in the Maryland House of Delegates?",
+    ["There are 47 districts.", "Each district elects three delegates: 47 × 3 = 141."],
+    "141",
+  ),
+  "social/md-g9-courts-and-rights": lesson(
+    ["Judicial review (Marbury v. Madison, 1803) lets courts strike down laws that break the Constitution.", "Due process means government must use fair procedures. The 14th Amendment applies most of the Bill of Rights to the states.", "Criminal cases are brought by the government. Civil cases settle disputes between people, sometimes by mediation or arbitration."],
+    "Who brings a criminal case to court?",
+    ["A crime is an offense against the community.", "The government, through a prosecutor, brings the case."],
+    "the government",
+  ),
+  "social/md-g9-us-government": lesson(
+    ["The Constitution sets up three branches: Congress makes laws, the President carries them out and the courts interpret them.", "Checks and balances let each branch limit the others.", "The Bill of Rights and later amendments protect people's rights."],
+    "Which branch can declare a law unconstitutional?",
+    ["Courts decide what laws mean.", "That is the judicial branch."],
+    "the judicial branch",
+  ),
+  "social/md-g9-economic-policy": lesson(
+    ["Scarcity means government must choose; the opportunity cost is the next best choice given up.", "Fiscal policy is government taxing and spending. Congress and the President set it.", "Monetary policy is the Federal Reserve changing interest rates and the money supply."],
+    "The Federal Reserve raises interest rates. Is that fiscal or monetary policy?",
+    ["Fiscal policy is taxing and spending.", "The Fed's tools are monetary policy."],
+    "monetary policy",
+  ),
+  "social/md-g9-foreign-policy": lesson(
+    ["US foreign policy balances three goals: trade, national security and human rights.", "The President negotiates treaties and leads the military, but the Senate approves treaties and Congress declares war.", "Tools include diplomacy, foreign aid, economic sanctions and military force. NATO and the United Nations help countries act together."],
+    "Refusing to trade with a country to pressure it is which foreign policy tool?",
+    ["It is not aid and not force.", "It is an economic penalty: sanctions."],
+    "economic sanctions",
+  ),
+  "social/md-g9-public-policy": lesson(
+    ["Regulatory agencies such as the EPA, FDA and OSHA are part of the executive branch and carry out laws Congress passes.", "Government may step in when a market fails, such as when pollution harms people who did not choose it.", "Shared problems, like cleaning up the Chesapeake Bay, lead states, the federal government and local governments to work together."],
+    "Which agency protects air and water quality?",
+    ["Its name includes the word environment.", "It is the Environmental Protection Agency."],
+    "the EPA",
+  ),
+  "social/md-g9-elections": lesson(
+    ["Primaries choose each party's candidate. In a closed primary, only that party's registered voters take part.", "The President is chosen by the Electoral College: 538 electors, and 270 are needed to win. A state's electors equal its senators plus its representatives.", "A bill goes through committees and votes in both houses of Congress, then the President signs or vetoes it."],
+    "How many electoral votes does Maryland have?",
+    ["Maryland has 2 senators and 8 representatives.", "2 + 8 = 10."],
+    "10",
+  ),
+  // South Carolina (us-sc)
+  "social/sc-g9-sc-government": lesson(
+    ["South Carolina's constitution was written in 1895 and has been amended many times.", "The General Assembly (Senate and House) makes laws; the governor can veto a whole bill or single spending items (line-item veto).", "Unlike most states, the General Assembly elects South Carolina's judges."],
+    "How are most South Carolina judges chosen?",
+    ["In many states, voters elect judges or the governor appoints them.", "In South Carolina, the General Assembly votes on them."],
+    "elected by the General Assembly",
+  ),
+  // Tennessee
+  "social/tn-g9-governing-tennessee": lesson(
+    ["Tennessee has two US senators and nine US representatives.", "The General Assembly has a 33-member Senate and a 99-member House; the governor leads the executive.", "Tennessee has 95 counties, plus city and metro governments that get their powers from the state."],
+    "How many counties does Tennessee have?",
+    ["It is close to 100.", "The state has 95."],
+    "95",
   ),
 };

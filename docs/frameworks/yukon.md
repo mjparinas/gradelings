@@ -1,4 +1,4 @@
-### Yukon
+# Yukon
 - **Framework `ca-yt`, slug `yukon`**, Kindergarten to Grade 9, including BC's two French subjects. Yukon implements the BC curriculum adapted for the Yukon and reports on BC's Provincial Proficiency Scale, so a Yukon course is the matching BC course with a `ca-yt` standards entry (`yukonGrade` in `src/content/yukon/kit.ts`); nothing is copied, and a new BC unit appears for Yukon automatically.
 - **Yukon-only units** (Yukon First Nations governance and citizenship in Grade 5 social studies) live in `src/content/yukon/units/` with `yk-` ids. Add other Yukon additions the same way. Yukon First Nations content is light and in the present tense. Source and record: `docs/research/yukon/`.
 - **Guides, report-card page and wording** are BC's reworded for the Yukon (`YUKON` in `yukon/framework.ts`, `YUKON_GUIDES` in `yukon/guides.ts`).

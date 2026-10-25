@@ -481,6 +481,12 @@ export const lessons: GradeLessons = {
     ["At noon the sun is highest.", "A high sun makes a short shadow."],
     "at noon",
   ),
+  "science/md-g5-sun-stars": lesson(
+    ["The sun is a star. It looks bigger and brighter because it is much closer than other stars.", "Earth spins once a day, so shadows change from morning to noon to evening.", "Earth moves around the sun, so we see different stars in different seasons."],
+    "When is your shadow shortest: at noon or early morning?",
+    ["At noon the sun is highest.", "A high sun makes a short shadow."],
+    "at noon",
+  ),
   "science/nj-g5-sun-stars": lesson(
     ["The sun is a star. It looks bigger and brighter because it is much closer than other stars.", "Earth spins once a day, so shadows change from morning to noon to evening.", "Earth moves around the sun, so we see different stars in different seasons."],
     "When is your shadow shortest: at noon or early morning?",
@@ -493,6 +499,12 @@ export const lessons: GradeLessons = {
     ["Rain and rivers are water.", "Soil is part of the geosphere."],
     "the hydrosphere and the geosphere",
   ),
+  "science/md-g5-earth-water": lesson(
+    ["Earth has four systems: the geosphere (rock and soil), hydrosphere (water), atmosphere (air) and biosphere (living things).", "They interact: rain wears away soil, and plants put water vapour into the air.", "Almost all of Earth's water is salty ocean water; very little is fresh and easy to use."],
+    "Rain washes soil into a river. Which two systems interact?",
+    ["Rain and rivers are water.", "Soil is part of the geosphere."],
+    "the hydrosphere and the geosphere",
+  ),
   "science/nj-g5-earth-water": lesson(
     ["Earth has four systems: the geosphere (rock and soil), hydrosphere (water), atmosphere (air) and biosphere (living things).", "They interact: rain wears away soil, and plants put water vapor into the air.", "Almost all of Earth's water is salty ocean water; very little is fresh and easy to use."],
     "Rain washes soil into a river. Which two systems interact?",
@@ -500,6 +512,12 @@ export const lessons: GradeLessons = {
     "the hydrosphere and the geosphere",
   ),
   "science/il-g5-ecosystems": lesson(
+    ["Producers (plants) make food. Consumers eat plants or other animals.", "Decomposers, like mushrooms, worms and bacteria, break down dead things.", "They return matter to the soil so plants can use it again.", "Without decomposers, dead things would pile up."],
+    "Which is a decomposer: a hawk, a mushroom or a fern?",
+    ["A hawk is a consumer and a fern is a producer.", "A mushroom breaks down dead matter."],
+    "a mushroom",
+  ),
+  "science/md-g5-ecosystems": lesson(
     ["Producers (plants) make food. Consumers eat plants or other animals.", "Decomposers, like mushrooms, worms and bacteria, break down dead things.", "They return matter to the soil so plants can use it again.", "Without decomposers, dead things would pile up."],
     "Which is a decomposer: a hawk, a mushroom or a fern?",
     ["A hawk is a consumer and a fern is a producer.", "A mushroom breaks down dead matter."],
@@ -607,6 +625,24 @@ export const lessons: GradeLessons = {
     ["Alike charges repel.", "The balloons push apart."],
     "push apart",
   ),
+  "science/mi-g5-sun-stars": lesson(
+    ["The sun looks brighter than other stars because it is much closer to Earth.", "Far-off headlights look dim and near ones bright: distance works the same way for stars.", "Earth spins once about every 24 hours, giving day and night.", "The North Star seems to stay still because it is almost straight above Earth's axis."],
+    "Some stars are bigger than the sun. Why do they look so small?",
+    ["Things far away look dimmer and smaller.", "Those stars are much farther from Earth."],
+    "they are very far away",
+  ),
+  "science/mi-g5-ecosystems": lesson(
+    ["Producers make food. Consumers eat other living things.", "Decomposers, like worms and fungi, return nutrients to the soil.", "Matter moves around an ecosystem again and again."],
+    "Orcas eat salmon. Are orcas producers or consumers?",
+    ["Orcas can't make their own food.", "They eat other animals."],
+    "consumers",
+  ),
+  "science/mi-g5-earth-water": lesson(
+    ["Earth has four systems: the geosphere (land), hydrosphere (water), atmosphere (air) and biosphere (life).", "Most of Earth's water is salty ocean water, and most fresh water is frozen in ice.", "The Great Lakes hold a large share of the world's fresh surface water, so people work to keep them clean."],
+    "Trees take in water and give off water vapour. Which systems interact?",
+    ["Trees: biosphere. Water: hydrosphere.", "The vapour goes into the air: atmosphere."],
+    "biosphere, hydrosphere and atmosphere",
+  ),
   // Indiana (us-in)
 "science/in-g5-sun-stars": lesson(
     ["The sun looks brighter than other stars because it is much closer to Earth.", "Far-off headlights look dim and near ones bright: distance works the same way for stars.", "Earth spins once about every 24 hours, giving day and night.", "The North Star seems to stay still because it is almost straight above Earth's axis."],
@@ -631,5 +667,143 @@ export const lessons: GradeLessons = {
     "Gasoline comes from oil. Is it renewable?",
     ["Oil took millions of years to form.", "It will run out."],
     "no, it is nonrenewable",
+  ),
+  // Missouri (us-mo)
+  "science/mo-g5-sun-stars": lesson(
+    ["The sun looks brighter than other stars because it is much closer to Earth.", "Far-off headlights look dim and near ones bright: distance works the same way for stars.", "Earth spins once about every 24 hours, giving day and night.", "The North Star seems to stay still because it is almost straight above Earth's axis."],
+    "Some stars are bigger than the sun. Why do they look so small?",
+    ["Things far away look dimmer and smaller.", "Those stars are much farther from Earth."],
+    "they are very far away",
+  ),
+  "science/mo-g5-earth-water": lesson(
+    ["The geosphere is rocks and land; the hydrosphere is water; the atmosphere is air; the biosphere is life.", "Most fresh water is frozen in ice caps and glaciers.", "Only a small part of Earth's water is fresh and easy to use.", "Rain and snow in the Great Plains and the Rockies fill the Missouri River, which flows across the state."],
+    "Trees take in water and give off water vapour. Which systems interact?",
+    ["Trees: biosphere. Water: hydrosphere.", "The vapour goes into the air: atmosphere."],
+    "biosphere, hydrosphere and atmosphere",
+  ),
+  "science/mo-g5-ecosystems": lesson(
+    ["Producers make food. Consumers eat other living things.", "Decomposers, like worms and fungi, return nutrients to the soil.", "Matter moves around an ecosystem again and again."],
+    "A bobcat eats rabbits. Is a bobcat a producer or a consumer?",
+    ["A bobcat can't make its own food.", "It eats other animals."],
+    "a consumer",
+  ),
+  "science/mo-g5-gravity": lesson(
+    ["Gravity is a force that pulls objects toward each other.", "Earth's gravity pulls everything toward its centre, everywhere on Earth.", "That's why balls fall back down, water flows downhill and the oceans stay on Earth."],
+    "You throw a ball straight up. What happens next, and why?",
+    ["Earth's gravity keeps pulling the ball toward Earth's centre."],
+    "it comes back down because of gravity",
+  ),
+
+  // North Carolina's units (us-nc).
+  "science/nc-g5-ecosystems": lesson(
+    ["Producers (plants) make food from sunlight. Consumers eat plants or other animals.", "Decomposers, like mushrooms, worms and bacteria, break down dead things and return matter to the soil.", "In an ecosystem, like a salt marsh, every part depends on the others."],
+    "Which is a decomposer: a hawk, a mushroom or a fern?",
+    ["A hawk is a consumer and a fern is a producer.", "A mushroom breaks down dead matter."],
+    "a mushroom",
+  ),
+  "science/nc-g5-water-cycle": lesson(
+    ["The sun warms water, and it evaporates into water vapor. Plants give off water vapor too (transpiration).", "Vapor cools and condenses into clouds, then falls as rain or snow (precipitation).", "Water runs off into rivers and lakes or soaks into the ground, and the cycle repeats."],
+    "Clouds form when water vapor does what?",
+    ["High in the air it is cool.", "Cool vapor condenses into tiny drops."],
+    "cools and condenses",
+  ),
+  "science/nc-g5-ocean-weather": lesson(
+    ["Water heats and cools more slowly than land, so the ocean keeps the coast milder in summer and winter.", "On sunny days, a sea breeze blows from the ocean onto the warmer land.", "The warm Gulf Stream flows past North Carolina, and warm ocean water gives hurricanes their energy."],
+    "Why are winters on the coast milder than in the mountains?",
+    ["The ocean stores heat from summer.", "It slowly releases that heat in winter."],
+    "The ocean releases stored heat.",
+  ),
+  // Massachusetts (us-ma)
+  "science/ma-g5-earth-water": lesson(
+    ["The geosphere is rocks and land; the hydrosphere is water; the atmosphere is air; the biosphere is life.", "Most fresh water is frozen in ice caps and glaciers.", "Only a small part of Earth's water is fresh and easy to use.", "Much of Boston's water comes from the Quabbin Reservoir."],
+    "Trees take in water and give off water vapour. Which systems interact?",
+    ["Trees: biosphere. Water: hydrosphere.", "The vapour goes into the air: atmosphere."],
+    "biosphere, hydrosphere and atmosphere",
+  ),
+  "science/ma-g5-ecosystems": lesson(
+    ["Producers make food. Consumers eat other living things.", "Decomposers, like worms and fungi, return nutrients to the soil.", "Matter moves around an ecosystem again and again."],
+    "Whales eat small fish. Are whales producers or consumers?",
+    ["Whales can't make their own food.", "They eat other animals."],
+    "consumers",
+  ),
+  "science/ma-g5-gravity": lesson(
+    ["Gravity is a force that pulls objects toward each other.", "Earth's gravity pulls everything toward its centre, everywhere on Earth.", "That's why balls fall back down, water flows downhill and the oceans stay on Earth."],
+    "You throw a ball straight up. What happens next, and why?",
+    ["Earth's gravity keeps pulling the ball toward Earth's centre."],
+    "it comes back down because of gravity",
+  ),
+  // South Carolina (us-sc)
+  "science/sc-g5-ecosystems": lesson(
+    ["Producers make food. Consumers eat other living things.", "Decomposers, like worms and fungi, return nutrients to the soil.", "Matter moves around an ecosystem again and again."],
+    "Orcas eat salmon. Are orcas producers or consumers?",
+    ["Orcas can't make their own food.", "They eat other animals."],
+    "consumers",
+  ),
+  "science/sc-g5-gravity": lesson(
+    ["Gravity pulls things toward Earth's centre, everywhere on Earth.", "Gravity makes water drop over waterfalls like Niagara Falls and skiers speed up downhill.", "Gravity keeps the oceans on Earth and the moon in orbit around it."],
+    "Which way does gravity pull on a person standing anywhere on Earth?",
+    ["Gravity pulls toward the centre of Earth.", "So it always points down, toward Earth's centre."],
+    "toward Earth's centre",
+  ),
+  "science/sc-g5-day-night": lesson(
+    ["Earth spins once about every 24 hours, giving day and night.", "Earth orbits the sun about once a year.", "The sun seems to rise in the east and set in the west. Shadows are shortest around noon.", "Some stars are bigger than the sun but look tiny because they are very far away."],
+    "How long does Earth take to spin once?",
+    ["One spin gives one day and one night."],
+    "about 24 hours",
+  ),
+  "science/wi-g5-sun-stars": lesson(
+    ["The sun is a star. It looks bigger and brighter because it is much closer than other stars.", "Earth spins once a day, so shadows change from morning to noon to evening.", "Earth moves around the sun, so we see different stars in different seasons."],
+    "When is your shadow shortest: at noon or early morning?",
+    ["At noon the sun is highest.", "A high sun makes a short shadow."],
+    "at noon",
+  ),
+  "science/wi-g5-earth-water": lesson(
+    ["Earth has four systems: the geosphere (rock and soil), hydrosphere (water), atmosphere (air) and biosphere (living things).", "They interact: rain wears away soil, and plants put water vapour into the air.", "Almost all of Earth's water is salty ocean water; very little is fresh and easy to use."],
+    "Rain washes soil into a river. Which two systems interact?",
+    ["Rain and rivers are water.", "Soil is part of the geosphere."],
+    "the hydrosphere and the geosphere",
+  ),
+  "science/wi-g5-ecosystems": lesson(
+    ["Producers (plants) make food. Consumers eat plants or other animals.", "Decomposers, like mushrooms, worms and bacteria, break down dead things.", "They return matter to the soil so plants can use it again.", "Without decomposers, dead things would pile up."],
+    "Which is a decomposer: a hawk, a mushroom or a fern?",
+    ["A hawk is a consumer and a fern is a producer.", "A mushroom breaks down dead matter."],
+    "a mushroom",
+  ),
+  // Tennessee
+  "science/phase-changes": lesson(
+    ["Matter can be a solid, a liquid or a gas.", "Adding heat melts a solid, or evaporates a liquid into a gas (vapour).", "Taking heat away condenses a gas into a liquid, or freezes a liquid into a solid.", "The water cycle uses these changes: evaporation, condensation, then rain or snow."],
+    "Drops form on the outside of a cold glass. Is heat being added or taken away?",
+    ["Water vapour in the air touches the cold glass.", "It cools and condenses into liquid drops, so heat is taken away."],
+    "taken away",
+  ),
+  "science/forces-at-work": lesson(
+    ["Gravity is a force of attraction between objects that have mass.", "Mass is the amount of matter. Weight is the pull of gravity on that mass.", "Friction slows sliding objects. Rough surfaces like carpet give more friction.", "Air resistance slows light, spread-out objects like feathers. Unbalanced forces change motion."],
+    "A puck slides on ice, wood and carpet. Where does it slow down fastest?",
+    ["Rougher surfaces make more friction.", "Carpet is the roughest."],
+    "on carpet",
+  ),
+  "science/sense-and-respond": lesson(
+    ["Your senses notice things. Nerves carry messages to your brain, and your brain tells your body what to do.", "A reflex is a quick response, like pulling your hand from something hot.", "Plants respond too: they bend toward light."],
+    "A plant bends toward a window. What is it responding to?",
+    ["Sunlight comes through the window."],
+    "light",
+  ),
+  "science/ny-g8-space": lesson(
+    ["The Moon’s phases depend on how much of its lit half we see.", "Seasons come from Earth’s tilt. Tides come mostly from the Moon’s gravity.", "A solar eclipse is the Moon between the Sun and Earth; a lunar eclipse is Earth between the Sun and Moon."],
+    "The Moon passes between the Sun and Earth. What happens?",
+    ["The Moon blocks the Sun’s light.", "That is a solar eclipse."],
+    "a solar eclipse",
+  ),
+  "science/tn-g5-gravity": lesson(
+    ["Gravity is a force that pulls objects toward each other.", "Earth's gravity pulls everything toward its centre, everywhere on Earth.", "That's why balls fall back down, water flows downhill and the oceans stay on Earth."],
+    "You throw a ball straight up. What happens next, and why?",
+    ["Earth's gravity keeps pulling the ball toward Earth's centre."],
+    "it comes back down because of gravity",
+  ),
+  "science/tn-g5-sun-stars": lesson(
+    ["The sun looks bright because it is the closest star to Earth.", "Earth spins once a day, so the sun rises in the east and sets in the west.", "Shadows point away from the sun: west in the morning, shortest around noon.", "Days in Tennessee are longest in June and shortest in December."],
+    "In the evening the sun is in the west. Which way does your shadow point?",
+    ["Shadows point away from the sun.", "Away from west is east."],
+    "east",
   ),
 };

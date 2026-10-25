@@ -1,0 +1,296 @@
+                                                                            7th Grade Mathematics
+
+                  Missouri Learning Standards:                                                               Missouri Learning Standards:
+             Grade-Level Expectations for Mathematics                                                               Mathematics
+   (Adopted April 2016 for implementation in the 2016 – 2017 school year, assessed        (Adopted 2010, transitioning out, assessed through the 2016 – 2017 school year.)
+                     beginning in the 2017 – 2018 school year.)
+    Code                                Adopted Standards                                 Code                                     Current MLS
+7.RP.A          Analyze proportional relationships and use them to solve
+                problems.
+7.RP.A.1        Compute unit rates, including those that involve complex              7.RP.A.1         Compute unit rates associated with ratios of fractions, including
+                fractions, with like or different units.                                               ratios of lengths, areas and other quantities measured in like or
+                                                                                                       different units. For example, if a person walks 1/2 mile in each
+                                                                                                       1/4 hour, compute the unit rate as the complex
+                                                                                                       fraction 1/2/1/4 miles per hour, equivalently 2 miles per hour.
+7.RP.A.2        Recognize and represent proportional relationships between            7.RP.A.2         Recognize and represent proportional relationships between
+                quantities.                                                                            quantities.
+                a. Determine when two quantities are in a proportional                                 a. Decide whether two quantities are in a proportional
+                   relationship.                                                                           relationship, e.g., by testing for equivalent ratios in a table or
+                b. Identify and/or compute the constant of proportionality (unit                           graphing on a coordinate plane and observing whether the
+                   rate).                                                                                  graph is a straight line through the origin.
+                c. Explain what a point (x, y) on the graph of a proportional                          b. Identify the constant of proportionality (unit rate) in tables,
+                   relationship means in terms of the situation.                                           graphs, equations, diagrams, and verbal descriptions of
+                d. Recognize that the graph of any proportional relationship                               proportional relationships.
+                   will pass through the origin.                                                       c. Represent proportional relationships by equations. For
+                                                                                                           example, if total cost t is proportional to the number n of items
+                                                                                                           purchased at a constant price p, the relationship between the
+                                                                                                           total cost and the number of items can be expressed as t = pn.
+                                                                                                       d. Explain what a point (x, y) on the graph of a proportional
+                                                                                                           relationship means in terms of the situation, with special
+                                                                                                           attention to the points (0, 0) and (1, r) where r is the unit
+                                                                                                           rate.
+7.RP.A.3        Solve problems involving ratios, rates, percentages and               7.RP.3           Use proportional relationships to solve multistep ratio and
+                proportional relationships.                                                            percent problems. Examples: simple interest, tax, markups and
+                                                                                                       markdowns, gratuities and commissions, fees, percent increase
+                                                                                                       and decrease, percent error.
+7.NS.A          Apply and extend previous understandings of operations to
+                add, subtract, multiply and divide rational numbers.
+
+
+
+
+                                                                                                                                                                                1
+                                                                            7th Grade Mathematics
+                  Missouri Learning Standards:                                                               Missouri Learning Standards:
+             Grade-Level Expectations for Mathematics                                                               Mathematics
+   (Adopted April 2016 for implementation in the 2016 – 2017 school year, assessed        (Adopted 2010, transitioning out, assessed through the 2016 – 2017 school year.)
+                     beginning in the 2017 – 2018 school year.)
+    Code                               Adopted Standards                                  Code                                    Current MLS
+7.NS.A.1        Apply and extend previous understandings of numbers to add            7.NS.A.1         Apply and extend previous understandings of addition and
+                and subtract rational numbers.                                                         subtraction to add and subtract rational numbers; represent
+                a. Add and subtract rational numbers.                                                  addition and subtraction on a horizontal or vertical number line
+                b. Represent addition and subtraction on a horizontal or                               diagram.
+                   vertical number line.                                                               a. Describe situations in which opposite quantities combine to
+                c. Describe situations and show that a number and its opposite                            make 0. For example, a hydrogen atom has 0 charge because
+                   have a sum of 0 (additive inverses).                                                   its two constituents are oppositely charged.
+                d. Understand subtraction of rational numbers as adding the                            b. Understand p + q as the number located a distance |q| from p,
+                   additive inverse.                                                                      in the positive or negative direction depending on
+                e. Determine the distance between two rational numbers on the                             whether q is positive or negative. Show that a number and its
+                   number line is the absolute value of their difference.                                 opposite have a sum of 0 (are additive inverses). Interpret
+                f. Interpret sums and differences of rational numbers.                                    sums of rational numbers by describing real-world contexts.
+                                                                                                       c. Understand subtraction of rational numbers as adding the
+                                                                                                          additive inverse, p - q = p+ (-q). Show that the distance
+                                                                                                          between two rational numbers on the number line is the
+                                                                                                          absolute value of their difference, and apply this principle in
+                                                                                                          real-world contexts.
+                                                                                                       d. Apply properties of operations as strategies to add and
+                                                                                                          subtract rational numbers.
+7.NS.A.2        Apply and extend previous understandings of numbers to                7.NS.A.2         Apply and extend previous understandings of multiplication and
+                multiply and divide rational numbers.                                                  division and of fractions to multiply and divide rational
+                a. Multiply and divide rational numbers.                                               numbers.
+                b. Determine that a number and its reciprocal have a product of                        a. Understand that multiplication is extended from fractions to
+                   1 (multiplicative inverse).                                                            rational numbers by requiring that operations continue to
+                c. Understand that every quotient of integers (with non-zero                              satisfy the properties of operations, particularly the
+                   divisor) is a rational number.                                                         distributive property, leading to products such as (-1)(-1) = 1
+                d. Convert a rational number to a decimal.                                                and the rules for multiplying signed numbers. Interpret
+                e. Understand that all rational numbers can be written as                                 products of rational numbers by describing real-world
+                   fractions or decimal numbers that terminate or repeat.                                 contexts.
+                f. Interpret products and quotients of rational numbers by                             b. Understand that integers can be divided, provided that the
+                   describing real-world contexts.                                                        divisor is not zero, and every quotient of integers (with non-
+                                                                                                          zero divisor) is a rational number. If p and q are integers,
+                                                                                                          then -(p/q) = (-p)/q = p/(-q). Interpret quotients of rational
+                                                                                                          numbers by describing real-world contexts.
+                                                                                                       c. Apply properties of operations as strategies to multiply and
+                                                                                                          divide rational numbers.
+                                                                                                       d. Convert a rational number to a decimal using long division;
+                                                                                                          know that the decimal form of a rational number terminates
+                                                                                                          in 0s or eventually repeats.
+                                                                                                                                                                             2
+                                                                            7th Grade Mathematics
+                  Missouri Learning Standards:                                                               Missouri Learning Standards:
+             Grade-Level Expectations for Mathematics                                                               Mathematics
+   (Adopted April 2016 for implementation in the 2016 – 2017 school year, assessed        (Adopted 2010, transitioning out, assessed through the 2016 – 2017 school year.)
+                     beginning in the 2017 – 2018 school year.)
+    Code                              Adopted Standards                                   Code                                   Current MLS
+7.NS.A.3        Solve problems involving the four arithmetic operations with          7.NS.A.3         Solve real-world and mathematical problems involving the four
+                rational numbers.                                                                      operations with rational numbers.
+7.EEI.A         Use properties of operations to generate equivalent
+                expressions.
+7.EEI.A.1       Apply properties of operations to simplify and to factor linear       7.EE.A.1         Apply properties of operations as strategies to add, subtract,
+                algebraic expressions with rational coefficients.                                      factor, and expand linear expressions with rational coefficients.
+7.EEI.A.2       Understand how to use equivalent expressions to clarify               7.EE.A.2         Understand that rewriting an expression in different forms in a
+                quantities in a problem.                                                               problem context can shed light on the problem and how the
+                                                                                                       quantities in it are related. For example, a + 0.05a = 1.05a means
+                                                                                                       that "increase by 5%" is the same as "multiply by 1.05."
+7.EEI.B         Solve problems using numerical and algebraic expressions
+                and equations.
+7.EEI.B.3       Solve multi-step problems posed with rational numbers.                7.EE.B.3         Solve multi-step real-life and mathematical problems posed with
+                a. Convert between equivalent forms of the same number.                                positive and negative rational numbers in any form (whole
+                b. Assess the reasonableness of answers using mental                                   numbers, fractions, and decimals), using tools strategically.
+                   computation and estimation strategies.                                              Apply properties of operations to calculate with numbers in any
+                                                                                                       form; convert between forms as appropriate; and assess the
+                                                                                                       reasonableness of answers using mental computation and
+                                                                                                       estimation strategies. For example: If a woman making $25 an
+                                                                                                       hour gets a 10% raise, she will make an additional 1/10 of her
+                                                                                                       salary an hour, or $2.50, for a new salary of $27.50. If you want to
+                                                                                                       place a towel bar 9 3/4 inches long in the center of a door that is
+                                                                                                       27 1/2 inches wide, you will need to place the bar about 9 inches
+                                                                                                       from each edge; this estimate can be used as a check on the exact
+                                                                                                       computation.
+
+
+
+
+                                                                                                                                                                              3
+                                                                            7th Grade Mathematics
+                  Missouri Learning Standards:                                                               Missouri Learning Standards:
+             Grade-Level Expectations for Mathematics                                                               Mathematics
+   (Adopted April 2016 for implementation in the 2016 – 2017 school year, assessed        (Adopted 2010, transitioning out, assessed through the 2016 – 2017 school year.)
+                     beginning in the 2017 – 2018 school year.)
+    Code                              Adopted Standards                                   Code                                    Current MLS
+7.EEI.B.4       Write and/or solve linear equations and inequalities in one           7.EE.B.4         Use variables to represent quantities in a real-world or
+                variable.                                                                              mathematical problem, and construct simple equations and
+                a. Write and/or solve equations of the form x+p = q and px = q                         inequalities to solve problems by reasoning about the quantities.
+                   in which p and q are rational numbers.                                              a. Solve word problems leading to equations of the
+                b. Write and/or solve two-step equations of the form px + q = r                           form px + q = r and p(x + q) = r, where p, q, and r are specific
+                   and p(x + q) = r, where p, q and r are rational numbers, and                           rational numbers. Solve equations of these forms fluently.
+                   interpret the meaning of the solution in the context of the                            Compare an algebraic solution to an arithmetic solution,
+                   problem.                                                                               identifying the sequence of the operations used in each
+                c. Write, solve and/or graph inequalities of the form px + q > r                          approach. For example, the perimeter of a rectangle is 54 cm.
+                   or px + q < r, where p, q and r are rational numbers.                                  Its length is 6 cm. What is its width?
+                                                                                                       b. Solve word problems leading to inequalities of the
+                                                                                                          form px + q > r or px + q < r, where p, q, and r are specific
+                                                                                                          rational numbers. Graph the solution set of the inequality and
+                                                                                                          interpret it in the context of the problem. For example: As a
+                                                                                                          salesperson, you are paid $50 per week plus $3 per sale. This
+                                                                                                          week you want your pay to be at least $100. Write an
+                                                                                                          inequality for the number of sales you need to make, and
+                                                                                                          describe the solutions.
+7.GM.A          Draw and describe geometrical figures and describe the
+                relationships between them.
+7.GM.A.1        Solve problems involving scale drawings of real objects and           7.G.A.1          Solve problems involving scale drawings of geometric figures,
+                geometric figures, including computing actual lengths and areas                        including computing actual lengths and areas from a scale
+                from a scale drawing and reproducing the drawing at a different                        drawing and reproducing a scale drawing at a different scale.
+                scale.
+7.GM.A.2        Use a variety of tools to construct geometric shapes.                 7.G.A.2          Draw (freehand, with ruler and protractor, and with technology)
+                a. Determine if provided constraints will create a unique                              geometric shapes with given conditions. Focus on constructing
+                   triangle through construction.                                                      triangles from three measures of angles or sides, noticing when
+                b. Construct special quadrilaterals given specific parameters.                         the conditions determine a unique triangle, more than one
+                                                                                                       triangle, or no triangle.
+7.GM.A.3        Describe two-dimensional cross sections of pyramids, prisms,          7.G.A.3          Describe the two-dimensional figures that result from slicing
+                cones and cylinders.                                                                   three-dimensional figures, as in plane sections of right
+                                                                                                       rectangular prisms and right rectangular pyramids.
+7.GM.A.4        Understand concepts of circles.                                       7.G.B.4          Know the formulas for the area and circumference of a circle and
+                a. Analyze the relationships among the circumference, the                              use them to solve problems; give an informal derivation of the
+                   radius, the diameter, the area and Pi in a circle.                                  relationship between the circumference and area of a circle.
+                b. Know and apply the formulas for circumference and area of
+                   circles to solve problems.
+
+
+                                                                                                                                                                             4
+                                                                            7th Grade Mathematics
+                  Missouri Learning Standards:                                                               Missouri Learning Standards:
+             Grade-Level Expectations for Mathematics                                                               Mathematics
+   (Adopted April 2016 for implementation in the 2016 – 2017 school year, assessed        (Adopted 2010, transitioning out, assessed through the 2016 – 2017 school year.)
+                     beginning in the 2017 – 2018 school year.)
+    Code                              Adopted Standards                                   Code                                     Current MLS
+7.GM.B          Apply and extend previous understanding of angle measure,
+                area and volume.
+7.GM.B.5        Use angle properties to write and solve equations for an              7.G.B.5          Use facts about supplementary, complementary, vertical, and
+                unknown angle.                                                                         adjacent angles in a multi-step problem to write and solve
+                                                                                                       simple equations for an unknown angle in a figure.
+7.GM.B.6        Understand the relationship between area, surface area and            7.G.B.6          Solve real-world and mathematical problems involving area,
+                volume.                                                                                volume and surface area of two- and three-dimensional objects
+                a. Find the area of triangles, quadrilaterals and other polygons                       composed of triangles, quadrilaterals, polygons, cubes, and right
+                   composed of triangles and rectangles.                                               prisms.
+                b. Find the volume and surface area of prisms, pyramids and
+                   cylinders.
+7.DSP.A         Use random sampling to draw inferences about a
+                population.
+7.DSP.A.1       Understand that statistics can be used to gain information about      7.SP.A.1         Understand that statistics can be used to gain information about
+                a population by examining a sample of the population.                                  a population by examining a sample of the population;
+                a. Understand that a sample is a subset of a population.                               generalizations about a population from a sample are valid only
+                b. Understand that generalizations from a sample are valid only                        if the sample is representative of that population. Understand
+                   if the sample is representative of the population.                                  that random sampling tends to produce representative samples
+                c. Understand that random sampling is used to produce                                  and support valid inferences.
+                   representative samples and support valid inferences.
+7.DSP.A.2       Use data from multiple samples to draw inferences about a             7.SP.A.2         Use data from a random sample to draw inferences about a
+                population and investigate variability in estimates of the                             population with an unknown characteristic of interest. Generate
+                characteristic of interest.                                                            multiple samples (or simulated samples) of the same size to
+                                                                                                       gauge the variation in estimates or predictions. For example,
+                                                                                                       estimate the mean word length in a book by randomly sampling
+                                                                                                       words from the book; predict the winner of a school election based
+                                                                                                       on randomly sampled survey data. Gauge how far off the estimate
+                                                                                                       or prediction might be.
+7.DSP.B         Draw informal comparative inferences about two
+                populations.
+7.DSP.B.3       Analyze different data distributions using statistical measures.      7.SP.B.3         Informally assess the degree of visual overlap of two numerical
+                                                                                                       data distributions with similar variabilities, measuring the
+                                                                                                       difference between the centers by expressing it as a multiple of a
+                                                                                                       measure of variability. For example, the mean height of players on
+                                                                                                       the basketball team is 10 cm greater than the mean height of
+                                                                                                       players on the soccer team, about twice the variability (mean
+                                                                                                       absolute deviation) on either team; on a dot plot, the separation
+                                                                                                       between the two distributions of heights is noticeable.
+
+                                                                                                                                                                             5
+                                                                            7th Grade Mathematics
+                  Missouri Learning Standards:                                                               Missouri Learning Standards:
+             Grade-Level Expectations for Mathematics                                                               Mathematics
+   (Adopted April 2016 for implementation in the 2016 – 2017 school year, assessed        (Adopted 2010, transitioning out, assessed through the 2016 – 2017 school year.)
+                     beginning in the 2017 – 2018 school year.)
+    Code                             Adopted Standards                                    Code                                   Current MLS
+7.DSP.B.4       Compare the numerical measures of center, measures of                 7.SP.B.4         Use measures of center and measures of variability for
+                frequency and measures of variability from two random samples                          numerical data from random samples to draw informal
+                to draw inferences about the population.                                               comparative inferences about two populations. For example,
+                                                                                                       decide whether the words in a chapter of a seventh-grade science
+                                                                                                       book are generally longer than the words in a chapter of a fourth-
+                                                                                                       grade science book.
+7.DSP.C         Develop, use and evaluate probability models.
+7.DSP.C.5       Investigate the probability of chance events.                         7.SP.C.5         Understand that the probability of a chance event is a number
+                a. Determine probabilities of simple events.                                           between 0 and 1 that expresses the likelihood of the event
+                b. Understand that the probability of a chance event is a                              occurring. Larger numbers indicate greater likelihood. A
+                   number between 0 and 1 that expresses the likelihood of the                         probability near 0 indicates an unlikely event, a probability
+                   event occurring.                                                                    around 1/2 indicates an event that is neither unlikely nor likely,
+                                                                                                       and a probability near 1 indicates a likely event.
+7.DSP.C.6       Investigate the relationship between theoretical and                  7.SP.C.6         Approximate the probability of a chance event by collecting data
+                experimental probabilities for simple events.                                          on the chance process that produces it and observing its long-
+                a. Predict outcomes using theoretical probability.                                     run relative frequency, and predict the approximate relative
+                b. Perform experiments that model theoretical probability.                             frequency given the probability. For example, when rolling a
+                c. Compare theoretical and experimental probabilities.                                 number cube 600 times, predict that a 3 or 6 would be rolled
+                                                                                                       roughly 200 times, but probably not exactly 200 times.
+7.DSP.C.7       Explain possible discrepancies between a developed probability        7.SP.C.7         Develop a probability model and use it to find probabilities of
+                model and observed frequencies.                                                        events. Compare probabilities from a model to observed
+                a. Develop a uniform probability model by assigning equal                              frequencies; if the agreement is not good, explain possible
+                   probability to all outcomes, and use the model to determine                         sources of the discrepancy.
+                   probabilities of events.                                                            a. Develop a uniform probability model by assigning equal
+                b. Develop a probability model (which may not be uniform) by                              probability to all outcomes, and use the model to determine
+                   observing frequencies in data generated from a chance                                  probabilities of events. For example, if a student is selected at
+                   process.                                                                               random from a class, find the probability that Jane will be
+                                                                                                          selected and the probability that a girl will be selected.
+                                                                                                       b. Develop a probability model (which may not be uniform) by
+                                                                                                          observing frequencies in data generated from a chance
+                                                                                                          process. For example, find the approximate probability that a
+                                                                                                          spinning penny will land heads up or that a tossed paper cup
+                                                                                                          will land open-end down. Do the outcomes for the spinning
+                                                                                                          penny appear to be equally likely based on the observed
+                                                                                                          frequencies?
+
+
+
+
+                                                                                                                                                                              6
+                                                                                               7th Grade Mathematics
+                       Missouri Learning Standards:                                                                                          Missouri Learning Standards:
+                  Grade-Level Expectations for Mathematics                                                                                          Mathematics
+     (Adopted April 2016 for implementation in the 2016 – 2017 school year, assessed                                  (Adopted 2010, transitioning out, assessed through the 2016 – 2017 school year.)
+                       beginning in the 2017 – 2018 school year.)
+    Code                                     Adopted Standards                                                      Code                                         Current MLS
+7.DSP.C.8             Find probabilities of compound events using organized lists,                              7.SP.C.8              Find probabilities of compound events using organized lists,
+                      tables, tree diagrams and simulations.                                                                          tables, tree diagrams, and simulation.
+                      a. Represent the sample space of a compound event.                                                              a. Understand that, just as with simple events, the probability of
+                      b. Design and use a simulation to generate frequencies for                                                         a compound event is the fraction of outcomes in the sample
+                         compound events.                                                                                                space for which the compound event occurs.
+                                                                                                                                      b. Represent sample spaces for compound events using
+                                                                                                                                         methods such as organized lists, tables and tree diagrams.
+                                                                                                                                         For an event described in everyday language (e.g., "rolling
+                                                                                                                                         double sixes"), identify the outcomes in the sample space
+                                                                                                                                         which compose the event.
+                                                                                                                                      c. Design and use a simulation to generate frequencies for
+                                                                                                                                         compound events. For example, use random digits as a
+                                                                                                                                         simulation tool to approximate the answer to the question: If
+                                                                                                                                         40% of donors have type A blood, what is the probability that it
+                                                                                                                                         will take at least 4 donors to find one with type A blood?
+
+
+
+
+The Department of Elementary and Secondary Education does not discriminate on the basis of race, color, religion, gender, gender identity, sexual orientation, national origin, age, veteran status, mental or physical
+disability, or any other basis prohibited by statute in its programs and activities. Inquiries related to department programs and to the location of services, activities, and facilities that are accessible by persons with
+disabilities may be directed to the Jefferson State Office Building, Director of Civil Rights Compliance and MOA Coordinator (Title VI/Title VII/Title IX/504/ADA/ADAAA/Age Act/GINA/USDA Title VI), 5th Floor, 205
+Jefferson Street, P.O. Box 480, Jefferson City, MO 65102-0480; telephone number 573-526-4757 or TTY 800-735-2966; email civilrights@dese.mo.gov
+
+
+
+                                                                                                                                                                                                                                7
+

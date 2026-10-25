@@ -4,6 +4,7 @@ import { FRAMEWORKS, getFramework, UPCOMING_FRAMEWORKS } from "../frameworks";
 import { localeOf, questionText } from "../locale";
 import { withSeed } from "../random";
 import type { Question } from "../types";
+import { adoptersOf } from "../adopters";
 import { OTHER_STATE } from "./units/kit";
 
 // Georgia's citations, own units, plan and US rules are checked by the framework and country contracts
@@ -65,7 +66,9 @@ describe("Georgia", () => {
       expect.arrayContaining(["ga-k-my-state", "ga-g2-creek-cherokee", "ga-g8-first-peoples-colony", "ga-g8-governing-georgia", "ga-g9-georgia-local-government", "ga-g3-georgia-habitats"]),
     );
     for (const { u, key } of own) {
-      expect(Object.keys(u.standards), `${key} carries only Georgia standards`).toEqual(["us-ga"]);
+      // States that adopt Georgia's units (their contracts' adoptsFrom) add their own standards to the shared unit.
+      const others = Object.keys(u.standards).filter((k) => k !== "us-ga" && !adoptersOf("us-ga").includes(k));
+      expect(u.standards["us-ga"] ? others : ["no us-ga"], `${key} carries only Georgia standards`).toEqual([]);
       expect(["math", "language", "social", "science"], `${key} is a core subject`).toContain(key.split("/")[1]);
     }
   });

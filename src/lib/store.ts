@@ -28,6 +28,7 @@ import { growthStage } from "./buddy";
 import { dailyQuests, weekDays, weeklyQuests, weekStart } from "./quests";
 import { hasTestCoins, isOn } from "./remoteFlags";
 import { storiesFor } from "./stories";
+import { SEASON_REWARD, seasonOn, seasonQuestId, seasonStickers } from "./seasons";
 import { getRoomItem, isRoomOwned } from "./room";
 import { getItem, isUnlocked, STARTER } from "./shop";
 import { setQuietCheck, setSoundCheck } from "./sound";
@@ -283,6 +284,21 @@ export const useStore = create<State>()((set, get) => ({
       if (!weekClaimed.includes(q.id) && q.progress(thisWeek) >= q.target) {
         questEvents.push({ type: "quest", quest: q.id, day: monday, reward: q.reward, id: newId(), t: now + 60, profileId: profile.id });
         toasts.push({ kind: "quest", title: "Weekly quest complete!", subtitle: `${q.title} · +${q.reward} coins`, icon: q.icon });
+      }
+    }
+    // Festival stickers: say when one is found, and add the page's coins once it is full.
+    const festival = isOn("seasonal-events") ? seasonOn(day) : null;
+    if (festival) {
+      const band = ageBandFor(profile.grade);
+      const had = seasonStickers(festival, before, band);
+      const has = seasonStickers(festival, after, band);
+      has.forEach((s, i) => {
+        if (s.earned && !had[i].earned) toasts.push({ kind: "quest", title: `New ${festival.season.name} sticker!`, subtitle: s.name, icon: s.emoji });
+      });
+      const quest = seasonQuestId(festival);
+      if (has.every((s) => s.earned) && !(after.questsClaimed[festival.from] ?? []).includes(quest)) {
+        questEvents.push({ type: "quest", quest, day: festival.from, reward: SEASON_REWARD, id: newId(), t: now + 65, profileId: profile.id });
+        toasts.push({ kind: "quest", title: `${festival.season.name} page full!`, subtitle: `Every sticker found · +${SEASON_REWARD} coins`, icon: festival.season.emoji });
       }
     }
     if (questEvents.length) {
