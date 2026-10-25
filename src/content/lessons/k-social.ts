@@ -337,4 +337,36 @@ export const lessons: GradeLessons = {
     ["Georgia is a state.", "States are part of a country."],
     "the United States",
   ),
+  "social/va-k-near-far": lesson(
+    ["Near means close. Far means a long way.", "A globe is a model of Earth.", "A map shows where places are."],
+    "A globe is a model of…",
+    ["A globe is round like our planet."],
+    "Earth",
+  ),
+  "social/va-k-virginia-symbols": lesson(
+    ["A symbol is a picture or thing that stands for something.", "The American flag has stars and stripes. Virginia's flag is blue.", "Holidays like the Fourth of July help us remember important days."],
+    "What does the American flag stand for?",
+    ["It is red, white and blue.", "It stands for our country."],
+    "the United States",
+  ),
+  "social/va-k-early-virginia": lesson(
+    ["Long ago, Powhatan people lived in Virginia near rivers and the bay.", "English settlers came by ship and built Jamestown.", "Old photos and stories help us learn about the past."],
+    "Who built Jamestown?",
+    ["They came on ships from England.", "They were English settlers."],
+    "English settlers",
+  ),
+  // Missouri (us-mo)
+  "social/mo-k-flag-and-holidays": lesson(
+    ["The American flag has stars and stripes.", "We say the Pledge of Allegiance to the flag.", "Holidays like the Fourth of July help us remember our country."],
+    "What do we celebrate on the Fourth of July?",
+    ["It is our country's birthday."],
+    "our country's birthday",
+  ),
+  // Massachusetts (us-ma)
+  "social/ma-gk-my-state": lesson(
+    ["We live in the United States. Our state is Massachusetts.", "Boston is the capital of Massachusetts.", "Our state has a flag, a state bird and a state tree."],
+    "What is the name of our state?",
+    ["It is the state we live in.", "Its capital is Boston."],
+    "Massachusetts",
+  ),
 };

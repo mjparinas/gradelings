@@ -1117,7 +1117,7 @@ export const lessons: GradeLessons = {
     ["Shinto shrines are often in natural places, marked by a torii gate.", "They honour kami, the spirits in nature and special places."],
     "kami, the spirits in nature and special places",
   ),
-  "social/wi-g7-japan": lesson(
+  "social/md-g7-japan": lesson(
     ["Japan is a chain of mountainous islands with the Pacific Ocean to the east. Mount Fuji is its tallest peak.", "Little flat land meant farming in valleys and lots of fishing.", "Shinto honours kami, spirits in nature; Buddhism and Confucian ideas of family, order and duty also shaped Japanese values."],
     "Shinto, an old belief in Japan, honours what?",
     ["Shinto shrines are often in natural places, marked by a torii gate.", "They honour kami, the spirits in nature and special places."],
@@ -1238,5 +1238,172 @@ export const lessons: GradeLessons = {
     "Ethiopia defeated Italy in 1896 at which battle?",
     ["Ethiopia kept its independence.", "The battle was at Adwa."],
     "Adwa",
+  ),
+  "social/az-g8-economy": lesson(
+    ["When the price of a good rises, the quantity demanded usually falls.", "Inflation is when prices across the economy keep rising; unemployment is people who want jobs but can’t find them.", "The Federal Reserve can slow inflation by raising interest rates. The US has a mixed economy."],
+    "What can the Federal Reserve do to slow inflation?",
+    ["Inflation means prices keep rising.", "Higher interest rates make borrowing cost more.", "People spend less, so price rises slow."],
+    "raise interest rates",
+  ),
+  "social/ca-g9-elections": lesson(
+    ["General elections are in November. California uses a top-two primary and mail ballots.", "House seats follow population: California sends 52 members.", "Debates let voters compare ideas. Judge campaign ads by checking claims against independent sources."],
+    "How can a voter judge a campaign ad?",
+    ["Ads are made to persuade.", "Check their claims against reliable, independent sources."],
+    "Check its claims against reliable, independent sources",
+  ),
+  "social/ca-g9-foundations": lesson(
+    ["American government has roots in Greek democracy, the Roman Republic (elected representatives), English rights and Enlightenment ideas.", "Popular sovereignty: the people are the source of power (“We the People”). The Constitution replaced the Articles of Confederation.", "The Founders added checks and balances and federalism because people in power can abuse it."],
+    "What does popular sovereignty mean?",
+    ["“Sovereignty” means the highest power.", "“Popular” means of the people."],
+    "The people are the source of government’s power",
+  ),
+  "social/ca-g9-supreme-court": lesson(
+    ["The president appoints justices with the Senate’s consent.", "Precedent (stare decisis) means following earlier rulings; judicial restraint defers to lawmakers, while activism is readier to overturn.", "Know key cases: Plessy (1896) allowed “separate but equal”; Brown (1954) overturned it; Korematsu (1944) upheld Japanese American removal."],
+    "Who appoints Supreme Court justices?",
+    ["The executive nominates, and the Senate checks.", "The president appoints them with the Senate’s consent."],
+    "the president, with the Senate’s consent",
+  ),
+  "social/wa-g9-government-economy": lesson(
+    ["Governments raise money by taxes (federal: mostly income tax; Washington: mostly sales tax) and spend it on services like schools.", "A deficit is spending more than you take in in a year; debt is what has built up.", "Inflation is a general rise in prices. A recession is when the economy shrinks and jobs are lost."],
+    "What is inflation?",
+    ["Watch what happens to prices over time.", "When most prices keep going up, that is inflation."],
+    "a general rise in prices over time",
+  ),
+  "social/va-g7-governing-virginia": lesson(
+    ["The Constitution of Virginia sets up three branches, like the US Constitution.", "The General Assembly (House of Delegates and Senate) makes laws, the governor carries them out, and courts interpret them.", "The governor serves four years and can't serve two terms in a row."],
+    "How long is a Virginia governor's term?",
+    ["It is the same length as a US president's term.", "Four years."],
+    "four years",
+  ),
+  "social/va-g7-local-government": lesson(
+    ["Virginia's local governments are counties, cities and towns. Independent cities are separate from counties.", "Local governments run schools, police, parks and roads, paid for mostly by property taxes.", "Citizens can take part by voting and speaking at public meetings."],
+    "How do local governments pay for most services?",
+    ["They tax land and buildings.", "These are property taxes."],
+    "property taxes",
+  ),
+  // Missouri (us-mo)
+  "social/ca-g6-greek-world": lesson(
+    ["Greeks lived by the sea and traded across the Aegean and Mediterranean.", "Myths: Poseidon ruled the sea; Achilles' heel means a weak spot.", "Thinkers: Socrates taught Plato, who founded the Academy; Hippocrates is the father of medicine. Plays were in open-air theatres."],
+    "Hippocrates is known as the father of what?",
+    ["Doctors still take an oath named after him.", "He studied illness and healing."],
+    "medicine",
+  ),
+  "social/ny-g9-crusades-plague": lesson(
+    ["In 1095, Pope Urban II called on Christians in Western Europe to begin the First Crusade to control Jerusalem.", "The Reconquista was the effort by Christian kingdoms to take back the Iberian Peninsula from Muslim rulers; it ended in 1492.", "The Black Death, a plague spread along trade routes, killed about a third of Europe’s people in the 1300s."],
+    "Who called for the First Crusade in 1095?",
+    ["The call came from the head of the Church.", "He spoke at Clermont in France.", "He was Pope Urban II."],
+    "Pope Urban II",
+  ),
+
+  // North Carolina's units (us-nc).
+  "social/ny-g5-columbian-exchange": lesson(
+    ["After 1492, plants, animals, people, ideas and diseases crossed the Atlantic: the Columbian Exchange.", "Corn and potatoes went to Europe. Horses, cattle and wheat came to the Americas.", "Diseases killed millions, and more than 12 million Africans were forced across the Atlantic in the Middle Passage."],
+    "Which went from the Americas to Europe: potatoes or horses?",
+    ["Horses came from Europe.", "Potatoes first grew in South America."],
+    "potatoes",
+  ),
+  "social/tx-g6-governments": lesson(
+    ["Limited governments follow laws and protect rights; unlimited ones do not.", "Autocracy is rule by one person; democracy is rule by the people. India is the world's largest democracy.", "Citizens' duties include voting and staying informed. Rights come with responsibilities."],
+    "What is rule by one person called?",
+    ["“Auto” means self.", "One person rules alone."],
+    "autocracy",
+  ),
+  "social/tx-g6-economies": lesson(
+    ["Factors of production: land (resources), labour (work people do) and capital (tools).", "Industries: agricultural (farming), manufacturing (factories), service.", "In free enterprise, private people own most businesses. GDP per capita is GDP divided by population."],
+    "Is a car factory part of agriculture or manufacturing?",
+    ["A factory makes goods from parts.", "Making goods is manufacturing."],
+    "manufacturing",
+  ),
+  "social/al-g9-interwar": lesson(
+    ["After World War I the Ottoman lands were divided; the Sykes-Picot Agreement split them between Britain and France.", "The Great Depression began with the 1929 crash and spread worldwide.", "Dictators rose: Stalin forced collectivization; fascism glorified nation, leader and military (Mussolini invaded Ethiopia in 1935); Hitler took power in 1933."],
+    "In what year did Adolf Hitler become chancellor of Germany?",
+    ["It was during the Great Depression.", "The year was 1933."],
+    "1933",
+  ),
+  "social/al-g9-holocaust": lesson(
+    ["Antisemitism is hatred of or prejudice against Jewish people. The Nazis built on it with lies and propaganda.", "Step by step, rights were taken: the Nuremberg Laws (1935) removed citizenship; then came ghettos and camps such as Dachau (1933).", "Six million Jews were murdered. People who risked their lives to save Jews are honoured as Righteous Among the Nations."],
+    "What did the Nuremberg Laws of 1935 do?",
+    ["They were laws passed by the Nazi government.", "They stripped German Jews of citizenship and rights."],
+    "took away German Jews’ citizenship and rights",
+  ),
+  // Massachusetts (us-ma)
+  "social/ca-g6-ancient-india": lesson(
+    ["The Indo-Aryans brought a language that became Sanskrit; their ways blended with earlier ones.", "The caste system divided society; Brahmins were priests and teachers.", "Epics: the Ramayana tells of Rama and Sita; the Bhagavad Gita is part of the Mahabharata. The Maurya Empire united much of India."],
+    "What were Brahmins?",
+    ["They were the top group in the caste system.", "They led worship and taught."],
+    "priests and teachers",
+  ),
+  "social/ca-g6-qin-and-han": lesson(
+    ["Mountains and rivers made China hard to govern because travel was slow.", "Confucius taught that rulers should lead by good example. The Qin united China; the Han ruled for 400 years.", "Under the Han, Buddhism came from India along the Silk Road; monks translated texts. The White Horse Temple is one of the first."],
+    "How did Confucius say a ruler should govern?",
+    ["Confucius valued respect and good behaviour.", "People follow a leader who acts well."],
+    "by setting a good example",
+  ),
+  "social/ca-g6-roman-empire": lesson(
+    ["Rome beat Carthage in three Punic Wars, then grew into an empire from Britain to Egypt and the Middle East.", "The Pax Romana was about 200 years of peace.", "Legacies: Latin (the root of Spanish, French, Italian and many English words), roads, aqueducts and law."],
+    "Rome fought the Punic Wars against which city?",
+    ["It was a powerful trading city in North Africa.", "Hannibal led its army across the Alps."],
+    "Carthage",
+  ),
+  "social/ga-g6-australia": lesson(
+    ["Australia is a country and a continent, with the Great Barrier Reef and the Outback.", "Most Australians live near the coast, where the climate is milder.", "Aboriginal Australians have lived there for tens of thousands of years."],
+    "Why do most Australians live near the coast?",
+    ["The middle is hot and dry.", "The coast has more rain and milder weather."],
+    "the coast has a milder climate and more water",
+  ),
+  "social/ma-g7-asia-geography": lesson(
+    ["The Himalayas, with Mount Everest, separate South Asia from China.", "Great rivers, like the Ganges, the Indus, the Yangtze and the Huang He, gave water and rich soil, so many people live near them.", "Monsoon winds bring heavy summer rain to South Asia."],
+    "Why do so many people in China live in the east?",
+    ["Look at where the plains and rivers are.", "The west has deserts and high mountains."],
+    "the east has rivers and good farmland",
+  ),
+  "social/ma-g7-oceania-europe": lesson(
+    ["Australia is both a continent and a country; most Australians live near the coast.", "Europe has many peninsulas, mountains like the Alps and rivers like the Danube.", "Each time zone is about 15° of longitude wide, counted from the prime meridian."],
+    "It is noon in Boston and 5 p.m. in London. How many hours ahead is London?",
+    ["Subtract the times.", "5 p.m. is 5 hours after noon."],
+    "5 hours",
+  ),
+  // South Carolina (us-sc)
+  "social/tx-g6-world-regions": lesson(
+    ["Regions share climate and features: tundra is cold, treeless and frozen underground.", "Population density is how many people live in an area. Migration to cities changes them.", "People modify the environment with dams, farms and clearing forests. Sustainability saves resources for the future."],
+    "What does population density mean?",
+    ["Density is how crowded something is.", "It counts people in a given area."],
+    "how many people live in a given area",
+  ),
+  "social/ny-g5-countries-capitals": lesson(
+    ["North America: Canada, the US, Mexico. Panama connects Central and South America.", "Learn capitals in pairs: Bogotá, Colombia; Kingston, Jamaica; Belmopan, Belize; Georgetown, Guyana.", "Mexico borders the US to the south."],
+    "What is the capital of Colombia?",
+    ["Colombia is in the north of South America.", "Its capital is high in the Andes."],
+    "Bogotá",
+  ),
+  "social/quality-of-life-8": lesson(
+    ["Indicators measure quality of life: life expectancy, literacy rate, infant mortality, and access to clean water and health care.", "High literacy and long life expectancy usually mean higher quality of life; high infant mortality usually means lower.", "To estimate doubling time, divide 70 by the yearly growth rate."],
+    "A population grows by 2% each year. About how many years will it take to double?",
+    ["Doubling time ≈ 70 ÷ growth rate.", "70 ÷ 2 = 35."],
+    "35",
+  ),
+  "social/sc-g7-world-regions": lesson(
+    ["World regions share features like climate, landforms and culture. Know which countries are in which region: India in Asia, New Zealand in Oceania.", "People adapt to climate, like warm clothing and insulated homes in the cold.", "The Ring of Fire around the Pacific has many volcanoes and earthquakes. Trade connects regions."],
+    "The Amazon rainforest is mostly in which country?",
+    ["The Amazon is in South America.", "Most of it lies in the largest South American country."],
+    "Brazil",
+  ),
+  "social/sc-g7-japan": lesson(
+    ["Japan is a chain of mountainous islands with the Pacific Ocean to the east. Mount Fuji is its tallest peak.", "Little flat land meant farming in valleys and lots of fishing.", "Shinto honours kami, spirits in nature; Buddhism and Confucian ideas of family, order and duty also shaped Japanese values."],
+    "Shinto, an old belief in Japan, honours what?",
+    ["Shinto shrines are often in natural places, marked by a torii gate.", "They honour kami, the spirits in nature and special places."],
+    "kami, the spirits in nature and special places",
+  ),
+  "social/sc-g7-americas-geography": lesson(
+    ["The Western Hemisphere is North and South America.", "Big features: the Andes and Rockies, the Amazon rainforest and River, and the Panama Canal.", "A political map shows countries and borders. A physical map shows landforms."],
+    "What is the largest rainforest in the world?",
+    ["It is in South America.", "It is named after a great river."],
+    "the Amazon rainforest",
+  ),
+  "social/wi-g7-japan": lesson(
+    ["Japan is a chain of mountainous islands with the Pacific Ocean to the east. Mount Fuji is its tallest peak.", "Little flat land meant farming in valleys and lots of fishing.", "Shinto honours kami, spirits in nature; Buddhism and Confucian ideas of family, order and duty also shaped Japanese values."],
+    "Shinto, an old belief in Japan, honours what?",
+    ["Shinto shrines are often in natural places, marked by a torii gate.", "They honour kami, the spirits in nature and special places."],
+    "kami, the spirits in nature and special places",
   ),
 };

@@ -1,0 +1,43 @@
+Maryland: coded standards no unit cites, per grade and subject (a standard counts as cited when it, or the
+standard it belongs to, is cited). Generated from outcomes.json and the citations in src/content/maryland, October 24, 2026.
+
+k/math (5 of 26): K.NOS.A.3 K.NOS.A.4 K.AT.B.3 K.GR.A.3 K.GR.B.4
+1/math (0 of 40): none
+2/math (0 of 37): none
+3/math (0 of 44): none
+4/math (0 of 59): none
+5/math (0 of 59): none
+6/math (0 of 60): none
+7/math (0 of 46): none
+8/math (0 of 43): none
+9/math (39 of 86): A.APR.B.3 F.LE.A.3 G.CO.A.1 G.CO.A.2 G.CO.A.3 G.CO.A.4 G.CO.A.5 G.CO.B.6 G.CO.B.7 G.CO.B.8 G.CO.C.9 G.CO.C.10 G.CO.C.11 G.CO.D.12 G.CO.D.13 G.SRT.A.1.a G.SRT.A.1.b G.SRT.A.2 G.SRT.A.3 G.SRT.B.4 G.SRT.B.5 G.SRT.C.6 G.SRT.C.7 G.SRT.C.8 G.C.A.1 G.C.A.2 G.C.A.3 G.C.B.5 G.GPE.A.1 G.GPE.B.4 G.GPE.B.5 G.GPE.B.6 G.GPE.B.7 G.GMD.A.1 G.GMD.A.3 G.GMD.B.4 G.MG.A.1 G.MG.A.2 G.MG.A.3
+k/language (16 of 69): RL.K.8 RL.K.10 RI.K.10 RF.K.4 W.K.1 W.K.2 W.K.3 W.K.4 W.K.5 W.K.6 W.K.7 W.K.9 W.K.10 SL.K.4 SL.K.5 L.K.3
+1/language (23 of 77): RL.1.8 RL.1.10 RI.1.10 RF.1.4.a RF.1.4.b RF.1.4.c W.1.1 W.1.2 W.1.3 W.1.4 W.1.5 W.1.6 W.1.7 W.1.9 W.1.10 SL.1.1.a SL.1.1.b SL.1.1.c SL.1.3 SL.1.4 SL.1.5 SL.1.6 L.1.3
+2/language (21 of 66): RL.2.8 RL.2.10 RI.2.10 RF.2.4.a RF.2.4.b W.2.1 W.2.2 W.2.3 W.2.4 W.2.5 W.2.6 W.2.7 W.2.9 W.2.10 SL.2.1.a SL.2.1.b SL.2.1.c SL.2.3 SL.2.4 SL.2.5 SL.2.6
+3/language (31 of 81): RL.3.8 RL.3.10 RI.3.10 RF.3.4.a RF.3.4.b RF.3.4.c W.3.1.a W.3.1.b W.3.1.c W.3.1.d W.3.2.a W.3.2.b W.3.2.c W.3.2.d W.3.3.a W.3.3.b W.3.3.c W.3.3.d W.3.4 W.3.5 W.3.6 W.3.9 W.3.10 SL.3.1.a SL.3.1.b SL.3.1.c SL.3.1.d SL.3.3 SL.3.4 SL.3.5 SL.3.6
+4/language (29 of 76): RL.4.8 RL.4.10 RI.4.10 RF.4.4.a RF.4.4.b RF.4.4.c W.4.1.a W.4.1.b W.4.1.c W.4.1.d W.4.3.a W.4.3.b W.4.3.c W.4.3.d W.4.3.e W.4.5 W.4.6 W.4.7 W.4.9.a W.4.9.b W.4.10 SL.4.1.a SL.4.1.b SL.4.1.c SL.4.1.d SL.4.3 SL.4.4 SL.4.5 SL.4.6
+5/language (32 of 74): RL.5.8 RL.5.10 RI.5.10 RF.5.4.a RF.5.4.b RF.5.4.c W.5.1.a W.5.1.b W.5.1.c W.5.1.d W.5.2.a W.5.2.b W.5.2.c W.5.2.d W.5.2.e W.5.3.a W.5.3.b W.5.3.c W.5.3.d W.5.3.e W.5.5 W.5.6 W.5.9.a W.5.9.b W.5.10 SL.5.1.a SL.5.1.b SL.5.1.c SL.5.1.d SL.5.3 SL.5.4 SL.5.6
+6/language (28 of 70): RL.6.8 RL.6.10 RI.6.10 W.6.2.a W.6.2.b W.6.2.c W.6.2.d W.6.2.e W.6.2.f W.6.3.a W.6.3.b W.6.3.c W.6.3.d W.6.3.e W.6.4 W.6.5 W.6.6 W.6.9.a W.6.9.b W.6.10 SL.6.1.a SL.6.1.b SL.6.1.c SL.6.1.d SL.6.3 SL.6.4 SL.6.5 SL.6.6
+7/language (32 of 67): RL.7.8 RL.7.10 RI.7.10 W.7.1.a W.7.1.b W.7.1.c W.7.1.d W.7.1.e W.7.2.a W.7.2.b W.7.2.c W.7.2.d W.7.2.e W.7.2.f W.7.3.a W.7.3.b W.7.3.c W.7.3.d W.7.3.e W.7.4 W.7.5 W.7.6 W.7.9.a W.7.9.b W.7.10 SL.7.1.a SL.7.1.b SL.7.1.c SL.7.1.d SL.7.4 SL.7.5 SL.7.6
+8/language (32 of 69): RL.8.8 RL.8.10 RI.8.10 W.8.1.a W.8.1.b W.8.1.c W.8.1.d W.8.1.e W.8.2.a W.8.2.b W.8.2.c W.8.2.d W.8.2.e W.8.2.f W.8.3.a W.8.3.b W.8.3.c W.8.3.d W.8.3.e W.8.4 W.8.7 W.8.9.a W.8.9.b W.8.10 SL.8.1.a SL.8.1.b SL.8.1.c SL.8.1.d SL.8.3 SL.8.4 SL.8.5 SL.8.6
+9/language (30 of 66): RL.9-10.8 RL.9-10.10 RI.9-10.10 W.9-10.1.a W.9-10.1.b W.9-10.1.c W.9-10.1.d W.9-10.1.e W.9-10.2.a W.9-10.2.b W.9-10.2.c W.9-10.2.d W.9-10.2.e W.9-10.2.f W.9-10.3.a W.9-10.3.b W.9-10.3.c W.9-10.3.d W.9-10.3.e W.9-10.9.a W.9-10.9.b W.9-10.10 SL.9-10.1.a SL.9-10.1.b SL.9-10.1.c SL.9-10.1.d SL.9-10.3 SL.9-10.4 SL.9-10.5 SL.9-10.6
+k/science (0 of 13): none
+1/science (0 of 12): none
+2/science (0 of 14): none
+3/science (0 of 18): none
+4/science (0 of 17): none
+5/science (1 of 16): 5-PS2-1
+6/science (0 of 59): none
+7/science (0 of 59): none
+8/science (0 of 59): none
+9/science (0 of 71): none
+k/social (0 of 49): none
+1/social (4 of 53): C.5.a C.5.b C.5.c C.5.d
+2/social (0 of 55): none
+3/social (0 of 38): none
+4/social (0 of 39): none
+5/social (0 of 34): none
+6/social (70 of 114): 6/7.1.2.a 6/7.1.2.b 6/7.1.2.d 6/7.1.3.a 6/7.1.3.b 6/7.1.3.c 6/7.1.3.d 6/7.1.4.a 6/7.1.4.b 6/7.1.4.c 6/7.1.5.a 6/7.1.5.b 6/7.1.5.c 6/7.2.2.a 6/7.2.2.b 6/7.2.2.c 6/7.2.3.a 6/7.2.3.b 6/7.2.3.c 6/7.2.4.a 6/7.2.4.b 6/7.2.4.c 6/7.2.4.d 6/7.3.4.a 6/7.3.4.b 6/7.3.4.c 6/7.4.4.a 6/7.4.4.b 6/7.4.4.c 6/7.5.3.a 6/7.5.3.b 6/7.5.3.c 6/7.5.4.a 6/7.5.4.b 6/7.5.4.c 6/7.6.2.a 6/7.6.2.b 6/7.6.2.c 6/7.6.2.d 6/7.6.3.a 6/7.6.3.b 6/7.6.3.c 6/7.6.4.a 6/7.6.4.b 6/7.6.4.c 6/7.7.3.a 6/7.7.3.b 6/7.7.3.c 6/7.7.3.d 6/7.7.4.a 6/7.7.4.b 6/7.7.4.c 6/7.7.4.d 6/7.8.1.a 6/7.8.1.b 6/7.8.1.c 6/7.8.2.a 6/7.8.2.b 6/7.8.2.c 6/7.8.2.d 6/7.8.2.e 6/7.8.3.a 6/7.8.3.b 6/7.8.3.c 6/7.8.3.d 6/7.8.3.e 6/7.8.4.a 6/7.8.4.b 6/7.8.4.c 6/7.8.4.d
+7/social (70 of 114): 6/7.1.2.a 6/7.1.2.b 6/7.1.2.d 6/7.1.3.a 6/7.1.3.b 6/7.1.3.c 6/7.1.3.d 6/7.1.4.a 6/7.1.4.b 6/7.1.4.c 6/7.1.5.a 6/7.1.5.b 6/7.1.5.c 6/7.2.2.a 6/7.2.2.b 6/7.2.2.c 6/7.2.3.a 6/7.2.3.b 6/7.2.3.c 6/7.2.4.a 6/7.2.4.b 6/7.2.4.c 6/7.2.4.d 6/7.3.4.a 6/7.3.4.b 6/7.3.4.c 6/7.4.4.a 6/7.4.4.b 6/7.4.4.c 6/7.5.3.a 6/7.5.3.b 6/7.5.3.c 6/7.5.4.a 6/7.5.4.b 6/7.5.4.c 6/7.6.2.a 6/7.6.2.b 6/7.6.2.c 6/7.6.2.d 6/7.6.3.a 6/7.6.3.b 6/7.6.3.c 6/7.6.4.a 6/7.6.4.b 6/7.6.4.c 6/7.7.3.a 6/7.7.3.b 6/7.7.3.c 6/7.7.3.d 6/7.7.4.a 6/7.7.4.b 6/7.7.4.c 6/7.7.4.d 6/7.8.1.a 6/7.8.1.b 6/7.8.1.c 6/7.8.2.a 6/7.8.2.b 6/7.8.2.c 6/7.8.2.d 6/7.8.2.e 6/7.8.3.a 6/7.8.3.b 6/7.8.3.c 6/7.8.3.d 6/7.8.3.e 6/7.8.4.a 6/7.8.4.b 6/7.8.4.c 6/7.8.4.d
+8/social (12 of 69): NN.2.a NN.2.b GE.3.a GE.3.b GE.5.a GE.5.b GE.5.c GE.5.d GI.2.a GI.2.b GI.2.c GI.2.d
+9/social (8 of 88): SOG.4.a SOG.4.b SOG.4.c SOG.4.d SOG.4.e EB.4.a EB.4.b EB.4.c

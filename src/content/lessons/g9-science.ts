@@ -619,7 +619,7 @@ export const lessons: GradeLessons = {
     ["About 10% passes on.", "10% of 5,000 is 500."],
     "500 units",
   ),
-  "science/wi-g9-ecosystems": lesson(
+  "science/md-g9-ecosystems": lesson(
     ["Carrying capacity is the largest population an environment can support over time.", "Only about 10% of energy passes from one trophic level to the next.", "Ecosystems recover from disturbance through succession; people can reduce harm, for example by stopping invasive species."],
     "Grasses store 5,000 units of energy. About how much reaches the animals that eat them?",
     ["About 10% passes on.", "10% of 5,000 is 500."],
@@ -649,5 +649,25 @@ export const lessons: GradeLessons = {
     "Shrubs sprout again after a wildfire. What is this an example of?",
     ["The community is rebuilding over time.", "Gradual change in a community is succession."],
     "succession",
+  ),
+  // Missouri (us-mo)
+  "science/mo-g9-ecosystems": lesson(
+    ["A population levels off at carrying capacity on a logistic growth curve.", "About 10% of energy passes up each trophic level.", "After disturbances like fire, succession rebuilds the community; stable ecosystems recover."],
+    "Shrubs sprout again after a prairie fire. What is this an example of?",
+    ["The community is rebuilding over time.", "Gradual change in a community is succession."],
+    "succession",
+  ),
+  // South Carolina (us-sc)
+  "science/sc-g9-ecosystems": lesson(
+    ["Relationships: predation, parasitism, commensalism, mutualism and competition.", "Density-dependent factors depend on crowding; density-independent ones, like hurricanes, don’t.", "Invasive species and disturbances can upset stability; stable ecosystems recover from small ones."],
+    "A barnacle rides on a whale, which is not harmed. Which relationship is this?",
+    ["The barnacle benefits.", "The whale is neither helped nor harmed: commensalism."],
+    "commensalism",
+  ),
+  "science/wi-g9-ecosystems": lesson(
+    ["Carrying capacity is the largest population an environment can support over time.", "Only about 10% of energy passes from one trophic level to the next.", "Ecosystems recover from disturbance through succession; people can reduce harm, for example by stopping invasive species."],
+    "Grasses store 5,000 units of energy. About how much reaches the animals that eat them?",
+    ["About 10% passes on.", "10% of 5,000 is 500."],
+    "500 units",
   ),
 };

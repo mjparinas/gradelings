@@ -4,6 +4,7 @@ import type { FactStat } from "./facts";
 import { dayKey, type AppEvent, type Mode } from "./model";
 import { unitLevel } from "./proficiency";
 import { READING_SAMPLES_KEPT, type ReadingSample } from "./readingLevel";
+import { mysteryReward } from "./mystery";
 import { storyLearnSeconds } from "./stories";
 import { TIER_COINS, TIER_POINTS, trophyTier } from "./trophies";
 
@@ -115,6 +116,10 @@ export interface Derived {
   stories: Record<string, { reads: number; best: number; questions: number; lastT: number }>;
   /** Math facts answered, by fact id ("mul:7:8"). Fact answers count as math practice but never as a unit. */
   facts: Record<string, FactStat>;
+  /** Mystery boxes opened, by the lesson (session event id) they came with, and on which day. */
+  mysteries: Record<string, string>;
+  /** Surprise stickers found in mystery boxes, by sticker id, with how many of each. */
+  surprises: Record<string, number>;
 }
 
 /** XP needed to go from `level` to `level + 1`. */
@@ -179,6 +184,8 @@ export function derive(events: AppEvent[], now = Date.now()): Derived {
     stories: {},
     facts: {},
     secrets: [],
+    mysteries: {},
+    surprises: {},
   };
   const seen = new Set<string>();
   let run = 0;
@@ -329,6 +336,15 @@ export function derive(events: AppEvent[], now = Date.now()): Derived {
           d.xp += TIER_POINTS[tier];
           d.coins += TIER_COINS[tier];
         }
+        break;
+      }
+      case "mystery": {
+        // One box per lesson, however many devices opened it.
+        if (d.mysteries[e.session]) break;
+        d.mysteries[e.session] = day.day;
+        const reward = mysteryReward(e.session);
+        if (reward.kind === "coins") d.coins += reward.coins;
+        else d.surprises[reward.sticker.id] = (d.surprises[reward.sticker.id] ?? 0) + 1;
         break;
       }
       case "secret":

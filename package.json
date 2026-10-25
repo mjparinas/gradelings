@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "node scripts/fetch-supertonic.mjs --optional && next dev",
+    "dev": "node scripts/fetch-piper.mjs --optional && next dev",
     "build": "next build && node scripts/csp-postbuild.mjs",
-    "prebuild": "node scripts/fetch-supertonic.mjs",
+    "prebuild": "node scripts/fetch-piper.mjs",
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.14.0",
+    "@diffusionstudio/piper-wasm": "1.0.0",
     "@stryker-mutator/api": "10.0.0",
     "@stryker-mutator/core": "10.0.0",
     "@stryker-mutator/vitest-runner": "10.0.0",

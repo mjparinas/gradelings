@@ -571,7 +571,7 @@ export const lessons: GradeLessons = {
     ["Something blocks the sunlight.", "The moon's shadow falls on Earth."],
     "the moon",
   ),
-  "science/wi-g8-space": lesson(
+  "science/md-g8-space": lesson(
     ["Earth's tilt causes the seasons: the hemisphere tilted toward the sun has summer.", "Moon phases come from seeing different parts of its sunlit half. In a solar eclipse the moon is between the sun and Earth.", "Gravity holds the planets in orbit; the solar system is huge compared with Earth."],
     "In a solar eclipse, what is between the sun and Earth?",
     ["Something blocks the sunlight.", "The moon's shadow falls on Earth."],
@@ -589,7 +589,7 @@ export const lessons: GradeLessons = {
     ["The eras go Paleozoic, Mesozoic, Cenozoic.", "The latest is the Cenozoic."],
     "the Cenozoic Era",
   ),
-  "science/wi-g8-earth-history": lesson(
+  "science/md-g8-earth-history": lesson(
     ["Rock layers and fossils order Earth’s 4.6-billion-year history; lower layers are older.", "Most of that history is the Precambrian. We live in the Cenozoic Era.", "Homologous structures show that living things share ancestors."],
     "In which era do we live today?",
     ["The eras go Paleozoic, Mesozoic, Cenozoic.", "The latest is the Cenozoic."],
@@ -704,5 +704,88 @@ export const lessons: GradeLessons = {
     "Most plastics are made from which natural resources?",
     ["Plastics are made in chemical plants.", "Their raw materials are fossil fuels."],
     "petroleum and natural gas",
+  ),
+  // Missouri (us-mo)
+  "science/mo-g8-space": lesson(
+    ["Mercury is closest to the Sun. Gravity keeps planets in orbit.", "Seasons happen because Earth’s axis is tilted.", "Tides are caused mostly by the Moon’s gravity. A solar eclipse is when the Moon passes between the Sun and Earth."],
+    "Why does Earth have seasons?",
+    ["It isn’t because Earth gets much closer to the Sun.", "Earth’s tilt changes how direct the sunlight is."],
+    "Earth’s axis is tilted",
+  ),
+  "science/mo-g8-earth-history": lesson(
+    ["Rock layers and fossils order Earth’s 4.6-billion-year history; lower layers are older.", "Most of that history is the Precambrian. We live in the Cenozoic Era.", "Homologous structures show that living things share ancestors."],
+    "In which era do we live today?",
+    ["The eras go Paleozoic, Mesozoic, Cenozoic.", "The latest is the Cenozoic."],
+    "the Cenozoic Era",
+  ),
+
+  // North Carolina's units (us-nc).
+  "science/food-chains-7": lesson(
+    ["The energy in most food chains first comes from the Sun.", "Producers make food. Consumers get energy by eating other organisms.", "Herbivores eat plants, carnivores eat animals and omnivores eat both.", "Arrows show the direction energy flows: from the food to the eater."],
+    "In grass → deer → wolf, which way does the energy flow?",
+    ["Arrows point from food to eater.", "Energy moves from grass to deer to wolf."],
+    "from grass to deer to wolf",
+  ),
+  "science/nc-g8-earth-history": lesson(
+    ["In undisturbed rock layers, lower layers are older. A fault or intrusion is younger than the layers it cuts.", "Index fossils, which lived for a short time over a wide area, help match the ages of layers in different places.", "Fossils show how life and environments changed, like shark teeth far inland where an ocean once was."],
+    "In undisturbed rock layers, where is the oldest layer?",
+    ["Layers pile up over time.", "The first layer laid down is at the bottom."],
+    "at the bottom",
+  ),
+  "science/nc-g8-ocean-currents": lesson(
+    ["Surface currents are driven by wind; deep currents are driven by differences in temperature and salinity.", "Cold, salty water is denser and sinks; warm, fresher water rises.", "Currents like the Gulf Stream carry heat, which shapes climate, and they carry food and young sea life."],
+    "Does cold, salty water sink or rise?",
+    ["Cold and salty both make water denser.", "Denser water sinks."],
+    "It sinks.",
+  ),
+  "science/nc-g8-changing-climate": lesson(
+    ["Greenhouse gases, such as carbon dioxide, trap heat near Earth's surface like a blanket.", "Burning fossil fuels since industrialization has added carbon dioxide, and measurements show global temperatures have risen.", "Rising seas threaten low coasts like the Outer Banks. Renewable energy and using less energy help."],
+    "Which is renewable: coal, natural gas or solar energy?",
+    ["Coal and natural gas are fossil fuels that run out.", "Sunlight keeps arriving every day."],
+    "solar energy",
+  ),
+  "science/nc-g8-energy-resources": lesson(
+    ["Renewable resources, like sunlight, wind, moving water and biomass, are replaced by nature.", "Nonrenewable resources, like coal, oil and natural gas, take millions of years to form.", "Every energy source has effects: burning fuels can pollute air and water, and dams change rivers."],
+    "Is natural gas renewable or nonrenewable?",
+    ["It formed over millions of years.", "It can't be replaced in our lifetime."],
+    "nonrenewable",
+  ),
+  "science/nc-g8-nc-water": lesson(
+    ["About 97% of Earth's water is salty ocean water; most fresh water is frozen.", "North Carolina has 17 river basins, and rivers like the Neuse flow into estuaries such as the Albemarle–Pamlico Sound, where fresh and salt water mix.", "Scientists judge water safety with pH, dissolved oxygen, turbidity, bacteria and chemicals like PFAS."],
+    "Why is low dissolved oxygen a problem in a river?",
+    ["Fish take oxygen from the water to breathe.", "Too little oxygen can kill them."],
+    "Fish and other animals can't breathe.",
+  ),
+  // Massachusetts (us-ma)
+  "science/ca-g7-food-molecules": lesson(
+    ["Digestion breaks big food molecules into small ones, such as starch into sugar.", "Cells use small molecules to build new parts or release energy in cellular respiration.", "Atoms are rearranged, never lost or made."],
+    "Enzymes in your saliva start breaking starch into what?",
+    ["Starch is a long chain of sugar units.", "Enzymes snip the chain apart."],
+    "sugar",
+  ),
+  // South Carolina (us-sc)
+  "science/tx-g7-reproduction": lesson(
+    ["Asexual reproduction uses one parent and makes identical offspring: budding, runners, cuttings, splitting.", "Sexual reproduction uses two parents, so offspring get a mix of traits.", "Variety helps a population survive diseases and changes."],
+    "A strawberry plant grows a runner that roots into a new plant. Asexual or sexual?",
+    ["Only one parent plant is involved.", "The new plant is identical."],
+    "asexual",
+  ),
+  "science/sc-g8-seasons-tides": lesson(
+    ["Earth's axis is tilted about 23.5°. Without the tilt there would be almost no seasons.", "When a hemisphere tilts toward the Sun, sunlight hits more directly and it has summer.", "Earth orbits the Sun about every 365 days.", "The Moon's and Sun's gravity pull on the oceans to make tides."],
+    "When the Northern Hemisphere tilts toward the Sun, what season does it have?",
+    ["Tilted toward the Sun means more direct sunlight.", "More direct sunlight means summer."],
+    "summer",
+  ),
+  "science/wi-g8-space": lesson(
+    ["Earth's tilt causes the seasons: the hemisphere tilted toward the sun has summer.", "Moon phases come from seeing different parts of its sunlit half. In a solar eclipse the moon is between the sun and Earth.", "Gravity holds the planets in orbit; the solar system is huge compared with Earth."],
+    "In a solar eclipse, what is between the sun and Earth?",
+    ["Something blocks the sunlight.", "The moon's shadow falls on Earth."],
+    "the moon",
+  ),
+  "science/wi-g8-earth-history": lesson(
+    ["Rock layers and fossils order Earth’s 4.6-billion-year history; lower layers are older.", "Most of that history is the Precambrian. We live in the Cenozoic Era.", "Homologous structures show that living things share ancestors."],
+    "In which era do we live today?",
+    ["The eras go Paleozoic, Mesozoic, Cenozoic.", "The latest is the Cenozoic."],
+    "the Cenozoic Era",
   ),
 };

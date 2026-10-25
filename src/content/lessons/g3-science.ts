@@ -493,7 +493,7 @@ export const lessons: GradeLessons = {
     ["Coral only grows in warm, shallow seas.", "So that place was once under a warm sea."],
     "it was once a warm sea",
   ),
-  "science/wi-g3-fossils": lesson(
+  "science/md-g3-fossils": lesson(
     ["A fossil is what is left of a plant or animal from long ago, kept in rock.", "Fossils show what lived in a place and what the place was like.", "Sea-animal fossils on dry land show a sea once covered it."],
     "Coral fossils are found in a field far from any sea. What does that tell us?",
     ["Coral only grows in warm, shallow seas.", "So that place was once under a warm sea."],
@@ -511,9 +511,9 @@ export const lessons: GradeLessons = {
     ["It talks about many winters, not one day.", "A pattern over many years is climate."],
     "climate",
   ),
-  "science/wi-g3-weather-climate": lesson(
-    ["Weather is what the air is like today: hot, cold, rainy or windy.", "Climate is the usual weather over many years.", "Wisconsin has warm summers, cold, snowy winters and spring storms."],
-    "Is 'Milwaukee gets snow most winters' about weather or climate?",
+  "science/md-g3-weather-climate": lesson(
+    ["Weather is what the air is like today: hot, cold, rainy or windy.", "Climate is the usual weather over many years.", "Maryland has hot, humid summers, cool winters and summer thunderstorms."],
+    "Is 'Western Maryland gets snow most winters' about weather or climate?",
     ["It talks about many winters, not one day.", "A pattern over many years is climate."],
     "climate",
   ),
@@ -595,5 +595,75 @@ export const lessons: GradeLessons = {
     "Highs of 30 °F, 28 °F and 32 °F. Which season is it?",
     ["Those are cold temperatures."],
     "winter",
+  ),
+  "science/water-world": lesson(
+    ["The sun warms water, and it rises into the air.", "The water forms clouds of tiny drops, then falls as rain or snow.", "The water flows back to lakes and oceans, and the cycle starts again."],
+    "What comes right after clouds form in the water cycle?",
+    ["Clouds hold tiny drops of water.", "When the drops get heavy, they fall."],
+    "rain or snow falls",
+  ),
+  // Missouri (us-mo)
+  "science/mo-g3-weather-climate": lesson(
+    ["Weather is what the air is like today. Climate is the usual weather over many years.", "Read temperature and rain data for each season.", "Mountains get the most snow in winter."],
+    "Highs of 30 °F, 28 °F and 32 °F. Which season is it?",
+    ["Those are cold temperatures."],
+    "winter",
+  ),
+
+  // North Carolina's units (us-nc).
+  "science/heart-bones-muscles": lesson(
+    ["The heart pumps blood to the lungs to pick up oxygen, then out to the whole body.", "Exercise makes your heart beat faster, because muscles need more oxygen.", "Bones hold you up and protect organs. Muscles pull on bones through tendons.", "Muscles can only pull: the biceps contracts to bend your arm."],
+    "Your heart beats 72 times a minute at rest and 118 after running. How many more beats?",
+    ["Subtract the rest rate from the running rate.", "118 − 72 = 46."],
+    "46 more beats per minute",
+  ),
+  "science/solar-system": lesson(
+    ["The planets in order from the Sun: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune.", "The asteroid belt lies between Mars and Jupiter.", "A moon is a natural object that orbits a planet.", "The farther a planet is from the Sun, the longer it takes to orbit once."],
+    "Which takes longer to orbit the Sun: Mars or Saturn?",
+    ["Saturn is much farther from the Sun than Mars.", "Farther planets have longer orbits."],
+    "Saturn",
+  ),
+  "science/nc-g3-land-features": lesson(
+    ["Land features include mountains, valleys, canyons, caverns, volcanoes and islands.", "Mountains are high; valleys and canyons are low places between higher land, and canyons have steep walls.", "Moving water carves valleys, canyons and caverns slowly over a very long time."],
+    "Which land feature has water all around it?",
+    ["A peninsula has water on three sides.", "An island has water on every side."],
+    "an island",
+  ),
+  "science/nc-g3-water-features": lesson(
+    ["Earth's water is salt water (oceans and seas) or fresh water (rivers, lakes, ponds, streams and glaciers).", "Almost all of Earth's water is in the oceans, and most fresh water is frozen in glaciers and ice sheets.", "Rivers and streams flow downhill; lakes and ponds hold water that is mostly still."],
+    "Is a lake salt water or fresh water?",
+    ["Most lakes are filled by rivers and rain.", "That water is fresh."],
+    "fresh water",
+  ),
+  "science/nc-g3-soil": lesson(
+    ["Soil has living parts (worms, roots) and non-living parts (bits of rock, air and water).", "Humus is made from rotted plants and animals, and it feeds plants.", "Water drains quickly through sandy soil and slowly through clay. Loam, a mix, is best for most plants."],
+    "Water drains through clay soil quickly or slowly?",
+    ["Clay has tiny, tightly packed bits.", "Water squeezes through slowly."],
+    "slowly",
+  ),
+  // Massachusetts (us-ma)
+  "science/ca-g4-design": lesson(
+    ["Criteria are what a design must do to succeed.", "Constraints are limits, like cost, time or materials.", "Compare designs with a table that scores each one on each criterion.", "Test fairly, then choose the design that best meets the criteria within the constraints."],
+    "A kite must fly for 1 minute and cost under $3. Which is the constraint?",
+    ["Flying for 1 minute is what it must do: a criterion.", "The cost is a limit."],
+    "cost under $3",
+  ),
+  "science/or-g5-design": lesson(
+    ["First, define the problem clearly, like “How can we keep an egg safe if dropped 2 m?”", "Brainstorm several solutions so you can compare them.", "In a fair test, keep everything the same except the design.", "Use the results to improve the best design."],
+    "You test three paper bridges. What should stay the same?",
+    ["Only the bridge design should change.", "Keep the weights and the gap they span the same."],
+    "the weights and the gap",
+  ),
+  "science/wi-g3-fossils": lesson(
+    ["A fossil is what is left of a plant or animal from long ago, kept in rock.", "Fossils show what lived in a place and what the place was like.", "Sea-animal fossils on dry land show a sea once covered it."],
+    "Coral fossils are found in a field far from any sea. What does that tell us?",
+    ["Coral only grows in warm, shallow seas.", "So that place was once under a warm sea."],
+    "it was once a warm sea",
+  ),
+  "science/wi-g3-weather-climate": lesson(
+    ["Weather is what the air is like today: hot, cold, rainy or windy.", "Climate is the usual weather over many years.", "Wisconsin has warm summers, cold, snowy winters and spring storms."],
+    "Is 'Milwaukee gets snow most winters' about weather or climate?",
+    ["It talks about many winters, not one day.", "A pattern over many years is climate."],
+    "climate",
   ),
 };

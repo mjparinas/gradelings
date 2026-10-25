@@ -4,7 +4,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import type { ChildSettings } from "@/lib/model";
 
 const h = vi.hoisted(() => ({ preload: vi.fn(), settings: {} as Record<string, Partial<ChildSettings>> }));
-vi.mock("@/lib/supertonic", () => ({ preloadSupertonicVoices: h.preload }));
+vi.mock("@/lib/piper", () => ({ preloadPiperVoices: h.preload }));
 vi.mock("@/lib/store", () => ({ useStore: (pick: (s: { settings: typeof h.settings }) => unknown) => pick({ settings: h.settings }) }));
 
 import { VoicePreload } from "./VoicePreload";

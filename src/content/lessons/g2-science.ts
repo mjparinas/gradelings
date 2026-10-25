@@ -427,8 +427,8 @@ export const lessons: GradeLessons = {
     ["A desert is very dry.", "Frogs and herons need water, so they live in wetlands."],
     "a wetland",
   ),
-  "science/wi-g2-habitats": lesson(
-    ["A habitat is a place where a living thing lives.", "Badgers dig on the prairie. Deer live in the woods. Frogs live in wetlands.", "Each habitat gives its animals food, water and shelter."],
+  "science/md-g2-habitats": lesson(
+    ["A habitat is a place where a living thing lives.", "Blue crabs live in the Chesapeake Bay. Deer live in the woods. Frogs live in marshes.", "Each habitat gives its animals food, water and shelter."],
     "Where do frogs and herons live: a wetland or a desert?",
     ["A desert is very dry.", "Frogs and herons need water, so they live in wetlands."],
     "a wetland",
@@ -445,8 +445,8 @@ export const lessons: GradeLessons = {
     ["A peninsula has water on three sides.", "Land with water all around is an island."],
     "island",
   ),
-  "science/wi-g2-land-water": lesson(
-    ["Land can be hills, valleys, plains or islands.", "Water can be rivers, lakes or oceans.", "Lake Michigan is a lake. The Mississippi is a river. The Apostle Islands are islands in Lake Superior."],
+  "science/md-g2-land-water": lesson(
+    ["Land can be hills, valleys, plains or islands.", "Water can be rivers, lakes or oceans.", "The Chesapeake Bay is a bay. The Potomac is a river. Western Maryland has mountains."],
     "Land with water all around it is an…?",
     ["A peninsula has water on three sides.", "Land with water all around is an island."],
     "island",
@@ -463,7 +463,7 @@ export const lessons: GradeLessons = {
     ["Many years is a long time.", "That is a slow change."],
     "slow",
   ),
-  "science/wi-g2-earth-changes": lesson(
+  "science/md-g2-earth-changes": lesson(
     ["Some changes are fast, like volcanoes, landslides and floods.", "Some are slow, like wind and water wearing away land over years.", "Plant roots and rock walls help slow these changes."],
     "Water carves a canyon over many years. Fast or slow?",
     ["Many years is a long time.", "That is a slow change."],
@@ -531,6 +531,77 @@ export const lessons: GradeLessons = {
     "valley",
   ),
 "science/in-g2-earth-changes": lesson(
+    ["Some changes are fast, like volcanoes, landslides and floods.", "Some are slow, like wind and water wearing away land over years.", "Plant roots and rock walls help slow these changes."],
+    "Water carves a canyon over many years. Fast or slow?",
+    ["Many years is a long time.", "That is a slow change."],
+    "slow",
+  ),
+  // Missouri (us-mo)
+  "science/mo-g2-earth-changes": lesson(
+    ["Some changes are fast, like volcanoes, landslides and floods.", "Some are slow, like wind and water wearing away land over years.", "Plant roots and rock walls help slow these changes."],
+    "Water carves a canyon over many years. Fast or slow?",
+    ["Many years is a long time.", "That is a slow change."],
+    "slow",
+  ),
+  "science/mo-g2-land-water": lesson(
+    ["Landforms: mountains, valleys, hills and plains.", "Bodies of water: rivers, lakes, oceans and bays. A bay is ocean partly closed in by land.", "Solid water stays in glaciers on high mountains."],
+    "Low land between mountains is a…?",
+    ["Mountains are high.", "The low land between them is a valley."],
+    "valley",
+  ),
+
+  // North Carolina's units (us-nc).
+  "science/light-and-sound": lesson(
+    ["The sun and a lamp make their own light.", "A shadow forms when something blocks light.", "Hit a drum harder to make a louder sound."],
+    "What makes a shadow?",
+    ["Light shines on you.", "Your body blocks the light."],
+    "something blocks the light",
+  ),
+  "science/tx-g1-animal-life-cycles": lesson(
+    ["A bird: egg, chick, adult bird.", "A fish: egg, fry, adult fish.", "A mammal is born live and drinks milk."],
+    "Fish life cycle: egg, ___, adult fish.",
+    ["A baby fish is called a fry."],
+    "fry",
+  ),
+  "science/wa-g1-parents-young": lesson(
+    ["Animal parents feed, protect and teach their young.", "Babies look like their parents, but not exactly.", "A baby kangaroo stays safe in its mother's pouch."],
+    "A baby bird chirps with its mouth open. Why?",
+    ["Baby birds can't find food yet.", "They call so a parent feeds them."],
+    "to get food",
+  ),
+  "science/wa-gk-sunlight": lesson(
+    ["Sunlight warms the ground, water and sand.", "Shade blocks the sun and keeps things cooler.", "Hats, umbrellas and trees make shade."],
+    "A rock sits in the sun all day. Does it get warmer or cooler?",
+    ["The sun warms things it shines on."],
+    "warmer",
+  ),
+  // Massachusetts (us-ma)
+  "science/ma-g2-earth-changes": lesson(
+    ["Some changes are fast, like landslides, floods and big storms.", "Some are slow, like waves wearing away a beach over many years.", "Plant roots and rock walls help slow these changes."],
+    "Waves wear away a cliff on Cape Cod over many years. Fast or slow?",
+    ["Many years is a long time.", "That is a slow change."],
+    "slow",
+  ),
+  // South Carolina (us-sc)
+  "science/sc-g2-earth-changes": lesson(
+    ["Some changes are fast, like volcanoes, landslides and floods.", "Some are slow, like wind and water wearing away land over years.", "Plant roots and rock walls help slow these changes."],
+    "Water carves a canyon over many years. Fast or slow?",
+    ["Many years is a long time.", "That is a slow change."],
+    "slow",
+  ),
+  "science/wi-g2-habitats": lesson(
+    ["A habitat is a place where a living thing lives.", "Badgers dig on the prairie. Deer live in the woods. Frogs live in wetlands.", "Each habitat gives its animals food, water and shelter."],
+    "Where do frogs and herons live: a wetland or a desert?",
+    ["A desert is very dry.", "Frogs and herons need water, so they live in wetlands."],
+    "a wetland",
+  ),
+  "science/wi-g2-land-water": lesson(
+    ["Land can be hills, valleys, plains or islands.", "Water can be rivers, lakes or oceans.", "Lake Michigan is a lake. The Mississippi is a river. The Apostle Islands are islands in Lake Superior."],
+    "Land with water all around it is an…?",
+    ["A peninsula has water on three sides.", "Land with water all around is an island."],
+    "island",
+  ),
+  "science/wi-g2-earth-changes": lesson(
     ["Some changes are fast, like volcanoes, landslides and floods.", "Some are slow, like wind and water wearing away land over years.", "Plant roots and rock walls help slow these changes."],
     "Water carves a canyon over many years. Fast or slow?",
     ["Many years is a long time.", "That is a slow change."],

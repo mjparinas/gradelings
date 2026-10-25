@@ -11,9 +11,9 @@ const h = vi.hoisted(() => ({
   prefs: { en: null as string | null, fr: null as string | null },
   setPref: vi.fn(),
   preview: vi.fn(),
-  previewSupertonic: vi.fn(),
+  previewPiper: vi.fn(),
   stop: vi.fn(),
-  supertonic: undefined as undefined | { enabled: boolean; voices: { en: { state: string }; fr: { state: string } } },
+  piper: undefined as undefined | { enabled: boolean; voices: { en: { state: string }; fr: { state: string } } },
 }));
 vi.mock("@/lib/speech", async (importOriginal) => {
   const real = await importOriginal<typeof import("@/lib/speech")>();
@@ -25,19 +25,19 @@ vi.mock("@/lib/speech", async (importOriginal) => {
     getVoicePreference: (lang: SpeechLanguage = "en") => h.prefs[lang],
     setVoicePreference: h.setPref,
     previewVoice: h.preview,
-    previewSupertonic: h.previewSupertonic,
+    previewPiper: h.previewPiper,
     stopSpeaking: h.stop,
   };
 });
-vi.mock("@/lib/supertonic", () => ({
-  subscribeSupertonic: () => () => {},
-  getSupertonicState: () => h.supertonic,
-  SUPERTONIC_VOICES: { en: { name: "Wren", credit: "" }, fr: { name: "Fleur", credit: "" } },
-  supertonicSupported: () => h.supertonic !== undefined,
-  supertonicDownloadBytes: vi.fn().mockResolvedValue(undefined),
-  downloadSupertonic: vi.fn(),
-  removeSupertonic: vi.fn(),
-  setSupertonicEnabled: vi.fn(),
+vi.mock("@/lib/piper", () => ({
+  subscribePiper: () => () => {},
+  getPiperState: () => h.piper,
+  PIPER_VOICES: { en: { name: "Amy", credit: "" }, fr: { name: "Siwis", credit: "" } },
+  piperSupported: () => h.piper !== undefined,
+  piperDownloadBytes: vi.fn().mockResolvedValue(undefined),
+  downloadPiper: vi.fn(),
+  removePiper: vi.fn(),
+  setPiperEnabled: vi.fn(),
 }));
 
 import { VoicePicker } from "./VoicePicker";
@@ -56,9 +56,9 @@ beforeEach(() => {
   h.prefs = { en: null, fr: null };
   h.setPref.mockReset();
   h.preview.mockReset();
-  h.previewSupertonic.mockReset().mockResolvedValue(undefined);
+  h.previewPiper.mockReset().mockResolvedValue(undefined);
   h.stop.mockReset();
-  h.supertonic = undefined;
+  h.piper = undefined;
   setOnline(true);
 });
 
@@ -173,20 +173,20 @@ describe("VoicePicker", () => {
     await userEvent.click(screen.getByRole("button", { name: "▶ Hear it" }));
     expect(h.stop).toHaveBeenCalled();
     expect(h.preview).toHaveBeenCalledWith("karen");
-    expect(h.previewSupertonic).not.toHaveBeenCalled();
+    expect(h.previewPiper).not.toHaveBeenCalled();
   });
 
   it("names the offline voice once it is on and here, and plays it as the sample", async () => {
-    h.supertonic = { enabled: true, voices: { en: { state: "ready" }, fr: { state: "missing" } } };
+    h.piper = { enabled: true, voices: { en: { state: "ready" }, fr: { state: "missing" } } };
     render(<VoicePicker />);
-    expect(screen.getByText(/Reading with:/).parentElement).toHaveTextContent("Reading with: Wren, the offline natural voice");
+    expect(screen.getByText(/Reading with:/).parentElement).toHaveTextContent("Reading with: Amy, the offline natural voice");
     await userEvent.click(screen.getByRole("button", { name: "▶ Hear it" }));
-    expect(h.previewSupertonic).toHaveBeenCalledWith("en");
+    expect(h.previewPiper).toHaveBeenCalledWith("en");
     expect(h.preview).not.toHaveBeenCalled();
   });
 
   it("says when the offline voice downloads while it isn't here yet", () => {
-    h.supertonic = { enabled: true, voices: { en: { state: "missing" }, fr: { state: "missing" } } };
+    h.piper = { enabled: true, voices: { en: { state: "missing" }, fr: { state: "missing" } } };
     render(<VoicePicker />);
     expect(screen.getByText(/Reading with:/).parentElement).toHaveTextContent("Reading with: Aria (sounds natural)");
     expect(screen.getByText(/a natural voice that works offline, downloads by itself once a child has/)).toBeInTheDocument();

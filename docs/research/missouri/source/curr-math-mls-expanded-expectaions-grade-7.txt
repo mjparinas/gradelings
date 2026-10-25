@@ -1,0 +1,278 @@
+                                  Grade 7 Grade-Level Expanded Expectations
+                                       RATIOS AND PROPORTIONAL RELATIONSHIPS: RP
+   7.RP.A        Analyze proportional relationships and use them to solve problems.
+                 Compute unit rates, including those that involve                                  The expectation of the student is to compute unit rates, including those that
+   7.RP.A.1
+                 complex fractions, with like or different units.                                  involve complex fractions, with like or different units.
+                 Recognize and represent proportional                                              The expectation of the student is to recognize and represent proportional
+                 relationships between quantities.                                                 relationships between quantities in equations, tables, graphs, diagrams and
+                                                                                                                                                                    𝑦𝑦
+                     a) Determine when two quantities are in a                                     real-world situations. The quantities y and x are proportional if is a
+                                                                                                                                                                    𝑥𝑥
+                         proportional relationship.                                                constant.
+                     b) Identify and/or compute the constant of                                        a. Determine when two quantities are in a proportional relationship.
+                         proportionality (unit rate).                                                  b. Identify and/or compute the constant of proportionality (unit rate).
+   7.RP.A.2
+                     c) Explain what a point (x, y) on the graph of                                    c. Explain what a point (x, y) on the graph of a proportional relationship
+                         a proportional relationship means in terms                                        means in terms of the situation, with special attention to the points
+                         of the situation.                                                                 (0, 0) and (1, r) where r is the unit rate.
+                     d) Recognize that the graph of any                                                d. Recognize that the graph of any proportional relationship will pass
+                         proportional relationship will pass through                                       through the origin.
+                         the origin.
+                                                                                                   The expectation of the student is to solve real-world and mathematical
+                 Solve problems involving ratios, rates,                                           problems involving ratios and percentages using proportional relationships
+   7.RP.A.3
+                 percentages and proportional relationships.                                       such as simple interest, tax markups and markdowns, gratuities and
+                                                                                                   commissions, fees, percent increase and decrease and percent error.
+
+                                                  NUMBER SENSE AND OPERATIONS: NS
+                 Apply and extend previous understandings of operations to add, subtract, multiply and divide rational
+   7.NS.A
+                 numbers.
+
+
+                 The Department of Elementary and Secondary Education does not discriminate on the basis of race, color, religion, gender, gender identity, sexual orientation, national origin, age, veteran status,
+                 mental or physical disability, or any other basis prohibited by statute in its programs and activities. Inquiries related to department programs and to the location of services, activities, and facilities
+                 that are accessible by persons with disabilities may be directed to the Jefferson State Office Building, Director of Civil Rights Compliance and MOA Coordinator (Title VI/Title VII/Title IX/504/ADA/
+                 ADAAA/Age Act/GINA/USDA Title VI), 5th Floor, 205 Jefferson Street, P.O. Box 480, Jefferson City, MO 65102-0480; telephone number 573-526-4757 or TTY 800-735-2966; email
+                 civilrights@dese.mo.gov
+GLEs – GRADE 7
+                 Apply and extend previous understandings of         The expectation of the student is to apply and extend previous
+                 numbers to add and subtract rational numbers.       understandings of numbers to add and subtract rational numbers.
+                     a) Add and subtract rational numbers.              a. Add and subtract rational numbers to include fractions, decimals and
+                     b) Represent addition and subtraction on a             integers.
+                        horizontal or vertical number line.             b. Represent addition and subtraction on a horizontal or vertical
+                     c) Describe situations and show that a                 number line.
+                        number and its opposite have a sum of 0         c. Describe situations and show that a number and its opposite have a
+   7.NS.A.1             (additive inverses).                                sum of 0 (are additive inverses).
+                     d) Understand subtraction of rational              d. Understand subtraction of rational numbers as adding the additive
+                        numbers as adding the additive inverse.             inverse, p – q = p + (–q).
+                     e) Determine the distance between two              e. Show that the distance between two rational numbers on the
+                        rational numbers on the number line is the          number line is the absolute value of their difference.
+                        absolute value of their difference.             f. Interpret sums and differences of rational numbers by describing real
+                     f) Interpret sums and differences of rational          world contexts.
+                        numbers.
+                 Apply and extend previous understandings of         The expectation of the student is to apply and extend previous
+                 numbers to multiply and divide rational numbers.    understandings of numbers to multiply and divide rational numbers.
+                     a) Multiply and divide rational numbers.           a. Multiply and divide rational numbers to include fractions, decimals
+                     b) Determine that a number and its                     and integers.
+                        reciprocal have a product of 1                  b. Determine that a number and its reciprocal have a product of 1
+                        (multiplicative inverse).                           (multiplicative inverse).
+                     c) Understand that every quotient of integers      c. Understand that integers can be divided, provided that the divisor is
+                        (with non-zero divisor) is a rational               not zero, and every quotient of integers (with non-zero divisor) is a
+   7.NS.A.2
+                        number.                                             rational number. If p and q are integers, then –(p/q) = (–p)/q = p/(–q).
+                     d) Convert a rational number to a decimal.         d. Convert a rational number to a decimal using long division.
+                     e) Understand that all rational numbers can        e. Understand that some rational numbers can be written as integers
+                        be written as fractions or decimal numbers          and all rational numbers can be written as fractions or decimal
+                        that terminate or repeat.                           numbers that terminate or repeat.
+                     f) Interpret products and quotients of             f. Interpret products and quotients of rational numbers by describing
+                        rational numbers by describing real-world           real-world contexts.
+                        contexts.
+                 Solve problems involving the four arithmetic        The expectation of the student is to solve real-world and mathematical
+   7.NS.A.3
+                 operations with rational numbers.                   problems involving the four arithmetic operations with rational numbers.
+
+                           EXPRESSIONS, EQUATIONS AND INEQUALITIES: EEI
+GLEs – GRADE 7
+   7.EEI.A       Use properties of operations to generate equivalent expressions.
+                 Apply properties of operations to simplify and to      The expectation of the student is to apply properties of operations (e.g.,
+   7.EEI.A.1     factor linear algebraic expressions with rational      commutative, associative, distributive) to simplify and to factor linear
+                 coefficients.                                          algebraic expressions with rational coefficients.
+                 Understand how to use equivalent expressions to        The expectation of the student is to understand how to use equivalent
+   7.EEI.A.2     clarify quantities in a problem.                       expressions to clarify quantities in a problem context. (e.g., Adding a 5% tax
+                                                                        to the total is the same as multiplying the total by 1.05; a + 0.05a = 1.05a.)
+   7.EEI.B       Solve problems using numerical and algebraic expressions and equations.
+                 Solve multi-step problems posed with rational          The expectation of the student is to solve multistep real-life and
+                 numbers.                                               mathematical problems posed with positive and negative rational numbers
+                     a) Convert between equivalent forms of the         in any form (e.g., integers, fractions and decimals) by applying properties of
+   7.EEI.B.3            same number.                                    operations as strategies to calculate with numbers.
+                     b) Assess the reasonableness of answers                a. Convert between forms as appropriate.
+                        using mental computation and estimation             b. Assess the reasonableness of answers using mental computation and
+                        strategies.                                             estimation strategies.
+                 Write and/or solve linear equations and                The expectation of the student is to write and/or solve real-world and
+                 inequalities in one variable.                          mathematical problems by using and solving linear equations and
+                     a) Write and/or solve equations of the form        inequalities in one variable.
+                        x+p = q and px = q in which p and q are             a. Write and solve equations of the form x+p = q and
+                        rational numbers.                                       px = q in which p and q are rational numbers.
+                     b) Write and/or solve two-step equations of            b. Write and solve two-step equations of the form
+   7.EEI.B.4            the form px + q = r and p(x + q) = r, where             px + q = r and p(x + q) = r, where p, q and r are rational numbers and
+                        p, q and r are rational numbers, and                    interpret the meaning of the solution in the context of the problem.
+                        interpret the meaning of the solution in            c. Write and solve inequalities of the form px + q > r or
+                        the context of the problem.                             px + q < r, where p, q and r are rational numbers.
+                     c) Write, solve and/or graph inequalities of           d. Write, solve and/or graph the solution set of the inequality and
+                        the form px + q > r or px + q < r, where p, q           interpret it in the context of a problem.
+                        and r are rational numbers.
+
+                                       GEOMETRY AND MEASUREMENT: GM
+  7.GM.A         Draw and describe geometrical figures and describe the relationships between them.
+
+
+GLEs – GRADE 7
+                 Solve problems involving scale drawings of real     The expectation of the student is to solve problems involving scale drawings
+                 objects and geometric figures, including            of real-world objects and geometric figures, including computing actual
+  7.GM.A.1       computing actual lengths and areas from a scale     lengths and areas from a scale drawing and reproducing the drawing at a
+                 drawing and reproducing the drawing at a            different scale.
+                 different scale.
+                                                                     The expectation of the student is to use a variety of tools (freehand, ruler,
+                 Use a variety of tools to construct geometric
+                                                                     protractor and/or technology) to construct geometric shapes.
+                 shapes.
+                                                                         a. Construct triangles given 3 sides, given 3 angles or given a
+                    a) Determine if provided constraints will
+                                                                            combination of 3 sides and/or angles and decide if the measurements
+  7.GM.A.2              create a unique triangle through
+                                                                            determine a unique triangle, more than one triangle or no triangle.
+                        construction.
+                                                                         b. Construct special quadrilaterals given specific parameters about
+                    b) Construct special quadrilaterals given
+                                                                            angles or sides. (e.g., kite, trapezoid, rhombus, parallelogram and
+                        specific parameters.
+                                                                            rectangle)
+                                                                     The expectation of the student is to describe two-dimensional cross sections
+                 Describe two-dimensional cross sections of
+  7.GM.A.3                                                           of pyramids, cones, cylinders and prisms including cross-sections that are not
+                 pyramids, prisms, cones and cylinders.
+                                                                     necessarily parallel to the base of the figure.
+                                                                     The expectation of the student is to understand concepts of circles.
+                 Understand concepts of circles.
+                                                                         a. Demonstrate an understanding of the relationships among radius,
+                    a) Analyze the relationships among the
+                                                                            diameter and circumference of a circle.
+                       circumference, the radius, the diameter,
+                                                                         b. Understand the relationship among the circumference, the diameter
+  7.GM.A.4             the area and Pi in a circle.
+                                                                            and 𝜋𝜋.
+                    b) Know and apply the formulas for
+                                                                         c. Explore the relationship between circumference and area of a circle.
+                       circumference and area of circles to solve
+                                                                         d. Know and apply the formulas for circumference and area of circles to
+                       problems.
+                                                                            solve real-world and mathematical problems.
+  7.GM.B         Apply and extend previous understanding of angle measure, area and volume.
+                                                                     The expectation of the student is to use facts about supplementary,
+                 Use angle properties to write and solve equations
+  7.GM.B.5                                                           complementary, vertical and adjacent angles in a multi-step problem to
+                 for an unknown angle.
+                                                                     write and solve simple equations for an unknown angle in a figure.
+
+
+
+
+GLEs – GRADE 7
+                                                                     The expectation of the student is to understand the relationship between area,
+                 Understand the relationship between area,           surface area and volume. Solve real-world and mathematical problems involving
+                 surface area and volume.                            area, volume and surface area.
+                     a) Find the area of triangles, quadrilaterals      a. Understand the concept of area and find area of triangles,
+  7.GM.B.6              and other polygons composed of triangles           quadrilaterals and other polygons composed of triangles and
+                        and rectangles.                                    rectangles.
+                     b) Find the volume and surface area of             b. Understand the concepts of volume and surface area and find related
+                        prisms, pyramids and cylinders.                    measures for cubes, right triangular prisms and pyramids, right
+                                                                           rectangular prisms and pyramids and cylinders.
+
+                           DATA ANALYSIS, STATISTICS AND PROBABILITY: DSP
+  7.DSP.A        Use random sampling to draw inferences about a population.
+                 Understand that statistics can be used to gain      The expectation of the student is to understand that statistics can be used to
+                 information about a population by examining a       gain information about a population by examining a sample of the
+                 sample of the population.                           population.
+                     a) Understand that a sample is a subset of a        a. Understand that a sample is a subset of a population and both the
+                        population.                                          sample and the population have similar characteristics.
+  7.DSP.A.1          b) Understand that generalizations from a           b. Understand that generalizations from a sample are valid only if the
+                        sample are valid only if the sample is               sample is representative of the population.
+                        representative of the population.                c. Understand that random sampling is used to produce representative
+                     c) Understand that random sampling is used              samples and support valid inferences.
+                        to produce representative samples and
+                        support valid inferences.
+                                                                     The expectation of the student is to use data from multiple samples to draw
+                 Use data from multiple samples to draw              inferences about a population and investigate variability in estimates of the
+                 inferences about a population and investigate       characteristic of interest. (e.g., Estimate the mean word length in a book by
+  7.DSP.A.2
+                 variability in estimates of the characteristic of   randomly sampling words from the book; predict the winner of a school
+                 interest.                                           election based on randomly sampled survey data; gauge how far off each of
+                                                                     the estimates or predictions might be.)
+  7.DSP.B        Draw informal comparative inferences about two populations.
+
+
+
+
+GLEs – GRADE 7
+                                                                   The expectation of the student is to analyze different data distributions using
+                                                                   statistical measures. Informally assess the degree of visual overlap of two
+                                                                   numerical data distributions with similar variabilities, measuring the
+                 Analyze different data distributions using        difference between the centers by expressing it as a multiple of a measure of
+  7.DSP.B.3
+                 statistical measures.                             variability. (e.g., The mean height of players on the basketball team is 10 cm
+                                                                   greater than the mean height of players on the soccer team, about twice the
+                                                                   variability (mean absolute deviation) on either team; on a dot plot, the
+                                                                   separation between the two distributions of heights is noticeable.)
+                 Compare the numerical measures of center,         The expectation of the student is to compare the numerical measures of
+                 measures of frequency and measures of variability center (mean and median), measures of frequency (mode) and measures of
+  7.DSP.B.4
+                 from two random samples to draw inferences        variability (range, interquartile range and mean absolute deviation) from two
+                 about the population.                             random samples to draw inferences about the populations.
+  7.DSP.C        Develop, use and evaluate probability models.
+                                                                      The expectation of the student is to investigate probability of chance events.
+                 Investigate the probability of chance events.
+                                                                         a. Determine probabilities of simple (single) events.
+                     a) Determine probabilities of simple events.
+                                                                         b. Understand that the probability of a chance event is a number
+                     b) Understand that the probability of a
+  7.DSP.C.5                                                                  between 0 and 1 that expresses the likelihood of the event occurring.
+                         chance event is a number between 0 and 1
+                                                                         c. Understand that a probability near 0 indicates an unlikely event, a
+                         that expresses the likelihood of the event
+                                                                             probability near 1/2 indicates an event that is neither unlikely nor
+                         occurring.
+                                                                             likely and a probability near 1 indicates a likely event.
+                 Investigate the relationship between theoretical     The expectation of the student is to investigate the relationship between
+                 and experimental probabilities for simple events.    theoretical and experimental probabilities for simple events.
+                     a) Predict outcomes using theoretical               a. Predict outcomes using theoretical probability.
+                         probability.                                    b. Perform experiments that model theoretical probability.
+  7.DSP.C.6
+                     b) Perform experiments that model                   c. Compare theoretical and experimental probabilities.
+                         theoretical probability.
+                     c) Compare theoretical and experimental
+                         probabilities.
+
+
+
+
+GLEs – GRADE 7
+                                                                   The expectation of the student is to explain possible discrepancies between
+                                                                   a developed probability model and observed frequencies. Develop a
+                                                                   probability model and use it to find probabilities of events. Compare
+                 Explain possible discrepancies between a          probabilities from a model to observed frequencies; if the agreement is not
+                 developed probability model and observed          good, explain possible sources of the discrepancy.
+                 frequencies.                                          a. Develop a uniform probability model by assigning equal probability to
+                     a) Develop a uniform probability model by            all outcomes and use the model to determine probabilities of events.
+                        assigning equal probability to all                (e.g., If a student is selected at random from a class, find the
+  7.DSP.C.7
+                        outcomes, and use the model to                    probability that Jane will be selected and the probability that a girl
+                        determine probabilities of events.                will be selected.)
+                     b) Develop a probability model (which may         b. Develop a probability model (which may not be uniform) by
+                        not be uniform) by observing frequencies          observing frequencies in data generated from a chance process. (e.g.,
+                        in data generated from a chance process.          Find the approximate probability that a spinning penny will land
+                                                                          heads up or that a tossed paper cup will land open-end down. Do the
+                                                                          outcomes for the spinning penny appear to be equally likely based on
+                                                                          the observed frequencies?)
+                                                                   The expectation of the student is to find probabilities of compound events
+                 Find probabilities of compound events using
+                                                                   using organized lists, tables, tree diagrams and simulations.
+                 organized lists, tables, tree diagrams and
+                                                                       a. Represent sample spaces for compound events using methods such
+                 simulations.
+                                                                          as organized lists, tables and tree diagrams. For an event described in
+  7.DSP.C.8          a) Represent the sample space of a
+                                                                          everyday language (e.g., “rolling double sixes”), identify the outcomes
+                        compound event.
+                                                                          in the sample space which compose the event.
+                     b) Design and use a simulation to generate
+                                                                       b. Design and use a simulation to generate frequencies for compound
+                        frequencies for compound events.
+                                                                          events.
+
+
+
+
+GLEs – GRADE 7
+
