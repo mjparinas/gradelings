@@ -11,6 +11,7 @@ import { manifest as britishColumbia } from "./grades/manifest";
 import { manifest as illinois } from "./illinois/manifest";
 import { manifest as indiana } from "./indiana/manifest";
 import { manifest as kentucky } from "./kentucky/manifest";
+import { manifest as louisiana } from "./louisiana/manifest";
 import { manifest as maine } from "./maine/manifest";
 import { manifest as manitoba } from "./manitoba/manifest";
 import { manifest as maryland } from "./maryland/manifest";
@@ -27,6 +28,7 @@ import { manifest as novaScotia } from "./nova-scotia/manifest";
 import { manifest as nunavut } from "./nunavut/manifest";
 import { manifest as northwestTerritories } from "./nwt/manifest";
 import { manifest as ohio } from "./ohio/manifest";
+import { manifest as oklahoma } from "./oklahoma/manifest";
 import { manifest as ontario } from "./ontario/manifest";
 import { manifest as oregon } from "./oregon/manifest";
 import { manifest as pennsylvania } from "./pennsylvania/manifest";
@@ -63,6 +65,7 @@ const MANIFESTS = [
   illinois,
   indiana,
   kentucky,
+  louisiana,
   maine,
   manitoba,
   maryland,
@@ -79,6 +82,7 @@ const MANIFESTS = [
   nunavut,
   northwestTerritories,
   ohio,
+  oklahoma,
   ontario,
   oregon,
   pennsylvania,

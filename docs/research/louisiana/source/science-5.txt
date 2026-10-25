@@ -1,0 +1,495 @@
+                                                                                                                                                                          5
+                                                                                                                                                                5-PS1-1
+
+
+MATTER AND ITS INTERACTIONS
+            Performance Expectation                       Develop a model to describe that matter is made of particles too small to be seen.
+
+
+                                                          Examples of evidence could include adding air to expand a basketball, compressing air in a syringe, dissolving sugar
+             Clarification Statement                      in water, or evaporating salt water. Does not include atomic scale mechanism of evaporation and condensation or
+                                                          defining the unseen particles.
+
+
+        Science & Engineering Practices                                 Disciplinary Core Ideas                                      Crosscutting Concepts
+1. Asking questions and defining problems                 STRUCTURE AND PROPERTIES OF MATTER                            SCALE, PROPORTION, AND QUANTITY
+2. Developing and using models: Modeling in 3–5           Matter of any type can be subdivided into particles that      Natural objects and/or observable phenomena exist
+   builds on K–2 experiences and progresses to building   are too small to see, but even then the matter still exists   from the very small to the immensely large or from very
+   and revising simple models and using models to         and can be detected by other means. A model showing           short to very long time periods.
+   represent events and design solutions.                 that gases are made from matter particles that are too
+                                                          small to see and are moving freely around in space can
+ • Develop and/or use models to describe and/or           explain many observations, including boiling water, the
+   predict phenomena.                                     inflation and shape of a balloon, and the effects of air on
+3. Planning and carrying out Investigations               larger particles or objects. (UE.PS1A.a)
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                  1
+                                                                                                                                                                   MARCH 2017
+                                                                                                                                                                      5
+                                                                                                                                                           5-PS1-2
+
+
+MATTER AND ITS INTERACTIONS
+                                                          Measure and graph quantities to provide evidence that regardless of the type of change that occurs when heating,
+            Performance Expectation                       cooling, or mixing substances, the total amount of matter is conserved.
+
+
+                                                          Examples of chemical changes includes reactions that produce new substances with new properties. Examples of
+             Clarification Statement                      physical changes could include phase changes, dissolving, or mixing.
+
+
+
+        Science & Engineering Practices                                 Disciplinary Core Ideas                                  Crosscutting Concepts
+1. Asking questions and defining problems                 STRUCTURE AND PROPERTIES OF MATTER                        ENERGY AND MATTER
+2. Developing and using models                            The amount of mass in matter is conserved when it         Matter flows and cycles can be tracked in terms of mass
+                                                          changes form, even in transitions in which it seems to    of the substances before and after a process occurs.
+3. Planning and carrying out Investigations               vanish. (UE.PS1A.b)                                       The total mass of the substances does not change. This
+4. Analyzing and interpreting data                                                                                  is what is meant by conservation of matter. Matter is
+                                                          CHEMICAL REACTIONS                                        transported into, out of, and within systems.
+5. Using mathematics and computational thinking:          When two or more different substances are mixed, a
+   Mathematical and computational thinking in             new substance with different properties may be formed.
+   3-5 builds on K-2 experiences and progresses to        (UE.PS1B.a)
+   extending quantitative measurements to a variety
+   of physical properties and using computation           No matter what reaction or change in properties occurs,
+   and mathematics to analyze data and compare            the total mass of the substances does not change.
+   alternative design solutions.                          (UE.PS1B.b)
+
+ • Describe, measure, estimate, and/or graph quantities
+   (e.g., area, volume, time) to address scientific and
+   engineering questions and problems.
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                             2
+                                                                                                                                                               MARCH 2017
+                                                                                                                                                                                   5
+                                                                                                                                                                       5-PS1-3
+
+
+MATTER AND ITS INTERACTIONS
+             Performance Expectation                           Make observations and measurements to identify materials based on their properties.
+
+
+                                                               Examples of materials to be identified could include baking soda and other powders, metals, minerals, or liquids.
+                                                               Examples of properties could include color, hardness, reflectivity, electrical conductivity, thermal conductivity,
+              Clarification Statement                          response to magnetic forces, or solubility; density is not intended to be used as an identifiable property. No attempt is
+                                                               made to define the unseen particles or explain the atomic-scale mechanism of evaporation and condensation.
+
+
+         Science & Engineering Practices                                     Disciplinary Core Ideas                                       Crosscutting Concepts
+1. Asking questions and defining problems                      STRUCTURE AND PROPERTIES OF MATTER                           SCALE, PROPORTION, AND QUANTITY
+2. Developing and using models                                 Measurements of a variety of properties can be used to       Standard units are used to measure and describe
+                                                               identify materials. (UE.PS1A.c)                              physical quantities such as mass, time, temperature,
+3. Planning and carrying out Investigations: Planning                                                                       and volume.
+   and carrying out investigations to answer questions
+   (science) or test solutions (engineering) to problems
+   in 3–5 builds on K–2 experiences and progresses to
+   include investigations that control variables and provide
+   evidence to support explanations or design solutions.
+ • Make observations and/or measurements to
+   produce data to serve as the basis for evidence for an
+   explanation of a phenomenon or test a design solution.
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                       3
+                                                                                                                                                                           MARCH 2017
+                                                                                                                                                                          5
+                                                                                                                                                              5-PS1-4
+
+
+MATTER AND ITS INTERACTIONS
+            Performance Expectation                         Conduct an investigation to determine whether the mixing of two or more substances results in new substances.
+
+
+
+                                                            Examples of interactions forming new substances can include mixing baking soda and vinegar. Examples of
+             Clarification Statement                        interactions not forming new substances can include mixing baking soda and water.
+
+
+
+        Science & Engineering Practices                                  Disciplinary Core Ideas                                   Crosscutting Concepts
+1. Asking questions and defining problems                   CHEMICAL REACTIONS                                       CAUSE AND EFFECT
+2. Developing and using models                              When two or more different substances are mixed,         Cause and effect relationships are routinely identified,
+                                                            a new substance with different properties may be         tested, and used to explain change.
+3. Planning and carrying out Investigations: Planning       formed. (UE.PS1B.a)
+   and carrying out investigations to answer questions
+   or test solutions to problems in 3–5 builds on K–2
+   experiences and progresses to include investigations
+   that control variables and provide evidence to
+   support explanations or design solutions.
+ • Plan and conduct an investigation collaboratively to
+   produce data to serve as the basis for evidence, using
+   fair tests in which variables are controlled and the
+   number of trials considered.
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                4
+                                                                                                                                                                  MARCH 2017
+                                                                                                                                                                               5
+                                                                                                                                                                   5-PS2-1
+
+
+MOTION AND STABILITY: FORCES AND INTERACTIONS
+            Performance Expectation                           Support an argument that the gravitational force exerted by the Earth is directed down.
+
+
+                                                              “Down” is a local description of the direction that points toward the center of the spherical Earth. Earth’s mass
+                                                              causes objects to have a force on them that points toward the center of the Earth, “down”. Support for arguments
+             Clarification Statement                          can be drawn from diagrams, evidence, and data that are provided. This does not include mathematical
+                                                              representation of gravitational force.
+
+
+        Science & Engineering Practices                                     Disciplinary Core Ideas                                     Crosscutting Concepts
+1. Asking questions and defining problems                     TYPES OF INTERACTIONS                                       CAUSE AND EFFECT
+2. Developing and using models                                The gravitational force of Earth acting on an object near   Cause and effect relationships are routinely identified,
+                                                              Earth’s surface pulls that object toward the planet’s       tested, and used to explain change.
+3. Planning and carrying out Investigations                   center. (UE.PS2B.c)
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence: Engaging in
+   argument from evidence in 3–5 builds on K–2 experiences
+   and progresses to critiquing the scientific explanations
+   or solutions proposed by peers by citing relevant
+   evidence about the natural and designed world(s)
+ • Construct and/or support an argument with
+   evidence, data, and/or a model.
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                     5
+                                                                                                                                                                       MARCH 2017
+                                                                                                                                                                       5
+                                                                                                                                                            5-PS3-1
+
+
+MATTER AND ENERGY IN ORGANISMS AND ECOSYSTEMS
+                                                          Use models to describe that energy in animals’ food (used for body repair, growth, motion, and to maintain body
+            Performance Expectation                       warmth) was once energy from the sun.
+
+
+
+             Clarification Statement                      Examples of models could include diagrams or flowcharts.
+
+
+
+
+        Science & Engineering Practices                                 Disciplinary Core Ideas                                   Crosscutting Concepts
+1. Asking questions and defining problems                 ENERGY IN CHEMICAL PROCESSES AND                          ENERGY AND MATTER
+2. Developing and using models: Modeling in 3–5           EVERYDAY LIFE                                             Energy can be transferred in various ways and
+   builds on K–2 experiences and progresses to building   The energy released from food was once energy from        between objects.
+   and revising simple models and using models to         the sun that was captured by plants in the chemical
+   represent events and design solutions.                 process that forms plant matter (from air and water).
+                                                          (UE.PS3D.b)
+ • Develop and/or use models to describe and/or
+   predict phenomena.                                     ORGANIZATION FOR MATTER AND ENERGY
+3. Planning and carrying out Investigations               FLOW IN ORGANISMS
+                                                          Food provides animals with the materials they need
+4. Analyzing and interpreting data                        for body repair and growth and energy they need to
+5. Using mathematics and computational thinking           maintain body warmth and for motion. (UE.LS1C.a)
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                            6
+                                                                                                                                                                MARCH 2017
+                                                                                                                                                                          5
+                                                                                                                                                                5-LS1-1
+
+
+FROM MOLECULES TO ORGANISMS: STRUCTURES AND PROCESSES
+            Performance Expectation                       Ask questions about how air and water affect the growth of plants.
+
+
+
+                                                          Emphasis is on the idea that plant matter comes mostly from air and water, not from the soil. The chemical
+             Clarification Statement                      processes of photosynthesis and cellular respiration are not addressed at this grade level.
+
+
+
+        Science & Engineering Practices                                 Disciplinary Core Ideas                                     Crosscutting Concepts
+1. Asking questions and defining problems: Asking         ORGANIZATION FOR MATTER AND ENERGY                          ENERGY AND MATTER
+   questions (science) and defining problems              FLOW IN ORGANISMS                                           Matter is transported into, out of, and within systems.
+   (engineering) in 3-5 builds on K-2 experiences and     Plants acquire their material for growth chiefly from air
+   progresses to specifying qualitative relationships.    and water. (UE.LS1C.b)
+ • Ask questions that can be investigated and predict
+   reasonable outcomes based on patterns such as
+   cause and effect relationships.
+2. Developing and using models
+3. Planning and carrying out Investigations
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                7
+                                                                                                                                                                   MARCH 2017
+                                                                                                                                                                          5
+                                                                                                                                                               5-LS2-1
+
+
+ECOSYSTEMS
+            Performance Expectation                       Develop a model to describe the movement of matter among plants, animals, decomposers, and the environment.
+
+
+                                                          Emphasis is on the idea that matter that is not food (air, water, decomposed materials in soil) is changed by plants
+             Clarification Statement                      into matter that is food. Examples of systems could include organisms, ecosystems of the Earth not including
+                                                          molecular explanations.
+
+
+        Science & Engineering Practices                                  Disciplinary Core Ideas                                   Crosscutting Concepts
+1. Asking questions and defining problems                 INTERDEPENDENT RELATIONSHIPS IN ECOSYSTEMS SYSTEMS AND SYSTEM MODELS
+2. Developing and using models: Modeling in 3–5           The food of almost any kind of animal can be traced  A system can be described in terms of its components
+   builds on K–2 experiences and progresses to building   back to plants. Organisms are related in food webs   and their interactions.
+   and revising simple models and using models to         in which some animals eat plants for food and other
+   represent events and design solutions.                 animals eat the animals that eat plants. (UE.LS2A.a)
+
+ • Develop and/or use models to describe and/or           Some organisms, such as fungi and bacteria, break
+   predict phenomena.                                     down dead organisms and therefore operate as
+                                                          “decomposers.” Decomposition eventually restores
+3. Planning and carrying out investigations               (recycles) some materials back to the soil. (UE.LS2A.b)
+4. Analyzing and interpreting data                        Organisms can survive only in environments in which their
+5. Using mathematics and computational thinking           particular needs are met. A healthy ecosystem is one in
+                                                          which multiple species of different types are each able to
+6. Constructing explanations and designing solutions
+                                                          meet their needs in a relatively stable web of life. (UE.LS2A.c)
+7. Engaging in argument from evidence
+                                                        Newly introduced species can damage the balance of an
+8. Obtaining, evaluating, and communicating information ecosystem. (UE.LS2A.d)
+                                                          CYCLES OF MATTER AND ENERGY TRANSFER
+                                                          IN ECOSYSTEMS
+                                                          Matter cycles between the air and soil and among plants,
+                                                          animals, decomposers, and microbes as these organisms
+                                                          live and die. Organisms obtain gases, and water, from the
+                                                          environment, and release waste matter (gas, liquid, or
+                                                          solid) back into the environment. (UE.LS2B.a)
+
+
+                                                                                                                                                                                 8
+                                                                                                                                                                   MARCH 2017
+                                                                                                                                                                                5
+                                                                                                                                                                  5-ESS1-1
+
+
+EARTH’S PLACE IN THE UNIVERSE
+                                                              Support an argument that differences in the apparent brightness of the sun compared to other stars is due to their
+            Performance Expectation                           relative distances from the Earth.
+
+
+                                                              Examples include the relative distances of the stars, but not the sizes. It does not include other factors that affect
+             Clarification Statement                          apparent brightness (such as stellar masses, age, stage).
+
+
+
+        Science & Engineering Practices                                     Disciplinary Core Ideas                                      Crosscutting Concepts
+1. Asking questions and defining problems                     THE UNIVERSE AND ITS STARS                                  SCALE, PROPORTION, AND QUANTITY
+2. Developing and using models                                The sun is a star that appears larger and brighter than     Natural objects and/or observable phenomena exist
+                                                              other stars because it is closer. Stars range greatly in    from the very small to the immensely large or from very
+3. Planning and carrying out investigations                   their distance from Earth. (UE.ESS1A.a)                     short to very long time periods.
+4. Analyzing and interpreting data
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence: Engaging in
+   argument from evidence in 3–5 builds on K–2 experiences
+   and progresses to critiquing the scientific explanations
+   or solutions proposed by peers by citing relevant
+   evidence about the natural and designed world(s).
+ • Construct and/or support an argument with
+   evidence, data, and/or a model.
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                                       9
+                                                                                                                                                                        MARCH 2017
+                                                                                                                                                                         5
+                                                                                                                                                           5-ESS1-2
+
+
+EARTH’S PLACE IN THE UNIVERSE
+                                                          Represent data in graphical displays to reveal patterns of daily changes in length and direction of shadows, day and
+            Performance Expectation                       night, and the seasonal appearance of some stars in the night sky.
+
+
+                                                          Patterns could include the position and motion of Earth with respect to the sun and selected stars that are visible
+             Clarification Statement                      only in particular months; not including the causes of the seasons.
+
+
+
+        Science & Engineering Practices                                 Disciplinary Core Ideas                                    Crosscutting Concepts
+1. Asking questions and defining problems                 EARTH AND THE SOLAR SYSTEM                                 PATTERNS
+2. Developing and using models                            The orbits of Earth around the sun and of the moon         Similarities and differences in patterns can be used to
+                                                          around Earth, together with the rotation of Earth about    sort, classify, communicate and analyze simple rates of
+3. Planning and carrying out investigations               an axis between its North and South poles, cause           change for natural phenomena and designed products.
+4. Analyzing and interpreting data: Analyzing data in     observable patterns. These include: day and night,
+   3–5 builds on K–2 experiences and progresses to        daily changes in the length and direction of shadows,
+   introducing quantitative approaches to collecting      and different positions of the sun, moon, and stars at
+   data and conducting multiple trials of qualitative     different times of the day, month, and year.
+   observations. When possible and feasible, digital      (UE.ESS1B.a)
+   tools should be used.
+ • Represent data in tables and/or various graphical
+   displays (bar graphs, pictographs and/or pie charts)
+   to reveal patterns that indicate relationships.
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                           10
+                                                                                                                                                                  MARCH 2017
+                                                                                                                                                                        5
+                                                                                                                                                           5-ESS2-1
+
+
+EARTH’S SYSTEMS
+            Performance Expectation                       Develop a model using an example to describe ways the geosphere, biosphere, hydrosphere, and/or atmosphere interact.
+
+
+                                                          Examples could include the influence of the ocean on ecosystems, landform shape, and climate; the influence
+                                                          of the atmosphere on landforms and ecosystems through weather and climate; and the influence of mountain
+             Clarification Statement                      ranges on winds and clouds in the atmosphere. The geosphere, hydrosphere, atmosphere, and biosphere are each
+                                                          a system.
+
+
+        Science & Engineering Practices                                 Disciplinary Core Ideas                                   Crosscutting Concepts
+1. Asking questions and defining problems                 EARTH MATERIALS AND SYSTEMS                                SYSTEMS AND SYSTEM MODELS
+2. Developing and using models: Modeling in 3–5           Earth’s major systems are the geosphere (solid and         A system can be described in terms of its components
+   builds on K–2 experiences and progresses to building   molten rock, soil, and sediments), the hydrosphere         and their interactions.
+   and revising simple models and using models to         (water and ice), the atmosphere (air), and the biosphere
+   represent events and design solutions.                 (living things, including humans). These systems
+                                                          interact in multiple ways to affect Earth’s surface
+ • Develop and/or use models to describe and/or           materials and processes. The ocean supports a variety
+   predict phenomena.                                     of ecosystems and organisms, shapes landforms, and
+3. Planning and carrying out investigations               influences climate. Winds and clouds in the atmosphere
+                                                          interact with the landforms to determine patterns of
+4. Analyzing and interpreting data
+                                                          weather. (UE.ESS2A.b)
+5. Using mathematics and computational thinking
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                            11
+                                                                                                                                                                 MARCH 2017
+                                                                                                                                                                          5
+                                                                                                                                                           5-ESS2-2
+
+
+EARTH’S SYSTEMS
+                                                          Describe and graph the amounts and percentages of water and fresh water in various reservoirs to provide evidence
+            Performance Expectation                       about the distribution of water on Earth.
+
+
+
+             Clarification Statement                      Examples include oceans, lakes, rivers, glaciers, ground water, and polar ice caps.
+
+
+
+
+        Science & Engineering Practices                                 Disciplinary Core Ideas                                     Crosscutting Concepts
+1. Asking questions and defining problems                 THE ROLES OF WATER IN EARTH’S                              SCALE, PROPORTION, AND QUANTITY
+2. Developing and using models                            SURFACE PROCESSES                                          Standard units are used to measure and describe
+                                                          Nearly all of Earth’s available water is in the ocean.     physical quantities such as mass, time, temperature,
+3. Planning and carrying out investigations               Most fresh water is in glaciers or underground; only       and volume.
+4. Analyzing and interpreting data                        a tiny fraction is in streams, lakes, wetlands, and the
+                                                          atmosphere. (UE.ESS2C.a)
+5. Using mathematics and computational thinking:
+   Mathematical and computational thinking in 3–5         Liquid water can become the gas form of water (water
+   builds on K–2 experiences and progresses to            vapor) and liquid water can become a solid as ice.
+   extending quantitative measurements to a variety       (UE.ESS2C.b)
+   of physical properties and using computation
+   and mathematics to analyze data and compare
+   alternative design solutions.
+ • Describe, measure, estimate, and/or graph quantities
+   (e.g., area, volume, time) to address scientific and
+   engineering questions and problems.
+6. Constructing explanations and designing solutions
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                              12
+                                                                                                                                                                   MARCH 2017
+                                                                                                                                                                            5
+                                                                                                                                                              5-ESS3-1
+
+
+EARTH AND HUMAN ACTIVITY
+                                                           Generate and compare multiple solutions about ways individual communities can use science to protect the Earth’s
+            Performance Expectation                        resources and environment.
+
+
+                                                           Examples of solutions can include cleanup of oil spills, protecting against coastal erosion, or prevention of polluted
+             Clarification Statement                       runoff into waterways.
+
+
+
+        Science & Engineering Practices                                  Disciplinary Core Ideas                                     Crosscutting Concepts
+1. Asking questions and defining problems                  HUMAN IMPACTS ON EARTH SYSTEMS                          SYSTEMS AND SYSTEM MODELS
+2. Developing and using models                             Human activities in agriculture, industry, and everyday A system can be described in terms of its components
+                                                           life have had major effects on the land, vegetation,    and their interactions.
+3. Planning and carrying out investigations                streams, ocean and the atmosphere. But individuals and
+4. Analyzing and interpreting data                         communities are doing things to help protect Earth’s
+                                                           resources and environments. (UE.ESS3C.a)
+5. Using mathematics and computational thinking
+6. Constructing explanations (science) and designing       DEVELOPING POSSIBLE SOLUTIONS
+   solutions (engineering) in 3–5 builds on K–2            Tests are often designed to identify failure points or
+   experiences and progresses to the use of evidence in    difficulties, which suggest the elements of the design
+   constructing explanations that specify variables that   that need to be improved. (ETS.UE.1B.c)
+   describe and predict phenomena and in designing
+   multiple solutions to design problems.
+ • Generate and compare multiple solutions to a
+   problem based on how well they meet the criteria
+   and constraints of the design solution.
+7. Engaging in argument from evidence
+8. Obtaining, evaluating, and communicating information
+
+
+
+
+                                                                                                                                                                              13
+                                                                                                                                                                    MARCH 2017
+
