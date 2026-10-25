@@ -1,9 +1,12 @@
 import type { Unit } from "../../types";
+import { SOCIAL_2 as CALIFORNIA_2 } from "../../california/units/social-g2";
 import { bankUnit, type Q } from "../own";
+import { copyOf, from } from "./kit";
 
 // Nevada Grade 2 social studies, Our National Identity and Culture: events and symbols that shaped the nation's identity
 // (SS.2.10), the role and responsibilities of the president (SS.2.17), and national landmarks (SS.2.21), with the
-// holidays that remember them.
+// holidays that remember them, plus copies of California's difference makers (SS.2.11, SS.2.15) and family journeys
+// (SS.2.23) and making and trading (SS.2.25) units without their California places, with Nevada items added.
 
 const SYMBOLS: Q[] = [
   ["What does each star on the American flag stand for?", "a state", ["a city", "a lake", "a president"], "There are 50 stars."],
@@ -35,6 +38,33 @@ const SYMBOLS: Q[] = [
   ["How many years is one President's term?", "four", ["one", "ten", "forty"], "A President can serve two terms.", true],
 ];
 
+const DIFFERENCE_EXTRA: Q[] = [
+  ["Sarah Winnemucca, a Northern Paiute woman from Nevada, made a difference by…", "speaking and writing for her people's rights", ["building a dam", "inventing the car", "flying to the moon"], "She gave speeches across the country."],
+  ["Anne Martin helped women in Nevada win the right to…", "vote", ["drive", "swim", "read"], "Nevada women won the vote in 1914."],
+  ["Ruby Duncan helped families in Las Vegas get…", "food, health care and jobs", ["new cars", "toys", "boats"], "She worked to help poor families."],
+  ["Dat So La Lee was a Washoe artist who made beautiful…", "baskets", ["cars", "rockets", "bridges"], "Her baskets are in museums today."],
+  ["A person who makes a difference often…", "helps others and solves problems", ["only helps themselves", "gives up", "breaks rules"], "Anyone can make a difference.", true],
+  ["Which is a way a 2nd grader can make a difference?", "help pick up litter at a park", ["throw trash on the ground", "be unkind to a new student", "waste water"], "Small acts help a community.", true],
+];
+
+const JOURNEYS_EXTRA: Q[] = [
+  ["Long ago, many families came to Nevada in…", "covered wagons", ["airplanes", "cars", "rockets"], "Wagons followed trails across the desert."],
+  ["In 1869 a new way to travel across Nevada was the…", "railroad", ["airplane", "subway", "spaceship"], "Trains were much faster than wagons."],
+  ["Today, many families move to Las Vegas by car or…", "airplane", ["covered wagon", "stagecoach", "canoe"], "Las Vegas has a big airport."],
+  ["Many people moved to Nevada in 1859 because they hoped to find…", "silver", ["oceans", "snow", "rain forests"], "The Comstock Lode was a huge silver find."],
+  ["A family moves to Nevada to be near grandparents. Why did they move?", "to be near family", ["to find gold", "to escape a flood", "to go to the beach"], "Families move for many reasons.", true],
+  ["Basque families came to Nevada from Spain and France. To find Spain on a map, look in…", "Europe", ["Asia", "Australia", "South America"], "Spain is in southwest Europe.", true],
+];
+
+const TRADING_EXTRA: Q[] = [
+  ["Ranchers in northern Nevada raise cattle. Beef from the ranch reaches stores by…", "truck and train", ["canoe", "hot air balloon", "bicycle only"], "Goods travel on highways and railroads."],
+  ["Farmers near Fallon grow alfalfa, a crop that is used to…", "feed cattle and horses", ["make glass", "build houses", "make shoes"], "Alfalfa is hay for animals."],
+  ["Onions grown near Yerington are sold in other states. This shows that…", "people in different places trade", ["no one eats onions", "trade is not allowed", "onions grow only in stores"], "Buyers and sellers depend on each other."],
+  ["Long ago, miners in Virginia City bought food that came from…", "farms and ranches in valleys nearby", ["the moon", "a grocery app", "an airplane"], "Food had to travel to the mining towns.", true],
+  ["Most of the food sold in Las Vegas grocery stores is grown…", "in other places and shipped in", ["on the Strip", "in the hotels", "in Lake Mead"], "The desert city trades for most of its food.", true],
+  ["Water from rivers is a natural resource Nevada farmers use to…", "grow crops", ["make movies", "build phones", "sell cars"], "Farms in the desert need irrigation.", true],
+];
+
 export const SOCIAL_2: Unit[] = [
   bankUnit({
     id: "nv-g2-symbols-holidays",
@@ -45,4 +75,43 @@ export const SOCIAL_2: Unit[] = [
     standards: ["SS.2.10; SS.2.17; SS.2.21", "events and symbols that shaped national identity, the role and responsibilities of the president, and national landmarks"],
     items: SYMBOLS,
   }),
+  copyOf(
+    from(CALIFORNIA_2, "ca-g2-difference-makers"),
+    {
+      id: "nv-g2-difference-makers",
+      title: "People Who Made a Difference",
+      emoji: "🌟",
+      blurb: "Heroes long ago and today",
+      parentNote:
+        "People from long ago and the recent past whose courage, ideas and hard work made life better, such as Rosa Parks, Harriet Tubman, Sally Ride and Dolores Huerta, and Nevadans like Sarah Winnemucca, Anne Martin, Ruby Duncan and Dat So La Lee.",
+      standards: ["SS.2.11; SS.2.15", "how individuals have made a difference in their communities, and the contributions of diverse people in U.S. history"],
+    },
+    DIFFERENCE_EXTRA,
+  ),
+  copyOf(
+    from(CALIFORNIA_2, "ca-g2-family-journeys"),
+    {
+      id: "nv-g2-family-journeys",
+      title: "Family Journeys",
+      emoji: "🧳",
+      blurb: "Where families came from, and why",
+      parentNote:
+        "Finding on a world map where a family's ancestors lived, how families traveled long ago and today (from covered wagons and the railroad across Nevada to airplanes), when they moved, and the reasons people move.",
+      standards: ["SS.2.23; SS.2.20", "why people decided to move in U.S. history, and finding places and events on a map"],
+    },
+    JOURNEYS_EXTRA,
+  ),
+  copyOf(
+    from(CALIFORNIA_2, "ca-g2-making-trading"),
+    {
+      id: "nv-g2-making-trading",
+      title: "Making & Trading",
+      emoji: "🧺",
+      blurb: "From farm to table",
+      parentNote:
+        "How food is grown, processed, shipped and sold long ago and today, the work of farmers, ranchers, processors, distributors and grocers, and why people trade, with Nevada examples like cattle ranches, alfalfa and onion farms and the food trucked into Las Vegas.",
+      standards: ["SS.2.25", "how natural resources are used to produce goods and services in the past and present"],
+    },
+    TRADING_EXTRA,
+  ),
 ];

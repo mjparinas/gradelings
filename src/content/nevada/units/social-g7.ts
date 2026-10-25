@@ -31,6 +31,14 @@ const WORLD: Q[] = [
   ["Lake Mead's falling water level during long droughts shows how… affects a region.", "climate", ["population maps", "time zones", "languages"], "Less snow in the mountains means less river water.", true],
   ["A region defined by a shared feature people made, like the Las Vegas metro area, is a…", "human region", ["physical region", "climate zone", "landform"], "People draw human regions.", true],
   ["Nevada's mountains and basins formed because the Earth's crust there is slowly…", "stretching apart", ["sinking under the ocean", "freezing", "melting"], "Faults let blocks rise and drop.", true],
+  ["Nevada lies between the Sierra Nevada to the west and the Rocky Mountains to the east. This describes Nevada's…", "relative location", ["absolute location", "climate", "population"], "It is located by what is around it."],
+  ["Reno and Las Vegas are about 440 miles apart. Which tool would best show the distance?", "a map with a scale", ["a thermometer", "a calendar", "a compass rose alone"], "A scale turns map distance into miles."],
+  ["The Great Basin and the Sahara are both deserts, but the Great Basin is…", "colder in winter, with snow on its mountains", ["a tropical rain forest", "at the equator", "under the ocean"], "Latitude and elevation shape climate."],
+  ["Interstate 15 links Las Vegas with cities to its southwest and northeast. This is part of the theme of…", "movement", ["place", "region", "absolute location"], "Highways move people and goods."],
+  ["Farmers in Fallon use water from rivers to grow crops in the desert. This is an example of…", "human-environment interaction", ["absolute location", "region", "movement"], "People change the environment to meet their needs."],
+  ["A map that shows where Nevada's people live, with most in two metro areas, is studying…", "population distribution", ["rainfall only", "time zones", "rock types"], "Where people live is a pattern geographers map.", true],
+  ["Las Vegas welcomes visitors who speak many languages. This makes Las Vegas a… city.", "global", ["closed", "isolated", "rural"], "People from around the world meet there.", true],
+  ["Why might the price of gold in world markets matter to towns like Elko?", "many local jobs depend on gold mines", ["Elko is on the ocean", "gold is not mined there", "prices never change"], "Global prices reach local economies.", true],
 ];
 
 export const SOCIAL_7: Unit[] = [

@@ -197,7 +197,10 @@
       "ca-g2-work-and-money text=29d8f69f16 std=fe3ea66b6c q=3daba19f0f",
       "communities-compared text=38aa387c10 std=bf0a45c6d2 q=20e81812b4",
       "ny-g1-american-symbols text=2a7c05d064 std=aa2ff75fa1 q=8d619485e3",
-      "nv-g2-symbols-holidays text=fea7ad278c std=977a05ae1b q=7bbc929dae"
+      "nv-g2-symbols-holidays text=fea7ad278c std=977a05ae1b q=7bbc929dae",
+      "nv-g2-difference-makers text=5eae9d4e69 std=bf57979254 q=75db86287e",
+      "nv-g2-family-journeys text=f2542f91db std=03a7d311d8 q=d3aedbb9a3",
+      "nv-g2-making-trading text=ba2116e7ba std=fbfe482457 q=20ee47acc9"
     ]
   },
   "3/language": {
@@ -554,7 +557,7 @@
       "ny-g5-governments text=4b0cc1fe2e std=8ac49cad7a q=a7367abdf1",
       "ny-g5-economics text=c6e08cdf26 std=ec2e595290 q=b1deb4ea50",
       "maps-graphs-8 text=a3580471ce std=ee6d40697b q=db3f6f1744",
-      "nv-g7-nevada-in-the-world text=90f5a379f3 std=d4bea5fafc q=381d148d06"
+      "nv-g7-nevada-in-the-world text=90f5a379f3 std=d4bea5fafc q=06ef565dc5"
     ]
   },
   "8/language": {

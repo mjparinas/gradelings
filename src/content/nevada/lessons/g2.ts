@@ -56,4 +56,42 @@ export const LESSONS: GradeLessons = {
     ],
     "the birthday of the United States",
   ),
+  "social/nv-g2-difference-makers": lesson(
+    [
+      "Difference makers solve problems and help others.",
+      "Helen Keller spoke out for others. Jackie Robinson broke a barrier in baseball.",
+      "Sarah Winnemucca spoke and wrote for the Paiute people's rights.",
+    ],
+    "George Washington Carver found many uses for…",
+    [
+      "He was a scientist who studied plants.",
+      "He worked with peanuts and sweet potatoes.",
+    ],
+    "peanuts and sweet potatoes",
+  ),
+  "social/nv-g2-family-journeys": lesson(
+    [
+      "An immigrant moves to a new country to live.",
+      "Families move for jobs, safety or to be near family.",
+      "To find how long ago, subtract: this year minus the year it happened.",
+    ],
+    "A family moved here in 2018. It is 2025 now. How many years ago was that?",
+    [
+      "2025 − 2018 = 7.",
+    ],
+    "7",
+  ),
+  "social/nv-g2-making-trading": lesson(
+    [
+      "Food is grown on farms and ranches, made ready in factories, shipped and sold in stores.",
+      "Every choice has a cost and a benefit, and people trade for what they don't make.",
+      "Workers need skills: a rancher knows how to raise cattle.",
+    ],
+    "Why does Las Vegas trade for most of its food?",
+    [
+      "Las Vegas is a city in a dry desert.",
+      "Little food is grown there, so it comes from farms in other places.",
+    ],
+    "little food is grown in the desert city",
+  ),
 };
