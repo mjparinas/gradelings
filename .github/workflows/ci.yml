@@ -181,6 +181,9 @@ jobs:
   devices:
     name: Browser · ${{ matrix.name }}
     needs: build
+    # Pull requests only: a merge to main already passed these, so main keeps just types, lint,
+    # unit tests and the build (which saves the Next cache) to save Actions minutes.
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     container:
@@ -219,6 +222,7 @@ jobs:
   browser:
     name: Browser · ${{ matrix.name }}
     needs: build
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     strategy:
@@ -280,6 +284,6 @@ jobs:
       - name: Every job succeeded
         run: |
           echo '${{ toJSON(needs) }}'
-          if [ "${{ contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled') || contains(needs.*.result, 'skipped') }}" = "true" ]; then
+          if [ "${{ contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled') }}" = "true" ]; then
             exit 1
           fi
