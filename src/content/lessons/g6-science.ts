@@ -789,4 +789,29 @@ export const lessons: GradeLessons = {
     ["Mud makes the water cloudy.", "Plants need sunlight to grow."],
     "It blocks the sunlight they need.",
   ),
+  // Missouri (us-mo)
+  "science/mo-g6-weather": lesson(
+    ["Evaporation: liquid water becomes vapour. Condensation: vapour cools into cloud droplets.", "Humidity is the amount of water vapour in the air.", "Warm, moist air from the Gulf meets cold, dry air from Canada over the middle of the country.", "Where those air masses meet, warm air is pushed up, cools and makes storms, including the thunderstorms Missouri gets in spring."],
+    "Why does Missouri get many spring thunderstorms?",
+    ["Warm, moist air and cold, dry air meet there.", "The warm air rises, cools and forms storm clouds."],
+    "warm moist air and cold dry air meet and the warm air rises",
+  ),
+  "science/mo-g6-climate": lesson(
+    ["Climate is the average weather over many years.", "Oceans keep coastal temperatures steady, so places far inland, like Missouri, have hotter summers and colder winters.", "People burn much more fossil fuel than 200 years ago, so there is more CO₂ in the air.", "We can use less energy, like walking short trips, and adapt, like planting shade trees."],
+    "Why does a coastal city have milder winters than a city far inland?",
+    ["Ocean water warms and cools slowly.", "It keeps nearby temperatures steady."],
+    "the ocean keeps temperatures steady",
+  ),
+  "science/mo-g6-growth": lesson(
+    ["Asexual reproduction needs one parent: bacteria splitting, strawberry runners.", "Sexual reproduction needs two parents and creates variation.", "Behaviours like nest building and feeding chicks help young survive.", "Genes and the environment both affect growth: the same plants grow differently in sun and shade."],
+    "Two identical plants grow in sun and in shade and end up different heights. Why?",
+    ["Their genes are the same.", "So the difference comes from where they grew."],
+    "the environment",
+  ),
+  "science/mo-g6-design": lesson(
+    ["Criteria are what a solution must do to succeed. Constraints are limits.", "A decision matrix compares designs against the criteria.", "A trade-off is giving up some of one thing to get more of another.", "After a test fails, improve the design and test again."],
+    "A cheaper filter cleans water less well. Choosing it means accepting a… what?",
+    ["You give up some cleaning to save money.", "Giving up one thing for another is a trade-off."],
+    "a trade-off",
+  ),
 };

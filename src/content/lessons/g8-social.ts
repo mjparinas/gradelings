@@ -1225,4 +1225,29 @@ export const lessons: GradeLessons = {
     ["It flows through many countries.", "Boats carry goods and people along it."],
     "It links many countries for trade and travel.",
   ),
+  // Missouri (us-mo)
+  "social/mo-g8-rights-citizenship": lesson(
+    ["The Constitution sets up three branches with checks and balances; the Bill of Rights protects freedoms.", "The 13th Amendment ended slavery, the 14th promised citizenship and equal protection, and the 15th protected voting regardless of race.", "Citizenship grew unevenly: women won the national vote in 1920, and most Native Americans became citizens in 1924."],
+    "Which amendment abolished slavery?",
+    ["It was ratified in 1865.", "It came first of the three Reconstruction amendments."],
+    "the 13th Amendment",
+  ),
+  "social/mo-g8-early-republic": lesson(
+    ["The early republic had its own writers: Herman Melville (Moby-Dick), James Fenimore Cooper (The Last of the Mohicans).", "Transcendentalists like Emerson and Thoreau believed in self-reliance and finding truth in nature; Thoreau wrote Walden.", "Treaties often took Native land, such as the Treaty of Fort Jackson (1814), which forced the Muscogee to give up about 23 million acres."],
+    "Thoreau wrote Walden about what?",
+    ["Thoreau was a Transcendentalist.", "He lived for two years in a small cabin.", "It was beside a pond, where he lived simply."],
+    "living simply near a pond",
+  ),
+  "social/mo-g8-westward": lesson(
+    ["Manifest Destiny drove expansion west, at great cost to Native nations.", "Wagon trains on the Oregon and Santa Fe trails set out from Independence, Missouri.", "The Treaty of Guadalupe Hidalgo (1848) ended the US–Mexican War, and the Pony Express (1860–61) carried mail by horse relay from St. Joseph."],
+    "Why did so many wagon trains start in Missouri?",
+    ["It was at the western edge of the settled country.", "Settlers could buy supplies there before the trail."],
+    "it was the last place to buy supplies before the trails west",
+  ),
+  "social/mo-g8-missouri-crossroads": lesson(
+    ["The Missouri Compromise (1820) let Missouri in as a slave state and Maine as a free state.", "Dred and Harriet Scott sued for freedom in St. Louis; in 1857 the Supreme Court ruled against them.", "During the Civil War, Missouri stayed in the Union but was bitterly divided. It ended slavery in January 1865."],
+    "What did the Missouri Compromise do?",
+    ["It admitted two states at once.", "It kept free and slave states balanced."],
+    "admitted Missouri as a slave state and Maine as a free state",
+  ),
 };

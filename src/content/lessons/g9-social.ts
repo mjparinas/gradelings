@@ -1274,4 +1274,17 @@ export const lessons: GradeLessons = {
     ["Before, rules could change from person to person.", "Written laws let everyone know the same rules."],
     "people could know the rules and they applied the same way",
   ),
+  // Missouri (us-mo)
+  "social/mo-g9-civics-test": lesson(
+    ["The test asks about the Constitution, the branches, rights and responsibilities, and history.", "The Declaration of Independence announced independence from Great Britain. The Supreme Court is the highest court.", "Voting in federal elections is a right only for citizens; serving on a jury is a responsibility only for citizens."],
+    "Name one responsibility that is only for United States citizens.",
+    ["Everyone must obey laws and pay taxes.", "Only citizens can be called to serve on a jury."],
+    "serving on a jury",
+  ),
+  "social/mo-g9-governing-missouri": lesson(
+    ["Missouri's 1945 constitution sets up the General Assembly (34 senators, 163 representatives), the governor and the courts.", "Under the Missouri Plan, a commission lists judges, the governor picks one and voters later decide whether to keep them.", "Voters can propose laws by initiative petition. Federal law wins when it conflicts with state law."],
+    "Under the Missouri Plan, who first narrows the list of judges?",
+    ["The governor picks from a short list.", "A nonpartisan commission makes that list."],
+    "a nonpartisan commission",
+  ),
 };

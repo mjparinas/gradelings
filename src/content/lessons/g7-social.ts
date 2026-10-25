@@ -1275,4 +1275,17 @@ export const lessons: GradeLessons = {
     ["They tax land and buildings.", "These are property taxes."],
     "property taxes",
   ),
+  // Missouri (us-mo)
+  "social/ca-g6-greek-world": lesson(
+    ["Greeks lived by the sea and traded across the Aegean and Mediterranean.", "Myths: Poseidon ruled the sea; Achilles' heel means a weak spot.", "Thinkers: Socrates taught Plato, who founded the Academy; Hippocrates is the father of medicine. Plays were in open-air theatres."],
+    "Hippocrates is known as the father of what?",
+    ["Doctors still take an oath named after him.", "He studied illness and healing."],
+    "medicine",
+  ),
+  "social/ny-g9-crusades-plague": lesson(
+    ["In 1095, Pope Urban II called on Christians in Western Europe to begin the First Crusade to control Jerusalem.", "The Reconquista was the effort by Christian kingdoms to take back the Iberian Peninsula from Muslim rulers; it ended in 1492.", "The Black Death, a plague spread along trade routes, killed about a third of Europe’s people in the 1300s."],
+    "Who called for the First Crusade in 1095?",
+    ["The call came from the head of the Church.", "He spoke at Clermont in France.", "He was Pope Urban II."],
+    "Pope Urban II",
+  ),
 };

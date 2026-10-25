@@ -1,0 +1,351 @@
+                                                                                     Algebra 1
+
+                  Missouri Learning Standards:                                                                  Missouri Learning Standards:
+             Grade-Level Expectations for Mathematics                                                                  Mathematics
+   (Adopted April 2016 for implementation in the 2016 – 2017 school year, assessed           (Adopted 2010, transitioning out, assessed through the 2016 – 2017 school year.)
+                     beginning in the 2017 – 2018 school year.)
+   Code                               Adopted Standards                                      Code                                    Current MLS
+A1.NQ.A         Extend and use properties of rational exponents.
+A1.NQ.A.1       Explain how the meaning of rational exponents extends from the           HSN-RN.A.1       Explain how the definition of the meaning of rational exponents
+                properties of integer exponents.                                                          follows from extending the properties of integer exponents to
+                                                                                                          those values, allowing for a notation for radicals in terms of
+                                                                                                          rational exponents. For example, we define 51/3 to be the cube root
+                                                                                                          of 5 because we want (51/3)3= 5(1/3)3 to hold, so (51/3)3 must equal
+                                                                                                          5.
+A1.NQ.A.2       Rewrite expressions involving radicals and rational exponents            HSN-RN.A.2       Rewrite expressions involving radicals and rational exponents
+                using the properties of exponents. Limit to rational exponents                            using the properties of exponents.
+                with a numerator of 1.
+A1.NQ.B         Use units to solve problems.
+A1.NQ.B.3       Use units of measure as a way to understand and solve problems           HSN-Q.A.1        Use units as a way to understand problems and to guide the
+                involving quantities.                                                                     solution of multi-step problems; choose and interpret units
+                a. Identify, label and use appropriate units of measure within a                          consistently in formulas; choose and interpret the scale and the
+                   problem.                                                                               origin in graphs and data displays.
+                b. Convert units and rates.
+                c. Use units within problems.
+                d. Choose and interpret the scale and the origin in graphs and
+                   data displays.
+A1.NQ.B.4       Define and use appropriate quantities for representing a given           HSN-Q.A.2        Define appropriate quantities for the purpose of descriptive
+                context or problem.                                                                       modeling.
+A1.NQ.B.5       Choose a level of accuracy appropriate to limitations on                 HSN-Q.A.3        Choose a level of accuracy appropriate to limitations on
+                measurement when reporting quantities.                                                    measurement when reporting quantities.
+A1.SSE.A        Interpret and use structure.
+A1.SSE.A.1      Interpret the contextual meaning of individual terms or factors          HSA-SSE.A.1      Interpret expressions that represent a quantity in terms of its
+                from a given problem that utilizes formulas or expressions.                               context.
+                                                                                                          a. Interpret parts of an expression, such as terms, factors, and
+                                                                                                               coefficients.
+                                                                                                          b. Interpret complicated expressions by viewing one or more of
+                                                                                                               their parts as a single entity. For example, interpret P(1+r)n as
+                                                                                                               the product of P and a factor not depending on P.
+A1.SSE.A.2      Analyze the structure of polynomials to create equivalent                HSA-SSE.A.2      Use the structure of an expression to identify ways to rewrite
+                expressions or equations.                                                                 it. For example, see x4 - y4 as (x2)2 - (y2)2, thus recognizing it as a
+                                                                                                          difference of squares that can be factored as (x2 - y2)(x2 + y2).
+
+
+
+
+                                                                                                                                                                                    1
+                                                                                     Algebra 1
+                  Missouri Learning Standards:                                                                  Missouri Learning Standards:
+             Grade-Level Expectations for Mathematics                                                                  Mathematics
+   (Adopted April 2016 for implementation in the 2016 – 2017 school year, assessed           (Adopted 2010, transitioning out, assessed through the 2016 – 2017 school year.)
+                     beginning in the 2017 – 2018 school year.)
+   Code                               Adopted Standards                                      Code                                    Current MLS
+A1.SSE.A.3      Choose and produce equivalent forms of a quadratic expression            HSA-SSE.B.3      Choose and produce an equivalent form of an expression to
+                or equations to reveal and explain properties.                                            reveal and explain properties of the quantity represented by the
+                a. Find the zeros of a quadratic function by rewriting it in                              expression.
+                    factored form.                                                                        a. Factor a quadratic expression to reveal the zeros of the
+                b. Find the maximum or minimum value of a quadratic function                                 function it defines.
+                    by completing the square.                                                             b. Complete the square in a quadratic expression to reveal the
+                                                                                                             maximum or minimum value of the function it defines.
+                                                                                                          c. Use the properties of exponents to transform expressions for
+                                                                                                             exponential functions. For example the expression 1.15t can be
+                                                                                                             rewritten as (1.151/12)12t ? 1.01212t to reveal the approximate
+                                                                                                             equivalent monthly interest rate if the annual rate is 15%.
+A1.CED.A        Create equations that describe linear, quadratic and
+                exponential relationships.
+A1.CED.A.1      Create equations and inequalities in one variable and use them           HSA-CED.A.1      Create equations and inequalities in one variable and use them
+                to model and/or solve problems.                                                           to solve problems. Include equations arising from linear and
+                                                                                                          quadratic functions, and exponential functions.
+                                                                                         HSA-REI.B.3      Solve linear equations and inequalities in one variable, including
+                                                                                                          equations with coefficients represented by letters.
+A1.CED.A.2      Create and graph linear, quadratic and exponential equations in          HSA-CED.A.2      Create equations in two or more variables to represent
+                two variables.                                                                            relationships between quantities; graph equations on coordinate
+                                                                                                          axes with labels and scales.
+A1.CED.A.3      Represent constraints by equations or inequalities and by                HSA-CED.A.3      Represent constraints by equations or inequalities, and by
+                systems of equations or inequalities, and interpret the data                              systems of equations and/or inequalities, and interpret solutions
+                points as a solution or non-solution in a modeling context.                               as viable or nonviable options in a modeling context. For
+                                                                                                          example, represent inequalities describing nutritional and cost
+                                                                                                          constraints on combinations of different foods.
+A1.CED.A.4      Solve literal equations and formulas for a specified variable that       HSA-CED.A.4      Rearrange formulas to highlight a quantity of interest, using the
+                highlights a quantity of interest.                                                        same reasoning as in solving equations. For example, rearrange
+                                                                                                          Ohm's law V = IR to highlight resistance R.
+A1.REI.A        Understand solving equations as a process, and solve
+                equations and inequalities in one variable.
+A1.REI.A.1      Explain how each step taken when solving an equation or                  HSA-REI.A.1      Explain each step in solving a simple equation as following from
+                inequality in one variable creates an equivalent equation or                              the equality of numbers asserted at the previous step, starting
+                inequality that has the same solution(s) as the original.                                 from the assumption that the original equation has a solution.
+                                                                                                          Construct a viable argument to justify a solution method.
+
+
+
+
+                                                                                                                                                                                2
+                                                                                     Algebra 1
+                  Missouri Learning Standards:                                                                  Missouri Learning Standards:
+             Grade-Level Expectations for Mathematics                                                                  Mathematics
+   (Adopted April 2016 for implementation in the 2016 – 2017 school year, assessed           (Adopted 2010, transitioning out, assessed through the 2016 – 2017 school year.)
+                     beginning in the 2017 – 2018 school year.)
+   Code                               Adopted Standards                                      Code                                    Current MLS
+A1.REI.A.2      Solve problems involving quadratic equations.                            HSA-REI.B.4      Solve quadratic equations in one variable.
+                a. Use the method of completing the square to create an                                   a. Use the method of completing the square to transform any
+                   equivalent quadratic equation.                                                            quadratic equation in x into an equation of the form (x ­
+                b. Derive the quadratic formula.                                                              p)2 = q that has the same solutions. Derive the quadratic
+                c. Analyze different methods of solving quadratic equations.                                 formula from this form.
+                                                                                                          b. Solve quadratic equations by inspection (e.g., for x2 = 49),
+                                                                                                             taking square roots, completing the square, the quadratic
+                                                                                                             formula and factoring, as appropriate to the initial form of
+                                                                                                             the equation. Recognize when the quadratic formula gives
+                                                                                                             complex solutions and write them as a ± bi for real
+                                                                                                             numbers a and b.
+A1.REI.B        Solve systems of equations.
+A1.REI.B.3      Solve a system of linear equations algebraically and/or                  HSA-REI.C.6      Solve systems of linear equations exactly and approximately
+                graphically.                                                                              (e.g., with graphs), focusing on pairs of linear equations in two
+                                                                                                          variables.
+A1.REI.B.4      Solve a system consisting of a linear equation and a quadratic           HSA-REI.C.7      Solve a simple system consisting of a linear equation and a
+                equation algebraically and/or graphically.                                                quadratic equation in two variables algebraically and
+                                                                                                          graphically. For example, find the points of intersection between
+                                                                                                          the line y = -3x and the circle x2+ y2 = 3.
+A1.REI.B.5      Justify that the technique of linear combination produces an             HSA-REI.C.5      Prove that, given a system of two equations in two variables,
+                equivalent system of equations.                                                           replacing one equation by the sum of that equation and a
+                                                                                                          multiple of the other produces a system with the same solutions.
+A1.REI.C        Represent and solve linear and exponential equations and
+                inequalities graphically.
+A1.REI.C.6      Explain that the graph of an equation in two variables is the set        HSA-             Understand that the graph of an equation in two variables is the
+                of all its solutions plotted in the Cartesian coordinate plane.          REI.D.10         set of all its solutions plotted in the coordinate plane, often
+                                                                                                          forming a curve (which could be a line).
+                                                                                         HSA-             Explain why the x-coordinates of the points where the graphs of
+                                                                                         REI.D.11         the equations y = f(x)and y = g(x)intersect are the solutions of
+                                                                                                          the equation f(x)= g(x); find the solutions approximately, e.g.,
+                                                                                                          using technology to graph the functions, make tables of values,
+                                                                                                          or find successive approximations. Include cases where f(x)
+                                                                                                          and/or g(x) are linear, polynomial, rational, absolute value,
+                                                                                                          exponential, and logarithmic functions.
+A1.REI.C.7      Graph the solution to a linear inequality in two variables.              HSA-             Graph the solutions to a linear inequality in two variables as a
+
+
+
+
+                                                                                                                                                                                3
+                                                                                     Algebra 1
+                  Missouri Learning Standards:                                                                  Missouri Learning Standards:
+             Grade-Level Expectations for Mathematics                                                                  Mathematics
+   (Adopted April 2016 for implementation in the 2016 – 2017 school year, assessed           (Adopted 2010, transitioning out, assessed through the 2016 – 2017 school year.)
+                     beginning in the 2017 – 2018 school year.)
+   Code                               Adopted Standards                                      Code                                    Current MLS
+A1.REI.C.8      Solve problems involving a system of linear inequalities.                REI.D.12         half-plane (excluding the boundary in the case of a strict
+                                                                                                          inequality), and graph the solution set to a system of linear
+                                                                                                          inequalities in two variables as the intersection of the
+                                                                                                          corresponding half-planes.
+A1.APR.A        Perform operations on polynomials.
+A1.APR.A.1      Add, subtract and multiply polynomials, and understand that              HSA-APR.A.1      Understand that polynomials form a system analogous to the
+                polynomials follow the same general rules of arithmetic and are                           integers, namely, they are closed under the operations of
+                closed under these operations.                                                            addition, subtraction, and multiplication; add, subtract, and
+                                                                                                          multiply polynomials.
+A1.APR.A.2      Divide polynomials by monomials.
+
+A1.IF.A         Understand the concept of a function and use function
+                notation.
+A1.IF.A.1       Understand that a function from one set (domain) to another set          HSF-IF.A.1       Understand that a function from one set (called the domain) to
+                (range) assigns to each element of the domain exactly one                                 another set (called the range) assigns to each element of the
+                element of the range.                                                                     domain exactly one element of the range. If f is a function and x is
+                a. Represent a function using function notation.                                          an element of its domain, then f(x) denotes the output
+                b. Understand that the graph of a function labeled 𝑓 is the set of                        of f corresponding to the input x. The graph of f is the graph of
+                   all ordered pairs (𝑥, y) that satisfy the equation 𝑦=f (𝑥).                            the equation y = f(x).
+A1.IF.A.2       Use function notation to evaluate functions for inputs in their          HSF-IF.A.2       Use function notation, evaluate functions for inputs in their
+                domains, and interpret statements that use function notation in                           domains, and interpret statements that use function notation in
+                terms of a context.                                                                       terms of a context.
+A1.IF.B         Interpret linear, quadratic and exponential functions in
+                terms of the context.
+A1.IF.B.3       Using tables, graphs and verbal descriptions, interpret key              HSF-IF.B.4       For a function that models a relationship between two
+                characteristics of a function that models the relationship                                quantities, interpret key features of graphs and tables in terms of
+                between two quantities.                                                                   the quantities, and sketch graphs showing key features given a
+                                                                                                          verbal description of the relationship. Key features include:
+                                                                                                          intercepts; intervals where the function is increasing, decreasing,
+                                                                                                          positive, or negative; relative maximums and minimums;
+                                                                                                          symmetries; end behavior; and periodicity.
+A1.IF.B.4       Relate the domain and range of a function to its graph and,              HSF-IF.B.5       Relate the domain of a function to its graph and, where
+                where applicable, to the quantitative relationship it describes.                          applicable, to the quantitative relationship it describes. For
+                                                                                                          example, if the function h(n) gives the number of person-hours it
+                                                                                                          takes to assemble n engines in a factory, then the positive integers
+                                                                                                          would be an appropriate domain for the function.
+
+
+
+                                                                                                                                                                                 4
+                                                                                     Algebra 1
+                  Missouri Learning Standards:                                                                  Missouri Learning Standards:
+             Grade-Level Expectations for Mathematics                                                                  Mathematics
+   (Adopted April 2016 for implementation in the 2016 – 2017 school year, assessed           (Adopted 2010, transitioning out, assessed through the 2016 – 2017 school year.)
+                     beginning in the 2017 – 2018 school year.)
+   Code                               Adopted Standards                                      Code                                    Current MLS
+A1.IF.B.5       Determine the average rate of change of a function over a                HSF-IF.B.6       Calculate and interpret the average rate of change of a function
+                specified interval and interpret the meaning.                                             (presented symbolically or as a table) over a specified interval.
+                                                                                                          Estimate the rate of change from a graph.
+A1.IF.B.6       Interpret the parameters of a linear or exponential function in          HSF-LE.B.5       Interpret the parameters in a linear or exponential function in
+                terms of the context.                                                                     terms of a context.
+A1.IF.C         Analyze linear, quadratic and exponential functions using
+                different representations.
+A1.IF.C.7       Graph functions expressed symbolically and identify and                  HSF-IF.C.7       Graph functions expressed symbolically and show key features
+                interpret key features of the graph.                                                      of the graph, by hand in simple cases and using technology for
+                                                                                                          more complicated cases.
+                                                                                                          a. Graph linear and quadratic functions and show intercepts,
+                                                                                                              maxima, and minima.
+                                                                                                          b. Graph piecewise-defined functions, including step functions
+                                                                                                              and absolute value functions.
+                                                                                                          e. Graph exponential and logarithmic functions, showing
+                                                                                                              intercepts and end behavior, and trigonometric functions,
+                                                                                                              showing period, midline, and amplitude.
+A1.IF.C.8       Translate between different but equivalent forms of a function to        HSF-IF.C.8       Write a function defined by an expression in different but
+                reveal and explain properties of the function and interpret these                         equivalent forms to reveal and explain different properties of the
+                in terms of a context.                                                                    function.
+                                                                                                          a. Use the process of factoring and completing the square in a
+                                                                                                              quadratic function to show zeros, extreme values, and
+                                                                                                              symmetry of the graph, and interpret these in terms of a
+                                                                                                              context.
+                                                                                                          b. Use the properties of exponents to interpret expressions for
+                                                                                                              exponential functions. For example, identify percent rate of
+                                                                                                              change in functions such as y = (1.02)ᵗ, y = (0.97)ᵗ, y =
+                                                                                                              (1.01)12ᵗ, y = (1.2)ᵗ/10, and classify them as representing
+                                                                                                              exponential growth or decay.
+A1.IF.C.9       Compare the properties of two functions given different                  HSF-IF.C.9       Compare properties of two functions each represented in a
+                representations.                                                                          different way (algebraically, graphically, numerically in tables, or
+                                                                                                          by verbal descriptions). For example, given a graph of one
+                                                                                                          quadratic function and an algebraic expression for another, say
+                                                                                                          which has the larger maximum.
+A1.BF.A         Build new functions from existing functions (limited to
+                linear, quadratic and exponential).
+
+
+
+                                                                                                                                                                                 5
+                                                                                     Algebra 1
+                  Missouri Learning Standards:                                                                  Missouri Learning Standards:
+             Grade-Level Expectations for Mathematics                                                                  Mathematics
+   (Adopted April 2016 for implementation in the 2016 – 2017 school year, assessed           (Adopted 2010, transitioning out, assessed through the 2016 – 2017 school year.)
+                     beginning in the 2017 – 2018 school year.)
+   Code                               Adopted Standards                                      Code                                    Current MLS
+A1.BF.A.1       Analyze the effect of translations and scale changes on functions.       HSF-BF.B.3       Identify the effect on the graph of replacing f(x) by f(x)
+                                                                                                          + k, k f(x), f(kx), and f(x + k) for specific values of k (both positive
+                                                                                                          and negative); find the value of k given the graphs. Experiment
+                                                                                                          with cases and illustrate an explanation of the effects on the
+                                                                                                          graph using technology. Include recognizing even and odd
+                                                                                                          functions from their graphs and algebraic expressions for them.
+A1.LQE.A        Construct and compare linear, quadratic and exponential
+                models and solve problems.
+A1.LQE.A.1      Distinguish between situations that can be modeled with linear           HSF-LE.A.1       Distinguish between situations that can be modeled with linear
+                or exponential functions.                                                                 functions and with exponential functions.
+                a. Determine that linear functions change by equal differences                            a. Prove that linear functions grow by equal differences over
+                    over equal intervals.                                                                     equal intervals, and that exponential functions grow by equal
+                b. Recognize exponential situations in which a quantity grows                                 factors over equal intervals.
+                    or decays by a constant percent rate per unit interval.                               b. Recognize situations in which one quantity changes at a
+                                                                                                              constant rate per unit interval relative to another.
+                                                                                                          c. Recognize situations in which a quantity grows or decays by
+                                                                                                              a constant percent rate per unit interval relative to another.
+A1.LQE.A.2      Describe, using graphs and tables, that a quantity increasing            HSF-LE.A.3       Observe using graphs and tables that a quantity increasing
+                exponentially eventually exceeds a quantity increasing linearly                           exponentially eventually exceeds a quantity increasing linearly,
+                or quadratically.                                                                         quadratically, or (more generally) as a polynomial function.
+A1.LQE.A.3      Construct linear, quadratic and exponential equations given              HSF-LE.A.2       Construct linear and exponential functions, including arithmetic
+                graphs, verbal descriptions or tables.                                                    and geometric sequences, given a graph, a description of a
+                                                                                                          relationship, or two input-output pairs (include reading these
+                                                                                                          from a table).
+                                                                                         HSF-BF.A.1       Write a function that describes a relationship between two
+                                                                                                          quantities.
+                                                                                                          a. Determine an explicit expression, a recursive process, or
+                                                                                                              steps for calculation from a context.
+                                                                                                          b. Combine standard function types using arithmetic
+                                                                                                              operations. For example, build a function that models the
+                                                                                                              temperature of a cooling body by adding a constant function to
+                                                                                                              a decaying exponential, and relate these functions to the
+                                                                                                              model.
+A1.LQE.B        Use arithmetic and geometric sequences.
+A1.LQE.B.4      Write arithmetic and geometric sequences in recursive and                HSF-BF.A.2       Write arithmetic and geometric sequences both recursively and
+                explicit forms, and use them to model situations and translate                            with an explicit formula, use them to model situations, and
+                between the two forms.                                                                    translate between the two forms.
+
+
+                                                                                                                                                                                     6
+                                                                                     Algebra 1
+                  Missouri Learning Standards:                                                                  Missouri Learning Standards:
+             Grade-Level Expectations for Mathematics                                                                  Mathematics
+   (Adopted April 2016 for implementation in the 2016 – 2017 school year, assessed           (Adopted 2010, transitioning out, assessed through the 2016 – 2017 school year.)
+                     beginning in the 2017 – 2018 school year.)
+   Code                               Adopted Standards                                      Code                                    Current MLS
+A1.LQE.B.5      Recognize that sequences are functions, sometimes defined                HSF-IF.A.3       Recognize that sequences are functions, sometimes defined
+                recursively, whose domain is a subset of the set of integers.                             recursively, whose domain is a subset of the integers. For
+                                                                                                          example, the Fibonacci sequence is defined recursively by f(0) =
+                                                                                                          f(1) = 1, f(n+1) = f(n) + f(n-1) for n ≥ 1.
+A1.LQE.B.6      Find the terms of sequences given an explicit or recursive
+                formula.
+A1.DS.A         Summarize, represent and interpret data.
+A1.DS.A.1       Analyze and interpret graphical displays of data.                        HSS-ID.A.1       Represent data with plots on the real number line (dot plots,
+                                                                                                          histograms, and box plots).
+A1.DS.A.2       Use statistics appropriate to the shape of the data distribution to      HSS-ID.A.2       Use statistics appropriate to the shape of the data distribution to
+                compare center and spread of two or more different data sets.                             compare center (median, mean) and spread (interquartile range,
+                                                                                                          standard deviation) of two or more different data sets.
+A1.DS.A.3       Interpret differences in shape, center and spreads in the context        HSS-ID.A.3       Interpret differences in shape, center, and spread in the context
+                of the data sets, accounting for possible effects of outliers.                            of the data sets, accounting for possible effects of extreme data
+                                                                                                          points (outliers).
+A1.DS.A.4       Summarize data in two-way frequency tables.                              HSS-ID.B.5       Summarize categorical data for two categories in two-way
+                a. Interpret relative frequencies in the context of the data.                             frequency tables. Interpret relative frequencies in the context of
+                b. Recognize possible associations and trends in the data.                                the data (including joint, marginal, and conditional relative
+                                                                                                          frequencies). Recognize possible associations and trends in the
+                                                                                                          data.
+A1.DS.A.5       Construct a scatter plot of bivariate quantitative data describing       HSS-ID.B.6       Represent data on two quantitative variables on a scatter plot,
+                how the variables are related; determine and use a function that                          and describe how the variables are related.
+                models the relationship.                                                                  a. Fit a function to the data; use functions fitted to data to solve
+                a. Construct a linear function to model bivariate data                                        problems in the context of the data. Use given functions or
+                   represented on a scatter plot that minimizes residuals.                                    choose a function suggested by the context. Emphasize linear,
+                b. Construct an exponential function to model bivariate data                                  quadratic, and exponential models.
+                   represented on a scatter plot that minimizes residuals.                                b. Informally assess the fit of a function by plotting and
+                                                                                                              analyzing residuals.
+                                                                                                          c. Fit a linear function for a scatter plot that suggests a linear
+                                                                                                              association.
+A1.DS.A.6       Interpret the slope (rate of change) and the y-intercept (constant       HSS-ID.C.7       Interpret the slope (rate of change) and the intercept (constant
+                term) of a linear model in the context of the data.                                       term) of a linear model in the context of the data.
+A1.DS.A.7       Determine and interpret the correlation coefficient for a linear         HSS-ID.C.8       Compute (using technology) and interpret the correlation
+                association.                                                                              coefficient of a linear fit.
+A1.DS.A.8       Distinguish between correlation and causation.                           HSS-ID.C.9       Distinguish between correlation and causation.
+
+The following from the 2010 MLS have no corresponding standard in the 2016 updated Missouri Learning Standards.
+
+
+                                                                                                                                                                                 7
+                                                                                                         Algebra 1
+                       Missouri Learning Standards:                                                                                          Missouri Learning Standards:
+                  Grade-Level Expectations for Mathematics                                                                                          Mathematics
+     (Adopted April 2016 for implementation in the 2016 – 2017 school year, assessed                                  (Adopted 2010, transitioning out, assessed through the 2016 – 2017 school year.)
+                       beginning in the 2017 – 2018 school year.)
+     Code                                        Adopted Standards                                                   Code                                              Current MLS
+                                                                                                                HSN-RN.B.3            Explain why the sum or product of two rational numbers is
+                                                                                                                                      rational; that the sum of a rational number and an irrational
+                                                                                                                                      number is irrational; and that the product of a nonzero rational
+                                                                                                                                      number and an irrational number is irrational.
+                                                                                                                HSA-REI.B.3           Solve linear equations and inequalities in one variable, including
+                                                                                                                                      equations with coefficients represented by letters.
+                                                                                                                HSF-BF.B.4            Find inverse functions.
+                                                                                                                                      a. Solve an equation of the form f(x) =c for a simple function f
+                                                                                                                                          that has an inverse and write an expression for the inverse.
+                                                                                                                                          For example, f(x) =2 x3 or f(x) = (x+1)/(x–1) for x > 1.
+
+
+
+
+The Department of Elementary and Secondary Education does not discriminate on the basis of race, color, religion, gender, gender identity, sexual orientation, national origin, age, veteran status, mental or physical
+disability, or any other basis prohibited by statute in its programs and activities. Inquiries related to department programs and to the location of services, activities, and facilities that are accessible by persons with
+disabilities may be directed to the Jefferson State Office Building, Director of Civil Rights Compliance and MOA Coordinator (Title VI/Title VII/Title IX/504/ADA/ADAAA/Age Act/GINA/USDA Title VI), 5th Floor, 205
+Jefferson Street, P.O. Box 480, Jefferson City, MO 65102-0480; telephone number 573-526-4757 or TTY 800-735-2966; email civilrights@dese.mo.gov
+
+
+
+                                                                                                                                                                                                                                8
+

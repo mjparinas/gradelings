@@ -458,4 +458,11 @@ export const lessons: GradeLessons = {
     ["Crabs and oysters live there.", "It is the Chesapeake Bay."],
     "the Chesapeake Bay",
   ),
+  // Missouri (us-mo)
+  "social/mo-g1-american-symbols": lesson(
+    ["Symbols stand for our country.", "The bald eagle and the flag are symbols of the United States.", "The Gateway Arch in St. Louis is a Missouri landmark."],
+    "Which bird is a symbol of the United States?",
+    ["It has a white head.", "It is the bald eagle."],
+    "the bald eagle",
+  ),
 };

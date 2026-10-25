@@ -662,4 +662,11 @@ export const lessons: GradeLessons = {
     ["It happened in 1803.", "Napoleon sold the land."],
     "France",
   ),
+  // Missouri (us-mo)
+  "social/mo-g2-missouri-regions": lesson(
+    ["Missouri has regions with different land.", "The Ozarks in the south have hills, forests and springs.", "The north has rolling plains and farms. The Missouri and Mississippi rivers shape the state."],
+    "Which Missouri region has hills, forests and springs?",
+    ["It is in the south of the state.", "It is the Ozarks."],
+    "the Ozarks",
+  ),
 };

@@ -999,4 +999,59 @@ export const lessons: GradeLessons = {
     ["It was a popular belief in the 1840s.", "People believed the country should grow.", "They thought it was meant to stretch across the continent."],
     "the belief that the US was meant to expand across North America",
   ),
+  // Missouri (us-mo)
+  "social/ga-g7-africa": lesson(
+    ["Key features include the Sahara, the Sahel, the Nile and the Congo River.", "Desertification in the Sahel and unsafe water are big environmental issues.", "Many African countries gained independence in the 1950s and 1960s."],
+    "What is desertification?",
+    ["Desert means dry land.", "Land slowly becomes like a desert."],
+    "good land turning into desert",
+  ),
+  "social/ga-g7-southwest-asia": lesson(
+    ["Key features include the Tigris and Euphrates Rivers, the Persian Gulf and the Arabian Peninsula.", "Oil is the region's most important export.", "Water is scarce, so sharing rivers is an important issue."],
+    "What is Southwest Asia's most important export?",
+    ["It is found under the desert and the Gulf.", "It is used for fuel."],
+    "oil",
+  ),
+  "social/ga-g7-southern-eastern-asia": lesson(
+    ["Key features include the Himalayas, the Ganges and the Yangtze Rivers.", "The Ganges is polluted and the Yangtze has huge dams.", "China, India and Japan have large economies."],
+    "Which mountains are the highest in the world?",
+    ["They are in southern Asia.", "Mount Everest is part of them."],
+    "the Himalayas",
+  ),
+  "social/ga-g7-population": lesson(
+    ["Demography is the study of human populations. Population density is how many people live in an area.", "Cities often grow along rivers and coasts for water and trade.", "Push factors drive people away; pull factors draw them. Newcomers keep culture alive with language and festivals."],
+    "Why do cities often grow along rivers and coasts?",
+    ["People need water.", "Rivers and coasts are also routes for trade."],
+    "They offer water and trade routes",
+  ),
+  "social/ga-g7-economies": lesson(
+    ["In a command economy the government decides what to make; in a market economy buyers and sellers do; a mixed economy blends both.", "Exports are sold to other countries; imports are bought from them. A tariff is a tax on imports.", "Comparative advantage: make what you can produce at the lowest opportunity cost, then trade."],
+    "In a command economy, who makes the main decisions about production?",
+    ["“Command” means orders from the top.", "The government gives those orders."],
+    "the government",
+  ),
+  "social/quality-of-life-8": lesson(
+    ["Indicators measure quality of life: life expectancy, literacy rate, infant mortality, and access to clean water and health care.", "High literacy and long life expectancy usually mean higher quality of life; high infant mortality usually means lower.", "To estimate doubling time, divide 70 by the yearly growth rate."],
+    "A population grows by 2% each year. About how many years will it take to double?",
+    ["Doubling time ≈ 70 ÷ growth rate.", "70 ÷ 2 = 35."],
+    "35",
+  ),
+  "social/mo-g6-world-maps": lesson(
+    ["There are 7 continents and 5 oceans. The Atlantic lies between the Americas and Europe and Africa.", "Latitude runs from 0° at the equator to 90° at the poles. Longitude is measured from the prime meridian.", "Every flat map (projection) stretches some places."],
+    "What latitude is the equator?",
+    ["Latitude counts from the middle of the Earth.", "The equator is the starting line."],
+    "0°",
+  ),
+  "social/mo-g6-latin-america": lesson(
+    ["Key features: the Amazon Rainforest, the Andes Mountains and the Atacama Desert.", "Most people speak Spanish, but Brazil speaks Portuguese.", "Issues include rainforest loss in Brazil and air pollution in Mexico City."],
+    "Why is the Amazon Rainforest shrinking?",
+    ["People clear land.", "Trees are cut for farms, ranches, logging and mining."],
+    "people cut and clear it for farms and logging",
+  ),
+  "social/mo-g6-australia": lesson(
+    ["Australia is a country and a continent, with the Great Barrier Reef and the Outback.", "Most Australians live near the coast, where the climate is milder.", "Aboriginal Australians have lived there for tens of thousands of years."],
+    "Why do most Australians live near the coast?",
+    ["The middle is hot and dry.", "The coast has more rain and milder weather."],
+    "the coast has a milder climate and more water",
+  ),
 };

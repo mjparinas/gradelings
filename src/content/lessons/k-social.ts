@@ -355,4 +355,11 @@ export const lessons: GradeLessons = {
     ["They came on ships from England.", "They were English settlers."],
     "English settlers",
   ),
+  // Missouri (us-mo)
+  "social/mo-k-flag-and-holidays": lesson(
+    ["The American flag has stars and stripes.", "We say the Pledge of Allegiance to the flag.", "Holidays like the Fourth of July help us remember our country."],
+    "What do we celebrate on the Fourth of July?",
+    ["It is our country's birthday."],
+    "our country's birthday",
+  ),
 };
