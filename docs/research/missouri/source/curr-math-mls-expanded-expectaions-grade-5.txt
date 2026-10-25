@@ -1,0 +1,252 @@
+                                Grade 5 Grade-Level Expanded Expectations
+                                NUMBER SENSE AND OPERATIONS IN BASE TEN: NBT
+                  Use place value system understanding to perform operations with multi-digit whole numbers to billions
+   5.NBT.A
+                  and decimals to thousandths.
+                  Read, write and identify numbers from billions to                                The expectation for the student is to read, write and identify numbers
+   5.NBT.A.1      thousandths using number names, base ten                                         from billions to thousandths using base ten numerals, number names and
+                  numerals and expanded form.                                                      expanded form.
+                  Compare two numbers from billions to                                             The expectation for the student is to compare two numbers from billions
+   5.NBT.A.2      thousandths using the symbols >, = or <, and                                     to thousandths using the symbols >, = or <, and justify the solution.
+                  justify the solution.
+                                                                                                   The expectation for the student is to understand that in a multi-digit
+                  Understand that in a multi-digit number, a digit
+                                                                                                   number, a digit in one place represents 10 times as much as it represents
+   5.NBT.A.3      represents 1/10 times what it would represents
+                                                                                                   in the place to its right and 1/10 of what it represents in the place to its
+                  in the place to its left.
+                                                                                                   left.
+                  Evaluate the value of powers of 10 and                                           The expectation for the student is to evaluate the value of powers of 10
+   5.NBT.A.4      understand the relationship to the place value                                   (exponents with a base of 10) and understand the relationship to the
+                  system.                                                                          place value system. (e.g., 101 =10, 102 =100, 103 =1000, 3 X 102 =300, etc.)
+                                                                                                   The expectation for the student is to use place value understanding to
+                  Round numbers from billions to thousandths
+   5.NBT.A.5                                                                                       round whole numbers as well as decimals, including to the nearest whole
+                  place.
+                                                                                                   number, in the context of estimation.
+                  Add and subtract multi-digit whole numbers and                                   The expectation for the student is to add and subtract multi-digit whole
+   5.NBT.A.6      decimals to the thousandths place, and justify                                   numbers and decimals to the thousandths place using an appropriate
+                  the solution.                                                                    strategy and justify solutions.
+                                                                                                   The expectation for the student is to multiply multi-digit whole numbers
+                  Multiply multi-digit whole numbers and decimals
+   5.NBT.A.7                                                                                       and decimals to the hundredths place using an appropriate strategy and
+                  to the hundredths place, and justify the solution.
+                                                                                                   justify solutions.
+                 The Department of Elementary and Secondary Education does not discriminate on the basis of race, color, religion, gender, gender identity, sexual orientation, national origin, age, veteran
+                 status, mental or physical disability, or any other basis prohibited by statute in its programs and activities. Inquiries related to department programs and to the location of services, activities, and
+                 facilities that are accessible by persons with disabilities may be directed to the Jefferson State Office Building, Director of Civil Rights Compliance and MOA Coordinator (Title VI/Title VII/Title
+                 IX/504/ADA/ADAAA/Age Act/GINA/USDA Title VI), 5th Floor, 205 Jefferson Street, P.O. Box 480, Jefferson City, MO 65102-0480; telephone number 573-526-4757 or TTY 800-735-2966; email
+                 civilrights@dese.mo.gov
+GLEs – GRADE 5
+                 Divide multi-digit whole numbers and decimals to     The expectation for the student is to divide multi-digit whole numbers
+                 the hundredths place using up to two-digit           and decimals to the hundredths place using up to two- digit whole
+   5.NBT.A.8
+                 divisors and four-digit dividends, and justify the   number divisors and four-digit dividends using an appropriate strategy
+                 solution.                                            and justify solutions.
+
+                       NUMBER SENSE AND OPERATIONS IN FRACTIONS: NF
+ 5.NF.A          Understand the relationship between fractions and decimals (denominators that are factors of 100).
+                                                                      The expectation for the student is to understand that parts of a whole can
+                 Understand that parts of a whole can be
+ 5.NF.A.1                                                             be expressed as fractions and/or decimals (Limit to denominators that are
+                 expressed as fractions and/or decimals.
+                                                                      factors of 100.).
+                                                                      The expectation for the student is to convert decimals to fractions and
+                 Convert decimals to fractions and fractions to
+ 5.NF.A.2                                                             fractions to decimals including values greater than one (Limit to
+                 decimals.
+                                                                      denominators that are factors of 100).
+                                                                      The expectation for the student is to compare and order fractions, or
+                 Compare and order fractions and/or decimals to       decimal numbers to the thousandths place, by reasoning about their size.
+ 5.NF.A.3        the thousandths place using the symbols >, = or      Record the results of comparisons with symbols >, = or <, and justify the
+                 <, and justify the solution.                         conclusions. (e.g., by using benchmarks, number lines, manipulatives or
+                                                                      drawings)
+ 5.NF.B          Perform operations and solve problems with fractions and decimals.
+                 Estimate results of sums, differences and            The expectation for the student is to estimate results of sums, differences
+ 5.NF.B.4        products with fractions and decimals to the          and products with fractions and with decimals to thousandths, including
+                 thousandths.                                         numbers greater than one.
+
+
+
+
+GLEs – GRADE 5
+                 Justify the reasonableness of a product when         The expectation for the student is to justify the reasonableness of a
+                 multiplying with fractions.                          product when multiplying with fractions.
+                     a) Estimate the size of the product based on       a. Estimate the size of the product based on the size of the two
+                          the size of the two factors.                     factors;
+                     b) Explain why multiplying a given number          b. Explain why multiplying a given number by a number greater than 1
+                          by a fraction greater than 1 results in a        (e.g., improper fractions, mixed numbers or whole numbers) results
+                          product larger than the given number.            in a product larger than the given number;
+ 5.NF.B.5
+                     c) Explain why multiplying a given number          c. Explain why multiplying a given number by a fraction between zero
+                          by a fraction less than 1 results in a           and 1 results in a product smaller than the given number;
+                          product smaller than the given number.        d. Explain why multiplying the numerator and denominator by the
+                     d) Explain why multiplying the numerator              same number has the same effect as multiplying the fraction by 1.
+                          and denominator by the same number is
+                          equivalent to multiplying the fraction by
+                          1.
+                 Solve problems involving addition and               The expectation for the student is to solve problems involving addition
+ 5.NF.B.6        subtraction of fractions and mixed numbers with     and subtraction of fractions with unlike denominators (including mixed
+                 unlike denominators, and justify the solution.      numbers) using an appropriate strategy and justify solutions.
+                                                                     The expectation for the student is to apply and extend previous
+                 Extend the concept of multiplication to multiply a
+                                                                     understanding of multiplication to multiply a fraction or whole number by
+                 fraction or whole number by a fraction.
+                                                                     a fraction.
+                     a) Recognize the relationship between
+                                                                       a. Recognize the relationship between multiplying fractions and
+                         multiplying fractions and finding the areas
+                                                                           finding the areas of rectangles with fractional side lengths;
+                         of rectangles with fractional side lengths.
+ 5.NF.B.7                                                              b. Calculate and interpret multiplication of a fraction or a whole
+                     b) Calculate and interpret the product of a
+                                                                           number by a fraction. (e.g., 1/5 x 5/12 is one fifth of five objects
+                         fraction by a whole number and a whole
+                                                                           called twelfths; 2 ½ x 4/5 is two groups of four fifths and another
+                         number by a fraction.
+                                                                           half-group of four fifths)
+                     c) Calculate and interpret the product of
+                                                                       c. Calculate and interpret the product of two fractions which are both
+                         two fractions less than one.
+                                                                           between zero and one.
+
+
+
+
+GLEs – GRADE 5
+                 Extend the concept of division to divide unit      The expectation for the student is to extend the concept of division to
+                 fractions and whole numbers by using visual        divide unit fractions and whole numbers by using visual fraction models
+                 fraction models and equations.                     and equations.
+                     a) Calculate and interpret the quotient of a     a. Calculate and interpret division of a unit fraction by a non-zero
+ 5.NF.B.8
+                         unit fraction by a non-zero whole                whole number and compute the quotient;
+                         number.                                      b. Calculate and interpret division of a whole number by a unit fraction
+                     b) Calculate and interpret the quotient of a         and compute the quotient.
+                         whole number by a unit fraction.
+
+                             RELATIONSHIPS AND ALGEBRAIC THINKING: RA
+ 5.RA.A          Represent and analyze patterns and relationships.
+                                                                    The expectation for the student is to investigate the relationship between
+                                                                    two numerical patterns expressed as rules, tables, sets of ordered pairs or
+                 Investigate the relationship between two           graphs.
+                 numeric patterns.                                    a. Generate two numerical patterns given two rules and organize in
+                     a) Generate two numeric patterns given two            tables;
+                         rules.                                       b. Translate the two numerical patterns into two sets of ordered pairs
+                     b) Translate two numeric patterns into two            then graph the two sets of ordered pairs on the same Cartesian
+ 5.RA.A.1
+                         sets of ordered pairs.                            plane;
+                     c) Graph numeric patterns on the Cartesian       c. Graph numeric patterns on the Cartesian coordinate plane;
+                         coordinate plane.                            d. Identify the relationship between the two numerical patterns.
+                     d) Identify the relationship between two       (e.g., Given the rule “Starting at 0, add 3” and given the rule “Starting at
+                         numeric patterns.                          0, add 6”, generate terms in the resulting sequences, and observe that the
+                                                                    terms in one sequence are twice the corresponding terms in the other
+                                                                    sequence. Explain this pattern informally.)
+                                                                    The expectation for the student to given a numerical pattern, write a rule
+                 Write a rule to describe or explain a given        to describe or explain the pattern. (e.g., Given the pattern 64, 32, 16, …
+ 5.RA.A.2
+                 numeric pattern.                                   generate the rule. “Starting at 64, divide the previous term by 2” or
+                                                                    “Starting at 64 multiply the previous term by ½”)
+ 5.RA.B          Write and interpret numerical expressions.
+
+
+
+
+GLEs – GRADE 5
+                                                                   The expectation for the student is to write, evaluate and interpret
+                 Write, evaluate and interpret numeric
+ 5.RA.B.3                                                          numerical expressions using order of operations (not including
+                 expressions using the order of operations.
+                                                                   exponents).
+                 Translate written expressions into algebraic      The expectation for the student is to translate written expressions into
+ 5.RA.B.4
+                 expressions.                                      numerical expressions.
+ 5.RA.C          Use the four operations to represent and solve problems.
+                                                                   The expectation for the student is to solve multistep word problems using
+                 Solve and justify multi-step problems involving   whole numbers, fractions and decimals. Represent these problems as
+ 5.RA.C.5        variables, whole numbers, fractions and           equations with a letter standing for the unknown quantity. Use estimation
+                 decimals.                                         to assess the reasonableness of answers. (Exclude division of fractions by
+                                                                   fractions.)
+
+                                     GEOMETRY AND MEASUREMENT: GM
+ 5.GM.A          Classify two- and three-dimensional geometric shapes.
+                                                                   The expectation for the student is to understand that attributes belonging
+                 Understand that attributes belonging to a         to a category of two-dimensional or three-dimensional geometric shapes
+ 5.GM.A.1        category of figures also belong to all            also belong to all subcategories of that category. (e.g., All rectangles have
+                 subcategories.                                    four right angles and squares are rectangles, so all squares have four right
+                                                                   angles.)
+                 Classify figures in a hierarchy based on          The expectation for the student is to classify figures (e.g., triangles and
+ 5.GM.A.2
+                 properties.                                       quadrilaterals) in a hierarchy based on properties.
+                                                                   The expectation for the student is to analyze properties of prisms and
+                 Analyze and describe the properties of prisms
+ 5.GM.A.3                                                          pyramids, describing them by the number of edges, faces or vertices as
+                 and pyramids.
+                                                                   well as the types of bases.
+ 5.GM.B          Understand and compute volume.
+
+
+
+
+GLEs – GRADE 5
+                 Understand the concept of volume and recognize       The expectation for the student is to understand the concept of volume
+                 that volume is measured in cubic units.              and recognize that volume is measured in cubic units:
+                     a) Describe a cube with edge length 1 unit         a. A cube with edge length 1 unit is called a “unit cube” and is said to
+                         as a “unit cube” and is said to have “one         have “one cubic unit” of volume and can be used to measure
+ 5.GM.B.4                cubic unit” of volume and can be used to          volume.
+                         measure volume.                                b. Understand that the volume of a right rectangular prism can be
+                     b) Understand that the volume of a right              found by packing the prism with cubes or stacking multiple layers of
+                         rectangular prism can be found by                 the base.
+                         stacking multiple layers of the base.
+                 Apply the formulas V = l × w × h and V = B × h for   The expectation for the student is to apply the formulas V = l × w × h and
+ 5.GM.B.5        volume of right rectangular prisms with whole-       V = B × h for volume of right rectangular prisms with whole-number edge
+                 number edge lengths.                                 lengths.
+ 5.GM.C          Graph points on the Cartesian coordinate plane within the first quadrant to solve problems.
+                 Define a first quadrant Cartesian coordinate         The expectation for the student is to define a Cartesian coordinate
+                 system.                                              system.
+                     a) Represent the axes as scaled                    a. The x- and y- axes are perpendicular number lines that intersect at 0
+                        perpendicular number lines that both               (the origin);
+                        intersect at 0, the origin.                     b. Any point on the Cartesian coordinate plane can be represented by
+                     b) Identify any point on the Cartesian                its coordinates;
+ 5.GM.C.6               coordinate plane by its ordered pair            c. The first number in an ordered pair is the x-coordinate and
+                        coordinates.                                       represents the horizontal distance from the origin;
+                     c) Define the first number in an ordered pair      d. The second number in an ordered pair is the y-coordinate and
+                        as the horizontal distance from the origin.        represents the vertical distance from the origin.
+                     d) Define the second number in an ordered
+                        pair as the vertical distance from the
+                        origin.
+                                                                      The expectation for the student is to plot and interpret points in the first
+                 Plot and interpret points in the first quadrant of
+ 5.GM.C.7                                                             quadrant of the Cartesian coordinate plane to represent real-world and
+                 the Cartesian coordinate plane.
+                                                                      mathematical situations.
+ 5.GM.D          Solve problems involving measurement and conversions within a measurement system.
+
+
+
+
+GLEs – GRADE 5
+                                                                    The expectation for the student is to convert measurements of capacity,
+                 Convert measurements of capacity, length and
+ 5.GM.D.8                                                           length and weight within a single measurement system (customary-to-
+                 weight within a given measurement system.
+                                                                    customary and metric-to-metric systems).
+                 Solve multi-step problems that require             The expectation for the student is to solve multi-step problems that
+ 5.GM.D.9
+                 measurement conversions.                           require measurement conversions.
+
+                                               DATA AND STATISTICS: DS
+ 5.DS.A          Represent and analyze data.
+                 Create a line graph to represent a data set, and   The expectation for the student is to create a line graph to represent a
+ 5.DS.A.1        analyze the data to answer questions and solve     given or generated data set. Analyze the data to answer questions and
+                 problems.                                          solve problems.
+                 Create a line plot to represent a given or         The expectation for the student is to create a line plot to represent a
+                 generated data set, and analyze the data to        given or generated data set (data could include fractions or decimals).
+ 5.DS.A.2        answer questions and solve problems,               Analyze the data to answer questions and solve problems, recognizing the
+                 recognizing the outliers and generating the        outliers and generating the median.
+                 median.
+
+
+
+
+GLEs – GRADE 5
+

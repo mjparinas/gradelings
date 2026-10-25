@@ -1,14 +1,14 @@
 "use client";
 
 import { APP_NAME } from "@/lib/brand";
-import { getSupertonicState, SUPERTONIC_VOICES, supertonicSupported, setSupertonicEnabled, subscribeSupertonic, type SupertonicState } from "@/lib/supertonic";
+import { getPiperState, PIPER_VOICES, piperSupported, setPiperEnabled, subscribePiper, type PiperState } from "@/lib/piper";
 import { useSyncExternalStore } from "react";
 import {
   canSpeak,
   chooseVoice,
   getVoiceOptions,
   getVoicePreference,
-  previewSupertonic,
+  previewPiper,
   previewVoice,
   setVoicePreference,
   stopSpeaking,
@@ -19,7 +19,7 @@ import {
 import { Disclosure } from "../Disclosure";
 import { SelectMenu } from "../SelectMenu";
 import { Panel } from "./common";
-import { SupertonicVoice } from "./SupertonicVoice";
+import { PiperVoice } from "./PiperVoice";
 
 const NONE: VoiceOption[] = [];
 
@@ -88,17 +88,17 @@ function Tips({ open }: { open: boolean }) {
 
 /** What read-aloud uses on this device right now, with a sample, so most parents never need to change it. */
 function CurrentVoice({ current }: { current: VoiceOption | undefined }) {
-  const supertonic = useSyncExternalStore<SupertonicState | undefined>(subscribeSupertonic, getSupertonicState, () => undefined);
-  const supported = supertonic !== undefined && supertonicSupported();
-  const voiceName = SUPERTONIC_VOICES.en.name;
-  const usingSupertonic = supported && supertonic.enabled && supertonic.voices.en.state === "ready";
-  const waiting = supported && supertonic.enabled && supertonic.voices.en.state !== "ready";
+  const piper = useSyncExternalStore<PiperState | undefined>(subscribePiper, getPiperState, () => undefined);
+  const supported = piper !== undefined && piperSupported();
+  const voiceName = PIPER_VOICES.en.name;
+  const usingPiper = supported && piper.enabled && piper.voices.en.state === "ready";
+  const waiting = supported && piper.enabled && piper.voices.en.state !== "ready";
   const device = current ? `${shortName(current.name)} (${QUALITY[current.quality].label.toLowerCase()})` : "the device voice";
   return (
     <div className="flex flex-col gap-2 rounded-xl bg-paper p-4">
       <p>
         <span className="font-semibold">Reading with: </span>
-        {usingSupertonic ? `${voiceName}, the offline natural voice` : device}
+        {usingPiper ? `${voiceName}, the offline natural voice` : device}
       </p>
       {waiting && <p className="text-sm text-ink-soft">{voiceName}, a natural voice that works offline, downloads by itself once a child has &ldquo;Read questions out loud&rdquo; on or taps 🔊 (it waits while this device is on mobile data).</p>}
       <button
@@ -106,7 +106,7 @@ function CurrentVoice({ current }: { current: VoiceOption | undefined }) {
         className="self-start rounded-xl bg-[#4f8ef7] px-4 py-2.5 font-bold text-[#0f172a]"
         onClick={() => {
           stopSpeaking();
-          if (usingSupertonic) void previewSupertonic("en").catch(() => previewVoice(getVoicePreference()));
+          if (usingPiper) void previewPiper("en").catch(() => previewVoice(getVoicePreference()));
           else previewVoice(getVoicePreference());
         }}
       >
@@ -133,7 +133,7 @@ export function VoicePicker() {
       )}
       <Disclosure title="Change voice" className="mt-3 rounded-xl border-2 border-line px-4">
         <div className="flex flex-col gap-4 pb-4">
-          <SupertonicVoice language="en" />
+          <PiperVoice language="en" />
           {!canSpeak() ? null : options.length === 0 ? (
             <>
               <p className="text-ink-soft">No English voices found on this device yet.</p>
@@ -148,7 +148,7 @@ export function VoicePicker() {
                   stopSpeaking();
                   setVoicePreference(next || null);
                   // Picking a device voice means the parent wants to hear it.
-                  if (next) setSupertonicEnabled(false);
+                  if (next) setPiperEnabled(false);
                 }}
                 options={[
                   { value: "", label: `Automatic: ${best ? describe(best) : "best available"}` },
@@ -187,7 +187,7 @@ function FrenchVoice() {
   return (
     <div className="mt-5 flex flex-col gap-3 border-t border-line pt-4">
       <h3 className="text-lg font-bold">French voice</h3>
-      <SupertonicVoice language="fr" />
+      <PiperVoice language="fr" />
       {options.length === 0 ? (
         <p className="text-sm text-ink-soft">
           No French voices found on this device yet, so French lessons will be read in an English voice. Add a French voice in your device&apos;s speech settings

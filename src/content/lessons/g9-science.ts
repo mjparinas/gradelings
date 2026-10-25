@@ -650,4 +650,11 @@ export const lessons: GradeLessons = {
     ["The community is rebuilding over time.", "Gradual change in a community is succession."],
     "succession",
   ),
+  // Missouri (us-mo)
+  "science/mo-g9-ecosystems": lesson(
+    ["A population levels off at carrying capacity on a logistic growth curve.", "About 10% of energy passes up each trophic level.", "After disturbances like fire, succession rebuilds the community; stable ecosystems recover."],
+    "Shrubs sprout again after a prairie fire. What is this an example of?",
+    ["The community is rebuilding over time.", "Gradual change in a community is succession."],
+    "succession",
+  ),
 };

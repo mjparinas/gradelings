@@ -1,0 +1,158 @@
+                                                                          2nd Grade Mathematics
+                  Missouri Learning Standards:                                                         Missouri Learning Standards:
+             Grade-Level Expectations for Mathematics                                                         Mathematics
+      (Adopted April 2016 for implementation in the 2016 – 2017 school year)                                       (Adopted 2010)
+   Code                             Adopted Standards                                  Code                                Current MLS
+2.NBT.A        Understand place value of three digit numbers.
+2.NBT.A.1      Understand three-digit numbers are composed of hundreds, tens        2.NBT.A.1     Understand that the three digits of a three-digit number
+               and ones.                                                                          represent amounts of hundreds, tens, and ones; e.g., 706 equals
+2.NBT.A.2      Understand that 100 can be thought of as 10 tens – called a                        7 hundreds, 0 tens, and 6 ones. Understand the following as
+               “hundred”.                                                                         special cases:
+                                                                                                  a. 100 can be thought of as a bundle of ten tens — called a
+                                                                                                     "hundred."
+                                                                                                  b. The numbers 100, 200, 300, 400, 500, 600, 700, 800, 900
+                                                                                                     refer to one, two, three, four, five, six, seven, eight, or nine
+                                                                                                     hundreds (and 0 tens and 0 ones).
+2.NBT.A.3      Count within 1000 by 1s, 10s and 100s starting with any              2.NBT.A.2     Count within 1000; skip-count by 5s, 10s, and 100s.
+               number.
+2.NBT.A.4      Read and write numbers to 1000 using number names, base-ten          2.NBT.A.3     Read and write numbers to 1000 using base-ten numerals,
+               numerals and expanded form.                                                        number names, and expanded form.
+2.NBT.A.5      Compare two three-digit numbers using the symbols >, = or <.         2.NBT.A.4     Compare two three-digit numbers based on meanings of the
+                                                                                                  hundreds, tens, and ones digits, using >, =, and < symbols to
+                                                                                                  record the results of comparisons.
+2.NBT.B        Use place value understanding and properties of operations
+               to add and subtract.
+2.NBT.B.6      Demonstrate fluency with addition and subtraction within 100.        2.NBT.B.5     Fluently add and subtract within 100 using strategies based on
+                                                                                                  place value, properties of operations, and/or the relationship
+                                                                                                  between addition and subtraction.
+                                                                                    2.NBT.B.9     Explain why addition and subtraction strategies work, using
+                                                                                                  place value and the properties of operations.
+2.NBT.B.7      Add up to four two-digit numbers.                                    2.NBT.B.6     Add up to four two-digit numbers using strategies based on
+                                                                                                  place value and properties of operations.
+2.NBT.B.8      Add or subtract within 1000, and justify the solution.               2.NBT.B.7     Add and subtract within 1000, using concrete models or
+                                                                                                  drawings and strategies based on place value, properties of
+2.NBT.B.9      Use the relationship between addition and subtraction to solve                     operations, and/or the relationship between addition and
+               problems.                                                                          subtraction; relate the strategy to a written method. Understand
+                                                                                                  that in adding or subtracting three-digit numbers, one adds or
+                                                                                                  subtracts hundreds and hundreds, tens and tens, ones and ones;
+                                                                                                  and sometimes it is necessary to compose or decompose tens or
+                                                                                                  hundreds.
+2.NBT.B.10     Add or subtract mentally 10 or 100 to or from a given number         2.NBT.B.8     Mentally add 10 or 100 to a given number 100-900, and
+               within 1000.                                                                       mentally subtract 10 or 100 from a given number 100-900.
+2.NBT.C        Represent and solve problems involving addition and
+               subtraction.
+
+                                                                                                                                                                        1
+                                                                             2nd Grade Mathematics
+                   Missouri Learning Standards:                                                           Missouri Learning Standards:
+              Grade-Level Expectations for Mathematics                                                           Mathematics
+         (Adopted April 2016 for implementation in the 2016 – 2017 school year)                                       (Adopted 2010)
+   Code                                Adopted Standards                                  Code                                Current MLS
+2.NBT.C.11        Write and solve problems involving addition and subtraction          2.OA.A.1      Use addition and subtraction within 100 to solve one- and two-
+                  within 100.                                                                        step word problems involving situations of adding to, taking
+                                                                                                     from, putting together, taking apart, and comparing, with
+                                                                                                     unknowns in all positions, e.g., by using drawings and equations
+                                                                                                     with a symbol for the unknown number to represent the
+                                                                                                     problem.
+2.RA.A            Add and subtract within 20.
+2.RA.A.1          Demonstrate fluency with addition and subtraction within 20.         2.OA.B.2      Fluently add and subtract within 20 using mental strategies. By
+                                                                                                     end of Grade 2, know from memory all sums of two one-digit
+                                                                                                     numbers.
+2.RA.B            Develop foundations for multiplication and division.
+2.RA.B.2          Determine if a set of objects has an odd or even number of           2.OA.C.3      Determine whether a group of objects (up to 20) has an odd or
+                  members.                                                                           even number of members, e.g., by pairing objects or counting
+             a)   Count by 2s to 100 starting with any even number.                                  them by 2s; write an equation to express an even number as a
+             b)   Express even numbers as pairings/groups of 2, and write an                         sum of two equal addends.
+                  expression to represent the number using addends of 2.
+             c)   Express even numbers as being composed of equal groups and
+                  write an expression to represent the number with 2 equal
+                  addends.
+2.RA.B.3          Find the total number of objects arranged in a rectangular array     2.OA.C.4      Use addition to find the total number of objects arranged in
+                  with up to 5 rows and 5 columns, and write an equation to                          rectangular arrays with up to 5 rows and up to 5 columns; write
+                  represent the total as a sum of equal addends.                                     an equation to express the total as a sum of equal addends.
+2.GM.A            Reason with shapes and their attributes.
+2.GM.A.1          Recognize and draw shapes having specified attributes, such as a     2.G.A.1       Recognize and draw shapes having specified attributes, such as a
+                  given number of angles or sides.                                                   given number of angles or a given number of equal
+             a)   Identify triangles, quadrilaterals, pentagons, hexagons, circles                   faces. Identify triangles, quadrilaterals, pentagons, hexagons, and
+                  and cubes.                                                                         cubes.
+             b)   Identify the faces of three-dimensional objects.
+2.GM.A.2          Partition a rectangle into rows and columns of same-size squares     2.G.A.2       Partition a rectangle into rows and columns of same-size squares
+                  and count to find the total number of squares.                                     and count to find the total number of them.
+2.GM.A.3          Partition circles and rectangles into two, three or four equal       2.G.A.3       Partition circles and rectangles into two, three, or four equal
+                  shares, and describe the shares and the whole.                                     shares, describe the shares using the words halves, thirds, half
+             a)   Demonstrate that equal shares of identical wholes need not have                    of, a third of, etc., and describe the whole as two halves, three
+                  the same shape.                                                                    thirds, four fourths. Recognize that equal shares of identical
+                                                                                                     wholes need not have the same shape.
+2.GM.B            Measure and estimate lengths in standard units.
+
+
+
+
+                                                                                                                                                                           2
+                                                                           2nd Grade Mathematics
+                 Missouri Learning Standards:                                                           Missouri Learning Standards:
+            Grade-Level Expectations for Mathematics                                                           Mathematics
+       (Adopted April 2016 for implementation in the 2016 – 2017 school year)                                       (Adopted 2010)
+   Code                              Adopted Standards                                  Code                                Current MLS
+2.GM.B.4        Measure the length of an object by selecting and using               2.MD.A.1      Measure the length of an object by selecting and using
+                appropriate tools.                                                                 appropriate tools such as rulers, yardsticks, meter sticks, and
+                                                                                                   measuring tapes.
+
+2.GM.B.5        Analyze the results of measuring the same object with different      2.MD.A.2      Measure the length of an object twice, using length units of
+                units.                                                                             different lengths for the two measurements; describe how the
+                                                                                                   two measurements relate to the size of the unit chosen.
+2.GM.B.6        Estimate lengths using units of inches, feet, yards, centimeters     2.MD.A.3      Estimate lengths using units of inches, feet, centimeters, and
+                and meters.                                                                        meters.
+2.GM.B.7        Measure to determine how much longer one object is than              2.MD.A.4      Measure to determine how much longer one object is than
+                another.                                                                           another, expressing the length difference in terms of a standard
+                                                                                                   length unit.
+2.GM.C          Relate addition and subtraction to length.
+2.GM.C.8        Use addition and subtraction within 100 to solve problems            2.MD.B.5      Use addition and subtraction within 100 to solve word problems
+                involving lengths that are given in the same units.                                involving lengths that are given in the same units, e.g., by using
+                                                                                                   drawings (such as drawings of rulers) and equations with a
+                                                                                                   symbol for the unknown number to represent the problem.
+2.GM.C.9        Represent whole numbers as lengths on a number line, and             2.MD.B.6      Represent whole numbers as lengths from 0 on a number line
+                represent whole-number sums and differences within 100 on a                        diagram with equally spaced points corresponding to the
+                number line.                                                                       numbers 0, 1, 2, ..., and represent whole-number sums and
+                                                                                                   differences within 100 on a number line diagram.
+2.GM.D          Work with time and money.
+2.GM.D.10       Tell and write time from analog and digital clocks to the nearest    2.MD.C.7      Tell and write time from analog and digital clocks to the nearest
+                five minutes, using a.m. and p.m.                                                  five minutes, using a.m. and p.m.
+2.GM.D.11       Describe a time shown on a digital clock as representing hours
+                and minutes, and relate a time shown on a digital clock to the
+                same time on an analog clock.
+2.GM.D.12       Find the value of combinations of dollar bills, quarters, dimes,     2.MD.C.8      Solve word problems involving dollar bills, quarters, dimes,
+                nickels and pennies, using $ and ¢ appropriately.                                  nickels, and pennies, using $ and ¢ symbols appropriately.
+2.GM.D.13       Find combinations of coins that equal a given amount.                              Example: If you have 2 dimes and 3 pennies, how many cents do
+                                                                                                   you have?
+2.DS.A          Represent and interpret data.
+2.DS.A.1        Create a line plot to represent a set of numeric data, given a       2.MD.D.9      Generate measurement data by measuring lengths of several
+                horizontal scale marked in whole numbers.                                          objects to the nearest whole unit, or by making repeated
+2.DS.A.2        Generate measurement data to the nearest whole unit, and                           measurements of the same object. Show the measurements by
+                display the data in a line plot.                                                   making a line plot, where the horizontal scale is marked off in
+                                                                                                   whole-number units.
+2.DS.A.3        Draw a picture graph or a bar graph to represent a data set with     2.MD.D.10     Draw a picture graph and a bar graph (with single-unit scale) to
+                up to four categories.                                                             represent a data set with up to four categories. Solve simple put-
+                                                                                                                                                                        3
+                                                                                                2nd Grade Mathematics
+                       Missouri Learning Standards:                                                                                           Missouri Learning Standards:
+                  Grade-Level Expectations for Mathematics                                                                                           Mathematics
+           (Adopted April 2016 for implementation in the 2016 – 2017 school year)                                                                             (Adopted 2010)
+     Code                                        Adopted Standards                                                    Code                                              Current MLS
+2.DS.A.4               Solve problems using information presented in line plots, picture                                               together, take-apart, and compare problems using information
+                       graphs and bar graphs.                                                                                          presented in a bar graph.
+2.DS.A.5               Draw conclusions from line plots, picture graphs and bar graphs.
+
+
+
+
+The Department of Elementary and Secondary Education does not discriminate on the basis of race, color, religion, gender, gender identity, sexual orientation, national origin, age, veteran status, mental or physical
+disability, or any other basis prohibited by statute in its programs and activities. Inquiries related to department programs and to the location of services, activities, and facilities that are accessible by persons with
+disabilities may be directed to the Jefferson State Office Building, Director of Civil Rights Compliance and MOA Coordinator (Title VI/Title VII/Title IX/504/ADA/ADAAA/Age Act/GINA/USDA Title VI), 5th Floor, 205
+Jefferson Street, P.O. Box 480, Jefferson City, MO 65102-0480; telephone number 573-526-4757 or TTY 800-735-2966; email civilrights@dese.mo.gov
+
+
+
+
+                                                                                                                                                                                                                                4
+

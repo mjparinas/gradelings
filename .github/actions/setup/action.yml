@@ -11,13 +11,20 @@ runs:
       with:
         node-version: 22
         cache: npm
-    # Restoring node_modules is much faster than npm ci. The cache is only saved on a miss,
-    # and a miss falls through to a clean npm ci.
+    # Restoring node_modules is much faster than npm ci. A miss falls through to a clean npm ci,
+    # and the result is saved straight away rather than when the job ends, so a job that is
+    # cancelled by a newer push (or fails) still leaves the cache for the next run.
     - id: modules
-      uses: actions/cache@v6
+      uses: actions/cache/restore@v6
       with:
         path: node_modules
         key: node-modules-${{ runner.os }}-${{ inputs.flavor }}-${{ hashFiles('package-lock.json') }}
     - if: steps.modules.outputs.cache-hit != 'true'
       run: npm ci --prefer-offline --no-audit --no-fund
       shell: bash
+    - if: steps.modules.outputs.cache-hit != 'true'
+      uses: actions/cache/save@v6
+      continue-on-error: true
+      with:
+        path: node_modules
+        key: ${{ steps.modules.outputs.cache-primary-key }}

@@ -10,12 +10,21 @@ runs:
     - id: version
       shell: bash
       run: echo "playwright=$(node -p "require('playwright/package.json').version")" >> "$GITHUB_OUTPUT"
-    - uses: actions/cache@v6
+    # Saved as soon as it is downloaded (not when the job ends), so a cancelled job still keeps it.
+    - id: cache
+      uses: actions/cache/restore@v6
       with:
         path: ~/.cache/ms-playwright
         key: playwright-${{ runner.os }}-${{ steps.version.outputs.playwright }}-${{ inputs.browsers }}
-    - shell: bash
+    - if: steps.cache.outputs.cache-hit != 'true'
+      shell: bash
       run: npx playwright install ${{ inputs.browsers }}
+    - if: steps.cache.outputs.cache-hit != 'true'
+      uses: actions/cache/save@v6
+      continue-on-error: true
+      with:
+        path: ~/.cache/ms-playwright
+        key: ${{ steps.cache.outputs.cache-primary-key }}
     # System libraries are not part of the browser download, so they are installed every run.
     - shell: bash
       run: npx playwright install-deps ${{ inputs.browsers }}
