@@ -919,6 +919,42 @@ export const lessons: GradeLessons = {
     ["It is a tool people made.", "Tools and machines are capital resources."],
     "a capital resource",
   ),
+  "social/mi-g3-michigan-land": lesson(
+    ["Michigan has two peninsulas: the Upper Peninsula and the mitten-shaped Lower Peninsula.", "Four of the five Great Lakes touch Michigan: Superior, Michigan, Huron and Erie.", "The Mackinac Bridge joins the two peninsulas across the Straits of Mackinac."],
+    "Which Great Lake does not touch Michigan?",
+    ["Name the five Great Lakes: Superior, Michigan, Huron, Erie, Ontario.", "Four of them touch Michigan. Lake Ontario is farther east."],
+    "Lake Ontario",
+  ),
+  "social/mi-g3-first-peoples": lesson(
+    ["The Anishinaabek in Michigan are the Ojibwe, the Odawa and the Potawatomi, the Three Fires.", "Long ago they used the lakes and forests: canoes, maple sugar, wild rice, fishing and hunting.", "Today Michigan has 12 federally recognized Tribes, each with its own government."],
+    "Which three nations make up the Three Fires?",
+    ["They are the Anishinaabek of Michigan.", "The Ojibwe, Odawa and Potawatomi."],
+    "the Ojibwe, Odawa and Potawatomi",
+  ),
+  "social/mi-g3-early-michigan": lesson(
+    ["French fur traders and missionaries came first. Cadillac founded Detroit in 1701.", "Britain took control in 1763, and the British left Detroit in 1796.", "Settlers came on the Erie Canal, and Michigan became the 26th state in 1837."],
+    "Which country controlled Michigan first: France or Britain?",
+    ["Think of who founded Detroit in 1701.", "Cadillac was French."],
+    "France",
+  ),
+  "social/mi-g3-michigan-timeline": lesson(
+    ["A timeline puts events in order, from earliest to latest.", "A smaller year number happened earlier.", "Some of early Michigan's big moments: Detroit founded (1701), Michigan Territory (1805), statehood (1837)."],
+    "Put in order: statehood (1837), Detroit founded (1701), Michigan Territory (1805).",
+    ["Find the smallest year first.", "1701, then 1805, then 1837."],
+    "Detroit founded, Michigan Territory, statehood",
+  ),
+  "social/mi-g3-michigan-economy": lesson(
+    ["Natural resources like water, forests and soil help Michigan grow cherries and make lumber.", "Human resources are workers' skills. Capital resources are tools and machines, like car-factory robots.", "Places specialize in what they make best and trade for the rest."],
+    "A car factory's robots are which kind of resource?",
+    ["People made them to make other goods.", "Tools and machines are capital resources."],
+    "capital resources",
+  ),
+  "social/mi-g3-michigan-government": lesson(
+    ["Michigan's government in Lansing has three branches, like the nation's.", "The Legislature makes laws, the governor carries them out, and the courts decide what laws mean.", "Taxes pay for state services like highways, parks and state police."],
+    "Which branch of Michigan's government makes laws?",
+    ["Think of the people who meet in the Capitol to vote on bills.", "That is the Legislature."],
+    "the Legislature (legislative branch)",
+  ),
   // Indiana (us-in)
   "social/in-g3-indiana-midwest": lesson(
     ["Indiana is in the Midwest, between Illinois and Ohio, with Michigan and Lake Michigan to the north and Kentucky to the south.", "The Ohio River forms Indiana's southern border.", "Use a map's compass rose and key to find places."],

@@ -625,6 +625,24 @@ export const lessons: GradeLessons = {
     ["Alike charges repel.", "The balloons push apart."],
     "push apart",
   ),
+  "science/mi-g5-sun-stars": lesson(
+    ["The sun looks brighter than other stars because it is much closer to Earth.", "Far-off headlights look dim and near ones bright: distance works the same way for stars.", "Earth spins once about every 24 hours, giving day and night.", "The North Star seems to stay still because it is almost straight above Earth's axis."],
+    "Some stars are bigger than the sun. Why do they look so small?",
+    ["Things far away look dimmer and smaller.", "Those stars are much farther from Earth."],
+    "they are very far away",
+  ),
+  "science/mi-g5-ecosystems": lesson(
+    ["Producers make food. Consumers eat other living things.", "Decomposers, like worms and fungi, return nutrients to the soil.", "Matter moves around an ecosystem again and again."],
+    "Orcas eat salmon. Are orcas producers or consumers?",
+    ["Orcas can't make their own food.", "They eat other animals."],
+    "consumers",
+  ),
+  "science/mi-g5-earth-water": lesson(
+    ["Earth has four systems: the geosphere (land), hydrosphere (water), atmosphere (air) and biosphere (life).", "Most of Earth's water is salty ocean water, and most fresh water is frozen in ice.", "The Great Lakes hold a large share of the world's fresh surface water, so people work to keep them clean."],
+    "Trees take in water and give off water vapour. Which systems interact?",
+    ["Trees: biosphere. Water: hydrosphere.", "The vapour goes into the air: atmosphere."],
+    "biosphere, hydrosphere and atmosphere",
+  ),
   // Indiana (us-in)
 "science/in-g5-sun-stars": lesson(
     ["The sun looks brighter than other stars because it is much closer to Earth.", "Far-off headlights look dim and near ones bright: distance works the same way for stars.", "Earth spins once about every 24 hours, giving day and night.", "The North Star seems to stay still because it is almost straight above Earth's axis."],

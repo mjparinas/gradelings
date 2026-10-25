@@ -337,6 +337,12 @@ export const lessons: GradeLessons = {
     ["Georgia is a state.", "States are part of a country."],
     "the United States",
   ),
+  "social/mi-k-flag-and-state": lesson(
+    ["Michigan is our state. The United States is our country.", "The flag has 50 stars, one for each state, and 13 stripes.", "Michigan's state bird is the robin."],
+    "How many stars are on the American flag?",
+    ["There is one star for each state.", "There are 50 states."],
+    "50",
+  ),
   "social/va-k-near-far": lesson(
     ["Near means close. Far means a long way.", "A globe is a model of Earth.", "A map shows where places are."],
     "A globe is a model of…",

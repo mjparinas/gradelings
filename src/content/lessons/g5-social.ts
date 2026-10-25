@@ -859,6 +859,18 @@ export const lessons: GradeLessons = {
     ["Banks lend money.", "A home loan is called a mortgage."],
     "a bank",
   ),
+  "social/mi-g5-eastern-woodland": lesson(
+    ["The Eastern Woodland is the land of forests east of the Mississippi River.", "Many Woodland peoples grew the Three Sisters (corn, beans and squash), hunted and fished.", "Peoples adapted to their land: longhouses and wigwams in the forests, tipis on the Plains, adobe in the Southwest."],
+    "Why did Plains peoples live in tipis that were easy to move?",
+    ["Think about how they got food.", "They followed the bison herds."],
+    "they followed the bison herds",
+  ),
+  "social/mi-g5-explorers": lesson(
+    ["New ships like the caravel and tools like the astrolabe made long sea voyages possible.", "Explorers sailed for Spain, Portugal, France, England and the Dutch, looking for riches and routes to Asia.", "French explorers and fur traders came to the Great Lakes; Cadillac founded Detroit in 1701."],
+    "What did many explorers hope to find?",
+    ["They wanted spices and silk from the East.", "They looked for a sea route to Asia."],
+    "a sea route to Asia and riches",
+  ),
   "social/ca-g7-west-african-life": lesson(
     ["Many West Africans lived in extended families, with several generations close together.", "Labour specialization means people do different jobs and trade. Cities like Timbuktu, Djenné and Gao grew on the Niger and Saharan routes.", "Arabic became a language of records, trade and Islamic scholarship, especially in Timbuktu."],
     "What does labour specialization mean?",

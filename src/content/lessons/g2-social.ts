@@ -637,6 +637,18 @@ export const lessons: GradeLessons = {
     ["The nation has a president.", "A city has a mayor."],
     "the governor",
   ),
+  "social/mi-g2-reading-maps": lesson(
+    ["A map is a drawing of a place seen from above. North is usually at the top.", "On a grid map, find the column letter, then the row number.", "The key explains symbols, like a star for a capital city."],
+    "On a grid map, the park is in square B3. How do you find it?",
+    ["Find column B first.", "Then go to row 3."],
+    "column B, then row 3",
+  ),
+  "social/mi-g2-local-government": lesson(
+    ["Local government makes rules and gives services for a city, township or county.", "A city often has a mayor and a council. A township has a board.", "Taxes pay for services like fire fighters, parks, roads and libraries."],
+    "Who pays for a town's fire trucks?",
+    ["Services cost money.", "People pay taxes, and the government uses them for services."],
+    "the people, through taxes",
+  ),
   // Indiana (us-in)
   "social/in-g2-pledge-harrison": lesson(
     ["The Pledge of Allegiance is a promise to be loyal to the United States.", "Benjamin Harrison, from Indiana, was the 23rd president. He asked schools to fly the flag.", "Good citizens follow rules, help others and care for their community."],

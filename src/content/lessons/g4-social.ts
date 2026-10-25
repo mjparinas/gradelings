@@ -1423,6 +1423,36 @@ export const lessons: GradeLessons = {
     ["They are in the middle of the country.", "They are wide, flat grasslands."],
     "flat grasslands",
   ),
+  "social/wa-g5-constitution": lesson(
+    ["The Constitution was written in Philadelphia in 1787. It begins “We the People”.", "Three branches: legislative (Congress makes laws), executive (the president carries them out), judicial (courts, including the Supreme Court).", "Each state has 2 senators. The first ten amendments are the Bill of Rights."],
+    "Which branch includes the Supreme Court?",
+    ["Courts decide what laws mean.", "The courts make up the judicial branch."],
+    "judicial",
+  ),
+  "social/mi-g4-us-regions": lesson(
+    ["The United States can be divided into regions, such as the Northeast, Southeast, Midwest, Southwest and West.", "A region shares features: landforms, climate, or the work people do.", "Michigan is in the Midwest, in the Great Lakes region."],
+    "Which region has deserts and canyons?",
+    ["Think of hot, dry land with cactuses.", "That is the Southwest."],
+    "the Southwest",
+  ),
+  "social/mi-g4-michigan-industry": lesson(
+    ["After statehood, Michigan's forests made lumber, and the Upper Peninsula's mines gave copper and iron.", "The Soo Locks (1855) let ships carry ore from Lake Superior to the other lakes.", "Henry Ford's moving assembly line (1913) made cars cheaper, and Detroit became the Motor City."],
+    "Why did the moving assembly line make cars cheaper?",
+    ["Each worker did one step as the car moved past.", "Cars were built much faster."],
+    "cars were built faster",
+  ),
+  "social/mi-g4-moving-to-michigan": lesson(
+    ["Push factors make people leave a place. Pull factors draw them to a new one.", "Many came to Michigan for jobs: Dutch to Holland, Finns to the Upper Peninsula, and in the Great Migration, African Americans to Detroit.", "On the Underground Railroad, freedom seekers crossed the Detroit River to Canada."],
+    "Factory jobs in Detroit were a push factor or a pull factor?",
+    ["Did the jobs make people leave or come?", "They drew people to Detroit."],
+    "a pull factor",
+  ),
+  "social/mi-g4-market-economy": lesson(
+    ["In a market economy, buyers and businesses make most choices about what to make and buy.", "When prices rise, people usually buy less. Competition among sellers lowers prices.", "Incentives, like sales or fines, change what people choose to do."],
+    "Many stores sell the same toy. What usually happens to its price?",
+    ["Sellers want buyers to choose them.", "Competition among sellers pushes prices down."],
+    "it goes down",
+  ),
   // Indiana (us-in)
   "social/in-g4-indiana-land": lesson(
     ["Indiana has three regions: the Northern Lake and Moraine, the Central Till Plain and the Southern Hills and Lowlands.", "Glaciers flattened much of the north and middle, leaving rich soil for farms.", "The Wabash River crosses most of the state."],
