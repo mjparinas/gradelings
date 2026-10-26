@@ -1,7 +1,8 @@
 // @vitest-environment jsdom
-import { act, renderHook } from "@testing-library/react";
+import { act, render, renderHook } from "@testing-library/react";
+import { createElement, Suspense, use } from "react";
 import { describe, expect, it, vi } from "vitest";
-import { back, go, href, parse, useRoute } from "./router";
+import { back, go, href, parse, useRoute, useShownHash } from "./router";
 
 describe("hash router", () => {
   it("decodes path parts and parses query values", () => {
@@ -63,5 +64,41 @@ describe("useRoute", () => {
     navigate("#/shop");
     expect(result.current.path).toEqual(["unit", "math/add"]);
     scrollTo.mockRestore();
+  });
+});
+
+describe("useShownHash", () => {
+  const navigate = (hash: string) =>
+    act(() => {
+      window.location.hash = hash;
+      window.dispatchEvent(new HashChangeEvent("hashchange"));
+    });
+
+  it("moves to the new address once it is drawn, and isn't pending once there", () => {
+    vi.spyOn(window, "scrollTo").mockImplementation(() => {});
+    window.location.hash = "#/";
+    const { result } = renderHook(() => useShownHash());
+    expect(result.current).toEqual({ shown: "/", pending: false });
+    navigate("#/trophies");
+    expect(result.current).toEqual({ shown: "/trophies", pending: false });
+  });
+
+  it("keeps the old screen up, pending, while the next one is still on its way", () => {
+    vi.spyOn(window, "scrollTo").mockImplementation(() => {});
+    window.location.hash = "#/";
+    const never = new Promise<never>(() => {});
+    function Screen({ hash }: { hash: string }) {
+      if (hash === "/slow") use(never);
+      return createElement("p", null, `screen ${hash}`);
+    }
+    function App() {
+      const { shown, pending } = useShownHash();
+      return createElement("div", { "data-pending": pending }, createElement(Suspense, { fallback: "loading" }, createElement(Screen, { hash: shown })));
+    }
+    const { container } = render(createElement(App));
+    navigate("#/slow");
+    // No loading view: the home screen stays, marked pending.
+    expect(container.textContent).toBe("screen /");
+    expect(container.firstElementChild).toHaveAttribute("data-pending", "true");
   });
 });

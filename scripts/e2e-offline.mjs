@@ -108,6 +108,19 @@ try {
   await tab.screenshot({ path: `${OUT}/offline-1-grade5-question.png` });
   console.log("✓ offline: Grade 5 lessons load from the cache");
 
+  // Occasional screens are their own downloads (src/components/play/lazyScreens.tsx), fetched in the background
+  // while the app was open, so they open offline too.
+  await tab.getByRole("button", { name: "Stop", exact: true }).first().click({ force: true });
+  await tab.getByRole("dialog").getByRole("button", { name: "Stop", exact: true }).click({ force: true });
+  for (const [hash, heading] of [["#/arcade", /Arcade/], ["#/shop", /Shop/], ["#/trophies", /Trophies/]) {
+    await tab.evaluate((h) => (location.hash = h), hash);
+    await tab.getByRole("heading", { level: 1, name: heading }).waitFor({ timeout: 15000 });
+  }
+  console.log("✓ offline: the arcade, shop and trophies open from the cache");
+  await tab.evaluate(() => (location.hash = "#/"));
+  await tab.getByRole("button", { name: /Adventure/ }).click({ force: true, timeout: 15000 });
+  await questionOnScreen(tab).waitFor({ timeout: 15000 });
+
   const clipsBefore = await tab.evaluate(() => window.__audioClips);
   await tab.getByRole("button", { name: "Read it to me" }).click();
   await tab.waitForFunction((n) => window.__audioClips > n, clipsBefore, { timeout: 90000 });

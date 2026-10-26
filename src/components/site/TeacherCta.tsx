@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { APP_NAME } from "@/lib/brand";
 import { teacherPath, TEACHER_SIGNUP } from "./teachers";
+import { AppLink } from "./AppLink";
 
 /** The closing call to action on teacher pages: create an account, or read how classes work. */
 export function TeacherCta({ showHub = true }: { showHub?: boolean }) {
@@ -11,9 +12,9 @@ export function TeacherCta({ showHub = true }: { showHub?: boolean }) {
       </h2>
       <p className="font-read text-ink-soft">Classes are free for now. Create a teacher account, share a join code with families and assign units in minutes.</p>
       <div className="flex flex-wrap gap-3">
-        <Link prefetch={false} href={TEACHER_SIGNUP} className="btn btn-good min-h-14 px-8 text-xl">
+        <AppLink href={TEACHER_SIGNUP} className="btn btn-good min-h-14 px-8 text-xl">
           Create a free teacher account
-        </Link>
+        </AppLink>
         {showHub && (
           <Link href={teacherPath.hub()} className="btn min-h-14 px-6 text-lg">
             How classes work

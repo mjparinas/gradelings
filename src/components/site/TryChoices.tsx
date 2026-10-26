@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { useState, type ReactNode } from "react";
+import { AppLink } from "./AppLink";
 
 // A sample question a visitor can answer on the unit's public page, the way the app asks it: a miss shows the hint
 // and another try, a second miss shows the answer, and either way the next step is the app with this unit open.
@@ -83,9 +83,9 @@ export function TryChoices({
                 </>
               )}
             </p>
-            <Link prefetch={false} href={play} className="btn btn-good min-h-12 self-start px-5 text-lg">
+            <AppLink href={play} className="btn btn-good min-h-12 self-start px-5 text-lg">
               {playLabel}: new questions every time →
-            </Link>
+            </AppLink>
           </>
         )}
         {!done && missed.length === 0 && <p className="font-read text-sm text-ink-soft">Tap an answer to try it.</p>}

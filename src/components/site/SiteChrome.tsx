@@ -10,6 +10,7 @@ import { NavLink } from "./NavLink";
 import { PromoBanner } from "./PromoBanner";
 import { RefCapture } from "./ShareButton";
 import { byCountry, regionList } from "./provinces";
+import { AppLink } from "./AppLink";
 
 /**
  * `play` is the "Try it free" link for this page (`playHref`), so the app opens on what the visitor was reading.
@@ -33,9 +34,9 @@ export function SiteHeader({ play = "/play/", lead = "subscribe" }: { play?: str
           <NavLink href="/report-cards/" className="hidden rounded-lg px-2 py-1 hover:bg-black/5 sm:inline">
             Report cards
           </NavLink>
-          <Link prefetch={false} href="/parents/" className="hidden rounded-lg px-2 py-1 hover:bg-black/5 sm:inline">
+          <AppLink href="/parents/" className="hidden rounded-lg px-2 py-1 hover:bg-black/5 sm:inline">
             Parents
-          </Link>
+          </AppLink>
           <NavLink href={teacherPath.hub()} className="hidden rounded-lg px-2 py-1 hover:bg-black/5 sm:inline">
             Teachers
           </NavLink>
@@ -47,9 +48,9 @@ export function SiteHeader({ play = "/play/", lead = "subscribe" }: { play?: str
           </a>
           <HeaderSignIn />
           {/* The apps are big single-page bundles: fetch them on tap, not on every public page view. */}
-          <Link prefetch={false} href={play} className="btn btn-good h-11 px-4 text-base">
+          <AppLink href={play} className="btn btn-good h-11 px-4 text-base">
             Play free
-          </Link>
+          </AppLink>
         </nav>
       </div>
       {lead === "subscribe" && (

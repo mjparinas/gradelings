@@ -196,6 +196,38 @@ describe("logging practice", () => {
     expect(st().events.filter((e) => e.type === "trophy" && e.trophy === "first-answer")).toHaveLength(1);
   });
 
+  it("logSoon logs after the paint, and a log in between keeps the order", async () => {
+    vi.useFakeTimers();
+    try {
+      st().addProfile(child);
+      st().logSoon([answer(true, 1000)]);
+      st().logSoon([answer(false, 2000)]);
+      expect(st().events).toEqual([]);
+      await vi.runAllTimersAsync();
+      expect(st().events.filter((e) => e.type === "answer").map((e) => e.type === "answer" && e.ms)).toEqual([1000, 2000]);
+
+      st().logSoon([answer(true, 3000)]);
+      st().log([{ type: "session", mode: "practice", scope: "mix", total: 3, correct: 2, ms: 9000 }]);
+      const order = st().events.filter((e) => e.type === "answer" || e.type === "session").map((e) => (e.type === "answer" ? e.ms : e.type));
+      expect(order).toEqual([1000, 2000, 3000, "session"]);
+      // Already logged with the session, so the timer adds nothing more.
+      const count = st().events.length;
+      await vi.runAllTimersAsync();
+      expect(st().events).toHaveLength(count);
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it("logs queued answers for the child who gave them before switching players", () => {
+    const first = st().addProfile(child);
+    const second = st().addProfile({ ...child, name: "B" });
+    st().setActive(first);
+    st().logSoon([answer()]);
+    st().setActive(second);
+    expect(st().events.find((e) => e.type === "answer")?.profileId).toBe(first);
+  });
+
   it("says on the level-up toast when a new arcade game opens, unless games are off", () => {
     st().addProfile(child);
     st().log(Array.from({ length: 6 }, () => answer()));

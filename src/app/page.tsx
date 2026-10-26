@@ -20,6 +20,7 @@ import { Disclosure } from "@/components/Disclosure";
 import { JsonLd, ORG_JSON_LD, SITE_URL } from "@/lib/site";
 import { pageMeta } from "@/lib/pageMeta";
 import { buildLabel } from "@/lib/build";
+import { AppLink } from "@/components/site/AppLink";
 
 export const metadata: Metadata = pageMeta({
   title: { absolute: `${APP_NAME} · Curriculum practice and games for Kindergarten to Grade 9` },
@@ -145,9 +146,9 @@ export default function Home() {
             About {DEFAULT_GOAL_MINUTES.other} minutes a day of practice matched to your child&apos;s grade and {regionWord(FRAMEWORKS)}, in math, reading, science, social studies and French{offersUsd(FRAMEWORKS) ? " (in Canada)" : ""}. Your child earns game time by learning. You see their progress in the same words as their report card.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Link prefetch={false} href="/play/" className="btn btn-good min-h-14 px-8 text-xl">
+            <AppLink href="/play/" className="btn btn-good min-h-14 px-8 text-xl">
               Start your free {TRIAL_DAYS}-day trial
-            </Link>
+            </AppLink>
             <Link href="/pricing/" className="btn min-h-14 px-6 text-xl">
               See plans
             </Link>
@@ -327,9 +328,9 @@ export default function Home() {
           See if your child likes it
         </h2>
         <p className="mx-auto mt-3 max-w-xl font-read text-lg text-ink-soft">Everything is open for {TRIAL_DAYS} days. No card, and nothing to cancel.</p>
-        <Link prefetch={false} href="/play/" className="btn btn-good mt-5 min-h-14 px-8 text-xl">
+        <AppLink href="/play/" className="btn btn-good mt-5 min-h-14 px-8 text-xl">
           Start your free {TRIAL_DAYS}-day trial
-        </Link>
+        </AppLink>
       </section>
 
       {/* Teachers */}
@@ -343,9 +344,9 @@ export default function Home() {
               Create a class, pick your {regionWord(TEACHER_FRAMEWORKS)}, and assign units from that curriculum. Families join with a code and choose what is shared. Classes are free for now.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
-              <Link prefetch={false} href={TEACHER_SIGNUP} className="btn btn-good min-h-12 px-5 text-lg">
+              <AppLink href={TEACHER_SIGNUP} className="btn btn-good min-h-12 px-5 text-lg">
                 Create a free teacher account
-              </Link>
+              </AppLink>
               <Link href={teacherPath.hub()} className="btn min-h-12 px-5 text-lg">
                 See how classes work
               </Link>

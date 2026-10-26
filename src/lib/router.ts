@@ -1,6 +1,6 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useDeferredValue, useSyncExternalStore } from "react";
 
 // A tiny hash router for the kids' app, the parent area and the teacher area. Hash routes keep
 // everything on one cached page, so the app works fully offline and moving
@@ -29,8 +29,24 @@ export function parse(hash: string): Route {
 }
 
 export function useRoute(): Route {
-  const hash = useSyncExternalStore(subscribe, read, () => "/");
-  return parse(hash);
+  return parse(useHash());
+}
+
+/** The address after the #, as a string (cheap to compare and to pass to a memoised screen). */
+export function useHash(): string {
+  return useSyncExternalStore(subscribe, read, () => "/");
+}
+
+/**
+ * For an app's screen switcher: the address whose screen is on show, and whether a newer one is still being
+ * drawn. A tap changes the address at once; the new screen is drawn in the background while the old one stays
+ * up with a progress bar (`RouteProgress`), so a screen that takes a while to draw never leaves a tap unanswered.
+ * Pass `shown` to a `memo` component, or the old screen is drawn again in the meantime.
+ */
+export function useShownHash(): { shown: string; pending: boolean } {
+  const hash = useHash();
+  const shown = useDeferredValue(hash);
+  return { shown, pending: shown !== hash };
 }
 
 export function href(path: string, query?: Record<string, string | number | undefined>): string {
