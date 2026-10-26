@@ -1,0 +1,166 @@
+import type { Unit } from "../../types";
+import { bankUnit, type Q } from "../own";
+
+// Mississippi Grade 9 social studies, the half-year Mississippi Studies course: Mississippi's geography, its Native
+// nations, European claims and the road to statehood (MS.1, MS.2, MS.3, MS.4), antebellum Mississippi, the Civil War,
+// Reconstruction and the Jim Crow era to World War II (MS.5, MS.6, MS.7), Mississippi in the Civil Rights Movement
+// (MS.8), and modern Mississippi: its economy, its state and local government, its artists and writers, and the many
+// groups who make up its people (MS.9, MS.10, MS.11, MS.12). Introduction to Geography is practised with adopted units
+// (see ../plan/social.ts). Indigenous content is in the present tense, about living nations, with nothing sacred or
+// ceremonial.
+
+const FOUNDATIONS: Q[] = [
+  ["The rich, flat Yazoo-Mississippi Delta was built up mainly by…", "thousands of years of river floods depositing silt", ["volcanic eruptions", "glaciers carving valleys", "ocean reefs"], "Silt settles when floodwater spreads out."],
+  ["Loess, the soil of the bluffs east of the Delta, is…", "fine dust carried and dropped by wind", ["hardened lava", "coral sand", "glacial ice"], "Loess soils erode easily into steep bluffs."],
+  ["Ship, Horn, Petit Bois and Cat islands off Mississippi's coast are…", "barrier islands", ["volcanic islands", "river deltas", "glacier remains"], "They shelter the Mississippi Sound."],
+  ["The Tennessee-Tombigbee Waterway, opened in 1985, connects northeast Mississippi to…", "the Gulf of Mexico by way of Alabama's rivers", ["the Pacific Ocean", "the Great Lakes directly", "the Atlantic by canal"], "Barges can reach the port of Mobile."],
+  ["Mississippi's humid subtropical climate brings…", "long, hot, humid summers and mild winters", ["year-round snow", "almost no rain", "a dry season of eight months"], "Moist air flows in from the Gulf."],
+  ["Earlier peoples in the Mississippi valley built large earthen mounds, as at Winterville near Greenville. These peoples are often called…", "Mississippian cultures", ["Roman colonists", "Viking settlers", "Spanish missions"], "Their towns flourished centuries before Europeans arrived."],
+  ["The Mississippi Band of Choctaw Indians is a federally recognized nation, which means it…", "governs itself and deals with the United States government to government", ["is part of a county government", "has no government", "is a private club"], "Tribal sovereignty is recognized in federal law."],
+  ["Under Chief Phillip Martin, the Mississippi Band of Choctaw Indians built businesses that made it…", "one of the largest employers in the state", ["a territory of France", "a part of Alabama", "a city council"], "Tribal enterprises fund schools and services."],
+  ["In World War I, Choctaw soldiers helped the US Army by…", "sending messages in the Choctaw language that enemies could not read", ["building the first tanks", "flying the first airplanes", "printing money"], "They are remembered as Code Talkers."],
+  ["The Indian Removal Act of 1830 was signed by President…", "Andrew Jackson", ["Abraham Lincoln", "George Washington", "Thomas Jefferson"], "Mississippi's capital is named for him."],
+  ["The Chickasaw gave up their Mississippi homeland in the Treaty of…", "Pontotoc Creek", ["Paris", "Ghent", "Guadalupe Hidalgo"], "It was signed in 1832."],
+  ["Hernando de Soto's expedition of 1540–1541 brought to Native towns in Mississippi…", "violence and European diseases", ["horses and peace treaties only", "printing presses", "railroads"], "Disease spread faster than the explorers."],
+  ["In the early 1720s, the capital of French Louisiana was at…", "Biloxi", ["Jackson", "Tupelo", "Oxford"], "The capital later moved to New Orleans."],
+  ["The French founded Fort Rosalie in 1716 on the bluffs at what is now…", "Natchez", ["Columbus", "Meridian", "Hattiesburg"], "It became a center of French settlement."],
+  ["The French brought enslaved Africans to the Natchez area in the 1700s to…", "work on tobacco and indigo plantations", ["build castles", "mine gold", "sail to China"], "Slavery began in Mississippi under French rule."],
+  ["After the French and Indian War in 1763, the Natchez district passed to…", "Great Britain", ["Spain only", "Russia", "the United States"], "It became part of British West Florida."],
+  ["Spain took the Natchez district during the American Revolution and gave it up after Pinckney's Treaty set the border at the…", "31st parallel", ["Mason-Dixon Line", "Mississippi River's mouth", "Equator"], "Spain left Natchez in 1798."],
+  ["The first governor of the Mississippi Territory, appointed in 1798, was…", "Winthrop Sargent", ["David Holmes", "Jefferson Davis", "Hiram Revels"], "Holmes was the last territorial and first state governor."],
+  ["Mississippi entered the Union as a slave state on December 10, 1817, after the territory was split, creating…", "the Alabama Territory to the east", ["the Louisiana Territory to the west", "the state of Tennessee to the north", "Florida to the south"], "The eastern half became Alabama in 1819."],
+  ["Mississippi's constitution of 1832 was the first in the nation to have voters elect…", "all of the state's judges", ["the President directly", "school principals", "foreign ambassadors"], "It reflected the Jacksonian push for more democracy.", true],
+  ["Why did the Natchez Trace lose most of its traffic by the 1830s?", "steamboats could carry people and goods upriver", ["the road was flooded by the Gulf", "it was turned into a railroad", "travel was banned"], "Boats made the long walk home unnecessary.", true],
+  ["Why did the United States want control of the Mississippi River in the 1790s?", "western farmers needed it to ship goods to New Orleans", ["it was the nation's capital", "it had gold mines", "it was a border with Canada"], "Trade depended on the river.", true],
+  ["Why did the cotton gin and the removal of Native nations together reshape Mississippi?", "they opened vast new land for cotton grown by enslaved labor", ["they ended slavery", "they ended farming in the state", "they returned land to Native nations"], "Land and labor drove the cotton boom.", true],
+  ["Which statement about the Choctaw, Chickasaw and Natchez is accurate?", "each nation has its own language, history and government", ["they were one nation with three names", "none of their people live on today", "they arrived with the Spanish"], "Avoid treating all nations as one.", true],
+  ["Many county names in Mississippi, such as Itawamba and Oktibbeha, come from…", "Choctaw and Chickasaw words and leaders", ["Latin", "French kings", "Greek gods"], "Native languages remain on the map.", true],
+];
+
+const SLAVERY_TO_JIM_CROW: Q[] = [
+  ["Forks of the Road in Natchez was one of the Deep South's busiest…", "markets where enslaved people were sold", ["cotton gins", "steamboat factories", "colleges"], "A historic site marks it today."],
+  ["William Johnson of Natchez, who kept a detailed diary in the 1830s and 1840s, was a…", "free Black barber and businessman", ["Confederate general", "French governor", "Choctaw chief"], "Free people of color were a small part of the population."],
+  ["In 1860, enslaved people made up about what share of Mississippi's population?", "55 percent", ["5 percent", "25 percent", "90 percent"], "Mississippi had more enslaved than free people."],
+  ["Mississippi's 1861 Declaration of the Immediate Causes of secession said the state's position was identified with…", "the institution of slavery", ["free trade with Britain", "states' road building", "tariffs on tea"], "The document states its reason plainly."],
+  ["Corinth was a target in 1862 because it was…", "where two major railroads crossed", ["the Confederate capital", "a deep-water port", "the largest city in the South"], "Railroads moved troops and supplies."],
+  ["After Union troops burned much of Jackson in 1863, people called the city…", "Chimneyville", ["Steamboat Town", "Cotton City", "Riverbend"], "Only chimneys were left standing."],
+  ["Grierson's Raid in 1863 helped Grant's Vicksburg campaign by…", "drawing Confederate troops away and cutting railroads", ["capturing Richmond", "ending the war", "freeing New Orleans"], "Cavalry rode the length of the state."],
+  ["The fall of Vicksburg and the fall of Port Hudson soon after split the Confederacy by giving the Union control of the…", "Mississippi River", ["Atlantic coast", "Ohio River valley", "Rio Grande"], "Lincoln called Vicksburg the key."],
+  ["In 1865, Mississippi was the first state to pass Black Codes, which…", "limited the freedom of formerly enslaved people", ["gave freedmen land", "ended segregation", "allowed women to vote"], "Congress responded with stronger Reconstruction laws."],
+  ["John R. Lynch, who was once enslaved, became Speaker of the Mississippi House and later a…", "US congressman", ["Confederate senator", "French ambassador", "plantation owner"], "Black Mississippians held office during Reconstruction."],
+  ["The Mississippi Plan of 1875 ended Reconstruction in the state through…", "violence and intimidation of Black voters", ["a peaceful treaty", "a new railroad", "federal elections"], "Democrats retook control of the state."],
+  ["The 1890 Mississippi constitution's poll tax and 'understanding clause' were designed to…", "keep Black citizens from voting", ["raise money for schools only", "help all citizens vote", "end segregation"], "Other Southern states copied the plan."],
+  ["In Williams v. Mississippi (1898), the US Supreme Court…", "upheld the state's voting restrictions", ["struck down segregation", "ended the poll tax", "ordered new elections"], "The rules looked fair on paper but were unfairly applied."],
+  ["Under sharecropping, a family farmed a landowner's land and paid with…", "part of the crop, often falling into debt", ["gold", "nothing at all", "factory wages"], "Debts tied families to the land."],
+  ["The boll weevil, which reached Mississippi in the early 1900s, was…", "an insect that destroyed cotton crops", ["a new kind of steamboat", "a farm machine", "a cotton price law"], "Crop losses pushed farmers to diversify."],
+  ["During the Great Flood of 1927, many Black workers near Greenville were…", "forced to work on the levees and kept in camps", ["paid high wages", "sent to college", "given land"], "The flood exposed deep injustice."],
+  ["During the Great Migration, hundreds of thousands of Black Mississippians moved to Northern cities such as…", "Chicago and Detroit", ["Havana and Mexico City", "Paris and London", "Biloxi and Gulfport"], "Factory jobs and escape from Jim Crow drew them north."],
+  ["In 1934, Tupelo became the first city to buy electricity from the…", "Tennessee Valley Authority", ["Federal Reserve", "Pony Express", "Erie Canal"], "The TVA was a New Deal program."],
+  ["Mississippi's 1936 Balance Agriculture With Industry program tried to…", "bring factories to the state to reduce dependence on cotton", ["end all farming", "close the ports", "ban new businesses"], "Towns offered incentives to factories."],
+  ["During World War II, Camp Shelby near Hattiesburg and Keesler Field in Biloxi…", "trained thousands of soldiers and airmen", ["were cotton plantations", "built steamboats", "held peace talks"], "The war brought new jobs to the state."],
+  ["Ida B. Wells, born in Holly Springs, used journalism to expose…", "lynching", ["the Gold Rush", "the Louisiana Purchase", "the Space Race"], "She gathered facts to prove the truth.", true],
+  ["Why did the 1890 constitution's voting rules not mention race directly?", "to get around the 15th Amendment", ["because race was not an issue", "to help Black voters", "because Congress wrote them"], "The 15th Amendment bars denying the vote by race.", true],
+  ["Why did Ingalls Shipbuilding, founded in Pascagoula in 1938, matter for the coast?", "it brought thousands of industrial jobs", ["it ended fishing", "it closed the port", "it was a cotton farm"], "It is still one of the state's largest employers.", true],
+  ["How did the Great Migration change Mississippi?", "it lost much of its Black population and workforce", ["its population doubled overnight", "it gained many Northern factories at once", "it ended agriculture"], "Migration reshapes both places.", true],
+  ["Which best explains why Reconstruction failed to protect Black rights in Mississippi?", "federal troops left and state leaders used law and violence to take rights away", ["Black Mississippians did not want rights", "the Union lost the war", "Congress never passed amendments"], "Weigh several causes.", true],
+];
+
+const CIVIL_RIGHTS: Q[] = [
+  ["The murder of 14-year-old Emmett Till in 1955 near Money, Mississippi, drew national attention because…", "his mother insisted on an open casket so the world could see", ["the killers were quickly punished", "it happened in Washington, D.C.", "it was never reported"], "An all-white jury acquitted the men accused."],
+  ["The first Citizens' Council, founded in Indianola in 1954, was organized to…", "resist school desegregation", ["support Brown v. Board", "register Black voters", "build new schools for all"], "Councils used economic pressure against activists."],
+  ["The Mississippi State Sovereignty Commission, created in 1956,…", "spied on civil rights workers to defend segregation", ["protected civil rights workers", "built highways", "ran elections fairly"], "Its secret files were opened in 1998."],
+  ["Freedom Riders arrested in Jackson in 1961 were sent to…", "Parchman, the state penitentiary", ["the Capitol", "a hotel", "the University of Mississippi"], "They chose jail over paying fines."],
+  ["Governor Ross Barnett gained national attention in 1962 when he…", "tried to block James Meredith from enrolling at Ole Miss", ["welcomed Meredith", "signed the Voting Rights Act", "ended segregation"], "Federal marshals and troops enforced the court order."],
+  ["Medgar Evers, the NAACP's field secretary in Mississippi, was assassinated in 1963. His killer was finally convicted in…", "1994", ["1963", "1865", "2020"], "Byron De La Beckwith was convicted after decades."],
+  ["In June 1964, civil rights workers James Chaney, Andrew Goodman and Michael Schwerner were murdered near…", "Philadelphia, Mississippi", ["Biloxi", "Oxford", "Natchez"], "The search drew national attention to Freedom Summer."],
+  ["Freedom Summer in 1964 was organized by a coalition of groups called…", "COFO, the Council of Federated Organizations", ["NASA", "the Citizens' Council", "the TVA"], "SNCC and CORE were part of it."],
+  ["Bob Moses of SNCC is known in Mississippi for…", "organizing voter registration in rural counties", ["leading the Confederate army", "founding a shipyard", "writing the 1890 constitution"], "Grassroots organizing built the movement."],
+  ["The Mississippi Freedom Democratic Party challenged the state's all-white delegation at the 1964…", "Democratic National Convention", ["Olympic Games", "Supreme Court", "World Series"], "Fannie Lou Hamer testified before a national TV audience."],
+  ["In Alexander v. Holmes County Board of Education (1969), the US Supreme Court ordered Mississippi schools to…", "desegregate at once", ["close", "stay segregated", "teach only in French"], "It ended 'all deliberate speed.'"],
+  ["The Voting Rights Act of 1965 raised Black voter registration in Mississippi from under 7 percent to about…", "60 percent", ["10 percent", "3 percent", "100 percent overnight"], "Federal examiners registered voters."],
+  ["Which strategy did civil rights activists in Mississippi rely on most?", "nonviolent direct action and voter registration", ["armed rebellion", "leaving the country", "writing to the king"], "Sit-ins, marches and registration drives."],
+  ["The Jackson Woolworth's sit-in of 1963 protested…", "segregated lunch counters", ["high bus fares", "school taxes", "cotton prices"], "Students from Tougaloo College took part."],
+  ["Organized resistance in Mississippi often set the state against the federal government over…", "enforcing civil rights laws and court rulings", ["mail delivery", "space exploration", "foreign trade"], "States' rights arguments were used to defend segregation."],
+  ["Fannie Lou Hamer's 1964 testimony described…", "being beaten in jail for trying to register voters", ["life on a riverboat", "the Gold Rush", "her trip to Europe"], "It moved many Americans."],
+  ["Which describes the lasting impact of the movement in Mississippi?", "Black Mississippians were elected to offices across the state", ["voting rules got stricter for all", "segregation laws grew", "the state left the Union"], "Voting brought representation.", true],
+  ["Why did Freedom Summer recruit college students from across the country?", "to bring national attention and protection to the voting drive", ["to replace local leaders", "to grow cotton", "to build roads"], "Organizers knew the nation would watch.", true],
+  ["How did the State Sovereignty Commission and Citizens' Councils use economic pressure?", "by getting activists fired and cutting off their credit", ["by giving activists jobs", "by funding Freedom Schools", "by lowering taxes for activists"], "Losing a job was a real threat.", true],
+  ["Why was the trial and conviction for Medgar Evers's murder in 1994 significant?", "it showed old civil rights crimes could still be brought to justice", ["it ended the Civil War", "it started segregation", "it was the first trial in the state"], "Justice delayed is not always denied.", true],
+  ["Which source would be a primary source on Freedom Summer?", "a letter written by a volunteer in 1964", ["a 2020 textbook summary", "an encyclopedia article", "a movie made decades later"], "Primary sources come from the time.", true],
+  ["The Mississippi Civil Rights Museum, opened in 2017, was built to…", "tell the story of the movement in the state and honor those who took part", ["sell cotton", "replace schools", "celebrate segregation"], "Public memory is part of history.", true],
+  ["Why is the Medgar Evers home in Jackson now a national monument?", "to preserve a place central to the civil rights struggle", ["it was a Confederate fort", "it was a steamboat dock", "it was a state capitol"], "Historic places help people learn.", true],
+  ["How did James Meredith's admission change the University of Mississippi over time?", "it opened the way for Black students to attend", ["it closed the university", "it ended all classes", "it moved the school to Alabama"], "One act can open doors for many.", true],
+];
+
+const MODERN: Q[] = [
+  ["Mississippi's largest industry is…", "agriculture and forestry", ["oil drilling", "space travel", "movie making"], "Farms and forests cover most of the state."],
+  ["Mississippi's most valuable farm product is…", "poultry", ["oranges", "maple syrup", "wheat"], "Broiler chickens lead farm income."],
+  ["Mississippi produces more than half of the country's farm-raised…", "catfish", ["salmon", "lobster", "tuna"], "Belzoni calls itself the Catfish Capital."],
+  ["Nissan opened a car plant in Canton in 2003, and Toyota opened one in Blue Springs in 2011. These are examples of…", "manufacturing growth", ["agricultural decline", "tourism", "mining"], "States compete to attract factories."],
+  ["Casino gaming, legal in Mississippi since 1990, is concentrated on the Gulf Coast and…", "along the Mississippi River", ["in the Piney Woods", "on Woodall Mountain", "in the Black Prairie"], "Casinos first had to be on the water."],
+  ["Stennis Space Center in Hancock County is where NASA…", "tests rocket engines", ["launches astronauts", "trains pilots", "builds satellites"], "The engines roar across protected land."],
+  ["Mississippi's Legislature has a Senate of 52 members and a House of Representatives of…", "122 members", ["52 members", "435 members", "12 members"], "Both meet in the Capitol in Jackson."],
+  ["The officer who presides over the Mississippi Senate is the…", "lieutenant governor", ["governor", "chief justice", "secretary of state"], "Mississippi's lieutenant governor has great influence over bills."],
+  ["Mississippi's governor serves a four-year term and is limited to…", "two terms", ["one year", "unlimited terms", "life"], "Term limits are set in the state constitution."],
+  ["The constitution Mississippi still uses today, with many amendments, was written in…", "1890", ["1817", "1965", "2020"], "It is one of the oldest state constitutions in use."],
+  ["Each of Mississippi's 82 counties is governed by a Board of Supervisors with…", "five members elected by district", ["one appointed king", "50 members", "no elected members"], "Supervisors oversee roads and county budgets."],
+  ["Most Mississippi cities and towns are governed by a mayor and a…", "board of aldermen or city council", ["Supreme Court", "governor's cabinet", "state senate"], "Local laws are called ordinances."],
+  ["Mississippi Supreme Court justices are chosen by…", "voters, in nonpartisan elections", ["the President", "the Legislature each year", "a coin toss"], "There are nine justices."],
+  ["Natasha Trethewey, born in Gulfport, served as…", "US Poet Laureate", ["governor", "Secretary of State", "chief justice"], "She also won a Pulitzer Prize."],
+  ["Jesmyn Ward, who writes about her home community of DeLisle, has won the National Book Award…", "twice", ["never", "ten times", "for poetry only"], "Her novels are set on the Gulf Coast."],
+  ["Composer William Grant Still, born in Woodville, is known as…", "the Dean of African American composers", ["the King of Rock and Roll", "the Father of Country Music", "the Queen of Soul"], "He wrote symphonies and operas."],
+  ["Dockery Farms near Cleveland is often called a birthplace of the blues because of musicians like…", "Charley Patton", ["Elvis Presley", "Jim Henson", "Eudora Welty"], "Patton influenced many Delta players."],
+  ["Playwright Tennessee Williams, author of A Streetcar Named Desire, was born in…", "Columbus, Mississippi", ["Paris, France", "London, England", "Rome, Italy"], "He drew on memories of the South."],
+  ["Chinese immigrants who came to the Delta from the 1870s on often…", "ran grocery stores in Delta towns", ["worked as sea captains", "owned the railroads", "founded the state"], "They served Black and white customers alike."],
+  ["Many Vietnamese families who came to the Gulf Coast after 1975 work in…", "shrimping and seafood", ["coal mining", "cotton ginning", "space science"], "Biloxi has a large Vietnamese American community."],
+  ["Lebanese immigrants arriving in the late 1800s often began as peddlers and became…", "store owners in towns like Vicksburg and Clarksdale", ["plantation owners only", "French governors", "Confederate generals"], "Families built businesses over generations."],
+  ["Temple B'nai Israel in Natchez reflects the long history of…", "Jewish communities in Mississippi", ["Spanish missions", "French forts", "Choctaw government"], "Jewish merchants settled in river towns in the 1800s."],
+  ["Many Latino families have come to towns such as Morton and Forest to work in…", "poultry processing plants", ["shipyards in the Delta", "gold mines", "ski resorts"], "Jobs draw new residents.", true],
+  ["Why have Black churches been central to Mississippi communities?", "they were places for worship, organizing and community support, including in the civil rights era", ["they were run by the state", "they were banks", "they were only for weddings"], "Churches hosted mass meetings.", true],
+  ["Why do economists point to education and workforce training for Mississippi's future?", "skilled jobs pay more and attract employers", ["they lower all wages", "they end farming", "they stop tourism"], "Human capital drives growth.", true],
+  ["Why would a state rely on taxes from gaming and tourism?", "visitors bring money into the state economy", ["visitors pay no taxes", "it ends all other industries", "it stops hurricanes"], "Outside spending supports local jobs.", true],
+  ["Which best describes how a bill becomes law in Mississippi?", "it passes both houses and the governor signs it, or a veto is overridden", ["the governor writes and passes it alone", "the Supreme Court votes on it first", "it becomes law when introduced"], "Two houses plus the executive.", true],
+];
+
+export const SOCIAL_9: Unit[] = [
+  bankUnit({
+    id: "ms-g9-foundations",
+    title: "Mississippi: Land, Nations & Statehood",
+    emoji: "🌊",
+    blurb: "Geography, Native nations, European claims and statehood.",
+    parentNote:
+      "Practices Mississippi's geography (the Delta, loess bluffs, barrier islands and waterways), the Choctaw, Chickasaw and Natchez nations and the Mississippi Band of Choctaw Indians today, Indian Removal, French, British and Spanish rule, and the territory's road to statehood in 1817.",
+    standards: ["MS.1; MS.2; MS.3; MS.4", "Mississippi's geography, its Native nations, European presence, and the territory's path to statehood"],
+    items: FOUNDATIONS,
+  }),
+  bankUnit({
+    id: "ms-g9-slavery-to-jim-crow",
+    title: "Slavery, War & Jim Crow",
+    emoji: "⛓️",
+    blurb: "From the plantation economy to World War II.",
+    parentNote:
+      "Practices antebellum Mississippi and the plantation system built on slavery, the state's role in the Civil War, Reconstruction and how it was overturned, the 1890 constitution, sharecropping, the 1927 flood, the Great Migration, and the New Deal and World War II in Mississippi.",
+    standards: ["MS.5; MS.6; MS.7", "antebellum Mississippi and slavery, the Civil War and Reconstruction, and the Jim Crow era to World War II"],
+    items: SLAVERY_TO_JIM_CROW,
+  }),
+  bankUnit({
+    id: "ms-g9-civil-rights",
+    title: "Mississippi & the Movement",
+    emoji: "✊",
+    blurb: "Leaders, strategies, resistance and lasting change.",
+    parentNote:
+      "Practices Mississippi's role in the Civil Rights Movement: Emmett Till, Medgar Evers, Fannie Lou Hamer, the Freedom Rides and Freedom Summer, organized resistance such as the Citizens' Councils and the State Sovereignty Commission, and the movement's lasting impact on the state.",
+    standards: ["MS.8", "the role of Mississippi in the Civil Rights Movement"],
+    items: CIVIL_RIGHTS,
+  }),
+  bankUnit({
+    id: "ms-g9-modern",
+    title: "Modern Mississippi",
+    emoji: "🏛️",
+    blurb: "Economy, government, the arts and Mississippi's people.",
+    parentNote:
+      "Practices modern Mississippi's economy (agriculture and forestry, manufacturing, shipbuilding, tourism and Stennis Space Center), how its state and local governments work, its writers, musicians and artists, and the many ethnic and religious groups that make up its people.",
+    standards: ["MS.9; MS.10; MS.11; MS.12", "Mississippi's economy, state and local government, artists and writers, and its many communities"],
+    items: MODERN,
+  }),
+];

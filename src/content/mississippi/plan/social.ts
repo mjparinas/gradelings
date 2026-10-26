@@ -1,0 +1,135 @@
+import type { Entry } from "../kit";
+
+// Mississippi social studies: the units Mississippi uses from other frameworks, per grade ("<grade>/social"). The 2022
+// Mississippi College- and Career-Readiness Standards for the Social Studies give Kindergarten to Grade 3 five strands,
+// numbered within the grade: civics ("K.CI.1"), economics ("K.E.1"), civil rights ("K.CR.1"), geography ("K.G.1") and
+// history ("K.H.1"). Grade 4 is Mississippi Studies and Regions ("4.MS.1"); Grades 5 to 8 number their standards within
+// the grade ("5.1", "8.10"). Grade themes: Citizenship at Home and School (K), Citizenship at School (1), Citizenship in
+// School and Community (2), Citizenship in Local Government (3), Mississippi Studies and Regions (4), United States
+// History, Pre-Columbian Era to the American Revolution (5), World Geography and Civics (6), Early World History (7) and
+// United States History, Exploration through Reconstruction (8). Grade 9 follows the high school path most districts
+// start with: Mississippi Studies ("MS.1") and Introduction to Geography ("ITG.1"), each a half-year course.
+//
+// Only general units free of Canadian content and of other states' places are adopted, and never another state's units
+// about its Tribes. Mississippi's own units (its symbols, government and land in Kindergarten and Grade 3, Mississippi
+// Studies in Grade 4 and again, in more depth, in Grade 9) are in ../units.
+export const PLAN_SOCIAL: Record<string, Entry[]> = {
+  "k/social": [
+    ["all-about-me", "share", "K.CR.1; K.CR.2; K.CI.1", "the ways each person is alike and different, diversity in the classroom, and being a good member of the class"],
+    ["families", "share", "K.CR.1; K.CR.3", "how families are alike and different, and their customs and celebrations"],
+    ["needs-and-wants", "share", "K.E.3", "telling needs from wants"],
+    ["mb-k-jobs-and-rules", "adopt", "K.CI.2; K.CI.3", "why we have rules, and the roles of the leaders and helpers at home and school"],
+    ["or-k-money-and-work", "adopt", "K.E.1; K.E.2", "how money is earned and used, and telling goods from services"],
+    ["places-near-me", "adopt", "K.G.1; K.G.2", "a sense of place at home and school, and the physical features around us"],
+    ["pe-first-maps-k", "adopt", "K.G.3", "maps and globes as pictures of the Earth"],
+    ["ca-k-good-citizens", "adopt", "K.CI.1; K.H.2", "being a productive citizen, and people from the past who showed good character"],
+    ["ny-k-symbols-holidays", "adopt", "K.H.1", "symbols and celebrations of the United States"],
+    ["ca-k-calendar", "adopt", "K.H.1; K.CR.3", "finding celebrations on a calendar, and putting days and events in order"],
+  ],
+  "1/social": [
+    ["maps", "share", "1.G.3", "reading maps using directions"],
+    ["our-land", "share", "1.G.2", "how land, water and climate shape the way people live"],
+    ["my-community", "share", "1.E.2; 1.CI.1", "how people meet their basic needs, and the roles people play in the community"],
+    ["ca-g1-long-ago", "adopt", "1.H.2", "comparing life in the past, such as school and travel long ago, with life today"],
+    ["ny-g1-rules-and-government", "adopt", "1.CI.2; 1.CI.1", "rules and laws, and the rights and responsibilities of citizens"],
+    ["ca-g1-american-symbols", "adopt", "1.CI.3", "patriotism and the symbols, songs and holidays that show it"],
+    ["wa-g1-earn-save-share", "adopt", "1.E.1", "why people work to earn money, and choosing to spend or save"],
+    ["respect-and-inclusion", "adopt", "1.CR.1; 1.CR.2", "cooperation and compromise in a group, and the different cultures at school"],
+    ["ga-g1-american-heroes", "adopt", "1.H.1", "people from the history of the United States who made a difference"],
+    ["or-g2-world-maps", "adopt", "1.G.1", "a global sense of place: continents, oceans and countries"],
+  ],
+  "2/social": [
+    ["caring-citizens", "share", "2.CI.1", "civic virtues and civic responsibilities in the community"],
+    ["needs-and-wants", "share", "2.E.2", "meeting needs and wants with goods and services"],
+    ["ca-g2-citizens-and-leaders", "adopt", "2.CI.2; 2.H.1", "voting and leaders, and people who shaped the community and nation"],
+    ["ca-g2-work-and-money", "adopt", "2.E.1; 2.E.2; 2.E.4", "resources, producers and consumers, and saving money in a bank"],
+    ["pe-work-and-prices-2", "adopt", "2.E.3", "what changes the price and availability of goods and services"],
+    ["ny-g3-culture", "adopt", "2.CR.1; 2.CR.2", "how traditions and customs bring a community together and celebrate its diversity"],
+    ["ny-g3-globes-and-maps", "adopt", "2.G.3", "the Equator, the Prime Meridian and the lines that locate places on a globe"],
+    ["communities-compared", "adopt", "2.G.2; 2.G.4", "how physical features shape where people live, and how people change the land"],
+    ["then-and-now", "adopt", "2.H.2", "generations, timelines and change over time"],
+  ],
+  "3/social": [
+    ["meeting-needs", "share", "3.E.2", "how people use resources to meet their needs around the world"],
+    ["ny-g3-trade", "adopt", "3.E.2", "how communities trade resources to meet their needs"],
+    ["ny-g3-world-communities", "adopt", "3.E.3", "why people live where they do in communities around the world"],
+    ["ca-g5-constitution", "adopt", "3.CR.1; 3.H.2", "the Bill of Rights and the framework of the United States government"],
+    ["or-g2-world-maps", "adopt", "3.G.4", "maps and other representations of the Earth"],
+    ["az-g2-continents-oceans", "adopt", "3.G.4", "the continents and oceans on maps and globes"],
+  ],
+  "4/social": [
+    ["or-g5-history-detective", "adopt", "4.MS.10", "using primary and secondary sources to learn about people and events of the past"],
+    ["ca-g5-slavery-and-resistance", "adopt", "4.MS.5", "slavery in the South before the Civil War and how enslaved people resisted it"],
+    ["ca-g8-civil-war", "adopt", "4.MS.6", "the causes of the Civil War and its major events"],
+    ["or-g8-reconstruction", "adopt", "4.MS.7", "Reconstruction, and how rights were won and then rolled back"],
+    ["ny-g8-civil-rights", "adopt", "4.MS.8", "the Civil Rights Movement and the laws it won"],
+    ["or-g5-earn-and-save", "adopt", "4.MS.11", "earning and saving, and how money choices shape life and work"],
+  ],
+  "5/social": [
+    ["wa-g5-us-geography", "adopt", "5.1; 5.10", "the regions, rivers and landforms of North America and the United States"],
+    ["or-g5-states-capitals", "adopt", "5.10", "finding the states and their capitals on a map"],
+    ["ny-g5-first-peoples", "adopt", "5.2", "the first peoples of the Americas and how they adapted to the land"],
+    ["ny-g5-early-civilizations", "adopt", "5.2", "the Olmec, Maya, Aztec, Inca and Mississippian civilizations before 1492"],
+    ["ca-g5-explorers", "adopt", "5.3", "why explorers sailed to North America and what changed when they arrived"],
+    ["ny-g5-columbian-exchange", "adopt", "5.3", "the exchange of crops, animals and diseases, and the Middle Passage"],
+    ["ca-g5-thirteen-colonies", "adopt", "5.4", "the founding of the New England, Middle and Southern colonies"],
+    ["ca-g5-colonial-economy", "adopt", "5.4", "the economic reasons for the colonies, and their trade and work"],
+    ["ca-g5-road-to-revolution", "adopt", "5.5", "taxes, protests and the growth of the revolutionary movement"],
+    ["ca-g5-revolution", "adopt", "5.6", "the major events of the American Revolution"],
+    ["ca-g8-revolutionary-ideas", "adopt", "5.7", "the ideas behind the Declaration of Independence and the first state constitutions"],
+    ["ca-g5-constitution", "adopt", "5.8", "the Articles of Confederation, the Constitution and the Bill of Rights"],
+    ["ca-g5-american-creed", "adopt", "5.9", "the symbols, songs and shared ideals of the United States"],
+    ["or-g5-timeline", "adopt", "5.5; 5.8", "putting the events from 1492 to the Constitution in order"],
+  ],
+  "6/social": [
+    ["wa-g6-world-maps", "adopt", "6.1", "maps, globes and coordinates as tools of geography"],
+    ["ny-g6-eastern-hemisphere", "adopt", "6.2; 6.3", "the physical patterns and regions of the Eastern Hemisphere"],
+    ["wa-g6-world-regions", "adopt", "6.3; 6.16", "the world's regions, climates and cultures"],
+    ["ga-g7-population", "adopt", "6.6; 6.7", "population change, migration and why settlements grow where they do"],
+    ["tx-g6-economies", "adopt", "6.4; 6.15", "natural resources, factors of production and economic systems"],
+    ["ga-g7-economies", "adopt", "6.15", "trade between nations and patterns of economic interaction"],
+    ["ga-g6-europe", "adopt", "6.16", "the cultural region of Europe"],
+    ["ga-g7-africa", "adopt", "6.16", "the cultural regions of Africa"],
+    ["ga-g7-southwest-asia", "adopt", "6.16", "the cultural region of the Middle East"],
+    ["ga-g7-southern-eastern-asia", "adopt", "6.16", "the cultural regions of South Asia and East Asia"],
+    ["tx-g6-governments", "adopt", "6.10; 6.11", "how governments are organized, and limited and unlimited government"],
+    ["ca-g9-rights", "adopt", "6.12", "the rights and responsibilities of American citizenship"],
+    ["ca-g9-civic-action", "adopt", "6.13", "the challenges of civic engagement today"],
+    ["pe-human-rights-6", "adopt", "6.14", "how rights and citizenship differ from one nation to another"],
+  ],
+  "7/social": [
+    ["first-farmers", "share", "7.1; 7.2", "how farming led to the first river valley civilizations"],
+    ["where-civilizations-grew", "share", "7.1; 7.2; 7.3", "the river valleys where the first civilizations grew"],
+    ["world-beliefs", "share", "7.7", "the origins of the world's major religions and philosophies"],
+    ["laws-and-government", "share", "7.4; 7.5", "early law codes, and government in ancient Greece and Rome"],
+    ["mb-egypt-8", "adopt", "7.1", "the civilization of the Nile River Valley"],
+    ["ca-g6-qin-and-han", "adopt", "7.2", "Confucius and the Qin and Han dynasties of ancient China"],
+    ["ca-g6-ancient-india", "adopt", "7.3", "the civilization of the Indus Valley and ancient India"],
+    ["ca-g6-greek-world", "adopt", "7.4", "the city-states, trade and thinkers of ancient Greece"],
+    ["ca-g6-roman-empire", "adopt", "7.5", "the history of ancient Rome, from republic to empire"],
+    ["or-g7-african-kingdoms", "adopt", "7.6", "the civilizations and trading kingdoms of sub-Saharan Africa"],
+    ["medieval-europe", "adopt", "7.8", "the Middle Ages in Europe and the rise of nation-states"],
+    ["renaissance-and-reformation", "adopt", "7.9", "the Renaissance and the Reformation"],
+  ],
+  "8/social": [
+    ["tx-g8-colonies-revolution", "adopt", "8.1; 8.2", "the colonies and the road to the American Revolution"],
+    ["ny-g9-atlantic-world", "adopt", "8.1", "exploration, exchange and the Atlantic slave trade before 1754"],
+    ["ca-g8-founding-ideals", "adopt", "8.2; 8.3", "the Declaration of Independence, the Constitution and the ideas behind them"],
+    ["wa-g8-bill-of-rights", "adopt", "8.3", "the Bill of Rights and the amendments that followed"],
+    ["ca-g8-new-nation", "adopt", "8.4", "the first presidents and the challenges of building a new nation"],
+    ["ca-g8-westward", "adopt", "8.5", "the causes, effects and costs of westward expansion"],
+    ["wa-g8-industry-reform", "adopt", "8.6; 8.7", "inventions and factories, and the reform movements of the 1800s"],
+    ["tx-g8-divided-nation", "adopt", "8.8", "slavery, compromises and the conflicts between North and South"],
+    ["ca-g8-civil-war", "adopt", "8.9", "the key people and events of the Civil War"],
+    ["or-g8-reconstruction", "adopt", "8.10", "Reconstruction, and how rights were won and then rolled back"],
+    ["fl-g8-freedom-struggle", "adopt", "8.7; 8.10", "abolition, the Underground Railroad and the struggle for freedom through Reconstruction"],
+  ],
+  "9/social": [
+    ["co-g6-world-regions", "adopt", "ITG.1; ITG.3; ITG.5", "maps and spatial terms, how regions organize Earth's surface, and culture across the world's regions"],
+    ["ga-g7-population", "adopt", "ITG.4; ITG.8", "population structures and migration, and how settlements grow"],
+    ["quality-of-life-8", "adopt", "ITG.4", "measuring quality of life and the differences between populations"],
+    ["tx-g6-economies", "adopt", "ITG.6; ITG.10", "economic systems and resources around the world"],
+    ["ga-g7-economies", "adopt", "ITG.6", "economic interdependence and global trade"],
+    ["al-g9-decolonization", "adopt", "ITG.7", "how new nations and borders formed after the end of empires"],
+  ],
+};

@@ -136,13 +136,16 @@ describe("the Monday class email", () => {
   });
 
   it("goes on Mondays, once a week, with first names and homework, and unsubscribes on its own", async () => {
+    // The class is set up on the Sunday before the Monday the email goes, so its practice is from the last week and
+    // its homework is due this week whatever day the test runs.
+    vi.useFakeTimers({ toFake: ["Date"] });
+    const monday = dayWhere(Date.now() + DAY, (d) => d.getUTCDay() === 1);
+    vi.setSystemTime(monday.getTime() - DAY);
     const t = await teacherWithClass("digest-on@example.com");
     expect((await digest.PATCH(req("/api/classes/digest/", "PATCH", { on: "yes" }, t.cookie))).status).toBe(400);
     expect((await digest.PATCH(req("/api/classes/digest/", "PATCH", { on: true }, t.cookie))).status).toBe(200);
     expect((await (await classes.GET(req("/api/classes/", "GET", undefined, t.cookie))).json()).mondayEmail).toBe(true);
 
-    vi.useFakeTimers({ toFake: ["Date"] });
-    const monday = dayWhere(Date.now() + DAY, (d) => d.getUTCDay() === 1);
     // A Wednesday first: nothing.
     vi.setSystemTime(monday.getTime() - 5 * DAY);
     await runJob();
