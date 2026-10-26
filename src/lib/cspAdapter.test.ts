@@ -3,6 +3,7 @@ import os from "node:os";
 import path from "node:path";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { writePolicyTags } from "../../scripts/csp-pages.mjs";
+import { PRERENDER_BUDGET, checkPrerenderBudget, trimSegmentPrefetches } from "../../scripts/deploy-outputs.mjs";
 
 const PAGE = '<!DOCTYPE html><html><head><meta charSet="utf-8"/><script>self.x=1</script></head><body></body></html>';
 const TAG = 'http-equiv="Content-Security-Policy"';
@@ -57,11 +58,49 @@ describe("csp-adapter", () => {
     expect(adapter.name).toBe("Platform");
     expect(await adapter.modifyConfig({}, {})).toEqual({ touched: true });
 
-    const prerender = { htmlSize: PAGE.length, fallback: { filePath: files[2] } };
-    await adapter.onBuildComplete({ distDir: dir, outputs: { prerenders: [prerender] } });
+    const prerender = { pathname: "/play", htmlSize: PAGE.length, fallback: { filePath: files[2] } };
+    const segment = { pathname: "/curriculum/bc/grade-4/math/fractions.segments/_tree.segment.rsc" };
+    const prerenders = [prerender, segment];
+    await adapter.onBuildComplete({ distDir: dir, outputs: { prerenders } });
+    expect(prerenders).toEqual([prerender]);
     expect(seen).toHaveLength(1);
     expect(seen[0]).toContain(TAG);
     expect(prerender.htmlSize).toBe(fs.statSync(files[2]).size);
+  });
+});
+
+describe("deploy outputs", () => {
+  const unit = "/curriculum/us-ks/grade-4/math/fractions";
+  const subject = "/curriculum/us-ks/grade-4/math";
+
+  it("leaves out only unit pages' segment prefetch files", () => {
+    const prerenders = [
+      unit,
+      `${unit}.rsc`,
+      `${unit}.segments/_tree.segment.rsc`,
+      `${unit}.segments/_full.segment.rsc`,
+      `${unit}.segments/curriculum/$d$framework/$d$grade/$d$subject/$d$unit/__PAGE__.segment.rsc`,
+      subject,
+      `${subject}.rsc`,
+      `${subject}.segments/_tree.segment.rsc`,
+      `${unit}/opengraph-image`,
+      "/guides/us-ks/grade-4/math/worksheet.segments/_tree.segment.rsc",
+    ].map((pathname) => ({ pathname }));
+    expect(trimSegmentPrefetches(prerenders)).toBe(3);
+    expect(prerenders.map((p) => p.pathname)).toEqual([
+      unit,
+      `${unit}.rsc`,
+      subject,
+      `${subject}.rsc`,
+      `${subject}.segments/_tree.segment.rsc`,
+      `${unit}/opengraph-image`,
+      "/guides/us-ks/grade-4/math/worksheet.segments/_tree.segment.rsc",
+    ]);
+  });
+
+  it("stops the build when a deploy would carry too many outputs", () => {
+    expect(() => checkPrerenderBudget(PRERENDER_BUDGET)).not.toThrow();
+    expect(() => checkPrerenderBudget(PRERENDER_BUDGET + 1)).toThrow(/over the budget/);
   });
 });
 
