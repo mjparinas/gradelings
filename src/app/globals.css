@@ -310,7 +310,7 @@
   opacity: 1;
   animation: nav-pending 0.9s ease-in-out 0.12s infinite both;
 }
-/* The next screen is being drawn (RouteProgress): a bar sweeps across the top, and the old screen dims a little. */
+/* A tapped screen is on its way (RouteProgress): a bar sweeps across the top, from the first frame. */
 .route-progress {
   position: fixed;
   top: 0;
@@ -325,13 +325,8 @@
   background-repeat: no-repeat;
 }
 .route-progress[data-pending] {
-  animation:
-    link-spinner-in 0.15s ease-out 0.08s both,
-    route-progress 1s ease-in-out 0.08s infinite;
-}
-.route-progress[data-pending] ~ * {
-  opacity: 0.75;
-  transition: opacity 0.2s ease-out 0.2s;
+  opacity: 1;
+  animation: route-progress 1s ease-in-out infinite;
 }
 @keyframes route-progress {
   from {

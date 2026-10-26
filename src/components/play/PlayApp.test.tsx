@@ -22,8 +22,8 @@ const h = vi.hoisted(() => ({
 }));
 
 vi.mock("@/lib/router", async (importOriginal) => {
-  const { parse } = await importOriginal<typeof import("@/lib/router")>();
-  return { parse, useRoute: () => parse(h.route), useShownHash: () => ({ shown: h.route, pending: false }), go: h.go };
+  const { parse, ShownRoute } = await importOriginal<typeof import("@/lib/router")>();
+  return { parse, ShownRoute, useRoute: () => parse(h.route), useShownHash: () => ({ shown: h.route, pending: false }), go: h.go };
 });
 vi.mock("@/content", () => ({
   parseUnitKey: (key: string) => {

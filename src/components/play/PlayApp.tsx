@@ -9,7 +9,7 @@ import { ageBandFor } from "@/content/subjects";
 import type { FrameworkId, GradeId, SubjectId } from "@/content/types";
 import type { Mode } from "@/lib/model";
 import { PLACEMENT_SUBJECTS } from "@/lib/placement";
-import { parse, useShownHash } from "@/lib/router";
+import { parse, ShownRoute, useShownHash } from "@/lib/router";
 import { useActiveProfile, useChildSettings, useProfiles, useReady, useStore } from "@/lib/store";
 import { storiesFor } from "@/lib/stories";
 import { startBackgroundSync } from "@/lib/sync";
@@ -55,9 +55,11 @@ function Screen() {
   return (
     <>
       <RouteProgress pending={pending} />
-      <LazyScreen name={parse(shown).path[0] ?? ""}>
-        <Routes hash={shown} />
-      </LazyScreen>
+      <ShownRoute value={shown}>
+        <LazyScreen name={parse(shown).path[0] ?? ""}>
+          <Routes hash={shown} />
+        </LazyScreen>
+      </ShownRoute>
     </>
   );
 }

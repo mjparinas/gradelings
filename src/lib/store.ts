@@ -35,6 +35,7 @@ import { setQuietCheck, setSoundCheck } from "./sound";
 import { forgetMyInvite } from "./referral";
 import { getTrophy, newlyEarned, TIER_STYLE } from "./trophies";
 import { schoolYearOf } from "./schoolYear";
+import { afterPaint } from "./afterPaint";
 
 export interface Toast {
   id: string;
@@ -115,12 +116,6 @@ function newFamily(): FamilyInfo {
 
 // Events waiting for `logSoon` to log them after the next paint.
 let soon: NewEvent[] = [];
-
-function afterPaint(fn: () => void) {
-  // Animation frames don't run in a hidden tab, so a hidden tab logs on the next task instead.
-  if (typeof requestAnimationFrame === "function" && document.visibilityState === "visible") requestAnimationFrame(() => setTimeout(fn, 0));
-  else setTimeout(fn, 0);
-}
 
 // Derived stats are cached per child and recomputed only when their events change.
 const deriveCache = new Map<string, { events: AppEvent[]; resetAt: number; day: string; testCoins: boolean; value: Derived }>();

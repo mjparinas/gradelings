@@ -6,7 +6,7 @@ import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
 import { finishGoogleSignIn, refreshAccount, type BillingInfo } from "@/lib/account";
 import { takeBillingPass } from "@/lib/billingReturn";
 import { hasPaidPlan, isPremium, trialDaysLeft } from "@/lib/plan";
-import { go, parse, useRoute, useShownHash } from "@/lib/router";
+import { go, parse, ShownRoute, useRoute, useShownHash } from "@/lib/router";
 import { useLocale } from "@/lib/say";
 import { useProfiles, useReady, useStore } from "@/lib/store";
 import { VoicePreload } from "@/components/VoicePreload";
@@ -258,7 +258,9 @@ export function ParentApp() {
     <ContentGate targets={profiles.map((p) => ({ grade: p.grade, framework: p.framework }))} optional>
       <VoicePreload />
       <Shell active={tab} pending={pending}>
-        <Section hash={shown} billing={billing} onBilling={setBilling} />
+        <ShownRoute value={shown}>
+          <Section hash={shown} billing={billing} onBilling={setBilling} />
+        </ShownRoute>
       </Shell>
     </ContentGate>
   );

@@ -5,6 +5,7 @@
 //
 //   node scripts/bench-clicks.mjs http://localhost:3000 [runs] [--json out.json]
 //
+// "next paint" is the Event Timing duration of the tap (what INP measures): how long the screen stayed frozen.
 // "feedback" is the first frame after the tap that shows a progress signal (a pending spinner or bar, a
 // loading view) or the next screen itself; "ready" is when the next screen's landmark is visible. Both are
 // timed from the pointerdown in the page. Medians over the runs are printed.
@@ -57,7 +58,7 @@ async function seedHistory(page) {
   );
   await page.reload();
 }
-const add = (name, feedback, ready) => (results[name] ??= []).push({ feedback, ready });
+const add = (name, feedback, ready, paint = 0) => (results[name] ??= []).push({ feedback, ready, paint });
 
 /**
  * Notes when the tap lands (pointerdown, so Playwright's own checks before clicking don't count) and the first
@@ -67,6 +68,13 @@ async function armObserver(page) {
   await page.evaluate(() => {
     window.__tapAt = 0;
     window.__signalAt = 0;
+    window.__paintMs = 0;
+    // Event Timing (what INP is built on): from the tap to the next frame the browser painted.
+    window.__eventObs?.disconnect();
+    window.__eventObs = new PerformanceObserver((list) => {
+      for (const e of list.getEntries()) if (e.interactionId && ["pointerdown", "pointerup", "click"].includes(e.name)) window.__paintMs = Math.max(window.__paintMs, e.duration);
+    });
+    window.__eventObs.observe({ type: "event", durationThreshold: 16 });
     const watch = () => {
       if (document.querySelector("[data-pending], .screen-loading")) window.__signalAt = performance.now();
       else requestAnimationFrame(watch);
@@ -87,20 +95,25 @@ async function timed(page, name, target, ready) {
   await armObserver(page);
   await target.click({ force: true, noWaitAfter: true });
   await ready.waitFor({ timeout: 60_000 });
-  const r = await page.evaluate(() => ({ tap: window.__tapAt, signal: window.__signalAt, now: performance.now() })).catch(() => null);
+  const readyAt = await page.evaluate(() => performance.now()).catch(() => 0);
+  // Event Timing entries arrive after the frame; give them a moment.
+  await page.waitForTimeout(150);
+  const r = await page.evaluate(() => ({ tap: window.__tapAt, signal: window.__signalAt, paint: window.__paintMs, now: performance.now() })).catch(() => null);
   // A full page load replaces the document, so its timings are taken from navigation entries instead.
   if (!r || r.tap === undefined) {
     const nav = await page.evaluate(() => ({ fcp: performance.getEntriesByName("first-contentful-paint")[0]?.startTime ?? 0, now: performance.now() }));
     add(name, Math.round(nav.fcp), Math.round(nav.now));
     return;
   }
-  const readyMs = r.now - r.tap;
-  add(name, Math.round(r.signal ? Math.min(r.signal - r.tap, readyMs) : readyMs), Math.round(readyMs));
+  const readyMs = readyAt - r.tap;
+  add(name, Math.round(r.signal ? Math.min(r.signal - r.tap, readyMs) : readyMs), Math.round(readyMs), Math.round(r.paint));
 }
 
 async function newPage(browser, viewport = { width: 1024, height: 768 }) {
-  const context = await browser.newContext({ viewport, serviceWorkers: "block", hasTouch: true });
+  const context = await browser.newContext({ viewport, serviceWorkers: "block", hasTouch: true, bypassCSP: Boolean(process.env.BENCH_CSS) });
   const page = await context.newPage();
+  // BENCH_CSS tries a style change without a rebuild.
+  if (process.env.BENCH_CSS) await page.addInitScript((css) => addEventListener("DOMContentLoaded", () => document.head.append(Object.assign(document.createElement("style"), { textContent: css }))), process.env.BENCH_CSS);
   const cdp = await context.newCDPSession(page);
   await cdp.send("Emulation.setCPUThrottlingRate", { rate: 4 });
   await cdp.send("Network.enable");
@@ -143,6 +156,12 @@ async function kids(browser) {
   for (const [name, tile, ready] of tiles) {
     if (!(await tile.isVisible().catch(() => false))) continue;
     await timed(page, name, tile, ready);
+    await back();
+  }
+  // The same screens again: the app remembers which draw quickly and skips the progress bar for those.
+  for (const [name, tile, ready] of tiles.slice(1)) {
+    if (!(await tile.isVisible().catch(() => false))) continue;
+    await timed(page, `${name} (again)`, tile, ready);
     await back();
   }
   // Answering: tap a choice and time the feedback.
@@ -208,7 +227,7 @@ const median = (xs) => {
   const s = [...xs].sort((a, b) => a - b);
   return s[Math.floor(s.length / 2)];
 };
-const rows = Object.entries(results).map(([name, rs]) => ({ name, feedback: median(rs.map((r) => r.feedback)), ready: median(rs.map((r) => r.ready)) }));
-console.log("click                                    feedback ms   ready ms");
-for (const r of rows) console.log(`${r.name.padEnd(40)} ${String(r.feedback).padStart(11)} ${String(r.ready).padStart(10)}`);
+const rows = Object.entries(results).map(([name, rs]) => ({ name, feedback: median(rs.map((r) => r.feedback)), ready: median(rs.map((r) => r.ready)), paint: median(rs.map((r) => r.paint)) }));
+console.log("click                                    next paint ms   feedback ms   ready ms");
+for (const r of rows) console.log(`${r.name.padEnd(40)} ${String(r.paint).padStart(13)} ${String(r.feedback).padStart(13)} ${String(r.ready).padStart(10)}`);
 if (JSON_OUT) writeFileSync(JSON_OUT, JSON.stringify(rows, null, 2));

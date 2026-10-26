@@ -112,7 +112,7 @@ try {
   // while the app was open, so they open offline too.
   await tab.getByRole("button", { name: "Stop", exact: true }).first().click({ force: true });
   await tab.getByRole("dialog").getByRole("button", { name: "Stop", exact: true }).click({ force: true });
-  for (const [hash, heading] of [["#/arcade", /Arcade/], ["#/shop", /Shop/], ["#/trophies", /Trophies/]) {
+  for (const [hash, heading] of [["#/arcade", /Arcade/], ["#/shop", /Shop/], ["#/trophies", /Trophies/]]) {
     await tab.evaluate((h) => (location.hash = h), hash);
     await tab.getByRole("heading", { level: 1, name: heading }).waitFor({ timeout: 15000 });
   }
