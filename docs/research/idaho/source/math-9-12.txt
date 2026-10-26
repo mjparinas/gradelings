@@ -1,0 +1,2314 @@
+                    IDAHO CONTENT STANDARDS FOR MATHEMATICS
+
+
+9-12 Mathematics Course Planning Guide
+
+
+
+
+                          IDAHO DEPARTMENT OF EDUCATION
+                   CONTENT AND CURRICULUM | MATHEMATICS
+
+                                   650 W STATE STREET, 2ND FLOOR
+                                               BOISE, IDAHO 83702
+                                     208 332 6800 OFFICE / 711 TRS
+                                            WWW.SDE.IDAHO.GOV
+
+                                              CREATED 02/28/2024
+TABLE OF CONTENTS
+Introduction .................................................................................................................................... 3
+Recommendations For Districts...................................................................................................... 4
+Foundational Standards .................................................................................................................. 7
+   Number and Quantity (N) ........................................................................................................... 8
+   Algebra (A)................................................................................................................................... 9
+   Functions (F) .............................................................................................................................. 12
+   Geometry (G)............................................................................................................................. 15
+   Statistics and Probability (S) ...................................................................................................... 19
+Advanced Standards by Career Pathway ...................................................................................... 21
+   Number and Quantity (N) ......................................................................................................... 21
+   Algebra (A)................................................................................................................................. 22
+   Functions (F) .............................................................................................................................. 25
+   Geometry (G)............................................................................................................................. 26
+   Statistics and Probability (S) ...................................................................................................... 27
+College Standards ......................................................................................................................... 29
+   Number and Quantity (N) ......................................................................................................... 29
+   Algebra (A)................................................................................................................................. 32
+   Functions (F) .............................................................................................................................. 35
+   Geometry (G)............................................................................................................................. 42
+   Statistics and Probability (S) ...................................................................................................... 44
+References .................................................................................................................................... 49
+Additional Recommended reading ............................................................................................... 49
+Appendix A: STANDARDS TO ISAT ALIGNMENT............................................................................ 50
+   Grade 11 ISAT Target Summary for Claim 1 .............................................................................. 52
+   Grade 11 ISAT Target Summary for Claims 2 through 4 ........................................................... 54
+
+
+
+
+CREATED 02/28/2024                                           9-12 Mathematics Course Planning Guide / Content & Curriculum 2
+INTRODUCTION
+The 2022 Idaho Content Standards for Mathematics support a progression of increasing
+knowledge and skills. For grades nine through twelve, content is organized into five conceptual
+categories:
+
+   •   Number and Quantity (N)
+   •   Algebra (A)
+   •   Functions (F)
+   •   Geometry (G)
+   •   Statistics and Probability (S)
+
+While the standards document clearly articulates rigorous standards for high school
+mathematics, it does not provide guidance for districts to assign standards to grade levels or
+courses. Because Idaho is a local control state, assigning standards to courses at the high school
+level is a local district responsibility.
+This document was created as a resource for districts to assist them in assigning standards to
+high school mathematics courses. These recommendations are based on a vision for high school
+mathematics programs articulated by the Idaho Math Transitions Steering Committee, shown in
+Figure 1. This committee is comprised of a mathematics professor from each public college and
+university as well as a K-12 teacher or leader for each of Idaho’s six geographical regions. The
+steering committee worked with Regional Math Specialists from Idaho’s Regional Math Centers,
+college math faculty, and high school educators to organize the Idaho Content Standards for
+Mathematics into recommended grade bands. The standards were compared to the content
+taught in the three general education mathematics courses that all of Idaho’s public colleges
+and universities offer. These courses are:
+       MATH 123: Math in the Modern Society
+       MATH 143: Precalculus I: Algebra
+       MATH 153: Statistical Reasoning
+These three general education courses are required for different career pathways at Idaho’s
+public colleges and universities. By aligning high school mathematics content standards to the
+content taught in courses that can be taken for dual credit through Idaho’s Advanced
+Opportunities program, we hope to ensure a successful transition in mathematics from high
+school to college for all Idaho high school graduates.
+The standards are organized into three types of standards:
+
+   •   Foundational Standards are mathematics standards that all high school graduates need
+       to master in order to be successful in both college and careers.
+   •   Advanced Standards are standards that are considered pre-requisite standards needed
+       for one or more of the three college pathways.
+
+
+
+CREATED 02/28/2024                       9-12 Mathematics Course Planning Guide / Content & Curriculum 3
+   •   College Standards are taught at the college level through dual-credit courses or in more
+       advanced college mathematics courses.
+
+Figure 1: Idaho Math Transitions Graphic
+
+
+
+
+RECOMMENDATIONS FOR DISTRICTS
+The Idaho Math Transitions Steering Committee provides recommendations for Idaho high
+schools to create a successful transition in mathematics from high school to college. These
+recommendations are based on research on college success in mathematics (see references
+section), and data on retention and failure rates of mathematics courses typically taken by
+freshman at Idaho’s colleges and universities.
+
+Recommendations for Idaho high school mathematics programs:
+
+   ● Strongly encourage all students to complete four years of mathematics courses in high
+     school. Students who complete four years of mathematics in high school are more
+
+
+CREATED 02/28/2024                     9-12 Mathematics Course Planning Guide / Content & Curriculum 4
+       successful in college mathematics courses than students who do not have four years of
+       mathematics (Zelkowski, 2011). Math courses taken in high school have a significant
+       effect on whether a student goes to college by age 21 (Aughinbaugh, 2012; Jia, 2021).
+       Advanced high school mathematics courses that include statistics and applied
+       mathematics can engage students in a broad understanding of mathematical sciences
+       used in modern industries (Son & Stigler, 2023).
+   ●   Students desiring to continue on to college in a Science, Technology, Engineering or
+       Mathematics (STEM) related major should have four years of mathematics courses in
+       high school, including Calculus when possible. Studies show that the most successful
+       college freshman in Calculus courses have taken Calculus both as a high school senior
+       and as a college freshman (Bressoud, 2016). Students who take Calculus in high school
+       who are majoring in a STEM field may be asked to take Calculus again at the college
+       level depending on their placement data. Students can also take Calculus for the first
+       time in college and be very successful as a STEM major. Calculus completion in high
+       school is not a prerequisite for college admission as a STEM major.
+   ●   Students pursuing a non-STEM related major may not need Calculus for their chosen
+       degree. Students can broaden their mathematical understanding through other
+       mathematics courses such as Algebra 2 and Algebra 2 equivalent courses including
+       trigonometry, statistics, data science, computer science, engineering, business math,
+       quantitative reasoning and applied math. Being confident and successful in
+       mathematics, seeing mathematics as relevant, and having a strong foundation in
+       problem solving may be more important than taking Calculus before graduating from
+       high school.
+   ●   Align junior and senior year courses to general education mathematics courses offered
+       at all of Idaho’s public colleges and universities and in many Idaho high schools as dual
+       credit courses. Consider creating access to these general education mathematics
+       courses for high school students by working with Idaho Digital Learning Alliance (IDLA)
+       or local colleges and universities. Juniors and seniors can take any of these courses and
+       complete their college general education math course prior to their freshman year of
+       college with Idaho’s Advanced Opportunities program. The recommended college
+       mathematics courses for high school students are:
+           o Precalculus I: Algebra and Precalculus 2: Trigonometry – for all STEM fields
+           o Math in the Modern Society – for Communications, Trades, Arts and Languages
+           o Statistical Reasoning – for Health, Business, and Social Sciences
+   ●   High Schools can create mathematics courses for juniors and seniors centered around
+       college and career pathways. See The Launch Years Report published by the University
+       of Texas at Austin Charles A. Dana Center and Sparks (2018) for additional guidance on
+       designing high school mathematics programs.
+
+
+CREATED 02/28/2024                      9-12 Mathematics Course Planning Guide / Content & Curriculum 5
+   ● Engage students in the Standards for Mathematical Practice described in the Idaho
+     Content Standards through the use of high-impact teaching practices. The Standards for
+     Mathematical Practice (SMP) describe the type of mathematical thinking needed for the
+     for students to be ready for a world of STEM. The Standards for Mathematical Practice
+     are:
+
+               SMP1: Make sense of problems and persevere in solving them.
+               SMP2: Reason abstractly and quantitatively.
+               SMP3: Construct viable arguments and critique the reasoning of others.
+               SMP4: Model with mathematics.
+               SMP5: SMP1: Use appropriate tools strategically.
+               SMP6: Attend to precision.
+               SMP7: Look for and make use of structure.
+               SMP8: Look for and express regularity in repeated reasoning.
+   ● Design lessons using the practices listed in the Idaho Math Instructional Framework.
+     These practices are supported by research summarized by the National Council Teachers
+     of Mathematics in Principles to Actions: Ensuring Mathematical Success for All (NCTM,
+     2014). Figure 2 shows these eight high-impact teaching practices.
+
+   Figure 2: Idaho Mathematics Instructional Framework
+
+
+
+
+CREATED 02/28/2024                      9-12 Mathematics Course Planning Guide / Content & Curriculum 6
+FORMATTING NOTES
+   ● Throughout this document, standards listed with a ★ are standards that are
+     opportunities to engage students in mathematical modeling. See pages 145 and 146 in
+     the 2022 Idaho Content Standards for Mathematics for a thorough description of
+     mathematical modeling.
+   ● The coding for the standards in this document is consistent with the 2022 Idaho Content
+     Standards for Mathematics. For each 9 – 12 conceptual category, the standard number
+     begins with the identifier for the conceptual category code (N, A, F, G, S), followed by
+     the domain code, and the standard number, as shown in Figure 3. In this document, the
+     conceptual categories, the domain headings and the cluster headings are used to
+     organized standards as foundational, advanced, or college standards. Within the original
+     standards clusters, standards have been identified as different levels of difficulty. For
+     this reason, the numbering within the tables in this document is not sequential so that
+     the numbering continues to match the original standards document.
+
+
+Figure 2: Idaho Content Standards for Mathematics Coding System
+
+
+
+
+A Standards Overview Chart is provided in Appendix A as a summary of the designation for each
+9-12 Idaho Content Standard for Mathematics.
+
+
+
+
+CREATED 02/28/2024                     9-12 Mathematics Course Planning Guide / Content & Curriculum 7
+FOUNDATIONAL STANDARDS
+These standards are foundational for all students regardless of career pathway. The majority of
+the Grade 11 Idaho Standards for Achievement Test (ISAT) will assess these standards (See
+Appendix B). Some of the Grade 11 ISAT will assess content more advanced than these
+foundational standards, so these standards should not be the stopping point for most students
+in their high school mathematics education. Appendix B provides details on the alignment of
+each category of standards to the ISAT.
+
+
+Number and Quantity (N)
+
+The Real Number System - N.RN
+N.RN.A. Extend the properties of exponents to rational exponents.
+   1. Explain how the definition of the meaning of rational exponents follows from extending
+      the properties of integer exponents to those values, allowing for a notation for radicals
+      in terms of rational exponents.
+                               1                                                  1        1
+       Example: We define 5 to be the cube root of 5 because we want (53)3 = 5( 3 )3 to hold,
+                               3
+             1
+       so (53 )3 must equal 5.
+   2. Rewrite expressions involving radicals and rational exponents using the properties of
+      exponents.
+
+       Example: Solving the volume of a cube formula, 𝑉𝑉 = 𝑠𝑠 3 , for 𝑠𝑠 would involve rewriting
+                                                  1
+                                    3
+       the solution as either 𝑠𝑠 = √𝑉𝑉 or 𝑠𝑠 = 𝑉𝑉 3 .
+N.RN.B. Use properties of rational and irrational numbers.
+   3. Explain why the sum and product of two rational numbers is rational; why the sum of a
+      rational number and an irrational number is irrational; and why the product of a
+      nonzero rational number and an irrational number is irrational.
+
+
+Quantities – N.Q
+N.Q.A. Reason quantitatively and use units to solve problems.
+   1. Use units as a way to understand problems and to guide the solution of multi-step
+      problems choose and interpret units consistently in formulas; choose and interpret the
+       scale and the origin in graphs and data displays.★
+
+
+
+CREATED 02/28/2024                         9-12 Mathematics Course Planning Guide / Content & Curriculum 8
+   2. Define appropriate quantities for the purpose of descriptive modeling.★
+
+
+Algebra (A)
+
+Seeing Structure in Expressions – A.SSE
+A.SSE.A. Interpret the structure of linear, quadratic, exponential, polynomial, and rational
+expressions.
+
+   1. Interpret expressions that represent a quantity in terms of its context.★
+          a. Interpret parts of an expression, such as terms, factors and coefficients.
+          b. Interpret complicated expressions by viewing one or more of their parts as a
+             single entity.
+
+       Example: Interpret 𝑃𝑃(1 + 𝑟𝑟)𝑛𝑛 as the product of P and a factor not depending on 𝑃𝑃.
+   2. Use the structure of an expression to identify ways to rewrite it.
+
+       Example: See 𝑥𝑥 4 – 𝑦𝑦 4 as (𝑥𝑥 2 )2 – (𝑦𝑦 2 )2 , thus recognizing it as a difference of squares
+       that can be factored as (𝑥𝑥 2 – 𝑦𝑦 2 )(𝑥𝑥 2 + 𝑦𝑦 2 ).
+A.SSE.B. Write expressions in equivalent forms to solve problems.
+   3. Choose and produce an equivalent form of an expression to reveal and explain
+      properties of the quantity represented by the expression.
+         a. Factor a quadratic expression to reveal the zeros of the function it defines.
+         c. Use the properties of exponents to transform expressions for exponential
+             functions.
+                                                                       1
+       Example: The expression 1.15𝑡𝑡 can be rewritten as (1.1512 )12𝑡𝑡 ≈ 1.01212𝑡𝑡 to reveal the
+       approximate equivalent monthly interest rate if the annual rate is 15%.
+
+
+Arithmetic with Polynomials and Rational Expressions – A.APR
+A.APR.A. Perform arithmetic operations on polynomials.
+   1. Demonstrate understanding that polynomials form a system analogous to the integers;
+      namely, they are closed under certain operations.
+
+           a. Perform operations on polynomial expressions (+, -, x, /) and compare the
+              system of polynomials to the system of integers when performing operations.
+
+ Teacher Note:
+
+
+
+CREATED 02/28/2024                          9-12 Mathematics Course Planning Guide / Content & Curriculum 9
+ Teacher Note: Division with monomials is foundational, but division with polynomials is an
+ Advanced Standard in preparation for Math 143 Precalculus 1.
+
+           b. Factor and/or expand polynomial expressions, identify and combine like terms,
+              and apply the distributive property.
+
+ Teacher Note:
+ Factoring and/or expanding polynomial expressions is an Advanced Standard in preparation
+ for Math 143 Precalculus 1: Algebra. Identifying and combining like terms and applying the
+ distributive property is foundational.
+
+
+
+Creating Equations – A.CED
+A.CED.A. Create equations that describe numbers or relationships.
+
+   1. Create one-variable equations and inequalities to solve problems, including linear,
+      quadratic, rational, and exponential functions.
+   Example: Four people may be seated at one rectangular table. If two rectangular tables are
+   placed together end-to-end, six people may be seated at the table. If ten tables are placed
+   together end-to-end, how many people can be seated? How many tables are needed for 𝑛𝑛
+   people?
+
+ Teacher Note:
+ Focus on creating linear equations and inequalities to solve problems at the foundational
+ level. This standard will be expanded upon at the advanced and college levels.
+
+
+   2. Interpret the relationship between two or more quantities.★
+          a. Define variables to represent the quantities and write equations to show the
+               relationship.★
+
+       Example: The cost of parking in the parking garage is $2.00 for the first hour and $1.00
+       for every hour after that. Write an equation in terms of 𝑥𝑥 and 𝑦𝑦 that shows the total cost
+       for parking, 𝑦𝑦, for 𝑥𝑥 hours. Use the equation to calculate the cost for parking in the
+       garage for 5 hours.
+           b. Use graphs to show a visual representation of the relationship while adhering to
+               appropriate labels and scales.★
+
+
+
+
+CREATED 02/28/2024                      9-12 Mathematics Course Planning Guide / Content & Curriculum 10
+       Example: Using the equation from A.CED.A.2.a, show how the graph of the equation can
+       be used to predict the cost for a specified amount of time.
+   3. Represent constraints using equations or inequalities and interpret solutions as viable or
+      non-viable options in a modeling context.★
+   4. Represent constraints using systems of equations and/or inequalities and interpret
+      solutions as viable or non-viable options in a modeling context.★
+   5. Rearrange formulas to highlight a quantity of interest, using the same reasoning as in
+       solving equations.★
+
+   Example: Rearrange Ohm’s law 𝑉𝑉 = 𝐼𝐼𝐼𝐼 to highlight resistance 𝑅𝑅.
+
+
+Reasoning with Equations and Inequalities – A.REI
+A.REI.A. Understand solving equations as a process of reasoning and explain the reasoning.
+
+   1. Explain each step in solving a simple equations as following from the equality of
+      numbers asserted at the previous step, starting from the assumption that the original
+      equation has a solution. Construct a viable argument to justify or refute a solution
+      method.
+
+A.REI.B. Solve equations and inequalities in one variable.
+   Solve linear equations and inequalities in one variable, including equations with coefficients
+       represented by letters.
+
+A.REI.C. Solve systems of equations.
+   6. Solve systems of linear equations exactly and approximately (e.g., with graphs), focusing
+      on pairs of linear equations in two variables.
+
+       Example: A school club is selling hats and t-shirts for a fundraiser. The group expects to
+       sell a total of 50 items. They make a profit of 15 dollars for each t-shirt sold and 5
+       dollars for each hat sold. How many hats and t-shirts will the school club need to sell to
+       make a profit of $300?
+A.REI.D. Represent and solve equations and inequalities graphically.
+   10. Demonstrate understanding that the graph of an equation in two variables is the set of
+       all its solutions plotted in the coordinate plane. Show that any point on the graph of an
+       equation in two variables is a solution to the equation.
+
+
+
+
+CREATED 02/28/2024                     9-12 Mathematics Course Planning Guide / Content & Curriculum 11
+Functions (F)
+
+Interpreting Functions – F.IF
+F.IF.A. Understand the concept of a function and use function notation.
+   1. Demonstrate understanding that a function is a correspondence from one set (called the
+      domain) to another set (called the range) that assigns to each element of the domain
+      exactly one element of the range: If f is a function and x is an element of its domain,
+      then f(x) denotes the output of f corresponding to the input x. The graph of f is the
+      graph of the equation y = f(x).
+   2. Use function notation, evaluate functions for inputs in their domains, and interpret
+      statements that use function notation in terms of a context.
+       Example: Given a function representing a car loan, determine the balance of the loan at
+       different points in time.
+F.IF.B. Interpret functions that arise in applications in terms of the context. Include linear,
+quadratic, exponential, rational, polynomial, square root and cube root, trigonometric, and
+logarithmic functions.
+
+ Teacher Note:
+ Foundational standards primarily emphasize linear functions. Foundational standards also
+ include a less formal exploration of the basic attributes of exponential and quadratic
+ functions.
+
+ The further reinforcement of these standards (F.IF.B.4 and F.IF.B.5) as prerequisite concepts
+ for the named dual-credit courses would be for continued exploration of exponential and
+ quadratic functions as well as more complex functions such as cubic and logarithmic
+ functions.
+
+   4. For a function that models a relationship between two quantities, interpret key features
+      of graphs and tables in terms of the quantities, and sketch graphs showing key features
+      given a verbal description of the relationship. Key features include: intercepts; intervals
+      where the function is increasing, decreasing, positive, or negative; relative maxima and
+       minima; symmetries; end behavior; and periodicity.★
+       Example: Given a context or verbal description of a relationship, sketch a graph that
+       models the context or description and shows its key features.
+
+ Teacher Note:
+ Foundational standards primarily emphasize linear functions, but interpreting exponential and
+ quadratic functions is also relevant for F.IF.B.4. Interpreting other functions is related to
+
+
+
+CREATED 02/28/2024                      9-12 Mathematics Course Planning Guide / Content & Curriculum 12
+ advanced standards.
+
+   5. Relate the domain of a function to its graph and, where applicable, to the quantitative
+       relationship it describes.★
+       Example: If the function ℎ(𝑛𝑛) gives the number of person-hours it takes to assemble 𝑛𝑛
+       engines in a factory, then the positive integers would be an appropriate domain for the
+       function.
+
+ Teacher Note:
+ Foundational standards primarily emphasize linear functions, though interpreting domain and
+ range from various graphs is appropriate for foundational standards. Other functions are
+ related to advanced standards.
+
+   6. Calculate and interpret the average rate of change of a function (presented symbolically
+       or as a table) over a specified interval. Estimate the rate of change from a graph.★
+
+ Teacher Note:
+ F.IF.B.6 should be focused primarily on linear functions as a foundational standard.
+
+F.IF.C. Analyze functions using different representations.
+   7. Graph functions expressed symbolically and show key features of the graphs, by hand in
+      simple cases and using technology for more complicated cases.
+
+           a. Graph linear and quadratic functions and show intercepts, maxima, and
+               minima.★
+
+   8. Write a function defined by an expression in different but equivalent forms to reveal
+      and explain different properties of the function.
+
+   9. Compare properties of two functions each represented in a different way (algebraically,
+      graphically, numerically in tables or by verbal descriptions).
+
+       Example: Given a graph of one polynomial function and an algebraic expression for
+       another, say which has the larger/smaller relative maximum and/or minimum.
+
+
+Building Functions – F.BF
+F.BF.A. Build a function that models a relationship between two quantities.
+   1. Write a function that describes a relationship between two quantities. Functions could
+      include linear, exponential, quadratic, simple rational, radical, logarithmic, and
+       trigonometric.★
+
+
+CREATED 02/28/2024                      9-12 Mathematics Course Planning Guide / Content & Curriculum 13
+ Teacher Note:
+ Specifically, linear and exponential functions are relevant to the foundational standards
+ portion of F.BF.A. Other functions are addressed in the advanced standards.
+
+
+           a. Determine an explicit expression, a recursive process, or steps for calculation
+               from a context.★
+
+
+Linear, Quadratic, and Exponential Models – F.LE
+ Teacher Note:
+ Foundational standards primarily emphasize linear functions. Foundational standards also
+ include a less formal exploration of the basic attributes of exponential and quadratic
+ functions.
+
+ The further reinforcement of these ideas as prerequisite concepts for the named dual-credit
+ courses in the Advanced Standards section would be for continued exploration of exponential
+ and quadratic functions.
+
+
+F.LE.A. Construct and compare linear, quadratic, and exponential models and solve problems.
+
+   1. Distinguish between situations that can be modeled with linear functions and with
+       exponential functions.★
+          a. Demonstrate that linear functions grow by equal differences over equal
+             intervals, and that exponential functions grow by equal factors over equal
+              intervals.★
+           b. Identify situations in which one quantity changes at a constant rate per unit
+              interval relative to another.★
+           c. Identify situations in which a quantity grows or decays by a constant percent rate
+             per unit interval relative to another.★
+   2. Construct linear and exponential functions, including arithmetic and geometric
+      sequences, given a graph, a description of the relationship, or two input-output pairs
+       (including reading these from a table).★
+
+F.LE.B. Interpret expressions for functions in terms of the situation they model.
+   5. Interpret the parameters in a linear or exponential function (of the form 𝑓𝑓(𝑥𝑥) = 𝑏𝑏 𝑥𝑥 + 𝑘𝑘)
+       in terms of a context.★
+
+
+
+
+CREATED 02/28/2024                      9-12 Mathematics Course Planning Guide / Content & Curriculum 14
+Geometry (G)
+
+Congruence – G.CO
+   G.CO.A. Experiment with transformations in the plane.
+   1. Know precise definitions of angle, circle, perpendicular line, parallel line, and line
+      segment, based on the undefined notions of point, line, distance along a line, and
+      distance around a circular arc.
+   2. Represent transformations in the plane and describe transformations as functions that
+      take points in the plane as inputs and give other points as outputs. Compare
+      transformations that preserve distance and angle to those that do not.
+       Example: Translation versus horizontal stretch.
+   3. Describe the rotations and reflections that carry a given figure (rectangle, parallelogram,
+      trapezoid, or regular polygon) onto itself.
+   4. Develop definitions of rotations, reflections and translations in terms of angles, circles,
+      perpendicular lines, parallel lines, and line segments.
+   5. Draw the transformation (rotation, reflection, or translation) for a given geometric
+      figure.
+       Example: Given quadrilateral 𝑇𝑇𝑇𝑇𝑇𝑇𝑇𝑇 with vertices 𝑇𝑇(0, −1), 𝑀𝑀(3, −2), 𝐸𝐸(−1, −5), and
+       𝐽𝐽(−3, −2), reflect the shape across the 𝑥𝑥-axis.
+Teacher Note: Emphasis should be placed on spatial reasoning over procedures with
+coordinates.
+   6. Specify a sequence of transformations that will carry a given figure onto another.
+G.CO.B. Understand congruence in terms of rigid motions.
+   7. Use geometric descriptions of rigid motions to transform figures and to predict the
+      effect of a given rigid motion on a given figure; given two figures, use the definition of
+      congruence in terms of rigid motions to decide if they are congruent.
+   8. Use the definition of congruence in terms of rigid motions to show that two triangles
+      are congruent if and only if corresponding pairs of sides and corresponding pairs of
+      angles are congruent.
+   9. Explain how the criteria for triangle congruence (ASA, SAS, and SSS) follow from the
+      definition of congruence in terms of rigid motions.
+       Example: In ∆𝐴𝐴𝐴𝐴𝐴𝐴 and ∆𝐴𝐴𝐴𝐴𝐴𝐴 (with shared side 𝐴𝐴𝐴𝐴), we are given that ∠𝐵𝐵𝐵𝐵𝐵𝐵 ≅ ∠𝐵𝐵𝐵𝐵𝐵𝐵
+       and ∠𝐴𝐴𝐴𝐴𝐴𝐴 ≅ ∠𝐴𝐴𝐴𝐴𝐴𝐴. What pair(s) of corresponding parts is/are needed to ensure the
+       triangles are congruent by either ASA, SAS, or SSS? What rigid motion would show the
+       triangles are congruent?
+
+
+CREATED 02/28/2024                      9-12 Mathematics Course Planning Guide / Content & Curriculum 15
+  G.CO.C. Prove geometric theorems and, when appropriate, the converse of theorems.
+
+Teacher Note:
+The value of proof in these contexts is a transferable understanding of deductive reasoning
+and argumentation; it is more about the argumentation than the specific geometric topic.
+
+   10. Prove theorems about lines and angles. Theorems include: vertical angles are
+       congruent; when a transversal crosses parallel lines, alternate interior angles are
+       congruent and corresponding angles are congruent, and conversely prove lines are
+       parallel; points on a perpendicular bisector of a line segment are exactly those
+       equidistant from the segment's endpoints.
+   11. Prove theorems about triangles. Theorems include: measures of interior angles of a
+       triangle sum to 180 degrees; base angles of isosceles triangles are congruent, and
+       conversely probe a triangle is isosceles; the segment joining midpoints of two sides of a
+       triangle is parallel to the third side and half the length; the medians of a triangle meet at
+       a point.
+   12. Prove theorems about parallelograms. Theorems include: opposite sides are
+       congruent, opposite angles are congruent, the diagonals of a parallelogram bisect each
+       other, and conversely, rectangles are parallelograms with congruent diagonals.
+           a. Prove theorems about polygons. Theorems include: the measures of interior
+               and exterior angles; apply properties of polygons to the solutions of
+               mathematical and contextual problems.
+  G.CO.D. Make geometric constructions.
+   13. Make formal geometric constructions with a variety of tools and methods (compass and
+       straightedge, string, reflective devices, paper folding, dynamic geometric software, etc.).
+       Constructions include: copying a segment; copying an angle; bisecting a segment;
+       bisecting an angle; constructing perpendicular lines, including the perpendicular bisector
+       of a line segment; and constructing a line parallel to a given line through a point not on
+       the line.
+   14. Construct an equilateral triangle, a square, and a regular hexagon inscribed in a circle.
+
+
+Similarity, Right Triangles, and Trigonometry – G.SRT
+   G.SRT.A. Understand similarity in terms of similarity transformations.
+   1. Verify experimentally the properties of dilations given by a center and a scale factor.
+         a. A dilation takes a line not passing through the center of the dilation to a parallel
+              line, and leaves a line passing through the center unchanged.
+         b. The dilation of a line segment is longer or shorter in the ratio given by the scale
+              factor.
+
+
+CREATED 02/28/2024                     9-12 Mathematics Course Planning Guide / Content & Curriculum 16
+   2. Use the definition of similarity to decide if two given figures are similar; explain using
+      similarity transformations the meaning of similarity for triangles as the equality of all
+      corresponding pairs of angles and the proportionality of all corresponding pairs of sides.
+   3. Use the properties of similarity transformations to establish the Angle-Angle (AA)
+      criterion for two triangles to be similar.
+       Example: Given ∆𝐴𝐴𝐴𝐴𝐴𝐴 and ∆𝐷𝐷𝐷𝐷𝐷𝐷, ∠𝐴𝐴 ≅ ∠𝐷𝐷, and ∠𝐵𝐵 ≅ ∠𝐸𝐸, show that ∆𝐴𝐴𝐴𝐴𝐴𝐴~ ∆𝐷𝐷𝐷𝐷𝐷𝐷
+       using a sequence of translations, rotations, reflections, and/or dilations.
+   G.SRT.B. Prove theorems involving similarity.
+   5. Use congruence and similarity criteria for triangles to solve problems and to prove
+      relationships in geometric figures.
+   G.SRT.C. Define trigonometric ratios and solve problems involving right triangles.
+   6. Demonstrate understanding that by similarity, side ratios in right triangles are
+      properties of the angles in the triangle, leading to definitions of trigonometric ratios for
+      acute triangles
+
+
+Circles – G.C
+  G.C.A. Understand and apply theorems about circles.
+   2. Identify and describe relationships among inscribed angles, radii, and chords. Include
+      the relationship between central, inscribed, and circumscribed angles; inscribed angles
+      on a diameter are right angles; the radius of a circle is perpendicular to the tangent
+      where the radius intersects the circle.
+
+
+Expressing Geometric Properties with Equations – G.GPE
+G.GPE.B. Use coordinates to prove simple geometric theorems algebraically.
+   4. Use coordinates to prove simple geometric theorems algebraically, including the
+      distance formula and its relationship to the Pythagorean Theorem.
+
+       Example: Prove or disprove that a figure defined by four given points in the coordinate
+       plane is a rectangle; prove or disprove that the point (1, √3) lies on the circle centered at
+       the origin and containing the point (0, 2).
+   5. Prove the slope criteria for parallel and perpendicular lines and use them to solve
+      geometric problems.
+
+       Example: Find the equation of a line parallel or perpendicular to a given line that passes
+       through a given point.
+
+
+CREATED 02/28/2024                      9-12 Mathematics Course Planning Guide / Content & Curriculum 17
+   6. Find the point on a directed line segment between two given points that partitions the
+      segment in a given ratio.
+   7. Use coordinates to compute perimeters of polygons and areas of triangles and
+       rectangles (e.g., using the distance formula).★
+
+
+Geometric Measurement and Dimension – G.GMD
+G.GMD.A. Explain volume formulas and use them to solve problems.
+   1. Give an informal argument for the formulas for the circumference of a circle; area of a
+      circle; volume of a cylinder, pyramid, and cone. Use dissection arguments, Cavalieri’s
+      principle, and informal limit arguments.
+
+   3. Use volume formulas for cylinders, pyramids, cones and spheres to solve problems.★
+       Example: The tank at the top of the Meridian Water Tower is roughly spherical. If the
+       diameter of the sphere is 50.35 feet, approximately how much water can the tank hold?
+
+
+Modeling with Geometry – G.MG
+G.MG.A. Apply geometric concepts in modeling situations.
+
+    1. Use geometric shapes, their measures, and their properties to describe objects.★
+        Example: Modeling a tree trunk or a human torso as a cylinder.
+
+    2. Apply concepts of density based on area and volume in modeling situations.★
+       Example: Persons per square mile, BTUs per cubic foot
+
+ Teacher Note:
+ Understanding of this standard is particularly important for students interested in pursuing
+ STEM.
+
+    3. Apply geometric methods to solve design problems.★
+        Example: Designing an object or structure to satisfy physical constraints or minimize
+        cost; working with typographic grid systems based on ratios.
+    4. Use dimensional analysis for unit conversions to confirm that expressions and
+        equations make sense.★
+
+
+
+
+CREATED 02/28/2024                     9-12 Mathematics Course Planning Guide / Content & Curriculum 18
+Statistics and Probability (S)
+
+Interpreting Categorical and Quantitative Data – S.ID
+S.ID.A. Summarize, represent, and interpret data on a single count or measurement variable.
+Use calculators, spreadsheets, and other technology as appropriate.
+
+   1. Differentiate between count data and measurement variable.★
+   2. Represent measurement data with plots on the real number line (dot plots, histograms,
+       and box plots).★
+       Example: Construct a histogram of the current population size in each of Idaho’s
+       counties.
+   3. Compare center (median, mean) and spread (interquartile range, standard deviation) of
+      two or more different variables, using statistics appropriate to the shape of the
+       distribution for each measurement variable.★
+       Example: Compare the histograms of the annual potato yields over the last 25 years for
+       Idaho and Maine using the correct measures of center and spread for the shape of the
+       histograms.
+S.ID.B. Summarize, represent, and interpret data on two categorical and quantitative
+variables.
+   6. Represent data on two categorical variables on a clustered bar chart and describe how
+      the variables are related. Summarize categorical data for two categories in two-way
+      frequency tables. Interpret relative frequencies in the context of the data (including
+      joint, marginal, and conditional relative frequencies). Recognize possible associations
+       and trends in the data.★
+       Example: Represent the relationship between student effort (on a scale of 1 – 5) and
+       letter grade in a math class with a clustered bar chart and describe the relationship using
+       a relative frequency table.
+
+ Teacher Note:
+ Teacher Note: While this standard is foundational, the type of data and modeling used will
+ extend from foundational into advanced standards.
+
+   Represent data on two quantitative variables on a scatter plot, and describe how the
+       variables are related.★
+           a. Fit a linear function to data where a scatter plot suggests a linear relationship
+               and use the fitted function to solve problems in the context of the data.★
+
+
+CREATED 02/28/2024                      9-12 Mathematics Course Planning Guide / Content & Curriculum 19
+ Teacher Note:
+ Teachers should emphasize the use of technology when working with this standard. It is more
+ important for students to understand the concept of linear regression and be able to use
+ technology to find the line of best and then interpret it in context than it is to do linear
+ regressions by hand.
+
+S.ID.C. Interpret linear models.
+   Interpret the slope (rate of change) and the intercept (constant term) of a linear model in
+       the context of the data.★
+   Example: Explain why the y-intercept of a linear model relating the volume production of
+   sugar beets to size of farm has no meaning, whereas the y-intercept of a linear model
+   relating the volume production of sugar beets related to minimum temperature does have
+   meaning.
+
+   Distinguish between (linear) correlation and causation.★
+
+
+Making Inferences and Justifying Conclusions – S.IC
+S.IC.A. Understand and evaluate random processes underlying statistical studies. Use
+calculators, spreadsheets, and other technology as appropriate.
+   1. Understand statistics as a process for making inferences about population parameters
+       based on a random sample from that population.★
+
+
+Conditional Probability and the Rules of Probability – S.CP
+S.CP.A. Understand independence and conditional probability and use them to interpret data
+from simulations or experiments.
+   1. Describe events as subsets of a sample space (the set of outcomes) using characteristics
+      (or categories) of the outcomes, or as unions, intersections, or complements of other
+       events (“or,” “and,” “not”).★
+
+
+
+
+CREATED 02/28/2024                     9-12 Mathematics Course Planning Guide / Content & Curriculum 20
+   ADVANCED STANDARDS BY CAREER PATHWAY
+   These standards are considered pre-requisite standards needed for one or more of the three
+   college pathways. They are more advanced than foundational standards, but will be necessary
+   for success in college-level mathematics courses. Standards in this section that are also listed as
+   the foundational standards are revisited and taught at a deeper level of understanding and
+   application in preparation for college level courses.
+
+   This section uses the following course codes for the common general education mathematics
+   courses:
+
+   123 = Math in the Modern Society
+
+   143 = Precalculus: Algebra
+
+   153 = Statistical Reasoning
+
+
+   Number and Quantity (N)
+Standard                                                                             123       143       153
+
+N.Q.A. Reason quantitatively and use units to solve problems.
+
+   2. Define appropriate quantities for the purpose of descriptive
+      modeling.                                                                       X         X         X
+
+   3. Choose a level of accuracy appropriate to limitations on
+      measurement when reporting quantities.
+N.CN.A. Perform arithmetic operations with complex numbers.
+
+   1. Know there is a complex number i such that i2=-1, and show that
+      every complex number has the form a + bi where a and b are real.                          X
+   2. Use the relation i2=-1 and the commutative, associative, and
+      distributive properties to add, subtract and multiply complex
+      numbers.
+N.CN.C. Use complex numbers in polynomial identities and equations.
+                                                                                                X
+   7. Solve quadratic equations with real coefficients that have complex
+      solutions.
+
+
+
+
+    CREATED 02/28/2024                     9-12 Mathematics Course Planning Guide / Content & Curriculum 21
+    Algebra (A)
+Standard                                                                             123       143       153
+
+A.SSE.B. Write expressions in equivalent forms to solve problems.
+
+   3. Choose and produce an equivalent form of an expression to reveal
+      and explain properties of the quantity represented by the
+      expression.
+       b. Complete the square in a quadratic expression to reveal the
+       maximum or minimum value of the function it defines.
+
+Example: A high school player punts a football, and the function ℎ(𝑡𝑡) =              X         X
+−16𝑡𝑡 2 + 64𝑡𝑡 + 2 represents the height ℎ, in feet, of the football at time 𝑡𝑡
+seconds after it is punted. Complete the square in the quadratic expression
+to find the maximum height of the football.
+
+   4. Derive the formula for the sum of a finite geometric series (when
+      the common ratio is not 1) and use the formula to solve
+      problems.★
+Example: Calculate mortgage payments.
+
+A.APR.A. Perform arithmetic operations on polynomials.
+
+   1. Demonstrate understanding that polynomials form a system
+      analogous to the integers; namely, they are closed under certain
+      operations.
+    a. Perform operations on polynomial expressions (+, -, x, /) and
+       compare the system of polynomials to the system of integers when
+       performing operations.
+Teacher Note: Division with monomials is foundational, but division with
+polynomials is an Advanced Standard in preparation for Precalculus 1:                           X
+Algebra.
+   b. Factor and/or expand polynomial expressions, identify and combine
+      like terms, and apply the distributive property.
+Teacher Note: Factoring and/or expanding polynomial expressions is an
+Advanced Standard in preparation for Precalculus 1: Algebra Identifying
+and combining like terms and applying the distributive property is
+foundational.
+
+
+
+
+    CREATED 02/28/2024                       9-12 Mathematics Course Planning Guide / Content & Curriculum 22
+Standard                                                                            123       143       153
+
+A.APR.B. Understand the relationship between zeros and factors of
+polynomials.
+
+   2. Know and apply the Remainder Theorem: For a polynomial p(x)
+      and a number a, the remainder on division by x-a is p(a), so p(a)=0                      X
+      if and only if x-a is a factor of p(x).
+   3. Identify zeros of polynomials when suitable factorizations are
+      available, and use the zeros to construct a rough graph of the
+      function defined by the polynomial.
+A.APR.D. Rewrite rational expressions.
+
+   7. (+) Demonstrate understanding that rational expressions form a
+      system analogous to the rational numbers, closed under addition,
+      subtraction, multiplication, and division by a nonzero rational
+                                                                                               X
+      expression; add, subtract, multiply, and divide rational expressions.
+Teacher Note: In preparation for Math 143, students should be able to add,
+subtract, multiply, and divide rational expressions. The rest of this standard
+is a college standard introduced in Math 143.
+
+A.CED.A. Create equations that describe numbers or relationships.
+
+   1. Create one-variable equations and inequalities to solve problems,
+      including linear, quadratic, rational, and exponential functions.
+   Example: Four people may be seated at one rectangular table. If two
+   rectangular tables are placed together end-to-end, six people may be
+   seated at the table. If ten tables are placed together end-to-end, how
+   many people can be seated? How many tables are needed for 𝑛𝑛
+   people?                                                                                     X
+   2. Interpret the relationship between two or more quantities
+   a. Define variables to represent the quantities and write equations to
+      show the relationship.
+   b. Use graphs to show a visual representation of the relationship while
+      adhering to appropriate labels and scales.
+   3. Represent constraints using equations or inequalities and interpret
+      solutions as viable or non-viable options in a modeling context.
+
+
+
+
+    CREATED 02/28/2024                      9-12 Mathematics Course Planning Guide / Content & Curriculum 23
+Standard                                                                          123       143       153
+
+   4. Represent constraints using systems of equations and/or
+      inequalities and interpret solutions as viable or non-viable options
+      in a modeling context.
+A.REI.A. Understand solving equations as a process of reasoning and
+explain the reasoning.
+                                                                                              X
+   2. Solve simple rational and radical equations in one variable, and give
+      examples showing how extraneous solutions may arise.
+A.REI.B. Solve equations and inequalities in one variable.
+
+   3. Solve linear equations and inequalities in one variable, including
+      equations with coefficients represented by letters.
+   a. Solve linear equations and inequalities in one variable involving
+      absolute value.
+   4. Solve quadratic equations in one variable.
+   a. Use the method of completing the square to transform any
+      quadratic equation in x into an equation of the form (𝑥𝑥– 𝑝𝑝)2 = 𝑞𝑞
+      that has the same solutions. Derive the quadratic formula from this
+                                                                                              X
+      form.
+   b. Solve quadratic equations by inspection (e.g., for 𝑥𝑥 2 = 49), taking
+      square roots, completing the square, the quadratic formula, and
+      factoring, as appropriate to the initial form of the equation.
+      Recognize when the quadratic formula gives complex solutions and
+      write them as as 𝑎𝑎 ± 𝑏𝑏𝑏𝑏 for real numbers 𝑎𝑎 and 𝑏𝑏.
+Teacher Note: Rather than focusing on students being able to derive the
+quadratic formula themselves, it is more important for them to make sense
+of where the quadratic formula comes from. That is, focus on looking for
+patterns and solutions being in the same format
+A.REI.C. Solve systems of equations.
+
+   5. Verify that, given a system of two equations in two variables,                          X
+      replacing one equation by the sum of that equation and a multiple
+      of the other produces a system with the same solutions.
+
+
+
+
+    CREATED 02/28/2024                     9-12 Mathematics Course Planning Guide / Content & Curriculum 24
+Standard                                                                            123       143      153
+
+A.REI.D. Represent and solve equations and inequalities graphically.
+   10. Demonstrate understanding that the graph of an equation in two
+       variables is the set of all its solutions plotted in the coordinate
+       plane. Show that any point on the graph of an equation in two
+       variables is a solution to the equation.                                                X
+
+Graph the solutions to a linear inequality in two variables as a half-plane
+(excluding the boundary in the case of a strict inequality), and graph the
+solution set to a system of linear inequalities in two variables as the
+intersection of the corresponding half-planes.
+
+
+    Functions (F)
+Standard                                                                             123       143       153
+
+F.IF.B. Interpret functions that arise in applications in terms of the context.
+Include linear, quadratic, exponential, rational, polynomial, square root
+and cube root, trigonometric, and logarithmic functions.
+
+   4. For a function that models a relationship between two quantities,
+      interpret key features of graphs and tables in terms of the quantities,
+      and sketch graphs showing key features given a verbal description of
+      the relationship. Key features include: intercepts; intervals where
+      the function is increasing, decreasing, positive, or negative; relative
+      maxima and minima; symmetries; end behavior; and periodicity.
+                                                                                       X           X       X
+   5. Relate the domain of a function to its graph and, where applicable,
+      to the quantitative relationship it describes.
+Teacher Note: Foundational standards primarily emphasize linear functions.
+Foundational standards also include a less formal exploration of the basic
+attributes of exponential and quadratic functions.
+The further reinforcement of these standards (F.IF.B.4 and F.IF.B.5) as
+prerequisite concepts for the named dual-credit courses would be for
+continued exploration of exponential and quadratic functions as well as
+more complex functions such as cubic and logarithmic functions.
+
+
+
+
+    CREATED 02/28/2024                      9-12 Mathematics Course Planning Guide / Content & Curriculum 25
+   Geometry (G)
+Standard                                                                             123       143       153
+
+G.SRT.C. Define trigonometric ratios and solve problems involving right
+   triangles.
+
+   7. Explain and use the relationship between the sine and cosine of
+      complementary angles.
+Teacher Note: This standard is primarily taught in Precalculus II:
+Trigonometry. Introducing this concept before Precalculus I: Algebra is
+                                                                                                 X
+helpful preparation.
+   8. Use trigonometric ratios and the Pythagorean Theorem to solve right
+      triangles in applied problems.
+Note: This standard is primarily taught in Precalculus II: Trigonometry.
+Introducing this concept before Precalculus I: Algebra is helpful preparation.
+
+G.C.B. Find arc lengths and areas of sectors of circles.
+   5. Derive using similarity the fact that the length of the arc intercepted
+      by an angle is proportional to the radius, and define the radian
+      measure of the angle as the constant of proportionality; derive the
+      formula for the area of a sector.                                                          X
+Teacher Note: This standard is primarily taught in Precalculus II:
+Trigonometry. Introducing this concept before Precalculus I: Algebra is
+helpful preparation.
+
+G.GPE.A. Translate between the geometric description and the equation
+for a conic section.
+
+   1. Derive the equation of a circle of given center and radius using the
+      Pythagorean Theorem; complete the square to find the center and
+      radius of a circle given by an equation.
+   3. (+) Derive the equations of ellipses and hyperbolas given the foci,                        X
+      using the fact that the sum or difference of distances from the foci is
+      constant.
+   a. Use equations and graphs of conic sections to model real-world
+      problems. 
+
+
+
+
+    CREATED 02/28/2024                      9-12 Mathematics Course Planning Guide / Content & Curriculum 26
+Standard                                                                            123       143       153
+
+G.GPE.B. Use coordinates to prove simple geometric theorems
+algebraically.
+                                                                                                X
+   6. Find the point on a directed line segment between two given points
+      that partitions the segment in a given ratio.
+G.GMD.A. Explain volume formulas and use them to solve problems.
+
+   2. (+) Give an informal argument using Cavalieri's principle for the
+      formulas for the volume of a sphere and other solid figures.                    X         X
+
+   3. Use volume formulas for cylinders, pyramids, cones and spheres to
+      solve problems.
+G.GMD.B. Visualize relationships between two-dimensional and three-
+dimensional objects.
+                                                                                      X         X
+   4. Identify the shapes of two-dimensional cross-sections of three-
+      dimensional objects, and identify three-dimensional objects
+      generated by rotations of two-dimensional objects
+
+
+
+   Statistics and Probability (S)
+Standard                                                                            123       143       153
+
+S.ID.A. Summarize, represent, and interpret data on a single count or
+measurement variable. Use calculators, spreadsheets, and other
+technology as appropriate.
+
+   4. Interpret differences in shape, center, and spread in the context of
+      the variables accounting for possible effects of extreme data points
+      (outliers) for measurement variables.★
+Example: Describe differences in distributions of annual precipitation over                               X
+the last 100 years between Boise and Seattle using shape, center, spread,
+and outliers.
+   5. Use the mean and standard deviation of a data set to fit it to a
+      normal distribution and to estimate population percentages.
+      Recognize that there are data sets for which such a procedure is not
+      appropriate. Use calculators, spreadsheets, and tables to estimate
+      areas under the normal curve.★
+
+
+
+    CREATED 02/28/2024                     9-12 Mathematics Course Planning Guide / Content & Curriculum 27
+Standard                                                                            123       143       153
+
+Example: Estimate the percentage of all Idaho elk hunters who successfully
+filled their tag last year, using the results from Washington County hunters.
+
+S.ID.B. Summarize, represent, and interpret data on two categorical and
+quantitative variables.
+
+   6. Represent data on two categorical variables on a clustered bar chart
+      and describe how the variables are related. Summarize categorical
+      data for two categories in a two-way frequency table. Interpret
+      relative frequencies in the context of the data (including joint,                                  X
+      marginal, and conditional relative frequencies). Recognize possible
+      associations and trends in the data.
+Teacher Note: Specifically focus on the part, “Interpret relative frequencies in
+the context of the data (including joint, marginal, and conditional relative
+frequencies). Recognize possible associations and trends in the data.”
+
+
+
+
+    CREATED 02/28/2024                                      9-12 Mathematics Course Planning Guide/ SDE 28
+   COLLEGE STANDARDS
+   These standards are taught at the college level. They appear in dual-credit courses taught in
+   high school and also in college mathematics courses. Standards in this section that are also
+   listed in the foundational and advanced standards are revisited and taught at a deeper level of
+   understanding and application in preparation for college level courses.
+
+   This section uses the following course codes for the common general education mathematics
+   courses:
+
+   123 = Math in the Modern Society
+
+   143 = Precalculus: Algebra
+
+   153 = Statistical Reasoning
+
+
+   Number and Quantity (N)
+Standard                                                                             123       143       153
+
+N.Q.A. Reason quantitatively and use units to solve problems.
+
+   3. Choose a level of accuracy appropriate to limitations on
+                                                                                                          X
+      measurement when reporting quantities.★
+Teacher Note: In high school students are told the level of accuracy. Students
+choose a level of accuracy in college level courses.
+N.CN.A. Perform arithmetic operations with complex numbers.
+
+   1. Know there is a complex number 𝑖𝑖 such that 𝑖𝑖 2 = −1, and show that
+      every complex number has the form 𝑎𝑎 + 𝑏𝑏𝑏𝑏 where 𝑎𝑎 and 𝑏𝑏 are real.
+Example: Express the radical ±√−24 , using the imaginary unit, 𝑖𝑖, in
+simplified form. Expressing the radical using 𝑖𝑖 in simplified form results in
+the expression ±2𝑖𝑖√6 .                                                                         X
+
+Teacher Note: This standards was also marked as a prerequisite for 143. This
+is still true, but the concepts are reinforced in Precalculus 1: Algebra.
+
+   2. Use the relation 𝑖𝑖 2 = 1 and the commutative, associative, and
+      distributive properties to add, subtract, and multiply complex
+      numbers.
+
+
+
+
+    CREATED 02/28/2024                                       9-12 Mathematics Course Planning Guide/ SDE 29
+Standard                                                                          123       143       153
+
+Teacher Note: This standard was also marked as a prerequisite for 143. This
+is still true, but the concepts are reinforced in Precalculus 1: Algebra.
+
+    3. N.CN.A.3 (+) Find the conjugate of a complex number; use
+       conjugates to find absolute value and quotients of complex numbers.
+    Taught in Precalculus 2: Trigonometry
+
+N.CN.B. Represent complex numbers and their operations on the complex
+plane.
+
+    4. (+) Represent complex numbers on the complex plane in rectangular
+       and polar form (including real and imaginary numbers), and explain
+       why the rectangular and polar forms of a given complex number
+       represent the same number.
+Taught in Precalculus 2: Trigonometry
+
+    5. (+) Represent addition, subtraction, multiplication, and conjugation
+       of complex numbers geometrically on the complex plane; use
+       properties of this representation for computation.
+Example: (1 + 𝑏𝑏 √3)3 = 8 because (−1 + 𝑏𝑏 √3) has a radius of 2 and
+argument 120°.
+Taught in Precalculus 2: Trigonometry
+
+    6. (+) Calculate the distance between numbers in the complex plane as
+       the absolute value of the difference, and the midpoint of a segment
+       as the average of the numbers at its endpoints.
+Also taught in Precalculus 2: Trigonometry
+
+N.CN.C. Use complex numbers in polynomial identities and equations.
+
+    8. (+) Extend polynomial identities to the complex numbers.
+Example: Rewrite 𝑥𝑥 2 + 4 as (𝑥𝑥 + 2𝑖𝑖) (𝑥𝑥 − 2𝑖𝑖).
+                                                                                             X
+Also taught in Precalculus 2: Trigonometry
+
+    9. (+) Know the Fundamental Theorem of Algebra; show that it is true
+       for quadratic polynomials.
+N.VM.A. Represent and model with vector quantities.
+
+
+
+
+    CREATED 02/28/2024                                    9-12 Mathematics Course Planning Guide/ SDE 30
+Standard                                                                             123       143       153
+
+   1. (+) Recognize vector quantities as having both magnitude and
+      direction. Represent vector quantities by directed line segments, and
+      use appropriate symbols for vectors and their magnitudes (e.g., v,
+      |v|, ||v||, v).
+Taught in Precalculus 2: Trigonometry
+
+   2. (+) Find the components of a vector by subtracting the coordinates
+      of an initial point from the coordinates of a terminal point.
+Taught in Precalculus 2: Trigonometry
+
+   3. (+) Solve problems involving velocity and other quantities that can
+      be represented by vectors.
+Taught in Precalculus 2: Trigonometry
+
+N.VM.B. Perform operations on vectors.
+
+   4. (+) Add and subtract vectors.
+   a. (+) Add vectors end-to-end, component-wise, and by the
+      parallelogram rule. Understand that the magnitude of a sum of two
+      vectors is typically not the sum of the magnitudes.
+   b. (+) Given two vectors in magnitude and direction form, determine
+      the magnitude and direction of their sum.
+   c. (+) Demonstrate understanding of vector subtraction 𝐯𝐯 – 𝐰𝐰 as 𝐯𝐯 + (–
+      𝐰𝐰), where --𝐰𝐰 is the additive inverse of 𝐰𝐰, with the same magnitude
+      as w and pointing in the opposite direction. Represent vector
+      subtraction graphically by connecting the tips in the appropriate
+      order, and perform vector subtraction component-wise.
+Taught in Calculus 2/3 and Linear Algebra
+
+   5. (+) Multiply a vector by a scalar.
+   a. (+) Represent scalar multiplication graphically by scaling vectors and
+       possibly reversing their direction; perform scalar multiplication
+       component-wise, e.g., as 𝑐𝑐(𝑣𝑣𝑣𝑣 , 𝑣𝑣𝑣𝑣) = (𝑐𝑐𝑐𝑐𝑐𝑐 , 𝑐𝑐𝑐𝑐𝑐𝑐).
+   b. (+) Compute the magnitude of a scalar multiple cv using ||cv|| =
+       |c|v. Compute the direction of cv, knowing that when |c|v ≠ 0, the
+       direction of cv is either along v (for 𝑐𝑐 > 0) or against v (for 𝑐𝑐 < 0).
+Taught in Calculus 2/3 and Linear Algebra
+
+
+
+
+    CREATED 02/28/2024                                       9-12 Mathematics Course Planning Guide/ SDE 31
+Standard                                                                           123        143       153
+
+N.VM.C. Perform operations on matrices and use matrices in applications.
+   1. (+)Use matrices to represent and manipulate data, e.g., to represent
+      payoffs or incidence relationships in a network.
+Taught in Linear Algebra
+   2. (+) Multiply matrices by scalars to produce new matrices, e.g., as
+      when all of the payoffs in a game are doubled. (+) Given two vectors
+      in magnitude and direction form, determine the magnitude and
+      direction of their sum.
+Taught in Linear Algebra
+   3. (+) Add, subtract, and multiply matrices of appropriate dimensions.
+Taught in Linear Algebra
+   4. (+) Demonstrate understanding that, unlike multiplication of
+      numbers, matrix multiplication for square matrices is not a
+      commutative operation, but still satisfies the associative and
+      distributive properties.
+Taught in Linear Algebra
+   5. (+) Demonstrate understanding that the zero and identity matrices
+      play a role in matrix addition and multiplication similar to the role of
+      0 and 1 in the real numbers. The determinant of a square matrix is
+      nonzero if and only if the matrix has a multiplicative inverse.
+Taught in Linear Algebra
+   6. (+) Multiply a vector (regarded as a matrix with one column) by a
+      matrix of suitable dimensions to produce another vector. Work with
+      matrices as transformations of vectors.
+Taught in Linear Algebra
+   7. Work with 2×2 matrices as transformations of the plane, and
+      interpret the absolute value of the determinant in terms of area.
+Taught in Linear Algebra
+
+
+
+
+    CREATED 02/28/2024                     9-12 Mathematics Course Planning Guide / Content & Curriculum 32
+   Algebra (A)
+Standard                                                                                  123       143       153
+
+A.APR.C. Use polynomial identities to solve problems.
+
+   4. Prove polynomial identities and use the to describe numerical
+      relationships. (Example: The polynomial identity (x^2 + y^2)^2 =
+      (x^2 - y^2)^2 = (2xy)^2 can be used to generate Pythagorean triples.)
+       Example: The polynomial identity (𝑥𝑥 2 + 𝑦𝑦 2 )2 = (𝑥𝑥 2 − 𝑦𝑦 2 )2 +
+       (2𝑥𝑥𝑥𝑥)2 can be used to generate Pythagorean triples.
+
+   5. (+) Know and apply the Binomial Theorem for the expansion of
+      (x+y)^n in powers of x and y for a positive integer n, where x and y
+      are any numbers, with coefficients determined for example by
+      Pascal's Triangle.
+Sometimes taught in Precalculus 2: Trigonometry
+
+A.APR.D. Rewrite rational expressions.
+
+   6. Rewrite simple rational expressions in different forms using
+      inspection, long division, or, for the more complicated examples, a
+      computer algebra system.
+                         𝑎𝑎(𝑥𝑥)                      𝑟𝑟(𝑥𝑥)
+       Example: Write 𝑏𝑏(𝑥𝑥) in the form 𝑞𝑞(𝑥𝑥) + 𝑏𝑏(𝑥𝑥) where 𝑎𝑎(𝑥𝑥), 𝑏𝑏(𝑥𝑥), 𝑞𝑞(𝑥𝑥),
+                                                                                                     X
+       and 𝑟𝑟(𝑥𝑥) are polynomials with the degree of 𝑟𝑟(𝑥𝑥) less than the
+       degree of 𝑏𝑏(𝑥𝑥).
+
+   7. Demonstrate understanding that rational expressions form a system
+      analogous to the rational numbers, closed under addition,
+      subtraction, multiplication, and division by a nonzero rational
+      expression; add, subtract, multiply, and divide rational expressions.
+
+
+
+
+    CREATED 02/28/2024                          9-12 Mathematics Course Planning Guide / Content & Curriculum 33
+Standard                                                                              123       143       153
+
+A.CED.A. Create equations that describe numbers or relationships.
+
+   1. Create one-variable equations and inequalities to solve problems,
+      including linear, quadratic, rational, and exponential functions.
+   2. Interpret the relationship between two or more quantities.★
+     a. Define variables to represent the quantities and write equations to
+        show the relationship.★
+ Example: The cost of parking in the parking garage is $2.00 for the first
+ hour and $1.00 for every hour after that. Write an equation in terms of
+ 𝑥𝑥 and 𝑦𝑦 that shows the total cost for parking, 𝑦𝑦, for 𝑥𝑥 hours. Use the
+ equation to calculate the cost for parking in the garage for 5 hours.
+     b. Use graphs to show a visual representation of the relationship while
+        adhering to appropriate labels and scales.★
+ Example: Using the equation from A.CED.A.2.a, show how the graph of the                         X
+ equation can be used to predict the cost for a specified amount of time.
+Teacher Note: This was also marked as a prerequisite for 143. This is still
+true, but the concepts are reinforced in Precalculus: Algebra.
+
+   3. Represent constraints using equations or inequalities and interpret
+      solutions as viable or non-viable options in a modeling context.★
+Teacher Note: This was also marked as a prerequisite for 143. This is still
+true, but the concepts are reinforced in Precalculus: Algebra.
+
+   4. Represent constraints using systems of equations and/or inequalities
+      and interpret solutions as viable or non-viable options in a modeling
+      context.★
+Teacher Note: This was also marked as a prerequisite for 143. This is still
+true, but the concepts are reinforced in Precalculus: Algebra.
+A.REI.C. Solve systems of equations.
+
+   7. Solve a simple system consisting of a linear equation and a quadratic
+      equation in two variables algebraically and graphically.
+Example: Find the points of intersection between the line 𝑦𝑦 = – 3𝑥𝑥 and the
+                                                                                                 X
+circle 𝑥𝑥 2 + 𝑦𝑦 2 = 3.
+   8. (+) Represent a system of linear equations as a single matrix
+      equation in a vector variable.
+Taught in Linear Algebra
+
+
+
+    CREATED 02/28/2024                      9-12 Mathematics Course Planning Guide / Content & Curriculum 34
+Standard                                                                              123       143       153
+
+   9. (+) Find the inverse of a matrix if it exists and use it to solve systems
+      of linear equations (using technology for matrices of dimension 3×3
+      or greater).
+Taught in Linear Algebra
+
+A.REI.D. Represent and solve equations and inequalities graphically.
+
+   10. Demonstrate understanding that the graph of an equation in two
+       variables is the set of all its solutions plotted in the coordinate plane.
+       Show that any point on the graph of an equation in two variables is a
+       solution to the equation.
+   11. Explain why the x-coordinates of the points where the graphs of the                       X
+       equations 𝑦𝑦 = 𝑓𝑓(𝑥𝑥) and 𝑦𝑦 = 𝑔𝑔(𝑥𝑥) intersect are the solutions of the
+       equation 𝑓𝑓(𝑥𝑥) = 𝑔𝑔(𝑥𝑥); find the solutions approximately. Include
+       cases where 𝑓𝑓(𝑥𝑥) and/or 𝑔𝑔(𝑥𝑥) are linear, polynomial, rational,
+       absolute value, exponential, and logarithmic functions.★
+Example: Use technology to graph the functions, make tables of values, or
+find successive approximations.
+
+
+   Functions (F)
+Standard                                                                              123       143       153
+
+F.IF.A. Understand the concept of a function and use function notation.
+   1. Demonstrate understanding that a function is a correspondence
+      from one set (called the domain) to another set (called the range)
+      that assigns to each element of the domain exactly one element of
+      the range: If 𝑓𝑓 is a function and 𝑥𝑥 is an element of its domain, then
+      𝑓𝑓(𝑥𝑥) denotes the output of 𝑓𝑓 corresponding to the input 𝑥𝑥. The
+      graph of 𝑓𝑓 is the graph of the equation 𝑦𝑦 = 𝑓𝑓(𝑥𝑥).
+                                                                                                 X         X
+Also taught in Calculus 1 and 2
+   3. Demonstrate that a sequence is a functions, sometimes defined
+      recursively, whose domain is a subset of the integers.
+Example: The Fibonacci sequence is defined recursively by 𝑓𝑓(0) = 𝑓𝑓(1) = 1,
+𝑓𝑓(𝑛𝑛 + 1) = 𝑓𝑓(𝑛𝑛) + 𝑓𝑓(𝑛𝑛 − 1) for 𝑛𝑛 ≥ 1.
+Teacher Note: Not all 153 courses include this standard.
+
+
+
+
+    CREATED 02/28/2024                      9-12 Mathematics Course Planning Guide / Content & Curriculum 35
+Standard                                                                              123       143       153
+
+F.IF.B. Interpret functions that arise in applications in terms of the context.
+Include linear, quadratic, exponential, rational, polynomial, square root
+and cube root, trigonometric, and logarithmic functions.
+
+   4. For a function that models a relationship between two quantities,
+      interpret key features of graphs and tables in terms of the quantities,
+      and sketch graphs showing key features given a verbal description of
+      the relationship. Key features include: intercepts; intervals where the
+      function is increasing, decreasing, positive, or negative; relative
+      maxima and minima; symmetries; end behavior; and periodicity.★
+                                                                                                  X
+Teacher Note: This is addressed as a foundational standard and as an
+advanced standard. This standard is also addressed at the college level with
+increasingly complex functions. It is also taught in Precalculus 2:
+Trigonometry and Calculus.
+
+   6. Calculate and interpret the average rate of change of a function
+      (presented symbolically or as a table) over a specified interval.
+      Estimate the rate of change from a graph.★
+Also taught in Calculus 1
+
+F.IF.C. Analyze functions using different representations.
+
+   7. Graph functions expressed symbolically and show key features of the
+      graphs, by hand in simple cases and using technology for more
+      complicated cases.★
+   b. Graph square root, cube root, and piecewise-defined functions,
+      including step functions and absolute value functions.★
+   c. Graph polynomial functions, identifying zeros when suitable
+      factorizations are available, and showing end behavior.★                                    X
+   d. (+) Graph rational functions, identifying zeros and asymptotes when
+       suitable factorizations are available, and showing end behavior.★
+   e. Graph exponential and logarithmic functions, showing intercepts and
+      end behavior, and trigonometric functions, showing period, midline,
+       and amplitude.★
+Also taught in Precalculus 2: Trigonometry
+   8. Write a function defined by an expression in different but equivalent
+      forms to reveal and explain different properties of the function.
+
+
+
+    CREATED 02/28/2024                       9-12 Mathematics Course Planning Guide / Content & Curriculum 36
+Standard                                                                              123       143       153
+
+     a. Use the process of factoring and/or completing the square in
+        quadratic and polynomial functions, where appropriate, to show
+        zeros, extreme values, and symmetry of the graph, and interpret
+        these in terms of a context.
+Example: Suppose ℎ(𝑡𝑡) = −5𝑡𝑡 2 + 10𝑡𝑡 + 3 represents the height of a diver
+above the water (in meters), 𝑡𝑡 seconds after the diver leaves the
+springboard. What is the maximum height above the water the diver
+reaches? After how many seconds, 𝑡𝑡, does the diver hit the water?
+
+   b. Use the properties of exponents to interpret expressions for
+      exponential functions. Apply to financial situations such as
+      identifying appreciation and depreciation rate for the value of a
+      house or car sometime after its initial purchase.
+                                                               𝑡𝑡
+                                                         1
+Example: The equation for radioactive decay is 𝐴𝐴 = 𝐴𝐴 ( 2 ) ℎ . When 𝐴𝐴0 is
+the original amount of a radioactive substance, 𝐴𝐴 is the final amount, ℎ is
+the half-life of the substance, and 𝑡𝑡 is time. Hagerman, Idaho is a hotbed of
+fossil hunting. The half-life of carbon-14 is about 5730 years. If a fossil that
+was found in Hagerman contains 54 grams of carbon-14 at time 𝑡𝑡 = 0, how
+much carbon-14 remains at time 𝑡𝑡 = 17190 years?
+   10. Given algebraic, numeric and/or graphical representations of
+       functions, recognize the function as polynomial, rational,
+       logarithmic, exponential, or trigonometric.
+Also taught in Precalculus 2: Trigonometry
+
+F.BF.A. Build a function that models a relationship between two
+quantities.
+
+   1. Write a function that describes a relationship between two
+      quantities. Functions could include linear, exponential, quadratic,
+      simple rational, radical, logarithmic, and trigonometric.★
+                                                                                                  X
+   b. Combine standard function types using arithmetic operations.★
+Example: Build a function that models the temperature of a cooling body by
+adding a constant function to a decaying exponential, and relate these
+functions to the model.
+
+   c. (+) Compose functions.★
+
+
+    CREATED 02/28/2024                       9-12 Mathematics Course Planning Guide / Content & Curriculum 37
+Standard                                                                                  123       143       153
+
+Example: If 𝑇𝑇(𝑦𝑦) is the temperature in the atmosphere as a function of
+height, and ℎ(𝑡𝑡) is the height of a weather balloon as a function of time,
+then 𝑇𝑇(ℎ(𝑡𝑡)) is the temperature at the location of the weather balloon as a
+function of time.
+Also taught in Precalculus 2: Trigonometry
+
+    2. Write arithmetic and geometric sequences both recursively and with
+       an explicit formula, use them to model situations, and translate
+       between the two forms.★
+Example: If the U.S. Census Bureau wrote the following recursive equation to
+represent how they estimate Idaho’s population will grow each year after
+2019: 𝑃𝑃(𝑛𝑛) = 1.023 ∙ 𝑃𝑃(𝑛𝑛 − 1), 𝑃𝑃(0) = 1,787,000. 𝑃𝑃(𝑛𝑛) represents
+Idaho’s population at the end of the 𝑛𝑛𝑡𝑡ℎ year in terms of Idaho’s population
+at the end of the (𝑛𝑛 − 1)𝑡𝑡ℎ year, 𝑃𝑃(𝑛𝑛 − 1). Predict Idaho’s population in
+2040.
+Also taught in Calculus 1 and 2
+
+F.BF.B. Build new functions from existing functions.
+
+    3. Identify the effect on the graph of replacing 𝑓𝑓(𝑥𝑥) by 𝑓𝑓(𝑥𝑥) +
+       𝑘𝑘, 𝑘𝑘𝑘𝑘(𝑥𝑥), 𝑓𝑓(𝑘𝑘𝑘𝑘), and 𝑓𝑓(𝑥𝑥 + 𝑘𝑘) for specific values of 𝑘𝑘 (both positive
+       and negative); find the value of 𝑘𝑘 given the graphs. Include, linear,
+       quadratic, exponential, absolute value, simple rational and radical,
+       logarithmic, and trigonometric functions. Utilize technology to
+       experiment with cases and illustrate an explanation of the effects on
+       the graph. Include recognizing even and odd functions from their
+       graphs and algebraic expressions for them.
+                                                                                                     X
+Also taught in Precalculus 2: Trigonometry
+
+    4. Find inverse functions algebraically and graphically.
+    Solve an equation of the form 𝑓𝑓(𝑥𝑥) = 𝑐𝑐 for a simple function 𝑓𝑓 that has
+        an inverse and write an expression for the inverse. Include linear and
+        simple polynomial, rational, and exponential functions.
+                                      𝑥𝑥+1
+Example: 𝑓𝑓(𝑥𝑥) = 2𝑥𝑥 3 or 𝑓𝑓(𝑥𝑥) = 𝑥𝑥−1 for 𝑥𝑥 ≠ 1
+
+    (+) Verify by composition that one function is the inverse of another.
+
+
+
+
+     CREATED 02/28/2024                         9-12 Mathematics Course Planning Guide / Content & Curriculum 38
+Standard                                                                              123       143       153
+
+   (+) Read values of an inverse function from a graph or a table, given that
+       the function has an inverse.
+   (+) Produce an invertible function from a non-invertible function by
+       restricting the domain.
+   5. (+) Understand the inverse relationship between exponents and
+      logarithms and use this relationship to solve problems involving
+      logarithms and exponents.
+F.LE.A. Construct and compare linear, quadratic, and exponential models
+and solve problems.
+
+   1. Distinguish between situations that can be modeled with linear
+      functions and with exponential functions.★
+   a. Demonstrate that linear functions grow by equal differences over
+      equal intervals, and that exponential functions grow by equal factors
+       over equal intervals.★
+   b. Identify situations in which one quantity changes at a constant rate
+       per unit interval relative to another.★
+   c. Identify situations in which a quantity grows or decays by a constant
+       percent rate per unit interval relative to another.★
+Teacher Note: This standard is also a foundational standard.
+                                                                                                 X
+   2. Construct linear and exponential functions, including arithmetic and
+      geometric sequences, given a graph, a description of a relationship,
+      or two input-output pairs (including reading these from a table).★
+Teacher Note: This standard is also a foundational standard. However, it
+takes on a deeper level of focus and understanding in the Calculus sequence.
+
+   3. Use graphs and tables to demonstrate that a quantity increasing
+      exponentially eventually exceeds a quantity increasing linearly,
+      quadratically, or (more generally) as a polynomial function.★
+Example: Becca’s parents are saving for her college education by
+putting $3,000/year in a safe deposit box. Becca’s grandpa is also saving for
+her college education by putting $2,000/year in an IDeal (Idaho college
+savings) account with an APR of 6.17%. Build tables to show which account
+has the most money after ten years, and how much more? How many years
+
+
+    CREATED 02/28/2024                       9-12 Mathematics Course Planning Guide / Content & Curriculum 39
+Standard                                                                                 123       143       153
+
+will it take for the total in her grandpa’s account to exceed the total in her
+parents’ safe deposit box
+
+    4. For exponential models, express as a logarithm the solution to
+       𝑎𝑎𝑏𝑏 𝑐𝑐𝑐𝑐 = 𝑑𝑑 where 𝑎𝑎, 𝑐𝑐, and 𝑑𝑑 are numbers and the base 𝑏𝑏 is 2, 10, or
+       𝑒𝑒; evaluate the logarithm using technology.★
+Example: Mr. Rico has a savings account that has an interest rate of 7%
+compounded continuously. The amount in the account is calculated using
+𝐴𝐴 = 𝑃𝑃𝑒𝑒 𝑟𝑟𝑟𝑟 . If Mr. Rico invested $30,000 on January 1, 2020, when will he
+have $100,000 in the account?
+
+F.LE.B. Interpret expressions for functions in terms of the situation they
+model.
+                                                                                                    X
+    5. F.LE.B.5 - Interpret the parameters in a linear or exponential function
+       (of the form 𝑓𝑓(𝑥𝑥) = 𝑏𝑏 𝑥𝑥 + 𝑘𝑘) in terms of a context.★
+F.TF.A. Extend the domain of trigonometric functions using the unit circle.
+
+    1. Demonstrate radian measure as the ratio of the arc length
+       subtended by a central angle to the length of the radius of the unit
+       circle.
+    a. Use radian measure to solve problems.
+
+Example: You live in New Meadows, Idaho, which is located on the
+45th parallel (45° North latitude). Approximately how far will you drive, in
+miles, to attend the Calgary Stampede? Calgary is located at 51°N latitude,
+almost due North of New Meadows. (Use 𝑟𝑟 = 3960 miles for the radius of
+the Earth.)
+Taught in Precalculus 2: Trigonometry
+    2. Explain how the unit circle in the coordinate plane enables the
+       extension of trigonometric functions to all real numbers, interpreted
+       as radian measures of angles traversed counterclockwise around the
+       unit circle.
+Taught in Precalculus 2: Trigonometry
+    3. (+) Use special triangles to determine geometrically the values of
+                                 𝜋𝜋 𝜋𝜋       𝜋𝜋
+       sine, cosine, tangent for 3 , 4 , and 6 , and use the unit circle to express
+       the values of sine, cosine, and tangent for 𝜋𝜋 − 𝑥𝑥, 𝜋𝜋 + 𝑥𝑥, and 2𝜋𝜋 − 𝑥𝑥
+       in terms of their values for 𝑥𝑥, where 𝑥𝑥 is any real number.
+
+
+    CREATED 02/28/2024                         9-12 Mathematics Course Planning Guide / Content & Curriculum 40
+Standard                                                                                  123      143       153
+
+Taught in Precalculus 2: Trigonometry
+   4. (+) Use the unit circle to explain symmetry (odd and even) and
+      periodicity of trigonometric functions.
+Taught in Precalculus 2: Trigonometry
+
+F.TF.B. Model periodic phenomena with trigonometric functions.
+
+   5. F.TF.B.5 - Model periodic phenomena using trigonometric functions
+      with specified amplitude, frequency, and midline.★
+Example: This past summer you and your friends decided to ride the Ferris
+wheel at the Idaho State Fair. You wondered how high the highest point on
+the Ferris wheel was. You asked the operator, and he didn’t know, but he
+told you that the height of the chair was 5 ft off the ground when you got on
+and the center of the Ferris wheel is 30 ft above that. You checked your
+phone when you got on and figured out that it took you 12 mins to make
+one full revolution. Create a model to show your height from the platform at
+any given time on the Ferris wheel.
+Taught in Precalculus 2: Trigonometry
+
+   6. (+) Understand that restricting a trigonometric function to a domain
+      on which it is always increasing or always decreasing allows its
+      inverse to be constructed.
+Taught in Precalculus 2: Trigonometry
+
+   7. (+) Use inverse functions to solve trigonometric equations that arise
+      in modeling contexts; evaluate the solutions using technology, and
+      interpret them in terms of the context.★
+Taught in Precalculus 2: Trigonometry
+
+F.TF.C. Prove and apply trigonometric identities.
+
+   8. F.TF.C.8 - Relate the Pythagorean Theorem to the unit circle to
+      discover the Pythagorean identity 𝑠𝑠𝑠𝑠𝑠𝑠2 (𝜃𝜃) + 𝑐𝑐𝑐𝑐𝑐𝑐 2 (𝜃𝜃) = 1 and use
+      the Pythagorean identity to find the value of a trigonometric
+      function (𝑠𝑠𝑠𝑠𝑠𝑠(𝜃𝜃), 𝑐𝑐𝑐𝑐𝑐𝑐(𝜃𝜃), 𝑜𝑜𝑜𝑜 𝑡𝑡𝑡𝑡𝑡𝑡(𝜃𝜃)) given one trigonometric
+      function (𝑠𝑠𝑠𝑠𝑠𝑠(𝜃𝜃), 𝑐𝑐𝑐𝑐𝑐𝑐(𝜃𝜃), 𝑜𝑜𝑜𝑜 𝑡𝑡𝑡𝑡𝑡𝑡(𝜃𝜃)) and the quadrant of the angle.
+
+
+
+
+    CREATED 02/28/2024                          9-12 Mathematics Course Planning Guide / Content & Curriculum 41
+Standard                                                                                 123       143       153
+                                         2
+Example: Suppose that 𝑐𝑐𝑐𝑐𝑐𝑐 (𝜃𝜃) = 5 and that 𝜃𝜃 is in the 4th quadrant. Find
+the exact value of 𝑠𝑠𝑠𝑠𝑠𝑠(𝜃𝜃) and 𝑡𝑡𝑡𝑡𝑡𝑡(𝜃𝜃).
+Taught in Precalculus 2: Trigonometry
+
+    9. (+) Prove the addition and subtraction formulas for sine, cosine, and
+       tangent and use them to solve problems.
+Taught in Precalculus 2: Trigonometry and Math Proofs courses
+
+
+    Geometry (G)
+Standard                                                                                 123       143       153
+
+G.SRT.B. Prove theorems involving similarity.
+
+    4. Prove theorems about triangles. Theorems include: a line parallel to
+       one side of a triangle divides the other two proportionally, and
+       conversely; the Pythagorean Theorem proved using triangle
+       similarity
+Teacher Note: This standard was deemed unnecessary in high school, and
+also not covered in college. The use of the Pythagorean theorem is central to
+foundational mathematics, but the proofs described here are not.
+
+This standard is taught in Axiomatic/Euclidean Geometry at the college level.
+
+G.SRT.D. Apply trigonometry to general triangles.
+                                         1
+    9. (+) Derive the formula 𝐴𝐴 = 2 𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎𝑎(𝐶𝐶) for the area of a triangle by
+       drawing an auxiliary line from a vertex perpendicular to the opposite
+       side.
+Taught in Precalculus 2: Trigonometry
+
+    10. (+) Prove the Laws of Sines and Cosines and use them to solve
+        problems.
+Taught in Precalculus 2: Trigonometry and Math Proofs courses
+
+    11. (+) Understand and apply the Law of Sines and the Law of Cosines to
+        find unknown measurements in right and non-right triangles (e.g.,
+        surveying problems; resultant forces).
+
+
+
+    CREATED 02/28/2024                          9-12 Mathematics Course Planning Guide / Content & Curriculum 42
+Standard                                                                             123       143       153
+
+Taught in Precalculus 2: Trigonometry and College Physics
+
+G.C.A. Understand and apply theorems about circles.
+
+   1. Prove that all circles are similar.
+Taught in Axiomatic/Euclidean Geometry
+
+   3. Prove properties of angles for a quadrilateral and other polygons
+      inscribed in a circle, by constructing the inscribed and circumscribed
+      circles of a triangle.
+Taught in Axiomatic/Euclidean Geometry
+
+   4. (+) Construct a tangent line to a circle from a point outside the given
+      circle.
+Taught in Axiomatic/Euclidean Geometry
+
+G.GPE.A. Translate between the geometric description and the equation
+for a conic section.
+
+   2. Derive the equation of a parabola given a focus and directrix.
+Taught in Calculus 2
+
+   3. (+) Derive the equations of ellipses and hyperbolas given the foci,
+      using the fact that the sum or difference of distances from the foci is
+      constant.
+Taught in Calculus 2 and 3
+
+G.GMD.A. Explain volume formulas and use them to solve problems.
+
+   2. (+) Give an informal argument using Cavalieri’s principle for the
+      formulas for the volume of a sphere and other solid figures.
+Taught in Axiomatic/Euclidean Geometry
+
+   3. Use volume formulas for cylinders, pyramids, cones, and spheres to
+      solve problems.★
+Example: The tank at the top of the Meridian Water Tower is roughly
+spherical. If the diameter of the sphere is 50.35 feet, approximately how
+much water can the tank hold?
+
+
+
+
+    CREATED 02/28/2024                      9-12 Mathematics Course Planning Guide / Content & Curriculum 43
+Standard                                                                            123       143       153
+
+Teacher Note: This standard is first introduced as a foundational standard
+and is developed further in the advanced standards. It is then revisited in
+Axiomatic/Euclidean Geometry.
+
+G.GMD.B. Visualize relationships between two-dimensional and three-
+dimensional objects.
+
+   4. Identify the shapes of two-dimensional cross-sections of three-
+      dimensional objects, and identify three-dimensional objects
+      generated by rotations of two-dimensional objects.
+Taught in Calculus 2 and 3
+
+G.MG.A. Apply geometric concepts in modeling situations.
+
+   4. Use dimensional analysis for unit conversions to confirm that
+      expressions and equations make sense.★                                                    X
+Teacher Note: This standard also appears as a foundational standard as the
+complexity of applications of this standard increases.
+
+
+   Statistics and Probability (S)
+Standard                                                                            123       143       153
+
+S.ID.B. Summarize, represent, and interpret data on two categorical and
+quantitative variables.
+
+   7. Represent data on two quantitative variables on a scatter plot, and
+      describe how the variables are related.★
+   b. Use functions fitted to data, focusing on quadratic and exponential
+      models, or choose a function suggested by the context. Utilize
+                                                                                                          X
+       technology where appropriate.★
+Example: Use technology to fit a function of the relationship between the
+board-feet (measured in volume) of trees and the diameter of the trunks of
+the trees.
+
+   c. Informally assess the fit of a function by plotting and analyzing
+       residuals.★
+
+
+
+
+    CREATED 02/28/2024                     9-12 Mathematics Course Planning Guide / Content & Curriculum 44
+Standard                                                                             123       143       153
+
+S.ID.C. Interpret linear models.
+
+   9. Compute (using technology) and interpret the linear correlation
+      coefficient.★                                                                                        X
+Example: Find the correlation coefficient between the number of hours
+firefighters sleep each night and the length of fireline they construct each
+day. Use the correlation coefficient to explain whether sleep is important.
+
+S.IC.A. Understand and evaluate random processes underlying statistical
+studies. Use calculators, spreadsheets, and other technology as
+appropriate.
+
+   2. Decide if a specified model is consistent with results from a given
+      data-generating process (e.g., using simulation or validation with
+      given data).★                                                                                        X
+Example: A model says a spinning coin falls heads up with probability 0.5.
+Would a result of 5 tails in a row cause you to question the model?
+
+
+
+
+S.IC.B. Make inferences and justify conclusions from sample surveys,
+experiments, and observational studies.
+   3. Recognize the purposes of and differences among sample surveys,
+      experiments, and observational studies; explain how randomization
+      relates to each.★
+   4. Use data from a sample survey to estimate a population mean or
+      proportion and a margin of error.★                                                                   X
+   5. Use data from a randomized and controlled experiment to compare
+      two treatments; use margins of error to decide if differences
+      between treatments are significant.★
+   6. Evaluate reports of statistical information based on data.★
+Example: Students may analyze and critique different reports from media,
+business, and government sources.
+
+S.CP.A. Understand independence and conditional probability and use
+                                                                                                           X
+them to interpret data from simulations or experiments.
+
+
+
+    CREATED 02/28/2024                      9-12 Mathematics Course Planning Guide / Content & Curriculum 45
+Standard                                                                              123       143       153
+
+   2. Demonstrate understanding that two events A and B are
+      independent if the probability of A and B occurring together is the
+      product of their probabilities, and use this characterization to
+      determine if they are independent.★
+   3. Understand the conditional probability of 𝐴𝐴 given 𝐵𝐵 as 𝑃𝑃(𝐵𝐵) , and
+                                                                  𝑃𝑃(𝐴𝐴∩𝐵𝐵)
+
+
+       interpret independence of 𝐴𝐴 and 𝐵𝐵 as saying that the conditional
+       probability of 𝐴𝐴 given 𝐵𝐵 is the same as the probability of 𝐴𝐴, and the
+       conditional probability of 𝐵𝐵 given 𝐴𝐴 is the same as the probability of
+       𝐵𝐵.★
+Taught in Statistical Methods and Probability and Statistics courses
+
+   4. Construct and interpret two-way frequency tables of data when two
+      categories are associated with each object being classified. Use the
+      two-way table as a sample space to decide if events are independent
+      and to approximate conditional probabilities.★
+Example: Collect data from a random sample of students in your school on
+their favorite subject among math, science, and English. Estimate the
+probability that a randomly selected student from your school will favor
+science given that the student is in tenth grade. Do the same for other
+subjects and compare the results.
+   5. Recognize and explain the concepts of conditional probability and
+      independence in everyday language and everyday situations.★
+Example: Compare the chance of having lung cancer if you are a smoker
+with the chance of being a smoker if you have lung cancer.
+Also taught in Statistical Methods and Probability and Statistics courses
+
+S.CP.B. Use the rules of probability to compute probabilities of compound
+events in a uniform probability model.
+
+   6. Find the conditional probability of 𝐴𝐴 given 𝐵𝐵 as the fraction of 𝐵𝐵’s
+      outcomes that also belong to 𝐴𝐴, and interpret the answer in terms of
+                                                                                                            X
+      the model.★
+Taught in Statistical Methods and Probability and Statistics courses
+
+   7. Apply the Addition Rule, 𝑃𝑃(𝐴𝐴 ∪ 𝐵𝐵) = 𝑃𝑃(𝐴𝐴) + 𝑃𝑃(𝐵𝐵) − 𝑃𝑃(𝐴𝐴 ∩ 𝐵𝐵), and
+      interpret the answer in terms of the model.★
+
+
+
+    CREATED 02/28/2024                       9-12 Mathematics Course Planning Guide / Content & Curriculum 46
+Standard                                                                              123       143       153
+
+Also taught in Statistical Methods and Probability and Statistics courses
+
+   8. (+) Apply the general Multiplication Rule in a uniform probability
+      model 𝑃𝑃(𝐴𝐴 ∩ 𝐵𝐵) = 𝑃𝑃(𝐴𝐴)𝑃𝑃(𝐴𝐴) = 𝑃𝑃(𝐵𝐵)𝑃𝑃(𝐴𝐴|𝐵𝐵), and interpret the
+      answer in terms of the model.★
+Also taught in Statistical Methods and Probability and Statistics courses
+
+   9. (+) Use permutations and combinations to compute probabilities of
+      compound events and solve problems.★
+Also taught in Statistical Methods and Probability and Statistics courses
+
+S.MD.A. Calculate expected values and use them to solve problems.
+   1. (+) Define a random variable for a quantity of interest by assigning a
+      numerical value to each event in a sample space; graph the
+      corresponding probability distribution using the same graphical
+      displays as for data distributions.★
+Taught in Statistical Methods and Probability and Statistics courses
+
+   2. (+) Calculate the expected value of a random variable; interpret it as
+      the mean of the probability distribution of the variable.★
+Also taught in Statistical Methods and Probability and Statistics courses
+
+   3. (+) Develop a probability distribution for a random variable defined
+      for a sample space in which theoretical probabilities can be                                         X
+      calculated; find the expected value.★
+Example: Find the theoretical probability distribution for the number of
+correct answers obtained by guessing on all five questions of a multiple-
+choice test where each question has four choices, and find the expected
+grade under various grading schemes.
+Taught in Statistical Methods and Probability and Statistics courses
+
+   4. (+) Develop a probability distribution for a random variable defined
+      for a sample space in which probabilities are assigned empirically;
+      find the expected value.★
+Example: Find a current data distribution on the number of TV sets per
+household in the United States, and calculate the expected number of sets
+
+
+
+
+    CREATED 02/28/2024                      9-12 Mathematics Course Planning Guide / Content & Curriculum 47
+Standard                                                                             123       143       153
+
+per household. How many TV sets would you expect to find in 100 randomly
+selected households?
+Taught in Statistical Methods and Probability and Statistics courses
+
+S.MD.B. Use probability to evaluate outcomes of decisions.
+   5. (+) Weigh the possible outcomes of a decision by assigning
+      probabilities to payoff values and finding expected values.★
+   a. Find the expected payoff for a game of chance.★
+Example: Find the expected winnings from a state lottery ticket or a game at
+a fast-food restaurant.
+
+   b. Evaluate and compare strategies on the basis of expected values.★
+Example: Compare a high-deductible versus a low-deductible automobile
+insurance policy using various, but reasonable, chances of having a minor or
+a major accident.
+                                                                                                          X
+Also taught in Statistical Methods and Probability and Statistics courses
+
+   6. (+) Use probabilities to make objective decisions.★
+Example: The Idaho Department of Transportation classifies highways for
+overweight loads based on the probability of bridges on a highway failing
+under given vehicle weights.
+Also taught in Statistical Methods and Probability and Statistics courses
+
+   7. (+) Analyze decisions and strategies using probability concepts.★
+Example: Product testing, medical testing, or pulling a hockey or soccer
+goalie at the end of a game and replacing the goalie with an extra player.
+Also taught in Statistical Methods and Probability and Statistics courses
+
+
+
+
+    CREATED 02/28/2024                     9-12 Mathematics Course Planning Guide / Content & Curriculum 48
+  REFERENCES
+Aughinbaugh, A. (2012). The effects of high school math curriculum on college attendance:
+      Evidence from the NLSY97. Economics of Education Review, 31 (6), 861-870. Retrieved
+      from: https://www.sciencedirect.com/science/article/abs/pii/S0272775712000726
+Jia, N. (2021). Do stricter high school math requirements raise college STEM attainment?
+         Economics of Education Review, 83. Retrieved from:
+         https://www.sciencedirect.com/science/article/abs/pii/S0272775721000595
+National Council Teachers of Mathematics. (2014). Principles to Actions: Ensuring Mathematical
+       Success for All. NCTM.
+Son, J.Y. & Stigler, J. (2023) Don’t Force a False Choice between Algebra and Data Science.
+        EdSource. Retrieved from: https://edsource.org/2023/dont-force-a-false-choice-between-
+        algebra-and-data-science/684817
+Sparks, S.D. (2018) Calculus is the Peak of High School Math. Maybe It’s Time to Change That.
+  Education Week, 37(32). Retrieved from: www.edweek.org/ew/articles/2018/05/23/calculus-is-
+  the-peak-of-high-school.html?cmp=eml-enl-cm-news2-rm&M=58504831&U=1121672
+University of Texas at Austin Charles A. Dana Center. (2020). Launch Years: A New Vision for the
+       Transition from High School to Postsecondary Mathematics. Retrieved from:
+       https://www.utdanacenter.org/our-work/k-12-education/launch-years-initiative/launch-
+       years-initiative-resources-and-reports
+Zelkowski, J. (2011) Defining the Intensity of High School Mathematics: Distinguishing the
+      Difference Between College-Ready and College-Eligible Students. American Secondary
+      Education, 39(2), 27-54. Retrieved from: https://www.jstor.org/stable/23100400
+
+
+
+  ADDITIONAL RECOMMENDED READING
+Boaler, J. (2022). Mathematical Mindsets. Jossey-Bass.
+Leinwand, S. & Milou, E. (2021). Invigorating High School Math. Heinemann.
+National Council of Teachers of Mathematics. (2018). Catalyzing Change in High School
+       Mathematics. NCTM.
+National Council of Teachers of Mathematics. (2016). Mathematical Modeling and Modeling
+       Mathematics. NCTM.
+National Council of Supervisors of Mathematics. Closing the Opportunity Gap: A Call for Detracking
+       Mathematics. Position paper retrieved from:
+       https://www.mathedleadership.org/docs/resources/positionpapers/NCSMPositionPaper1
+       9.pdf
+
+
+
+
+   CREATED 02/28/2024                     9-12 Mathematics Course Planning Guide / Content & Curriculum 49
+APPENDIX A: 9-12 STANDARDS OVERVIEW CHART
+Key: F=Foundational, A=Advanced, C=College
+
+    Number and               Number and                       Algebra                   Functions
+     Quantity                 Quantity                 Standard      F A C        Standard       F A C
+Standard      F A C       Standard     F A C           A.CED.A.2b x      x   x    F.IF.C.7       x      x
+N.RN.A.1      x           N.VM.C.9               x
+                                                       A.CED.A.3     x   x   x    F.IF.C.7a      x
+N.RN.A.2      x           N.VM.C.10              x
+                                                       A.CED.A.4     x   x   x    F.IF.C.7b             x
+N.RN.B.3      x           N.VM.C.11              x
+                                                       A.CED.A.5     x            F.IF.C.7c             x
+N.Q.A.1       x           N.VM.C.12              x
+                                                       A.REI.A.1     x            F.IF.C.7d             x
+N.Q.A.2       x   x
+                                                       A.REI.A.2         x        F.IF.C.7e             x
+N.Q.A.3           x   x         Algebra
+                                                       A.REI.B.3     x            F.IF.C.8       x      x
+N.CN.A.1          x   x   Standard     F A C
+                                                       A.REI.B.3a        x        F.IF.C.8a             x
+N.CN.A.2          x   x   A.SSE.A.1    x
+                                                       A.REI.B.4         x        F.IF.C.8b             x
+N.CN.A.3              x   A.SSE.A.1a x
+                                                       A.REI.B.4a        x        F.IF.C.9       x
+N.CN.B.4              x   A.SSE.A.1b x
+                                                       A.REI.B.4b        x        F.IF.C.10             x
+N.CN.B.5              x   A.SSE.A.2    x
+                                                       A.REI.C.5         x        F.BF.A.1       x      x
+N.CN.B.6              x   A.SSE.B.3    x
+                                                       A.REI.C.6    x             F.BF.A.1a      x
+N.CN.C.7          x       A.SSE.B.3a x
+                                                       A.REI.C.7             x    F.BF.A.1b             x
+N.CN.C.8              x   A.SSE.B.3b         x
+                                                       A.REI.C.8             x    F.BF.A.1c             x
+N.CN.C.9              x   A.SSE.B.3c   x
+                                                       A.REI.C.9             x    F.BF.A.2              x
+N.VM.A.1              x   A.SSE.B.4          x
+                                                       A.REI.D.10 x      x   x    F.BF.B.3              x
+N.VM.A.2              x   A.APR.A.1    x
+                                                       A.REI.D.11            x    F.BF.B.4              x
+N.VM.A.3              x   A.APR.A.1a x       x
+                                                       A.REI.D.12        x        F.BF.B.4a             x
+N.VM.B.4              x   A.APR.A.1b x       x
+                                                                                  F.BF.B.4b             x
+N.VM.B.4a             x   A.APR.B.2          x
+                                                             Functions            F.BF.B.4c             x
+N.VM.B.4b             x   A.APR.B.3          x
+                                                       Standard      F A C        F.BF.B.4d             x
+N.VM.B.4c             x   A.APR.C.4              x
+                                                       F.IF.A.1      x       x    F.BF.B.5              x
+N.VM.B.5              x   A.APR.C.5              x
+                                                       F.IF.A.2      x            F.LE.A.1       x      x
+N.VM.B.5a             x   A.APR.D.6              x
+                                                       F.IF.A.3              x    F.LE.A.1a      x      x
+N.VM.B.5b             x   A.APR.D.7         x    x
+                                                       F.IF.B.4      x   x   x    F.LE.A.1b      x      x
+N.VM.C.6              x   A.CED.A.1    x    x    x
+                                                       F.IF.B.5      x   x        F.LE.A.1c      x      x
+N.VM.C.7              x   A.CED.A.2    x     x   x
+                                                       F.IF.B.6      x       x    F.LE.A.2       x      x
+N.VM.C.8              x   A.CED.A.2a x       x   x
+
+
+
+CREATED 02/28/2024                         9-12 Mathematics Course Planning Guide / Content & Curriculum 50
+      Functions               Geometry                      Geometry                    Statistics
+Standard      F A C      Standard     F A C           Standard      F A C        Standard       F A C
+F.LE.A.3             x   G.CO.C.12    x               G.GPE.B.5     x            S.IC.A.1       x
+F.LE.A.4             x   G.CO.C.12a x                 G.GPE.B.6     x    x       S.IC.A.2              x
+F.LE.B.5      x      x   G.CO.D.13    x               G.GPE.B.7     x            S.IC.B.3              x
+F.TF.A.1             x   G.CO.D.14    x               G.GMD.A.1     x            S.IC.B.4              x
+F.TF.A.1a            x   G.SRT.A.1    x               G.GMD.A.2          x   x   S.IC.B.5              x
+F.TF.A.2             x   G.SRT.A.1a x                 G.GMD.A.3     x    x   x   S.IC.B.6              x
+F.TF.A.3             x   G.SRT.A.1b x                 G.GMD.B.4          x   x   S.CP.A.1       x
+F.TF.A.4             x   G.SRT.A.2    x               G.MG.A.1      x            S.CP.A.2              x
+F.TF.B.5             x   G.SRT.A.3    x               G.MG.A.2      x            S.CP.A.3              x
+F.TF.B.6             x   G.SRT.B.4              x     G.MG.A.3      x            S.CP.A.4              x
+F.TF.B.7             x   G.SRT.B.5    x               G.MG.A.4      x        x   S.CP.A.5              x
+F.TF.C.8             x   G.SRT.C.6    x                                          S.CP.B.6              x
+F.TF.C.9             x   G.SRT.C.7          x               Statistics           S.CP.B.7              x
+                         G.SRT.C.8          x         Standard      F A C        S.CP.B.8              x
+     Geometry            G.SRT.D.9              x     S.ID.A.1      x            S.CP.B.9              x
+Standard      F A C      G.SRT.D.10             x     S.ID.A.2      x            S.MD.A.1              x
+G.CO.A.1      x          G.SRT.D.11             x     S.ID.A.3      x            S.MD.A.2              x
+G.CO.A.2      x          G.C.A.1                x     S.ID.A.4           x       S.MD.A.3              x
+G.CO.A.3      x          G.C.A.2      x               S.ID.A.5           x       S.MD.A.4              x
+G.CO.A.4      x          G.C.A.3                x     S.ID.B.6      x    x       S.MD.B.5              x
+G.CO.A.5      x          G.C.A.4                x     S.ID.B.7      x        x   S.MD.B.5a             x
+G.CO.A.6      x          G.C.B.5            x         S.ID.B.7a     x            S.MD.B.5b             x
+G.CO.B.7      x          G.GPE.A.1          x         S.ID.B.7b              x   S.MD.B.6              x
+G.CO.B.8      x          G.GPE.A.2              x     S.ID.B.7c              x   S.MD.B.7              x
+G.CO.B.9      x          G.GPE.A.3          x   x     S.ID.C.8      x
+G.CO.C.10     x          G.GPE.A.3a         x         S.ID.C.9               x
+G.CO.C.11     x          G.GPE.B.4    x               S.ID.C.10     x
+
+
+
+
+CREATED 02/28/2024                        9-12 Mathematics Course Planning Guide / Content & Curriculum 51
+APPENDIX B: STANDARDS TO ISAT ALIGNMENT
+This section shows how the Grade 11 Idaho Standards for Achievement (ISAT) Assessment
+Claims and Targets align to the different categories of high school mathematics standards. Half
+of the ISAT is scored based on claims 2, 3, and 4, and these claims are centered on
+mathematical practices, not just mathematical content (see ISAT blueprints for details).
+Instruction and planning should not be limited to ISAT Claim 1, Concepts and Procedures. For
+instructional priority planning, please primarily reference the Idaho Content Standards for
+Mathematics.
+
+Note that it is possible to see standards in claims 2 through 4 that are not listed in this table.
+The tables in this section were created based on the Smarter Balanced Content Specifications
+document for mathematics (2015). (retrieved from:
+http://portal.smarterbalanced.org/library/en/Mathematics-content-specifications.pdf)
+
+
+Grade 11 ISAT Target Summary for Claim 1
+Claim 1: Students can explain and apply mathematical concepts and carry out mathematical
+procedures with precision and fluency.
+
+Targets marked with a  are ISAT major targets for 11th grade. The other targets are
+supporting targets. Standards marked with a ★ indicate a Modeling Standard.
+
+Target                                           Foundational          Advanced             College
+
+Target A - Extend the properties of
+exponents to rational exponents; Use
+properties of rational and irrational              N.RN.A.1,
+numbers; Reason quantitatively and use             N.RN.A.2
+units to solve problems
+
+Target B - Use properties of rational and
+irrational numbers                                 N.RN.B.3
+
+Target C - Reason quantitatively and use
+units to solve problems                             N.Q.A.1
+
+Target D - Interpret the structure of
+expressions                                        A.SSE.A.2
+
+
+
+CREATED 02/28/2024                       9-12 Mathematics Course Planning Guide / Content & Curriculum 52
+Target                                         Foundational         Advanced             College
+
+Target E - Write expressions in                 A.SSE.B.3
+equivalent forms to solve problems             A.SSE.B.3a★         A.SSE.B.3b★
+                                                A.SSE.B.3c★
+Target F - Perform arithmetic operations
+on polynomials                                   A.APR.A.1
+
+Target G - Create equations that describe       A.CED.A.1★         A.CED.A.1★         A.CED.A.1★,
+numbers or relationships
+                                                A.CED.A.2★         A.CED.A.2★          A.CED.A.2★
+Target H - Understand solving equations
+as a process of reasoning and explain the                            A.REI.A.2
+reasoning
+
+Target I - Solve equations and                                     A.REI.B.4,
+inequalities in one variable                     A.REI.B.3          A.REI.B.4a
+                                                                    A.REI.B.4b
+Target J - Represent and solve equations                                              A.REI.D.10,
+and inequalities graphically                                        A.REI.D.12
+                                                                                      A.REI.D.11★,
+Target K - Understand the concept of a           F.IF.A.1
+function and use function notation                                                       F.IF.A.1
+                                                  F.IF.A.3
+
+Target L - Interpret functions that arise       F.IF.B.4★                              F.IF.B.4★
+                                                                     F.IF.B.4★
+in applications in terms of a context            F.IF.B.5★                              F.IF.B.6★
+                                                                     F.IF.B.5★
+                                                 F.IF.B.6★
+                                                                                         F.IF.C.7,
+                                                                                        F.IF.C.7a★
+                                                                                        F.IF.C.7b★
+Target M - Analyze functions using                                                     F.IF.C.7c★
+                                                  F.IF.C.9
+different representations
+                                                                                        F.IF.C.7d★
+                                                                                        F.IF.C.7e★
+                                                                                         F.IF.C.8a
+                                                                                         F.IF.C.8b
+                                                                                       F.BF.A.1★,
+Target N - Build a function that models a       F.BF.A.1★                             F.BF.A.1b★,
+relationship between two quantities
+                                                F.BF.A.1a★                             F.BF.A.1c★,
+                                                                                        F.BF.A.2★
+
+CREATED 02/28/2024                    9-12 Mathematics Course Planning Guide / Content & Curriculum 53
+Target                                          Foundational         Advanced              College
+
+Target O - Define trigonometric ratios and                           G.SRT.C.7
+solve problems involving right triangles        G.SRT.C.6★
+                                                                     G.SRT.C.8
+Target P - Summarize, represent, and             S.ID.A.1★
+interpret data on a single count or              S.ID.A.2★
+measurement variable
+                                                 S.ID.A.3★
+
+
+Grade 11 ISAT Target Summary for Claims 2 through 4
+The performance tasks are primarily used to assess Claims 2 through 4. Note that half of the
+ISAT is scored based on claims 2, 3, and 4, and these claims are centered on mathematical
+practices, not just mathematical content (see ISAT blueprints for details). Since the ISAT
+outlines clusters (for example, A.SSE.A) and standards (for example, A.SSE.A.1) for claims 2-4,
+this table breaks clusters into their constituent standards when they are in different categories.
+A cluster by itself implies that all its constituent standards are included. Performance tasks are
+written to assess the standards and clusters shown in the table below.
+
+Claim 2 Problem Solving & Claim 4 Modeling and Data Analysis
+Claim 2: Students can solve a range of complex, well-posed problems in pure and applied
+mathematics, making productive use of knowledge and problem-solving strategies.
+
+Claim 4: Students can analyze complex, real-world scenarios and can construct and use
+mathematical models to interpret and solve problems.
+
+            Foundational                        Advanced                         College
+               N.Q.A.1                           N.Q.A.2
+                                                                                 N.Q.A.3
+               N.Q.A.2                           N.Q.A.3
+               A.SSE.A
+               A.SSE.B
+                                             HS.A.CED.A.1
+                                                                             HS.A.CED.A.2
+                                             HS.A.CED.A.2
+                                                                             HS.A.CED.A.2a
+                                             HS.A.CED.A.2a
+               A.CED.A                                                       HS.A.CED.A.2b
+                                             HS.A.CED.A.2b
+                                                                             HS.A.CED.A.3
+                                             HS.A.CED.A.3
+                                                                             HS.A.CED.A.4
+                                             HS.A.CED.A.4
+               A.REI.A.1                       A.REI.A.2
+               A.REI.B.3                       A.REI.B.3a
+
+CREATED 02/28/2024                     9-12 Mathematics Course Planning Guide / Content & Curriculum 54
+            Foundational            Advanced                          College
+                                    A.REI.B.4
+                                    A.REI.B.4a
+                                    A.REI.B.4b
+                                                                     A.REI.C.7
+               A.REI.C.6            A.REI.C.5                        A.REI.C.8
+                                                                     A.REI.C.9
+                                                                    A.REI.D.10
+                                    A.REI.D.12
+                                                                    A.REI.D.11
+              HS.F.IF.A.1                                           HS.F.IF.A.1
+              HS.F.IF.A.2                                           HS.F.IF.A.3
+                                     F.IF.B.4                         F.IF.B.4
+                 F.IF.B
+                                     F.IF.B.5                         F.IF.B.6
+                                                                      F.IF.C.7
+                                                                     F.IF.C.7a
+                                                                     F.IF.C.7b
+                F.IF.C.7                                             F.IF.C.7c
+               F.IF.C.7a                                             F.IF.C.7d
+                F.IF.C.8                                             F.IF.C.7e
+                F.IF.C.9                                              F.IF.C.8
+                                                                     F.IF.C.8a
+                                                                     F.IF.C.8b
+                                                                     F.IF.C.10
+                                                                     F.BF.A.1
+               F.BF.A.1                                             F.BF.A.1b
+              F.BF.A.1a                                              F.Bf.A.1c
+                                                                     F.BF.A.2
+                                                                      F.LE.A.1
+                                                                     F.LE.A.1a
+               F.LE.A.1
+                                                                    F.LE.A.1b.
+              F.LE.A.1a
+                                                                     F.LE.A.1c
+              F.LE.A.1b.
+                                                                      F.LE.A.2
+              F.LE.A.1c
+                                                                      F.LE.A.3
+                                                                      F.LE.A.4
+               F.LE.B.5                                               F.LE.B.5
+                                                                      F.TF.B.5
+              G.SRT.C.6             G.SRT.C.7
+
+CREATED 02/28/2024          9-12 Mathematics Course Planning Guide / Content & Curriculum 55
+            Foundational                      Advanced                         College
+                                              G.SRT.C.8
+             G.GMD.A.3                       G.GMD.A.3                       G.GMD.A.3
+             G.MG.A.1
+             G.MG.A.2
+                                                                              G.MG.A.4
+             G.MG.A.3
+             G.MG.A.4
+               S.ID.A.1
+                                               S.ID.A.4
+               S.ID.A.2
+                                               S.ID.A.5
+               S.ID.A.3
+               S.ID.B.6                                                        S.ID.B.7
+               S.ID.B.7                        S.ID.B.6                       S.ID.B.7b
+              S.ID.B.7a                                                       S.ID.B.7c
+               S.ID.C.8
+                                                                               S.ID.C.9
+              S.ID.C.10
+               S.IC.A.1
+                                                                               S.IC.B.3
+                                                                               S.IC.B.4
+                                                                               S.IC.B.5
+                                                                               S.IC.B.6
+                                                                               S.CP.A.2
+                                                                               S.CP.A.3
+               S.CP.A.1
+                                                                               S.CP.A.4
+                                                                               S.CP.A.5
+
+
+Claim 3 Communicating Reasoning
+Claim 3: Students can clearly and precisely construct viable arguments to support their own
+reasoning and to critique the reasoning of others.
+
+            Foundational                      Advanced                         College
+               N.RN.A
+               N.RN.B
+              A.SSE.A.2
+              A.APR.A.1
+                                               A.APR.B
+                                               A.APR.C
+
+
+CREATED 02/28/2024                   9-12 Mathematics Course Planning Guide / Content & Curriculum 56
+            Foundational            Advanced                         College
+                                    A.APR.D.6
+               A.REI.A.1            A.REI.A.2
+                                                                     A.REI.C.7
+               A.REI.C.6             A.REI.C.5                       A.REI.C.8
+                                                                     A.REI.C.9
+                                                                    A.REI.D.10
+                                    A.REI.D.12
+                                                                    A.REI.D.11
+                F.IF.A.1                                              F.IF.A.1
+                F.IF.B.5              F.IF.B.5
+                F.IF.C.9
+                                                                     F.BF.B.3
+                                                                     F.BF.B.4
+                                                                     F.TF.A.1
+                                                                     F.TF.A.2
+                                                                     F.TF.C.8
+               G.CO.A
+               G.CO.B
+              G.CO.C10
+              G.CO.C.11
+              G.CO.C.12
+               G.SRT.A
+              G.SRT.B.5                                             G.SRT.B.4
+
+
+
+
+CREATED 02/28/2024         9-12 Mathematics Course Planning Guide / Content & Curriculum 57
+
