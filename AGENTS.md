@@ -483,6 +483,7 @@ Tests are duplicated across screen sizes only where layout can break:
 - **Public pages are statically generated** with `dynamicParams = false`.
   - Sample questions are seeded from the unit key, so pages are identical on every build.
   - `/play/`, `/parents/` and `/api/` are `noindex` and disallowed in `robots.ts`.
+  - **Vercel's deploy takes a limited number of prerendered outputs** (each page is its HTML, its `.rsc` and three segment prefetch files). Above about 165,000 its "Deploying outputs" step fails with "Maximum call stack size exceeded" (October 2026, after Mississippi and Kansas). `scripts/deploy-outputs.mjs`, run by the CSP adapter on Vercel, leaves out unit pages' segment files (Vercel serves the page's `.rsc` for them) and stops the build above `PRERENDER_BUDGET` with a clear message. The adapter logs the count after each Vercel build ("prerendered outputs remain"); a new state adds about 2,000. If the budget is reached, trim more segment files or render a page kind on demand, never drop pages from a framework.
 
 ## Content rules
 
