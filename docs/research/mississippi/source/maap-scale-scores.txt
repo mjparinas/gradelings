@@ -1,0 +1,44 @@
+                        Mississippi Academic Assessment Program (MAAP)
+                                       Performance Level Scale Score Ranges
+                             The scale score ranges are applicable for all MAAP assessment administrations.
+
+                               MAAP ELA Scale Score Ranges
+               Performance        Performance         Performance         Performance         Performance
+   Grade         Level 1            Level 2              Level 3             Level 4             Level 5
+                (Minimal)            (Basic)            (Passing)          (Proficient)        (Advanced)
+    3            301-334            335-349            350-364              365-386             387-399
+    4            401-428            429-449            450-464              465-487             488-499
+    5            501-538            539-549            550-564              565-581             582-599
+    6            601-635            636-649            650-664              665-678             679-699
+    7            701-737            738-749            750-764              765-775             776-799
+    8            801-841            842-849            850-864              865-879             880-899
+  ENG II        1001-1036          1037-1049          1050-1064            1065-1080           1081-1099
+  The passing score for MAAP English II is 1050.
+
+                          MAAP Mathematics Scale Score Ranges
+               Performance        Performance        Performance          Performance         Performance
+  Grade          Level 1            Level 2             Level 3              Level 4             Level 5
+                (Minimal)            (Basic)           (Passing)           (Proficient)        (Advanced)
+    3            301-332           333-349             350-364              365-383             384-399
+    4            401-435           436-449             450-464              465-483             484-499
+    5            501-539           540-549             550-564              565-578             579-599
+    6            601-635           636-649             650-664              665-686             687-699
+    7            701-735           736-749             750-764              765-792             793-799
+    8            801-837           838-849             850-864              865-888             889-899
+  ALG I         1001-1038         1039-1049           1050-1064            1065-1087           1088-1099
+ The passing score for MAAP Algebra I is 1050.
+
+                              MAAP Science Scale Score Ranges
+                  Performance Performance Performance                      Performance        Performance
+    Grade           Level 1     Level 2      Level 3                          Level 4            Level 5
+                   (Minimal)     (Basic)    (Passing)                       (Proficient)       (Advanced)
+      5            500-540            541-549            550-564            565-588             589-650
+      8            800-840            841-849            850-864            865-888             889-950
+     BIO          1000-1037          1038-1049          1050-1064          1065-1094           1095-1180
+ The passing score for MAAP Biology is 1050.
+
+
+
+
+Office of Student Assessment                                                         Revised September 2025
+
