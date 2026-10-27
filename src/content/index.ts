@@ -295,3 +295,23 @@ export function allUnitRefs(grade: GradeId, framework: FrameworkId): UnitRef[] {
     }),
   );
 }
+
+/** Grades a child practises some subjects at instead of their own grade (see src/lib/subjectGrades.ts). */
+export type SubjectGrades = Partial<Record<SubjectId, GradeId>>;
+
+/**
+ * The courses a child practises: each subject from the grade set for it, the rest from their own grade. A subject whose
+ * other grade hasn't loaded yet stays on the child's grade, so nothing goes missing while a download finishes.
+ */
+export function practiceCourses(grade: GradeId, framework: FrameworkId, bySubject: SubjectGrades = {}): Course[] {
+  return coursesForGrade(grade, framework).map((course) => {
+    const other = bySubject[course.subject];
+    if (!other || other === grade) return course;
+    return getCourse(other, course.subject, framework) ?? course;
+  });
+}
+
+/** `allUnitRefs` for the courses a child practises (`practiceCourses`). */
+export function practiceUnitRefs(grade: GradeId, framework: FrameworkId, bySubject: SubjectGrades = {}): UnitRef[] {
+  return practiceCourses(grade, framework, bySubject).flatMap((course) => allUnitRefs(course.grade, framework).filter((r) => r.course.subject === course.subject));
+}

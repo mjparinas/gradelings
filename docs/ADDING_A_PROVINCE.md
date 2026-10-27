@@ -2,6 +2,8 @@
 
 Everything that differs by jurisdiction lives in its own folder, `src/content/<name>/`, described by a manifest (`manifest.ts`) and listed with one import and one line in `src/content/registry.ts` (both lists alphabetical, so parallel state PRs rarely collide). No screen changes are needed.
 
+**Shortcut for a US state:** `npm run new-state -- <folder> us-xx <Name>` writes the mechanical files below (manifest, citation helper, schools notice, contract, research README, framework doc) and adds the state to the registry in alphabetical place, as `upcoming`. The framework, grade files, guides and plan are still yours to write.
+
 1. **Framework.** Create `src/content/<name>/framework.ts` exporting a `Framework` (the type is in `src/content/frameworks.ts`): id, slug, `curriculumName`, grades, subjects offered, report-card scale and guide, and the scoring scheme.
 2. **Official standards.** Everything the research used goes in `docs/research/<name>/`, committed, so it can be checked again after the website changes or the document is taken down:
    - `source/`: the official documents as downloaded (PDF, HTML, spreadsheet or JSON), plus a `pdftotext -layout` `.txt` beside each PDF, so a diff shows what changed in a new edition. Commit them even when the site allows automated downloads. If a site blocks downloads, ask the owner for the files and commit those. Keep each file under 50 MB; for a bigger document, commit the parts the research reads and say so in the README.

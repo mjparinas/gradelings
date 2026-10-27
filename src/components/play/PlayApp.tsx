@@ -10,10 +10,11 @@ import type { FrameworkId, GradeId, SubjectId } from "@/content/types";
 import type { Mode } from "@/lib/model";
 import { PLACEMENT_SUBJECTS } from "@/lib/placement";
 import { parse, ShownRoute, useShownHash } from "@/lib/router";
-import { useActiveProfile, useChildSettings, useProfiles, useReady, useStore } from "@/lib/store";
+import { useActiveProfile, useChildSettings, useProfiles, useReady, useStore, useSubjectGrades } from "@/lib/store";
+import { practiceTargets } from "@/lib/subjectGrades";
 import { storiesFor } from "@/lib/stories";
 import { startBackgroundSync } from "@/lib/sync";
-import { prefetchGrades } from "@/lib/useGradeContent";
+import { prefetchGrades, useGradeContent } from "@/lib/useGradeContent";
 import { BandProvider } from "../band";
 import { ContentGate } from "../ContentGate";
 import { LoadingScreen } from "../ui";
@@ -201,7 +202,9 @@ export function PlayApp() {
       <BandProvider value={band}>
         {/* While the teacher's question is up, nothing behind it can be tapped, focused or read. */}
         <div data-band={band} key={active.id} inert={asking}>
-          <Screen />
+          <PracticeGrades>
+            <Screen />
+          </PracticeGrades>
         </div>
         {/* Only while the child's teacher is asking the class something, and only online. */}
         <LiveQuestionCard state={live} />
@@ -230,11 +233,33 @@ function StartLink() {
   return null;
 }
 
+/**
+ * Waits for the grades a parent set some subjects to (`subjectGrades.ts`). Unlike the child's own grade, a grade that
+ * can't download (offline) doesn't block anything: those subjects stay on the child's own grade until it can.
+ */
+function PracticeGrades({ children }: { children: ReactNode }) {
+  const active = useActiveProfile()!;
+  const subjectGrades = useSubjectGrades();
+  const extra = practiceTargets(active, { subjectGrades }).filter((t) => t.grade !== active.grade);
+  const { status } = useGradeContent(extra);
+  if (status === "loading" && extra.length) return <LoadingScreen />;
+  return children;
+}
+
 /** Once the active child's lessons are in, quietly download the other screens, and siblings' and nearby grades, for offline use. */
 function Prefetch() {
   const profiles = useProfiles();
   const active = useActiveProfile();
-  const targets = [...new Set([active, ...profiles].filter(Boolean).map((p) => `${p!.framework}:${p!.grade}`))].join(",");
+  const settings = useStore((s) => s.settings);
+  const levels = useIsOn()("subject-levels");
+  const targets = [
+    ...new Set(
+      [active, ...profiles]
+        .filter(Boolean)
+        .flatMap((p) => (levels ? practiceTargets(p!, settings[p!.id]) : [{ grade: p!.grade, framework: p!.framework }]))
+        .map((t) => `${t.framework}:${t.grade}`),
+    ),
+  ].join(",");
   useEffect(() => prefetchScreens(), []);
   useEffect(() => {
     if (targets) {

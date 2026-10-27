@@ -22,6 +22,7 @@ const h = vi.hoisted(() => {
 vi.mock("@/lib/router", () => ({ go: h.go, href: (p: string) => `#${p}` }));
 vi.mock("@/content", () => ({
   coursesForGrade: () => h.courses,
+  practiceCourses: () => h.courses,
   unitKey: (grade: string, subject: string, id: string) => `${grade}/${subject}/${id}`,
   getUnitRef: (key: string) => {
     const [, subject, id] = key.split("/");
@@ -34,6 +35,7 @@ vi.mock("@/lib/store", () => ({
   useStore: (select: (s: unknown) => unknown) => select({ family: { plan: "premium", trialEndsAt: 0, updatedAt: 0 } }),
   useActiveProfile: () => ({ id: "p1", name: "Ava", grade: "3", framework: "ca-bc", avatar: "ollie" }),
   useChildSettings: () => h.settings,
+  useSubjectGrades: () => ({}),
   useDerived: () => ({ units: h.units, level: 1 }),
 }));
 vi.mock("../Critter", () => ({

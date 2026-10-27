@@ -11,7 +11,7 @@ import type { GradeId } from "@/content/types";
 import { buildReport } from "@/lib/reports";
 import { factSetsFor, factSummary, factText, type FactStat } from "@/lib/facts";
 import { useSay } from "@/lib/say";
-import { eventsFor, useChildSettings, useDerived, useStore } from "@/lib/store";
+import { eventsFor, useChildSettings, useDerived, useStore, useSubjectGrades } from "@/lib/store";
 import { getTrophy, TIER_STYLE } from "@/lib/trophies";
 import { ColumnChart, LevelStacks, LineChart, RowBars, StatTile } from "./charts";
 import { ShareReport } from "./ShareReport";
@@ -27,9 +27,10 @@ export function ReportsPage({ childId }: { childId?: string }) {
   const settings = useChildSettings(child?.id);
   const [period, setPeriod] = useState(14);
   const say = useSay();
+  const subjectGrades = useSubjectGrades(child?.id ?? null);
   const report = useMemo(
-    () => (child ? buildReport(eventsFor(events, child), d, child.grade, child.framework, period) : null),
-    [child, events, d, period],
+    () => (child ? buildReport(eventsFor(events, child), d, child.grade, child.framework, period, undefined, subjectGrades) : null),
+    [child, events, d, period, subjectGrades],
   );
   if (!child || !report) return <NoChildren />;
   const scheme = getFramework(child.framework).scoringFor(child.grade);
@@ -186,7 +187,7 @@ export function ReportsPage({ childId }: { childId?: string }) {
           const units = report.units.filter((u) => u.ref.course.subject === s.id);
           if (!units.length) return null;
           return (
-            <Disclosure key={s.id} className="border-t border-line py-2" titleClassName="py-1 text-lg font-bold" title={`${s.emoji} ${s.title.big}`} open={period <= 14}>
+            <Disclosure key={s.id} className="border-t border-line py-2" titleClassName="py-1 text-lg font-bold" title={`${s.emoji} ${s.title.big}${subjectGrades[s.id] ? ` · ${gradeLabel(subjectGrades[s.id]!, child.framework)} lessons` : ""}`} open={period <= 14}>
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-sm">
                   <thead>
@@ -205,6 +206,7 @@ export function ReportsPage({ childId }: { childId?: string }) {
                         <tr key={u.ref.key} className="border-t border-line/60 align-top">
                           <td className="py-1.5 pr-3 font-semibold">
                             {u.ref.unit.emoji} {u.ref.unit.title}
+                            {u.ref.course.grade !== child.grade && <span className="ml-1 text-xs font-normal text-ink-soft">({gradeLabel(u.ref.course.grade, child.framework)})</span>}
                           </td>
                           <td className="py-1.5 pr-3 text-ink-soft">{u.ref.unit.standards[child.framework]}</td>
                           <td className="py-1.5 pr-3 whitespace-nowrap">{level ? `${level.icon} ${level.label}` : "Not started"}</td>

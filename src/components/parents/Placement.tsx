@@ -11,6 +11,9 @@ import { compareToGrade, latestPlacements, PLACEMENT_SUBJECTS, placementSentence
 import { useLocale, useSay } from "@/lib/say";
 import { eventsFor, useStore } from "@/lib/store";
 import { useGradeContent } from "@/lib/useGradeContent";
+import { useFlag } from "@/lib/remoteFlags";
+import { setSubjectGrade, subjectGradeFor } from "@/lib/subjectGrades";
+import { SelectMenu } from "../SelectMenu";
 import type { Profile } from "@/lib/model";
 import { ChildTabs, NoChildren, PageTitle, Panel, useChild } from "./common";
 
@@ -21,12 +24,57 @@ function unitTitle(key: string, framework?: string): string {
   return parsed ? `${gradeLabel(parsed.grade, framework)} · ${parsed.unitId}` : key;
 }
 
+/**
+ * Which grade's lessons the child practises this subject at (`subjectGrades.ts`): after a placement test, one tap
+ * to practise the placed grade in this subject only, a way back to their own grade, and a picker for any grade.
+ */
+function SubjectLevel({ child, subject, placed }: { child: Profile; subject: SubjectId; placed?: GradeId }) {
+  const settings = useStore((s) => s.settings[child.id]);
+  const updateSettings = useStore((s) => s.updateSettings);
+  const say = useSay();
+  const meta = getSubjectMeta(subject);
+  const name = meta.title.big.toLowerCase();
+  const current = subjectGradeFor(child, settings, subject);
+  const own = gradeLabel(child.grade, child.framework);
+  const label = (g: GradeId) => gradeLabel(g, child.framework);
+  const set = (grade: GradeId) => updateSettings(child.id, setSubjectGrade(child, settings, subject, grade));
+  const offerPlaced = placed && placed !== current;
+  return (
+    <div className="mt-4 flex flex-col gap-3 rounded-xl border border-[#4f8ef7]/40 bg-[#eef4ff] p-4">
+      <p className="font-read">
+        {current === child.grade ? say(`${child.name} practises ${own} ${name}, like the rest of their lessons.`) : say(`${child.name} practises ${label(current)} ${name}. Their other subjects stay at ${own}.`)}
+        {offerPlaced && ` ${say(`To practise ${label(placed)} ${name} instead, switch just this subject. Progress is kept either way.`)}`}
+      </p>
+      <div className="flex flex-wrap items-end gap-3">
+        {offerPlaced && (
+          <button type="button" onClick={() => set(placed)} className="min-h-11 rounded-xl bg-[#253047] px-3 py-2 text-sm font-bold text-white">
+            {say(`Practise ${label(placed)} ${name}`)}
+          </button>
+        )}
+        {current !== child.grade && placed !== child.grade && (
+          <button type="button" onClick={() => set(child.grade)} className="btn btn-soft min-h-11 px-3 text-sm">
+            {say(`Back to ${own} ${name}`)}
+          </button>
+        )}
+        <SelectMenu
+          label={say(`${meta.title.big} lessons from`)}
+          value={current}
+          onChange={(g) => set(g as GradeId)}
+          options={getFramework(child.framework).grades.map((g) => ({ value: g, label: g === child.grade ? `${label(g)} (their grade)` : label(g) }))}
+          block={false}
+        />
+      </div>
+    </div>
+  );
+}
+
 function SubjectResult({ child, subject, result }: { child: Profile; subject: SubjectId; result?: PlacementEvent }) {
   const meta = getSubjectMeta(subject);
   const updateProfile = useStore((s) => s.updateProfile);
   const say = useSay();
   const locale = useLocale();
   const where = result ? compareToGrade(result.placedGrade, child.grade) : "at";
+  const levels = useFlag("subject-levels");
   return (
     <Panel>
       <div className="flex flex-wrap items-center justify-between gap-3">
@@ -39,9 +87,12 @@ function SubjectResult({ child, subject, result }: { child: Profile; subject: Su
         </Link>
       </div>
       {!result ? (
-        <p className="mt-3 font-read text-ink-soft">
-          Not taken yet. {child.name} answers about 8 to 16 questions, starting at {gradeLabel(child.grade, child.framework)} and moving up or down. It takes about 5 minutes and is not scored out loud, so it stays low-pressure.
-        </p>
+        <>
+          <p className="mt-3 font-read text-ink-soft">
+            Not taken yet. {child.name} answers about 8 to 16 questions, starting at {gradeLabel(child.grade, child.framework)} and moving up or down. It takes about 5 minutes and is not scored out loud, so it stays low-pressure.
+          </p>
+          {levels && <SubjectLevel child={child} subject={subject} />}
+        </>
       ) : (
         <>
           <p className="mt-3 text-lg font-bold">{placementSentence(result, child.name, child.grade, child.framework)}</p>
@@ -82,15 +133,19 @@ function SubjectResult({ child, subject, result }: { child: Profile; subject: Su
               </div>
             )}
           </div>
-          {where !== "at" && (
-            <div className="mt-4 flex flex-wrap items-center gap-3 rounded-xl border border-[#4f8ef7]/40 bg-[#eef4ff] p-4">
-              <p className="min-w-0 flex-1 font-read">
-                {say(`Lessons follow ${child.name}'s grade (${gradeLabel(child.grade, child.framework)}). To practise ${gradeLabel(result.placedGrade, child.framework)} lessons instead, switch the grade. Their progress is kept.`)}
-              </p>
-              <button type="button" onClick={() => updateProfile(child.id, { grade: result.placedGrade })} className="rounded-xl bg-[#253047] px-3 py-2 text-sm font-bold text-white">
-                {say(`Practise ${gradeLabel(result.placedGrade, child.framework)}`)}
-              </button>
-            </div>
+          {levels ? (
+            <SubjectLevel child={child} subject={subject} placed={result.placedGrade} />
+          ) : (
+            where !== "at" && (
+              <div className="mt-4 flex flex-wrap items-center gap-3 rounded-xl border border-[#4f8ef7]/40 bg-[#eef4ff] p-4">
+                <p className="min-w-0 flex-1 font-read">
+                  {say(`Lessons follow ${child.name}'s grade (${gradeLabel(child.grade, child.framework)}). To practise ${gradeLabel(result.placedGrade, child.framework)} lessons instead, switch the grade. Their progress is kept.`)}
+                </p>
+                <button type="button" onClick={() => updateProfile(child.id, { grade: result.placedGrade })} className="rounded-xl bg-[#253047] px-3 py-2 text-sm font-bold text-white">
+                  {say(`Practise ${gradeLabel(result.placedGrade, child.framework)}`)}
+                </button>
+              </div>
+            )
           )}
         </>
       )}

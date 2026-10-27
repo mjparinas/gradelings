@@ -1,4 +1,4 @@
-import { allUnitRefs, type UnitRef } from "@/content";
+import { practiceUnitRefs, type SubjectGrades, type UnitRef } from "@/content";
 import type { FrameworkId, GradeId, SubjectId } from "@/content/types";
 import type { Derived } from "./derive";
 import { FOCUS_BOOST } from "./focus";
@@ -18,6 +18,8 @@ export interface Pick {
 export interface PickOptions {
   grade: GradeId;
   framework: FrameworkId;
+  /** Subjects the child practises at another grade (`subjectGrades.ts`). */
+  subjectGrades?: SubjectGrades;
   derived: Derived;
   subjects: SubjectId[];
   /** Unit keys asked most recently, newest last. */
@@ -70,7 +72,7 @@ export function difficultyFor(mastery: number, mode: PickOptions["mode"]): 1 | 2
 }
 
 export function candidates(opts: PickOptions): UnitRef[] {
-  return allUnitRefs(opts.grade, opts.framework).filter(
+  return practiceUnitRefs(opts.grade, opts.framework, opts.subjectGrades).filter(
     (r) =>
       opts.subjects.includes(r.course.subject) &&
       (!opts.subject || r.course.subject === opts.subject) &&

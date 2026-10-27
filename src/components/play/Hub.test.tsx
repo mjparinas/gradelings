@@ -36,6 +36,7 @@ vi.mock("@/lib/store", () => ({
   eventsFor: (events: { profileId: string }[], p: { id: string }) => events.filter((e) => e.profileId === p.id),
   useActiveProfile: () => ({ id: "p1", name: "Ava", grade: "2", framework: "ca-bc", companion: "ollie" }),
   useChildSettings: () => h.settings,
+  useSubjectGrades: () => ({}),
   useDerived: () => h.derived,
 }));
 vi.mock("./FamilyCards", () => ({ RewardCard: () => <div data-testid="reward-card" />, TogetherCard: () => <div data-testid="together-card" /> }));

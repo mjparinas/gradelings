@@ -24,10 +24,11 @@ const h = vi.hoisted(() => {
   };
 });
 
-vi.mock("@/content", () => ({ allUnitRefs: () => h.refs }));
+vi.mock("@/content", () => ({ allUnitRefs: () => h.refs, practiceUnitRefs: () => h.refs }));
 vi.mock("@/lib/store", () => ({
   useActiveProfile: () => ({ id: "p1", name: "Ava", grade: "2", framework: "ca-bc", companion: "ollie" }),
   useChildSettings: () => h.settings,
+  useSubjectGrades: () => ({}),
   useDerived: () => h.d,
 }));
 vi.mock("@/lib/router", () => ({ go: vi.fn(), useRoute: () => ({ path: ["stickers"], query: new URLSearchParams(h.query) }) }));
