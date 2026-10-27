@@ -1,0 +1,1883 @@
+       South Dakota
+       Mathematics
+       Standards
+Adopted May 4, 2026
+
+
+
+
+       Adopted May 4, 2026   | South Dakota Mathematics Standards
+Summary of Changes
+ The 2026 South Dakota Mathematics Standards introduces several important updates aimed at
+ improving clarity, coherence, and instructional alignment across grade levels. Several significant
+ updates were made to improve clarity and readability, ensure alignment across grade levels, and
+ incorporate the mathematical practices within the standards. The key changes are as follows:
+
+ 1. Structural and Organizational Enhancements
+      • Domain-Based Organization: The new standards are organized by clear domains (e.g.,
+          Numbers, Arithmetic, Geometry), each with subcategories (clusters) that reflect conceptual
+          groupings. This structure improves readability and instructional planning.
+      • Standard Coding System: Each standard is now labeled with a consistent code (e.g., 3.N.1 for
+          3rd Grade Numbers), making it easier to reference and track across documents and
+          assessments.
+      • Grade-Level Clarity: Each grade’s standards are presented in a self-contained section, reducing
+          the need for cross-referencing and supporting vertical alignment.
+
+ 2. Content Refinements and Emphases
+     • Expanded Fluency Expectations: Fluency standards are clearly labeled and include expectations
+         for mental math, fact recall, and efficient computation strategies.
+     • Conceptual Understanding and Procedural Fluency: the standards are intentionally designed to
+         balance conceptual understanding-the “why” behind the math-with procedural fluency-the
+         ability to apply skills efficiently and accurately. This blend ensures students develop both deep
+         comprehension and practical competence across all grade levels.
+     • Real-world Contexts: many standards now explicitly call for application in real-world scenarios,
+         especially in measurement, data, and functions.
+
+ 3. Instructional Shifts
+      • Mathematical Practices Embedded: While not listed separately, the Standards for
+          Mathematical Practice are embedded throughout, with a focus on reasoning, modeling, and
+          problem-solving.
+      • Visual and Concrete Representations: There is increased emphasis on using drawings,
+          manipulatives and visual models to support understanding, particularly in early grades.
+
+ 4. Improving Clarity of Standards:
+     • Language and terminology were simplified to ensure that the standards are easily understood
+         by educators, students, and parents.
+     • Ambiguous or overly complex phrasing was revised to provide clear expectations and goals.
+     • Redundant standards were consolidated to streamline the framework and eliminate confusion.
+
+
+
+
+Adopted May 4, 2026                                                  | South Dakota Mathematics Standards
+Standards Revision Committee
+
+          Name                   Organization                                       Position
+  Nicole Bisgaard      Black Hills Special Services           Learning Specialist
+  Victoria Borns       Clark School District                  1st Grade Teacher
+  Ruth Coates          Hill City School District              High School Math Teacher
+  Susan Fairchild      Watertown High School                  High School Math Teacher
+  Zach Gors            Tri-Valley School District             Elementary Principal
+  Shaun Groen          Sioux Falls School District            Middle School Math Instructional Coach
+  Tim Heil             Lemmon School District                 4th Grade Teacher
+  Becky Kitts          Pierre School District                 K-2 Title I Teacher
+  Cole Knippling       Parkston School District               High School Principal
+  Kristyn LaBine       Douglas School District                Middle School Math Teacher
+  Brent Liechti        Highmore-Harrold School District       High School Math Teacher
+  Dr. Monte Meyerink   Northern State University              Assistant Professor of Mathematics Education
+  Alyssa Morrisette    Oglala Lakota School District          Middle School Math Teacher
+  Kristen Pittmann     Agar-Blunt-Onida School District       Middle School Math Teacher
+  Dena Sievers         Aberdeen School District               Middle School Math Teacher
+  Kendra Sundall       Sioux Falls School District            K-5 Instructional Math Coach
+  Sarah Timmer         Mitchell Catholic Parishes             K-5 Principal
+  Megan Wilson         Sanborn Central School District        High School Math Teacher
+                                               Support Team
+  Hayley Miller        Department of Education                DOE Project Lead
+  Kelly Royer          Department of Education                DOE Project Lead
+  Vera Van Winkle      Department of Education                DOE Project Lead
+
+
+
+
+Adopted May 4, 2026                                               | South Dakota Mathematics Standards
+How to Read the Standards
+The Math standards are organized into grade level and structured into clearly defined domains such as
+Numbers, Geometry, and Measurement. Within each domain, standards are grouped by conceptual
+subcategories called clusters (e.g., Place Value, Operations and Properties), and each standard is labeled
+with a consistent code (e.g., 3.G.1).
+
+  K-5 Domain Code                  K-5 Domain Name
+  N                                Numbers
+  OA                               Operations and Algebraic Thinking
+  M                                Measurement
+  G                                Geometry
+  MF                               Mathematical Fluency
+  F                                Fractions
+  Middle School Domain Code        Middle School Domain Name
+  NC                               Number Concepts and Computations
+  PR                               Proportional Relationships
+  A                                Algebra
+  G                                Geometry
+  M                                Measurement
+  SP                               Statistics and Probability
+  RF                               Relationships and Functions
+  High School Domain Code          High School Domain Name
+  E                                Expressions
+  AF                               Algebraic Functions
+  LF                               Linear Functions, Equations, and Inequalities
+  QF                               Quadratic Functions and Equations
+  EF                               Exponential Functions and Equations
+  SP                               Statistics and Probability
+  RT                               Right Triangles
+  C                                Circles
+  GF                               Geometric Figures
+  LA                               Lines and Angles
+  T                                Transformations
+  SC                               Similarity and Congruency
+  EL                               Exponential and Logarithmic Functions and Equations
+  TF                               Trigonometric Functions and Equations
+  PR                               Polynomial, Rational and Other Functions and Equations
+  FR                               Function and Relationships
+  TF                               Trigonometry
+  PP                               Polar and Parametric
+  VM                               Vectors and Matrices
+  CS                               Conic Sections
+  SS                               Sequence and Series
+
+
+
+Adopted May 4, 2026                                                   | South Dakota Mathematics Standards
+ Example Standard
+Geometry
+Shapes
+K.G.1      Understand shapes in diﬀerent categories may share attributes and can deﬁne a larger
+           category.
+
+Geometry = Domain Name, Shapes = Cluster Name. K.G.1 = Standards abbreviation
+
+K = Grade Level/Course (Kindergarten), G = Domain name (Geometry), 1 = Standard number
+
+High School Standards Course Abbreviations
+
+A1 = Algebra 1, G = Geometry, A2 = Algebra 2
+
+
+
+
+Adopted May 4, 2026                                               | South Dakota Mathematics Standards
+Standards for Mathematical Practices
+The Standards for Mathematical Practice are eight practices that describe the habits of mind and
+actions of mathematically proﬁcient students and serve as a guide for educators to cultivate deep,
+meaningful engagement with mathematics across all grade levels. These practices emphasize not only
+what students should know, but how they should think and interact with mathematical ideas. They
+reﬂect the skills and dispositions that students need to become eﬀective problem solvers, critical
+thinkers, and lifelong learners in a world increasingly shaped by quantitative reasoning. The Standards
+for Mathematical Practice are not intended to be taught in isolation. Instead, they are integrated with
+the content standards to support a balanced approach to procedural ﬂuency, conceptual understanding,
+and application.
+
+   1. Make sense of problems and persevere in solving them.
+      Mathematically proﬁcient students start by explaining to themselves the meaning of a problem
+      and looking for entry points to its solution. They analyze givens, constraints, relationships, and
+      goals. They make conjectures about the form and meaning of the solution and plan a solution
+      pathway rather than simply jumping into a solution attempt. They consider analogous problems,
+      and try special cases and simpler forms of the original problem in order to gain insight into its
+      solution. They monitor and evaluate their progress and change course if necessary. Older
+      students might, depending on the context of the problem, transform algebraic expressions or
+      change the viewing window on their graphing calculator to get the information they need.
+      Mathematically proﬁcient students can explain correspondences between equations, verbal
+      descriptions, tables, and graphs or draw diagrams of important features and relationships, graph
+      data, and search for regularity or trends. Younger students might rely on using concrete objects
+      or pictures to help conceptualize and solve a problem. Mathematically proﬁcient students check
+      their answers to problems using a diﬀerent method, and they continually ask themselves, "Does
+      this make sense?" They can understand the approaches of others to solving complex problems
+      and identify correspondences between diﬀerent approaches.
+
+   2. Reason abstractly and quantitatively.
+      Mathematically proﬁcient students make sense of quantities and their relationships in problem
+      situations. They bring two complementary abilities to bear on problems involving quantitative
+      relationships: the ability to decontextualize—to abstract a given situation and represent it
+      symbolically and manipulate the representing symbols as if they have a life of their own, without
+      necessarily attending to their referents—and the ability to contextualize, to pause as needed
+      during the manipulation process in order to probe into the referents for the symbols involved.
+      Quantitative reasoning entails habits of creating a coherent representation of the problem at
+      hand; considering the units involved; attending to the meaning of quantities, not just how to
+      compute them; and knowing and ﬂexibly using diﬀerent properties of operations and objects.
+
+   3. Construct viable arguments and critique the reasoning of others.
+      Mathematically proﬁcient students understand and use stated assumptions, deﬁnitions, and
+      previously established results in constructing arguments. They make conjectures and build a
+      logical progression of statements to explore the truth of their conjectures. They are able to
+
+
+
+
+Adopted May 4, 2026                                                 | South Dakota Mathematics Standards
+       analyze situations by breaking them into cases, and can recognize and use counterexamples.
+       They justify their conclusions, communicate them to others, and respond to the arguments of
+       others. They reason inductively about data, making plausible arguments that take into account
+       the context from which the data arose. Mathematically proﬁcient students are also able to
+       compare the eﬀectiveness of two plausible arguments, distinguish correct logic or reasoning
+       from that which is ﬂawed, and—if there is a ﬂaw in an argument—explain what it is. Elementary
+       students can construct arguments using concrete referents such as objects, drawings, diagrams,
+       and actions. Such arguments can make sense and be correct, even though they are not
+       generalized or made formal until later grades. Later, students learn to determine domains to
+       which an argument applies. Students at all grades can listen or read the arguments of others,
+       decide whether they make sense, and ask useful questions to clarify or improve the arguments.
+
+   4. Model with mathematics.
+      Mathematically proﬁcient students can apply the mathematics they know to solve problems
+      arising in everyday life, society, and the workplace. In early grades, this might be as simple as
+      writing an addition equation to describe a situation. In middle grades, a student might apply
+      proportional reasoning to plan a school event or analyze a problem in the community. By high
+      school, a student might use geometry to solve a design problem or use a function to describe
+      how one quantity of interest depends on another. Mathematically proﬁcient students who can
+      apply what they know are comfortable making assumptions and approximations to simplify a
+      complicated situation, realizing that these may need revision later. They are able to identify
+      important quantities in a practical situation and map their relationships using such tools as
+      diagrams, two-way tables, graphs, ﬂowcharts and formulas. They can analyze those relationships
+      mathematically to draw conclusions. They routinely interpret their mathematical results in the
+      context of the situation and reﬂect on whether the results make sense, possibly improving the
+      model if it has not served its purpose.
+
+   5. Use appropriate tools strategically.
+      Mathematically proﬁcient students consider the available tools when solving a mathematical
+      problem. These tools might include pencil and paper, concrete models, a ruler, a protractor, a
+      calculator, a spreadsheet, a computer algebra system, a statistical package, or dynamic geometry
+      software. Proﬁcient students are suﬃciently familiar with tools appropriate for their grade or
+      course to make sound decisions about when each of these tools might be helpful, recognizing
+      both the insight to be gained and their limitations. For example, mathematically proﬁcient high
+      school students analyze graphs of functions and solutions generated using a graphing calculator.
+      They detect possible errors by strategically using estimation and other mathematical knowledge.
+      When making mathematical models, they know that technology can enable them to visualize the
+      results of varying assumptions, explore consequences, and compare predictions with data.
+      Mathematically proﬁcient students at various grade levels are able to identify relevant external
+      mathematical resources, such as digital content located on a website, and use them to pose or
+      solve problems. They are able to use technological tools to explore and deepen their
+      understanding of concepts.
+
+
+
+
+Adopted May 4, 2026                                                | South Dakota Mathematics Standards
+   6. Attend to precision.
+      Mathematically proﬁcient students try to communicate precisely to others. They try to use clear
+      deﬁnitions in discussion with others and in their own reasoning. They state the meaning of the
+      symbols they choose, including using the equal sign consistently and appropriately. They are
+      careful about specifying units of measure, and labeling axes to clarify the correspondence with
+      quantities in a problem. They calculate accurately and eﬃciently, express numerical answers
+      with a degree of precision appropriate for the problem context. In the elementary grades,
+      students give carefully formulated explanations to each other. By the time they reach high school
+      they have learned to examine claims and make explicit use of deﬁnitions.
+
+   7. Look for and make use of structure.
+      Mathematically proﬁcient students look closely to discern a pattern or structure. Young students,
+      for example, might notice that three and seven more is the same amount as seven and three
+      more, or they may sort a collection of shapes according to how many sides the shapes have.
+      Later, students will see 7 × 8 equals the well-remembered 7 × 5 + 7 × 3 in preparation for
+      learning about the distributive property. In the expression 𝑥𝑥 2 + 9𝑥𝑥 + 14, older students can see
+      the 14 as 2 × 7 and the 9 as 2 + 7. They recognize the signiﬁcance of an existing line in a
+      geometric ﬁgure and can use the strategy of drawing an auxiliary line for solving problems. They
+      also can step back for an overview and shift perspective. They can see complicated things, such
+      as some algebraic expressions, as single objects or as being composed of several objects. For
+      example, they can see 5 − 3(𝑥𝑥 − 𝑦𝑦)2 as 5 minus a positive number times a square and use that
+      to realize that its value cannot be more than 5 for any real numbers x and y.
+
+   8. Look for and express regularity in repeated reasoning.
+      Mathematically proﬁcient students notice if calculations are repeated and look both for general
+      methods and for shortcuts. Upper elementary students might notice when dividing 25 by 11 that
+      they are repeating the same calculations over and over again, and conclude they have a
+      repeating decimal. By paying attention to the calculation of slope as they repeatedly check
+      whether points are on the line through (1, 2) with slope 3, middle school students might abstract
+                      𝑦𝑦−2
+       the equation        = 3. Noticing the regularity in the way terms cancel when expanding
+                      𝑥𝑥−1
+                                   2                            3     2
+       (𝑥𝑥 − 1)(𝑥𝑥 + 1), (𝑥𝑥 − 1)(𝑥𝑥 + 𝑥𝑥𝑥𝑥 + 1) and (𝑥𝑥 − 1)(𝑥𝑥 + 𝑥𝑥 + 𝑥𝑥 + 1) might lead them to the
+       general formula for the sum of a geometric series. As they work to solve a problem,
+       mathematically proﬁcient students maintain oversight of the process, while attending to the
+       details. They continually evaluate the reasonableness of their intermediate results
+
+
+
+
+Adopted May 4, 2026                                                 | South Dakota Mathematics Standards
+Standard Algorithms
+Standard algorithms are eﬃcient, reliable procedures for performing the four basic operations of
+arithmetic: addition, subtraction, multiplication, and division. These algorithms are foundational to
+mathematical ﬂuency and are typically introduced after students have developed a conceptual
+understanding of number operations and place value.
+
+The purpose of teaching standard algorithms is to provide students with consistent, generalizable
+methods for solving problems with accuracy and eﬃciency. Mastery of these algorithms supports
+students in performing multi-digit calculations, estimating, and checking for reasonableness in real-world
+and academic context. Examples for the four major arithmetic standard algorithms can be found below.
+
+
+
+
+Adopted May 4, 2026                                                   | South Dakota Mathematics Standards
+     South Dakota State Standards for Mathematics
+Kindergarten Mathematics Standards ................................................................................ 1
+
+1st Grade Mathematics Standards ..................................................................................... 3
+
+2nd Grade Mathematics Standards..................................................................................... 5
+
+3rd Grade Mathematics Standards ..................................................................................... 7
+
+4th Grade Mathematics Standards ................................................................................... 10
+
+5th Grade Mathematics Standards ................................................................................... 13
+
+6th Grade Mathematics Standards ................................................................................... 16
+
+7th Grade Mathematics Standards ................................................................................... 20
+
+8th Grade Mathematics Standards ................................................................................... 23
+
+Algebra 1 Mathematics Standards ................................................................................... 27
+
+Geometry Mathematics Standards .................................................................................. 30
+
+Algebra 2 Mathematics Standards ................................................................................... 34
+
+Pre-Calculus Mathematics Standards ............................................................................... 38
+
+
+
+
+Adopted May 4, 2026                                                           | South Dakota Mathematics Standards
+                         Kindergarten Mathematics Standards
+
+Numbers
+Names, Sequence, & Counting
+K.N.1     Count to 100 by ones and tens.
+K.N.2     Start counting forward from any number up to 100 and count backward from any number
+          within 20.
+K.N.3     Read, write, and identify numbers from 0 to 20.
+K.N.4     Count objects using one-to-one correspondence.
+K.N.5     Understand that the last number name said tells the number of objects counted regardless
+          of arrangement or the order in which they were counted (cardinality).
+K.N.6     Given a number within 20, identify one more.
+K.N.7     Count up to 20 objects in a line, rectangular array, and circle.
+K.N.8     Count up to 10 objects in a scattered arrangement.
+K.N.9     For any number from 1 to 9, ﬁnd the number that makes 10 when added to the given
+          number.
+K.N.10    Given a number(s) from 0-20, count out that many objects.
+
+Comparison
+K.N.11     Identify whether the number of objects in one group is greater than, less than, or equal to
+           the objects of another group (up to ten).
+K.N.12     Identify whether a written number is greater than, less than, or equal to another written
+           number (0-10).
+K.N.13     Describe the relative positions of objects using terms such as above, below, beside, in front
+           of, behind, and next to.
+
+Operations and Algebraic Thinking
+Number Operations
+K.OA.1   Represent addition and subtraction within ten using objects, ﬁngers, drawings, mental
+         images, or verbal explanations.
+K.OA.2   Represent the operations of addition and subtraction using an equation.
+K.OA.3   Demonstrate understanding that addition is putting together, getting more, or counting on.
+K.OA.4   Demonstrate understanding that subtraction is taking away, taking apart, or counting back.
+K.OA.5   Solve word problems, identify the correct operation needed (add or subtract within ten) and
+         solve using objects or drawings.
+K.OA.6   Find diﬀerent ways that a whole number (1 to 10) can be decomposed into two parts by
+         using a visual representation or equation.
+K.OA.7   Find all the ways the number 5 can be broken into two parts using visual representations or
+         equations.
+K.OA.8   Decompose and compose numbers 11-19 into tens and ones, using objects, drawings, or
+         equations.
+
+
+
+Adopted May 4, 2026                                                 | South Dakota Mathematics Standards 1
+Measurement
+Measurement Concepts
+K.M.1    Describe measurable traits of an object such as length, weight, or size.
+K.M.2    Compare objects using the same measurable trait.
+
+Time and Money
+K.M.3     Identify a clock as a tool that measures time of day. Answer questions about time of day and
+          duration of time using both analog and digital clocks (morning, afternoon, evening, minute,
+          hour).
+K.M.4     Identify a calendar as a tool that measures time in days, months, weeks, years. Answer
+          questions about time sequencing (yesterday, today, tomorrow).
+K.M.5     Identify pennies and dimes by name and value.
+K.M.6     Count groups of pennies and groups of dimes by their values (coins not combined).
+
+Data
+K.M.7      Collect and sort objects into categories.
+
+Geometry
+Shapes
+K.G.1      Identify and sort shapes as two-dimensional or three-dimensional.
+K.G.2      Name and describe two-dimensional shapes (circles, triangles, squares, and rectangles)
+           using attributes (sides, vertices, square corners).
+K.G.3      Identify and draw two-dimensional shapes (circles, triangles, squares, rectangles, and
+           trapezoid) in a variety of orientations.
+K.G.4      Identify three-dimensional shapes (cube, cone, cylinder, or sphere).
+K.G.5      Build and draw shapes found in the real-world.
+K.G.6      Build simple shapes to form larger shapes.
+
+Mathematical Fluency
+K.MF.1     Fluently add within 5.
+K.MF.2     Fluently subtract within 5.
+K.MF.3     Recognize objects within 5 (tallies, ﬁve frame, ﬁngers, dominoes, dice, and scattered).
+
+
+
+
+Adopted May 4, 2026                                                | South Dakota Mathematics Standards 2
+                           1st Grade Mathematics Standards
+
+Numbers
+Names, Sequence, and Comparison
+1.N.1     Count to 120 by 10s.
+1.N.2     Count forward and backward from any number within 120.
+1.N.3     Read, write, and identify numbers from 0 to 120.
+1.N.4     Compose and decompose two-digit numbers into tens and ones.
+1.N.5     Represent two-digit numbers (drawings, ten-frames, connecting cubes, base-ten blocks,
+          place value chart, etc.).
+1.N.6     Count objects up to 120 using groups of tens and ones.
+1.N.7     Compare two two-digit numbers using the symbols <, >, =, based on the value of the 10s
+          and 1s in the given numbers.
+
+Operations and Algebraic Thinking
+Number Operations
+1.OA.1   Understand counting on as addition and counting back as subtraction.
+1.OA.2   Demonstrate understanding of addition problems using properties (commutative,
+         associative, and additive identity) within 20.
+1.OA.3   Solve addition and subtraction problems within 20, using objects, drawings, number line, or
+         equations with a symbol for the unknown number.
+1.OA.4   Solve addition and subtraction word problems within 20, including problems with 3 whole
+         addends.
+1.OA.5   Given a number within 100, add and subtract multiples of 10 within 100 using multiple
+         strategies that reﬂect an understanding of place value.
+1.OA.6   Add a two-digit and one-digit number (with or without regrouping) using multiple strategies
+         that reﬂect an understanding of place value.
+1.OA.7   Subtract a two digit and one digit number (with or without borrowing) using multiple
+         strategies that reﬂect an understanding of place value.
+1.OA.8   Subtract multiples of 10 in the range 10-90 from multiples of 10 in the range 10-90 (positive
+         or zero diﬀerences).
+1.OA.9   Demonstrate understanding of inverse operations between addition and subtraction by
+         creating equivalent equations within 20.
+1.OA.10  Apply the understanding of the equal sign to determine if equations involving addition or
+         subtraction are true or false.
+1.OA.11  Given an addition or subtraction equation, ﬁnd an unknown value in any position.
+
+
+
+
+Adopted May 4, 2026                                               | South Dakota Mathematics Standards 3
+Measurement
+Measurement Concepts
+1.M.1    Order three objects by length; compare the lengths of two objects indirectly by using a third
+         object.
+1.M.2    Measure the length of an object by lining up same-size units with no gaps or overlaps and
+         counting the number of units.
+
+Time and Money
+1.M.3     Tell and write time to half-hour and hour intervals on analog and digital clocks.
+1.M.4     Identify coins by name and value, including penny, nickel, dime, and quarter.
+1.M.5     Find the value of combinations of U.S. coins up to one dollar using pennies, nickels and
+          dimes and represent with ¢.
+
+Data
+1.M.6       Organize, represent, and interpret data with up to three categories.
+1.M.7       Interpret and compare data represented in a picture/bar graph or tally chart.
+
+Geometry
+Shapes
+1.G.1       Distinguish between deﬁning attributes (such as triangles are three-sided) and non-deﬁning
+            attributes (such as color, orientation, or size).
+1.G.2       Use deﬁning attributes to build and draw shapes.
+1.G.3       Compose and identify two-dimensional shapes including triangles, squares, rectangles,
+            trapezoids, circles, half-circles, and quarter-circles.
+1.G.4       Identify right rectangular prisms (three-dimensional solids with rectangular faces).
+1.G.5       Partition circles and rectangles into two and four equal parts and describe the parts using
+            the words halves, fourths, and quarters and understand that more equal shares create small
+            shares.
+
+Mathematical Fluency
+1.MF.1      Fluently add within 20.
+1.MF.2      Fluently subtract within 20.
+1.MF.3      Recall from memory addition facts within 10.
+1.MF.4      Recall from memory subtraction facts within 10.
+1.MF.5      Mentally ﬁnd 10 more or 10 less than a given two-digit number.
+
+
+
+
+Adopted May 4, 2026                                                | South Dakota Mathematics Standards 4
+                           2nd Grade Mathematics Standards
+
+Numbers
+Counting
+2.N.1       Count forward and backward from any number by 10s and 100s up to 1000.
+2.N.2       Count forward and backward by 5s to 120.
+2.N.3       Count forward and backward by 2s to 50
+2.N.4       Determine whether a number is odd or even within 50.
+
+Place Value
+2.N.5       Given a two-digit or three-digit number, ﬁnd the distance to the next ten or hundred, and
+            prior ten or hundred.
+2.N.6       Compose and decompose three-digit numbers into hundreds, tens and ones.
+2.N.7       Read, write, and identify numbers up to 1000 in standard form, word form, and expanded
+            form.
+2.N.8       Compare two three-digit numbers using the symbols <, >, =, based on the value of the
+            hundreds, tens, and ones in the given numbers.
+
+Operations and Algebraic Thinking
+Number Operations
+2.OA.1   Demonstrate understanding of addition problems using properties (commutative,
+         associative, and additive identity) within 100.
+2.OA.2   Solve addition and subtraction problems within 100, using objects, drawings, open number
+         lines, or equations with a symbol for the unknown number in any position.
+2.OA.3   Solve addition and subtraction word problems within 100.
+2.OA.4   Add up to four two-digit numbers using multiple strategies.
+2.OA.5   Use place value understanding and visual models (e.g., base-ten blocks, number lines) to
+         explain and justify addition and subtraction strategies up to 1000.
+2.OA.6   Given a rectangular array (up to 5 x 5), use repeated addition to ﬁnd the total number of
+         objects; write an addition equation to express the total.
+
+Fractions
+Fraction Foundation
+2.F.1       Partition circles and rectangles into two, three or four equal parts then count and describe
+            the parts using the words halves, thirds, and fourths. ("one-fourth, two-fourths, three-
+            fourths").
+
+Measurement
+Measurement Concepts
+2.M.1    Explore length of an object by lining up inch-sized manipulatives with no gaps or overlaps.
+2.M.2    Estimate the length of an object using inches, feet, and yards.
+
+
+
+Adopted May 4, 2026                                                 | South Dakota Mathematics Standards 5
+2.M.3       Measure the length of objects using inches, feet, and yards.
+2.M.4       Explore length of an object by lining up centimeter and decimeter-sized manipulatives with
+            no gaps or overlaps.
+2.M.5       Estimate the length of an object using centimeters, decimeters, and meters.
+2.M.6       Measure the length of objects using centimeters, decimeters, and meters.
+
+Time and Money
+2.M.7     Tell and write time to the nearest ﬁve minutes on analog and digital clocks and use a.m. and
+          p.m. appropriately.
+2.M.8     Solve problems involving time in 5-minute intervals.
+2.M.9     Find the value of combinations of U.S. coins up to $1 and bills up to $100.
+2.M.10    Identify and count coins and bills and apply that understanding to solve word problems.
+2.M.11    Solve word problems involving dollar bills, quarters, dimes, nickels, and pennies, using dollar
+          sign and cent sign symbols appropriately.
+
+Data
+2.M.12      Create tables, line plots, and bar graphs to represent a given set of data with up to four
+            categories.
+2.M.13      Interpret and analyze data presented with tables, line plots, picture graphs, and bar graphs.
+
+Geometry
+Shapes
+2.G.1       Recognize, identify, and describe attributes (such as number of angles and number of sides)
+            of polygons including triangles, quadrilaterals, pentagons, hexagons, and octagons.
+2.G.2       Describe the diﬀerences between quadrilaterals (including squares, rectangles, and
+            trapezoids) using attributes (such as congruent sides, parallel sides, and right angles).
+2.G.3       Identify regular and irregular two-dimensional shapes.
+2.G.4       Partition a rectangle into rows and columns of same-size squares and count to ﬁnd the total
+            number of them.
+
+Mathematical Fluency
+2.MF.1      Fluently add within 100 using various strategies.
+2.MF.2      Fluently subtract within 100 using various strategies.
+2.MF.3      Recall from memory addition facts within 20
+2.MF.4      Recall from memory subtraction facts within 20.
+2.MF.5      Mentally calculate 10 more, 10 less, 100 more and 100 less than a given three-digit number
+            100-900.
+
+
+
+
+Adopted May 4, 2026                                                 | South Dakota Mathematics Standards 6
+                           3rd Grade Mathematics Standards
+
+Numbers
+Place Value
+3.N.1       Use place value understanding to round whole numbers to the nearest 10 or 100.
+3.N.2       Compose and decompose four-digit numbers into thousands, hundreds, tens, and ones.
+3.N.3       Read and write whole numbers up to 10,000 using standard form, word form, and expanded
+            form.
+
+Operations and Algebraic Thinking
+Number Operations
+3.OA.1   Use visual models (e.g., arrays, equal groups, number lines) to explain and justify
+         multiplication as combining equal groups.
+3.OA.2   Use visual models (e.g., arrays, equal groups, number lines) to explain and justify division as
+         separating into equal groups.
+3.OA.3   Solve word problems using multiplication and division within 100 using drawings and
+         equations with a symbol for the unknown quantities.
+3.OA.4   Determine the unknown whole number in a multiplication or division equation relating to
+         three whole numbers.
+3.OA.5   Apply properties of operations as strategies to multiply and divide.
+3.OA.6   Understand that multiplication and division are inverse operations.
+3.OA.7   Demonstrate understanding of multiplication and division within 100 by using arrays, equal
+         groups, and number lines to explain the relationship between the two operations.
+3.OA.8   Demonstrate understanding of addition and multiplication problems using properties
+         (commutative, associative, and identity).
+3.OA.9   Solve two-step word problems using addition, subtraction, multiplication, and division using
+         an equation with a symbol for the unknown quantity; Assess the reasonableness of answers
+         using mental computation and estimation strategies including rounding.
+3.OA.10  Identify and explain arithmetic patterns.
+
+Fractions
+Fraction Foundation
+3.F.1       Understand the denominator of a fraction represents the number of equal parts the whole is
+            broken into.
+3.F.2       Understand the numerator of a fraction represents the number of selected equal parts.
+3.F.3       Understand fractions as parts of a whole, as numbers on a number line, and as multiples of
+            unit fractions.
+3.F.4       Use number lines and area models to explain why two fractions are equivalent and how they
+            represent the same quantity (include fractions with denominators 2, 3, 4, 6 and 8).
+3.F.5       Recognize and generate equivalent fractions and explain why they are equivalent.
+
+
+
+
+Adopted May 4, 2026                                                | South Dakota Mathematics Standards 7
+3.F.6       Express whole number fractions and recognize fractions that are equivalent to whole
+            numbers.
+3.F.7       Compare two fractions with the same numerator or the same denominator using the
+            symbols <, >, =.
+
+Measurement
+Measurement Concepts
+3.M.1    Understand area to be the amount of space inside a two-dimensional shape.
+3.M.2    Understand a square unit to be a square that is 1 unit on each side and is used to measure
+         area.
+3.M.3    Understand a shape has an area of 𝑛𝑛 square units if it can be covered with 𝑛𝑛 unit squares
+         without gaps or overlaps.
+3.M.4    Measure areas by square units.
+3.M.5    Use tiling and visual models to explain how multiplying side lengths of a rectangle represents
+         its area.
+3.M.6    Solve word problems involving areas of rectangles.
+3.M.7    Use tiling with area models to represent the distributive property of multiplication.
+3.M.8    Understand that area can be found by adding the areas of non-overlapping rectangles and
+         use this method to solve real-world problems.
+3.M.9    Understand perimeter as the distance around a two-dimensional shape.
+3.M.10   Solve real-world and mathematical problems involving perimeters of polygons, including
+         ﬁnding the perimeter given the side lengths, ﬁnding unknown side lengths, and creating
+         rectangles with the same perimeter and diﬀerent areas or with the same area and diﬀerent
+         perimeters.
+3.M.11   Measure and estimate liquid volumes using the U.S. Customary and metric system.
+3.M.12   Measure and estimate masses of objects using the U.S. Customary and metric system.
+3.M.13   Solve one-step addition, subtraction, multiplication, and division word problems involving
+         masses or volumes in the same units.
+3.M.14   Measure lengths using rulers to halves and fourths of an inch.
+
+Time and Money
+3.M.15    Tell and write time to the nearest minute using an analog and digital clock.
+3.M.16    When solving word problems add, subtract, multiply and divide time to the minute.
+3.M.17    Determine the value of a collection of U.S. coins and bills up to $100.00 using decimal
+          notation.
+
+Data
+3.M.18      Create a scaled table, bar graph, circle graph, and line graph to represent a given set of data.
+3.M.19      Interpret and analyze one and two -step data problems with scaled tables, bar graphs, circle
+            graphs, and line graphs.
+3.M.20      Make a line plot using horizontal scale marked oﬀ in whole numbers, halves, or quarters.
+
+
+
+
+Adopted May 4, 2026                                                  | South Dakota Mathematics Standards 8
+Geometry
+Shapes
+3.G.1      Understand that shapes in diﬀerent categories may share attributes and can deﬁne a larger
+           category.
+3.G.2      Understand that a quadrilateral is any four-sided shape, and identify and describe the
+           relationships between various quadrilaterals, including trapezoids, parallelograms,
+           rectangles, and squares.
+3.G.3      Break apart shapes into parts with equal areas and express the area of each part as a unit
+           fraction of the whole.
+3.G.4      Determine whether a shape is a polygon or non-polygon.
+3.G.5      Classify polygons based on the number of sides.
+
+Mathematical Fluency
+3.MF.1     Fluently use multiplication strategies to mentally solve multiplication facts through 12.
+3.MF.2     Recall from memory multiplication facts (0-12) to include 0, 1, 2, 5, and 10.
+3.MF.3     Fluently add within 1,000 using various strategies.
+3.MF.4     Fluently subtract within 1,000 using various strategies.
+3.MF.5     Fluently multiply one-digit whole numbers by multiples of 10 in the range 10-90.
+
+
+
+
+Adopted May 4, 2026                                                 | South Dakota Mathematics Standards 9
+                            4th Grade Mathematics Standards
+
+Numbers
+Place Value
+4.N.1       Recognize that a digit in a given place represents ten times what it represents in the place to
+            its right.
+4.N.2       Use place value understanding to round multi-digit whole numbers to any place.
+4.N.3       Compose and decompose ﬁve-digit numbers into ten thousands, thousands, hundreds, tens,
+            and ones.
+4.N.4       Read and write whole numbers up to 1,000,000 using standard form, word form, and
+            expanded form.
+4.N.5       Compare two multi-digit numbers based on values of the digits in each place value using the
+            symbols <, >, =.
+
+Operations and Algebraic Thinking
+Number Operations
+4.OA.1   Represent and explain multiplicative comparisons using equations, drawings, and verbal
+         reasoning.
+4.OA.2   Solve real-world problems involving multiplicative comparison, using drawings and/or
+         equations with a symbol for the unknown number, and distinguish between multiplicative
+         comparison and additive comparison.
+4.OA.3   Multiply four-digit whole numbers by one-digit whole numbers, and multiply two two-digit
+         whole numbers.
+4.OA.4   Divide four digit whole numbers by one-digit divisors; quotients should be with and without
+         whole number remainders.
+4.OA.5   Interpret a remainder of a one-step division problem.
+4.OA.6   Solve multistep word problems using addition, subtraction, multiplication, and division, with
+         whole numbers and having whole number answers, including problems in which remainders
+         must be interpreted; assess the reasonableness of answers using mental computation and
+         estimation strategies including rounding.
+4.OA.7   Find factor pairs for whole numbers up to 100.
+4.OA.8   Recognize that a whole number (within 100) is a multiple of each of its factors.
+4.OA.9   Find multiples of single-digit whole numbers.
+4.OA.10  Determine whether a whole number from 1 to 100 is prime or composite.
+4.OA.11  Generate a number or shape pattern that follows a given rule, identifying apparent features
+         of the pattern that are not explicit in the rule itself.
+4.OA.12  Demonstrate understanding of addition and multiplication problems using properties
+         (commutative, associative, distributive, and identity).
+4.OA.13  Evaluate a numerical expression including addition, subtraction, multiplication, and division
+         using the order of operations of whole numbers without parenthesis and exponents.
+
+
+
+
+Adopted May 4, 2026                                                | South Dakota Mathematics Standards 10
+Fractions
+Operations and Properties
+4.F.1      Use visual models and reasoning to explain why a fraction 𝑎𝑎/𝑏𝑏 is equivalent to another
+           fraction when both the numerator and denominator are multiplied by the same number.
+4.F.2      Compare fractions with diﬀerent numerators and denominators, by creating common
+           denominators or numerators, using the symbols <, >, =.
+4.F.3      Add and subtract fractions with like denominators.
+4.F.4      Solve word problems involving addition and subtraction of fractions referring to the same
+           whole and having like denominators.
+4.F.5      Break apart fractions into sums of fractions with the same denominator and smaller
+           numerators.
+4.F.6      Add and subtract mixed numbers with like denominators using various strategies.
+4.F.7      Multiply a fraction by a whole number and a whole number by a fraction.
+4.F.8      Understand a fraction 𝑎𝑎/𝑏𝑏 is a multiple of 1/𝑏𝑏.
+4.F.9      Understand a multiple of 𝑎𝑎/𝑏𝑏 is also a multiple of 1/𝑏𝑏.
+4.F.10     Solve word problems involving multiplication of fractions by whole numbers.
+4.F.11     Add two fractions with denominator of 10 and 100 by expressing the denominator of 10 as
+           an equivalent fraction with a denominator of 100.
+4.F.12     Understand a decimal number to be a number with a whole part and a fractional part
+           separated by a decimal point.
+4.F.13     Apply decimal notation for fractions with denominators 10 or 100; locate these decimals on
+           a number line.
+4.F.14     Read, write, and describe the value of decimal numbers to the hundredths place.
+4.F.15     Compare decimals to the hundredths place on a number line and by using the symbols <, >
+           , =.
+
+Measurement
+Measurement Concepts
+4.M.1    Measure length, weight, mass, and capacity using U.S. Customary and metric systems of
+         measurement (including km, m, cm; kg, g; lb, oz.; l, ml; hr, min, sec.).
+4.M.2    Express larger units in terms of smaller units through conversions within a single system of
+         measurement.
+4.M.3    Solve word problems using addition, subtraction, multiplication, and division involving
+         distance, intervals of time, capacity, masses, and money, using fractional and decimal values.
+4.M.4    Use visual models and reasoning to explain how area and perimeter formulas for rectangles
+         relate to their side lengths and solve real-world problems.
+
+Data
+4.M.5       Make a line plot to display a data set of measurements in fractions of a unit (1/2, 1/4, 1/8)
+            and solve problems using the line plot.
+
+
+
+
+Adopted May 4, 2026                                                | South Dakota Mathematics Standards 11
+Geometry
+Geometric Measurement
+4.G.1      Recognize angles as geometric shapes that are formed where two rays share a common
+           endpoint.
+4.G.2      Measure angles in degrees using a protractor and understand a degree as 1/360 of a circle;
+           draw angles of speciﬁc measure.
+4.G.3      Classify angles as right, acute, obtuse, or straight. Draw right, acute, obtuse, and straight
+           angles.
+4.G.4      Recognize and apply the concept of additive angles: when angles are broken apart the sum
+           of the parts is equal to the angle measure of the whole.
+
+Shapes
+4.G.5       Identify, describe, and draw points, lines, segments, rays, and angles.
+4.G.6       Identify, describe, and draw intersecting, parallel, and perpendicular lines.
+4.G.7       Understand a trapezoid to be a two-dimensional shape with four sides, where exactly one
+            pair of sides is parallel.
+4.G.8       Identify and describe various quadrilaterals by their properties of parallel and perpendicular
+            lines including square, rectangle, trapezoid, and rhombus.
+4.G.9       Identify, describe, and draw equilateral, scalene, right, acute, and obtuse angles and
+            triangles.
+4.G.10      Identify and draw lines of symmetry for two-dimensional ﬁgures.
+
+Mathematical Fluency
+4.MF.1      Recall from memory multiplication facts (0-12).
+4.MF.2      Recall from memory division facts (0-12).
+4.MF.3      Fluently add and subtract multi-digit whole numbers using an algorithm including, but not
+            limited to, the standard algorithm.
+
+
+
+
+Adopted May 4, 2026                                                | South Dakota Mathematics Standards 12
+                            5th Grade Mathematics Standards
+
+Numbers
+Place Value
+5.N.1       Recognize that a digit in a given place represents ten times what it represents in the place to
+            its right and 1/10 what it represents in the place to its left.
+5.N.2       Use place value reasoning and patterns to explain how multiplying or dividing by powers of
+            10 aﬀects the value and placement of digits in a number.
+5.N.3       Read and write decimal numbers to the thousandths place using standard form, word form
+            and expanded form.
+5.N.4       Order and compare decimal numbers to the thousandths place using the symbols
+             <, >, =.
+5.N.5       Apply place value understanding to round decimals to any decimal place up to the
+            hundredths place.
+
+Operations and Algebraic Thinking
+Number Operations
+5.OA.1   Write and evaluate numerical expressions with parentheses using the order of operations.
+5.OA.2   Generate two number patterns by following two diﬀerent rules and make a graph using
+         ordered pairs that match the numbers from each pattern.
+5.OA.3   Calculate whole number quotients of whole numbers with up to four-digit dividends and
+         two-digit divisors. Explain the calculation by using equations, rectangular arrays, illustrations,
+         area models, or other representations based on place value.
+5.OA.4   Add decimals to the hundredths place using various strategies.
+5.OA.5   Subtract decimals to the hundredths place using various strategies.
+5.OA.6   Multiply decimals to the hundredths place using various strategies.
+5.OA.7   Divide decimals to the hundredths place using various strategies.
+
+Fractions
+Fractional Operations and Properties
+5.F.1       Add and subtract fractions, fractions with unlike denominators, mixed numbers, and
+            improper fractions by replacing given fractions with equivalent fractions.
+5.F.2       Solve word problems using addition and subtraction of fractions, fractions with unlike
+            denominators, mixed numbers, and improper fractions by using visual fraction models or
+            equations.
+5.F.3       Use benchmark fractions and number sense of fractions to estimate mentally and assess the
+            reasonableness of answers.
+5.F.4       Multiply a fraction or whole number by a fraction. Interpret the product using visual fraction
+            models and story contexts (e.g., area models for rectangles with fractional side lengths).
+
+
+
+
+Adopted May 4, 2026                                                | South Dakota Mathematics Standards 13
+5.F.5       Solve real-world problems involving multiplication of fractions and mixed numbers, including
+            interpreting multiplication as scaling (resizing). Explain why multiplying by a fraction greater
+            than 1 increases the product and multiplying by a fraction less than 1 decreases the product.
+5.F.6       Interpret a fraction as division of the numerator by the denominator (a/b = a ÷ b). Solve
+            word problems involving division of whole numbers leading to answers in the form of
+            fractions or mixed numbers, using visual fraction models or equations to represent the
+            problem
+5.F.7       Interpret division of a unit fraction by a non-zero whole number and compute such
+            quotients.
+5.F.8       Interpret division of a whole number by a unit fraction and compute such quotients.
+5.F.9       Divide unit fractions by whole numbers and whole numbers by unit fractions. Use visual
+            fraction models and equations to represent and explain the relationship between
+            multiplication and division.
+5.F.10      Solve real-world problems involving the division of unit fractions by whole numbers and
+            whole numbers by unit fractions, using visual fraction models and equations to represent
+            the problem.
+
+Measurement
+Measurement Concepts
+5.M.1    Convert length, weight, mass, capacity, and time measurements from larger to smaller units
+         and vice versa within the U.S. customary and metric measuring systems.
+
+Data
+5.M.2       Create and use a line plot to display a data set of measurements to solve real-world
+            problems involving information presented.
+
+Geometry
+Geometric Measurement
+5.G.1      Use unit cubes and visual models to explore and explain volume as the amount of space
+           inside a three-dimensional object.
+5.G.2      Understand a shape has a volume of 𝑛𝑛 cubic units if it can be ﬁlled with 𝑛𝑛 unit cubes without
+           gaps or overlaps.
+5.G.3      Measure volume by cubic units using cubic cm, cubic in, cubic ft or cubic units.
+5.G.4      Find the volume of right rectangular prism by packing with unit cubes and show that the
+           volume is the same as multiplying the edge lengths (or multiplying the height by the area of
+           the base).
+5.G.5      Use threefold whole-number products of volume to represent the associative property of
+           multiplication.
+5.G.6      Solve real-world problems by applying formulas (V=l • w • h, V=B • h) for rectangular prisms
+           to ﬁnd the volume of right rectangular prisms with whole number side lengths.
+
+
+
+
+Adopted May 4, 2026                                                 | South Dakota Mathematics Standards 14
+5.G.7       Find volumes of solid ﬁgures composed of two non-overlapping right rectangular prisms
+            (with whole number side lengths) by adding the volumes.
+
+Shapes
+5.G.8       Understand attributes belonging to a category of two-dimensional ﬁgures also belong to all
+            subcategories of that category.
+5.G.9       Classify two-dimensional ﬁgures in a hierarchy based on properties.
+5.G.10      Identify and draw triangles based on their attributes (side lengths and angle measures).
+            Understand that triangles can be classiﬁed into categories (such as equilateral, isosceles,
+            scalene, acute, right, and obtuse), and that these categories can overlap.
+
+Coordinate Plane System
+5.G.11     Understand a coordinate plane to be a diagram for graphing two related pieces of
+           information with two perpendicular number lines.
+5.G.12     Identify the origin, 𝑥𝑥-axis, and 𝑦𝑦-axis on the coordinate plane.
+5.G.13     Identify 𝑥𝑥- and 𝑦𝑦-coordinates of points on a coordinate plane.
+5.G.14     Understand the 𝑥𝑥-coordinate of an ordered pair as the point's location on the coordinate
+           plane relative to the 𝑦𝑦-axis, and the 𝑦𝑦-coordinate of an ordered pair as the point's location
+           on the coordinate plane relative to the 𝑥𝑥-axis.
+5.G.15     Represent and interpret real-world and mathematical problems by graphing points in the
+           ﬁrst quadrant on a coordinate plane.
+
+Mathematical Fluency
+5.MF.1      Fluently multiply multi-digit whole numbers using an algorithm, including but not limited to
+            the standard algorithm.
+5.MF.2      Fluently divide multi-digit whole numbers using an algorithm, including but not limited to
+            the standard algorithm.
+
+
+
+
+Adopted May 4, 2026                                                 | South Dakota Mathematics Standards 15
+                           6th Grade Mathematics Standards
+
+Numbers Concepts and Computations
+Rational Numbers
+6.NC.1     Understand a ratio as a comparison of two quantities.
+6.NC.2     Classify numbers (integers, fractions, decimals) as rational numbers.
+6.NC.3     Explain positive and negative integers as being opposite (inverse) values or directions from
+           zero. Also, explain zero as its own opposite.
+6.NC.4     Understand the meaning of zero in a real-world context.
+6.NC.5     Understand the absolute value of rational numbers to be its distance from zero on the
+           number line; interpret absolute value as magnitude for a positive or negative quantity in a
+           real-world situation.
+6.NC.6     Determine the absolute value of a rational number by ﬁnding its distance from zero on a
+           number line in real-world situations; recognize that the opposite of the opposite of a
+           number is the number itself.
+6.NC.7     Write, interpret, and explain statements of order for rational numbers in real-world contexts.
+
+Rational Number Operations
+6.NC.8     Use visual models (e.g., area models, number lines) to explore and explain why dividing by a
+           fraction is equivalent to multiplying by its reciprocal.
+6.NC.9     Use visual models (e.g., area models, number lines) to explain, justify, and apply the process
+           of dividing fractions by fractions in real-world contexts.
+6.NC.10    Solve word problems involving division of fractions by fractions.
+6.NC.11    Compare rational numbers, using inequalities (<, >, ≤, ≥, ≠) and order on a number line.
+
+Common Factors and Multiples
+6.NC.12  Find the greatest common factor of two whole numbers less than or equal to 100.
+6.NC.13  Find the least common multiple of two whole numbers less than or equal to 12.
+6.NC.14  Use the distributive property to rewrite the sum of two whole numbers 1-100 using its
+         greatest common factor.
+
+Mathematical Fluency
+6.NC.15   Fluently divide multi-digit numbers using various strategies, including but not limited to the
+          standard algorithm.
+6.NC.16   Fluently add, subtract, multiply, and divide multi-digit decimals and fractions using various
+          strategies, including but not limited to the standard algorithm.
+
+
+
+
+Adopted May 4, 2026                                               | South Dakota Mathematics Standards 16
+Proportional Relationships
+Ratio and Rates
+6.PR.1     Write ratios, rates, and unit rates. Determine the units of a unit rate.
+6.PR.2     Use ratio and rate reasoning to solve real-world and mathematical problems including
+           making ratio tables, solving unit rate problems, and using percentages.
+6.PR.3     Solve unit rate problems including those involving unit pricing and constant speed.
+6.PR.4     Find a percent of a quantity as a rate per 100.
+
+Algebra
+Expressions
+6.A.1       Write and evaluate numerical expressions involving whole-number exponents, including
+            those with parentheses.
+6.A.2       Translate verbal descriptions into algebraic expressions and evaluate them for given values.
+6.A.3       Identify parts of an expression using mathematical terms (sum, term, product, factor,
+            quotient, coeﬃcient, variable, constant) and view one or more parts of an expression as a
+            single entity.
+6.A.4       Evaluate expressions at speciﬁc values of their variables, including expressions with whole
+            number exponents and those from formulas in real-world problems. Explain how the
+            structure of an expression aﬀects its value by justifying each step using the order of
+            operations and properties of operations.
+6.A.5       Apply properties of operations (distributive, commutative, associative) to generate
+            equivalent expressions.
+
+Equations and Inequalities
+6.A.6      Use substitution to determine if a given value in a speciﬁed set makes an equation or
+           inequality true. Include the following inequality symbols: <, >, ≤, ≥, ≠.
+6.A.7      Write and solve one-step equations in real-world and mathematical problems, involving
+           positive rational numbers and zero.
+6.A.8      Write, solve, and graph one-step inequalities in real-world and mathematical problems,
+           involving positive rational numbers and zero.
+6.A.9      Understand an equation with two variables as a statement expressing a relationship
+           between two quantities, and recognize that this relationship can often be represented as a
+           function, where one variable depends on the other.
+6.A.10     Analyze the relationship between the dependent and independent variables in an equation
+           using tables and graphs, relating these to the equation.
+
+Geometry
+Area, Volume, and Surface Area
+6.G.1      Find the area of triangles, special quadrilaterals, and polygons by composing or
+           decomposing to solve real-world problems.
+
+
+
+
+Adopted May 4, 2026                                               | South Dakota Mathematics Standards 17
+6.G.2       Find the volume of right rectangular prisms with fractional edge lengths by packing and
+            relate it to multiplication.
+6.G.3       Draw polygons in the coordinate plane when given coordinates for the vertices.
+6.G.4       Use coordinates to calculate vertical and horizontal distances between points with the same
+            𝑥𝑥-coordinate or the same 𝑦𝑦-coordinate to solve real-world and mathematical problems.
+6.G.5       Construct nets of a rectangular prism, rectangular pyramid, triangular prism, and triangular
+            pyramid, using the nets to ﬁnd the surface area of these prisms and pyramids.
+
+Coordinate Plane System
+6.G.6      Find and graph pairs of rational numbers in all four quadrants of the coordinate plane in real-
+           world and mathematical problems.
+6.G.7      Understand that signs of a coordinate pair indicate locations in a quadrant of the coordinate
+           plane, opposite signs indicate reﬂections across one or both axes.
+
+Measurement
+Conversions
+6.M.1       Use ratio reasoning to convert measurement units within the U.S. Customary and metric
+            measuring systems.
+
+Statistics and Probability
+Statistical and Nonstatistical
+6.SP.1       Understand the four components of the statistical process (question formulation, data
+             collection, data analysis, interpretation).
+6.SP.2       Recognize that data sets collected to answer a statistical question can be analyzed by their
+             distributions.
+
+Numerical Data
+6.SP.3     Represent numerical data on a number line, histogram, and box plot.
+6.SP.4     Interpret a box plot to answer statistical questions about a data set.
+
+Measures of Center
+6.SP.5     Distinguish between a measure of center (mean, medium, and mode) and measure of
+           variation (range and/or mean absolute deviation).
+6.SP.6     Calculate and interpret any measure of center (mean, median, and mode) of a numerical
+           data set.
+6.SP.7     Determine which measure of center (mean or median) is more appropriate to describe the
+           center of data; justify the choice.
+
+Measures of Variation
+6.SP.8     Compare and interpret range and interquartile range (IQR) to describe how data varies in a
+           distribution.
+
+
+
+
+Adopted May 4, 2026                                                 | South Dakota Mathematics Standards 18
+6.SP.9     Calculate and interpret the measure of variation (range, interquartile range (IQR), and/or
+           mean absolute deviation) of a numerical data set.
+
+
+
+
+Adopted May 4, 2026                                              | South Dakota Mathematics Standards 19
+                            7th Grade Mathematics Standards
+
+Numbers Concepts and Computations
+Rational Numbers
+7.NC.1     Model and describe additive inverse in real-world situations to show opposite quantities
+           combine to make zero (positive or negative).
+7.NC.2     Demonstrate in real-world contexts the distance between two rational numbers on the
+           number line as the absolute value of their diﬀerences.
+7.NC.3     Convert a rational number in fraction form to decimal form and recognize that the decimal
+           form of a rational number terminates in zeros or eventually repeats (using bar notation).
+7.NC.4     Understand that integers can be divided, provided the divisor is not zero.
+
+Rational Number Operations
+7.NC.5     Add and subtract rational numbers using horizontal or vertical number lines and real-world
+           contexts.
+7.NC.6     Solve multi-step problems with rational numbers (whole numbers, fractions, and decimals)
+           and justify the steps taken.
+7.NC.7     Multiply and divide rational numbers (integers, fractions, decimals etc.) in real-world and
+           mathematical problems.
+
+Proportional Relationships
+Ratio and Rates
+7.PR.1     Calculate unit rates in real-world contexts that include complex fractions.
+7.PR.2     Determine the unit rate (constant of proportionality 𝑦𝑦 = 𝑘𝑘𝑘𝑘) from tables, graphs, equations,
+           diagrams, or verbal descriptions of proportional relationships.
+7.PR.3     Solve multi-step ratio and percent problems using proportional reasoning.
+
+Constant of Proportionality
+7.PR.4      Determine whether two quantities are in a proportional relationship, by determining if each
+            have a constant rate of change that starts at (0,0), using tables, graphs, equations, diagrams,
+            and verbal descriptions.
+7.PR.5      Explain what a point (𝑥𝑥, 𝑦𝑦) on the graph of a proportional relationship means in terms of the
+            situation, with special attention to the points (0,0) and (1, 𝑟𝑟) where 𝑟𝑟 is the unit rate.
+
+Algebra
+Expressions
+7.A.1       Write and solve equations (𝑦𝑦 = 𝑘𝑘𝑘𝑘 or 𝑦𝑦 = 𝑚𝑚𝑚𝑚 + 𝑏𝑏) to represent relationships between
+            quantities.
+7.A.2       Add, subtract, factor, and expand linear expressions with rational coeﬃcients using multiple
+            grouping symbols.
+
+
+
+
+Adopted May 4, 2026                                                | South Dakota Mathematics Standards 20
+Equations and Inequalities
+7.A.3      Write and solve two-step equations in real-world and mathematical problems in the form of
+           𝑝𝑝𝑝𝑝 + 𝑞𝑞 = 𝑟𝑟 and 𝑝𝑝(𝑥𝑥 + 𝑞𝑞) = 𝑟𝑟 where 𝑝𝑝, 𝑞𝑞, and 𝑟𝑟 are speciﬁc rational numbers.
+7.A.4      Write, solve, and graph two-step inequalities in real-world and mathematical problems in
+           the forms of 𝑝𝑝𝑝𝑝 + 𝑞𝑞 > 𝑟𝑟, 𝑝𝑝𝑝𝑝 + 𝑞𝑞 ≥ 𝑟𝑟, 𝑝𝑝𝑝𝑝 + 𝑞𝑞 < 𝑟𝑟, and 𝑝𝑝𝑝𝑝 + 𝑞𝑞 ≤ 𝑟𝑟, where 𝑝𝑝, 𝑞𝑞, and 𝑟𝑟 are
+           speciﬁc rational numbers.
+
+Relationships between Quantities
+7.A.5       Use tables, graphs, and equations to distinguish between proportional and non-proportional
+            relationships.
+
+Geometry
+Area, Volume, and Surface Area
+7.G.1      Identify, describe, and draw elements of circles, including center, radius, and diameter.
+                                               𝐶𝐶
+7.G.2        Use the constant ratio pi (𝜋𝜋 = ) to calculate the circumference and area of a circle.
+                                               𝑑𝑑
+7.G.3        Use area (𝐴𝐴 = 𝜋𝜋𝑟𝑟 2 ) and circumference (𝐶𝐶 = 2𝜋𝜋𝜋𝜋) formulas of a circle to solve real-world
+             and mathematical problems.
+7.G.4        Solve real-world and mathematical problems involving area, volume and surface area of two
+             and three-dimensional ﬁgures, as in plane sections of right rectangular prisms and right
+             rectangular pyramids.
+
+Cross Sections
+7.G.5       Describe the two-dimensional ﬁgure (cross section) that results from slicing a three-
+            dimensional ﬁgure including right rectangular prisms, triangular prisms, pyramids and
+            cylinders.
+
+Triangle and Angles
+7.G.6       Draw geometric shapes with given conditions. Focus on constructing triangles from three
+            measures of angles or sides, noticing when the conditions determine a unique triangle, more
+            than one triangle, or no triangle.
+7.G.7       Solve multi-step problems involving supplementary, complementary, vertical, and adjacent
+            angles to include solving for an unknown angle in a ﬁgure.
+
+Measurement
+Scale
+7.M.1        Calculate the scale factor, compute the actual lengths from the scale in a drawing, and
+             reproduce a scale drawing using another scale.
+
+
+
+
+Adopted May 4, 2026                                                      | South Dakota Mathematics Standards 21
+Statistics and Probability
+Sampling and Population
+7.SP.1     Understand sampling to be a selection of a smaller group (sample) from a larger group
+           (population).
+7.SP.2     Compare random and convenience sampling to determine if a sample is representative of a
+           population.
+7.SP.3     Draw conclusions, such as mean, median, mode, and range of data, about a larger
+           population using data from a representative sample.
+7.SP.4     Understand a sample space to be the set of all possible outcomes for a situation or
+           experiment.
+
+Probability
+7.SP.5      Understand probability as the likelihood or chance of an event occurring.
+7.SP.6      Recognize that probabilities in a simple experiment can be qualitative descriptors of
+            likelihood: impossible (0), unlikely, neither likely nor unlikely, likely, or certain (1).
+7.SP.7      Calculate the probability for a single event by dividing the number of favorable outcomes by
+            the number of total outcomes.
+7.SP.8      Determine experimental probabilities in simple experiments and represent as fractions,
+            decimals, and percents.
+7.SP.9      Use theoretical probability of an event in a simple experiment to predict the number of
+            times that an event will occur for a large number of experiments.
+7.SP.10     Calculate the probability for a compound event using organized lists, tables, tree diagrams,
+            and a simulation.
+
+
+
+
+Adopted May 4, 2026                                               | South Dakota Mathematics Standards 22
+                           8th Grade Mathematics Standards
+
+Numbers Concepts and Computations
+Rational and Irrational Numbers
+8.NC.1      Understand that a real number is any number that can be represented on a number line.
+8.NC.2      Classify numbers as rational or irrational and explain how both sets together form the set of
+            real numbers.
+8.NC.3      Understand an irrational number to be a non-terminating, non-repeating decimal that
+            cannot be expressed as a fraction of two integers (rational number).
+8.NC.4      Compare the value of irrational numbers and locate them on a number line by ﬁnding the
+            rational approximations.
+
+Rational Number Operations
+8.NC.5     Explain how the properties of integer exponents work by using patterns and reasoning to
+           generate and justify equivalent expressions.
+8.NC.6     Understand the root index to be the number placed above the radical symbol indicating
+           which root to ﬁnd and recognize that if the root index is not speciﬁed, it is assumed to be 2.
+8.NC.7     Understand a square root of a number to be the number that when multiplied by itself
+           produces the original number.
+8.NC.8     Understand the cube root of a number to be a number that when cubed produces the
+           original number.
+8.NC.9     Use square root and cube root symbols to represent solutions to equations of the form 𝑥𝑥 2 =
+           𝑝𝑝 and 𝑥𝑥 3 = 𝑝𝑝, where p is a positive rational number. Evaluate square roots of small perfect
+           squares (up to 100) and cube roots of small perfect cubes (up to 125).
+8.NC.10    Write numbers in scientiﬁc notation using positive and negative exponents.
+8.NC.11    Perform operations (add, subtract, multiply, divide) with numbers in scientiﬁc notation.
+
+Relationships and Functions
+Proportional and Linear Relationships
+8.RF.1     Graph proportional relationships, interpreting the rate of change as the slope of the graph.
+8.RF.2     Construct a function to model a linear relationship between two quantities.
+8.RF.3     Compare two diﬀerent proportional relationships represented in diﬀerent ways.
+8.RF.4     Explain how the slope m of a line is the same between any two points on a line. Types of
+           slope include: positive, negative, zero (horizontal), and undeﬁned (vertical).
+
+
+
+
+Adopted May 4, 2026                                                | South Dakota Mathematics Standards 23
+Functions
+8.RF.5      Deﬁne a function as a rule where each input has exactly one output.
+8.RF.6      Understand the domain as the set of inputs allowed by the function.
+8.RF.7      Understand the range as the set of outputs produced by the function.
+8.RF.8      Determine whether a relationship is a function given a table, graph, equation, or verbal
+            description.
+8.RF.9      Compare properties of two functions represented in diﬀerent ways including tables, graphs,
+            equations, and verbal descriptions.
+8.RF.10     Determine whether a relationship is linear or nonlinear given a table, graph, equation, or
+            verbal description.
+8.RF.11     Understand a linear function to be a relationship between two variables with a constant rate
+            of change whose graph is a straight line on the coordinate plane and to have the equation
+            𝑦𝑦 = 𝑚𝑚𝑚𝑚 + 𝑏𝑏, give examples of functions that are not linear.
+8.RF.12     Explain how the rate of change and y-intercept describe the relationship between two
+            quantities, using multiple representations to justify interpretations.
+8.RF.13     Explain how the rate of change (slope) and y-intercept (initial value) describe the
+            relationship between two quantities, using multiple representations to justify
+            interpretations.
+8.RF.14     Describe qualitatively the functional relationship between two quantities by analyzing a
+            graph (e.g., where the function is increasing or decreasing, linear or nonlinear).
+
+Algebra
+Equations and Inequalities
+8.A.1      Identify linear equations in one variable with one solution, inﬁnitely many solutions, or no
+           solution.
+8.A.2      Solve linear equations with rational number coeﬃcients using the distributive property and
+           combining like terms.
+8.A.3      Analyze and solve one-variable linear inequalities with rational coeﬃcients.
+
+System of Equations
+8.A.4       Understand a system of linear equations to be a set of two or more equations.
+8.A.5       Determine whether an ordered pair is a solution to a system of two linear equations by
+            substituting the values into both equations and explaining why the pair satisﬁes both.
+8.A.6       Analyze a system of two linear equations to determine whether it has one solution, inﬁnitely
+            many solutions, or no solution, and explain what each case means in terms of the graphs or
+            equations.
+8.A.7       Analyze and solve systems of linear equations algebraically and estimate solutions by
+            graphing the equation.
+8.A.8       Solve real-world and mathematical problems involving leading to two linear equations in one
+            and/or two variables.
+
+
+
+
+Adopted May 4, 2026                                               | South Dakota Mathematics Standards 24
+Geometry
+Area, Volume, and Surface Area
+8.G.1      Explain the formulas for the volumes of cones, cylinders, and spheres and apply them to
+           solve real-world and mathematical problems.
+
+Triangles and Angles
+8.G.2       Understand properties of interior and exterior angles in triangles (triangle sum theorem,
+            exterior angle theorem).
+8.G.3       Understand and explain the relationships between angles when parallel lines are intersected
+            by a transversal.
+
+Pythagorean Theorem
+8.G.4     Identify, describe, and draw elements of triangles including base, height, leg, and
+          hypotenuse.
+8.G.5     Explain the Pythagorean theorem and apply it to ﬁnd unknown side lengths in right
+          triangles.
+8.G.6     Explain the converse of the Pythagorean theorem and apply it to determine if a triangle is a
+          right triangle.
+8.G.7     Apply the Pythagorean theorem to ﬁnd the distance between two points in a coordinate
+          system.
+
+Transformation, Similarity, and Congruency
+8.G.8      Understand congruent ﬁgures to be geometric objects that have exactly the same size and
+           shape.
+8.G.9      Understand similar ﬁgures to be geometric objects that have the same shape (congruent
+           angles), but diﬀerent sizes (proportional) sizes.
+8.G.10     Understand a rigid transformation to be a change in location or orientation that generates a
+           congruent shape by preserving distances between vertices.
+8.G.11     Identify, draw, and describe the three types of rigid transformations on two-dimensional
+           ﬁgures: rotations, reﬂections, and translations.
+8.G.12     Identify, draw, and describe mathematical dilations on, two-dimensional ﬁgures, as non-rigid
+           transformations that generate a similar shape.
+8.G.13     Describe a sequence of rigid transformations that moves and aligns one congruent shape
+           onto another.
+8.G.14     Understand and explain the angle-angle criterion for determining the similarity of triangles.
+
+
+
+
+Adopted May 4, 2026                                              | South Dakota Mathematics Standards 25
+Statistics and Probability
+Bivariate Data
+8.SP.1      Construct and interpret scatter plots using bivariate data; determine if the data displays a
+            linear or nonlinear pattern and describe the patterns as clustering, outliers, positive,
+            negative, or no association.
+8.SP.2      Construct a line of ﬁt to approximately ﬁt data displaying a linear association when
+            presented in scatter plot.
+8.SP.3      Construct and interpret a relative frequency table.
+
+
+
+
+Adopted May 4, 2026                                                 | South Dakota Mathematics Standards 26
+                            Algebra 1 Mathematics Standards
+
+Expressions
+Rational and Irrational Numbers
+A1.E.1      Explain why the sum or product of two rational numbers is rational; the sum of a rational
+            and an irrational number is irrational; and the product of a nonzero rational and an irrational
+            number is irrational.
+
+Polynomials, Radical Expressions and Rational Exponents
+A1.E.2     Understand polynomials to be a sum of algebraic terms having variables, coeﬃcients,
+           exponents, and/or constants.
+A1.E.3     Add, subtract and multiply polynomials.
+A1.E.4     Understand rational exponents as a way to represent roots as powers.
+A1.E.5     Simplify numerical expressions containing exponents and/or roots, including negative and
+           rational exponents.
+A1.E.6     Simplify algebraic expressions using the laws of exponents.
+
+Algebraic Functions
+Domain and Range, Function Notation
+A1.AF.1   Use function notation, evaluate functions, and interpret statements that use function
+          notation in terms of a context.
+
+Construct and Compare
+A1.AF.2     Determine whether a relationship is a function given a graph, an equation, or a table of
+            values.
+A1.AF.3     Compare linear, quadratic, and exponential growth using tables and graphs to show that
+            exponential growth eventually exceeds others.
+A1.AF.4     Diﬀerentiate between real-world scenarios that can be modeled by exponential or linear
+            functions by determining whether the relationship has a common diﬀerence or a common
+            ratio.
+
+Linear Functions, Equations, and Inequalities
+Create and Solve
+A1.LF.1     Represent and solve real-world problems, using linear expressions, equations, and
+            inequalities in one variable. Interpret the solution as reasonable or unreasonable in context.
+A1.LF.2     Solve linear equations and linear inequalities in one variable, including those with rational
+            number coeﬃcients, variables on both sides of the equal or inequality sign, and literal
+            equations, explaining the process used.
+A1.LF.3     Construct linear functions from arithmetic sequences with and without context.
+A1.LF.4     Write arithmetic sequences using explicit and recursive formulas.
+
+
+
+
+Adopted May 4, 2026                                                | South Dakota Mathematics Standards 27
+Interpret Key Features
+A1.LF.5     Identify the parts of expressions such as terms, factors, variables, constants, and coeﬃcients.
+A1.LF.6     Determine reasonable domain and range values of linear functions representing real-world
+            situations, both continuous and discrete.
+A1.LF.7     Interpret the key features of linear functions that model a relationship between two
+            quantities in a given context.
+A1.LF.8     Use diﬀerent representations of a linear function, including graphs, tables, and equations.
+A1.LF.9     Calculate and interpret the rate of change of a linear function represented in a table, graph,
+            or as an equation in context of real-world and mathematical problems.
+A1.LF.10 Translate between equivalent forms of equations for linear functions, including standard,
+            point-slope, and slope intercept forms; recognize that each form reveals key features in a
+            given context.
+
+Systems of Equations and Inequalities
+A1.LF.11 Estimate the solution of a system of linear equations by graphing the equations on a
+            coordinate plane.
+A1.LF.12 Solve a system of linear equations with integer coeﬃcients algebraically (substitution and
+            elimination).
+A1.LF.13 Solve linear inequalities and systems of linear inequalities in two variables by graphing.
+A1.LF.14 Explain why a solution to the equation 𝑓𝑓(𝑥𝑥) = 𝑔𝑔(𝑥𝑥) is the x-coordinate where the y-
+            coordinate of 𝑓𝑓(𝑥𝑥) and 𝑔𝑔(𝑥𝑥) are the same using graphs, tables, or approximations. Include
+            cases where 𝑓𝑓(𝑥𝑥) and/or 𝑔𝑔(𝑥𝑥) are linear, quadratic, and exponential.
+
+Statistical Relationships
+A1.LF.15 Interpret the slope (rate of change) and the intercept (constant term) of a linear model in
+             the context of the data.
+A1.LF.16 Compute (using technology) and interpret the correlation coeﬃcient of a linear ﬁt.
+A1.LF.17 Distinguish between correlation and causation.
+
+Quadratic Functions and Equations
+Create and Solve
+A1.QF.1     Solve quadratic equations with real number solutions, containing one variable, including
+            those with variables on both sides of the equal sign. Equations should be solved by:
+            graphing, factoring, completing the square (leading coeﬃcient is one, 𝑏𝑏 𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣 is even),
+            taking the square root and using the quadratic formula.
+A1.QF.2     Interpret the solutions for quadratic equations as reasonable or unreasonable in context.
+A1.QF.3     Graph quadratic functions in standard and vertex form.
+
+Interpret Key Features
+A1.QF.4     Determine the domain and range of quadratic functions.
+A1.QF.5     Determine reasonable domain and range values of quadratic functions representing real-
+            world situations.
+
+
+
+Adopted May 4, 2026                                                 | South Dakota Mathematics Standards 28
+A1.QF.6     Interpret the key features of a quadratic function (direction, roots, zeros, x-intercepts, and
+            maximum or minimum values) that models a relationship between two quantities in a given
+            context.
+
+Graphing and Transformations
+A1.QF.7    Graph and describe how transformations (stretches, translations, and reﬂections) aﬀect
+           linear, absolute value, and quadratic functions.
+
+Exponential Functions and Equations
+Create and Solve
+A1.EF.1     Construct exponential equations from geometric sequences with and without context.
+A1.EF.2     Use properties of exponents to write equivalent expressions for exponential functions.
+A1.EF.3     Write geometric sequences using explicit and recursive formulas.
+
+Interpret Key Features
+A1.EF.4     Determine the domain and range of exponential functions.
+A1.EF.5     Determine reasonable domain and range values of exponential functions representing real-
+            world situations.
+A1.EF.6     Interpret the key features of an exponential function that models a relationship between
+            two quantities in a given context.
+
+Graphing
+A1.EF.7     Graph exponential functions that model real-world problems (growth, decay, and compound
+            interest), showing key attributes.
+
+Statistical Relationships
+A1.EF.8      Interpret the quantities in an exponential equation in the context of a real-world problem,
+             including growth, decay, and compound interest.
+
+Statistics and Probability
+Numerical Data
+A1.SP.1    Use box plots and histograms to determine the statistics appropriate to the shape of the
+           data distribution; compare the center (mean and median) and spread (standard deviation
+           and interquartile range [IQR]) of two or more data sets.
+A1.SP.2    Interpret diﬀerences in shape, center, and spread in the context of the data sets, accounting
+           for possible eﬀects of extreme data points.
+
+Bivariate Data
+A1.SP.3     Interpret relative frequencies and associations in two-way tables.
+
+
+
+
+Adopted May 4, 2026                                                | South Dakota Mathematics Standards 29
+                            Geometry Mathematics Standards
+
+Right Triangles
+Special Right Triangles and Pythagorean Theorem
+G.RT.1      Apply the properties of special right triangles (30°−60°−90° and 45°−45°−90°) to solve real-
+            world and mathematical problems.
+G.RT.2      Prove and apply the Pythagorean theorem and its converse.
+
+Trigonometry Ratios
+G.RT.3     Deﬁne that side ratios in right triangles are related to the angles in the triangle, leading to
+           deﬁnitions of trigonometric ratios (sine, cosine, and tangent) for acute angles.
+G.RT.4     Explain the relationship between the sine and cosine of complementary angles and use
+           them to solve problems.
+G.RT.5     Use the deﬁnition of the trigonometric ratios (sine, cosine, tangent, secant, cosecant,
+           cotangent) as ratios of side in a right triangle to solve problems about lengths of sides and
+           measurements of angles.
+G.RT.6     Understand and apply the Law of Sines and the Law of Cosines to ﬁnd unknown
+           measurements in right and non-right triangles.
+
+Circles
+Circle Relationships
+G.C.1        Recognize and apply relationships between angles, radii, chords, tangents, and secants,
+             including: the relationship between central, inscribed, and circumscribed angles; that
+             inscribed angles intersecting a diameter are right angles; and the radius of a circle
+             intersecting a tangent line at the point of tangency forms a right angle.
+G.C.2        Explain how arc length relates to the whole circle using proportional reasoning and visual
+             models to justify solutions.
+G.C.3        Use the proportional relationship between the measure of the area of a sector of a circle
+             and the area of the circle to solve problems.
+
+Equations of Circles
+G.C.4       Write the equation of a circle, given the radius and center, where the center is at the origin
+            or another point.
+G.C.5       Identify the center and radius of a circle, given the equation of a circle, where the center is
+            at the origin or another point.
+
+
+
+
+Adopted May 4, 2026                                                 | South Dakota Mathematics Standards 30
+Geometric Figures
+Two-Dimensional
+G.GF.1    Understand and apply the fundamental geometric elements (points, lines, line segments,
+          rays, planes, angles, and circles) by describing their properties and using them to model and
+          solve real-world and mathematical problems.
+
+G.GF.2      Apply and prove theorems about triangles including: the isosceles triangle theorem and its
+            converse; the triangle midsegment theorem; the proportionality theorem; the triangle
+            inequality theorem and its converse.
+G.GF.3      Apply and prove theorems about quadrilaterals included but not limited to opposite sides
+            are congruent, opposite angles are congruent, diagonals of a parallelogram bisect each
+            other.
+G.GF.4      Apply theorems about polygons including interior angle sum and exterior angle theorems.
+G.GF.5      Construct an equilateral triangle, square, and a regular hexagon.
+
+Three-Dimensional
+G.GF.6    Find the volume and surface area of complex three-dimensional ﬁgures composed of prisms,
+          pyramids, cones, cylinders, and spheres.
+G.GF.7    Give an informal argument for the formulas for the volume of a cylinder, pyramid, sphere,
+          and cone. Use dissection arguments, and informal limit arguments.
+G.GF.8    Identify the three-dimensional ﬁgure generated by rotating a two-dimensional ﬁgure about a
+          ﬁxed axis.
+G.GF.9    Use three-dimensional geometric ﬁgures and their measures to model real-world objects
+          and solve problems.
+G.GF.10   Identify two-dimensional cross sections of three-dimensional objects.
+
+Geometric Probability
+G.GF.11    Calculate probabilities as a proportion of area in a geometric context.
+
+Lines and Angles
+Deﬁne and Construct
+G.LA.1     Make geometric constructions with a variety of tools and methods, including congruent
+           segments and angles; segment and angle bisectors; perpendicular lines; and the
+           perpendicular bisector of a line segment.
+
+Coordinate Geometry
+G.LA.2     Determine the point that cuts a line segment into a speciﬁed ratio on a number line and a
+           coordinate plane, including ﬁnding the midpoint.
+G.LA.3     Derive the distance and midpoint formulas and use the formulas, including the slope
+           formula, to verify geometric relationships on a coordinate plane.
+
+
+
+
+Adopted May 4, 2026                                               | South Dakota Mathematics Standards 31
+G.LA.4       Calculate the perimeter of polygons when given the vertices, including using the distance
+             formula.
+G.LA.5       Use coordinates to prove geometric relationships algebraically.
+
+Parallel and Perpendicular Lines
+G.LA.6      Prove and apply slope criteria of parallel and perpendicular lines to solve problems.
+G.LA.7      Prove and apply theorems about lines and angles including vertical angles, angles formed by
+            parallel lines cut by a transversal, and points on a perpendicular bisector.
+G.LA.8      Write an equation of a line that is parallel or perpendicular to a given line and passing
+            through a given point.
+
+Transformations
+Coordinate Plane
+G.T.1      Describe rotations, reﬂections, and translations as functions that take points in the
+           coordinate plane as inputs and give other points as outputs; write in prime notation.
+G.T.2      Compare transformations that preserve distance and angle (rotation, reﬂections, and
+           translations) to those that do not (dilations) to develop deﬁnitions of congruence and
+           similarity.
+G.T.3      Given a rectangle, parallelogram, trapezoid, or a regular polygon, describe the rotations
+           and/or reﬂections that map the ﬁgure onto itself.
+GT.4       Identify whether a ﬁgure has reﬂectional (line) symmetry. If so, identify the lines of
+           symmetry and determine how many lines of symmetry the given ﬁgure has.
+GT.5       Identify whether a ﬁgure has rotational symmetry. If so, state the angle of rotational
+           symmetry, and the number of times the ﬁgure can be rotated onto itself (between 0° and
+           360°).
+
+Plane
+G.T.6        Given two congruent ﬁgures, identify the sequence of transformations that maps one ﬁgure
+             to another.
+G.T.7        Apply understanding of angles, circles, perpendicular lines, parallel lines, and line segments
+             to develop deﬁnitions for rotations, reﬂections, and translations.
+
+Similarity and Congruency
+Similarity
+G.SC.1       Given two ﬁgures, apply the deﬁnition of similarity in terms of a dilation to identify similar
+             ﬁgures, proportional sides, and corresponding congruent angles and ﬁnding and using the
+             scale factor of the dilation that maps one ﬁgure to the other.
+G.SC.2       Determine whether ﬁgures are similar, using the deﬁnition of similarity and using similarity
+             transformations.
+G.SC.3       Verify experimentally and apply the properties of dilations as determined by a center and a
+             scale factor.
+
+
+
+
+Adopted May 4, 2026                                                 | South Dakota Mathematics Standards 32
+G.SC.4      Determine whether ﬁgures are similar, using the deﬁnition of similarity and using similarity
+            transformations.
+G.SC.5      Develop, apply and prove the criteria of similarity for triangles (AA~, SAS~, and SSS~) to solve
+            problems and prove geometric relationships.
+G.SC.6      Use transformations to prove all circles are similar.
+
+Triangle Congruency
+G.SC.7      Use congruence and similarity criteria for triangles to solve problems and to prove
+            relationships in geometric ﬁgures.
+G.SC.8      Explain, using rigid motion transformations, why two triangles are congruent if and only if
+            corresponding pairs of sides and corresponding pairs of angles are congruent.
+G.SC.9      Develop and apply criteria for triangle congruence (ASA, SAS, AAS, SSS, HL) and similarity to
+            solve problems and prove relationships within triangles and other geometric ﬁgures.
+
+Statistics and Probability
+Conditional and Joint Probability
+G.SP.1      Describe events as subsets of a sample space or as unions, intersections, or complements of
+            other events.
+G.SP.2      Determine whether two events A and B are independent.
+G.SP.3      Find the conditional probability of A given B as the fraction of B’s outcomes that also belong
+            to A, and interpret the result, including everyday language and situations. Construct and
+            interpret two-way frequency tables to represent data and use them to determine
+            conditional probabilities and assess independence of events.
+G.SP.4      Apply the addition rule, 𝑝𝑝(𝐴𝐴 𝑜𝑜𝑜𝑜 𝐵𝐵), and interpret the result.
+G.SP.5      Apply the general multiplication rule, 𝑝𝑝(𝐴𝐴 𝑎𝑎𝑎𝑎𝑎𝑎 𝐵𝐵), and interpret the result.
+
+
+
+
+Adopted May 4, 2026                                                | South Dakota Mathematics Standards 33
+                           Algebra 2 Mathematics Standards
+
+Expressions
+Radical Expressions and Rational Exponents
+A2.E.1      Apply the properties of exponents to translate between radical and exponential forms of
+            expressions.
+A2.E.2      Simplify and perform operations with radical expressions with and without variables;
+            rationalizing denominators should include conjugates.
+
+Complex Number
+A2.E.3    Understand an imaginary number to be a product of any real number and the imaginary unit
+          𝑖𝑖 where 𝑖𝑖 2 = −1.
+A2.E.4    Understand a complex number to be a number of the form 𝑎𝑎 + 𝑏𝑏𝑏𝑏 where 𝑎𝑎 and 𝑏𝑏 are real
+          numbers and 𝑖𝑖 is the imaginary unit.
+A2.E.5    Add, subtract, multiply, and divide complex numbers.
+
+Algebraic Functions
+Compositions
+A2.AF.1    Compose functions and evaluate their composition.
+
+Graph and Key Features
+A2.AF.2    Graph rational functions, identifying zeros and asymptotes (vertical and horizontal) when
+           suitable factorizations are available and showing end behavior, with or without the
+           appropriate technology.
+A2.AF.3    Compare properties of graphs, tables, equations, and verbal descriptions of two functions.
+A2.AF.4    Calculate and interpret the average rate of change of a function, both symbolically and from
+           a table over a speciﬁed interval. Estimate the rate of change from a graph.
+
+Transformations
+A2.AF.5    Given a graph, explain the eﬀects of the transformation from the parent function including
+           square root and cubic functions, rational, and absolute value functions.
+A2.AF.6    Describe the transformation of functions in the coordinate plane including translation,
+           reﬂection, and dilation.
+
+Inverses
+A2.AF.7     Explain how restricting the domain of a function allows for the creation of its inverse.
+A2.AF.8     Write and graph the inverse of a given function; understand that the graph of an inverse
+            function is a reﬂection of the function over the line 𝑦𝑦 = 𝑥𝑥.
+A2.AF.9     Verify if two functions are inverses of each other using composition of functions.
+A2.AF.10    Using ordered pairs, determine the inverse of a function given a graph or table.
+
+
+
+
+Adopted May 4, 2026                                               | South Dakota Mathematics Standards 34
+Linear Functions, Equations and Inequalities
+Arithmetic Sequences
+A2.LF.1     Write and use arithmetic sequences recursively and explicitly to model situations; translate
+            between the two forms when given a graph, a description of the relationship, or two input-
+            output pairs.
+
+Matrices
+A2.LF.2     Multiply a matrix by a scalar.
+A2.LF.3     Add and subtract matrices.
+
+Systems of Equations
+A2.LF.4     Solve systems of linear equations in three variables.
+A2.LF.5     Represent constraints by equations or inequalities, and by systems of equations and/or
+            inequalities, and interpret solutions as viable or nonviable options in a modeling context.
+
+Quadratic Functions, Equations, and Inequalities
+Create and Solve
+A2.QF.1     Select, justify and apply appropriate methods to solve quadratic equations in one variable.
+            Recognize complex solutions and write them as 𝑎𝑎 ± 𝑏𝑏𝑏𝑏 for real numbers 𝑎𝑎 and 𝑏𝑏.
+A2.QF.2     Represent and solve real-world problems using quadratic equations and inequalities.
+
+Graph and Key Features
+A2.QF.3    Use the discriminant to determine the number and type of solutions of a quadratic equation.
+A2.QF.4    Sketch the graph of a quadratic function given a verbal description and show key features.
+
+System of Equations
+A2.QF.5     Solve a system of equations consisting of a linear equation and a nonlinear equation in two
+            variables algebraically or graphically with or without technology.
+
+Exponential and Logarithmic Functions and Equations
+Create and Solve
+A2.EL.1     Use the properties of exponents to ﬁnd equivalent expressions and to solve equations,
+            including those involving rational exponents.
+A2.EL.2     Interpret the solution of a logarithmic equation as reasonable or unreasonable in context.
+
+Logarithms
+A2.EL.3    Translate between logarithmic and exponential forms of an equation.
+A2.EL.4    Use properties of logarithms to simplify and evaluate logarithmic expressions, with or
+           without technology.
+A2.EL.5    Use the inverse relationship between exponents and logarithms to solve problems.
+
+
+
+
+Adopted May 4, 2026                                                | South Dakota Mathematics Standards 35
+Graph and Key Features
+A2.EL.6    Graph logarithmic functions, showing intercepts and end behavior.
+
+Trigonometric Functions and Equations
+Create and Solve
+A2.TF.1     Select trigonometric functions that model real-world contexts.
+A2.TF.2     Develop the Pythagorean identity, sin2 (𝜃𝜃) + cos 2(𝜃𝜃) = 1.
+A2.TF.3     Apply the Pythagorean identity to ﬁnd the remaining trigonometric
+            functions when given sin (𝜃𝜃), cos (𝜃𝜃), or tan (𝜃𝜃) and the quadrant of the angle.
+
+Graphs and Key Features
+A2.TF.4    Explain how changes in amplitude, period, and midline aﬀect the graph of sine and cosine
+           functions, using transformations and real-world contexts to support understanding.
+
+Unit Circle
+A2.TF.5     Understand radian measure of an angle as the length of the arc on the unit circle subtended
+            by the angle.
+A2.TF.6     Explain how the unit circle can be used to model sine, cosine, tangent, secant, cosecant, and
+            cotangent for all real numbers.
+
+Polynomial, Rational, and Other Functions and Equations
+Create and Solve
+A2.PR.1     Construct a possible polynomial given a graph.
+A2.PR.2     Create equations and inequalities with one variable and use them to solve problems,
+            including absolute value functions.
+A2.PR.3     Solve formulas for a speciﬁc variable.
+A2.PR.4     Solve rational and radical equations containing one variable specifying extraneous solutions.
+
+Graph and Key Features
+A2.PR.5    Explain how the multiplicity of zeros aﬀects the shape of a polynomial graph, using
+           reasoning and visual patterns to justify the behavior at each intercept.
+A2.PR.6    Interpret the key features of polynomial functions that model a relationship between two
+           quantities in a given context; translate between diﬀerent representations of the function,
+           especially graphs, tables, and equations.
+A2.PR.7    Determine the domain and range of polynomial and rational functions.
+A2.PR.8    Graph polynomial functions, identifying zeros when suitable factorizations are available and
+           showing end behavior, with or without the appropriate technology.
+
+
+
+
+Adopted May 4, 2026                                                 | South Dakota Mathematics Standards 36
+Factor Polynomials
+A2.PR.9     Apply the remainder and factor theorems to identify factors and ﬁnd solutions to polynomial
+            equations of degree greater than 2 and explain how each theorem supports the reasoning
+            process.
+A2.PR.10 Factor polynomials using polynomial identities, including diﬀerence of squares, sum and
+            diﬀerence of cubes, and the square of a sum or diﬀerence.
+
+Rational Expressions
+A2.PR.11 Divide polynomial expressions using factorization, long division, and synthetic division, with
+            and without a remainder.
+
+Systems of Equations
+A2.PR.12 Explain why a solution to the equation 𝑓𝑓(𝑥𝑥) = 𝑔𝑔(𝑥𝑥) is the x-coordinate where the y-
+            coordinate of 𝑓𝑓(𝑥𝑥) and 𝑔𝑔(𝑥𝑥) are the same using graphs, tables, or approximations, include
+            cases where 𝑓𝑓(𝑥𝑥) and/or 𝑔𝑔(𝑥𝑥) are linear, polynomial, exponential, or rational and where at
+            least one of the functions is not linear.
+
+Statistics and Probability
+Statistical Experiments and Studies
+A2.SP.1       Represent and use mathematical models for bivariate data sets to answer questions, draw
+              conclusions, and make decisions.
+A2.SP.2       Use the mean and standard deviation of a data set to ﬁt it to a normal distribution and to
+              estimate population percentages. Recognize that there are data sets for which such a
+              procedure is not appropriate.
+A2.SP.3       Distinguish between sample surveys, experiments, and observational studies and explain the
+              purpose of randomization in statistical studies.
+A2.SP.4       Use data from a random sample to make inferences about a population.
+A2.SP.5       Compare theoretical and experimental probabilities using simulations.
+A2.SP.6       Read and explain, in context, the validity of data from outside reports by identifying the
+              variables as quantitative or categorical and describing how the data was collected.
+A2.SP.7       Indicate any potential biases or ﬂaws and identifying inferences the author of the report
+              made from sample data.
+
+
+
+
+Adopted May 4, 2026                                                 | South Dakota Mathematics Standards 37
+                          Pre-Calculus Mathematics Standards
+
+Functions & Relationships
+Operations and Graphing
+PC.FR.1    Add, subtract, multiply, and divide polynomial and rational functions.
+PC.FR.2    Use the properties of exponents to ﬁnd equivalent expressions and to solve equations.
+PC.FR.3    Use properties of logarithms to simplify and evaluate logarithmic expressions, and to solve
+           equations.
+PC.FR.4    Find the composition of two functions and determine the domain of the composite function.
+PC.FR.5    Determine if a function has an inverse and ﬁnd the inverse of a function algebraically and
+           graphically, restricting the domain if necessary.
+PC.FR.6    Analyze functions and identify key features including domain, range, intercepts, symmetry,
+           intercepts, asymptotes, and end behavior.
+PC.FR.7    Apply transformations (translations, reﬂections, and dilations) to functions and graphs of
+           polynomial, rational, exponential, and logarithmic functions.
+PC.FR.8    Model data sets with exponential and logarithmic regression.
+PC.FR.9    Choose an appropriate regression model and use it to make predictions.
+
+Trigonometry
+Trigonometric Functions and Equations
+PC.TF.1    Use trigonometric functions to model and solve real-world problems.
+PC.TF.2    Develop the Pythagorean and quotient identities, and use them to simplify expressions and
+           solve equations.
+PC.TF.3    Use the addition and subtraction, half-angle, and double-angle formulas for sine, cosine, and
+           tangent to simplify expressions and solve equations.
+PC.TF.4    Apply the Law of Sines (including the ambiguous case) and the Law of Cosines to ﬁnd
+           unknown sides and angles in any triangle.
+
+Graphs and Key Features
+PC.TF.5    Explain how changes in amplitude, period, phase shift, and midline aﬀect the graph of sine,
+           cosine, and tangent functions, using transformations and real-world contexts to support
+           understanding.
+PC.TF.6    Explain how changes in amplitude, period, phase shift, and midline aﬀect the graph of
+           secant, cosecant, and cotangent functions, using transformations.
+
+Unit Circle and Applications
+PC.TF.7      Explain the relationship between the radian measure of an angle and the length of the arc it
+             subtends on a unit circle.
+PC.TF.8      Explain how the unit circle can be used to model sine, cosine, tangent, secant, cosecant, and
+             cotangent for all real numbers.
+PC.TF.9      Calculate arc length, area of a sector, linear speed, and angular speed in real-world contexts.
+
+
+
+Adopted May 4, 2026                                                 | South Dakota Mathematics Standards 38
+Polar & Parametric
+Coordinates and Equations
+PC.PP.1    Represent points and equations in both rectangular and polar coordinate systems and
+           convert between them.
+PC.PP.2    Represent and graph parametric equations and eliminate the parameter to convert to
+           rectangular form.
+PC.PP.3    Represent complex numbers in rectangular and polar form and multiply, divide, and evaluate
+           powers (De Moivre's theorem).
+PC.PP.4    Find the modulus of a complex number, and the distance between two complex numbers.
+
+Vectors & Matrices
+Vector Operations and Applications
+PC.VM.1 Represent vectors in component form and calculate magnitude and direction.
+PC.VM.2 Perform vector addition, subtraction, and scalar multiplication both visually and component-
+           wise.
+
+Matrices and Systems
+PC.VM.3 Find the dot product of, and angle between, two vectors.
+PC.VM.4 Use matrices to represent and solve systems of equations, in two and three variables, with
+           and without technology.
+PC.VM.5 Perform matrix multiplication and use matrices to represent transformations in the plane.
+PC.VM.6 Find the determinant and inverse of a matrix, with and without technology.
+
+Conic Sections
+Properties, Equations and graphs
+PC.CS.1      Identify and describe the properties of conic sections (parabolas, ellipses, circles, and
+             hyperbolas).
+PC.CS.2      Write equations and graph conic sections given speciﬁc properties, features, or
+             transformations.
+
+Sequences & Series
+Patterns and Sums
+PC.SS.1     Deﬁne and use arithmetic and geometric sequences and series to model real-world
+            situations.
+PC.SS.2     Find partial sums of arithmetic and geometric series and understand the concept of limits as
+            they relate to inﬁnite series.
+PC.SS.3     Know and apply the binomial theorem.
+
+
+
+
+Adopted May 4, 2026                                                  | South Dakota Mathematics Standards 39
+
