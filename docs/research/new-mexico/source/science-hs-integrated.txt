@@ -1,0 +1,49 @@
+                                                 High School Recommended
+                                                   Integrated Course Map
+
+Integrated                                       Integrated                               Integrated
+  Science                                          Science                                  Science
+      I                                               II                                       III
+   Matter and Its                                   From Molecules to                        Motion and Stability:
+   Interactions                                     Organisms: Structure                     Forces and Interactions
+   HS-PS1-1                                         and Processes                            HS-PS2-1
+   HS-PS1-2                                         HS-LS1-1                                 HS-PS2-2
+   HS-PS1-3                                         HS-LS1-2                                 HS-PS2-3
+   HS-PS1-5                                         HS-LS1-3                                 HS-PS2-4
+   HS-PS1-6                                         HS-LS1-5                                 HS-PS2-5
+   HS-PS1-7            Ecosystem: Interaction,      HS-LS1-6                                 HS-PS3-1                Heredity: Inheritance
+                                                                         Matter and Its
+   HS-ETS1-4           Energy, and Dynamics         HS-LS1-7                                 HS-PS3-2                and Variation of Traits
+                                                                         Interactions
+                       HS-LS2-1                     HS-LS2-3                                 HS-ETS1-4               HS-LS1-4
+                                                                         HS-PS1-8
+   Matter and Energy   HS-LS2-2                     HS-ETS1-4                                                        HS-LS3-1
+                                                                         HS-PS2-6
+   HS-PS1-4            HS-LS2-4                                                              Earth’s Place in the    HS-LS3-2
+   HS-PS3-3            HS-LS2-5                     Waves and Their                          Universe                HS-LS3-3
+                                                                        Earth and Human
+   HS-PS3-4            HS-LS2-6                     Applications in                          HS-ESS1-1               HS-ETS1-3
+                                                                        Activity
+   HS-PS3-5            HS-LS2-7                     Technologies                             HS-ESS1-2
+                                                                        HS-ESS3-1
+                       HS-LS2-7 NM                  HS-PS4-1                                 HS-ESS1-3
+                                                                        HS-ESS3-2
+   Earth’s Systems     HS-LS2-8                     HS-PS4-2                                 HS-ESS1-4
+                                                                        HS-ESS3-3
+   HS-ESS2-4           HS-ETS1-1                    HS-PS4-3                                 HS-ESS1-6
+                                                                        HS-ESS3-4
+   HS-ESS2-5           HS-ETS1-2                    HS-PS4-4                                 HS-ESS2-7
+                                                                        HS-SS-2
+   HS-ESS2-6                                        HS-PS4-5                                 HS-SS-1
+   HS-ETS1-3                                        HS-ETS1-2                                HS-ETS1-2
+
+   Earth and Human Activity                         Earth’s Systems                          Biological Evolution:
+   HS-ESS3-2                                        HS-ESS2-1                                Unity and Diversity
+   HS-ESS3-3                                        HS-ESS1-5                                HS-LS4-1
+                                                    HS-PS4-1 (repeat)                        HS-LS4-2
+                                                    HS-ESS2-2                                HS-LS4-3
+                                                    HS-ESS2-3                                HS-LS4-4
+                                                    HS-ESS3-5                                HS-LS4-5
+                                                    HS-ESS3-6                                HS-LS4-6
+                                                                                             HS-ETS1-1
+

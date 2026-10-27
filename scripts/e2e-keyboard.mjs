@@ -159,7 +159,9 @@ async function playByKeys(page, target, label, until = async () => false) {
       ok = await tabToSelector(page, '[data-testid="bin"]', sortTry++);
       await page.keyboard.press("Enter");
     } else if (state.kind === "shade") {
-      ok = await tabToSelector(page, '[data-testid="shade-part"]');
+      // A retry keeps the parts shaded on the first try, so shade one that isn't yet (Space on a shaded part clears it,
+      // which can leave nothing shaded and Check disabled).
+      ok = await tabToSelector(page, '[data-testid="shade-part"][aria-pressed="false"]');
       await page.keyboard.press("Space");
       ok = ok && (await tabTo(page, /Check/));
       await page.keyboard.press("Enter");
