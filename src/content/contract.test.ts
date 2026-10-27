@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { COURSES } from "./all";
 import type { FrameworkContract } from "./contract";
-import { canadianWords, localizeUnit, questionText } from "./locale";
+import { canadianWords, localeOf, localizeUnit, questionText } from "./locale";
 import type { FrameworkManifest } from "./manifest";
 import { withSeed } from "./random";
 import { REGISTRY } from "./registry";
@@ -21,9 +21,29 @@ const contractOf = (id: string): FrameworkContract | undefined => {
   return path ? contracts[path.replace(/manifest\.ts$/, "contract.ts")]?.contract : undefined;
 };
 
-/** A good spread of a unit's questions: three seeds at every difficulty. */
-const sampleOf = (generate: Unit["generate"]): Question[] =>
-  [1, 2, 3].flatMap((seed) => ([1, 2, 3] as const).flatMap((difficulty) => withSeed(seed * 101 + difficulty, () => generate({ difficulty }))));
+/**
+ * A good spread of a unit's questions: three seeds at every difficulty. Most units are shared by many frameworks, so each
+ * unit's spread is made once and kept for every framework that checks it (generators are seeded, so it is the same).
+ */
+const samples = new Map<Unit["generate"], Question[]>();
+const sampleOf = (generate: Unit["generate"]): Question[] => {
+  let s = samples.get(generate);
+  if (!s) samples.set(generate, (s = [1, 2, 3].flatMap((seed) => ([1, 2, 3] as const).flatMap((difficulty) => withSeed(seed * 101 + difficulty, () => generate({ difficulty }))))));
+  return s;
+};
+
+/** The same spread as a US family sees it (US spelling and money), kept per unit like `sampleOf`. */
+const usSamples = new Map<Unit, Question[]>();
+const usSampleOf = (u: Unit): Question[] => {
+  let s = usSamples.get(u);
+  if (!s) usSamples.set(u, (s = sampleOf(localizeUnit(u, "en-US").generate)));
+  return s;
+};
+
+/** Every line a unit shows: title, blurb, parent note (left out when `note` is false) and a spread of its questions. */
+const linesOf = (u: Unit, note = true): string[] => [u.title, u.blurb, note ? (u.parentNote ?? "") : "", ...sampleOf(u.generate).map(questionText)].join("\n").split("\n");
+
+const escape = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 /** Every unit a framework shows, with where it sits. */
 const unitsOf = (id: FrameworkId) =>
@@ -76,12 +96,42 @@ const US = REGISTRY.filter((m) => m.framework.country === "US");
 /** Units written for a US state may use US words that are also Canadian (treaty, Confederation, Great Lakes). */
 const usOwn = US.map((m) => contractOf(m.id)?.ownPrefix).filter(Boolean) as string[];
 
+/** The plain practice scale every US state reports on (no state has a statewide report-card scale). */
+const US_LEVELS = ["Beginning", "Approaching", "Meeting", "Exceeding"];
+
 describe.each(US.map((m) => [m.framework.name, m] as const))("%s keeps the US contract", (_, m) => {
   const units = unitsOf(m.id);
+  const contract = contractOf(m.id)!;
+  const own = (u: Unit) => Boolean(contract?.ownPrefix && u.id.startsWith(contract.ownPrefix));
+
+  it("is in US English, with the four core subjects and the plain practice scale in every grade", () => {
+    expect(localeOf(m.framework)).toBe("en-US");
+    expect(m.framework.subjects).toEqual(["math", "language", "science", "social"]);
+    for (const g of m.framework.grades) expect(m.framework.scoringFor(g).levels.map((l) => l.label), g).toEqual(US_LEVELS);
+  });
+
+  it.runIf(contract?.otherStates)("never shows another state's places, outside its own units and US history", () => {
+    const { pattern, exempt = [], historyGrades = [], includeOwn, ownNotesOnly, people = [] } = contract.otherStates!;
+    const strip = new RegExp(`(${["George", "Martha", ...people].map(escape).join("|")}) Washington`, "g");
+    const checked = units.filter(({ c, u }) => (includeOwn || !own(u)) && !exempt.includes(u.id) && !(c.subject === "social" && historyGrades.includes(c.grade)));
+    const hits = checked.flatMap(({ u, key }) => {
+      const hit = linesOf(u, !ownNotesOnly || own(u)).find((line) => pattern.test(line.replace(strip, "")));
+      return hit ? [`${key}: ${hit}`] : [];
+    });
+    expect(hits).toEqual([]);
+  });
+
+  it.runIf(contract?.tribal)("never borrows another state's unit about its Tribes", () => {
+    // Treaties alone aren't a sign where `words` leaves them out (adopted civics units ask about the Treaty of Paris).
+    const { words, from, card } = contract.tribal!;
+    const borrowed = units.filter(({ u }) => (from ? from.test(u.id) : /^[a-z]{2}-/.test(u.id) && !own(u) && !u.standards["ca-bc"]));
+    const text = (u: Unit) => (card ? [u.id, u.title, u.blurb, u.parentNote ?? ""].join(" ") : sampleOf(u.generate).map(questionText).join("\n"));
+    expect(borrowed.filter(({ u }) => words.test(text(u))).map(({ key }) => key)).toEqual([]);
+  });
 
   it("never shows a unit about Canada, or Canadian money", () => {
     for (const { u, key } of units) {
-      const qs = sampleOf(localizeUnit(u, "en-US").generate);
+      const qs = usSampleOf(u);
       const words = usOwn.some((p) => u.id.startsWith(p)) ? [] : [...new Set(qs.flatMap((q) => canadianWords(questionText(q))))];
       expect(words, `${key} mentions Canada`).toEqual([]);
       for (const q of qs) {
@@ -93,7 +143,7 @@ describe.each(US.map((m) => [m.framework.name, m] as const))("%s keeps the US co
 
   it("never shows a spelling lesson whose choices collide in US spelling", () => {
     for (const { u, key } of units) {
-      for (const q of sampleOf(localizeUnit(u, "en-US").generate)) {
+      for (const q of usSampleOf(u)) {
         if (q.kind !== "choice") continue;
         const labels = q.choices.map((c) => `${c.label}|${c.emoji ?? ""}|${c.coin ?? ""}|${c.shape ?? ""}`);
         expect(new Set(labels).size, `${key}: ${q.prompt}`).toBe(labels.length);

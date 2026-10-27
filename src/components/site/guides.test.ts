@@ -4,7 +4,7 @@ import { FRAMEWORKS } from "@/content/frameworks";
 import { GUIDES, GUIDE_FRAMEWORKS } from "@/content/guides";
 import { GRADE_ORDER } from "@/content/subjects";
 import { allCurriculumPaths } from "./curriculum";
-import { allGuidePaths } from "./guides";
+import { allGuidePaths, guidePath } from "./guides";
 
 describe("guide pages", () => {
   const paths = allGuidePaths().map((p) => p.path);
@@ -85,5 +85,30 @@ describe("guide pages", () => {
       expect(c.chooseThem.length).toBeGreaterThan(0);
       expect(c.chooseUs.length).toBeGreaterThan(0);
     }
+  });
+});
+
+// Every US state's guides: the same checks for each, so a new state's own guide test keeps only what is its alone (its
+// state tests, its competencies and the other states' names it must not use).
+describe.each(GUIDE_FRAMEWORKS.filter((f) => f.country === "US").map((f) => [f.name, f] as const))("%s parent guides", (_, f) => {
+  const g = GUIDES[f.id]!;
+  const paths = allGuidePaths().map((p) => p.path);
+
+  it("are built: the hub, every grade, the competencies and the state tests, and no French guide", () => {
+    for (const p of [guidePath.hub(f), ...f.grades.map((grade) => guidePath.grade(f, grade)), guidePath.competencies(f), guidePath.assessment(f)]) expect(paths, p).toContain(p);
+    expect(paths).not.toContain(`/guides/${f.slug}/french/`);
+    expect(g.french).toBeUndefined();
+  });
+
+  it("have an overview and what to look for in every grade", () => {
+    for (const grade of f.grades) {
+      expect(g.gradeNotes[grade]?.overview, grade).toBeTruthy();
+      expect(g.gradeNotes[grade]?.lookFor, grade).toBeTruthy();
+    }
+  });
+
+  it("are written in US English, with US grade names", () => {
+    // "Read by Grade 3" is the name of Nevada's reading law, so it keeps its capital G.
+    expect(JSON.stringify(g).replaceAll("Read by Grade 3", "")).not.toMatch(/practis|colour|neighbour|favour|centre|behaviour|Grade \d/);
   });
 });

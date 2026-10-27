@@ -33,6 +33,35 @@ export interface FrameworkContract {
   /** Places a unit borrowed from another framework must not name, so no other province's names reach this one's classrooms. */
   foreign?: RegExp;
   /**
+   * A US state's rule for other states' places. Every line of a unit's title, blurb, parent note and a spread of its
+   * questions is tested against `pattern` (after taking out George and Martha Washington), except in the state's own
+   * units, the units in `exempt` and social studies in `historyGrades`, which name states where the history does.
+   */
+  otherStates?: {
+    pattern: RegExp;
+    /** Units that may name other states anyway, with the reason beside them (a 50 states unit, Ruby Bridges's story). */
+    exempt?: string[];
+    /** Social studies grades about US history and civics. */
+    historyGrades?: GradeId[];
+    /** Check the state's own units too (for a narrow pattern, such as Washington State alone). */
+    includeOwn?: boolean;
+    /** Check only the state's own parent notes: a shared unit carries the first framework's note. */
+    ownNotesOnly?: boolean;
+    /** More people taken out before testing, beside George and Martha Washington ("Booker T."). */
+    people?: string[];
+  };
+  /**
+   * A US state's rule against borrowing another state's units about its Tribes: no unit it borrowed from another state
+   * (an id with another state's prefix, not shared with BC) may match `words`.
+   */
+  tribal?: {
+    words: RegExp;
+    /** Which borrowed units are checked, by id; by default every id with another two-letter prefix. */
+    from?: RegExp;
+    /** Test the unit's id, title, blurb and parent note rather than a spread of its questions. */
+    card?: boolean;
+  };
+  /**
    * The framework's plan, for frameworks that place units from one (see placement.ts): "grade/subject" to entries that
    * start [unit id, "share" | "adopt" | "lift"]. Checked: each unit is listed once per course and exists there with this
    * framework's standards, and "share" is used for BC units only.

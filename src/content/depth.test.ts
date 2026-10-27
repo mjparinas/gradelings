@@ -49,17 +49,30 @@ function fingerprint(q: Question): string {
 }
 
 const cache = new Map<string, number>();
-function courseDepth(course: Course): number {
-  let total = 0;
-  for (const unit of course.units) {
-    const key = `${course.grade}/${course.subject}/${unit.id}`;
-    if (!cache.has(key)) cache.set(key, distinctPairs(key, unit));
-    total += cache.get(key)!;
-  }
-  return total;
+/** A unit's distinct questions, counted once however many frameworks and checks ask. */
+function unitDepth(course: Course, unit: Unit): number {
+  const key = `${course.grade}/${course.subject}/${unit.id}`;
+  if (!cache.has(key)) cache.set(key, distinctPairs(key, unit));
+  return cache.get(key)!;
 }
 
+function courseDepth(course: Course): number {
+  return course.units.reduce((total, unit) => total + unitDepth(course, unit), 0);
+}
+
+// Practice needs enough variety that a child does not see the same question every few sessions, in every unit as well
+// as across a course. A question counts as distinct by prompt, picture and correct answer, so reshuffled choices do not
+// count.
+const MIN_UNIT_DISTINCT = 24;
+
 describe("every course has enough practice", () => {
+  it(`has at least ${MIN_UNIT_DISTINCT} distinct questions in every unit`, () => {
+    const thin = COURSES.flatMap((course) =>
+      course.units.map((unit) => [`${course.grade}/${course.subject}/${unit.id}`, unitDepth(course, unit)] as const).filter(([, n]) => n < MIN_UNIT_DISTINCT),
+    );
+    expect(thin.map(([key, n]) => `${key}: ${n}`), "units with too few distinct questions").toEqual([]);
+  }, 120000);
+
   it("meets the minimum units and distinct questions in every framework, grade and subject", () => {
     const thin: string[] = [];
     // Frameworks not offered yet are checked too, so they launch complete.
