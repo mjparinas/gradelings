@@ -84,8 +84,10 @@ describe("every unit has a deep enough question pool", () => {
     for (const course of COURSES) {
       for (const unit of course.units) {
         const seen = new Set<string>();
+        // Stop as soon as the unit has enough: the count only has to reach the minimum, and generating 450 sets for
+        // every unit of every framework outgrew the time limit.
         for (const difficulty of [1, 2, 3] as const) {
-          for (let seed = 0; seed < 150; seed++) {
+          for (let seed = 0; seed < 150 && seen.size < MIN_DISTINCT; seed++) {
             for (const q of withSeed(seed * 7919 + difficulty, () => unit.generate({ difficulty }))) {
               const answer =
                 q.kind === "choice"
