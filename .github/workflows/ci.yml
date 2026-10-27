@@ -162,7 +162,8 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    # The build alone took about 14 minutes by late October 2026 (each state adds pages), so 15 cancelled it.
+    timeout-minutes: 25
     env:
       # The static job runs the same type check at the same time (next.config.ts).
       SKIP_BUILD_TYPECHECK: "1"
