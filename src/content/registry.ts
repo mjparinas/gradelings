@@ -6,6 +6,7 @@ import { manifest as arkansas } from "./arkansas/manifest";
 import { manifest as california } from "./california/manifest";
 import { manifest as colorado } from "./colorado/manifest";
 import { manifest as connecticut } from "./connecticut/manifest";
+import { manifest as delaware } from "./delaware/manifest";
 import { manifest as florida } from "./florida/manifest";
 import { manifest as georgia } from "./georgia/manifest";
 import { manifest as britishColumbia } from "./grades/manifest";
@@ -72,6 +73,7 @@ const MANIFESTS = [
   california,
   colorado,
   connecticut,
+  delaware,
   florida,
   georgia,
   britishColumbia,
