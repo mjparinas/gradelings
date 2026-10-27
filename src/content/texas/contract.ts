@@ -10,4 +10,6 @@ export const contract: FrameworkContract = {
   ownPrefix: "tx-",
   adoptsFrom: ["us-ca", "ca-nb", "ca-ns", "ca-mb", "us-or", "us-wa"],
   plan: PLAN,
+  // Treaties alone aren't a sign: adopted civics units ask about the Treaty of Paris and foreign treaties.
+  tribal: { words: /\b(Tribes?|Tribal)\b|\bNative\b|California Indian/, from: /^(wa|or|ca)-/ },
 };

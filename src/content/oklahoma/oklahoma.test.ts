@@ -1,10 +1,5 @@
 import { describe, expect, it } from "vitest";
 import { COURSES } from "../all";
-import { FRAMEWORKS, getFramework, UPCOMING_FRAMEWORKS } from "../frameworks";
-import { localeOf, questionText } from "../locale";
-import { withSeed } from "../random";
-import type { Question } from "../types";
-import { OTHER_STATE } from "./units/kit";
 
 // Oklahoma's citations, own units, plan and US rules are checked by the framework and country contracts
 // (src/content/contract.test.ts, with ./contract.ts). This file keeps what is Oklahoma's alone.
@@ -14,52 +9,7 @@ const oklahoma = COURSES.flatMap((c) =>
   c.units.filter((u) => u.standards["us-ok"]).map((u) => ({ c, u, key: `${c.grade}/${c.subject}/${u.id}` })),
 );
 
-/** A good spread of a unit's questions: three seeds at every difficulty. */
-const sampleOf = (generate: (o: { difficulty: 1 | 2 | 3 }) => Question[]) =>
-  [1, 2, 3].flatMap((seed) =>
-    ([1, 2, 3] as const).flatMap((difficulty) => withSeed(seed * 101 + difficulty, () => generate({ difficulty }))),
-  );
-
-/** Every line a unit shows: title, blurb, parent note and a spread of its questions. */
-const linesOf = (u: (typeof oklahoma)[number]["u"]) =>
-  [u.title, u.blurb, u.parentNote ?? "", ...sampleOf((o) => u.generate(o)).map(questionText)].join("\n").split("\n");
-
 describe("Oklahoma", () => {
-  it("is a US framework in US English, offered to families", () => {
-    const ok = getFramework("oklahoma");
-    expect(ok.id).toBe("us-ok");
-    expect(ok.country).toBe("US");
-    expect(localeOf(ok)).toBe("en-US");
-    expect(ok.subjects).toEqual(["math", "language", "science", "social"]);
-    expect(ok.scoringFor("4").levels.map((l) => l.label)).toEqual(["Beginning", "Approaching", "Meeting", "Exceeding"]);
-    expect(FRAMEWORKS).toContain(ok);
-    expect(UPCOMING_FRAMEWORKS).not.toContain(ok);
-  });
-
-  it("never shows Oklahoma families a unit about another state's places", () => {
-    // George Washington, Martha Washington and Washington, D.C. are fine. Oklahoma's own units (ok-) may name other
-    // places where Oklahoma's story calls for it (its neighbor states, California for the Dust Bowl migrants), the
-    // United States geography and history grades (4, 5, 8 and 9) name states where the history does, and the
-    // states-and-capitals unit names every state.
-    const EXEMPT = new Set(["or-g5-states-capitals", "wa-g5-us-geography"]);
-    const history = (grade: string, subject: string) => subject === "social" && ["4", "5", "8", "9"].includes(grade);
-    for (const { u, key } of oklahoma.filter(({ c, u }) => !u.id.startsWith("ok-") && !EXEMPT.has(u.id) && !history(c.grade, c.subject))) {
-      const hit = linesOf(u).find((line) => OTHER_STATE.test(line.replace(/(George|Martha) Washington/g, "")));
-      expect(hit ?? "", `${key} names another state's places`).toBe("");
-    }
-  });
-
-  it("never borrows another state's Tribal or California Indian units", () => {
-    // Oklahoma's own units about its Tribal nations are written for Oklahoma. Treaties alone aren't a sign (adopted
-    // civics units ask about the Treaty of Paris), and neither is "Native nations" in a general unit about North America.
-    const words = /\b(Tribes?|Tribal)\b|California Indian/;
-    const borrowed = oklahoma.filter(({ u }) => /^[a-z]{2}-/.test(u.id) && !u.id.startsWith("ok-") && !u.standards["ca-bc"]);
-    for (const { u, key } of borrowed.filter(({ u }) => /^(wa|or|ca|me|tx|ny|mn|ak|al|az|ar|fl|il|co|pa|ga|oh|nj|in|va|mo|nc|ma|md|sc|wi|tn|mi)-/.test(u.id))) {
-      const text = sampleOf((o) => u.generate(o)).map(questionText).join("\n");
-      expect(words.test(text) ? key : "", `${key} is another state's unit about Tribes`).toBe("");
-    }
-  });
-
   it("teaches Oklahoma studies in its own units, which carry only Oklahoma standards", () => {
     const own = oklahoma.filter(({ u }) => u.id.startsWith("ok-"));
     expect(own.map(({ u }) => u.id)).toEqual(

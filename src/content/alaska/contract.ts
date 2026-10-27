@@ -11,4 +11,10 @@ export const contract: FrameworkContract = {
   ownPrefix: "ak-",
   adoptsFrom: ["us-ca", "ca-nb", "ca-ns", "ca-mb", "us-tx", "us-or", "us-wa", "us-me"],
   plan: PLAN,
+  // George Washington, Martha Washington and Washington, D.C. are fine, and so are the Oregon Trail and California in
+  // United States history (the Gold Rush, statehood, the Compromise of 1850).
+  otherStates: { pattern: /Washington(?!,? D\.?C\.?)|Oregon(?! Trail)|California(?! Gold Rush| became|, a free state)/, exempt: ["or-g5-states-capitals"], includeOwn: true },
+  // Alaska's own units about Alaska Native peoples are written for Alaska. Other states' units about their Tribes,
+  // treaties or California Indian nations stay theirs.
+  tribal: { words: /\b(Tribes?|Tribal|treaty|treaties|Indian(?! Ocean)|Native|missions?|Wabanaki)\b/i, from: /^(wa|or|ca|me|tx|ny)-/, card: true },
 };

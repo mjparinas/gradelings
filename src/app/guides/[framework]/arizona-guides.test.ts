@@ -1,30 +1,13 @@
 import { describe, expect, it } from "vitest";
-import { allGuidePaths, guidePath } from "@/components/site/guides";
-import { FRAMEWORKS, getFramework, UPCOMING_FRAMEWORKS } from "@/content/frameworks";
-import { GUIDE_FRAMEWORKS, guidesFor } from "@/content/guides";
+import { guidePath } from "@/components/site/guides";
+import { getFramework } from "@/content/frameworks";
+import { guidesFor } from "@/content/guides";
 
 // Arizona's guides: the hub, grade notes, the eight Standards for Mathematical Practice and the state tests (AASA, AzSCI
 // and ACT Aspire).
 describe("Arizona parent guides", () => {
   const az = getFramework("us-az");
   const g = guidesFor("us-az");
-
-  it("is offered, so every Arizona guide page is built", () => {
-    expect(FRAMEWORKS).toContain(az);
-    expect(UPCOMING_FRAMEWORKS).not.toContain(az);
-    expect(GUIDE_FRAMEWORKS).toContain(az);
-    const paths = allGuidePaths().map((p) => p.path);
-    for (const p of [guidePath.hub(az), guidePath.grade(az, "4"), "/guides/arizona/math-practices/", "/guides/arizona/state-tests/"]) expect(paths, p).toContain(p);
-  });
-
-  it("has a note for every grade and no French guide", () => {
-    expect(g.french).toBeUndefined();
-    expect(az.grades).toEqual(["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"]);
-    for (const grade of az.grades) {
-      expect(g.gradeNotes[grade]?.overview, grade).toBeTruthy();
-      expect(g.gradeNotes[grade]?.lookFor, grade).toBeTruthy();
-    }
-  });
 
   it("covers AASA, AzSCI and ACT Aspire, and the eight Mathematical Practices, which are not graded on their own", () => {
     expect(guidePath.competencies(az)).toBe("/guides/arizona/math-practices/");
@@ -44,9 +27,8 @@ describe("Arizona parent guides", () => {
     }
   });
 
-  it("is written in US English and never names another state", () => {
+  it("never names another state", () => {
     const text = JSON.stringify(g);
-    expect(text).not.toMatch(/practis|colour|neighbour|favour|centre|behaviour|Grade \d/);
     expect(text).not.toMatch(/Washington|Oregon|California|Maine|Texas|Alaska/);
   });
 });

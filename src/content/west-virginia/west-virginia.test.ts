@@ -1,10 +1,5 @@
 import { describe, expect, it } from "vitest";
 import { COURSES } from "../all";
-import { FRAMEWORKS, getFramework, UPCOMING_FRAMEWORKS } from "../frameworks";
-import { localeOf, questionText } from "../locale";
-import { withSeed } from "../random";
-import type { Question } from "../types";
-import { OTHER_STATE } from "./units/kit";
 
 // West Virginia's citations, own units, plan and US rules are checked by the framework and country contracts
 // (src/content/contract.test.ts, with ./contract.ts). This file keeps what is West Virginia's alone.
@@ -14,53 +9,10 @@ const westVirginia = COURSES.flatMap((c) =>
   c.units.filter((u) => u.standards["us-wv"]).map((u) => ({ c, u, key: `${c.grade}/${c.subject}/${u.id}` })),
 );
 
-/** A good spread of a unit's questions: three seeds at every difficulty. */
-const sampleOf = (generate: (o: { difficulty: 1 | 2 | 3 }) => Question[]) =>
-  [1, 2, 3].flatMap((seed) =>
-    ([1, 2, 3] as const).flatMap((difficulty) => withSeed(seed * 101 + difficulty, () => generate({ difficulty }))),
-  );
-
-/** Every line a unit shows: title, blurb, parent note and a spread of its questions. */
-const linesOf = (u: (typeof westVirginia)[number]["u"]) =>
-  [u.title, u.blurb, u.parentNote ?? "", ...sampleOf((o) => u.generate(o)).map(questionText)].join("\n").split("\n");
-
 const social = (grade: string) => westVirginia.filter(({ c }) => c.grade === grade && c.subject === "social").map(({ u }) => u.id);
 
 describe("West Virginia", () => {
-  it("is a US framework in US English, offered to families", () => {
-    const wv = getFramework("west-virginia");
-    expect(wv.id).toBe("us-wv");
-    expect(wv.country).toBe("US");
-    expect(localeOf(wv)).toBe("en-US");
-    expect(wv.subjects).toEqual(["math", "language", "science", "social"]);
-    expect(wv.scoringFor("4").levels.map((l) => l.label)).toEqual(["Beginning", "Approaching", "Meeting", "Exceeding"]);
-    expect(FRAMEWORKS).toContain(wv);
-    expect(UPCOMING_FRAMEWORKS).not.toContain(wv);
-  });
-
-  it("never shows West Virginia families a borrowed unit about another state's places", () => {
-    // George Washington, Martha Washington and Washington, D.C. are fine, and so is Virginia, which West Virginia was
-    // part of. West Virginia's own units (wv-) are written for it, and the United States and world history and
-    // geography grades (4 to 9) name states where the lesson does. The Grade 9 rhetoric unit quotes Dr. King's letter
-    // from Birmingham.
-    const EXEMPT = new Set(["ca-g9-rhetoric-and-sources"]);
-    const history = (grade: string, subject: string) => subject === "social" && ["4", "5", "6", "7", "8", "9"].includes(grade);
-    for (const { u, key } of westVirginia.filter(({ c, u }) => !u.id.startsWith("wv-") && !EXEMPT.has(u.id) && !history(c.grade, c.subject))) {
-      const hit = linesOf(u).find((line) => OTHER_STATE.test(line.replace(/(George|Martha) Washington/g, "")));
-      expect(hit ?? "", `${key} names another state's places`).toBe("");
-    }
-  });
-
-  it("never borrows another state's Tribal units", () => {
-    // Treaties alone aren't a sign (adopted civics units ask about the Treaty of Paris).
-    const words = /\b(Tribes?|Tribal)\b|California Indian/;
-    for (const { u, key } of westVirginia.filter(({ u }) => /^[a-z]{2}-/.test(u.id) && !u.id.startsWith("wv-") && !u.standards["ca-bc"])) {
-      const text = sampleOf((o) => u.generate(o)).map(questionText).join("\n");
-      expect(words.test(text) ? key : "", `${key} is another state's unit about Tribes`).toBe("");
-    }
-  });
-
-  it("teaches West Virginia in its own units, which carry only West Virginia standards", () => {
+  it("teaches West Virginia in its own units", () => {
     const own = westVirginia.filter(({ u }) => u.id.startsWith("wv-"));
     expect(own.map(({ u }) => u.id)).toEqual(
       expect.arrayContaining([
@@ -73,10 +25,6 @@ describe("West Virginia", () => {
         "wv-g8-civil-war-statehood",
       ]),
     );
-    for (const { u, key } of own) {
-      expect(Object.keys(u.standards), `${key} carries only West Virginia standards`).toEqual(["us-wv"]);
-      expect(["math", "language", "social", "science"], `${key} is a core subject`).toContain(key.split("/")[1]);
-    }
   });
 
   it("follows the grade content of West Virginia's social studies standards", () => {

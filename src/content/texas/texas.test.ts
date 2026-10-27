@@ -1,7 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { COURSES } from "../all";
-import { FRAMEWORKS, getFramework, UPCOMING_FRAMEWORKS } from "../frameworks";
-import { localeOf, questionText } from "../locale";
+import { questionText } from "../locale";
 import { withSeed } from "../random";
 import type { Question } from "../types";
 
@@ -23,17 +22,6 @@ const linesOf = (u: (typeof texas)[number]["u"]) =>
   [u.title, u.blurb, u.id.startsWith("tx-") ? (u.parentNote ?? "") : "", ...sampleOf((o) => u.generate(o)).map(questionText)].join("\n").split("\n");
 
 describe("Texas", () => {
-  it("is a US framework in US English, offered to families", () => {
-    const tx = getFramework("texas");
-    expect(tx.id).toBe("us-tx");
-    expect(tx.country).toBe("US");
-    expect(localeOf(tx)).toBe("en-US");
-    expect(tx.subjects).toEqual(["math", "language", "science", "social"]);
-    expect(tx.scoringFor("4").levels.map((l) => l.label)).toEqual(["Beginning", "Approaching", "Meeting", "Exceeding"]);
-    expect(FRAMEWORKS).toContain(tx);
-    expect(UPCOMING_FRAMEWORKS).not.toContain(tx);
-  });
-
   it("teaches Texas history in Grades 4 and 7 with units written for Texas", () => {
     for (const grade of ["4", "7"]) {
       const own = texas.filter(({ c, u }) => c.grade === grade && c.subject === "social" && u.id.startsWith("tx-"));
@@ -57,12 +45,4 @@ describe("Texas", () => {
     }
   });
 
-  it("never borrows another state's Tribal units", () => {
-    // Treaties alone aren't a sign: adopted civics units ask about the Treaty of Paris and foreign treaties.
-    const words = /\b(Tribes?|Tribal)\b|\bNative\b|California Indian/;
-    for (const { u, key } of texas.filter(({ u }) => /^(wa|or|ca)-/.test(u.id))) {
-      const text = sampleOf((o) => u.generate(o)).map(questionText).join("\n");
-      expect(words.test(text) ? key : "", `${key} is another state's unit about Tribes`).toBe("");
-    }
-  });
 });

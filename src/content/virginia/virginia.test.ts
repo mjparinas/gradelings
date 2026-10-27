@@ -1,10 +1,5 @@
 import { describe, expect, it } from "vitest";
 import { COURSES } from "../all";
-import { FRAMEWORKS, getFramework, UPCOMING_FRAMEWORKS } from "../frameworks";
-import { localeOf, questionText } from "../locale";
-import { withSeed } from "../random";
-import type { Question } from "../types";
-import { OTHER_STATE } from "./units/kit";
 
 // Virginia's citations, own units, plan and US rules are checked by the framework and country contracts
 // (src/content/contract.test.ts, with ./contract.ts). This file keeps what is Virginia's alone.
@@ -14,59 +9,12 @@ const virginia = COURSES.flatMap((c) =>
   c.units.filter((u) => u.standards["us-va"]).map((u) => ({ c, u, key: `${c.grade}/${c.subject}/${u.id}` })),
 );
 
-/** A good spread of a unit's questions: three seeds at every difficulty. */
-const sampleOf = (generate: (o: { difficulty: 1 | 2 | 3 }) => Question[]) =>
-  [1, 2, 3].flatMap((seed) =>
-    ([1, 2, 3] as const).flatMap((difficulty) => withSeed(seed * 101 + difficulty, () => generate({ difficulty }))),
-  );
-
-/** Every line a unit shows: title, blurb, parent note and a spread of its questions. */
-const linesOf = (u: (typeof virginia)[number]["u"]) =>
-  [u.title, u.blurb, u.parentNote ?? "", ...sampleOf((o) => u.generate(o)).map(questionText)].join("\n").split("\n");
-
 describe("Virginia", () => {
-  it("is a US framework in US English, offered to families", () => {
-    const va = getFramework("virginia");
-    expect(va.id).toBe("us-va");
-    expect(va.country).toBe("US");
-    expect(localeOf(va)).toBe("en-US");
-    expect(va.subjects).toEqual(["math", "language", "science", "social"]);
-    expect(va.scoringFor("4").levels.map((l) => l.label)).toEqual(["Beginning", "Approaching", "Meeting", "Exceeding"]);
-    expect(FRAMEWORKS).toContain(va);
-    expect(UPCOMING_FRAMEWORKS).not.toContain(va);
-  });
-
-  it("never shows Virginia families a unit about another state's places", () => {
-    // George Washington, Martha Washington, Booker T. Washington and Washington, D.C. are fine. Virginia's own units
-    // (va-) may name other places where Virginia's story calls for it (Valley Forge, the Wilderness Road into
-    // Kentucky), "Letter from Birmingham Jail" is a source in Grade 9 English, and United States history and civics (the units Grade 4 borrows, and Grades 5, 6 and 7) name states where the history does.
-    const EXEMPT = new Set(["ca-g9-rhetoric-and-sources"]);
-    const history = (grade: string, subject: string) => subject === "social" && ["4", "5", "6", "7"].includes(grade);
-    for (const { u, key } of virginia.filter(({ c, u }) => !u.id.startsWith("va-") && !EXEMPT.has(u.id) && !history(c.grade, c.subject))) {
-      const hit = linesOf(u).find((line) => OTHER_STATE.test(line.replace(/(George|Martha|Booker T\.) Washington/g, "")));
-      expect(hit ?? "", `${key} names another state's places`).toBe("");
-    }
-  });
-
-  it("never borrows another state's Tribal or California Indian units", () => {
-    // Virginia's own units about Virginia's tribes are written for Virginia. Treaties alone aren't a sign (adopted
-    // civics units ask about the Treaty of Paris), and neither is "Native nations" in a general unit about explorers.
-    const words = /\b(Tribes?|Tribal)\b|California Indian/;
-    for (const { u, key } of virginia.filter(({ u }) => /^(wa|or|ca|me|tx|ny|mn|ak|al|az|ar|fl|il|co|pa|ga)-/.test(u.id))) {
-      const text = sampleOf((o) => u.generate(o)).map(questionText).join("\n");
-      expect(words.test(text) ? key : "", `${key} is another state's unit about Tribes`).toBe("");
-    }
-  });
-
-  it("teaches Virginia's own units, which carry only Virginia standards", () => {
+  it("teaches Virginia's own units", () => {
     const own = virginia.filter(({ u }) => u.id.startsWith("va-"));
     expect(own.map(({ u }) => u.id)).toEqual(
       expect.arrayContaining(["va-k-virginia-symbols", "va-g1-virginia-history", "va-g2-first-peoples", "va-g3-mali", "va-g7-governing-virginia", "va-g4-virginia-resources", "va-g6-watersheds"]),
     );
-    for (const { u, key } of own) {
-      expect(Object.keys(u.standards), `${key} carries only Virginia standards`).toEqual(["us-va"]);
-      expect(["math", "language", "social", "science"], `${key} is a core subject`).toContain(key.split("/")[1]);
-    }
   });
 
   it("teaches Virginia Studies in 4th grade, US history in 5th and 6th, civics in 7th, world geography in 8th and world history in 9th", () => {
