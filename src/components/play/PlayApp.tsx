@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, type ReactNode } from "react";
+import { memo, useEffect, useState, type ReactNode } from "react";
 import { VoicePreload } from "@/components/VoicePreload";
 import { ClassTimerChip } from "./ClassTimer";
 import type { FlagKey } from "@/lib/flags";
@@ -9,7 +9,7 @@ import { ageBandFor } from "@/content/subjects";
 import type { FrameworkId, GradeId, SubjectId } from "@/content/types";
 import type { Mode } from "@/lib/model";
 import { PLACEMENT_SUBJECTS } from "@/lib/placement";
-import { useRoute } from "@/lib/router";
+import { parse, ShownRoute, useShownHash } from "@/lib/router";
 import { useActiveProfile, useChildSettings, useProfiles, useReady, useStore } from "@/lib/store";
 import { storiesFor } from "@/lib/stories";
 import { startBackgroundSync } from "@/lib/sync";
@@ -17,30 +17,21 @@ import { prefetchGrades } from "@/lib/useGradeContent";
 import { BandProvider } from "../band";
 import { ContentGate } from "../ContentGate";
 import { LoadingScreen } from "../ui";
-import { Arcade, GameScreen } from "./Arcade";
+import { RouteProgress } from "../RouteProgress";
 import { Hub } from "./Hub";
-import { FactsPicker } from "./Facts";
 import { setLivePaused } from "@/lib/livePause";
 import { LiveQuestionCard, useLiveQuestion } from "./LiveQuestion";
 import { SpeedPicker, SubjectPicker, UnitList } from "./Practice";
-import { PlacementTest } from "./PlacementTest";
 import { SecretsListener } from "./Secrets";
 import { Session } from "./Session";
-import { Shop } from "./Shop";
 import type { ClassCodes } from "@/lib/playLink";
 import { CardSignIn, FirstRun, Picker, useClassSignInLink, usePlayStart } from "./Start";
 import { getCourse, parseUnitKey } from "@/content";
 import { nextGrade } from "@/lib/schoolYear";
-import { SneakPeek } from "./SneakPeek";
 import { go } from "@/lib/router";
 import { Toasts } from "./Toasts";
+import { Arcade, FactsPicker, GameScreen, LazyScreen, PlacementTest, prefetchScreens, Room, Shop, SneakPeek, StickerBook, StoryLibrary, StoryReader, TrailMap, Treasures, TrophyRoom } from "./lazyScreens";
 import { LessonScreen } from "./LessonScreen";
-import { StickerBook } from "./StickerBook";
-import { StoryLibrary, StoryReader } from "./Stories";
-import { Room } from "./Room";
-import { TrailMap } from "./TrailMap";
-import { TrophyRoom } from "./Trophies";
-import { Treasures } from "./Treasures";
 
 const MODES: Mode[] = ["practice", "adventure", "review", "speed", "daily", "challenge", "facts"];
 
@@ -55,8 +46,27 @@ function NextGrade({ grade, children }: { grade: GradeId; children: ReactNode })
   return <ContentGate targets={[{ grade, framework: profile.framework }]}>{children}</ContentGate>;
 }
 
+/**
+ * The screen for the address. A tap shows a progress bar at once while the next screen is drawn (or downloaded)
+ * in the background, and the old one stays up until it is ready.
+ */
 function Screen() {
-  const { path, query } = useRoute();
+  const { shown, pending } = useShownHash();
+  return (
+    <>
+      <RouteProgress pending={pending} />
+      <ShownRoute value={shown}>
+        <LazyScreen name={parse(shown).path[0] ?? ""}>
+          <Routes hash={shown} />
+        </LazyScreen>
+      </ShownRoute>
+    </>
+  );
+}
+
+// Memoised, so the old screen isn't drawn again while the next one is on its way.
+const Routes = memo(function Routes({ hash }: { hash: string }) {
+  const { path, query } = parse(hash);
   const isOn = useIsOn();
   const profile = useActiveProfile()!;
   const settings = useChildSettings();
@@ -123,7 +133,7 @@ function Screen() {
     default:
       return <Hub />;
   }
-}
+});
 
 export function PlayApp() {
   const ready = useReady();
@@ -220,11 +230,12 @@ function StartLink() {
   return null;
 }
 
-/** Once the active child's lessons are in, quietly download siblings' and nearby grades for offline use. */
+/** Once the active child's lessons are in, quietly download the other screens, and siblings' and nearby grades, for offline use. */
 function Prefetch() {
   const profiles = useProfiles();
   const active = useActiveProfile();
   const targets = [...new Set([active, ...profiles].filter(Boolean).map((p) => `${p!.framework}:${p!.grade}`))].join(",");
+  useEffect(() => prefetchScreens(), []);
   useEffect(() => {
     if (targets) {
       prefetchGrades(

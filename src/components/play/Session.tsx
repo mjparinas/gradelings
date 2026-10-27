@@ -126,6 +126,7 @@ function Runner({ plan }: { plan: Plan }) {
   const settings = useChildSettings();
   const band = useBand();
   const log = useStore((s) => s.log);
+  const logSoon = useStore((s) => s.logSoon);
   const startDerived = useMemo(() => derivedFor(useStore.getState(), profile.id), [profile.id]);
 
   const [started] = useState(() => Date.now());
@@ -198,7 +199,8 @@ function Runner({ plan }: { plan: Plan }) {
   function record(correct: boolean, attempts: number, revealed: boolean) {
     if (!item) return;
     const rl = q && item.unitKey.split("/")[1] === "language" ? questionReadingLevel(q) : undefined;
-    log([
+    // After the paint, so the tap's sound, burst and feedback come first.
+    logSoon([
       {
         type: "answer",
         unit: item.unitKey,

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { SitePage } from "@/components/site/SiteChrome";
 import { PARENT_SIGN_IN, STUDENT_SIGN_IN } from "@/lib/accountLinks";
 import { TEACHER_SIGNUP } from "@/components/site/teachers";
+import { AppLink } from "@/components/site/AppLink";
 
 export const metadata: Metadata = { title: "Sign in", robots: { index: false, follow: false } };
 
@@ -24,14 +25,14 @@ export default function SignInChooser() {
               <h2 className="text-2xl font-bold">{w.who}</h2>
               <p className="font-read text-ink-soft">{w.note}</p>
               {/* The apps are big single-page bundles: fetch them on tap. */}
-              <Link prefetch={false} href={w.href} className="btn btn-good min-h-12 px-6 text-lg">
+              <AppLink href={w.href} className="btn btn-good min-h-12 px-6 text-lg">
                 {w.label}
-              </Link>
+              </AppLink>
             </li>
           ))}
         </ul>
         <p className="mt-6 font-read text-ink-soft">
-          New here? <Link className="font-semibold underline" href="/pricing/">See pricing</Link> or <Link prefetch={false} className="font-semibold underline" href="/play/">try it free</Link>.
+          New here? <Link className="font-semibold underline" href="/pricing/">See pricing</Link> or <AppLink className="font-semibold underline" href="/play/">try it free</AppLink>.
         </p>
       </div>
     </SitePage>

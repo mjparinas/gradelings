@@ -1,12 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState, useSyncExternalStore, type ReactNode } from "react";
+import { memo, useEffect, useState, useSyncExternalStore, type ReactNode } from "react";
 import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
 import { finishGoogleSignIn, refreshAccount, type BillingInfo } from "@/lib/account";
 import { takeBillingPass } from "@/lib/billingReturn";
 import { hasPaidPlan, isPremium, trialDaysLeft } from "@/lib/plan";
-import { go, useRoute } from "@/lib/router";
+import { go, parse, ShownRoute, useRoute, useShownHash } from "@/lib/router";
 import { useLocale } from "@/lib/say";
 import { useProfiles, useReady, useStore } from "@/lib/store";
 import { VoicePreload } from "@/components/VoicePreload";
@@ -14,6 +14,7 @@ import { startBackgroundSync, syncNow } from "@/lib/sync";
 import { isStoreApp } from "@/lib/twa";
 import { ContentGate } from "../ContentGate";
 import { LoadingScreen } from "../ui";
+import { RouteProgress } from "../RouteProgress";
 import { AccountPage, AuthForm } from "./Account";
 import { ChildrenPage } from "./Children";
 import { Gate } from "./Gate";
@@ -66,7 +67,7 @@ function SyncBadge() {
   );
 }
 
-function Shell({ children, active }: { children: ReactNode; active: string }) {
+function Shell({ children, active, pending }: { children: ReactNode; active: string; pending: boolean }) {
   const family = useStore((s) => s.family);
   const premium = isPremium(family);
   const paid = hasPaidPlan(family);
@@ -126,6 +127,7 @@ function Shell({ children, active }: { children: ReactNode; active: string }) {
           </ul>
         </nav>
       </header>
+      <RouteProgress pending={pending} />
       <main id={MAIN_ID} tabIndex={-1} className="mx-auto max-w-6xl px-4 py-6" style={{ paddingBottom: "max(2rem, env(safe-area-inset-bottom))" }}>
         <UsConsent />
         <UpgradeBanner />
@@ -167,12 +169,58 @@ function SignInOnly() {
   );
 }
 
+/** The page for a section. Memoised, so the old page isn't drawn again while the next one is on its way. */
+const Section = memo(function Section({ hash, billing, onBilling }: { hash: string; billing: BillingInfo | null; onBilling: (b: BillingInfo | null) => void }) {
+  const { path } = parse(hash);
+  const section = path[0] ?? "";
+  let page: ReactNode;
+  switch (section) {
+    case "reports":
+      page = <ReportsPage childId={path[1]} />;
+      break;
+    case "placement":
+      page = <PlacementPage childId={path[1]} />;
+      break;
+    case "report-cards":
+      page = <ReportCardsPage childId={path[1]} />;
+      break;
+    case "year":
+      page = <YearReviewPage childId={path[1]} />;
+      break;
+    case "children":
+      page = <ChildrenPage />;
+      break;
+    case "settings":
+      page = <SettingsPage childId={path[1]} />;
+      break;
+    case "subscription":
+      page = <SubscriptionPage billing={billing} onBilling={onBilling} />;
+      break;
+    case "account":
+    case "privacy":
+      page = <AccountPage onBilling={onBilling} />;
+      break;
+    default:
+      page = <Overview />;
+  }
+  if ((NAV_PARENT[section] ?? section) === "reports") {
+    page = (
+      <>
+        <ReportTabs current={section} childId={path[1]} />
+        {page}
+      </>
+    );
+  }
+  return page;
+});
+
 export function ParentApp() {
   const ready = useReady();
   // Back from Stripe straight after typing the PIN: don't ask for it again (src/lib/billingReturn.ts).
   const [unlocked, setUnlocked] = useState(() => typeof window !== "undefined" && takeBillingPass(window.location.hash));
   const [billing, setBilling] = useState<BillingInfo | null>(null);
   const { path, query } = useRoute();
+  const { shown, pending } = useShownHash();
   const profiles = useProfiles();
   const hasPin = useStore((s) => Boolean(s.pin));
   const signedIn = useStore((s) => Boolean(s.family.account));
@@ -203,51 +251,17 @@ export function ParentApp() {
   if (!unlocked && !hasPin && !signedIn && path[0] === "account" && query.get("mode") === "signin") return <SignInOnly />;
   if (!unlocked) return <Gate onPass={() => setUnlocked(true)} />;
 
-  const section = path[0] ?? "";
-  let page: ReactNode;
-  switch (section) {
-    case "reports":
-      page = <ReportsPage childId={path[1]} />;
-      break;
-    case "placement":
-      page = <PlacementPage childId={path[1]} />;
-      break;
-    case "report-cards":
-      page = <ReportCardsPage childId={path[1]} />;
-      break;
-    case "year":
-      page = <YearReviewPage childId={path[1]} />;
-      break;
-    case "children":
-      page = <ChildrenPage />;
-      break;
-    case "settings":
-      page = <SettingsPage childId={path[1]} />;
-      break;
-    case "subscription":
-      page = <SubscriptionPage billing={billing} onBilling={setBilling} />;
-      break;
-    case "account":
-    case "privacy":
-      page = <AccountPage onBilling={setBilling} />;
-      break;
-    default:
-      page = <Overview />;
-  }
-  const tab = NAV_PARENT[section] ?? section;
-  if (tab === "reports") {
-    page = (
-      <>
-        <ReportTabs current={section} childId={path[1]} />
-        {page}
-      </>
-    );
-  }
+  // The tab lights up at once; its page is drawn in the background while the old one stays up (useShownHash).
+  const tab = NAV_PARENT[path[0] ?? ""] ?? path[0] ?? "";
   // Reports need each child's lessons; settings and billing still work if a download fails.
   return (
     <ContentGate targets={profiles.map((p) => ({ grade: p.grade, framework: p.framework }))} optional>
       <VoicePreload />
-      <Shell active={tab}>{page}</Shell>
+      <Shell active={tab} pending={pending}>
+        <ShownRoute value={shown}>
+          <Section hash={shown} billing={billing} onBilling={setBilling} />
+        </ShownRoute>
+      </Shell>
     </ContentGate>
   );
 }

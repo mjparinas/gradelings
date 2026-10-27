@@ -35,6 +35,7 @@ import { setQuietCheck, setSoundCheck } from "./sound";
 import { forgetMyInvite } from "./referral";
 import { getTrophy, newlyEarned, TIER_STYLE } from "./trophies";
 import { schoolYearOf } from "./schoolYear";
+import { afterPaint } from "./afterPaint";
 
 export interface Toast {
   id: string;
@@ -82,6 +83,11 @@ interface State {
   updateSettings: (profileId: string, patch: Partial<ChildSettings>) => void;
   /** Record events for the active child; awards trophies and quests. */
   log: (events: NewEvent[]) => void;
+  /**
+   * Logs once the screen has painted, so a tap's feedback shows before the scoring catches up (re-deriving a
+   * child's stats takes longer the more they have practised). Anything queued is logged first by the next `log`.
+   */
+  logSoon: (events: NewEvent[]) => void;
   buy: (itemId: string) => boolean;
   /** Buy (if needed) and place a room item. */
   placeRoomItem: (itemId: string) => boolean;
@@ -107,6 +113,9 @@ function newFamily(): FamilyInfo {
   const now = Date.now();
   return { plan: "trial", trialEndsAt: now + TRIAL_DAYS * 86_400_000, updatedAt: now };
 }
+
+// Events waiting for `logSoon` to log them after the next paint.
+let soon: NewEvent[] = [];
 
 // Derived stats are cached per child and recomputed only when their events change.
 const deriveCache = new Map<string, { events: AppEvent[]; resetAt: number; day: string; testCoins: boolean; value: Derived }>();
@@ -234,6 +243,8 @@ export const useStore = create<State>()((set, get) => ({
   resetProgress: (id) => get().updateProfile(id, { resetAt: Date.now() }),
 
   setActive: (id) => {
+    // Answers waiting to be logged belong to the child who gave them.
+    if (soon.length) get().log([]);
     set({ activeId: id });
     save("activeId", id);
   },
@@ -246,7 +257,16 @@ export const useStore = create<State>()((set, get) => ({
     get().setSync({ dirtyProfiles: [...new Set([...get().sync.dirtyProfiles, profileId])] });
   },
 
-  log: (incoming) => {
+  logSoon: (incoming) => {
+    if (!incoming.length) return;
+    const first = soon.length === 0;
+    soon.push(...incoming);
+    if (first) afterPaint(() => get().log([]));
+  },
+
+  log: (queued) => {
+    // Anything waiting for logSoon goes first, so events keep the order they happened in.
+    const incoming = soon.length ? [...soon.splice(0), ...queued] : queued;
     const state = get();
     const profile = state.profiles.find((p) => p.id === state.activeId);
     if (!profile || !incoming.length) return;
@@ -455,6 +475,7 @@ export const useStore = create<State>()((set, get) => ({
   dismissToast: (id) => set({ toasts: get().toasts.filter((t) => t.id !== id) }),
 
   wipeDevice: async () => {
+    soon = [];
     await localdb.clearAll();
     forgetMyInvite();
     deriveCache.clear();
@@ -470,6 +491,9 @@ export const useStore = create<State>()((set, get) => ({
     });
   },
 }));
+
+// A tab closed or put away right after an answer still saves it.
+if (typeof window !== "undefined") window.addEventListener("pagehide", () => soon.length && useStore.getState().log([]));
 
 // ---------- Hooks ----------
 

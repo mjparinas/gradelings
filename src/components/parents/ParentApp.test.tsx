@@ -190,7 +190,8 @@ describe("ParentApp", () => {
       window.location.hash = "#/children";
       window.dispatchEvent(new HashChangeEvent("hashchange"));
     });
-    expect(screen.getByText("page:children")).toBeInTheDocument();
+    // The page follows once the tap has been painted.
+    expect(await screen.findByText("page:children")).toBeInTheDocument();
     expect(screen.queryByRole("button", { name: "Unlock" })).not.toBeInTheDocument();
   });
 

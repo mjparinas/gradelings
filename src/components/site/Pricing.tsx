@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, money, perChildMonthly, PRICES_BY_CURRENCY, SUBSCRIBE_HREF, TAX_NOTE, TRIAL_DAYS, type Currency } from "@/lib/plan";
+import { AppLink } from "./AppLink";
 
 /**
  * The three plan cards, shared by the landing page and the pricing page. All numbers come from lib/plan.ts.
@@ -29,9 +29,9 @@ export function PricingCards({ currency = "CAD" }: { currency?: Currency }) {
             $0 <span className="text-base font-semibold text-ink-soft">for {TRIAL_DAYS} days</span>
           </p>
           <p className="mt-2 font-read text-ink-soft">Everything included. No card needed. Afterwards, the first {FREE_UNITS_PER_COURSE} units of every subject stay free.</p>
-          <Link prefetch={false} href="/play/" className="btn mt-4 min-h-12 px-4 text-lg">
+          <AppLink href="/play/" className="btn mt-4 min-h-12 px-4 text-lg">
             Start free
-          </Link>
+          </AppLink>
         </div>
         <div className="card flex flex-col border-[#4f8ef7] p-6">
           <h3 className="text-xl font-bold">Family · monthly</h3>

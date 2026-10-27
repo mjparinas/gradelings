@@ -1,7 +1,8 @@
 // @vitest-environment jsdom
+import { createElement, type ReactNode } from "react";
 import { act, renderHook } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
-import { back, go, href, parse, useRoute } from "./router";
+import { back, go, href, parse, ShownRoute, useRoute, useShownHash } from "./router";
 
 describe("hash router", () => {
   it("decodes path parts and parses query values", () => {
@@ -63,5 +64,66 @@ describe("useRoute", () => {
     navigate("#/shop");
     expect(result.current.path).toEqual(["unit", "math/add"]);
     scrollTo.mockRestore();
+  });
+});
+
+describe("useShownHash", () => {
+  const navigate = (hash: string) =>
+    act(() => {
+      window.location.hash = hash;
+      window.dispatchEvent(new HashChangeEvent("hashchange"));
+    });
+  const nextFrame = () => act(() => new Promise((r) => setTimeout(r, 50)));
+
+  it("keeps the old screen up, pending, until the tap has been painted, then shows the new one", async () => {
+    vi.spyOn(window, "scrollTo").mockImplementation(() => {});
+    window.location.hash = "#/";
+    const { result } = renderHook(() => useShownHash());
+    expect(result.current).toEqual({ shown: "/", pending: false });
+    navigate("#/trophies");
+    expect(result.current).toEqual({ shown: "/", pending: true });
+    await nextFrame();
+    expect(result.current).toEqual({ shown: "/trophies", pending: false });
+  });
+
+  it("draws a screen that was quick last time straight away, with no bar", async () => {
+    vi.spyOn(window, "scrollTo").mockImplementation(() => {});
+    window.location.hash = "#/";
+    const { result } = renderHook(() => useShownHash());
+    navigate("#/map");
+    await nextFrame();
+    navigate("#/");
+    await nextFrame();
+    // Drawn in well under SLOW_DRAW_MS in a test, so the second visit needs no bar.
+    navigate("#/map?from=home");
+    expect(result.current).toEqual({ shown: "/map?from=home", pending: false });
+  });
+
+  it("goes straight to the latest address when taps come quickly", async () => {
+    vi.spyOn(window, "scrollTo").mockImplementation(() => {});
+    window.location.hash = "#/";
+    const { result } = renderHook(() => useShownHash());
+    navigate("#/shop");
+    navigate("#/room");
+    await nextFrame();
+    expect(result.current).toEqual({ shown: "/room", pending: false });
+  });
+
+  it("lets a screen still on show read its own address, not the one being drawn next", async () => {
+    vi.spyOn(window, "scrollTo").mockImplementation(() => {});
+    window.location.hash = "#/start?unit=add";
+    const { result } = renderHook(
+      () => {
+        const { shown } = useShownHash();
+        return { shown, inside: useRoute() };
+      },
+      { wrapper: ({ children }: { children: ReactNode }) => createElement(ShownRoute, { value: "/start?unit=add" }, children) },
+    );
+    navigate("#/practice/math?unit=add");
+    // The switcher sees the new address; a screen inside the provider keeps reading the one it was drawn for.
+    expect(result.current.shown).toBe("/start?unit=add");
+    expect(result.current.inside.path).toEqual(["start"]);
+    await nextFrame();
+    expect(result.current.shown).toBe("/practice/math?unit=add");
   });
 });

@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 import { act, render, screen } from "@testing-library/react";
-import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 import { useBand } from "../band";
 
 const h = vi.hoisted(() => ({
@@ -21,13 +21,10 @@ const h = vi.hoisted(() => ({
   subjects: ["math", "language", "science", "social"],
 }));
 
-vi.mock("@/lib/router", () => ({
-  useRoute: () => {
-    const [p, q = ""] = h.route.split("?");
-    return { path: p.split("/").filter(Boolean), query: new URLSearchParams(q) };
-  },
-  go: h.go,
-}));
+vi.mock("@/lib/router", async (importOriginal) => {
+  const { parse, ShownRoute } = await importOriginal<typeof import("@/lib/router")>();
+  return { parse, ShownRoute, useRoute: () => parse(h.route), useShownHash: () => ({ shown: h.route, pending: false }), go: h.go };
+});
 vi.mock("@/content", () => ({
   parseUnitKey: (key: string) => {
     const [grade, subject, unitId] = key.split("/");
@@ -107,6 +104,7 @@ vi.mock("./Treasures", () => ({ Treasures: screenStub("Treasures") }));
 vi.mock("./Stories", () => ({ StoryLibrary: screenStub("StoryLibrary"), StoryReader: screenStub("StoryReader") }));
 
 import { PlayApp } from "./PlayApp";
+import { loadAllScreens } from "./lazyScreens";
 
 const ava = { id: "a", grade: "3", framework: "ca-bc" };
 const shown = () => screen.getByTestId("screen").textContent;
@@ -248,6 +246,9 @@ describe("PlayApp start-up", () => {
 });
 
 describe("PlayApp routes", () => {
+  // The occasional screens are their own downloads; have them in, as a device does once the app has been open.
+  beforeAll(() => loadAllScreens());
+
   it.each([
     ["", "Hub"],
     ["practice", "SubjectPicker"],
