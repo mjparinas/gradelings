@@ -1,12 +1,12 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { allUnitRefs, getUnitRef } from "@/content";
+import { getUnitRef, practiceUnitRefs } from "@/content";
 import { getSubjectMeta } from "@/content/subjects";
 import { activeFocus } from "@/lib/focus";
 import { dayKey, defaultChildSettings, type Profile } from "@/lib/model";
 import { useLocale, useSay } from "@/lib/say";
-import { useStore } from "@/lib/store";
+import { useStore, useSubjectGrades } from "@/lib/store";
 import { useNow } from "@/lib/useNow";
 import { SelectMenu, type MenuGroup } from "../SelectMenu";
 
@@ -29,16 +29,17 @@ export function FocusUnit({ p }: { p: Profile }) {
   const [open, setOpen] = useState(false);
   const [unit, setUnit] = useState("");
   const [until, setUntil] = useState("");
+  const subjectGrades = useSubjectGrades(p.id);
   const groups = useMemo<MenuGroup[]>(() => {
     const bySubject = new Map<string, MenuGroup>();
-    for (const r of allUnitRefs(p.grade, p.framework)) {
+    for (const r of practiceUnitRefs(p.grade, p.framework, subjectGrades)) {
       if (!s.enabledSubjects.includes(r.course.subject)) continue;
       const g = bySubject.get(r.course.subject) ?? { label: getSubjectMeta(r.course.subject).title.big, options: [] };
       g.options.push({ value: r.key, label: `${r.unit.emoji} ${r.unit.title}` });
       bySubject.set(r.course.subject, g);
     }
     return [...bySubject.values()];
-  }, [p.grade, p.framework, s.enabledSubjects]);
+  }, [p.grade, p.framework, s.enabledSubjects, subjectGrades]);
   const ref = focus ? getUnitRef(focus.unit, p.framework) : undefined;
   const save = () => {
     if (!unit) return;

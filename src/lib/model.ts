@@ -80,6 +80,11 @@ export interface ChildSettings {
   /** Light vibration on taps and answers, on devices that support it. On unless set to false. */
   haptics?: boolean;
   enabledSubjects: SubjectId[];
+  /**
+   * A grade a parent picked for one subject, so the child practises it above or below their own grade (usually from
+   * the placement test). Unset subjects follow the child's grade. See `subjectGrades.ts`.
+   */
+  subjectGrades?: Partial<Record<SubjectId, GradeId>>;
   updatedAt: number;
 }
 

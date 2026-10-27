@@ -1,13 +1,13 @@
 "use client";
 
 import { useState, type CSSProperties } from "react";
-import { coursesForGrade, unitKey } from "@/content";
+import { practiceCourses, unitKey } from "@/content";
 import { getSubjectMeta } from "@/content/subjects";
 import type { SubjectId } from "@/content/types";
 import { onColour } from "@/lib/contrast";
 import { levelInfo, unitLevel } from "@/lib/proficiency";
 import { go } from "@/lib/router";
-import { useActiveProfile, useChildSettings, useDerived } from "@/lib/store";
+import { useActiveProfile, useChildSettings, useDerived, useSubjectGrades } from "@/lib/store";
 import { useBand } from "../band";
 import { SayButton } from "./BuddySays";
 import { Critter, CritterSvg, SpeechBubble } from "../Critter";
@@ -30,7 +30,7 @@ export function TrailMap() {
   const d = useDerived();
   const band = useBand();
   const allowed = useAllowed();
-  const courses = coursesForGrade(profile.grade, profile.framework).filter((c) => (settings?.enabledSubjects ?? []).includes(c.subject));
+  const courses = practiceCourses(profile.grade, profile.framework, useSubjectGrades()).filter((c) => (settings?.enabledSubjects ?? []).includes(c.subject));
   const [subject, setSubject] = useState<SubjectId | null>(null);
   const [selected, setSelected] = useState<string | null>(null);
   const [locked, setLocked] = useState(false);

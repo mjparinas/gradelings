@@ -1,4 +1,4 @@
-import { allUnitRefs, getUnitRef, unitKey, type UnitRef } from "@/content";
+import { getUnitRef, practiceUnitRefs, unitKey, type SubjectGrades, type UnitRef } from "@/content";
 import { hashSeed, pick, sample, shuffle, withSeed } from "@/content/random";
 import { getSubjectMeta } from "@/content/subjects";
 import type { AgeBand, FrameworkId, GradeId, Lesson, Question, SubjectId } from "@/content/types";
@@ -72,6 +72,8 @@ export interface PlanInput {
   scope: string;
   grade: GradeId;
   framework: FrameworkId;
+  /** Subjects the child practises at another grade (`subjectGrades.ts`). */
+  subjectGrades?: SubjectGrades;
   band: AgeBand;
   profileId: string;
   subjects: SubjectId[];
@@ -90,6 +92,7 @@ export function makePlan(input: PlanInput): Plan | null {
   const pickOpts = (m: PickOptions["mode"], recent: string[], d: Derived): PickOptions => ({
     grade,
     framework,
+    subjectGrades: input.subjectGrades,
     derived: d,
     subjects,
     recent,
@@ -126,7 +129,7 @@ export function makePlan(input: PlanInput): Plan | null {
     const day = dayKey(Date.now());
     // Same 10 questions all day, on every device.
     const items = withSeed(hashSeed(`${input.profileId}:daily:${day}`), () => {
-      const refs = allUnitRefs(grade, framework).filter((r) => subjects.includes(r.course.subject) && allowed(r));
+      const refs = practiceUnitRefs(grade, framework, input.subjectGrades).filter((r) => subjects.includes(r.course.subject) && allowed(r));
       const bySubject = subjects.map((s) => shuffle(refs.filter((r) => r.course.subject === s))).filter((l) => l.length);
       const chosen: UnitRef[] = [];
       for (let i = 0; chosen.length < 10 && bySubject.length; i++) {
@@ -214,8 +217,8 @@ export function makePlan(input: PlanInput): Plan | null {
 }
 
 /** Pick a few units for the hub's "try next" suggestions. */
-export function suggestions(grade: GradeId, framework: FrameworkId, derived: Derived, subjects: SubjectId[], allowed: (r: UnitRef) => boolean, n = 3): UnitRef[] {
-  const refs = allUnitRefs(grade, framework).filter((r) => subjects.includes(r.course.subject) && allowed(r));
+export function suggestions(grade: GradeId, framework: FrameworkId, derived: Derived, subjects: SubjectId[], allowed: (r: UnitRef) => boolean, n = 3, subjectGrades?: SubjectGrades): UnitRef[] {
+  const refs = practiceUnitRefs(grade, framework, subjectGrades).filter((r) => subjects.includes(r.course.subject) && allowed(r));
   const fresh = refs.filter((r) => !derived.units[r.key]);
   const weak = refs.filter((r) => derived.units[r.key] && derived.units[r.key].mastery < 0.7);
   return [...sample(weak, Math.min(1, weak.length)), ...fresh].slice(0, n);

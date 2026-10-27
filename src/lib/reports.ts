@@ -1,6 +1,6 @@
 import { isCoreSubject } from "@/content/subjects";
 import type { FrameworkId } from "@/content/types";
-import { allUnitRefs, parseUnitKey, type UnitRef } from "@/content";
+import { allUnitRefs, parseUnitKey, practiceUnitRefs, type SubjectGrades, type UnitRef } from "@/content";
 import type { GradeId, SubjectId } from "@/content/types";
 import type { Derived } from "./derive";
 import { learnSecondsFor } from "./derive";
@@ -62,7 +62,9 @@ function startOfDay(t: number): number {
 
 const shortDate = (t: number) => new Date(t).toLocaleDateString("en-CA", { month: "short", day: "numeric" });
 
-export function buildReport(events: AppEvent[], derived: Derived, grade: GradeId, framework: FrameworkId, periodDays: number, now = Date.now()): Report {
+/** `subjectGrades`: subjects the child practises at another grade (`subjectGrades.ts`); their rows come from that grade. */
+export function buildReport(events: AppEvent[], derived: Derived, grade: GradeId, framework: FrameworkId, periodDays: number, now?: number, subjectGrades: SubjectGrades = {}): Report {
+  now ??= Date.now();
   const end = startOfDay(now) + DAY;
   const start = end - periodDays * DAY;
   const prevStart = start - periodDays * DAY;
@@ -132,7 +134,11 @@ export function buildReport(events: AppEvent[], derived: Derived, grade: GradeId
   }
 
   // French is opt-in, so its units only appear once the child has started them.
-  const units: UnitRow[] = allUnitRefs(grade, framework).filter((ref) => isCoreSubject(ref.course.subject) || derived.units[ref.key]).map((ref) => {
+  // A subject set to another grade lists that grade's units, plus any of the child's own grade's units already started.
+  const practised = practiceUnitRefs(grade, framework, subjectGrades);
+  const keys = new Set(practised.map((r) => r.key));
+  const own = allUnitRefs(grade, framework).filter((ref) => !keys.has(ref.key) && derived.units[ref.key]);
+  const units: UnitRow[] = [...practised, ...own].filter((ref) => isCoreSubject(ref.course.subject) || derived.units[ref.key]).map((ref) => {
     const s = derived.units[ref.key];
     return { ref, level: unitLevel(s), attempts: s?.attempts ?? 0, accuracy: s ? recentAccuracy(s) : 0, lastT: s?.lastT ?? 0 };
   });
