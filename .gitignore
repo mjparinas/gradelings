@@ -70,3 +70,6 @@ next-env.d.ts
 # python
 __pycache__/
 .vitest
+
+# tsc and ESLint incremental state (CI caches it)
+/.cache
