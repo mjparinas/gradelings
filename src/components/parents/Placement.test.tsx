@@ -28,6 +28,7 @@ vi.mock("next/link", () => ({
   ),
 }));
 
+import { setRemoteFlags } from "@/lib/remoteFlags";
 import { useStore } from "@/lib/store";
 import { PlacementPage } from "./Placement";
 
@@ -59,7 +60,8 @@ const mathAbove = {
 };
 
 beforeEach(() => {
-  useStore.setState({ profiles: [kid("a", "Ava"), kid("b", "Ben")], activeId: "b", events: [] });
+  useStore.setState({ profiles: [kid("a", "Ava"), kid("b", "Ben")], activeId: "b", events: [], settings: {} });
+  setRemoteFlags({ flags: {}, variants: {} });
 });
 
 const panelFor = (heading: RegExp) => screen.getByRole("heading", { name: heading }).closest("section")!;
@@ -101,7 +103,32 @@ describe("PlacementPage", () => {
     expect(math).not.toHaveTextContent("Worth a quick revisit");
     expect(within(math).getByRole("link", { name: "Retake →" })).toBeInTheDocument();
 
-    fireEvent.click(within(math).getByRole("button", { name: "Practise Grade 4" }));
+    // Only math moves up: the child's grade, and so their other subjects, stay at Grade 3.
+    expect(math).toHaveTextContent("Ava practises Grade 3 math, like the rest of their lessons.");
+    fireEvent.click(within(math).getByRole("button", { name: "Practise Grade 4 math" }));
+    expect(useStore.getState().profiles.find((p) => p.id === "a")!.grade).toBe("3");
+    expect(useStore.getState().settings.a?.subjectGrades).toEqual({ math: "4" });
+    expect(math).toHaveTextContent("Ava practises Grade 4 math. Their other subjects stay at Grade 3.");
+    expect(within(math).queryByRole("button", { name: "Practise Grade 4 math" })).not.toBeInTheDocument();
+    expect(panelFor(/Language Arts/)).toHaveTextContent("Ava practises Grade 3 language arts");
+  });
+
+  it("goes back to the child's own grade for one subject", () => {
+    useStore.setState({ events: [{ ...mathAbove, placedGrade: "2" }] as AppEvent[], settings: { a: { subjectGrades: { math: "4" } } } as never });
+    render(<PlacementPage />);
+    const math = panelFor(/Math/);
+    expect(math).toHaveTextContent("Ava practises Grade 4 math.");
+    fireEvent.click(within(math).getByRole("button", { name: "Practise Grade 2 math" }));
+    expect(useStore.getState().settings.a?.subjectGrades).toEqual({ math: "2" });
+    fireEvent.click(within(math).getByRole("button", { name: "Back to Grade 3 math" }));
+    expect(useStore.getState().settings.a?.subjectGrades).toEqual({});
+  });
+
+  it("switches the whole grade when a level for each subject is turned off", () => {
+    setRemoteFlags({ flags: { "subject-levels": false }, variants: {} });
+    useStore.setState({ events: [mathAbove] as AppEvent[] });
+    render(<PlacementPage />);
+    fireEvent.click(within(panelFor(/Math/)).getByRole("button", { name: "Practise Grade 4" }));
     expect(useStore.getState().profiles.find((p) => p.id === "a")!.grade).toBe("4");
   });
 

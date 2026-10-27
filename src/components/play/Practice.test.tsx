@@ -39,6 +39,7 @@ const h = vi.hoisted(() => {
 vi.mock("@/lib/router", () => ({ go: h.go, href: (path: string) => `#${path}`, useRoute: () => ({ path: [], query: h.query }) }));
 vi.mock("@/content", () => ({
   coursesForGrade: (grade: string) => h.courses.map((c) => ({ ...c, grade })),
+  practiceCourses: (grade: string) => h.courses.map((c) => ({ ...c, grade })),
   unitKey: (grade: string, subject: string, id: string) => `${grade}/${subject}/${id}`,
   getUnitRef: (key: string) => {
     const [, subject, id] = key.split("/");
@@ -54,6 +55,7 @@ vi.mock("@/lib/store", () => ({
   useStore: (select: (s: unknown) => unknown) => select({ family: {} }),
   useActiveProfile: () => ({ id: "p1", name: "Ava", grade: "2", framework: "ca-bc", companion: "ollie" }),
   useChildSettings: () => h.settings,
+  useSubjectGrades: () => ({}),
   useDerived: () => ({ units: h.units, speedBest: h.speedBest, level: 1, dailyDone: h.dailyDone }),
 }));
 vi.mock("@/lib/remoteFlags", () => ({ useIsOn: () => (key: string) => !h.off.has(key), useFlag: (key: string) => !h.off.has(key) }));

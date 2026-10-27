@@ -34,7 +34,7 @@ vi.mock("@/content", () => ({
 }));
 vi.mock("@/lib/remoteFlags", () => ({ refreshFlags: h.refreshFlags, useIsOn: () => (k: string) => !h.off.has(k) }));
 vi.mock("@/lib/sync", () => ({ startBackgroundSync: h.startBackgroundSync }));
-vi.mock("@/lib/useGradeContent", () => ({ prefetchGrades: h.prefetchGrades }));
+vi.mock("@/lib/useGradeContent", () => ({ prefetchGrades: h.prefetchGrades, useGradeContent: () => ({ status: "ready" }) }));
 vi.mock("@/components/VoicePreload", () => ({ VoicePreload: () => null }));
 vi.mock("./LiveQuestion", () => ({ useLiveQuestion: () => ({ live: null, offline: false, note: "", answer: () => {} }), LiveQuestionCard: () => null }));
 vi.mock("@/lib/store", () => ({
@@ -42,7 +42,8 @@ vi.mock("@/lib/store", () => ({
   useProfiles: () => h.profiles,
   useActiveProfile: () => h.active,
   useChildSettings: () => ({ enabledSubjects: h.subjects }),
-  useStore: Object.assign((select: (s: unknown) => unknown) => select({ family: {} }), {
+  useSubjectGrades: () => ({}),
+  useStore: Object.assign((select: (s: unknown) => unknown) => select({ family: {}, settings: {} }), {
     getState: () => ({ init: h.init, setActive: h.setActive }),
   }),
 }));

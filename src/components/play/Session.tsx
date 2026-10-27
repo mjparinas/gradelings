@@ -23,7 +23,7 @@ import { sounds } from "@/lib/sound";
 import { speakQuestion } from "@/lib/readaloud";
 import { speak, speakSegments, stopSpeaking } from "@/lib/speech";
 import { useChildSay } from "@/lib/say";
-import { derivedFor, useActiveProfile, useChildSettings, useDerived, useStore } from "@/lib/store";
+import { derivedFor, useActiveProfile, useChildSettings, useDerived, useStore, useSubjectGrades } from "@/lib/store";
 import { useBand } from "../band";
 import { Critter, SpeechBubble, type Mood } from "../Critter";
 import { Companion } from "./Companion";
@@ -91,12 +91,14 @@ export function Session({ mode, scope }: { mode: Mode; scope: string }) {
   const allowed = useAllowed();
   const derivedNow = useDerived();
   const matchReading = useFlag("reading-level-match");
+  const subjectGrades = useSubjectGrades();
   const [plan] = useState<Plan | null>(() =>
     makePlan({
       mode,
       scope,
       grade: profile.grade,
       framework: profile.framework,
+      subjectGrades,
       band,
       profileId: profile.id,
       subjects: settings?.enabledSubjects ?? ["math", "language", "science", "social"],
