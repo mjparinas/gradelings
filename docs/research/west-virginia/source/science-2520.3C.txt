@@ -1,0 +1,1822 @@
+TITLE 126
+LEGISLATIVE RULE
+BOARD OF EDUCATION
+
+SERIES 44CC
+WEST VIRGINIA COLLEGE- AND CAREER-READINESS STANDARDS FOR SCIENCE (2520.3C)
+
+
+§126-44CC-1.  General.
+
+	1.1.  Scope.  --  W. Va. 126CSR42, Policy 2510, Assuring the Quality of Education: Regulations for Education Programs (Policy 2510), provides a definition of a delivery system for, and an assessment and accountability system for, a thorough and efficient education for West Virginia public school students.  Policy 2520.3C defines the content standards for science as required by Policy 2510.
+ 
+	1.2.  Authority.  --  W.  Va.  Constitution, Article XII, §2, and W. Va. Code §18-2-5 and §18-9A-22.
+
+	1.3.  Filing Date.  --  August 16, 2021. 
+
+	1.4.  Effective Date.  --  July 1, 2022.  
+
+	1.5.  Repeal of Former Rule.  --  This legislative rule repeals and replaces W. Va. 126CSR44CC, Policy 2520.3C, Next Generation Content Standards and Objectives for Science in West Virginia Schools, filed April 9, 2015, and effective July 1, 2016.
+
+§126-44CC-2.  Purpose.
+
+	2.1.  This policy defines the content standards and College- and Career-Readiness Indicators for the program of study required by Policy 2510 in science. The period of time between the adoption date and the effective date of the policy will allow time for the adoption of instructional materials and the administration of professional development and support to educators.
+
+§126-44CC-3.  Incorporation by Reference. 
+ 
+3.1.  A copy of the West Virginia College- and Career-Readiness Standards for Science is attached and incorporated by reference into this policy.  Copies may be obtained in the Office of the Secretary of State and in the West Virginia Department of Education, Office of Teaching and Learning, Middle and Secondary Services. 
+ 
+§126-44CC-4.  Summary of the Content Standards.
+
+	4.1.  The West Virginia Board of Education has the responsibility of establishing high quality standards pertaining to all educational standards (W. Va. Code §18-9A-22).  The content standards provide focus for teachers to teach and students to learn the skills and competencies essential for future success in the workplace and further education.  The document includes content standards for science, an explanation of terms, and College- and Career-Readiness Indicators that reflect a rigorous and challenging curriculum.
+
+
+
+§126-44CC-5.  Severability.
+
+	5.1.	 If any provision of this policy or the application thereof to any person or circumstances is held invalid, such invalidity shall not affect other provisions or applications of this policy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+College- and Career-Readiness Standards for Science
+
+Introduction 
+ 
+West Virginia’s College- and Career-Readiness Standards have been developed with the goal of preparing students for a wide range of high-quality post-secondary opportunities.  Specifically, college- and careerreadiness refers to the knowledge, skills, and dispositions needed to be successful in higher education and/or training that lead to gainful employment.  The West Virginia College- and Career-Readiness Standards establish a set of knowledge and skills that all individuals need to transition into higher education or the workplace, as both realms share many expectations.  All students throughout their educational experience should develop a full understanding of the career opportunities available, the education necessary to be successful in their chosen pathway, and a plan to attain their goals. 
+
+West Virginia educators, including regular classroom teachers, instructors representing higher education institutions, and county instructional leaders convened to revise the content standards; they played a key role in shaping the content standards to align with rigorous national assessments.  The committees considered major advances in science and technology, research from the American Association for Advancement in Science, the National Research Council in addition to their understanding of how students learn science as decisions were made regarding science content, practices of scientists and engineers, science connecting concepts, the nature of science, science literacy, science lab safety, and the sequencing of standards.  The contribution of these professionals was critical in creating a policy that is meaningful to classroom teachers and appears in a format that can easily be understood and used.  
+
+West Virginia’s College- and Career-Readiness Standards for Science are organized around the two major components of a standards-based curriculum: learning standards and College- and Career-Readiness Indicators for Science.  The learning standards are the descriptions of what all students must know and be able to do at the conclusion of the instructional sequence.  The College- and Career-Readiness Indicators establish a set of knowledge and skills that all students need throughout their educational experience.
+Science learning standards address science content, science practices, and engineering design.  The accompanying programmatic level science indicators are specific descriptors of knowledge, skills, practices, and attitudes that, when mastered, will enable students to attain each standard.  The instructional standards guide instructional planning and provide a basis for determining appropriate instructional strategies, resources, and assessments.
+
+There is a deliberate sequencing of standards, based on programmatic level, to ensure students will develop skills to acknowledge and distinguish claim(s) from alternate or opposing claims, support arguments for claims or counterclaims with evidence, and communicate about science related topics and issues in a knowledgeable, clear, and objective manner.  In combination, the use of learning standards and College- and Career-Readiness Indicators for Science become a comprehensive guide for delivering a rigorous and relevant science curriculum to all West Virginia students.  These elements, when used to guide the instructional process and delivered with the creativity and instructional expertise of West Virginia teachers, will become a powerful resource for preparing students to be scientifically literate and prepared for college and/or career pathways.
+
+
+
+Explanation of Terms
+
+Domains.  Include the four main subject areas of Life Science, Earth and Space Science, Physical Science, and Engineering, Technology, and Applications of Science.
+
+Indicators.  A set of knowledge and skills that all students need to transition into higher education or the workplace.
+
+Topics.   Categorical groupings of central ideas within each science course.
+
+Standards.  Expectations of what students should know and be able to do in a content area and represent educational goals.  Standards followed by an asterisk (*) denote the integration of traditional science content with an engineering practice.
+
+Numbering of Standards 
+The number for each standard is composed of three parts, each part separated by a period:
+the content area code is S for Science,
+the grade level or high school course, and
+the standard number.
+
+Examples: 
+	S.8.1 refers to science standard #1 for grade 8.
+	S.HAP.1 refers to science standard #1 for Human Anatomy and Physiology.
+
+Abbreviations
+Content Area
+S				Science
+
+Course Content
+ESS			Earth and Space Science Content
+B				Biology Content
+PS				Physical Science Content
+C				Chemistry Content
+P				Physics Content
+ENV			Environmental Content
+FS				Forensics Science Content
+HAP			Human Anatomy and Physiology Content
+
+
+
+
+
+
+
+
+
+
+
+Indicators for Science
+ 
+Science is the study of the structures and processes of the physical and natural world through observations and experiments.  By its very nature, science embodies the doing of science and engineering practices which builds and organizes knowledge in the form of testable explanations, predictions about the universe, and technological applications.  The science policy describes students engaging in those practices as they acquire science knowledge and skills necessary for the furtherance of their education, careers, and general welfare.
+
+The grades K - 12 standards on the following pages define what students should know, understand, and be able to do by the end of each grade band.  They correspond to the College- and Career-Readiness Indicators for Science by programmatic level (K - 2, 3 - 5, 6 - 8, and 9 - 12).  The College- and Career-Readiness Indicators and grade-specific standards are necessary complements- the former providing broad standards, the latter providing additional specificity- that together define the skills and understandings that all students must demonstrate. 
+
+Literacy strategies and skills are applied as students acquire information and communicate their learning and understanding of science.  Integration of literacy in science is critical for student success.  It is essential that literacy strategy and skill instruction be purposefully and appropriately planned and embedded within science instruction.
+
+Science Content K – 12
+
+Earth and Space Science 
+
+Earth and Space Science content provides opportunities for students to investigate processes that operate on Earth and address its place in the solar system and the galaxy.  The content encompasses three central ideas: Earth’s Place in the Universe; Earth’s Systems; and Earth and Human Activity.  Beginning in kindergarten, students make observations, ask questions, and make predictions as they describe patterns in their local Weather and Climate.  In later grades, the content progresses to include these topics: Space Systems: Patterns and Functions, Stars and the Solar System; Earth Systems: Processes that Shape the Earth; History of Earth; and Human Impacts.  Elementary students observe and investigate matter and processes in their own yards and neighborhoods with their own eyes.  The content continues in the grades that follow to include investigations of invisibly small phenomena to the unimaginably large and distant.  As students investigate the atmosphere, hydrosphere, geosphere, and biosphere, they gain an understanding of the different sources of energy, matter cycles, multiple systems’ interconnections, and feedback which cause Earth to change over time.  
+
+Life Science 
+
+Life science content focuses on patterns, processes, and relationships of living organisms.  The content includes four central ideas: From Molecules to Organisms: Structures and Processes; Ecosystems: Interactions, Energy, and Dynamics; Heredity: Inheritance and Variation of Traits across Generations; and Biological Evolution: Unity and Diversity.  These four central ideas, which represent basic life science    fields of investigation - structures and processes in organisms, ecology, heredity, and evolution - have a long history and solid foundation based on the research evidence established by many scientists working across multiple fields.  Beginning in kindergarten, curious learners explore Animals, Plants, and Their Environment as they learn of the Interdependent Relationships in Ecosystems.  In the grades which follow, the inquiry continues as the content encompasses these topics:  Structure, Function, and Information Processing; Inheritance and Variation of Traits: Life Cycles and Traits; Matter and Energy in Organisms and Ecosystems; and Growth, Development, and Reproduction of Organisms.  Investigations include single molecules, organisms, ecosystems, and the entire biosphere that is all life on Earth. Students examine processes that occur on time scales from the blink of an eye to those that happen over billions of years.  As they make observations, construct hypotheses, perform experiments, evaluate evidence, build models, and use technology to explore how life works, they prepare to answer questions about themselves and the world around them.
+
+Physical Science 
+Physical Science content focuses on two subjects, physics and chemistry, presented in a coherent approach that addresses five central ideas: Matter and Its Interactions; Motion and Stability, Forces and Interactions; Energy; and Waves and Their Applications in Technologies for Information Transfer.  Beginning in kindergarten, students explore pushes and pulls as an introduction to the Forces and Interactions topic.  The inquiry continues through each grade level and includes Light and Sound, Structure and Properties of Matter, Forces and Interactions, Energy, Waves and Information, Matter and Energy in Organisms and Ecosystems, Waves and Electromagnetic Radiation, and Chemical Reactions.  An understanding of these topics allows students to answer two fundamental questions - “What is everything made of?” and “Why do things happen?”   Students apply these central ideas to explain and predict a wide variety of phenomena, such as the evaporation of water, the transmission of sound, the digital storage and transmission of information, the properties of metals, and photosynthesis, to name just a few.  Because such explanations and predictions rely on a basic understanding of matter and energy, students’ abilities to conceive the interactions of matter and energy are central to their science education.
+Chemistry 
+Chemistry content focuses on the central concepts:  Structure and Properties of Matter and Chemical Reactions.  Opportunities are provided for studying in-depth phenomena central to the physical sciences, life science, and earth and space science.  The chemistry standards go into greater depth as students progress through grade levels investigating matter, its composition, and its changes by including concepts such as the periodic table and modern theories of bonding, the effects of temperature, concentration, and vapor pressure on solubility, types of chemical reactions, stoichiometry, molarity, and gas laws.  The content blends the central ideas with the practices of scientists and engineers and science connecting concepts to support students in developing useable knowledge to explain ideas across the science disciplines.  There is an emphasis on several scientific practices, which include developing and using models, planning and conducting investigations, analyzing and interpreting data, using mathematical and computational thinking, and constructing explanations.  
+Physics 
+Physics content focuses on the central concepts: Forces and Interactions, Energy, States of Matter, Waves and Electromagnetic Radiation, and Electricity and Magnetism.  Opportunities are provided for studying in-depth phenomena central not only to the physical sciences but to life science and earth and space science.  The physics standards go into greater depth as students progress through grade levels, investigating elastic and inelastic collisions, buoyancy and fluid dynamics, projectile motion, vectors, circuits and currents, and optics.  The content blends the central ideas with the practices and science connecting concepts to support students in developing useable knowledge to explain ideas across the science disciplines.  There is an emphasis on several scientific practices, including developing and using models, planning and conducting investigations, analyzing and interpreting data, using mathematical and computational thinking, and constructing explanations.
+Environmental Science 
+Environmental Science content focuses on chemical, physical, biological, and geological processes, and the interdependent relationships in the natural world.  Concepts from the major science domains - Life Science, Physical Science, and Earth and Space Science - are integrated into six environmental topics including: Biogeochemical cycles, Energy Conservation, Ecosystems, Oceans and Climate, Water Management, and Land Use.  There is an emphasis on several scientific practices that include developing and using models, planning and conducting investigations, analyzing and interpreting data, constructing explanations, engaging in arguments from evidence, obtaining, evaluating, and communicating information, and synthesizing concepts across various science disciplines.  The content provides opportunities for students to develop an understanding of systems of a complex world and the interdependence of organisms along with an appreciation of the ecosystem in which they live.  As students develop an awareness of the environment and its associated problems, they acquire knowledge and skills to work individually and collectively toward solutions to current issues and the prevention of new ones.
+ Forensic Science
+Forensic Science content applies the knowledge and technology of science to criminal and civil law.  Concepts from the three major domains - Life Science, Physical Science, and Earth and Space Science - are reinforced and made relevant and pertinent to students as they acquire techniques and skills and learn the limitations of the modern crime laboratories.  There is an emphasis on several scientific practices, which include planning and carrying out investigations, using mathematics and computations, analyzing and interpreting data, and obtaining, evaluating and communicating information.  Students must address the attention to detail and protocol necessary for providing impartial scientific evidence that may be used in courts of law to support the prosecution or defense in criminal and civil investigations.   These skills and attitudes transfer readily to other areas of science.
+Human Anatomy and Physiology 
+Human Anatomy and Physiology content addresses the structures and functions of the human body.  While concepts from the Life Science domain are the major focus of study, concepts from the Physical Sciences are incorporated to explain processes and mechanisms of the human body.  The interdisciplinary nature of the sciences is revealed through the interdependency of body systems.  There is an emphasis on several scientific practices, which include asking questions, developing and using models, constructing explanations, and obtaining and communicating information.  The standard encompasses gross and microscopic content, including basic biochemistry and physiological concepts, which are foundational to medical fields of study as students make health-related decisions.  
+Engineering, Technology, and Applications of Science 
+Engineering, Technology, and Applications of Science content provide opportunities for students to utilize science and appreciate the distinctions and relationships between engineering, technology, and applications of science.  As Engineering, Technology, and the Application of Science are integrated with content from the three major domains of science - Life Science, Physical Science, and Earth and Space Science - students develop understandings of how scientific knowledge is acquired, scientific explanations are developed, and science is applied in the world around us.  The interactive cycle of design offers potential in applying scientific knowledge and engaging in engineering practices.  Through instruction that implements this interactive cycle, students gain experiences and understandings in the use of technology to modify the natural world to fulfill human needs or desires; they employ an engineering approach to design objects, use processes, or construct systems to meet human needs and wants; and they apply scientific knowledge for a specific purpose, whether to do more science, design a product, process, or medical treatment, develop new technology, or to predict the impacts of human actions. 
+
+
+
+Science Indicators Grades K - 2
+All West Virginia teachers are responsible for classroom instruction that integrates content standards, foundational skills, literacy, learning skills, computer science and technology tools.  Students in grades K - 2 will advance through a developmentally appropriate progression of standards.  The following chart represents the College- and Career-Readiness Indicators for Science that will be developed in grades K - 2. 
+College- and Career-Readiness Indicators for Science
+Grades K - 2
+Nature of Science
+Scientific knowledge is simultaneously reliable and subject to change based on empirical evidence and interpretation.
+Scientific knowledge is obtained through a combination of observations of the natural world and inferences based on those observations.
+Science is a creative human endeavor which is influenced by social and cultural biases.
+A primary goal of science is the formation of theories and laws.  Theories are inferred explanations of some aspect of the natural world based on successfully tested information from evidence and evaluated phenomena.  Laws describe relationships among what has been observed in the natural world.  
+Scientific investigations use a variety of methods to address questions about the natural and material world.
+ Practices of Scientists and Engineers
+Science Connecting Concepts
+Asking questions and defining problems
+Developing and using models
+Planning and carrying out investigations
+Analyzing and interpreting data
+Using mathematical and computational thinking
+Constructing explanations and designing solutions
+Engaging in argument from evidence
+Obtaining, evaluating, and communicating information
+Observing patterns
+Investigating and explaining cause and effect
+Recognizing scale, proportion, and quantity
+Defining systems and system models
+Tracking energy and matter flows into, out of, and within systems to understand system behavior
+Determining the relationships between structure and function
+Studying stability and change
+Science Literacy
+Science Lab Safety
+Utilizing and connecting ideas among informational (factual) scientific texts
+Integrating and applying information presented in various media formats when writing and speaking
+Citing evidence to support scientific claims
+Comparing and contrasting sets of data
+Building and appropriately using science domain vocabulary and phrases
+Interpreting and applying visually expressed information (e.g., flowchart, diagram, model, graph, or table)
+Requiring lab safety training and archiving signed student safety contracts including medical conditions
+Wearing proper protective equipment as needed (e.g., goggles, apron, and gloves)
+Requiring grade-appropriate lab equipment operation and safety training
+Storing and disposing of chemical/biological materials properly
+Following ethical classroom use of living organisms
+
+Science - Kindergarten
+The Kindergarten Science standards are designed to engage students in finding answers to questions related to their interests and the world around them.  Kindergarten students will engage in active inquiries, investigations, and hands-on activities at least 50% of the instructional time to develop conceptual understanding and research skills described in the standards and indicators for science.  Kindergarten domains include Physical Science, Life Science, and Earth and Space Science.  Students are expected to demonstrate age-appropriate proficiency in multiple indicators which include asking questions, dev eloping and using models, planning and carrying out investigations, analyzing and interpreting data, designing solutions, engaging in argument from evidence, and obtaining, evaluating, and communicating information.  Engineering, Technology, and the Application of Science are integrated throughout instruction as students define problems and design solutions related to the course standard and indicators for science.  Students are expected to use these practices to demonstrate an understanding of the scientific world.  Standards followed by an asterisk (*) denote the integration of traditional science content with an engineering practice.
+
+Physical Science
+Topic
+Forces and Interactions: Pushes and Pulls 
+S.K.1
+Plan and conduct an investigation to compare the effects of different strengths or different directions of pushes and pulls on the motion of an object.
+S.K.2
+Analyze data to determine if a design solution works as intended to change the speed or direction of an object with a push or a pull.*  
+
+Life Science
+Topic
+Interdependent Relationships in Ecosystems: Animals, Plants, and Their Environment
+S.K.3
+Use observations to describe patterns of what plants and animals (including humans) need to survive. 
+S.K.4
+Construct an argument supported by evidence for how plants and animals (including humans) can change the environment to meet their needs.
+S.K.5
+Use a model to represent the relationship between the needs of different plants or animals (including humans) and the places they live.  
+S.K.6
+Communicate solutions that will reduce the impact of humans on the land, water, air, and/or other living things in the local environment.*
+
+Earth and Space Science
+Topic
+Weather and Climate
+S.K.7
+Use and share observations of local weather conditions to describe patterns over time.  
+S.K.8
+Ask questions to obtain information about the purpose of weather forecasting to prepare for, and respond to, severe weather. *  
+S.K.9
+Make observations to determine the effect of sunlight on Earth’s surface.  
+S.K.10
+Use tools and materials to design and build a structure that will reduce the warming effect of sunlight on an area.*  
+
+
+
+
+
+Engineering, Technology, and Applications of Science
+Topic
+Engineering Design
+S.K.11
+Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool.  
+S.K.12
+Develop a simple sketch, drawing, or physical model to illustrate how the shape of an object helps it function as needed to solve a given problem. 
+S.K.13
+Analyze data from tests of two objects designed to solve the same problem to compare the strengths and weaknesses of how each performs.  
+
+Science - Grade 1
+First Grade Science standards build on the process skills and add data gathering and reporting.  Through a progressive rigorous, inquiry-based program of study, all students demonstrate scientific literacy in the domains of Physical Science, Life Science, and Earth and Space Science focusing on the connecting concepts of science: systems, changes, and models.  Students will engage in hands-on activities at least 50% of the instructional time as they develop and demonstrate conceptual understandings along with research and laboratory skills described in the standards and indicators for science.  Engineering, Technology, and the Application of Science are integrated throughout instruction as students define problems and design solutions related to the course standards and indicators for science.  The content develops early problem-solving skills through observing, experimenting, and concluding.  First Grade Science intentionally supports developmental and academic growth.  Standards followed by an asterisk (*) denote the integration of traditional science content with an engineering practice.
+
+Physical Science
+Topic
+Waves: Light and Sound
+S.1.1
+Plan and conduct investigations to provide evidence that vibrating materials can make sound and that sound can make materials vibrate.  
+S.1.2
+Make observations to construct an evidence-based account that objects can be seen only when illuminated. 
+S.1.3
+Plan and conduct an investigation to determine the effect of placing objects made with different materials in the path of a beam of light.  
+S.1.4
+Use tools and materials to design and build a device that uses light or sound to solve the problem of communicating over a distance.*  
+
+Life Science
+Topic
+Structure, Function, and Information Processing
+S.1.5
+Read texts and use media to determine patterns in behavior of parents and offspring that help offspring survive.  
+S.1.6
+Make observations to construct an evidence-based account that young plants and animals are like, but not exactly like, their parents.  
+S.1.7
+Use materials to design a solution to a human problem by mimicking how plants and/or animals use their external parts to help them survive, grow, and meet their needs.*  
+
+
+
+Earth and Space Science
+Topic
+Space Systems: Patterns and Cycles
+S.1.8
+Use observations of the sun, moon, and stars to describe patterns that can be predicted.  
+S.1.9
+Make observations at different times of year to relate the amount of daylight to the time of year.  
+
+Engineering, Technology, and Applications of Science
+Topic
+Engineering Design
+S.1.10
+Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool.
+S.1.11
+Develop a simple sketch, drawing, or physical model to illustrate how the shape of an object helps it function as needed to solve a given problem.  
+S.1.12
+Analyze data from tests of two objects designed to solve the same problem to compare the strengths and weaknesses of how each performs.  
+ 
+Science - Grade 2
+Second Grade Science standards build upon the early stages of experimentation and maintenance of natural curiosity.  Through a progressive rigorous, integrated approach, the inquiry-based program of study provides students opportunities to demonstrate scientific literacy in the domains of Physical Science, Life Science, and Earth and Space Science focusing on the connecting concepts of science: systems, changes, and models.  Students will engage in hands-on activities at least 50% of the instructional time as they develop and demonstrate conceptual understandings along with research and laboratory skills described in the standards and indicators for science.  Engineering, Technology, and the Application of Science are integrated throughout instruction as students define problems and design solutions related to the course standards and indicators for science.  The content focus develops early problem-solving skills through observing, experimenting, and concluding.  Second Grade Science intentionally supports developmental and academic growth.  Standards followed by an asterisk (*) denote the integration of traditional science content with an engineering practice.
+
+Physical Science
+Topic
+Structure and Properties of Matter
+S.2.1
+Plan and conduct an investigation to describe and classify different kinds of materials by their observable properties.  
+S.2.2
+Analyze data obtained from testing different materials to determine which materials have the properties that are best suited for an intended purpose.*
+S.2.3
+Make observations to construct an evidence-based account of how an object made of a small set of pieces can be disassembled and made into a new object.
+S.2.4
+Construct an argument with evidence that some changes caused by heating or cooling can be reversed and some cannot.  
+
+Life Science
+Topic
+Interdependent Relationships in Ecosystems
+S.2.5
+Plan and conduct an investigation to determine if plants need sunlight and water to grow.
+S.2.6
+Develop a simple model that mimics the function of an animal in dispersing seeds or pollinating plants.*  
+S.2.7
+Make observations of plants and animals to compare the diversity of life in different habitats.  
+
+Earth and Space Science
+Topic
+Earth’s Systems: Processes that Shape the Earth
+S.2.8
+Use information from several sources to provide evidence that Earth events can occur quickly or slowly.  
+S.2.9
+Compare multiple solutions designed to slow or prevent wind or water from changing the shape of the land.*  
+S.2.10
+Develop a model to represent the shapes and kinds of land and bodies of water in an area.  
+S.2.11
+Obtain information to identify where water is found on Earth and that it can be solid or liquid.  
+
+Engineering, Technology, and Applications of Science
+Topic
+Engineering Design
+S.2.12
+Ask questions, make observations, and gather information about a situation people want to change to define a simple problem that can be solved through the development of a new or improved object or tool.  
+S.2.13
+Develop a simple sketch, drawing, or physical model to illustrate how the shape of an object helps it function as needed to solve a given problem.
+S.2.14
+Analyze data from tests of two objects designed to solve the same problem to compare the strengths and weaknesses of how each performs.
+
+
+Science Indicators Grades 3 - 5
+All West Virginia teachers are responsible for classroom instruction that integrates content standards, foundational skills, literacy, learning skills, computer science and technology tools.  Students in grades 3 - 5 will advance through a developmentally appropriate progression of standards.  The following chart represents the College- and Career-Readiness Indicators for Science that will be developed in grades 3 - 5. 
+College- and Career-Readiness Indicators for Science
+Grades 3 - 5
+Nature of Science
+Scientific knowledge is simultaneously reliable and subject to change based on empirical evidence and interpretation.
+Scientific knowledge is obtained through a combination of observations of the natural world and inferences based on those observations.
+Science is a creative human endeavor which is influenced by social and cultural biases.
+A primary goal of science is the formation of theories and laws.  Theories are inferred explanations of some aspect of the natural world based on successfully tested information from evidence and evaluated phenomena.  Laws describe relationships among what has been observed in the natural world.  
+Scientific investigations use a variety of methods to address questions about the natural and material world.
+Practices of Scientists and Engineers
+Science Connecting Concepts
+Asking questions and defining problems
+Developing and using models
+Planning and carrying out investigations
+Analyzing and interpreting data
+Using mathematical and computational thinking
+Constructing explanations and designing solutions
+Engaging in argument from evidence
+Obtaining, evaluating, and communicating information
+Observing patterns
+Investigating and explaining cause and effect
+Recognizing scale, proportion, and quantity
+Defining systems and system models
+Tracking energy and matter flows into, out of, and within systems to understand system behavior
+Determining the relationships between structure and function
+Studying stability and change
+Science Literacy
+Science Lab Safety
+Utilizing and connecting ideas among informational (factual) scientific texts
+Integrating and applying information presented in various media formats when writing and speaking
+Citing evidence to support scientific claims
+Comparing and contrasting sets of data
+Building and appropriately using science domain vocabulary and phrases
+
+Requiring lab safety training and archiving signed student safety contracts including medical conditions
+Wearing proper protective equipment as needed (e.g., goggles, apron, and gloves)
+Requiring grade appropriate lab equipment operation and safety training
+Storing and disposing of chemical/biological materials properly
+Interpreting and applying visually expressed information (e.g., flowchart, diagram, model, graph, or table)
+Following ethical classroom use of living organisms
+
+Science - Grade 3
+The Third Grade Science standards build upon problem-solving and experimentation, moving into a more in-depth study of science.  Through a progressive rigorous, integrated approach, the inquiry-based program of study provides students opportunities to demonstrate scientific literacy in the domains of Physical Science, Life Science, and Earth and Space Science, focusing on the connecting concepts of science: systems, changes, and models.  The content develops early problem-solving skills through observing, experimenting, and concluding.   Students will engage in hands-on activities at least 50% of the instructional time developing and demonstrating conceptual understandings along with research and laboratory skills described in the standards and indicators for science.  Engineering, Technology, and the Application of Science are integrated throughout instruction as students define problems and design solutions related to the course standards and indicators for science.  Third Grade Science intentionally supports developmental and academic growth.  Standards followed by an asterisk (*) denote the integration of traditional science content with an engineering practice.
+
+Physical Science
+Topic
+Forces and Interactions
+S.3.1
+Plan and conduct an investigation to provide evidence of the effects of balanced and unbalanced forces on the motion of an object.
+S.3.2
+Make observations and/or measurements of an object’s motion to provide evidence that a pattern can be used to predict future motion.
+S.3.3
+Ask questions to determine cause and effect relationships of electric or magnetic interactions between two objects not in contact with each other.
+S.3.4
+Define a simple design problem that can be solved by applying scientific ideas about magnets.*
+S.3.5
+Support an argument that the gravitational force exerted by Earth on objects is directed toward the center of the Earth.
+
+Life Science
+Topic
+Interdependent Relationships in Ecosystems
+S.3.6
+Construct an argument that some animals form groups that help members survive.
+S.3.7
+Construct an argument with evidence that in a particular habitat some organisms can survive well, some survive less well, and some cannot survive at all.
+S.3.8
+Make a claim about the merit of a solution to a problem caused when the environment changes and the types of plants and animals that live there may change.* 
+Topic
+Inheritance and Variation of Traits: Life Cycles and Traits
+S.3.9
+Develop models to describe that organisms have unique and diverse life cycles but all have in common birth, growth, reproduction, and death.
+S.3.10
+Analyze and interpret data to provide evidence that plants and animals have traits inherited from parents and that variation of these traits exists in a group of similar organisms.
+S.3.11
+Use evidence to support the explanation that traits can be influenced by the environment.
+S.3.12
+Use evidence to construct an explanation for how the variations in characteristics among individuals of the same species may provide advantages in surviving, finding mates, and reproducing.
+
+Earth and Space Science
+Topic
+Weather and Climate
+S.3.13
+Represent data in tables and graphical displays to describe typical weather conditions expected during a particular season. 
+S.3.14
+Obtain and combine information to describe climates in different regions of the world.  
+S.3.15
+Make a claim about the merit of a design solution that reduces the impacts of a weather-related hazard.*  
+
+Engineering, Technology, and Applications of Science
+Topic
+Engineering Design
+S.3.16
+Define a simple design problem reflecting a need or a want that includes specified criteria for success and constraints on materials, time, or cost. 
+S.3.17
+Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem.  
+S.3.18
+Plan and carry out fair tests in which variables are controlled and failure points are considered to identify aspects of a model or prototype that can be improved.  
+ 
+Science - Grade 4
+Fourth Grade Science standards build on the study of physics and geology.  Through a progressive rigorous, integrated approach, the inquiry-based program of study provides students opportunities to demonstrate scientific literacy in the fields of Physical Science, Life Science, and Earth and Space Science focusing on the connecting concepts of science: systems, changes, and models.  The content develops basic problem-solving skills through observing, experimenting, and concluding.  Students will engage in hands-on activities at least 50% of the instructional time as they develop and demonstrate conceptual understandings along with research and laboratory skills described in the standards and indicators for science.  Engineering, Technology, and the Application of Science standards are integrated throughout instruction as students define problems and design solutions related to the course standards and indicators for science.  Fourth Grade Science intentionally supports developmental and academic growth.  Standards followed by an asterisk (*) denote the integration of traditional science content with an engineering practice. 
+
+Physical Science
+Topic
+Energy
+S.4.1
+Use evidence to construct an explanation relating the speed of an object to the energy of that object.  
+S.4.2
+Make observations to provide evidence that energy can be transferred from place to place by sound, light, heat, and electric currents.
+S.4.3
+Ask questions and predict outcomes about the changes in energy that occur when objects collide.  
+S.4.4
+Apply scientific ideas to design, test, and refine a device that converts energy from one form to another.*  
+
+Topic
+Waves: Waves and Information
+S.4.5
+Develop a model of waves to describe patterns in terms of amplitude and wavelength and that waves can cause objects to move.
+S.4.6
+Generate and compare multiple solutions that use patterns to transfer information.*  
+
+Life Science
+Topic
+Structure, Function, and Information Processing
+S.4.7
+Develop a model to describe that light reflecting from objects and entering the eye allows objects to be seen. 
+S.4.8
+Construct an argument that plants and animals have internal and external structures that function to support survival, growth, behavior, and reproduction. 
+S.4.9
+Use a model to describe that animals receive different types of information through their senses, process the information in their brain, and respond to the information in different ways.  
+
+Earth and Space Science
+Topic
+Earth’s Systems: Processes that Shape the Earth
+S.4.10
+Identify evidence from patterns in rock formations and fossils in rock layers to support an explanation for changes in a landscape over time.  
+S.4.11
+Analyze and interpret data from fossils to provide evidence of the organisms and the environments in which they lived long ago.
+S.4.12
+Make observations and/or measurements to provide evidence of the effects of weathering or the rate of erosion by water, ice, wind, or vegetation.  
+S.4.13
+Analyze and interpret data from maps to describe patterns of Earth’s geological features.  
+
+Engineering, Technology, and Applications of Science
+Topic
+Engineering Design
+S.4.14
+Define a simple design problem reflecting a need or a want that includes specified criteria for success and constraints on materials, time, or cost.  
+S.4.15
+Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem.  
+S.4.16
+Plan and carry out fair tests in which variables are controlled and failure points are considered to identify aspects of a model or prototype that can be improved.  
+
+Science - Grade 5
+Fifth Grade Science standards identify, compare, classify, and explain our living and designed worlds.  Through a progressive rigorous, integrated approach, the inquiry-based program of study provides students opportunities to demonstrate scientific literacy in the domains of Physical Science, Life Science, and Earth and Space Science focusing on the connecting concepts: systems, changes, and models.  The content develops basic problem-solving skills through observing, experimenting, and concluding.  Students will engage in hands-on activities at least 50% of the instructional time as they develop and demonstrate conceptual understandings along with research and laboratory skills described in the standards and indicators for science.  Engineering, Technology, and the Application of Science are integrated throughout instruction as students define problems and design solutions related to the course standards and indicators for science.  Fifth Grade Science intentionally supports developmental and academic growth.  Standards followed by an asterisk (*) denote the integration of traditional science content with an engineering practice.
+
+Physical Science
+Topic
+Structure and Properties of Matter
+S.5.1
+Make observations and measurements to identify materials based on their properties.
+S.5.2
+Develop a model to describe that matter is made of particles too small to be seen.  
+S.5.3
+Measure and graph quantities to provide evidence that regardless of the type of change that occurs when heating, cooling, or mixing substances, the total weight of matter is conserved.   
+S.5.4
+Conduct an investigation to determine whether the mixing of two or more substances results in new substances.  
+
+Life Science
+Topic
+Matter and Energy in Organisms and Ecosystems
+S.5.5
+Support an argument that plants get the materials they need for growth chiefly from air and water.
+S.5.6
+Use models to describe that energy in animals’ food (used for body repair, growth, motion, and maintenance of body warmth) originated as energy from the sun.
+S.5.7
+Develop a model to describe the movement of matter among plants, animals, decomposers, and the environment.  
+
+Earth and Space Science
+Topic
+Earth’s Systems
+S.5.8
+Describe and graph the amounts and percentages of water and fresh water in various reservoirs to provide evidence about the distribution of water on Earth.  
+S.5.9
+Obtain and combine information about ways individual communities use science ideas to protect the Earth’s resources and environment.
+S.5.10
+Develop a model using an example to describe ways the geosphere, biosphere, hydrosphere, and/or atmosphere interact.
+S.5.11
+Obtain and combine information to describe that energy and fuels are derived from natural resources and their uses affect the environment.
+S.5.12
+Generate and compare multiple solutions to reduce the impacts of natural Earth processes on the human population.*  
+Topic
+Space Systems: Stars and the Solar System
+S.5.13
+Support an argument that differences in the apparent brightness of the sun compared to other stars is due to their relative distances from Earth.  
+S.5.14
+Represent data in graphical displays to reveal patterns of daily changes in length and direction of shadows, day and night, and the seasonal appearance of some stars in the night sky.  
+
+Engineering, Technology, and Applications of Science
+Topic
+Engineering Design
+S.5.15
+Define a simple design problem reflecting a need or a want that includes specified criteria for success and constraints on materials, time, or cost.  
+S.5.16
+Generate and compare multiple possible solutions to a problem based on how well each is likely to meet the criteria and constraints of the problem.  
+S.5.17
+Plan and carry out fair tests in which variables are controlled and failure points are considered to identify aspects of a model or prototype that can be improved.  
+
+Science Indicators Grades 6 - 8
+All West Virginia teachers are responsible for classroom instruction that integrates content standards, foundational skills, literacy, learning skills, computer science and technology tools.  Students in grades 6 - 8 will advance through a developmentally appropriate progression of standards.  The following chart represents the College- and Career-Readiness Indicators for Science that will be developed in grades 6 - 8.
+ 
+College- and Career-Readiness Indicators for Science
+Grades 6 - 8 
+Nature of Science
+Scientific knowledge is simultaneously reliable and subject to change based on empirical evidence and interpretation.
+Scientific knowledge is obtained through a combination of observations of the natural world and inferences based on those observations.
+Science is a creative human endeavor which is influenced by social and cultural biases.
+A primary goal of science is the formation of theories and laws.  Theories are inferred explanations of some aspect of the natural world based on successfully tested information from evidence and evaluated phenomena.  Laws describe relationships among what has been observed in the natural world.  
+Scientific investigations use a variety of methods to address questions about the natural and material world.
+Practices of Scientists and Engineers
+Science Connecting Concepts
+Asking questions and defining problems
+Developing and using models
+Planning and carrying out investigations
+Analyzing and interpreting data
+Using mathematical and computational thinking
+Constructing explanations and designing solutions
+Engaging in argument from evidence
+Obtaining, evaluating, and communicating information 
+Observing patterns
+Investigating and explaining cause and effect
+Recognizing scale, proportion, and quantity
+Defining systems and system models
+Tracking energy and matter flows, into, out of, and within systems to understand system behavior  
+Determining the relationships between structure and function
+Studying stability and change
+Science Literacy
+Science Lab Safety
+Producing clear and coherent technical writing in which the development, organization and style are appropriate for the science topic
+Correctly utilizing and explaining visually expressed information (e.g., flowchart, diagram, model, graph, table, or digital mapping technology) in a science narrative.  
+Appropriately using technical terminology or scientific concepts and processes to create visually expressed information
+Reading with understanding articles about science in the popular press and engaging in social conversation about the validity of the conclusions
+Identifying scientific issues underlying national and local decisions and expressing positions that are scientifically and technologically informed
+Evaluating the quality and validity of scientific information on the basis of its source and the methods used to generate it
+Requiring student lab safety training and demonstrating appropriate proficiency before participating in lab activities
+Archiving signed student safety contracts documenting lab safety training and medical contraindications (e.g., allergies, contact lenses, medical conditions)
+Wearing proper protective gear as needed (e.g., goggles, apron, and gloves)
+Requiring grade appropriate lab equipment operation and safety training
+Using and following SDS protocols
+Storing and disposing of chemical/biological materials properly
+Following ethical classroom uses of living materials/organisms  
+Displaying proper safety signage and laboratory rules in the classroom and lab
+
+Science - Grade 6
+Sixth Grade Science standards build upon students’ science understanding from earlier grades and provide deeper understandings in eight major content topics: Weather and Climate; Space Systems; Atoms and Elements; Waves and Electromagnetic Radiation; Matter and Energy in Organisms and Ecosystems; Interdependent Relationships in Ecosystems; Human Impacts, and Engineering Design.  The standards blend central ideas with the practices of scientists and engineers and science connecting concepts to support students in developing useable knowledge across the science disciplines.  There is a focus on multiple indicators, including developing and using models; analyzing and interpreting data; using mathematical and computational thinking; obtaining, evaluating, and communicating information; and engaging in argument from evidence.  Engineering, Technology, and the Application of Science are integrated throughout instruction as students define problems and design solutions related to the course topics.  Students will engage in active inquiries, investigations, and hands-on activities at least 50% of the instructional time as they develop and demonstrate conceptual understandings along with research and laboratory skills described in the standards and indicators for science.  Safety instruction is integrated into all activities, and students will implement safe procedures and practices when manipulating equipment, materials, organisms, and models.  Standards followed by an asterisk (*) denote the integration of traditional science content with an engineering practice.
+
+Life Science
+Topic 
+Interdependent Relationships in Ecosystems
+S.6.1
+Construct an explanation that predicts patterns of interactions among organisms across multiple ecosystems. 
+S.6.2
+Evaluate competing design solutions for maintaining biodiversity and ecosystem services.*  
+Topic
+Matter and Energy in Organisms and Ecosystems
+S.6.3
+Construct a scientific explanation based on evidence for the role of photosynthesis in the cycling of matter and flow of energy into and out of organisms.
+S.6.4
+Develop a model to describe how food is rearranged through chemical reactions forming new molecules that support growth and/or release energy as this matter moves through an organism.
+S.6.5
+Analyze and interpret data to provide evidence for the effects of resource availability on organisms and populations of organisms in an ecosystem.
+S.6.6
+Develop a model to describe the cycling of matter and flow of energy among living and nonliving parts of an ecosystem. 
+S.6.7
+Construct an argument supported by empirical evidence that changes to physical or biological components of an ecosystem affect populations.
+
+
+
+Physical Science
+Topic
+Atoms and Elements
+S.6.8
+Develop models to describe the relationship between atoms and molecules.
+S.6.9
+Utilize the periodic table as an informational tool to identify elements.
+Topic
+Waves and Electromagnetic Radiation
+S.6.10
+Use mathematical representations to describe a simple model for waves that includes how the amplitude of a wave is related to the energy in a wave.
+S.6.11
+Develop and use a model to describe that waves are reflected, absorbed, or transmitted through various materials.
+S.6.12
+Integrate qualitative scientific and technical information to support the claim that digitized signals are a more reliable way to encode and transmit information than analog signals.
+
+Earth and Space Science
+Topic 
+Space Systems
+S.6.13
+Develop and use a model of the Earth-sun-moon system to describe the cyclic patterns of lunar phases, eclipses of the sun and moon, and seasons.
+S.6.14
+Develop and use a model to describe the role of gravity in the motions within galaxies and the solar system.
+S.6.15
+Analyze and interpret data to determine scale properties of objects in the solar system.
+Topic
+Weather and Climate
+S.6.16
+Collect data to provide evidence for how the motions and complex interactions of air masses results in changes in weather conditions.
+S.6.17
+Develop and use a model to describe how unequal heating and rotation of the Earth cause patterns of atmospheric and oceanic circulation that determine regional climates.
+S.6.18
+Ask questions to clarify evidence of the factors that have caused the change in global temperatures over the past century.
+Topic
+Human Impacts
+S.6.19
+analyze and interpret data on natural hazards to forecast future catastrophic events and inform the development of technologies to mitigate their effects.
+
+Engineering, Technology, and Applications of Science
+Topic
+Engineering Design
+S.6.20
+Define the criteria and constraints of a design problem with sufficient precision to ensure a successful solution.
+S.6.21
+Analyze data from tests to determine similarities and differences among several design solutions to identify the best characteristics of each. 
+
+Science - Grade 7
+Seventh Grade Science standards build upon students’ science understanding from earlier grades and provide deeper understandings in seven major content topics: Earth Systems; History of Earth; Energy; Forces and Interactions; Structure, Function, and Information Processing; Human Impacts, and Engineering Design.  The standards blend central ideas with the practices of scientists and engineers and science connecting concepts to support students in developing useable knowledge across the science disciplines.  There is a focus on multiple indicators, including planning and carrying out investigations; developing and using models; analyzing and interpreting data; using mathematical and computational thinking; obtaining, evaluating, and communicating information; and engaging in argument from evidence.  Engineering, Technology, and the Application of Science are integrated throughout instruction as students define problems and design solutions related to the course topics.  Students will engage in active inquiries, investigations, and hands-on activities at least 50% of instructional time as they develop and demonstrate conceptual understandings along with research and laboratory skills described in the standards and indicators for science.   Safety instruction is integrated into all activities, and students will implement safe procedures and practices when manipulating equipment, materials, organisms, and models.  Standards followed by an asterisk (*) denote the integration of traditional science content with an engineering practice.
+
+Life Science
+Topic
+Structure, Function, and Information Processing
+S.7.1
+Conduct an investigation to provide evidence that living things are made of cells, either one cell or many different numbers and types of cells.  
+S.7.2
+Develop and use a model to describe the function of a cell as a whole and ways parts of cells contribute to the function.   
+S.7.3
+Use argument supported by evidence for how the body is a system of interacting subsystems composed of groups of cells with emphasis on the circulatory, excretory, digestive, respiratory, muscular, and nervous systems.
+S.7.4
+Gather and synthesize information that sensory receptors respond to stimuli by sending messages to the brain for immediate behavior or storage as memories.  
+
+Physical Science
+Topic
+Energy
+S.7.5
+Construct and interpret graphical displays of data to describe the relationships of kinetic energy to the mass of an object and to the speed of an object.  
+S.7.6
+Develop a model to describe that when the arrangement of objects interacting at a distance changes, different amounts of potential energy are stored in the system.  
+S.7.7
+Apply scientific principles to design, construct, and test a device that either minimizes or maximizes thermal energy transfer. *  
+S.7.8
+Plan an investigation to determine the relationships among the energy transferred, the type of matter, the mass, and the change in the average kinetic energy of the particles as measured by the temperature of the sample.  
+S.7.9
+Construct, use, and present arguments to support the claim that when the kinetic energy of an object changes, energy is transferred to or from the object.  
+Topic
+Forces and Interactions
+S.7.10
+Apply Newton’s Third Law to design a solution to a problem involving the motion of two colliding objects. *  
+S.7.11
+Plan an investigation to provide evidence that the change in an object’s motion depends on the sum of the forces on the object and the mass of the object.  
+S.7.12
+Ask questions about data to determine the factors that affect the strength of electric and magnetic forces.  
+S.7.13
+Construct and present arguments using evidence to support the claim that gravitational interactions are attractive and depend on the masses of interacting objects.  
+S.7.14
+Conduct an investigation and evaluate the experimental design to provide evidence that fields exist between objects exerting forces on each other even though the objects are not in contact.   
+
+Earth and Space Sciences
+Topic
+Earth’s Systems 
+S.7.15
+Develop a model to describe the cycling of Earth’s materials and the flow of energy that drives this process.  
+S.7.16
+Develop a model to describe the cycling of water through Earth’s systems driven by energy from the sun and the force of gravity.
+S.7.17
+Construct a scientific explanation based on evidence for how the uneven distributions of Earth’s mineral, energy, and groundwater resources are the result of past and current geoscience processes.  
+Topic
+History of Earth
+S.7.18
+Construct a scientific explanation based on evidence from rock strata for how the geologic timescale is used to organize Earth’s 4.6-billion-year-old history.  
+S.7.19
+Construct an explanation based on evidence for how geoscience processes have changed Earth’s surface at varying time and spatial scales.  
+S.7.20
+Analyze and interpret data on the distribution of fossils and rocks, continental shapes, and seafloor structures to provide evidence of the past plate motions.  
+Topic
+Human Impacts
+S.7.21
+Apply scientific principles to design a method for monitoring and minimizing a human impact on the environment. *  
+
+Engineering, Technology, and Applications of Science
+Topic
+Engineering Design
+S.7.22
+Define the criteria and constraints of a design problem with sufficient precision to ensure a successful solution, considering limitations to solutions including scientific principles and potential relevant possible impacts on people and the environment.
+S.7.23
+Analyze data from tests to determine which characteristics of design can be combined into a new solution to better meet the criteria for success.  
+
+Science - Grade 8
+
+Eighth Grade Science standards build upon students’ science understanding from earlier grades and provide deeper understandings in six major content topics: Structure and Properties of Matter; Chemical Reactions; Growth, Development, and Reproduction of Organisms; Natural Selection and Adaptations; and Human Impacts, and Engineering Design.  The standards blend central ideas with the practices of scientists and engineers and science connecting concepts to support students in developing useable knowledge across the science disciplines.  There is a focus on multiple indicators including planning and carrying out investigations; developing and using models; analyzing and interpreting data; using mathematical and computational thinking; obtaining, evaluating, and communicating information; and engaging in argument from evidence.  Engineering, Technology, and the Application of Science are integrated throughout instruction as students define problems and design solutions related to the course topics.  Students will engage in active inquiries, investigations, and hands-on activities at least 50% of instructional time as they develop and demonstrate conceptual understandings along with research and laboratory skills described in the standards and indicators for science.  Safety instruction is integrated into all activities, and students will implement safe procedures and practices when manipulating equipment, materials, organisms, and models.  Standards followed by an asterisk (*) denote the integration of traditional science content with an engineering practice.
+
+Life Science
+Topic
+Growth, Development, and Reproduction of Organisms
+S.8.1
+Use argument based on empirical evidence and scientific reasoning to support an explanation for how characteristic animal behaviors and specialized plant structures affect the probability of successful reproduction of animals and plants respectively. 
+S.8.2
+Construct a scientific explanation based on evidence for how environmental and genetic factors influence the growth of organisms. 
+S.8.3
+Develop and use a model to describe why structural changes to genes (mutations) located on chromosomes may affect proteins and may result in harmful, beneficial, or neutral effects to the structure and function of an organism. 
+S.8.4
+Develop and use a model to describe why asexual reproduction results in offspring with identical genetic information and sexual reproduction results in offspring with genetic variation. 
+S.8.5
+Gather and synthesize information about the technologies that have changed the way humans influence the inheritance of desired traits in organisms. 
+Topic
+Natural Selection and Adaptations
+S.8.6
+Analyze and interpret data for patterns in the fossil record that document the existence, diversity, extinction, and change of life forms throughout the history of life on Earth under the assumption that natural laws operate today as in the past.  
+S.8.7
+Apply scientific ideas to construct an explanation for the anatomical similarities and differences among modern organisms and between modern and fossil organisms to infer evolutionary relationships.  
+S.8.8
+Analyze displays of pictorial data to compare patterns of similarities in the embryological development across multiple species to identify relationships not evident in the fully formed anatomy.  
+S.8.9
+Construct an explanation based on evidence that describes how genetic variations of traits in a population increase some individuals’ probability of surviving and reproducing in a specific environment.  
+S.8.10
+Use mathematical models, probability statements, and proportional reasoning to support explanations of how natural selection may lead to increases and decreases of specific traits in populations over time.  
+
+Physical Science
+Topic
+Structure and Properties of Matter
+S.8.11
+Develop models to describe the atomic composition of simple molecules and basic extended structures.  
+S.8.12
+Gather and make sense of information to describe that synthetic materials come from natural resources and impact society. 
+S.8.13
+Develop a model that predicts and describes changes in particle motion, temperature, and state of a pure substance when thermal energy is added or removed.  
+Topic
+Chemical Reactions
+S.8.14
+Analyze and interpret data on the properties of substances before and after the substances interact to determine if a chemical reaction has occurred.  
+S.8.15
+Develop and use a model to describe how the total number of atoms does not change in a chemical reaction and thus mass is conserved.
+S.8.16
+Undertake a design project to construct, test, and modify a device that either releases or absorbs thermal energy by chemical processes. *
+
+Earth and Space Science
+Topic
+Human Impacts
+S.8.17
+Construct an argument supported by evidence for how increases in human population and per-capita consumption of natural resources impact Earth’s systems.  
+
+Engineering, Technology, and Applications of Science
+Topic
+Engineering Design
+S.8.18
+Evaluate competing design solutions using a systematic process to determine how well they meet the criteria and constraints of the problem.  
+S.8.19
+Develop a model to generate data for iterative testing and modification of a proposed object, tool, or process such that an optimal design can be achieved.  
+
+
+Science Indicators Grades 9 - 12
+All West Virginia teachers are responsible for classroom instruction that integrates content standards, foundational skills, literacy, learning skills, computer science and technology tools.  Students in grades 9 - 12 will advance through a developmentally appropriate progression of standards.  The following chart represents the College- and Career-Readiness Indicators for Science that will be developed in grades 9 - 12. 
+College- and Career-Readiness Indicators for Science
+Grades 9 - 12 
+Nature of Science
+Scientific knowledge is simultaneously reliable and subject to change based on empirical evidence and interpretation.
+Scientific knowledge is obtained through a combination of observations of the natural world and inferences based on those observations.
+Science is a creative human endeavor which is influenced by social and cultural biases.
+A primary goal of science is the formation of theories and laws.  Theories are inferred explanations of some aspect of the natural world based on successfully tested information from evidence and evaluated phenomena.  Laws describe relationships among what has been observed in the natural world.  
+Scientific investigations use a variety of methods to address questions about the natural and material world.
+Practices of Scientists and Engineers
+Science Connecting Concepts
+Asking questions and defining problems
+Developing and using models
+Planning and carrying out investigations
+Analyzing and interpreting data
+Using mathematical and computational thinking
+Constructing explanations and designing solutions
+Engaging in argument from evidence
+Obtaining, evaluating, and communicating information 
+Observing patterns
+Investigating and explaining cause and effect
+Recognizing scale, proportion, and quantity
+Defining systems and system models
+Tracking energy and matter flows, into, out of, and within systems to understand system behavior  
+Determining the relationships between structure and function
+Studying stability and change
+Science Literacy
+Science Lab Safety
+Producing clear and coherent technical writing in which the development, organization and style are appropriate for the science topic
+Correctly utilizing and explaining visually expressed information (e.g., flowchart, diagram, model, graph, table, or digital mapping technology) in a science narrative.  
+Appropriately using technical terminology or scientific concepts and processes to create visually expressed information
+Reading with understanding articles about science in the popular press and engaging in social conversation about the validity of the conclusions
+Identifying scientific issues underlying national and local decisions and expressing positions that are scientifically and technologically informed
+Evaluating the quality and validity of scientific information on the basis of its source and the methods used to generate it
+Requiring student lab safety training and demonstrating appropriate proficiency before participating in lab activities
+Archiving signed student safety contracts documenting lab safety training and medical contraindications (e.g., allergies, contact lenses, medical conditions)
+Wearing proper protective gear as needed (e.g., goggles, apron, and gloves)
+Requiring grade appropriate lab equipment operation and safety training
+Using and following SDS protocols
+Storing and disposing of chemical/biological materials properly
+Following ethical classroom uses of living materials/organisms
+Displaying proper safety signage and laboratory rules in the classroom and lab
+
+
+Earth and Space Science
+The Earth and Space Science (ESS) course builds upon science concepts from middle school by revealing the complexity of Earth’s interacting systems, evaluating and using current data to explain Earth’s place in the universe, and enabling students to relate Earth Science to many aspects of human society.  Students focus on five ESS content topics: Space Systems, History of Earth, Earth’s Systems, Weather and Climate, and Human Sustainability.  The standards strongly reflect the many societally relevant aspects of ESS including resources, hazards, environmental impacts, with an emphasis on using engineering and technology concepts to design solutions to challenges facing human society.  Engineering, Technology, and the Application of Science are integrated throughout instruction as students define problems and design solutions related to the course topics.   There is a focus on multiple indicators including developing and using models, planning and conducting investigations, analyzing and interpreting data, using mathematical and computational thinking, constructing explanations and designing solutions.  Students will engage in active inquiries, investigations, and hands-on activities at least 50% of the instructional time as they develop and demonstrate conceptual understandings along with research and laboratory skills described in the standards and indicators for science.  Safety instruction is integrated into all activities, and students will implement safe procedures and practices when manipulating equipment, materials, organisms, and models.  The bulleted examples listed below each standard illustrate optional instructional subtopics to assist students in achieving mastery of the content.  These are only suggested illustrations and content is not limited to these suggestions.  Standards followed by an asterisk (*) denote the integration of traditional science content with an engineering practice.
+
+Earth and Space Science
+Topic
+Space Systems
+S.ESS.1
+Develop a model based on evidence to illustrate the life span of the sun and the role of nuclear fusion in the sun’s core to release energy that eventually reaches Earth in the form of radiation in relation to:  
+atomic structure
+periodic table
+energy transfer
+fusion vs fission
+structure of the sun
+sunspots and other solar phenomenon (space weather).
+S.ESS.2
+Construct an explanation of the Big Bang theory based on astronomical evidence of light spectra, motion of distant galaxies, and composition of matter in the universe.  
+expansion of the universe
+frequency & wavelength
+origin theories of the universe
+blue shift/ red shift
+Hubble constant
+dark matter/dark energy
+cosmic background radiation
+EM spectrum
+properties of light.
+S.ESS.3
+Use at least two different formats (e.g., oral, graphical, textual, mathematical) to communicate scientific ideas about the way stars, over their life cycle, produce elements.
+HR diagram
+life cycle of stars
+atomic theory
+periodic table
+fusion vs fission
+nucleosynthesis.
+S.ESS.4
+Use mathematical or computational representations (modeling) to predict the motion of orbiting objects in the solar system.  
+introduce velocity and acceleration
+modeling Kepler’s Laws
+Newtonian Gravity.
+Topic
+History of Earth
+S.ESS.5
+Evaluate evidence of the past and current movements of continental and oceanic crust and the theory of plate tectonics to explain the ages of crustal rocks. 
+ Hypothesis of Continental Drift
+fossil evidence
+seafloor spreading
+slab-push/plate pull
+subduction
+magnetic field reversal
+oceanic vs continental crust.
+S.ESS.6
+Apply scientific reasoning and evidence from ancient Earth materials, meteorites, and other planetary surfaces to construct an account of Earth’s formation and early history.  
+xenoliths
+radiometric dating
+relative dating
+cratering
+moon origin theories.
+S.ESS.7
+Develop a model to illustrate how Earth’s internal and surface processes operate at different spatial and temporal scales to form continental and ocean-floor features through a process of constructive and destructive forces.
+constructive forces
+volcanic activity
+tectonic forces
+mineral formation
+rock formation
+destructive forces
+subduction
+convection
+coastal erosion
+weathering
+mass wasting.
+Topic
+Earth’s Systems
+S.ESS.8
+Analyze geoscience data to make the claim that one change to Earth’s surface can create feedbacks that cause changes to other Earth systems.
+map and GIS data interpretation
+examples could include:
+coastal erosion
+greenhouse gasses
+global temperatures
+rising ocean levels
+loss of wetlands
+acid rain
+injection wells/earthquakes
+loss of ground vegetation/erosion.
+S.ESS.9
+Develop a model based on seismic and magnetic evidence of Earth’s interior to describe the cycling of matter by thermal convection and the resulting plate tectonics.
+layers of the Earth
+density
+heat transfer
+temperature gradients
+radioactive decay
+differentiation
+Earth’s formation
+chemical composition
+seismic waves.
+S.ESS.10
+Plan and conduct investigations of the properties of water and its effects on Earth materials and surface processes.
+water cycle
+mechanical & chemical weathering
+chemical reactions
+solutions
+pH scale.
+S.ESS.11
+Develop a quantitative model to describe the cycling of carbon among the hydrosphere, atmosphere, geosphere, and biosphere. 
+biogeochemical cycles
+carbon cycle
+carbon reservoirs
+carbon budget.
+S.ESS.12
+Construct an argument based on evidence about the simultaneous coevolution of Earth systems and life on Earth.  
+Earth’s history
+evolution of earth’s atmosphere
+soil development
+requirements for life and how they change with changing earth conditions.
+Topic
+Weather and Climate
+S.ESS.13
+Use a model to describe how variations in the flow of energy into and out of Earth systems result in changes in climate.
+changes in climate
+orbital changes, precession, and Milankovitch cycles
+volcanic impacts 
+ocean circulation impacts on atmosphere
+glaciation
+atmospheric composition.
+S.ESS.14
+Analyze geoscience data and the results from the global climate models to make an evidence-based forecast of the current rate of global or regional climate change and associated future impacts to Earth systems.
+local barometric pressure
+precipitation
+relative humidity
+clouds
+air temperature
+surface temperature
+rising sea level.
+Topic
+Human Sustainability
+S.ESS.15
+Construct an explanation based on evidence for how the availability of natural resources, occurrence of natural hazards, and changes in climate have influenced human activity.  
+Examples include:
+access to fresh water-surface and groundwater
+fertile soils-river deltas
+fossil fuels and mining
+natural disasters
+severe weather
+rising sea level
+mass migrations.
+S.ESS.16
+Evaluate competing design solutions for developing, managing, and utilizing energy and mineral resources based on cost-benefit ratios. *  
+conservation, reuse, recycling
+soil conservation
+mining and drilling
+rare earth mineral mining for technology products.
+S.ESS.17
+Create a computational simulation to illustrate the relationships among management of natural resources, the sustainability of human populations, and biodiversity.  
+cost of resource extraction
+waste management
+consumption
+new technology development.
+S.ESS.18
+Evaluate or refine a technological solution that reduces impacts of human activities on natural systems. *  
+data examples include:
+point and nonpoint pollution 
+changes in biodiversity
+land use via aerial or satellite imaging 
+deducing impact examples include:
+local efforts in recycling
+watershed or stream monitoring
+geoengineering design solutions.
+S.ESS.19
+Use a computational representation to illustrate the relationships among Earth systems and how those relationships are being modified due to human activity. *  
+hydrosphere
+atmosphere
+cryosphere
+geosphere
+biosphere
+connection between carbon dioxide concentrations and photosynthetic biomass
+ocean acidification
+increasing ocean temperatures.
+
+Engineering, Technology, and Applications of Science
+Topic
+Engineering Design
+S.ESS.20
+Analyze a major global challenge to specify qualitative and quantitative criteria and constraints for solutions that account for societal needs and wants.  In reference to:  
+natural disasters
+lack of water
+resources
+climate change. 
+S.ESS.21
+Design a solution to a complex real-world problem by breaking it down into smaller, more manageable problems that can be solved through engineering.  In reference to:  
+tsunamis
+earthquakes
+volcanic eruptions
+flooding
+coastal erosion
+water quality.
+S.ESS.22
+Evaluate a solution to a complex real-world problem based on prioritized criteria and trade-offs that account for a range of constraints, including cost, safety, reliability, and aesthetics, as well as possible social, cultural, and environmental impacts in reference to:
+tsunamis
+earthquakes
+volcanic eruptions
+flooding
+coastal erosion
+water quality.
+S.ESS.23
+Use a computer simulation to model the impact of proposed solutions to a complex real-world problem with numerous criteria and constraints on interactions within and between systems relevant to the problem in reference to:
+GIS
+disaster simulations.
+
+
+Biology
+
+The Biology content provides more in-depth studies of the living world and enables students to make sense of emerging research findings and apply those understandings to solving problems.  Students focus on five life science topics: Structure and Function, Inheritance and Variation of Traits, Matter and Energy in Organisms and Ecosystems, Interdependent Relationships in Ecosystems, and Natural Selection and Evolution.  Engineering, Technology, and the Application of Science are integrated throughout instruction as students define problems and design solutions related to the course topics.  There is a focus on multiple indicators including developing and using models, planning and conducting investigations, analyzing and interpreting data, using mathematical and computational thinking, constructing explanations and designing solutions.  Students will engage in active inquiries, investigations, and hands-on activities at least 50% of the instructional time as they develop and demonstrate conceptual understandings along with research and laboratory skills described in the standards and indicators for science.  Safety instruction is integrated into all activities, and students will implement safe procedures and practices when manipulating equipment, materials, organisms, and models.  Standards followed by an asterisk (*) denote the integration of traditional science content with an engineering practice. 
+
+Biology/Life Science
+Topic
+Structure and Function 
+S.B.1
+Construct an explanation based on evidence for how the structure of DNA determines the structure of proteins which carry out the essential functions of life through systems of specialized cells. 
+S.B.2
+Develop and use a model to illustrate the hierarchical organization of interacting systems that provide specific functions within multicellular organisms. 
+S.B.3
+Identify and describe the characteristics of living organisms based on taxonomic classification systems.
+S.B.4
+Develop and use a model to provide evidence that feedback mechanisms maintain homeostasis.  
+Topic
+Matter and Energy in Organisms and Ecosystems
+S.B.5
+Use a model to illustrate how photosynthesis transforms light energy into stored chemical energy.  
+S.B.6
+Use a model to illustrate that cellular respiration is a chemical process whereby the bonds of food molecules and oxygen molecules are broken and the bonds in new compounds are formed resulting in a net transfer of energy.
+S.B.7
+Construct and revise an explanation based on evidence for the cycling of matter and flow of energy in aerobic and anaerobic respiration in different environments.
+S.B.8
+Use mathematical representations to support claims for the cycling of matter and flow of energy between trophic levels in an ecosystem.  
+transfer of calories
+energy loss (entropy)
+10% Rule
+bioaccumulation.
+S.B.9
+Develop a model to illustrate the role of photosynthesis and cellular respiration in the cycling of carbon among the biosphere, atmosphere, hydrosphere, and geosphere.  
+
+Topic
+Interdependent Relationships in Ecosystems
+S.B.10
+Use mathematical and/or computational representations to support explanations of factors that affect carrying capacity of ecosystems at different scales.  
+S.B.11
+Use mathematical representations to support and revise explanations based on evidence about factors affecting biodiversity and populations in ecosystems of different scales.  
+S.B.12
+Evaluate the claims, evidence, and reasoning that the complex interactions in ecosystems maintain relatively consistent numbers and types of organisms in stable conditions, but changing conditions may result in a new ecosystem possibly leading to speciation.  
+S.B.13
+Design, evaluate, and refine a solution for reducing the impacts of human activities on the environment and biodiversity. *
+S.B.14
+Create or revise a simulation to test a solution to mitigate adverse impacts of human activity on biodiversity. *  
+Topic
+Inheritance and Variation of Traits
+S.B.15
+Use a model to illustrate the role of cellular division (mitosis) and differentiation in producing and maintaining complex organisms.  
+S.B.16
+Develop and use a model to demonstrate the role of DNA and chromosomes in coding the instructions for characteristic traits passed from parents to offspring. 
+S.B.17
+Make and defend a claim based on evidence that inheritable genetic variations may result from: 
+new genetic combinations through meiosis
+viable errors occurring during replication
+mutations caused by environmental factors.  
+S.B.18
+Apply concepts of statistics and probability to explain the variation and distribution of expressed traits in a population. 
+Topic
+Natural Selection and Evolution
+S.B.19
+Engage in argumentation utilizing evidence to support common ancestry and biological evolution.
+phylogenetic trees
+cladograms.
+S.B.20
+Construct an explanation based on evidence that the process of evolution primarily results from four factors: 
+potential for a species to increase in number
+heritable genetic variation of individuals in a species due to mutation and sexual reproduction
+competition for limited resources
+the proliferation of those organisms that are better able to survive and reproduce in the environment. 
+S.B.21
+Construct an explanation based on evidence for how natural selection leads to adaptation of populations.  
+S.B.22
+Evaluate the evidence supporting claims that changes in environmental conditions drive natural selection.
+
+
+
+
+Engineering, Technology, and Applications of Science
+Topic
+Engineering Design
+S.B.23
+Analyze a major global challenge to specify qualitative and quantitative criteria and constraints for solutions that account for societal needs and wants.  
+S.B.24
+Design a solution to a complex real-world problem by breaking it down into smaller, more manageable problems that can be solved through engineering.  
+S.B.25
+Evaluate a solution to a complex real-world problem based on prioritized criteria and trade-offs that account for a range of constraints, including cost, safety, reliability, and aesthetics, as well as possible social, cultural, and environmental impacts. 
+S.B.26
+Use a computer simulation to model the impact of proposed solutions to a complex real-world problem with numerous criteria and constraints on interactions within and between systems relevant to the problem. 
+
+
+Physical Science
+The Physical Science course develops understandings of the central concepts from chemistry and physics: Structure and Properties of Matter; Chemical Reactions; Energy; Forces and Interactions; Waves and Electromagnetic Radiation.  The topics in Physical Science allow high school students to explain more in-depth phenomena central not only to the physical sciences but to life and earth and space sciences, as well.  The standards blend the central ideas with the practices of scientists and engineers and science connecting concepts to support students in developing useable knowledge to explain ideas across the science disciplines.  There is a focus on multiple indicators, including developing and using models, planning and conducting investigations, analyzing and interpreting data, using mathematical and computational thinking, and constructing explanations.  Students are expected to use these practices to demonstrate understanding of the central ideas and demonstrate understanding of several engineering practices, including design and evaluation.  Students will engage in active inquiries, investigations, and hands-on activities at least 50% of the instructional time as they develop and demonstrate conceptual understandings along with research and laboratory skills described in the standards and indicators for science.  Safety instruction is integrated into all activities, and students will implement safe procedures and practices when manipulating equipment, materials, organisms, and models.  Standards followed by an asterisk (*) denote the integration of traditional science content with an engineering practice.
+
+Physical Science/Chemistry
+Topic
+Structure and Properties of Matter
+S.PS.1
+Perform calculations involving equivalence statements for English and Metric conversions (e.g., Newtons/kg/lbs., km/mi., kg/g, km/m). 
+S.PS.2
+Compare and contrast the properties of matter to classify as homogeneous or heterogeneous; pure substance or mixture; element or compound; metals, nonmetals, or metalloids; solution, colloid or suspension.
+S.PS.3
+Plan and conduct an investigation to distinguish chemical properties of matter from physical properties of matter including boiling point, freezing/melting point, density, solubility, viscosity, and conductivity. 
+S.PS.4
+Compare the subatomic particles of an atom with regard to mass, location, and charge, then explain how these particles affect the properties of an atom including identity, mass, volume, and reactivity. 
+S.PS.5
+Analyze data and interpret the Periodic Table to determine trends of the following: 
+number of valence electrons 
+types of ions formed by main group elements 
+location and properties of metals, nonmetals, metalloids 
+state phases at room temperature.
+S.PS.6
+Identify the names/formulas of ionic and molecular compounds and simple-chained hydrocarbons based on the bonding arrangement and structures of molecules.
+S.PS.7
+Investigate the properties of substances to classify them based on the relative strengths of ionic, covalent, and metallic bonds. 
+S.PS.8
+Communicate scientific and technical information about why the molecular-level structure is important in the functioning of designed materials. *
+Topic
+Chemical Reactions
+S.PS.9
+Analyze experimental evidence to distinguish between chemical and physical reactions.
+S.PS.10
+Use mathematical representations to support the claim that atoms, mass, energy, and charge are conserved during a chemical reaction. 
+S.PS.11
+Apply scientific principles and evidence to provide an explanation about the effects of changing the temperature or concentration of the reacting particles on the rate at which a reaction occurs.
+S.PS.12
+Refine the design of a chemical system by specifying a change in conditions that would produce increased amounts of products at equilibrium. *
+S.PS.13
+Use models to identify chemical reactions as synthesis, decomposition, single-replacement, and double-replacement.  Given the reactants, use these models to predict the products of those chemical reactions. 
+S.PS.14
+Experimentally evaluate the characteristics and interactions of acids and bases.
+
+Physical Science/Physics
+Topic
+Energy
+S.PS.15
+Create a computational model to calculate the change in the energy of one component in a system when the change in energy of the other component(s) and energy flows in and out of the system are known. 
+S.PS.16
+Evaluate the forces of a system to quantify the change in energy of a system as work and interpret the rate of energy changes as power.
+S.PS.17
+Design, build, and refine a device that works within given constraints to convert one form of energy into another form of energy. * 
+S.PS.18
+Plan and conduct an investigation to provide evidence that the transfer of thermal energy when two components of different temperature are combined within a closed system results in a more uniform energy distribution among the components in the system (Second Law of Thermodynamics). 
+S.PS.19
+Develop and use a model of two objects interacting through electric or magnetic fields to illustrate the forces between objects and the changes in energy of the objects due to the interaction. 
+Topic
+Forces and Interactions
+S.PS.20
+Experimentally generate graphical data of distance, speed/velocity, and acceleration to analyze the motion of an object and justify and/or derive kinematic equations. 
+S.PS.21
+Analyze data to support the claim that Newton’s second law of motion describes the mathematical relationship among the net force on a macroscopic object, its mass, and its acceleration. 
+S.PS.22
+Identify the pair of equal and opposite forces between two interacting bodies and relate their magnitudes and directions using Newton’s 3rd Law.
+S.PS.23
+Use mathematical representations to support the claim that the total momentum of a system of objects is conserved when the system is closed.
+S.PS.24
+Apply scientific and engineering ideas to design, evaluate, and refine a device that minimizes the force on a macroscopic object during a collision. *
+S.PS.25
+Develop and use a model to describe the mathematical relationship between mass, distance, and force as expressed by Newton’s Universal Law of Gravitation. 
+Topic
+Waves and Electromagnetic Radiation 
+S.PS.26
+Use mathematical representations to support a claim regarding relationships among the frequency, wavelength, and speed of waves traveling in various media while differentiating between longitudinal and transverse waves.
+S.PS.27
+Evaluate the validity and reliability of claims in published materials of the effects that different frequencies of electromagnetic radiation have when absorbed by matter. 
+S.PS.28
+Qualitatively analyze the law of reflection, the law of refraction, and the relationship between the angle of incidence and angle of refraction. 
+S.PS.29
+Communicate technical information about how some technological devices use the principles of wave behavior and wave interactions with matter to transmit and capture information and energy (e.g., broadband, Bluetooth, satellites, and WiFi). * 
+
+Engineering, Technology, and Application of Science
+Topic
+Engineering Design
+S.PS.30
+Analyze a major global challenge to specify qualitative and quantitative criteria and constraints for solutions that account for societal needs and wants.  
+S.PS.31
+Design a solution to a complex real-world problem by breaking it down into smaller, more manageable problems that can be solved through engineering.  
+S.PS.32
+Evaluate a solution to a complex real-world problem based on prioritized criteria and trade-offs that account for a range of constraints, including cost, safety, reliability, and aesthetics, as well as possible social, cultural, and environmental impacts. 
+S.PS.33
+Use a computer simulation to model the impact of proposed solutions to a complex real-world problem with numerous criteria and constraints on interactions within and between systems relevant to the problem. 
+
+
+Chemistry
+Chemistry is an advanced elective course designed for students pursuing Science Technology Engineering Mathematics (STEM) education and careers.  Students will develop a deeper understanding of the central concepts of Structure and Properties of Matter, Chemical Reactions, and Applications of Chemical Reactions as they prepare for college chemistry requiring a strong mathematical foundation.  The chemistry course prepares high school students to explain more in-depth phenomena central not only to the physical sciences, but to life and earth and space sciences as well.  The chemistry standards blend the central ideas with the practices of scientists and engineers and science connecting concepts to support students in developing useable knowledge to explain ideas across the science disciplines.  There is a focus on multiple indicators, including developing and using models, planning and conducting investigations, analyzing and interpreting data, using mathematical and computational thinking, and constructing explanations. Students will use these practices to demonstrate understanding of the central ideas and demonstrate understanding of several engineering practices, including design and evaluation.  Students will engage in active inquiries, investigations, and hands-on activities at least 50% of the instructional time as they develop and demonstrate conceptual understandings along with research and laboratory skills described in the standards and indicators for science.  Safety instruction is integrated into all activities, and students will implement safe procedures and practices when manipulating equipment, materials, organisms, and models.  Standards followed by an asterisk (*) denote the integration of traditional science content with an engineering practice.
+
+Chemistry/Physical Science
+Topic
+Structure and Properties of Matter  
+S.C.1
+Use systematic rules for measuring with certainty to determine intrinsic and extrinsic properties of matter relating to: 
+specific heat
+density
+melting point
+freezing point
+boiling point
+color, volume, length, mass, weight, texture.
+S.C.2
+Calculate properties of matter using the significant figure rules for addition/subtraction and multiplication/division and correctly reporting answers using scientific notation.
+S.C.3
+Compare and contrast the properties of matter to classify as homogeneous or heterogeneous; pure substance or mixture; element or compound; metals, nonmetals, or metalloids; solution, colloid or suspension, including relative strengths of ionic, covalent, and metallic bonds.
+S.C.4
+Research and evaluate contributions (e.g., experimental design, atomic models) to the evolution of the atomic theory in relation to:
+isotopes
+atoms 
+ions
+atomic notation.
+S.C.5
+Use the periodic table as a model to predict the relative properties of elements based on the patterns of electrons in the outermost energy level of atoms in relation to:
+atomic size
+ionic size
+electronegativity
+ionization energy
+electron affinity.
+S.C.6
+Describe atoms and molecules using the Quantum and VSEPR (Valence Shell Electron Pair Repulsion) theories.
+S.C.7
+Produce electron configurations and orbital diagrams for any element on the periodic table and predict the chemical properties of the element from the electron configuration.
+S.C.8
+Construct the names/formulas of ionic and molecular compounds and simple-chained hydrocarbons based on the bonding arrangement and structures of molecules.
+S.C.9
+Investigate and explain water’s role as a solvent based upon its physical, chemical, and colligative properties.
+S.C.10
+Apply the relationship among pressure, temperature, and volume of a gas utilizing graph construction and data generation to illustrate the gas laws in reference to:
+Ideal Gas Law
+Boyle’s Law
+Charles’s Law
+Combined Gas Law.
+S.C.11
+Construct and interpret a phase diagram/heating curve for a substance identifying boiling point, melting point, triple point, and critical point.
+Topic
+Chemical Reactions
+S.C.12
+Construct and revise an explanation for the outcome of a simple chemical reaction based on the outermost electron states of atoms, trends in the periodic table, and knowledge of the patterns of chemical properties.  
+S.C.13
+Classify, predict products of, and write balanced equations for chemical reaction types including single replacement, double replacement, composition, decomposition, combustion, redox, and neutralization.
+S.C.14
+Use mathematical representations to support the claim that atoms, and therefore mass, are conserved during a chemical reaction.
+S.C.15
+Generate mole conversions that demonstrate correct application of Avogadro’s number, molar mass, density, scientific notation, and significant figures in reference to:
+mass to number of particles 
+number of particles to volume 
+volume to mass.
+S.C.16
+Perform the following “mole” calculations showing answers rounded to the correct number of significant figures: 
+molarity 
+percentage composition 
+empirical formulas 
+molecular formulas 
+formulas of hydrates
+mole-mole and mass-mass stoichiometry
+determination of limiting reactant 
+theoretical yield.
+S.C.17
+Classify exothermic & endothermic reactions by the direction of heat flow in a chemical reaction as observed by changes in temperature.
+Topic
+Applications of Chemical Reactions
+S.C.18
+Compare and contrast the defining characteristics of the characteristics of the Arrhenius theory of acids and bases and Bronsted-Lowry theory of acids and bases.  
+S.C.19
+Investigate the chemical and physical properties of acids and bases and evaluate their applications.
+S.C.20
+Compare methods of measuring pH: 
+chemical indicators 
+indicator papers 
+pH meters.
+S.C.21
+Analyze the pH of solutions based on the logarithmic pH scale and concentrations of hydronium or hydroxide ions.
+S.C.22
+Plan and conduct an investigation to evaluate the factors that affect the rate at which a solute dissolves in a specific solvent then develop a model to illustrate the process of dissolving.
+S.C.23
+Measure, quantitatively compare and interpret solubility curves of chemical species in solution types including unsaturated and supersaturated solutions.
+S.C.24
+Apply scientific principles and evidence to provide an explanation about the effects of changing the temperature or concentration of the reacting particles on the rate at which a reaction occurs.
+S.C.25
+Design a properly working electrolytic cell based on redox principles.
+S.C.26
+
+Develop models to illustrate the changes in the composition of the nucleus of the atom and the energy released during the processes of fission, fusion, and radioactive decay.  
+S.C.27
+
+Communicate scientific and technical information about why the molecular-level structure and shape is important in the functioning of designed materials in reference to:
+polymers
+plastics
+pharmaceuticals
+vaccines.
+
+Engineering, Technology, and Applications of Science
+Topic
+Engineering Design
+S.C.28
+Analyze a major global challenge to specify qualitative and quantitative criteria and constraints for solutions that account for societal needs and wants.  
+S.C.29
+Design a solution to a complex real-world problem by breaking it down into smaller, more manageable problems that can be solved through engineering.  
+S.C.30
+Evaluate a solution to a complex real-world problem based on prioritized criteria and trade-offs that account for a range of constraints, including cost, safety, reliability, and aesthetics, as well as possible social, cultural, and environmental impacts. 
+S.C.31
+Use a computer simulation to model the impact of proposed solutions to a complex real-world problem with numerous criteria and constraints on interactions within and between systems relevant to the problem. 
+
+
+Physics
+
+Physics is an advanced elective course designed for students pursuing Science Technology Engineering Mathematics (STEM) education and careers.  The course emphasizes a mathematical approach to the topics of Forces and Interactions, Energy, and Waves and Electromagnetic Radiation and prepares students for college physics.  The physics course prepares high school students to explain more in-depth phenomena central not only to the physical sciences but to life and earth and space sciences, as well.  These standards blend the central ideas with the practices of scientists and engineers and science connecting concepts to support students in developing useable knowledge to explain ideas across the science disciplines.  There is a focus on multiple indicators including developing and using models, planning and conducting investigations, analyzing and interpreting data, using mathematical and computational thinking, and constructing explanations.  Students will use these practices to demonstrate understanding of the central ideas and demonstrate understanding of several engineering practices, including design and evaluation.  Students will engage in active inquiries, investigations, and hands-on activities at least 50% of the instructional time as they develop and demonstrate conceptual understandings along with research and laboratory skills described in the standards and indicators for science.  Safety instruction is integrated into all activities, and students will implement safe procedures and practices when manipulating equipment, materials, organisms, and models.  Standards followed by an asterisk (*) denote the integration of traditional science content with an engineering practice.
+
+Physics/Physical Science
+Topic
+Forces and Interactions
+S.P.1
+Use systematic rules for measuring with certainty and accurately perform calculations using significant figure rules for addition/subtraction and multiplication/division to determine distance, speed/velocity, and acceleration of objects.
+S.P.2
+Interpret graphical, algebraic, and/or trigonometric solutions to prove the values for vector components and resultants.
+S.P.3
+Develop free body diagrams to define a system experiencing balanced or unbalanced forces to justify Newton’s Laws of Motion.
+S.P.4
+Analyze data to support the claim that Newton’s second law of motion describes the mathematical relationship among the net force on a macroscopic object, its mass, and its acceleration.
+S.P.5
+Identify the pair of equal and opposite forces between two interacting bodies and relate their magnitudes and directions using Newton’s 3rd Law.
+S.P.6
+Use mathematical representations to support the claim that the total momentum of a system of objects is conserved when the system is closed.
+S.P.7
+Evaluate the conservation of energy and momentum and deduce solutions for elastic and inelastic collisions.
+S.P.8
+Apply scientific and engineering ideas to design, evaluate, and refine a device that minimizes the force on a macroscopic object during a collision.
+S.P.9
+Develop and use a model to describe the mathematical relationship between mass, distance, and force as expressed by Newton’s Universal Law of Gravitation.
+S.P.10
+Analyze the motion of a projectile; appraise data, either textbook generated or laboratory collected, for motion in one and/or two dimensions, then select the correct mathematical method for communicating the value of unknown variables.
+
+Topic
+Energy
+S.P.11
+Create a computational model to calculate the change in the energy of one component in a system when the change in energy of the other component(s) and energy flows in and out of the system are known. 
+S.P.12
+Evaluate the conservation of energy and momentum and deduce solutions for elastic and inelastic collisions.
+S.P.13
+Evaluate the forces of a system to quantify the change in energy of a system as work and interpret the rate of energy changes as power.
+S.P.14
+Design, build, and refine a device that works within given constraints to convert one form of energy into another form of energy. * 
+S.P.15
+Plan and conduct an investigation to provide evidence that the transfer of thermal energy when two components of different temperature are combined within a closed system results in a more uniform energy distribution among the components in the system (Second Law of Thermodynamics). 
+Topic
+States of Matter
+S.P.16
+Conduct experiments to evaluate the application of metals based on internal structure and physical properties in relation to:
+thermal expansion
+electrical/thermal conductivity
+magnetism.
+S.P.17
+Assess the magnitude of buoyant force on submerged and floating objects.
+S.P.18
+Evaluate the compressibility of fluids and apply the equation of continuity to analyze the mass flow rate of incompressible fluids.
+S.P.19
+Anticipate the effects of Bernoulli’s principle on fluid motion.
+Topic
+Waves and Electromagnetic Radiation
+S.P.20
+Use mathematical representations to support a claim regarding relationships among the frequency, wavelength, and speed of waves traveling in various media while differentiating between longitudinal and transverse waves.
+S.P.21
+Evaluate the claims, evidence, and reasoning behind the idea that electromagnetic radiation can be described either by a wave model or a particle model, and that for some situations one model is more useful than the other.
+S.P.22
+Calculate the energy from electromagnetic radiation with differing frequencies that are absorbed by matter then propose possible applications for those materials.
+S.P.23
+Apply ray optics diagrams to lenses and mirrors; use the lens/mirror equation and the magnification equation to solve optics problems; justify the image results obtained by diagramming the ray optics of lenses and mirrors and/or by deducing the image information from the lens/mirror equation.
+S.P.24
+Apply Snell’s Law to calculate either the angle of incidence or angle of refraction for refraction through various media.
+S.P.25
+Make claims about the diffraction/interference patterns produced when a wave passes through a small opening/set of openings.
+S.P.26
+Evaluate the photon model of light with evidence of the photoelectric effect.
+Topic
+Electricity and Magnetism
+S.P.27
+Diagram magnetic fields for different types of magnets and evaluate the strength of magnetic fields based on field line density. 
+S.P.28
+Plan and conduct an investigation to provide evidence that an electric current can produce a magnetic field and that a changing magnetic field can produce an electric current.
+S.P.29
+Generate models of electric fields surrounding point charges and calculate the magnitude of electric force applied to a charge when placed at different positions in the electric field.
+S.P.30
+Qualitatively and quantitatively predict the interactions of charged particles when performing calculations using Coulomb’s Law.
+S.P.31
+Construct and analyze electrical circuits and calculate Ohm’s law problems for series and parallel circuits.
+S.P.32
+Distinguish between direct and alternating current and identify ways of generating each type.
+
+Engineering, Technology, and Applications of Science
+Topic
+Engineering Design
+S.P.33
+
+Analyze a major global challenge to specify qualitative and quantitative criteria and constraints for solutions that account for societal needs and wants.  
+S.P.34
+Design a solution to a complex real-world problem by breaking it down into smaller, more manageable problems that can be solved through engineering.  
+S.P.35
+
+Evaluate a solution to a complex real-world problem based on prioritized criteria and trade-offs that account for a range of constraints, including cost, safety, reliability, and aesthetics, as well as possible social, cultural, and environmental impacts. 
+S.P.36
+Use a computer simulation to model the impact of proposed solutions to a complex real-world problem with numerous criteria and constraints on interactions within and between systems relevant to the problem. 
+
+
+
+
+Environmental Science
+
+Environmental Science is an advanced, high school elective course which builds on foundational knowledge of the chemical, physical, biological, geological processes and focuses on the natural world.  Through an inquiry-based program of study, all students will demonstrate environmental literacy as they explore the economic, social, political, and ecological interdependence in urban and rural areas and on local and global scales.  As students fuse experiences across disciplines, they will acquire knowledge, values, and skills needed to protect and improve the environment.  There is a focus on several science connecting concepts, including cause and effect, systems and system models, energy and matter, and stability and change.   Science indicators and Engineering, Technology, and the Application of Science are integrated as students ask questions and define problems, develop and use models, plan and conduct investigations, analyze and interpret data, and construct explanations and design solutions.  Students will engage in active inquiries, investigations, and hands-on activities at least 50% of the instructional time as they develop and demonstrate conceptual understandings along with research and laboratory skills described in the standards and indicators for science.  Safety instruction is integrated into all activities, and students will implement safe procedures and practices when manipulating equipment, materials, organisms, and models.  The bulleted examples listed below each standard illustrate optional instructional subtopics to assist students in achieving mastery of the content.  These are only suggested illustrations, and content is not limited to these suggestions.  Standards followed by an asterisk (*) denote the integration of traditional science content with an engineering practice.
+
+Environmental Science/Life Science, Earth and Space Science, and Physical Science Domains
+S.ENV.1
+Compare and contrast the rate elements cycle through the ecosphere, describing natural and human influences on reaction rates:
+carbon
+nitrogen
+phosphorus
+oxygen
+sulfur.
+S.ENV.2
+Explain how the chemical components of biological and physical processes fit in the overall process of biogeochemical cycling such as photosynthesis, respiration, nitrogen fixation, or decomposition.
+S.ENV.3
+Analyze and evaluate the use and availability of renewable and nonrenewable energy resources:
+coal
+solar
+biomass
+biofuels
+hydropower
+natural gas
+wind
+geothermal
+nuclear.
+S.ENV.4
+Evaluate environmental and economic advantages and disadvantages of using nonrenewable and renewable energy.
+S.ENV.5
+Differentiate various means of generating electricity in terms of the transformation of energy among forms, the relationship of matter and energy, and efficiency/production of heat energy.
+S.ENV.6
+Explain how technology has influenced the sustainability of natural resources over time:
+forestry practices
+fossil fuels
+farming.
+S.ENV.7
+Relate logistic, exponential, and irruptive population growth to population dynamics including:
+natural selection
+predator/prey relationships
+reproductive strategies
+carrying capacity
+limiting factors.
+S.ENV.8
+Create food web diagrams to explain how adding and/or removing a species from an ecosystem may affect other organisms and the entire ecosystem.
+S.ENV.9
+Evaluate the leading causes of species decline and premature extinction:
+habitat destruction and degradation
+invasive species
+pollution
+human population growth
+over exploitation.
+S.ENV.10
+Analyze biological diversity as it relates to the stability of an ecosystem.
+S.ENV.11
+Relate habitat changes to plant and animal populations and climate influences:
+variations in habitat size
+fragmentation
+fluctuation in conditions of abiotic factors
+albedo
+surface temperature.
+S.ENV.12
+Compare and contrast local, state, and federal legislation and international agreements associated with protecting habitats, ecosystems, and species: 
+Superfund (CERCLA)
+Surface Mining Control and Reclamation Act
+Wilderness Act
+Endangered Species Act
+Marine Mammals Act
+Wild Flora and Fauna (CITES).
+S.ENV.13
+Illustrate how changes in wind patterns or ocean temperatures can affect weather in different parts of the world:
+El Nino
+La Nina
+Santa Ana winds.
+S.ENV.14
+Identify natural and anthropogenic sources of primary, secondary, and indoor air pollutants and the resulting environmental and health effects.
+S.ENV.15
+Explain the formation of acid rain and describe the resulting effect on soil, plants, water, and statues. 
+S.ENV.16
+Identify causes for the thinning of the ozone layer and evaluate the effectiveness of the Montreal Protocol for reducing ozone depletion.
+S.ENV.17
+Debate climate change as it relates to natural forces, greenhouse gases, human changes in atmospheric concentrations of greenhouse gases, and relevant laws and treaties.
+S.ENV.18
+Identify sources, uses, quality, conservation, and global distribution of water.
+S.ENV.19
+Create models to show surface and groundwater flows in a local drainage and explain how surface and ground water are related.
+S.ENV.20
+Contrast point source and non-point source water pollutants.
+S.ENV.21
+Use GIS data to analyze the parameters of a watershed and interpret physical, chemical, and biological data as a means of assessing environmental quality.
+S.ENV.22
+Examine legislation associated with the protection of water:
+Clean Water Act
+London Dumping Convention of 1972.
+S.ENV.23
+Describe the processes involved and compare different methods of wastewater treatment.
+S.ENV.24
+Utilize soil classification and analysis methods to make recommendations for soil conservation practices.  Analysis could include the following:
+texture
+moisture content
+supported vegetation
+color
+pH
+porosity
+nitrogen
+phosphorus
+potassium
+organic compounds.
+S.ENV.25
+Analyze best management practices of the agriculture business:
+fertilizers
+integrated pest management
+associated water pollution
+irrigation practices
+agricultural waste.
+S.ENV.26
+Research and describe how communities have restored or protected ecosystems:
+remediation
+mitigation
+rehabilitation
+reclamation
+preservation.
+S.ENV.27
+Evaluate solid waste management practices:
+recycling
+incineration
+sanitary landfills
+hazardous waste disposal.
+
+Engineering, Technology, and Applications of Science
+Topic 
+Engineering Design
+S.ENV.28
+Analyze a major global challenge to specify qualitative and quantitative criteria and constraints for solutions that account for societal needs and wants.  
+S.ENV.29
+Design a solution to a complex real-world problem by breaking it down into smaller, more manageable problems that can be solved through engineering.  
+S.ENV.30
+Evaluate a solution to a complex real-world problem based on prioritized criteria and trade-offs that account for a range of constraints, including cost, safety, reliability, and aesthetics, as well as possible social, cultural, and environmental impacts. 
+S.ENV.31
+Use a computer simulation to model the impact of proposed solutions to a complex real-world problem with numerous criteria and constraints on interactions within and between systems relevant to the problem. 
+
+
+Forensic Science
+
+Forensic Science is an advanced, high school elective course designed to provide students with hands-on experiences in various aspects of a criminal investigation.  Science content and Engineering, Technology, and the Application of Science are integrated as students ask questions and define problems, develop and use models, plan and conduct investigations, analyze and interpret data, construct explanations and design solutions as they consider crime scenes, evidence, and protocol.  As students demonstrate proficiency in evidence collection- maintenance of data integrity, formulation of a conclusion/summary, and succinct communication of findings- they prepare for forensic-related careers and other occupational opportunities in science, technology, engineering, and math.  Students will engage in active inquiries, investigations, and hands-on activities at least 50% of the instructional time as they develop and demonstrate conceptual understandings along with research and laboratory skills described in the standards and indicators for science.  Safety instruction is integrated into all activities, and students will implement safe procedures and practices when manipulating equipment, materials, organisms, and models.  The bulleted examples listed below each standard illustrate optional instructional subtopics to assist students in achieving mastery of the content.  These are only suggested illustrations, and content is not limited to these suggestions.  Standards followed by an asterisk (*) denote the integration of traditional science content with an engineering practice.
+
+Forensic Science/Life Science, Earth and Space Science, and Physical Science Domains
+S.FS.1
+Identify evidence which encompasses materials establishing a link between a crime and its victim or a crime and its perpetrator:
+impressions (tire, tool, teeth, shoes)
+prints (finger, lip, voice)
+hair and fiber analysis
+drugs and poisons
+ballistics 
+soil and pollen
+glass
+serology
+questioned documents.
+S.FS.2
+Distinguish between types of evidence:
+testimonial
+physical:  individual and class
+quantitative 
+qualitative.
+S.FS.3
+Analyze modes of transfer and the factors affecting persistence of evidence (Locard’s Exchange Principle):
+indirect
+direct
+S.FS.4
+Demonstrate steps of crime scene processing:
+note-taking
+photography
+sketching to scale
+evidence collection  
+chain of custody.
+S.FS.5
+Validate, classify, and analyze fingerprints as individual evidence:
+type
+pattern
+minutiae.
+S.FS.6
+Model techniques of collecting and developing prints on various objects and textures:
+physical (dusting powders) 
+chemical (ninhydrin, iodine, cyanoacrylate). 
+S.FS.7
+Examine the absorption and effects of toxins in the human body: 
+alcohol
+drugs
+poisons.
+S.FS.8
+Identify known and unknown substances utilizing the techniques of forensic toxicology:
+white powders
+blood alcohol
+over the counter/illicit drugs
+gas chromatography charts.
+S.FS.9
+Discuss and cite evidence of biological and chemical hazards and their impact on society and the environment:
+arson
+bombs
+bioterrorism
+environmental terrorism.
+S.FS.10
+Apply forensic entomology to assess a crime scene:
+Berlese funnel  
+life cycles.
+S.FS.11
+Analyze bones and teeth as forensic evidence:
+type 
+articulation 
+origin 
+sex 
+age
+race 
+stature
+disease/injury.
+S.FS.12
+Analyze blood samples as evidence:
+ABO system
+Rh factor
+DNA fingerprinting
+blood spatter.
+S.FS.13
+Investigate forensic applications of chromatography:
+inks and dyes
+cosmetics 
+calculation of Rf values.
+S.FS.14
+Explore earth science concepts as they relate to forensic science: 
+rock and mineral identification  
+classify soils’ common constituents in relation to crime scene location.
+S.FS.15
+Identify and describe agents and processes of degradation of evidence:
+weathering
+scavengers.
+S.FS.16
+Solve multi-step problems involving velocity, acceleration, net force, and projectile motion during analysis of crime scene:
+Ballistics
+vehicular collisions.
+S.FS.17
+Utilize biometric techniques for forensic science investigations:
+prints
+recognition scans
+anthropometry.
+S.FS.18
+Research and evaluate technological advances and careers related to the field of forensics.
+S.FS.19
+Investigate and analyze forensic evidence using handwriting analysis, forgery, and counterfeiting.
+
+Engineering, Technology, and Applications of Science
+Topic
+Engineering Design
+S.FS.20
+Analyze a major global challenge to specify qualitative and quantitative criteria and constraints for solutions that account for societal needs and wants.  
+S.FS.21
+Design a solution to a complex real-world problem by breaking it down into smaller, more manageable problems that can be solved through engineering.  
+S.FS.22
+Evaluate a solution to a complex real-world problem based on prioritized criteria and trade-offs that account for a range of constraints, including cost, safety, reliability, and aesthetics, as well as possible social, cultural, and environmental impacts. 
+S.FS.23
+Use a computer simulation to model the impact of proposed solutions to a complex real-world problem with numerous criteria and constraints on interactions within and between systems relevant to the problem. 
+
+
+
+Human Anatomy and Physiology
+
+Human Anatomy and Physiology is an advanced, high school elective course designed for those students wanting a deeper understanding of the structures and functions of the human body.  The body will be viewed as a whole using anatomical terminology necessary to describe location.  Instruction will be at both micro and macro levels reviewing cellular functions, biochemical processes, tissue interactions, organ systems, and the interaction of those systems as it relates to the human organism.  Systems covered include integumentary, skeletal, muscular, respiratory, circulatory, digestive, excretory, reproductive immunological, nervous, and endocrine.  Content standards are integrated with Engineering, Technology, and the Application of Science as students develop conceptual understandings and prepare for occupational opportunities in health and medical fields.  Students will engage in active inquiries, investigations, and hands-on activities at least 50% of the instructional time as they develop and demonstrate research and laboratory skills described in the standards and indicators for science.  Safety instruction is integrated into all activities, and students will implement safe procedures and practices when manipulating equipment, materials, organisms, and models.  Standards followed by an asterisk (*) denote the integration of traditional science content with an engineering practice.
+
+Human Anatomy and Physiology/Life Science, Physical Science Domains
+S.HAP.1
+Apply directional terminology to locate human body structures:
+superior-inferior 
+dorsal-ventral
+proximal-distal 
+medial-lateral
+superficial-deep.
+S.HAP.2
+Describe the organizational levels, interdependency, and the interaction of:
+cells
+tissues
+organs
+organ systems.
+S.HAP.3
+Categorize, by structure and function, the four main human tissue types:
+muscle
+epithelial
+connective
+nervous.
+S.HAP.4
+Relate the structure of the integumentary system to its function as a/an:
+sensory organ
+environmental barrier
+temperature regulator.
+S.HAP.5
+Relate how bone tissue is important to the development of the human skeleton.
+S.HAP.6
+Correlate the structure and function of the elements of the skeletal system:
+bone
+articulations
+insertions.
+S.HAP.7
+Model the mechanisms of muscular contraction on the cellular and molecular levels.
+S.HAP.8
+Integrate the skeletal, muscular, and nervous systems to the functioning of the organism.
+S.HAP.9
+Model the muscular system including:
+locations
+origins
+insertions
+muscle groups
+types of muscles.
+S.HAP.10
+Classify the various types of neurons emphasizing the relationship of structure and function.
+S.HAP.11
+Model the mechanism of a nerve impulse at the cellular and molecular levels.
+S.HAP.12
+Compare and contrast the parts and functions of the central and peripheral nervous system including the autonomic portions.
+S.HAP.13
+Apply the structure of the ear and eye to their function/dysfunction in relation to environmental perception.
+S.HAP.14
+Apply the action of specific enzymes to their roles in bodily functions.
+S.HAP.15
+Incorporate the role of endocrine glands and their hormones into the overall functions and dysfunctions of the body.
+S.HAP.16
+Analyze the role of components and processes of the digestive system in supplying essential nutrients.
+S.HAP.17
+Explain how structures of the respiratory system are essential to cellular respiration, gas exchange and communication.
+S.HAP.18
+Illustrate the structures of the circulatory and lymphatic systems and the function of blood to the role of: 
+transportation
+cellular support
+defense.
+S.HAP.19
+Compare the compatibility of blood types and assess the molecular basis for blood functions.
+S.HAP.20
+Integrate the functions of the excretory system to the maintenance of the other body systems.
+S.HAP.21
+Compare and contrast the structure and function of male and female reproductive systems.
+S.HAP.22
+Outline the events of reproduction for the formation of gametes through fertilizations and embryological development.
+S.HAP.23
+Assess the role of components of the immune system in defending the body.
+S.HAP.24
+Research disease causative factors, symptoms, prevention, and treatment.
+ 
+Engineering, Technology, and Applications of Science
+Topic
+Engineering Design
+S.HAP.25
+Analyze a major global challenge to specify qualitative and quantitative criteria and constraints for solutions that account for societal needs and wants.  
+S.HAP.26
+Design a solution to a complex real-world problem by breaking it down into smaller, more manageable problems that can be solved through engineering.  
+S.HAP.27
+Evaluate a solution to a complex real-world problem based on prioritized criteria and trade-offs that account for a range of constraints, including cost, safety, reliability, and aesthetics, as well as possible social, cultural, and environmental impacts. 
+S.HAP.28
+Use a computer simulation to model the impact of proposed solutions to a complex real-world problem with numerous criteria and constraints on interactions within and between systems relevant to the problem. 
+
