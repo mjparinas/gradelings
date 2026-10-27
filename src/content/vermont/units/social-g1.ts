@@ -25,13 +25,13 @@ const THEN_NOW: Q[] = [
   ["A photo of your town from long ago helps you compare…", "the past and today", ["two planets", "two oceans", "two animals"], "Look for what changed."],
   ["Long ago, people kept food cold with blocks of ice cut from…", "frozen lakes and ponds", ["the freezer", "the store", "the sky"], "Ice was stored in sawdust to last into summer."],
   ["How is a town today different from long ago?", "it has paved roads and electric lights", ["it has no houses", "it has no people", "it has no sun"], "Inventions changed how we live."],
-  ["Many Vermont farms keep cows because grass grows well on the hills. Their milk is made into…", "cheese and butter", ["paper", "bricks", "glass"], "The land helps decide what farmers do."],
+  ["Vermont dairy cows eat hill grass. Their milk is made into…", "cheese and butter", ["paper", "bricks", "glass"], "The land helps decide what farmers do."],
   ["Long ago, villages had a general store where families could buy…", "flour, tools and cloth in one place", ["video games", "cell phones", "airplane tickets"], "One store sold a little of everything."],
   ["Before trains, goods went between towns by…", "wagon or boat", ["truck", "airplane", "drone"], "Rivers and roads were the highways.", true],
   ["Why do some families keep old photos and stories?", "to remember their history", ["to throw them away", "to sell them", "to forget"], "Family stories teach us about the past.", true],
   ["Long ago, kids learned letters from a paddle with a page called a…", "hornbook", ["tablet computer", "comic book", "map"], "Paper was precious, so one page was shared.", true],
   ["A child's chores on a Vermont farm long ago might be…", "feeding the chickens and carrying wood", ["charging a phone", "riding the school bus", "ordering food online"], "Everyone helped on the farm.", true],
-  ["Why did many Vermont families long ago move from farms to towns with mills and quarries?", "to find jobs", ["to see the ocean", "to go to the moon", "to live in caves"], "Mills and quarries needed many workers.", true],
+  ["Why did many families long ago move from farms to mill and quarry towns?", "to find jobs", ["to see the ocean", "to go to the moon", "to live in caves"], "Mills and quarries needed many workers.", true],
   ["Learning about how children lived long ago helps us…", "see how life has changed", ["forget the past", "stay the same", "stop learning"], "History is about people like us.", true],
 ];
 
