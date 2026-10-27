@@ -58,9 +58,10 @@ async function practice(grade: GradeId, framework: FrameworkId): Promise<AppEven
 }
 
 let events: AppEvent[] = [];
+// Loading a grade and playing a session can pass 10 s on a busy CI machine, so the hook gets the tests' own timeout.
 beforeAll(async () => {
   events = await practice("4", "us-wa");
-});
+}, 20000);
 
 function setChild(p: Profile, evs = events) {
   useStore.setState({ profiles: [p], activeId: p.id, events: evs, settings: { a: defaultChildSettings("a", false, p.grade) }, family, toasts: [] });
