@@ -34,14 +34,31 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v7
+        with:
+          # docs/research/*/source holds about 650 MB of official PDFs and pages that no job reads
+          # (the tests read each state's outcomes.json, which stays). Leaving them out, and fetching
+          # file contents only for what is checked out, makes every job's checkout much quicker.
+          sparse-checkout: |
+            /*
+            !/docs/research/*/source/
+          sparse-checkout-cone-mode: false
+          filter: blob:none
       - uses: ./.github/actions/setup
       - run: npx next typegen
+      # tsc and ESLint keep their own incremental state in .cache/, so a run only re-checks what changed.
+      # The key is new each run (the state is small), and the newest earlier one is restored.
+      - uses: actions/cache@v6
+        with:
+          path: .cache
+          key: static-${{ runner.os }}-${{ hashFiles('package-lock.json', 'tsconfig.json', 'eslint.config.mjs') }}-${{ github.sha }}
+          restore-keys: |
+            static-${{ runner.os }}-${{ hashFiles('package-lock.json', 'tsconfig.json', 'eslint.config.mjs') }}-
       - name: Types
-        run: npx tsc --noEmit
+        run: npx tsc --noEmit --incremental --tsBuildInfoFile .cache/tsc.tsbuildinfo
       # Each check runs even when the one before it failed, so one run reports them all.
       - name: Lint
         if: ${{ !cancelled() }}
-        run: npm run lint
+        run: npx eslint --cache --cache-strategy content --cache-location .cache/eslint/
       # Reads the lockfile only. Production dependencies are what ship to families, so they gate the build.
       - name: Dependency audit
         if: ${{ !cancelled() }}
@@ -65,6 +82,15 @@ jobs:
         shard: ["1/3", "2/3", "3/3"]
     steps:
       - uses: actions/checkout@v7
+        with:
+          # docs/research/*/source holds about 650 MB of official PDFs and pages that no job reads
+          # (the tests read each state's outcomes.json, which stays). Leaving them out, and fetching
+          # file contents only for what is checked out, makes every job's checkout much quicker.
+          sparse-checkout: |
+            /*
+            !/docs/research/*/source/
+          sparse-checkout-cone-mode: false
+          filter: blob:none
       - uses: ./.github/actions/setup
       - name: Run
         run: >-
@@ -90,6 +116,15 @@ jobs:
       pull-requests: write
     steps:
       - uses: actions/checkout@v7
+        with:
+          # docs/research/*/source holds about 650 MB of official PDFs and pages that no job reads
+          # (the tests read each state's outcomes.json, which stays). Leaving them out, and fetching
+          # file contents only for what is checked out, makes every job's checkout much quicker.
+          sparse-checkout: |
+            /*
+            !/docs/research/*/source/
+          sparse-checkout-cone-mode: false
+          filter: blob:none
       - uses: ./.github/actions/setup
       - uses: actions/download-artifact@v8
         with:
@@ -133,6 +168,15 @@ jobs:
       SKIP_BUILD_TYPECHECK: "1"
     steps:
       - uses: actions/checkout@v7
+        with:
+          # docs/research/*/source holds about 650 MB of official PDFs and pages that no job reads
+          # (the tests read each state's outcomes.json, which stays). Leaving them out, and fetching
+          # file contents only for what is checked out, makes every job's checkout much quicker.
+          sparse-checkout: |
+            /*
+            !/docs/research/*/source/
+          sparse-checkout-cone-mode: false
+          filter: blob:none
       - uses: ./.github/actions/setup
       # Next's incremental build cache, so unchanged files aren't compiled again. It is about 2 GB,
       # so only main saves it and pull requests reuse main's: a copy saved on every pull request
@@ -151,6 +195,8 @@ jobs:
           path: public/piper
           key: piper-${{ hashFiles('src/lib/piper-manifest.json', 'package-lock.json') }}
       - run: npm run build
+      # The Vercel deploy fails above a fixed number of prerendered pages; say so here, before merging.
+      - run: node scripts/count-prerenders.mjs
       - if: steps.voices.outputs.cache-hit != 'true'
         uses: actions/cache/save@v6
         continue-on-error: true
@@ -198,6 +244,15 @@ jobs:
           - { name: "devices 2/2", shard: "2/2" }
     steps:
       - uses: actions/checkout@v7
+        with:
+          # docs/research/*/source holds about 650 MB of official PDFs and pages that no job reads
+          # (the tests read each state's outcomes.json, which stays). Leaving them out, and fetching
+          # file contents only for what is checked out, makes every job's checkout much quicker.
+          sparse-checkout: |
+            /*
+            !/docs/research/*/source/
+          sparse-checkout-cone-mode: false
+          filter: blob:none
       - uses: ./.github/actions/setup
         with:
           flavor: playwright
@@ -250,6 +305,15 @@ jobs:
               - "node scripts/e2e-admin.mjs http://localhost:3000 e2e-shots/admin"
     steps:
       - uses: actions/checkout@v7
+        with:
+          # docs/research/*/source holds about 650 MB of official PDFs and pages that no job reads
+          # (the tests read each state's outcomes.json, which stays). Leaving them out, and fetching
+          # file contents only for what is checked out, makes every job's checkout much quicker.
+          sparse-checkout: |
+            /*
+            !/docs/research/*/source/
+          sparse-checkout-cone-mode: false
+          filter: blob:none
       - uses: ./.github/actions/setup
       - uses: actions/download-artifact@v8
         with:
