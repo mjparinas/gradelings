@@ -5,7 +5,7 @@ import { APP_NAME } from "@/lib/brand";
 import { buildConferenceSheet } from "@/lib/conference";
 import { buildReport } from "@/lib/reports";
 import { useLocale, useSay } from "@/lib/say";
-import { eventsFor, useChildSettings, useDerived, useStore } from "@/lib/store";
+import { eventsFor, useChildSettings, useDerived, useStore, useSubjectGrades } from "@/lib/store";
 import { Panel, useChild } from "./common";
 
 const pct = (v: number) => `${Math.round(v * 100)}%`;
@@ -20,11 +20,12 @@ export function ConferenceSheet({ childId }: { childId?: string }) {
   const [now] = useState(() => Date.now());
   const say = useSay();
   const locale = useLocale();
+  const subjectGrades = useSubjectGrades(child?.id ?? null);
   const sheet = useMemo(() => {
     if (!child) return null;
-    const report = buildReport(eventsFor(events, child), d, child.grade, child.framework, 90, now);
+    const report = buildReport(eventsFor(events, child), d, child.grade, child.framework, 90, now, subjectGrades);
     return buildConferenceSheet({ name: child.name, grade: child.grade, framework: child.framework, report, derived: d, dailyGoalMinutes: settings?.dailyGoalMinutes ?? 15 });
-  }, [child, events, d, settings?.dailyGoalMinutes, now]);
+  }, [child, events, d, settings?.dailyGoalMinutes, now, subjectGrades]);
   if (!child || !sheet) return null;
 
   return (

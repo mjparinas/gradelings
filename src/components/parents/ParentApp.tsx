@@ -9,6 +9,8 @@ import { hasPaidPlan, isPremium, trialDaysLeft } from "@/lib/plan";
 import { go, parse, ShownRoute, useRoute, useShownHash } from "@/lib/router";
 import { useLocale } from "@/lib/say";
 import { useProfiles, useReady, useStore } from "@/lib/store";
+import { useFlag } from "@/lib/remoteFlags";
+import { practiceTargets } from "@/lib/subjectGrades";
 import { VoicePreload } from "@/components/VoicePreload";
 import { startBackgroundSync, syncNow } from "@/lib/sync";
 import { isStoreApp } from "@/lib/twa";
@@ -222,6 +224,8 @@ export function ParentApp() {
   const { path, query } = useRoute();
   const { shown, pending } = useShownHash();
   const profiles = useProfiles();
+  const childSettings = useStore((s) => s.settings);
+  const levels = useFlag("subject-levels");
   const hasPin = useStore((s) => Boolean(s.pin));
   const signedIn = useStore((s) => Boolean(s.family.account));
   const isStudent = useStore((s) => Boolean(s.family.account?.student));
@@ -255,7 +259,7 @@ export function ParentApp() {
   const tab = NAV_PARENT[path[0] ?? ""] ?? path[0] ?? "";
   // Reports need each child's lessons; settings and billing still work if a download fails.
   return (
-    <ContentGate targets={profiles.map((p) => ({ grade: p.grade, framework: p.framework }))} optional>
+    <ContentGate targets={profiles.flatMap((p) => (levels ? practiceTargets(p, childSettings[p.id]) : [{ grade: p.grade, framework: p.framework }]))} optional>
       <VoicePreload />
       <Shell active={tab} pending={pending}>
         <ShownRoute value={shown}>

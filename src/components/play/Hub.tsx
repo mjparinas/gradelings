@@ -3,7 +3,7 @@
 import { onColour } from "@/lib/contrast";
 import Link from "next/link";
 import { useState, type CSSProperties } from "react";
-import { allUnitRefs, getUnitRef } from "@/content";
+import { getUnitRef, practiceUnitRefs } from "@/content";
 import { getSubjectMeta } from "@/content/subjects";
 import { refresherUnit, weakest } from "@/lib/adaptive";
 import { factSetsFor, factSummary } from "@/lib/facts";
@@ -20,7 +20,7 @@ import { storiesFor } from "@/lib/stories";
 import { signOutStudent } from "@/lib/account";
 import { go } from "@/lib/router";
 import { useChildSay } from "@/lib/say";
-import { eventsFor, useActiveProfile, useChildSettings, useDerived, useStore } from "@/lib/store";
+import { eventsFor, useActiveProfile, useChildSettings, useDerived, useStore, useSubjectGrades } from "@/lib/store";
 import { useNow } from "@/lib/useNow";
 import { useBand } from "../band";
 import { SayButton, useBuddySays } from "./BuddySays";
@@ -82,7 +82,8 @@ export function Hub() {
   const goal = effectiveGoal(settings, d, today).minutes;
   const subjects = settings?.enabledSubjects ?? ["math", "language", "science", "social"];
   const games = gameTime(settings, d, now);
-  const weak = weakest({ grade: profile.grade, framework: profile.framework, derived: d, subjects }, 10).length;
+  const subjectGrades = useSubjectGrades();
+  const weak = weakest({ grade: profile.grade, framework: profile.framework, subjectGrades, derived: d, subjects }, 10).length;
   const dailyDone = d.dailyDone.includes(today);
   const stories = storiesFor(settings, isOn("story-library"));
   const quests = dailyQuests(profile.id, today, band, { stories });
@@ -91,13 +92,13 @@ export function Hub() {
   const weekly = weeklyQuests(profile.id, monday, band, { stories });
   const weekStats = weekDays(monday).flatMap((k) => (d.days[k] ? [d.days[k]] : []));
   const weekClaimed = d.questsClaimed[monday] ?? [];
-  const suggested = suggestions(profile.grade, profile.framework, d, subjects, allowed, 1)[0];
+  const suggested = suggestions(profile.grade, profile.framework, d, subjects, allowed, 1, subjectGrades)[0];
   const little = band === "little";
-  const unitKeys = allUnitRefs(profile.grade, profile.framework).filter((r) => subjects.includes(r.course.subject) && allowed(r)).map((r) => r.key);
+  const unitKeys = practiceUnitRefs(profile.grade, profile.framework, subjectGrades).filter((r) => subjects.includes(r.course.subject) && allowed(r)).map((r) => r.key);
   const next = nextUp(d, unitKeys);
   const nextRef = next ? getUnitRef(next.key, profile.framework) : undefined;
   const nextInfo = next ? levelInfo(profile.framework, profile.grade, next.level) : undefined;
-  const refresher = refresherUnit({ grade: profile.grade, framework: profile.framework, derived: d, subjects, allowed, now });
+  const refresher = refresherUnit({ grade: profile.grade, framework: profile.framework, subjectGrades, derived: d, subjects, allowed, now });
   const classwork = useClasswork();
   const allEvents = useStore((s) => s.events);
   // Little kids see one quest at a time, the first not yet done, and no weekly goals.

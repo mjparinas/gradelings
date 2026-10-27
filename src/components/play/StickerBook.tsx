@@ -7,12 +7,12 @@ import { useIsOn } from "@/lib/remoteFlags";
 import { useRoute } from "@/lib/router";
 import { seasonPages } from "@/lib/seasons";
 import { useNow } from "@/lib/useNow";
-import { allUnitRefs } from "@/content";
+import { practiceUnitRefs } from "@/content";
 import { getSubjectMeta } from "@/content/subjects";
 import type { SubjectId } from "@/content/types";
 import { onColour } from "@/lib/contrast";
 import { countEarned, momentStickers, unitStickers, type Sticker } from "@/lib/stickers";
-import { useActiveProfile, useChildSettings, useDerived } from "@/lib/store";
+import { useActiveProfile, useChildSettings, useDerived, useSubjectGrades } from "@/lib/store";
 import { useBand } from "../band";
 import { SayButton } from "./BuddySays";
 import { Critter, SpeechBubble } from "../Critter";
@@ -33,7 +33,7 @@ export function StickerBook() {
   const [page, setPage] = useState<PageId>(useRoute().query.get("page") ?? "moments");
 
   const enabled = settings?.enabledSubjects ?? [];
-  const refs = allUnitRefs(profile.grade, profile.framework).filter((r) => enabled.includes(r.course.subject));
+  const refs = practiceUnitRefs(profile.grade, profile.framework, useSubjectGrades()).filter((r) => enabled.includes(r.course.subject));
   const bySubject = unitStickers(refs, d);
   const subjects = Object.keys(bySubject) as SubjectId[];
   const moments = momentStickers(d);

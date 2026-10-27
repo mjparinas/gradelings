@@ -24,6 +24,7 @@ vi.mock("@/lib/store", () => {
     useDerived: () => derived,
     useActiveProfile: () => ({ id: "p1", name: "Ava", grade: "2", framework: "bc", companion: "ollie", confetti: "classic" }),
     useChildSettings: () => h.settings,
+    useSubjectGrades: () => ({}),
   };
 });
 vi.mock("./SaveProgress", () => ({ SaveProgress: () => null }));

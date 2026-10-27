@@ -2,8 +2,9 @@
 
 import { useMemo } from "react";
 import { create } from "zustand";
-import { DEFAULT_FRAMEWORK } from "@/content/frameworks";
+import { DEFAULT_FRAMEWORK, getFramework } from "@/content/frameworks";
 import { ageBandFor } from "@/content/subjects";
+import type { SubjectGrades } from "@/content";
 import type { FrameworkId, GradeId } from "@/content/types";
 import type { Classwork } from "./classroom";
 import { derive, type Derived } from "./derive";
@@ -26,7 +27,7 @@ import { effectiveGoal, STRETCH_QUEST, STRETCH_REWARD } from "./goal";
 import { gamesOpenedBetween } from "./arcade";
 import { growthStage } from "./buddy";
 import { dailyQuests, weekDays, weeklyQuests, weekStart } from "./quests";
-import { hasTestCoins, isOn } from "./remoteFlags";
+import { hasTestCoins, isOn, useFlag } from "./remoteFlags";
 import { storiesFor } from "./stories";
 import { SEASON_REWARD, seasonOn, seasonQuestId, seasonStickers } from "./seasons";
 import { getRoomItem, isRoomOwned } from "./room";
@@ -36,6 +37,7 @@ import { forgetMyInvite } from "./referral";
 import { getTrophy, newlyEarned, TIER_STYLE } from "./trophies";
 import { schoolYearOf } from "./schoolYear";
 import { afterPaint } from "./afterPaint";
+import { shiftSubjectGrades, subjectGradesFor } from "./subjectGrades";
 
 export interface Toast {
   id: string;
@@ -225,10 +227,16 @@ export const useStore = create<State>()((set, get) => ({
     const now = Date.now();
     // A grade a parent changes is the grade for this school year, so the back-to-school prompt doesn't ask again.
     const year = (p: Profile) => (patch.grade && patch.grade !== p.grade && patch.gradeYear === undefined ? { gradeYear: schoolYearOf(now) } : {});
+    const before = get().profiles.find((p) => p.id === id);
     const profiles = get().profiles.map((p) => (p.id === id ? { ...p, ...patch, ...year(p), updatedAt: now } : p));
     set({ profiles });
     save("profiles", profiles);
     get().setSync({ dirtyProfiles: [...new Set([...get().sync.dirtyProfiles, id])] });
+    // A subject set a grade ahead or behind stays that far ahead or behind when the child changes grade.
+    if (before && patch.grade && patch.grade !== before.grade) {
+      const shifted = shiftSubjectGrades(get().settings[id], before.grade, patch.grade, getFramework(patch.framework ?? before.framework).grades);
+      if (shifted) get().updateSettings(id, shifted);
+    }
   },
 
   removeProfile: (id) => {
@@ -522,6 +530,16 @@ export function useChildSettings(profileId?: string | null): ChildSettings | und
   const activeId = useStore((s) => s.activeId);
   const id = profileId ?? activeId;
   return useStore((s) => (id ? s.settings[id] : undefined));
+}
+
+/** The grades a child practises some subjects at instead of their own (`subjectGrades.ts`); empty while flag `subject-levels` is off. */
+export function useSubjectGrades(profileId?: string | null): SubjectGrades {
+  const on = useFlag("subject-levels");
+  const activeId = useStore((s) => s.activeId);
+  const id = profileId === undefined ? activeId : profileId;
+  const profile = useStore((s) => s.profiles.find((p) => p.id === id));
+  const settings = useStore((s) => (id ? s.settings[id] : undefined));
+  return useMemo(() => (on && profile ? subjectGradesFor(profile, settings) : {}), [on, profile, settings]);
 }
 
 export function useTrophyName(id: string): string {

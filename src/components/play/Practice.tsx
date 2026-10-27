@@ -2,7 +2,7 @@
 
 import { onColour } from "@/lib/contrast";
 import { useEffect, useRef, useState, type CSSProperties } from "react";
-import { coursesForGrade, getUnitRef, unitKey } from "@/content";
+import { coursesForGrade, getUnitRef, practiceCourses, unitKey } from "@/content";
 import { getSubjectMeta } from "@/content/subjects";
 import type { GradeId, SubjectId } from "@/content/types";
 import { dayKey } from "@/lib/model";
@@ -13,7 +13,7 @@ import { useIsOn } from "@/lib/remoteFlags";
 import { storiesFor } from "@/lib/stories";
 import { go, href, useRoute } from "@/lib/router";
 import { useChildSay } from "@/lib/say";
-import { useActiveProfile, useChildSettings, useDerived, useStore } from "@/lib/store";
+import { useActiveProfile, useChildSettings, useDerived, useStore, useSubjectGrades } from "@/lib/store";
 import { useNow } from "@/lib/useNow";
 import { useBand } from "../band";
 import { Critter, SpeechBubble } from "../Critter";
@@ -51,7 +51,8 @@ export function SubjectPicker() {
   const settings = useChildSettings();
   const d = useDerived();
   const band = useBand();
-  const courses = coursesForGrade(profile.grade, profile.framework).filter((c) => (settings?.enabledSubjects ?? []).includes(c.subject));
+  // Each subject at the grade the child practises it at (`subjectGrades.ts`).
+  const courses = practiceCourses(profile.grade, profile.framework, useSubjectGrades()).filter((c) => (settings?.enabledSubjects ?? []).includes(c.subject));
   return (
     <Page className="gap-6">
       <header className="flex items-center gap-3">
@@ -215,7 +216,8 @@ export function UnitList({ subject, grade }: { subject: SubjectId; grade?: Grade
   const d = useDerived();
   const band = useBand();
   const allowed = useAllowed();
-  const course = coursesForGrade(grade ?? profile.grade, profile.framework).find((c) => c.subject === subject);
+  const subjectGrades = useSubjectGrades();
+  const course = (grade ? coursesForGrade(grade, profile.framework) : practiceCourses(profile.grade, profile.framework, subjectGrades)).find((c) => c.subject === subject);
   const meta = getSubjectMeta(subject);
   const assigned = new Set(useClasswork().map((a) => a.ref.key));
   const [selected, setSelected] = useState<string | null>(null);
