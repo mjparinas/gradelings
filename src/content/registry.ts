@@ -27,6 +27,7 @@ import { manifest as missouri } from "./missouri/manifest";
 import { manifest as nebraska } from "./nebraska/manifest";
 import { manifest as nevada } from "./nevada/manifest";
 import { manifest as newBrunswick } from "./new-brunswick/manifest";
+import { manifest as newHampshire } from "./new-hampshire/manifest";
 import { manifest as newJersey } from "./new-jersey/manifest";
 import { manifest as newMexico } from "./new-mexico/manifest";
 import { manifest as newYork } from "./new-york/manifest";
@@ -90,6 +91,7 @@ const MANIFESTS = [
   nebraska,
   nevada,
   newBrunswick,
+  newHampshire,
   newJersey,
   newMexico,
   newYork,
