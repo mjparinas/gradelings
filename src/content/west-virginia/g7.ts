@@ -9,7 +9,6 @@ import { SOCIAL_COPIES as georgiaCopiesG7SOCIALCOPIES } from "../georgia/units/c
 import { SOCIAL_6 as georgiaSocialG67SOCIAL6, SOCIAL_7 as georgiaSocialG67SOCIAL7 } from "../georgia/units/social-g67";
 import { course as gradesG6ScienceCourse } from "../grades/g6/science";
 import { wordRoots as manitobaG7LanguageWordRoots } from "../manitoba/units/g7-language";
-import { SOCIAL_7 as massachusettsSocialG7SOCIAL7 } from "../massachusetts/units/social-g7";
 import { senses as newBrunswickG6ScienceSenses } from "../new-brunswick/units/g6-science";
 import { motionForces as newBrunswickG8ScienceMotionForces } from "../new-brunswick/units/g8-science";
 import { units as ontarioG7Language } from "../ontario/g7-language";
@@ -33,7 +32,7 @@ const POOL: Pool = {
   math: [...ontarioG7Math, ...albertaG7Math, ...washingtonMathUpperG7_UNITS, ...californiaMath7],
   language: [...ontarioG7Language, manitobaG7LanguageWordRoots, ...washingtonLanguageRmlUpperRML_7, washingtonLanguageSpellingSPELLING_7, ...californiaLanguage7],
   science: [...gradesG6ScienceCourse.units, newBrunswickG6ScienceSenses, ...washingtonScience68SCIENCE6, ...ontarioG8ScienceUnits, ...californiaScienceG6OWNSCIENCE, ...californiaScienceG7OWNSCIENCE, newBrunswickG8ScienceMotionForces, ...washingtonScience68SCIENCE8],
-  social: [...washingtonSocial59G6G6, ...georgiaSocialG67SOCIAL6, ...georgiaSocialG67SOCIAL7, ...massachusettsSocialG7SOCIAL7, ...georgiaCopiesG7SOCIALCOPIES, ...texasSocialG6SOCIAL6],
+  social: [...washingtonSocial59G6G6, ...georgiaSocialG67SOCIAL6, ...georgiaSocialG67SOCIAL7, ...georgiaCopiesG7SOCIALCOPIES, ...texasSocialG6SOCIAL6],
 };
 
 export const courses: Course[] = withLessons(westVirginiaGrade("7", POOL, OWN), LESSONS);

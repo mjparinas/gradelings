@@ -107,4 +107,10 @@ export const LESSONS: GradeLessons = {
     ],
     "300 km",
   ),
+  "social/wv-g7-asia-geography": lesson(
+    ["The Himalayas, with Mount Everest, separate South Asia from China.", "Great rivers, like the Ganges, the Indus, the Yangtze and the Huang He, gave water and rich soil, so many people live near them.", "Monsoon winds bring heavy summer rain to South Asia."],
+    "Why do so many people in China live in the east?",
+    ["Look at where the plains and rivers are.", "The west has deserts and high mountains."],
+    "the east has rivers and good farmland",
+  ),
 };

@@ -3,6 +3,7 @@ import { LANGUAGE_7 as CALIFORNIA_LANGUAGE_7 } from "../../california/units/lang
 import { SCIENCE_7 as WASHINGTON_SCIENCE_7 } from "../../washington/units/science-68";
 import { G6 as WASHINGTON_SOCIAL_6 } from "../../washington/units/social-59-g6";
 import { units as ALBERTA_SOCIAL_8 } from "../../alberta/g8-social";
+import { SOCIAL_7 as MASSACHUSETTS_SOCIAL_7 } from "../../massachusetts/units/social-g7";
 import { from, localCopy } from "./kit";
 
 // West Virginia copies of Grade 7 units that fit West Virginia except for a few questions naming another state's places.
@@ -130,5 +131,9 @@ export const SOCIAL_COPIES: Unit[] = [
   localCopy(from(ALBERTA_SOCIAL_8, "japan-land-values-ab"), "wv-g7-japan", [
     "SS.7.19",
     "the human and physical geography of East Asia: how Japan's land and climate vary, and how its cultural traditions shape life there",
+  ]),
+  localCopy(from(MASSACHUSETTS_SOCIAL_7, "ma-g7-asia-geography"), "wv-g7-asia-geography", [
+    "SS.7.18; SS.7.19",
+    "the mountains, rivers and countries of South, East and Southeast Asia",
   ]),
 ];

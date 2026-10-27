@@ -87,7 +87,6 @@ export const PLAN_SOCIAL: Record<string, Entry[]> = {
     ["ga-g6-latin-america", "adopt", "SS.7.13", "the land, people and countries of Central and South America and the Caribbean"],
     ["ga-g6-europe", "adopt", "SS.7.14", "the physical features of Europe and how they shaped its countries and cultures"],
     ["ga-g7-africa", "adopt", "SS.7.17", "the physical features, resources and people of Africa"],
-    ["ma-g7-asia-geography", "adopt", "SS.7.18; SS.7.19", "the mountains, rivers and countries of South, East and Southeast Asia"],
     ["ga-g6-australia", "adopt", "SS.7.20", "the land, people and trade of Australia"],
     ["ga-g7-economies", "adopt", "SS.7.5; SS.7.9", "supply, demand, trade and scarcity, and how natural resources shape an economy"],
     ["tx-g6-governments", "adopt", "SS.7.1", "democracy, monarchy, dictatorship and other forms of government"],
