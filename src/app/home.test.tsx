@@ -44,8 +44,15 @@ describe("home page", () => {
     for (const f of FRAMEWORKS) {
       expect(within(coverage).getByRole("link", { name: f.region }).getAttribute("href"), f.region).toMatch(new RegExp(`^/curriculum/${f.slug}/?$`));
     }
-    const usStates = FRAMEWORKS.filter((f) => f.country === "US").length;
-    expect(coverage.textContent).toContain(`Canadian provinces and territories and ${usStates} US states`);
+    const us = FRAMEWORKS.filter((f) => f.country === "US");
+    const usStates = us.filter((f) => f.regionKind !== "district").length;
+    // Washington, DC is a district, so it is named after the states rather than counted as one.
+    const districts = us.filter((f) => f.regionKind === "district").map((f) => f.region);
+    expect(coverage.textContent).toContain(
+      districts.length
+        ? `Canadian provinces and territories, ${usStates} US states and ${districts.join(" and ")}`
+        : `Canadian provinces and territories and ${usStates} US states`,
+    );
     const faq = screen.getByRole("heading", { name: "Questions from parents" }).closest("section")!;
     expect(faq.textContent).toContain(PRICES_BY_CURRENCY.USD.month.label);
     expect(faq.textContent).toContain("Washington");

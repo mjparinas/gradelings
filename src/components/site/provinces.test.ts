@@ -96,6 +96,9 @@ describe("provinces and states in marketing copy", () => {
     expect(regionSummary([...ca, wa, or])).toBe(`${ca.length} Canadian provinces and territories, plus Washington and Oregon`);
     expect(regionSummary([wa, or])).toBe("Washington and Oregon");
     expect(regionSummary([...ca, wa, or, wa, or, wa])).toBe(`${ca.length} Canadian provinces and territories and 5 US states`);
+    // Washington, DC is a district, so it is named after the states, not counted as one.
+    const dc = getFramework("us-dc");
+    expect(regionSummary([...ca, wa, or, wa, or, dc])).toBe(`${ca.length} Canadian provinces and territories, 4 US states and Washington, DC`);
     expect(regionWord(ca)).toBe("province");
     expect(regionWord([...ca, wa])).toBe("province or state");
     expect(offersUsd(ca)).toBe(false);
@@ -103,9 +106,16 @@ describe("provinces and states in marketing copy", () => {
   });
 
   it("offers every US state on the public site, grouped after the provinces", () => {
-    const states = FRAMEWORKS.filter((f) => f.country === "US");
+    const us = FRAMEWORKS.filter((f) => f.country === "US");
+    const states = us.filter((f) => f.regionKind !== "district");
+    const districts = us.filter((f) => f.regionKind === "district").map((f) => f.region);
     expect(states.length).toBeGreaterThan(0);
     expect(byCountry(FRAMEWORKS).map((g) => g.country)).toEqual(["CA", "US"]);
-    expect(regionSummary(FRAMEWORKS)).toBe(`${FRAMEWORKS.length - states.length} Canadian provinces and territories and ${states.length} US states`);
+    const named = [`${states.length} US states`, ...districts];
+    expect(regionSummary(FRAMEWORKS)).toBe(
+      districts.length
+        ? `${FRAMEWORKS.length - us.length} Canadian provinces and territories, ${named.slice(0, -1).join(", ")} and ${named.at(-1)}`
+        : `${FRAMEWORKS.length - us.length} Canadian provinces and territories and ${named[0]}`,
+    );
   });
 });

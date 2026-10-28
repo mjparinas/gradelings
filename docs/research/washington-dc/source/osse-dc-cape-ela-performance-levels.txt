@@ -1,0 +1,67 @@
+    English Language Arts (ELA) DC CAPE Performance Level Ranges by
+                               Grade Level
+
+Grade 3
+      Performance Level         Minimum Score         Maximum Score
+1                         650                   699
+2                         700                   724
+3                         725                   749
+4                         750                   809
+5                         810                   850
+
+Grade 4
+      Performance Level         Minimum Score         Maximum Score
+1                         650                   699
+2                         700                   724
+3                         725                   749
+4                         750                   789
+5                         790                   850
+
+Grade 5
+      Performance Level         Minimum Score         Maximum Score
+1                         650                   699
+2                         700                   724
+3                         725                   749
+4                         750                   798
+5                         799                   850
+
+Grade 6
+      Performance Level         Minimum Score         Maximum Score
+1                         650                   699
+2                         700                   724
+3                         725                   749
+4                         750                   789
+5                         790                   850
+Grade 7
+        Performance Level         Minimum Score         Maximum Score
+1                           650                   699
+2                           700                   724
+3                           725                   749
+4                           750                   784
+5                           785                   850
+
+
+Grade 8
+        Performance Level         Minimum Score         Maximum Score
+1                           650                   699
+2                           700                   724
+3                           725                   749
+4                           750                   793
+5                           794                   850
+
+ELA I
+        Performance Level         Minimum Score         Maximum Score
+1                           650                   699
+2                           700                   724
+3                           725                   749
+4                           750                   790
+5                           791                   850
+
+ELA II
+        Performance Level         Minimum Score         Maximum Score
+1                           650                   699
+2                           700                   724
+3                           725                   749
+4                           750                   793
+5                           794                   850
+

@@ -47,8 +47,8 @@ export interface Framework {
   name: string;
   shortName: string;
   country: CountryCode;
-  /** What the region is called in sentences, when not the country's usual word (the territories). */
-  regionKind?: "territory";
+  /** What the region is called in sentences, when not the country's usual word (the territories, and Washington, DC, a federal district). */
+  regionKind?: "territory" | "district";
   curriculumName: string;
   /** The place name used in sentences, e.g. "Ontario". */
   region: string;

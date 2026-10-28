@@ -1,0 +1,73 @@
+    Mathematics DC CAPE Performance Level Ranges by Grade Level
+
+Grade 3
+     Performance Level         Minimum Score         Maximum Score
+1                        650                   699
+2                        700                   724
+3                        725                   749
+4                        750                   789
+5                        790                   850
+
+Grade 4
+     Performance Level         Minimum Score         Maximum Score
+1                        650                   699
+2                        700                   724
+3                        725                   749
+4                        750                   795
+5                        796                   850
+
+Grade 5
+     Performance Level         Minimum Score         Maximum Score
+1                        650                   699
+2                        700                   724
+3                        725                   749
+4                        750                   789
+5                        790                   850
+
+Grade 6
+     Performance Level         Minimum Score         Maximum Score
+1                        650                   699
+2                        700                   724
+3                        725                   749
+4                        750                   787
+5                        788                   850
+Grade 7
+    Performance Level         Minimum Score         Maximum Score
+1                       650                   699
+2                       700                   724
+3                       725                   749
+4                       750                   789
+5                       786                   850
+
+
+Grade 8
+    Performance Level         Minimum Score         Maximum Score
+1                       650                   699
+2                       700                   724
+3                       725                   749
+4                       750                   800
+5                       801                   850
+
+Algebra I
+    Performance Level         Minimum Score         Maximum Score
+1                       650                   699
+2                       700                   724
+3                       725                   749
+4                       750                   804
+5                       805                   850
+
+Geometry
+    Performance Level         Minimum Score         Maximum Score
+1                       650                   699
+2                       700                   724
+3                       725                   749
+4                       750                   782
+5                       783                   850
+Algebra II
+     Performance Level         Minimum Score         Maximum Score
+1                        650                   699
+2                        700                   724
+3                        725                   749
+4                        750                   80
+5                        808                   850
+
