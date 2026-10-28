@@ -61,7 +61,7 @@ await page.goto(`${BASE}/play/#/`);
 await page.getByTestId("week-recap-card").waitFor();
 await scan(page, "hub with the weekly recap card");
 await page.goto(`${BASE}/play/#/grew`);
-await page.getByRole("region", { name: "Lessons that grew" }).waitFor();
+await page.getByRole("region", { name: "Days you practised" }).waitFor();
 await scan(page, "/play/#/grew");
 
 console.log("Teacher area");

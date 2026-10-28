@@ -551,7 +551,8 @@ export function CritterSvg({ id, mood = "happy", stage = 1 }: { id: string; mood
         <TopExtras c={c} />
         <GrowthTop stage={stage} />
         {mood === "sleepy" && (
-          <g fill={INK} fontFamily="var(--font-fredoka, sans-serif)" fontWeight="700" opacity="0.55">
+          // Hidden from screen readers: "z z" would otherwise join the name of a button the critter sits in.
+          <g fill={INK} fontFamily="var(--font-fredoka, sans-serif)" fontWeight="700" opacity="0.55" aria-hidden="true">
             <text x="150" y="52" fontSize="26">z</text>
             <text x="166" y="32" fontSize="18">z</text>
           </g>
