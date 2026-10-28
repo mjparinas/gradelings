@@ -551,10 +551,11 @@ export function CritterSvg({ id, mood = "happy", stage = 1 }: { id: string; mood
         <TopExtras c={c} />
         <GrowthTop stage={stage} />
         {mood === "sleepy" && (
-          // Hidden from screen readers: "z z" would otherwise join the name of a button the critter sits in.
-          <g fill={INK} fontFamily="var(--font-fredoka, sans-serif)" fontWeight="700" opacity="0.55" aria-hidden="true">
-            <text x="150" y="52" fontSize="26">z</text>
-            <text x="166" y="32" fontSize="18">z</text>
+          // Drawn as lines, not <text>: letters inside the SVG would join the name of a button the critter
+          // sits in ("Pat your buddy"), which axe flags as a label mismatch.
+          <g data-part="zz" fill="none" stroke={INK} strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.55">
+            <path d="M151 37h12l-12 15h12" />
+            <path d="M167 22h8l-8 10h8" />
           </g>
         )}
         {mood === "think" && (
