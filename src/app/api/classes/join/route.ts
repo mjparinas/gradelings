@@ -1,6 +1,6 @@
 import { getFramework } from "@/content/frameworks";
 import type { FrameworkId, GradeId } from "@/content/types";
-import { countryOf } from "@/lib/country";
+import { regionKind } from "@/content/locale";
 import { error, getSession, json, rateLimited, sameOrigin } from "@/server/auth";
 import { classGrades, MAX_STUDENTS, normalizeCode } from "@/server/classroom";
 import { query, run } from "@/server/db";
@@ -34,7 +34,7 @@ export async function POST(req: Request) {
   if (!cls) return error(404, "We couldn’t find a class with that code. Check it with the teacher.");
   const child = JSON.parse(owns[0].data) as { grade?: string; framework?: string };
   if (!classGrades(cls).includes(child.grade as GradeId)) return error(409, "This class is for a different grade than your child’s profile.");
-  if ((child.framework ?? "ca-bc") !== cls.framework) return error(409, `This class follows a different ${countryOf(getFramework(cls.framework as FrameworkId)).regionKind}’s curriculum than your child’s profile.`);
+  if ((child.framework ?? "ca-bc") !== cls.framework) return error(409, `This class follows a different ${regionKind(getFramework(cls.framework as FrameworkId))}’s curriculum than your child’s profile.`);
   const size = await query<{ n: number }>("SELECT COUNT(*) AS n FROM class_members WHERE class_id = ?", [cls.id]);
   if (Number(size[0].n) >= MAX_STUDENTS) return error(409, "This class is full.");
   const now = Date.now();

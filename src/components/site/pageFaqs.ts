@@ -41,8 +41,9 @@ export function reportingBands(f: Framework): ReportingBand[] {
   return bands;
 }
 
-/** "provincial", "territory-wide" or "statewide": the reach of a scale that a region doesn't have. */
+/** "provincial", "territory-wide", "statewide" or "District-wide": the reach of a scale that a region doesn't have. */
 export function scaleReach(f: Pick<Framework, "country" | "regionKind">): string {
+  if (f.regionKind === "district") return "District-wide";
   return f.country === "US" ? "statewide" : f.regionKind === "territory" ? "territory-wide" : "provincial";
 }
 

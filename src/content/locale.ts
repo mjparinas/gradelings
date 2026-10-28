@@ -15,8 +15,8 @@ export function localeOf(framework: Pick<Framework, "country">): Locale {
   return countryOf(framework).locale;
 }
 
-/** What a framework's region is called in sentences: "province", "territory" or "state". */
-export function regionKind(framework: Pick<Framework, "country" | "regionKind">): "province" | "territory" | "state" {
+/** What a framework's region is called in sentences: "province", "territory", "state" or "district". */
+export function regionKind(framework: Pick<Framework, "country" | "regionKind">): "province" | "territory" | "state" | "district" {
   return framework.regionKind ?? countryOf(framework).regionKind;
 }
 

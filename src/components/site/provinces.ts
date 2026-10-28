@@ -147,7 +147,8 @@ export function regionWord(frameworks: readonly Pick<Framework, "country">[]): s
 /**
  * Where the curriculum is offered, for marketing copy: "12 provinces and territories", or
  * "12 Canadian provinces and territories and Washington State" once a state is offered, "..., plus Washington and Oregon"
- * with two to four, and "... and 5 US states" after that.
+ * with two to four, and "... and 5 US states" after that. Washington, DC is a district, not a state, so it is named
+ * after the states ("..., 5 US states and Washington, DC").
  */
 export function regionSummary(frameworks: readonly Framework[]): string {
   const ca = frameworks.filter((f) => f.country === "CA").length;
@@ -157,8 +158,11 @@ export function regionSummary(frameworks: readonly Framework[]): string {
     const states = joinAnd(us.map((f) => f.region));
     return ca ? `${ca} Canadian provinces and territories, plus ${states}` : states;
   }
-  const states = us.length === 1 ? `${us[0].region} State` : `${us.length} US states`;
-  return ca ? `${ca} Canadian provinces and territories and ${states}` : states;
+  const districts = us.filter((f) => f.regionKind === "district").map((f) => f.region);
+  const stateCount = us.length - districts.length;
+  const named = stateCount === 1 && !districts.length ? `${us[0].region} State` : `${stateCount} US ${stateCount === 1 ? "state" : "states"}`;
+  if (!districts.length) return ca ? `${ca} Canadian provinces and territories and ${named}` : named;
+  return ca ? `${ca} Canadian provinces and territories, ${joinAnd([named, ...districts])}` : joinAnd([named, ...districts]);
 }
 
 /** The currencies public pages list prices in: Canadian dollars, plus US dollars once a US curriculum is offered. */

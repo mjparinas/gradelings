@@ -48,7 +48,7 @@ describe("locales", () => {
   it("every framework today is Canadian, with the right region word", () => {
     for (const f of FRAMEWORKS) {
       expect(localeOf(f)).toBe(f.country === "US" ? "en-US" : "en-CA");
-      expect(regionKind(f)).toBe(f.country === "US" ? "state" : ["ca-yt", "ca-nt", "ca-nu"].includes(f.id) ? "territory" : "province");
+      expect(regionKind(f)).toBe(f.regionKind === "district" ? "district" : f.country === "US" ? "state" : ["ca-yt", "ca-nt", "ca-nu"].includes(f.id) ? "territory" : "province");
     }
     expect(regionKind({ country: "US" })).toBe("state");
     expect(regionKind({ country: "CA" })).toBe("province");
