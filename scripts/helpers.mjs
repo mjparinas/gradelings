@@ -198,3 +198,35 @@ export async function signInTeacher(context, base, fixture) {
 
 /** The teacher area's tabs, in order, with the hash that opens each for a class. */
 export const TEACHER_TABS = ["", "/homework", "/live", "/students", "/settings"];
+
+/**
+ * Gives the device's first child some practice last week (seven days ago is always in it), then reloads,
+ * so the weekly "you grew" recap has something to show. Units are Grade 3 BC by default.
+ */
+export async function seedLastWeek(page, units = ["3/math/numbers-to-1000", "3/math/facts-to-20", "3/science/grouping-living-things"]) {
+  await page.evaluate(async (units) => {
+    const db = await new Promise((res, rej) => {
+      const r = indexedDB.open("grademap", 1);
+      r.onsuccess = () => res(r.result);
+      r.onerror = () => rej(r.error);
+    });
+    const profiles = await new Promise((res) => {
+      const g = db.transaction("kv").objectStore("kv").get("profiles");
+      g.onsuccess = () => res(g.result);
+    });
+    const pid = profiles[0].id;
+    const t0 = Date.now() - 7 * 86_400_000;
+    const tx = db.transaction("events", "readwrite");
+    const store = tx.objectStore("events");
+    units.forEach((unit, u) => {
+      for (let i = 0; i < 10; i++) {
+        const event = { id: `lastweek-${u}-${i}`, profileId: pid, t: t0 + u * 600_000 + i * 20_000, type: "answer", unit, correct: true, attempts: 1, revealed: false, ms: 15000, mode: "practice", difficulty: 2 };
+        store.put({ event, id: event.id, profileId: pid, synced: 1 });
+      }
+      const s = { id: `lastweek-s${u}`, profileId: pid, t: t0 + u * 600_000 + 300_000, type: "session", mode: "practice", scope: unit, total: 10, correct: 10, ms: 200000 };
+      store.put({ event: s, id: s.id, profileId: pid, synced: 1 });
+    });
+    await new Promise((res) => (tx.oncomplete = res));
+  }, units);
+  await page.reload();
+}

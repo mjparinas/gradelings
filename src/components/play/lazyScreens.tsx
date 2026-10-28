@@ -53,6 +53,7 @@ export const StoryLibrary = lazyScreen(() => stories().then((m) => m.StoryLibrar
 export const StoryReader = lazyScreen(() => stories().then((m) => m.StoryReader));
 export const TrailMap = lazyScreen(() => import("./TrailMap").then((m) => m.TrailMap));
 export const Treasures = lazyScreen(() => import("./Treasures").then((m) => m.Treasures));
+export const WeekRecap = lazyScreen(() => import("./WeekRecap").then((m) => m.WeekRecap));
 export const TrophyRoom = lazyScreen(() => import("./Trophies").then((m) => m.TrophyRoom));
 
 /** Downloads every lazy screen; settles when each has loaded or failed. */

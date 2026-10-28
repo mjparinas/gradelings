@@ -9,7 +9,7 @@ import AxeBuilder from "@axe-core/playwright";
 import { chromium, devices } from "playwright";
 import { mkdirSync } from "node:fs";
 import { DEFICIENCIES, contrastAs, shootAll, visibleColour } from "./colour-blind.mjs";
-import { TEACHER_TABS, enterPin, newChild, signInTeacher, step, teacherFixture, vis } from "./helpers.mjs";
+import { TEACHER_TABS, enterPin, newChild, seedLastWeek, signInTeacher, step, teacherFixture, vis } from "./helpers.mjs";
 
 const BASE = process.argv[2] || "http://localhost:3000";
 const TAGS = ["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"];
@@ -55,6 +55,14 @@ for (const route of ["trophies", "shop", "stickers", "room", "practice", "map", 
   await page.goto(`${BASE}/play/#/${route}`);
   await scan(page, `/play/#/${route}`);
 }
+// The weekly "you grew" recap, with practice last week: its home card and its screen.
+await seedLastWeek(page);
+await page.goto(`${BASE}/play/#/`);
+await page.getByTestId("week-recap-card").waitFor();
+await scan(page, "hub with the weekly recap card");
+await page.goto(`${BASE}/play/#/grew`);
+await page.getByRole("region", { name: "Lessons that grew" }).waitFor();
+await scan(page, "/play/#/grew");
 
 console.log("Teacher area");
 const teacher = await teacherFixture(BASE);

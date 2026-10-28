@@ -102,6 +102,7 @@ vi.mock("./Room", () => ({ Room: screenStub("Room") }));
 vi.mock("./TrailMap", () => ({ TrailMap: screenStub("TrailMap") }));
 vi.mock("./Trophies", () => ({ TrophyRoom: screenStub("TrophyRoom") }));
 vi.mock("./Treasures", () => ({ Treasures: screenStub("Treasures") }));
+vi.mock("./WeekRecap", () => ({ WeekRecap: screenStub("WeekRecap") }));
 vi.mock("./Stories", () => ({ StoryLibrary: screenStub("StoryLibrary"), StoryReader: screenStub("StoryReader") }));
 
 import { PlayApp } from "./PlayApp";
@@ -258,6 +259,7 @@ describe("PlayApp routes", () => {
     ["map", "TrailMap"],
     ["treasures", "Treasures"],
     ["stickers", "StickerBook"],
+    ["grew", "WeekRecap"],
     ["room", "Room"],
     ["speed", "SpeedPicker"],
     ["facts", "FactsPicker"],
@@ -324,6 +326,7 @@ describe("PlayApp routes", () => {
     ["shop", "shop"],
     ["stories", "story-library"],
     ["stories/theo-kite", "story-library"],
+    ["grew", "weekly-recap"],
     ["session?mode=daily", "daily-challenge"],
     ["session?mode=speed&scope=mix", "speed-run"],
     ["facts", "math-facts"],
