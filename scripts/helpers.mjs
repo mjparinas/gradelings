@@ -229,4 +229,7 @@ export async function seedLastWeek(page, units = ["3/math/numbers-to-1000", "3/m
     await new Promise((res) => (tx.oncomplete = res));
   }, units);
   await page.reload();
+  // Wait for the app to be back on screen: in WebKit, a hash change made while it is still starting up is lost.
+  await page.locator("main").first().waitFor();
+  await page.waitForLoadState("networkidle");
 }
