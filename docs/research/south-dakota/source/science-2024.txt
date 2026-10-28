@@ -1,0 +1,1547 @@
+South Dakota
+Science Standards
+Adopted April 22, 2024
+Contents
+Introduction .......................................................................................................................... 4
+Science Standards Advisory Committee .................................................................................. 5
+Notable Adjustments ............................................................................................................. 6
+Kindergarten ....................................................................................................................... 11
+Physical Science ................................................................................................................... 11
+Life Science .......................................................................................................................... 11
+Earth and Space Science ...................................................................................................... 11
+Engineering, Technology, and Applications of Science .......................................................... 12
+1st Grade Science ................................................................................................................. 13
+Physical Science ................................................................................................................... 13
+Life Science .......................................................................................................................... 13
+Earth and Space Science ...................................................................................................... 14
+Engineering, Technology, and Applications of Science .......................................................... 14
+2nd Grade Science ................................................................................................................ 15
+Physical Science ................................................................................................................... 15
+Life Science .......................................................................................................................... 15
+Earth and Space Science ...................................................................................................... 16
+Engineering, Technology, and Applications of Science .......................................................... 16
+3rd Grade Science ................................................................................................................. 17
+Physical Science ................................................................................................................... 17
+Life Science .......................................................................................................................... 17
+Earth and Space Science ...................................................................................................... 18
+Engineering, Technology, and Applications of Science .......................................................... 19
+4th Grade Science ................................................................................................................. 20
+Physical Science ................................................................................................................... 20
+Life Science .......................................................................................................................... 21
+Earth and Space Science ...................................................................................................... 21
+Engineering, Technology, and Applications of Science .......................................................... 22
+
+Adopted April 22, 2024                                                                   South Dakota Science Standards | 2
+5th Grade Science ................................................................................................................. 23
+Physical Science ................................................................................................................... 23
+Life Science .......................................................................................................................... 23
+Earth and Space Science ...................................................................................................... 24
+Engineering, Technology, and Applications of Science .......................................................... 24
+Middle School Science (Grades 6-8) ...................................................................................... 26
+Physical Science ................................................................................................................... 26
+Life Science .......................................................................................................................... 28
+Earth and Space Science ...................................................................................................... 30
+Engineering, Technology, and Applications of Science .......................................................... 31
+High School Science (Grades 9-12)........................................................................................ 33
+Physical Science ................................................................................................................... 33
+Life Science .......................................................................................................................... 35
+Earth and Space Science ...................................................................................................... 38
+Engineering, Technology, and Applications of Science .......................................................... 39
+
+
+
+
+Adopted April 22, 2024                                                                   South Dakota Science Standards | 3
+Introduction
+In 2023, the Science Content Standards Revision Commitee was tasked with reviewing the science
+standards as part of the standards revision cycle-Content Standards. The South Dakota Science
+Standards have undergone many hours of discussion by experienced K-12 educators, parents, and
+science professionals. The focus of the team was to ensure best prac�ces were built into the standards
+while making sure they are also rigorous, atainable, and user friendly.
+
+The Next Genera�on Science Standards (na�onal standards) and A Framework for K-12 Science
+Education were used as a reference for the South Dakota Science Standards. The South Dakota Science
+Standards are writen to include the dimension of Science and Engineering Prac�ces, Disciplinary Core
+Ideas, and Crosscu�ng Concepts. The Science and Engineering Prac�ces are the skill that students will
+use to help make sense of the science they are learning or exploring. The four domains; physical science,
+life science, earth and space science, and engineering, technology, and applica�ons of science and the
+conceptual ideas that guide students in their thinking to develop a connected understanding of real-
+world phenomena and prac�cal solu�ons to the problem are the Disciplinary Core Ideas. Crosscu�ng
+Concepts are a way to include the paterns across the diﬀerent domains of science, such as cause and
+eﬀect or energy and mater.
+
+The integra�on of rigorous prac�ces, core ideas, and concepts reﬂects how science and engineering are
+applied and prac�ced in our everyday lives. The standards are writen as a progression of knowledge
+that occurs from grade band to grade band that allows for students the opportunity for the applica�on
+of concepts and deeper understandings. The South Dakota Science Standards are writen to the
+expecta�on of student outcomes. They are writen to build coherently from Kindergarten through Grade
+Twelve.
+
+The concepts and content in the science standards represent the most current research in science and
+science educa�on. All theories are presented in a way that allow teachers to structure an experience
+around mul�ple pieces of scien�ﬁc evidence and compe�ng ideas to allow students to engage in an
+objec�ve discussion. These standards were developed in such a manner to encourage students to
+analyze all forms of scien�ﬁc evidence and draw their own conclusions.
+
+Through the public hearing process, past and present, related to adoption of the South Dakota Science
+Standards, it is evident that there is particular sensitivity to two issues: climate change and evolution.
+The South Dakota Board of Education recognizes that parents are their children’s first teachers, and that
+parents play a critical role in their children’s formal education. The South Dakota Board of Education also
+recognizes that not all viewpoints can be covered in the science classroom. Therefore, the board
+recommends that parents engage their children in discussions regarding these important issues, in order
+that South Dakota students are able to analyze all forms of evidence and argument and draw their own
+conclusions.
+
+The standards document provides a workable synthesis of transparency, public input, and scien�ﬁc
+consensus. They are writen to ensure that our students will have the knowledge, skills, and
+competencies to be college, career, and life ready.
+
+
+
+Adopted April 22, 2024                                               South Dakota Science Standards | 4
+Science Standards Advisory Committee
+ Ashley Armstrong        Science Education Specialist           Sandford Underground Research Facility
+ Elizabeth Burtzlaff     8-12 Science Teacher                   Newell School District
+ Jessica Carr            Parent                                 Pierre School District
+ Katie Faini             Grade 2 Teacher                        Rapid City School District
+ Rubylin Harrington      Middle School Science Teacher          Wagner School District
+ Jayne Heier             High School Teacher                    Brookings School District
+ Nicole Keegan           Staff Development Manager              Rapid City School District
+ Tonda Kirton            Grade 4 Teacher                        Harrisburg School District
+ Sherry Olson            High School Science Teacher            Tea Area School District
+ Louisa Otto             Senior Research Education Specialist   Sanford PROMISE
+ Joy Robbins             Middle School Teacher                  Waverly-South Shore School District
+ Tamara Schmidt          Grade 4 Teacher                        Brookings School District
+ Patrick Skroch          Middle School Science Teacher          Pierre School District
+ Gary Thury              Grade 5 Teacher                        Bridgewater-Emery School District
+ Nicole Urhe-Balk        Learning Specialist                    Technology & Innovation in Education
+ Janeen Outka            Instructional Leader                   Teachwell Solutions
+ Terri Mehlhaff          Education Specialist                   Department of Education
+ Vera Tipton             Administrator                          Department of Education
+ Dr. Joseph Graves       Secretary of Education                 Department of Education
+
+
+
+
+Adopted April 22, 2024                                              South Dakota Science Standards | 5
+Notable Adjustments
+With an ever-changing world and research showing hands-on activities help our students learn best, the
+engineering design standards were previously a separate document and embedded into the standards.
+The standards continue to align with and follow the core ideas, science and engineering practices, and
+crosscutting concepts to help ensure our students learn the most about science. These are now listed
+within the science standards. The engineering design science standards were also aligned with the other
+areas of science; Physical, Life, Earth and Space Sciences and are listed in grade bands. The alignment is a
+recommendation of when it can be taught. Engineering standards are not standards that are taught as a
+stand-alone lesson or skill. Engineering, Technology, and Application of Science Standards go hand in hand
+with inquiry-based learning. This is an approach to learning that encourages students to engage in
+experiential learning and problem-solving that will meet both the standards of the discipline and the
+engineering.
+
+Throughout the standards, minor language changes were made for clarification and consistency purposes.
+The language that was used came from the Science and Engineering Practices, Disciplinary Core Ideas and
+the Crosscutting Concepts from A Framework for K-12 Science Education. These ideas are also aligned with
+the Next Generation Science Standards (NGSS).
+
+
+
+
+(2011). A Framework for K-12 Science Education: Practices, crosscutting concepts, and core ideas.
+Washington, DC: The National Academies Press. Retrieved from
+http://www.nap.edu/catalog.php?record_id=13165
+
+
+
+Adopted April 22, 2024                                               South Dakota Science Standards | 6
+How to read the South Dakota Science Standards
+The standards are labeled to allow teachers and parents to gain a better understanding of what is
+expected of their child to study without having to be up to date on the most recent systems in education
+administration. The three dimensions of science referenced from A Framework for K-12 Science
+Education can be found in parentheses in every standard. The three dimensions include Science and
+Engineering Practices, Disciplinary Core Ideas, and Crosscutting Concepts. This information can be used
+to interpret a deeper meaning.
+
+
+
+ K-PS2-2       Analyze data to determine if a design solution works as intended to change the speed or
+               direction of an object with a push or a pull. (SEP: 4; DCI: PS2.A; CCC: Cause/Effect)
+               Alignment may include K-2-ETS1-1
+K = Kindergarten        PS = Physical Science            2 = Core Idea 2           2 = Standard Number
+
+    •        SEP: 4 = Science and Engineering Practice: Analyzing and Interpreting Data
+    •        DCI: PS2.A = Disciplinary Core Idea: Physical Science; Motion and Stability: Forces and
+             Interactions, Forces and Motion
+    •        CCC: Cause/Effect = Crosscutting Concept: Cause and Effect
+    •        K-2-ETS1-1 = K-2 = grade band, ETS = Engineering, Technology, and Application of Sciences, 1-1 =
+             the ETS embedded standard alignment
+
+
+
+Below is a legend to decode the components that are in parentheses at the end of each standard.
+
+ Science and Engineering Practices (SEP)
+        1.    Asking Questions and Defining Problems
+        2.    Developing and Using Models
+        3.    Planning and Carrying Out Investigations
+        4.    Analyzing and Interpreting Data
+        5.    Using Mathematics and Computational Thinking
+        6.    Constructing Explanations and Designing Solutions
+        7.    Engaging in Argument from Evidence
+        8.    Obtaining, Evaluating, and Communicating Information
+                                                                                     Framework (2012) p. 41
+
+
+
+
+Adopted April 22, 2024                                                    South Dakota Science Standards | 7
+ Disciplinary Core Idea (DCI)
+ These are listed as written in A Framework for K-12 Science Education. For example, PS1 stands for
+ Physical Science Core Idea 1: Matter and Its Interactions. You will notice that next to the standard it
+ will read, for example, PS1.A. In this case, the coding is referring to Physical Science Core Idea 1:
+ Matter and Its Interactions, Component Idea A: Structure and Properties of Matter.
+          PS = Physical Science
+          LS = Life Science
+          ESS = Earth and Space Science
+          ETS = Engineering, Technology, and Applications of Sciences
+                                                                                  Framework (2012) p. 103
+
+
+
+
+ Core Ideas in the Physical Sciences
+ Core Idea PS1: Matter and Its Interactions
+         PS1.A: Structure and Properties of Matter
+         PS1.B: Chemical Reactions
+         PS1.C: Nuclear Processes
+
+ Core Idea PS2: Motion and Stability: Forces and Interactions
+         PS2.A: Forces and Motion
+         PS2.B: Types of Interactions
+         PS2.C: Stability and Instability in Physical Systems
+
+ Core Idea PS3: Energy
+         PS3.A: Definitions of Energy
+         PS3.B: Conservation of Energy and Energy Transfer
+         PS3.C: Relationship Between Energy and Forces
+         PS3.D: Energy in Chemical Processes and Everyday Life
+
+ Core Idea PS4: Waves and Their Applications in Technologies for Information Transfer
+         PS4.A: Wave Properties
+         PS4.B: Electromagnetic Radiation
+         PS4.C: Information Technologies and Instrumentation
+                                                                          Framework (2012) p. 105
+
+
+
+
+Adopted April 22, 2024                                               South Dakota Science Standards | 8
+ Core Ideas in the Life Sciences
+ Core Idea LS1: From Molecules to Organisms: Structures to Processes
+         LS1.A: Structure and Function
+         LS1.B: Growth and Development of Organisms
+         LS1.C: Organization for Matter and Energy Flow in Organisms
+         LS1.D: Information Processing
+
+ Core Idea LS2: Ecosystems: Interactions, Energy, and Dynamics
+         LS2.A: Interdependent Relationships in Ecosystems
+         LS2.B: Cycles of Matter and Energy Transfer in Ecosystems
+         LS2.C: Ecosystem Dynamics, Functioning, and Resilience
+         LS2.D: Social Interactions and Group Behavior
+
+ Core Idea LS3: Heredity: Inheritance and Variation of Traits
+         LS3.A: Inheritance of Traits
+         LS3.B: Variation of Traits
+
+ Core Idea LS4: Biological Unity and Diversity
+         LS4.A: Evidence of Common Ancestry and Diversity
+         LS4.B: Natural Selection
+         LS4.C: Adaptation
+         LS4.D: Biodiversity and Humans
+                                                                          Framework (2012) p. 142
+
+
+
+
+Adopted April 22, 2024                                           South Dakota Science Standards | 9
+ Core Ideas in the Earth and Space Sciences
+ Core Idea ESS1: Earth’s Places in the Universe
+         ESS1.A: The Universe and Its Stars
+         ESS1.B: Earth and the Solar System
+         ESS1.C: The History of Planet Earth
+
+ Core Idea ESS2: Earth’s Systems
+         ESS2.A: Earth Materials and Systems
+         ESS2.B: Plate Tectonics and Large-Scale System Interactions
+         ESS2.C: The Roles of Water in Earth’s Surface Processes
+         ESS2.D: Weather and Climate
+         ESS2.E: Biogeology
+
+ Core Idea ESS3: Earth and Human Activity
+         ESS3.A: Natural Resources
+         ESS3.B: Natural Hazards
+         ESS3.C: Human Impacts on Earth’s Systems
+         ESS3.D: Global Climate Change
+                                                                           Framework (2012) p. 171
+
+
+
+ Core Ideas in Engineering, Technology, and Applications of Science
+ Core Idea ETS1: Engineering Design
+         ETS1.A: Defining and Delimiting an Engineering Problem
+         ETS1.B: Developing Possible Solutions
+         ETS1.C: Optimizing the Design Solution
+
+ Core Idea ETS2: Links Among Engineering, Technology, Science, and Society
+         ETS2.A: Interdependence of Science, Engineering, and Technology
+         ETS2.B: Influence of Engineering, Technology, and Science on Society and the Natural World
+                                                                            Framework (2012) p. 203
+
+
+
+ Crosscutting Concept (CCC)
+        Patterns = Patterns
+        Cause/Effect = Cause and Effect
+        Scale/Prop. = Scale, Proportion, and Quantity
+        Systems = Systems and System Models
+        Energy/Matter = Energy and Matter
+        Structure/Function = Structure and Function
+        Stability/Change = Stability and Change
+                                                                              Framework (2012) p. 83
+
+
+
+Adopted April 22, 2024                                            South Dakota Science Standards | 10
+Kindergarten
+Physical Science
+Core Ideas
+PS2: Motion and Stability: Forces and Interactions
+        PS2.A: Forces and Motion
+        PS2.B: Types of Interactions
+PS3: Energy
+        PS3.B: Conservation of Energy and Energy Transfer
+        PS3.C: Relationship Between Energy and Forces
+ K-PS2-1       Plan and carry out an investigation to compare the effects of different strengths or
+               different directions of pushes and pulls on the motion of an object. (SEP: 3; DCI: PS2.A,
+               PS2.B, PS3.C; CCC: Cause/Effect)
+ K-PS2-2       Analyze data to determine if a design solution works as intended to change the speed or
+               direction of an object with a push or a pull. (SEP: 4; DCI: PS2.A, ETS1.A; CCC:
+               Cause/Effect) Alignment may include K-2-ETS1-1
+ K-PS3-1       Make observations to determine the effect of sunlight on Earth’s surface. (SEP: 3; DCI:
+               PS3.B; CCC: Cause/Effect)
+ K-PS3-2       Design and build a structure that will reduce the warming effect of sunlight on an area.
+               (SEP: 6; DCI: PS3.B, ETS1.B; CCC: Cause/Effect) Alignment may include K-2-ETS1-2
+
+
+
+Life Science
+Core Idea
+LS1: From Molecules to Organisms: Structures and Processes
+        LS1.C: Organization for Matter and Energy Flow in Organisms
+ K-LS1-1       Describe patterns of what plants and animals (including humans) need to survive.
+               (SEP: 4; DCI: LS1.C; CCC: Patterns)
+
+
+
+Earth and Space Science
+Core Ideas
+ESS2: Earth’s Systems
+        ESS2.D: Weather and Climate
+        ESS2.E: Biogeology
+ESS3: Earth and Human Activity
+        ESS3.A: Natural Resources
+        ESS3.B: Natural Hazards
+        ESS3.C: Human Impacts on Earth’s Systems
+ K-ESS2-1       Plan and carry out observations of local weather conditions to describe patterns over
+                time. (SEP: 4; DCI: ESS2.D; CCC: Patterns)
+ K-ESS2-2       Engage in argument from evidence for how plants and animals (including humans) can
+                change the environment to meet their needs. (SEP: 7; DCI: ESS2.E, ESS3.C; CCC: Systems)
+
+Adopted April 22, 2024                                              South Dakota Science Standards | 11
+ K-ESS3-1     Use a model to represent the characteristics of and the relationship between various
+              plants and animals in the places they live. (SEP: 2; DCI: ESS3.A; CCC: Systems)
+ K-ESS3-2     Ask questions to obtain information about the purpose of weather forecasting to
+              prepare for, and respond to, severe weather. (SEP: 1, 8; DCI: ESS3.B, ETS1.A; CCC:
+              Cause/Effect) Alignment may include K-2-ETS1-1
+ K-ESS3-3     Communicate solutions that will reduce the impact of humans on the land, water, air,
+              and living things in the local environment. (SEP: 8; DCI: ESS3.C, ETS1.B; CCC:
+              Cause/Effect) Alignment may include K-2-ETS1-2
+
+
+
+Engineering, Technology, and Applications of Science
+Core Ideas
+ETS1: Engineering Design
+        ETS1.A: Defining and Delimiting an Engineering Problem
+        ETS1.B: Developing Possible Solutions
+ K-2-ETS1-1     Ask questions, make observations, and gather information about a situation people
+                want to change to define a simple problem that can be solved through the
+                development of a new or improved object or tool. Alignment may include K-PS2-2;
+                K-ESS3-2; 1-LS1-1
+ K-2-ETS1-2     Develop a simple sketch, drawing, or physical model to illustrate how the shape of an
+                object helps it function as needed to solve a given problem. Alignment may include
+                K-ESS3-3; 1-PS4-4; 2-LS2-2
+ K-2-ETS1-3     Analyze data from tests of two objects designed to solve the same problem to compare
+                the strengths and weaknesses of how each performs. Alignment may include 2-PS1-2;
+                2-ESS2-1
+
+
+
+
+Adopted April 22, 2024                                            South Dakota Science Standards | 12
+1st Grade Science
+
+Physical Science
+Core Ideas
+PS4: Waves and Their Applications in Technologies for Information Transfer
+        PS4.A: Wave Properties
+        PS4.B: Electromagnetic Radiation
+        PS4.C: Information Technologies and Instrumentation
+1-PS4-1       Plan and carry out an investigation to provide evidence that vibrating materials can make
+              sound and that sound can make materials vibrate. (SEP: 3; DCI: PS4.A; CCC: Cause/Effect)
+
+1-PS4-2       Construct an evidence-based account for how objects can be seen only when illuminated.
+              (SEP: 6; DCI: PS4.B; CCC: Cause/Effect)
+
+1-PS4-3       Plan and carry out an investigation to determine the effect of placing objects made with
+              different materials in the path of a beam of light. (SEP: 3; DCI: PS4.B; CCC: Cause/Effect)
+
+1-PS4-4       Design and build a device that uses light or sound to solve the problem of communicating
+              over a distance. (SEP: 6; DCI: PS4.C, ETS1.B; CCC: Cause/Effect) Alignment may include
+              K-2-ETS1-2
+
+
+
+
+Life Science
+Core Ideas
+LS1: From Molecules to Organisms: Structures and Processes
+        LS1.A: Structure and Function
+        LS1.B: Growth and Development of Organisms
+LS3: Heredity: Inheritance and Variation of Traits
+        LS3.A: Inheritance of Traits
+        LS3.B: Variation of Traits
+1-LS1-1       Construct an explanation and design a solution to a human problem by mimicking how
+              plants and/or animals use their external parts to help them survive, grow, and meet their
+              needs. (SEP: 6; DCI: LS1.A, LSI.D, ETS1.A; CCC: Structure/Function) Alignment may include
+              K-2-ETS1-1
+
+1-LS1-2      Read texts and use media to determine patterns in behavior of parents and offspring that
+             help offspring survive. (SEP: 8; DCI: LS1.B; CCC: Patterns)
+
+1-LS3-1      Construct an evidence-based account that young plants and animals are like, but not
+             exactly like, their parents. (SEP: 6; DCI: LS3.A, LS3.B; CCC: Patterns)
+
+
+
+
+Adopted April 22, 2024                                               South Dakota Science Standards | 13
+Earth and Space Science
+Core Ideas
+ESS1: Earth’s Place in the Universe
+        ESS1.A: The Universe and Its Stars
+        ESS1.B: Earth and the Solar System
+1-ESS1-1      Use observations of the sun, moon, and stars to describe patterns that can be predicted.
+              (SEP: 4; DCI: ESS1.A; CCC: Patterns)
+
+1-ESS1-2     Make observations and compare the amount of daylight at different times of the year.
+             (SEP: 3; DCI: ESS1.B; CCC: Patterns)
+
+
+
+
+Engineering, Technology, and Applications of Science
+Core Ideas
+ETS1: Engineering Design
+        ETS1.A: Defining and Delimiting an Engineering Problem
+        ETS1.B: Developing Possible Solutions
+ K-2-ETS1-1     Ask questions, make observations, and gather information about a situation people
+                want to change to define a simple problem that can be solved through the
+                development of a new or improved object or tool. Alignment may include K-PS2-2;
+                K-ESS3-2; 1-LS1-1
+ K-2-ETS1-2     Develop a simple sketch, drawing, or physical model to illustrate how the shape of an
+                object helps it function as needed to solve a given problem. Alignment may include
+                K-ESS3-3; 1-PS4-4; 2-LS2-2
+ K-2-ETS1-3     Analyze data from tests of two objects designed to solve the same problem to compare
+                the strengths and weaknesses of how each performs. Alignment may include 2-PS1-2;
+                2-ESS2-1
+
+
+
+
+Adopted April 22, 2024                                             South Dakota Science Standards | 14
+2nd Grade Science
+Physical Science
+Core Ideas
+PS1: Matter and Its Interactions
+        PS1.A: Structure and Properties of Matter
+        PS1.B: Chemical Reactions
+2-PS1-1      Plan and carry out an investigation to describe and classify different kinds of materials by
+             their observable properties. (SEP: 3; DCI: PS1.A; CCC: Patterns)
+
+2-PS1-2       Analyze data obtained from testing different materials to determine which materials have
+              the properties that are best suited for an intended purpose. (SEP: 4; DCI: PS1.A, ETS1.C;
+              CCC: Cause/Effect) Alignment may include K-2-ETS1-3
+
+2-PS1-3       Construct an evidence-based account of how an object made of a small set of pieces can
+              be disassembled and made into a new object. (SEP: 6; DCI: PS1.A; CCC: Energy/Matter)
+
+2-PS1-4       Construct an evidenced-based argument using reasoning and evidence that some changes
+              caused by heating or cooling can be reversed and some cannot. (SEP: 7; DCI: PS1.B;
+              CCC: Cause/Effect)
+
+
+
+
+Life Science
+Core Ideas
+LS2: Ecosystems: Interactions, Energy, and Dynamics
+        LS2.A: Interdependent Relationships in Ecosystems
+LS4: Biological Unity and Diversity
+        LS4.D: Biodiversity and Humans
+2-LS2-1       Plan and carry out an investigation to determine if plants need sunlight and water to grow.
+              (SEP: 3; DCI: LS2.A; CCC: Cause/Effect)
+
+2-LS2-2       Develop a simple model that mimics the function of an animal in dispersing seeds or
+              pollinating plants. (SEP: 2; DCI: LS2.A, ETS1.B; CCC: Structure/Function) Alignment may
+              include K-2ETS1-2
+
+2-LS4-1       Make observations of plants and animals to compare the diversity of life in different
+              habitats. (SEP: 3; DCI: LS4.D; CCC: Systems)
+
+
+
+
+Adopted April 22, 2024                                               South Dakota Science Standards | 15
+Earth and Space Science
+Core Ideas
+ESS1: Earth’s Place in the Universe
+        ESS1.C: The History of Planet Earth
+ESS2: Earth’s Systems
+        ESS2.A: Earth Materials and Systems
+        ESS2.B: Plate Tectonics and Large-Scale System Interactions
+        ESS2.C: The Roles of Water in Earth’s Surface Processes
+2-ESS1-1      Use information from several sources to construct an explanation that Earth events like
+              volcanic eruptions, earthquakes, weather, and erosion can occur quickly or slowly. (SEP: 6;
+              DCI: ESS1.C; CCC: Stability/Change)
+
+2-ESS2-1     Compare multiple solutions to develop a model designed to slow or prevent wind or water
+             from changing the shape of the land. (SEP: 6; DCI: ESS2.A, ETS1.C; CCC: Stability/Change)
+             Alignment may include K-2-ETS1-3
+
+2-ESS2-2     Obtain and evaluate information about the shapes and kinds of land and bodies of water
+             in your local areas. (SEP: 8; DCI: ESS2.B; CCC: Stability/Change)
+
+2-ESS2-3     Obtain information to identify where water is found on Earth and that it can be solid,
+             liquid, or gas. (SEP: 8; DCI: ESS2.C; CCC: Patterns)
+
+
+
+
+Engineering, Technology, and Applications of Science
+Core Ideas
+ETS1: Engineering Design
+        ETS1.B: Developing Possible Solutions
+        ETS1.C: Optimizing the Design Solution
+ K-2-ETS1-1     Ask questions, make observations, and gather information about a situation people
+                want to change to define a simple problem that can be solved through the
+                development of a new or improved object or tool. Alignment may include K-PS2-2;
+                K-ESS3-2; 1-LS1-1
+ K-2-ETS1-2     Develop a simple sketch, drawing, or physical model to illustrate how the shape of an
+                object helps it function as needed to solve a given problem. Alignment may include
+                K-ESS3-3; 1-PS4-4; 2-LS2-2
+ K-2-ETS1-3     Analyze data from tests of two objects designed to solve the same problem to compare
+                the strengths and weaknesses of how each performs. Alignment may include 2-PS1-2;
+                2-ESS2-1
+
+
+
+
+Adopted April 22, 2024                                              South Dakota Science Standards | 16
+3rd Grade Science
+Physical Science
+Core Ideas
+PS2: Motion and Stability: Forces and Interactions
+        PS2.A: Forces and Motion
+        PS2.B: Types of Interactions
+3-PS2-1      Plan and carry out an investigation to provide evidence of the effects of balanced and
+             unbalanced forces on the motion of an object. (SEP: 3; DCI: PS2.A, PS2.B; CCC: Cause/Effect)
+
+3-PS2-2      Make observations and/or measurements of an object’s motion to provide evidence for
+             how a pattern can be used to predict future motion. (SEP: 3; DCI: PS2.A; CCC: Patterns)
+
+3-PS2-3      Ask questions about cause-and-effect relationships of electric or magnetic interactions
+             between two objects not in contact with each other. (SEP: 1; DCI: PS2.B; CCC: Cause/Effect)
+
+3-PS2-4      Define a simple design problem that can be solved by applying scientific ideas about
+             magnets. (SEP: 1; DCI: PS2.B, ETS1.A; CCC: Cause/Effect) Alignment may include 3-5-ETS1-1
+
+
+
+
+Life Science
+Core Ideas
+LS1: From Molecules to Organisms: Structures and Processes
+        LS1.B: Growth and Development of Organisms
+LS2: Ecosystems: Interactions, Energy, and Dynamics
+        LS2.C: Ecosystem Dynamics, Functioning, and Resilience
+        LS2.D: Social Interactions and Group Behavior
+LS3: Heredity: Inheritance and Variation of Traits
+        LS3.A: Inheritance of Traits
+        LS3.B: Variation of Traits
+LS4: Biological Unity and Diversity
+        LS4.A: Evidence of Common Ancestry and Diversity
+        LS4.B: Natural Selection
+        LS4.C: Adaptation
+        LS4.D: Biodiversity and Humans
+3-LS1-1        Develop models to describe that organisms have unique and diverse life cycles, but all have
+               in common birth, growth, reproduction, and death. (SEP: 1; DCI: LS1.B; CCC: Patterns)
+
+3-LS2-1       Construct an argument that some animals form groups that help members survive. (SEP: 7;
+              DCI: LS2.D; CCC: Cause/Effect)
+
+
+
+
+Adopted April 22, 2024                                             South Dakota Science Standards | 17
+3-LS3-1       Analyze and interpret data to provide evidence that plants and animals have traits
+              inherited from parents and that variations of these traits exist in a group of similar
+              organisms. (SEP: 4; DCI: LS3.A, LS3.B; CCC: Patterns)
+
+3-LS3-2       Use evidence and reasoning to support the explanation that traits can be influenced by the
+              environment. (SEP: 6; DCI: LS3.A, LS3.B; CCC: Cause/Effect)
+
+3-LS4-1       Analyze and interpret data from fossils to provide evidence of the organisms and the
+              environments in which they lived long ago. (SEP: 4; DCI: LS4.A; CCC: Scale/Prop.)
+
+3-LS4-2       Use evidence and reasoning to construct an explanation for how the variations in
+              characteristics among individuals of the same species may provide advantages in surviving,
+              finding mates, and reproducing. (SEP: 6; DCI: LS4.B; CCC: Cause/Effect)
+
+3-LS4-3       Construct an argument with evidence how some organisms thrive, some struggle to
+              survive, and some cannot survive in a particular habitat. (SEP: 7; DCI: LS4.C;
+              CCC: Cause/Effect)
+
+3-LS4-4       Make an evidence-based claim about the validity of a solution to a change in the
+              environment that affects the types of plants and animals that live there. (SEP: 7; DCI: LS2.C,
+              LS4.D, ETS1.A; CCC: Systems) Alignment may include 3-5-ETS1-1
+
+
+
+
+Earth and Space Science
+Core Ideas
+ESS2: Earth’s Systems
+        ESS2.D: Weather and Climate
+ESS3: Earth and Human Activity
+        ESS3.B: Natural Hazards
+3-ESS2-1       Represent data in tables and graphical displays to describe weather conditions during a
+               particular season. (SEP: 4; DCI: ESS2.D; CCC: Patterns)
+
+3-ESS2-2      Obtain and combine information to describe climates in different regions of the world.
+              (SEP: 8; DCI: ESS2.D; CCC: Patterns)
+
+3-ESS3-1      Make an evidence-based claim about the validity of a design solution that reduces the
+              impacts of a weather-related hazard. (SEP: 7; DCI: ESS3.B, ETS1.A; CCC: Cause/Effect)
+              Alignment may include 3-5-ETS1-1
+
+
+
+
+Adopted April 22, 2024                                               South Dakota Science Standards | 18
+Engineering, Technology, and Applications of Science
+Core Ideas
+ETS1: Engineering Design
+        ETS1.A: Defining and Delimiting an Engineering Problem
+3-5-ETS1-1 Define a simple design problem reflecting a need or want that includes specified criteria for
+             success and constraints on materials, time, or cost. Alignment may include 3-PS2-4; 3-LS4-4;
+             3-ESS3-1; 4-PS3-4
+
+3-5-ETS1-2 Generate and compare multiple solutions to a problem based on how well each is likely to
+           meet the criteria and constraints of the problem. Alignment may include 4-ESS3-2
+
+3-5-ETS1-3 Plan and carry out fair tests in which variables are controlled and failure points are
+           considered to identify aspects of a model or prototype that can be improved. Alignment
+           may include 4-PS4-3
+
+
+
+
+Adopted April 22, 2024                                             South Dakota Science Standards | 19
+4th Grade Science
+Physical Science
+Core Ideas
+PS3: Energy
+        PS3.A: Definitions of Energy
+        PS3.B: Conservation of Energy and Energy Transfer
+        PS3.C: Relationship Between Energy and Forces
+        PS3.D: Energy in Chemical Processes and Everyday Life
+PS4: Waves and Their Applications in Technologies for Information Transfer
+        PS4.A: Wave Properties
+        PS4.B: Electromagnetic Radiation
+        PS4.C: Information Technologies and Instrumentation
+4-PS3-1      Use evidence to construct an explanation relating the speed of an object to the energy of
+             that object. (SEP: 6; DCI: PS3.A; CCC: Energy/Matter)
+
+4-PS3-2      Make observations to provide evidence for how energy can be transferred from place to
+             place by sound, light, heat, and electric currents. (SEP: 3; DCI: PS3.A, PS3.B;
+             CCC: Energy/Matter)
+
+4-PS3-3      Ask questions and predict outcomes about the changes in energy that occur when objects
+             collide. (SEP: 1; DCI: PS3.A, PS3.B, PS3.C; CCC: Energy/Matter)
+
+4-PS3-4      Design, test, and refine a device that converts energy from one form to another. (SEP: 6;
+             DCI: PS3.B, PS3.D, ETS1.A; CCC: Energy/Matter) Alignment my include 3-5-ETS1-1
+
+4-PS4-1      Develop a model of waves to describe patterns in terms of amplitude and wavelength and
+             to provide evidence that waves can cause objects to move. (SEP: 2; DCI: PS4.A;
+             CCC: Patterns)
+
+4-PS4-2      Develop a model to describe how light reflecting from objects and entering the eye allows
+             objects to be seen. (SEP: 2; DCI: PS4.B; CCC: Cause/Effect)
+
+4-PS4-3      Create and compare multiple solutions that use patterns to transfer information. (SEP: 6;
+             DCI: PS4.C, ETS1.C; CCC: Patterns) Alignment may include 3-5-ETS1-3
+
+
+
+
+Adopted April 22, 2024                                             South Dakota Science Standards | 20
+Life Science
+Core Ideas
+LS1: From Molecules to Organisms: Structures and Processes
+        LS1.A: Structure and Function
+        LS1.D: Information Processing
+4-LS1-1      Construct an argument that plants and animals have internal and external structures that
+             function to support survival, growth, behavior, and reproduction. (SEP: 7; DCI: LS1.A;
+             CCC: Systems)
+
+4-LS1-2      Use a model to describe that animals receive different types of information through their
+             senses, process the information in their brain, and respond to the information in different
+             ways. (SEP: 2; DCI: LS1.D; CCC: Systems)
+
+
+
+
+Earth and Space Science
+Core Ideas
+ESS1: Earth’s Place in the Universe
+        ESS1.B: Earth and the Solar System
+        ESS1.C: The History of Planet Earth
+ESS2: Earth’s Systems
+        ESS2.A: Earth Materials and Systems
+        ESS2.B: Plate Tectonics and Large-Scale System Interactions
+        ESS2.E: Biogeology
+ESS3: Earth and Human Activity
+        ESS3.A: Natural Resources
+        ESS3.B: Natural Hazards
+4-ESS1-1      Identify evidence from patterns in rock formations and fossils in rock layers to support an
+              explanation for changes in a landscape over time. (SEP: 6; DCI: ESS1.C; CCC: Patterns)
+
+4-ESS2-1     Make observations and/or measurements to provide evidence of the effects of weathering
+             or the rate of erosion by water, ice, wind, or vegetation. (SEP: 3; DCI: ESS2.A, ESS2.E;
+             CCC: Cause/Effect)
+
+4-ESS2-2     Analyze and interpret data from maps to describe patterns of Earth’s features. (SEP: 4;
+             DCI: ESS2.B; CCC: Patterns)
+
+4-ESS3-1     Obtain and combine information to describe that energy and fuels are derived from natural
+             resources and how their uses affect the environment. (SEP: 8; DCI: ESS3.A;
+             CCC: Cause/Effect)
+
+4-ESS3-2     Generate and compare multiple solutions to reduce the impacts of natural Earth processes
+             on humans. (SEP: 6; DCI: ESS3.B, ETS1.B; CCC: Cause/Effect) Alignment may include
+             3-5-ETS1-2
+
+
+
+Adopted April 22, 2024                                              South Dakota Science Standards | 21
+Engineering, Technology, and Applications of Science
+Core Ideas
+ETS1: Engineering Design
+        ETS1.A: Defining and Delimiting an Engineering Problem
+        ETS1.B: Developing Possible Solutions
+        ETS1.C: Optimizing the Design Solution
+3-5-ETS1-1 Define a simple design problem reflecting a need or want that includes specified criteria for
+             success and constraints on materials, time, or cost. Alignment may include 3-PS2-4; 3-LS4-4;
+             3-ESS3-1; 4-PS3-4
+
+3-5-ETS1-2 Generate and compare multiple solutions to a problem based on how well each is likely to
+           meet the criteria and constraints of the problem. Alignment may include 4-ESS3-2
+
+3-5-ETS1-3 Plan and carry out fair tests in which variables are controlled and failure points are
+           considered to identify aspects of a model or prototype that can be improved. Alignment
+           may include 4-PS4-3
+
+
+
+
+Adopted April 22, 2024                                             South Dakota Science Standards | 22
+5th Grade Science
+
+Physical Science
+Core Ideas
+PS1: Matter and Its Interactions
+        PS1.A: Structure and Properties of Matter
+        PS1.B: Chemical Reactions
+PS2: Motion and Stability: Forces and Interactions
+        PS2.B: Types of Interactions
+PS3: Energy
+        PS3.D: Energy in Chemical Processes and Everyday Life
+5-PS1-1      Develop a model to describe that matter is made of particles too small to be seen. (SEP: 2;
+             DCI: PS1.A; CCC: Scale/Prop.)
+
+5-PS1-2      Measure and graph quantities to provide evidence that regardless of the type of change
+             that occurs when heating, cooling, or mixing substances, the total mass of matter is
+             conserved. (SEP: 5; DCI: PS1.A, PS1.B; CCC: Scale/Prop.)
+
+5-PS1-3      Make observations and measurements to identify materials based on their properties.
+             (SEP: 3; DCI: PS1.A; CCC: Scale/Prop.)
+
+5-PS1-4      Plan and carry out an investigation to determine if the mixing of two or more substances
+             results in new substances. (SEP: 3; DCI: PS1.B; CCC: Cause/Effect)
+
+5-PS2-1      Support an evidence-based argument that the gravitational force exerted on objects is
+             directed toward the center of the Earth. (SEP: 7; DCI: PS2.B; CCC: Cause/Effect)
+
+5-PS3-1      Use models to describe that energy in animals’ food (used for body repair, growth, motion,
+             and to maintain body warmth) was once energy from the sun. (SEP: 2; DCI: PS3.D, LSI.C;
+             CCC: Energy/Matter)
+
+
+
+
+Life Science
+Core Ideas
+LS1: From Molecules to Organisms: Structures and Processes
+        LS1.C: Organization for Matter and Energy Flow in Organisms
+LS2: Ecosystems: Interactions, Energy, and Dynamics
+        LS2.A: Interdependent Relationships in Ecosystems
+5-LS1-1      Engage in an evidence-based argument that plants get the materials they need for growth
+             chiefly from air and water. (SEP: 7; DCI: LS1.C; CCC: Energy/Matter)
+
+
+
+
+Adopted April 22, 2024                                             South Dakota Science Standards | 23
+5-LS2-1      Develop a model to describe the movement of matter and energy among producers,
+             consumers, decomposers, and the environment. (SEP: 2; DCI: LS2.A, LS2.B; CCC: Systems)
+
+
+
+
+Earth and Space Science
+Core Ideas
+ESS1: Earth’s Place in the Universe
+        ESS1.A: The Universe and Its Stars
+        ESS1.B: Earth and the Solar System
+ESS2: Earth’s Systems
+        ESS2.A: Earth Materials and Systems
+        ESS2.C: The Roles of Water in Earth’s Surface Processes
+ESS3: Earth and Human Activity
+        ESS3.C: Human Impacts on Earth’s Systems
+5-ESS1-1      Support an argument that differences in the apparent brightness of the sun compared to
+              other stars is due to distances from the Earth. (SEP: 7; DCI: ESS1.A; CCC: Scale/Prop.)
+
+5-ESS1-2     Represent data in graphical displays to reveal patterns of daily changes in length and
+             direction of shadows, day and night, and the seasonal appearance of some stars in the night
+             sky. (SEP: 4; DCI: ESS1.B; CCC: Patterns)
+
+5-ESS2-1     Develop a model to describe the interaction of geosphere, biosphere, hydrosphere, and
+             atmosphere. (SEP: 2; DCI: ESS2.A; CCC: Systems)
+
+5-ESS2-2     Describe and graph the amounts and percentages of salt water and fresh water in various
+             reservoirs to provide evidence about the distribution of water on Earth. (SEP: 5;
+             DCI: ESS2.C; CCC: Scale/Prop.)
+
+5-ESS3-1     Obtain and combine information about ways individual communities use science ideas to
+             protect the Earth’s resources and environment. (SEP:8; DCI: ESS3.C; CCC: Systems)
+
+
+
+
+Engineering, Technology, and Applications of Science
+Core Idea
+ETS1: Engineering Design
+3-5-ETS1-1 Define a simple design problem reflecting a need or want that includes specified criteria for
+            success and constraints on materials, time, or cost. Alignment may include 3-PS2-4; 3-LS4-4;
+            3-ESS3-1; 4-PS3-4
+
+3-5-ETS1-2 Generate and compare multiple solutions to a problem based on how well each is likely to
+           meet the criteria and constraints of the problem. Alignment may include 4-ESS3-2
+
+
+
+
+Adopted April 22, 2024                                            South Dakota Science Standards | 24
+3-5-ETS1-3 Plan and carry out fair tests in which variables are controlled and failure points are
+           considered to identify aspects of a model or prototype that can be improved. Alignment
+           may include 4-PS4-3
+
+
+
+
+Adopted April 22, 2024                                          South Dakota Science Standards | 25
+Middle School Science (Grades 6-8)
+Physical Science
+Core Ideas
+PS1: Matter and Its Interactions
+        PS1.A: Structure and Properties of Matter
+        PS1.B: Chemical Reactions
+PS2: Motion and Stability: Forces and Interactions
+        PS2.A: Forces and Motion
+        PS2.B: Types of Interactions
+PS3: Energy
+        PS3.A: Definitions of Energy
+        PS3.B: Conservation of Energy and Energy Transfer
+        PS3.C: Relationship Between Energy and Forces
+PS4: Waves and Their Applications in Technologies for Information Transfer
+        PS4.A: Wave Properties
+        PS4.B: Electromagnetic Radiation
+        PS4.C: Information Technologies and Instrumentation
+MS-PS1-1     Develop models to describe the atomic composition of simple molecules and extended
+             structures. (SEP:2; DCI: PS1.A; CCC: Scale/Prop.)
+
+MS-PS1-2     Analyze and interpret data on the properties of substances before and after the substances
+             interact to determine if a chemical reaction has occurred. (SEP: 8; DCI: PS1.A, PS1.B;
+             CCC: Patterns)
+
+MS-PS1-3     Obtain and evaluate information to describe that synthetic materials come from natural
+             resources and impact society. (SEP: 8; DCI: PS1.A, PS1.B; CCC: Structure/Function)
+
+MS-PS1-4     Develop a model that predicts and describes changes in particle motion, temperature, and
+             state of a pure substance when thermal energy is added or removed. (SEP:2; DCI: PS1.A,
+             PS3.A; CCC: Cause/Effect)
+
+MS-PS1-5     Develop and use a model to describe how the total number of atoms does not change in a
+             chemical reaction and thus mass is conserved. (SEP: 2; DCI: PS1.B; CCC: Energy/Matter)
+
+MS-PS1-6     Design, construct, test, and modify a device that either releases or absorbs thermal energy
+             by chemical processes. (SEP: 6; DCI: PS1.B, ETS1.B, ETS1.C; CCC: Energy/Matter) Alignment
+             may include MS-ETS1-2; MS-ETS1-3; MS-ETS1-4
+
+MS-PS2-1     Design a solution to a problem involving the motion of two colliding objects that illustrates
+             Newton’s Third Law. (SEP: 6; DCI: PS2.A, ETS1.B; CCC: Systems) Alignment may include
+             MS-ETS1-1
+
+
+
+
+Adopted April 22, 2024                                              South Dakota Science Standards | 26
+MS-PS2-2     Plan an investigation to provide evidence that the change in an object’s motion depends on
+             the sum of the forces on the object and the mass of the object. (SEP: 3; DCI: PS2.A;
+             CCC: Stability/Change)
+
+MS-PS2-3     Ask questions about data to determine the factors that affect the strength of electric and
+             magnetic forces. (SEP: 1; DCI: PS2.B; CCC: Cause/Effect)
+
+MS-PS2-4     Construct and present arguments using evidence to support the claim that gravitational
+             interactions are attractive and depend on the masses of interacting objects. (SEP:7;
+             DCI: PS2.B; CCC: Systems)
+
+MS-PS2-5     Conduct an investigation and evaluate the experimental design to provide evidence that
+             fields exist between objects exerting forces on each other when objects are not in contact.
+             (SEP:3; DCI: PS2.B; CCC: Cause/Effect)
+
+MS-PS3-1     Construct and analyze graphical displays of data to describe the relationships of kinetic
+             energy to the mass and to the speed of an object. (SEP:4; DCI: PS3.A; CCC: Scale/Prop.)
+
+MS-PS3-2     Develop a model to describe that when the arrangement of objects interacting at a distance
+             changes, different amounts of potential energy are stored in the system. (SEP:2; DCI: PS3.A,
+             PS3.C; CCC: Systems)
+
+MS-PS3-3     Design, construct, and test a device that either minimizes or maximizes thermal energy
+             transfer. (SEP: 6; DCI: PS3.A, PS3.B, ETS1.A, ETS1.B; CCC: Energy/Matter) May include
+             alignment to MS-ETS1-1 and MS-ETS1-2
+
+MS-PS3-4     Plan an investigation to determine the relationships among the energy transferred, the type
+             of matter, the mass, and the change in the average kinetic energy of the particles as
+             measured by the temperature of the sample. (SEP:3; DCI: PS3.A, PS3.B; CCC: Scale/Prop.)
+
+MS-PS3-5     Engage in argument from evidence to support the claim that when the kinetic energy of an
+             object changes, energy is transferred to or from the object. (SEP: 7; DCI: PS3.B; CCC:
+             Energy/Matter)
+
+MS-PS4-1     Use mathematical representations to describe a simple model for waves that includes how
+             the amplitude of a wave is related to the energy in a wave. (SEP: 5; DCI: PS4.A; CCC:
+             Patterns)
+
+MS-PS4-2     Develop and use a model to describe how waves are reflected, absorbed, or transmitted
+             through various materials. (SEP:2; DCI: PS4.A, PS4.B; CCC: Structure and Function)
+
+MS-PS4-3     Obtain, evaluate and communicate information to support an evidence-based claim for the
+             reliability of digitized signals to encode and transmit information compared to analog
+             signals. (SEP: 8; DCI: PS4.C; CCC: Structure and Function)
+
+
+
+
+Adopted April 22, 2024                                              South Dakota Science Standards | 27
+Life Science
+Core Ideas
+LS1: From Molecules to Organisms: Structures and Processes
+        LS1.A: Structure and Function
+        LS1.B: Growth and Development of Organisms
+        LS1.C: Organization for Matter and Energy Flow in Organisms
+LS2: Ecosystems: Interactions, Energy, and Dynamics
+        LS2.A: Interdependent Relationships in Ecosystems
+        LS2.B: Cycles of Matter and Energy Transfer in Ecosystems
+        LS2.C: Ecosystem Dynamics, Functioning, and Resilience
+LS3: Heredity: Inheritance and Variation of Traits
+        LS3.A: Inheritance of Traits
+        LS3.B: Variation of Traits
+LS4: Biological Unity and Diversity
+        LS4.A: Evidence of Common Ancestry and Diversity
+        LS4.B: Natural Selection
+        LS4.C: Adaptation
+        LS4.D: Biodiversity and Humans
+MS-LS1-1 Plan and carry out an investigation to provide evidence that living things are made of cells;
+              either one cell or many different types and numbers of cells. (SEP: 3; DCI: LS1.A;
+              CCC: Scale/Prop)
+
+MS-LS1-2     Develop and use a model to describe the function of a cell as a whole and ways parts of cells
+             contribute to the function. (SEP: 2; DCI: LS1.A; CCC: Structure/Function)
+
+MS-LS1-3     Construct an evidence-based argument for how the body is a system of interacting
+             subsystems composed of groups of cells, tissues, and organs. (SEP: 7; DCI: LS1.A;
+             CCC: Systems)
+
+MS-LS1-4     Construct an evidence-based argument to support an explanation for a) how characteristic
+             animal behaviors affect the probability of successful reproduction of animals; and b) how
+             specialized structures affect the probability of successful reproduction of plants. (SEP: 7;
+             DCI: LS1.B; CCC: Cause/Effect)
+
+MS-LS1-5     Construct a scientific explanation based on evidence for how environmental and genetic
+             factors influence the growth of organisms. (SEP: 6; DCI: LS1.B; CCC: Cause/Effect)
+
+MS-LS1-6     Construct a scientific explanation based on evidence for the role of photosynthesis in the
+             cycling of matter and flow of energy into and out of organisms. (SEP: 6, Nature
+             Science/Empirical Evidence; DCI: LS1.C, PS3.D; CCC: Energy/Matter)
+
+MS-LS1-7     Develop a model to describe how food is rearranged through chemical reactions forming
+             new molecules that support growth and/or release energy as this matter moves through an
+             organism. (SEP: 2; DCI: LS1.C, PS3.D; CCC: Energy/Matter)
+
+
+
+
+Adopted April 22, 2024                                              South Dakota Science Standards | 28
+MS-LS2-1    Analyze and interpret data to provide evidence for the effects of resource availability on
+            organisms and populations of organisms in an ecosystem. (SEP: 4; DCI: LS2.A;
+            CCC: Cause/Effect)
+
+MS-LS2-2    Construct an explanation that predicts patterns (relationships) of interactions among
+            organisms across multiple ecosystems. (SEP: 6; DCI: LS2.A; CCC: Patterns)
+
+MS-LS2-3    Develop a model to describe the cycling of matter and flow of energy among living and
+            nonliving parts of an ecosystem. (SEP: 2; DCI: LS2.B; CCC: Energy/Matter)
+
+MS-LS2-4    Construct an evidence-based argument that articulates how changes to physical or
+            biological components of an ecosystem affect populations. (SEP: 7; DCI: LS2.C;
+            CCC: Stability/Change)
+
+MS-LS2-5    Evaluate competing design solutions for maintaining biodiversity and ecosystem
+            preservation practices and services. (SEP: 7; DCI: LS2.C, LS4.D, ETS1.B; CCC: Stability/Change)
+            Alignment may include MS-ETS1-2
+
+MS-LS3-1    Develop and use a model to describe why structural changes to genes (mutations) located
+            on chromosomes may affect proteins and may result in harmful, beneficial, or neutral
+            effects to the structure and function of the organism. (SEP:2; DCI: LS3.A, LS3.B;
+            CCC: Structure/Function)
+
+MS-LS3-2    Develop and use a model to describe why asexual reproduction results in offspring with
+            identical genetic information and sexual reproduction results in offspring with genetic
+            variation. (SEP: 2; DCI: LS1.B, LS3.A, LS3.B; CCC: Cause/Effect)
+
+MS-LS4-1    Analyze and interpret data for patterns in the fossil record that document the existence,
+            diversity, extinction, and change of life forms throughout the history of life on Earth. (SEP: 4;
+            DCI: LS4.A; CCC: Patterns)
+
+MS-LS4-2    Apply scientific ideas to construct an explanation for similarities and differences among
+            modern organisms and between modern and fossil organisms to infer evolutionary
+            relationships. (SEP: 6; DCI: LS4.A; CCC: Patterns)
+
+MS-LS4-4    Construct an explanation based on evidence that describes how genetic variations of traits
+            in a population increase some individuals’ probability of surviving and reproducing in a
+            specific environment. (SEP: 6; DCI: LS4.B; CCC: Cause/Effect)
+
+MS-LS4-5    Obtain, evaluate, and communicate information about how technological advances have
+            changed the way humans influence the inheritance of desired traits in organisms. (SEP: 8;
+            DCI: LS4.B, CCC: Cause/Effect) Alignment may include MS-ETS1-1, MS-ETS1-4
+
+MS-LS4-6    Use mathematical representations to support explanations of how natural selection may
+            lead to increases and decreases of specific traits in populations over time. (SEP: 5;
+            DCI: LS4.C; CCC: Cause/Effect)
+
+
+
+
+Adopted April 22, 2024                                               South Dakota Science Standards | 29
+Earth and Space Science
+Core Ideas
+ESS1: Earth’s Place in the Universe
+        ESS1.A: The Universe and Its Stars
+        ESS1.B: Earth and the Solar System
+        ESS1.C: The History of Planet Earth
+ESS2: Earth’s Systems
+        ESS2.A: Earth Materials and Systems
+        ESS2.B: Plate Tectonics and Large-Scale System Interactions
+        ESS2.C: The Roles of Water in Earth’s Surface Processes
+        ESS2.D: Weather and Climate
+ESS3: Earth and Human Activity
+        ESS3.A: Natural Resources
+        ESS3.B: Natural Hazards
+        ESS3.C: Human Impacts on Earth’s Systems
+        ESS3.D: Global Climate Change
+MS-ESS1-1 Develop and use a model of the Earth-sun-moon system to describe the cyclic patterns of
+              lunar phases, eclipses of the sun and moon, and seasons. (SEP: 2; DCI: ESS1.A, ESS1.B;
+              CCC: Patterns)
+
+MS-ESS1-2 Develop and use a model to describe the role of gravity in the motions within galaxies and
+          the solar system. (SEP: 2; DCI: ESS1.A, ESS1.B; CCC: Systems)
+
+MS-ESS1-3 Analyze and interpret data to determine scale properties of objects in the solar system.
+          (SEP: 4; DCI: ESS1.B; CCC: Scale/Prop.)
+
+MS-ESS1-4 Construct a scientific explanation based on evidence from rock strata for how the geologic
+          time scale is used to organize Earth’s 4.6-billion-year-old history. (SEP:6; DCI: ESS1.C;
+          CCC: Scale/Prop.)
+
+MS-ESS2-1 Develop a model to describe the cycling of Earth’s materials and the flow of energy that
+          drives this process. (SEP: 2; DCI: ESS2.A; CCC: Stability/Change)
+
+MS-ESS2-2 Construct an explanation based on evidence for how geoscience processes have changed
+          Earth’s surface at varying time and spatial scales. (SEP: 6; DCI: ESS2.A, ESS2.C;
+          CCC: Scale/Prop.)
+
+MS-ESS2-3 Analyze and interpret data on the age of the Earth, distribution of fossils and rocks,
+          continental shapes, and seafloor structures to provide evidence of the past plate motions.
+          (SEP: 4; DCI: ESS2.B, ESS1.C; CCC: Patterns)
+
+MS-ESS2-4 Develop a model to describe the cycling of water through Earth’s systems driven by energy
+          from the sun and the force of gravity. (SEP: 2; DCI: ESS2.C; CCC: Energy/Matter)
+
+
+
+
+Adopted April 22, 2024                                           South Dakota Science Standards | 30
+MS-ESS2-5 Collect data to provide evidence for how the motions and complex interactions of air
+          masses results in changes in weather conditions. (SEP: 3; DCI: ESS2.C, ESS2.D;
+          CCC: Cause/Effect)
+
+MS-ESS2-6 Develop and use a model to describe how unequal heating and rotation of the Earth cause
+          patterns of atmospheric and oceanic circulation that determine regional climates. (SEP: 2;
+          DCI: ESS2.C, ESS2.D; CCC: Systems)
+
+MS-ESS3-1 Construct a scientific explanation based on evidence for how the uneven distributions of
+          Earth’s mineral, energy, and groundwater resources are the result of past and current
+          geoscience processes. (SEP: 6; DCI: ESS3.A; CCC: Cause/Effect)
+
+MS-ESS3-2 Analyze and interpret data on natural hazards to forecast future catastrophic events and
+          inform the development of technologies to mitigate their effects. (SEP: 4; DCI: ESS3.B;
+          CCC: Patterns)
+
+MS-ESS3-3 Apply scientific principles to design a method for monitoring and minimizing a human
+          impact on the environment. (SEP: 6; DCI: ESS3.C, ETS1.B; CCC: Cause/Effect) Alignment may
+          include MS-ETS1-1
+
+MS-ESS3-4 Construct an argument supported by evidence for how increases in human population and
+          per- capita consumption of natural resources impact Earth’s systems. (SEP: 7; DCI: ESS3.C;
+          CCC: Cause/Effect, Nature Science/Consequence-Actions)
+
+MS-ESS3-5 Ask questions to clarify evidence of the factors that may have caused a change in global
+          temperatures over the past century. (SEP: 1; DCI: ESS3.D; CCC: Stability/Change)
+
+
+
+
+Engineering, Technology, and Applications of Science
+Core Ideas
+ETS1: Engineering Design
+        ETS1.A: Defining and Delimiting an Engineering Problem
+        ETS1.B: Developing Possible Solutions
+        ETS1.C: Optimizing the Design Solution
+MS-ETS1-1 Define the criteria and constraints of a design problem with sufficient precision to ensure a
+             successful solution, considering relevant scientific principles and potential impacts on
+             people and the natural environment that may limit possible solutions. Alignment may
+             include MS-PS2-1; MS-PS3-3; MS-LS4-5
+
+MS-ETS1-2 Evaluate competing design solutions using a systematic process to determine how well they
+          meet the criteria and constraints of the problem. Alignment may include 6-8-PS1-6;
+          MS-PS3-3; MS-LS2-5; MS-ESS3-3
+MS-ETS1-3 Analyze data from tests to determine similarities and differences among several design
+          solutions to identify the best characteristics of each that can be combined into a new
+          solution to better meet the criteria for success. Alignment may include MS-PS1-6
+
+
+Adopted April 22, 2024                                            South Dakota Science Standards | 31
+MS-ETS1-4 Develop a model to generate data for iterative testing and modification of a proposed
+          object, tool, or process such that an optimal design can be achieved. Alignment may include
+          MS-PS1-6; MS-LS4-5
+
+
+
+
+Adopted April 22, 2024                                          South Dakota Science Standards | 32
+High School Science (Grades 9-12)
+
+Physical Science
+Core Ideas
+PS1: Matter and Its Interactions
+        PS1.A: Structure and Properties of Matter
+        PS1.B: Chemical Reactions
+        PS1.C: Nuclear Processes
+PS2: Motion and Stability: Forces and Interactions
+        PS2.A: Forces and Motion
+        PS2.B: Types of Interactions
+PS3: Energy
+        PS3.A: Definitions of Energy
+        PS3.B: Conservation of Energy and Energy Transfer
+        PS3.C: Relationship Between Energy and Forces
+        PS3.D: Energy in Chemical Processes and Everyday Life
+PS4: Waves and Their Applications in Technologies for Information Transfer
+        PS4.A: Wave Properties
+        PS4.B: Electromagnetic Radiation
+        PS4.C: Information Technologies and Instrumentation
+HS-PS1-1     Use the periodic table as a model to predict the relative properties of elements based on
+             the patterns of electrons in the outermost energy level of atoms. (SEP: 2; DCI: PS1.A, PS2.B;
+             CCC: Patterns)
+
+HS-PS1-2     Construct and revise an explanation for the outcome of a simple chemical reaction based on
+             the outermost electron states of atoms, trends in the periodic table, and knowledge of the
+             patterns of chemical properties. (SEP: 6; DCI: PS1.A, PS1.B; CCC: Patterns)
+
+HS-PS1-3     Plan and carry out an investigation to gather evidence to compare the structure of
+             substances at the bulk scale to infer the strength of electrical forces between particles.
+             (SEP: 3; DCI: PS1.A, PS2.B; CCC: Patterns)
+
+HS-PS1-4     Develop a model to illustrate that the release or absorption of energy from a chemical
+             reaction system depends upon the changes in total bond energy. (SEP: 2; DCI: PS1.A, PS1.B;
+             CCC: Energy/Matter)
+
+HS-PS1-5     Construct an explanation based on evidence about the effects of changing the temperature
+             or concentration of the reacting particles on the rate at which a reaction occurs. (SEP: 6;
+             DCI: PS1.B; CCC: Patterns)
+
+HS-PS1-6     Refine the design of a chemical reaction system by specifying a change in conditions that
+             would produce increased amounts of products at equilibrium. (SEP: 6; DCI: PS1.B, ETS1.C;
+             CCC: Stability/Change) Alignment may include HS-ETS1-3
+
+
+Adopted April 22, 2024                                               South Dakota Science Standards | 33
+HS-PS1-7    Use mathematical representations to support the claim that atoms, and therefore mass, are
+            conserved during a chemical reaction. (SEP: 5; DCI: PS1.B; CCC: Energy/Matter, Nature of
+            Science/Consistency)
+
+HS-PS1-8    Develop models to illustrate the changes in the composition of the nucleus of the atom and
+            the energy released during the processes of fission, fusion, and radioactive decay. (SEP: 2;
+            DCI: PS1.C; CCC: Energy/Matter)
+
+HS-PS2-1    Analyze data to support the claim that Newton’s Second Law of motion describes the
+            mathematical relationship among the net force on a macroscopic object, its mass, and its
+            acceleration. (SEP: 4; DCI: PS2.A; CCC: Cause/Effect)
+
+HS-PS2-2    Use mathematical representations to support the claim that the total momentum of a
+            system of objects is conserved when there is no net force on the system. (SEP: 5; DCI: PS2.A;
+            CCC: Systems)
+
+HS-PS2-3    Design, evaluate, and refine a device that minimizes the force on a macroscopic object
+            during a collision. (SEP: 6; DCI: PS2.A, ETS1.A, ETS1.C; CCC: Cause/Effect) Alignment may
+            include HS-ETS1-1, HS-ETS1-3
+
+HS-PS2-4    a) Use mathematical representations of Newton’s Law of Gravitation to describe and predict
+            the gravitational forces between objects; and b) Use mathematical representations of
+            Coulomb’s Law to describe and predict electrostatic force between objects. (SEP: 5;
+            DCI: PS2.B; CCC: Patterns)
+
+HS-PS2-5    Plan and carry out an investigation to provide evidence that an electric current can produce
+            a magnetic field and that a changing magnetic field can produce an electric current. (SEP: 3;
+            DCI: PS2.B, PS3.A; CCC: Cause/Effect)
+
+HS-PS2-6    Communicate scientific and technical information about why the molecular-level structure
+            (intermolecular forces) is important in the functioning of designed materials. (SEP: 8;
+            DCI: PS1.A, PS2.B, ETS1.A; CCC: Structure/Function) Alignment may include
+            HS-ETS1-1
+
+HS-PS3-1    Create a computational model to calculate the change in the energy of one component in a
+            system when the change in energy of the other component(s) and energy flows in and out
+            of the system are known. (SEP: 5; DCI: PS3.A, PS3.B; CCC: Systems)
+
+HS-PS3-2    Develop and use models to illustrate that energy at the macroscopic scale can be accounted
+            for as a combination of energy associated with the motion and relative position of particles
+            (objects). (SEP: 2; DCI: PS3.A; CCC: Energy/Matter)
+
+HS-PS3-3    Design, build, and refine a device that works within given constraints to convert one form of
+            energy into another form of energy. (SEP: 6; DCI: PS3.A, PS3.D, ETS1.A; CCC: Energy/Matter)
+            Alignment may include HS-ETS1-2
+
+HS-PS3-4    Plan and carry out an investigation to provide evidence for the Second Law of
+            Thermodynamics. (SEP: 3; DCI: PS3.B, PS3.D; CCC: Systems)
+
+
+Adopted April 22, 2024                                             South Dakota Science Standards | 34
+HS-PS3-5    Develop and use a model of two objects interacting through electric or magnetic fields to
+            illustrate the forces between objects and the changes in energy of the objects due to the
+            interaction. (SEP: 2; DCI: PS3.C; CCC: Cause/Effect)
+
+HS-PS4-1    Use mathematical representations to support a claim regarding relationships among the
+            frequency, wavelength, and speed of waves traveling in various media. (SEP: 5; DCI: PS4.A;
+            CCC: Cause/Effect)
+
+HS-PS4-2    Evaluate questions about the advantages of using a digital transmission and storage of
+            information. (SEP: 1; DCI: PS4.A; CCC: Stability/Change) Alignment may include HS-ETS1-1
+HS-PS4-3    Evaluate the claims, evidence, and reasoning behind the idea that electromagnetic radiation
+            can be described either by a wave model or a particle model, and that for some situations
+            one model is more useful than the other. (SEP: 7; DCI: PS4.A, PS4.B; CCC: Systems)
+
+HS-PS4-4    Engage in an evidence-based argument for the effects that different frequencies of
+            electromagnetic radiation have when absorbed by matter. (SEP: 7; DCI: PS4.B;
+            CCC: Cause/Effect)
+
+HS-PS4-5    Communicate technical information about how some technological devices use the
+            principles of wave behavior and wave interactions with matter to transmit and capture
+            information and energy. (SEP: 8; DCI: PS3.D, PS4.A, PS4.B, PS4.C, ETS1.A; CCC: Cause/Effect)
+            Alignment may include HS-ETS1-1
+
+
+
+
+Life Science
+Core Ideas
+LS1: From Molecules to Organisms: Structures and Processes
+        LS1.A: Structure and Function
+        LS1.B: Growth and Development of Organisms
+        LS1.C: Organization for Matter and Energy Flow in Organisms
+LS2: Ecosystems: Interactions, Energy, and Dynamics
+        LS2.A: Interdependent Relationships in Ecosystems
+        LS2.B: Cycles of Matter and Energy Transfer in Ecosystems
+        LS2.C: Ecosystem Dynamics, Functioning, and Resilience
+        LS2.D: Social Interactions and Group Behavior
+LS3: Heredity: Inheritance and Variation of Traits
+        LS3.A: Inheritance of Traits
+        LS3.B: Variation of Traits
+LS4: Biological Unity and Diversity
+        LS4.A: Evidence of Common Ancestry and Diversity
+        LS4.B: Natural Selection
+        LS4.C: Adaptation
+        LS4.D: Biodiversity and Humans
+
+
+
+
+Adopted April 22, 2024                                            South Dakota Science Standards | 35
+HS-LS1-1    Construct an evidence-based explanation for how the structure of DNA determines the
+            structure of proteins which carry out the essential functions of life through systems of
+            specialized cells, tissues, and organs. (SEP: 6; DCI: LS1.A; CCC: Structure/Function)
+
+HS-LS1-2    Develop and use a model to illustrate the hierarchical organization of interacting systems
+            that provide specific functions within multicellular organisms. (SEP: 2; DCI: LS1.A;
+            CCC: Systems)
+
+HS-LS1-3    Plan and carry out an investigation to provide evidence that feedback mechanisms maintain
+            homeostasis. (SEP: 3; DCI: LS1.A; CCC: Stability/Change)
+
+HS-LS1-4    Use a model to illustrate the role of cellular division (mitosis) and differentiation in
+            producing and maintaining complex organisms. (SEP: 2; DCI: LS1.B; CCC: Systems)
+
+HS-LS1-5    Use a model to illustrate how photosynthesis transforms light energy into stored chemical
+            energy. (SEP: 2; DCI: LS1.C; CCC: Systems, Energy/Matter)
+
+HS-LS1-6    Construct and revise an explanation based on evidence for how carbon, hydrogen, and
+            oxygen from sugar molecules may combine with other elements to form amino acids and/or
+            other large carbon-based molecules. (SEP: 6; DCI: LS1.C; CCC: Energy/Matter)
+
+HS-LS1-7    Use a model of the major inputs and outputs of cellular respiration (aerobic and anaerobic)
+            to exemplify the chemical process in which the bonds of food molecules are broken, the
+            bonds of new compounds are formed, and a net transfer of energy results. (SEP: 2;
+            DCI: LS1.C; CCC: Energy/Matter)
+
+HS-LS2-1    Use mathematical and/or computational representations to support explanations of factors
+            that affect carrying capacity of ecosystems at different scales. (SEP: 5; DCI: LS2.A;
+            CCC: Scale/Prop.)
+
+HS-LS2-2    Use mathematical representations to support and revise explanations based on evidence
+            about factors affecting biodiversity and populations in ecosystems of different scales.
+            (SEP: 5; DCI: LS2.A, LS2.C; CCC: Scale/Prop.)
+
+HS-LS2-3    Construct and revise an explanation based on evidence for the cycling of matter and flow of
+            energy in aerobic and anaerobic conditions. (SEP:6; DCI: LS2.B; CCC: Energy/Matter)
+
+HS-LS2-4    Use mathematical representations to support claims for the cycling of matter and flow of
+            energy among organisms in an ecosystem. (SEP: 5; DCI: LS2.B; CCC: Energy/Matter)
+
+HS-LS2-5    Develop a model to illustrate the role of photosynthesis and cellular respiration in the
+            cycling of carbon among the biosphere, atmosphere, hydrosphere, and geosphere. (SEP: 2;
+            DCI: LS2.B, PS3.D; CCC: Systems)
+
+HS-LS2-6    Evaluate the claims, evidence, and reasoning that the complex interactions in ecosystems
+            maintain relatively consistent numbers and types of organisms under stable conditions;
+            however, moderate to extreme fluctuations in conditions may result in new ecosystems.
+            (SEP: 7; DCI: LS2.C; CCC: Stability/Change)
+
+
+
+Adopted April 22, 2024                                               South Dakota Science Standards | 36
+HS-LS2-7    Design, evaluate, and refine a solution for reducing the impacts of human activities on the
+            environment and biodiversity. (SEP: 6; DCI: LS2.C, LS4.D, ETS1.B, ETS1.C;
+            CCC: Stability/Change) Alignment may include HS-ETS1-2 and HS-ETS1-3
+
+HS-LS2-8    Evaluate the evidence for the role of group behavior on individual and species’ chances to
+            survive and reproduce. (SEP: 7; DCI: LS2.D; CCC: Cause/Effect)
+
+HS-LS3-1    Ask questions to clarify relationships about the role of DNA and chromosomes in coding the
+            instructions for characteristic traits passed from parents to offspring. (SEP: 1; DCI: LS1.A,
+            LS3.A; CCC: Cause/Effect)
+
+HS-LS3-2    Make and defend a claim based on evidence that inheritable genetic variations may result
+            from: (1) new genetic combinations through meiosis, (2) viable errors occurring during
+            replication, and/or (3) mutations caused by environmental factors. (SEP: 7; DCI: LS3.B;
+            CCC: Cause/Effect)
+
+HS-LS3-3    Apply concepts of statistics and probability to explain the variation and distribution of
+            expressed traits in a population. (SEP: 4; DCI: LS3.B; CCC: Scale/Prop.)
+
+HS-LS4-1    Communicate scientific information that common ancestry and biological evolution are
+            supported by multiple lines of empirical evidence. (SEP: 8; DCI: LS4.A; CCC: Patterns)
+
+HS-LS4-2    Construct an explanation based on evidence that the process of evolution primarily results
+            from four factors: (1) the potential for a species to increase in number, (2) the heritable
+            genetic variation of individuals in a species due to mutation and sexual reproduction, (3)
+            competition for limited resources, and (4) the proliferation of those organisms that are
+            better able to survive and reproduce in the environment. (SEP: 6; DCI: LS4.B, LS4.C;
+            CCC: Cause/Effect)
+
+HS-LS4-3    Apply concepts of statistics and probability to support explanations that organisms with an
+            advantageous heritable trait tend to increase in proportion to organisms lacking this trait.
+            (SEP: 4; DCI: LS4.B, LS4.C; CCC: Patterns)
+
+HS-LS4-4    Construct an explanation based on evidence for how natural selection leads to adaptation of
+            populations. (SEP: 6; DCI: LS4.C; CCC: Cause/Effect)
+
+HS-LS4-5    Evaluate the evidence supporting claims that changes in environmental conditions may
+            result in: (1) increases in the number of individuals of some species, (2) the emergence of
+            new species over time, and (3) the extinction of other species. (SEP: 7; DCI: LS4.C;
+            CCC: Cause/Effect)
+
+HS-LS4-6    Use a simulation to research and analyze possible solutions for the adverse impacts of
+            human activity on biodiversity. (SEP: 5; DCI: LS4.C, LS4.D, ETS1.B; CCC: Cause/Effect)
+            Alignment may include HS-ETS1-3, HS-ETS1-4
+
+
+
+
+Adopted April 22, 2024                                              South Dakota Science Standards | 37
+Earth and Space Science
+Core Ideas
+ESS1: Earth’s Place in the Universe
+        ESS1.A: The Universe and Its Stars
+        ESS1.B: Earth and the Solar System
+        ESS1.C: The History of Planet Earth
+ESS2: Earth’s Systems
+        ESS2.A: Earth Materials and Systems
+        ESS2.B: Plate Tectonics and Large-Scale System Interactions
+        ESS2.D: Weather and Climate
+ESS3: Earth and Human Activity
+        ESS3.A: Natural Resources
+        ESS3.B: Natural Hazards
+        ESS3.C: Human Impacts on Earth’s Systems
+        ESS3.D: Global Climate Change
+HS-ESS1-1      Develop a model based on evidence to illustrate the life span of the sun and the role of
+               nuclear fusion in the sun’s core to release energy that eventually reaches Earth in the form
+               of radiation. (SEP: 2; DCI: ESS1.A, PS3.D; CCC: Scale/Prop.)
+
+HS-ESS1-2     Construct an explanation of the Big Bang Theory based on astronomical evidence of light
+              spectra, motion of distant galaxies, and composition of matter in the universe. (SEP: 6;
+              DCI: PS4.B, ESS1.A; CCC: Energy/Matter)
+
+HS-ESS1-3     Communicate scientific ideas about the way stars, over their life cycle, produce elements.
+              (SEP: 8; DCI: ESS1.A; CCC: Energy/Matter)
+
+HS-ESS1-4     Use mathematical or computational representations to predict the motion of orbiting
+              objects in the solar system. (SEP: 5; DCI: ESS1.B; CCC: Scale/Prop.)
+
+HS-ESS1-5     Evaluate evidence of the past and current movements of continental and oceanic crust and
+              the theory of plate tectonics to explain the ages of crustal rocks. (SEP: 7; DCI: ESS1.C,
+              ESS2.B, PS1.C; CCC: Patterns)
+
+HS-ESS1-6     Apply scientific reasoning and evidence from ancient Earth materials, meteorites, and
+              other planetary surfaces to construct an account of Earth’s formation and early history.
+              (SEP: 6; DCI: ESS1.C, PS1.C; CCC: Stability/Change)
+
+HS-ESS2-1     Develop a model to illustrate how Earth’s internal and surface processes operate at
+              different spatial and temporal scales to form continental and ocean-floor features. (SEP:2;
+              DCI: ESS2.B; CCC: Stability/Change)
+
+HS-ESS2-2     Analyze geoscience data to make the claim that one change to Earth’s surface can create
+              feedback that cause changes to other Earth systems. (SEP: 2; DCI: ESS2.A, ESS2.B;
+              CCC: Stability/Change)
+
+
+
+
+Adopted April 22, 2024                                              South Dakota Science Standards | 38
+HS-ESS2-3    Develop a model based on evidence of Earth’s interior to describe the cycling of matter by
+             thermal convection. (SEP: 4; DCI: ESS2.A, ESS2.D; CCC: Stability/Change)
+
+HS-ESS2-4    Use a model to describe how variations in the flow of energy into and out of Earth’s
+             systems result in changes in climate. (SEP: 2; DCI: ESS2.A, ESS2.B, PS4.A;
+             CCC: Energy/Matter)
+
+HS-ESS2-5    Plan and carry out an investigation of the properties of water and its effects on Earth’s
+             materials and surface processes. (SEP: 2; DCI: ESS1.B, ESS2.A, ESS2.D; CCC: Cause/Effect)
+
+HS-ESS3-1    Construct an explanation based on evidence for how the availability of natural resources,
+             occurrence of natural hazards, and changes in climate have influenced human activity.
+             (SEP: 6; DCI: ESS3.A, ESS3.B; CCC: Cause/Effect)
+
+HS-ESS3-2    Evaluate competing design solutions for developing, managing, and utilizing energy and
+             mineral resources based on cost-benefit ratios. (SEP: 7; DCI: ESS3.A, ETS1.B; CCC: Energy
+             and Matter) Alignment may include HS-ETS1-3
+
+HS-ESS3-3    Create a computational simulation to illustrate the relationships among management of
+             natural resources, the sustainability of human populations, and biodiversity. (SEP: 5;
+             DCI: ESS3.C; CCC: Stability/Change)
+
+HS-ESS3-4    Evaluate or refine a technological solution that reduces impacts of human activities on
+             natural systems. (SEP: 6; DCI: ESS3.C, ETS1.B; CCC: Stability/Change) Alignment may include
+             HS-ETS1-3
+
+HS-ESS3-5    Analyze geoscience data and the results from global climate models to make an evidence-
+             based forecast of the current rate of global or regional climate change and associated
+             future impacts to Earth systems. (SEP: 4; DCI: ESS3.D; CCC: Stability/Change)
+
+HS-ESS3-6    Use a computational representation to illustrate the relationships among Earth systems
+             and how those relationships are being modified due to human activity. (SEP: 5; DCI: ESS2.D,
+             ESS3.D; CCC: Systems)
+
+
+
+
+Engineering, Technology, and Applications of Science
+Core Ideas
+ETS1: Engineering Design
+        ETS1.A: Defining and Delimiting an Engineering Problem
+        ETS1.B: Developing Possible Solutions
+        ETS1.C: Optimizing the Design Solution
+
+HS-ETS1-1    Analyze a major global challenge to specify qualitative and quantitative criteria for
+             constraints for solutions that account for societal needs and wants. Alignment may include
+             HS-PS2-3; HS-PS2-6; HS-PS4-2; HS-PS4-5
+
+
+
+Adopted April 22, 2024                                            South Dakota Science Standards | 39
+HS-ETS1-2    Design a solution to complex real-world problems by breaking it down into smaller, more
+             manageable problems that can be solved through engineering. Alignment may include
+             HS-LS2-7; HS-PS3-3
+HS-ETS1-3    Evaluate a solution to a complex real-word problem based on prioritized criteria and trade-
+             offs that account for a range of constraints, including cost, safety, reliability, and
+             aesthetics, as well as social, cultural, and environmental impacts. Alignment may include
+             HS-PS1-6; HS-PS2-3; HS-LS2-7; HS-LS4-6; HS-ESS3-2; HS-ESS3-4
+HS-ETS1-4    Use a computer simulation to model the impact of proposed solutions to a complex real-
+             world problem with numerous criteria and constraints on interactions within and between
+             systems relevant to the problem. Alignment may include HS-LS4-6
+
+
+
+
+Adopted April 22, 2024                                            South Dakota Science Standards | 40
+

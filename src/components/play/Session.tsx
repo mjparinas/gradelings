@@ -465,7 +465,7 @@ function Runner({ plan }: { plan: Plan }) {
           )}
           {q.visual && (
             <div className="flex animate-rise-in justify-center" style={{ animationDelay: "80ms" }}>
-              <div lang={q.visualLang}>
+              <div lang={q.visualLang} className="min-w-0 max-w-full">
                 <QuestionVisual visual={q.visual} />
               </div>
             </div>
