@@ -59,6 +59,7 @@ import { manifest as washington } from "./washington/manifest";
 import { manifest as washingtonDc } from "./washington-dc/manifest";
 import { manifest as westVirginia } from "./west-virginia/manifest";
 import { manifest as wisconsin } from "./wisconsin/manifest";
+import { manifest as wyoming } from "./wyoming/manifest";
 import { manifest as yukon } from "./yukon/manifest";
 import type { FrameworkManifest } from "./manifest";
 
@@ -132,6 +133,7 @@ const MANIFESTS = [
   washingtonDc,
   westVirginia,
   wisconsin,
+  wyoming,
   yukon,
 ] as const satisfies readonly FrameworkManifest[];
 
