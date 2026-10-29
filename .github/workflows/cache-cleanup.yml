@@ -1,0 +1,46 @@
+name: Cache cleanup
+
+# The repository's cache space is 10 GB and every pull request run can add to it, which pushes out the node_modules and
+# browser caches every job restores. This deletes the caches a pull request made once it is closed, and, once a week,
+# any cache made on a pull request branch more than 3 days ago (main's caches, which pull requests restore, are kept).
+
+on:
+  pull_request:
+    types: [closed]
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  closed:
+    name: Delete a closed pull request's caches
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+      REF: refs/pull/${{ github.event.pull_request.number }}/merge
+    steps:
+      - run: |
+          ids=$(gh api --paginate "repos/${{ github.repository }}/actions/caches?ref=$REF&per_page=100" --jq '.actions_caches[].id')
+          for id in $ids; do gh api -X DELETE "repos/${{ github.repository }}/actions/caches/$id" --silent && echo "deleted $id"; done
+          echo "done"
+
+  stale:
+    name: Delete old pull request caches
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - run: |
+          cutoff=$(date -u -d '3 days ago' +%Y-%m-%dT%H:%M:%SZ)
+          ids=$(gh api --paginate "repos/${{ github.repository }}/actions/caches?per_page=100" \
+            --jq ".actions_caches[] | select(.ref | startswith(\"refs/pull/\")) | select(.last_accessed_at < \"$cutoff\") | .id")
+          for id in $ids; do gh api -X DELETE "repos/${{ github.repository }}/actions/caches/$id" --silent && echo "deleted $id"; done
+          echo "done"

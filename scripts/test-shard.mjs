@@ -21,7 +21,8 @@ if (!Number.isInteger(index) || !Number.isInteger(count) || index < 1 || index >
 const weights = JSON.parse(readFileSync(new URL("./test-weights.json", import.meta.url), "utf8"));
 const files = execFileSync("npx", ["vitest", "list", "--filesOnly"], { encoding: "utf8", maxBuffer: 1 << 26 })
   .split("\n")
-  .map((l) => l.trim())
+  // With projects, each line starts with the project name: "[content] src/content/a.test.ts".
+  .map((l) => l.trim().replace(/^\[[^\]]+\]\s*/, ""))
   .filter((l) => /\.test\.tsx?$/.test(l));
 const weight = (f) => (typeof weights[f] === "number" ? weights[f] : 1);
 
