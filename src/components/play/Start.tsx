@@ -305,7 +305,8 @@ export function NewChild({ onDone, onCancel, first = false, preset = null }: { o
                 aria-pressed={grade === g}
                 onClick={() => setGrade(g)}
                 className={`btn h-16 min-w-16 px-4 text-2xl ${grade === g ? "btn-good scale-110" : ""}`}
-                aria-label={gradeLabel(g, frameworkId)}
+                // The name must contain the visible text (WCAG 2.5.3), and "Pre-K" doesn't contain "PK".
+                aria-label={gradeLabel(g, frameworkId).includes(GRADE_SHORT[g]) ? gradeLabel(g, frameworkId) : `${GRADE_SHORT[g]}, ${gradeLabel(g, frameworkId)}`}
               >
                 {GRADE_SHORT[g]}
               </button>
