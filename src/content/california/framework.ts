@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // California, the third US state. Standards are the California Department of Education's (CDE): the California Common
 // Core State Standards for Mathematics (2013) and for English Language Arts & Literacy (2013), the Next Generation
@@ -76,9 +77,10 @@ export const CALIFORNIA: Framework = {
   standardLabel: "Learning standard",
   sourceName: "California Department of Education (CDE)",
   sourceUrl: "https://www.cde.ca.gov/be/st/ss/",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  preKName: "Transitional Kindergarten",
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding California report cards",
     intro:

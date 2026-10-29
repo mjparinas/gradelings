@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Texas, the fourth US state. Standards are the Texas Essential Knowledge and Skills (TEKS), adopted by the State Board
 // of Education and published by the Texas Education Agency (TEA) in 19 Texas Administrative Code Chapters 110 (English
@@ -74,9 +75,9 @@ export const TEXAS: Framework = {
   standardLabel: "TEKS student expectation",
   sourceName: "Texas Education Agency (TEA)",
   sourceUrl: "https://tea.texas.gov/curriculum-and-instruction/texas-essential-knowledge-and-skills-teks",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Texas report cards",
     intro:

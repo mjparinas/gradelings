@@ -1,0 +1,510 @@
+{
+ "pk/math": [
+  {
+   "idx": "PK4.V.A.1",
+   "text": "Child rote counts from 1 to 30."
+  },
+  {
+   "idx": "PK4.V.A.2",
+   "text": "Child counts up to 10 objects with one-to-one correspondence."
+  },
+  {
+   "idx": "PK4.V.A.3",
+   "text": "Child counts up to 10 items and demonstrates cardinality by communicating that the last number indicates how many items are in the set."
+  },
+  {
+   "idx": "PK4.V.A.4",
+   "text": "Child instantly recognizes the quantity of up to 6 objects without counting (subitizes)."
+  },
+  {
+   "idx": "PK4.V.A.5",
+   "text": "Child recognizes numerals 0-10."
+  },
+  {
+   "idx": "PK4.V.A.6",
+   "text": "Child represents quantities up to 10."
+  },
+  {
+   "idx": "PK4.V.A.7",
+   "text": "Child begins to understand that numbers 0-10 can be composed and decomposed in various ways to represent a quantity."
+  },
+  {
+   "idx": "PK4.V.A.8",
+   "text": "Child compares sets of objects up to 10 using comparative language (e.g., greater/more than, less/fewer than, equal to/same number of)."
+  },
+  {
+   "idx": "PK4.V.B.1",
+   "text": "Child uses objects, pictorial models, and/or a verbal word problem to represent adding up to 5 objects."
+  },
+  {
+   "idx": "PK4.V.B.2",
+   "text": "Child uses objects, pictorial models, and/or a verbal word problem to represent subtracting objects from a set of 5."
+  },
+  {
+   "idx": "PK4.V.C.1",
+   "text": "Child names and describes common 2D shapes and names at least 1 solid 3D shape."
+  },
+  {
+   "idx": "PK4.V.C.2",
+   "text": "Child creates shapes using materials and/or manipulatives."
+  },
+  {
+   "idx": "PK4.V.C.3",
+   "text": "Child demonstrates use of position words."
+  },
+  {
+   "idx": "PK4.V.C.4",
+   "text": "Child recognizes common shapes, regardless of orientation and size."
+  },
+  {
+   "idx": "PK4.V.D.1",
+   "text": "Child recognizes and compares heights or lengths of people or objects."
+  },
+  {
+   "idx": "PK4.V.D.2",
+   "text": "Child recognizes and compares capacity based on how much space exists within an object."
+  },
+  {
+   "idx": "PK4.V.D.3",
+   "text": "Child recognizes and compares weights of objects."
+  },
+  {
+   "idx": "PK4.V.D.4",
+   "text": "Child uses language to describe concepts associated with the passing of time within a day."
+  },
+  {
+   "idx": "PK4.V.E.1",
+   "text": "Child sorts objects that are the same and different into groups and uses language to describe how the groups are similar and different."
+  },
+  {
+   "idx": "PK4.V.E.2",
+   "text": "Child collects data and organizes it in a graphic representation."
+  },
+  {
+   "idx": "PK4.V.E.3",
+   "text": "Child recognizes, duplicates, extends, and creates patterns."
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "PK4.II.A.1",
+   "text": "Child shows understanding by responding appropriately to what has been communicated by adults and peers."
+  },
+  {
+   "idx": "PK4.II.A.2",
+   "text": "Child shows understanding by following three‐step verbal directions."
+  },
+  {
+   "idx": "PK4.II.B.1",
+   "text": "Child uses language for multiple purposes."
+  },
+  {
+   "idx": "PK4.II.B.2",
+   "text": "Child engages in conversations in appropriate ways, demonstrating knowledge of verbal and nonverbal conversational rules."
+  },
+  {
+   "idx": "PK4.II.B.3",
+   "text": "Child provides appropriate information in various situations."
+  },
+  {
+   "idx": "PK4.II.B.4",
+   "text": "Child matches language to social contexts."
+  },
+  {
+   "idx": "PK4.II.C.1",
+   "text": "Child’s speech is understood by both familiar and unfamiliar adults and peers."
+  },
+  {
+   "idx": "PK4.II.C.2",
+   "text": "Child demonstrates growing understanding of the intonation of language."
+  },
+  {
+   "idx": "PK4.II.D.1",
+   "text": "Child understands (receptive) and uses (expressive) a wide variety of words to label, describe and make connections among objects, people, places, actions, and events."
+  },
+  {
+   "idx": "PK4.II.D.2",
+   "text": "Child understands (receptive) and uses (expressive) the instructional language of the classroom."
+  },
+  {
+   "idx": "PK4.II.D.3",
+   "text": "Child consistently understands (receptive) and uses (expressive) new vocabulary acquired through books, conversations, and play."
+  },
+  {
+   "idx": "PK4.II.E.1",
+   "text": "Child typically uses complete sentences of four or more words with age- appropriate grammatical complexity, usually in standard word order."
+  },
+  {
+   "idx": "PK4.II.E.2",
+   "text": "Child correctly uses regular and irregular plurals, regular past tense, personal and possessive pronouns, and subject‐verb agreement."
+  },
+  {
+   "idx": "PK4.II.E.3",
+   "text": "Child uses sentences that combine multiple phrases or ideas."
+  },
+  {
+   "idx": "PK4.II.E.4",
+   "text": "Child uses sentences that provide many details, remains on topic, and clearly communicates intended meaning."
+  },
+  {
+   "idx": "PK4.III.A.1",
+   "text": "Child engages in story-related pre‐reading activities."
+  },
+  {
+   "idx": "PK4.III.A.2",
+   "text": "Child self‐selects books and other written materials to engage in pre‐reading behaviors."
+  },
+  {
+   "idx": "PK4.III.A.3",
+   "text": "Child recognizes that all print carries meaning and serves as a means for communication."
+  },
+  {
+   "idx": "PK4.III.B.1",
+   "text": "Child identifies the individual words in a spoken sentence."
+  },
+  {
+   "idx": "PK4.III.B.2",
+   "text": "Child distinguishes differences between similar-sounding words."
+  },
+  {
+   "idx": "PK4.III.B.3",
+   "text": "Child uses two familiar base words to form a compound word with pictorial or gestural supports."
+  },
+  {
+   "idx": "PK4.III.B.4",
+   "text": "Child manipulates compound words with pictorial or gestural support."
+  },
+  {
+   "idx": "PK4.III.B.5",
+   "text": "Child begins to blend and segment syllables in multisyllabic words."
+  },
+  {
+   "idx": "PK4.III.B.6",
+   "text": "Child identifies rhyming words."
+  },
+  {
+   "idx": "PK4.III.B.7",
+   "text": "Child identifies alliterative words with pictorial support."
+  },
+  {
+   "idx": "PK4.III.B.8",
+   "text": "Child identifies a familiar one-syllable word that is segmented by onset and rime (in English only)."
+  },
+  {
+   "idx": "PK4.III.B.9",
+   "text": "Child blends and segments one-syllable words by phonemes with visual or gestural support."
+  },
+  {
+   "idx": "PK4.III.C.1",
+   "text": "Child recognizes and names at least 20 letters (upper- or lower-case letters)."
+  },
+  {
+   "idx": "PK4.III.C.2",
+   "text": "Child recognizes at least 20 distinct letter-sound correspondences."
+  },
+  {
+   "idx": "PK4.III.C.3",
+   "text": "Child produces at least 20 distinct letter-sound correspondences."
+  },
+  {
+   "idx": "PK4.III.D.1",
+   "text": "Child retells or re‐enacts a story with a clear beginning, middle, and end."
+  },
+  {
+   "idx": "PK4.III.D.2",
+   "text": "Child uses information learned from books by describing, relating, categorizing, or comparing and contrasting."
+  },
+  {
+   "idx": "PK4.III.D.3",
+   "text": "Child asks and responds to questions relevant to the text read aloud."
+  },
+  {
+   "idx": "PK4.III.D.4",
+   "text": "Child makes inferences and predictions about a text."
+  },
+  {
+   "idx": "PK4.III.E.1",
+   "text": "Child can distinguish between elements of print including letters, words, and pictures."
+  },
+  {
+   "idx": "PK4.III.E.2",
+   "text": "Child holds books right side up and demonstrates understanding of print directionality (e.g., knows where a book starts and ends, turns pages, points to words left to right, top to bottom, with correct sweeping)."
+  },
+  {
+   "idx": "PK4.III.E.3",
+   "text": "Child can identify some conventional features of print that communicate meaning including end punctuation and case."
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "PK4.VI.A.1",
+   "text": "Child observes, investigates, describes, and discusses characteristics of common objects."
+  },
+  {
+   "idx": "PK4.VI.A.2",
+   "text": "Child observes, investigates, describes, and discusses position and motion of objects."
+  },
+  {
+   "idx": "PK4.VI.A.3",
+   "text": "Child uses simple scientific tools to learn about objects."
+  },
+  {
+   "idx": "PK4.VI.A.4",
+   "text": "Child observes, investigates, describes, and discusses sources of energy including light, heat, and electricity."
+  },
+  {
+   "idx": "PK4.VI.B.1",
+   "text": "Child observes, investigates, describes, and discusses the characteristics of organisms."
+  },
+  {
+   "idx": "PK4.VI.B.2",
+   "text": "Child observes, describes, and discusses the life cycles of organisms."
+  },
+  {
+   "idx": "PK4.VI.B.3",
+   "text": "Child observes, investigates, describes, and discusses the relationship of organisms in their environments."
+  },
+  {
+   "idx": "PK4.VI.C.1",
+   "text": "Child observes, investigates, describes, and discusses earth materials, and their properties and uses."
+  },
+  {
+   "idx": "PK4.VI.C.2",
+   "text": "Child identifies, observes, describes, and discusses objects in the sky."
+  },
+  {
+   "idx": "PK4.VI.C.3",
+   "text": "Child observes and describes what happens during changes in the earth and sky."
+  },
+  {
+   "idx": "PK4.VI.C.4",
+   "text": "Child demonstrates an understanding of the importance of caring for our environment and our planet."
+  },
+  {
+   "idx": "PK4.IX.A.1",
+   "text": "Child demonstrates coordination and balance in isolation."
+  },
+  {
+   "idx": "PK4.IX.A.2",
+   "text": "Child coordinates sequence of movements to perform tasks."
+  },
+  {
+   "idx": "PK4.IX.B.1",
+   "text": "Child shows control of tasks that require small-muscle strength and control."
+  },
+  {
+   "idx": "PK4.IX.B.2",
+   "text": "Child shows increasing control of tasks that require eye-hand coordination."
+  },
+  {
+   "idx": "PK4.IX.C.1",
+   "text": "Child practices good habits of personal safety."
+  },
+  {
+   "idx": "PK4.IX.C.2",
+   "text": "Child practices good habits of personal health and hygiene."
+  },
+  {
+   "idx": "PK4.IX.C.3",
+   "text": "Child identifies good habits of nutrition and exercise."
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "PK4.I.A.1",
+   "text": "Child is aware of where own body is in space and respects personal boundaries."
+  },
+  {
+   "idx": "PK4.I.A.2",
+   "text": "Child shows self-awareness of physical attributes, personal preferences, and own abilities."
+  },
+  {
+   "idx": "PK4.I.A.3",
+   "text": "Child shows reasonable opinion of his own abilities and limitations."
+  },
+  {
+   "idx": "PK4.I.A.4",
+   "text": "Child shows initiative in trying new activities and demonstrates perseverance when attempting to overcome obstacles or challenges."
+  },
+  {
+   "idx": "PK4.I.B.1.a",
+   "text": "Child follows classroom rules and routines with occasional reminders from adults."
+  },
+  {
+   "idx": "PK4.I.B.1.b",
+   "text": "Child takes care of and manages classroom materials."
+  },
+  {
+   "idx": "PK4.I.B.1.c",
+   "text": "Child regulates own behavior with occasional reminders or assistance from adults."
+  },
+  {
+   "idx": "PK4.I.B.2.a",
+   "text": "Child begins to understand the connection between emotions and behaviors."
+  },
+  {
+   "idx": "PK4.I.B.2.b",
+   "text": "Child uses verbal and nonverbal communication to communicate basic emotions and feelings."
+  },
+  {
+   "idx": "PK4.I.B.2.c",
+   "text": "Child is able to manage intensity of emotions more consistently, although adult guidance is sometimes necessary."
+  },
+  {
+   "idx": "PK4.I.B.3.a",
+   "text": "Child sustains attention to personally chosen or routine (teacher-directed) tasks until completed."
+  },
+  {
+   "idx": "PK4.I.B.3.b",
+   "text": "Child remains focused on engaging, teacher-led group activities for up to 20 minutes."
+  },
+  {
+   "idx": "PK4.I.C.1",
+   "text": "Child uses effective verbal and nonverbal communication skills to build relationships with adults and peers."
+  },
+  {
+   "idx": "PK4.I.C.2",
+   "text": "Child assumes various roles and responsibilities as part of the classroom community."
+  },
+  {
+   "idx": "PK4.I.C.3",
+   "text": "Child shows competence in initiating social interactions."
+  },
+  {
+   "idx": "PK4.I.C.4",
+   "text": "Child increasingly interacts with peers during cooperative play scenarios that share a common plan and goal."
+  },
+  {
+   "idx": "PK4.I.C.5",
+   "text": "Child initiates problem‐solving strategies when experiencing conflicts with others and seeks adult support when necessary."
+  },
+  {
+   "idx": "PK4.I.C.6",
+   "text": "Child demonstrates empathy and caring for others."
+  },
+  {
+   "idx": "PK4.I.C.7",
+   "text": "Child interacts with peers and has preferred friends."
+  },
+  {
+   "idx": "PK4.I.D.1",
+   "text": "Child demonstrates an understanding that others have perspectives and feelings that are similar and/or different from her own."
+  },
+  {
+   "idx": "PK4.VI.A.1",
+   "text": "Child observes, investigates, describes, and discusses characteristics of common objects."
+  },
+  {
+   "idx": "PK4.VI.A.2",
+   "text": "Child observes, investigates, describes, and discusses position and motion of objects."
+  },
+  {
+   "idx": "PK4.VI.A.3",
+   "text": "Child uses simple scientific tools to learn about objects."
+  },
+  {
+   "idx": "PK4.VI.A.4",
+   "text": "Child observes, investigates, describes, and discusses sources of energy including light, heat, and electricity."
+  },
+  {
+   "idx": "PK4.VI.B.1",
+   "text": "Child observes, investigates, describes, and discusses the characteristics of organisms."
+  },
+  {
+   "idx": "PK4.VI.B.2",
+   "text": "Child observes, describes, and discusses the life cycles of organisms."
+  },
+  {
+   "idx": "PK4.VI.B.3",
+   "text": "Child observes, investigates, describes, and discusses the relationship of organisms in their environments."
+  },
+  {
+   "idx": "PK4.VI.C.1",
+   "text": "Child observes, investigates, describes, and discusses earth materials, and their properties and uses."
+  },
+  {
+   "idx": "PK4.VI.C.2",
+   "text": "Child identifies, observes, describes, and discusses objects in the sky."
+  },
+  {
+   "idx": "PK4.VI.C.3",
+   "text": "Child observes and describes what happens during changes in the earth and sky."
+  },
+  {
+   "idx": "PK4.VI.C.4",
+   "text": "Child demonstrates an understanding of the importance of caring for our environment and our planet."
+  },
+  {
+   "idx": "PK4.VII.A.1",
+   "text": "Child identifies similarities and differences between himself, classmates, and other people through specific characteristics and cultural influences."
+  },
+  {
+   "idx": "PK4.VII.A.2",
+   "text": "Child identifies similarities and differences in characteristics of families."
+  },
+  {
+   "idx": "PK4.VII.A.3",
+   "text": "Child connects his life to events, time, and routines."
+  },
+  {
+   "idx": "PK4.VII.B.1",
+   "text": "Child demonstrates an understanding that all people need food, clothing, and shelter."
+  },
+  {
+   "idx": "PK4.VII.B.2",
+   "text": "Child demonstrates an understanding of what it means to be a consumer."
+  },
+  {
+   "idx": "PK4.VII.B.3",
+   "text": "Child discusses the roles and responsibilities of family, school, and community helpers."
+  },
+  {
+   "idx": "PK4.VII.C.1",
+   "text": "Child identifies and creates common geographic features."
+  },
+  {
+   "idx": "PK4.VII.C.2",
+   "text": "Child explores geography tools and resources."
+  },
+  {
+   "idx": "PK4.VII.D.1",
+   "text": "Child identifies the United States and Texas flag."
+  },
+  {
+   "idx": "PK4.VII.D.2",
+   "text": "Child recites the Pledge of Allegiance to the United States flag and the Texas flag and observes a moment of silence."
+  },
+  {
+   "idx": "PK4.VII.D.3",
+   "text": "The child engages in voting as a method for group decision‐making."
+  },
+  {
+   "idx": "PK4.IX.A.1",
+   "text": "Child demonstrates coordination and balance in isolation."
+  },
+  {
+   "idx": "PK4.IX.A.2",
+   "text": "Child coordinates sequence of movements to perform tasks."
+  },
+  {
+   "idx": "PK4.IX.B.1",
+   "text": "Child shows control of tasks that require small-muscle strength and control."
+  },
+  {
+   "idx": "PK4.IX.B.2",
+   "text": "Child shows increasing control of tasks that require eye-hand coordination."
+  },
+  {
+   "idx": "PK4.IX.C.1",
+   "text": "Child practices good habits of personal safety."
+  },
+  {
+   "idx": "PK4.IX.C.2",
+   "text": "Child practices good habits of personal health and hygiene."
+  },
+  {
+   "idx": "PK4.IX.C.3",
+   "text": "Child identifies good habits of nutrition and exercise."
+  }
+ ]
+}

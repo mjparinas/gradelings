@@ -1,0 +1,126 @@
+{
+ "pk/math": [
+  {
+   "idx": "Learning about my world: Knowledge (cognition)",
+   "text": "Knowledge (cognition)"
+  },
+  {
+   "idx": "Learning about my world: Math",
+   "text": "Math"
+  },
+  {
+   "idx": "Learning about my world: Science",
+   "text": "Science"
+  },
+  {
+   "idx": "Learning about my world: Social Studies",
+   "text": "Social Studies"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "Communicating (literacy): Speaking and listening (language development)",
+   "text": "Speaking and listening (language development)"
+  },
+  {
+   "idx": "Communicating (literacy): Reading",
+   "text": "Reading"
+  },
+  {
+   "idx": "Communicating (literacy): Writing",
+   "text": "Writing"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "Learning about my world: Knowledge (cognition)",
+   "text": "Knowledge (cognition)"
+  },
+  {
+   "idx": "Learning about my world: Math",
+   "text": "Math"
+  },
+  {
+   "idx": "Learning about my world: Science",
+   "text": "Science"
+  },
+  {
+   "idx": "Learning about my world: Social Studies",
+   "text": "Social Studies"
+  },
+  {
+   "idx": "Touching, seeing, hearing and moving around: Using the senses (sensorimotor skills)",
+   "text": "Using the senses (sensorimotor skills)"
+  },
+  {
+   "idx": "Growing up healthy: Daily living skills (personal health and hygiene)",
+   "text": "Daily living skills (personal health and hygiene)"
+  },
+  {
+   "idx": "Growing up healthy: Nutrition and health",
+   "text": "Nutrition and health"
+  },
+  {
+   "idx": "Growing up healthy: Safety",
+   "text": "Safety"
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "About me and my family and culture: Family and culture",
+   "text": "Family and culture"
+  },
+  {
+   "idx": "About me and my family and culture: Self concept",
+   "text": "Self concept"
+  },
+  {
+   "idx": "About me and my family and culture: Self management",
+   "text": "Self management"
+  },
+  {
+   "idx": "About me and my family and culture: Learning to learn",
+   "text": "Learning to learn"
+  },
+  {
+   "idx": "Building relationships: Interactions with adults",
+   "text": "Interactions with adults"
+  },
+  {
+   "idx": "Building relationships: Interactions with peers",
+   "text": "Interactions with peers"
+  },
+  {
+   "idx": "Building relationships: Social behaviors",
+   "text": "Social behaviors"
+  },
+  {
+   "idx": "Growing up healthy: Daily living skills (personal health and hygiene)",
+   "text": "Daily living skills (personal health and hygiene)"
+  },
+  {
+   "idx": "Growing up healthy: Nutrition and health",
+   "text": "Nutrition and health"
+  },
+  {
+   "idx": "Growing up healthy: Safety",
+   "text": "Safety"
+  },
+  {
+   "idx": "Learning about my world: Knowledge (cognition)",
+   "text": "Knowledge (cognition)"
+  },
+  {
+   "idx": "Learning about my world: Math",
+   "text": "Math"
+  },
+  {
+   "idx": "Learning about my world: Science",
+   "text": "Science"
+  },
+  {
+   "idx": "Learning about my world: Social Studies",
+   "text": "Social Studies"
+  }
+ ]
+}

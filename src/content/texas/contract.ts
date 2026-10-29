@@ -1,4 +1,4 @@
-import { codeCite, research, type FrameworkContract } from "../contract";
+import { codeCite, preKCite, research, type FrameworkContract } from "../contract";
 import { PLAN } from "./plan";
 
 // The Texas Essential Knowledge and Skills, built from TEA's chapter files by docs/research/texas/build_outcomes.py.
@@ -7,6 +7,8 @@ const OUTCOMES = research<Record<string, { idx: string }[]>>("texas/outcomes.jso
 
 export const contract: FrameworkContract = {
   cite: codeCite(OUTCOMES, "Texas"),
+  // Pre-K cites the state's early-learning standards (docs/research/texas/prek).
+  preK: preKCite("texas", "Texas"),
   ownPrefix: "tx-",
   adoptsFrom: ["us-ca", "ca-nb", "ca-ns", "ca-mb", "us-or", "us-wa"],
   plan: PLAN,

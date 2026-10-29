@@ -1,0 +1,610 @@
+{
+ "pk/math": [
+  {
+   "idx": "Mathematics 1.1",
+   "text": "Reciting Numbers"
+  },
+  {
+   "idx": "Mathematics 1.2",
+   "text": "One-to-One Correspondence"
+  },
+  {
+   "idx": "Mathematics 1.3",
+   "text": "Cardinality"
+  },
+  {
+   "idx": "Mathematics 1.4",
+   "text": "Subitize"
+  },
+  {
+   "idx": "Mathematics 1.5",
+   "text": "Numeral Recognition"
+  },
+  {
+   "idx": "Mathematics 1.6",
+   "text": "Number Comparison"
+  },
+  {
+   "idx": "Mathematics 2.1",
+   "text": "Principles of Addition and Subtraction"
+  },
+  {
+   "idx": "Mathematics 2.2",
+   "text": "Number Composition and Decomposition"
+  },
+  {
+   "idx": "Mathematics 2.3",
+   "text": "Solving Addition and Subtraction Problems"
+  },
+  {
+   "idx": "Mathematics 2.4",
+   "text": "Sharing Objects (Division)"
+  },
+  {
+   "idx": "Mathematics 2.5",
+   "text": "Sorting and Classifying"
+  },
+  {
+   "idx": "Mathematics 2.6",
+   "text": "Recognizing, Duplicating, and Extending Patterns"
+  },
+  {
+   "idx": "Mathematics 2.7",
+   "text": "Creating Patterns"
+  },
+  {
+   "idx": "Mathematics 3.1",
+   "text": "Comparing Measurable Attributes of Objects"
+  },
+  {
+   "idx": "Mathematics 3.2",
+   "text": "Ordering Objects"
+  },
+  {
+   "idx": "Mathematics 3.3",
+   "text": "Measuring Length"
+  },
+  {
+   "idx": "Mathematics 3.4",
+   "text": "Representing Data"
+  },
+  {
+   "idx": "Mathematics 3.5",
+   "text": "Interpreting Data"
+  },
+  {
+   "idx": "Mathematics 4.1",
+   "text": "Identifying Two-Dimensional Shapes"
+  },
+  {
+   "idx": "Mathematics 4.2",
+   "text": "Identifying Three-Dimensional Shapes"
+  },
+  {
+   "idx": "Mathematics 4.3",
+   "text": "Comparing Two-Dimensional Shapes"
+  },
+  {
+   "idx": "Mathematics 4.4",
+   "text": "Composing Shapes"
+  },
+  {
+   "idx": "Mathematics 4.5",
+   "text": "Positions and Directions in Space"
+  },
+  {
+   "idx": "Mathematics 4.6",
+   "text": "Mental Rotation"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "Foundational Language Development 1.1",
+   "text": "Understanding and Using Vocabulary"
+  },
+  {
+   "idx": "Foundational Language Development 1.2",
+   "text": "Understanding and Using Words for Categories"
+  },
+  {
+   "idx": "Foundational Language Development 1.3",
+   "text": "Understanding and Using Size and Location Words"
+  },
+  {
+   "idx": "Foundational Language Development 1.4",
+   "text": "Using Grammatical Features and Sentence Structure"
+  },
+  {
+   "idx": "Foundational Language Development 1.5",
+   "text": "Asking Questions"
+  },
+  {
+   "idx": "Foundational Language Development 1.6",
+   "text": "Constructing Narratives"
+  },
+  {
+   "idx": "Foundational Language Development 1.7",
+   "text": "Sharing Explanations and Opinions"
+  },
+  {
+   "idx": "Foundational Language Development 1.8",
+   "text": "Participating in Conversations"
+  },
+  {
+   "idx": "Foundational Language Development 2.1",
+   "text": "Isolating Initial Sounds"
+  },
+  {
+   "idx": "Foundational Language Development 2.2",
+   "text": "Recognizing and Blending Sounds"
+  },
+  {
+   "idx": "Foundational Language Development 2.3",
+   "text": "Participating in Rhyming and Wordplay"
+  },
+  {
+   "idx": "Foundational Language Development 2.4",
+   "text": "Identifying Letters"
+  },
+  {
+   "idx": "Foundational Language Development 2.5",
+   "text": "Learning Letter–Sound Correspondence"
+  },
+  {
+   "idx": "Foundational Language Development 2.6",
+   "text": "Understanding the Concept of Print"
+  },
+  {
+   "idx": "Foundational Language Development 2.7",
+   "text": "Understanding Print Conventions"
+  },
+  {
+   "idx": "Foundational Language Development 3.1",
+   "text": "Demonstrating Interest in Literacy Activities"
+  },
+  {
+   "idx": "Foundational Language Development 3.2",
+   "text": "Understanding Stories"
+  },
+  {
+   "idx": "Foundational Language Development 3.3",
+   "text": "Understanding Informational Text"
+  },
+  {
+   "idx": "Foundational Language Development 4.1",
+   "text": "Developing Fine Motor Skills in Writing"
+  },
+  {
+   "idx": "Foundational Language Development 4.2",
+   "text": "Writing to Represent Sounds"
+  },
+  {
+   "idx": "Foundational Language Development 4.3",
+   "text": "Dictating Thoughts and Ideas to Be Conveyed in Writing"
+  },
+  {
+   "idx": "Foundational Language Development 4.4",
+   "text": "Writing to Represent Words or Ideas"
+  },
+  {
+   "idx": "Foundational Language Development 4.5",
+   "text": "Writing Own Name"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "Science 1.1",
+   "text": "Making Observations"
+  },
+  {
+   "idx": "Science 1.2",
+   "text": "Comparing and Contrasting"
+  },
+  {
+   "idx": "Science 1.3",
+   "text": "Asking Questions"
+  },
+  {
+   "idx": "Science 1.4",
+   "text": "Defining Problems"
+  },
+  {
+   "idx": "Science 1.5",
+   "text": "Making Predictions"
+  },
+  {
+   "idx": "Science 1.6",
+   "text": "Planning and Carrying Out Investigations"
+  },
+  {
+   "idx": "Science 1.7",
+   "text": "Using Tools"
+  },
+  {
+   "idx": "Science 1.8",
+   "text": "Documenting Observations and Using Models"
+  },
+  {
+   "idx": "Science 1.9",
+   "text": "Mathematical Thinking and Analyzing Data"
+  },
+  {
+   "idx": "Science 1.10",
+   "text": "Formulating and Communicating Explanations and Solutions"
+  },
+  {
+   "idx": "Science 2.1",
+   "text": "Characteristics of Objects and Materials"
+  },
+  {
+   "idx": "Science 2.2",
+   "text": "Light and Sound Waves"
+  },
+  {
+   "idx": "Science 2.3",
+   "text": "Exploring Changes in Objects and Materials"
+  },
+  {
+   "idx": "Science 2.4",
+   "text": "Force and Motion"
+  },
+  {
+   "idx": "Science 2.5",
+   "text": "Energy"
+  },
+  {
+   "idx": "Science 3.1",
+   "text": "Characteristics of Living Things"
+  },
+  {
+   "idx": "Science 3.2",
+   "text": "Bodily Processes"
+  },
+  {
+   "idx": "Science 3.3",
+   "text": "Living and Nonliving Things"
+  },
+  {
+   "idx": "Science 3.4",
+   "text": "Heredity and Traits"
+  },
+  {
+   "idx": "Science 3.5",
+   "text": "Habitats"
+  },
+  {
+   "idx": "Science 3.6",
+   "text": "Growth, Change, and the Life Cycle of Living Things"
+  },
+  {
+   "idx": "Science 3.7",
+   "text": "Needs of Living Things"
+  },
+  {
+   "idx": "Science 4.1",
+   "text": "Characteristics of Earth Materials"
+  },
+  {
+   "idx": "Science 4.2",
+   "text": "Natural Objects in the Sky"
+  },
+  {
+   "idx": "Science 4.3",
+   "text": "Weather"
+  },
+  {
+   "idx": "Science 4.4",
+   "text": "Earth and Human Activity"
+  },
+  {
+   "idx": "Science 5.1",
+   "text": "Engineering Design Process"
+  },
+  {
+   "idx": "Science 5.2",
+   "text": "Design Solutions and Society"
+  },
+  {
+   "idx": "Science 5.3",
+   "text": "Using Digital Devices"
+  },
+  {
+   "idx": "Health 1.1",
+   "text": "Identifying and Naming Body Parts"
+  },
+  {
+   "idx": "Health 1.2",
+   "text": "Communicating About Health Needs"
+  },
+  {
+   "idx": "Health 1.3",
+   "text": "Understanding the Role of Health Care Providers"
+  },
+  {
+   "idx": "Health 1.4",
+   "text": "Recognizing and Communicating About Body Boundaries"
+  },
+  {
+   "idx": "Health 1.5",
+   "text": "Identifying Foods"
+  },
+  {
+   "idx": "Health 1.6",
+   "text": "Communicating Fullness and Hunger"
+  },
+  {
+   "idx": "Health 1.7",
+   "text": "Understanding a Variety of Foods"
+  },
+  {
+   "idx": "Health 1.8",
+   "text": "Recognizing the Body’s Response to Physical Activity"
+  },
+  {
+   "idx": "Health 1.9",
+   "text": "Recognizing and Indicating When Tired"
+  },
+  {
+   "idx": "Health 2.1",
+   "text": "Handwashing"
+  },
+  {
+   "idx": "Health 2.2",
+   "text": "Preventing Infectious Diseases"
+  },
+  {
+   "idx": "Health 2.3",
+   "text": "Toothbrushing"
+  },
+  {
+   "idx": "Health 2.4",
+   "text": "Practicing Sun Safety"
+  },
+  {
+   "idx": "Health 2.5",
+   "text": "Following Safety Rules"
+  },
+  {
+   "idx": "Health 2.6",
+   "text": "Following Emergency Routines"
+  },
+  {
+   "idx": "Health 2.7",
+   "text": "Following Transportation and Pedestrian Safety Rules"
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "History–Social Science 1.1",
+   "text": "Making Observations and Asking Questions"
+  },
+  {
+   "idx": "History–Social Science 1.2",
+   "text": "Gathering and Using Evidence"
+  },
+  {
+   "idx": "History–Social Science 1.3",
+   "text": "Creating Representations"
+  },
+  {
+   "idx": "History–Social Science 2.1",
+   "text": "Self-Identity"
+  },
+  {
+   "idx": "History–Social Science 2.2",
+   "text": "Membership in Communities"
+  },
+  {
+   "idx": "History–Social Science 2.3",
+   "text": "Awareness of Social Roles"
+  },
+  {
+   "idx": "History–Social Science 2.4",
+   "text": "Exploring Cultural Communities"
+  },
+  {
+   "idx": "History–Social Science 2.5",
+   "text": "Exploring Similarities and Differences"
+  },
+  {
+   "idx": "History–Social Science 3.1",
+   "text": "Identifying and Including Members of Peer Groups"
+  },
+  {
+   "idx": "History–Social Science 3.2",
+   "text": "Showing Care and Offering Help"
+  },
+  {
+   "idx": "History–Social Science 3.3",
+   "text": "Understanding Different Needs and Fairness"
+  },
+  {
+   "idx": "History–Social Science 3.4",
+   "text": "Contributing to the Group"
+  },
+  {
+   "idx": "History–Social Science 3.5",
+   "text": "Following Community Rules and Norms"
+  },
+  {
+   "idx": "History–Social Science 3.6",
+   "text": "Group Decision-Making"
+  },
+  {
+   "idx": "History–Social Science 3.7",
+   "text": "Collective Problem-Solving"
+  },
+  {
+   "idx": "History–Social Science 3.8",
+   "text": "Developing Solutions and Taking Action"
+  },
+  {
+   "idx": "History–Social Science 4.1",
+   "text": "Using Time Order Words"
+  },
+  {
+   "idx": "History–Social Science 4.2",
+   "text": "Describing Change Over Time"
+  },
+  {
+   "idx": "History–Social Science 4.3",
+   "text": "Recalling Past Events"
+  },
+  {
+   "idx": "History–Social Science 5.1",
+   "text": "Identifying Characteristics of Locations"
+  },
+  {
+   "idx": "History–Social Science 5.2",
+   "text": "Communicating Locations and Directions"
+  },
+  {
+   "idx": "History–Social Science 5.3",
+   "text": "Understanding Physical Space Through Drawings, Building Materials, and"
+  },
+  {
+   "idx": "History–Social Science 5.4",
+   "text": "Caring for the World"
+  },
+  {
+   "idx": "History–Social Science 6.1",
+   "text": "Meeting Community Needs"
+  },
+  {
+   "idx": "History–Social Science 6.2",
+   "text": "Awareness of People at Work"
+  },
+  {
+   "idx": "History–Social Science 6.3",
+   "text": "Understanding Exchange"
+  },
+  {
+   "idx": "Social and Emotional Development 1.1",
+   "text": "Self-Identity"
+  },
+  {
+   "idx": "Social and Emotional Development 1.2",
+   "text": "Confidence in Abilities"
+  },
+  {
+   "idx": "Social and Emotional Development 1.3",
+   "text": "Understanding Emotions in Self and Others"
+  },
+  {
+   "idx": "Social and Emotional Development 1.4",
+   "text": "Regulating Emotions, Behaviors, and Stress"
+  },
+  {
+   "idx": "Social and Emotional Development 1.5",
+   "text": "Managing Routines and Transitions"
+  },
+  {
+   "idx": "Social and Emotional Development 1.6",
+   "text": "Awareness of Similarities and Differences Across People"
+  },
+  {
+   "idx": "Social and Emotional Development 1.7",
+   "text": "Understanding Other People’s Thoughts, Behaviors, and Experiences"
+  },
+  {
+   "idx": "Social and Emotional Development 1.8",
+   "text": "Empathy and Caring"
+  },
+  {
+   "idx": "Social and Emotional Development 2.1",
+   "text": "Reciprocal Interactions with Adults"
+  },
+  {
+   "idx": "Social and Emotional Development 2.2",
+   "text": "Seeking Security and Support"
+  },
+  {
+   "idx": "Social and Emotional Development 2.3",
+   "text": "Coping with Departures"
+  },
+  {
+   "idx": "Social and Emotional Development 2.4",
+   "text": "Relationships with Adults"
+  },
+  {
+   "idx": "Social and Emotional Development 3.1",
+   "text": "Interacting and Cooperating with Peers"
+  },
+  {
+   "idx": "Social and Emotional Development 3.2",
+   "text": "Conflict Resolution with Peers"
+  },
+  {
+   "idx": "Social and Emotional Development 3.3",
+   "text": "Fairness and Respect"
+  },
+  {
+   "idx": "Social and Emotional Development 3.4",
+   "text": "Developing Friendships"
+  },
+  {
+   "idx": "Health 1.1",
+   "text": "Identifying and Naming Body Parts"
+  },
+  {
+   "idx": "Health 1.2",
+   "text": "Communicating About Health Needs"
+  },
+  {
+   "idx": "Health 1.3",
+   "text": "Understanding the Role of Health Care Providers"
+  },
+  {
+   "idx": "Health 1.4",
+   "text": "Recognizing and Communicating About Body Boundaries"
+  },
+  {
+   "idx": "Health 1.5",
+   "text": "Identifying Foods"
+  },
+  {
+   "idx": "Health 1.6",
+   "text": "Communicating Fullness and Hunger"
+  },
+  {
+   "idx": "Health 1.7",
+   "text": "Understanding a Variety of Foods"
+  },
+  {
+   "idx": "Health 1.8",
+   "text": "Recognizing the Body’s Response to Physical Activity"
+  },
+  {
+   "idx": "Health 1.9",
+   "text": "Recognizing and Indicating When Tired"
+  },
+  {
+   "idx": "Health 2.1",
+   "text": "Handwashing"
+  },
+  {
+   "idx": "Health 2.2",
+   "text": "Preventing Infectious Diseases"
+  },
+  {
+   "idx": "Health 2.3",
+   "text": "Toothbrushing"
+  },
+  {
+   "idx": "Health 2.4",
+   "text": "Practicing Sun Safety"
+  },
+  {
+   "idx": "Health 2.5",
+   "text": "Following Safety Rules"
+  },
+  {
+   "idx": "Health 2.6",
+   "text": "Following Emergency Routines"
+  },
+  {
+   "idx": "Health 2.7",
+   "text": "Following Transportation and Pedestrian Safety Rules"
+  }
+ ]
+}

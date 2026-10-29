@@ -113,8 +113,8 @@ describe("grade guide page", () => {
     expect(answers.at(-1)).not.toMatch(/practise/);
   });
 
-  it("has no previous grade in Kindergarten and no next grade in Grade 9", async () => {
-    const { unmount } = render(await GradeGuide(props("ontario", "kindergarten")));
+  it("has no previous grade in the first year and no next grade in Grade 9", async () => {
+    const { unmount } = render(await GradeGuide(props("ontario", "pre-k")));
     expect(screen.queryByRole("heading", { name: /^Ready for/ })).not.toBeInTheDocument();
     expect(within(screen.getByRole("navigation", { name: "Other grades" })).getAllByRole("link")).toHaveLength(1);
     unmount();

@@ -15,7 +15,7 @@ describe("share cards", () => {
 
   it("has a card for every curriculum, guide and report-card page that gets one", () => {
     for (const f of FRAMEWORKS) {
-      expect(curriculumCard({ framework: f.slug })?.title).toMatch(f.country === "US" ? /^Kindergarten through 9th grade practice$/ : /Kindergarten to Grade 9 practice|to Grade/);
+      expect(curriculumCard({ framework: f.slug })?.title).toMatch(f.country === "US" ? /^(Kindergarten|Pre-K|Transitional Kindergarten) through 9th grade practice$/ : /Kindergarten to Grade 9 practice|to Grade/);
       expect(reportCardCard(f.slug)?.title).toContain(f.shortName);
       for (const g of gradesWithContent(f)) {
         expect(curriculumCard({ framework: f.slug, grade: gradeSlug(g) })).toBeDefined();
@@ -29,9 +29,9 @@ describe("share cards", () => {
   });
 
   it("speaks US English on a state's cards: 4th grade, 4th grader, practice, no French", () => {
-    expect(curriculumCard({ framework: "washington" })).toMatchObject({ title: "Kindergarten through 9th grade practice", line: "Math · Language Arts · Science · Social Studies" });
+    expect(curriculumCard({ framework: "washington" })).toMatchObject({ title: "Pre-K through 9th grade practice", line: "Math · Language Arts · Science · Social Studies" });
     expect(curriculumCard({ framework: "washington", grade: "grade-4", subject: "math" })).toMatchObject({ kicker: "Washington curriculum · 4th grade", title: "4th grade Math" });
-    expect(guideCard({ framework: "washington" })?.line).toBe("Kindergarten through 9th grade, in the words of the report card");
+    expect(guideCard({ framework: "washington" })?.line).toBe("Pre-K through 9th grade, in the words of the report card");
     expect(worksheetCard({ framework: "washington", grade: "grade-4", subject: "math" })?.line).toBe("Print it, try it, then practice free");
     expect(worksheetCard({ framework: "bc", grade: "grade-4", subject: "math" })?.line).toBe("Print it, try it, then practise free");
     const unit = coursesFor(getFramework("us-wa"), "4").find((c) => c.subject === "math")!.units.find((u) => unitCard({ framework: "washington", grade: "grade-4", subject: "math", unit: u.id })?.question)!;

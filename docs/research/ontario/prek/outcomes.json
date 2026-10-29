@@ -1,0 +1,398 @@
+{
+ "pk/math": [
+  {
+   "idx": "A6.1",
+   "text": "explore what numbers are used for"
+  },
+  {
+   "idx": "A6.2",
+   "text": "understand when counting forward, the quantity gets bigger and when counting backward, the quantity gets smaller"
+  },
+  {
+   "idx": "A6.3",
+   "text": "identify and write numbers to 20"
+  },
+  {
+   "idx": "A6.4",
+   "text": "subitize quantities to 5"
+  },
+  {
+   "idx": "A6.5",
+   "text": "compose and decompose quantities to 10"
+  },
+  {
+   "idx": "A6.6",
+   "text": "understand the concept of more than, the same (equal), or less than"
+  },
+  {
+   "idx": "A6.7",
+   "text": "estimate the number of objects in small collections and check by counting"
+  },
+  {
+   "idx": "A6.8",
+   "text": "count to 20 by 1s, starting from any number"
+  },
+  {
+   "idx": "A6.9",
+   "text": "solve equal-share problems using concrete materials"
+  },
+  {
+   "idx": "A6.10",
+   "text": "describe relationships between any two numbers from 0 to 20"
+  },
+  {
+   "idx": "A6.11",
+   "text": "recall addition facts to 5 and related subtraction facts"
+  },
+  {
+   "idx": "A6.12",
+   "text": "solve situations involving addition and subtraction to 10 using concrete materials"
+  },
+  {
+   "idx": "A6.13",
+   "text": "identify and explore the value of Canadian coins to 25¢ and coins and bills to $10"
+  },
+  {
+   "idx": "A7.1",
+   "text": "identify, describe, and create patterns"
+  },
+  {
+   "idx": "A7.2",
+   "text": "identify the core of a repeating pattern and describe why it is important"
+  },
+  {
+   "idx": "A7.3",
+   "text": "show that patterns can be represented in different ways because the core remains the same"
+  },
+  {
+   "idx": "A7.4",
+   "text": "extend patterns in both directions and identify any missing elements"
+  },
+  {
+   "idx": "A8.1",
+   "text": "sort objects or data using one attribute"
+  },
+  {
+   "idx": "A8.2",
+   "text": "collect and record data to answer questions of interest, and display it in concrete graphs or picture graphs"
+  },
+  {
+   "idx": "A8.3",
+   "text": "respond to data in concrete graphs and picture graphs by interpreting it and drawing conclusions"
+  },
+  {
+   "idx": "A8.4",
+   "text": "describe how likely familiar events are to happen"
+  },
+  {
+   "idx": "A9.1",
+   "text": "identify, sort, and compare the most common two-dimensional shapes, including circle, hexagon, rhombus, and trapezoid"
+  },
+  {
+   "idx": "A9.2",
+   "text": "identify, sort, and compare the most common three-dimensional objects, including cube, sphere, prisms, cone, and pyramid"
+  },
+  {
+   "idx": "A9.3",
+   "text": "in structures they have made, identify three-dimensional objects and two-dimensional shapes"
+  },
+  {
+   "idx": "A9.4",
+   "text": "construct two-dimensional pictures and three-dimensional structures with matching halves"
+  },
+  {
+   "idx": "A9.5",
+   "text": "put two-dimensional shapes together to make other shapes, break them into smaller shapes, and put them together in different ways"
+  },
+  {
+   "idx": "A9.6",
+   "text": "describe basic spatial relationships and movements, and visualize objects from different perspectives"
+  },
+  {
+   "idx": "A9.7",
+   "text": "give and follow directions for moving from one location to another"
+  },
+  {
+   "idx": "A10.1",
+   "text": "describe different ways that objects can be measured"
+  },
+  {
+   "idx": "A10.2",
+   "text": "compare the length, area, mass, and capacity of objects using concrete materials"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "A1.1",
+   "text": "listen and respond"
+  },
+  {
+   "idx": "A1.2",
+   "text": "use language conventions and non-verbal communication"
+  },
+  {
+   "idx": "A1.3",
+   "text": "understand and use new words and develop morphological awareness"
+  },
+  {
+   "idx": "A2.1",
+   "text": "name upper- and lowercase letters (both in and out of order)"
+  },
+  {
+   "idx": "A2.2",
+   "text": "use proper formation patterns to write letters"
+  },
+  {
+   "idx": "A2.3",
+   "text": "isolate and blend phonemes, and segment simple words into phonemes"
+  },
+  {
+   "idx": "A2.4",
+   "text": "identify simple grapheme-phoneme correspondences"
+  },
+  {
+   "idx": "A2.5",
+   "text": "read and spell simple words using phonemic awareness and phonics knowledge"
+  },
+  {
+   "idx": "A2.6",
+   "text": "read short sentences fluently, including those with explicitly taught words, with increasing accuracy, to support comprehension"
+  },
+  {
+   "idx": "A3.1",
+   "text": "identify purposes for choosing different texts"
+  },
+  {
+   "idx": "A3.2",
+   "text": "apply knowledge of words, sentence structure, and punctuation"
+  },
+  {
+   "idx": "A3.3",
+   "text": "read and understand simple texts, using background knowledge and beginning knowledge of words, grammar, and sentence structure"
+  },
+  {
+   "idx": "A3.4",
+   "text": "express personal thoughts and feelings about texts"
+  },
+  {
+   "idx": "A3.5",
+   "text": "make predictions about unfamiliar texts, using background knowledge"
+  },
+  {
+   "idx": "A3.6",
+   "text": "make connections to a variety of texts"
+  },
+  {
+   "idx": "A4.1",
+   "text": "use knowledge of letters, words, and sentences, with pictures and symbols, to create simple texts"
+  },
+  {
+   "idx": "A4.2",
+   "text": "use classroom writing resources to support creating simple texts"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "A10.1",
+   "text": "describe different ways that objects can be measured"
+  },
+  {
+   "idx": "A10.2",
+   "text": "compare the length, area, mass, and capacity of objects using concrete materials"
+  },
+  {
+   "idx": "B12.1",
+   "text": "state problems and pose questions"
+  },
+  {
+   "idx": "B12.2",
+   "text": "make predictions and observations while exploring, investigating, and designing"
+  },
+  {
+   "idx": "B12.3",
+   "text": "select materials and tools to carry out investigations and to construct models and structures"
+  },
+  {
+   "idx": "B12.4",
+   "text": "draw conclusions and communicate results"
+  },
+  {
+   "idx": "B12.5",
+   "text": "design, build, and test models and structures"
+  },
+  {
+   "idx": "B12.6",
+   "text": "follow safety rules to help prevent injuries, including concussion, and demonstrate an understanding of the importance of these practices"
+  },
+  {
+   "idx": "B13.1",
+   "text": "ask questions about and describe some natural occurrences"
+  },
+  {
+   "idx": "B13.2",
+   "text": "sort and classify groups of living and non-living things"
+  },
+  {
+   "idx": "B13.3",
+   "text": "compare patterns in natural and built environments"
+  },
+  {
+   "idx": "C16.1",
+   "text": "demonstrate an understanding of the effects of healthy, active living on the mind and body"
+  },
+  {
+   "idx": "C16.2",
+   "text": "investigate the benefits of nutritious foods and explore ways of ensuring healthy eating"
+  },
+  {
+   "idx": "C16.3",
+   "text": "practise and discuss appropriate personal hygiene that promotes personal, family, and community health"
+  },
+  {
+   "idx": "C16.4",
+   "text": "discuss what action to take when they feel unsafe or uncomfortable, in person or online, and when and how to seek assistance"
+  },
+  {
+   "idx": "C16.5",
+   "text": "discuss and demonstrate in play what makes them happy and unhappy, and why"
+  },
+  {
+   "idx": "D23.1",
+   "text": "identify similarities and differences between local environments"
+  },
+  {
+   "idx": "D23.2",
+   "text": "describe what would happen if something in the local environment changed"
+  },
+  {
+   "idx": "D23.3",
+   "text": "describe ways in which they care for and respect the environment"
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "B13.1",
+   "text": "ask questions about and describe some natural occurrences"
+  },
+  {
+   "idx": "B13.2",
+   "text": "sort and classify groups of living and non-living things"
+  },
+  {
+   "idx": "B13.3",
+   "text": "compare patterns in natural and built environments"
+  },
+  {
+   "idx": "C14.1",
+   "text": "act and talk with peers and adults by expressing and accepting positive messages"
+  },
+  {
+   "idx": "C14.2",
+   "text": "show the ability to take turns"
+  },
+  {
+   "idx": "C14.3",
+   "text": "demonstrate an awareness of ways of making and keeping friends"
+  },
+  {
+   "idx": "C14.4",
+   "text": "use problem-solving skills in social situations"
+  },
+  {
+   "idx": "C15.1",
+   "text": "demonstrate self-reliance and a sense of responsibility"
+  },
+  {
+   "idx": "C15.2",
+   "text": "demonstrate a willingness to try new experiences and to adapt to new situations"
+  },
+  {
+   "idx": "C15.3",
+   "text": "demonstrate self-motivation, initiative, and confidence in their approach to learning"
+  },
+  {
+   "idx": "C15.4",
+   "text": "demonstrate self-control and adapt behaviour to different contexts"
+  },
+  {
+   "idx": "C15.5",
+   "text": "develop empathy for others, and acknowledge and respond to each other’s feelings"
+  },
+  {
+   "idx": "C16.1",
+   "text": "demonstrate an understanding of the effects of healthy, active living on the mind and body"
+  },
+  {
+   "idx": "C16.2",
+   "text": "investigate the benefits of nutritious foods and explore ways of ensuring healthy eating"
+  },
+  {
+   "idx": "C16.3",
+   "text": "practise and discuss appropriate personal hygiene that promotes personal, family, and community health"
+  },
+  {
+   "idx": "C16.4",
+   "text": "discuss what action to take when they feel unsafe or uncomfortable, in person or online, and when and how to seek assistance"
+  },
+  {
+   "idx": "C16.5",
+   "text": "discuss and demonstrate in play what makes them happy and unhappy, and why"
+  },
+  {
+   "idx": "D19.1",
+   "text": "recognize personal interests, strengths, and accomplishments"
+  },
+  {
+   "idx": "D19.2",
+   "text": "identify and talk about their own interests and preferences"
+  },
+  {
+   "idx": "D19.3",
+   "text": "express their thoughts and share experiences"
+  },
+  {
+   "idx": "D20.1",
+   "text": "understand that everyone belongs to multiple groups and communities, and that these groups and communities together shape Canadian identity"
+  },
+  {
+   "idx": "D20.2",
+   "text": "describe, both verbally and non-verbally, ways in which they contribute to the various groups to which they belong"
+  },
+  {
+   "idx": "D20.3",
+   "text": "demonstrate respect for different perspectives and identify areas of connection"
+  },
+  {
+   "idx": "D21.1",
+   "text": "stand up for themselves, and apply behaviours that enhance their own and others’ well-being"
+  },
+  {
+   "idx": "D21.2",
+   "text": "think critically about fair/unfair and biased behaviour towards both themselves and others, and act with compassion and kindness"
+  },
+  {
+   "idx": "D21.3",
+   "text": "recognize discriminatory and inequitable practices and behaviours and respond appropriately"
+  },
+  {
+   "idx": "D22.1",
+   "text": "recognize people in their community and talk about what they do"
+  },
+  {
+   "idx": "D22.2",
+   "text": "recognize places and buildings within their community, both natural and human-made, and talk about their functions"
+  },
+  {
+   "idx": "D23.1",
+   "text": "identify similarities and differences between local environments"
+  },
+  {
+   "idx": "D23.2",
+   "text": "describe what would happen if something in the local environment changed"
+  },
+  {
+   "idx": "D23.3",
+   "text": "describe ways in which they care for and respect the environment"
+  }
+ ]
+}

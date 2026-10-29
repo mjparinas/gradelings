@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 import type { GradeId } from "../types";
 
 // Ontario. Standards are the expectations in the Ontario Curriculum (Ministry of
@@ -100,9 +101,10 @@ export const ONTARIO: Framework = {
   standardLabel: "Expectation",
   sourceName: "Ontario Ministry of Education, Curriculum and Resources",
   sourceUrl: "https://www.dcp.edu.gov.on.ca/en/curriculum",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  preKName: "Junior Kindergarten",
   subjects: ["math", "language", "science", "social", "immersion", "core-french"],
-  scoringFor: (grade: GradeId) => (grade === "k" ? K_SCHEME : grade === "7" || grade === "8" || grade === "9" ? PERCENT_SCHEME : LETTER_SCHEME),
+  scoringFor: (grade: GradeId) => (grade === "pk" ? preKScale(K_SCHEME) : grade === "k" ? K_SCHEME : grade === "7" || grade === "8" || grade === "9" ? PERCENT_SCHEME : LETTER_SCHEME),
   reportCard: {
     title: "Understanding Ontario report cards",
     intro:

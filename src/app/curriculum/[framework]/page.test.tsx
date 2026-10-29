@@ -47,7 +47,7 @@ describe("curriculum framework page", () => {
 
   it("describes the curriculum's subjects in the metadata", async () => {
     const meta = await generateMetadata(props("nova-scotia"));
-    expect(meta.title).toBe("Nova Scotia Curriculum practice, Kindergarten to Grade 9");
+    expect(meta.title).toBe("Nova Scotia Curriculum practice, Pre-primary to Grade 9");
     expect(meta.alternates?.canonical).toBe("/curriculum/nova-scotia/");
     expect(meta.description).toMatch(/\(Nova Scotia\): math, english language arts, science, social studies/i);
   });
