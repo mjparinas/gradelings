@@ -157,6 +157,10 @@ export const ALABAMA_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-K in Alabama is First Class Pre-K, the state's free, voluntary program for 4-year-olds, offered in public schools, child care centers and Head Start classrooms. Programs follow the Alabama Standards for Early Learning and Development: social and emotional growth, approaches to play and learning, language and literacy, math, science, social studies and the creative arts.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in Alabama is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 by ones and tens, and start adding and taking away within 10. Science looks at pushes and pulls, living things and weather, and social studies covers family, school and community, rules and community helpers.",
       lookFor: "Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

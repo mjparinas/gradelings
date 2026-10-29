@@ -2,7 +2,8 @@
 
 ## Framework
 
-- **Id and slug:** `us-ky`, `kentucky`. Kindergarten to Grade 9 in math, reading and writing, science and social studies (no French). It is in `FRAMEWORKS`, offered to families and in classroom mode, like the other states.
+- **Id and slug:** `us-ky`, `kentucky`. Pre-K and Kindergarten to Grade 9 in math, reading and writing, science and social studies (no French). It is in `FRAMEWORKS`, offered to families and in classroom mode, like the other states.
+- **Pre-K:** the 26 shared Pre-K units (`src/content/grades/pk/`), each citing a benchmark of the Kentucky Early Childhood Standards for three- and four-year-olds as domain and number (`Mathematics 1.1`, `Social Studies 1.5`; `src/content/kentucky/pk.ts`), checked against `docs/research/kentucky/prek/outcomes.json` (PDF in `source/`, `fetch.sh`, `build_outcomes.py`). Practice steps only.
 
 ## Standards
 
@@ -22,7 +23,7 @@
 
 ## Parent guides
 
-- `src/content/kentucky/guides.ts`, US English: the hub, grade notes for Kindergarten to Grade 9, the eight Standards for Mathematical Practice from the 2019 math standards (`/guides/kentucky/math-practices/`) and KSA (`/guides/kentucky/state-tests/`; dates point to the Department). No French guide.
+- `src/content/kentucky/guides.ts`, US English: the hub, grade notes for Pre-K to Grade 9, the eight Standards for Mathematical Practice from the 2019 math standards (`/guides/kentucky/math-practices/`) and KSA (`/guides/kentucky/state-tests/`; dates point to the Department). No French guide.
 
 ## Schools
 

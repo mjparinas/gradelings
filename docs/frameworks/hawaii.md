@@ -2,7 +2,8 @@
 
 ## Framework
 
-- **Id and slug:** `us-hi`, `hawaii`. Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: Hawaiʻi has no statewide French standards the app follows; Hawaiian language and the Kaiapuni immersion schools are not taught). Offered to families and in classroom mode. The name is written Hawaiʻi, with the ʻokina (U+02BB), in every label and copy line.
+- **Id and slug:** `us-hi`, `hawaii`. Pre-K and Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: Hawaiʻi has no statewide French standards the app follows; Hawaiian language and the Kaiapuni immersion schools are not taught). Offered to families and in classroom mode. The name is written Hawaiʻi, with the ʻokina (U+02BB), in every label and copy line.
+- **Pre-K:** the 26 shared Pre-K units (`src/content/grades/pk/`), each citing the Hawaiʻi Early Learning and Development Standards (2014) "48 months to kindergarten entry" indicators (`GK.KE.d`, `SE.KE.c`; `src/content/hawaii/pk.ts`), checked against `docs/research/hawaii/prek/outcomes.json` (PDF in `source/`, `fetch.sh`, `build_outcomes.py`). Practice steps only.
 
 ## Standards
 
@@ -28,7 +29,7 @@
 
 ## Parent guides
 
-- `src/content/hawaii/guides.ts`, US English: the hub, grade notes for Kindergarten to Grade 9, the General Learner Outcomes (`/guides/hawaii/general-learner-outcomes/`) and state tests (`/guides/hawaii/state-tests/`; dates point to HIDOE). No French guide.
+- `src/content/hawaii/guides.ts`, US English: the hub, grade notes for Pre-K to Grade 9, the General Learner Outcomes (`/guides/hawaii/general-learner-outcomes/`) and state tests (`/guides/hawaii/state-tests/`; dates point to HIDOE). No French guide.
 
 ## Schools
 

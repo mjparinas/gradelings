@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Connecticut, a US state. Standards are the ones the Connecticut State Board of Education adopted: the Connecticut Core
 // Standards for mathematics and for English language arts (the Common Core, 2010), the Next Generation Science Standards
@@ -74,9 +75,9 @@ export const CONNECTICUT: Framework = {
   standardLabel: "Standard",
   sourceName: "Connecticut State Department of Education",
   sourceUrl: "https://portal.ct.gov/sde",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Connecticut report cards",
     intro:

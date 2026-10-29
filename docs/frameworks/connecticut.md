@@ -2,7 +2,8 @@
 
 ## Framework
 
-- **Id and slug:** `us-ct`, `connecticut`. Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: Connecticut's world language standards aren't a subject the app follows yet). Offered to families and in classroom mode.
+- **Id and slug:** `us-ct`, `connecticut`. Pre-K and Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: Connecticut's world language standards aren't a subject the app follows yet). Offered to families and in classroom mode.
+- **Pre-K:** the 26 shared Pre-K units (`src/content/grades/pk/`), each citing the Connecticut Early Learning and Development Standards' 48 to 60 months indicators as `domain.60.number` (`M.60.2`, `SS.60.4`; `src/content/connecticut/pk.ts`), checked against `docs/research/connecticut/prek/outcomes.json` (PDF in `source/`, `fetch.sh`, `build_outcomes.py`). Practice steps only.
 
 ## Standards
 
@@ -23,7 +24,7 @@
 
 ## Parent guides
 
-- `src/content/connecticut/guides.ts`, US English: the hub, grade notes for Kindergarten to Grade 9, the eight Standards for Mathematical Practice (`/guides/connecticut/math-practices/`) and the state tests (`/guides/connecticut/state-tests/`; dates point to the State Department of Education). No French guide.
+- `src/content/connecticut/guides.ts`, US English: the hub, grade notes for Pre-K to Grade 9, the eight Standards for Mathematical Practice (`/guides/connecticut/math-practices/`) and the state tests (`/guides/connecticut/state-tests/`; dates point to the State Department of Education). No French guide.
 
 ## Schools
 

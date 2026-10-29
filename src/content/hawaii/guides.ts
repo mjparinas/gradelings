@@ -177,6 +177,10 @@ export const HAWAII_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-K in Hawaiʻi is the year before kindergarten, offered in the state's free public pre-kindergarten classrooms in some elementary schools and in community preschools, many of them helped by the Preschool Open Doors program. Programs follow the Hawaiʻi Early Learning and Development Standards (HELDS): physical well-being, social and emotional growth, approaches to learning, language and literacy, and cognition and general knowledge.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in Hawaiʻi is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. In social studies they learn about themselves, their families and school, rules and roles, and their island home.",
       lookFor: "Hawaiʻi's elementary report card is standards-based and also rates the six General Learner Outcomes. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",
