@@ -51,7 +51,7 @@ export default async function GuidesHub({
   const f = r.framework;
   const guides = guidesFor(f.id);
   const levels = f
-    .scoringFor(f.grades.find((g) => g !== "k") ?? f.grades[0])
+    .scoringFor(f.grades.find((g) => g !== "k" && g !== "pk") ?? f.grades[0])
     .levels.map((l) => l.label);
   const crumbs = [
     { label: "Home", href: "/" },

@@ -1,4 +1,4 @@
-import { head, research, type FrameworkContract } from "../contract";
+import { head, preKCite, research, type FrameworkContract } from "../contract";
 
 // The official Nova Scotia outcomes (docs/research/nova-scotia). Unit standards cite them by code, or by bundle or outcome title.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("nova-scotia/outcomes.json");
@@ -13,6 +13,8 @@ export const contract: FrameworkContract = {
     const labels = official.has(first) ? [first] : first.split(/,\s*/).map((c) => c.trim());
     return labels.filter((l) => !official.has(l)).map((l) => `cites "${l}", which is not in Nova Scotia ${grade}/${subject}`);
   },
+  // Pre-primary cites the Early Learning Curriculum Framework's learning objectives (docs/research/nova-scotia/prek).
+  preK: preKCite("nova-scotia", "Nova Scotia"),
   ownPrefix: "ns-",
   adoptsFrom: ["ca-mb"],
   foreign: /Ontario|Queen's Park|EQAO|Upper Canada|Lower Canada|Saskatchewan|Regina|Alberta|Manitoba|Winnipeg/,

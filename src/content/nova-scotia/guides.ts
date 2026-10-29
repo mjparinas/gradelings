@@ -99,6 +99,10 @@ export const NOVA_SCOTIA_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-primary is Nova Scotia's free, play-based school year for four-year-olds, led by early childhood educators. It follows Nova Scotia's Early Learning Curriculum Framework: well-being, discovery and invention, language and communication, and personal and social responsibility.",
+      lookFor: "Pre-primary has no report card; the early childhood educator shares updates instead. Look for joining in, taking turns, naming feelings, rhyming, letters in your child's name and counting small groups.",
+    },
     k: {
       overview: "Primary (Kindergarten) in Nova Scotia builds early learning through play in language and literacy, mathematics, science and social studies. Children count, spot patterns, compare objects, and explore living things, materials and their community.",
       lookFor: "Look for comments on listening, early letters and sounds, counting and comparing, sharing ideas, and getting along with classmates.",

@@ -86,8 +86,9 @@ export function allCurriculumPaths(): SitemapPath[] {
   return paths;
 }
 
-/** A grade as the framework's country says it: "Grade 4" in Canada, "4th grade" in the US. */
-export function gradeLabel(framework: Pick<Framework, "country">, grade: GradeId): string {
+/** A grade as the framework's country says it: "Grade 4" in Canada, "4th grade" in the US, and Pre-K by the region's own name. */
+export function gradeLabel(framework: Pick<Framework, "country" | "preKName">, grade: GradeId): string {
+  if (grade === "pk" && framework.preKName) return framework.preKName;
   return gradeName(grade, localeOf(framework));
 }
 
@@ -95,11 +96,11 @@ export function gradeLabel(framework: Pick<Framework, "country">, grade: GradeId
  * The framework's grade range in a sentence: "Kindergarten to Grade 9" in Canada, "kindergarten through 9th grade"
  * in the US. Pass `start` for the start of a sentence or a title.
  */
-export function gradeSpan(framework: Pick<Framework, "country" | "grades">, start = false): string {
+export function gradeSpan(framework: Pick<Framework, "country" | "grades" | "preKName">, start = false): string {
   const first = framework.grades[0];
   const last = framework.grades[framework.grades.length - 1];
   if (localeOf(framework) !== "en-US") return `${gradeLabel(framework, first)} to ${gradeLabel(framework, last)}`;
-  const text = `${first === "k" ? "kindergarten" : gradeLabel(framework, first)} through ${gradeLabel(framework, last)}`;
+  const text = `${first === "k" ? "kindergarten" : first === "pk" ? (framework.preKName ?? "pre-K") : gradeLabel(framework, first)} through ${gradeLabel(framework, last)}`;
   return start ? text[0].toUpperCase() + text.slice(1) : text;
 }
 

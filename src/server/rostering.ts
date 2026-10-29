@@ -16,7 +16,7 @@ import {
   type RosterStudent,
 } from "@/lib/rostering";
 import { appOrigin, newId } from "./auth";
-import { classOwnedCount, isFramework, MAX_CLASSES, MAX_STUDENTS, newJoinCode, type ClassRow } from "./classroom";
+import { classOwnedCount, isFramework, offersGrade, MAX_CLASSES, MAX_STUDENTS, newJoinCode, type ClassRow } from "./classroom";
 import { batch, query, run } from "./db";
 import { isFlagOn } from "./flags";
 import { addStudents, cleanStudentName } from "./students";
@@ -413,6 +413,7 @@ export async function applyImport(parentId: string, pending: PendingImport, choi
       if (!name) return { ok: false, status: 400, message: "Give every class a name." };
       if (!(GRADE_ORDER as string[]).includes(choice.grade)) return { ok: false, status: 400, message: "Choose a grade for every class." };
       if (!isFramework(choice.framework)) return { ok: false, status: 400, message: "Choose a province or state for every class." };
+      if (!offersGrade(choice.framework, choice.grade)) return { ok: false, status: 400, message: "Choose a grade for every class." };
       if ((await classOwnedCount(parentId)) >= MAX_CLASSES) return { ok: false, status: 409, message: "You have the maximum number of classes. Close one first." };
       cls = (await createRosterClass(parentId, pending.provider, section, { ...choice, name, grade: choice.grade as GradeId })) as ClassRow;
       if (!cls) return { ok: false, status: 500, message: "Couldn't create the class. Try again." };

@@ -5,7 +5,7 @@
 import type { Currency } from "./money";
 import type { RegisteredId } from "./registry";
 
-export type GradeId = "k" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9";
+export type GradeId = "pk" | "k" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9";
 export type SubjectId = "math" | "language" | "science" | "social" | "immersion" | "core-french";
 /** A curriculum framework: a province, state or national standard set. One per manifest in ./registry. */
 export type FrameworkId = RegisteredId;

@@ -1,3 +1,4 @@
+import { gradeNumber as gradeOf } from "@/content/subjects";
 import type { GradeId, Question } from "@/content/types";
 
 // Reading levels for language-arts passages and the child's own level.
@@ -66,7 +67,8 @@ export function setReadingLevel(qs: Question[]): number | undefined {
   return levels[Math.floor(levels.length / 2)];
 }
 
-const gradeNumber = (g: GradeId): number => (g === "k" ? 0 : Number(g));
+/** The grade on the reading scale, which starts at Kindergarten (Pre-K reads at 0 too). */
+const gradeNumber = (g: GradeId): number => Math.max(0, gradeOf(g));
 
 /** Chance of a first-try right answer when the child's level equals the passage's level. */
 const AT_LEVEL = 0.75;

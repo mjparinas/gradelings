@@ -155,6 +155,10 @@ export const TEXAS_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-K in Texas is free in public schools for 4-year-olds who qualify (for example, children learning English, from low-income or military families, or in foster care), and many districts open it to more families. It follows the 2022 Texas Prekindergarten Guidelines: social and emotional development, language and early reading and writing, math, science and social studies.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in Texas is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to at least 20, and start adding and taking away. Science looks at the five senses, weather and living things, and social studies covers rules, jobs, and the flags and symbols of the United States and Texas.",
       lookFor: "Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

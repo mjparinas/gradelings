@@ -59,12 +59,18 @@ export function classGrades(cls: { grade: GradeId; grade2?: GradeId | null }): G
 }
 
 /** A second grade from the browser: next to the class's grade, or null for none. `undefined` means it isn't a valid choice. */
-export function cleanSecondGrade(grade: string, v: unknown): GradeId | null | undefined {
+export function cleanSecondGrade(grade: string, v: unknown, framework?: string): GradeId | null | undefined {
   if (v === undefined || v === null || v === "") return null;
   const order = GRADE_ORDER as readonly string[];
   const i = order.indexOf(grade);
   const j = typeof v === "string" ? order.indexOf(v) : -1;
+  if (framework !== undefined && !offersGrade(framework, String(v))) return undefined;
   return j >= 0 && Math.abs(i - j) === 1 ? (v as GradeId) : undefined;
+}
+
+/** Whether a province or state teaches a grade: Pre-K isn't offered everywhere yet. */
+export function offersGrade(framework: string, grade: string): boolean {
+  return FRAMEWORKS.some((f) => f.id === framework && (f.grades as string[]).includes(grade));
 }
 
 /** Whether a unit is for a student: the grade of a split class's student decides, unless the teacher picked students. */

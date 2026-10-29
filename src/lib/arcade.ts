@@ -21,7 +21,7 @@ export interface GameInfo {
   french?: boolean;
 }
 
-const ALL: readonly GradeId[] = ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+const ALL: readonly GradeId[] = ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 const from = (g: GradeId, to: GradeId = "9") => ALL.slice(ALL.indexOf(g), ALL.indexOf(to) + 1);
 
 export const GAMES: GameInfo[] = [

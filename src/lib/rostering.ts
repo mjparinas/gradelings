@@ -61,11 +61,13 @@ export function rosterReturnUrl(result: { error?: RosterError; importId?: string
 /**
  * The grade a provider's text means: "K", "Kindergarten", "KG", "4", "04", "Grade 4", "4th grade". Free text such as a
  * class name needs the word "grade" (or "kindergarten") so "Period 3" or "Room 4" is never read as a grade; a field the
- * provider fills with a grade alone (`bare`) can be just the number. Grades above 9 and pre-kindergarten are null.
+ * provider fills with a grade alone (`bare`) can be just the number. Pre-K, Junior and Transitional Kindergarten and
+ * Pre-primary are Pre-K ("pk"); grades above 9 are null.
  */
 export function gradeFromText(text: string | null | undefined, bare = false): GradeId | null {
   const t = String(text ?? "").trim().toLowerCase();
   if (!t) return null;
+  if (/\bpre-?k\b|\bpre-?kindergarten\b|\bjunior kindergarten\b|\btransitional kindergarten\b|\bpre-?primary\b/.test(t) || (bare && /^(?:pk|jk|tk|p)$/.test(t))) return "pk";
   if (/\bkindergarten\b/.test(t) || (bare && /^(?:kg|k|jk\/k|sk|kdg)$/.test(t))) return "k";
   const m = bare && /^0?(\d{1,2})$/.test(t)
     ? t.match(/^0?(\d{1,2})$/)

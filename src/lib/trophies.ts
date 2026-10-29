@@ -93,8 +93,8 @@ export const ARCADE_GAMES = ["munchers", "ninja", "catch", "bubbles", "memory"];
 /** Every grade has at least this many games once they're unlocked (Kindergarten has seven). */
 export const EXPLORER_GAMES = 7;
 
-const GRADES: GradeId[] = ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-const gradeName = (g: GradeId) => (g === "k" ? "Kindergarten" : `Grade ${g}`);
+const GRADES: GradeId[] = ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+const gradeName = (g: GradeId) => (g === "pk" ? "Pre-K" : g === "k" ? "Kindergarten" : `Grade ${g}`);
 
 /** Units at a level across every grade, read from the unit stats alone so it never depends on loaded content. */
 const unitsEverAt = (d: Derived, min: number) => Object.values(d.units).filter((u) => unitLevel(u) >= min).length;

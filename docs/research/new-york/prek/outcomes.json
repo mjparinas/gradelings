@@ -1,0 +1,390 @@
+{
+ "pk/math": [
+  {
+   "idx": "PK.MATH.1",
+   "text": "Counts to 20"
+  },
+  {
+   "idx": "PK.MATH.2",
+   "text": "Represents a number of objects (0-5), with a written numeral 0-5 (with 0"
+  },
+  {
+   "idx": "PK.MATH.3",
+   "text": "Understands the relationship between numbers and quantities to 10, connects"
+  },
+  {
+   "idx": "PK.MATH.3a",
+   "text": "When counting objects, says the number names in the standard order, pairing"
+  },
+  {
+   "idx": "PK.MATH.3b",
+   "text": "Explores and develops the concept that the last number name said tells the"
+  },
+  {
+   "idx": "PK.MATH.4a",
+   "text": "Answers counting questions using as many as 10 objects arranged in a line,"
+  },
+  {
+   "idx": "PK.MATH.4b",
+   "text": "Given a number from 1-10, counts out that many objects"
+  },
+  {
+   "idx": "PK.MATH.6",
+   "text": "Recognizes whether the number of objects in one group is more than, fewer than, or"
+  },
+  {
+   "idx": "PK.MATH.7",
+   "text": "Identifes frst and last related to order or position"
+  },
+  {
+   "idx": "PK.MATH.8",
+   "text": "Explores addition and subtraction by using objects, fngers, and responding to real"
+  },
+  {
+   "idx": "PK.MATH.9",
+   "text": "Duplicates and extends simple patterns using concrete objects (e.g., what comes next?)"
+  },
+  {
+   "idx": "PK.MATH.10",
+   "text": "Identifes measurable attributes of objects, such as length or weight, and describes"
+  },
+  {
+   "idx": "PK.MATH.11",
+   "text": "Sorts objects and shapes into categories; counts the objects in each category. Note:"
+  },
+  {
+   "idx": "PK.MATH.12",
+   "text": "Describes objects in the environment using names of shapes and describes the"
+  },
+  {
+   "idx": "PK.MATH.13",
+   "text": "Names shapes regardless of size"
+  },
+  {
+   "idx": "PK.MATH.14",
+   "text": "Explores two-and three-dimensional objects and uses informal language to describe"
+  },
+  {
+   "idx": "PK.MATH.15",
+   "text": "Creates and builds shapes from components (e.g., sticks, blocks, clay)"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "PK.AC.1",
+   "text": "Demonstrates motivation to communicate"
+  },
+  {
+   "idx": "PK.AC.2",
+   "text": "Demonstrates they are building background knowledge"
+  },
+  {
+   "idx": "PK.AC.3",
+   "text": "Demonstrates understanding of what is observed"
+  },
+  {
+   "idx": "PK.AC.4",
+   "text": "Demonstrates a growing receptive vocabulary"
+  },
+  {
+   "idx": "PK.AC.5",
+   "text": "Demonstrates a growing expressive vocabulary"
+  },
+  {
+   "idx": "PK.AC.6",
+   "text": "Demonstrates their ability to represent ideas using a variety of methods"
+  },
+  {
+   "idx": "PK.ELAL.1",
+   "text": "Demonstrates understanding of the organization and basic features of print"
+  },
+  {
+   "idx": "PK.ELAL.2",
+   "text": "Demonstrates an emerging understanding of spoken words, syllables, and sounds"
+  },
+  {
+   "idx": "PK.ELAL.3",
+   "text": "Demonstrates emergent phonics and word analysis skills"
+  },
+  {
+   "idx": "PK.ELAL.4",
+   "text": "Displays emergent reading behaviors with purpose and understanding"
+  },
+  {
+   "idx": "PK.ELAL.5",
+   "text": "Participates in discussions about a text (e.g., during whole or small group interactive read-"
+  },
+  {
+   "idx": "PK.ELAL.6",
+   "text": "Retells stories or share information from a text"
+  },
+  {
+   "idx": "PK.ELAL.7",
+   "text": "Develops and answers questions about characters, major events, and pieces of information"
+  },
+  {
+   "idx": "PK.ELAL.8",
+   "text": "Exhibits an interest in learning new vocabulary (e.g., asks questions about unfamiliar words)"
+  },
+  {
+   "idx": "PK.ELAL.9",
+   "text": "Interacts with a variety of genres (e.g., storybooks, poems, songs)"
+  },
+  {
+   "idx": "PK.ELAL.10",
+   "text": "Describes the role of an author and illustrator"
+  },
+  {
+   "idx": "PK.ELAL.11",
+   "text": "Describes the relationship between illustrations and the text (e.g., what person, place, thing"
+  },
+  {
+   "idx": "PK.ELAL.12",
+   "text": "Makes connections between self, text, and the world (e.g., what is familiar, what does an"
+  },
+  {
+   "idx": "PK.ELAL.13",
+   "text": "Uses a combination of drawing, dictating, oral expression, and/or emergent writing to state"
+  },
+  {
+   "idx": "PK.ELAL.14",
+   "text": "Uses a combination of drawing, dictating, oral expression, and/or emergent writing to"
+  },
+  {
+   "idx": "PK.ELAL.15",
+   "text": "Uses a combination of drawing, dictating, oral expression, and/or emergent writing to"
+  },
+  {
+   "idx": "PK.ELAL.16",
+   "text": "Creates a response to a text, author, or personal experience (e.g., dramatization, art work"
+  },
+  {
+   "idx": "PK.ELAL.17",
+   "text": "Develops questions and participates in shared research and exploration to answer"
+  },
+  {
+   "idx": "PK.ELAL.19",
+   "text": "Participates in collaborative conversations with diverse peers and adults in small and large"
+  },
+  {
+   "idx": "PK.ELAL.20",
+   "text": "Interacts with diverse formats and texts (e.g., shared read aloud, video clips, oral"
+  },
+  {
+   "idx": "PK.ELAL.21",
+   "text": "Identifes the speaker"
+  },
+  {
+   "idx": "PK.ELAL.22",
+   "text": "Describes familiar people, places, things and events"
+  },
+  {
+   "idx": "PK.ELAL.23",
+   "text": "Creates a visual display (e.g., drawing, art work, building, writing)"
+  },
+  {
+   "idx": "PK.ELAL.24",
+   "text": "Expresses thoughts, feelings, and ideas (e.g., role-playing, music, drawing, art work,"
+  },
+  {
+   "idx": "PK.ELAL.25",
+   "text": "Demonstrates command of the conventions of academic English grammar and usage when"
+  },
+  {
+   "idx": "PK.ELAL.26",
+   "text": "Demonstrates command of the conventions of academic English capitalization, punctuation,"
+  },
+  {
+   "idx": "PK.ELAL.27",
+   "text": "Explores and uses new vocabulary in child-centered, authentic, play-based experiences"
+  },
+  {
+   "idx": "PK.ELAL.28",
+   "text": "Explores and discusses word relationships and word meanings"
+  },
+  {
+   "idx": "PK.ELAL.29",
+   "text": "Uses words and phrases acquired through language rich experiences, conversations,"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "PK.PDH.1",
+   "text": "Uses senses to assist and guide learning."
+  },
+  {
+   "idx": "PK.PDH.2",
+   "text": "Uses sensory information to plan and carry out movements"
+  },
+  {
+   "idx": "PK.PDH.3",
+   "text": "Demonstrates coordination and control of large muscles"
+  },
+  {
+   "idx": "PK.PDH.4",
+   "text": "Combines a sequence of large motor skills with and without the use of equipment"
+  },
+  {
+   "idx": "PK.PDH.5",
+   "text": "Demonstrates eye-hand coordination and fne motor skills"
+  },
+  {
+   "idx": "PK.PDH.6",
+   "text": "Engages in a variety of physical ftness activities"
+  },
+  {
+   "idx": "PK.PDH.7",
+   "text": "Demonstrates personal care and hygiene skills"
+  },
+  {
+   "idx": "PK.PDH.8",
+   "text": "Demonstrates awareness and understanding of healthy habits."
+  },
+  {
+   "idx": "PK.PDH.9",
+   "text": "Demonstrates awareness and understanding of safety rules"
+  },
+  {
+   "idx": "PK.SCI.1",
+   "text": "Asks questions and uses observations to test the claim that diferent kinds of matter exist"
+  },
+  {
+   "idx": "PK.SCI.2",
+   "text": "Uses tools and materials to design and build a device that causes an object to move faster"
+  },
+  {
+   "idx": "PK.SCI.3",
+   "text": "Plans and conducts investigations to provide evidence that sound is produced by"
+  },
+  {
+   "idx": "PK.SCI.4",
+   "text": "Observes familiar plants and animals (including humans) and describes what they need to"
+  },
+  {
+   "idx": "PK.SCI.5",
+   "text": "Plans and conducts investigations to determine how familiar plants and/or animals use"
+  },
+  {
+   "idx": "PK.SCI.6",
+   "text": "Develops a model to describe that some young plants and animals are similar to, but not"
+  },
+  {
+   "idx": "PK.SCI.7",
+   "text": "Observes and describes the apparent motions of the sun, moon, and stars to recognize"
+  },
+  {
+   "idx": "PK.SCI.8",
+   "text": "Asks questions, makes observations, and collects and records data using simple"
+  },
+  {
+   "idx": "PK.SCI.9",
+   "text": "Plans and conducts an investigation to determine the efect of sunlight on Earth’s surface."
+  },
+  {
+   "idx": "PK.SCI.10",
+   "text": "Asks questions, makes observations, and gathers information about a situation people"
+  },
+  {
+   "idx": "PK.SCI.11",
+   "text": "Develops a simple sketch, drawing, or physical model to illustrate how the shape of an"
+  },
+  {
+   "idx": "PK.SCI.12",
+   "text": "Analyzes data from tests of two objects designed to solve the same problem to"
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "PK.PDH.1",
+   "text": "Uses senses to assist and guide learning."
+  },
+  {
+   "idx": "PK.PDH.2",
+   "text": "Uses sensory information to plan and carry out movements"
+  },
+  {
+   "idx": "PK.PDH.3",
+   "text": "Demonstrates coordination and control of large muscles"
+  },
+  {
+   "idx": "PK.PDH.4",
+   "text": "Combines a sequence of large motor skills with and without the use of equipment"
+  },
+  {
+   "idx": "PK.PDH.5",
+   "text": "Demonstrates eye-hand coordination and fne motor skills"
+  },
+  {
+   "idx": "PK.PDH.6",
+   "text": "Engages in a variety of physical ftness activities"
+  },
+  {
+   "idx": "PK.PDH.7",
+   "text": "Demonstrates personal care and hygiene skills"
+  },
+  {
+   "idx": "PK.PDH.8",
+   "text": "Demonstrates awareness and understanding of healthy habits."
+  },
+  {
+   "idx": "PK.PDH.9",
+   "text": "Demonstrates awareness and understanding of safety rules"
+  },
+  {
+   "idx": "PK.SEL.1",
+   "text": "Regulates responses to needs, feelings and events"
+  },
+  {
+   "idx": "PK.SEL.2",
+   "text": "Recognizes self as an individual having unique abilities, characteristics, feelings and interests"
+  },
+  {
+   "idx": "PK.SEL.3",
+   "text": "Demonstrates and continues to develop positive relationships with signifcant adults (primary"
+  },
+  {
+   "idx": "PK.SEL.4",
+   "text": "Develops positive relationships with their peers"
+  },
+  {
+   "idx": "PK.SEL.5",
+   "text": "Demonstrates pro-social problem-solving skills in social interactions"
+  },
+  {
+   "idx": "PK.SEL.6",
+   "text": "Understands and follows routines and rules"
+  },
+  {
+   "idx": "PK.SEL.7",
+   "text": "Adapts to change"
+  },
+  {
+   "idx": "PK.SOC.1",
+   "text": "Develops a basic awareness of self as an individual, self within the context of group, and self within"
+  },
+  {
+   "idx": "PK.SOC.2",
+   "text": "Demonstrates awareness and appreciation of their own culture and other cultures"
+  },
+  {
+   "idx": "PK.SOC.3",
+   "text": "Demonstrates an understanding of roles, rights, and responsibilities"
+  },
+  {
+   "idx": "PK.SOC.4",
+   "text": "Begins to learn basic civic and democratic principles"
+  },
+  {
+   "idx": "PK.SOC.5",
+   "text": "Demonstrates knowledge of the relationship between people, places, and regions"
+  },
+  {
+   "idx": "PK.SOC.6",
+   "text": "Develops an understanding of how people and things change over time and how to relate past"
+  },
+  {
+   "idx": "PK.SOC.7",
+   "text": "Develops a basic understanding of economic concepts within a community"
+  }
+ ]
+}

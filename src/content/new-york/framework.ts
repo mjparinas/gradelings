@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // New York, the fourth US state. Standards are the New York State Education Department's (NYSED): the NYS Next
 // Generation Mathematics Learning Standards (2017, Algebra I in Grade 9), the NYS Next Generation English Language Arts
@@ -74,9 +75,9 @@ export const NEW_YORK: Framework = {
   standardLabel: "Learning standard",
   sourceName: "New York State Education Department (NYSED)",
   sourceUrl: "https://www.nysed.gov/curriculum-instruction",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding New York report cards",
     intro:

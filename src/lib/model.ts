@@ -187,7 +187,7 @@ export function dayKey(t: number): string {
 }
 
 /** Grades whose children have read-aloud switched on by default. Parents can still turn it off per child. */
-export const AUTO_READ_GRADES: readonly GradeId[] = ["k", "1"];
+export const AUTO_READ_GRADES: readonly GradeId[] = ["pk", "k", "1"];
 
 /** Daily goal a new child starts with. Little kids (Kindergarten and Grade 1) get the shorter one. */
 export const DEFAULT_GOAL_MINUTES = { little: 10, other: 15 } as const;
@@ -205,6 +205,8 @@ export function defaultChildSettings(profileId: string, little: boolean, grade?:
     autoRead: grade ? AUTO_READ_GRADES.includes(grade) : little,
     sound: true,
     enabledSubjects: ["math", "language", "science", "social"],
+    // Pre-K lessons are 5 questions to start with: four-year-olds sit for short bursts. A parent can change it.
+    ...(grade === "pk" ? { shortSessions: true } : {}),
     updatedAt: Date.now(),
   };
 }

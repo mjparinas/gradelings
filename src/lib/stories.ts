@@ -1,3 +1,4 @@
+import { gradeNumber } from "@/content/subjects";
 import { storyLevel, type Story } from "@/content/stories";
 import type { GradeId } from "@/content/types";
 import type { Derived } from "./derive";
@@ -7,7 +8,6 @@ import { estimateReadingLevel } from "./readingLevel";
 // Which stories suit a child. The library groups them around the child's reading level (estimated from their
 // passage and story answers, see readingLevel.ts), or around their grade until there are enough answers.
 
-const gradeNumber = (g: GradeId): number => (g === "k" ? 0 : Number(g));
 
 /** How far either side of the child's level a story still counts as "just right". */
 export const JUST_RIGHT_SPAN = 1.2;

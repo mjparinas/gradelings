@@ -1,4 +1,5 @@
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Washington, the first US state. Standards are the Washington State K–12 Learning Standards set by the Office of
 // Superintendent of Public Instruction (OSPI): the 2026 mathematics and English language arts standards (revisions of
@@ -66,9 +67,9 @@ export const WASHINGTON: Framework = {
   standardLabel: "Learning standard",
   sourceName: "Washington Office of Superintendent of Public Instruction (OSPI)",
   sourceUrl: "https://ospi.k12.wa.us/student-success/learning-standards-instructional-materials",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Washington report cards",
     intro:

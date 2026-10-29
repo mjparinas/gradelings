@@ -173,6 +173,10 @@ export const CALIFORNIA_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Transitional kindergarten (TK) is California's free public school year before kindergarten, open to every 4-year-old. It follows the California Preschool/Transitional Kindergarten Learning Foundations, and children learn through play: early math, language and literacy, science, social skills and health.",
+      lookFor: "TK reports are usually short notes or a developmental checklist, not grades. Look for joining in, taking turns, naming feelings, rhyming, letters in your child's name and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in California is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. Social studies is “Learning and Working Now and Long Ago”: rules, jobs, calendars and the flags and symbols of the country and the state.",
       lookFor: "Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

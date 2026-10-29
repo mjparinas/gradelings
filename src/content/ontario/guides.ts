@@ -191,6 +191,12 @@ export const ONTARIO_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview:
+        "Junior Kindergarten is the first of Ontario's two Kindergarten years, for children who turn four by December 31. It follows the same Kindergarten Curriculum as the second year, so play and inquiry come first and expectations grow over the two years.",
+      lookFor:
+        "Junior Kindergarten families receive written communications of learning, not marks. Look for comments about joining in, taking turns, naming feelings, letters in your child's name, rhyming and counting small groups.",
+    },
     k: {
       overview:
         "Kindergarten in Ontario is play-based and inquiry-based. The Kindergarten Program looks at belonging and contributing, self-regulation and well-being, demonstrating literacy and math behaviours, and problem solving and innovating. Children learn through exploring, talking, building and drawing.",

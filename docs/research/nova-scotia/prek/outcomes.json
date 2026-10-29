@@ -1,0 +1,170 @@
+{
+ "pk/math": [
+  {
+   "idx": "Discovery and Invention 1",
+   "text": "children develop curiosity, cooperation, confidence, creativity, commitment, enthusiasm, persistence, and imagination"
+  },
+  {
+   "idx": "Discovery and Invention 2",
+   "text": "children develop a range of skills and processes such as problem solving, inquiry, experimentation, hypothesizing, researching, and investigating"
+  },
+  {
+   "idx": "Language and Communication 1",
+   "text": "children interact verbally and nonverbally with others"
+  },
+  {
+   "idx": "Language and Communication 2",
+   "text": "children engage with a variety of texts and gain meaning from them"
+  },
+  {
+   "idx": "Language and Communication 3",
+   "text": "children express ideas and make meaning with a variety of media"
+  },
+  {
+   "idx": "Language and Communication 4",
+   "text": "children begin to understand how symbols and patterns work"
+  },
+  {
+   "idx": "Language and Communication 5",
+   "text": "children use technology, with guidance, to access information, investigate ideas, and express their thoughts"
+  },
+  {
+   "idx": "Language and Communication 6",
+   "text": "children communicate in individualized, meaningful ways such as using sign language, augmentative and alternative communication strategies and/or using their heritage and family languages"
+  },
+  {
+   "idx": "Language and Communication 7",
+   "text": "children cultivate language skills in French, one of Canada’s two official languages, and deepen connections to Acadian and Francophone language, culture, and heritage in official-language minority communities (OLMC)"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "Language and Communication 1",
+   "text": "children interact verbally and nonverbally with others"
+  },
+  {
+   "idx": "Language and Communication 2",
+   "text": "children engage with a variety of texts and gain meaning from them"
+  },
+  {
+   "idx": "Language and Communication 3",
+   "text": "children express ideas and make meaning with a variety of media"
+  },
+  {
+   "idx": "Language and Communication 4",
+   "text": "children begin to understand how symbols and patterns work"
+  },
+  {
+   "idx": "Language and Communication 5",
+   "text": "children use technology, with guidance, to access information, investigate ideas, and express their thoughts"
+  },
+  {
+   "idx": "Language and Communication 6",
+   "text": "children communicate in individualized, meaningful ways such as using sign language, augmentative and alternative communication strategies and/or using their heritage and family languages"
+  },
+  {
+   "idx": "Language and Communication 7",
+   "text": "children cultivate language skills in French, one of Canada’s two official languages, and deepen connections to Acadian and Francophone language, culture, and heritage in official-language minority communities (OLMC)"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "Discovery and Invention 1",
+   "text": "children develop curiosity, cooperation, confidence, creativity, commitment, enthusiasm, persistence, and imagination"
+  },
+  {
+   "idx": "Discovery and Invention 2",
+   "text": "children develop a range of skills and processes such as problem solving, inquiry, experimentation, hypothesizing, researching, and investigating"
+  },
+  {
+   "idx": "Personal and Social Responsibility 1",
+   "text": "children learn to interact in relation to others with care, empathy, and respect"
+  },
+  {
+   "idx": "Personal and Social Responsibility 2",
+   "text": "children develop a sense of belonging to groups and communities, and how they can actively participate in them"
+  },
+  {
+   "idx": "Personal and Social Responsibility 3",
+   "text": "children respond to diversity with respect and pride"
+  },
+  {
+   "idx": "Personal and Social Responsibility 4",
+   "text": "children become aware of fairness, equity, and social justice"
+  },
+  {
+   "idx": "Personal and Social Responsibility 5",
+   "text": "children become socially responsible and show respect for the environment"
+  },
+  {
+   "idx": "Personal and Social Responsibility 6",
+   "text": "children connect with the Mi’kmaq through their language, culture and teachings of Netukulimk"
+  },
+  {
+   "idx": "Well-being 1",
+   "text": "children feel safe, secure, and supported"
+  },
+  {
+   "idx": "Well-being 2",
+   "text": "children become strong in their social, emotional, linguistic, cultural, and spiritual well-being"
+  },
+  {
+   "idx": "Well-being 3",
+   "text": "children take increasing responsibility for their own health and physical well-being"
+  },
+  {
+   "idx": "Well-being 4",
+   "text": "children develop knowledge and confidence in their own identity"
+  },
+  {
+   "idx": "Well-being 5",
+   "text": "children build the capacity and skill to observe and develop awareness and respect for the well-being of others"
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "Well-being 1",
+   "text": "children feel safe, secure, and supported"
+  },
+  {
+   "idx": "Well-being 2",
+   "text": "children become strong in their social, emotional, linguistic, cultural, and spiritual well-being"
+  },
+  {
+   "idx": "Well-being 3",
+   "text": "children take increasing responsibility for their own health and physical well-being"
+  },
+  {
+   "idx": "Well-being 4",
+   "text": "children develop knowledge and confidence in their own identity"
+  },
+  {
+   "idx": "Well-being 5",
+   "text": "children build the capacity and skill to observe and develop awareness and respect for the well-being of others"
+  },
+  {
+   "idx": "Personal and Social Responsibility 1",
+   "text": "children learn to interact in relation to others with care, empathy, and respect"
+  },
+  {
+   "idx": "Personal and Social Responsibility 2",
+   "text": "children develop a sense of belonging to groups and communities, and how they can actively participate in them"
+  },
+  {
+   "idx": "Personal and Social Responsibility 3",
+   "text": "children respond to diversity with respect and pride"
+  },
+  {
+   "idx": "Personal and Social Responsibility 4",
+   "text": "children become aware of fairness, equity, and social justice"
+  },
+  {
+   "idx": "Personal and Social Responsibility 5",
+   "text": "children become socially responsible and show respect for the environment"
+  },
+  {
+   "idx": "Personal and Social Responsibility 6",
+   "text": "children connect with the Mi’kmaq through their language, culture and teachings of Netukulimk"
+  }
+ ]
+}

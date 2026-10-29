@@ -165,7 +165,7 @@ Tests are duplicated across screen sizes only where layout can break:
 - **Verify French against the official sources:** curriculum.gov.bc.ca (`/curriculum/fral/{grade}/core` and `/curriculum/core-french/{grade}`) for BC, and the Ministry's FSL curriculum for Ontario.
 
 ### Ages
-- **Three age bands** (`ageBandFor`): little (K–1), middle (2–4) and big (5–9). The band changes copy, size and features:
+- **Three age bands** (`ageBandFor`): little (Pre-K–1), middle (2–4) and big (5–9). The band changes copy, size and features:
   - **Subject names:**
     - Language: "Letters & Words" (little), "Reading & Writing" (middle), "Language Arts" (big).
     - Social studies: "My World" (little), "Our World" (middle), "Social Studies" (big).
@@ -174,6 +174,13 @@ Tests are duplicated across screen sizes only where layout can break:
     - No Speed Run or Review tile; they go straight into lessons.
     - The adaptive mode is called "Let's Play!" and the arcade "Games".
     - **A calm home screen** (`Hub.tsx`): Let's Play plus three big picture tiles with one word each (Lessons, Games, Treasures) and no small print. Treasures (`#/treasures`, `Treasures.tsx`) holds Stickers, Trophies, My Room, Shop and Trail Map, and those screens' Back goes to it. The Daily Challenge sits on the Lessons screen. One short greeting line, one daily quest at a time (dots, no weekly list; all quests are still claimed), at most one suggestion card ("Almost there" first) and no XP numbers in the top bar. Don't add tiles or cards to their home screen; put new things behind Treasures or Lessons.
+
+### Pre-K
+- **Pre-K is the year before Kindergarten** (grade id `pk`, age 4, `isPreK` and `gradeNumber` in `src/content/subjects.ts`; owner, October 2026). A framework offers it by listing `"pk"` in `grades` and names the year with `preKName` ("Junior Kindergarten", "Pre-primary", "Transitional Kindergarten"; default "Pre-K", or "pre-K" in US wording). Pickers, classes and roster import offer only the grades a child's framework lists (`offersGrade` in `src/server/classroom.ts`).
+- **One shared library:** 26 units in math, language, science and social studies, written once in `src/content/grades/pk/` with lessons in `src/content/lessons/pk.ts` (`PRE_K_UNITS` in `src/content/prek.ts`). No French. Each framework's `<folder>/pk.ts` only cites its own early-learning document for each unit (`preKCourses`), checked by `preK` in its `contract.ts` against `docs/research/<folder>/prek/outcomes.json`; `coverage.test.ts` fails when a framework offering Pre-K misses a unit. Where a region has no Pre-K outcomes, units cite its play-based early-learning framework's goals.
+- **Picture-only questions** (`checkPreK` in `src/content/fairness/question.ts`): tap-to-answer, order or sort only, at most 3 choices, each choice an emoji, a shape or a label of 2 characters or fewer, no passages or tables. Read-aloud and shorter sessions are on by default. No Speed Run, Review tile, Math Facts or placement test. The Challenge has no time limit, so Star stays reachable.
+- **Levels are practice steps only** (`preKScale`): Pre-K has no report card anywhere.
+- **Rollout:** Pre-K reaches the frameworks in batches (owner chose every region). Until every framework has it, site-wide copy keeps "Kindergarten to Grade 9" (`provinceCoverage` starts its range where every framework starts); a region's own pages read their range from its grades (`gradeSpan`).
 
 ### Modes
 - **Adventure** is the headline mode and needs no topic picking.
@@ -185,7 +192,7 @@ Tests are duplicated across screen sizes only where layout can break:
 - **Daily Challenge:** 10 questions, seeded so everyone gets the same set that day.
 - **Challenge:** 10 questions at difficulty 3, a 300 s time limit (420 s for little kids) and no retries.
   - Passing takes 8 out of 10, and passing is the only way to reach Extending.
-- **Math Facts** (`src/lib/facts.ts`, `Facts.tsx`, `#/facts`; flag `math-facts`): addition and subtraction facts to 10 (Grades 1 and 2, 45 each) and to 20 (Grade 2 up, 100 each), then times tables and division facts to 10 × 10 (Grade 3 up, 100 each). None in Kindergarten (no typed answers). Rounds of 20 typed facts (10 with short sessions); a right answer moves straight on, a miss gets the usual hint and another try, and "Show me another way" opens the set's strategy lesson.
+- **Math Facts** (`src/lib/facts.ts`, `Facts.tsx`, `#/facts`; flag `math-facts`): addition and subtraction facts to 10 (Grades 1 and 2, 45 each) and to 20 (Grade 2 up, 100 each), then times tables and division facts to 10 × 10 (Grade 3 up, 100 each). None in Pre-K or Kindergarten (no typed answers). Rounds of 20 typed facts (10 with short sessions); a right answer moves straight on, a miss gets the usual hint and another try, and "Show me another way" opens the set's strategy lesson.
   - Each fact is tracked on its own: answer events carry `fact` ("mul:7:8") and `derive` builds `facts` from them, never stored. A fact is known after its last two tries were right the first time without a hint. Missed facts come back most, then facts being learned, then new ones (slower while 8 are being learned), then known ones now and then (`pickFact`). Fact sets share ids, so "3 + 4" practised in Adding to 10 counts in Addition facts too.
   - Fact answers use the unit key `<grade>/math/facts`, so they count as math practice (XP, minutes, subject totals, streaks) but never as a unit: no level, no report-card row, no "ask a grown-up" entry and no question report.
   - Older kids get a home-screen tile; little kids (Grade 1) find it on the Lessons screen. It needs the family plan (`Feature` "facts") and math switched on. Parent Reports say "knows 64 of 100 times-table facts" for each set practised, with the facts still being practised (`FactsLine`). Trophies: Fact Finder, Fact Collector (50 known) and one gold per set of 100 (`facts-add`, `facts-sub`, `facts-mul`, `facts-div`), shown only where the grade has the set; daily quest "Do a Math Facts round" for non-little kids.
@@ -233,7 +240,7 @@ Tests are duplicated across screen sizes only where layout can break:
   - Session bonuses: +15 per session, +25 when perfect, +40 for the Daily Challenge, +30 for passing a Challenge.
   - Level *n* needs `80 + 40(n−1)` XP.
 - **Coins** come from correct answers, sessions, games, trophies and quests. They're spent in a pretend shop on critter companions, titles and confetti styles.
-- **Trophies:** 208 in the list, about 119 visible to a child at any one grade (mastery trophies are per grade), including a French group kept in its own list (`src/lib/trophies.ts`), in Xbox/PlayStation-style tiers. Everything a child can do has a trophy: every subject (a practice ladder for each of math, language, science, social studies and both French subjects), every mode, the Story Library, every arcade game, streaks, levels, shop, and mastery for every grade and subject.
+- **Trophies:** 216 in the list, about 119 visible to a child at any one grade (mastery trophies are per grade), including a French group kept in its own list (`src/lib/trophies.ts`), in Xbox/PlayStation-style tiers. Everything a child can do has a trophy: every subject (a practice ladder for each of math, language, science, social studies and both French subjects), every mode, the Story Library, every arcade game, streaks, levels, shop, and mastery for every grade and subject.
 
   | Tier | Points | Coins |
   | --- | --- | --- |
@@ -519,6 +526,7 @@ Full guide: `docs/CONTENT_GUIDE.md`. The essentials:
   - the maths checks out.
   - `src/content/content.test.ts` enforces this. Keep it passing and extend it rather than weaken it.
 - **Little kids:**
+  - Pre-K questions are picture-only, with at most 3 choices (see Pre-K above).
   - Prompts are at most 80 characters, with at most 4 choices (5 for older kids).
   - No typed answers in Kindergarten.
   - Use `speak` when read-aloud should differ from the text, and `speak: ""` to stay silent.

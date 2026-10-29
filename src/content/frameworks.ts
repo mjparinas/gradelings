@@ -59,7 +59,10 @@ export interface Framework {
   /** Where the standards come from, shown on public pages. */
   sourceName: string;
   sourceUrl: string;
+  /** The grades this framework offers, youngest first. Pre-K ("pk") is listed only once the framework has its Pre-K units. */
   grades: GradeId[];
+  /** What families here call the year before Kindergarten ("Junior Kindergarten", "Pre-primary"). "Pre-K" when not set. */
+  preKName?: string;
   /** Subjects with content for this framework. */
   subjects: SubjectId[];
   scoringFor: (grade: GradeId) => ScoringScheme;

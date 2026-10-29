@@ -4,8 +4,11 @@ import { describe, expect, it } from "vitest";
 import { COURSES } from "../all";
 import { FRAMEWORKS, getFramework } from "../frameworks";
 import { GUIDES } from "../guides";
-import { GRADE_ORDER } from "../subjects";
+import { GRADE_ORDER as ALL_GRADES } from "../subjects";
 import type { GradeId } from "../types";
+
+// French starts in Kindergarten at the earliest, never in Pre-K.
+const GRADE_ORDER = ALL_GRADES.filter((g): g is Exclude<GradeId, "pk"> => g !== "pk");
 
 // Saskatchewan French: Core French Levels 1 to 9 (Grades 1 to 9) and Français en immersion (Kindergarten to Grade 9).
 // Sources and the checking record are in docs/research/saskatchewan/.

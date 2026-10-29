@@ -1,3 +1,4 @@
+import { gradeNumber } from "@/content/subjects";
 import { APP_NAME } from "@/lib/brand";
 import { PRICES_BY_CURRENCY, type Currency } from "@/lib/plan";
 import type { Framework } from "@/content/frameworks";
@@ -57,9 +58,9 @@ export function itemListJsonLd(name: string, items: { name: string; path: string
   };
 }
 
-/** Usual ages for a grade: Kindergarten 5–6, Grade 1 6–7 and so on. */
+/** Usual ages for a grade: Pre-K 4–5, Kindergarten 5–6, Grade 1 6–7 and so on. */
 export function typicalAgeRange(grade: GradeId): string {
-  const n = grade === "k" ? 0 : Number(grade);
+  const n = gradeNumber(grade);
   return `${n + 5}-${n + 6}`;
 }
 

@@ -155,6 +155,10 @@ export const NEW_YORK_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "New York offers free, full-day Pre-K for 4-year-olds in most school districts, including every New York City family who applies. It follows the New York State Prekindergarten Learning Standards: approaches to learning, physical and social-emotional development, language and literacy, math, science, social studies and the arts.",
+      lookFor: "Pre-K reports are usually progress notes, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in New York is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 by ones and tens, and add and subtract within 5 fluently. Science explores pushes and pulls, sunlight, weather and what plants and animals need, and social studies is “Self and Others”: families, rules, symbols, maps and needs and wants.",
       lookFor: "Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

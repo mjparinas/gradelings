@@ -4,6 +4,7 @@ import { describe, expect, it } from "vitest";
 import { COURSES } from "./all";
 import { FRAMEWORKS, UPCOMING_FRAMEWORKS } from "./frameworks";
 import { manifestOf } from "./registry";
+import { PRE_K_SUBJECTS, PRE_K_UNITS } from "./prek";
 import { CORE_SUBJECTS, GRADE_ORDER } from "./subjects";
 import type { FrameworkId, GradeId } from "./types";
 
@@ -21,8 +22,16 @@ const CONTENT_FRAMEWORKS = [...FRAMEWORKS, ...UPCOMING_FRAMEWORKS];
 const frenchGrades = (id: FrameworkId) => manifestOf(id).french;
 
 describe("every framework covers every grade and subject", () => {
-  it("offers each framework's grades as Kindergarten to Grade 9", () => {
-    for (const f of CONTENT_FRAMEWORKS) expect(f.grades, f.id).toEqual(GRADE_ORDER);
+  it("offers each framework's grades as Pre-K or Kindergarten to Grade 9", () => {
+    // Pre-K is reaching every framework in turn; until a framework has its Pre-K standards it starts at Kindergarten.
+    for (const f of CONTENT_FRAMEWORKS) expect(f.grades, f.id).toEqual(f.grades.includes("pk") ? GRADE_ORDER : GRADE_ORDER.filter((g) => g !== "pk"));
+  });
+
+  it("gives Pre-K every shared unit, cited, in the four core subjects and no French", () => {
+    for (const f of CONTENT_FRAMEWORKS.filter((x) => x.grades.includes("pk"))) {
+      for (const subject of PRE_K_SUBJECTS) expect(units(f.id, "pk", subject).map((u) => u.id).sort(), `${f.id} pk/${subject}`).toEqual([...PRE_K_UNITS[subject]].sort());
+      expect(f.scoringFor("pk").practiceSteps, `${f.id} Pre-K levels are practice steps`).toBe(true);
+    }
   });
 
   it("has math, language, science and social studies in every grade, with Big Ideas or strands", () => {

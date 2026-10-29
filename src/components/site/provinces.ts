@@ -1,6 +1,6 @@
 import { COUNTRIES, COUNTRY_ORDER, countryOf } from "@/lib/country";
 import type { Framework } from "@/content/frameworks";
-import { SUBJECTS, subjectInSentence } from "@/content/subjects";
+import { GRADE_ORDER, SUBJECTS, subjectInSentence } from "@/content/subjects";
 import type { GradeId, SubjectId } from "@/content/types";
 import { subjectSeoTitle } from "./curriculum";
 
@@ -109,10 +109,13 @@ export function provinceCoverage(frameworks: readonly Framework[]): ProvinceCove
     };
   });
 
+  // The grades every province teaches: they all end on the same grade, and the range starts where the last of them
+  // starts, so "Kindergarten to Grade 9" stays true while Pre-K reaches the provinces one at a time.
   const first = frameworks[0];
-  const from = first?.grades[0];
   const to = first ? first.grades[first.grades.length - 1] : undefined;
-  const sameRange = Boolean(from && to && frameworks.every((f) => f.grades[0] === from && f.grades[f.grades.length - 1] === to));
+  const starts = frameworks.map((f) => GRADE_ORDER.indexOf(f.grades[0]));
+  const from = frameworks.length ? GRADE_ORDER[Math.max(...starts)] : undefined;
+  const sameRange = Boolean(from && to && frameworks.every((f) => f.grades[f.grades.length - 1] === to && f.grades.includes(from)));
 
   return {
     sharedSubjects,

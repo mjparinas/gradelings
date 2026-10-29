@@ -17,7 +17,7 @@ const withLesson = COURSES.flatMap((c) => c.units.filter((u) => u.lesson).map((u
 describe("unit lessons", () => {
   it("covers every grade", () => {
     const grades = new Set(withLesson.map(({ c }) => c.grade));
-    expect([...grades].sort()).toEqual(["1", "2", "3", "4", "5", "6", "7", "8", "9", "k"].sort());
+    expect([...grades].sort()).toEqual(["1", "2", "3", "4", "5", "6", "7", "8", "9", "k", "pk"].sort());
   });
 
   it("is short, clear and complete", () => {

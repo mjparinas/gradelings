@@ -6,7 +6,7 @@ import type { GradeId } from "../types";
 
 export type SkSubject = "math" | "language" | "science" | "social";
 
-export const SK_OUTCOMES: Record<GradeId, Record<SkSubject, string[]>> = {
+export const SK_OUTCOMES: Record<Exclude<GradeId, "pk">, Record<SkSubject, string[]>> = {
   k: {
     math: [
       "NK (NK.1–NK.5): Say the whole number sequence by 1s starting anywhere from 0 to 10 and from 10 to 0. Recognize, at a glance, and name familiar arrangements of 1 to 5 objects, dots, or pictures. Relate a numeral, 0 to 10, to its respective quantity. (and 2 more outcomes)",

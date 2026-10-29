@@ -1,4 +1,5 @@
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 import type { GradeId } from "../types";
 
 // Nova Scotia. Standards are the outcomes in the Nova Scotia curriculum (Department of Education and Early Childhood
@@ -78,9 +79,10 @@ export const NOVA_SCOTIA: Framework = {
   standardLabel: "Learning outcome",
   sourceName: "Nova Scotia Department of Education and Early Childhood Development",
   sourceUrl: "https://curriculum.novascotia.ca/",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  preKName: "Pre-primary",
   subjects: ["math", "language", "science", "social", "immersion", "core-french"],
-  scoringFor: (grade: GradeId) => (grade === "k" ? PRIMARY : grade === "1" || grade === "2" || grade === "3" ? EARLY : grade === "4" || grade === "5" || grade === "6" ? MIDDLE : PERCENT),
+  scoringFor: (grade: GradeId) => (grade === "pk" ? preKScale(PRIMARY) : grade === "k" ? PRIMARY : grade === "1" || grade === "2" || grade === "3" ? EARLY : grade === "4" || grade === "5" || grade === "6" ? MIDDLE : PERCENT),
   reportCard: {
     title: "Understanding Nova Scotia report cards",
     intro:

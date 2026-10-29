@@ -1,5 +1,5 @@
 import { error, getSession, json, newId, rateLimited, sameOrigin } from "@/server/auth";
-import { assignedAt, assignmentAudience, cleanClassName, cleanSecondGrade, assignmentDue, assignmentGoals, assignmentKeys, classProgressAndMisses, classTeachers, hiddenClassIds, isFramework, MAX_CLASSES, newJoinCode, ownedClass, pendingInvites, removeClassTeachers, teachingClass } from "@/server/classroom";
+import { assignedAt, assignmentAudience, cleanClassName, cleanSecondGrade, offersGrade, assignmentDue, assignmentGoals, assignmentKeys, classProgressAndMisses, classTeachers, hiddenClassIds, isFramework, MAX_CLASSES, newJoinCode, ownedClass, pendingInvites, removeClassTeachers, teachingClass } from "@/server/classroom";
 import { batch, query, run } from "@/server/db";
 import { liveClassStatements } from "@/server/live";
 import { isFlagOn } from "@/server/flags";
@@ -86,8 +86,8 @@ export async function POST(req: Request) {
   const framework = body?.framework === undefined ? "ca-bc" : body.framework;
   if (!isFramework(framework)) return error(400, "Choose a province or state.");
   if (!name) return error(400, "Give the class a name.");
-  if (!(GRADE_ORDER as string[]).includes(grade)) return error(400, "Choose a grade.");
-  const grade2 = cleanSecondGrade(grade, body?.grade2);
+  if (!(GRADE_ORDER as string[]).includes(grade) || !offersGrade(framework, grade)) return error(400, "Choose a grade.");
+  const grade2 = cleanSecondGrade(grade, body?.grade2, framework);
   if (grade2 === undefined) return error(400, "A split class's second grade has to be next to the first.");
   const mine = await query<{ n: number }>("SELECT COUNT(*) AS n FROM classes WHERE owner_parent_id = ? AND closed_at IS NULL", [session.parentId]);
   if (Number(mine[0].n) >= MAX_CLASSES) return error(409, "You have the maximum number of classes. Close one first.");

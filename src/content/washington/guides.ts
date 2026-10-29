@@ -176,6 +176,10 @@ export const WASHINGTON_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Washington has no single public pre-K year: 4-year-olds learn in ECEAP and Head Start (free for families who qualify), transitional kindergarten in some districts, child care and preschool. They follow the Washington State Early Learning and Development Guidelines, which describe what children may do at each age.",
+      lookFor: "Pre-K programs share notes and observations, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in Washington is a full-day year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away, and teachers get to know each child through the WaKIDS inventory in the first weeks.",
       lookFor: "Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",
