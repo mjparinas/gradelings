@@ -1,4 +1,5 @@
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 import type { GradeId } from "../types";
 
 // Newfoundland and Labrador (English program). Standards are the key-stage outcomes in the Foundation documents for the Atlantic
@@ -67,9 +68,9 @@ export const NEWFOUNDLAND_AND_LABRADOR: Framework = {
   standardLabel: "Curriculum outcome",
   sourceName: "Newfoundland and Labrador Department of Education and Early Childhood Development",
   sourceUrl: "https://www.gov.nl.ca/education/k12/curriculum/",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social", "core-french"],
-  scoringFor: (grade: GradeId) => (grade === "7" || grade === "8" || grade === "9" ? JUNIOR_HIGH : K6),
+  scoringFor: (grade: GradeId) => (grade === "pk" ? preKScale(K6) : grade === "7" || grade === "8" || grade === "9" ? JUNIOR_HIGH : K6),
   reportCard: {
     title: "Understanding Newfoundland and Labrador report cards",
     intro:

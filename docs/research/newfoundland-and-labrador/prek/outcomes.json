@@ -1,0 +1,106 @@
+{
+ "pk/math": [
+  {
+   "idx": "2.1",
+   "text": "Language Development"
+  },
+  {
+   "idx": "2.2",
+   "text": "Creative Expression"
+  },
+  {
+   "idx": "2.3",
+   "text": "Cultural Connection"
+  },
+  {
+   "idx": "3.1",
+   "text": "Investigation and Thinking"
+  },
+  {
+   "idx": "3.2",
+   "text": "Creativity"
+  },
+  {
+   "idx": "3.3",
+   "text": "A Positive Attitude Towards Learning"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "2.1",
+   "text": "Language Development"
+  },
+  {
+   "idx": "2.2",
+   "text": "Creative Expression"
+  },
+  {
+   "idx": "2.3",
+   "text": "Cultural Connection"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "1.1",
+   "text": "Physical Well-Being"
+  },
+  {
+   "idx": "1.2",
+   "text": "Emotional Well-Being"
+  },
+  {
+   "idx": "1.3",
+   "text": "Belonging"
+  },
+  {
+   "idx": "3.1",
+   "text": "Investigation and Thinking"
+  },
+  {
+   "idx": "3.2",
+   "text": "Creativity"
+  },
+  {
+   "idx": "3.3",
+   "text": "A Positive Attitude Towards Learning"
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "1.1",
+   "text": "Physical Well-Being"
+  },
+  {
+   "idx": "1.2",
+   "text": "Emotional Well-Being"
+  },
+  {
+   "idx": "1.3",
+   "text": "Belonging"
+  },
+  {
+   "idx": "2.1",
+   "text": "Language Development"
+  },
+  {
+   "idx": "2.2",
+   "text": "Creative Expression"
+  },
+  {
+   "idx": "2.3",
+   "text": "Cultural Connection"
+  },
+  {
+   "idx": "4.1",
+   "text": "Equality"
+  },
+  {
+   "idx": "4.2",
+   "text": "Diversity"
+  },
+  {
+   "idx": "4.3",
+   "text": "Social Responsibility"
+  }
+ ]
+}

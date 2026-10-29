@@ -1,0 +1,378 @@
+{
+ "pk/math": [
+  {
+   "idx": "V.A.1",
+   "text": "Subitizes (immediately recognizes without counting) up to five objects"
+  },
+  {
+   "idx": "V.A.2",
+   "text": "Counts and identifies the number sequence \"1 to 31\""
+  },
+  {
+   "idx": "V.A.3",
+   "text": "Demonstrates one-to-one correspondence when counting objects placed in a row (one to 15 and beyond)"
+  },
+  {
+   "idx": "V.A.4",
+   "text": "Identifies the last number spoken tells ”how many” up to 10 (cardinality)"
+  },
+  {
+   "idx": "V.A.5",
+   "text": "Constructs and counts sets of objects (one to 10 and beyond)"
+  },
+  {
+   "idx": "V.A.6",
+   "text": "Uses counting and matching strategies to find which is more, less than or equal to 10"
+  },
+  {
+   "idx": "V.A.7",
+   "text": "Reads and writes some numerals one to 10 using appropriate activities"
+  },
+  {
+   "idx": "V.B.1",
+   "text": "Explores quantities up to eight using objects, fingers and dramatic play to solve real-world joining and separating problems"
+  },
+  {
+   "idx": "V.B.2",
+   "text": "Begins to demonstrate how to compose and decompose (build and take apart) sets up to eight using objects, fingers and acting out"
+  },
+  {
+   "idx": "V.C.1",
+   "text": "Identifies and extends a simple AB repeating pattern"
+  },
+  {
+   "idx": "V.C.2",
+   "text": "Duplicates a simple AB pattern using different objects"
+  },
+  {
+   "idx": "V.C.3",
+   "text": "Recognizes the unit of repeat of a more complex pattern and extends the pattern (e.g., ABB or ABC)"
+  },
+  {
+   "idx": "V.D.1",
+   "text": "Recognizes and names two-dimensional shapes (circle, square, triangle and rectangle) of different size and orientation"
+  },
+  {
+   "idx": "V.D.2",
+   "text": "Describes, sorts and classifies two- and three-dimensional shapes using some attributes such as size, sides and other properties (e.g., vertices)"
+  },
+  {
+   "idx": "V.D.3",
+   "text": "Creates two-dimensional shapes using other shapes (e.g., putting two squares together to make a rectangle)"
+  },
+  {
+   "idx": "V.D.4",
+   "text": "Constructs with three-dimensional shapes in the environment through play (e.g., building castles in the construction area)"
+  },
+  {
+   "idx": "V.E.1",
+   "text": "Describes relationships between objects and locations with words and gestures by constructing models to demonstrate an understanding of proximity"
+  },
+  {
+   "idx": "V.E.2",
+   "text": "Uses directions to move through space and find places in space"
+  },
+  {
+   "idx": "V.F.1",
+   "text": "Measures object attributes using a variety of standard and nonstandard tools"
+  },
+  {
+   "idx": "V.F.2",
+   "text": "Identifies measurable attributes such as length and weight and solves problems by making direct comparisons of objects"
+  },
+  {
+   "idx": "V.F.3",
+   "text": "Seriates (places objects in sequence) up to six objects in order by height or length (e.g., cube towers or unit blocks)"
+  },
+  {
+   "idx": "V.F.4",
+   "text": "Represents, analyzes and discusses data (e.g., charts, graphs and tallies)"
+  },
+  {
+   "idx": "V.F.5",
+   "text": "Begins to predict the results of data collection"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "IV.A.1",
+   "text": "Demonstrates understanding when listening"
+  },
+  {
+   "idx": "IV.A.2",
+   "text": "Increases knowledge through listening"
+  },
+  {
+   "idx": "IV.A.3",
+   "text": "Follows Directions"
+  },
+  {
+   "idx": "IV.B.1",
+   "text": "Speaks and is understood when speaking"
+  },
+  {
+   "idx": "IV.C.1",
+   "text": "Shows an understanding of words and their meanings (receptive)"
+  },
+  {
+   "idx": "IV.C.2",
+   "text": "Uses increased vocabulary to describe objects, actions and events (expressive)"
+  },
+  {
+   "idx": "IV.D.1",
+   "text": "Uses age-appropriate grammar in conversations and increasingly complex phrases and sentences"
+  },
+  {
+   "idx": "IV.D.2",
+   "text": "Connects words, phrases and sentences to build ideas"
+  },
+  {
+   "idx": "IV.E.1",
+   "text": "Uses verbal and nonverbal communication and language to express needs and feelings, share experiences and resolve problems"
+  },
+  {
+   "idx": "IV.E.2",
+   "text": "Asks questions, and responds to adults and peers in a variety of settings"
+  },
+  {
+   "idx": "IV.E.3",
+   "text": "Demonstrates understanding of the social conventions of communication and language use"
+  },
+  {
+   "idx": "IV.F.1",
+   "text": "Shows motivation for and appreciation of reading"
+  },
+  {
+   "idx": "IV.F.2",
+   "text": "Shows age-appropriate phonological awareness"
+  },
+  {
+   "idx": "IV.F.3",
+   "text": "Shows alphabetic and print knowledge"
+  },
+  {
+   "idx": "IV.F.4",
+   "text": "Demonstrates comprehension of books read aloud"
+  },
+  {
+   "idx": "IV.G.1",
+   "text": "Begins to show motivation to engage in written expression and appropriate knowledge of forms and functions of written composition"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "VI.A.1",
+   "text": "Uses senses to explore and understand their social and physical environment"
+  },
+  {
+   "idx": "VI.A.2",
+   "text": "Uses tools in scientific inquiry"
+  },
+  {
+   "idx": "VI.A.3",
+   "text": "Uses understanding of causal relationships to act on social and physical environments"
+  },
+  {
+   "idx": "VI.B.1",
+   "text": "Demonstrates knowledge related to living things and their environments"
+  },
+  {
+   "idx": "VI.C.1",
+   "text": "Demonstrates knowledge related to physical science"
+  },
+  {
+   "idx": "VI.D.1",
+   "text": "Demonstrates knowledge related to the dynamic properties of earth and sky"
+  },
+  {
+   "idx": "VI.E.1",
+   "text": "Demonstrates awareness of relationship to people, objects and living/non-living things in their environment"
+  },
+  {
+   "idx": "VI.F.1",
+   "text": "Shows interest and understanding of how simple tools and machines assist with solving problems or creating objects and structures"
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "III.A.1",
+   "text": "Expresses, identifies and responds to a range of emotions"
+  },
+  {
+   "idx": "III.A.2",
+   "text": "Demonstrates appropriate affect (emotional response) between behavior and facial expression"
+  },
+  {
+   "idx": "III.B.1",
+   "text": "Demonstrates ability to self-regulate"
+  },
+  {
+   "idx": "III.B.2",
+   "text": "Attends to sights, sounds, objects, people and activities"
+  },
+  {
+   "idx": "III.C.1",
+   "text": "Develops positive relationships with adults"
+  },
+  {
+   "idx": "III.C.2",
+   "text": "Develops positive relationships with peers"
+  },
+  {
+   "idx": "III.C.3",
+   "text": "Develops increasing ability to engage in social problem solving"
+  },
+  {
+   "idx": "III.C.4",
+   "text": "Exhibits empathy by demonstrating care and concern for others"
+  },
+  {
+   "idx": "III.D.1",
+   "text": "Develops sense of identity and belonging through play"
+  },
+  {
+   "idx": "III.D.2",
+   "text": "Develops sense of identity and belonging through exploration and persistence"
+  },
+  {
+   "idx": "III.D.3",
+   "text": "Develops sense of identity and belonging through routines, rituals and interactions"
+  },
+  {
+   "idx": "III.D.4",
+   "text": "Develops sense of self-awareness and independence"
+  },
+  {
+   "idx": "VI.A.1",
+   "text": "Uses senses to explore and understand their social and physical environment"
+  },
+  {
+   "idx": "VI.A.2",
+   "text": "Uses tools in scientific inquiry"
+  },
+  {
+   "idx": "VI.A.3",
+   "text": "Uses understanding of causal relationships to act on social and physical environments"
+  },
+  {
+   "idx": "VI.B.1",
+   "text": "Demonstrates knowledge related to living things and their environments"
+  },
+  {
+   "idx": "VI.C.1",
+   "text": "Demonstrates knowledge related to physical science"
+  },
+  {
+   "idx": "VI.D.1",
+   "text": "Demonstrates knowledge related to the dynamic properties of earth and sky"
+  },
+  {
+   "idx": "VI.E.1",
+   "text": "Demonstrates awareness of relationship to people, objects and living/non-living things in their environment"
+  },
+  {
+   "idx": "VI.F.1",
+   "text": "Shows interest and understanding of how simple tools and machines assist with solving problems or creating objects and structures"
+  },
+  {
+   "idx": "VII.A.1",
+   "text": "Identifies self as a member of a culture"
+  },
+  {
+   "idx": "VII.A.2",
+   "text": "Understands everyone belongs to a culture"
+  },
+  {
+   "idx": "VII.A.3",
+   "text": "Explores culture of peers and families in the classroom and community"
+  },
+  {
+   "idx": "VII.A.4",
+   "text": "Explores cultural attributes by comparing and contrasting different characteristics (e.g., language, literature, music, arts, artifacts, foods, architecture"
+  },
+  {
+   "idx": "VII.B.1",
+   "text": "Identifies characteristics of self as an individual"
+  },
+  {
+   "idx": "VII.B.2",
+   "text": "Identifies the ways self is similar to and different from peers and others"
+  },
+  {
+   "idx": "VII.B.3",
+   "text": "Recognizes individual responsibility as a member of a group (e.g., classroom or family)"
+  },
+  {
+   "idx": "VII.C.1",
+   "text": "Identifies differences and similarities of self and others as part of a group"
+  },
+  {
+   "idx": "VII.C.2",
+   "text": "Explains the role of groups within a community"
+  },
+  {
+   "idx": "VII.C.3",
+   "text": "Demonstrates awareness of group rules (e.g., family, classroom, school or community)"
+  },
+  {
+   "idx": "VII.C.4",
+   "text": "Exhibits leadership skills and roles (e.g., line leader and door holder)"
+  },
+  {
+   "idx": "VII.D.1",
+   "text": "Identifies the relationship of personal space to surroundings"
+  },
+  {
+   "idx": "VII.D.2",
+   "text": "Identifies differences and similarities between own environment and other locations"
+  },
+  {
+   "idx": "VII.D.3",
+   "text": "Identifies differences and similarities of basic physical characteristics (e.g., landmarks or land features)"
+  },
+  {
+   "idx": "VII.D.4",
+   "text": "Uses spatial words (e.g., far/close, over/under and up/down)"
+  },
+  {
+   "idx": "VII.D.5",
+   "text": "Recognizes some geographic tools and resources (e.g., maps, globes or GPS)"
+  },
+  {
+   "idx": "VII.D.6",
+   "text": "Begins to identify the relationship between human decisions and the impact on the environment (e.g., recycling and water conservation)"
+  },
+  {
+   "idx": "VII.E.1",
+   "text": "Identifies changes within a sequence of events to establish a sense of order and time"
+  },
+  {
+   "idx": "VII.E.2",
+   "text": "Observes and recognizes changes that take place over time in the immediate environment"
+  },
+  {
+   "idx": "VII.F.1",
+   "text": "Recognizes and follows rules and expectations in varying settings"
+  },
+  {
+   "idx": "VII.F.2",
+   "text": "Participates in problem solving and decision making"
+  },
+  {
+   "idx": "VII.F.3",
+   "text": "Begins to explore basic principles of democracy (e.g., deciding rules in a classroom, respecting opinions of others, voting on classroom activities or civic"
+  },
+  {
+   "idx": "VII.G.1",
+   "text": "Recognizes the difference between wants and needs"
+  },
+  {
+   "idx": "VII.G.2",
+   "text": "Begins to recognize that people work to earn money to buy things they need or want"
+  },
+  {
+   "idx": "VII.H.1",
+   "text": "Uses and shows awareness of technology and its impact on how people live (e.g., computers, tablets, mobile devices, cameras or music players)"
+  }
+ ]
+}

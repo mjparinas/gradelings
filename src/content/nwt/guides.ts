@@ -6,8 +6,19 @@ import { BC_GUIDES, localText } from "../grades/guides";
  */
 const nwtText = <T,>(value: T): T => localText(value, "the NWT", "NWT", "NWT Education, Culture and Employment");
 
+const bc = nwtText(BC_GUIDES);
+
 export const NWT_GUIDES: FrameworkGuides = {
-  ...nwtText(BC_GUIDES),
+  ...bc,
+  gradeNotes: {
+    ...bc.gradeNotes,
+    pk: {
+      overview:
+        "Junior Kindergarten is a free, play-based school year for four-year-olds in every NWT community. It follows the NWT's own JK/K curriculum, A Holistic Approach to Children's Early Learning: eleven competencies such as sense of identity, relationship with the land, communication and applied literacies in reading, writing and math.",
+      lookFor:
+        "Junior Kindergarten has no marks; teachers share what your child is exploring and how they are growing in each competency. Look for joining in, taking turns, naming feelings, rhyming, letters from your child's name and counting small groups.",
+    },
+  },
   assessment: {
     ...nwtText(BC_GUIDES.assessment),
     source: "NWT Education, Culture and Employment",

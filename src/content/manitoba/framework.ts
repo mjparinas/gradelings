@@ -1,4 +1,5 @@
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 import type { GradeId } from "../types";
 
 // Manitoba. Standards are the learning outcomes in Manitoba's curriculum (Education and Early Childhood
@@ -89,9 +90,9 @@ export const MANITOBA: Framework = {
   standardLabel: "Learning outcome",
   sourceName: "Manitoba Education and Early Childhood Learning",
   sourceUrl: "https://www.edu.gov.mb.ca/k12/framework/",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social", "immersion", "core-french"],
-  scoringFor: (grade: GradeId) => (grade === "k" ? K_SCHEME : grade === "7" || grade === "8" || grade === "9" ? PERCENT_SCHEME : LEVELS_SCHEME),
+  scoringFor: (grade: GradeId) => (grade === "pk" ? preKScale(K_SCHEME) : grade === "k" ? K_SCHEME : grade === "7" || grade === "8" || grade === "9" ? PERCENT_SCHEME : LEVELS_SCHEME),
   reportCard: {
     title: "Understanding Manitoba report cards",
     intro:

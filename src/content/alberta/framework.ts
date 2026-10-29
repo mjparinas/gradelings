@@ -1,4 +1,5 @@
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Alberta. Standards are the learning outcomes in the Alberta programs of study (Alberta Education,
 // alberta.ca/curriculum): the new K–6 curriculum for mathematics, English language arts and literature,
@@ -66,9 +67,9 @@ export const ALBERTA: Framework = {
   standardLabel: "Learning outcome",
   sourceName: "Alberta Education",
   sourceUrl: "https://www.alberta.ca/curriculum",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social", "immersion", "core-french"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Alberta report cards",
     intro:

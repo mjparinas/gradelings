@@ -1,9 +1,11 @@
-import { head, research, type FrameworkContract } from "../contract";
+import { head, preKCite, research, type FrameworkContract } from "../contract";
 
 // The official Manitoba outcomes (docs/research/manitoba). Unit standards cite them by code; Core French cites strands.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("manitoba/outcomes.json");
 
 export const contract: FrameworkContract = {
+  // Pre-K cites the early-learning document (docs/research/manitoba/prek).
+  preK: preKCite("manitoba", "Manitoba"),
   cite: ({ grade, subject, standard }) => {
     const official = new Set((OUTCOMES[`${grade}/${subject}`] ?? []).map((r) => r.idx));
     const codes = head(standard).split(/,\s*/).map((c) => c.trim());

@@ -1,4 +1,5 @@
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Saskatchewan. Standards are the outcomes in the Saskatchewan Curriculum (Ministry of Education,
 // curriculum.gov.sk.ca). Saskatchewan has no single provincial report-card scale: each school division
@@ -66,10 +67,11 @@ export const SASKATCHEWAN: Framework = {
   standardLabel: "Outcome",
   sourceName: "Saskatchewan Ministry of Education",
   sourceUrl: "https://curriculum.gov.sk.ca/",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  preKName: "Prekindergarten",
   // French Immersion (Kindergarten to Grade 9) and Core French (Levels 1 to 9, Grades 1 to 9); see docs/research/saskatchewan/README.md.
   subjects: ["math", "language", "science", "social", "immersion", "core-french"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Saskatchewan report cards",
     intro:

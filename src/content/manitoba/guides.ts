@@ -153,6 +153,10 @@ export const MANITOBA_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Manitoba has no Pre-K school year: four-year-olds learn at home, in child care and in nursery schools, which follow Early Returns, Manitoba's play-based curriculum framework for preschool centres. It is about play that supports social, emotional, physical and cognitive development, not marks.",
+      lookFor: "Nursery schools have no report card. Notice counting, rhyming, letters from your child's name, curiosity about animals and weather, and how they share and name feelings. Short, playful practice is plenty at this age.",
+    },
     k: {
       overview:
         "Kindergarten in Manitoba builds early learning through play in English language arts, mathematics, science and social studies. Children count, spot patterns, compare objects, and explore living things, materials and their community.",

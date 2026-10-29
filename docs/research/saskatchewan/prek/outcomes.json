@@ -1,0 +1,186 @@
+{
+ "pk/math": [
+  {
+   "idx": "Intellectual: Solving Problems",
+   "text": "Solving Problems"
+  },
+  {
+   "idx": "Intellectual: Creating and Imagining",
+   "text": "Creating and Imagining"
+  },
+  {
+   "idx": "Intellectual: Recognizing Attributes and Characteristics",
+   "text": "Recognizing Attributes and Characteristics"
+  },
+  {
+   "idx": "Intellectual: Exploring Numeracy",
+   "text": "Exploring Numeracy"
+  },
+  {
+   "idx": "Intellectual: Exploring Time",
+   "text": "Exploring Time"
+  },
+  {
+   "idx": "Intellectual: Exploring Position and Direction",
+   "text": "Exploring Position and Direction"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "Language and Emerging Literacy: Listening with Interest and Engagement During Brief Experiences with Spoken Language",
+   "text": "Listening with Interest and Engagement During Brief Experiences with Spoken Language"
+  },
+  {
+   "idx": "Language and Emerging Literacy: Engaging in Conversation",
+   "text": "Engaging in Conversation"
+  },
+  {
+   "idx": "Language and Emerging Literacy: Exploring Words",
+   "text": "Exploring Words"
+  },
+  {
+   "idx": "Language and Emerging Literacy: Gaining Meaning From a Variety of Visual Formats and Text Materials",
+   "text": "Gaining Meaning From a Variety of Visual Formats and Text Materials"
+  },
+  {
+   "idx": "Language and Emerging Literacy: Representing Ideas Using Expressive Forms",
+   "text": "Representing Ideas Using Expressive Forms"
+  },
+  {
+   "idx": "Language and Emerging Literacy: Exploring How Print Works",
+   "text": "Exploring How Print Works"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "Intellectual: Solving Problems",
+   "text": "Solving Problems"
+  },
+  {
+   "idx": "Intellectual: Creating and Imagining",
+   "text": "Creating and Imagining"
+  },
+  {
+   "idx": "Intellectual: Recognizing Attributes and Characteristics",
+   "text": "Recognizing Attributes and Characteristics"
+  },
+  {
+   "idx": "Intellectual: Exploring Numeracy",
+   "text": "Exploring Numeracy"
+  },
+  {
+   "idx": "Intellectual: Exploring Time",
+   "text": "Exploring Time"
+  },
+  {
+   "idx": "Intellectual: Exploring Position and Direction",
+   "text": "Exploring Position and Direction"
+  },
+  {
+   "idx": "Spiritual: Experiencing a Sense of Wonder, Awe, and Joy",
+   "text": "Experiencing a Sense of Wonder, Awe, and Joy"
+  },
+  {
+   "idx": "Spiritual: Experiencing Heightened Sensory Awareness",
+   "text": "Experiencing Heightened Sensory Awareness"
+  },
+  {
+   "idx": "Spiritual: Developing an Appreciation of Beauty and Connection to the Natural and Man-Made World",
+   "text": "Developing an Appreciation of Beauty and Connection to the Natural and Man-Made World"
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "Social Emotional: Developing Self-Awareness",
+   "text": "Developing Self-Awareness"
+  },
+  {
+   "idx": "Social Emotional: Developing Self-Worth",
+   "text": "Developing Self-Worth"
+  },
+  {
+   "idx": "Social Emotional: Developing a Sense of Belonging",
+   "text": "Developing a Sense of Belonging"
+  },
+  {
+   "idx": "Social Emotional: Separating from Family Without Distress",
+   "text": "Separating from Family Without Distress"
+  },
+  {
+   "idx": "Social Emotional: Identifying and Regulating Emotions",
+   "text": "Identifying and Regulating Emotions"
+  },
+  {
+   "idx": "Social Emotional: Interacting with Others",
+   "text": "Interacting with Others"
+  },
+  {
+   "idx": "Social Emotional: Taking the Perspective of Others and Showing Empathy",
+   "text": "Taking the Perspective of Others and Showing Empathy"
+  },
+  {
+   "idx": "Social Emotional: Resolving Conflicts",
+   "text": "Resolving Conflicts"
+  },
+  {
+   "idx": "Physical: Developing Loco-motor Skills",
+   "text": "Developing Loco-motor Skills"
+  },
+  {
+   "idx": "Physical: Developing Fine Motor Skills",
+   "text": "Developing Fine Motor Skills"
+  },
+  {
+   "idx": "Physical: Developing Stability/Balance",
+   "text": "Developing Stability/Balance"
+  },
+  {
+   "idx": "Physical: Developing Manipulative Skills",
+   "text": "Developing Manipulative Skills"
+  },
+  {
+   "idx": "Physical: Developing Space and Body Awareness",
+   "text": "Developing Space and Body Awareness"
+  },
+  {
+   "idx": "Physical: Developing Healthy Habits",
+   "text": "Developing Healthy Habits"
+  },
+  {
+   "idx": "Intellectual: Solving Problems",
+   "text": "Solving Problems"
+  },
+  {
+   "idx": "Intellectual: Creating and Imagining",
+   "text": "Creating and Imagining"
+  },
+  {
+   "idx": "Intellectual: Recognizing Attributes and Characteristics",
+   "text": "Recognizing Attributes and Characteristics"
+  },
+  {
+   "idx": "Intellectual: Exploring Numeracy",
+   "text": "Exploring Numeracy"
+  },
+  {
+   "idx": "Intellectual: Exploring Time",
+   "text": "Exploring Time"
+  },
+  {
+   "idx": "Intellectual: Exploring Position and Direction",
+   "text": "Exploring Position and Direction"
+  },
+  {
+   "idx": "Spiritual: Experiencing a Sense of Wonder, Awe, and Joy",
+   "text": "Experiencing a Sense of Wonder, Awe, and Joy"
+  },
+  {
+   "idx": "Spiritual: Experiencing Heightened Sensory Awareness",
+   "text": "Experiencing Heightened Sensory Awareness"
+  },
+  {
+   "idx": "Spiritual: Developing an Appreciation of Beauty and Connection to the Natural and Man-Made World",
+   "text": "Developing an Appreciation of Beauty and Connection to the Natural and Man-Made World"
+  }
+ ]
+}

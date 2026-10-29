@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Florida, a US state. Standards are Florida's state academic standards, adopted by the State Board of Education and
 // published by the Florida Department of Education: the B.E.S.T. (Benchmarks for Excellent Student Thinking) Standards for
@@ -75,9 +76,9 @@ export const FLORIDA: Framework = {
   standardLabel: "Benchmark",
   sourceName: "Florida Department of Education",
   sourceUrl: "https://www.fldoe.org/academics/standards/",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Florida report cards",
     intro:

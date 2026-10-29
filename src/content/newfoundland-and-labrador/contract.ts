@@ -1,4 +1,4 @@
-import { head, research, type FrameworkContract } from "../contract";
+import { head, preKCite, research, type FrameworkContract } from "../contract";
 import { PLAN } from "./plan";
 import type { GradeId } from "../types";
 
@@ -9,6 +9,8 @@ const OUTCOMES = research<Record<string, { idx: string; stage: number; outcomes:
 const KEY_STAGE: Record<GradeId, number> = { pk: 3, k: 3, "1": 3, "2": 3, "3": 3, "4": 6, "5": 6, "6": 6, "7": 9, "8": 9, "9": 9 };
 
 export const contract: FrameworkContract = {
+  // Pre-K cites the early-learning document (docs/research/newfoundland-and-labrador/prek).
+  preK: preKCite("newfoundland-and-labrador", "Newfoundland and Labrador"),
   cite: ({ grade, subject, standard }) => {
     const rows = OUTCOMES[`${grade}/${subject}`];
     if (!rows) return [`${grade}/${subject} has no Newfoundland and Labrador outcomes`];

@@ -171,6 +171,10 @@ export const SASKATCHEWAN_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Saskatchewan's Prekindergarten is a free, play-based school program for some three- and four-year-olds, offered in many communities with spaces set aside for children who will benefit most. It follows Essential Learning Experiences, a supplement to Play and Exploration: social emotional, physical, spiritual and intellectual development, with language and early literacy.",
+      lookFor: "Prekindergarten has no marks or report card; teachers share what your child is exploring. Look for joining in, taking turns, naming feelings, rhyming, letters from your child's name and counting small groups.",
+    },
     k: {
       overview:
         "Kindergarten in Saskatchewan builds early learning in English language arts, mathematics, science, social studies, health, arts and physical education. Children count to 10, spot patterns, compare objects, and explore living things, forces, materials and their natural surroundings.",
