@@ -26,10 +26,45 @@ env:
 # taking one. The last job, "CI passed", is the one to require in branch protection: it is green
 # only when every other job is.
 jobs:
+  # A pull request that changes only documents, the iOS app or the Android app can't break the site, so the
+  # jobs below are skipped for it ("CI passed" still reports, because a skipped job is not a failure).
+  # Every push to main runs everything.
+  changes:
+    name: What changed
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      pull-requests: read
+    outputs:
+      code: ${{ steps.files.outputs.code }}
+    steps:
+      - id: files
+        uses: actions/github-script@v9
+        with:
+          script: |
+            if (context.eventName !== 'pull_request') {
+              core.setOutput('code', 'true');
+              return;
+            }
+            const files = await github.paginate(github.rest.pulls.listFiles, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              per_page: 100,
+            });
+            // Tests read the research JSON files (outcomes.json and the like), so those still count as code.
+            const quiet = /^(docs\/(?!research\/.*\.json$)|ios\/|android\/)|\.md$/;
+            const code = files.some((f) => !quiet.test(f.filename) || (f.previous_filename && !quiet.test(f.previous_filename)));
+            core.info(`${files.length} files changed; site code touched: ${code}`);
+            core.setOutput('code', String(code));
+
   # Types, lint and the dependency audit are quick, so they share one machine: each job costs
   # about a minute of setup, and every job waits in the same queue as the other open pull requests.
   static:
     name: Types, lint and audit
+    needs: changes
+    if: needs.changes.outputs.code == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -74,6 +109,8 @@ jobs:
   # with its coverage data.
   unit:
     name: Unit and content tests · ${{ matrix.shard }}
+    needs: changes
+    if: needs.changes.outputs.code == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     strategy:
@@ -161,6 +198,8 @@ jobs:
 
   build:
     name: Build
+    needs: changes
+    if: needs.changes.outputs.code == 'true'
     runs-on: ubuntu-latest
     # The build alone took about 14 minutes by late October 2026 (each state adds pages), so 15 cancelled it.
     timeout-minutes: 25
@@ -227,10 +266,10 @@ jobs:
   # package-lock.json, so bump both together.
   devices:
     name: Browser · ${{ matrix.name }}
-    needs: build
+    needs: [changes, build]
     # Pull requests only: a merge to main already passed these, so main keeps just types, lint,
     # unit tests and the build (which saves the Next cache) to save Actions minutes.
-    if: github.event_name == 'pull_request'
+    if: github.event_name == 'pull_request' && needs.changes.outputs.code == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     container:
@@ -277,8 +316,8 @@ jobs:
   # machine waits in the queue shared with the other open pull requests.
   browser:
     name: Browser · ${{ matrix.name }}
-    needs: build
-    if: github.event_name == 'pull_request'
+    needs: [changes, build]
+    if: github.event_name == 'pull_request' && needs.changes.outputs.code == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     strategy:
@@ -342,7 +381,7 @@ jobs:
 
   passed:
     name: CI passed
-    needs: [static, unit, coverage, build, devices, browser]
+    needs: [changes, static, unit, coverage, build, devices, browser]
     if: always()
     runs-on: ubuntu-latest
     steps:
