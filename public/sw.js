@@ -9,6 +9,9 @@
 // - /api/ is never cached: progress is saved in IndexedDB and synced by the app.
 // - Shared report links (/shared/{token}/) and anything sent with no-store are never cached, so a
 //   report stops opening on a device once its link is revoked or expires.
+// - A build file is only kept when it really is one: a school web filter or a captive portal can
+//   answer a script request with its own HTML page (status 200), and keeping that cache-first
+//   would break the app on that device for good. Such copies are dropped when a worker activates.
 // - The Piper voice (/piper/{version}/, /piper-worker.js) lives in its own cache, which only
 //   the app's voice download fills (src/lib/piper.ts), and which is kept across updates
 //   because it is about 100 MB.
@@ -16,6 +19,11 @@ const CACHE = "grademap-v4";
 const PIPER_CACHE = "grademap-piper";
 const SHELLS = ["/play/", "/parents/", "/"];
 const EXTRAS = ["/manifest.webmanifest", "/icon.svg", "/icon-192.png", "/icon-512.png"];
+
+/** A build file response worth keeping: not an error, and not an HTML page standing in for a script or style. */
+function isAsset(res) {
+  return res.ok && !/text\/html/i.test(res.headers.get("content-type") || "");
+}
 
 /** Cache a page and every /_next/static file its HTML references. */
 async function precachePage(cache, path) {
@@ -27,7 +35,7 @@ async function precachePage(cache, path) {
   for (const m of html.matchAll(/(?:src|href)="(\/_next\/static\/[^"]+)"/g)) assets.add(m[1]);
   await Promise.all(
     [...assets].map((url) =>
-      caches.match(url).then((hit) => hit || fetch(url).then((r) => (r.ok ? cache.put(url, r) : undefined))).catch(() => undefined),
+      caches.match(url).then((hit) => hit || fetch(url).then((r) => (isAsset(r) ? cache.put(url, r) : undefined))).catch(() => undefined),
     ),
   );
 }
@@ -42,11 +50,22 @@ self.addEventListener("install", (event) => {
   );
 });
 
+/** Removes HTML pages saved under build-file addresses by an earlier worker. */
+async function dropFakeAssets() {
+  const cache = await caches.open(CACHE);
+  for (const request of await cache.keys()) {
+    if (!new URL(request.url).pathname.startsWith("/_next/static/")) continue;
+    const res = await cache.match(request);
+    if (res && !isAsset(res)) await cache.delete(request);
+  }
+}
+
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches
       .keys()
       .then((keys) => Promise.all(keys.filter((k) => k !== CACHE && k !== PIPER_CACHE).map((k) => caches.delete(k))))
+      .then(() => dropFakeAssets().catch(() => undefined))
       .then(() => self.clients.claim()),
   );
 });
@@ -57,13 +76,17 @@ self.addEventListener("message", (event) => {
   const urls = data.urls.filter((u) => typeof u === "string" && new URL(u).origin === self.location.origin && new URL(u).pathname.startsWith("/_next/static/"));
   event.waitUntil(
     caches.open(CACHE).then((cache) =>
-      Promise.all(urls.map((u) => cache.match(u).then((hit) => hit || cache.add(u).catch(() => undefined)))),
+      Promise.all(
+        urls.map((u) =>
+          cache.match(u).then((hit) => hit || fetch(u).then((r) => (isAsset(r) ? cache.put(u, r) : undefined)).catch(() => undefined)),
+        ),
+      ),
     ),
   );
 });
 
-function store(request, response) {
-  if (response.ok && response.type === "basic" && !/no-store/i.test(response.headers.get("cache-control") || "")) {
+function store(request, response, keep = (r) => r.ok) {
+  if (keep(response) && response.type === "basic" && !/no-store/i.test(response.headers.get("cache-control") || "")) {
     const copy = response.clone();
     caches.open(CACHE).then((cache) => cache.put(request, copy));
   }
@@ -109,7 +132,9 @@ self.addEventListener("fetch", (event) => {
   }
 
   if (url.pathname.startsWith("/_next/static/") || /\.(png|svg|ico|webmanifest|woff2?)$/.test(url.pathname)) {
-    event.respondWith(caches.match(request).then((hit) => hit || fetch(request).then((res) => store(request, res))));
+    event.respondWith(
+      caches.match(request).then((hit) => (hit && isAsset(hit) ? hit : fetch(request).then((res) => store(request, res, isAsset)))),
+    );
     return;
   }
 
