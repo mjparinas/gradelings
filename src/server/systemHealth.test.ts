@@ -14,6 +14,7 @@ const DAY = 86_400_000;
 const NOW = Date.parse("2026-10-12T16:00:00Z");
 
 const KEYS = [
+  "UPTIMEROBOT_API_KEY",
   "GITHUB_TOKEN",
   "GITHUB_REPOSITORY",
   "VERCEL_TOKEN",
@@ -187,7 +188,7 @@ describe("the route", () => {
 describe("checks that aren't set up", () => {
   it("say what to set, by name", async () => {
     stubFetch({});
-    for (const c of [await health.uptimeCheck(NOW), await health.buildsCheck(), await health.deploysCheck(NOW), await health.errorsCheck(NOW), await health.paymentsCheck(NOW), await health.emailCheck(NOW)]) {
+    for (const c of [await health.uptimeCheck(), await health.buildsCheck(), await health.deploysCheck(NOW), await health.errorsCheck(NOW), await health.paymentsCheck(NOW), await health.emailCheck(NOW)]) {
       expect(c.state).toBe("off");
       expect(c.setup).toMatch(/[A-Z_]{6,}/);
     }
@@ -212,42 +213,69 @@ describe("database", () => {
   });
 });
 
-describe("uptime and builds (GitHub)", () => {
+describe("uptime (UptimeRobot)", () => {
+  const ROBOT = "https://api.uptimerobot.com/v2/getMonitors";
+  const monitor = (name: string, status: number, ratio = "99.95-99.9", logs: { type: number; datetime: number }[] = []) => ({ id: 1, friendly_name: name, status, custom_uptime_ratio: ratio, logs });
+
+  it("is off without a key", async () => {
+    const c = await health.uptimeCheck();
+    expect(c.state).toBe("off");
+    expect(c.setup).toMatch(/UPTIMEROBOT_API_KEY/);
+  });
+
+  it("shows each monitor's uptime and sends the key only to UptimeRobot, in the body", async () => {
+    process.env.UPTIMEROBOT_API_KEY = "ur-key";
+    let sent = "";
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async (input: string | URL, init?: RequestInit) => {
+        expect(String(input)).toBe(ROBOT);
+        expect(init?.method).toBe("POST");
+        sent = String(init?.body);
+        return Response.json({ stat: "ok", monitors: [monitor("Health", 2, "100.000-99.950", [{ type: 1, datetime: (NOW - 3 * DAY) / 1000 }]), monitor("Home page", 2, "99.5-99.8")] });
+      }),
+    );
+    const c = await health.uptimeCheck();
+    expect(new URLSearchParams(sent).get("api_key")).toBe("ur-key");
+    expect(c.state).toBe("ok");
+    expect(c.summary).toBe("Up. 99.5% uptime in the last day.");
+    expect(c.rows[0]).toMatchObject({ label: "Health", value: "Up · 100% last 24 hours · 99.95% last 7 days", state: "ok" });
+    expect(c.rows.find((r) => r.label === "Last outage")).toMatchObject({ value: "Health", at: NOW - 3 * DAY });
+    expect(c.link?.href).toMatch(/uptimerobot\.com/);
+  });
+
+  it("is down while a monitor is down, with how long", async () => {
+    process.env.UPTIMEROBOT_API_KEY = "ur-key";
+    stubFetch({ [ROBOT]: { stat: "ok", monitors: [monitor("Health", 9, "97-99", [{ type: 1, datetime: (NOW - 3_600_000) / 1000 }, { type: 2, datetime: (NOW - DAY) / 1000 }]), monitor("Home page", 2)] } });
+    const c = await health.uptimeCheck();
+    expect(c.state).toBe("down");
+    expect(c.summary).toBe("The site is down: Health is failing.");
+    expect(c.rows[0]).toMatchObject({ label: "Down since", at: NOW - 3_600_000 });
+  });
+
+  it("warns about paused monitors and when there are none", async () => {
+    process.env.UPTIMEROBOT_API_KEY = "ur-key";
+    stubFetch({ [ROBOT]: { stat: "ok", monitors: [monitor("Health", 0)] } });
+    const paused = await health.uptimeCheck();
+    expect(paused.state).toBe("warn");
+    expect(paused.summary).toBe("1 monitor paused in UptimeRobot.");
+    stubFetch({ [ROBOT]: { stat: "ok", monitors: [] } });
+    expect((await health.uptimeCheck()).summary).toBe("UptimeRobot has no monitors yet.");
+  });
+
+  it("says when UptimeRobot refuses the key", async () => {
+    process.env.UPTIMEROBOT_API_KEY = "wrong";
+    stubFetch({ [ROBOT]: { stat: "fail", error: { message: "api_key not found." } } });
+    await expect(health.uptimeCheck()).rejects.toThrow(/api_key not found/);
+  });
+});
+
+describe("builds (GitHub)", () => {
   beforeEach(() => {
     process.env.GITHUB_TOKEN = "t";
     process.env.GITHUB_REPOSITORY = "owner/app";
   });
   const run = (ago: number, conclusion: string, status = "completed") => ({ conclusion, status, created_at: iso(NOW - ago), html_url: "https://github.com/run", display_title: "Fix things\nmore" });
-
-  it("reports the share of passing pings and sends the token only to GitHub", async () => {
-    const calls = stubFetch({
-      "https://api.github.com/repos/owner/app/actions/workflows/uptime.yml/runs": { workflow_runs: [run(5 * 60_000, "success"), run(DAY / 2, "failure"), run(2 * DAY, "success"), run(3 * DAY, "success")] },
-      "https://api.github.com/repos/owner/app/issues": [],
-    });
-    const c = await health.uptimeCheck(NOW);
-    expect(c.state).toBe("ok");
-    expect(c.rows.find((r) => r.label === "Last 24 hours")?.value).toBe("50% of 2 checks");
-    expect(c.rows.find((r) => r.label === "Last 7 days")?.value).toBe("75% of 4 checks");
-    expect(calls.every((x) => x.url.startsWith("https://api.github.com/") && x.auth === "Bearer t")).toBe(true);
-  });
-
-  it("is down while an uptime issue is open, with how long", async () => {
-    stubFetch({
-      "https://api.github.com/repos/owner/app/actions/workflows/uptime.yml/runs": { workflow_runs: [run(60_000, "failure")] },
-      "https://api.github.com/repos/owner/app/issues": [{ created_at: iso(NOW - 3 * 3_600_000), html_url: "https://github.com/issue/1" }],
-    });
-    const c = await health.uptimeCheck(NOW);
-    expect(c.state).toBe("down");
-    expect(c.rows[0]).toMatchObject({ label: "Down since", at: NOW - 3 * 3_600_000, href: "https://github.com/issue/1" });
-  });
-
-  it("warns when the pings have stopped", async () => {
-    stubFetch({
-      "https://api.github.com/repos/owner/app/actions/workflows/uptime.yml/runs": { workflow_runs: [run(5 * 3_600_000, "success")] },
-      "https://api.github.com/repos/owner/app/issues": [],
-    });
-    expect((await health.uptimeCheck(NOW)).summary).toMatch(/stopped running/);
-  });
 
   it("shows main's latest build and any running now", async () => {
     stubFetch({ "https://api.github.com/repos/owner/app/actions/workflows/ci.yml/runs": { workflow_runs: [run(60_000, null as unknown as string, "in_progress"), run(DAY, "failure"), run(2 * DAY, "success")] } });

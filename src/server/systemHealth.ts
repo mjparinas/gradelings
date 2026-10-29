@@ -25,7 +25,7 @@ import {
   SYNC_SLOW_MS,
   statuspageState,
   stripeStatusState,
-  uptimePercent,
+  uptimeRobotStatus,
   worst,
   type CheckRow,
   type CheckState,
@@ -66,10 +66,10 @@ class HttpError extends Error {
   }
 }
 
-async function getJson<T>(service: string, url: string, headers: Record<string, string> = {}): Promise<T> {
+async function getJson<T>(service: string, url: string, headers: Record<string, string> = {}, init: Pick<RequestInit, "method" | "body"> = {}): Promise<T> {
   let res: Response;
   try {
-    res = await fetch(url, { headers: { accept: "application/json", ...headers }, cache: "no-store", signal: AbortSignal.timeout(TIMEOUT) });
+    res = await fetch(url, { ...init, headers: { accept: "application/json", ...headers }, cache: "no-store", signal: AbortSignal.timeout(TIMEOUT) });
   } catch (e) {
     throw new Error((e as Error).name === "TimeoutError" ? `${service} didn't answer in time.` : `Couldn't reach ${service}.`);
   }
@@ -117,7 +117,77 @@ export async function databaseCheck(): Promise<HealthCheck> {
   }
 }
 
-// ---------- GitHub: uptime pings and builds ----------
+// ---------- Uptime (UptimeRobot) ----------
+
+interface RobotLog {
+  type: number;
+  datetime: number;
+  duration?: number;
+}
+interface RobotMonitor {
+  id: number;
+  friendly_name: string;
+  url?: string;
+  status: number;
+  custom_uptime_ratio?: string;
+  logs?: RobotLog[];
+}
+
+const ROBOT_SETUP = "Set UPTIMEROBOT_API_KEY to UptimeRobot's read-only API key (Integrations & API > API > Read-only API key).";
+const ROBOT_LINK = { label: "UptimeRobot dashboard", href: "https://dashboard.uptimerobot.com/monitors" };
+
+/** UptimeRobot's monitors: whether each is up, its uptime over a day and a week, and the last outage. */
+export async function uptimeCheck(): Promise<HealthCheck> {
+  const key = env("UPTIMEROBOT_API_KEY");
+  if (!key) return { id: "uptime", title: "Uptime", state: "off", summary: "Not connected to UptimeRobot.", rows: [], setup: ROBOT_SETUP };
+  const body = new URLSearchParams({ api_key: key, format: "json", custom_uptime_ratios: "1-7", logs: "1", logs_limit: "10" });
+  const res = await getJson<{ stat: string; error?: { message?: string }; monitors?: RobotMonitor[] }>("UptimeRobot", "https://api.uptimerobot.com/v2/getMonitors",
+    { "content-type": "application/x-www-form-urlencoded", "cache-control": "no-cache" },
+    { method: "POST", body: body.toString() },
+  );
+  if (res.stat !== "ok") throw new Error(`UptimeRobot refused the request${res.error?.message ? `: ${res.error.message}` : "."}`);
+  const monitors = res.monitors ?? [];
+  if (!monitors.length) {
+    return { id: "uptime", title: "Uptime", state: "warn", summary: "UptimeRobot has no monitors yet.", rows: [], setup: "Add a monitor for /api/health/ in UptimeRobot (docs/DEPLOY.md, Uptime monitoring).", link: ROBOT_LINK };
+  }
+  const ratios = (m: RobotMonitor) => (m.custom_uptime_ratio ?? "").split("-").map((r) => (r && Number.isFinite(Number(r)) ? Math.round(Number(r) * 100) / 100 : null));
+  const rows: CheckRow[] = monitors.map((m) => {
+    const { state, label } = uptimeRobotStatus(m.status);
+    const [day, week] = ratios(m);
+    const parts = [label, day == null ? "" : `${day}% last 24 hours`, week == null ? "" : `${week}% last 7 days`].filter(Boolean);
+    return { label: m.friendly_name, value: parts.join(" · "), state };
+  });
+  const down = monitors.filter((m) => uptimeRobotStatus(m.status).state === "down");
+  const paused = monitors.filter((m) => m.status === 0);
+  const outages = monitors.flatMap((m) => (m.logs ?? []).filter((l) => l.type === 1).map((l) => ({ name: m.friendly_name, at: l.datetime * 1000 }))).sort((a, b) => b.at - a.at);
+  if (down.length) {
+    const since = outages.find((o) => down.some((m) => m.friendly_name === o.name));
+    return {
+      id: "uptime",
+      title: "Uptime",
+      state: "down",
+      summary: `The site is down: ${down.map((m) => m.friendly_name).join(", ")} ${down.length === 1 ? "is" : "are"} failing.`,
+      rows: [...(since ? [{ label: "Down since", value: "", at: since.at, state: "down" as const }] : []), ...rows],
+      link: ROBOT_LINK,
+    };
+  }
+  const days = monitors.map((m) => ratios(m)[0]).filter((r): r is number => r != null);
+  const lowest = days.length ? Math.min(...days) : null;
+  return {
+    id: "uptime",
+    title: "Uptime",
+    state: worst(rows.map((r) => r.state ?? "ok")),
+    summary: paused.length
+      ? `${plural(paused.length, "monitor")} paused in UptimeRobot.`
+      : monitors.every((m) => m.status === 2)
+        ? `Up.${lowest === null ? "" : ` ${lowest}% uptime in the last day.`}`
+        : "UptimeRobot hasn't checked every monitor yet.",
+    rows: [...rows, ...(outages[0] ? [{ label: "Last outage", value: outages[0].name, at: outages[0].at }] : [])],
+    link: ROBOT_LINK,
+  };
+}
+
+// ---------- GitHub: builds ----------
 
 interface GhRun {
   conclusion: string | null;
@@ -130,64 +200,10 @@ interface GhRun {
 
 const github = () => ({ token: env("GITHUB_TOKEN"), repo: env("GITHUB_REPOSITORY") });
 const GITHUB_SETUP =
-  "Set GITHUB_TOKEN (a fine-grained token for this repository with read-only Actions and Issues access) and GITHUB_REPOSITORY (owner/name).";
+  "Set GITHUB_TOKEN (a fine-grained token for this repository with read-only Actions access) and GITHUB_REPOSITORY (owner/name).";
 
 function ghHeaders(token: string) {
   return { authorization: `Bearer ${token}`, "x-github-api-version": "2022-11-28" };
-}
-
-export async function uptimeCheck(now = Date.now()): Promise<HealthCheck> {
-  const { token, repo } = github();
-  if (!token || !repo) return { id: "uptime", title: "Uptime", state: "off", summary: "Not connected to GitHub.", rows: [], setup: GITHUB_SETUP };
-  const base = `https://api.github.com/repos/${repo}`;
-  const [runs, issues] = await Promise.all([
-    getJson<{ workflow_runs: GhRun[] }>("GitHub", `${base}/actions/workflows/uptime.yml/runs?per_page=100&created=>=${new Date(now - 7 * DAY).toISOString().slice(0, 10)}`, ghHeaders(token)),
-    getJson<{ created_at: string; html_url: string }[]>("GitHub", `${base}/issues?labels=uptime&state=open&per_page=5`, ghHeaders(token)),
-  ]);
-  const done = runs.workflow_runs.filter((r) => r.status === "completed" && (r.conclusion === "success" || r.conclusion === "failure"));
-  const pings = done.map((r) => ({ ok: r.conclusion === "success", at: Date.parse(r.created_at) }));
-  const day = pings.filter((p) => p.at >= now - DAY);
-  const lastFail = pings.find((p) => !p.ok);
-  const latest = pings[0];
-  const link = { label: "Uptime runs", href: `https://github.com/${repo}/actions/workflows/uptime.yml` };
-  if (issues.length) {
-    const since = Date.parse(issues[0].created_at);
-    return {
-      id: "uptime",
-      title: "Uptime",
-      state: "down",
-      summary: "The site is down: the uptime check is failing.",
-      rows: [{ label: "Down since", value: "", at: since, state: "down", href: issues[0].html_url }, ...(latest ? [{ label: "Last check", value: latest.ok ? "Passed" : "Failed", at: latest.at }] : [])],
-      link,
-    };
-  }
-  if (!latest) {
-    return {
-      id: "uptime",
-      title: "Uptime",
-      state: "warn",
-      summary: "No uptime checks in the last 7 days.",
-      rows: [],
-      setup: "Set the repository variable UPTIME_URL to the site's address so the Uptime workflow runs (see .github/workflows/uptime.yml).",
-      link,
-    };
-  }
-  const p24 = uptimePercent(day);
-  const p7 = uptimePercent(pings);
-  const stale = latest.at < now - 2 * 60 * 60 * 1000;
-  return {
-    id: "uptime",
-    title: "Uptime",
-    state: !latest.ok || stale ? "warn" : "ok",
-    summary: stale ? "Uptime checks have stopped running (GitHub may have paused the schedule)." : latest.ok ? `Up. ${p24 ?? p7}% of checks passed in the last day.` : "The last uptime check failed.",
-    rows: [
-      { label: "Last check", value: latest.ok ? "Passed" : "Failed", at: latest.at, state: latest.ok ? "ok" : "warn" },
-      { label: "Last 24 hours", value: p24 === null ? "No checks" : `${p24}% of ${plural(day.length, "check")}` },
-      { label: "Last 7 days", value: `${p7}% of ${plural(pings.length, "check")}` },
-      ...(lastFail ? [{ label: "Last failed check", value: "", at: lastFail.at }] : []),
-    ],
-    link,
-  };
 }
 
 // ---------- The live site, loaded from outside ----------
@@ -1106,7 +1122,7 @@ export async function statusPages(): Promise<StatusPage[]> {
 
 const RUNNERS: Record<CheckId, (now: number) => Promise<HealthCheck>> = {
   database: () => databaseCheck(),
-  uptime: (now) => uptimeCheck(now),
+  uptime: () => uptimeCheck(),
   site: () => siteCheck(),
   deploys: (now) => deploysCheck(now),
   builds: () => buildsCheck(),

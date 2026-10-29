@@ -1,8 +1,8 @@
 import { query } from "@/server/db";
 
 // Uptime check. Returns 200 when the app and its database answer, 503 otherwise.
-// Public and cheap: one `SELECT 1`, no user data, never cached. Point an external monitor
-// or .github/workflows/uptime.yml at /api/health/ (the trailing slash matters).
+// Public and cheap: one `SELECT 1`, no user data, never cached. UptimeRobot watches /api/health/
+// (the trailing slash matters; docs/DEPLOY.md).
 
 export const dynamic = "force-dynamic";
 

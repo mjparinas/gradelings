@@ -49,7 +49,7 @@ export const TRUST_GROUPS: { title: string; controls: Control[] }[] = [
       { title: "No third-party scripts in the app", note: "No ads or trackers for kids." },
       { title: "Strict script policy", note: "Each page runs only the scripts it lists." },
       { title: "Scrubbed error reports", note: "Names, emails and cookies removed first." },
-      { title: "Uptime monitoring", note: "Checked every 15 minutes, with alerts." },
+      { title: "Uptime monitoring", note: "Checked every 5 minutes from outside, with alerts." },
     ],
   },
   {

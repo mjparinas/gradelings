@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { betterStackState, capacityState, emailRateState, megabytes, restoreDrillState, SETTINGS, speedState, statuspageState, stripeStatusState, uptimePercent, worst } from "./systemHealth";
+import { betterStackState, capacityState, emailRateState, megabytes, restoreDrillState, SETTINGS, speedState, statuspageState, stripeStatusState, uptimeRobotStatus, worst } from "./systemHealth";
 
 describe("system health helpers", () => {
   it("takes the worst state, ignoring checks that aren't set up", () => {
@@ -15,9 +15,9 @@ describe("system health helpers", () => {
     expect(["up", "degraded", "down", undefined].map(stripeStatusState)).toEqual(["ok", "warn", "down", "warn"]);
   });
 
-  it("works out uptime to one decimal", () => {
-    expect(uptimePercent([])).toBeNull();
-    expect(uptimePercent([{ ok: true }, { ok: true }, { ok: false }])).toBe(66.7);
+  it("reads UptimeRobot's monitor status", () => {
+    expect([2, 9, 8, 0, 1, undefined].map((s) => uptimeRobotStatus(s).state)).toEqual(["ok", "down", "down", "warn", "warn", "warn"]);
+    expect(uptimeRobotStatus(8).label).toBe("Seems down");
   });
 
   it("warns at Resend's bounce and spam limits, only once there's enough email", () => {
