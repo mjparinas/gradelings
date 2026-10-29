@@ -9,8 +9,8 @@ import { arcadeFor, GAMES } from "./arcade";
 import { FACT_SETS, factsIn } from "./facts";
 import { EXPLORER_GAMES, getTrophy, newlyEarned, TIER_STYLE, TROPHIES, trophyTier, visibleTrophies, type TrophyContext } from "./trophies";
 
-const GRADES: GradeId[] = ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-const CONTEXTS: TrophyContext[] = FRAMEWORKS.flatMap((f) => GRADES.map((grade) => ({ grade, framework: f.id })));
+const GRADES: GradeId[] = ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+const CONTEXTS: TrophyContext[] = FRAMEWORKS.flatMap((f) => GRADES.filter((g) => f.grades.includes(g)).map((grade) => ({ grade, framework: f.id })));
 
 beforeAll(() => Promise.all(CONTEXTS.map((c) => loadGrade(c.grade, c.framework))), 60_000);
 
@@ -134,8 +134,8 @@ describe("the trophy list", () => {
     expect(times.progress(d, { grade: "4", framework: "ca-bc" }).value).toBe(1);
   });
 
-  it("has 203 trophies with the secret ones hidden", () => {
-    expect(TROPHIES).toHaveLength(208);
+  it("has 216 trophies with the secret ones hidden", () => {
+    expect(TROPHIES).toHaveLength(216);
     expect(TROPHIES.filter((t) => t.hidden).map((t) => t.id).sort()).toEqual(
       ["early-bird", "konami", "marathon", "dizzy-ollie", "polite-moose", "secret-word", "palindrome", "make-a-wish", ...GRADES.map((g) => `polymath-${g}`)].sort(),
     );

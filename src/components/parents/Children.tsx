@@ -55,14 +55,14 @@ function ChildForm({ draft, onChange, isNew }: { draft: Draft; onChange: (d: Dra
             onChange={(next) => {
               const birthYear = next ? Number(next) : undefined;
               // Suggest a grade from age (a September birthday can shift it by one).
-              onChange({ ...draft, birthYear, grade: birthYear && isNew && !gradePicked ? gradeForAge(thisYear - birthYear) : draft.grade });
+              onChange({ ...draft, birthYear, grade: birthYear && isNew && !gradePicked ? gradeForAge(thisYear - birthYear, chosen.grades) : draft.grade });
             }}
             options={[
               { value: "", label: "Not set" },
               ...Array.from({ length: 11 }, (_, i) => thisYear - 4 - i).map((y) => ({ value: String(y), label: String(y) })),
             ]}
           />
-          {age !== undefined && <span className="text-sm text-ink-soft">About {age} years old (suggested: {gradeLabel(gradeForAge(age), draft.framework)})</span>}
+          {age !== undefined && <span className="text-sm text-ink-soft">About {age} years old (suggested: {gradeLabel(gradeForAge(age, chosen.grades), draft.framework)})</span>}
         </div>
         <SelectMenu
           label="Grade"
@@ -72,7 +72,7 @@ function ChildForm({ draft, onChange, isNew }: { draft: Draft; onChange: (d: Dra
             setGradePicked(true);
             onChange({ ...draft, grade: next as GradeId });
           }}
-          options={AVAILABLE_GRADES.map((g) => ({ value: g, label: gradeLabel(g, draft.framework) }))}
+          options={AVAILABLE_GRADES.filter((g) => chosen.grades.includes(g)).map((g) => ({ value: g, label: gradeLabel(g, draft.framework) }))}
         />
       </div>
       <div className="flex flex-col gap-1">
@@ -80,7 +80,8 @@ function ChildForm({ draft, onChange, isNew }: { draft: Draft; onChange: (d: Dra
           label={us ? "State or province" : "Province or state"}
           size="lg"
           value={draft.framework}
-          onChange={(next) => onChange({ ...draft, framework: next as FrameworkId })}
+          // Pre-K isn't offered in every curriculum yet: a child moved to one without it starts at Kindergarten.
+          onChange={(next) => onChange({ ...draft, framework: next as FrameworkId, grade: getFramework(next).grades.includes(draft.grade) ? draft.grade : "k" })}
           {...frameworkMenu((f) => `${f.name} (${f.curriculumName})`)}
         />
         <span className="text-sm text-ink-soft">

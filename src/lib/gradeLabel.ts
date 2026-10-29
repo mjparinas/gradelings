@@ -7,5 +7,7 @@ import type { FrameworkId, GradeId } from "@/content/types";
  * Kindergarten is the same in both. With no framework it is BC's ("Grade 4").
  */
 export function gradeLabel(grade: GradeId, framework?: FrameworkId | string): string {
-  return gradeName(grade, localeOf(getFramework(framework)));
+  const f = getFramework(framework);
+  if (grade === "pk" && f.preKName) return f.preKName;
+  return gradeName(grade, localeOf(f));
 }

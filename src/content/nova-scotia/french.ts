@@ -65,7 +65,7 @@ function sharesFor(plan: Plan, standard: (kind: Kind) => Unit["standards"]): Non
   return Object.fromEntries(Object.entries(plan).map(([id, kind]) => [id, { standards: standard(kind) }]));
 }
 
-const COURSE_NAME: Record<GradeId, string> = {
+const COURSE_NAME: Record<Exclude<GradeId, "pk">, string> = {
   k: "Français arts langagiers Maternelle",
   "1": "Français arts langagiers 1re année",
   "2": "Français arts langagiers 2e année",
@@ -79,7 +79,7 @@ const COURSE_NAME: Record<GradeId, string> = {
 };
 
 /** The Nova Scotia Core French and French Immersion courses for a grade: BC units with Nova Scotia standards. */
-export function frenchCourses(grade: GradeId): Course[] {
+export function frenchCourses(grade: Exclude<GradeId, "pk">): Course[] {
   const out: Course[] = [];
   const core = CORE_PLAN[grade];
   if (grade === "4") {

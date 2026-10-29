@@ -72,7 +72,8 @@ function nextGradeOf(c: { grade: GradeId; grade2?: GradeId | null; framework: st
 /** The grade next to `grade` a class could share (a split class), as menu options after "None". */
 function secondGradeOptions(grade: GradeId, framework: string) {
   const i = GRADE_ORDER.indexOf(grade);
-  return [{ value: "", label: "None" }, ...[GRADE_ORDER[i - 1], GRADE_ORDER[i + 1]].filter(Boolean).map((g) => ({ value: g, label: gradeLabel(g, framework) }))];
+  const offered = getFramework(framework).grades;
+  return [{ value: "", label: "None" }, ...[GRADE_ORDER[i - 1], GRADE_ORDER[i + 1]].filter((g) => g && offered.includes(g)).map((g) => ({ value: g, label: gradeLabel(g, framework) }))];
 }
 
 /** The browser tab's title, so history and screen readers say where the teacher is: "Room 3 · Homework · For teachers · Gradelings". */
@@ -338,9 +339,22 @@ function ClassList({ onOpen, account }: { onOpen: (id: string) => void; account:
           Class name
           <input className="mt-1 min-h-11 rounded-xl border border-line px-3" value={name} maxLength={60} onChange={(e) => setName(e.target.value)} required />
         </label>
-        <SelectMenu label="Grade" block={false} value={grade} onChange={(next) => { setGrade(next as GradeId); setGrade2(""); }} options={GRADE_ORDER.map((g) => ({ value: g, label: gradeLabel(g, framework) }))} />
+        <SelectMenu label="Grade" block={false} value={grade} onChange={(next) => { setGrade(next as GradeId); setGrade2(""); }} options={getFramework(framework).grades.map((g) => ({ value: g, label: gradeLabel(g, framework) }))} />
         <SelectMenu label="Second grade (split class)" block={false} value={grade2} onChange={setGrade2} options={secondGradeOptions(grade, framework)} />
-        <SelectMenu label={REGION_LABEL} block={false} value={framework} onChange={(next) => setFramework(next as FrameworkId)} {...frameworkMenu((f) => f.region)} />
+        <SelectMenu
+          label={REGION_LABEL}
+          block={false}
+          value={framework}
+          onChange={(next) => {
+            setFramework(next as FrameworkId);
+            // Pre-K isn't offered everywhere yet.
+            if (!getFramework(next).grades.includes(grade)) {
+              setGrade("k");
+              setGrade2("");
+            }
+          }}
+          {...frameworkMenu((f) => f.region)}
+        />
         <button disabled={account.verified === false} className={`${btn} bg-[#25b47e] text-[#0f172a] disabled:opacity-50`}>Create class</button>
         {isUsClass(getFramework(framework)) && <p className="w-full font-read text-sm text-ink-soft">{US_CLASS_CONSENT}</p>}
       </form>

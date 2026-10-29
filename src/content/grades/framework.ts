@@ -1,4 +1,5 @@
 import type { Framework, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // British Columbia: the default framework. Its units are the shared base most other frameworks build on.
 
@@ -62,9 +63,9 @@ export const BRITISH_COLUMBIA: Framework = {
     standardLabel: "Learning standard",
     sourceName: "BC Ministry of Education and Child Care",
     sourceUrl: "https://curriculum.gov.bc.ca/",
-    grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+    grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
     subjects: ["math", "language", "science", "social", "immersion", "core-french"],
-    scoringFor: () => BC_PROFICIENCY,
+    scoringFor: (grade) => (grade === "pk" ? preKScale(BC_PROFICIENCY) : BC_PROFICIENCY),
     reportCard: {
       title: "Understanding BC report cards",
       intro:

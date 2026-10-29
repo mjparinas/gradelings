@@ -44,13 +44,17 @@ describe("framework registry", () => {
       for (const grades of Object.values(m.french)) for (const g of grades) expect(m.framework.grades, `${m.id} ${g}`).toContain(g);
     }
     expect(gradeRange("4", "9")).toEqual(["4", "5", "6", "7", "8", "9"]);
-    expect(gradeRange("k", "9")).toEqual(GRADE_ORDER);
+    expect(gradeRange("pk", "9")).toEqual(GRADE_ORDER);
   });
 
   for (const m of REGISTRY) {
     it(`${m.framework.name} loads a course list for every grade`, async () => {
       for (const g of GRADE_ORDER) {
-        const mod = await m.grades[g]();
+        const load = m.grades[g];
+        // Pre-K is optional while it reaches every framework, but a framework lists it exactly when it has its loader.
+        expect(Boolean(load), `${m.id} ${g} loader`).toBe(m.framework.grades.includes(g));
+        if (!load) continue;
+        const mod = await load();
         expect(Array.isArray(mod.courses), `${m.id} ${g}`).toBe(true);
         for (const c of mod.courses) expect(c.grade, `${m.id} ${g}/${c.subject}`).toBe(g);
       }

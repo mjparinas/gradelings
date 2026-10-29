@@ -10,7 +10,7 @@ describe("Yukon", () => {
   });
 
   it("carries every BC unit, so the two curricula share progress", () => {
-    for (const c of COURSES) {
+    for (const c of COURSES.filter((c) => getFramework("ca-yt").grades.includes(c.grade))) {
       for (const u of c.units.filter((u) => u.standards["ca-bc"])) {
         expect(u.standards["ca-yt"], `${c.grade}/${c.subject}/${u.id}`).toBe(u.standards["ca-bc"]);
       }

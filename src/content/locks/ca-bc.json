@@ -1,4 +1,50 @@
 {
+  "pk/language": {
+    "overview": "6cfa6f376f",
+    "units": [
+      "letter-names text=4e2d74ab60 std=505190f753 q=a8b9337751",
+      "first-sounds text=dd9cd8d5d4 std=da60431c4a q=48ed3455eb",
+      "rhyme-time text=12f8d63dc7 std=018cbea053 q=b73dfecad5",
+      "clap-the-parts text=606ab5cbbd std=5ca0e825b5 q=6215dee4f1",
+      "listen-to-a-story text=8907705eaa std=fcaf1cd195 q=e4e96571e7",
+      "word-meanings text=fbdee7f0ca std=7a8ccd1eb3 q=1d5b4d5e30"
+    ]
+  },
+  "pk/math": {
+    "overview": "5234836555",
+    "units": [
+      "count-to-5 text=5de441ec7a std=c6442eaf70 q=7da6a21961",
+      "find-the-number text=48b0986657 std=20b78d23bd q=cbb1ca9734",
+      "more-or-fewer text=0faa658ba5 std=b75d4d7937 q=4d8cca7ab1",
+      "shapes text=3eb07867e4 std=427b93fa66 q=ed58e37c08",
+      "patterns text=e9db8c53c8 std=2f5a03424e q=d72ed7b913",
+      "big-and-small text=ec30e0312f std=7dd863029b q=ac1fcda3f6",
+      "sort-it text=6f36cd219c std=47d92d8180 q=d255478c19"
+    ]
+  },
+  "pk/science": {
+    "overview": "c42476250e",
+    "units": [
+      "five-senses text=ede42da0ab std=925abb420f q=18b2cf96c9",
+      "living-or-not text=9c2f339fb0 std=c02b0c6714 q=c6b64af68c",
+      "animals-and-babies text=c26be2c8ec std=36a6623490 q=d23f0b3d01",
+      "weather-and-sky text=152ba8b660 std=d42cb77689 q=9ab5b99907",
+      "plants-grow text=beae59bc1e std=503b5aa9b4 q=d37c124eee",
+      "sink-or-float text=87253513e6 std=1fa4a6ad47 q=80c8fb85a3"
+    ]
+  },
+  "pk/social": {
+    "overview": "0e5aca5a4b",
+    "units": [
+      "my-family text=81af8740c1 std=ee46303d99 q=5f47bd5b99",
+      "feelings text=32db0a0097 std=f829ebee90 q=1e8788180c",
+      "community-helpers text=e038723509 std=5ccc583577 q=27bacf2a4a",
+      "places-around-me text=659860832c std=3019de9104 q=8a8589b026",
+      "taking-turns text=04b975dae4 std=273f965d25 q=22be788cc9",
+      "first-next-last text=6f92e7037f std=a8dc9754b0 q=c643395606",
+      "caring-for-our-world text=0df6123b83 std=d91d21a054 q=82f9f5197f"
+    ]
+  },
   "k/immersion": {
     "overview": "83c624c5a3",
     "units": [

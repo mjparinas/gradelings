@@ -3,7 +3,6 @@ import { adoptersOf } from "../adopters";
 import { COURSES } from "../all";
 import { getFramework } from "../frameworks";
 import { GUIDES } from "../guides";
-import { GRADE_ORDER as GRADES } from "../subjects";
 
 // Citations, own units, the plan and borrowed units' wording are checked by the framework contract
 // (src/content/contract.test.ts, with ./contract.ts). This file keeps what is Prince Edward Island's alone.
@@ -32,6 +31,6 @@ describe("Prince Edward Island", () => {
     expect(guides.competencies.items).toHaveLength(6);
     expect(guides.assessment.grades).toEqual(["3", "6"]);
     expect(guides.french?.browse).toEqual(["4"]);
-    for (const g of GRADES) expect(guides.gradeNotes[g], g).toBeDefined();
+    for (const g of getFramework("ca-pe").grades) expect(guides.gradeNotes[g], g).toBeDefined();
   });
 });

@@ -298,7 +298,7 @@ export function NewChild({ onDone, onCancel, first = false, preset = null }: { o
         <div className="w-full max-w-2xl">
           <p className="mb-3 text-2xl font-semibold">What grade?</p>
           <div className="flex flex-wrap justify-center gap-2">
-            {AVAILABLE_GRADES.map((g) => (
+            {AVAILABLE_GRADES.filter((g) => framework.grades.includes(g)).map((g) => (
               <button
                 key={g}
                 type="button"
@@ -312,9 +312,18 @@ export function NewChild({ onDone, onCancel, first = false, preset = null }: { o
             ))}
           </div>
           <p className="mt-2 font-read text-sm text-ink-soft">
-            {grade ? `${gradeLabel(grade, frameworkId)} · ${framework.curriculumName}` : "K means Kindergarten."}
+            {grade ? `${gradeLabel(grade, frameworkId)} · ${framework.curriculumName}` : framework.grades.includes("pk") ? `PK means ${gradeLabel("pk", frameworkId)}. K means Kindergarten.` : "K means Kindergarten."}
           </p>
-          {FRAMEWORKS.length > 1 && <ProvinceMenu value={frameworkId} onChange={setFrameworkId} />}
+          {FRAMEWORKS.length > 1 && (
+            <ProvinceMenu
+              value={frameworkId}
+              onChange={(next) => {
+                setFrameworkId(next);
+                // Pre-K isn't offered everywhere yet: a grade the new curriculum doesn't have is picked again.
+                if (grade && !getFramework(next).grades.includes(grade)) setGrade(null);
+              }}
+            />
+          )}
         </div>
       ) : (
         <p className="font-read text-lg text-ink-soft">

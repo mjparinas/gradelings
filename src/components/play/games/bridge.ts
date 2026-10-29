@@ -1,3 +1,4 @@
+import { gradeNumber } from "@/content/subjects";
 import { pick, sample, shuffle } from "@/content/random";
 import type { GradeId, SubjectId } from "@/content/types";
 
@@ -74,7 +75,7 @@ const choicesFrom = (answer: string, pool: string[], count = 3) => shuffle([answ
 
 /** How far along the child is, 0 (first words) to 3 (verb tenses). */
 export function frenchStep(grade: GradeId, subjects: readonly SubjectId[] = []): 0 | 1 | 2 | 3 {
-  const g = grade === "k" ? 0 : Number(grade);
+  const g = Math.max(0, gradeNumber(grade));
   if (subjects.includes("immersion")) return g <= 1 ? 0 : g <= 3 ? 1 : g <= 5 ? 2 : 3;
   return g <= 4 ? 0 : g <= 6 ? 1 : g <= 8 ? 2 : 3;
 }

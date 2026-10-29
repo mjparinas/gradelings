@@ -161,6 +161,10 @@ export const BC_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "BC has no Pre-K school year: four-year-olds learn at home, in child care and in preschool, guided by the BC Early Learning Framework. It is about play, relationships and wonder, not marks.",
+      lookFor: "Notice counting, rhyming, letters from your child's name, curiosity about animals and weather, and how they share and name feelings. Short, playful practice is plenty at this age.",
+    },
     k: {
       overview: "Kindergarten in BC is play-based. Children learn through exploring, talking, building and drawing, and teachers describe learning through observations and portfolios as well as written comments.",
       lookFor: "Expect comments about friendships, listening, early letters and sounds, counting, and how your child shares ideas. It's a time to see what your child is curious about.",

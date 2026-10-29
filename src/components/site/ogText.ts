@@ -19,6 +19,7 @@ const subjectsLine = (subjects: string[]) => subjects.map((s) => subjectSeoTitle
 
 /** "Can your Grade 4 solve this?" in Canada, "Can your 4th grader solve this?" in the US. */
 function gradeChild(f: Framework, grade: GradeId): string {
+  if (grade === "pk") return localeOf(f) === "en-US" ? "preschooler" : "little one";
   if (grade === "k") return "Kindergartner";
   return localeOf(f) === "en-US" ? `${gradeLabel(f, grade)}r` : gradeLabel(f, grade);
 }

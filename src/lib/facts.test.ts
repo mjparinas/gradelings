@@ -39,11 +39,12 @@ describe("fact sets", () => {
     for (const f of factsIn("div")) expect(f.a % f.b).toBe(0);
   });
 
-  it("are offered by grade: none in Kindergarten, to 10 in Grades 1 and 2, times tables from Grade 3", () => {
+  it("are offered by grade: none in Pre-K or Kindergarten, to 10 in Grades 1 and 2, times tables from Grade 3", () => {
+    expect(factSetsFor("pk")).toEqual([]);
     expect(factSetsFor("k")).toEqual([]);
     expect(factSetsFor("1").map((s) => s.id)).toEqual(["add10", "sub10"]);
     expect(factSetsFor("2").map((s) => s.id)).toEqual(["add10", "sub10", "add", "sub"]);
-    for (const g of GRADE_ORDER.slice(3)) expect(factSetsFor(g).map((s) => s.id)).toEqual(["add", "sub", "mul", "div"]);
+    for (const g of GRADE_ORDER.slice(GRADE_ORDER.indexOf("3"))) expect(factSetsFor(g).map((s) => s.id)).toEqual(["add", "sub", "mul", "div"]);
   });
 
   it("each carry a short lesson for little kids", () => {

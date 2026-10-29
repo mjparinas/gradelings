@@ -8,12 +8,16 @@ import type { Course, GradeId, SubjectId } from "./types";
 // Never import this from client code (the apps): it would put all content back
 // into the first download. ESLint enforces this; the apps use ./index.
 
-// Every framework's grade files, from the registry (British Columbia's first, as the apps load them).
-const loaded = await Promise.all(REGISTRY.map((m) => Promise.all(GRADE_ORDER.map((g) => m.grades[g]()))));
+// Every framework's grade files, from the registry (British Columbia's first, as the apps load them). A framework that
+// doesn't offer Pre-K yet has no loader for it.
+const loaded = await Promise.all(REGISTRY.map((m) => Promise.all(GRADE_ORDER.flatMap((g) => m.grades[g] ?? []).map((load) => load()))));
 
 // Each grade's lessons live in the shared grade files and apply to every framework's units with the same id (as in ./index).
-const more = await Promise.all(loaded[0].map((m) => m.moreLessons?.() ?? {}));
-const lessons = Object.fromEntries(GRADE_ORDER.map((g, i) => [g, { ...more[i], ...loaded[0][i].lessons }])) as Record<GradeId, NonNullable<(typeof loaded)[0][0]["lessons"]>>;
+const shared = await Promise.all(GRADE_ORDER.map(async (g) => {
+  const mod = await REGISTRY[0].grades[g]?.();
+  return [g, { ...(await mod?.moreLessons?.()), ...mod?.lessons }] as const;
+}));
+const lessons = Object.fromEntries(shared) as Record<GradeId, NonNullable<(typeof loaded)[0][0]["lessons"]>>;
 
 /** Every course with at least one unit. */
 export const COURSES: Course[] = mergeCourses(loaded.flat().map((m) => m.courses))

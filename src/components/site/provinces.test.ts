@@ -62,6 +62,13 @@ describe("homepage province coverage", () => {
     }
   });
 
+  it("starts the shared range at Kindergarten until every province teaches Pre-K", () => {
+    const bc = withGrades(getFramework("ca-bc"), ["pk", "k", "1", "2"]);
+    const on = withGrades(getFramework("ca-on"), ["k", "1", "2"]);
+    expect(provinceCoverage([bc, on]).range).toEqual({ from: "k", to: "2" });
+    expect(provinceCoverage([bc, withGrades(on, ["pk", "k", "1", "2"])]).range).toEqual({ from: "pk", to: "2" });
+  });
+
   it("leaves the grade range unset when provinces don't share one", () => {
     const bc = withGrades(getFramework("ca-bc"), ["k", "1"]);
     const on = withGrades(getFramework("ca-on"), ["1", "2", "3"]);

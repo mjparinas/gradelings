@@ -2,11 +2,17 @@
 import { render, screen, within } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import { coursesFor, curriculumPath, gradesWithContent, gradeLabel } from "@/components/site/curriculum";
-import { FRAMEWORKS } from "@/content/frameworks";
+import { FRAMEWORKS, type Framework } from "@/content/frameworks";
 import FrameworkPage, { generateMetadata, generateStaticParams } from "./page";
 
 // next.config.ts sets trailingSlash, which next/link reads from this variable.
 vi.stubEnv("__NEXT_TRAILING_SLASH", "1");
+
+// The first year is Pre-K where the framework teaches it, under the framework's own name for it.
+const span = (f: Framework) => {
+  const first = f.grades[0] === "pk" ? (f.preKName ?? "Pre-K") : "Kindergarten";
+  return f.country === "US" ? `${first} through 9th grade` : `${first} to Grade 9`;
+};
 
 const props = (framework: string) => ({ params: Promise.resolve({ framework }) }) as never;
 
@@ -17,7 +23,7 @@ describe("curriculum framework page", () => {
 
   it.each(FRAMEWORKS.map((f) => [f.slug, f] as const))("%s: a card for every grade with each subject's unit count", async (slug, f) => {
     render(await FrameworkPage(props(slug)));
-    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(`${f.curriculumName}: ${f.country === "US" ? "Kindergarten through 9th grade" : "Kindergarten to Grade 9"}`);
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent(`${f.curriculumName}: ${span(f)}`);
     for (const g of gradesWithContent(f)) {
       const card = screen.getByRole("heading", { level: 2, name: gradeLabel(f, g) }).closest("section")!;
       expect(within(card).getByRole("link", { name: gradeLabel(f, g) })).toHaveAttribute("href", curriculumPath.grade(f, g));

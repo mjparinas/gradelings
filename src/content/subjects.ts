@@ -132,9 +132,10 @@ export function getSubjectMeta(id: SubjectId | string): SubjectMeta {
   return SUBJECTS.find((s) => s.id === id) ?? SUBJECTS[0];
 }
 
-export const GRADE_ORDER: GradeId[] = ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+export const GRADE_ORDER: GradeId[] = ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 export const GRADE_LABEL: Record<GradeId, string> = {
+  pk: "Pre-K",
   k: "Kindergarten",
   "1": "Grade 1",
   "2": "Grade 2",
@@ -148,6 +149,7 @@ export const GRADE_LABEL: Record<GradeId, string> = {
 };
 
 export const GRADE_SHORT: Record<GradeId, string> = {
+  pk: "PK",
   k: "K",
   "1": "1",
   "2": "2",
@@ -161,7 +163,7 @@ export const GRADE_SHORT: Record<GradeId, string> = {
 };
 
 export function gradeSlug(grade: GradeId): string {
-  return grade === "k" ? "kindergarten" : `grade-${grade}`;
+  return grade === "pk" ? "pre-k" : grade === "k" ? "kindergarten" : `grade-${grade}`;
 }
 
 export function gradeFromSlug(slug: string): GradeId | undefined {
@@ -169,13 +171,26 @@ export function gradeFromSlug(slug: string): GradeId | undefined {
 }
 
 export function ageBandFor(grade: GradeId): AgeBand {
-  if (grade === "k" || grade === "1") return "little";
+  if (grade === "pk" || grade === "k" || grade === "1") return "little";
   if (grade === "5" || grade === "6" || grade === "7" || grade === "8" || grade === "9") return "big";
   return "middle";
 }
 
-/** Typical age at the start of a grade, for suggesting a grade from a child's age. */
-export function gradeForAge(age: number): GradeId {
-  const g = Math.max(0, Math.min(9, Math.round(age) - 5));
-  return GRADE_ORDER[g];
+/**
+ * Typical age at the start of a grade, for suggesting a grade from a child's age (4 is Pre-K, 5 Kindergarten). Pass the
+ * curriculum's grades to keep to them: a 4-year-old is suggested Kindergarten where Pre-K isn't offered.
+ */
+export function gradeForAge(age: number, grades: readonly GradeId[] = GRADE_ORDER): GradeId {
+  const g = GRADE_ORDER[Math.max(0, Math.min(GRADE_ORDER.length - 1, Math.round(age) - 4))];
+  return grades.includes(g) ? g : (grades.find((x) => GRADE_ORDER.indexOf(x) > GRADE_ORDER.indexOf(g)) ?? grades[grades.length - 1]);
+}
+
+/** Pre-K, the year before Kindergarten: age 4, no reading or typing needed, and not offered in every framework yet. */
+export function isPreK(grade: GradeId | string): boolean {
+  return grade === "pk";
+}
+
+/** A grade as a number for comparing and counting: Pre-K is -1, Kindergarten 0, then 1 to 9. */
+export function gradeNumber(grade: GradeId): number {
+  return grade === "pk" ? -1 : grade === "k" ? 0 : Number(grade);
 }

@@ -17,8 +17,11 @@ export interface GradeModule {
   moreLessons?: () => Promise<GradeLessons>;
 }
 
-/** Each grade's download, as a dynamic import so the apps only fetch the grades a child needs. */
-export type GradeLoaders = Record<GradeId, () => Promise<GradeModule>>;
+/**
+ * Each grade's download, as a dynamic import so the apps only fetch the grades a child needs. Pre-K is optional while it
+ * reaches every framework: a framework offers it once it has a loader here and "pk" in its framework's `grades`.
+ */
+export type GradeLoaders = Record<Exclude<GradeId, "pk">, () => Promise<GradeModule>> & { pk?: () => Promise<GradeModule> };
 
 /** One school-privacy paragraph on /privacy/: a bold heading ("Schools in Oregon.") and the text after it. */
 export interface SchoolsNotice {

@@ -2,7 +2,6 @@ import { describe, expect, it } from "vitest";
 import { COURSES } from "../all";
 import { getFramework } from "../frameworks";
 import { GUIDES } from "../guides";
-import { GRADE_ORDER as GRADES } from "../subjects";
 
 // Citations, own units, the plan and borrowed units' wording are checked by the framework contract
 // (src/content/contract.test.ts, with ./contract.ts). This file keeps what is Newfoundland and Labrador's alone.
@@ -32,6 +31,6 @@ describe("Newfoundland and Labrador", () => {
     expect(guides.competencies.items.map((i) => i.id)).toHaveLength(6);
     expect(guides.assessment.grades).toEqual(["3", "6"]);
     expect(guides.french?.browse).toEqual(["4"]);
-    for (const g of GRADES) expect(guides.gradeNotes[g], g).toBeDefined();
+    for (const g of getFramework("ca-nl").grades) expect(guides.gradeNotes[g], g).toBeDefined();
   });
 });

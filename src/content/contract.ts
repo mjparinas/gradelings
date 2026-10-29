@@ -22,6 +22,12 @@ export interface FrameworkContract {
    * Null only where there is nothing official to check against; say why beside it.
    */
   cite: ((c: Citation) => string[]) | null;
+  /**
+   * The same check for Pre-K units, against the framework's early-learning document, which is a different source from its
+   * school curriculum (docs/research/<folder>/prek/outcomes.json, read with `preKCite`). Required once the framework
+   * offers Pre-K.
+   */
+  preK?: (c: Citation) => string[];
   /** Units written for this framework have ids starting with this ("wa-"). */
   ownPrefix?: string;
   /**
@@ -81,6 +87,14 @@ export const head = (standard: string) => standard.split(" · ")[0];
 export function problems(): { check: (ok: unknown, message: string) => void; list: string[] } {
   const list: string[] = [];
   return { list, check: (ok, message) => void (ok ? undefined : list.push(message)) };
+}
+
+/**
+ * The Pre-K citation check: codes from the framework's early-learning document, built into
+ * docs/research/<folder>/prek/outcomes.json as {"pk/<subject>": [{idx, text}]}.
+ */
+export function preKCite(folder: string, region: string): (c: Citation) => string[] {
+  return codeCite(research<Record<string, { idx: string }[]>>(`${folder}/prek/outcomes.json`), `${region} early-learning`);
 }
 
 /**

@@ -41,9 +41,12 @@ export function verdict(stage: Pick<Stage, "total" | "correct">): Verdict {
   return share >= 0.75 ? "strong" : share >= 0.5 ? "partial" : "weak";
 }
 
-/** Grades that have lessons in this subject, lowest first. Only counts grades that have loaded. */
+/**
+ * Grades that have lessons in this subject, lowest first. Only counts grades that have loaded. Pre-K is left out: its
+ * questions are all pictures and listening, so the placement test starts at Kindergarten.
+ */
 export function gradesWithSubject(subject: SubjectId, framework: FrameworkId = DEFAULT_FRAMEWORK): GradeId[] {
-  return GRADE_ORDER.filter((g) => coursesForGrade(g, framework).some((c) => c.subject === subject && c.units.length > 0));
+  return GRADE_ORDER.filter((g) => g !== "pk" && coursesForGrade(g, framework).some((c) => c.subject === subject && c.units.length > 0));
 }
 
 /**

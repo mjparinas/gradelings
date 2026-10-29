@@ -118,7 +118,8 @@ export function makePlan(input: PlanInput): Plan | null {
       title: challenge ? `${ref.unit.title} Challenge` : ref.unit.title,
       icon: challenge ? "🛡️" : ref.unit.emoji,
       total: qs.length,
-      timeLimit: challenge ? (band === "little" ? 420 : 300) : undefined,
+      // Pre-K Challenges have no clock: four-year-olds can't read one, and racing it isn't the point.
+      timeLimit: challenge && grade !== "pk" ? (band === "little" ? 420 : 300) : undefined,
       retries: !challenge,
       feedback: "bar",
       next: ({ index }) => (qs[index] ? { question: qs[index], unitKey: ref.key, difficulty } : undefined),

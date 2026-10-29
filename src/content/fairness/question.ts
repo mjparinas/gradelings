@@ -140,6 +140,23 @@ function checkMath(q: Question, answerText: string) {
   if (v?.type === "array" && /^How many/.test(q.prompt)) expect(n).toBe(v.rows * v.cols);
 }
 
+/**
+ * Pre-K children are four and don't read yet: every question is a tap on pictures, with at most 3 choices, and each
+ * choice is a picture, a shape or one letter or number. Tapping in order uses up to 4 pictures; sorting needs pictures.
+ */
+function checkPreK(q: Question) {
+  expect(["choice", "order", "sort"], `Pre-K "${q.prompt}" is a ${q.kind} question`).toContain(q.kind);
+  expect(q.visual?.type ?? "", `Pre-K "${q.prompt}" can't need reading a passage`).not.toMatch(/^(passage|story|table)$/);
+  if (q.kind === "choice") {
+    expect(q.choices.length, `Pre-K "${q.prompt}" has more than 3 choices`).toBeLessThanOrEqual(3);
+    for (const c of q.choices) expect(Boolean(c.emoji || c.shape || c.label.length <= 2), `Pre-K choice "${c.label}" needs a picture`).toBe(true);
+  }
+  if (q.kind === "order") {
+    expect(q.items.length).toBeLessThanOrEqual(4);
+    for (const i of q.items) expect(i.emoji ?? "", `Pre-K order item "${i.label}" needs a picture`).not.toBe("");
+  }
+}
+
 // The slow part of the content tests, one grade at a time. Each grade has its own test file in this
 // folder so the files run in parallel and CI can spread them over machines (see content.test.ts).
 export function checkQuestion(q: Question, course: Pick<Course, "grade">) {
@@ -151,6 +168,7 @@ export function checkQuestion(q: Question, course: Pick<Course, "grade">) {
     expect(q.prompt.length, `prompt too long for K/1: "${q.prompt}"`).toBeLessThanOrEqual(80);
   }
   if (q.visual) checkVisual(q.visual);
+  if (course.grade === "pk") checkPreK(q);
 
   switch (q.kind) {
     case "choice": {

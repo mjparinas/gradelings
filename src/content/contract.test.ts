@@ -58,7 +58,13 @@ describe.each(REGISTRY.map((m) => [m.framework.name, m] as const))("%s keeps the
   });
 
   it.runIf(contract?.cite)("cites real standards for each unit's own grade and subject", () => {
-    const wrong = units.flatMap(({ c, u, key }) => contract.cite!({ grade: c.grade, subject: c.subject, unitId: u.id, standard: u.standards[m.id]! }).map((p) => `${key}: ${p}`));
+    const wrong = units.filter(({ c }) => c.grade !== "pk").flatMap(({ c, u, key }) => contract.cite!({ grade: c.grade, subject: c.subject, unitId: u.id, standard: u.standards[m.id]! }).map((p) => `${key}: ${p}`));
+    expect(wrong).toEqual([]);
+  });
+
+  it.runIf(m.framework.grades.includes("pk"))("cites its early-learning document for each Pre-K unit", () => {
+    expect(contract.preK, `${m.id} offers Pre-K, so its contract.ts needs preK (see preKCite)`).toBeDefined();
+    const wrong = units.filter(({ c }) => c.grade === "pk").flatMap(({ c, u, key }) => contract.preK!({ grade: c.grade, subject: c.subject, unitId: u.id, standard: u.standards[m.id]! }).map((p) => `${key}: ${p}`));
     expect(wrong).toEqual([]);
   });
 

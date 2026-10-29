@@ -8,6 +8,8 @@ import { BRITISH_COLUMBIA } from "../grades/framework";
 export const NORTHWEST_TERRITORIES: Framework = {
   ...BRITISH_COLUMBIA,
   id: "ca-nt",
+  // Pre-K comes with its own early-learning standards (see src/content/prek.ts); not added here yet.
+  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   regionKind: "territory",
   slug: "northwest-territories",
   name: "Northwest Territories",

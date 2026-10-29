@@ -24,6 +24,7 @@ const ORDINAL: Record<string, string> = { "1": "1st", "2": "2nd", "3": "3rd" };
 
 /** "Grade 4" in Canada, "4th grade" in the US. Kindergarten is the same in both. */
 export function gradeName(grade: GradeId, locale: Locale): string {
+  if (grade === "pk") return "Pre-K";
   if (grade === "k") return "Kindergarten";
   return locale === "en-US" ? `${ORDINAL[grade] ?? `${grade}th`} grade` : `Grade ${grade}`;
 }

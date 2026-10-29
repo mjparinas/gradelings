@@ -9,7 +9,7 @@ import { GUIDES } from "./guides";
 import { coursesInFramework, EXTRA_DEPENDS } from "./index";
 import { withSeed } from "./random";
 import { GRADE_ORDER } from "./subjects";
-import type { Course, FrameworkId, GradeId, Unit } from "./types";
+import type { Course, FrameworkId, Unit } from "./types";
 
 // Curriculum lock files (src/content/locks/). Each framework's lock lists every course it shows, the units in order, and a
 // short hash of each unit's text, its standard and its questions at fixed seeds. Units are shared between frameworks, so a
@@ -123,7 +123,7 @@ function entries(): Record<string, Record<string, string>> {
     if (!existsSync(file)) continue;
     const text = readFileSync(file, "utf8");
     const id = /\bid: "([a-z]{2}-[a-z]{2})"/.exec(text)?.[1];
-    if (id) out[id] = Object.fromEntries([...text.matchAll(/"?(\w)"?: \(\) => import\("\.\/([^"]+)"\)/g)].map((m) => [m[1], `${dir}/${m[2]}`]));
+    if (id) out[id] = Object.fromEntries([...text.matchAll(/"?(\w{1,2})"?: \(\) => import\("\.\/([^"]+)"\)/g)].map((m) => [m[1], `${dir}/${m[2]}`]));
   }
   return out;
 }
@@ -153,7 +153,7 @@ function sizes(): Record<string, Record<string, number>> {
   const out: Record<string, Record<string, number>> = {};
   for (const f of FRAMEWORKS) {
     out[f.id] = {};
-    for (const grade of GRADE_ORDER as GradeId[]) {
+    for (const grade of f.grades) {
       const seen = new Set<string>();
       const parts = [...new Set([DEFAULT_FRAMEWORK, f.id, ...(EXTRA_DEPENDS[f.id] ?? [])])].map((id) => files[id]?.[grade]).filter(Boolean) as string[];
       for (const p of parts) reach(resolveImport(join(__dirname, "index.ts"), `./${p}`)!, seen);

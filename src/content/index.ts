@@ -17,8 +17,8 @@ import type { Course, FrameworkId, GradeId, SubjectId, Unit } from "./types";
 // units with that id, so a unit only one province teaches still gets its lesson.
 type Loader = () => Promise<GradeModule>;
 
-/** The shared grade files (British Columbia's), loaded for every child. */
-const LOADERS: Record<GradeId, Loader> = manifestOf(DEFAULT_FRAMEWORK).grades;
+/** The shared grade files (British Columbia's), loaded for every child. They hold every grade, Pre-K too (registry.test.ts checks). */
+const LOADERS = manifestOf(DEFAULT_FRAMEWORK).grades as Record<GradeId, Loader>;
 
 /** Each other framework's own grade files. Each is its own download per grade, on top of the shared one. */
 const EXTRA_LOADERS: Partial<Record<FrameworkId, Partial<Record<GradeId, Loader>>>> = Object.fromEntries(

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { SelectMenu } from "@/components/SelectMenu";
-import { FRAMEWORKS } from "@/content/frameworks";
+import { FRAMEWORKS, getFramework } from "@/content/frameworks";
 import { GRADE_ORDER } from "@/content/subjects";
 import type { GradeId } from "@/content/types";
 import { call } from "@/lib/classroom";
@@ -205,7 +205,7 @@ export function RosterReview({ id, onOpenClass, onBack }: { id: string; onOpenCl
                           block={false}
                           value={c.grade}
                           onChange={(g) => set(s.id, { grade: g as GradeId })}
-                          options={[{ value: "", label: "Choose…" }, ...GRADE_ORDER.map((g) => ({ value: g, label: gradeLabel(g, c.framework) }))]}
+                          options={[{ value: "", label: "Choose…" }, ...GRADE_ORDER.filter((g) => getFramework(c.framework).grades.includes(g)).map((g) => ({ value: g, label: gradeLabel(g, c.framework) }))]}
                         />
                         <SelectMenu label={REGION_LABEL} block={false} value={c.framework} onChange={(f) => set(s.id, { framework: f })} {...frameworkMenu((f) => f.region)} />
                       </div>

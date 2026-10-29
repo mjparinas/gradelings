@@ -10,8 +10,13 @@ describe("gradeFromText", () => {
     expect(gradeFromText("9", true)).toBe("9");
     expect(gradeFromText("4th", true)).toBe("4");
   });
-  it("leaves out grades above 9, pre-kindergarten and nonsense", () => {
-    for (const t of ["10", "12", "PreK", "", "Algebra", null, undefined]) expect(gradeFromText(t as string, true)).toBeNull();
+  it("leaves out grades above 9 and nonsense", () => {
+    for (const t of ["10", "12", "", "Algebra", null, undefined]) expect(gradeFromText(t as string, true)).toBeNull();
+  });
+
+  it("reads the year before Kindergarten as Pre-K", () => {
+    for (const t of ["PreK", "Pre-K", "Pre-Kindergarten", "Junior Kindergarten", "JK", "TK", "Transitional Kindergarten", "Pre-primary"])
+      expect(gradeFromText(t, true)).toBe("pk");
   });
   it("needs the word grade in a class name, so a room or period number is never a grade", () => {
     expect(gradeFromText("Grade 4 Math")).toBe("4");
