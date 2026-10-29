@@ -25,7 +25,7 @@
 // with the same screen size, pixel ratio, touch and user agent.
 import fs from "node:fs";
 import { chromium, devices, webkit } from "playwright";
-import { TEACHER_TABS, enterPin, newChild, signInTeacher, step, teacherFixture, vis } from "./helpers.mjs";
+import { TEACHER_TABS, enterPin, newChild, seedLastWeek, signInTeacher, step, teacherFixture, vis } from "./helpers.mjs";
 
 const BASE = (process.argv[2] || "http://localhost:3000").replace(/\/$/, "");
 const OUT = process.argv[3] && !process.argv[3].startsWith("--") ? process.argv[3] : "e2e-shots/devices";
@@ -239,6 +239,15 @@ async function everyDevice(device, page) {
   record(device, "story page: Next page on screen", np.ok, np.detail);
   await checkTargets(device, "story page: page buttons", page.getByRole("button", { name: /Next page|Previous page|Read this page to me/ }), KID_TARGET);
   await shot(page, device, "5-story");
+
+  // The weekly "you grew" recap, with practice seeded last week: no sideways scroll, its buttons tappable.
+  await seedLastWeek(page);
+  await page.goto(`${BASE}/play/#/grew`);
+  await page.getByRole("region", { name: "Days you practised" }).waitFor();
+  await page.waitForTimeout(300);
+  await noSideScroll(device, page, "weekly recap");
+  await checkTargets(device, "weekly recap: links", page.locator("main a"), KID_TARGET);
+  await shot(page, device, "5b-week-recap");
 
   // Parent reports
   await page.goto(`${BASE}/parents/`);

@@ -31,13 +31,13 @@ import { getCourse, parseUnitKey } from "@/content";
 import { nextGrade } from "@/lib/schoolYear";
 import { go } from "@/lib/router";
 import { Toasts } from "./Toasts";
-import { Arcade, FactsPicker, GameScreen, LazyScreen, PlacementTest, prefetchScreens, Room, Shop, SneakPeek, StickerBook, StoryLibrary, StoryReader, TrailMap, Treasures, TrophyRoom } from "./lazyScreens";
+import { Arcade, FactsPicker, GameScreen, LazyScreen, PlacementTest, prefetchScreens, Room, Shop, SneakPeek, StickerBook, StoryLibrary, StoryReader, TrailMap, Treasures, TrophyRoom, WeekRecap } from "./lazyScreens";
 import { LessonScreen } from "./LessonScreen";
 
 const MODES: Mode[] = ["practice", "adventure", "review", "speed", "daily", "challenge", "facts"];
 
 /** Screens the admin panel can switch off for everyone (src/lib/flags.ts). A switched-off screen shows the home screen. */
-const SCREEN_FLAGS: Record<string, FlagKey> = { stickers: "sticker-book", room: "my-room", speed: "speed-run", facts: "math-facts", arcade: "arcade", shop: "shop", stories: "story-library" };
+const SCREEN_FLAGS: Record<string, FlagKey> = { stickers: "sticker-book", room: "my-room", speed: "speed-run", facts: "math-facts", arcade: "arcade", shop: "shop", stories: "story-library", grew: "weekly-recap" };
 /** Sessions whose mode the admin panel can switch off. */
 const MODE_FLAGS: Partial<Record<Mode, FlagKey>> = { daily: "daily-challenge", speed: "speed-run", facts: "math-facts" };
 
@@ -107,6 +107,8 @@ const Routes = memo(function Routes({ hash }: { hash: string }) {
       return <Treasures />;
     case "stickers":
       return <StickerBook />;
+    case "grew":
+      return <WeekRecap />;
     case "room":
       return <Room />;
     case "speed":

@@ -50,9 +50,11 @@ describe("CritterSvg", () => {
   });
 
   it("shows sleepy z's only when sleepy and a thought bubble only when thinking", () => {
-    const zs = (mood: Mood) => [...svgOf({ id: "ruby", mood }).querySelectorAll("text")].map((t) => t.textContent).join("");
-    expect(zs("sleepy")).toBe("zz");
-    for (const mood of ["happy", "cheer", "think", "oops", "wave"] as const) expect(zs(mood)).toBe("");
+    // Drawn as lines with no text, so they never join the name of a button the critter sits in.
+    const zs = (mood: Mood) => svgOf({ id: "ruby", mood }).querySelectorAll('[data-part="zz"] path').length;
+    expect(zs("sleepy")).toBe(2);
+    expect(svgOf({ id: "ruby", mood: "sleepy" }).querySelector("text")).toBeNull();
+    for (const mood of ["happy", "cheer", "think", "oops", "wave"] as const) expect(zs(mood)).toBe(0);
     expect(svgOf({ id: "ruby", mood: "think" }).querySelectorAll('g[fill="#4f8ef7"] circle')).toHaveLength(2);
     expect(svgOf({ id: "ruby", mood: "happy" }).querySelector('g[fill="#4f8ef7"]')).toBeNull();
   });

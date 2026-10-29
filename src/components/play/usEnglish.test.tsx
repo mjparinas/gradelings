@@ -37,6 +37,7 @@ import { Toasts } from "./Toasts";
 import { TrailMap } from "./TrailMap";
 import { Treasures } from "./Treasures";
 import { TrophyRoom } from "./Trophies";
+import { WeekRecap } from "./WeekRecap";
 
 const DAY = 86_400_000;
 const family: FamilyInfo = { plan: "premium", trialEndsAt: 0, updatedAt: 1, country: "US" } as FamilyInfo;
@@ -107,6 +108,13 @@ describe("the kids' app for a US child", () => {
   it("Trophies", () => expectUs(<TrophyRoom />));
   it("Shop", () => expectUs(<Shop />));
   it("Arcade", () => expectUs(<Arcade />));
+  it("Weekly recap", async () => {
+    // Practice last week (seven days ago is always in it), so every part of the recap shows.
+    const lastWeek = events.slice(0, 40).map((e, i) => ({ ...e, id: `w${i}`, t: Date.now() - 7 * DAY + i * 60_000 }));
+    setChild(child("4"), [...events, ...lastWeek]);
+    await expectUs(<WeekRecap />);
+    expect(document.body.textContent).toContain("last week");
+  });
   it("Toasts", async () => {
     useStore.getState().pushToast({ kind: "trophy", title: "Grade 4 Champion", subtitle: "Practise on 30 different days.", icon: "🏆" });
     useStore.getState().pushToast({ kind: "level", title: "You levelled up!", subtitle: "Your buddy grew", icon: "⬆️" });

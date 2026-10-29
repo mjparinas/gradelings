@@ -40,6 +40,7 @@ import { ClassGoalCard } from "./ClassGoalCard";
 import { RewardCard, TogetherCard } from "./FamilyCards";
 import { FestivalCard } from "./FestivalCard";
 import { FocusCard } from "./FocusCard";
+import { WeekRecapCard } from "./WeekRecapCard";
 import { LevelChip } from "./Practice";
 import { InstallChip } from "./InstallChip";
 
@@ -283,6 +284,7 @@ export function Hub() {
       </div>
 
       {/* Little kids' home screen stays calm: a parent's focus only shapes their Adventure. */}
+      {!little && <WeekRecapCard />}
       {!little && <FocusCard />}
       {!little && <FestivalCard />}
 
