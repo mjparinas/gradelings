@@ -10,7 +10,8 @@ describe("Northwest Territories", () => {
   });
 
   it("carries every BC unit, so the curricula share progress", () => {
-    for (const c of COURSES.filter((c) => getFramework("ca-nt").grades.includes(c.grade))) {
+    // Junior Kindergarten keeps the NWT's own JK/K curriculum, so its Pre-K units cite that instead of BC's framework.
+    for (const c of COURSES.filter((c) => c.grade !== "pk" && getFramework("ca-nt").grades.includes(c.grade))) {
       for (const u of c.units.filter((u) => u.standards["ca-bc"])) {
         expect(u.standards["ca-nt"], `${c.grade}/${c.subject}/${u.id}`).toBe(u.standards["ca-bc"]);
       }

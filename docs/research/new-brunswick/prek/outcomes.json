@@ -1,0 +1,118 @@
+{
+ "pk/math": [
+  {
+   "idx": "Play and Playfulness: Imagination and Creativity",
+   "text": "Imagination and Creativity"
+  },
+  {
+   "idx": "Play and Playfulness: Playful Exploration and Problem Solving",
+   "text": "Playful Exploration and Problem Solving"
+  },
+  {
+   "idx": "Play and Playfulness: Dizzy Play",
+   "text": "Dizzy Play"
+  },
+  {
+   "idx": "Communication and Literacies: Communicative Practices",
+   "text": "Communicative Practices"
+  },
+  {
+   "idx": "Communication and Literacies: Multimodal Literacies",
+   "text": "Multimodal Literacies"
+  },
+  {
+   "idx": "Communication and Literacies: Literate Identities With/In Communities",
+   "text": "Literate Identities With/In Communities"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "Communication and Literacies: Communicative Practices",
+   "text": "Communicative Practices"
+  },
+  {
+   "idx": "Communication and Literacies: Multimodal Literacies",
+   "text": "Multimodal Literacies"
+  },
+  {
+   "idx": "Communication and Literacies: Literate Identities With/In Communities",
+   "text": "Literate Identities With/In Communities"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "Play and Playfulness: Imagination and Creativity",
+   "text": "Imagination and Creativity"
+  },
+  {
+   "idx": "Play and Playfulness: Playful Exploration and Problem Solving",
+   "text": "Playful Exploration and Problem Solving"
+  },
+  {
+   "idx": "Play and Playfulness: Dizzy Play",
+   "text": "Dizzy Play"
+  },
+  {
+   "idx": "Diversity and Social Responsibility: Inclusiveness and Equity",
+   "text": "Inclusiveness and Equity"
+  },
+  {
+   "idx": "Diversity and Social Responsibility: Democratic Practices",
+   "text": "Democratic Practices"
+  },
+  {
+   "idx": "Diversity and Social Responsibility: Sustainable Futures",
+   "text": "Sustainable Futures"
+  },
+  {
+   "idx": "Well-Being: Emotional Health and Positive Identities",
+   "text": "Emotional Health and Positive Identities"
+  },
+  {
+   "idx": "Well-Being: Belonging",
+   "text": "Belonging"
+  },
+  {
+   "idx": "Well-Being: Physical Health",
+   "text": "Physical Health"
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "Well-Being: Emotional Health and Positive Identities",
+   "text": "Emotional Health and Positive Identities"
+  },
+  {
+   "idx": "Well-Being: Belonging",
+   "text": "Belonging"
+  },
+  {
+   "idx": "Well-Being: Physical Health",
+   "text": "Physical Health"
+  },
+  {
+   "idx": "Diversity and Social Responsibility: Inclusiveness and Equity",
+   "text": "Inclusiveness and Equity"
+  },
+  {
+   "idx": "Diversity and Social Responsibility: Democratic Practices",
+   "text": "Democratic Practices"
+  },
+  {
+   "idx": "Diversity and Social Responsibility: Sustainable Futures",
+   "text": "Sustainable Futures"
+  },
+  {
+   "idx": "Communication and Literacies: Communicative Practices",
+   "text": "Communicative Practices"
+  },
+  {
+   "idx": "Communication and Literacies: Multimodal Literacies",
+   "text": "Multimodal Literacies"
+  },
+  {
+   "idx": "Communication and Literacies: Literate Identities With/In Communities",
+   "text": "Literate Identities With/In Communities"
+  }
+ ]
+}

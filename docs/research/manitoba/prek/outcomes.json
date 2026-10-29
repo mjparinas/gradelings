@@ -1,0 +1,98 @@
+{
+ "pk/math": [
+  {
+   "idx": "Social development",
+   "text": "Social development"
+  },
+  {
+   "idx": "Emotional development",
+   "text": "Emotional development"
+  },
+  {
+   "idx": "Physical development",
+   "text": "Physical development"
+  },
+  {
+   "idx": "Cognitive development",
+   "text": "Cognitive development"
+  },
+  {
+   "idx": "Numeracy",
+   "text": "play area: numeracy"
+  },
+  {
+   "idx": "Block and construction",
+   "text": "play area: block and construction"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "Social development",
+   "text": "Social development"
+  },
+  {
+   "idx": "Emotional development",
+   "text": "Emotional development"
+  },
+  {
+   "idx": "Physical development",
+   "text": "Physical development"
+  },
+  {
+   "idx": "Cognitive development",
+   "text": "Cognitive development"
+  },
+  {
+   "idx": "Literacy",
+   "text": "play area: literacy"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "Social development",
+   "text": "Social development"
+  },
+  {
+   "idx": "Emotional development",
+   "text": "Emotional development"
+  },
+  {
+   "idx": "Physical development",
+   "text": "Physical development"
+  },
+  {
+   "idx": "Cognitive development",
+   "text": "Cognitive development"
+  },
+  {
+   "idx": "Science, water and sand",
+   "text": "play area: science, water and sand"
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "Social development",
+   "text": "Social development"
+  },
+  {
+   "idx": "Emotional development",
+   "text": "Emotional development"
+  },
+  {
+   "idx": "Physical development",
+   "text": "Physical development"
+  },
+  {
+   "idx": "Cognitive development",
+   "text": "Cognitive development"
+  },
+  {
+   "idx": "Dramatic",
+   "text": "play area: dramatic"
+  },
+  {
+   "idx": "Science, water and sand",
+   "text": "play area: science, water and sand"
+  }
+ ]
+}

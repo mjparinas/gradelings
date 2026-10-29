@@ -99,6 +99,10 @@ export const NEWFOUNDLAND_AND_LABRADOR_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Four-year-olds in Newfoundland and Labrador learn at home, in child care and in Pre-Kindergarten programs, which follow Navigating the Early Years, the province's early childhood learning framework: well-being and belonging, communication, play and exploration, and social contribution.",
+      lookFor: "Early learning programs have no marks or report card. Notice counting, rhyming, letters from your child's name, curiosity about animals and weather, and how they share and name feelings. Short, playful practice is plenty at this age.",
+    },
     k: {
       overview: "Kindergarten builds early learning through play. Children explore language and letters, counting and shapes, and the world around them. Reports use the same four-point rating as the later grades, and also describe play and exploration, well-being and belonging, communication and social contribution.",
       lookFor: "Look for comments on listening, early letters and sounds, counting to 10, patterns, sharing ideas, and getting along with classmates.",

@@ -1,4 +1,5 @@
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 import type { GradeId } from "../types";
 
 // New Brunswick (anglophone sector). Standards are the skill descriptors of the New Brunswick curriculum (Department of
@@ -63,9 +64,9 @@ export const NEW_BRUNSWICK: Framework = {
   standardLabel: "Skill descriptor",
   sourceName: "New Brunswick Department of Education and Early Childhood Development",
   sourceUrl: "https://curriculum.nbed.ca/",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social", "immersion", "core-french"],
-  scoringFor: (grade: GradeId) => (grade === "9" ? HIGH_SCHOOL : K8),
+  scoringFor: (grade: GradeId) => (grade === "pk" ? preKScale(K8) : grade === "9" ? HIGH_SCHOOL : K8),
   reportCard: {
     title: "Understanding New Brunswick report cards",
     intro:

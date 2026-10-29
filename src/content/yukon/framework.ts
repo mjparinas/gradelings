@@ -7,8 +7,8 @@ import { BRITISH_COLUMBIA } from "../grades/framework";
 export const YUKON: Framework = {
   ...BRITISH_COLUMBIA,
   id: "ca-yt",
-  // Pre-K comes with its own early-learning standards (see src/content/prek.ts); not added here yet.
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  preKName: "Early Kindergarten",
   regionKind: "territory",
   slug: "yukon",
   name: "Yukon",

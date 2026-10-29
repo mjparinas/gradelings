@@ -158,6 +158,10 @@ export const FLORIDA_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-K in Florida is Voluntary Prekindergarten (VPK): free for every 4-year-old who lives in Florida, in a school or a private provider. It follows the Florida Early Learning and Developmental Standards: approaches to learning, social and emotional development, language and literacy, math, science and social studies.",
+      lookFor: "VPK has no report card; teachers share progress notes and a checklist, and VPK children take a short state progress check three times a year. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in Florida is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. Science looks at the senses, living things and objects, and social studies covers rules, needs and wants, simple maps, and symbols like the American flag and the Florida flag.",
       lookFor: "Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

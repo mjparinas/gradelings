@@ -100,6 +100,10 @@ export const NEW_BRUNSWICK_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "New Brunswick has no Pre-K school year: four-year-olds learn at home and in early learning centres, which follow the New Brunswick Curriculum Framework for Early Learning and Child Care: well-being, play and playfulness, communication and literacies, and diversity and social responsibility.",
+      lookFor: "The framework has no marks or report card. Notice counting, rhyming, letters from your child's name, curiosity about animals and weather, and how they share and name feelings. Short, playful practice is plenty at this age.",
+    },
     k: {
       overview: "Kindergarten in New Brunswick builds early learning through play. Children explore language and literacy, early mathematics, and the inquiry, well-being and community learning in Explore Your World. There are no separate science and social studies courses in Kindergarten to Grade 2.",
       lookFor: "Look for comments on listening, early letters and sounds, counting and comparing, sharing ideas, and getting along with classmates.",

@@ -21,11 +21,14 @@ describe("page FAQs", () => {
 
   it("never says a region's report card uses our practice steps", () => {
     const ab = getFramework("ca-ab");
-    expect(reportingBands(ab).map((b) => bandLine(ab, b))).toEqual(["Kindergarten to Grade 9: no provincial scale, so Gradelings describes practice in four steps (Beginning, Approaching, Meeting and Exceeding)."]);
+    expect(reportingBands(ab).map((b) => bandLine(ab, b))).toEqual([
+      "Pre-K: no provincial scale, so Gradelings describes practice in four steps (Beginning, Approaching, Meeting and Exceeding).",
+      "Kindergarten to Grade 9: no provincial scale, so Gradelings describes practice in four steps (Beginning, Approaching, Meeting and Exceeding)."]);
     const nu = getFramework("ca-nu");
     expect(bandLine(nu, reportingBands(nu)[0])).toContain("no territory-wide scale");
     const nl = getFramework("ca-nl");
     expect(reportingBands(nl).map((b) => bandLine(nl, b))).toEqual([
+      "Pre-K: no provincial scale, so Gradelings describes practice in four steps (Not Yet Achieving, Approaching, Good and Excellent).",
       "Kindergarten to Grade 6: Not Yet Achieving, Approaching, Good and Excellent.",
       "Grade 7 to Grade 9: no provincial scale, so Gradelings describes practice in four steps (Beginning, Approaching, Meeting and Exceeding).",
     ]);

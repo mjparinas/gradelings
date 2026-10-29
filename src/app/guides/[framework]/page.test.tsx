@@ -64,7 +64,7 @@ describe("guides hub page", () => {
     expect(meta.alternates?.canonical).toBe("/guides/alberta/");
     expect(meta.title).toBe("Alberta parent guides and free printable practice sheets");
     expect(meta.description).toContain(ab.curriculumName);
-    expect(meta.description).toContain("Kindergarten to Grade 9");
+    expect(meta.description).toContain("Pre-K to Grade 9");
     expect(meta.description).toContain(guidesFor("ca-ab").assessment.short);
   });
 

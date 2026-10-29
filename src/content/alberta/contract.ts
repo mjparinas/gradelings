@@ -1,4 +1,4 @@
-import { head, problems, research, type FrameworkContract } from "../contract";
+import { head, problems, preKCite, research, type FrameworkContract } from "../contract";
 import type { GradeId } from "../types";
 
 // Alberta standards cite the official learning outcomes (docs/research/alberta/outcomes.json). How each subject cites them:
@@ -35,6 +35,8 @@ function snapshotItems(subject: string, grade: GradeId): string[] {
 }
 
 export const contract: FrameworkContract = {
+  // Pre-K cites the early-learning document (docs/research/alberta/prek).
+  preK: preKCite("alberta", "Alberta"),
   cite: ({ grade: g, subject, standard }) => {
     const { check, list } = problems();
     const first = head(standard);

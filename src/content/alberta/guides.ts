@@ -192,6 +192,10 @@ export const ALBERTA_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Alberta has no Pre-K school year for every child: four-year-olds learn at home, in child care and in preschool, and some get Pre-Kindergarten through Early Childhood Services. Early learning programs follow Flight, Alberta's Early Learning and Care Framework: well-being, play and playfulness, communication and literacies, and diversity and social responsibility.",
+      lookFor: "Flight has no marks or report card. Notice counting, rhyming, letters from your child's name, curiosity about animals and weather, and how they share and name feelings. Short, playful practice is plenty at this age.",
+    },
     k: {
       overview:
         "Kindergarten in Alberta is a play-based year of listening, speaking, early letters and counting. The new curriculum focuses on quantity to 10, shapes, simple patterns, the five senses, and culture, tradition and community.",

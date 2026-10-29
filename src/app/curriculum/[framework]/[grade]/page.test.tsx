@@ -45,7 +45,10 @@ describe("curriculum grade page", () => {
     const f = getFramework("ca-mb");
     render(await GradePage(props("manitoba", "kindergarten")));
     const nav = screen.getByRole("navigation", { name: "Other grades" });
-    expect(within(nav).getAllByRole("link").map((a) => [a.textContent, a.getAttribute("href")])).toEqual([["Grade 1 →", curriculumPath.grade(f, "1")]]);
+    expect(within(nav).getAllByRole("link").map((a) => [a.textContent, a.getAttribute("href")])).toEqual([
+      ["← Pre-K", curriculumPath.grade(f, "pk")],
+      ["Grade 1 →", curriculumPath.grade(f, "1")],
+    ]);
     expect(within(screen.getByRole("region", { name: /Ready to try/ })).getByRole("link", { name: "Try it free" })).toHaveAttribute("href", expect.stringMatching(/^\/play\/#\/start\?framework=[a-z-]+/));
     const crumbs = within(screen.getByRole("navigation", { name: "Breadcrumb" })).getAllByRole("link");
     expect(crumbs.map((a) => a.getAttribute("href"))).toEqual(["/", "/curriculum/", "/curriculum/manitoba/"]);

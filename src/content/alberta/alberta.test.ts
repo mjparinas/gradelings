@@ -9,11 +9,11 @@ import { head } from "../contract";
 describe("Alberta framework", () => {
   const alberta = getFramework("ca-ab");
 
-  it("is registered with Alberta names and Kindergarten to Grade 9", () => {
+  it("is registered with Alberta names and Pre-K to Grade 9", () => {
     expect(FRAMEWORKS.map((f) => f.id)).toContain("ca-ab");
     expect(alberta.slug).toBe("alberta");
     expect(alberta.region).toBe("Alberta");
-    expect(alberta.grades).toHaveLength(10);
+    expect(alberta.grades).toEqual(["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"]);
   });
 
   it("uses one practice scale with four steps, never a provincial scale", () => {

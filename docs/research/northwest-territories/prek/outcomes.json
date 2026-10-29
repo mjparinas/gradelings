@@ -1,0 +1,986 @@
+{
+ "pk/math": [
+  {
+   "idx": "9.1",
+   "text": "Access, select, organize, and record information and ideas, using a variety of sources, tools and technologies."
+  },
+  {
+   "idx": "9.2",
+   "text": "Finds, collects, questions, records and creates using information and communication technology"
+  },
+  {
+   "idx": "9.3",
+   "text": "Record relevant observations, findings and measurements using pictorial representations, charts, drawings, concrete materials and written language (SC GLO 1-5, ELA 3.2.3)."
+  },
+  {
+   "idx": "9.4",
+   "text": "Use critical thinking skills to make observations, decisions and to solve problems"
+  },
+  {
+   "idx": "9.5",
+   "text": "Use patterns to describe the world and solve problems."
+  },
+  {
+   "idx": "9.6",
+   "text": "Use direct or indirect measurement to solve problems."
+  },
+  {
+   "idx": "9.7",
+   "text": "Recalls and/or records prior knowledge"
+  },
+  {
+   "idx": "9.8",
+   "text": "Carry out simple hands-on investigations involving free and guided exploration using inquiry skills (questioning, planning, predicting, observing, communicating)"
+  },
+  {
+   "idx": "9.9",
+   "text": "Use investigation to explore a wide range of topics from Inuuqatigiit and/or Dene Kede, for example:"
+  },
+  {
+   "idx": "9.10",
+   "text": "Ask questions to satisfy personal curiosity and information needs in own and group inquiry."
+  },
+  {
+   "idx": "9.11",
+   "text": "Identify self and others as sources of information."
+  },
+  {
+   "idx": "9.12",
+   "text": "Ask questions and use prior knowledge to make sense of information."
+  },
+  {
+   "idx": "9.13",
+   "text": "Indicate whether or not information is useful for answering questions."
+  },
+  {
+   "idx": "9.14",
+   "text": "Categorize objects and pictures according to visual similarities and differences."
+  },
+  {
+   "idx": "9.15",
+   "text": "Compare gathered ideas and information to personal knowledge."
+  },
+  {
+   "idx": "9.16",
+   "text": "Choose different ways to gather information and ideas for own and group inquiry."
+  },
+  {
+   "idx": "11.1",
+   "text": "Develop number sense"
+  },
+  {
+   "idx": "11.2",
+   "text": "Say the number sequence by 1s starting anywhere from 1 to 10 and 10 to 1."
+  },
+  {
+   "idx": "11.3",
+   "text": "Recognize, at a glance, and name familiar arrangements of 1 to 5 objects or dots."
+  },
+  {
+   "idx": "11.4",
+   "text": "Relate a numeral, 1 to 10, to its respective quantity."
+  },
+  {
+   "idx": "11.5",
+   "text": "Represent and describe numbers 2 to 10, concretely and pictorially."
+  },
+  {
+   "idx": "11.6",
+   "text": "Compare quantities, 1 to 10, using one-to-one correspondence."
+  },
+  {
+   "idx": "11.7",
+   "text": "Use patterns to describe the world and solve problems."
+  },
+  {
+   "idx": "11.8",
+   "text": "Demonstrate an understanding of repeating patterns (two or three elements) by identifying, reproducing, extending, creating patterns using manipulatives, sounds, and actions."
+  },
+  {
+   "idx": "11.9",
+   "text": "Use direct or indirect measurement to solve problems."
+  },
+  {
+   "idx": "11.10",
+   "text": "Use direct comparison to compare two objects based on a single attribute, such as length (height), mass (weight) and volume (capacity)."
+  },
+  {
+   "idx": "11.11",
+   "text": "Describe characteristics of 3-D objects and 2-D shapes, and analyze the relationships among them."
+  },
+  {
+   "idx": "11.12",
+   "text": "Sort 3-D objects using a single attribute."
+  },
+  {
+   "idx": "11.13",
+   "text": "Build and describe 3-D objects."
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "6.1",
+   "text": "Communicate the results of investigations and explorations in a variety of ways"
+  },
+  {
+   "idx": "6.2",
+   "text": "Explore different ways that people communicate."
+  },
+  {
+   "idx": "6.3",
+   "text": "Talk about and/or represent self and listen to others."
+  },
+  {
+   "idx": "6.4",
+   "text": "Demonstrate desire to listen and speak."
+  },
+  {
+   "idx": "6.5",
+   "text": "Listen to opinions, ideas and thoughts of others."
+  },
+  {
+   "idx": "6.6",
+   "text": "Communicate opinions and ideas."
+  },
+  {
+   "idx": "6.7",
+   "text": "Talk about connections between prior and new experiences and information."
+  },
+  {
+   "idx": "6.8",
+   "text": "Tell about personal connections with texts (oral, print, and other media"
+  },
+  {
+   "idx": "6.9",
+   "text": "Represent and share information and ideas."
+  },
+  {
+   "idx": "6.10",
+   "text": "Use a variety of simple sentence patterns when talking."
+  },
+  {
+   "idx": "6.11",
+   "text": "Begins to use a voice that is individual, expressive, engaging, with an awareness and respect for intended audience and intended purpose."
+  },
+  {
+   "idx": "6.12",
+   "text": "Express text preferences (oral, print, and other media texts)."
+  },
+  {
+   "idx": "6.13",
+   "text": "Demonstrate interest in own and others’ texts and representations."
+  },
+  {
+   "idx": "6.14",
+   "text": "Talk about enhancing a presentation of text (oral, print, and media)."
+  },
+  {
+   "idx": "6.15",
+   "text": "Interpret and express ideas clearly and purposefully using a variety of media."
+  },
+  {
+   "idx": "10.1",
+   "text": "Explore a variety of oral, print, and other media texts."
+  },
+  {
+   "idx": "10.2",
+   "text": "Explore a variety of narrative, expository and poetic texts."
+  },
+  {
+   "idx": "10.3",
+   "text": "Use prior knowledge to identify connections between self and texts (oral, print, and other media)."
+  },
+  {
+   "idx": "10.4",
+   "text": "Demonstrates desire to read"
+  },
+  {
+   "idx": "10.5",
+   "text": "Demonstrate desire to represent and write"
+  },
+  {
+   "idx": "10.6",
+   "text": "Retell stories."
+  },
+  {
+   "idx": "10.7",
+   "text": "Recognize that print has meaning"
+  },
+  {
+   "idx": "10.8",
+   "text": "Talk about and predict meaning from print, symbols, and images."
+  },
+  {
+   "idx": "10.9",
+   "text": "Begin to use comprehension strategies to construct and confirm understanding."
+  },
+  {
+   "idx": "10.10",
+   "text": "Begin to talk about context and purpose in texts."
+  },
+  {
+   "idx": "10.11",
+   "text": "Recognize familiar words."
+  },
+  {
+   "idx": "10.12",
+   "text": "Recognize that sentences are made up of words and words are made up of letter sounds"
+  },
+  {
+   "idx": "10.13",
+   "text": "Begin to read for meaning."
+  },
+  {
+   "idx": "10.14",
+   "text": "Connect sounds with some letters when writing"
+  },
+  {
+   "idx": "10.15",
+   "text": "Form recognizable letters (ELA 4.2.3), and use some capital letters."
+  },
+  {
+   "idx": "10.16",
+   "text": "Create original texts (oral, print, and other media)."
+  },
+  {
+   "idx": "10.17",
+   "text": "Talk about what is realistic and imaginary in a variety of forms and genres of texts."
+  },
+  {
+   "idx": "10.18",
+   "text": "Talk about vocabulary and language used by authors from a variety of oral, print, and other media texts."
+  },
+  {
+   "idx": "10.19",
+   "text": "Begin to play with repetition, rhyme and rhythm."
+  },
+  {
+   "idx": "10.20",
+   "text": "Experiment with language to create desired effect in oral, print, and other media text."
+  },
+  {
+   "idx": "10.21",
+   "text": "Uses given ICT to show learning by creating pictures, texts, graphs, and sounds"
+  },
+  {
+   "idx": "10.22",
+   "text": "Begin to use a computer to create texts."
+  },
+  {
+   "idx": "10.23",
+   "text": "Demonstrates motivation and growing confidence when using ICT alone and with others."
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "2.1",
+   "text": "Identify basic common human needs and explore various ways in which those needs may be met."
+  },
+  {
+   "idx": "2.2",
+   "text": "Identify habits that lead to a healthy lifestyle."
+  },
+  {
+   "idx": "2.3",
+   "text": "Describe how dental health is influenced by oral hygiene and diet."
+  },
+  {
+   "idx": "2.4",
+   "text": "Describe how the food that people eat may help their bodies grow healthy and strong."
+  },
+  {
+   "idx": "2.5",
+   "text": "Understand that healthy foods vary from one culture to another."
+  },
+  {
+   "idx": "2.6",
+   "text": "Identify basic body parts and their functions."
+  },
+  {
+   "idx": "2.7",
+   "text": "Acquire skills through a variety of developmentally appropriate movement activities: dance, games, types of gymnastics, individual activities and activities in an alternative environment (e.g., aquatics and outdoor pursuits)."
+  },
+  {
+   "idx": "2.8",
+   "text": "Experience and develop locomotor and non-locomotor skills through a variety of activities."
+  },
+  {
+   "idx": "2.9",
+   "text": "Recognize and reflect on improvement in physical abilities."
+  },
+  {
+   "idx": "2.10",
+   "text": "Understand the connection between physical activity, personal health and emotional well- being."
+  },
+  {
+   "idx": "2.11",
+   "text": "Take responsibility for leading an active way of life."
+  },
+  {
+   "idx": "2.12",
+   "text": "Explore health care in traditional times and in the present."
+  },
+  {
+   "idx": "2.13",
+   "text": "Experience natural, nutritious foods that were part of the traditional Inuit lifestyle and some that are still part of the modern Inuit diet."
+  },
+  {
+   "idx": "2.14",
+   "text": "Understand that the Dene have developed their own system of food gathering, preparation and preservation. Food is a source of wealth for the Dene and must be shared. One must never deny another food."
+  },
+  {
+   "idx": "2.15",
+   "text": "Experience traditional Dene games, which were played to test physical strength, develop mental capabilities, and build character."
+  },
+  {
+   "idx": "2.16",
+   "text": "Participate in traditional Inuit games."
+  },
+  {
+   "idx": "2.17",
+   "text": "Identify and explain methods of keeping warm during the season."
+  },
+  {
+   "idx": "2.18",
+   "text": "Identify the need for different clothing in response to environmental changes."
+  },
+  {
+   "idx": "2.19",
+   "text": "Identify devices that help keep us warm."
+  },
+  {
+   "idx": "2.20",
+   "text": "Choose appropriate clothing based on environmental conditions."
+  },
+  {
+   "idx": "2.21",
+   "text": "Understand that taking personal responsibility for following safety rules (pedestrian, ice, water, fire, dangerous substances) is an important part of life."
+  },
+  {
+   "idx": "2.22",
+   "text": "Discover and practice rules for water safety."
+  },
+  {
+   "idx": "2.23",
+   "text": "Discover and practice rules for ice safety."
+  },
+  {
+   "idx": "3.1",
+   "text": "Recognize the personal actions that can be taken to support the environment."
+  },
+  {
+   "idx": "3.2",
+   "text": "Describe characteristics of the local physical environment."
+  },
+  {
+   "idx": "3.3",
+   "text": "Give examples of how the natural environment influences daily life."
+  },
+  {
+   "idx": "3.4",
+   "text": "Appreciate the beauty and importance of the natural environment."
+  },
+  {
+   "idx": "3.5",
+   "text": "Develop a love of the land."
+  },
+  {
+   "idx": "3.6",
+   "text": "Understand that the land has provided the Dene with everything they need to survive for thousands of years."
+  },
+  {
+   "idx": "3.7",
+   "text": "Understand that Dene have a very deep respect for water and rivers as a living force."
+  },
+  {
+   "idx": "3.8",
+   "text": "Understand that the Dene had many uses for plants in the past, both domestic and medicinal."
+  },
+  {
+   "idx": "3.9",
+   "text": "Understand the importance of the animals to Dene life (bear, beaver, birds, caribou, dog, fish, fox, moose, muskox, rabbit, raven, shrews/mice, spiders, wolverine, wolf, and muskrat)."
+  },
+  {
+   "idx": "3.10",
+   "text": "Develop an appreciation for the land, sea, ice, sky and weather through Inuit stories and legends."
+  },
+  {
+   "idx": "3.11",
+   "text": "Appreciate the importance of water to the Inuit for food and transportation."
+  },
+  {
+   "idx": "3.12",
+   "text": "Develop an awareness of ice and its importance to Inuit life."
+  },
+  {
+   "idx": "3.13",
+   "text": "Understand the importance of the animals to Inuit life (caribou, bears, seals, fish, whales, fox, wolverine, birds, bugs) and plants."
+  },
+  {
+   "idx": "3.14",
+   "text": "Develop observation skills in order to explore landforms and landmarks for finding direction when travelling on the land."
+  },
+  {
+   "idx": "3.15",
+   "text": "Identify rivers, lakes and the sea."
+  },
+  {
+   "idx": "3.16",
+   "text": "Discover the changing patterns in the sky and their importance in traditional Inuit life."
+  },
+  {
+   "idx": "3.17",
+   "text": "Describe the changing weather conditions."
+  },
+  {
+   "idx": "5.1",
+   "text": "Build and maintain a positive self-image."
+  },
+  {
+   "idx": "5.2",
+   "text": "Explore ways to express feelings."
+  },
+  {
+   "idx": "5.3",
+   "text": "Understand that everyone has different physical characteristics, abilities and feelings."
+  },
+  {
+   "idx": "5.4",
+   "text": "Understand that in traditional Dene life, sharing, being self-disciplined, and learning from elders was very important."
+  },
+  {
+   "idx": "5.5",
+   "text": "Explore the concept of change and growth as part of life."
+  },
+  {
+   "idx": "5.6",
+   "text": "Be open to change in order to learn and grow."
+  },
+  {
+   "idx": "5.7",
+   "text": "Develop a sense of time: yesterday, today, tomorrow"
+  },
+  {
+   "idx": "5.8",
+   "text": "Relate events and stories in chronological order."
+  },
+  {
+   "idx": "5.9",
+   "text": "Discover repeating patterns and events in own and others’ lives."
+  },
+  {
+   "idx": "5.10",
+   "text": "Evaluate the impact of personal decisions on self and others."
+  },
+  {
+   "idx": "5.11",
+   "text": "Begin to offer positive feedback to a peer about group processes."
+  },
+  {
+   "idx": "5.12",
+   "text": "Begin to develop respectful communication skills to give positive feedback, encouragement and compliments to classmates."
+  },
+  {
+   "idx": "5.13",
+   "text": "Respect self."
+  },
+  {
+   "idx": "5.14",
+   "text": "Begin to reflect on personal behaviours and learning style."
+  },
+  {
+   "idx": "5.15",
+   "text": "Begin to reflect on personal behaviours that contribute to group success."
+  },
+  {
+   "idx": "5.16",
+   "text": "Responds to others’ experiences and feelings through conversation."
+  },
+  {
+   "idx": "5.17",
+   "text": "Adjust listening, viewing, speaking behaviours according to the situation."
+  },
+  {
+   "idx": "9.1",
+   "text": "Access, select, organize, and record information and ideas, using a variety of sources, tools and technologies."
+  },
+  {
+   "idx": "9.2",
+   "text": "Finds, collects, questions, records and creates using information and communication technology"
+  },
+  {
+   "idx": "9.3",
+   "text": "Record relevant observations, findings and measurements using pictorial representations, charts, drawings, concrete materials and written language (SC GLO 1-5, ELA 3.2.3)."
+  },
+  {
+   "idx": "9.4",
+   "text": "Use critical thinking skills to make observations, decisions and to solve problems"
+  },
+  {
+   "idx": "9.5",
+   "text": "Use patterns to describe the world and solve problems."
+  },
+  {
+   "idx": "9.6",
+   "text": "Use direct or indirect measurement to solve problems."
+  },
+  {
+   "idx": "9.7",
+   "text": "Recalls and/or records prior knowledge"
+  },
+  {
+   "idx": "9.8",
+   "text": "Carry out simple hands-on investigations involving free and guided exploration using inquiry skills (questioning, planning, predicting, observing, communicating)"
+  },
+  {
+   "idx": "9.9",
+   "text": "Use investigation to explore a wide range of topics from Inuuqatigiit and/or Dene Kede, for example:"
+  },
+  {
+   "idx": "9.10",
+   "text": "Ask questions to satisfy personal curiosity and information needs in own and group inquiry."
+  },
+  {
+   "idx": "9.11",
+   "text": "Identify self and others as sources of information."
+  },
+  {
+   "idx": "9.12",
+   "text": "Ask questions and use prior knowledge to make sense of information."
+  },
+  {
+   "idx": "9.13",
+   "text": "Indicate whether or not information is useful for answering questions."
+  },
+  {
+   "idx": "9.14",
+   "text": "Categorize objects and pictures according to visual similarities and differences."
+  },
+  {
+   "idx": "9.15",
+   "text": "Compare gathered ideas and information to personal knowledge."
+  },
+  {
+   "idx": "9.16",
+   "text": "Choose different ways to gather information and ideas for own and group inquiry."
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "1.1",
+   "text": "Understand that every person is unique and has special interests, abilities, talents, feelings and ideas to contribute to his or her community."
+  },
+  {
+   "idx": "1.2",
+   "text": "Explore the multitude of groups that make up our society."
+  },
+  {
+   "idx": "1.3",
+   "text": "Understand self as a social being and a contributing member of various groups and the community."
+  },
+  {
+   "idx": "1.4",
+   "text": "Recognize the role that family plays in shaping the identity of individuals."
+  },
+  {
+   "idx": "1.5",
+   "text": "Understand personal role as a family member."
+  },
+  {
+   "idx": "1.6",
+   "text": "Understand that families, immediate or extended, have strengths and responsibilities."
+  },
+  {
+   "idx": "1.7",
+   "text": "Understand that families take care of each other in good and bad times and contribute to the community"
+  },
+  {
+   "idx": "1.8",
+   "text": "Discover personal and direct connections to history through family."
+  },
+  {
+   "idx": "1.9",
+   "text": "Recognize familiar places and landmarks in the community and their connection to family and community history."
+  },
+  {
+   "idx": "1.10",
+   "text": "Explore the diversity and importance of celebrations and come to understand the value of stories from the past."
+  },
+  {
+   "idx": "1.11",
+   "text": "Be aware of the traditional and current role of Dene children, parents and grandparents."
+  },
+  {
+   "idx": "1.12",
+   "text": "Understand that the extended family was the basic unit of survival in Dene culture and continues to be important today."
+  },
+  {
+   "idx": "1.13",
+   "text": "Discover that the Dene tribes and the Inuit are the indigenous peoples of the Northwest Territories."
+  },
+  {
+   "idx": "1.14",
+   "text": "Understand the vital connection between Dene identity and history, and the land and animals."
+  },
+  {
+   "idx": "1.15",
+   "text": "Appreciate and respect elders’ skills, knowledge and story-telling abilities."
+  },
+  {
+   "idx": "1.16",
+   "text": "Acknowledge personal accomplishments and strengths in the classroom community."
+  },
+  {
+   "idx": "1.17",
+   "text": "Tell and draw stories about self and family."
+  },
+  {
+   "idx": "2.1",
+   "text": "Identify basic common human needs and explore various ways in which those needs may be met."
+  },
+  {
+   "idx": "2.2",
+   "text": "Identify habits that lead to a healthy lifestyle."
+  },
+  {
+   "idx": "2.3",
+   "text": "Describe how dental health is influenced by oral hygiene and diet."
+  },
+  {
+   "idx": "2.4",
+   "text": "Describe how the food that people eat may help their bodies grow healthy and strong."
+  },
+  {
+   "idx": "2.5",
+   "text": "Understand that healthy foods vary from one culture to another."
+  },
+  {
+   "idx": "2.6",
+   "text": "Identify basic body parts and their functions."
+  },
+  {
+   "idx": "2.7",
+   "text": "Acquire skills through a variety of developmentally appropriate movement activities: dance, games, types of gymnastics, individual activities and activities in an alternative environment (e.g., aquatics and outdoor pursuits)."
+  },
+  {
+   "idx": "2.8",
+   "text": "Experience and develop locomotor and non-locomotor skills through a variety of activities."
+  },
+  {
+   "idx": "2.9",
+   "text": "Recognize and reflect on improvement in physical abilities."
+  },
+  {
+   "idx": "2.10",
+   "text": "Understand the connection between physical activity, personal health and emotional well- being."
+  },
+  {
+   "idx": "2.11",
+   "text": "Take responsibility for leading an active way of life."
+  },
+  {
+   "idx": "2.12",
+   "text": "Explore health care in traditional times and in the present."
+  },
+  {
+   "idx": "2.13",
+   "text": "Experience natural, nutritious foods that were part of the traditional Inuit lifestyle and some that are still part of the modern Inuit diet."
+  },
+  {
+   "idx": "2.14",
+   "text": "Understand that the Dene have developed their own system of food gathering, preparation and preservation. Food is a source of wealth for the Dene and must be shared. One must never deny another food."
+  },
+  {
+   "idx": "2.15",
+   "text": "Experience traditional Dene games, which were played to test physical strength, develop mental capabilities, and build character."
+  },
+  {
+   "idx": "2.16",
+   "text": "Participate in traditional Inuit games."
+  },
+  {
+   "idx": "2.17",
+   "text": "Identify and explain methods of keeping warm during the season."
+  },
+  {
+   "idx": "2.18",
+   "text": "Identify the need for different clothing in response to environmental changes."
+  },
+  {
+   "idx": "2.19",
+   "text": "Identify devices that help keep us warm."
+  },
+  {
+   "idx": "2.20",
+   "text": "Choose appropriate clothing based on environmental conditions."
+  },
+  {
+   "idx": "2.21",
+   "text": "Understand that taking personal responsibility for following safety rules (pedestrian, ice, water, fire, dangerous substances) is an important part of life."
+  },
+  {
+   "idx": "2.22",
+   "text": "Discover and practice rules for water safety."
+  },
+  {
+   "idx": "2.23",
+   "text": "Discover and practice rules for ice safety."
+  },
+  {
+   "idx": "3.1",
+   "text": "Recognize the personal actions that can be taken to support the environment."
+  },
+  {
+   "idx": "3.2",
+   "text": "Describe characteristics of the local physical environment."
+  },
+  {
+   "idx": "3.3",
+   "text": "Give examples of how the natural environment influences daily life."
+  },
+  {
+   "idx": "3.4",
+   "text": "Appreciate the beauty and importance of the natural environment."
+  },
+  {
+   "idx": "3.5",
+   "text": "Develop a love of the land."
+  },
+  {
+   "idx": "3.6",
+   "text": "Understand that the land has provided the Dene with everything they need to survive for thousands of years."
+  },
+  {
+   "idx": "3.7",
+   "text": "Understand that Dene have a very deep respect for water and rivers as a living force."
+  },
+  {
+   "idx": "3.8",
+   "text": "Understand that the Dene had many uses for plants in the past, both domestic and medicinal."
+  },
+  {
+   "idx": "3.9",
+   "text": "Understand the importance of the animals to Dene life (bear, beaver, birds, caribou, dog, fish, fox, moose, muskox, rabbit, raven, shrews/mice, spiders, wolverine, wolf, and muskrat)."
+  },
+  {
+   "idx": "3.10",
+   "text": "Develop an appreciation for the land, sea, ice, sky and weather through Inuit stories and legends."
+  },
+  {
+   "idx": "3.11",
+   "text": "Appreciate the importance of water to the Inuit for food and transportation."
+  },
+  {
+   "idx": "3.12",
+   "text": "Develop an awareness of ice and its importance to Inuit life."
+  },
+  {
+   "idx": "3.13",
+   "text": "Understand the importance of the animals to Inuit life (caribou, bears, seals, fish, whales, fox, wolverine, birds, bugs) and plants."
+  },
+  {
+   "idx": "3.14",
+   "text": "Develop observation skills in order to explore landforms and landmarks for finding direction when travelling on the land."
+  },
+  {
+   "idx": "3.15",
+   "text": "Identify rivers, lakes and the sea."
+  },
+  {
+   "idx": "3.16",
+   "text": "Discover the changing patterns in the sky and their importance in traditional Inuit life."
+  },
+  {
+   "idx": "3.17",
+   "text": "Describe the changing weather conditions."
+  },
+  {
+   "idx": "4.1",
+   "text": "Respect the rules of the school and the property of others."
+  },
+  {
+   "idx": "4.2",
+   "text": "Demonstrate an understanding of basic rules and fair play."
+  },
+  {
+   "idx": "4.3",
+   "text": "Know the community helpers who work to keep us safe."
+  },
+  {
+   "idx": "4.4",
+   "text": "Demonstrate awareness of those who help, care, and make decisions for them."
+  },
+  {
+   "idx": "4.5",
+   "text": "Explore various responsibilities at home and in school and identify ways in which those actions affect others."
+  },
+  {
+   "idx": "4.6",
+   "text": "Understand that taking responsibilities helps them and others."
+  },
+  {
+   "idx": "4.7",
+   "text": "Demonstrate the ability to take responsibility for one’s decisions and actions."
+  },
+  {
+   "idx": "4.8",
+   "text": "Explore how people cooperate and work together in order to live peacefully. (SS 2.5) Give examples of ways in which people cooperate in order to live together peacefully (SS Skills Core Concept/ Citizenship)."
+  },
+  {
+   "idx": "4.9",
+   "text": "Explore the concepts of peace and peaceful conflict resolution."
+  },
+  {
+   "idx": "4.10",
+   "text": "Explore the role of leadership in school and community peace - past and present."
+  },
+  {
+   "idx": "4.11",
+   "text": "Understand the importance of preparing for one’s life and work paths."
+  },
+  {
+   "idx": "4.12",
+   "text": "Understand how work benefits the individual and society."
+  },
+  {
+   "idx": "4.13",
+   "text": "Discover the value of following one’s own heart and its relation to life and work."
+  },
+  {
+   "idx": "4.14",
+   "text": "Identify different types of work and their value in families, schools, and communities."
+  },
+  {
+   "idx": "4.15",
+   "text": "Actively contribute to work done in families, schools and community."
+  },
+  {
+   "idx": "4.16",
+   "text": "Recognize selves as citizens of Canada with special privileges and responsibilities."
+  },
+  {
+   "idx": "4.17",
+   "text": "Become aware of the larger world outside of the community."
+  },
+  {
+   "idx": "4.18",
+   "text": "Recognize globes, maps and models as representations of actual places."
+  },
+  {
+   "idx": "4.19",
+   "text": "Participate in classroom activities."
+  },
+  {
+   "idx": "4.20",
+   "text": "Respect others."
+  },
+  {
+   "idx": "4.21",
+   "text": "Find ways to be helpful to others."
+  },
+  {
+   "idx": "4.22",
+   "text": "Contribute to the classroom community."
+  },
+  {
+   "idx": "5.1",
+   "text": "Build and maintain a positive self-image."
+  },
+  {
+   "idx": "5.2",
+   "text": "Explore ways to express feelings."
+  },
+  {
+   "idx": "5.3",
+   "text": "Understand that everyone has different physical characteristics, abilities and feelings."
+  },
+  {
+   "idx": "5.4",
+   "text": "Understand that in traditional Dene life, sharing, being self-disciplined, and learning from elders was very important."
+  },
+  {
+   "idx": "5.5",
+   "text": "Explore the concept of change and growth as part of life."
+  },
+  {
+   "idx": "5.6",
+   "text": "Be open to change in order to learn and grow."
+  },
+  {
+   "idx": "5.7",
+   "text": "Develop a sense of time: yesterday, today, tomorrow"
+  },
+  {
+   "idx": "5.8",
+   "text": "Relate events and stories in chronological order."
+  },
+  {
+   "idx": "5.9",
+   "text": "Discover repeating patterns and events in own and others’ lives."
+  },
+  {
+   "idx": "5.10",
+   "text": "Evaluate the impact of personal decisions on self and others."
+  },
+  {
+   "idx": "5.11",
+   "text": "Begin to offer positive feedback to a peer about group processes."
+  },
+  {
+   "idx": "5.12",
+   "text": "Begin to develop respectful communication skills to give positive feedback, encouragement and compliments to classmates."
+  },
+  {
+   "idx": "5.13",
+   "text": "Respect self."
+  },
+  {
+   "idx": "5.14",
+   "text": "Begin to reflect on personal behaviours and learning style."
+  },
+  {
+   "idx": "5.15",
+   "text": "Begin to reflect on personal behaviours that contribute to group success."
+  },
+  {
+   "idx": "5.16",
+   "text": "Responds to others’ experiences and feelings through conversation."
+  },
+  {
+   "idx": "5.17",
+   "text": "Adjust listening, viewing, speaking behaviours according to the situation."
+  },
+  {
+   "idx": "7.1",
+   "text": "Recognize that people all over the world have the same basic needs."
+  },
+  {
+   "idx": "7.2",
+   "text": "Recognize that people from other places meet their needs in diverse ways."
+  },
+  {
+   "idx": "7.3",
+   "text": "Play confidently and freely with other children."
+  },
+  {
+   "idx": "7.4",
+   "text": "Through play, children acquire language, find friendships, learn leadership skills, and develop mentally, physically, creatively and spiritually."
+  },
+  {
+   "idx": "7.5",
+   "text": "Show respect for the talents, strengths, interests, feelings and ideas of others, to strengthen the community."
+  },
+  {
+   "idx": "7.6",
+   "text": "Interact effectively and positively with others."
+  },
+  {
+   "idx": "7.7",
+   "text": "Demonstrate good relations with others by working cooperatively toward common goals, and collaborating with others for the well-being of the community. (SS Skills Core Concept/ Citizenship)."
+  },
+  {
+   "idx": "7.8",
+   "text": "Work in partnerships by taking turns, sharing ideas, and following directions"
+  }
+ ]
+}

@@ -1,0 +1,2454 @@
+Navigating the Early Years:
+An Early Childhood Learning Framework
+
+Education and Early Childhood Development
+2019
+
+i
+
+Available in Alternate Format, Upon Request
+Disponible en français en ligne www.gov.nl.ca
+Please contact Mary Goss-Prowse at ELCD@gov.nl.ca or call 729-5960 for access
+
+ii
+
+Published By
+Department of Education and Early Childhood Development
+PO Box 8700
+St. John’s, NL
+A1B 4J6
+Canada
+2019
+Printed in Newfoundland and Labrador
+
+iii
+
+Acknowledgments
+This document is the culmination of extensive collaboration and consultations with many early learning
+partners. In particular, we would like to thank the following members for their contribution:
+
+Framework Development Team:
+Andrea Kelland – Program Consultant, Department of Education and Early Childhood Development
+Ann Burke, Ph.D – Associate Professor, Literacy Education & Early Learning, Memorial University
+Antoinette (Toni) Doyle, PhD – Assistant Professor, Faculty of Education, Memorial University
+Brian Harvey – Director, Indigenous Affairs, Intergovernmental and Indigenous Affairs Secretariat
+Cathie Royle – Program Consultant, Department of Children, Seniors and Social Development
+Christine McLean – Manager, ECE Program, College of the North Atlantic
+Claudia Downey – Senior Analyst, Intergovernmental and Indigenous Affairs Secretariat
+Dolores Dooley – Program Development Specialist, Department of Education and Early Childhood
+Development
+Jaspreet Kaur – Program Development Specialist, Department of Education and Early Childhood Development
+Jenny Lyall – Regional Child Care Coordinator, Nunatsiavut Government, Department of Health and Social
+Development
+Joanne Morris – Instructor, Early Childhood Education, College of the North Atlantic
+Linda Snow – Program & Policy Development Specialist, Department of Advanced Education, Skills and
+Labour
+Lisa Baker Worthman – Child Youth Disability Support and Intervention Services Consultant, Department
+of Health and Community Services
+Lori Chaulk – Regional Child Care Consultant, Department of Education and Early Childhood Development
+Lynn Voisey Smyth/Valerie Collins – Coordinator, Family and Child Care Connections
+Mary Goss-Prowse – Director, Department of Education and Early Childhood Development
+Michelle Power – Primary Education Consultant, Department of Education and Early Childhood Development
+Paula Hennessey – Director, Department of Education and Early Childhood Development
+Sheila Tulk-Lane – Administrative Officer, Deparment of Education and Early Childhood Development
+Skye Taylor – Director of Professional Development, Association of Early Childhood Educators of NL
+Susan Prior – Children’s Librarian, Newfoundland and Labrador Public Libraries
+
+iv
+
+Acknowledgments
+Reviewers:
+Andrea Kelland – Program Consultant, Department of Education and Early Childhood Development
+Antoinette (Toni) Doyle, PhD – Assistant Professor, Faculty of Education, Memorial University
+Cathy O’Keefe – Director for Disease Control, Department of Health and Community Services
+Christine McLean – Manager, ECE Program, College of the North Atlantic
+Florentina Stroia – Liaison Officer, Office of French Services
+Niki Legge – Consultant, Mental Health and Addictions, Department of Health and Community Services
+Susan Earles – Disease Control Nurse Specialist, Department of Health and Community Services
+
+We would like to thank the early learning practitoners, children and other adults in their community of
+care who participated in the pilot and provided their brilliant feedback:
+
+In the Home:
+Brenda Halley & Susan Green
+Lana Rowsell
+Laura Walsh-Martino & David Martino
+Lori Lynn Critch
+Nancy Wilton
+Nathalie Caddigan
+Nicole Smyth
+Terrilynn Osmond
+
+In Regulated Child Care:
+Campus Childcare Inc.
+Dr. A.T. Brace Infant Centre (Little People’s Workshop)
+Jack and Jill Nursery School, Stephenville Shelley Cormier
+Little People’s Workshop, Cowan Heights
+Pinguavik Daycare Centre
+
+v
+
+Acknowledgments
+Shelley Bennett
+Trudy Everett
+YMCA – Children’s Learning Centre
+
+In the Community
+Daybreak Community Programs: The Kirk & Bishop Abraham Sites
+Dora Williams, Public Health Nurse
+Kilbride to Ferryland Family Resource Centre
+Krista Murphy, Child Management Specialist
+Patsy Bowers, Librarian, NLPL – Tilley Memorial Library
+Southern Labrador Family Resource Centre
+The Tree House Family Resource Centre
+Tracy Vaughn-Evan, Librarian, NLPL – Carbonear
+Training Wheels: Springdale Family Resource Centre
+
+In School
+Beachy Cove Elementary
+Centreville Academy
+Gros Morne Academy
+Henry Gordon Academy
+Humber Elementary
+Indian River Academy
+New World Island Academy
+Peacock Primary
+Sacred Heart Academy
+Smallwood Academy
+
+vi
+
+vii
+
+Contents
+Context of Early Learning in Newfoundland and Labrador . . . . . . . . . . . . x
+Navigating the Framework  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . xi
+The Symbol of the Early Childhood Learning Framework   .  .  .  .  .  .  .  .  .  .  .  xiii
+Part 1: Early Learning and Child Development  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 1
+Importance of Early Years   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 1
+Quality Experiences and Child Development  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 1
+Why Do We Need a Framework?   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 2
+School Readiness and Transition to School  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 2
+Part 2: Introduction  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 4
+Vision  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 6
+Purpose .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 6
+Scope  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 6
+Part 3: Principles of Early Childhood Learning From a Child’s Perspective  .  .  .  . 9
+1. Who We Are  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 10
+Principle 1: Individuality  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 10
+Principle 2: Diversity  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  12
+Principle 3: Citizenship  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  13
+2. Our Connections   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  14
+Principle 4: Parents and caregivers, Family, and Friends  .  .  .  .  .  .  .  14
+Principle 5: Community of Care  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  15
+Principle 6: Growing up in Newfoundland & Labrador  .  .  .  .  .  .  .  .  . 16
+3. How We Learn   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  17
+Principle 7: Learning Environments  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  17
+Principle 8: Play and Inquiry Based Learning  .  .  .  .  .  .  .  .  .  .  .  .  . 19
+
+viii
+
+Principle 9: Effective Communication  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  21
+Part 4: Goals for Early Childhood Learning  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 23
+Early Childhood Framework Structure  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  24
+Well-Being and Belonging  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 25
+Physical Well-Being  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 26
+Emotional Well-Being .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  28
+Belonging  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  31
+Communication  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  32
+Language Development  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 33
+Creative Expression   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  35
+Cultural Connection   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  37
+Play and Exploration  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  38
+Investigation and Thinking  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  39
+Creativity  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 40
+A Positive Attitude Towards Learning  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  41
+Social Contribution  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 42
+Equality  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  43
+Diversity  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  44
+Social Responsibility  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  45
+Part 5: Connections   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  47
+Part 6: Glossary of Early Learning Terms  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  . 51
+Part 7: References and Resources   .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  .  60
+
+ix
+
+Context of Early Learning in
+Newfoundland and Labrador
+The Department of Education and Early Childhood Development (EECD) is
+responsible for early childhood learning and development, the K-12 school system,
+and public libraries. EECD strives to provide safe, caring, and inclusive learning
+environments for all children and youth in early childhood settings, regulated child
+care, family resources centres, and pre-school to grade 12.
+In order to enhance co-ordination and ensure consistency and continuity in planning,
+in fall 2014, the mandate for regulated child care and Family Resource Centres
+moved to the new Department of Education and Early Childhood Development. With
+a view to provide seamless programs and services for children, in March 2017, the
+Divisions of Early Childhood Learning and Family and Child Development combined
+to form the new Division of Early Learning and Child Development.
+Currently, provincial programs and services that support early childhood learning,
+for children from birth to eight years and their families, are provided by multiple
+agencies, organizations, and service providers. In addition to the Department of
+Education and Early Childhood Development, the Department of Children, Seniors
+and Social Development, and the Department of Health and Community Services
+have policies, programs, and services for children birth to age eight years with a
+broader early childhood learning and development focus. Other departments and
+agencies that partake the co-ordinated planning and integrated service delivery are;
+the Department of Advanced Education, Skills and Labour, the Office of the Advocate
+for Children and Youth, and the Department of Justice and Public Safety.
+
+x
+
+Navigating the Early Years:
+An Early Childhood Learning Framework
+
+The Early Childhood Learning Framework is outlined in seven parts.
+Part 1 provides research-based information on early learning and child development and
+presents how a framework supports learning during the early years.
+Part 2 provides an introduction to the framework and a description of its purpose, vision,
+and scope.
+Part 3 contains the principles of early childhood learning for children living in Newfoundland
+and Labrador. The principles, as they mean to a child, are written in the voice of a child whom
+this framework is intended to support.
+These principles of early childhood learning define:
+1. Who We Are;
+2. Our Connections; and
+3. How We Learn.
+This section also includes a snapshot of children growing up in Newfoundland and Labrador.
+Part 4 outlines the goals for early childhood learning. These are built on evidence-based
+positive practices for optimal early learning and development. The importance of establishing
+connections between early learning practitioners and families in providing the support necessary
+for early learning is also highlighted in this section. The framework is specifically designed to
+support and promote the roles of early learning practitioners in the learning and development
+of children and to bring consistency and cohesion to their work.
+
+Early learning practitioners are those that work in a variety of early learning
+settings with young children including regulated child care services (child
+care centres and family child care homes) and other early learning settings
+such as family resource centres, early literacy programs, public libraries, and
+schools.
+
+When asked what he wanted to be when he grew up, a child—hands
+on hips—replied indignantly, “I already am!”
+
+xi
+
+Early learning settings are defined as anywhere a child has opportunities to learn
+and develop, including their own home, child care settings, primary school, and in
+the community.
+
+The goals for early childhood learning reflect:
+• Well-Being and Belonging;
+• Communication;
+• Play and Exploration; and
+• Social Contribution.
+Part 5 provides information on connections that early learning practitioners share with other
+adults in children's community of care to strengthen optimal learning and development for
+children.
+Part 6 is a glossary of early learning terms that are referenced within the document.
+Part 7 contains a bibliography of references as well as resources that were used to guide the
+development of the Early Childhood Learning Framework.
+
+xii
+
+The Symbol
+
+of the Early Childhood Learning Framework
+The Fisher’s Knot is used throughout the document as a symbol of the framework. It represents
+the unique culture of Newfoundland and Labrador, and the importance culture plays in the
+lives of all who live in this province. All children are unique and bring their own perspectives to
+everyday learning experiences.
+There are four separate strands of the Fisher’s Knot, each of which contributes to the overall
+strength of the knot. These strands represent the four goals for early childhood learning, which
+are:
+1. Well-Being and Belonging;
+2. Communication;
+3. Play and Exploration; and
+4. Social Contribution.
+Each goal impacts the overall development of a child and draws strength from the others. If
+one strand is frayed, the strength of the knot is compromised.
+The framework encourages a holistic approach to the development of children. Like the interwoven
+strands of the Fisher’s Knot, the framework respects the strength of the whole during the critical
+period of early childhood.
+
+Legend
+Well-Being and Belonging
+Communication
+Play and Exploration
+Social Contribution
+
+xiii
+
+So
+
+y
+t
+cie
+
+Learnin
+g
+
+ironment
+Env
+
+Child
+y
+
+mu
+
+n it
+
+y
+
+e
+m
+
+nt
+
+Com
+xiv
+
+l
+i
+Fa m
+
+n
+r
+e
+G ov
+
+Part 1:
+
+Early Learning and Child Development
+Learning begins well before birth with the development of sensory and brain mechanisms
+of the fetus in the womb. This can be attributed to the development of brain cells, called
+neurons, in the fetal brain. These neurons begin to form connections with each other
+prenatally and continue to do so throughout life. During the first few years of life, this
+development takes place at an extraordinary rate. As children grow older, this rate slows
+down. The connections that are not repeatedly used are removed, enabling remaining
+connections to become stronger and more influential. These connections are strengthened
+depending on the quality of environment and availability of appropriate experiences at the
+right stages of development during the early years.
+
+Importance of Early Years
+Children are born ready to learn. The science behind brain development emphasizes that
+the early years are a time of immense growth and development for children with regards
+to physical, cognitive, socio-emotional, language, and executive function abilities. The
+brain is particularly receptive and responsive to experiences and environments during
+the early years. Early experiences shape brain development, which strongly influences
+learning, behaviour, and health throughout life. The influence of early experiences on brain
+architecture —how it matures and functions—makes the early years a period of both great
+opportunity and great risk for child development.
+
+Quality Early Experiences and Child Development
+The timing and quality of experiences are critical for early childhood development. Children
+learn more quickly during their early years than at any other time in life. If the quality of
+encouragement, support, and care is deficient during these years, child development is
+seriously affected. It is the quality of a child's relationships, environment, and experiences
+during the early years that influences and shapes brain development. Experiences in early
+years strongly influence the achievement of socio-economic success and better health
+outcomes, and impact the ability to contribute constructively to the community in later life.
+Early childhood development encompasses learning and development in a number of
+developmental areas or domains—physical, socio-emotional, cognitive, and language and
+communication. Quality early learning opportunities across all these developmental domains
+help to build a strong foundation for future learning and development. Positive relations with
+children, opportunities and resources for play and exploration, challenging their cognitive
+skills, and extending their learning using scaffolding are known to support early learning.
+This necessitates early learning programs that provide children with meaningful learning
+opportunities to develop skills, sense of self, and a foundation for learning throughout life.
+
+1
+
+Equally important is that those who provide early learning opportunities consistently provide
+nurturing and respectful interactions with children in their care.
+
+Why Do We Need a Framework?
+Early learning frameworks provide overarching and guiding principles for early learning of
+children across all learning environments. Early learning frameworks support the development
+of effective education programming and quality early learning programs.
+Implementation of an early learning framework is expected to encourage and promote:
+• Consistency in goals for early childhood learning;
+• Quality and inclusive early learning for children;
+• Increased understanding of the importance of early learning experiences for children; and
+• Communication, collaboration, and partnership, where appropriate, between early learning
+practitioners and other adults in the community of care of children.
+Most jurisdictions in Canada and internationally are in various phases of development of
+early childhood learning frameworks. The Council of Ministers of Education in Canada (CMEC)
+has developed an Early Learning and Development Framework. This CMEC document, which
+builds on provincial and territorial objectives and pan-Canadian approach to early learning and
+development, has guided the development of this provincial framework.
+
+School Readiness and Transition to School
+Developing school readiness begins at birth and continues with the support of responsive
+parents and caregivers, early learning practitioners, and other adults in the children’s community
+of care. It is about achieving social-emotional, intellectual, language and communication, early
+literacy and numeracy, self-regulation, and physical development skills. These skills are essential
+for success in school and later life. Quality early learning experiences and environments and
+healthy relationships with adults establish the building blocks for these skills. Exposure to
+quality early learning programs during the years before school entry has positive effects on
+children’s school readiness.
+School readiness not only means ‘children ready for school’, but also refers to ‘readiness of
+families and schools’ to provide resources and support to children for successful transitions.
+Prior to school, the family is the most important context for early childhood development where
+parents and caregivers are a child’s first teachers. As such, it is important that early learning
+practitioners model best practices and collaborate with them, where appropriate, to provide
+quality learning experiences and environments for children.
+Transition to school is a process that begins well before the first day of school and continues
+far beyond. Children develop at a pace that is unique to them. Depending on how quickly
+children attain school readiness skills, they are ready to make a smooth transition to school.
+A successful start to school is linked to future positive academic and social school outcomes.
+
+2
+
+3
+
+Part 2:
+Introduction
+
+The Department of Education and Early Childhood Development has developed the Early
+Childhood Learning Framework to support early learning practitioners in regulated child care
+(child care centres and family child care homes) and other early learning settings, such as
+family resource centres, early literacy programs, public libraries, and schools, that care for
+children aged birth to eight years old. While this guide is primarily intended to support early
+learning practitioners in their practice with children, it is also a valuable resource for use by
+other adults in children's community of care. These adults include, but are not limited to,
+parents and caregivers, grandparents, other family members, and community members. The
+framework is designed to be applied in different ways depending on the circumstances of
+individual children, families, and communities.
+The provincial Early Childhood Learning Framework is intended for all children living in
+Newfoundland and Labrador and their families. The framework provides the overarching
+principles and goals written in a way that considers all children, regardless of gender, ability,
+language, family circumstances, and cultural identity. There is recognition that specific minority
+communities may wish to use this framework as a starting point for discussion to further
+develop their own culturally specific companion guide. The goal is to ensure that children living
+in Newfoundland and Labrador are provided with an optimal early learning environment to build
+a strong foundation for growth, development, and well-being.
+Children have unique perspectives, strengths, and needs. It is through consistent, responsive,
+and meaningful relationships and healthy learning environments that children reach their
+full potential. As a member of a child’s community of care, it is essential that early learning
+practitioners nurture and respect a child’s uniqueness. All children should know they are special
+and worthy of love and attention.
+
+Every system that touches the lives of children offers an opportunity to
+strengthen the foundations and capacities that make lifelong healthy
+development possible.
+(Centre on the Developing Child at Harvard University, 2012)
+
+This framework is grounded in research and evidence-based practice, acknowledging that early
+childhood is a time of rapid growth and development and the experiences during the early years
+lay the foundation for lifelong learning. Development of the Early Childhood Learning Framework
+was led by the Department of Education and Early Childhood Development in partnership with
+the Department of Children, Seniors and Social Development, the Department of Health and
+Community Services, the Office of Labrador Affairs, the Intergovernmental and Indigenous
+Affairs Secretariat, and the Department of Advanced Education, Skills and Labour. In addition,
+
+4
+
+consultations were conducted with many early learning partners, families, and educators in
+the field of early learning.
+Several early learning frameworks influenced the development of this document, including:
+•
+•
+•
+•
+
+•
+•
+
+the Province of British Columbia’s Early Learning Framework (Ministry of Education, 2008);
+the Province of Ontario’s Early Learning Framework (Ministry of Education, 2014);
+the Province of New Brunswick’s Curriculum Framework for Early Learning and Child Care
+(Department of Education and Early Childhood Development, 2008);
+the Province of Prince Edward Island’s Relationships, Environments, Experiences: The
+Curriculum Framework of the Preschool Excellence Initiative (Department of Education
+and Early Childhood Development, 2011);
+New Zealand’s Te Whariki (Ministry of Education, 1996); and
+Ireland’s Aistear (National Council for Curriculum and Assessment, 2009).
+
+For further information on early learning in Newfoundland and Labrador, please visit http://
+www.ed.gov.nl.ca/edu/earlychildhood/index.html.
+
+5
+
+Vision
+The vision of this framework is that children living in this province are respected, valued, nurtured,
+and supported to grow, learn, and develop. Their health and happiness are fostered, and they live
+in a safe, caring, and inclusive community that supports positive contributions to society. This
+vision is supported by a system of early childhood learning in which all children from birth to age
+eight and their families have access to an integrated continuum of early learning opportunities.
+
+Purpose
+The Early Childhood Learning Framework is intended to ensure that early learning environments
+provide quality learning opportunities for children. The framework is also meant to guide and
+reinforce early learning practitioners' daily practice and interactions with children from birth
+to eight years. This document will support these practitioners as they attempt to provide
+optimal early learning opportunities during this critical period of development to meet children’s
+individual needs. The framework can also be used as a resource by other adults in the children's
+community of care. While the intended scope is for children from birth to age eight, the principles
+and goals reflected in the framework are also relevant for older school age children (nine years
+of age and older), particularly those within regulated child care settings.
+The Early Childhood Learning Framework aims to:
+• Encourage consistency and continuity in planning for early learning opportunities with
+children across different settings;
+• Provide a common professional language for those within the early learning community;
+• Highlight positive practices and help early learning practitioners reflect and plan for
+stimulating experiences to support children’s learning and development;
+• Integrate and complement existing early childhood learning documents; and,
+• Identify connections between programs and services for early learning continuity.
+
+Scope
+The Early Childhood Learning Framework caters to learning and development of children in the
+following age groups from birth to eight years:
+• Infant—Birth to 12 months
+• Toddler—12 months to 3 years
+• Pre-school—3 to 5 years
+• School age —5 to 8 years
+This document is designed for use by early learning practitioners in regulated child care
+services (child care centres and family child care homes), family resource centres, early
+literacy programs, public libraries, and schools. It can be used as a guide in day-to-day
+practice with children from birth to eight years of age and to provide continuity and support
+to other adults in children's community of care.
+
+6
+
+During early years of development, there are no specific learning outcomes. However, there
+are developmental outcomes which are attained through experiences with the environment
+and responsive early learning practitioners and other adults in a child's community of care.
+As the ability to focus on specific developmental domains increases with age, children
+transition from developmental outcomes to specific curriculum outcomes.
+The framework recognizes that the early school-age period from age five to eight years
+overlaps both early childhood learning and the public K-12 education system. Through
+the four goals for early learning, this framework outlines developmental outcomes for
+early years. Achievement of these developmental outcomes supports the achievement of
+curriculum outcomes derived from the Essential Graduation Learnings of the K-12 public
+school system. By virtue of alignment between the framework and Essential Graduation
+Learnings, the teachers reflect the principles and goals of the Early Childhood Learning
+Framework in their day-to-day practice through teaching of curriculum.
+
+Essential Graduation Learnings are statements describing the knowledge,
+skills and attitudes expected of all students who graduate high school.
+Through the achievement of curriculum outcomes, students demonstrate the
+Essential Graduation Learnings.
+(Atlantic Provinces Education Foundation, 1997)
+
+Curriculum outcomes statements articulate what students are expected
+to know and be able to do in particular subject areas. These outcomes
+statements also describe the expectations at particular grade levels.
+(Atlantic Provinces Education Foundation, 1997)
+
+7
+
+Part 3:
+
+Principles of Early Childhood Learning from a Child’s Perspective
+The principles of early learning are grounded in evidence-based research on effective ways
+to support children’s learning and development and lay the foundation for the achievement
+of the goals for early childhood learning. The goals for early learning reflect the intended
+outcomes of the framework, such as providing quality early learning experiences to support
+a child’s optimal development. The principles will help to achieve the overall goals by guiding
+the day-to-day practice of early learning practitioners and others in a child’s community
+of care. The principles are written in a child's voice to emphasize the child's perspective.
+The learning principles are organized into three broad categories with each category
+comprised of specific elements.
+
+9
+
+Who We Are
+
+Principle 1: Individuality
+Every child growing up in Newfoundland and Labrador is an
+individual with his or her own unique life experiences that are
+fundamental to their development.
+
+What this means to the child:
+I am growing and developing in my own special way. I have my own personality and temperament.
+I have my own way of learning, strengths, and needs.
+I am an active contributor to my learning and can make choices about how and what I learn
+and how long it will take for me to feel comfortable with new information. Please support me
+by ensuring my environment is appropriate for my developmental level.
+I need you to keep a record of my growth. This will help me feel proud of how much I have
+learned and you can track my development easily and encourage my learning.
+Please guide my learning and development so I can reach my own individual potential. I love to
+learn, so please take care to ensure I am supported to learn wherever I am.
+I learn many things from others, including adults and peers. Please provide me with time to play
+on my own. This will give me time to do things I like to do in my own ways.
+Please make sure you understand and plan learning experiences that are relevant to me, respect
+my individuality and developmental needs.
+As a member of my community of care, please share what you know about me and my learning
+and development with other members. This will help ensure I get the best possible care, and
+learn in the best way I can. Please remember some things are confidential and bear that in
+mind when you share information.
+Remember I am listening to you, so please do not talk about me to others when I am with you.
+
+10
+
+I need time to explore and follow my own interests, and I need someone to share in my
+discoveries and appreciate my uniqueness.
+Give me opportunities to learn on my own and in small and large groups so I can explore,
+learn, and develop in many ways.
+
+11
+
+Principle 2: Diversity
+Early childhood learning is enhanced when diversity
+is recognized and celebrated in children’s learning
+environments. Children living in Newfoundland and Labrador
+are diverse, and these differences contribute to making this
+province rich in compassion, culture, and heritage.
+
+What this means to the child:
+I am part of a family and community that influences my growth and development. Please respect
+my differences and ensure you embrace and celebrate me.
+I am unique. I need your help to develop pride in who I am.
+My individuality, in part, is based on my family history and the experiences, language, and
+customs within my culture.
+It is important that I develop a sense of belonging and that my cultural identity is respected and
+integrated in all my learning environments, especially if I live within a unique minority setting
+within Newfoundland and Labrador.
+Remember to show me how I share many similarities with others in my learning community
+and throughout the world.
+I know that I am different than others in many ways. Help me to feel included in my learning
+environment by providing me with what I need based on my own personal circumstances and
+ensure I am treated fairly.
+Guide me to learn from others’ perspectives, and to respect diversity. Teach me to be open to
+learning from others in my community, and to respect and honour others.
+Understand that I learn best when I am able to see myself in the learning experience and when
+my abilities, interests, individuality, and culture are represented.
+Show me how to stand up for myself and others, to recognize discrimination and to seek out
+fairness and justice. Model acceptance and openness in all aspects of diversity and provide
+a fair and just learning environment for me.
+Listen to me as I communicate what is important to me —my needs, wants, desires, feelings,
+and hopes. Please learn to understand the different ways I communicate and be responsive
+to me, letting me know that I matter.
+
+12
+
+Principle 3: Citizenship
+Children growing up in Newfoundland and Labrador are
+valued members of this province whose opinions and
+perspectives matter. Children are considered active,
+contributing citizens of Newfoundland and Labrador.
+Encouraging mutual respect contributes to the development
+of citizens who respect and care for each other, their
+province, and the world.
+
+What this means to the child:
+Teach me about my rights and responsibilities as a citizen of this province and the world.
+Help me learn to take care of myself and others, and teach me what it means to belong —to
+a group, to my community, and to the larger global society.
+Help me learn about the world I live in so that I can find ways to contribute to it.
+Help me to understand that at any age, my actions and choices impact the province, the country,
+and the world.
+Instill pride in me belonging to this province, this country, and the world, and teach me to
+take responsibility for its care. Help me to learn how to protect the environment and value its
+resources.
+Model characteristics of a responsible citizen and provide me with a stimulating learning
+environment that nurtures respect for all.
+Allow and encourage me to ask questions. Help me grow as a citizen who is open-minded and
+respectful of different opinions and perspectives.
+Encourage me to become an active member in my community. I need to feel that I am contributing
+to my world and that my opinions matter. Help me realize that positive change begins with me.
+
+13
+
+Our Connections
+
+Principle 4: Parents and Caregivers, Family, and Friends
+Parents and caregivers are a child’s first and most influential
+teachers. It is through early experiences with parents and
+caregivers that children learn how to form relationships
+throughout their lives. It is important that early learning
+practitioners support parents and caregivers by maintaining
+communication and partnering with them for learning and
+development of children.
+
+What this means to the child:
+Understand that you as early learning practitioners, along with my parents and caregivers and
+my family, are the most influential people in my life and know me better than anyone else.
+Trust that I am always trying to be the best possible me I can be. Remember that every day is
+an adventure in learning for me.
+Please respect and honour my parents and caregivers and my family, and support them in doing
+the best they can to help me learn, grow, and develop.
+Please give my family opportunities to share information about my learning and development
+and be open to communication with them about me.
+Support my parents and caregivers and family to know what is developmentally appropriate for
+me so that they can provide me with learning opportunities and resources.
+My family and culture are very special to me and I feel cherished when these are recognized in all
+my learning environments. It clearly communicates to me that I am important and that I matter.
+
+14
+
+Principle 5: Community of Care
+Children’s optimal learning and development occurs
+when members in their communities of care are positive,
+responsive, and have a nurturing and consistent presence
+in their lives. It is essential that early learning practitioners
+communicate and collaborate, where appropriate, with each
+other and other adults to develop healthy, respectful, and
+secure relationships with children.
+
+What this means to the child:
+I am watching and trying to follow you as I grow and develop. I need you to model for
+me how to behave and how to appropriately regulate my emotions. You are teaching
+me in every moment of every day; please remember to always show respect, love, and
+compassion.
+It is important that you communicate, collaborate, and build partnerships with each other
+and other adults in my community of care so I can reach my learning potential at every
+stage of my development. Please be willing to learn from each other and prioritize my best
+interests.
+Help me build strong attachments with you, as members of my community of care, by
+responding to my needs and giving me a secure foundation built on love and trust.
+Please give me culturally and developmentally appropriate physical affection and nurturing
+touch throughout my early years.
+Be open to learning new things with me. I love when we can learn together. It is good for
+me to see you make mistakes and learn from them, and then I will feel it is okay to make
+mistakes.
+Support me as I learn how to develop relationships with other children. Encourage us to
+learn from each other and explore together.
+Keep me safe from harm and neglect. Teach me to understand how I should be treated,
+and help me feel comfortable to tell you if I am not getting this care in any of my learning
+environments. If you see that I am not getting the care I need and deserve, it is your
+duty to speak up on my behalf, and if necessary, to inform the authorities so that I am
+comfortable and safe.
+
+15
+
+Principle 6: Growing up in Newfoundland and Labrador
+Newfoundland and Labrador is known for its rich culture
+and heritage and is filled with diverse communities.
+Children growing up in Newfoundland and Labrador
+are active contributors to this province and hold the
+responsibility for its future.
+
+What this means to the child:
+Allow me opportunities to explore my neighbourhood, community, and province so I can
+appreciate and respect everything that my home province has to offer.
+Provide me opportunities to learn about the geography and culture of communities that make
+up Newfoundland and Labrador’s society.
+Know that my experiences growing up in this province will be different depending on my unique
+cultural background and whether I live in an urban or a rural centre.
+Provide me opportunities to connect with my culture through play, music, books, activities, and
+stories. This will also help my peers understand my background and culture.
+I need your help to preserve and promote my heritage. Provide me with positive messages
+about my culture, beliefs, and languages so that I develop pride in who I am.
+Through your interactions with me and my family, show that you respect my cultural background,
+heritage, and values.
+Understand that I can learn a lot from different cultures and life experiences, but I would like
+to keep my individual identity and hang on to what makes me unique.
+Encourage me to use my own language and dialect in all learning environments, and to become
+familiar with other languages. Support me as I share my cultural traditions with others and
+learn about cultures different from my own.
+
+16
+
+How We Learn
+
+Principle 7: Learning Environments
+The learning environment means the physical space
+and materials, instructional practices, daily routines,
+expectations, and the inter-relationships between
+children, adults, and all of these elements. Children's
+learning environments influence what they learn,
+how they learn, who they learn from, and when they
+learn. Children should feel safe and comfortable to
+explore and discover in their environments. Learning
+environments should foster a sense of belonging in
+children, allowing them to feel free to choose from a
+variety of learning opportunities which interest them.
+
+What this means to the child:
+I am naturally curious and interested in learning all that I can. Please get to know and
+understand how I learn best in my different learning environments and share this information
+with each other.
+I learn best when my environment builds on my current knowledge and skills and motivates
+me to explore and discover.
+Please ensure that my learning environment is safe, organized, and developmentally
+appropriate and that culturally adapted materials are readily available to me. Often, my
+curiosity leads to learning, so please ensure the materials that I can access are open-ended,
+stimulating, and challenging for me.
+Organize my environment so I can make choices. This gives me a great sense of empowerment
+and a better sense of control in my world.
+Make sure I feel my environment is readily accessible. Have child-sized tables and chairs,
+shelves, and developmentally appropriate learning materials for me. Also, remember to
+come down to my eye level when you are talking to me, as I am more likely to listen that way.
+
+17
+
+Make sure my learning environment reflects my individuality, family, culture, language, and
+community. For me to feel I belong, I need to see myself in my environments. My learning
+experiences and environments must be genuine and meaningful to me, or I won’t be interested
+in learning.
+Please remember I need consistent routines that make me feel calm knowing I can predict what
+will happen next. This will reduce the stress I might feel during transition times. Model flexibility,
+within consistent routines, and be prepared to follow my lead. I love it when I am offered
+different choices. These are opportunities for me to express my creativity and individuality.
+Take advantage of teachable moments that might occur; sometimes natural, unplanned learning
+events are the most meaningful. These can be easily transferred to other areas of learning.
+When planning my environment, ensure there are multiple ways for me to learn. Remember that
+I learn by using all of my senses and by using skills in all my areas of development. Arrange
+my spaces so that there are quiet areas where I can reflect and areas where I can have the
+freedom to be active.
+Take me outside regularly during every season. I learn so much about my world by going
+outdoors. Newfoundland and Labrador has so much natural beauty, and it is important I learn
+to appreciate it. I learn so many concepts outside such as temperature, changing seasons,
+and weather. I have more opportunities to develop my physical skills through activities such as
+running longer distances, climbing steep hills, making mud pies, and building snow structures.
+Bring the outside in and ensure my learning environments are filled with nature. Water, plants,
+rocks, sand, shells, wood, insects, and other natural elements teach me about my world.
+
+18
+
+Principle 8: Play and Inquiry Based Learning
+In a quality learning environment, children learn through
+play and exploration. These play and inquiry based learning
+experiences promote holistic development of a child’s
+physical, social, emotional, language, cognitive, and selfhelp skills. It is during imaginative and creative play that
+children learn self-regulation, and how to manage their
+feelings in appropriate ways.
+
+What this means to the child:
+As a member of my community of care it is important you make play a priority.
+When I play, I learn how my world works.
+Understand that I learn through exploring my world using my mind, my body, and all my
+senses. I thrive when I have the opportunity to be actively involved in my learning.
+Provide me with daily opportunities for indoor and outdoor play. I especially love having the
+freedom to play outdoors and to explore nature at my own pace.
+Provide me with daily opportunities for active play such as running, jumping, skipping, and
+hopping to strengthen and excercise my body. I like the sense of freedom.
+Ensure I am given plenty of time to play and be creative. Allow opportunities for me to
+play and explore on my own, and to play in small and large groups. When playing with my
+friends I learn how to share and cooperate, develop empathy for the feelings of others,
+and understand how I can impact others by my actions. It is through playing that I learn
+how to effectively identify problems to solve and find creative solutions.
+When setting up my indoor and outdoor play spaces, please make sure I am able to take
+part in different types of play and give me developmentally appropriate play choices and
+materials. Remember to balance my time with free play and structured play opportunities.
+
+19
+
+Know my abilities and set my play space up for success, where I can work on the next phase
+of my development doing hands-on activities. Let me try to achieve new skills on my own and
+develop independence. I feel great when I am successful!
+Please help me recognize when I need time to be solitary.
+Play with me whenever you can. I love it when we have fun and laugh together. I especially
+love it when you come down to my eye level and follow my interests. This shows me that I am
+important to you and you get a chance to see my interests, abilities, and needs in a more
+tangible way.
+When I am playing, please observe me and find ways to support me, as needed, to ensure I
+get the most out of my play experiences.
+
+20
+
+Principle 9: Effective Communication
+Learning occurs through effective communication. Children
+must be able to understand what is being communicated
+and have their communication understood by others if they
+are to experience optimal learning and development.
+
+What this means to the child:
+Talk to me often and in a calm, respectful, and gentle way. Even if I cannot speak, I learn so
+much by listening to your words and watching your body language. Give me time to process
+information as I am young and it might take me longer to understand.
+Remember to allow opportunities for me to share my experiences with you and my friends.
+Understand that I communicate in many different ways, not just by using my words. I can
+communicate through gestures, body language, facial expressions, sounds (e.g., crying,
+laughter, and squealing), drama, drawing, Braille, sign language, pictures, and other assistive
+technology.
+Give me many tools to express myself through drama, art, music, constructive play, and
+movement and dance. As I develop, reading and writing will also help me communicate.
+Ensure that I regularly participate in activities such as storytelling, playing with rhymes, and
+hearing and singing songs. These types of activities will help develop my communication
+skills.
+Expose me to the environmental print in my learning environments. These include signs,
+symbols, letters, and numbers that I can recognize and interpret.
+If I am showing signs of difficulty with communicating, remember to seek out additional
+support if needed, as early as possible.
+Encourage me to communicate using my own language in all of my learning environments
+and to be open to learning other languages.
+
+21
+
+Legend
+Well-Being and Belonging
+Communication
+Play and Exploration
+Social Contribution
+
+22
+
+Part 4:
+
+Goals for Early Childhood Learning
+Newfoundland and Labrador’s Early Childhood Learning Framework outlines the goals for
+early learning, providing a guide for early learning practitioners within regulated child care
+(child care centres and family child care homes), family resource centres, early literacy
+programs, public libraries, and schools in supporting children from birth to eight years to
+reach their learning potential.
+These goals for early learning are:
+1. Well-Being and Belonging;
+2. Communication;
+3. Play and Exploration; and
+4. Social Contribution.
+Like the Fisher's Knot, these learning goals are intertwined, strengthening each other and
+laying the groundwork for optimal learning experiences. Often, positive learning outcomes
+in one goal will support learning within another goal.
+Learning is often viewed as academic or cognitive ability, and while academic ability
+is important, it is only one area of child development. It is also essential that children
+develop their social, emotional, physical, and communication skills for optimal growth and
+development to occur. The four interconnected goals for early learning focus on the whole
+child and promote children’s development across all domain areas. For further information
+on each of these specific domain areas, see the glossary of early learning terms in Part 6.
+
+"Education is a human right with immense power to transform. On its
+foundation rest the cornerstones of freedom, democracy and sustainable
+human development."
+(Annan, 1999 as cited in Bellamy, 1999)
+
+Children learn best when they have a variety of learning experiences that they can see,
+hear, talk about, explore, and try out. Children grow, develop, learn, and reach their potential
+at their own rates. It is important to be aware of this and have realistic expectations for
+children’s development.
+The goals in this section will be defined more specifically for regulated child care and
+other early learning environments in the Reflections companion guides of this framework.
+
+23
+
+Early Childhood Learning Framework Structure
+
+24
+
+1. Well-Being and Belonging
+THE GOAL:
+
+Children experience learning environments that promote a sense of well-being
+and belonging.
+
+“A true measure of a nation’s standing is how well it attends to its children – their
+health and safety, their material security, their education and socialization, and
+their sense of being loved, valued, and included into their families and societies
+into which they are born.”
+(UNICEF, 2007)
+The well-being of children refers to their physical and emotional health. Belonging is a socio-emotional
+aspect of well-being. Emotional well-being influences the way children interact, form relationships,
+feel involved, and develop their own identities. If they feel that they belong, are supported and valued,
+their overall well-being will be fostered.
+Children need healthy, stable environments that provide love, warmth, and security with responsive
+relationships beginning at home. Early learning practitioners should provide children with resources
+for positive learning and opportunities to connect with parents and caregivers. This concept of wellbeing is embedded within the whole child experience, and how a child learns and develops is linked
+to their formative experiences throughout childhood.
+The goal consists of three categories:
+
+25
+
+1.1 Physical Well-Being
+Physical health is an essential aspect of early childhood development. It is not merely an
+absence of illness or disease. Since physical and cognitive development are interlinked, it
+becomes even more important to guide children in developing an understanding of physical
+fitness, proper nutrition, good sleep, healthy eating habits, and an active lifestyle. Physical
+literacy is the key to ensuring physical well-being.
+Following an active lifestyle is associated with better:
+• body composition;
+• physical strength and stamina;
+• academic achievement and cognition;
+• social and emotional health;
+• rate of metabolism; and
+• overall quality of life.
+Through the following four interconnected and essential elements, physical literacy helps
+individuals to adopt physical activity as an integral part of one’s lifestyle:
+• Motivation and confidence (Affective) – Physical literacy fosters enjoyment of and enthusiasm
+for physical activities in individuals.
+• Physical competence (Physical) – Physical literacy kindles the ability to participate in a wide
+range of physical activities in settings which require a variety of movement intensities and
+duration.
+• Knowledge and understanding (Cognitive) – Physical literacy develops and promotes an
+understanding of the health benefits of an active lifestyle. It also fosters an appreciation
+of safety features associated with physical activity in a variety of settings and physical
+environments.
+• Engagement in physical activities (Behavioural) – Physical literacy motivates individuals to
+freely choose to be active on a regular basis, and to prioritize and sustain involvement in
+a range of meaningful and personally challenging activities.
+
+26
+
+Physical well-being is fostered when early learning practitioners promote physical literacy
+in children by:
+• providing for and helping them to understand how to be physically healthy through
+a balance of:
+		
+- proper nutrition;
+		
+- sleep;
+		
+- activity and movement; and
+		
+- self-care routines.
+• supporting them to become aware of their own bodies and how to respond to
+physical signals;
+• modelling and promoting physical safety;
+• motivating them to adopt an active lifestyle by limiting sedentary behaviours;
+• providing them a wide range of physical activities in a variety of environments for
+fine and gross motor development;
+• providing them opportunities for moderate to vigorous intensities of physical activities;
+• providing them with materials and opportunities for involvement in physical activities
+for various durations;
+• providing them opportunities for development of fundamental movement skills such
+as jumping, running, catching, hopping, and climbing; and,
+• communicating, collaborating, and partnering, where appropriate, with each other
+and other adults in the children's community of care for ensuring physical wellbeing of children.
+
+“Physical literacy is the motivation, confidence, physical competence, knowledge, and
+understanding to value and take responsibility for engagement in physical activities for life."
+(International Physical Literacy Association, 2014)
+
+27
+
+1.2 Emotional Well-Being
+Providing children opportunities for mental and emotional well-being helps them understand the
+value of their emotions. When children are respected for their individuality, they gain a better
+sense of self-esteem.
+Children with exceptional emotional well-being are able to:
+• participate in physical and social environments;
+• interact with others and form healthy and secure relationships;
+• experience, understand, express, and regulate emotions; and
+• understand and regulate behaviour.
+
+Emotional well-being is fostered when early learning practitioners provide a learning
+environment that communicates that children are:
+• loved;
+• valued for their individuality;
+• respected;
+• capable;
+• confident in their abilities;
+• secure in their safety and well-being;
+• knowledgeable of consistent routines within each learning environment;
+• connected to consistent, responsive, and compassionate caregivers;
+• safe to take age-appropriate risks and try new things;
+• free to express their thoughts, opinions, and emotions;
+• acknowledged in their feelings, wants, desires, and preferences in a respectful
+manner;
+• important and that they belong;
+• aware of their own and others’ emotions;
+• capable of accepting change during transition;
+• encouraged to build positive relationships with peers and other adults in their
+community of care; and
+• encouraged to be optimistic about themselves and their life circumstances.
+
+Promoting positive emotional well-being in children means fostering behavioural, emotional
+and social skills, and coping strategies that they need to cope with normal streses of life.
+To enable children to realize their abililtes and make contributions to their community, it is
+important to foster resilience in them.
+
+28
+
+Resilience
+
+“Resilience is similar to buoyancy. When pushed under water, our bodies instinctively rise
+back up to the surface. It’s what we want our children to be able to do: when pushed
+under, rise to the top again.”
+(Ginsburg and Jablow, 2006)
+
+Resilience is often used as an indicator of children’s emotional well-being. Resilience can
+be described in terms of one’s ability to recover from hardship or change. It is the abililty
+to cope with and adapt to new life situations. It is through resilience that children learn
+to ‘go with the flow’ and adapt. It is very important to foster resilience in children as life
+is unpredictable, and children will encounter situations that cause stress. It is through
+these encounters that children develop effective problem solving skills. Having a sense of
+resilience and positive well-being enables children to approach people and situations with
+confidence and optimism. Early learning practitioners must help children learn to navigate
+stressful experiences. It is also essential that early learning practitioners communicate,
+collaborate, and partner, where appropriate, with each other and other adults in children's
+community of care to develop and promote resilience.
+Two factors that strengthen children’s resilience are:
+•
+•
+
+Attachment; and
+Self-Regulation.
+
+Attachment and self-regulation emerge during the early years and develop gradually until
+children are much older. It is important to hold developmentally appropriate expectations
+for children within their own societal and cultural contexts.
+Attachment
+Attachment is defined as a connection between a young child and their parents or other
+primary caregivers, including early learning practitioners. It is an emotional bond that fosters
+a sense of trust. It is important to note that attachment and emotional connection with all
+of a child’s caregivers are important during the early years.
+When children have formed strong, healthy attachments with responsive, caring early
+learning practitioners and other adults who are consistently available, they are developing
+a template for the quality of future relationships. These early bonds that are formed will
+help children learn how to build positive relationships with others, which in turn helps them
+to create a strong and supportive social network, creating healthy emotional well-being.
+
+29
+
+Early learning practitioners can foster secure attachment by being:
+• in tune with and responsive to children’s wants, needs, and desires;
+• available physically and emotionally; being present and using developmentally appropriate
+nurturing touch;
+• sensitive to the child’s temperament and personality;
+• warm and compassionate, using a soothing voice and eye contact when possible;
+• reliable in their responses; and
+• a lead for continuous communication, collaboration, and partnership, where appropriate, with
+each other and other adults in children's communities of care to foster attachment with children.
+Self-regulation
+
+Self-regulation is defined by Shanker (2012) as the ability to:
+• attain, maintain, and change one’s level of energy to match the demands of a task or
+situation
+• monitor, evaluate, and modify one’s emotions
+• sustain and shift one’s attention when necessary and ignore distractions
+• understand both the meaning of a variety of social interactions and how to engage in
+them in a sustained way
+• connect with and care about what others are thinking and feeling—to empathize and
+act accordingly
+
+Self-regulation begins to develop in infancy and throughout the early years. It flows through a child’s
+cognitive, communication, social and emotional, and physical developmental areas. There are links
+between all of these areas which contribute to a child’s overall ability to be calm and focused.
+To enhance self-regulation development, children should be in environments where early learning
+practitioners consistently:
+• support children when they are frustrated and teach them how to deal with stress through
+appropriate modeling, and giving cues and hints;
+• look for the reasons for challenging behaviour, to help children feel understood, and help early
+learning practitioners convey empathy when they have a better understanding of why the behaviour
+is happening;
+• model appropriate emotional responses and let children see expression of various emotions;
+• provide options and choice in learning environments that have age-appropriate limits;
+• have clear expectations for children and ensure these are communicated effectively;
+• give children reminders about upcoming events and advance warning, if possible, of schedule
+changes;
+
+30
+
+• attempt to predict and anticipate behavioural concerns before they occur;
+• reinforce cooperation;
+• monitor children’s activities and set them up for success;
+• provide opportunities for children to ‘let off steam’ in socially acceptable ways;
+• provide a balance of rights and responsibilities; and
+• communicate, collaborate, and partner, where appropriate, with each other and other
+adults in children's community of care to foster self-regulation in children.
+
+31
+
+1.3 Belonging
+Children living in Newfoundland and Labrador are from diverse backgrounds and cultures, yet
+they may share similar experiences, stories, and sense of places.
+A sense of belonging is fostered when children feel they are loved, valued, and included both
+within their own family unit and in society as a whole. Children feel they belong when they are
+accepted and understood in the contexts of their cultures. Children experience belonging when
+they are free to express themselves in ways that are meaningful to them.
+
+Belonging is fostered when early learning practitioners provide children a learning environment
+that enables them to:
+•
+•
+•
+•
+
+develop an awareness of family and community, and feel they have a place within these;
+embrace differences, promote equality, recognize similarities, and celebrate diversity;
+develop their own identities; and
+have an understanding of who they are as unique individuals and an awareness of their
+strengths and abilities.
+
+It is essential that children feel they are valued, accepted as they are, and have a sense of
+belonging at home, in their community, and within society. This will foster children's confidence
+to develop their identities, feel safe in expressing who they are, and reach their learning
+potential. It is through responsive, supportive, and respectful relationships that children thrive
+and develop positive self-identities. Children begin to develop their identities from the moment
+they are born. Their life experiences and the messages they receive create the foundation of
+learning throughout their lives.
+It is important that early learning practitioners communicate, collaborate, and partner, where
+appropriate, with each other and other adults in the children's community of care to develop
+a sense of belonging in children.
+
+"What is learned in those first years, and the contexts in which it is learned, is decisive not only for
+the child's individual development and success, but also for the vitality of the community."
+(New Brunswick. Department of Education and Early Childhood Development, 2014)
+
+32
+
+2. Communication
+THE GOAL:
+
+Children experience learning environments that provide a variety of
+opportunities and tools for them to develop the ability to communicate
+effectively.
+
+Effective communication is crucial to learning and development. Communication is more than
+verbal language; there are many forms of language and expression. To connect with others,
+children can use non-verbal language (e.g., gestures, body language, and facial expressions),
+sounds (e.g., crying, laughter, and squealing), Braille, sign language, pictures, and other
+assistive technology.
+Responsive adults can often determine exactly how a child feels about a situation without a
+spoken word. Children communicate from birth, and responsive early learning practitioners and
+other adults very quickly learn to meet a child’s wants and needs as they express themselves
+through a variety of sounds and actions.
+Children can use many tools to express themselves (e.g., drama, art, music, construction,
+movement, and dance). Early literacy activities such as listening to and telling stories, playing
+with rhymes, and hearing and singing songs foster communicative abilities and improve
+communication. As children grow, reading and writing enhance these abilities.
+The learning goal for communication is broken down into the following categories:
+
+33
+
+2.1 Language Development
+According to psychologist Lev Vygotsky, social interaction is the foundation of all language.
+Communication is an inherently social exchange of information and it is through relationships
+that language develops.
+Language development takes place when responsive adults foster children's receptive,
+expressive, pragmatic, and early literacy and numeracy skills.
+Receptive language refers to the ability to understand what is being communicated.
+Receptive language involves understanding spoken words, sign language, the meaning
+of symbols, and written language. Understanding what is being communicated plays an
+important role in language development, which in turn influences literacy skill development,
+understanding directions, and social relationship development. Receptive language develops
+before children can talk, and they will usually understand simple requests well before
+they say their first word. Typically, there are more words that are understood than used
+expressively.
+Expressive language refers to the ability to use speech, gestures, body language, symbolic
+pictures, written words, and facial expressions to communicate meaning. This is related to
+the skill of expressing thoughts, needs, desires, and emotions clearly to others.
+Early Literacy begins at birth and quickly expands within the first six years. It includes the
+knowledge necessary to communicate, read, write, think, explore, and solve problems.
+Children acquire literacy through language development and everyday experiences within
+regulated child care, families, communities, and other early learning settings that are
+social, interactive, and meaningful. Talking, singing, reading, and playing with children are
+important early literacy activities that also build attachment. Early Literacy is fostered in
+settings that are sensitive to children’s development, language, and culture.
+The six skills of early literacy include:
+•
+•
+•
+•
+•
+•
+
+vocabulary (I know a lot of words);
+print motivation (I love books);
+print awareness (I understand that words have meaning);
+narrative skills (I tell stories);
+letter knowledge (I recognize letters); and
+phonological awareness (I understand that words that are spoken, signed, or heard
+can be broken into smaller parts).
+
+For further information on Early Literacy, please visit www.gov.nl.ca/edu/earlychildhood/parent.html
+
+34
+
+Early Numeracy refers to basic number concepts and math skills that children develop during
+early years. These skills include noticing patterns, sorting, grouping, seriation, understanding
+numbers, counting, adding, subtracting, and measuring etc. During early childhood, numeracy
+develops when children hear the language of mathematics in play, such as by singing number
+rhymes (Five little monkeys…), fitting ‘smaller’ cups inside ‘bigger’ cups, learning that some
+things are the ‘same’, while others are ‘different’, and experiencing going ‘faster’ or ‘slower’.
+As they grow, their knowledge of math concepts and acquisition of numeracy skills broadens
+with increased interactions within a mathematically rich play environment.
+Responsive adults help children acquire these skills through everyday play and activities,
+such as counting fingers, toes, and toys etc. They enable children to understand the value of
+numeracy as a means of communication in everyday life. They foster strong numeracy skills
+so children can interpret quantitative information to make informed decisions throughout their
+lives. Early numeracy skills are often predictive of children’s future school achievement and
+success in life.
+Pragmatic language is another term for social language. Pragmatic skills help to determine if
+what we say, how we say it, and how we use our body language are appropriate in different social
+situations. Pragmatic language includes how communication is interpreted, which influences
+how to appropriately respond. Some examples of pragmatic language are turn-taking during
+conversations, using humour appropriately, seeking clarifications, using acceptable methods
+for getting attention, and maintaining appropriate eye contact. Pragmatic skill development
+begins when children are very young and begin to model the adults in their circle of care. This
+skill is not fully developed until children are much older.
+
+Language development is fostered when early learning practitioners provide a learning
+environment that consistently:
+• sparks curiosity about language (e.g., varied sounds, stories, rhymes, and words
+—spoken, written, and signed);
+• supports and encourages communication in general (e.g., using alternative forms
+of communication as an inclusive practice for children who require it);
+• uses rich, developmentally appropriate literacy tools that are readily available
+(e.g., books, magazines, musical instruments, songs, poems, and rhymes);
+• encourages open, shared communication with responsive members of community
+of care who regularly listen and interpret children’s expressive and receptive
+language;
+• encourages the use of appropriate expressive, receptive, and pragmatic language
+for both community of care and children;
+• encourages different forms of expression;
+• motivates children to engage in social communication on a regular basis;
+• helps children feel safe to share their discoveries, feelings, and desires; and
+• integrates, uses, and encourages mathematical language in activities and play.
+
+35
+
+2.2 Creative Expression
+Imagination and creativity are essential elements in children’s language acquisition. When children
+are learning language, they will often engage in creative play and come up with their own variations
+of sound, word, and sentence combinations. This expression of creativity is actually a very important
+aspect of language development, and should be nurtured and encouraged. Children will use many
+creative tools to express themselves and will find many ways to communicate their ideas if given
+the opportunity. Children will create their reality through their own interpretation of language and
+communication experiences.
+As children develop, imagination plays an important role in language development. Children will often
+express their emotions and attempt to make sense of their world through imaginary play, both alone
+and with others. Singing songs, creating arts and crafts, drawing, playing music, and dancing are
+all ways children can express themselves.
+
+“I saw the angel in the marble, and I carved until I set him free.”
+(Michelangelo, n.d.)
+
+36
+
+Creative expression is fostered when early learning practitioners provide a learning
+environment that develops creative expression. Early learning practitioners should
+consistently:
+• sing songs and rhymes;
+• encourage children to play with sounds and words;
+• demonstrate musical expression, and have various forms of music available
+(e.g., include a variety of musical instruments available including standard and
+homemade or natural);
+• tell stories, read books, and allow children the freedom to use their imaginations
+(e.g., expanding on the story, asking questions, and commenting while interacting
+with the literacy material);
+• have various art materials readily available (e.g., paints, modelling clay, many
+types and sizes of paper and writing utensils—including paint brushes, crayons,
+markers, and pens—and also nature’s own ‘art items’ such as leaves, pebbles,
+shells, twigs, and sand);
+• model creative expression (e.g., dance, create, wonder, act, invent, and construct);
+• join in children’s imaginary play (e.g., for fun and/or to extend the depth or breadth
+of the play scenario or experience);
+• interact and have playful creative experiences with children both indoors and
+outdoors;
+• appreciate the sounds, rhythms, and beauty of nature as a language and creative
+platform in and of itself; and
+• communicate, collaborate, and partner, where appropriate, with each other and
+other adults in children's community of care to develop and promote creative
+expression.
+
+37
+
+2.3 Cultural Connection
+Communication is a method of exploring and developing personal and cultural identities. Children use
+their own languages and dialects as a method of communicating who they are and that they belong
+within their own cultures. Children will be open to the symbols and stories of their own cultures and
+others when exposed to them from a very early age.
+It is also important that early learning practitioners communicate, collaborate, and partner, where
+appropriate, with each other and other adults in children's community of care to develop cultural
+connection in children.
+
+Cultural connection is fostered when early learning practitioners help children enhance
+their cultural connections through communication and provide learning environments that
+consistently:
+• feature daily stories, songs, rhymes, and rhythms that are part of the children’s cultures
+and histories;
+• ensure cultural representation (including First Nations, English, French, and others) can
+be found in books, symbols, dramatic play items, physical activity, and art materials
+available to the children;
+• ensure children are given the opportunity to express themselves in culturally significant
+ways;
+• respect and engage in the traditions and social rules specific to children’s cultures; and
+• promote respect and support for cultural diversity through conversations, activities,
+and other interactions.
+
+38
+
+3. Play and Exploration
+THE GOAL:
+
+Children experience learning environments that provide rich and varied
+opportunities for them to learn and explore through play.
+
+Learning starts with play. Wondering, exploring, and figuring things out—play has a purpose. It’s
+how children make sense of the world around them and find a place in it. Play is defined as fun,
+open-ended, and spontaneous activity chosen by the player. There are different types of play including outdoor play, exploratory play, pretend play, and creative play. Play is important for a
+child’s social, emotional, language, cognitive, and physical development. Play-based learning
+is an essential part of children’s development and when children are given the opportunity to
+play and explore the world, their love of learning grows.
+Children are naturally curious, and it is through play and exploration that children learn to
+problem-solve, create, imagine, and discover for themselves on their own terms. Play is its
+own reward. Although children learn through play, they don’t necessarily play to learn. They
+play because they want to and because it is interesting, challenging, and fun.
+The learning goal for Play and Exploration includes three sections:
+
+39
+
+3.1 Investigation and Thinking
+Investigating and thinking are at the core of children’s play. Children will naturally investigate
+and explore the world through play. Children interpret their experience—what they see, hear,
+taste, and feel —through exploration and investigation. When children are encouraged and
+allowed to follow their interests, they develop their own ideas about the world around them,
+and then experiment with and refine those ideas. Through playing independently and interacting
+with others, children acquire new knowledge, develop skills in all developmental areas, and
+learn to solve problems. Children develop problem-solving skills while playing, seeking out
+solutions to problems as they occur (e.g., how to adjust a ramp to make a toy car go faster).
+Play is the foundation for children's future learning and development. Through play, children
+rehearse, practice, and consolidate general knowledge and academic concepts. They also
+refine acquired skills and abilities that are emerging.
+
+Investigation and thinking are fostered when early learning practitioners provide children with
+opportunities and an environment that promotes investigation and thinking through play and
+play-based learning. Early learning practitioners should consistently:
+• set children up for success by readily providing materials and information that match their
+developmental levels and allow them to make their own discoveries;
+• challenge them by providing new and thought-provoking items, ideas, and activities
+designed to ignite curiosity and problem-solving;
+• support them as they actively explore these materials and information across a variety
+of learning environments;
+• communicate with them patiently and allow them to communicate or express their
+ideas and experiences in their own ways (e.g., verbally or non-verbally, creatively, and
+imaginatively);
+• encourage them to take appropriate risks and to experiment with ideas and materials;
+• model effective problem-solving skills;
+• respect individual differences (e.g., temperament, modes of expression);
+• provide supportive guidance and scaffolding as needed to promote positive behaviour
+and to facilitate the learning process;
+• provide opportunites for children to experience active play (e.g., running, jumping, and
+skipping);
+• provide opportunities for children to experience concepts such as logic, comparison,
+classification, opposites, matching, shape recognition, measurement, and time;
+• use concrete materials that children can manipulate to learn mathematics and science
+in the early years;
+• provide opportunities for children to develop and experience many forms of communication
+and to interact with peers in a way that is meaningful to them; and
+• communicate, collaborate, and partner, where appropriate, with each other and other
+adults in children's community of care to develop investigation and thinking skills.
+
+40
+
+3.2 Creativity
+Creativity naturally occurs when children are free to play and explore their learning environments.
+Children will express their thoughts, ideas, and feelings through play activities. During creative
+play, children learn about the world in which they live. When children engage in pretend play with
+others, they are developing their language skills, social skills, and an understanding of social
+rules. Children will use their imaginations to explore, discover, and document the world and their
+understanding of it.
+
+Creativity is fostered when early learning practitioners provide children with a learning environment
+that develops and promotes creativity, and where early learning practitioners:
+•
+•
+•
+•
+•
+•
+
+are responsive to the developmental needs of children;
+provide a wide variety of materials for children to use to express themselves;
+have models of various creative techniques;
+provide time, space, and support for a variety of play activities, both indoors and outdoors;
+are supportive and encouraging;
+have developmentally appropriate expectations of children’s behaviours, interests, and needs;
+and
+• communicate, collaborate, and partner, where appropriate, with each other and other adults
+in children's community of care to develop and nurture creativity in children.
+
+For further information on early numeracy, please see www.gov.nl.ca/edu/earlychildhood/parent.
+html
+
+“Given the evidence, CMEC believes in the intrinsic value and importance of play and its relationship
+to learning. Educators should intentionally plan and create challenging, dynamic, play-based learning
+opportunities. Intentional teaching is the opposite of teaching by rote or continuing with traditions
+simply because things have always been done that way. Intentional teaching involves educators being
+deliberate and purposeful in creating play-based learning environments—because when children are
+playing, children are learning.”
+(Council of Ministers of Education in Canada, 2012)
+
+41
+
+3.3 A Positive Attitude Towards Learning
+A positive attitude towards learning will develop when children regularly engage in play and
+exploration. Play helps children develop good interpersonal skills and helps children learn to
+problem-solve, negotiate conflicts, and think for themselves. When children are encouraged
+to play and explore in supportive learning environments, meaningful learning experiences are
+created. When learning has meaning, it is long-lasting. When children are given the freedom to
+discover and learn through play, they develop a love of learning. A love of learning will positively
+impact a child’s future attitude toward learning, as they encounter new experiences throughout
+their lifetime.
+
+A positive attitude towards learning is fostered when early learning practitioners provide children with
+a learning environment that develops positive attitudes towards learning. Early learning practitioners
+should consistently:
+•
+•
+•
+•
+
+structure the learning environment to encourage play;
+introduce new types of play to children when developmentally appropriate;
+learn about children’s play strengths and needs and respond accordingly;
+ensure play materials are suitable for children’s levels of development and that these are
+culturally relevant. This will increase the likelihood that the materials are meaningful for the
+children, and will provoke interest and curiosity;
+• encourage children to take responsibility for their actions and behaviour during play and
+exploration; and
+• communicate, collaborate, and partner, where appropriate, with each other and other adults
+in children's community of care to develop and promote positive attitudes towards learning.
+
+“Play expands intelligence, stimulates the imagination, encourages creative problem solving, and
+helps develop confidence, self esteem, and a positive attitude toward learning.”
+(McCain, Mustard, and Shankar, 2007)
+
+42
+
+4. Social Contribution
+THE GOAL:
+
+Children experience learning environments that help them discover who they are
+and the many ways they can have a positive impact on the world.
+
+Children are contributing members of society who have a right to be considered during decisionmaking regarding matters that concern them directly or indirectly. It is important that they are
+recognized as active citizens of Newfoundland and Labrador. Early learning experiences impact
+lifelong development, and have greater impacts on communities.
+As children develop their identities and personal connections to cultural heritage, as well as a
+knowledge of other cultures, they are learning their place in the world. This knowledge encourages
+acceptance and awareness of international perspectives. Children who experience early learning
+settings that are culturally sensitive and respectful are more likely to understand their own
+communities and be open to developing relationships with people from outside their families
+and cultures. These relationships affirm children’s identities and foster respect for difference.
+There are three components to the Social Contribution learning goal.
+
+43
+
+4.1 Equality
+Equality means recognizing individual needs and ensuring equity and fairness in accessing
+resources and benefits as well as participation in activities. It means equity for all children
+and their families regardless of ability, age, religion, socio-economic status, or ethnic
+background. Consideration of individual circumstances is an important aspect of equality.
+In terms of early childhood learning opportunities, equality of access to opportunities is
+essential.
+Inclusion means truly accepting that we are all members of humanity. It dismisses the
+concept of 'us and them', accepting all races, genders, abilities, religions, and socioeconomic factors. Children who are encouraged to appreciate their own and others’
+identities will experience true inclusion. It is essential that early learning practitioners
+model equality. Children who are taught to accept and celebrate diversity will internalize
+the concept of equality.
+
+Equality is fostered when early learning practitioners promote equality by providing a learning
+environment that consistently:
+• promotes individual strengths and contributions;
+• considers all children as unique, with differing abilities and interests;
+• allows children to have a voice in making the rules and routines in their daily lives;
+• helps children to understand the concept of responsibility for themselves and others;
+• shows them how to stand up for themselves and others appropriately;
+• promotes the concept of fairness;
+• acquaints children with their rights;
+• communicates peaceful ways to negotiate conflict;
+• allows children to make mistakes and learn from these mistakes in supportive ways;
+• allows children to participate at the fullest potential;
+• promotes a positive discussion and understanding of individual, family, linguistic, and
+cultural differences; and
+• minimizes stereotypes.
+
+It is important that early learning practitioners communicate, collaborate, and partner,
+where appropriate, with each other and other adults in children's community of care to
+develop and promote the concept of equality.
+
+“We may have different religions, different languages, different colored skin,but we all belong
+to one human race.”
+(Annan, 1999 as cited in Jones, 1999)
+
+44
+
+4.2 Diversity
+Diversity means accepting and respecting the qualities and characteristics that make people
+different. These might include physical attributes, race, gender, ability, religion, family status,
+sexual identity, sexual orientation, language, and cultural practices. Newfoundland and Labrador
+is becoming increasingly diverse, bringing richness to our communities.
+
+Diversity is fostered when early learning practitioners provide an environment that accepts
+and respects differences. Early learning practitioners should consistently:
+• model respect, acceptance, and openness to difference;
+• integrate diversity into all aspects of children’s learning experiences;
+• be responsive to children’s questions and explain similarity and difference as children
+inquire;
+• celebrate diversity every day in many ways;
+• encourage children to explore the many similarities that we share;
+• explore family, community, and international cultures;
+• make children aware of stereotypes, prejudice, and discrimination and model how to
+appropriately respond; and
+• communicate, collaborate, and partner, where appropriate, with each other and other
+adults in children's community of care to develop and promote the concept of diversity.
+
+45
+
+4.3 Social Responsibility
+Social Responsibility focuses on children's ability to make positive contributions to the
+world. Children will come to recognize the impact of their actions on the world if they have
+a strong sense of belonging to their families, their communities, and the world at large.
+Children should be encouraged to be active, contributing members of the global community.
+Development of this responsibility starts in the early years.
+
+Social responsibility is fostered when early learning practitioners enable children to become
+socially responsible and provide them an environment that consistently:
+• provides opportunities for children to work together in their daily activities;
+• emphasizes children’s responsibility for taking care of themselves, others, and the
+earth;
+• connects them to nature;
+• respects and honours the environment (e.g., practices Reduce, Reuse, and Recycle);
+• involves them in the care of plants and animals; and
+• provides opportunities for inclusion, peer coaching, and peer mentorship.
+
+It is essential that early learning practitioners model social responsibility. They should
+communicate, collaborate, and partner, where appropriate, with each other and other adults
+in children's community of care to develop and promote the concept of social responsibility
+in children.
+
+“We are made wise not by the recollection of our past, but by the responsibility
+for our future.”
+(Shaw, n.d.)
+
+46
+
+Part 5:
+Connections
+
+Children develop in an environment of relationships that begins with family. Their community
+of care involves adults who play important roles in their lives. This can include parents
+and caregivers, grandparents, extended family members, child care providers, early
+learning practitioners, teachers, nurses, social workers, coaches, and neighbours. For
+optimal learning and development of children, it is essential that all members in children’s
+community of care share a common understanding for early childhood learning and work
+closely with each other to support positive transitions for children across settings. Such
+interrelationship is important for all children.
+For holistic child development, it is important that early learning practitioners observe
+and document children's learning and development. Reflective practice provides valuable
+insights to early learning practitioners about their own practice with chidlren. These insights
+help to capitalize on strengths of children and address their needs effectively. Observation
+and documentation equip early learning practitioners with knowledge and information to
+share with parents, caregivers, and other family members about children’s learning and
+development. This is helpful in shared decision-making and supports families in connecting
+with children.
+It is essential that early learning practitioners adopt an inclusive approach to support
+families in accessing quality resources for children. Early learning practitioners need to
+support families by promoting a common understanding of early learning and development,
+developmentally appropriate practices, and healthy learning environments at home. Positive,
+respectful, timely, two-way, and ongoing communication between early learning practitioners
+and families ensures opportunities for collaboration in children’s learning, making transitions
+easier, and meeting children's unique needs.
+It is also important that early learning practitioners collaborate and partner, where
+appropriate, with other professionals and agencies in the community who share responsibility
+for care of children. Some examples include medical or allied health professionals, public
+health nurses, early intervention specialists, family support workers, social workers,
+private practitioners, summer camp counsellors, organized sports/physical literacy
+coaches, early learning researchers and policy makers, and other health, social sciences,
+or education professionals in early learning settings. Such collaboration supports early
+learning practitioners to create a shared understanding and language, strengthening early
+learning programs for children. Collaboration also provides opportunities for professional
+development through formal and informal learning from peers with diverse backgrounds,
+experience, and expertise. Confidentiality regarding sensitive information related to children
+must be maintained while making referrals.
+Strong links with other members of children’s community of care provide early learning
+practitioners with valuable information and resources. By drawing on community knowledge
+and expertise, early learning practitioners are able to better understand the children and
+
+48
+
+families with whom they work. They are able to provide children with learning experiences that
+are meaningful and relevant to their lives. Engaging other adults within wider communities helps
+identify and integrate resources and services from the community to strengthen programs
+and family practices for children's learning and development. Communication, collaboration,
+and partnership between and within early learning services is essential to achieve the best
+outcomes for children and families.
+Communication and collaboration with school personnel, such as teachers, guidance
+counsellors, educational psychologists, and speech language pathologists can be formalized
+through the Individual Education Plan (IEP)/Individual Student Support Plan (ISSP) process.
+This process ensures collaboration among service providers and opportunity for educators to
+plan for meeting children’s needs through their educational programming. The type, nature,
+and extent of such partnership can vary depending on needs of the child, the school, and the
+early learning practitioners. Such collaborations enhance and promote parental involvement,
+emphasize focus on children’s well-being, ensure smooth transition to school, and provide
+integration and continuity of learning environment and experiences to children.
+The framework promotes play-based learning through responsive and reciprocal relationships
+with early learning practitioners and other adults within a child’s community of care. These
+relationships are responsive to the strengths, needs, and preferences of all children and
+support holistic child development. In an inclusive learning environment, play-based activities
+and play-based service delivery support learning and healthy child development.
+
+49
+
+The framework focuses on the child whose needs, strengths, and abilities need to be
+considered when determining play-based activities and service delivery models. Responsive
+teaching by early learning practitioners, along with meaningful and inclusive resources and
+materials, promotes varied learning opportunities for children. Early learning practitioners
+ensure inclusive, safe, and caring environments that are physically structured to promote
+learning. Documentation of children's learning experiences reinforces appropriate early
+intervention should developmental concerns arise.
+To ensure that children receive an integrated continuum of early learning experiences, the
+framework reinforces collaboration, partnership, and communication between early learning
+practitioners, families, and other members in a child's community of care. This is essential
+given that children learn in different ways and have diverse learning and developmental
+needs. It is important that they are provided different levels of support in formative years
+through a range of early learning services that exist within the communities.
+In order to develop congruity with members of children’s community of care, early learning
+practitioners should communicate positively with them to share a common vision for early
+learning across different settings. They should acknowledge and value the ability of peers
+and support each other’s roles in achieving the best possible outcomes for children.
+
+50
+
+51
+
+Part 6:
+
+Glossary of Early Learning Terms
+• Accessible refers to early childhood
+learning opportunities for children
+from birth to school entry. This
+may vary according to specific
+geographical, community, and family
+considerations. A general term used
+to describe something that can be
+easily accessed or used by people
+with disabilities.
+• Active Play is any form of regular
+indoor/outdoor physical activity that
+children do, which includes use of
+fundamental movements skills.
+• Adaptive/Assistive technology is
+a broad term which includes any
+product, device or equipment that
+allows individuals with a disability
+to accomplish tasks or access
+resources while minimizing the
+impact of the disability.
+• Alternative forms: Other ways
+of providing information besides
+traditional print (by a person who
+experiences communication barriers).
+Some examples are Braille, large
+print, audio books, and videos.
+Picture Exchange Communication
+System (PECS) is an alternative
+communication intervention package
+for individuals with autism spectrum
+disorder.
+• Assessment refers to a collection of
+relevant information about the child’s
+developmental level, their abilities,
+and interests that may be gathered to
+help make decisions.
+• Attachment is a connection between
+a young child and their parent or
+other primary caregiver; an emotional
+bond that fosters the development of
+a sense of trust.
+
+52
+
+• Background refers to a child’s
+personal experiences, family history,
+education, and culture.
+• Child care may be regulated or
+unregulated. Child care must be
+regulated if more than four children
+of mixed ages, or more than three
+infants, are being cared for by a
+person who is not a parent or legal
+guardian. Regulated child care
+takes place in child care centres
+or family child care homes that are
+individually licensed or are approved
+under a family child care agency’s
+licence. Child care regulations
+govern the operations of regulated
+child care settings through the
+Department of Education and Early
+Childhood Development Child Care
+Act & Regulations (2017) and related
+standards and policies. Unregulated
+child care is care provided by a
+family member, a neighbour, an
+acquaintance or other child care
+provider.
+• Cognitive domain refers to an area
+of child development often referred
+to as academic or intellectual – to
+understand and apply concepts.
+• Community of care refers to
+early learning practitioners and
+other adults that are unique and
+specific to a child. Other adults
+in the community of care may
+include parents and caregivers,
+grandparents, foster parents, other
+family members, educators, family
+care providers, health professionals,
+and community members. Parents
+and caregivers refer to parents,
+guardians or other adults who are
+responsible for the primary care of
+the child.
+
+• Culture refers to the characteristics of
+groups of people defined by language,
+religion, social practices, music, art,
+dance, and food. Often, group members
+have similar values, shared meaning for
+communication (e.g., slang, rituals, and
+symbols) and have an understanding of
+the social norms and the expectations for
+behaviour.
+• Curriculum refers to resources used in
+educational settings to help learners
+acquire knowledge, skills, and values.
+• Developmentally appropriate practice
+is based on an understanding of child
+development for the purposes of promoting
+young children’s optimal learning and
+development. It focuses on the needs,
+interests, and learning styles of the child;
+and values and builds on children’s prior
+experiences, knowledge, and strengths
+in a holistic approach by focusing on all
+developmental domains.
+• Developmental domains are four main
+areas of child development; Physical,
+Social and emotional, Cognitive, and
+Language.
+• Direct Home Services Program a
+government-funded program that is
+delivered by the Regional Health Authorities.
+It is a voluntary, home-based early
+intervention program that is provided at no
+cost to the family. The program is offered
+to families with infants, toddlers, and
+preschool-aged children who display or are
+at risk for significant developmental delay.
+The goal of the program is to develop and
+implement individualized skill teaching
+and behavioural strategies with the family
+to achieve positive gains in the child’s
+development.
+• Disposition is a person’s mood or general
+attitude defined by the way they view their
+world.
+• Diversity refers to differences in such
+characteristics as physical attributes,
+race, gender, ability, religion, family status,
+
+sexual orientation, language spoken, and
+cultural practices.
+• Documentation is the practice of gathering
+and displaying physical and photographic
+evidence of children’s activities and
+explorations for the purpose of making
+children’s learning visible to the children,
+early childhood educators, teachers,
+parents and caregivers, and other adults.
+Adults use documentation as a basis
+to plan activities based on children’s
+interests, questions, and discoveries.
+• Early childhood development includes all
+domains of early learning and development
+and strongly influences well-being, obesity,
+stunting, mental health, heart disease,
+competence in literacy and numeracy,
+criminality, and economic participation
+throughout life. What happens to the child
+in the early years is critical for the child’s
+developmental trajectory and life course.
+• Early childhood educator (ECE) is often
+regarded as a front line teaching/child
+care position within a child care setting or
+pre-kindergarten program. Also includes
+family child care providers, family resource
+program personnel, resource and referral
+program personnel, and instructors in early
+childhood care and education programs
+in post-secondary institutions. An ECE is
+a graduate from a recognized university or
+college with an early childhood education
+degree, certificate, or diploma focusing on
+child development, program planning, and
+evaluation for children and families ranging
+from infancy up to age 13.
+• Early childhood learning is the learning
+process where a child’s physical, social,
+emotional, cognitive (intellectual), and
+language abilities develop from the
+period of infancy through to primary
+school. Children are born learning, and
+they explore and engage in their learning
+environments from birth.
+• Early intervention is aimed at supporting
+families and promoting children’s optimal
+
+53
+
+development during the critical period
+from birth to age 8. The goal is to
+intervene early in the lives of children
+who are experiencing biological,
+developmental, or environmental
+challenges.
+• Early learning practitioners are those
+that work in a variety of early learning
+settings with young children including,
+regulated child care services (child care
+centres and family child care homes)
+and other early learning settings such
+as family resource centres, early literacy
+programs, public libraries, and schools.
+• Early literacy begins at birth and quickly
+expands within the first six years. It
+includes the knowledge necessary to
+learn to communicate, read, write, think,
+explore, and solve problems. Children
+acquire literacy through oral language
+development and experiences with
+families and communities that are social,
+interactive, and meaningful. Literacy is
+fostered in settings that are sensitive to
+children’s development, language, and
+culture. The six skills of early literacy
+include: vocabulary, print motivation,
+print awareness, narrative skills, letter
+knowledge, and phonological awareness.
+• Early literacy program is a program
+that is implemented in a standardized
+way, as outlined in a guide or manual,
+and is intended to promote early literacy
+development in young children and to
+provide information, resources, and
+activities to parents and caregivers
+to promote parent-child involvement
+in early literacy activities in the home
+environment. Some examples of specific
+programs include: Parent and Child
+Mother Goose Program®, Every Child
+Ready to Read©, and Early Literacy
+Foundations.
+• Early numeracy refers to when children
+learn important math skills through
+their play and routines, and need to
+experience a lot of doing and saying,
+
+54
+
+using concrete materials that they
+can manipulate to learn math in the
+early years. Young children develop
+early math skills in a variety of areas,
+including problem solving and reasoning,
+number concepts, geometry and spatial
+sense, measurement, and patterns and
+relationships.
+• Ethnicity refers to an individual’s
+nationality, culture, ancestry, language and
+beliefs.
+• Expressive language refers to the ability
+to use speech, gestures, body language,
+symbolic pictures, and facial expressions
+to communicate meaning.
+• Family resource centres (FRCs) are
+community-based organizations that
+deliver programs to promote positive
+parent-child interactions, improved child
+development, and increased community
+involvement to support families.
+• Framework refers to a collection of
+information which forms a foundation
+and rationale for practice, includes core
+concepts and outlines essential qualities
+for optimal learning environments.
+• Fundamental movement skills include
+physical skills such as jumping, hopping,
+catching, throwing, and balancing. These
+skills provide a foundation for many
+physical activities including play, games,
+dance, indoor and outdoor recreation,
+and sports. Children who have achieved
+fundamental motor skill competencies
+are able to successfully participate
+and sustain involvement in a range of
+meaningful and personally challenging
+sports and movement activities during
+their lifetime.
+• Holistic often refers to the “whole”
+child which implies consideration of all
+developmental areas for the child —
+physical, social and emotional, cognitive,
+and language.
+• Holistic child development refers to
+'whole child development' which means
+
+growth and development of a child in all
+domains of early learning.
+• Inclusion means truly accepting that
+all of us are members of humanity,
+dismissing the concept of "us and them",
+accepting all races, genders, abilities,
+religions, sexual orientation, and socioeconomic factors.
+• Inclusive refers to early childhood
+learning opportunities that exemplify
+the values, policies, and practices
+that support the rights of children and
+their families, regardless of ability, to
+participate in a broad range of activities
+and contexts.
+• Infancy refers to the developmental
+period from birth up to twenty four
+months of age.
+• Integrated continuum of early learning
+opportunities refers to existence of a
+variety of early learning programs and
+services (for children and families,
+including children with exceptionalities),
+that are complementary and coordinated
+with one another to allow children
+and their families to transition across
+services (e.g., regulated child care, early
+intervention, family resource centres,
+health based services, and school).
+• KinderStart is a province-wide program
+that is offered by the Department
+of Education and Early Childhood
+Development. This program offers
+orientation sessions for children and
+their parents and caregivers in the year
+prior to school entry. The program is
+designed to support transition to school.
+• Language domain refers to an area of
+development in which children learn
+to express themselves, understand
+language, and use and understand the
+social meaning of communication to the
+best of their ability.
+• Learning environment refers to the
+physical set up of the learning space;
+interactions between children, parents
+
+and early learning practitioners; attitudes
+and aptitudes of children, parents and
+early learning practitioners towards
+teaching and learning, and the approach
+to teaching and learning including
+schedules, routines, materials, activities,
+and experiences.
+• Numeracy means to understand and use
+mathematical concepts effectively.
+• Observation refers to watching, listening,
+and reflecting on children’s interests,
+abilities, behaviours, emotions, and their
+developmental level, with the goal of
+evaluating and improving their learning
+experience.
+• Pedagogy (pedagogical practice)
+are philosophies and strategies that
+are used in the learning environment
+to support children’s aquisition of
+knowledge, skills, and abilities.
+• Physical domain refers to an area of
+development involving the physical
+growth and development of large
+muscles and small muscles, and skill
+development in performing motor tasks.
+• Physical Literacy is the motivation,
+confidence, physical competence,
+knowledge, and understanding for
+engagement in a variety of physical
+activities.
+• Play refers to fun, open-ended, and
+spontaneous activities chosen by the
+players. Play is child-centred, childinitiated, and voluntary. Play is essential
+for a child’s social, emotional, language,
+cognitive, and physical development.
+Children at play are more concerned with
+the process of playing and not the end
+product.
+• Play-based learning refers to early
+childhood learning opportunities that
+are rich in child-initiated play, especially
+when it involves the presence of a caring,
+engaged, and responsive adult. Ongoing
+planned and spontaneous opportunities
+for learning through intentional playful
+
+55
+
+interactions are provided by adults
+in an environment with a variety of
+developmentally appropriate play
+materials.
+• Portfolio refers to collections or
+samples of information about a child’s
+developmental progress in their learning
+environment.
+• Pragmatic language refers to the social
+language through which we determine if
+what we say, how we say it, and how we
+use our body language are appropriate to
+different social situations.
+• Pre-school aged are children who are
+between the ages of three and five years
+old.
+• Primary school refers to formal
+education programs for children from
+Kindergarten to Grade 3 inclusive.
+• Problem-solving is a process in which
+children use intellectual and motor skills
+to gain an understanding of the world
+and figure out, through trial and error,
+‘what works’ to serve their purpose.
+• Pro-social behaviour is characterized
+by a concern about the rights, feelings,
+and welfare of other people. Pro-social
+behaviours include feeling empathy and
+concern for others and behaving in ways
+to help other people.
+• Receptive language refers to the ability
+to listen and understand what is being
+communicated. Receptive language
+involves understanding spoken words,
+sign language, the meaning of symbols,
+and written language.
+• Recreation includes activities done for
+the purpose of relaxation, pleasure,
+amusement,and enjoyment (e.g., summer
+camps and excursions).
+• Reflective Practice is the process of
+analyzing and evaluating one's actions
+with a view to engage in a process of
+continuous learning. It involves looking at
+what you do, why you do it, how you do it,
+
+56
+
+what happened, thinking if it worked, and
+then deciding what and how you would do
+differently to achieve your goal.
+• Resilience is the process of adapting
+positively to difficult experiences and
+circumstances—social, emotional,
+physical, and intellectual.
+• Responsive teaching is an adult’s
+response to the varied learning
+behaviours observed and respected
+within a setting, such as a classroom,
+homeroom, or home environment.
+Planned strategies or instructions are
+provided to support and respond to
+individual child learning to promote
+development (e.g., acquisition of skills
+or outcomes). When the plan does not
+meet certain children where they are
+developmentally, it is understood that
+it has to change to move them along in
+“their” learning.
+• Scaffolding refers to a graduated
+teaching strategy in which the adult
+provides the level of support needed
+for children to learn a new task and
+then slowly reduces the support for the
+task to the students as they develop
+their understandings of the nature of
+the skill. It can be used by anyone more
+experienced at a task.
+• School readiness refers to children
+having skills that are important for
+successful transition to school and later
+outcomes in school and throughout
+life. These skills fall under the four
+developmental domains of early learning.
+School readiness also includes readiness
+of schools and families to provide
+supports that contribute to children's
+readiness for school.
+• Sedentary behaviours include postures
+and activities that require very little
+movement. Some examples include
+sitting for longer durations, playing
+passive video or computer games,
+watching television, spending excessive
+
+time on the computer, and excessive use
+of motorized transportation.
+• Self-regulation refers to the ability to
+attain, maintain, and change one’s level
+of energy to match the demands of a
+task or situation; to monitor, evaluate
+and modify one’s emotions; sustain and
+shift one’s attention when necessary and
+ignore distractions; to understand both the
+meaning of a variety of social interactions
+and how to engage in them in a sustained
+way; and to connect with and care about
+what others are thinking and feeling – to
+empathize and act accordingly.
+• Social-emotional domain refers to an
+area of development involving the child’s
+experience, expression, development,
+and management of emotions and the
+ability to establish positive and rewarding
+relationships with others.
+• Special need refers to requirement of
+additional resources or accommodations,
+such as any technical aid or device,
+personal support, or disability-related
+support, by children due to exceptional gifts
+and talents, sensory, physical, cognitive and
+learning challenges, mental health issues,
+and problems due to social, linguistic,
+cultural, or family factors.
+
+the addition of a parent involvement
+component to highlight and promote
+parent-child involvement in early literacy
+activities in the home environment.
+• Temperament refers to children's
+natural style of interacting with people
+and reacting to situations. A child’s
+temperament impacts how, what, and
+when they learn, and it is important that
+adults in a child’s community of care
+understand and support children based on
+their temperament.
+• Toddlers are children between the ages of
+one and three years old.
+• Transition refers to moving from one
+place or situation to another. It may
+include moving between different learning
+environments, such as transition from
+home to child care. It can refer to moving
+between activities within the learning
+environment such as moving from snack
+time to free play. Transition can also
+refer to major life events such as starting
+school.
+• Well-being refers to the combination of a
+person’s physical, social, and emotional
+health.
+
+• Stakeholders include either a person or
+group that has an interest in a system or
+organization. Stakeholders can directly
+affect or be affected by the actions and
+policies of the system or organization.
+• Story-time programming in public libraries
+facilitates oral language and early literacy
+development through the use of books,
+activities, and play materials. Storytime programming may include rhymes,
+stories, songs, plays and puppets,
+dance, and social time. Programs are
+presented by library staff and are offered
+to children birth to six and their parents
+and caregivers. Enhanced Story-time
+Programming includes all elements of
+regular story-time programming with
+
+57
+
+Part 7:
+References
+
+Annan, K. (1999). In Bellamy, C. (Ed.). (1999). The state of the world's children 1999. Unicef.
+Annan, K. (1999). In Jones, S. A. (1999). Simply living: The spirit of the indigenous people. New World Library.
+Atlantic Provinces Education Foundation. (1997). The Atlantic Canada framework for essential graduation
+learnings. Retrieved from https://www.ed.gov.nl.ca/edu/k12/curriculum/documents/foundation/essential_
+graduation_learnings.pdf
+Britto, P. R. (2012). School readiness: A conceptual framework. Education Section, Programme Division,
+United Nations Children’s Fund, New York. Retrieved from https://www.unicef.org/earlychildhood/files/
+Child2Child_ConceptualFramework_FINAL(1).pdf
+Brito, P. R., & Lumlingan, M. C. (2012). School readiness and transitions. Retrieved from http://www.unicef.
+org/publications/files/CFS_School_Readiness_E_web.pdf
+Bruder, M. B. (2010). Early childhood intervention: A promise to children and families for their future. Exceptional
+Children, 76(3), 339–355.
+Cappelloni, N. L. (2012). Kindergarten Readiness. Corwin Press.
+Caspe, M., Lopez, M. E., & Chattrabhuti, C. (2015). Four important things to know about the transition to
+school. Harvard Family Research Project. Retrieved from https://elc.grads360.org/services/PDCService.
+svc/GetPDCDocumentFile?fileId=9713
+Center on the Developing Child at Harvard University. (2012). The foundations of lifelong health are built in
+early childhood. Retrieved from http://46y5eh11fhgw3ve3ytpwxt9r.wpengine.netdna-cdn.com/wp-content/
+uploads/2010/05/Foundations-of-Lifelong-Health.pdf
+Center on the Developing Child at Harvard University. (2016). From best practices to breakthrough
+impacts. Retrieved from http://46y5eh11fhgw3ve3ytpwxt9r.wpengine.netdna-cdn.com/wp-content/
+uploads/2016/05/From_Best_Practices_to_Breakthrough_Impacts-3.pdf
+CMEC Early Childhood Learning and Development Working Group. (2014). CMEC Early learning and development
+framework. Retrieved from http://www.cmec.ca/Publications/Lists/Publications/Attachments/327/201407-Early-Learning-Framework-EN.pdf
+Connor, J. (2012a). Collaborative partnerships with families. National Quality Standard Professional
+Learning Program, 35. Retrieved from http://www.earlychildhoodaustralia.org.au/nqsplp/wp-content/
+uploads/2012/05/NQS_PLP_E-Newsletter_No35.pdf
+Connor, J. (2012b). Continuity of learning; National Quality Standard Professional Learning Program, 46.
+Retrieved from http://www.earlychildhoodaustralia.org.au/nqsplp/wp-content/uploads/2012/11/NQS_
+PLP_E-Newsletter_No46.pdf
+Council of Ministers of Education in Canada. (2012). CMEC statement on play-based learning. Retrieved from
+http://www.cmec.ca/Publications/lists/publications/attachments/282/play-based-learning_statement_
+EN.pdf
+Department of Education and Early Childhood Development. (2008). New Brunswick curriculum framework
+for early learning and child care. New Brunswick. Retrieved from http://www2.gnb.ca/content/gnb/en/
+departments/education/elcc/content/curriculum/curriculum_framework.html
+
+59
+
+Department of Education and Early Childhood Development. (2011). PEI early learning framework: Relationships,
+environments, experiences. Prince Edward Island. Retrieved from https://www.princeedwardisland.ca/sites/
+default/files/publications/eecd_eyfrwrk_full.pdf
+Families and Work Institute. (2009). Mind in the making: The science of early learning. Retrieved from http://
+www.bestbeginningsalaska.org/wp-content/uploads/whatisearlylearning.pdf
+Shaw, G.B. (n.d.). BrainyQuote.com. Retrieved December 9, 2016, from BrainyQuote.com Web site: https://
+www.brainyquote.com/quotes/quotes/g/georgebern161863.html
+Ginsburg, K.R. & Jablow, M.M. (2006). A parent’s guide to building resilience in children and teens: Giving your
+child roots and wings. Elk Grove Village, IL: American Academy of Pediatrics.
+Harrison L.J., Goldfeld S., Metcalfe E., Moore T. (2012). Early learning programs that promote children’s
+developmental and educational outcomes, Resource sheet no. 15, produced for the Closing the Gap
+Clearinghouse, Australian Institute of Health and Welfare, Canberra andAustralian Institute of Family Studies,
+Melbourne. Retrieved from https://researchoutput.csu.edu.au/ws/portalfiles/portal/9387429
+Heckman, J. J. (2012). Invest in early childhood development: Reduce deficits, strengthen the economy.
+Retrieved from http://physicalliteracy.ca/wp-content/uploads/2016/08/Consensus-Handout-EN-WEB_1.pdf
+International Physical Literacy Association. (2014). Canada’s physical literacy consensus statement. Retrieved
+from http://www.physicalliteracy.ca/sites/default/files/Consensus-Handout-EN-WEB_1.pdf
+Lally, J. R. (2010). School readiness begins in infancy: Social interactions during the first two years of life
+provide the foundation for learning. Phi Delta Kappan, 92(3), 17.
+Lerner, C., & Ciervo, L. A. (2004). Getting ready for school begins at birth: How to help your child learn in the
+early years. Retrieved from https://www.zerotothree.org/resources/221-getting-ready-for-school-begins-atbirth#downloads
+McCain, M., Mustard, F. & Shanker, S.J. (2007). Early years study 2: Putting science into action. Ontario,
+Canada: Council for Early Childhood Development.
+McWayne, C., Broomfield, M., Sidoti, J., & Camacho, N. (2008). Facilitators of and challenges to interagency
+collaboration: An early childhood perspective. NHSA Dialog: A Research-to-Practice Journal for the Early
+Intervention Field, 11(2), 90–109.
+Michelangelo. (n.d.). BrainyQuote.com. Retrieved December 9, 2016, from BrainyQuote.com Web site: https://
+www.brainyquote.com/quotes/quotes/m/michelange161309.html
+Ministry of Education. (2008). British Columbia early learning framework. Retrieved from https://www2.gov.
+bc.ca/gov/content/education-training/early-learning/teach/early-learning-framework
+Ministry of Education. (1996). Te whàriki. Wellington, New Zealand. Retrieved from https://www.education.
+govt.nz/assets/Documents/Early-Childhood/Te-Whariki-1996.pdf
+Ministry of Education, Government of Ontario. (2014). How does learning happen? Ontario’s pedagogy for the
+early years. Ontario.
+DEC/NAEYC. (2009). Early childhood inclusion: A joint position statement of the Division for Early Childhood
+(DEC) and the National Association for the Education of Young Children (NAEYC). Chapel Hill: The University
+of North Carolina, FPG Child Development Institute.
+National Council for Curriculum and Assessment. (2009). Aistear: The early childhood curriculum framework.
+Dublin, Ireland. Retrieved from http://www.ncca.biz/Aistear/
+
+60
+
+National Scientific Council on the Developing Child. (2007). The timing and quality of early experiences combine to
+shape brain architecture: Working paper No. 5. Retrieved from https://46y5eh11fhgw3ve3ytpwxt9r-wpengine.
+netdna-ssl.com/wp-content/uploads/2010/05/Early-Experiences-Can-Alter-Gene-Expression-and-Affect-LongTerm-Development.pdf
+National Scientific Council on the Developing Child. (2010). Early experiences can alter gene expression and affect
+long-term development: Working paper No. 10. Retrieved from https://46y5eh11fhgw3ve3ytpwxt9r-wpengine.
+netdna-ssl.com/wp-content/uploads/2010/05/Early-Experiences-Can-Alter-Gene-Expression-and-Affect-LongTerm-Development.pdf
+New Brunswick. Department of Education and Early Childhood Development. (2014). The linguistic and cultural
+development policy- A societal project for the French education system. Retrieved from https://www2.gnb.ca/
+content/dam/gnb/Departments/ed/pdf/K12/comm/LinguisticAndCulturalDevelopmentPolicy.pdf
+Organization for Economic Cooperation and Development. (n.d.). Encouraging quality in early childhood education
+and care (ECEC). Research brief: Parental and community engagement matters. Retrieved from http://www.oecd.
+org/education/school/49322478.pdf
+Pears, K. C., Fisher, P. A., Kim, H. K., Bruce, J., Healey, C. V., & Yoerger, K. (2013). Immediate effects of a school
+readiness intervention for children in foster care. Early Education & Development, 24(6), 771–791. Retrieved
+from https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3760738/
+Rosier, K., & McDonald, M. (2011). Promoting positive education and care transitions for children. CAFCA resource
+sheet. Retrieved from https://aifs.gov.au/cfca/sites/default/files/publication-documents/rs5.pdf
+Sammons, P. (2010). Does pre-school make a difference? Identifying the impact of pre-school on children’s cognitive
+and social behavioural development at different ages. In Sylva K, Melhuish E, Sammons P, Siraj-Blatchford I,
+Taggart B, (Eds.), Early childhood matters: Evidence from the effective pre-school and primary education project
+(pp. 92–113). London: Routledge.
+Shanker, S. (2012). Calm, alert and learning: Classroom strategies for self-regulation. Don Mills, ON: Pearson
+Education Canada.
+Stonehouse, A. (2012). Collaborating with families: Not a problem!. Every Child, 18(1). Retrieved from http://www.
+earlychildhoodaustralia.org.au/nqsplp/wp-content/uploads/2012/05/EC1201_Collaborating_with_families_
+not_a_problem.pdf
+Trepanier-Street, M. (2010). Education and medical professionals collaborating to prepare early childhood teachers
+for inclusive settings. Journal of Early Childhood Teacher Education, 31(1), 63–70.
+UNICEF. (2007). Child poverty in perspective: An overview of child well-being in rich countries, Innocenti Report Card
+7, UNICEF Innocenti Research Centre, Florence. Retrieved from https://www.unicef-irc.org/publications/pdf/
+rc7_eng.pdf
+Vygotsky, L. (1962). In Palaiologou, I. (Ed.). (2010). The early years foundation stage: Theory and practice. Sage.
+
+61
+
+Resources
+VIDEOS
+Brain Development
+Child Development Story, Part 1: Brain Architecture:
+https://www.youtube.com/watch?v=SpqLzFew9bs
+Child Development Story, Part 2: Serve and Return:
+https://www.youtube.com/watch?v=u0_Y7jSGnp8
+Child Development Story, Part 3: Stress:
+https://www.youtube.com/watch?v=kivv2BJhzbA
+Child Development Story, Part 4: Pay Now or Pay Later:
+https://www.youtube.com/watch?v=20DdwzhMTTA
+
+Early Literacy
+http://www.easternct.edu/cece/e-clip-predictors-of-early-literacy/
+http://www.easternct.edu/cece/reflections-building-vocabulary-in-the-preschool-classroom/
+https://www.zerotothree.org/resources/216-how-to-promote-early-language-and-literacy
+https://www.zerotothree.org/resources/1059-literacy-with-love
+https://www.zerotothree.org/early-learning/early-literacy
+
+Play
+http://www.easternct.edu/cece/e-clip-importance-of-play/
+http://www.easternct.edu/cece/supporting-childrens-learning-in-dramatic-play-centers/
+http://www.easternct.edu/cece/physical_play_videos/
+http://www.easternct.edu/cece/cultural-influences-on-childrens-play/
+
+Numeracy
+http://www.easternct.edu/cece/math-play-video/
+http://www.easternct.edu/cece/supporting-mathematical-development-in-young-children/
+http://www.easternct.edu/cece/e-clip-using-math-talk/
+https://www.zerotothree.org/resources/255-everyday-fun-with-patterns-let-s-talk-about-math-video
+https://www.zerotothree.org/resources/253-everyday-fun-with-addition-and-subtraction-let-s-talk-aboutmath-video
+https://www.zerotothree.org/resources/250-everyday-fun-with-shapes-let-s-talk-about-math-video
+
+62
+
+https://www.zerotothree.org/resources/251-everyday-fun-with-spatial-awareness-let-s-talk-about-mathvideo
+https://www.zerotothree.org/resources/252-everyday-fun-with-counting-let-s-talk-about-math-video
+https://www.zerotothree.org/resources/254-everyday-fun-with-measurement-let-s-talk-about-math-video
+https://www.zerotothree.org/resources/series/let-s-talk-about-stem-video-series
+http://earlymath.erikson.edu/value-blocks-kindergarten-2/
+http://earlymath.erikson.edu/matching-cards-game-in-prek/
+http://earlymath.erikson.edu/measuring-in-kindergarten-with-taller-towers/
+https://www.zerotothree.org/resources/156-brain-wonders-nurturing-healthy-brain-development-from-birth
+
+School Readiness
+https://www.zerotothree.org/early-learning/school-readiness
+
+OTHER RESOURCES
+Numeracy
+http://www.child-encyclopedia.com/numeracy/complete-topic
+http://munews.missouri.edu/news-releases/2016/0804-kindergarteners-mathematics-success-hinges-onpreschool-skills/
+https://www.zerotothree.org/early-learning/early-math-and-science
+https://www.zerotothree.org/resources/299-help-your-child-develop-early-math-skills
+
+Play
+http://www.beststart.org/OnTrack_English/pdf/OnTrack-Section4.pdf
+http://www.child-encyclopedia.com/play/complete-topic
+http://www.naeyc.org/play
+http://www.pz.harvard.edu/resources/towards-a-pedagogy-of-play
+
+Transition to School
+http://www.beststart.org/OnTrack_English/4-factors.html
+http://www.beststart.org/OnTrack_English/4-supportschool.html
+http://www.child-encyclopedia.com/school-readiness/complete-topic
+http://www.earlychildhoodnews.com/earlychildhood/article_view.aspx?ArticleID=477
+
+63
+
+http://ecrp.uiuc.edu/v3n2/dockett.html
+http://www.excellence-jeunesenfants.ca/documents/Forum_Autism_2010-Report_ANG.pdf
+http://www.naeyc.org/tyc/files/tyc/file/V6N4/Transitions%20to%20Kindergarten.pdf
+http://www.thelearningpartnership.ca/what-we-do/student-programs/welcome-to-kindergarten
+https://www.zerotothree.org/resources/series/developing-school-readiness-skills-from-24-to-36-months
+https://www.zerotothree.org/resources/221-getting-ready-for-school-begins-at-birth
+https://www.unicef.org/earlychildhood/files/Child2Child_ConceptualFramework_FINAL(1).pdf
+
+Developmental Screening
+https://www.zerotothree.org/resources/71-achieving-the-promise-of-a-bright-future-developmentalscreening-of-infants-and-toddlers
+https://www.zerotothree.org/resources/70-developmental-screening-assessment-and-evaluation-keyelements-for-individualizing-curricula-in-early-head-start-programs
+https://www.zerotothree.org/policy-and-advocacy/developmental-screening
+
+Early Development Instrument
+http://www.eyeonkids.ca/docs/files/mchp_edi_report_web.pdf
+http://www.manitoba.ca/healthychild/edi/edi_handbook_2007.pdf
+
+Early Learning
+https://www.zerotothree.org/resources/1063-building-blocks-of-learning
+https://www.zerotothree.org/resources/series/the-development-of-thinking-skills
+https://www.sciencedaily.com/news/education_learning/
+https://www.zerotothree.org/resources/series/healthy-minds-nurturing-your-child-s-development
+https://www.zerotothree.org/resources/1503-what-s-going-on-in-your-baby-s-mind-in-the-first-year-5-waysto-put-brain-science-into-action
+https://www.zerotothree.org/resources/1497-getting-in-tune-the-powerful-influence-of-music-on-youngchildren-s-development
+https://www.zerotothree.org/resources/265-everyday-ways-to-support-your-baby-s-and-toddler-s-earlylearning
+https://www.zerotothree.org/resources/305-learning-to-write-and-draw
+
+64
+
+
