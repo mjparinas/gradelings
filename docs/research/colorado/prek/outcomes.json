@@ -1,0 +1,758 @@
+{
+ "pk/math": [
+  {
+   "idx": "NQ.1",
+   "text": "Number and Quantity"
+  },
+  {
+   "idx": "P.CC.A",
+   "text": "Know number names and the count sequence."
+  },
+  {
+   "idx": "P.CC.A.1",
+   "text": "Count verbally or sign to at least 20 by ones."
+  },
+  {
+   "idx": "P.CC.B",
+   "text": "Recognize the number of objects in a small set."
+  },
+  {
+   "idx": "P.CC.B.2",
+   "text": "Instantly recognize, without counting, small quantities of up to five objects and say or sign the number."
+  },
+  {
+   "idx": "P.CC.C",
+   "text": "Understand the relationship between numbers and quantities."
+  },
+  {
+   "idx": "P.CC.C.3",
+   "text": "Say or sign the number names in order when counting, pairing one number word that corresponds with one object, up to at least 10."
+  },
+  {
+   "idx": "P.CC.C.4",
+   "text": "Use the number name of the last object counted to answer \"How many?\" questions for up to approximately 10 objects."
+  },
+  {
+   "idx": "P.CC.C.5",
+   "text": "Accurately count as many as five objects in a scattered configuration or out of a collection of more than five objects."
+  },
+  {
+   "idx": "P.CC.C.6",
+   "text": "Understand that each successive number name refers to a quantity that is one larger."
+  },
+  {
+   "idx": "P.CC.D",
+   "text": "Compare numbers."
+  },
+  {
+   "idx": "P.CC.D.7",
+   "text": "Identify whether the number of objects in one group is more than, less than or the same as objects in another group for up to at least five objects."
+  },
+  {
+   "idx": "P.CC.D.8",
+   "text": "Identify and use numbers related to order or position from first to fifth."
+  },
+  {
+   "idx": "P.CC.E",
+   "text": "Associate a quantity with written numerals up to 5 and begin to write numbers."
+  },
+  {
+   "idx": "P.CC.E.9",
+   "text": "Associate a number of objects with a written numeral 0–5."
+  },
+  {
+   "idx": "P.CC.E.10",
+   "text": "Recognize and, with support, write some numerals up to 10."
+  },
+  {
+   "idx": "AF.2",
+   "text": "Algebra and Functions"
+  },
+  {
+   "idx": "P.OA.A",
+   "text": "Understand addition as adding to and understand subtraction as taking away from."
+  },
+  {
+   "idx": "P.OA.A.1",
+   "text": "Represent addition and subtraction in different ways, such as with fingers, objects, and drawings."
+  },
+  {
+   "idx": "P.OA.A.2",
+   "text": "Solve addition and subtraction problems set in simple contexts. Add and subtract up to at least five to or from a given number to find a sum or difference up to 10."
+  },
+  {
+   "idx": "P.OA.A.3",
+   "text": "With adult assistance, begin to use counting on (adding 1 or 2, for example) from the larger number for addition."
+  },
+  {
+   "idx": "P.OA.B",
+   "text": "Understand simple patterns."
+  },
+  {
+   "idx": "P.OA.B.4",
+   "text": "Fill in missing elements of simple patterns."
+  },
+  {
+   "idx": "P.OA.B.5",
+   "text": "Duplicate simple patterns in a different location than demonstrated, such as making the same alternating color pattern with blocks at a table that was demonstrated on the rug. Extend patterns, such as making an eight-block tower of the same pattern that was demonstrated with four blocks."
+  },
+  {
+   "idx": "P.OA.B.6",
+   "text": "Identify the core unit of sequentially repeating patterns, such as color in a sequence of alternating red and blue blocks."
+  },
+  {
+   "idx": "DSP.3",
+   "text": "Data, Statistics, and Probability"
+  },
+  {
+   "idx": "P.MD.A",
+   "text": "Measure objects by their various attributes using standard and nonstandard measurement and use differences in attributes to make comparisons."
+  },
+  {
+   "idx": "P.MD.A.1",
+   "text": "Use comparative language, such as shortest, heavier, biggest, or later."
+  },
+  {
+   "idx": "P.MD.A.2",
+   "text": "Compare or order up to five objects based on their measurable attributes, such as height or weight."
+  },
+  {
+   "idx": "P.MD.A.3",
+   "text": "Measure using the same unit, such as putting together snap cubes to see how tall a book is."
+  },
+  {
+   "idx": "G.4",
+   "text": "Geometry"
+  },
+  {
+   "idx": "P.G.A",
+   "text": "Identify, describe, compare, and compose shapes."
+  },
+  {
+   "idx": "P.G.A.1",
+   "text": "Name and describe shapes in terms of length of sides, number of sides, and number of angles/corners."
+  },
+  {
+   "idx": "P.G.A.2",
+   "text": "Correctly name basic shapes (circle, square, rectangle, triangle) regardless of size and orientation."
+  },
+  {
+   "idx": "P.G.A.3",
+   "text": "Analyze, compare, and sort two-and three-dimensional shapes and objects in different sizes. Describe their similarities, differences, and other attributes, such as size and shape."
+  },
+  {
+   "idx": "P.G.A.4",
+   "text": "Compose simple shapes to form larger shapes."
+  },
+  {
+   "idx": "P.G.B",
+   "text": "Explore the positions of objects in space."
+  },
+  {
+   "idx": "P.G.B.5",
+   "text": "Understand and use language related to directionality, order, and the position of objects, including up/down and in front/behind."
+  },
+  {
+   "idx": "P.G.B.6",
+   "text": "Correctly follow directions involving their own position in space, such as \"Stand up\" and \"Move forward.\""
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "OL.1",
+   "text": "Oral Expression and Listening"
+  },
+  {
+   "idx": "PK.1.1",
+   "text": "Children comprehend and understand the English language."
+  },
+  {
+   "idx": "PK.1.1.a",
+   "text": "Attend to language during conversations, songs, stories or other learning experiences."
+  },
+  {
+   "idx": "PK.1.1.b",
+   "text": "Comprehend increasingly complex and varied vocabulary."
+  },
+  {
+   "idx": "PK.1.1.c",
+   "text": "Follow two- to three-step directions."
+  },
+  {
+   "idx": "PK.1.2",
+   "text": "Children use language to convey thoughts and feelings."
+  },
+  {
+   "idx": "PK.1.2.a",
+   "text": "Participate in conversations of more than three exchanges with peers and adults."
+  },
+  {
+   "idx": "PK.1.2.b",
+   "text": "Use language to express ideas and needs."
+  },
+  {
+   "idx": "PK.1.2.c",
+   "text": "Use increasingly complex and varied vocabulary."
+  },
+  {
+   "idx": "PK.1.2.d",
+   "text": "Understand the difference between a question and a statement."
+  },
+  {
+   "idx": "PK.1.2.e",
+   "text": "Practice asking questions and making statements."
+  },
+  {
+   "idx": "PK.1.2.f",
+   "text": "Speak in sentences of five or six words."
+  },
+  {
+   "idx": "RAP.2",
+   "text": "Reading for All Purposes"
+  },
+  {
+   "idx": "PK.2.1",
+   "text": "Children understand and obtain meaning from stories and information from books and other texts."
+  },
+  {
+   "idx": "PK.2.1.a",
+   "text": "Show interest in shared reading experiences and looking at books independently."
+  },
+  {
+   "idx": "PK.2.1.b",
+   "text": "Recognize how books are read, such as front-to-back and one page at a time, and recognize basic characteristics, such as title, author, and illustrator."
+  },
+  {
+   "idx": "PK.2.1.c",
+   "text": "Ask and answer questions and make comments about print materials."
+  },
+  {
+   "idx": "PK.2.1.d",
+   "text": "Demonstrate interest in different kinds of literature, such as fiction and nonfiction books and poetry, on a range of topics."
+  },
+  {
+   "idx": "PK.2.1.e",
+   "text": "Begin to identify key features of reality versus fantasy in stories, pictures, and events."
+  },
+  {
+   "idx": "PK.2.1.f",
+   "text": "Retell stories or information from books through conversation, artistic works, creative movement, or drama."
+  },
+  {
+   "idx": "PK.2.1.g",
+   "text": "Make predictions based on illustrations."
+  },
+  {
+   "idx": "PK.2.1.h",
+   "text": "Begin to identify key features of reality versus fantasy in stories, pictures, and events."
+  },
+  {
+   "idx": "PK.2.2",
+   "text": "Phonological awareness is the building block for understanding language."
+  },
+  {
+   "idx": "PK.2.2.a",
+   "text": "Identify and discriminate between words in language."
+  },
+  {
+   "idx": "PK.2.2.b",
+   "text": "Identify and discriminate between separate syllables in words."
+  },
+  {
+   "idx": "PK.2.2.c",
+   "text": "Identify and discriminate between sounds and phonemes in language, such as attention to beginning and ending sounds of words and recognition that different words begin or end with the same sound."
+  },
+  {
+   "idx": "PK.2.2.d",
+   "text": "Recognize patterns of sounds in songs, storytelling, and poetry through interactions and meaningful experiences."
+  },
+  {
+   "idx": "PK.2.3",
+   "text": "Print concepts and conventions anchor concepts of early decoding."
+  },
+  {
+   "idx": "PK.2.3.a",
+   "text": "Recognize print in everyday life, such as numbers, letters, one's name, words, and familiar logos and signs."
+  },
+  {
+   "idx": "PK.2.3.b",
+   "text": "Understand that print conveys meaning."
+  },
+  {
+   "idx": "PK.2.3.c",
+   "text": "Understand conventions, such as print moves from left to right and top to bottom of a page."
+  },
+  {
+   "idx": "PK.2.3.d",
+   "text": "Recognize words as a unit of print and understand that letters are grouped to form words."
+  },
+  {
+   "idx": "PK.2.3.e",
+   "text": "Recognize the association between spoken or signed and written words."
+  },
+  {
+   "idx": "PK.2.4",
+   "text": "The names and sounds associated with letters makes up alphabetic knowledge."
+  },
+  {
+   "idx": "PK.2.4.a",
+   "text": "Recognize that the letters of the alphabet are a special category of visual graphics that can be individually named."
+  },
+  {
+   "idx": "PK.2.4.b",
+   "text": "Recognize that letters of the alphabet have distinct sound(s) associated with them."
+  },
+  {
+   "idx": "PK.2.4.c",
+   "text": "Attend to the beginning letters and sounds in familiar words."
+  },
+  {
+   "idx": "PK.2.4.d",
+   "text": "Identify letters and associate correct sounds with letters, including a minimum of ten letters, preferably including letters in the child's name."
+  },
+  {
+   "idx": "WC.3",
+   "text": "Writing and Composition"
+  },
+  {
+   "idx": "PK.3.1",
+   "text": "Familiarity with writing implements, conventions, and emerging skills to communicate through written representations, symbols, and letters."
+  },
+  {
+   "idx": "PK.3.1.a",
+   "text": "Experiment with writing tools and materials."
+  },
+  {
+   "idx": "PK.3.1.b",
+   "text": "Recognize that writing is a way of communicating for a variety of purposes, such as giving information, sharing stories, or giving an opinion."
+  },
+  {
+   "idx": "PK.3.1.c",
+   "text": "Use scribbles, shapes, pictures, and letters to represent objects, stories, experiences, or ideas."
+  },
+  {
+   "idx": "PK.3.1.d",
+   "text": "Copy, trace, or independently write letters or words."
+  },
+  {
+   "idx": "RID.4",
+   "text": "Research Inquiry and Design"
+  },
+  {
+   "idx": "PK.4.1",
+   "text": "Begin research by asking a question to identify and define a problem and its possible solutions."
+  },
+  {
+   "idx": "PK.4.1.a",
+   "text": "Differentiate between questions and statements."
+  },
+  {
+   "idx": "PK.4.1.b",
+   "text": "Identify problems and search for solutions by asking questions during collaborative explorations of the topic; begin to state facts about the topic."
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "PS1",
+   "text": "Physical Science"
+  },
+  {
+   "idx": "PS1.PK.1",
+   "text": "Recognize there are cause-and-effect relationships related to matter and energy."
+  },
+  {
+   "idx": "PS1.PK.1.a",
+   "text": "Use senses to explore the properties of objects and materials (e.g., solids, liquids)."
+  },
+  {
+   "idx": "PS1.PK.1.b",
+   "text": "Make simple observations, predictions, explanations, and generalizations based on real-life experiences."
+  },
+  {
+   "idx": "PS1.PK.1.c",
+   "text": "Collect, describe, predict and record information using words, drawings, maps, graphs and charts."
+  },
+  {
+   "idx": "PS1.PK.1.d",
+   "text": "Observe, describe, and discuss living things and natural processes."
+  },
+  {
+   "idx": "PS1.PK.2",
+   "text": "Recognize there are cause-and-effect relationships related to matter and energy."
+  },
+  {
+   "idx": "PS1.PK.2.a",
+   "text": "Recognize and investigate cause-and-effect relationships in everyday experiences (pushing, pulling, kicking, rolling or blowing objects)."
+  },
+  {
+   "idx": "PS1.PK.2.b",
+   "text": "Notice change in matter."
+  },
+  {
+   "idx": "PS1.PK.2.c",
+   "text": "Observe, describe and discuss properties of materials and transformation of substances."
+  },
+  {
+   "idx": "PS1.PK.2.d",
+   "text": "Seek answers to questions and test predictions using simple experiments."
+  },
+  {
+   "idx": "LS2",
+   "text": "Life Science"
+  },
+  {
+   "idx": "LS2.PK.1",
+   "text": "Recognize that living things have unique characteristics and basic needs that can be observed and studied."
+  },
+  {
+   "idx": "LS2.PK.1.a",
+   "text": "Observe, describe and discuss living things."
+  },
+  {
+   "idx": "LS2.PK.1.b",
+   "text": "Observe similarities and differences in the needs of living things."
+  },
+  {
+   "idx": "LS2.PK.1.c",
+   "text": "Observe and describe how natural habitats provide for the basic needs of plants and animals with respect to shelter, food, water, air and light."
+  },
+  {
+   "idx": "LS2.PK.1.d",
+   "text": "Ask and pursue questions through simple investigations and observations of living things."
+  },
+  {
+   "idx": "LS2.PK.1.e",
+   "text": "Collect, describe, and record information about living things through discussion, drawings, graphs, technology and charts."
+  },
+  {
+   "idx": "LS2.PK.1.f",
+   "text": "Identify differences between living and nonliving things."
+  },
+  {
+   "idx": "LS2.PK.2",
+   "text": "Recognize that living things develop in predictable patterns."
+  },
+  {
+   "idx": "LS2.PK.2.a",
+   "text": "Identify the common needs such as food, air and water of familiar living things."
+  },
+  {
+   "idx": "LS2.PK.2.b",
+   "text": "Predict, explain and infer patterns based on observations and representations of living things, their needs and life cycles."
+  },
+  {
+   "idx": "LS2.PK.2.c",
+   "text": "Observe and document changes in living things over time using different modalities such as drawing, dramatization, describing or using technology."
+  },
+  {
+   "idx": "LS2.PK.2.d",
+   "text": "Recognize that plants and animals grow and change."
+  },
+  {
+   "idx": "ESS3",
+   "text": "Earth and Space Science"
+  },
+  {
+   "idx": "ESS3.PK.1",
+   "text": "The acquisition of concepts and facts related to the Earth materials and their uses."
+  },
+  {
+   "idx": "ESS3.PK.1.a",
+   "text": "Use senses and tools, including technology, to investigate materials, and observe processes and relationships to gather information and explore the environment."
+  },
+  {
+   "idx": "ESS3.PK.1.b",
+   "text": "Inquire about the natural and physical environment."
+  },
+  {
+   "idx": "ESS3.PK.1.c",
+   "text": "Observe and discuss common properties, differences and comparisons among objects."
+  },
+  {
+   "idx": "ESS3.PK.1.d",
+   "text": "Participate in simple investigations to form hypothesis, gather observations, draw conclusions."
+  },
+  {
+   "idx": "ESS3.PK.1.e",
+   "text": "Record observations using words, drawings, maps, graphs and charts."
+  },
+  {
+   "idx": "ESS3.PK.2",
+   "text": "The acquisition of concepts and facts related to the natural and physical world and the understanding of naturally occurring relationships."
+  },
+  {
+   "idx": "ESS3.PK.2.a",
+   "text": "Predict, explain and infer patterns based on observations and evidence."
+  },
+  {
+   "idx": "ESS3.PK.2.b",
+   "text": "Articulate findings through a variety of modalities (e.g., drawings, words, dramatizations)."
+  },
+  {
+   "idx": "ESS3.PK.2.c",
+   "text": "Recognizes familiar elements of the natural world and demonstrates an understanding that these may change over time (e.g., sun and moon, weather)."
+  },
+  {
+   "idx": "ESS3.PK.2.d",
+   "text": "Observe and describe patterns observed over the course of a number of days and nights (e.g., differences in the activities or appearance of plants and animals)."
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "PK.H.1",
+   "text": "Recognize change and sequence over time."
+  },
+  {
+   "idx": "PK.H.1.a",
+   "text": "Begin to understand concepts of the past, present, and future."
+  },
+  {
+   "idx": "PK.H.1.b",
+   "text": "Begin to recall family traditions or personal events that happened in the past (this can include immediate past events from that day or week, or longer) and the present, especially as it pertains to diverse backgrounds, such as race, and individual family traditions."
+  },
+  {
+   "idx": "PK.H.1.c",
+   "text": "Begin to understand that previous, current, and future events can have an impact on our daily, weekly, or monthly lives."
+  },
+  {
+   "idx": "PK.G.1",
+   "text": "Develop spatial understanding, perspectives, and connections to the world"
+  },
+  {
+   "idx": "PK.G.1.a",
+   "text": "Identify aspects of their immediate environment, such as areas of their preschool classroom, their own room or house, and/or building and roads, trees, gardens, bodies of water, and land formations."
+  },
+  {
+   "idx": "PK.G.1.b",
+   "text": "Develop an awareness of their own home, classroom, school, neighborhood, and community."
+  },
+  {
+   "idx": "PK.G.1.c",
+   "text": "Develop an awareness of basic, developmentally appropriate spatial concepts such as near and far."
+  },
+  {
+   "idx": "PK.E.1",
+   "text": "Understand that individuals have many wants and must make choices."
+  },
+  {
+   "idx": "PK.E.1.a",
+   "text": "Identify choices that individuals can make to get their needs and wants met."
+  },
+  {
+   "idx": "PK.E.1.b",
+   "text": "Explain how individuals earn money and use it to make choices among their various wants."
+  },
+  {
+   "idx": "PK.C.1",
+   "text": "Understand one's relationship to the family and community and respect differences in others."
+  },
+  {
+   "idx": "PK.C.1.a",
+   "text": "Recognize membership in family, neighborhood, school, team, and various other groups and organizations."
+  },
+  {
+   "idx": "PK.C.1.b",
+   "text": "Understand similarities and respect differences among people of diverse backgrounds within their classroom and community."
+  },
+  {
+   "idx": "PK.C.1.c",
+   "text": "Identify emotions using age-appropriate vocabulary and correlate cause and effect to those emotions."
+  },
+  {
+   "idx": "PK.C.1.d",
+   "text": "Utilize positive social skill methods such as communication, trade-offs, common goals, kind actions, etc. to get positive results for obtaining needs and wants from other individuals, classmates, friends, and adults to empathize with others and begin to solve problems."
+  },
+  {
+   "idx": "PK.C.1.e",
+   "text": "Understand how similarities and differences can make a family, classroom, and community stronger."
+  },
+  {
+   "idx": "PK.C.2",
+   "text": "Understand that rules allow groups to work effectively."
+  },
+  {
+   "idx": "PK.C.2.a",
+   "text": "Understand how rules in the classroom, home, and community keep us safe."
+  },
+  {
+   "idx": "PK.C.2.b",
+   "text": "Show interest in interacting with and developing relationships with others, including those who are African American, Latino, Asian American, Hawaiian/Pacific Islander, Indigenous Peoples, LGBTQ, and religious minorities."
+  },
+  {
+   "idx": "PK.C.2.c",
+   "text": "Recognize that everyone has rights and responsibilities within a group."
+  },
+  {
+   "idx": "PK.C.2.d",
+   "text": "Demonstrate self-regulated behaviors and problem-solving skills when resolving conflicts."
+  },
+  {
+   "idx": "PK.C.2.e",
+   "text": "Follow classroom routines, rules, and expectations."
+  },
+  {
+   "idx": "PK.PF.1",
+   "text": "Identify money and its purpose."
+  },
+  {
+   "idx": "PK.PF.1.a",
+   "text": "Recognize coins and currency as money."
+  },
+  {
+   "idx": "PK.PF.1.b",
+   "text": "Identify how money is obtained (e.g., through work or gifts) and how it is used."
+  },
+  {
+   "idx": "PK.PF.1.c",
+   "text": "Discuss why we need money."
+  },
+  {
+   "idx": "PK.PF.1.d",
+   "text": "Identify different forms of money and their different values."
+  },
+  {
+   "idx": "PS1",
+   "text": "Physical Science"
+  },
+  {
+   "idx": "PS1.PK.1",
+   "text": "Recognize there are cause-and-effect relationships related to matter and energy."
+  },
+  {
+   "idx": "PS1.PK.1.a",
+   "text": "Use senses to explore the properties of objects and materials (e.g., solids, liquids)."
+  },
+  {
+   "idx": "PS1.PK.1.b",
+   "text": "Make simple observations, predictions, explanations, and generalizations based on real-life experiences."
+  },
+  {
+   "idx": "PS1.PK.1.c",
+   "text": "Collect, describe, predict and record information using words, drawings, maps, graphs and charts."
+  },
+  {
+   "idx": "PS1.PK.1.d",
+   "text": "Observe, describe, and discuss living things and natural processes."
+  },
+  {
+   "idx": "PS1.PK.2",
+   "text": "Recognize there are cause-and-effect relationships related to matter and energy."
+  },
+  {
+   "idx": "PS1.PK.2.a",
+   "text": "Recognize and investigate cause-and-effect relationships in everyday experiences (pushing, pulling, kicking, rolling or blowing objects)."
+  },
+  {
+   "idx": "PS1.PK.2.b",
+   "text": "Notice change in matter."
+  },
+  {
+   "idx": "PS1.PK.2.c",
+   "text": "Observe, describe and discuss properties of materials and transformation of substances."
+  },
+  {
+   "idx": "PS1.PK.2.d",
+   "text": "Seek answers to questions and test predictions using simple experiments."
+  },
+  {
+   "idx": "LS2",
+   "text": "Life Science"
+  },
+  {
+   "idx": "LS2.PK.1",
+   "text": "Recognize that living things have unique characteristics and basic needs that can be observed and studied."
+  },
+  {
+   "idx": "LS2.PK.1.a",
+   "text": "Observe, describe and discuss living things."
+  },
+  {
+   "idx": "LS2.PK.1.b",
+   "text": "Observe similarities and differences in the needs of living things."
+  },
+  {
+   "idx": "LS2.PK.1.c",
+   "text": "Observe and describe how natural habitats provide for the basic needs of plants and animals with respect to shelter, food, water, air and light."
+  },
+  {
+   "idx": "LS2.PK.1.d",
+   "text": "Ask and pursue questions through simple investigations and observations of living things."
+  },
+  {
+   "idx": "LS2.PK.1.e",
+   "text": "Collect, describe, and record information about living things through discussion, drawings, graphs, technology and charts."
+  },
+  {
+   "idx": "LS2.PK.1.f",
+   "text": "Identify differences between living and nonliving things."
+  },
+  {
+   "idx": "LS2.PK.2",
+   "text": "Recognize that living things develop in predictable patterns."
+  },
+  {
+   "idx": "LS2.PK.2.a",
+   "text": "Identify the common needs such as food, air and water of familiar living things."
+  },
+  {
+   "idx": "LS2.PK.2.b",
+   "text": "Predict, explain and infer patterns based on observations and representations of living things, their needs and life cycles."
+  },
+  {
+   "idx": "LS2.PK.2.c",
+   "text": "Observe and document changes in living things over time using different modalities such as drawing, dramatization, describing or using technology."
+  },
+  {
+   "idx": "LS2.PK.2.d",
+   "text": "Recognize that plants and animals grow and change."
+  },
+  {
+   "idx": "ESS3",
+   "text": "Earth and Space Science"
+  },
+  {
+   "idx": "ESS3.PK.1",
+   "text": "The acquisition of concepts and facts related to the Earth materials and their uses."
+  },
+  {
+   "idx": "ESS3.PK.1.a",
+   "text": "Use senses and tools, including technology, to investigate materials, and observe processes and relationships to gather information and explore the environment."
+  },
+  {
+   "idx": "ESS3.PK.1.b",
+   "text": "Inquire about the natural and physical environment."
+  },
+  {
+   "idx": "ESS3.PK.1.c",
+   "text": "Observe and discuss common properties, differences and comparisons among objects."
+  },
+  {
+   "idx": "ESS3.PK.1.d",
+   "text": "Participate in simple investigations to form hypothesis, gather observations, draw conclusions."
+  },
+  {
+   "idx": "ESS3.PK.1.e",
+   "text": "Record observations using words, drawings, maps, graphs and charts."
+  },
+  {
+   "idx": "ESS3.PK.2",
+   "text": "The acquisition of concepts and facts related to the natural and physical world and the understanding of naturally occurring relationships."
+  },
+  {
+   "idx": "ESS3.PK.2.a",
+   "text": "Predict, explain and infer patterns based on observations and evidence."
+  },
+  {
+   "idx": "ESS3.PK.2.b",
+   "text": "Articulate findings through a variety of modalities (e.g., drawings, words, dramatizations)."
+  },
+  {
+   "idx": "ESS3.PK.2.c",
+   "text": "Recognizes familiar elements of the natural world and demonstrates an understanding that these may change over time (e.g., sun and moon, weather)."
+  },
+  {
+   "idx": "ESS3.PK.2.d",
+   "text": "Observe and describe patterns observed over the course of a number of days and nights (e.g., differences in the activities or appearance of plants and animals)."
+  }
+ ]
+}

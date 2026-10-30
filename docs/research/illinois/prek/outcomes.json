@@ -1,0 +1,678 @@
+{
+ "pk/math": [
+  {
+   "idx": "6.A.ECa",
+   "text": "Count with understanding and recognize “how many” in small sets up to 5."
+  },
+  {
+   "idx": "6.A.ECb",
+   "text": "Use subitizing (the rapid and accurate judgment of how many items there are without counting) to identify the number of objects in sets of 4 or less."
+  },
+  {
+   "idx": "6.A.ECc",
+   "text": "Understand and appropriately use informal or everyday terms that mean zero, such as"
+  },
+  {
+   "idx": "6.A.ECd",
+   "text": "Connect numbers to quantities they represent using physical models and informal representations."
+  },
+  {
+   "idx": "6.A.ECe",
+   "text": "Differentiate numerals from letters and recognize some single-digit written numerals."
+  },
+  {
+   "idx": "6.A.ECf",
+   "text": "Verbally recite numbers from 1 to 10."
+  },
+  {
+   "idx": "6.A.ECg",
+   "text": "Be able to say the number after another in the series up to 9 when given a “running start,” as in “What comes after one, two, three, four…?”."
+  },
+  {
+   "idx": "6.B.ECa",
+   "text": "Recognize that numbers (or sets of objects) can be combined or separated to make another number."
+  },
+  {
+   "idx": "6.B.ECb",
+   "text": "Show understanding of how to count out and construct sets of objects of a given number up to 5."
+  },
+  {
+   "idx": "6.B.ECc",
+   "text": "Identify the new number created when small sets (up to 5) are combined or separated."
+  },
+  {
+   "idx": "6.B.ECd",
+   "text": "Informally solve simple mathematical problems presented in a meaningful context."
+  },
+  {
+   "idx": "6.B.ECe",
+   "text": "Fairly share a set of up to 10 items between two children."
+  },
+  {
+   "idx": "6.C.ECa",
+   "text": "Estimate number of objects in a small set."
+  },
+  {
+   "idx": "6.D.ECa",
+   "text": "Compare two collections to see if they are equal or determine which is more, using a procedure of the child’s choice."
+  },
+  {
+   "idx": "6.D.ECb",
+   "text": "Describe comparisons with appropriate vocabulary, such as “more”, “less”, “greater than”, “fewer”, “equal to”, or “same as”."
+  },
+  {
+   "idx": "7.A.ECa",
+   "text": "Compare, order, and describe objects according to a single attribute."
+  },
+  {
+   "idx": "7.A.ECb",
+   "text": "Use nonstandard units to measure attributes such as length and capacity."
+  },
+  {
+   "idx": "7.A.ECc",
+   "text": "Use vocabulary that describes and compares length, height, weight, capacity, and size."
+  },
+  {
+   "idx": "7.A.ECd",
+   "text": "Begin to construct a sense of time through participation in daily activities."
+  },
+  {
+   "idx": "7.B.ECa",
+   "text": "Practice estimating in everyday play and everyday measurement problems."
+  },
+  {
+   "idx": "7.C.ECa",
+   "text": "With teacher assistance, explore use of measuring tools that use standard units to measure objects and quantities that are meaningful to the child."
+  },
+  {
+   "idx": "7.C.ECb",
+   "text": "Know that different attributes, such as length, weight, and time, are measured using different kinds of units, such as feet, pounds, and seconds."
+  },
+  {
+   "idx": "8.A.ECa",
+   "text": "Sort, order, compare, and describe objects according to characteristics or attribute(s)."
+  },
+  {
+   "idx": "8.A.ECb",
+   "text": "Recognize, duplicate, extend, and create simple patterns in various formats."
+  },
+  {
+   "idx": "8.B.ECa",
+   "text": "With adult assistance, represent a simple repeating pattern by verbally describing it or by modeling it with objects or actions."
+  },
+  {
+   "idx": "9.A.ECa",
+   "text": "Recognize and name common two- and three-dimensional shapes and describe some of their attributes (e.g., number of sides, straight or curved lines)."
+  },
+  {
+   "idx": "9.A.ECb",
+   "text": "Sort collections of two- and three-dimensional shapes by type (e.g., triangles, rectangles, circles, cubes, spheres, pyramids)."
+  },
+  {
+   "idx": "9.A.ECc",
+   "text": "Identify and name some of the faces (flat sides) of common three-dimensional shapes using two-dimensional shape names."
+  },
+  {
+   "idx": "9.A.ECd",
+   "text": "Combine two-dimensional shapes to create new shapes."
+  },
+  {
+   "idx": "9.A.ECe",
+   "text": "Think about/imagine how altering the spatial orientation of a shape will change how it looks (e.g., turning it upside down)."
+  },
+  {
+   "idx": "9.B.ECa",
+   "text": "Show understanding of location and ordinal position."
+  },
+  {
+   "idx": "9.B.ECb",
+   "text": "Use appropriate vocabulary for identifying location and ordinal position."
+  },
+  {
+   "idx": "10.A.ECa",
+   "text": "With teacher assistance, come up with meaningful questions that can be answered through gathering information."
+  },
+  {
+   "idx": "10.A.ECb",
+   "text": "Gather data about themselves and their surroundings to answer meaningful questions."
+  },
+  {
+   "idx": "10.B.ECa",
+   "text": "Organize, represent, and analyze information using concrete objects, pictures, and graphs, with teacher support."
+  },
+  {
+   "idx": "10.B.ECb",
+   "text": "Make predictions about the outcome prior to collecting information, with teacher support and multiple experiences over time."
+  },
+  {
+   "idx": "10.C.ECa",
+   "text": "Describe likelihood of events with appropriate vocabulary, such as “possible”, “impossible”, “always”, and “never”."
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "1.A.ECa",
+   "text": "Follow simple one-, two- and three-step directions."
+  },
+  {
+   "idx": "1.A.ECb",
+   "text": "Respond appropriately to questions from others."
+  },
+  {
+   "idx": "1.A.ECc",
+   "text": "Provide comments relevant to the context."
+  },
+  {
+   "idx": "1.A.ECd",
+   "text": "Identify emotions from facial expressions and body language."
+  },
+  {
+   "idx": "1.B.ECa",
+   "text": "Use language for a variety of purposes."
+  },
+  {
+   "idx": "1.B.ECb",
+   "text": "With teacher assistance, participate in collaborative conversations with diverse partners (e.g., peers and adults in both small and large groups) about age-appropriate topics and texts."
+  },
+  {
+   "idx": "1.B.ECc",
+   "text": "Continue a conversation through two or more exchanges."
+  },
+  {
+   "idx": "1.B.ECd",
+   "text": "Engage in agreed-upon rules for discussions (e.g., listening, making eye contact, taking turns speaking)."
+  },
+  {
+   "idx": "1.C.ECa",
+   "text": "Describe familiar people, places, things, and events and, with teacher assistance, provide additional detail."
+  },
+  {
+   "idx": "1.D.ECa",
+   "text": "With teacher assistance, use complete sentences in speaking with peers and adults in individual and group situations."
+  },
+  {
+   "idx": "1.D.ECb",
+   "text": "Speak using age-appropriate conventions of Standard English grammar and usage."
+  },
+  {
+   "idx": "1.D.ECc",
+   "text": "Understand and use question words in speaking."
+  },
+  {
+   "idx": "1.E.ECa",
+   "text": "With teacher assistance, begin to use increasingly complex sentences."
+  },
+  {
+   "idx": "1.E.ECb",
+   "text": "Exhibit curiosity and interest in learning new words heard in conversations and books."
+  },
+  {
+   "idx": "1.E.ECc",
+   "text": "With teacher assistance, use new words acquired through conversations and book‑sharing experiences."
+  },
+  {
+   "idx": "1.E.ECd",
+   "text": "With teacher assistance, explore word relationships to understand the concepts represented by common categories of words (e.g., food, clothing, vehicles)."
+  },
+  {
+   "idx": "1.E.ECe",
+   "text": "With teacher assistance, use adjectives to describe people, places, and things."
+  },
+  {
+   "idx": "2.A.ECa",
+   "text": "Engage in book-sharing experiences with purpose and understanding."
+  },
+  {
+   "idx": "2.A.ECb",
+   "text": "Look at books independently, pretending to read."
+  },
+  {
+   "idx": "2.B.ECa",
+   "text": "With teacher assistance, ask and answer questions about books read aloud."
+  },
+  {
+   "idx": "2.B.ECb",
+   "text": "With teacher assistance, retell familiar stories with three or more key events."
+  },
+  {
+   "idx": "2.B.ECc",
+   "text": "With teacher assistance, identify main character(s) of the story."
+  },
+  {
+   "idx": "2.C.ECa",
+   "text": "Interact with a variety of types of texts (e.g., storybooks, poems, rhymes, songs)."
+  },
+  {
+   "idx": "2.C.ECb",
+   "text": "Identify the front and back covers of books and display the correct orientation of books and page-turning skills."
+  },
+  {
+   "idx": "2.C.ECc",
+   "text": "With teacher assistance, describe the role of an author and illustrator."
+  },
+  {
+   "idx": "2.D.ECa",
+   "text": "With teacher assistance, discuss illustrations in books and make personal connections to the pictures and story."
+  },
+  {
+   "idx": "2.D.ECb",
+   "text": "With teacher assistance, compare and contrast two stories relating to the same topic."
+  },
+  {
+   "idx": "3.A.ECa",
+   "text": "With teacher assistance, ask and answer questions about details in a nonfiction book."
+  },
+  {
+   "idx": "3.A.ECb",
+   "text": "With teacher assistance, retell detail(s) about main topic in a nonfiction book."
+  },
+  {
+   "idx": "3.B.ECa",
+   "text": "With teacher assistance, identify basic similarities and differences in pictures and information found in two texts on the same topic."
+  },
+  {
+   "idx": "4.A.ECa",
+   "text": "Recognize the differences between print and pictures."
+  },
+  {
+   "idx": "4.A.ECb",
+   "text": "Begin to follow words from left to right, top to bottom, and page by page."
+  },
+  {
+   "idx": "4.A.ECc",
+   "text": "Recognize the one-to-one relationship between spoken and written words."
+  },
+  {
+   "idx": "4.A.ECd",
+   "text": "Understand that words are separated by spaces in print."
+  },
+  {
+   "idx": "4.A.ECe",
+   "text": "Recognize that letters are grouped to form words."
+  },
+  {
+   "idx": "4.A.ECf",
+   "text": "Differentiate letters from numerals."
+  },
+  {
+   "idx": "4.B.ECa",
+   "text": "With teacher assistance, recite the alphabet."
+  },
+  {
+   "idx": "4.B.ECb",
+   "text": "Recognize and name some upper/lowercase letters of the alphabet, especially those in own name."
+  },
+  {
+   "idx": "4.B.ECc",
+   "text": "With teacher assistance, match some upper/lowercase letters of the alphabet."
+  },
+  {
+   "idx": "4.B.ECd",
+   "text": "With teacher assistance, begin to form some letters of the alphabet, especially those in own name."
+  },
+  {
+   "idx": "4.C.ECa",
+   "text": "Recognize that sentences are made up of separate words."
+  },
+  {
+   "idx": "4.C.ECb",
+   "text": "With teacher assistance, recognize and match words that rhyme."
+  },
+  {
+   "idx": "4.C.ECc",
+   "text": "Demonstrate ability to segment and blend syllables in words (e.g., “trac/tor, tractor”)."
+  },
+  {
+   "idx": "4.C.ECd",
+   "text": "With teacher assistance, isolate and pronounce the initial sounds in words."
+  },
+  {
+   "idx": "4.C.ECe",
+   "text": "With teacher assistance, blend sounds (phonemes) in one-syllable words (e.g., /c/ /a/ /t/ = cat)."
+  },
+  {
+   "idx": "4.C.ECf",
+   "text": "With teacher assistance, begin to segment sounds (phonemes) in one-syllable words (e.g., cat = /c/ /a/ /t/)."
+  },
+  {
+   "idx": "4.C.ECg",
+   "text": "With teacher assistance, begin to manipulate sounds (phonemes) in words (e.g., changing cat to hat to mat)."
+  },
+  {
+   "idx": "4.D.ECa",
+   "text": "Recognize own name and common signs and labels in the environment."
+  },
+  {
+   "idx": "4.D.ECb",
+   "text": "With teacher assistance, demonstrate understanding of the one-to-one correspondence of letters and sounds."
+  },
+  {
+   "idx": "4.D.ECc",
+   "text": "With teacher assistance, begin to use knowledge of letters and sounds to spell words phonetically."
+  },
+  {
+   "idx": "5.A.ECa",
+   "text": "Experiment with writing tools and materials."
+  },
+  {
+   "idx": "5.A.ECb",
+   "text": "Use scribbles, letterlike forms, or letters/words to represent written language."
+  },
+  {
+   "idx": "5.A.ECc",
+   "text": "With teacher assistance, write own first name using appropriate upper/ lowercase letters."
+  },
+  {
+   "idx": "5.B.ECa",
+   "text": "With teacher assistance, use a combination of drawing, dictating, or writing to express an opinion about a book or topic."
+  },
+  {
+   "idx": "5.B.ECb",
+   "text": "With teacher assistance, use a combination of drawing, dictating, or writing to compose informative/explanatory texts in which they name what they are writing about and supply some information about the topic."
+  },
+  {
+   "idx": "5.B.ECc",
+   "text": "With teacher assistance, use a combination of drawing, dictating, or writing to narrate a single event and provide a reaction to what happened."
+  },
+  {
+   "idx": "5.C.ECa",
+   "text": "Participate in group projects or units of study designed to learn about a topic of interest."
+  },
+  {
+   "idx": "5.C.ECb",
+   "text": "With teacher assistance, recall factual information and share that information through drawing, dictation, or writing."
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "11.A.ECa",
+   "text": "Express wonder and curiosity about their world by asking questions, solving problems, and designing things."
+  },
+  {
+   "idx": "11.A.ECb",
+   "text": "Develop and use models to represent their ideas, observations, and explanations through approaches such as drawing, building, or modeling with clay."
+  },
+  {
+   "idx": "11.A.ECc",
+   "text": "Plan and carry out simple investigations."
+  },
+  {
+   "idx": "11.A.ECd",
+   "text": "Collect, describe, compare, and record information from observations and investigations."
+  },
+  {
+   "idx": "11.A.ECe",
+   "text": "Use mathematical and computational thinking."
+  },
+  {
+   "idx": "11.A.ECf",
+   "text": "Make meaning from experience and information by describing, talking, and thinking about what happened during an investigation."
+  },
+  {
+   "idx": "11.A.ECg",
+   "text": "Generate explanations and communicate ideas and/or conclusions about their investigations."
+  },
+  {
+   "idx": "12.A.ECa",
+   "text": "Observe, investigate, describe, and categorize living things."
+  },
+  {
+   "idx": "12.A.ECb",
+   "text": "Show an awareness of changes that occur in oneself and the environment."
+  },
+  {
+   "idx": "12.B.ECa",
+   "text": "Describe and compare basic needs of living things."
+  },
+  {
+   "idx": "12.B.ECb",
+   "text": "Show respect for living things."
+  },
+  {
+   "idx": "12.C.ECa",
+   "text": "Identify, describe, and compare the physical properties of objects."
+  },
+  {
+   "idx": "12.C.ECb",
+   "text": "Experiment with changes in matter when combined with other substances."
+  },
+  {
+   "idx": "12.D.ECa",
+   "text": "Describe the effects of forces in nature."
+  },
+  {
+   "idx": "12.D.ECb",
+   "text": "Explore the effect of force on objects in and outside the early childhood environment."
+  },
+  {
+   "idx": "12.E.ECa",
+   "text": "Observe and describe characteristics of earth, water, and air."
+  },
+  {
+   "idx": "12.E.ECb",
+   "text": "Participate in discussions about simple ways to take care of the environment."
+  },
+  {
+   "idx": "12.F.ECa",
+   "text": "Observe and discuss changes in weather and seasons using common vocabulary."
+  },
+  {
+   "idx": "13.A.ECa",
+   "text": "Begin to understand basic safety practices one must follow when exploring and engaging in science and engineering investigations."
+  },
+  {
+   "idx": "13.B.ECa",
+   "text": "Use nonstandard and standard scientific tools for investigation."
+  },
+  {
+   "idx": "13.B.ECb",
+   "text": "Become familiar with technological tools that can aid in scientific inquiry."
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "12.A.ECa",
+   "text": "Observe, investigate, describe, and categorize living things."
+  },
+  {
+   "idx": "12.A.ECb",
+   "text": "Show an awareness of changes that occur in oneself and the environment."
+  },
+  {
+   "idx": "12.B.ECa",
+   "text": "Describe and compare basic needs of living things."
+  },
+  {
+   "idx": "12.B.ECb",
+   "text": "Show respect for living things."
+  },
+  {
+   "idx": "12.C.ECa",
+   "text": "Identify, describe, and compare the physical properties of objects."
+  },
+  {
+   "idx": "12.C.ECb",
+   "text": "Experiment with changes in matter when combined with other substances."
+  },
+  {
+   "idx": "12.D.ECa",
+   "text": "Describe the effects of forces in nature."
+  },
+  {
+   "idx": "12.D.ECb",
+   "text": "Explore the effect of force on objects in and outside the early childhood environment."
+  },
+  {
+   "idx": "12.E.ECa",
+   "text": "Observe and describe characteristics of earth, water, and air."
+  },
+  {
+   "idx": "12.E.ECb",
+   "text": "Participate in discussions about simple ways to take care of the environment."
+  },
+  {
+   "idx": "12.F.ECa",
+   "text": "Observe and discuss changes in weather and seasons using common vocabulary."
+  },
+  {
+   "idx": "14.A.ECa",
+   "text": "Recognize the reasons for rules in the home and early childhood environment and for laws in the community."
+  },
+  {
+   "idx": "14.A.ECb",
+   "text": "Contribute to the well-being of one’s early childhood environment, school, and community."
+  },
+  {
+   "idx": "14.C.ECa",
+   "text": "Participate in voting as a way of making choices."
+  },
+  {
+   "idx": "14.D.ECa",
+   "text": "Develop an awareness of what it means to be a leader."
+  },
+  {
+   "idx": "14.D.ECb",
+   "text": "Participate in a variety of roles in the early childhood environment."
+  },
+  {
+   "idx": "15.A.ECa",
+   "text": "Describe some common jobs and what is needed to perform those jobs."
+  },
+  {
+   "idx": "15.A.ECb",
+   "text": "Discuss why people work."
+  },
+  {
+   "idx": "15.B.ECa",
+   "text": "Understand that some resources and money are limited."
+  },
+  {
+   "idx": "15.D.ECa",
+   "text": "Begin to understand the use of trade or money to obtain goods and services."
+  },
+  {
+   "idx": "16.A.ECa",
+   "text": "Recall information about the immediate past."
+  },
+  {
+   "idx": "16.A.ECb",
+   "text": "Develop a basic awareness of self as an individual."
+  },
+  {
+   "idx": "17.A.ECa",
+   "text": "Locate objects and places in familiar environments."
+  },
+  {
+   "idx": "17.A.ECb",
+   "text": "Express beginning geographic thinking."
+  },
+  {
+   "idx": "18.A.ECa",
+   "text": "Recognize similarities and differences in people."
+  },
+  {
+   "idx": "18.B.ECa",
+   "text": "Understand that each of us belongs to a family and recognize that families vary."
+  },
+  {
+   "idx": "30.A.ECa",
+   "text": "Recognize and label basic emotions."
+  },
+  {
+   "idx": "30.A.ECb",
+   "text": "Use appropriate communication skills when expressing needs, wants, and feelings."
+  },
+  {
+   "idx": "30.A.ECc",
+   "text": "Express feelings that are appropriate to the situation."
+  },
+  {
+   "idx": "30.A.ECd",
+   "text": "Begin to understand and follow rules."
+  },
+  {
+   "idx": "30.A.ECe",
+   "text": "Use materials with purpose, safety, and respect."
+  },
+  {
+   "idx": "30.A.ECf",
+   "text": "Begin to understand the consequences of his or her behavior."
+  },
+  {
+   "idx": "30.B.ECa",
+   "text": "Describe self using several basic characteristics."
+  },
+  {
+   "idx": "30.C.ECa",
+   "text": "Exhibit eagerness and curiosity as a learner."
+  },
+  {
+   "idx": "30.C.ECb",
+   "text": "Demonstrate persistence and creativity in seeking solutions to problems."
+  },
+  {
+   "idx": "30.C.ECc",
+   "text": "Show some initiative, self-direction, and independence in actions."
+  },
+  {
+   "idx": "30.C.ECd",
+   "text": "Demonstrate engagement and sustained attention in activities."
+  },
+  {
+   "idx": "31.A.ECa",
+   "text": "Show empathy, sympathy, and caring for others."
+  },
+  {
+   "idx": "31.A.ECb",
+   "text": "Recognize the feelings and perspectives of others."
+  },
+  {
+   "idx": "31.A.ECc",
+   "text": "Interact easily with familiar adults."
+  },
+  {
+   "idx": "31.A.ECd",
+   "text": "Demonstrate attachment to familiar adults."
+  },
+  {
+   "idx": "31.A.ECe",
+   "text": "Develop positive relationships with peers."
+  },
+  {
+   "idx": "31.B.ECa",
+   "text": "Interact verbally and nonverbally with other children."
+  },
+  {
+   "idx": "31.B.ECb",
+   "text": "Engage in cooperative group play."
+  },
+  {
+   "idx": "31.B.ECc",
+   "text": "Use socially appropriate behavior with peers and adults, such as helping, sharing, and taking turns."
+  },
+  {
+   "idx": "31.C.ECa",
+   "text": "Begin to share materials and experiences and take turns."
+  },
+  {
+   "idx": "31.C.ECb",
+   "text": "Solve simple conflicts with peers with independence, using gestures or words."
+  },
+  {
+   "idx": "31.C.ECc",
+   "text": "Seek adult help when needed to resolve conflict."
+  },
+  {
+   "idx": "32.A.ECa",
+   "text": "Participate in discussions about why rules exist."
+  },
+  {
+   "idx": "32.A.ECb",
+   "text": "Follow rules and make good choices about behavior."
+  },
+  {
+   "idx": "32.B.ECa",
+   "text": "Participate in discussions about finding alternative solutions to problems."
+  }
+ ]
+}

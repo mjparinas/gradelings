@@ -185,6 +185,10 @@ export const NEW_JERSEY_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-K in New Jersey is public preschool, free and full-day in a growing number of school districts, offered in district schools, Head Start and community child care centers. Classrooms follow the New Jersey Preschool Teaching and Learning Standards: social and emotional development, language arts, math, science, social studies, the arts, health and physical education, and technology.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in New Jersey is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100, start adding and taking away within 10 and learn the names of coins. In social studies they learn about themselves, families, rules and community helpers. Schools also check early reading skills.",
       lookFor: "Many New Jersey districts use standards-based report cards. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

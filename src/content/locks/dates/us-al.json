@@ -1,5 +1,9 @@
 {
   "courses": {
+    "pk/language": "2026-10-29",
+    "pk/math": "2026-10-29",
+    "pk/science": "2026-10-29",
+    "pk/social": "2026-10-29",
     "k/language": "2026-10-14",
     "k/math": "2026-10-14",
     "k/science": "2026-10-14",
@@ -42,6 +46,32 @@
     "9/social": "2026-10-14"
   },
   "units": {
+    "pk/language/letter-names": "2026-10-29",
+    "pk/language/first-sounds": "2026-10-29",
+    "pk/language/rhyme-time": "2026-10-29",
+    "pk/language/clap-the-parts": "2026-10-29",
+    "pk/language/listen-to-a-story": "2026-10-29",
+    "pk/language/word-meanings": "2026-10-29",
+    "pk/math/count-to-5": "2026-10-29",
+    "pk/math/find-the-number": "2026-10-29",
+    "pk/math/more-or-fewer": "2026-10-29",
+    "pk/math/shapes": "2026-10-29",
+    "pk/math/patterns": "2026-10-29",
+    "pk/math/big-and-small": "2026-10-29",
+    "pk/math/sort-it": "2026-10-29",
+    "pk/science/five-senses": "2026-10-29",
+    "pk/science/living-or-not": "2026-10-29",
+    "pk/science/animals-and-babies": "2026-10-29",
+    "pk/science/weather-and-sky": "2026-10-29",
+    "pk/science/plants-grow": "2026-10-29",
+    "pk/science/sink-or-float": "2026-10-29",
+    "pk/social/my-family": "2026-10-29",
+    "pk/social/feelings": "2026-10-29",
+    "pk/social/community-helpers": "2026-10-29",
+    "pk/social/places-around-me": "2026-10-29",
+    "pk/social/taking-turns": "2026-10-29",
+    "pk/social/first-next-last": "2026-10-29",
+    "pk/social/caring-for-our-world": "2026-10-29",
     "k/language/letter-partners": "2026-10-14",
     "k/language/first-sounds": "2026-10-14",
     "k/language/rhyme-time": "2026-10-14",
@@ -583,5 +613,5 @@
     "9/social/al-g9-world-today": "2026-10-14",
     "9/social/al-g9-timeline": "2026-10-14"
   },
-  "guides": "2026-10-14 77a5a07d5d"
+  "guides": "2026-10-29 95733e6308"
 }

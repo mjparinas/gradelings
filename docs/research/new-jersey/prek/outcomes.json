@@ -1,0 +1,578 @@
+{
+ "pk/math": [
+  {
+   "idx": "4.1.1",
+   "text": "Count to 20 by ones with minimal prompting."
+  },
+  {
+   "idx": "4.1.2",
+   "text": "Recognize and name one-digit written numbers up to 10 with minimal prompting."
+  },
+  {
+   "idx": "4.1.3",
+   "text": "Know that written numbers are symbols for number quantities and, with support, begin to write numbers from 0 to 10."
+  },
+  {
+   "idx": "4.1.4",
+   "text": "Understand the relationship between numbers and quantities (i.e., the last word stated when counting tells “how many”):"
+  },
+  {
+   "idx": "4.1.5",
+   "text": "Use one to one correspondence to solve problems by matching sets (e.g., getting just enough straws to distribute for each juice container on the table) and comparing amounts (e.g., collecting the number of cubes needed to fill the spaces in a muffin tin with one cube each)."
+  },
+  {
+   "idx": "4.1.6",
+   "text": "Compare groups of up to 5 objects (e.g., beginning to use terms such as “more,” “less,” “same”)."
+  },
+  {
+   "idx": "4.2.1",
+   "text": "Represent addition and subtraction by manipulating up to 5 objects: (a) putting together and adding to (e.g., “3 blue pegs, 2 yellow pegs, 5 pegs altogether.”); and (b) taking apart and taking from (“I have four carrot sticks. I’m eating one. Now I have 3.”)."
+  },
+  {
+   "idx": "4.2.2",
+   "text": "Begin to represent simple word problem data in pictures and drawings."
+  },
+  {
+   "idx": "4.3.1",
+   "text": "Sort, order, pattern, and classify objects by non-measurable (e.g., color, texture, type of material) and measurable attributes"
+  },
+  {
+   "idx": "4.3.2",
+   "text": "Begin to use appropriate vocabulary to demonstrate awareness of the measurable attributes of length, area, weight and capacity of everyday objects (e.g., long, short, tall, light, heavy, full)."
+  },
+  {
+   "idx": "4.3.3",
+   "text": "Compare (e.g., which container holds more) and order (e.g., shortest to longest) up to 5 objects according to measurable attributes."
+  },
+  {
+   "idx": "4.4.1",
+   "text": "Respond to and use positional words (e.g., in, under, between, down, behind)."
+  },
+  {
+   "idx": "4.4.2",
+   "text": "Use accurate terms to name and describe some two-dimensional shapes and begin to use accurate terms to name and describe some three-dimensional shapes (e.g., circle, square, triangle, sphere, cylinder, cube, side point, angle)."
+  },
+  {
+   "idx": "4.4.3",
+   "text": "Manipulate, compare and discuss the attributes of: (a) two-dimensional shapes (e.g., use two dimensional shapes to make designs, patterns and pictures by manipulating materials such as paper shapes, puzzle pieces, tangrams; construct shapes from materials such as straws; match identical shapes; sort shapes based on rules [something that makes them alike/different]; describe shapes by sides/angles; use pattern blocks to compose/decompose shapes when making and taking apart compositions of several shapes). (b) three-dimensional shapes by building with blocks and with other materials having height, width and depth (e.g., unit blocks, hollow blocks, attribute blocks, boxes, empty food containers, plastic pipe). __________________________________________________________________________"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "RL.PK.1",
+   "text": "With prompting and support, ask and answer key elements in a familiar story or poem."
+  },
+  {
+   "idx": "RL.PK.2",
+   "text": "With prompting and support, retell familiar stories or poems."
+  },
+  {
+   "idx": "RL.PK.3",
+   "text": "With prompting and support, identify characters, settings, and major events in a familiar story."
+  },
+  {
+   "idx": "RL.PK.4",
+   "text": "With prompting and support, ask and answer questions about unfamiliar words in a story or poem read aloud."
+  },
+  {
+   "idx": "RL.PK.5",
+   "text": "Recognize common types of literature (storybooks and poetry books)."
+  },
+  {
+   "idx": "RL.PK.6",
+   "text": "With prompting and support, identify the role of author and illustrator in telling the story."
+  },
+  {
+   "idx": "RL.PK.7",
+   "text": "With prompting and support, using a familiar storybook, tell how the illustrations support the story."
+  },
+  {
+   "idx": "RL.PK.9",
+   "text": "With prompting and support using a familiar storybook, tell how adventures and experiences of characters are alike and how they are different."
+  },
+  {
+   "idx": "RL.PK.10",
+   "text": "Actively participate in read aloud experiences using age appropriate literature in individual, small and large groups."
+  },
+  {
+   "idx": "RI.PK.1",
+   "text": "With prompting and support, ask and answer questions about key elements in a familiar text."
+  },
+  {
+   "idx": "RI.PK.2",
+   "text": "With prompting and support, recall important facts from a familiar text."
+  },
+  {
+   "idx": "RI.PK.3",
+   "text": "With prompting and support, make a connection between pieces of essential information in a familiar text."
+  },
+  {
+   "idx": "RI.PK.4",
+   "text": "With prompting and support, ask and answer questions about unfamiliar words in informational text."
+  },
+  {
+   "idx": "RI.PK.5",
+   "text": "Identify the front and back cover of a book."
+  },
+  {
+   "idx": "RI.PK.6",
+   "text": "With prompting and support, identify the role of author and illustrator in presenting ideas in informational text."
+  },
+  {
+   "idx": "RI.PK.7",
+   "text": "With prompting and support, tell how the illustrations support the text (information or topic) in informational text."
+  },
+  {
+   "idx": "RI.PK.10",
+   "text": "Actively participate in read aloud experiences using age appropriate information books individually and in small and large groups."
+  },
+  {
+   "idx": "RF.PK.1a",
+   "text": "Follow words from left to right, top to bottom, page by page."
+  },
+  {
+   "idx": "RF.PK.1b",
+   "text": "Recognize that spoken words can be written and read."
+  },
+  {
+   "idx": "RF.PK.1c",
+   "text": "Recognize that words are separated by spaces."
+  },
+  {
+   "idx": "RF.PK.1d",
+   "text": "Recognize and name many upper and lower case letters of the alphabet."
+  },
+  {
+   "idx": "RF.PK.1",
+   "text": "Begin to demonstrate understanding of basic features of print."
+  },
+  {
+   "idx": "RF.PK.2a",
+   "text": "Recognize and produce simple rhyming words."
+  },
+  {
+   "idx": "RF.PK.2b",
+   "text": "Segment syllables in spoken words by clapping out the number of syllables."
+  },
+  {
+   "idx": "RF.PK.2c",
+   "text": "Identify many initial sounds of familiar words."
+  },
+  {
+   "idx": "RF.PK.2",
+   "text": "Demonstrate understanding of spoken words and begin to understand syllables and sounds (phonemes)."
+  },
+  {
+   "idx": "RF.PK.3a",
+   "text": "Associates many letters (consonants and vowels as ready) with their names and their most frequent sounds."
+  },
+  {
+   "idx": "RF.PK.3c",
+   "text": "Recognize their name in print as well as other familiar print in the environment."
+  },
+  {
+   "idx": "RF.PK.3",
+   "text": "Demonstrate an understanding of beginning phonics and word skills."
+  },
+  {
+   "idx": "RF.PK.4",
+   "text": "Begin to engage in a variety of texts with purpose and understanding."
+  },
+  {
+   "idx": "W.PK.1",
+   "text": "Use a combination of drawings, dictation, scribble writing, letter-strings, or invented spelling to share a preference or opinion during play or other activities."
+  },
+  {
+   "idx": "W.PK.2",
+   "text": "Use a combination of drawings, dictation, scribble writing, letter-strings, or invented spelling to share information during play or other activities."
+  },
+  {
+   "idx": "W.PK.5",
+   "text": "With guidance and support, share a drawing with dictation, scribble-writing, letter-strings, or invented spelling to describe an event real or imagined."
+  },
+  {
+   "idx": "W.PK.6",
+   "text": "With guidance and support, use digital tools to express ideas (e.g., taking a picture of a block structure to document or express ideas, etc.)."
+  },
+  {
+   "idx": "W.PK.7",
+   "text": "With guidance and support, participate in shared research and shared writing projects."
+  },
+  {
+   "idx": "W.PK.8",
+   "text": "With guidance and support, recall information from experience or familiar topic to answer a question."
+  },
+  {
+   "idx": "SL.PK.1a",
+   "text": "Follow-agreed upon rules for discussions during group interactions."
+  },
+  {
+   "idx": "SL.PK.1b",
+   "text": "Continue a conversation through several back and forth exchanges."
+  },
+  {
+   "idx": "SL.PK.1",
+   "text": "Participate in conversations and interactions with peers and adults individually and in small and large groups."
+  },
+  {
+   "idx": "SL.PK.2",
+   "text": "Ask and answer questions about a text or other information read aloud or presented orally."
+  },
+  {
+   "idx": "SL.PK.3",
+   "text": "Ask and answer questions to seek help, get information, or follow directions."
+  },
+  {
+   "idx": "SL.PK.4",
+   "text": "Begin to describe familiar people, places, things, and events and sometimes with detail."
+  },
+  {
+   "idx": "SL.PK.5",
+   "text": "Use drawings or visual displays to add to descriptions to provide additional detail."
+  },
+  {
+   "idx": "SL.PK.6",
+   "text": "With guidance and support, speak audibly and express thoughts, feelings, and ideas."
+  },
+  {
+   "idx": "L.PK.1a",
+   "text": "Print many alphabet letters."
+  },
+  {
+   "idx": "L.PK.1b",
+   "text": "Use frequently occurring nouns and verbs."
+  },
+  {
+   "idx": "L.PK.1c",
+   "text": "Form regular plural nouns."
+  },
+  {
+   "idx": "L.PK.1d",
+   "text": "Understand and use question words (e.g., who, what, where, when, why, how)."
+  },
+  {
+   "idx": "L.PK.1e",
+   "text": "Use frequently occurring prepositions (e.g., to, from, in, out, on, off, for, by, with)."
+  },
+  {
+   "idx": "L.PK.1f",
+   "text": "Begin to speak in complete sentences."
+  },
+  {
+   "idx": "L.PK.1g",
+   "text": "Understands and can follow simple multi-step directions."
+  },
+  {
+   "idx": "L.PK.1",
+   "text": "Begin to understand the conventions of standard English grammar when speaking during interactions and activities."
+  },
+  {
+   "idx": "L.PK.2c",
+   "text": "Attempt to write a letter or letters by using scribble-writing, letter-like forms, letter-strings, and invented spelling during writing activities throughout the day."
+  },
+  {
+   "idx": "L.PK.2",
+   "text": "Begin to understand the simple conventions of standard English grammar during reading and writing experiences throughout the day."
+  },
+  {
+   "idx": "L.PK.4a",
+   "text": "With guidance and support, generate words that are similar in meaning (e.g., rock/stone,"
+  },
+  {
+   "idx": "L.PK.4",
+   "text": "Begin to determine the meaning of new words and phrases introduced through preschool reading and content."
+  },
+  {
+   "idx": "L.PK.5a",
+   "text": "Begin to sort familiar objects (e.g., sort a collection of plastic animals into groups: dogs, tigers, and bears)."
+  },
+  {
+   "idx": "L.PK.5b",
+   "text": "Begin to understand opposites of simple and familiar words."
+  },
+  {
+   "idx": "L.PK.5c",
+   "text": "Identify real-life connections between words and their use (e.g., “Tell me the name of a place in the classroom that is noisy or quiet.”)."
+  },
+  {
+   "idx": "L.PK.5",
+   "text": "With guidance and support, explore word relationships."
+  },
+  {
+   "idx": "L.PK.6",
+   "text": "Use words and phrases acquired through conversations, activities and read alouds."
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "5.1.1",
+   "text": "Display curiosity about science objects, materials, activities, and longer-term investigations in progress (e.g., ask who, what, when, where, why, and how questions during sensory explorations, experimentation, and focused inquiry)."
+  },
+  {
+   "idx": "5.1.2",
+   "text": "Observe, question, predict, and investigate materials, objects, and phenomena during classroom activities indoors and outdoors and during any longer-term investigations in progress. Seek answers to questions and test predictions using simple experiments or research media (e.g., cracking a nut to look inside; putting a toy car in water to determine whether it sinks)."
+  },
+  {
+   "idx": "5.1.3",
+   "text": "Use basic science terms (e.g., observe, predict, experiment) and topic-related science vocabulary (e.g., words related to living things [fur, fins, feathers, beak, bark, trunk, stem]; weather terms [breezy, mild, cloudy, hurricane, shower, temperature]; vocabulary related to simple machines [wheel, pulley, lever, screw, inclined plane]; words for states of matter [solid, liquid]; names of basic tools [hammer, screwdriver, awl, binoculars, stethoscope, magnifier])."
+  },
+  {
+   "idx": "5.1.4",
+   "text": "Communicate with other children and adults to share observations, pursue questions, make predictions, and/or conclusions."
+  },
+  {
+   "idx": "5.1.5",
+   "text": "Represent observations and work through drawing, recording data, and “writing” (e.g., drawing and “writing” on observation clipboards, making rubbings, charting the growth of plants)."
+  },
+  {
+   "idx": "5.2.1",
+   "text": "Observe, manipulate, sort, and describe objects and materials (e.g., water, sand, clay, paint, glue, various types of blocks, collections of objects, simple household items that can be taken apart, or objects made of wood, metal, or cloth) in the classroom and outdoor environment based on size, shape, color, texture, and weight."
+  },
+  {
+   "idx": "5.2.2",
+   "text": "Explore changes in liquids and solids when substances are combined, heated, or cooled (e.g., mixing sand or clay with various amounts of water; preparing gelatin; mixing different colors of tempera paint; and longer term investigations, such as the freezing and melting of water and other liquids)."
+  },
+  {
+   "idx": "5.2.3",
+   "text": "Investigate sound, heat, and light energy through one or more of the senses (e.g., comparing the pitch and volume of sounds made by commercially made and homemade instruments, recording how shadows change during the course of a day or over time, using flashlights or lamp light to make shadows indoors)."
+  },
+  {
+   "idx": "5.2.4",
+   "text": "Investigate how and why things move (e.g., slide block, balance structures, push structures over, use ramps to explore how far and how fast different objects move or roll)."
+  },
+  {
+   "idx": "5.3.1",
+   "text": "Investigate and compare the basic physical characteristics of plants, humans, and other animals (e.g., observing and discussing leaves, stems, roots, body parts; observing and drawing different insects; sorting leaves by shape; comparing animals with fur to those with feathers)."
+  },
+  {
+   "idx": "5.3.2",
+   "text": "Observe similarities and differences in the needs of living things, and differences between living and nonliving things (e.g., observing and discussing similarities between animal babies and their parents; discussing the differences between a living thing, such as a hermit crab, and a nonliving thing, such as a shell)."
+  },
+  {
+   "idx": "5.3.3",
+   "text": "Observe and describe how natural habitats provide for the basic needs of plants and animals with respect to shelter, food, water, air, and light (e.g., digging outside in the soil to investigate the kinds of animal life that live in and around the ground or replicating a natural habitat in a classroom terrarium)."
+  },
+  {
+   "idx": "5.3.4",
+   "text": "Observe and record change over time and cycles of change that affect living things (e.g., monitoring the life cycle of a plant, using children’s baby photographs to discuss human change and growth, using unit blocks to record the height of classroom plants)."
+  },
+  {
+   "idx": "5.4.1",
+   "text": "Explore and describe characteristics of soil, rocks, water, and air (e.g., sorting rocks by shape and/or color, observing water as a solid and a liquid, noticing the wind’s effect on playground objects)."
+  },
+  {
+   "idx": "5.4.2",
+   "text": "Explore the effects of sunlight on living and nonliving things (e.g., growing plants with and without sunlight, investigating shadows that occur when the sun’s light is blocked by objects)."
+  },
+  {
+   "idx": "5.4.3",
+   "text": "Observe and record weather (e.g., chart temperatures throughout the seasons or represent levels of wind by waving scarves outdoors)."
+  },
+  {
+   "idx": "5.4.4",
+   "text": "Demonstrate emergent awareness of the need for conservation, recycling, and respect for the environment (e.g., turning off water faucets, collecting empty yogurt cups for reuse as paint containers, separating materials in recycling bins, re-using clean paper goods for classroom collage and sculpture projects)."
+  },
+  {
+   "idx": "5.5.1",
+   "text": "Identify and use basic tools and technology to extend exploration in conjunction with science investigations (e.g., writing, drawing, and painting utensils, scissors, staplers, magnifiers, balance scales, ramps, pulleys, hammers, screwdrivers, sieves, tubing, binoculars, whisks, measuring cups, appropriate computer software and website information, video and audio recordings, digital cameras, tape recorders)."
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "0.1.1",
+   "text": "Express individuality by making independent decisions about which materials to use."
+  },
+  {
+   "idx": "0.1.2",
+   "text": "Express ideas for activities and initiate discussions."
+  },
+  {
+   "idx": "0.1.3",
+   "text": "Actively engage in activities and interactions with teachers and peers."
+  },
+  {
+   "idx": "0.1.4",
+   "text": "Discuss their own actions and efforts."
+  },
+  {
+   "idx": "0.2.1",
+   "text": "Make independent choices and plans from a broad range of diverse interest centers."
+  },
+  {
+   "idx": "0.2.2",
+   "text": "Demonstrate self-help skills (e.g., clean up, pour juice, use soap when washing hands, put away belongings)."
+  },
+  {
+   "idx": "0.2.3",
+   "text": "Move through classroom routines and activities with minimal teacher direction and transition easily from one activity to the next."
+  },
+  {
+   "idx": "0.2.4",
+   "text": "Attend to tasks for a period of time."
+  },
+  {
+   "idx": "0.3.1",
+   "text": "Recognize and describe a wide range of feelings, including sadness, anger, fear, and happiness."
+  },
+  {
+   "idx": "0.3.2",
+   "text": "Empathize with feelings of others (e.g., get a blanket for a friend and comfort him/her when he/she feels sad)."
+  },
+  {
+   "idx": "0.3.3",
+   "text": "Channel impulses and negative feelings, such as anger (e.g., taking three deep breaths, using calming words, pulling self out of play to go to “safe spot” to relax, expressive activities)."
+  },
+  {
+   "idx": "0.4.1",
+   "text": "Engage appropriately with peers and teachers in classroom activities."
+  },
+  {
+   "idx": "0.4.2",
+   "text": "Demonstrate socially acceptable behavior for teachers and peers (e.g., give hugs, get a tissue, sit next to a friend/teacher, hold hands)."
+  },
+  {
+   "idx": "0.4.3",
+   "text": "Say “thank you,” “please,” and “excuse me.”"
+  },
+  {
+   "idx": "0.4.4",
+   "text": "Respect the rights of others (e.g., “This painting belongs to Carlos.”)."
+  },
+  {
+   "idx": "0.4.5",
+   "text": "Express needs verbally or nonverbally to teacher and peers without being aggressive (e.g., “I don’t like it when you call me dummy. Stop!”)."
+  },
+  {
+   "idx": "0.4.6",
+   "text": "Demonstrate verbal or nonverbal problem-solving skills without being aggressive (e.g., talk about a problem and related feelings and negotiate solutions)."
+  },
+  {
+   "idx": "0.5.1",
+   "text": "Play independently and cooperatively in pairs and small groups."
+  },
+  {
+   "idx": "0.5.2",
+   "text": "Engage in pretend play."
+  },
+  {
+   "idx": "0.5.3",
+   "text": "Demonstrate how to enter into play when a group of children are already involved in play."
+  },
+  {
+   "idx": "0.5.4",
+   "text": "Take turns."
+  },
+  {
+   "idx": "0.5.5",
+   "text": "Demonstrate understanding the concept of sharing by attempting to share."
+  },
+  {
+   "idx": "5.1.1",
+   "text": "Display curiosity about science objects, materials, activities, and longer-term investigations in progress (e.g., ask who, what, when, where, why, and how questions during sensory explorations, experimentation, and focused inquiry)."
+  },
+  {
+   "idx": "5.1.2",
+   "text": "Observe, question, predict, and investigate materials, objects, and phenomena during classroom activities indoors and outdoors and during any longer-term investigations in progress. Seek answers to questions and test predictions using simple experiments or research media (e.g., cracking a nut to look inside; putting a toy car in water to determine whether it sinks)."
+  },
+  {
+   "idx": "5.1.3",
+   "text": "Use basic science terms (e.g., observe, predict, experiment) and topic-related science vocabulary (e.g., words related to living things [fur, fins, feathers, beak, bark, trunk, stem]; weather terms [breezy, mild, cloudy, hurricane, shower, temperature]; vocabulary related to simple machines [wheel, pulley, lever, screw, inclined plane]; words for states of matter [solid, liquid]; names of basic tools [hammer, screwdriver, awl, binoculars, stethoscope, magnifier])."
+  },
+  {
+   "idx": "5.1.4",
+   "text": "Communicate with other children and adults to share observations, pursue questions, make predictions, and/or conclusions."
+  },
+  {
+   "idx": "5.1.5",
+   "text": "Represent observations and work through drawing, recording data, and “writing” (e.g., drawing and “writing” on observation clipboards, making rubbings, charting the growth of plants)."
+  },
+  {
+   "idx": "5.2.1",
+   "text": "Observe, manipulate, sort, and describe objects and materials (e.g., water, sand, clay, paint, glue, various types of blocks, collections of objects, simple household items that can be taken apart, or objects made of wood, metal, or cloth) in the classroom and outdoor environment based on size, shape, color, texture, and weight."
+  },
+  {
+   "idx": "5.2.2",
+   "text": "Explore changes in liquids and solids when substances are combined, heated, or cooled (e.g., mixing sand or clay with various amounts of water; preparing gelatin; mixing different colors of tempera paint; and longer term investigations, such as the freezing and melting of water and other liquids)."
+  },
+  {
+   "idx": "5.2.3",
+   "text": "Investigate sound, heat, and light energy through one or more of the senses (e.g., comparing the pitch and volume of sounds made by commercially made and homemade instruments, recording how shadows change during the course of a day or over time, using flashlights or lamp light to make shadows indoors)."
+  },
+  {
+   "idx": "5.2.4",
+   "text": "Investigate how and why things move (e.g., slide block, balance structures, push structures over, use ramps to explore how far and how fast different objects move or roll)."
+  },
+  {
+   "idx": "5.3.1",
+   "text": "Investigate and compare the basic physical characteristics of plants, humans, and other animals (e.g., observing and discussing leaves, stems, roots, body parts; observing and drawing different insects; sorting leaves by shape; comparing animals with fur to those with feathers)."
+  },
+  {
+   "idx": "5.3.2",
+   "text": "Observe similarities and differences in the needs of living things, and differences between living and nonliving things (e.g., observing and discussing similarities between animal babies and their parents; discussing the differences between a living thing, such as a hermit crab, and a nonliving thing, such as a shell)."
+  },
+  {
+   "idx": "5.3.3",
+   "text": "Observe and describe how natural habitats provide for the basic needs of plants and animals with respect to shelter, food, water, air, and light (e.g., digging outside in the soil to investigate the kinds of animal life that live in and around the ground or replicating a natural habitat in a classroom terrarium)."
+  },
+  {
+   "idx": "5.3.4",
+   "text": "Observe and record change over time and cycles of change that affect living things (e.g., monitoring the life cycle of a plant, using children’s baby photographs to discuss human change and growth, using unit blocks to record the height of classroom plants)."
+  },
+  {
+   "idx": "5.4.1",
+   "text": "Explore and describe characteristics of soil, rocks, water, and air (e.g., sorting rocks by shape and/or color, observing water as a solid and a liquid, noticing the wind’s effect on playground objects)."
+  },
+  {
+   "idx": "5.4.2",
+   "text": "Explore the effects of sunlight on living and nonliving things (e.g., growing plants with and without sunlight, investigating shadows that occur when the sun’s light is blocked by objects)."
+  },
+  {
+   "idx": "5.4.3",
+   "text": "Observe and record weather (e.g., chart temperatures throughout the seasons or represent levels of wind by waving scarves outdoors)."
+  },
+  {
+   "idx": "5.4.4",
+   "text": "Demonstrate emergent awareness of the need for conservation, recycling, and respect for the environment (e.g., turning off water faucets, collecting empty yogurt cups for reuse as paint containers, separating materials in recycling bins, re-using clean paper goods for classroom collage and sculpture projects)."
+  },
+  {
+   "idx": "5.5.1",
+   "text": "Identify and use basic tools and technology to extend exploration in conjunction with science investigations (e.g., writing, drawing, and painting utensils, scissors, staplers, magnifiers, balance scales, ramps, pulleys, hammers, screwdrivers, sieves, tubing, binoculars, whisks, measuring cups, appropriate computer software and website information, video and audio recordings, digital cameras, tape recorders)."
+  },
+  {
+   "idx": "6.1.1",
+   "text": "Describe characteristics of oneself, one’s family, and others."
+  },
+  {
+   "idx": "6.1.2",
+   "text": "Demonstrate an understanding of family roles and traditions."
+  },
+  {
+   "idx": "6.1.3",
+   "text": "Express individuality and cultural diversity (e.g., through dramatic play)."
+  },
+  {
+   "idx": "6.2.1",
+   "text": "Demonstrate understanding of rules by following most classroom routines."
+  },
+  {
+   "idx": "6.2.2",
+   "text": "Demonstrates responsibility by initiating simple classroom tasks and jobs."
+  },
+  {
+   "idx": "6.2.3",
+   "text": "Demonstrate appropriate behavior when collaborating with others."
+  },
+  {
+   "idx": "6.3.1",
+   "text": "Develop an awareness of the physical features of the neighborhood/community."
+  },
+  {
+   "idx": "6.3.2",
+   "text": "Identify, discuss, and role-play the duties of a range of community workers."
+  },
+  {
+   "idx": "6.4.1",
+   "text": "Learn about and respect other cultures within the classroom and community."
+  }
+ ]
+}

@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // New Jersey, a US state. Standards are the New Jersey Student Learning Standards (NJSLS), adopted by the New Jersey
 // State Board of Education and published by the New Jersey Department of Education: mathematics (2023), English language
@@ -75,9 +76,9 @@ export const NEW_JERSEY: Framework = {
   standardLabel: "Standard",
   sourceName: "New Jersey Department of Education",
   sourceUrl: "https://www.nj.gov/education/standards/",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding New Jersey report cards",
     intro:

@@ -1,0 +1,922 @@
+{
+ "pk/math": [
+  {
+   "idx": "MAT.1bOP-1",
+   "text": "Rote count up to 20 in sequence"
+  },
+  {
+   "idx": "MAT.1bOP-2",
+   "text": "Count backwards from 10 to 0"
+  },
+  {
+   "idx": "MAT.1bOP-3",
+   "text": "Demonstrate one-to one correspondence when counting objects placed in a row (one to 15 and beyond)"
+  },
+  {
+   "idx": "MAT.1bOP-4",
+   "text": "Count out a specified number of objects up to 10"
+  },
+  {
+   "idx": "MAT.1bOP-5",
+   "text": "Understand that the last number represents how many objects are in a group"
+  },
+  {
+   "idx": "MAT.1aOP-1",
+   "text": "Understand that written numerals represent quantities of objects (up to 10)"
+  },
+  {
+   "idx": "MAT.1aOP-2",
+   "text": "Compare groups of objects and tell which is same or different, more, less, or fewer"
+  },
+  {
+   "idx": "MAT.1aOP-3",
+   "text": "Subitize (immediately recognize without counting) five or more objects"
+  },
+  {
+   "idx": "MAT.1aOP-4",
+   "text": "Identify written numerals from zero (0) up to 10"
+  },
+  {
+   "idx": "MAT.1aOP-5",
+   "text": "Match numerals with the correct number of objects, with assistance"
+  },
+  {
+   "idx": "MAT.2aOP-1",
+   "text": "Use addition and subtraction concepts while playing with sets of objects (0-10)."
+  },
+  {
+   "idx": "MAT.2aOP-2",
+   "text": "Independently change size of sets by combining or taking away"
+  },
+  {
+   "idx": "MAT.2aOP-3",
+   "text": "Understand that each successive number name refers to a quantity that is one larger"
+  },
+  {
+   "idx": "MAT.2bOP-1",
+   "text": "Match objects according to two or more attributes"
+  },
+  {
+   "idx": "MAT.2bOP-2",
+   "text": "Sort and place in a series objects according to more than attribute"
+  },
+  {
+   "idx": "MAT.2bOP-3",
+   "text": "Put up to 10 objects in order according to an attribute"
+  },
+  {
+   "idx": "MAT.2bOP-4",
+   "text": "Demonstrate knowledge that the same set can be sorted in different ways"
+  },
+  {
+   "idx": "MAT.2cOP-1",
+   "text": "Identify differences in the daily schedule or routine"
+  },
+  {
+   "idx": "MAT.2cOP-2",
+   "text": "Identify a pattern, and duplicate or extend"
+  },
+  {
+   "idx": "MAT.2cOP-3",
+   "text": "Create a more complex pattern that includes different attributes"
+  },
+  {
+   "idx": "MAT.2cOP-4",
+   "text": "Identify more complex ordinals, such as second, third, or next,"
+  },
+  {
+   "idx": "MAT.3aOP-1",
+   "text": "Visualize a spatial transformation"
+  },
+  {
+   "idx": "MAT.3aOP-2",
+   "text": "Describe the way in which objects fit together or verbally share plans with how to fit objects together"
+  },
+  {
+   "idx": "MAT.3aOP-3",
+   "text": "Move body in different ways independently or following directions in response to music or song"
+  },
+  {
+   "idx": "MAT.3bOP-1",
+   "text": "Identify and classify 2-D and 3-D shapes by their attributes"
+  },
+  {
+   "idx": "MAT.3bOP-2",
+   "text": "Visualize shapes by description and find them in the environment"
+  },
+  {
+   "idx": "MAT.3bOP-3",
+   "text": "Complete complex shape puzzles"
+  },
+  {
+   "idx": "MAT.4aOP-1",
+   "text": "Order objects in a series according to size"
+  },
+  {
+   "idx": "MAT.4aOP-2",
+   "text": "Use a variety of techniques with standard and non-standard tools to measure and compare objects"
+  },
+  {
+   "idx": "MAT.4aOP-3",
+   "text": "Compare objects by two or more attributes"
+  },
+  {
+   "idx": "MAT.4aOP-4",
+   "text": "Show a beginning awareness of the concept of time as a sequence of events"
+  },
+  {
+   "idx": "MAT.4aOP-5",
+   "text": "Use beginning skills of estimation in solving everyday measurement problems"
+  },
+  {
+   "idx": "MAT.4bOP-1",
+   "text": "Use trial and error to reach a solution to a problem"
+  },
+  {
+   "idx": "MAT.4bOP-2",
+   "text": "Gather data to answer questions to problems"
+  },
+  {
+   "idx": "MAT.4bOP-3",
+   "text": "Make a prediction based on data"
+  },
+  {
+   "idx": "MAT.4bOP-4",
+   "text": "Interpret a chart or graph to explain data findings"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "LLT.1aOP-1",
+   "text": "Understand and follow multi-step directions"
+  },
+  {
+   "idx": "LLT.1aOP-2",
+   "text": "Recall the events described in a story"
+  },
+  {
+   "idx": "LLT.1aOP-3",
+   "text": "Respond to questions and extend answer to convey new, but related, thought"
+  },
+  {
+   "idx": "LLT.1aOP-4",
+   "text": "Attend to conversations and group discussions and respond on topic"
+  },
+  {
+   "idx": "LLT.1bOP-1",
+   "text": "Combine 5-8 words together into sentences"
+  },
+  {
+   "idx": "LLT.1bOP-2",
+   "text": "Engage in storytelling and pretend play, using oral language"
+  },
+  {
+   "idx": "LLT.1bOP-3",
+   "text": "Answer questions with detailed and more abstract words and ideas"
+  },
+  {
+   "idx": "LLT.1bOP-4",
+   "text": "Use mostly grammatically complex sentence structures"
+  },
+  {
+   "idx": "LLT.1bOP-5",
+   "text": "Have a vocabulary of over 1000 words"
+  },
+  {
+   "idx": "LLT.1bOP-6",
+   "text": "Ask specific questions to understand and solve problems."
+  },
+  {
+   "idx": "LLT.1bOP-7",
+   "text": "Produce four to five word phrases using clear and understandable speech"
+  },
+  {
+   "idx": "LLT.1cOP-1",
+   "text": "Listen and respond on topic with individuals and during group conversations"
+  },
+  {
+   "idx": "LLT.1cOP-2",
+   "text": "Use language to communicate with others during familiar and unfamiliar social situations"
+  },
+  {
+   "idx": "LLT.1cOP-3",
+   "text": "Initiate conversations and stay on topic during at least 5 turn-taking exchanges"
+  },
+  {
+   "idx": "LLT.1cOP-4",
+   "text": "Demonstrate conversational rules of language"
+  },
+  {
+   "idx": "LLT.2aOP-1",
+   "text": "Identify characters and setting in a story"
+  },
+  {
+   "idx": "LLT.2aOP-2",
+   "text": "Use title, pictures, and prior knowledge to predict story content"
+  },
+  {
+   "idx": "LLT.2aOP-3",
+   "text": "Retell or act out a story in the correct sequence"
+  },
+  {
+   "idx": "LLT.2aOP-4",
+   "text": "Make connections between stories and reallife experiences"
+  },
+  {
+   "idx": "LLT.2aOP-5",
+   "text": "Answer questions about the characters and events in a story"
+  },
+  {
+   "idx": "LLT.2aOP-6",
+   "text": "Generalize idea to another situation"
+  },
+  {
+   "idx": "LLT.2bOP-1",
+   "text": "Identify whether or not two words start or end with the same sound"
+  },
+  {
+   "idx": "LLT.2bOP-2",
+   "text": "Produce rhyming words"
+  },
+  {
+   "idx": "LLT.2bOP-3",
+   "text": "Isolate and match the initial sounds in words with adult guidance"
+  },
+  {
+   "idx": "LLT.2bOP-4",
+   "text": "Segment words into syllables"
+  },
+  {
+   "idx": "LLT.2bOP-5",
+   "text": "Identify words as separate units in a sentence"
+  },
+  {
+   "idx": "LLT.2bOP-6",
+   "text": "Blend sounds with adult guidance"
+  },
+  {
+   "idx": "LLT.2cOP-1",
+   "text": "Recognize about half of the upper and lower case letters of the alphabet"
+  },
+  {
+   "idx": "LLT.2cOP-2",
+   "text": "Associate some letters of the alphabet with their specific sounds"
+  },
+  {
+   "idx": "LLT.2cOP-3",
+   "text": "Identify words that start with the same letter as their name"
+  },
+  {
+   "idx": "LLT.2cOP-4",
+   "text": "Visually discriminate letter shapes and formations"
+  },
+  {
+   "idx": "LLT.2cOP-5",
+   "text": "Sort letters and find words that contain specified letters"
+  },
+  {
+   "idx": "LLT.2dOP-1",
+   "text": "Select different kinds of literature"
+  },
+  {
+   "idx": "LLT.2dOP-2",
+   "text": "Show beginning understanding of word and sentence structure"
+  },
+  {
+   "idx": "LLT.2dOP-3",
+   "text": "Hold book correctly and read from beginning to end"
+  },
+  {
+   "idx": "LLT.2dOP-4",
+   "text": "Read some environmental print"
+  },
+  {
+   "idx": "LLT.2dOP-5",
+   "text": "Track words from left to right, top to bottom, page to page"
+  },
+  {
+   "idx": "LLT.2dOP-6",
+   "text": "Know that books have titles, authors, and illustrators"
+  },
+  {
+   "idx": "LLT.3OP-3",
+   "text": "Write some letters of the alphabet, including name"
+  },
+  {
+   "idx": "LLT.3OP-4",
+   "text": "Begin to use inventive spelling using a letter to represent a word"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "SEK.1aOP-1",
+   "text": "Use the five senses to collect information"
+  },
+  {
+   "idx": "SEK.1aOP-2",
+   "text": "Try new approaches when results differ from what is expected"
+  },
+  {
+   "idx": "SEK.1aOP-3",
+   "text": "Form conclusions based on observable actions or results"
+  },
+  {
+   "idx": "SEK.1aOP-4",
+   "text": "Predict outcomes based on cause and effect, “If I…., then I….”"
+  },
+  {
+   "idx": "SEK.1bOP-1",
+   "text": "Describe differences between living and nonliving things"
+  },
+  {
+   "idx": "SEK.1bOP-2",
+   "text": "Describe how living things interact with the environment and its conditions to survive"
+  },
+  {
+   "idx": "SEK.1bOP-3",
+   "text": "Describe the functions of body parts"
+  },
+  {
+   "idx": "SEK.1bOP-4",
+   "text": "Describe the predictable patterns for life cycles of plants and animals"
+  },
+  {
+   "idx": "SEK.1cOP-1",
+   "text": "Experiment with cars, balls, and other objects to determine which is faster"
+  },
+  {
+   "idx": "SEK.1cOP-2",
+   "text": "Notice and explain changes in physical properties of objects as a result of outside influences"
+  },
+  {
+   "idx": "SEK.1cOP-3",
+   "text": "Describe characteristics of solids and liquids"
+  },
+  {
+   "idx": "SEK.1cOP-4",
+   "text": "Investigate the properties of light and sound"
+  },
+  {
+   "idx": "SEK.1dOP-1",
+   "text": "Compare and contrast the properties of natural materials, soil, and sand"
+  },
+  {
+   "idx": "SEK.1dOP-2",
+   "text": "Describe the properties and changes of water"
+  },
+  {
+   "idx": "SEK.1dOP-3",
+   "text": "Explore the characteristics of the sun and shadows, moon, clouds and stars"
+  },
+  {
+   "idx": "SEK.1dOP-4",
+   "text": "Explain how weather and its changes impact daily life"
+  },
+  {
+   "idx": "SEK.1dOP-5",
+   "text": "Describe the day and night cycle"
+  },
+  {
+   "idx": "SEK.1eOP-1",
+   "text": "Describe how changes to the environment occur"
+  },
+  {
+   "idx": "SEK.1eOP-2",
+   "text": "Discuss how actions positively and negatively impact the environment"
+  },
+  {
+   "idx": "SEK.1eOP-3",
+   "text": "Demonstrate conservation as part of daily routines"
+  },
+  {
+   "idx": "SEK.1eOP-4",
+   "text": "Describe the features of habitats that species need for life"
+  },
+  {
+   "idx": "SEK.2aOP-1",
+   "text": "Use or adapt appropriate tools and materials to create or solve problems"
+  },
+  {
+   "idx": "SEK.2aOP-2",
+   "text": "Use technology tools to seek out information or an answer to a problem"
+  },
+  {
+   "idx": "SEK.2aOP-3",
+   "text": "Explain the purposes of specific technology tools"
+  },
+  {
+   "idx": "SEK.2bOP-1",
+   "text": "Differentiate between real or pretend objects or situations"
+  },
+  {
+   "idx": "SEK.2bOP-2",
+   "text": "Discuss if information is realistic or could actually happen"
+  },
+  {
+   "idx": "SEK.2bOP-3",
+   "text": "Describe the specific uses for technology tools"
+  },
+  {
+   "idx": "SEK.2bOP-4",
+   "text": "Identify differences between packaging and what’s inside"
+  },
+  {
+   "idx": "SEK.2bOP-5",
+   "text": "Discuss the ways one can find out more information"
+  },
+  {
+   "idx": "SEK.2cOP-1",
+   "text": "Identify appropriate and inappropriate use of digital media"
+  },
+  {
+   "idx": "SEK.2cOP-2",
+   "text": "Collaborate with others to create a product or investigate information"
+  },
+  {
+   "idx": "SEK.2cOP-3",
+   "text": "Use technology terms such as mouse, keyboard, printer as part of daily conversation"
+  },
+  {
+   "idx": "SEK.2dOP-1",
+   "text": "Break down the steps of a problem or activity (Decomposition)"
+  },
+  {
+   "idx": "SEK.2dOP-2",
+   "text": "Extend and create design patterns (Pattern Recognition)"
+  },
+  {
+   "idx": "SEK.2dOP-3",
+   "text": "Attempt to solve a problem by working through the sequence of steps (Algorithms)"
+  },
+  {
+   "idx": "SEK.2dOP-4",
+   "text": "Assist teacher in sorting needed and unneeded information"
+  },
+  {
+   "idx": "SEK.3OP-1",
+   "text": "Use unique materials to create a simple machine"
+  },
+  {
+   "idx": "SEK.3OP-2",
+   "text": "Follow a visual plan to create a structure"
+  },
+  {
+   "idx": "SEK.3OP-3",
+   "text": "Create detailed observational drawings that represent objects"
+  },
+  {
+   "idx": "SEK.3OP-4",
+   "text": "Follow directional cues to accomplish a task"
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "SED.1aOP-1",
+   "text": "Differentiate themselves by physical characteristics"
+  },
+  {
+   "idx": "SED.1aOP-2",
+   "text": "Show increasingly accurate understanding of own strengths, preferences, limitations, and personal qualities"
+  },
+  {
+   "idx": "SED.1aOP-3",
+   "text": "Connect adult’s actions to own accomplishments or actions"
+  },
+  {
+   "idx": "SED.1aOP-4",
+   "text": "Make choices based on likes and dislikes (preferences)"
+  },
+  {
+   "idx": "SED.1aOP-5",
+   "text": "Stand up for rights of others"
+  },
+  {
+   "idx": "SED.1bOP-1",
+   "text": "Show confidence in ability by taking on new tasks"
+  },
+  {
+   "idx": "SED.1bOP-2",
+   "text": "Show pride in completion of challenging tasks and activities"
+  },
+  {
+   "idx": "SED.1bOP-3",
+   "text": "Invite peers to join play or activity"
+  },
+  {
+   "idx": "SED.1bOP-4",
+   "text": "Describe accomplishments with detail"
+  },
+  {
+   "idx": "SED.2aOP-1",
+   "text": "Associate basic emotions with words, expressions or gestures or actions"
+  },
+  {
+   "idx": "SED.2aOP-2",
+   "text": "Communicate feelings or emotions in socially-acceptable ways"
+  },
+  {
+   "idx": "SED.2aOP-3",
+   "text": "Seek reassurance or recognition from adults when attempting to resolve distress or challenging situation"
+  },
+  {
+   "idx": "SED.2aOP-4",
+   "text": "Respond with empathy and compassion at others’ expression of emotion"
+  },
+  {
+   "idx": "SED.2bOP-1",
+   "text": "Independently use self-regulation strategies to solve simple problems"
+  },
+  {
+   "idx": "SED.2bOP-2",
+   "text": "Adapt behavior to accommodate situation or adult response"
+  },
+  {
+   "idx": "SED.2bOP-3",
+   "text": "Independently solve simple problems"
+  },
+  {
+   "idx": "SED.2bOP-4",
+   "text": "Transition to new activities independently when asked"
+  },
+  {
+   "idx": "SED.3aOP-1",
+   "text": "Separate and easily accept explanation for parting with trusted adult"
+  },
+  {
+   "idx": "SED.3aOP-2",
+   "text": "Cooperate with adult guidance to achieve adult approval"
+  },
+  {
+   "idx": "SED.3aOP-3",
+   "text": "Initiate and engage with familiar adults to share mutual interests"
+  },
+  {
+   "idx": "SED.3bOP-1",
+   "text": "Sustain relationships with other children for an extended period of time"
+  },
+  {
+   "idx": "SED.3bOP-2",
+   "text": "Take the perspective of another child and respond in a manner that is supportive"
+  },
+  {
+   "idx": "SED.3bOP-3",
+   "text": "Play with peers in a coordinated manner including assigning roles, materials and actions"
+  },
+  {
+   "idx": "SED.3bOP-4",
+   "text": "Engage in prosocial behavior during play (cooperating, turn-taking, sharing)"
+  },
+  {
+   "idx": "SST.1aOP-1",
+   "text": "Name extended family members (aunts, grandparents, etc.)"
+  },
+  {
+   "idx": "SST.1aOP-2",
+   "text": "Talk about relationships with other family members"
+  },
+  {
+   "idx": "SST.1aOP-3",
+   "text": "Discuss how families differ and how they are the same"
+  },
+  {
+   "idx": "SST.1bOP-1",
+   "text": "Differentiate groups they belong to"
+  },
+  {
+   "idx": "SST.1bOP-2",
+   "text": "Follow routines and schedules"
+  },
+  {
+   "idx": "SST.1bOP-3",
+   "text": "Understand natural and logical consequences for not following rules"
+  },
+  {
+   "idx": "SST.1bOP-4",
+   "text": "Seek out opportunities for leadership"
+  },
+  {
+   "idx": "SST.1cOP-1",
+   "text": "Compare traits and characteristics of self with others"
+  },
+  {
+   "idx": "SST.1cOP-2",
+   "text": "Discuss differences and similarities between themselves and others"
+  },
+  {
+   "idx": "SST.1cOP-3",
+   "text": "Show appreciation of own culture or customs"
+  },
+  {
+   "idx": "SST.2aOP-1",
+   "text": "Realize that people depend on others to have needs met"
+  },
+  {
+   "idx": "SST.2aOP-2",
+   "text": "Describe roles of various community helpers and workers"
+  },
+  {
+   "idx": "SST.2aOP-3",
+   "text": "Describe occupations’ roles and purposes"
+  },
+  {
+   "idx": "SST.2aOP-4",
+   "text": "Understand the purpose of saving for tomorrow"
+  },
+  {
+   "idx": "SST.2bOP-1",
+   "text": "Use directional terms such as turn left, straight ahead"
+  },
+  {
+   "idx": "SST.2cOP-1",
+   "text": "Use the posted schedule to describe the day’s activities"
+  },
+  {
+   "idx": "SST.2cOP-2",
+   "text": "Distinguish between events that happened in the past, present or future"
+  },
+  {
+   "idx": "SST.2cOP-3",
+   "text": "Talk about an event that happened or will happen"
+  },
+  {
+   "idx": "SST.2cOP-4",
+   "text": "Discuss past experiences or events in the correct sequence"
+  },
+  {
+   "idx": "SST.2cOP-5",
+   "text": "Use time vocabulary with some accuracy"
+  },
+  {
+   "idx": "APL.1aOP-1",
+   "text": "Use props and create characters as part of pretend play"
+  },
+  {
+   "idx": "APL.1aOP-2",
+   "text": "Engage in elaborate and sustained imaginative play"
+  },
+  {
+   "idx": "APL.1aOP-3",
+   "text": "Distinguish between real life and fantasy"
+  },
+  {
+   "idx": "APL.1bOP-1",
+   "text": "Develop and sustain complex play themes and roles in cooperation with peers"
+  },
+  {
+   "idx": "APL.1bOP-2",
+   "text": "Seek out specific children to engage in play experiences"
+  },
+  {
+   "idx": "APL.1bOP-3",
+   "text": "Take another’s perspective"
+  },
+  {
+   "idx": "APL.1bOP-4",
+   "text": "Articulate values and “rules” through play"
+  },
+  {
+   "idx": "APL.2aOP-1",
+   "text": "Stay focused on activities and tasks until completion"
+  },
+  {
+   "idx": "APL.2aOP-2",
+   "text": "Persist with task completion even after previous efforts have failed"
+  },
+  {
+   "idx": "APL.2aOP-3",
+   "text": "Stay engaged in an activity or task despite interruptions"
+  },
+  {
+   "idx": "APL.2aOP-4",
+   "text": "Generalize the success to another task"
+  },
+  {
+   "idx": "APL.2aOP-5",
+   "text": "Set simple goals that extend over time, make plans and follow through"
+  },
+  {
+   "idx": "APL.2bOP-1",
+   "text": "Demonstrate understanding that a task can be achieved in multiple ways"
+  },
+  {
+   "idx": "APL.2bOP-2",
+   "text": "Break down multi-part tasks into steps"
+  },
+  {
+   "idx": "APL.2bOP-3",
+   "text": "Independently identify and seek things needed to complete activities or tasks"
+  },
+  {
+   "idx": "APL.2cOP-1",
+   "text": "Apply prior knowledge and experiences to new ideas and activities"
+  },
+  {
+   "idx": "APL.2cOP-2",
+   "text": "Describe the steps they will use to solve a problem"
+  },
+  {
+   "idx": "APL.2cOP-3",
+   "text": "Evaluate different strategies for problem solving and select the strategy they feel will work without trying it"
+  },
+  {
+   "idx": "APL.2cOP-4",
+   "text": "Ask specific questions of adult or peer to solve a problem"
+  },
+  {
+   "idx": "APL.3aOP-1",
+   "text": "Show eagerness to learn about and discuss new topics, ideas, and tasks"
+  },
+  {
+   "idx": "APL.3aOP-2",
+   "text": "Ask questions to understand a new concept"
+  },
+  {
+   "idx": "APL.3aOP-3",
+   "text": "Show independence and purpose when making choices."
+  },
+  {
+   "idx": "APL.3aOP-4",
+   "text": "Use complex and varied language to share ideas and influence others during play"
+  },
+  {
+   "idx": "APL.3aOP-5",
+   "text": "Select and carry out activities without adult prompting"
+  },
+  {
+   "idx": "APL.3bOP-1",
+   "text": "Approach new experiences, topics, and ideas with interest"
+  },
+  {
+   "idx": "APL.3bOP-2",
+   "text": "Express a belief that they can do things that are hard"
+  },
+  {
+   "idx": "APL.3bOP-3",
+   "text": "Try things they are not sure they can do while avoiding dangerous risks"
+  },
+  {
+   "idx": "APL.3bOP-4",
+   "text": "Take on new roles in a group setting"
+  },
+  {
+   "idx": "SEK.1aOP-1",
+   "text": "Use the five senses to collect information"
+  },
+  {
+   "idx": "SEK.1aOP-2",
+   "text": "Try new approaches when results differ from what is expected"
+  },
+  {
+   "idx": "SEK.1aOP-3",
+   "text": "Form conclusions based on observable actions or results"
+  },
+  {
+   "idx": "SEK.1aOP-4",
+   "text": "Predict outcomes based on cause and effect, “If I…., then I….”"
+  },
+  {
+   "idx": "SEK.1bOP-1",
+   "text": "Describe differences between living and nonliving things"
+  },
+  {
+   "idx": "SEK.1bOP-2",
+   "text": "Describe how living things interact with the environment and its conditions to survive"
+  },
+  {
+   "idx": "SEK.1bOP-3",
+   "text": "Describe the functions of body parts"
+  },
+  {
+   "idx": "SEK.1bOP-4",
+   "text": "Describe the predictable patterns for life cycles of plants and animals"
+  },
+  {
+   "idx": "SEK.1cOP-1",
+   "text": "Experiment with cars, balls, and other objects to determine which is faster"
+  },
+  {
+   "idx": "SEK.1cOP-2",
+   "text": "Notice and explain changes in physical properties of objects as a result of outside influences"
+  },
+  {
+   "idx": "SEK.1cOP-3",
+   "text": "Describe characteristics of solids and liquids"
+  },
+  {
+   "idx": "SEK.1cOP-4",
+   "text": "Investigate the properties of light and sound"
+  },
+  {
+   "idx": "SEK.1dOP-1",
+   "text": "Compare and contrast the properties of natural materials, soil, and sand"
+  },
+  {
+   "idx": "SEK.1dOP-2",
+   "text": "Describe the properties and changes of water"
+  },
+  {
+   "idx": "SEK.1dOP-3",
+   "text": "Explore the characteristics of the sun and shadows, moon, clouds and stars"
+  },
+  {
+   "idx": "SEK.1dOP-4",
+   "text": "Explain how weather and its changes impact daily life"
+  },
+  {
+   "idx": "SEK.1dOP-5",
+   "text": "Describe the day and night cycle"
+  },
+  {
+   "idx": "SEK.1eOP-1",
+   "text": "Describe how changes to the environment occur"
+  },
+  {
+   "idx": "SEK.1eOP-2",
+   "text": "Discuss how actions positively and negatively impact the environment"
+  },
+  {
+   "idx": "SEK.1eOP-3",
+   "text": "Demonstrate conservation as part of daily routines"
+  },
+  {
+   "idx": "SEK.1eOP-4",
+   "text": "Describe the features of habitats that species need for life"
+  },
+  {
+   "idx": "SEK.2aOP-1",
+   "text": "Use or adapt appropriate tools and materials to create or solve problems"
+  },
+  {
+   "idx": "SEK.2aOP-2",
+   "text": "Use technology tools to seek out information or an answer to a problem"
+  },
+  {
+   "idx": "SEK.2aOP-3",
+   "text": "Explain the purposes of specific technology tools"
+  },
+  {
+   "idx": "SEK.2bOP-1",
+   "text": "Differentiate between real or pretend objects or situations"
+  },
+  {
+   "idx": "SEK.2bOP-2",
+   "text": "Discuss if information is realistic or could actually happen"
+  },
+  {
+   "idx": "SEK.2bOP-3",
+   "text": "Describe the specific uses for technology tools"
+  },
+  {
+   "idx": "SEK.2bOP-4",
+   "text": "Identify differences between packaging and what’s inside"
+  },
+  {
+   "idx": "SEK.2bOP-5",
+   "text": "Discuss the ways one can find out more information"
+  },
+  {
+   "idx": "SEK.2cOP-1",
+   "text": "Identify appropriate and inappropriate use of digital media"
+  },
+  {
+   "idx": "SEK.2cOP-2",
+   "text": "Collaborate with others to create a product or investigate information"
+  },
+  {
+   "idx": "SEK.2cOP-3",
+   "text": "Use technology terms such as mouse, keyboard, printer as part of daily conversation"
+  },
+  {
+   "idx": "SEK.2dOP-1",
+   "text": "Break down the steps of a problem or activity (Decomposition)"
+  },
+  {
+   "idx": "SEK.2dOP-2",
+   "text": "Extend and create design patterns (Pattern Recognition)"
+  },
+  {
+   "idx": "SEK.2dOP-3",
+   "text": "Attempt to solve a problem by working through the sequence of steps (Algorithms)"
+  },
+  {
+   "idx": "SEK.2dOP-4",
+   "text": "Assist teacher in sorting needed and unneeded information"
+  },
+  {
+   "idx": "SEK.3OP-1",
+   "text": "Use unique materials to create a simple machine"
+  },
+  {
+   "idx": "SEK.3OP-2",
+   "text": "Follow a visual plan to create a structure"
+  },
+  {
+   "idx": "SEK.3OP-3",
+   "text": "Create detailed observational drawings that represent objects"
+  },
+  {
+   "idx": "SEK.3OP-4",
+   "text": "Follow directional cues to accomplish a task"
+  }
+ ]
+}

@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Alabama, a US state. Standards are the Alabama Courses of Study adopted by the Alabama State Board of Education and
 // published by the Alabama State Department of Education (ALSDE): Mathematics (2019), English Language Arts (2021),
@@ -74,9 +75,9 @@ export const ALABAMA: Framework = {
   standardLabel: "Content standard",
   sourceName: "Alabama State Department of Education (ALSDE)",
   sourceUrl: "https://www.alabamaachieves.org/academic-standards/",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Alabama report cards",
     intro:

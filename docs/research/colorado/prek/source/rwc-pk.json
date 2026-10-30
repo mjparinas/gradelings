@@ -1,0 +1,683 @@
+{
+ "data": {
+  "cspStatus": {},
+  "document": {
+   "asnIdentifier": "D21132944",
+   "id": "D21132944",
+   "publicationStatus": "Published",
+   "sourceURL": "https://www.cde.state.co.us/coreadingwriting/2020cas-rw-p12",
+   "title": "Colorado Academic Standards: Reading, Writing and Communicating",
+   "valid": "2020"
+  },
+  "educationLevels": [
+   "Pre-K"
+  ],
+  "id": "83F29380C23C4AEB843733B243CB2243_D21132944_grade-pre-k",
+  "jurisdiction": {
+   "id": "83F29380C23C4AEB843733B243CB2243",
+   "title": "Colorado"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/3.0/us/",
+   "rightsHolder": "D2L Corporation",
+   "title": "CC BY 3.0 US"
+  },
+  "normalizedSubject": "English",
+  "standards": {
+   "0077FC2DD9184946829F900479990EB5": {
+    "ancestorIds": [
+     "F0F0C8706D414B4CB6D62A30BD150F43",
+     "4C0F16CD1F194BB4820BA5BFF86C6B2D"
+    ],
+    "asnIdentifier": "S21133685",
+    "depth": 2,
+    "description": "Use scribbles, shapes, pictures, and letters to represent objects, stories, experiences, or ideas.",
+    "id": "0077FC2DD9184946829F900479990EB5",
+    "parentId": "F0F0C8706D414B4CB6D62A30BD150F43",
+    "position": 43000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.3.1.c"
+   },
+   "027C8BC571434F318CFEB58A3876BCE4": {
+    "ancestorIds": [
+     "13F14B769FEE4264B1A342BC9FF9683E",
+     "4304DA15F3504834AE429ADAB585342E"
+    ],
+    "asnIdentifier": "S21134098",
+    "depth": 2,
+    "description": "Identify problems and search for solutions by asking questions during collaborative explorations of the topic; begin to state facts about the topic.",
+    "id": "027C8BC571434F318CFEB58A3876BCE4",
+    "parentId": "13F14B769FEE4264B1A342BC9FF9683E",
+    "position": 48000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.4.1.b"
+   },
+   "02A76BF02D044B968E5F9E5C15343088": {
+    "ancestorIds": [
+     "35FB93C97353480F905DB75F5197EAE7",
+     "ACCC9F034CC14B8586D222AA243412DE"
+    ],
+    "asnIdentifier": "S21132948",
+    "depth": 2,
+    "description": "Comprehend increasingly complex and varied vocabulary.",
+    "id": "02A76BF02D044B968E5F9E5C15343088",
+    "parentId": "35FB93C97353480F905DB75F5197EAE7",
+    "position": 4000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.1.1.b"
+   },
+   "0667AA1BE5D74AB7A7827D231B0B57AB": {
+    "ancestorIds": [
+     "8C100C939724436C8F9AE5D19FDC1D6F",
+     "BA87622DE7D9403B80D09144D6DAC51C"
+    ],
+    "asnIdentifier": "S21133107",
+    "depth": 2,
+    "description": "Recognize how books are read, such as front-to-back and one page at a time, and recognize basic characteristics, such as title, author, and illustrator.",
+    "id": "0667AA1BE5D74AB7A7827D231B0B57AB",
+    "parentId": "8C100C939724436C8F9AE5D19FDC1D6F",
+    "position": 16000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.2.1.b"
+   },
+   "06CA6CB8C95D459295935F5C3B59D4A7": {
+    "ancestorIds": [
+     "ACCC9F034CC14B8586D222AA243412DE"
+    ],
+    "asnIdentifier": "S21132950",
+    "depth": 1,
+    "description": "Children use language to convey thoughts and feelings.",
+    "id": "06CA6CB8C95D459295935F5C3B59D4A7",
+    "parentId": "ACCC9F034CC14B8586D222AA243412DE",
+    "position": 6000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PK.1.2"
+   },
+   "13F14B769FEE4264B1A342BC9FF9683E": {
+    "ancestorIds": [
+     "4304DA15F3504834AE429ADAB585342E"
+    ],
+    "asnIdentifier": "S21134096",
+    "depth": 1,
+    "description": "Begin research by asking a question to identify and define a problem and its possible solutions.",
+    "id": "13F14B769FEE4264B1A342BC9FF9683E",
+    "parentId": "4304DA15F3504834AE429ADAB585342E",
+    "position": 46000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PK.4.1"
+   },
+   "151D0F890A774550A7A73C2D2C74EE85": {
+    "ancestorIds": [
+     "06CA6CB8C95D459295935F5C3B59D4A7",
+     "ACCC9F034CC14B8586D222AA243412DE"
+    ],
+    "asnIdentifier": "S21132955",
+    "depth": 2,
+    "description": "Practice asking questions and making statements.",
+    "id": "151D0F890A774550A7A73C2D2C74EE85",
+    "parentId": "06CA6CB8C95D459295935F5C3B59D4A7",
+    "position": 11000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.1.2.e"
+   },
+   "1839E5AB1E63496B9AD90F093D8AC4B5": {
+    "ancestorIds": [
+     "67202F31C2584809BB08BA9A0F50B537",
+     "BA87622DE7D9403B80D09144D6DAC51C"
+    ],
+    "asnIdentifier": "S21133117",
+    "depth": 2,
+    "description": "Identify and discriminate between sounds and phonemes in language, such as attention to beginning and ending sounds of words and recognition that different words begin or end with the same sound.",
+    "id": "1839E5AB1E63496B9AD90F093D8AC4B5",
+    "parentId": "67202F31C2584809BB08BA9A0F50B537",
+    "position": 26000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.2.2.c"
+   },
+   "19CCF0E9345449D0B30C0530F8DB71E7": {
+    "ancestorIds": [
+     "BA87622DE7D9403B80D09144D6DAC51C"
+    ],
+    "asnIdentifier": "S21133125",
+    "depth": 1,
+    "description": "The names and sounds associated with letters makes up alphabetic knowledge.",
+    "id": "19CCF0E9345449D0B30C0530F8DB71E7",
+    "parentId": "BA87622DE7D9403B80D09144D6DAC51C",
+    "position": 34000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PK.2.4"
+   },
+   "1C9A95E94D4D42E59827745515F8D35E": {
+    "ancestorIds": [
+     "F0F0C8706D414B4CB6D62A30BD150F43",
+     "4C0F16CD1F194BB4820BA5BFF86C6B2D"
+    ],
+    "asnIdentifier": "S21133686",
+    "depth": 2,
+    "description": "Copy, trace, or independently write letters or words.",
+    "id": "1C9A95E94D4D42E59827745515F8D35E",
+    "parentId": "F0F0C8706D414B4CB6D62A30BD150F43",
+    "position": 44000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.3.1.d"
+   },
+   "21A317601916435EBDA2E559EEC198B9": {
+    "ancestorIds": [
+     "06CA6CB8C95D459295935F5C3B59D4A7",
+     "ACCC9F034CC14B8586D222AA243412DE"
+    ],
+    "asnIdentifier": "S21132951",
+    "depth": 2,
+    "description": "Participate in conversations of more than three exchanges with peers and adults.",
+    "id": "21A317601916435EBDA2E559EEC198B9",
+    "parentId": "06CA6CB8C95D459295935F5C3B59D4A7",
+    "position": 7000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.1.2.a"
+   },
+   "243B961FD0AB420CA7553AB8A8C64D89": {
+    "ancestorIds": [
+     "67202F31C2584809BB08BA9A0F50B537",
+     "BA87622DE7D9403B80D09144D6DAC51C"
+    ],
+    "asnIdentifier": "S21133118",
+    "depth": 2,
+    "description": "Recognize patterns of sounds in songs, storytelling, and poetry through interactions and meaningful experiences.",
+    "id": "243B961FD0AB420CA7553AB8A8C64D89",
+    "parentId": "67202F31C2584809BB08BA9A0F50B537",
+    "position": 27000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.2.2.d"
+   },
+   "28D21C9F8EED4CC2937F2EE464D7B03D": {
+    "ancestorIds": [
+     "8C100C939724436C8F9AE5D19FDC1D6F",
+     "BA87622DE7D9403B80D09144D6DAC51C"
+    ],
+    "asnIdentifier": "S21133112",
+    "depth": 2,
+    "description": "Make predictions based on illustrations.",
+    "id": "28D21C9F8EED4CC2937F2EE464D7B03D",
+    "parentId": "8C100C939724436C8F9AE5D19FDC1D6F",
+    "position": 21000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.2.1.g"
+   },
+   "2BCE24E3C85D409B960C9F9D7968C6E7": {
+    "ancestorIds": [
+     "06CA6CB8C95D459295935F5C3B59D4A7",
+     "ACCC9F034CC14B8586D222AA243412DE"
+    ],
+    "asnIdentifier": "S21132953",
+    "depth": 2,
+    "description": "Use increasingly complex and varied vocabulary.",
+    "id": "2BCE24E3C85D409B960C9F9D7968C6E7",
+    "parentId": "06CA6CB8C95D459295935F5C3B59D4A7",
+    "position": 9000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.1.2.c"
+   },
+   "2CCE6CD595F94AF8BC2E6CD5DC599A45": {
+    "ancestorIds": [
+     "8C100C939724436C8F9AE5D19FDC1D6F",
+     "BA87622DE7D9403B80D09144D6DAC51C"
+    ],
+    "asnIdentifier": "S21133108",
+    "depth": 2,
+    "description": "Ask and answer questions and make comments about print materials.",
+    "id": "2CCE6CD595F94AF8BC2E6CD5DC599A45",
+    "parentId": "8C100C939724436C8F9AE5D19FDC1D6F",
+    "position": 17000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.2.1.c"
+   },
+   "2E7633E0583B437E816FA3BA6370FE69": {
+    "ancestorIds": [
+     "19CCF0E9345449D0B30C0530F8DB71E7",
+     "BA87622DE7D9403B80D09144D6DAC51C"
+    ],
+    "asnIdentifier": "S21133126",
+    "depth": 2,
+    "description": "Recognize that the letters of the alphabet are a special category of visual graphics that can be individually named.",
+    "id": "2E7633E0583B437E816FA3BA6370FE69",
+    "parentId": "19CCF0E9345449D0B30C0530F8DB71E7",
+    "position": 35000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.2.4.a"
+   },
+   "31CA2BFC58EF4325A7700A704F6BAF8F": {
+    "ancestorIds": [
+     "F0F0C8706D414B4CB6D62A30BD150F43",
+     "4C0F16CD1F194BB4820BA5BFF86C6B2D"
+    ],
+    "asnIdentifier": "S21133684",
+    "depth": 2,
+    "description": "Recognize that writing is a way of communicating for a variety of purposes, such as giving information, sharing stories, or giving an opinion.",
+    "id": "31CA2BFC58EF4325A7700A704F6BAF8F",
+    "parentId": "F0F0C8706D414B4CB6D62A30BD150F43",
+    "position": 42000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.3.1.b"
+   },
+   "35FB93C97353480F905DB75F5197EAE7": {
+    "ancestorIds": [
+     "ACCC9F034CC14B8586D222AA243412DE"
+    ],
+    "asnIdentifier": "S21132946",
+    "depth": 1,
+    "description": "Children comprehend and understand the English language.",
+    "id": "35FB93C97353480F905DB75F5197EAE7",
+    "parentId": "ACCC9F034CC14B8586D222AA243412DE",
+    "position": 2000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PK.1.1"
+   },
+   "3CA3D1571F4B4F80B8270DFF790D98F9": {
+    "ancestorIds": [
+     "42CA9C655D6D4074863F669C3189FBEC",
+     "BA87622DE7D9403B80D09144D6DAC51C"
+    ],
+    "asnIdentifier": "S21133122",
+    "depth": 2,
+    "description": "Understand conventions, such as print moves from left to right and top to bottom of a page.",
+    "id": "3CA3D1571F4B4F80B8270DFF790D98F9",
+    "parentId": "42CA9C655D6D4074863F669C3189FBEC",
+    "position": 31000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.2.3.c"
+   },
+   "42CA9C655D6D4074863F669C3189FBEC": {
+    "ancestorIds": [
+     "BA87622DE7D9403B80D09144D6DAC51C"
+    ],
+    "asnIdentifier": "S21133119",
+    "depth": 1,
+    "description": "Print concepts and conventions anchor concepts of early decoding.",
+    "id": "42CA9C655D6D4074863F669C3189FBEC",
+    "parentId": "BA87622DE7D9403B80D09144D6DAC51C",
+    "position": 28000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PK.2.3"
+   },
+   "4304DA15F3504834AE429ADAB585342E": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21134095",
+    "depth": 0,
+    "description": "Research Inquiry and Design",
+    "id": "4304DA15F3504834AE429ADAB585342E",
+    "parentId": null,
+    "position": 45000,
+    "statementLabel": "Standard",
+    "statementNotation": "RID.4"
+   },
+   "473FA0FE39D64D5EACFAAEBC3259A676": {
+    "ancestorIds": [
+     "67202F31C2584809BB08BA9A0F50B537",
+     "BA87622DE7D9403B80D09144D6DAC51C"
+    ],
+    "asnIdentifier": "S21133115",
+    "depth": 2,
+    "description": "Identify and discriminate between words in language.",
+    "id": "473FA0FE39D64D5EACFAAEBC3259A676",
+    "parentId": "67202F31C2584809BB08BA9A0F50B537",
+    "position": 24000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.2.2.a"
+   },
+   "48179A70FE624D61A1C0205FA3177797": {
+    "ancestorIds": [
+     "42CA9C655D6D4074863F669C3189FBEC",
+     "BA87622DE7D9403B80D09144D6DAC51C"
+    ],
+    "asnIdentifier": "S21133121",
+    "depth": 2,
+    "description": "Understand that print conveys meaning.",
+    "id": "48179A70FE624D61A1C0205FA3177797",
+    "parentId": "42CA9C655D6D4074863F669C3189FBEC",
+    "position": 30000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.2.3.b"
+   },
+   "4C0F16CD1F194BB4820BA5BFF86C6B2D": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21133681",
+    "depth": 0,
+    "description": "Writing and Composition",
+    "id": "4C0F16CD1F194BB4820BA5BFF86C6B2D",
+    "parentId": null,
+    "position": 39000,
+    "statementLabel": "Standard",
+    "statementNotation": "WC.3"
+   },
+   "67202F31C2584809BB08BA9A0F50B537": {
+    "ancestorIds": [
+     "BA87622DE7D9403B80D09144D6DAC51C"
+    ],
+    "asnIdentifier": "S21133114",
+    "depth": 1,
+    "description": "Phonological awareness is the building block for understanding language.",
+    "id": "67202F31C2584809BB08BA9A0F50B537",
+    "parentId": "BA87622DE7D9403B80D09144D6DAC51C",
+    "position": 23000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PK.2.2"
+   },
+   "800257C3193E4EDBADE36B2254BA097D": {
+    "ancestorIds": [
+     "42CA9C655D6D4074863F669C3189FBEC",
+     "BA87622DE7D9403B80D09144D6DAC51C"
+    ],
+    "asnIdentifier": "S21133120",
+    "depth": 2,
+    "description": "Recognize print in everyday life, such as numbers, letters, one's name, words, and familiar logos and signs.",
+    "id": "800257C3193E4EDBADE36B2254BA097D",
+    "parentId": "42CA9C655D6D4074863F669C3189FBEC",
+    "position": 29000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.2.3.a"
+   },
+   "8269218FAC9E4DB4833631A38CB69B4B": {
+    "ancestorIds": [
+     "8C100C939724436C8F9AE5D19FDC1D6F",
+     "BA87622DE7D9403B80D09144D6DAC51C"
+    ],
+    "asnIdentifier": "S21133113",
+    "depth": 2,
+    "description": "Begin to identify key features of reality versus fantasy in stories, pictures, and events.",
+    "id": "8269218FAC9E4DB4833631A38CB69B4B",
+    "parentId": "8C100C939724436C8F9AE5D19FDC1D6F",
+    "position": 22000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.2.1.h"
+   },
+   "8C100C939724436C8F9AE5D19FDC1D6F": {
+    "ancestorIds": [
+     "BA87622DE7D9403B80D09144D6DAC51C"
+    ],
+    "asnIdentifier": "S21133105",
+    "depth": 1,
+    "description": "Children understand and obtain meaning from stories and information from books and other texts.",
+    "id": "8C100C939724436C8F9AE5D19FDC1D6F",
+    "parentId": "BA87622DE7D9403B80D09144D6DAC51C",
+    "position": 14000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PK.2.1"
+   },
+   "8E6401FCC2BD45629AA9AD570EEB1A00": {
+    "ancestorIds": [
+     "13F14B769FEE4264B1A342BC9FF9683E",
+     "4304DA15F3504834AE429ADAB585342E"
+    ],
+    "asnIdentifier": "S21134097",
+    "depth": 2,
+    "description": "Differentiate between questions and statements.",
+    "id": "8E6401FCC2BD45629AA9AD570EEB1A00",
+    "parentId": "13F14B769FEE4264B1A342BC9FF9683E",
+    "position": 47000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.4.1.a"
+   },
+   "9D72770D108049AC872B844D35533CA4": {
+    "ancestorIds": [
+     "8C100C939724436C8F9AE5D19FDC1D6F",
+     "BA87622DE7D9403B80D09144D6DAC51C"
+    ],
+    "asnIdentifier": "S21133110",
+    "depth": 2,
+    "description": "Begin to identify key features of reality versus fantasy in stories, pictures, and events.",
+    "id": "9D72770D108049AC872B844D35533CA4",
+    "parentId": "8C100C939724436C8F9AE5D19FDC1D6F",
+    "position": 19000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.2.1.e"
+   },
+   "9D744FCF267D4E4797ED3A3CAD7ED658": {
+    "ancestorIds": [
+     "67202F31C2584809BB08BA9A0F50B537",
+     "BA87622DE7D9403B80D09144D6DAC51C"
+    ],
+    "asnIdentifier": "S21133116",
+    "depth": 2,
+    "description": "Identify and discriminate between separate syllables in words.",
+    "id": "9D744FCF267D4E4797ED3A3CAD7ED658",
+    "parentId": "67202F31C2584809BB08BA9A0F50B537",
+    "position": 25000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.2.2.b"
+   },
+   "A014D780CFFC43E7AB65D7DAA23156C6": {
+    "ancestorIds": [
+     "06CA6CB8C95D459295935F5C3B59D4A7",
+     "ACCC9F034CC14B8586D222AA243412DE"
+    ],
+    "asnIdentifier": "S21132956",
+    "depth": 2,
+    "description": "Speak in sentences of five or six words.",
+    "id": "A014D780CFFC43E7AB65D7DAA23156C6",
+    "parentId": "06CA6CB8C95D459295935F5C3B59D4A7",
+    "position": 12000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.1.2.f"
+   },
+   "A5D9411165E447FDB3920DCF72895C5C": {
+    "ancestorIds": [
+     "8C100C939724436C8F9AE5D19FDC1D6F",
+     "BA87622DE7D9403B80D09144D6DAC51C"
+    ],
+    "asnIdentifier": "S21133109",
+    "depth": 2,
+    "description": "Demonstrate interest in different kinds of literature, such as fiction and nonfiction books and poetry, on a range of topics.",
+    "id": "A5D9411165E447FDB3920DCF72895C5C",
+    "parentId": "8C100C939724436C8F9AE5D19FDC1D6F",
+    "position": 18000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.2.1.d"
+   },
+   "A75313A04955405791B0FDABE6AA0637": {
+    "ancestorIds": [
+     "19CCF0E9345449D0B30C0530F8DB71E7",
+     "BA87622DE7D9403B80D09144D6DAC51C"
+    ],
+    "asnIdentifier": "S21133127",
+    "depth": 2,
+    "description": "Recognize that letters of the alphabet have distinct sound(s) associated with them.",
+    "id": "A75313A04955405791B0FDABE6AA0637",
+    "parentId": "19CCF0E9345449D0B30C0530F8DB71E7",
+    "position": 36000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.2.4.b"
+   },
+   "AA58636F8A7D4E88834A2B36FBAE4995": {
+    "ancestorIds": [
+     "42CA9C655D6D4074863F669C3189FBEC",
+     "BA87622DE7D9403B80D09144D6DAC51C"
+    ],
+    "asnIdentifier": "S21133123",
+    "depth": 2,
+    "description": "Recognize words as a unit of print and understand that letters are grouped to form words.",
+    "id": "AA58636F8A7D4E88834A2B36FBAE4995",
+    "parentId": "42CA9C655D6D4074863F669C3189FBEC",
+    "position": 32000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.2.3.d"
+   },
+   "ACCC9F034CC14B8586D222AA243412DE": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21132945",
+    "depth": 0,
+    "description": "Oral Expression and Listening",
+    "id": "ACCC9F034CC14B8586D222AA243412DE",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": "Standard",
+    "statementNotation": "OL.1"
+   },
+   "ADB22EF546FA47CAA40165CFCF3C97C4": {
+    "ancestorIds": [
+     "19CCF0E9345449D0B30C0530F8DB71E7",
+     "BA87622DE7D9403B80D09144D6DAC51C"
+    ],
+    "asnIdentifier": "S21133128",
+    "depth": 2,
+    "description": "Attend to the beginning letters and sounds in familiar words.",
+    "id": "ADB22EF546FA47CAA40165CFCF3C97C4",
+    "parentId": "19CCF0E9345449D0B30C0530F8DB71E7",
+    "position": 37000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.2.4.c"
+   },
+   "AF4354670924414CA1110BC4DAE4EC69": {
+    "ancestorIds": [
+     "06CA6CB8C95D459295935F5C3B59D4A7",
+     "ACCC9F034CC14B8586D222AA243412DE"
+    ],
+    "asnIdentifier": "S21132954",
+    "depth": 2,
+    "description": "Understand the difference between a question and a statement.",
+    "id": "AF4354670924414CA1110BC4DAE4EC69",
+    "parentId": "06CA6CB8C95D459295935F5C3B59D4A7",
+    "position": 10000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.1.2.d"
+   },
+   "B3AD8A16505C40AAAC35777C3CC91E95": {
+    "ancestorIds": [
+     "F0F0C8706D414B4CB6D62A30BD150F43",
+     "4C0F16CD1F194BB4820BA5BFF86C6B2D"
+    ],
+    "asnIdentifier": "S21133683",
+    "depth": 2,
+    "description": "Experiment with writing tools and materials.",
+    "id": "B3AD8A16505C40AAAC35777C3CC91E95",
+    "parentId": "F0F0C8706D414B4CB6D62A30BD150F43",
+    "position": 41000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.3.1.a"
+   },
+   "BA87622DE7D9403B80D09144D6DAC51C": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21133104",
+    "depth": 0,
+    "description": "Reading for All Purposes",
+    "id": "BA87622DE7D9403B80D09144D6DAC51C",
+    "parentId": null,
+    "position": 13000,
+    "statementLabel": "Standard",
+    "statementNotation": "RAP.2"
+   },
+   "BD1168D064AB4E7AAF70BD004A79ADC6": {
+    "ancestorIds": [
+     "19CCF0E9345449D0B30C0530F8DB71E7",
+     "BA87622DE7D9403B80D09144D6DAC51C"
+    ],
+    "asnIdentifier": "S21133129",
+    "depth": 2,
+    "description": "Identify letters and associate correct sounds with letters, including a minimum of ten letters, preferably including letters in the child's name.",
+    "id": "BD1168D064AB4E7AAF70BD004A79ADC6",
+    "parentId": "19CCF0E9345449D0B30C0530F8DB71E7",
+    "position": 38000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.2.4.d"
+   },
+   "C80705853C354C9E91248F875BF23EDC": {
+    "ancestorIds": [
+     "8C100C939724436C8F9AE5D19FDC1D6F",
+     "BA87622DE7D9403B80D09144D6DAC51C"
+    ],
+    "asnIdentifier": "S21133106",
+    "depth": 2,
+    "description": "Show interest in shared reading experiences and looking at books independently.",
+    "id": "C80705853C354C9E91248F875BF23EDC",
+    "parentId": "8C100C939724436C8F9AE5D19FDC1D6F",
+    "position": 15000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.2.1.a"
+   },
+   "CBDE3BC2D97D4D9BBB9B488F6253BF6F": {
+    "ancestorIds": [
+     "35FB93C97353480F905DB75F5197EAE7",
+     "ACCC9F034CC14B8586D222AA243412DE"
+    ],
+    "asnIdentifier": "S21132947",
+    "depth": 2,
+    "description": "Attend to language during conversations, songs, stories or other learning experiences.",
+    "id": "CBDE3BC2D97D4D9BBB9B488F6253BF6F",
+    "parentId": "35FB93C97353480F905DB75F5197EAE7",
+    "position": 3000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.1.1.a"
+   },
+   "D99DFDC5666C409FBF4429767495B016": {
+    "ancestorIds": [
+     "06CA6CB8C95D459295935F5C3B59D4A7",
+     "ACCC9F034CC14B8586D222AA243412DE"
+    ],
+    "asnIdentifier": "S21132952",
+    "depth": 2,
+    "description": "Use language to express ideas and needs.",
+    "id": "D99DFDC5666C409FBF4429767495B016",
+    "parentId": "06CA6CB8C95D459295935F5C3B59D4A7",
+    "position": 8000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.1.2.b"
+   },
+   "E3B9EBDCF0814C4E96358313CBD49ADC": {
+    "ancestorIds": [
+     "8C100C939724436C8F9AE5D19FDC1D6F",
+     "BA87622DE7D9403B80D09144D6DAC51C"
+    ],
+    "asnIdentifier": "S21133111",
+    "depth": 2,
+    "description": "Retell stories or information from books through conversation, artistic works, creative movement, or drama.",
+    "id": "E3B9EBDCF0814C4E96358313CBD49ADC",
+    "parentId": "8C100C939724436C8F9AE5D19FDC1D6F",
+    "position": 20000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.2.1.f"
+   },
+   "EE2DF808C7F64914A3CBF4DD629E494C": {
+    "ancestorIds": [
+     "35FB93C97353480F905DB75F5197EAE7",
+     "ACCC9F034CC14B8586D222AA243412DE"
+    ],
+    "asnIdentifier": "S21132949",
+    "depth": 2,
+    "description": "Follow two- to three-step directions.",
+    "id": "EE2DF808C7F64914A3CBF4DD629E494C",
+    "parentId": "35FB93C97353480F905DB75F5197EAE7",
+    "position": 5000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.1.1.c"
+   },
+   "F0F0C8706D414B4CB6D62A30BD150F43": {
+    "ancestorIds": [
+     "4C0F16CD1F194BB4820BA5BFF86C6B2D"
+    ],
+    "asnIdentifier": "S21133682",
+    "depth": 1,
+    "description": "Familiarity with writing implements, conventions, and emerging skills to communicate through written representations, symbols, and letters.",
+    "id": "F0F0C8706D414B4CB6D62A30BD150F43",
+    "parentId": "4C0F16CD1F194BB4820BA5BFF86C6B2D",
+    "position": 40000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "PK.3.1"
+   },
+   "FEDC82883117430A814FA69A61EC7F07": {
+    "ancestorIds": [
+     "42CA9C655D6D4074863F669C3189FBEC",
+     "BA87622DE7D9403B80D09144D6DAC51C"
+    ],
+    "asnIdentifier": "S21133124",
+    "depth": 2,
+    "description": "Recognize the association between spoken or signed and written words.",
+    "id": "FEDC82883117430A814FA69A61EC7F07",
+    "parentId": "42CA9C655D6D4074863F669C3189FBEC",
+    "position": 33000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "PK.2.3.e"
+   }
+  },
+  "subject": "Reading, Writing and Communicating (2020-)\n",
+  "title": "Grade Pre-K"
+ }
+}

@@ -1,0 +1,747 @@
+{
+ "data": {
+  "cspStatus": {},
+  "document": {
+   "asnIdentifier": "D2980651",
+   "id": "D2980651",
+   "publicationStatus": "Published",
+   "sourceURL": "https://www.cde.state.co.us/comath/2020cas-ma-p12",
+   "title": "Colorado Academic Standards: Mathematics",
+   "valid": "2020"
+  },
+  "educationLevels": [
+   "Pre-K"
+  ],
+  "id": "83F29380C23C4AEB843733B243CB2243_D2980651_grade-pre-k",
+  "jurisdiction": {
+   "id": "83F29380C23C4AEB843733B243CB2243",
+   "title": "Colorado"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/3.0/us/",
+   "rightsHolder": "D2L Corporation",
+   "title": "CC BY 3.0 US"
+  },
+  "normalizedSubject": "Math",
+  "standards": {
+   "00714653283D4353AF503EF9017BD521": {
+    "ancestorIds": [
+     "BF5E0824FEAF4CC481472E4720C8E713",
+     "4F89D61F751C493286246A6802D37DF7",
+     "170DBF1AFDE5419699A5A6D68F932F2E"
+    ],
+    "asnIdentifier": "S21045226",
+    "depth": 3,
+    "description": "Analyze, compare, and sort two-and three-dimensional shapes and objects in different sizes. Describe their similarities, differences, and other attributes, such as size and shape.",
+    "id": "00714653283D4353AF503EF9017BD521",
+    "parentId": "BF5E0824FEAF4CC481472E4720C8E713",
+    "position": 48000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "P.G.A.3"
+   },
+   "06D62EEF5DFF4A65BA672A292A67DF07": {
+    "ancestorIds": [
+     "DF3BC91224CA4CBE9E1751FA5DE62021",
+     "E0BC7F98AF6F4426ADFF330B15EF0A68"
+    ],
+    "asnIdentifier": "S21029668",
+    "depth": 2,
+    "description": "Understand addition as adding to and understand subtraction as taking away from.",
+    "id": "06D62EEF5DFF4A65BA672A292A67DF07",
+    "parentId": "DF3BC91224CA4CBE9E1751FA5DE62021",
+    "position": 29000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "P.OA.A"
+   },
+   "0D6F433B522A4905A4168EEB66A2FC38": {
+    "ancestorIds": [
+     "6EBA094941CD4A35865100A359A520B9",
+     "11F5BEC5C1354097A235736132768BEF",
+     "4C45B0E292764399A7C1CE3BC5C6ED35"
+    ],
+    "asnIdentifier": "S21045221",
+    "depth": 3,
+    "description": "Use comparative language, such as shortest, heavier, biggest, or later.",
+    "id": "0D6F433B522A4905A4168EEB66A2FC38",
+    "parentId": "6EBA094941CD4A35865100A359A520B9",
+    "position": 40000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "P.MD.A.1"
+   },
+   "0F35C09F1606437DACF0913D65EDAA42": {
+    "ancestorIds": [
+     "1B47B1C960F74138B7C3F306B86BC3DB"
+    ],
+    "asnIdentifier": "S21029614",
+    "depth": 1,
+    "description": "Look for and express regularity in repeated reasoning.",
+    "id": "0F35C09F1606437DACF0913D65EDAA42",
+    "parentId": "1B47B1C960F74138B7C3F306B86BC3DB",
+    "position": 9000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP8"
+   },
+   "11CA73C3CB41488396FAF94418DC4F6F": {
+    "ancestorIds": [
+     "06D62EEF5DFF4A65BA672A292A67DF07",
+     "DF3BC91224CA4CBE9E1751FA5DE62021",
+     "E0BC7F98AF6F4426ADFF330B15EF0A68"
+    ],
+    "asnIdentifier": "S21045216",
+    "depth": 3,
+    "description": "Solve addition and subtraction problems set in simple contexts. Add and subtract up to at least five to or from a given number to find a sum or difference up to 10.",
+    "id": "11CA73C3CB41488396FAF94418DC4F6F",
+    "parentId": "06D62EEF5DFF4A65BA672A292A67DF07",
+    "position": 31000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "P.OA.A.2"
+   },
+   "11F5BEC5C1354097A235736132768BEF": {
+    "ancestorIds": [
+     "4C45B0E292764399A7C1CE3BC5C6ED35"
+    ],
+    "asnIdentifier": "S21029729",
+    "depth": 1,
+    "description": "Measurement & Data",
+    "id": "11F5BEC5C1354097A235736132768BEF",
+    "parentId": "4C45B0E292764399A7C1CE3BC5C6ED35",
+    "position": 38000
+   },
+   "164E6CA31C30428BA0E0218B8F1B1A87": {
+    "ancestorIds": [
+     "5309E5E2FC0440ACAAEAAE3E129B695B",
+     "6F856C7BC31B43EF98A21AE12884C42F"
+    ],
+    "asnIdentifier": "S21029619",
+    "depth": 2,
+    "description": "Understand the relationship between numbers and quantities.",
+    "id": "164E6CA31C30428BA0E0218B8F1B1A87",
+    "parentId": "5309E5E2FC0440ACAAEAAE3E129B695B",
+    "position": 16000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "P.CC.C"
+   },
+   "170DBF1AFDE5419699A5A6D68F932F2E": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029770",
+    "depth": 0,
+    "description": "Geometry",
+    "id": "170DBF1AFDE5419699A5A6D68F932F2E",
+    "parentId": null,
+    "position": 43000,
+    "statementLabel": "Standard",
+    "statementNotation": "G.4"
+   },
+   "1B47B1C960F74138B7C3F306B86BC3DB": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029606",
+    "depth": 0,
+    "description": "Standards for Mathematical Practice",
+    "id": "1B47B1C960F74138B7C3F306B86BC3DB",
+    "parentId": null,
+    "position": 1000
+   },
+   "1DC5878FB89E44939B1EB2542A904E38": {
+    "ancestorIds": [
+     "5309E5E2FC0440ACAAEAAE3E129B695B",
+     "6F856C7BC31B43EF98A21AE12884C42F"
+    ],
+    "asnIdentifier": "S21029620",
+    "depth": 2,
+    "description": "Compare numbers.",
+    "id": "1DC5878FB89E44939B1EB2542A904E38",
+    "parentId": "5309E5E2FC0440ACAAEAAE3E129B695B",
+    "position": 21000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "P.CC.D"
+   },
+   "23B43D5EDAE447EA86FC5F6C9B7376CA": {
+    "ancestorIds": [
+     "6ED1212FD74F467FA7FA041FB7D5D488",
+     "4F89D61F751C493286246A6802D37DF7",
+     "170DBF1AFDE5419699A5A6D68F932F2E"
+    ],
+    "asnIdentifier": "S21045229",
+    "depth": 3,
+    "description": "Correctly follow directions involving their own position in space, such as \"Stand up\" and \"Move forward.\"",
+    "id": "23B43D5EDAE447EA86FC5F6C9B7376CA",
+    "parentId": "6ED1212FD74F467FA7FA041FB7D5D488",
+    "position": 52000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "P.G.B.6"
+   },
+   "2C6B96126295494081004F2148C8AD6F": {
+    "ancestorIds": [
+     "1B47B1C960F74138B7C3F306B86BC3DB"
+    ],
+    "asnIdentifier": "S21029611",
+    "depth": 1,
+    "description": "Use appropriate tools strategically.",
+    "id": "2C6B96126295494081004F2148C8AD6F",
+    "parentId": "1B47B1C960F74138B7C3F306B86BC3DB",
+    "position": 6000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP5"
+   },
+   "453A3C0CE76A44DB94F5A2BC52AE2D34": {
+    "ancestorIds": [
+     "BF5E0824FEAF4CC481472E4720C8E713",
+     "4F89D61F751C493286246A6802D37DF7",
+     "170DBF1AFDE5419699A5A6D68F932F2E"
+    ],
+    "asnIdentifier": "S21045224",
+    "depth": 3,
+    "description": "Name and describe shapes in terms of length of sides, number of sides, and number of angles/corners.",
+    "id": "453A3C0CE76A44DB94F5A2BC52AE2D34",
+    "parentId": "BF5E0824FEAF4CC481472E4720C8E713",
+    "position": 46000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "P.G.A.1"
+   },
+   "4C45B0E292764399A7C1CE3BC5C6ED35": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029728",
+    "depth": 0,
+    "description": "Data, Statistics, and Probability",
+    "id": "4C45B0E292764399A7C1CE3BC5C6ED35",
+    "parentId": null,
+    "position": 37000,
+    "statementLabel": "Standard",
+    "statementNotation": "DSP.3"
+   },
+   "4F89D61F751C493286246A6802D37DF7": {
+    "ancestorIds": [
+     "170DBF1AFDE5419699A5A6D68F932F2E"
+    ],
+    "asnIdentifier": "S21029771",
+    "depth": 1,
+    "description": "Geometry",
+    "id": "4F89D61F751C493286246A6802D37DF7",
+    "parentId": "170DBF1AFDE5419699A5A6D68F932F2E",
+    "position": 44000
+   },
+   "5309E5E2FC0440ACAAEAAE3E129B695B": {
+    "ancestorIds": [
+     "6F856C7BC31B43EF98A21AE12884C42F"
+    ],
+    "asnIdentifier": "S21029616",
+    "depth": 1,
+    "description": "Counting and Cardinality",
+    "id": "5309E5E2FC0440ACAAEAAE3E129B695B",
+    "parentId": "6F856C7BC31B43EF98A21AE12884C42F",
+    "position": 11000
+   },
+   "53D2BB0CD1FF4059B545793082A23578": {
+    "ancestorIds": [
+     "E523BB31D6AC47C1AA34F8C0CDEBE387",
+     "DF3BC91224CA4CBE9E1751FA5DE62021",
+     "E0BC7F98AF6F4426ADFF330B15EF0A68"
+    ],
+    "asnIdentifier": "S21045219",
+    "depth": 3,
+    "description": "Duplicate simple patterns in a different location than demonstrated, such as making the same alternating color pattern with blocks at a table that was demonstrated on the rug. Extend patterns, such as making an eight-block tower of the same pattern that was demonstrated with four blocks.",
+    "id": "53D2BB0CD1FF4059B545793082A23578",
+    "parentId": "E523BB31D6AC47C1AA34F8C0CDEBE387",
+    "position": 35000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "P.OA.B.5"
+   },
+   "5455648B9B9A4D37BB5A5ADA72250269": {
+    "ancestorIds": [
+     "1B47B1C960F74138B7C3F306B86BC3DB"
+    ],
+    "asnIdentifier": "S21029609",
+    "depth": 1,
+    "description": "Construct viable arguments and critique the reasoning of others.",
+    "id": "5455648B9B9A4D37BB5A5ADA72250269",
+    "parentId": "1B47B1C960F74138B7C3F306B86BC3DB",
+    "position": 4000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP3"
+   },
+   "63541F776A9D49EC91B777752E1B8E7F": {
+    "ancestorIds": [
+     "164E6CA31C30428BA0E0218B8F1B1A87",
+     "5309E5E2FC0440ACAAEAAE3E129B695B",
+     "6F856C7BC31B43EF98A21AE12884C42F"
+    ],
+    "asnIdentifier": "S21045207",
+    "depth": 3,
+    "description": "Say or sign the number names in order when counting, pairing one number word that corresponds with one object, up to at least 10.",
+    "id": "63541F776A9D49EC91B777752E1B8E7F",
+    "parentId": "164E6CA31C30428BA0E0218B8F1B1A87",
+    "position": 17000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "P.CC.C.3"
+   },
+   "679601DCFDD84ED9BFD5391499EBBE10": {
+    "ancestorIds": [
+     "6EBA094941CD4A35865100A359A520B9",
+     "11F5BEC5C1354097A235736132768BEF",
+     "4C45B0E292764399A7C1CE3BC5C6ED35"
+    ],
+    "asnIdentifier": "S21045222",
+    "depth": 3,
+    "description": "Compare or order up to five objects based on their measurable attributes, such as height or weight.",
+    "id": "679601DCFDD84ED9BFD5391499EBBE10",
+    "parentId": "6EBA094941CD4A35865100A359A520B9",
+    "position": 41000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "P.MD.A.2"
+   },
+   "6EBA094941CD4A35865100A359A520B9": {
+    "ancestorIds": [
+     "11F5BEC5C1354097A235736132768BEF",
+     "4C45B0E292764399A7C1CE3BC5C6ED35"
+    ],
+    "asnIdentifier": "S21029730",
+    "depth": 2,
+    "description": "Measure objects by their various attributes using standard and nonstandard measurement and use differences in attributes to make comparisons.",
+    "id": "6EBA094941CD4A35865100A359A520B9",
+    "parentId": "11F5BEC5C1354097A235736132768BEF",
+    "position": 39000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "P.MD.A"
+   },
+   "6ED1212FD74F467FA7FA041FB7D5D488": {
+    "ancestorIds": [
+     "4F89D61F751C493286246A6802D37DF7",
+     "170DBF1AFDE5419699A5A6D68F932F2E"
+    ],
+    "asnIdentifier": "S21029773",
+    "depth": 2,
+    "description": "Explore the positions of objects in space.",
+    "id": "6ED1212FD74F467FA7FA041FB7D5D488",
+    "parentId": "4F89D61F751C493286246A6802D37DF7",
+    "position": 50000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "P.G.B"
+   },
+   "6F856C7BC31B43EF98A21AE12884C42F": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029615",
+    "depth": 0,
+    "description": "Number and Quantity",
+    "id": "6F856C7BC31B43EF98A21AE12884C42F",
+    "parentId": null,
+    "position": 10000,
+    "statementLabel": "Standard",
+    "statementNotation": "NQ.1"
+   },
+   "78CFDBA50C2C4C1C972380A161EC54BF": {
+    "ancestorIds": [
+     "A701BCEF09DC4FD89B80122A8CE0E74E",
+     "5309E5E2FC0440ACAAEAAE3E129B695B",
+     "6F856C7BC31B43EF98A21AE12884C42F"
+    ],
+    "asnIdentifier": "S21045214",
+    "depth": 3,
+    "description": "Recognize and, with support, write some numerals up to 10.",
+    "id": "78CFDBA50C2C4C1C972380A161EC54BF",
+    "parentId": "A701BCEF09DC4FD89B80122A8CE0E74E",
+    "position": 26000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "P.CC.E.10"
+   },
+   "89B9D25D29F84B438DCFE98034890C46": {
+    "ancestorIds": [
+     "A701BCEF09DC4FD89B80122A8CE0E74E",
+     "5309E5E2FC0440ACAAEAAE3E129B695B",
+     "6F856C7BC31B43EF98A21AE12884C42F"
+    ],
+    "asnIdentifier": "S21045213",
+    "depth": 3,
+    "description": "Associate a number of objects with a written numeral 0–5.",
+    "id": "89B9D25D29F84B438DCFE98034890C46",
+    "parentId": "A701BCEF09DC4FD89B80122A8CE0E74E",
+    "position": 25000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "P.CC.E.9"
+   },
+   "941BB48A0C264FE3A7DC57F213BC4E3D": {
+    "ancestorIds": [
+     "5309E5E2FC0440ACAAEAAE3E129B695B",
+     "6F856C7BC31B43EF98A21AE12884C42F"
+    ],
+    "asnIdentifier": "S21029618",
+    "depth": 2,
+    "description": "Recognize the number of objects in a small set.",
+    "id": "941BB48A0C264FE3A7DC57F213BC4E3D",
+    "parentId": "5309E5E2FC0440ACAAEAAE3E129B695B",
+    "position": 14000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "P.CC.B"
+   },
+   "A0D71D2A421E4A46A18046196D11D428": {
+    "ancestorIds": [
+     "1B47B1C960F74138B7C3F306B86BC3DB"
+    ],
+    "asnIdentifier": "S21029610",
+    "depth": 1,
+    "description": "Model with mathematics.",
+    "id": "A0D71D2A421E4A46A18046196D11D428",
+    "parentId": "1B47B1C960F74138B7C3F306B86BC3DB",
+    "position": 5000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP4"
+   },
+   "A1921BE27C5745F88B755300F161020C": {
+    "ancestorIds": [
+     "164E6CA31C30428BA0E0218B8F1B1A87",
+     "5309E5E2FC0440ACAAEAAE3E129B695B",
+     "6F856C7BC31B43EF98A21AE12884C42F"
+    ],
+    "asnIdentifier": "S21045209",
+    "depth": 3,
+    "description": "Accurately count as many as five objects in a scattered configuration or out of a collection of more than five objects.",
+    "id": "A1921BE27C5745F88B755300F161020C",
+    "parentId": "164E6CA31C30428BA0E0218B8F1B1A87",
+    "position": 19000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "P.CC.C.5"
+   },
+   "A701BCEF09DC4FD89B80122A8CE0E74E": {
+    "ancestorIds": [
+     "5309E5E2FC0440ACAAEAAE3E129B695B",
+     "6F856C7BC31B43EF98A21AE12884C42F"
+    ],
+    "asnIdentifier": "S21029621",
+    "depth": 2,
+    "description": "Associate a quantity with written numerals up to 5 and begin to write numbers.",
+    "id": "A701BCEF09DC4FD89B80122A8CE0E74E",
+    "parentId": "5309E5E2FC0440ACAAEAAE3E129B695B",
+    "position": 24000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "P.CC.E"
+   },
+   "A7AF03E8CF944209A7DC7E154AB3B1C6": {
+    "ancestorIds": [
+     "6EBA094941CD4A35865100A359A520B9",
+     "11F5BEC5C1354097A235736132768BEF",
+     "4C45B0E292764399A7C1CE3BC5C6ED35"
+    ],
+    "asnIdentifier": "S21045223",
+    "depth": 3,
+    "description": "Measure using the same unit, such as putting together snap cubes to see how tall a book is.",
+    "id": "A7AF03E8CF944209A7DC7E154AB3B1C6",
+    "parentId": "6EBA094941CD4A35865100A359A520B9",
+    "position": 42000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "P.MD.A.3"
+   },
+   "A9490DF817284B1C8A4915B2C8DE81EE": {
+    "ancestorIds": [
+     "EC802D571F6B49319B20802307F24D90",
+     "5309E5E2FC0440ACAAEAAE3E129B695B",
+     "6F856C7BC31B43EF98A21AE12884C42F"
+    ],
+    "asnIdentifier": "S21045205",
+    "depth": 3,
+    "description": "Count verbally or sign to at least 20 by ones.",
+    "id": "A9490DF817284B1C8A4915B2C8DE81EE",
+    "parentId": "EC802D571F6B49319B20802307F24D90",
+    "position": 13000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "P.CC.A.1"
+   },
+   "B4CF62520BB84956A33CC17F7E0F93DA": {
+    "ancestorIds": [
+     "1B47B1C960F74138B7C3F306B86BC3DB"
+    ],
+    "asnIdentifier": "S21029608",
+    "depth": 1,
+    "description": "Reason abstractly and quantitatively.",
+    "id": "B4CF62520BB84956A33CC17F7E0F93DA",
+    "parentId": "1B47B1C960F74138B7C3F306B86BC3DB",
+    "position": 3000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP2"
+   },
+   "BF5E0824FEAF4CC481472E4720C8E713": {
+    "ancestorIds": [
+     "4F89D61F751C493286246A6802D37DF7",
+     "170DBF1AFDE5419699A5A6D68F932F2E"
+    ],
+    "asnIdentifier": "S21029772",
+    "depth": 2,
+    "description": "Identify, describe, compare, and compose shapes.",
+    "id": "BF5E0824FEAF4CC481472E4720C8E713",
+    "parentId": "4F89D61F751C493286246A6802D37DF7",
+    "position": 45000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "P.G.A"
+   },
+   "C32DBB24EF0A47B783DF6F7947552C02": {
+    "ancestorIds": [
+     "06D62EEF5DFF4A65BA672A292A67DF07",
+     "DF3BC91224CA4CBE9E1751FA5DE62021",
+     "E0BC7F98AF6F4426ADFF330B15EF0A68"
+    ],
+    "asnIdentifier": "S21045217",
+    "depth": 3,
+    "description": "With adult assistance, begin to use counting on (adding 1 or 2, for example) from the larger number for addition.",
+    "id": "C32DBB24EF0A47B783DF6F7947552C02",
+    "parentId": "06D62EEF5DFF4A65BA672A292A67DF07",
+    "position": 32000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "P.OA.A.3"
+   },
+   "CC080373ACE44E008F8D2E60F5FF7BFE": {
+    "ancestorIds": [
+     "06D62EEF5DFF4A65BA672A292A67DF07",
+     "DF3BC91224CA4CBE9E1751FA5DE62021",
+     "E0BC7F98AF6F4426ADFF330B15EF0A68"
+    ],
+    "asnIdentifier": "S21045215",
+    "depth": 3,
+    "description": "Represent addition and subtraction in different ways, such as with fingers, objects, and drawings.",
+    "id": "CC080373ACE44E008F8D2E60F5FF7BFE",
+    "parentId": "06D62EEF5DFF4A65BA672A292A67DF07",
+    "position": 30000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "P.OA.A.1"
+   },
+   "CF5595D0386345F1A40EBA3CFAC900DE": {
+    "ancestorIds": [
+     "E523BB31D6AC47C1AA34F8C0CDEBE387",
+     "DF3BC91224CA4CBE9E1751FA5DE62021",
+     "E0BC7F98AF6F4426ADFF330B15EF0A68"
+    ],
+    "asnIdentifier": "S21045220",
+    "depth": 3,
+    "description": "Identify the core unit of sequentially repeating patterns, such as color in a sequence of alternating red and blue blocks.",
+    "id": "CF5595D0386345F1A40EBA3CFAC900DE",
+    "parentId": "E523BB31D6AC47C1AA34F8C0CDEBE387",
+    "position": 36000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "P.OA.B.6"
+   },
+   "D5D5672C45DF437EA4F89E98B80FF6A2": {
+    "ancestorIds": [
+     "1B47B1C960F74138B7C3F306B86BC3DB"
+    ],
+    "asnIdentifier": "S21029613",
+    "depth": 1,
+    "description": "Look for and make use of structure.",
+    "id": "D5D5672C45DF437EA4F89E98B80FF6A2",
+    "parentId": "1B47B1C960F74138B7C3F306B86BC3DB",
+    "position": 8000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP7"
+   },
+   "D65C32F8CE454BA4A19D6F171DF32802": {
+    "ancestorIds": [
+     "1B47B1C960F74138B7C3F306B86BC3DB"
+    ],
+    "asnIdentifier": "S21029607",
+    "depth": 1,
+    "description": "Make sense of problems and persevere in solving them.",
+    "id": "D65C32F8CE454BA4A19D6F171DF32802",
+    "parentId": "1B47B1C960F74138B7C3F306B86BC3DB",
+    "position": 2000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP1"
+   },
+   "D6DC0388B73144B59898136B04483FB7": {
+    "ancestorIds": [
+     "BF5E0824FEAF4CC481472E4720C8E713",
+     "4F89D61F751C493286246A6802D37DF7",
+     "170DBF1AFDE5419699A5A6D68F932F2E"
+    ],
+    "asnIdentifier": "S21045227",
+    "depth": 3,
+    "description": "Compose simple shapes to form larger shapes.",
+    "id": "D6DC0388B73144B59898136B04483FB7",
+    "parentId": "BF5E0824FEAF4CC481472E4720C8E713",
+    "position": 49000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "P.G.A.4"
+   },
+   "D85A72A4EB8248D089393291FE1AE9B6": {
+    "ancestorIds": [
+     "1DC5878FB89E44939B1EB2542A904E38",
+     "5309E5E2FC0440ACAAEAAE3E129B695B",
+     "6F856C7BC31B43EF98A21AE12884C42F"
+    ],
+    "asnIdentifier": "S21045212",
+    "depth": 3,
+    "description": "Identify and use numbers related to order or position from first to fifth.",
+    "id": "D85A72A4EB8248D089393291FE1AE9B6",
+    "parentId": "1DC5878FB89E44939B1EB2542A904E38",
+    "position": 23000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "P.CC.D.8"
+   },
+   "DB07F1681AD246EEA43981053557690F": {
+    "ancestorIds": [
+     "1B47B1C960F74138B7C3F306B86BC3DB"
+    ],
+    "asnIdentifier": "S21029612",
+    "depth": 1,
+    "description": "Attend to precision.",
+    "id": "DB07F1681AD246EEA43981053557690F",
+    "parentId": "1B47B1C960F74138B7C3F306B86BC3DB",
+    "position": 7000,
+    "statementLabel": "Standard",
+    "statementNotation": "MP6"
+   },
+   "DC716768EF85453189CEF79365945BA7": {
+    "ancestorIds": [
+     "164E6CA31C30428BA0E0218B8F1B1A87",
+     "5309E5E2FC0440ACAAEAAE3E129B695B",
+     "6F856C7BC31B43EF98A21AE12884C42F"
+    ],
+    "asnIdentifier": "S21045208",
+    "depth": 3,
+    "description": "Use the number name of the last object counted to answer \"How many?\" questions for up to approximately 10 objects.",
+    "id": "DC716768EF85453189CEF79365945BA7",
+    "parentId": "164E6CA31C30428BA0E0218B8F1B1A87",
+    "position": 18000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "P.CC.C.4"
+   },
+   "DF3BC91224CA4CBE9E1751FA5DE62021": {
+    "ancestorIds": [
+     "E0BC7F98AF6F4426ADFF330B15EF0A68"
+    ],
+    "asnIdentifier": "S21029667",
+    "depth": 1,
+    "description": "Operations & Algebraic Thinking",
+    "id": "DF3BC91224CA4CBE9E1751FA5DE62021",
+    "parentId": "E0BC7F98AF6F4426ADFF330B15EF0A68",
+    "position": 28000
+   },
+   "E044C3B3AA2E4D12B72B4C2707EDDC0E": {
+    "ancestorIds": [
+     "1DC5878FB89E44939B1EB2542A904E38",
+     "5309E5E2FC0440ACAAEAAE3E129B695B",
+     "6F856C7BC31B43EF98A21AE12884C42F"
+    ],
+    "asnIdentifier": "S21045211",
+    "depth": 3,
+    "description": "Identify whether the number of objects in one group is more than, less than or the same as objects in another group for up to at least five objects.",
+    "id": "E044C3B3AA2E4D12B72B4C2707EDDC0E",
+    "parentId": "1DC5878FB89E44939B1EB2542A904E38",
+    "position": 22000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "P.CC.D.7"
+   },
+   "E0BC7F98AF6F4426ADFF330B15EF0A68": {
+    "ancestorIds": [],
+    "asnIdentifier": "S21029666",
+    "depth": 0,
+    "description": "Algebra and Functions",
+    "id": "E0BC7F98AF6F4426ADFF330B15EF0A68",
+    "parentId": null,
+    "position": 27000,
+    "statementLabel": "Standard",
+    "statementNotation": "AF.2"
+   },
+   "E45934F5C8DF49A29E77AFCEB51955FF": {
+    "ancestorIds": [
+     "941BB48A0C264FE3A7DC57F213BC4E3D",
+     "5309E5E2FC0440ACAAEAAE3E129B695B",
+     "6F856C7BC31B43EF98A21AE12884C42F"
+    ],
+    "asnIdentifier": "S21045206",
+    "depth": 3,
+    "description": "Instantly recognize, without counting, small quantities of up to five objects and say or sign the number.",
+    "id": "E45934F5C8DF49A29E77AFCEB51955FF",
+    "parentId": "941BB48A0C264FE3A7DC57F213BC4E3D",
+    "position": 15000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "P.CC.B.2"
+   },
+   "E523BB31D6AC47C1AA34F8C0CDEBE387": {
+    "ancestorIds": [
+     "DF3BC91224CA4CBE9E1751FA5DE62021",
+     "E0BC7F98AF6F4426ADFF330B15EF0A68"
+    ],
+    "asnIdentifier": "S21029669",
+    "depth": 2,
+    "description": "Understand simple patterns.",
+    "id": "E523BB31D6AC47C1AA34F8C0CDEBE387",
+    "parentId": "DF3BC91224CA4CBE9E1751FA5DE62021",
+    "position": 33000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "P.OA.B"
+   },
+   "EA2E6BDA581D4E399B5CBFD56F381785": {
+    "ancestorIds": [
+     "E523BB31D6AC47C1AA34F8C0CDEBE387",
+     "DF3BC91224CA4CBE9E1751FA5DE62021",
+     "E0BC7F98AF6F4426ADFF330B15EF0A68"
+    ],
+    "asnIdentifier": "S21045218",
+    "depth": 3,
+    "description": "Fill in missing elements of simple patterns.",
+    "id": "EA2E6BDA581D4E399B5CBFD56F381785",
+    "parentId": "E523BB31D6AC47C1AA34F8C0CDEBE387",
+    "position": 34000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "P.OA.B.4"
+   },
+   "EC802D571F6B49319B20802307F24D90": {
+    "ancestorIds": [
+     "5309E5E2FC0440ACAAEAAE3E129B695B",
+     "6F856C7BC31B43EF98A21AE12884C42F"
+    ],
+    "asnIdentifier": "S21029617",
+    "depth": 2,
+    "description": "Know number names and the count sequence.",
+    "id": "EC802D571F6B49319B20802307F24D90",
+    "parentId": "5309E5E2FC0440ACAAEAAE3E129B695B",
+    "position": 12000,
+    "statementLabel": "Grade Level Expectation",
+    "statementNotation": "P.CC.A"
+   },
+   "F6BB6B3835D043DEB0C663A5DF5DD827": {
+    "ancestorIds": [
+     "164E6CA31C30428BA0E0218B8F1B1A87",
+     "5309E5E2FC0440ACAAEAAE3E129B695B",
+     "6F856C7BC31B43EF98A21AE12884C42F"
+    ],
+    "asnIdentifier": "S21045210",
+    "depth": 3,
+    "description": "Understand that each successive number name refers to a quantity that is one larger.",
+    "id": "F6BB6B3835D043DEB0C663A5DF5DD827",
+    "parentId": "164E6CA31C30428BA0E0218B8F1B1A87",
+    "position": 20000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "P.CC.C.6"
+   },
+   "F73D64F833334843A8E443F40AC9FBBB": {
+    "ancestorIds": [
+     "6ED1212FD74F467FA7FA041FB7D5D488",
+     "4F89D61F751C493286246A6802D37DF7",
+     "170DBF1AFDE5419699A5A6D68F932F2E"
+    ],
+    "asnIdentifier": "S21045228",
+    "depth": 3,
+    "description": "Understand and use language related to directionality, order, and the position of objects, including up/down and in front/behind.",
+    "id": "F73D64F833334843A8E443F40AC9FBBB",
+    "parentId": "6ED1212FD74F467FA7FA041FB7D5D488",
+    "position": 51000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "P.G.B.5"
+   },
+   "FF1EC41717F44705A1062B4961009AEE": {
+    "ancestorIds": [
+     "BF5E0824FEAF4CC481472E4720C8E713",
+     "4F89D61F751C493286246A6802D37DF7",
+     "170DBF1AFDE5419699A5A6D68F932F2E"
+    ],
+    "asnIdentifier": "S21045225",
+    "depth": 3,
+    "description": "Correctly name basic shapes (circle, square, rectangle, triangle) regardless of size and orientation.",
+    "id": "FF1EC41717F44705A1062B4961009AEE",
+    "parentId": "BF5E0824FEAF4CC481472E4720C8E713",
+    "position": 47000,
+    "statementLabel": "Evidence Outcome",
+    "statementNotation": "P.G.A.2"
+   }
+  },
+  "subject": "Mathematics (2020-)",
+  "title": "Grade Pre-K"
+ }
+}

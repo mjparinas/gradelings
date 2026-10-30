@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Illinois, a US state. Standards are the Illinois Learning Standards, adopted by the Illinois State Board of Education:
 // the Common Core State Standards for mathematics and for English language arts (2010), the Next Generation Science
@@ -74,9 +75,9 @@ export const ILLINOIS: Framework = {
   standardLabel: "Standard",
   sourceName: "Illinois State Board of Education",
   sourceUrl: "https://www.isbe.net/Pages/Standards-Courses.aspx",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Illinois report cards",
     intro:
