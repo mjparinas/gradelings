@@ -141,6 +141,10 @@ export const NORTH_CAROLINA_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "NC Pre-K funds a year for four-year-olds in public schools, Head Start and licensed child care centers. It follows North Carolina Foundations for Early Learning and Development.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in North Carolina is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. In social studies they learn about families, traditions, rules, needs and wants, and simple maps. Early in the year, teachers use the Kindergarten Entry Assessment to get to know each child, and reading is checked with a short screener three times a year.",
       lookFor: "Many North Carolina districts use standards-based report cards in the early grades. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

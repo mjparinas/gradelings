@@ -1,0 +1,690 @@
+{
+ "pk/math": [
+  {
+   "idx": "M.NQ",
+   "text": "Demonstrate knowledge of numbers, numerals, and quantity."
+  },
+  {
+   "idx": "M.NQ.PK1",
+   "text": "Recite numbers from 1 to 20."
+  },
+  {
+   "idx": "M.NQ.PK2",
+   "text": "Count backward from 5 to 1."
+  },
+  {
+   "idx": "M.NQ.PK3",
+   "text": "Give the next number name in the number series up to 10."
+  },
+  {
+   "idx": "M.NQ.PK4",
+   "text": "Recognize mistakes in others’ counting and self-correct own counting."
+  },
+  {
+   "idx": "M.NQ.PK5",
+   "text": "Identify and use numbers related to order or position from first to fifth."
+  },
+  {
+   "idx": "M.NQ.PK6",
+   "text": "Count up to 10 objects saying the number name in the correct order and pairing each object with one and only one number name."
+  },
+  {
+   "idx": "M.NQ.PK7",
+   "text": "Count using one-to-one correspondence and answer “How many?” questions for a group of up to 10 objects arranged in a straight line."
+  },
+  {
+   "idx": "M.NQ.PK8",
+   "text": "Instantly recognize and name the number of objects in a set up to five."
+  },
+  {
+   "idx": "M.NQ.PK9",
+   "text": "Manipulate a set of objects to count out a specified or target number of up to 10 objects."
+  },
+  {
+   "idx": "M.NQ.PK10",
+   "text": "Correctly identify the remaining number of objects in a set of up to four objects after one object is added or taken away."
+  },
+  {
+   "idx": "M.NQ.PK11",
+   "text": "Compare two or more sets of up to 10 objects and accurately identify which sets are equal and which have more or fewer objects."
+  },
+  {
+   "idx": "M.NQ.PK12",
+   "text": "Recognize and read some of the numerals between 0 and 10."
+  },
+  {
+   "idx": "M.NQ.PK13",
+   "text": "Match the number of objects in a set to the correct numeral between 1 and 5."
+  },
+  {
+   "idx": "M.NQ.PK14",
+   "text": "Write, draw, or create objects to represent the numerals between 0 and 5."
+  },
+  {
+   "idx": "M.PO",
+   "text": "Demonstrate the ability to analyze and create patterns and early mathematical problem-solving skills."
+  },
+  {
+   "idx": "M.PO.PK1",
+   "text": "Sort objects by attributes such as size and shape."
+  },
+  {
+   "idx": "M.PO.PK2",
+   "text": "Recognize, replicate, and extend simple repeating patterns."
+  },
+  {
+   "idx": "M.PO.PK3",
+   "text": "Create own simple pattern and identify the core unit of the repeating pattern."
+  },
+  {
+   "idx": "M.PO.PK4",
+   "text": "Solve simple addition and subtraction problems (where the answer is five or less), using objects to represent the problem."
+  },
+  {
+   "idx": "M.ME",
+   "text": "Demonstrate the ability to measure and compare by size and volume."
+  },
+  {
+   "idx": "M.ME.PK1",
+   "text": "Compare or order up to five objects based on their measurable attributes, such as height or weight."
+  },
+  {
+   "idx": "M.ME.PK2",
+   "text": "Use comparative language to describe the length, size, or weight of two or more objects (e.g., shortest, heavier, biggest)."
+  },
+  {
+   "idx": "M.ME.PK3",
+   "text": "Measure the length of an object using another object or group of objects."
+  },
+  {
+   "idx": "M.GS",
+   "text": "Analyze and compare common shapes and use knowledge of position in space."
+  },
+  {
+   "idx": "M.GS.PK1",
+   "text": "Identify basic shapes such as circles, triangles, squares, and rectangles regardless of size or orientation."
+  },
+  {
+   "idx": "M.GS.PK2",
+   "text": "Name, describe, and compare shapes in terms of length of sides, number of sides, and number of angles."
+  },
+  {
+   "idx": "M.GS.PK3",
+   "text": "Identify basic 2D and 3D shapes in the environment."
+  },
+  {
+   "idx": "M.GS.PK4",
+   "text": "Create and build shapes from components."
+  },
+  {
+   "idx": "M.GS.PK5",
+   "text": "Select, combine, rotate, and flip shapes to match an example."
+  },
+  {
+   "idx": "M.GS.PK6",
+   "text": "Understand and use language related to directionality and the position of objects."
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "L.RC",
+   "text": "Demonstrate the ability to attend to and understand communication from others."
+  },
+  {
+   "idx": "L.RC.PK1",
+   "text": "Use verbal and nonverbal signals to acknowledge communication from others."
+  },
+  {
+   "idx": "L.RC.PK2",
+   "text": "Show ongoing connection to a conversation, group discussion, or presentation."
+  },
+  {
+   "idx": "L.RC.PK3",
+   "text": "Recall and follow two- and three-step directions."
+  },
+  {
+   "idx": "L.RC.PK4",
+   "text": "Show understanding of books read aloud, stories, or explanations on a topic."
+  },
+  {
+   "idx": "L.RC.PK5",
+   "text": "Listen with increasing attention span to gain new knowledge."
+  },
+  {
+   "idx": "L.EC",
+   "text": "Demonstrate the ability to express themselves verbally or nonverbally."
+  },
+  {
+   "idx": "L.EC.PK1",
+   "text": "Communicate to express self in detailed ways."
+  },
+  {
+   "idx": "L.EC.PK2",
+   "text": "Communicate in complete sentences using at least three words."
+  },
+  {
+   "idx": "L.EC.PK3",
+   "text": "Follow conventions of conversation most of the time."
+  },
+  {
+   "idx": "L.EC.PK4",
+   "text": "Share ideas and information from personal and group experiences."
+  },
+  {
+   "idx": "L.EC.PK5",
+   "text": "Communicate to express needs and clarify a word or statement when misunderstood."
+  },
+  {
+   "idx": "L.V",
+   "text": "Use a variety of vocabulary words during play and other activities."
+  },
+  {
+   "idx": "L.V.PK1",
+   "text": "Use vocabulary words with increasing specificity and variety to describe feelings, experiences, observations, and ideas."
+  },
+  {
+   "idx": "L.V.PK2",
+   "text": "Use context to determine the meaning of unknown words."
+  },
+  {
+   "idx": "L.V.PK3",
+   "text": "Use a wide variety of words for many purposes."
+  },
+  {
+   "idx": "L.V.PK4",
+   "text": "Use words that describe a category of objects that go together."
+  },
+  {
+   "idx": "L.V.PK5",
+   "text": "Identify common opposite words."
+  },
+  {
+   "idx": "L.V.PK6",
+   "text": "Use words with similar meaning to describe an object, emotion, or action."
+  },
+  {
+   "idx": "L.V.PK7",
+   "text": "Discuss and use new vocabulary words learned from stories, books, and/or other early literacy activities."
+  },
+  {
+   "idx": "L.AK",
+   "text": "Demonstrate knowledge of the alphabet and how letters are used in the reading process."
+  },
+  {
+   "idx": "L.AK.PK1",
+   "text": "Identify the names of letters in own name and produce the sound of the first letter in own name."
+  },
+  {
+   "idx": "L.AK.PK2",
+   "text": "Identify and name most letters in their uppercase form and some letters in their lowercase form."
+  },
+  {
+   "idx": "L.AK.PK3",
+   "text": "Name and produce the letter sound for several letters."
+  },
+  {
+   "idx": "L.PB",
+   "text": "Demonstrate knowledge of how print and books are read."
+  },
+  {
+   "idx": "L.PB.PK1",
+   "text": "Recognize that print carries a message and information."
+  },
+  {
+   "idx": "L.PB.PK2",
+   "text": "Recognize environmental print and symbols."
+  },
+  {
+   "idx": "L.PB.PK3",
+   "text": "Indicate that groups of letters form a word."
+  },
+  {
+   "idx": "L.PB.PK4",
+   "text": "Identify book parts and features, such as the front, back, title, and/or author."
+  },
+  {
+   "idx": "L.C",
+   "text": "Demonstrate knowledge gained from stories, books, and other early literacy activities."
+  },
+  {
+   "idx": "L.C.PK1",
+   "text": "Ask questions or make comments related to the details of a story."
+  },
+  {
+   "idx": "L.C.PK2",
+   "text": "Retell a story, putting at least two events in the appropriate sequence."
+  },
+  {
+   "idx": "L.C.PK3",
+   "text": "Predict what might happen next in a story."
+  },
+  {
+   "idx": "L.C.PK4",
+   "text": "Recall information and answer questions related to an event, text, or pictures related to self and the world around them."
+  },
+  {
+   "idx": "L.C.PK5",
+   "text": "Use pictures to gain meaning and follow a simple pictorial direction."
+  },
+  {
+   "idx": "L.W",
+   "text": "Demonstrate the use of written letters and symbols to communicate."
+  },
+  {
+   "idx": "L.W.PK1",
+   "text": "Draw to express ideas, thoughts, or interests."
+  },
+  {
+   "idx": "L.W.PK2",
+   "text": "Experiment with writing tools and materials for variety of purposes."
+  },
+  {
+   "idx": "L.W.PK3",
+   "text": "Recreate basic shapes that form letters or draw the shapes while looking at a model."
+  },
+  {
+   "idx": "L.W.PK4",
+   "text": "Write for a variety of purposes using increasingly sophisticated marks."
+  },
+  {
+   "idx": "L.W.PK5",
+   "text": "Use letter-like approximation to print name."
+  },
+  {
+   "idx": "L.W.PK6",
+   "text": "Share ideas, information from experiences, and opinions for class writing."
+  },
+  {
+   "idx": "L.W.PK7",
+   "text": "Dictate words, phrases, or sentences to an adult who writes them down."
+  },
+  {
+   "idx": "L.PA",
+   "text": "Demonstrate knowledge of sounds within spoken language"
+  },
+  {
+   "idx": "L.PA.PK1",
+   "text": "Repeat rhyming words."
+  },
+  {
+   "idx": "L.PA.PK2",
+   "text": "Identify beginning sounds of some spoken words with which they are familiar."
+  },
+  {
+   "idx": "L.PA.PK3",
+   "text": "Identify two or more spoken words that share the same initial sound."
+  },
+  {
+   "idx": "L.PA.PK4",
+   "text": "Identify multiple parts of short words and long words."
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "S.EO",
+   "text": "Demonstrate the ability to use senses and tools to explore, make observations, and make predictions."
+  },
+  {
+   "idx": "S.EO.PK1",
+   "text": "Use smell, touch, sight, sound, and taste to make observations."
+  },
+  {
+   "idx": "S.EO.PK2",
+   "text": "Use tools to observe and describe objects, the environment, and processes."
+  },
+  {
+   "idx": "S.EO.PK3",
+   "text": "Use observations and information to notice patterns, create groups based on similarities/ differences observed, and/ or make predictions."
+  },
+  {
+   "idx": "S.EO.PK4",
+   "text": "Make predictions using prior knowledge and experience."
+  },
+  {
+   "idx": "S.SI",
+   "text": "Demonstrate the ability to use information gathered in different ways to conduct investigations."
+  },
+  {
+   "idx": "S.SI.PK1",
+   "text": "Show curiosity and ask questions about things they are interested in that can be answered through an investigation."
+  },
+  {
+   "idx": "S.SI.PK2",
+   "text": "Describe some of the steps and/or materials needed for an investigation or experiment."
+  },
+  {
+   "idx": "S.SI.PK3",
+   "text": "Conduct simple investigations and gather information through observations to see what happens."
+  },
+  {
+   "idx": "S.AC",
+   "text": "Demonstrate the ability to describe, analyze, and draw conclusions about the outcome of an investigation."
+  },
+  {
+   "idx": "S.AC.PK1",
+   "text": "Analyze observations from an investigation to develop an explanation or conclusion."
+  },
+  {
+   "idx": "S.AC.PK2",
+   "text": "Describe possible cause and effect relationships from observation or prior knowledge."
+  },
+  {
+   "idx": "S.SC",
+   "text": "Demonstrate the ability to communicate about observations, investigations, and outcomes."
+  },
+  {
+   "idx": "S.SC.PK1",
+   "text": "Create pictures, diagrams, or 3D models to represent plans for an investigation."
+  },
+  {
+   "idx": "S.SC.PK2",
+   "text": "Illustrate or describe observations, results, and conclusions or explanations from an investigation or science-related activities."
+  },
+  {
+   "idx": "S.SC.PK3",
+   "text": "Use scientific content words during scientific inquiry and investigation."
+  },
+  {
+   "idx": "S.SC.PK4",
+   "text": "Use adjectives and scientific words to describe objects, materials, organisms, events, and processes."
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "S.EO",
+   "text": "Demonstrate the ability to use senses and tools to explore, make observations, and make predictions."
+  },
+  {
+   "idx": "S.EO.PK1",
+   "text": "Use smell, touch, sight, sound, and taste to make observations."
+  },
+  {
+   "idx": "S.EO.PK2",
+   "text": "Use tools to observe and describe objects, the environment, and processes."
+  },
+  {
+   "idx": "S.EO.PK3",
+   "text": "Use observations and information to notice patterns, create groups based on similarities/ differences observed, and/ or make predictions."
+  },
+  {
+   "idx": "S.EO.PK4",
+   "text": "Make predictions using prior knowledge and experience."
+  },
+  {
+   "idx": "S.SI",
+   "text": "Demonstrate the ability to use information gathered in different ways to conduct investigations."
+  },
+  {
+   "idx": "S.SI.PK1",
+   "text": "Show curiosity and ask questions about things they are interested in that can be answered through an investigation."
+  },
+  {
+   "idx": "S.SI.PK2",
+   "text": "Describe some of the steps and/or materials needed for an investigation or experiment."
+  },
+  {
+   "idx": "S.SI.PK3",
+   "text": "Conduct simple investigations and gather information through observations to see what happens."
+  },
+  {
+   "idx": "S.AC",
+   "text": "Demonstrate the ability to describe, analyze, and draw conclusions about the outcome of an investigation."
+  },
+  {
+   "idx": "S.AC.PK1",
+   "text": "Analyze observations from an investigation to develop an explanation or conclusion."
+  },
+  {
+   "idx": "S.AC.PK2",
+   "text": "Describe possible cause and effect relationships from observation or prior knowledge."
+  },
+  {
+   "idx": "S.SC",
+   "text": "Demonstrate the ability to communicate about observations, investigations, and outcomes."
+  },
+  {
+   "idx": "S.SC.PK1",
+   "text": "Create pictures, diagrams, or 3D models to represent plans for an investigation."
+  },
+  {
+   "idx": "S.SC.PK2",
+   "text": "Illustrate or describe observations, results, and conclusions or explanations from an investigation or science-related activities."
+  },
+  {
+   "idx": "S.SC.PK3",
+   "text": "Use scientific content words during scientific inquiry and investigation."
+  },
+  {
+   "idx": "S.SC.PK4",
+   "text": "Use adjectives and scientific words to describe objects, materials, organisms, events, and processes."
+  },
+  {
+   "idx": "SS.ID",
+   "text": "Demonstrate a basic awareness of self as an individual, within the context of a group and community."
+  },
+  {
+   "idx": "SS.ID.PK1",
+   "text": "Identify and describe characteristics of self that are unique from others."
+  },
+  {
+   "idx": "SS.ID.PK2",
+   "text": "Identify self as a member of a family."
+  },
+  {
+   "idx": "SS.ID.PK3",
+   "text": "Share information about their family practices, customs, and culture."
+  },
+  {
+   "idx": "SS.ID.PK4",
+   "text": "Identify and describe family traditions and daily rituals that are important to their family."
+  },
+  {
+   "idx": "SS.CI",
+   "text": "Demonstrate a basic understanding of roles, rights, and responsibilities in their classroom and home."
+  },
+  {
+   "idx": "SS.CI.PK1",
+   "text": "Identify self as member of a classroom or community."
+  },
+  {
+   "idx": "SS.CI.PK2",
+   "text": "Identify classroom teachers/ practitioners and peers by name."
+  },
+  {
+   "idx": "SS.CI.PK3",
+   "text": "Recognize and resolve conflicts with peers in an age-appropriate manner."
+  },
+  {
+   "idx": "SS.CI.PK4",
+   "text": "Show awareness of and follow group routines and rules."
+  },
+  {
+   "idx": "SS.CI.PK5",
+   "text": "Participate in group decision-making."
+  },
+  {
+   "idx": "SS.CI.PK6",
+   "text": "Work together to complete simple tasks with peers."
+  },
+  {
+   "idx": "SS.CI.PK7",
+   "text": "Identify and describe the roles of different community helpers."
+  },
+  {
+   "idx": "SS.GH",
+   "text": "Demonstrate knowledge of the relationship between people and places."
+  },
+  {
+   "idx": "SS.GH.PK1",
+   "text": "Use spatial words to identify direction and location."
+  },
+  {
+   "idx": "SS.GH.PK2",
+   "text": "Identify and describe their classroom, home, or community."
+  },
+  {
+   "idx": "SS.GH.PK3",
+   "text": "Identify differences and similarities between home and school."
+  },
+  {
+   "idx": "SS.GH.PK4",
+   "text": "Recognize that peers live in different places within the community."
+  },
+  {
+   "idx": "SS.GH.PK5",
+   "text": "Recognize and identify some tools and resources used to describe features of places."
+  },
+  {
+   "idx": "SS.GH.PK6",
+   "text": "Identify and describe environmental and geographical features of the area where they live."
+  },
+  {
+   "idx": "SS.GH.PK7",
+   "text": "Participate in taking care of the world around them."
+  },
+  {
+   "idx": "SS.TC",
+   "text": "Demonstrate the ability to differentiate between the concepts of past, present, and future, and recognize that people and things change over time"
+  },
+  {
+   "idx": "SS.TC.PK1",
+   "text": "Describe a sequence of events."
+  },
+  {
+   "idx": "SS.TC.PK2",
+   "text": "Recognize a change in a sequence of events."
+  },
+  {
+   "idx": "SS.TC.PK3",
+   "text": "Recognize changes that take place over time."
+  },
+  {
+   "idx": "SS.TC.PK4",
+   "text": "Describe events that happened in the immediate past or are planned for the near future."
+  },
+  {
+   "idx": "SS.ES",
+   "text": "Demonstrate an awareness of basic economic concepts."
+  },
+  {
+   "idx": "SS.ES.PK1",
+   "text": "Recognize that resources can be limited."
+  },
+  {
+   "idx": "SS.ES.PK2",
+   "text": "Recognize that people may want something, which is different from something they need."
+  },
+  {
+   "idx": "SS.ES.PK3",
+   "text": "Decide between at least two choices involving resources in the classroom or at home."
+  },
+  {
+   "idx": "SS.ES.PK4",
+   "text": "Recognize that people use money to buy things they want and need."
+  },
+  {
+   "idx": "A,CI",
+   "text": "Demonstrate curiosity and initiative ."
+  },
+  {
+   "idx": "A.CI.PK1",
+   "text": "Ask questions and seek new information related to a variety of topics, ideas, and activities."
+  },
+  {
+   "idx": "A.CI.PK2",
+   "text": "Seek out and explore unfamiliar objects and activities."
+  },
+  {
+   "idx": "A.CI.PK3",
+   "text": "Initiate activities or tasks."
+  },
+  {
+   "idx": "A.CI.PK4",
+   "text": "Make choices and communicate their choice to adults and other children."
+  },
+  {
+   "idx": "A.RC",
+   "text": "Demonstrate willingness to take risks and use flexibility in thinking and actions."
+  },
+  {
+   "idx": "A.RC.PK1",
+   "text": "Try or join in new activities and experiences, even if they are perceived as challenging."
+  },
+  {
+   "idx": "A.RC.PK2",
+   "text": "Use a variety of approaches and strategies to complete tasks and solve problems."
+  },
+  {
+   "idx": "A.RC.PK3",
+   "text": "Try different strategies to resolve conflict or other problems in working with other children."
+  },
+  {
+   "idx": "A.RC.PK4",
+   "text": "Recognize and attempt to correct mistakes."
+  },
+  {
+   "idx": "A.RC.PK5",
+   "text": "Use rules from one situation as a guide for behavior in a different situation."
+  },
+  {
+   "idx": "A.RC.PK6",
+   "text": "Delay gratification to complete a larger task."
+  },
+  {
+   "idx": "A.RC.PK7",
+   "text": "Manage transition between activities without getting frustrated."
+  },
+  {
+   "idx": "A.EL",
+   "text": "Demonstrate the ability to focus attention and persist in an activity."
+  },
+  {
+   "idx": "A.EL.PK1",
+   "text": "Maintain focus on activities for developmentally appropriate periods of time."
+  },
+  {
+   "idx": "A.EL.PK2",
+   "text": "Persist in tasks and re-engage in an activity after an interruption."
+  },
+  {
+   "idx": "A.EL.PK3",
+   "text": "Express satisfaction when accomplishing a task and achieving a goal."
+  },
+  {
+   "idx": "A.EL.PK4",
+   "text": "Continue with a task or activity even when it is challenging or frustrating."
+  },
+  {
+   "idx": "A.PL",
+   "text": "Demonstrate imagination and engage in different types of play"
+  },
+  {
+   "idx": "A.PL.PK1",
+   "text": "Use imagination in social and pretend play."
+  },
+  {
+   "idx": "A.PL.PK2",
+   "text": "Give and follow directions from peers during social play."
+  },
+  {
+   "idx": "A.PL.PK3",
+   "text": "Communicate in a variety of ways when playing with others."
+  },
+  {
+   "idx": "A.PL.PK4",
+   "text": "Use what was learned in other disciplines in pretend play."
+  },
+  {
+   "idx": "A.PL.PK5",
+   "text": "Act out or create a new role based on life experiences, including collaboration with peers in related roles."
+  },
+  {
+   "idx": "A.PL.PK6",
+   "text": "Use materials or objects to represent something else during play or when acting out stories."
+  },
+  {
+   "idx": "A.PL.PK7",
+   "text": "Differentiate between pretend and real."
+  }
+ ]
+}

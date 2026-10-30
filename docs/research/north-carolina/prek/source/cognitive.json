@@ -1,0 +1,2629 @@
+{
+ "data": {
+  "cspStatus": {
+   "notes": null,
+   "value": "visible"
+  },
+  "document": {
+   "publicationStatus": "Published",
+   "sourceURL": "https://ncchildcare.ncdhhs.gov/Portals/0/documents/pdf/N/NC_Foundations.pdf?ver=2017-05-16-105950-953",
+   "title": "North Carolina Foundations for Early Learning and Development"
+  },
+  "educationLevels": [
+   "Pre-K"
+  ],
+  "id": "E3C9402103F74D6C81E62ECAE9421E3D",
+  "jurisdiction": {
+   "id": "8A257771396B4F0792EB9D6020CC9089",
+   "title": "North Carolina"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/4.0/us/",
+   "rightsHolder": "Common Curriculum, Inc.",
+   "title": "CC BY 4.0 US"
+  },
+  "normalizedSubject": null,
+  "standards": {
+   "058C0E3A9EAA42889053B7118B157F17": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "155D84039C3F496DA9EE2EAD62566257",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use drawing and concrete materials\nto represent an increasing variety\nof mathematical ideas (draw\nshapes to represent pattern; stack\ndifferent-colored blocks to represent\nclassmates’ answers to a survey\nquestion).",
+    "id": "058C0E3A9EAA42889053B7118B157F17",
+    "listId": "",
+    "parentId": "155D84039C3F496DA9EE2EAD62566257",
+    "position": 1117,
+    "statementLabel": null,
+    "statementNotation": "CD-13g"
+   },
+   "064A976AA46A4CE39B59F65A29577729": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6272979CC9864A0ABAD3E740C025EDA0",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children recognize that they are members of different groups\n(e.g., family, preschool class, cultural group).",
+    "id": "064A976AA46A4CE39B59F65A29577729",
+    "listId": "",
+    "parentId": "6272979CC9864A0ABAD3E740C025EDA0",
+    "position": 1055,
+    "statementLabel": null,
+    "statementNotation": "Goal CD-7"
+   },
+   "09BE947CAFA34086BFD7A27A05795BA7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FDB74F5A57074E1988EB70D9D159F3C3",
+     "C00BA1047EDA4323A2FCC31A268EEFBC",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Apply what they\nknow about everyday\nexperiences to new\nsituations (look for the\nseatbelt on the bus).",
+    "id": "09BE947CAFA34086BFD7A27A05795BA7",
+    "listId": "",
+    "parentId": "FDB74F5A57074E1988EB70D9D159F3C3",
+    "position": 1012,
+    "statementLabel": null,
+    "statementNotation": "CD-2p"
+   },
+   "0E22A18276D34242BFC1D552BB2BE134": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F48065E5D028461194137AFD5C5544E4",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Directly compare more than two\nobjects by size, length, or weight\n(“That rock is heavier than these\nothers; I can’t lift it.” Look at three\nstrings that are different lengths and\nselect the longest string).",
+    "id": "0E22A18276D34242BFC1D552BB2BE134",
+    "listId": "",
+    "parentId": "F48065E5D028461194137AFD5C5544E4",
+    "position": 1100,
+    "statementLabel": null,
+    "statementNotation": "CD-11n"
+   },
+   "0ED4C9F11D614DDE8797B6BF03F4435B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "75650F7A3DF543769E2EF085E6B2D909",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Show understanding of first, next,\nand last during play and daily\nactivities (answer questions about\nwho is first and last to slide down\nthe slide; say, “The engine is first,\nand the caboose is last” when\nmaking a train).",
+    "id": "0ED4C9F11D614DDE8797B6BF03F4435B",
+    "listId": "",
+    "parentId": "75650F7A3DF543769E2EF085E6B2D909",
+    "position": 1090,
+    "statementLabel": null,
+    "statementNotation": "CD-10w"
+   },
+   "1102816C1B6C455791986CC62BF9D94B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6272979CC9864A0ABAD3E740C025EDA0",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children explore concepts connected with their daily experiences\nin their community.",
+    "id": "1102816C1B6C455791986CC62BF9D94B",
+    "listId": "",
+    "parentId": "6272979CC9864A0ABAD3E740C025EDA0",
+    "position": 1064,
+    "statementLabel": null,
+    "statementNotation": "Goal CD-9"
+   },
+   "129EB42F3FF34B609272C7A28ED283A8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "554956EBFA37455DA2C33D3372A33689",
+     "39C3AE75B14F46EC8CF3427729DFC28B",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Notice and react to the natural world and\nthe outdoor environment.",
+    "id": "129EB42F3FF34B609272C7A28ED283A8",
+    "listId": "",
+    "parentId": "554956EBFA37455DA2C33D3372A33689",
+    "position": 1128,
+    "statementLabel": null,
+    "statementNotation": "CD-14l"
+   },
+   "12DE3964D75C4C3E838E117110EF9D17": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CF52818607D64685A541A84F4F67AD0B",
+     "39C3AE75B14F46EC8CF3427729DFC28B",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Represent what they\nlearn during scientific\nexploration through\ndrawing, modeling,\nbuilding, movement, or\nother methods.",
+    "id": "12DE3964D75C4C3E838E117110EF9D17",
+    "listId": "",
+    "parentId": "CF52818607D64685A541A84F4F67AD0B",
+    "position": 1135,
+    "statementLabel": null,
+    "statementNotation": "CD-15i"
+   },
+   "13A5FB584FF9426B8C900D6413ADF0E8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5B9E3B4A3CD145DFBF24ED9E4A22B9FB",
+     "E103D440F8974748B9569B67859DEA22",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Plan and complete artistic\ncreations such as drawings,\npaintings, collages, and\nsculptures.",
+    "id": "13A5FB584FF9426B8C900D6413ADF0E8",
+    "listId": "",
+    "parentId": "5B9E3B4A3CD145DFBF24ED9E4A22B9FB",
+    "position": 1044,
+    "statementLabel": null,
+    "statementNotation": "CD-5t"
+   },
+   "155D84039C3F496DA9EE2EAD62566257": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children use mathematical thinking to solve problems\nin their everyday environment.",
+    "id": "155D84039C3F496DA9EE2EAD62566257",
+    "listId": "",
+    "parentId": "F596007D0281416FA5250C4B4605A04E",
+    "position": 1111,
+    "statementLabel": null,
+    "statementNotation": "Goal CD-13"
+   },
+   "1578199AD72C4DA5813F7B0104B882F1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FDB74F5A57074E1988EB70D9D159F3C3",
+     "C00BA1047EDA4323A2FCC31A268EEFBC",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize whether a\npicture or object is the\nsame as or different from\nsomething they have seen\nbefore.",
+    "id": "1578199AD72C4DA5813F7B0104B882F1",
+    "listId": "",
+    "parentId": "FDB74F5A57074E1988EB70D9D159F3C3",
+    "position": 1011,
+    "statementLabel": null,
+    "statementNotation": "CD-2o"
+   },
+   "17902028C4244F67ADEC14AB459BFFE6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E1DDF73A99044F53A5F2D6EE04956F83",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use 2- and 3-dimensional\nshapes to create pictures,\ndesigns, or structures.",
+    "id": "17902028C4244F67ADEC14AB459BFFE6",
+    "listId": "",
+    "parentId": "E1DDF73A99044F53A5F2D6EE04956F83",
+    "position": 1106,
+    "statementLabel": null,
+    "statementNotation": "CD-12i"
+   },
+   "17C6D3C866DD4A1CAD07A831132492AB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5B9E3B4A3CD145DFBF24ED9E4A22B9FB",
+     "E103D440F8974748B9569B67859DEA22",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Choose to participate and\nexpress themselves through a\nvariety of creative experiences,\nsuch as art, music, movement,\ndance, and dramatic play. ",
+    "id": "17C6D3C866DD4A1CAD07A831132492AB",
+    "listId": "",
+    "parentId": "5B9E3B4A3CD145DFBF24ED9E4A22B9FB",
+    "position": 1042,
+    "statementLabel": null,
+    "statementNotation": "CD-5r"
+   },
+   "1B51D4DA6D5F40A9A6C0A44E6C37E46F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "554956EBFA37455DA2C33D3372A33689",
+     "39C3AE75B14F46EC8CF3427729DFC28B",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Notice and describe current\nweather conditions.",
+    "id": "1B51D4DA6D5F40A9A6C0A44E6C37E46F",
+    "listId": "",
+    "parentId": "554956EBFA37455DA2C33D3372A33689",
+    "position": 1124,
+    "statementLabel": null,
+    "statementNotation": "CD-14h"
+   },
+   "1D0ED52BF5F0471FA2E6B59463B60224": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "554956EBFA37455DA2C33D3372A33689",
+     "39C3AE75B14F46EC8CF3427729DFC28B",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Participate in the care of living\nthings, with guidance and\nsupport (water plants, help to\nfeed classroom pet).",
+    "id": "1D0ED52BF5F0471FA2E6B59463B60224",
+    "listId": "",
+    "parentId": "554956EBFA37455DA2C33D3372A33689",
+    "position": 1121,
+    "statementLabel": null,
+    "statementNotation": "CD-14e"
+   },
+   "1F0A44A262D84A999A62C19882903DCA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8A140203520C4AF793CEF5A62CC5383C",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Without counting, state the\nnumber of objects in a small\ncollection (1-3) (when a friend\nholds up two fingers, look at\nher hand and say, “Two fingers”\nwithout counting). ",
+    "id": "1F0A44A262D84A999A62C19882903DCA",
+    "listId": "",
+    "parentId": "8A140203520C4AF793CEF5A62CC5383C",
+    "position": 1080,
+    "statementLabel": null,
+    "statementNotation": "CD-10o"
+   },
+   "2059A09269B54621A5C42EA0AE94E1E9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "554956EBFA37455DA2C33D3372A33689",
+     "39C3AE75B14F46EC8CF3427729DFC28B",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Notice and react to the natural\nworld and the outdoor\nenvironment. ",
+    "id": "2059A09269B54621A5C42EA0AE94E1E9",
+    "listId": "",
+    "parentId": "554956EBFA37455DA2C33D3372A33689",
+    "position": 1122,
+    "statementLabel": null,
+    "statementNotation": "CD-14f"
+   },
+   "218DFAC475AD43C7BDCA1565D7BD2281": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CF52818607D64685A541A84F4F67AD0B",
+     "39C3AE75B14F46EC8CF3427729DFC28B",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Ask questions and identify ways to\nfind answers (look in a book, use the\ncomputer, try something and watch\nwhat happens).",
+    "id": "218DFAC475AD43C7BDCA1565D7BD2281",
+    "listId": "",
+    "parentId": "CF52818607D64685A541A84F4F67AD0B",
+    "position": 1141,
+    "statementLabel": null,
+    "statementNotation": "CD-15o"
+   },
+   "23F636E265374ABAA4DDE1108D6FF0B3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "99E9211124124BB3B7F20C635E1A8D4E",
+     "C00BA1047EDA4323A2FCC31A268EEFBC",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Distinguish appearance from\nreality (the person behind\na mask is still the same\nperson; recognize that a\nfantasy story could not be\nreal).",
+    "id": "23F636E265374ABAA4DDE1108D6FF0B3",
+    "listId": "",
+    "parentId": "99E9211124124BB3B7F20C635E1A8D4E",
+    "position": 1008,
+    "statementLabel": null,
+    "statementNotation": "CD-1m"
+   },
+   "274CFCF5E8594F9888EB9D3FC32EA7C1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F48065E5D028461194137AFD5C5544E4",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use simple measurement tools with\nguidance and support to measure\nobjects (a ruler, measuring cup,\nscale).  ",
+    "id": "274CFCF5E8594F9888EB9D3FC32EA7C1",
+    "listId": "",
+    "parentId": "F48065E5D028461194137AFD5C5544E4",
+    "position": 1093,
+    "statementLabel": null,
+    "statementNotation": "CD-11g"
+   },
+   "28F4F42B5DF3471B8D224A47BB7C7331": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B27410918357468FA88D5E42FD337224",
+     "6272979CC9864A0ABAD3E740C025EDA0",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Adopt roles of a wide variety of\nfamily and community members\nduring dramatic play, using props,\nlanguage, and actions to add\ndetail to their play.   ",
+    "id": "28F4F42B5DF3471B8D224A47BB7C7331",
+    "listId": "",
+    "parentId": "B27410918357468FA88D5E42FD337224",
+    "position": 1053,
+    "statementLabel": null,
+    "statementNotation": "CD-6l"
+   },
+   "2F11EE2EC9F04C92A89A9037FAA6B70E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1102816C1B6C455791986CC62BF9D94B",
+     "6272979CC9864A0ABAD3E740C025EDA0",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describe characteristics\nof the places where they\nlive and play (say, “My\nhouse is big and there are\ntrees in my yard.” “The\nplayground has swings and\na sandbox.”). ",
+    "id": "2F11EE2EC9F04C92A89A9037FAA6B70E",
+    "listId": "",
+    "parentId": "1102816C1B6C455791986CC62BF9D94B",
+    "position": 1065,
+    "statementLabel": null,
+    "statementNotation": "CD-9b"
+   },
+   "30A731224AFB443DA6C13898D94E533F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "99E9211124124BB3B7F20C635E1A8D4E",
+     "C00BA1047EDA4323A2FCC31A268EEFBC",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Organize and use\ninformation through\nmatching, grouping, and\nsequencing.",
+    "id": "30A731224AFB443DA6C13898D94E533F",
+    "listId": "",
+    "parentId": "99E9211124124BB3B7F20C635E1A8D4E",
+    "position": 1009,
+    "statementLabel": null,
+    "statementNotation": "CD-1n"
+   },
+   "314E6954C5764A908D5455E4F987F5C0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8A140203520C4AF793CEF5A62CC5383C",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Rote count in order to 20 with\nincreasing accuracy.",
+    "id": "314E6954C5764A908D5455E4F987F5C0",
+    "listId": "",
+    "parentId": "8A140203520C4AF793CEF5A62CC5383C",
+    "position": 1079,
+    "statementLabel": null,
+    "statementNotation": "CD-10n"
+   },
+   "347FF3F91AA846C1AE8299B5CB951CEF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "554956EBFA37455DA2C33D3372A33689",
+     "39C3AE75B14F46EC8CF3427729DFC28B",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describe some things plants and animals need\nto live and grow (sunlight, water, food).",
+    "id": "347FF3F91AA846C1AE8299B5CB951CEF",
+    "listId": "",
+    "parentId": "554956EBFA37455DA2C33D3372A33689",
+    "position": 1129,
+    "statementLabel": null,
+    "statementNotation": "CD-14m"
+   },
+   "36AE08A3354648DCBC47FCC28447479B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8A140203520C4AF793CEF5A62CC5383C",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Compare the amount of items\nin small sets of objects (up to 5\nobjects) by matching or counting\nand use language such as “more\nthan” and “less than” to describe\nthe sets of objects.",
+    "id": "36AE08A3354648DCBC47FCC28447479B",
+    "listId": "",
+    "parentId": "8A140203520C4AF793CEF5A62CC5383C",
+    "position": 1083,
+    "statementLabel": null,
+    "statementNotation": "CD-10r"
+   },
+   "36B6B6EB9ED84A5AA0CB5634E01A7EB6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E1DDF73A99044F53A5F2D6EE04956F83",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use 2- and 3-dimensional\nshapes to represent realworld objects (say, “We are\nbuilding a castle and we\nneed a round block for the\ntunnel.” “I glued a circle\nand a square on my picture\nto make a house.”). ",
+    "id": "36B6B6EB9ED84A5AA0CB5634E01A7EB6",
+    "listId": "",
+    "parentId": "E1DDF73A99044F53A5F2D6EE04956F83",
+    "position": 1109,
+    "statementLabel": null,
+    "statementNotation": "CD-12l"
+   },
+   "3733B92669034311B11E0920A5CBE5F9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FDB74F5A57074E1988EB70D9D159F3C3",
+     "C00BA1047EDA4323A2FCC31A268EEFBC",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describe or act out a\nmemory of a situation or\naction, with adult support. ",
+    "id": "3733B92669034311B11E0920A5CBE5F9",
+    "listId": "",
+    "parentId": "FDB74F5A57074E1988EB70D9D159F3C3",
+    "position": 1013,
+    "statementLabel": null,
+    "statementNotation": "CD-2q"
+   },
+   "39C3AE75B14F46EC8CF3427729DFC28B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Scientific Exploration and Knowledge ",
+    "id": "39C3AE75B14F46EC8CF3427729DFC28B",
+    "listId": "",
+    "parentId": "5BF2942DDC4F4A11AB22CB8948FA3A5B",
+    "position": 1119,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "3A22A449E1FD45F7BDFD69D4BCD899F1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F48065E5D028461194137AFD5C5544E4",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Put a few objects in order by length (arrange a group of 3 blocks in order from\nthe shortest to the longest).",
+    "id": "3A22A449E1FD45F7BDFD69D4BCD899F1",
+    "listId": "",
+    "parentId": "F48065E5D028461194137AFD5C5544E4",
+    "position": 1101,
+    "statementLabel": null,
+    "statementNotation": "CD-11o"
+   },
+   "3AC465B134DC498B8BC026592E66FC00": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "155D84039C3F496DA9EE2EAD62566257",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use observation and counting\n(not always correctly) to find out\nhow many things are needed\nduring play and other daily\nactivities (figure out how many\nspoons are needed for snack,\nfind enough dolls so each person\nhas one when playing in the\ndramatic play area).",
+    "id": "3AC465B134DC498B8BC026592E66FC00",
+    "listId": "",
+    "parentId": "155D84039C3F496DA9EE2EAD62566257",
+    "position": 1113,
+    "statementLabel": null,
+    "statementNotation": "CD-13c"
+   },
+   "3C0B7016EB4F4601B79CEE9DEDD0A21A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "95148752285B484F9F4C0EF0D490BB10",
+     "C00BA1047EDA4323A2FCC31A268EEFBC",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use language to identify\npretend or fantasy\nsituations (say, “Let’s\npretend we’re going\non a trip.” “That’s a\npretend story.”). ",
+    "id": "3C0B7016EB4F4601B79CEE9DEDD0A21A",
+    "listId": "",
+    "parentId": "95148752285B484F9F4C0EF0D490BB10",
+    "position": 1026,
+    "statementLabel": null,
+    "statementNotation": "CD-3i"
+   },
+   "3D07A136DC3D4A7A9E1489D12B0E51A2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5B9E3B4A3CD145DFBF24ED9E4A22B9FB",
+     "E103D440F8974748B9569B67859DEA22",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recall and imitate different\nmusical tones, rhythms, rhymes,\nand songs as they make music\nor participate in musical activities\n(clap previous beat to a new\nsong). ",
+    "id": "3D07A136DC3D4A7A9E1489D12B0E51A2",
+    "listId": "",
+    "parentId": "5B9E3B4A3CD145DFBF24ED9E4A22B9FB",
+    "position": 1045,
+    "statementLabel": null,
+    "statementNotation": "CD-5u"
+   },
+   "3E9DD2B7331C4173A084F915E248E106": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1102816C1B6C455791986CC62BF9D94B",
+     "6272979CC9864A0ABAD3E740C025EDA0",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Notice changes that\nhappen over time (seasons,\nself or others growing\nbigger).",
+    "id": "3E9DD2B7331C4173A084F915E248E106",
+    "listId": "",
+    "parentId": "1102816C1B6C455791986CC62BF9D94B",
+    "position": 1066,
+    "statementLabel": null,
+    "statementNotation": "CD-9c"
+   },
+   "42F8773CF65C4A228C5B60A9C005007D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "75650F7A3DF543769E2EF085E6B2D909",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize some numerals and\nattempt to write them during play\nand daily activities.",
+    "id": "42F8773CF65C4A228C5B60A9C005007D",
+    "listId": "",
+    "parentId": "75650F7A3DF543769E2EF085E6B2D909",
+    "position": 1089,
+    "statementLabel": null,
+    "statementNotation": "CD-10v"
+   },
+   "4307D766ADFA4086921A4AC79B26C5E8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "554956EBFA37455DA2C33D3372A33689",
+     "39C3AE75B14F46EC8CF3427729DFC28B",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Take responsibility for the care of living\nthings (independently feed classroom pet\nas daily chore, water plant when dry, weed\nvegetable garden). ",
+    "id": "4307D766ADFA4086921A4AC79B26C5E8",
+    "listId": "",
+    "parentId": "554956EBFA37455DA2C33D3372A33689",
+    "position": 1130,
+    "statementLabel": null,
+    "statementNotation": "CD-14n"
+   },
+   "45D03AD779EB4E46BB36EC87A8601982": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "554956EBFA37455DA2C33D3372A33689",
+     "39C3AE75B14F46EC8CF3427729DFC28B",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Participate in activities that help to care\nfor the environment and explain why they\nare important with guidance and support\n(gathering cans for recycling, planting\ntrees).",
+    "id": "45D03AD779EB4E46BB36EC87A8601982",
+    "listId": "",
+    "parentId": "554956EBFA37455DA2C33D3372A33689",
+    "position": 1133,
+    "statementLabel": null,
+    "statementNotation": "CD-14q"
+   },
+   "47CD6B6A5F8D4AD3A88E82F7422AF994": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5848300845A64B869EC268136B140BEA",
+     "6272979CC9864A0ABAD3E740C025EDA0",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Show acceptance of\ndifferent cultures through\nexploration of varying\ncustoms and traditions,\npast and present (how\npeople dress, how\npeople speak, food,\nmusic, art, etc.).",
+    "id": "47CD6B6A5F8D4AD3A88E82F7422AF994",
+    "listId": "",
+    "parentId": "5848300845A64B869EC268136B140BEA",
+    "position": 1063,
+    "statementLabel": null,
+    "statementNotation": "CD-8h"
+   },
+   "485AA0455039479C8773DD53FA6E0E55": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "95148752285B484F9F4C0EF0D490BB10",
+     "C00BA1047EDA4323A2FCC31A268EEFBC",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use language to\ndescribe their thinking\nprocesses with adult\nsupport. ",
+    "id": "485AA0455039479C8773DD53FA6E0E55",
+    "listId": "",
+    "parentId": "95148752285B484F9F4C0EF0D490BB10",
+    "position": 1028,
+    "statementLabel": null,
+    "statementNotation": "CD-3k"
+   },
+   "493199E9779346D9B5581BDC20BC74D6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "75650F7A3DF543769E2EF085E6B2D909",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Match numerals 1-5 to sets of\nobjects, with guidance and\nsupport.",
+    "id": "493199E9779346D9B5581BDC20BC74D6",
+    "listId": "",
+    "parentId": "75650F7A3DF543769E2EF085E6B2D909",
+    "position": 1088,
+    "statementLabel": null,
+    "statementNotation": "CD-10u"
+   },
+   "49AED48ED533451780A89A4C69FC8DD5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B27410918357468FA88D5E42FD337224",
+     "6272979CC9864A0ABAD3E740C025EDA0",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize and identify the\nroles of some community\nhelpers (police, fire fighters,\ngarbage collectors).",
+    "id": "49AED48ED533451780A89A4C69FC8DD5",
+    "listId": "",
+    "parentId": "B27410918357468FA88D5E42FD337224",
+    "position": 1051,
+    "statementLabel": null,
+    "statementNotation": "CD-6j"
+   },
+   "49BA2CDD3DCC42BAA26E7201BD3A43E1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CF52818607D64685A541A84F4F67AD0B",
+     "39C3AE75B14F46EC8CF3427729DFC28B",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describe and predict\nchanges that take\nplace when mixing and\nmanipulating materials. ",
+    "id": "49BA2CDD3DCC42BAA26E7201BD3A43E1",
+    "listId": "",
+    "parentId": "CF52818607D64685A541A84F4F67AD0B",
+    "position": 1139,
+    "statementLabel": null,
+    "statementNotation": "CD-15m"
+   },
+   "4A6BF392E80F403FB30D79621E4CB653": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "554956EBFA37455DA2C33D3372A33689",
+     "39C3AE75B14F46EC8CF3427729DFC28B",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Notice and describe weather conditions,\nposition of the sun and moon at different\ntimes, and seasonal changes.",
+    "id": "4A6BF392E80F403FB30D79621E4CB653",
+    "listId": "",
+    "parentId": "554956EBFA37455DA2C33D3372A33689",
+    "position": 1131,
+    "statementLabel": null,
+    "statementNotation": "CD-14o"
+   },
+   "4AAF24BE99944AD1A6E40E125D291CF3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CF52818607D64685A541A84F4F67AD0B",
+     "39C3AE75B14F46EC8CF3427729DFC28B",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Ask questions to find out\nmore about the natural\nworld.",
+    "id": "4AAF24BE99944AD1A6E40E125D291CF3",
+    "listId": "",
+    "parentId": "CF52818607D64685A541A84F4F67AD0B",
+    "position": 1137,
+    "statementLabel": null,
+    "statementNotation": "CD-15k"
+   },
+   "4CD5AE704A8C48768476A2F59016292F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FDB74F5A57074E1988EB70D9D159F3C3",
+     "C00BA1047EDA4323A2FCC31A268EEFBC",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Demonstrate their ability\nto apply what they\nknow about everyday\nexperiences to new\nsituations.",
+    "id": "4CD5AE704A8C48768476A2F59016292F",
+    "listId": "",
+    "parentId": "FDB74F5A57074E1988EB70D9D159F3C3",
+    "position": 1017,
+    "statementLabel": null,
+    "statementNotation": "CD-2u"
+   },
+   "4E7D014B0736477ABB50882799FF325B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8A140203520C4AF793CEF5A62CC5383C",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Count up to 10 objects arranged\nin a line using one-to-one\ncorrespondence with increasing\naccuracy, and answer the\nquestion “How many?” ",
+    "id": "4E7D014B0736477ABB50882799FF325B",
+    "listId": "",
+    "parentId": "8A140203520C4AF793CEF5A62CC5383C",
+    "position": 1081,
+    "statementLabel": null,
+    "statementNotation": "CD-10p"
+   },
+   "4F8182ADDE7B4064B66EC02E7C0CE52D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1102816C1B6C455791986CC62BF9D94B",
+     "6272979CC9864A0ABAD3E740C025EDA0",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Observe and talk about changes in\nthemselves and their families over time.",
+    "id": "4F8182ADDE7B4064B66EC02E7C0CE52D",
+    "listId": "",
+    "parentId": "1102816C1B6C455791986CC62BF9D94B",
+    "position": 1070,
+    "statementLabel": null,
+    "statementNotation": "CD-9g"
+   },
+   "4FEB4424C2254978AB758013503CE649": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5B9E3B4A3CD145DFBF24ED9E4A22B9FB",
+     "E103D440F8974748B9569B67859DEA22",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": " Show creativity and imagination\nwhen using materials and\nassuming roles during pretend\nplay.",
+    "id": "4FEB4424C2254978AB758013503CE649",
+    "listId": "",
+    "parentId": "5B9E3B4A3CD145DFBF24ED9E4A22B9FB",
+    "position": 1038,
+    "statementLabel": null,
+    "statementNotation": "CD-5n"
+   },
+   "516B79DB042F470EBA82140F1E9A7E27": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "75650F7A3DF543769E2EF085E6B2D909",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Show they understand that putting\ntwo groups of objects together\nwill make a bigger group and that\na group of objects can be taken\napart into smaller groups.",
+    "id": "516B79DB042F470EBA82140F1E9A7E27",
+    "listId": "",
+    "parentId": "75650F7A3DF543769E2EF085E6B2D909",
+    "position": 1086,
+    "statementLabel": null,
+    "statementNotation": "CD-10s"
+   },
+   "51A2EE1C25DA4B38A1B755DC81781B94": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9FAA6FA662FE43A6969387FA36731C19",
+     "E103D440F8974748B9569B67859DEA22",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Participate in, describe\nand ask questions about\nart, music, dance,\ndrama, or other aesthetic\nexperiences (describe\ndancers spinning round\nand round; talk about\ncolors in a painting).",
+    "id": "51A2EE1C25DA4B38A1B755DC81781B94",
+    "listId": "",
+    "parentId": "9FAA6FA662FE43A6969387FA36731C19",
+    "position": 1034,
+    "statementLabel": null,
+    "statementNotation": "CD-4j"
+   },
+   "536FB4D8B9AF4F3E8885113072D6D6B8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9FAA6FA662FE43A6969387FA36731C19",
+     "E103D440F8974748B9569B67859DEA22",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Participate in, describe\nand ask questions\nabout art, music, dance,\ndrama, or other aesthetic\nexperiences (describe\ndancers spinning round\nand round; talk about\ncolors in a painting).",
+    "id": "536FB4D8B9AF4F3E8885113072D6D6B8",
+    "listId": "",
+    "parentId": "9FAA6FA662FE43A6969387FA36731C19",
+    "position": 1032,
+    "statementLabel": null,
+    "statementNotation": "CD-4h"
+   },
+   "53946ECA95F449139D28D7F6C367A1C4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E1DDF73A99044F53A5F2D6EE04956F83",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Find shapes in the\nenvironment and describe\nthem in their own words.",
+    "id": "53946ECA95F449139D28D7F6C367A1C4",
+    "listId": "",
+    "parentId": "E1DDF73A99044F53A5F2D6EE04956F83",
+    "position": 1107,
+    "statementLabel": null,
+    "statementNotation": "CD-12j"
+   },
+   "54297159BFA14B8383424E956A0464C5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9FAA6FA662FE43A6969387FA36731C19",
+     "E103D440F8974748B9569B67859DEA22",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use art-specific vocabulary\nto express ideas and\nthoughts about artistic\ncreations more clearly (say,\n“We need a stage for our\npuppet show.”). ",
+    "id": "54297159BFA14B8383424E956A0464C5",
+    "listId": "",
+    "parentId": "9FAA6FA662FE43A6969387FA36731C19",
+    "position": 1035,
+    "statementLabel": null,
+    "statementNotation": "CD-4k"
+   },
+   "548B34A4CD3649068358B0818B5BD2CC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9FAA6FA662FE43A6969387FA36731C19",
+     "E103D440F8974748B9569B67859DEA22",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Express pleasure in\ndifferent forms of art\n(call something “pretty,”\nexpress preferences,\nchoose to look at book of\nphotographs or listen to\nmusic again). ",
+    "id": "548B34A4CD3649068358B0818B5BD2CC",
+    "listId": "",
+    "parentId": "9FAA6FA662FE43A6969387FA36731C19",
+    "position": 1033,
+    "statementLabel": null,
+    "statementNotation": "CD-4i"
+   },
+   "54D64FF738A2406CB7A3ACF0E8177836": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1102816C1B6C455791986CC62BF9D94B",
+     "6272979CC9864A0ABAD3E740C025EDA0",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describe characteristics of the places\nwhere they live and play (say, “My house\nis big and there are trees in my yard.”\n“The playground has swings and a\nsandbox.”).",
+    "id": "54D64FF738A2406CB7A3ACF0E8177836",
+    "listId": "",
+    "parentId": "1102816C1B6C455791986CC62BF9D94B",
+    "position": 1069,
+    "statementLabel": null,
+    "statementNotation": "CD-9f"
+   },
+   "554956EBFA37455DA2C33D3372A33689": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "39C3AE75B14F46EC8CF3427729DFC28B",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children observe and describe characteristics of living things\nand the physical world.",
+    "id": "554956EBFA37455DA2C33D3372A33689",
+    "listId": "",
+    "parentId": "39C3AE75B14F46EC8CF3427729DFC28B",
+    "position": 1120,
+    "statementLabel": null,
+    "statementNotation": "Goal CD-14"
+   },
+   "55A846CC39D44289AF47EEE462CD335D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E1DDF73A99044F53A5F2D6EE04956F83",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Show they understand\npositions in space by\nusing position words\nduring play and by\nfollowing directions from\nan adult (say, “Stand\nbehind the chair.” “Put the\nball in the box.”).",
+    "id": "55A846CC39D44289AF47EEE462CD335D",
+    "listId": "",
+    "parentId": "E1DDF73A99044F53A5F2D6EE04956F83",
+    "position": 1105,
+    "statementLabel": null,
+    "statementNotation": "CD-12h"
+   },
+   "5841B389DD4E48FCB44726D6DD176CBC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "554956EBFA37455DA2C33D3372A33689",
+     "39C3AE75B14F46EC8CF3427729DFC28B",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Notice, describe, and attempt to explain\nproperties of materials and changes in\nsubstances (metal railing is hot because\nthe sun shines on it; ice melts when it gets\nwarmer).",
+    "id": "5841B389DD4E48FCB44726D6DD176CBC",
+    "listId": "",
+    "parentId": "554956EBFA37455DA2C33D3372A33689",
+    "position": 1132,
+    "statementLabel": null,
+    "statementNotation": "CD-14p"
+   },
+   "5848300845A64B869EC268136B140BEA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6272979CC9864A0ABAD3E740C025EDA0",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children identify and demonstrate acceptance of similarities and differences\nbetween themselves and others.",
+    "id": "5848300845A64B869EC268136B140BEA",
+    "listId": "",
+    "parentId": "6272979CC9864A0ABAD3E740C025EDA0",
+    "position": 1058,
+    "statementLabel": null,
+    "statementNotation": "Goal CD-8"
+   },
+   "5AB924C4ECD048D284C9AB683CDF497E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F48065E5D028461194137AFD5C5544E4",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use simple measurement tools with\nguidance and support to measure\nobjects (a ruler, measuring cup,\nscale).",
+    "id": "5AB924C4ECD048D284C9AB683CDF497E",
+    "listId": "",
+    "parentId": "F48065E5D028461194137AFD5C5544E4",
+    "position": 1099,
+    "statementLabel": null,
+    "statementNotation": "CD-11m"
+   },
+   "5B9E3B4A3CD145DFBF24ED9E4A22B9FB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E103D440F8974748B9569B67859DEA22",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children demonstrate self-expression and creativity in a variety of forms and\ncontexts, including play, visual arts, music, drama, and dance.",
+    "id": "5B9E3B4A3CD145DFBF24ED9E4A22B9FB",
+    "listId": "",
+    "parentId": "E103D440F8974748B9569B67859DEA22",
+    "position": 1036,
+    "statementLabel": null,
+    "statementNotation": "Goal CD-5"
+   },
+   "5BF2942DDC4F4A11AB22CB8948FA3A5B": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Cognitive Development (CD)",
+    "id": "5BF2942DDC4F4A11AB22CB8948FA3A5B",
+    "listId": "",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "61A1C0E8FDDC4C799B1341DCF588CD5B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F48065E5D028461194137AFD5C5544E4",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Duplicate and extend simple patterns\nusing concrete objects (look at a\npattern of beads and tell what bead\ncomes next in the pattern).",
+    "id": "61A1C0E8FDDC4C799B1341DCF588CD5B",
+    "listId": "",
+    "parentId": "F48065E5D028461194137AFD5C5544E4",
+    "position": 1103,
+    "statementLabel": null,
+    "statementNotation": "CD-11q"
+   },
+   "61E95D757E7841A9943FB171AECEE829": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CF52818607D64685A541A84F4F67AD0B",
+     "39C3AE75B14F46EC8CF3427729DFC28B",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Observe objects,\nmaterials, and\nphenomena and\ndescribe what they notice\n(temperature, texture,\nsize, weight, color, etc.). ",
+    "id": "61E95D757E7841A9943FB171AECEE829",
+    "listId": "",
+    "parentId": "CF52818607D64685A541A84F4F67AD0B",
+    "position": 1136,
+    "statementLabel": null,
+    "statementNotation": "CD-15j"
+   },
+   "6272979CC9864A0ABAD3E740C025EDA0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Social Connections",
+    "id": "6272979CC9864A0ABAD3E740C025EDA0",
+    "listId": "",
+    "parentId": "5BF2942DDC4F4A11AB22CB8948FA3A5B",
+    "position": 1047,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "65C1066F993146A1836BAAAA796B1F56": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1102816C1B6C455791986CC62BF9D94B",
+     "6272979CC9864A0ABAD3E740C025EDA0",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With prompting and\nsupport, participate as a\nmember of a democratic\nclassroom community (vote\nfor name of class pet, wait\nturn to paint when easels\nare full).",
+    "id": "65C1066F993146A1836BAAAA796B1F56",
+    "listId": "",
+    "parentId": "1102816C1B6C455791986CC62BF9D94B",
+    "position": 1068,
+    "statementLabel": null,
+    "statementNotation": "CD-9e"
+   },
+   "671C9357B37F4E609202C7C06A552308": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F48065E5D028461194137AFD5C5544E4",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Compare the size or weight of two\nobjects and identify which one is longer/\ntaller/heavier than the other (“That rock\nis heavier than this one; I can’t lift it.” “A\nsnake is longer than a worm.”).",
+    "id": "671C9357B37F4E609202C7C06A552308",
+    "listId": "",
+    "parentId": "F48065E5D028461194137AFD5C5544E4",
+    "position": 1094,
+    "statementLabel": null,
+    "statementNotation": "CD-11h"
+   },
+   "6CF5C77158484D01A8A1ABAD274F7B7F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "95148752285B484F9F4C0EF0D490BB10",
+     "C00BA1047EDA4323A2FCC31A268EEFBC",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use words like “think”\nand “know” to talk about\nthoughts and beliefs.",
+    "id": "6CF5C77158484D01A8A1ABAD274F7B7F",
+    "listId": "",
+    "parentId": "95148752285B484F9F4C0EF0D490BB10",
+    "position": 1024,
+    "statementLabel": null,
+    "statementNotation": "CD-3g"
+   },
+   "6D86E00BD5594825893704282FD0AA1B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "95148752285B484F9F4C0EF0D490BB10",
+     "C00BA1047EDA4323A2FCC31A268EEFBC",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Express understanding\nthat others may have\ndifferent thoughts,\nbeliefs, or feelings\nthan their own (“I\nlike ketchup and you\ndon’t.”).",
+    "id": "6D86E00BD5594825893704282FD0AA1B",
+    "listId": "",
+    "parentId": "95148752285B484F9F4C0EF0D490BB10",
+    "position": 1027,
+    "statementLabel": null,
+    "statementNotation": "CD-3j"
+   },
+   "6DC882D7D12949C0A0AFB6567521872C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F48065E5D028461194137AFD5C5544E4",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use descriptive language for size,\nlength, or weight (short, tall, long,\nheavy, big).",
+    "id": "6DC882D7D12949C0A0AFB6567521872C",
+    "listId": "",
+    "parentId": "F48065E5D028461194137AFD5C5544E4",
+    "position": 1098,
+    "statementLabel": null,
+    "statementNotation": "CD-11l"
+   },
+   "70B4EA2DED10470C8CEF0592C66FF67D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FDB74F5A57074E1988EB70D9D159F3C3",
+     "C00BA1047EDA4323A2FCC31A268EEFBC",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Introduce ideas or actions\nin play based on previous\nknowledge or experience.",
+    "id": "70B4EA2DED10470C8CEF0592C66FF67D",
+    "listId": "",
+    "parentId": "FDB74F5A57074E1988EB70D9D159F3C3",
+    "position": 1015,
+    "statementLabel": null,
+    "statementNotation": "CD-2s"
+   },
+   "73BE0E10FD9841B1989D9663A3046A4E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B27410918357468FA88D5E42FD337224",
+     "6272979CC9864A0ABAD3E740C025EDA0",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Adopt roles of family and\ncommunity members during\nplay, given support and\nrealistic props.",
+    "id": "73BE0E10FD9841B1989D9663A3046A4E",
+    "listId": "",
+    "parentId": "B27410918357468FA88D5E42FD337224",
+    "position": 1050,
+    "statementLabel": null,
+    "statementNotation": "CD-6i"
+   },
+   "75650F7A3DF543769E2EF085E6B2D909": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children show understanding of numbers and quantities\nduring play and other activities.  ",
+    "id": "75650F7A3DF543769E2EF085E6B2D909",
+    "listId": "",
+    "parentId": "F596007D0281416FA5250C4B4605A04E",
+    "position": 1084,
+    "statementLabel": null,
+    "statementNotation": "Goal CD-10"
+   },
+   "75F407E179B24259BD660AA3C2245B20": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "554956EBFA37455DA2C33D3372A33689",
+     "39C3AE75B14F46EC8CF3427729DFC28B",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Notice and describe\ncharacteristics of plants and\nanimals, such as appearance,\nsimilarities, differences,\nbehavior, and habitat.",
+    "id": "75F407E179B24259BD660AA3C2245B20",
+    "listId": "",
+    "parentId": "554956EBFA37455DA2C33D3372A33689",
+    "position": 1123,
+    "statementLabel": null,
+    "statementNotation": "CD-14g"
+   },
+   "76788A88314B4CEF951ABD04009F4E9C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B27410918357468FA88D5E42FD337224",
+     "6272979CC9864A0ABAD3E740C025EDA0",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize and identify the roles\nof a wide variety of community\nhelpers (police, fire fighters,\ngarbage collectors, doctors,\ndentists). ",
+    "id": "76788A88314B4CEF951ABD04009F4E9C",
+    "listId": "",
+    "parentId": "B27410918357468FA88D5E42FD337224",
+    "position": 1054,
+    "statementLabel": null,
+    "statementNotation": "CD-6m"
+   },
+   "76FEEE30FE464B17AFACFEE4A1F75234": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CF52818607D64685A541A84F4F67AD0B",
+     "39C3AE75B14F46EC8CF3427729DFC28B",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Represent what they learn during\nscientific exploration through drawing,\nmodeling, building, movement, or\nother methods. ",
+    "id": "76FEEE30FE464B17AFACFEE4A1F75234",
+    "listId": "",
+    "parentId": "CF52818607D64685A541A84F4F67AD0B",
+    "position": 1140,
+    "statementLabel": null,
+    "statementNotation": "CD-15n"
+   },
+   "77484A60332240CC82486CEF05226F6E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "554956EBFA37455DA2C33D3372A33689",
+     "39C3AE75B14F46EC8CF3427729DFC28B",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Participate in activities that help\nto care for the environment,\nwith guidance and support\n(pick up trash, recycle paper). ",
+    "id": "77484A60332240CC82486CEF05226F6E",
+    "listId": "",
+    "parentId": "554956EBFA37455DA2C33D3372A33689",
+    "position": 1126,
+    "statementLabel": null,
+    "statementNotation": "CD-14j"
+   },
+   "80552DF396C84B41BBC6ECEC648CC204": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "75650F7A3DF543769E2EF085E6B2D909",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Write numerals or number-like\nforms during play and daily\nactivities.",
+    "id": "80552DF396C84B41BBC6ECEC648CC204",
+    "listId": "",
+    "parentId": "75650F7A3DF543769E2EF085E6B2D909",
+    "position": 1087,
+    "statementLabel": null,
+    "statementNotation": "CD-10t"
+   },
+   "80C89EE00DDF4666BE50AC0F4BA4C50F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "99E9211124124BB3B7F20C635E1A8D4E",
+     "C00BA1047EDA4323A2FCC31A268EEFBC",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Express knowledge\ngathered through their\nsenses using play, art,\nlanguage, and other forms\nof representation.",
+    "id": "80C89EE00DDF4666BE50AC0F4BA4C50F",
+    "listId": "",
+    "parentId": "99E9211124124BB3B7F20C635E1A8D4E",
+    "position": 1004,
+    "statementLabel": null,
+    "statementNotation": "CD-1i"
+   },
+   "8A140203520C4AF793CEF5A62CC5383C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children show understanding of numbers and quantities\nduring play and other activities.",
+    "id": "8A140203520C4AF793CEF5A62CC5383C",
+    "listId": "",
+    "parentId": "F596007D0281416FA5250C4B4605A04E",
+    "position": 1075,
+    "statementLabel": null,
+    "statementNotation": "Goal CD-10"
+   },
+   "8E110B18D3454C51AA67B7F318C2293A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "99E9211124124BB3B7F20C635E1A8D4E",
+     "C00BA1047EDA4323A2FCC31A268EEFBC",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Express knowledge\ngathered through their\nsenses using play, art,\nlanguage, and other forms of\nrepresentation.  ",
+    "id": "8E110B18D3454C51AA67B7F318C2293A",
+    "listId": "",
+    "parentId": "99E9211124124BB3B7F20C635E1A8D4E",
+    "position": 1007,
+    "statementLabel": null,
+    "statementNotation": "CD-1l"
+   },
+   "8E7670BADDBD414F81940783AECA0CD5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F48065E5D028461194137AFD5C5544E4",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize simple repeating patterns\nand attempt to create them during\nplay (repeat a movement pattern\nduring a song, make a line of blocks\nin alternating colors).",
+    "id": "8E7670BADDBD414F81940783AECA0CD5",
+    "listId": "",
+    "parentId": "F48065E5D028461194137AFD5C5544E4",
+    "position": 1097,
+    "statementLabel": null,
+    "statementNotation": "CD-11k"
+   },
+   "8F1444DC9FA644BDB319CA52DCFECCAE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5B9E3B4A3CD145DFBF24ED9E4A22B9FB",
+     "E103D440F8974748B9569B67859DEA22",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recall and imitate patterns of\nbeat, rhythm, and movement as\nthey create dances or participate\nin movement and dance\nactivities. ",
+    "id": "8F1444DC9FA644BDB319CA52DCFECCAE",
+    "listId": "",
+    "parentId": "5B9E3B4A3CD145DFBF24ED9E4A22B9FB",
+    "position": 1046,
+    "statementLabel": null,
+    "statementNotation": "CD-5v"
+   },
+   "8F67C96AB82D404594CF030320945D6B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "155D84039C3F496DA9EE2EAD62566257",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begin to explain how a mathematical\nproblem was solved (“I saw that\nthere was always a blue flower after\na red flower so I knew to put a blue\none next.” “I counted four friends\nwho didn’t have cookies so I got four\nmore.”).",
+    "id": "8F67C96AB82D404594CF030320945D6B",
+    "listId": "",
+    "parentId": "155D84039C3F496DA9EE2EAD62566257",
+    "position": 1118,
+    "statementLabel": null,
+    "statementNotation": "CD-13h"
+   },
+   "9254000514B14994A5FF08F85DEDFB0A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CF52818607D64685A541A84F4F67AD0B",
+     "39C3AE75B14F46EC8CF3427729DFC28B",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use simple tools to\ninvestigate objects and\nmaterials, with guidance\nand support (magnifying\nglass, sifter, ramps for\nrolling balls and cars). ",
+    "id": "9254000514B14994A5FF08F85DEDFB0A",
+    "listId": "",
+    "parentId": "CF52818607D64685A541A84F4F67AD0B",
+    "position": 1138,
+    "statementLabel": null,
+    "statementNotation": "CD-15l"
+   },
+   "9359DA4BF5D042DEBC752903411E0A67": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F48065E5D028461194137AFD5C5544E4",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Sort familiar objects into categories\nwith increasing accuracy (tools\nfor woodworking and utensils for\ncooking; rectangle blocks on one\nshelf and square blocks on another\nshelf).",
+    "id": "9359DA4BF5D042DEBC752903411E0A67",
+    "listId": "",
+    "parentId": "F48065E5D028461194137AFD5C5544E4",
+    "position": 1096,
+    "statementLabel": null,
+    "statementNotation": "CD-11j"
+   },
+   "9504CBA4867E438A8ACD082844F72DF4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F48065E5D028461194137AFD5C5544E4",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify familiar objects as the same\nor different.",
+    "id": "9504CBA4867E438A8ACD082844F72DF4",
+    "listId": "",
+    "parentId": "F48065E5D028461194137AFD5C5544E4",
+    "position": 1095,
+    "statementLabel": null,
+    "statementNotation": "CD-11i"
+   },
+   "95148752285B484F9F4C0EF0D490BB10": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C00BA1047EDA4323A2FCC31A268EEFBC",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children demonstrate the ability to think about their own thinking:\nreasoning, taking perspectives, and making decisions.",
+    "id": "95148752285B484F9F4C0EF0D490BB10",
+    "listId": "",
+    "parentId": "C00BA1047EDA4323A2FCC31A268EEFBC",
+    "position": 1022,
+    "statementLabel": null,
+    "statementNotation": "Goal CD-3"
+   },
+   "953798FAEA194E7B9DDB64CEF2810AB0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8A140203520C4AF793CEF5A62CC5383C",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Count up to 5 objects\narranged in a line\nusing one-to-one\ncorrespondence with\nincreasing accuracy, and\nanswer the question “How\nmany?”",
+    "id": "953798FAEA194E7B9DDB64CEF2810AB0",
+    "listId": "",
+    "parentId": "8A140203520C4AF793CEF5A62CC5383C",
+    "position": 1077,
+    "statementLabel": null,
+    "statementNotation": "CD-10k"
+   },
+   "98FDC090ED364031B8037A1B354C4328": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B27410918357468FA88D5E42FD337224",
+     "6272979CC9864A0ABAD3E740C025EDA0",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Talk about close family\nmembers, name their\nrelationships to each other,\nand describe family routines\n(“Marika is my sister.” “My\ngrandma takes care of me\nat night.”).",
+    "id": "98FDC090ED364031B8037A1B354C4328",
+    "listId": "",
+    "parentId": "B27410918357468FA88D5E42FD337224",
+    "position": 1049,
+    "statementLabel": null,
+    "statementNotation": "CD-6h"
+   },
+   "9917D22D125749CAAFE79AD5E06816EA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CF52818607D64685A541A84F4F67AD0B",
+     "39C3AE75B14F46EC8CF3427729DFC28B",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Compare objects, materials,\nand phenomena by observing\nand describing their physical\ncharacteristics.",
+    "id": "9917D22D125749CAAFE79AD5E06816EA",
+    "listId": "",
+    "parentId": "CF52818607D64685A541A84F4F67AD0B",
+    "position": 1142,
+    "statementLabel": null,
+    "statementNotation": "CD-15p"
+   },
+   "99E9211124124BB3B7F20C635E1A8D4E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C00BA1047EDA4323A2FCC31A268EEFBC",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children use their senses to construct knowledge about the world around them. ",
+    "id": "99E9211124124BB3B7F20C635E1A8D4E",
+    "listId": "",
+    "parentId": "C00BA1047EDA4323A2FCC31A268EEFBC",
+    "position": 1002,
+    "statementLabel": null,
+    "statementNotation": "Goal CD-1"
+   },
+   "9A1A36E35DD64739AA030CBF3FCB5828": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1102816C1B6C455791986CC62BF9D94B",
+     "6272979CC9864A0ABAD3E740C025EDA0",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Observe and talk about how people\nadapt to seasons and weather\nconditions (put out salt in icy weather,\nwear rain gear). ",
+    "id": "9A1A36E35DD64739AA030CBF3FCB5828",
+    "listId": "",
+    "parentId": "1102816C1B6C455791986CC62BF9D94B",
+    "position": 1071,
+    "statementLabel": null,
+    "statementNotation": "CD-9h"
+   },
+   "9A3DFF202F95412C8104DE10940B8366": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1102816C1B6C455791986CC62BF9D94B",
+     "6272979CC9864A0ABAD3E740C025EDA0",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Show awareness of the basic needs all\nfamilies have (food, shelter, clothing)\nand how needs are met (work, help\neach other).",
+    "id": "9A3DFF202F95412C8104DE10940B8366",
+    "listId": "",
+    "parentId": "1102816C1B6C455791986CC62BF9D94B",
+    "position": 1072,
+    "statementLabel": null,
+    "statementNotation": "CD-9i"
+   },
+   "9AD43440D4CA40DD987888BEC0E2CAEA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "75650F7A3DF543769E2EF085E6B2D909",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Show they understand that\nadding objects to a group\nwill make a bigger group,\nand taking away objects\nwill make a smaller group.",
+    "id": "9AD43440D4CA40DD987888BEC0E2CAEA",
+    "listId": "",
+    "parentId": "75650F7A3DF543769E2EF085E6B2D909",
+    "position": 1085,
+    "statementLabel": null,
+    "statementNotation": "CD-10m"
+   },
+   "9FAA6FA662FE43A6969387FA36731C19": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E103D440F8974748B9569B67859DEA22",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children demonstrate appreciation for different forms of artistic expression.",
+    "id": "9FAA6FA662FE43A6969387FA36731C19",
+    "listId": "",
+    "parentId": "E103D440F8974748B9569B67859DEA22",
+    "position": 1030,
+    "statementLabel": null,
+    "statementNotation": "Goal CD-4"
+   },
+   "A7D360005E364B3A8D27E0CB1CB87A8D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5B9E3B4A3CD145DFBF24ED9E4A22B9FB",
+     "E103D440F8974748B9569B67859DEA22",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Explore the properties of art\nmaterials and use them with\npurpose to draw, paint, sculpt,\nand create in other ways.",
+    "id": "A7D360005E364B3A8D27E0CB1CB87A8D",
+    "listId": "",
+    "parentId": "5B9E3B4A3CD145DFBF24ED9E4A22B9FB",
+    "position": 1039,
+    "statementLabel": null,
+    "statementNotation": "CD-5o"
+   },
+   "A96A11D5F73642A3B7F2E1FC732A1CA4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5848300845A64B869EC268136B140BEA",
+     "6272979CC9864A0ABAD3E740C025EDA0",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Show acceptance of\npeople who are\ndifferent from\nthemselves as well as\npeople who are similar.",
+    "id": "A96A11D5F73642A3B7F2E1FC732A1CA4",
+    "listId": "",
+    "parentId": "5848300845A64B869EC268136B140BEA",
+    "position": 1059,
+    "statementLabel": null,
+    "statementNotation": "CD-8d"
+   },
+   "A9EE5739E92B4122A391AE5C249047D1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F48065E5D028461194137AFD5C5544E4",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use descriptive language for size,\nlength, or weight (short, tall, long,\nheavy, big). ",
+    "id": "A9EE5739E92B4122A391AE5C249047D1",
+    "listId": "",
+    "parentId": "F48065E5D028461194137AFD5C5544E4",
+    "position": 1092,
+    "statementLabel": null,
+    "statementNotation": "CD-11f"
+   },
+   "AACDE03BE2BD405180A3B66F56464C79": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1102816C1B6C455791986CC62BF9D94B",
+     "6272979CC9864A0ABAD3E740C025EDA0",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Demonstrate positive social behaviors\nand take personal responsibility as a\nmember of a group (share, take turns,\nfollow rules, take responsibility for\nclassroom jobs).",
+    "id": "AACDE03BE2BD405180A3B66F56464C79",
+    "listId": "",
+    "parentId": "1102816C1B6C455791986CC62BF9D94B",
+    "position": 1073,
+    "statementLabel": null,
+    "statementNotation": "CD-9j"
+   },
+   "AC151A85E04B469586EEBF28081B5147": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FDB74F5A57074E1988EB70D9D159F3C3",
+     "C00BA1047EDA4323A2FCC31A268EEFBC",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describe past events in an\norganized way, including\ndetails or personal\nreactions.",
+    "id": "AC151A85E04B469586EEBF28081B5147",
+    "listId": "",
+    "parentId": "FDB74F5A57074E1988EB70D9D159F3C3",
+    "position": 1018,
+    "statementLabel": null,
+    "statementNotation": "CD-2v"
+   },
+   "B14E3E1B07BE4523B2E8A38CC734C95F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5848300845A64B869EC268136B140BEA",
+     "6272979CC9864A0ABAD3E740C025EDA0",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Show acceptance of\npeople who are different\nfrom themselves as\nwell as people who are\nsimilar.",
+    "id": "B14E3E1B07BE4523B2E8A38CC734C95F",
+    "listId": "",
+    "parentId": "5848300845A64B869EC268136B140BEA",
+    "position": 1061,
+    "statementLabel": null,
+    "statementNotation": "CD-8f"
+   },
+   "B27410918357468FA88D5E42FD337224": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6272979CC9864A0ABAD3E740C025EDA0",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children demonstrate knowledge of relationships and roles\nwithin their own families, homes, classrooms, and communities. ",
+    "id": "B27410918357468FA88D5E42FD337224",
+    "listId": "",
+    "parentId": "6272979CC9864A0ABAD3E740C025EDA0",
+    "position": 1048,
+    "statementLabel": null,
+    "statementNotation": "Goal CD-6"
+   },
+   "B430A0CCA8D44210A184B553A5077648": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8A140203520C4AF793CEF5A62CC5383C",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Given a number 0-5, count out\nthat many objects.",
+    "id": "B430A0CCA8D44210A184B553A5077648",
+    "listId": "",
+    "parentId": "8A140203520C4AF793CEF5A62CC5383C",
+    "position": 1082,
+    "statementLabel": null,
+    "statementNotation": "CD-10q"
+   },
+   "B6C3110AB29B4ADCACA146D3B27BC0FF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CF52818607D64685A541A84F4F67AD0B",
+     "39C3AE75B14F46EC8CF3427729DFC28B",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Make and check predictions through\nobservations and experimentation,\nwith adult support and guidance. ",
+    "id": "B6C3110AB29B4ADCACA146D3B27BC0FF",
+    "listId": "",
+    "parentId": "CF52818607D64685A541A84F4F67AD0B",
+    "position": 1144,
+    "statementLabel": null,
+    "statementNotation": "CD-15r"
+   },
+   "B961C19E01104C1293B50A0A97963AD9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5B9E3B4A3CD145DFBF24ED9E4A22B9FB",
+     "E103D440F8974748B9569B67859DEA22",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Show awareness of different\nmusical instruments, rhythms,\nand tonal patterns as they make\nmusic or participate in music\nactivities.",
+    "id": "B961C19E01104C1293B50A0A97963AD9",
+    "listId": "",
+    "parentId": "5B9E3B4A3CD145DFBF24ED9E4A22B9FB",
+    "position": 1040,
+    "statementLabel": null,
+    "statementNotation": "CD-5p"
+   },
+   "BBAE7D629E6E46AB870BCAE0C2B8CF2E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5B9E3B4A3CD145DFBF24ED9E4A22B9FB",
+     "E103D440F8974748B9569B67859DEA22",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Plan and act out scenes based\non books, stories, everyday life,\nand imagination.",
+    "id": "BBAE7D629E6E46AB870BCAE0C2B8CF2E",
+    "listId": "",
+    "parentId": "5B9E3B4A3CD145DFBF24ED9E4A22B9FB",
+    "position": 1043,
+    "statementLabel": null,
+    "statementNotation": "CD-5s"
+   },
+   "BBEABF2BD6FF47EFA0D9F1D94960BB80": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9FAA6FA662FE43A6969387FA36731C19",
+     "E103D440F8974748B9569B67859DEA22",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Express pleasure in\ndifferent forms of art\n(call something “pretty,”\nexpress preferences,\nchoose to look at book of\nphotographs or listen to\nmusic again).  ",
+    "id": "BBEABF2BD6FF47EFA0D9F1D94960BB80",
+    "listId": "",
+    "parentId": "9FAA6FA662FE43A6969387FA36731C19",
+    "position": 1031,
+    "statementLabel": null,
+    "statementNotation": "CD-4g"
+   },
+   "BD9704C6A97D4176B932663B4FBFAD97": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E1DDF73A99044F53A5F2D6EE04956F83",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Consistently use a variety\nof words for positions\nin space, and follow\ndirections using these\nwords.",
+    "id": "BD9704C6A97D4176B932663B4FBFAD97",
+    "listId": "",
+    "parentId": "E1DDF73A99044F53A5F2D6EE04956F83",
+    "position": 1108,
+    "statementLabel": null,
+    "statementNotation": "CD-12k"
+   },
+   "BF73F863CA79499FB30C17236C492940": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "554956EBFA37455DA2C33D3372A33689",
+     "39C3AE75B14F46EC8CF3427729DFC28B",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Collect items from nature (rocks, leaves,\ninsects) and classify them using physical\ncharacteristics (color, size, shape, texture).",
+    "id": "BF73F863CA79499FB30C17236C492940",
+    "listId": "",
+    "parentId": "554956EBFA37455DA2C33D3372A33689",
+    "position": 1127,
+    "statementLabel": null,
+    "statementNotation": "CD-14k"
+   },
+   "C00BA1047EDA4323A2FCC31A268EEFBC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Construction of Knowledge: Thinking and Reasoning",
+    "id": "C00BA1047EDA4323A2FCC31A268EEFBC",
+    "listId": "",
+    "parentId": "5BF2942DDC4F4A11AB22CB8948FA3A5B",
+    "position": 1001,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "C250EE5DF6BE4DC8B8165EBDC2946A62": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "99E9211124124BB3B7F20C635E1A8D4E",
+     "C00BA1047EDA4323A2FCC31A268EEFBC",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Explore objects, tools, and\nmaterials systematically to\nlearn about their properties\n(weigh an object, observe\nsomething from the top of\nthe object to the bottom). ",
+    "id": "C250EE5DF6BE4DC8B8165EBDC2946A62",
+    "listId": "",
+    "parentId": "99E9211124124BB3B7F20C635E1A8D4E",
+    "position": 1006,
+    "statementLabel": null,
+    "statementNotation": "CD-1k"
+   },
+   "C747316402FD498D8A942A0AF22F133F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FDB74F5A57074E1988EB70D9D159F3C3",
+     "C00BA1047EDA4323A2FCC31A268EEFBC",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Try to reach logical\nconclusions (including\nconclusions regarding\ncause and effect) about\nfamiliar situations and\nmaterials, based on\ninformation gathered with\ntheir senses.",
+    "id": "C747316402FD498D8A942A0AF22F133F",
+    "listId": "",
+    "parentId": "FDB74F5A57074E1988EB70D9D159F3C3",
+    "position": 1021,
+    "statementLabel": null,
+    "statementNotation": "CD-2y"
+   },
+   "C7893A0F30534887860A56254E41B534": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CF52818607D64685A541A84F4F67AD0B",
+     "39C3AE75B14F46EC8CF3427729DFC28B",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": " Manipulate the environment to\nproduce desired effects and invent\nsolutions to problems (attach a piece\nof string to the light switch so they can\nindependently turn off the lights). ",
+    "id": "C7893A0F30534887860A56254E41B534",
+    "listId": "",
+    "parentId": "CF52818607D64685A541A84F4F67AD0B",
+    "position": 1145,
+    "statementLabel": null,
+    "statementNotation": "CD-15s"
+   },
+   "CBAF5D03CF4F4682A5B72D9654BFFC48": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "95148752285B484F9F4C0EF0D490BB10",
+     "C00BA1047EDA4323A2FCC31A268EEFBC",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use language to identify\npretend or fantasy\nsituations (say, “Let’s\npretend we’re going on\na trip.” “That’s a pretend\nstory.”).",
+    "id": "CBAF5D03CF4F4682A5B72D9654BFFC48",
+    "listId": "",
+    "parentId": "95148752285B484F9F4C0EF0D490BB10",
+    "position": 1023,
+    "statementLabel": null,
+    "statementNotation": "CD-3f"
+   },
+   "CC99D6B69D7F4BF58A64E7B66D82AD99": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5B9E3B4A3CD145DFBF24ED9E4A22B9FB",
+     "E103D440F8974748B9569B67859DEA22",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Show awareness of various\npatterns of beat, rhythm, and\nmovement through music and\ndance activities.",
+    "id": "CC99D6B69D7F4BF58A64E7B66D82AD99",
+    "listId": "",
+    "parentId": "5B9E3B4A3CD145DFBF24ED9E4A22B9FB",
+    "position": 1041,
+    "statementLabel": null,
+    "statementNotation": "CD-5q"
+   },
+   "CDD55D79AB8F4546B33667EBA9B7155D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "155D84039C3F496DA9EE2EAD62566257",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Seek answers to questions by\nusing mathematical thinking\nduring play and daily activities\n(determine who is taller by\nstanding next to classmate; find\ntwo smaller blocks to replace\nlarger block).",
+    "id": "CDD55D79AB8F4546B33667EBA9B7155D",
+    "listId": "",
+    "parentId": "155D84039C3F496DA9EE2EAD62566257",
+    "position": 1112,
+    "statementLabel": null,
+    "statementNotation": "CD-13b"
+   },
+   "CF52818607D64685A541A84F4F67AD0B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "39C3AE75B14F46EC8CF3427729DFC28B",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children explore the world by observing, manipulating objects,\nasking questions, making predictions, and developing generalizations.",
+    "id": "CF52818607D64685A541A84F4F67AD0B",
+    "listId": "",
+    "parentId": "39C3AE75B14F46EC8CF3427729DFC28B",
+    "position": 1134,
+    "statementLabel": null,
+    "statementNotation": "Goal CD-15"
+   },
+   "CFCDA4435375446CB918BB214A3E6298": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "155D84039C3F496DA9EE2EAD62566257",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Seek answers to questions during\nplay and daily activities using an\nincreasing variety of mathematical\nstrategies.",
+    "id": "CFCDA4435375446CB918BB214A3E6298",
+    "listId": "",
+    "parentId": "155D84039C3F496DA9EE2EAD62566257",
+    "position": 1115,
+    "statementLabel": null,
+    "statementNotation": "CD-13e"
+   },
+   "D00905594D0A4644B858846D85CAD423": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FDB74F5A57074E1988EB70D9D159F3C3",
+     "C00BA1047EDA4323A2FCC31A268EEFBC",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Improve their ability to\nmake predictions and\nexplain why things happen\nusing what they know.",
+    "id": "D00905594D0A4644B858846D85CAD423",
+    "listId": "",
+    "parentId": "FDB74F5A57074E1988EB70D9D159F3C3",
+    "position": 1019,
+    "statementLabel": null,
+    "statementNotation": "CD-2w"
+   },
+   "D119226429684F87955C0B55E3DA9477": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5848300845A64B869EC268136B140BEA",
+     "6272979CC9864A0ABAD3E740C025EDA0",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Given support and\nguidance, explore\ndifferent cultural practices\nduring play and planned\nactivities.",
+    "id": "D119226429684F87955C0B55E3DA9477",
+    "listId": "",
+    "parentId": "5848300845A64B869EC268136B140BEA",
+    "position": 1060,
+    "statementLabel": null,
+    "statementNotation": "CD-8e"
+   },
+   "D568B2B357E747F4A7826F7155B30622": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "155D84039C3F496DA9EE2EAD62566257",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use drawing and concrete\nmaterials to represent\nmathematical ideas (draw many\ncircles to show “lots of people,”\nput Popsicle® sticks in a pile to\nshow the number of children who\nwant crackers for snack).",
+    "id": "D568B2B357E747F4A7826F7155B30622",
+    "listId": "",
+    "parentId": "155D84039C3F496DA9EE2EAD62566257",
+    "position": 1114,
+    "statementLabel": null,
+    "statementNotation": "CD-13d"
+   },
+   "D594748ED7E74D65B71F6376B064039A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FDB74F5A57074E1988EB70D9D159F3C3",
+     "C00BA1047EDA4323A2FCC31A268EEFBC",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Ask questions about why\nthings happen and try to\nunderstand cause and\neffect. ",
+    "id": "D594748ED7E74D65B71F6376B064039A",
+    "listId": "",
+    "parentId": "FDB74F5A57074E1988EB70D9D159F3C3",
+    "position": 1016,
+    "statementLabel": null,
+    "statementNotation": "CD-2t"
+   },
+   "D65ADB39F7CC4368BA25E5B25AAEF2A2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5848300845A64B869EC268136B140BEA",
+     "6272979CC9864A0ABAD3E740C025EDA0",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Talk about how other\nchildren have different\nfamily members and\nfamily structures than\ntheir own (“I live with my\nGrandma and Shanika\nlives with her Mom and\nDad.” “David’s dad works\nbut my Daddy stays\nhome and takes care of\nme.”).",
+    "id": "D65ADB39F7CC4368BA25E5B25AAEF2A2",
+    "listId": "",
+    "parentId": "5848300845A64B869EC268136B140BEA",
+    "position": 1062,
+    "statementLabel": null,
+    "statementNotation": "CD-8g"
+   },
+   "D683CB3B8BDB42E6852EA85CDEC14FBF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "155D84039C3F496DA9EE2EAD62566257",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use observation and counting with\nincreasing accuracy to answer\nquestions such as “How many do\nwe need?” and “How many more\ndo we need?” during play and other\ndaily activities (count new children\nto see how many more plates are\nneeded for snack; return extra drinks\nto cooler at picnic to arrive at the\ncorrect number).",
+    "id": "D683CB3B8BDB42E6852EA85CDEC14FBF",
+    "listId": "",
+    "parentId": "155D84039C3F496DA9EE2EAD62566257",
+    "position": 1116,
+    "statementLabel": null,
+    "statementNotation": "CD-13f"
+   },
+   "D7EC843018B949A9907139510E88E09B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CF52818607D64685A541A84F4F67AD0B",
+     "39C3AE75B14F46EC8CF3427729DFC28B",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use an increasing variety of tools to\ninvestigate the world around them\n(measuring tools, balance, prism,\ndroppers). ",
+    "id": "D7EC843018B949A9907139510E88E09B",
+    "listId": "",
+    "parentId": "CF52818607D64685A541A84F4F67AD0B",
+    "position": 1143,
+    "statementLabel": null,
+    "statementNotation": "CD-15q"
+   },
+   "DC6F2AC9F61D4F50BB64185F8CA15549": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "95148752285B484F9F4C0EF0D490BB10",
+     "C00BA1047EDA4323A2FCC31A268EEFBC",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize that beliefs and\ndesires can determine what\npeople do (e.g., a person\nwill look for a missing\nobject based on where they\nthink it is rather than where\nit actually is).",
+    "id": "DC6F2AC9F61D4F50BB64185F8CA15549",
+    "listId": "",
+    "parentId": "95148752285B484F9F4C0EF0D490BB10",
+    "position": 1025,
+    "statementLabel": null,
+    "statementNotation": "CD-3h"
+   },
+   "DD14BA70E69B44FF9CCCD851C264D54A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "554956EBFA37455DA2C33D3372A33689",
+     "39C3AE75B14F46EC8CF3427729DFC28B",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Notice and describe properties\nof materials and changes in\nsubstances (water freezes into\nice, pudding thickens, clay\nhardens).",
+    "id": "DD14BA70E69B44FF9CCCD851C264D54A",
+    "listId": "",
+    "parentId": "554956EBFA37455DA2C33D3372A33689",
+    "position": 1125,
+    "statementLabel": null,
+    "statementNotation": "CD-14i"
+   },
+   "DEB73F373FE14BF3B4C7ACFEDC190649": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FDB74F5A57074E1988EB70D9D159F3C3",
+     "C00BA1047EDA4323A2FCC31A268EEFBC",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Make predictions about\nwhat will happen using\nwhat they know. ",
+    "id": "DEB73F373FE14BF3B4C7ACFEDC190649",
+    "listId": "",
+    "parentId": "FDB74F5A57074E1988EB70D9D159F3C3",
+    "position": 1014,
+    "statementLabel": null,
+    "statementNotation": "CD-2r"
+   },
+   "DFDCDE738F1547A88D074654C3EAD144": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E1DDF73A99044F53A5F2D6EE04956F83",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Name basic shapes\nand describe their\ncharacteristics using\ndescriptive and geometric\nattributes (“That’s a\ntriangle; it’s pointy.” “It’s a\ncircle because it’s round.”).",
+    "id": "DFDCDE738F1547A88D074654C3EAD144",
+    "listId": "",
+    "parentId": "E1DDF73A99044F53A5F2D6EE04956F83",
+    "position": 1110,
+    "statementLabel": null,
+    "statementNotation": "CD-12m"
+   },
+   "E053B51FAB5E4450AEFDC47493D7A85F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "064A976AA46A4CE39B59F65A29577729",
+     "6272979CC9864A0ABAD3E740C025EDA0",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify self as a part of a\nspecific family, preschool\nclass, or other familiar\ngroup (e.g., point to\npicture and say, “That’s\nmy family,” or “I’m in Ms.\nEmily’s class.”). ",
+    "id": "E053B51FAB5E4450AEFDC47493D7A85F",
+    "listId": "",
+    "parentId": "064A976AA46A4CE39B59F65A29577729",
+    "position": 1056,
+    "statementLabel": null,
+    "statementNotation": "CD-7d"
+   },
+   "E103D440F8974748B9569B67859DEA22": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Creative Expression ",
+    "id": "E103D440F8974748B9569B67859DEA22",
+    "listId": "",
+    "parentId": "5BF2942DDC4F4A11AB22CB8948FA3A5B",
+    "position": 1029,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "E1DDF73A99044F53A5F2D6EE04956F83": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children identify and use common shapes and concepts about position\nduring play and other activities.",
+    "id": "E1DDF73A99044F53A5F2D6EE04956F83",
+    "listId": "",
+    "parentId": "F596007D0281416FA5250C4B4605A04E",
+    "position": 1104,
+    "statementLabel": null,
+    "statementNotation": "Goal CD-12"
+   },
+   "E75DCAF18F8246799A5A51B5CC96092E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1102816C1B6C455791986CC62BF9D94B",
+     "6272979CC9864A0ABAD3E740C025EDA0",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Notice and talk about\nweather conditions.",
+    "id": "E75DCAF18F8246799A5A51B5CC96092E",
+    "listId": "",
+    "parentId": "1102816C1B6C455791986CC62BF9D94B",
+    "position": 1067,
+    "statementLabel": null,
+    "statementNotation": "CD-9d"
+   },
+   "E9DA4F6D093A41C3B15BC8305E6A1C77": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "99E9211124124BB3B7F20C635E1A8D4E",
+     "C00BA1047EDA4323A2FCC31A268EEFBC",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Group familiar objects that\ngo together (shoe and\nsock, brush and paint,\nhammer and nail).",
+    "id": "E9DA4F6D093A41C3B15BC8305E6A1C77",
+    "listId": "",
+    "parentId": "99E9211124124BB3B7F20C635E1A8D4E",
+    "position": 1005,
+    "statementLabel": null,
+    "statementNotation": "CD-1j"
+   },
+   "EABEE1363B59441C9A245D79C35982CA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B27410918357468FA88D5E42FD337224",
+     "6272979CC9864A0ABAD3E740C025EDA0",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Talk about a wide circle of family\nmembers and other people\nimportant to the family, their\nrelationships to each other, and\nshared experiences.  ",
+    "id": "EABEE1363B59441C9A245D79C35982CA",
+    "listId": "",
+    "parentId": "B27410918357468FA88D5E42FD337224",
+    "position": 1052,
+    "statementLabel": null,
+    "statementNotation": "CD-6k"
+   },
+   "EEE6CF04004246E7857794926169EE8C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FDB74F5A57074E1988EB70D9D159F3C3",
+     "C00BA1047EDA4323A2FCC31A268EEFBC",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Introduce more elaborate\nor detailed ideas or\nactions into play based\non previous knowledge or\nexperience. ",
+    "id": "EEE6CF04004246E7857794926169EE8C",
+    "listId": "",
+    "parentId": "FDB74F5A57074E1988EB70D9D159F3C3",
+    "position": 1020,
+    "statementLabel": null,
+    "statementNotation": "CD-2x"
+   },
+   "EF11489681CD4783B6CDDFF1FF0A4C02": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8A140203520C4AF793CEF5A62CC5383C",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Rote count in order to 10\nwith increasing accuracy. ",
+    "id": "EF11489681CD4783B6CDDFF1FF0A4C02",
+    "listId": "",
+    "parentId": "8A140203520C4AF793CEF5A62CC5383C",
+    "position": 1076,
+    "statementLabel": null,
+    "statementNotation": "CD-10j"
+   },
+   "F48065E5D028461194137AFD5C5544E4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children compare, sort, group, organize and measure objects and create patterns\nin their everyday environment. ",
+    "id": "F48065E5D028461194137AFD5C5544E4",
+    "listId": "",
+    "parentId": "F596007D0281416FA5250C4B4605A04E",
+    "position": 1091,
+    "statementLabel": null,
+    "statementNotation": "Goal CD-11"
+   },
+   "F596007D0281416FA5250C4B4605A04E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Mathematical Thinking and Expression",
+    "id": "F596007D0281416FA5250C4B4605A04E",
+    "listId": "",
+    "parentId": "5BF2942DDC4F4A11AB22CB8948FA3A5B",
+    "position": 1074,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "F76E02D426D14BE3A81DEEFEBCA6A302": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F48065E5D028461194137AFD5C5544E4",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Sort a group of objects (0-10) using\none attribute (color, size, shape,\nquantity) with increasing accuracy\n(sort blocks by shape and place\nlike-shaped blocks on the shelf; sort\nbeads by color).",
+    "id": "F76E02D426D14BE3A81DEEFEBCA6A302",
+    "listId": "",
+    "parentId": "F48065E5D028461194137AFD5C5544E4",
+    "position": 1102,
+    "statementLabel": null,
+    "statementNotation": "CD-11p"
+   },
+   "F933655696A44DBDADBA7F80EE657B75": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "064A976AA46A4CE39B59F65A29577729",
+     "6272979CC9864A0ABAD3E740C025EDA0",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify and express self\nas a part of several groups\n(e.g., family, preschool\nclass, faith community). ",
+    "id": "F933655696A44DBDADBA7F80EE657B75",
+    "listId": "",
+    "parentId": "064A976AA46A4CE39B59F65A29577729",
+    "position": 1057,
+    "statementLabel": null,
+    "statementNotation": "CD-7e"
+   },
+   "FC8DC7D190B74D5D93EDC5C114C1DE46": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8A140203520C4AF793CEF5A62CC5383C",
+     "F596007D0281416FA5250C4B4605A04E",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Compare visually two\ngroups of objects that\nare obviously equal or\nunequal in quantity and\ncommunicate that they\nare the same or different,\nand which one has more\n(choose a plate with four\ncookies rather than a plate\nwith one cookie). ",
+    "id": "FC8DC7D190B74D5D93EDC5C114C1DE46",
+    "listId": "",
+    "parentId": "8A140203520C4AF793CEF5A62CC5383C",
+    "position": 1078,
+    "statementLabel": null,
+    "statementNotation": "CD-10l"
+   },
+   "FC9B360C3ACD40E89003903C5E13D4B6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "99E9211124124BB3B7F20C635E1A8D4E",
+     "C00BA1047EDA4323A2FCC31A268EEFBC",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Explore objects,\ntools, and materials\nsystematically to learn\nabout their properties\n(weigh an object, observe\nsomething from the top of\nthe object to the bottom).",
+    "id": "FC9B360C3ACD40E89003903C5E13D4B6",
+    "listId": "",
+    "parentId": "99E9211124124BB3B7F20C635E1A8D4E",
+    "position": 1003,
+    "statementLabel": null,
+    "statementNotation": "CD-1h"
+   },
+   "FDB74F5A57074E1988EB70D9D159F3C3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C00BA1047EDA4323A2FCC31A268EEFBC",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children recall information and use it for new situations and problems.",
+    "id": "FDB74F5A57074E1988EB70D9D159F3C3",
+    "listId": "",
+    "parentId": "C00BA1047EDA4323A2FCC31A268EEFBC",
+    "position": 1010,
+    "statementLabel": null,
+    "statementNotation": "Goal CD-2"
+   },
+   "FEE2E4B1D3EA4DCA856456B665F58B54": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5B9E3B4A3CD145DFBF24ED9E4A22B9FB",
+     "E103D440F8974748B9569B67859DEA22",
+     "5BF2942DDC4F4A11AB22CB8948FA3A5B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Choose to participate and\nexpress themselves through a\nvariety of creative experiences,\nsuch as art, music, movement,\ndance, and dramatic play. ",
+    "id": "FEE2E4B1D3EA4DCA856456B665F58B54",
+    "listId": "",
+    "parentId": "5B9E3B4A3CD145DFBF24ED9E4A22B9FB",
+    "position": 1037,
+    "statementLabel": null,
+    "statementNotation": "CD-5m"
+   }
+  },
+  "subject": "Foundations for Early Learning and Development (2013-)",
+  "title": "Cognitive Development (CD)"
+ }
+}

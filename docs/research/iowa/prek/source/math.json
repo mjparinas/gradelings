@@ -1,0 +1,2286 @@
+{
+ "data": {
+  "cspStatus": {
+   "notes": null,
+   "value": "visible"
+  },
+  "document": {
+   "publicationStatus": "Published",
+   "sourceURL": "https://educate.iowa.gov/media/13255/download?inline",
+   "title": "IOWA EARLY LEARNING STANDARDS 4th Edition June 2026"
+  },
+  "educationLevels": [
+   "Pre-K"
+  ],
+  "id": "1BE8D2F3B43444D585BC7927E2BEF739",
+  "jurisdiction": {
+   "id": "78D8430CBE88474FAB3CDAAD9094C961",
+   "title": "Iowa"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/4.0/us/",
+   "rightsHolder": "Common Curriculum, Inc.",
+   "title": "CC BY 4.0 US"
+  },
+  "normalizedSubject": null,
+  "standards": {
+   "0143D2D254294543893DDD9275992912": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F4309AF6997046D4B981D0E604A15381",
+     "E9D71364C2754DF1A8C42946790DC478",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Moves and stacks\r\nshapes vertically and\r\nhorizontally",
+    "id": "0143D2D254294543893DDD9275992912",
+    "listId": "a",
+    "parentId": "F4309AF6997046D4B981D0E604A15381",
+    "position": 10000,
+    "statementLabel": null,
+    "statementNotation": "7.1.F.a"
+   },
+   "02FDCF518D2D4CA68BC36A6A4CEBD7CA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0B43D47C12B94AC78D113A27270B3FF9",
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Shows awareness of\r\ncombining and taking away\r\nobjects",
+    "id": "02FDCF518D2D4CA68BC36A6A4CEBD7CA",
+    "listId": "C",
+    "parentId": "0B43D47C12B94AC78D113A27270B3FF9",
+    "position": 48000,
+    "statementLabel": null,
+    "statementNotation": "7.2.C"
+   },
+   "0358523110694F57992D6CED9AD10B41": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "890BC7BD0EC94B448ED16D2DE73D0DB9",
+     "3CE85610BC7E42EDAEE2D83FDB053B57"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Demonstrates awareness\r\nand anticipation of the\r\norder within familiar\r\nroutines, songs or play\r\nactivities",
+    "id": "0358523110694F57992D6CED9AD10B41",
+    "listId": "A",
+    "parentId": "890BC7BD0EC94B448ED16D2DE73D0DB9",
+    "position": 81000,
+    "statementLabel": null,
+    "statementNotation": "7.3.A"
+   },
+   "04042ED534874259B0156F2923EB3186": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3B782B36445944BD847D6B3EAE3BC07D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Approximately 24-36 months",
+    "id": "04042ED534874259B0156F2923EB3186",
+    "listId": "",
+    "parentId": "3B782B36445944BD847D6B3EAE3BC07D",
+    "position": 125000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "08F55E0FC485429E877DB8701BC5A50E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BFF5E685645D45DABBF229978D421B06",
+     "F28F1AB3BC40486AB3E485B327B034EB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Lines up or stacks objects\r\nto compare lengths,\r\nweights or amounts and\r\nuses words to describe\r\ndifferences",
+    "id": "08F55E0FC485429E877DB8701BC5A50E",
+    "listId": "D",
+    "parentId": "BFF5E685645D45DABBF229978D421B06",
+    "position": 110000,
+    "statementLabel": null,
+    "statementNotation": "7.4.D"
+   },
+   "0A15263470F24491940C97E67D0D947C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "74DCDFE79FCD4B70821F8D58287CE943",
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Counts verbally to at\r\nleast 10, progressing\r\ntoward 20",
+    "id": "0A15263470F24491940C97E67D0D947C",
+    "listId": "Y",
+    "parentId": "74DCDFE79FCD4B70821F8D58287CE943",
+    "position": 74000,
+    "statementLabel": null,
+    "statementNotation": "7.2.Y"
+   },
+   "0B3922496FC34E1891F0FE48E82FC098": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "74DCDFE79FCD4B70821F8D58287CE943",
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identifies numerals to 10\nby name",
+    "id": "0B3922496FC34E1891F0FE48E82FC098",
+    "listId": "BB",
+    "parentId": "74DCDFE79FCD4B70821F8D58287CE943",
+    "position": 77000,
+    "statementLabel": null,
+    "statementNotation": "7.2.BB"
+   },
+   "0B43D47C12B94AC78D113A27270B3FF9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Birth-12 months",
+    "id": "0B43D47C12B94AC78D113A27270B3FF9",
+    "listId": "",
+    "parentId": "41C8386B47FB4E29A6E6D29BA825D099",
+    "position": 45000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "0CAC1FD901804BFEA6DA60DAFBD6033D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "74BB3A362EF14805A466A020C063C9A6",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identifies at least two\r\nshapes",
+    "id": "0CAC1FD901804BFEA6DA60DAFBD6033D",
+    "listId": "K",
+    "parentId": "74BB3A362EF14805A466A020C063C9A6",
+    "position": 20000,
+    "statementLabel": null,
+    "statementNotation": "7.1.K"
+   },
+   "0D5F8DF73B554B26B66E2BC33F79E62F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "74DCDFE79FCD4B70821F8D58287CE943",
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Explains changes in\r\nquantity",
+    "id": "0D5F8DF73B554B26B66E2BC33F79E62F",
+    "listId": "CC",
+    "parentId": "74DCDFE79FCD4B70821F8D58287CE943",
+    "position": 78000,
+    "statementLabel": null,
+    "statementNotation": "7.2.CC"
+   },
+   "11BB4EEF7F8D4E199C2C168A246B7EE4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8383513AF7AD45FCAB7417FFE483F513",
+     "E9D71364C2754DF1A8C42946790DC478",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "On and off ",
+    "id": "11BB4EEF7F8D4E199C2C168A246B7EE4",
+    "listId": "c",
+    "parentId": "8383513AF7AD45FCAB7417FFE483F513",
+    "position": 16000,
+    "statementLabel": null,
+    "statementNotation": "7.1.H.c"
+   },
+   "127E8783C8F443B9A56EFCFA468877E2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F28F1AB3BC40486AB3E485B327B034EB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Approximately 3-4 years",
+    "id": "127E8783C8F443B9A56EFCFA468877E2",
+    "listId": "",
+    "parentId": "F28F1AB3BC40486AB3E485B327B034EB",
+    "position": 112000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "137539B51F674638816FA7262C5B1658": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B740E5FA17334BA282C66B547B7391D4",
+     "3CE85610BC7E42EDAEE2D83FDB053B57"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Recognizes sequence of\r\nobjects in a variety of ways",
+    "id": "137539B51F674638816FA7262C5B1658",
+    "listId": "C",
+    "parentId": "B740E5FA17334BA282C66B547B7391D4",
+    "position": 84000,
+    "statementLabel": null,
+    "statementNotation": "7.3.C"
+   },
+   "139B6BEFE58240F898310FE537DE4891": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Approximately 4-5 years",
+    "id": "139B6BEFE58240F898310FE537DE4891",
+    "listId": "",
+    "parentId": "999199F2098548DBA1483307C3997C26",
+    "position": 37000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "146A63874EDB4E1E9D609318C6884739": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0B43D47C12B94AC78D113A27270B3FF9",
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Notices characteristics of\r\nobjects",
+    "id": "146A63874EDB4E1E9D609318C6884739",
+    "listId": "B",
+    "parentId": "0B43D47C12B94AC78D113A27270B3FF9",
+    "position": 47000,
+    "statementLabel": null,
+    "statementNotation": "7.2.B"
+   },
+   "14F10BF8D6984146B96660A8C21413B6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8B57FB7E0AD443CFA20D6A5758BDC6DF",
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Recognizes small\r\nquantities (1-3) without\r\ncounting them (subitizing)",
+    "id": "14F10BF8D6984146B96660A8C21413B6",
+    "listId": "L",
+    "parentId": "8B57FB7E0AD443CFA20D6A5758BDC6DF",
+    "position": 59000,
+    "statementLabel": null,
+    "statementNotation": "7.2.L"
+   },
+   "1733FD0C6A2F411D94D129BFE9308BAE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Birth-12 months",
+    "id": "1733FD0C6A2F411D94D129BFE9308BAE",
+    "listId": "",
+    "parentId": "999199F2098548DBA1483307C3997C26",
+    "position": 2000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "1753C1A26BF244B78A2E5B9FE95CCB77": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A6ACE6FF371945558B0BEA29E8BE90A6",
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Combines and separates\r\nsmall groups to show\r\nunderstanding of concepts\r\nof addition and subtraction",
+    "id": "1753C1A26BF244B78A2E5B9FE95CCB77",
+    "listId": "V",
+    "parentId": "A6ACE6FF371945558B0BEA29E8BE90A6",
+    "position": 70000,
+    "statementLabel": null,
+    "statementNotation": "7.2.V"
+   },
+   "194FEC7DDD4141549C08425A8D2CE593": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2222EDFDF93F43BC9667CC5E5DCF9BA4",
+     "CD10A2FBB04B4193BAE5373EFE9ACACD",
+     "3CE85610BC7E42EDAEE2D83FDB053B57"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identifies",
+    "id": "194FEC7DDD4141549C08425A8D2CE593",
+    "listId": "a",
+    "parentId": "2222EDFDF93F43BC9667CC5E5DCF9BA4",
+    "position": 98000,
+    "statementLabel": null,
+    "statementNotation": "7.3.J.a"
+   },
+   "209255E24FDE4E8587BEE8520884144A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C16AF24ABDAA4C909ADFAB4881789ADB",
+     "74BB3A362EF14805A466A020C063C9A6",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Moves body predicting\r\nhow things fit and\r\nmove",
+    "id": "209255E24FDE4E8587BEE8520884144A",
+    "listId": "a",
+    "parentId": "C16AF24ABDAA4C909ADFAB4881789ADB",
+    "position": 28000,
+    "statementLabel": null,
+    "statementNotation": "7.1.O.a"
+   },
+   "2222EDFDF93F43BC9667CC5E5DCF9BA4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CD10A2FBB04B4193BAE5373EFE9ACACD",
+     "3CE85610BC7E42EDAEE2D83FDB053B57"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Repeats more complex\r\npatterns and sequences:",
+    "id": "2222EDFDF93F43BC9667CC5E5DCF9BA4",
+    "listId": "J",
+    "parentId": "CD10A2FBB04B4193BAE5373EFE9ACACD",
+    "position": 97000,
+    "statementLabel": null,
+    "statementNotation": "7.3.J"
+   },
+   "276CBBBA2D734C4B93CD1FB765D8614C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8383513AF7AD45FCAB7417FFE483F513",
+     "E9D71364C2754DF1A8C42946790DC478",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Up and down",
+    "id": "276CBBBA2D734C4B93CD1FB765D8614C",
+    "listId": "a",
+    "parentId": "8383513AF7AD45FCAB7417FFE483F513",
+    "position": 14000,
+    "statementLabel": null,
+    "statementNotation": "7.1.H.a"
+   },
+   "2786FE37E28D401EBE26E2B0C0406536": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "139B6BEFE58240F898310FE537DE4891",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Uses complex spatial\r\nlanguage related to\r\nlocation, direction and\r\ndistance",
+    "id": "2786FE37E28D401EBE26E2B0C0406536",
+    "listId": "AA",
+    "parentId": "139B6BEFE58240F898310FE537DE4891",
+    "position": 43000,
+    "statementLabel": null,
+    "statementNotation": "7.1.AA"
+   },
+   "2955FD2D39014D66982EB3AD747BD7C7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BD3F45FEB10349F6BB78FBDF2E1F40A9",
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Combines and takes away\r\nobjects",
+    "id": "2955FD2D39014D66982EB3AD747BD7C7",
+    "listId": "F",
+    "parentId": "BD3F45FEB10349F6BB78FBDF2E1F40A9",
+    "position": 52000,
+    "statementLabel": null,
+    "statementNotation": "7.2.F"
+   },
+   "2A1D966655E345C5BFDE4A408E93F87C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1733FD0C6A2F411D94D129BFE9308BAE",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Begins to reach for objects\r\ndeveloping foundational,\r\nclose-up spatial awareness",
+    "id": "2A1D966655E345C5BFDE4A408E93F87C",
+    "listId": "A",
+    "parentId": "1733FD0C6A2F411D94D129BFE9308BAE",
+    "position": 3000,
+    "statementLabel": null,
+    "statementNotation": "7.1.A"
+   },
+   "2AF69E7490FB47B9874BA154CFD9624F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "74BB3A362EF14805A466A020C063C9A6",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Begins to sort objects by\r\nshape",
+    "id": "2AF69E7490FB47B9874BA154CFD9624F",
+    "listId": "N",
+    "parentId": "74BB3A362EF14805A466A020C063C9A6",
+    "position": 26000,
+    "statementLabel": null,
+    "statementNotation": "7.1.N"
+   },
+   "2B0D580EFA3045C59B6AFD3090C10ACE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2E0B26C722774E59A28FBC128CDFA9CA",
+     "74BB3A362EF14805A466A020C063C9A6",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "On top",
+    "id": "2B0D580EFA3045C59B6AFD3090C10ACE",
+    "listId": "a",
+    "parentId": "2E0B26C722774E59A28FBC128CDFA9CA",
+    "position": 23000,
+    "statementLabel": null,
+    "statementNotation": "7.1.M.a"
+   },
+   "2E0B26C722774E59A28FBC128CDFA9CA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "74BB3A362EF14805A466A020C063C9A6",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Uses and follows simple\r\nspatial directions related to\r\nproximity:",
+    "id": "2E0B26C722774E59A28FBC128CDFA9CA",
+    "listId": "M",
+    "parentId": "74BB3A362EF14805A466A020C063C9A6",
+    "position": 22000,
+    "statementLabel": null,
+    "statementNotation": "7.1.M"
+   },
+   "335A104A9403453E9750D2584864A34E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1733FD0C6A2F411D94D129BFE9308BAE",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Explores properties of\r\nobjects by reaching for and\r\ngrasping a toy or by\r\nmouthing the object",
+    "id": "335A104A9403453E9750D2584864A34E",
+    "listId": "B",
+    "parentId": "1733FD0C6A2F411D94D129BFE9308BAE",
+    "position": 4000,
+    "statementLabel": null,
+    "statementNotation": "7.1.B"
+   },
+   "35E267827F7C4B5090C447B90B2C8C87": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "773246CD08E1494EA176CE2ECEB6CD63",
+     "3CE85610BC7E42EDAEE2D83FDB053B57"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Recognizes when patterns\r\nchange or end",
+    "id": "35E267827F7C4B5090C447B90B2C8C87",
+    "listId": "G",
+    "parentId": "773246CD08E1494EA176CE2ECEB6CD63",
+    "position": 90000,
+    "statementLabel": null,
+    "statementNotation": "7.3.G"
+   },
+   "38D40E23C3AD4DB4A88C0E257FD419E6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "773246CD08E1494EA176CE2ECEB6CD63",
+     "3CE85610BC7E42EDAEE2D83FDB053B57"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Communicates what\r\ncomes next in familiar\r\nsongs, stories or routines",
+    "id": "38D40E23C3AD4DB4A88C0E257FD419E6",
+    "listId": "H",
+    "parentId": "773246CD08E1494EA176CE2ECEB6CD63",
+    "position": 91000,
+    "statementLabel": null,
+    "statementNotation": "7.3.H"
+   },
+   "3A9924AC9BC845CE85B5FA10E0BBB5E3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E8187D71DC1341108F54AAA60C70F73E",
+     "3B782B36445944BD847D6B3EAE3BC07D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Makes simple comparisons\r\nbetween two objects\r\n(attributes)",
+    "id": "3A9924AC9BC845CE85B5FA10E0BBB5E3",
+    "listId": "D",
+    "parentId": "E8187D71DC1341108F54AAA60C70F73E",
+    "position": 124000,
+    "statementLabel": null,
+    "statementNotation": "7.5.D"
+   },
+   "3B31DE9C47744EA29250D5ECB44ED19C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E9D71364C2754DF1A8C42946790DC478",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Independently moves body\r\nin relation to objects in their\r\nenvironment",
+    "id": "3B31DE9C47744EA29250D5ECB44ED19C",
+    "listId": "I",
+    "parentId": "E9D71364C2754DF1A8C42946790DC478",
+    "position": 17000,
+    "statementLabel": null,
+    "statementNotation": "7.1.I"
+   },
+   "3B782B36445944BD847D6B3EAE3BC07D": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Develops an understanding of foundational skills for data analysis",
+    "id": "3B782B36445944BD847D6B3EAE3BC07D",
+    "listId": "5",
+    "parentId": null,
+    "position": 118000,
+    "statementLabel": null,
+    "statementNotation": "7.5"
+   },
+   "3CE85610BC7E42EDAEE2D83FDB053B57": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Develops the ability to recognize and understand patterns\r\n",
+    "id": "3CE85610BC7E42EDAEE2D83FDB053B57",
+    "listId": "3",
+    "parentId": null,
+    "position": 79000,
+    "statementLabel": null,
+    "statementNotation": "7.3"
+   },
+   "3D5EAA5644BB4DB68919EC8289A860A9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "127E8783C8F443B9A56EFCFA468877E2",
+     "F28F1AB3BC40486AB3E485B327B034EB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Measures objects using\r\nblocks, hands or other\r\ntools and explains which is\r\nlonger, heavier or holds\r\nmore",
+    "id": "3D5EAA5644BB4DB68919EC8289A860A9",
+    "listId": "F",
+    "parentId": "127E8783C8F443B9A56EFCFA468877E2",
+    "position": 113000,
+    "statementLabel": null,
+    "statementNotation": "7.4.F"
+   },
+   "3DFCB7AFBE384D808409359371CF63B7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F1D863F339B44E33B0EC683D065FE106",
+     "3B782B36445944BD847D6B3EAE3BC07D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Organizes data using\r\ncharts, graphs or tables\r\nwith adult support",
+    "id": "3DFCB7AFBE384D808409359371CF63B7",
+    "listId": "J",
+    "parentId": "F1D863F339B44E33B0EC683D065FE106",
+    "position": 133000,
+    "statementLabel": null,
+    "statementNotation": "7.5.J"
+   },
+   "41C8386B47FB4E29A6E6D29BA825D099": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Develops an understanding of number sense (counting, numbers and quantity)",
+    "id": "41C8386B47FB4E29A6E6D29BA825D099",
+    "listId": "2",
+    "parentId": null,
+    "position": 44000,
+    "statementLabel": null,
+    "statementNotation": "7.2"
+   },
+   "45FDF6E0717A468BA62DB05E1288D87C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F4309AF6997046D4B981D0E604A15381",
+     "E9D71364C2754DF1A8C42946790DC478",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Experiments with how\r\nobjects move",
+    "id": "45FDF6E0717A468BA62DB05E1288D87C",
+    "listId": "b",
+    "parentId": "F4309AF6997046D4B981D0E604A15381",
+    "position": 11000,
+    "statementLabel": null,
+    "statementNotation": "7.1.F.b"
+   },
+   "4698AD264E654F029DD057CC8D69127A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "139B6BEFE58240F898310FE537DE4891",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Separates shapes into\r\nparts and recombines\r\nthem to make new\r\nshapes or designs",
+    "id": "4698AD264E654F029DD057CC8D69127A",
+    "listId": "V",
+    "parentId": "139B6BEFE58240F898310FE537DE4891",
+    "position": 38000,
+    "statementLabel": null,
+    "statementNotation": "7.1.V"
+   },
+   "46F06AAA2E8246CAA006EBB0917B51AA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5B19422A936D41DC8F51AFC52BB255F7",
+     "3B782B36445944BD847D6B3EAE3BC07D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Shows awareness of\r\ncombining and taking away\r\nobjects",
+    "id": "46F06AAA2E8246CAA006EBB0917B51AA",
+    "listId": "C",
+    "parentId": "5B19422A936D41DC8F51AFC52BB255F7",
+    "position": 122000,
+    "statementLabel": null,
+    "statementNotation": "7.5.C"
+   },
+   "49397D9050674C53B2B98C43FFBBD858": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C1FD5C170D444F3296B8522544C17778",
+     "3B782B36445944BD847D6B3EAE3BC07D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Uses basic data\r\nrepresentation with adult\r\nsupport",
+    "id": "49397D9050674C53B2B98C43FFBBD858",
+    "listId": "G",
+    "parentId": "C1FD5C170D444F3296B8522544C17778",
+    "position": 129000,
+    "statementLabel": null,
+    "statementNotation": "7.5.G"
+   },
+   "4ECC6B634BEE4D0CA1D7810F8BDB09A2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8B57FB7E0AD443CFA20D6A5758BDC6DF",
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Groups objects into sets\r\nbased on a single, shared\r\nand visible property",
+    "id": "4ECC6B634BEE4D0CA1D7810F8BDB09A2",
+    "listId": "I",
+    "parentId": "8B57FB7E0AD443CFA20D6A5758BDC6DF",
+    "position": 56000,
+    "statementLabel": null,
+    "statementNotation": "7.2.I"
+   },
+   "50FC98E31B204F4CBBE509FB1E3ED72D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1733FD0C6A2F411D94D129BFE9308BAE",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Takes objects apart ",
+    "id": "50FC98E31B204F4CBBE509FB1E3ED72D",
+    "listId": "C",
+    "parentId": "1733FD0C6A2F411D94D129BFE9308BAE",
+    "position": 5000,
+    "statementLabel": null,
+    "statementNotation": "7.1.C"
+   },
+   "57400EF4A5E64CFC9C6A62DF85ADB368": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B944D7ADF83C4BE397211826BE84F44E",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Begins to create shapes\r\nwith various parts",
+    "id": "57400EF4A5E64CFC9C6A62DF85ADB368",
+    "listId": "S",
+    "parentId": "B944D7ADF83C4BE397211826BE84F44E",
+    "position": 34000,
+    "statementLabel": null,
+    "statementNotation": "7.1.S"
+   },
+   "5B19422A936D41DC8F51AFC52BB255F7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3B782B36445944BD847D6B3EAE3BC07D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Birth-12 months",
+    "id": "5B19422A936D41DC8F51AFC52BB255F7",
+    "listId": "",
+    "parentId": "3B782B36445944BD847D6B3EAE3BC07D",
+    "position": 119000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "634C5A2EC0D84E298B9DAED46BBF0394": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A6ACE6FF371945558B0BEA29E8BE90A6",
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Understands the last\r\nnumber counted\r\nrepresents the total\r\nquantity (cardinality)",
+    "id": "634C5A2EC0D84E298B9DAED46BBF0394",
+    "listId": "S",
+    "parentId": "A6ACE6FF371945558B0BEA29E8BE90A6",
+    "position": 67000,
+    "statementLabel": null,
+    "statementNotation": "7.2.S"
+   },
+   "63F120F664D84A128173420F16452723": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C1FD5C170D444F3296B8522544C17778",
+     "3B782B36445944BD847D6B3EAE3BC07D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Interprets simple data with\r\nadult support",
+    "id": "63F120F664D84A128173420F16452723",
+    "listId": "H",
+    "parentId": "C1FD5C170D444F3296B8522544C17778",
+    "position": 130000,
+    "statementLabel": null,
+    "statementNotation": "7.5.H"
+   },
+   "67B7304E0FFC443982FD22A783AA94C5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B944D7ADF83C4BE397211826BE84F44E",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Demonstrates\r\nunderstanding of complex\r\nspatial language related to\r\nlocation, direction and\r\ndistance",
+    "id": "67B7304E0FFC443982FD22A783AA94C5",
+    "listId": "U",
+    "parentId": "B944D7ADF83C4BE397211826BE84F44E",
+    "position": 36000,
+    "statementLabel": null,
+    "statementNotation": "7.1.U"
+   },
+   "67FF09772C684D46B5C25049839F8E57": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A6ACE6FF371945558B0BEA29E8BE90A6",
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Increases ability to quickly\r\nrecognize collections up to\r\nthree (subitizing)",
+    "id": "67FF09772C684D46B5C25049839F8E57",
+    "listId": "P",
+    "parentId": "A6ACE6FF371945558B0BEA29E8BE90A6",
+    "position": 64000,
+    "statementLabel": null,
+    "statementNotation": "7.2.P"
+   },
+   "6A74A4218CB8455387B1008B59BE85BC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "127E8783C8F443B9A56EFCFA468877E2",
+     "F28F1AB3BC40486AB3E485B327B034EB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Demonstrates an\r\nunderstanding of\r\nmeasurable attributes\r\nrelated to length, volume\r\nand area",
+    "id": "6A74A4218CB8455387B1008B59BE85BC",
+    "listId": "G",
+    "parentId": "127E8783C8F443B9A56EFCFA468877E2",
+    "position": 114000,
+    "statementLabel": null,
+    "statementNotation": "7.4.G"
+   },
+   "6CB49D09C216468FB1BC355A3A8297AE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3CE85610BC7E42EDAEE2D83FDB053B57"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Approximately 24-36 months",
+    "id": "6CB49D09C216468FB1BC355A3A8297AE",
+    "listId": "",
+    "parentId": "3CE85610BC7E42EDAEE2D83FDB053B57",
+    "position": 86000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "704FF1B6248D44C19424CCBE33BFC6C0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F1D863F339B44E33B0EC683D065FE106",
+     "3B782B36445944BD847D6B3EAE3BC07D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Collects simple data\r\nindependently",
+    "id": "704FF1B6248D44C19424CCBE33BFC6C0",
+    "listId": "I",
+    "parentId": "F1D863F339B44E33B0EC683D065FE106",
+    "position": 132000,
+    "statementLabel": null,
+    "statementNotation": "7.5.I"
+   },
+   "706BF22FF87D44A68808A24651738576": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B740E5FA17334BA282C66B547B7391D4",
+     "3CE85610BC7E42EDAEE2D83FDB053B57"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Takes part in or repeat\r\nsimple patterns with\r\nobjects, movements or\r\nsounds",
+    "id": "706BF22FF87D44A68808A24651738576",
+    "listId": "D",
+    "parentId": "B740E5FA17334BA282C66B547B7391D4",
+    "position": 85000,
+    "statementLabel": null,
+    "statementNotation": "7.3.D"
+   },
+   "71E1A71273E44FFBA3E002EBDD541D2B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CD10A2FBB04B4193BAE5373EFE9ACACD",
+     "3CE85610BC7E42EDAEE2D83FDB053B57"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Notices and describes\r\npatterns seen in natural\r\nand designed settings",
+    "id": "71E1A71273E44FFBA3E002EBDD541D2B",
+    "listId": "K",
+    "parentId": "CD10A2FBB04B4193BAE5373EFE9ACACD",
+    "position": 102000,
+    "statementLabel": null,
+    "statementNotation": "7.3.K"
+   },
+   "71E238158B7142CF9E4C916A08E53CAF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "139B6BEFE58240F898310FE537DE4891",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Uses spatial language to\r\ndescribe where things are\r\nand how they fit together",
+    "id": "71E238158B7142CF9E4C916A08E53CAF",
+    "listId": "Z",
+    "parentId": "139B6BEFE58240F898310FE537DE4891",
+    "position": 42000,
+    "statementLabel": null,
+    "statementNotation": "7.1.Z"
+   },
+   "74BB3A362EF14805A466A020C063C9A6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Approximately 24-36 months",
+    "id": "74BB3A362EF14805A466A020C063C9A6",
+    "listId": "",
+    "parentId": "999199F2098548DBA1483307C3997C26",
+    "position": 18000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "74DCDFE79FCD4B70821F8D58287CE943": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Approximately 4-5 years",
+    "id": "74DCDFE79FCD4B70821F8D58287CE943",
+    "listId": "",
+    "parentId": "41C8386B47FB4E29A6E6D29BA825D099",
+    "position": 71000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "765B823C2807401D8D34C70F24D3E4BF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "139B6BEFE58240F898310FE537DE4891",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identifies and describes\r\nshapes and their\r\nattributes",
+    "id": "765B823C2807401D8D34C70F24D3E4BF",
+    "listId": "W",
+    "parentId": "139B6BEFE58240F898310FE537DE4891",
+    "position": 39000,
+    "statementLabel": null,
+    "statementNotation": "7.1.W"
+   },
+   "773246CD08E1494EA176CE2ECEB6CD63": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3CE85610BC7E42EDAEE2D83FDB053B57"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Approximately 3-4 years",
+    "id": "773246CD08E1494EA176CE2ECEB6CD63",
+    "listId": "",
+    "parentId": "3CE85610BC7E42EDAEE2D83FDB053B57",
+    "position": 89000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "7942DDCDFAF24485AC5FFE6EF12D31E7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CA2A0524AC4F45E083204A83227D674A",
+     "773246CD08E1494EA176CE2ECEB6CD63",
+     "3CE85610BC7E42EDAEE2D83FDB053B57"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describes",
+    "id": "7942DDCDFAF24485AC5FFE6EF12D31E7",
+    "listId": "b",
+    "parentId": "CA2A0524AC4F45E083204A83227D674A",
+    "position": 94000,
+    "statementLabel": null,
+    "statementNotation": "7.3.I.b"
+   },
+   "79DC497CF67E428C9413A46034B2CCCB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1733FD0C6A2F411D94D129BFE9308BAE",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Fills and empties\r\ncontainers",
+    "id": "79DC497CF67E428C9413A46034B2CCCB",
+    "listId": "D",
+    "parentId": "1733FD0C6A2F411D94D129BFE9308BAE",
+    "position": 6000,
+    "statementLabel": null,
+    "statementNotation": "7.1.D"
+   },
+   "7AF52F61792641A6A2A2CD9405AAB283": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BD3F45FEB10349F6BB78FBDF2E1F40A9",
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Imitates counting and\r\nnaming number words\r\nwithout regard to sequence\r\n",
+    "id": "7AF52F61792641A6A2A2CD9405AAB283",
+    "listId": "G",
+    "parentId": "BD3F45FEB10349F6BB78FBDF2E1F40A9",
+    "position": 53000,
+    "statementLabel": null,
+    "statementNotation": "7.2.G"
+   },
+   "7D78BF7C8AD94C8498CBE75E1F5A8F8D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8B57FB7E0AD443CFA20D6A5758BDC6DF",
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Matches objects to other\r\nobjects in games or sorting\r\nactivities",
+    "id": "7D78BF7C8AD94C8498CBE75E1F5A8F8D",
+    "listId": "H",
+    "parentId": "8B57FB7E0AD443CFA20D6A5758BDC6DF",
+    "position": 55000,
+    "statementLabel": null,
+    "statementNotation": "7.2.H"
+   },
+   "7ED5A1CC3B4C4088A0B8A085070F6C86": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A6ACE6FF371945558B0BEA29E8BE90A6",
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Counts up to 10 verbally\r\n(stable order principle)",
+    "id": "7ED5A1CC3B4C4088A0B8A085070F6C86",
+    "listId": "Q",
+    "parentId": "A6ACE6FF371945558B0BEA29E8BE90A6",
+    "position": 65000,
+    "statementLabel": null,
+    "statementNotation": "7.2.Q"
+   },
+   "82B930D905BC40AAA463890CF17C49CC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BFF5E685645D45DABBF229978D421B06",
+     "F28F1AB3BC40486AB3E485B327B034EB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Uses vocabulary related to\r\nsize and quantity to\r\ndescribe measurable\r\nattributes",
+    "id": "82B930D905BC40AAA463890CF17C49CC",
+    "listId": "E",
+    "parentId": "BFF5E685645D45DABBF229978D421B06",
+    "position": 111000,
+    "statementLabel": null,
+    "statementNotation": "7.4.E"
+   },
+   "82CAC7CDCBA344A2B37BC24177765BCA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8B57FB7E0AD443CFA20D6A5758BDC6DF",
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Begins to recognize small\r\nnumbers (1-3) in their\r\nenvironment",
+    "id": "82CAC7CDCBA344A2B37BC24177765BCA",
+    "listId": "M",
+    "parentId": "8B57FB7E0AD443CFA20D6A5758BDC6DF",
+    "position": 60000,
+    "statementLabel": null,
+    "statementNotation": "7.2.M"
+   },
+   "8383513AF7AD45FCAB7417FFE483F513": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E9D71364C2754DF1A8C42946790DC478",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Follows simple spatial\r\ndirections related to\r\nposition:",
+    "id": "8383513AF7AD45FCAB7417FFE483F513",
+    "listId": "H",
+    "parentId": "E9D71364C2754DF1A8C42946790DC478",
+    "position": 13000,
+    "statementLabel": null,
+    "statementNotation": "7.1.H"
+   },
+   "83D09FEE5D4D4484ACE986DE37399EF6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F28F1AB3BC40486AB3E485B327B034EB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Birth-12 months",
+    "id": "83D09FEE5D4D4484ACE986DE37399EF6",
+    "listId": "",
+    "parentId": "F28F1AB3BC40486AB3E485B327B034EB",
+    "position": 104000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "870E32555DC34B4FA4AFD15706B8A3B5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F28F1AB3BC40486AB3E485B327B034EB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Approximately 4-5 years",
+    "id": "870E32555DC34B4FA4AFD15706B8A3B5",
+    "listId": "",
+    "parentId": "F28F1AB3BC40486AB3E485B327B034EB",
+    "position": 115000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "890BC7BD0EC94B448ED16D2DE73D0DB9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3CE85610BC7E42EDAEE2D83FDB053B57"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Birth-12 months",
+    "id": "890BC7BD0EC94B448ED16D2DE73D0DB9",
+    "listId": "",
+    "parentId": "3CE85610BC7E42EDAEE2D83FDB053B57",
+    "position": 80000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "89D70F8585174EFB882E2F53BCE0E658": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BD3F45FEB10349F6BB78FBDF2E1F40A9",
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Makes simple comparisons\r\nbetween two objects\r\n(attributes)",
+    "id": "89D70F8585174EFB882E2F53BCE0E658",
+    "listId": "D",
+    "parentId": "BD3F45FEB10349F6BB78FBDF2E1F40A9",
+    "position": 50000,
+    "statementLabel": null,
+    "statementNotation": "7.2.D"
+   },
+   "8A43B7409B2F4B209025966CC4DFED75": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2222EDFDF93F43BC9667CC5E5DCF9BA4",
+     "CD10A2FBB04B4193BAE5373EFE9ACACD",
+     "3CE85610BC7E42EDAEE2D83FDB053B57"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Extends",
+    "id": "8A43B7409B2F4B209025966CC4DFED75",
+    "listId": "c",
+    "parentId": "2222EDFDF93F43BC9667CC5E5DCF9BA4",
+    "position": 100000,
+    "statementLabel": null,
+    "statementNotation": "7.3.J.c"
+   },
+   "8B57FB7E0AD443CFA20D6A5758BDC6DF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Approximately 24-36 months",
+    "id": "8B57FB7E0AD443CFA20D6A5758BDC6DF",
+    "listId": "",
+    "parentId": "41C8386B47FB4E29A6E6D29BA825D099",
+    "position": 54000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "8C15ED2BFC8C4AFF8054ECB413DA1A55": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F28F1AB3BC40486AB3E485B327B034EB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Approximately 12-24 months",
+    "id": "8C15ED2BFC8C4AFF8054ECB413DA1A55",
+    "listId": "",
+    "parentId": "F28F1AB3BC40486AB3E485B327B034EB",
+    "position": 106000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "922CCC7D737E4225ACC854779F621DDC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BD3F45FEB10349F6BB78FBDF2E1F40A9",
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Develops an understanding\r\nof quantity by making\r\ncollections",
+    "id": "922CCC7D737E4225ACC854779F621DDC",
+    "listId": "E",
+    "parentId": "BD3F45FEB10349F6BB78FBDF2E1F40A9",
+    "position": 51000,
+    "statementLabel": null,
+    "statementNotation": "7.2.E"
+   },
+   "96EE589CD1F8443F8CAADDE5B20615F9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "74DCDFE79FCD4B70821F8D58287CE943",
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Uses objects, fingers or\r\ndrawings to count a\r\ngroup and shows the total\r\nwith the last number\r\ncounted ",
+    "id": "96EE589CD1F8443F8CAADDE5B20615F9",
+    "listId": "AA",
+    "parentId": "74DCDFE79FCD4B70821F8D58287CE943",
+    "position": 76000,
+    "statementLabel": null,
+    "statementNotation": "7.2.AA"
+   },
+   "97807C9478524BE384344549CAD1F4D5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CA2A0524AC4F45E083204A83227D674A",
+     "773246CD08E1494EA176CE2ECEB6CD63",
+     "3CE85610BC7E42EDAEE2D83FDB053B57"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identifies",
+    "id": "97807C9478524BE384344549CAD1F4D5",
+    "listId": "a",
+    "parentId": "CA2A0524AC4F45E083204A83227D674A",
+    "position": 93000,
+    "statementLabel": null,
+    "statementNotation": "7.3.I.a"
+   },
+   "999199F2098548DBA1483307C3997C26": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Develops an understanding of spatial relationships and shapes",
+    "id": "999199F2098548DBA1483307C3997C26",
+    "listId": "1",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": null,
+    "statementNotation": "7.1"
+   },
+   "9CDDBD4FB23D4C09A4E78F4967740B33": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6CB49D09C216468FB1BC355A3A8297AE",
+     "3CE85610BC7E42EDAEE2D83FDB053B57"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Creates and repeats\r\nsimple patterns with\r\nobjects, movements or\r\nsounds",
+    "id": "9CDDBD4FB23D4C09A4E78F4967740B33",
+    "listId": "F",
+    "parentId": "6CB49D09C216468FB1BC355A3A8297AE",
+    "position": 88000,
+    "statementLabel": null,
+    "statementNotation": "7.3.F"
+   },
+   "A48F9C2875664A4BBD4858DA2C97EE72": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C1FD5C170D444F3296B8522544C17778",
+     "3B782B36445944BD847D6B3EAE3BC07D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Participates in simple data\r\ncollection with adult\r\nsupport.",
+    "id": "A48F9C2875664A4BBD4858DA2C97EE72",
+    "listId": "F",
+    "parentId": "C1FD5C170D444F3296B8522544C17778",
+    "position": 128000,
+    "statementLabel": null,
+    "statementNotation": "7.5.F"
+   },
+   "A6ACE6FF371945558B0BEA29E8BE90A6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Approximately 3-4 years",
+    "id": "A6ACE6FF371945558B0BEA29E8BE90A6",
+    "listId": "",
+    "parentId": "41C8386B47FB4E29A6E6D29BA825D099",
+    "position": 62000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "AAD18F2B7AF343E4A4922A75C83147D9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8B57FB7E0AD443CFA20D6A5758BDC6DF",
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Uses simple counting in\r\nplay and interactions,\r\nalthough numbers may\r\noccur out of order",
+    "id": "AAD18F2B7AF343E4A4922A75C83147D9",
+    "listId": "K",
+    "parentId": "8B57FB7E0AD443CFA20D6A5758BDC6DF",
+    "position": 58000,
+    "statementLabel": null,
+    "statementNotation": "7.2.K"
+   },
+   "AF9507E249D5445AB5C34095E045639F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B944D7ADF83C4BE397211826BE84F44E",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Matches a wider variety of\r\nshapes with the same size\r\nand orientation",
+    "id": "AF9507E249D5445AB5C34095E045639F",
+    "listId": "Q",
+    "parentId": "B944D7ADF83C4BE397211826BE84F44E",
+    "position": 32000,
+    "statementLabel": null,
+    "statementNotation": "7.1.Q"
+   },
+   "B1F17B0A278A464292F60EC0545376F7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2E0B26C722774E59A28FBC128CDFA9CA",
+     "74BB3A362EF14805A466A020C063C9A6",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Under",
+    "id": "B1F17B0A278A464292F60EC0545376F7",
+    "listId": "b",
+    "parentId": "2E0B26C722774E59A28FBC128CDFA9CA",
+    "position": 24000,
+    "statementLabel": null,
+    "statementNotation": "7.1.M.b"
+   },
+   "B59CECD39E024D9A8B377E8294A46373": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8C15ED2BFC8C4AFF8054ECB413DA1A55",
+     "F28F1AB3BC40486AB3E485B327B034EB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Compares two objects by\r\nsize, weight or\r\namount/volume during play\r\nor routines",
+    "id": "B59CECD39E024D9A8B377E8294A46373",
+    "listId": "B",
+    "parentId": "8C15ED2BFC8C4AFF8054ECB413DA1A55",
+    "position": 107000,
+    "statementLabel": null,
+    "statementNotation": "7.4.B"
+   },
+   "B6C3B24F105441BCAA2C98E0D2F24A22": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A6ACE6FF371945558B0BEA29E8BE90A6",
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Points and counts up to 10\r\nobjects accurately (one to\r\none correspondence)",
+    "id": "B6C3B24F105441BCAA2C98E0D2F24A22",
+    "listId": "R",
+    "parentId": "A6ACE6FF371945558B0BEA29E8BE90A6",
+    "position": 66000,
+    "statementLabel": null,
+    "statementNotation": "7.2.R"
+   },
+   "B740E5FA17334BA282C66B547B7391D4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3CE85610BC7E42EDAEE2D83FDB053B57"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Approximately 12-24 months",
+    "id": "B740E5FA17334BA282C66B547B7391D4",
+    "listId": "",
+    "parentId": "3CE85610BC7E42EDAEE2D83FDB053B57",
+    "position": 82000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "B83DCD102E3B460E95CB891DAFD2091B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A6ACE6FF371945558B0BEA29E8BE90A6",
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Recognize and organize\r\nsets based on multiple\r\nattributes",
+    "id": "B83DCD102E3B460E95CB891DAFD2091B",
+    "listId": "O",
+    "parentId": "A6ACE6FF371945558B0BEA29E8BE90A6",
+    "position": 63000,
+    "statementLabel": null,
+    "statementNotation": "7.2.O"
+   },
+   "B944D7ADF83C4BE397211826BE84F44E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Approximately 3-4 years",
+    "id": "B944D7ADF83C4BE397211826BE84F44E",
+    "listId": "",
+    "parentId": "999199F2098548DBA1483307C3997C26",
+    "position": 30000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "B9DF3F91FA914C3DA4C919695DA9A56D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F1D863F339B44E33B0EC683D065FE106",
+     "3B782B36445944BD847D6B3EAE3BC07D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Interprets data to answer\r\nquestions with adult\r\nsupport",
+    "id": "B9DF3F91FA914C3DA4C919695DA9A56D",
+    "listId": "K",
+    "parentId": "F1D863F339B44E33B0EC683D065FE106",
+    "position": 134000,
+    "statementLabel": null,
+    "statementNotation": "7.5.K"
+   },
+   "BB46B63AC8F348C4A35996AAF7E088E4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "74DCDFE79FCD4B70821F8D58287CE943",
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Instantly recognizes\r\ncollections up to five",
+    "id": "BB46B63AC8F348C4A35996AAF7E088E4",
+    "listId": "X",
+    "parentId": "74DCDFE79FCD4B70821F8D58287CE943",
+    "position": 73000,
+    "statementLabel": null,
+    "statementNotation": "7.2.X"
+   },
+   "BCAF7016B43C464693CFF14499434109": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6CB49D09C216468FB1BC355A3A8297AE",
+     "3CE85610BC7E42EDAEE2D83FDB053B57"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Notices order in routines\r\nand play, showing\r\nunderstanding of how\r\nthings go together or\r\nhappen in a certain\r\nsequence",
+    "id": "BCAF7016B43C464693CFF14499434109",
+    "listId": "E",
+    "parentId": "6CB49D09C216468FB1BC355A3A8297AE",
+    "position": 87000,
+    "statementLabel": null,
+    "statementNotation": "7.3.E"
+   },
+   "BD3F45FEB10349F6BB78FBDF2E1F40A9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Approximately 12-24 months",
+    "id": "BD3F45FEB10349F6BB78FBDF2E1F40A9",
+    "listId": "",
+    "parentId": "41C8386B47FB4E29A6E6D29BA825D099",
+    "position": 49000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "BEC15EB9D84F49E78F226F98344B1265": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "139B6BEFE58240F898310FE537DE4891",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Uses basic shapes to\r\nbuild, make or represent\r\nobjects",
+    "id": "BEC15EB9D84F49E78F226F98344B1265",
+    "listId": "X",
+    "parentId": "139B6BEFE58240F898310FE537DE4891",
+    "position": 40000,
+    "statementLabel": null,
+    "statementNotation": "7.1.X"
+   },
+   "BFF5E685645D45DABBF229978D421B06": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F28F1AB3BC40486AB3E485B327B034EB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Approximately 24-36 months",
+    "id": "BFF5E685645D45DABBF229978D421B06",
+    "listId": "",
+    "parentId": "F28F1AB3BC40486AB3E485B327B034EB",
+    "position": 109000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "C0E55F4AA23345509CAC6DF0A5469E24": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5B19422A936D41DC8F51AFC52BB255F7",
+     "3B782B36445944BD847D6B3EAE3BC07D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Expresses a desire for\r\nmore",
+    "id": "C0E55F4AA23345509CAC6DF0A5469E24",
+    "listId": "A",
+    "parentId": "5B19422A936D41DC8F51AFC52BB255F7",
+    "position": 120000,
+    "statementLabel": null,
+    "statementNotation": "7.5.A"
+   },
+   "C16AF24ABDAA4C909ADFAB4881789ADB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "74BB3A362EF14805A466A020C063C9A6",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Demonstrates an internal\r\nmental map of space:",
+    "id": "C16AF24ABDAA4C909ADFAB4881789ADB",
+    "listId": "O",
+    "parentId": "74BB3A362EF14805A466A020C063C9A6",
+    "position": 27000,
+    "statementLabel": null,
+    "statementNotation": "7.1.O"
+   },
+   "C1FD5C170D444F3296B8522544C17778": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3B782B36445944BD847D6B3EAE3BC07D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Approximately 3-4 years",
+    "id": "C1FD5C170D444F3296B8522544C17778",
+    "listId": "",
+    "parentId": "3B782B36445944BD847D6B3EAE3BC07D",
+    "position": 127000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "C41A21427FA94C58AFF26F16A0AE8E5F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "74DCDFE79FCD4B70821F8D58287CE943",
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Points and counts 10 - 20\r\nobjects accurately",
+    "id": "C41A21427FA94C58AFF26F16A0AE8E5F",
+    "listId": "Z",
+    "parentId": "74DCDFE79FCD4B70821F8D58287CE943",
+    "position": 75000,
+    "statementLabel": null,
+    "statementNotation": "7.2.Z"
+   },
+   "C5B2280BBCB04D7A94DADB23778B8F61": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B944D7ADF83C4BE397211826BE84F44E",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identifies and describes\r\nmost simple shapes",
+    "id": "C5B2280BBCB04D7A94DADB23778B8F61",
+    "listId": "R",
+    "parentId": "B944D7ADF83C4BE397211826BE84F44E",
+    "position": 33000,
+    "statementLabel": null,
+    "statementNotation": "7.1.R"
+   },
+   "C9625D591727480BAFB162D6466D4215": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8B57FB7E0AD443CFA20D6A5758BDC6DF",
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Uses language such as\r\nmore, less or same to\r\ncompare quantities",
+    "id": "C9625D591727480BAFB162D6466D4215",
+    "listId": "J",
+    "parentId": "8B57FB7E0AD443CFA20D6A5758BDC6DF",
+    "position": 57000,
+    "statementLabel": null,
+    "statementNotation": "7.2.J"
+   },
+   "CA2A0524AC4F45E083204A83227D674A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "773246CD08E1494EA176CE2ECEB6CD63",
+     "3CE85610BC7E42EDAEE2D83FDB053B57"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Repeats patterns and\r\nsequences: \r\n",
+    "id": "CA2A0524AC4F45E083204A83227D674A",
+    "listId": "I",
+    "parentId": "773246CD08E1494EA176CE2ECEB6CD63",
+    "position": 92000,
+    "statementLabel": null,
+    "statementNotation": "7.3.I"
+   },
+   "CCB13372CB7A4F86856EA27CE4AF110F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5B19422A936D41DC8F51AFC52BB255F7",
+     "3B782B36445944BD847D6B3EAE3BC07D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Notices characteristics of\r\nobjects",
+    "id": "CCB13372CB7A4F86856EA27CE4AF110F",
+    "listId": "B",
+    "parentId": "5B19422A936D41DC8F51AFC52BB255F7",
+    "position": 121000,
+    "statementLabel": null,
+    "statementNotation": "7.5.B"
+   },
+   "CD10A2FBB04B4193BAE5373EFE9ACACD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3CE85610BC7E42EDAEE2D83FDB053B57"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Approximately 4-5 years",
+    "id": "CD10A2FBB04B4193BAE5373EFE9ACACD",
+    "listId": "",
+    "parentId": "3CE85610BC7E42EDAEE2D83FDB053B57",
+    "position": 96000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "CEBA993D2A994734AB4200461F8772F5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "74BB3A362EF14805A466A020C063C9A6",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Experiments with putting\r\nshapes together and taking\r\nthem apart during play",
+    "id": "CEBA993D2A994734AB4200461F8772F5",
+    "listId": "J",
+    "parentId": "74BB3A362EF14805A466A020C063C9A6",
+    "position": 19000,
+    "statementLabel": null,
+    "statementNotation": "7.1.J"
+   },
+   "D12B66D81F0E4D4D81DA4FE636C7EF91": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2222EDFDF93F43BC9667CC5E5DCF9BA4",
+     "CD10A2FBB04B4193BAE5373EFE9ACACD",
+     "3CE85610BC7E42EDAEE2D83FDB053B57"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Creates",
+    "id": "D12B66D81F0E4D4D81DA4FE636C7EF91",
+    "listId": "d",
+    "parentId": "2222EDFDF93F43BC9667CC5E5DCF9BA4",
+    "position": 101000,
+    "statementLabel": null,
+    "statementNotation": "7.3.J.d"
+   },
+   "D3B6D44AAD3A458A955608F64DF54662": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E9D71364C2754DF1A8C42946790DC478",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Matches and sorts identical\r\nand similar objects",
+    "id": "D3B6D44AAD3A458A955608F64DF54662",
+    "listId": "G",
+    "parentId": "E9D71364C2754DF1A8C42946790DC478",
+    "position": 12000,
+    "statementLabel": null,
+    "statementNotation": "7.1.G"
+   },
+   "D9B89EB8DCF449DE83EB45516EE72C86": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "83D09FEE5D4D4484ACE986DE37399EF6",
+     "F28F1AB3BC40486AB3E485B327B034EB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Explores objects and\r\nnotices differences in size,\r\nweight or fullness through\r\ntouch and play",
+    "id": "D9B89EB8DCF449DE83EB45516EE72C86",
+    "listId": "A",
+    "parentId": "83D09FEE5D4D4484ACE986DE37399EF6",
+    "position": 105000,
+    "statementLabel": null,
+    "statementNotation": "7.4.A"
+   },
+   "DAA20F7700B74DCD9B7BCA8579B0EF4C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8B57FB7E0AD443CFA20D6A5758BDC6DF",
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Develops an understanding\r\nof changes in quantity",
+    "id": "DAA20F7700B74DCD9B7BCA8579B0EF4C",
+    "listId": "N",
+    "parentId": "8B57FB7E0AD443CFA20D6A5758BDC6DF",
+    "position": 61000,
+    "statementLabel": null,
+    "statementNotation": "7.2.N"
+   },
+   "DBE9C1F6E2014A4C82A57691DD9F0C8F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8383513AF7AD45FCAB7417FFE483F513",
+     "E9D71364C2754DF1A8C42946790DC478",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "In and out",
+    "id": "DBE9C1F6E2014A4C82A57691DD9F0C8F",
+    "listId": "b",
+    "parentId": "8383513AF7AD45FCAB7417FFE483F513",
+    "position": 15000,
+    "statementLabel": null,
+    "statementNotation": "7.1.H.b"
+   },
+   "E19D89EC3C184B8BB72248E36B266373": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8C15ED2BFC8C4AFF8054ECB413DA1A55",
+     "F28F1AB3BC40486AB3E485B327B034EB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Makes observations about\r\nmeasurable attributes,\r\nnoticing sameness and\r\ndifference",
+    "id": "E19D89EC3C184B8BB72248E36B266373",
+    "listId": "C",
+    "parentId": "8C15ED2BFC8C4AFF8054ECB413DA1A55",
+    "position": 108000,
+    "statementLabel": null,
+    "statementNotation": "7.4.C"
+   },
+   "E2058210365442B094A93B825BBB207A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2222EDFDF93F43BC9667CC5E5DCF9BA4",
+     "CD10A2FBB04B4193BAE5373EFE9ACACD",
+     "3CE85610BC7E42EDAEE2D83FDB053B57"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Copies",
+    "id": "E2058210365442B094A93B825BBB207A",
+    "listId": "b",
+    "parentId": "2222EDFDF93F43BC9667CC5E5DCF9BA4",
+    "position": 99000,
+    "statementLabel": null,
+    "statementNotation": "7.3.J.b"
+   },
+   "E3B375C9571A4F02BEA7EE86329F937E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "870E32555DC34B4FA4AFD15706B8A3B5",
+     "F28F1AB3BC40486AB3E485B327B034EB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Uses objects or tools to\r\nmeasure and compare\r\nsize, weight or capacity,\r\ndescribing results in words\r\nor numbers",
+    "id": "E3B375C9571A4F02BEA7EE86329F937E",
+    "listId": "H",
+    "parentId": "870E32555DC34B4FA4AFD15706B8A3B5",
+    "position": 116000,
+    "statementLabel": null,
+    "statementNotation": "7.4.H"
+   },
+   "E735A33112484D9CA33BD7A07D0B1F5F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A6ACE6FF371945558B0BEA29E8BE90A6",
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Begins to recognize small\r\nnumbers (1-3) in their\r\nenvironment.",
+    "id": "E735A33112484D9CA33BD7A07D0B1F5F",
+    "listId": "T",
+    "parentId": "A6ACE6FF371945558B0BEA29E8BE90A6",
+    "position": 68000,
+    "statementLabel": null,
+    "statementNotation": "7.2.T"
+   },
+   "E8187D71DC1341108F54AAA60C70F73E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3B782B36445944BD847D6B3EAE3BC07D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Approximately 12-24 months",
+    "id": "E8187D71DC1341108F54AAA60C70F73E",
+    "listId": "",
+    "parentId": "3B782B36445944BD847D6B3EAE3BC07D",
+    "position": 123000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "E96BF6EEFCBF482FABF9DF66C9293E4F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "74DCDFE79FCD4B70821F8D58287CE943",
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Makes sets up to five\r\nobjects and answers the\r\n“how many” question with\r\nthe last number counted",
+    "id": "E96BF6EEFCBF482FABF9DF66C9293E4F",
+    "listId": "W",
+    "parentId": "74DCDFE79FCD4B70821F8D58287CE943",
+    "position": 72000,
+    "statementLabel": null,
+    "statementNotation": "7.2.W"
+   },
+   "E9D71364C2754DF1A8C42946790DC478": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Approximately 12-24 months",
+    "id": "E9D71364C2754DF1A8C42946790DC478",
+    "listId": "",
+    "parentId": "999199F2098548DBA1483307C3997C26",
+    "position": 8000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "EDBF42D41E7146B9A66C4A42A42E6D1C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A6ACE6FF371945558B0BEA29E8BE90A6",
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identifies and names\r\nnumerals 1-5\r\nindependently",
+    "id": "EDBF42D41E7146B9A66C4A42A42E6D1C",
+    "listId": "U",
+    "parentId": "A6ACE6FF371945558B0BEA29E8BE90A6",
+    "position": 69000,
+    "statementLabel": null,
+    "statementNotation": "7.2.U"
+   },
+   "EF930BD9D8A142A28F5B5FE6CCC0743C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B740E5FA17334BA282C66B547B7391D4",
+     "3CE85610BC7E42EDAEE2D83FDB053B57"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Engages in familiar\r\nroutines, songs or play\r\nactivities",
+    "id": "EF930BD9D8A142A28F5B5FE6CCC0743C",
+    "listId": "B",
+    "parentId": "B740E5FA17334BA282C66B547B7391D4",
+    "position": 83000,
+    "statementLabel": null,
+    "statementNotation": "7.3.B"
+   },
+   "F0A3968222C0466ABE3B838CC92B7FE5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CA2A0524AC4F45E083204A83227D674A",
+     "773246CD08E1494EA176CE2ECEB6CD63",
+     "3CE85610BC7E42EDAEE2D83FDB053B57"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Predicts",
+    "id": "F0A3968222C0466ABE3B838CC92B7FE5",
+    "listId": "c",
+    "parentId": "CA2A0524AC4F45E083204A83227D674A",
+    "position": 95000,
+    "statementLabel": null,
+    "statementNotation": "7.3.I.c"
+   },
+   "F1D863F339B44E33B0EC683D065FE106": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3B782B36445944BD847D6B3EAE3BC07D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Approximately 4-5 years",
+    "id": "F1D863F339B44E33B0EC683D065FE106",
+    "listId": "",
+    "parentId": "3B782B36445944BD847D6B3EAE3BC07D",
+    "position": 131000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "F1F34CC2417F4C189A86FF3C6975037E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "870E32555DC34B4FA4AFD15706B8A3B5",
+     "F28F1AB3BC40486AB3E485B327B034EB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Describes attributes of\r\nmeasurement using\r\ncomparative language",
+    "id": "F1F34CC2417F4C189A86FF3C6975037E",
+    "listId": "I",
+    "parentId": "870E32555DC34B4FA4AFD15706B8A3B5",
+    "position": 117000,
+    "statementLabel": null,
+    "statementNotation": "7.4.I"
+   },
+   "F28F1AB3BC40486AB3E485B327B034EB": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Develops an understanding of measurement",
+    "id": "F28F1AB3BC40486AB3E485B327B034EB",
+    "listId": "4",
+    "parentId": null,
+    "position": 103000,
+    "statementLabel": null,
+    "statementNotation": "7.4"
+   },
+   "F4309AF6997046D4B981D0E604A15381": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E9D71364C2754DF1A8C42946790DC478",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Takes objects apart and\r\nattempts to put them\r\ntogether:",
+    "id": "F4309AF6997046D4B981D0E604A15381",
+    "listId": "F",
+    "parentId": "E9D71364C2754DF1A8C42946790DC478",
+    "position": 9000,
+    "statementLabel": null,
+    "statementNotation": "7.1.F"
+   },
+   "F4CAD768F506461FB5D198E8EDD94CD6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "04042ED534874259B0156F2923EB3186",
+     "3B782B36445944BD847D6B3EAE3BC07D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Begins to identify and\r\ncommunicate observations\r\nof simple data sets",
+    "id": "F4CAD768F506461FB5D198E8EDD94CD6",
+    "listId": "E",
+    "parentId": "04042ED534874259B0156F2923EB3186",
+    "position": 126000,
+    "statementLabel": null,
+    "statementNotation": "7.5.E"
+   },
+   "F51842F4784941499BAFC49655296CF0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0B43D47C12B94AC78D113A27270B3FF9",
+     "41C8386B47FB4E29A6E6D29BA825D099"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Expresses a desire for\r\nmore",
+    "id": "F51842F4784941499BAFC49655296CF0",
+    "listId": "A",
+    "parentId": "0B43D47C12B94AC78D113A27270B3FF9",
+    "position": 46000,
+    "statementLabel": null,
+    "statementNotation": "7.2.A"
+   },
+   "F6C793D27B14498B84B8304AAABEABF9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C16AF24ABDAA4C909ADFAB4881789ADB",
+     "74BB3A362EF14805A466A020C063C9A6",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Understands relative\r\npositions",
+    "id": "F6C793D27B14498B84B8304AAABEABF9",
+    "listId": "b",
+    "parentId": "C16AF24ABDAA4C909ADFAB4881789ADB",
+    "position": 29000,
+    "statementLabel": null,
+    "statementNotation": "7.1.O.b"
+   },
+   "F835BD605BD049FEB535FDC7B82C4E1E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "139B6BEFE58240F898310FE537DE4891",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Builds structures using\r\n3D shapes and shows\r\nhow pieces fit together to\r\nmake new shapes",
+    "id": "F835BD605BD049FEB535FDC7B82C4E1E",
+    "listId": "Y",
+    "parentId": "139B6BEFE58240F898310FE537DE4891",
+    "position": 41000,
+    "statementLabel": null,
+    "statementNotation": "7.1.Y"
+   },
+   "F873F66D21C64F378CC976A8CEEAF1F8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2E0B26C722774E59A28FBC128CDFA9CA",
+     "74BB3A362EF14805A466A020C063C9A6",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Behind",
+    "id": "F873F66D21C64F378CC976A8CEEAF1F8",
+    "listId": "c",
+    "parentId": "2E0B26C722774E59A28FBC128CDFA9CA",
+    "position": 25000,
+    "statementLabel": null,
+    "statementNotation": "7.1.M.c"
+   },
+   "FB773E892FB540ED87D93FCA8DC3E39C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "74BB3A362EF14805A466A020C063C9A6",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Notices characteristics,\r\nsimilarities and differences\r\namong shapes",
+    "id": "FB773E892FB540ED87D93FCA8DC3E39C",
+    "listId": "L",
+    "parentId": "74BB3A362EF14805A466A020C063C9A6",
+    "position": 21000,
+    "statementLabel": null,
+    "statementNotation": "7.1.L"
+   },
+   "FE868C04BB684761ADE0B3E9E6AC2DF4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B944D7ADF83C4BE397211826BE84F44E",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Begins to recognize and\r\nname common 3D shapes\r\n",
+    "id": "FE868C04BB684761ADE0B3E9E6AC2DF4",
+    "listId": "T",
+    "parentId": "B944D7ADF83C4BE397211826BE84F44E",
+    "position": 35000,
+    "statementLabel": null,
+    "statementNotation": "7.1.T"
+   },
+   "FF3F51E929C04D08817671B1C24FCEA9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B944D7ADF83C4BE397211826BE84F44E",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Takes shapes apart into\r\nsmaller shapes during play\r\nor when using puzzles",
+    "id": "FF3F51E929C04D08817671B1C24FCEA9",
+    "listId": "P",
+    "parentId": "B944D7ADF83C4BE397211826BE84F44E",
+    "position": 31000,
+    "statementLabel": null,
+    "statementNotation": "7.1.P"
+   },
+   "FFD47F897CFA40978290BCC595D42DA3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1733FD0C6A2F411D94D129BFE9308BAE",
+     "999199F2098548DBA1483307C3997C26"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Rolls, crawls and cruises to\r\nnavigate around obstacles\r\nand reach desired items",
+    "id": "FFD47F897CFA40978290BCC595D42DA3",
+    "listId": "E",
+    "parentId": "1733FD0C6A2F411D94D129BFE9308BAE",
+    "position": 7000,
+    "statementLabel": null,
+    "statementNotation": "7.1.E"
+   }
+  },
+  "subject": "Early Learning Standards (2026-)",
+  "title": "Area 7: Mathematics"
+ }
+}

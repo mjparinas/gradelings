@@ -1,0 +1,1255 @@
+{
+ "data": {
+  "cspStatus": {
+   "notes": null,
+   "value": "visible"
+  },
+  "document": {
+   "sourceURL": "https://media.doe.in.gov/news/2023-early-learning-standards-final-5-25-23.pdf",
+   "title": "Indiana Early Learning Standards"
+  },
+  "educationLevels": [
+   "Pre-K"
+  ],
+  "id": "DEBC7A4B5E1148C1899CF62775B6EC29",
+  "jurisdiction": {
+   "id": "0F7091AB177F40D8B71B326CAFD13C8D",
+   "title": "Indiana"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/4.0/us/",
+   "rightsHolder": "Common Curriculum, Inc.",
+   "title": "CC BY 4.0 US"
+  },
+  "normalizedSubject": null,
+  "standards": {
+   "0AA2972788E44AF3A2A8F5B239612579": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "141B44F46B0D4F5EA23D4D26702A50C8",
+     "6484211CD17748A2926D6D667DC6EBC4",
+     "62E887D30C3A45ECAD58BA9BD228E7E2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begin to\nunderstand the\nrelationship\nbetween people\nand their\ncommunity",
+    "id": "0AA2972788E44AF3A2A8F5B239612579",
+    "listId": "e",
+    "parentId": "141B44F46B0D4F5EA23D4D26702A50C8",
+    "position": 1062,
+    "statementLabel": null,
+    "statementNotation": "SS5.1.y.e"
+   },
+   "0B5E9A88BF104255A99D9E56B8E12A8F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "143470A639564C628EADB53D2B304550",
+     "ED8AABE88CB94237ABD920B52A9C1D32",
+     "81F283831DD84F3B9C01831895EFFA68"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify leaders\nand helpers in the\nhome or early\nlearning\nenvironment",
+    "id": "0B5E9A88BF104255A99D9E56B8E12A8F",
+    "listId": "a",
+    "parentId": "143470A639564C628EADB53D2B304550",
+    "position": 1025,
+    "statementLabel": null,
+    "statementNotation": "SS2.3.y.a"
+   },
+   "0D6954502E334E3AA78733F522FFF5BC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "17226D785CCB4D089F4FC4C0F5DAA78A",
+     "D36BD01C56884F799EF3F88A2513E09E",
+     "81F283831DD84F3B9C01831895EFFA68"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Demonstrate\nunderstanding\nof concepts of\ntime including\nbefore, after,\nmorning, day,\nnight, now, and\nlater",
+    "id": "0D6954502E334E3AA78733F522FFF5BC",
+    "listId": "a",
+    "parentId": "17226D785CCB4D089F4FC4C0F5DAA78A",
+    "position": 1022,
+    "statementLabel": null,
+    "statementNotation": "SS2.2.o.a"
+   },
+   "0E81ABD09A3048C3ABCB67205A23AD70": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "141B44F46B0D4F5EA23D4D26702A50C8",
+     "6484211CD17748A2926D6D667DC6EBC4",
+     "62E887D30C3A45ECAD58BA9BD228E7E2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Assist adults with\ndaily routines and\nresponsibilities",
+    "id": "0E81ABD09A3048C3ABCB67205A23AD70",
+    "listId": "a",
+    "parentId": "141B44F46B0D4F5EA23D4D26702A50C8",
+    "position": 1058,
+    "statementLabel": null,
+    "statementNotation": "SS5.1.y.a"
+   },
+   "1004CD9247F44727A527CFF0AE8427A1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "595439C570E445ABBBE457E7EE4992D9",
+     "A4FE67AA2B294B4AA3613CFFF69260AA",
+     "81F283831DD84F3B9C01831895EFFA68"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begin to\nunderstand\nhow time is\nmeasured",
+    "id": "1004CD9247F44727A527CFF0AE8427A1",
+    "listId": "b",
+    "parentId": "595439C570E445ABBBE457E7EE4992D9",
+    "position": 1017,
+    "statementLabel": null,
+    "statementNotation": "SS2.1.o.b"
+   },
+   "13AE2A4043EA4250B939D206BC5156F9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1C5D8F6EA021498F87FBAC29CA5E23E6",
+     "B6A67DFCA7EB4F099447DC243076EE30",
+     "5821DC15B7C34F97A703C41DD3325C0A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Act out adult social roles and\noccupations",
+    "id": "13AE2A4043EA4250B939D206BC5156F9",
+    "listId": "b",
+    "parentId": "1C5D8F6EA021498F87FBAC29CA5E23E6",
+    "position": 1048,
+    "statementLabel": null,
+    "statementNotation": "SS4.1.yo.b"
+   },
+   "141B44F46B0D4F5EA23D4D26702A50C8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6484211CD17748A2926D6D667DC6EBC4",
+     "62E887D30C3A45ECAD58BA9BD228E7E2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Younger\nPreschool",
+    "id": "141B44F46B0D4F5EA23D4D26702A50C8",
+    "listId": "",
+    "parentId": "6484211CD17748A2926D6D667DC6EBC4",
+    "position": 1057,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "143470A639564C628EADB53D2B304550": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ED8AABE88CB94237ABD920B52A9C1D32",
+     "81F283831DD84F3B9C01831895EFFA68"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Younger Preschool",
+    "id": "143470A639564C628EADB53D2B304550",
+    "listId": "",
+    "parentId": "ED8AABE88CB94237ABD920B52A9C1D32",
+    "position": 1024,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "17226D785CCB4D089F4FC4C0F5DAA78A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D36BD01C56884F799EF3F88A2513E09E",
+     "81F283831DD84F3B9C01831895EFFA68"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Older\nPreschool",
+    "id": "17226D785CCB4D089F4FC4C0F5DAA78A",
+    "listId": "",
+    "parentId": "D36BD01C56884F799EF3F88A2513E09E",
+    "position": 1021,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "186925BA9D95471DA687E48C8B019C82": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A531A21CFA0D4D7EBE03DE27B201AF45"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Demonstrate awareness of the world in spatial terms",
+    "id": "186925BA9D95471DA687E48C8B019C82",
+    "listId": "1",
+    "parentId": "A531A21CFA0D4D7EBE03DE27B201AF45",
+    "position": 1031,
+    "statementLabel": null,
+    "statementNotation": "SS3.1"
+   },
+   "1C5D8F6EA021498F87FBAC29CA5E23E6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B6A67DFCA7EB4F099447DC243076EE30",
+     "5821DC15B7C34F97A703C41DD3325C0A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Younger and Older Preschool",
+    "id": "1C5D8F6EA021498F87FBAC29CA5E23E6",
+    "listId": "",
+    "parentId": "B6A67DFCA7EB4F099447DC243076EE30",
+    "position": 1047,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "1F5EDB0AEEDA4CA3B435319EEA01BE57": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D611180D172D413EBE3E5A94D79C7807",
+     "A531A21CFA0D4D7EBE03DE27B201AF45"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Younger Preschool",
+    "id": "1F5EDB0AEEDA4CA3B435319EEA01BE57",
+    "listId": "",
+    "parentId": "D611180D172D413EBE3E5A94D79C7807",
+    "position": 1039,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "2CFC771CC5A7423AAF8561130C0FE621": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CF089F5A24C2428B989C9F6BC0C8A03C",
+     "4200A3DCA7DE489591705DC93CBD0C19"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Younger\nPreschool",
+    "id": "2CFC771CC5A7423AAF8561130C0FE621",
+    "listId": "",
+    "parentId": "CF089F5A24C2428B989C9F6BC0C8A03C",
+    "position": 1002,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "2D0B58D684BB40CB8948FB5CA6680BB5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "80D794627CC74AB983930AC7800B251E",
+     "D611180D172D413EBE3E5A94D79C7807",
+     "A531A21CFA0D4D7EBE03DE27B201AF45"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Become familiar\nwith information\nabout where\nthey live and\nunderstand\nwhat an\naddress is",
+    "id": "2D0B58D684BB40CB8948FB5CA6680BB5",
+    "listId": "b",
+    "parentId": "80D794627CC74AB983930AC7800B251E",
+    "position": 1044,
+    "statementLabel": null,
+    "statementNotation": "SS3.2.o.b"
+   },
+   "351EB5EA16D642089C588A09D152EC0D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "512AF578246348059093189CF1009715",
+     "6484211CD17748A2926D6D667DC6EBC4",
+     "62E887D30C3A45ECAD58BA9BD228E7E2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Demonstrate\nwillingness to\nwork together to\naccomplish\ntasks",
+    "id": "351EB5EA16D642089C588A09D152EC0D",
+    "listId": "a",
+    "parentId": "512AF578246348059093189CF1009715",
+    "position": 1064,
+    "statementLabel": null,
+    "statementNotation": "SS5.1.o.a"
+   },
+   "35CEC049CB0D43D2A8B92CC922B2900F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A622AFD9D84C4525BF40CA6A55DAA9A6",
+     "CF089F5A24C2428B989C9F6BC0C8A03C",
+     "4200A3DCA7DE489591705DC93CBD0C19"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Participate in\nand describe\nlocal, state, and\nnational events\nand\ncelebrations if\nobserved ",
+    "id": "35CEC049CB0D43D2A8B92CC922B2900F",
+    "listId": "a",
+    "parentId": "A622AFD9D84C4525BF40CA6A55DAA9A6",
+    "position": 1007,
+    "statementLabel": null,
+    "statementNotation": "SS1.1.o.a"
+   },
+   "4200A3DCA7DE489591705DC93CBD0C19": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Self",
+    "id": "4200A3DCA7DE489591705DC93CBD0C19",
+    "listId": "1",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "4669A03BE8FA47B3A37E0CC1F803D10D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A622AFD9D84C4525BF40CA6A55DAA9A6",
+     "CF089F5A24C2428B989C9F6BC0C8A03C",
+     "4200A3DCA7DE489591705DC93CBD0C19"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Build\nawareness,\nrespect, and\nacceptance for\ndifferences in\npeople and\nacknowledge\nconnections ",
+    "id": "4669A03BE8FA47B3A37E0CC1F803D10D",
+    "listId": "d",
+    "parentId": "A622AFD9D84C4525BF40CA6A55DAA9A6",
+    "position": 1010,
+    "statementLabel": null,
+    "statementNotation": "SS1.1.o.d"
+   },
+   "4678EA953BF74A79B8543F3455D2B9A2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4E079FD70648449E92E179E09C55113E",
+     "ED8AABE88CB94237ABD920B52A9C1D32",
+     "81F283831DD84F3B9C01831895EFFA68"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify leaders\nand community\nhelpers at\nhome, school,\nand in\nenvironments",
+    "id": "4678EA953BF74A79B8543F3455D2B9A2",
+    "listId": "a",
+    "parentId": "4E079FD70648449E92E179E09C55113E",
+    "position": 1028,
+    "statementLabel": null,
+    "statementNotation": "SS2.3.o.a"
+   },
+   "47E7498F47EB44AA9E7D8261E49474AD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B6FB845539B14D25AF80C5A334514BF2",
+     "B6A67DFCA7EB4F099447DC243076EE30",
+     "5821DC15B7C34F97A703C41DD3325C0A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Develop an\nawareness of the\nroles of familiar\ncommunity\nhelpers/workers",
+    "id": "47E7498F47EB44AA9E7D8261E49474AD",
+    "listId": "b",
+    "parentId": "B6FB845539B14D25AF80C5A334514BF2",
+    "position": 1051,
+    "statementLabel": null,
+    "statementNotation": "SS4.1.y.b"
+   },
+   "4E079FD70648449E92E179E09C55113E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ED8AABE88CB94237ABD920B52A9C1D32",
+     "81F283831DD84F3B9C01831895EFFA68"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Older\nPreschool",
+    "id": "4E079FD70648449E92E179E09C55113E",
+    "listId": "",
+    "parentId": "ED8AABE88CB94237ABD920B52A9C1D32",
+    "position": 1027,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "4F7B870B5C1F47DBABBF4FCC4511C85A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "512AF578246348059093189CF1009715",
+     "6484211CD17748A2926D6D667DC6EBC4",
+     "62E887D30C3A45ECAD58BA9BD228E7E2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify simple\ntasks within the\nhome, learning\nenvironment, or\ncommunity ",
+    "id": "4F7B870B5C1F47DBABBF4FCC4511C85A",
+    "listId": "b",
+    "parentId": "512AF578246348059093189CF1009715",
+    "position": 1065,
+    "statementLabel": null,
+    "statementNotation": "SS5.1.o.b"
+   },
+   "512AF578246348059093189CF1009715": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6484211CD17748A2926D6D667DC6EBC4",
+     "62E887D30C3A45ECAD58BA9BD228E7E2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Older\nPreschool",
+    "id": "512AF578246348059093189CF1009715",
+    "listId": "",
+    "parentId": "6484211CD17748A2926D6D667DC6EBC4",
+    "position": 1063,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "53B5841DCF954678BD6C3ED86984408A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1F5EDB0AEEDA4CA3B435319EEA01BE57",
+     "D611180D172D413EBE3E5A94D79C7807",
+     "A531A21CFA0D4D7EBE03DE27B201AF45"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify and\ndescribe\nprominent\nfeatures of the\nearly learning\nenvironment,\nneighborhood,\nand community",
+    "id": "53B5841DCF954678BD6C3ED86984408A",
+    "listId": "a",
+    "parentId": "1F5EDB0AEEDA4CA3B435319EEA01BE57",
+    "position": 1040,
+    "statementLabel": null,
+    "statementNotation": "SS3.2.y.a"
+   },
+   "55145C5E795244028B5B29F77B3E6F62": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4E079FD70648449E92E179E09C55113E",
+     "ED8AABE88CB94237ABD920B52A9C1D32",
+     "81F283831DD84F3B9C01831895EFFA68"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize\ncommunity\nsymbols and\nbegin to\nrecognize\nnational\nsymbols (e.g.,\nthe flag) ",
+    "id": "55145C5E795244028B5B29F77B3E6F62",
+    "listId": "b",
+    "parentId": "4E079FD70648449E92E179E09C55113E",
+    "position": 1029,
+    "statementLabel": null,
+    "statementNotation": "SS2.3.o.b"
+   },
+   "5821DC15B7C34F97A703C41DD3325C0A": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Economics",
+    "id": "5821DC15B7C34F97A703C41DD3325C0A",
+    "listId": "4",
+    "parentId": null,
+    "position": 1045,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "595439C570E445ABBBE457E7EE4992D9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A4FE67AA2B294B4AA3613CFFF69260AA",
+     "81F283831DD84F3B9C01831895EFFA68"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Older\nPreschool",
+    "id": "595439C570E445ABBBE457E7EE4992D9",
+    "listId": "",
+    "parentId": "A4FE67AA2B294B4AA3613CFFF69260AA",
+    "position": 1015,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "5A24486DBD83413680FEEA2B9FCBFEB9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "512AF578246348059093189CF1009715",
+     "6484211CD17748A2926D6D667DC6EBC4",
+     "62E887D30C3A45ECAD58BA9BD228E7E2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize and\nhave language\nto describe\nwhen\nsomething is\nunfair",
+    "id": "5A24486DBD83413680FEEA2B9FCBFEB9",
+    "listId": "e",
+    "parentId": "512AF578246348059093189CF1009715",
+    "position": 1068,
+    "statementLabel": null,
+    "statementNotation": "SS5.1.o.e"
+   },
+   "5BC4E631219A46BAADB949D2F75199B8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A622AFD9D84C4525BF40CA6A55DAA9A6",
+     "CF089F5A24C2428B989C9F6BC0C8A03C",
+     "4200A3DCA7DE489591705DC93CBD0C19"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify key\npeople in\nhistory",
+    "id": "5BC4E631219A46BAADB949D2F75199B8",
+    "listId": "b",
+    "parentId": "A622AFD9D84C4525BF40CA6A55DAA9A6",
+    "position": 1008,
+    "statementLabel": null,
+    "statementNotation": "SS1.1.o.b"
+   },
+   "624E50B0531A43108B7784061DCCBCF3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "512AF578246348059093189CF1009715",
+     "6484211CD17748A2926D6D667DC6EBC4",
+     "62E887D30C3A45ECAD58BA9BD228E7E2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Provide\nleadership in\ncompleting daily\ntasks ",
+    "id": "624E50B0531A43108B7784061DCCBCF3",
+    "listId": "c",
+    "parentId": "512AF578246348059093189CF1009715",
+    "position": 1066,
+    "statementLabel": null,
+    "statementNotation": "SS5.1.o.c"
+   },
+   "62E887D30C3A45ECAD58BA9BD228E7E2": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Citizenship",
+    "id": "62E887D30C3A45ECAD58BA9BD228E7E2",
+    "listId": "5",
+    "parentId": null,
+    "position": 1055,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "6484211CD17748A2926D6D667DC6EBC4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "62E887D30C3A45ECAD58BA9BD228E7E2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Demonstrate awareness of citizenship ",
+    "id": "6484211CD17748A2926D6D667DC6EBC4",
+    "listId": "1",
+    "parentId": "62E887D30C3A45ECAD58BA9BD228E7E2",
+    "position": 1056,
+    "statementLabel": null,
+    "statementNotation": "SS5.1"
+   },
+   "699D31FF208F4EC19C31A127D8EF8327": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1F5EDB0AEEDA4CA3B435319EEA01BE57",
+     "D611180D172D413EBE3E5A94D79C7807",
+     "A531A21CFA0D4D7EBE03DE27B201AF45"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begin to learn\nknowledge of\npersonal and\ngeographic\ninformation",
+    "id": "699D31FF208F4EC19C31A127D8EF8327",
+    "listId": "b",
+    "parentId": "1F5EDB0AEEDA4CA3B435319EEA01BE57",
+    "position": 1041,
+    "statementLabel": null,
+    "statementNotation": "SS3.2.y.b"
+   },
+   "70BD26EA80C840E48CCF60C0688172BE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "DE3437B14ED04DD79E2887171B30598D",
+     "D36BD01C56884F799EF3F88A2513E09E",
+     "81F283831DD84F3B9C01831895EFFA68"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begin to\ncommunicate\nconcepts of time,\nsuch as before\nand after.",
+    "id": "70BD26EA80C840E48CCF60C0688172BE",
+    "listId": "a",
+    "parentId": "DE3437B14ED04DD79E2887171B30598D",
+    "position": 1020,
+    "statementLabel": null,
+    "statementNotation": "SS2.2.y.a"
+   },
+   "77DEAE16BE314996B8AEAEDAFB0CB355": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "141B44F46B0D4F5EA23D4D26702A50C8",
+     "6484211CD17748A2926D6D667DC6EBC4",
+     "62E887D30C3A45ECAD58BA9BD228E7E2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Choose simple\ndaily tasks from a\nlist of jobs in the\nlearning\nenvironment",
+    "id": "77DEAE16BE314996B8AEAEDAFB0CB355",
+    "listId": "b",
+    "parentId": "141B44F46B0D4F5EA23D4D26702A50C8",
+    "position": 1059,
+    "statementLabel": null,
+    "statementNotation": "SS5.1.y.b"
+   },
+   "80D794627CC74AB983930AC7800B251E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D611180D172D413EBE3E5A94D79C7807",
+     "A531A21CFA0D4D7EBE03DE27B201AF45"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Older\nPreschool",
+    "id": "80D794627CC74AB983930AC7800B251E",
+    "listId": "",
+    "parentId": "D611180D172D413EBE3E5A94D79C7807",
+    "position": 1042,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "81F283831DD84F3B9C01831895EFFA68": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "History and Events",
+    "id": "81F283831DD84F3B9C01831895EFFA68",
+    "listId": "2",
+    "parentId": null,
+    "position": 1011,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "858EFA3D44634AB79FE393ECE7DA5BBC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D3FC82DAFE404BEBBCF3EED3E28E0DBD",
+     "186925BA9D95471DA687E48C8B019C82",
+     "A531A21CFA0D4D7EBE03DE27B201AF45"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify location,\ndirectionality, and\nspatial\nrelationships",
+    "id": "858EFA3D44634AB79FE393ECE7DA5BBC",
+    "listId": "a",
+    "parentId": "D3FC82DAFE404BEBBCF3EED3E28E0DBD",
+    "position": 1033,
+    "statementLabel": null,
+    "statementNotation": "SS3.1.y.a"
+   },
+   "89F25C545BF947859584B7A464A3A090": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CF1856A46A024C658D7FA4A3E855BBD9",
+     "A4FE67AA2B294B4AA3613CFFF69260AA",
+     "81F283831DD84F3B9C01831895EFFA68"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize the\nsequence of\nevents as part of\na daily routine\nand as it relates\nto the passage of\ntime",
+    "id": "89F25C545BF947859584B7A464A3A090",
+    "listId": "a",
+    "parentId": "CF1856A46A024C658D7FA4A3E855BBD9",
+    "position": 1014,
+    "statementLabel": null,
+    "statementNotation": "SS2.1.y.a"
+   },
+   "9734B9801E27490BBF19562A55685677": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2CFC771CC5A7423AAF8561130C0FE621",
+     "CF089F5A24C2428B989C9F6BC0C8A03C",
+     "4200A3DCA7DE489591705DC93CBD0C19"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Participate in and\ndescribe own\nfamily,\ncommunity, and\nother celebrations\nwhen observed",
+    "id": "9734B9801E27490BBF19562A55685677",
+    "listId": "a",
+    "parentId": "2CFC771CC5A7423AAF8561130C0FE621",
+    "position": 1003,
+    "statementLabel": null,
+    "statementNotation": "SS1.1.y.a"
+   },
+   "9CEFB7B59EFF4E9A98C1C27C5BCEA889": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A02D17639CC74B1CA282E0A74CBF0C09",
+     "186925BA9D95471DA687E48C8B019C82",
+     "A531A21CFA0D4D7EBE03DE27B201AF45"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Develop\nconcepts and\ndescribe\nlocation,\ndirectionality,\nand spatial\nrelationships",
+    "id": "9CEFB7B59EFF4E9A98C1C27C5BCEA889",
+    "listId": "a",
+    "parentId": "A02D17639CC74B1CA282E0A74CBF0C09",
+    "position": 1036,
+    "statementLabel": null,
+    "statementNotation": "SS3.1.o.a"
+   },
+   "9F392908FCDE4E08A018F90DB494EE47": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D3FC82DAFE404BEBBCF3EED3E28E0DBD",
+     "186925BA9D95471DA687E48C8B019C82",
+     "A531A21CFA0D4D7EBE03DE27B201AF45"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begin to create\nsimple\nrepresentations\nof a familiar\nphysical place",
+    "id": "9F392908FCDE4E08A018F90DB494EE47",
+    "listId": "b",
+    "parentId": "D3FC82DAFE404BEBBCF3EED3E28E0DBD",
+    "position": 1034,
+    "statementLabel": null,
+    "statementNotation": "SS3.1.y.b"
+   },
+   "A02D17639CC74B1CA282E0A74CBF0C09": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "186925BA9D95471DA687E48C8B019C82",
+     "A531A21CFA0D4D7EBE03DE27B201AF45"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Older\nPreschool",
+    "id": "A02D17639CC74B1CA282E0A74CBF0C09",
+    "listId": "",
+    "parentId": "186925BA9D95471DA687E48C8B019C82",
+    "position": 1035,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "A08BD94DA35144CF8AA248E672D3AFA4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ADE3B85E45D84438B55DB873BCF45397",
+     "B6A67DFCA7EB4F099447DC243076EE30",
+     "5821DC15B7C34F97A703C41DD3325C0A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Develop an\nawareness that\npeople work for\nmoney in order\nto provide for\nbasic needs",
+    "id": "A08BD94DA35144CF8AA248E672D3AFA4",
+    "listId": "a",
+    "parentId": "ADE3B85E45D84438B55DB873BCF45397",
+    "position": 1053,
+    "statementLabel": null,
+    "statementNotation": "SS4.1.o.a"
+   },
+   "A42E6B9D365E4C9E953013C037F3F2A9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A02D17639CC74B1CA282E0A74CBF0C09",
+     "186925BA9D95471DA687E48C8B019C82",
+     "A531A21CFA0D4D7EBE03DE27B201AF45"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Engage in play\nwhere one item\nrepresents\nanother",
+    "id": "A42E6B9D365E4C9E953013C037F3F2A9",
+    "listId": "b",
+    "parentId": "A02D17639CC74B1CA282E0A74CBF0C09",
+    "position": 1037,
+    "statementLabel": null,
+    "statementNotation": "SS3.1.o.b"
+   },
+   "A4FE67AA2B294B4AA3613CFFF69260AA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "81F283831DD84F3B9C01831895EFFA68"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Demonstrate awareness of chronological thinking",
+    "id": "A4FE67AA2B294B4AA3613CFFF69260AA",
+    "listId": "1",
+    "parentId": "81F283831DD84F3B9C01831895EFFA68",
+    "position": 1012,
+    "statementLabel": null,
+    "statementNotation": "SS2.1"
+   },
+   "A531A21CFA0D4D7EBE03DE27B201AF45": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Geography",
+    "id": "A531A21CFA0D4D7EBE03DE27B201AF45",
+    "listId": "3",
+    "parentId": null,
+    "position": 1030,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "A622AFD9D84C4525BF40CA6A55DAA9A6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CF089F5A24C2428B989C9F6BC0C8A03C",
+     "4200A3DCA7DE489591705DC93CBD0C19"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Older\nPreschool",
+    "id": "A622AFD9D84C4525BF40CA6A55DAA9A6",
+    "listId": "",
+    "parentId": "CF089F5A24C2428B989C9F6BC0C8A03C",
+    "position": 1006,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "A874AE1CCB2848EEB55431FBA827EB2E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2CFC771CC5A7423AAF8561130C0FE621",
+     "CF089F5A24C2428B989C9F6BC0C8A03C",
+     "4200A3DCA7DE489591705DC93CBD0C19"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begin to\nassimilate family,\ncommunity, and\ncultural events in\ncooperative play",
+    "id": "A874AE1CCB2848EEB55431FBA827EB2E",
+    "listId": "b",
+    "parentId": "2CFC771CC5A7423AAF8561130C0FE621",
+    "position": 1004,
+    "statementLabel": null,
+    "statementNotation": "SS1.1.y.b"
+   },
+   "ADE3B85E45D84438B55DB873BCF45397": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B6A67DFCA7EB4F099447DC243076EE30",
+     "5821DC15B7C34F97A703C41DD3325C0A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Older\nPreschool",
+    "id": "ADE3B85E45D84438B55DB873BCF45397",
+    "listId": "",
+    "parentId": "B6A67DFCA7EB4F099447DC243076EE30",
+    "position": 1052,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "AFCF82E2F4EA4EDE98C80279FB53315C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2CFC771CC5A7423AAF8561130C0FE621",
+     "CF089F5A24C2428B989C9F6BC0C8A03C",
+     "4200A3DCA7DE489591705DC93CBD0C19"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use simple\nphrases to\ndemonstrate an\nawareness of\ndifferences\nand/or similarities\nbetween self and\nothers",
+    "id": "AFCF82E2F4EA4EDE98C80279FB53315C",
+    "listId": "c",
+    "parentId": "2CFC771CC5A7423AAF8561130C0FE621",
+    "position": 1005,
+    "statementLabel": null,
+    "statementNotation": "SS1.1.y.c"
+   },
+   "B6A67DFCA7EB4F099447DC243076EE30": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5821DC15B7C34F97A703C41DD3325C0A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Demonstrate awareness of economics, spending, and making money",
+    "id": "B6A67DFCA7EB4F099447DC243076EE30",
+    "listId": "1",
+    "parentId": "5821DC15B7C34F97A703C41DD3325C0A",
+    "position": 1046,
+    "statementLabel": null,
+    "statementNotation": "SS4.1"
+   },
+   "B6F24941E0FE4E73911323448454720C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "595439C570E445ABBBE457E7EE4992D9",
+     "A4FE67AA2B294B4AA3613CFFF69260AA",
+     "81F283831DD84F3B9C01831895EFFA68"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Demonstrate an\nunderstanding\nof time in the\ncontext of daily\nexperiences\nand understand\nthat the\npassage of time\ncan be\nmeasured",
+    "id": "B6F24941E0FE4E73911323448454720C",
+    "listId": "a",
+    "parentId": "595439C570E445ABBBE457E7EE4992D9",
+    "position": 1016,
+    "statementLabel": null,
+    "statementNotation": "SS2.1.o.a"
+   },
+   "B6FB845539B14D25AF80C5A334514BF2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B6A67DFCA7EB4F099447DC243076EE30",
+     "5821DC15B7C34F97A703C41DD3325C0A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Younger\nPreschool",
+    "id": "B6FB845539B14D25AF80C5A334514BF2",
+    "listId": "",
+    "parentId": "B6A67DFCA7EB4F099447DC243076EE30",
+    "position": 1049,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "C4AD231F708E4B0FBBC7A3BD7072919F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1C5D8F6EA021498F87FBAC29CA5E23E6",
+     "B6A67DFCA7EB4F099447DC243076EE30",
+     "5821DC15B7C34F97A703C41DD3325C0A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begin to understand the purpose of\nmoney and concepts of buying and\nselling through play",
+    "id": "C4AD231F708E4B0FBBC7A3BD7072919F",
+    "listId": "a",
+    "parentId": "1C5D8F6EA021498F87FBAC29CA5E23E6",
+    "position": 1048,
+    "statementLabel": null,
+    "statementNotation": "SS4.1.yo.a"
+   },
+   "C9117539A202440A970C870EF54BECA7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "141B44F46B0D4F5EA23D4D26702A50C8",
+     "6484211CD17748A2926D6D667DC6EBC4",
+     "62E887D30C3A45ECAD58BA9BD228E7E2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begin to\ndemonstrate an\nunderstanding of\nrules in the home\nand early learning\nenvironment, and\nthe purposes they\nserve",
+    "id": "C9117539A202440A970C870EF54BECA7",
+    "listId": "d",
+    "parentId": "141B44F46B0D4F5EA23D4D26702A50C8",
+    "position": 1061,
+    "statementLabel": null,
+    "statementNotation": "SS5.1.y.d"
+   },
+   "CC835511956F42179934C9A58FCCC48E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "512AF578246348059093189CF1009715",
+     "6484211CD17748A2926D6D667DC6EBC4",
+     "62E887D30C3A45ECAD58BA9BD228E7E2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Demonstrate an\nunderstanding\nof rules in the\nhome and early\nlearning\nenvironment,\nand the\npurposes they\nserve",
+    "id": "CC835511956F42179934C9A58FCCC48E",
+    "listId": "d",
+    "parentId": "512AF578246348059093189CF1009715",
+    "position": 1067,
+    "statementLabel": null,
+    "statementNotation": "SS5.1.o.d"
+   },
+   "CCA2751F8505429BBD49E462717BBCE2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "141B44F46B0D4F5EA23D4D26702A50C8",
+     "6484211CD17748A2926D6D667DC6EBC4",
+     "62E887D30C3A45ECAD58BA9BD228E7E2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begin to initiate\nhelping tasks",
+    "id": "CCA2751F8505429BBD49E462717BBCE2",
+    "listId": "c",
+    "parentId": "141B44F46B0D4F5EA23D4D26702A50C8",
+    "position": 1060,
+    "statementLabel": null,
+    "statementNotation": "SS5.1.y.c"
+   },
+   "CCB351DDDEEA4F1FBBAF49286D497F2E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ADE3B85E45D84438B55DB873BCF45397",
+     "B6A67DFCA7EB4F099447DC243076EE30",
+     "5821DC15B7C34F97A703C41DD3325C0A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describe\ncommunity\nhelpers or\nworkers in\nterms of tools or\nequipment they\nuse and\nservices or\nproducts they\nprovide",
+    "id": "CCB351DDDEEA4F1FBBAF49286D497F2E",
+    "listId": "b",
+    "parentId": "ADE3B85E45D84438B55DB873BCF45397",
+    "position": 1054,
+    "statementLabel": null,
+    "statementNotation": "SS4.1.o.b"
+   },
+   "CF089F5A24C2428B989C9F6BC0C8A03C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4200A3DCA7DE489591705DC93CBD0C19"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Demonstrate development of self",
+    "id": "CF089F5A24C2428B989C9F6BC0C8A03C",
+    "listId": "1",
+    "parentId": "4200A3DCA7DE489591705DC93CBD0C19",
+    "position": 1001,
+    "statementLabel": null,
+    "statementNotation": "SS1.1"
+   },
+   "CF1856A46A024C658D7FA4A3E855BBD9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A4FE67AA2B294B4AA3613CFFF69260AA",
+     "81F283831DD84F3B9C01831895EFFA68"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Younger\nPreschool",
+    "id": "CF1856A46A024C658D7FA4A3E855BBD9",
+    "listId": "",
+    "parentId": "A4FE67AA2B294B4AA3613CFFF69260AA",
+    "position": 1013,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "D36BD01C56884F799EF3F88A2513E09E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "81F283831DD84F3B9C01831895EFFA68"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Demonstrate awareness of personal historical knowledge",
+    "id": "D36BD01C56884F799EF3F88A2513E09E",
+    "listId": "2",
+    "parentId": "81F283831DD84F3B9C01831895EFFA68",
+    "position": 1018,
+    "statementLabel": null,
+    "statementNotation": "SS2.2"
+   },
+   "D3FC82DAFE404BEBBCF3EED3E28E0DBD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "186925BA9D95471DA687E48C8B019C82",
+     "A531A21CFA0D4D7EBE03DE27B201AF45"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Younger\nPreschool",
+    "id": "D3FC82DAFE404BEBBCF3EED3E28E0DBD",
+    "listId": "",
+    "parentId": "186925BA9D95471DA687E48C8B019C82",
+    "position": 1032,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "D611180D172D413EBE3E5A94D79C7807": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A531A21CFA0D4D7EBE03DE27B201AF45"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Demonstrate awareness of places and regions",
+    "id": "D611180D172D413EBE3E5A94D79C7807",
+    "listId": "2",
+    "parentId": "A531A21CFA0D4D7EBE03DE27B201AF45",
+    "position": 1038,
+    "statementLabel": null,
+    "statementNotation": "SS3.2"
+   },
+   "DE3437B14ED04DD79E2887171B30598D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D36BD01C56884F799EF3F88A2513E09E",
+     "81F283831DD84F3B9C01831895EFFA68"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Younger\nPreschool",
+    "id": "DE3437B14ED04DD79E2887171B30598D",
+    "listId": "",
+    "parentId": "D36BD01C56884F799EF3F88A2513E09E",
+    "position": 1019,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "DE7F82A3360340B9B4DDA09174B2CC5A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B6FB845539B14D25AF80C5A334514BF2",
+     "B6A67DFCA7EB4F099447DC243076EE30",
+     "5821DC15B7C34F97A703C41DD3325C0A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begin to develop\nan awareness\nthat people work\nfor money in\norder to provide\nfor basic needs",
+    "id": "DE7F82A3360340B9B4DDA09174B2CC5A",
+    "listId": "a",
+    "parentId": "B6FB845539B14D25AF80C5A334514BF2",
+    "position": 1050,
+    "statementLabel": null,
+    "statementNotation": "SS4.1.y.a"
+   },
+   "ED8AABE88CB94237ABD920B52A9C1D32": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "81F283831DD84F3B9C01831895EFFA68"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Demonstrate awareness of the foundations of government or authority",
+    "id": "ED8AABE88CB94237ABD920B52A9C1D32",
+    "listId": "3",
+    "parentId": "81F283831DD84F3B9C01831895EFFA68",
+    "position": 1023,
+    "statementLabel": null,
+    "statementNotation": "SS2.3"
+   },
+   "EE6B3A5F3CA84FCF9F2BB92CEA58FA1A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "512AF578246348059093189CF1009715",
+     "6484211CD17748A2926D6D667DC6EBC4",
+     "62E887D30C3A45ECAD58BA9BD228E7E2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begin to\ndescribe the\nreciprocal\nrelationship\nbetween people\nand their\ncommunity and\nthe\nresponsibility as\ncitizens to care\nfor it ",
+    "id": "EE6B3A5F3CA84FCF9F2BB92CEA58FA1A",
+    "listId": "f",
+    "parentId": "512AF578246348059093189CF1009715",
+    "position": 1069,
+    "statementLabel": null,
+    "statementNotation": "SS5.1.o.f"
+   },
+   "EEA7A042102641DA901226D6A73AEE6D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A622AFD9D84C4525BF40CA6A55DAA9A6",
+     "CF089F5A24C2428B989C9F6BC0C8A03C",
+     "4200A3DCA7DE489591705DC93CBD0C19"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Assimilate\nfamily,\ncommunity, and\nculture in\ncooperative\nplay",
+    "id": "EEA7A042102641DA901226D6A73AEE6D",
+    "listId": "c",
+    "parentId": "A622AFD9D84C4525BF40CA6A55DAA9A6",
+    "position": 1009,
+    "statementLabel": null,
+    "statementNotation": "SS1.1.o.c"
+   },
+   "F22E94064BBC491DBD41966C787F525C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "143470A639564C628EADB53D2B304550",
+     "ED8AABE88CB94237ABD920B52A9C1D32",
+     "81F283831DD84F3B9C01831895EFFA68"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize\nfamiliar\ncommunity\nsymbols",
+    "id": "F22E94064BBC491DBD41966C787F525C",
+    "listId": "b",
+    "parentId": "143470A639564C628EADB53D2B304550",
+    "position": 1026,
+    "statementLabel": null,
+    "statementNotation": "SS2.3.y.b"
+   },
+   "F59DFE45CBAA4886AF1BFEAD71847B51": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "80D794627CC74AB983930AC7800B251E",
+     "D611180D172D413EBE3E5A94D79C7807",
+     "A531A21CFA0D4D7EBE03DE27B201AF45"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use words to\ndescribe natural\nand peoplemade features\nof locations ",
+    "id": "F59DFE45CBAA4886AF1BFEAD71847B51",
+    "listId": "a",
+    "parentId": "80D794627CC74AB983930AC7800B251E",
+    "position": 1043,
+    "statementLabel": null,
+    "statementNotation": "SS3.2.o.a"
+   }
+  },
+  "subject": "Early Learning Standards (2023-)",
+  "title": "Social Studies: Preschool"
+ }
+}

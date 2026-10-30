@@ -1,0 +1,2056 @@
+{
+ "data": {
+  "cspStatus": {
+   "notes": null,
+   "value": "visible"
+  },
+  "document": {
+   "publicationStatus": "Published",
+   "sourceURL": "https://ncchildcare.ncdhhs.gov/Portals/0/documents/pdf/N/NC_Foundations.pdf?ver=2017-05-16-105950-953",
+   "title": "North Carolina Foundations for Early Learning and Development "
+  },
+  "educationLevels": [
+   "Pre-K"
+  ],
+  "id": "F687FAB94F1849C496F3760815F1BAB0",
+  "jurisdiction": {
+   "id": "8A257771396B4F0792EB9D6020CC9089",
+   "title": "North Carolina"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/4.0/us/",
+   "rightsHolder": "Common Curriculum, Inc.",
+   "title": "CC BY 4.0 US"
+  },
+  "normalizedSubject": null,
+  "standards": {
+   "0600F64F85D0461FBF19D1BE320CB897": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3DD0B8B73D014C21A906B67ECD4F4D19",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Hold a book upright while turning pages\none by one from front to back.",
+    "id": "0600F64F85D0461FBF19D1BE320CB897",
+    "listId": "",
+    "parentId": "3DD0B8B73D014C21A906B67ECD4F4D19",
+    "position": 1070,
+    "statementLabel": null,
+    "statementNotation": "LDC-10k"
+   },
+   "09AAA77B9BBC4A0FA49319F8DDEB3551": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3B6F924045984F4C9B2338010397790A",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With prompting and\nsupport, make comments\nand ask questions related\nto the topic of discussion.",
+    "id": "09AAA77B9BBC4A0FA49319F8DDEB3551",
+    "listId": "",
+    "parentId": "3B6F924045984F4C9B2338010397790A",
+    "position": 1012,
+    "statementLabel": null,
+    "statementNotation": "LDC-2k"
+   },
+   "0F1511355E6C4A57B648BD0E060E1B96": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7497CA9432B84C58B77675EB264516A5",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children use writing skills and conventions.",
+    "id": "0F1511355E6C4A57B648BD0E060E1B96",
+    "listId": "",
+    "parentId": "7497CA9432B84C58B77675EB264516A5",
+    "position": 1106,
+    "statementLabel": null,
+    "statementNotation": "Goal LDC-15"
+   },
+   "123CD0CCD0F848D5961025F449A248DD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "172581336AC840B5B16DBFB4FEB586A1",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Repeat rhythmic patterns\nin poems and songs\nusing words, clapping,\nmarching, and/or using\ninstruments.",
+    "id": "123CD0CCD0F848D5961025F449A248DD",
+    "listId": "",
+    "parentId": "172581336AC840B5B16DBFB4FEB586A1",
+    "position": 1078,
+    "statementLabel": null,
+    "statementNotation": "LDC-11g"
+   },
+   "13065EC006CE40D6801C6022C0AA322D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "51C3C4F42D71493FB1603BFBB94F8888",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With prompting and support,\nuse books and other media that\ncommunicate information to learn\nabout the world by looking at\npictures, asking questions, and\ntalking about the information.",
+    "id": "13065EC006CE40D6801C6022C0AA322D",
+    "listId": "",
+    "parentId": "51C3C4F42D71493FB1603BFBB94F8888",
+    "position": 1055,
+    "statementLabel": null,
+    "statementNotation": "LDC-9j"
+   },
+   "14344D80B0E24CC48DDE50BF2A484352": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0F1511355E6C4A57B648BD0E060E1B96",
+     "7497CA9432B84C58B77675EB264516A5",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use a variety of writing\ntools and materials with\nincreasing precision.",
+    "id": "14344D80B0E24CC48DDE50BF2A484352",
+    "listId": "",
+    "parentId": "0F1511355E6C4A57B648BD0E060E1B96",
+    "position": 1110,
+    "statementLabel": null,
+    "statementNotation": "LC-15i"
+   },
+   "14D024B747194910AE94D8B57A135B66": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B7B9BBD695D04D28A894ACB0194E8C35",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Communicate messages\nwith expression, tone, and\ninflection appropriate to\nthe situation.",
+    "id": "14D024B747194910AE94D8B57A135B66",
+    "listId": "",
+    "parentId": "B7B9BBD695D04D28A894ACB0194E8C35",
+    "position": 1024,
+    "statementLabel": null,
+    "statementNotation": "LDC-4h"
+   },
+   "172581336AC840B5B16DBFB4FEB586A1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children develop phonological awareness.",
+    "id": "172581336AC840B5B16DBFB4FEB586A1",
+    "listId": "",
+    "parentId": "502A6A12D9F442B49EAA72BA4FB735BA",
+    "position": 1076,
+    "statementLabel": null,
+    "statementNotation": "Goal LDC-11"
+   },
+   "17B79019717149DCBE3D5ABDEE799E5C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D8E2FE56177A4E89BB1D2E0547A11900",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Listen to and discuss\nincreasingly complex\nstorybooks, information\nbooks, and poetry.",
+    "id": "17B79019717149DCBE3D5ABDEE799E5C",
+    "listId": "",
+    "parentId": "D8E2FE56177A4E89BB1D2E0547A11900",
+    "position": 1052,
+    "statementLabel": null,
+    "statementNotation": "LDC-8o"
+   },
+   "1903E10227B24B239B6809FCE67A04E2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7CFF4F3FDC1645959053D90785DD5BDC",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize and name several\nletters of the alphabet,\nespecially those in their own\nname and in the names of\nothers who are important to\nthem. ",
+    "id": "1903E10227B24B239B6809FCE67A04E2",
+    "listId": "",
+    "parentId": "7CFF4F3FDC1645959053D90785DD5BDC",
+    "position": 1090,
+    "statementLabel": null,
+    "statementNotation": "LDC-12g"
+   },
+   "1973E05779A044FE8EC963D3BE1F21B3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "51C3C4F42D71493FB1603BFBB94F8888",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Imitate the special language in\nstorybooks and story dialogue\nwith accuracy and detail.",
+    "id": "1973E05779A044FE8EC963D3BE1F21B3",
+    "listId": "",
+    "parentId": "51C3C4F42D71493FB1603BFBB94F8888",
+    "position": 1060,
+    "statementLabel": null,
+    "statementNotation": "LDC-9o"
+   },
+   "1BEC9CA7630C48599DF3816AEA5B7C78": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3B6F924045984F4C9B2338010397790A",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Demonstrate an\nunderstanding that people\ncommunicate in many\nways (gestures, facial\nexpressions, multiple\nspoken languages, sign\nlanguage, augmentative\ncommunication).",
+    "id": "1BEC9CA7630C48599DF3816AEA5B7C78",
+    "listId": "",
+    "parentId": "3B6F924045984F4C9B2338010397790A",
+    "position": 1010,
+    "statementLabel": null,
+    "statementNotation": "LDC-2i"
+   },
+   "214B9FCE36C842899A06210281B38ADB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "172581336AC840B5B16DBFB4FEB586A1",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Repeat a variety of rhythmic\npatterns in poems and songs\nusing words, clapping,\nmarching, and/or instruments\nto repeat the rhythm or beat\nsyllables.",
+    "id": "214B9FCE36C842899A06210281B38ADB",
+    "listId": "",
+    "parentId": "172581336AC840B5B16DBFB4FEB586A1",
+    "position": 1081,
+    "statementLabel": null,
+    "statementNotation": "LDC-11j"
+   },
+   "2CF92F17683D424D9B4BA40F5461EFD5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F2FD1243293048248BD7DEA9797D49C5",
+     "7497CA9432B84C58B77675EB264516A5",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Represent thoughts and\nideas in drawings and by\nwriting letters or letter-like\nforms.",
+    "id": "2CF92F17683D424D9B4BA40F5461EFD5",
+    "listId": "",
+    "parentId": "F2FD1243293048248BD7DEA9797D49C5",
+    "position": 1098,
+    "statementLabel": null,
+    "statementNotation": "LDC-13f"
+   },
+   "2F9D0BAEBD3D4E8894E527CEC76FF316": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C1EF3D760F8148C3ADA19D1E556A6A35",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use a growing\nvocabulary that includes\nmany different kinds of\nwords to express ideas\nclearly. ",
+    "id": "2F9D0BAEBD3D4E8894E527CEC76FF316",
+    "listId": "",
+    "parentId": "C1EF3D760F8148C3ADA19D1E556A6A35",
+    "position": 1043,
+    "statementLabel": null,
+    "statementNotation": "LDC-7p"
+   },
+   "39004B9E5B314D738D4388ECB3F3A3F2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3B6F924045984F4C9B2338010397790A",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Participate in a group discussion,\nmaking comments and asking\nquestions related to the topic.",
+    "id": "39004B9E5B314D738D4388ECB3F3A3F2",
+    "listId": "",
+    "parentId": "3B6F924045984F4C9B2338010397790A",
+    "position": 1016,
+    "statementLabel": null,
+    "statementNotation": "LDC-2o"
+   },
+   "39E946FD69364297A875A750689142D3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7497CA9432B84C58B77675EB264516A5",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children use knowledge of letters in their attempts to write.",
+    "id": "39E946FD69364297A875A750689142D3",
+    "listId": "",
+    "parentId": "7497CA9432B84C58B77675EB264516A5",
+    "position": 1101,
+    "statementLabel": null,
+    "statementNotation": "Goal LDC-14"
+   },
+   "3A989B26A5EA425DB6B79258AA6B8A5F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "",
+    "id": "3A989B26A5EA425DB6B79258AA6B8A5F",
+    "listId": "",
+    "parentId": "E38379425A944E46BB8556813960DDB5",
+    "position": 1113,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "3B6F924045984F4C9B2338010397790A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children participate in conversations with peers and adults\nin one-on-one, small, and larger group interactions. ",
+    "id": "3B6F924045984F4C9B2338010397790A",
+    "listId": "",
+    "parentId": "83F49835493C4F8286541E205E1D58C3",
+    "position": 1009,
+    "statementLabel": null,
+    "statementNotation": "Goal LDC-2"
+   },
+   "3C9D3EFD4E104BA9B18E3365AF5F9CD2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F2FD1243293048248BD7DEA9797D49C5",
+     "7497CA9432B84C58B77675EB264516A5",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Independently engage\nin writing behaviors for\nvarious purposes (e.g.,\nwrite symbols or letters for\nnames, use materials at\nwriting center, write lists with\nsymbols/letters in pretend\nplay, write messages that\ninclude letters or symbols).",
+    "id": "3C9D3EFD4E104BA9B18E3365AF5F9CD2",
+    "listId": "",
+    "parentId": "F2FD1243293048248BD7DEA9797D49C5",
+    "position": 1100,
+    "statementLabel": null,
+    "statementNotation": "LDC-13h"
+   },
+   "3D894065D5E94B2D8BC083812CF96AE7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "39E946FD69364297A875A750689142D3",
+     "7497CA9432B84C58B77675EB264516A5",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Show they know that\nwritten words are made up\nof particular letters (point\nto the first letter of their\nown name, find the first\nletter of their own name in\na list of letters).",
+    "id": "3D894065D5E94B2D8BC083812CF96AE7",
+    "listId": "",
+    "parentId": "39E946FD69364297A875A750689142D3",
+    "position": 1103,
+    "statementLabel": null,
+    "statementNotation": "LC-14b"
+   },
+   "3DD0B8B73D014C21A906B67ECD4F4D19": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children develop book knowledge and print awareness.",
+    "id": "3DD0B8B73D014C21A906B67ECD4F4D19",
+    "listId": "",
+    "parentId": "502A6A12D9F442B49EAA72BA4FB735BA",
+    "position": 1066,
+    "statementLabel": null,
+    "statementNotation": "Goal LDC-10"
+   },
+   "4028D7B4E10C46E4A5B01C0CA8816B41": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3DD0B8B73D014C21A906B67ECD4F4D19",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Demonstrate an\nunderstanding that\nprint can tell people\nwhat to do (such as\nprint and symbols to\norganize classroom\nactivities—where to\nstore things, when they\nwill have a turn).",
+    "id": "4028D7B4E10C46E4A5B01C0CA8816B41",
+    "listId": "",
+    "parentId": "3DD0B8B73D014C21A906B67ECD4F4D19",
+    "position": 1069,
+    "statementLabel": null,
+    "statementNotation": "LDC-10j"
+   },
+   "43F4EEE760C74231ACEEFA5F209074CC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7CFF4F3FDC1645959053D90785DD5BDC",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Demonstrate an interest\nin learning the\nalphabet. ",
+    "id": "43F4EEE760C74231ACEEFA5F209074CC",
+    "listId": "",
+    "parentId": "7CFF4F3FDC1645959053D90785DD5BDC",
+    "position": 1085,
+    "statementLabel": null,
+    "statementNotation": "LDC-12b"
+   },
+   "46F953B1E6D44A4EB746BC9D49054D72": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7CFF4F3FDC1645959053D90785DD5BDC",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Show they know that letters\nfunction to represent sounds in\nspoken words.",
+    "id": "46F953B1E6D44A4EB746BC9D49054D72",
+    "listId": "",
+    "parentId": "7CFF4F3FDC1645959053D90785DD5BDC",
+    "position": 1089,
+    "statementLabel": null,
+    "statementNotation": "LDC-12f"
+   },
+   "48CB334ECA624C5CA64D1AB7682E1E5D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "51C3C4F42D71493FB1603BFBB94F8888",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use knowledge of the world\nto make sense of more\nchallenging texts. ",
+    "id": "48CB334ECA624C5CA64D1AB7682E1E5D",
+    "listId": "",
+    "parentId": "51C3C4F42D71493FB1603BFBB94F8888",
+    "position": 1062,
+    "statementLabel": null,
+    "statementNotation": "LDC-9q"
+   },
+   "4BB50AD54D744B9687451235050EE7A9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3DD0B8B73D014C21A906B67ECD4F4D19",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With prompting and\nsupport, recognize\nprint occurs in different\nforms and is used for\na variety of functions\n(sign naming block\nstructure, “message”\non card for family\nmember).",
+    "id": "4BB50AD54D744B9687451235050EE7A9",
+    "listId": "",
+    "parentId": "3DD0B8B73D014C21A906B67ECD4F4D19",
+    "position": 1068,
+    "statementLabel": null,
+    "statementNotation": "LDC-10i"
+   },
+   "4BE86913BA194CECBB85545B94B2CD60": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3DD0B8B73D014C21A906B67ECD4F4D19",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify their name and the names of\nsome friends when they see them in\nprint.",
+    "id": "4BE86913BA194CECBB85545B94B2CD60",
+    "listId": "",
+    "parentId": "3DD0B8B73D014C21A906B67ECD4F4D19",
+    "position": 1075,
+    "statementLabel": null,
+    "statementNotation": "LDC-10p"
+   },
+   "4CE59CE09C684CF79E8D899C7C08E885": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3DD0B8B73D014C21A906B67ECD4F4D19",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Demonstrate understanding of some\nbasic print conventions (the concept of\nwhat a letter is, the concept of words,\ndirectionality of print).",
+    "id": "4CE59CE09C684CF79E8D899C7C08E885",
+    "listId": "",
+    "parentId": "3DD0B8B73D014C21A906B67ECD4F4D19",
+    "position": 1074,
+    "statementLabel": null,
+    "statementNotation": "LDC-10o"
+   },
+   "502A6A12D9F442B49EAA72BA4FB735BA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Foundations for Reading",
+    "id": "502A6A12D9F442B49EAA72BA4FB735BA",
+    "listId": "",
+    "parentId": "E38379425A944E46BB8556813960DDB5",
+    "position": 1045,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "509A836FF7F74047BB6B0B9ECD727ACD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0F1511355E6C4A57B648BD0E060E1B96",
+     "7497CA9432B84C58B77675EB264516A5",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Imitate adult writing\nconventions that they have\nobserved (write groups of\nletter-like forms separated\nby spaces, try to write on\na line, press Enter key on\ncomputer after typing a\nseries of “words”).",
+    "id": "509A836FF7F74047BB6B0B9ECD727ACD",
+    "listId": "",
+    "parentId": "0F1511355E6C4A57B648BD0E060E1B96",
+    "position": 1111,
+    "statementLabel": null,
+    "statementNotation": "LC-15j"
+   },
+   "50CD6EA022FB428A941C44ABCD92387A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3DD0B8B73D014C21A906B67ECD4F4D19",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Hold a book upright\nwhile turning pages\none by one front to\nback, but not always in\norder.",
+    "id": "50CD6EA022FB428A941C44ABCD92387A",
+    "listId": "",
+    "parentId": "3DD0B8B73D014C21A906B67ECD4F4D19",
+    "position": 1067,
+    "statementLabel": null,
+    "statementNotation": "LDC-10h"
+   },
+   "51C3C4F42D71493FB1603BFBB94F8888": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children comprehend and use information\npresented in books and other print media.",
+    "id": "51C3C4F42D71493FB1603BFBB94F8888",
+    "listId": "",
+    "parentId": "502A6A12D9F442B49EAA72BA4FB735BA",
+    "position": 1053,
+    "statementLabel": null,
+    "statementNotation": "Goal LDC-9"
+   },
+   "557E3278B3CC436FB09A4816392C89D9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "51C3C4F42D71493FB1603BFBB94F8888",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use their knowledge of the world\n(what things are, how things work)\nto make sense of stories and\ninformation texts. ",
+    "id": "557E3278B3CC436FB09A4816392C89D9",
+    "listId": "",
+    "parentId": "51C3C4F42D71493FB1603BFBB94F8888",
+    "position": 1056,
+    "statementLabel": null,
+    "statementNotation": "LDC-9k"
+   },
+   "585659A25D7F4D8BA04685D7F49B3DC1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "51C3C4F42D71493FB1603BFBB94F8888",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Discuss storybooks by\nresponding to questions\nabout what is happening and\npredicting what will happen\nnext.",
+    "id": "585659A25D7F4D8BA04685D7F49B3DC1",
+    "listId": "",
+    "parentId": "51C3C4F42D71493FB1603BFBB94F8888",
+    "position": 1065,
+    "statementLabel": null,
+    "statementNotation": "LDC-9t"
+   },
+   "5A732B0A452B4A33A84663541680FDBB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F2FD1243293048248BD7DEA9797D49C5",
+     "7497CA9432B84C58B77675EB264516A5",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Engage in writing behaviors\nthat imitate real-life situations\n(e.g., make marks to take\nfood order during pretend\nrestaurant play).",
+    "id": "5A732B0A452B4A33A84663541680FDBB",
+    "listId": "",
+    "parentId": "F2FD1243293048248BD7DEA9797D49C5",
+    "position": 1097,
+    "statementLabel": null,
+    "statementNotation": "LDC-13e"
+   },
+   "612ED4ADA0DA43E6B824542E7BCA53D5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C0BB364DF6C34100A059F9D49017F0FF",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Communicate in longer\nsentences and use\nmore conventional\ngrammar in their home\nlanguage (plurals, tenses,\nprepositions).",
+    "id": "612ED4ADA0DA43E6B824542E7BCA53D5",
+    "listId": "",
+    "parentId": "C0BB364DF6C34100A059F9D49017F0FF",
+    "position": 1034,
+    "statementLabel": null,
+    "statementNotation": "LDC-6g"
+   },
+   "61D57A6E2B0A4D098FEE1E5C5E6BF4AC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F2FD1243293048248BD7DEA9797D49C5",
+     "7497CA9432B84C58B77675EB264516A5",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With prompting and support,\ncommunicate their thoughts\nfor an adult to write.",
+    "id": "61D57A6E2B0A4D098FEE1E5C5E6BF4AC",
+    "listId": "",
+    "parentId": "F2FD1243293048248BD7DEA9797D49C5",
+    "position": 1096,
+    "statementLabel": null,
+    "statementNotation": "LDC-13d"
+   },
+   "62B4275F177F46658283D99B9D2BA824": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "39E946FD69364297A875A750689142D3",
+     "7497CA9432B84C58B77675EB264516A5",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Try to connect the sounds\nin a spoken word with\nletters in the written word\n(write “M” and say, “This is\nMommy.”). ",
+    "id": "62B4275F177F46658283D99B9D2BA824",
+    "listId": "",
+    "parentId": "39E946FD69364297A875A750689142D3",
+    "position": 1105,
+    "statementLabel": null,
+    "statementNotation": "LC-14d"
+   },
+   "641F1000D006434888D670B80B5508E3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3DD0B8B73D014C21A906B67ECD4F4D19",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With prompting and support, run their\nfinger under or over print as they pretend\nto read text.",
+    "id": "641F1000D006434888D670B80B5508E3",
+    "listId": "",
+    "parentId": "3DD0B8B73D014C21A906B67ECD4F4D19",
+    "position": 1073,
+    "statementLabel": null,
+    "statementNotation": "LDC-10n"
+   },
+   "657A831F293C46C293A5B7122616945C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "51C3C4F42D71493FB1603BFBB94F8888",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Relate personal experiences to\nevents described in familiar books,\nwith prompting and support.",
+    "id": "657A831F293C46C293A5B7122616945C",
+    "listId": "",
+    "parentId": "51C3C4F42D71493FB1603BFBB94F8888",
+    "position": 1057,
+    "statementLabel": null,
+    "statementNotation": "LDC-9l"
+   },
+   "659E979628BE4F239460BD01A076975C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0F1511355E6C4A57B648BD0E060E1B96",
+     "7497CA9432B84C58B77675EB264516A5",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use some conventional\nletters in their writing.",
+    "id": "659E979628BE4F239460BD01A076975C",
+    "listId": "",
+    "parentId": "0F1511355E6C4A57B648BD0E060E1B96",
+    "position": 1112,
+    "statementLabel": null,
+    "statementNotation": "LC-15k"
+   },
+   "65A89F69F9384CD6A62C0EEC392B93AD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B30777EB741C4F7CA967397D18D922C5",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describe experiences\nand create or retell short\nnarratives.",
+    "id": "65A89F69F9384CD6A62C0EEC392B93AD",
+    "listId": "",
+    "parentId": "B30777EB741C4F7CA967397D18D922C5",
+    "position": 1031,
+    "statementLabel": null,
+    "statementNotation": "LDC-5e"
+   },
+   "67C222C7F35143D2A1FD37113CEF73B2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C1EF3D760F8148C3ADA19D1E556A6A35",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Make up names for things\nusing words they know (e.g.,\ndog doctor for veterinarian).",
+    "id": "67C222C7F35143D2A1FD37113CEF73B2",
+    "listId": "",
+    "parentId": "C1EF3D760F8148C3ADA19D1E556A6A35",
+    "position": 1040,
+    "statementLabel": null,
+    "statementNotation": "LDC-7m"
+   },
+   "67F7CE731BB54D378D72DC19C61EF5C5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3B6F924045984F4C9B2338010397790A",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Initiate and participate in\nconversations related to interests\nof their own or the persons they\nare communicating with. ",
+    "id": "67F7CE731BB54D378D72DC19C61EF5C5",
+    "listId": "",
+    "parentId": "3B6F924045984F4C9B2338010397790A",
+    "position": 1015,
+    "statementLabel": null,
+    "statementNotation": "LDC-2n"
+   },
+   "6B989E2E0BFF46CBA8BD61C74B8F5D3B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B30777EB741C4F7CA967397D18D922C5",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Talk to themselves and\nothers about what they\nare “working on,” what\nthey are doing, routines,\nand events of the day. ",
+    "id": "6B989E2E0BFF46CBA8BD61C74B8F5D3B",
+    "listId": "",
+    "parentId": "B30777EB741C4F7CA967397D18D922C5",
+    "position": 1030,
+    "statementLabel": null,
+    "statementNotation": "LDC-5d"
+   },
+   "6C9FBBE134964369AE0D891A5AD8B10A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7CFF4F3FDC1645959053D90785DD5BDC",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize and name\nsome letters of the\nalphabet, especially those\nin their own name.",
+    "id": "6C9FBBE134964369AE0D891A5AD8B10A",
+    "listId": "",
+    "parentId": "7CFF4F3FDC1645959053D90785DD5BDC",
+    "position": 1087,
+    "statementLabel": null,
+    "statementNotation": "LDC-12d"
+   },
+   "707ACA8A71114D33B089897C072A8A42": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D8E2FE56177A4E89BB1D2E0547A11900",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use and share books\nand print in their play.",
+    "id": "707ACA8A71114D33B089897C072A8A42",
+    "listId": "",
+    "parentId": "D8E2FE56177A4E89BB1D2E0547A11900",
+    "position": 1051,
+    "statementLabel": null,
+    "statementNotation": "LDC-8n"
+   },
+   "73BC96670A0F4633ADE95C7E2DD47CE9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C1EF3D760F8148C3ADA19D1E556A6A35",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use more than one word\nfor the same object and use\nwords for parts of objects\n(e.g., dog, beagle, Rover;\narm, leg).",
+    "id": "73BC96670A0F4633ADE95C7E2DD47CE9",
+    "listId": "",
+    "parentId": "C1EF3D760F8148C3ADA19D1E556A6A35",
+    "position": 1039,
+    "statementLabel": null,
+    "statementNotation": "LDC-7l"
+   },
+   "7497CA9432B84C58B77675EB264516A5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Foundations for Writing",
+    "id": "7497CA9432B84C58B77675EB264516A5",
+    "listId": "",
+    "parentId": "E38379425A944E46BB8556813960DDB5",
+    "position": 1093,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "78612F225BF2439B85007493E4EED0AD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "51C3C4F42D71493FB1603BFBB94F8888",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Ask more focused and detailed\nquestions about a story or the\ninformation in a book. ",
+    "id": "78612F225BF2439B85007493E4EED0AD",
+    "listId": "",
+    "parentId": "51C3C4F42D71493FB1603BFBB94F8888",
+    "position": 1064,
+    "statementLabel": null,
+    "statementNotation": "LDC-9s"
+   },
+   "7970812CBA0D4688B62C7B3E7D424EEF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7CFF4F3FDC1645959053D90785DD5BDC",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Associate sounds with the\nletters at the beginning of some\nwords, such as awareness that\ntwo words begin with the same\nletter and the same sound.",
+    "id": "7970812CBA0D4688B62C7B3E7D424EEF",
+    "listId": "",
+    "parentId": "7CFF4F3FDC1645959053D90785DD5BDC",
+    "position": 1092,
+    "statementLabel": null,
+    "statementNotation": "LDC-12i"
+   },
+   "79D0BB731B9B473C8ACE0FF6B81F5A2F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7DB11B7B8DD646AE82DD67E4C7B5BB08",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Follow simple multistep\ndirections with visual\ncues if needed.",
+    "id": "79D0BB731B9B473C8ACE0FF6B81F5A2F",
+    "listId": "",
+    "parentId": "7DB11B7B8DD646AE82DD67E4C7B5BB08",
+    "position": 1005,
+    "statementLabel": null,
+    "statementNotation": "LDC-1m"
+   },
+   "7CFF4F3FDC1645959053D90785DD5BDC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children begin to develop knowledge of the alphabet\nand the alphabetic principle.",
+    "id": "7CFF4F3FDC1645959053D90785DD5BDC",
+    "listId": "",
+    "parentId": "502A6A12D9F442B49EAA72BA4FB735BA",
+    "position": 1084,
+    "statementLabel": null,
+    "statementNotation": "Goal LDC-12"
+   },
+   "7D6F8835FE0E4BAC9748189D30EC8F87": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "172581336AC840B5B16DBFB4FEB586A1",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Play with the sounds of\nlanguage and begin to\nidentify rhymes (make\nup silly-sounding words,\nrepeat rhyming words). ",
+    "id": "7D6F8835FE0E4BAC9748189D30EC8F87",
+    "listId": "",
+    "parentId": "172581336AC840B5B16DBFB4FEB586A1",
+    "position": 1079,
+    "statementLabel": null,
+    "statementNotation": "LDC-11h"
+   },
+   "7DA6317B5D1144188449C26D4C15D44F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C1EF3D760F8148C3ADA19D1E556A6A35",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Infer the meaning of\ndifferent kinds of new\nwords from the context\nin which they are used\n(for example, hear\n“sandals” and “boots”\nused to describe two\npairs of shoes, and\ninfer that the unfamiliar\nshoes must be sandals\nbecause they know that\nthe other pair of shoes\nare boots).",
+    "id": "7DA6317B5D1144188449C26D4C15D44F",
+    "listId": "",
+    "parentId": "C1EF3D760F8148C3ADA19D1E556A6A35",
+    "position": 1044,
+    "statementLabel": null,
+    "statementNotation": "LDC-7q"
+   },
+   "7DB11B7B8DD646AE82DD67E4C7B5BB08": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children understand communications from others.  ",
+    "id": "7DB11B7B8DD646AE82DD67E4C7B5BB08",
+    "listId": "",
+    "parentId": "83F49835493C4F8286541E205E1D58C3",
+    "position": 1002,
+    "statementLabel": null,
+    "statementNotation": "Goal LDC-1"
+   },
+   "82A66D439CD44F7A8B2AA4457ED886B5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7DB11B7B8DD646AE82DD67E4C7B5BB08",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Show understanding\nof increasingly\ncomplex sentences. ",
+    "id": "82A66D439CD44F7A8B2AA4457ED886B5",
+    "listId": "",
+    "parentId": "7DB11B7B8DD646AE82DD67E4C7B5BB08",
+    "position": 1006,
+    "statementLabel": null,
+    "statementNotation": "LDC-1n"
+   },
+   "83F49835493C4F8286541E205E1D58C3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Learning to Communicate ",
+    "id": "83F49835493C4F8286541E205E1D58C3",
+    "listId": "",
+    "parentId": "E38379425A944E46BB8556813960DDB5",
+    "position": 1001,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "845B9201D0A348A98A1B9A6B8503BABA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3B6F924045984F4C9B2338010397790A",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Appreciate and use humor.",
+    "id": "845B9201D0A348A98A1B9A6B8503BABA",
+    "listId": "",
+    "parentId": "3B6F924045984F4C9B2338010397790A",
+    "position": 1017,
+    "statementLabel": null,
+    "statementNotation": "LDC-2p"
+   },
+   "85FA2489E35D4DC2937AA2D0D078C238": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B7B9BBD695D04D28A894ACB0194E8C35",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use language and\nnonverbal cues to\ncommunicate thoughts,\nbeliefs, feelings, and\nintentions.",
+    "id": "85FA2489E35D4DC2937AA2D0D078C238",
+    "listId": "",
+    "parentId": "B7B9BBD695D04D28A894ACB0194E8C35",
+    "position": 1026,
+    "statementLabel": null,
+    "statementNotation": "LDC-4j"
+   },
+   "9113DD7AB9C8499CBC71D032AB415BC3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C0BB364DF6C34100A059F9D49017F0FF",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Make grammatical errors\nthat follow language rules\n(say, “mouses” instead of\n“mice”). ",
+    "id": "9113DD7AB9C8499CBC71D032AB415BC3",
+    "listId": "",
+    "parentId": "C0BB364DF6C34100A059F9D49017F0FF",
+    "position": 1035,
+    "statementLabel": null,
+    "statementNotation": "LDC-6h"
+   },
+   "94973AC091A74180AE676840CE0CE606": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F2FD1243293048248BD7DEA9797D49C5",
+     "7497CA9432B84C58B77675EB264516A5",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Represent thoughts and ideas\nthrough marks, scribbles,\ndrawings, and paintings (draw\na picture of something they\ndid during the day, indicate\nwhat they want for lunch with a\nmark under the picture of the\nfood they want).",
+    "id": "94973AC091A74180AE676840CE0CE606",
+    "listId": "",
+    "parentId": "F2FD1243293048248BD7DEA9797D49C5",
+    "position": 1095,
+    "statementLabel": null,
+    "statementNotation": "LDC-13c"
+   },
+   "94ACF1E2E7BD4E0E95AC81BF8B0420F6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "172581336AC840B5B16DBFB4FEB586A1",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Play with the sounds of\nlanguage, identify a variety of\nrhymes, create some rhymes,\nand recognize the first sounds in\nsome words.",
+    "id": "94ACF1E2E7BD4E0E95AC81BF8B0420F6",
+    "listId": "",
+    "parentId": "172581336AC840B5B16DBFB4FEB586A1",
+    "position": 1082,
+    "statementLabel": null,
+    "statementNotation": "LDC-11k"
+   },
+   "97C7ED40B36F48329FA013850AA88C4B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7CFF4F3FDC1645959053D90785DD5BDC",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Demonstrate an interest\nin learning the alphabet.",
+    "id": "97C7ED40B36F48329FA013850AA88C4B",
+    "listId": "",
+    "parentId": "7CFF4F3FDC1645959053D90785DD5BDC",
+    "position": 1088,
+    "statementLabel": null,
+    "statementNotation": "LDC-12e"
+   },
+   "9B21D1E716604B77AB1E21C5A83DE03F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D8E2FE56177A4E89BB1D2E0547A11900",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Engage in reading\nbehaviors independently\nwith increased focus for\nlonger periods of time.",
+    "id": "9B21D1E716604B77AB1E21C5A83DE03F",
+    "listId": "",
+    "parentId": "D8E2FE56177A4E89BB1D2E0547A11900",
+    "position": 1050,
+    "statementLabel": null,
+    "statementNotation": "LDC-8m"
+   },
+   "9BA097ECC25E479E8BCD31C02B76E26C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7DB11B7B8DD646AE82DD67E4C7B5BB08",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Respond to requests\nfor information or\naction.",
+    "id": "9BA097ECC25E479E8BCD31C02B76E26C",
+    "listId": "",
+    "parentId": "7DB11B7B8DD646AE82DD67E4C7B5BB08",
+    "position": 1007,
+    "statementLabel": null,
+    "statementNotation": "LDC-1o"
+   },
+   "9D10C4AF809E4736ABFB4B5350CA225C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F2FD1243293048248BD7DEA9797D49C5",
+     "7497CA9432B84C58B77675EB264516A5",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Communicate their thoughts\nfor an adult to write.",
+    "id": "9D10C4AF809E4736ABFB4B5350CA225C",
+    "listId": "",
+    "parentId": "F2FD1243293048248BD7DEA9797D49C5",
+    "position": 1099,
+    "statementLabel": null,
+    "statementNotation": "LDC-13g"
+   },
+   "9FA4A0F85F3843CD8F2C2B3E1DC90FB0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7CFF4F3FDC1645959053D90785DD5BDC",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize letters of the\nalphabet as a special\ncategory of print, different\nfrom pictures, shapes,\nand numerals.",
+    "id": "9FA4A0F85F3843CD8F2C2B3E1DC90FB0",
+    "listId": "",
+    "parentId": "7CFF4F3FDC1645959053D90785DD5BDC",
+    "position": 1086,
+    "statementLabel": null,
+    "statementNotation": "LDC-12c"
+   },
+   "A2026EA06215457D8B3A940BC76875B8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D8E2FE56177A4E89BB1D2E0547A11900",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Show an interest in books,\nother print, and readingrelated activities.",
+    "id": "A2026EA06215457D8B3A940BC76875B8",
+    "listId": "",
+    "parentId": "D8E2FE56177A4E89BB1D2E0547A11900",
+    "position": 1048,
+    "statementLabel": null,
+    "statementNotation": "LDC-8k"
+   },
+   "A431B85CD0D941E5920A8BC87132EEB6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0F1511355E6C4A57B648BD0E060E1B96",
+     "7497CA9432B84C58B77675EB264516A5",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Make marks they call\n“writing” that look different\nfrom drawings (vertical\nseries of marks for a\n“grocery list,” horizontal\nline of marks for a “story”). ",
+    "id": "A431B85CD0D941E5920A8BC87132EEB6",
+    "listId": "",
+    "parentId": "0F1511355E6C4A57B648BD0E060E1B96",
+    "position": 1108,
+    "statementLabel": null,
+    "statementNotation": "LC-15g"
+   },
+   "A487088D9A0148A4B0134A1253FC183D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CCC2B195307F4F458975C97B6EB6B644",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Answer longer questions\nusing more detail.",
+    "id": "A487088D9A0148A4B0134A1253FC183D",
+    "listId": "",
+    "parentId": "CCC2B195307F4F458975C97B6EB6B644",
+    "position": 1019,
+    "statementLabel": null,
+    "statementNotation": "LDC-3d"
+   },
+   "A8254C6171B44E69BA64CF83C122A1B8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0F1511355E6C4A57B648BD0E060E1B96",
+     "7497CA9432B84C58B77675EB264516A5",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Play with writing letters\nand make letter-like forms.",
+    "id": "A8254C6171B44E69BA64CF83C122A1B8",
+    "listId": "",
+    "parentId": "0F1511355E6C4A57B648BD0E060E1B96",
+    "position": 1109,
+    "statementLabel": null,
+    "statementNotation": "LC-15h"
+   },
+   "AAE0E9BC87A44732A5DDEA3464131215": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7DB11B7B8DD646AE82DD67E4C7B5BB08",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Follow more detailed\nmultistep directions.",
+    "id": "AAE0E9BC87A44732A5DDEA3464131215",
+    "listId": "",
+    "parentId": "7DB11B7B8DD646AE82DD67E4C7B5BB08",
+    "position": 1008,
+    "statementLabel": null,
+    "statementNotation": "LDC-1p"
+   },
+   "ABEB7F74BE7548178701D98207348DC9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C0BB364DF6C34100A059F9D49017F0FF",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Speak in full sentences\nthat are grammatically\ncorrect most of the time.",
+    "id": "ABEB7F74BE7548178701D98207348DC9",
+    "listId": "",
+    "parentId": "C0BB364DF6C34100A059F9D49017F0FF",
+    "position": 1036,
+    "statementLabel": null,
+    "statementNotation": "LDC-6i"
+   },
+   "ACA6627F26FB4E6E8383D7838153064C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "172581336AC840B5B16DBFB4FEB586A1",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Participate in experiences\nwith songs, poems, and\nbooks that have rhyme\nand wordplay, and learn\nwords well enough to\ncomplete refrains and\nfill in missing words and\nsounds.",
+    "id": "ACA6627F26FB4E6E8383D7838153064C",
+    "listId": "",
+    "parentId": "172581336AC840B5B16DBFB4FEB586A1",
+    "position": 1077,
+    "statementLabel": null,
+    "statementNotation": "LDC-11f"
+   },
+   "B17D6F86F0154D2AB9921A728F03B612": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C1EF3D760F8148C3ADA19D1E556A6A35",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Repeat familiar songs,\nchants, or rhymes.",
+    "id": "B17D6F86F0154D2AB9921A728F03B612",
+    "listId": "",
+    "parentId": "C1EF3D760F8148C3ADA19D1E556A6A35",
+    "position": 1042,
+    "statementLabel": null,
+    "statementNotation": "LDC-7o"
+   },
+   "B30777EB741C4F7CA967397D18D922C5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children describe familiar people, places, things, and events.",
+    "id": "B30777EB741C4F7CA967397D18D922C5",
+    "listId": "",
+    "parentId": "83F49835493C4F8286541E205E1D58C3",
+    "position": 1029,
+    "statementLabel": null,
+    "statementNotation": "Goal LDC-5"
+   },
+   "B3228A1D99574687BC77E3883C23FB62": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "51C3C4F42D71493FB1603BFBB94F8888",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Ask questions about a story or the\ninformation in a book.",
+    "id": "B3228A1D99574687BC77E3883C23FB62",
+    "listId": "",
+    "parentId": "51C3C4F42D71493FB1603BFBB94F8888",
+    "position": 1058,
+    "statementLabel": null,
+    "statementNotation": "LDC-9m"
+   },
+   "B4D3C1B6312D4D2699642D3F02A42548": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CCC2B195307F4F458975C97B6EB6B644",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Answer more complex\nquestions with more\nexplanation (“I didn’t like\ncamping out because it\nrained.” “Emily is my friend\nbecause she’s nice to\nme.”). ",
+    "id": "B4D3C1B6312D4D2699642D3F02A42548",
+    "listId": "",
+    "parentId": "CCC2B195307F4F458975C97B6EB6B644",
+    "position": 1021,
+    "statementLabel": null,
+    "statementNotation": "LDC-3f"
+   },
+   "B7B9BBD695D04D28A894ACB0194E8C35": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children speak audibly and express thoughts, feelings, and ideas clearly.",
+    "id": "B7B9BBD695D04D28A894ACB0194E8C35",
+    "listId": "",
+    "parentId": "83F49835493C4F8286541E205E1D58C3",
+    "position": 1023,
+    "statementLabel": null,
+    "statementNotation": "Goal LDC-4"
+   },
+   "C0BB364DF6C34100A059F9D49017F0FF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children use most grammatical constructions of their home language well.  ",
+    "id": "C0BB364DF6C34100A059F9D49017F0FF",
+    "listId": "",
+    "parentId": "83F49835493C4F8286541E205E1D58C3",
+    "position": 1033,
+    "statementLabel": null,
+    "statementNotation": "Goal LDC-6"
+   },
+   "C1A4FBF8B78647C3BC604BE02656CD96": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "172581336AC840B5B16DBFB4FEB586A1",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Enjoy rhymes and wordplay,\nand sometimes add their own\nvariations.",
+    "id": "C1A4FBF8B78647C3BC604BE02656CD96",
+    "listId": "",
+    "parentId": "172581336AC840B5B16DBFB4FEB586A1",
+    "position": 1080,
+    "statementLabel": null,
+    "statementNotation": "LDC-11i"
+   },
+   "C1EF3D760F8148C3ADA19D1E556A6A35": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children respond to and use a growing vocabulary.",
+    "id": "C1EF3D760F8148C3ADA19D1E556A6A35",
+    "listId": "",
+    "parentId": "83F49835493C4F8286541E205E1D58C3",
+    "position": 1037,
+    "statementLabel": null,
+    "statementNotation": "Goal LDC-7"
+   },
+   "C420A3641BB248058EC1ED071209A286": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D8E2FE56177A4E89BB1D2E0547A11900",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Engage in reading\nbehaviors independently\n(choose books, turn\npages but not always in\norder, tell the story).  ",
+    "id": "C420A3641BB248058EC1ED071209A286",
+    "listId": "",
+    "parentId": "D8E2FE56177A4E89BB1D2E0547A11900",
+    "position": 1047,
+    "statementLabel": null,
+    "statementNotation": "LDC-8j"
+   },
+   "C943B398EDCD45EDABDC1EB89862171E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3B6F924045984F4C9B2338010397790A",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Express an understanding that\npeople communicate in many\nways (gestures, facial expressions,\nmultiple spoken languages, sign\nlanguage, and augmentative\ncommunication).",
+    "id": "C943B398EDCD45EDABDC1EB89862171E",
+    "listId": "",
+    "parentId": "3B6F924045984F4C9B2338010397790A",
+    "position": 1013,
+    "statementLabel": null,
+    "statementNotation": "LDC-2l"
+   },
+   "C978C48992E9424BB223A9FAEF4764A3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7DB11B7B8DD646AE82DD67E4C7B5BB08",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With prompting and\nsupport, respond to\nrequests for information\nor action.",
+    "id": "C978C48992E9424BB223A9FAEF4764A3",
+    "listId": "",
+    "parentId": "7DB11B7B8DD646AE82DD67E4C7B5BB08",
+    "position": 1004,
+    "statementLabel": null,
+    "statementNotation": "LDC-1l"
+   },
+   "CCC2B195307F4F458975C97B6EB6B644": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children ask and answer questions in order to seek help, get information,\nor clarify something that is not understood.",
+    "id": "CCC2B195307F4F458975C97B6EB6B644",
+    "listId": "",
+    "parentId": "83F49835493C4F8286541E205E1D58C3",
+    "position": 1018,
+    "statementLabel": null,
+    "statementNotation": "Goal LDC-3"
+   },
+   "D05325188D5D4897BFD82B7116A49602": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C1EF3D760F8148C3ADA19D1E556A6A35",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use many kinds of cues in\nthe environment to figure out\nwhat words mean.",
+    "id": "D05325188D5D4897BFD82B7116A49602",
+    "listId": "",
+    "parentId": "C1EF3D760F8148C3ADA19D1E556A6A35",
+    "position": 1041,
+    "statementLabel": null,
+    "statementNotation": "LDC-7n"
+   },
+   "D29F756374104597A8ADC7475246589A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "172581336AC840B5B16DBFB4FEB586A1",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Associate sounds with specific\nwords, such as awareness that\ndifferent words begin with the same sound",
+    "id": "D29F756374104597A8ADC7475246589A",
+    "listId": "",
+    "parentId": "172581336AC840B5B16DBFB4FEB586A1",
+    "position": 1083,
+    "statementLabel": null,
+    "statementNotation": " LDC-11l"
+   },
+   "D2F61E5FD44D4F3DBC14D5A9F4DB50B5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "51C3C4F42D71493FB1603BFBB94F8888",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With prompting and support,\ndiscuss storybooks by responding\nto questions about what is\nhappening and predicting what will\nhappen next.",
+    "id": "D2F61E5FD44D4F3DBC14D5A9F4DB50B5",
+    "listId": "",
+    "parentId": "51C3C4F42D71493FB1603BFBB94F8888",
+    "position": 1059,
+    "statementLabel": null,
+    "statementNotation": "LDC-9n"
+   },
+   "D373A6CB380B4E53AA1B91A61CD38219": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3B6F924045984F4C9B2338010397790A",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Initiate and carry on\nconversations, and ask\nquestions about things\nthat interest them.",
+    "id": "D373A6CB380B4E53AA1B91A61CD38219",
+    "listId": "",
+    "parentId": "3B6F924045984F4C9B2338010397790A",
+    "position": 1011,
+    "statementLabel": null,
+    "statementNotation": "LDC-2j"
+   },
+   "D3CA2CD1041A455BBBC59ECC97A2201B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7CFF4F3FDC1645959053D90785DD5BDC",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Make some sound-to-letter\nmatches, using letter name\nknowledge (notice the letter\nB with picture of ball and say,\n“Ball”; say, “ A-a-apple.”).",
+    "id": "D3CA2CD1041A455BBBC59ECC97A2201B",
+    "listId": "",
+    "parentId": "7CFF4F3FDC1645959053D90785DD5BDC",
+    "position": 1091,
+    "statementLabel": null,
+    "statementNotation": "LDC-12h"
+   },
+   "D513463E5B8E4E20B2535CD92665B0E9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "39E946FD69364297A875A750689142D3",
+     "7497CA9432B84C58B77675EB264516A5",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use known letters and\napproximations of letters\nto write their own name\nand some familiar words.",
+    "id": "D513463E5B8E4E20B2535CD92665B0E9",
+    "listId": "",
+    "parentId": "39E946FD69364297A875A750689142D3",
+    "position": 1104,
+    "statementLabel": null,
+    "statementNotation": "LC-14c"
+   },
+   "D622BA1D2AFC4990A381A603EBC54B9F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3DD0B8B73D014C21A906B67ECD4F4D19",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize print and symbols used to\norganize classroom activities and show\nunderstanding of their meaning (put toys\nin box with correct symbol and name;\ncheck sign-up sheet for popular activity;\ncheck schedule to learn next activity).",
+    "id": "D622BA1D2AFC4990A381A603EBC54B9F",
+    "listId": "",
+    "parentId": "3DD0B8B73D014C21A906B67ECD4F4D19",
+    "position": 1072,
+    "statementLabel": null,
+    "statementNotation": "LDC-10m"
+   },
+   "D8E2FE56177A4E89BB1D2E0547A11900": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children develop interest in books and motivation to read.",
+    "id": "D8E2FE56177A4E89BB1D2E0547A11900",
+    "listId": "",
+    "parentId": "502A6A12D9F442B49EAA72BA4FB735BA",
+    "position": 1046,
+    "statementLabel": null,
+    "statementNotation": "Goal LDC-8"
+   },
+   "DAE33866815F4173909D8111C0A5913E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "51C3C4F42D71493FB1603BFBB94F8888",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use informational texts and\nother media to learn about\nthe world, and infer from\nillustrations, ask questions\nand talk about the information. ",
+    "id": "DAE33866815F4173909D8111C0A5913E",
+    "listId": "",
+    "parentId": "51C3C4F42D71493FB1603BFBB94F8888",
+    "position": 1061,
+    "statementLabel": null,
+    "statementNotation": "LDC-9p"
+   },
+   "DD7A66D9E70546A8958C7570FDD9E477": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C1EF3D760F8148C3ADA19D1E556A6A35",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Repeat familiar songs,\nchants, or rhymes.",
+    "id": "DD7A66D9E70546A8958C7570FDD9E477",
+    "listId": "",
+    "parentId": "C1EF3D760F8148C3ADA19D1E556A6A35",
+    "position": 1038,
+    "statementLabel": null,
+    "statementNotation": "LDC-7k"
+   },
+   "E0DA7E6D00B54BE48FFD67EDE331ACEE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CCC2B195307F4F458975C97B6EB6B644",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use sentences or\nquestions to ask for things\n(people, actions, objects,\npets) or gain information.",
+    "id": "E0DA7E6D00B54BE48FFD67EDE331ACEE",
+    "listId": "",
+    "parentId": "CCC2B195307F4F458975C97B6EB6B644",
+    "position": 1020,
+    "statementLabel": null,
+    "statementNotation": "LDC-3e"
+   },
+   "E22B0C262F15430A8A253B1B0B5FD465": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3B6F924045984F4C9B2338010397790A",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Initiate and carry on conversations\nthat involve multiple back and\nforth communications or turns\nbetween the persons involved in\nthe conversation. ",
+    "id": "E22B0C262F15430A8A253B1B0B5FD465",
+    "listId": "",
+    "parentId": "3B6F924045984F4C9B2338010397790A",
+    "position": 1014,
+    "statementLabel": null,
+    "statementNotation": "LDC-2m"
+   },
+   "E2C70687ECC743CFABB294EA376267DE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CCC2B195307F4F458975C97B6EB6B644",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Ask specific questions\nto learn more about their\nworld, understand tasks,\nand solve problems.",
+    "id": "E2C70687ECC743CFABB294EA376267DE",
+    "listId": "",
+    "parentId": "CCC2B195307F4F458975C97B6EB6B644",
+    "position": 1022,
+    "statementLabel": null,
+    "statementNotation": "LDC-3g"
+   },
+   "E38379425A944E46BB8556813960DDB5": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Language Development and\nCommunication (LDC)",
+    "id": "E38379425A944E46BB8556813960DDB5",
+    "listId": "",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "E39F4C1F0A8749AAB759C9424F157E2E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "39E946FD69364297A875A750689142D3",
+     "7497CA9432B84C58B77675EB264516A5",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begin to use letters and\napproximations of letters\nto write their name.",
+    "id": "E39F4C1F0A8749AAB759C9424F157E2E",
+    "listId": "",
+    "parentId": "39E946FD69364297A875A750689142D3",
+    "position": 1102,
+    "statementLabel": null,
+    "statementNotation": "LC-14a"
+   },
+   "E51E2FBAE108481F9B6E375A33A3E017": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B7B9BBD695D04D28A894ACB0194E8C35",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Speak clearly enough to\nbe understood by familiar\nadults and children.",
+    "id": "E51E2FBAE108481F9B6E375A33A3E017",
+    "listId": "",
+    "parentId": "B7B9BBD695D04D28A894ACB0194E8C35",
+    "position": 1025,
+    "statementLabel": null,
+    "statementNotation": "LDC-4i"
+   },
+   "E6A494E70E4A4CA0B65E7D8EF5A011DE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B7B9BBD695D04D28A894ACB0194E8C35",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Speak clearly enough to\nbe understood by most\npeople. ",
+    "id": "E6A494E70E4A4CA0B65E7D8EF5A011DE",
+    "listId": "",
+    "parentId": "B7B9BBD695D04D28A894ACB0194E8C35",
+    "position": 1028,
+    "statementLabel": null,
+    "statementNotation": "LDC-4l"
+   },
+   "E73FEE0C92424414910AB29F61CEF51A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "51C3C4F42D71493FB1603BFBB94F8888",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Imitate the special language in\nstorybooks and story dialogue\nwith some accuracy and detail. ",
+    "id": "E73FEE0C92424414910AB29F61CEF51A",
+    "listId": "",
+    "parentId": "51C3C4F42D71493FB1603BFBB94F8888",
+    "position": 1054,
+    "statementLabel": null,
+    "statementNotation": "LDC-9i"
+   },
+   "EA5417A34D61482C8FACF8F09E6E95BB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0F1511355E6C4A57B648BD0E060E1B96",
+     "7497CA9432B84C58B77675EB264516A5",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use a variety of writing\ntools and materials with\npurpose and control\n(pencils, chalk, markers,\ncrayons, paintbrushes,\nfinger paint, computers). ",
+    "id": "EA5417A34D61482C8FACF8F09E6E95BB",
+    "listId": "",
+    "parentId": "0F1511355E6C4A57B648BD0E060E1B96",
+    "position": 1107,
+    "statementLabel": null,
+    "statementNotation": "LC-15f"
+   },
+   "EB4336C04BC84EA4B0F9CEE49C5ECE97": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7DB11B7B8DD646AE82DD67E4C7B5BB08",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Show understanding\nof increasingly\ncomplex sentences.",
+    "id": "EB4336C04BC84EA4B0F9CEE49C5ECE97",
+    "listId": "",
+    "parentId": "7DB11B7B8DD646AE82DD67E4C7B5BB08",
+    "position": 1003,
+    "statementLabel": null,
+    "statementNotation": "LDC-1k"
+   },
+   "ED03C589E52A43DEBB71C3620891088D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B7B9BBD695D04D28A894ACB0194E8C35",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Adapt their communication\nto meet social expectations\n(speak quietly in library,\nspeak politely to older\nrelative).",
+    "id": "ED03C589E52A43DEBB71C3620891088D",
+    "listId": "",
+    "parentId": "B7B9BBD695D04D28A894ACB0194E8C35",
+    "position": 1027,
+    "statementLabel": null,
+    "statementNotation": "LDC-4k"
+   },
+   "F2FD1243293048248BD7DEA9797D49C5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7497CA9432B84C58B77675EB264516A5",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children use writing and other symbols to record information and\ncommunicate for a variety of purposes.",
+    "id": "F2FD1243293048248BD7DEA9797D49C5",
+    "listId": "",
+    "parentId": "7497CA9432B84C58B77675EB264516A5",
+    "position": 1094,
+    "statementLabel": null,
+    "statementNotation": "Goal LDC-13"
+   },
+   "F709D830861C4A14957AA50A2E6183D8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D8E2FE56177A4E89BB1D2E0547A11900",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Listen to and discuss\nstorybooks, simple\ninformation books, and\npoetry.",
+    "id": "F709D830861C4A14957AA50A2E6183D8",
+    "listId": "",
+    "parentId": "D8E2FE56177A4E89BB1D2E0547A11900",
+    "position": 1049,
+    "statementLabel": null,
+    "statementNotation": "LDC-8l"
+   },
+   "F86A20B2396B47D7BA8143745FD5FD4C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3DD0B8B73D014C21A906B67ECD4F4D19",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize print in different forms for\na variety of functions (writing message\nto friend, pointing to print and saying,\n“Those words tell the story.”). ",
+    "id": "F86A20B2396B47D7BA8143745FD5FD4C",
+    "listId": "",
+    "parentId": "3DD0B8B73D014C21A906B67ECD4F4D19",
+    "position": 1071,
+    "statementLabel": null,
+    "statementNotation": "LDC-10l"
+   },
+   "FA353979167349AC8D3A6731994A2CD0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "51C3C4F42D71493FB1603BFBB94F8888",
+     "502A6A12D9F442B49EAA72BA4FB735BA",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Relate personal experiences to\nan increasing variety of events\ndescribed in familiar and new\nbooks.",
+    "id": "FA353979167349AC8D3A6731994A2CD0",
+    "listId": "",
+    "parentId": "51C3C4F42D71493FB1603BFBB94F8888",
+    "position": 1063,
+    "statementLabel": null,
+    "statementNotation": "LDC-9r"
+   },
+   "FAD3653DD89B4C548C8522708F5D0354": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B30777EB741C4F7CA967397D18D922C5",
+     "83F49835493C4F8286541E205E1D58C3",
+     "E38379425A944E46BB8556813960DDB5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describe experiences and\ncreate and/or retell longer narratives.",
+    "id": "FAD3653DD89B4C548C8522708F5D0354",
+    "listId": "",
+    "parentId": "B30777EB741C4F7CA967397D18D922C5",
+    "position": 1032,
+    "statementLabel": null,
+    "statementNotation": "LDC-5f"
+   }
+  },
+  "subject": "Foundations for Early Learning and Development (2013-)",
+  "title": "Language Development and Communication (LDC)"
+ }
+}

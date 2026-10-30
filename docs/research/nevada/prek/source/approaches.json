@@ -1,0 +1,439 @@
+{
+ "data": {
+  "cspStatus": {
+   "notes": null,
+   "value": "visible"
+  },
+  "document": {
+   "publicationStatus": "Published",
+   "sourceURL": "https://www.nevadaregistry.org/wp-content/uploads/2024/01/NevadaPre-KindergartenStandardsRevised2023forWebsite.pdf",
+   "title": "Nevada Pre-Kindergarten Standards, Revised 2023"
+  },
+  "educationLevels": [
+   "Pre-K"
+  ],
+  "id": "A741F7A83BF043BA903A33BA85BA37D3",
+  "jurisdiction": {
+   "id": "A7F156ECF40D4DFDB9DE1E3541550B20",
+   "title": "Nevada"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/4.0/us/",
+   "rightsHolder": "Common Curriculum, Inc.",
+   "title": "CC BY 4.0 US"
+  },
+  "normalizedSubject": null,
+  "standards": {
+   "1E14EF83B65B4C9CA3C7A0FD59E997CA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5A7D1069A95F4A469EE52B4E079A721B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Try or join\nin new activities and\nexperiences, even if they are\nperceived as challenging. ",
+    "id": "1E14EF83B65B4C9CA3C7A0FD59E997CA",
+    "listId": "1",
+    "parentId": "5A7D1069A95F4A469EE52B4E079A721B",
+    "position": 1006,
+    "statementLabel": null,
+    "statementNotation": "A.RC.PK1"
+   },
+   "2407FB693A474E0590D4A79A54276695": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Demonstrate curiosity and initiative . ",
+    "id": "2407FB693A474E0590D4A79A54276695",
+    "listId": "1",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": null,
+    "statementNotation": "A,CI"
+   },
+   "3495EEDD55544394A5EFD26C6136A1B3": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Demonstrate the ability to focus attention and persist in an activity. ",
+    "id": "3495EEDD55544394A5EFD26C6136A1B3",
+    "listId": "3",
+    "parentId": null,
+    "position": 1013,
+    "statementLabel": null,
+    "statementNotation": "A.EL"
+   },
+   "370320338D244C6184B97AE9B2CEDCC0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D7C2C2E9B3924833A7B49F7ACED39884"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Communicate\nin a variety of ways when\nplaying with others.",
+    "id": "370320338D244C6184B97AE9B2CEDCC0",
+    "listId": "3",
+    "parentId": "D7C2C2E9B3924833A7B49F7ACED39884",
+    "position": 1021,
+    "statementLabel": null,
+    "statementNotation": "A.PL.PK3"
+   },
+   "3D5DEFC4A9FD402CB1D6A7218E6734FF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5A7D1069A95F4A469EE52B4E079A721B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Delay\ngratification to complete a\nlarger task.",
+    "id": "3D5DEFC4A9FD402CB1D6A7218E6734FF",
+    "listId": "6",
+    "parentId": "5A7D1069A95F4A469EE52B4E079A721B",
+    "position": 1011,
+    "statementLabel": null,
+    "statementNotation": "A.RC.PK6"
+   },
+   "426DE7A0469549C685F8AA77EAAD2EA9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D7C2C2E9B3924833A7B49F7ACED39884"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Use imagination\nin social and pretend play.",
+    "id": "426DE7A0469549C685F8AA77EAAD2EA9",
+    "listId": "1",
+    "parentId": "D7C2C2E9B3924833A7B49F7ACED39884",
+    "position": 1019,
+    "statementLabel": null,
+    "statementNotation": "A.PL.PK1"
+   },
+   "4428F8C4EC634BE7948A4FDC072A1B3E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5A7D1069A95F4A469EE52B4E079A721B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Use rules from\none situation as a guide\nfor behavior in a different\nsituation.",
+    "id": "4428F8C4EC634BE7948A4FDC072A1B3E",
+    "listId": "5",
+    "parentId": "5A7D1069A95F4A469EE52B4E079A721B",
+    "position": 1010,
+    "statementLabel": null,
+    "statementNotation": "A.RC.PK5"
+   },
+   "53E84FEEAFFA457E97A0FA988D9098CC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2407FB693A474E0590D4A79A54276695"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": " Initiate activities\nor tasks. ",
+    "id": "53E84FEEAFFA457E97A0FA988D9098CC",
+    "listId": "3",
+    "parentId": "2407FB693A474E0590D4A79A54276695",
+    "position": 1003,
+    "statementLabel": null,
+    "statementNotation": "A.CI.PK3"
+   },
+   "55C26B2D1F1A46BB9A9C1859823B795B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D7C2C2E9B3924833A7B49F7ACED39884"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Use what was\nlearned in other disciplines\nin pretend play.",
+    "id": "55C26B2D1F1A46BB9A9C1859823B795B",
+    "listId": "4",
+    "parentId": "D7C2C2E9B3924833A7B49F7ACED39884",
+    "position": 1022,
+    "statementLabel": null,
+    "statementNotation": "A.PL.PK4"
+   },
+   "5A7D1069A95F4A469EE52B4E079A721B": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Demonstrate willingness to take risks and use flexibility in thinking and actions.",
+    "id": "5A7D1069A95F4A469EE52B4E079A721B",
+    "listId": "2",
+    "parentId": null,
+    "position": 1005,
+    "statementLabel": null,
+    "statementNotation": "A.RC"
+   },
+   "6ABC6B6086D04B61912CD91B63CF4DF4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3495EEDD55544394A5EFD26C6136A1B3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Persist in tasks\nand re-engage in an activity\nafter an interruption.",
+    "id": "6ABC6B6086D04B61912CD91B63CF4DF4",
+    "listId": "2",
+    "parentId": "3495EEDD55544394A5EFD26C6136A1B3",
+    "position": 1015,
+    "statementLabel": null,
+    "statementNotation": "A.EL.PK2"
+   },
+   "79BD084B79E44BEA969F618B9E148322": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3495EEDD55544394A5EFD26C6136A1B3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Express\nsatisfaction when\naccomplishing a task and\nachieving a goal.",
+    "id": "79BD084B79E44BEA969F618B9E148322",
+    "listId": "3",
+    "parentId": "3495EEDD55544394A5EFD26C6136A1B3",
+    "position": 1016,
+    "statementLabel": null,
+    "statementNotation": "A.EL.PK3"
+   },
+   "8088C1470376459487207A8291E46682": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D7C2C2E9B3924833A7B49F7ACED39884"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Act out or\ncreate a new role based on\nlife experiences, including\ncollaboration with peers in\nrelated roles.",
+    "id": "8088C1470376459487207A8291E46682",
+    "listId": "5",
+    "parentId": "D7C2C2E9B3924833A7B49F7ACED39884",
+    "position": 1023,
+    "statementLabel": null,
+    "statementNotation": "A.PL.PK5"
+   },
+   "82427A8E63E8497699CEA656EF8C5DCB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5A7D1069A95F4A469EE52B4E079A721B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Manage\ntransition between activities\nwithout getting frustrated. ",
+    "id": "82427A8E63E8497699CEA656EF8C5DCB",
+    "listId": "7",
+    "parentId": "5A7D1069A95F4A469EE52B4E079A721B",
+    "position": 1012,
+    "statementLabel": null,
+    "statementNotation": "A.RC.PK7"
+   },
+   "9ECA85EBF4C54B1396AB24DB74B4696D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5A7D1069A95F4A469EE52B4E079A721B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Use a variety of\napproaches and strategies\nto complete tasks and solve\nproblems.",
+    "id": "9ECA85EBF4C54B1396AB24DB74B4696D",
+    "listId": "2",
+    "parentId": "5A7D1069A95F4A469EE52B4E079A721B",
+    "position": 1007,
+    "statementLabel": null,
+    "statementNotation": "A.RC.PK2"
+   },
+   "A13E9581198941659DFBFA5539CAB5D9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D7C2C2E9B3924833A7B49F7ACED39884"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Differentiate\nbetween pretend and real.",
+    "id": "A13E9581198941659DFBFA5539CAB5D9",
+    "listId": "7",
+    "parentId": "D7C2C2E9B3924833A7B49F7ACED39884",
+    "position": 1025,
+    "statementLabel": null,
+    "statementNotation": "A.PL.PK7"
+   },
+   "B0CC27A204C94855AC91E514E2DD8449": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D7C2C2E9B3924833A7B49F7ACED39884"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Use materials\nor objects to represent\nsomething else during play\nor when acting out stories.",
+    "id": "B0CC27A204C94855AC91E514E2DD8449",
+    "listId": "6",
+    "parentId": "D7C2C2E9B3924833A7B49F7ACED39884",
+    "position": 1024,
+    "statementLabel": null,
+    "statementNotation": "A.PL.PK6"
+   },
+   "B0E6EA058BDB4BBAAEBD935744DE2D44": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3495EEDD55544394A5EFD26C6136A1B3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Maintain\nfocus on activities for\ndevelopmentally appropriate\nperiods of time.",
+    "id": "B0E6EA058BDB4BBAAEBD935744DE2D44",
+    "listId": "1",
+    "parentId": "3495EEDD55544394A5EFD26C6136A1B3",
+    "position": 1014,
+    "statementLabel": null,
+    "statementNotation": "A.EL.PK1"
+   },
+   "B873ED439DB146C7915CBFEBC3281882": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5A7D1069A95F4A469EE52B4E079A721B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Try different\nstrategies to resolve conflict\nor other problems in\nworking with other children.",
+    "id": "B873ED439DB146C7915CBFEBC3281882",
+    "listId": "3",
+    "parentId": "5A7D1069A95F4A469EE52B4E079A721B",
+    "position": 1008,
+    "statementLabel": null,
+    "statementNotation": "A.RC.PK3"
+   },
+   "BAD3B8C01BB44E1294241BDA5C1EE352": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2407FB693A474E0590D4A79A54276695"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Make choices\nand communicate their\nchoice to adults and other\nchildren.",
+    "id": "BAD3B8C01BB44E1294241BDA5C1EE352",
+    "listId": "4",
+    "parentId": "2407FB693A474E0590D4A79A54276695",
+    "position": 1004,
+    "statementLabel": null,
+    "statementNotation": "A.CI.PK4"
+   },
+   "BC5790BC1C9445B0AB459309DB72B9E8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5A7D1069A95F4A469EE52B4E079A721B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Recognize and\nattempt to correct mistakes.",
+    "id": "BC5790BC1C9445B0AB459309DB72B9E8",
+    "listId": "4",
+    "parentId": "5A7D1069A95F4A469EE52B4E079A721B",
+    "position": 1009,
+    "statementLabel": null,
+    "statementNotation": "A.RC.PK4"
+   },
+   "CB842C3ECA1F45699ADDCF007B967532": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3495EEDD55544394A5EFD26C6136A1B3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Continue with a task or activity even when it\nis challenging or frustrating.\n",
+    "id": "CB842C3ECA1F45699ADDCF007B967532",
+    "listId": "4",
+    "parentId": "3495EEDD55544394A5EFD26C6136A1B3",
+    "position": 1017,
+    "statementLabel": null,
+    "statementNotation": "A.EL.PK4"
+   },
+   "D1360C142A5A490BBCB8F817FA69607A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2407FB693A474E0590D4A79A54276695"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Seek out and\nexplore unfamiliar objects\nand activities.",
+    "id": "D1360C142A5A490BBCB8F817FA69607A",
+    "listId": "2",
+    "parentId": "2407FB693A474E0590D4A79A54276695",
+    "position": 1002,
+    "statementLabel": null,
+    "statementNotation": "A.CI.PK2"
+   },
+   "D7C2C2E9B3924833A7B49F7ACED39884": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Demonstrate imagination and engage in different types of play",
+    "id": "D7C2C2E9B3924833A7B49F7ACED39884",
+    "listId": "4",
+    "parentId": null,
+    "position": 1018,
+    "statementLabel": null,
+    "statementNotation": "A.PL"
+   },
+   "E36336E5F31F43E4A2EB749A164ADDA0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2407FB693A474E0590D4A79A54276695"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Ask questions\nand seek new information\nrelated to a variety of topics,\nideas, and activities.",
+    "id": "E36336E5F31F43E4A2EB749A164ADDA0",
+    "listId": "1",
+    "parentId": "2407FB693A474E0590D4A79A54276695",
+    "position": 1001,
+    "statementLabel": null,
+    "statementNotation": "A.CI.PK1"
+   },
+   "FF88B971150449BB9E16EB61D1277A79": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D7C2C2E9B3924833A7B49F7ACED39884"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Give and follow\ndirections from peers during\nsocial play.",
+    "id": "FF88B971150449BB9E16EB61D1277A79",
+    "listId": "2",
+    "parentId": "D7C2C2E9B3924833A7B49F7ACED39884",
+    "position": 1020,
+    "statementLabel": null,
+    "statementNotation": "A.PL.PK2"
+   }
+  },
+  "subject": "Pre-Kindergarten (2023-)",
+  "title": "Approaches to Learning"
+ }
+}

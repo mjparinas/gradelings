@@ -1,0 +1,430 @@
+{
+ "pk/math": [
+  {
+   "idx": "Mathematics I.A.1",
+   "text": "Show interest and understanding in counting"
+  },
+  {
+   "idx": "Mathematics I.A.2",
+   "text": "Explores quantity"
+  },
+  {
+   "idx": "Mathematics I.B.1",
+   "text": "Identify numerals in everyday situations"
+  },
+  {
+   "idx": "Mathematics I.B.2",
+   "text": "Use drawings to represent number"
+  },
+  {
+   "idx": "Mathematics I.B.3",
+   "text": "Write some numerals"
+  },
+  {
+   "idx": "Mathematics II.A.1",
+   "text": "Take objects apart and puts them together"
+  },
+  {
+   "idx": "Mathematics II.A.2",
+   "text": "Use actions and words to indicate position and location"
+  },
+  {
+   "idx": "Mathematics II.A.3",
+   "text": "Use actions and words to indicate movement and orientation"
+  },
+  {
+   "idx": "Mathematics II.B.1",
+   "text": "Investigate and talk about the characteristics of shapes"
+  },
+  {
+   "idx": "Mathematics II.B.2",
+   "text": "Identify and name some shapes"
+  },
+  {
+   "idx": "Mathematics II.B.3",
+   "text": "Create and duplicate three-dimensional and two-dimensional shapes"
+  },
+  {
+   "idx": "Mathematics III.A.1",
+   "text": "Recognize patterns and relationships"
+  },
+  {
+   "idx": "Mathematics III.A.2",
+   "text": "Duplicate and extend patterns"
+  },
+  {
+   "idx": "Mathematics III.A.3",
+   "text": "Create patterns"
+  },
+  {
+   "idx": "Mathematics IV.A.1",
+   "text": "Explore ways to measure"
+  },
+  {
+   "idx": "Mathematics IV.A.2",
+   "text": "Measure using objects"
+  },
+  {
+   "idx": "Mathematics IV.A.3",
+   "text": "Compare objects using measurable features"
+  },
+  {
+   "idx": "Mathematics IV.A.4",
+   "text": "Use language to describe measurement"
+  },
+  {
+   "idx": "Mathematics V.A.1",
+   "text": "Collect and organize information"
+  },
+  {
+   "idx": "Mathematics V.A.2",
+   "text": "Displays information (charts and graphs)"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "Language and Literacy I.A.1",
+   "text": "Communicate in a variety of ways"
+  },
+  {
+   "idx": "Language and Literacy I.A.2",
+   "text": "Initiate and respond appropriately in conversation and discussions"
+  },
+  {
+   "idx": "Language and Literacy I.A.3",
+   "text": "Use language to pretend or create"
+  },
+  {
+   "idx": "Language and Literacy I.A.4",
+   "text": "Use complete sentences of varying length"
+  },
+  {
+   "idx": "Language and Literacy II.A.1",
+   "text": "Listen to others"
+  },
+  {
+   "idx": "Language and Literacy II.A.2",
+   "text": "Listen to sounds in the environment"
+  },
+  {
+   "idx": "Language and Literacy II.A.3",
+   "text": "Follow simple directions"
+  },
+  {
+   "idx": "Language and Literacy II.A.4",
+   "text": "Listen responsively to books and stories"
+  },
+  {
+   "idx": "Language and Literacy II.A.5",
+   "text": "Respond to questions"
+  },
+  {
+   "idx": "Language and Literacy III.A.1",
+   "text": "Experiment with writing tools and materials"
+  },
+  {
+   "idx": "Language and Literacy III.A.2",
+   "text": "Use scribbles, shapes, pictures, letter-like forms and letters to write"
+  },
+  {
+   "idx": "Language and Literacy III.A.3",
+   "text": "Tell others about marks and intended meaning of drawing or writing"
+  },
+  {
+   "idx": "Language and Literacy III.A.4",
+   "text": "Use a variety of resources to facilitate writing"
+  },
+  {
+   "idx": "Language and Literacy IV.A.1",
+   "text": "Show an interest in reading and books"
+  },
+  {
+   "idx": "Language and Literacy IV.A.2",
+   "text": "Exhibit book handling skills"
+  },
+  {
+   "idx": "Language and Literacy IV.A.3",
+   "text": "Recognize that print represents spoken words"
+  },
+  {
+   "idx": "Language and Literacy IV.A.4",
+   "text": "Develop a sense of story"
+  },
+  {
+   "idx": "Language and Literacy IV.A.5",
+   "text": "Read environmental print and symbols"
+  },
+  {
+   "idx": "Language and Literacy IV.A.6",
+   "text": "Identify some alphabet letters"
+  },
+  {
+   "idx": "Language and Literacy V.A.1",
+   "text": "Repeat rhymes, simple songs, poems and finger plays"
+  },
+  {
+   "idx": "Language and Literacy V.A.2",
+   "text": "Participate in word games"
+  },
+  {
+   "idx": "Language and Literacy V.A.3",
+   "text": "Discriminate some sounds in words"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "Science I.A.1",
+   "text": "Ask questions"
+  },
+  {
+   "idx": "Science I.A.2",
+   "text": "Make predictions based on experiences"
+  },
+  {
+   "idx": "Science I.A.3",
+   "text": "Experiment"
+  },
+  {
+   "idx": "Science I.A.4",
+   "text": "Reflect on results"
+  },
+  {
+   "idx": "Science II.A.1",
+   "text": "Ask questions"
+  },
+  {
+   "idx": "Science II.A.2",
+   "text": "Make predictions based on experiences"
+  },
+  {
+   "idx": "Science II.A.3",
+   "text": "Experiment"
+  },
+  {
+   "idx": "Science II.A.4",
+   "text": "Reflect on results"
+  },
+  {
+   "idx": "Science III.A.1",
+   "text": "Ask questions"
+  },
+  {
+   "idx": "Science III.A.2",
+   "text": "Make predictions based on experiences"
+  },
+  {
+   "idx": "Science III.A.3",
+   "text": "Experiment"
+  },
+  {
+   "idx": "Science III.A.4",
+   "text": "Reflect on results"
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "Approaches to Learning I.A.1",
+   "text": "Express interest in people"
+  },
+  {
+   "idx": "Approaches to Learning I.A.2",
+   "text": "Show interest in learning new things and trying new experiences"
+  },
+  {
+   "idx": "Approaches to Learning I.A.3",
+   "text": "Ask questions"
+  },
+  {
+   "idx": "Approaches to Learning I.B.1",
+   "text": "Initiate interaction with others"
+  },
+  {
+   "idx": "Approaches to Learning I.B.2",
+   "text": "Make decisions independently"
+  },
+  {
+   "idx": "Approaches to Learning I.B.3",
+   "text": "Develop independence during activities, routines and play"
+  },
+  {
+   "idx": "Approaches to Learning I.C.1",
+   "text": "Try new ways of doing things"
+  },
+  {
+   "idx": "Approaches to Learning I.C.2",
+   "text": "Use imagination to generate a variety of ideas"
+  },
+  {
+   "idx": "Approaches to Learning I.C.3",
+   "text": "Exhibit sense of humor"
+  },
+  {
+   "idx": "Approaches to Learning I.D.1",
+   "text": "Express ideas and opinions"
+  },
+  {
+   "idx": "Approaches to Learning I.D.2",
+   "text": "View self as competent and has a positive self-image"
+  },
+  {
+   "idx": "Approaches to Learning I.E.1",
+   "text": "Sustain attention to a task or activity that is age-appropriate"
+  },
+  {
+   "idx": "Approaches to Learning I.E.2",
+   "text": "Pursue challenges"
+  },
+  {
+   "idx": "Approaches to Learning I.E.3",
+   "text": "Cope with frustration"
+  },
+  {
+   "idx": "Approaches to Learning I.F.1",
+   "text": "Recognize problems"
+  },
+  {
+   "idx": "Approaches to Learning I.F.2",
+   "text": "Try to solve problems"
+  },
+  {
+   "idx": "Approaches to Learning I.F.3",
+   "text": "Work with others to solve problems"
+  },
+  {
+   "idx": "Social-Emotional I.A.1",
+   "text": "Show respect for self"
+  },
+  {
+   "idx": "Social-Emotional I.A.2",
+   "text": "Develop personal preferences"
+  },
+  {
+   "idx": "Social-Emotional I.A.3",
+   "text": "Know personal information"
+  },
+  {
+   "idx": "Social-Emotional I.B.1",
+   "text": "Follow simple rules"
+  },
+  {
+   "idx": "Social-Emotional I.B.2",
+   "text": "Accept transitions and follow daily routines"
+  },
+  {
+   "idx": "Social-Emotional I.B.3",
+   "text": "Express feelings through appropriate gestures, action and language"
+  },
+  {
+   "idx": "Social-Emotional I.B.4",
+   "text": "Adapt to different environments"
+  },
+  {
+   "idx": "Social-Emotional I.C.1",
+   "text": "Care for personal and group belongings"
+  },
+  {
+   "idx": "Social-Emotional I.C.2",
+   "text": "Begin to accept the consequences of their own actions"
+  },
+  {
+   "idx": "Social-Emotional II.A.1",
+   "text": "Respect rights of others"
+  },
+  {
+   "idx": "Social-Emotional II.A.2",
+   "text": "Seek comfort and security from significant adults"
+  },
+  {
+   "idx": "Social-Emotional II.A.3",
+   "text": "Develop friendships"
+  },
+  {
+   "idx": "Social-Emotional II.A.4",
+   "text": "Use courteous words and actions"
+  },
+  {
+   "idx": "Social-Emotional II.A.5",
+   "text": "Respect similarities and differences among people"
+  },
+  {
+   "idx": "Social-Emotional II.B.1",
+   "text": "Participate successfully as a member of a group"
+  },
+  {
+   "idx": "Social-Emotional II.B.2",
+   "text": "Share experiences and ideas with others"
+  },
+  {
+   "idx": "Social-Emotional II.B.3",
+   "text": "Begin to examine a situation from another person’s perspective"
+  },
+  {
+   "idx": "Social-Emotional II.B.4",
+   "text": "Resolve conflicts with others"
+  },
+  {
+   "idx": "Physical Development I.A.1",
+   "text": "Control body movements"
+  },
+  {
+   "idx": "Physical Development I.A.2",
+   "text": "Use large muscle movements to manipulate objects"
+  },
+  {
+   "idx": "Physical Development I.A.3",
+   "text": "Move from one point to another"
+  },
+  {
+   "idx": "Physical Development I.B.1",
+   "text": "Use fingers and hands to accomplish fine motor tasks"
+  },
+  {
+   "idx": "Physical Development I.B.2",
+   "text": "Use tools in a functional manner"
+  },
+  {
+   "idx": "Physical Development I.B.3",
+   "text": "Exhibit coordination of facial muscles"
+  },
+  {
+   "idx": "Physical Development I.C.1",
+   "text": "Exhibit sensory awareness"
+  },
+  {
+   "idx": "Physical Development I.C.2",
+   "text": "Exhibit body awareness"
+  },
+  {
+   "idx": "Physical Development I.C.3",
+   "text": "Exhibit spatial awareness"
+  },
+  {
+   "idx": "Physical Development I.C.4",
+   "text": "Exhibit temporal awareness"
+  },
+  {
+   "idx": "Physical Development II.A.1",
+   "text": "Show independence in personal care routines"
+  },
+  {
+   "idx": "Physical Development II.A.2",
+   "text": "Participate in daily physical activity"
+  },
+  {
+   "idx": "Physical Development II.A.3",
+   "text": "Exhibit body strength and endurance"
+  },
+  {
+   "idx": "Physical Development III.A.1",
+   "text": "Know and follow safety rules"
+  },
+  {
+   "idx": "Physical Development III.A.2",
+   "text": "Recognize personal danger"
+  },
+  {
+   "idx": "Physical Development III.A.3",
+   "text": "Know how and when to seek help from others"
+  }
+ ]
+}

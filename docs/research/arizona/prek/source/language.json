@@ -1,0 +1,1067 @@
+{
+ "data": {
+  "cspStatus": {
+   "notes": null,
+   "value": "visible"
+  },
+  "document": {
+   "sourceURL": "https://www.azed.gov/sites/default/files/2015/02/Arizona%20Early%20Learning%20Standards_4th%20Edition_2021.pdf",
+   "title": "ARIZONA EARLY LEARNING STANDARDS 4th Edition May 2018"
+  },
+  "educationLevels": [
+   "Pre-K",
+   "K"
+  ],
+  "id": "C87CFC0159CF4FDFAE1E566AA63B75F5",
+  "jurisdiction": {
+   "id": "0B41FFF6B5114EB0B8A89CE0E70E22D8",
+   "title": "Arizona"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/4.0/us/",
+   "rightsHolder": "Common Curriculum, Inc.",
+   "title": "CC BY 4.0 US"
+  },
+  "normalizedSubject": null,
+  "standards": {
+   "001ADA87A40548A99CC1AF5A360AB182": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A6845E1144F6448CB693FDE4E497BD40",
+     "FAA7DC7D718C4C94A592D4D930634EC1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Initiates, sustains, and expands conversations with peers and adults using open-ended responses.",
+    "id": "001ADA87A40548A99CC1AF5A360AB182",
+    "listId": "d",
+    "parentId": "A6845E1144F6448CB693FDE4E497BD40",
+    "position": 1009,
+    "statementLabel": null,
+    "statementNotation": "1.2.d"
+   },
+   "0720196FFE714E8D8CDEECE474FB6437": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "727B706CA8354E25A3E67188D11B0B8D",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identifies rhyming words.",
+    "id": "0720196FFE714E8D8CDEECE474FB6437",
+    "listId": "b",
+    "parentId": "727B706CA8354E25A3E67188D11B0B8D",
+    "position": 1032,
+    "statementLabel": null,
+    "statementNotation": "2.3.b"
+   },
+   "0752FC7EAEFC45E68DB4BCCAD54372ED": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2D76E7CE2A1B4253953C101167435A29",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identifies events and details in the story and makes predictions.",
+    "id": "0752FC7EAEFC45E68DB4BCCAD54372ED",
+    "listId": "e",
+    "parentId": "2D76E7CE2A1B4253953C101167435A29",
+    "position": 1049,
+    "statementLabel": null,
+    "statementNotation": "2.5.e"
+   },
+   "09C0EB5820AE4864938D86CE3CD4D84F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A6845E1144F6448CB693FDE4E497BD40",
+     "FAA7DC7D718C4C94A592D4D930634EC1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Makes culturally relevant responses (both verbal and nonverbal) to questions and comments from others. ",
+    "id": "09C0EB5820AE4864938D86CE3CD4D84F",
+    "listId": "c",
+    "parentId": "A6845E1144F6448CB693FDE4E497BD40",
+    "position": 1008,
+    "statementLabel": null,
+    "statementNotation": "1.2.c"
+   },
+   "0C0D8AF2622C4C86A82CC7E6764271DB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Book Handling Skills: The child demonstrates how to handle books appropriately and with care.",
+    "id": "0C0D8AF2622C4C86A82CC7E6764271DB",
+    "listId": "2",
+    "parentId": "BFE4E25AC8C047A09BAFE2DF46B69A42",
+    "position": 1026,
+    "statementLabel": null,
+    "statementNotation": "2.2"
+   },
+   "0D7A505B7D564733A95179DEE74869F4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E9B3C65C9E1F4CE794CD5DE7D9FF4C0C",
+     "FAA7DC7D718C4C94A592D4D930634EC1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Demonstrates understanding of a variety of finger-plays, rhymes, chants and songs, poems, conversations,\nandstories. ",
+    "id": "0D7A505B7D564733A95179DEE74869F4",
+    "listId": "a",
+    "parentId": "E9B3C65C9E1F4CE794CD5DE7D9FF4C0C",
+    "position": 1002,
+    "statementLabel": null,
+    "statementNotation": "1.1.a"
+   },
+   "0FD2BEBF08094971BD9603D09FDE8078": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "727B706CA8354E25A3E67188D11B0B8D",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Recognizes spoken words that begin with the same sound.",
+    "id": "0FD2BEBF08094971BD9603D09FDE8078",
+    "listId": "d",
+    "parentId": "727B706CA8354E25A3E67188D11B0B8D",
+    "position": 1034,
+    "statementLabel": null,
+    "statementNotation": "2.3.d"
+   },
+   "17880AA37C8D4C9EA0707650EDF4BEE9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2D76E7CE2A1B4253953C101167435A29",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identifies characters and major events in a story.",
+    "id": "17880AA37C8D4C9EA0707650EDF4BEE9",
+    "listId": "b",
+    "parentId": "2D76E7CE2A1B4253953C101167435A29",
+    "position": 1046,
+    "statementLabel": null,
+    "statementNotation": "2.5.b"
+   },
+   "196F6991E3004D1A93592032FF8F2CDA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "727B706CA8354E25A3E67188D11B0B8D",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Produces rhyming words. ",
+    "id": "196F6991E3004D1A93592032FF8F2CDA",
+    "listId": "c",
+    "parentId": "727B706CA8354E25A3E67188D11B0B8D",
+    "position": 1033,
+    "statementLabel": null,
+    "statementNotation": "2.3.c"
+   },
+   "1E1F246C5922438084086C988F7BF0ED": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2D76E7CE2A1B4253953C101167435A29",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Takes an active role in reading activities.",
+    "id": "1E1F246C5922438084086C988F7BF0ED",
+    "listId": "a",
+    "parentId": "2D76E7CE2A1B4253953C101167435A29",
+    "position": 1045,
+    "statementLabel": null,
+    "statementNotation": "2.5.a"
+   },
+   "1E5058F1E5DD4E359AF0172D9551B0CC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "727B706CA8354E25A3E67188D11B0B8D",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Hears and shows awareness of separate words within spoken phrases or sentences.",
+    "id": "1E5058F1E5DD4E359AF0172D9551B0CC",
+    "listId": "e",
+    "parentId": "727B706CA8354E25A3E67188D11B0B8D",
+    "position": 1035,
+    "statementLabel": null,
+    "statementNotation": "2.3.e"
+   },
+   "2CF991A965EB429EB7B2ECC38F82E321": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9A0BE2720C88403990F14760455559A6",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Demonstrates and understands that print conveys meaning and that each spoken word can be written and read.",
+    "id": "2CF991A965EB429EB7B2ECC38F82E321",
+    "listId": "b",
+    "parentId": "9A0BE2720C88403990F14760455559A6",
+    "position": 1022,
+    "statementLabel": null,
+    "statementNotation": "2.1.b"
+   },
+   "2D76E7CE2A1B4253953C101167435A29": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Comprehension and Text Structure: The child demonstrates an understanding of narrative structure through storytelling, questioning, and recall. ",
+    "id": "2D76E7CE2A1B4253953C101167435A29",
+    "listId": "5",
+    "parentId": "BFE4E25AC8C047A09BAFE2DF46B69A42",
+    "position": 1044,
+    "statementLabel": null,
+    "statementNotation": "2.5"
+   },
+   "300AD71564B04156A88956DCF5E007C6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A6845E1144F6448CB693FDE4E497BD40",
+     "FAA7DC7D718C4C94A592D4D930634EC1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Uses culturally relevant responses such as eye contact, turn taking, and intonation while having conversations\nwithadults and peers.",
+    "id": "300AD71564B04156A88956DCF5E007C6",
+    "listId": "f",
+    "parentId": "A6845E1144F6448CB693FDE4E497BD40",
+    "position": 1011,
+    "statementLabel": null,
+    "statementNotation": "1.2.f"
+   },
+   "30307064D31440D0817DD15FB63573AC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2D76E7CE2A1B4253953C101167435A29",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Draws connections between story events and personal experiences.",
+    "id": "30307064D31440D0817DD15FB63573AC",
+    "listId": "d",
+    "parentId": "2D76E7CE2A1B4253953C101167435A29",
+    "position": 1048,
+    "statementLabel": null,
+    "statementNotation": "2.5.d"
+   },
+   "32A91CF7766F4201B9CFB7A9EF7F07E3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9A0BE2720C88403990F14760455559A6",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Seeks information in printed materials.",
+    "id": "32A91CF7766F4201B9CFB7A9EF7F07E3",
+    "listId": "e",
+    "parentId": "9A0BE2720C88403990F14760455559A6",
+    "position": 1025,
+    "statementLabel": null,
+    "statementNotation": "2.1.e"
+   },
+   "34080071EA4C4D388D39645A0507C10B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Alphabet Knowledge: The child demonstrates knowledge of the alphabet. Child identifies letters of the alphabet and produces\ncorrectsounds associated with several letters.",
+    "id": "34080071EA4C4D388D39645A0507C10B",
+    "listId": "4",
+    "parentId": "BFE4E25AC8C047A09BAFE2DF46B69A42",
+    "position": 1038,
+    "statementLabel": null,
+    "statementNotation": "2.4"
+   },
+   "417BAC5D22D64CB6AEAEB1C237267393": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A6845E1144F6448CB693FDE4E497BD40",
+     "FAA7DC7D718C4C94A592D4D930634EC1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "With modeling and support, child uses language that includes social rules; e.g., pragmatics,\nappropriatetone, volume, and inflectionto express ideas, feelings, and needs.",
+    "id": "417BAC5D22D64CB6AEAEB1C237267393",
+    "listId": "e",
+    "parentId": "A6845E1144F6448CB693FDE4E497BD40",
+    "position": 1010,
+    "statementLabel": null,
+    "statementNotation": "1.2.e"
+   },
+   "434AF6B22F6B4BC999CE5FFFA789BEFB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9A0BE2720C88403990F14760455559A6",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Recognizes that letters are grouped to form words.",
+    "id": "434AF6B22F6B4BC999CE5FFFA789BEFB",
+    "listId": "c",
+    "parentId": "9A0BE2720C88403990F14760455559A6",
+    "position": 1023,
+    "statementLabel": null,
+    "statementNotation": "2.1.c"
+   },
+   "43E2120B03B14168AF61A888287147AC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2D76E7CE2A1B4253953C101167435A29",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identifies the topic of informational text that has been read aloud.",
+    "id": "43E2120B03B14168AF61A888287147AC",
+    "listId": "h",
+    "parentId": "2D76E7CE2A1B4253953C101167435A29",
+    "position": 1052,
+    "statementLabel": null,
+    "statementNotation": "2.5.h"
+   },
+   "4A2845BA6E234AA3A552194F470E8C03": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "727B706CA8354E25A3E67188D11B0B8D",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identifies and discriminates syllables in words.",
+    "id": "4A2845BA6E234AA3A552194F470E8C03",
+    "listId": "f",
+    "parentId": "727B706CA8354E25A3E67188D11B0B8D",
+    "position": 1036,
+    "statementLabel": null,
+    "statementNotation": "2.3.f"
+   },
+   "5121F2700DAB4835910FA7906EC790DA": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "EMERGENT WRITING",
+    "id": "5121F2700DAB4835910FA7906EC790DA",
+    "listId": "3",
+    "parentId": null,
+    "position": 1055,
+    "statementLabel": null,
+    "statementNotation": "3"
+   },
+   "6094F372AA774D278F117F7C3BB51EA2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0C0D8AF2622C4C86A82CC7E6764271DB",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Understands a book has a title, author, and/or illustrator.",
+    "id": "6094F372AA774D278F117F7C3BB51EA2",
+    "listId": "c",
+    "parentId": "0C0D8AF2622C4C86A82CC7E6764271DB",
+    "position": 1029,
+    "statementLabel": null,
+    "statementNotation": "2.2.c"
+   },
+   "60FA65B02ED74C3BBF287C49D9833632": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A6845E1144F6448CB693FDE4E497BD40",
+     "FAA7DC7D718C4C94A592D4D930634EC1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Speaks clearly and understandably to express ideas, feelings, and needs. ",
+    "id": "60FA65B02ED74C3BBF287C49D9833632",
+    "listId": "b",
+    "parentId": "A6845E1144F6448CB693FDE4E497BD40",
+    "position": 1007,
+    "statementLabel": null,
+    "statementNotation": "1.2.b"
+   },
+   "65239CC57ED942D39B6D9D804942209B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E9B3C65C9E1F4CE794CD5DE7D9FF4C0C",
+     "FAA7DC7D718C4C94A592D4D930634EC1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Engages actively in finger-plays, rhymes, chants and songs, poems, conversations, and stories.",
+    "id": "65239CC57ED942D39B6D9D804942209B",
+    "listId": "b",
+    "parentId": "E9B3C65C9E1F4CE794CD5DE7D9FF4C0C",
+    "position": 1003,
+    "statementLabel": null,
+    "statementNotation": "1.1.b"
+   },
+   "656D60EB8B1744C7889B1C7FAC2CE381": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C714320291F2461FBD9F4C707472CE1C",
+     "5121F2700DAB4835910FA7906EC790DA"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Organizes writing from left to right, indicating a print awareness that letters cluster as words and\nwordscluster into phrases or sentences by use of spacing or marks.",
+    "id": "656D60EB8B1744C7889B1C7FAC2CE381",
+    "listId": "e",
+    "parentId": "C714320291F2461FBD9F4C707472CE1C",
+    "position": 1061,
+    "statementLabel": null,
+    "statementNotation": "3.1.e"
+   },
+   "663CF4DEE63B4E48A160130ECABF0A80": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0C0D8AF2622C4C86A82CC7E6764271DB",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identifies where in the book to begin reading.",
+    "id": "663CF4DEE63B4E48A160130ECABF0A80",
+    "listId": "b",
+    "parentId": "0C0D8AF2622C4C86A82CC7E6764271DB",
+    "position": 1028,
+    "statementLabel": null,
+    "statementNotation": "2.2.b"
+   },
+   "66B5BD769DEA4169B5355A16A9BA8228": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2D76E7CE2A1B4253953C101167435A29",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Begins to demonstrate an understanding of the differences between fiction and non-fiction. ",
+    "id": "66B5BD769DEA4169B5355A16A9BA8228",
+    "listId": "g",
+    "parentId": "2D76E7CE2A1B4253953C101167435A29",
+    "position": 1051,
+    "statementLabel": null,
+    "statementNotation": "2.5.g"
+   },
+   "713AA72E4ACE457194CB597BC20484CA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2D76E7CE2A1B4253953C101167435A29",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Gives an opinion for liking or disliking a book or story.",
+    "id": "713AA72E4ACE457194CB597BC20484CA",
+    "listId": "f",
+    "parentId": "2D76E7CE2A1B4253953C101167435A29",
+    "position": 1050,
+    "statementLabel": null,
+    "statementNotation": "2.5.f"
+   },
+   "7278D216843743ACB5F5CA19FAE03A63": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0C0D8AF2622C4C86A82CC7E6764271DB",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Holds a book right side up with the front cover facing the reader and understands left to right and top to\nbottom directionality.",
+    "id": "7278D216843743ACB5F5CA19FAE03A63",
+    "listId": "a",
+    "parentId": "0C0D8AF2622C4C86A82CC7E6764271DB",
+    "position": 1027,
+    "statementLabel": null,
+    "statementNotation": "2.2.a"
+   },
+   "727B706CA8354E25A3E67188D11B0B8D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Phonological Awareness: The child develops awareness that language can be broken in words, syllables, and smaller units of sounds\n(phonemes).",
+    "id": "727B706CA8354E25A3E67188D11B0B8D",
+    "listId": "3",
+    "parentId": "BFE4E25AC8C047A09BAFE2DF46B69A42",
+    "position": 1030,
+    "statementLabel": null,
+    "statementNotation": "2.3"
+   },
+   "7498B1812F424452BFC001F0DFFC3A14": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "727B706CA8354E25A3E67188D11B0B8D",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Combines onset and rime to form a familiar one-syllable word with and without pictorial support.",
+    "id": "7498B1812F424452BFC001F0DFFC3A14",
+    "listId": "g",
+    "parentId": "727B706CA8354E25A3E67188D11B0B8D",
+    "position": 1037,
+    "statementLabel": null,
+    "statementNotation": "2.3.g"
+   },
+   "7511DD9934274F3C9D5D6DC2AB33C3C9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A6845E1144F6448CB693FDE4E497BD40",
+     "FAA7DC7D718C4C94A592D4D930634EC1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Recognizes when the listener does not understand and varies the amount of information12 to clarify the message.",
+    "id": "7511DD9934274F3C9D5D6DC2AB33C3C9",
+    "listId": "g",
+    "parentId": "A6845E1144F6448CB693FDE4E497BD40",
+    "position": 1012,
+    "statementLabel": null,
+    "statementNotation": "1.2.g"
+   },
+   "79BE4F1E5B3F4C4E94D2F51932599C6A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "34080071EA4C4D388D39645A0507C10B",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Recognizes an increasing number of letters, especially those in own name, familiar objects, family, and friends.",
+    "id": "79BE4F1E5B3F4C4E94D2F51932599C6A",
+    "listId": "c",
+    "parentId": "34080071EA4C4D388D39645A0507C10B",
+    "position": 1041,
+    "statementLabel": null,
+    "statementNotation": "2.4.c"
+   },
+   "86B6F7A422804521859A8246C6171D0C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "727B706CA8354E25A3E67188D11B0B8D",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Differentiates between sounds that are the same and different (e.g., environmental sounds, animal\nsounds,phonemes).",
+    "id": "86B6F7A422804521859A8246C6171D0C",
+    "listId": "a",
+    "parentId": "727B706CA8354E25A3E67188D11B0B8D",
+    "position": 1031,
+    "statementLabel": null,
+    "statementNotation": "2.3.a"
+   },
+   "88BF83597B024B31912A1AADE737BD37": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "34080071EA4C4D388D39645A0507C10B",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Uses letter-sound knowledge, identifying the sounds of a few letters and producing the correct sounds for an\nincreasing number of letters.",
+    "id": "88BF83597B024B31912A1AADE737BD37",
+    "listId": "e",
+    "parentId": "34080071EA4C4D388D39645A0507C10B",
+    "position": 1043,
+    "statementLabel": null,
+    "statementNotation": "2.4.e"
+   },
+   "8B16FF16A4FC46B1AA8AF41B1DC58BD7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C714320291F2461FBD9F4C707472CE1C",
+     "5121F2700DAB4835910FA7906EC790DA"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Writes own name using letter-like forms or conventional print.",
+    "id": "8B16FF16A4FC46B1AA8AF41B1DC58BD7",
+    "listId": "b",
+    "parentId": "C714320291F2461FBD9F4C707472CE1C",
+    "position": 1058,
+    "statementLabel": null,
+    "statementNotation": "3.1.b"
+   },
+   "8CB10D9482C044D892193AD542B8C3D0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2D76E7CE2A1B4253953C101167435A29",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Asks and answers a variety of questions about books or stories told or read aloud.",
+    "id": "8CB10D9482C044D892193AD542B8C3D0",
+    "listId": "c",
+    "parentId": "2D76E7CE2A1B4253953C101167435A29",
+    "position": 1047,
+    "statementLabel": null,
+    "statementNotation": "2.5.c"
+   },
+   "9453B824179E47179EDC16404EB3898A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9A0BE2720C88403990F14760455559A6",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Recognizes own written name and the written names of friends and family.",
+    "id": "9453B824179E47179EDC16404EB3898A",
+    "listId": "d",
+    "parentId": "9A0BE2720C88403990F14760455559A6",
+    "position": 1024,
+    "statementLabel": null,
+    "statementNotation": "2.1.d"
+   },
+   "963BEB3A3D7C4456BEBC9011E5C0B8F2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A6845E1144F6448CB693FDE4E497BD40",
+     "FAA7DC7D718C4C94A592D4D930634EC1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Communicates needs, wants, ideas, and feelings through three to five-word sentences.",
+    "id": "963BEB3A3D7C4456BEBC9011E5C0B8F2",
+    "listId": "a",
+    "parentId": "A6845E1144F6448CB693FDE4E497BD40",
+    "position": 1006,
+    "statementLabel": null,
+    "statementNotation": "1.2.a"
+   },
+   "9A0BE2720C88403990F14760455559A6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Concepts of Print: The child knows that print carries messages.",
+    "id": "9A0BE2720C88403990F14760455559A6",
+    "listId": "1",
+    "parentId": "BFE4E25AC8C047A09BAFE2DF46B69A42",
+    "position": 1020,
+    "statementLabel": null,
+    "statementNotation": "2.1"
+   },
+   "9AE419F399FE490987A0814A82F1F9A6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C714320291F2461FBD9F4C707472CE1C",
+     "5121F2700DAB4835910FA7906EC790DA"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Intentionally uses scribbles/writing and inventive writing to convey meaning, ideas, or to tell a story;\ne.g.,signing artwork, captioning, labeling, creating lists, making notes.",
+    "id": "9AE419F399FE490987A0814A82F1F9A6",
+    "listId": "c",
+    "parentId": "C714320291F2461FBD9F4C707472CE1C",
+    "position": 1059,
+    "statementLabel": null,
+    "statementNotation": "3.1.c"
+   },
+   "A3B49E7DA0EC4F66B0357C893EC3FE91": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2D76E7CE2A1B4253953C101167435A29",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Demonstrates reading fluency by use of phrasing, intonation, and expression in shared reading of\nfamiliarbooks, poems, chants, songs, nursery rhymes, or other repetitious or predictable texts.",
+    "id": "A3B49E7DA0EC4F66B0357C893EC3FE91",
+    "listId": "j",
+    "parentId": "2D76E7CE2A1B4253953C101167435A29",
+    "position": 1054,
+    "statementLabel": null,
+    "statementNotation": "2.5.j"
+   },
+   "A531C6A7D7654BB38A4A45F3EE583203": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E9B3C65C9E1F4CE794CD5DE7D9FF4C0C",
+     "FAA7DC7D718C4C94A592D4D930634EC1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Demonstrates understanding and follows directions that involve one step, two steps, or multiple steps. ",
+    "id": "A531C6A7D7654BB38A4A45F3EE583203",
+    "listId": "c",
+    "parentId": "E9B3C65C9E1F4CE794CD5DE7D9FF4C0C",
+    "position": 1004,
+    "statementLabel": null,
+    "statementNotation": "1.1.c"
+   },
+   "A6845E1144F6448CB693FDE4E497BD40": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FAA7DC7D718C4C94A592D4D930634EC1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Expressive Language and Communication Skills: The child uses verbal and nonverbal communication for a variety of purposes; to share observations,\nideas,experiences, problem-solve, reason, predict, seek new information, and make connections.",
+    "id": "A6845E1144F6448CB693FDE4E497BD40",
+    "listId": "2",
+    "parentId": "FAA7DC7D718C4C94A592D4D930634EC1",
+    "position": 1005,
+    "statementLabel": null,
+    "statementNotation": "1.2"
+   },
+   "BFE4E25AC8C047A09BAFE2DF46B69A42": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "EMERGENT LITERACY",
+    "id": "BFE4E25AC8C047A09BAFE2DF46B69A42",
+    "listId": "2",
+    "parentId": null,
+    "position": 1019,
+    "statementLabel": null,
+    "statementNotation": "2"
+   },
+   "C03F0C7EB0224CA99A99700E28D97385": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F23B8C4F513C4C4E8A5E81BAB7EB28F2",
+     "FAA7DC7D718C4C94A592D4D930634EC1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Figures out the meanings of unfamiliar words and concepts using the context of conversations, pictures\nthat accompany text, or concrete objects. ",
+    "id": "C03F0C7EB0224CA99A99700E28D97385",
+    "listId": "b",
+    "parentId": "F23B8C4F513C4C4E8A5E81BAB7EB28F2",
+    "position": 1016,
+    "statementLabel": null,
+    "statementNotation": "1.3.b"
+   },
+   "C714320291F2461FBD9F4C707472CE1C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5121F2700DAB4835910FA7906EC790DA"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Writing Processes and Writing Applications: Children engage in a variety of writing activities and begin to convey meaning through their increasingly\nsophisticated marks. Children write to communicate ideas and to convey meaning. These skills include the\nunderstanding of print, the development of motor skills, and the generation of ideas.",
+    "id": "C714320291F2461FBD9F4C707472CE1C",
+    "listId": "1",
+    "parentId": "5121F2700DAB4835910FA7906EC790DA",
+    "position": 1056,
+    "statementLabel": null,
+    "statementNotation": "3.1"
+   },
+   "CA3EF260D1A34B1AB896316EE21C2C1B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A6845E1144F6448CB693FDE4E497BD40",
+     "FAA7DC7D718C4C94A592D4D930634EC1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "With modeling and support, uses increasingly complex phrases and sentences.",
+    "id": "CA3EF260D1A34B1AB896316EE21C2C1B",
+    "listId": "h",
+    "parentId": "A6845E1144F6448CB693FDE4E497BD40",
+    "position": 1013,
+    "statementLabel": null,
+    "statementNotation": "1.2.h"
+   },
+   "CFA1189212294DCE92EC9D7F47DD7685": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F23B8C4F513C4C4E8A5E81BAB7EB28F2",
+     "FAA7DC7D718C4C94A592D4D930634EC1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Demonstrates understanding of and uses words that indicate position and direction; e.g., in, on, out,\nunder, over, off, besides, behind.",
+    "id": "CFA1189212294DCE92EC9D7F47DD7685",
+    "listId": "d",
+    "parentId": "F23B8C4F513C4C4E8A5E81BAB7EB28F2",
+    "position": 1018,
+    "statementLabel": null,
+    "statementNotation": "1.3.d"
+   },
+   "D0E4E13066DD486A8EECEF2352D58E4A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F23B8C4F513C4C4E8A5E81BAB7EB28F2",
+     "FAA7DC7D718C4C94A592D4D930634EC1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Uses rich vocabulary across many topic areas.",
+    "id": "D0E4E13066DD486A8EECEF2352D58E4A",
+    "listId": "a",
+    "parentId": "F23B8C4F513C4C4E8A5E81BAB7EB28F2",
+    "position": 1015,
+    "statementLabel": null,
+    "statementNotation": "1.3.a"
+   },
+   "DD2E7F0A1EB04344AC58E1B9D9E664EA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "34080071EA4C4D388D39645A0507C10B",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Discriminates letters from other shapes and symbols.",
+    "id": "DD2E7F0A1EB04344AC58E1B9D9E664EA",
+    "listId": "a",
+    "parentId": "34080071EA4C4D388D39645A0507C10B",
+    "position": 1039,
+    "statementLabel": null,
+    "statementNotation": "2.4.a"
+   },
+   "E4694652E14E445A91E2C3E493F0EB28": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C714320291F2461FBD9F4C707472CE1C",
+     "5121F2700DAB4835910FA7906EC790DA"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "In writing process, uses a variety of writing tools, materials, and surfaces to create drawings or symbols. ",
+    "id": "E4694652E14E445A91E2C3E493F0EB28",
+    "listId": "a",
+    "parentId": "C714320291F2461FBD9F4C707472CE1C",
+    "position": 1057,
+    "statementLabel": null,
+    "statementNotation": "3.1.a"
+   },
+   "E8488874DB7D4EBCBE5171908F7E1008": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F23B8C4F513C4C4E8A5E81BAB7EB28F2",
+     "FAA7DC7D718C4C94A592D4D930634EC1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Uses category labels and names objects within a category; e.g., fruit, vegetable, animal, transportation. ",
+    "id": "E8488874DB7D4EBCBE5171908F7E1008",
+    "listId": "c",
+    "parentId": "F23B8C4F513C4C4E8A5E81BAB7EB28F2",
+    "position": 1017,
+    "statementLabel": null,
+    "statementNotation": "1.3.c"
+   },
+   "E9B3C65C9E1F4CE794CD5DE7D9FF4C0C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FAA7DC7D718C4C94A592D4D930634EC1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Receptive Language Understanding: The child demonstrates understanding of directions, stories, conversations, and nonverbal cues.",
+    "id": "E9B3C65C9E1F4CE794CD5DE7D9FF4C0C",
+    "listId": "1",
+    "parentId": "FAA7DC7D718C4C94A592D4D930634EC1",
+    "position": 1001,
+    "statementLabel": null,
+    "statementNotation": "1.1"
+   },
+   "F23B8C4F513C4C4E8A5E81BAB7EB28F2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FAA7DC7D718C4C94A592D4D930634EC1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Vocabulary: The child understands and uses increasingly complex vocabulary. ",
+    "id": "F23B8C4F513C4C4E8A5E81BAB7EB28F2",
+    "listId": "3",
+    "parentId": "FAA7DC7D718C4C94A592D4D930634EC1",
+    "position": 1014,
+    "statementLabel": null,
+    "statementNotation": "1.3"
+   },
+   "F4155A60F8554BB994A02AF3241CD3EA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C714320291F2461FBD9F4C707472CE1C",
+     "5121F2700DAB4835910FA7906EC790DA"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Forms letters starting with large motor (sky writing, paint brush and water, sidewalk chalk) progressing to\nfinemotor (paper and writing utensil).",
+    "id": "F4155A60F8554BB994A02AF3241CD3EA",
+    "listId": "d",
+    "parentId": "C714320291F2461FBD9F4C707472CE1C",
+    "position": 1060,
+    "statementLabel": null,
+    "statementNotation": "3.1.d"
+   },
+   "F7C930C0479F425FB2D7B90A1B60D74C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2D76E7CE2A1B4253953C101167435A29",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Retells or reenacts a story in sequence with pictures or props.",
+    "id": "F7C930C0479F425FB2D7B90A1B60D74C",
+    "listId": "i",
+    "parentId": "2D76E7CE2A1B4253953C101167435A29",
+    "position": 1053,
+    "statementLabel": null,
+    "statementNotation": "2.5.i"
+   },
+   "FAA7DC7D718C4C94A592D4D930634EC1": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "LANGUAGE",
+    "id": "FAA7DC7D718C4C94A592D4D930634EC1",
+    "listId": "1",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": null,
+    "statementNotation": "1"
+   },
+   "FCAF0296DAA3422DA240330C4A4FBEA4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9A0BE2720C88403990F14760455559A6",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identifies signs, symbols, and labels in a variety of environments (environmental print).",
+    "id": "FCAF0296DAA3422DA240330C4A4FBEA4",
+    "listId": "a",
+    "parentId": "9A0BE2720C88403990F14760455559A6",
+    "position": 1021,
+    "statementLabel": null,
+    "statementNotation": "2.1.a"
+   },
+   "FD0E0CC3DD6E44599538726E7E6A3C5C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "34080071EA4C4D388D39645A0507C10B",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Demonstrates understanding of letters by producing letter forms using a variety of materials; e.g.,\nplaydough,blocks, marker, and paper.",
+    "id": "FD0E0CC3DD6E44599538726E7E6A3C5C",
+    "listId": "d",
+    "parentId": "34080071EA4C4D388D39645A0507C10B",
+    "position": 1042,
+    "statementLabel": null,
+    "statementNotation": "2.4.d"
+   },
+   "FE7385FCDD914462BEDFB27FECD01453": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "34080071EA4C4D388D39645A0507C10B",
+     "BFE4E25AC8C047A09BAFE2DF46B69A42"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Matches and recognizes similarities and differences in letters, with modeling and support.",
+    "id": "FE7385FCDD914462BEDFB27FECD01453",
+    "listId": "b",
+    "parentId": "34080071EA4C4D388D39645A0507C10B",
+    "position": 1040,
+    "statementLabel": null,
+    "statementNotation": "2.4.b"
+   }
+  },
+  "subject": "Early Learning (2018-)",
+  "title": "Language and Literacy"
+ }
+}

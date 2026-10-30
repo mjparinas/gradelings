@@ -1,0 +1,598 @@
+{
+ "pk/math": [
+  {
+   "idx": "M1.1.o.a",
+   "text": "Count the number sequence 1-20"
+  },
+  {
+   "idx": "M1.1.o.b",
+   "text": "Recognize the last number name said tells the number of objects counted"
+  },
+  {
+   "idx": "M1.1.o.c",
+   "text": "Apply one-toone correspondence with increasing number of objects and/or people (5-10 objects)"
+  },
+  {
+   "idx": "M1.1.o.d",
+   "text": "Draw pictures, symbols, or use manipulatives to represent spoken number 0-10"
+  },
+  {
+   "idx": "M1.1.o.e",
+   "text": "Identify, without counting, small quantities of items (1-4) presented in an irregular or unfamiliar pattern (subitize)"
+  },
+  {
+   "idx": "M1.2.o.a",
+   "text": "Match number symbols with amounts 1-10"
+  },
+  {
+   "idx": "M1.2.o.b",
+   "text": "Name written numerals from 0-10"
+  },
+  {
+   "idx": "M1.2.o.c",
+   "text": "Begin to write numerals 1-10"
+  },
+  {
+   "idx": "M1.3.o.a",
+   "text": "Identify when 2 sets are equal using matching and counting strategies"
+  },
+  {
+   "idx": "M1.3.o.b",
+   "text": "Correctly use the words for position"
+  },
+  {
+   "idx": "M1.3.o.c",
+   "text": "Compare the values of two numbers from 1 to 10 presented as written numerals"
+  },
+  {
+   "idx": "M1.3.o.d",
+   "text": "Demonstrate the understanding of the concept of before"
+  },
+  {
+   "idx": "M2.1.o.a",
+   "text": "Use understanding that numbers can be composed and decomposed to create new numbers in solving problems with quantities under five"
+  },
+  {
+   "idx": "M2.2.o.a",
+   "text": "Begin to create and extend a new simple pattern"
+  },
+  {
+   "idx": "M2.2.yo.a",
+   "text": "Understand sequence of events when clearly explained"
+  },
+  {
+   "idx": "M3.1.o.a",
+   "text": "Explain simple sorting or classifying strategies"
+  },
+  {
+   "idx": "M3.1.o.b",
+   "text": "Sort a group of objects in multiple ways"
+  },
+  {
+   "idx": "M4.1.yo.a",
+   "text": "Complete lined tangram or pattern block puzzles using basic shapes to construct other shapes"
+  },
+  {
+   "idx": "M4.1.o.a",
+   "text": "Use position terms such as above, below, beside, and between"
+  },
+  {
+   "idx": "M4.2.o.a",
+   "text": "Use the attributes of shapes, such as number or length of sides, to distinguish between shapes"
+  },
+  {
+   "idx": "M4.2.o.b",
+   "text": "Differentiate two- and three-dimensional shapes (e.g., squares from cubes)"
+  },
+  {
+   "idx": "M5.1.o.a",
+   "text": "Know daily concepts of earlier and later, morning and afternoon"
+  },
+  {
+   "idx": "M5.2.o.a",
+   "text": "Directly compare and describe two or more objects with a measurable attribute"
+  },
+  {
+   "idx": "M5.2.o.b",
+   "text": "Engage in measuring type play/behaviors using standard tools like rulers or measuring tapes, liquid measuring cups, or cylinders"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "ELA.1.1.a",
+   "text": "Younger and Older Preschool: Demonstrate continual growth in understanding increasingly complex and varied vocabulary"
+  },
+  {
+   "idx": "ELA.1.1.b",
+   "text": "Younger and Older Preschool: Respond to complex gestures and/or actions to communicate (such as comforting others who are crying)"
+  },
+  {
+   "idx": "ELA.1.1.c",
+   "text": "Younger Preschool: Listen to and follow multi-step directions with adult support"
+  },
+  {
+   "idx": "ELA.1.1.d",
+   "text": "Older Preschool: Listen to and follow multi-step directions"
+  },
+  {
+   "idx": "ELA.1.1.e",
+   "text": "Older Preschool: With adult support, discover the meaning of new words and relate them to prior knowledge"
+  },
+  {
+   "idx": "ELA.1.2.a",
+   "text": "Younger and Older Preschool: Demonstrate continual growth in increasingly varied and complex vocabulary"
+  },
+  {
+   "idx": "ELA.1.2.b",
+   "text": "Younger and Older Preschool: Use complex gestures and actions to communicate"
+  },
+  {
+   "idx": "ELA.1.2.c",
+   "text": "Younger Preschool: Describe activities and experiences with detail"
+  },
+  {
+   "idx": "ELA.1.2.d",
+   "text": "Older Preschool: Describe activities, experiences, and stories with expanded details"
+  },
+  {
+   "idx": "ELA.1.2.e",
+   "text": "Younger Preschool: Use expanded sentences"
+  },
+  {
+   "idx": "ELA.1.2.f",
+   "text": "Older Preschool: Use complex sentences"
+  },
+  {
+   "idx": "ELA.1.2.g",
+   "text": "Older Preschool: Change word tense to indicate time"
+  },
+  {
+   "idx": "ELA.1.2.h",
+   "text": "Older Preschool: Use communication for a variety of purposes"
+  },
+  {
+   "idx": "ELA.1.3.a",
+   "text": "Younger Preschool: Answer questions posed by adults or peers"
+  },
+  {
+   "idx": "ELA.1.3.b",
+   "text": "Older Preschool: Answer openended questions posed by adults or peers"
+  },
+  {
+   "idx": "ELA.1.3.c",
+   "text": "Younger and Older Preschool: Ask questions for understanding and clarity"
+  },
+  {
+   "idx": "ELA.1.3.d",
+   "text": "Younger and Older Preschool: Make on-topic comments"
+  },
+  {
+   "idx": "ELA.1.3.e",
+   "text": "Younger Preschool: Stay on topic in two-way conversation with others"
+  },
+  {
+   "idx": "ELA.1.3.f",
+   "text": "Older Preschool: Stay on topic in two-way conversation that involves multiple turns"
+  },
+  {
+   "idx": "ELA.1.3.g",
+   "text": "Older Preschool: Communicate actively in group activities"
+  },
+  {
+   "idx": "ELA.1.3.h",
+   "text": "Older Preschool: Vary tone and volume of expression to match the situation"
+  },
+  {
+   "idx": "ELA.2.1.a",
+   "text": "Younger Preschool: Recognize and identify some uppercase and a few lowercase letters in a meaningful context (e.g., the first letter in their name)"
+  },
+  {
+   "idx": "ELA.2.1.b",
+   "text": "Older Preschool: Recognize and identify most uppercase and some lowercase letters"
+  },
+  {
+   "idx": "ELA.2.1.c",
+   "text": "Recognize own name in print"
+  },
+  {
+   "idx": "ELA.2.2.a",
+   "text": "Younger and Older Preschool: Demonstrate basic knowledge of letter-sound correspondence"
+  },
+  {
+   "idx": "ELA.2.2.b",
+   "text": "Younger and Older Preschool: Engage in rhyming games and songs; can recognize a familiar rhyme"
+  },
+  {
+   "idx": "ELA.2.2.c",
+   "text": "Younger Preschool: Identify rhyming words in spoken language"
+  },
+  {
+   "idx": "ELA.2.2.d",
+   "text": "Older Preschool: Make rhymes to simple words"
+  },
+  {
+   "idx": "ELA.2.2.e",
+   "text": "Younger Preschool: Orally blend and segment familiar compound words, with modeling and support"
+  },
+  {
+   "idx": "ELA.2.2.f",
+   "text": "Older Preschool: Blend and segment syllables in spoken words with modeling and support"
+  },
+  {
+   "idx": "ELA.2.2.g",
+   "text": "Younger Preschool: Demonstrate awareness of sounds as separate units"
+  },
+  {
+   "idx": "ELA.2.2.h",
+   "text": "Older Preschool: Isolate the initial sound in some words"
+  },
+  {
+   "idx": "ELA.2.3.a",
+   "text": "Younger Preschool: Begin to understand that books are comprised of written words"
+  },
+  {
+   "idx": "ELA.2.3.b",
+   "text": "Older Preschool: Understand that print carries meaning"
+  },
+  {
+   "idx": "ELA.2.3.c",
+   "text": "Younger Preschool: Respond to and interact with readalouds of literary and informational text"
+  },
+  {
+   "idx": "ELA.2.3.d",
+   "text": "Younger Preschool: Hold books right side up and turn pages left to right"
+  },
+  {
+   "idx": "ELA.2.3.e",
+   "text": "Older Preschool: Track words in a book from left to right, top to bottom, and page to page with adult support"
+  },
+  {
+   "idx": "ELA.2.4.a",
+   "text": "Younger and Older Preschool: Respond and interact with literature, including both fiction and building background knowledge with nonfiction text"
+  },
+  {
+   "idx": "ELA.2.4.b",
+   "text": "Younger and Older Preschool: Answer questions about a story"
+  },
+  {
+   "idx": "ELA.2.4.c",
+   "text": "Younger Preschool: With adult support, begin to retell familiar stories"
+  },
+  {
+   "idx": "ELA.2.4.d",
+   "text": "Older Preschool: Retell familiar stories"
+  },
+  {
+   "idx": "ELA.3.1.a",
+   "text": "Younger Preschool: Recognize that drawings, paintings, and writings are meaningful representations"
+  },
+  {
+   "idx": "ELA.3.1.b",
+   "text": "Older Preschool"
+  },
+  {
+   "idx": "ELA.3.1.c",
+   "text": "Younger Preschool: Copy simple lines and shapes during play"
+  },
+  {
+   "idx": "ELA.3.1.d",
+   "text": "Older Preschool: Use writing tools"
+  },
+  {
+   "idx": "ELA.3.1.e",
+   "text": "Younger Preschool: Use writing tools with adult support during play"
+  },
+  {
+   "idx": "ELA.3.1.f",
+   "text": "Younger Preschool: Create a simple picture"
+  },
+  {
+   "idx": "ELA.3.1.g",
+   "text": "Older Preschool: Copy more complex lines, shapes, and some letters, particularly the letters in their name"
+  },
+  {
+   "idx": "ELA.3.2.a",
+   "text": "Younger and Older Preschool: Create writing with the intent of communicating"
+  },
+  {
+   "idx": "ELA.3.2.b",
+   "text": "Younger Preschool: Dictate a story for an adult to write"
+  },
+  {
+   "idx": "ELA.3.2.c",
+   "text": "Older Preschool: Dictate a story that demonstrates simple details and narrative structure"
+  },
+  {
+   "idx": "ELA.3.2.d",
+   "text": "Younger Preschool: Use pictures, letters, and symbols to communicate a story"
+  },
+  {
+   "idx": "ELA.3.2.e",
+   "text": "Older Preschool: Use letters, symbols, and words to share an idea with someone"
+  },
+  {
+   "idx": "ELA.3.2.f",
+   "text": "Use writing to label drawings"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "SC1.1.o.a",
+   "text": "Use senses to observe and describe concepts of weight, motion, and force"
+  },
+  {
+   "idx": "SC1.1.o.b",
+   "text": "Ask questions and draw conclusions about physical properties and the physical world"
+  },
+  {
+   "idx": "SC1.1.o.c",
+   "text": "Use a greater number of scientific vocabulary words related to classroom investigations"
+  },
+  {
+   "idx": "SC1.2.yo.a",
+   "text": "Identify materials that make up objects"
+  },
+  {
+   "idx": "SC1.2.o.a",
+   "text": "Use evidence from investigations to describe observable properties of objects"
+  },
+  {
+   "idx": "SC1.2.o.b",
+   "text": "Sort objects into categories based on physical attributes and explain reasoning"
+  },
+  {
+   "idx": "SC2.1.yo.a",
+   "text": "Communicate awareness of seasonal changes"
+  },
+  {
+   "idx": "SC2.1.o.a",
+   "text": "Describe how weather changes"
+  },
+  {
+   "idx": "SC3.1.yo.a",
+   "text": "Identify and describe the function of body parts"
+  },
+  {
+   "idx": "SC3.1.o.a",
+   "text": "Differentiate animals from plants"
+  },
+  {
+   "idx": "SC3.1.o.b",
+   "text": "Discriminate between living organisms and non-living objects"
+  },
+  {
+   "idx": "SC3.1.o.c",
+   "text": "Ask questions and conduct investigations to understand life science"
+  },
+  {
+   "idx": "SC3.2.o.a",
+   "text": "Participate in discussions about simple ways to take care of the environment (e. g., throwing away trash in containers, turning off lights and water faucets, and putting out bird feeders)"
+  },
+  {
+   "idx": "SC3.2.o.b",
+   "text": "Participate in reusing and recycling materials"
+  },
+  {
+   "idx": "SC3.2.o.c",
+   "text": "Describe basic things plants and animals need to live and grow (sunlight, water, food)"
+  },
+  {
+   "idx": "SC3.2.o.d",
+   "text": "Take responsibility for the care of living things (feeding fish, watering plants, helping weed garden)"
+  },
+  {
+   "idx": "SC4.1.o.a",
+   "text": "Select materials and implement a designated plan"
+  },
+  {
+   "idx": "SC4.1.o.b",
+   "text": "Evaluate and communicate solution outcomes"
+  },
+  {
+   "idx": "SC4.1.o.c",
+   "text": "Use nearby objects to create simple machines to enhance play"
+  },
+  {
+   "idx": "SC5.1.o.a",
+   "text": "Discuss ways that people can affect the environment in positive and negative ways"
+  },
+  {
+   "idx": "SC5.1.o.b",
+   "text": "Independently use simple tools to conduct an investigation to increase understanding"
+  },
+  {
+   "idx": "SC5.1.o.c",
+   "text": "Engage in a scientific experiment with peers"
+  },
+  {
+   "idx": "SC5.1.o.d",
+   "text": "Communicate results of an investigation"
+  },
+  {
+   "idx": "SC6.1.o.a",
+   "text": "Identify 3-5 steps in common routines"
+  },
+  {
+   "idx": "SC6.2.o.a",
+   "text": "Demonstrate an understanding of when a task requires a set of ordered steps"
+  },
+  {
+   "idx": "SC6.2.o.b",
+   "text": "With adult support, create an algorithm (set of ordered steps) to accomplish a two-step task"
+  },
+  {
+   "idx": "SC6.2.o.c",
+   "text": "With adult support, demonstrate the process of troubleshooting why a solution or step didn’t work, and revising their solution"
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "SS1.1.o.a",
+   "text": "Participate in and describe local, state, and national events and celebrations if observed"
+  },
+  {
+   "idx": "SS1.1.o.b",
+   "text": "Identify key people in history"
+  },
+  {
+   "idx": "SS1.1.o.c",
+   "text": "Assimilate family, community, and culture in cooperative play"
+  },
+  {
+   "idx": "SS1.1.o.d",
+   "text": "Build awareness, respect, and acceptance for differences in people and acknowledge connections"
+  },
+  {
+   "idx": "SS2.1.o.a",
+   "text": "Demonstrate an understanding of time in the context of daily experiences and understand that the passage of time can be measured"
+  },
+  {
+   "idx": "SS2.1.o.b",
+   "text": "Begin to understand how time is measured"
+  },
+  {
+   "idx": "SS2.2.o.a",
+   "text": "Demonstrate understanding of concepts of time including before, after, morning, day, night, now, and later"
+  },
+  {
+   "idx": "SS2.3.o.a",
+   "text": "Identify leaders and community helpers at home, school, and in environments"
+  },
+  {
+   "idx": "SS2.3.o.b",
+   "text": "Recognize community symbols and begin to recognize national symbols (e.g., the flag)"
+  },
+  {
+   "idx": "SS3.1.o.a",
+   "text": "Develop concepts and describe location, directionality, and spatial relationships"
+  },
+  {
+   "idx": "SS3.1.o.b",
+   "text": "Engage in play where one item represents another"
+  },
+  {
+   "idx": "SS3.2.o.a",
+   "text": "Use words to describe natural and peoplemade features of locations"
+  },
+  {
+   "idx": "SS3.2.o.b",
+   "text": "Become familiar with information about where they live and understand what an address is"
+  },
+  {
+   "idx": "SS4.1.yo.b",
+   "text": "Act out adult social roles and occupations"
+  },
+  {
+   "idx": "SS4.1.yo.a",
+   "text": "Begin to understand the purpose of money and concepts of buying and selling through play"
+  },
+  {
+   "idx": "SS4.1.o.a",
+   "text": "Develop an awareness that people work for money in order to provide for basic needs"
+  },
+  {
+   "idx": "SS4.1.o.b",
+   "text": "Describe community helpers or workers in terms of tools or equipment they use and services or products they provide"
+  },
+  {
+   "idx": "SS5.1.o.a",
+   "text": "Demonstrate willingness to work together to accomplish tasks"
+  },
+  {
+   "idx": "SS5.1.o.b",
+   "text": "Identify simple tasks within the home, learning environment, or community"
+  },
+  {
+   "idx": "SS5.1.o.c",
+   "text": "Provide leadership in completing daily tasks"
+  },
+  {
+   "idx": "SS5.1.o.d",
+   "text": "Demonstrate an understanding of rules in the home and early learning environment, and the purposes they serve"
+  },
+  {
+   "idx": "SS5.1.o.e",
+   "text": "Recognize and have language to describe when something is unfair"
+  },
+  {
+   "idx": "SS5.1.o.f",
+   "text": "Begin to describe the reciprocal relationship between people and their community and the responsibility as citizens to care for it"
+  },
+  {
+   "idx": "SW1.1.o.a",
+   "text": "Identify self as a unique member of a group that fits into a larger world picture"
+  },
+  {
+   "idx": "SW1.1.o.b",
+   "text": "Show confidence in a range of abilities and recognizing own strengths, as well as the capacity to take on and accomplish new tasks"
+  },
+  {
+   "idx": "SW1.1.o.c",
+   "text": "Show independence in own choices"
+  },
+  {
+   "idx": "SW1.2.o.a",
+   "text": "Identify own emotions and the emotions of others"
+  },
+  {
+   "idx": "SW1.2.o.b",
+   "text": "Express and accurately respond to emotions of self and others"
+  },
+  {
+   "idx": "SW1.2.o.c",
+   "text": "Predict reactions from others"
+  },
+  {
+   "idx": "SW1.2.o.d",
+   "text": "Effectively use sentences and actions to express feelings"
+  },
+  {
+   "idx": "SW2.1.o.a",
+   "text": "Manage transitions and adapt to changes in schedules, routines, and situations independently"
+  },
+  {
+   "idx": "SW2.1.o.b",
+   "text": "Manage a range of impulses"
+  },
+  {
+   "idx": "SW2.1.o.c",
+   "text": "Begin to manage behavior based on location and corresponding expectations (e. g., playground vs. classroom)"
+  },
+  {
+   "idx": "SW2.1.yo.a",
+   "text": "Recognize, navigate, and respond to own emotions and interactions with others with adult support when needed"
+  },
+  {
+   "idx": "SW3.1.o.a",
+   "text": "Independently initiate conflict resolution strategies with peers and seek adult support when necessary"
+  },
+  {
+   "idx": "SW3.1.o.b",
+   "text": "Begin to use “I feel\" statements with adult support when managing conflict with others"
+  },
+  {
+   "idx": "SW4.1.yo.a",
+   "text": "Accept compromises when suggested by a peer or adult"
+  },
+  {
+   "idx": "SW4.1.yo.b",
+   "text": "Gauge response based on the facial expressions of others"
+  },
+  {
+   "idx": "SW4.1.o.a",
+   "text": "Show care and concern for familiar adults and peers using more complex words and actions"
+  },
+  {
+   "idx": "SW4.1.o.b",
+   "text": "Maintain consistent friendships"
+  },
+  {
+   "idx": "SW4.1.o.c",
+   "text": "Engage in cooperative play experiences for sustained periods of time"
+  },
+  {
+   "idx": "SW4.1.o.d",
+   "text": "Form connections across diverse backgrounds"
+  }
+ ]
+}

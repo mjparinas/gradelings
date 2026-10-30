@@ -1,0 +1,519 @@
+{
+ "data": {
+  "cspStatus": {
+   "notes": null,
+   "value": "visible"
+  },
+  "document": {
+   "publicationStatus": "Published",
+   "sourceURL": "https://www.nevadaregistry.org/wp-content/uploads/2024/01/NevadaPre-KindergartenStandardsRevised2023forWebsite.pdf",
+   "title": "Nevada Pre-Kindergarten Standards, Revised 2023"
+  },
+  "educationLevels": [
+   "Pre-K"
+  ],
+  "id": "D0FD8647B4D44D0AAABCDF10670BF587",
+  "jurisdiction": {
+   "id": "A7F156ECF40D4DFDB9DE1E3541550B20",
+   "title": "Nevada"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/4.0/us/",
+   "rightsHolder": "Common Curriculum, Inc.",
+   "title": "CC BY 4.0 US"
+  },
+  "normalizedSubject": null,
+  "standards": {
+   "0754941158E8456C890B664399B8443C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6733ABA482D34503B03AF65D857E8C97"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Compare or\norder up to five objects\nbased on their measurable\nattributes, such as height or\nweight. ",
+    "id": "0754941158E8456C890B664399B8443C",
+    "listId": "1",
+    "parentId": "6733ABA482D34503B03AF65D857E8C97",
+    "position": 1021,
+    "statementLabel": null,
+    "statementNotation": "M.ME.PK1"
+   },
+   "0C1D012DF7A640D9A9AFC0F7029E8CAD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1EFE8C6277A44EBF8084F676CA030897"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Compare\ntwo or more sets of up to\n10 objects and accurately\nidentify which sets are equal\nand which have more or\nfewer objects. ",
+    "id": "0C1D012DF7A640D9A9AFC0F7029E8CAD",
+    "listId": "11",
+    "parentId": "1EFE8C6277A44EBF8084F676CA030897",
+    "position": 1011,
+    "statementLabel": null,
+    "statementNotation": "M.NQ.PK11"
+   },
+   "1EFE8C6277A44EBF8084F676CA030897": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Demonstrate knowledge of numbers, numerals, and quantity.",
+    "id": "1EFE8C6277A44EBF8084F676CA030897",
+    "listId": "1",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": null,
+    "statementNotation": "M.NQ"
+   },
+   "23904EEF054A4AEA8E90A924913F9B5F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E6775FE7D73048F3BCFCEF0077BE1508"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Recognize,\nreplicate, and extend simple\nrepeating patterns. ",
+    "id": "23904EEF054A4AEA8E90A924913F9B5F",
+    "listId": "2",
+    "parentId": "E6775FE7D73048F3BCFCEF0077BE1508",
+    "position": 1017,
+    "statementLabel": null,
+    "statementNotation": "M.PO.PK2"
+   },
+   "2FF08D00A6DC47E2A45EA88D9F20E1A0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "59DF06DD91194F52AABA6B9D23433619"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Identify basic\nshapes such as circles,\ntriangles, squares, and\nrectangles regardless of size\nor orientation.",
+    "id": "2FF08D00A6DC47E2A45EA88D9F20E1A0",
+    "listId": "1",
+    "parentId": "59DF06DD91194F52AABA6B9D23433619",
+    "position": 1025,
+    "statementLabel": null,
+    "statementNotation": "M.GS.PK1"
+   },
+   "327ED2ADA4514313B4A4DFD30871A552": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E6775FE7D73048F3BCFCEF0077BE1508"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Solve simple\naddition and subtraction\nproblems (where the answer\nis five or less), using objects\nto represent the problem. ",
+    "id": "327ED2ADA4514313B4A4DFD30871A552",
+    "listId": "4",
+    "parentId": "E6775FE7D73048F3BCFCEF0077BE1508",
+    "position": 1019,
+    "statementLabel": null,
+    "statementNotation": "M.PO.PK4"
+   },
+   "42065E71D63B422DA5A33FE090D58627": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1EFE8C6277A44EBF8084F676CA030897"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Count\nbackward from 5 to 1.",
+    "id": "42065E71D63B422DA5A33FE090D58627",
+    "listId": "2",
+    "parentId": "1EFE8C6277A44EBF8084F676CA030897",
+    "position": 1002,
+    "statementLabel": null,
+    "statementNotation": "M.NQ.PK2"
+   },
+   "45DD9806A1E147CFA9CE5694C7D3645C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1EFE8C6277A44EBF8084F676CA030897"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Match the\nnumber of objects in a\nset to the correct numeral\nbetween 1 and 5.",
+    "id": "45DD9806A1E147CFA9CE5694C7D3645C",
+    "listId": "13",
+    "parentId": "1EFE8C6277A44EBF8084F676CA030897",
+    "position": 1013,
+    "statementLabel": null,
+    "statementNotation": "M.NQ.PK13"
+   },
+   "4F79C9A4C9A54CD790D3CB5C78370868": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1EFE8C6277A44EBF8084F676CA030897"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Write, draw, or\ncreate objects to represent\nthe numerals between 0\nand 5. ",
+    "id": "4F79C9A4C9A54CD790D3CB5C78370868",
+    "listId": "14",
+    "parentId": "1EFE8C6277A44EBF8084F676CA030897",
+    "position": 1014,
+    "statementLabel": null,
+    "statementNotation": "M.NQ.PK14"
+   },
+   "59DF06DD91194F52AABA6B9D23433619": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Analyze and compare common shapes and use knowledge of position in space.",
+    "id": "59DF06DD91194F52AABA6B9D23433619",
+    "listId": "4",
+    "parentId": null,
+    "position": 1024,
+    "statementLabel": null,
+    "statementNotation": "M.GS"
+   },
+   "5B9574D1D3C04A45A2620AA7341E8C5A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "59DF06DD91194F52AABA6B9D23433619"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": " Select,\ncombine, rotate, and\nflip shapes to match an\nexample.",
+    "id": "5B9574D1D3C04A45A2620AA7341E8C5A",
+    "listId": "5",
+    "parentId": "59DF06DD91194F52AABA6B9D23433619",
+    "position": 1029,
+    "statementLabel": null,
+    "statementNotation": "M.GS.PK5"
+   },
+   "5BEB73CA2D254C2C8DC5F3FF38127897": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1EFE8C6277A44EBF8084F676CA030897"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Recognize\nand read some of the\nnumerals between 0 and\n10. ",
+    "id": "5BEB73CA2D254C2C8DC5F3FF38127897",
+    "listId": "12",
+    "parentId": "1EFE8C6277A44EBF8084F676CA030897",
+    "position": 1012,
+    "statementLabel": null,
+    "statementNotation": "M.NQ.PK12"
+   },
+   "5C1D17178F84469EA618343740803A38": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1EFE8C6277A44EBF8084F676CA030897"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Count using\none-to-one correspondence\nand answer “How many?”\nquestions for a group of up\nto 10 objects arranged in a\nstraight line. ",
+    "id": "5C1D17178F84469EA618343740803A38",
+    "listId": "7",
+    "parentId": "1EFE8C6277A44EBF8084F676CA030897",
+    "position": 1007,
+    "statementLabel": null,
+    "statementNotation": "M.NQ.PK7"
+   },
+   "6733ABA482D34503B03AF65D857E8C97": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Demonstrate the ability to measure and compare by size and volume. ",
+    "id": "6733ABA482D34503B03AF65D857E8C97",
+    "listId": "3",
+    "parentId": null,
+    "position": 1020,
+    "statementLabel": null,
+    "statementNotation": "M.ME"
+   },
+   "67B63493014F48F98800FF0098AEF2E6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1EFE8C6277A44EBF8084F676CA030897"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Recognize\nmistakes in others’ counting\nand self-correct own\ncounting.",
+    "id": "67B63493014F48F98800FF0098AEF2E6",
+    "listId": "4",
+    "parentId": "1EFE8C6277A44EBF8084F676CA030897",
+    "position": 1004,
+    "statementLabel": null,
+    "statementNotation": "M.NQ.PK4"
+   },
+   "6B2C2619350A4AE0B829934390E82474": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6733ABA482D34503B03AF65D857E8C97"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Use\ncomparative language to\ndescribe the length, size,\nor weight of two or more\nobjects (e.g., shortest,\nheavier, biggest).",
+    "id": "6B2C2619350A4AE0B829934390E82474",
+    "listId": "2",
+    "parentId": "6733ABA482D34503B03AF65D857E8C97",
+    "position": 1022,
+    "statementLabel": null,
+    "statementNotation": "M.ME.PK2"
+   },
+   "6D64173EB7784BB1A04242B1E8507407": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1EFE8C6277A44EBF8084F676CA030897"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Manipulate a\nset of objects to count out a\nspecified or target number\nof up to 10 objects.  ",
+    "id": "6D64173EB7784BB1A04242B1E8507407",
+    "listId": "9",
+    "parentId": "1EFE8C6277A44EBF8084F676CA030897",
+    "position": 1009,
+    "statementLabel": null,
+    "statementNotation": "M.NQ.PK9"
+   },
+   "6EAE2FB78CD84B9F9444FC0FC4DE5DC2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E6775FE7D73048F3BCFCEF0077BE1508"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Sort objects by\nattributes such as size and\nshape.",
+    "id": "6EAE2FB78CD84B9F9444FC0FC4DE5DC2",
+    "listId": "1",
+    "parentId": "E6775FE7D73048F3BCFCEF0077BE1508",
+    "position": 1016,
+    "statementLabel": null,
+    "statementNotation": "M.PO.PK1"
+   },
+   "74535F583A0E412E9DEF1D2354D684ED": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1EFE8C6277A44EBF8084F676CA030897"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Correctly\nidentify the remaining number\nof objects in a set of up to\nfour objects after one object\nis added or taken away. ",
+    "id": "74535F583A0E412E9DEF1D2354D684ED",
+    "listId": "10",
+    "parentId": "1EFE8C6277A44EBF8084F676CA030897",
+    "position": 1010,
+    "statementLabel": null,
+    "statementNotation": "M.NQ.PK10"
+   },
+   "79D7B795CB9840D38E92CF4A12EE9028": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1EFE8C6277A44EBF8084F676CA030897"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Count up to 10\nobjects saying the number\nname in the correct order\nand pairing each object with\none and only one number\nname. ",
+    "id": "79D7B795CB9840D38E92CF4A12EE9028",
+    "listId": "6",
+    "parentId": "1EFE8C6277A44EBF8084F676CA030897",
+    "position": 1006,
+    "statementLabel": null,
+    "statementNotation": "M.NQ.PK6"
+   },
+   "852582AC487149CA8CC77FF10F8E7701": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "59DF06DD91194F52AABA6B9D23433619"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Understand\nand use language related\nto directionality and the\nposition of objects.",
+    "id": "852582AC487149CA8CC77FF10F8E7701",
+    "listId": "6",
+    "parentId": "59DF06DD91194F52AABA6B9D23433619",
+    "position": 1030,
+    "statementLabel": null,
+    "statementNotation": "M.GS.PK6"
+   },
+   "852D9C7BCE61401D9C2291CA467DDB2B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1EFE8C6277A44EBF8084F676CA030897"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Give the next\nnumber name in the number\nseries up to 10. ",
+    "id": "852D9C7BCE61401D9C2291CA467DDB2B",
+    "listId": "3",
+    "parentId": "1EFE8C6277A44EBF8084F676CA030897",
+    "position": 1003,
+    "statementLabel": null,
+    "statementNotation": "M.NQ.PK3"
+   },
+   "981E1795FE614F9E97E52B460F4E4EEB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1EFE8C6277A44EBF8084F676CA030897"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Recite numbers\nfrom 1 to 20.",
+    "id": "981E1795FE614F9E97E52B460F4E4EEB",
+    "listId": "1",
+    "parentId": "1EFE8C6277A44EBF8084F676CA030897",
+    "position": 1001,
+    "statementLabel": null,
+    "statementNotation": "M.NQ.PK1"
+   },
+   "AE35B09746DD4BD5896BB33B99C75103": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1EFE8C6277A44EBF8084F676CA030897"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Identify and use\nnumbers related to order or\nposition from first to fifth. ",
+    "id": "AE35B09746DD4BD5896BB33B99C75103",
+    "listId": "5",
+    "parentId": "1EFE8C6277A44EBF8084F676CA030897",
+    "position": 1005,
+    "statementLabel": null,
+    "statementNotation": "M.NQ.PK5"
+   },
+   "BB16EF027B0743E9AF757D03D8132790": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1EFE8C6277A44EBF8084F676CA030897"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Instantly\nrecognize and name the\nnumber of objects in a set\nup to five.",
+    "id": "BB16EF027B0743E9AF757D03D8132790",
+    "listId": "8",
+    "parentId": "1EFE8C6277A44EBF8084F676CA030897",
+    "position": 1008,
+    "statementLabel": null,
+    "statementNotation": "M.NQ.PK8"
+   },
+   "C3AC574288844BAEB9B81DA592AB8048": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "59DF06DD91194F52AABA6B9D23433619"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Create\nand build shapes from\ncomponents.",
+    "id": "C3AC574288844BAEB9B81DA592AB8048",
+    "listId": "4",
+    "parentId": "59DF06DD91194F52AABA6B9D23433619",
+    "position": 1028,
+    "statementLabel": null,
+    "statementNotation": "M.GS.PK4"
+   },
+   "DF94B59B418C4B23A045E025EF9D3475": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "59DF06DD91194F52AABA6B9D23433619"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Identify basic\n2D and 3D shapes in the\nenvironment.",
+    "id": "DF94B59B418C4B23A045E025EF9D3475",
+    "listId": "3",
+    "parentId": "59DF06DD91194F52AABA6B9D23433619",
+    "position": 1027,
+    "statementLabel": null,
+    "statementNotation": "M.GS.PK3"
+   },
+   "E3AEC5CCD48C455DB8A278C16A328026": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6733ABA482D34503B03AF65D857E8C97"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Measure the\nlength of an object using\nanother object or group of\nobjects. ",
+    "id": "E3AEC5CCD48C455DB8A278C16A328026",
+    "listId": "3",
+    "parentId": "6733ABA482D34503B03AF65D857E8C97",
+    "position": 1023,
+    "statementLabel": null,
+    "statementNotation": "M.ME.PK3"
+   },
+   "E6775FE7D73048F3BCFCEF0077BE1508": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Demonstrate the ability to analyze and create patterns and early mathematical problem-solving skills.",
+    "id": "E6775FE7D73048F3BCFCEF0077BE1508",
+    "listId": "2",
+    "parentId": null,
+    "position": 1015,
+    "statementLabel": null,
+    "statementNotation": "M.PO"
+   },
+   "E70548EB2F694860BC01CDCAA0AB6F2B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "59DF06DD91194F52AABA6B9D23433619"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Name,\ndescribe, and compare\nshapes in terms of length of\nsides, number of sides, and\nnumber of angles.",
+    "id": "E70548EB2F694860BC01CDCAA0AB6F2B",
+    "listId": "2",
+    "parentId": "59DF06DD91194F52AABA6B9D23433619",
+    "position": 1026,
+    "statementLabel": null,
+    "statementNotation": "M.GS.PK2"
+   },
+   "F1B0317924AD4E80B0D3B707E312BB1E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E6775FE7D73048F3BCFCEF0077BE1508"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Create\nown simple pattern and\nidentify the core unit of the\nrepeating pattern.",
+    "id": "F1B0317924AD4E80B0D3B707E312BB1E",
+    "listId": "3",
+    "parentId": "E6775FE7D73048F3BCFCEF0077BE1508",
+    "position": 1018,
+    "statementLabel": null,
+    "statementNotation": "M.PO.PK3"
+   }
+  },
+  "subject": "Pre-Kindergarten (2023-)",
+  "title": "Mathematics"
+ }
+}

@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Indiana, a US state. Standards are the 2023 Indiana Academic Standards for mathematics, English/language arts, science
 // and social studies, adopted by the Indiana State Board of Education in June 2023 and published by the Indiana
@@ -73,9 +74,9 @@ export const INDIANA: Framework = {
   standardLabel: "Standard",
   sourceName: "Indiana Department of Education",
   sourceUrl: "https://www.in.gov/doe/students/indiana-academic-standards/",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Indiana report cards",
     intro:

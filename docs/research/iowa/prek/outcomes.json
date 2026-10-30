@@ -1,0 +1,442 @@
+{
+ "pk/math": [
+  {
+   "idx": "7.1.V",
+   "text": "Separates shapes into parts and recombines them to make new shapes or designs"
+  },
+  {
+   "idx": "7.1.W",
+   "text": "Identifies and describes shapes and their attributes"
+  },
+  {
+   "idx": "7.1.X",
+   "text": "Uses basic shapes to build, make or represent objects"
+  },
+  {
+   "idx": "7.1.Y",
+   "text": "Builds structures using 3D shapes and shows how pieces fit together to make new shapes"
+  },
+  {
+   "idx": "7.1.Z",
+   "text": "Uses spatial language to describe where things are and how they fit together"
+  },
+  {
+   "idx": "7.1.AA",
+   "text": "Uses complex spatial language related to location, direction and distance"
+  },
+  {
+   "idx": "7.2.W",
+   "text": "Makes sets up to five objects and answers the “how many” question with the last number counted"
+  },
+  {
+   "idx": "7.2.X",
+   "text": "Instantly recognizes collections up to five"
+  },
+  {
+   "idx": "7.2.Y",
+   "text": "Counts verbally to at least 10, progressing toward 20"
+  },
+  {
+   "idx": "7.2.Z",
+   "text": "Points and counts 10 - 20 objects accurately"
+  },
+  {
+   "idx": "7.2.AA",
+   "text": "Uses objects, fingers or drawings to count a group and shows the total with the last number counted"
+  },
+  {
+   "idx": "7.2.BB",
+   "text": "Identifies numerals to 10 by name"
+  },
+  {
+   "idx": "7.2.CC",
+   "text": "Explains changes in quantity"
+  },
+  {
+   "idx": "7.3.J",
+   "text": "Repeats more complex patterns and sequences:"
+  },
+  {
+   "idx": "7.3.J.a",
+   "text": "Identifies"
+  },
+  {
+   "idx": "7.3.J.b",
+   "text": "Copies"
+  },
+  {
+   "idx": "7.3.J.c",
+   "text": "Extends"
+  },
+  {
+   "idx": "7.3.J.d",
+   "text": "Creates"
+  },
+  {
+   "idx": "7.3.K",
+   "text": "Notices and describes patterns seen in natural and designed settings"
+  },
+  {
+   "idx": "7.4.H",
+   "text": "Uses objects or tools to measure and compare size, weight or capacity, describing results in words or numbers"
+  },
+  {
+   "idx": "7.4.I",
+   "text": "Describes attributes of measurement using comparative language"
+  },
+  {
+   "idx": "7.5.I",
+   "text": "Collects simple data independently"
+  },
+  {
+   "idx": "7.5.J",
+   "text": "Organizes data using charts, graphs or tables with adult support"
+  },
+  {
+   "idx": "7.5.K",
+   "text": "Interprets data to answer questions with adult support"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "6.1.R",
+   "text": "Demonstrates more complex receptive language skills:"
+  },
+  {
+   "idx": "6.1.R.a",
+   "text": "Understands approximately 4,200 words and expands to at least 10,000 by age of 5"
+  },
+  {
+   "idx": "6.1.R.b",
+   "text": "Follows 3-4 step directions"
+  },
+  {
+   "idx": "6.1.R.c",
+   "text": "Understands most of what is said at home and school"
+  },
+  {
+   "idx": "6.1.S",
+   "text": "Understands comparatives (-er) and superlatives (-est)"
+  },
+  {
+   "idx": "6.1.T",
+   "text": "Follows directions to play a game"
+  },
+  {
+   "idx": "6.2.Z",
+   "text": "Demonstrates knowledge of the rules of conversations:"
+  },
+  {
+   "idx": "6.2.Z.a",
+   "text": "Speech is understood by strangers 90-100% of the time"
+  },
+  {
+   "idx": "6.2.Z.b",
+   "text": "Has an expressive vocabulary of more than 2,000 words"
+  },
+  {
+   "idx": "6.2.Z.c",
+   "text": "Takes turns while speaking and listening"
+  },
+  {
+   "idx": "6.2.Z.d",
+   "text": "Engages with at least three back and forth exchanges"
+  },
+  {
+   "idx": "6.2.Z.e",
+   "text": "Produces longer and more complex sentences which are grammatically correct"
+  },
+  {
+   "idx": "6.2.AA",
+   "text": "Can tell a story that stays on topic"
+  },
+  {
+   "idx": "6.2.BB",
+   "text": "Participates in group discussions making comments and asking questions related to the topic"
+  },
+  {
+   "idx": "6.3.S",
+   "text": "Shows increasing comprehension of a story"
+  },
+  {
+   "idx": "6.3.T",
+   "text": "Retells familiar stories with key events using some simple sequencing terms:"
+  },
+  {
+   "idx": "6.3.T.a",
+   "text": "First"
+  },
+  {
+   "idx": "6.3.T.b",
+   "text": "Then"
+  },
+  {
+   "idx": "6.3.T.c",
+   "text": "Next"
+  },
+  {
+   "idx": "6.3.U",
+   "text": "With support, provides basic answers to specific questions about details of a story:"
+  },
+  {
+   "idx": "6.3.U.a",
+   "text": "Who"
+  },
+  {
+   "idx": "6.3.U.b",
+   "text": "What"
+  },
+  {
+   "idx": "6.3.U.c",
+   "text": "When"
+  },
+  {
+   "idx": "6.3.U.d",
+   "text": "Where"
+  },
+  {
+   "idx": "6.3.V",
+   "text": "With support, answers inferential questions about stories and makes predictions or how/why something is happening in a particular moment"
+  },
+  {
+   "idx": "6.4.P",
+   "text": "Says most sounds correctly when speaking except for a few (l, s, r, v, z, ch, sh, th)"
+  },
+  {
+   "idx": "6.4.Q",
+   "text": "Produces the sound of some known letters"
+  },
+  {
+   "idx": "6.4.R",
+   "text": "Blends and/or segments word parts or syllables to identify a word, object or picture"
+  },
+  {
+   "idx": "6.4.S",
+   "text": "Identifies the beginning sounds in words"
+  },
+  {
+   "idx": "6.4.T",
+   "text": "Identifies words that begin with the same sound"
+  },
+  {
+   "idx": "6.4.U",
+   "text": "Identifies words that rhyme from a group of 3-4 words"
+  },
+  {
+   "idx": "6.5.L",
+   "text": "Starts to write in left to right and top to bottom direction"
+  },
+  {
+   "idx": "6.5.M",
+   "text": "Writes in letter strings, especially using the letters in their own name"
+  },
+  {
+   "idx": "6.5.N",
+   "text": "Uses invented spelling with:"
+  },
+  {
+   "idx": "6.5.N.a",
+   "text": "Beginning sound(s)"
+  },
+  {
+   "idx": "6.5.N.b",
+   "text": "Ending sound(s)"
+  },
+  {
+   "idx": "6.5.N.c",
+   "text": "Logical sound substitution(s)"
+  },
+  {
+   "idx": "6.5.O",
+   "text": "Uses a combination of drawing, dictating or emergent writing to convey meaning through writing"
+  },
+  {
+   "idx": "6.5.P",
+   "text": "Shows an awareness of print:"
+  },
+  {
+   "idx": "6.5.P.a",
+   "text": "Locates print on the page"
+  },
+  {
+   "idx": "6.5.P.b",
+   "text": "Understands sentences are made of words and words are made of individual letters"
+  },
+  {
+   "idx": "6.5.P.c",
+   "text": "Follows print from left to right"
+  },
+  {
+   "idx": "6.5.Q",
+   "text": "Recognizes at least half upper and half lower case letters including letters in own name and letters seen frequently in the environment"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "8.1.L",
+   "text": "Plans and conducts simple investigations to answer questions or to design solutions to scientific or engineering problems"
+  },
+  {
+   "idx": "8.1.M",
+   "text": "Uses observational tools to extend the five senses"
+  },
+  {
+   "idx": "8.1.N",
+   "text": "Observes, investigates and describes objects, materials and other physical science phenomena in the classroom and outdoor environments"
+  },
+  {
+   "idx": "8.1.O",
+   "text": "Observes, asks questions and begins to recognize patterns and relationships in natural phenomena"
+  },
+  {
+   "idx": "8.2.K",
+   "text": "Uses observations from investigations to notice similarities and differences in living things and to make guesses about their needs"
+  },
+  {
+   "idx": "8.2.L",
+   "text": "Describes and compares the properties and motions of objects in terms of speed and direction, based on exploration"
+  },
+  {
+   "idx": "8.2.M",
+   "text": "Uses prior experiences and/or data from observations to identify patterns in how living and nonliving things stay the same or change over time and/or when conditions change"
+  },
+  {
+   "idx": "8.2.N",
+   "text": "Analyzes what happened during an investigation to make meaning"
+  },
+  {
+   "idx": "8.3.G",
+   "text": "Generates explanations and communicates ideas and/or conclusions about investigations:"
+  },
+  {
+   "idx": "8.3.G.a",
+   "text": "Communicates with others about questions, actions, ideas, observations or results using labels and adjectives"
+  },
+  {
+   "idx": "8.3.G.b",
+   "text": "Draws increasingly complex pictures to represent their observations of objects and/or of changes to objects or the environment"
+  },
+  {
+   "idx": "8.3.G.c",
+   "text": "Uses scientific content words when investigating and describing observable phenomena"
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "4.1.N",
+   "text": "Begins to express own thoughts and opinions with confidence while listening to and respecting the thoughts and opinions of others:"
+  },
+  {
+   "idx": "4.1.N.a",
+   "text": "Demonstrates preferences and choices"
+  },
+  {
+   "idx": "4.1.N.b",
+   "text": "Displays empathy and understanding that others have input and opinions"
+  },
+  {
+   "idx": "4.1.N.c",
+   "text": "Begins to identify ways of making choices with others"
+  },
+  {
+   "idx": "4.1.N.d",
+   "text": "Demonstrates understanding of an outcome of a discussion"
+  },
+  {
+   "idx": "4.1.O",
+   "text": "Demonstrates an initial awareness of the concepts of fairness and responsibility toward family and community"
+  },
+  {
+   "idx": "4.1.P",
+   "text": "Recognize the reasons for rules in the home and early childhood environment and for laws in the community"
+  },
+  {
+   "idx": "4.2.O",
+   "text": "Identifies features of the environment and people"
+  },
+  {
+   "idx": "4.2.P",
+   "text": "Recognizes a variety of jobs and how they impact the environment"
+  },
+  {
+   "idx": "4.2.Q",
+   "text": "Describes where something is using detailed vocabulary"
+  },
+  {
+   "idx": "4.3.O",
+   "text": "Constructs meaning of the world through past events"
+  },
+  {
+   "idx": "4.3.P",
+   "text": "Explains how past events relate to oneself, family and community"
+  },
+  {
+   "idx": "4.3.Q",
+   "text": "Sequences familiar events by describing events and answering simple questions about time"
+  },
+  {
+   "idx": "1.1.O",
+   "text": "Engages in extended reciprocal interactions with adults"
+  },
+  {
+   "idx": "1.1.P",
+   "text": "Accepts guidance, comfort and directions from a range of adults in a variety of environments"
+  },
+  {
+   "idx": "1.1.Q",
+   "text": "Responds to adult requests and directions, may need assistance or prompting"
+  },
+  {
+   "idx": "1.2.AA",
+   "text": "Displays independence and confidence in making choices of wants and needs"
+  },
+  {
+   "idx": "1.2.BB",
+   "text": "Begins to understand how own actions relate to how others perceive them"
+  },
+  {
+   "idx": "1.2.CC",
+   "text": "Imitates social behaviors and shared interests by participating in cooperative and social play"
+  },
+  {
+   "idx": "1.3.T",
+   "text": "Expresses a broad range of emotions and begins to notice more complex emotions in self"
+  },
+  {
+   "idx": "1.3.U",
+   "text": "Labels emotions, needs, opinions and desires through preferred communication methods"
+  },
+  {
+   "idx": "1.3.V",
+   "text": "Demonstrates coping and self-regulation skills to manage a variety of emotions with increasing independence"
+  },
+  {
+   "idx": "1.3.W",
+   "text": "Shows an increasing ability to understand and accept the connection between their actions and positive or negative consequences"
+  },
+  {
+   "idx": "1.3.X",
+   "text": "Shows increasing understanding of changing expectations and emotional expression in different settings"
+  },
+  {
+   "idx": "1.4.U",
+   "text": "Expresses empathy for others and tries to help with an increased range of more complex actions"
+  },
+  {
+   "idx": "1.4.V",
+   "text": "Sustains positive interactions with one to two preferred peers"
+  },
+  {
+   "idx": "1.4.W",
+   "text": "Negotiates with others to resolve disagreements with or without prompting from adults:"
+  },
+  {
+   "idx": "1.4.X",
+   "text": "Engages in sustained periods of cooperative play including strategies to join groups"
+  },
+  {
+   "idx": "1.4.Y",
+   "text": "Identifies friends by names"
+  }
+ ]
+}

@@ -2,7 +2,8 @@
 
 ## Framework
 
-- **Id and slug:** `us-ia`, `iowa`. Kindergarten to Grade 9 in math, English language arts, science and social studies. There is no French, because Iowa has no statewide French standards the app follows. Offered to families and in classroom mode.
+- **Id and slug:** `us-ia`, `iowa`. Pre-K and Kindergarten to Grade 9 in math, English language arts, science and social studies. There is no French, because Iowa has no statewide French standards the app follows. Offered to families and in classroom mode.
+- **Pre-K:** the 26 shared Pre-K units (`src/content/grades/pk/`), cited by the Iowa Early Learning Standards' indicators for about 4 to 5 years (`7.2.X`) (`src/content/iowa/pk.ts`), checked against `docs/research/iowa/prek/outcomes.json` (sources in `source/`, `fetch.sh`, `build_outcomes.py`). Practice steps only.
 
 ## Standards
 
@@ -67,7 +68,7 @@
 - **Source:** `src/content/iowa/guides.ts`, in US English.
 - **Pages:**
   - the hub;
-  - grade notes for Kindergarten to Grade 9;
+  - grade notes for Pre-K to Grade 9;
   - the eight Standards for Mathematical Practice (`/guides/iowa/math-practices/`);
   - state tests (`/guides/iowa/state-tests/`).
 - Test dates point to the Department.

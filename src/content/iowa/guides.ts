@@ -202,6 +202,10 @@ export const IOWA_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Iowa's Statewide Voluntary Preschool Program funds a year for four-year-olds in school districts and community partners. It follows the Iowa Early Learning Standards, 4th edition (2026).",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in Iowa is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. In social studies (Me and My Community) they learn about their roles at home and school, rules here and in other places, community helpers, and needs, wants and money. Schools also check reading at the start of the year.",
       lookFor: "Many Iowa districts use standards-based report cards. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",
