@@ -18,6 +18,7 @@ export interface StoredEvent {
 }
 
 let dbPromise: Promise<IDBDatabase | null> | null = null;
+let current: IDBDatabase | null = null;
 const memory = { kv: new Map<string, unknown>(), events: new Map<string, StoredEvent>() };
 
 function open(): Promise<IDBDatabase | null> {
@@ -34,7 +35,18 @@ function open(): Promise<IDBDatabase | null> {
           store.createIndex("synced", "synced");
         }
       };
-      req.onsuccess = () => resolve(req.result);
+      req.onsuccess = () => {
+        const db = req.result;
+        // The browser can close the connection under us (storage cleared, the tab frozen, another
+        // tab upgrading the database). Open a fresh one next time rather than keep a dead handle.
+        db.onclose = () => forget(db);
+        db.onversionchange = () => {
+          db.close();
+          forget(db);
+        };
+        current = db;
+        resolve(db);
+      };
       req.onerror = () => resolve(null);
       req.onblocked = () => resolve(null);
     } catch {
@@ -44,12 +56,29 @@ function open(): Promise<IDBDatabase | null> {
   return dbPromise;
 }
 
-function tx<T>(store: string, mode: IDBTransactionMode, fn: (s: IDBObjectStore) => IDBRequest<T> | void): Promise<T | undefined> {
+/** Drops a connection the browser closed, if it is still the one in use, so the next call opens a new one. */
+function forget(db: IDBDatabase) {
+  if (current !== db) return;
+  current = null;
+  dbPromise = null;
+}
+
+function tx<T>(store: string, mode: IDBTransactionMode, fn: (s: IDBObjectStore) => IDBRequest<T> | void, retry = true): Promise<T | undefined> {
   return open().then(
     (db) =>
       new Promise((resolve, reject) => {
         if (!db) return resolve(undefined);
-        const t = db.transaction(store, mode);
+        let t: IDBTransaction;
+        try {
+          t = db.transaction(store, mode);
+        } catch (err) {
+          // "The database connection is closing": open it again once and carry on.
+          if (retry && (err as DOMException)?.name === "InvalidStateError") {
+            forget(db);
+            return void tx(store, mode, fn, false).then(resolve, reject);
+          }
+          return reject(err);
+        }
         const req = fn(t.objectStore(store));
         t.oncomplete = () => resolve(req ? req.result : undefined);
         t.onerror = () => reject(t.error);
