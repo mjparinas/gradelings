@@ -1,5 +1,6 @@
-import { describe, expect, it } from "vitest";
-import { arcadeFor, gameFits, gamesOpenedBetween, gameUnlocked, GAMES, getGame, hasFrenchOn } from "./arcade";
+import { afterEach, describe, expect, it } from "vitest";
+import { arcadeFor, gameFits, gamesOpenedBetween, gameUnlocked, GAMES, getGame, hasFrenchOn, subjectsOn } from "./arcade";
+import { setRemoteFlags } from "./remoteFlags";
 
 describe("the arcade's games", () => {
   it("keeps the five classic games open from the start, and the new ones behind a level", () => {
@@ -33,5 +34,25 @@ describe("the arcade's games", () => {
     expect(gamesOpenedBetween(3, 6, { grade: "3" }).map((g) => g.id)).toEqual(["clock", "coins", "tower"]);
     expect(gamesOpenedBetween(3, 6, { grade: "8", subjects: ["immersion"] }).map((g) => g.id)).toEqual(["bridge", "tower"]);
     expect(gamesOpenedBetween(6, 9, { grade: "3" })).toEqual([]);
+  });
+});
+
+describe("Word Bridge in Spanish", () => {
+  afterEach(() => setRemoteFlags({ flags: {}, variants: {} }));
+  const bridge = getGame("bridge")!;
+
+  it("shows to a child with Spanish on in Grades 3 to 9, in any curriculum, once Spanish is offered", () => {
+    expect(gameFits(bridge, { grade: "5", subjects: ["spanish"], framework: "us-wa" })).toBe(false);
+    setRemoteFlags({ flags: { spanish: true }, variants: {} });
+    expect(gameFits(bridge, { grade: "5", subjects: ["spanish"], framework: "us-wa" })).toBe(true);
+    expect(gameFits(bridge, { grade: "3", subjects: ["spanish"], framework: "ca-on" })).toBe(true);
+    // Spanish starts in Grade 3.
+    expect(gameFits(bridge, { grade: "2", subjects: ["spanish"], framework: "ca-bc" })).toBe(false);
+  });
+
+  it("hands the game only the subjects the child's curriculum and grade offer", () => {
+    setRemoteFlags({ flags: { spanish: true }, variants: {} });
+    expect(subjectsOn({ grade: "5", subjects: ["math", "core-french", "spanish"], framework: "us-wa" })).toEqual(["math", "spanish"]);
+    expect(subjectsOn({ grade: "2", subjects: ["math", "spanish"], framework: "us-wa" })).toEqual(["math"]);
   });
 });

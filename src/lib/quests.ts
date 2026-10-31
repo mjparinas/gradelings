@@ -38,6 +38,8 @@ const subjectsTried = (day: DayStat | undefined) => SUBJECTS.filter((s) => (day?
 export interface QuestOptions {
   /** The Story Library is on (its flag) and the child has language arts. */
   stories?: boolean;
+  /** The child has Spanish on and it is offered (Grades 3 to 9, flag on). Left out means no Spanish quest. */
+  spanish?: boolean;
 }
 
 function pool(band: AgeBand, opts: QuestOptions = {}): Quest[] {
@@ -89,6 +91,7 @@ function pool(band: AgeBand, opts: QuestOptions = {}): Quest[] {
     subjectQuest("science", band, n),
     subjectQuest("social", band, n),
     ...(little ? [] : SUBJECTS.map((s) => subjectQuest(s, band, 15, 30))),
+    ...(opts.spanish ? [subjectQuest("spanish", band, 5)] : []),
     { id: "daily", title: "Do the Daily Challenge", icon: "☀️", reward: 25, target: 1, progress: (day) => day?.modes.daily ?? 0 },
     { id: "adventure", title: "Play Adventure", icon: "🗺️", reward: 15, target: 1, progress: (day) => day?.modes.adventure ?? 0 },
     { id: "challenge", title: "Try a Challenge", icon: "🛡️", reward: 30, target: 1, progress: (day) => day?.modes.challenge ?? 0 },

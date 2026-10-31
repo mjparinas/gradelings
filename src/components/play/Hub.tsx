@@ -11,6 +11,7 @@ import { gameTime } from "@/lib/gametime";
 import { effectiveGoal } from "@/lib/goal";
 import { dayKey } from "@/lib/model";
 import { canUse, type Feature } from "@/lib/plan";
+import { subjectsOn } from "@/lib/arcade";
 import { dailyQuests, weekDays, weeklyQuests, weekStart, type Quest } from "@/lib/quests";
 import { nextUp } from "@/lib/nextup";
 import { levelInfo, unitLevel } from "@/lib/proficiency";
@@ -87,7 +88,8 @@ export function Hub() {
   const weak = weakest({ grade: profile.grade, framework: profile.framework, subjectGrades, derived: d, subjects }, 10).length;
   const dailyDone = d.dailyDone.includes(today);
   const stories = storiesFor(settings, isOn("story-library"));
-  const quests = dailyQuests(profile.id, today, band, { stories });
+  const spanish = subjectsOn({ grade: profile.grade, subjects: settings?.enabledSubjects, framework: profile.framework }).includes("spanish");
+  const quests = dailyQuests(profile.id, today, band, { stories, spanish });
   const claimed = d.questsClaimed[today] ?? [];
   const monday = weekStart(now);
   const weekly = weeklyQuests(profile.id, monday, band, { stories });

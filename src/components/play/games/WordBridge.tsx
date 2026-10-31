@@ -6,7 +6,7 @@ import { bridgeQuestion, type BridgeQuestion } from "./bridge";
 import { Hearts, questionSeconds, TimerBar, useCountdown, useNumberKeys, useRun } from "./kit";
 import type { GameProps } from "./types";
 
-// Word Bridge: pick the right French word before the timer runs out, and a plank goes down.
+// Word Bridge: pick the right French or Spanish word before the timer runs out, and a plank goes down.
 // Eight planks cross the river; then a new river.
 
 const PLANKS = 8;
@@ -43,7 +43,7 @@ export function WordBridge({ grade, band, subjects, onScore, onLevel, onOver }: 
     if (value === q.answer) {
       setPicked({ value, ok: true });
       setNote("");
-      speak(q.answer, undefined, "fr");
+      speak(q.answer, undefined, q.answerLang ?? "fr");
       run.win(10 + Math.round(left / 2), refs.current[value]);
       if (planks + 1 >= PLANKS) {
         run.bonus(30);
@@ -101,7 +101,7 @@ export function WordBridge({ grade, band, subjects, onScore, onLevel, onOver }: 
                 ref={(el) => {
                   refs.current[c] = el;
                 }}
-                lang="fr"
+                lang={q.answerLang ?? "fr"}
                 type="button"
                 data-state={state}
                 aria-keyshortcuts={String(i + 1)}

@@ -1,6 +1,7 @@
 import { getFramework } from "@/content/frameworks";
-import { languagesOf } from "@/content/subjects";
+import { languagesOf, subjectsOffered } from "@/content/subjects";
 import type { GradeId, SubjectId } from "@/content/types";
+import { isOn } from "./remoteFlags";
 
 // The arcade's games: what each one is, which grades it fits and the level that unlocks it.
 // Kept free of the store and content so public pages can list the games cheaply.
@@ -17,8 +18,8 @@ export interface GameInfo {
   unlockLevel?: number;
   /** Grades it has content for. Left out means every grade. */
   grades?: readonly GradeId[];
-  /** Only shown to a child with a French subject turned on. */
-  french?: boolean;
+  /** Only shown to a child with a second language (French or Spanish) turned on. */
+  language?: boolean;
 }
 
 const ALL: readonly GradeId[] = ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
@@ -33,7 +34,7 @@ export const GAMES: GameInfo[] = [
   { id: "map", title: "Map Dash", icon: "🗺️", subject: "Social Studies", desc: "Find the place on the map before the timer runs out.", colour: "#f2b233", dark: "#c98a0c", unlockLevel: 2 },
   { id: "timeline", title: "Timeline Snap", icon: "🧩", subject: "Order", desc: "Tap the cards in the right order.", colour: "#a78bfa", dark: "#7c5fd6", unlockLevel: 3 },
   { id: "clock", title: "Clock Catch", icon: "⏰", subject: "Math: time", desc: "Catch the clocks that show the right time.", colour: "#5ec7e8", dark: "#2a9cc0", unlockLevel: 4, grades: from("1", "4") },
-  { id: "bridge", title: "Word Bridge", icon: "🌉", subject: "French", desc: "Pick the right French word to build the bridge.", colour: "#ef7f8f", dark: "#c95466", unlockLevel: 4, french: true },
+  { id: "bridge", title: "Word Bridge", icon: "🌉", subject: "French or Spanish", desc: "Pick the right French or Spanish word to build the bridge.", colour: "#ef7f8f", dark: "#c95466", unlockLevel: 4, language: true },
   { id: "coins", title: "Coin Shop", icon: "🪙", subject: "Math: money", desc: "Pay the customer with the right coins.", colour: "#e6c84a", dark: "#b89a1c", unlockLevel: 5, grades: from("1", "5") },
   { id: "tower", title: "Equation Tower", icon: "⚖️", subject: "Math: equations", desc: "Pick the block that balances the scale.", colour: "#6fd08c", dark: "#3fa65f", unlockLevel: 6, grades: from("2") },
 ];
@@ -52,10 +53,19 @@ export interface ArcadeContext {
 
 export const hasFrenchOn = (subjects: readonly SubjectId[] = []) => languagesOf(subjects).includes("fr");
 
-/** Whether a game has content for this child (grade, and French turned on for French games). */
+/**
+ * The child's turned-on subjects that their curriculum and grade offer: a French subject left on from a curriculum
+ * without French doesn't count, nor Spanish outside Grades 3 to 9 or while its flag is off.
+ */
+export function subjectsOn(ctx: ArcadeContext): SubjectId[] {
+  const offered = subjectsOffered(getFramework(ctx.framework), ctx.grade, isOn);
+  return (ctx.subjects ?? []).filter((s) => offered.includes(s));
+}
+
+/** Whether a game has content for this child (grade, and French or Spanish turned on for Word Bridge). */
 export function gameFits(game: GameInfo, ctx: ArcadeContext): boolean {
   if (game.grades && !game.grades.includes(ctx.grade)) return false;
-  if (game.french && !hasFrenchOn(ctx.subjects?.filter((s) => getFramework(ctx.framework).subjects.includes(s)))) return false;
+  if (game.language && languagesOf(subjectsOn(ctx)).length === 0) return false;
   return true;
 }
 

@@ -27,6 +27,17 @@
         "fr_FR-siwis-medium.onnx": "641d1ab097da2b81128c076810edb052b385decc8be3381814802a64a73baf99",
         "fr_FR-siwis-medium.onnx.json": "39479916c2db192b5ac9764daddd0c744d83e023ad890c6976c0633ae4df8959"
       }
+    },
+    "es": {
+      "id": "es_MX-ald-medium",
+      "name": "Ald",
+      "credit": "Ald voice trained on the Ald Mexican Spanish speech dataset (public domain), fine-tuned from the davefx voice.",
+      "source": "https://huggingface.co/rhasspy/piper-voices/resolve/b4e358ffcb232591bf73a540e70f7de528e4174a/es/es_MX/ald/medium/",
+      "optional": true,
+      "files": {
+        "es_MX-ald-medium.onnx": "019b3803293c93e34a206dd2e53a3889209a514e786fd7144f7b70196c579b63",
+        "es_MX-ald-medium.onnx.json": "5a71498158e04afc8099bfd019c7e87c68eb9d042505a2b1a87e5c1ac2b1a61d"
+      }
     }
   }
 }

@@ -86,7 +86,21 @@ export function mergeCourses(lists: Course[][]): Course[] {
       order: { ...base.order, ...course.order },
     };
   }
-  return out.map(applyShares);
+  return out.map(applyShares).map(applyElsewhere);
+}
+
+/** Gives every framework a course's "elsewhere" Big Ideas and unit standards where it names none of its own (Spanish). */
+function applyElsewhere(course: Course): Course {
+  const ideas = course.bigIdeasElsewhere;
+  if (!ideas && !course.units.some((u) => u.standardElsewhere)) return course;
+  const fill = <T,>(own: Partial<Record<FrameworkId, T>>, value: T | undefined, missing: (v: T | undefined) => boolean) =>
+    value === undefined ? own : { ...Object.fromEntries(REGISTRY.filter((m) => missing(own[m.id])).map((m) => [m.id, value])), ...Object.fromEntries(Object.entries(own).filter(([, v]) => !missing(v as T))) };
+  return {
+    ...course,
+    // A framework that follows BC (Yukon) gets BC's Big Ideas, which are empty in a grade BC doesn't teach Spanish.
+    bigIdeas: fill(course.bigIdeas, ideas, (v) => !v?.length),
+    units: course.units.map((u) => (u.standardElsewhere ? { ...u, standards: fill(u.standards, u.standardElsewhere, (v) => !v) } : u)),
+  };
 }
 
 /** Joins two unit lists. A unit with the same id is the same unit, with the standards of every framework that uses it. */

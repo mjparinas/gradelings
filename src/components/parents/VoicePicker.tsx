@@ -1,5 +1,6 @@
 "use client";
 
+import { LANGUAGE_NAME } from "@/content/subjects";
 import { APP_NAME } from "@/lib/brand";
 import { getPiperState, PIPER_VOICES, piperSupported, setPiperEnabled, subscribePiper, type PiperState } from "@/lib/piper";
 import { useSyncExternalStore } from "react";
@@ -13,9 +14,11 @@ import {
   setVoicePreference,
   stopSpeaking,
   subscribeVoices,
+  type SpeechLanguage,
   type VoiceOption,
   type VoiceQuality,
 } from "@/lib/speech";
+import { useFlag } from "@/lib/remoteFlags";
 import { Disclosure } from "../Disclosure";
 import { SelectMenu } from "../SelectMenu";
 import { Panel } from "./common";
@@ -43,6 +46,10 @@ const ACCENT: Record<string, string> = {
   "fr-FR": "French (France)",
   "fr-BE": "Belgian French",
   "fr-CH": "Swiss French",
+  "es-MX": "Mexican Spanish",
+  "es-US": "US Spanish",
+  "es-419": "Latin American Spanish",
+  "es-ES": "Spanish (Spain)",
 };
 
 /** "Microsoft Aria Online (Natural) - English (United States)" → "Aria". */
@@ -51,8 +58,8 @@ function shortName(name: string): string {
     .replace(/^Microsoft\s+/i, "")
     .replace(/\s+Online/i, "")
     .replace(/\s*\((Natural|Premium|Enhanced)\)/i, "")
-    .replace(/\s+-\s+(English|French|français).*$/i, "")
-    .replace(/\s*\((English|French|français).*\)$/i, "")
+    .replace(/\s+-\s+(English|French|français|Spanish|español).*$/i, "")
+    .replace(/\s*\((English|French|français|Spanish|español).*\)$/i, "")
     .trim();
 }
 
@@ -120,6 +127,8 @@ function CurrentVoice({ current }: { current: VoiceOption | undefined }) {
 export function VoicePicker() {
   const options = useSyncExternalStore(subscribeVoices, getVoiceOptions, () => NONE);
   const preferred = useSyncExternalStore(subscribeVoices, getVoicePreference, () => null);
+  // The Spanish voice section appears once Spanish is offered (flag "spanish").
+  const spanish = useFlag("spanish");
   const offline = typeof navigator !== "undefined" && navigator.onLine === false;
   const best = chooseVoice(options, null, offline);
   const current = chooseVoice(options, preferred, offline);
@@ -170,37 +179,45 @@ export function VoicePicker() {
               <Tips open={best?.quality === "basic" || best?.quality === "standard"} />
             </div>
           )}
-          {canSpeak() && <FrenchVoice />}
+          {canSpeak() && <SecondVoice language="fr" />}
+          {canSpeak() && spanish && <SecondVoice language="es" />}
         </div>
       </Disclosure>
     </Panel>
   );
 }
 
-/** The voice for French Immersion and Core French questions. Separate from the English voice because every voice speaks one language. */
-function FrenchVoice() {
-  const options = useSyncExternalStore((l) => subscribeVoices(l), () => getVoiceOptions("fr"), () => NONE);
-  const preferred = useSyncExternalStore(subscribeVoices, () => getVoicePreference("fr"), () => null);
+// What to look for in a device's speech settings, per language.
+const ADD_VOICE: Record<Exclude<SpeechLanguage, "en">, string> = { fr: "French, ideally Canadian French", es: "Spanish, ideally Mexican or Latin American Spanish" };
+
+/**
+ * The voice for French (Immersion and Core French) or Spanish questions. Separate from the English voice because
+ * every voice speaks one language.
+ */
+function SecondVoice({ language }: { language: Exclude<SpeechLanguage, "en"> }) {
+  const name = LANGUAGE_NAME[language];
+  const options = useSyncExternalStore((l) => subscribeVoices(l), () => getVoiceOptions(language), () => NONE);
+  const preferred = useSyncExternalStore(subscribeVoices, () => getVoicePreference(language), () => null);
   const offline = typeof navigator !== "undefined" && navigator.onLine === false;
   const best = chooseVoice(options, null, offline);
   const current = chooseVoice(options, preferred, offline);
   return (
     <div className="mt-5 flex flex-col gap-3 border-t border-line pt-4">
-      <h3 className="text-lg font-bold">French voice</h3>
-      <PiperVoice language="fr" />
+      <h3 className="text-lg font-bold">{name} voice</h3>
+      <PiperVoice language={language} />
       {options.length === 0 ? (
         <p className="text-sm text-ink-soft">
-          No French voices found on this device yet, so French lessons will be read in an English voice. Add a French voice in your device&apos;s speech settings
-          (the same place as the English tips above, but choose French, ideally Canadian French), then reopen {APP_NAME}.
+          No {name} voices found on this device yet, so {name} lessons will be read in an English voice. Add a {name} voice in your device&apos;s speech settings
+          (the same place as the English tips above, but choose {ADD_VOICE[language]}), then reopen {APP_NAME}.
         </p>
       ) : (
         <>
           <SelectMenu
-            label="Voice for French lessons"
+            label={`Voice for ${name} lessons`}
             value={preferred && options.some((o) => o.uri === preferred) ? preferred : ""}
             onChange={(next) => {
               stopSpeaking();
-              setVoicePreference(next || null, "fr");
+              setVoicePreference(next || null, language);
             }}
             options={[
               { value: "", label: `Automatic: ${best ? describe(best) : "best available"}` },
@@ -208,8 +225,8 @@ function FrenchVoice() {
             ]}
           />
           <div className="flex flex-wrap items-center gap-3">
-            <button type="button" className="rounded-xl bg-[#4f8ef7] px-4 py-2.5 font-bold text-[#0f172a]" onClick={() => previewVoice(preferred, "fr")}>
-              ▶ Preview French
+            <button type="button" className="rounded-xl bg-[#4f8ef7] px-4 py-2.5 font-bold text-[#0f172a]" onClick={() => previewVoice(preferred, language)}>
+              ▶ Preview {name}
             </button>
             {current && (
               <span className={`rounded-full px-3 py-1 text-sm font-semibold ${QUALITY[current.quality].className}`}>
