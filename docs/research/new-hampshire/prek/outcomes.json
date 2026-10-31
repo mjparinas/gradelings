@@ -1,0 +1,414 @@
+{
+ "pk/math": [
+  {
+   "idx": "Numeracy 1.1.7a",
+   "text": "Four- and Five-Year-Olds: Develop progressively more complex knowledge and skills about numbers, in the following sequence*:"
+  },
+  {
+   "idx": "Numeracy 1.1.7b",
+   "text": "Four- and Five-Year-Olds: Identify by sight how many are in a small group of up to 3 items"
+  },
+  {
+   "idx": "Numeracy 1.1.7c",
+   "text": "Four- and Five-Year-Olds: Demonstrate understanding of one-to-one correspondence"
+  },
+  {
+   "idx": "Numeracy 1.1.7d",
+   "text": "Four- and Five-Year-Olds: Recognize that the last number used in counting is the same as the total (E.g. Leila counts four cars and when the teacher asks her, “How many cars do you have?” she answers, “Four.”)"
+  },
+  {
+   "idx": "Numeracy 1.1.7e",
+   "text": "Four- and Five-Year-Olds: Count objects in two different collections (up to ten in each) to determine which is the larger one"
+  },
+  {
+   "idx": "Numeracy 1.1.7f",
+   "text": "Four- and Five-Year-Olds: Can answer the question “What comes after...” a number without having to recount (E.g. When asked, “What comes after five,” Sawyer says, “Six,” without having to count up from one.)"
+  },
+  {
+   "idx": "Numeracy 1.1.7g",
+   "text": "Four- and Five-Year-Olds: Change small collections of objects by combining or removing objects and then counting to determine how many they have (E.g. Avery counts out three blocks, then adds two more, and counts all of the blocks and says, “I have five blocks.”)"
+  },
+  {
+   "idx": "Numeracy 1.1.7h",
+   "text": "Four- and Five-Year-Olds: *While many children move through all of the steps of this sequence by five years old, others may still be only partially through this sequence by that age."
+  },
+  {
+   "idx": "Numeracy 1.1.7i",
+   "text": "Four- and Five-Year-Olds: Begin to recognize and attempt to write numerals up to 10"
+  },
+  {
+   "idx": "Numeracy 2.1.7a",
+   "text": "Four- and Five-Year-Olds: Use words that show understanding of order and position of objects"
+  },
+  {
+   "idx": "Numeracy 2.1.7b",
+   "text": "Four- and Five-Year-Olds: Identify and name common shapes"
+  },
+  {
+   "idx": "Numeracy 2.1.7c",
+   "text": "Four- and Five-Year-Olds: Describes basic features of shapes (E.g. Finnley says, “This triangle has three sides and this square has four sides.”)"
+  },
+  {
+   "idx": "Numeracy 2.1.7d",
+   "text": "Four- and Five-Year-Olds: Compare the shape of two objects (E.g. Reanna draws two round shapes and says, “This one is an oval and this one is a circle.”)"
+  },
+  {
+   "idx": "Numeracy 3.1.7a",
+   "text": "Four- and Five-Year-Olds: Recognize that objects can be measured by height, length, weight, and volume (E.g. Palo makes a stack of unifix cubes next to his friend and says, “You’re 40 cubes tall.”)"
+  },
+  {
+   "idx": "Numeracy 3.1.7b",
+   "text": "Four- and Five-Year-Olds: Make comparison such as bigger or smaller between two groups of objects"
+  },
+  {
+   "idx": "Numeracy 3.1.7c",
+   "text": "Four- and Five-Year-Olds: Recognize that time is measured in units (E.g. John asks how many more minutes he can stay outside.)"
+  },
+  {
+   "idx": "Numeracy 4.1.7a",
+   "text": "Four- and Five-Year-Olds: Order or sequence several objects based on one characteristic"
+  },
+  {
+   "idx": "Numeracy 4.1.7b",
+   "text": "Four- and Five-Year-Olds: Begin creating simple patterns with familiar objects (E.g. Max places the blocks in rows of long, short, long, short, etc.)"
+  },
+  {
+   "idx": "Numeracy 5.1.7a",
+   "text": "Four- and Five-Year-Olds: Sort objects and count and compare the groups formed (E.g. Carlo says, “There are 3 brown teddy bears and 4 black teddy bears.”"
+  },
+  {
+   "idx": "Numeracy 5.1.7b",
+   "text": "Four- and Five-Year-Olds: Organize and represent information visually, with adult support (E.g. The teacher helps the preschoolers create a picture graph showing the numbers of children who walked to school or rode in a car.)"
+  },
+  {
+   "idx": "Numeracy 6.1.7",
+   "text": "Four- and Five-Year-Olds: Begin to differentiate between yesterday, today, and tomorrow"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "Language 1.1.7a",
+   "text": "Four- and Five-Year-Olds: Listen with understanding to stories, directions, and conversations"
+  },
+  {
+   "idx": "Language 1.1.7b",
+   "text": "Four- and Five-Year-Olds: Follow instructions that include a two or three step sequence of actions such as setting up a game or following a recipe"
+  },
+  {
+   "idx": "Language 2.1.7a",
+   "text": "Four- and Five-Year-Olds: Understand non-verbal cues"
+  },
+  {
+   "idx": "Language 2.1.7b",
+   "text": "Four- and Five-Year-Olds: Communicate needs, wants, or thoughts using nonverbal gestures, actions, or expressions (E.g. 5-year-old Devin points to the block area when he is asked what he wants to do next.)"
+  },
+  {
+   "idx": "Language 3.1.7a",
+   "text": "Four- and Five-Year-Olds: Use language according to rules appropriate for the cultural context (may need adult help in recognizing appropriate cultural context) (E.g. 4-year-old Savannah asks her peer, “Can I please have the purple crayon?”)"
+  },
+  {
+   "idx": "Language 3.1.7b",
+   "text": "Four- and Five-Year-Olds: With adult support, can take turns in conversations and group discussions"
+  },
+  {
+   "idx": "Language 4.1.7a",
+   "text": "Four- and Five-Year-Olds: Use increasingly complex and varied vocabulary and language"
+  },
+  {
+   "idx": "Language 4.1.7b",
+   "text": "Four- and Five-Year-Olds: Use words and phrases learned through conversations and being read to (E.g. 4-year-old Hazel says, “The end”, when she finishes her snack.)"
+  },
+  {
+   "idx": "Language 4.2.7a",
+   "text": "Four- and Five-Year-Olds: Speak clearly enough to be understood"
+  },
+  {
+   "idx": "Language 4.2.7b",
+   "text": "Four- and Five-Year-Olds: Use language for a variety of purposes, including communicating information (E.g. 5-year-old Sean shows his friends his new race car and they ask him questions about it and tell him stories about theirs.)"
+  },
+  {
+   "idx": "Language 4.2.7c",
+   "text": "Four- and Five-Year-Olds: Ask questions and initiate and respond in conversations with others"
+  },
+  {
+   "idx": "Language 4.2.7d",
+   "text": "Four- and Five-Year-Olds: Tell stories with multiple characters and events"
+  },
+  {
+   "idx": "Language 5.1.7a",
+   "text": "Four- and Five-Year-Olds: Learn new information from books being read to them"
+  },
+  {
+   "idx": "Language 5.1.7b",
+   "text": "Four- and Five-Year-Olds: Ask for a story to be read and respond to stories told or read aloud"
+  },
+  {
+   "idx": "Language 5.1.7c",
+   "text": "Four- and Five-Year-Olds: Respond to adult questions about a book or story"
+  },
+  {
+   "idx": "Language 5.1.7d",
+   "text": "Four- and Five-Year-Olds: Ask questions about a book or story"
+  },
+  {
+   "idx": "Language 5.1.7e",
+   "text": "Four- and Five-Year-Olds: Make connections between a book or story to personal experiences (E.g. Irena points to a picture of a dog and says, “I have a dog like this, only bigger and my dog never chews shoes”.)"
+  },
+  {
+   "idx": "Language 5.2.7a",
+   "text": "Four- and Five-Year-Olds: Guess what will happen next in a story using pictures as a guide"
+  },
+  {
+   "idx": "Language 5.2.7b",
+   "text": "Four- and Five-Year-Olds: Tell their own stories"
+  },
+  {
+   "idx": "Language 5.3.7a",
+   "text": "Four- and Five-Year-Olds: Represent stories told or read aloud through a variety of media or in play"
+  },
+  {
+   "idx": "Language 5.3.7b",
+   "text": "Four- and Five-Year-Olds: Use their own words to retell a simple familiar story while looking at a book"
+  },
+  {
+   "idx": "Language 5.3.7c",
+   "text": "Four- and Five-Year-Olds: Retell information from a book (E.g. 5 year old Mac tells his Papa that Tyrannosaurus Rex runs as fast as a horse.)"
+  },
+  {
+   "idx": "Language 5.4.7a",
+   "text": "Four- and Five-Year-Olds: Select favorite books, authors, or illustrators"
+  },
+  {
+   "idx": "Language 5.4.7b",
+   "text": "Four- and Five-Year-Olds: Request or respond to informational books on favorite topics"
+  },
+  {
+   "idx": "Language 5.5.7a",
+   "text": "Four- and Five-Year-Olds: Listen to and recognize different sounds in rhymes, songs, and familiar words (E.g. When the teacher sings, “Willaby wallaby Wecca an elephant sat on...”, Becca shouts, “Becca!”)"
+  },
+  {
+   "idx": "Language 5.5.7b",
+   "text": "Four- and Five-Year-Olds: Play with sounds of spoken language including letter sounds, rhymes, and words (E.g. Ray says, “My name rhymes with play.”)"
+  },
+  {
+   "idx": "Language 5.5.7c",
+   "text": "Four- and Five-Year-Olds: Can distinguish the beginning sounds of some words"
+  },
+  {
+   "idx": "Language 5.6.7a",
+   "text": "Four- and Five-Year-Olds: Identify parts of books such as cover, first page, and title"
+  },
+  {
+   "idx": "Language 5.6.7b",
+   "text": "Four- and Five-Year-Olds: Understand that print carries a message"
+  },
+  {
+   "idx": "Language 6.1.7a",
+   "text": "Four- and Five-Year-Olds: Recognize some letters in the alphabet, especially those in their own name (E.g. While putting her things away in her cubby, 4-year-old Azlyn notices other children’s names on their cubbies. She exclaims,“Hey, Autumn starts the same as me!”)"
+  },
+  {
+   "idx": "Language 6.1.7b",
+   "text": "Four- and Five-Year-Olds: Begin to associate sounds with words or letters"
+  },
+  {
+   "idx": "Language 6.1.7c",
+   "text": "Four- and Five-Year-Olds: Understand that specific symbols are used to communicate in writing"
+  },
+  {
+   "idx": "Language 6.2.7a",
+   "text": "Four- and Five-Year-Olds: Understand that writing is a way of communicating"
+  },
+  {
+   "idx": "Language 6.2.7b",
+   "text": "Four- and Five-Year-Olds: Use scribbles, shapes, pictures, or dictation to represent thoughts or ideas"
+  },
+  {
+   "idx": "Language 6.2.7c",
+   "text": "Four- and Five-Year-Olds: Engage in writing using letter-like symbols to make letters or words"
+  },
+  {
+   "idx": "Language 6.2.7d",
+   "text": "Four- and Five-Year-Olds: Begin to copy or write their own name"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "Cognition 2.1.7a",
+   "text": "Four- and Five-Year-Olds: Begin to identify the properties of various living things and what living things need to be able to survive"
+  },
+  {
+   "idx": "Cognition 2.1.7b",
+   "text": "Begin to talk about environmental changes and phenomena (weather, seasons, sun, and moon)"
+  },
+  {
+   "idx": "Cognition 2.1.7c",
+   "text": "Show interest in caring for the earth and environment"
+  },
+  {
+   "idx": "Cognition 2.1.7d",
+   "text": "Explore simple physical science concepts such as force, motion, and gravity (E.g. Three children in the preschool room build an elaborate structure with blocks and ramps and then run different marbles through it to see which is the fastest.)"
+  },
+  {
+   "idx": "Approaches 1.1.7a",
+   "text": "Four- and Five-Year-Olds: Observe, wonder, and/or ask questions, make guesses, and explore hypotheses"
+  },
+  {
+   "idx": "Approaches 1.1.7b",
+   "text": "Four- and Five-Year-Olds: Use senses and tools/technology to aid in investigation"
+  },
+  {
+   "idx": "Approaches 1.2.7a",
+   "text": "Four- and Five-Year-Olds: Sometimes use magical thinking, showing misunderstanding of cause and effect (E.g. Zeke puts his snow pants by the front door, believing that this will make it snow overnight.)"
+  },
+  {
+   "idx": "Approaches 1.2.7b",
+   "text": "Four- and Five-Year-Olds: Continue to experiment with cause and effect"
+  },
+  {
+   "idx": "Approaches 1.2.7c",
+   "text": "Four- and Five-Year-Olds: Engage in repeated actions to make something happen (E.g. Dannie notices that Marie buttons her own coat, so Dannie tries several methods before succeeding in buttoning her own coat.)"
+  },
+  {
+   "idx": "Approaches 2.1.7a",
+   "text": "Four- and Five-Year-Olds: Talk about own ideas, predictions, and plans, building on prior experiences either self-initiated or guided by adults"
+  },
+  {
+   "idx": "Approaches 2.1.7b",
+   "text": "Four- and Five-Year-Olds: Can figure out more than one solution to a problem if the first one doesn’t work (E.g. In trying to get a ball down from the tree, Marlow first throws a shoe to get it down and when that doesn’t work, gets a rake to try to poke it down.)"
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "Numeracy 6.1.7",
+   "text": "Four- and Five-Year-Olds: Begin to differentiate between yesterday, today, and tomorrow"
+  },
+  {
+   "idx": "Cognition 2.1.7a",
+   "text": "Four- and Five-Year-Olds: Begin to identify the properties of various living things and what living things need to be able to survive"
+  },
+  {
+   "idx": "Cognition 2.1.7b",
+   "text": "Begin to talk about environmental changes and phenomena (weather, seasons, sun, and moon)"
+  },
+  {
+   "idx": "Cognition 2.1.7c",
+   "text": "Show interest in caring for the earth and environment"
+  },
+  {
+   "idx": "Cognition 2.1.7d",
+   "text": "Explore simple physical science concepts such as force, motion, and gravity (E.g. Three children in the preschool room build an elaborate structure with blocks and ramps and then run different marbles through it to see which is the fastest.)"
+  },
+  {
+   "idx": "Cognition 3.1.7a",
+   "text": "Four- and Five-Year-Olds: Show interest in caring for the classroom environment"
+  },
+  {
+   "idx": "Cognition 3.1.7b",
+   "text": "Four- and Five-Year-Olds: Participate in developing classroom rules"
+  },
+  {
+   "idx": "Cognition 3.1.7c",
+   "text": "Four- and Five-Year-Olds: Practice culturally appropriate social conventions (E.g. Satori uses chopsticks when eating meals at home.)"
+  },
+  {
+   "idx": "Cognition 3.1.7d",
+   "text": "Four- and Five-Year-Olds: With guidance from adults, can engage in problem-solving to resolve difference in perspectives"
+  },
+  {
+   "idx": "Cognition 3.2.7a",
+   "text": "Four- and Five-Year-Olds: Know basic personal information"
+  },
+  {
+   "idx": "Cognition 3.2.7b",
+   "text": "Four- and Five-Year-Olds: Are aware of own family relationships and show curiosity about others’ families"
+  },
+  {
+   "idx": "Cognition 3.2.7c",
+   "text": "Four- and Five-Year-Olds: Notice similarities and differences in people, families, and social groups"
+  },
+  {
+   "idx": "Cognition 3.2.7d",
+   "text": "Four- and Five-Year-Olds: Recognize some people, places, and occupations in their communities"
+  },
+  {
+   "idx": "Cognition 3.2.7e",
+   "text": "Four- and Five-Year-Olds: Act out family roles and occupations in dramatic play"
+  },
+  {
+   "idx": "Cognition 3.2.7f",
+   "text": "Four- and Five-Year-Olds: Show interest in issues of friendship and fairness"
+  },
+  {
+   "idx": "Social-Emotional 1.1.7a",
+   "text": "Four- and Five-Year-Olds: Continue to seek adult attention and recognition of what they know and can do"
+  },
+  {
+   "idx": "Social-Emotional 1.1.7b",
+   "text": "Boast about what they know and can do (E.g. Quinn says, “I am really good at drawing rainbows.”)"
+  },
+  {
+   "idx": "Social-Emotional 1.2.7",
+   "text": "Four- and Five-Year-Olds: Are confident, self-directed, purposeful and inventive in play"
+  },
+  {
+   "idx": "Social-Emotional 1.3.7a",
+   "text": "Four- and Five-Year-Olds: Notice differences and make comparisons between their physical characteristics and others’ and the way things are done in different settings (E.g. Consuela says “My abuela talks Spanish and my grandma talks English.”)"
+  },
+  {
+   "idx": "Social-Emotional 1.3.7b",
+   "text": "Four- and Five-Year-Olds: Express or describe their own characteristics and preferences (E.g. Jacob only chooses brown sweatpants when clothes shopping with his mother.)"
+  },
+  {
+   "idx": "Social-Emotional 2.1.7a",
+   "text": "Four- and Five-Year-Olds: Interact easily with familiar adults, but may be hesitant to approach or respond to less familiar adults"
+  },
+  {
+   "idx": "Social-Emotional 2.1.7b",
+   "text": "Four- and Five-Year-Olds: Seek adult help when needed for emotional support, physical assistance, social interaction, and approval"
+  },
+  {
+   "idx": "Social-Emotional 2.1.7c",
+   "text": "Four- and Five-Year-Olds: Imitate familiar adults in culturally appropriate ways in everyday situations"
+  },
+  {
+   "idx": "Social-Emotional 3.1.7a",
+   "text": "Four- and Five-Year-Olds: Approach others with expectations of positive interactions"
+  },
+  {
+   "idx": "Social-Emotional 3.1.7b",
+   "text": "Four- and Five-Year-Olds: Build skills needed to participate successfully as a member of a group, such as taking turns"
+  },
+  {
+   "idx": "Social-Emotional 3.1.7c",
+   "text": "Four- and Five-Year-Olds: Sustain interaction by cooperating, helping, sharing, and expressing interest, though they may need adult guidance"
+  },
+  {
+   "idx": "Social-Emotional 3.1.7d",
+   "text": "Four- and Five-Year-Olds: Develop friendships, sometimes based on shared interests or characteristics"
+  },
+  {
+   "idx": "Social-Emotional 3.2.7",
+   "text": "Four- and Five-Year-Olds: Begin to understand the reasons for others’ emotions and respond appropriately (E.g. Audrey says to a friend who is upset over not getting the toy she wanted during play, “You’ll get to play with it next time.”)"
+  },
+  {
+   "idx": "Social-Emotional 3.3.7",
+   "text": "Four- and Five-Year-Olds: Begin to be able to stop undesirable behaviors on their own or with a gentle reminder (E.g. Xavier starts to grab Zach’s car, but stops himself and asks, “Can I use that when you’re done?”)"
+  },
+  {
+   "idx": "Social-Emotional 4.1.7a",
+   "text": "Four- and Five-Year-Olds: Demonstrate increasing competencies in recognizing and describing their own emotions"
+  },
+  {
+   "idx": "Social-Emotional 4.1.7b",
+   "text": "Four- and Five-Year-Olds: Explore emotions in various ways (through play, art, music, and dance)"
+  },
+  {
+   "idx": "Social-Emotional 4.2.7a",
+   "text": "Four- and Five-Year-Olds: May still have difficulty regulating strong emotions"
+  },
+  {
+   "idx": "Social-Emotional 4.2.7b",
+   "text": "Four- and Five-Year-Olds: Increasingly use words instead of actions to express their emotions"
+  }
+ ]
+}

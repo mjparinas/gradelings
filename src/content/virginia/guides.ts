@@ -164,6 +164,10 @@ export const VIRGINIA_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "The Virginia Preschool Initiative funds a pre-K year for four-year-olds in public schools and community programs. It follows Virginia's Early Learning and Development Standards (2021).",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in Virginia is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start joining and separating groups within 10. In history and social science they learn about Virginia's holidays, the American and Virginia flags, Virginia's earliest communities and maps. Teachers check early skills with the Virginia Kindergarten Readiness Program and reading with a short screener.",
       lookFor: "Many Virginia school divisions use standards-based report cards. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

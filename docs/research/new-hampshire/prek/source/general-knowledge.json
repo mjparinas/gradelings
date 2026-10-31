@@ -1,0 +1,817 @@
+{
+ "data": {
+  "cspStatus": {
+   "notes": null,
+   "value": "visible"
+  },
+  "document": {
+   "publicationStatus": "Published",
+   "sourceURL": "https://www.nh-connections.org/wp-content/uploads/2022/09/NH-Early-Learning-Standards.pdf",
+   "title": "NH-Early-Learning-Standards"
+  },
+  "educationLevels": [
+   "Pre-K"
+  ],
+  "id": "13285EF7811D4DE5A262BDE1ACFC215E",
+  "jurisdiction": {
+   "id": "46115D815A5E41C185AAE63E7B3E4F83",
+   "title": "New Hampshire"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/4.0/us/",
+   "rightsHolder": "Common Curriculum, Inc.",
+   "title": "CC BY 4.0 US"
+  },
+  "normalizedSubject": null,
+  "standards": {
+   "040DFA82C6DB4E35927E937A913C9A15": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2631E74CDA334AE1A6CDB7B86A9A48AD",
+     "BD3FC1D1F91946D0B8B40601F0843A10"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Nine Months to\nEighteen Months\n: Use culturally appropriate labels\r\nfor people and relationships in\r\ntheir family",
+    "id": "040DFA82C6DB4E35927E937A913C9A15",
+    "listId": "2",
+    "parentId": "2631E74CDA334AE1A6CDB7B86A9A48AD",
+    "position": 26000,
+    "statementLabel": null,
+    "statementNotation": "3.1.2"
+   },
+   "0D53BC4D49E54092954B5171E8C7EDE7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1E8F5AF09194432283972E001FD0F4E0",
+     "8500AC13A877409C9983221EA767F858"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Thirty Months to\nThree Years: Enjoy hiding games",
+    "id": "0D53BC4D49E54092954B5171E8C7EDE7",
+    "listId": "5",
+    "parentId": "1E8F5AF09194432283972E001FD0F4E0",
+    "position": 7000,
+    "statementLabel": null,
+    "statementNotation": "1.1.5"
+   },
+   "0DA3445DA8E740389D17A8A933B1BA02": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EED66631F5BD4E44807BCB96AD00A5DF",
+     "1AE21280642B4D8E8752C41339297CD0"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Nine Months to\nEighteen Months\n: Through trial and error, begin\r\nto develop an understanding\r\nof some basic physical science\r\nconcepts such as gravity, force,\r\nand motion. (E.g. Penelope\r\nrepeatedly drops her cup off the\r\nhigh chair and watches it fall to\r\nthe floor.)",
+    "id": "0DA3445DA8E740389D17A8A933B1BA02",
+    "listId": "2",
+    "parentId": "EED66631F5BD4E44807BCB96AD00A5DF",
+    "position": 14000,
+    "statementLabel": null,
+    "statementNotation": "2.1.2"
+   },
+   "0F709448A9DA461BA071AF438514ECE1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2631E74CDA334AE1A6CDB7B86A9A48AD",
+     "BD3FC1D1F91946D0B8B40601F0843A10"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Eighteen to\nTwenty-Four Months: Recognize that there are\r\nroutines and may test the\r\nexpectations",
+    "id": "0F709448A9DA461BA071AF438514ECE1",
+    "listId": "3",
+    "parentId": "2631E74CDA334AE1A6CDB7B86A9A48AD",
+    "position": 27000,
+    "statementLabel": null,
+    "statementNotation": "3.1.3"
+   },
+   "105C4C674A644804875CC924A058F8BC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EED66631F5BD4E44807BCB96AD00A5DF",
+     "1AE21280642B4D8E8752C41339297CD0"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Birth to\nNine Months: Explore objects in various ways\r\nusing their senses",
+    "id": "105C4C674A644804875CC924A058F8BC",
+    "listId": "1",
+    "parentId": "EED66631F5BD4E44807BCB96AD00A5DF",
+    "position": 13000,
+    "statementLabel": null,
+    "statementNotation": "2.1.1"
+   },
+   "1AE21280642B4D8E8752C41339297CD0": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Exploring the Physical World",
+    "id": "1AE21280642B4D8E8752C41339297CD0",
+    "listId": "2",
+    "parentId": null,
+    "position": 11000,
+    "statementLabel": null,
+    "statementNotation": "2"
+   },
+   "1E8F5AF09194432283972E001FD0F4E0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8500AC13A877409C9983221EA767F858"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Object\r\npermanence",
+    "id": "1E8F5AF09194432283972E001FD0F4E0",
+    "listId": "1",
+    "parentId": "8500AC13A877409C9983221EA767F858",
+    "position": 2000,
+    "statementLabel": null,
+    "statementNotation": "1.1"
+   },
+   "1F61CAF3133D4054AD63805D5353B7FA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ECD1B7124AC443A1A7FFEC56A3A38157",
+     "BD3FC1D1F91946D0B8B40601F0843A10"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Twenty-Four to\nThirty Months: May sort items or toys into\r\n“families” and label with\r\ndifferent roles in their own terms",
+    "id": "1F61CAF3133D4054AD63805D5353B7FA",
+    "listId": "4",
+    "parentId": "ECD1B7124AC443A1A7FFEC56A3A38157",
+    "position": 39000,
+    "statementLabel": null,
+    "statementNotation": "3.2.4"
+   },
+   "1FE602C3A84A48D299CFA9847F119EA7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EED66631F5BD4E44807BCB96AD00A5DF",
+     "1AE21280642B4D8E8752C41339297CD0"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Explore simple physical science concepts such as force, motion, and gravity\r\n(E.g. Three children in the preschool room build an elaborate structure with blocks\r\nand ramps and then run different marbles through it to see which is the fastest.)",
+    "id": "1FE602C3A84A48D299CFA9847F119EA7",
+    "listId": "7d",
+    "parentId": "EED66631F5BD4E44807BCB96AD00A5DF",
+    "position": 22000,
+    "statementLabel": null,
+    "statementNotation": "2.1.7d"
+   },
+   "2631E74CDA334AE1A6CDB7B86A9A48AD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BD3FC1D1F91946D0B8B40601F0843A10"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Social\r\nconventions",
+    "id": "2631E74CDA334AE1A6CDB7B86A9A48AD",
+    "listId": "1",
+    "parentId": "BD3FC1D1F91946D0B8B40601F0843A10",
+    "position": 24000,
+    "statementLabel": null,
+    "statementNotation": "3.1"
+   },
+   "2635D25E5DC2453695762C252911D85F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2631E74CDA334AE1A6CDB7B86A9A48AD",
+     "BD3FC1D1F91946D0B8B40601F0843A10"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: With guidance from adults, can engage in problem-solving to resolve difference\r\nin perspectives",
+    "id": "2635D25E5DC2453695762C252911D85F",
+    "listId": "7d",
+    "parentId": "2631E74CDA334AE1A6CDB7B86A9A48AD",
+    "position": 34000,
+    "statementLabel": null,
+    "statementNotation": "3.1.7d"
+   },
+   "2F4076EEA9694B899D5AB2CB4E8C9110": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1E8F5AF09194432283972E001FD0F4E0",
+     "8500AC13A877409C9983221EA767F858"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Three Years: Play simple memory games",
+    "id": "2F4076EEA9694B899D5AB2CB4E8C9110",
+    "listId": "6",
+    "parentId": "1E8F5AF09194432283972E001FD0F4E0",
+    "position": 8000,
+    "statementLabel": null,
+    "statementNotation": "1.1.6"
+   },
+   "4951697716554898BBEDC3B5983C6561": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2631E74CDA334AE1A6CDB7B86A9A48AD",
+     "BD3FC1D1F91946D0B8B40601F0843A10"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds:  Practice culturally appropriate social conventions (E.g. Satori uses chopsticks\r\nwhen eating meals at home.)",
+    "id": "4951697716554898BBEDC3B5983C6561",
+    "listId": "7c",
+    "parentId": "2631E74CDA334AE1A6CDB7B86A9A48AD",
+    "position": 33000,
+    "statementLabel": null,
+    "statementNotation": "3.1.7c"
+   },
+   "4BFC2D9CF825445A803743F55A5D2A44": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ECD1B7124AC443A1A7FFEC56A3A38157",
+     "BD3FC1D1F91946D0B8B40601F0843A10"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Eighteen to\nTwenty-Four Months: Identify family members of other\r\nchildren in their class\r",
+    "id": "4BFC2D9CF825445A803743F55A5D2A44",
+    "listId": "3",
+    "parentId": "ECD1B7124AC443A1A7FFEC56A3A38157",
+    "position": 38000,
+    "statementLabel": null,
+    "statementNotation": "3.2.3"
+   },
+   "4C9E248116D344F9BCF106F2000E5098": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2631E74CDA334AE1A6CDB7B86A9A48AD",
+     "BD3FC1D1F91946D0B8B40601F0843A10"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Three Years: Demonstrate and follow\r\ndifferent customs in different\r\nsettings",
+    "id": "4C9E248116D344F9BCF106F2000E5098",
+    "listId": "6",
+    "parentId": "2631E74CDA334AE1A6CDB7B86A9A48AD",
+    "position": 30000,
+    "statementLabel": null,
+    "statementNotation": "3.1.6"
+   },
+   "4CD06DBB7ADE4DF1BDDE12838648F382": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EED66631F5BD4E44807BCB96AD00A5DF",
+     "1AE21280642B4D8E8752C41339297CD0"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Thirty Months to\nThree Years: Focus on small details in indoor\r\nand outdoor environment\r\n(E.g. Esme lays on the grass\r\nand watches an ant move.)",
+    "id": "4CD06DBB7ADE4DF1BDDE12838648F382",
+    "listId": "5",
+    "parentId": "EED66631F5BD4E44807BCB96AD00A5DF",
+    "position": 17000,
+    "statementLabel": null,
+    "statementNotation": "2.1.5"
+   },
+   "577CBB1A80614AEBBC24DFB851CB40CD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1E8F5AF09194432283972E001FD0F4E0",
+     "8500AC13A877409C9983221EA767F858"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Twenty-Four to\nThirty Months: Ask for people or things that are\r\nnot in sight",
+    "id": "577CBB1A80614AEBBC24DFB851CB40CD",
+    "listId": "4",
+    "parentId": "1E8F5AF09194432283972E001FD0F4E0",
+    "position": 6000,
+    "statementLabel": null,
+    "statementNotation": "1.1.4"
+   },
+   "5B0B364C42D3494383DDE1B4A1D9443C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1E8F5AF09194432283972E001FD0F4E0",
+     "8500AC13A877409C9983221EA767F858"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Use a variety of forms (drawings, block structures, movement, and other\nmaterials) to represent their ideas and feelings",
+    "id": "5B0B364C42D3494383DDE1B4A1D9443C",
+    "listId": "7b",
+    "parentId": "1E8F5AF09194432283972E001FD0F4E0",
+    "position": 10000,
+    "statementLabel": null,
+    "statementNotation": "1.1.7b"
+   },
+   "600BC966C0EC4F34BC71FEB3A1E13F3E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EED66631F5BD4E44807BCB96AD00A5DF",
+     "1AE21280642B4D8E8752C41339297CD0"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Twenty-Four to\nThirty Months: Show interest in observing,\r\nexperiencing, and/or exploring\r\nphysical science concepts and\r\nthe natural world",
+    "id": "600BC966C0EC4F34BC71FEB3A1E13F3E",
+    "listId": "4",
+    "parentId": "EED66631F5BD4E44807BCB96AD00A5DF",
+    "position": 16000,
+    "statementLabel": null,
+    "statementNotation": "2.1.4"
+   },
+   "64C34ADE284B4C61B2BDEFBBA4807208": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ECD1B7124AC443A1A7FFEC56A3A38157",
+     "BD3FC1D1F91946D0B8B40601F0843A10"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Three Years: Ask questions about other\r\npeople’s experiences in their\r\nfamilies and communities",
+    "id": "64C34ADE284B4C61B2BDEFBBA4807208",
+    "listId": "6",
+    "parentId": "ECD1B7124AC443A1A7FFEC56A3A38157",
+    "position": 41000,
+    "statementLabel": null,
+    "statementNotation": "3.2.6"
+   },
+   "677D30E63CA2408B8F247FC48694166B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ECD1B7124AC443A1A7FFEC56A3A38157",
+     "BD3FC1D1F91946D0B8B40601F0843A10"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Thirty Months to\nThree Years: Explore various roles in\r\ntheir home and classroom\r\n(E.g. Natalie tells James, 20\r\nmonths old, that he is the baby\r\nand that she is going to be\r\nthe mommy. She then begins\r\nacting out the role by giving\r\nhim a bottle.)",
+    "id": "677D30E63CA2408B8F247FC48694166B",
+    "listId": "5",
+    "parentId": "ECD1B7124AC443A1A7FFEC56A3A38157",
+    "position": 40000,
+    "statementLabel": null,
+    "statementNotation": "3.2.5"
+   },
+   "6B4ECF28210347E7801A325F7F1DE376": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ECD1B7124AC443A1A7FFEC56A3A38157",
+     "BD3FC1D1F91946D0B8B40601F0843A10"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Notice similarities and differences in people, families, and social groups",
+    "id": "6B4ECF28210347E7801A325F7F1DE376",
+    "listId": "7c",
+    "parentId": "ECD1B7124AC443A1A7FFEC56A3A38157",
+    "position": 44000,
+    "statementLabel": null,
+    "statementNotation": "3.2.7c"
+   },
+   "82CA7782B811476AB97FADCB7E9726DF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2631E74CDA334AE1A6CDB7B86A9A48AD",
+     "BD3FC1D1F91946D0B8B40601F0843A10"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Twenty-Four to\nThirty Months: Participate in expected behavior\r\nincluding greetings and goodbyes",
+    "id": "82CA7782B811476AB97FADCB7E9726DF",
+    "listId": "4",
+    "parentId": "2631E74CDA334AE1A6CDB7B86A9A48AD",
+    "position": 28000,
+    "statementLabel": null,
+    "statementNotation": "3.1.4"
+   },
+   "82D6117129B44BE48FB7F3962C2BBD34": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2631E74CDA334AE1A6CDB7B86A9A48AD",
+     "BD3FC1D1F91946D0B8B40601F0843A10"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Show interest in caring for the classroom environment",
+    "id": "82D6117129B44BE48FB7F3962C2BBD34",
+    "listId": "7a",
+    "parentId": "2631E74CDA334AE1A6CDB7B86A9A48AD",
+    "position": 31000,
+    "statementLabel": null,
+    "statementNotation": "3.1.7a"
+   },
+   "8500AC13A877409C9983221EA767F858": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Key Concepts",
+    "id": "8500AC13A877409C9983221EA767F858",
+    "listId": "1",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": null,
+    "statementNotation": "1"
+   },
+   "895C91D239994038B7B2BF643BB1B3DD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ECD1B7124AC443A1A7FFEC56A3A38157",
+     "BD3FC1D1F91946D0B8B40601F0843A10"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Act out family roles and occupations in dramatic play",
+    "id": "895C91D239994038B7B2BF643BB1B3DD",
+    "listId": "7e",
+    "parentId": "ECD1B7124AC443A1A7FFEC56A3A38157",
+    "position": 46000,
+    "statementLabel": null,
+    "statementNotation": "3.2.7e"
+   },
+   "8B6E9240F6534F049B521ACE7F939B01": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ECD1B7124AC443A1A7FFEC56A3A38157",
+     "BD3FC1D1F91946D0B8B40601F0843A10"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Know basic personal information",
+    "id": "8B6E9240F6534F049B521ACE7F939B01",
+    "listId": "7a",
+    "parentId": "ECD1B7124AC443A1A7FFEC56A3A38157",
+    "position": 42000,
+    "statementLabel": null,
+    "statementNotation": "3.2.7a"
+   },
+   "8D00D69C04AA410DA62700E395968AD7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1E8F5AF09194432283972E001FD0F4E0",
+     "8500AC13A877409C9983221EA767F858"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Nine Months to\nEighteen Months\n: Show understanding that people\r\nand objects no longer in sight\r\nstill exist (E.g. Molly watches\r\nher mother put keys in her\r\npurse. Molly then searches in\r\nthe purse to find them.)",
+    "id": "8D00D69C04AA410DA62700E395968AD7",
+    "listId": "2",
+    "parentId": "1E8F5AF09194432283972E001FD0F4E0",
+    "position": 4000,
+    "statementLabel": null,
+    "statementNotation": "1.1.2"
+   },
+   "9552885F22864C979B4DDFAF2885A7C6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ECD1B7124AC443A1A7FFEC56A3A38157",
+     "BD3FC1D1F91946D0B8B40601F0843A10"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Are aware of own family relationships and show curiosity about others’ families\r",
+    "id": "9552885F22864C979B4DDFAF2885A7C6",
+    "listId": "7b",
+    "parentId": "ECD1B7124AC443A1A7FFEC56A3A38157",
+    "position": 43000,
+    "statementLabel": null,
+    "statementNotation": "3.2.7b"
+   },
+   "9949791EA35144A89CD50313020E760E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ECD1B7124AC443A1A7FFEC56A3A38157",
+     "BD3FC1D1F91946D0B8B40601F0843A10"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Show interest in issues of friendship and fairness\r",
+    "id": "9949791EA35144A89CD50313020E760E",
+    "listId": "7f",
+    "parentId": "ECD1B7124AC443A1A7FFEC56A3A38157",
+    "position": 47000,
+    "statementLabel": null,
+    "statementNotation": "3.2.7f"
+   },
+   "9A11E5916E7640AABF4E7EEBA2D5EA17": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ECD1B7124AC443A1A7FFEC56A3A38157",
+     "BD3FC1D1F91946D0B8B40601F0843A10"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Nine Months to\nEighteen Months\n: Interact with members of their\nhousehold and their classroom\nRelates to social/emotional\nconstruct of relationships and\nsocial skills with peers",
+    "id": "9A11E5916E7640AABF4E7EEBA2D5EA17",
+    "listId": "2",
+    "parentId": "ECD1B7124AC443A1A7FFEC56A3A38157",
+    "position": 37000,
+    "statementLabel": null,
+    "statementNotation": "3.2.2"
+   },
+   "9CBFEE92948D4542BB642C56DEE87D1E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1E8F5AF09194432283972E001FD0F4E0",
+     "8500AC13A877409C9983221EA767F858"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Birth to\nNine Months: Track moving objects and\r\nbegin to understand that\r\npeople and objects no longer\r\nin sight still exist",
+    "id": "9CBFEE92948D4542BB642C56DEE87D1E",
+    "listId": "1",
+    "parentId": "1E8F5AF09194432283972E001FD0F4E0",
+    "position": 3000,
+    "statementLabel": null,
+    "statementNotation": "1.1.1"
+   },
+   "A67FF6216D9942EF9F129E74554A538E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EED66631F5BD4E44807BCB96AD00A5DF",
+     "1AE21280642B4D8E8752C41339297CD0"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Begin to talk about environmental changes and phenomena (weather, seasons,\r\nsun, and moon)",
+    "id": "A67FF6216D9942EF9F129E74554A538E",
+    "listId": "7b",
+    "parentId": "EED66631F5BD4E44807BCB96AD00A5DF",
+    "position": 20000,
+    "statementLabel": null,
+    "statementNotation": "2.1.7b"
+   },
+   "BD3FC1D1F91946D0B8B40601F0843A10": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Exploring the\r\nSocial World",
+    "id": "BD3FC1D1F91946D0B8B40601F0843A10",
+    "listId": "3",
+    "parentId": null,
+    "position": 23000,
+    "statementLabel": null,
+    "statementNotation": "3"
+   },
+   "BE9942B8DBB844738DBD422BBB66EF7E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EED66631F5BD4E44807BCB96AD00A5DF",
+     "1AE21280642B4D8E8752C41339297CD0"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Three Years: Ask many questions about the\r\nphysical world and investigate\r\nwith adult guidance",
+    "id": "BE9942B8DBB844738DBD422BBB66EF7E",
+    "listId": "6",
+    "parentId": "EED66631F5BD4E44807BCB96AD00A5DF",
+    "position": 18000,
+    "statementLabel": null,
+    "statementNotation": "2.1.6"
+   },
+   "C8C80E82C29D4E7E9D311E101813E4BE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ECD1B7124AC443A1A7FFEC56A3A38157",
+     "BD3FC1D1F91946D0B8B40601F0843A10"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Birth to\nNine Months: Recognize primary caregivers\r",
+    "id": "C8C80E82C29D4E7E9D311E101813E4BE",
+    "listId": "1",
+    "parentId": "ECD1B7124AC443A1A7FFEC56A3A38157",
+    "position": 36000,
+    "statementLabel": null,
+    "statementNotation": "3.2.1"
+   },
+   "D98FCDAA7B71482DBAF70997A83545C9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EED66631F5BD4E44807BCB96AD00A5DF",
+     "1AE21280642B4D8E8752C41339297CD0"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Show interest in caring for the earth and environment",
+    "id": "D98FCDAA7B71482DBAF70997A83545C9",
+    "listId": "7c",
+    "parentId": "EED66631F5BD4E44807BCB96AD00A5DF",
+    "position": 21000,
+    "statementLabel": null,
+    "statementNotation": "2.1.7c"
+   },
+   "DA9BBD2156854AE39F68E90A3BE20BE2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ECD1B7124AC443A1A7FFEC56A3A38157",
+     "BD3FC1D1F91946D0B8B40601F0843A10"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Recognize some people, places, and occupations in their communities",
+    "id": "DA9BBD2156854AE39F68E90A3BE20BE2",
+    "listId": "7d",
+    "parentId": "ECD1B7124AC443A1A7FFEC56A3A38157",
+    "position": 45000,
+    "statementLabel": null,
+    "statementNotation": "3.2.7d"
+   },
+   "E102793B981B40DC9C2F9055F2915148": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EED66631F5BD4E44807BCB96AD00A5DF",
+     "1AE21280642B4D8E8752C41339297CD0"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Begin to identify the properties of various living things and what living things\r\nneed to be able to survive",
+    "id": "E102793B981B40DC9C2F9055F2915148",
+    "listId": "7a",
+    "parentId": "EED66631F5BD4E44807BCB96AD00A5DF",
+    "position": 19000,
+    "statementLabel": null,
+    "statementNotation": "2.1.7a"
+   },
+   "ECD1B7124AC443A1A7FFEC56A3A38157": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BD3FC1D1F91946D0B8B40601F0843A10"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Self, family, and\r\ncommunity",
+    "id": "ECD1B7124AC443A1A7FFEC56A3A38157",
+    "listId": "2",
+    "parentId": "BD3FC1D1F91946D0B8B40601F0843A10",
+    "position": 35000,
+    "statementLabel": null,
+    "statementNotation": "3.2"
+   },
+   "EDD7A88D40E84DFB934ADFD2E73EC2F5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2631E74CDA334AE1A6CDB7B86A9A48AD",
+     "BD3FC1D1F91946D0B8B40601F0843A10"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Participate in developing classroom rules",
+    "id": "EDD7A88D40E84DFB934ADFD2E73EC2F5",
+    "listId": "7b",
+    "parentId": "2631E74CDA334AE1A6CDB7B86A9A48AD",
+    "position": 32000,
+    "statementLabel": null,
+    "statementNotation": "3.1.7b"
+   },
+   "EED66631F5BD4E44807BCB96AD00A5DF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1AE21280642B4D8E8752C41339297CD0"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Physical world",
+    "id": "EED66631F5BD4E44807BCB96AD00A5DF",
+    "listId": "1",
+    "parentId": "1AE21280642B4D8E8752C41339297CD0",
+    "position": 12000,
+    "statementLabel": null,
+    "statementNotation": "2.1"
+   },
+   "F1DBED39E43440DDBE81A1F48E188262": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2631E74CDA334AE1A6CDB7B86A9A48AD",
+     "BD3FC1D1F91946D0B8B40601F0843A10"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Birth to\nNine Months: Recognize cultural and\r\nsocial labels for people and\r\nrelationships in their family",
+    "id": "F1DBED39E43440DDBE81A1F48E188262",
+    "listId": "1",
+    "parentId": "2631E74CDA334AE1A6CDB7B86A9A48AD",
+    "position": 25000,
+    "statementLabel": null,
+    "statementNotation": "3.1.1"
+   },
+   "FB3D5A6AEDAB46B8959CA2EF82FBAF5B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1E8F5AF09194432283972E001FD0F4E0",
+     "8500AC13A877409C9983221EA767F858"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Talk about things or people that are not present",
+    "id": "FB3D5A6AEDAB46B8959CA2EF82FBAF5B",
+    "listId": "7a",
+    "parentId": "1E8F5AF09194432283972E001FD0F4E0",
+    "position": 9000,
+    "statementLabel": null,
+    "statementNotation": "1.1.7a"
+   },
+   "FB6B785422334A9180C68FC812DB7CD0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EED66631F5BD4E44807BCB96AD00A5DF",
+     "1AE21280642B4D8E8752C41339297CD0"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Eighteen to\nTwenty-Four Months: Through repeated observation,\r\nexperimentation, and/or\r\nexploration, further develop their\r\nunderstanding of basic physical\r\nscience concepts and the\r\nnatural world",
+    "id": "FB6B785422334A9180C68FC812DB7CD0",
+    "listId": "3",
+    "parentId": "EED66631F5BD4E44807BCB96AD00A5DF",
+    "position": 15000,
+    "statementLabel": null,
+    "statementNotation": "2.1.3"
+   },
+   "FF2EE40EE9CE446CA76C71ECC3A592C6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1E8F5AF09194432283972E001FD0F4E0",
+     "8500AC13A877409C9983221EA767F858"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Eighteen to\nTwenty-Four Months: Can find objects that are not in\r\nsight",
+    "id": "FF2EE40EE9CE446CA76C71ECC3A592C6",
+    "listId": "3",
+    "parentId": "1E8F5AF09194432283972E001FD0F4E0",
+    "position": 5000,
+    "statementLabel": null,
+    "statementNotation": "1.1.3"
+   },
+   "FF8BC18ACC7B45AA951513C9CD502673": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2631E74CDA334AE1A6CDB7B86A9A48AD",
+     "BD3FC1D1F91946D0B8B40601F0843A10"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Thirty Months to\nThree Years: Understand that certain rules\r\nand customs apply in some\r\nsituations and not in others\r\n(E.g. Sam tells his baby sister,\r\n“No yelling in church.”)",
+    "id": "FF8BC18ACC7B45AA951513C9CD502673",
+    "listId": "5",
+    "parentId": "2631E74CDA334AE1A6CDB7B86A9A48AD",
+    "position": 29000,
+    "statementLabel": null,
+    "statementNotation": "3.1.5"
+   }
+  },
+  "subject": "Early Learning Standards (2016-)",
+  "title": "Cognitive Development – Early Numeracy: Birth-5"
+ }
+}

@@ -1,0 +1,302 @@
+{
+ "pk/math": [
+  {
+   "idx": "Mathematics 1a",
+   "text": "Explore and begin to make sense of their world through mathematical thinking and strategies."
+  },
+  {
+   "idx": "Mathematics 1b",
+   "text": "Explore and begin to understand mathematical symbols and language in communicating their explorations and discoveries."
+  },
+  {
+   "idx": "Mathematics 1c",
+   "text": "Develop an increasing ability to recognize mathematical problems in everyday situations at home and in the learning environment, and experiment to find possible solutions."
+  },
+  {
+   "idx": "Mathematics 2a",
+   "text": "Counting: Explore numbers and number vocabulary with increasing understanding of their relationship to quantity."
+  },
+  {
+   "idx": "Mathematics 2b",
+   "text": "Subitizing: Recognize and name the quantity of objects in a group without counting."
+  },
+  {
+   "idx": "Mathematics 2c",
+   "text": "Comparing, Adding, and Subtracting Numbers: Begin to understand numbers as sets to be compared, put together, and taken apart."
+  },
+  {
+   "idx": "Mathematics 2d",
+   "text": "Composing and Decomposing Numbers: Begin to understand that numbers are made up of smaller numbers."
+  },
+  {
+   "idx": "Mathematics 3a",
+   "text": "Explore and begin to recognize the positional relationships between objects, their environment, and themselves."
+  },
+  {
+   "idx": "Mathematics 3b",
+   "text": "Explore and begin to analyze two-dimensional and three-dimensional shapes and shape attributes."
+  },
+  {
+   "idx": "Mathematics 3c",
+   "text": "Investigate and begin to understand the concept of a whole and how it can be divided into two (or more) equal parts."
+  },
+  {
+   "idx": "Mathematics 4a",
+   "text": "Recognizing and Building Patterns: Notice, recognize, copy, extend, and create repeating patterns."
+  },
+  {
+   "idx": "Mathematics 4b",
+   "text": "Ordering and Seriation: Arrange objects in order according to changes in a specific attribute, such as size, length, number, color, etc."
+  },
+  {
+   "idx": "Mathematics 5a",
+   "text": "Notice and recognize that things in their environment can be measured (length/height, weight, area, volume, temperature, time)."
+  },
+  {
+   "idx": "Mathematics 5b",
+   "text": "Compare things in their environment and use the language of measurement (lighter, darker, long, longer, big, bigger, etc.) to describe them."
+  },
+  {
+   "idx": "Mathematics 5c",
+   "text": "Use non-standard and standard tools and units of measurement."
+  },
+  {
+   "idx": "Mathematics 6a",
+   "text": "Recognize and classify things in their environment."
+  },
+  {
+   "idx": "Mathematics 6b",
+   "text": "Sort things in their environment into groups based on attributes."
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "Language 1a",
+   "text": "Demonstrate understanding of increasingly complex language, including non-verbal cues."
+  },
+  {
+   "idx": "Language 1b",
+   "text": "Follow increasingly complex directions."
+  },
+  {
+   "idx": "Language 2a",
+   "text": "Communicate using increasingly understandable language, including sounds, gestures, signs, words, and language expressed using assistive devices."
+  },
+  {
+   "idx": "Language 2b",
+   "text": "Communicate using an expanding vocabulary."
+  },
+  {
+   "idx": "Language 2c",
+   "text": "Communicate using increasingly complex grammar and sentence structure."
+  },
+  {
+   "idx": "Language 3a",
+   "text": "Communicate with others for a variety of purposes."
+  },
+  {
+   "idx": "Language 3b",
+   "text": "Follow the social expectations of their personal cultural context when communicating with others."
+  },
+  {
+   "idx": "Language 4a",
+   "text": "Demonstrate interest in and care for books, including book handling concepts."
+  },
+  {
+   "idx": "Language 4b",
+   "text": "Demonstrate an understanding of print concepts."
+  },
+  {
+   "idx": "Language 4c",
+   "text": "Understand that print and pictures communicate ideas that can be read/viewed and understood by others."
+  },
+  {
+   "idx": "Language 5a",
+   "text": "Recognize letters, the names of letters, and how the letters are shaped, as well as some personally meaningful words."
+  },
+  {
+   "idx": "Language 5b",
+   "text": "Recognize the sounds associated with letters."
+  },
+  {
+   "idx": "Language 6a",
+   "text": "Notice, manipulate, and play with the sounds of language."
+  },
+  {
+   "idx": "Language 6b",
+   "text": "Recognize, manipulate, and play with sounds within words."
+  },
+  {
+   "idx": "Language 7a",
+   "text": "Demonstrate reading-like behaviors with familiar text or print materials."
+  },
+  {
+   "idx": "Language 7b",
+   "text": "Demonstrate an understanding of text."
+  },
+  {
+   "idx": "Language 8a",
+   "text": "Develop increasing control, strength, and coordination of small muscle groups."
+  },
+  {
+   "idx": "Language 8b",
+   "text": "With guidance and support, explore a variety of writing tools and materials."
+  },
+  {
+   "idx": "Language 8c",
+   "text": "Develop an understanding that writing is a way of communicating for a variety of purposes."
+  },
+  {
+   "idx": "Language 8d",
+   "text": "Show interest in using a variety of forms of early writing to convey meaning and represent sounds and words."
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "Science 1a",
+   "text": "Observe and investigate their environment using scientific thinking, scientific vocabulary, and the scientific method."
+  },
+  {
+   "idx": "Science 1b",
+   "text": "Explore cause-and-effect relationships."
+  },
+  {
+   "idx": "Science 1c",
+   "text": "Observe, compare, and classify objects and information."
+  },
+  {
+   "idx": "Science 1d",
+   "text": "Communicate and/or record observations, questions, and predictions about their environment."
+  },
+  {
+   "idx": "Science 2a",
+   "text": "Explore and compare the ways objects move, including their speed, direction, and duration of movement."
+  },
+  {
+   "idx": "Science 2b",
+   "text": "Explore and observe the states of matter (liquids, solids, gasses) in their environment."
+  },
+  {
+   "idx": "Science 2c",
+   "text": "Observe and explore light and sound."
+  },
+  {
+   "idx": "Science 3a",
+   "text": "Explore and recognize a variety of earth materials in their community (soil, rocks, water, etc.) and their observable properties."
+  },
+  {
+   "idx": "Science 3b",
+   "text": "Recognize and identify different weather conditions and the ways weather can impact their lives."
+  },
+  {
+   "idx": "Science 3c",
+   "text": "Recognize and make connections between the seasons and their observable characteristics."
+  },
+  {
+   "idx": "Science 4a",
+   "text": "Explore, observe, notice, and describe a variety of plants and animals in their community, and their life cycles."
+  },
+  {
+   "idx": "Science 4b",
+   "text": "Observe and explore the habitats of a variety of plants and animals in their community (such as wooded areas, parks, lakes, and streams)."
+  },
+  {
+   "idx": "Science 4c",
+   "text": "Observe, describe, and compare the differences between living and non-living things."
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "Social Studies 1a",
+   "text": "Recognize themselves as unique individuals and become aware of the uniqueness of others."
+  },
+  {
+   "idx": "Social Studies 1b",
+   "text": "Recognize themselves as members of a family and become aware of how families are alike and different."
+  },
+  {
+   "idx": "Social Studies 1c",
+   "text": "Demonstrate a growing sense of belonging across their home, their learning environment, and their community."
+  },
+  {
+   "idx": "Social Studies 1d",
+   "text": "Participate in the routines, customs, and traditions of their family and community, and develops an awareness of and respect for the ways these can differ across settings, families, and cultures."
+  },
+  {
+   "idx": "Social Studies 2a",
+   "text": "Show a growing understanding of and participation with the expectations, boundaries, and responsibilities in their family, learning environment, and community."
+  },
+  {
+   "idx": "Social Studies 2b",
+   "text": "Develop a growing understanding of what people need to thrive and the ways people fill those needs."
+  },
+  {
+   "idx": "Social Studies 2c",
+   "text": "Develop a growing understanding of value, as well as supply and demand, as they relate to sharing and trading."
+  },
+  {
+   "idx": "Social Studies 3a",
+   "text": "Explore and learn how to respectfully interact with nature."
+  },
+  {
+   "idx": "Social Studies 3b",
+   "text": "Begin to identify, and use location vocabulary to describe, places and physical features in their environment."
+  },
+  {
+   "idx": "Social Studies 3c",
+   "text": "Demonstrate a growing understanding of the passage of time as it impacts their lives."
+  },
+  {
+   "idx": "Social-Emotional 1a",
+   "text": "Demonstrate awareness of and recognize the value of their personal traits, including their strengths and interests."
+  },
+  {
+   "idx": "Social-Emotional 1b",
+   "text": "Demonstrate willingness to explore independently and try new things."
+  },
+  {
+   "idx": "Social-Emotional 2a",
+   "text": "Express their emotions freely, and begin to identify and manage those emotions, with support from familiar adults."
+  },
+  {
+   "idx": "Social-Emotional 2b",
+   "text": "Demonstrate flexibility and an increasing ability to adapt to changes and setbacks."
+  },
+  {
+   "idx": "Social-Emotional 3a",
+   "text": "Recognize other people’s emotions and respond with care, sensitivity, and later empathy."
+  },
+  {
+   "idx": "Social-Emotional 3b",
+   "text": "Recognize and respond to social cues."
+  },
+  {
+   "idx": "Social-Emotional 3c",
+   "text": "Demonstrate an understanding that the diverse community of people around them have unique strengths and experiences to share and should be treated with respect."
+  },
+  {
+   "idx": "Social-Emotional 4a",
+   "text": "Demonstrate healthy attachment to and trust in familiar adults in their lives."
+  },
+  {
+   "idx": "Social-Emotional 4b",
+   "text": "Demonstrate an ability to initiate and sustain interactions and communication with others, primarily in their home language."
+  },
+  {
+   "idx": "Social-Emotional 4c",
+   "text": "Develop and maintain deep, caring connections, friendships, and other relationships with people of various cultures, family structures, home languages, racial identities, genders and gender identities, abilities and disabilities, religious beliefs, and socio-economic classes."
+  },
+  {
+   "idx": "Social-Emotional 4d",
+   "text": "Express disagreement and begin to manage conflict in safe, developmentally appropriate ways."
+  },
+  {
+   "idx": "Social-Emotional 5a",
+   "text": "Begin to make choices that reflect their understanding of fairness and unfairness, as well as the boundaries and expectations of various situations."
+  },
+  {
+   "idx": "Social-Emotional 5b",
+   "text": "Show a desire to positively participate in their community (family, learning environment, school, community) through showing care and consideration for others."
+  }
+ ]
+}

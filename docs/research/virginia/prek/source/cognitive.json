@@ -1,0 +1,5611 @@
+{
+ "data": {
+  "cspStatus": {},
+  "document": {
+   "sourceURL": "https://www.doe.virginia.gov/home/showpublisheddocument/421/637890605072570000",
+   "title": "VIRGINIA’S EARLY LEARNING & DEVELOPMENT STANDARDS (ELDS): BIRTH-FIVE LEARNING GUIDELINES"
+  },
+  "educationLevels": [
+   "Pre-K",
+   "K"
+  ],
+  "id": "29CEDCCC0AD44F32B4E344B1315C95D0",
+  "jurisdiction": {
+   "id": "27D1AF28D2F54DD3A69C057DDA772BD0",
+   "title": "Virginia"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/4.0/us/",
+   "rightsHolder": "Common Curriculum, Inc.",
+   "title": "CC BY 4.0 US"
+  },
+  "normalizedSubject": null,
+  "standards": {
+   "030FB93E319D4FEDA63C2A887B6BDC69": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3C939DA50427491DA6B0E3343A2FFCDB",
+     "0433FCAD56A5437193ED46B65D3D95BB",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Imitates other\nchildren’s behavior  ",
+    "id": "030FB93E319D4FEDA63C2A887B6BDC69",
+    "listId": "c",
+    "parentId": "3C939DA50427491DA6B0E3343A2FFCDB",
+    "position": 1091,
+    "statementLabel": null,
+    "statementNotation": "CD2.3c"
+   },
+   "0433FCAD56A5437193ED46B65D3D95BB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Learning about differences ",
+    "id": "0433FCAD56A5437193ED46B65D3D95BB",
+    "listId": "3",
+    "parentId": "0992767DF43842B997EDB3C5ED99AEC7",
+    "position": 1085,
+    "statementLabel": null,
+    "statementNotation": "CD2.3"
+   },
+   "04571165423D4303BBC62FB6813041BB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EBC41226FAC74E8B8B237FAB65D10891",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Infancy\n6-14 months",
+    "id": "04571165423D4303BBC62FB6813041BB",
+    "listId": "",
+    "parentId": "EBC41226FAC74E8B8B237FAB65D10891",
+    "position": 1048,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "0494BE117F634F53B464BB215D80D22C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6A3F4BE585304199849F4447B15DB89C",
+     "664894926BA34D3AB9964CECA1028A54",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Contributes ideas to\ncreate dance movements",
+    "id": "0494BE117F634F53B464BB215D80D22C",
+    "listId": "o",
+    "parentId": "6A3F4BE585304199849F4447B15DB89C",
+    "position": 1236,
+    "statementLabel": null,
+    "statementNotation": "CD4.1o"
+   },
+   "04AAD11B49D04464870CC10A40A00F48": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "11CA5711D8D34885A302CE504E014C6E",
+     "AE1CC838CDD74809B02CA193713D5BCB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Anticipates the next\naction in a pattern of\nclapping or bouncing\non a caregiver’s knee  ",
+    "id": "04AAD11B49D04464870CC10A40A00F48",
+    "listId": "c",
+    "parentId": "11CA5711D8D34885A302CE504E014C6E",
+    "position": 1177,
+    "statementLabel": null,
+    "statementNotation": "CD3.4c"
+   },
+   "0508EAD339D44B2180D19FC067E22F26": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E0389F99B8B7445FA2A2E49F684FCA6E",
+     "2B25374D89BE4ED9A679D771A0247A28",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Communicates\nabout self as member\nof specific groups (e.g.,\nneighborhood, faith\ncommunity, team)",
+    "id": "0508EAD339D44B2180D19FC067E22F26",
+    "listId": "e",
+    "parentId": "E0389F99B8B7445FA2A2E49F684FCA6E",
+    "position": 1079,
+    "statementLabel": null,
+    "statementNotation": "CD2.2e"
+   },
+   "07C2111987DE43F694829A0FA8420C81": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E1B74CA537F647EF94BF78EE64EEE2E2",
+     "29B86EEB137D49A891D9BA94542EB652",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With adult guiding\ndramatic play, explores\ncharacter, plot and\nsetting",
+    "id": "07C2111987DE43F694829A0FA8420C81",
+    "listId": "m",
+    "parentId": "E1B74CA537F647EF94BF78EE64EEE2E2",
+    "position": 1291,
+    "statementLabel": null,
+    "statementNotation": "CD4.3m"
+   },
+   "0945FE712B2C4136A3F1D2C78D9A9BF5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "DA94F8B991724597A99B84119CD4BEF1",
+     "359026A4560140E98969947BFECFF852",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognizes and names a typical\ncircle, square, and sometimes\ntriangle",
+    "id": "0945FE712B2C4136A3F1D2C78D9A9BF5",
+    "listId": "m",
+    "parentId": "DA94F8B991724597A99B84119CD4BEF1",
+    "position": 1161,
+    "statementLabel": null,
+    "statementNotation": "CD3.3m"
+   },
+   "0992767DF43842B997EDB3C5ED99AEC7": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Social Science: People, Community, and Culture",
+    "id": "0992767DF43842B997EDB3C5ED99AEC7",
+    "listId": "Standard 2",
+    "parentId": null,
+    "position": 1044,
+    "statementLabel": null,
+    "statementNotation": "CD2"
+   },
+   "0BDB6C8993D8428392B9FE84A6EA657A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5076DA8871434680857B7662184462A1",
+     "7DF064DFC20A4C2EB5F703F3776CC25A",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Explores objects and\nevents with all senses\nbriefly (e.g., watch,\nlisten, touch, smell, taste)",
+    "id": "0BDB6C8993D8428392B9FE84A6EA657A",
+    "listId": "c",
+    "parentId": "5076DA8871434680857B7662184462A1",
+    "position": 1006,
+    "statementLabel": null,
+    "statementNotation": "CD1.1c"
+   },
+   "0CC4C683C11844B28D11F3AFAA31BDBB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BFAF2332946F47B591CC7D544BA3F10C",
+     "514310F9794142DE8150831DF52A53D1",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Shows preferences\nfor music by requesting\nsongs ",
+    "id": "0CC4C683C11844B28D11F3AFAA31BDBB",
+    "listId": "n",
+    "parentId": "BFAF2332946F47B591CC7D544BA3F10C",
+    "position": 1263,
+    "statementLabel": null,
+    "statementNotation": "CD4.2n"
+   },
+   "0DE9C8747BC94231B6CB661C0694773E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "664894926BA34D3AB9964CECA1028A54",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Preschool\n44-60 months",
+    "id": "0DE9C8747BC94231B6CB661C0694773E",
+    "listId": "",
+    "parentId": "664894926BA34D3AB9964CECA1028A54",
+    "position": 1237,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "0F39114DE8EF488FB8BCD9939AE6E3B8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B4D45E204D5644A0B42FCFFFE5AEF22C",
+     "EBC41226FAC74E8B8B237FAB65D10891",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Helps with daily\nroutines at home or in\nthe classroom",
+    "id": "0F39114DE8EF488FB8BCD9939AE6E3B8",
+    "listId": "g",
+    "parentId": "B4D45E204D5644A0B42FCFFFE5AEF22C",
+    "position": 1057,
+    "statementLabel": null,
+    "statementNotation": "CD2.1g"
+   },
+   "0F5587D93BE54CF2BC312B30F24EE616": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "22BF0AFD82844799BABA880AE80823DC",
+     "BBB376261B48413E87342FC022069374",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Looks for verbal, facial\nand gestural cues from\nadults about whether\nto continue or stop an\nactivity",
+    "id": "0F5587D93BE54CF2BC312B30F24EE616",
+    "listId": "b",
+    "parentId": "22BF0AFD82844799BABA880AE80823DC",
+    "position": 1024,
+    "statementLabel": null,
+    "statementNotation": "CD1.2b"
+   },
+   "0FB56D8EBA944D84A2BBC043B35B2F7F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4D37CDCC64D746719BF19CE323EBAC8E",
+     "AE1CC838CDD74809B02CA193713D5BCB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognizes, names,\nand extends simple\nrepeating patterns",
+    "id": "0FB56D8EBA944D84A2BBC043B35B2F7F",
+    "listId": "n",
+    "parentId": "4D37CDCC64D746719BF19CE323EBAC8E",
+    "position": 1192,
+    "statementLabel": null,
+    "statementNotation": "CD3.4n"
+   },
+   "11CA5711D8D34885A302CE504E014C6E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "AE1CC838CDD74809B02CA193713D5BCB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Infancy\n6-14 months",
+    "id": "11CA5711D8D34885A302CE504E014C6E",
+    "listId": "",
+    "parentId": "AE1CC838CDD74809B02CA193713D5BCB",
+    "position": 1176,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "12BDA439E8FF48E098D441EF96313C0E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3590A0681E0B4F6A8ADD4108005ADCA3",
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Counts up to 10 objects in a line",
+    "id": "12BDA439E8FF48E098D441EF96313C0E",
+    "listId": "t",
+    "parentId": "3590A0681E0B4F6A8ADD4108005ADCA3",
+    "position": 1129,
+    "statementLabel": null,
+    "statementNotation": "CD3.1t"
+   },
+   "147AB2F0F26E4B96ABE52D3E165864F9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D88BF920C9864DD99FB79C36884A27B4",
+     "514310F9794142DE8150831DF52A53D1",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Responds to and\nfollows changes in\ntempo",
+    "id": "147AB2F0F26E4B96ABE52D3E165864F9",
+    "listId": "m",
+    "parentId": "D88BF920C9864DD99FB79C36884A27B4",
+    "position": 1261,
+    "statementLabel": null,
+    "statementNotation": "CD4.2m"
+   },
+   "15F718C94283466A823D572BD82E034C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ABAA3F9E9D1943DD9421CE98C0F0AB0B",
+     "7DF064DFC20A4C2EB5F703F3776CC25A",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Notices and talks with\nadults about similarities\nand differences among\nobjects and living things",
+    "id": "15F718C94283466A823D572BD82E034C",
+    "listId": "h",
+    "parentId": "ABAA3F9E9D1943DD9421CE98C0F0AB0B",
+    "position": 1014,
+    "statementLabel": null,
+    "statementNotation": "CD1.1h"
+   },
+   "16A0C9EA66A64DFDAC5D1B37CA38FE40": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Toddler\n12-24 months",
+    "id": "16A0C9EA66A64DFDAC5D1B37CA38FE40",
+    "listId": "",
+    "parentId": "9CF7B674A8F142D3929702C47D3C1625",
+    "position": 1108,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "16C8E6DECFBE4A98B055205EAB265961": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5967F724E6214864AB9BFF3655CAA428",
+     "94E4419F19FC4B3CAF8D5F46D5978D8E",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begins to transition\ndrawings from\nspontaneous loops and\nlines to intentional\nshapes, including ovals,\ncircles, and rectangles ",
+    "id": "16C8E6DECFBE4A98B055205EAB265961",
+    "listId": "i",
+    "parentId": "5967F724E6214864AB9BFF3655CAA428",
+    "position": 1309,
+    "statementLabel": null,
+    "statementNotation": "CD4.4i"
+   },
+   "175B4349B2B942FC8D6AFE7B4630B8ED": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E0389F99B8B7445FA2A2E49F684FCA6E",
+     "2B25374D89BE4ED9A679D771A0247A28",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Participates as a\nmember of the group\nto work cooperatively,\nmake plans and solves\nproblems",
+    "id": "175B4349B2B942FC8D6AFE7B4630B8ED",
+    "listId": "f",
+    "parentId": "E0389F99B8B7445FA2A2E49F684FCA6E",
+    "position": 1080,
+    "statementLabel": null,
+    "statementNotation": "CD2.2f"
+   },
+   "17B9A02E2B084E51B690E0B3277D8108": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "94E4419F19FC4B3CAF8D5F46D5978D8E",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Infancy\n0-8 months",
+    "id": "17B9A02E2B084E51B690E0B3277D8108",
+    "listId": "",
+    "parentId": "94E4419F19FC4B3CAF8D5F46D5978D8E",
+    "position": 1296,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "197D21B97D704423BD75281C9FFBAD6D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C0E90F40F6B94B7EAED75FDE1AFDF392",
+     "F19FBCED05214F9CB939F676B7F6B6BB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With adult support, demonstrates “size\nseriation” by comparing and ordering\nobjects according to measured attribute/\ncharacteristic (e.g., places books on shelf\naccording to measured size) ",
+    "id": "197D21B97D704423BD75281C9FFBAD6D",
+    "listId": "l",
+    "parentId": "C0E90F40F6B94B7EAED75FDE1AFDF392",
+    "position": 1212,
+    "statementLabel": null,
+    "statementNotation": "CD3.5l"
+   },
+   "1A967579DCAE4B64AE851D2C5CC4FD11": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2B25374D89BE4ED9A679D771A0247A28",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Infancy\n0-8 months",
+    "id": "1A967579DCAE4B64AE851D2C5CC4FD11",
+    "listId": "",
+    "parentId": "2B25374D89BE4ED9A679D771A0247A28",
+    "position": 1070,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "1C1A1E45E3044489A22ABD9437C2E321": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "324337C3392A4C4F8DF3151219716FDD",
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Imitates an adult\nwho is counting\nalong with actions\nsuch as clapping ",
+    "id": "1C1A1E45E3044489A22ABD9437C2E321",
+    "listId": "i",
+    "parentId": "324337C3392A4C4F8DF3151219716FDD",
+    "position": 1116,
+    "statementLabel": null,
+    "statementNotation": "CD3.1i"
+   },
+   "1C53A42248DD4A03B5B708A6E624360B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5077884215E449DF88F3737E4C6A106E",
+     "664894926BA34D3AB9964CECA1028A54",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Takes a step or more\nwhile holding on to\nadult or other supports  ",
+    "id": "1C53A42248DD4A03B5B708A6E624360B",
+    "listId": "c",
+    "parentId": "5077884215E449DF88F3737E4C6A106E",
+    "position": 1221,
+    "statementLabel": null,
+    "statementNotation": "CD4.1c"
+   },
+   "1E6579F2835A493BB318131E2E86C6BF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C0E90F40F6B94B7EAED75FDE1AFDF392",
+     "F19FBCED05214F9CB939F676B7F6B6BB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With adult support, measures using\nthe same non-standard unit, such as\nputting together snap cubes to see how\ntall a book is",
+    "id": "1E6579F2835A493BB318131E2E86C6BF",
+    "listId": "i",
+    "parentId": "C0E90F40F6B94B7EAED75FDE1AFDF392",
+    "position": 1209,
+    "statementLabel": null,
+    "statementNotation": "CD3.5i"
+   },
+   "1EB5EC5B9E104FE19FE5372A094DECAF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3590A0681E0B4F6A8ADD4108005ADCA3",
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Counts backwards from 5",
+    "id": "1EB5EC5B9E104FE19FE5372A094DECAF",
+    "listId": "r",
+    "parentId": "3590A0681E0B4F6A8ADD4108005ADCA3",
+    "position": 1127,
+    "statementLabel": null,
+    "statementNotation": "CD3.1r"
+   },
+   "2009796CFBE141AB9AF7CBC968A4FC83": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C0E90F40F6B94B7EAED75FDE1AFDF392",
+     "F19FBCED05214F9CB939F676B7F6B6BB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With adult support, compares or\norders up to 5 objects based on their\nmeasurable attributes, such as height or\nweight",
+    "id": "2009796CFBE141AB9AF7CBC968A4FC83",
+    "listId": "j",
+    "parentId": "C0E90F40F6B94B7EAED75FDE1AFDF392",
+    "position": 1210,
+    "statementLabel": null,
+    "statementNotation": "CD3.5j"
+   },
+   "2028DFC95BBF4435A994E9112E16B07A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "664894926BA34D3AB9964CECA1028A54",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Toddler\n22-36 months",
+    "id": "2028DFC95BBF4435A994E9112E16B07A",
+    "listId": "",
+    "parentId": "664894926BA34D3AB9964CECA1028A54",
+    "position": 1226,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "209EA68CC67C46CAA3BBA6023A75764C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "686CA69C8B404C90BBE52A8B73E96FD9",
+     "2B25374D89BE4ED9A679D771A0247A28",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Uses positive social\nbehaviors (taking turns,\nsharing, helping with\njobs) to help meet needs\nof the group",
+    "id": "209EA68CC67C46CAA3BBA6023A75764C",
+    "listId": "h",
+    "parentId": "686CA69C8B404C90BBE52A8B73E96FD9",
+    "position": 1083,
+    "statementLabel": null,
+    "statementNotation": "CD2.2h"
+   },
+   "210E616127014A9196F0CC3C621042D7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "98303BC6B29249B78EB387046FE890ED",
+     "EBC41226FAC74E8B8B237FAB65D10891",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Uses props and\ndramatic play to show\ngrowing awareness of\nthings and events in the\nlarger world (using a\ncomputer, driving a bus)",
+    "id": "210E616127014A9196F0CC3C621042D7",
+    "listId": "o",
+    "parentId": "98303BC6B29249B78EB387046FE890ED",
+    "position": 1067,
+    "statementLabel": null,
+    "statementNotation": "CD2.1o"
+   },
+   "22BF0AFD82844799BABA880AE80823DC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BBB376261B48413E87342FC022069374",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Infancy\n6-14 months",
+    "id": "22BF0AFD82844799BABA880AE80823DC",
+    "listId": "",
+    "parentId": "BBB376261B48413E87342FC022069374",
+    "position": 1023,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "22C750A5CE8D45EF98E5ADEFD945AF98": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0DE9C8747BC94231B6CB661C0694773E",
+     "664894926BA34D3AB9964CECA1028A54",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Reproduces dance\nsteps or movements\nseveral times",
+    "id": "22C750A5CE8D45EF98E5ADEFD945AF98",
+    "listId": "t",
+    "parentId": "0DE9C8747BC94231B6CB661C0694773E",
+    "position": 1242,
+    "statementLabel": null,
+    "statementNotation": "CD4.1t"
+   },
+   "234E4553A70445FB9A9D7ECE193021A0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D1AEACDB578B459CBFC294EFE8400CE7",
+     "359026A4560140E98969947BFECFF852",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Uses blocks or\nfound materials to\nrepresent a simple\nconstruction such\nas a road or a room",
+    "id": "234E4553A70445FB9A9D7ECE193021A0",
+    "listId": "f",
+    "parentId": "D1AEACDB578B459CBFC294EFE8400CE7",
+    "position": 1152,
+    "statementLabel": null,
+    "statementNotation": "CD3.3f"
+   },
+   "24139D3E5B844D719702C02F8727F4D5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "39CBE264E7DC4B21ACCF6E008FF3F93A",
+     "BBB376261B48413E87342FC022069374",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Uses drawing,\nbuilding, and\ndemonstrating to show\nthinking about an object\nor idea",
+    "id": "24139D3E5B844D719702C02F8727F4D5",
+    "listId": "m",
+    "parentId": "39CBE264E7DC4B21ACCF6E008FF3F93A",
+    "position": 1038,
+    "statementLabel": null,
+    "statementNotation": "CD1.2m"
+   },
+   "258F8C79B81D4D2487141DDBF422579F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "857E1A6DA567407E92EAD6FDD94D1595",
+     "514310F9794142DE8150831DF52A53D1",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Draws to represent\npatterns in sound (e.g.,\n“clap, clap, stomp,\nstomp” drawn as\n“dot, dot, dash, dash”) ",
+    "id": "258F8C79B81D4D2487141DDBF422579F",
+    "listId": "u",
+    "parentId": "857E1A6DA567407E92EAD6FDD94D1595",
+    "position": 1271,
+    "statementLabel": null,
+    "statementNotation": "CD4.2u"
+   },
+   "2646B15FE7F54E0F984AEF187874DDB8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8C1B99DBFE124398A3A7420A0B5ACDFC",
+     "94E4419F19FC4B3CAF8D5F46D5978D8E",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begins to draw with\nplanning and purpose\nto show or tell a story\nabout something in their\nexperience",
+    "id": "2646B15FE7F54E0F984AEF187874DDB8",
+    "listId": "k",
+    "parentId": "8C1B99DBFE124398A3A7420A0B5ACDFC",
+    "position": 1312,
+    "statementLabel": null,
+    "statementNotation": "CD4.4k"
+   },
+   "26C8E2CA4AB24607B2F89B98D5292F2D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4EB2068764BB4FB2B145039878A211C5",
+     "2B25374D89BE4ED9A679D771A0247A28",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Pays attention to\nchildren nearby by\nwatching and possibly\nimitating their play ",
+    "id": "26C8E2CA4AB24607B2F89B98D5292F2D",
+    "listId": "c",
+    "parentId": "4EB2068764BB4FB2B145039878A211C5",
+    "position": 1075,
+    "statementLabel": null,
+    "statementNotation": "CD2.2c"
+   },
+   "26D7D9A8A95948F59C033E14045C248A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4D37CDCC64D746719BF19CE323EBAC8E",
+     "AE1CC838CDD74809B02CA193713D5BCB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identifies, duplicates,\nextends, and creates\nsimple repeating patterns",
+    "id": "26D7D9A8A95948F59C033E14045C248A",
+    "listId": "l",
+    "parentId": "4D37CDCC64D746719BF19CE323EBAC8E",
+    "position": 1190,
+    "statementLabel": null,
+    "statementNotation": "CD3.4l"
+   },
+   "280CAF40DCB74E67846CE169D7BD266A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "514310F9794142DE8150831DF52A53D1",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Infancy\n0-8 months",
+    "id": "280CAF40DCB74E67846CE169D7BD266A",
+    "listId": "",
+    "parentId": "514310F9794142DE8150831DF52A53D1",
+    "position": 1245,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "283E3D7E397746CFA07BC800B1EDC129": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "280CAF40DCB74E67846CE169D7BD266A",
+     "514310F9794142DE8150831DF52A53D1",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Responds to music\nby either quieting or\nbecoming more active ",
+    "id": "283E3D7E397746CFA07BC800B1EDC129",
+    "listId": "c",
+    "parentId": "280CAF40DCB74E67846CE169D7BD266A",
+    "position": 1248,
+    "statementLabel": null,
+    "statementNotation": "CD4.2c"
+   },
+   "284950D03239496A97BAC7A29085A165": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "41D37720A74A4765887EAE1A07949926",
+     "3AF8163C3BD8404E97E737AA447B6D10",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With adult help, subtracts (separates)\nsmall sets of objects (e.g., “You have\nfour ribbons. If you share three with\nyour friends, how many will you have\nleft?”)",
+    "id": "284950D03239496A97BAC7A29085A165",
+    "listId": "b",
+    "parentId": "41D37720A74A4765887EAE1A07949926",
+    "position": 1140,
+    "statementLabel": null,
+    "statementNotation": "CD3.2b"
+   },
+   "296031998BCA498ABF765744C90D0393": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9463B502A53B4BCA86A07954EBB391B4",
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Counts up to 5\nobjects in a line ",
+    "id": "296031998BCA498ABF765744C90D0393",
+    "listId": "o",
+    "parentId": "9463B502A53B4BCA86A07954EBB391B4",
+    "position": 1123,
+    "statementLabel": null,
+    "statementNotation": "CD3.1o"
+   },
+   "29B86EEB137D49A891D9BA94542EB652": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Building understanding, empathy, and relationship skills through drama and theatre arts",
+    "id": "29B86EEB137D49A891D9BA94542EB652",
+    "listId": "3",
+    "parentId": "C6BB54435FF44FD5ABD0CD22BD6781E4",
+    "position": 1273,
+    "statementLabel": null,
+    "statementNotation": "CD4.3"
+   },
+   "2A27ABF658C7404FB8508FE8CBDDDD4B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "427171BEC49B4C089B13F7DB2F8C5E8F",
+     "359026A4560140E98969947BFECFF852",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describes attributes of two and\nthree dimensional shapes (e.g., “A\nsquare has four corners/angles”,\n“a triangle has three straight\nsides”)",
+    "id": "2A27ABF658C7404FB8508FE8CBDDDD4B",
+    "listId": "u",
+    "parentId": "427171BEC49B4C089B13F7DB2F8C5E8F",
+    "position": 1170,
+    "statementLabel": null,
+    "statementNotation": "CD3.3u"
+   },
+   "2AD13940C2904168A02902CE869F9D47": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C77920B6308F44F7906F52718E4E9B0E",
+     "29B86EEB137D49A891D9BA94542EB652",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Uses props and\ndramatic play to explore\nroles in their circle of\nfamily and friends (e.g.,\nholding and patting a\nbaby doll on the back\nto demonstrate care)",
+    "id": "2AD13940C2904168A02902CE869F9D47",
+    "listId": "j",
+    "parentId": "C77920B6308F44F7906F52718E4E9B0E",
+    "position": 1287,
+    "statementLabel": null,
+    "statementNotation": "CD4.3j"
+   },
+   "2B25374D89BE4ED9A679D771A0247A28": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Understanding relationships and connections",
+    "id": "2B25374D89BE4ED9A679D771A0247A28",
+    "listId": "2",
+    "parentId": "0992767DF43842B997EDB3C5ED99AEC7",
+    "position": 1069,
+    "statementLabel": null,
+    "statementNotation": "CD2.2"
+   },
+   "2B3C9C5BE7564996A64E799E73B5CBBD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7249CFCDB5F84743A67DB8772005D118",
+     "AE1CC838CDD74809B02CA193713D5BCB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Predicts the next word\nor phrase in a familiar\nstory",
+    "id": "2B3C9C5BE7564996A64E799E73B5CBBD",
+    "listId": "h",
+    "parentId": "7249CFCDB5F84743A67DB8772005D118",
+    "position": 1184,
+    "statementLabel": null,
+    "statementNotation": "CD3.4h"
+   },
+   "2B5211FFDB88467898E00FADA824A908": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D88BF920C9864DD99FB79C36884A27B4",
+     "514310F9794142DE8150831DF52A53D1",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Asks with words,\nsigns, or gestures to hear\nmusic again",
+    "id": "2B5211FFDB88467898E00FADA824A908",
+    "listId": "h",
+    "parentId": "D88BF920C9864DD99FB79C36884A27B4",
+    "position": 1256,
+    "statementLabel": null,
+    "statementNotation": "CD4.2h"
+   },
+   "2F68B787CED14064BCBEA85B59EC5FFF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E6F0CD4012A84F6CA0C15472BDCCD75C",
+     "514310F9794142DE8150831DF52A53D1",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Imitates a steady\nbeat with body parts or\nsimple “instruments”\n(e.g., hitting a metal\nbowl with a spoon,\ndrumming on a table\ntop) ",
+    "id": "2F68B787CED14064BCBEA85B59EC5FFF",
+    "listId": "g",
+    "parentId": "E6F0CD4012A84F6CA0C15472BDCCD75C",
+    "position": 1254,
+    "statementLabel": null,
+    "statementNotation": "CD4.2g"
+   },
+   "2FA1890E5D4A4CE3BAB197AC297A5000": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EBC41226FAC74E8B8B237FAB65D10891",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Infancy\n0-8 months",
+    "id": "2FA1890E5D4A4CE3BAB197AC297A5000",
+    "listId": "",
+    "parentId": "EBC41226FAC74E8B8B237FAB65D10891",
+    "position": 1046,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "30C96BD0BA134116A87C3D4A23C2E37F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C0E90F40F6B94B7EAED75FDE1AFDF392",
+     "F19FBCED05214F9CB939F676B7F6B6BB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Uses comparative language to describe\nand compare objects using attributes\n(e.g., longer, shorter, lighter, heavier,\netc.)",
+    "id": "30C96BD0BA134116A87C3D4A23C2E37F",
+    "listId": "h",
+    "parentId": "C0E90F40F6B94B7EAED75FDE1AFDF392",
+    "position": 1208,
+    "statementLabel": null,
+    "statementNotation": "CD3.5h"
+   },
+   "30EA82B3F4BE49449511A2D673DD467E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0DE9C8747BC94231B6CB661C0694773E",
+     "664894926BA34D3AB9964CECA1028A54",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Uses dance to\ncommunicate ideas or\nfeelings",
+    "id": "30EA82B3F4BE49449511A2D673DD467E",
+    "listId": "u",
+    "parentId": "0DE9C8747BC94231B6CB661C0694773E",
+    "position": 1243,
+    "statementLabel": null,
+    "statementNotation": "CD4.1u"
+   },
+   "320903B3CB6F40918C76DFC5DF53344F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4E2D41E24C014A5CAD41BFEFA6AF0B37",
+     "EBC41226FAC74E8B8B237FAB65D10891",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Uses visual arts such\nas drawing, sculpting,\nand building to show\nthinking",
+    "id": "320903B3CB6F40918C76DFC5DF53344F",
+    "listId": "m",
+    "parentId": "4E2D41E24C014A5CAD41BFEFA6AF0B37",
+    "position": 1064,
+    "statementLabel": null,
+    "statementNotation": "CD2.1m"
+   },
+   "320E4DAC04D542608EABDBEAC5E6C4C5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EBC41226FAC74E8B8B237FAB65D10891",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Toddler\n12-24 months",
+    "id": "320E4DAC04D542608EABDBEAC5E6C4C5",
+    "listId": "",
+    "parentId": "EBC41226FAC74E8B8B237FAB65D10891",
+    "position": 1050,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "324337C3392A4C4F8DF3151219716FDD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Toddler\n22-36 months",
+    "id": "324337C3392A4C4F8DF3151219716FDD",
+    "listId": "",
+    "parentId": "9CF7B674A8F142D3929702C47D3C1625",
+    "position": 1111,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "359026A4560140E98969947BFECFF852": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Geometric thinking and spatial reasoning",
+    "id": "359026A4560140E98969947BFECFF852",
+    "listId": "3",
+    "parentId": "BF92703DD68544308104071245C1804A",
+    "position": 1146,
+    "statementLabel": null,
+    "statementNotation": "CD3.3"
+   },
+   "3590A0681E0B4F6A8ADD4108005ADCA3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Preschool\n44-60 months",
+    "id": "3590A0681E0B4F6A8ADD4108005ADCA3",
+    "listId": "",
+    "parentId": "9CF7B674A8F142D3929702C47D3C1625",
+    "position": 1125,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "375C79F26147491E90D3BBC29C441424": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E6F0CD4012A84F6CA0C15472BDCCD75C",
+     "514310F9794142DE8150831DF52A53D1",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Directs attention to\nthe source of sound\nand shows interest or\npleasure when provided\nmusic",
+    "id": "375C79F26147491E90D3BBC29C441424",
+    "listId": "f",
+    "parentId": "E6F0CD4012A84F6CA0C15472BDCCD75C",
+    "position": 1253,
+    "statementLabel": null,
+    "statementNotation": "CD4.2f"
+   },
+   "3762EB5D750F4E88848CDB88A64C500B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D3C7A23686A6494087BD90DD9C596665",
+     "514310F9794142DE8150831DF52A53D1",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Imitates adults\nsounds including\nmultiple syllables (e.g.,\n“mamama”, “dadada”) ",
+    "id": "3762EB5D750F4E88848CDB88A64C500B",
+    "listId": "d",
+    "parentId": "D3C7A23686A6494087BD90DD9C596665",
+    "position": 1250,
+    "statementLabel": null,
+    "statementNotation": "CD4.2d"
+   },
+   "381CF3FF41354F55ADFA03466669FB69": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F8D10A8068A3420B97735F7A22866618",
+     "7DF064DFC20A4C2EB5F703F3776CC25A",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Imitates and uses\nadults’ words and ideas\nwhen talking about the\nphysical and natural\nworlds ",
+    "id": "381CF3FF41354F55ADFA03466669FB69",
+    "listId": "k",
+    "parentId": "F8D10A8068A3420B97735F7A22866618",
+    "position": 1018,
+    "statementLabel": null,
+    "statementNotation": "CD1.1k"
+   },
+   "38A80BF962BB45DFB0DDC4BFAAB41777": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "DA94F8B991724597A99B84119CD4BEF1",
+     "359026A4560140E98969947BFECFF852",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Matches some shapes that are\ndifferent sizes or orientations\nwith adult support",
+    "id": "38A80BF962BB45DFB0DDC4BFAAB41777",
+    "listId": "n",
+    "parentId": "DA94F8B991724597A99B84119CD4BEF1",
+    "position": 1162,
+    "statementLabel": null,
+    "statementNotation": "CD3.3n"
+   },
+   "38CFDDA431064350908288117EEE9D4D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "60DA1999A4DA4027B8FC0CDB5F93CB6D",
+     "BBB376261B48413E87342FC022069374",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With adult guidance,\nplans and conducts\ninvestigations",
+    "id": "38CFDDA431064350908288117EEE9D4D",
+    "listId": "o",
+    "parentId": "60DA1999A4DA4027B8FC0CDB5F93CB6D",
+    "position": 1041,
+    "statementLabel": null,
+    "statementNotation": "CD1.2o"
+   },
+   "39CBE264E7DC4B21ACCF6E008FF3F93A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BBB376261B48413E87342FC022069374",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Preschool\n34-48 months",
+    "id": "39CBE264E7DC4B21ACCF6E008FF3F93A",
+    "listId": "",
+    "parentId": "BBB376261B48413E87342FC022069374",
+    "position": 1034,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "39D33AEF8E504F38A96E09A5FDD535F6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4E2D41E24C014A5CAD41BFEFA6AF0B37",
+     "EBC41226FAC74E8B8B237FAB65D10891",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Communicates about\nfamily members in terms\nof roles (e.g., “Grandma\npicks me up from\nschool.”)",
+    "id": "39D33AEF8E504F38A96E09A5FDD535F6",
+    "listId": "i",
+    "parentId": "4E2D41E24C014A5CAD41BFEFA6AF0B37",
+    "position": 1060,
+    "statementLabel": null,
+    "statementNotation": "CD2.1i"
+   },
+   "39FA6E8F5CBE4627800BE9FFA78507CA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FA88EFE5E7884038A79960511557385B",
+     "7DF064DFC20A4C2EB5F703F3776CC25A",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Handles toys and\nmaterials in different\nways (e.g., filling,\ndumping, etc.)",
+    "id": "39FA6E8F5CBE4627800BE9FFA78507CA",
+    "listId": "e",
+    "parentId": "FA88EFE5E7884038A79960511557385B",
+    "position": 1009,
+    "statementLabel": null,
+    "statementNotation": "CD1.1e"
+   },
+   "3A3F662E08DE4F86838273843F953E7E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4FE5182332CD46C885043888BAAD9815",
+     "94E4419F19FC4B3CAF8D5F46D5978D8E",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begins to use materials\n(e.g., crayons, chalk) to\nleave marks on paper",
+    "id": "3A3F662E08DE4F86838273843F953E7E",
+    "listId": "f",
+    "parentId": "4FE5182332CD46C885043888BAAD9815",
+    "position": 1304,
+    "statementLabel": null,
+    "statementNotation": "CD4.4f"
+   },
+   "3AF8163C3BD8404E97E737AA447B6D10": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Understanding number relationships and solving problems using operations ",
+    "id": "3AF8163C3BD8404E97E737AA447B6D10",
+    "listId": "2",
+    "parentId": "BF92703DD68544308104071245C1804A",
+    "position": 1137,
+    "statementLabel": null,
+    "statementNotation": "CD3.2"
+   },
+   "3BC30A0DF24645AC9C66DC168CAC0DA5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BA2F71DDC49243DB977312DBB933DBAF",
+     "94E4419F19FC4B3CAF8D5F46D5978D8E",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Pays attention to and\nstudies own face in a\nmirror",
+    "id": "3BC30A0DF24645AC9C66DC168CAC0DA5",
+    "listId": "c",
+    "parentId": "BA2F71DDC49243DB977312DBB933DBAF",
+    "position": 1300,
+    "statementLabel": null,
+    "statementNotation": "CD4.4c"
+   },
+   "3C1D6B91AAA44D6CB2E036C1C0B3310A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4FE5182332CD46C885043888BAAD9815",
+     "94E4419F19FC4B3CAF8D5F46D5978D8E",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begins to make\ncontrolled marks and\ndrawings on paper ",
+    "id": "3C1D6B91AAA44D6CB2E036C1C0B3310A",
+    "listId": "g",
+    "parentId": "4FE5182332CD46C885043888BAAD9815",
+    "position": 1305,
+    "statementLabel": null,
+    "statementNotation": "CD4.4g"
+   },
+   "3C939DA50427491DA6B0E3343A2FFCDB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0433FCAD56A5437193ED46B65D3D95BB",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Toddler\n12-24 months",
+    "id": "3C939DA50427491DA6B0E3343A2FFCDB",
+    "listId": "",
+    "parentId": "0433FCAD56A5437193ED46B65D3D95BB",
+    "position": 1090,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "3D0928D3229941948AE7CBC0CD484E80": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "29B86EEB137D49A891D9BA94542EB652",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Toddler\n12-24 months",
+    "id": "3D0928D3229941948AE7CBC0CD484E80",
+    "listId": "",
+    "parentId": "29B86EEB137D49A891D9BA94542EB652",
+    "position": 1280,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "3F324D289AAF4185972DE156C0D95F4A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6A3F4BE585304199849F4447B15DB89C",
+     "664894926BA34D3AB9964CECA1028A54",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Imitates dance\nmovements or patterns\nof movement",
+    "id": "3F324D289AAF4185972DE156C0D95F4A",
+    "listId": "n",
+    "parentId": "6A3F4BE585304199849F4447B15DB89C",
+    "position": 1235,
+    "statementLabel": null,
+    "statementNotation": "CD4.1n"
+   },
+   "408DC7095FCE468F9D408C090F3FB02D": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "SCIENCE: THE NATURAL AND PHYSICAL WORLD\n",
+    "id": "408DC7095FCE468F9D408C090F3FB02D",
+    "listId": "Standard 1",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": null,
+    "statementNotation": "CD1"
+   },
+   "411C0BA6825A4DCB8FE207671F73BCCF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0DE9C8747BC94231B6CB661C0694773E",
+     "664894926BA34D3AB9964CECA1028A54",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Imitates adult model\nof walking in a circle or\ncircular fashion, walking\non tiptoe and balancing\non one foot during\nguided movement\nexperiences",
+    "id": "411C0BA6825A4DCB8FE207671F73BCCF",
+    "listId": "p",
+    "parentId": "0DE9C8747BC94231B6CB661C0694773E",
+    "position": 1238,
+    "statementLabel": null,
+    "statementNotation": "CD4.1p"
+   },
+   "41D37720A74A4765887EAE1A07949926": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3AF8163C3BD8404E97E737AA447B6D10",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Preschool\n34-48 months",
+    "id": "41D37720A74A4765887EAE1A07949926",
+    "listId": "",
+    "parentId": "3AF8163C3BD8404E97E737AA447B6D10",
+    "position": 1138,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "423BCD63E5C04D2FA5813AF702BC5351": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "320E4DAC04D542608EABDBEAC5E6C4C5",
+     "EBC41226FAC74E8B8B237FAB65D10891",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Imitates sounds,\ngestures, and actions\nobserved in daily\ninteractions and routines ",
+    "id": "423BCD63E5C04D2FA5813AF702BC5351",
+    "listId": "c",
+    "parentId": "320E4DAC04D542608EABDBEAC5E6C4C5",
+    "position": 1051,
+    "statementLabel": null,
+    "statementNotation": "CD2.1c"
+   },
+   "427171BEC49B4C089B13F7DB2F8C5E8F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "359026A4560140E98969947BFECFF852",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Preschool\n44-60 months",
+    "id": "427171BEC49B4C089B13F7DB2F8C5E8F",
+    "listId": "",
+    "parentId": "359026A4560140E98969947BFECFF852",
+    "position": 1167,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "4281369E91A84FA6BD546D4633639621": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "324337C3392A4C4F8DF3151219716FDD",
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Compares\nquantities of items\nand indicates “same”\nor “more”",
+    "id": "4281369E91A84FA6BD546D4633639621",
+    "listId": "f",
+    "parentId": "324337C3392A4C4F8DF3151219716FDD",
+    "position": 1113,
+    "statementLabel": null,
+    "statementNotation": "CD3.1f"
+   },
+   "445BC72101CE49D0AEFA38C359CEC057": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "94E4419F19FC4B3CAF8D5F46D5978D8E",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Toddler\n22-36 months",
+    "id": "445BC72101CE49D0AEFA38C359CEC057",
+    "listId": "",
+    "parentId": "94E4419F19FC4B3CAF8D5F46D5978D8E",
+    "position": 1306,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "44808F0324FE4518B352D83F0843AEC3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3590A0681E0B4F6A8ADD4108005ADCA3",
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Shows accuracy in demonstrating oneto-one correspondence for up to 10 objects  ",
+    "id": "44808F0324FE4518B352D83F0843AEC3",
+    "listId": "s",
+    "parentId": "3590A0681E0B4F6A8ADD4108005ADCA3",
+    "position": 1128,
+    "statementLabel": null,
+    "statementNotation": "CD3.1s"
+   },
+   "456FD4F7531D445CAB7A5D6C5DD0FDE0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A772EEF624924DCEB53869DEC0D1EE9A",
+     "BBB376261B48413E87342FC022069374",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Repeats actions\n(e.g., making a noise\nor expression) to get\nrepeated adult reaction ",
+    "id": "456FD4F7531D445CAB7A5D6C5DD0FDE0",
+    "listId": "a",
+    "parentId": "A772EEF624924DCEB53869DEC0D1EE9A",
+    "position": 1022,
+    "statementLabel": null,
+    "statementNotation": "CD1.2a"
+   },
+   "45B227D100BC40A4950EB85649F0AA60": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8C1B99DBFE124398A3A7420A0B5ACDFC",
+     "94E4419F19FC4B3CAF8D5F46D5978D8E",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Draws the human\nform with more accuracy\nand detail",
+    "id": "45B227D100BC40A4950EB85649F0AA60",
+    "listId": "l",
+    "parentId": "8C1B99DBFE124398A3A7420A0B5ACDFC",
+    "position": 1313,
+    "statementLabel": null,
+    "statementNotation": "CD4.4l"
+   },
+   "4638A3EB362440858413AB26CF0B53C7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BA2F71DDC49243DB977312DBB933DBAF",
+     "94E4419F19FC4B3CAF8D5F46D5978D8E",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Participates in a\nvariety of tactile/sensory\nexperiences such as\nfeeling different fabrics\nand textures or playing\nwith water under\nclose adult supervision",
+    "id": "4638A3EB362440858413AB26CF0B53C7",
+    "listId": "d",
+    "parentId": "BA2F71DDC49243DB977312DBB933DBAF",
+    "position": 1301,
+    "statementLabel": null,
+    "statementNotation": "CD4.4d"
+   },
+   "47880822B10848A89748D1FFAC04A062": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "857E1A6DA567407E92EAD6FDD94D1595",
+     "514310F9794142DE8150831DF52A53D1",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Creates original lyrics\nand songs ",
+    "id": "47880822B10848A89748D1FFAC04A062",
+    "listId": "s",
+    "parentId": "857E1A6DA567407E92EAD6FDD94D1595",
+    "position": 1269,
+    "statementLabel": null,
+    "statementNotation": "CD4.2s"
+   },
+   "488F800C88344B7EA0C4061F75947ADB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A2D5B7F452324C2FAAC52A43F231813B",
+     "7DF064DFC20A4C2EB5F703F3776CC25A",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Observes and describes\nitems and events in the\nnatural world using\nwords, signs, or gestures",
+    "id": "488F800C88344B7EA0C4061F75947ADB",
+    "listId": "f",
+    "parentId": "A2D5B7F452324C2FAAC52A43F231813B",
+    "position": 1011,
+    "statementLabel": null,
+    "statementNotation": "CD1.1f"
+   },
+   "48F4E254D78149FBADAFAE55E1FF275E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "60DA1999A4DA4027B8FC0CDB5F93CB6D",
+     "BBB376261B48413E87342FC022069374",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Collaborates with\nothers to conduct\ninvestigations",
+    "id": "48F4E254D78149FBADAFAE55E1FF275E",
+    "listId": "q",
+    "parentId": "60DA1999A4DA4027B8FC0CDB5F93CB6D",
+    "position": 1043,
+    "statementLabel": null,
+    "statementNotation": "CD1.2q"
+   },
+   "49C090C37C864764B8B960CA36B26CD7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9463B502A53B4BCA86A07954EBB391B4",
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Continues\ncounting from a\nrunning start, as in\n“What comes after 1,\n2, 3, 4…?” ",
+    "id": "49C090C37C864764B8B960CA36B26CD7",
+    "listId": "k",
+    "parentId": "9463B502A53B4BCA86A07954EBB391B4",
+    "position": 1119,
+    "statementLabel": null,
+    "statementNotation": "CD3.1k"
+   },
+   "4AA420E9631345DEA44B1B7FCB46E0D0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B7AD6C03113B49D7AB3DF02640F30D24",
+     "0433FCAD56A5437193ED46B65D3D95BB",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Learns simple\nvocabulary of other\nlanguages spoken in\nhome, classroom, or\nschool community  ",
+    "id": "4AA420E9631345DEA44B1B7FCB46E0D0",
+    "listId": "g",
+    "parentId": "B7AD6C03113B49D7AB3DF02640F30D24",
+    "position": 1098,
+    "statementLabel": null,
+    "statementNotation": "CD2.3g"
+   },
+   "4AAA8DB73F5D4F26993B3EC8E6696B7B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A7E6EDAC834A420A99D7C11A80E4D879",
+     "3AF8163C3BD8404E97E737AA447B6D10",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Solves subtraction (separating)\nproblems using manipulatives (e.g.,\nfingers, objects, tally marks)",
+    "id": "4AAA8DB73F5D4F26993B3EC8E6696B7B",
+    "listId": "d",
+    "parentId": "A7E6EDAC834A420A99D7C11A80E4D879",
+    "position": 1143,
+    "statementLabel": null,
+    "statementNotation": "CD3.2d"
+   },
+   "4B98805B78844F229A19A3B2AD7584EE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B455524C491746AD8500DBEBCA3A031D",
+     "2B25374D89BE4ED9A679D771A0247A28",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Communicates about\nself and others in terms\nof physical characteristics\n(e.g., big/little, curly\nhair/straight hair) ",
+    "id": "4B98805B78844F229A19A3B2AD7584EE",
+    "listId": "d",
+    "parentId": "B455524C491746AD8500DBEBCA3A031D",
+    "position": 1077,
+    "statementLabel": null,
+    "statementNotation": "CD2.2d"
+   },
+   "4C24D7BDC50B42BFBE3135FF4A862072": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3590A0681E0B4F6A8ADD4108005ADCA3",
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Uses words that mean zero such as\n“nothing” or “none” ",
+    "id": "4C24D7BDC50B42BFBE3135FF4A862072",
+    "listId": "x",
+    "parentId": "3590A0681E0B4F6A8ADD4108005ADCA3",
+    "position": 1133,
+    "statementLabel": null,
+    "statementNotation": "CD3.1x"
+   },
+   "4CBBE56761BF4F29BF6C9BE97DEDF00F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D3C7A23686A6494087BD90DD9C596665",
+     "514310F9794142DE8150831DF52A53D1",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Responds to music by\nchanging expression,\nmoving head or limbs,\nswaying, nodding,\nbouncing or clapping",
+    "id": "4CBBE56761BF4F29BF6C9BE97DEDF00F",
+    "listId": "e",
+    "parentId": "D3C7A23686A6494087BD90DD9C596665",
+    "position": 1251,
+    "statementLabel": null,
+    "statementNotation": "CD4.2e"
+   },
+   "4CCA0B676FDC4B5CB811C5650ABD745E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B7AD6C03113B49D7AB3DF02640F30D24",
+     "0433FCAD56A5437193ED46B65D3D95BB",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With adult\nhelp, notices and\ncommunicates about\ndifferent family\nstructures represented in\nthe group",
+    "id": "4CCA0B676FDC4B5CB811C5650ABD745E",
+    "listId": "i",
+    "parentId": "B7AD6C03113B49D7AB3DF02640F30D24",
+    "position": 1100,
+    "statementLabel": null,
+    "statementNotation": "CD2.3i"
+   },
+   "4CD80518C3A74C22AB4EA4D055513BC3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3590A0681E0B4F6A8ADD4108005ADCA3",
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Arranges images with 3 or more different\nquantities of objects in correct order",
+    "id": "4CD80518C3A74C22AB4EA4D055513BC3",
+    "listId": "aa",
+    "parentId": "3590A0681E0B4F6A8ADD4108005ADCA3",
+    "position": 1136,
+    "statementLabel": null,
+    "statementNotation": "CD3.1aa"
+   },
+   "4D31ACEBFCC147D4B75246411A62DE46": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6B6C67B93CFC4470B29DF5E3BAB8D7FE",
+     "664894926BA34D3AB9964CECA1028A54",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With feet on a flat\nsurface, and with adult\nsupport, pushes down\nwith legs",
+    "id": "4D31ACEBFCC147D4B75246411A62DE46",
+    "listId": "a",
+    "parentId": "6B6C67B93CFC4470B29DF5E3BAB8D7FE",
+    "position": 1218,
+    "statementLabel": null,
+    "statementNotation": "CD4.1a"
+   },
+   "4D37CDCC64D746719BF19CE323EBAC8E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "AE1CC838CDD74809B02CA193713D5BCB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Preschool\n44-60 months",
+    "id": "4D37CDCC64D746719BF19CE323EBAC8E",
+    "listId": "",
+    "parentId": "AE1CC838CDD74809B02CA193713D5BCB",
+    "position": 1189,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "4E2D41E24C014A5CAD41BFEFA6AF0B37": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EBC41226FAC74E8B8B237FAB65D10891",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Preschool\n34-48 months",
+    "id": "4E2D41E24C014A5CAD41BFEFA6AF0B37",
+    "listId": "",
+    "parentId": "EBC41226FAC74E8B8B237FAB65D10891",
+    "position": 1058,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "4E6BD5BAD83648A59211919E71A5F097": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A7E6EDAC834A420A99D7C11A80E4D879",
+     "3AF8163C3BD8404E97E737AA447B6D10",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Solves addition (joining) problems\nusing manipulatives (e.g., fingers,\nobjects, tally marks)",
+    "id": "4E6BD5BAD83648A59211919E71A5F097",
+    "listId": "c",
+    "parentId": "A7E6EDAC834A420A99D7C11A80E4D879",
+    "position": 1142,
+    "statementLabel": null,
+    "statementNotation": "CD3.2c"
+   },
+   "4EB2068764BB4FB2B145039878A211C5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2B25374D89BE4ED9A679D771A0247A28",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Toddler\n12-24 months",
+    "id": "4EB2068764BB4FB2B145039878A211C5",
+    "listId": "",
+    "parentId": "2B25374D89BE4ED9A679D771A0247A28",
+    "position": 1074,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "4F1AF4BF01E548779E97BAB7F429386E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2B25374D89BE4ED9A679D771A0247A28",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Infancy\n6-14 months",
+    "id": "4F1AF4BF01E548779E97BAB7F429386E",
+    "listId": "",
+    "parentId": "2B25374D89BE4ED9A679D771A0247A28",
+    "position": 1072,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "4F3C10B5F3AE478D9DC82C1EC21786A0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "39CBE264E7DC4B21ACCF6E008FF3F93A",
+     "BBB376261B48413E87342FC022069374",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Uses mathematical\nideas such as counting,\nweighing, and\nmeasuring to understand\nobjects and categories of\nobjects ",
+    "id": "4F3C10B5F3AE478D9DC82C1EC21786A0",
+    "listId": "l",
+    "parentId": "39CBE264E7DC4B21ACCF6E008FF3F93A",
+    "position": 1037,
+    "statementLabel": null,
+    "statementNotation": "CD1.2l"
+   },
+   "4FE5182332CD46C885043888BAAD9815": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "94E4419F19FC4B3CAF8D5F46D5978D8E",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Toddler\n12-24 months",
+    "id": "4FE5182332CD46C885043888BAAD9815",
+    "listId": "",
+    "parentId": "94E4419F19FC4B3CAF8D5F46D5978D8E",
+    "position": 1303,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "50584F72AB66413892123F835D039DC9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "DA94F8B991724597A99B84119CD4BEF1",
+     "359026A4560140E98969947BFECFF852",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describes the spatial features of\nobjects in the classroom, home,\nor neighborhood (e.g., Pointing\nto a picture of the sun, child says\n“It’s a circle.”)",
+    "id": "50584F72AB66413892123F835D039DC9",
+    "listId": "o",
+    "parentId": "DA94F8B991724597A99B84119CD4BEF1",
+    "position": 1163,
+    "statementLabel": null,
+    "statementNotation": "CD3.3o"
+   },
+   "5076DA8871434680857B7662184462A1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7DF064DFC20A4C2EB5F703F3776CC25A",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Infancy\n6-14 months",
+    "id": "5076DA8871434680857B7662184462A1",
+    "listId": "",
+    "parentId": "7DF064DFC20A4C2EB5F703F3776CC25A",
+    "position": 1005,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "5077884215E449DF88F3737E4C6A106E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "664894926BA34D3AB9964CECA1028A54",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Infancy\n6-14 months",
+    "id": "5077884215E449DF88F3737E4C6A106E",
+    "listId": "",
+    "parentId": "664894926BA34D3AB9964CECA1028A54",
+    "position": 1219,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "50F23A33D601497E97AB6AA68B27E703": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4D37CDCC64D746719BF19CE323EBAC8E",
+     "AE1CC838CDD74809B02CA193713D5BCB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Fills in missing\nelements of simple,\nrepeating patterns ",
+    "id": "50F23A33D601497E97AB6AA68B27E703",
+    "listId": "m",
+    "parentId": "4D37CDCC64D746719BF19CE323EBAC8E",
+    "position": 1191,
+    "statementLabel": null,
+    "statementNotation": "CD3.4m"
+   },
+   "514310F9794142DE8150831DF52A53D1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Learning about and through music",
+    "id": "514310F9794142DE8150831DF52A53D1",
+    "listId": "2",
+    "parentId": "C6BB54435FF44FD5ABD0CD22BD6781E4",
+    "position": 1244,
+    "statementLabel": null,
+    "statementNotation": "CD4.2"
+   },
+   "522CDF62673748C0ADA5A5B6C974D41A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "280CAF40DCB74E67846CE169D7BD266A",
+     "514310F9794142DE8150831DF52A53D1",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Engages in a\n“conversation” with adult\nby taking turns making\nsounds",
+    "id": "522CDF62673748C0ADA5A5B6C974D41A",
+    "listId": "b",
+    "parentId": "280CAF40DCB74E67846CE169D7BD266A",
+    "position": 1247,
+    "statementLabel": null,
+    "statementNotation": "CD4.2b"
+   },
+   "54112762921B42DA8D84394525390C5B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "359026A4560140E98969947BFECFF852",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Infancy\n6-14 months",
+    "id": "54112762921B42DA8D84394525390C5B",
+    "listId": "",
+    "parentId": "359026A4560140E98969947BFECFF852",
+    "position": 1147,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "5471D31B676243398106FDD54597F1FA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0433FCAD56A5437193ED46B65D3D95BB",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Infancy\n6-14 months",
+    "id": "5471D31B676243398106FDD54597F1FA",
+    "listId": "",
+    "parentId": "0433FCAD56A5437193ED46B65D3D95BB",
+    "position": 1088,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "562628B635BD41CDB2EA5E01C16996C7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "AE1CC838CDD74809B02CA193713D5BCB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Preschool\n34-48 months",
+    "id": "562628B635BD41CDB2EA5E01C16996C7",
+    "listId": "",
+    "parentId": "AE1CC838CDD74809B02CA193713D5BCB",
+    "position": 1186,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "58765B67A8C244CA94A2CC311F6EC835": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A2D5B7F452324C2FAAC52A43F231813B",
+     "7DF064DFC20A4C2EB5F703F3776CC25A",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Observes and describes\nnatural phenomena using\nthe tools of the arts (e.g.,\nexpressions, sounds,\nmovements, drawing) ",
+    "id": "58765B67A8C244CA94A2CC311F6EC835",
+    "listId": "g",
+    "parentId": "A2D5B7F452324C2FAAC52A43F231813B",
+    "position": 1012,
+    "statementLabel": null,
+    "statementNotation": "CD1.1g"
+   },
+   "58DF07CB35EC41A8B3374400D57F5788": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6A3F4BE585304199849F4447B15DB89C",
+     "664894926BA34D3AB9964CECA1028A54",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Repeats longer rhythm\npatterns",
+    "id": "58DF07CB35EC41A8B3374400D57F5788",
+    "listId": "m",
+    "parentId": "6A3F4BE585304199849F4447B15DB89C",
+    "position": 1234,
+    "statementLabel": null,
+    "statementNotation": "CD4.1m"
+   },
+   "5967F724E6214864AB9BFF3655CAA428": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "94E4419F19FC4B3CAF8D5F46D5978D8E",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Preschool\n34-48 months",
+    "id": "5967F724E6214864AB9BFF3655CAA428",
+    "listId": "",
+    "parentId": "94E4419F19FC4B3CAF8D5F46D5978D8E",
+    "position": 1308,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "5A4DC50CF77C47D2A88F9FB3D943E83B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F3378EE6A2D2473BBBCCC65A6FC2E285",
+     "0433FCAD56A5437193ED46B65D3D95BB",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Uses words to describe\ntheir own physical\nfeatures (e.g., size,\ngender, assistive devices,\netc.) and those of peers\nand adults",
+    "id": "5A4DC50CF77C47D2A88F9FB3D943E83B",
+    "listId": "d",
+    "parentId": "F3378EE6A2D2473BBBCCC65A6FC2E285",
+    "position": 1093,
+    "statementLabel": null,
+    "statementNotation": "CD2.3d"
+   },
+   "5AA98C7302334503837327EE8EB2F108": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "427171BEC49B4C089B13F7DB2F8C5E8F",
+     "359026A4560140E98969947BFECFF852",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Draws and describes pictures\nthat show relative locations\nand uses terms like “near to” or\n“closer to” ",
+    "id": "5AA98C7302334503837327EE8EB2F108",
+    "listId": "v",
+    "parentId": "427171BEC49B4C089B13F7DB2F8C5E8F",
+    "position": 1171,
+    "statementLabel": null,
+    "statementNotation": "CD3.3v"
+   },
+   "5AFE59ED2F9A4E4BA7678A2490F922DA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D1AEACDB578B459CBFC294EFE8400CE7",
+     "359026A4560140E98969947BFECFF852",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Places one block\nor an alternative\nitem on another and\nsays or signs “on”",
+    "id": "5AFE59ED2F9A4E4BA7678A2490F922DA",
+    "listId": "d",
+    "parentId": "D1AEACDB578B459CBFC294EFE8400CE7",
+    "position": 1151,
+    "statementLabel": null,
+    "statementNotation": "CD3.3d"
+   },
+   "5DF4B809D3084990B48C25B59948628F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BA2F71DDC49243DB977312DBB933DBAF",
+     "94E4419F19FC4B3CAF8D5F46D5978D8E",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Watches faces and\nresponds to presence of\nfamiliar figures",
+    "id": "5DF4B809D3084990B48C25B59948628F",
+    "listId": "b",
+    "parentId": "BA2F71DDC49243DB977312DBB933DBAF",
+    "position": 1299,
+    "statementLabel": null,
+    "statementNotation": "CD4.4b"
+   },
+   "5E49D9FF3D6649229142693D8AC0CD10": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C0E90F40F6B94B7EAED75FDE1AFDF392",
+     "F19FBCED05214F9CB939F676B7F6B6BB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With adult support, explores tools of\nmeasurement such as rulers, scales, and\nmeasuring cup, using the appropriate\ntool for the attribute/characteristic being\nmeasured ",
+    "id": "5E49D9FF3D6649229142693D8AC0CD10",
+    "listId": "m",
+    "parentId": "C0E90F40F6B94B7EAED75FDE1AFDF392",
+    "position": 1213,
+    "statementLabel": null,
+    "statementNotation": "CD3.5m"
+   },
+   "5E8C131B1E524021A54FFADFFE177E95": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BFAF2332946F47B591CC7D544BA3F10C",
+     "514310F9794142DE8150831DF52A53D1",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Repeats longer rhythm\npatterns",
+    "id": "5E8C131B1E524021A54FFADFFE177E95",
+    "listId": "p",
+    "parentId": "BFAF2332946F47B591CC7D544BA3F10C",
+    "position": 1265,
+    "statementLabel": null,
+    "statementNotation": "CD4.2p"
+   },
+   "60DA1999A4DA4027B8FC0CDB5F93CB6D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BBB376261B48413E87342FC022069374",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Preschool\n44-60 months",
+    "id": "60DA1999A4DA4027B8FC0CDB5F93CB6D",
+    "listId": "",
+    "parentId": "BBB376261B48413E87342FC022069374",
+    "position": 1039,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "6286FB2F0E474F49BF534C5EF542304D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F8D10A8068A3420B97735F7A22866618",
+     "7DF064DFC20A4C2EB5F703F3776CC25A",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Shows detail in\ndrawings, constructions,\ndemonstrations to show\nthinking",
+    "id": "6286FB2F0E474F49BF534C5EF542304D",
+    "listId": "l",
+    "parentId": "F8D10A8068A3420B97735F7A22866618",
+    "position": 1019,
+    "statementLabel": null,
+    "statementNotation": "CD1.1l"
+   },
+   "629B23CDAD314BD5AF49406FC5500C05": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0DE9C8747BC94231B6CB661C0694773E",
+     "664894926BA34D3AB9964CECA1028A54",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Follows directions or\nexample to stop moving\non cue",
+    "id": "629B23CDAD314BD5AF49406FC5500C05",
+    "listId": "s",
+    "parentId": "0DE9C8747BC94231B6CB661C0694773E",
+    "position": 1241,
+    "statementLabel": null,
+    "statementNotation": "CD4.1s"
+   },
+   "62C4B7A198554E17A31A228AF691B4CF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D88BF920C9864DD99FB79C36884A27B4",
+     "514310F9794142DE8150831DF52A53D1",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Participates in group\nmusical experiences ",
+    "id": "62C4B7A198554E17A31A228AF691B4CF",
+    "listId": "i",
+    "parentId": "D88BF920C9864DD99FB79C36884A27B4",
+    "position": 1257,
+    "statementLabel": null,
+    "statementNotation": "CD4.2i"
+   },
+   "63F4ED13696841B5978CAFCD430DC3A9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B7AD6C03113B49D7AB3DF02640F30D24",
+     "0433FCAD56A5437193ED46B65D3D95BB",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Communicates about\nown family’s culture and\ntraditions and accepts\nthat children and families\nare different",
+    "id": "63F4ED13696841B5978CAFCD430DC3A9",
+    "listId": "j",
+    "parentId": "B7AD6C03113B49D7AB3DF02640F30D24",
+    "position": 1101,
+    "statementLabel": null,
+    "statementNotation": "CD2.3j"
+   },
+   "64824D726EDF4EDFAA27CEB84556020C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9463B502A53B4BCA86A07954EBB391B4",
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begins to\nexplore one-toone correspondence\n(e.g., setting places at\na table), counting up\nto 10",
+    "id": "64824D726EDF4EDFAA27CEB84556020C",
+    "listId": "n",
+    "parentId": "9463B502A53B4BCA86A07954EBB391B4",
+    "position": 1122,
+    "statementLabel": null,
+    "statementNotation": "CD3.1n"
+   },
+   "651307E51BB348269FC21E798C9BAE77": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "29B86EEB137D49A891D9BA94542EB652",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Infancy\n6-14 months",
+    "id": "651307E51BB348269FC21E798C9BAE77",
+    "listId": "",
+    "parentId": "29B86EEB137D49A891D9BA94542EB652",
+    "position": 1277,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "654D442C2AB84049AF640D2205DBD9B2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "17B9A02E2B084E51B690E0B3277D8108",
+     "94E4419F19FC4B3CAF8D5F46D5978D8E",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Responds to visual\nelements in the\nenvironment by gazing\nat light, color, and\npatterns",
+    "id": "654D442C2AB84049AF640D2205DBD9B2",
+    "listId": "a",
+    "parentId": "17B9A02E2B084E51B690E0B3277D8108",
+    "position": 1297,
+    "statementLabel": null,
+    "statementNotation": "CD4.4a"
+   },
+   "664894926BA34D3AB9964CECA1028A54": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Exploring and expressing ideas through movement and dance",
+    "id": "664894926BA34D3AB9964CECA1028A54",
+    "listId": "1",
+    "parentId": "C6BB54435FF44FD5ABD0CD22BD6781E4",
+    "position": 1216,
+    "statementLabel": null,
+    "statementNotation": "CD4.1"
+   },
+   "66980FF543B243F8B116AF21A0A06B29": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "16A0C9EA66A64DFDAC5D1B37CA38FE40",
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Can name and\nsing/chant some\nnumbers with no\nsequence",
+    "id": "66980FF543B243F8B116AF21A0A06B29",
+    "listId": "d",
+    "parentId": "16A0C9EA66A64DFDAC5D1B37CA38FE40",
+    "position": 1110,
+    "statementLabel": null,
+    "statementNotation": "CD3.1d"
+   },
+   "6864570D866A4ECD97A2FF1C93FAF872": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B8F39CF893754F029A566B67E9656A96",
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Says, signs, or\ngestures for “more”\nto request additional\nfood or items ",
+    "id": "6864570D866A4ECD97A2FF1C93FAF872",
+    "listId": "b",
+    "parentId": "B8F39CF893754F029A566B67E9656A96",
+    "position": 1107,
+    "statementLabel": null,
+    "statementNotation": "CD3.1b"
+   },
+   "686CA69C8B404C90BBE52A8B73E96FD9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2B25374D89BE4ED9A679D771A0247A28",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Preschool\n44-60 months",
+    "id": "686CA69C8B404C90BBE52A8B73E96FD9",
+    "listId": "",
+    "parentId": "2B25374D89BE4ED9A679D771A0247A28",
+    "position": 1081,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "68A1AD4B98A14A9FB63F0BF0365A3053": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F19FBCED05214F9CB939F676B7F6B6BB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Toddler\n12-24 months",
+    "id": "68A1AD4B98A14A9FB63F0BF0365A3053",
+    "listId": "",
+    "parentId": "F19FBCED05214F9CB939F676B7F6B6BB",
+    "position": 1199,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "68E816A75ECB42908C207D3BA0035118": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "29B86EEB137D49A891D9BA94542EB652",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Preschool\n44-60 months",
+    "id": "68E816A75ECB42908C207D3BA0035118",
+    "listId": "",
+    "parentId": "29B86EEB137D49A891D9BA94542EB652",
+    "position": 1292,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "68F7CCF727834B159DE1B79EB4DCC9C7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C0E90F40F6B94B7EAED75FDE1AFDF392",
+     "F19FBCED05214F9CB939F676B7F6B6BB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With adult support, recognizes that\ndifferent attributes such as weight,\nheight, and volume require different\ntools to measure",
+    "id": "68F7CCF727834B159DE1B79EB4DCC9C7",
+    "listId": "k",
+    "parentId": "C0E90F40F6B94B7EAED75FDE1AFDF392",
+    "position": 1211,
+    "statementLabel": null,
+    "statementNotation": "CD3.5k"
+   },
+   "69431A0CAC064CC7AAC0455AABD9F54E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2028DFC95BBF4435A994E9112E16B07A",
+     "664894926BA34D3AB9964CECA1028A54",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Follows adult’s\nguidance for recognizing\npersonal space",
+    "id": "69431A0CAC064CC7AAC0455AABD9F54E",
+    "listId": "g",
+    "parentId": "2028DFC95BBF4435A994E9112E16B07A",
+    "position": 1227,
+    "statementLabel": null,
+    "statementNotation": "CD4.1g"
+   },
+   "6A3F4BE585304199849F4447B15DB89C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "664894926BA34D3AB9964CECA1028A54",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Preschool\n34-48 months",
+    "id": "6A3F4BE585304199849F4447B15DB89C",
+    "listId": "",
+    "parentId": "664894926BA34D3AB9964CECA1028A54",
+    "position": 1230,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "6A753683AA6D429DA03F270D06DC8B92": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E1B74CA537F647EF94BF78EE64EEE2E2",
+     "29B86EEB137D49A891D9BA94542EB652",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Uses props and\ndramatic play to act out\nemotions related to fear,\nexcitement, happiness,\nsadness and anger ",
+    "id": "6A753683AA6D429DA03F270D06DC8B92",
+    "listId": "k",
+    "parentId": "E1B74CA537F647EF94BF78EE64EEE2E2",
+    "position": 1289,
+    "statementLabel": null,
+    "statementNotation": "CD4.3k"
+   },
+   "6B6C67B93CFC4470B29DF5E3BAB8D7FE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "664894926BA34D3AB9964CECA1028A54",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Infancy\n0-8 months",
+    "id": "6B6C67B93CFC4470B29DF5E3BAB8D7FE",
+    "listId": "",
+    "parentId": "664894926BA34D3AB9964CECA1028A54",
+    "position": 1217,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "6EA083048B1146A59520FA494DF7D772": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D1AEACDB578B459CBFC294EFE8400CE7",
+     "359026A4560140E98969947BFECFF852",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Matches simple\nshapes in a sorting\nbox or puzzle",
+    "id": "6EA083048B1146A59520FA494DF7D772",
+    "listId": "c",
+    "parentId": "D1AEACDB578B459CBFC294EFE8400CE7",
+    "position": 1150,
+    "statementLabel": null,
+    "statementNotation": "CD3.3c"
+   },
+   "6EED040BA79145AB97042C0F112FE746": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5967F724E6214864AB9BFF3655CAA428",
+     "94E4419F19FC4B3CAF8D5F46D5978D8E",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Shows control and\ncoordination with\nscissors",
+    "id": "6EED040BA79145AB97042C0F112FE746",
+    "listId": "j",
+    "parentId": "5967F724E6214864AB9BFF3655CAA428",
+    "position": 1310,
+    "statementLabel": null,
+    "statementNotation": "CD4.4j"
+   },
+   "6F79FA36E3AA455984C1203CAD153F1F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "AE1CC838CDD74809B02CA193713D5BCB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Toddler\n12-24 months",
+    "id": "6F79FA36E3AA455984C1203CAD153F1F",
+    "listId": "",
+    "parentId": "AE1CC838CDD74809B02CA193713D5BCB",
+    "position": 1178,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "6FB298D89BDD41A4899F04F20D317C9B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1A967579DCAE4B64AE851D2C5CC4FD11",
+     "2B25374D89BE4ED9A679D771A0247A28",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Shows preference for\nfamiliar people with\nsmiles and an open facial\nexpression",
+    "id": "6FB298D89BDD41A4899F04F20D317C9B",
+    "listId": "a",
+    "parentId": "1A967579DCAE4B64AE851D2C5CC4FD11",
+    "position": 1071,
+    "statementLabel": null,
+    "statementNotation": "CD2.2a"
+   },
+   "7249CFCDB5F84743A67DB8772005D118": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "AE1CC838CDD74809B02CA193713D5BCB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Toddler\n22-36 months",
+    "id": "7249CFCDB5F84743A67DB8772005D118",
+    "listId": "",
+    "parentId": "AE1CC838CDD74809B02CA193713D5BCB",
+    "position": 1182,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "7430FEE94A534CC2B3EC103323B91E91": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "445BC72101CE49D0AEFA38C359CEC057",
+     "94E4419F19FC4B3CAF8D5F46D5978D8E",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Explores a variety\nof media including\npaper, tape, glue,\nclay, watercolor, etc.",
+    "id": "7430FEE94A534CC2B3EC103323B91E91",
+    "listId": "h",
+    "parentId": "445BC72101CE49D0AEFA38C359CEC057",
+    "position": 1307,
+    "statementLabel": null,
+    "statementNotation": "CD4.4h"
+   },
+   "74D29DA4666A4A7C96877C6F98C7612E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3590A0681E0B4F6A8ADD4108005ADCA3",
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Answers the question “How many?” for up\nto 10 objects",
+    "id": "74D29DA4666A4A7C96877C6F98C7612E",
+    "listId": "u",
+    "parentId": "3590A0681E0B4F6A8ADD4108005ADCA3",
+    "position": 1130,
+    "statementLabel": null,
+    "statementNotation": "CD3.1u"
+   },
+   "779776DAF95E4ADCB07907B54046C0C9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4F1AF4BF01E548779E97BAB7F429386E",
+     "2B25374D89BE4ED9A679D771A0247A28",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Shows awareness\nof strangers and of\nseparation from parents\nwith hesitation and/or\ndistress",
+    "id": "779776DAF95E4ADCB07907B54046C0C9",
+    "listId": "b",
+    "parentId": "4F1AF4BF01E548779E97BAB7F429386E",
+    "position": 1073,
+    "statementLabel": null,
+    "statementNotation": "CD2.2b"
+   },
+   "7998EE6D93484A91B023FF8FDC7D72BC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "686CA69C8B404C90BBE52A8B73E96FD9",
+     "2B25374D89BE4ED9A679D771A0247A28",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With adult help,\nparticipates with peers\nin solving problems,\nsettling conflicts, and\nnegotiating plans and\ndecisions ",
+    "id": "7998EE6D93484A91B023FF8FDC7D72BC",
+    "listId": "i",
+    "parentId": "686CA69C8B404C90BBE52A8B73E96FD9",
+    "position": 1084,
+    "statementLabel": null,
+    "statementNotation": "CD2.2i"
+   },
+   "7A697403714C4C77BCCC95FDED71DF2D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5077884215E449DF88F3737E4C6A106E",
+     "664894926BA34D3AB9964CECA1028A54",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Stands alone very\nbriefly with adult\nsupporting nearby",
+    "id": "7A697403714C4C77BCCC95FDED71DF2D",
+    "listId": "b",
+    "parentId": "5077884215E449DF88F3737E4C6A106E",
+    "position": 1220,
+    "statementLabel": null,
+    "statementNotation": "CD4.1b"
+   },
+   "7AFBD4A477A74F27A26893F8F2CE4852": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B7AD6C03113B49D7AB3DF02640F30D24",
+     "0433FCAD56A5437193ED46B65D3D95BB",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Represents self and\nothers in drawing with\nincreasing detail and\naccuracy, including\ndistinguishing features\nrelated to physical, racial,\nand cultural differences  ",
+    "id": "7AFBD4A477A74F27A26893F8F2CE4852",
+    "listId": "h",
+    "parentId": "B7AD6C03113B49D7AB3DF02640F30D24",
+    "position": 1099,
+    "statementLabel": null,
+    "statementNotation": "CD2.3h"
+   },
+   "7B7E54817A614B1CB8462DB1165896D8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "29B86EEB137D49A891D9BA94542EB652",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Infancy\n0-8 months",
+    "id": "7B7E54817A614B1CB8462DB1165896D8",
+    "listId": "",
+    "parentId": "29B86EEB137D49A891D9BA94542EB652",
+    "position": 1274,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "7B8815B59B4443148B483D1EC291853B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B1B2AC5FB1D44228ABC6A3EE82FB4816",
+     "F19FBCED05214F9CB939F676B7F6B6BB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Explores\nfamiliar and\nunfamiliar\npeople or\nobjects through\ntouching\n(handling) or\nmouthing (oral\nexploration) ",
+    "id": "7B8815B59B4443148B483D1EC291853B",
+    "listId": "a",
+    "parentId": "B1B2AC5FB1D44228ABC6A3EE82FB4816",
+    "position": 1196,
+    "statementLabel": null,
+    "statementNotation": "CD3.5a"
+   },
+   "7BBBC785271445FBBA702382D54DFAF9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BFAF2332946F47B591CC7D544BA3F10C",
+     "514310F9794142DE8150831DF52A53D1",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Sings alone and with\nothers ",
+    "id": "7BBBC785271445FBBA702382D54DFAF9",
+    "listId": "r",
+    "parentId": "BFAF2332946F47B591CC7D544BA3F10C",
+    "position": 1267,
+    "statementLabel": null,
+    "statementNotation": "CD4.2r"
+   },
+   "7CFF87808A694BAD94E387555590A3FD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D88BF920C9864DD99FB79C36884A27B4",
+     "514310F9794142DE8150831DF52A53D1",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Repeats short rhythm\npatterns",
+    "id": "7CFF87808A694BAD94E387555590A3FD",
+    "listId": "l",
+    "parentId": "D88BF920C9864DD99FB79C36884A27B4",
+    "position": 1260,
+    "statementLabel": null,
+    "statementNotation": "CD4.2l"
+   },
+   "7DF064DFC20A4C2EB5F703F3776CC25A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Paying attention to the natural world",
+    "id": "7DF064DFC20A4C2EB5F703F3776CC25A",
+    "listId": "1",
+    "parentId": "408DC7095FCE468F9D408C090F3FB02D",
+    "position": 1001,
+    "statementLabel": null,
+    "statementNotation": "CD1.1"
+   },
+   "7EF82D86E9AC4DB28E2E4A37FCCF0093": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6A3F4BE585304199849F4447B15DB89C",
+     "664894926BA34D3AB9964CECA1028A54",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Uses words that\ndescribe movement\n(e.g., roll, gallop, etc.) ",
+    "id": "7EF82D86E9AC4DB28E2E4A37FCCF0093",
+    "listId": "k",
+    "parentId": "6A3F4BE585304199849F4447B15DB89C",
+    "position": 1232,
+    "statementLabel": null,
+    "statementNotation": "CD4.1k"
+   },
+   "7F930314BBC349A88F9FD8B633051DA8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "427171BEC49B4C089B13F7DB2F8C5E8F",
+     "359026A4560140E98969947BFECFF852",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Correctly names squares,\nrectangles and triangles regardless\nof size or orientation",
+    "id": "7F930314BBC349A88F9FD8B633051DA8",
+    "listId": "t",
+    "parentId": "427171BEC49B4C089B13F7DB2F8C5E8F",
+    "position": 1169,
+    "statementLabel": null,
+    "statementNotation": "CD3.3t"
+   },
+   "80B1562D1D384D6CB6581622EAE4AFB5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A9C993476B7549EA96DAF28A47D7E71A",
+     "BBB376261B48413E87342FC022069374",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Reacts to and\ncomments on changes\nwhen mixing or\nmanipulating materials",
+    "id": "80B1562D1D384D6CB6581622EAE4AFB5",
+    "listId": "i",
+    "parentId": "A9C993476B7549EA96DAF28A47D7E71A",
+    "position": 1033,
+    "statementLabel": null,
+    "statementNotation": "CD1.2i"
+   },
+   "83C2F782F2D842988BB9CDA2EAE974CB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F8D10A8068A3420B97735F7A22866618",
+     "7DF064DFC20A4C2EB5F703F3776CC25A",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Compares and\ncategorizes observable\nphenomena (e.g., by\ncollecting, organizing,\nand describing materials\naccording to their\nphysical characteristics)",
+    "id": "83C2F782F2D842988BB9CDA2EAE974CB",
+    "listId": "j",
+    "parentId": "F8D10A8068A3420B97735F7A22866618",
+    "position": 1017,
+    "statementLabel": null,
+    "statementNotation": "CD1.1j"
+   },
+   "840474CE24D640FF85FB846AD2507E37": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D88BF920C9864DD99FB79C36884A27B4",
+     "514310F9794142DE8150831DF52A53D1",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Changes the tempo of\na beat between fast and\nslow",
+    "id": "840474CE24D640FF85FB846AD2507E37",
+    "listId": "k",
+    "parentId": "D88BF920C9864DD99FB79C36884A27B4",
+    "position": 1259,
+    "statementLabel": null,
+    "statementNotation": "CD4.2k"
+   },
+   "84AFFCB49C0F4340B82B64008AB23E2D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2FA1890E5D4A4CE3BAB197AC297A5000",
+     "EBC41226FAC74E8B8B237FAB65D10891",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Reacts to, and carefully\nobserves, the actions\nof adults and peers ",
+    "id": "84AFFCB49C0F4340B82B64008AB23E2D",
+    "listId": "a",
+    "parentId": "2FA1890E5D4A4CE3BAB197AC297A5000",
+    "position": 1047,
+    "statementLabel": null,
+    "statementNotation": "CD2.1a"
+   },
+   "857E1A6DA567407E92EAD6FDD94D1595": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "514310F9794142DE8150831DF52A53D1",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Preschool\n44-60 months",
+    "id": "857E1A6DA567407E92EAD6FDD94D1595",
+    "listId": "",
+    "parentId": "514310F9794142DE8150831DF52A53D1",
+    "position": 1268,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "85B72BA719364A24A40477E07277CE51": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0DE9C8747BC94231B6CB661C0694773E",
+     "664894926BA34D3AB9964CECA1028A54",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Follows directions\nor demonstrations\nof moving forward,\nbackwards, sideways,\nor in a turning motion",
+    "id": "85B72BA719364A24A40477E07277CE51",
+    "listId": "q",
+    "parentId": "0DE9C8747BC94231B6CB661C0694773E",
+    "position": 1239,
+    "statementLabel": null,
+    "statementNotation": "CD4.1q"
+   },
+   "85B913919FB8465CA6EF9E716BC26E58": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "41D37720A74A4765887EAE1A07949926",
+     "3AF8163C3BD8404E97E737AA447B6D10",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With adult help, adds (joins) two\nsmall sets of objects (e.g., “I have two\nbooks and you have two books. How\nmany books do we have all together?”)  ",
+    "id": "85B913919FB8465CA6EF9E716BC26E58",
+    "listId": "a",
+    "parentId": "41D37720A74A4765887EAE1A07949926",
+    "position": 1139,
+    "statementLabel": null,
+    "statementNotation": "CD3.2a"
+   },
+   "863351C9EF9D427892715BC534841673": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "324337C3392A4C4F8DF3151219716FDD",
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Uses number\nwords for counting,\nthough not\nnecessarily in order",
+    "id": "863351C9EF9D427892715BC534841673",
+    "listId": "h",
+    "parentId": "324337C3392A4C4F8DF3151219716FDD",
+    "position": 1115,
+    "statementLabel": null,
+    "statementNotation": "CD3.1h"
+   },
+   "86AA51719FD04832A8AFE7AE0176A4A4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3590A0681E0B4F6A8ADD4108005ADCA3",
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Counts forward to 20 by memory ",
+    "id": "86AA51719FD04832A8AFE7AE0176A4A4",
+    "listId": "q",
+    "parentId": "3590A0681E0B4F6A8ADD4108005ADCA3",
+    "position": 1126,
+    "statementLabel": null,
+    "statementNotation": "CD3.1q"
+   },
+   "8761164749D949CE93D000A63B744610": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E7B41F677B434F35AF6496097003B638",
+     "BBB376261B48413E87342FC022069374",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Continues to play\nor explore in spite of\ndistracting sounds or\nobjects",
+    "id": "8761164749D949CE93D000A63B744610",
+    "listId": "e",
+    "parentId": "E7B41F677B434F35AF6496097003B638",
+    "position": 1028,
+    "statementLabel": null,
+    "statementNotation": "CD1.2e"
+   },
+   "89300957EB7348D79649D8AE1C473B23": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C0E90F40F6B94B7EAED75FDE1AFDF392",
+     "F19FBCED05214F9CB939F676B7F6B6BB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Directly compares the length or\nvolume of two objects",
+    "id": "89300957EB7348D79649D8AE1C473B23",
+    "listId": "g",
+    "parentId": "C0E90F40F6B94B7EAED75FDE1AFDF392",
+    "position": 1207,
+    "statementLabel": null,
+    "statementNotation": "CD3.5g"
+   },
+   "8BD0995A0FA94047BE8552DB94610A1D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3590A0681E0B4F6A8ADD4108005ADCA3",
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Counts out 10-20 objects in a line from a\nlarger group",
+    "id": "8BD0995A0FA94047BE8552DB94610A1D",
+    "listId": "v",
+    "parentId": "3590A0681E0B4F6A8ADD4108005ADCA3",
+    "position": 1131,
+    "statementLabel": null,
+    "statementNotation": "CD3.1v"
+   },
+   "8C1B99DBFE124398A3A7420A0B5ACDFC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "94E4419F19FC4B3CAF8D5F46D5978D8E",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Preschool\n44-60 months",
+    "id": "8C1B99DBFE124398A3A7420A0B5ACDFC",
+    "listId": "",
+    "parentId": "94E4419F19FC4B3CAF8D5F46D5978D8E",
+    "position": 1311,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "8E01691D31684CE39BAC525A8F9BEC4F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3590A0681E0B4F6A8ADD4108005ADCA3",
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Instantly recognizes a collection of up to\n10 objects (i.e. subitizes)",
+    "id": "8E01691D31684CE39BAC525A8F9BEC4F",
+    "listId": "w",
+    "parentId": "3590A0681E0B4F6A8ADD4108005ADCA3",
+    "position": 1132,
+    "statementLabel": null,
+    "statementNotation": "CD3.1w"
+   },
+   "8F9B39168E684E23A6A4C06E5849594A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6F79FA36E3AA455984C1203CAD153F1F",
+     "AE1CC838CDD74809B02CA193713D5BCB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Imitates adult’s words\nin naming a pattern (e.g.,\nblue - red - blue - red) ",
+    "id": "8F9B39168E684E23A6A4C06E5849594A",
+    "listId": "f",
+    "parentId": "6F79FA36E3AA455984C1203CAD153F1F",
+    "position": 1181,
+    "statementLabel": null,
+    "statementNotation": "CD3.4f"
+   },
+   "9034E359A5E34DFBB412D1B54F6CEDBE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8C1B99DBFE124398A3A7420A0B5ACDFC",
+     "94E4419F19FC4B3CAF8D5F46D5978D8E",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With adult help,\nchooses media to match\nthe intention of the\nart (e.g., clay vs. paint\nvs. 3-D vs. collage) ",
+    "id": "9034E359A5E34DFBB412D1B54F6CEDBE",
+    "listId": "n",
+    "parentId": "8C1B99DBFE124398A3A7420A0B5ACDFC",
+    "position": 1315,
+    "statementLabel": null,
+    "statementNotation": "CD4.4n"
+   },
+   "91D34240D3064228B7A169EC36F51B2C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "359026A4560140E98969947BFECFF852",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Toddler\n22-36 months",
+    "id": "91D34240D3064228B7A169EC36F51B2C",
+    "listId": "",
+    "parentId": "359026A4560140E98969947BFECFF852",
+    "position": 1153,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "924BFF7CB64E4B19B5F8BEE46292A990": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F5C476F8539245C38A9D77493CE4ECD7",
+     "664894926BA34D3AB9964CECA1028A54",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Keeps a steady beat\nby tapping on legs or\nshaking or tapping a\nsimple instrument while\nseated on the floor ",
+    "id": "924BFF7CB64E4B19B5F8BEE46292A990",
+    "listId": "e",
+    "parentId": "F5C476F8539245C38A9D77493CE4ECD7",
+    "position": 1224,
+    "statementLabel": null,
+    "statementNotation": "CD4.1e"
+   },
+   "9463B502A53B4BCA86A07954EBB391B4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Preschool\n34-48 months",
+    "id": "9463B502A53B4BCA86A07954EBB391B4",
+    "listId": "",
+    "parentId": "9CF7B674A8F142D3929702C47D3C1625",
+    "position": 1117,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "94E4419F19FC4B3CAF8D5F46D5978D8E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Using visual arts media to express thoughts and feelings",
+    "id": "94E4419F19FC4B3CAF8D5F46D5978D8E",
+    "listId": "4",
+    "parentId": "C6BB54435FF44FD5ABD0CD22BD6781E4",
+    "position": 1295,
+    "statementLabel": null,
+    "statementNotation": "CD4.4"
+   },
+   "959879442C5A498E8536A2A514F58C14": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "651307E51BB348269FC21E798C9BAE77",
+     "29B86EEB137D49A891D9BA94542EB652",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Copies simple gestures\nsuch as waving goodbye  ",
+    "id": "959879442C5A498E8536A2A514F58C14",
+    "listId": "d",
+    "parentId": "651307E51BB348269FC21E798C9BAE77",
+    "position": 1279,
+    "statementLabel": null,
+    "statementNotation": "CD4.3d"
+   },
+   "97AB73466340497885011DAE0AA67EB1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0433FCAD56A5437193ED46B65D3D95BB",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Preschool\n34-48 months",
+    "id": "97AB73466340497885011DAE0AA67EB1",
+    "listId": "",
+    "parentId": "0433FCAD56A5437193ED46B65D3D95BB",
+    "position": 1094,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "97FCB4CCE8524A6F80967B7B25C291FB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "39CBE264E7DC4B21ACCF6E008FF3F93A",
+     "BBB376261B48413E87342FC022069374",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With adult support,\nasks a question, gathers\ninformation, and makes a\nprediction",
+    "id": "97FCB4CCE8524A6F80967B7B25C291FB",
+    "listId": "k",
+    "parentId": "39CBE264E7DC4B21ACCF6E008FF3F93A",
+    "position": 1036,
+    "statementLabel": null,
+    "statementNotation": "CD1.2k"
+   },
+   "98303BC6B29249B78EB387046FE890ED": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EBC41226FAC74E8B8B237FAB65D10891",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Preschool\n44-60 months",
+    "id": "98303BC6B29249B78EB387046FE890ED",
+    "listId": "",
+    "parentId": "EBC41226FAC74E8B8B237FAB65D10891",
+    "position": 1065,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "98603432998A43688B83D9FF5BD1BCB6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3590A0681E0B4F6A8ADD4108005ADCA3",
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Shows a quantity to match a numeral by\nmaking marks, drawing items, or placing\nactual objects",
+    "id": "98603432998A43688B83D9FF5BD1BCB6",
+    "listId": "y",
+    "parentId": "3590A0681E0B4F6A8ADD4108005ADCA3",
+    "position": 1134,
+    "statementLabel": null,
+    "statementNotation": "CD3.1y"
+   },
+   "99AFB163D87B49E19C326DE86581AF33": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6A3F4BE585304199849F4447B15DB89C",
+     "664894926BA34D3AB9964CECA1028A54",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Follows adult’s\nguidance to recognize\nother children’s personal\nspace, as suggested\nby the cultures of the\nchildren in the group",
+    "id": "99AFB163D87B49E19C326DE86581AF33",
+    "listId": "l",
+    "parentId": "6A3F4BE585304199849F4447B15DB89C",
+    "position": 1233,
+    "statementLabel": null,
+    "statementNotation": "CD4.1l"
+   },
+   "99E8D6918C6B436285AEC9447113F6BB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "562628B635BD41CDB2EA5E01C16996C7",
+     "AE1CC838CDD74809B02CA193713D5BCB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With adult help, fills in\nthe missing element of a\npattern (e.g., red, blue,\nred, ___, red)",
+    "id": "99E8D6918C6B436285AEC9447113F6BB",
+    "listId": "k",
+    "parentId": "562628B635BD41CDB2EA5E01C16996C7",
+    "position": 1188,
+    "statementLabel": null,
+    "statementNotation": "CD3.4k"
+   },
+   "9A3C92C58AB4444FAF0641C574F8A981": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CCF32F6FA1FC4FF08007B416DDCA2E62",
+     "AE1CC838CDD74809B02CA193713D5BCB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Anticipates the next\nmove in a game of peeka-boo",
+    "id": "9A3C92C58AB4444FAF0641C574F8A981",
+    "listId": "b",
+    "parentId": "CCF32F6FA1FC4FF08007B416DDCA2E62",
+    "position": 1175,
+    "statementLabel": null,
+    "statementNotation": "CD3.4b"
+   },
+   "9B3C9FF8ED09475FBDC063A46562248D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B4D45E204D5644A0B42FCFFFE5AEF22C",
+     "EBC41226FAC74E8B8B237FAB65D10891",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Makes comments,\nsigns, or gestures about\nfamily members and\nfriends, including where\nthey are and what they\ndo",
+    "id": "9B3C9FF8ED09475FBDC063A46562248D",
+    "listId": "f",
+    "parentId": "B4D45E204D5644A0B42FCFFFE5AEF22C",
+    "position": 1056,
+    "statementLabel": null,
+    "statementNotation": "CD2.1f"
+   },
+   "9B6DECAF9D874E83944B4C484F92E317": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7DF064DFC20A4C2EB5F703F3776CC25A",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Infancy\n0-8 months",
+    "id": "9B6DECAF9D874E83944B4C484F92E317",
+    "listId": "",
+    "parentId": "7DF064DFC20A4C2EB5F703F3776CC25A",
+    "position": 1002,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "9B700D919D6F4BD3AB45089DBECE25B1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9B6DECAF9D874E83944B4C484F92E317",
+     "7DF064DFC20A4C2EB5F703F3776CC25A",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Reaches for and moves\ntoward objects",
+    "id": "9B700D919D6F4BD3AB45089DBECE25B1",
+    "listId": "b",
+    "parentId": "9B6DECAF9D874E83944B4C484F92E317",
+    "position": 1004,
+    "statementLabel": null,
+    "statementNotation": "CD1.1b"
+   },
+   "9C2D3CCF6BE94E45AF25E3FAC2113D88": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "562628B635BD41CDB2EA5E01C16996C7",
+     "AE1CC838CDD74809B02CA193713D5BCB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Shows understanding\nof simple patterns\nby recognizing and\nextending simple,\nrepeating, “ABAB”\npatterns (e.g., of\nmovements such as “tap\nhead, tap knees, tap\nhead...”; or of objects\nsuch as “red car, yellow\ncar, red car...”)",
+    "id": "9C2D3CCF6BE94E45AF25E3FAC2113D88",
+    "listId": "j",
+    "parentId": "562628B635BD41CDB2EA5E01C16996C7",
+    "position": 1187,
+    "statementLabel": null,
+    "statementNotation": "CD3.4j"
+   },
+   "9CED343F01D440D5A03EE68AFD411A40": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F19FBCED05214F9CB939F676B7F6B6BB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Infancy\n6-14 months",
+    "id": "9CED343F01D440D5A03EE68AFD411A40",
+    "listId": "",
+    "parentId": "F19FBCED05214F9CB939F676B7F6B6BB",
+    "position": 1197,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "9CF7B674A8F142D3929702C47D3C1625": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Comparing numbers, counting, and recognizing quantities",
+    "id": "9CF7B674A8F142D3929702C47D3C1625",
+    "listId": "1",
+    "parentId": "BF92703DD68544308104071245C1804A",
+    "position": 1103,
+    "statementLabel": null,
+    "statementNotation": "CD3.1"
+   },
+   "9EB49F9B5628462DAF85F9E27203B678": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "91D34240D3064228B7A169EC36F51B2C",
+     "359026A4560140E98969947BFECFF852",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Sorts items or\npictures by shape  ",
+    "id": "9EB49F9B5628462DAF85F9E27203B678",
+    "listId": "h",
+    "parentId": "91D34240D3064228B7A169EC36F51B2C",
+    "position": 1155,
+    "statementLabel": null,
+    "statementNotation": "CD3.3h"
+   },
+   "9F28412726D742E99E01F34223E90B82": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "DA94F8B991724597A99B84119CD4BEF1",
+     "359026A4560140E98969947BFECFF852",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Uses words about position\n– “first”, “last”, “middle” – to\ndescribe the placement of a\nperson or thing",
+    "id": "9F28412726D742E99E01F34223E90B82",
+    "listId": "p",
+    "parentId": "DA94F8B991724597A99B84119CD4BEF1",
+    "position": 1164,
+    "statementLabel": null,
+    "statementNotation": "CD3.3p"
+   },
+   "A2A7B57A7D3748C48BAB487EE8473264": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "54112762921B42DA8D84394525390C5B",
+     "359026A4560140E98969947BFECFF852",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Explores\nrelationships of\nthings in space\nby combining\nobjects of different\nsizes and shapes\nwith containers of\ndifferent sizes and\nshapes",
+    "id": "A2A7B57A7D3748C48BAB487EE8473264",
+    "listId": "b",
+    "parentId": "54112762921B42DA8D84394525390C5B",
+    "position": 1149,
+    "statementLabel": null,
+    "statementNotation": "CD3.3b"
+   },
+   "A2D5B7F452324C2FAAC52A43F231813B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7DF064DFC20A4C2EB5F703F3776CC25A",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Toddler\n22-36 months",
+    "id": "A2D5B7F452324C2FAAC52A43F231813B",
+    "listId": "",
+    "parentId": "7DF064DFC20A4C2EB5F703F3776CC25A",
+    "position": 1010,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "A643A439BC5842BDB39AC919526114D2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "91D34240D3064228B7A169EC36F51B2C",
+     "359026A4560140E98969947BFECFF852",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognizes\ncertain shapes (circle\nor square) in the\nclassroom, home,\nor neighborhood ",
+    "id": "A643A439BC5842BDB39AC919526114D2",
+    "listId": "i",
+    "parentId": "91D34240D3064228B7A169EC36F51B2C",
+    "position": 1156,
+    "statementLabel": null,
+    "statementNotation": "CD3.3i"
+   },
+   "A675A1F00C344F51933FC1A9FFFF3727": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "16A0C9EA66A64DFDAC5D1B37CA38FE40",
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Sings number\nwords in chants or\nsongs",
+    "id": "A675A1F00C344F51933FC1A9FFFF3727",
+    "listId": "c",
+    "parentId": "16A0C9EA66A64DFDAC5D1B37CA38FE40",
+    "position": 1109,
+    "statementLabel": null,
+    "statementNotation": "CD3.1c"
+   },
+   "A727DEC2007E4C2D8CDAAFEDDEA8A53D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C77920B6308F44F7906F52718E4E9B0E",
+     "29B86EEB137D49A891D9BA94542EB652",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Uses figures (e.g.,\ndolls, action figures) to\nrole play interactions and\nrelationships, including\ndifferences related to\nculture, gender, race,\nage, and ability",
+    "id": "A727DEC2007E4C2D8CDAAFEDDEA8A53D",
+    "listId": "h",
+    "parentId": "C77920B6308F44F7906F52718E4E9B0E",
+    "position": 1285,
+    "statementLabel": null,
+    "statementNotation": "CD4.3h"
+   },
+   "A73C6E9BEFDB441CA6D2487601A08A58": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "97AB73466340497885011DAE0AA67EB1",
+     "0433FCAD56A5437193ED46B65D3D95BB",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Follows caregiver\nor educator’s model\nto talk accurately\nand respectfully\nabout similarities and\ndifferences present in the\ngroup",
+    "id": "A73C6E9BEFDB441CA6D2487601A08A58",
+    "listId": "f",
+    "parentId": "97AB73466340497885011DAE0AA67EB1",
+    "position": 1096,
+    "statementLabel": null,
+    "statementNotation": "CD2.3f"
+   },
+   "A772EEF624924DCEB53869DEC0D1EE9A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BBB376261B48413E87342FC022069374",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Infancy\n0-8 months",
+    "id": "A772EEF624924DCEB53869DEC0D1EE9A",
+    "listId": "",
+    "parentId": "BBB376261B48413E87342FC022069374",
+    "position": 1021,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "A798CDFC2AC542BE9E4CFC51B32E8359": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "686CA69C8B404C90BBE52A8B73E96FD9",
+     "2B25374D89BE4ED9A679D771A0247A28",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Communicates\nabout self as member\nof many different\ngroups, such as within a\nfamily, classroom, faith\ncommunity, or sport\nteam",
+    "id": "A798CDFC2AC542BE9E4CFC51B32E8359",
+    "listId": "g",
+    "parentId": "686CA69C8B404C90BBE52A8B73E96FD9",
+    "position": 1082,
+    "statementLabel": null,
+    "statementNotation": "CD2.2g"
+   },
+   "A7E6EDAC834A420A99D7C11A80E4D879": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3AF8163C3BD8404E97E737AA447B6D10",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Preschool\n44-60 months",
+    "id": "A7E6EDAC834A420A99D7C11A80E4D879",
+    "listId": "",
+    "parentId": "3AF8163C3BD8404E97E737AA447B6D10",
+    "position": 1141,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "A8D79C8C8C894195BB3D65ABFA8038BE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7B7E54817A614B1CB8462DB1165896D8",
+     "29B86EEB137D49A891D9BA94542EB652",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Protests with\nexpression or\nvocalization when\nplayful interactions stop",
+    "id": "A8D79C8C8C894195BB3D65ABFA8038BE",
+    "listId": "b",
+    "parentId": "7B7E54817A614B1CB8462DB1165896D8",
+    "position": 1276,
+    "statementLabel": null,
+    "statementNotation": "CD4.3b"
+   },
+   "A9C993476B7549EA96DAF28A47D7E71A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BBB376261B48413E87342FC022069374",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Toddler\n22-36 months",
+    "id": "A9C993476B7549EA96DAF28A47D7E71A",
+    "listId": "",
+    "parentId": "BBB376261B48413E87342FC022069374",
+    "position": 1030,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "AAA37DC16D4F429DB5AE3EDD52D65585": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9B6DECAF9D874E83944B4C484F92E317",
+     "7DF064DFC20A4C2EB5F703F3776CC25A",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Reacts with interest to\nnearby sights and sounds",
+    "id": "AAA37DC16D4F429DB5AE3EDD52D65585",
+    "listId": "a",
+    "parentId": "9B6DECAF9D874E83944B4C484F92E317",
+    "position": 1003,
+    "statementLabel": null,
+    "statementNotation": "CD1.1a"
+   },
+   "ABAA3F9E9D1943DD9421CE98C0F0AB0B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7DF064DFC20A4C2EB5F703F3776CC25A",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Preschool\n34-48 months",
+    "id": "ABAA3F9E9D1943DD9421CE98C0F0AB0B",
+    "listId": "",
+    "parentId": "7DF064DFC20A4C2EB5F703F3776CC25A",
+    "position": 1013,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "AC74662C7F32416DB456F4DE4E01917F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ABAA3F9E9D1943DD9421CE98C0F0AB0B",
+     "7DF064DFC20A4C2EB5F703F3776CC25A",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Notices and talks with\nadults about changes in\nnature and in substances\n(e.g., water to ice) ",
+    "id": "AC74662C7F32416DB456F4DE4E01917F",
+    "listId": "i",
+    "parentId": "ABAA3F9E9D1943DD9421CE98C0F0AB0B",
+    "position": 1015,
+    "statementLabel": null,
+    "statementNotation": "CD1.1i"
+   },
+   "AE1CC838CDD74809B02CA193713D5BCB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Sorting, classifying, and patterning",
+    "id": "AE1CC838CDD74809B02CA193713D5BCB",
+    "listId": "4",
+    "parentId": "BF92703DD68544308104071245C1804A",
+    "position": 1172,
+    "statementLabel": null,
+    "statementNotation": "CD3.4"
+   },
+   "AE971B77051A4397B8E4D734ED61EE45": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CB0BCC48DBDA4CA2ABA95566796783B6",
+     "F19FBCED05214F9CB939F676B7F6B6BB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With adult support, indirectly\ncompares the length of two objects\nusing a third object (e.g., using a piece\nof string to measure two objects on the\nplayground and determining which is\ntaller)",
+    "id": "AE971B77051A4397B8E4D734ED61EE45",
+    "listId": "f",
+    "parentId": "CB0BCC48DBDA4CA2ABA95566796783B6",
+    "position": 1205,
+    "statementLabel": null,
+    "statementNotation": "CD3.5f"
+   },
+   "B0802923A89A41EF90C45C28F4E32CBC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A7E6EDAC834A420A99D7C11A80E4D879",
+     "3AF8163C3BD8404E97E737AA447B6D10",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With adult help, uses “counting on”\nas a strategy to solve addition (joining)\nproblems (e.g., “I have 3 and 2 more\ngives me 4, 5”)",
+    "id": "B0802923A89A41EF90C45C28F4E32CBC",
+    "listId": "e",
+    "parentId": "A7E6EDAC834A420A99D7C11A80E4D879",
+    "position": 1144,
+    "statementLabel": null,
+    "statementNotation": "CD3.2e"
+   },
+   "B0E33AD50BE34F36957940639F1E9B9F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9463B502A53B4BCA86A07954EBB391B4",
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Instantly\nrecognizes a\ncollection of up to 4\nobjects (i.e. subitizes",
+    "id": "B0E33AD50BE34F36957940639F1E9B9F",
+    "listId": "m",
+    "parentId": "9463B502A53B4BCA86A07954EBB391B4",
+    "position": 1121,
+    "statementLabel": null,
+    "statementNotation": "CD3.1m"
+   },
+   "B1343CDC14DA4E858B31E2E2151AEA7B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C0E90F40F6B94B7EAED75FDE1AFDF392",
+     "F19FBCED05214F9CB939F676B7F6B6BB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With instruction, shows an awareness\nof time by talking about events with\nwords such as before, after, and later ",
+    "id": "B1343CDC14DA4E858B31E2E2151AEA7B",
+    "listId": "n",
+    "parentId": "C0E90F40F6B94B7EAED75FDE1AFDF392",
+    "position": 1214,
+    "statementLabel": null,
+    "statementNotation": "CD3.5n"
+   },
+   "B16150D969794E87A11E24BB1538F43F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "22BF0AFD82844799BABA880AE80823DC",
+     "BBB376261B48413E87342FC022069374",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Enjoys searching for\nobjects within reach\nbut hidden from view\n(e.g., under a blanket) ",
+    "id": "B16150D969794E87A11E24BB1538F43F",
+    "listId": "c",
+    "parentId": "22BF0AFD82844799BABA880AE80823DC",
+    "position": 1025,
+    "statementLabel": null,
+    "statementNotation": "CD1.2c"
+   },
+   "B1B2AC5FB1D44228ABC6A3EE82FB4816": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F19FBCED05214F9CB939F676B7F6B6BB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Infancy\n0-8 months",
+    "id": "B1B2AC5FB1D44228ABC6A3EE82FB4816",
+    "listId": "",
+    "parentId": "F19FBCED05214F9CB939F676B7F6B6BB",
+    "position": 1195,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "B455524C491746AD8500DBEBCA3A031D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2B25374D89BE4ED9A679D771A0247A28",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Toddler\n22-36 months",
+    "id": "B455524C491746AD8500DBEBCA3A031D",
+    "listId": "",
+    "parentId": "2B25374D89BE4ED9A679D771A0247A28",
+    "position": 1076,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "B4D45E204D5644A0B42FCFFFE5AEF22C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EBC41226FAC74E8B8B237FAB65D10891",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Toddler\n22-36 months",
+    "id": "B4D45E204D5644A0B42FCFFFE5AEF22C",
+    "listId": "",
+    "parentId": "EBC41226FAC74E8B8B237FAB65D10891",
+    "position": 1054,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "B5340B9DA770488AA1186D4ECFEEAAF6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B4D45E204D5644A0B42FCFFFE5AEF22C",
+     "EBC41226FAC74E8B8B237FAB65D10891",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Uses props and\ndramatic play to play\nout roles (e.g., mother,\nteacher, baby) and play\nout relationships and\nroutines such as feeding,\nshopping, or story time",
+    "id": "B5340B9DA770488AA1186D4ECFEEAAF6",
+    "listId": "e",
+    "parentId": "B4D45E204D5644A0B42FCFFFE5AEF22C",
+    "position": 1055,
+    "statementLabel": null,
+    "statementNotation": "CD2.1e"
+   },
+   "B72B8F6F2C0E4723B1DB8DC5CC637AC5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CCF32F6FA1FC4FF08007B416DDCA2E62",
+     "AE1CC838CDD74809B02CA193713D5BCB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Shows a beginning\nalertness to something\n“different” by holding\nattention to briefly study\nthe new item or face  ",
+    "id": "B72B8F6F2C0E4723B1DB8DC5CC637AC5",
+    "listId": "a",
+    "parentId": "CCF32F6FA1FC4FF08007B416DDCA2E62",
+    "position": 1174,
+    "statementLabel": null,
+    "statementNotation": "CD3.4a"
+   },
+   "B7AD6C03113B49D7AB3DF02640F30D24": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0433FCAD56A5437193ED46B65D3D95BB",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Preschool\n44-60 months",
+    "id": "B7AD6C03113B49D7AB3DF02640F30D24",
+    "listId": "",
+    "parentId": "0433FCAD56A5437193ED46B65D3D95BB",
+    "position": 1097,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "B8E654094DE84E9A94A3B1F9A8713827": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2028DFC95BBF4435A994E9112E16B07A",
+     "664894926BA34D3AB9964CECA1028A54",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Repeats short rhythm\npatterns",
+    "id": "B8E654094DE84E9A94A3B1F9A8713827",
+    "listId": "i",
+    "parentId": "2028DFC95BBF4435A994E9112E16B07A",
+    "position": 1229,
+    "statementLabel": null,
+    "statementNotation": "CD4.1i"
+   },
+   "B8F39CF893754F029A566B67E9656A96": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Infancy\n6-14 months",
+    "id": "B8F39CF893754F029A566B67E9656A96",
+    "listId": "",
+    "parentId": "9CF7B674A8F142D3929702C47D3C1625",
+    "position": 1106,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "B9CA7CA5176C47FB913E62C36A19A383": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7B7E54817A614B1CB8462DB1165896D8",
+     "29B86EEB137D49A891D9BA94542EB652",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Responds to people\nwhose faces are nearby\nby smiling and copying\nbasic facial expressions ",
+    "id": "B9CA7CA5176C47FB913E62C36A19A383",
+    "listId": "a",
+    "parentId": "7B7E54817A614B1CB8462DB1165896D8",
+    "position": 1275,
+    "statementLabel": null,
+    "statementNotation": "CD4.3a"
+   },
+   "BA10DAFD7343422EA6E1A317A2828ED3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "DA94F8B991724597A99B84119CD4BEF1",
+     "359026A4560140E98969947BFECFF852",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Uses words that describe\nand compare shapes in the\nenvironment (e.g., “the cracker\nis a circle”, “the green square is\nsmaller than the purple square”)",
+    "id": "BA10DAFD7343422EA6E1A317A2828ED3",
+    "listId": "l",
+    "parentId": "DA94F8B991724597A99B84119CD4BEF1",
+    "position": 1160,
+    "statementLabel": null,
+    "statementNotation": "CD3.3l"
+   },
+   "BA2F71DDC49243DB977312DBB933DBAF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "94E4419F19FC4B3CAF8D5F46D5978D8E",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Infancy\n6-14 months",
+    "id": "BA2F71DDC49243DB977312DBB933DBAF",
+    "listId": "",
+    "parentId": "94E4419F19FC4B3CAF8D5F46D5978D8E",
+    "position": 1298,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "BBB376261B48413E87342FC022069374": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Testing questions and ideas",
+    "id": "BBB376261B48413E87342FC022069374",
+    "listId": "2",
+    "parentId": "408DC7095FCE468F9D408C090F3FB02D",
+    "position": 1020,
+    "statementLabel": null,
+    "statementNotation": "CD1.2"
+   },
+   "BC46D247CBE94AAF86B1FC354D7CCB75": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4E2D41E24C014A5CAD41BFEFA6AF0B37",
+     "EBC41226FAC74E8B8B237FAB65D10891",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Communicates about\nfamily members in terms\nof relationships (e.g.,\n“Riley is my sister.”)",
+    "id": "BC46D247CBE94AAF86B1FC354D7CCB75",
+    "listId": "h",
+    "parentId": "4E2D41E24C014A5CAD41BFEFA6AF0B37",
+    "position": 1059,
+    "statementLabel": null,
+    "statementNotation": "CD2.1h"
+   },
+   "BCD2188D62EC4EFBA4371B0D389C5FC3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "320E4DAC04D542608EABDBEAC5E6C4C5",
+     "EBC41226FAC74E8B8B237FAB65D10891",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Shows preference for a familiar adult over others",
+    "id": "BCD2188D62EC4EFBA4371B0D389C5FC3",
+    "listId": "d",
+    "parentId": "320E4DAC04D542608EABDBEAC5E6C4C5",
+    "position": 1053,
+    "statementLabel": null,
+    "statementNotation": "CD2.1d"
+   },
+   "BD1573601D5949D1B5FC23F429A1C968": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9463B502A53B4BCA86A07954EBB391B4",
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Compares sets of\nobjects that range\nin size from 1-5, as\nhaving “more” or\n“fewer” ",
+    "id": "BD1573601D5949D1B5FC23F429A1C968",
+    "listId": "p",
+    "parentId": "9463B502A53B4BCA86A07954EBB391B4",
+    "position": 1124,
+    "statementLabel": null,
+    "statementNotation": "CD3.1p"
+   },
+   "BD9AE4BE52A34C65A0B9671FD4FB62BC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BFAF2332946F47B591CC7D544BA3F10C",
+     "514310F9794142DE8150831DF52A53D1",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Participates in\nconversations about\nmusic dynamics,\nincluding sound qualities\nand pitch (high or low) ",
+    "id": "BD9AE4BE52A34C65A0B9671FD4FB62BC",
+    "listId": "o",
+    "parentId": "BFAF2332946F47B591CC7D544BA3F10C",
+    "position": 1264,
+    "statementLabel": null,
+    "statementNotation": "CD4.2o"
+   },
+   "BEAE4F3B56D345CA853FEB3F1261B486": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C77920B6308F44F7906F52718E4E9B0E",
+     "29B86EEB137D49A891D9BA94542EB652",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Shows imagination\nby substituting items to\nrepresent actual items\n(e.g., using a block as a\ncell phone)",
+    "id": "BEAE4F3B56D345CA853FEB3F1261B486",
+    "listId": "g",
+    "parentId": "C77920B6308F44F7906F52718E4E9B0E",
+    "position": 1284,
+    "statementLabel": null,
+    "statementNotation": "CD4.3g"
+   },
+   "BEC963C9D1F94F0FB7604253F3200657": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "97AB73466340497885011DAE0AA67EB1",
+     "0433FCAD56A5437193ED46B65D3D95BB",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Follows adult’s lead\nto notice and talk about\ndifferences presented in\nbooks and other media",
+    "id": "BEC963C9D1F94F0FB7604253F3200657",
+    "listId": "e",
+    "parentId": "97AB73466340497885011DAE0AA67EB1",
+    "position": 1095,
+    "statementLabel": null,
+    "statementNotation": "CD2.3e"
+   },
+   "BF92703DD68544308104071245C1804A": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "MATHEMATICS",
+    "id": "BF92703DD68544308104071245C1804A",
+    "listId": "Standard 3",
+    "parentId": null,
+    "position": 1102,
+    "statementLabel": null,
+    "statementNotation": "CD3"
+   },
+   "BFAF2332946F47B591CC7D544BA3F10C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "514310F9794142DE8150831DF52A53D1",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Preschool\n34-48 months",
+    "id": "BFAF2332946F47B591CC7D544BA3F10C",
+    "listId": "",
+    "parentId": "514310F9794142DE8150831DF52A53D1",
+    "position": 1262,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "BFFE3D0BFB494B08BE6780A439D5C23C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D502ECB822854C8C9DF4A60F9B5C14BC",
+     "0433FCAD56A5437193ED46B65D3D95BB",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Notices an unfamiliar\nperson whose face is near\nand briefly gazes at that\nnew face",
+    "id": "BFFE3D0BFB494B08BE6780A439D5C23C",
+    "listId": "a",
+    "parentId": "D502ECB822854C8C9DF4A60F9B5C14BC",
+    "position": 1087,
+    "statementLabel": null,
+    "statementNotation": "CD2.3a"
+   },
+   "C0E90F40F6B94B7EAED75FDE1AFDF392": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F19FBCED05214F9CB939F676B7F6B6BB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Preschool\n44-60 months",
+    "id": "C0E90F40F6B94B7EAED75FDE1AFDF392",
+    "listId": "",
+    "parentId": "F19FBCED05214F9CB939F676B7F6B6BB",
+    "position": 1206,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "C1F6F313E41742808553323E86D53E88": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "280CAF40DCB74E67846CE169D7BD266A",
+     "514310F9794142DE8150831DF52A53D1",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Responds to adult\nby copying sounds ",
+    "id": "C1F6F313E41742808553323E86D53E88",
+    "listId": "a",
+    "parentId": "280CAF40DCB74E67846CE169D7BD266A",
+    "position": 1246,
+    "statementLabel": null,
+    "statementNotation": "CD4.2a"
+   },
+   "C22A25C79785485AAAB08FE73B8AF82B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CB0BCC48DBDA4CA2ABA95566796783B6",
+     "F19FBCED05214F9CB939F676B7F6B6BB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With adult support, makes direct\ncomparisons of objects’ volume or length\n(e.g., standing two students back to back\nto see which one is taller)",
+    "id": "C22A25C79785485AAAB08FE73B8AF82B",
+    "listId": "e",
+    "parentId": "CB0BCC48DBDA4CA2ABA95566796783B6",
+    "position": 1204,
+    "statementLabel": null,
+    "statementNotation": "CD3.5e"
+   },
+   "C4E67A18FA884E6BB9997302DD44F4AA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5471D31B676243398106FDD54597F1FA",
+     "0433FCAD56A5437193ED46B65D3D95BB",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Shows awareness of\nstrangers or less familiar\npeople by showing\nhesitation or distress ",
+    "id": "C4E67A18FA884E6BB9997302DD44F4AA",
+    "listId": "b",
+    "parentId": "5471D31B676243398106FDD54597F1FA",
+    "position": 1089,
+    "statementLabel": null,
+    "statementNotation": "CD2.3b"
+   },
+   "C5196688293746F78577431621E32F81": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F76EA8D4DC6F4EE38B9E9540A7E77DC7",
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "After observing\na picture or display\nwith one item, pays\nlonger attention to\na picture or display\nwith two or three\nitems",
+    "id": "C5196688293746F78577431621E32F81",
+    "listId": "a",
+    "parentId": "F76EA8D4DC6F4EE38B9E9540A7E77DC7",
+    "position": 1105,
+    "statementLabel": null,
+    "statementNotation": "CD3.1a"
+   },
+   "C6BB54435FF44FD5ABD0CD22BD6781E4": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "FINE ARTS",
+    "id": "C6BB54435FF44FD5ABD0CD22BD6781E4",
+    "listId": "Standard 4",
+    "parentId": null,
+    "position": 1215,
+    "statementLabel": null,
+    "statementNotation": "CD4"
+   },
+   "C6E85556ACED4092AFF3044DD6C9DDEA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "60DA1999A4DA4027B8FC0CDB5F93CB6D",
+     "BBB376261B48413E87342FC022069374",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Analyzes results,\ndraws conclusions, and\ncommunicates results ",
+    "id": "C6E85556ACED4092AFF3044DD6C9DDEA",
+    "listId": "p",
+    "parentId": "60DA1999A4DA4027B8FC0CDB5F93CB6D",
+    "position": 1042,
+    "statementLabel": null,
+    "statementNotation": "CD1.2p"
+   },
+   "C7760C1A23934D018EA7BCC19882CF92": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BFAF2332946F47B591CC7D544BA3F10C",
+     "514310F9794142DE8150831DF52A53D1",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Creates beats, patterns\nor simple melodies\nusing the voice or\nsimple materials in the\nenvironment",
+    "id": "C7760C1A23934D018EA7BCC19882CF92",
+    "listId": "q",
+    "parentId": "BFAF2332946F47B591CC7D544BA3F10C",
+    "position": 1266,
+    "statementLabel": null,
+    "statementNotation": "CD4.2q"
+   },
+   "C77920B6308F44F7906F52718E4E9B0E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "29B86EEB137D49A891D9BA94542EB652",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Toddler\n22-36 months",
+    "id": "C77920B6308F44F7906F52718E4E9B0E",
+    "listId": "",
+    "parentId": "29B86EEB137D49A891D9BA94542EB652",
+    "position": 1283,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "C9083D48CA024CE18926F0F46AE5A2B9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2028DFC95BBF4435A994E9112E16B07A",
+     "664894926BA34D3AB9964CECA1028A54",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Adjusts movements to\nmatch the music or beat\nwhen adult introduces\nvaried types of music to\ninvite kinds and rates of\nmovement",
+    "id": "C9083D48CA024CE18926F0F46AE5A2B9",
+    "listId": "h",
+    "parentId": "2028DFC95BBF4435A994E9112E16B07A",
+    "position": 1228,
+    "statementLabel": null,
+    "statementNotation": "CD4.1h"
+   },
+   "C98E2D9030FD491DA07263772E18266A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "DA94F8B991724597A99B84119CD4BEF1",
+     "359026A4560140E98969947BFECFF852",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "In outside play, uses and\nresponds to direction (e.g., up,\ndown) or position (e.g., on top\nof, beside) words",
+    "id": "C98E2D9030FD491DA07263772E18266A",
+    "listId": "r",
+    "parentId": "DA94F8B991724597A99B84119CD4BEF1",
+    "position": 1166,
+    "statementLabel": null,
+    "statementNotation": "CD3.3r"
+   },
+   "CA10F1ED5D5E4BCFB3617FEE5D87F4C7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5077884215E449DF88F3737E4C6A106E",
+     "664894926BA34D3AB9964CECA1028A54",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Responds to music by\nbouncing",
+    "id": "CA10F1ED5D5E4BCFB3617FEE5D87F4C7",
+    "listId": "d",
+    "parentId": "5077884215E449DF88F3737E4C6A106E",
+    "position": 1222,
+    "statementLabel": null,
+    "statementNotation": "CD4.1d"
+   },
+   "CA1C72D1498C4986A87A7EF46E5EC453": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A9C993476B7549EA96DAF28A47D7E71A",
+     "BBB376261B48413E87342FC022069374",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Follows adult’s model\nto use simple tools to\nmanipulate and explore\nobjects",
+    "id": "CA1C72D1498C4986A87A7EF46E5EC453",
+    "listId": "h",
+    "parentId": "A9C993476B7549EA96DAF28A47D7E71A",
+    "position": 1032,
+    "statementLabel": null,
+    "statementNotation": "CD1.2h"
+   },
+   "CA9D32D754BB4BE8B0C35D31ADF754E5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4E2D41E24C014A5CAD41BFEFA6AF0B37",
+     "EBC41226FAC74E8B8B237FAB65D10891",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Uses props and\ndramatic play to\ndramatize stories from\nculturally responsive\nbooks, movies and shows",
+    "id": "CA9D32D754BB4BE8B0C35D31ADF754E5",
+    "listId": "l",
+    "parentId": "4E2D41E24C014A5CAD41BFEFA6AF0B37",
+    "position": 1063,
+    "statementLabel": null,
+    "statementNotation": "CD2.1l"
+   },
+   "CB0BCC48DBDA4CA2ABA95566796783B6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F19FBCED05214F9CB939F676B7F6B6BB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Preschool\n34-48 months",
+    "id": "CB0BCC48DBDA4CA2ABA95566796783B6",
+    "listId": "",
+    "parentId": "F19FBCED05214F9CB939F676B7F6B6BB",
+    "position": 1203,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "CC4DA1CD8F214CDF93D386D3DEDC71C1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9CED343F01D440D5A03EE68AFD411A40",
+     "F19FBCED05214F9CB939F676B7F6B6BB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Examines\ndifferences\nbetween familiar\nor unfamiliar\npeople or\nobjects with\ngreater focus\n(e.g., shaking\nor squeaking\ndifferent sound\nproducing toys,\nsuch as keys,\nrattles, and\nnoisemakers)",
+    "id": "CC4DA1CD8F214CDF93D386D3DEDC71C1",
+    "listId": "b",
+    "parentId": "9CED343F01D440D5A03EE68AFD411A40",
+    "position": 1198,
+    "statementLabel": null,
+    "statementNotation": "CD3.5b"
+   },
+   "CCF32F6FA1FC4FF08007B416DDCA2E62": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "AE1CC838CDD74809B02CA193713D5BCB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Infancy\n0-8 months",
+    "id": "CCF32F6FA1FC4FF08007B416DDCA2E62",
+    "listId": "",
+    "parentId": "AE1CC838CDD74809B02CA193713D5BCB",
+    "position": 1173,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "CF7A3045A8CC4BCA96B10BA747CB41D7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "98303BC6B29249B78EB387046FE890ED",
+     "EBC41226FAC74E8B8B237FAB65D10891",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Communicates about\nthe roles of people in the\ncommunity encountered\ndirectly (caregiver or\neducator) and roles\nintroduced through\npictures, books and other\nmedia (artists, cooks,\ncashiers, construction\nworkers)",
+    "id": "CF7A3045A8CC4BCA96B10BA747CB41D7",
+    "listId": "n",
+    "parentId": "98303BC6B29249B78EB387046FE890ED",
+    "position": 1066,
+    "statementLabel": null,
+    "statementNotation": "CD2.1n"
+   },
+   "D1AEACDB578B459CBFC294EFE8400CE7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "359026A4560140E98969947BFECFF852",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Toddler\n12-24 months",
+    "id": "D1AEACDB578B459CBFC294EFE8400CE7",
+    "listId": "",
+    "parentId": "359026A4560140E98969947BFECFF852",
+    "position": 1150,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "D1C7CCFD400F4CE7AA1A2C3518EB8465": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "91D34240D3064228B7A169EC36F51B2C",
+     "359026A4560140E98969947BFECFF852",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Stacks 4 or more\nblocks or items\nvertically",
+    "id": "D1C7CCFD400F4CE7AA1A2C3518EB8465",
+    "listId": "k",
+    "parentId": "91D34240D3064228B7A169EC36F51B2C",
+    "position": 1158,
+    "statementLabel": null,
+    "statementNotation": "CD3.3k"
+   },
+   "D2F07075E72A4141BF254ACB915059D2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F5C476F8539245C38A9D77493CE4ECD7",
+     "664894926BA34D3AB9964CECA1028A54",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With adult help,\npractices moving\nthrough space and\nexploring different\nmovements such as\njumping, walking,\nbouncing, and turning",
+    "id": "D2F07075E72A4141BF254ACB915059D2",
+    "listId": "f",
+    "parentId": "F5C476F8539245C38A9D77493CE4ECD7",
+    "position": 1225,
+    "statementLabel": null,
+    "statementNotation": "CD4.1f"
+   },
+   "D3084FE8533A45EDBCB417657F118FDD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "427171BEC49B4C089B13F7DB2F8C5E8F",
+     "359026A4560140E98969947BFECFF852",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Uses smaller shapes to compose\nlarger and different shapes (e.g.,\ntwo triangles make one square) ",
+    "id": "D3084FE8533A45EDBCB417657F118FDD",
+    "listId": "s",
+    "parentId": "427171BEC49B4C089B13F7DB2F8C5E8F",
+    "position": 1168,
+    "statementLabel": null,
+    "statementNotation": "CD3.3s"
+   },
+   "D36C4C47E37541B2BBAACEB006AFB222": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "39CBE264E7DC4B21ACCF6E008FF3F93A",
+     "BBB376261B48413E87342FC022069374",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Answers questions\n(e.g., “What will\nhappen if…”) to make\npredictions",
+    "id": "D36C4C47E37541B2BBAACEB006AFB222",
+    "listId": "j",
+    "parentId": "39CBE264E7DC4B21ACCF6E008FF3F93A",
+    "position": 1035,
+    "statementLabel": null,
+    "statementNotation": "CD1.2j"
+   },
+   "D3C7A23686A6494087BD90DD9C596665": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "514310F9794142DE8150831DF52A53D1",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Infancy\n6-14 months",
+    "id": "D3C7A23686A6494087BD90DD9C596665",
+    "listId": "",
+    "parentId": "514310F9794142DE8150831DF52A53D1",
+    "position": 1249,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "D44577B080B44990AFDE89AC269C136B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3D0928D3229941948AE7CBC0CD484E80",
+     "29B86EEB137D49A891D9BA94542EB652",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognizes and\ndemonstrates actual uses\nof objects (e.g., combing\nhair with comb) ",
+    "id": "D44577B080B44990AFDE89AC269C136B",
+    "listId": "e",
+    "parentId": "3D0928D3229941948AE7CBC0CD484E80",
+    "position": 1281,
+    "statementLabel": null,
+    "statementNotation": "CD4.3e"
+   },
+   "D502ECB822854C8C9DF4A60F9B5C14BC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0433FCAD56A5437193ED46B65D3D95BB",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Infancy\n0-8 months",
+    "id": "D502ECB822854C8C9DF4A60F9B5C14BC",
+    "listId": "",
+    "parentId": "0433FCAD56A5437193ED46B65D3D95BB",
+    "position": 1086,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "D5D52448A2264496B2E46C5D2B2FA1D6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3D0928D3229941948AE7CBC0CD484E80",
+     "29B86EEB137D49A891D9BA94542EB652",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Interacts with an adult\nin role play (e.g., acting\nout the characters and\nstory in a familiar book) ",
+    "id": "D5D52448A2264496B2E46C5D2B2FA1D6",
+    "listId": "f",
+    "parentId": "3D0928D3229941948AE7CBC0CD484E80",
+    "position": 1282,
+    "statementLabel": null,
+    "statementNotation": "CD4.3f"
+   },
+   "D6FCF6E539E14BCB8FEBF2D361ABB7DD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "91D34240D3064228B7A169EC36F51B2C",
+     "359026A4560140E98969947BFECFF852",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Imitates adult in\ncalling simple shapes\n(e.g., circle, square,\ntriangle) by name",
+    "id": "D6FCF6E539E14BCB8FEBF2D361ABB7DD",
+    "listId": "g",
+    "parentId": "91D34240D3064228B7A169EC36F51B2C",
+    "position": 1154,
+    "statementLabel": null,
+    "statementNotation": "CD3.3g"
+   },
+   "D88BF920C9864DD99FB79C36884A27B4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "514310F9794142DE8150831DF52A53D1",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Toddler\n22-36 months",
+    "id": "D88BF920C9864DD99FB79C36884A27B4",
+    "listId": "",
+    "parentId": "514310F9794142DE8150831DF52A53D1",
+    "position": 1255,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "DA081C1A0BA1437FA5C664BA73F0393A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A7E6EDAC834A420A99D7C11A80E4D879",
+     "3AF8163C3BD8404E97E737AA447B6D10",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With adult help, uses “counting back\nfrom” as a strategy to solve subtraction\n(separating) problems (e.g., To take\naway 3 from 5, “5,4,3...leaves 2”) ",
+    "id": "DA081C1A0BA1437FA5C664BA73F0393A",
+    "listId": "f",
+    "parentId": "A7E6EDAC834A420A99D7C11A80E4D879",
+    "position": 1145,
+    "statementLabel": null,
+    "statementNotation": "CD3.2f"
+   },
+   "DA94F8B991724597A99B84119CD4BEF1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "359026A4560140E98969947BFECFF852",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Preschool\n34-48 months",
+    "id": "DA94F8B991724597A99B84119CD4BEF1",
+    "listId": "",
+    "parentId": "359026A4560140E98969947BFECFF852",
+    "position": 1159,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "DACD5B37ECFB4AEB93CDD420F2C4433B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4E2D41E24C014A5CAD41BFEFA6AF0B37",
+     "EBC41226FAC74E8B8B237FAB65D10891",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Communicates about\npast events and changes\nover time",
+    "id": "DACD5B37ECFB4AEB93CDD420F2C4433B",
+    "listId": "j",
+    "parentId": "4E2D41E24C014A5CAD41BFEFA6AF0B37",
+    "position": 1061,
+    "statementLabel": null,
+    "statementNotation": "CD2.1j"
+   },
+   "DB277E1A03EB425C9BB4DFBD5C1E95BB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "60DA1999A4DA4027B8FC0CDB5F93CB6D",
+     "BBB376261B48413E87342FC022069374",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Uses many sources\n(e.g., pictures, books)\nto gather information  ",
+    "id": "DB277E1A03EB425C9BB4DFBD5C1E95BB",
+    "listId": "n",
+    "parentId": "60DA1999A4DA4027B8FC0CDB5F93CB6D",
+    "position": 1040,
+    "statementLabel": null,
+    "statementNotation": "CD1.2n"
+   },
+   "DB9E22190A3845AA82321066630BD152": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6A3F4BE585304199849F4447B15DB89C",
+     "664894926BA34D3AB9964CECA1028A54",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Imitates adult’s model\nof moving body parts in\nisolation or coordination",
+    "id": "DB9E22190A3845AA82321066630BD152",
+    "listId": "j",
+    "parentId": "6A3F4BE585304199849F4447B15DB89C",
+    "position": 1231,
+    "statementLabel": null,
+    "statementNotation": "CD4.1j"
+   },
+   "DD9B85EDF5BF4A7EBE53FA24E651609A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "68E816A75ECB42908C207D3BA0035118",
+     "29B86EEB137D49A891D9BA94542EB652",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Negotiates roles and\ndialogue with peers and\nadapts to the needs of the\ngroup in dramatic play",
+    "id": "DD9B85EDF5BF4A7EBE53FA24E651609A",
+    "listId": "o",
+    "parentId": "68E816A75ECB42908C207D3BA0035118",
+    "position": 1294,
+    "statementLabel": null,
+    "statementNotation": "CD4.3o"
+   },
+   "DF30A6A06BCF44F6A1D008C678830A34": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A9C993476B7549EA96DAF28A47D7E71A",
+     "BBB376261B48413E87342FC022069374",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Notices differences\namong materials such as\nsand and water",
+    "id": "DF30A6A06BCF44F6A1D008C678830A34",
+    "listId": "g",
+    "parentId": "A9C993476B7549EA96DAF28A47D7E71A",
+    "position": 1031,
+    "statementLabel": null,
+    "statementNotation": "CD1.2g"
+   },
+   "DFA1EAD0A38649EF9A81B0925C691D46": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BA2F71DDC49243DB977312DBB933DBAF",
+     "94E4419F19FC4B3CAF8D5F46D5978D8E",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Shows interest in\ncertain images or\nobjects by vocalizing or\nreaching",
+    "id": "DFA1EAD0A38649EF9A81B0925C691D46",
+    "listId": "e",
+    "parentId": "BA2F71DDC49243DB977312DBB933DBAF",
+    "position": 1302,
+    "statementLabel": null,
+    "statementNotation": "CD4.4e"
+   },
+   "E0389F99B8B7445FA2A2E49F684FCA6E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2B25374D89BE4ED9A679D771A0247A28",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Preschool\n34-48 months",
+    "id": "E0389F99B8B7445FA2A2E49F684FCA6E",
+    "listId": "",
+    "parentId": "2B25374D89BE4ED9A679D771A0247A28",
+    "position": 1078,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "E0E4DBB52BBB4093ABF267A587716B01": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "324337C3392A4C4F8DF3151219716FDD",
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Notices or points\nto the presence of\nnumbers (as distinct\nfrom letters) in the\nenvironment such\nas in books or on\nbuildings or signs",
+    "id": "E0E4DBB52BBB4093ABF267A587716B01",
+    "listId": "e",
+    "parentId": "324337C3392A4C4F8DF3151219716FDD",
+    "position": 1112,
+    "statementLabel": null,
+    "statementNotation": "CD3.1e"
+   },
+   "E151B4D7F356479987D2D5F6216DA911": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C77920B6308F44F7906F52718E4E9B0E",
+     "29B86EEB137D49A891D9BA94542EB652",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Transitions between\nimagination and reality\nin dramatic play or in a\nguided drama experience",
+    "id": "E151B4D7F356479987D2D5F6216DA911",
+    "listId": "i",
+    "parentId": "C77920B6308F44F7906F52718E4E9B0E",
+    "position": 1286,
+    "statementLabel": null,
+    "statementNotation": "CD4.3i"
+   },
+   "E1B74CA537F647EF94BF78EE64EEE2E2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "29B86EEB137D49A891D9BA94542EB652",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Preschool\n34-48 months",
+    "id": "E1B74CA537F647EF94BF78EE64EEE2E2",
+    "listId": "",
+    "parentId": "29B86EEB137D49A891D9BA94542EB652",
+    "position": 1288,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "E2E283B66FAD439E90B9989081D92568": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3590A0681E0B4F6A8ADD4108005ADCA3",
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Compares sets of objects that range in size\nfrom 1-10, as having “more”, “fewer” or\n“same”",
+    "id": "E2E283B66FAD439E90B9989081D92568",
+    "listId": "z",
+    "parentId": "3590A0681E0B4F6A8ADD4108005ADCA3",
+    "position": 1135,
+    "statementLabel": null,
+    "statementNotation": "CD3.1z"
+   },
+   "E55E00CEC46F40E581257FDCD23657E8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F19FBCED05214F9CB939F676B7F6B6BB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Toddler\n22-36 months",
+    "id": "E55E00CEC46F40E581257FDCD23657E8",
+    "listId": "",
+    "parentId": "F19FBCED05214F9CB939F676B7F6B6BB",
+    "position": 1201,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "E670431E29214DF084079E1B29B42562": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "DA94F8B991724597A99B84119CD4BEF1",
+     "359026A4560140E98969947BFECFF852",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Uses words about direction and\ndistance (e.g., “run toward the\ntree”, “my car went farther than\nyour car”) ",
+    "id": "E670431E29214DF084079E1B29B42562",
+    "listId": "q",
+    "parentId": "DA94F8B991724597A99B84119CD4BEF1",
+    "position": 1165,
+    "statementLabel": null,
+    "statementNotation": "CD3.3q"
+   },
+   "E6BB4584CC364A91950EE535E8B924D1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0DE9C8747BC94231B6CB661C0694773E",
+     "664894926BA34D3AB9964CECA1028A54",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Changes tempo of\nmovements in response\nto changes in tempo or\nbeat of music",
+    "id": "E6BB4584CC364A91950EE535E8B924D1",
+    "listId": "r",
+    "parentId": "0DE9C8747BC94231B6CB661C0694773E",
+    "position": 1240,
+    "statementLabel": null,
+    "statementNotation": "CD4.1r"
+   },
+   "E6BE3858E7B84D0DBC6797AEB76E6B3E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E1B74CA537F647EF94BF78EE64EEE2E2",
+     "29B86EEB137D49A891D9BA94542EB652",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "When engaged in\nrole play, contributes\ndialogue, gesture, and\nfacial expressions to\nconvey meaning, ideas\nand feelings",
+    "id": "E6BE3858E7B84D0DBC6797AEB76E6B3E",
+    "listId": "l",
+    "parentId": "E1B74CA537F647EF94BF78EE64EEE2E2",
+    "position": 1290,
+    "statementLabel": null,
+    "statementNotation": "CD4.3l"
+   },
+   "E6F0CD4012A84F6CA0C15472BDCCD75C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "514310F9794142DE8150831DF52A53D1",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Toddler\n12-24 months",
+    "id": "E6F0CD4012A84F6CA0C15472BDCCD75C",
+    "listId": "",
+    "parentId": "514310F9794142DE8150831DF52A53D1",
+    "position": 1252,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "E7B41F677B434F35AF6496097003B638": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BBB376261B48413E87342FC022069374",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Toddler\n12-24 months",
+    "id": "E7B41F677B434F35AF6496097003B638",
+    "listId": "",
+    "parentId": "BBB376261B48413E87342FC022069374",
+    "position": 1027,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "E8431BB31DCB402D990A74CDFB9D29B1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "651307E51BB348269FC21E798C9BAE77",
+     "29B86EEB137D49A891D9BA94542EB652",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Explores materials by\nusing them in different\nways such as shaking,\nbanging, throwing ",
+    "id": "E8431BB31DCB402D990A74CDFB9D29B1",
+    "listId": "c",
+    "parentId": "651307E51BB348269FC21E798C9BAE77",
+    "position": 1278,
+    "statementLabel": null,
+    "statementNotation": "CD4.3c"
+   },
+   "E8506AE3C1084A739EC0F972F1C20E24": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7249CFCDB5F84743A67DB8772005D118",
+     "AE1CC838CDD74809B02CA193713D5BCB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognizes and\nfollows simple patterns in\nstories or books such as I\nKnow an Old Lady Who\nSwallowed a Fly or The\nVery Hungry Caterpillar",
+    "id": "E8506AE3C1084A739EC0F972F1C20E24",
+    "listId": "i",
+    "parentId": "7249CFCDB5F84743A67DB8772005D118",
+    "position": 1185,
+    "statementLabel": null,
+    "statementNotation": "CD3.4i"
+   },
+   "EA548E67B14D40DDBBE411B7342EF5AD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4D37CDCC64D746719BF19CE323EBAC8E",
+     "AE1CC838CDD74809B02CA193713D5BCB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describes quantitative\nchanges (e.g., “I am\ntwo years older than\nwhen I started school.”) ",
+    "id": "EA548E67B14D40DDBBE411B7342EF5AD",
+    "listId": "o",
+    "parentId": "4D37CDCC64D746719BF19CE323EBAC8E",
+    "position": 1193,
+    "statementLabel": null,
+    "statementNotation": "CD3.4o"
+   },
+   "EAE11D9111E0431A87856BF6B64A8D52": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6F79FA36E3AA455984C1203CAD153F1F",
+     "AE1CC838CDD74809B02CA193713D5BCB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Sorts and classifies\nobjects according to one\nattribute or feature (e.g.,\nsorts socks by color,\nsorts twigs from leaves)  ",
+    "id": "EAE11D9111E0431A87856BF6B64A8D52",
+    "listId": "d",
+    "parentId": "6F79FA36E3AA455984C1203CAD153F1F",
+    "position": 1179,
+    "statementLabel": null,
+    "statementNotation": "CD3.4d"
+   },
+   "EB567B9A338B499F9AB5A35D316F1C0B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "04571165423D4303BBC62FB6813041BB",
+     "EBC41226FAC74E8B8B237FAB65D10891",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Uses expressions,\nmovements, and\nvocalizations to get\nattention from adults and\nolder children for play or\nbasic needs",
+    "id": "EB567B9A338B499F9AB5A35D316F1C0B",
+    "listId": "b",
+    "parentId": "04571165423D4303BBC62FB6813041BB",
+    "position": 1049,
+    "statementLabel": null,
+    "statementNotation": "CD2.1b"
+   },
+   "EBC41226FAC74E8B8B237FAB65D10891": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Learning about ways that people interact",
+    "id": "EBC41226FAC74E8B8B237FAB65D10891",
+    "listId": "1",
+    "parentId": "0992767DF43842B997EDB3C5ED99AEC7",
+    "position": 1045,
+    "statementLabel": null,
+    "statementNotation": "CD2.1"
+   },
+   "ECA6903300254F52AD26629569AEFF59": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "324337C3392A4C4F8DF3151219716FDD",
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begins to match\nnumerals to the\ncorrect quantity\n(amount) ",
+    "id": "ECA6903300254F52AD26629569AEFF59",
+    "listId": "g",
+    "parentId": "324337C3392A4C4F8DF3151219716FDD",
+    "position": 1114,
+    "statementLabel": null,
+    "statementNotation": "CD3.1g"
+   },
+   "ECFD6AC288F442439040E4070FCB1000": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E55E00CEC46F40E581257FDCD23657E8",
+     "F19FBCED05214F9CB939F676B7F6B6BB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With adult\nsupport, sorts\nobjects into two\ngroups based on\na single attribute/\ncharacteristic\n(e.g. grouping\nblocks separately\nfrom toy animals\nor putting red\nblocks and\nblue blocks in\ndifferent piles) ",
+    "id": "ECFD6AC288F442439040E4070FCB1000",
+    "listId": "d",
+    "parentId": "E55E00CEC46F40E581257FDCD23657E8",
+    "position": 1202,
+    "statementLabel": null,
+    "statementNotation": "CD3.5d"
+   },
+   "F0820D405F1140EA968E05CBB0CFD112": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "98303BC6B29249B78EB387046FE890ED",
+     "EBC41226FAC74E8B8B237FAB65D10891",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Shows more\ndetail in drawings,\nbuildings, models, and\nperformances, reflecting\ntheir thinking and\nunderstanding about\nsocial connections",
+    "id": "F0820D405F1140EA968E05CBB0CFD112",
+    "listId": "p",
+    "parentId": "98303BC6B29249B78EB387046FE890ED",
+    "position": 1068,
+    "statementLabel": null,
+    "statementNotation": "CD2.1p"
+   },
+   "F1592DB9774345C58A36F98BBB9A1573": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "68E816A75ECB42908C207D3BA0035118",
+     "29B86EEB137D49A891D9BA94542EB652",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Uses props and dramatic\nplay to explore roles\nand events in the larger\ncommunity and world",
+    "id": "F1592DB9774345C58A36F98BBB9A1573",
+    "listId": "n",
+    "parentId": "68E816A75ECB42908C207D3BA0035118",
+    "position": 1293,
+    "statementLabel": null,
+    "statementNotation": "CD4.3n"
+   },
+   "F19FBCED05214F9CB939F676B7F6B6BB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Describing, comparing, and measuring",
+    "id": "F19FBCED05214F9CB939F676B7F6B6BB",
+    "listId": "5",
+    "parentId": "BF92703DD68544308104071245C1804A",
+    "position": 1194,
+    "statementLabel": null,
+    "statementNotation": "CD3.5"
+   },
+   "F2703976895B4993B1E8B284782A3DD7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D88BF920C9864DD99FB79C36884A27B4",
+     "514310F9794142DE8150831DF52A53D1",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Echoes short phrases\nas sung by an adult ",
+    "id": "F2703976895B4993B1E8B284782A3DD7",
+    "listId": "j",
+    "parentId": "D88BF920C9864DD99FB79C36884A27B4",
+    "position": 1258,
+    "statementLabel": null,
+    "statementNotation": "CD4.2j"
+   },
+   "F3378EE6A2D2473BBBCCC65A6FC2E285": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0433FCAD56A5437193ED46B65D3D95BB",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Toddler\n22-36 months",
+    "id": "F3378EE6A2D2473BBBCCC65A6FC2E285",
+    "listId": "",
+    "parentId": "0433FCAD56A5437193ED46B65D3D95BB",
+    "position": 1092,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "F3A4DADC1798403A99D5C070AAEE8EA1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7249CFCDB5F84743A67DB8772005D118",
+     "AE1CC838CDD74809B02CA193713D5BCB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Imitates an adult in\nnaming the elements of a\npattern and then predicts\nthe next item in the\nchain",
+    "id": "F3A4DADC1798403A99D5C070AAEE8EA1",
+    "listId": "g",
+    "parentId": "7249CFCDB5F84743A67DB8772005D118",
+    "position": 1183,
+    "statementLabel": null,
+    "statementNotation": "CD3.4g"
+   },
+   "F43113456DFD49DDAFFEC8A0D393A0DF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E7B41F677B434F35AF6496097003B638",
+     "BBB376261B48413E87342FC022069374",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Shows more\nindependence and uses\n“trial and error” when\nexploring toys and\nmaterials",
+    "id": "F43113456DFD49DDAFFEC8A0D393A0DF",
+    "listId": "f",
+    "parentId": "E7B41F677B434F35AF6496097003B638",
+    "position": 1029,
+    "statementLabel": null,
+    "statementNotation": "CD1.2f"
+   },
+   "F52881972D84476D970F7A937DD92409": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FA88EFE5E7884038A79960511557385B",
+     "7DF064DFC20A4C2EB5F703F3776CC25A",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Shows more focus and\nspends more time when\nobserving or exploring",
+    "id": "F52881972D84476D970F7A937DD92409",
+    "listId": "d",
+    "parentId": "FA88EFE5E7884038A79960511557385B",
+    "position": 1008,
+    "statementLabel": null,
+    "statementNotation": "CD1.1d"
+   },
+   "F58F26AEE8404F73833B1B04914E1E9B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4E2D41E24C014A5CAD41BFEFA6AF0B37",
+     "EBC41226FAC74E8B8B237FAB65D10891",
+     "0992767DF43842B997EDB3C5ED99AEC7"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Communicates about\nthe roles of people\nencountered in the\ncommunity (e.g., bus\ndriver, mail carrier)",
+    "id": "F58F26AEE8404F73833B1B04914E1E9B",
+    "listId": "k",
+    "parentId": "4E2D41E24C014A5CAD41BFEFA6AF0B37",
+    "position": 1062,
+    "statementLabel": null,
+    "statementNotation": "CD2.1k"
+   },
+   "F5C476F8539245C38A9D77493CE4ECD7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "664894926BA34D3AB9964CECA1028A54",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Toddler\n12-24 months",
+    "id": "F5C476F8539245C38A9D77493CE4ECD7",
+    "listId": "",
+    "parentId": "664894926BA34D3AB9964CECA1028A54",
+    "position": 1223,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "F6327D8C74B343BD8CB0937035334691": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D1AEACDB578B459CBFC294EFE8400CE7",
+     "359026A4560140E98969947BFECFF852",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Plays with blocks,\nfound materials (e.g.,\nstones or sticks),\nor other items by\nplacing them side by\nside",
+    "id": "F6327D8C74B343BD8CB0937035334691",
+    "listId": "e",
+    "parentId": "D1AEACDB578B459CBFC294EFE8400CE7",
+    "position": 1151,
+    "statementLabel": null,
+    "statementNotation": "CD3.3e"
+   },
+   "F63E617450C643ED890ECC6689C37166": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9463B502A53B4BCA86A07954EBB391B4",
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Uses own fingers\nto show a number  ",
+    "id": "F63E617450C643ED890ECC6689C37166",
+    "listId": "l",
+    "parentId": "9463B502A53B4BCA86A07954EBB391B4",
+    "position": 1120,
+    "statementLabel": null,
+    "statementNotation": "CD3.1l"
+   },
+   "F68A94F89D664EC5B55B6FE8E2E684DE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "857E1A6DA567407E92EAD6FDD94D1595",
+     "514310F9794142DE8150831DF52A53D1",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Uses songs, simple\ninstruments and found\nmaterials to create music\nthat expresses mood,\nstory, or relationships",
+    "id": "F68A94F89D664EC5B55B6FE8E2E684DE",
+    "listId": "v",
+    "parentId": "857E1A6DA567407E92EAD6FDD94D1595",
+    "position": 1272,
+    "statementLabel": null,
+    "statementNotation": "CD4.2v"
+   },
+   "F76EA8D4DC6F4EE38B9E9540A7E77DC7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Infancy\n0-8 months",
+    "id": "F76EA8D4DC6F4EE38B9E9540A7E77DC7",
+    "listId": "",
+    "parentId": "9CF7B674A8F142D3929702C47D3C1625",
+    "position": 1104,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "F8D10A8068A3420B97735F7A22866618": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7DF064DFC20A4C2EB5F703F3776CC25A",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Later Preschool\n44-60 months",
+    "id": "F8D10A8068A3420B97735F7A22866618",
+    "listId": "",
+    "parentId": "7DF064DFC20A4C2EB5F703F3776CC25A",
+    "position": 1016,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "F8D8DAE6AF3B4FA2BBDE003D24F13B27": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8C1B99DBFE124398A3A7420A0B5ACDFC",
+     "94E4419F19FC4B3CAF8D5F46D5978D8E",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begins to describe\nart and the story it tells ",
+    "id": "F8D8DAE6AF3B4FA2BBDE003D24F13B27",
+    "listId": "m",
+    "parentId": "8C1B99DBFE124398A3A7420A0B5ACDFC",
+    "position": 1314,
+    "statementLabel": null,
+    "statementNotation": "CD4.4m"
+   },
+   "F8E809449684472D910DA16AA29758C8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "68A1AD4B98A14A9FB63F0BF0365A3053",
+     "F19FBCED05214F9CB939F676B7F6B6BB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With adult\nsupport, begins\nto match objects\nby similar or\nrelated attributes/\ncharacteristics\n(e.g. explores\nmatching shapes\nusing a shape\nsorting box)",
+    "id": "F8E809449684472D910DA16AA29758C8",
+    "listId": "c",
+    "parentId": "68A1AD4B98A14A9FB63F0BF0365A3053",
+    "position": 1200,
+    "statementLabel": null,
+    "statementNotation": "CD3.5c"
+   },
+   "F976A5B837514E949FE81D6A86E131BE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "22BF0AFD82844799BABA880AE80823DC",
+     "BBB376261B48413E87342FC022069374",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Uses adult help\nto explore toys and\nmaterials to discover how\nthey work",
+    "id": "F976A5B837514E949FE81D6A86E131BE",
+    "listId": "d",
+    "parentId": "22BF0AFD82844799BABA880AE80823DC",
+    "position": 1026,
+    "statementLabel": null,
+    "statementNotation": "CD1.2d"
+   },
+   "F9E0781078554FE38D83853326B26425": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "91D34240D3064228B7A169EC36F51B2C",
+     "359026A4560140E98969947BFECFF852",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Responds to\nand uses words\ndescribing a place in\nspace such as “next\nto”, “inside of”,\n“under” ",
+    "id": "F9E0781078554FE38D83853326B26425",
+    "listId": "j",
+    "parentId": "91D34240D3064228B7A169EC36F51B2C",
+    "position": 1157,
+    "statementLabel": null,
+    "statementNotation": "CD3.3j"
+   },
+   "F9ED17AC768645C5BC071CF14F72B64B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6F79FA36E3AA455984C1203CAD153F1F",
+     "AE1CC838CDD74809B02CA193713D5BCB",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Imitates patterns\nin movement (e.g.,\nclapping patterns)  ",
+    "id": "F9ED17AC768645C5BC071CF14F72B64B",
+    "listId": "e",
+    "parentId": "6F79FA36E3AA455984C1203CAD153F1F",
+    "position": 1180,
+    "statementLabel": null,
+    "statementNotation": "CD3.4e"
+   },
+   "FA88EFE5E7884038A79960511557385B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7DF064DFC20A4C2EB5F703F3776CC25A",
+     "408DC7095FCE468F9D408C090F3FB02D"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Early Toddler\n12-24 months",
+    "id": "FA88EFE5E7884038A79960511557385B",
+    "listId": "",
+    "parentId": "7DF064DFC20A4C2EB5F703F3776CC25A",
+    "position": 1007,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "FC5CD258D37447BF93E64A74AC3DB268": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9463B502A53B4BCA86A07954EBB391B4",
+     "9CF7B674A8F142D3929702C47D3C1625",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Names some\nnumbers when\nthey appear in print",
+    "id": "FC5CD258D37447BF93E64A74AC3DB268",
+    "listId": "j",
+    "parentId": "9463B502A53B4BCA86A07954EBB391B4",
+    "position": 1118,
+    "statementLabel": null,
+    "statementNotation": "CD3.1j"
+   },
+   "FD675B71059945FC8F84C2813D547441": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "857E1A6DA567407E92EAD6FDD94D1595",
+     "514310F9794142DE8150831DF52A53D1",
+     "C6BB54435FF44FD5ABD0CD22BD6781E4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Keeps a steady beat for\n8-16 counts by patting\nbody parts or using small\ninstruments",
+    "id": "FD675B71059945FC8F84C2813D547441",
+    "listId": "t",
+    "parentId": "857E1A6DA567407E92EAD6FDD94D1595",
+    "position": 1270,
+    "statementLabel": null,
+    "statementNotation": "CD4.2t"
+   },
+   "FFBC67C9CEAA4223999B425D331B0772": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "54112762921B42DA8D84394525390C5B",
+     "359026A4560140E98969947BFECFF852",
+     "BF92703DD68544308104071245C1804A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Shows interest in\nspace and location\nby looking in\nmirrors, noticing\nwhat is reflected,\nand looking for it  ",
+    "id": "FFBC67C9CEAA4223999B425D331B0772",
+    "listId": "a",
+    "parentId": "54112762921B42DA8D84394525390C5B",
+    "position": 1148,
+    "statementLabel": null,
+    "statementNotation": "CD3.3a"
+   }
+  },
+  "subject": "Early Learning and Development Standards (2021-)",
+  "title": "Area Five: Cognitive Development"
+ }
+}

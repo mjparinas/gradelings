@@ -2,7 +2,8 @@
 
 ## Framework
 
-- **Id and slug:** `us-nh`, `new-hampshire`. Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: New Hampshire has no statewide French standards the app follows). Offered to families and in classroom mode.
+- **Id and slug:** `us-nh`, `new-hampshire`. Pre-K and Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: New Hampshire has no statewide French standards the app follows). Offered to families and in classroom mode.
+- **Pre-K:** the 26 shared Pre-K units (`src/content/grades/pk/`), cited by the New Hampshire Early Learning Standards' indicators for four- and five-year-olds with the domain (`Numeracy 1.1.7b`) (`src/content/new-hampshire/pk.ts`), checked against `docs/research/new-hampshire/prek/outcomes.json` (sources in `source/`, `fetch.sh`, `build_outcomes.py`). Practice steps only.
 
 ## Standards
 
@@ -24,7 +25,7 @@
 
 ## Parent guides
 
-- `src/content/new-hampshire/guides.ts`, US English: the hub, grade notes for Kindergarten to Grade 9, the eight Standards for Mathematical Practice (`/guides/new-hampshire/math-practices/`) and state tests (`/guides/new-hampshire/state-tests/`; dates point to the Department of Education). No French guide.
+- `src/content/new-hampshire/guides.ts`, US English: the hub, grade notes for Pre-K to Grade 9, the eight Standards for Mathematical Practice (`/guides/new-hampshire/math-practices/`) and state tests (`/guides/new-hampshire/state-tests/`; dates point to the Department of Education). No French guide.
 
 ## Schools
 
