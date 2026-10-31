@@ -1,0 +1,2261 @@
+{
+ "data": {
+  "cspStatus": {
+   "notes": null,
+   "value": "visible"
+  },
+  "document": {
+   "publicationStatus": "Published",
+   "sourceURL": "https://www.nh-connections.org/wp-content/uploads/2022/09/NH-Early-Learning-Standards.pdf",
+   "title": "NH-Early-Learning-Standards"
+  },
+  "educationLevels": [
+   "Pre-K"
+  ],
+  "id": "1229C4DA77BC46A3B207F991E76356FD",
+  "jurisdiction": {
+   "id": "46115D815A5E41C185AAE63E7B3E4F83",
+   "title": "New Hampshire"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/4.0/us/",
+   "rightsHolder": "Common Curriculum, Inc.",
+   "title": "CC BY 4.0 US"
+  },
+  "normalizedSubject": null,
+  "standards": {
+   "00F35D1B6A944DEE9E7658532D960C6B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EB37DEE0BAD54A82BDF7BA5AED6A71B9",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Thirty Months to\nThree Years: Ask for familiar books to be\r\nread in exactly the same way\r\neach time and know when\r\nsections are being skipped",
+    "id": "00F35D1B6A944DEE9E7658532D960C6B",
+    "listId": "5",
+    "parentId": "EB37DEE0BAD54A82BDF7BA5AED6A71B9",
+    "position": 79000,
+    "statementLabel": null,
+    "statementNotation": "5.3.5"
+   },
+   "0438391446ED43FC84366DFD9678AED8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E41C45584E45493CB8FD1B74467979C9",
+     "2D65E5A20446441DB721D3DBC6369C21"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Three Years: Can relate a simple story\r\n(E.g. When asked about her\r\nday, Rhianna says, “I went\r\nout on the playground and\r\nit was so icy and I fell and\r\nI cried and cried and my\r\nteacher helped me.”)",
+    "id": "0438391446ED43FC84366DFD9678AED8",
+    "listId": "6",
+    "parentId": "E41C45584E45493CB8FD1B74467979C9",
+    "position": 47000,
+    "statementLabel": null,
+    "statementNotation": "4.2.6"
+   },
+   "057EFB575747472DAB28D0ABCE186ACA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "613FB2DF14B848FD93F613367504B143",
+     "388C19292ADA4A30B29B11807DEC6DEC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Birth to\nNine Months: Use various sounds and\r\nmovements to communicate",
+    "id": "057EFB575747472DAB28D0ABCE186ACA",
+    "listId": "1",
+    "parentId": "613FB2DF14B848FD93F613367504B143",
+    "position": 13000,
+    "statementLabel": null,
+    "statementNotation": "2.1.1"
+   },
+   "059F35F1D94D47BB8CA201C03B6EC7C2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E60933D242F8427CA73E674D66CFB612",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Thirty Months to\nThree Years: Participate in chants and songs\r\nand books that rhyme",
+    "id": "059F35F1D94D47BB8CA201C03B6EC7C2",
+    "listId": "5",
+    "parentId": "E60933D242F8427CA73E674D66CFB612",
+    "position": 98000,
+    "statementLabel": null,
+    "statementNotation": "5.5.5"
+   },
+   "0768CA7B3E2E48B2916C5CCC1A103DB8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C66F20B133B04F87BDB294DB02359035",
+     "0B7B587843844E2989678D3C572E4E87"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Twenty-Four to\nThirty Months: Scribble and draw and see\r\nthese as the same",
+    "id": "0768CA7B3E2E48B2916C5CCC1A103DB8",
+    "listId": "4",
+    "parentId": "C66F20B133B04F87BDB294DB02359035",
+    "position": 127000,
+    "statementLabel": null,
+    "statementNotation": "6.2.4"
+   },
+   "095E8DF68DC74FBF8B697F680D878255": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8C2C3ABA7B3B4546A2E0070572B24A74",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds:  Ask questions about a book or story",
+    "id": "095E8DF68DC74FBF8B697F680D878255",
+    "listId": "7d",
+    "parentId": "8C2C3ABA7B3B4546A2E0070572B24A74",
+    "position": 63000,
+    "statementLabel": null,
+    "statementNotation": "5.1.7d"
+   },
+   "0B7B587843844E2989678D3C572E4E87": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Emergent Writing",
+    "id": "0B7B587843844E2989678D3C572E4E87",
+    "listId": "6",
+    "parentId": null,
+    "position": 112000,
+    "statementLabel": null,
+    "statementNotation": "6"
+   },
+   "0BC2E29613D4400F9470369B6BADBEA9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1A502B0E9B64429A8FE3EDEDC17C0407",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Nine Months to\nEighteen Months\n: Bring a book to an adult to be\r\nread to and/or respond positively\r\nto an adult’s offer to read",
+    "id": "0BC2E29613D4400F9470369B6BADBEA9",
+    "listId": "2",
+    "parentId": "1A502B0E9B64429A8FE3EDEDC17C0407",
+    "position": 86000,
+    "statementLabel": null,
+    "statementNotation": "5.4.2"
+   },
+   "11E757CC8FF845F29671513F90675D4E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5AE1E316EA7A440BA031ECFE982024E4",
+     "0B7B587843844E2989678D3C572E4E87"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Twenty-Four to\nThirty Months: Recognize that print and\r\nnumerals are symbols that\r\nconvey meaning (E.g. Colin, age\r\n2, points to the bottom of his\r\npainting on his classroom wall\r\nand says, “There’s my name.”)",
+    "id": "11E757CC8FF845F29671513F90675D4E",
+    "listId": "4",
+    "parentId": "5AE1E316EA7A440BA031ECFE982024E4",
+    "position": 117000,
+    "statementLabel": null,
+    "statementNotation": "6.1.4"
+   },
+   "12D7FEB77A484E87A91855B75769BFEC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EB37DEE0BAD54A82BDF7BA5AED6A71B9",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Eighteen to\nTwenty-Four Months: Point to and vocalize about an\r\nillustration or imitate an action\r\nseen in a picture (E.g. 18-\r\nmonth-old Angelique imitates the\r\njumping action of the frog when\r\nbeing read, Jump Frog Jump.)",
+    "id": "12D7FEB77A484E87A91855B75769BFEC",
+    "listId": "3",
+    "parentId": "EB37DEE0BAD54A82BDF7BA5AED6A71B9",
+    "position": 77000,
+    "statementLabel": null,
+    "statementNotation": "5.3.3"
+   },
+   "15C99B88088E47269DD2C1D6014F42C4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E41C45584E45493CB8FD1B74467979C9",
+     "2D65E5A20446441DB721D3DBC6369C21"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Speak clearly enough to be understood",
+    "id": "15C99B88088E47269DD2C1D6014F42C4",
+    "listId": "7a",
+    "parentId": "E41C45584E45493CB8FD1B74467979C9",
+    "position": 48000,
+    "statementLabel": null,
+    "statementNotation": "4.2.7a"
+   },
+   "16EF9A61065C42A2A0A99CD837852D01": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C4E431AD2A5E4479AC9501AD75384A66",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Nine Months to\nEighteen Months\n: Participate in book reading\r\nactivities (E.g. Brandon, 15\r\nmonths, makes a shhh sound\r\nand puts his finger on his lips\r\nat the appropriate time when\r\nreading The Napping House.)",
+    "id": "16EF9A61065C42A2A0A99CD837852D01",
+    "listId": "2",
+    "parentId": "C4E431AD2A5E4479AC9501AD75384A66",
+    "position": 67000,
+    "statementLabel": null,
+    "statementNotation": "5.2.2"
+   },
+   "1A502B0E9B64429A8FE3EDEDC17C0407": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Interest in and\r\nappreciation of\r\nreading*",
+    "id": "1A502B0E9B64429A8FE3EDEDC17C0407",
+    "listId": "4",
+    "parentId": "C5F1F095D0274A1AB6DF5FFC2196BEC4",
+    "position": 84000,
+    "statementLabel": null,
+    "statementNotation": "5.4"
+   },
+   "1BF8BF3C83BB4B64A0E0DDFC0C890C0B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EB37DEE0BAD54A82BDF7BA5AED6A71B9",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Birth to\nNine Months: Enjoy hearing a book\r\nbeing read and looking at\r\nthe pictures, but do not\r\nunderstand the sequence of\r\nthe story",
+    "id": "1BF8BF3C83BB4B64A0E0DDFC0C890C0B",
+    "listId": "1",
+    "parentId": "EB37DEE0BAD54A82BDF7BA5AED6A71B9",
+    "position": 75000,
+    "statementLabel": null,
+    "statementNotation": "5.3.1"
+   },
+   "1C405AF63DFA40409B281ADF243E7FC0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E60933D242F8427CA73E674D66CFB612",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Listen to and recognize different sounds in rhymes, songs, and familiar words\n(E.g. When the teacher sings, “Willaby wallaby Wecca an elephant sat on...”,\nBecca shouts, “Becca!”)",
+    "id": "1C405AF63DFA40409B281ADF243E7FC0",
+    "listId": "7a",
+    "parentId": "E60933D242F8427CA73E674D66CFB612",
+    "position": 100000,
+    "statementLabel": null,
+    "statementNotation": "5.5.7a"
+   },
+   "1E30013C269F4A6E849BFB94EC1DA2D6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C66F20B133B04F87BDB294DB02359035",
+     "0B7B587843844E2989678D3C572E4E87"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Thirty Months to\nThree Years: Use their increased fine motor\r\ncontrol to control the size and\r\nshape of their scribbles",
+    "id": "1E30013C269F4A6E849BFB94EC1DA2D6",
+    "listId": "5",
+    "parentId": "C66F20B133B04F87BDB294DB02359035",
+    "position": 128000,
+    "statementLabel": null,
+    "statementNotation": "6.2.5"
+   },
+   "1E773C6B39824AF79320DB6A4EF81FC2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E60933D242F8427CA73E674D66CFB612",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Birth to\nNine Months: Respond to sounds and words\r\nheard often",
+    "id": "1E773C6B39824AF79320DB6A4EF81FC2",
+    "listId": "1",
+    "parentId": "E60933D242F8427CA73E674D66CFB612",
+    "position": 94000,
+    "statementLabel": null,
+    "statementNotation": "5.5.1"
+   },
+   "1F44D9DB1CC64AEF8A4BB75EA4E78F4F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5AE1E316EA7A440BA031ECFE982024E4",
+     "0B7B587843844E2989678D3C572E4E87"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Three Years: Begin to recognize their own\r\nname and may notice words\r\nthat start with the same letter\r\nas their own name",
+    "id": "1F44D9DB1CC64AEF8A4BB75EA4E78F4F",
+    "listId": "6",
+    "parentId": "5AE1E316EA7A440BA031ECFE982024E4",
+    "position": 119000,
+    "statementLabel": null,
+    "statementNotation": "6.1.6"
+   },
+   "2778C42A379F420D97E68B6524B49C72": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EB37DEE0BAD54A82BDF7BA5AED6A71B9",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Use their own words to retell a simple familiar story while looking at a book",
+    "id": "2778C42A379F420D97E68B6524B49C72",
+    "listId": "7b",
+    "parentId": "EB37DEE0BAD54A82BDF7BA5AED6A71B9",
+    "position": 82000,
+    "statementLabel": null,
+    "statementNotation": "5.3.7b"
+   },
+   "279FB439154B4ABB8E0A7A9E78D2D047": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C8E09A0A4E9D4A0AAC722CE48D454638",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Eighteen to\nTwenty-Four Months: Hold the book properly and\r\nturn pages, sometimes several\r\nat a time",
+    "id": "279FB439154B4ABB8E0A7A9E78D2D047",
+    "listId": "3",
+    "parentId": "C8E09A0A4E9D4A0AAC722CE48D454638",
+    "position": 106000,
+    "statementLabel": null,
+    "statementNotation": "5.6.3"
+   },
+   "294AC1C709E34C02B43D256700F66C97": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EB37DEE0BAD54A82BDF7BA5AED6A71B9",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Retell information from a book (E.g. 5 year old Mac tells his Papa that\nTyrannosaurus Rex runs as fast as a horse.)",
+    "id": "294AC1C709E34C02B43D256700F66C97",
+    "listId": "7c",
+    "parentId": "EB37DEE0BAD54A82BDF7BA5AED6A71B9",
+    "position": 83000,
+    "statementLabel": null,
+    "statementNotation": "5.3.7c"
+   },
+   "2D65E5A20446441DB721D3DBC6369C21": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Verbal Expressions",
+    "id": "2D65E5A20446441DB721D3DBC6369C21",
+    "listId": "4",
+    "parentId": null,
+    "position": 31000,
+    "statementLabel": null,
+    "statementNotation": "4"
+   },
+   "30BED481447B480CBA719A578E144A52": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7662FC7CA7A6449AA1AAB7B4E82388A0",
+     "2D65E5A20446441DB721D3DBC6369C21"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Eighteen to\nTwenty-Four Months: Combine two words to express\r\nwants or needs (E.g. As Harper\r\nwalks to the car she says, “Car\r\ngo.”)",
+    "id": "30BED481447B480CBA719A578E144A52",
+    "listId": "3",
+    "parentId": "7662FC7CA7A6449AA1AAB7B4E82388A0",
+    "position": 35000,
+    "statementLabel": null,
+    "statementNotation": "4.1.3"
+   },
+   "34D423CA1F834AE0A74164FEEA0643EB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8C2C3ABA7B3B4546A2E0070572B24A74",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Learn new information from books being read to them",
+    "id": "34D423CA1F834AE0A74164FEEA0643EB",
+    "listId": "7a",
+    "parentId": "8C2C3ABA7B3B4546A2E0070572B24A74",
+    "position": 60000,
+    "statementLabel": null,
+    "statementNotation": "5.1.7a"
+   },
+   "34FCF1439FE64E858A385561ACC222C5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7662FC7CA7A6449AA1AAB7B4E82388A0",
+     "2D65E5A20446441DB721D3DBC6369C21"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Three Years: Continue to build their\r\nvocabulary including more\r\ndescriptive words",
+    "id": "34FCF1439FE64E858A385561ACC222C5",
+    "listId": "6",
+    "parentId": "7662FC7CA7A6449AA1AAB7B4E82388A0",
+    "position": 38000,
+    "statementLabel": null,
+    "statementNotation": "4.1.6"
+   },
+   "388C19292ADA4A30B29B11807DEC6DEC": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Non-verbal\r\ncommunication",
+    "id": "388C19292ADA4A30B29B11807DEC6DEC",
+    "listId": "2",
+    "parentId": null,
+    "position": 11000,
+    "statementLabel": null,
+    "statementNotation": "2"
+   },
+   "41775E3AD5D44B6291FC857358953639": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "613FB2DF14B848FD93F613367504B143",
+     "388C19292ADA4A30B29B11807DEC6DEC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Thirty Months to\nThree Years: Begin to understand other\r\nchildren’s nonverbal social cues\r",
+    "id": "41775E3AD5D44B6291FC857358953639",
+    "listId": "5",
+    "parentId": "613FB2DF14B848FD93F613367504B143",
+    "position": 17000,
+    "statementLabel": null,
+    "statementNotation": "2.1.5"
+   },
+   "445CB9170C9748649D5527076ACCA011": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C66F20B133B04F87BDB294DB02359035",
+     "0B7B587843844E2989678D3C572E4E87"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Three Years: Begin to differentiate between\r\ndrawing and writing, and their\r\nscribbles may look more like\r\nwriting (E.g. After painting\r\na picture, 3-year-old Isaiah\r\nmakes a series of vertical\r\nlines, representing his name.)",
+    "id": "445CB9170C9748649D5527076ACCA011",
+    "listId": "6",
+    "parentId": "C66F20B133B04F87BDB294DB02359035",
+    "position": 129000,
+    "statementLabel": null,
+    "statementNotation": "6.2.6"
+   },
+   "4520EB59426E45A586799D1074EFFB53": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7662FC7CA7A6449AA1AAB7B4E82388A0",
+     "2D65E5A20446441DB721D3DBC6369C21"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Thirty Months to\nThree Years: Correctly use a growing number\r\nof vocabulary words and show\r\ninterest in new words (E.g. Liam\r\nknows that fast, quick, and\r\nspeedy mean the same thing.)",
+    "id": "4520EB59426E45A586799D1074EFFB53",
+    "listId": "5",
+    "parentId": "7662FC7CA7A6449AA1AAB7B4E82388A0",
+    "position": 37000,
+    "statementLabel": null,
+    "statementNotation": "4.1.5"
+   },
+   "4718E6E69D99413AB5E7A56696B3623D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8C2C3ABA7B3B4546A2E0070572B24A74",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Eighteen to\nTwenty-Four Months: May show preferences for\r\nspecific books and turn pages at\r\nthe appropriate time with adult\r\nassistance\r",
+    "id": "4718E6E69D99413AB5E7A56696B3623D",
+    "listId": "3",
+    "parentId": "8C2C3ABA7B3B4546A2E0070572B24A74",
+    "position": 56000,
+    "statementLabel": null,
+    "statementNotation": "5.1.3"
+   },
+   "4E7387A746114662A0A33F1B60EDAFFF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E6D2B078D5C54E82913C7E188D5441D4",
+     "66C9AA2FD3714859B4DA8F1909CACE3C"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Three Years: Begin to understand the rules\r\nfor communication in different\r\nsituations (E.g. Charlie\r\nwhispers when dad explains\r\nthat he needs to use a quiet\r\nvoice when visiting grandpa in\r\nthe hospital.)",
+    "id": "4E7387A746114662A0A33F1B60EDAFFF",
+    "listId": "6",
+    "parentId": "E6D2B078D5C54E82913C7E188D5441D4",
+    "position": 28000,
+    "statementLabel": null,
+    "statementNotation": "3.1.6"
+   },
+   "4EC5A49B379C41848589AFDBD81A2FD3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EB37DEE0BAD54A82BDF7BA5AED6A71B9",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Represent stories told or read aloud through a variety of media or in play",
+    "id": "4EC5A49B379C41848589AFDBD81A2FD3",
+    "listId": "7a",
+    "parentId": "EB37DEE0BAD54A82BDF7BA5AED6A71B9",
+    "position": 81000,
+    "statementLabel": null,
+    "statementNotation": "5.3.7a"
+   },
+   "52D89275CC1B49EA8EE6847E48D713D0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E41C45584E45493CB8FD1B74467979C9",
+     "2D65E5A20446441DB721D3DBC6369C21"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Use language for a variety of purposes, including communicating information\r\n(E.g. 5-year-old Sean shows his friends his new race car and they ask him\r\nquestions about it and tell him stories about theirs.)",
+    "id": "52D89275CC1B49EA8EE6847E48D713D0",
+    "listId": "7b",
+    "parentId": "E41C45584E45493CB8FD1B74467979C9",
+    "position": 49000,
+    "statementLabel": null,
+    "statementNotation": "4.2.7b"
+   },
+   "52FC60EB46FD4068868AD8FB855DAB00": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8C2C3ABA7B3B4546A2E0070572B24A74",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Three Years: May describe what’s\r\nhappening in the pictures\r\nwhile turning the pages in a\r\nfamiliar book",
+    "id": "52FC60EB46FD4068868AD8FB855DAB00",
+    "listId": "6",
+    "parentId": "8C2C3ABA7B3B4546A2E0070572B24A74",
+    "position": 59000,
+    "statementLabel": null,
+    "statementNotation": "5.1.6"
+   },
+   "5367F77CD69447EE9441AFBBDA297FAE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E6D2B078D5C54E82913C7E188D5441D4",
+     "66C9AA2FD3714859B4DA8F1909CACE3C"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Nine Months to\nEighteen Months\n: Begin to use single words to\r\ncommunicate",
+    "id": "5367F77CD69447EE9441AFBBDA297FAE",
+    "listId": "2",
+    "parentId": "E6D2B078D5C54E82913C7E188D5441D4",
+    "position": 24000,
+    "statementLabel": null,
+    "statementNotation": "3.1.2"
+   },
+   "54B08BFE6A6B4825924B1AC2EDD254D0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C8E09A0A4E9D4A0AAC722CE48D454638",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Identify parts of books such as cover, first page, and title",
+    "id": "54B08BFE6A6B4825924B1AC2EDD254D0",
+    "listId": "7a",
+    "parentId": "C8E09A0A4E9D4A0AAC722CE48D454638",
+    "position": 110000,
+    "statementLabel": null,
+    "statementNotation": "5.6.7a"
+   },
+   "5637F9518E3F466B96417D1495E96E1A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C40DA82586BC4B10A530383CDD763D09"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Receptive verbal\r\ncommunication",
+    "id": "5637F9518E3F466B96417D1495E96E1A",
+    "listId": "1",
+    "parentId": "C40DA82586BC4B10A530383CDD763D09",
+    "position": 2000,
+    "statementLabel": null,
+    "statementNotation": "1.1"
+   },
+   "5787F966607F4605873E80B689E17C6A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5637F9518E3F466B96417D1495E96E1A",
+     "C40DA82586BC4B10A530383CDD763D09"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Birth to\nNine Months: Show interest in the speech\r\nof others and prefer familiar\r\nvoices",
+    "id": "5787F966607F4605873E80B689E17C6A",
+    "listId": "1",
+    "parentId": "5637F9518E3F466B96417D1495E96E1A",
+    "position": 3000,
+    "statementLabel": null,
+    "statementNotation": "1.1.1"
+   },
+   "5AE1E316EA7A440BA031ECFE982024E4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0B7B587843844E2989678D3C572E4E87"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Print and\r\nalphabet\r\nawareness*",
+    "id": "5AE1E316EA7A440BA031ECFE982024E4",
+    "listId": "1",
+    "parentId": "0B7B587843844E2989678D3C572E4E87",
+    "position": 113000,
+    "statementLabel": null,
+    "statementNotation": "6.1"
+   },
+   "5D4D929CADF146299E28F6FDC92B0FDF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5AE1E316EA7A440BA031ECFE982024E4",
+     "0B7B587843844E2989678D3C572E4E87"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Recognize some letters in the alphabet, especially those in their own name\n(E.g. While putting her things away in her cubby, 4-year-old Azlyn notices other\nchildren’s names on their cubbies. She exclaims,“Hey, Autumn starts the same\nas me!”)",
+    "id": "5D4D929CADF146299E28F6FDC92B0FDF",
+    "listId": "7a",
+    "parentId": "5AE1E316EA7A440BA031ECFE982024E4",
+    "position": 120000,
+    "statementLabel": null,
+    "statementNotation": "6.1.7a"
+   },
+   "5DD6E4783AC248D28F640FA385BEA253": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "613FB2DF14B848FD93F613367504B143",
+     "388C19292ADA4A30B29B11807DEC6DEC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Communicate needs, wants, or thoughts using nonverbal gestures, actions, or\nexpressions (E.g. 5-year-old Devin points to the block area when he is asked\nwhat he wants to do next.)",
+    "id": "5DD6E4783AC248D28F640FA385BEA253",
+    "listId": "7b",
+    "parentId": "613FB2DF14B848FD93F613367504B143",
+    "position": 20000,
+    "statementLabel": null,
+    "statementNotation": "2.1.7b"
+   },
+   "5EAA943357E8495688957BBCF194FFA9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E6D2B078D5C54E82913C7E188D5441D4",
+     "66C9AA2FD3714859B4DA8F1909CACE3C"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Birth to\nNine Months: Use sounds to get adult\r\nattention and to engage adults",
+    "id": "5EAA943357E8495688957BBCF194FFA9",
+    "listId": "1",
+    "parentId": "E6D2B078D5C54E82913C7E188D5441D4",
+    "position": 23000,
+    "statementLabel": null,
+    "statementNotation": "3.1.1"
+   },
+   "5F2EDBF0FE474F27856C9B128E0389C5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C8E09A0A4E9D4A0AAC722CE48D454638",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Thirty Months to\nThree Years: Can turn the book to the first\npage for an adult to begin\nreading and close the book and\nsay, “The end”",
+    "id": "5F2EDBF0FE474F27856C9B128E0389C5",
+    "listId": "5",
+    "parentId": "C8E09A0A4E9D4A0AAC722CE48D454638",
+    "position": 108000,
+    "statementLabel": null,
+    "statementNotation": "5.6.5"
+   },
+   "5FA1FF9CCF3040EF9AF6925279230FCC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C4E431AD2A5E4479AC9501AD75384A66",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Birth to\nNine Months: Look at the face of an adult\r\ndescribing the sequence of\r\nwhat will happen next (E.g.\r\n5-month-old Nate stares\r\nintently at his father’s face\r\nwhen he describes how he will\r\nchange Nate’s diaper.)",
+    "id": "5FA1FF9CCF3040EF9AF6925279230FCC",
+    "listId": "1",
+    "parentId": "C4E431AD2A5E4479AC9501AD75384A66",
+    "position": 66000,
+    "statementLabel": null,
+    "statementNotation": "5.2.1"
+   },
+   "613FB2DF14B848FD93F613367504B143": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "388C19292ADA4A30B29B11807DEC6DEC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Non-Verbal\r\nCommunication",
+    "id": "613FB2DF14B848FD93F613367504B143",
+    "listId": "1",
+    "parentId": "388C19292ADA4A30B29B11807DEC6DEC",
+    "position": 12000,
+    "statementLabel": null,
+    "statementNotation": "2.1"
+   },
+   "63299A24932440A796673F700EDB3395": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E60933D242F8427CA73E674D66CFB612",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Nine Months to\nEighteen Months\n: Recognize and react to the\r\nsounds of language and can\r\ndiscriminate between nonspeech environmental sounds\r\n(E.g. Jamie continues playing\r\nwhen he hears the refrigerator\r\ndoor open, but stops when he\r\nhears a jar being opened.)",
+    "id": "63299A24932440A796673F700EDB3395",
+    "listId": "2",
+    "parentId": "E60933D242F8427CA73E674D66CFB612",
+    "position": 95000,
+    "statementLabel": null,
+    "statementNotation": "5.5.2"
+   },
+   "66C9AA2FD3714859B4DA8F1909CACE3C": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Communication\nConcepts",
+    "id": "66C9AA2FD3714859B4DA8F1909CACE3C",
+    "listId": "3",
+    "parentId": null,
+    "position": 21000,
+    "statementLabel": null,
+    "statementNotation": "3"
+   },
+   "66E50ED6430F4C769662FC23BE76B334": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5AE1E316EA7A440BA031ECFE982024E4",
+     "0B7B587843844E2989678D3C572E4E87"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds:  Understand that specific symbols are used to communicate in writing",
+    "id": "66E50ED6430F4C769662FC23BE76B334",
+    "listId": "7c",
+    "parentId": "5AE1E316EA7A440BA031ECFE982024E4",
+    "position": 122000,
+    "statementLabel": null,
+    "statementNotation": "6.1.7c"
+   },
+   "6C6120DBE40F49D2BB4E281436B9375A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C66F20B133B04F87BDB294DB02359035",
+     "0B7B587843844E2989678D3C572E4E87"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Use scribbles, shapes, pictures, or dictation to represent thoughts or ideas",
+    "id": "6C6120DBE40F49D2BB4E281436B9375A",
+    "listId": "7b",
+    "parentId": "C66F20B133B04F87BDB294DB02359035",
+    "position": 131000,
+    "statementLabel": null,
+    "statementNotation": "6.2.7b"
+   },
+   "6CBC0CC9109948878F4C6FFB4CEE9561": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5AE1E316EA7A440BA031ECFE982024E4",
+     "0B7B587843844E2989678D3C572E4E87"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Nine Months to\nEighteen Months\n: May begin to recognize that\r\nlabels convey meaning (E.g.\r\nJared sees a box of cheerios\r\nand says, “Oh, Oh!”)",
+    "id": "6CBC0CC9109948878F4C6FFB4CEE9561",
+    "listId": "2",
+    "parentId": "5AE1E316EA7A440BA031ECFE982024E4",
+    "position": 115000,
+    "statementLabel": null,
+    "statementNotation": "6.1.2"
+   },
+   "6FA4782BB11442F68F0EECCF5A898820": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C66F20B133B04F87BDB294DB02359035",
+     "0B7B587843844E2989678D3C572E4E87"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Engage in writing using letter-like symbols to make letters or words",
+    "id": "6FA4782BB11442F68F0EECCF5A898820",
+    "listId": "7c",
+    "parentId": "C66F20B133B04F87BDB294DB02359035",
+    "position": 132000,
+    "statementLabel": null,
+    "statementNotation": "6.2.7c"
+   },
+   "711FDBC6ECD54A04924042333D02A10A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C8E09A0A4E9D4A0AAC722CE48D454638",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Nine Months to\nEighteen Months\n: Look at pictures in books, but\r\noften treat books like other toys\r\nand objects in the environment",
+    "id": "711FDBC6ECD54A04924042333D02A10A",
+    "listId": "2",
+    "parentId": "C8E09A0A4E9D4A0AAC722CE48D454638",
+    "position": 105000,
+    "statementLabel": null,
+    "statementNotation": "5.6.2"
+   },
+   "75404329175D45C49949E896A6B2422D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EB37DEE0BAD54A82BDF7BA5AED6A71B9",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Three Years: Can ask and answer simple\r\nquestions about the story",
+    "id": "75404329175D45C49949E896A6B2422D",
+    "listId": "6",
+    "parentId": "EB37DEE0BAD54A82BDF7BA5AED6A71B9",
+    "position": 80000,
+    "statementLabel": null,
+    "statementNotation": "5.3.6"
+   },
+   "7662FC7CA7A6449AA1AAB7B4E82388A0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2D65E5A20446441DB721D3DBC6369C21"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Vocabulary\r\ndevelopment\r",
+    "id": "7662FC7CA7A6449AA1AAB7B4E82388A0",
+    "listId": "1",
+    "parentId": "2D65E5A20446441DB721D3DBC6369C21",
+    "position": 32000,
+    "statementLabel": null,
+    "statementNotation": "4.1"
+   },
+   "79F12EDB09784DF88195BB99F9067082": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C4E431AD2A5E4479AC9501AD75384A66",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Three Years: Relate or retell stories with\r\nmore parts",
+    "id": "79F12EDB09784DF88195BB99F9067082",
+    "listId": "6",
+    "parentId": "C4E431AD2A5E4479AC9501AD75384A66",
+    "position": 71000,
+    "statementLabel": null,
+    "statementNotation": "5.2.6"
+   },
+   "79FFD1EDA4C04B2D9ACB062ED372257B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E6D2B078D5C54E82913C7E188D5441D4",
+     "66C9AA2FD3714859B4DA8F1909CACE3C"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Eighteen to\nTwenty-Four Months: Convey a variety of meanings\r\nthrough simple vocabulary\r\n(E.g. Jeff says “milk,” which\r\ncan mean, “I want milk,” “I’m\r\nfinished drinking milk,” or “I\r\nspilled my milk.”)",
+    "id": "79FFD1EDA4C04B2D9ACB062ED372257B",
+    "listId": "3",
+    "parentId": "E6D2B078D5C54E82913C7E188D5441D4",
+    "position": 25000,
+    "statementLabel": null,
+    "statementNotation": "3.1.3"
+   },
+   "7B5D101E855E46D5BBA1873A15115A18": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E60933D242F8427CA73E674D66CFB612",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Three Years: Enjoy playing with the sounds\r\nof language (E.g. Claire\r\nlaughs loudly when her friend\r\ncalls her Clairey Berry.)",
+    "id": "7B5D101E855E46D5BBA1873A15115A18",
+    "listId": "6",
+    "parentId": "E60933D242F8427CA73E674D66CFB612",
+    "position": 99000,
+    "statementLabel": null,
+    "statementNotation": "5.5.6"
+   },
+   "7DBFBAFD25024CCAB879D053DBAB4334": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1A502B0E9B64429A8FE3EDEDC17C0407",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Three Years: Say what they like about a\r\nfavorite book",
+    "id": "7DBFBAFD25024CCAB879D053DBAB4334",
+    "listId": "6",
+    "parentId": "1A502B0E9B64429A8FE3EDEDC17C0407",
+    "position": 90000,
+    "statementLabel": null,
+    "statementNotation": "5.4.6"
+   },
+   "803BD196D82041E9A0B5CD040AF679BE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "613FB2DF14B848FD93F613367504B143",
+     "388C19292ADA4A30B29B11807DEC6DEC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Twenty-Four to\nThirty Months: Use gestures to augment what\r\nthey are trying to communicate\r\nwith words (E.g. Destiny shakes\r\nher head emphatically as she\r\nsays, “No, no, no.”)\r",
+    "id": "803BD196D82041E9A0B5CD040AF679BE",
+    "listId": "4",
+    "parentId": "613FB2DF14B848FD93F613367504B143",
+    "position": 16000,
+    "statementLabel": null,
+    "statementNotation": "2.1.4"
+   },
+   "808D07E1FDBD469D98616E2B75CD29D9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5AE1E316EA7A440BA031ECFE982024E4",
+     "0B7B587843844E2989678D3C572E4E87"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Begin to associate sounds with words or letters",
+    "id": "808D07E1FDBD469D98616E2B75CD29D9",
+    "listId": "7b",
+    "parentId": "5AE1E316EA7A440BA031ECFE982024E4",
+    "position": 121000,
+    "statementLabel": null,
+    "statementNotation": "6.1.7b"
+   },
+   "83CDB18D8A0D4403A6B3644707448ED1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E6D2B078D5C54E82913C7E188D5441D4",
+     "66C9AA2FD3714859B4DA8F1909CACE3C"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Twenty-Four to\nThirty Months: Use language for a variety of\r\nfunctions",
+    "id": "83CDB18D8A0D4403A6B3644707448ED1",
+    "listId": "4",
+    "parentId": "E6D2B078D5C54E82913C7E188D5441D4",
+    "position": 26000,
+    "statementLabel": null,
+    "statementNotation": "3.1.4"
+   },
+   "847C6BBA863D4669AFAD5D8E1E5840A7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C4E431AD2A5E4479AC9501AD75384A66",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Guess what will happen next in a story using pictures as a guide",
+    "id": "847C6BBA863D4669AFAD5D8E1E5840A7",
+    "listId": "7a",
+    "parentId": "C4E431AD2A5E4479AC9501AD75384A66",
+    "position": 72000,
+    "statementLabel": null,
+    "statementNotation": "5.2.7a"
+   },
+   "8C1B8021CDD64174A9607E2704649095": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C8E09A0A4E9D4A0AAC722CE48D454638",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Three Years: Understand proper handling of\r\nbooks to avoid damage and\r\nhelp repair books, with adult\r\nsupport",
+    "id": "8C1B8021CDD64174A9607E2704649095",
+    "listId": "6",
+    "parentId": "C8E09A0A4E9D4A0AAC722CE48D454638",
+    "position": 109000,
+    "statementLabel": null,
+    "statementNotation": "5.6.6"
+   },
+   "8C2C3ABA7B3B4546A2E0070572B24A74": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Participation in\r\nlanguage and\r\nliteracy activities*\r",
+    "id": "8C2C3ABA7B3B4546A2E0070572B24A74",
+    "listId": "1",
+    "parentId": "C5F1F095D0274A1AB6DF5FFC2196BEC4",
+    "position": 53000,
+    "statementLabel": null,
+    "statementNotation": "5.1"
+   },
+   "8E38B1F15B5A460DB6790564D57237EB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C4E431AD2A5E4479AC9501AD75384A66",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Twenty-Four to\nThirty Months: May relay or retell simple\r\nstories",
+    "id": "8E38B1F15B5A460DB6790564D57237EB",
+    "listId": "4",
+    "parentId": "C4E431AD2A5E4479AC9501AD75384A66",
+    "position": 69000,
+    "statementLabel": null,
+    "statementNotation": "5.2.4"
+   },
+   "90560F3117534D01B39E6D89A015B8FC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E41C45584E45493CB8FD1B74467979C9",
+     "2D65E5A20446441DB721D3DBC6369C21"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Eighteen to\nTwenty-Four Months: Begin to use words to\r\ncommunicate and may combine\r\ntwo to three words to form short\r\nphrases or sentences",
+    "id": "90560F3117534D01B39E6D89A015B8FC",
+    "listId": "3",
+    "parentId": "E41C45584E45493CB8FD1B74467979C9",
+    "position": 44000,
+    "statementLabel": null,
+    "statementNotation": "4.2.3"
+   },
+   "919F3534865641529E1D86D859C5EBDB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E41C45584E45493CB8FD1B74467979C9",
+     "2D65E5A20446441DB721D3DBC6369C21"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Twenty-Four to\nThirty Months: Use words and some common\r\nrules of speech to express their\r\nideas and thoughts (E.g. Margie\r\nexclaims, “I climbed up stairs!”)",
+    "id": "919F3534865641529E1D86D859C5EBDB",
+    "listId": "4",
+    "parentId": "E41C45584E45493CB8FD1B74467979C9",
+    "position": 45000,
+    "statementLabel": null,
+    "statementNotation": "4.2.4"
+   },
+   "92685F7B71C149B7BCE0DCBB91F439DB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C66F20B133B04F87BDB294DB02359035",
+     "0B7B587843844E2989678D3C572E4E87"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Nine Months to\nEighteen Months\n: Use writing tools (crayons,\r\nmarkers, pens) and notice that\r\nthey can make marks with these\r\nutensils",
+    "id": "92685F7B71C149B7BCE0DCBB91F439DB",
+    "listId": "2",
+    "parentId": "C66F20B133B04F87BDB294DB02359035",
+    "position": 125000,
+    "statementLabel": null,
+    "statementNotation": "6.2.2"
+   },
+   "929BF30AF2EA4578A8D88DEDE602F5CB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5AE1E316EA7A440BA031ECFE982024E4",
+     "0B7B587843844E2989678D3C572E4E87"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Birth to\nNine Months: Note: Children at this age are\r\nnot aware of print as being\r\ndistinct from anything else in\r\ntheir environment.",
+    "id": "929BF30AF2EA4578A8D88DEDE602F5CB",
+    "listId": "1",
+    "parentId": "5AE1E316EA7A440BA031ECFE982024E4",
+    "position": 114000,
+    "statementLabel": null,
+    "statementNotation": "6.1.1"
+   },
+   "9460B57EC699498689B849A7DD4A6AA7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E41C45584E45493CB8FD1B74467979C9",
+     "2D65E5A20446441DB721D3DBC6369C21"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Nine Months to\nEighteen Months\n: Move from imitating single\r\nwords to beginning to use single\r\nwords to communicate",
+    "id": "9460B57EC699498689B849A7DD4A6AA7",
+    "listId": "2",
+    "parentId": "E41C45584E45493CB8FD1B74467979C9",
+    "position": 43000,
+    "statementLabel": null,
+    "statementNotation": "4.2.2"
+   },
+   "95CA2E04E0114D0A936108E3FCEC0E24": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E6D2B078D5C54E82913C7E188D5441D4",
+     "66C9AA2FD3714859B4DA8F1909CACE3C"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: With adult support, can take turns in conversations and group discussions",
+    "id": "95CA2E04E0114D0A936108E3FCEC0E24",
+    "listId": "7b",
+    "parentId": "E6D2B078D5C54E82913C7E188D5441D4",
+    "position": 30000,
+    "statementLabel": null,
+    "statementNotation": "3.1.7b"
+   },
+   "96C50F9F7D2C41D19C321DAF6CEEA0FC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1A502B0E9B64429A8FE3EDEDC17C0407",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Request or respond to informational books on favorite topics\n",
+    "id": "96C50F9F7D2C41D19C321DAF6CEEA0FC",
+    "listId": "7b",
+    "parentId": "1A502B0E9B64429A8FE3EDEDC17C0407",
+    "position": 92000,
+    "statementLabel": null,
+    "statementNotation": "5.4.7b"
+   },
+   "973B30A067024B62AC16CB6C9FCD8825": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C4E431AD2A5E4479AC9501AD75384A66",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Eighteen to\nTwenty-Four Months: Can recognize that a story is\r\nbeginning from a clue such as\r\n‘Once upon a time’\r",
+    "id": "973B30A067024B62AC16CB6C9FCD8825",
+    "listId": "3",
+    "parentId": "C4E431AD2A5E4479AC9501AD75384A66",
+    "position": 68000,
+    "statementLabel": null,
+    "statementNotation": "5.2.3"
+   },
+   "97E8F1DC3ECA4350A767BA155D3ADC05": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5637F9518E3F466B96417D1495E96E1A",
+     "C40DA82586BC4B10A530383CDD763D09"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Nine Months to\nEighteen Months\n: Demonstrate their understanding\r\nof others’ speech through their\r\nactions, such as responding\r\nphysically to simple requests\r\n(E.g. Joshua, 15 months, smiles\r\nwhen his father says, “Smile at\r\nDaddy.”)",
+    "id": "97E8F1DC3ECA4350A767BA155D3ADC05",
+    "listId": "2",
+    "parentId": "5637F9518E3F466B96417D1495E96E1A",
+    "position": 4000,
+    "statementLabel": null,
+    "statementNotation": "1.1.2"
+   },
+   "9FE47C1B7C30439EA7AA5138BB94A208": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "613FB2DF14B848FD93F613367504B143",
+     "388C19292ADA4A30B29B11807DEC6DEC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Eighteen to\nTwenty-Four Months: Understand others’ nonverbal\r\nsymbolic cues such as nodding\r\nfor yes or shaking head for no",
+    "id": "9FE47C1B7C30439EA7AA5138BB94A208",
+    "listId": "3",
+    "parentId": "613FB2DF14B848FD93F613367504B143",
+    "position": 15000,
+    "statementLabel": null,
+    "statementNotation": "2.1.3"
+   },
+   "A03DDA046DD74A5E9D07F5825474AA0A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7662FC7CA7A6449AA1AAB7B4E82388A0",
+     "2D65E5A20446441DB721D3DBC6369C21"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Use increasingly complex and varied vocabulary and language",
+    "id": "A03DDA046DD74A5E9D07F5825474AA0A",
+    "listId": "7a",
+    "parentId": "7662FC7CA7A6449AA1AAB7B4E82388A0",
+    "position": 39000,
+    "statementLabel": null,
+    "statementNotation": "4.1.7a"
+   },
+   "A3EF75FD4BE44F33BF0452F8DDFFAE84": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C4E431AD2A5E4479AC9501AD75384A66",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Thirty Months to\nThree Years: Can react to dramatic elements\r\nof a story and may respond\r\nwith predictions when asked,\r\n“What will happen next?”\r\n(E.g. Addison, 33 months, is\r\nable to predict what is hidden\r\nunder the flap on a page of a\r\nfamiliar book.)",
+    "id": "A3EF75FD4BE44F33BF0452F8DDFFAE84",
+    "listId": "5",
+    "parentId": "C4E431AD2A5E4479AC9501AD75384A66",
+    "position": 70000,
+    "statementLabel": null,
+    "statementNotation": "5.2.5"
+   },
+   "A6E57F483F2848BB871B9E3227DB5FCC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C8E09A0A4E9D4A0AAC722CE48D454638",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Birth to\nNine Months: Treat books as any other object\r\nby exploring with hands and\r\nmouth (E.g. 5- month-old Colby\r\ngrabs a board book and puts it\r\nto his mouth to chew on it.)",
+    "id": "A6E57F483F2848BB871B9E3227DB5FCC",
+    "listId": "1",
+    "parentId": "C8E09A0A4E9D4A0AAC722CE48D454638",
+    "position": 104000,
+    "statementLabel": null,
+    "statementNotation": "5.6.1"
+   },
+   "A7A95A66BD694ACCAFB4AA5C7F3CA762": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1A502B0E9B64429A8FE3EDEDC17C0407",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Thirty Months to\nThree Years: Ask for familiar books to be\r\nread in exactly the same way\r\neach time and know when\r\nsections are being skipped",
+    "id": "A7A95A66BD694ACCAFB4AA5C7F3CA762",
+    "listId": "5",
+    "parentId": "1A502B0E9B64429A8FE3EDEDC17C0407",
+    "position": 89000,
+    "statementLabel": null,
+    "statementNotation": "5.4.5"
+   },
+   "AC289692D8B241A08D40FD26D43DAD5C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "613FB2DF14B848FD93F613367504B143",
+     "388C19292ADA4A30B29B11807DEC6DEC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Understand non-verbal cues",
+    "id": "AC289692D8B241A08D40FD26D43DAD5C",
+    "listId": "7a",
+    "parentId": "613FB2DF14B848FD93F613367504B143",
+    "position": 19000,
+    "statementLabel": null,
+    "statementNotation": "2.1.7a"
+   },
+   "AD21EF1F36804179A41D069097D99D69": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8C2C3ABA7B3B4546A2E0070572B24A74",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Birth to\nNine Months: Focus on picture books while\r\nan adult is reading to them\r\n(E.g. 6-month-old Alisha\r\nsits on her mother’s lap and\r\nlooks and pats her hand on\r\nthe book that her mother is\r\nreading.)",
+    "id": "AD21EF1F36804179A41D069097D99D69",
+    "listId": "1",
+    "parentId": "8C2C3ABA7B3B4546A2E0070572B24A74",
+    "position": 54000,
+    "statementLabel": null,
+    "statementNotation": "5.1.1"
+   },
+   "AD79615E61FE4F04B4016F3D11E2E124": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E41C45584E45493CB8FD1B74467979C9",
+     "2D65E5A20446441DB721D3DBC6369C21"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Tell stories with multiple characters and events\r",
+    "id": "AD79615E61FE4F04B4016F3D11E2E124",
+    "listId": "7d",
+    "parentId": "E41C45584E45493CB8FD1B74467979C9",
+    "position": 51000,
+    "statementLabel": null,
+    "statementNotation": "4.2.7d"
+   },
+   "AF5023C1140F4F9FB0F3D284A431EEFD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1A502B0E9B64429A8FE3EDEDC17C0407",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Birth to\nNine Months: Show enjoyment at being\r\nread to through vocalizing,\r\neye contact, and movement\r\n(E.g. 8-month-old Sophia\r\nsqueals in delight when\r\nher mother reads Ten Little\r\nFingers and Ten Little Toes.)",
+    "id": "AF5023C1140F4F9FB0F3D284A431EEFD",
+    "listId": "1",
+    "parentId": "1A502B0E9B64429A8FE3EDEDC17C0407",
+    "position": 85000,
+    "statementLabel": null,
+    "statementNotation": "5.4.1"
+   },
+   "AFC9588FBE0F42D28D9F7EADD41DEF00": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EB37DEE0BAD54A82BDF7BA5AED6A71B9",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Nine Months to\nEighteen Months\n: May focus on certain elements\r\nin the illustrations, but often\r\nskip pages or focus on a\r\nparticular page",
+    "id": "AFC9588FBE0F42D28D9F7EADD41DEF00",
+    "listId": "2",
+    "parentId": "EB37DEE0BAD54A82BDF7BA5AED6A71B9",
+    "position": 76000,
+    "statementLabel": null,
+    "statementNotation": "5.3.2"
+   },
+   "B3608036D99648B7BAD92FE323589841": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8C2C3ABA7B3B4546A2E0070572B24A74",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Thirty Months to\nThree Years: Enjoy being read to and looking\r\nat books independently; May\r\nsay familiar words and phrases\r\nwhile looking at the appropriate\r\npage (E.g. Kali, 33 months,\r\nsings along to the repetitious\r\nbook, Brown Bear, Brown Bear,\r\nas her teacher reads it to her.)",
+    "id": "B3608036D99648B7BAD92FE323589841",
+    "listId": "5",
+    "parentId": "8C2C3ABA7B3B4546A2E0070572B24A74",
+    "position": 58000,
+    "statementLabel": null,
+    "statementNotation": "5.1.5"
+   },
+   "B432C2367FAE4533BF36F82042CC7874": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8C2C3ABA7B3B4546A2E0070572B24A74",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Twenty-Four to\nThirty Months: While being read to, point to\r\nand comment on illustrations\r\nand repeat or anticipate familiar\r\nwords or phrases in the text",
+    "id": "B432C2367FAE4533BF36F82042CC7874",
+    "listId": "4",
+    "parentId": "8C2C3ABA7B3B4546A2E0070572B24A74",
+    "position": 57000,
+    "statementLabel": null,
+    "statementNotation": "5.1.4"
+   },
+   "B4A97F3FE440476CA70BF10E9C3DF7D2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5637F9518E3F466B96417D1495E96E1A",
+     "C40DA82586BC4B10A530383CDD763D09"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Follow instructions that include a two or three step sequence of actions such as\nsetting up a game or following a recipe",
+    "id": "B4A97F3FE440476CA70BF10E9C3DF7D2",
+    "listId": "7b",
+    "parentId": "5637F9518E3F466B96417D1495E96E1A",
+    "position": 10000,
+    "statementLabel": null,
+    "statementNotation": "1.1.7b"
+   },
+   "B4CA15A0053B435EB7E1E13A462EEF42": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C8E09A0A4E9D4A0AAC722CE48D454638",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Twenty-Four to\nThirty Months: Can identify the front of the book\r\nand use clues on the cover to\r\nselect a book (E.g. Using the\r\ncover of the book as a clue,\r\nCharna, 28 months, picks up\r\nThe Itsy Bitsy Spider and says to\r\nher mother, “Spider book.”)",
+    "id": "B4CA15A0053B435EB7E1E13A462EEF42",
+    "listId": "4",
+    "parentId": "C8E09A0A4E9D4A0AAC722CE48D454638",
+    "position": 107000,
+    "statementLabel": null,
+    "statementNotation": "5.6.4"
+   },
+   "B4E76B50373240A282B2DCC401D12AE6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5637F9518E3F466B96417D1495E96E1A",
+     "C40DA82586BC4B10A530383CDD763D09"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Twenty-Four to\nThirty Months: Show by their actions that they\r\nunderstand simple one-step\r\ndirections (E.g. When her\r\nteacher says, “Put on your\r\ncoat,” Doretta picks up her\r\ncoat and puts her hand in the\r\nsleeve.)",
+    "id": "B4E76B50373240A282B2DCC401D12AE6",
+    "listId": "4",
+    "parentId": "5637F9518E3F466B96417D1495E96E1A",
+    "position": 6000,
+    "statementLabel": null,
+    "statementNotation": "1.1.4"
+   },
+   "BC49E9A5D5524EC99EFD248CA7F021C3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C66F20B133B04F87BDB294DB02359035",
+     "0B7B587843844E2989678D3C572E4E87"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Birth to\nNine Months: Note: Children at this age are\r\nnot aware of writing.",
+    "id": "BC49E9A5D5524EC99EFD248CA7F021C3",
+    "listId": "1",
+    "parentId": "C66F20B133B04F87BDB294DB02359035",
+    "position": 124000,
+    "statementLabel": null,
+    "statementNotation": "6.2.1"
+   },
+   "BE9DC6E6C862455F860E477FFBD0D3DA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E60933D242F8427CA73E674D66CFB612",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Play with sounds of spoken language including letter sounds, rhymes, and words\r\n(E.g. Ray says, “My name rhymes with play.”)",
+    "id": "BE9DC6E6C862455F860E477FFBD0D3DA",
+    "listId": "7b",
+    "parentId": "E60933D242F8427CA73E674D66CFB612",
+    "position": 101000,
+    "statementLabel": null,
+    "statementNotation": "5.5.7b"
+   },
+   "BFAED2C31E43444989665D12011C4888": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C8E09A0A4E9D4A0AAC722CE48D454638",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Understand that print carries a message",
+    "id": "BFAED2C31E43444989665D12011C4888",
+    "listId": "7b",
+    "parentId": "C8E09A0A4E9D4A0AAC722CE48D454638",
+    "position": 111000,
+    "statementLabel": null,
+    "statementNotation": "5.6.7b"
+   },
+   "C049F90BAB744D1CBBED995306A6F2D2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "613FB2DF14B848FD93F613367504B143",
+     "388C19292ADA4A30B29B11807DEC6DEC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Three Years: Notice other children’s body\r\nlanguage and try to interpret it",
+    "id": "C049F90BAB744D1CBBED995306A6F2D2",
+    "listId": "6",
+    "parentId": "613FB2DF14B848FD93F613367504B143",
+    "position": 18000,
+    "statementLabel": null,
+    "statementNotation": "2.1.6"
+   },
+   "C0DE9FF97E494BEA9568418A761F296D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8C2C3ABA7B3B4546A2E0070572B24A74",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Make connections between a book or story to personal experiences\r\n(E.g. Irena points to a picture of a dog and says, “I have a dog like this,\r\nonly bigger and my dog never chews shoes”.)",
+    "id": "C0DE9FF97E494BEA9568418A761F296D",
+    "listId": "7e",
+    "parentId": "8C2C3ABA7B3B4546A2E0070572B24A74",
+    "position": 64000,
+    "statementLabel": null,
+    "statementNotation": "5.1.7e"
+   },
+   "C1D41E05D605497D9A92ED28E98AB312": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1A502B0E9B64429A8FE3EDEDC17C0407",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Select favorite books, authors, or illustrators",
+    "id": "C1D41E05D605497D9A92ED28E98AB312",
+    "listId": "7a",
+    "parentId": "1A502B0E9B64429A8FE3EDEDC17C0407",
+    "position": 91000,
+    "statementLabel": null,
+    "statementNotation": "5.4.7a"
+   },
+   "C34853A316EA45EB8208EB24898657F4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8C2C3ABA7B3B4546A2E0070572B24A74",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Nine Months to\nEighteen Months\n: Enjoy being read to and may\r\nseek opportunities to be read to\r\nand to interact with books\r",
+    "id": "C34853A316EA45EB8208EB24898657F4",
+    "listId": "2",
+    "parentId": "8C2C3ABA7B3B4546A2E0070572B24A74",
+    "position": 55000,
+    "statementLabel": null,
+    "statementNotation": "5.1.2"
+   },
+   "C40DA82586BC4B10A530383CDD763D09": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Listening\r\nComprehension",
+    "id": "C40DA82586BC4B10A530383CDD763D09",
+    "listId": "1",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": null,
+    "statementNotation": "1"
+   },
+   "C4DE4DFB72CB4F959614216161817218": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E60933D242F8427CA73E674D66CFB612",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Eighteen to\nTwenty-Four Months: Enjoy chants and songs and\r\nbooks that rhyme",
+    "id": "C4DE4DFB72CB4F959614216161817218",
+    "listId": "3",
+    "parentId": "E60933D242F8427CA73E674D66CFB612",
+    "position": 96000,
+    "statementLabel": null,
+    "statementNotation": "5.5.3"
+   },
+   "C4E431AD2A5E4479AC9501AD75384A66": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Narrative and\r\nstory sense*\r",
+    "id": "C4E431AD2A5E4479AC9501AD75384A66",
+    "listId": "2",
+    "parentId": "C5F1F095D0274A1AB6DF5FFC2196BEC4",
+    "position": 65000,
+    "statementLabel": null,
+    "statementNotation": "5.2"
+   },
+   "C5F1F095D0274A1AB6DF5FFC2196BEC4": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Emergent Reading",
+    "id": "C5F1F095D0274A1AB6DF5FFC2196BEC4",
+    "listId": "5",
+    "parentId": null,
+    "position": 52000,
+    "statementLabel": null,
+    "statementNotation": "5"
+   },
+   "C608552A197947D3BB1813065833617F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1A502B0E9B64429A8FE3EDEDC17C0407",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Eighteen to\nTwenty-Four Months: Name and/or ask for favorite\r\nbook and may show preference\r\nfor books on certain topics",
+    "id": "C608552A197947D3BB1813065833617F",
+    "listId": "3",
+    "parentId": "1A502B0E9B64429A8FE3EDEDC17C0407",
+    "position": 87000,
+    "statementLabel": null,
+    "statementNotation": "5.4.3"
+   },
+   "C66F20B133B04F87BDB294DB02359035": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0B7B587843844E2989678D3C572E4E87"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Interest in and\r\nemergent writing*",
+    "id": "C66F20B133B04F87BDB294DB02359035",
+    "listId": "2",
+    "parentId": "0B7B587843844E2989678D3C572E4E87",
+    "position": 123000,
+    "statementLabel": null,
+    "statementNotation": "6.2"
+   },
+   "C8E09A0A4E9D4A0AAC722CE48D454638": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Book awareness*",
+    "id": "C8E09A0A4E9D4A0AAC722CE48D454638",
+    "listId": "6",
+    "parentId": "C5F1F095D0274A1AB6DF5FFC2196BEC4",
+    "position": 103000,
+    "statementLabel": null,
+    "statementNotation": "5.6"
+   },
+   "C9AD0864B6ED4DDCA22DF705119423B2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7662FC7CA7A6449AA1AAB7B4E82388A0",
+     "2D65E5A20446441DB721D3DBC6369C21"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Nine Months to\nEighteen Months\n: Produce their first word and\r\nmay have a vocabulary of up to\r\n15 words",
+    "id": "C9AD0864B6ED4DDCA22DF705119423B2",
+    "listId": "2",
+    "parentId": "7662FC7CA7A6449AA1AAB7B4E82388A0",
+    "position": 34000,
+    "statementLabel": null,
+    "statementNotation": "4.1.2"
+   },
+   "CD2A7C4C60334D719D43D63AD4A11FB5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C4E431AD2A5E4479AC9501AD75384A66",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Tell their own stories\r",
+    "id": "CD2A7C4C60334D719D43D63AD4A11FB5",
+    "listId": "7b",
+    "parentId": "C4E431AD2A5E4479AC9501AD75384A66",
+    "position": 73000,
+    "statementLabel": null,
+    "statementNotation": "5.2.7b"
+   },
+   "D5A9AADDF6744EC784BFA9EFFAEA2760": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1A502B0E9B64429A8FE3EDEDC17C0407",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Twenty-Four to\nThirty Months: May ask an adult to read the\r\nsame book repeatedly",
+    "id": "D5A9AADDF6744EC784BFA9EFFAEA2760",
+    "listId": "4",
+    "parentId": "1A502B0E9B64429A8FE3EDEDC17C0407",
+    "position": 88000,
+    "statementLabel": null,
+    "statementNotation": "5.4.4"
+   },
+   "D690F644CBD74B3EAB08F000BAECDE92": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C66F20B133B04F87BDB294DB02359035",
+     "0B7B587843844E2989678D3C572E4E87"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds:  Begin to copy or write their own name",
+    "id": "D690F644CBD74B3EAB08F000BAECDE92",
+    "listId": "7d",
+    "parentId": "C66F20B133B04F87BDB294DB02359035",
+    "position": 133000,
+    "statementLabel": null,
+    "statementNotation": "6.2.7d"
+   },
+   "D786A146DA6243AA80B4509DAAF2F906": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7662FC7CA7A6449AA1AAB7B4E82388A0",
+     "2D65E5A20446441DB721D3DBC6369C21"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Birth to\nNine Months: At this age children are not\r\ncommunicating with words",
+    "id": "D786A146DA6243AA80B4509DAAF2F906",
+    "listId": "1",
+    "parentId": "7662FC7CA7A6449AA1AAB7B4E82388A0",
+    "position": 33000,
+    "statementLabel": null,
+    "statementNotation": "4.1.1"
+   },
+   "D7F646239E63455A923012A62721A8D8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E41C45584E45493CB8FD1B74467979C9",
+     "2D65E5A20446441DB721D3DBC6369C21"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds:  Ask questions and initiate and respond in conversations with others",
+    "id": "D7F646239E63455A923012A62721A8D8",
+    "listId": "7c",
+    "parentId": "E41C45584E45493CB8FD1B74467979C9",
+    "position": 50000,
+    "statementLabel": null,
+    "statementNotation": "4.2.7c"
+   },
+   "DA337E8FDB564B90AB4181609FA93814": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5637F9518E3F466B96417D1495E96E1A",
+     "C40DA82586BC4B10A530383CDD763D09"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Listen with understanding to stories, directions, and conversations",
+    "id": "DA337E8FDB564B90AB4181609FA93814",
+    "listId": "7a",
+    "parentId": "5637F9518E3F466B96417D1495E96E1A",
+    "position": 9000,
+    "statementLabel": null,
+    "statementNotation": "1.1.7a"
+   },
+   "DAFF5A6A3BE4461AA4E14B054C1C07A7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5637F9518E3F466B96417D1495E96E1A",
+     "C40DA82586BC4B10A530383CDD763D09"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Eighteen to\nTwenty-Four Months: May show by their actions\r\nunderstanding of simple\r\nstatements (E.g. Blaine sits\r\ndown at the table when his\r\nteacher says, “It’s time to eat.”)",
+    "id": "DAFF5A6A3BE4461AA4E14B054C1C07A7",
+    "listId": "3",
+    "parentId": "5637F9518E3F466B96417D1495E96E1A",
+    "position": 5000,
+    "statementLabel": null,
+    "statementNotation": "1.1.3"
+   },
+   "DE8FE0D6515F46269770AA2F9726881A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5AE1E316EA7A440BA031ECFE982024E4",
+     "0B7B587843844E2989678D3C572E4E87"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Eighteen to\nTwenty-Four Months: Can show awareness of and\r\nrecognize some print in the\r\nenvironment",
+    "id": "DE8FE0D6515F46269770AA2F9726881A",
+    "listId": "3",
+    "parentId": "5AE1E316EA7A440BA031ECFE982024E4",
+    "position": 116000,
+    "statementLabel": null,
+    "statementNotation": "6.1.3"
+   },
+   "E0A94D797A5A425486EE80ACC1F150C9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8C2C3ABA7B3B4546A2E0070572B24A74",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Respond to adult questions about a book or story",
+    "id": "E0A94D797A5A425486EE80ACC1F150C9",
+    "listId": "7c",
+    "parentId": "8C2C3ABA7B3B4546A2E0070572B24A74",
+    "position": 62000,
+    "statementLabel": null,
+    "statementNotation": "5.1.7c"
+   },
+   "E41C45584E45493CB8FD1B74467979C9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2D65E5A20446441DB721D3DBC6369C21"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Expressive\r\nlanguage or\r\nspeaking",
+    "id": "E41C45584E45493CB8FD1B74467979C9",
+    "listId": "2",
+    "parentId": "2D65E5A20446441DB721D3DBC6369C21",
+    "position": 41000,
+    "statementLabel": null,
+    "statementNotation": "4.2"
+   },
+   "E60933D242F8427CA73E674D66CFB612": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Phonological\r\nawareness\r\n(which refers to\r\nunderstanding the\r\nsound structure\r\nof language\r\nsuch as sounds,\r\nrhymes, syllables,\r\nand words)*",
+    "id": "E60933D242F8427CA73E674D66CFB612",
+    "listId": "5",
+    "parentId": "C5F1F095D0274A1AB6DF5FFC2196BEC4",
+    "position": 93000,
+    "statementLabel": null,
+    "statementNotation": "5.5"
+   },
+   "E6D2B078D5C54E82913C7E188D5441D4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "66C9AA2FD3714859B4DA8F1909CACE3C"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Pragmatics and\r\nsocial language",
+    "id": "E6D2B078D5C54E82913C7E188D5441D4",
+    "listId": "1",
+    "parentId": "66C9AA2FD3714859B4DA8F1909CACE3C",
+    "position": 22000,
+    "statementLabel": null,
+    "statementNotation": "3.1"
+   },
+   "E85E96DC1CDE49029B9624BC3229FC4C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7662FC7CA7A6449AA1AAB7B4E82388A0",
+     "2D65E5A20446441DB721D3DBC6369C21"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Use words and phrases learned through conversations and being read to\r\n(E.g. 4-year-old Hazel says, “The end”, when she finishes her snack.)",
+    "id": "E85E96DC1CDE49029B9624BC3229FC4C",
+    "listId": "7b",
+    "parentId": "7662FC7CA7A6449AA1AAB7B4E82388A0",
+    "position": 40000,
+    "statementLabel": null,
+    "statementNotation": "4.1.7b"
+   },
+   "EA09357D6E21495E92A83FEFE80B143F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5637F9518E3F466B96417D1495E96E1A",
+     "C40DA82586BC4B10A530383CDD763D09"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Three Years: Show awareness of others’\r\ncomments or statements that\r\nhave to do with them (E.g.\r\nMilo shouts, “Don’t want\r\nto go to the doctor!” after\r\noverhearing his parents talk\r\nabout his illness.)",
+    "id": "EA09357D6E21495E92A83FEFE80B143F",
+    "listId": "6",
+    "parentId": "5637F9518E3F466B96417D1495E96E1A",
+    "position": 8000,
+    "statementLabel": null,
+    "statementNotation": "1.1.6"
+   },
+   "EABB9522DC3346CE8B472F9A2C7584FF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C66F20B133B04F87BDB294DB02359035",
+     "0B7B587843844E2989678D3C572E4E87"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Eighteen to\nTwenty-Four Months: Gain more control over the kinds\r\nof marks they make (lines vs.\r\ncircular marks)",
+    "id": "EABB9522DC3346CE8B472F9A2C7584FF",
+    "listId": "3",
+    "parentId": "C66F20B133B04F87BDB294DB02359035",
+    "position": 126000,
+    "statementLabel": null,
+    "statementNotation": "6.2.3"
+   },
+   "EB37DEE0BAD54A82BDF7BA5AED6A71B9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Comprehension\nand\ninterpretation*",
+    "id": "EB37DEE0BAD54A82BDF7BA5AED6A71B9",
+    "listId": "3",
+    "parentId": "C5F1F095D0274A1AB6DF5FFC2196BEC4",
+    "position": 74000,
+    "statementLabel": null,
+    "statementNotation": "5.3"
+   },
+   "ECF65E3E70DC48DB91B3CD459B7C5B75": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E60933D242F8427CA73E674D66CFB612",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Twenty-Four to\nThirty Months: Enjoy chants and songs and\r\nbooks that rhyme",
+    "id": "ECF65E3E70DC48DB91B3CD459B7C5B75",
+    "listId": "4",
+    "parentId": "E60933D242F8427CA73E674D66CFB612",
+    "position": 97000,
+    "statementLabel": null,
+    "statementNotation": "5.5.4"
+   },
+   "ED6183B665AF488F9787A8A67D95666A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EB37DEE0BAD54A82BDF7BA5AED6A71B9",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Twenty-Four to\nThirty Months: Identify with a particular\r\ncharacter or scene (E.g. When\r\nlistening to the book, Where’s\r\nMy Teddy Said Eddie, Zaviel,\r\n25 months, makes a scared\r\nface, identifying with the little\r\nboy in the woods.)",
+    "id": "ED6183B665AF488F9787A8A67D95666A",
+    "listId": "4",
+    "parentId": "EB37DEE0BAD54A82BDF7BA5AED6A71B9",
+    "position": 78000,
+    "statementLabel": null,
+    "statementNotation": "5.3.4"
+   },
+   "F0EB3AA61B224416B75582AB3E7AF368": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5AE1E316EA7A440BA031ECFE982024E4",
+     "0B7B587843844E2989678D3C572E4E87"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Thirty Months to\nThree Years: Point to print and ask, “What\r\ndoes that say?” or ask\r\nsomeone to write for them",
+    "id": "F0EB3AA61B224416B75582AB3E7AF368",
+    "listId": "5",
+    "parentId": "5AE1E316EA7A440BA031ECFE982024E4",
+    "position": 118000,
+    "statementLabel": null,
+    "statementNotation": "6.1.5"
+   },
+   "F12A5C54640C477C8170A3490FD9D932": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E41C45584E45493CB8FD1B74467979C9",
+     "2D65E5A20446441DB721D3DBC6369C21"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Birth to\nNine Months: Begin vocalizing using a\r\nvariety of sounds (E.g. Stan\r\nuses different types of cries to\r\ncommunicate different needs.)",
+    "id": "F12A5C54640C477C8170A3490FD9D932",
+    "listId": "1",
+    "parentId": "E41C45584E45493CB8FD1B74467979C9",
+    "position": 42000,
+    "statementLabel": null,
+    "statementNotation": "4.2.1"
+   },
+   "F14FF79D981F433C9C3B527CDFC1EA4F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E6D2B078D5C54E82913C7E188D5441D4",
+     "66C9AA2FD3714859B4DA8F1909CACE3C"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Use language according to rules appropriate for the cultural context (may need\nadult help in recognizing appropriate cultural context) (E.g. 4-year-old Savannah\nasks her peer, “Can I please have the purple crayon?”)",
+    "id": "F14FF79D981F433C9C3B527CDFC1EA4F",
+    "listId": "7a",
+    "parentId": "E6D2B078D5C54E82913C7E188D5441D4",
+    "position": 29000,
+    "statementLabel": null,
+    "statementNotation": "3.1.7a"
+   },
+   "F2367465B64846AC89D21981F8B8FAA4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "613FB2DF14B848FD93F613367504B143",
+     "388C19292ADA4A30B29B11807DEC6DEC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Nine Months to\nEighteen Months\n: Communicate using consistent\r\nsounds, gestures, and facial\r\nexpressions",
+    "id": "F2367465B64846AC89D21981F8B8FAA4",
+    "listId": "2",
+    "parentId": "613FB2DF14B848FD93F613367504B143",
+    "position": 14000,
+    "statementLabel": null,
+    "statementNotation": "2.1.2"
+   },
+   "F3C8A2C6503147318A236D072CEF1CF8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E41C45584E45493CB8FD1B74467979C9",
+     "2D65E5A20446441DB721D3DBC6369C21"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Thirty Months to\nThree Years: Use more connecting words,\r\nsuch as “and” or “then”\r",
+    "id": "F3C8A2C6503147318A236D072CEF1CF8",
+    "listId": "5",
+    "parentId": "E41C45584E45493CB8FD1B74467979C9",
+    "position": 46000,
+    "statementLabel": null,
+    "statementNotation": "4.2.5"
+   },
+   "F5C300D1410D47E5B0F57617E9F72D7A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7662FC7CA7A6449AA1AAB7B4E82388A0",
+     "2D65E5A20446441DB721D3DBC6369C21"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Twenty-Four to\nThirty Months: Demonstrate a burst of new\r\nvocabulary words, which they\r\nmay or may not use correctly",
+    "id": "F5C300D1410D47E5B0F57617E9F72D7A",
+    "listId": "4",
+    "parentId": "7662FC7CA7A6449AA1AAB7B4E82388A0",
+    "position": 36000,
+    "statementLabel": null,
+    "statementNotation": "4.1.4"
+   },
+   "F688A62FCB774914B8DDF1D48DB9D5F9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E6D2B078D5C54E82913C7E188D5441D4",
+     "66C9AA2FD3714859B4DA8F1909CACE3C"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Thirty Months to\nThree Years: Can participate in simple\r\nconversational exchanges,\r\nusually with adults\r",
+    "id": "F688A62FCB774914B8DDF1D48DB9D5F9",
+    "listId": "5",
+    "parentId": "E6D2B078D5C54E82913C7E188D5441D4",
+    "position": 27000,
+    "statementLabel": null,
+    "statementNotation": "3.1.5"
+   },
+   "F77D728C46AF4E8C8C456E96EA60D31C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5637F9518E3F466B96417D1495E96E1A",
+     "C40DA82586BC4B10A530383CDD763D09"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Thirty Months to\nThree Years: Respond to simple questions",
+    "id": "F77D728C46AF4E8C8C456E96EA60D31C",
+    "listId": "5",
+    "parentId": "5637F9518E3F466B96417D1495E96E1A",
+    "position": 7000,
+    "statementLabel": null,
+    "statementNotation": "1.1.5"
+   },
+   "FA375148188142278B091A4AB5A6300F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E60933D242F8427CA73E674D66CFB612",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Can distinguish the beginning sounds of some words",
+    "id": "FA375148188142278B091A4AB5A6300F",
+    "listId": "7c",
+    "parentId": "E60933D242F8427CA73E674D66CFB612",
+    "position": 102000,
+    "statementLabel": null,
+    "statementNotation": "5.5.7c"
+   },
+   "FD39468ACED04DB7879F633799A0CD9F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C66F20B133B04F87BDB294DB02359035",
+     "0B7B587843844E2989678D3C572E4E87"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Understand that writing is a way of communicating",
+    "id": "FD39468ACED04DB7879F633799A0CD9F",
+    "listId": "7a",
+    "parentId": "C66F20B133B04F87BDB294DB02359035",
+    "position": 130000,
+    "statementLabel": null,
+    "statementNotation": "6.2.7a"
+   },
+   "FD7DF5E426BC43BBB8CB69C5823B1BDB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8C2C3ABA7B3B4546A2E0070572B24A74",
+     "C5F1F095D0274A1AB6DF5FFC2196BEC4"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Ask for a story to be read and respond to stories told or read aloud\r",
+    "id": "FD7DF5E426BC43BBB8CB69C5823B1BDB",
+    "listId": "7b",
+    "parentId": "8C2C3ABA7B3B4546A2E0070572B24A74",
+    "position": 61000,
+    "statementLabel": null,
+    "statementNotation": "5.1.7b"
+   }
+  },
+  "subject": "Early Learning Standards (2016-)",
+  "title": "Language Development and Emergent Literacy: Birth-5"
+ }
+}

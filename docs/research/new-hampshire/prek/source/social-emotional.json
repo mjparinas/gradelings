@@ -1,0 +1,1573 @@
+{
+ "data": {
+  "cspStatus": {
+   "notes": null,
+   "value": "visible"
+  },
+  "document": {
+   "publicationStatus": "Published",
+   "sourceURL": "https://www.nh-connections.org/wp-content/uploads/2022/09/NH-Early-Learning-Standards.pdf",
+   "title": "NH Early Learning Standards"
+  },
+  "educationLevels": [
+   "Pre-K"
+  ],
+  "id": "CDF904691C6742038866B1A193707F10",
+  "jurisdiction": {
+   "id": "46115D815A5E41C185AAE63E7B3E4F83",
+   "title": "New Hampshire"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/4.0/us/",
+   "rightsHolder": "Common Curriculum, Inc.",
+   "title": "CC BY 4.0 US"
+  },
+  "normalizedSubject": null,
+  "standards": {
+   "02ED29E5816B457CA458985434DDC4C1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8280856E37ED4E3AAFCD1FCA955730DA",
+     "94CA3A9AF9E24D929943D99949274539"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Birth to\nNine Months: Smile and laugh when\r\nimitating an adult\r\n(E.g. 8-month-old Ashton\r\nsmiles when he imitates his\r\nteacher clapping.)",
+    "id": "02ED29E5816B457CA458985434DDC4C1",
+    "listId": "1",
+    "parentId": "8280856E37ED4E3AAFCD1FCA955730DA",
+    "position": 12000,
+    "statementLabel": null,
+    "statementNotation": "1.2.1"
+   },
+   "033D1C64B8824BD59EA4556AA12CFCDE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F737C68733664FD69120CA7AEF0D5F98",
+     "94CA3A9AF9E24D929943D99949274539"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Birth to\nNine Months: Smile or are comforted when\r\na trusted caregiver speaks\r\nkindly to them",
+    "id": "033D1C64B8824BD59EA4556AA12CFCDE",
+    "listId": "1",
+    "parentId": "F737C68733664FD69120CA7AEF0D5F98",
+    "position": 3000,
+    "statementLabel": null,
+    "statementNotation": "1.1.1"
+   },
+   "09D5DA7239194DEFB0BB085481D4FBE0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9B2938C9B4124F598E04D6F6C2B897D9",
+     "AFE9770247DF48DDAE3C7C794191E6C2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Birth to\nNine Months: May cry when another baby\r\ncries",
+    "id": "09D5DA7239194DEFB0BB085481D4FBE0",
+    "listId": "1",
+    "parentId": "9B2938C9B4124F598E04D6F6C2B897D9",
+    "position": 59000,
+    "statementLabel": null,
+    "statementNotation": "3.2.1"
+   },
+   "1357E6CA3D014E4F82F854E722821F18": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5625EBB33FB24603A597F0314CC30A73",
+     "C85E1093BB7E4196B37335A6BDA9131B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Nine Months to\nEighteen Months\n: Rely on trusted adults to feel\r\nsecure trying new activities",
+    "id": "1357E6CA3D014E4F82F854E722821F18",
+    "listId": "2",
+    "parentId": "5625EBB33FB24603A597F0314CC30A73",
+    "position": 31000,
+    "statementLabel": null,
+    "statementNotation": "2.1.2"
+   },
+   "14CD5370412C48B49A1635E14E2083A5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8280856E37ED4E3AAFCD1FCA955730DA",
+     "94CA3A9AF9E24D929943D99949274539"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds:  Are confident, self-directed, purposeful and inventive in play",
+    "id": "14CD5370412C48B49A1635E14E2083A5",
+    "listId": "7",
+    "parentId": "8280856E37ED4E3AAFCD1FCA955730DA",
+    "position": 18000,
+    "statementLabel": null,
+    "statementNotation": "1.2.7"
+   },
+   "166C581750A94EAC8CBF39470B6105D7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8280856E37ED4E3AAFCD1FCA955730DA",
+     "94CA3A9AF9E24D929943D99949274539"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Three Years: Begin to experiment with\r\ntheir own potential and show\r\nconfidence in their own\r\nabilities",
+    "id": "166C581750A94EAC8CBF39470B6105D7",
+    "listId": "6",
+    "parentId": "8280856E37ED4E3AAFCD1FCA955730DA",
+    "position": 17000,
+    "statementLabel": null,
+    "statementNotation": "1.2.6"
+   },
+   "1F465E9B46404F008C5A0558254E1E8D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8280856E37ED4E3AAFCD1FCA955730DA",
+     "94CA3A9AF9E24D929943D99949274539"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Twenty-Four to\nThirty Months: Perform the tasks requested\r\nof them and may initiate tasks\r\non their own (E.g. Kyle’s nana\r\nspoons food onto his plate\r\nand Kyle says, “Me do it!” and\r\nreaches for the spoon.)",
+    "id": "1F465E9B46404F008C5A0558254E1E8D",
+    "listId": "4",
+    "parentId": "8280856E37ED4E3AAFCD1FCA955730DA",
+    "position": 15000,
+    "statementLabel": null,
+    "statementNotation": "1.2.4"
+   },
+   "2078E03058804C5F8EE263F130F2B126": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F737C68733664FD69120CA7AEF0D5F98",
+     "94CA3A9AF9E24D929943D99949274539"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Twenty-Four to\nThirty Months: Show delight in their abilities",
+    "id": "2078E03058804C5F8EE263F130F2B126",
+    "listId": "4",
+    "parentId": "F737C68733664FD69120CA7AEF0D5F98",
+    "position": 6000,
+    "statementLabel": null,
+    "statementNotation": "1.1.4"
+   },
+   "21DB4ED01667458CAEE5BD2C553EB468": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D0D870D09A194ACC9A775F7143191539",
+     "C697DF62D54D404A88372341B496B949"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Three Years: Express their feelings verbally\r\nwith greater frequency",
+    "id": "21DB4ED01667458CAEE5BD2C553EB468",
+    "listId": "6",
+    "parentId": "D0D870D09A194ACC9A775F7143191539",
+    "position": 81000,
+    "statementLabel": null,
+    "statementNotation": "4.1.6"
+   },
+   "25221DF6FF4E4C77A2EFEF71CEBFFC0B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ADF8F85AAE7A4FBE8A32A932CA915904",
+     "C697DF62D54D404A88372341B496B949"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Twenty-Four to\nThirty Months: Have difficulty regulating strong\r\nfeelings",
+    "id": "25221DF6FF4E4C77A2EFEF71CEBFFC0B",
+    "listId": "4",
+    "parentId": "ADF8F85AAE7A4FBE8A32A932CA915904",
+    "position": 88000,
+    "statementLabel": null,
+    "statementNotation": "4.2.4"
+   },
+   "25FA4022F6CD46A580723D822629F9E0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9B2938C9B4124F598E04D6F6C2B897D9",
+     "AFE9770247DF48DDAE3C7C794191E6C2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Twenty-Four to\nThirty Months: May try to comfort children who\r\nare distressed (E.g. Filomena\r\ngives her teddy bear to Ellen,\r\nwho is crying.)",
+    "id": "25FA4022F6CD46A580723D822629F9E0",
+    "listId": "4",
+    "parentId": "9B2938C9B4124F598E04D6F6C2B897D9",
+    "position": 62000,
+    "statementLabel": null,
+    "statementNotation": "3.2.4"
+   },
+   "29CAACFBE5904F968C8B10718F5D56D3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3D582A0F21F34F31949B74C8FAE544A9",
+     "94CA3A9AF9E24D929943D99949274539"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Birth to\nNine Months: By 9 months, recognize that\r\nthey are separate and distinct\r\nfrom primary caregivers (E.g.\r\n8-month-old Taniesha cries\r\nwhenever her mother leaves\r\nthe room.)",
+    "id": "29CAACFBE5904F968C8B10718F5D56D3",
+    "listId": "1",
+    "parentId": "3D582A0F21F34F31949B74C8FAE544A9",
+    "position": 20000,
+    "statementLabel": null,
+    "statementNotation": "1.3.1"
+   },
+   "2A09855AF3BE4DA5829CE42864EE1B61": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5625EBB33FB24603A597F0314CC30A73",
+     "C85E1093BB7E4196B37335A6BDA9131B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Twenty-Four to\nThirty Months: Imitate and attempt to please\r\nfamiliar adults (E.g. Rylee joins\r\nin singing when her caregiver\r\nsings a silly song with her.)",
+    "id": "2A09855AF3BE4DA5829CE42864EE1B61",
+    "listId": "4",
+    "parentId": "5625EBB33FB24603A597F0314CC30A73",
+    "position": 33000,
+    "statementLabel": null,
+    "statementNotation": "2.1.4"
+   },
+   "2EBCF5C876B04B47A1840A0DC067E5B9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5625EBB33FB24603A597F0314CC30A73",
+     "C85E1093BB7E4196B37335A6BDA9131B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Birth to\nNine Months: Demonstrate interest in\r\nfamiliar adults and develop\r\nstrong attachment to primary\r\ncaregivers",
+    "id": "2EBCF5C876B04B47A1840A0DC067E5B9",
+    "listId": "1",
+    "parentId": "5625EBB33FB24603A597F0314CC30A73",
+    "position": 30000,
+    "statementLabel": null,
+    "statementNotation": "2.1.1"
+   },
+   "2FACD498E1674BBABC596AEE013BCB4C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5625EBB33FB24603A597F0314CC30A73",
+     "C85E1093BB7E4196B37335A6BDA9131B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Eighteen to\nTwenty-Four Months: Continue to need the security of\r\na trusted adult; ask for help, if\r\nneeded, in verbal and non-verbal\r\nways",
+    "id": "2FACD498E1674BBABC596AEE013BCB4C",
+    "listId": "3",
+    "parentId": "5625EBB33FB24603A597F0314CC30A73",
+    "position": 32000,
+    "statementLabel": null,
+    "statementNotation": "2.1.3"
+   },
+   "30B65A8CF38F4D3E9678545F13837DAC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ADF8F85AAE7A4FBE8A32A932CA915904",
+     "C697DF62D54D404A88372341B496B949"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Thirty Months to\nThree Years: Begin using words to describe\r\ntheir feelings while still\r\nexpressing strong emotions",
+    "id": "30B65A8CF38F4D3E9678545F13837DAC",
+    "listId": "5",
+    "parentId": "ADF8F85AAE7A4FBE8A32A932CA915904",
+    "position": 89000,
+    "statementLabel": null,
+    "statementNotation": "4.2.5"
+   },
+   "3CB10C7BCBD04DEFB8BD82256E8E9144": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7710966B7E6C44AA9102B856505047F3",
+     "AFE9770247DF48DDAE3C7C794191E6C2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Twenty-Four to\nThirty Months: Engage in brief or momentary\r\ninteractions with other children,\r\nbut may need adult support\r\n(E.g. Siddarth yells, “Run, run,”\r\nto several other children on the\r\nplayground.)",
+    "id": "3CB10C7BCBD04DEFB8BD82256E8E9144",
+    "listId": "4",
+    "parentId": "7710966B7E6C44AA9102B856505047F3",
+    "position": 51000,
+    "statementLabel": null,
+    "statementNotation": "3.1.4"
+   },
+   "3D051A7A9C364BE69924119D991AD1A0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3EB905A5C16B4A29A579B6D3384057D6",
+     "AFE9770247DF48DDAE3C7C794191E6C2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Nine Months to\nEighteen Months\n: Need adult support to regulate\nphysical expressions of emotions\n(E.g. Marigold pulls another\nbaby’s hair until the teacher\ntakes her hand and shows her\nhow to pat the baby gently.)",
+    "id": "3D051A7A9C364BE69924119D991AD1A0",
+    "listId": "2",
+    "parentId": "3EB905A5C16B4A29A579B6D3384057D6",
+    "position": 68000,
+    "statementLabel": null,
+    "statementNotation": "3.3.2"
+   },
+   "3D582A0F21F34F31949B74C8FAE544A9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "94CA3A9AF9E24D929943D99949274539"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Social identity",
+    "id": "3D582A0F21F34F31949B74C8FAE544A9",
+    "listId": "3",
+    "parentId": "94CA3A9AF9E24D929943D99949274539",
+    "position": 19000,
+    "statementLabel": null,
+    "statementNotation": "1.3"
+   },
+   "3EB905A5C16B4A29A579B6D3384057D6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "AFE9770247DF48DDAE3C7C794191E6C2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Behavioral\r\nregulation",
+    "id": "3EB905A5C16B4A29A579B6D3384057D6",
+    "listId": "3",
+    "parentId": "AFE9770247DF48DDAE3C7C794191E6C2",
+    "position": 66000,
+    "statementLabel": null,
+    "statementNotation": "3.3"
+   },
+   "3FE4CE26FE3A4A8BB7DB6E63E67D3F06": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7710966B7E6C44AA9102B856505047F3",
+     "AFE9770247DF48DDAE3C7C794191E6C2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Birth to\nNine Months: Demonstrate increasing\r\nawareness of other children\r\n(E.g. While lying on a blanket\r\nclose to her, Carlos reaches\r\nfor Becca’s arm.)",
+    "id": "3FE4CE26FE3A4A8BB7DB6E63E67D3F06",
+    "listId": "1",
+    "parentId": "7710966B7E6C44AA9102B856505047F3",
+    "position": 48000,
+    "statementLabel": null,
+    "statementNotation": "3.1.1"
+   },
+   "441603C8EF5646BE83ADADB708D83E98": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3D582A0F21F34F31949B74C8FAE544A9",
+     "94CA3A9AF9E24D929943D99949274539"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Three Years: Continue to develop\r\nawareness of differences and\r\ntheir own gender and cultural\r\nidentity (E.g. Delia says to her\r\nteacher, “I’m a girl, so I can\r\nbe a mommy someday.”)",
+    "id": "441603C8EF5646BE83ADADB708D83E98",
+    "listId": "6",
+    "parentId": "3D582A0F21F34F31949B74C8FAE544A9",
+    "position": 25000,
+    "statementLabel": null,
+    "statementNotation": "1.3.6"
+   },
+   "498C6B5D478A4057B5D53F6A96E4E58A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ADF8F85AAE7A4FBE8A32A932CA915904",
+     "C697DF62D54D404A88372341B496B949"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Birth to\nNine Months: By 9 months, stop crying when\r\ntheir needs are met or they\r\nexpect their needs to be met\r",
+    "id": "498C6B5D478A4057B5D53F6A96E4E58A",
+    "listId": "1",
+    "parentId": "ADF8F85AAE7A4FBE8A32A932CA915904",
+    "position": 85000,
+    "statementLabel": null,
+    "statementNotation": "4.2.1"
+   },
+   "4A030CB96E644226B5938EF7B626F76B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7710966B7E6C44AA9102B856505047F3",
+     "AFE9770247DF48DDAE3C7C794191E6C2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Build skills needed to participate successfully as a member of a group, such as\r\ntaking turns\r",
+    "id": "4A030CB96E644226B5938EF7B626F76B",
+    "listId": "7b",
+    "parentId": "7710966B7E6C44AA9102B856505047F3",
+    "position": 55000,
+    "statementLabel": null,
+    "statementNotation": "3.1.7b"
+   },
+   "4AA76FD7437A4D93B6EF83399500788C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F23C9D4B728C45E99EB8209193718993",
+     "C85E1093BB7E4196B37335A6BDA9131B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Eighteen to\nTwenty-Four Months: Continue to show hesitation\r\naround unfamiliar adults (E.g.\r\nBillie hides behind his father\r\nwhen the store clerk says “hi”\r\nto him.)",
+    "id": "4AA76FD7437A4D93B6EF83399500788C",
+    "listId": "3",
+    "parentId": "F23C9D4B728C45E99EB8209193718993",
+    "position": 42000,
+    "statementLabel": null,
+    "statementNotation": "2.2.3"
+   },
+   "4D1F09D83CF648FD934AE3820693936E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5625EBB33FB24603A597F0314CC30A73",
+     "C85E1093BB7E4196B37335A6BDA9131B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Interact easily with familiar adults, but may be hesitant to approach or respond\nto less familiar adults ",
+    "id": "4D1F09D83CF648FD934AE3820693936E",
+    "listId": "7a",
+    "parentId": "5625EBB33FB24603A597F0314CC30A73",
+    "position": 36000,
+    "statementLabel": null,
+    "statementNotation": "2.1.7a"
+   },
+   "4F1F8FA8D8E34258A4083BDE5144DD22": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ADF8F85AAE7A4FBE8A32A932CA915904",
+     "C697DF62D54D404A88372341B496B949"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Nine Months to\nEighteen Months\n: Follow their caregiver to keep\r\nhim/her in sight\r",
+    "id": "4F1F8FA8D8E34258A4083BDE5144DD22",
+    "listId": "2",
+    "parentId": "ADF8F85AAE7A4FBE8A32A932CA915904",
+    "position": 86000,
+    "statementLabel": null,
+    "statementNotation": "4.2.2"
+   },
+   "508C377FC544478E9D3958641CC8BCE6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3D582A0F21F34F31949B74C8FAE544A9",
+     "94CA3A9AF9E24D929943D99949274539"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Nine Months to\nEighteen Months\n: Show preference for their family\r\nmembers and primary caregivers",
+    "id": "508C377FC544478E9D3958641CC8BCE6",
+    "listId": "2",
+    "parentId": "3D582A0F21F34F31949B74C8FAE544A9",
+    "position": 21000,
+    "statementLabel": null,
+    "statementNotation": "1.3.2"
+   },
+   "522378663B0249D8A642DDD6D62A04BD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7710966B7E6C44AA9102B856505047F3",
+     "AFE9770247DF48DDAE3C7C794191E6C2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Sustain interaction by cooperating, helping, sharing, and expressing interest,\r\nthough they may need adult guidance",
+    "id": "522378663B0249D8A642DDD6D62A04BD",
+    "listId": "7c",
+    "parentId": "7710966B7E6C44AA9102B856505047F3",
+    "position": 56000,
+    "statementLabel": null,
+    "statementNotation": "3.1.7c"
+   },
+   "54A5108727824FBC92F2574F052DA027": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D0D870D09A194ACC9A775F7143191539",
+     "C697DF62D54D404A88372341B496B949"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Eighteen to\nTwenty-Four Months: May express their feelings\r\nstrongly including extended\r\nepisodes and may not be easily\r\ndistracted",
+    "id": "54A5108727824FBC92F2574F052DA027",
+    "listId": "3",
+    "parentId": "D0D870D09A194ACC9A775F7143191539",
+    "position": 78000,
+    "statementLabel": null,
+    "statementNotation": "4.1.3"
+   },
+   "5625EBB33FB24603A597F0314CC30A73": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C85E1093BB7E4196B37335A6BDA9131B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Relationships\nwith primary\ncaregivers: ",
+    "id": "5625EBB33FB24603A597F0314CC30A73",
+    "listId": "1",
+    "parentId": "C85E1093BB7E4196B37335A6BDA9131B",
+    "position": 29000,
+    "statementLabel": null,
+    "statementNotation": "2.1"
+   },
+   "56AF442CEAC145708216E841BA04EDC8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8280856E37ED4E3AAFCD1FCA955730DA",
+     "94CA3A9AF9E24D929943D99949274539"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Eighteen to\nTwenty-Four Months: Show more awareness of their\r\nabilities",
+    "id": "56AF442CEAC145708216E841BA04EDC8",
+    "listId": "3",
+    "parentId": "8280856E37ED4E3AAFCD1FCA955730DA",
+    "position": 14000,
+    "statementLabel": null,
+    "statementNotation": "1.2.3"
+   },
+   "57BE756F2E7F4974A41551241B51EB88": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5625EBB33FB24603A597F0314CC30A73",
+     "C85E1093BB7E4196B37335A6BDA9131B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Thirty Months to\nThree Years: Continue to need adult approval\r\nand validation but show more\r\ncompetence",
+    "id": "57BE756F2E7F4974A41551241B51EB88",
+    "listId": "5",
+    "parentId": "5625EBB33FB24603A597F0314CC30A73",
+    "position": 34000,
+    "statementLabel": null,
+    "statementNotation": "2.1.5"
+   },
+   "5944E89CE6D04AB88FECB896367F76E6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3D582A0F21F34F31949B74C8FAE544A9",
+     "94CA3A9AF9E24D929943D99949274539"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Eighteen to\nTwenty-Four Months: Mimic adult behavior and\r\nresponses to other people\r",
+    "id": "5944E89CE6D04AB88FECB896367F76E6",
+    "listId": "3",
+    "parentId": "3D582A0F21F34F31949B74C8FAE544A9",
+    "position": 22000,
+    "statementLabel": null,
+    "statementNotation": "1.3.3"
+   },
+   "5F3A82974C5C4DEB80D842834106FB47": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5625EBB33FB24603A597F0314CC30A73",
+     "C85E1093BB7E4196B37335A6BDA9131B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds:  Imitate familiar adults in culturally appropriate ways in everyday situations",
+    "id": "5F3A82974C5C4DEB80D842834106FB47",
+    "listId": "7c",
+    "parentId": "5625EBB33FB24603A597F0314CC30A73",
+    "position": 38000,
+    "statementLabel": null,
+    "statementNotation": "2.1.7c"
+   },
+   "6127116EBA104E238AD91949F3293B5F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F737C68733664FD69120CA7AEF0D5F98",
+     "94CA3A9AF9E24D929943D99949274539"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Eighteen to\nTwenty-Four Months: Show awareness of being seen\r\nby others such as repeating\r\nan action when someone is\r\nwatching (E.g. Whenever she\r\nsees a camera, Ruby smiles and\r\nposes.)",
+    "id": "6127116EBA104E238AD91949F3293B5F",
+    "listId": "3",
+    "parentId": "F737C68733664FD69120CA7AEF0D5F98",
+    "position": 5000,
+    "statementLabel": null,
+    "statementNotation": "1.1.3"
+   },
+   "65324E2ACB13469E921F8388F12451C3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D0D870D09A194ACC9A775F7143191539",
+     "C697DF62D54D404A88372341B496B949"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Birth to\nNine Months: Express enjoyment and\r\nunhappiness in their\r\nenvironment",
+    "id": "65324E2ACB13469E921F8388F12451C3",
+    "listId": "1",
+    "parentId": "D0D870D09A194ACC9A775F7143191539",
+    "position": 76000,
+    "statementLabel": null,
+    "statementNotation": "4.1.1"
+   },
+   "691CAF8BFAA6437FA9E1B505B53A0F7F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7710966B7E6C44AA9102B856505047F3",
+     "AFE9770247DF48DDAE3C7C794191E6C2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Three Years: Play cooperatively with other\r\nchildren and show preference\r\nfor some children over\r\nothers (E.g. Jose and Chris\r\nare playing together. When\r\nMartin comes over, Chris says,\r\n“No, go away.”)",
+    "id": "691CAF8BFAA6437FA9E1B505B53A0F7F",
+    "listId": "6",
+    "parentId": "7710966B7E6C44AA9102B856505047F3",
+    "position": 53000,
+    "statementLabel": null,
+    "statementNotation": "3.1.6"
+   },
+   "69E6D86488CF4D3EAE41A736C8D38A8A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3D582A0F21F34F31949B74C8FAE544A9",
+     "94CA3A9AF9E24D929943D99949274539"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds:  Express or describe their own characteristics and preferences (E.g. Jacob only\nchooses brown sweatpants when clothes shopping with his mother.)",
+    "id": "69E6D86488CF4D3EAE41A736C8D38A8A",
+    "listId": "7b",
+    "parentId": "3D582A0F21F34F31949B74C8FAE544A9",
+    "position": 27000,
+    "statementLabel": null,
+    "statementNotation": "1.3.7b"
+   },
+   "7258148E0DD64EF980E1ED5739ECB2B2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7710966B7E6C44AA9102B856505047F3",
+     "AFE9770247DF48DDAE3C7C794191E6C2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Thirty Months to\nThree Years: Begin to play cooperatively for\r\nbrief periods with other children",
+    "id": "7258148E0DD64EF980E1ED5739ECB2B2",
+    "listId": "5",
+    "parentId": "7710966B7E6C44AA9102B856505047F3",
+    "position": 52000,
+    "statementLabel": null,
+    "statementNotation": "3.1.5"
+   },
+   "745C10423EA1498C8C87594B937C0E02": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7710966B7E6C44AA9102B856505047F3",
+     "AFE9770247DF48DDAE3C7C794191E6C2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Nine Months to\nEighteen Months\n: Show interest in other children",
+    "id": "745C10423EA1498C8C87594B937C0E02",
+    "listId": "2",
+    "parentId": "7710966B7E6C44AA9102B856505047F3",
+    "position": 49000,
+    "statementLabel": null,
+    "statementNotation": "3.1.2"
+   },
+   "749B9EF3628A40DFBE6797F9D5848742": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F23C9D4B728C45E99EB8209193718993",
+     "C85E1093BB7E4196B37335A6BDA9131B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Twenty-Four to\nThirty Months: Dependent on experience, may\r\nshow more interest in unfamiliar\r\nadults, but are still cautious",
+    "id": "749B9EF3628A40DFBE6797F9D5848742",
+    "listId": "4",
+    "parentId": "F23C9D4B728C45E99EB8209193718993",
+    "position": 43000,
+    "statementLabel": null,
+    "statementNotation": "2.2.4"
+   },
+   "76CD4337BB7C4DF38929EE456A0B861E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ADF8F85AAE7A4FBE8A32A932CA915904",
+     "C697DF62D54D404A88372341B496B949"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Eighteen to\nTwenty-Four Months: Use comfort objects or certain\r\nbehaviors to calm themselves\r\n(E.g. Finn finds and holds his\r\nblanket to calm himself.)",
+    "id": "76CD4337BB7C4DF38929EE456A0B861E",
+    "listId": "3",
+    "parentId": "ADF8F85AAE7A4FBE8A32A932CA915904",
+    "position": 87000,
+    "statementLabel": null,
+    "statementNotation": "4.2.3"
+   },
+   "7710966B7E6C44AA9102B856505047F3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "AFE9770247DF48DDAE3C7C794191E6C2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Relationships and\r\nsocial skills with\r\npeers",
+    "id": "7710966B7E6C44AA9102B856505047F3",
+    "listId": "1",
+    "parentId": "AFE9770247DF48DDAE3C7C794191E6C2",
+    "position": 47000,
+    "statementLabel": null,
+    "statementNotation": "3.1"
+   },
+   "7A6702F054C44D47A11DC3DFF9B1D8DA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ADF8F85AAE7A4FBE8A32A932CA915904",
+     "C697DF62D54D404A88372341B496B949"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Three Years: Begin to respond to an adult’s\ncues about regulating their\nemotions (E.g. At drop-off\ntime, Sage begins to control\nhis crying when his teacher\nsays, “I know you’re sad,\nwould you like to see what\nyour friends are doing?”)",
+    "id": "7A6702F054C44D47A11DC3DFF9B1D8DA",
+    "listId": "6",
+    "parentId": "ADF8F85AAE7A4FBE8A32A932CA915904",
+    "position": 90000,
+    "statementLabel": null,
+    "statementNotation": "4.2.6"
+   },
+   "7EDAFCD6BF7F4E25A15AADF9DE518016": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9B2938C9B4124F598E04D6F6C2B897D9",
+     "AFE9770247DF48DDAE3C7C794191E6C2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds:  Begin to understand the reasons for others’ emotions and respond appropriately\r\n(E.g. Audrey says to a friend who is upset over not getting the toy she wanted\r\nduring play, “You’ll get to play with it next time.”)\r",
+    "id": "7EDAFCD6BF7F4E25A15AADF9DE518016",
+    "listId": "7",
+    "parentId": "9B2938C9B4124F598E04D6F6C2B897D9",
+    "position": 65000,
+    "statementLabel": null,
+    "statementNotation": "3.2.7"
+   },
+   "7F70DE9AF35D434580FF6C697B6CE426": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3EB905A5C16B4A29A579B6D3384057D6",
+     "AFE9770247DF48DDAE3C7C794191E6C2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Begin to be able to stop undesirable behaviors on their own or with a gentle\r\nreminder (E.g. Xavier starts to grab Zach’s car, but stops himself and asks, “Can\r\nI use that when you’re done?”)",
+    "id": "7F70DE9AF35D434580FF6C697B6CE426",
+    "listId": "7",
+    "parentId": "3EB905A5C16B4A29A579B6D3384057D6",
+    "position": 73000,
+    "statementLabel": null,
+    "statementNotation": "3.3.7"
+   },
+   "8280856E37ED4E3AAFCD1FCA955730DA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "94CA3A9AF9E24D929943D99949274539"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Self-confidence",
+    "id": "8280856E37ED4E3AAFCD1FCA955730DA",
+    "listId": "2",
+    "parentId": "94CA3A9AF9E24D929943D99949274539",
+    "position": 11000,
+    "statementLabel": null,
+    "statementNotation": "1.2"
+   },
+   "867FF20C3DD34F3E86B29279A58151CD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7710966B7E6C44AA9102B856505047F3",
+     "AFE9770247DF48DDAE3C7C794191E6C2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Eighteen to\nTwenty-Four Months: Play alongside other children,\r\nwith or without acknowledging\r\ntheir presence\r",
+    "id": "867FF20C3DD34F3E86B29279A58151CD",
+    "listId": "3",
+    "parentId": "7710966B7E6C44AA9102B856505047F3",
+    "position": 50000,
+    "statementLabel": null,
+    "statementNotation": "3.1.3"
+   },
+   "8C00FBC854034D33A913E16A5E0EF3A6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3D582A0F21F34F31949B74C8FAE544A9",
+     "94CA3A9AF9E24D929943D99949274539"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Twenty-Four to\nThirty Months: Point out or comment on\r\ndifferences in gender and\r\nphysical characteristics, using\r\nsocial labels (E.g. Eddie points\r\nto each classmate and labels\r\neach as “boy” or “girl.”)",
+    "id": "8C00FBC854034D33A913E16A5E0EF3A6",
+    "listId": "4",
+    "parentId": "3D582A0F21F34F31949B74C8FAE544A9",
+    "position": 23000,
+    "statementLabel": null,
+    "statementNotation": "1.3.4"
+   },
+   "8DB2956310DB4BCCBB8A88AF19BB8A32": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F737C68733664FD69120CA7AEF0D5F98",
+     "94CA3A9AF9E24D929943D99949274539"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Boast about what they know and can do (E.g. Quinn says, “I am really good at\r\ndrawing rainbows.”)",
+    "id": "8DB2956310DB4BCCBB8A88AF19BB8A32",
+    "listId": "7b",
+    "parentId": "F737C68733664FD69120CA7AEF0D5F98",
+    "position": 10000,
+    "statementLabel": null,
+    "statementNotation": "1.1.7b"
+   },
+   "91DE5F23DDBD45E0B81970CF3FD2DBBE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9B2938C9B4124F598E04D6F6C2B897D9",
+     "AFE9770247DF48DDAE3C7C794191E6C2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Eighteen to\nTwenty-Four Months: Demonstrate interest in the\r\nfeelings of another child",
+    "id": "91DE5F23DDBD45E0B81970CF3FD2DBBE",
+    "listId": "3",
+    "parentId": "9B2938C9B4124F598E04D6F6C2B897D9",
+    "position": 61000,
+    "statementLabel": null,
+    "statementNotation": "3.2.3"
+   },
+   "94CA3A9AF9E24D929943D99949274539": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Self-Concept and Social Identity",
+    "id": "94CA3A9AF9E24D929943D99949274539",
+    "listId": "1",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": null,
+    "statementNotation": "1"
+   },
+   "9AFDEB15176A4370964EC9AF8A0E2791": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3EB905A5C16B4A29A579B6D3384057D6",
+     "AFE9770247DF48DDAE3C7C794191E6C2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Eighteen to\nTwenty-Four Months: With guidance, demonstrate\nthey can use some classroom\nmaterials appropriately (E.g.\nThe teacher shows her toddlers\nhow to handle books gently and\nClara turns the pages carefully.)",
+    "id": "9AFDEB15176A4370964EC9AF8A0E2791",
+    "listId": "3",
+    "parentId": "3EB905A5C16B4A29A579B6D3384057D6",
+    "position": 69000,
+    "statementLabel": null,
+    "statementNotation": "3.3.3"
+   },
+   "9B0C153435394691B7012856D101EC3C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F23C9D4B728C45E99EB8209193718993",
+     "C85E1093BB7E4196B37335A6BDA9131B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Thirty Months to\nThree Years: Are more comfortable around\r\nunfamiliar adults",
+    "id": "9B0C153435394691B7012856D101EC3C",
+    "listId": "5",
+    "parentId": "F23C9D4B728C45E99EB8209193718993",
+    "position": 44000,
+    "statementLabel": null,
+    "statementNotation": "2.2.5"
+   },
+   "9B2938C9B4124F598E04D6F6C2B897D9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "AFE9770247DF48DDAE3C7C794191E6C2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Recognition of\r\nothers’ feelings",
+    "id": "9B2938C9B4124F598E04D6F6C2B897D9",
+    "listId": "2",
+    "parentId": "AFE9770247DF48DDAE3C7C794191E6C2",
+    "position": 58000,
+    "statementLabel": null,
+    "statementNotation": "3.2"
+   },
+   "9B60763BD00D4C60B4EAADC8DB6576A1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D0D870D09A194ACC9A775F7143191539",
+     "C697DF62D54D404A88372341B496B949"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Explore emotions in various ways (through play, art, music, and dance)",
+    "id": "9B60763BD00D4C60B4EAADC8DB6576A1",
+    "listId": "7b",
+    "parentId": "D0D870D09A194ACC9A775F7143191539",
+    "position": 83000,
+    "statementLabel": null,
+    "statementNotation": "4.1.7b"
+   },
+   "9BD052C3A64C4A12BAFFF04DEA77361C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F23C9D4B728C45E99EB8209193718993",
+     "C85E1093BB7E4196B37335A6BDA9131B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Nine Months to\nEighteen Months\n: Show strong preference\r\nfor familiar adults and may\r\ndemonstrate fear or rejection\r\nresponses to unfamiliar adults",
+    "id": "9BD052C3A64C4A12BAFFF04DEA77361C",
+    "listId": "2",
+    "parentId": "F23C9D4B728C45E99EB8209193718993",
+    "position": 41000,
+    "statementLabel": null,
+    "statementNotation": "2.2.2"
+   },
+   "9D12D8CD249A47FC8757392C78A4CACD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F737C68733664FD69120CA7AEF0D5F98",
+     "94CA3A9AF9E24D929943D99949274539"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Continue to seek adult attention and recognition of what they know and can do",
+    "id": "9D12D8CD249A47FC8757392C78A4CACD",
+    "listId": "7a",
+    "parentId": "F737C68733664FD69120CA7AEF0D5F98",
+    "position": 9000,
+    "statementLabel": null,
+    "statementNotation": "1.1.7a"
+   },
+   "AA92FF97FCBF41A9B005F523232DBE37": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3EB905A5C16B4A29A579B6D3384057D6",
+     "AFE9770247DF48DDAE3C7C794191E6C2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Twenty-Four to\nThirty Months: With adult guidance, can begin to\r\ntone down aggressive behaviors.",
+    "id": "AA92FF97FCBF41A9B005F523232DBE37",
+    "listId": "4",
+    "parentId": "3EB905A5C16B4A29A579B6D3384057D6",
+    "position": 70000,
+    "statementLabel": null,
+    "statementNotation": "3.3.4"
+   },
+   "ABD23CAFF3D84FEC8EBA636FD69DFB0A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9B2938C9B4124F598E04D6F6C2B897D9",
+     "AFE9770247DF48DDAE3C7C794191E6C2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Nine Months to\nEighteen Months\n: Show awareness in other\r\npeople’s emotions",
+    "id": "ABD23CAFF3D84FEC8EBA636FD69DFB0A",
+    "listId": "2",
+    "parentId": "9B2938C9B4124F598E04D6F6C2B897D9",
+    "position": 60000,
+    "statementLabel": null,
+    "statementNotation": "3.2.2"
+   },
+   "ADE6B8F0AE99497D896DB1093722EA58": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D0D870D09A194ACC9A775F7143191539",
+     "C697DF62D54D404A88372341B496B949"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Demonstrate increasing competencies in recognizing and describing their own\nemotions",
+    "id": "ADE6B8F0AE99497D896DB1093722EA58",
+    "listId": "7a",
+    "parentId": "D0D870D09A194ACC9A775F7143191539",
+    "position": 82000,
+    "statementLabel": null,
+    "statementNotation": "4.1.7a"
+   },
+   "ADF8F85AAE7A4FBE8A32A932CA915904": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C697DF62D54D404A88372341B496B949"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Emotional\r\nregulation",
+    "id": "ADF8F85AAE7A4FBE8A32A932CA915904",
+    "listId": "2",
+    "parentId": "C697DF62D54D404A88372341B496B949",
+    "position": 84000,
+    "statementLabel": null,
+    "statementNotation": "4.2"
+   },
+   "AF39D105ADEC4FF799FCA435387CCBFB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7710966B7E6C44AA9102B856505047F3",
+     "AFE9770247DF48DDAE3C7C794191E6C2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Approach others with expectations of positive interactions",
+    "id": "AF39D105ADEC4FF799FCA435387CCBFB",
+    "listId": "7a",
+    "parentId": "7710966B7E6C44AA9102B856505047F3",
+    "position": 54000,
+    "statementLabel": null,
+    "statementNotation": "3.1.7a"
+   },
+   "AFA649328458434CB96A7FBF293C0BD9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3EB905A5C16B4A29A579B6D3384057D6",
+     "AFE9770247DF48DDAE3C7C794191E6C2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Birth to\nNine Months: Calm themselves (E.g.\r\n9-month-old Vinod babbles in\r\nhis crib until his father comes\r\nto get him up from his nap.)",
+    "id": "AFA649328458434CB96A7FBF293C0BD9",
+    "listId": "1",
+    "parentId": "3EB905A5C16B4A29A579B6D3384057D6",
+    "position": 67000,
+    "statementLabel": null,
+    "statementNotation": "3.3.1"
+   },
+   "AFE9770247DF48DDAE3C7C794191E6C2": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Social Competence ",
+    "id": "AFE9770247DF48DDAE3C7C794191E6C2",
+    "listId": "3",
+    "parentId": null,
+    "position": 46000,
+    "statementLabel": null,
+    "statementNotation": "3"
+   },
+   "B39B736B931E41C092DCDFB3485490A3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9B2938C9B4124F598E04D6F6C2B897D9",
+     "AFE9770247DF48DDAE3C7C794191E6C2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Thirty Months to\nThree Years: Begin to display empathy\r\ntowards other children",
+    "id": "B39B736B931E41C092DCDFB3485490A3",
+    "listId": "5",
+    "parentId": "9B2938C9B4124F598E04D6F6C2B897D9",
+    "position": 63000,
+    "statementLabel": null,
+    "statementNotation": "3.2.5"
+   },
+   "B5F14C4A83884982896F8B68ADEACA87": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F23C9D4B728C45E99EB8209193718993",
+     "C85E1093BB7E4196B37335A6BDA9131B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Three Years: May initiate contact with\r\nunfamiliar adults, when\r\nfamiliar adults are nearby",
+    "id": "B5F14C4A83884982896F8B68ADEACA87",
+    "listId": "6",
+    "parentId": "F23C9D4B728C45E99EB8209193718993",
+    "position": 45000,
+    "statementLabel": null,
+    "statementNotation": "2.2.6"
+   },
+   "B7BDD45DD07A4CF8BD8BAD8CA86598B4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8280856E37ED4E3AAFCD1FCA955730DA",
+     "94CA3A9AF9E24D929943D99949274539"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Thirty Months to\nThree Years: Show independence and\r\ncompetence",
+    "id": "B7BDD45DD07A4CF8BD8BAD8CA86598B4",
+    "listId": "5",
+    "parentId": "8280856E37ED4E3AAFCD1FCA955730DA",
+    "position": 16000,
+    "statementLabel": null,
+    "statementNotation": "1.2.5"
+   },
+   "C10F0EAEF27140F9A5A480C5AFFD9CBF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ADF8F85AAE7A4FBE8A32A932CA915904",
+     "C697DF62D54D404A88372341B496B949"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Increasingly use words instead of actions to express their emotions",
+    "id": "C10F0EAEF27140F9A5A480C5AFFD9CBF",
+    "listId": "7b",
+    "parentId": "ADF8F85AAE7A4FBE8A32A932CA915904",
+    "position": 92000,
+    "statementLabel": null,
+    "statementNotation": "4.2.7b"
+   },
+   "C697DF62D54D404A88372341B496B949": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Emotional Competence",
+    "id": "C697DF62D54D404A88372341B496B949",
+    "listId": "4",
+    "parentId": null,
+    "position": 74000,
+    "statementLabel": null,
+    "statementNotation": "4"
+   },
+   "C85E1093BB7E4196B37335A6BDA9131B": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Attachment\r",
+    "id": "C85E1093BB7E4196B37335A6BDA9131B",
+    "listId": "2",
+    "parentId": null,
+    "position": 28000,
+    "statementLabel": null,
+    "statementNotation": "2"
+   },
+   "C8B5D9B4253540E2847F1A5A436432A5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7710966B7E6C44AA9102B856505047F3",
+     "AFE9770247DF48DDAE3C7C794191E6C2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Develop friendships, sometimes based on shared interests or\r\ncharacteristics",
+    "id": "C8B5D9B4253540E2847F1A5A436432A5",
+    "listId": "7d",
+    "parentId": "7710966B7E6C44AA9102B856505047F3",
+    "position": 57000,
+    "statementLabel": null,
+    "statementNotation": "3.1.7d"
+   },
+   "CC3063269BB947ED94C00B8920B46D5F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F23C9D4B728C45E99EB8209193718993",
+     "C85E1093BB7E4196B37335A6BDA9131B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Birth to\nNine Months: Are able, over time, to\r\ndifferentiate between familiar\r\nand unfamiliar adults\r",
+    "id": "CC3063269BB947ED94C00B8920B46D5F",
+    "listId": "1",
+    "parentId": "F23C9D4B728C45E99EB8209193718993",
+    "position": 40000,
+    "statementLabel": null,
+    "statementNotation": "2.2.1"
+   },
+   "CE1379689A1D4B5FBEF8FE8F66E1BE9E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8280856E37ED4E3AAFCD1FCA955730DA",
+     "94CA3A9AF9E24D929943D99949274539"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Nine Months to\nEighteen Months\n: Take actions in the expectation\r\nof getting a response from\r\nan adult (E.g. 11-monthold Carolyn lifts her arms up\r\nknowing that her caregiver will\r\npick her up.)",
+    "id": "CE1379689A1D4B5FBEF8FE8F66E1BE9E",
+    "listId": "2",
+    "parentId": "8280856E37ED4E3AAFCD1FCA955730DA",
+    "position": 13000,
+    "statementLabel": null,
+    "statementNotation": "1.2.2"
+   },
+   "D0D870D09A194ACC9A775F7143191539": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C697DF62D54D404A88372341B496B949"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Emotional\r\nexpression",
+    "id": "D0D870D09A194ACC9A775F7143191539",
+    "listId": "1",
+    "parentId": "C697DF62D54D404A88372341B496B949",
+    "position": 75000,
+    "statementLabel": null,
+    "statementNotation": "4.1"
+   },
+   "D281B85A11EA4BDAAF5986F5034A008C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F737C68733664FD69120CA7AEF0D5F98",
+     "94CA3A9AF9E24D929943D99949274539"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Three Years: Draw adult’s attention to their\r\nactions and creations (E.g. On\r\nthe playground Luna keeps\r\ntelling her father, “Watch me,\r\nwatch me!”)",
+    "id": "D281B85A11EA4BDAAF5986F5034A008C",
+    "listId": "6",
+    "parentId": "F737C68733664FD69120CA7AEF0D5F98",
+    "position": 8000,
+    "statementLabel": null,
+    "statementNotation": "1.1.6"
+   },
+   "D32139AC00D14733B14ACB1EBA516601": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3D582A0F21F34F31949B74C8FAE544A9",
+     "94CA3A9AF9E24D929943D99949274539"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Thirty Months to\nThree Years: Identify or point to characters\r\nthat resemble themselves or\r\ntheir family members in books\r\nor magazines",
+    "id": "D32139AC00D14733B14ACB1EBA516601",
+    "listId": "5",
+    "parentId": "3D582A0F21F34F31949B74C8FAE544A9",
+    "position": 24000,
+    "statementLabel": null,
+    "statementNotation": "1.3.5"
+   },
+   "D37A2139FA48476995D58F6CF3E396E8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3D582A0F21F34F31949B74C8FAE544A9",
+     "94CA3A9AF9E24D929943D99949274539"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds:  Notice differences and make comparisons between their physical characteristics\nand others’ and the way things are done in different settings (E.g. Consuela\nsays “My abuela talks Spanish and my grandma talks English.”)",
+    "id": "D37A2139FA48476995D58F6CF3E396E8",
+    "listId": "7a",
+    "parentId": "3D582A0F21F34F31949B74C8FAE544A9",
+    "position": 26000,
+    "statementLabel": null,
+    "statementNotation": "1.3.7a"
+   },
+   "DE9436C4C235471083475F5C89448DC6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D0D870D09A194ACC9A775F7143191539",
+     "C697DF62D54D404A88372341B496B949"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Nine Months to\nEighteen Months\n: Begin to express a variety of\r\nfeelings through vocalizations,\r\nfacial expressions, and body\r\nmovements",
+    "id": "DE9436C4C235471083475F5C89448DC6",
+    "listId": "2",
+    "parentId": "D0D870D09A194ACC9A775F7143191539",
+    "position": 77000,
+    "statementLabel": null,
+    "statementNotation": "4.1.2"
+   },
+   "DF6E6A16FDB94A07BAE9F9F64426F3FD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F737C68733664FD69120CA7AEF0D5F98",
+     "94CA3A9AF9E24D929943D99949274539"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Nine Months to\nEighteen Months\n: Show likes and dislikes in ways\r\nthat are consistent with the\r\nfamily’s cultural expectations\r\n(E.g. Brady vocalizes pleasure\r\nwhile playing, but cries while\r\nhaving a diaper changed.)",
+    "id": "DF6E6A16FDB94A07BAE9F9F64426F3FD",
+    "listId": "2",
+    "parentId": "F737C68733664FD69120CA7AEF0D5F98",
+    "position": 4000,
+    "statementLabel": null,
+    "statementNotation": "1.1.2"
+   },
+   "E16D7A74AEFD46C898C23538B0F7C585": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D0D870D09A194ACC9A775F7143191539",
+     "C697DF62D54D404A88372341B496B949"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Twenty-Four to\nThirty Months: Share their feelings through\r\ntalking and pretend play",
+    "id": "E16D7A74AEFD46C898C23538B0F7C585",
+    "listId": "4",
+    "parentId": "D0D870D09A194ACC9A775F7143191539",
+    "position": 79000,
+    "statementLabel": null,
+    "statementNotation": "4.1.4"
+   },
+   "E2A75D98005F4492A3E97525254597F0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3EB905A5C16B4A29A579B6D3384057D6",
+     "AFE9770247DF48DDAE3C7C794191E6C2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Thirty Months to\nThree Years: Show increased self-regulation\r\nand awareness of how their\r\nactions affect others",
+    "id": "E2A75D98005F4492A3E97525254597F0",
+    "listId": "5",
+    "parentId": "3EB905A5C16B4A29A579B6D3384057D6",
+    "position": 71000,
+    "statementLabel": null,
+    "statementNotation": "3.3.5"
+   },
+   "E4BC47AD5AE148C6AF078C6F76CDF6BD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9B2938C9B4124F598E04D6F6C2B897D9",
+     "AFE9770247DF48DDAE3C7C794191E6C2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Three Years: Begin to label others’ feelings\r\nand recognize reasons for\r\nthose feelings",
+    "id": "E4BC47AD5AE148C6AF078C6F76CDF6BD",
+    "listId": "6",
+    "parentId": "9B2938C9B4124F598E04D6F6C2B897D9",
+    "position": 64000,
+    "statementLabel": null,
+    "statementNotation": "3.2.6"
+   },
+   "E692886842B1483CA5D2FAC325B3A2A9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F737C68733664FD69120CA7AEF0D5F98",
+     "94CA3A9AF9E24D929943D99949274539"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Thirty Months to\nThree Years: Call attention to themselves in\r\nphotographs or videos",
+    "id": "E692886842B1483CA5D2FAC325B3A2A9",
+    "listId": "5",
+    "parentId": "F737C68733664FD69120CA7AEF0D5F98",
+    "position": 7000,
+    "statementLabel": null,
+    "statementNotation": "1.1.5"
+   },
+   "EA9B95A3A048494CB2D3F32A17F2D2C9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3EB905A5C16B4A29A579B6D3384057D6",
+     "AFE9770247DF48DDAE3C7C794191E6C2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Three Years: Follow classroom rules and\r\nroutines with guidance",
+    "id": "EA9B95A3A048494CB2D3F32A17F2D2C9",
+    "listId": "6",
+    "parentId": "3EB905A5C16B4A29A579B6D3384057D6",
+    "position": 72000,
+    "statementLabel": null,
+    "statementNotation": "3.3.6"
+   },
+   "ED5EFC122FDE4E1B9C975033C2F35B1C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ADF8F85AAE7A4FBE8A32A932CA915904",
+     "C697DF62D54D404A88372341B496B949"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: May still have difficulty regulating strong emotions",
+    "id": "ED5EFC122FDE4E1B9C975033C2F35B1C",
+    "listId": "7a",
+    "parentId": "ADF8F85AAE7A4FBE8A32A932CA915904",
+    "position": 91000,
+    "statementLabel": null,
+    "statementNotation": "4.2.7a"
+   },
+   "EF7AE53519634ED99331BFD5E1F29486": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5625EBB33FB24603A597F0314CC30A73",
+     "C85E1093BB7E4196B37335A6BDA9131B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Three Years: Respond appropriately to\r\nsocial and emotional cues of\r\nadults",
+    "id": "EF7AE53519634ED99331BFD5E1F29486",
+    "listId": "6",
+    "parentId": "5625EBB33FB24603A597F0314CC30A73",
+    "position": 35000,
+    "statementLabel": null,
+    "statementNotation": "2.1.6"
+   },
+   "F23C9D4B728C45E99EB8209193718993": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C85E1093BB7E4196B37335A6BDA9131B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Relationships\nwith less familiar\nadults: ",
+    "id": "F23C9D4B728C45E99EB8209193718993",
+    "listId": "2",
+    "parentId": "C85E1093BB7E4196B37335A6BDA9131B",
+    "position": 39000,
+    "statementLabel": null,
+    "statementNotation": "2.2"
+   },
+   "F286B65AC81143B19BA9D0D1C70B9CDF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5625EBB33FB24603A597F0314CC30A73",
+     "C85E1093BB7E4196B37335A6BDA9131B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Four- and Five-Year-Olds: Seek adult help when needed for emotional support, physical assistance, social\r\ninteraction, and approval\r",
+    "id": "F286B65AC81143B19BA9D0D1C70B9CDF",
+    "listId": "7b",
+    "parentId": "5625EBB33FB24603A597F0314CC30A73",
+    "position": 37000,
+    "statementLabel": null,
+    "statementNotation": "2.1.7b"
+   },
+   "F737C68733664FD69120CA7AEF0D5F98": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "94CA3A9AF9E24D929943D99949274539"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Self-esteem",
+    "id": "F737C68733664FD69120CA7AEF0D5F98",
+    "listId": "1",
+    "parentId": "94CA3A9AF9E24D929943D99949274539",
+    "position": 2000,
+    "statementLabel": null,
+    "statementNotation": "1.1"
+   },
+   "FCE791047B784B8CBCE8B1A6D9630B17": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D0D870D09A194ACC9A775F7143191539",
+     "C697DF62D54D404A88372341B496B949"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Thirty Months to\nThree Years: Verbally relate their needs,\r\nwants, and feelings to others",
+    "id": "FCE791047B784B8CBCE8B1A6D9630B17",
+    "listId": "5",
+    "parentId": "D0D870D09A194ACC9A775F7143191539",
+    "position": 80000,
+    "statementLabel": null,
+    "statementNotation": "4.1.5"
+   }
+  },
+  "subject": "Early Learning Standards (2016-)",
+  "title": "Social and Emotional Development: Birth-5"
+ }
+}

@@ -1,0 +1,574 @@
+{
+ "pk/math": [
+  {
+   "idx": "CD3.1q",
+   "text": "Counts forward to 20 by memory"
+  },
+  {
+   "idx": "CD3.1r",
+   "text": "Counts backwards from 5"
+  },
+  {
+   "idx": "CD3.1s",
+   "text": "Shows accuracy in demonstrating oneto-one correspondence for up to 10 objects"
+  },
+  {
+   "idx": "CD3.1t",
+   "text": "Counts up to 10 objects in a line"
+  },
+  {
+   "idx": "CD3.1u",
+   "text": "Answers the question “How many?” for up to 10 objects"
+  },
+  {
+   "idx": "CD3.1v",
+   "text": "Counts out 10-20 objects in a line from a larger group"
+  },
+  {
+   "idx": "CD3.1w",
+   "text": "Instantly recognizes a collection of up to 10 objects (i.e. subitizes)"
+  },
+  {
+   "idx": "CD3.1x",
+   "text": "Uses words that mean zero such as “nothing” or “none”"
+  },
+  {
+   "idx": "CD3.1y",
+   "text": "Shows a quantity to match a numeral by making marks, drawing items, or placing actual objects"
+  },
+  {
+   "idx": "CD3.1z",
+   "text": "Compares sets of objects that range in size from 1-10, as having “more”, “fewer” or “same”"
+  },
+  {
+   "idx": "CD3.1aa",
+   "text": "Arranges images with 3 or more different quantities of objects in correct order"
+  },
+  {
+   "idx": "CD3.2c",
+   "text": "Solves addition (joining) problems using manipulatives (e.g., fingers, objects, tally marks)"
+  },
+  {
+   "idx": "CD3.2d",
+   "text": "Solves subtraction (separating) problems using manipulatives (e.g., fingers, objects, tally marks)"
+  },
+  {
+   "idx": "CD3.2e",
+   "text": "With adult help, uses “counting on” as a strategy to solve addition (joining) problems (e.g., “I have 3 and 2 more gives me 4, 5”)"
+  },
+  {
+   "idx": "CD3.2f",
+   "text": "With adult help, uses “counting back from” as a strategy to solve subtraction (separating) problems (e.g., To take away 3 from 5, “5,4,3...leaves 2”)"
+  },
+  {
+   "idx": "CD3.3s",
+   "text": "Uses smaller shapes to compose larger and different shapes (e.g., two triangles make one square)"
+  },
+  {
+   "idx": "CD3.3t",
+   "text": "Correctly names squares, rectangles and triangles regardless of size or orientation"
+  },
+  {
+   "idx": "CD3.3u",
+   "text": "Describes attributes of two and three dimensional shapes (e.g., “A square has four corners/angles”, “a triangle has three straight sides”)"
+  },
+  {
+   "idx": "CD3.3v",
+   "text": "Draws and describes pictures that show relative locations and uses terms like “near to” or “closer to”"
+  },
+  {
+   "idx": "CD3.4l",
+   "text": "Identifies, duplicates, extends, and creates simple repeating patterns"
+  },
+  {
+   "idx": "CD3.4m",
+   "text": "Fills in missing elements of simple, repeating patterns"
+  },
+  {
+   "idx": "CD3.4n",
+   "text": "Recognizes, names, and extends simple repeating patterns"
+  },
+  {
+   "idx": "CD3.4o",
+   "text": "Describes quantitative changes (e.g., “I am two years older than when I started school.”)"
+  },
+  {
+   "idx": "CD3.5g",
+   "text": "Directly compares the length or volume of two objects"
+  },
+  {
+   "idx": "CD3.5h",
+   "text": "Uses comparative language to describe and compare objects using attributes (e.g., longer, shorter, lighter, heavier, etc.)"
+  },
+  {
+   "idx": "CD3.5i",
+   "text": "With adult support, measures using the same non-standard unit, such as putting together snap cubes to see how tall a book is"
+  },
+  {
+   "idx": "CD3.5j",
+   "text": "With adult support, compares or orders up to 5 objects based on their measurable attributes, such as height or weight"
+  },
+  {
+   "idx": "CD3.5k",
+   "text": "With adult support, recognizes that different attributes such as weight, height, and volume require different tools to measure"
+  },
+  {
+   "idx": "CD3.5l",
+   "text": "With adult support, demonstrates “size seriation” by comparing and ordering objects according to measured attribute/ characteristic (e.g., places books on shelf according to measured size)"
+  },
+  {
+   "idx": "CD3.5m",
+   "text": "With adult support, explores tools of measurement such as rulers, scales, and measuring cup, using the appropriate tool for the attribute/characteristic being measured"
+  },
+  {
+   "idx": "CD3.5n",
+   "text": "With instruction, shows an awareness of time by talking about events with words such as before, after, and later"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "CLLD1.1aa",
+   "text": "Answers questions and adds comments relevant to the topic"
+  },
+  {
+   "idx": "CLLD1.1ab",
+   "text": "Begins to demonstrate understanding of implied messages based on speaker’s tone and/ or gestures (e.g., finger on lip and saying “shhhh” means be quiet)"
+  },
+  {
+   "idx": "CLLD1.1ac",
+   "text": "Understands and responds to words for descriptive concepts (e.g., hard, square)"
+  },
+  {
+   "idx": "CLLD1.1ad",
+   "text": "Follows 2-3 step related directions and some new directions related to familiar and daily routines"
+  },
+  {
+   "idx": "CLLD1.1ae",
+   "text": "Demonstrates understanding of communication that includes a variety of complex sentences related to familiar stories, learning activities, and events (e.g., After Clifford the dog came home, he played with Emily Elizabeth.)"
+  },
+  {
+   "idx": "CLLD1.2s",
+   "text": "Uses age-appropriate grammar in conversations and increasingly complex phrases and sentences (e.g., uses irregular past tense verbs such as came, ran, fell, broke, went, told, did)"
+  },
+  {
+   "idx": "CLLD1.2t",
+   "text": "Answers open-ended questions comfortably"
+  },
+  {
+   "idx": "CLLD1.2u",
+   "text": "Retells stories and events in sequence with multiple details (e.g., retells The Three Bears noting three chairs, three beds, etc.)"
+  },
+  {
+   "idx": "CLLD1.3n",
+   "text": "Begins to match language to contexts (e.g., voice volume, inflection/rise and fall of voice in speaking, and parting/greeting rituals)"
+  },
+  {
+   "idx": "CLLD1.3o",
+   "text": "Engages in multiple back-and-forth conversations with adults in ways that can be goal directed (such as solving problems)"
+  },
+  {
+   "idx": "CLLD1.3p",
+   "text": "Asks and responds to questions with accurate information"
+  },
+  {
+   "idx": "CLLD2.1l",
+   "text": "Distinguishes among a variety of texts and their purposes (e.g., books, shopping lists, etc.)"
+  },
+  {
+   "idx": "CLLD2.1m",
+   "text": "Begins to track individual words in text or braille by pointing or touching"
+  },
+  {
+   "idx": "CLLD2.2p",
+   "text": "Listens and responds to a variety of texts and media (e.g., audio book, music and movement)"
+  },
+  {
+   "idx": "CLLD2.2q",
+   "text": "Tells fictional or personal stories sequentially and with 3 or more details"
+  },
+  {
+   "idx": "CLLD2.2r",
+   "text": "Begins to understand cause and effect relationships in fiction and nonfiction texts"
+  },
+  {
+   "idx": "CLLD2.2s",
+   "text": "Predicts what will happen next in an unfamiliar story"
+  },
+  {
+   "idx": "CLLD2.2t",
+   "text": "Uses new words learned through listening to stories"
+  },
+  {
+   "idx": "CLLD2.3i",
+   "text": "Begins to rhyme and produce rhymes of simple words"
+  },
+  {
+   "idx": "CLLD2.3j",
+   "text": "Begins to orally segment and combine compound words (e.g., lunchbox segmented is lunch-box; when combined it is lunchbox)"
+  },
+  {
+   "idx": "CLLD2.3k",
+   "text": "Begins to segment and combine syllables (e.g., purple segmented is purple; when combined it is purple)"
+  },
+  {
+   "idx": "CLLD2.3l",
+   "text": "Begins to identify the initial and final sound in words (e.g., /b/ in bat)"
+  },
+  {
+   "idx": "CLLD2.4f",
+   "text": "For many, with instructional support, matches the sound with the corresponding letter"
+  },
+  {
+   "idx": "CLLD2.4g",
+   "text": "For many, with instructional support, matches the letter with the corresponding sound"
+  },
+  {
+   "idx": "CLLD2.4h",
+   "text": "Recognizes many upper and lower case letters"
+  },
+  {
+   "idx": "CLLD2.4i",
+   "text": "Will use a combination of letters and symbols to represent words"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "CD1.1j",
+   "text": "Compares and categorizes observable phenomena (e.g., by collecting, organizing, and describing materials according to their physical characteristics)"
+  },
+  {
+   "idx": "CD1.1k",
+   "text": "Imitates and uses adults’ words and ideas when talking about the physical and natural worlds"
+  },
+  {
+   "idx": "CD1.1l",
+   "text": "Shows detail in drawings, constructions, demonstrations to show thinking"
+  },
+  {
+   "idx": "CD1.2n",
+   "text": "Uses many sources (e.g., pictures, books) to gather information"
+  },
+  {
+   "idx": "CD1.2o",
+   "text": "With adult guidance, plans and conducts investigations"
+  },
+  {
+   "idx": "CD1.2p",
+   "text": "Analyzes results, draws conclusions, and communicates results"
+  },
+  {
+   "idx": "CD1.2q",
+   "text": "Collaborates with others to conduct investigations"
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "CD1.1j",
+   "text": "Compares and categorizes observable phenomena (e.g., by collecting, organizing, and describing materials according to their physical characteristics)"
+  },
+  {
+   "idx": "CD1.1k",
+   "text": "Imitates and uses adults’ words and ideas when talking about the physical and natural worlds"
+  },
+  {
+   "idx": "CD1.1l",
+   "text": "Shows detail in drawings, constructions, demonstrations to show thinking"
+  },
+  {
+   "idx": "CD1.2n",
+   "text": "Uses many sources (e.g., pictures, books) to gather information"
+  },
+  {
+   "idx": "CD1.2o",
+   "text": "With adult guidance, plans and conducts investigations"
+  },
+  {
+   "idx": "CD1.2p",
+   "text": "Analyzes results, draws conclusions, and communicates results"
+  },
+  {
+   "idx": "CD1.2q",
+   "text": "Collaborates with others to conduct investigations"
+  },
+  {
+   "idx": "CD2.1n",
+   "text": "Communicates about the roles of people in the community encountered directly (caregiver or educator) and roles introduced through pictures, books and other media (artists, cooks, cashiers, construction workers)"
+  },
+  {
+   "idx": "CD2.1o",
+   "text": "Uses props and dramatic play to show growing awareness of things and events in the larger world (using a computer, driving a bus)"
+  },
+  {
+   "idx": "CD2.1p",
+   "text": "Shows more detail in drawings, buildings, models, and performances, reflecting their thinking and understanding about social connections"
+  },
+  {
+   "idx": "CD2.2g",
+   "text": "Communicates about self as member of many different groups, such as within a family, classroom, faith community, or sport team"
+  },
+  {
+   "idx": "CD2.2h",
+   "text": "Uses positive social behaviors (taking turns, sharing, helping with jobs) to help meet needs of the group"
+  },
+  {
+   "idx": "CD2.2i",
+   "text": "With adult help, participates with peers in solving problems, settling conflicts, and negotiating plans and decisions"
+  },
+  {
+   "idx": "CD2.3g",
+   "text": "Learns simple vocabulary of other languages spoken in home, classroom, or school community"
+  },
+  {
+   "idx": "CD2.3h",
+   "text": "Represents self and others in drawing with increasing detail and accuracy, including distinguishing features related to physical, racial, and cultural differences"
+  },
+  {
+   "idx": "CD2.3i",
+   "text": "With adult help, notices and communicates about different family structures represented in the group"
+  },
+  {
+   "idx": "CD2.3j",
+   "text": "Communicates about own family’s culture and traditions and accepts that children and families are different"
+  },
+  {
+   "idx": "CD3.1q",
+   "text": "Counts forward to 20 by memory"
+  },
+  {
+   "idx": "CD3.1r",
+   "text": "Counts backwards from 5"
+  },
+  {
+   "idx": "CD3.1s",
+   "text": "Shows accuracy in demonstrating oneto-one correspondence for up to 10 objects"
+  },
+  {
+   "idx": "CD3.1t",
+   "text": "Counts up to 10 objects in a line"
+  },
+  {
+   "idx": "CD3.1u",
+   "text": "Answers the question “How many?” for up to 10 objects"
+  },
+  {
+   "idx": "CD3.1v",
+   "text": "Counts out 10-20 objects in a line from a larger group"
+  },
+  {
+   "idx": "CD3.1w",
+   "text": "Instantly recognizes a collection of up to 10 objects (i.e. subitizes)"
+  },
+  {
+   "idx": "CD3.1x",
+   "text": "Uses words that mean zero such as “nothing” or “none”"
+  },
+  {
+   "idx": "CD3.1y",
+   "text": "Shows a quantity to match a numeral by making marks, drawing items, or placing actual objects"
+  },
+  {
+   "idx": "CD3.1z",
+   "text": "Compares sets of objects that range in size from 1-10, as having “more”, “fewer” or “same”"
+  },
+  {
+   "idx": "CD3.1aa",
+   "text": "Arranges images with 3 or more different quantities of objects in correct order"
+  },
+  {
+   "idx": "CD3.2c",
+   "text": "Solves addition (joining) problems using manipulatives (e.g., fingers, objects, tally marks)"
+  },
+  {
+   "idx": "CD3.2d",
+   "text": "Solves subtraction (separating) problems using manipulatives (e.g., fingers, objects, tally marks)"
+  },
+  {
+   "idx": "CD3.2e",
+   "text": "With adult help, uses “counting on” as a strategy to solve addition (joining) problems (e.g., “I have 3 and 2 more gives me 4, 5”)"
+  },
+  {
+   "idx": "CD3.2f",
+   "text": "With adult help, uses “counting back from” as a strategy to solve subtraction (separating) problems (e.g., To take away 3 from 5, “5,4,3...leaves 2”)"
+  },
+  {
+   "idx": "CD3.3s",
+   "text": "Uses smaller shapes to compose larger and different shapes (e.g., two triangles make one square)"
+  },
+  {
+   "idx": "CD3.3t",
+   "text": "Correctly names squares, rectangles and triangles regardless of size or orientation"
+  },
+  {
+   "idx": "CD3.3u",
+   "text": "Describes attributes of two and three dimensional shapes (e.g., “A square has four corners/angles”, “a triangle has three straight sides”)"
+  },
+  {
+   "idx": "CD3.3v",
+   "text": "Draws and describes pictures that show relative locations and uses terms like “near to” or “closer to”"
+  },
+  {
+   "idx": "CD3.4l",
+   "text": "Identifies, duplicates, extends, and creates simple repeating patterns"
+  },
+  {
+   "idx": "CD3.4m",
+   "text": "Fills in missing elements of simple, repeating patterns"
+  },
+  {
+   "idx": "CD3.4n",
+   "text": "Recognizes, names, and extends simple repeating patterns"
+  },
+  {
+   "idx": "CD3.4o",
+   "text": "Describes quantitative changes (e.g., “I am two years older than when I started school.”)"
+  },
+  {
+   "idx": "CD3.5g",
+   "text": "Directly compares the length or volume of two objects"
+  },
+  {
+   "idx": "CD3.5h",
+   "text": "Uses comparative language to describe and compare objects using attributes (e.g., longer, shorter, lighter, heavier, etc.)"
+  },
+  {
+   "idx": "CD3.5i",
+   "text": "With adult support, measures using the same non-standard unit, such as putting together snap cubes to see how tall a book is"
+  },
+  {
+   "idx": "CD3.5j",
+   "text": "With adult support, compares or orders up to 5 objects based on their measurable attributes, such as height or weight"
+  },
+  {
+   "idx": "CD3.5k",
+   "text": "With adult support, recognizes that different attributes such as weight, height, and volume require different tools to measure"
+  },
+  {
+   "idx": "CD3.5l",
+   "text": "With adult support, demonstrates “size seriation” by comparing and ordering objects according to measured attribute/ characteristic (e.g., places books on shelf according to measured size)"
+  },
+  {
+   "idx": "CD3.5m",
+   "text": "With adult support, explores tools of measurement such as rulers, scales, and measuring cup, using the appropriate tool for the attribute/characteristic being measured"
+  },
+  {
+   "idx": "CD3.5n",
+   "text": "With instruction, shows an awareness of time by talking about events with words such as before, after, and later"
+  },
+  {
+   "idx": "SED1.1n",
+   "text": "Describes themselves (e.g., talks about self in terms of looks, gender, family, and interests)"
+  },
+  {
+   "idx": "SED1.1o",
+   "text": "Positively identifies self as a member of a specific culture or group that fits into a larger world picture"
+  },
+  {
+   "idx": "SED1.1p",
+   "text": "Shares other identifying information (e.g., parent’s name)"
+  },
+  {
+   "idx": "SED1.1q",
+   "text": "Describes a larger range of individual characteristics and interests and communicates how these are similar or different from those of other people"
+  },
+  {
+   "idx": "SED1.2k",
+   "text": "Displays pride in their accomplishments"
+  },
+  {
+   "idx": "SED1.3l",
+   "text": "Acts independently in unfamiliar settings with unfamiliar adults"
+  },
+  {
+   "idx": "SED1.3m",
+   "text": "Attempts to complete tasks independently"
+  },
+  {
+   "idx": "SED1.3n",
+   "text": "Asks for support from adults only when needed"
+  },
+  {
+   "idx": "SED2.1i",
+   "text": "Begins to recognize their own emotions before reacting (e.g., pauses and takes deep breath when mad)"
+  },
+  {
+   "idx": "SED2.1j",
+   "text": "Communicates how other children or adults may be feeling and why (e.g., states that a peer is sad because their toy was taken away)"
+  },
+  {
+   "idx": "SED2.2k",
+   "text": "Recognizes appropriate reaction to situations"
+  },
+  {
+   "idx": "SED2.2l",
+   "text": "Uses words and respectful language to express thoughts and emotions (e.g., “I’m frustrated because Jay won’t let me play” or “I’m excited to play with my cousin Santiago tomorrow.”)"
+  },
+  {
+   "idx": "SED2.3f",
+   "text": "Demonstrates confidence in meeting own needs"
+  },
+  {
+   "idx": "SED2.3g",
+   "text": "Seeks and accepts help when needed"
+  },
+  {
+   "idx": "SED2.4m",
+   "text": "Increasingly uses a variety of strategies to self-soothe or solve problems (e.g., goes to a quiet area or uses a fidget toy when upset)"
+  },
+  {
+   "idx": "SED2.4n",
+   "text": "Exhibits emotional control with or without adult support (e.g., follows group activities although upset)"
+  },
+  {
+   "idx": "SED2.5h",
+   "text": "Shows care and concern for others, including comforting others in distress"
+  },
+  {
+   "idx": "SED2.5i",
+   "text": "Begins to recognize the emotions of peers and responds with empathy and compassion"
+  },
+  {
+   "idx": "SED2.5j",
+   "text": "Begins to understand the reasons for others’ emotions and responds appropriately (e.g., a child comforts a peer who is upset that they have to clean up their toys)"
+  },
+  {
+   "idx": "SED3.1n",
+   "text": "Shows enjoyment in interactions with trusted adults while also demonstrating skills in separating from these adults"
+  },
+  {
+   "idx": "SED3.1o",
+   "text": "Comfortable with being with less familiar adults in a safe setting (e.g., engages with visitor to home or classroom)"
+  },
+  {
+   "idx": "SED3.2r",
+   "text": "Demonstrates strategies for participating in social play with peers (e.g., asks to join in game or brings new item to add to existing play)"
+  },
+  {
+   "idx": "SED3.2s",
+   "text": "Plays with peers in a coordinated manner including assigning roles, materials, and actions (e.g., sets up and assigns roles in restaurant in dramatic play area)"
+  },
+  {
+   "idx": "SED3.2t",
+   "text": "Maintains friendships over time"
+  },
+  {
+   "idx": "SED3.2u",
+   "text": "Responds to the needs of others and tries to help others with simple tasks"
+  },
+  {
+   "idx": "SED3.3n",
+   "text": "Builds on cooperative play, communication, and working memory skills by engaging in dramatic play with several other children, each taking on a particular role in a shared theme"
+  },
+  {
+   "idx": "SED3.4d",
+   "text": "Engages in prosocial behavior such as cooperating, compromising, turntaking, and resolving social conflict"
+  },
+  {
+   "idx": "SED3.4e",
+   "text": "Expresses feelings and needs in conflict situations (e.g., “I’m feeling upset because you have the truck I need for my racetrack.”)"
+  },
+  {
+   "idx": "SED3.4f",
+   "text": "Uses problem-solving strategies independently or with adult prompting when feeling angry or frustrated (e.g., asks peer to trade toys because they want the one-of-a-kind toy)"
+  }
+ ]
+}

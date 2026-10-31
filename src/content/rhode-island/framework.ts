@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Rhode Island, a US state. Standards are the ones the Rhode Island Board of Education and the Council on Elementary and
 // Secondary Education adopted: mathematics and English language arts (2010, the Common Core State Standards, which
@@ -75,9 +76,9 @@ export const RHODE_ISLAND: Framework = {
   standardLabel: "Standard",
   sourceName: "Rhode Island Department of Education",
   sourceUrl: "https://ride.ri.gov/",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Rhode Island report cards",
     intro:
