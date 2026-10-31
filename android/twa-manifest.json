@@ -22,7 +22,7 @@
   "isMetaQuest": false,
   "splashScreenFadeOutDuration": 300,
   "fallbackType": "customtabs",
-  "minSdkVersion": 21,
+  "minSdkVersion": 24,
   "appVersionName": "1.0.0",
   "appVersionCode": 1,
   "signingKey": { "path": "./grademap-upload.keystore", "alias": "grademap-upload" },
