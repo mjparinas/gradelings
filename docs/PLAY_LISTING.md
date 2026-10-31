@@ -9,12 +9,12 @@ Google Play's payments policy doesn't let an app sell digital content outside Go
 ## Store listing
 
 - **App name:** Gradelings: K-9 Practice (30 characters at most).
-- **Short description** (80 at most): `Curriculum practice and learning games for Kindergarten to Grade 9 in Canada.`
+- **Short description** (80 at most): `Curriculum practice and learning games for Kindergarten to Grade 9.` (68 characters)
 - **Full description:**
 
-  > Gradelings is kind, curriculum-matched practice for Kindergarten to Grade 9, built for Canadian families.
+  > Gradelings is kind, curriculum-matched practice for Kindergarten to Grade 9, for families in Canada and the United States.
   >
-  > • Matched to your province or territory's curriculum: math, language arts, science, social studies, and French Immersion or Core French where your province teaches them.
+  > • Matched to your province, territory or state's curriculum: math, language arts, science and social studies, plus French Immersion or Core French where your province teaches them.
   > • Speaks the language of the report card, so you can see where your child is growing.
   > • Gentle feedback: a wrong answer gets a hint and another try. No buzzers, no shame.
   > • Learning earns game time, with limits you set.
@@ -27,11 +27,12 @@ Google Play's payments policy doesn't let an app sell digital content outside Go
   > Start with a free trial. After it ends, the first units of every subject stay free.
 
 - **Category:** Education. **Tags:** Education, Kids, Math.
-- **Contact email:** `CONTACT_EMAIL` in `src/lib/brand.ts`. **Website:** the production domain. **Privacy policy:** `https://<domain>/privacy/`.
+- **Contact email:** `CONTACT_EMAIL` in `src/lib/brand.ts`. **Website:** the production domain. **Privacy policy:** `https://www.gradelings.com/privacy/`.
 - **Graphics:** a 512×512 icon (the PWA icon), a 1024×500 feature graphic, and at least 4 screenshots each for phone, 7-inch tablet and 10-inch tablet. `node scripts/e2e-devices.mjs` already drives the app at those sizes; take the screenshots from a demo child with some practice, with no real child's name.
 
 ## Target audience and content (App content page)
 
+- **US children (COPPA):** a US family's children and progress don't leave the device until a parent gives consent in the parent area (`UsConsent.tsx`), and no guest count is sent for a US child. Say so if the Families declaration or a reviewer asks how parental consent is collected.
 - **Target age groups:** 5 and under, 6–8, 9–12, 13–15. This puts the app in the **Families** program: it must meet the Families policy and Google's Teacher Approved criteria are optional.
 - **Families policy fit:** no ads and no ad SDKs; no third-party analytics in the app (Vercel Web Analytics runs on public pages only, never `/play/` or `/parents/`, see `src/components/SiteAnalytics.tsx`); the parent area and anything to do with accounts or billing sit behind the parent PIN gate; children can't type free text, upload photos or record voice.
 - **Ads:** "No, my app does not contain ads."
@@ -51,11 +52,12 @@ Collected (sent to our server), only when a parent makes an account and turns on
 | App activity → App interactions | Yes (practice answers and results) | App functionality, analytics shown to the parent | Yes |
 | App info and performance → Crash logs, Diagnostics | Yes, when error reporting is on (Sentry, with names, emails and typing stripped) | App functionality | No |
 | Financial info → Purchase history | No in the app (Stripe handles payment on the website) | | |
-| Location, contacts, photos, audio, files, messages, calendar, device ids | No | | |
+| Device or other IDs | Yes, only on a device with no parent account and not for a US child: a one-way hash of a random id the app makes, kept 35 days, to count guest players (`src/lib/guestPing.ts`) | Analytics | No |
+| Location, contacts, photos, audio, files, messages, calendar | No | | |
 
 - **Shared with third parties:** no. Stripe, Resend, Sentry and the hosting provider are service providers acting for us, which Play doesn't count as sharing.
 - **Encrypted in transit:** yes (HTTPS only).
-- **Deletion:** yes. In the app under Parent area → Account → Delete account, and on the web at `https://<domain>/parents/#/account`. Give that web link as the deletion URL Play asks for.
+- **Deletion:** yes. In the app under Parent area → Account → Delete account, and on the web at `https://www.gradelings.com/parents/#/account`. Give that web link as the deletion URL Play asks for.
 - **Independent security review:** no.
 - **Families policy declaration:** yes, the app follows it.
 
