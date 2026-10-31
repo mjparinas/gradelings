@@ -143,6 +143,10 @@ export const SOUTH_CAROLINA_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "South Carolina's full-day 4K year (CERDEP) runs in public schools and approved community programs for four-year-olds. It follows the South Carolina Early Learning Standards (2017).",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in South Carolina is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 by ones and tens, and start adding and taking away within 10. Science looks at pushes and pulls, living things and weather, and social studies, The Community Around Us, covers rules, needs and wants, jobs and simple maps.",
       lookFor: "Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

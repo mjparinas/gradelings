@@ -171,6 +171,10 @@ export const MICHIGAN_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Michigan's Great Start Readiness Program funds a pre-K year for four-year-olds in schools and community programs. It follows Michigan's Early Childhood Standards of Quality for Birth to Kindergarten (2022).",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in Michigan is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. In social studies (Myself and Others) they learn about themselves, families, rules, the American flag and the difference between goods and services. Schools also give early literacy and math benchmark checks.",
       lookFor: "Many Michigan districts use standards-based report cards. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

@@ -1,0 +1,134 @@
+{
+ "pk/math": [
+  {
+   "idx": "M 1.a",
+   "text": "Children develop number recognition and counting skills and learn the relationship between numbers and the quantity they represent."
+  },
+  {
+   "idx": "M 2.a",
+   "text": "Children learn to use numbers to compare quantities and solve mathematical situations."
+  },
+  {
+   "idx": "M 3.a",
+   "text": "Children learn to order and sort objects by common attributes, to identify patterns, and to predict the next sequence in a pattern."
+  },
+  {
+   "idx": "M 4.a",
+   "text": "Children learn to measure objects by their various attributes to make comparisons."
+  },
+  {
+   "idx": "M 5.a",
+   "text": "Children learn to identify shapes and their attributes, solve problems using shapes, and explore the positions of objects in space."
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "LD 1.a",
+   "text": "Children attend to, understand, and respond to increasingly complex language."
+  },
+  {
+   "idx": "LD 2.a",
+   "text": "Children use increasingly complex vocabulary, grammar, and syntax to express thoughts and needs."
+  },
+  {
+   "idx": "LD 3.a",
+   "text": "Children understand, follow, and use appropriate social and conversational rules."
+  },
+  {
+   "idx": "LD 4.a",
+   "text": "Multilingual children attend to, understand, and respond to increasingly complex language on a range of topics, including personally meaningful experiences and texts (including digital texts) in English and their home language(s)."
+  },
+  {
+   "idx": "LD 4.b",
+   "text": "Multilingual children become increasingly proficient in expressing their thoughts and ideas in English and their home language(s)."
+  },
+  {
+   "idx": "L 1.a",
+   "text": "Children demonstrate awareness of spoken words, syllables, and sounds (phonemes)."
+  },
+  {
+   "idx": "L 2.a",
+   "text": "Children develop letter-sound correspondence and identify letters by sounds (phonemes) and names."
+  },
+  {
+   "idx": "L 2.b",
+   "text": "Children demonstrate book awareness and knowledge of basic print conventions; they understand that print carries meaning and spoken words are represented by text."
+  },
+  {
+   "idx": "L 3.a",
+   "text": "Children show interest in and an understanding of a variety of literacy experiences."
+  },
+  {
+   "idx": "L 4.a",
+   "text": "Multilingual children become increasingly engaged in literacy experiences in English and their home language(s)."
+  },
+  {
+   "idx": "L 5.a",
+   "text": "Children use a combination of drawing, dictating, and writing to show knowledge of writing conventions and demonstrate writing as a means of communication."
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "S 2.a",
+   "text": "Children gain increasing knowledge of basic concepts related to the properties of objects and materials, forces and motion, and energy (light and sound)."
+  },
+  {
+   "idx": "S 3.a",
+   "text": "Children gain increasing knowledge of the features of earth and space, the components of weather, and how all living things depend on natural resources to survive."
+  },
+  {
+   "idx": "S 4.a",
+   "text": "Children begin to learn about the characteristics , needs, and life cycles of living things and how they get their needs met within a particular environment."
+  },
+  {
+   "idx": "S 1.a",
+   "text": "Children are increasingly able to engage with the inquiry process by developing questions, planning and carryings out investigations, collecting and analyzing data, generating and sharing findings and ideas, and using and applying new knowledge to solve problems."
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "SE 1.a",
+   "text": "Children develop trust in and engage positively with adults who are familiar and consistently present in children’s lives."
+  },
+  {
+   "idx": "SE 1.b",
+   "text": "Children engage in positive relationships and interactions with other children."
+  },
+  {
+   "idx": "SE 2.a",
+   "text": "Children develop an awareness of themselves as an individual with unique thoughts, feelings, and perspectives."
+  },
+  {
+   "idx": "SE 2.b",
+   "text": "Children develop the confidence to complete an action successfully or independently."
+  },
+  {
+   "idx": "SE 3.a",
+   "text": "Children develop the ability to identify, express, and manage their emotions."
+  },
+  {
+   "idx": "SE 3.b",
+   "text": "Children develop the ability to manage impulses and express emotions appropriately even in challenging situations."
+  },
+  {
+   "idx": "SS 1.a",
+   "text": "Children develop awareness that care of the community through personal responsibility, agreed-upon rules, and conflict resolution are important components of a fair and just society."
+  },
+  {
+   "idx": "SS 2.a",
+   "text": "Children demonstrate increasing knowledge of basic economic concepts such as supply and demand, occupations, and currency."
+  },
+  {
+   "idx": "SS 3.a",
+   "text": "Children develop an understanding of the passage of time as it relates to historical changes in events, people, and the world."
+  },
+  {
+   "idx": "SS 3.b",
+   "text": "Children gain awareness of themselves and others as members of diverse families, communities, and cultures."
+  },
+  {
+   "idx": "SS 4.a",
+   "text": "Children demonstrate knowledge of geographical concepts of location and physical characteristics of the environments in which they live."
+  }
+ ]
+}

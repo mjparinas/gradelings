@@ -1,0 +1,174 @@
+{
+ "pk/math": [
+  {
+   "idx": "V.B.EL.1",
+   "text": "Demonstrates understanding of numbers and counting"
+  },
+  {
+   "idx": "V.B.EL.2",
+   "text": "Understands number operations and relationships"
+  },
+  {
+   "idx": "V.B.EL.3",
+   "text": "Explores, recognizes, and describes shapes and spatial relationships"
+  },
+  {
+   "idx": "V.B.EL.4",
+   "text": "Uses the attributes of objects for comparison and patterning"
+  },
+  {
+   "idx": "V.B.EL.5",
+   "text": "Understands the concept of measurement"
+  },
+  {
+   "idx": "V.B.EL.6",
+   "text": "Collects, describes, and records information using all senses"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "III.A.EL.1",
+   "text": "Derives meaning through listening to communications of others and sounds in"
+  },
+  {
+   "idx": "III.A.EL.2",
+   "text": "Listens and responds to communication with others"
+  },
+  {
+   "idx": "III.A.EL.3",
+   "text": "Follows directions of increasing complexity"
+  },
+  {
+   "idx": "III.B.EL.1",
+   "text": "Uses gestures and movements (non-verbal) to communicate"
+  },
+  {
+   "idx": "III.B.EL.2a",
+   "text": "Uses vocalizations and spoken language to communicate"
+  },
+  {
+   "idx": "III.B.EL.2b",
+   "text": "Uses vocalizations and spoken language to communicate"
+  },
+  {
+   "idx": "III.B.EL.2c",
+   "text": "Uses vocalizations and spoken language to communicate"
+  },
+  {
+   "idx": "III.C.EL.1",
+   "text": "Develops ability to detect, manipulate, or analyze the auditory parts of spoken"
+  },
+  {
+   "idx": "III.C.EL.2",
+   "text": "Understands concept that the alphabet represents the sounds of spoken language"
+  },
+  {
+   "idx": "III.C.EL.3",
+   "text": "Shows appreciation of books and understands how print works"
+  },
+  {
+   "idx": "III.C.EL.4",
+   "text": "Uses writing to represent thoughts or ideas"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "V.A.EL.1",
+   "text": "Uses multi-sensory abilities to process information"
+  },
+  {
+   "idx": "V.A.EL.2",
+   "text": "Understands new meanings as memory increases"
+  },
+  {
+   "idx": "V.A.EL.3",
+   "text": "Applies problem solving skills"
+  },
+  {
+   "idx": "V.C.EL.1",
+   "text": "Uses observation to gather information"
+  },
+  {
+   "idx": "V.C.EL.2",
+   "text": "Use tools to gather information, compare observed objects, and seek answers to"
+  },
+  {
+   "idx": "V.C.EL.3",
+   "text": "Hypothesizes and makes predictions"
+  },
+  {
+   "idx": "V.C.EL.4",
+   "text": "Forms explanations based on trial and error, observations, and explorations"
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "II.A.EL.1",
+   "text": "Expresses a wide range of emotions"
+  },
+  {
+   "idx": "II.A.EL.2",
+   "text": "Understands and responds to others’ emotions"
+  },
+  {
+   "idx": "II.B.EL.1",
+   "text": "Develops positive self-esteem"
+  },
+  {
+   "idx": "II.B.EL.2",
+   "text": "Demonstrates self-awareness"
+  },
+  {
+   "idx": "II.C.EL.1",
+   "text": "Demonstrates attachment, trust, and autonomy"
+  },
+  {
+   "idx": "II.C.EL.2",
+   "text": "Engages in social interaction and plays with others"
+  },
+  {
+   "idx": "II.C.EL.3",
+   "text": "Demonstrates understanding of rules and social expectations"
+  },
+  {
+   "idx": "II.C.EL.4",
+   "text": "Engages in social problem-solving behavior and learns to resolve conflict"
+  },
+  {
+   "idx": "IV.C.EL.1",
+   "text": "Experiences a variety of routines, practices, and languages"
+  },
+  {
+   "idx": "IV.C.EL.2",
+   "text": "Learns within the context of his/her family and culture"
+  },
+  {
+   "idx": "IV.C.EL.3",
+   "text": "Uses various styles of learning such as visual/spatial, verbal/linguistic,"
+  },
+  {
+   "idx": "V.B.EL.1",
+   "text": "Demonstrates understanding of numbers and counting"
+  },
+  {
+   "idx": "V.B.EL.2",
+   "text": "Understands number operations and relationships"
+  },
+  {
+   "idx": "V.B.EL.3",
+   "text": "Explores, recognizes, and describes shapes and spatial relationships"
+  },
+  {
+   "idx": "V.B.EL.4",
+   "text": "Uses the attributes of objects for comparison and patterning"
+  },
+  {
+   "idx": "V.B.EL.5",
+   "text": "Understands the concept of measurement"
+  },
+  {
+   "idx": "V.B.EL.6",
+   "text": "Collects, describes, and records information using all senses"
+  }
+ ]
+}

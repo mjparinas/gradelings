@@ -90,7 +90,8 @@ describe("Rhode Island", () => {
   });
 
   it("cites the Rhode Island Social Studies Standards by their own codes", () => {
-    const social = rhodeIsland.filter(({ c }) => c.subject === "social");
+    // Pre-K cites the Rhode Island Early Learning and Development Standards instead (checked by the contract).
+    const social = rhodeIsland.filter(({ c }) => c.subject === "social" && c.grade !== "pk");
     for (const { c, u, key } of social) {
       const code = c.grade === "9" ? /^SSHS\.CVC\.\d/ : c.grade === "k" ? /^SSK\.\d/ : new RegExp(`^SS${c.grade}\\.\\d`);
       expect(u.standards["us-ri"], key).toMatch(code);

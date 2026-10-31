@@ -5,6 +5,7 @@ export const manifest = defineFramework({
   id: "us-nh",
   framework: NEW_HAMPSHIRE,
   grades: {
+    pk: () => import("./pk"),
     k: () => import("./k"),
     "1": () => import("./g1"),
     "2": () => import("./g2"),
