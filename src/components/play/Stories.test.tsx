@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 import { act, fireEvent, render, screen, within } from "@testing-library/react";
-import { beforeEach, describe, expect, it, vi } from "vitest";
+import { beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 import type { Question } from "@/content/types";
 import type { AgeBand } from "@/content/types";
 import type { SpeechEvents, SpeechPiece } from "@/lib/speech";
@@ -47,9 +47,14 @@ vi.mock("./Session", () => ({
   ),
 }));
 
+import { loadStories } from "@/content/stories";
 import { StoryLibrary, StoryReader } from "./Stories";
 
 const inBand = (ui: React.ReactElement, band: AgeBand = "middle") => render(<BandProvider value={band}>{ui}</BandProvider>);
+
+// The library is a dynamic import. Load it once up front, so the first test doesn't spend its
+// 1-second wait on that cold import: on a busy CI machine it sometimes didn't fit (October 2026).
+beforeAll(() => loadStories(), 30_000);
 
 beforeEach(() => {
   vi.clearAllMocks();
