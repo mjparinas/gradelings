@@ -1,5 +1,5 @@
 import { getSubjectMeta, isCoreSubject, subjectsIn } from "@/content/subjects";
-import { isOn } from "./remoteFlags";
+import { isOn } from "./deviceFlags";
 import { allUnitRefs } from "@/content";
 import type { FrameworkId, GradeId, SubjectId } from "@/content/types";
 import type { Derived } from "./derive";

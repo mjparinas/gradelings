@@ -1,7 +1,7 @@
 import { getFramework } from "@/content/frameworks";
 import { languagesOf, subjectsOffered } from "@/content/subjects";
 import type { GradeId, SubjectId } from "@/content/types";
-import { isOn } from "./remoteFlags";
+import { isOn } from "./deviceFlags";
 
 // The arcade's games: what each one is, which grades it fits and the level that unlocks it.
 // Kept free of the store and content so public pages can list the games cheaply.

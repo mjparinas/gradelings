@@ -1,7 +1,7 @@
 "use client";
 
 import manifest from "./piper-manifest.json";
-import { isOn } from "./remoteFlags";
+import { isOn } from "./deviceFlags";
 import type { SpeechLanguage } from "./speech";
 
 // Piper: a natural-sounding voice that runs on the device, so it works offline and the same on
