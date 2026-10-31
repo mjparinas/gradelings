@@ -1,0 +1,386 @@
+{
+ "data": {
+  "cspStatus": {
+   "notes": null,
+   "value": "visible"
+  },
+  "document": {
+   "sourceURL": "https://www.tn.gov/content/dam/tn/education/standards/tnelds/std_tnelds_4yo_2018.pdf",
+   "title": "Tennessee Early Learning Developmental Standards"
+  },
+  "educationLevels": [
+   "Pre-K"
+  ],
+  "id": "DDD7D47970944CDABA9A7FA6F1B52614",
+  "jurisdiction": {
+   "id": "180878796A3C448D808F38BCCCFD26CF",
+   "title": "Tennessee"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/4.0/us/",
+   "rightsHolder": "Common Curriculum, Inc.",
+   "title": "CC BY 4.0 US"
+  },
+  "normalizedSubject": null,
+  "standards": {
+   "022015EA2714471DB07B00FEDC4210C5": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Life Science: From molecules to organisms: structures and processes.",
+    "id": "022015EA2714471DB07B00FEDC4210C5",
+    "listId": "",
+    "parentId": null,
+    "position": 1005,
+    "statementLabel": null,
+    "statementNotation": "LS"
+   },
+   "1236F84A444F40D5A20242BA0AE2F40A": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Engineering, Technology and Science: Links among engineering, technology, science, and society.",
+    "id": "1236F84A444F40D5A20242BA0AE2F40A",
+    "listId": "",
+    "parentId": null,
+    "position": 1020,
+    "statementLabel": null,
+    "statementNotation": "ETS2"
+   },
+   "1E236E8567C74D9C9649DC209727E34E": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Engineering, Technology and Science: Engineering design.",
+    "id": "1E236E8567C74D9C9649DC209727E34E",
+    "listId": "",
+    "parentId": null,
+    "position": 1016,
+    "statementLabel": null,
+    "statementNotation": "ETS1"
+   },
+   "3AE01712292A4EBA9021496814B6DBB4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E361F17FB57849289E8CF16F52449489"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Describe and categorize objects based on\ntheir observable properties.",
+    "id": "3AE01712292A4EBA9021496814B6DBB4",
+    "listId": "1a",
+    "parentId": "E361F17FB57849289E8CF16F52449489",
+    "position": 1001,
+    "statementLabel": null,
+    "statementNotation": "PK.PS1.01a"
+   },
+   "507863316CA841F088610711742DC704": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1E236E8567C74D9C9649DC209727E34E"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Use senses to gather, explore, and\ninterpret information. ",
+    "id": "507863316CA841F088610711742DC704",
+    "listId": "1a",
+    "parentId": "1E236E8567C74D9C9649DC209727E34E",
+    "position": 1017,
+    "statementLabel": null,
+    "statementNotation": "PK.ETS1.01a"
+   },
+   "5487EC76AA504EC3BA2679758BB487A1": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Earth Science: Earth systems.\nNote: Earth Science (ESS1): Earth’s place in the universe begins in Kindergarten.\n",
+    "id": "5487EC76AA504EC3BA2679758BB487A1",
+    "listId": "",
+    "parentId": null,
+    "position": 1009,
+    "statementLabel": null,
+    "statementNotation": "ESS2"
+   },
+   "59A598512CAC458B9BFD938467E9A9D9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5487EC76AA504EC3BA2679758BB487A1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Observe and discuss changes in weather and\nseasons using common weather-related vocabulary\n(e.g., rain, sun, snow, wind, spring, summer,\nfall/autumn, winter, etc.).",
+    "id": "59A598512CAC458B9BFD938467E9A9D9",
+    "listId": "1b",
+    "parentId": "5487EC76AA504EC3BA2679758BB487A1",
+    "position": 1011,
+    "statementLabel": null,
+    "statementNotation": "PK.ESS2.01b"
+   },
+   "59E78F5204E2431CA5A1957AB38AA431": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "022015EA2714471DB07B00FEDC4210C5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Recognize and describe the function of the five\nsenses of humans.",
+    "id": "59E78F5204E2431CA5A1957AB38AA431",
+    "listId": "1c",
+    "parentId": "022015EA2714471DB07B00FEDC4210C5",
+    "position": 1008,
+    "statementLabel": null,
+    "statementNotation": "PK.LS1.01c"
+   },
+   "5EC13A164D624C039E245A689093280E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E361F17FB57849289E8CF16F52449489"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Observe, predict, and describe how objects can be\ncombined, stacked, or arranged to create a new\nobject.",
+    "id": "5EC13A164D624C039E245A689093280E",
+    "listId": "1d",
+    "parentId": "E361F17FB57849289E8CF16F52449489",
+    "position": 1004,
+    "statementLabel": null,
+    "statementNotation": "PK.PS1.01"
+   },
+   "67BA57D6749145F19355C41FEABEDEF0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "022015EA2714471DB07B00FEDC4210C5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Recognize differences between living organisms and\nnon-living materials.",
+    "id": "67BA57D6749145F19355C41FEABEDEF0",
+    "listId": "1b",
+    "parentId": "022015EA2714471DB07B00FEDC4210C5",
+    "position": 1007,
+    "statementLabel": null,
+    "statementNotation": "PK.LS1.01b"
+   },
+   "6E5DDEB2F3AE4E2395F27CA0D681AA48": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "022015EA2714471DB07B00FEDC4210C5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": " Identify common attributes of familiar\nliving things.",
+    "id": "6E5DDEB2F3AE4E2395F27CA0D681AA48",
+    "listId": "1a",
+    "parentId": "022015EA2714471DB07B00FEDC4210C5",
+    "position": 1006,
+    "statementLabel": null,
+    "statementNotation": "PK.LS1.01a"
+   },
+   "7B9F86A985354216B74B47D1B247C23B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E361F17FB57849289E8CF16F52449489"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Demonstrate an awareness that matter exist in\ndifferent states (i.e., solid and liquid) and that matter\nchanges as a result of changes in its environment.",
+    "id": "7B9F86A985354216B74B47D1B247C23B",
+    "listId": "1b",
+    "parentId": "E361F17FB57849289E8CF16F52449489",
+    "position": 1002,
+    "statementLabel": null,
+    "statementNotation": "PK.PS1.01b"
+   },
+   "8F072AE714F14B3AADA11D8869C14E0D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1E236E8567C74D9C9649DC209727E34E"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Make predictions based on observations and prior\nexplorations. ",
+    "id": "8F072AE714F14B3AADA11D8869C14E0D",
+    "listId": "1c",
+    "parentId": "1E236E8567C74D9C9649DC209727E34E",
+    "position": 1019,
+    "statementLabel": null,
+    "statementNotation": "PK.ETS1.01c"
+   },
+   "B6AF41D5C1E2464B805F265FF74D9611": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1E236E8567C74D9C9649DC209727E34E"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "With modeling, prompting, and support, record and\norganize data using graphs, charts, science journals,\netc., to communicate conclusions regarding\nexperiments and explorations.",
+    "id": "B6AF41D5C1E2464B805F265FF74D9611",
+    "listId": "1b",
+    "parentId": "1E236E8567C74D9C9649DC209727E34E",
+    "position": 1018,
+    "statementLabel": null,
+    "statementNotation": "PK.ETS1.01b"
+   },
+   "B90EDE13CE7B420EA482861D2B70FDC3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E361F17FB57849289E8CF16F52449489"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Observe, predict, and describe how objects move\nusing common motion related vocabulary (e.g.,\nstraight, fast/slow, up/down, zigzag).",
+    "id": "B90EDE13CE7B420EA482861D2B70FDC3",
+    "listId": "1c",
+    "parentId": "E361F17FB57849289E8CF16F52449489",
+    "position": 1003,
+    "statementLabel": null,
+    "statementNotation": "PK.PS1.01c"
+   },
+   "BA737D82677A4D1EBD50B2AD89E3A825": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5487EC76AA504EC3BA2679758BB487A1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Investigate and identify a variety of Earth\nmaterials by their observable properties (e.g. soil,\nrocks, sand, water).",
+    "id": "BA737D82677A4D1EBD50B2AD89E3A825",
+    "listId": "1a",
+    "parentId": "5487EC76AA504EC3BA2679758BB487A1",
+    "position": 1010,
+    "statementLabel": null,
+    "statementNotation": "PK.ESS2.01a"
+   },
+   "C9038BB7C8024AAA8DEFB171E5815E3A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1236F84A444F40D5A20242BA0AE2F40A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Explore familiar environments through the use of\nsimple tools.",
+    "id": "C9038BB7C8024AAA8DEFB171E5815E3A",
+    "listId": "1b",
+    "parentId": "1236F84A444F40D5A20242BA0AE2F40A",
+    "position": 1022,
+    "statementLabel": null,
+    "statementNotation": "PK.ETS2.01b"
+   },
+   "CC2A55B8FDBC4520BB42F05E577FC143": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F1DCEB84DA554215969D6812DCB4762B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Explore ways that humans use water and\nmaterials/resources from the Earth (e.g., water to\ndrink, wood to make blocks, soil to grow food, bricks\nto make homes, plants to make food, etc.).",
+    "id": "CC2A55B8FDBC4520BB42F05E577FC143",
+    "listId": "1c",
+    "parentId": "F1DCEB84DA554215969D6812DCB4762B",
+    "position": 1015,
+    "statementLabel": null,
+    "statementNotation": "PK.ESS3.01c"
+   },
+   "E361F17FB57849289E8CF16F52449489": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Physical Science: Matter and its interactions.",
+    "id": "E361F17FB57849289E8CF16F52449489",
+    "listId": "",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": null,
+    "statementNotation": "PS"
+   },
+   "EB98050836EE4EB8A2736B8DD76C1940": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F1DCEB84DA554215969D6812DCB4762B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Observe and discuss how humans and animals\nrespond to changes in weather.",
+    "id": "EB98050836EE4EB8A2736B8DD76C1940",
+    "listId": "1b",
+    "parentId": "F1DCEB84DA554215969D6812DCB4762B",
+    "position": 1014,
+    "statementLabel": null,
+    "statementNotation": "PK.ESS3.01b"
+   },
+   "F1DCEB84DA554215969D6812DCB4762B": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Earth Science: Earth and human activity.\n",
+    "id": "F1DCEB84DA554215969D6812DCB4762B",
+    "listId": "",
+    "parentId": null,
+    "position": 1012,
+    "statementLabel": null,
+    "statementNotation": "ESS3"
+   },
+   "F325ED019FBB41FE9BD9867F9BD073FC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F1DCEB84DA554215969D6812DCB4762B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Observe, describe, and compare the\nhabitats of plants and animals. ",
+    "id": "F325ED019FBB41FE9BD9867F9BD073FC",
+    "listId": "1a",
+    "parentId": "F1DCEB84DA554215969D6812DCB4762B",
+    "position": 1013,
+    "statementLabel": null,
+    "statementNotation": "PK.ESS3.01a"
+   },
+   "F97E395E81F74C15A57D3B5D99F2BBDB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1236F84A444F40D5A20242BA0AE2F40A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Recognize that tools have specific\ncharacteristics that determine their use.",
+    "id": "F97E395E81F74C15A57D3B5D99F2BBDB",
+    "listId": "1a",
+    "parentId": "1236F84A444F40D5A20242BA0AE2F40A",
+    "position": 1021,
+    "statementLabel": null,
+    "statementNotation": "PK.ETS2.01a"
+   }
+  },
+  "subject": "Early Learning Developmental Standards (2018-)",
+  "title": "Science"
+ }
+}

@@ -141,6 +141,10 @@ export const PENNSYLVANIA_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pennsylvania funds a pre-K year for many four-year-olds through Pre-K Counts and Head Start, in schools, child care and community programs. Programs follow the Pennsylvania Learning Standards for Early Childhood, Pre-Kindergarten (2024).",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten is optional in Pennsylvania, and most districts offer it. It is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. Science looks at plants, animals, weather and pushes and pulls, and social studies covers rules, needs and wants, jobs, and simple maps.",
       lookFor: "Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

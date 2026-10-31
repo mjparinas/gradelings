@@ -2,7 +2,8 @@
 
 ## Framework
 
-- **Id and slug:** `us-ri`, `rhode-island`. Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: Rhode Island has no statewide French standards the app follows). Offered to families and in classroom mode.
+- **Id and slug:** `us-ri`, `rhode-island`. Pre-K and Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: Rhode Island has no statewide French standards the app follows). Offered to families and in classroom mode.
+- **Pre-K:** the 26 shared Pre-K units (`src/content/grades/pk/`), cited by the Rhode Island Early Learning and Development Standards' learning goals (`M 1.a`) (`src/content/rhode-island/pk.ts`), checked against `docs/research/rhode-island/prek/outcomes.json` (sources in `source/`, `fetch.sh`, `build_outcomes.py`). Practice steps only.
 
 ## Standards
 
@@ -23,7 +24,7 @@
 
 ## Parent guides
 
-- `src/content/rhode-island/guides.ts`, US English: the hub, grade notes for Kindergarten to Grade 9, the eight Standards for Mathematical Practice (`/guides/rhode-island/math-practices/`) and state tests (`/guides/rhode-island/state-tests/`; dates point to the Department). No French guide.
+- `src/content/rhode-island/guides.ts`, US English: the hub, grade notes for Pre-K to Grade 9, the eight Standards for Mathematical Practice (`/guides/rhode-island/math-practices/`) and state tests (`/guides/rhode-island/state-tests/`; dates point to the Department). No French guide.
 
 ## Schools
 

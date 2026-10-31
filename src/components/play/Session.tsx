@@ -44,6 +44,7 @@ import { useAllowed } from "./useAllowed";
 import { useNow } from "@/lib/useNow";
 import { timerChoice } from "@/lib/timers";
 import { isLivePaused } from "@/lib/livePause";
+import { clearUnfinished, isResumable, saveUnfinished, unfinishedFor, type Unfinished } from "@/lib/resume";
 
 const PRAISE = ["Great job!", "You got it!", "Super!", "Awesome!", "Way to go!", "Nailed it!", "Brilliant!"];
 const NUDGE = ["Almost! Try again.", "So close! Have another go.", "Good try! Look again."];
@@ -84,7 +85,7 @@ interface Result {
   correct: boolean;
 }
 
-export function Session({ mode, scope }: { mode: Mode; scope: string }) {
+export function Session({ mode, scope, resume = false }: { mode: Mode; scope: string; resume?: boolean }) {
   const profile = useActiveProfile()!;
   const settings = useChildSettings();
   const band = useBand();
@@ -92,6 +93,7 @@ export function Session({ mode, scope }: { mode: Mode; scope: string }) {
   const derivedNow = useDerived();
   const matchReading = useFlag("reading-level-match");
   const subjectGrades = useSubjectGrades();
+  const resumeOn = useFlag("resume-lesson");
   const [plan] = useState<Plan | null>(() =>
     makePlan({
       mode,
@@ -119,10 +121,17 @@ export function Session({ mode, scope }: { mode: Mode; scope: string }) {
       </Page>
     );
   }
-  return <Runner plan={plan} />;
+  return <Runner plan={plan} resumeOn={resumeOn} resume={resume && resumeOn ? resumable(plan, profile.id) : undefined} />;
 }
 
-function Runner({ plan }: { plan: Plan }) {
+/** The saved place in this lesson, when it still fits the questions the plan has. */
+function resumable(plan: Plan, profileId: string): Unfinished | undefined {
+  const saved = unfinishedFor(profileId, plan.mode, plan.scope);
+  if (!saved || plan.total === undefined || saved.results.length >= plan.total) return undefined;
+  return saved;
+}
+
+function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfinished; resumeOn?: boolean }) {
   const profile = useActiveProfile()!;
   const say = useChildSay();
   const settings = useChildSettings();
@@ -131,15 +140,17 @@ function Runner({ plan }: { plan: Plan }) {
   const logSoon = useStore((s) => s.logSoon);
   const startDerived = useMemo(() => derivedFor(useStore.getState(), profile.id), [profile.id]);
 
-  const [started] = useState(() => Date.now());
+  // A lesson picked up again carries on its clock from where it stopped.
+  const [started] = useState(() => Date.now() - (resume?.ms ?? 0));
   const [now, setNow] = useState(() => Date.now());
   const recent = useRef<string[]>([]);
-  const [index, setIndex] = useState(0);
-  const [item, setItem] = useState<Item | undefined>(() => plan.next({ index: 0, recent: [], derived: startDerived }));
+  const startAt = resume?.results.length ?? 0;
+  const [index, setIndex] = useState(startAt);
+  const [item, setItem] = useState<Item | undefined>(() => plan.next({ index: startAt, recent: [], derived: startDerived }));
   const [shownAt, setShownAt] = useState(() => Date.now());
   const [status, setStatus] = useState<Status>("answering");
   const [misses, setMisses] = useState(0);
-  const [results, setResults] = useState<Result[]>([]);
+  const [results, setResults] = useState<Result[]>(() => resume?.results.map((correct) => ({ correct })) ?? []);
   const [run, setRun] = useState(0);
   const [mood, setMood] = useState<Mood>("happy");
   const [message, setMessage] = useState("");
@@ -179,6 +190,23 @@ function Runner({ plan }: { plan: Plan }) {
     }, 250);
     return () => clearInterval(t);
   }, [done, checkpoint]);
+
+  // Keep this lesson's place on the device after each answer, so it can be finished later if the app closes.
+  const keepPlace = resumeOn && isResumable(plan.mode) && plan.total !== undefined;
+  useEffect(() => {
+    if (!keepPlace || done || results.length === 0) return;
+    if (results.length >= plan.total!) return clearUnfinished(profile.id);
+    saveUnfinished(profile.id, {
+      mode: plan.mode,
+      scope: plan.scope,
+      title: plan.title,
+      icon: plan.icon,
+      results: results.map((r) => r.correct),
+      total: plan.total!,
+      ms: Date.now() - started,
+      at: Date.now(),
+    });
+  }, [keepPlace, done, results, plan, profile.id, started]);
 
   // Countdown tick in the last 5 seconds, and time's up.
   const lastTick = useRef(0);
@@ -241,6 +269,7 @@ function Runner({ plan }: { plan: Plan }) {
     if (done) return;
     stopSpeaking();
     setDone(true);
+    if (keepPlace) clearUnfinished(profile.id);
     // Results state may lag one render behind a final answer, so read it fresh.
     setResults((list) => {
       if (plan.mode !== "adventure" || list.length - loggedUpTo.current >= 3) logSession(list);
@@ -526,7 +555,11 @@ function Runner({ plan }: { plan: Plan }) {
             onClick={() => {
               setConfirmExit(false);
               if (results.length >= 3) finish();
-              else go("/");
+              else {
+                // Stopping on purpose: nothing to come back to.
+                if (keepPlace) clearUnfinished(profile.id);
+                go("/");
+              }
             }}
           >
             Stop

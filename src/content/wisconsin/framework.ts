@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Wisconsin, a US state. Standards are Wisconsin's academic standards, adopted by the State Superintendent and published
 // by the Department of Public Instruction (DPI): mathematics (2021), English language arts (2020), science (2017),
@@ -74,9 +75,9 @@ export const WISCONSIN: Framework = {
   standardLabel: "Standard",
   sourceName: "Wisconsin Department of Public Instruction",
   sourceUrl: "https://dpi.wi.gov/standards",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Wisconsin report cards",
     intro:

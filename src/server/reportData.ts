@@ -1,7 +1,7 @@
 import "server-only";
 import { loadGrade } from "@/content";
 import { DEFAULT_FRAMEWORK } from "@/content/frameworks";
-import { derive } from "@/lib/derive";
+import { derive, type Derived } from "@/lib/derive";
 import type { AppEvent, ChildSettings, Profile } from "@/lib/model";
 import { buildReport, type Report } from "@/lib/reports";
 import { practiceTargets, subjectGradesFor } from "@/lib/subjectGrades";
@@ -31,8 +31,8 @@ export async function loadChildReport(familyId: string, profileId: string, days:
   return data && { profile: data.profile, report: data.report };
 }
 
-/** The report plus the events it was built from (the class view counts homework from them). */
-export async function loadChildData(familyId: string, profileId: string, days: number, now = Date.now()): Promise<(ChildReport & { events: AppEvent[] }) | null> {
+/** The report plus the events and stats it was built from (the class view and the weekly email count homework from them). */
+export async function loadChildData(familyId: string, profileId: string, days: number, now = Date.now()): Promise<(ChildReport & { events: AppEvent[]; derived: Derived }) | null> {
   const rows = await query<{ data: string }>("SELECT data FROM profiles WHERE id = ? AND family_id = ?", [profileId, familyId]);
   if (!rows[0]) return null;
   const stored = JSON.parse(rows[0].data) as Profile;
@@ -46,8 +46,9 @@ export async function loadChildData(familyId: string, profileId: string, days: n
   const settingsRow = (await query<{ data: string }>("SELECT data FROM child_settings WHERE profile_id = ? AND family_id = ?", [profileId, familyId]))[0];
   const subjectGrades = settingsRow && (await isFlagOn("subject-levels", familyId)) ? subjectGradesFor(profile, JSON.parse(settingsRow.data) as ChildSettings) : {};
   await Promise.all(practiceTargets(profile, { subjectGrades }).map((t) => loadGrade(t.grade, t.framework)));
-  const report = buildReport(events, derive(events, now), profile.grade, profile.framework, days, now, subjectGrades);
-  return { profile, report, events };
+  const derived = derive(events, now);
+  const report = buildReport(events, derived, profile.grade, profile.framework, days, now, subjectGrades);
+  return { profile, report, events, derived };
 }
 
 export async function familyProfileIds(familyId: string): Promise<string[]> {

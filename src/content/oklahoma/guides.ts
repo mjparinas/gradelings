@@ -188,6 +188,10 @@ export const OKLAHOMA_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Oklahoma offers free public pre-K for four-year-olds in nearly every school district. The Oklahoma Academic Standards include pre-kindergarten standards in every subject.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in Oklahoma is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. Science looks at pushes and pulls, sunlight, weather and what living things need, and social studies is about families, school, needs and wants, simple maps and the symbols of the United States. Teachers screen each child's early reading three times a year.",
       lookFor: "Many Oklahoma districts use standards-based report cards in the early grades. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

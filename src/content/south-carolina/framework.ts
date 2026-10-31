@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // South Carolina, a US state. Standards are the South Carolina College- and Career-Ready Standards adopted by the State
 // Board of Education and published by the South Carolina Department of Education: Mathematics (2025), English Language
@@ -74,9 +75,9 @@ export const SOUTH_CAROLINA: Framework = {
   standardLabel: "Standard",
   sourceName: "South Carolina Department of Education",
   sourceUrl: "https://ed.sc.gov/instruction/standards/",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding South Carolina report cards",
     intro:

@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Virginia, a US state. Standards are the Virginia Board of Education's Standards of Learning (SOL): Mathematics (2023),
 // English (2024), Science (2018, with the 2026 technical edits) and History and Social Science (2023), as the Virginia
@@ -73,9 +74,9 @@ export const VIRGINIA: Framework = {
   standardLabel: "Standard",
   sourceName: "Virginia Department of Education",
   sourceUrl: "https://www.doe.virginia.gov/",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Virginia report cards",
     intro:

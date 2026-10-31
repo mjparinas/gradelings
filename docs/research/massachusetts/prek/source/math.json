@@ -1,0 +1,475 @@
+{
+ "data": {
+  "cspStatus": {},
+  "document": {
+   "asnIdentifier": "D2802330",
+   "id": "D2802330",
+   "publicationStatus": "Published",
+   "sourceURL": "http://www.doe.mass.edu/frameworks/math/2017-06.pdf",
+   "title": "Massachusetts Curriculum Framework for Mathematics",
+   "valid": "2017"
+  },
+  "educationLevels": [
+   "Pre-K"
+  ],
+  "id": "95C543B18A1B473B894ED35ECA322576_D2802330_grade-pre-k",
+  "jurisdiction": {
+   "id": "95C543B18A1B473B894ED35ECA322576",
+   "title": "Massachusetts"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/3.0/us/",
+   "rightsHolder": "D2L Corporation",
+   "title": "CC BY 3.0 US"
+  },
+  "normalizedSubject": "Math",
+  "standards": {
+   "0AEB778FDB424B7EBBE28B7B444A63A2": {
+    "ancestorIds": [
+     "195B6A05FEED4484BE200AC1A24B8FBA"
+    ],
+    "asnIdentifier": "S2803224",
+    "depth": 1,
+    "description": "Compare numbers.",
+    "id": "0AEB778FDB424B7EBBE28B7B444A63A2",
+    "parentId": "195B6A05FEED4484BE200AC1A24B8FBA",
+    "position": 16000,
+    "statementLabel": "Cluster",
+    "statementNotation": "PK.CC.C"
+   },
+   "16A73F38667D452EBBCD6ACF6DD4E93E": {
+    "ancestorIds": [
+     "C57698C6A75B4064B62F6E32DCEC6AE8"
+    ],
+    "asnIdentifier": "S2803390",
+    "depth": 1,
+    "description": "Describe and compare measurable attributes.",
+    "id": "16A73F38667D452EBBCD6ACF6DD4E93E",
+    "parentId": "C57698C6A75B4064B62F6E32DCEC6AE8",
+    "position": 23000,
+    "statementLabel": "Cluster",
+    "statementNotation": "PK.MD.A"
+   },
+   "195B6A05FEED4484BE200AC1A24B8FBA": {
+    "ancestorIds": [],
+    "asnIdentifier": "S2803218",
+    "depth": 0,
+    "description": "Counting and Cardinality",
+    "id": "195B6A05FEED4484BE200AC1A24B8FBA",
+    "parentId": null,
+    "position": 10000,
+    "statementLabel": "Domain"
+   },
+   "1A80C5821D6C4A4AB9843810237AD7C2": {
+    "ancestorIds": [
+     "C57698C6A75B4064B62F6E32DCEC6AE8"
+    ],
+    "asnIdentifier": "S2803395",
+    "depth": 1,
+    "description": "Work with money.",
+    "id": "1A80C5821D6C4A4AB9843810237AD7C2",
+    "parentId": "C57698C6A75B4064B62F6E32DCEC6AE8",
+    "position": 28000,
+    "statementLabel": "Cluster",
+    "statementNotation": "PK.MD.C"
+   },
+   "24E88787A2C4482495313AAF8E3C8DE4": {
+    "ancestorIds": [],
+    "asnIdentifier": "S2803240",
+    "depth": 0,
+    "description": "Operations and Algebraic Thinking",
+    "id": "24E88787A2C4482495313AAF8E3C8DE4",
+    "parentId": null,
+    "position": 19000,
+    "statementLabel": "Domain"
+   },
+   "24EA829488AD4173A8AB85646A355855": {
+    "ancestorIds": [
+     "9E81D1A1C8DC48A6B77A247F695CC9D0"
+    ],
+    "asnIdentifier": "S2803210",
+    "depth": 1,
+    "description": "Make sense of problems and persevere in solving them.",
+    "id": "24EA829488AD4173A8AB85646A355855",
+    "parentId": "9E81D1A1C8DC48A6B77A247F695CC9D0",
+    "position": 2000,
+    "statementNotation": "MP.1"
+   },
+   "2B10AA8DE62E4AB392EBA3C0D6182D9D": {
+    "ancestorIds": [
+     "1A80C5821D6C4A4AB9843810237AD7C2",
+     "C57698C6A75B4064B62F6E32DCEC6AE8"
+    ],
+    "asnIdentifier": "S2803396",
+    "depth": 2,
+    "description": "Recognize that certain objects are coins and that dollars and coins represent money.",
+    "id": "2B10AA8DE62E4AB392EBA3C0D6182D9D",
+    "parentId": "1A80C5821D6C4A4AB9843810237AD7C2",
+    "position": 29000,
+    "statementLabel": "Content Standard",
+    "statementNotation": "PK.MD.C.4"
+   },
+   "427118AF678242649275CEE3D6170EC4": {
+    "ancestorIds": [
+     "C0F7E67B364B4C3EBCD20A6D203A5262",
+     "EDBFF393D92149F5A336A806DE81560A"
+    ],
+    "asnIdentifier": "S2803471",
+    "depth": 2,
+    "description": "Identify relative positions of objects in space, and use appropriate language (e.g., beside, inside, next to, close to, above, below, apart).",
+    "id": "427118AF678242649275CEE3D6170EC4",
+    "parentId": "C0F7E67B364B4C3EBCD20A6D203A5262",
+    "position": 32000,
+    "statementLabel": "Content Standard",
+    "statementNotation": "PK.G.A.1"
+   },
+   "576DED44D1334CE38108CA5545CF050F": {
+    "ancestorIds": [
+     "9E81D1A1C8DC48A6B77A247F695CC9D0"
+    ],
+    "asnIdentifier": "S2803214",
+    "depth": 1,
+    "description": "Use appropriate tools strategically.",
+    "id": "576DED44D1334CE38108CA5545CF050F",
+    "parentId": "9E81D1A1C8DC48A6B77A247F695CC9D0",
+    "position": 6000,
+    "statementNotation": "MP.5"
+   },
+   "592EDCD2BC034454927D374BB878DD78": {
+    "ancestorIds": [
+     "16A73F38667D452EBBCD6ACF6DD4E93E",
+     "C57698C6A75B4064B62F6E32DCEC6AE8"
+    ],
+    "asnIdentifier": "S2803391",
+    "depth": 2,
+    "description": "Recognize the attributes of length, area, weight, and capacity of everyday objects using appropriate vocabulary (e.g., long, short, tall, heavy, light, big, small, wide, narrow).",
+    "id": "592EDCD2BC034454927D374BB878DD78",
+    "parentId": "16A73F38667D452EBBCD6ACF6DD4E93E",
+    "position": 24000,
+    "statementLabel": "Content Standard",
+    "statementNotation": "PK.MD.A.1"
+   },
+   "5B66C99DB2F94DE2B0936A01FB015D59": {
+    "ancestorIds": [
+     "9E81D1A1C8DC48A6B77A247F695CC9D0"
+    ],
+    "asnIdentifier": "S2803215",
+    "depth": 1,
+    "description": "Attend to precision.",
+    "id": "5B66C99DB2F94DE2B0936A01FB015D59",
+    "parentId": "9E81D1A1C8DC48A6B77A247F695CC9D0",
+    "position": 7000,
+    "statementNotation": "MP.6"
+   },
+   "5C633D1D4F77494CB658374A18831EE0": {
+    "ancestorIds": [
+     "16A73F38667D452EBBCD6ACF6DD4E93E",
+     "C57698C6A75B4064B62F6E32DCEC6AE8"
+    ],
+    "asnIdentifier": "S2803392",
+    "depth": 2,
+    "description": "Compare the attributes of length and weight for two objects, including longer/shorter, same length; heavier/lighter, same weight; holds more/less, holds the same amount.",
+    "id": "5C633D1D4F77494CB658374A18831EE0",
+    "parentId": "16A73F38667D452EBBCD6ACF6DD4E93E",
+    "position": 25000,
+    "statementLabel": "Content Standard",
+    "statementNotation": "PK.MD.A.2"
+   },
+   "5EDF118626794BEE9C0CD7EEBF3A1B63": {
+    "ancestorIds": [
+     "74A4342C43A4435E9341D815095C9386",
+     "EDBFF393D92149F5A336A806DE81560A"
+    ],
+    "asnIdentifier": "S2803474",
+    "depth": 2,
+    "description": "Create and represent three-dimensional shapes (ball/sphere, square box/cube, tube/cylinder) using various manipulative materials (such as Popsicle sticks, blocks, pipe cleaners, pattern blocks).",
+    "id": "5EDF118626794BEE9C0CD7EEBF3A1B63",
+    "parentId": "74A4342C43A4435E9341D815095C9386",
+    "position": 35000,
+    "statementLabel": "Content Standard",
+    "statementNotation": "PK.G.B.3"
+   },
+   "6B8D1B9BB329497DA340F71442CE25BF": {
+    "ancestorIds": [
+     "DD113E71153546A99220CC9E67A2652A",
+     "195B6A05FEED4484BE200AC1A24B8FBA"
+    ],
+    "asnIdentifier": "S2803220",
+    "depth": 2,
+    "description": "Listen to and say the names of numbers in meaningful contexts.",
+    "id": "6B8D1B9BB329497DA340F71442CE25BF",
+    "parentId": "DD113E71153546A99220CC9E67A2652A",
+    "position": 12000,
+    "statementLabel": "Content Standard",
+    "statementNotation": "PK.CC.A.1"
+   },
+   "74A4342C43A4435E9341D815095C9386": {
+    "ancestorIds": [
+     "EDBFF393D92149F5A336A806DE81560A"
+    ],
+    "asnIdentifier": "S2803473",
+    "depth": 1,
+    "description": "Analyze, compare, create, and compose shapes.",
+    "id": "74A4342C43A4435E9341D815095C9386",
+    "parentId": "EDBFF393D92149F5A336A806DE81560A",
+    "position": 34000,
+    "statementLabel": "Cluster",
+    "statementNotation": "PK.G.B"
+   },
+   "7673BA9CF9A34386BD0A5A9E281F110C": {
+    "ancestorIds": [
+     "9E81D1A1C8DC48A6B77A247F695CC9D0"
+    ],
+    "asnIdentifier": "S2803211",
+    "depth": 1,
+    "description": "Reason abstractly and quantitatively.",
+    "id": "7673BA9CF9A34386BD0A5A9E281F110C",
+    "parentId": "9E81D1A1C8DC48A6B77A247F695CC9D0",
+    "position": 3000,
+    "statementNotation": "MP.2"
+   },
+   "88D3830EEF8641778BD50C61FC52B894": {
+    "ancestorIds": [
+     "A587D8FC59A14BD2914E651912AEE585",
+     "195B6A05FEED4484BE200AC1A24B8FBA"
+    ],
+    "asnIdentifier": "S2803223",
+    "depth": 2,
+    "description": "Understand the relationships between numerals and quantities up to 10.",
+    "id": "88D3830EEF8641778BD50C61FC52B894",
+    "parentId": "A587D8FC59A14BD2914E651912AEE585",
+    "position": 15000,
+    "statementLabel": "Content Standard",
+    "statementNotation": "PK.CC.B.3"
+   },
+   "9905B7EF3EC94301B50D81487E38AF94": {
+    "ancestorIds": [
+     "0AEB778FDB424B7EBBE28B7B444A63A2",
+     "195B6A05FEED4484BE200AC1A24B8FBA"
+    ],
+    "asnIdentifier": "S2803225",
+    "depth": 2,
+    "description": "Count many kinds of concrete objects and actions up to ten, using one-to-one correspondence, and accurately count as many as seven things in a scattered configuration. Recognize the \"one more,\" \"one less\" patterns.",
+    "id": "9905B7EF3EC94301B50D81487E38AF94",
+    "parentId": "0AEB778FDB424B7EBBE28B7B444A63A2",
+    "position": 17000,
+    "statementLabel": "Content Standard",
+    "statementNotation": "PK.CC.C.4"
+   },
+   "9E81D1A1C8DC48A6B77A247F695CC9D0": {
+    "ancestorIds": [],
+    "asnIdentifier": "S2803209",
+    "depth": 0,
+    "description": "Standards for Mathematical Practice",
+    "id": "9E81D1A1C8DC48A6B77A247F695CC9D0",
+    "parentId": null,
+    "position": 1000
+   },
+   "A16F1958E6724E318021CEF4C4A42878": {
+    "ancestorIds": [
+     "9E81D1A1C8DC48A6B77A247F695CC9D0"
+    ],
+    "asnIdentifier": "S2803217",
+    "depth": 1,
+    "description": "Look for and express regularity in repeated reasoning.",
+    "id": "A16F1958E6724E318021CEF4C4A42878",
+    "parentId": "9E81D1A1C8DC48A6B77A247F695CC9D0",
+    "position": 9000,
+    "statementNotation": "MP.8"
+   },
+   "A291939D41B84C3FA681C62275A9DCA8": {
+    "ancestorIds": [
+     "9E81D1A1C8DC48A6B77A247F695CC9D0"
+    ],
+    "asnIdentifier": "S2803212",
+    "depth": 1,
+    "description": "Construct viable arguments and critique the reasoning of others.",
+    "id": "A291939D41B84C3FA681C62275A9DCA8",
+    "parentId": "9E81D1A1C8DC48A6B77A247F695CC9D0",
+    "position": 4000,
+    "statementNotation": "MP.3"
+   },
+   "A587D8FC59A14BD2914E651912AEE585": {
+    "ancestorIds": [
+     "195B6A05FEED4484BE200AC1A24B8FBA"
+    ],
+    "asnIdentifier": "S2803222",
+    "depth": 1,
+    "description": "Count to tell the number of objects.",
+    "id": "A587D8FC59A14BD2914E651912AEE585",
+    "parentId": "195B6A05FEED4484BE200AC1A24B8FBA",
+    "position": 14000,
+    "statementLabel": "Cluster",
+    "statementNotation": "PK.CC.B"
+   },
+   "AD6AB6AB0FF14BA09C80EE69A7FE7D44": {
+    "ancestorIds": [
+     "DD113E71153546A99220CC9E67A2652A",
+     "195B6A05FEED4484BE200AC1A24B8FBA"
+    ],
+    "asnIdentifier": "S2803221",
+    "depth": 2,
+    "description": "Recognize and name written numerals 0–10.",
+    "id": "AD6AB6AB0FF14BA09C80EE69A7FE7D44",
+    "parentId": "DD113E71153546A99220CC9E67A2652A",
+    "position": 13000,
+    "statementLabel": "Content Standard",
+    "statementNotation": "PK.CC.A.2"
+   },
+   "B3E60BA08596444ABB28440554278E44": {
+    "ancestorIds": [
+     "0AEB778FDB424B7EBBE28B7B444A63A2",
+     "195B6A05FEED4484BE200AC1A24B8FBA"
+    ],
+    "asnIdentifier": "S2803226",
+    "depth": 2,
+    "description": "Use comparative language, such as more/less than, equal to, to compare and describe collections of objects.",
+    "id": "B3E60BA08596444ABB28440554278E44",
+    "parentId": "0AEB778FDB424B7EBBE28B7B444A63A2",
+    "position": 18000,
+    "statementLabel": "Content Standard",
+    "statementNotation": "PK.CC.C.5"
+   },
+   "B5315B42ABFC465B9C2A0C41BD2322AB": {
+    "ancestorIds": [
+     "9E81D1A1C8DC48A6B77A247F695CC9D0"
+    ],
+    "asnIdentifier": "S2803213",
+    "depth": 1,
+    "description": "Model with mathematics.",
+    "id": "B5315B42ABFC465B9C2A0C41BD2322AB",
+    "parentId": "9E81D1A1C8DC48A6B77A247F695CC9D0",
+    "position": 5000,
+    "statementNotation": "MP.4"
+   },
+   "BB0C672EAA2D44EDAA770275A1D6D753": {
+    "ancestorIds": [
+     "C57698C6A75B4064B62F6E32DCEC6AE8"
+    ],
+    "asnIdentifier": "S2803393",
+    "depth": 1,
+    "description": "Classify objects and count the number of objects in each category.",
+    "id": "BB0C672EAA2D44EDAA770275A1D6D753",
+    "parentId": "C57698C6A75B4064B62F6E32DCEC6AE8",
+    "position": 26000,
+    "statementLabel": "Cluster",
+    "statementNotation": "PK.MD.B"
+   },
+   "BDE8816D31254F1795D0ACD971DB94C2": {
+    "ancestorIds": [
+     "F31F052B7E8C49CDA45CBE570C6FB7DD",
+     "24E88787A2C4482495313AAF8E3C8DE4"
+    ],
+    "asnIdentifier": "S2803242",
+    "depth": 2,
+    "description": "Use concrete objects to model real-world addition (putting together) and subtraction (taking away) problems up through five.",
+    "id": "BDE8816D31254F1795D0ACD971DB94C2",
+    "parentId": "F31F052B7E8C49CDA45CBE570C6FB7DD",
+    "position": 21000,
+    "statementLabel": "Content Standard",
+    "statementNotation": "PK.OA.A.1"
+   },
+   "C0D2014A17CE4E2099CEB683A0CA2F9C": {
+    "ancestorIds": [
+     "C0F7E67B364B4C3EBCD20A6D203A5262",
+     "EDBFF393D92149F5A336A806DE81560A"
+    ],
+    "asnIdentifier": "S2803472",
+    "depth": 2,
+    "description": "Identify various two-dimensional shapes using appropriate language.",
+    "id": "C0D2014A17CE4E2099CEB683A0CA2F9C",
+    "parentId": "C0F7E67B364B4C3EBCD20A6D203A5262",
+    "position": 33000,
+    "statementLabel": "Content Standard",
+    "statementNotation": "PK.G.A.2"
+   },
+   "C0F7E67B364B4C3EBCD20A6D203A5262": {
+    "ancestorIds": [
+     "EDBFF393D92149F5A336A806DE81560A"
+    ],
+    "asnIdentifier": "S2803470",
+    "depth": 1,
+    "description": "Identify and describe shapes (squares, circles, triangles, rectangles).",
+    "id": "C0F7E67B364B4C3EBCD20A6D203A5262",
+    "parentId": "EDBFF393D92149F5A336A806DE81560A",
+    "position": 31000,
+    "statementLabel": "Cluster",
+    "statementNotation": "PK.G.A"
+   },
+   "C57698C6A75B4064B62F6E32DCEC6AE8": {
+    "ancestorIds": [],
+    "asnIdentifier": "S2803389",
+    "depth": 0,
+    "description": "Measurement and Data",
+    "id": "C57698C6A75B4064B62F6E32DCEC6AE8",
+    "parentId": null,
+    "position": 22000,
+    "statementLabel": "Domain"
+   },
+   "D06D569075D44342A19565E1663F55EA": {
+    "ancestorIds": [
+     "BB0C672EAA2D44EDAA770275A1D6D753",
+     "C57698C6A75B4064B62F6E32DCEC6AE8"
+    ],
+    "asnIdentifier": "S2803394",
+    "depth": 2,
+    "description": "Sort, categorize, and classify objects by more than one attribute.",
+    "id": "D06D569075D44342A19565E1663F55EA",
+    "parentId": "BB0C672EAA2D44EDAA770275A1D6D753",
+    "position": 27000,
+    "statementLabel": "Content Standard",
+    "statementNotation": "PK.MD.B.3"
+   },
+   "D48910DFD9BF4FE8AD891DB6E865A813": {
+    "ancestorIds": [
+     "9E81D1A1C8DC48A6B77A247F695CC9D0"
+    ],
+    "asnIdentifier": "S2803216",
+    "depth": 1,
+    "description": "Look for and make use of structure.",
+    "id": "D48910DFD9BF4FE8AD891DB6E865A813",
+    "parentId": "9E81D1A1C8DC48A6B77A247F695CC9D0",
+    "position": 8000,
+    "statementNotation": "MP.7"
+   },
+   "DD113E71153546A99220CC9E67A2652A": {
+    "ancestorIds": [
+     "195B6A05FEED4484BE200AC1A24B8FBA"
+    ],
+    "asnIdentifier": "S2803219",
+    "depth": 1,
+    "description": "Know number names and the counting sequence.",
+    "id": "DD113E71153546A99220CC9E67A2652A",
+    "parentId": "195B6A05FEED4484BE200AC1A24B8FBA",
+    "position": 11000,
+    "statementLabel": "Cluster",
+    "statementNotation": "PK.CC.A"
+   },
+   "EDBFF393D92149F5A336A806DE81560A": {
+    "ancestorIds": [],
+    "asnIdentifier": "S2803469",
+    "depth": 0,
+    "description": "Geometry",
+    "id": "EDBFF393D92149F5A336A806DE81560A",
+    "parentId": null,
+    "position": 30000,
+    "statementLabel": "Domain"
+   },
+   "F31F052B7E8C49CDA45CBE570C6FB7DD": {
+    "ancestorIds": [
+     "24E88787A2C4482495313AAF8E3C8DE4"
+    ],
+    "asnIdentifier": "S2803241",
+    "depth": 1,
+    "description": "Understand addition as putting together and adding to, and understand subtraction as taking apart and taking from.",
+    "id": "F31F052B7E8C49CDA45CBE570C6FB7DD",
+    "parentId": "24E88787A2C4482495313AAF8E3C8DE4",
+    "position": 20000,
+    "statementLabel": "Cluster",
+    "statementNotation": "PK.OA.A"
+   }
+  },
+  "subject": "Mathematics (2017-)",
+  "title": "Grade Pre-K"
+ }
+}

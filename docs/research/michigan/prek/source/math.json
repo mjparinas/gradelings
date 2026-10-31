@@ -1,0 +1,3613 @@
+{
+ "data": {
+  "cspStatus": {
+   "notes": null,
+   "value": "visible"
+  },
+  "document": {
+   "publicationStatus": "Published",
+   "sourceURL": "https://www.michigan.gov/mileap/-/media/Project/Websites/mileap/Documents/Early-Childhood-Education/gsrp/standards/ECSQ-B-K_Final.pdf",
+   "title": "Early Childhood Standards of Quality for Birth to Kindergarten "
+  },
+  "educationLevels": [
+   "Pre-K",
+   "K"
+  ],
+  "id": "6F733A5CDE024381B7B75FB57445C8EF",
+  "jurisdiction": {
+   "id": "778458DAC3234C428E022B08ADF179C3",
+   "title": "Michigan"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/4.0/us/",
+   "rightsHolder": "Common Curriculum, Inc.",
+   "title": "CC BY 4.0 US"
+  },
+  "normalizedSubject": null,
+  "standards": {
+   "00054DD574BA4CEF92BBBE4F743FB47C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D5E5FC6B8F764A1EB5C90F5D13ADA58C",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "3 Years",
+    "id": "00054DD574BA4CEF92BBBE4F743FB47C",
+    "listId": "",
+    "parentId": "D5E5FC6B8F764A1EB5C90F5D13ADA58C",
+    "position": 1090,
+    "statementLabel": null,
+    "statementNotation": "3.3a"
+   },
+   "009DD9933A434F20A7C1D7DCB7D50F6A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "47588E61330042E4AD3A0A000CE09DC3",
+     "CE85C78278B84EBDA97C0B6E96239C16",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Try to fix things that are broken, such as putting a toy back together or using\ntape to repair a torn paper.",
+    "id": "009DD9933A434F20A7C1D7DCB7D50F6A",
+    "listId": "2",
+    "parentId": "47588E61330042E4AD3A0A000CE09DC3",
+    "position": 1032,
+    "statementLabel": null,
+    "statementNotation": "3.1c.2"
+   },
+   "00F1FE8EDE074D71874CBBD9369D8686": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B28DCCBAE6544F0188770AC5CC599DC7",
+     "87078CC1F5584D61A308FCC495C8DC11",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Put together simple tangram or pattern block forms, creating new shapes. They may need to\nfollow a model or map.",
+    "id": "00F1FE8EDE074D71874CBBD9369D8686",
+    "listId": "6",
+    "parentId": "B28DCCBAE6544F0188770AC5CC599DC7",
+    "position": 1124,
+    "statementLabel": null,
+    "statementNotation": "5.3b.6"
+   },
+   "022B644C053041C69163513B74081D40": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "22FA0E0705B24E01A9C37F1A27AF3AC2",
+     "D5E5FC6B8F764A1EB5C90F5D13ADA58C",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Keep track of themselves and where they’ve been as they move through a\nmaze.",
+    "id": "022B644C053041C69163513B74081D40",
+    "listId": "1",
+    "parentId": "22FA0E0705B24E01A9C37F1A27AF3AC2",
+    "position": 1100,
+    "statementLabel": null,
+    "statementNotation": "5.3a.1"
+   },
+   "04594C9819C044EFA66DD2687C98B3E6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "26B9704A88A84E87B533AD852B8744A6",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "4 Years",
+    "id": "04594C9819C044EFA66DD2687C98B3E6",
+    "listId": "",
+    "parentId": "26B9704A88A84E87B533AD852B8744A6",
+    "position": 1070,
+    "statementLabel": null,
+    "statementNotation": "4.2c"
+   },
+   "05FE2AAF658746B8B8B1129AF868C17F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "78D3DE7A0CB84D32B4A187DFB89AE7AD",
+     "883C846FE0744FF8A52FF1D2A07EE3C0",
+     "5C1D6FC1D19C48BB802BA184AB2CEAFB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Sort animals by habitat (farm or forest, for example), when directed by an\nadult. ",
+    "id": "05FE2AAF658746B8B8B1129AF868C17F",
+    "listId": "2",
+    "parentId": "78D3DE7A0CB84D32B4A187DFB89AE7AD",
+    "position": 1199,
+    "statementLabel": null,
+    "statementNotation": "3.6b.2"
+   },
+   "060457878E084BBAA0C3D9C9867CAE79": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F43B374906234633BB73CA9660FABFE9",
+     "D5E5FC6B8F764A1EB5C90F5D13ADA58C",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Continue to expand their spatial and directional vocabulary, including terms\nsuch as left and right, as well as in front of and behind.",
+    "id": "060457878E084BBAA0C3D9C9867CAE79",
+    "listId": "3",
+    "parentId": "F43B374906234633BB73CA9660FABFE9",
+    "position": 1096,
+    "statementLabel": null,
+    "statementNotation": "4.3a.3"
+   },
+   "0678DEE3C8D542E4A2DE036BC2277666": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "44E1FE62909D4EA0A7AEC6791D463FC5",
+     "CE85C78278B84EBDA97C0B6E96239C16",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Stack blocks in several ways until they figure out how to make the tower stay\nup.",
+    "id": "0678DEE3C8D542E4A2DE036BC2277666",
+    "listId": "3",
+    "parentId": "44E1FE62909D4EA0A7AEC6791D463FC5",
+    "position": 1038,
+    "statementLabel": null,
+    "statementNotation": "4.1c.3"
+   },
+   "068D75ED84EE424EBB7239B8F6718B24": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A9CE6821BAF34213AF6DE7D34B36FAB0",
+     "87078CC1F5584D61A308FCC495C8DC11",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begin to compare shapes using simple terms, such as being pointy or tall.",
+    "id": "068D75ED84EE424EBB7239B8F6718B24",
+    "listId": "4",
+    "parentId": "A9CE6821BAF34213AF6DE7D34B36FAB0",
+    "position": 1110,
+    "statementLabel": null,
+    "statementNotation": "3.3b.4"
+   },
+   "07CAF2C7F3A148BB89155405581FA094": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "83C56DB7E791420BA133944EEBBCCE7D",
+     "38B8158FCE5349C7B2C26DAF34F7902D",
+     "D338575AE7F645ABB2BB4CDFB672BAC9"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Draw scribbles and spirals both inside and outside the lines when asked to\n“color in” or “fill in” a square (early recognition of area). ",
+    "id": "07CAF2C7F3A148BB89155405581FA094",
+    "listId": "1",
+    "parentId": "83C56DB7E791420BA133944EEBBCCE7D",
+    "position": 1160,
+    "statementLabel": null,
+    "statementNotation": "3.5a.1"
+   },
+   "0E9926573423447088DF4FB9B4400591": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F59461C2D4AC4E7AAF1F9842CF4FB99F",
+     "6D70A55E52884313BF0980223A53E3BB",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Play with signs, words, and patterns, e.g., Five Little Monkeys or Brown Bear, Brown\nBear, What Do You Hear?",
+    "id": "0E9926573423447088DF4FB9B4400591",
+    "listId": "3",
+    "parentId": "F59461C2D4AC4E7AAF1F9842CF4FB99F",
+    "position": 1005,
+    "statementLabel": null,
+    "statementNotation": "3.1a.3"
+   },
+   "0EF552053050434C8EE076B24F47B786": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "22FA0E0705B24E01A9C37F1A27AF3AC2",
+     "D5E5FC6B8F764A1EB5C90F5D13ADA58C",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Label or name some locations during play, such as “That corner is home\nbase!”",
+    "id": "0EF552053050434C8EE076B24F47B786",
+    "listId": "2",
+    "parentId": "22FA0E0705B24E01A9C37F1A27AF3AC2",
+    "position": 1101,
+    "statementLabel": null,
+    "statementNotation": "5.3a.2"
+   },
+   "0FA548731D294B30B23B705DDCE65AD6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "36147CA66D1047BE9E1B174423F259F0",
+     "6D70A55E52884313BF0980223A53E3BB",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Tell a friend that their birthday is in five days.",
+    "id": "0FA548731D294B30B23B705DDCE65AD6",
+    "listId": "3",
+    "parentId": "36147CA66D1047BE9E1B174423F259F0",
+    "position": 1009,
+    "statementLabel": null,
+    "statementNotation": "4.1a.3"
+   },
+   "0FAD66CF1BEB4B778664EB821B7C605E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "227C1674C2FD4263A17FB9F07E542E6C",
+     "6D70A55E52884313BF0980223A53E3BB",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Count the children sitting at the table to answer how many napkins are needed for\nsnack.",
+    "id": "0FAD66CF1BEB4B778664EB821B7C605E",
+    "listId": "3",
+    "parentId": "227C1674C2FD4263A17FB9F07E542E6C",
+    "position": 1014,
+    "statementLabel": null,
+    "statementNotation": "5.1a.3"
+   },
+   "10623BA2A5044551B537C3488067DC0F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ABAEFD8246B04CC39D4EAE3EFAAB12EC",
+     "78CD9CA57894428685B8201E990381B3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "5 Years",
+    "id": "10623BA2A5044551B537C3488067DC0F",
+    "listId": "",
+    "parentId": "ABAEFD8246B04CC39D4EAE3EFAAB12EC",
+    "position": 1155,
+    "statementLabel": null,
+    "statementNotation": "5.4b"
+   },
+   "10AB4302300942AFA260FCF2F55A7228": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "96A318ECDBDB4B13B7816FD65D5D5198",
+     "651942F95D7049E78319A113A153AD56",
+     "5C1D6FC1D19C48BB802BA184AB2CEAFB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Ask the other children if they have a cat at home and make marks in their\njournal to count how many. ",
+    "id": "10AB4302300942AFA260FCF2F55A7228",
+    "listId": "2",
+    "parentId": "96A318ECDBDB4B13B7816FD65D5D5198",
+    "position": 1191,
+    "statementLabel": null,
+    "statementNotation": "4.6a.2"
+   },
+   "11C02FB3FDE948818D922DC65E087350": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8C410FCFF70847F2A8F297F37EAEC64A",
+     "651942F95D7049E78319A113A153AD56",
+     "5C1D6FC1D19C48BB802BA184AB2CEAFB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Classify items by their similarities, such as “all of these animals have fur, and\nthese ones over here have scales!” ",
+    "id": "11C02FB3FDE948818D922DC65E087350",
+    "listId": "2",
+    "parentId": "8C410FCFF70847F2A8F297F37EAEC64A",
+    "position": 1195,
+    "statementLabel": null,
+    "statementNotation": "5.6a.2"
+   },
+   "13297C332199456FAD74A064CB1D7206": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "26B9704A88A84E87B533AD852B8744A6",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "5 Years",
+    "id": "13297C332199456FAD74A064CB1D7206",
+    "listId": "",
+    "parentId": "26B9704A88A84E87B533AD852B8744A6",
+    "position": 1074,
+    "statementLabel": null,
+    "statementNotation": "5.2c"
+   },
+   "133EBA111B214C33B938EF6F06976055": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "87E1065983934FD597253725AB9D0ADB",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "5 Years",
+    "id": "133EBA111B214C33B938EF6F06976055",
+    "listId": "",
+    "parentId": "87E1065983934FD597253725AB9D0ADB",
+    "position": 1051,
+    "statementLabel": null,
+    "statementNotation": "5.2a"
+   },
+   "14727ED4C93F40FF9711F193429D0D0E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "00054DD574BA4CEF92BBBE4F743FB47C",
+     "D5E5FC6B8F764A1EB5C90F5D13ADA58C",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Look over puzzle pieces to narrow down the group to just those that might fit\nin the space they are trying to fill, without using trial and error for each piece,\nsometimes.",
+    "id": "14727ED4C93F40FF9711F193429D0D0E",
+    "listId": "2",
+    "parentId": "00054DD574BA4CEF92BBBE4F743FB47C",
+    "position": 1092,
+    "statementLabel": null,
+    "statementNotation": "3.3a.2"
+   },
+   "15531213311446CEBE5289D2401BFFE2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EC33C6897F4C4D8EB119FDF5370A5D20",
+     "AA51E2E4E4B34F87B53339B5FE73C97D",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Point out pictures in book that resemble familiar shapes (e.g., sun/circle;\nroof/triangle; truck/rectangle).",
+    "id": "15531213311446CEBE5289D2401BFFE2",
+    "listId": "3",
+    "parentId": "EC33C6897F4C4D8EB119FDF5370A5D20",
+    "position": 1020,
+    "statementLabel": null,
+    "statementNotation": "3.1b.3"
+   },
+   "15C7EC853E234A049DBF5B558ECEE880": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A9CE6821BAF34213AF6DE7D34B36FAB0",
+     "87078CC1F5584D61A308FCC495C8DC11",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Match more shapes, such as rectangles, ovals, etc., even if they are different sizes or rotated\ndifferently, such as pointing out two rectangular blocks as matches, even though one was\nsideways and the other flat on the floor.",
+    "id": "15C7EC853E234A049DBF5B558ECEE880",
+    "listId": "1",
+    "parentId": "A9CE6821BAF34213AF6DE7D34B36FAB0",
+    "position": 1107,
+    "statementLabel": null,
+    "statementNotation": "3.3b.1"
+   },
+   "16BA022828EF48A4ADD7066AF9D916F1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B28DCCBAE6544F0188770AC5CC599DC7",
+     "87078CC1F5584D61A308FCC495C8DC11",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use more shapes to add complexity to their drawings, such as using 2 rectangles to form the\nupper and lower arm in a drawing of a person.",
+    "id": "16BA022828EF48A4ADD7066AF9D916F1",
+    "listId": "5",
+    "parentId": "B28DCCBAE6544F0188770AC5CC599DC7",
+    "position": 1123,
+    "statementLabel": null,
+    "statementNotation": "5.3b.5"
+   },
+   "16EC62ABD2164356B7B89C1393A5A59E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "87E1065983934FD597253725AB9D0ADB",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "4 Years",
+    "id": "16EC62ABD2164356B7B89C1393A5A59E",
+    "listId": "",
+    "parentId": "87E1065983934FD597253725AB9D0ADB",
+    "position": 1047,
+    "statementLabel": null,
+    "statementNotation": "4.2a"
+   },
+   "17E1C74F36EF429C90B8651CE700CB04": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9E8AE8FA54424B2DA0833083B9BFF6D7",
+     "AA51E2E4E4B34F87B53339B5FE73C97D",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begin expressing simple mathematical problems identifying mathematical\nsymbols such as “+” or “=.” ",
+    "id": "17E1C74F36EF429C90B8651CE700CB04",
+    "listId": "3",
+    "parentId": "9E8AE8FA54424B2DA0833083B9BFF6D7",
+    "position": 1028,
+    "statementLabel": null,
+    "statementNotation": "5.1b.3"
+   },
+   "19583CD09A45415086B895B00BDF12F2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B28DCCBAE6544F0188770AC5CC599DC7",
+     "87078CC1F5584D61A308FCC495C8DC11",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize and identify more complex shapes, such as the trapezoid, rhombus (diamond), and\nhexagon, as well as more 3-dimensional shapes, beginning to learn the formal terms for these\nshapes.",
+    "id": "19583CD09A45415086B895B00BDF12F2",
+    "listId": "3",
+    "parentId": "B28DCCBAE6544F0188770AC5CC599DC7",
+    "position": 1121,
+    "statementLabel": null,
+    "statementNotation": "5.3b.3"
+   },
+   "1CAF688E83984CABBEA55C87EFA4A9A3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BE49C7FA405248EBB3285227D3164DE8",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "3 Years",
+    "id": "1CAF688E83984CABBEA55C87EFA4A9A3",
+    "listId": "",
+    "parentId": "BE49C7FA405248EBB3285227D3164DE8",
+    "position": 1128,
+    "statementLabel": null,
+    "statementNotation": "3.3c"
+   },
+   "1D008D9C20774368A553141E5BFD712A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "DDCBBAC5A015430083B17825D7A080A9",
+     "87078CC1F5584D61A308FCC495C8DC11",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Continue to expand the range of shapes they can match, even with size or rotation differences.",
+    "id": "1D008D9C20774368A553141E5BFD712A",
+    "listId": "1",
+    "parentId": "DDCBBAC5A015430083B17825D7A080A9",
+    "position": 1113,
+    "statementLabel": null,
+    "statementNotation": "4.3b.1"
+   },
+   "1D21E2286B9A49AFA4BF4E125C2954F7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CCD32E468CB643C59973C04E77C28921",
+     "D338575AE7F645ABB2BB4CDFB672BAC9"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "4 Years",
+    "id": "1D21E2286B9A49AFA4BF4E125C2954F7",
+    "listId": "",
+    "parentId": "CCD32E468CB643C59973C04E77C28921",
+    "position": 1178,
+    "statementLabel": null,
+    "statementNotation": "4.5c"
+   },
+   "1D860B1EB94045498908D73B01935641": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "35FE1622AE5B4B599F3A39A44060E804",
+     "7961492CD0824167AC0CF6B9393813B5",
+     "D338575AE7F645ABB2BB4CDFB672BAC9"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Set several blocks next to each other, using trial and error to decide which is\nlongest, when working to line blocks from longest to shortest. ",
+    "id": "1D860B1EB94045498908D73B01935641",
+    "listId": "1",
+    "parentId": "35FE1622AE5B4B599F3A39A44060E804",
+    "position": 1169,
+    "statementLabel": null,
+    "statementNotation": "4.5b.1"
+   },
+   "1F02A546065E4520B5B0275283AA1310": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "22FA0E0705B24E01A9C37F1A27AF3AC2",
+     "D5E5FC6B8F764A1EB5C90F5D13ADA58C",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Walk around furniture and other people without bumping into them.",
+    "id": "1F02A546065E4520B5B0275283AA1310",
+    "listId": "4",
+    "parentId": "22FA0E0705B24E01A9C37F1A27AF3AC2",
+    "position": 1103,
+    "statementLabel": null,
+    "statementNotation": "5.3a.4"
+   },
+   "227C1674C2FD4263A17FB9F07E542E6C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6D70A55E52884313BF0980223A53E3BB",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "5 Years",
+    "id": "227C1674C2FD4263A17FB9F07E542E6C",
+    "listId": "",
+    "parentId": "6D70A55E52884313BF0980223A53E3BB",
+    "position": 1011,
+    "statementLabel": null,
+    "statementNotation": "5.1a"
+   },
+   "22F8F72019394946B7183B2D5E03AFFF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "133EBA111B214C33B938EF6F06976055",
+     "87E1065983934FD597253725AB9D0ADB",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Point out mistakes in counting.",
+    "id": "22F8F72019394946B7183B2D5E03AFFF",
+    "listId": "4",
+    "parentId": "133EBA111B214C33B938EF6F06976055",
+    "position": 1055,
+    "statementLabel": null,
+    "statementNotation": "5.2a.4"
+   },
+   "22FA0E0705B24E01A9C37F1A27AF3AC2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D5E5FC6B8F764A1EB5C90F5D13ADA58C",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "5 Years",
+    "id": "22FA0E0705B24E01A9C37F1A27AF3AC2",
+    "listId": "",
+    "parentId": "D5E5FC6B8F764A1EB5C90F5D13ADA58C",
+    "position": 1099,
+    "statementLabel": null,
+    "statementNotation": "5.3a"
+   },
+   "2365D9EA692D46ADB04C33190EF4B4FA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "227C1674C2FD4263A17FB9F07E542E6C",
+     "6D70A55E52884313BF0980223A53E3BB",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Explain to a friend how they figured out how many musical instruments were needed\nso that each child in the group could have two.",
+    "id": "2365D9EA692D46ADB04C33190EF4B4FA",
+    "listId": "4",
+    "parentId": "227C1674C2FD4263A17FB9F07E542E6C",
+    "position": 1015,
+    "statementLabel": null,
+    "statementNotation": "5.1a.4"
+   },
+   "23F40ED39B934A1D80CC26417E7416E9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B28DCCBAE6544F0188770AC5CC599DC7",
+     "87078CC1F5584D61A308FCC495C8DC11",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use blocks to build taller arches and enclosures/rooms, and begin to build bridges, ramps, stairs,\nand add roofs to their constructions.",
+    "id": "23F40ED39B934A1D80CC26417E7416E9",
+    "listId": "8",
+    "parentId": "B28DCCBAE6544F0188770AC5CC599DC7",
+    "position": 1126,
+    "statementLabel": null,
+    "statementNotation": "5.3b.8"
+   },
+   "24E69C1228EC4824A1CCC14CAD1DA47B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5F7E4B88864F47898D0FFEA6FC9BE2EE",
+     "651942F95D7049E78319A113A153AD56",
+     "5C1D6FC1D19C48BB802BA184AB2CEAFB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begin to describe the difference between objects, such as telling that one\ndoll has a blue dress and the other has a red dress.  ",
+    "id": "24E69C1228EC4824A1CCC14CAD1DA47B",
+    "listId": "1",
+    "parentId": "5F7E4B88864F47898D0FFEA6FC9BE2EE",
+    "position": 1187,
+    "statementLabel": null,
+    "statementNotation": "3.6a.1"
+   },
+   "2640B3895CD140CDA9E40D724494A979": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BCB8FDED970C4F09913FDB3F094B9955",
+     "F33443AC52D6477DA5083C1EFB842AF2",
+     "78CD9CA57894428685B8201E990381B3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize, identify, and build repeating AAB and AABC patterns. ",
+    "id": "2640B3895CD140CDA9E40D724494A979",
+    "listId": "1",
+    "parentId": "BCB8FDED970C4F09913FDB3F094B9955",
+    "position": 1147,
+    "statementLabel": null,
+    "statementNotation": "5.4a.1"
+   },
+   "26B9704A88A84E87B533AD852B8744A6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Comparing, Adding, and Subtracting Numbers: Begin to understand numbers as sets to be\ncompared, put together, and taken apart.  ",
+    "id": "26B9704A88A84E87B533AD852B8744A6",
+    "listId": "c",
+    "parentId": "D5B1385BF5B245FE9319A3913CA92156",
+    "position": 1065,
+    "statementLabel": null,
+    "statementNotation": "2c"
+   },
+   "27133759A5004B0298F0E9160EDEF438": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "227C1674C2FD4263A17FB9F07E542E6C",
+     "6D70A55E52884313BF0980223A53E3BB",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use different size blocks, different arrangements, and other strategies to build and\nre-build a structure that falls, until achieving their goal. ",
+    "id": "27133759A5004B0298F0E9160EDEF438",
+    "listId": "2",
+    "parentId": "227C1674C2FD4263A17FB9F07E542E6C",
+    "position": 1013,
+    "statementLabel": null,
+    "statementNotation": "5.1a.2"
+   },
+   "27223869EB15483FA2AB6F7FB0E428B1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "133EBA111B214C33B938EF6F06976055",
+     "87E1065983934FD597253725AB9D0ADB",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Show an understanding of cardinality, or the understanding that the last number\nsaid when counting is the total quantity. For example: counting the cards in their\nhand, and saying, “I have six cards.” ",
+    "id": "27223869EB15483FA2AB6F7FB0E428B1",
+    "listId": "2",
+    "parentId": "133EBA111B214C33B938EF6F06976055",
+    "position": 1053,
+    "statementLabel": null,
+    "statementNotation": "5.2a.2"
+   },
+   "283D585AA78044D8AD55EEF42443A793": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "63B4FF75553E42659BAAF344BBC9CEBA",
+     "ABAEFD8246B04CC39D4EAE3EFAAB12EC",
+     "78CD9CA57894428685B8201E990381B3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Place rods of Unifix cubes in order from shortest to longest based on the\nnumber of individual cubes. ",
+    "id": "283D585AA78044D8AD55EEF42443A793",
+    "listId": "2",
+    "parentId": "63B4FF75553E42659BAAF344BBC9CEBA",
+    "position": 1154,
+    "statementLabel": null,
+    "statementNotation": "4.4b.2"
+   },
+   "284CA40E52EC4D50AD7502E30DC4B52F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D00533880A394A90A6D05920891E708D",
+     "26B9704A88A84E87B533AD852B8744A6",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Choose the biggest piece of cake.",
+    "id": "284CA40E52EC4D50AD7502E30DC4B52F",
+    "listId": "2",
+    "parentId": "D00533880A394A90A6D05920891E708D",
+    "position": 1068,
+    "statementLabel": null,
+    "statementNotation": "3.2c.2"
+   },
+   "2981A3E1442746A59CF1052ED0084394": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "59508A6FC7284E188B2A28AF0E705269",
+     "AAA48882D194447395C081AE9C9FB28A",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Attempt to label a whole and its parts with numbers, such as explaining that\ntheir basket of 4 pieces of play food has 2 pears and 2 oranges.",
+    "id": "2981A3E1442746A59CF1052ED0084394",
+    "listId": "1",
+    "parentId": "59508A6FC7284E188B2A28AF0E705269",
+    "position": 1083,
+    "statementLabel": null,
+    "statementNotation": "4.2d.1"
+   },
+   "2BDF4811E1254DE7B60C7F8B00789DDB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "883C846FE0744FF8A52FF1D2A07EE3C0",
+     "5C1D6FC1D19C48BB802BA184AB2CEAFB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "4 Years",
+    "id": "2BDF4811E1254DE7B60C7F8B00789DDB",
+    "listId": "",
+    "parentId": "883C846FE0744FF8A52FF1D2A07EE3C0",
+    "position": 1200,
+    "statementLabel": null,
+    "statementNotation": "4.6b"
+   },
+   "2C2C15DA47C94E5AA7D5803B700DBC3C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "76CBD7C34AE44550BF1FD9C15E410377",
+     "883C846FE0744FF8A52FF1D2A07EE3C0",
+     "5C1D6FC1D19C48BB802BA184AB2CEAFB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Collect leaves and sort by type of tree and/or leaf shapes.  ",
+    "id": "2C2C15DA47C94E5AA7D5803B700DBC3C",
+    "listId": "1",
+    "parentId": "76CBD7C34AE44550BF1FD9C15E410377",
+    "position": 1204,
+    "statementLabel": null,
+    "statementNotation": "5.6b.1"
+   },
+   "2C812E23FFB64374A2B2B438499EC2C2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "329EA607429B4995B35C6BFA114AFAF3",
+     "AA51E2E4E4B34F87B53339B5FE73C97D",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Estimate how many toy frogs they think are in a plastic pond.",
+    "id": "2C812E23FFB64374A2B2B438499EC2C2",
+    "listId": "3",
+    "parentId": "329EA607429B4995B35C6BFA114AFAF3",
+    "position": 1024,
+    "statementLabel": null,
+    "statementNotation": "4.1b.3"
+   },
+   "2E615C9B1B2A424B933F4F5F2B42CC89": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "22FA0E0705B24E01A9C37F1A27AF3AC2",
+     "D5E5FC6B8F764A1EB5C90F5D13ADA58C",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Quickly decide if puzzle pieces will fit in the spot they are working on.",
+    "id": "2E615C9B1B2A424B933F4F5F2B42CC89",
+    "listId": "5",
+    "parentId": "22FA0E0705B24E01A9C37F1A27AF3AC2",
+    "position": 1104,
+    "statementLabel": null,
+    "statementNotation": "5.3a.5"
+   },
+   "2E95FEB0481C48BCA29E5D9936696CC5": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Children begin to develop processes and strategies for solving mathematical\nproblems.",
+    "id": "2E95FEB0481C48BCA29E5D9936696CC5",
+    "listId": "1",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": null,
+    "statementNotation": "1"
+   },
+   "303EF46BFBC142A58C03B913DE78F574": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "59508A6FC7284E188B2A28AF0E705269",
+     "AAA48882D194447395C081AE9C9FB28A",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognizes and produces number combinations up to 4. For example,\nmoving a collection of four toy cars to groups of 1 and 3, 2 and 3, 3 and 1, 4\nand 0.",
+    "id": "303EF46BFBC142A58C03B913DE78F574",
+    "listId": "2",
+    "parentId": "59508A6FC7284E188B2A28AF0E705269",
+    "position": 1084,
+    "statementLabel": null,
+    "statementNotation": "4.2d.2"
+   },
+   "325AA63862F94EF982ED4E3F6E11D61E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "AAA48882D194447395C081AE9C9FB28A",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "5 Years",
+    "id": "325AA63862F94EF982ED4E3F6E11D61E",
+    "listId": "",
+    "parentId": "AAA48882D194447395C081AE9C9FB28A",
+    "position": 1085,
+    "statementLabel": null,
+    "statementNotation": "5.2d"
+   },
+   "329EA607429B4995B35C6BFA114AFAF3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "AA51E2E4E4B34F87B53339B5FE73C97D",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "4 Years",
+    "id": "329EA607429B4995B35C6BFA114AFAF3",
+    "listId": "",
+    "parentId": "AA51E2E4E4B34F87B53339B5FE73C97D",
+    "position": 1021,
+    "statementLabel": null,
+    "statementNotation": "4.1b"
+   },
+   "339782BD173B454BA1D21AE72A1F3EFF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EC33C6897F4C4D8EB119FDF5370A5D20",
+     "AA51E2E4E4B34F87B53339B5FE73C97D",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Match numeral shapes when completing a number puzzle.",
+    "id": "339782BD173B454BA1D21AE72A1F3EFF",
+    "listId": "2",
+    "parentId": "EC33C6897F4C4D8EB119FDF5370A5D20",
+    "position": 1019,
+    "statementLabel": null,
+    "statementNotation": "3.1b.2"
+   },
+   "34A2714F3D144921825AAAC80C4D3704": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1D21E2286B9A49AFA4BF4E125C2954F7",
+     "CCD32E468CB643C59973C04E77C28921",
+     "D338575AE7F645ABB2BB4CDFB672BAC9"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begin to use formal measuring tools, such as tape measures and balance\nscales, to determine size and weight. ",
+    "id": "34A2714F3D144921825AAAC80C4D3704",
+    "listId": "1",
+    "parentId": "1D21E2286B9A49AFA4BF4E125C2954F7",
+    "position": 1179,
+    "statementLabel": null,
+    "statementNotation": "4.5c.1"
+   },
+   "35FE1622AE5B4B599F3A39A44060E804": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7961492CD0824167AC0CF6B9393813B5",
+     "D338575AE7F645ABB2BB4CDFB672BAC9"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "4 Years",
+    "id": "35FE1622AE5B4B599F3A39A44060E804",
+    "listId": "",
+    "parentId": "7961492CD0824167AC0CF6B9393813B5",
+    "position": 1168,
+    "statementLabel": null,
+    "statementNotation": "4.5b"
+   },
+   "36147CA66D1047BE9E1B174423F259F0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6D70A55E52884313BF0980223A53E3BB",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "4 Years",
+    "id": "36147CA66D1047BE9E1B174423F259F0",
+    "listId": "",
+    "parentId": "6D70A55E52884313BF0980223A53E3BB",
+    "position": 1006,
+    "statementLabel": null,
+    "statementNotation": "4.1a"
+   },
+   "3801DDB46E594B6EA6F559A780AE4E2D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "04594C9819C044EFA66DD2687C98B3E6",
+     "26B9704A88A84E87B533AD852B8744A6",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Tell how many children are present after counting how many are absent.",
+    "id": "3801DDB46E594B6EA6F559A780AE4E2D",
+    "listId": "2",
+    "parentId": "04594C9819C044EFA66DD2687C98B3E6",
+    "position": 1072,
+    "statementLabel": null,
+    "statementNotation": "4.2c.2"
+   },
+   "3827CC3CB231498B9D56CEA722D7B404": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8C410FCFF70847F2A8F297F37EAEC64A",
+     "651942F95D7049E78319A113A153AD56",
+     "5C1D6FC1D19C48BB802BA184AB2CEAFB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Measure the growth of their seedling every day. ",
+    "id": "3827CC3CB231498B9D56CEA722D7B404",
+    "listId": "1",
+    "parentId": "8C410FCFF70847F2A8F297F37EAEC64A",
+    "position": 1194,
+    "statementLabel": null,
+    "statementNotation": "5.6a.1"
+   },
+   "38B8158FCE5349C7B2C26DAF34F7902D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D338575AE7F645ABB2BB4CDFB672BAC9"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Notice and recognize that things in their environment can be measured (length/height, weight, area,\nvolume, temperature, time).  ",
+    "id": "38B8158FCE5349C7B2C26DAF34F7902D",
+    "listId": "a",
+    "parentId": "D338575AE7F645ABB2BB4CDFB672BAC9",
+    "position": 1158,
+    "statementLabel": null,
+    "statementNotation": "5a"
+   },
+   "3BC6A1A9BB3F4FE78E339AC5108EDA32": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "78D3DE7A0CB84D32B4A187DFB89AE7AD",
+     "883C846FE0744FF8A52FF1D2A07EE3C0",
+     "5C1D6FC1D19C48BB802BA184AB2CEAFB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Sort blocks by material (plastic/wooden) during clean-up time, when directed\nby an adult.  ",
+    "id": "3BC6A1A9BB3F4FE78E339AC5108EDA32",
+    "listId": "1",
+    "parentId": "78D3DE7A0CB84D32B4A187DFB89AE7AD",
+    "position": 1198,
+    "statementLabel": null,
+    "statementNotation": "3.6b.1"
+   },
+   "3C042D71103B4D17BAFCD6DA19DC702B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A9CE6821BAF34213AF6DE7D34B36FAB0",
+     "87078CC1F5584D61A308FCC495C8DC11",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify circles and squares and begin to recognize and identify a sphere (ball) and a cube (box). ",
+    "id": "3C042D71103B4D17BAFCD6DA19DC702B",
+    "listId": "3",
+    "parentId": "A9CE6821BAF34213AF6DE7D34B36FAB0",
+    "position": 1109,
+    "statementLabel": null,
+    "statementNotation": "3.3b.3"
+   },
+   "3C04BBEE09BD42F6B86C5BF6FFA0C35D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "47588E61330042E4AD3A0A000CE09DC3",
+     "CE85C78278B84EBDA97C0B6E96239C16",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Plan ways to solve problems based on their knowledge and experience,\nsuch as getting a stool to reach a book that is on a shelf after trying to reach\nit on tiptoes. ",
+    "id": "3C04BBEE09BD42F6B86C5BF6FFA0C35D",
+    "listId": "4",
+    "parentId": "47588E61330042E4AD3A0A000CE09DC3",
+    "position": 1034,
+    "statementLabel": null,
+    "statementNotation": "3.1c.4"
+   },
+   "3C9A7892C0254A0B8A4458A39A2BEA06": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B2D57EE4CCB940DAAF70F09F3113B7A7",
+     "806AF4DCE39D433EA503F71179A1F366",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize that they have five counting bears, and their friend has four, so\nthey have more than their friend.",
+    "id": "3C9A7892C0254A0B8A4458A39A2BEA06",
+    "listId": "1",
+    "parentId": "B2D57EE4CCB940DAAF70F09F3113B7A7",
+    "position": 1060,
+    "statementLabel": null,
+    "statementNotation": "4.2b.1"
+   },
+   "3D298DF69B52419C959422B4AFFA091D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ABAEFD8246B04CC39D4EAE3EFAAB12EC",
+     "78CD9CA57894428685B8201E990381B3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "3 Years",
+    "id": "3D298DF69B52419C959422B4AFFA091D",
+    "listId": "",
+    "parentId": "ABAEFD8246B04CC39D4EAE3EFAAB12EC",
+    "position": 1150,
+    "statementLabel": null,
+    "statementNotation": "3.4b"
+   },
+   "40D4BECE90D4494DA2C50494DB67F157": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Children show a growing understanding of shapes and spatial relationships. ",
+    "id": "40D4BECE90D4494DA2C50494DB67F157",
+    "listId": "3",
+    "parentId": null,
+    "position": 1088,
+    "statementLabel": null,
+    "statementNotation": "3"
+   },
+   "44E1FE62909D4EA0A7AEC6791D463FC5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CE85C78278B84EBDA97C0B6E96239C16",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "4 Years",
+    "id": "44E1FE62909D4EA0A7AEC6791D463FC5",
+    "listId": "",
+    "parentId": "CE85C78278B84EBDA97C0B6E96239C16",
+    "position": 1035,
+    "statementLabel": null,
+    "statementNotation": "4.1c"
+   },
+   "45554F733D2F4166A3E90D2D35892F5B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CCD32E468CB643C59973C04E77C28921",
+     "D338575AE7F645ABB2BB4CDFB672BAC9"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "3 Years",
+    "id": "45554F733D2F4166A3E90D2D35892F5B",
+    "listId": "",
+    "parentId": "CCD32E468CB643C59973C04E77C28921",
+    "position": 1175,
+    "statementLabel": null,
+    "statementNotation": "3.5c"
+   },
+   "47588E61330042E4AD3A0A000CE09DC3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CE85C78278B84EBDA97C0B6E96239C16",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "3 Years",
+    "id": "47588E61330042E4AD3A0A000CE09DC3",
+    "listId": "",
+    "parentId": "CE85C78278B84EBDA97C0B6E96239C16",
+    "position": 1030,
+    "statementLabel": null,
+    "statementNotation": "3.1c"
+   },
+   "47892B9AAB04491D8CE421C13DA65044": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EC33C6897F4C4D8EB119FDF5370A5D20",
+     "AA51E2E4E4B34F87B53339B5FE73C97D",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Point to a clock and ask if it is time for snack.",
+    "id": "47892B9AAB04491D8CE421C13DA65044",
+    "listId": "1",
+    "parentId": "EC33C6897F4C4D8EB119FDF5370A5D20",
+    "position": 1018,
+    "statementLabel": null,
+    "statementNotation": "3.1b.1"
+   },
+   "4953809C90B8424A845C3BE11987C647": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "16EC62ABD2164356B7B89C1393A5A59E",
+     "87E1065983934FD597253725AB9D0ADB",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Pass out one plate and one cup to each child.",
+    "id": "4953809C90B8424A845C3BE11987C647",
+    "listId": "2",
+    "parentId": "16EC62ABD2164356B7B89C1393A5A59E",
+    "position": 1049,
+    "statementLabel": null,
+    "statementNotation": "4.2a.2"
+   },
+   "4C8D6D3BC0A34CAD8D301B8F8CDE62FB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "36147CA66D1047BE9E1B174423F259F0",
+     "6D70A55E52884313BF0980223A53E3BB",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "When building with Legos, search for another wheel, while saying “I only have three\nwheels.” ",
+    "id": "4C8D6D3BC0A34CAD8D301B8F8CDE62FB",
+    "listId": "1",
+    "parentId": "36147CA66D1047BE9E1B174423F259F0",
+    "position": 1007,
+    "statementLabel": null,
+    "statementNotation": "4.1a.1"
+   },
+   "4E27986B86274B1E8942EC42AB1E1178": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A9CE6821BAF34213AF6DE7D34B36FAB0",
+     "87078CC1F5584D61A308FCC495C8DC11",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begin to use blocks to build arches, corners, and enclosures or “rooms,” though the constructions\nmay not have interior space and may have been constructed through trial and error.",
+    "id": "4E27986B86274B1E8942EC42AB1E1178",
+    "listId": "5",
+    "parentId": "A9CE6821BAF34213AF6DE7D34B36FAB0",
+    "position": 1111,
+    "statementLabel": null,
+    "statementNotation": "3.3b.5"
+   },
+   "54E96FF34DC9441B96020141049130DD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "38B8158FCE5349C7B2C26DAF34F7902D",
+     "D338575AE7F645ABB2BB4CDFB672BAC9"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "4 Years",
+    "id": "54E96FF34DC9441B96020141049130DD",
+    "listId": "",
+    "parentId": "38B8158FCE5349C7B2C26DAF34F7902D",
+    "position": 1161,
+    "statementLabel": null,
+    "statementNotation": "4.5a"
+   },
+   "57AADA4BD15D4C43B5E236DE127F7F84": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "45554F733D2F4166A3E90D2D35892F5B",
+     "CCD32E468CB643C59973C04E77C28921",
+     "D338575AE7F645ABB2BB4CDFB672BAC9"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use a cup to move sand into a bucket, counting out loud as they pour each\ncupful in, sometimes.  ",
+    "id": "57AADA4BD15D4C43B5E236DE127F7F84",
+    "listId": "1",
+    "parentId": "45554F733D2F4166A3E90D2D35892F5B",
+    "position": 1176,
+    "statementLabel": null,
+    "statementNotation": "3.5c.1"
+   },
+   "59508A6FC7284E188B2A28AF0E705269": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "AAA48882D194447395C081AE9C9FB28A",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "4 Years",
+    "id": "59508A6FC7284E188B2A28AF0E705269",
+    "listId": "",
+    "parentId": "AAA48882D194447395C081AE9C9FB28A",
+    "position": 1082,
+    "statementLabel": null,
+    "statementNotation": "4.2d"
+   },
+   "59CB0183B78243DDAE2ED46B392A3794": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F43B374906234633BB73CA9660FABFE9",
+     "D5E5FC6B8F764A1EB5C90F5D13ADA58C",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize a taller bar in a bar graph means that bar has “more.” ",
+    "id": "59CB0183B78243DDAE2ED46B392A3794",
+    "listId": "4",
+    "parentId": "F43B374906234633BB73CA9660FABFE9",
+    "position": 1097,
+    "statementLabel": null,
+    "statementNotation": "4.3a.4"
+   },
+   "5ADEB1D4F7734043B96882DB50399CB6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "54E96FF34DC9441B96020141049130DD",
+     "38B8158FCE5349C7B2C26DAF34F7902D",
+     "D338575AE7F645ABB2BB4CDFB672BAC9"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Participate in a group discussion to decide which shelf will best fit the\nwooden unit blocks. ",
+    "id": "5ADEB1D4F7734043B96882DB50399CB6",
+    "listId": "1",
+    "parentId": "54E96FF34DC9441B96020141049130DD",
+    "position": 1162,
+    "statementLabel": null,
+    "statementNotation": "4.5a.1"
+   },
+   "5B09FE6269E740A9AA35AD08DD2F686F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1CAF688E83984CABBEA55C87EFA4A9A3",
+     "BE49C7FA405248EBB3285227D3164DE8",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begin to use tools to divide playdough shapes (circle, square, or rectangle)\ninto two or more generally equal parts, through trial and error, and they may\nnot be able to explain how they decided what was “equal.” ",
+    "id": "5B09FE6269E740A9AA35AD08DD2F686F",
+    "listId": "2",
+    "parentId": "1CAF688E83984CABBEA55C87EFA4A9A3",
+    "position": 1130,
+    "statementLabel": null,
+    "statementNotation": "3.3c.2"
+   },
+   "5C1D6FC1D19C48BB802BA184AB2CEAFB": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Children begin to develop processes and strategies for classifying\nand using data. ",
+    "id": "5C1D6FC1D19C48BB802BA184AB2CEAFB",
+    "listId": "6",
+    "parentId": null,
+    "position": 1184,
+    "statementLabel": null,
+    "statementNotation": "6"
+   },
+   "5F7E4B88864F47898D0FFEA6FC9BE2EE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "651942F95D7049E78319A113A153AD56",
+     "5C1D6FC1D19C48BB802BA184AB2CEAFB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "3 Years",
+    "id": "5F7E4B88864F47898D0FFEA6FC9BE2EE",
+    "listId": "",
+    "parentId": "651942F95D7049E78319A113A153AD56",
+    "position": 1186,
+    "statementLabel": null,
+    "statementNotation": "3.6a"
+   },
+   "62071A89EEC34FEC99E53DF26F22686E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5F7E4B88864F47898D0FFEA6FC9BE2EE",
+     "651942F95D7049E78319A113A153AD56",
+     "5C1D6FC1D19C48BB802BA184AB2CEAFB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Participate in a group activity to count how many people in the group have\npets.  ",
+    "id": "62071A89EEC34FEC99E53DF26F22686E",
+    "listId": "2",
+    "parentId": "5F7E4B88864F47898D0FFEA6FC9BE2EE",
+    "position": 1188,
+    "statementLabel": null,
+    "statementNotation": "3.6a.2"
+   },
+   "631E9AA7875E4BCD86A5B7E56A89E87A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F68A38CED2DA47A6B53B69BBBDCC05C2",
+     "CE85C78278B84EBDA97C0B6E96239C16",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "When their first idea for a solution doesn’t work, try to think of other ways to\nsolve their problem or achieve the result they want. For example: when the\nmosaic tiles they chose for their city artwork are too heavy for the paper, tell\na familiar adult they might need to choose something else to work with, or\ndifferent paper, or maybe even different glue to make it stick better.",
+    "id": "631E9AA7875E4BCD86A5B7E56A89E87A",
+    "listId": "2",
+    "parentId": "F68A38CED2DA47A6B53B69BBBDCC05C2",
+    "position": 1041,
+    "statementLabel": null,
+    "statementNotation": "5.1c.2"
+   },
+   "634115A4063B4A799177BDA916BBA4F5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "DDCBBAC5A015430083B17825D7A080A9",
+     "87078CC1F5584D61A308FCC495C8DC11",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize a wider variety of shapes, such as identifying a book cover as a rectangle, and a line\ndrawn across the angle/corner of a square as forming a triangle.",
+    "id": "634115A4063B4A799177BDA916BBA4F5",
+    "listId": "2",
+    "parentId": "DDCBBAC5A015430083B17825D7A080A9",
+    "position": 1114,
+    "statementLabel": null,
+    "statementNotation": "4.3b.2"
+   },
+   "6369B14C8DE24A2AA4B2E5687E405C77": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "13297C332199456FAD74A064CB1D7206",
+     "26B9704A88A84E87B533AD852B8744A6",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Tell how many children are present after counting how many are absent.",
+    "id": "6369B14C8DE24A2AA4B2E5687E405C77",
+    "listId": "3",
+    "parentId": "13297C332199456FAD74A064CB1D7206",
+    "position": 1077,
+    "statementLabel": null,
+    "statementNotation": "5.2c.3"
+   },
+   "63B4FF75553E42659BAAF344BBC9CEBA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ABAEFD8246B04CC39D4EAE3EFAAB12EC",
+     "78CD9CA57894428685B8201E990381B3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "4 Years",
+    "id": "63B4FF75553E42659BAAF344BBC9CEBA",
+    "listId": "",
+    "parentId": "ABAEFD8246B04CC39D4EAE3EFAAB12EC",
+    "position": 1152,
+    "statementLabel": null,
+    "statementNotation": "4.4b"
+   },
+   "64DB9FF5ECAC476CAB1BD261C60ADD99": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "99C94ACD92C844409EFAED53570DE14B",
+     "BE49C7FA405248EBB3285227D3164DE8",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begin extending their understanding of equal parts to include 1/4 and 1/3,\nsuch as 4 parts of a sandwich or separating crackers into 3 equal piles. ",
+    "id": "64DB9FF5ECAC476CAB1BD261C60ADD99",
+    "listId": "1",
+    "parentId": "99C94ACD92C844409EFAED53570DE14B",
+    "position": 1136,
+    "statementLabel": null,
+    "statementNotation": "5.3c.1"
+   },
+   "651942F95D7049E78319A113A153AD56": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5C1D6FC1D19C48BB802BA184AB2CEAFB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Recognize and classify things in their environment. ",
+    "id": "651942F95D7049E78319A113A153AD56",
+    "listId": "a",
+    "parentId": "5C1D6FC1D19C48BB802BA184AB2CEAFB",
+    "position": 1185,
+    "statementLabel": null,
+    "statementNotation": "6a"
+   },
+   "6B14BC9A4567424F89FD328F62902F87": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B28DCCBAE6544F0188770AC5CC599DC7",
+     "87078CC1F5584D61A308FCC495C8DC11",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize lines and angles (corners) as attributes of shapes when comparing and classifying\nshapes. For example: noting that a triangle has 3 sides, but a rectangle has 4.",
+    "id": "6B14BC9A4567424F89FD328F62902F87",
+    "listId": "2",
+    "parentId": "B28DCCBAE6544F0188770AC5CC599DC7",
+    "position": 1120,
+    "statementLabel": null,
+    "statementNotation": "5.3b.2"
+   },
+   "6C157976F3C54D37A126B79589AAE207": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F33443AC52D6477DA5083C1EFB842AF2",
+     "78CD9CA57894428685B8201E990381B3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "3 Years",
+    "id": "6C157976F3C54D37A126B79589AAE207",
+    "listId": "",
+    "parentId": "F33443AC52D6477DA5083C1EFB842AF2",
+    "position": 1140,
+    "statementLabel": null,
+    "statementNotation": "3.4a"
+   },
+   "6D70A55E52884313BF0980223A53E3BB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Explore and begin to make sense of their world through mathematical thinking and strategies. ",
+    "id": "6D70A55E52884313BF0980223A53E3BB",
+    "listId": "a",
+    "parentId": "2E95FEB0481C48BCA29E5D9936696CC5",
+    "position": 1001,
+    "statementLabel": null,
+    "statementNotation": "1a"
+   },
+   "6E4F5C1B353347339689BC95D5CA21A0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D8BFF40A1BB94CCA973CE40326868B60",
+     "CCD32E468CB643C59973C04E77C28921",
+     "D338575AE7F645ABB2BB4CDFB672BAC9"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Expand their use of formal measuring tools to include more complex or\ndetailed tools, such as rulers, kitchen and bathroom scales, thermometers,\netc. ",
+    "id": "6E4F5C1B353347339689BC95D5CA21A0",
+    "listId": "1",
+    "parentId": "D8BFF40A1BB94CCA973CE40326868B60",
+    "position": 1182,
+    "statementLabel": null,
+    "statementNotation": "5.5c.1"
+   },
+   "6F6CFE23D644494AA675A0C74BAEA6EE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F387D91F839F4FF786D167792122EB76",
+     "7961492CD0824167AC0CF6B9393813B5",
+     "D338575AE7F645ABB2BB4CDFB672BAC9"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Place blocks tightly against each other to compare the area, or space inside,\ntwo differently sized rectangles, with more accuracy.  ",
+    "id": "6F6CFE23D644494AA675A0C74BAEA6EE",
+    "listId": "1",
+    "parentId": "F387D91F839F4FF786D167792122EB76",
+    "position": 1172,
+    "statementLabel": null,
+    "statementNotation": "5.5b.1"
+   },
+   "70AFDEC52E3F4E2F84D14910BAF037DF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "63B4FF75553E42659BAAF344BBC9CEBA",
+     "ABAEFD8246B04CC39D4EAE3EFAAB12EC",
+     "78CD9CA57894428685B8201E990381B3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Set several blocks next to each other, using trial and error to decide which is\nlongest, when working to line blocks from longest to shortest.  ",
+    "id": "70AFDEC52E3F4E2F84D14910BAF037DF",
+    "listId": "1",
+    "parentId": "63B4FF75553E42659BAAF344BBC9CEBA",
+    "position": 1153,
+    "statementLabel": null,
+    "statementNotation": "4.4b.1"
+   },
+   "72934D5B87224F93B9DBE5027E890783": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "133EBA111B214C33B938EF6F06976055",
+     "87E1065983934FD597253725AB9D0ADB",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Pass out ten crackers for each child.",
+    "id": "72934D5B87224F93B9DBE5027E890783",
+    "listId": "1",
+    "parentId": "133EBA111B214C33B938EF6F06976055",
+    "position": 1052,
+    "statementLabel": null,
+    "statementNotation": "5.2a.1"
+   },
+   "73D78836206E4F54BB9E97E2B3A695F0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "948031C88F3A4ABC93079A2AC8967B44",
+     "BE49C7FA405248EBB3285227D3164DE8",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Attempt to label a whole and its parts with numbers, such as explaining that\ntheir basket of 4 pieces of play food has 2 pears and 2 oranges. ",
+    "id": "73D78836206E4F54BB9E97E2B3A695F0",
+    "listId": "1",
+    "parentId": "948031C88F3A4ABC93079A2AC8967B44",
+    "position": 1132,
+    "statementLabel": null,
+    "statementNotation": "4.3c.1"
+   },
+   "73F1CC0294244D4EA9A8CFB512A00671": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "87E1065983934FD597253725AB9D0ADB",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "3 Years",
+    "id": "73F1CC0294244D4EA9A8CFB512A00671",
+    "listId": "",
+    "parentId": "87E1065983934FD597253725AB9D0ADB",
+    "position": 1044,
+    "statementLabel": null,
+    "statementNotation": "3.2a"
+   },
+   "76CBD7C34AE44550BF1FD9C15E410377": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "883C846FE0744FF8A52FF1D2A07EE3C0",
+     "5C1D6FC1D19C48BB802BA184AB2CEAFB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "5 Years",
+    "id": "76CBD7C34AE44550BF1FD9C15E410377",
+    "listId": "",
+    "parentId": "883C846FE0744FF8A52FF1D2A07EE3C0",
+    "position": 1203,
+    "statementLabel": null,
+    "statementNotation": "5.6b"
+   },
+   "775D57C1D57C4B858A517498FB8D5F65": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "DDCBBAC5A015430083B17825D7A080A9",
+     "87078CC1F5584D61A308FCC495C8DC11",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use blocks to create the lines of a shape, so their creation looks like a particular shape.",
+    "id": "775D57C1D57C4B858A517498FB8D5F65",
+    "listId": "3",
+    "parentId": "DDCBBAC5A015430083B17825D7A080A9",
+    "position": 1115,
+    "statementLabel": null,
+    "statementNotation": "4.3b.3"
+   },
+   "777275D5B869494FB4D2807DC31483D9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "04594C9819C044EFA66DD2687C98B3E6",
+     "26B9704A88A84E87B533AD852B8744A6",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Say that William has more blocks than they do, after counting.",
+    "id": "777275D5B869494FB4D2807DC31483D9",
+    "listId": "1",
+    "parentId": "04594C9819C044EFA66DD2687C98B3E6",
+    "position": 1071,
+    "statementLabel": null,
+    "statementNotation": "4.2c.1"
+   },
+   "78CD9CA57894428685B8201E990381B3": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Children show a growing understanding of patterns, structures, and relationships\nin math.",
+    "id": "78CD9CA57894428685B8201E990381B3",
+    "listId": "4",
+    "parentId": null,
+    "position": 1138,
+    "statementLabel": null,
+    "statementNotation": "4"
+   },
+   "78D3DE7A0CB84D32B4A187DFB89AE7AD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "883C846FE0744FF8A52FF1D2A07EE3C0",
+     "5C1D6FC1D19C48BB802BA184AB2CEAFB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "3 Years",
+    "id": "78D3DE7A0CB84D32B4A187DFB89AE7AD",
+    "listId": "",
+    "parentId": "883C846FE0744FF8A52FF1D2A07EE3C0",
+    "position": 1197,
+    "statementLabel": null,
+    "statementNotation": "3.6b"
+   },
+   "7961492CD0824167AC0CF6B9393813B5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D338575AE7F645ABB2BB4CDFB672BAC9"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Compare things in their environment and use the language of measurement (lighter, darker, long,\nlonger, big, bigger, etc.) to describe them.  ",
+    "id": "7961492CD0824167AC0CF6B9393813B5",
+    "listId": "b",
+    "parentId": "D338575AE7F645ABB2BB4CDFB672BAC9",
+    "position": 1165,
+    "statementLabel": null,
+    "statementNotation": "5b"
+   },
+   "7C82586D26764A6AB82E80E1D2DEBB8B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6C157976F3C54D37A126B79589AAE207",
+     "F33443AC52D6477DA5083C1EFB842AF2",
+     "78CD9CA57894428685B8201E990381B3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Put a blue counting bear in the empty spot in a row of yellow bear, blue,\nyellow, empty space, yellow.",
+    "id": "7C82586D26764A6AB82E80E1D2DEBB8B",
+    "listId": "1",
+    "parentId": "6C157976F3C54D37A126B79589AAE207",
+    "position": 1141,
+    "statementLabel": null,
+    "statementNotation": "3.4a.1"
+   },
+   "7D49D808D29B4631AD340D04D6D00D95": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "10623BA2A5044551B537C3488067DC0F",
+     "ABAEFD8246B04CC39D4EAE3EFAAB12EC",
+     "78CD9CA57894428685B8201E990381B3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use a mental map of ordering as they set stacking cups in a row from\nsmallest to largest. ",
+    "id": "7D49D808D29B4631AD340D04D6D00D95",
+    "listId": "1",
+    "parentId": "10623BA2A5044551B537C3488067DC0F",
+    "position": 1156,
+    "statementLabel": null,
+    "statementNotation": "5.4b.1"
+   },
+   "806AF4DCE39D433EA503F71179A1F366": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Subitizing: Recognize and name the quantity of objects in a group without counting. ",
+    "id": "806AF4DCE39D433EA503F71179A1F366",
+    "listId": "b",
+    "parentId": "D5B1385BF5B245FE9319A3913CA92156",
+    "position": 1056,
+    "statementLabel": null,
+    "statementNotation": "2b"
+   },
+   "83C56DB7E791420BA133944EEBBCCE7D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "38B8158FCE5349C7B2C26DAF34F7902D",
+     "D338575AE7F645ABB2BB4CDFB672BAC9"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "3 Years",
+    "id": "83C56DB7E791420BA133944EEBBCCE7D",
+    "listId": "",
+    "parentId": "38B8158FCE5349C7B2C26DAF34F7902D",
+    "position": 1159,
+    "statementLabel": null,
+    "statementNotation": "3.5a"
+   },
+   "84F1B77C9B0D46748B7528D60EBDB510": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "44E1FE62909D4EA0A7AEC6791D463FC5",
+     "CE85C78278B84EBDA97C0B6E96239C16",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With support, explain how they decided that each child would get two\ncrackers from the snack tray. For example, by passing out one cracker to\neach child, and then counting to make sure that there were enough left for\nevery child to have one more.",
+    "id": "84F1B77C9B0D46748B7528D60EBDB510",
+    "listId": "1",
+    "parentId": "44E1FE62909D4EA0A7AEC6791D463FC5",
+    "position": 1036,
+    "statementLabel": null,
+    "statementNotation": "4.1c.1"
+   },
+   "869CB69707E8483080E64E3B69120FF3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9E8AE8FA54424B2DA0833083B9BFF6D7",
+     "AA51E2E4E4B34F87B53339B5FE73C97D",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use mathematical terms like bigger/smaller than, more/less than or the\nsame when referring to quantities or size of items.",
+    "id": "869CB69707E8483080E64E3B69120FF3",
+    "listId": "1",
+    "parentId": "9E8AE8FA54424B2DA0833083B9BFF6D7",
+    "position": 1026,
+    "statementLabel": null,
+    "statementNotation": "5.1b.1"
+   },
+   "86EEC8FD05434446BF673DDAA308A4B9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "13297C332199456FAD74A064CB1D7206",
+     "26B9704A88A84E87B533AD852B8744A6",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use finger patterns, objects, and counting on to join quantities together. For\nexample, when prompted with “You have 7 cheese sticks, and someone\ngives you 5 more. How many do you have now?” will start at 7 and counting\n8, 9, 10, 11, 12 until they have counted 5 more numbers to find the sum.",
+    "id": "86EEC8FD05434446BF673DDAA308A4B9",
+    "listId": "1",
+    "parentId": "13297C332199456FAD74A064CB1D7206",
+    "position": 1075,
+    "statementLabel": null,
+    "statementNotation": "5.2c.1"
+   },
+   "87078CC1F5584D61A308FCC495C8DC11": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Explore and begin to analyze two-dimensional and three-dimensional shapes and shape attributes.  ",
+    "id": "87078CC1F5584D61A308FCC495C8DC11",
+    "listId": "b",
+    "parentId": "40D4BECE90D4494DA2C50494DB67F157",
+    "position": 1105,
+    "statementLabel": null,
+    "statementNotation": "3b"
+   },
+   "87E1065983934FD597253725AB9D0ADB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Counting: Explore numbers and number vocabulary with increasing understanding of their\nrelationship to quantity.  ",
+    "id": "87E1065983934FD597253725AB9D0ADB",
+    "listId": "a",
+    "parentId": "D5B1385BF5B245FE9319A3913CA92156",
+    "position": 1043,
+    "statementLabel": null,
+    "statementNotation": "2a"
+   },
+   "883C846FE0744FF8A52FF1D2A07EE3C0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5C1D6FC1D19C48BB802BA184AB2CEAFB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Sort things in their environment into groups based on attributes. ",
+    "id": "883C846FE0744FF8A52FF1D2A07EE3C0",
+    "listId": "b",
+    "parentId": "5C1D6FC1D19C48BB802BA184AB2CEAFB",
+    "position": 1196,
+    "statementLabel": null,
+    "statementNotation": "6b"
+   },
+   "8923CE402C5E4190811303D0B950A1AF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "948031C88F3A4ABC93079A2AC8967B44",
+     "BE49C7FA405248EBB3285227D3164DE8",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Continue to explore and become more accurate in dividing shapes into equal\nparts. ",
+    "id": "8923CE402C5E4190811303D0B950A1AF",
+    "listId": "2",
+    "parentId": "948031C88F3A4ABC93079A2AC8967B44",
+    "position": 1133,
+    "statementLabel": null,
+    "statementNotation": "4.3c.2"
+   },
+   "897741CF6BE2417E9C059686335782AF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "96A318ECDBDB4B13B7816FD65D5D5198",
+     "651942F95D7049E78319A113A153AD56",
+     "5C1D6FC1D19C48BB802BA184AB2CEAFB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describe the similarities and differences between objects, such as\ndetermining by feel that some of a collection of buttons are fabric-covered\nand others have holes. ",
+    "id": "897741CF6BE2417E9C059686335782AF",
+    "listId": "1",
+    "parentId": "96A318ECDBDB4B13B7816FD65D5D5198",
+    "position": 1190,
+    "statementLabel": null,
+    "statementNotation": "4.6a.1"
+   },
+   "8B330285ED714F3EB7EEC4EDF27AE42F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "13297C332199456FAD74A064CB1D7206",
+     "26B9704A88A84E87B533AD852B8744A6",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Mentally separate larger groups of objects in two or more smaller groups\nwhen figuring out quantity. For example, with a plate of 7 apple slices,\nvisually separate into groups of 3 and 4 to be able to easily decide there are\n7 slices.",
+    "id": "8B330285ED714F3EB7EEC4EDF27AE42F",
+    "listId": "2",
+    "parentId": "13297C332199456FAD74A064CB1D7206",
+    "position": 1076,
+    "statementLabel": null,
+    "statementNotation": "5.2c.2"
+   },
+   "8BF49CE24E484085A5829DA8517472FF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "04594C9819C044EFA66DD2687C98B3E6",
+     "26B9704A88A84E87B533AD852B8744A6",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "After naming who is missing during the morning message, tell how many\nchildren are absent today.",
+    "id": "8BF49CE24E484085A5829DA8517472FF",
+    "listId": "3",
+    "parentId": "04594C9819C044EFA66DD2687C98B3E6",
+    "position": 1073,
+    "statementLabel": null,
+    "statementNotation": "4.2c.3"
+   },
+   "8C410FCFF70847F2A8F297F37EAEC64A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "651942F95D7049E78319A113A153AD56",
+     "5C1D6FC1D19C48BB802BA184AB2CEAFB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "5 Years",
+    "id": "8C410FCFF70847F2A8F297F37EAEC64A",
+    "listId": "",
+    "parentId": "651942F95D7049E78319A113A153AD56",
+    "position": 1193,
+    "statementLabel": null,
+    "statementNotation": "5.6a"
+   },
+   "8D536C93CECB46B98F48C7C7915B8A10": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "227C1674C2FD4263A17FB9F07E542E6C",
+     "6D70A55E52884313BF0980223A53E3BB",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Suggest an idea for sharing when there are a limited number of scoops in the sand\ntable.",
+    "id": "8D536C93CECB46B98F48C7C7915B8A10",
+    "listId": "1",
+    "parentId": "227C1674C2FD4263A17FB9F07E542E6C",
+    "position": 1012,
+    "statementLabel": null,
+    "statementNotation": "5.1a.1"
+   },
+   "8DA461416590432E994208A0DB8CAA3C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2BDF4811E1254DE7B60C7F8B00789DDB",
+     "883C846FE0744FF8A52FF1D2A07EE3C0",
+     "5C1D6FC1D19C48BB802BA184AB2CEAFB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Sort manipulatives into separate containers during clean up time. ",
+    "id": "8DA461416590432E994208A0DB8CAA3C",
+    "listId": "2",
+    "parentId": "2BDF4811E1254DE7B60C7F8B00789DDB",
+    "position": 1202,
+    "statementLabel": null,
+    "statementNotation": "4.6b.2"
+   },
+   "8F07833D035E4BB3A7D0051E675823ED": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "329EA607429B4995B35C6BFA114AFAF3",
+     "AA51E2E4E4B34F87B53339B5FE73C97D",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Participate in a group activity to predict what will happen to a toy car if the\nramp is taller or shorter.",
+    "id": "8F07833D035E4BB3A7D0051E675823ED",
+    "listId": "2",
+    "parentId": "329EA607429B4995B35C6BFA114AFAF3",
+    "position": 1023,
+    "statementLabel": null,
+    "statementNotation": "4.1b.2"
+   },
+   "8F917F8922EB434F98D8858EA002F0D5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "00054DD574BA4CEF92BBBE4F743FB47C",
+     "D5E5FC6B8F764A1EB5C90F5D13ADA58C",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Expand their spatial vocabulary to include more complex terms such as\nbeside and between.",
+    "id": "8F917F8922EB434F98D8858EA002F0D5",
+    "listId": "1",
+    "parentId": "00054DD574BA4CEF92BBBE4F743FB47C",
+    "position": 1091,
+    "statementLabel": null,
+    "statementNotation": "3.3a.1"
+   },
+   "8FE11AF1C44E487C9953D6D6C07EDC6F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "329EA607429B4995B35C6BFA114AFAF3",
+     "AA51E2E4E4B34F87B53339B5FE73C97D",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Tell about how they put a puzzle together.",
+    "id": "8FE11AF1C44E487C9953D6D6C07EDC6F",
+    "listId": "1",
+    "parentId": "329EA607429B4995B35C6BFA114AFAF3",
+    "position": 1022,
+    "statementLabel": null,
+    "statementNotation": "4.1b.1"
+   },
+   "90D7FE8A29F34034B7146702B3E4F3E2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B28DCCBAE6544F0188770AC5CC599DC7",
+     "87078CC1F5584D61A308FCC495C8DC11",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Point out lines and angles as geometric objects, at least in the context of how they can be put\ntogether to form shapes. ",
+    "id": "90D7FE8A29F34034B7146702B3E4F3E2",
+    "listId": "1",
+    "parentId": "B28DCCBAE6544F0188770AC5CC599DC7",
+    "position": 1119,
+    "statementLabel": null,
+    "statementNotation": "5.3b.1"
+   },
+   "91E9DA6C66EF423FB4B03D8720BB1D97": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "DDCBBAC5A015430083B17825D7A080A9",
+     "87078CC1F5584D61A308FCC495C8DC11",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use shapes as parts of their drawings, such as using a square as the body of a house and a\ntriangle as the roof.",
+    "id": "91E9DA6C66EF423FB4B03D8720BB1D97",
+    "listId": "4",
+    "parentId": "DDCBBAC5A015430083B17825D7A080A9",
+    "position": 1116,
+    "statementLabel": null,
+    "statementNotation": "4.3b.4"
+   },
+   "927A168761D249F48067C5263013A2E9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D00533880A394A90A6D05920891E708D",
+     "26B9704A88A84E87B533AD852B8744A6",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Tell who is first and who is second in a race or other scenario. For example,\n“Sarah finished her snack first, and I finished second.”",
+    "id": "927A168761D249F48067C5263013A2E9",
+    "listId": "1",
+    "parentId": "D00533880A394A90A6D05920891E708D",
+    "position": 1067,
+    "statementLabel": null,
+    "statementNotation": "3.2c.1"
+   },
+   "948031C88F3A4ABC93079A2AC8967B44": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BE49C7FA405248EBB3285227D3164DE8",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "4 Years",
+    "id": "948031C88F3A4ABC93079A2AC8967B44",
+    "listId": "",
+    "parentId": "BE49C7FA405248EBB3285227D3164DE8",
+    "position": 1131,
+    "statementLabel": null,
+    "statementNotation": "4.3c"
+   },
+   "96A318ECDBDB4B13B7816FD65D5D5198": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "651942F95D7049E78319A113A153AD56",
+     "5C1D6FC1D19C48BB802BA184AB2CEAFB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "4 Years",
+    "id": "96A318ECDBDB4B13B7816FD65D5D5198",
+    "listId": "",
+    "parentId": "651942F95D7049E78319A113A153AD56",
+    "position": 1189,
+    "statementLabel": null,
+    "statementNotation": "4.6a"
+   },
+   "96F74BE6341B4B1A940D4A71F0597025": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B28DCCBAE6544F0188770AC5CC599DC7",
+     "87078CC1F5584D61A308FCC495C8DC11",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize that the faces of 3-dimensional shapes are 2-dimensional shapes, such as identifying\nthe side of a cube/box as a square.",
+    "id": "96F74BE6341B4B1A940D4A71F0597025",
+    "listId": "4",
+    "parentId": "B28DCCBAE6544F0188770AC5CC599DC7",
+    "position": 1122,
+    "statementLabel": null,
+    "statementNotation": "5.3b.4"
+   },
+   "976FCD75087444A3B414E1954BE00103": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F387D91F839F4FF786D167792122EB76",
+     "7961492CD0824167AC0CF6B9393813B5",
+     "D338575AE7F645ABB2BB4CDFB672BAC9"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Point out that one book must be “longer” than another one because the\nspine is thicker.  ",
+    "id": "976FCD75087444A3B414E1954BE00103",
+    "listId": "2",
+    "parentId": "F387D91F839F4FF786D167792122EB76",
+    "position": 1173,
+    "statementLabel": null,
+    "statementNotation": "5.5b.2"
+   },
+   "99C94ACD92C844409EFAED53570DE14B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BE49C7FA405248EBB3285227D3164DE8",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "5 Years",
+    "id": "99C94ACD92C844409EFAED53570DE14B",
+    "listId": "",
+    "parentId": "BE49C7FA405248EBB3285227D3164DE8",
+    "position": 1135,
+    "statementLabel": null,
+    "statementNotation": "5.3c"
+   },
+   "9A1BA95F72DC496787A08F83AEA90E38": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FAADFEAAB0F54F5ABCC9B71BCBB59275",
+     "806AF4DCE39D433EA503F71179A1F366",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Mentally separate a large group of objects into two or more smaller groups.\nFor example, recognizing that they have five blueberries, and their sister\nalso has five, so there are ten blueberries in all. ",
+    "id": "9A1BA95F72DC496787A08F83AEA90E38",
+    "listId": "2",
+    "parentId": "FAADFEAAB0F54F5ABCC9B71BCBB59275",
+    "position": 1064,
+    "statementLabel": null,
+    "statementNotation": "5.2b.2"
+   },
+   "9E8AE8FA54424B2DA0833083B9BFF6D7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "AA51E2E4E4B34F87B53339B5FE73C97D",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "5 Years",
+    "id": "9E8AE8FA54424B2DA0833083B9BFF6D7",
+    "listId": "",
+    "parentId": "AA51E2E4E4B34F87B53339B5FE73C97D",
+    "position": 1025,
+    "statementLabel": null,
+    "statementNotation": "5.1b"
+   },
+   "9F83CC50AC1549E5931A76E53F09039B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "45554F733D2F4166A3E90D2D35892F5B",
+     "CCD32E468CB643C59973C04E77C28921",
+     "D338575AE7F645ABB2BB4CDFB672BAC9"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Hold a piece of fruit in each hand to decide which is heavier. ",
+    "id": "9F83CC50AC1549E5931A76E53F09039B",
+    "listId": "2",
+    "parentId": "45554F733D2F4166A3E90D2D35892F5B",
+    "position": 1177,
+    "statementLabel": null,
+    "statementNotation": "3.5c.2"
+   },
+   "9FB55670C6A54449AF6119E95ABFBC05": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "35FE1622AE5B4B599F3A39A44060E804",
+     "7961492CD0824167AC0CF6B9393813B5",
+     "D338575AE7F645ABB2BB4CDFB672BAC9"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With prompting, place blocks somewhat randomly inside two differently sized\nsquares to compare how much space is inside each square (area), with\nsome accuracy.  ",
+    "id": "9FB55670C6A54449AF6119E95ABFBC05",
+    "listId": "2",
+    "parentId": "35FE1622AE5B4B599F3A39A44060E804",
+    "position": 1170,
+    "statementLabel": null,
+    "statementNotation": "4.5b.2"
+   },
+   "A2F5D129E18A4BA29EB210C2A7BB90EC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F43B374906234633BB73CA9660FABFE9",
+     "D5E5FC6B8F764A1EB5C90F5D13ADA58C",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begin to build a mental model of a line between dots on a graph to predict\nwhere two “lines” might meet.",
+    "id": "A2F5D129E18A4BA29EB210C2A7BB90EC",
+    "listId": "5",
+    "parentId": "F43B374906234633BB73CA9660FABFE9",
+    "position": 1098,
+    "statementLabel": null,
+    "statementNotation": "4.3a.5"
+   },
+   "A628E949CDFC4B788D78FA90EF5A4C22": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9E8AE8FA54424B2DA0833083B9BFF6D7",
+     "AA51E2E4E4B34F87B53339B5FE73C97D",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize different ways to represent number such as tally marks, dice,\n5/10 frames, and numerals.",
+    "id": "A628E949CDFC4B788D78FA90EF5A4C22",
+    "listId": "2",
+    "parentId": "9E8AE8FA54424B2DA0833083B9BFF6D7",
+    "position": 1027,
+    "statementLabel": null,
+    "statementNotation": "5.1b.2"
+   },
+   "A7A00CCBC539481EB66BFE3406A24DE4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "325AA63862F94EF982ED4E3F6E11D61E",
+     "AAA48882D194447395C081AE9C9FB28A",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Mentally separate larger groups of objects in two or more smaller groups\nwhen figuring out quantity. For example, with a plate of 7 apple slices,\nvisually separate into groups of 3 and 4 to be able to easily decide there are\n7 slices.",
+    "id": "A7A00CCBC539481EB66BFE3406A24DE4",
+    "listId": "1",
+    "parentId": "325AA63862F94EF982ED4E3F6E11D61E",
+    "position": 1086,
+    "statementLabel": null,
+    "statementNotation": "5.2d.1"
+   },
+   "A8E3A0E18D814C0DB9A7406290D79BD6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F59461C2D4AC4E7AAF1F9842CF4FB99F",
+     "6D70A55E52884313BF0980223A53E3BB",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Ask a familiar adult to pour more milk to fill their cup all the way (concept of “more”).",
+    "id": "A8E3A0E18D814C0DB9A7406290D79BD6",
+    "listId": "2",
+    "parentId": "F59461C2D4AC4E7AAF1F9842CF4FB99F",
+    "position": 1004,
+    "statementLabel": null,
+    "statementNotation": "3.1a.2"
+   },
+   "A9CE6821BAF34213AF6DE7D34B36FAB0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "87078CC1F5584D61A308FCC495C8DC11",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "3 Years",
+    "id": "A9CE6821BAF34213AF6DE7D34B36FAB0",
+    "listId": "",
+    "parentId": "87078CC1F5584D61A308FCC495C8DC11",
+    "position": 1106,
+    "statementLabel": null,
+    "statementNotation": "3.3b"
+   },
+   "AA51E2E4E4B34F87B53339B5FE73C97D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Explore and begin to understand mathematical symbols and language in communicating their\nexplorations and discoveries.",
+    "id": "AA51E2E4E4B34F87B53339B5FE73C97D",
+    "listId": "b",
+    "parentId": "2E95FEB0481C48BCA29E5D9936696CC5",
+    "position": 1016,
+    "statementLabel": null,
+    "statementNotation": "1b"
+   },
+   "AAA48882D194447395C081AE9C9FB28A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Composing and Decomposing Numbers: Begin to understand that numbers are made up of\nsmaller numbers.  ",
+    "id": "AAA48882D194447395C081AE9C9FB28A",
+    "listId": "d",
+    "parentId": "D5B1385BF5B245FE9319A3913CA92156",
+    "position": 1078,
+    "statementLabel": null,
+    "statementNotation": "2d"
+   },
+   "AB3721DB2B6844D4A445A88DCD46EAC8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "16EC62ABD2164356B7B89C1393A5A59E",
+     "87E1065983934FD597253725AB9D0ADB",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Roll a die that lands on 5, then move their game piece five spaces.",
+    "id": "AB3721DB2B6844D4A445A88DCD46EAC8",
+    "listId": "1",
+    "parentId": "16EC62ABD2164356B7B89C1393A5A59E",
+    "position": 1048,
+    "statementLabel": null,
+    "statementNotation": "4.2a.1"
+   },
+   "AB583B10E50A42C696D026A823A6BB69": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "44E1FE62909D4EA0A7AEC6791D463FC5",
+     "CE85C78278B84EBDA97C0B6E96239C16",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Try to put a bead on a shoelace as a bracelet, and then look around for\nother options to replace the shoelace when the bead doesn’t fit.",
+    "id": "AB583B10E50A42C696D026A823A6BB69",
+    "listId": "2",
+    "parentId": "44E1FE62909D4EA0A7AEC6791D463FC5",
+    "position": 1037,
+    "statementLabel": null,
+    "statementNotation": "4.1c.2"
+   },
+   "ABAEFD8246B04CC39D4EAE3EFAAB12EC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "78CD9CA57894428685B8201E990381B3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Ordering and Seriation: Arrange objects in order according to changes in a specific attribute, such\nas size, length, number, color, etc.  ",
+    "id": "ABAEFD8246B04CC39D4EAE3EFAAB12EC",
+    "listId": "b",
+    "parentId": "78CD9CA57894428685B8201E990381B3",
+    "position": 1149,
+    "statementLabel": null,
+    "statementNotation": "4b"
+   },
+   "ABB1B331C4A54F77945B7B5E7F35B123": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "96A318ECDBDB4B13B7816FD65D5D5198",
+     "651942F95D7049E78319A113A153AD56",
+     "5C1D6FC1D19C48BB802BA184AB2CEAFB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Chart different kinds of weather with their group over the course of a week or\na month.  ",
+    "id": "ABB1B331C4A54F77945B7B5E7F35B123",
+    "listId": "3",
+    "parentId": "96A318ECDBDB4B13B7816FD65D5D5198",
+    "position": 1192,
+    "statementLabel": null,
+    "statementNotation": "4.6a.3"
+   },
+   "AF2CF3FA3A8442218D5DD1685B28ABA5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "36147CA66D1047BE9E1B174423F259F0",
+     "6D70A55E52884313BF0980223A53E3BB",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Make an ‘AB’ pattern using colored manipulatives. ",
+    "id": "AF2CF3FA3A8442218D5DD1685B28ABA5",
+    "listId": "4",
+    "parentId": "36147CA66D1047BE9E1B174423F259F0",
+    "position": 1010,
+    "statementLabel": null,
+    "statementNotation": "4.1a.4"
+   },
+   "B28DCCBAE6544F0188770AC5CC599DC7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "87078CC1F5584D61A308FCC495C8DC11",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "5 Years",
+    "id": "B28DCCBAE6544F0188770AC5CC599DC7",
+    "listId": "",
+    "parentId": "87078CC1F5584D61A308FCC495C8DC11",
+    "position": 1118,
+    "statementLabel": null,
+    "statementNotation": "5.3b"
+   },
+   "B2D57EE4CCB940DAAF70F09F3113B7A7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "806AF4DCE39D433EA503F71179A1F366",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "4 Years",
+    "id": "B2D57EE4CCB940DAAF70F09F3113B7A7",
+    "listId": "",
+    "parentId": "806AF4DCE39D433EA503F71179A1F366",
+    "position": 1059,
+    "statementLabel": null,
+    "statementNotation": "4.2b"
+   },
+   "B3080B2EC0274367A6AFB821C9A782C2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B2D57EE4CCB940DAAF70F09F3113B7A7",
+     "806AF4DCE39D433EA503F71179A1F366",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Demonstrate “conceptual subitizing,” or identifying a whole when only seeing\nparts of it. For example, seeing five cookies stacked and overlapped on a\nplate and saying that they see five.",
+    "id": "B3080B2EC0274367A6AFB821C9A782C2",
+    "listId": "2",
+    "parentId": "B2D57EE4CCB940DAAF70F09F3113B7A7",
+    "position": 1061,
+    "statementLabel": null,
+    "statementNotation": "4.2b.2"
+   },
+   "B7C8BD8295104FE7854602F85AFF747F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F43B374906234633BB73CA9660FABFE9",
+     "D5E5FC6B8F764A1EB5C90F5D13ADA58C",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Play hide-and-seek.",
+    "id": "B7C8BD8295104FE7854602F85AFF747F",
+    "listId": "2",
+    "parentId": "F43B374906234633BB73CA9660FABFE9",
+    "position": 1095,
+    "statementLabel": null,
+    "statementNotation": "4.3a.2"
+   },
+   "BCB8FDED970C4F09913FDB3F094B9955": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F33443AC52D6477DA5083C1EFB842AF2",
+     "78CD9CA57894428685B8201E990381B3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "5 Years",
+    "id": "BCB8FDED970C4F09913FDB3F094B9955",
+    "listId": "",
+    "parentId": "F33443AC52D6477DA5083C1EFB842AF2",
+    "position": 1146,
+    "statementLabel": null,
+    "statementNotation": "5.4a"
+   },
+   "BE49C7FA405248EBB3285227D3164DE8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Investigate and begin to understand the concept of a whole and how it can be divided into two (or\nmore) equal parts.  ",
+    "id": "BE49C7FA405248EBB3285227D3164DE8",
+    "listId": "c",
+    "parentId": "40D4BECE90D4494DA2C50494DB67F157",
+    "position": 1127,
+    "statementLabel": null,
+    "statementNotation": "3c"
+   },
+   "C1732C6BF36F4AB886E6D9A5442FC42E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FFDCB39F9EB04958888C6714AB5C7CCD",
+     "806AF4DCE39D433EA503F71179A1F366",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Tell a familiar adult that there are “only two” Goldfish crackers on their plate after looking but not counting. ",
+    "id": "C1732C6BF36F4AB886E6D9A5442FC42E",
+    "listId": "1",
+    "parentId": "FFDCB39F9EB04958888C6714AB5C7CCD",
+    "position": 1058,
+    "statementLabel": null,
+    "statementNotation": "3.2b.1"
+   },
+   "C2471BCDCB9043BA96B4F0D71FFE7CC9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "73F1CC0294244D4EA9A8CFB512A00671",
+     "87E1065983934FD597253725AB9D0ADB",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Point to animal counters one-by-one, counting out loud from one to five.",
+    "id": "C2471BCDCB9043BA96B4F0D71FFE7CC9",
+    "listId": "1",
+    "parentId": "73F1CC0294244D4EA9A8CFB512A00671",
+    "position": 1045,
+    "statementLabel": null,
+    "statementNotation": "3.2a.1"
+   },
+   "C4A224FB76974A45AA1AF0443CF9EB2F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "948031C88F3A4ABC93079A2AC8967B44",
+     "BE49C7FA405248EBB3285227D3164DE8",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begin to identify “half” of a circle (cookie) or square (sandwich), as well as\n“half” of a countable quantity (crackers) as they apply to “fair shares.” ",
+    "id": "C4A224FB76974A45AA1AF0443CF9EB2F",
+    "listId": "3",
+    "parentId": "948031C88F3A4ABC93079A2AC8967B44",
+    "position": 1134,
+    "statementLabel": null,
+    "statementNotation": "4.3c.3"
+   },
+   "C4ABEF78AFAD43EE90E5396C5DAFF732": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CF08B541F4764B4691A04E7D5105A2A4",
+     "AAA48882D194447395C081AE9C9FB28A",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Trade 2 small items for 1 bigger item.",
+    "id": "C4ABEF78AFAD43EE90E5396C5DAFF732",
+    "listId": "2",
+    "parentId": "CF08B541F4764B4691A04E7D5105A2A4",
+    "position": 1081,
+    "statementLabel": null,
+    "statementNotation": "3.2d.2"
+   },
+   "C4E8F87B420A40479FD3D86526998D25": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D32909D4C6ED48ECAA777F6D46D53598",
+     "F33443AC52D6477DA5083C1EFB842AF2",
+     "78CD9CA57894428685B8201E990381B3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Continue a pattern set out by an adult, adding a triangle and then a circle to\na row of triangle, circle, triangle, circle. ",
+    "id": "C4E8F87B420A40479FD3D86526998D25",
+    "listId": "1",
+    "parentId": "D32909D4C6ED48ECAA777F6D46D53598",
+    "position": 1144,
+    "statementLabel": null,
+    "statementNotation": "4.4a.1"
+   },
+   "C66705CE17C944D38131A274574ECE32": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "38B8158FCE5349C7B2C26DAF34F7902D",
+     "D338575AE7F645ABB2BB4CDFB672BAC9"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "5 Years",
+    "id": "C66705CE17C944D38131A274574ECE32",
+    "listId": "",
+    "parentId": "38B8158FCE5349C7B2C26DAF34F7902D",
+    "position": 1163,
+    "statementLabel": null,
+    "statementNotation": "5.5a"
+   },
+   "CCCE1A07A0224678BE29060FA4BB3D22": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "99C94ACD92C844409EFAED53570DE14B",
+     "BE49C7FA405248EBB3285227D3164DE8",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Quickly answer questions about the parts of a whole. For example,\nrecognizing that if there are 3 green blocks and 1 red block, there are 4\nblocks, or if there are 6 candies then 3 people can share with 2 candies\neach.  ",
+    "id": "CCCE1A07A0224678BE29060FA4BB3D22",
+    "listId": "2",
+    "parentId": "99C94ACD92C844409EFAED53570DE14B",
+    "position": 1137,
+    "statementLabel": null,
+    "statementNotation": "5.3c.2"
+   },
+   "CCD32E468CB643C59973C04E77C28921": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D338575AE7F645ABB2BB4CDFB672BAC9"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Use non-standard and standard tools and units of measurement. ",
+    "id": "CCD32E468CB643C59973C04E77C28921",
+    "listId": "c",
+    "parentId": "D338575AE7F645ABB2BB4CDFB672BAC9",
+    "position": 1174,
+    "statementLabel": null,
+    "statementNotation": "5c"
+   },
+   "CD643A7E04BF4EE6B8672ED115982907": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "325AA63862F94EF982ED4E3F6E11D61E",
+     "AAA48882D194447395C081AE9C9FB28A",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Quickly answer questions about the parts of a whole. For example,\nrecognizing that if there are 3 green blocks and 1 red block, there are 4\nblocks, or if there are 6 candies then 3 people can share with 2 candies\neach.",
+    "id": "CD643A7E04BF4EE6B8672ED115982907",
+    "listId": "2",
+    "parentId": "325AA63862F94EF982ED4E3F6E11D61E",
+    "position": 1087,
+    "statementLabel": null,
+    "statementNotation": "5.2d.2"
+   },
+   "CE5CD94393B14D6394A99EF49BC768EA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F59461C2D4AC4E7AAF1F9842CF4FB99F",
+     "6D70A55E52884313BF0980223A53E3BB",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Ask for “three candles” on their birthday cake.",
+    "id": "CE5CD94393B14D6394A99EF49BC768EA",
+    "listId": "1",
+    "parentId": "F59461C2D4AC4E7AAF1F9842CF4FB99F",
+    "position": 1003,
+    "statementLabel": null,
+    "statementNotation": "3.1a.1"
+   },
+   "CE85C78278B84EBDA97C0B6E96239C16": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Develop an increasing ability to recognize mathematical problems in everyday situations at home\nand in the learning environment, and experiment to find possible solutions. ",
+    "id": "CE85C78278B84EBDA97C0B6E96239C16",
+    "listId": "c",
+    "parentId": "2E95FEB0481C48BCA29E5D9936696CC5",
+    "position": 1029,
+    "statementLabel": null,
+    "statementNotation": "1c"
+   },
+   "CF08B541F4764B4691A04E7D5105A2A4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "AAA48882D194447395C081AE9C9FB28A",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "3 Years",
+    "id": "CF08B541F4764B4691A04E7D5105A2A4",
+    "listId": "",
+    "parentId": "AAA48882D194447395C081AE9C9FB28A",
+    "position": 1079,
+    "statementLabel": null,
+    "statementNotation": "3.2d"
+   },
+   "CF83BD3DECF349DC83A4F035744D013C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "47588E61330042E4AD3A0A000CE09DC3",
+     "CE85C78278B84EBDA97C0B6E96239C16",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With support and modeling, explain their thinking when trying to solve\nproblems, such as telling a familiar adult that they couldn’t put a toy back\ntogether themselves, so now they are asking for help.",
+    "id": "CF83BD3DECF349DC83A4F035744D013C",
+    "listId": "3",
+    "parentId": "47588E61330042E4AD3A0A000CE09DC3",
+    "position": 1033,
+    "statementLabel": null,
+    "statementNotation": "3.1c.3"
+   },
+   "D00533880A394A90A6D05920891E708D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "26B9704A88A84E87B533AD852B8744A6",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "3 Years",
+    "id": "D00533880A394A90A6D05920891E708D",
+    "listId": "",
+    "parentId": "26B9704A88A84E87B533AD852B8744A6",
+    "position": 1066,
+    "statementLabel": null,
+    "statementNotation": "3.2c"
+   },
+   "D28B6F301CE641998371DEBDA7AB4C25": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "DDCBBAC5A015430083B17825D7A080A9",
+     "87078CC1F5584D61A308FCC495C8DC11",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begin to build arches and enclosures/rooms with interior space, with more understanding of what\nshapes they will need and how to build it.",
+    "id": "D28B6F301CE641998371DEBDA7AB4C25",
+    "listId": "5",
+    "parentId": "DDCBBAC5A015430083B17825D7A080A9",
+    "position": 1117,
+    "statementLabel": null,
+    "statementNotation": "4.3b.5"
+   },
+   "D32909D4C6ED48ECAA777F6D46D53598": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F33443AC52D6477DA5083C1EFB842AF2",
+     "78CD9CA57894428685B8201E990381B3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "4 Years",
+    "id": "D32909D4C6ED48ECAA777F6D46D53598",
+    "listId": "",
+    "parentId": "F33443AC52D6477DA5083C1EFB842AF2",
+    "position": 1143,
+    "statementLabel": null,
+    "statementNotation": "4.4a"
+   },
+   "D336B6205B864A9D9998E4E82DECBB1D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "47588E61330042E4AD3A0A000CE09DC3",
+     "CE85C78278B84EBDA97C0B6E96239C16",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use a variety of strategies to solve problems, such as trial and error, simple\ntools, or asking someone to help.",
+    "id": "D336B6205B864A9D9998E4E82DECBB1D",
+    "listId": "1",
+    "parentId": "47588E61330042E4AD3A0A000CE09DC3",
+    "position": 1031,
+    "statementLabel": null,
+    "statementNotation": "3.1c.1"
+   },
+   "D338575AE7F645ABB2BB4CDFB672BAC9": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Children show a growing understanding of the concepts of quantifying and comparing.",
+    "id": "D338575AE7F645ABB2BB4CDFB672BAC9",
+    "listId": "5",
+    "parentId": null,
+    "position": 1157,
+    "statementLabel": null,
+    "statementNotation": "5"
+   },
+   "D5B1385BF5B245FE9319A3913CA92156": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Children show a growing understanding of the concept of number and quantity. ",
+    "id": "D5B1385BF5B245FE9319A3913CA92156",
+    "listId": "2",
+    "parentId": null,
+    "position": 1042,
+    "statementLabel": null,
+    "statementNotation": "2"
+   },
+   "D5E5FC6B8F764A1EB5C90F5D13ADA58C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Explore and begin to recognize the positional relationships between objects, their environment, and\nthemselves. ",
+    "id": "D5E5FC6B8F764A1EB5C90F5D13ADA58C",
+    "listId": "a",
+    "parentId": "40D4BECE90D4494DA2C50494DB67F157",
+    "position": 1089,
+    "statementLabel": null,
+    "statementNotation": "3a"
+   },
+   "D65ACACEC7C04ABF9CEB2909DEE3FFAE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "22FA0E0705B24E01A9C37F1A27AF3AC2",
+     "D5E5FC6B8F764A1EB5C90F5D13ADA58C",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Move successfully through a simple obstacle course.",
+    "id": "D65ACACEC7C04ABF9CEB2909DEE3FFAE",
+    "listId": "3",
+    "parentId": "22FA0E0705B24E01A9C37F1A27AF3AC2",
+    "position": 1102,
+    "statementLabel": null,
+    "statementNotation": "5.3a.3"
+   },
+   "D78E62C85DD84366AA6DD1243BEEFA9E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1D21E2286B9A49AFA4BF4E125C2954F7",
+     "CCD32E468CB643C59973C04E77C28921",
+     "D338575AE7F645ABB2BB4CDFB672BAC9"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use informal measuring tools, such as footsteps, hands, or blocks to\nmeasure length, volume, and other measurable characteristics. ",
+    "id": "D78E62C85DD84366AA6DD1243BEEFA9E",
+    "listId": "2",
+    "parentId": "1D21E2286B9A49AFA4BF4E125C2954F7",
+    "position": 1180,
+    "statementLabel": null,
+    "statementNotation": "4.5c.2"
+   },
+   "D834BCC0408F4E45A46D1E6A78B97B58": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3D298DF69B52419C959422B4AFFA091D",
+     "ABAEFD8246B04CC39D4EAE3EFAAB12EC",
+     "78CD9CA57894428685B8201E990381B3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Choose picture books from the library that have main characters who look like them. ",
+    "id": "D834BCC0408F4E45A46D1E6A78B97B58",
+    "listId": "1",
+    "parentId": "3D298DF69B52419C959422B4AFFA091D",
+    "position": 1151,
+    "statementLabel": null,
+    "statementNotation": "3.4b.1"
+   },
+   "D8BFF40A1BB94CCA973CE40326868B60": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CCD32E468CB643C59973C04E77C28921",
+     "D338575AE7F645ABB2BB4CDFB672BAC9"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "5 Years",
+    "id": "D8BFF40A1BB94CCA973CE40326868B60",
+    "listId": "",
+    "parentId": "CCD32E468CB643C59973C04E77C28921",
+    "position": 1181,
+    "statementLabel": null,
+    "statementNotation": "5.5c"
+   },
+   "DDCBBAC5A015430083B17825D7A080A9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "87078CC1F5584D61A308FCC495C8DC11",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "4 Years",
+    "id": "DDCBBAC5A015430083B17825D7A080A9",
+    "listId": "",
+    "parentId": "87078CC1F5584D61A308FCC495C8DC11",
+    "position": 1112,
+    "statementLabel": null,
+    "statementNotation": "4.3b"
+   },
+   "E3B41A540E9C49A7885DF2A750152A4F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F43B374906234633BB73CA9660FABFE9",
+     "D5E5FC6B8F764A1EB5C90F5D13ADA58C",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Find a toy that has been misplaced or intentionally hidden.",
+    "id": "E3B41A540E9C49A7885DF2A750152A4F",
+    "listId": "1",
+    "parentId": "F43B374906234633BB73CA9660FABFE9",
+    "position": 1094,
+    "statementLabel": null,
+    "statementNotation": "4.3a.1"
+   },
+   "E54820793D584DD09BE87C85B0B466D2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6C157976F3C54D37A126B79589AAE207",
+     "F33443AC52D6477DA5083C1EFB842AF2",
+     "78CD9CA57894428685B8201E990381B3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "While looking at a pattern of blocks set out by an adult, copy the pattern with\ntheir own set of blocks. ",
+    "id": "E54820793D584DD09BE87C85B0B466D2",
+    "listId": "2",
+    "parentId": "6C157976F3C54D37A126B79589AAE207",
+    "position": 1142,
+    "statementLabel": null,
+    "statementNotation": "3.4a.2"
+   },
+   "E578B41BA81C4068896C1B8F141840A3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D8BFF40A1BB94CCA973CE40326868B60",
+     "CCD32E468CB643C59973C04E77C28921",
+     "D338575AE7F645ABB2BB4CDFB672BAC9"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With support, measure ingredients for making bread. ",
+    "id": "E578B41BA81C4068896C1B8F141840A3",
+    "listId": "2",
+    "parentId": "D8BFF40A1BB94CCA973CE40326868B60",
+    "position": 1183,
+    "statementLabel": null,
+    "statementNotation": "5.5c.2"
+   },
+   "E652FBA9D6FE45A8978FDCC5EF1B8B6C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D32909D4C6ED48ECAA777F6D46D53598",
+     "F33443AC52D6477DA5083C1EFB842AF2",
+     "78CD9CA57894428685B8201E990381B3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize, identify, and build repeating AB and ABC patterns. ",
+    "id": "E652FBA9D6FE45A8978FDCC5EF1B8B6C",
+    "listId": "2",
+    "parentId": "D32909D4C6ED48ECAA777F6D46D53598",
+    "position": 1145,
+    "statementLabel": null,
+    "statementNotation": "4.4a.2"
+   },
+   "E7B37A58FF844891A2C9A68FB8288FF9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FBAB426BD84F40F5AB33FE2EAFDDE8BE",
+     "7961492CD0824167AC0CF6B9393813B5",
+     "D338575AE7F645ABB2BB4CDFB672BAC9"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Compare size with simple terms, such as bigger, smaller, taller, shorter,\nlighter, and heavier. ",
+    "id": "E7B37A58FF844891A2C9A68FB8288FF9",
+    "listId": "1",
+    "parentId": "FBAB426BD84F40F5AB33FE2EAFDDE8BE",
+    "position": 1167,
+    "statementLabel": null,
+    "statementNotation": "3.5b.1"
+   },
+   "EA0B8C257EFB4450B667E55E87DB600A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "73F1CC0294244D4EA9A8CFB512A00671",
+     "87E1065983934FD597253725AB9D0ADB",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Serve themselves five carrot sticks for snack. ",
+    "id": "EA0B8C257EFB4450B667E55E87DB600A",
+    "listId": "2",
+    "parentId": "73F1CC0294244D4EA9A8CFB512A00671",
+    "position": 1046,
+    "statementLabel": null,
+    "statementNotation": "3.2a.2"
+   },
+   "EA263C02E92E45CC89A1092B3CECE995": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "133EBA111B214C33B938EF6F06976055",
+     "87E1065983934FD597253725AB9D0ADB",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Keep track of what they counted and what they haven’t counted in a group of\nobjects.",
+    "id": "EA263C02E92E45CC89A1092B3CECE995",
+    "listId": "3",
+    "parentId": "133EBA111B214C33B938EF6F06976055",
+    "position": 1054,
+    "statementLabel": null,
+    "statementNotation": "5.2a.3"
+   },
+   "EA64688185B44181884CE197B32E71BD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B28DCCBAE6544F0188770AC5CC599DC7",
+     "87078CC1F5584D61A308FCC495C8DC11",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Draw a line on a simple illustration of a house to show the separation between a triangle and a\nsquare (identifying and decomposing shapes).",
+    "id": "EA64688185B44181884CE197B32E71BD",
+    "listId": "7",
+    "parentId": "B28DCCBAE6544F0188770AC5CC599DC7",
+    "position": 1125,
+    "statementLabel": null,
+    "statementNotation": "5.3b.7"
+   },
+   "EC33C6897F4C4D8EB119FDF5370A5D20": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "AA51E2E4E4B34F87B53339B5FE73C97D",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "3 Years",
+    "id": "EC33C6897F4C4D8EB119FDF5370A5D20",
+    "listId": "",
+    "parentId": "AA51E2E4E4B34F87B53339B5FE73C97D",
+    "position": 1017,
+    "statementLabel": null,
+    "statementNotation": "3.1b"
+   },
+   "EEB90588188A4C138A9F9445324C84C7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2BDF4811E1254DE7B60C7F8B00789DDB",
+     "883C846FE0744FF8A52FF1D2A07EE3C0",
+     "5C1D6FC1D19C48BB802BA184AB2CEAFB"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Organize buttons based on different attributes, such as solid color, stripes,\ndots.  ",
+    "id": "EEB90588188A4C138A9F9445324C84C7",
+    "listId": "1",
+    "parentId": "2BDF4811E1254DE7B60C7F8B00789DDB",
+    "position": 1201,
+    "statementLabel": null,
+    "statementNotation": "4.6b.1"
+   },
+   "EED28EF0D0BB4D749DD99AAB13BAC1B4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "16EC62ABD2164356B7B89C1393A5A59E",
+     "87E1065983934FD597253725AB9D0ADB",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "While pretending to launch a rocket, count backwards 5,4,3,2,1 and then shout,\n“BLAST OFF!”",
+    "id": "EED28EF0D0BB4D749DD99AAB13BAC1B4",
+    "listId": "3",
+    "parentId": "16EC62ABD2164356B7B89C1393A5A59E",
+    "position": 1050,
+    "statementLabel": null,
+    "statementNotation": "4.2a.3"
+   },
+   "F33443AC52D6477DA5083C1EFB842AF2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "78CD9CA57894428685B8201E990381B3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Recognizing and Building Patterns: Notice, recognize, copy, extend, and create repeating\npatterns.  ",
+    "id": "F33443AC52D6477DA5083C1EFB842AF2",
+    "listId": "a",
+    "parentId": "78CD9CA57894428685B8201E990381B3",
+    "position": 1139,
+    "statementLabel": null,
+    "statementNotation": "4a"
+   },
+   "F387D91F839F4FF786D167792122EB76": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7961492CD0824167AC0CF6B9393813B5",
+     "D338575AE7F645ABB2BB4CDFB672BAC9"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "5 Years",
+    "id": "F387D91F839F4FF786D167792122EB76",
+    "listId": "",
+    "parentId": "7961492CD0824167AC0CF6B9393813B5",
+    "position": 1171,
+    "statementLabel": null,
+    "statementNotation": "5.5b"
+   },
+   "F43803E3D96F48EE8E45D480554C4831": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C66705CE17C944D38131A274574ECE32",
+     "38B8158FCE5349C7B2C26DAF34F7902D",
+     "D338575AE7F645ABB2BB4CDFB672BAC9"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Ask a familiar adult to help them measure string for a bracelet.  ",
+    "id": "F43803E3D96F48EE8E45D480554C4831",
+    "listId": "1",
+    "parentId": "C66705CE17C944D38131A274574ECE32",
+    "position": 1164,
+    "statementLabel": null,
+    "statementNotation": "5.5a.1"
+   },
+   "F43B374906234633BB73CA9660FABFE9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D5E5FC6B8F764A1EB5C90F5D13ADA58C",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "4 Years",
+    "id": "F43B374906234633BB73CA9660FABFE9",
+    "listId": "",
+    "parentId": "D5E5FC6B8F764A1EB5C90F5D13ADA58C",
+    "position": 1093,
+    "statementLabel": null,
+    "statementNotation": "4.3a"
+   },
+   "F55F569F99C24D0E8CABC95445FBB444": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FAADFEAAB0F54F5ABCC9B71BCBB59275",
+     "806AF4DCE39D433EA503F71179A1F366",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize some common number arrangements, such as 5 and 5 makes\n10.",
+    "id": "F55F569F99C24D0E8CABC95445FBB444",
+    "listId": "1",
+    "parentId": "FAADFEAAB0F54F5ABCC9B71BCBB59275",
+    "position": 1063,
+    "statementLabel": null,
+    "statementNotation": "5.2b.1"
+   },
+   "F59461C2D4AC4E7AAF1F9842CF4FB99F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6D70A55E52884313BF0980223A53E3BB",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "3 Years",
+    "id": "F59461C2D4AC4E7AAF1F9842CF4FB99F",
+    "listId": "",
+    "parentId": "6D70A55E52884313BF0980223A53E3BB",
+    "position": 1002,
+    "statementLabel": null,
+    "statementNotation": "3.1a"
+   },
+   "F68A38CED2DA47A6B53B69BBBDCC05C2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CE85C78278B84EBDA97C0B6E96239C16",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "5 Years",
+    "id": "F68A38CED2DA47A6B53B69BBBDCC05C2",
+    "listId": "",
+    "parentId": "CE85C78278B84EBDA97C0B6E96239C16",
+    "position": 1039,
+    "statementLabel": null,
+    "statementNotation": "5.1c"
+   },
+   "F82BC69F7BA8482CAB3D8888B1E4AE2D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A9CE6821BAF34213AF6DE7D34B36FAB0",
+     "87078CC1F5584D61A308FCC495C8DC11",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Turn two books to line up with each other, so they can check if they are the same shape,\nsometimes.",
+    "id": "F82BC69F7BA8482CAB3D8888B1E4AE2D",
+    "listId": "2",
+    "parentId": "A9CE6821BAF34213AF6DE7D34B36FAB0",
+    "position": 1108,
+    "statementLabel": null,
+    "statementNotation": "3.3b.2"
+   },
+   "FA09762E9E3B4420B327994DF81F3E24": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1CAF688E83984CABBEA55C87EFA4A9A3",
+     "BE49C7FA405248EBB3285227D3164DE8",
+     "40D4BECE90D4494DA2C50494DB67F157"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize that parts make up a whole, and whole is bigger than individual\nparts. However, they may not be able to use numbers or measurements to\nexplain why this is the case.  ",
+    "id": "FA09762E9E3B4420B327994DF81F3E24",
+    "listId": "1",
+    "parentId": "1CAF688E83984CABBEA55C87EFA4A9A3",
+    "position": 1129,
+    "statementLabel": null,
+    "statementNotation": "3.3c.1"
+   },
+   "FAADFEAAB0F54F5ABCC9B71BCBB59275": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "806AF4DCE39D433EA503F71179A1F366",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "5 Years",
+    "id": "FAADFEAAB0F54F5ABCC9B71BCBB59275",
+    "listId": "",
+    "parentId": "806AF4DCE39D433EA503F71179A1F366",
+    "position": 1062,
+    "statementLabel": null,
+    "statementNotation": "5.2b"
+   },
+   "FAC0B6CB87B143149F1FB4402258CD08": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BCB8FDED970C4F09913FDB3F094B9955",
+     "F33443AC52D6477DA5083C1EFB842AF2",
+     "78CD9CA57894428685B8201E990381B3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Begin to copy patterns into other materials. For example: looking at an AAB\npattern made with yellow and blue counting bears, draw that pattern with\nyellow and blue crayons. ",
+    "id": "FAC0B6CB87B143149F1FB4402258CD08",
+    "listId": "2",
+    "parentId": "BCB8FDED970C4F09913FDB3F094B9955",
+    "position": 1148,
+    "statementLabel": null,
+    "statementNotation": "5.4a.2"
+   },
+   "FBAB426BD84F40F5AB33FE2EAFDDE8BE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7961492CD0824167AC0CF6B9393813B5",
+     "D338575AE7F645ABB2BB4CDFB672BAC9"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "3 Years",
+    "id": "FBAB426BD84F40F5AB33FE2EAFDDE8BE",
+    "listId": "",
+    "parentId": "7961492CD0824167AC0CF6B9393813B5",
+    "position": 1166,
+    "statementLabel": null,
+    "statementNotation": "3.5b"
+   },
+   "FD149AF1ACDD4A4E9841F7ADA916E68B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CF08B541F4764B4691A04E7D5105A2A4",
+     "AAA48882D194447395C081AE9C9FB28A",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize that parts make up a whole, and whole is bigger than individual\nparts. However, they may not be able to use numbers or measurements to\nexplain why this is the case.",
+    "id": "FD149AF1ACDD4A4E9841F7ADA916E68B",
+    "listId": "1",
+    "parentId": "CF08B541F4764B4691A04E7D5105A2A4",
+    "position": 1080,
+    "statementLabel": null,
+    "statementNotation": "3.2d.1"
+   },
+   "FD32A620863342F29E1C18FEF31790A5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F68A38CED2DA47A6B53B69BBBDCC05C2",
+     "CE85C78278B84EBDA97C0B6E96239C16",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Share several ideas with another child about how to keep their block tower\nfrom falling.",
+    "id": "FD32A620863342F29E1C18FEF31790A5",
+    "listId": "1",
+    "parentId": "F68A38CED2DA47A6B53B69BBBDCC05C2",
+    "position": 1040,
+    "statementLabel": null,
+    "statementNotation": "5.1c.1"
+   },
+   "FE9135BEFF684C2AA7BEAE61DACC2F1B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "36147CA66D1047BE9E1B174423F259F0",
+     "6D70A55E52884313BF0980223A53E3BB",
+     "2E95FEB0481C48BCA29E5D9936696CC5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Sort colored goldfish crackers, then count how many are in each color group.",
+    "id": "FE9135BEFF684C2AA7BEAE61DACC2F1B",
+    "listId": "2",
+    "parentId": "36147CA66D1047BE9E1B174423F259F0",
+    "position": 1008,
+    "statementLabel": null,
+    "statementNotation": "4.1a.2"
+   },
+   "FF673BC1D3BA432F978078DEECAA38C9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D00533880A394A90A6D05920891E708D",
+     "26B9704A88A84E87B533AD852B8744A6",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Look at the two pieces of crackers on their plate, compare that with the three\non Laura’s plate and say, “I need one more.”",
+    "id": "FF673BC1D3BA432F978078DEECAA38C9",
+    "listId": "3",
+    "parentId": "D00533880A394A90A6D05920891E708D",
+    "position": 1069,
+    "statementLabel": null,
+    "statementNotation": "3.2c.3"
+   },
+   "FFDCB39F9EB04958888C6714AB5C7CCD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "806AF4DCE39D433EA503F71179A1F366",
+     "D5B1385BF5B245FE9319A3913CA92156"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "3 Years",
+    "id": "FFDCB39F9EB04958888C6714AB5C7CCD",
+    "listId": "",
+    "parentId": "806AF4DCE39D433EA503F71179A1F366",
+    "position": 1057,
+    "statementLabel": null,
+    "statementNotation": "3.2b"
+   }
+  },
+  "subject": "Early Childhood Standards of Quality (2022-)",
+  "title": "Mathematics: 3-5 Years"
+ }
+}

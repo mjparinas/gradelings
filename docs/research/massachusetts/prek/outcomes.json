@@ -1,0 +1,818 @@
+{
+ "pk/math": [
+  {
+   "idx": "PK.CC.A",
+   "text": "Know number names and the counting sequence."
+  },
+  {
+   "idx": "PK.CC.A.1",
+   "text": "Listen to and say the names of numbers in meaningful contexts."
+  },
+  {
+   "idx": "PK.CC.A.2",
+   "text": "Recognize and name written numerals 0–10."
+  },
+  {
+   "idx": "PK.CC.B",
+   "text": "Count to tell the number of objects."
+  },
+  {
+   "idx": "PK.CC.B.3",
+   "text": "Understand the relationships between numerals and quantities up to 10."
+  },
+  {
+   "idx": "PK.CC.C",
+   "text": "Compare numbers."
+  },
+  {
+   "idx": "PK.CC.C.4",
+   "text": "Count many kinds of concrete objects and actions up to ten, using one-to-one correspondence, and accurately count as many as seven things in a scattered configuration. Recognize the \"one more,\" \"one less\" patterns."
+  },
+  {
+   "idx": "PK.CC.C.5",
+   "text": "Use comparative language, such as more/less than, equal to, to compare and describe collections of objects."
+  },
+  {
+   "idx": "PK.OA.A",
+   "text": "Understand addition as putting together and adding to, and understand subtraction as taking apart and taking from."
+  },
+  {
+   "idx": "PK.OA.A.1",
+   "text": "Use concrete objects to model real-world addition (putting together) and subtraction (taking away) problems up through five."
+  },
+  {
+   "idx": "PK.MD.A",
+   "text": "Describe and compare measurable attributes."
+  },
+  {
+   "idx": "PK.MD.A.1",
+   "text": "Recognize the attributes of length, area, weight, and capacity of everyday objects using appropriate vocabulary (e.g., long, short, tall, heavy, light, big, small, wide, narrow)."
+  },
+  {
+   "idx": "PK.MD.A.2",
+   "text": "Compare the attributes of length and weight for two objects, including longer/shorter, same length; heavier/lighter, same weight; holds more/less, holds the same amount."
+  },
+  {
+   "idx": "PK.MD.B",
+   "text": "Classify objects and count the number of objects in each category."
+  },
+  {
+   "idx": "PK.MD.B.3",
+   "text": "Sort, categorize, and classify objects by more than one attribute."
+  },
+  {
+   "idx": "PK.MD.C",
+   "text": "Work with money."
+  },
+  {
+   "idx": "PK.MD.C.4",
+   "text": "Recognize that certain objects are coins and that dollars and coins represent money."
+  },
+  {
+   "idx": "PK.G.A",
+   "text": "Identify and describe shapes (squares, circles, triangles, rectangles)."
+  },
+  {
+   "idx": "PK.G.A.1",
+   "text": "Identify relative positions of objects in space, and use appropriate language (e.g., beside, inside, next to, close to, above, below, apart)."
+  },
+  {
+   "idx": "PK.G.A.2",
+   "text": "Identify various two-dimensional shapes using appropriate language."
+  },
+  {
+   "idx": "PK.G.B",
+   "text": "Analyze, compare, create, and compose shapes."
+  },
+  {
+   "idx": "PK.G.B.3",
+   "text": "Create and represent three-dimensional shapes (ball/sphere, square box/cube, tube/cylinder) using various manipulative materials (such as Popsicle sticks, blocks, pipe cleaners, pattern blocks)."
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "RL.P.1",
+   "text": "With prompting and support, ask and answer questions about a story or poem read aloud."
+  },
+  {
+   "idx": "RL.P.2",
+   "text": "With prompting and support, retell a sequence of events from a story read aloud."
+  },
+  {
+   "idx": "RL.P.3",
+   "text": "With prompting and support, act out characters and events from a story or poem read aloud."
+  },
+  {
+   "idx": "RL.P.4",
+   "text": "With prompting and support, ask and answer questions about unfamiliar words in a story or poem read aloud."
+  },
+  {
+   "idx": "RL.P.5",
+   "text": "Show awareness of the rhythmic structure of a poem or song by clapping or through movement."
+  },
+  {
+   "idx": "RL.P.6",
+   "text": "With prompting and support, \"read\" the illustrations in a picture book by describing a character or place depicted, or by telling how a sequence of events unfolds."
+  },
+  {
+   "idx": "RL.P.7",
+   "text": "With prompting and support, make predictions about what happens next in a picture book after examining and discussing the illustrations."
+  },
+  {
+   "idx": "RL.P.8",
+   "text": "Not applicable."
+  },
+  {
+   "idx": "RL.P.9",
+   "text": "With prompting and support, make connections between a story or poem and their own experiences."
+  },
+  {
+   "idx": "RL.P.10",
+   "text": "Listen actively as an individual and as a member of a group to a variety of age-appropriate literature read aloud."
+  },
+  {
+   "idx": "RI.P.1",
+   "text": "With prompting and support, ask and answer questions about an informational text read aloud."
+  },
+  {
+   "idx": "RI.P.2",
+   "text": "With prompting and support, recall important facts from an informational text after hearing it read aloud."
+  },
+  {
+   "idx": "RI.P.3",
+   "text": "With prompting and support, represent or act out concepts learned from hearing an informational text read aloud (e.g., make a skyscraper out of blocks after listening to a book about cities or, following a read-aloud on animals, show how an elephant's gait differs from a bunny's hop)."
+  },
+  {
+   "idx": "RI.P.4",
+   "text": "With prompting and support, ask and answer questions about unfamiliar words in an informational text read aloud."
+  },
+  {
+   "idx": "RI.P.5",
+   "text": "Begins in kindergarten or when the individual child is ready."
+  },
+  {
+   "idx": "RI.P.6",
+   "text": "With prompting and support, \"read\" illustrations in an informational picture book by describing facts learned from the pictures (e.g., how a seed grows into a plant)."
+  },
+  {
+   "idx": "RI.P.7",
+   "text": "With prompting and support, describe important details from an illustration or photograph."
+  },
+  {
+   "idx": "RI.P.8",
+   "text": "Begins in kindergarten or when the individual child is ready."
+  },
+  {
+   "idx": "RI.P.9",
+   "text": "With prompting and support, identify several books on a favorite topic or several books by a favorite author or illustrator."
+  },
+  {
+   "idx": "RI.P.10",
+   "text": "Listen actively as an individual and as a member of a group to a variety of age-appropriate informational texts read aloud."
+  },
+  {
+   "idx": "RF.P.1",
+   "text": "With guidance and support, demonstrate understanding of the organization and basic features of printed and written text: books, words, letters, and the alphabet."
+  },
+  {
+   "idx": "RF.P.1.a",
+   "text": "Handle books respectfully and appropriately, holding them right-side-up and turning pages one at a time from front to back."
+  },
+  {
+   "idx": "RF.P.1.b",
+   "text": "Begins in kindergarten or when the individual child is ready."
+  },
+  {
+   "idx": "RF.P.1.c",
+   "text": "Begins in kindergarten or when the individual child is ready."
+  },
+  {
+   "idx": "RF.P.1.d",
+   "text": "Recognize and name some uppercase letters of the alphabet and the lowercase letters in their own name."
+  },
+  {
+   "idx": "RF.P.2",
+   "text": "With guidance and support, demonstrate understanding of spoken words, syllables, and sounds (phonemes)."
+  },
+  {
+   "idx": "RF.P.2.a",
+   "text": "With guidance and support, recognize and produce rhyming words (e.g., identify words that rhyme with /cat/ such as /bat/ and /sat/)."
+  },
+  {
+   "idx": "RF.P.2.b",
+   "text": "With guidance and support, segment words in a simple sentence by clapping and naming the number of words in the sentence."
+  },
+  {
+   "idx": "RF.P.2.c",
+   "text": "Identify the initial sound of a spoken word and, with guidance and support, generate several other words that have the same initial sound."
+  },
+  {
+   "idx": "RF.P.2.d",
+   "text": "Begins in kindergarten or when the individual child is ready."
+  },
+  {
+   "idx": "RF.P.2.e",
+   "text": "Begins in kindergarten or when the individual child is ready."
+  },
+  {
+   "idx": "RF.P.3",
+   "text": "Demonstrate beginning understanding of phonics and word analysis skills."
+  },
+  {
+   "idx": "RF.P.3.a",
+   "text": "Link an initial sound to a picture of an object that begins with that sound and, with guidance and support, to the corresponding printed letter (e.g., link the initial sound /b/ to a picture of a ball and, with support, to a printed or written \"B\")."
+  },
+  {
+   "idx": "RF.P.3.b",
+   "text": "Begins in kindergarten or when the individual child is ready."
+  },
+  {
+   "idx": "RF.P.3.c",
+   "text": "Recognize their own name and familiar common signs and labels (e.g., STOP)."
+  },
+  {
+   "idx": "RF.P.3.d",
+   "text": "Begins in kindergarten or when the individual child is ready."
+  },
+  {
+   "idx": "RF.P.4",
+   "text": "Begins in kindergarten or when the individual child is ready."
+  },
+  {
+   "idx": "W.P.1",
+   "text": "Dictate words to express a preference or opinion about a topic (e.g., \"I would like to go to the fire station to see the truck and meet the firemen.\")."
+  },
+  {
+   "idx": "W.P.2",
+   "text": "Use a combination of dictating and drawing to supply information about a topic. For example, students draw pictures to show how they planted tulip bulbs in the school garden in the fall. They dictate words and sentences about the soil in the garden, the tools they used, and what the bulbs will become in the spring."
+  },
+  {
+   "idx": "W.P.3",
+   "text": "Use a combination of dictating and drawing to tell a story."
+  },
+  {
+   "idx": "W.P.4",
+   "text": "Begins in grade 1."
+  },
+  {
+   "idx": "W.P.5",
+   "text": "Begins in kindergarten or when the individual child is ready."
+  },
+  {
+   "idx": "W.P.6",
+   "text": "Recognize that digital tools (e.g., computers, mobile phones, cameras) are used for communication and, with guidance and support, use them to convey messages in pictures and/or words."
+  },
+  {
+   "idx": "W.P.7",
+   "text": "Begins in kindergarten or when the individual child is ready."
+  },
+  {
+   "idx": "W.P.8",
+   "text": "Begins in kindergarten or when the individual child is ready."
+  },
+  {
+   "idx": "W.P.9",
+   "text": "Begins in grade 4."
+  },
+  {
+   "idx": "W.P.10",
+   "text": "Begins in kindergarten or when the individual child is ready."
+  },
+  {
+   "idx": "SL.P.1",
+   "text": "Participate in collaborative conversations with diverse partners during daily routines and play."
+  },
+  {
+   "idx": "SL.P.1.a",
+   "text": "Observe and use appropriate ways of interacting in a group (e.g., taking turns in talking, listening to peers, waiting to speak until another person is finished talking, asking questions and waiting for an answer, gaining the floor in appropriate ways)."
+  },
+  {
+   "idx": "SL.P.1.b",
+   "text": "Continue a conversation through multiple exchanges. For example, students practice holding conversations with one another when they are playing being shopkeepers and customers in a store, when they are getting ready for snack time, when they are counting blocks, or when they are in a circle discussing which books they liked the best that day at school."
+  },
+  {
+   "idx": "SL.P.2",
+   "text": "Recall information for short periods of time and retell, act out, or represent information from a text read aloud, a recording, or a video (e.g., watch a video about birds and their habitats and make drawings or constructions of birds and their nests)."
+  },
+  {
+   "idx": "SL.P.3",
+   "text": "Ask and answer questions in order to seek help, get information, or clarify something that is not understood."
+  },
+  {
+   "idx": "SL.P.4",
+   "text": "Describe personal experiences; tell stories."
+  },
+  {
+   "idx": "SL.P.5",
+   "text": "Create representations of experiences or stories (e.g., drawings, constructions with blocks or other materials, clay models) and explain them to others."
+  },
+  {
+   "idx": "SL.P.6",
+   "text": "Speak audibly and express thoughts, feelings, and ideas."
+  },
+  {
+   "idx": "L.P.1",
+   "text": "Demonstrate command of the conventions of standard English grammar and usage when speaking. Sentence Structure and Meaning"
+  },
+  {
+   "idx": "L.P.1.a",
+   "text": "Demonstrate the ability to speak in complete sentences and to form questions using frequently occurring nouns, verbs, question words, and prepositions; name and use in context numbers 0–10."
+  },
+  {
+   "idx": "L.P.2",
+   "text": "Begins in kindergarten."
+  },
+  {
+   "idx": "L.P.3",
+   "text": "Begins in grade 2."
+  },
+  {
+   "idx": "L.P.4",
+   "text": "Ask and answer questions about the meanings of new words and phrases introduced through books, activities, and play."
+  },
+  {
+   "idx": "L.P.4.a",
+   "text": "With guidance and support, generate words that are similar in meaning (e.g., happy/glad, angry/mad)."
+  },
+  {
+   "idx": "L.P.5",
+   "text": "With guidance and support from adults, explore word relationships and nuances in word meanings."
+  },
+  {
+   "idx": "L.P.5.a",
+   "text": "Demonstrate understanding of concepts by sorting common objects into categories (e.g., sort objects by color, shape, texture)."
+  },
+  {
+   "idx": "L.P.5.b",
+   "text": "Begins in kindergarten."
+  },
+  {
+   "idx": "L.P.5.c",
+   "text": "Apply words learned in classroom activities to real-life examples (e.g., name places in school that are fun, quiet, or noisy)."
+  },
+  {
+   "idx": "L.P.5.d",
+   "text": "Begins in kindergarten."
+  },
+  {
+   "idx": "L.P.6",
+   "text": "Use words and phrases acquired through conversations, listening to books read aloud, activities, and play."
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "PreK-ESS1-1(MA)",
+   "text": "Demonstrate awareness that the moon can be seen in the daytime and at night, and of the different apparent shapes of the moon over a month."
+  },
+  {
+   "idx": "PreK-ESS1-2(MA)",
+   "text": "Observe and use evidence to describe that the sun is in different places in the sky during the day."
+  },
+  {
+   "idx": "PreK-ESS2-1(MA)",
+   "text": "Raise questions and engage in discussions about how different types of local environments (including water) provide homes for different kinds of living things."
+  },
+  {
+   "idx": "PreK-ESS2-2(MA)",
+   "text": "Observe and classify non-living materials, natural and human made, in their local environment."
+  },
+  {
+   "idx": "PreK-ESS2-3(MA)",
+   "text": "Explore and describe different places water is found in the local environment."
+  },
+  {
+   "idx": "PreK-ESS2-4(MA)",
+   "text": "Use simple instruments to collect and record data on elements of daily weather, including sun or clouds, wind, snow or rain, and higher or lower temperature."
+  },
+  {
+   "idx": "PreK-ESS2-5(MA)",
+   "text": "Describe how local weather changes from day to day and over the seasons and recognize patterns in those changes."
+  },
+  {
+   "idx": "PreK-ESS2-6(MA)",
+   "text": "Provide examples of the impact of weather on living things."
+  },
+  {
+   "idx": "PreK-ESS3-1(MA)",
+   "text": "Engage in discussion and raise questions using examples about local resources (including soil and water) humans use to meet their needs."
+  },
+  {
+   "idx": "PreK-ESS3-2(MA)",
+   "text": "Observe and discuss the impact of people's activities on the local environment."
+  },
+  {
+   "idx": "PreK-LS1-1(MA)",
+   "text": "Compare, using descriptions and drawings, the external body parts of animals (including humans) and plants and explain functions of some of the observable body parts."
+  },
+  {
+   "idx": "PreK-LS1-2(MA)",
+   "text": "Explain that most animals have five senses they use to gather information about the world around them."
+  },
+  {
+   "idx": "PreK-LS1-3(MA)",
+   "text": "Use their five senses in their exploration and play to gather information."
+  },
+  {
+   "idx": "PreK-LS2-1(MA)",
+   "text": "Use evidence from animals and plants to define several characteristics of living things that distinguish them from non-living things."
+  },
+  {
+   "idx": "PreK-LS2-2(MA)",
+   "text": "Using evidence from the local environment explain how familiar plants and animals meet their needs where they live."
+  },
+  {
+   "idx": "PreK-LS2-3(MA)",
+   "text": "Give examples from the local environment of how animals and plants are dependent on one another to meet their basic needs."
+  },
+  {
+   "idx": "PreK-LS3-1(MA)",
+   "text": "Use observations to explain that young plants and animals are like but not exactly like their parents."
+  },
+  {
+   "idx": "PreK-LS3-2(MA)",
+   "text": "Use observations to recognize differences and similarities among themselves and their friends."
+  },
+  {
+   "idx": "PreK-PS1-1(MA)",
+   "text": "Raise questions and investigate the differences between liquids and solids and develop awareness that a liquid can become a solid and vice versa."
+  },
+  {
+   "idx": "PreK-PS1-2(MA)",
+   "text": "Investigate natural and human-made objects to describe, compare, sort, and classify objects based on observable physical characteristics, uses, and whether something is manufactured or occurs in nature."
+  },
+  {
+   "idx": "PreK-PS1-3(MA)",
+   "text": "Differentiate between the properties of an object and those of the material of which it is made."
+  },
+  {
+   "idx": "PreK-PS1-4(MA)",
+   "text": "Recognize through investigation that physical objects and materials can change under different circumstances."
+  },
+  {
+   "idx": "PreK-PS2-1(MA)",
+   "text": "Using evidence, discuss ideas about what is making something move the way it does and how some movements can be controlled."
+  },
+  {
+   "idx": "PreK-PS2-2(MA)",
+   "text": "Through experience, develop awareness of factors that influence whether things stand or fall."
+  },
+  {
+   "idx": "PreK-PS4-1(MA)",
+   "text": "Investigate sounds made by different objects and materials and discuss explanations about what is causing the sounds. Through play and investigations, identify ways to manipulate different objects and materials that make sound to change volume and pitch."
+  },
+  {
+   "idx": "PreK-PS4-2(MA)",
+   "text": "Connect daily experience and investigations to demonstrate the relationships between the size and shape of shadows, the objects creating the shadow, and the light source."
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "PreK-ESS1-1(MA)",
+   "text": "Demonstrate awareness that the moon can be seen in the daytime and at night, and of the different apparent shapes of the moon over a month."
+  },
+  {
+   "idx": "PreK-ESS1-2(MA)",
+   "text": "Observe and use evidence to describe that the sun is in different places in the sky during the day."
+  },
+  {
+   "idx": "PreK-ESS2-1(MA)",
+   "text": "Raise questions and engage in discussions about how different types of local environments (including water) provide homes for different kinds of living things."
+  },
+  {
+   "idx": "PreK-ESS2-2(MA)",
+   "text": "Observe and classify non-living materials, natural and human made, in their local environment."
+  },
+  {
+   "idx": "PreK-ESS2-3(MA)",
+   "text": "Explore and describe different places water is found in the local environment."
+  },
+  {
+   "idx": "PreK-ESS2-4(MA)",
+   "text": "Use simple instruments to collect and record data on elements of daily weather, including sun or clouds, wind, snow or rain, and higher or lower temperature."
+  },
+  {
+   "idx": "PreK-ESS2-5(MA)",
+   "text": "Describe how local weather changes from day to day and over the seasons and recognize patterns in those changes."
+  },
+  {
+   "idx": "PreK-ESS2-6(MA)",
+   "text": "Provide examples of the impact of weather on living things."
+  },
+  {
+   "idx": "PreK-ESS3-1(MA)",
+   "text": "Engage in discussion and raise questions using examples about local resources (including soil and water) humans use to meet their needs."
+  },
+  {
+   "idx": "PreK-ESS3-2(MA)",
+   "text": "Observe and discuss the impact of people's activities on the local environment."
+  },
+  {
+   "idx": "PreK-LS1-1(MA)",
+   "text": "Compare, using descriptions and drawings, the external body parts of animals (including humans) and plants and explain functions of some of the observable body parts."
+  },
+  {
+   "idx": "PreK-LS1-2(MA)",
+   "text": "Explain that most animals have five senses they use to gather information about the world around them."
+  },
+  {
+   "idx": "PreK-LS1-3(MA)",
+   "text": "Use their five senses in their exploration and play to gather information."
+  },
+  {
+   "idx": "PreK-LS2-1(MA)",
+   "text": "Use evidence from animals and plants to define several characteristics of living things that distinguish them from non-living things."
+  },
+  {
+   "idx": "PreK-LS2-2(MA)",
+   "text": "Using evidence from the local environment explain how familiar plants and animals meet their needs where they live."
+  },
+  {
+   "idx": "PreK-LS2-3(MA)",
+   "text": "Give examples from the local environment of how animals and plants are dependent on one another to meet their basic needs."
+  },
+  {
+   "idx": "PreK-LS3-1(MA)",
+   "text": "Use observations to explain that young plants and animals are like but not exactly like their parents."
+  },
+  {
+   "idx": "PreK-LS3-2(MA)",
+   "text": "Use observations to recognize differences and similarities among themselves and their friends."
+  },
+  {
+   "idx": "PreK-PS1-1(MA)",
+   "text": "Raise questions and investigate the differences between liquids and solids and develop awareness that a liquid can become a solid and vice versa."
+  },
+  {
+   "idx": "PreK-PS1-2(MA)",
+   "text": "Investigate natural and human-made objects to describe, compare, sort, and classify objects based on observable physical characteristics, uses, and whether something is manufactured or occurs in nature."
+  },
+  {
+   "idx": "PreK-PS1-3(MA)",
+   "text": "Differentiate between the properties of an object and those of the material of which it is made."
+  },
+  {
+   "idx": "PreK-PS1-4(MA)",
+   "text": "Recognize through investigation that physical objects and materials can change under different circumstances."
+  },
+  {
+   "idx": "PreK-PS2-1(MA)",
+   "text": "Using evidence, discuss ideas about what is making something move the way it does and how some movements can be controlled."
+  },
+  {
+   "idx": "PreK-PS2-2(MA)",
+   "text": "Through experience, develop awareness of factors that influence whether things stand or fall."
+  },
+  {
+   "idx": "PreK-PS4-1(MA)",
+   "text": "Investigate sounds made by different objects and materials and discuss explanations about what is causing the sounds. Through play and investigations, identify ways to manipulate different objects and materials that make sound to change volume and pitch."
+  },
+  {
+   "idx": "PreK-PS4-2(MA)",
+   "text": "Connect daily experience and investigations to demonstrate the relationships between the size and shape of shadows, the objects creating the shadow, and the light source."
+  },
+  {
+   "idx": "PK.RI.1",
+   "text": "With prompting and support, ask and answer questions about an informational text read aloud."
+  },
+  {
+   "idx": "PK.RI.2",
+   "text": "With prompting and support, recall important facts from an informational text after hearing it read aloud."
+  },
+  {
+   "idx": "PK.RI.3",
+   "text": "With prompting and support, represent or act out concepts learned from hearing an informational text read aloud (e.g., make a skyscraper out of blocks after listening to a book about cities or, following a read-aloud on animals, show how an elephant's gait differs from a bunny's hop)."
+  },
+  {
+   "idx": "PK.RI.4",
+   "text": "With prompting and support, ask and answer questions about unfamiliar words in an informational text read aloud."
+  },
+  {
+   "idx": "PK.RI.5",
+   "text": "Begins in kindergarten or when the child is ready."
+  },
+  {
+   "idx": "PK.RI.6",
+   "text": "With prompting and support, \"read\" illustrations in an informational picture book by describing facts learned from the pictures (e.g., how a seed grows into a plant)."
+  },
+  {
+   "idx": "PK.RI.7",
+   "text": "With prompting and support, describe important details from an illustration or photograph."
+  },
+  {
+   "idx": "PK.RI.8",
+   "text": "Begins in kindergarten or when the child is ready."
+  },
+  {
+   "idx": "PK.RI.9",
+   "text": "With prompting and support, identify several books on a favorite topic or several books by a favorite author or illustrator."
+  },
+  {
+   "idx": "PK.RI.10",
+   "text": "Listen actively as an individual and as a member of a group to a variety of age-appropriate informational texts read aloud."
+  },
+  {
+   "idx": "PK.W.1",
+   "text": "Dictate words to express a preference about a topic (e.g., \"I would like to go to the fire station to see the truck and meet the firemen.\")"
+  },
+  {
+   "idx": "PK.W.2",
+   "text": "Use a combination of dictating and drawing to supply information about a topic."
+  },
+  {
+   "idx": "PK.W.3",
+   "text": "Use a combination of dictating and drawing to tell a story."
+  },
+  {
+   "idx": "PK.W.4",
+   "text": "Begins in grade 1."
+  },
+  {
+   "idx": "PK.W.5",
+   "text": "Begins in kindergarten or when the individual child is ready."
+  },
+  {
+   "idx": "PK.W.6",
+   "text": "Recognize that digital tools (e.g., computers, mobile phones, cameras) are used for communication, and, with guidance and support, use them to convey messages in pictures and/or words."
+  },
+  {
+   "idx": "PK.W.7",
+   "text": "Begins in kindergarten or when the individual child is ready."
+  },
+  {
+   "idx": "PK.W.8",
+   "text": "Begins in kindergarten or when the individual child is ready."
+  },
+  {
+   "idx": "PK.W.9",
+   "text": "Begins in grade 4."
+  },
+  {
+   "idx": "PK.W.10",
+   "text": "Begins in kindergarten or when the individual child is ready."
+  },
+  {
+   "idx": "PK.SL.1",
+   "text": "Participate in collaborative discussions with diverse partners during daily routines and play."
+  },
+  {
+   "idx": "PK.SL.1.a",
+   "text": "Observe and use appropriate ways of interacting in a group (e.g., taking turns in talking, listening to peers, waiting to speak until another person is finished talking, asking questions and waiting for an answer, gaining the floor in appropriate ways)."
+  },
+  {
+   "idx": "PK.SL.1.b",
+   "text": "Continue a conversation through multiple exchanges."
+  },
+  {
+   "idx": "PK.SL.2",
+   "text": "Recall information for short periods of time and retell, act out, or represent information from a text read aloud, a recording, or a video (e.g., watch a video about birds and their habits and make drawings or constructions of birds and their nests.)."
+  },
+  {
+   "idx": "PK.SL.3",
+   "text": "Ask and answer questions in order to seek help, get information, or clarify something that is not understood."
+  },
+  {
+   "idx": "PK.SL.4",
+   "text": "Describe personal experiences, tell stories."
+  },
+  {
+   "idx": "PK.SL.5",
+   "text": "Create representations of experiences in stories (e.g., constructions with blocks or other materials, clay models) and explain them to others."
+  },
+  {
+   "idx": "PK.SL.6",
+   "text": "Speak audibly to express thoughts, feelings, and ideas."
+  },
+  {
+   "idx": "PreK.T1.1",
+   "text": "With prompting and support, give reasons for rules in the classroom and at home."
+  },
+  {
+   "idx": "PreK.T1.2",
+   "text": "With prompting and support, follow agreed-upon rules, limits, and expectations."
+  },
+  {
+   "idx": "PreK.T1.3",
+   "text": "Show willingness to take on responsibilities (e.g., being a helper or a leader)."
+  },
+  {
+   "idx": "PreK.T1.4",
+   "text": "With prompting and support, ask and answer questions about literature and informational social studies texts read aloud, and act out or give examples of characters who show fairness, friendship, kindness, responsibility, and respect for one another."
+  },
+  {
+   "idx": "PreK.T2.1",
+   "text": "With prompting and support, describe location of people, animals, objects, and places, using words and phrases such as up, down, on, off, close, far away, beside, inside, next to, close to, above, below, apart correctly."
+  },
+  {
+   "idx": "PreK.T2.2",
+   "text": "With prompting and support, explain what a map or another kind of representation of a place can show."
+  },
+  {
+   "idx": "PreK.T2.3",
+   "text": "With guidance and support, use a combination of drawing, building with blocks or other materials, or dictating to construct maps and other representations of familiar places."
+  },
+  {
+   "idx": "PreK.T3.1",
+   "text": "With guidance and support, recall and describe events that happened in the classroom or in a story, using words and phrases relating to chronology and time, including first, next, last (e.g., describe something that happened yesterday or last week)."
+  },
+  {
+   "idx": "PreK.T3.2",
+   "text": "With guidance and support, explain how the concepts of days, weeks, and months relate to the passage of time."
+  },
+  {
+   "idx": "PreK.T3.3",
+   "text": "With guidance and support, participate in short shared research projects to gather information about traditions of people of diverse backgrounds."
+  },
+  {
+   "idx": "PreK.T4.1",
+   "text": "With prompting and support, describe some things people do when they work inside and outside of the home, drawing on personal experience, literature, and informational texts."
+  },
+  {
+   "idx": "PreK.T4.2",
+   "text": "With prompting and support, ask and answer questions about buying, selling or trading something and explain how people make choices about the things they need and want."
+  },
+  {
+   "idx": "PreK.T4.3",
+   "text": "With prompting and support, give examples from personal experience, literature, or informational texts of goods and services that people purchase with money they earn."
+  },
+  {
+   "idx": "SEL1",
+   "text": "The child will be able to recognize, identify, and express his/her emotions."
+  },
+  {
+   "idx": "SEL2",
+   "text": "The child will demonstrate accurate self-perception."
+  },
+  {
+   "idx": "SEL3",
+   "text": "The child will demonstrate self-efficacy (confidence/competence)."
+  },
+  {
+   "idx": "SEL4",
+   "text": "The child will demonstrate impulse control and stress management."
+  },
+  {
+   "idx": "SEL5",
+   "text": "The child will display empathetic characteristics."
+  },
+  {
+   "idx": "SEL6",
+   "text": "The child will recognize diversity and demonstrate respect for others."
+  },
+  {
+   "idx": "SEL7",
+   "text": "The child will demonstrate the ability to communicate with others in a variety of ways."
+  },
+  {
+   "idx": "SEL8",
+   "text": "The child will engage socially, and build relationships with other children and with adults."
+  },
+  {
+   "idx": "SEL9",
+   "text": "The child will demonstrate the ability to manage conflict."
+  },
+  {
+   "idx": "SEL10",
+   "text": "The child will demonstrate the ability to seek help and offer help."
+  },
+  {
+   "idx": "SEL11",
+   "text": "The child will demonstrate beginning personal, social, and ethical responsibility"
+  },
+  {
+   "idx": "SEL12",
+   "text": "The child will demonstrate the ability to reflect on and evaluate the results of his/her actions and decisions."
+  },
+  {
+   "idx": "APL 1",
+   "text": "The child will demonstrate initiative, self-direction, and independence."
+  },
+  {
+   "idx": "APL 2",
+   "text": "The child will demonstrate eagerness and curiosity as a learner."
+  },
+  {
+   "idx": "APL 3",
+   "text": "The child will be able to maintain focus and attention, and persist in efforts to complete a task."
+  },
+  {
+   "idx": "APL 4",
+   "text": "The child will demonstrate creativity in thinking and use of materials."
+  },
+  {
+   "idx": "APL 5",
+   "text": "The child will cooperate with others in play and learning."
+  },
+  {
+   "idx": "APL 6",
+   "text": "The child will seek multiple solutions to a question, task, or problem."
+  },
+  {
+   "idx": "APL 7",
+   "text": "The child will demonstrate organizational skills."
+  },
+  {
+   "idx": "APL 8",
+   "text": "The child will be able to retain and recall information."
+  }
+ ]
+}
