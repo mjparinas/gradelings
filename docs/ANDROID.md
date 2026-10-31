@@ -18,7 +18,7 @@ The Android app is a **Trusted Web Activity (TWA)**: a small shell, built with [
 | `src/lib/android.ts` | The package id and the asset links builder. Fingerprints come from the `ANDROID_CERT_SHA256` environment variable. |
 | `.gitignore` | Keeps `*.keystore`, `*.jks` and build output out of git. |
 
-The web manifest is unchanged. The package id `ca.grademap.app` is in two places (`android/twa-manifest.json` and `src/lib/android.ts`); a test keeps them equal. **It can never change once the app is published.**
+The web manifest is unchanged. The package id `com.gradelings.app` is in two places (`android/twa-manifest.json` and `src/lib/android.ts`); a test keeps them equal. **It can never change once the app is published.**
 
 ## What you need to do yourself
 
@@ -27,7 +27,7 @@ Each of these needs an account or a choice only the owner can make. The build it
 1. **Create a Google Play Console developer account** (play.google.com/console; a one-time US$25 fee and identity verification). An organization account needs a D-U-N-S number. A **personal** account created after November 2023 must run a closed test with at least 12 testers for 14 days in a row before it can apply for production; an organization account skips that. Check Google's current rules when you sign up.
 2. **Make the upload key.** In GitHub, add the secret `ANDROID_KEYSTORE_PASSWORD` (a long password; keep it in a password manager). Then Actions > Android > Run workflow > task `create-key`. Download the `upload-key` artifact within a day, keep `grademap-upload.keystore` with the password in your password manager, and paste the text of `ANDROID_KEYSTORE_B64.txt` into a new secret `ANDROID_KEYSTORE_B64`. The run refuses to make a second key once that secret exists.
 3. **Build:** Actions > Android > Run workflow > task `build`. The `gradelings-android` artifact has `app-release-bundle.aab` (upload to Play) and `app-release-signed.apk` (installs on a device for testing).
-4. **Create the app in the Play Console** with the package `ca.grademap.app` and keep **Play App Signing** on (the default). Google re-signs the app with its own key, so **the fingerprint that matters is Google's**: your app > Test and release > App integrity > App signing > "SHA-256 certificate fingerprint".
+4. **Create the app in the Play Console** with the package `com.gradelings.app` and keep **Play App Signing** on (the default). Google re-signs the app with its own key, so **the fingerprint that matters is Google's**: your app > Test and release > App integrity > App signing > "SHA-256 certificate fingerprint".
 5. **Set `ANDROID_CERT_SHA256`** in Vercel (Production) to that fingerprint. To also test the APK from step 3, add the upload key's fingerprint (`upload-key-sha256.txt`), comma-separated. The route reads the variable on each request, but Vercel only applies a changed variable to new deployments, so redeploy once.
 6. **Check the link:** `https://www.gradelings.com/.well-known/assetlinks.json` should list the fingerprint. With the app installed from Play, there should be no browser bar. If the bar shows, the fingerprint, package id or host doesn't match.
 7. **Fill in the listing and App content pages** from `docs/PLAY_LISTING.md`: descriptions, screenshots, privacy policy, target audience (this puts the app in the Families program), Data safety, content rating and reviewer access.

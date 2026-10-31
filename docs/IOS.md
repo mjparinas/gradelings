@@ -31,7 +31,7 @@ One universal app for iPhone and iPad, in `ios/`. It is a small native Swift she
 | `src/lib/ios.test.ts` | Keeps the web app and `ios/` agreeing (start path, user agent, domain, orientations). |
 | `scripts/ios-screenshots.mjs` | App Store screenshots at iPhone 6.9" and iPad 13" sizes. |
 
-The bundle id is `ca.grademap.app`, the same as the Android package. **It can never change once the app is in App Store Connect.**
+The bundle id is `com.gradelings.app`, the same as the Android package. **It can never change once the app is in App Store Connect.**
 
 ## Paying: not inside the iOS app
 
@@ -53,7 +53,7 @@ The app can go in the **Education** category with a 4+ age rating, or in the **K
 1. **Deploy the site to the production domain** (`docs/DEPLOY.md`). If it isn't `gradelings.com`, change `APP_ORIGIN` and `APP_DOMAIN` in `ios/project.yml` (and `NEXT_PUBLIC_SITE_URL`; `src/lib/ios.test.ts` checks they match).
 2. **Join the Apple Developer Program** (developer.apple.com/programs, US$99 a year). Enrolling as an organization needs a D-U-N-S number; as an individual, the seller name on the App Store is your own name.
 3. **Find your Team ID:** developer.apple.com > Account > Membership details (10 characters).
-4. **Create the app in App Store Connect** (appstoreconnect.apple.com > Apps > +): platform iOS, name "Gradelings: K-9 Practice", bundle id `ca.grademap.app` (register it first under Certificates, Identifiers & Profiles > Identifiers if it isn't offered), SKU `gradelings-ios`.
+4. **Create the app in App Store Connect** (appstoreconnect.apple.com > Apps > +): platform iOS, name "Gradelings: K-9 Practice", bundle id `com.gradelings.app` (register it first under Certificates, Identifiers & Profiles > Identifiers if it isn't offered), SKU `gradelings-ios`.
 5. **Create an App Store Connect API key:** App Store Connect > Users and Access > Integrations > App Store Connect API > Team Keys > +, access **Admin** (needed so the build can create its own signing certificate and profile). Download the `.p8` file (it can be downloaded once) and note the Key ID and the Issuer ID shown above the list.
 6. **Add four repository secrets** (GitHub > Settings > Secrets and variables > Actions > New repository secret):
 
@@ -96,4 +96,4 @@ For later releases, raise `MARKETING_VERSION` in `ios/project.yml` when `ios/` c
 - **In-App Purchase.** Not built. The app sells nothing, which Apple usually accepts for an app that works free. Adding Apple's In-App Purchase (StoreKit, Apple's 15% small-business commission, server receipt checks, and a second billing system beside Stripe) is the fallback if review insists.
 - **US link-out.** Since 2025, apps on the US storefront may link to a web checkout. Gradelings sells in Canada, where that isn't allowed, so the app links to none.
 - **Kids Category or Education.** See above; the default is Education, 4+, because Kids Category can't be undone.
-- **Bundle id.** `ca.grademap.app`, the same as Android. It can't change once the app record exists.
+- **Bundle id.** `com.gradelings.app`, the same as Android. It can't change once the app record exists.
