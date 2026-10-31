@@ -5,7 +5,7 @@
 # The .xcodeproj is generated, so it isn't committed; change this file instead.
 name: Gradelings
 options:
-  bundleIdPrefix: ca.grademap
+  bundleIdPrefix: com.gradelings
   deploymentTarget:
     iOS: "16.0"
   createIntermediateGroups: true
@@ -38,7 +38,7 @@ targets:
     settings:
       base:
         # Must match the App Store Connect record. It can never change once the app is published.
-        PRODUCT_BUNDLE_IDENTIFIER: ca.grademap.app
+        PRODUCT_BUNDLE_IDENTIFIER: com.gradelings.app
         PRODUCT_NAME: Gradelings
         # 1 = iPhone, 2 = iPad: one universal app.
         TARGETED_DEVICE_FAMILY: "1,2"
@@ -59,7 +59,7 @@ targets:
     settings:
       base:
         GENERATE_INFOPLIST_FILE: YES
-        PRODUCT_BUNDLE_IDENTIFIER: ca.grademap.app.tests
+        PRODUCT_BUNDLE_IDENTIFIER: com.gradelings.app.tests
 
 schemes:
   Gradelings:
