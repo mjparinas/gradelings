@@ -244,7 +244,7 @@ export interface Classwork {
   due: Record<string, number>;
   /** Homework question counts, by unit key. Units without one are not listed. */
   goal: Record<string, number>;
-  /** When each unit was assigned (ms since epoch), by unit key. */
+  /** When each unit was assigned, or started if it was scheduled ahead (ms since epoch), by unit key. */
   since: Record<string, number>;
 }
 
@@ -273,6 +273,22 @@ export async function assignmentDue(classId: string): Promise<Record<string, num
   return Object.fromEntries(rows.map((r) => [r.unit_key, Number(r.due_at)]));
 }
 
+/** Start dates a teacher set on this class's assigned units (scheduled ahead). Units without one are not listed. */
+export async function assignmentStarts(classId: string): Promise<Record<string, number>> {
+  const rows = await query<{ unit_key: string; starts_at: number | null }>("SELECT unit_key, starts_at FROM class_assignments WHERE class_id = ? AND starts_at IS NOT NULL", [classId]);
+  return Object.fromEntries(rows.map((r) => [r.unit_key, Number(r.starts_at)]));
+}
+
+/** A start date from the browser: a time from a day ago (the start of today, wherever the teacher is) to a year ahead, or null for at once. */
+export function cleanStartsAt(v: unknown, now = Date.now()): number | null | undefined {
+  if (v === null) return null;
+  if (typeof v !== "number" || !Number.isFinite(v)) return undefined;
+  return v > now - 86_400_000 && v < now + 366 * 86_400_000 ? Math.round(v) : undefined;
+}
+
+/** When homework on a unit starts counting: when it was assigned or, if it was scheduled ahead, when it starts. */
+const startedAt = (createdAt: number, startsAt: number | null | undefined) => Math.max(createdAt, startsAt ?? 0);
+
 /** A due date from the browser: a time within the next year or the last month, or null for none. */
 export function cleanDueAt(v: unknown, now = Date.now()): number | null | undefined {
   if (v === null) return null;
@@ -281,18 +297,20 @@ export function cleanDueAt(v: unknown, now = Date.now()): number | null | undefi
 }
 
 /** What each of a family's linked children has been assigned. Sent only to that family's own devices. */
-export async function familyClasswork(familyId: string): Promise<Classwork[]> {
+export async function familyClasswork(familyId: string, now = Date.now()): Promise<Classwork[]> {
   // A unit reaches a student when the teacher picked them, or, if it has no picks, when it is for their whole class
   // or (in a split class) for their grade.
-  const rows = await query<{ profile_id: string; class_id: string; name: string; unit_key: string | null; due_at: number | null; goal: number | null; created_at: number | null }>(
-    `SELECT m.profile_id, m.class_id, c.name, a.unit_key, a.due_at, a.goal, a.created_at FROM class_members m
+  // A unit scheduled ahead is left out until its start date, so neither the child nor their parent sees it early.
+  const rows = await query<{ profile_id: string; class_id: string; name: string; unit_key: string | null; due_at: number | null; goal: number | null; created_at: number | null; starts_at: number | null }>(
+    `SELECT m.profile_id, m.class_id, c.name, a.unit_key, a.due_at, a.goal, a.created_at, a.starts_at FROM class_members m
      JOIN classes c ON c.id = m.class_id AND c.closed_at IS NULL
      LEFT JOIN class_assignments a ON a.class_id = m.class_id
+       AND (a.starts_at IS NULL OR a.starts_at <= ?)
        AND (EXISTS (SELECT 1 FROM class_assignment_students t WHERE t.class_id = a.class_id AND t.unit_key = a.unit_key AND t.profile_id = m.profile_id)
             OR (NOT EXISTS (SELECT 1 FROM class_assignment_students t WHERE t.class_id = a.class_id AND t.unit_key = a.unit_key)
                 AND (c.grade2 IS NULL OR substr(a.unit_key, 1, instr(a.unit_key, '/') - 1) = COALESCE(m.grade, c.grade))))
      WHERE m.family_id = ? ORDER BY m.joined_at, a.created_at, a.unit_key`,
-    [familyId],
+    [now, familyId],
   );
   const out = new Map<string, Classwork>();
   for (const r of rows) {
@@ -301,7 +319,7 @@ export async function familyClasswork(familyId: string): Promise<Classwork[]> {
     if (r.unit_key) entry.unitKeys.push(r.unit_key);
     if (r.unit_key && r.due_at != null) entry.due[r.unit_key] = Number(r.due_at);
     if (r.unit_key && r.goal != null) entry.goal[r.unit_key] = Number(r.goal);
-    if (r.unit_key && r.created_at != null) entry.since[r.unit_key] = Number(r.created_at);
+    if (r.unit_key && r.created_at != null) entry.since[r.unit_key] = startedAt(Number(r.created_at), r.starts_at == null ? null : Number(r.starts_at));
     out.set(k, entry);
   }
   return [...out.values()];
@@ -324,12 +342,15 @@ export async function classProgress(classId: string): Promise<StudentProgress[]>
 }
 
 /** `classProgress`, plus the questions several students missed on each assigned unit (only answers that carry the question's text). */
-export async function classProgressAndMisses(classId: string): Promise<{ students: StudentProgress[]; missed: Record<string, MissedQuestion[]> }> {
+export async function classProgressAndMisses(classId: string, now = Date.now()): Promise<{ students: StudentProgress[]; missed: Record<string, MissedQuestion[]> }> {
   const members = await query<{ profile_id: string; family_id: string; grade: string | null }>("SELECT profile_id, family_id, grade FROM class_members WHERE class_id = ? ORDER BY joined_at", [classId]);
   const cls = (await query<{ grade: GradeId; grade2: GradeId | null }>("SELECT grade, grade2 FROM classes WHERE id = ?", [classId]))[0];
   const keys = await assignmentKeys(classId);
   const audience = await assignmentAudience(classId);
-  const since = Object.fromEntries((await query<{ unit_key: string; created_at: number }>("SELECT unit_key, created_at FROM class_assignments WHERE class_id = ?", [classId])).map((r) => [r.unit_key, Number(r.created_at)]));
+  const timing = await query<{ unit_key: string; created_at: number; starts_at: number | null }>("SELECT unit_key, created_at, starts_at FROM class_assignments WHERE class_id = ?", [classId]);
+  const since = Object.fromEntries(timing.map((r) => [r.unit_key, startedAt(Number(r.created_at), r.starts_at == null ? null : Number(r.starts_at))]));
+  // A unit scheduled ahead isn't anyone's yet: it counts as not assigned (so insights, badges and the Monday email skip it) until it starts.
+  const waiting = new Set(timing.filter((r) => r.starts_at != null && Number(r.starts_at) > now).map((r) => r.unit_key));
   const questions: Record<string, Record<string, boolean>>[] = [];
   const progress = await mapLimit(members, CLASS_LOAD_CONCURRENCY, async (m): Promise<StudentProgress | null> => {
     // One unreadable child record must not take the whole class view down with it.
@@ -340,7 +361,7 @@ export async function classProgressAndMisses(classId: string): Promise<{ student
     if (!data) return null;
     const byKey = new Map(data.report.units.map((u) => [u.ref.key, u]));
     // Only units the student was given count toward the class's missed questions.
-    const given = keys.filter((key) => (audience[key] ? audience[key].includes(m.profile_id) : !cls || unitIsForGrade(key, (m.grade ?? cls.grade) as GradeId, cls)));
+    const given = keys.filter((key) => !waiting.has(key) && (audience[key] ? audience[key].includes(m.profile_id) : !cls || unitIsForGrade(key, (m.grade ?? cls.grade) as GradeId, cls)));
     questions.push(studentQuestions(data.events, Object.fromEntries(given.map((k) => [k, since[k] ?? 0]))));
     return {
       profileId: m.profile_id,
@@ -350,7 +371,7 @@ export async function classProgressAndMisses(classId: string): Promise<{ student
       lastActive: data.report.units.reduce<number | null>((t, u) => (u.lastT && (t === null || u.lastT > t) ? u.lastT : t), null),
       units: keys.map((key) => {
         const u = byKey.get(key);
-        return { key, level: u ? u.level : unitLevel(undefined), attempts: u?.attempts ?? 0, accuracy: u?.accuracy ?? 0, done: homeworkDone(data.events, key, since[key] ?? 0), assigned: audience[key] ? audience[key].includes(m.profile_id) : !cls || unitIsForGrade(key, (m.grade ?? cls.grade) as GradeId, cls) };
+        return { key, level: u ? u.level : unitLevel(undefined), attempts: u?.attempts ?? 0, accuracy: u?.accuracy ?? 0, done: homeworkDone(data.events, key, since[key] ?? 0), assigned: !waiting.has(key) && (audience[key] ? audience[key].includes(m.profile_id) : !cls || unitIsForGrade(key, (m.grade ?? cls.grade) as GradeId, cls)) };
       }),
     };
   });
