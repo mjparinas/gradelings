@@ -1,0 +1,1270 @@
+{
+ "data": {
+  "cspStatus": {},
+  "document": {
+   "asnIdentifier": "D2800677",
+   "id": "D2800677",
+   "publicationStatus": "Published",
+   "sourceURL": "http://www.doe.mass.edu/frameworks/ela/2017-06.pdf",
+   "title": "Massachusetts English Language Arts and Literacy Framework",
+   "valid": "2017"
+  },
+  "educationLevels": [
+   "Pre-K"
+  ],
+  "id": "95C543B18A1B473B894ED35ECA322576_D2800677_grade-pre-k",
+  "jurisdiction": {
+   "id": "95C543B18A1B473B894ED35ECA322576",
+   "title": "Massachusetts"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/3.0/us/",
+   "rightsHolder": "D2L Corporation",
+   "title": "CC BY 3.0 US"
+  },
+  "normalizedSubject": "English",
+  "standards": {
+   "010CE2FCAF6841A2A967D37AD0A5C3D8": {
+    "ancestorIds": [
+     "15DF4C989CE24EB4BC80D1C290CE532B",
+     "F80F9A7603254E09A6D72760CF531423",
+     "DE93235F19E548C29FE549919259BB86"
+    ],
+    "asnIdentifier": "S2808593",
+    "depth": 3,
+    "description": "Begins in kindergarten or when the individual child is ready.",
+    "id": "010CE2FCAF6841A2A967D37AD0A5C3D8",
+    "parentId": "15DF4C989CE24EB4BC80D1C290CE532B",
+    "position": 36000,
+    "statementLabel": "Component",
+    "statementNotation": "RF.P.1.c"
+   },
+   "0153B76192D842B5B3488E071984A0F6": {
+    "ancestorIds": [
+     "74F0320ADBE54C849DE77C3C546465DD"
+    ],
+    "asnIdentifier": "S2808450",
+    "depth": 1,
+    "description": "Range of Reading and Level of Text Complexity",
+    "id": "0153B76192D842B5B3488E071984A0F6",
+    "parentId": "74F0320ADBE54C849DE77C3C546465DD",
+    "position": 14000
+   },
+   "06A5BE6E5EC940ADBE2AE83B69238BA3": {
+    "ancestorIds": [
+     "BF7497E721204900890CC85DA7FCC3A5",
+     "74F0320ADBE54C849DE77C3C546465DD"
+    ],
+    "asnIdentifier": "S2808379",
+    "depth": 2,
+    "description": "With prompting and support, \"read\" the illustrations in a picture book by describing a character or place depicted, or by telling how a sequence of events unfolds.",
+    "id": "06A5BE6E5EC940ADBE2AE83B69238BA3",
+    "parentId": "BF7497E721204900890CC85DA7FCC3A5",
+    "position": 9000,
+    "statementLabel": "Standard",
+    "statementNotation": "RL.P.6"
+   },
+   "08BF963CE5374A478378E3514114F870": {
+    "ancestorIds": [
+     "BF7497E721204900890CC85DA7FCC3A5",
+     "74F0320ADBE54C849DE77C3C546465DD"
+    ],
+    "asnIdentifier": "S2808377",
+    "depth": 2,
+    "description": "With prompting and support, ask and answer questions about unfamiliar words in a story or poem read aloud.",
+    "id": "08BF963CE5374A478378E3514114F870",
+    "parentId": "BF7497E721204900890CC85DA7FCC3A5",
+    "position": 7000,
+    "statementLabel": "Standard",
+    "statementNotation": "RL.P.4"
+   },
+   "0C1E840CDC5F48F5BB45D6FF85F2CE98": {
+    "ancestorIds": [
+     "74F0320ADBE54C849DE77C3C546465DD"
+    ],
+    "asnIdentifier": "S2808413",
+    "depth": 1,
+    "description": "Integration of Knowledge and Ideas",
+    "id": "0C1E840CDC5F48F5BB45D6FF85F2CE98",
+    "parentId": "74F0320ADBE54C849DE77C3C546465DD",
+    "position": 10000
+   },
+   "0E51E049026B43F79FAC229B0CB4F484": {
+    "ancestorIds": [
+     "AEDA294DAE564061AA94746E6994DD53",
+     "AB1F73F7F35349389B5A4BCFAA96A4BA"
+    ],
+    "asnIdentifier": "S2809032",
+    "depth": 2,
+    "description": "Create representations of experiences or stories (e.g., drawings, constructions with blocks or other materials, clay models) and explain them to others.",
+    "id": "0E51E049026B43F79FAC229B0CB4F484",
+    "parentId": "AEDA294DAE564061AA94746E6994DD53",
+    "position": 76000,
+    "statementLabel": "Standard",
+    "statementNotation": "SL.P.5"
+   },
+   "1089867D9A30466BB8058A10129C58D4": {
+    "ancestorIds": [
+     "581594C5A1C6477AA75B0CED8FC007D0",
+     "53DBC6FE60CF4FA297AF187140778456"
+    ],
+    "asnIdentifier": "S2808465",
+    "depth": 2,
+    "description": "With prompting and support, ask and answer questions about an informational text read aloud.",
+    "id": "1089867D9A30466BB8058A10129C58D4",
+    "parentId": "581594C5A1C6477AA75B0CED8FC007D0",
+    "position": 18000,
+    "statementLabel": "Standard",
+    "statementNotation": "RI.P.1"
+   },
+   "15DF4C989CE24EB4BC80D1C290CE532B": {
+    "ancestorIds": [
+     "F80F9A7603254E09A6D72760CF531423",
+     "DE93235F19E548C29FE549919259BB86"
+    ],
+    "asnIdentifier": "S2808590",
+    "depth": 2,
+    "description": "With guidance and support, demonstrate understanding of the organization and basic features of printed and written text: books, words, letters, and the alphabet.",
+    "id": "15DF4C989CE24EB4BC80D1C290CE532B",
+    "parentId": "F80F9A7603254E09A6D72760CF531423",
+    "position": 33000,
+    "statementLabel": "Standard",
+    "statementNotation": "RF.P.1"
+   },
+   "172C2ED0639346FBA486397F8852AB48": {
+    "ancestorIds": [
+     "0153B76192D842B5B3488E071984A0F6",
+     "74F0320ADBE54C849DE77C3C546465DD"
+    ],
+    "asnIdentifier": "S2808451",
+    "depth": 2,
+    "description": "Listen actively as an individual and as a member of a group to a variety of age-appropriate literature read aloud.",
+    "id": "172C2ED0639346FBA486397F8852AB48",
+    "parentId": "0153B76192D842B5B3488E071984A0F6",
+    "position": 15000,
+    "statementLabel": "Standard",
+    "statementNotation": "RL.P.10"
+   },
+   "190E2D50CC3240F8AD04A565429AD321": {
+    "ancestorIds": [
+     "B41877C3FBC34F8C816362DA89BA8A2C",
+     "DC87D9FB49BA4AE7935CD8E443943998",
+     "AB1F73F7F35349389B5A4BCFAA96A4BA"
+    ],
+    "asnIdentifier": "S2808953",
+    "depth": 3,
+    "description": "Observe and use appropriate ways of interacting in a group (e.g., taking turns in talking, listening to peers, waiting to speak until another person is finished talking, asking questions and waiting for an answer, gaining the floor in appropriate ways).",
+    "id": "190E2D50CC3240F8AD04A565429AD321",
+    "parentId": "B41877C3FBC34F8C816362DA89BA8A2C",
+    "position": 70000,
+    "statementLabel": "Component",
+    "statementNotation": "SL.P.1.a"
+   },
+   "2022ED8AE2FE480D840C24E86E714567": {
+    "ancestorIds": [
+     "DC87D9FB49BA4AE7935CD8E443943998",
+     "AB1F73F7F35349389B5A4BCFAA96A4BA"
+    ],
+    "asnIdentifier": "S2808955",
+    "depth": 2,
+    "description": "Recall information for short periods of time and retell, act out, or represent information from a text read aloud, a recording, or a video (e.g., watch a video about birds and their habitats and make drawings or constructions of birds and their nests).",
+    "id": "2022ED8AE2FE480D840C24E86E714567",
+    "parentId": "DC87D9FB49BA4AE7935CD8E443943998",
+    "position": 72000,
+    "statementLabel": "Standard",
+    "statementNotation": "SL.P.2"
+   },
+   "2088B2D854E74FB580D4AB31DE5623A5": {
+    "ancestorIds": [
+     "E0917F89849A4BC7A5DF706587AA4D00",
+     "AEF4BEB7093D49D7880AC8D1FE4322F4"
+    ],
+    "asnIdentifier": "S2809224",
+    "depth": 2,
+    "description": "Ask and answer questions about the meanings of new words and phrases introduced through books, activities, and play.",
+    "id": "2088B2D854E74FB580D4AB31DE5623A5",
+    "parentId": "E0917F89849A4BC7A5DF706587AA4D00",
+    "position": 86000,
+    "statementLabel": "Standard",
+    "statementNotation": "L.P.4"
+   },
+   "230A18DDBC794D269E5332EC592E28B9": {
+    "ancestorIds": [
+     "821000387C854D8E90892F2B830F8D11",
+     "74F0320ADBE54C849DE77C3C546465DD"
+    ],
+    "asnIdentifier": "S2808341",
+    "depth": 2,
+    "description": "With prompting and support, retell a sequence of events from a story read aloud.",
+    "id": "230A18DDBC794D269E5332EC592E28B9",
+    "parentId": "821000387C854D8E90892F2B830F8D11",
+    "position": 4000,
+    "statementLabel": "Standard",
+    "statementNotation": "RL.P.2"
+   },
+   "238CFA815B744D57B4B9F10D7ED6C997": {
+    "ancestorIds": [
+     "A4CAC84525E8419ABE043776B881776E",
+     "58F5C2297A1747F6988AB9C77D5B156E"
+    ],
+    "asnIdentifier": "S2808842",
+    "depth": 2,
+    "description": "Begins in grade 1.",
+    "id": "238CFA815B744D57B4B9F10D7ED6C997",
+    "parentId": "A4CAC84525E8419ABE043776B881776E",
+    "position": 58000,
+    "statementLabel": "Standard",
+    "statementNotation": "W.P.4"
+   },
+   "239950D63B1448F9834B2BBA27DE86FB": {
+    "ancestorIds": [
+     "5057453849D641C38F5A4CE08DA35920",
+     "E0917F89849A4BC7A5DF706587AA4D00",
+     "AEF4BEB7093D49D7880AC8D1FE4322F4"
+    ],
+    "asnIdentifier": "S2809228",
+    "depth": 3,
+    "description": "Begins in kindergarten.",
+    "id": "239950D63B1448F9834B2BBA27DE86FB",
+    "parentId": "5057453849D641C38F5A4CE08DA35920",
+    "position": 90000,
+    "statementLabel": "Component",
+    "statementNotation": "L.P.5.b"
+   },
+   "2D7BA69B42A34445BAD613E74E989EB1": {
+    "ancestorIds": [
+     "BEF10C43C7E24EFCB6C7C0D073FDEADC",
+     "58F5C2297A1747F6988AB9C77D5B156E"
+    ],
+    "asnIdentifier": "S2808902",
+    "depth": 2,
+    "description": "Begins in kindergarten or when the individual child is ready.",
+    "id": "2D7BA69B42A34445BAD613E74E989EB1",
+    "parentId": "BEF10C43C7E24EFCB6C7C0D073FDEADC",
+    "position": 63000,
+    "statementLabel": "Standard",
+    "statementNotation": "W.P.8"
+   },
+   "36D078BCA0A64D2B8C03DDABBC7DF679": {
+    "ancestorIds": [
+     "DE93235F19E548C29FE549919259BB86"
+    ],
+    "asnIdentifier": "S2808654",
+    "depth": 1,
+    "description": "Fluency",
+    "id": "36D078BCA0A64D2B8C03DDABBC7DF679",
+    "parentId": "DE93235F19E548C29FE549919259BB86",
+    "position": 50000
+   },
+   "38F0517025814CBDB36BE8095382471B": {
+    "ancestorIds": [
+     "15DF4C989CE24EB4BC80D1C290CE532B",
+     "F80F9A7603254E09A6D72760CF531423",
+     "DE93235F19E548C29FE549919259BB86"
+    ],
+    "asnIdentifier": "S2808592",
+    "depth": 3,
+    "description": "Begins in kindergarten or when the individual child is ready.",
+    "id": "38F0517025814CBDB36BE8095382471B",
+    "parentId": "15DF4C989CE24EB4BC80D1C290CE532B",
+    "position": 35000,
+    "statementLabel": "Component",
+    "statementNotation": "RF.P.1.b"
+   },
+   "3D73A2876F804DBD9EE8D407DBD94568": {
+    "ancestorIds": [
+     "53DBC6FE60CF4FA297AF187140778456"
+    ],
+    "asnIdentifier": "S2808538",
+    "depth": 1,
+    "description": "Integration of Knowledge and Ideas",
+    "id": "3D73A2876F804DBD9EE8D407DBD94568",
+    "parentId": "53DBC6FE60CF4FA297AF187140778456",
+    "position": 25000
+   },
+   "42C8FFA174B74806A32A10891626B698": {
+    "ancestorIds": [
+     "3D73A2876F804DBD9EE8D407DBD94568",
+     "53DBC6FE60CF4FA297AF187140778456"
+    ],
+    "asnIdentifier": "S2808541",
+    "depth": 2,
+    "description": "With prompting and support, identify several books on a favorite topic or several books by a favorite author or illustrator.",
+    "id": "42C8FFA174B74806A32A10891626B698",
+    "parentId": "3D73A2876F804DBD9EE8D407DBD94568",
+    "position": 28000,
+    "statementLabel": "Standard",
+    "statementNotation": "RI.P.9"
+   },
+   "46F60104302A497FBC52F33B49BBB68F": {
+    "ancestorIds": [
+     "821000387C854D8E90892F2B830F8D11",
+     "74F0320ADBE54C849DE77C3C546465DD"
+    ],
+    "asnIdentifier": "S2808342",
+    "depth": 2,
+    "description": "With prompting and support, act out characters and events from a story or poem read aloud.",
+    "id": "46F60104302A497FBC52F33B49BBB68F",
+    "parentId": "821000387C854D8E90892F2B830F8D11",
+    "position": 5000,
+    "statementLabel": "Standard",
+    "statementNotation": "RL.P.3"
+   },
+   "47BC41BC86714873A0C3FA5BB4F94890": {
+    "ancestorIds": [
+     "DC87D9FB49BA4AE7935CD8E443943998",
+     "AB1F73F7F35349389B5A4BCFAA96A4BA"
+    ],
+    "asnIdentifier": "S2808956",
+    "depth": 2,
+    "description": "Ask and answer questions in order to seek help, get information, or clarify something that is not understood.",
+    "id": "47BC41BC86714873A0C3FA5BB4F94890",
+    "parentId": "DC87D9FB49BA4AE7935CD8E443943998",
+    "position": 73000,
+    "statementLabel": "Standard",
+    "statementNotation": "SL.P.3"
+   },
+   "4D4A8D43D2BB4F9CA721F0B5FECF9917": {
+    "ancestorIds": [
+     "F253206109DA4218B0E5D1ADCF2064C3",
+     "53DBC6FE60CF4FA297AF187140778456"
+    ],
+    "asnIdentifier": "S2808503",
+    "depth": 2,
+    "description": "Begins in kindergarten or when the individual child is ready.",
+    "id": "4D4A8D43D2BB4F9CA721F0B5FECF9917",
+    "parentId": "F253206109DA4218B0E5D1ADCF2064C3",
+    "position": 23000,
+    "statementLabel": "Standard",
+    "statementNotation": "RI.P.5"
+   },
+   "5057453849D641C38F5A4CE08DA35920": {
+    "ancestorIds": [
+     "E0917F89849A4BC7A5DF706587AA4D00",
+     "AEF4BEB7093D49D7880AC8D1FE4322F4"
+    ],
+    "asnIdentifier": "S2809226",
+    "depth": 2,
+    "description": "With guidance and support from adults, explore word relationships and nuances in word meanings.",
+    "id": "5057453849D641C38F5A4CE08DA35920",
+    "parentId": "E0917F89849A4BC7A5DF706587AA4D00",
+    "position": 88000,
+    "statementLabel": "Standard",
+    "statementNotation": "L.P.5"
+   },
+   "52131A3DF8B340D7985C2412FAD58110": {
+    "ancestorIds": [
+     "DE93235F19E548C29FE549919259BB86"
+    ],
+    "asnIdentifier": "S2808619",
+    "depth": 1,
+    "description": "Phonics and Word Recognition",
+    "id": "52131A3DF8B340D7985C2412FAD58110",
+    "parentId": "DE93235F19E548C29FE549919259BB86",
+    "position": 44000
+   },
+   "53DBC6FE60CF4FA297AF187140778456": {
+    "ancestorIds": [],
+    "asnIdentifier": "S2808463",
+    "depth": 0,
+    "description": "Reading Standards for Informational Text",
+    "id": "53DBC6FE60CF4FA297AF187140778456",
+    "parentId": null,
+    "position": 16000,
+    "statementLabel": "Anchor Standard"
+   },
+   "581594C5A1C6477AA75B0CED8FC007D0": {
+    "ancestorIds": [
+     "53DBC6FE60CF4FA297AF187140778456"
+    ],
+    "asnIdentifier": "S2808464",
+    "depth": 1,
+    "description": "Key Ideas and Details",
+    "id": "581594C5A1C6477AA75B0CED8FC007D0",
+    "parentId": "53DBC6FE60CF4FA297AF187140778456",
+    "position": 17000
+   },
+   "58BE2C3A57EC454DADF80EA32401BC54": {
+    "ancestorIds": [
+     "AEF4BEB7093D49D7880AC8D1FE4322F4"
+    ],
+    "asnIdentifier": "S2809192",
+    "depth": 1,
+    "description": "Knowledge of Language",
+    "id": "58BE2C3A57EC454DADF80EA32401BC54",
+    "parentId": "AEF4BEB7093D49D7880AC8D1FE4322F4",
+    "position": 83000
+   },
+   "58F5C2297A1747F6988AB9C77D5B156E": {
+    "ancestorIds": [],
+    "asnIdentifier": "S2808677",
+    "depth": 0,
+    "description": "Writing",
+    "id": "58F5C2297A1747F6988AB9C77D5B156E",
+    "parentId": null,
+    "position": 52000,
+    "statementLabel": "Anchor Standard"
+   },
+   "5996BF4AFFDD42FD96A4F42135335169": {
+    "ancestorIds": [
+     "BF7497E721204900890CC85DA7FCC3A5",
+     "74F0320ADBE54C849DE77C3C546465DD"
+    ],
+    "asnIdentifier": "S2808378",
+    "depth": 2,
+    "description": "Show awareness of the rhythmic structure of a poem or song by clapping or through movement.",
+    "id": "5996BF4AFFDD42FD96A4F42135335169",
+    "parentId": "BF7497E721204900890CC85DA7FCC3A5",
+    "position": 8000,
+    "statementLabel": "Standard",
+    "statementNotation": "RL.P.5"
+   },
+   "5B257CA81775497F996992C3CE18D93B": {
+    "ancestorIds": [
+     "F80F9A7603254E09A6D72760CF531423",
+     "DE93235F19E548C29FE549919259BB86"
+    ],
+    "asnIdentifier": "S2808595",
+    "depth": 2,
+    "description": "With guidance and support, demonstrate understanding of spoken words, syllables, and sounds (phonemes).",
+    "id": "5B257CA81775497F996992C3CE18D93B",
+    "parentId": "F80F9A7603254E09A6D72760CF531423",
+    "position": 38000,
+    "statementLabel": "Standard",
+    "statementNotation": "RF.P.2"
+   },
+   "6695AB5835AF4A769E023FABB1124C54": {
+    "ancestorIds": [
+     "53DBC6FE60CF4FA297AF187140778456"
+    ],
+    "asnIdentifier": "S2808575",
+    "depth": 1,
+    "description": "Range of Reading and Level of Text Complexity",
+    "id": "6695AB5835AF4A769E023FABB1124C54",
+    "parentId": "53DBC6FE60CF4FA297AF187140778456",
+    "position": 29000
+   },
+   "6C5D7CE7B8534CC582DE1E90789CE83B": {
+    "ancestorIds": [
+     "3D73A2876F804DBD9EE8D407DBD94568",
+     "53DBC6FE60CF4FA297AF187140778456"
+    ],
+    "asnIdentifier": "S2808540",
+    "depth": 2,
+    "description": "Begins in kindergarten or when the individual child is ready.",
+    "id": "6C5D7CE7B8534CC582DE1E90789CE83B",
+    "parentId": "3D73A2876F804DBD9EE8D407DBD94568",
+    "position": 27000,
+    "statementLabel": "Standard",
+    "statementNotation": "RI.P.8"
+   },
+   "7431AF72841748DDB82DABDA28D72B00": {
+    "ancestorIds": [
+     "BAF53CAE12A7437485B47B6DF520EFCA",
+     "52131A3DF8B340D7985C2412FAD58110",
+     "DE93235F19E548C29FE549919259BB86"
+    ],
+    "asnIdentifier": "S2808622",
+    "depth": 3,
+    "description": "Begins in kindergarten or when the individual child is ready.",
+    "id": "7431AF72841748DDB82DABDA28D72B00",
+    "parentId": "BAF53CAE12A7437485B47B6DF520EFCA",
+    "position": 47000,
+    "statementLabel": "Component",
+    "statementNotation": "RF.P.3.b"
+   },
+   "74F0320ADBE54C849DE77C3C546465DD": {
+    "ancestorIds": [],
+    "asnIdentifier": "S2808338",
+    "depth": 0,
+    "description": "Reading Standards for Literature",
+    "id": "74F0320ADBE54C849DE77C3C546465DD",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": "Anchor Standard"
+   },
+   "7E21C860825D48C7B5C74B1BFB36C1FC": {
+    "ancestorIds": [
+     "A4CAC84525E8419ABE043776B881776E",
+     "58F5C2297A1747F6988AB9C77D5B156E"
+    ],
+    "asnIdentifier": "S2808844",
+    "depth": 2,
+    "description": "Recognize that digital tools (e.g., computers, mobile phones, cameras) are used for communication and, with guidance and support, use them to convey messages in pictures and/or words.",
+    "id": "7E21C860825D48C7B5C74B1BFB36C1FC",
+    "parentId": "A4CAC84525E8419ABE043776B881776E",
+    "position": 60000,
+    "statementLabel": "Standard",
+    "statementNotation": "W.P.6"
+   },
+   "821000387C854D8E90892F2B830F8D11": {
+    "ancestorIds": [
+     "74F0320ADBE54C849DE77C3C546465DD"
+    ],
+    "asnIdentifier": "S2808339",
+    "depth": 1,
+    "description": "Key Ideas and Details",
+    "id": "821000387C854D8E90892F2B830F8D11",
+    "parentId": "74F0320ADBE54C849DE77C3C546465DD",
+    "position": 2000
+   },
+   "847E3027E59F4DF2962627FDB776333E": {
+    "ancestorIds": [
+     "5B257CA81775497F996992C3CE18D93B",
+     "F80F9A7603254E09A6D72760CF531423",
+     "DE93235F19E548C29FE549919259BB86"
+    ],
+    "asnIdentifier": "S2808600",
+    "depth": 3,
+    "description": "Begins in kindergarten or when the individual child is ready.",
+    "id": "847E3027E59F4DF2962627FDB776333E",
+    "parentId": "5B257CA81775497F996992C3CE18D93B",
+    "position": 43000,
+    "statementLabel": "Component",
+    "statementNotation": "RF.P.2.e"
+   },
+   "8610C68C0C024A7995E267DA4E5D114F": {
+    "ancestorIds": [
+     "821000387C854D8E90892F2B830F8D11",
+     "74F0320ADBE54C849DE77C3C546465DD"
+    ],
+    "asnIdentifier": "S2808340",
+    "depth": 2,
+    "description": "With prompting and support, ask and answer questions about a story or poem read aloud.",
+    "id": "8610C68C0C024A7995E267DA4E5D114F",
+    "parentId": "821000387C854D8E90892F2B830F8D11",
+    "position": 3000,
+    "statementLabel": "Standard",
+    "statementNotation": "RL.P.1"
+   },
+   "86BFE654A35F4E329836D55293FCB46B": {
+    "ancestorIds": [
+     "9FB5582243464938BDE8E1634DCB7642",
+     "AEF4BEB7093D49D7880AC8D1FE4322F4"
+    ],
+    "asnIdentifier": "S2809071",
+    "depth": 2,
+    "description": "Begins in kindergarten.",
+    "id": "86BFE654A35F4E329836D55293FCB46B",
+    "parentId": "9FB5582243464938BDE8E1634DCB7642",
+    "position": 82000,
+    "statementLabel": "Standard",
+    "statementNotation": "L.P.2"
+   },
+   "8CB663B7A90942E48FCC2BBE91394CC2": {
+    "ancestorIds": [
+     "E58B45A4783D489AADF6034E94E61CAD",
+     "58F5C2297A1747F6988AB9C77D5B156E"
+    ],
+    "asnIdentifier": "S2808680",
+    "depth": 2,
+    "description": "Use a combination of dictating and drawing to supply information about a topic. For example, students draw pictures to show how they planted tulip bulbs in the school garden in the fall. They dictate words and sentences about the soil in the garden, the tools they used, and what the bulbs will become in the spring.",
+    "id": "8CB663B7A90942E48FCC2BBE91394CC2",
+    "parentId": "E58B45A4783D489AADF6034E94E61CAD",
+    "position": 55000,
+    "statementLabel": "Standard",
+    "statementNotation": "W.P.2"
+   },
+   "8D66FAD9F1C945D3A96B255E4603E615": {
+    "ancestorIds": [
+     "AEDA294DAE564061AA94746E6994DD53",
+     "AB1F73F7F35349389B5A4BCFAA96A4BA"
+    ],
+    "asnIdentifier": "S2809031",
+    "depth": 2,
+    "description": "Describe personal experiences; tell stories.",
+    "id": "8D66FAD9F1C945D3A96B255E4603E615",
+    "parentId": "AEDA294DAE564061AA94746E6994DD53",
+    "position": 75000,
+    "statementLabel": "Standard",
+    "statementNotation": "SL.P.4"
+   },
+   "99D0863A7CC64C88A50EF6CA815723C6": {
+    "ancestorIds": [
+     "5057453849D641C38F5A4CE08DA35920",
+     "E0917F89849A4BC7A5DF706587AA4D00",
+     "AEF4BEB7093D49D7880AC8D1FE4322F4"
+    ],
+    "asnIdentifier": "S2809230",
+    "depth": 3,
+    "description": "Begins in kindergarten.",
+    "id": "99D0863A7CC64C88A50EF6CA815723C6",
+    "parentId": "5057453849D641C38F5A4CE08DA35920",
+    "position": 92000,
+    "statementLabel": "Component",
+    "statementNotation": "L.P.5.d"
+   },
+   "9A796AB280C14680A03BBCE338336172": {
+    "ancestorIds": [
+     "AEDA294DAE564061AA94746E6994DD53",
+     "AB1F73F7F35349389B5A4BCFAA96A4BA"
+    ],
+    "asnIdentifier": "S2809033",
+    "depth": 2,
+    "description": "Speak audibly and express thoughts, feelings, and ideas.",
+    "id": "9A796AB280C14680A03BBCE338336172",
+    "parentId": "AEDA294DAE564061AA94746E6994DD53",
+    "position": 77000,
+    "statementLabel": "Standard",
+    "statementNotation": "SL.P.6"
+   },
+   "9EA226144C1F44FFAC6BE4A3657687DA": {
+    "ancestorIds": [
+     "5B257CA81775497F996992C3CE18D93B",
+     "F80F9A7603254E09A6D72760CF531423",
+     "DE93235F19E548C29FE549919259BB86"
+    ],
+    "asnIdentifier": "S2808598",
+    "depth": 3,
+    "description": "Identify the initial sound of a spoken word and, with guidance and support, generate several other words that have the same initial sound.",
+    "id": "9EA226144C1F44FFAC6BE4A3657687DA",
+    "parentId": "5B257CA81775497F996992C3CE18D93B",
+    "position": 41000,
+    "statementLabel": "Component",
+    "statementNotation": "RF.P.2.c"
+   },
+   "9FB5582243464938BDE8E1634DCB7642": {
+    "ancestorIds": [
+     "AEF4BEB7093D49D7880AC8D1FE4322F4"
+    ],
+    "asnIdentifier": "S2809068",
+    "depth": 1,
+    "description": "Conventions of Standard English",
+    "id": "9FB5582243464938BDE8E1634DCB7642",
+    "parentId": "AEF4BEB7093D49D7880AC8D1FE4322F4",
+    "position": 79000
+   },
+   "A4CAC84525E8419ABE043776B881776E": {
+    "ancestorIds": [
+     "58F5C2297A1747F6988AB9C77D5B156E"
+    ],
+    "asnIdentifier": "S2808841",
+    "depth": 1,
+    "description": "Production and Distribution of Writing",
+    "id": "A4CAC84525E8419ABE043776B881776E",
+    "parentId": "58F5C2297A1747F6988AB9C77D5B156E",
+    "position": 57000
+   },
+   "A6724262A42A4C8C98453CDAF28862E4": {
+    "ancestorIds": [
+     "36D078BCA0A64D2B8C03DDABBC7DF679",
+     "DE93235F19E548C29FE549919259BB86"
+    ],
+    "asnIdentifier": "S2808655",
+    "depth": 2,
+    "description": "Begins in kindergarten or when the individual child is ready.",
+    "id": "A6724262A42A4C8C98453CDAF28862E4",
+    "parentId": "36D078BCA0A64D2B8C03DDABBC7DF679",
+    "position": 51000,
+    "statementLabel": "Standard",
+    "statementNotation": "RF.P.4"
+   },
+   "A85079F5401848E2B200339BB8E4F103": {
+    "ancestorIds": [
+     "58BE2C3A57EC454DADF80EA32401BC54",
+     "AEF4BEB7093D49D7880AC8D1FE4322F4"
+    ],
+    "asnIdentifier": "S2809193",
+    "depth": 2,
+    "description": "Begins in grade 2.",
+    "id": "A85079F5401848E2B200339BB8E4F103",
+    "parentId": "58BE2C3A57EC454DADF80EA32401BC54",
+    "position": 84000,
+    "statementLabel": "Standard",
+    "statementNotation": "L.P.3"
+   },
+   "AA6A9C2038EE424C951CF76AF44F9C34": {
+    "ancestorIds": [
+     "B41877C3FBC34F8C816362DA89BA8A2C",
+     "DC87D9FB49BA4AE7935CD8E443943998",
+     "AB1F73F7F35349389B5A4BCFAA96A4BA"
+    ],
+    "asnIdentifier": "S2808954",
+    "depth": 3,
+    "description": "Continue a conversation through multiple exchanges. For example, students practice holding conversations with one another when they are playing being shopkeepers and customers in a store, when they are getting ready for snack time, when they are counting blocks, or when they are in a circle discussing which books they liked the best that day at school.",
+    "id": "AA6A9C2038EE424C951CF76AF44F9C34",
+    "parentId": "B41877C3FBC34F8C816362DA89BA8A2C",
+    "position": 71000,
+    "statementLabel": "Component",
+    "statementNotation": "SL.P.1.b"
+   },
+   "AAF6946E6A5B410089AB5810A3D3B9EC": {
+    "ancestorIds": [
+     "0C1E840CDC5F48F5BB45D6FF85F2CE98",
+     "74F0320ADBE54C849DE77C3C546465DD"
+    ],
+    "asnIdentifier": "S2808414",
+    "depth": 2,
+    "description": "With prompting and support, make predictions about what happens next in a picture book after examining and discussing the illustrations.",
+    "id": "AAF6946E6A5B410089AB5810A3D3B9EC",
+    "parentId": "0C1E840CDC5F48F5BB45D6FF85F2CE98",
+    "position": 11000,
+    "statementLabel": "Standard",
+    "statementNotation": "RL.P.7"
+   },
+   "AB1F73F7F35349389B5A4BCFAA96A4BA": {
+    "ancestorIds": [],
+    "asnIdentifier": "S2808950",
+    "depth": 0,
+    "description": "Speaking and Listening",
+    "id": "AB1F73F7F35349389B5A4BCFAA96A4BA",
+    "parentId": null,
+    "position": 67000,
+    "statementLabel": "Anchor Standard"
+   },
+   "AD598D93286946C5A590A6632511E2BA": {
+    "ancestorIds": [
+     "E58B45A4783D489AADF6034E94E61CAD",
+     "58F5C2297A1747F6988AB9C77D5B156E"
+    ],
+    "asnIdentifier": "S2808679",
+    "depth": 2,
+    "description": "Dictate words to express a preference or opinion about a topic (e.g., \"I would like to go to the fire station to see the truck and meet the firemen.\").",
+    "id": "AD598D93286946C5A590A6632511E2BA",
+    "parentId": "E58B45A4783D489AADF6034E94E61CAD",
+    "position": 54000,
+    "statementLabel": "Standard",
+    "statementNotation": "W.P.1"
+   },
+   "AEDA294DAE564061AA94746E6994DD53": {
+    "ancestorIds": [
+     "AB1F73F7F35349389B5A4BCFAA96A4BA"
+    ],
+    "asnIdentifier": "S2809030",
+    "depth": 1,
+    "description": "Presentation of Knowledge and Ideas",
+    "id": "AEDA294DAE564061AA94746E6994DD53",
+    "parentId": "AB1F73F7F35349389B5A4BCFAA96A4BA",
+    "position": 74000
+   },
+   "AEF4BEB7093D49D7880AC8D1FE4322F4": {
+    "ancestorIds": [],
+    "asnIdentifier": "S2809067",
+    "depth": 0,
+    "description": "Language",
+    "id": "AEF4BEB7093D49D7880AC8D1FE4322F4",
+    "parentId": null,
+    "position": 78000,
+    "statementLabel": "Anchor Standard"
+   },
+   "AFB6CA16ED9347CBA86586CA87A30B9B": {
+    "ancestorIds": [
+     "F253206109DA4218B0E5D1ADCF2064C3",
+     "53DBC6FE60CF4FA297AF187140778456"
+    ],
+    "asnIdentifier": "S2808504",
+    "depth": 2,
+    "description": "With prompting and support, \"read\" illustrations in an informational picture book by describing facts learned from the pictures (e.g., how a seed grows into a plant).",
+    "id": "AFB6CA16ED9347CBA86586CA87A30B9B",
+    "parentId": "F253206109DA4218B0E5D1ADCF2064C3",
+    "position": 24000,
+    "statementLabel": "Standard",
+    "statementNotation": "RI.P.6"
+   },
+   "B41877C3FBC34F8C816362DA89BA8A2C": {
+    "ancestorIds": [
+     "DC87D9FB49BA4AE7935CD8E443943998",
+     "AB1F73F7F35349389B5A4BCFAA96A4BA"
+    ],
+    "asnIdentifier": "S2808952",
+    "depth": 2,
+    "description": "Participate in collaborative conversations with diverse partners during daily routines and play.",
+    "id": "B41877C3FBC34F8C816362DA89BA8A2C",
+    "parentId": "DC87D9FB49BA4AE7935CD8E443943998",
+    "position": 69000,
+    "statementLabel": "Standard",
+    "statementNotation": "SL.P.1"
+   },
+   "B476953AADAD4D3CBB5CD11D16EDCC5F": {
+    "ancestorIds": [
+     "6695AB5835AF4A769E023FABB1124C54",
+     "53DBC6FE60CF4FA297AF187140778456"
+    ],
+    "asnIdentifier": "S2808576",
+    "depth": 2,
+    "description": "Listen actively as an individual and as a member of a group to a variety of age-appropriate informational texts read aloud.",
+    "id": "B476953AADAD4D3CBB5CD11D16EDCC5F",
+    "parentId": "6695AB5835AF4A769E023FABB1124C54",
+    "position": 30000,
+    "statementLabel": "Standard",
+    "statementNotation": "RI.P.10"
+   },
+   "B4E011F3EC2643DAAD3E0BC8F2434135": {
+    "ancestorIds": [
+     "E5EC3C02162041E8AF1AFBD80A55AA60",
+     "58F5C2297A1747F6988AB9C77D5B156E"
+    ],
+    "asnIdentifier": "S2808938",
+    "depth": 2,
+    "description": "Begins in kindergarten or when the individual child is ready.",
+    "id": "B4E011F3EC2643DAAD3E0BC8F2434135",
+    "parentId": "E5EC3C02162041E8AF1AFBD80A55AA60",
+    "position": 66000,
+    "statementLabel": "Standard",
+    "statementNotation": "W.P.10"
+   },
+   "B6030079DDF54D4398C73379C12C3168": {
+    "ancestorIds": [
+     "E58B45A4783D489AADF6034E94E61CAD",
+     "58F5C2297A1747F6988AB9C77D5B156E"
+    ],
+    "asnIdentifier": "S2808681",
+    "depth": 2,
+    "description": "Use a combination of dictating and drawing to tell a story.",
+    "id": "B6030079DDF54D4398C73379C12C3168",
+    "parentId": "E58B45A4783D489AADF6034E94E61CAD",
+    "position": 56000,
+    "statementLabel": "Standard",
+    "statementNotation": "W.P.3"
+   },
+   "B7C55B3122234001AF9C196EFB81EF36": {
+    "ancestorIds": [
+     "BEF10C43C7E24EFCB6C7C0D073FDEADC",
+     "58F5C2297A1747F6988AB9C77D5B156E"
+    ],
+    "asnIdentifier": "S2808903",
+    "depth": 2,
+    "description": "Begins in grade 4.",
+    "id": "B7C55B3122234001AF9C196EFB81EF36",
+    "parentId": "BEF10C43C7E24EFCB6C7C0D073FDEADC",
+    "position": 64000,
+    "statementLabel": "Standard",
+    "statementNotation": "W.P.9"
+   },
+   "B897F3E09D1945098453B3BD536ABCF5": {
+    "ancestorIds": [
+     "BEF10C43C7E24EFCB6C7C0D073FDEADC",
+     "58F5C2297A1747F6988AB9C77D5B156E"
+    ],
+    "asnIdentifier": "S2808901",
+    "depth": 2,
+    "description": "Begins in kindergarten or when the individual child is ready.",
+    "id": "B897F3E09D1945098453B3BD536ABCF5",
+    "parentId": "BEF10C43C7E24EFCB6C7C0D073FDEADC",
+    "position": 62000,
+    "statementLabel": "Standard",
+    "statementNotation": "W.P.7"
+   },
+   "BA61703C91BF4A9EA3BDFA560949AA59": {
+    "ancestorIds": [
+     "BAF53CAE12A7437485B47B6DF520EFCA",
+     "52131A3DF8B340D7985C2412FAD58110",
+     "DE93235F19E548C29FE549919259BB86"
+    ],
+    "asnIdentifier": "S2808623",
+    "depth": 3,
+    "description": "Recognize their own name and familiar common signs and labels (e.g., STOP).",
+    "id": "BA61703C91BF4A9EA3BDFA560949AA59",
+    "parentId": "BAF53CAE12A7437485B47B6DF520EFCA",
+    "position": 48000,
+    "statementLabel": "Component",
+    "statementNotation": "RF.P.3.c"
+   },
+   "BAF53CAE12A7437485B47B6DF520EFCA": {
+    "ancestorIds": [
+     "52131A3DF8B340D7985C2412FAD58110",
+     "DE93235F19E548C29FE549919259BB86"
+    ],
+    "asnIdentifier": "S2808620",
+    "depth": 2,
+    "description": "Demonstrate beginning understanding of phonics and word analysis skills.",
+    "id": "BAF53CAE12A7437485B47B6DF520EFCA",
+    "parentId": "52131A3DF8B340D7985C2412FAD58110",
+    "position": 45000,
+    "statementLabel": "Standard",
+    "statementNotation": "RF.P.3"
+   },
+   "BC4D8D37AF2F4C7F94BA953CFEA6C9B9": {
+    "ancestorIds": [
+     "F000278BF2B44B9E938807D55E7A673F",
+     "9FB5582243464938BDE8E1634DCB7642",
+     "AEF4BEB7093D49D7880AC8D1FE4322F4"
+    ],
+    "asnIdentifier": "S2809070",
+    "depth": 3,
+    "description": "Demonstrate the ability to speak in complete sentences and to form questions using frequently occurring nouns, verbs, question words, and prepositions; name and use in context numbers 0–10.",
+    "id": "BC4D8D37AF2F4C7F94BA953CFEA6C9B9",
+    "parentId": "F000278BF2B44B9E938807D55E7A673F",
+    "position": 81000,
+    "statementLabel": "Component",
+    "statementNotation": "L.P.1.a"
+   },
+   "BEF10C43C7E24EFCB6C7C0D073FDEADC": {
+    "ancestorIds": [
+     "58F5C2297A1747F6988AB9C77D5B156E"
+    ],
+    "asnIdentifier": "S2808900",
+    "depth": 1,
+    "description": "Research to Build and Present Knowledge",
+    "id": "BEF10C43C7E24EFCB6C7C0D073FDEADC",
+    "parentId": "58F5C2297A1747F6988AB9C77D5B156E",
+    "position": 61000
+   },
+   "BF7497E721204900890CC85DA7FCC3A5": {
+    "ancestorIds": [
+     "74F0320ADBE54C849DE77C3C546465DD"
+    ],
+    "asnIdentifier": "S2808376",
+    "depth": 1,
+    "description": "Craft and Structure",
+    "id": "BF7497E721204900890CC85DA7FCC3A5",
+    "parentId": "74F0320ADBE54C849DE77C3C546465DD",
+    "position": 6000
+   },
+   "C792D5D949D64156986E4E7EEE89A842": {
+    "ancestorIds": [
+     "0C1E840CDC5F48F5BB45D6FF85F2CE98",
+     "74F0320ADBE54C849DE77C3C546465DD"
+    ],
+    "asnIdentifier": "S2808416",
+    "depth": 2,
+    "description": "With prompting and support, make connections between a story or poem and their own experiences.",
+    "id": "C792D5D949D64156986E4E7EEE89A842",
+    "parentId": "0C1E840CDC5F48F5BB45D6FF85F2CE98",
+    "position": 13000,
+    "statementLabel": "Standard",
+    "statementNotation": "RL.P.9"
+   },
+   "C86FB9D2FC254F46AF3E3CACCA37D819": {
+    "ancestorIds": [
+     "5B257CA81775497F996992C3CE18D93B",
+     "F80F9A7603254E09A6D72760CF531423",
+     "DE93235F19E548C29FE549919259BB86"
+    ],
+    "asnIdentifier": "S2808597",
+    "depth": 3,
+    "description": "With guidance and support, segment words in a simple sentence by clapping and naming the number of words in the sentence.",
+    "id": "C86FB9D2FC254F46AF3E3CACCA37D819",
+    "parentId": "5B257CA81775497F996992C3CE18D93B",
+    "position": 40000,
+    "statementLabel": "Component",
+    "statementNotation": "RF.P.2.b"
+   },
+   "CBAECFA0061E467A843FFA483504714E": {
+    "ancestorIds": [
+     "5B257CA81775497F996992C3CE18D93B",
+     "F80F9A7603254E09A6D72760CF531423",
+     "DE93235F19E548C29FE549919259BB86"
+    ],
+    "asnIdentifier": "S2808599",
+    "depth": 3,
+    "description": "Begins in kindergarten or when the individual child is ready.",
+    "id": "CBAECFA0061E467A843FFA483504714E",
+    "parentId": "5B257CA81775497F996992C3CE18D93B",
+    "position": 42000,
+    "statementLabel": "Component",
+    "statementNotation": "RF.P.2.d"
+   },
+   "CD931B8CFAB54BBB9422CACE8171D43C": {
+    "ancestorIds": [
+     "BAF53CAE12A7437485B47B6DF520EFCA",
+     "52131A3DF8B340D7985C2412FAD58110",
+     "DE93235F19E548C29FE549919259BB86"
+    ],
+    "asnIdentifier": "S2808624",
+    "depth": 3,
+    "description": "Begins in kindergarten or when the individual child is ready.",
+    "id": "CD931B8CFAB54BBB9422CACE8171D43C",
+    "parentId": "BAF53CAE12A7437485B47B6DF520EFCA",
+    "position": 49000,
+    "statementLabel": "Component",
+    "statementNotation": "RF.P.3.d"
+   },
+   "D1EE5EA752524BC8A2F5FC42D3498D69": {
+    "ancestorIds": [
+     "15DF4C989CE24EB4BC80D1C290CE532B",
+     "F80F9A7603254E09A6D72760CF531423",
+     "DE93235F19E548C29FE549919259BB86"
+    ],
+    "asnIdentifier": "S2808594",
+    "depth": 3,
+    "description": "Recognize and name some uppercase letters of the alphabet and the lowercase letters in their own name.",
+    "id": "D1EE5EA752524BC8A2F5FC42D3498D69",
+    "parentId": "15DF4C989CE24EB4BC80D1C290CE532B",
+    "position": 37000,
+    "statementLabel": "Component",
+    "statementNotation": "RF.P.1.d"
+   },
+   "D1F86B01F81A4BDEBA22C7B71725DC86": {
+    "ancestorIds": [
+     "E0917F89849A4BC7A5DF706587AA4D00",
+     "AEF4BEB7093D49D7880AC8D1FE4322F4"
+    ],
+    "asnIdentifier": "S2809231",
+    "depth": 2,
+    "description": "Use words and phrases acquired through conversations, listening to books read aloud, activities, and play.",
+    "id": "D1F86B01F81A4BDEBA22C7B71725DC86",
+    "parentId": "E0917F89849A4BC7A5DF706587AA4D00",
+    "position": 93000,
+    "statementLabel": "Standard",
+    "statementNotation": "L.P.6"
+   },
+   "D21632F361704A9FAD264A41EC17BEB6": {
+    "ancestorIds": [
+     "F253206109DA4218B0E5D1ADCF2064C3",
+     "53DBC6FE60CF4FA297AF187140778456"
+    ],
+    "asnIdentifier": "S2808502",
+    "depth": 2,
+    "description": "With prompting and support, ask and answer questions about unfamiliar words in an informational text read aloud.",
+    "id": "D21632F361704A9FAD264A41EC17BEB6",
+    "parentId": "F253206109DA4218B0E5D1ADCF2064C3",
+    "position": 22000,
+    "statementLabel": "Standard",
+    "statementNotation": "RI.P.4"
+   },
+   "D3B6F6B465E4498F9B3B1C76AFEA320A": {
+    "ancestorIds": [
+     "5057453849D641C38F5A4CE08DA35920",
+     "E0917F89849A4BC7A5DF706587AA4D00",
+     "AEF4BEB7093D49D7880AC8D1FE4322F4"
+    ],
+    "asnIdentifier": "S2809229",
+    "depth": 3,
+    "description": "Apply words learned in classroom activities to real-life examples (e.g., name places in school that are fun, quiet, or noisy).",
+    "id": "D3B6F6B465E4498F9B3B1C76AFEA320A",
+    "parentId": "5057453849D641C38F5A4CE08DA35920",
+    "position": 91000,
+    "statementLabel": "Component",
+    "statementNotation": "L.P.5.c"
+   },
+   "D532D28A40B943C285C04CE90F479204": {
+    "ancestorIds": [
+     "15DF4C989CE24EB4BC80D1C290CE532B",
+     "F80F9A7603254E09A6D72760CF531423",
+     "DE93235F19E548C29FE549919259BB86"
+    ],
+    "asnIdentifier": "S2808591",
+    "depth": 3,
+    "description": "Handle books respectfully and appropriately, holding them right-side-up and turning pages one at a time from front to back.",
+    "id": "D532D28A40B943C285C04CE90F479204",
+    "parentId": "15DF4C989CE24EB4BC80D1C290CE532B",
+    "position": 34000,
+    "statementLabel": "Component",
+    "statementNotation": "RF.P.1.a"
+   },
+   "D6B799170F0A4F3A841ED282494819F1": {
+    "ancestorIds": [
+     "581594C5A1C6477AA75B0CED8FC007D0",
+     "53DBC6FE60CF4FA297AF187140778456"
+    ],
+    "asnIdentifier": "S2808467",
+    "depth": 2,
+    "description": "With prompting and support, represent or act out concepts learned from hearing an informational text read aloud (e.g., make a skyscraper out of blocks after listening to a book about cities or, following a read-aloud on animals, show how an elephant's gait differs from a bunny's hop).",
+    "id": "D6B799170F0A4F3A841ED282494819F1",
+    "parentId": "581594C5A1C6477AA75B0CED8FC007D0",
+    "position": 20000,
+    "statementLabel": "Standard",
+    "statementNotation": "RI.P.3"
+   },
+   "D9EA2A70AC6A4A2196180BAC1EFF662E": {
+    "ancestorIds": [
+     "0C1E840CDC5F48F5BB45D6FF85F2CE98",
+     "74F0320ADBE54C849DE77C3C546465DD"
+    ],
+    "asnIdentifier": "S2808415",
+    "depth": 2,
+    "description": "Not applicable.",
+    "id": "D9EA2A70AC6A4A2196180BAC1EFF662E",
+    "parentId": "0C1E840CDC5F48F5BB45D6FF85F2CE98",
+    "position": 12000,
+    "statementLabel": "Standard",
+    "statementNotation": "RL.P.8"
+   },
+   "DC87D9FB49BA4AE7935CD8E443943998": {
+    "ancestorIds": [
+     "AB1F73F7F35349389B5A4BCFAA96A4BA"
+    ],
+    "asnIdentifier": "S2808951",
+    "depth": 1,
+    "description": "Comprehension and Collaboration",
+    "id": "DC87D9FB49BA4AE7935CD8E443943998",
+    "parentId": "AB1F73F7F35349389B5A4BCFAA96A4BA",
+    "position": 68000
+   },
+   "DE93235F19E548C29FE549919259BB86": {
+    "ancestorIds": [],
+    "asnIdentifier": "S2808588",
+    "depth": 0,
+    "description": "Reading Standards for Foundational Skills",
+    "id": "DE93235F19E548C29FE549919259BB86",
+    "parentId": null,
+    "position": 31000,
+    "statementLabel": "Anchor Standard"
+   },
+   "E0917F89849A4BC7A5DF706587AA4D00": {
+    "ancestorIds": [
+     "AEF4BEB7093D49D7880AC8D1FE4322F4"
+    ],
+    "asnIdentifier": "S2809223",
+    "depth": 1,
+    "description": "Vocabulary Acquisition and Use",
+    "id": "E0917F89849A4BC7A5DF706587AA4D00",
+    "parentId": "AEF4BEB7093D49D7880AC8D1FE4322F4",
+    "position": 85000
+   },
+   "E268CDFD59FD4091BF49C03BE31E68AA": {
+    "ancestorIds": [
+     "5B257CA81775497F996992C3CE18D93B",
+     "F80F9A7603254E09A6D72760CF531423",
+     "DE93235F19E548C29FE549919259BB86"
+    ],
+    "asnIdentifier": "S2808596",
+    "depth": 3,
+    "description": "With guidance and support, recognize and produce rhyming words (e.g., identify words that rhyme with /cat/ such as /bat/ and /sat/).",
+    "id": "E268CDFD59FD4091BF49C03BE31E68AA",
+    "parentId": "5B257CA81775497F996992C3CE18D93B",
+    "position": 39000,
+    "statementLabel": "Component",
+    "statementNotation": "RF.P.2.a"
+   },
+   "E58B45A4783D489AADF6034E94E61CAD": {
+    "ancestorIds": [
+     "58F5C2297A1747F6988AB9C77D5B156E"
+    ],
+    "asnIdentifier": "S2808678",
+    "depth": 1,
+    "description": "Text Types and Purposes",
+    "id": "E58B45A4783D489AADF6034E94E61CAD",
+    "parentId": "58F5C2297A1747F6988AB9C77D5B156E",
+    "position": 53000
+   },
+   "E5EC3C02162041E8AF1AFBD80A55AA60": {
+    "ancestorIds": [
+     "58F5C2297A1747F6988AB9C77D5B156E"
+    ],
+    "asnIdentifier": "S2808937",
+    "depth": 1,
+    "description": "Range of Writing",
+    "id": "E5EC3C02162041E8AF1AFBD80A55AA60",
+    "parentId": "58F5C2297A1747F6988AB9C77D5B156E",
+    "position": 65000
+   },
+   "E98F66BD3C014A2B8EF9EA07029E5BC5": {
+    "ancestorIds": [
+     "3D73A2876F804DBD9EE8D407DBD94568",
+     "53DBC6FE60CF4FA297AF187140778456"
+    ],
+    "asnIdentifier": "S2808539",
+    "depth": 2,
+    "description": "With prompting and support, describe important details from an illustration or photograph.",
+    "id": "E98F66BD3C014A2B8EF9EA07029E5BC5",
+    "parentId": "3D73A2876F804DBD9EE8D407DBD94568",
+    "position": 26000,
+    "statementLabel": "Standard",
+    "statementNotation": "RI.P.7"
+   },
+   "EF711E3939CA4D849F88D39EE92F8E3E": {
+    "ancestorIds": [
+     "5057453849D641C38F5A4CE08DA35920",
+     "E0917F89849A4BC7A5DF706587AA4D00",
+     "AEF4BEB7093D49D7880AC8D1FE4322F4"
+    ],
+    "asnIdentifier": "S2809227",
+    "depth": 3,
+    "description": "Demonstrate understanding of concepts by sorting common objects into categories (e.g., sort objects by color, shape, texture).",
+    "id": "EF711E3939CA4D849F88D39EE92F8E3E",
+    "parentId": "5057453849D641C38F5A4CE08DA35920",
+    "position": 89000,
+    "statementLabel": "Component",
+    "statementNotation": "L.P.5.a"
+   },
+   "F000278BF2B44B9E938807D55E7A673F": {
+    "ancestorIds": [
+     "9FB5582243464938BDE8E1634DCB7642",
+     "AEF4BEB7093D49D7880AC8D1FE4322F4"
+    ],
+    "asnIdentifier": "S2809069",
+    "depth": 2,
+    "description": "Demonstrate command of the conventions of standard English grammar and usage when speaking. Sentence Structure and Meaning",
+    "id": "F000278BF2B44B9E938807D55E7A673F",
+    "parentId": "9FB5582243464938BDE8E1634DCB7642",
+    "position": 80000,
+    "statementLabel": "Standard",
+    "statementNotation": "L.P.1"
+   },
+   "F12C14E4CC354C76BC8B65374C595049": {
+    "ancestorIds": [
+     "BAF53CAE12A7437485B47B6DF520EFCA",
+     "52131A3DF8B340D7985C2412FAD58110",
+     "DE93235F19E548C29FE549919259BB86"
+    ],
+    "asnIdentifier": "S2808621",
+    "depth": 3,
+    "description": "Link an initial sound to a picture of an object that begins with that sound and, with guidance and support, to the corresponding printed letter (e.g., link the initial sound /b/ to a picture of a ball and, with support, to a printed or written \"B\").",
+    "id": "F12C14E4CC354C76BC8B65374C595049",
+    "parentId": "BAF53CAE12A7437485B47B6DF520EFCA",
+    "position": 46000,
+    "statementLabel": "Component",
+    "statementNotation": "RF.P.3.a"
+   },
+   "F253206109DA4218B0E5D1ADCF2064C3": {
+    "ancestorIds": [
+     "53DBC6FE60CF4FA297AF187140778456"
+    ],
+    "asnIdentifier": "S2808501",
+    "depth": 1,
+    "description": "Craft and Structure",
+    "id": "F253206109DA4218B0E5D1ADCF2064C3",
+    "parentId": "53DBC6FE60CF4FA297AF187140778456",
+    "position": 21000
+   },
+   "F80F9A7603254E09A6D72760CF531423": {
+    "ancestorIds": [
+     "DE93235F19E548C29FE549919259BB86"
+    ],
+    "asnIdentifier": "S2808589",
+    "depth": 1,
+    "description": "Print Concepts",
+    "id": "F80F9A7603254E09A6D72760CF531423",
+    "parentId": "DE93235F19E548C29FE549919259BB86",
+    "position": 32000
+   },
+   "F885D385DE1F4B73AB098B01BB8365E4": {
+    "ancestorIds": [
+     "A4CAC84525E8419ABE043776B881776E",
+     "58F5C2297A1747F6988AB9C77D5B156E"
+    ],
+    "asnIdentifier": "S2808843",
+    "depth": 2,
+    "description": "Begins in kindergarten or when the individual child is ready.",
+    "id": "F885D385DE1F4B73AB098B01BB8365E4",
+    "parentId": "A4CAC84525E8419ABE043776B881776E",
+    "position": 59000,
+    "statementLabel": "Standard",
+    "statementNotation": "W.P.5"
+   },
+   "FD1E92F0699C4AB39461B9D8EB21F91A": {
+    "ancestorIds": [
+     "2088B2D854E74FB580D4AB31DE5623A5",
+     "E0917F89849A4BC7A5DF706587AA4D00",
+     "AEF4BEB7093D49D7880AC8D1FE4322F4"
+    ],
+    "asnIdentifier": "S2809225",
+    "depth": 3,
+    "description": "With guidance and support, generate words that are similar in meaning (e.g., happy/glad, angry/mad).",
+    "id": "FD1E92F0699C4AB39461B9D8EB21F91A",
+    "parentId": "2088B2D854E74FB580D4AB31DE5623A5",
+    "position": 87000,
+    "statementLabel": "Component",
+    "statementNotation": "L.P.4.a"
+   },
+   "FE89C132BC8E481482E96EF3A8B2C0A0": {
+    "ancestorIds": [
+     "581594C5A1C6477AA75B0CED8FC007D0",
+     "53DBC6FE60CF4FA297AF187140778456"
+    ],
+    "asnIdentifier": "S2808466",
+    "depth": 2,
+    "description": "With prompting and support, recall important facts from an informational text after hearing it read aloud.",
+    "id": "FE89C132BC8E481482E96EF3A8B2C0A0",
+    "parentId": "581594C5A1C6477AA75B0CED8FC007D0",
+    "position": 19000,
+    "statementLabel": "Standard",
+    "statementNotation": "RI.P.2"
+   }
+  },
+  "subject": "English Language Arts and Literacy (2017-)",
+  "title": "Grade Pre-K"
+ }
+}

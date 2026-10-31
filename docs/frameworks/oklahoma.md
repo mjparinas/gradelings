@@ -2,7 +2,8 @@
 
 ## Framework
 
-- **Id and slug:** `us-ok`, `oklahoma`. Kindergarten to Grade 9 in math, English language arts, science and social studies (no French). In `FRAMEWORKS`, offered to families and in classroom mode, like the other states.
+- **Id and slug:** `us-ok`, `oklahoma`. Pre-K and Kindergarten to Grade 9 in math, English language arts, science and social studies (no French). In `FRAMEWORKS`, offered to families and in classroom mode, like the other states.
+- **Pre-K:** the 26 shared Pre-K units (`src/content/grades/pk/`), cited by the pre-kindergarten standards of the Oklahoma Academic Standards by their own codes (`PK.N.2.2`, `PK.S.3`); they have no social and emotional strand, so feelings cites respect for others (`PK.1.2`) (`src/content/oklahoma/pk.ts`), checked against `docs/research/oklahoma/prek/outcomes.json` (sources in `source/`, `fetch.sh`, `build_outcomes.py`). Practice steps only.
 
 ## Standards
 
@@ -23,7 +24,7 @@
 
 ## Parent guides
 
-- `src/content/oklahoma/guides.ts`, US English: the hub, grade notes for Kindergarten to Grade 9, the seven Mathematical Actions and Processes (`/guides/oklahoma/math-actions/`; Oklahoma has no statewide SEL standards for students) and OSTP (`/guides/oklahoma/state-tests/`; dates point to the Department). No French guide.
+- `src/content/oklahoma/guides.ts`, US English: the hub, grade notes for Pre-K to Grade 9, the seven Mathematical Actions and Processes (`/guides/oklahoma/math-actions/`; Oklahoma has no statewide SEL standards for students) and OSTP (`/guides/oklahoma/state-tests/`; dates point to the Department). No French guide.
 
 ## Schools
 

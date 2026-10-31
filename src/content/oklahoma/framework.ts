@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Oklahoma, a US state. Standards are the Oklahoma Academic Standards, adopted by the State Board of Education and
 // published by the Oklahoma State Department of Education: mathematics (2022, in classrooms from fall 2023), English
@@ -74,9 +75,9 @@ export const OKLAHOMA: Framework = {
   standardLabel: "Standard",
   sourceName: "Oklahoma State Department of Education",
   sourceUrl: "https://oklahoma.gov/education/services/standards-learning/oklahoma-academic-standards.html",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Oklahoma report cards",
     intro:

@@ -201,6 +201,10 @@ export const TENNESSEE_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Tennessee's Voluntary Pre-K funds a pre-K year for four-year-olds in public schools and community programs. It follows the Tennessee Early Learning Developmental Standards (2018).",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in Tennessee is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. Science looks at materials, light and sound, living things and the weather, and social studies is about themselves, families, rules and the symbols of Tennessee and the United States. Teachers check each child's early reading with a screener.",
       lookFor: "Many Tennessee districts use standards-based report cards in the early grades. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",
