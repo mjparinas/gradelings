@@ -439,6 +439,8 @@ export interface ClassDetail {
   goal?: Record<string, number>;
   /** When each unit was assigned (ms). Older servers omit it. */
   assignedAt?: Record<string, number>;
+  /** Start dates of units scheduled ahead (ms): students and their parents see a unit only from then. Older servers omit it. */
+  startsAt?: Record<string, number>;
   /** The students a unit is for, by unit key. Units for the whole class are not listed. Older servers omit it. */
   audience?: Record<string, string[]>;
   /** Questions several students missed on the first try, by unit key (only for answers given since this was added). Older servers omit it. */
@@ -452,6 +454,10 @@ export interface ClassDetail {
 
 /** A date input's value ("2026-10-14") as the end of that day, local time. */
 const endOfDay = (v: string) => new Date(`${v}T23:59:00`).getTime();
+/** A date input's value as the start of that day, local time: when a unit scheduled ahead reaches students. */
+const startOfDay = (v: string) => new Date(`${v}T00:00:00`).getTime();
+/** "Mon, Nov 3", for a unit scheduled ahead. */
+const startsText = (t: number) => new Date(t).toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" });
 const toInput = (t: number) => {
   const d = new Date(t);
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
@@ -1131,7 +1137,7 @@ function ProgressTable({ data, label, levelLabel, now }: { data: ClassDetail; la
                   <span className="block text-sm font-normal text-ink-soft">{s.lastActive ? `Active ${new Date(s.lastActive).toLocaleDateString(countryOf(getFramework(cls.framework)).locale, { month: "short", day: "numeric" })}` : "Not active yet"}</span>
                 </th>
         {s.units.map((u) => u.assigned === false ? (
-          <td key={u.key} className="py-2 pr-3 text-sm text-ink-soft">Not assigned</td>
+          <td key={u.key} className="py-2 pr-3 text-sm text-ink-soft">{(data.startsAt?.[u.key] ?? 0) > now ? `Starts ${startsText(data.startsAt![u.key])}` : "Not assigned"}</td>
         ) : (
           <td key={u.key} className="py-2 pr-3">
             <b>{levelLabel(u.level)}</b>
@@ -1221,6 +1227,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
   const [confirmYear, setConfirmYear] = useState(false);
   const [nameDraft, setNameDraft] = useState<string | null>(null);
   const [due, setDue] = useState("");
+  const [starts, setStarts] = useState("");
   // The number of questions last used is offered again, because a teacher usually assigns the same amount each time.
   const [questions, setQuestions] = useState(() => (HOMEWORK_GOALS as readonly number[]).includes(Number(readStore(GOAL_KEY))) ? readStore(GOAL_KEY) : "");
   const [undo, setUndo] = useState<UndoOffer | null>(null);
@@ -1443,7 +1450,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
         <section className="mt-4 rounded-2xl border border-line bg-white p-5">
           <h2 className="text-xl font-bold">Homework</h2>
           <p className="mt-1 font-read text-ink-soft">
-            Assign units for practice at home or in class, with a due date and a number of questions if you like. Students see them on their home screen and can do them offline: their answers reach you once their device is back online. Without a number of questions, a unit is done when it reaches {meeting}.
+            Assign units for practice at home or in class, with a due date and a number of questions if you like. To plan ahead, give a unit a start date: students and their parents see it from that day. Students see them on their home screen and can do them offline: their answers reach you once their device is back online. Without a number of questions, a unit is done when it reaches {meeting}.
           </p>
           {overdue > 0 && (
             <p role="status" className="mt-2 font-read font-bold text-nudge-dark">
@@ -1456,6 +1463,17 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
                 <span className="min-w-40 flex-1">
                   {getUnitRef(k)?.unit.emoji} {label(k)}
                 </span>
+                <span className="flex items-center gap-1 text-sm">
+                  <span aria-hidden="true">Starts</span>
+                  <DateField
+                    label={`Start date for ${label(k)}`}
+                    hideLabel
+                    size="sm"
+                    value={data.startsAt?.[k] ? toInput(data.startsAt[k]) : ""}
+                    onChange={(next) => void change("/api/classes/assignments/", "PATCH", { classId: id, unitKey: k, startsAt: next ? startOfDay(next) : null }, next ? `${label(k)} starts ${startsText(startOfDay(next))}.` : `${label(k)} is out to students now.`)}
+                  />
+                </span>
+                <span aria-hidden="true" className="text-sm">Due</span>
                 <DateField
                   label={`Due date for ${label(k)}`}
                   hideLabel
@@ -1479,7 +1497,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
                 </button>
                 <button type="button" aria-label={`Remove ${label(k)}`} className="min-h-11 min-w-11 rounded-full font-bold" onClick={() => {
                   // What it was, so Undo can put it back the same way (including the date it was first assigned, so answers already given still count).
-                  const was = { classId: id, unitKey: k, dueAt: data.due[k] || undefined, goal: data.goal?.[k] || undefined, ...(data.audience?.[k]?.length ? { students: data.audience[k] } : {}), since: data.assignedAt?.[k] };
+                  const was = { classId: id, unitKey: k, dueAt: data.due[k] || undefined, startsAt: (data.startsAt?.[k] ?? 0) > Date.now() ? data.startsAt![k] : undefined, goal: data.goal?.[k] || undefined, ...(data.audience?.[k]?.length ? { students: data.audience[k] } : {}), since: data.assignedAt?.[k] };
                   void change(`/api/classes/assignments/?classId=${id}&unitKey=${encodeURIComponent(k)}`, "DELETE", undefined, undefined, () => ({
                     text: `${label(k)} was removed from homework.`,
                     run: () => change("/api/classes/assignments/", "POST", was, `${label(k)} is back in homework.`),
@@ -1487,7 +1505,13 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
                 }}>
                   ✕
                 </button>
-                <HomeworkProgress status={overview.find((o) => o.key === k)} />
+                {(data.startsAt?.[k] ?? 0) > now ? (
+                  <p className="basis-full text-sm text-ink-soft">
+                    <b>Scheduled:</b> students see it from {startsText(data.startsAt![k])}.
+                  </p>
+                ) : (
+                  <HomeworkProgress status={overview.find((o) => o.key === k)} />
+                )}
                 <RowAudience
                   key={`${k}:${(data.audience?.[k] ?? []).join(",")}`}
                   unitLabel={label(k)}
@@ -1555,6 +1579,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
                 ))}
               </div>
             )}
+            <DateField label="Starts (optional)" value={starts} onChange={setStarts} />
             <DateField label="Due (optional)" value={due} onChange={setDue} />
             <div role="group" aria-label="Due date shortcuts" className="flex flex-wrap gap-2">
               {dueChips(new Date(now)).map((c) => (
@@ -1572,7 +1597,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
               disabled={chosenKeys.length === 0 || (who === "some" && picked.length === 0)}
               className={`${btn} bg-[#4f8ef7] text-[#0f172a] disabled:opacity-50`}
               onClick={async () => {
-                const bodyFor = (k: string) => ({ classId: id, unitKey: k, dueAt: due ? endOfDay(due) : undefined, goal: questions ? Number(questions) : undefined, ...(who === "some" ? { students: picked } : {}) });
+                const bodyFor = (k: string) => ({ classId: id, unitKey: k, startsAt: starts ? startOfDay(starts) : undefined, dueAt: due ? endOfDay(due) : undefined, goal: questions ? Number(questions) : undefined, ...(who === "some" ? { students: picked } : {}) });
                 const ok =
                   chosenKeys.length === 1
                     ? await change("/api/classes/assignments/", "POST", bodyFor(chosenKeys[0]), `${label(chosenKeys[0])} assigned.`)
@@ -1583,6 +1608,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
                 setPick("");
                 setManyPicked([]);
                 setDue("");
+                setStarts("");
                 setWho("all");
                 setPicked([]);
               }}

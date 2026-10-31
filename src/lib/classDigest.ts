@@ -16,6 +16,8 @@ export interface DigestClass {
   due: Record<string, number>;
   goal: Record<string, number>;
   assignedAt: Record<string, number>;
+  /** Start dates of units scheduled ahead. A unit counts as assigned from its start. */
+  startsAt?: Record<string, number>;
 }
 
 const lowerFirst = (t: string) => t.charAt(0).toLowerCase() + t.slice(1);
@@ -27,7 +29,8 @@ export function classDigestLines(c: DigestClass, unitName: (key: string) => stri
   const practised = c.students.filter((s) => s.lastActive !== null && now - s.lastActive <= 7 * DAY).length;
   const lines = [`${c.name}: ${practised} of ${c.students.length} ${c.students.length === 1 ? "student" : "students"} practised in the last week.`];
 
-  const current = c.assignments.filter((k) => isCurrentHomework(c.due[k], c.assignedAt[k], now));
+  // A unit scheduled ahead is current from its start date, and not at all before it.
+  const current = c.assignments.filter((k) => !((c.startsAt?.[k] ?? 0) > now) && isCurrentHomework(c.due[k], Math.max(c.assignedAt[k] ?? 0, c.startsAt?.[k] ?? 0), now));
   const homework = homeworkOverview(c.students, current, c.due, c.goal, now).filter((h) => h.assigned > 0);
   for (const h of homework.slice(0, MAX_HOMEWORK)) {
     const when = h.overdue ? ", past due" : c.due[h.key] !== undefined && c.due[h.key] - now <= 7 * DAY && c.due[h.key] >= now ? ", due this week" : "";
