@@ -1,0 +1,325 @@
+{
+ "data": {
+  "cspStatus": {
+   "notes": null,
+   "value": "visible"
+  },
+  "document": {
+   "sourceURL": "https://www.tn.gov/content/dam/tn/education/standards/tnelds/std_tnelds_4yo_2018.pdf",
+   "title": "Tennessee Early Learning Developmental Standards"
+  },
+  "educationLevels": [
+   "Pre-K",
+   "K"
+  ],
+  "id": "998E3CBB928241FD9FC585706096CCF5",
+  "jurisdiction": {
+   "id": "180878796A3C448D808F38BCCCFD26CF",
+   "title": "Tennessee"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/4.0/us/",
+   "rightsHolder": "Common Curriculum, Inc.",
+   "title": "CC BY 4.0 US"
+  },
+  "normalizedSubject": null,
+  "standards": {
+   "08C10564DEBF4BAAA9E298FB469F5DBD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8E8063E3CF8D4B72925B2336BDA37552"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Demonstrate a willingness to engage in new experiences and activities.",
+    "id": "08C10564DEBF4BAAA9E298FB469F5DBD",
+    "listId": "4",
+    "parentId": "8E8063E3CF8D4B72925B2336BDA37552",
+    "position": 1004,
+    "statementLabel": null,
+    "statementNotation": "PK.AL.CR.4"
+   },
+   "2A0730AF7C364076A0265E732DCEA03A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "581EAC894A904AE6A7E9491CA5F39996"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Persist in solving a problem or question, with adult prompting.",
+    "id": "2A0730AF7C364076A0265E732DCEA03A",
+    "listId": "6",
+    "parentId": "581EAC894A904AE6A7E9491CA5F39996",
+    "position": 1007,
+    "statementLabel": null,
+    "statementNotation": "PK.AL.SR.6"
+   },
+   "2FF472283699423AB893B49732EF6601": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Collaboration: Actively engage in learning with other people.",
+    "id": "2FF472283699423AB893B49732EF6601",
+    "listId": "",
+    "parentId": null,
+    "position": 1016,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "4FCCF303839446BEAADC02693EC2707A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8E179D1E7A3E4502B510D9686ED1A12F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Identify a problem and attempt multiple ways to solve it, with or without assistance. ",
+    "id": "4FCCF303839446BEAADC02693EC2707A",
+    "listId": "10",
+    "parentId": "8E179D1E7A3E4502B510D9686ED1A12F",
+    "position": 1012,
+    "statementLabel": null,
+    "statementNotation": "PK.AL.CT.10"
+   },
+   "581EAC894A904AE6A7E9491CA5F39996": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Self-Regulation: Engage in learning to effectively plan and problem solve. ",
+    "id": "581EAC894A904AE6A7E9491CA5F39996",
+    "listId": "",
+    "parentId": null,
+    "position": 1005,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "5B21F27020524433B624FFB0AFB468FB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2FF472283699423AB893B49732EF6601"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Demonstrate a willingness to collaborate with others to solve a problem.",
+    "id": "5B21F27020524433B624FFB0AFB468FB",
+    "listId": "14",
+    "parentId": "2FF472283699423AB893B49732EF6601",
+    "position": 1018,
+    "statementLabel": null,
+    "statementNotation": "PK.AL.CB.14"
+   },
+   "5DAF9844A2314A0BAAAC49377EF92FAD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "581EAC894A904AE6A7E9491CA5F39996"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Maintain focus appropriate to completing a task and/or learning activity. ",
+    "id": "5DAF9844A2314A0BAAAC49377EF92FAD",
+    "listId": "5",
+    "parentId": "581EAC894A904AE6A7E9491CA5F39996",
+    "position": 1006,
+    "statementLabel": null,
+    "statementNotation": "PK.AL.SR.5"
+   },
+   "8E179D1E7A3E4502B510D9686ED1A12F": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Critical Thinking: Actively inquire and reflect about new ideas and activities.",
+    "id": "8E179D1E7A3E4502B510D9686ED1A12F",
+    "listId": "",
+    "parentId": null,
+    "position": 1009,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "8E8063E3CF8D4B72925B2336BDA37552": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Creativity: Actively engage in learning with curiosity, flexibility, and openness to new ideas.",
+    "id": "8E8063E3CF8D4B72925B2336BDA37552",
+    "listId": "",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "94281ABC0EED46D8955723AF0F2749FB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8E8063E3CF8D4B72925B2336BDA37552"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Independently interact with a variety of materials through multiple play activities. ",
+    "id": "94281ABC0EED46D8955723AF0F2749FB",
+    "listId": "1",
+    "parentId": "8E8063E3CF8D4B72925B2336BDA37552",
+    "position": 1001,
+    "statementLabel": null,
+    "statementNotation": "PK.AL.CR.1"
+   },
+   "9BFFA27E6A3B482BA35C030B3D67C01F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8E8063E3CF8D4B72925B2336BDA37552"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Choose materials/props and use novel ways to represent ideas, characters, and objects in symbolic\nplay.",
+    "id": "9BFFA27E6A3B482BA35C030B3D67C01F",
+    "listId": "3",
+    "parentId": "8E8063E3CF8D4B72925B2336BDA37552",
+    "position": 1003,
+    "statementLabel": null,
+    "statementNotation": "PK.AL.CR.3"
+   },
+   "A4EB4750E855444F9C12D51597E7CA03": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2FF472283699423AB893B49732EF6601"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Engage in play-based, student-directed activities with a peer or peers (e.g., dramatic play, block\nbuilding, symbolic play in recess) for at least 15 consecutive minutes, at multiple times throughout the year.",
+    "id": "A4EB4750E855444F9C12D51597E7CA03",
+    "listId": "13",
+    "parentId": "2FF472283699423AB893B49732EF6601",
+    "position": 1017,
+    "statementLabel": null,
+    "statementNotation": "PK.AL.CB.13"
+   },
+   "AAEA43519B2843C88DB3EE1BAC979D18": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C25AA750861748928A25941E2DECEFBC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Ask and respond to questions with peers and adults in individual and group activities.",
+    "id": "AAEA43519B2843C88DB3EE1BAC979D18",
+    "listId": "11",
+    "parentId": "C25AA750861748928A25941E2DECEFBC",
+    "position": 1014,
+    "statementLabel": null,
+    "statementNotation": "PK.AL.CO.11"
+   },
+   "B3273B1277AB4285920E30CA17BDA41D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8E179D1E7A3E4502B510D9686ED1A12F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Demonstrate an awareness of connection between prior and new knowledge.",
+    "id": "B3273B1277AB4285920E30CA17BDA41D",
+    "listId": "9",
+    "parentId": "8E179D1E7A3E4502B510D9686ED1A12F",
+    "position": 1011,
+    "statementLabel": null,
+    "statementNotation": "PK.AL.CT.9"
+   },
+   "C25AA750861748928A25941E2DECEFBC": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Communication: Actively engage in conversations with adults and peers.",
+    "id": "C25AA750861748928A25941E2DECEFBC",
+    "listId": "",
+    "parentId": null,
+    "position": 1013,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "C6920683D82E476EA8F6D9D35A71C4EE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8E179D1E7A3E4502B510D9686ED1A12F"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Seek additional clarity to further own knowledge (e.g., asks what, how, why, when, where, and/or\nwhat if).",
+    "id": "C6920683D82E476EA8F6D9D35A71C4EE",
+    "listId": "8",
+    "parentId": "8E179D1E7A3E4502B510D9686ED1A12F",
+    "position": 1010,
+    "statementLabel": null,
+    "statementNotation": "PK.AL.CT.8"
+   },
+   "D3CB0322670B478D9E60FCCD0F8BF5F5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C25AA750861748928A25941E2DECEFBC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Seek assistance and/or information when needed to complete a task.",
+    "id": "D3CB0322670B478D9E60FCCD0F8BF5F5",
+    "listId": "12",
+    "parentId": "C25AA750861748928A25941E2DECEFBC",
+    "position": 1015,
+    "statementLabel": null,
+    "statementNotation": "PK.AL.CO.12"
+   },
+   "DD75D005ED3D49BC83356BB4B0911F65": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8E8063E3CF8D4B72925B2336BDA37552"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Self-select play activities to support own curiosity and to engage in pretend and imaginative play\n(e.g., testing theories, acting out imagination). ",
+    "id": "DD75D005ED3D49BC83356BB4B0911F65",
+    "listId": "2",
+    "parentId": "8E8063E3CF8D4B72925B2336BDA37552",
+    "position": 1002,
+    "statementLabel": null,
+    "statementNotation": "PK.AL.CR.2"
+   },
+   "EDCFC9490E864D55B0467F055D17338C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "581EAC894A904AE6A7E9491CA5F39996"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Reflect and plan a logical series of steps to accomplish a task, such as writing a message, completing\na puzzle, drawing a picture, or building a block structure. ",
+    "id": "EDCFC9490E864D55B0467F055D17338C",
+    "listId": "7",
+    "parentId": "581EAC894A904AE6A7E9491CA5F39996",
+    "position": 1008,
+    "statementLabel": null,
+    "statementNotation": "PK.AL.SR.7"
+   }
+  },
+  "subject": "Early Learning Developmental Standards (2018-)",
+  "title": "Approaches to Learning"
+ }
+}

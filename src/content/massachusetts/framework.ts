@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Massachusetts, a US state. Standards are the Massachusetts Curriculum Frameworks, adopted by the Board of Elementary
 // and Secondary Education and published by the Department of Elementary and Secondary Education (DESE): mathematics
@@ -74,9 +75,9 @@ export const MASSACHUSETTS: Framework = {
   standardLabel: "Standard",
   sourceName: "Massachusetts Department of Elementary and Secondary Education",
   sourceUrl: "https://www.doe.mass.edu/frameworks/",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Massachusetts report cards",
     intro:

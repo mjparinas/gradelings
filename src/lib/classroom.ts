@@ -100,6 +100,14 @@ export function homeworkDone(events: readonly { type: string; unit?: string; t: 
   return n;
 }
 
+/**
+ * Whether an assigned unit is current homework: due from a week ago on, or, with no due date, assigned in the
+ * last 4 weeks. The teacher's Monday email and the parent area use the same rule, so they list the same units.
+ */
+export function isCurrentHomework(dueAt: number | undefined, since: number | undefined, now: number): boolean {
+  return dueAt !== undefined ? dueAt >= now - 7 * 86_400_000 : (since ?? 0) >= now - 28 * 86_400_000;
+}
+
 /** One question a class missed: how many students got it wrong on the first try, out of how many saw it. */
 export interface MissedQuestion {
   q: string;

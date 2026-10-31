@@ -1,0 +1,811 @@
+{
+ "data": {
+  "cspStatus": {
+   "notes": null,
+   "value": "visible"
+  },
+  "document": {
+   "sourceURL": "https://www.tn.gov/content/dam/tn/education/standards/tnelds/std_tnelds_4yo_2018.pdf",
+   "title": "Tennessee Early Learning Developmental Standards"
+  },
+  "educationLevels": [
+   "Pre-K"
+  ],
+  "id": "EF3D17EDD43D42069E152F75EC370DE3",
+  "jurisdiction": {
+   "id": "180878796A3C448D808F38BCCCFD26CF",
+   "title": "Tennessee"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/4.0/us/",
+   "rightsHolder": "Common Curriculum, Inc.",
+   "title": "CC BY 4.0 US"
+  },
+  "normalizedSubject": null,
+  "standards": {
+   "0318C1B5967444F399BC29B12477E206": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "544532ABB30A44B0BC37047383B3AC75",
+     "885F5698A33C49D0AE5A489E0A4FFAD3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Use comparative language, such as\nmore/less than or equal to, to compare and describe\ncollections of objects.",
+    "id": "0318C1B5967444F399BC29B12477E206",
+    "listId": "6",
+    "parentId": "544532ABB30A44B0BC37047383B3AC75",
+    "position": 1017,
+    "statementLabel": null,
+    "statementNotation": "PK.CC.C.6"
+   },
+   "164D580C1DC84D8DACACAA220375793E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2565EC936A20414BA9D0ECA0B48A8988",
+     "E525909983C140EAAB5A03C46BA40678"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Begin to recognize currency and its\npurpose. ",
+    "id": "164D580C1DC84D8DACACAA220375793E",
+    "listId": "3",
+    "parentId": "2565EC936A20414BA9D0ECA0B48A8988",
+    "position": 1034,
+    "statementLabel": null,
+    "statementNotation": "PK.MD.B.3"
+   },
+   "169314CE0B6C44DEB53F6347C8D7452F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "885F5698A33C49D0AE5A489E0A4FFAD3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Know number names and the counting sequence.",
+    "id": "169314CE0B6C44DEB53F6347C8D7452F",
+    "listId": "A",
+    "parentId": "885F5698A33C49D0AE5A489E0A4FFAD3",
+    "position": 1001,
+    "statementLabel": null,
+    "statementNotation": "A"
+   },
+   "1B1633ECAA05495AAC6B1E59C5AC0ABA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1F1B70AF18FA4B6481A3281A82032949",
+     "EB3C7FEDDD42411781E4DC2DC2294CFF",
+     "885F5698A33C49D0AE5A489E0A4FFAD3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Given a number from 1-10, count out that many\nobjects.",
+    "id": "1B1633ECAA05495AAC6B1E59C5AC0ABA",
+    "listId": "b",
+    "parentId": "1F1B70AF18FA4B6481A3281A82032949",
+    "position": 1013,
+    "statementLabel": null,
+    "statementNotation": "PK.CC.B.5.b"
+   },
+   "1F1B70AF18FA4B6481A3281A82032949": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EB3C7FEDDD42411781E4DC2DC2294CFF",
+     "885F5698A33C49D0AE5A489E0A4FFAD3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Understand that a number represents a\ncorresponding quantity.",
+    "id": "1F1B70AF18FA4B6481A3281A82032949",
+    "listId": "5",
+    "parentId": "EB3C7FEDDD42411781E4DC2DC2294CFF",
+    "position": 1011,
+    "statementLabel": null,
+    "statementNotation": "PK.CC.B.5"
+   },
+   "22BA273EEA0E4377A76A37D1EE271BAA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "75BEC2F0DB434E42AA9AE3114996A75F",
+     "A67F318F42DF46FD9AC2A76E3A95BCF5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Begin to use relative position words in\nappropriate context, such as above, below, beside,\nand between.",
+    "id": "22BA273EEA0E4377A76A37D1EE271BAA",
+    "listId": "1",
+    "parentId": "75BEC2F0DB434E42AA9AE3114996A75F",
+    "position": 1039,
+    "statementLabel": null,
+    "statementNotation": "PK.G.A.1"
+   },
+   "2565EC936A20414BA9D0ECA0B48A8988": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E525909983C140EAAB5A03C46BA40678"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Work with money.",
+    "id": "2565EC936A20414BA9D0ECA0B48A8988",
+    "listId": "B",
+    "parentId": "E525909983C140EAAB5A03C46BA40678",
+    "position": 1033,
+    "statementLabel": null,
+    "statementNotation": "B"
+   },
+   "299597B948864D2E8953CF4FD7B78604": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4E71A4A701874675B9FF9E348F60F2FC",
+     "E525909983C140EAAB5A03C46BA40678"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Compare the attributes of two or more\nconcrete objects and use words to define attributes of\nthe objects (i.e. heavier/lighter, longer/shorter, etc.).",
+    "id": "299597B948864D2E8953CF4FD7B78604",
+    "listId": "2",
+    "parentId": "4E71A4A701874675B9FF9E348F60F2FC",
+    "position": 1032,
+    "statementLabel": null,
+    "statementNotation": "PK.MD.A.2"
+   },
+   "3C79D4B282024690B55BE75BC7CA3CB8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CD81985ECA7E4472955A512822E05AAE",
+     "A67F318F42DF46FD9AC2A76E3A95BCF5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Describe similarities and differences\nbetween two-dimensional shapes. ",
+    "id": "3C79D4B282024690B55BE75BC7CA3CB8",
+    "listId": "4",
+    "parentId": "CD81985ECA7E4472955A512822E05AAE",
+    "position": 1044,
+    "statementLabel": null,
+    "statementNotation": "PK.G.B.4"
+   },
+   "449644D85468433AB50A3FD5783F92EB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "169314CE0B6C44DEB53F6347C8D7452F",
+     "885F5698A33C49D0AE5A489E0A4FFAD3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Count forward from 1 to 30.",
+    "id": "449644D85468433AB50A3FD5783F92EB",
+    "listId": "1",
+    "parentId": "169314CE0B6C44DEB53F6347C8D7452F",
+    "position": 1002,
+    "statementLabel": null,
+    "statementNotation": "PK.CC.A.1"
+   },
+   "4A38E8C8659D4D14A04A6AA240C6348E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9367ECF4A3074720970A7613ED91DE55",
+     "B261B62553D04062AA24CAB4EC7E2D88"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "With guidance and support, begin to solve\naddition and subtraction word problems, and add and\nsubtract within 5 (e.g., by using objects or drawings to\nrepresent the problem).",
+    "id": "4A38E8C8659D4D14A04A6AA240C6348E",
+    "listId": "2",
+    "parentId": "9367ECF4A3074720970A7613ED91DE55",
+    "position": 1022,
+    "statementLabel": null,
+    "statementNotation": "PK.OA.A.2"
+   },
+   "4BCFCBFA26D14A27B7DC4D469952D6B7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "169314CE0B6C44DEB53F6347C8D7452F",
+     "885F5698A33C49D0AE5A489E0A4FFAD3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Begin to name numerals 0-10.",
+    "id": "4BCFCBFA26D14A27B7DC4D469952D6B7",
+    "listId": "4",
+    "parentId": "169314CE0B6C44DEB53F6347C8D7452F",
+    "position": 1005,
+    "statementLabel": null,
+    "statementNotation": "PK.CC.A.4"
+   },
+   "4E71A4A701874675B9FF9E348F60F2FC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E525909983C140EAAB5A03C46BA40678"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Describe and compare measurable attributes.",
+    "id": "4E71A4A701874675B9FF9E348F60F2FC",
+    "listId": "A",
+    "parentId": "E525909983C140EAAB5A03C46BA40678",
+    "position": 1030,
+    "statementLabel": null,
+    "statementNotation": "A"
+   },
+   "4EBFACEA35E4443BA178DEDF9557926C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "75BEC2F0DB434E42AA9AE3114996A75F",
+     "A67F318F42DF46FD9AC2A76E3A95BCF5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Correctly name some two-dimensional\nshapes. ",
+    "id": "4EBFACEA35E4443BA178DEDF9557926C",
+    "listId": "2",
+    "parentId": "75BEC2F0DB434E42AA9AE3114996A75F",
+    "position": 1040,
+    "statementLabel": null,
+    "statementNotation": "PK.G.A.2"
+   },
+   "544532ABB30A44B0BC37047383B3AC75": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "885F5698A33C49D0AE5A489E0A4FFAD3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Compare numbers.",
+    "id": "544532ABB30A44B0BC37047383B3AC75",
+    "listId": "C",
+    "parentId": "885F5698A33C49D0AE5A489E0A4FFAD3",
+    "position": 1016,
+    "statementLabel": null,
+    "statementNotation": "C"
+   },
+   "586A4E577D0D46E1B079C6AC1FCDC71A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1F1B70AF18FA4B6481A3281A82032949",
+     "EB3C7FEDDD42411781E4DC2DC2294CFF",
+     "885F5698A33C49D0AE5A489E0A4FFAD3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With guidance and support, count to answer “how\nmany?” questions about as many as 10 things\narranged in a line, a rectangular array, or a circle.",
+    "id": "586A4E577D0D46E1B079C6AC1FCDC71A",
+    "listId": "c",
+    "parentId": "1F1B70AF18FA4B6481A3281A82032949",
+    "position": 1014,
+    "statementLabel": null,
+    "statementNotation": "PK.CC.B.5.c"
+   },
+   "59F2794F11BA493A84FCEED33405BD7C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BF9253F6B94340A3BAB20B35B31893B3",
+     "EB3C7FEDDD42411781E4DC2DC2294CFF",
+     "885F5698A33C49D0AE5A489E0A4FFAD3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "When counting objects, say the number names in\nthe standard order, using one-to-one correspondence. ",
+    "id": "59F2794F11BA493A84FCEED33405BD7C",
+    "listId": "a",
+    "parentId": "BF9253F6B94340A3BAB20B35B31893B3",
+    "position": 1008,
+    "statementLabel": null,
+    "statementNotation": "PK.CC.B.4.a"
+   },
+   "6820A5904AF844D089CCCF2B6C291075": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BF9253F6B94340A3BAB20B35B31893B3",
+     "EB3C7FEDDD42411781E4DC2DC2294CFF",
+     "885F5698A33C49D0AE5A489E0A4FFAD3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Understand that the last number name said tells\nthe number of objects counted.",
+    "id": "6820A5904AF844D089CCCF2B6C291075",
+    "listId": "b",
+    "parentId": "BF9253F6B94340A3BAB20B35B31893B3",
+    "position": 1009,
+    "statementLabel": null,
+    "statementNotation": "PK.CC.B.4.b"
+   },
+   "691D232F68A649879D829E96BE79EDA7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "544532ABB30A44B0BC37047383B3AC75",
+     "885F5698A33C49D0AE5A489E0A4FFAD3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "This standard begins in Kindergarten ",
+    "id": "691D232F68A649879D829E96BE79EDA7",
+    "listId": "7",
+    "parentId": "544532ABB30A44B0BC37047383B3AC75",
+    "position": 1018,
+    "statementLabel": null,
+    "statementNotation": "PK.CC.C.7"
+   },
+   "6AA41E3E7A6A4BAB83F68435B30AEE8B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "75BEC2F0DB434E42AA9AE3114996A75F",
+     "A67F318F42DF46FD9AC2A76E3A95BCF5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Begin to explore shapes as two-dimensional\nor three-dimensional.",
+    "id": "6AA41E3E7A6A4BAB83F68435B30AEE8B",
+    "listId": "3",
+    "parentId": "75BEC2F0DB434E42AA9AE3114996A75F",
+    "position": 1041,
+    "statementLabel": null,
+    "statementNotation": "PK.G.A.3"
+   },
+   "7352966A60F043B9A44E2786910EBAF4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CD81985ECA7E4472955A512822E05AAE",
+     "A67F318F42DF46FD9AC2A76E3A95BCF5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Begin to recognize smaller shapes within a\nlarger shape, including that some shapes can be put\ntogether to make a new shape.",
+    "id": "7352966A60F043B9A44E2786910EBAF4",
+    "listId": "6",
+    "parentId": "CD81985ECA7E4472955A512822E05AAE",
+    "position": 1046,
+    "statementLabel": null,
+    "statementNotation": "PK.G.B.6"
+   },
+   "75BEC2F0DB434E42AA9AE3114996A75F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A67F318F42DF46FD9AC2A76E3A95BCF5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Identify and describe shapes (squares, circles, triangles,\nrectangles, hexagons, cubes, cones, cylinders, and spheres).",
+    "id": "75BEC2F0DB434E42AA9AE3114996A75F",
+    "listId": "A",
+    "parentId": "A67F318F42DF46FD9AC2A76E3A95BCF5",
+    "position": 1038,
+    "statementLabel": null,
+    "statementNotation": "A"
+   },
+   "7D29D75B4EA54B8AB4D0CA9D0D0AAEDC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "75BEC2F0DB434E42AA9AE3114996A75F",
+     "A67F318F42DF46FD9AC2A76E3A95BCF5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Begin to describe objects in the environment\nusing names of shapes.",
+    "id": "7D29D75B4EA54B8AB4D0CA9D0D0AAEDC",
+    "listId": "4",
+    "parentId": "75BEC2F0DB434E42AA9AE3114996A75F",
+    "position": 1042,
+    "statementLabel": null,
+    "statementNotation": "PK.G.A.4"
+   },
+   "81B01403DCB246D397427C4DF53FABB6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CD81985ECA7E4472955A512822E05AAE",
+     "A67F318F42DF46FD9AC2A76E3A95BCF5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Model shapes in the world by building and\ndrawing shapes.",
+    "id": "81B01403DCB246D397427C4DF53FABB6",
+    "listId": "5",
+    "parentId": "CD81985ECA7E4472955A512822E05AAE",
+    "position": 1045,
+    "statementLabel": null,
+    "statementNotation": "PK.G.B.5"
+   },
+   "885F5698A33C49D0AE5A489E0A4FFAD3": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Counting and Cardinality",
+    "id": "885F5698A33C49D0AE5A489E0A4FFAD3",
+    "listId": "",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": null,
+    "statementNotation": "CC"
+   },
+   "8F38F42C3FCD42FAA70741ECAB3C9A92": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9367ECF4A3074720970A7613ED91DE55",
+     "B261B62553D04062AA24CAB4EC7E2D88"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "With guidance and support, begin to\nrepresent addition and subtraction with objects,\nfingers, mental images, drawings, sounds, acting out\nsituations, verbal explanations, expressions, or\nequations.",
+    "id": "8F38F42C3FCD42FAA70741ECAB3C9A92",
+    "listId": "1",
+    "parentId": "9367ECF4A3074720970A7613ED91DE55",
+    "position": 1021,
+    "statementLabel": null,
+    "statementNotation": "PK.OA.A.1"
+   },
+   "9367ECF4A3074720970A7613ED91DE55": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B261B62553D04062AA24CAB4EC7E2D88"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Understand addition as putting together and adding to, and\nunderstand subtraction as taking apart and taking from.",
+    "id": "9367ECF4A3074720970A7613ED91DE55",
+    "listId": "A",
+    "parentId": "B261B62553D04062AA24CAB4EC7E2D88",
+    "position": 1020,
+    "statementLabel": null,
+    "statementNotation": "A"
+   },
+   "976F47A2EB9A4FE8AEEA0582D777561F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "169314CE0B6C44DEB53F6347C8D7452F",
+     "885F5698A33C49D0AE5A489E0A4FFAD3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Begin to print the distinctive features of\nnumerals (i.e., circle, line, diagonal, crossed lines).",
+    "id": "976F47A2EB9A4FE8AEEA0582D777561F",
+    "listId": "3",
+    "parentId": "169314CE0B6C44DEB53F6347C8D7452F",
+    "position": 1004,
+    "statementLabel": null,
+    "statementNotation": "PK.CC.A.3"
+   },
+   "9ACF07E1BA8E4C2683689C7F795572F7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E2055337DDB24D14AFC38CB1EE3CD16D",
+     "BAC1E97ECF124ACF806F5699F97F53AC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "This standard begins in Kindergarten.",
+    "id": "9ACF07E1BA8E4C2683689C7F795572F7",
+    "listId": "1",
+    "parentId": "E2055337DDB24D14AFC38CB1EE3CD16D",
+    "position": 1028,
+    "statementLabel": null,
+    "statementNotation": "PK.NBT.A.1"
+   },
+   "9B9BD1C033BB4010BA8B313D7A55F11E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BF9253F6B94340A3BAB20B35B31893B3",
+     "EB3C7FEDDD42411781E4DC2DC2294CFF",
+     "885F5698A33C49D0AE5A489E0A4FFAD3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize that one more object added to a group of\nobjects changes the quantity as a whole. ",
+    "id": "9B9BD1C033BB4010BA8B313D7A55F11E",
+    "listId": "c",
+    "parentId": "BF9253F6B94340A3BAB20B35B31893B3",
+    "position": 1010,
+    "statementLabel": null,
+    "statementNotation": "PK.CC.B.4.c"
+   },
+   "A236381C963A43099F88271EB9570262": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9367ECF4A3074720970A7613ED91DE55",
+     "B261B62553D04062AA24CAB4EC7E2D88"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Compose and decompose numbers to 5, in\nmore than one way, by using objects or drawings.",
+    "id": "A236381C963A43099F88271EB9570262",
+    "listId": "3",
+    "parentId": "9367ECF4A3074720970A7613ED91DE55",
+    "position": 1023,
+    "statementLabel": null,
+    "statementNotation": "PK.OA.A.3"
+   },
+   "A67F318F42DF46FD9AC2A76E3A95BCF5": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Geometry",
+    "id": "A67F318F42DF46FD9AC2A76E3A95BCF5",
+    "listId": "",
+    "parentId": null,
+    "position": 1037,
+    "statementLabel": null,
+    "statementNotation": "G"
+   },
+   "B261B62553D04062AA24CAB4EC7E2D88": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Operations and Algebraic Thinking",
+    "id": "B261B62553D04062AA24CAB4EC7E2D88",
+    "listId": "",
+    "parentId": null,
+    "position": 1019,
+    "statementLabel": null,
+    "statementNotation": "OA"
+   },
+   "BAC1E97ECF124ACF806F5699F97F53AC": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Number and Operations in Base Ten",
+    "id": "BAC1E97ECF124ACF806F5699F97F53AC",
+    "listId": "",
+    "parentId": null,
+    "position": 1026,
+    "statementLabel": null,
+    "statementNotation": "NBT"
+   },
+   "BF9253F6B94340A3BAB20B35B31893B3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EB3C7FEDDD42411781E4DC2DC2294CFF",
+     "885F5698A33C49D0AE5A489E0A4FFAD3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Understand the relationship between\nnumbers and quantities; connect counting to\ncardinality.",
+    "id": "BF9253F6B94340A3BAB20B35B31893B3",
+    "listId": "4",
+    "parentId": "EB3C7FEDDD42411781E4DC2DC2294CFF",
+    "position": 1007,
+    "statementLabel": null,
+    "statementNotation": "PK.CC.B.4"
+   },
+   "C39BBB62C68E46E987D8A5828CBA7655": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9367ECF4A3074720970A7613ED91DE55",
+     "B261B62553D04062AA24CAB4EC7E2D88"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "This standard begins in Kindergarten.",
+    "id": "C39BBB62C68E46E987D8A5828CBA7655",
+    "listId": "5",
+    "parentId": "9367ECF4A3074720970A7613ED91DE55",
+    "position": 1025,
+    "statementLabel": null,
+    "statementNotation": "PK.OA.A.5"
+   },
+   "CD81985ECA7E4472955A512822E05AAE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A67F318F42DF46FD9AC2A76E3A95BCF5"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Analyze, compare, create, and compose shapes.",
+    "id": "CD81985ECA7E4472955A512822E05AAE",
+    "listId": "B",
+    "parentId": "A67F318F42DF46FD9AC2A76E3A95BCF5",
+    "position": 1043,
+    "statementLabel": null,
+    "statementNotation": "B"
+   },
+   "DB40C95C9303428381EABD51DFE70836": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F92A47EF7DA9471884BC5A5114682720",
+     "E525909983C140EAAB5A03C46BA40678"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Sort a collection of objects into given\ncategories using more than one attribute. ",
+    "id": "DB40C95C9303428381EABD51DFE70836",
+    "listId": "4",
+    "parentId": "F92A47EF7DA9471884BC5A5114682720",
+    "position": 1036,
+    "statementLabel": null,
+    "statementNotation": "PK.MD.C.4"
+   },
+   "DE5D4A22398244C194217C029100D620": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1F1B70AF18FA4B6481A3281A82032949",
+     "EB3C7FEDDD42411781E4DC2DC2294CFF",
+     "885F5698A33C49D0AE5A489E0A4FFAD3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "With guidance and support, count to answer “how\nmany?” questions about as many as 5 things in a\nscattered configuration.",
+    "id": "DE5D4A22398244C194217C029100D620",
+    "listId": "d",
+    "parentId": "1F1B70AF18FA4B6481A3281A82032949",
+    "position": 1015,
+    "statementLabel": null,
+    "statementNotation": "PK.CC.B.5.d"
+   },
+   "E2055337DDB24D14AFC38CB1EE3CD16D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "BAC1E97ECF124ACF806F5699F97F53AC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Work with numbers 11-19 to gain foundations for place value.",
+    "id": "E2055337DDB24D14AFC38CB1EE3CD16D",
+    "listId": "A",
+    "parentId": "BAC1E97ECF124ACF806F5699F97F53AC",
+    "position": 1027,
+    "statementLabel": null,
+    "statementNotation": "A"
+   },
+   "E51BBCF8669B44839AC4A8C20EDC7983": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1F1B70AF18FA4B6481A3281A82032949",
+     "EB3C7FEDDD42411781E4DC2DC2294CFF",
+     "885F5698A33C49D0AE5A489E0A4FFAD3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Subitize quantities up to 5 (i.e., the ability to look at\na quantity and say the quantity [1-5] quickly, just by\nlooking).",
+    "id": "E51BBCF8669B44839AC4A8C20EDC7983",
+    "listId": "a",
+    "parentId": "1F1B70AF18FA4B6481A3281A82032949",
+    "position": 1012,
+    "statementLabel": null,
+    "statementNotation": "PK.CC.B.5.a"
+   },
+   "E525909983C140EAAB5A03C46BA40678": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Measurement and Data",
+    "id": "E525909983C140EAAB5A03C46BA40678",
+    "listId": "",
+    "parentId": null,
+    "position": 1029,
+    "statementLabel": null,
+    "statementNotation": "MD"
+   },
+   "E95F1AAFF2A84C55A6E15DA465CEDF22": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9367ECF4A3074720970A7613ED91DE55",
+     "B261B62553D04062AA24CAB4EC7E2D88"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Show, through the use of concrete objects\nor drawings, the number needed to make up to 5\nwhen added to any given number from 0-5.",
+    "id": "E95F1AAFF2A84C55A6E15DA465CEDF22",
+    "listId": "4",
+    "parentId": "9367ECF4A3074720970A7613ED91DE55",
+    "position": 1024,
+    "statementLabel": null,
+    "statementNotation": "PK.OA.A.4"
+   },
+   "EB3C7FEDDD42411781E4DC2DC2294CFF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "885F5698A33C49D0AE5A489E0A4FFAD3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Count to tell the number of objects. ",
+    "id": "EB3C7FEDDD42411781E4DC2DC2294CFF",
+    "listId": "B",
+    "parentId": "885F5698A33C49D0AE5A489E0A4FFAD3",
+    "position": 1006,
+    "statementLabel": null,
+    "statementNotation": "B"
+   },
+   "EF68D24B8C5045859F27542976ACE070": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4E71A4A701874675B9FF9E348F60F2FC",
+     "E525909983C140EAAB5A03C46BA40678"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Describe measurable attributes of a single\nobject, such as length, width, height.",
+    "id": "EF68D24B8C5045859F27542976ACE070",
+    "listId": "1",
+    "parentId": "4E71A4A701874675B9FF9E348F60F2FC",
+    "position": 1031,
+    "statementLabel": null,
+    "statementNotation": "PK.MD.A.1"
+   },
+   "F458D0578AFD474D835B98701F0A5AA2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "169314CE0B6C44DEB53F6347C8D7452F",
+     "885F5698A33C49D0AE5A489E0A4FFAD3"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "This standard begins in Kindergarten.",
+    "id": "F458D0578AFD474D835B98701F0A5AA2",
+    "listId": "2",
+    "parentId": "169314CE0B6C44DEB53F6347C8D7452F",
+    "position": 1003,
+    "statementLabel": null,
+    "statementNotation": "PK.CC.A.2"
+   },
+   "F92A47EF7DA9471884BC5A5114682720": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E525909983C140EAAB5A03C46BA40678"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Classify objects and count the number of objects in each category.",
+    "id": "F92A47EF7DA9471884BC5A5114682720",
+    "listId": "C",
+    "parentId": "E525909983C140EAAB5A03C46BA40678",
+    "position": 1035,
+    "statementLabel": null,
+    "statementNotation": "C"
+   }
+  },
+  "subject": "Early Learning Developmental Standards (2018-)",
+  "title": "Mathematics"
+ }
+}

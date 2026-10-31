@@ -1,0 +1,366 @@
+{
+ "pk/math": [
+  {
+   "idx": "PK.N.1",
+   "text": "Know number names and count in sequence."
+  },
+  {
+   "idx": "PK.N.1.1",
+   "text": "Count aloud forward in sequence by 1s to 20."
+  },
+  {
+   "idx": "PK.N.1.2",
+   "text": "Recognize and name written numerals 0-10."
+  },
+  {
+   "idx": "PK.N.1.3",
+   "text": "Recognize that 0 (zero) represents the count of no objects."
+  },
+  {
+   "idx": "PK.N.2",
+   "text": "Count to tell the number of objects."
+  },
+  {
+   "idx": "PK.N.2.1",
+   "text": "Identify the number of objects, up to 10, in a row or column."
+  },
+  {
+   "idx": "PK.N.2.2",
+   "text": "Use one-to-one correspondence in counting objects and matching groups of objects up to 10."
+  },
+  {
+   "idx": "PK.N.2.3",
+   "text": "Understand the last numeral spoken when counting aloud tells how many total objects are in a set up to 10."
+  },
+  {
+   "idx": "PK.N.2.4",
+   "text": "Count up to 5 items in a scattered configuration, not in a row or column."
+  },
+  {
+   "idx": "PK.N.3",
+   "text": "Compare sets using numbers."
+  },
+  {
+   "idx": "PK.N.3.1",
+   "text": "Compare two sets of 0-5 objects using comparative language such as \"same,\" \"more,\" or \"fewer.\""
+  },
+  {
+   "idx": "PK.A.1",
+   "text": "Recognize, duplicate, and extend patterns."
+  },
+  {
+   "idx": "PK.A.1.1",
+   "text": "Sort and group up to 5 objects into a set based upon characteristics such as color, size, and shape. Explain verbally what the objects have in common."
+  },
+  {
+   "idx": "PK.A.1.2",
+   "text": "Recognize, duplicate, and extend repeating patterns involving manipulatives, sound, movement, and other contexts."
+  },
+  {
+   "idx": "PK.GM.1",
+   "text": "Identify common shapes."
+  },
+  {
+   "idx": "PK.GM.1.1",
+   "text": "Identify circles, squares, rectangles, and triangles by pointing to the shape when given the name."
+  },
+  {
+   "idx": "PK.GM.2",
+   "text": "Describe and compare measurable attributes."
+  },
+  {
+   "idx": "PK.GM.2.1",
+   "text": "Identify measurable attributes of objects. Describe them using age-appropriate vocabulary (i.e., little, big, long, short, tall, heavy, light)."
+  },
+  {
+   "idx": "PK.GM.2.2",
+   "text": "Directly compare two objects with a common measurable attribute using age-appropriate vocabulary (e.g., longer/shorter, heavier/lighter, taller/shorter)."
+  },
+  {
+   "idx": "PK.GM.2.3",
+   "text": "Sort objects into sets by one or more attributes."
+  },
+  {
+   "idx": "PK.D.1",
+   "text": "Collect and organize categorical data."
+  },
+  {
+   "idx": "PK.D.1.1",
+   "text": "Collect and organize information about objects and events in the environment."
+  },
+  {
+   "idx": "PK.D.1.2",
+   "text": "Use categorical data to create real-object graphs, with guidance and support."
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "PK.1.L.2",
+   "text": "Follow simple one-step oral directions."
+  },
+  {
+   "idx": "PK.1.S.1",
+   "text": "Work respectfully with peers with prompting."
+  },
+  {
+   "idx": "PK.1.S.2",
+   "text": "Engage in collaborative discussions about various topics and texts, including their own writing, with peers and adults in small and large groups with prompting."
+  },
+  {
+   "idx": "PK.1.S.3",
+   "text": "Ask and answer questions with prompting."
+  },
+  {
+   "idx": "PK.1.S.4",
+   "text": "Orally describe personal interests or tell stories to peers and adults with prompting."
+  },
+  {
+   "idx": "PK.2.PA.1",
+   "text": "Count spoken words in a three- to four-word sentence with one-syllable words."
+  },
+  {
+   "idx": "PK.2.PA.2",
+   "text": "Recognize spoken words that rhyme (e.g., wall & fall )."
+  },
+  {
+   "idx": "PK.2.PA.3",
+   "text": "Recognize syllables in spoken words (e.g., pony = po + ny)."
+  },
+  {
+   "idx": "PK.2.PA.4",
+   "text": "Isolate the common initial sound when given a set of alliterative spoken words (e.g., the p uppy p ounces )."
+  },
+  {
+   "idx": "PK.2.PC.1",
+   "text": "Begin to understand that print carries a message by recognizing labels, signs, and other print in the environment."
+  },
+  {
+   "idx": "PK.2.PC.2",
+   "text": "Demonstrate correct book orientation and identify the front and back covers of a book."
+  },
+  {
+   "idx": "PK.2.PC.3",
+   "text": "Begin to understand that print moves from top to bottom, left to right, and front to back."
+  },
+  {
+   "idx": "PK.2.PC.4",
+   "text": "Begin to recognize that written words are made up of letters and are separated by spaces."
+  },
+  {
+   "idx": "PK.2.PC.5",
+   "text": "Begin to recognize ending punctuation marks in print during shared reading or other text experiences."
+  },
+  {
+   "idx": "PK.2.PC.6",
+   "text": "Begin to write some uppercase and lowercase letters including the majority of the letters in their first name with prompting."
+  },
+  {
+   "idx": "PK.2.PWS.1",
+   "text": "Name the letters in their first name."
+  },
+  {
+   "idx": "PK.2.PWS.2",
+   "text": "Name a majority of uppercase and lowercase letters."
+  },
+  {
+   "idx": "PK.2.PWS.3",
+   "text": "Produce some sounds represented by letters."
+  },
+  {
+   "idx": "PK.2.F.1",
+   "text": "Read their first name in print."
+  },
+  {
+   "idx": "PK.2.F.2",
+   "text": "Recite familiar texts (e.g., rhymes, songs, poetry, etc.)."
+  },
+  {
+   "idx": "PK.2.R",
+   "text": "Retell or reenact major events or details from a read-aloud."
+  },
+  {
+   "idx": "PK.2.W",
+   "text": "Begin to express themselves through drawing and emergent writing."
+  },
+  {
+   "idx": "PK.3.R.1",
+   "text": "Describe the roles of an author and illustrator with prompting."
+  },
+  {
+   "idx": "PK.3.R.2",
+   "text": "Answer basic questions (e.g., who, what, where, and when) about texts, photographs, or illustrations during shared reading or other text experiences with prompting."
+  },
+  {
+   "idx": "PK.3.R.3",
+   "text": "Identify characters in a story with prompting."
+  },
+  {
+   "idx": "PK.3.W.1",
+   "text": "Use drawing and labeling to tell a story or share information with prompting."
+  },
+  {
+   "idx": "PK.4.R.1",
+   "text": "Name and sort familiar objects into categories based on similarities and differences with prompting."
+  },
+  {
+   "idx": "PK.4.R.2",
+   "text": "Begin to develop an awareness of context clues through read-alouds and other text experiences."
+  },
+  {
+   "idx": "PK.4.R.3",
+   "text": "Begin to acquire new vocabulary and relate new words to prior knowledge."
+  },
+  {
+   "idx": "PK.4.W.1",
+   "text": "Begin to use new vocabulary to produce and expand complete sentences in shared language activities."
+  },
+  {
+   "idx": "PK.4.W.2",
+   "text": "Begin to use language according to purpose in shared writing experiences."
+  },
+  {
+   "idx": "PK.5.R.1",
+   "text": "Hear different sentence structures through conversations, read-alouds, and interactive reading."
+  },
+  {
+   "idx": "PK.5.R.2",
+   "text": "Hear different parts of speech through conversations, read-alouds, and interactive reading: concrete objects as persons, places, or things (i.e., nouns) words as actions (i.e., verbs) color adjectives spatial and time relationships such as up , down , before , and after"
+  },
+  {
+   "idx": "PK.6.R",
+   "text": "Begin to identify pictures, charts, grade-level texts, or people as sources of information on a topic of interest."
+  },
+  {
+   "idx": "PK.6.W",
+   "text": "Generate topics of interest and decide if a friend, teacher, or expert can answer their questions with prompting."
+  },
+  {
+   "idx": "PK.7.R",
+   "text": "Explore ideas and topics in a variety of media and formats with prompting."
+  },
+  {
+   "idx": "PK.7.W",
+   "text": "Begin to combine movement with relevant props, images, or illustrations to support their writing and speaking."
+  },
+  {
+   "idx": "PK.8.R",
+   "text": "Listen and respond to read-alouds, participate in shared reading, and interact independently with texts."
+  },
+  {
+   "idx": "PK.8.W",
+   "text": "Begin to express their ideas using a combination of drawing and emergent writing with prompting."
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "PK.S.1",
+   "text": "Engage in play to explore the physical and natural world."
+  },
+  {
+   "idx": "PK.S.2",
+   "text": "Make observations of the physical and natural world."
+  },
+  {
+   "idx": "PK.S.3",
+   "text": "Notice and describe similarities and differences among plants, animals, and objects."
+  },
+  {
+   "idx": "PK.S.4",
+   "text": "Share noticings and wonderings about the physical and natural world."
+  },
+  {
+   "idx": "PK.S.5",
+   "text": "Ask questions based on curiosity about the physical and natural world."
+  },
+  {
+   "idx": "PK.S.6",
+   "text": "Engage in investigations based on curiosity and wondering about the physical and natural world."
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "PK.1",
+   "text": "The student will understand and demonstrate traits of good citizenship."
+  },
+  {
+   "idx": "PK.1.1",
+   "text": "Describe the importance of rules and personal responsibilities, including working together while listening to others to make decisions as a member of a family and classroom community."
+  },
+  {
+   "idx": "PK.1.2",
+   "text": "Explain the need to respect the equal dignity and uniqueness of individuals in their class and community."
+  },
+  {
+   "idx": "PK.1.3",
+   "text": "Describe the concept of patriotism, citizenship, and the traits of being a responsible citizen (e.g., respect for others’ rights and property, obedience to rules)."
+  },
+  {
+   "idx": "PK.1.4",
+   "text": "Identify the United States and the Oklahoma flags as symbols of the nation and the state."
+  },
+  {
+   "idx": "PK.2",
+   "text": "The student will understand the importance of the study of history."
+  },
+  {
+   "idx": "PK.2.1",
+   "text": "Explain history as the events that happened to people of other times and places."
+  },
+  {
+   "idx": "PK.2.2",
+   "text": "Describe how and why we honor people and events of the past (e.g., national holidays and naming of schools)."
+  },
+  {
+   "idx": "PK.2.3",
+   "text": "Use words and phrases (e.g., before and after) as they relate to chronology and time in order to explain how things change."
+  },
+  {
+   "idx": "PK.2.4",
+   "text": "Explain that lessons can be learned from the past and from decisions that people have made in the past."
+  },
+  {
+   "idx": "PK.3",
+   "text": "The student will examine the basic concepts of physical and human geography."
+  },
+  {
+   "idx": "PK.3.1",
+   "text": "Explain that a map is a drawing that represents a place."
+  },
+  {
+   "idx": "PK.3.2",
+   "text": "Use basic directional terms in relation to the student’s relative location (e.g., near, far, between, across)."
+  },
+  {
+   "idx": "PK.3.3",
+   "text": "Describe the classroom as both a geographic place and a community of people."
+  },
+  {
+   "idx": "PK.3.4",
+   "text": "Identify customs and traditions as basic elements of culture, using examples from families, the school, and community."
+  },
+  {
+   "idx": "PK.4",
+   "text": "The student will identify basic economic concepts."
+  },
+  {
+   "idx": "PK.4.1",
+   "text": "Identify basic needs that all people share (e.g., clothing, shelter, food)."
+  },
+  {
+   "idx": "PK.4.2",
+   "text": "Explain how people’s needs are met through work or trade."
+  },
+  {
+   "idx": "PK.4.3",
+   "text": "Explain how resources are used by people to meet their needs."
+  },
+  {
+   "idx": "PK.4.4",
+   "text": "Describe how the work of various school personnel provides needed services for students."
+  },
+  {
+   "idx": "PK.4.5",
+   "text": "Identify the differences between buyers and sellers, using examples relevant to student experiences."
+  }
+ ]
+}

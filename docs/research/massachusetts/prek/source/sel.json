@@ -1,0 +1,761 @@
+{
+ "data": {
+  "cspStatus": {
+   "notes": null,
+   "value": "visible"
+  },
+  "document": {
+   "sourceURL": "file:///C:/Users/barce/OneDrive/Documents/Julien/gah/West/Paypal%20monthly%20statements/Images%20data/guidelines%20for%20preschool%20and%20kindergarten%20learning%20experiences.pdf",
+   "title": "Guidelines on Preschool/Kindergarten Learning Experiences"
+  },
+  "educationLevels": [
+   "Pre-K",
+   "K"
+  ],
+  "id": "340F2DA39F92485FAC17B25D077EEC89",
+  "jurisdiction": {
+   "id": "95C543B18A1B473B894ED35ECA322576",
+   "title": "Massachusetts"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/4.0/us/",
+   "rightsHolder": "Common Curriculum, Inc.",
+   "title": "CC BY 4.0 US"
+  },
+  "normalizedSubject": null,
+  "standards": {
+   "0CB6467B59A743F494AC59649A9D0F04": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CD154FD6DF69443297C043781FAD6DF8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Eagerness and Curiosity as a Learner",
+    "id": "0CB6467B59A743F494AC59649A9D0F04",
+    "listId": "",
+    "parentId": "CD154FD6DF69443297C043781FAD6DF8",
+    "position": 1031,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "12D6AA2208D34231A1D5EED27B0E6E6B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CD154FD6DF69443297C043781FAD6DF8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Initiative, self-direction, and independence",
+    "id": "12D6AA2208D34231A1D5EED27B0E6E6B",
+    "listId": "",
+    "parentId": "CD154FD6DF69443297C043781FAD6DF8",
+    "position": 1029,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "134A2AFCC10A434B9A52667857E60302": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "856160E955B541F28A68E15F2B548057"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Self-Perception/Self-Concept",
+    "id": "134A2AFCC10A434B9A52667857E60302",
+    "listId": "",
+    "parentId": "856160E955B541F28A68E15F2B548057",
+    "position": 1003,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "1FFC8F8A585444BD8FEE899C36051291": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C08C4E268BD640B2B429C36D63D81F69"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Empathy",
+    "id": "1FFC8F8A585444BD8FEE899C36051291",
+    "listId": "",
+    "parentId": "C08C4E268BD640B2B429C36D63D81F69",
+    "position": 1010,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "22F976BB454E4A11BB48A4F057B7EC3F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3EF2207A6D564A3E918029C37A64A8EB",
+     "CD154FD6DF69443297C043781FAD6DF8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "The child will\ndemonstrate creativity in\nthinking and use of\nmaterials.",
+    "id": "22F976BB454E4A11BB48A4F057B7EC3F",
+    "listId": "4",
+    "parentId": "3EF2207A6D564A3E918029C37A64A8EB",
+    "position": 1036,
+    "statementLabel": null,
+    "statementNotation": "APL 4"
+   },
+   "3BC17DDADD344A429F9D233A856AEABB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0CB6467B59A743F494AC59649A9D0F04",
+     "CD154FD6DF69443297C043781FAD6DF8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "The child will\ndemonstrate eagerness\nand curiosity as a\nlearner.",
+    "id": "3BC17DDADD344A429F9D233A856AEABB",
+    "listId": "2",
+    "parentId": "0CB6467B59A743F494AC59649A9D0F04",
+    "position": 1032,
+    "statementLabel": null,
+    "statementNotation": "APL 2"
+   },
+   "3EF2207A6D564A3E918029C37A64A8EB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CD154FD6DF69443297C043781FAD6DF8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Creativity",
+    "id": "3EF2207A6D564A3E918029C37A64A8EB",
+    "listId": "",
+    "parentId": "CD154FD6DF69443297C043781FAD6DF8",
+    "position": 1035,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "4B4C97B59D174EC2AC2FDE11DF500F5E": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "RESPONSIBLE DECISION MAKING",
+    "id": "4B4C97B59D174EC2AC2FDE11DF500F5E",
+    "listId": "",
+    "parentId": null,
+    "position": 1023,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "4DFF324891454CBE939C639AE92507D4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C08C4E268BD640B2B429C36D63D81F69"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Recognition of Diversity and Demonstration of Respect for Others",
+    "id": "4DFF324891454CBE939C639AE92507D4",
+    "listId": "",
+    "parentId": "C08C4E268BD640B2B429C36D63D81F69",
+    "position": 1012,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "56289FFE2F31468887A30D0BB061F91F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1FFC8F8A585444BD8FEE899C36051291",
+     "C08C4E268BD640B2B429C36D63D81F69"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "The child will display\nempathetic characteristics.",
+    "id": "56289FFE2F31468887A30D0BB061F91F",
+    "listId": "5",
+    "parentId": "1FFC8F8A585444BD8FEE899C36051291",
+    "position": 1011,
+    "statementLabel": null,
+    "statementNotation": "SEL5"
+   },
+   "5D52EE02DEF74CE7895278AF3A3DD340": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E6283E50A92F4D00B9F1C550CC4BB4D0",
+     "856160E955B541F28A68E15F2B548057"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "The child will be\nable to recognize,\nidentify, and express\nhis/her emotions.",
+    "id": "5D52EE02DEF74CE7895278AF3A3DD340",
+    "listId": "1",
+    "parentId": "E6283E50A92F4D00B9F1C550CC4BB4D0",
+    "position": 1002,
+    "statementLabel": null,
+    "statementNotation": "SEL1"
+   },
+   "6EC840F663144CDBAB744785381EA63A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B1B0F1119ED64B18A894166C19DC3211"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Conflict Management",
+    "id": "6EC840F663144CDBAB744785381EA63A",
+    "listId": "",
+    "parentId": "B1B0F1119ED64B18A894166C19DC3211",
+    "position": 1019,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "70F3AE97B51D465C9CA2DB5BD2CA2BB7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CD154FD6DF69443297C043781FAD6DF8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Problem Solving",
+    "id": "70F3AE97B51D465C9CA2DB5BD2CA2BB7",
+    "listId": "",
+    "parentId": "CD154FD6DF69443297C043781FAD6DF8",
+    "position": 1039,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "78D134B335C0421D82C84C5DF6124950": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9031F8BD263449C69E1321FB97361EBB",
+     "4B4C97B59D174EC2AC2FDE11DF500F5E"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "The child will\ndemonstrate the ability\nto reflect on and\nevaluate the results of\nhis/her actions and\ndecisions.",
+    "id": "78D134B335C0421D82C84C5DF6124950",
+    "listId": "12",
+    "parentId": "9031F8BD263449C69E1321FB97361EBB",
+    "position": 1027,
+    "statementLabel": null,
+    "statementNotation": "SEL12"
+   },
+   "7B9A3B1B9A8040A28810885E9FFB6A57": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "12D6AA2208D34231A1D5EED27B0E6E6B",
+     "CD154FD6DF69443297C043781FAD6DF8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "The child will\ndemonstrate initiative,\nself-direction, and\nindependence.",
+    "id": "7B9A3B1B9A8040A28810885E9FFB6A57",
+    "listId": "1",
+    "parentId": "12D6AA2208D34231A1D5EED27B0E6E6B",
+    "position": 1030,
+    "statementLabel": null,
+    "statementNotation": "APL 1"
+   },
+   "843451947ECC4DC88D7F9E65335073E7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CD154FD6DF69443297C043781FAD6DF8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Focus and Persistence",
+    "id": "843451947ECC4DC88D7F9E65335073E7",
+    "listId": "",
+    "parentId": "CD154FD6DF69443297C043781FAD6DF8",
+    "position": 1033,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "856160E955B541F28A68E15F2B548057": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "SELF-AWARENESS",
+    "id": "856160E955B541F28A68E15F2B548057",
+    "listId": "",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "878C56DEE5AF459285FE5CACCE94CD76": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C72402B47EC845B3B7BE423B743CDAFA",
+     "856160E955B541F28A68E15F2B548057"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "The child will\ndemonstrate impulse\ncontrol and stress\nmanagement.",
+    "id": "878C56DEE5AF459285FE5CACCE94CD76",
+    "listId": "4",
+    "parentId": "C72402B47EC845B3B7BE423B743CDAFA",
+    "position": 1008,
+    "statementLabel": null,
+    "statementNotation": "SEL4"
+   },
+   "9031F8BD263449C69E1321FB97361EBB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4B4C97B59D174EC2AC2FDE11DF500F5E"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Reflection and Evaluation",
+    "id": "9031F8BD263449C69E1321FB97361EBB",
+    "listId": "",
+    "parentId": "4B4C97B59D174EC2AC2FDE11DF500F5E",
+    "position": 1026,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "95965EEA4A2F46B589541B0FC3AC47F7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CD154FD6DF69443297C043781FAD6DF8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Organizational Skills",
+    "id": "95965EEA4A2F46B589541B0FC3AC47F7",
+    "listId": "",
+    "parentId": "CD154FD6DF69443297C043781FAD6DF8",
+    "position": 1041,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "976DA21E017E4C7E9D7BA7F6BED1FEA1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B1B0F1119ED64B18A894166C19DC3211"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Interpersonal Communication",
+    "id": "976DA21E017E4C7E9D7BA7F6BED1FEA1",
+    "listId": "",
+    "parentId": "B1B0F1119ED64B18A894166C19DC3211",
+    "position": 1015,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "9890B5F4878345DCA47EAC95331C1857": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4B4C97B59D174EC2AC2FDE11DF500F5E"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Personal, Social, and Ethical Responsibility",
+    "id": "9890B5F4878345DCA47EAC95331C1857",
+    "listId": "",
+    "parentId": "4B4C97B59D174EC2AC2FDE11DF500F5E",
+    "position": 1024,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "9D0A6E7C74774246A3648136949C6E15": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B1B0F1119ED64B18A894166C19DC3211"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Social Relationships ",
+    "id": "9D0A6E7C74774246A3648136949C6E15",
+    "listId": "",
+    "parentId": "B1B0F1119ED64B18A894166C19DC3211",
+    "position": 1017,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "A13D44C91EC8442C89B34CBCE3940F47": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4DFF324891454CBE939C639AE92507D4",
+     "C08C4E268BD640B2B429C36D63D81F69"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "The child will\nrecognize diversity and\ndemonstrate respect for\nothers.",
+    "id": "A13D44C91EC8442C89B34CBCE3940F47",
+    "listId": "6",
+    "parentId": "4DFF324891454CBE939C639AE92507D4",
+    "position": 1013,
+    "statementLabel": null,
+    "statementNotation": "SEL6"
+   },
+   "A7DA307CDC944B5F8EC2459D6C7E47C9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CD154FD6DF69443297C043781FAD6DF8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Retain and Recall Information",
+    "id": "A7DA307CDC944B5F8EC2459D6C7E47C9",
+    "listId": "",
+    "parentId": "CD154FD6DF69443297C043781FAD6DF8",
+    "position": 1043,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "A88F04C44769464FB1AF71998D81E9DE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B1B0F1119ED64B18A894166C19DC3211"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Seeking and Offering Help",
+    "id": "A88F04C44769464FB1AF71998D81E9DE",
+    "listId": "",
+    "parentId": "B1B0F1119ED64B18A894166C19DC3211",
+    "position": 1021,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "AF4559C119E24BA1ADE663FE12C89026": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A7DA307CDC944B5F8EC2459D6C7E47C9",
+     "CD154FD6DF69443297C043781FAD6DF8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "The child will be\nable to retain and recall\ninformation.",
+    "id": "AF4559C119E24BA1ADE663FE12C89026",
+    "listId": "8",
+    "parentId": "A7DA307CDC944B5F8EC2459D6C7E47C9",
+    "position": 1044,
+    "statementLabel": null,
+    "statementNotation": "APL 8"
+   },
+   "B1B0F1119ED64B18A894166C19DC3211": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "RELATIONSHIP SKILLS",
+    "id": "B1B0F1119ED64B18A894166C19DC3211",
+    "listId": "",
+    "parentId": null,
+    "position": 1014,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "B2471DB737C54417A0A76C39FA21F746": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "976DA21E017E4C7E9D7BA7F6BED1FEA1",
+     "B1B0F1119ED64B18A894166C19DC3211"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "The child will\ndemonstrate the ability to\ncommunicate with others in\na variety of ways.",
+    "id": "B2471DB737C54417A0A76C39FA21F746",
+    "listId": "7",
+    "parentId": "976DA21E017E4C7E9D7BA7F6BED1FEA1",
+    "position": 1016,
+    "statementLabel": null,
+    "statementNotation": "SEL7"
+   },
+   "B4B54F9AC3374335BBC0559ED6E3CB9F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "856160E955B541F28A68E15F2B548057"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Self-Efficacy (Confidence/Competence)",
+    "id": "B4B54F9AC3374335BBC0559ED6E3CB9F",
+    "listId": "",
+    "parentId": "856160E955B541F28A68E15F2B548057",
+    "position": 1005,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "BAD95B1A6A114A31AD6FBBC027EC1871": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "95965EEA4A2F46B589541B0FC3AC47F7",
+     "CD154FD6DF69443297C043781FAD6DF8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "The child will\ndemonstrate\norganizational skills.",
+    "id": "BAD95B1A6A114A31AD6FBBC027EC1871",
+    "listId": "7",
+    "parentId": "95965EEA4A2F46B589541B0FC3AC47F7",
+    "position": 1042,
+    "statementLabel": null,
+    "statementNotation": "APL 7"
+   },
+   "C08C4E268BD640B2B429C36D63D81F69": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "SOCIAL AWARENESS",
+    "id": "C08C4E268BD640B2B429C36D63D81F69",
+    "listId": "",
+    "parentId": null,
+    "position": 1009,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "C2B38218B6F145E088EC42F6A37D21E0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9D0A6E7C74774246A3648136949C6E15",
+     "B1B0F1119ED64B18A894166C19DC3211"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "The child will\nengage socially, and\nbuild relationships with\nother children and with\nadults.",
+    "id": "C2B38218B6F145E088EC42F6A37D21E0",
+    "listId": "8",
+    "parentId": "9D0A6E7C74774246A3648136949C6E15",
+    "position": 1018,
+    "statementLabel": null,
+    "statementNotation": "SEL8"
+   },
+   "C72402B47EC845B3B7BE423B743CDAFA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "856160E955B541F28A68E15F2B548057"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Self-Management",
+    "id": "C72402B47EC845B3B7BE423B743CDAFA",
+    "listId": "",
+    "parentId": "856160E955B541F28A68E15F2B548057",
+    "position": 1007,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "CB2121FEBCB14F40A3F5DCB47EDBFFAB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "134A2AFCC10A434B9A52667857E60302",
+     "856160E955B541F28A68E15F2B548057"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "The child will\ndemonstrate accurate\nself-perception.",
+    "id": "CB2121FEBCB14F40A3F5DCB47EDBFFAB",
+    "listId": "2",
+    "parentId": "134A2AFCC10A434B9A52667857E60302",
+    "position": 1004,
+    "statementLabel": null,
+    "statementNotation": "SEL2"
+   },
+   "CD154FD6DF69443297C043781FAD6DF8": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "APPROACHES TO PLAY AND LEARNING",
+    "id": "CD154FD6DF69443297C043781FAD6DF8",
+    "listId": "",
+    "parentId": null,
+    "position": 1028,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "CDFC9738714341E2B80C5D86E690EB27": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D2EFE710C4CB4800A6281CD94F071A31",
+     "CD154FD6DF69443297C043781FAD6DF8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "The child will\ncooperate with others in\nplay and learning.",
+    "id": "CDFC9738714341E2B80C5D86E690EB27",
+    "listId": "5",
+    "parentId": "D2EFE710C4CB4800A6281CD94F071A31",
+    "position": 1038,
+    "statementLabel": null,
+    "statementNotation": "APL 5"
+   },
+   "D2EFE710C4CB4800A6281CD94F071A31": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CD154FD6DF69443297C043781FAD6DF8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Cooperative Play and Learning",
+    "id": "D2EFE710C4CB4800A6281CD94F071A31",
+    "listId": "",
+    "parentId": "CD154FD6DF69443297C043781FAD6DF8",
+    "position": 1037,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "DDCEEB4CEC2342C68939ED83B8C1D749": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A88F04C44769464FB1AF71998D81E9DE",
+     "B1B0F1119ED64B18A894166C19DC3211"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "The child will\ndemonstrate the ability\nto seek help and offer\nhelp.",
+    "id": "DDCEEB4CEC2342C68939ED83B8C1D749",
+    "listId": "10",
+    "parentId": "A88F04C44769464FB1AF71998D81E9DE",
+    "position": 1022,
+    "statementLabel": null,
+    "statementNotation": "SEL10"
+   },
+   "E6283E50A92F4D00B9F1C550CC4BB4D0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "856160E955B541F28A68E15F2B548057"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Understanding and Expression of Emotions",
+    "id": "E6283E50A92F4D00B9F1C550CC4BB4D0",
+    "listId": "",
+    "parentId": "856160E955B541F28A68E15F2B548057",
+    "position": 1001,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "E882D93A2A9A4284B93A989C1866BC75": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "843451947ECC4DC88D7F9E65335073E7",
+     "CD154FD6DF69443297C043781FAD6DF8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "The child will be\nable to maintain focus\nand attention, and\npersist in efforts to\ncomplete a task.",
+    "id": "E882D93A2A9A4284B93A989C1866BC75",
+    "listId": "3",
+    "parentId": "843451947ECC4DC88D7F9E65335073E7",
+    "position": 1034,
+    "statementLabel": null,
+    "statementNotation": "APL 3"
+   },
+   "EBFB9982804745E7A2C74E79AC96252F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "70F3AE97B51D465C9CA2DB5BD2CA2BB7",
+     "CD154FD6DF69443297C043781FAD6DF8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "The child will\nseek multiple solutions\nto a question, task, or\nproblem.",
+    "id": "EBFB9982804745E7A2C74E79AC96252F",
+    "listId": "6",
+    "parentId": "70F3AE97B51D465C9CA2DB5BD2CA2BB7",
+    "position": 1040,
+    "statementLabel": null,
+    "statementNotation": "APL 6"
+   },
+   "EC195825657F42DA87D8665D9BB27690": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6EC840F663144CDBAB744785381EA63A",
+     "B1B0F1119ED64B18A894166C19DC3211"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "The child will\ndemonstrate the ability\nto manage conflict.",
+    "id": "EC195825657F42DA87D8665D9BB27690",
+    "listId": "9",
+    "parentId": "6EC840F663144CDBAB744785381EA63A",
+    "position": 1020,
+    "statementLabel": null,
+    "statementNotation": "SEL9"
+   },
+   "F48E205BFC224F2DB208C967C984504B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B4B54F9AC3374335BBC0559ED6E3CB9F",
+     "856160E955B541F28A68E15F2B548057"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "The child will\ndemonstrate self-efficacy\n(confidence/competence).",
+    "id": "F48E205BFC224F2DB208C967C984504B",
+    "listId": "3",
+    "parentId": "B4B54F9AC3374335BBC0559ED6E3CB9F",
+    "position": 1006,
+    "statementLabel": null,
+    "statementNotation": "SEL3"
+   },
+   "F7F5251BDAB745A38D0A72EBC27FA1FB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9890B5F4878345DCA47EAC95331C1857",
+     "4B4C97B59D174EC2AC2FDE11DF500F5E"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "The child will\ndemonstrate beginning\npersonal, social, and\nethical responsibility",
+    "id": "F7F5251BDAB745A38D0A72EBC27FA1FB",
+    "listId": "11",
+    "parentId": "9890B5F4878345DCA47EAC95331C1857",
+    "position": 1025,
+    "statementLabel": null,
+    "statementNotation": "SEL11"
+   }
+  },
+  "subject": "Guidelines for Preschool and Kindergarten Learning Experiences (2019-)",
+  "title": "Social and Emotional Development and Approaches to Play and Learning"
+ }
+}

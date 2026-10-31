@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { withSeed } from "@/content/random";
 import { checkQuestion } from "@/content/fairness/question";
 import { GRADE_ORDER } from "@/content/subjects";
-import { FACT_SETS, factKnown, factQuestion, factSetsFor, factSummary, factsIn, factText, factWeight, getFactSet, parseFact, pickFact, type FactStat } from "./facts";
+import { FACT_SETS, factGrid, factKnown, factQuestion, factState, hasGrid, factSetsFor, factSummary, factsIn, factText, factWeight, getFactSet, parseFact, pickFact, type FactStat } from "./facts";
 
 const stat = (...recent: boolean[]): FactStat => ({ attempts: recent.length, recent, lastT: Date.now() });
 
@@ -136,5 +136,35 @@ describe("picking the next fact", () => {
         expect(f.answer).toBeLessThanOrEqual(10);
       }
     });
+  });
+});
+
+describe("the facts chart", () => {
+  it("puts each times fact where its two numbers meet", () => {
+    const grid = factGrid(getFactSet("mul")!, { "mul:7:8": { attempts: 2, recent: [true, true], lastT: 1 }, "mul:3:4": { attempts: 1, recent: [false], lastT: 1 } });
+    expect(grid).toHaveLength(10);
+    expect(grid.every((row) => row.length === 10 && row.every((c) => c.fact))).toBe(true);
+    expect(grid[6][7]).toMatchObject({ row: 7, col: 8, state: "known", fact: { id: "mul:7:8", answer: 56 } });
+    expect(grid[2][3].state).toBe("tricky");
+    expect(grid[0][0].state).toBe("new");
+  });
+
+  it("fills only part of the grid for adding to 10", () => {
+    const grid = factGrid(getFactSet("add10")!, {});
+    const filled = grid.flat().filter((c) => c.fact);
+    expect(filled).toHaveLength(factsIn("add10").length);
+    expect(grid[9][9].fact).toBeUndefined();
+  });
+
+  it("has a chart for adding and times only", () => {
+    expect(FACT_SETS.filter(hasGrid).map((s) => s.id)).toEqual(["add10", "add", "mul"]);
+    expect(factGrid(getFactSet("div")!, {}).flat().some((c) => c.fact)).toBe(false);
+  });
+
+  it("tells a fact being learned from one just missed", () => {
+    expect(factState(undefined)).toBe("new");
+    expect(factState({ attempts: 2, recent: [false, true], lastT: 1 })).toBe("learning");
+    expect(factState({ attempts: 2, recent: [true, false], lastT: 1 })).toBe("tricky");
+    expect(factState({ attempts: 2, recent: [true, true], lastT: 1 })).toBe("known");
   });
 });
