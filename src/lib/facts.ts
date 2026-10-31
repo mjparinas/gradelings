@@ -268,3 +268,38 @@ export function pickFact(set: FactSetId, facts: Record<string, FactStat>, recent
   }
   return pool[pool.length - 1];
 }
+
+/** Where a child is with one fact: known, missed last time, being learned, or not tried yet. */
+export type FactState = "known" | "tricky" | "learning" | "new";
+
+export function factState(s: FactStat | undefined): FactState {
+  if (!s) return "new";
+  if (factKnown(s)) return "known";
+  return s.recent[s.recent.length - 1] === false ? "tricky" : "learning";
+}
+
+export interface FactCell {
+  /** The row number and column number, 1 to 10. */
+  row: number;
+  col: number;
+  /** Undefined where the set has no fact (the "to 10" sets fill only part of the grid). */
+  fact?: Fact;
+  state?: FactState;
+}
+
+/** Adding and times sets read as a chart (row number, column number, answer where they meet); taking away and dividing don't. */
+export function hasGrid(set: FactSet): boolean {
+  return set.op === "add" || set.op === "mul";
+}
+
+/** A set as a 10 × 10 chart, the way a times-table chart is drawn: 7 × 8 sits at row 7, column 8. */
+export function factGrid(set: FactSet, facts: Record<string, FactStat>): FactCell[][] {
+  const at = new Map<string, Fact>();
+  if (hasGrid(set)) for (const f of factsIn(set.id)) at.set(`${f.a}:${f.b}`, f);
+  return Array.from({ length: 10 }, (_, r) =>
+    Array.from({ length: 10 }, (_, c) => {
+      const fact = at.get(`${r + 1}:${c + 1}`);
+      return fact ? { row: r + 1, col: c + 1, fact, state: factState(facts[fact.id]) } : { row: r + 1, col: c + 1 };
+    }),
+  );
+}

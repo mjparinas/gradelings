@@ -31,7 +31,7 @@ import { getCourse, parseUnitKey } from "@/content";
 import { nextGrade } from "@/lib/schoolYear";
 import { go } from "@/lib/router";
 import { Toasts } from "./Toasts";
-import { Arcade, FactsPicker, GameScreen, LazyScreen, PlacementTest, prefetchScreens, Room, Shop, SneakPeek, StickerBook, StoryLibrary, StoryReader, TrailMap, Treasures, TrophyRoom, WeekRecap } from "./lazyScreens";
+import { Arcade, FactChart, FactsPicker, GameScreen, LazyScreen, PlacementTest, prefetchScreens, Room, Shop, SneakPeek, StickerBook, StoryLibrary, StoryReader, TrailMap, Treasures, TrophyRoom, WeekRecap } from "./lazyScreens";
 import { LessonScreen } from "./LessonScreen";
 
 const MODES: Mode[] = ["practice", "adventure", "review", "speed", "daily", "challenge", "facts"];
@@ -114,13 +114,13 @@ const Routes = memo(function Routes({ hash }: { hash: string }) {
     case "speed":
       return <SpeedPicker />;
     case "facts":
-      return <FactsPicker />;
+      return path[1] ? <FactChart key={path[1]} id={path[1]} /> : <FactsPicker />;
     case "session": {
       const mode = query.get("mode") as Mode;
       const scope = query.get("scope") ?? "mix";
       if (!MODES.includes(mode)) return <Hub />;
       // A new key restarts the session cleanly when "Play again" is pressed.
-      return withPeek(<Session key={`${mode}:${scope}:${query.get("r") ?? ""}`} mode={mode} scope={scope} />);
+      return withPeek(<Session key={`${mode}:${scope}:${query.get("r") ?? ""}:${query.get("resume") ?? ""}`} mode={mode} scope={scope} resume={query.get("resume") === "1"} />);
     }
     case "placement":
       if (!PLACEMENT_SUBJECTS.includes(path[1] as SubjectId)) return <Hub />;

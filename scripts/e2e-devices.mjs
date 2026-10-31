@@ -249,6 +249,23 @@ async function everyDevice(device, page) {
   await checkTargets(device, "weekly recap: links", page.locator("main a"), KID_TARGET);
   await shot(page, device, "5b-week-recap");
 
+  // The times-table chart: all ten columns fit without sideways scroll, even at 320 px.
+  await page.goto(`${BASE}/play/#/facts/mul`);
+  await page.getByTestId("fact-chart").waitFor();
+  await page.waitForTimeout(300);
+  await noSideScroll(device, page, "facts chart");
+  await shot(page, device, "5c-facts-chart");
+
+  // A lesson left partway: the home screen's "Finish your lesson?" card, with tappable buttons.
+  await page.goto(`${BASE}/play/#/session?mode=daily&scope=mix`);
+  await page.getByRole("button", { name: "Stop", exact: true }).waitFor();
+  for (let i = 0; i < 40 && !(await vis(page.getByRole("button", { name: /^Next →$/ }))); i++) await step(page);
+  await page.goto(`${BASE}/play/#/`);
+  await page.getByTestId("resume-lesson").waitFor();
+  await page.waitForTimeout(300);
+  await noSideScroll(device, page, "finish your lesson card");
+  await checkTargets(device, "finish your lesson: link and Not now", page.getByTestId("resume-lesson").locator("a, button"), KID_TARGET);
+
   // Parent reports
   await page.goto(`${BASE}/parents/`);
   await enterPin(page, true);

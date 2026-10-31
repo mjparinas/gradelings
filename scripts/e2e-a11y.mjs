@@ -51,7 +51,7 @@ await page.getByRole("button", { name: "Stop", exact: true }).waitFor();
 await scan(page, "question");
 for (let i = 0; i < 40 && !(await vis(page.locator("[role=status]").getByRole("button"))); i++) await step(page);
 await scan(page, "feedback bar");
-for (const route of ["trophies", "shop", "stickers", "room", "practice", "map", "arcade", "treasures", "stories", "stories/wiggly-tooth"]) {
+for (const route of ["trophies", "shop", "stickers", "room", "practice", "map", "arcade", "treasures", "stories", "stories/wiggly-tooth", "facts", "facts/mul"]) {
   await page.goto(`${BASE}/play/#/${route}`);
   await scan(page, `/play/#/${route}`);
 }
@@ -63,6 +63,16 @@ await scan(page, "hub with the weekly recap card");
 await page.goto(`${BASE}/play/#/grew`);
 await page.getByRole("region", { name: "Days you practised" }).waitFor();
 await scan(page, "/play/#/grew");
+// A lesson left partway: its "Finish your lesson?" card, and picking it up again at the next question.
+await page.goto(`${BASE}/play/#/session?mode=daily&scope=mix`);
+await page.getByRole("button", { name: "Stop", exact: true }).waitFor();
+for (let i = 0; i < 40 && !(await vis(page.getByRole("button", { name: /^Next →$/ }))); i++) await step(page);
+await page.goto(`${BASE}/play/#/`);
+await page.getByTestId("resume-lesson").waitFor();
+await scan(page, "hub with the finish-your-lesson card");
+await page.getByTestId("resume-lesson").getByRole("link").click();
+await page.getByRole("progressbar", { name: "Questions answered" }).waitFor();
+if ((await page.getByRole("progressbar", { name: "Questions answered" }).getAttribute("aria-valuenow")) !== "1") throw new Error("the lesson didn't pick up at its second question");
 
 console.log("Teacher area");
 const teacher = await teacherFixture(BASE);
