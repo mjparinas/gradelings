@@ -21,7 +21,7 @@ vi.mock("@/lib/store", () => ({
 }));
 vi.mock("./MembershipLock", () => ({ MembershipLock: ({ open }: { open: boolean }) => (open ? <p>Ask a grown-up</p> : null) }));
 
-import { FactsPicker } from "./Facts";
+import { FactChart, FactsPicker } from "./Facts";
 
 const show = (band: AgeBand = "big") => render(<BandProvider value={band}>{<FactsPicker />}</BandProvider>);
 
@@ -81,5 +81,42 @@ describe("FactsPicker", () => {
     show();
     expect(screen.queryByRole("button", { name: /Times tables/ })).not.toBeInTheDocument();
     expect(screen.getByText("Math is switched off right now. A grown-up can turn it on.")).toBeInTheDocument();
+  });
+});
+
+describe("FactChart", () => {
+  const chart = () => render(<BandProvider value="big"><FactChart id="mul" /></BandProvider>);
+
+  it("is linked from a set once a fact in it has been tried, but only for adding and times", () => {
+    h.facts = { "mul:7:8": { attempts: 1, recent: [true], lastT: 1 }, "div:56:8": { attempts: 1, recent: [true], lastT: 1 } };
+    show();
+    const links = screen.getAllByRole("link", { name: /See my chart/ });
+    expect(links.map((l) => l.getAttribute("href"))).toEqual(["#/facts/mul"]);
+  });
+
+  it("shows the answer where a fact is known and a dot where it is being practised", () => {
+    h.facts = {
+      "mul:7:8": { attempts: 2, recent: [true, true], lastT: 1 },
+      "mul:6:9": { attempts: 1, recent: [false], lastT: 2 },
+    };
+    chart();
+    expect(screen.getByText("My times-table chart")).toBeInTheDocument();
+    expect(screen.getByRole("img", { name: "7 × 8: 56, known" })).toHaveTextContent("56");
+    expect(screen.getByRole("img", { name: "6 × 9: practising" })).toHaveTextContent("•");
+    expect(screen.getByRole("img", { name: "2 × 3: not tried yet" })).toHaveTextContent("");
+    expect(screen.getAllByRole("img", { name: /^\d+ × \d+:/ })).toHaveLength(100);
+    expect(screen.getByText(/of 100 known/)).toHaveTextContent("1 of 100 known");
+  });
+
+  it("starts a round of the set", () => {
+    chart();
+    fireEvent.click(screen.getByRole("button", { name: /Practise times tables/ }));
+    expect(h.go).toHaveBeenCalledWith("/session", { mode: "facts", scope: "mul" });
+  });
+
+  it("has no chart for a set the grade doesn't have, or for dividing", () => {
+    h.grade = "1";
+    chart();
+    expect(screen.getByText("That chart isn't here.")).toBeInTheDocument();
   });
 });

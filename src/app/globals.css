@@ -560,6 +560,13 @@ main[tabindex="-1"]:focus {
   [data-state="wrong"] {
     border: 3px dashed GrayText;
   }
+  /* Math Facts chart: known facts get a solid edge, ones being practised a dashed one. */
+  .fact-cell[data-state="known"] {
+    border: 3px solid Highlight;
+  }
+  .fact-cell[data-state="learning"] {
+    border: 2px dashed CanvasText;
+  }
   .switch-track {
     border: 2px solid ButtonText;
   }

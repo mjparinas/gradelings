@@ -73,7 +73,7 @@ const screenStub = vi.hoisted(() => (name: string) => {
 });
 vi.mock("./Arcade", () => ({ Arcade: screenStub("Arcade"), GameScreen: screenStub("GameScreen") }));
 vi.mock("./Hub", () => ({ Hub: screenStub("Hub") }));
-vi.mock("./Facts", () => ({ FactsPicker: screenStub("FactsPicker") }));
+vi.mock("./Facts", () => ({ FactsPicker: screenStub("FactsPicker"), FactChart: screenStub("FactChart") }));
 vi.mock("./Practice", () => ({ SpeedPicker: screenStub("SpeedPicker"), SubjectPicker: screenStub("SubjectPicker"), UnitList: screenStub("UnitList") }));
 vi.mock("./PlacementTest", () => ({ PlacementTest: screenStub("PlacementTest") }));
 vi.mock("./Secrets", () => ({ SecretsListener: () => <p>secrets on</p> }));
@@ -263,9 +263,11 @@ describe("PlayApp routes", () => {
     ["room", "Room"],
     ["speed", "SpeedPicker"],
     ["facts", "FactsPicker"],
-    ["session?mode=facts&scope=mul", "Session mode=facts scope=mul"],
-    ["session?mode=review", "Session mode=review scope=mix"],
-    ["session?mode=practice&scope=3/math/add", "Session mode=practice scope=3/math/add"],
+    ["facts/mul", "FactChart id=mul"],
+    ["session?mode=facts&scope=mul", "Session mode=facts scope=mul resume=false"],
+    ["session?mode=review", "Session mode=review scope=mix resume=false"],
+    ["session?mode=practice&scope=3/math/add", "Session mode=practice scope=3/math/add resume=false"],
+    ["session?mode=practice&scope=3/math/add&resume=1", "Session mode=practice scope=3/math/add resume=true"],
     ["placement/math", "PlacementTest subject=math"],
     ["arcade", "Arcade"],
     ["arcade/ninja", "GameScreen id=ninja"],
@@ -286,7 +288,7 @@ describe("PlayApp routes", () => {
       ["peek", "SneakPeek"],
       ["practice/math?grade=4", "UnitList subject=math grade=4"],
       ["lesson?scope=4/math/add", "LessonScreen unitKey=4/math/add"],
-      ["session?mode=practice&scope=4/math/add", "Session mode=practice scope=4/math/add"],
+      ["session?mode=practice&scope=4/math/add", "Session mode=practice scope=4/math/add resume=false"],
     ]) {
       h.route = route;
       h.gate.mockClear();
