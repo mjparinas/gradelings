@@ -1,0 +1,132 @@
+name: Android
+
+# Builds the Android app (docs/ANDROID.md), a Trusted Web Activity made with Bubblewrap from
+# android/twa-manifest.json, so nobody needs Java or the Android SDK on their own computer.
+#
+# - On a pull request that touches android/, it builds with a throwaway key, to check the build works.
+# - Run by hand with "build" to make the signed bundle for Google Play (needs the secrets below).
+#   Download "gradelings-android" from the run's Artifacts and upload the .aab to the Play Console.
+# - Run by hand with "create-key" once, to make the upload key. Download "upload-key" from the run's
+#   Artifacts within a day, keep it in a password manager and add it as the ANDROID_KEYSTORE_B64 secret.
+#
+# Secrets (Settings > Secrets and variables > Actions):
+#   ANDROID_KEYSTORE_PASSWORD  a long password you choose; used for both the keystore and the key
+#   ANDROID_KEYSTORE_B64       the upload key, as the "create-key" run prints it (base64 text)
+
+on:
+  pull_request:
+    paths: ["android/**", ".github/workflows/android.yml"]
+  workflow_dispatch:
+    inputs:
+      task:
+        description: What to do
+        type: choice
+        options: [build, create-key]
+        default: build
+
+concurrency:
+  group: android-${{ github.ref }}-${{ inputs.task || 'check' }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  BUBBLEWRAP: "@bubblewrap/cli@1.27.0"
+  KEY_ALIAS: grademap-upload
+
+jobs:
+  create-key:
+    name: Create the upload key
+    if: github.event_name == 'workflow_dispatch' && inputs.task == 'create-key'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/setup-java@v5
+        with: { distribution: temurin, java-version: "17" }
+      - name: Make the keystore
+        env:
+          PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          HAVE_KEY: ${{ secrets.ANDROID_KEYSTORE_B64 != '' }}
+        run: |
+          if [ -z "$PASSWORD" ]; then echo "::error::Add the ANDROID_KEYSTORE_PASSWORD secret first (docs/ANDROID.md)"; exit 1; fi
+          if [ "$HAVE_KEY" = true ]; then echo "::error::ANDROID_KEYSTORE_B64 is already set. A second key would not match the one Google Play knows; delete the secret first only if you really mean to replace it."; exit 1; fi
+          mkdir out
+          keytool -genkeypair -v -keystore out/grademap-upload.keystore -alias "$KEY_ALIAS" \
+            -keyalg RSA -keysize 2048 -validity 10000 \
+            -storepass "$PASSWORD" -keypass "$PASSWORD" \
+            -dname "CN=Gradelings, O=Gradelings, C=CA"
+          base64 -w0 out/grademap-upload.keystore > out/ANDROID_KEYSTORE_B64.txt
+          keytool -list -v -keystore out/grademap-upload.keystore -storepass "$PASSWORD" | grep -E "SHA256:" | tee out/upload-key-sha256.txt
+          cat > out/README.txt <<'TXT'
+          grademap-upload.keystore   the upload key itself. Keep it, and the password, in a password manager.
+          ANDROID_KEYSTORE_B64.txt   paste this text as the ANDROID_KEYSTORE_B64 repository secret.
+          upload-key-sha256.txt      the upload key's fingerprint (only needed to test an APK you didn't get from Play).
+          TXT
+      - uses: actions/upload-artifact@v7
+        with:
+          name: upload-key
+          path: out/
+          retention-days: 1
+
+  build:
+    name: Build the Android app
+    if: github.event_name == 'pull_request' || inputs.task == 'build'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-java@v5
+        with: { distribution: temurin, java-version: "17" }
+      - uses: actions/setup-node@v7
+        with: { node-version: 22 }
+      - name: Point Bubblewrap at the runner's JDK and Android SDK
+        run: |
+          mkdir -p ~/.bubblewrap
+          printf '{"jdkPath":"%s","androidSdkPath":"%s"}\n' "$JAVA_HOME" "$ANDROID_HOME" > ~/.bubblewrap/config.json
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
+      - name: Get the signing key
+        working-directory: android
+        env:
+          KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_B64 }}
+          PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          REAL: ${{ github.event_name == 'workflow_dispatch' }}
+        run: |
+          if [ "$REAL" = true ]; then
+            if [ -z "$KEYSTORE_B64" ] || [ -z "$PASSWORD" ]; then
+              echo "::error::Add the ANDROID_KEYSTORE_B64 and ANDROID_KEYSTORE_PASSWORD secrets first (docs/ANDROID.md)"; exit 1
+            fi
+            echo "$KEYSTORE_B64" | base64 -d > grademap-upload.keystore
+          else
+            # A pull request only checks that the app builds, so it signs with a key made on the spot.
+            PASSWORD="throwaway-$GITHUB_RUN_ID"
+            keytool -genkeypair -keystore grademap-upload.keystore -alias "$KEY_ALIAS" -keyalg RSA -keysize 2048 \
+              -validity 1 -storepass "$PASSWORD" -keypass "$PASSWORD" -dname "CN=Throwaway" > /dev/null 2>&1
+          fi
+          echo "::add-mask::$PASSWORD"
+          echo "BUBBLEWRAP_KEYSTORE_PASSWORD=$PASSWORD" >> "$GITHUB_ENV"
+          echo "BUBBLEWRAP_KEY_PASSWORD=$PASSWORD" >> "$GITHUB_ENV"
+      - name: Generate the Android project from twa-manifest.json
+        working-directory: android
+        run: yes "" | npx -y "$BUBBLEWRAP" update --skipVersionUpgrade
+      - name: Check the package id didn't change
+        working-directory: android
+        run: |
+          test "$(jq -r .packageId twa-manifest.json)" = ca.grademap.app
+          git diff --exit-code -- twa-manifest.json || { echo "::error::Bubblewrap changed twa-manifest.json; commit the change or fix the config"; exit 1; }
+      - name: Build and sign
+        working-directory: android
+        run: yes "" | npx -y "$BUBBLEWRAP" build --skipPwaValidation
+      - name: Show what was built
+        working-directory: android
+        run: |
+          ls -l app-release-bundle.aab app-release-signed.apk
+          echo "Version: $(jq -r '.appVersionName + " (code " + (.appVersionCode|tostring) + ")"' twa-manifest.json)" >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v7
+        if: github.event_name == 'workflow_dispatch'
+        with:
+          name: gradelings-android
+          path: |
+            android/app-release-bundle.aab
+            android/app-release-signed.apk
+          retention-days: 14

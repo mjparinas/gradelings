@@ -22,24 +22,20 @@ The web manifest is unchanged. The package id `ca.grademap.app` is in two places
 
 ## What you need to do yourself
 
-Nothing here can be done from code; each step needs an account, a key or a domain.
+Each of these needs an account or a choice only the owner can make. The build itself runs on GitHub (`.github/workflows/android.yml`), so no Java or Android SDK is needed on your computer.
 
-1. **Deploy to the production domain first** (`docs/DEPLOY.md`). The TWA verifies the site over the network, so localhost or a preview URL won't do.
-2. **Set the real domain.** In `android/twa-manifest.json`, `host`, `iconUrl`, `maskableIconUrl` and `webManifestUrl` use `gradelings.com`. Keep them matched to `NEXT_PUBLIC_SITE_URL`.
-3. **Create a Google Play Console developer account** (play.google.com/console; a one-time fee and identity verification). Check Google's current rules for new accounts: a personal account may have to run a closed test with a minimum number of testers for a set time before it can publish to production.
-4. **Create the upload key** (keep the file and passwords in a password manager; never commit them):
-   ```bash
-   cd android
-   npx @bubblewrap/cli init --manifest=https://<domain>/manifest.webmanifest
-   ```
-   Bubblewrap needs a JDK and the Android SDK and offers to download both. `init` can create the keystore; the path and alias in `twa-manifest.json` are `./grademap-upload.keystore` and `grademap-upload`. If `init` rewrites `twa-manifest.json`, check that `packageId` is still `ca.grademap.app`.
-5. **Build:** `npx @bubblewrap/cli build` in `android/` makes `app-release-bundle.aab` (upload to Play) and an `.apk` (install on a device for testing).
-6. **Use Play App Signing** when you create the app in the Play Console (it is the default). Google re-signs the app with its own key, so **the fingerprint that matters is Google's**: Play Console > your app > App integrity > App signing > "SHA-256 certificate fingerprint".
-7. **Set `ANDROID_CERT_SHA256`** in Vercel to that fingerprint. To also test an APK you built locally, add the upload key's fingerprint too (`keytool -list -v -keystore grademap-upload.keystore`), comma-separated. No redeploy of the build is needed: the route reads the variable on each request.
-8. **Check the link:** open `https://<domain>/.well-known/assetlinks.json` (it should list your fingerprint) and, with the app installed on a device, confirm there is no browser bar. If the bar shows, the fingerprint, package id or host doesn't match.
-9. **Fill in the Play listing:** screenshots (phone, 7" and 10" tablet), descriptions, the privacy policy URL (`/privacy/`), the Data safety form and the content rating questionnaire. The text and every form answer are drafted in `docs/PLAY_LISTING.md`.
+1. **Create a Google Play Console developer account** (play.google.com/console; a one-time US$25 fee and identity verification). An organization account needs a D-U-N-S number. A **personal** account created after November 2023 must run a closed test with at least 12 testers for 14 days in a row before it can apply for production; an organization account skips that. Check Google's current rules when you sign up.
+2. **Make the upload key.** In GitHub, add the secret `ANDROID_KEYSTORE_PASSWORD` (a long password; keep it in a password manager). Then Actions > Android > Run workflow > task `create-key`. Download the `upload-key` artifact within a day, keep `grademap-upload.keystore` with the password in your password manager, and paste the text of `ANDROID_KEYSTORE_B64.txt` into a new secret `ANDROID_KEYSTORE_B64`. The run refuses to make a second key once that secret exists.
+3. **Build:** Actions > Android > Run workflow > task `build`. The `gradelings-android` artifact has `app-release-bundle.aab` (upload to Play) and `app-release-signed.apk` (installs on a device for testing).
+4. **Create the app in the Play Console** with the package `ca.grademap.app` and keep **Play App Signing** on (the default). Google re-signs the app with its own key, so **the fingerprint that matters is Google's**: your app > Test and release > App integrity > App signing > "SHA-256 certificate fingerprint".
+5. **Set `ANDROID_CERT_SHA256`** in Vercel (Production) to that fingerprint. To also test the APK from step 3, add the upload key's fingerprint (`upload-key-sha256.txt`), comma-separated. The route reads the variable on each request, but Vercel only applies a changed variable to new deployments, so redeploy once.
+6. **Check the link:** `https://www.gradelings.com/.well-known/assetlinks.json` should list the fingerprint. With the app installed from Play, there should be no browser bar. If the bar shows, the fingerprint, package id or host doesn't match.
+7. **Fill in the listing and App content pages** from `docs/PLAY_LISTING.md`: descriptions, screenshots, privacy policy, target audience (this puts the app in the Families program), Data safety, content rating and reviewer access.
+8. **Release:** upload the `.aab` to Internal testing first and install it on your own phone and tablet; then the closed test if your account needs one; then Production. Google's review of a new app usually takes a few days, sometimes longer for apps for children.
 
-For later releases, raise `appVersionCode` and `appVersionName` in `android/twa-manifest.json`, run `npx @bubblewrap/cli build`, and upload the new bundle. Site changes need no new release.
+The host is `www.gradelings.com`, not the bare domain: the bare domain answers with a redirect to `www`, and Android won't follow a redirect to `assetlinks.json`, so the app would always show a browser bar. A test (`src/lib/android.test.ts`) keeps it so. If the site ever moves domain, change `host` and the three URLs in `android/twa-manifest.json`, and publish a new version.
+
+For later releases, raise `appVersionCode` and `appVersionName` in `android/twa-manifest.json`, run the `build` task again, and upload the new bundle. (On your own computer instead: `npx @bubblewrap/cli update --skipVersionUpgrade` then `npx @bubblewrap/cli build` in `android/`, which needs JDK 17 and the Android SDK.) Site changes need no new release.
 
 ## Paying: not inside the Android app
 

@@ -20,4 +20,14 @@ describe("android asset links", () => {
     const twa = JSON.parse(readFileSync("android/twa-manifest.json", "utf8"));
     expect(twa.packageId).toBe(ANDROID_PACKAGE);
   });
+  it("points the app at www, the host that serves assetlinks.json without a redirect", async () => {
+    // The apex domain answers 308 to www, and Android won't follow a redirect to assetlinks.json,
+    // so a TWA on the apex would always show the browser bar.
+    const { readFileSync } = await import("node:fs");
+    const twa = JSON.parse(readFileSync("android/twa-manifest.json", "utf8"));
+    expect(twa.host).toBe("www.gradelings.com");
+    for (const key of ["iconUrl", "maskableIconUrl", "webManifestUrl"]) {
+      expect(new URL(twa[key]).host, key).toBe(twa.host);
+    }
+  });
 });
