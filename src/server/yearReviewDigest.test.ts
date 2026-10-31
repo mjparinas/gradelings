@@ -180,3 +180,52 @@ describe("the Monday class email", () => {
     expect((await digest.PATCH(req("/api/classes/digest/", "PATCH", { on: false }, t.cookie))).status).toBe(200);
   });
 });
+
+describe("the weekly email for parents", () => {
+  it("lists the child's homework, math facts, stories and an idea to try at home", async () => {
+    vi.useFakeTimers({ toFake: ["Date"] });
+    const sunday = dayWhere(Date.now() + DAY, (d) => d.getUTCDay() === 0);
+    // Saturday: the class is set up, the homework assigned, and Maya practises.
+    vi.setSystemTime(sunday.getTime() - DAY);
+    const teacher = await family("weekly-hw-teacher@example.com", { name: "Riley" });
+    const { class: cls } = await (await classes.POST(req("/api/classes/", "POST", { name: "Room 7", grade: "2" }, teacher.cookie))).json();
+    await dbm.run("INSERT INTO class_assignments (class_id, unit_key, created_at, due_at, goal) VALUES (?, ?, ?, ?, ?)", [cls.id, "2/math/tens-and-ones", Date.now() - DAY, Date.now() + 3 * DAY, 20]);
+    const f = await family("weekly-hw@example.com");
+    await prefs.POST(req("/api/account/prefs/", "POST", { weeklyReport: true }, f.cookie));
+    await dbm.run("INSERT INTO class_members (class_id, profile_id, family_id, joined_at) VALUES (?, ?, ?, ?)", [cls.id, f.id, f.familyId, Date.now()]);
+    const t = Date.now();
+    const base = { profileId: f.id, attempts: 1, revealed: false, ms: 4000, mode: "facts", difficulty: 1 };
+    const events = [
+      ...[0, 1].map((i) => ({ ...base, id: `${f.id}-fact${i}`, type: "answer", t: t + 20_000 + i * 1000, unit: "2/math/facts", fact: "add:3:4", correct: true })),
+      { id: `${f.id}-story`, profileId: f.id, type: "story", t: t + 30_000, story: "lost-mitten", rl: 2, results: [true, true, false], pages: 6, ms: 120_000 },
+    ];
+    await sync.POST(req("/api/sync/", "POST", { events }, f.cookie));
+
+    vi.setSystemTime(sunday);
+    await runJob();
+    const mail = email.outbox().filter((m) => m.to === "weekly-hw@example.com" && m.subject.includes("week")).at(-1)!;
+    // Ten of the twenty questions the teacher asked for were answered after the unit was assigned.
+    expect(mail.text).toContain("Homework: Maya has finished 0 of 1 unit from the teacher.");
+    expect(mail.text).toContain("Tens & Ones: 10 of 20 questions, due this week.");
+    // "3 + 4" is in both Grade 2 addition sets, and counts once as new.
+    expect(mail.text).toContain("Math facts: Maya knows 1 of 45 adding facts to 10 and 1 of 100 addition facts to 20 (1 new this week).");
+    expect(mail.text).toContain("Stories: Maya read 1 story in the Story Library.");
+    expect(mail.text).toMatch(/Try at home: \S/);
+    expect(mail.text).toContain("report-card mark");
+  });
+
+  it("leaves the extra lines out for a family with the flags off", async () => {
+    vi.useFakeTimers({ toFake: ["Date"] });
+    const sunday = dayWhere(Date.now() + DAY, (d) => d.getUTCDay() === 0);
+    vi.setSystemTime(sunday.getTime() - DAY);
+    const f = await family("weekly-plain@example.com");
+    await prefs.POST(req("/api/account/prefs/", "POST", { weeklyReport: true }, f.cookie));
+    const flags = await import("@/server/flags");
+    await flags.setOverride("weekly-email-extras", f.familyId, false);
+    vi.setSystemTime(sunday);
+    await runJob();
+    const mail = email.outbox().filter((m) => m.to === "weekly-plain@example.com" && m.subject.includes("week")).at(-1)!;
+    expect(mail.text).toContain("Maya: ");
+    expect(mail.text).not.toContain("Try at home");
+  });
+});
