@@ -61,9 +61,11 @@ export function LessonScreen({ unitKey }: { unitKey: string }) {
   const settings = useChildSettings();
   const lesson = ref?.unit.lesson;
   const auto = Boolean(settings?.autoRead) || band === "little";
+  // The « » parts of a Spanish lesson are Spanish; every other lesson marks French that way.
+  const quoted = ref ? (getSubjectMeta(ref.course.subject).language ?? "fr") : "fr";
   useEffect(() => {
     if (!lesson) go("/session", { mode: "practice", scope: unitKey }, true);
-    else if (auto) speakMixed(lessonSpeech(lesson));
+    else if (auto) speakMixed(lessonSpeech(lesson), quoted);
     return stopSpeaking;
     // Read once when the lesson opens.
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -90,7 +92,7 @@ export function LessonScreen({ unitKey }: { unitKey: string }) {
         <button type="button" className="btn btn-good min-h-16 flex-1 text-2xl" onClick={practise}>
           Let&apos;s practise! ▶
         </button>
-        <button type="button" className="btn min-h-16 text-xl" onClick={() => speakMixed(lessonSpeech(lesson))}>
+        <button type="button" className="btn min-h-16 text-xl" onClick={() => speakMixed(lessonSpeech(lesson), quoted)}>
           🔊 Read to me
         </button>
       </div>

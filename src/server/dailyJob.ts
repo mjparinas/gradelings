@@ -1,7 +1,7 @@
 import "server-only";
 import { loadChildData, loadChildReport, familyProfileIds } from "@/server/reportData";
 import { getUnitRef, loadGrade } from "@/content";
-import { assignedAt, assignmentDue, familyClasswork, assignmentGoals, assignmentKeys, classGrades, classProgressAndMisses, type ClassRow } from "@/server/classroom";
+import { assignedAt, assignmentDue, familyClasswork, assignmentGoals, assignmentKeys, assignmentStarts, classGrades, classProgressAndMisses, type ClassRow } from "@/server/classroom";
 import { classDigestLines } from "@/lib/classDigest";
 import { isYearReviewEmailDay, reviewYearOf, schoolYearStart, yearReview, type YearReviewChild } from "@/lib/yearReview";
 import { unsubscribeToken } from "@/server/auth";
@@ -532,7 +532,7 @@ async function classDigests(ctx: Ctx): Promise<boolean> {
         for (const g of classGrades(cls)) await loadGrade(g, cls.framework);
         const unitName = (key: string) => getUnitRef(key, cls.framework)?.unit.title ?? key;
         const lines = classDigestLines(
-          { name: cls.name, students, assignments: keys, due: await assignmentDue(cls.id), goal: await assignmentGoals(cls.id), assignedAt: await assignedAt(cls.id) },
+          { name: cls.name, students, assignments: keys, due: await assignmentDue(cls.id), goal: await assignmentGoals(cls.id), assignedAt: await assignedAt(cls.id), startsAt: await assignmentStarts(cls.id) },
           unitName,
           now,
         );

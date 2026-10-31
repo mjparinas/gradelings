@@ -45,7 +45,8 @@ describe("Nebraska", () => {
     // Grade 9 cites the high school standards, and the Grades 9-10 band of English language arts, which the document
     // codes with a 10.
     const prefix = { math: "MA", language: "LA", science: "SC", social: "SS" } as const;
-    for (const { c, u, key } of nebraska) {
+    // The shared Spanish course cites the World-Readiness Standards, checked by spanishCite in the contract tests.
+    for (const { c, u, key } of nebraska.filter(({ c }) => c.subject !== "spanish")) {
       const g = c.grade === "k" ? "K" : c.grade === "9" ? (c.subject === "language" ? "10" : "HS") : c.grade;
       const p = prefix[c.subject as keyof typeof prefix];
       const sep = c.subject === "social" ? " " : ".";

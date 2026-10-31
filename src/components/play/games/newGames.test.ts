@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { withSeed } from "@/content/random";
 import type { GradeId } from "@/content/types";
 import { bridgeQuestion, frenchStep } from "./bridge";
+import { spanishStep } from "./bridgeSpanish";
 import { clockMinutes, clockRound, decoyTime, digital, handAngles, inWords, sameTime } from "./clock";
 import { canadianWords } from "@/content/locale";
 import { fewestPieces, formatMoney, MONEY, sayMoney, shopOrder, US_MONEY } from "./coins";
@@ -509,5 +510,59 @@ describe("Timeline Snap and Memory Match in the United States", () => {
     expect(commas).toBe(true);
     expect(spaced(54321, "US")).toBe("54,321");
     expect(spaced(4321, "US")).toBe("4321");
+  });
+});
+
+describe("Word Bridge in Spanish", () => {
+  const SPANISH: GradeId[] = ["3", "4", "5", "6", "7", "8", "9"];
+
+  it("starts with pictures and numbers and reaches verb tenses by Grade 9", () => {
+    expect(spanishStep("3")).toBe(0);
+    expect(spanishStep("6")).toBe(1);
+    expect(spanishStep("8")).toBe(2);
+    expect(spanishStep("9")).toBe(3);
+  });
+
+  it("asks in English with Spanish choices, the answer once among different choices", () => {
+    for (const grade of SPANISH) {
+      for (const seed of seeds(60)) {
+        const q = withSeed(seed, () => bridgeQuestion(grade, ["spanish"]));
+        expect(q.answerLang, q.prompt).toBe("es");
+        expect(q.speakLang).toBe("en");
+        expect(q.choices.filter((c) => c === q.answer), q.prompt).toHaveLength(1);
+        expect(new Set(q.choices).size).toBe(q.choices.length);
+        expect(q.choices.length).toBeGreaterThanOrEqual(2);
+      }
+    }
+  });
+
+  it("mixes French and Spanish for a child taking both", () => {
+    const langs = new Set(seeds(60).map((seed) => withSeed(seed, () => bridgeQuestion("6", ["core-french", "spanish"])).answerLang ?? "fr"));
+    expect([...langs].sort()).toEqual(["es", "fr"]);
+  });
+
+  it("gets the grammar right", () => {
+    const facts: Record<string, string> = {
+      "nosotros ___ (vivir)": "vivimos",
+      "yo ___ (tener)": "tengo",
+      "ellos ___ (ser)": "son",
+      "tú ___ (ir)": "vas",
+      "Ella ___ en la escuela.": "está",
+      "Mi padre ___ médico.": "es",
+      "Ayer ella ___ pizza. (comer)": "comió",
+      "___ casa": "la",
+      "___ árbol": "el",
+    };
+    const seen = new Set<string>();
+    for (const grade of SPANISH) {
+      for (const seed of seeds(200)) {
+        const q = withSeed(seed, () => bridgeQuestion(grade, ["spanish"]));
+        if (facts[q.prompt]) {
+          expect(q.answer, q.prompt).toBe(facts[q.prompt]);
+          seen.add(q.prompt);
+        }
+      }
+    }
+    expect(seen.size).toBeGreaterThan(4);
   });
 });

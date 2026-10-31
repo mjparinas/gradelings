@@ -30,7 +30,7 @@ vi.mock("./FestivalCard", () => ({ FestivalCard: () => <div data-testid="festiva
 vi.mock("./WeekRecapCard", () => ({ WeekRecapCard: () => <div data-testid="week-recap-card" /> }));
 vi.mock("@/lib/router", () => ({ go: vi.fn() }));
 vi.mock("@/lib/useNow", () => ({ useNow: () => h.now }));
-vi.mock("@/lib/remoteFlags", () => ({ useIsOn: () => (key: string) => !h.off.has(key) }));
+vi.mock("@/lib/remoteFlags", () => ({ useIsOn: () => (key: string) => !h.off.has(key), isOn: (key: string) => !h.off.has(key) }));
 vi.mock("@/lib/account", () => ({ signOutStudent: h.signOutStudent }));
 vi.mock("@/lib/store", () => ({
   useStore: (select: (s: unknown) => unknown) => select({ family: h.family, log: vi.fn(), events: h.events, classwork: [] }),

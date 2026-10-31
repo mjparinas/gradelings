@@ -6,7 +6,10 @@ import type { Currency } from "./money";
 import type { RegisteredId } from "./registry";
 
 export type GradeId = "pk" | "k" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9";
-export type SubjectId = "math" | "language" | "science" | "social" | "immersion" | "core-french";
+export type SubjectId = "math" | "language" | "science" | "social" | "immersion" | "core-french" | "spanish";
+
+/** A second language that questions are read aloud in (French Immersion and Core French, Spanish). */
+export type QuestionLanguage = "fr" | "es";
 /** A curriculum framework: a province, state or national standard set. One per manifest in ./registry. */
 export type FrameworkId = RegisteredId;
 /** UI and wording adapt to the child's age band. */
@@ -107,11 +110,13 @@ interface BaseQuestion {
   /** What read-aloud says, if different from the prompt (e.g. letter sounds). */
   speak?: string;
   /** Set to "fr" when the prompt (and passage) is in French, so read-aloud uses a French voice. Hints stay in English. */
-  lang?: "fr";
-  /** Core French: the answer choices are French even though the prompt is English. */
-  choicesLang?: "fr";
-  /** Core French: the passage or story shown above is French even though the prompt is English. */
-  visualLang?: "fr";
+  lang?: QuestionLanguage;
+  /** Core French and Spanish: the answer choices are in the language even though the prompt is English. */
+  choicesLang?: QuestionLanguage;
+  /** Core French and Spanish: the passage or story shown above is in the language even though the prompt is English. */
+  visualLang?: QuestionLanguage;
+  /** The language of « » quotations inside an English prompt: French unless set (Spanish questions set "es"). */
+  quoteLang?: QuestionLanguage;
   /** Shown after a miss, and again with the answer if they still need help. */
   hint: string;
   visual?: Visual;
@@ -229,6 +234,11 @@ export interface Unit {
   parentNote: string;
   /** The learning standard this unit practises, per framework. */
   standards: Partial<Record<FrameworkId, string>>;
+  /**
+   * The standard for every framework `standards` doesn't name, for a course every framework offers (Spanish). Filled
+   * in by mergeCourses (./index), so a grade file needn't import the registry to list every framework.
+   */
+  standardElsewhere?: string;
   /** An optional short lesson. Added per grade in ./lessons, so it can be shared by every province that uses the unit. */
   lesson?: Lesson;
   /** Returns 6–10 questions. Must only use the helpers in ../random (never Math.random). */
@@ -241,6 +251,8 @@ export interface Course {
   subject: SubjectId;
   /** Big Ideas (or equivalent) per framework, shown to parents. */
   bigIdeas: Partial<Record<FrameworkId, string[]>>;
+  /** The Big Ideas for every framework `bigIdeas` doesn't name (see Unit.standardElsewhere). */
+  bigIdeasElsewhere?: string[];
   units: Unit[];
   /**
    * Units another framework's content already provides that this framework also uses as they

@@ -1,8 +1,9 @@
 // @vitest-environment jsdom
-import { fireEvent, render, screen, within } from "@testing-library/react";
+import { act, fireEvent, render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { defaultChildSettings, type ChildSettings, type Profile } from "@/lib/model";
+import { setRemoteFlags } from "@/lib/remoteFlags";
 
 // The real store runs; the device database is faked.
 vi.mock("@/lib/localdb", () => ({
@@ -189,6 +190,17 @@ describe("SettingsPage", () => {
     await userEvent.click(screen.getByRole("checkbox", { name: /Math/ }));
     expect(stored().enabledSubjects).toEqual(["math"]);
     expect(screen.getByRole("checkbox", { name: /Math/ })).toHaveAttribute("aria-checked", "true");
+  });
+
+  it("offers Spanish from Grade 3 once its flag is on, and not before", async () => {
+    render(<SettingsPage />);
+    expect(screen.queryByRole("checkbox", { name: /Spanish/ })).not.toBeInTheDocument();
+    act(() => setRemoteFlags({ flags: { spanish: true }, variants: {} }));
+    const spanish = screen.getByRole("checkbox", { name: /Spanish/ });
+    expect(spanish).toHaveAttribute("aria-checked", "false");
+    await userEvent.click(spanish);
+    expect(stored().enabledSubjects).toContain("spanish");
+    act(() => setRemoteFlags({ flags: {}, variants: {} }));
   });
 
   it("leaves the device-wide voice and PIN to the Account page", () => {

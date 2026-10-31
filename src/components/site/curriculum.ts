@@ -1,7 +1,7 @@
 import { coursesInFramework, unitKey } from "@/content";
 import { COURSES } from "@/content/all";
 import { FRAMEWORKS, getFramework, type Framework } from "@/content/frameworks";
-import { ageBandFor, getSubjectMeta, gradeFromSlug, gradeSlug } from "@/content/subjects";
+import { ageBandFor, getSubjectMeta, gradeFromSlug, gradeSlug, publicSubject } from "@/content/subjects";
 import { gradeName, localeOf, localizeText } from "@/content/locale";
 import type { Course, GradeId, SubjectId, Unit } from "@/content/types";
 import { courseUpdated, curriculumUpdated, gradeUpdated, latest, unitUpdated } from "@/content/updated";
@@ -14,9 +14,10 @@ export function frameworkBySlug(slug: string): Framework | undefined {
 }
 
 export function coursesFor(framework: Framework, grade: GradeId): Course[] {
-  // Units carry standards per framework; each framework sees only the units it has standards for.
+  // Units carry standards per framework; each framework sees only the units it has standards for. A subject still behind
+  // its flag (Spanish) has no public pages yet.
   return coursesInFramework(
-    COURSES.filter((c) => c.grade === grade && framework.grades.includes(grade)),
+    COURSES.filter((c) => c.grade === grade && framework.grades.includes(grade) && publicSubject(c.subject)),
     framework.id,
   );
 }

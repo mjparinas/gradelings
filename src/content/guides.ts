@@ -201,6 +201,26 @@ export const HOME_TIPS: Record<SubjectId, Record<AgeBand, string[]>> = {
       "Look up a Francophone festival or community in Canada and share one thing you learned.",
     ],
   },
+  spanish: {
+    little: [
+      "Learn a few Spanish words together, like hola, gracias and adiós.",
+      "Count to ten in Spanish while you set the table.",
+      "Name colours and animals in Spanish on a walk.",
+      "Greet each other in Spanish at breakfast.",
+    ],
+    middle: [
+      "Learn a few Spanish words together, like hola, gracias and adiós.",
+      "Label things around the house with Spanish sticky notes.",
+      "Count in Spanish while climbing the stairs.",
+      "Play a Spanish game or watch a short Spanish video together.",
+    ],
+    big: [
+      "Practise a few minutes a day: greetings, numbers, then simple sentences about yourself.",
+      "Say your answers out loud in Spanish, even if you are not sure. Speaking is how it sticks.",
+      "Watch Spanish videos with subtitles and spot words that look like English (cognates).",
+      "Look up a celebration from a Spanish-speaking country and share one thing you learned.",
+    ],
+  },
 };
 
 /**

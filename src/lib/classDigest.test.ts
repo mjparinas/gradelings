@@ -46,6 +46,15 @@ describe("the Monday class email", () => {
     expect(classDigestLines(happy, name, NOW).at(-1)).toBe("  Nobody needs a check-in this week. 🎉");
   });
 
+  it("counts a unit scheduled ahead as homework only once it starts, from its start date", () => {
+    // Planned two months ago to start three days ago: current homework, though it was assigned long ago.
+    const started = cls({ due: {}, assignedAt: { "3/math/fractions": NOW - 60 * DAY, "3/math/old": NOW - 60 * DAY }, startsAt: { "3/math/old": NOW - 3 * DAY } });
+    expect(classDigestLines(started, name, NOW).join("\n")).toContain("Homework, Old unit");
+    // Not started yet: not listed, even with every student marked as given it.
+    const waiting = cls({ startsAt: { "3/math/fractions": NOW + 2 * DAY } });
+    expect(classDigestLines(waiting, name, NOW).join("\n")).not.toContain("Homework, Fractions");
+  });
+
   it("has nothing to say for a class with no students or nothing assigned", () => {
     expect(classDigestLines(cls({ students: [] }), name, NOW)).toEqual([]);
     expect(classDigestLines(cls({ assignments: [] }), name, NOW)).toEqual([]);

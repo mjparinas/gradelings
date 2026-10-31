@@ -336,6 +336,16 @@
       "maps-and-globes text=6a6a9ae26b std=18cefda807 q=fd8314b02c"
     ]
   },
+  "3/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "saludos text=0e496163f1 std=81fd30989b q=6eb3a6e66f",
+      "numeros-hasta-20 text=23e8632af0 std=2c8be968c9 q=a349f236c5",
+      "colores text=3ed4b7d140 std=1b910c4c55 q=4763b47770",
+      "animales text=badbbecebe std=0f498f10c6 q=128d83d818",
+      "familia text=b2dcc8e66e std=8faa275c49 q=86a8e86e86"
+    ]
+  },
   "4/core-french": {
     "overview": "8dc2c1a80e",
     "units": [
@@ -423,6 +433,16 @@
       "industry-env-4 text=f4691e8c2e std=6999540327 q=7de9188559",
       "political-4 text=06b12ed63a std=7a2aadced1 q=c7cfd797e6",
       "provinces-and-regions text=57d19f24c1 std=f9951b1db6 q=383103dd3d"
+    ]
+  },
+  "4/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "cuerpo text=8eaaf9bf61 std=8c08a1ee0b q=73f074b2b4",
+      "escuela text=e9996c83b9 std=aae3f690b6 q=ae47848fa7",
+      "dias-y-meses text=34db9dab39 std=024d22536e q=cb10fd8733",
+      "tiempo text=42f12e5fce std=4e118d7e71 q=1cc1215af3",
+      "ropa text=34970c68fc std=efa7f79cc2 q=f0e3970adf"
     ]
   },
   "5/core-french": {
@@ -513,6 +533,16 @@
       "rights-and-freedoms text=2369786fde std=486953fb56 q=ff4eff6018",
       "citizen-action-5 text=f28f71cf64 std=7428b3c881 q=0794058cb7",
       "inquiry-5 text=e3bf1b8910 std=c876b9467c q=ceaebe5dfd"
+    ]
+  },
+  "5/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "sonidos text=80683d829a std=27fd41838f q=58c17693b8",
+      "el-y-la text=cb225e5d39 std=38c5881bb8 q=1074c9539b",
+      "gustos text=d36fa4b597 std=e9c4eb69ac q=810c4ba7db",
+      "sobre-mi text=8d8ab79cae std=abb6b5215a q=d4ac49825c",
+      "fiestas text=97e8a47873 std=e64520304e q=d84d35d37b"
     ]
   },
   "6/core-french": {
@@ -606,6 +636,16 @@
       "global-challenges text=e6d834ab65 std=d29f9242b3 q=a4c2095188",
       "trade-and-globalization text=5973228b70 std=fbe72b8179 q=15577023bc",
       "inquiry-6 text=66a2b7f908 std=11edda9a07 q=484d6ef20b"
+    ]
+  },
+  "6/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "preguntas text=a185455eef std=ed20ce18ba q=d44b56c84c",
+      "comida text=125b021db0 std=1246d6d4dd q=ffef28847f",
+      "pasatiempos text=c33589e083 std=4cd3a86ef5 q=cc01218407",
+      "emociones text=a925cf1d90 std=289704dd77 q=a82624e446",
+      "personas text=3f99f93025 std=0deaff300e q=4ab03f6e6a"
     ]
   },
   "7/core-french": {
@@ -706,6 +746,16 @@
       "black-history-7 text=d4ca740238 std=8564db2dfd q=087f30c261",
       "war-1812-7 text=2d8ddfacd8 std=91c28730c9 q=703dc16771",
       "reform-rebellions-7 text=8833dae2a4 std=ca3a99c1cb q=8a90a3ffd2"
+    ]
+  },
+  "7/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "verbos-ar text=fc3d64d1c7 std=6c4ba3089b q=2a9f9c0c73",
+      "describir text=0dc4ce0abf std=bcf0bcf6a1 q=44675bd803",
+      "comparaciones text=32f5de1457 std=21d56ee848 q=6e43c85246",
+      "paises text=1827fc7cb2 std=e5fa08cacb q=26617a81ba",
+      "direcciones text=246e0580ed std=3d3546530b q=525b6d4747"
     ]
   },
   "8/core-french": {
@@ -815,6 +865,16 @@
       "economies-8 text=0cb04b3e84 std=dcc1b4ebec q=8bf289f20f"
     ]
   },
+  "8/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "verbos-er-ir text=16633c38db std=21430181d8 q=2a4bf2332c",
+      "ir-a text=418d5f16ce std=deb65aab31 q=13df3f558e",
+      "hora-y-frecuencia text=d2c28828a0 std=d5d00e2856 q=439e808472",
+      "compras text=e832882aee std=c953c869f4 q=aa1245d3bb",
+      "medio-ambiente text=6393bb902f std=6fd14b0904 q=1980351cc5"
+    ]
+  },
   "9/core-french": {
     "overview": "8dc2c1a80e",
     "units": [
@@ -910,6 +970,16 @@
       "population-issues-9 text=b5e7899c1d std=de192d2593 q=a62dc487a7",
       "land-use-9 text=62a6570292 std=a998c0bbd0 q=a92051da22",
       "sustainable-communities-9 text=6e0b029f68 std=927e07e0ef q=9b85a8a6b1"
+    ]
+  },
+  "9/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "preterito text=92cdef7045 std=09bf56e5b4 q=ccac7e09a5",
+      "ser-y-estar text=cf084dc6cc std=f248b63008 q=fd01edeb18",
+      "en-orden text=56d16d8e93 std=3f09b3ef6d q=23cf0bbdba",
+      "profesiones text=55b2e6e3d3 std=69575f4637 q=1c177bd0fb",
+      "cuentos text=942f5f0729 std=ecd51bd440 q=c29106e529"
     ]
   }
 }

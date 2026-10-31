@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import type { AgeBand } from "@/content/types";
 import type { DayStat } from "./derive";
 import { dayKey } from "./model";
-import { activeDay, dailyQuests, weekDays, weeklyQuests, weekStart, type Quest, type WeeklyQuest } from "./quests";
+import { activeDay, dailyQuests, weekDays, weeklyQuests, weekStart, type Quest, type QuestOptions, type WeeklyQuest } from "./quests";
 
 const DAY = 86_400_000;
 const T = new Date(2026, 0, 1, 12).getTime();
@@ -12,9 +12,9 @@ const dayStat = (over: Partial<DayStat> = {}): DayStat => ({
 });
 
 /** Every quest a band can get, gathered from a few years of days and two children. */
-function dailyPool(band: AgeBand): Map<string, Quest> {
+function dailyPool(band: AgeBand, opts?: QuestOptions): Map<string, Quest> {
   const all = new Map<string, Quest>();
-  for (const child of ["p1", "p2"]) for (let i = 0; i < 1000; i++) for (const q of dailyQuests(child, dayKey(T + i * DAY), band)) all.set(q.id, q);
+  for (const child of ["p1", "p2"]) for (let i = 0; i < 1000; i++) for (const q of dailyQuests(child, dayKey(T + i * DAY), band, opts)) all.set(q.id, q);
   return all;
 }
 
@@ -148,5 +148,14 @@ describe("weekly quests", () => {
 
   it("lists the seven days of the week, across a month end", () => {
     expect(weekDays("2026-09-28")).toEqual(["2026-09-28", "2026-09-29", "2026-09-30", "2026-10-01", "2026-10-02", "2026-10-03", "2026-10-04"]);
+  });
+});
+
+describe("the Spanish quest", () => {
+  it("joins the daily pool only for a child taking Spanish", () => {
+    expect(dailyPool("middle").has("spanish-5")).toBe(false);
+    const quest = dailyPool("big", { spanish: true }).get("spanish-5")!;
+    expect(quest.title).toBe("Answer 5 Spanish questions");
+    expect(quest.progress(dayStat({ subjects: { spanish: 6 } }))).toBe(6);
   });
 });

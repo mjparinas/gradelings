@@ -346,6 +346,48 @@ describe("classroom mode", () => {
     expect((await (await classes.GET(req("/api/classes/?badges=1", "GET", undefined, other))).json()).badges).toEqual({});
   });
 
+  it("keeps a unit scheduled ahead from students and parents until its start date", async () => {
+    const teacher = await account_("sched-teacher@example.com");
+    const { class: cls } = await (await classes.POST(req("/api/classes/", "POST", { name: "Room 3", grade: "2" }, teacher))).json();
+    const parent = await parentWithChild("sched-parent@example.com", "sched-kid");
+    expect((await join_.POST(req("/api/classes/join/", "POST", { code: cls.joinCode, profileId: "sched-kid" }, parent))).status).toBe(200);
+    const unitKey = "2/math/tens-and-ones";
+    const tomorrow = Date.now() + 86_400_000;
+    const assign = (body: Record<string, unknown>) => assignments.POST(req("/api/classes/assignments/", "POST", { classId: cls.id, unitKey, ...body }, teacher));
+    const patch = (body: Record<string, unknown>) => assignments.PATCH(req("/api/classes/assignments/", "PATCH", { classId: cls.id, unitKey, ...body }, teacher));
+    const work = async () => (await (await sync.POST(req("/api/sync/", "POST", {}, parent))).json()).classwork[0];
+    const view = async () => (await (await classes.GET(req(`/api/classes/?id=${cls.id}`, "GET", undefined, teacher))).json()) as { startsAt: Record<string, number>; students: { units: { key: string; assigned: boolean }[] }[] };
+
+    // A due date before the start date, or a start date in the past or too far ahead, is refused.
+    expect((await assign({ startsAt: tomorrow, dueAt: tomorrow - 3600_000 })).status).toBe(400);
+    expect((await assign({ startsAt: tomorrow, dueAt: tomorrow + 86_400_000 })).status).toBe(200);
+    expect((await patch({ startsAt: Date.now() - 3 * 86_400_000 })).status).toBe(400);
+    expect((await patch({ startsAt: Date.now() + 400 * 86_400_000 })).status).toBe(400);
+    expect((await patch({ startsAt: tomorrow + 2 * 86_400_000 })).status).toBe(400);
+    expect((await patch({ dueAt: tomorrow - 3600_000 })).status).toBe(400);
+
+    // Before it starts: the child's device (and so the parent) gets nothing, and the teacher sees it as scheduled, not anyone's yet.
+    expect((await work()).unitKeys).toEqual([]);
+    const before = await view();
+    expect(before.startsAt[unitKey]).toBe(tomorrow);
+    expect(before.students[0].units.find((u) => u.key === unitKey)?.assigned).toBe(false);
+
+    // Once the day comes it reaches the child, and homework counts from the start, not from when it was planned.
+    const started = Date.now() - 60_000;
+    await dbm.run("UPDATE class_assignments SET starts_at = ?, created_at = ? WHERE class_id = ? AND unit_key = ?", [started, started - 7 * 86_400_000, cls.id, unitKey]);
+    const after = await work();
+    expect(after.unitKeys).toEqual([unitKey]);
+    expect(after.since[unitKey]).toBe(started);
+    expect((await view()).students[0].units.find((u) => u.key === unitKey)?.assigned).toBe(true);
+
+    // Clearing the start date gives it out at once.
+    expect((await patch({ startsAt: tomorrow })).status).toBe(200);
+    expect((await work()).unitKeys).toEqual([]);
+    expect((await patch({ startsAt: null })).status).toBe(200);
+    expect((await work()).unitKeys).toEqual([unitKey]);
+    expect((await view()).startsAt[unitKey]).toBeUndefined();
+  });
+
   it("keeps the day a unit was first assigned when a removal is undone, and ignores a made-up one", async () => {
     const teacher = await account_("undo-teacher@example.com");
     const { class: cls } = await (await classes.POST(req("/api/classes/", "POST", { name: "Room 5", grade: "2" }, teacher))).json();

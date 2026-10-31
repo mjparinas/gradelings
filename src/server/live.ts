@@ -63,6 +63,7 @@ export async function pickLiveQuestion(cls: Pick<ClassRow, "id" | "grade" | "fra
       lang: q.lang,
       choicesLang: q.choicesLang,
       visualLang: q.visualLang,
+      quoteLang: q.quoteLang,
       visual: q.visual,
       currency: q.currency,
       hint: q.hint,

@@ -487,7 +487,8 @@ const CLASS_COLUMNS: [string, string][] = [
 const MEMBER_COLUMNS: [string, string][] = [["grade", "TEXT"]];
 /** A due date a teacher can set on an assigned unit (ms since epoch). */
 // `goal`: how many questions the teacher asked for (homework); NULL means "until Proficient".
-const ASSIGNMENT_COLUMNS: [string, string][] = [["due_at", "INTEGER"], ["goal", "INTEGER"]];
+// `starts_at`: a unit scheduled ahead reaches students (and their parents) only from then; null means at once.
+const ASSIGNMENT_COLUMNS: [string, string][] = [["due_at", "INTEGER"], ["goal", "INTEGER"], ["starts_at", "INTEGER"]];
 // The login code a student had before a teacher gave them a new one, kept for a few minutes so "Undo" can restore it.
 const STUDENT_COLUMNS: [string, string][] = [
   ["prev_login_code", "TEXT"],

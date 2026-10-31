@@ -270,6 +270,16 @@
       "nm-g3-money-and-voting text=d9a707d0ec std=25a88fbfce q=30542007e2"
     ]
   },
+  "3/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "saludos text=0e496163f1 std=81fd30989b q=6c47ef34de",
+      "numeros-hasta-20 text=23e8632af0 std=2c8be968c9 q=a349f236c5",
+      "colores text=86a558acac std=1b910c4c55 q=5f3c5730ec",
+      "animales text=badbbecebe std=0f498f10c6 q=128d83d818",
+      "familia text=b2dcc8e66e std=8faa275c49 q=86a8e86e86"
+    ]
+  },
   "4/language": {
     "overview": "285bed1e3b",
     "units": [
@@ -343,6 +353,16 @@
       "nm-g4-timeline text=c9a148fbc9 std=2776df0d19 q=2edca5d2b4"
     ]
   },
+  "4/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "cuerpo text=8eaaf9bf61 std=8c08a1ee0b q=73f074b2b4",
+      "escuela text=e9996c83b9 std=aae3f690b6 q=ae47848fa7",
+      "dias-y-meses text=34db9dab39 std=024d22536e q=cb10fd8733",
+      "tiempo text=42f12e5fce std=4e118d7e71 q=1cc1215af3",
+      "ropa text=34970c68fc std=efa7f79cc2 q=f0e3970adf"
+    ]
+  },
   "5/language": {
     "overview": "708c47293a",
     "units": [
@@ -410,6 +430,16 @@
       "or-g5-timeline text=d6feb485b6 std=2951dd9de6 q=750a99801f",
       "nm-g5-eastern-woodland text=6bc2734a1f std=35e15b5860 q=1ed578af79",
       "nm-g5-explorers text=33dd48c9f5 std=6e001ec159 q=f073420633"
+    ]
+  },
+  "5/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "sonidos text=80683d829a std=27fd41838f q=58c17693b8",
+      "el-y-la text=b0dbe3b0fc std=38c5881bb8 q=1074c9539b",
+      "gustos text=d36fa4b597 std=e9c4eb69ac q=8b22e9b02f",
+      "sobre-mi text=8d8ab79cae std=abb6b5215a q=d4ac49825c",
+      "fiestas text=705d12c072 std=e64520304e q=d84d35d37b"
     ]
   },
   "6/language": {
@@ -483,6 +513,16 @@
       "wa-g6-greece-rome text=07d03c3210 std=b3a91975cc q=c581214fd3",
       "ny-g6-classical-china-india text=3389ff18ee std=08cb6640ef q=9a4731e2a5",
       "or-g7-african-kingdoms text=3ee3cfac21 std=78ccfeeb14 q=5a669c38d2"
+    ]
+  },
+  "6/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "preguntas text=a185455eef std=ed20ce18ba q=d44b56c84c",
+      "comida text=125b021db0 std=1246d6d4dd q=ffef28847f",
+      "pasatiempos text=c33589e083 std=4cd3a86ef5 q=cc01218407",
+      "emociones text=a925cf1d90 std=289704dd77 q=a82624e446",
+      "personas text=3f99f93025 std=0deaff300e q=4ab03f6e6a"
     ]
   },
   "7/language": {
@@ -564,6 +604,16 @@
       "nm-g7-timeline text=e843f3492e std=128f14ed35 q=50d342313d"
     ]
   },
+  "7/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "verbos-ar text=fc3d64d1c7 std=6c4ba3089b q=2a9f9c0c73",
+      "describir text=0dc4ce0abf std=bcf0bcf6a1 q=b504bae3cb",
+      "comparaciones text=32f5de1457 std=21d56ee848 q=6e43c85246",
+      "paises text=1827fc7cb2 std=e5fa08cacb q=26617a81ba",
+      "direcciones text=246e0580ed std=3d3546530b q=525b6d4747"
+    ]
+  },
   "8/language": {
     "overview": "db2cf9b24a",
     "units": [
@@ -637,6 +687,16 @@
       "or-g8-reconstruction text=693a3316b8 std=75e9d7508c q=4c87f1ca5f",
       "nm-g8-new-mexico-and-the-nation text=2eba1b686a std=0f431eeccc q=3979677b0c",
       "nm-g8-new-nation text=18f2c2ff8f std=130fd35b2e q=4bf0fe3df8"
+    ]
+  },
+  "8/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "verbos-er-ir text=16633c38db std=21430181d8 q=2a4bf2332c",
+      "ir-a text=418d5f16ce std=deb65aab31 q=13df3f558e",
+      "hora-y-frecuencia text=d2c28828a0 std=d5d00e2856 q=439e808472",
+      "compras text=e832882aee std=c953c869f4 q=2c2a3e610b",
+      "medio-ambiente text=6393bb902f std=6fd14b0904 q=1980351cc5"
     ]
   },
   "9/language": {
@@ -733,6 +793,16 @@
       "nm-g9-personal-finance text=f88dcf17a6 std=4aef2efe63 q=291af5a714",
       "nm-g9-economics text=f13a6253bc std=d3964b360a q=ef0bd92ca1",
       "nm-g9-supply-demand text=5896d85f44 std=8cdd3acb7b q=ec20cad137"
+    ]
+  },
+  "9/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "preterito text=92cdef7045 std=09bf56e5b4 q=ccac7e09a5",
+      "ser-y-estar text=cf084dc6cc std=f248b63008 q=fd01edeb18",
+      "en-orden text=56d16d8e93 std=3f09b3ef6d q=23cf0bbdba",
+      "profesiones text=55b2e6e3d3 std=69575f4637 q=1c177bd0fb",
+      "cuentos text=942f5f0729 std=ecd51bd440 q=c29106e529"
     ]
   }
 }

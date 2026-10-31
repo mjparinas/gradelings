@@ -10,8 +10,8 @@
 
 import { autoDownloadPiper, markPiperFailed, piperCanSpeak, piperMightSpeak, piperWanted, resetOldVoiceChoices, speakPiper, stopPiper } from "./piper";
 
-/** English is the app's language; French is for French Immersion and Core French questions. */
-export type SpeechLanguage = "en" | "fr";
+/** English is the app's language; French is for French Immersion and Core French questions, Spanish for Spanish. */
+export type SpeechLanguage = "en" | "fr" | "es";
 
 export type VoiceQuality = "natural" | "enhanced" | "standard" | "basic";
 
@@ -39,11 +39,13 @@ const NOVELTY = /\b(albert|bad news|bahh|bells|boing|bubbles|cellos|good news|je
 // Apple's older "Eloquence" voices: understandable but robotic.
 const ELOQUENCE = /\b(eddy|flo|grandma|grandpa|reed|rocko|sandy|shelley)\b/i;
 // Apple's better standard voices.
-const APPLE_GOOD = /\b(amélie|amelie|thomas|audrey|aurélie|aurelie|marie|jacques|nicolas|samantha|ava|allison|susan|zoe|karen|moira|tessa|daniel|serena|evan|nathan|tom|alex|nicky|aaron|martha|arthur)\b/i;
+const APPLE_GOOD = /\b(amélie|amelie|thomas|audrey|aurélie|aurelie|marie|jacques|nicolas|paulina|juan|mónica|monica|jorge|samantha|ava|allison|susan|zoe|karen|moira|tessa|daniel|serena|evan|nathan|tom|alex|nicky|aaron|martha|arthur)\b/i;
 
 const LOCALE_BONUS: Record<string, number> = {
   "en-ca": 12, "en-us": 8, "en-gb": 6, "en-au": 6, "en-nz": 6, "en-ie": 6,
   "fr-ca": 12, "fr-fr": 8, "fr-be": 4, "fr-ch": 4,
+  // Latin American Spanish, which the Spanish course teaches, first.
+  "es-mx": 12, "es-us": 10, "es-41": 10 /* es-419, Latin America, cut to five characters */, "es-co": 8, "es-ar": 6, "es-es": 6,
 };
 
 /** Scores one voice, or undefined if it shouldn't be offered at all. */
@@ -65,7 +67,7 @@ export function scoreVoice(v: VoiceLike, language: SpeechLanguage = "en"): Voice
   return { uri: v.voiceURI, name: v.name, lang: v.lang, quality, online: !v.localService, score };
 }
 
-/** English voices, most natural first. Locale only breaks ties between similar voices. */
+/** One language's voices, most natural first. Locale only breaks ties between similar voices. */
 export function rankVoices(voices: readonly VoiceLike[], language: SpeechLanguage = "en"): VoiceOption[] {
   return voices
     .map((v) => scoreVoice(v, language))
@@ -83,12 +85,11 @@ export function chooseVoice(ranked: readonly VoiceOption[], preferredUri: string
 
 // ---- Browser state ----
 
-const PREF_KEY = "grademap.voice";
-const PREF_KEY_FR = "grademap.voice.fr";
-const prefKey = (language: SpeechLanguage) => (language === "fr" ? PREF_KEY_FR : PREF_KEY);
+// grademap.voice for English, grademap.voice.fr and grademap.voice.es for the others.
+const prefKey = (language: SpeechLanguage) => (language === "en" ? "grademap.voice" : `grademap.voice.${language}`);
 const EMPTY: VoiceOption[] = [];
-let ranked: VoiceOption[] = EMPTY;
-let rankedFr: VoiceOption[] = EMPTY;
+const LANGUAGES: readonly SpeechLanguage[] = ["en", "fr", "es"];
+let ranked: Record<SpeechLanguage, VoiceOption[]> = { en: EMPTY, fr: EMPTY, es: EMPTY };
 const listeners = new Set<() => void>();
 
 function hasSynth(): boolean {
@@ -102,8 +103,7 @@ export function canSpeak(): boolean {
 function refresh() {
   if (!hasSynth()) return;
   const voices = window.speechSynthesis.getVoices();
-  ranked = rankVoices(voices);
-  rankedFr = rankVoices(voices, "fr");
+  ranked = Object.fromEntries(LANGUAGES.map((l) => [l, rankVoices(voices, l)])) as typeof ranked;
   for (const l of listeners) l();
 }
 
@@ -125,7 +125,7 @@ export function subscribeVoices(listener: () => void): () => void {
 
 export function getVoiceOptions(language: SpeechLanguage = "en"): VoiceOption[] {
   watch();
-  return language === "fr" ? rankedFr : ranked;
+  return ranked[language];
 }
 
 export function getVoicePreference(language: SpeechLanguage = "en"): string | null {
@@ -152,7 +152,7 @@ export function setVoicePreference(uri: string | null, language: SpeechLanguage 
 /** The voice read-aloud will use right now (for showing in Settings). */
 export function currentVoice(language: SpeechLanguage = "en"): VoiceOption | undefined {
   watch();
-  return chooseVoice(language === "fr" ? rankedFr : ranked, getVoicePreference(language), typeof navigator !== "undefined" && navigator.onLine === false);
+  return chooseVoice(ranked[language], getVoicePreference(language), typeof navigator !== "undefined" && navigator.onLine === false);
 }
 
 /** Turn on-screen symbols into words a speech engine reads naturally. */
@@ -170,8 +170,10 @@ export function speakStretched(text: string): string {
   });
 }
 
+const BLANK: Record<SpeechLanguage, string> = { en: " blank ", fr: " mot manquant ", es: " palabra que falta " };
+
 export function forSpeech(text: string, language: SpeechLanguage = "en"): string {
-  const blank = language === "fr" ? " mot manquant " : " blank ";
+  const blank = BLANK[language];
   return (language === "en" ? speakStretched(text) : text)
     .replace(/☐/g, blank)
     .replace(/(\d+)¢/g, "$1 cents")
@@ -186,7 +188,7 @@ const RATE = 0.92;
 
 // Piper voices have their own natural pace. Amy (English) is unhurried already, so slowing her
 // as well made her drag; she reads a bit faster than her natural pace instead.
-export const PIPER_RATE: Record<SpeechLanguage, number> = { en: 1.15, fr: RATE };
+export const PIPER_RATE: Record<SpeechLanguage, number> = { en: 1.15, fr: RATE, es: RATE };
 
 // Pauses (such as between a question and its answers) are half as long when Piper reads.
 export const PIPER_PAUSE_SCALE = 0.5;
@@ -203,6 +205,9 @@ function isAndroid(): boolean {
   return typeof navigator !== "undefined" && /android/i.test(navigator.userAgent ?? "");
 }
 
+// The language tag when no installed voice was picked: Canadian English and French, Mexican Spanish.
+const DEFAULT_LANG: Record<SpeechLanguage, string> = { en: "en-CA", fr: "fr-CA", es: "es-MX" };
+
 function utter(text: string, option: VoiceOption | undefined, onFail?: () => void, language: SpeechLanguage = "en", onDone?: () => void) {
   if (!hasSynth()) return onDone?.();
   const synth = window.speechSynthesis;
@@ -210,7 +215,7 @@ function utter(text: string, option: VoiceOption | undefined, onFail?: () => voi
   const voice = option ? synth.getVoices().find((v) => v.voiceURI === option.uri) : undefined;
   if (voice) u.voice = voice;
   // Older Android Chrome reports "en_US", which isn't a valid language tag.
-  u.lang = voice?.lang.replace("_", "-") ?? (language === "fr" ? "fr-CA" : "en-CA");
+  u.lang = voice?.lang.replace("_", "-") ?? DEFAULT_LANG[language];
   // Natural pitch: raising it makes good voices sound processed.
   u.rate = RATE;
   u.pitch = 1;
@@ -253,8 +258,8 @@ function queue(text: string, voiceUri: string | null | undefined, language: Spee
 
 function queueDevice(text: string, voiceUri: string | null | undefined, language: SpeechLanguage, onDone?: () => void) {
   const offline = navigator.onLine === false;
-  // English and French each have their own ranked list and saved choice.
-  const list = language === "fr" ? rankedFr : ranked;
+  // Each language has its own ranked list and saved choice.
+  const list = ranked[language];
   const preferred = voiceUri !== undefined ? voiceUri : getVoicePreference(language);
   const choice = chooseVoice(list, preferred, offline);
   // A cloud voice can fail on a flaky connection: try again with the best on-device voice. Any
@@ -336,6 +341,7 @@ export function stopSpeaking() {
 const SAMPLE: Record<SpeechLanguage, string> = {
   en: "Hi! I'm Ollie the Otter. Let's count together: one, two, three. Great job!",
   fr: "Bonjour! Je m'appelle Ollie la loutre. Comptons ensemble : un, deux, trois. Bravo!",
+  es: "¡Hola! Me llamo Ollie, la nutria. Contemos juntos: uno, dos, tres. ¡Muy bien!",
 };
 
 /** A short sample for the voice picker. */
