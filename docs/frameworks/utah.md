@@ -8,7 +8,7 @@
 
 - **Source:** the Utah Core Standards, adopted by the Utah State Board of Education (USBE) and published at https://www.schools.utah.gov/curr: mathematics (Kindergarten to Grade 8, and Secondary Mathematics I for Grade 9), English language arts (May 2023), science (SEEd, Utah Science with Engineering Education, June 2023 edition) and social studies (Kindergarten to Grade 6 adopted December 2022; Grades 7 to 12 for Utah Studies, United States History I and World Geography).
 - **Citations** are `"CODES · text"` (`src/content/utah/cite.ts`): math `4.NBT.5`, Grade 9 `A.CED.1`; English language arts `4.R.5`, `4.W.2`, `4.SL.1`, with the Grades 7 and 8 band `7-8.R.5` and Grade 9 citing the Grades 9-10 band `9-10.R.5`; science `4.2.1`, Grade 9 `BIO.1.2` and `ESS.2.4`; social studies `4.3.2`, Grade 7 `UT.2.1`, Grade 8 `USI.3.4`, Grade 9 `WG.1.2`.
-- `src/content/utah/contract.ts` checks every code against `docs/research/utah/outcomes.json` (940 standards), which `python3 -I docs/research/utah/build_outcomes.py` rebuilds from `docs/research/utah/source/`. Sources and dates: `docs/research/utah/README.md`.
+- `src/content/utah/contract.ts` checks every code against `docs/research/utah/outcomes.json` (940 standards), which `python3 -I gradelings-research/utah/build_outcomes.py` rebuilds from `gradelings-research/utah/source/`. Sources and dates: `gradelings-research/utah/README.md`.
 
 ## Content
 

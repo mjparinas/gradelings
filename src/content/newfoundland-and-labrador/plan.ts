@@ -3,7 +3,7 @@
 // Nova Scotia or New Brunswick), kept only where its questions do not name another province.
 // Newfoundland and Labrador's English program follows the Atlantic Canada foundation documents, which give outcomes for the end
 // of Grade 3, Grade 6 and Grade 9. The grade guides are not public, so a unit sits in the grade where the Atlantic neighbours
-// teach it; see docs/research/newfoundland-and-labrador/README.md.
+// teach it; see gradelings-research/newfoundland-and-labrador/README.md.
 
 export type Entry = readonly [id: string, kind: "share" | "adopt", citation: string, text: string];
 

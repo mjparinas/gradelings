@@ -3,7 +3,7 @@ import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
 // Hawaiʻi's official standards (the Hawaiʻi State Department of Education's content standards), built from HIDOE's
-// files by docs/research/hawaii/build_outcomes.py.
+// files by gradelings-research/hawaii/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("hawaii/outcomes.json");
 
 export const contract: FrameworkContract = {

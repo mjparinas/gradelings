@@ -8,8 +8,8 @@ import type { FrameworkGuides } from "../guides";
 // own. The assessment page covers the New Mexico Measures of Student Success and Achievement (NM-MSSA, language arts and
 // math, grades 3 to 8), the New Mexico Assessment of Science Readiness (NM-ASR, grades 5, 8 and 11) and the SAT in
 // grade 11, from the Public Education Department's NM-ASR fact sheet and Cognia's 2026 NM-MSSA family guide (both in
-// docs/research/new-mexico/source); dates change each year, so the page points to the department. No French here, so no
-// French guide. Record: docs/research/new-mexico/README.md.
+// gradelings-research/new-mexico/source); dates change each year, so the page points to the department. No French here, so no
+// French guide. Record: gradelings-research/new-mexico/README.md.
 
 export const NEW_MEXICO_GUIDES: FrameworkGuides = {
   competencies: {

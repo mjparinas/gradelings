@@ -10,7 +10,7 @@ import type { FrameworkGuides } from "../guides";
 // five performance levels, the Kindergarten Readiness Assessment and the 3rd grade reading requirement of the
 // Literacy-Based Promotion Act, from the Mississippi Department of Education's MAAP page and scale score tables; dates
 // change each year, so the page points to the department. No French here, so no French guide. Record:
-// docs/research/mississippi/README.md.
+// gradelings-research/mississippi/README.md.
 
 export const MISSISSIPPI_GUIDES: FrameworkGuides = {
   competencies: {

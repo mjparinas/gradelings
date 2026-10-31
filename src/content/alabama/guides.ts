@@ -4,7 +4,7 @@ import type { FrameworkGuides } from "../guides";
 // Parent guide copy for Alabama, in US English. Alabama has no statewide social and emotional learning standards, so the
 // competencies page explains the practices the Alabama Courses of Study build into every grade: the Student
 // Mathematical Practices, the science and engineering practices, the recurring English language arts standards and the
-// social studies practices (docs/research/alabama/README.md). The assessment page covers the Alabama Comprehensive
+// social studies practices (gradelings-research/alabama/README.md). The assessment page covers the Alabama Comprehensive
 // Assessment Program (ACAP) as ALSDE describes it: English language arts and math in grades 2 to 8, science in grades 4,
 // 6 and 8, four achievement levels with Levels 3 and 4 counting as proficient, and ACAP Alternate. It also covers the
 // Alabama Literacy Act's 3rd grade reading rule. Dates change each year, so the page points to ALSDE. Alabama has no

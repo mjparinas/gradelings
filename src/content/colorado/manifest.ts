@@ -19,6 +19,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.COLORADO_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Colorado: no French subject (see docs/research/colorado/README.md).
+  // Colorado: no French subject (see gradelings-research/colorado/README.md).
   french: { immersion: [], "core-french": [] },
 });

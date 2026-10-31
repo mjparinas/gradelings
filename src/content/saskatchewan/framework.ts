@@ -69,7 +69,7 @@ export const SASKATCHEWAN: Framework = {
   sourceUrl: "https://curriculum.gov.sk.ca/",
   grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   preKName: "Prekindergarten",
-  // French Immersion (Kindergarten to Grade 9) and Core French (Levels 1 to 9, Grades 1 to 9); see docs/research/saskatchewan/README.md.
+  // French Immersion (Kindergarten to Grade 9) and Core French (Levels 1 to 9, Grades 1 to 9); see gradelings-research/saskatchewan/README.md.
   subjects: ["math", "language", "science", "social", "immersion", "core-french"],
   scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {

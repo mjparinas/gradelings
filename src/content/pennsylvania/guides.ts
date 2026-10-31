@@ -4,11 +4,11 @@ import type { FrameworkGuides } from "../guides";
 // Parent guide copy for Pennsylvania, in US English. The Pennsylvania Department of Education (PDE) has no statewide social
 // and emotional learning standards, but it publishes the Pennsylvania Career Ready Skills (PA CRS), optional social emotional
 // learning progressions for every grade band, so the competencies page explains those three domains
-// (docs/research/pennsylvania/FACTS.md, section 4). The assessment page covers the PSSA and the Keystone Exams as PDE
+// (gradelings-research/pennsylvania/FACTS.md, section 4). The assessment page covers the PSSA and the Keystone Exams as PDE
 // describes them, including the religious-belief review and excusal route in 22 Pa. Code 4.4(d)(4) and the early-literacy
 // screening in Act 47 of 2025. Dates change each year, so the page points to PDE and the district. Pennsylvania has no French
 // subject here, so no French guide. Grade notes follow the PA Core Standards, the Pennsylvania science standards (STEELS) and
-// the state's civics, economics, geography and history standards, placed as in docs/research/pennsylvania/README.md.
+// the state's civics, economics, geography and history standards, placed as in gradelings-research/pennsylvania/README.md.
 
 export const PENNSYLVANIA_GUIDES: FrameworkGuides = {
   competencies: {

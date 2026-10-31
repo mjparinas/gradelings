@@ -3,7 +3,7 @@ import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
 // Idaho's official standards (the Idaho Content Standards), built from the Idaho Department of Education's
-// files by docs/research/idaho/build_outcomes.py.
+// files by gradelings-research/idaho/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("idaho/outcomes.json");
 
 export const contract: FrameworkContract = {

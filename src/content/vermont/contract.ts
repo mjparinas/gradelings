@@ -3,7 +3,7 @@ import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
 // Vermont's official standards (the Common Core, the Next Generation Science Standards and the C3 Framework for social
-// studies), built from the Achievement Standards Network copies by docs/research/vermont/build_outcomes.py.
+// studies), built from the Achievement Standards Network copies by gradelings-research/vermont/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("vermont/outcomes.json");
 
 export const contract: FrameworkContract = {

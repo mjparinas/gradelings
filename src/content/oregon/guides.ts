@@ -10,7 +10,7 @@ import type { FrameworkGuides } from "../guides";
 // arts and math in grades 3 to 8 and 11, science in grades 5, 8 and 11, four achievement levels. ORS 329.479 lets a
 // parent opt a child out of the ELA and/or math tests each year with ODE's form (ODE's 2026-27 annual notice and
 // opt-out form). Dates change each year, so the page points to ODE. Oregon has no French subject, so no French guide.
-// Grade notes follow ODE's standards and docs/research/oregon/README.md.
+// Grade notes follow ODE's standards and gradelings-research/oregon/README.md.
 
 export const OREGON_GUIDES: FrameworkGuides = {
   competencies: {

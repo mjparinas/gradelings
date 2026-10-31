@@ -1,7 +1,7 @@
 import { codeCite, preKCite, research, type FrameworkContract } from "../contract";
 import { PLAN } from "./plan";
 
-// Washington's official standards, built from OSPI's files by docs/research/washington/build_outcomes.py.
+// Washington's official standards, built from OSPI's files by gradelings-research/washington/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("washington/outcomes.json");
 
 export const contract: FrameworkContract = {

@@ -4,7 +4,7 @@ import { bankUnit, type Q } from "../own";
 // Pennsylvania's own Grade 7 social studies units (`pa-` ids). Grade 7 here is United States history and government to
 // the 1840s, so Pennsylvania's units cover its constitution and government (5.1.7 to 5.3.7), the Commonwealth in the
 // early republic (8.2.7, 8.3.7), its land and rivers (7.x.7) and the Pennsylvanians who shaped the country (8.2.7.A).
-// Slavery and the early fight against it are told plainly. Facts are from docs/research/pennsylvania/FACTS.md or are
+// Slavery and the early fight against it are told plainly. Facts are from gradelings-research/pennsylvania/FACTS.md or are
 // well established.
 
 const PA_GOVERNMENT_7: Q[] = [

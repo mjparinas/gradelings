@@ -7,7 +7,7 @@ import type { FrameworkGuides } from "../guides";
 // 8, science in grades 4 and 8, social studies in grades 4, 8 and 10), PreACT Secure in grades 9 and 10, the ACT in
 // grade 11 and Dynamic Learning Maps for students with the most significant cognitive disabilities. Dates change each
 // year, so the page points to DPI. Wisconsin has no French subject here, so no French guide. Record:
-// docs/research/wisconsin/README.md.
+// gradelings-research/wisconsin/README.md.
 
 export const WISCONSIN_GUIDES: FrameworkGuides = {
   competencies: {

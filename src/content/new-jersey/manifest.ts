@@ -19,6 +19,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.NEW_JERSEY_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // New Jersey: no French subject (see docs/research/new-jersey/README.md).
+  // New Jersey: no French subject (see gradelings-research/new-jersey/README.md).
   french: { immersion: [], "core-french": [] },
 });

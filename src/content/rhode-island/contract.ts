@@ -2,7 +2,7 @@ import { codeCite, preKCite, research, type FrameworkContract } from "../contrac
 import { PLAN } from "./plan";
 
 // Rhode Island's official standards (the Common Core, the NGSS and the Rhode Island Social Studies Standards), built
-// from the source files by docs/research/rhode-island/build_outcomes.py.
+// from the source files by gradelings-research/rhode-island/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("rhode-island/outcomes.json");
 
 export const contract: FrameworkContract = {

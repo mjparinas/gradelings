@@ -8,7 +8,7 @@
 ## Standards
 
 - Rhode Island's standards, adopted by the Board of Education and the Council on Elementary and Secondary Education: math (the Common Core, 2010, Rhode Island's Core Standards; `4.NBT.1`; Grade 9 cites the high school standards, `A-SSE.1`), English language arts (the Common Core, 2010; `RL.4.2`; Grade 9 cites the 9-10 band, `RI.9-10.2`), science (the Next Generation Science Standards, 2013; `4-PS3-2`; middle school `MS-LS1-1` in any of Grades 6 to 8, high school `HS-LS2-6` in Grade 9) and social studies (the Rhode Island Social Studies Standards, taken up by the Council in February 2023; `SS4.2.3`; Grade 9 cites the high school Civics course, `SSHS.CVC.6.3`).
-- Citations are `"CODES · text"` (`ris()` in `src/content/rhode-island/cite.ts`), checked by `src/content/rhode-island/contract.ts` against `docs/research/rhode-island/outcomes.json`. Sources are in `docs/research/rhode-island/source/`; `fetch.sh` downloads them again and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. Record: `docs/research/rhode-island/README.md`.
+- Citations are `"CODES · text"` (`ris()` in `src/content/rhode-island/cite.ts`), checked by `src/content/rhode-island/contract.ts` against `docs/research/rhode-island/outcomes.json`. Sources are in `gradelings-research/rhode-island/source/`; `fetch.sh` downloads them again and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. Record: `gradelings-research/rhode-island/README.md`.
 
 ## Content
 

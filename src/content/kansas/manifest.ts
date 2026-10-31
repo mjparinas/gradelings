@@ -18,6 +18,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.KANSAS_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Kansas: no French subject in the app (see docs/research/kansas/README.md).
+  // Kansas: no French subject in the app (see gradelings-research/kansas/README.md).
   french: { immersion: [], "core-french": [] },
 });

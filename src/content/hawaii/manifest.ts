@@ -19,6 +19,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.HAWAII_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Hawaiʻi: no French subject in the app (see docs/research/hawaii/README.md).
+  // Hawaiʻi: no French subject in the app (see gradelings-research/hawaii/README.md).
   french: { immersion: [], "core-french": [] },
 });

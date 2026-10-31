@@ -6,7 +6,7 @@ import { getFramework } from "../frameworks";
 import { overall, NEW_CURRICULUM_GRADES } from "./overall";
 
 // The approved guides per grade and subject, from the Nunavut Department of Education's Approved Curriculum and Teaching
-// Resources (docs/research/nunavut/README.md).
+// Resources (gradelings-research/nunavut/README.md).
 const APPROVED = JSON.parse(readFileSync(join(__dirname, "../../../docs/research/nunavut/approved.json"), "utf8")) as Record<
   string,
   { guides: string[]; areas: string[] | null }

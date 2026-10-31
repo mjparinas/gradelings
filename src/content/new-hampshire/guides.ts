@@ -8,7 +8,7 @@ import type { FrameworkGuides } from "../guides";
 // a subject of their own. The assessment page covers the New Hampshire Statewide Assessment System (NH SAS: language arts
 // and math in grades 3 to 8, science in grades 5, 8 and 11) and the SAT in grade 11. The Department of Education's site
 // refuses automated downloads, so the page keeps to the program's lasting facts and points families to the department
-// for dates. No French here, so no French guide. Record: docs/research/new-hampshire/README.md.
+// for dates. No French here, so no French guide. Record: gradelings-research/new-hampshire/README.md.
 
 export const NEW_HAMPSHIRE_GUIDES: FrameworkGuides = {
   competencies: {

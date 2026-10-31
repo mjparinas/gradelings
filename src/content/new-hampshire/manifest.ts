@@ -19,6 +19,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.NEW_HAMPSHIRE_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // New Hampshire: no French subject in the app (see docs/research/new-hampshire/README.md).
+  // New Hampshire: no French subject in the app (see gradelings-research/new-hampshire/README.md).
   french: { immersion: [], "core-french": [] },
 });

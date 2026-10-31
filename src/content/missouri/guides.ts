@@ -10,7 +10,7 @@ import type { FrameworkGuides } from "../guides";
 // four achievement levels, and the reading assessments and reading success plans in kindergarten to 3rd grade (section
 // 167.645, RSMo), under which a parent and the school discuss retention at the end of 3rd grade. Dates change each
 // year, so the page points to the Department of Elementary and Secondary Education. Missouri has no French subject
-// here, so no French guide. Record: docs/research/missouri/README.md.
+// here, so no French guide. Record: gradelings-research/missouri/README.md.
 
 export const MISSOURI_GUIDES: FrameworkGuides = {
   competencies: {

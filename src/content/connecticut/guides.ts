@@ -8,7 +8,7 @@ import type { FrameworkGuides } from "../guides";
 // arts and math, grades 3 to 8, four achievement levels), the Next Generation Science Assessment (grades 5, 8 and 11),
 // the SAT School Day in grade 11 and the Connecticut Alternate Assessment. Dates change each year, so the page points to
 // the Connecticut State Department of Education (CSDE). No French here, so no French guide. Record:
-// docs/research/connecticut/README.md.
+// gradelings-research/connecticut/README.md.
 
 export const CONNECTICUT_GUIDES: FrameworkGuides = {
   competencies: {

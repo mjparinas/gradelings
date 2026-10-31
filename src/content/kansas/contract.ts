@@ -3,7 +3,7 @@ import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
 // Kansas's official standards (the Kansas standards for mathematics, English language arts, science and history,
-// government and social studies), built from the Kansas State Department of Education's files by docs/research/kansas/build_outcomes.py.
+// government and social studies), built from the Kansas State Department of Education's files by gradelings-research/kansas/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("kansas/outcomes.json");
 
 export const contract: FrameworkContract = {

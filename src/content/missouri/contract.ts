@@ -3,7 +3,7 @@ import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
 // Missouri's official standards (the Missouri Learning Standards' Grade-Level Expectations), built by
-// docs/research/missouri/build_outcomes.py.
+// gradelings-research/missouri/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("missouri/outcomes.json");
 
 export const contract: FrameworkContract = {

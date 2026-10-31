@@ -19,6 +19,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.NORTH_CAROLINA_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // North Carolina: no French subject (see docs/research/north-carolina/README.md).
+  // North Carolina: no French subject (see gradelings-research/north-carolina/README.md).
   french: { immersion: [], "core-french": [] },
 });

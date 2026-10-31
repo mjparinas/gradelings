@@ -1,6 +1,6 @@
 // Starts a new US state: `node scripts/new-state.mjs <folder> <id> <Name>`, e.g. `node scripts/new-state.mjs idaho us-id Idaho`.
-// It writes the mechanical files (manifest, citation helper, schools notice, contract, the framework's doc and research
-// README) and adds the state to src/content/registry.ts in alphabetical place. It does not write the content: framework.ts,
+// It writes the mechanical files (manifest, citation helper, schools notice, contract and the framework's doc) and adds
+// the state to src/content/registry.ts in alphabetical place. It does not write the content: framework.ts,
 // the grade files, guides.ts and the plan are the state's own work (docs/ADDING_A_PROVINCE.md). The manifest is
 // `upcoming: true` until the state is ready to offer.
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -71,7 +71,7 @@ export const SCHOOLS: SchoolsNotice = {
 `,
     [`src/content/${folder}/contract.ts`]: `import { codeCite, research, type FrameworkContract } from "../contract";
 
-// ${name}'s official standards, built by docs/research/${folder}/build_outcomes.py.
+// ${name}'s official standards, built by gradelings-research/${folder}/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("${folder}/outcomes.json");
 
 export const contract: FrameworkContract = {
@@ -79,10 +79,6 @@ export const contract: FrameworkContract = {
   ownPrefix: "${short}-",
   adoptsFrom: [],
 };
-`,
-    [`docs/research/${folder}/README.md`]: `# ${name}: sources and checking record
-
-${name} (\`${id}\`, slug \`${folder}\`). List each official source here with its URL and the date it was checked. Sources go in \`source/\`, \`fetch.sh\` downloads them again and \`build_outcomes.py\` rebuilds \`outcomes.json\` from them exactly (docs/ADDING_A_PROVINCE.md, step 2).
 `,
   };
 }
@@ -110,6 +106,7 @@ function main() {
   }
   writeFileSync(registry, updated);
   console.log(`Created ${Object.keys(out).length} files and added ${name} to src/content/registry.ts.`);
+  console.log(`Sources: add ${folder}/ to the gradelings-research repository (README.md, source/, fetch.sh, build_outcomes.py) and copy its outcomes.json to docs/research/${folder}/ here.`);
   console.log(`Next: write src/content/${folder}/framework.ts (export ${folder.toUpperCase().replace(/-/g, "_")}), the grade files, guides.ts and a plan, then run npm run curriculum:lock.`);
 }
 

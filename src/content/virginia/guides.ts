@@ -7,7 +7,7 @@ import type { FrameworkGuides } from "../guides";
 // (reading and math in grades 3 to 8, science in grades 5 and 8, writing in grade 8, end-of-course tests in high
 // school), the fall and winter growth tests in reading and math, and the Virginia Literacy Act's reading checks in
 // Kindergarten to 3rd grade. Dates and score levels change, so the page points to the Virginia Department of Education
-// (VDOE). Virginia has no French subject here, so no French guide. Record: docs/research/virginia/README.md.
+// (VDOE). Virginia has no French subject here, so no French guide. Record: gradelings-research/virginia/README.md.
 
 export const VIRGINIA_GUIDES: FrameworkGuides = {
   competencies: {

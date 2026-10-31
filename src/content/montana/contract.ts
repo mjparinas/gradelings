@@ -2,7 +2,7 @@ import { codeCite, research, type FrameworkContract } from "../contract";
 import { PLAN } from "./plan";
 
 // Montana's official standards, built from the Office of Public Instruction's machine-readable standards (its CASE
-// server) by docs/research/montana/build_outcomes.py.
+// server) by gradelings-research/montana/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("montana/outcomes.json");
 
 export const contract: FrameworkContract = {

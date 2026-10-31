@@ -19,6 +19,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.PENNSYLVANIA_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Pennsylvania: no French subject (see docs/research/pennsylvania/README.md).
+  // Pennsylvania: no French subject (see gradelings-research/pennsylvania/README.md).
   french: { immersion: [], "core-french": [] },
 });

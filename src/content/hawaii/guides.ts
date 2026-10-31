@@ -4,11 +4,11 @@ import type { FrameworkGuides } from "../guides";
 // Parent guide copy for Hawaiʻi, in US English. The competencies page is the six General Learner Outcomes (GLOs), which
 // the Hawaiʻi State Department of Education calls the foundation of standards-based learning in every grade: elementary
 // teachers rate each one with a GLO rubric on the standards-based report card (HIDOE's GLO and elementary pages, in
-// docs/research/hawaii/source). The assessment page covers the Smarter Balanced Assessments (SBA) in language arts and
+// gradelings-research/hawaii/source). The assessment page covers the Smarter Balanced Assessments (SBA) in language arts and
 // math (grades 3 to 8 and 11), the Hawaiʻi Assessments in Science (grades 5 and 8 and the Biology 1 end-of-course exam)
 // and the Kaiapuni Assessment of Educational Outcomes (KĀʻEO) for Hawaiian language immersion students, from HIDOE's
 // Types of Testing page; dates change each year, so the page points to the department. No French here, so no French
-// guide. Record: docs/research/hawaii/README.md.
+// guide. Record: gradelings-research/hawaii/README.md.
 
 export const HAWAII_GUIDES: FrameworkGuides = {
   competencies: {

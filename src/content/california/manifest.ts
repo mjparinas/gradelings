@@ -19,6 +19,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.CALIFORNIA_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // California: no French subject (see docs/research/california/README.md).
+  // California: no French subject (see gradelings-research/california/README.md).
   french: { immersion: [], "core-french": [] },
 });

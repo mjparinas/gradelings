@@ -19,6 +19,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.SOUTH_CAROLINA_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // South Carolina: no French subject (see docs/research/south-carolina/README.md).
+  // South Carolina: no French subject (see gradelings-research/south-carolina/README.md).
   french: { immersion: [], "core-french": [] },
 });

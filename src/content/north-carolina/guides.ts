@@ -9,7 +9,7 @@ import type { FrameworkGuides } from "../guides";
 // (NC Math 1, NC Math 3, English II and Biology), the Read to Achieve reading checks in Kindergarten to 3rd grade and
 // the Kindergarten Entry Assessment. Dates change each year, so the page points to the North Carolina Department of
 // Public Instruction (NCDPI). North Carolina has no French subject here, so no French guide. Record:
-// docs/research/north-carolina/README.md.
+// gradelings-research/north-carolina/README.md.
 
 export const NORTH_CAROLINA_GUIDES: FrameworkGuides = {
   competencies: {

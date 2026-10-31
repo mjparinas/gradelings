@@ -19,6 +19,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.ILLINOIS_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Illinois: no French subject (see docs/research/illinois/README.md).
+  // Illinois: no French subject (see gradelings-research/illinois/README.md).
   french: { immersion: [], "core-french": [] },
 });

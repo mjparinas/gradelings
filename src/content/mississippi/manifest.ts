@@ -18,6 +18,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.MISSISSIPPI_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Mississippi: no French subject in the app (see docs/research/mississippi/README.md).
+  // Mississippi: no French subject in the app (see gradelings-research/mississippi/README.md).
   french: { immersion: [], "core-french": [] },
 });

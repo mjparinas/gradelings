@@ -8,7 +8,7 @@ import type { FrameworkGuides } from "../guides";
 // are taught inside math lessons, not graded as a subject. The assessment page covers TCAP (English language arts, math
 // and science in grades 3 to 8, social studies in grades 6 to 8, end-of-course tests in high school) and the 3rd grade
 // promotion law (T.C.A. 49-6-3115). Dates change each year, so the page points to the Tennessee Department of
-// Education. No French here, so no French guide. Record: docs/research/tennessee/README.md.
+// Education. No French here, so no French guide. Record: gradelings-research/tennessee/README.md.
 
 export const TENNESSEE_GUIDES: FrameworkGuides = {
   competencies: {

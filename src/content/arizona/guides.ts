@@ -7,7 +7,7 @@ import type { FrameworkGuides } from "../guides";
 // reasoning. They are taught inside math lessons, not graded as a subject of their own. The assessment page covers AASA
 // (English language arts and math, grades 3 to 8), AzSCI (science, grades 5, 8 and 11) and ACT Aspire (grade 9), from the
 // Arizona Department of Education's 2026-27 assessments overview; dates change each year, so the page points to the
-// department. No French here, so no French guide. Record: docs/research/arizona/README.md.
+// department. No French here, so no French guide. Record: gradelings-research/arizona/README.md.
 
 export const ARIZONA_GUIDES: FrameworkGuides = {
   competencies: {

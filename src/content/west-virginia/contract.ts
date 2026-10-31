@@ -3,7 +3,7 @@ import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
 // West Virginia's official standards, built from the West Virginia Board of Education's standards policies by
-// docs/research/west-virginia/build_outcomes.py.
+// gradelings-research/west-virginia/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("west-virginia/outcomes.json");
 
 export const contract: FrameworkContract = {

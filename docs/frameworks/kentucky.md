@@ -8,7 +8,7 @@
 ## Standards
 
 - The Kentucky Academic Standards, published by the Kentucky Department of Education: mathematics (2019; `KY.4.NBT.1`, Grade 9 cites the high school codes, `KY.HS.A.12`), reading and writing (2025; `RL.4.2`, `RI.4.5`, composition `C.4.1`, language `L.4.4`, foundational skills `RF.2.3`; Grade 9 cites the 9-10 band, `RL.9-10.1`), science (2022, built on the Next Generation Science Standards; `4-PS3-2`; Kentucky places each middle school expectation in one grade and numbers it with that grade, `6-ESS2-4`, `7-PS3-1`, `8-LS4-4`, with engineering as `MS-ETS1-1`; Grade 9 cites `HS-` expectations) and social studies (2022; `4.H.CH.1`, `K.C.KGO.2`; Grade 9 cites the high school civics, economics and Kentucky government codes, `HS.C.KGO.1`, `HS.E.MA.5`).
-- Citations are `"CODES · text"` (`kyc()` in `src/content/kentucky/cite.ts`), checked by `src/content/kentucky/contract.ts` against `docs/research/kentucky/outcomes.json` (1,359 standards). `fetch.sh` downloads the sources again with plain `curl` and a browser user agent; `python3 -I build_outcomes.py` rebuilds the JSON exactly, and `--check` says whether it is up to date. Record: `docs/research/kentucky/README.md`.
+- Citations are `"CODES · text"` (`kyc()` in `src/content/kentucky/cite.ts`), checked by `src/content/kentucky/contract.ts` against `docs/research/kentucky/outcomes.json` (1,359 standards). `fetch.sh` downloads the sources again with plain `curl` and a browser user agent; `python3 -I build_outcomes.py` rebuilds the JSON exactly, and `--check` says whether it is up to date. Record: `gradelings-research/kentucky/README.md`.
 
 ## Content
 

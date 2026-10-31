@@ -9,7 +9,7 @@ import type { FrameworkGuides } from "../guides";
 // grades 5 and 8), the PSAT 8/9 in grade 8, the PSAT 8/9 and PSAT 10 in grades 9 and 10, the Michigan Merit Examination
 // in grade 11, MI-Access, and the early literacy and math benchmark assessments in Kindergarten to Grade 2. Dates change
 // each year, so the page points to the Michigan Department of Education. Michigan has no French subject here, so no
-// French guide. Record: docs/research/michigan/README.md.
+// French guide. Record: gradelings-research/michigan/README.md.
 
 export const MICHIGAN_GUIDES: FrameworkGuides = {
   competencies: {

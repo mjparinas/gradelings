@@ -7,8 +7,8 @@ import type { FrameworkGuides } from "../guides";
 // repeated reasoning. They are taught inside math lessons, not graded as a subject of their own. The assessment page
 // covers the Rhode Island Comprehensive Assessment System (RICAS, English language arts and math, grades 3 to 8), the
 // Next Generation Science Assessment (NGSA, grades 5, 8 and 11) and the PSAT 10 and SAT in high school, from RIDE's
-// family guides to RICAS and the NGSA (both in docs/research/rhode-island/source); dates change each year, so the page
-// points to the department. No French here, so no French guide. Record: docs/research/rhode-island/README.md.
+// family guides to RICAS and the NGSA (both in gradelings-research/rhode-island/source); dates change each year, so the page
+// points to the department. No French here, so no French guide. Record: gradelings-research/rhode-island/README.md.
 
 export const RHODE_ISLAND_GUIDES: FrameworkGuides = {
   competencies: {

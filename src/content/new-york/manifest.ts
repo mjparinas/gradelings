@@ -19,6 +19,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.NEW_YORK_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // New York: no French subject (see docs/research/new-york/README.md).
+  // New York: no French subject (see gradelings-research/new-york/README.md).
   french: { immersion: [], "core-french": [] },
 });

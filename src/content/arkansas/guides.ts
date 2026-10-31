@@ -4,7 +4,7 @@ import type { FrameworkGuides } from "../guides";
 // Parent guide copy for Arkansas, in US English. Arkansas has no statewide social and emotional learning standards, so the
 // competencies page explains the ways of working the Arkansas Academic Standards build into every grade: problem solving
 // and reasoning in math, the science and engineering practices, the communication, collaboration and research strands
-// of English language arts and the social studies inquiry practices (docs/research/arkansas/README.md). The assessment
+// of English language arts and the social studies inquiry practices (gradelings-research/arkansas/README.md). The assessment
 // page covers ATLAS, the Arkansas Teaching and Learning Assessment System, as DESE describes it: English language arts,
 // math and science in grades 3 to 10 (no 9th grade science test), literacy and math checks in kindergarten to 2nd grade,
 // four achievement levels with Levels 3 and 4 counting as proficient, and the LEARNS Act's 3rd grade reading rule. Dates

@@ -8,7 +8,7 @@
 
 - South Dakota's standards, adopted by the Board of Education Standards: the South Dakota State Standards for Mathematics (2018; `4.NBT.1`; Grade 9 cites the high school courses, `A.SSE.1`), the English Language Arts Standards (April 2025; `4.RL.2`; Grade 9 cites the 9-10 band, `9-10.RL.1`), the Science Standards (April 2024; `4-PS3-2`; middle school `MS-LS1-1` in any of Grades 6 to 8, high school `HS-LS2-6` in Grade 9) and the Social Studies Standards (April 2023; `4.SS.11`; Grade 9 cites United States Government/American Civics, `9-12.C.17`).
 - The 2026 math standards (adopted May 4, 2026) are committed in `source/` but not cited until districts switch to them; when they do, re-cite math from `math-2026.pdf`.
-- Citations are `"CODES · text"` (`sds()` in `src/content/south-dakota/cite.ts`), checked by `src/content/south-dakota/contract.ts` against `docs/research/south-dakota/outcomes.json`. Sources are in `docs/research/south-dakota/source/`; `fetch.sh` downloads them again and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. Record: `docs/research/south-dakota/README.md`.
+- Citations are `"CODES · text"` (`sds()` in `src/content/south-dakota/cite.ts`), checked by `src/content/south-dakota/contract.ts` against `docs/research/south-dakota/outcomes.json`. Sources are in `gradelings-research/south-dakota/source/`; `fetch.sh` downloads them again and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. Record: `gradelings-research/south-dakota/README.md`.
 
 ## Content
 

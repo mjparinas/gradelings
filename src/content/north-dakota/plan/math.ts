@@ -5,7 +5,7 @@ import type { Entry } from "../kit";
 // Department of Public Instruction prints them ("4.NO.NBT.1", "3.AR.OA.4", "5.GM.M.3", "6.DPS.D.1"); Grade 9 cites
 // the Grades 9-10 high school standards ("9-10.AR.F.3", "9-10.GM.12"). The placement follows Michigan's (and so
 // California's), and each Common Core code was carried to the 2023 standards through the Department's 2017-to-2023
-// crosswalk (docs/research/north-dakota/source/math-crosswalk-2017-2023.pdf).
+// crosswalk (gradelings-research/north-dakota/source/math-crosswalk-2017-2023.pdf).
 export const PLAN_MATH: Record<string, Entry[]> = {
   "k/math": [
     ["count-to-10", "share", "K.NO.CC.5", "connecting counting to how many, and counting to answer how-many questions"],

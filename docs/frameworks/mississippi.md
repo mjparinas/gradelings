@@ -7,7 +7,7 @@
 ## Standards
 
 - The Mississippi College- and Career-Readiness Standards (MS CCRS), adopted by the State Board of Education: math (2025; `4.NBT.5`, `1.MD.3a`; Grade 9 cites Algebra I, `A-SSE.1`), English language arts (2025; `RL.4.2`; Grade 9 cites English I, `RI.9.2`), science (2026, in effect from 2026-27; `L.4.1`, `P.4.6A`, `E.4.9B`; Grade 9 cites Biology, `BIO.5`, and Physical Science, `PHS.5`) and social studies (2022; `K.CI.1` to `3.H.2` in five strands, `4.MS.1` in Grade 4, `5.1` to `8.10` in Grades 5 to 8; Grade 9 cites Mississippi Studies, `MS.8`, and Introduction to Geography, `ITG.4`).
-- Citations are `"CODES · text"` (`mss()` in `src/content/mississippi/cite.ts`), checked by `src/content/mississippi/contract.ts` against `docs/research/mississippi/outcomes.json`. Sources are in `docs/research/mississippi/source/`; `fetch.sh` downloads them again and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. Record: `docs/research/mississippi/README.md`.
+- Citations are `"CODES · text"` (`mss()` in `src/content/mississippi/cite.ts`), checked by `src/content/mississippi/contract.ts` against `docs/research/mississippi/outcomes.json`. Sources are in `gradelings-research/mississippi/source/`; `fetch.sh` downloads them again and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. Record: `gradelings-research/mississippi/README.md`.
 
 ## Content
 

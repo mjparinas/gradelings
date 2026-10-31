@@ -9,7 +9,7 @@ import type { FrameworkGuides } from "../guides";
 // ACT in grade 11), from the Nebraska Department of Education's 2025-26 Summative Assessment Administration and
 // Reporting Plan, and the reading checks of the Nebraska Reading Improvement Act (79-2603 to 79-2606); dates change
 // each year, so the page points to the department. No French here, so no French guide. Record:
-// docs/research/nebraska/README.md.
+// gradelings-research/nebraska/README.md.
 
 export const NEBRASKA_GUIDES: FrameworkGuides = {
   competencies: {

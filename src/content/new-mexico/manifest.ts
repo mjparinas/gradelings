@@ -18,6 +18,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.NEW_MEXICO_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // New Mexico: no French subject in the app (see docs/research/new-mexico/README.md).
+  // New Mexico: no French subject in the app (see gradelings-research/new-mexico/README.md).
   french: { immersion: [], "core-french": [] },
 });

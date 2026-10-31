@@ -7,7 +7,7 @@
 ## Standards
 
 - Adopted by the Kansas State Board of Education: math (the Kansas Mathematics Standards, 2017, reviewed 2024; the 2017 codes, `4.NBT.1`; Grade 9 cites the high school standards with dots, `A.SSE.1`, `F.LQE.1`), English language arts (2023; `RL.4.2`, `W.5.10`; no Language strand; Grade 9 cites the 9-10 band, `RI.9-10.2`), science (the NGSS, 2013; `4-PS3-2`, middle school `MS-LS1-1` in any of Grades 6 to 8, high school `HS-LS2-6` in Grade 9) and history, government and social studies (2020; benchmarks `1.1` to `5.4`, the same in every grade, limited in Kindergarten to Grade 3 to the standards each grade teaches).
-- Citations are `"CODES · text"` (`kss()` in `src/content/kansas/cite.ts`), checked by `src/content/kansas/contract.ts` against `docs/research/kansas/outcomes.json`. Sources are in `docs/research/kansas/source/`; `fetch.sh` downloads them again and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. Record: `docs/research/kansas/README.md`.
+- Citations are `"CODES · text"` (`kss()` in `src/content/kansas/cite.ts`), checked by `src/content/kansas/contract.ts` against `docs/research/kansas/outcomes.json`. Sources are in `gradelings-research/kansas/source/`; `fetch.sh` downloads them again and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. Record: `gradelings-research/kansas/README.md`.
 
 ## Content
 

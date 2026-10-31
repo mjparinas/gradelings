@@ -7,8 +7,8 @@ import type { FrameworkGuides } from "../guides";
 // structure and repeated reasoning. They are taught inside math lessons, not graded as a subject of their own. The
 // assessment page covers the South Dakota ELA and Math Assessments (grades 3 to 8), the South Dakota Science Assessment
 // (grades 5 and 8) and the SD-ACT (grade 11), from the Department of Education's 2026-27 assessment milestones and a
-// sample student report (both in docs/research/south-dakota/source); dates change each year, so the page points to the
-// department. No French here, so no French guide. Record: docs/research/south-dakota/README.md.
+// sample student report (both in gradelings-research/south-dakota/source); dates change each year, so the page points to the
+// department. No French here, so no French guide. Record: gradelings-research/south-dakota/README.md.
 
 export const SOUTH_DAKOTA_GUIDES: FrameworkGuides = {
   competencies: {

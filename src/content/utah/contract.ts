@@ -2,7 +2,7 @@ import { codeCite, research, type FrameworkContract } from "../contract";
 import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
-// Utah's official standards (the Utah Student Standards), built by docs/research/utah/build_outcomes.py.
+// Utah's official standards (the Utah Student Standards), built by gradelings-research/utah/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("utah/outcomes.json");
 
 export const contract: FrameworkContract = {

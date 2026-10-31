@@ -3,7 +3,7 @@ import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
 // Minnesota's official benchmarks, built from the Minnesota K-12 Academic Standards by
-// docs/research/minnesota/build_outcomes.py.
+// gradelings-research/minnesota/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("minnesota/outcomes.json");
 
 export const contract: FrameworkContract = {

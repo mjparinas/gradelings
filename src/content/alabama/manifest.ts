@@ -19,6 +19,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.ALABAMA_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Alabama: no French subject (see docs/research/alabama/README.md).
+  // Alabama: no French subject (see gradelings-research/alabama/README.md).
   french: { immersion: [], "core-french": [] },
 });

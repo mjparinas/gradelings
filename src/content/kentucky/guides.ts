@@ -8,7 +8,7 @@ import type { FrameworkGuides } from "../guides";
 // Summative Assessments (reading and math in grades 3 to 8 and 10, science in 4, 7 and 11, social studies in 5, 8 and
 // 11) and the Read to Succeed Act's reading screening in kindergarten to 3rd grade. Dates change each year, so the page
 // points to the Kentucky Department of Education. No French here, so no French guide. Record:
-// docs/research/kentucky/README.md.
+// gradelings-research/kentucky/README.md.
 
 export const KENTUCKY_GUIDES: FrameworkGuides = {
   competencies: {

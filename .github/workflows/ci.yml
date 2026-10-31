@@ -70,13 +70,8 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with:
-          # docs/research/*/source holds about 650 MB of official PDFs and pages that no job reads
-          # (the tests read each state's outcomes.json, which stays). Leaving them out, and fetching
-          # file contents only for what is checked out, makes every job's checkout much quicker.
-          sparse-checkout: |
-            /*
-            !/docs/research/*/source/
-          sparse-checkout-cone-mode: false
+          # Fetch file contents only for what is checked out. The research PDFs moved to the
+          # gradelings-research repository, but older commits still hold them.
           filter: blob:none
       - uses: ./.github/actions/setup
       - run: npx next typegen
@@ -120,13 +115,8 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with:
-          # docs/research/*/source holds about 650 MB of official PDFs and pages that no job reads
-          # (the tests read each state's outcomes.json, which stays). Leaving them out, and fetching
-          # file contents only for what is checked out, makes every job's checkout much quicker.
-          sparse-checkout: |
-            /*
-            !/docs/research/*/source/
-          sparse-checkout-cone-mode: false
+          # Fetch file contents only for what is checked out. The research PDFs moved to the
+          # gradelings-research repository, but older commits still hold them.
           filter: blob:none
       - uses: ./.github/actions/setup
       - name: Run
@@ -154,13 +144,8 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with:
-          # docs/research/*/source holds about 650 MB of official PDFs and pages that no job reads
-          # (the tests read each state's outcomes.json, which stays). Leaving them out, and fetching
-          # file contents only for what is checked out, makes every job's checkout much quicker.
-          sparse-checkout: |
-            /*
-            !/docs/research/*/source/
-          sparse-checkout-cone-mode: false
+          # Fetch file contents only for what is checked out. The research PDFs moved to the
+          # gradelings-research repository, but older commits still hold them.
           filter: blob:none
       - uses: ./.github/actions/setup
       - uses: actions/download-artifact@v8
@@ -209,13 +194,8 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with:
-          # docs/research/*/source holds about 650 MB of official PDFs and pages that no job reads
-          # (the tests read each state's outcomes.json, which stays). Leaving them out, and fetching
-          # file contents only for what is checked out, makes every job's checkout much quicker.
-          sparse-checkout: |
-            /*
-            !/docs/research/*/source/
-          sparse-checkout-cone-mode: false
+          # Fetch file contents only for what is checked out. The research PDFs moved to the
+          # gradelings-research repository, but older commits still hold them.
           filter: blob:none
       - uses: ./.github/actions/setup
       # Next's incremental build cache, so unchanged files aren't compiled again. It is about 2 GB,
@@ -285,13 +265,8 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with:
-          # docs/research/*/source holds about 650 MB of official PDFs and pages that no job reads
-          # (the tests read each state's outcomes.json, which stays). Leaving them out, and fetching
-          # file contents only for what is checked out, makes every job's checkout much quicker.
-          sparse-checkout: |
-            /*
-            !/docs/research/*/source/
-          sparse-checkout-cone-mode: false
+          # Fetch file contents only for what is checked out. The research PDFs moved to the
+          # gradelings-research repository, but older commits still hold them.
           filter: blob:none
       - uses: ./.github/actions/setup
         with:
@@ -346,13 +321,8 @@ jobs:
     steps:
       - uses: actions/checkout@v7
         with:
-          # docs/research/*/source holds about 650 MB of official PDFs and pages that no job reads
-          # (the tests read each state's outcomes.json, which stays). Leaving them out, and fetching
-          # file contents only for what is checked out, makes every job's checkout much quicker.
-          sparse-checkout: |
-            /*
-            !/docs/research/*/source/
-          sparse-checkout-cone-mode: false
+          # Fetch file contents only for what is checked out. The research PDFs moved to the
+          # gradelings-research repository, but older commits still hold them.
           filter: blob:none
       - uses: ./.github/actions/setup
       - uses: actions/download-artifact@v8

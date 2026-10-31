@@ -3,7 +3,7 @@ import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
 // North Dakota's official standards (mathematics and English language arts 2023, science 2019, social studies 2019), built
-// from the Department of Public Instruction's CASE server packages by docs/research/north-dakota/build_outcomes.py.
+// from the Department of Public Instruction's CASE server packages by gradelings-research/north-dakota/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("north-dakota/outcomes.json");
 
 export const contract: FrameworkContract = {

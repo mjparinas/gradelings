@@ -9,7 +9,7 @@ import type { FrameworkGuides } from "../guides";
 // and high school), the ACT (grade 11), i-Ready reading checks in Kindergarten to Grade 3 and the Read by Grade 3 law,
 // from the Nevada Department of Education's 2026-27 assessment calendar, its score report guides and NRS 392.750 to
 // 392.785; dates change each year, so the page points to the department. No French here, so no French guide. Record:
-// docs/research/nevada/README.md.
+// gradelings-research/nevada/README.md.
 
 export const NEVADA_GUIDES: FrameworkGuides = {
   competencies: {
