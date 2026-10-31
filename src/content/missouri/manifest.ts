@@ -5,6 +5,7 @@ export const manifest = defineFramework({
   id: "us-mo",
   framework: MISSOURI,
   grades: {
+    pk: () => import("./pk"),
     k: () => import("./k"),
     "1": () => import("./g1"),
     "2": () => import("./g2"),
@@ -18,6 +19,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.MISSOURI_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Missouri: no French subject (see docs/research/missouri/README.md).
+  // Missouri: no French subject (see gradelings-research/missouri/README.md).
   french: { immersion: [], "core-french": [] },
 });

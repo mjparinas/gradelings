@@ -7,7 +7,7 @@
 ## Standards
 
 - The West Virginia College- and Career-Readiness Standards, West Virginia Board of Education policies (legislative rules in Title 126 of the Code of State Rules): English language arts, Policy 2520.1A (effective July 1, 2021; `ELA.4.2`, with the literacy foundations as Roman numerals, `ELA.2.III`); mathematics, Policy 2520.2B (effective July 1, 2024; `M.4.6`; Grade 9 cites Algebra I, `M.A1HS.7`); science, Policy 2520.3C (effective July 1, 2022; `S.4.2`; Grade 9 cites the high school courses, `S.ESS.1`, `S.B.10`, `S.PS.3`); and social studies, Policy 2520.4 (filed July 8, 2024; `SS.8.22`; Grade 9 cites the high school courses, `SS.W.16`).
-- West Virginia numbers every standard by subject, grade and number rather than using Common Core or NGSS codes, although the content grew out of both. Citations are `"CODES · text"` (`wvs()` in `src/content/west-virginia/cite.ts`), checked by `src/content/west-virginia/contract.ts` against `docs/research/west-virginia/outcomes.json`. Sources are in `docs/research/west-virginia/source/`; `fetch.sh` downloads them again and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. Record: `docs/research/west-virginia/README.md`.
+- West Virginia numbers every standard by subject, grade and number rather than using Common Core or NGSS codes, although the content grew out of both. Citations are `"CODES · text"` (`wvs()` in `src/content/west-virginia/cite.ts`), checked by `src/content/west-virginia/contract.ts` against `docs/research/west-virginia/outcomes.json`. Sources are in `gradelings-research/west-virginia/source/`; `fetch.sh` downloads them again and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. Record: `gradelings-research/west-virginia/README.md`.
 
 ## Content
 

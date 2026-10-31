@@ -1,9 +1,10 @@
-import { beforeAll, describe, expect, it } from "vitest";
+import { afterEach, beforeAll, describe, expect, it } from "vitest";
 import { allUnitRefs, loadGrade } from "@/content";
 import { FRAMEWORKS } from "@/content/frameworks";
 import type { GradeId, SubjectId } from "@/content/types";
 import { derive, type Derived, type UnitStat } from "./derive";
 import { SURPRISE_STICKERS } from "./mystery";
+import { setRemoteFlags } from "./remoteFlags";
 import { SHOP } from "./shop";
 import { arcadeFor, GAMES } from "./arcade";
 import { FACT_SETS, factsIn } from "./facts";
@@ -134,19 +135,20 @@ describe("the trophy list", () => {
     expect(times.progress(d, { grade: "4", framework: "ca-bc" }).value).toBe(1);
   });
 
-  it("has 216 trophies with the secret ones hidden", () => {
-    expect(TROPHIES).toHaveLength(216);
+  it("has 234 trophies with the secret ones hidden", () => {
+    expect(TROPHIES).toHaveLength(234);
     expect(TROPHIES.filter((t) => t.hidden).map((t) => t.id).sort()).toEqual(
       ["early-bird", "konami", "marathon", "dizzy-ollie", "polite-moose", "secret-word", "palindrome", "make-a-wish", ...GRADES.map((g) => `polymath-${g}`)].sort(),
     );
   });
 
-  it("has a practice ladder per subject: 100, 500 and 2,000 for the core four, 250 for each French", () => {
+  it("has a practice ladder per subject: 100, 500 and 2,000 for the core four, 250 for each French and for Spanish", () => {
     const ladder = (subject: string) => TROPHIES.filter((t) => t.id.startsWith(`subject-${subject}-`)).map((t) => [t.id, t.tier, t.category]);
     for (const s of ["math", "language", "science", "social"]) {
       expect(ladder(s)).toEqual([[`subject-${s}-100`, "bronze", "Practice"], [`subject-${s}-500`, "silver", "Practice"], [`subject-${s}-2000`, "gold", "Practice"]]);
     }
     for (const s of ["immersion", "core-french"]) expect(ladder(s)).toEqual([[`subject-${s}-250`, "silver", "French"]]);
+    expect(ladder("spanish")).toEqual([["subject-spanish-250", "silver", "Spanish"]]);
     expect(getTrophy("subject-math-2000")).toMatchObject({ name: "Math Legend", icon: "♾️", description: "Get 2,000 Math questions right." });
   });
 
@@ -252,6 +254,34 @@ describe("which trophies are earned", () => {
     const d = derive([]);
     d.trophies = { "master-math-5": 1 };
     expect(visibleTrophies(d, { grade: "4", framework: "ca-bc" }).map((t) => t.id)).toContain("master-math-5");
+  });
+});
+
+describe("Spanish trophies", () => {
+  afterEach(() => setRemoteFlags({ flags: {}, variants: {} }));
+  const spanish = ["spanish-first", "spanish-100", "spanish-500", "spanish-proficient-1", "spanish-proficient-5", "spanish-extending-1", "subject-spanish-250"];
+  const ids = (ctx: TrophyContext) => visibleTrophies(derive([]), ctx).map((t) => t.id);
+
+  it("stay hidden while Spanish is behind its flag", () => {
+    for (const id of [...spanish, "master-spanish-5"]) expect(ids({ grade: "5", framework: "us-wa" }), id).not.toContain(id);
+  });
+
+  it("show in Grades 3 to 9 of every curriculum once Spanish is offered, and Word Bridge's trophy with them", () => {
+    setRemoteFlags({ flags: { spanish: true }, variants: {} });
+    for (const ctx of CONTEXTS) {
+      const teaches = ["3", "4", "5", "6", "7", "8", "9"].includes(ctx.grade);
+      const shown = ids(ctx);
+      for (const id of [...spanish, `master-spanish-${ctx.grade}`]) expect(shown.includes(id), `${ctx.framework} ${ctx.grade} ${id}`).toBe(teaches);
+      if (teaches) expect(shown, `${ctx.framework} ${ctx.grade}`).toContain("bridge-300");
+    }
+  });
+
+  it("never count toward Grade Champion", () => {
+    setRemoteFlags({ flags: { spanish: true }, variants: {} });
+    expect(getTrophy("master-spanish-6")).toMatchObject({ name: "Campeón de español · Grade 6", category: "Spanish" });
+    const ctx: TrophyContext = { grade: "6", framework: "us-wa" };
+    const core = allUnitRefs(ctx.grade, ctx.framework).filter((r) => ["math", "language", "science", "social"].includes(r.course.subject)).length;
+    expect(getTrophy("grade-champion-6")!.progress(derive([]), ctx).target).toBe(core);
   });
 });
 

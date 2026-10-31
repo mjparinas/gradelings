@@ -10,7 +10,7 @@ import type { FrameworkGuides } from "../guides";
 // 8, science in 5 and 8 and social studies in 8; End-of-Course tests in high school; four achievement levels), the
 // promotion rules in O.C.G.A. 20-2-283 and the Georgia Early Literacy Act's reading checks. Dates change each year, so
 // the page points to the Georgia Department of Education (GaDOE). Georgia has no French subject here, so no French
-// guide. Record: docs/research/georgia/README.md.
+// guide. Record: gradelings-research/georgia/README.md.
 
 export const GEORGIA_GUIDES: FrameworkGuides = {
   competencies: {
@@ -159,6 +159,10 @@ export const GEORGIA_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-K in Georgia is Georgia's Pre-K Program, free for every 4-year-old in the state and offered in public schools and private child care centers. Classrooms follow the Georgia Early Learning and Development Standards (GELDS): social and emotional growth, approaches to play and learning, language and literacy, math, science, social studies and creative development.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in Georgia is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. In social studies they learn about holidays, American symbols, good citizens and maps. Teachers record each child's skills through the year with GKIDS and check reading with a short screener.",
       lookFor: "Many Georgia districts use standards-based report cards. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

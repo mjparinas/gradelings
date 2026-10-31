@@ -1,12 +1,14 @@
-import { codeCite, research, type FrameworkContract } from "../contract";
+import { codeCite, preKCite, research, type FrameworkContract } from "../contract";
 import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
 // Colorado's official standards (the Colorado Academic Standards), built by
-// docs/research/colorado/build_outcomes.py.
+// gradelings-research/colorado/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("colorado/outcomes.json");
 
 export const contract: FrameworkContract = {
+  // Pre-K cites the early-learning document (docs/research/colorado/prek).
+  preK: preKCite("colorado", "Colorado"),
   cite: codeCite(OUTCOMES, "Colorado"),
   ownPrefix: "co-",
   adoptsFrom: ["us-ca", "ca-nb", "ca-ns", "ca-mb", "us-or", "us-ny", "us-wa"],

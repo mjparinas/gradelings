@@ -97,7 +97,7 @@ export async function reportStaffFailure(email: string, step: StaffStep, now = D
 /** A link to one family's page in the admin panel. */
 export const familyPath = (familyId: string) => `/admin/?family=${encodeURIComponent(familyId)}`;
 
-/** Alerts when a System check goes down, and says so again once it's working. Run every 15 minutes by the uptime workflow. */
+/** Alerts when a System check goes down, and says so again once it's working. Run by `/api/cron/watch/`. */
 export async function watchSystem(now = Date.now(), origin?: string): Promise<{ down: string[]; alerted: boolean }> {
   const report = await systemReport({ refresh: true, now });
   const down = report.checks.filter((c) => c.state === "down");

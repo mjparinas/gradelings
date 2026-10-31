@@ -1,0 +1,614 @@
+{
+ "pk/math": [
+  {
+   "idx": "Math 1.1.a",
+   "text": "Shows interest in and awareness of counting."
+  },
+  {
+   "idx": "Math 1.1.b",
+   "text": "Rote counts zero to ten and beyond with increasing accuracy.18"
+  },
+  {
+   "idx": "Math 1.2.a",
+   "text": "Uses numerals and number symbols in the context of daily routines, activities, and play."
+  },
+  {
+   "idx": "Math 1.2.b",
+   "text": "Uses and creates symbols to represent numbers."
+  },
+  {
+   "idx": "Math 1.2.c",
+   "text": "Uses a variety of materials (i.e. clay, sand, shaving cream) to write and form numerals and numeral-like symbols."
+  },
+  {
+   "idx": "Math 1.2.d",
+   "text": "Identifies numerals zero to ten."
+  },
+  {
+   "idx": "Math 1.2.e",
+   "text": "Differentiates some written numerals from written letters."
+  },
+  {
+   "idx": "Math 1.3.a",
+   "text": "Compares two sets of objects using terms such as greater than, less than, or equal to."
+  },
+  {
+   "idx": "Math 1.4.a",
+   "text": "Identifies quantities of three to five objects without counting using visual approximation (Subitize)."
+  },
+  {
+   "idx": "Math 1.4.b",
+   "text": "Demonstrates the ability to match object to object in a group (One-to-one correspondence)."
+  },
+  {
+   "idx": "Math 1.4.c",
+   "text": "Counts groups of objects using a number word for each object (Rational counting)."
+  },
+  {
+   "idx": "Math 1.4.d",
+   "text": "Counts a collection of up to ten items using the last counting word to tell, “How many?” (Cardinality)"
+  },
+  {
+   "idx": "Math 1.4.e",
+   "text": "Matches numerals to quantities using manipulatives."
+  },
+  {
+   "idx": "Math 2.1.a",
+   "text": "Recognizes that adding increases the number of objects in a group."
+  },
+  {
+   "idx": "Math 2.1.b",
+   "text": "Describes changes in two or more sets of objects when they are combined."
+  },
+  {
+   "idx": "Math 2.1.c",
+   "text": "Recognizes that taking away (subtracting) decreases the number of objects in a group"
+  },
+  {
+   "idx": "Math 2.1.d",
+   "text": "Describes changes in a set of objects when they are separated into parts."
+  },
+  {
+   "idx": "Math 2.1.e",
+   "text": "Counts on from the larger number for addition."
+  },
+  {
+   "idx": "Math 2.2.a",
+   "text": "Recognizes patterns in the real world."
+  },
+  {
+   "idx": "Math 2.2.b",
+   "text": "Fixes simple patterns."
+  },
+  {
+   "idx": "Math 2.2.c",
+   "text": "Duplicates simple patterns."
+  },
+  {
+   "idx": "Math 2.2.d",
+   "text": "Extends Patterns"
+  },
+  {
+   "idx": "Math 2.2.e",
+   "text": "Creates patterns."
+  },
+  {
+   "idx": "Math 2.2.f",
+   "text": "Describes similarities and differences in patterns."
+  },
+  {
+   "idx": "Math 3.1.a",
+   "text": "Sorts and classifies objects by one or more attributes (e.g., size, color, shape, texture, use)."
+  },
+  {
+   "idx": "Math 3.1.b",
+   "text": "Explains how items were sorted into groups."
+  },
+  {
+   "idx": "Math 3.2.a",
+   "text": "Asks questions to gather measurable data."
+  },
+  {
+   "idx": "Math 3.2.b",
+   "text": "Displays data to answer simple questions about themselves or the environment."
+  },
+  {
+   "idx": "Math 3.2.c",
+   "text": "Uses descriptive language to compare data in picture graphs or other concrete representations."
+  },
+  {
+   "idx": "Math 3.2.d",
+   "text": "Analyzes data from charts and graphs to answer questions."
+  },
+  {
+   "idx": "Math 3.3.a",
+   "text": "Compares objects and uses terms (e.g. lighter-heavier, hotter-colder, and faster-slower)."
+  },
+  {
+   "idx": "Math 3.3.b",
+   "text": "Uses non-standard units of measurement (e.g., hands, bodies, containers) to estimate measurable attributes."
+  },
+  {
+   "idx": "Math 3.3.c",
+   "text": "Uses various standard measuring tools for simple measuring tasks."
+  },
+  {
+   "idx": "Math 3.3.d",
+   "text": "Orders objects by measurable attributes."
+  },
+  {
+   "idx": "Math 3.3.e",
+   "text": "Uses appropriate vocabulary to describe time and sequence related to daily routines (e.g. tomorrow, yesterday,next, this morning)."
+  },
+  {
+   "idx": "Math 4.1.a",
+   "text": "Recognizes basic two-dimensional shapes when presented in different orientations. 22"
+  },
+  {
+   "idx": "Math 4.1.b",
+   "text": "Uses the names of geometric shapes when describing objects found in the environment."
+  },
+  {
+   "idx": "Math 4.1.c",
+   "text": "Creates two-dimensional shapes during play."
+  },
+  {
+   "idx": "Math 4.1.d",
+   "text": "Creates three-dimensional (solid) shapes during play."
+  },
+  {
+   "idx": "Math 4.1.e",
+   "text": "Compares, describes, analyzes, and sorts two- and three- dimensional objects in the environment using formal and informal mathematical language with prompting and support based on their attributes."
+  },
+  {
+   "idx": "Math 4.2.a",
+   "text": "Uses and responds to spatial language (e.g., between, inside, under, above, behind)."
+  },
+  {
+   "idx": "Math 4.2.b",
+   "text": "Describes the relative position or location of objects in relation to self or to other objects with mathematical precision."
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "Language 1.1.a",
+   "text": "Demonstrates understanding of a variety of finger-plays, rhymes, chants and songs, poems, conversations, andstories."
+  },
+  {
+   "idx": "Language 1.1.b",
+   "text": "Engages actively in finger-plays, rhymes, chants and songs, poems, conversations, and stories."
+  },
+  {
+   "idx": "Language 1.1.c",
+   "text": "Demonstrates understanding and follows directions that involve one step, two steps, or multiple steps."
+  },
+  {
+   "idx": "Language 1.2.a",
+   "text": "Communicates needs, wants, ideas, and feelings through three to five-word sentences."
+  },
+  {
+   "idx": "Language 1.2.b",
+   "text": "Speaks clearly and understandably to express ideas, feelings, and needs."
+  },
+  {
+   "idx": "Language 1.2.c",
+   "text": "Makes culturally relevant responses (both verbal and nonverbal) to questions and comments from others."
+  },
+  {
+   "idx": "Language 1.2.d",
+   "text": "Initiates, sustains, and expands conversations with peers and adults using open-ended responses."
+  },
+  {
+   "idx": "Language 1.2.e",
+   "text": "With modeling and support, child uses language that includes social rules; e.g., pragmatics, appropriatetone, volume, and inflectionto express ideas, feelings, and needs."
+  },
+  {
+   "idx": "Language 1.2.f",
+   "text": "Uses culturally relevant responses such as eye contact, turn taking, and intonation while having conversations withadults and peers."
+  },
+  {
+   "idx": "Language 1.2.g",
+   "text": "Recognizes when the listener does not understand and varies the amount of information12 to clarify the message."
+  },
+  {
+   "idx": "Language 1.2.h",
+   "text": "With modeling and support, uses increasingly complex phrases and sentences."
+  },
+  {
+   "idx": "Language 1.3.a",
+   "text": "Uses rich vocabulary across many topic areas."
+  },
+  {
+   "idx": "Language 1.3.b",
+   "text": "Figures out the meanings of unfamiliar words and concepts using the context of conversations, pictures that accompany text, or concrete objects."
+  },
+  {
+   "idx": "Language 1.3.c",
+   "text": "Uses category labels and names objects within a category; e.g., fruit, vegetable, animal, transportation."
+  },
+  {
+   "idx": "Language 1.3.d",
+   "text": "Demonstrates understanding of and uses words that indicate position and direction; e.g., in, on, out, under, over, off, besides, behind."
+  },
+  {
+   "idx": "Language 2.1.a",
+   "text": "Identifies signs, symbols, and labels in a variety of environments (environmental print)."
+  },
+  {
+   "idx": "Language 2.1.b",
+   "text": "Demonstrates and understands that print conveys meaning and that each spoken word can be written and read."
+  },
+  {
+   "idx": "Language 2.1.c",
+   "text": "Recognizes that letters are grouped to form words."
+  },
+  {
+   "idx": "Language 2.1.d",
+   "text": "Recognizes own written name and the written names of friends and family."
+  },
+  {
+   "idx": "Language 2.1.e",
+   "text": "Seeks information in printed materials."
+  },
+  {
+   "idx": "Language 2.2.a",
+   "text": "Holds a book right side up with the front cover facing the reader and understands left to right and top to bottom directionality."
+  },
+  {
+   "idx": "Language 2.2.b",
+   "text": "Identifies where in the book to begin reading."
+  },
+  {
+   "idx": "Language 2.2.c",
+   "text": "Understands a book has a title, author, and/or illustrator."
+  },
+  {
+   "idx": "Language 2.3.a",
+   "text": "Differentiates between sounds that are the same and different (e.g., environmental sounds, animal sounds,phonemes)."
+  },
+  {
+   "idx": "Language 2.3.b",
+   "text": "Identifies rhyming words."
+  },
+  {
+   "idx": "Language 2.3.c",
+   "text": "Produces rhyming words."
+  },
+  {
+   "idx": "Language 2.3.d",
+   "text": "Recognizes spoken words that begin with the same sound."
+  },
+  {
+   "idx": "Language 2.3.e",
+   "text": "Hears and shows awareness of separate words within spoken phrases or sentences."
+  },
+  {
+   "idx": "Language 2.3.f",
+   "text": "Identifies and discriminates syllables in words."
+  },
+  {
+   "idx": "Language 2.3.g",
+   "text": "Combines onset and rime to form a familiar one-syllable word with and without pictorial support."
+  },
+  {
+   "idx": "Language 2.4.a",
+   "text": "Discriminates letters from other shapes and symbols."
+  },
+  {
+   "idx": "Language 2.4.b",
+   "text": "Matches and recognizes similarities and differences in letters, with modeling and support."
+  },
+  {
+   "idx": "Language 2.4.c",
+   "text": "Recognizes an increasing number of letters, especially those in own name, familiar objects, family, and friends."
+  },
+  {
+   "idx": "Language 2.4.d",
+   "text": "Demonstrates understanding of letters by producing letter forms using a variety of materials; e.g., playdough,blocks, marker, and paper."
+  },
+  {
+   "idx": "Language 2.4.e",
+   "text": "Uses letter-sound knowledge, identifying the sounds of a few letters and producing the correct sounds for an increasing number of letters."
+  },
+  {
+   "idx": "Language 2.5.a",
+   "text": "Takes an active role in reading activities."
+  },
+  {
+   "idx": "Language 2.5.b",
+   "text": "Identifies characters and major events in a story."
+  },
+  {
+   "idx": "Language 2.5.c",
+   "text": "Asks and answers a variety of questions about books or stories told or read aloud."
+  },
+  {
+   "idx": "Language 2.5.d",
+   "text": "Draws connections between story events and personal experiences."
+  },
+  {
+   "idx": "Language 2.5.e",
+   "text": "Identifies events and details in the story and makes predictions."
+  },
+  {
+   "idx": "Language 2.5.f",
+   "text": "Gives an opinion for liking or disliking a book or story."
+  },
+  {
+   "idx": "Language 2.5.g",
+   "text": "Begins to demonstrate an understanding of the differences between fiction and non-fiction."
+  },
+  {
+   "idx": "Language 2.5.h",
+   "text": "Identifies the topic of informational text that has been read aloud."
+  },
+  {
+   "idx": "Language 2.5.i",
+   "text": "Retells or reenacts a story in sequence with pictures or props."
+  },
+  {
+   "idx": "Language 2.5.j",
+   "text": "Demonstrates reading fluency by use of phrasing, intonation, and expression in shared reading of familiarbooks, poems, chants, songs, nursery rhymes, or other repetitious or predictable texts."
+  },
+  {
+   "idx": "Language 3.1.a",
+   "text": "In writing process, uses a variety of writing tools, materials, and surfaces to create drawings or symbols."
+  },
+  {
+   "idx": "Language 3.1.b",
+   "text": "Writes own name using letter-like forms or conventional print."
+  },
+  {
+   "idx": "Language 3.1.c",
+   "text": "Intentionally uses scribbles/writing and inventive writing to convey meaning, ideas, or to tell a story; e.g.,signing artwork, captioning, labeling, creating lists, making notes."
+  },
+  {
+   "idx": "Language 3.1.d",
+   "text": "Forms letters starting with large motor (sky writing, paint brush and water, sidewalk chalk) progressing to finemotor (paper and writing utensil)."
+  },
+  {
+   "idx": "Language 3.1.e",
+   "text": "Organizes writing from left to right, indicating a print awareness that letters cluster as words and wordscluster into phrases or sentences by use of spacing or marks."
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "Science 1.1.a",
+   "text": "Exhibits curiosity about objects, living things, and other natural events in the environment."
+  },
+  {
+   "idx": "Science 1.1.b",
+   "text": "Identifies attributes of objects, living things, and natural events in the environment."
+  },
+  {
+   "idx": "Science 1.1.c",
+   "text": "Describes changes in objects, living things, and natural events in the environment."
+  },
+  {
+   "idx": "Science 1.1.d",
+   "text": "Begins to describe the similarities, differences and relationships between objects, living things and natural events."
+  },
+  {
+   "idx": "Science 1.1.e",
+   "text": "Asks and responds to questions about relationships of objects, living things, and events in the natural environment."
+  },
+  {
+   "idx": "Science 1.2.a",
+   "text": "Uses a variety of tools and materials to investigate."
+  },
+  {
+   "idx": "Science 1.2.b",
+   "text": "Makes predictions and researches hypotheses through active investigation."
+  },
+  {
+   "idx": "Science 1.2.c",
+   "text": "Adjusts their approach if results are different than expected and continues testing."
+  },
+  {
+   "idx": "Science 1.2.d",
+   "text": "Persists with an investigation."
+  },
+  {
+   "idx": "Science 1.3.a",
+   "text": "Uses a variety of materials to record and organize data."
+  },
+  {
+   "idx": "Science 1.3.b",
+   "text": "Identifies cause and effect relationships."
+  },
+  {
+   "idx": "Science 1.3.c",
+   "text": "Constructs theories to explain their investigations."
+  },
+  {
+   "idx": "Science 1.4.a",
+   "text": "Displays and interprets data."
+  },
+  {
+   "idx": "Science 1.4.b",
+   "text": "Presents their scientific ideas in a variety of ways."
+  },
+  {
+   "idx": "Science 1.4.c",
+   "text": "Conducts further investigation based on prior experience and information gained."
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "Social Studies 1.1.a",
+   "text": "Views self in relationship to others in a family."
+  },
+  {
+   "idx": "Social Studies 1.1.b",
+   "text": "Identifies family members (e.g., mother, father, sister, brother, grandparents, and other important people in the child’s life)."
+  },
+  {
+   "idx": "Social Studies 1.1.c",
+   "text": "Describes/discusses own cultural or familial traditions."
+  },
+  {
+   "idx": "Social Studies 1.1.d",
+   "text": "Identifies similarities and differences in their family composition and the families of others such as blended, foster, and other family structures."
+  },
+  {
+   "idx": "Social Studies 1.1.e",
+   "text": "Develops an awareness of their personal and family history."
+  },
+  {
+   "idx": "Social Studies 1.1.f",
+   "text": "Shows knowledge of family members’ roles and responsibilities in the home."
+  },
+  {
+   "idx": "Social Studies 2.1.a",
+   "text": "Recognizes that places where people live are made up of individuals who may be from different cultures, perspectives, and backgrounds and who speak different languages."
+  },
+  {
+   "idx": "Social Studies 2.1.b",
+   "text": "Identifies, discusses, and asks questions about similarities and differences in other people in their community."
+  },
+  {
+   "idx": "Social Studies 2.1.c",
+   "text": "Describes some characteristics (e.g., clothing, food, jobs) of the people in their community."
+  },
+  {
+   "idx": "Social Studies 2.2.a",
+   "text": "Demonstrates responsible behaviors."
+  },
+  {
+   "idx": "Social Studies 2.2.b",
+   "text": "Recognizes that people rely on others for economics, goods, and services (e.g., farm goods, mail delivery, safety,health care)."
+  },
+  {
+   "idx": "Social Studies 2.2.c",
+   "text": "Seeks opportunities for leadership."
+  },
+  {
+   "idx": "Social Studies 2.2.d",
+   "text": "Describes the purpose of rules."
+  },
+  {
+   "idx": "Social Studies 2.2.e",
+   "text": "Recognizes that people have wants and must make choices because resources and materials are limited."
+  },
+  {
+   "idx": "Social Studies 2.2.f",
+   "text": "Describes their role at home, at school, and in the community."
+  },
+  {
+   "idx": "Social Studies 2.3.a",
+   "text": "Describes directionality and/or location within the community."
+  },
+  {
+   "idx": "Social Studies 2.3.b",
+   "text": "Describes some physical features of the environment in which she lives (e.g., buildings and natural elementslike mountains and weather)."
+  },
+  {
+   "idx": "Social Studies 2.3.c",
+   "text": "Recognizes that people share the environment with other people, plants, and animals."
+  },
+  {
+   "idx": "Social Studies 2.3.d",
+   "text": "Shows an understanding of how to care for the indoor and outdoor environment."
+  },
+  {
+   "idx": "Social Studies 3.1.a",
+   "text": "Demonstrates an understanding of time in the context of daily experiences."
+  },
+  {
+   "idx": "Social Studies 3.1.b",
+   "text": "Understands that events happened in the past and how these events relate to one’s self, family, and community."
+  },
+  {
+   "idx": "Social Studies 3.1.c",
+   "text": "Communicates time and sequence vocabulary (e.g., before, after, during, later, first, last, yesterday, tomorrow,today) to describe relevant history and events."
+  },
+  {
+   "idx": "Social Emotional 1.1.a",
+   "text": "Demonstrates self-confidence."
+  },
+  {
+   "idx": "Social Emotional 1.1.b",
+   "text": "Makes personal preferences known to others."
+  },
+  {
+   "idx": "Social Emotional 1.1.c",
+   "text": "Demonstrates knowledge of self-identity/autonomy."
+  },
+  {
+   "idx": "Social Emotional 1.1.d",
+   "text": "Displays an awareness of similarities and differences between self and others."
+  },
+  {
+   "idx": "Social Emotional 1.1.e",
+   "text": "Demonstrates developmentally appropriate cultural curiosity and responsiveness."
+  },
+  {
+   "idx": "Social Emotional 1.2.a",
+   "text": "Associates emotions with words, facial expressions, and body language."
+  },
+  {
+   "idx": "Social Emotional 1.2.b",
+   "text": "Identifies, describes, and expresses their own feelings."
+  },
+  {
+   "idx": "Social Emotional 1.2.c",
+   "text": "Identifies and describes feelings of others."
+  },
+  {
+   "idx": "Social Emotional 1.2.d",
+   "text": "Expresses feelings of satisfaction in independent activities"
+  },
+  {
+   "idx": "Social Emotional 1.2.e",
+   "text": "Expresses empathy for others."
+  },
+  {
+   "idx": "Social Emotional 1.3.a",
+   "text": "Understands and follows expectations in the learning environment."
+  },
+  {
+   "idx": "Social Emotional 1.3.b",
+   "text": "Adjusts behavior and adapts to transitions, daily routines, and unexpected events."
+  },
+  {
+   "idx": "Social Emotional 1.3.c",
+   "text": "Chooses appropriate words and actions."
+  },
+  {
+   "idx": "Social Emotional 2.1.a",
+   "text": "Expresses interest, curiosity, and trust with familiar adults."
+  },
+  {
+   "idx": "Social Emotional 2.1.b",
+   "text": "Seeks support from familiar adults."
+  },
+  {
+   "idx": "Social Emotional 2.1.c",
+   "text": "Separates from familiar adult with minimal distress."
+  },
+  {
+   "idx": "Social Emotional 2.2.a",
+   "text": "Responds when adults or other children initiate interactions."
+  },
+  {
+   "idx": "Social Emotional 2.2.b",
+   "text": "Initiates and sustains positive interactions with adults and other children."
+  },
+  {
+   "idx": "Social Emotional 2.2.c",
+   "text": "Acknowledges someone’s perspective by demonstrating positive ways to resolve conflict."
+  },
+  {
+   "idx": "Social Emotional 2.3.a",
+   "text": "Respects the rights and property of others."
+  },
+  {
+   "idx": "Social Emotional 2.3.b",
+   "text": "Defends own rights and the rights of others."
+  },
+  {
+   "idx": "Social Emotional 2.3.c",
+   "text": "Shows respect for learning materials in the learning environment."
+  }
+ ]
+}

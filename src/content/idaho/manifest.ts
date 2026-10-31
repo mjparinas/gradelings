@@ -18,6 +18,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.IDAHO_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Idaho: no French subject in the app (see docs/research/idaho/README.md).
+  // Idaho: no French subject in the app (see gradelings-research/idaho/README.md).
   french: { immersion: [], "core-french": [] },
 });

@@ -1,0 +1,1654 @@
+{
+ "pk/math": [
+  {
+   "idx": "2.1 PK.A.1",
+   "text": "Know number names and the count sequence."
+  },
+  {
+   "idx": "2.1 PK.A.1.1",
+   "text": "Name numerals up to 10 ."
+  },
+  {
+   "idx": "2.1 PK.A.1.2",
+   "text": "Rote count up to 20 ."
+  },
+  {
+   "idx": "2.1 PK.A.1.3",
+   "text": "Match a numeral to a set of 0–10 objects ."
+  },
+  {
+   "idx": "2.1 PK.A.1.4",
+   "text": "Represent a number of objects with a written numeral 0–10 ."
+  },
+  {
+   "idx": "2.1 PK.A.1.5",
+   "text": "Differentiate numerals from letters ."
+  },
+  {
+   "idx": "2.1 PK.A.1.6",
+   "text": "Counts on when a specific number is provided ."
+  },
+  {
+   "idx": "2.1 PK.A.2",
+   "text": "Count to tell the number of objects."
+  },
+  {
+   "idx": "2.1 PK.A.2.1",
+   "text": "Subitize (visually quantify) to determine how many: attach a numerical value to a set of objects without counting up to six ."
+  },
+  {
+   "idx": "2.1 PK.A.2.2",
+   "text": "Use one-to-one correspondence when counting to 10 ."
+  },
+  {
+   "idx": "2.1 PK.A.2.3",
+   "text": "State the total number of objects counted, demonstrating understanding that the last number named tells the number of objects counted ."
+  },
+  {
+   "idx": "2.1 PK.A.2.4",
+   "text": "Use counting and numbers as part of play and as a means for determining quantity ."
+  },
+  {
+   "idx": "2.1 PK.A.3",
+   "text": "Compare numbers"
+  },
+  {
+   "idx": "2.1 PK.A.3.1",
+   "text": "Create sets of objects with same and different amounts ."
+  },
+  {
+   "idx": "2.1 PK.A.3.2",
+   "text": "Identify whether the number of objects in one group is greater than, less than, or equal to the number of objects in another group up to 10 ."
+  },
+  {
+   "idx": "2.1 PK.A.3.3",
+   "text": "Compare two numbers between 1 and 5 when presented as written numerals ."
+  },
+  {
+   "idx": "2.1 PK.A.3.4",
+   "text": "Practice use of mathematical vocabulary to compare numbers of objects"
+  },
+  {
+   "idx": "2.1 PK.MP.1",
+   "text": "Engage in numerical play ."
+  },
+  {
+   "idx": "2.1 PK.MP.2",
+   "text": "Persist in numerical play (Reference AL.2 PK.C)."
+  },
+  {
+   "idx": "2.1 PK.MP.3",
+   "text": "When prompted, communicate thinking while engaged in numerical play ."
+  },
+  {
+   "idx": "2.1 PK.MP.4",
+   "text": "Talk and listen to peers during numerical play ."
+  },
+  {
+   "idx": "2.1 PK.MP.5",
+   "text": "Use common forms of numerical representation (e .g ., fingers, tally marks, dots) ."
+  },
+  {
+   "idx": "2.2 PK.A.1",
+   "text": "Understand addition as putting together and adding to, and understand subtraction as taking apart and taking from."
+  },
+  {
+   "idx": "2.2 PK.A.1.1",
+   "text": "Represent addition and subtraction with objects, fingers, mental images, drawings, sounds (e .g ., claps), acting out situations, verbal explanations, expressions, or equations ."
+  },
+  {
+   "idx": "2.2 PK.A.1.2",
+   "text": "Explain adding and subtracting sets of objects up to and including six, using basic math vocabulary (e .g ., putting together, adding to, taking away, taking apart, taking from) ."
+  },
+  {
+   "idx": "2.2 PK.A.1.3",
+   "text": "Join sets of objects ."
+  },
+  {
+   "idx": "2.2 PK.A.1.4",
+   "text": "Separate sets of objects ."
+  },
+  {
+   "idx": "2.2 PK.A.1.5",
+   "text": "Add objects to a set and tell a number story about it ."
+  },
+  {
+   "idx": "2.2 PK.MP.1",
+   "text": "Engage in mathematical play ."
+  },
+  {
+   "idx": "2.2 PK.MP.2",
+   "text": "Persist in mathematical play (Reference AL.2 PK.C)."
+  },
+  {
+   "idx": "2.2 PK.MP.3",
+   "text": "Problem-solve during mathematical play (Reference AL.4 PK.C)."
+  },
+  {
+   "idx": "2.2 PK.MP.4",
+   "text": "When prompted, communicate thinking while engaged in mathematical play ."
+  },
+  {
+   "idx": "2.2 PK.MP.5",
+   "text": "Talk and listen to peers during mathematical play ."
+  },
+  {
+   "idx": "2.2 PK.MP.6",
+   "text": "Use common forms of numerical representation (e .g ., fingers, tally marks, dots) ."
+  },
+  {
+   "idx": "2.3 PK.A.1",
+   "text": "Identify and describe shapes."
+  },
+  {
+   "idx": "2.3 PK.A.1.1",
+   "text": "Describe objects in the environment using names of shapes ."
+  },
+  {
+   "idx": "2.3 PK.A.1.2",
+   "text": "Recognize and describe the attributes of geometric figures ."
+  },
+  {
+   "idx": "2.3 PK.A.1.3",
+   "text": "Describe the relative positions of objects using terms such as above, below, beside, in front of, behind, and next to ."
+  },
+  {
+   "idx": "2.3 PK.A.1.4",
+   "text": "Identify shapes as two-dimensional (lying in a plane, “flat”) or three- dimensional (solid) ."
+  },
+  {
+   "idx": "2.3 PK.A.2",
+   "text": "Analyze, compare, create, and compose shapes."
+  },
+  {
+   "idx": "2.3 PK.A.2.1",
+   "text": "Analyze and compare two- and three- dimensional shapes, in different sizes and orientations, using informal language to describe their similarities, differences, parts, and other attributes ."
+  },
+  {
+   "idx": "2.3 PK.A.2.2",
+   "text": "Model shapes in the world by building shapes from components and drawing shapes ."
+  },
+  {
+   "idx": "2.3 PK.A.2.3",
+   "text": "Use geoboards to create shapes with rubber bands ."
+  },
+  {
+   "idx": "2.3 PK.A.2.4",
+   "text": "Use simple shapes to compose larger shapes ."
+  },
+  {
+   "idx": "2.3 PK.MP.1",
+   "text": "Engage in geometric play ."
+  },
+  {
+   "idx": "2.3 PK.MP.2",
+   "text": "Persist in geometric play (Reference AL.2 PK.C)."
+  },
+  {
+   "idx": "2.3 PK.MP.3",
+   "text": "Problem-solve during geometric play (Reference AL.4 PK.C)."
+  },
+  {
+   "idx": "2.3 PK.MP.4",
+   "text": "When prompted, communicate thinking while engaged in geometric play ."
+  },
+  {
+   "idx": "2.3 PK.MP.5",
+   "text": "Talk and listen to peers during geometric play"
+  },
+  {
+   "idx": "2.4 PK.A.1",
+   "text": "Describe and compare measurable attributes of length and weights of everyday objects."
+  },
+  {
+   "idx": "2.4 PK.A.1.1",
+   "text": "Recognize attributes of objects that can be measured ."
+  },
+  {
+   "idx": "2.4 PK.A.1.2",
+   "text": "Measure objects using non-standard items (e .g ., hands, shoes, yarn, blocks) ."
+  },
+  {
+   "idx": "2.4 PK.A.1.3",
+   "text": "Practice use of standard measurement tools ."
+  },
+  {
+   "idx": "2.4 PK.A.1.4",
+   "text": "Practice using measurement vocabulary ."
+  },
+  {
+   "idx": "2.4 PK.A.1.5",
+   "text": "Sort and order by one attribute ."
+  },
+  {
+   "idx": "2.4 PK.A.1.6",
+   "text": "Use ordinal number words to describe the position of objects (first, second, last) ."
+  },
+  {
+   "idx": "2.4 PK.A.1.7",
+   "text": "Compare two objects with a measureable attribute in common to see which object has “more of”/“less of” the attribute and describe the difference ."
+  },
+  {
+   "idx": "2.4 PK.A.4",
+   "text": "Classify objects and count the number of objects in each category."
+  },
+  {
+   "idx": "2.4 PK.A.4.1",
+   "text": "Classify up to 10 objects using one attribute into categories ."
+  },
+  {
+   "idx": "2.4 PK.A.4.2",
+   "text": "Display the number of objects in each category ."
+  },
+  {
+   "idx": "2.4 PK.A.4.3",
+   "text": "Count and compare the quantities of each category to describe which category has “more of”/“less of” the attribute ."
+  },
+  {
+   "idx": "2.4 PK.MP.1",
+   "text": "Engage in activities that include measuring, representing, organizing, and understanding data ."
+  },
+  {
+   "idx": "2.4 PK.MP.2",
+   "text": "Persist in activities that include measuring, representing, organizing, and understanding data (Reference AL.2 PK.C)."
+  },
+  {
+   "idx": "2.4 PK.MP.3",
+   "text": "Problem-solve in activities that include measuring, representing, organizing, and understanding data (Reference AL.4 PK.C)."
+  },
+  {
+   "idx": "2.4 PK.MP.4",
+   "text": "When prompted, communicate thinking while engaged in activities that include measuring, representing, organizing, and understanding data ."
+  },
+  {
+   "idx": "2.4 PK.MP.5",
+   "text": "Talk and listen to peers during activities that include measuring, representing, organizing, and understanding data ."
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "1.1 PK.A.1",
+   "text": "Orient a book correctly ."
+  },
+  {
+   "idx": "1.1 PK.A.2",
+   "text": "Turn pages in order ."
+  },
+  {
+   "idx": "1.1 PK.A.3",
+   "text": "Use pointers or finger to track print on charts, posters, environmental print or in books ."
+  },
+  {
+   "idx": "1.1 PK.A.4",
+   "text": "Practice tracking from top to bottom and left to right with scaffolding ."
+  },
+  {
+   "idx": "1.1 PK.B.1",
+   "text": "Differentiate between numbers and letters and letters and words ."
+  },
+  {
+   "idx": "1.1 PK.B.2",
+   "text": "Recognize and name some upper and lower case letters of the alphabet"
+  },
+  {
+   "idx": "1.1 PK.C.1",
+   "text": "Recognize rhyming words ."
+  },
+  {
+   "idx": "1.1 PK.C.2",
+   "text": "Recognize when two or more words begin with the same sound (alliteration) ."
+  },
+  {
+   "idx": "1.1 PK.C.3",
+   "text": "Count syllables in spoken words ."
+  },
+  {
+   "idx": "1.1 PK.C.4",
+   "text": "Isolate and pronounce initial sounds ."
+  },
+  {
+   "idx": "1.1 PK.C.5",
+   "text": "Segment single-syllable spoken words into phonemes ."
+  },
+  {
+   "idx": "1.1 PK.D.1",
+   "text": "Associate some letters with their names and sounds ."
+  },
+  {
+   "idx": "1.1 PK.D.2",
+   "text": "Identify familiar words and environmental print"
+  },
+  {
+   "idx": "1.1 PK.E.1",
+   "text": "Recite rhymes, songs, and familiar text while tracking with a finger or pointer ."
+  },
+  {
+   "idx": "1.1 PK.E.2",
+   "text": "Apply knowledge of letters, words, and sounds to read simple sentences ."
+  },
+  {
+   "idx": "1.1 PK.E.3",
+   "text": "Assemble letters to form words and words to form sentences and (pretend) to read the words or sentences back ."
+  },
+  {
+   "idx": "1.2 PK.A.1",
+   "text": "Know that the details of a text can be used to support a main topic or idea ."
+  },
+  {
+   "idx": "1.2 PK.A.2",
+   "text": "Provide relevant details from a text which support a provided main idea ."
+  },
+  {
+   "idx": "1.2 PK.B.1",
+   "text": "Use specific details from the text to answer questions ."
+  },
+  {
+   "idx": "1.2 PK.B.2",
+   "text": "Answer “who” or “what” the text is about ."
+  },
+  {
+   "idx": "1.2 PK.B.3",
+   "text": "Answer “how” and/or “why” questions using specifics from the text ."
+  },
+  {
+   "idx": "1.2 PK.C.1",
+   "text": "Share personal experience and prior knowledge that is relevant to the text ."
+  },
+  {
+   "idx": "1.2 PK.C.2",
+   "text": "Contribute relevant information to a K (know), W (what child wants to learn), L (what group learned) chart ."
+  },
+  {
+   "idx": "1.2 PK.C.3",
+   "text": "Choose text based on personal interests and experiences ."
+  },
+  {
+   "idx": "1.2 PK.E.1",
+   "text": "Relate that texts are organized in a predictable format ."
+  },
+  {
+   "idx": "1.2 PK.E.2",
+   "text": "Identify the title page of a book ."
+  },
+  {
+   "idx": "1.2 PK.E.3",
+   "text": "Identify the front cover of a book ."
+  },
+  {
+   "idx": "1.2 PK.E.4",
+   "text": "Identify the back cover of a book"
+  },
+  {
+   "idx": "1.2 PK.F.1",
+   "text": "Participate in discussions about unfamiliar words ."
+  },
+  {
+   "idx": "1.2 PK.F.2",
+   "text": "Connect prior understandings to unfamiliar words ."
+  },
+  {
+   "idx": "1.2 PK.G.1",
+   "text": "Retell a simple sequence in a text using picture support ."
+  },
+  {
+   "idx": "1.2 PK.G.2",
+   "text": "Match pictures to ideas, objects, or steps in a sequence ."
+  },
+  {
+   "idx": "1.2 PK.G.3",
+   "text": "Describe pictures in a text in detail to answer specific questions about the text ."
+  },
+  {
+   "idx": "1.2 PK.I.1",
+   "text": "Recognize that texts have similar components that can be compared and contrasted (e .g ., main ideas, details) ."
+  },
+  {
+   "idx": "1.2 PK.I.2",
+   "text": "Participate in strategies that provide opportunities to compare and contrast texts and/or components of texts (e .g ., Venn diagrams, T-charts) ."
+  },
+  {
+   "idx": "1.2 PK.J.1",
+   "text": "Talk about pictures using new vocabulary words or phrases ."
+  },
+  {
+   "idx": "1.2 PK.J.2",
+   "text": "Use new vocabulary in the context of dramatic play, daily routines, and classroom conversations ."
+  },
+  {
+   "idx": "1.2 PK.J.3",
+   "text": "Begin to use new vocabulary when asking questions or describing situations or objects ."
+  },
+  {
+   "idx": "1.2 PK.K.1",
+   "text": "Recognize words or phrases that are unfamiliar to them ."
+  },
+  {
+   "idx": "1.2 PK.K.2",
+   "text": "Ask, “What does that mean?”"
+  },
+  {
+   "idx": "1.2 PK.K.3",
+   "text": "Talk about connections between familiar and unfamiliar words or phrases that mean similar things (e .g ., grass, lawn) ."
+  },
+  {
+   "idx": "1.2 PK.L.1",
+   "text": "Ask and answer questions about text being read aloud ."
+  },
+  {
+   "idx": "1.2 PK.L.2",
+   "text": "Share relevant prior knowledge about text being read aloud ."
+  },
+  {
+   "idx": "1.2 PK.L.3",
+   "text": "Respond to and build on comments from other children ."
+  },
+  {
+   "idx": "1.2 PK.L.4",
+   "text": "Use ideas gained in group reading activities in other daily routines, learning centers, and activities ."
+  },
+  {
+   "idx": "1.3 PK.A.1",
+   "text": "Retell a story in sequential order using various materials ."
+  },
+  {
+   "idx": "1.3 PK.B.1",
+   "text": "Use specific details from the story to answer questions ."
+  },
+  {
+   "idx": "1.3 PK.C.1",
+   "text": "Demonstrate understanding that “setting” is where a story takes place ."
+  },
+  {
+   "idx": "1.3 PK.C.2",
+   "text": "Demonstrate understanding that “characters” are people or animals who have a role in the story ."
+  },
+  {
+   "idx": "1.3 PK.C.3",
+   "text": "Respond to questions and prompts about characters, settings, and events during a read-aloud ."
+  },
+  {
+   "idx": "1.3 PK.D.1",
+   "text": "Understand that an author writes the story ."
+  },
+  {
+   "idx": "1.3 PK.D.2",
+   "text": "Understand that the illustrator draws the pictures ."
+  },
+  {
+   "idx": "1.3 PK.E.1",
+   "text": "Understand that different types of texts are used for different purposes ."
+  },
+  {
+   "idx": "1.3 PK.E.2",
+   "text": "Understand that a storybook has characters, setting, and actions associated with words and, most often, illustrations ."
+  },
+  {
+   "idx": "1.3 PK.E.3",
+   "text": "Understand that a poem consists of words arranged in patterns of sound (e .g ., rhyming words, alliteration) ."
+  },
+  {
+   "idx": "1.3 PK.E.4",
+   "text": "Tell if a text is storybook or poem ."
+  },
+  {
+   "idx": "1.3 PK.E.5",
+   "text": "Differentiate between real and make- believe ."
+  },
+  {
+   "idx": "1.3 PK.F.1",
+   "text": "Participate in discussions about unfamiliar words ."
+  },
+  {
+   "idx": "1.3 PK.F.2",
+   "text": "Connect prior understandings to unfamiliar words ."
+  },
+  {
+   "idx": "1.3 PK.G.1",
+   "text": "Attach action and descriptive words to illustrations (e .g ., “That man in the yellow hat is running fast .”) ."
+  },
+  {
+   "idx": "1.3 PK.H.1",
+   "text": "Understand that characters within the same story or characters from different stories can be compared and contrasted ."
+  },
+  {
+   "idx": "1.3 PK.H.2",
+   "text": "Participate in strategies that provide opportunities to compare and contrast the experiences of characters (e .g ., Venn diagrams, T-charts, dramatic play) ."
+  },
+  {
+   "idx": "1.3 PK.I.1",
+   "text": "Recognize words or phrases that are unfamiliar to them ."
+  },
+  {
+   "idx": "1.3 PK.I.2",
+   "text": "Ask, “What does that mean?”"
+  },
+  {
+   "idx": "1.3 PK.I.3",
+   "text": "Talk about connections between familiar and unfamiliar words or phrases that mean similar things (e .g ., grass, lawn) ."
+  },
+  {
+   "idx": "1.3 PK.J.1",
+   "text": "Talk about pictures using new vocabulary words or phrases ."
+  },
+  {
+   "idx": "1.3 PK.J.2",
+   "text": "Use new vocabulary in the context of dramatic play, daily routines, and classroom conversations ."
+  },
+  {
+   "idx": "1.3 PK.J.3",
+   "text": "Begin to use new vocabulary when asking questions or describing situations or objects ."
+  },
+  {
+   "idx": "1.3 PK.K.1",
+   "text": "Ask and answer questions about story or poem being read aloud ."
+  },
+  {
+   "idx": "1.3 PK.K.2",
+   "text": "Share relevant prior knowledge about text being read aloud ."
+  },
+  {
+   "idx": "1.3 PK.K.3",
+   "text": "Respond to and build on comments from other children ."
+  },
+  {
+   "idx": "1.3 PK.K.4",
+   "text": "Use ideas gained in group reading activities in other daily routines, learning centers, and activities ."
+  },
+  {
+   "idx": "1.4 PK.A.1",
+   "text": "Use illustration/dictation to convey meaning about a particular topic ."
+  },
+  {
+   "idx": "1.4 PK.A.2",
+   "text": "Create a picture about a nonfiction topic and talk about it ."
+  },
+  {
+   "idx": "1.4 PK.B.1",
+   "text": "Create a picture about a nonfiction topic and talk about it ."
+  },
+  {
+   "idx": "1.4 PK.C.1",
+   "text": "Brainstorm ideas for pictures and stories ."
+  },
+  {
+   "idx": "1.4 PK.C.2",
+   "text": "Tell adult what she/he will draw ."
+  },
+  {
+   "idx": "1.4 PK.D.1",
+   "text": "Understand that words are connected to print ."
+  },
+  {
+   "idx": "1.4 PK.D.2",
+   "text": "Work with adult to create words or sentences that relate to drawings ."
+  },
+  {
+   "idx": "1.4 PK.E.1",
+   "text": "Write symbols, letters, or letter-like shapes ."
+  },
+  {
+   "idx": "1.4 PK.E.2",
+   "text": "Attempt to reproduce own name and/or simple words, with most letters correct"
+  },
+  {
+   "idx": "1.4 PK.M.1",
+   "text": "Use illustration/dictation to convey meaning about an experience or event ."
+  },
+  {
+   "idx": "1.4 PK.M.2",
+   "text": "Create a picture about an experience or event and talk about it ."
+  },
+  {
+   "idx": "1.4 PK.N.1",
+   "text": "Generate ideas for writing ."
+  },
+  {
+   "idx": "1.4 PK.N.2",
+   "text": "Understand that “who” a story will be about refers to the person, animal, or animated object that the story will be about ."
+  },
+  {
+   "idx": "1.4 PK.N.3",
+   "text": "Understand that “what” a story will be about refers to the sequenced events that happen to the referenced “who .”"
+  },
+  {
+   "idx": "1.4 PK.N.4",
+   "text": "Respond when asked “who” or “what” a story is about, and follow through when drawing about or dictating the story ."
+  },
+  {
+   "idx": "1.4 PK.O.1",
+   "text": "When prompted, provide details (e .g ., descriptive words, feelings, and thoughts of the character) to further develop a story ."
+  },
+  {
+   "idx": "1.4 PK.O.2",
+   "text": "Tell adult what she/he has drawn/written about ."
+  },
+  {
+   "idx": "1.4 PK.P.1",
+   "text": "Understand that stories can be told about a single event ."
+  },
+  {
+   "idx": "1.4 PK.P.2",
+   "text": "Understand that a single event is made up of a series of smaller events that are in a sequence (before, next, end) ."
+  },
+  {
+   "idx": "1.4 PK.P.3",
+   "text": "Respond with a logical sequence of events when asked “what” their story is about ."
+  },
+  {
+   "idx": "1.4 PK.R.1",
+   "text": "Write symbols, letters, or letter-like shapes ."
+  },
+  {
+   "idx": "1.4 PK.R.2",
+   "text": "Attempt to reproduce own name and/or simple words, with most letters correct ."
+  },
+  {
+   "idx": "1.4 PK.T.1",
+   "text": "Understand that drawings and dictations can convey meaning to an audience ."
+  },
+  {
+   "idx": "1.4 PK.T.2",
+   "text": "Understand that stories may have to be changed to make meaning more clear ."
+  },
+  {
+   "idx": "1.4 PK.T.3",
+   "text": "Share work with others ."
+  },
+  {
+   "idx": "1.4 PK.T.4",
+   "text": "Participate in discussions about their work ."
+  },
+  {
+   "idx": "1.4 PK.T.5",
+   "text": "When prompted, make changes to work based on feedback"
+  },
+  {
+   "idx": "1.4 PK.V.1",
+   "text": "Ask adults for explanations or information using why, how, where, and when questions (e .g ., “Why do leaves turn colors?” “Why doesn’t Jamal like pizza?”) ."
+  },
+  {
+   "idx": "1.4 PK.V.2",
+   "text": "Use a variety of resources (e .g ., adults and peers, books, digital media, maps, recipes, experts) to find new information ."
+  },
+  {
+   "idx": "1.4 PK.W.1",
+   "text": "Respond to prompts which require reference to prior experiences ."
+  },
+  {
+   "idx": "1.4 PK.W.2",
+   "text": "Relate prior experiences and learning to a current topic ."
+  },
+  {
+   "idx": "1.4 PK.X.1",
+   "text": "Engage in writing opportunities including journaling ."
+  },
+  {
+   "idx": "1.4 PK.X.2",
+   "text": "Ask adult to “write down the words” of his/her story or to his/her drawing ."
+  },
+  {
+   "idx": "1.4 PK.X.3",
+   "text": "Ask to revisit previous work ."
+  },
+  {
+   "idx": "1.5 PK.A.1",
+   "text": "Communicate using detail related to topic being discussed ."
+  },
+  {
+   "idx": "1.5 PK.A.2",
+   "text": "Pose questions related to topic being discussed ."
+  },
+  {
+   "idx": "1.5 PK.A.3",
+   "text": "Allow wait time before responding ."
+  },
+  {
+   "idx": "1.5 PK.A.4",
+   "text": "Engage in turn-taking ."
+  },
+  {
+   "idx": "1.5 PK.B.1",
+   "text": "Respond to a question with an answer or details related to the topic being discussed ."
+  },
+  {
+   "idx": "1.5 PK.C.1",
+   "text": "Follow two-step directions ."
+  },
+  {
+   "idx": "1.5 PK.C.2",
+   "text": "Act upon or respond to simple statements and questions showing understanding of intent ."
+  },
+  {
+   "idx": "1.5 PK.D.1",
+   "text": "Talk about stories, experiences, and interests using some detail ."
+  },
+  {
+   "idx": "1.5 PK.D.2",
+   "text": "Use appropriate volume to be heard by group, paying attention to inside and outside voices ."
+  },
+  {
+   "idx": "1.5 PK.D.3",
+   "text": "Use appropriate pacing when speaking ."
+  },
+  {
+   "idx": "1.5 PK.E.1",
+   "text": "Talk about personal thoughts, feelings, and ideas ."
+  },
+  {
+   "idx": "1.5 PK.E.2",
+   "text": "Use appropriate volume to be heard by group, paying attention to inside and outside voices ."
+  },
+  {
+   "idx": "1.5 PK.E.3",
+   "text": "Use appropriate pacing when speaking ."
+  },
+  {
+   "idx": "1.5 PK.G.1",
+   "text": "Speak in complete sentences that contain more than three words ."
+  },
+  {
+   "idx": "1.5 PK.G.2",
+   "text": "Use past tense ."
+  },
+  {
+   "idx": "1.5 PK.G.3",
+   "text": "Use plurals including those which do not end in “s .”"
+  },
+  {
+   "idx": "1.5 PK.G.4",
+   "text": "Use pronouns ."
+  },
+  {
+   "idx": "1.5 PK.G.5",
+   "text": "Use a variety of prepositions ."
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "3.1 PK.A.1",
+   "text": "Sort objects by living and non-living ."
+  },
+  {
+   "idx": "3.1 PK.A.2",
+   "text": "Categorize common living things into plants and animals ."
+  },
+  {
+   "idx": "3.1 PK.A.3",
+   "text": "State that living things need air, food, and water to survive ."
+  },
+  {
+   "idx": "3.1 PK.A.4",
+   "text": "Observe the effect of darkness and light on growing plants ."
+  },
+  {
+   "idx": "3.1 PK.A.5",
+   "text": "Tell the parts of a person, animal, or plant ."
+  },
+  {
+   "idx": "3.1 PK.A.6",
+   "text": "Draw a picture of a person, an animal, or a plant including most of the major observable features ."
+  },
+  {
+   "idx": "3.1 PK.A.7",
+   "text": "Ask questions about objects, organisms, and events ."
+  },
+  {
+   "idx": "3.1 PK.A.8",
+   "text": "Use the five senses and simple equipment to gather data ."
+  },
+  {
+   "idx": "3.1 PK.A.9",
+   "text": "Collect objects during a nature walk ."
+  },
+  {
+   "idx": "3.1 PK.A.10",
+   "text": "Describe observations accurately ."
+  },
+  {
+   "idx": "3.1 PK.A.11",
+   "text": "Compare observations with others ."
+  },
+  {
+   "idx": "3.1 PK.A.12",
+   "text": "Make a prediction about the result of the experiment"
+  },
+  {
+   "idx": "3.1 PK.A.13",
+   "text": "Observe and document the growth of a living thing through drawings, writing, and/or photos ."
+  },
+  {
+   "idx": "3.1 PK.A.14",
+   "text": "Describe changes in people and animals over time (e .g ., losing teeth, growing out of clothing, beans sprouting) ."
+  },
+  {
+   "idx": "3.1 PK.A.15",
+   "text": "Care for plants and animals in the classroom ."
+  },
+  {
+   "idx": "3.1 PK.A.16",
+   "text": "Identify changes that occur to animals during the seasons"
+  },
+  {
+   "idx": "3.2 PK.A.1",
+   "text": "Recognize the different types of matter (e .g ., solid, liquid, gas) ."
+  },
+  {
+   "idx": "3.2 PK.A.2",
+   "text": "Describe objects according to size, shape, color, or properties of matter ."
+  },
+  {
+   "idx": "3.2 PK.A.3",
+   "text": "Collect items and sort them according to shape, color, or other attributes ."
+  },
+  {
+   "idx": "3.2 PK.A.4",
+   "text": "Recognize that matter takes on different shapes depending upon its type (e .g ., solids have a definite shape, liquids take the shape of their container, gas lacks shape and is present everywhere) ."
+  },
+  {
+   "idx": "3.2 PK.A.5",
+   "text": "Ask questions about objects ."
+  },
+  {
+   "idx": "3.2 PK.A.6",
+   "text": "Use the five senses and simple equipment to gather data ."
+  },
+  {
+   "idx": "3.2 PK.A.7",
+   "text": "Make a prediction about the results of the experiment ."
+  },
+  {
+   "idx": "3.2 PK.A.8",
+   "text": "Point out when a change in matter occurs ."
+  },
+  {
+   "idx": "3.2 PK.A.9",
+   "text": "Observe differences in water (e .g ., ice cube or snow melting and freezing) ."
+  },
+  {
+   "idx": "3.2 PK.A.10",
+   "text": "Notice changes in food substances during cooking ."
+  },
+  {
+   "idx": "3.2 PK.A.11",
+   "text": "Experiment with changes in matter ."
+  },
+  {
+   "idx": "3.2 PK.A.12",
+   "text": "Experiment with changes in substances when combined ."
+  },
+  {
+   "idx": "3.2 PK.B.1",
+   "text": "omment about the speed or direction of objects during play ."
+  },
+  {
+   "idx": "3.2 PK.B.2",
+   "text": "Demonstrate an understanding of fast, slow, back, forth, start and stop ."
+  },
+  {
+   "idx": "3.2 PK.B.3",
+   "text": "Use the five sense and simple equipment to gather data ."
+  },
+  {
+   "idx": "3.2 PK.B.4",
+   "text": "Experiment with objects or ideas to obtain a result ."
+  },
+  {
+   "idx": "3.2 PK.B.5",
+   "text": "Make predictions about an outcome (e .g ., What might happen to a kite when the wind blows or slows down?) ."
+  },
+  {
+   "idx": "3.2 PK.B.6",
+   "text": "Describe observations accurately ."
+  },
+  {
+   "idx": "3.2 PK.B.7",
+   "text": "Compare observations with others ."
+  },
+  {
+   "idx": "3.2 PK.B.8",
+   "text": "Push or pull objects with varying size, shape, and weights ."
+  },
+  {
+   "idx": "3.2 PK.C.1",
+   "text": "Demonstrate an understanding of push and pull ."
+  },
+  {
+   "idx": "3.2 PK.C.2",
+   "text": "Participate in activities that involve changes in strength and direction in the pushing and pulling of objects and discuss the outcomes ."
+  },
+  {
+   "idx": "3.2 PK.C.3",
+   "text": "Make predictions about an outcome (e .g ., What might happen to a car that is pushed up or down a hill?) ."
+  },
+  {
+   "idx": "3.2 PK.C.4",
+   "text": "Describe observations accurately ."
+  },
+  {
+   "idx": "3.2 PK.C.5",
+   "text": "Compare observations with others ."
+  },
+  {
+   "idx": "3.2 PK.C.6",
+   "text": "Push or pull objects using varying strengths and directions"
+  },
+  {
+   "idx": "3.2 PK.D.1",
+   "text": "Understand the earth’s surface could include rocks, sand, soil, water ."
+  },
+  {
+   "idx": "3.2 PK.D.2",
+   "text": "Participate in investigations of the effect of the sun on the earth’s surface ."
+  },
+  {
+   "idx": "3.2 PK.E.1",
+   "text": "Comment on the impact an object has when placed between the sun and the earth’s surface (e .g ., umbrellas, canopies, and tents) ."
+  },
+  {
+   "idx": "3.2 PK.E.2",
+   "text": "Use tools and materials to design and build a structure that will reduce the warming effect of sunlight on an area ."
+  },
+  {
+   "idx": "3.3 PK.A.1",
+   "text": "Name the four seasons and an observable condition for that season (e .g ., falling leaves, snow, rain, buds on trees, or green grass) ."
+  },
+  {
+   "idx": "3.3 PK.A.2",
+   "text": "Match types of clothing or activities to seasonal weather conditions (e .g ., we use an umbrella when it is raining; we wear coats, hats, scarves, and mittens when it’s cold outside) ."
+  },
+  {
+   "idx": "3.3 PK.A.3",
+   "text": "Use a thermometer as a tool for measuring temperature ."
+  },
+  {
+   "idx": "3.3 PK.A.4",
+   "text": "Talk about current weather events that affect the community ."
+  },
+  {
+   "idx": "3.4 PK.A.1",
+   "text": "State that living things need air, food, and water to survive ."
+  },
+  {
+   "idx": "3.4 PK.A.2",
+   "text": "Understand that the things we use can be made from things found in the environment ."
+  },
+  {
+   "idx": "3.4 PK.A.3",
+   "text": "Match simple items used by people to its natural resource (e .g ., milk to cow, wood for building to tree, wool to sheep) ."
+  },
+  {
+   "idx": "3.4 PK.A.4",
+   "text": "Understand that natural resources are materials that come from the environment and are used by people ."
+  },
+  {
+   "idx": "3.4 PK.A.5",
+   "text": "Discuss and use natural items collected from the immediate environment ."
+  },
+  {
+   "idx": "3.4 PK.A.6",
+   "text": "Label human needs as air, food, water, shelter, clothing ."
+  },
+  {
+   "idx": "3.4 PK.D.1",
+   "text": "Identify how litter can have a negative impact on the environment ."
+  },
+  {
+   "idx": "3.4 PK.D.2",
+   "text": "Participate in experiments that show how litter can impact the environment ."
+  },
+  {
+   "idx": "3.4 PK.D.3",
+   "text": "Identify ways that litter should be handled ."
+  },
+  {
+   "idx": "3.4 PK.D.4",
+   "text": "Sort waste into those things that can be recycled and those things that cannot ."
+  },
+  {
+   "idx": "3.4 PK.D.5",
+   "text": "Practice recycling as part of classroom routine ."
+  },
+  {
+   "idx": "3.5 PK.A.1",
+   "text": "Label symbols including road signs, symbols for persons with disabilities, and icons on a screen ."
+  },
+  {
+   "idx": "3.5 PK.A.2",
+   "text": "Use symbols to represent or communicate an idea or a solution to a problem ."
+  },
+  {
+   "idx": "3.5 PK.C.2",
+   "text": "Discuss personal experiences with technology ."
+  },
+  {
+   "idx": "3.5 PK.E.1",
+   "text": "Label technology with appropriate vocabulary when using or shown (e .g ., telephone, cell phone, computer, TV, camera, tablet, e-reader, Smart board) ."
+  },
+  {
+   "idx": "3.5 PK.E.2",
+   "text": "Discuss personal experiences with technology ."
+  },
+  {
+   "idx": "3.5 PK.E.3",
+   "text": "Identify how technology affects daily lives ."
+  },
+  {
+   "idx": "3.5 PK.E.4",
+   "text": "Describe different types of technology ."
+  },
+  {
+   "idx": "3.5 PK.E.5",
+   "text": "Discuss how technology use could be helpful or harmful ."
+  },
+  {
+   "idx": "3.5 PK.K.1",
+   "text": "Identify different tools ."
+  },
+  {
+   "idx": "3.5 PK.K.2",
+   "text": "Use tools for intended purpose ."
+  },
+  {
+   "idx": "3.5 PK.K.3",
+   "text": "Discuss the ways in which tools can be used safely ."
+  },
+  {
+   "idx": "3.5 PK.K.4",
+   "text": "Follow established rules (e .g ., time limit, handling with care, putting away) when using tools ."
+  },
+  {
+   "idx": "3.5 PK.K.5",
+   "text": "Choose tools that are appropriate for an identified task ."
+  },
+  {
+   "idx": "3.5 PK.M.1",
+   "text": "Identify the steps of the engineering design process (Ask, Imagine, Plan, Create, Improve) ."
+  },
+  {
+   "idx": "3.5 PK.M.2",
+   "text": "Participate in activities that use the steps of the engineering design process"
+  },
+  {
+   "idx": "3.5 PK.N.1",
+   "text": "Engage is listening, questioning, and discussing ."
+  },
+  {
+   "idx": "3.5 PK.N.2",
+   "text": "Ask questions about how things work ."
+  },
+  {
+   "idx": "3.5 PK.N.3",
+   "text": "Observe and discuss how things work ."
+  },
+  {
+   "idx": "3.5 PK.N.4",
+   "text": "Take things apart and put them back together"
+  },
+  {
+   "idx": "3.5 PK.CC.1",
+   "text": "Act out roles’ scientists, engineers, technologists, and others who work with technology ."
+  },
+  {
+   "idx": "3.5 PK.CC.2",
+   "text": "Examine and explore different careers and discuss the similarities and differences in the way that those careers use technology ."
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "3.4 PK.A.1",
+   "text": "State that living things need air, food, and water to survive ."
+  },
+  {
+   "idx": "3.4 PK.A.2",
+   "text": "Understand that the things we use can be made from things found in the environment ."
+  },
+  {
+   "idx": "3.4 PK.A.3",
+   "text": "Match simple items used by people to its natural resource (e .g ., milk to cow, wood for building to tree, wool to sheep) ."
+  },
+  {
+   "idx": "3.4 PK.A.4",
+   "text": "Understand that natural resources are materials that come from the environment and are used by people ."
+  },
+  {
+   "idx": "3.4 PK.A.5",
+   "text": "Discuss and use natural items collected from the immediate environment ."
+  },
+  {
+   "idx": "3.4 PK.A.6",
+   "text": "Label human needs as air, food, water, shelter, clothing ."
+  },
+  {
+   "idx": "3.4 PK.D.1",
+   "text": "Identify how litter can have a negative impact on the environment ."
+  },
+  {
+   "idx": "3.4 PK.D.2",
+   "text": "Participate in experiments that show how litter can impact the environment ."
+  },
+  {
+   "idx": "3.4 PK.D.3",
+   "text": "Identify ways that litter should be handled ."
+  },
+  {
+   "idx": "3.4 PK.D.4",
+   "text": "Sort waste into those things that can be recycled and those things that cannot ."
+  },
+  {
+   "idx": "3.4 PK.D.5",
+   "text": "Practice recycling as part of classroom routine ."
+  },
+  {
+   "idx": "5.1 PK.A.1",
+   "text": "Describe classroom rules ."
+  },
+  {
+   "idx": "5.1 PK.A.2",
+   "text": "Explain a consequence for breaking a classroom rule ."
+  },
+  {
+   "idx": "5.1 PK.F.1",
+   "text": "Discuss images, pictures or items that are symbols of America ."
+  },
+  {
+   "idx": "5.1 PK.F.2",
+   "text": "Identify the American flag ."
+  },
+  {
+   "idx": "5.1 PK.F.3",
+   "text": "Replicate the American flag using art materials ."
+  },
+  {
+   "idx": "5.2 PK.A.1",
+   "text": "Display awareness of role as member of a group ."
+  },
+  {
+   "idx": "5.2 PK.A.2",
+   "text": "Participate in group decision-making ."
+  },
+  {
+   "idx": "5.2 PK.A.3",
+   "text": "Participate in classroom and family responsibilities ."
+  },
+  {
+   "idx": "5.2 PK.A.4",
+   "text": "Talk about responsibilities at home ."
+  },
+  {
+   "idx": "5.2 PK.A.5",
+   "text": "Work cooperatively with other children to achieve an outcome ."
+  },
+  {
+   "idx": "5.2 PK.B.1",
+   "text": "Identify one or two solutions to a problem ."
+  },
+  {
+   "idx": "5.2 PK.B.2",
+   "text": "Attempt to solve a conflict with a peer ."
+  },
+  {
+   "idx": "5.2 PK.B.3",
+   "text": "Work with a peer to develop a solution to a problem (e .g ., ways to share the playdough when there isn’t enough) ."
+  },
+  {
+   "idx": "5.2 PK.B.4",
+   "text": "Suggest simple solutions to conflict which are most often based upon own needs and desires ."
+  },
+  {
+   "idx": "5.2 PK.C.1",
+   "text": "Show interest in leadership opportunities ."
+  },
+  {
+   "idx": "5.2 PK.C.2",
+   "text": "Choose a leader for a classroom project ."
+  },
+  {
+   "idx": "5.2 PK.C.3",
+   "text": "Ask to be the line leader ."
+  },
+  {
+   "idx": "5.2 PK.C.4",
+   "text": "Request to help teacher ."
+  },
+  {
+   "idx": "5.3 PK.C.1",
+   "text": "Match descriptions of people’s work in a community with picture illustrating the job ."
+  },
+  {
+   "idx": "5.3 PK.C.2",
+   "text": "Act out roles of community workers in dramatic play ."
+  },
+  {
+   "idx": "5.3 PK.C.3",
+   "text": "Relay personal experiences to describe the work that community workers do ."
+  },
+  {
+   "idx": "5.3 PK.F.1",
+   "text": "Use inside voices while indoors and outside voices when outdoors ."
+  },
+  {
+   "idx": "5.3 PK.F.2",
+   "text": "Cooperate in both large and small group activities that are facilitated by adult ."
+  },
+  {
+   "idx": "5.3 PK.F.3",
+   "text": "Follow rules and routines in classroom ."
+  },
+  {
+   "idx": "5.3 PK.F.4",
+   "text": "Respond with empathy to others who are upset ."
+  },
+  {
+   "idx": "5.3 PK.F.5",
+   "text": "Recognize when someone needs help and offer assistance ."
+  },
+  {
+   "idx": "5.3 PK.F.6",
+   "text": "Respect another’s attempts to complete tasks independently ."
+  },
+  {
+   "idx": "6.1 PK.A.1",
+   "text": "Understand that some resources are limited ."
+  },
+  {
+   "idx": "6.1 PK.A.2",
+   "text": "Notice when materials are running low (e .g ., “We need more paper in the art area .”) ."
+  },
+  {
+   "idx": "6.1 PK.A.3",
+   "text": "Offer to share materials when materials are scarce (e .g ., one shovel in sensory table) ."
+  },
+  {
+   "idx": "6.1 PK.A.4",
+   "text": "Show preference for one material/center, but choose a different material/center when materials are scarce or center is full"
+  },
+  {
+   "idx": "6.1 PK.B.1",
+   "text": "Identify what people need to survive ."
+  },
+  {
+   "idx": "6.1 PK.B.2",
+   "text": "Demonstrates awareness of one’s own preferences ."
+  },
+  {
+   "idx": "6.1 PK.B.3",
+   "text": "Identify personal wants ."
+  },
+  {
+   "idx": "6.1 PK.D.1",
+   "text": "Make a choice and explain the reason for the choice ."
+  },
+  {
+   "idx": "6.1 PK.D.2",
+   "text": "Provide a reason for choosing to play in a particular center that shows interest in specific materials or people ."
+  },
+  {
+   "idx": "6.2 PK.C.1",
+   "text": "Recognize logos (environmental print) from local businesses ."
+  },
+  {
+   "idx": "6.2 PK.C.2",
+   "text": "Discuss advertisements (e .g ., radio, print, TV)"
+  },
+  {
+   "idx": "6.2 PK.D.1",
+   "text": "Identify that money is used to buy things ."
+  },
+  {
+   "idx": "6.2 PK.D.2",
+   "text": "State that money can be saved ."
+  },
+  {
+   "idx": "6.2 PK.D.3",
+   "text": "Use pretend money while engaging in dramatic play activities ."
+  },
+  {
+   "idx": "6.2 PK.D.4",
+   "text": "Practice exchanging play money for goods ."
+  },
+  {
+   "idx": "6.3 PK.D.1",
+   "text": "Name items that come from farms, factories, and/or businesses within the community ."
+  },
+  {
+   "idx": "6.3 PK.D.2",
+   "text": "Talk about products that can be found around their homes ."
+  },
+  {
+   "idx": "6.5 PK.A.1",
+   "text": "Respond that adults work to earn money ."
+  },
+  {
+   "idx": "6.5 PK.A.2",
+   "text": "Relate that work involves performing an activity that is chosen and directed by someone else, and has a specific goal ."
+  },
+  {
+   "idx": "6.5 PK.A.3",
+   "text": "Relate that play is a self-selected activity that may or may not have a specific purpose ."
+  },
+  {
+   "idx": "6.5 PK.C.1",
+   "text": "Participate in role-play that is related to a local business (e .g ., pet store, hair salon, restaurant) ."
+  },
+  {
+   "idx": "6.5 PK.C.2",
+   "text": "Describe where customers go to acquire specific goods or services (e .g ., food purchased at grocery store, hammer and nails purchased at hardware store) ."
+  },
+  {
+   "idx": "7.1 PK.A.1",
+   "text": "Use a simple map ."
+  },
+  {
+   "idx": "7.1 PK.A.2",
+   "text": "Use available materials (e .g ., blocks) to represent buildings, roads, or houses ."
+  },
+  {
+   "idx": "7.1 PK.A.3",
+   "text": "Include representations of roads, bodies of water, and buildings in play ."
+  },
+  {
+   "idx": "7.1 PK.A.4",
+   "text": "Discuss tools used to locate places ."
+  },
+  {
+   "idx": "7.1 PK.A.5",
+   "text": "Use the term “map ."
+  },
+  {
+   "idx": "7.1 PK.B.1",
+   "text": "Describe the location of items/areas in the classroom and at home ."
+  },
+  {
+   "idx": "7.1 PK.B.2",
+   "text": "Use directionality, size, and position (e .g ., left, right, first, last, little, big, top, bottom) to describe location ."
+  },
+  {
+   "idx": "7.1 PK.B.3",
+   "text": "Place pictures of common household items in the proper rooms of a floor plan ."
+  },
+  {
+   "idx": "7.1 PK.B.4",
+   "text": "Listen to directions and retrieve items ."
+  },
+  {
+   "idx": "7.2 PK.A.1",
+   "text": "Describe simple characteristics of home (e .g ., type of dwelling, where located, what surrounds it) ."
+  },
+  {
+   "idx": "7.2 PK.A.2",
+   "text": "Identify familiar places in the neighborhood ."
+  },
+  {
+   "idx": "7.2 PK.A.3",
+   "text": "Describe simple characteristics of business or community structures (e .g ., type of dwelling, where located, what surrounds it) ."
+  },
+  {
+   "idx": "8.1 PK.A.1",
+   "text": "Demonstrate an understanding of past, present, and future (e .g ., today is , yesterday was , and tomorrow will be , recall information from the immediate past, sequence pictures of self from birth to present) ."
+  },
+  {
+   "idx": "8.1 PK.A.2",
+   "text": "Describe the daily routine (e .g ., what happens first, before lunch, after lunch, at end of day) ."
+  },
+  {
+   "idx": "8.1 PK.A.3",
+   "text": "Show anticipation for regularly- scheduled events ."
+  },
+  {
+   "idx": "8.1 PK.A.4",
+   "text": "Use words to describe time (e .g ., yesterday, today, tomorrow, o’clock) ."
+  },
+  {
+   "idx": "8.1 PK.C.1",
+   "text": "Label types of media and what information can be gained (e .g ., recipes from a cookbook, prices from an advertisement) ."
+  },
+  {
+   "idx": "8.1 PK.C.2",
+   "text": "Locate information on identified topics using media (e .g ., music, books, maps, TV programming, newspapers, magazines, movies, Internet, applications, advertising)"
+  },
+  {
+   "idx": "16.1 PK.A.1",
+   "text": "Recognize and label basic feelings ."
+  },
+  {
+   "idx": "16.1 PK.A.2",
+   "text": "Express feelings that are appropriate to the situation ."
+  },
+  {
+   "idx": "16.1 PK.A.3",
+   "text": "Express feelings verbally or through play and artistic representation ."
+  },
+  {
+   "idx": "16.1 PK.A.4",
+   "text": "Name a range of feelings (e .g ., excited, scared, angry, surprised) ."
+  },
+  {
+   "idx": "16.1 PK.A.5",
+   "text": "Control negative responses by expressing them in appropriate ways (e .g ., talking with a peer or telling a teacher) ."
+  },
+  {
+   "idx": "16.1 PK.B.1",
+   "text": "Demonstrate awareness of self and one’s own preferences ."
+  },
+  {
+   "idx": "16.1 PK.B.2",
+   "text": "Know and state independent thoughts and feelings ."
+  },
+  {
+   "idx": "16.1 PK.B.3",
+   "text": "Show pride in own accomplishments ."
+  },
+  {
+   "idx": "16.1 PK.B.4",
+   "text": "Demonstrate confidence in own abilities (e .g ., “I can kick that ball really far .”) ."
+  },
+  {
+   "idx": "16.1 PK.B.5",
+   "text": "Choose materials and activities based on preferences and personal interests ."
+  },
+  {
+   "idx": "16.1 PK.C.1",
+   "text": "Stay calm when something does not go the way intended ."
+  },
+  {
+   "idx": "16.1 PK.C.2",
+   "text": "Strive to correct mistakes ."
+  },
+  {
+   "idx": "16.1 PK.C.3",
+   "text": "Move forward with a second attempt at something after the first attempt was unsuccessful ."
+  },
+  {
+   "idx": "16.1 PK.C.4",
+   "text": "Ask for help with a task after an unsuccessful attempt ."
+  },
+  {
+   "idx": "16.1 PK.D.1",
+   "text": "Set and discuss goals for play and activities when asked ."
+  },
+  {
+   "idx": "16.2 PK.A.1",
+   "text": "Engage in reciprocal conversation with familiar peers and adults ."
+  },
+  {
+   "idx": "16.2 PK.A.2",
+   "text": "Respond to familiar adult’s questions and directions ."
+  },
+  {
+   "idx": "16.2 PK.A.3",
+   "text": "Demonstrate appropriate affection for familiar adults and peers ."
+  },
+  {
+   "idx": "16.2 PK.A.4",
+   "text": "Seek out companionship from another child ."
+  },
+  {
+   "idx": "16.2 PK.A.5",
+   "text": "Use words denoting friendship ."
+  },
+  {
+   "idx": "16.2 PK.A.6",
+   "text": "Ask a child to play (e .g ., “Do you want to make a block house with me?”) ."
+  },
+  {
+   "idx": "16.2 PK.A.7",
+   "text": "Play cooperatively with a few peers for a sustained period of time ."
+  },
+  {
+   "idx": "16.2 PK.A.8",
+   "text": "Respond with empathy to others who are upset ."
+  },
+  {
+   "idx": "16.2 PK.A.9",
+   "text": "Share and take turns ."
+  },
+  {
+   "idx": "16.2 PK.A.10",
+   "text": "Respect feelings and belongings of others ."
+  },
+  {
+   "idx": "16.2 PK.B.1",
+   "text": "Understand that each person has a set of unique characteristics ."
+  },
+  {
+   "idx": "16.2 PK.B.2",
+   "text": "Make drawings of people, including self- portraits, depicting body parts, clothing, and other physical characteristics ."
+  },
+  {
+   "idx": "16.2 PK.B.3",
+   "text": "Label personal characteristics ."
+  },
+  {
+   "idx": "16.2 PK.B.4",
+   "text": "Discuss the similarities and differences between self and others ."
+  },
+  {
+   "idx": "16.2 PK.B.5",
+   "text": "Understand that family structures may differ from one family to another ."
+  },
+  {
+   "idx": "16.2 PK.B.6",
+   "text": "Understand that the thoughts and feelings of others may differ from own ."
+  },
+  {
+   "idx": "16.2 PK.B.7",
+   "text": "Demonstrate respect for children’s differences, including differences in thoughts and feelings ."
+  },
+  {
+   "idx": "16.2 PK.C.1",
+   "text": "Communicate using detail related to topic being discussed including topics of personal interest, and special events ."
+  },
+  {
+   "idx": "16.2 PK.C.2",
+   "text": "Pose questions related to topic being discussed ."
+  },
+  {
+   "idx": "16.2 PK.C.3",
+   "text": "Respond to questions posed by adults and peers ."
+  },
+  {
+   "idx": "16.2 PK.C.4",
+   "text": "Allow wait time before responding ."
+  },
+  {
+   "idx": "16.2 PK.C.5",
+   "text": "Engage in turn-taking ."
+  },
+  {
+   "idx": "16.2 PK.D.1",
+   "text": "Identify a problem and discuss possible solutions ."
+  },
+  {
+   "idx": "16.2 PK.D.2",
+   "text": "Solve simple conflicts with peers with independence (e .g ., share, take turns, apologize, try something else, ask for help) ."
+  },
+  {
+   "idx": "16.2 PK.D.3",
+   "text": "Begin to negotiate conflicts that arise using words before seeking help ."
+  },
+  {
+   "idx": "16.2 PK.D.4",
+   "text": "Use words during a conflict instead of physically responding ."
+  },
+  {
+   "idx": "16.2 PK.D.5",
+   "text": "Accept and attempt teacher’s or others’ ideas about new strategies to solve a conflict ."
+  },
+  {
+   "idx": "16.2 PK.E.1",
+   "text": "Attempt tasks independently before asking for help ."
+  },
+  {
+   "idx": "16.2 PK.E.2",
+   "text": "Recognize when help is needed ."
+  },
+  {
+   "idx": "16.2 PK.E.3",
+   "text": "Recognize appropriate sources of help (e .g ., familiar adult, community helpers, peers) ."
+  },
+  {
+   "idx": "16.2 PK.E.4",
+   "text": "Ask for adult help to solve a problem or to complete a task ."
+  },
+  {
+   "idx": "16.2 PK.E.5",
+   "text": "Respond appropriately to offers of help (e .g ., “That’s okay, I can do it .” or “Yes, thank you .”) ."
+  },
+  {
+   "idx": "16.3 PK.A.1",
+   "text": "Recognize unsafe situations and tell an adult ."
+  },
+  {
+   "idx": "16.3 PK.A.2",
+   "text": "Tell a peer when a rule is broken ."
+  },
+  {
+   "idx": "16.3 PK.A.3",
+   "text": "Warn a peer about a safety risk on the playground ."
+  },
+  {
+   "idx": "16.3 PK.A.4",
+   "text": "Encourage two friends who are having a dispute to “use their words and work it out .”"
+  },
+  {
+   "idx": "16.3 PK.A.5",
+   "text": "Discuss the reasons for having rules"
+  },
+  {
+   "idx": "16.3 PK.B.1",
+   "text": "Make transitions between places and people with minimal distress ."
+  },
+  {
+   "idx": "16.3 PK.B.2",
+   "text": "Use inside voices while indoors and outside voices when outdoors ."
+  },
+  {
+   "idx": "16.3 PK.B.3",
+   "text": "Cooperate in both large and small group activities that are facilitated by adult ."
+  },
+  {
+   "idx": "16.3 PK.B.4",
+   "text": "Apply classroom rules to new situations ."
+  },
+  {
+   "idx": "16.3 PK.B.5",
+   "text": "Adjust to changes in routines and activities ."
+  },
+  {
+   "idx": "16.3 PK.B.6",
+   "text": "Follow rules and routines in classroom and other settings with reminders ."
+  },
+  {
+   "idx": "16.3 PK.C.1",
+   "text": "Respond with empathy to others who are upset ."
+  },
+  {
+   "idx": "16.3 PK.C.2",
+   "text": "Recognize when someone needs help and offer assistance ."
+  },
+  {
+   "idx": "16.3 PK.C.3",
+   "text": "Respect another’s attempts to complete tasks independently ."
+  }
+ ]
+}

@@ -1,0 +1,574 @@
+{
+ "pk/math": [
+  {
+   "idx": "C.60.4",
+   "text": "Show pride in accomplishment when reaching mastery of a skill and share experiences with others"
+  },
+  {
+   "idx": "C.60.5",
+   "text": "Plan and complete learning activity with a peer"
+  },
+  {
+   "idx": "C.60.6",
+   "text": "Model or teach peers how to use materials or complete a task"
+  },
+  {
+   "idx": "C.60.2",
+   "text": "Express interest in learning about a specific topic over time"
+  },
+  {
+   "idx": "C.60.3",
+   "text": "Engage in preferred and some non-preferred activities for longer periods of time. Remain with some high interest activities 15 minutes or longer"
+  },
+  {
+   "idx": "C.60.7",
+   "text": "Try multiple uses of same materials and observe differing results"
+  },
+  {
+   "idx": "C.60.8",
+   "text": "Compare relative attributes of objects, people, events, sounds (e.g., louder, more, less)"
+  },
+  {
+   "idx": "C.60.9",
+   "text": "Use familiar patterns to solve problems and reason (e.g., if we go to the library every other day and we went yesterday, today we will...)"
+  },
+  {
+   "idx": "C.60.10",
+   "text": "Begin to question accuracy of information and sources as evidenced by sharing conflicting information from another source (e.g., when the teacher shares information with class, says, “But my dad says…”)"
+  },
+  {
+   "idx": "C.60.11",
+   "text": "Try multiple strategies to solve a problem and draw on multiple resources (e.g., look at what a peer is doing for ideas)"
+  },
+  {
+   "idx": "C.60.12",
+   "text": "Use dissimilar objects to represent other objects in play or perform an action with an imaginary object (e.g., use stirring action without anything in hand)"
+  },
+  {
+   "idx": "C.60.13",
+   "text": "Engage in extended pretend play scenarios and display recognition of the difference between pretend or fantasy situations and reality"
+  },
+  {
+   "idx": "C.60.14",
+   "text": "Represent people, places or things through drawings, movements and/or three-dimensional constructions that are increasingly abstract (e.g., may draw a map that includes an “X” that marks the location of the treasure)"
+  },
+  {
+   "idx": "C.60.15",
+   "text": "Make a plan, follow through and review plan based on what they actually did. Indicate reasons for choice, set goals and follow plan"
+  },
+  {
+   "idx": "C.60.16",
+   "text": "Complete longer term and more complex tasks with a focus on the goal, despite frustration"
+  },
+  {
+   "idx": "C.60.17",
+   "text": "Generate or seek out multiple solutions to a problem"
+  },
+  {
+   "idx": "C.60.18",
+   "text": "Hold in mind the topic of group discussion and contribute personal experience (e.g., when talking about something that is broken says, “My mom used a screwdriver to fix our shelf.”)"
+  },
+  {
+   "idx": "C.60.19",
+   "text": "Engage in preferred and some non-preferred activities for longer periods of time. Remain with some high-interest activities 15 minutes or longer"
+  },
+  {
+   "idx": "C.60.20",
+   "text": "Typically resists impulses and can wait longer to respond in more structured settings (e.g., at a restaurant, in circle time in preschool)"
+  },
+  {
+   "idx": "M.60.1",
+   "text": "Say or sign the number sequence up to at least 20"
+  },
+  {
+   "idx": "M.60.2",
+   "text": "Count up to 10 objects using one-to-one correspondence, regardless of configuration, using the number name of the last object counted to represent the total number of objects in a set"
+  },
+  {
+   "idx": "M.60.3",
+   "text": "Count out a set of objects up to five"
+  },
+  {
+   "idx": "M.60.4",
+   "text": "Recognize written numerals up to at least 10"
+  },
+  {
+   "idx": "M.60.5",
+   "text": "Quickly recognize and name, without counting, the number of objects in collections of up to at least five items"
+  },
+  {
+   "idx": "M.60.6",
+   "text": "Compare sets of up to 10 objects using a visual matching or counting strategy and describing the comparison as more, less than or the same"
+  },
+  {
+   "idx": "M.60.7",
+   "text": "Use real-world situations and Number M.36.5 Use some M.48.7 Understand that adding to (or taking away) one or more concrete objects to model and solve Operations vocabulary related to objects from a group will increase or addition (e.g., putting together) and relative quantity (e.g., decrease the objects in the group subtraction (e.g., taking away) problems “more,” “less”) up through five"
+  },
+  {
+   "idx": "M.60.8",
+   "text": "Recognize and describe parts contained in larger numbers by composing number combinations up to at least five (e.g., recognize how many have been secretly taken away from a group of five objects) Strand C: Early learning experiences will support children to understand the attributes and relative properties of objects (measurement and data). See Attribute, Sorting and Patterns learning progression in Cognition Measurement M.24.5 Use some vocabulary related to size and quantity (e.g., say something is “big” or request “more”)"
+  },
+  {
+   "idx": "M.60.9",
+   "text": "Compare the measurable attributes of two or more objects (e.g., length, weight and capacity) and describe the comparison using appropriate vocabulary (e.g., longer, shorter, same length, heavier, lighter, same weight, holds more, holds less, holds the same amount)"
+  },
+  {
+   "idx": "M.60.10",
+   "text": "Begin to use strategies to determine measurable attributes (e.g., length or capacity of objects). May use comparison, standard or non-standard measurement tools"
+  },
+  {
+   "idx": "M.60.11",
+   "text": "Represent data using a concrete object or picture graph according to one attribute"
+  },
+  {
+   "idx": "M.60.12",
+   "text": "Sort and classify a set of objects on the basis of one attribute independently and describe the sorting rule. Can re-sort and classify the same set of objects based on a different attribute"
+  },
+  {
+   "idx": "M.60.13",
+   "text": "Use relational vocabulary of M.36.8 Find objects or Spatial M.18.4 Adjust M.24.7 Show locations based upon (e.g., up/down, in/out, on/off, under) proximity (e.g., beside, next to, between, beginning Relationships their reach above, below, over and under) to identify landmarks and position to identify and describe the location understanding and grasp and describe the location of an object words (e.g., “Your of an object of positional based upon distance, size vocabulary (e.g., blanket is on the couch.”) and weight of up/down, in/out, an object on/off, under) Identification of Shapes"
+  },
+  {
+   "idx": "M.60.14",
+   "text": "Identify and describe a variety of 2-dimensional and 3-dimensional shapes with mathematical names (e.g., ball/sphere, box/rectangular prism, can/ cylinder) regardless of orientation and size"
+  },
+  {
+   "idx": "M.60.15",
+   "text": "Complete a shape puzzle or a new figure by putting multiple shapes together with purpose"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "L.60.1",
+   "text": "Understand an increasing variety and specificity of words for objects, actions and attributes encountered in both real and symbolic contexts"
+  },
+  {
+   "idx": "L.60.2",
+   "text": "Determine the meanings of unknown words/concepts using the context of conversations, pictures or concrete objects"
+  },
+  {
+   "idx": "L.60.3",
+   "text": "Understand increasingly complex sentences that include 3-4 concepts (e.g., “Plants are living things that will not survive without soil, sunlight and water.”)"
+  },
+  {
+   "idx": "L.60.4",
+   "text": "Use an increasing variety and specificity of accepted words for objects, actions and attributes encountered in both real and symbolic contexts"
+  },
+  {
+   "idx": "L.60.5",
+   "text": "Use more complex words learned through books and personal experiences (e.g., label favorite shirt as chartreuse, or know that a paleontologist studies dinosaurs)"
+  },
+  {
+   "idx": "L.60.6",
+   "text": "Use more complex words to describe the relationships between objects and ideas (e.g., position words such as “under” or “beside” and comparative words such as “bigger” or “longer”)"
+  },
+  {
+   "idx": "L.60.8",
+   "text": "Use an increasing variety and specificity of accepted words for objects, actions and attributes encountered in both real and symbolic contexts"
+  },
+  {
+   "idx": "L.60.9",
+   "text": "Initiate, maintain and end conversations by repeating what other person says and/or by asking questions"
+  },
+  {
+   "idx": "L.60.10",
+   "text": "Use language to share ideas and gain information"
+  },
+  {
+   "idx": "L.60.11",
+   "text": "Independently choose to “read” books and select a variety of texts including fiction and nonfiction"
+  },
+  {
+   "idx": "L.60.12",
+   "text": "With prompting and support, retell familiar stories, including story elements (e.g., setting, characters, events) and/or share key details from informational text"
+  },
+  {
+   "idx": "L.60.13",
+   "text": "Identify main components of a story or text (the major plot points of a story or the main topic of an informational text)"
+  },
+  {
+   "idx": "L.60.14",
+   "text": "Use connections between L.48.15 Make predictions self and character, experience and and/or ask questions about emotions to increase comprehension the text by examining the title, cover, pictures"
+  },
+  {
+   "idx": "L.60.15",
+   "text": "Know how print is read (e.g., left to right, top to bottom, front to back or according to convention of home language)"
+  },
+  {
+   "idx": "L.60.16",
+   "text": "Know that books have titles, print represents spoken authors, illustrators or photographers words (e.g., first name in print, environmental labels) L.60.17 Recognize words as a unit of print and that letters are grouped to form words Print Concepts"
+  },
+  {
+   "idx": "L.60.18",
+   "text": "Identify some familiar printed words out of context"
+  },
+  {
+   "idx": "L.60.19",
+   "text": "Begin to use awareness of letter sounds along with pictures to read words in text"
+  },
+  {
+   "idx": "L.60.20",
+   "text": "Recognize and name known letters of the alphabet in familiar and unfamiliar words"
+  },
+  {
+   "idx": "L.60.21",
+   "text": "Make some letter-sound connections"
+  },
+  {
+   "idx": "L.60.24",
+   "text": "Distinguish syllables in words"
+  },
+  {
+   "idx": "L.60.25",
+   "text": "Draw original stories with a beginning, middle and end"
+  },
+  {
+   "idx": "L.60.26",
+   "text": "Use early developmental spelling. May use one letter for the initial or final sound to represent whole word"
+  },
+  {
+   "idx": "L.60.7",
+   "text": "Use basic grammar rules including subject-verb agreement, tenses, regular & irregular past tense, irregular plurals"
+  },
+  {
+   "idx": "L.60.17",
+   "text": "Recognize words as a unit in a text of print and that letters are grouped CC.K.R.L.4 Ask and answer questions about unknown to form words words in a text CC.K.R.L.5 Recognize common types of texts (e.g., storybooks, poems) CC.K.R.L.6 With prompting and support, name the author and illustrator of a story and define the role of each in telling the story CC.K.R.I.7 With prompting and support, describe the relationship between illustrations and the text in which they appear (e.g., what person, place, thing, or idea in the text an illustration depicts) CC.K.R.I.8 With prompting and support, identify the reasons an author gives to support points in a text CC.K.R.I.9 With prompting and support, identify basic similarities in and differences between two texts on the same topic (e.g., in illustrations, descriptions, or procedures) CC.K.R.L.7 With prompting and support, describe the relationship between illustrations and the story in which they appear (e.g., what moment in a story an illustration depicts) CC.K.R.L.9 With prompting and support, compare and contrast the adventures and experiences of characters in familiar stories"
+  },
+  {
+   "idx": "L.60.22",
+   "text": "Produce rhyming words or words that have same initial sound"
+  },
+  {
+   "idx": "L.60.23",
+   "text": "Recognize which words in a set of words begin with the same sound"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "C.60.4",
+   "text": "Show pride in accomplishment when reaching mastery of a skill and share experiences with others"
+  },
+  {
+   "idx": "C.60.5",
+   "text": "Plan and complete learning activity with a peer"
+  },
+  {
+   "idx": "C.60.6",
+   "text": "Model or teach peers how to use materials or complete a task"
+  },
+  {
+   "idx": "C.60.2",
+   "text": "Express interest in learning about a specific topic over time"
+  },
+  {
+   "idx": "C.60.3",
+   "text": "Engage in preferred and some non-preferred activities for longer periods of time. Remain with some high interest activities 15 minutes or longer"
+  },
+  {
+   "idx": "C.60.7",
+   "text": "Try multiple uses of same materials and observe differing results"
+  },
+  {
+   "idx": "C.60.8",
+   "text": "Compare relative attributes of objects, people, events, sounds (e.g., louder, more, less)"
+  },
+  {
+   "idx": "C.60.9",
+   "text": "Use familiar patterns to solve problems and reason (e.g., if we go to the library every other day and we went yesterday, today we will...)"
+  },
+  {
+   "idx": "C.60.10",
+   "text": "Begin to question accuracy of information and sources as evidenced by sharing conflicting information from another source (e.g., when the teacher shares information with class, says, “But my dad says…”)"
+  },
+  {
+   "idx": "C.60.11",
+   "text": "Try multiple strategies to solve a problem and draw on multiple resources (e.g., look at what a peer is doing for ideas)"
+  },
+  {
+   "idx": "C.60.12",
+   "text": "Use dissimilar objects to represent other objects in play or perform an action with an imaginary object (e.g., use stirring action without anything in hand)"
+  },
+  {
+   "idx": "C.60.13",
+   "text": "Engage in extended pretend play scenarios and display recognition of the difference between pretend or fantasy situations and reality"
+  },
+  {
+   "idx": "C.60.14",
+   "text": "Represent people, places or things through drawings, movements and/or three-dimensional constructions that are increasingly abstract (e.g., may draw a map that includes an “X” that marks the location of the treasure)"
+  },
+  {
+   "idx": "C.60.15",
+   "text": "Make a plan, follow through and review plan based on what they actually did. Indicate reasons for choice, set goals and follow plan"
+  },
+  {
+   "idx": "C.60.16",
+   "text": "Complete longer term and more complex tasks with a focus on the goal, despite frustration"
+  },
+  {
+   "idx": "C.60.17",
+   "text": "Generate or seek out multiple solutions to a problem"
+  },
+  {
+   "idx": "C.60.18",
+   "text": "Hold in mind the topic of group discussion and contribute personal experience (e.g., when talking about something that is broken says, “My mom used a screwdriver to fix our shelf.”)"
+  },
+  {
+   "idx": "C.60.19",
+   "text": "Engage in preferred and some non-preferred activities for longer periods of time. Remain with some high-interest activities 15 minutes or longer"
+  },
+  {
+   "idx": "C.60.20",
+   "text": "Typically resists impulses and can wait longer to respond in more structured settings (e.g., at a restaurant, in circle time in preschool)"
+  },
+  {
+   "idx": "S.60.1",
+   "text": "Define a problem to be solved, including details and limitations to be to things observed through the questions including the senses (“what” and “why”) relationship between two things or considered (e.g., “We need to figure out how to reach that shelf, but we cause and effect relationships aren’t allowed to stand on the chairs.”) S.36.2 Manipulate materials and comment on the impact of own actions"
+  },
+  {
+   "idx": "S.60.2",
+   "text": "Engage in collaborative investigations to describe phenomena or to explore cause and affect relationships"
+  },
+  {
+   "idx": "S.60.3",
+   "text": "Gather data by drawing, counting or otherwise documenting observations Using Evidence"
+  },
+  {
+   "idx": "S.60.4",
+   "text": "Give evidence from observations or investigations"
+  },
+  {
+   "idx": "S.60.5",
+   "text": "Begin to distinguish evidence from opinion"
+  },
+  {
+   "idx": "S.60.6",
+   "text": "Identify a problem and, with adult assistance, design a solution, test and refine design elements"
+  },
+  {
+   "idx": "S.60.7",
+   "text": "Group and classify living things based upon features, providing evidence to support groupings"
+  },
+  {
+   "idx": "S.60.8",
+   "text": "Demonstrate an understanding of how living things grow and change through predictable stages (e.g., birth, growth, reproduction, death)"
+  },
+  {
+   "idx": "S.60.9",
+   "text": "Provide examples of how living things obtain food as a source depend upon the environment for animals depend on plants and other of energy for surviving food, water and shelter animals for food"
+  },
+  {
+   "idx": "S.60.10",
+   "text": "Make predictions and conduct simple experiments to change direction, speed and distance objects move"
+  },
+  {
+   "idx": "S.60.11",
+   "text": "Determine cause and effect of push/pull/collision that make objects, start, stop and change direction"
+  },
+  {
+   "idx": "S.60.12",
+   "text": "Evaluate the appropriateness of a material for a given purpose based upon its properties"
+  },
+  {
+   "idx": "S.60.13",
+   "text": "Observe how heating and cooling cause changes to properties of materials (e.g., Ice melts when we bring it inside. Plastic becomes brittle when it is left outside in the cold.)"
+  },
+  {
+   "idx": "S.60.14",
+   "text": "Give examples of ways in which weather variables (hot/cold temperatures, amount and intensity of precipitation, wind speed) affect us and/or cause changes to earth’s features (e.g., The stream has greater water flow after snow melts.)"
+  },
+  {
+   "idx": "S.60.15",
+   "text": "Explore how humans’ use of natural resources impacts the environment (e.g., If we catch all the salmon, this can no longer be a food source. Cutting down trees can cause erosion.)"
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "C.60.4",
+   "text": "Show pride in accomplishment when reaching mastery of a skill and share experiences with others"
+  },
+  {
+   "idx": "C.60.5",
+   "text": "Plan and complete learning activity with a peer"
+  },
+  {
+   "idx": "C.60.6",
+   "text": "Model or teach peers how to use materials or complete a task"
+  },
+  {
+   "idx": "C.60.2",
+   "text": "Express interest in learning about a specific topic over time"
+  },
+  {
+   "idx": "C.60.3",
+   "text": "Engage in preferred and some non-preferred activities for longer periods of time. Remain with some high interest activities 15 minutes or longer"
+  },
+  {
+   "idx": "C.60.7",
+   "text": "Try multiple uses of same materials and observe differing results"
+  },
+  {
+   "idx": "C.60.8",
+   "text": "Compare relative attributes of objects, people, events, sounds (e.g., louder, more, less)"
+  },
+  {
+   "idx": "C.60.9",
+   "text": "Use familiar patterns to solve problems and reason (e.g., if we go to the library every other day and we went yesterday, today we will...)"
+  },
+  {
+   "idx": "C.60.10",
+   "text": "Begin to question accuracy of information and sources as evidenced by sharing conflicting information from another source (e.g., when the teacher shares information with class, says, “But my dad says…”)"
+  },
+  {
+   "idx": "C.60.11",
+   "text": "Try multiple strategies to solve a problem and draw on multiple resources (e.g., look at what a peer is doing for ideas)"
+  },
+  {
+   "idx": "C.60.12",
+   "text": "Use dissimilar objects to represent other objects in play or perform an action with an imaginary object (e.g., use stirring action without anything in hand)"
+  },
+  {
+   "idx": "C.60.13",
+   "text": "Engage in extended pretend play scenarios and display recognition of the difference between pretend or fantasy situations and reality"
+  },
+  {
+   "idx": "C.60.14",
+   "text": "Represent people, places or things through drawings, movements and/or three-dimensional constructions that are increasingly abstract (e.g., may draw a map that includes an “X” that marks the location of the treasure)"
+  },
+  {
+   "idx": "C.60.15",
+   "text": "Make a plan, follow through and review plan based on what they actually did. Indicate reasons for choice, set goals and follow plan"
+  },
+  {
+   "idx": "C.60.16",
+   "text": "Complete longer term and more complex tasks with a focus on the goal, despite frustration"
+  },
+  {
+   "idx": "C.60.17",
+   "text": "Generate or seek out multiple solutions to a problem"
+  },
+  {
+   "idx": "C.60.18",
+   "text": "Hold in mind the topic of group discussion and contribute personal experience (e.g., when talking about something that is broken says, “My mom used a screwdriver to fix our shelf.”)"
+  },
+  {
+   "idx": "C.60.19",
+   "text": "Engage in preferred and some non-preferred activities for longer periods of time. Remain with some high-interest activities 15 minutes or longer"
+  },
+  {
+   "idx": "C.60.20",
+   "text": "Typically resists impulses and can wait longer to respond in more structured settings (e.g., at a restaurant, in circle time in preschool)"
+  },
+  {
+   "idx": "SE.60.1",
+   "text": "Seek help and approval from a wider array of adults in trusted roles"
+  },
+  {
+   "idx": "SE.60.2",
+   "text": "Through expanding relationships with adults (e.g., teacher, play group leader, friends’ caregivers), exhibit comfort in exploring more new settings, although they may need to periodically check-in with a familiar adult"
+  },
+  {
+   "idx": "SE.60.3",
+   "text": "Use strategies to self-soothe across situations with minimal prompting and share strategies with peers or family"
+  },
+  {
+   "idx": "SE.60.4",
+   "text": "Demonstrate increased ability to consider the social standards of the environment when responding to their emotional state"
+  },
+  {
+   "idx": "SE.60.5",
+   "text": "Tolerate small levels of frustration and disappointment, displaying appropriate behavior with adult prompting and support"
+  },
+  {
+   "idx": "SE.60.6",
+   "text": "Initiate previously taught strategies to help delay gratification (e.g., sets up turn-taking with a peer, finds a book to read while waiting for a special activity)"
+  },
+  {
+   "idx": "SE.60.7",
+   "text": "Recall and follow daily routines with little support, including adapting to changes in rules and routines"
+  },
+  {
+   "idx": "SE.60.8",
+   "text": "Describe emotions and feelings to trusted adults and peers"
+  },
+  {
+   "idx": "SE.60.9",
+   "text": "Recognize and show acknowledgement of the feelings, needs and rights of others through behavior (e.g., say “thank you,” share with others, notice issues of fairness)"
+  },
+  {
+   "idx": "SE.60.10",
+   "text": "Begin to understand that different people may have different emotional reactions"
+  },
+  {
+   "idx": "SE.60.11",
+   "text": "Identify themselves as an individual and a part of a group by sharing individual characteristics and roles within the group (e.g., name family members and roles, name team members or classmates)"
+  },
+  {
+   "idx": "SE.60.12",
+   "text": "Describe self by referring to preferences, thoughts and feelings"
+  },
+  {
+   "idx": "SE.60.13",
+   "text": "Demonstrate increased confidence and a willingness to take risks when attempting new tasks and making decisions regarding activities and materials"
+  },
+  {
+   "idx": "SE.60.14",
+   "text": "Show pride in accomplishments and abilities"
+  },
+  {
+   "idx": "SE.60.15",
+   "text": "Typically use socially appropriate behavior with adults, such as helping, responding to limits, etc."
+  },
+  {
+   "idx": "SE.60.16",
+   "text": "Cooperate with peers through sharing and taking turns"
+  },
+  {
+   "idx": "SE.60.17",
+   "text": "Show increasing investment in the responses and friendship of peers and modify behavior to enhance peer relationships"
+  },
+  {
+   "idx": "SE.60.18",
+   "text": "Seek help from peers and offer assistance when it is appropriate"
+  },
+  {
+   "idx": "SE.60.19",
+   "text": "Engage in developing solutions and work to resolve conflict with peers"
+  },
+  {
+   "idx": "SS.60.1",
+   "text": "Demonstrate an understanding that there are similarities and differences among people and families"
+  },
+  {
+   "idx": "SS.60.2",
+   "text": "Demonstrate understanding that there are similarities and differences among the cultural characteristics of people, families and communities (e.g., languages, foods, art, customs, modes of transportation and shelter)"
+  },
+  {
+   "idx": "SS.60.3",
+   "text": "Demonstrate understanding of the reasons for rules and laws in the home, cultural community and/or classroom"
+  },
+  {
+   "idx": "SS.60.4",
+   "text": "Demonstrate awareness that people have a responsibility to take care of the environment through active participation in activities such as recycling"
+  },
+  {
+   "idx": "SS.60.5",
+   "text": "Describe, draw or construct aspects of the classroom, home and/or community (including roads, building, bodies of water, etc.)"
+  },
+  {
+   "idx": "SS.60.7",
+   "text": "Demonstrate awareness of the tools and technologies associated with a variety of roles and jobs; expressing interest in different careers"
+  },
+  {
+   "idx": "SS.60.9",
+   "text": "Begin to be aware of technology and how it affects life"
+  },
+  {
+   "idx": "SS.60.10",
+   "text": "Demonstrate a beginning understanding of past, present and future as it relates to one’s self, family and community"
+  },
+  {
+   "idx": "SS.60.11",
+   "text": "Demonstrate a beginning understanding of change over time through discussing, representing or playing, about expanding topics such as their own growth and family history"
+  }
+ ]
+}

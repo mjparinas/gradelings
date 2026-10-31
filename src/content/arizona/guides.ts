@@ -7,7 +7,7 @@ import type { FrameworkGuides } from "../guides";
 // reasoning. They are taught inside math lessons, not graded as a subject of their own. The assessment page covers AASA
 // (English language arts and math, grades 3 to 8), AzSCI (science, grades 5, 8 and 11) and ACT Aspire (grade 9), from the
 // Arizona Department of Education's 2026-27 assessments overview; dates change each year, so the page points to the
-// department. No French here, so no French guide. Record: docs/research/arizona/README.md.
+// department. No French here, so no French guide. Record: gradelings-research/arizona/README.md.
 
 export const ARIZONA_GUIDES: FrameworkGuides = {
   competencies: {
@@ -203,6 +203,10 @@ export const ARIZONA_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Arizona's preschool year for four-year-olds runs in district, Head Start and Quality First programs. It follows the Arizona Early Learning Standards, 4th edition.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in Arizona is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. In social studies they are \"children as citizens\": learning about themselves, families, rules, leaders and American symbols.",
       lookFor: "Many Arizona schools use standards-based report cards. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas. Under Move On When Reading, schools also check early reading skills during the year.",

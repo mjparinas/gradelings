@@ -3,7 +3,7 @@ import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
 // Nebraska's College and Career Ready Standards (mathematics, English language arts, science and social studies), built
-// from the Nebraska Department of Education's files by docs/research/nebraska/build_outcomes.py.
+// from the Nebraska Department of Education's files by gradelings-research/nebraska/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("nebraska/outcomes.json");
 
 export const contract: FrameworkContract = {

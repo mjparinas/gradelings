@@ -2,12 +2,13 @@
 
 ## Framework
 
-- **Id and slug:** `us-ct`, `connecticut`. Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: Connecticut's world language standards aren't a subject the app follows yet). Offered to families and in classroom mode.
+- **Id and slug:** `us-ct`, `connecticut`. Pre-K and Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: Connecticut's world language standards aren't a subject the app follows yet). Offered to families and in classroom mode.
+- **Pre-K:** the 26 shared Pre-K units (`src/content/grades/pk/`), each citing the Connecticut Early Learning and Development Standards' 48 to 60 months indicators as `domain.60.number` (`M.60.2`, `SS.60.4`; `src/content/connecticut/pk.ts`), checked against `docs/research/connecticut/prek/outcomes.json` (PDF in `source/`, `fetch.sh`, `build_outcomes.py`). Practice steps only.
 
 ## Standards
 
 - Adopted by the Connecticut State Board of Education: the Connecticut Core Standards for mathematics (the Common Core, 2010; `4.NBT.A.1`, with the cluster letter as the State Department of Education prints it; Grade 9 cites the high school standards without "HS", `A-SSE.A.1`) and for English language arts (the Common Core, 2010; `RL.4.2`; Grade 9 cites the 9-10 band, `RI.9-10.2`), the Next Generation Science Standards (adopted November 4, 2015; `4-PS3-2`, `MS-LS1-1`, `HS-LS2-6`) and the Connecticut Elementary and Secondary Social Studies Standards (adopted October 4, 2023; `K.Civ.1.a`, `3.His.3.a`; Grade 9 cites the high school Civics and Government course, `CG.Civ.1.a`).
-- Citations are `"CODES · text"` (`ctcs()` in `src/content/connecticut/cite.ts`), checked by `src/content/connecticut/contract.ts` against `docs/research/connecticut/outcomes.json`. Sources are in `docs/research/connecticut/source/`; `fetch.sh` downloads them again and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. Record: `docs/research/connecticut/README.md`.
+- Citations are `"CODES · text"` (`ctcs()` in `src/content/connecticut/cite.ts`), checked by `src/content/connecticut/contract.ts` against `docs/research/connecticut/outcomes.json`. Sources are in `gradelings-research/connecticut/source/`; `fetch.sh` downloads them again and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. Record: `gradelings-research/connecticut/README.md`.
 
 ## Content
 
@@ -23,7 +24,7 @@
 
 ## Parent guides
 
-- `src/content/connecticut/guides.ts`, US English: the hub, grade notes for Kindergarten to Grade 9, the eight Standards for Mathematical Practice (`/guides/connecticut/math-practices/`) and the state tests (`/guides/connecticut/state-tests/`; dates point to the State Department of Education). No French guide.
+- `src/content/connecticut/guides.ts`, US English: the hub, grade notes for Pre-K to Grade 9, the eight Standards for Mathematical Practice (`/guides/connecticut/math-practices/`) and the state tests (`/guides/connecticut/state-tests/`; dates point to the State Department of Education). No French guide.
 
 ## Schools
 

@@ -1,4 +1,5 @@
 import { scrubEvent } from "@/lib/sentry-scrub";
+import { IGNORE_ERRORS, groupEvent } from "@/lib/sentry-noise";
 
 // Browser error reporting. Off unless NEXT_PUBLIC_SENTRY_DSN is set. The library (about 180 KB)
 // is only downloaded once something actually goes wrong, so pages that run cleanly never pay for
@@ -23,7 +24,8 @@ if (dsn && typeof window !== "undefined") {
         tracesSampleRate: 0,
         // Only the error handlers: no replay, no profiling, no breadcrumbs of taps.
         integrations: (defaults) => defaults.filter((i) => ["GlobalHandlers", "Dedupe", "InboundFilters", "FunctionToString", "LinkedErrors"].includes(i.name)),
-        beforeSend: scrubEvent,
+        ignoreErrors: IGNORE_ERRORS,
+        beforeSend: (event) => scrubEvent(groupEvent(event)),
       });
       // Sentry's own handlers take over from here.
       const early = pending.splice(0);

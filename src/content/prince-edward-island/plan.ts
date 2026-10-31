@@ -2,7 +2,7 @@
 // "share" is a BC unit used as it is; "adopt" is a copy of a unit another province wrote (Ontario, Manitoba, Alberta, Saskatchewan,
 // Nova Scotia or New Brunswick), kept only where its questions name no other province. Units written for Prince Edward Island
 // (pe- ids, in units/) are added in each grade file. Generated from the unit mapping described in
-// docs/research/prince-edward-island/README.md.
+// gradelings-research/prince-edward-island/README.md.
 
 export type Entry = readonly [id: string, kind: "share" | "adopt", citation: string, text: string];
 

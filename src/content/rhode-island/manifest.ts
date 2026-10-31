@@ -5,6 +5,7 @@ export const manifest = defineFramework({
   id: "us-ri",
   framework: RHODE_ISLAND,
   grades: {
+    pk: () => import("./pk"),
     k: () => import("./k"),
     "1": () => import("./g1"),
     "2": () => import("./g2"),
@@ -18,6 +19,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.RHODE_ISLAND_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Rhode Island: no French subject in the app (see docs/research/rhode-island/README.md).
+  // Rhode Island: no French subject in the app (see gradelings-research/rhode-island/README.md).
   french: { immersion: [], "core-french": [] },
 });

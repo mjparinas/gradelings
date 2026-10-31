@@ -15,7 +15,7 @@ import { SayButton } from "./BuddySays";
 import { SpeechBubble } from "../Critter";
 import { Companion } from "./Companion";
 import { Page, ProgressBar } from "../ui";
-import { arcadeFor, gameFits, gameUnlocked, getGame, type GameInfo } from "@/lib/arcade";
+import { arcadeFor, gameFits, gameUnlocked, getGame, subjectsOn, type GameInfo } from "@/lib/arcade";
 import { Bubbles } from "./games/Bubbles";
 import { Catch } from "./games/Catch";
 import { ClockCatch } from "./games/ClockCatch";
@@ -314,7 +314,7 @@ function GamePlay({ id }: { id: string }) {
           🎮 {mmss(left)}
         </span>
       </header>
-      <Game key={round} grade={profile.grade} band={band} subjects={settings?.enabledSubjects} country={getFramework(profile.framework).country} onScore={onScore} onLevel={onLevel} onOver={onOver} />
+      <Game key={round} grade={profile.grade} band={band} subjects={subjectsOn({ grade: profile.grade, subjects: settings?.enabledSubjects, framework: profile.framework })} country={getFramework(profile.framework).country} onScore={onScore} onLevel={onLevel} onOver={onOver} />
     </Page>
   );
 }

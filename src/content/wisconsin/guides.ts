@@ -7,7 +7,7 @@ import type { FrameworkGuides } from "../guides";
 // 8, science in grades 4 and 8, social studies in grades 4, 8 and 10), PreACT Secure in grades 9 and 10, the ACT in
 // grade 11 and Dynamic Learning Maps for students with the most significant cognitive disabilities. Dates change each
 // year, so the page points to DPI. Wisconsin has no French subject here, so no French guide. Record:
-// docs/research/wisconsin/README.md.
+// gradelings-research/wisconsin/README.md.
 
 export const WISCONSIN_GUIDES: FrameworkGuides = {
   competencies: {
@@ -178,6 +178,10 @@ export const WISCONSIN_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Most Wisconsin school districts offer a free 4K year for four-year-olds, often with community child care partners. It follows the Wisconsin Model Early Learning Standards (4th edition).",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in Wisconsin is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. In social studies they learn about themselves, families, rules and jobs. Schools also check early reading skills to see who needs extra help.",
       lookFor: "Many Wisconsin districts use standards-based report cards. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

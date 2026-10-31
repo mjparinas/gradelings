@@ -1,4 +1,50 @@
 {
+  "pk/language": {
+    "overview": "f3e4eadfb9",
+    "units": [
+      "letter-names text=4e2d74ab60 std=0ef2ee7492 q=a8b9337751",
+      "first-sounds text=dd9cd8d5d4 std=eb3fd46f91 q=48ed3455eb",
+      "rhyme-time text=12f8d63dc7 std=42b127a27c q=b73dfecad5",
+      "clap-the-parts text=606ab5cbbd std=a3462132a5 q=6215dee4f1",
+      "listen-to-a-story text=8907705eaa std=659b45fd84 q=e4e96571e7",
+      "word-meanings text=fbdee7f0ca std=35cce3d623 q=1d5b4d5e30"
+    ]
+  },
+  "pk/math": {
+    "overview": "f616ac3743",
+    "units": [
+      "count-to-5 text=5de441ec7a std=ec842f7eb8 q=7da6a21961",
+      "find-the-number text=48b0986657 std=6029da9897 q=cbb1ca9734",
+      "more-or-fewer text=0faa658ba5 std=0d099817fb q=4d8cca7ab1",
+      "shapes text=3eb07867e4 std=6d1bf438c9 q=ed58e37c08",
+      "patterns text=4bbf1795ab std=998e0de069 q=d72ed7b913",
+      "big-and-small text=ec30e0312f std=7fe4f710aa q=ac1fcda3f6",
+      "sort-it text=c844f13fda std=b8e15f1217 q=11e6557b38"
+    ]
+  },
+  "pk/science": {
+    "overview": "a7dfa31355",
+    "units": [
+      "five-senses text=ede42da0ab std=ea2cbef5f9 q=cd1a3c2577",
+      "living-or-not text=9c2f339fb0 std=64af0c83ff q=c6b64af68c",
+      "animals-and-babies text=c26be2c8ec std=e471ff48eb q=d23f0b3d01",
+      "weather-and-sky text=152ba8b660 std=e848d1702c q=04120788f3",
+      "plants-grow text=beae59bc1e std=9313e3e386 q=d8f8686f2b",
+      "sink-or-float text=87253513e6 std=add762b38f q=80c8fb85a3"
+    ]
+  },
+  "pk/social": {
+    "overview": "dc3fa334b7",
+    "units": [
+      "my-family text=81af8740c1 std=7924adabe0 q=41e53ad242",
+      "feelings text=32db0a0097 std=997184fec8 q=1e8788180c",
+      "community-helpers text=e038723509 std=d383ee78ba q=27bacf2a4a",
+      "places-around-me text=659860832c std=0234a1e012 q=8a8589b026",
+      "taking-turns text=04b975dae4 std=dac6d41d4f q=22be788cc9",
+      "first-next-last text=6f92e7037f std=f2662e186e q=1ad086320d",
+      "caring-for-our-world text=0df6123b83 std=b3b5a1697c q=82f9f5197f"
+    ]
+  },
   "k/language": {
     "overview": "58c8a930a9",
     "units": [
@@ -270,6 +316,16 @@
       "nj-g3-local-government text=c0e7153e62 std=08e6c4e102 q=306672b9e9"
     ]
   },
+  "3/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "saludos text=0e496163f1 std=81fd30989b q=6c47ef34de",
+      "numeros-hasta-20 text=23e8632af0 std=2c8be968c9 q=a349f236c5",
+      "colores text=86a558acac std=1b910c4c55 q=5f3c5730ec",
+      "animales text=badbbecebe std=0f498f10c6 q=128d83d818",
+      "familia text=b2dcc8e66e std=8faa275c49 q=86a8e86e86"
+    ]
+  },
   "4/language": {
     "overview": "852041bcd3",
     "units": [
@@ -342,6 +398,16 @@
       "nj-g4-new-jersey-economy text=98a547c8a5 std=8cbb7aa85b q=52e94ba0b6"
     ]
   },
+  "4/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "cuerpo text=8eaaf9bf61 std=8c08a1ee0b q=73f074b2b4",
+      "escuela text=e9996c83b9 std=aae3f690b6 q=ae47848fa7",
+      "dias-y-meses text=34db9dab39 std=024d22536e q=cb10fd8733",
+      "tiempo text=42f12e5fce std=4e118d7e71 q=1cc1215af3",
+      "ropa text=34970c68fc std=efa7f79cc2 q=f0e3970adf"
+    ]
+  },
   "5/language": {
     "overview": "1f372ea8b4",
     "units": [
@@ -407,6 +473,16 @@
       "wa-g5-constitution text=4fce7c7602 std=5eff5a03e5 q=2d1d2c254b",
       "or-g5-timeline text=d6feb485b6 std=a79ef20d1f q=750a99801f",
       "or-g5-earn-and-save text=c264e57498 std=aad1392541 q=9f54445f7e"
+    ]
+  },
+  "5/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "sonidos text=80683d829a std=27fd41838f q=58c17693b8",
+      "el-y-la text=b0dbe3b0fc std=38c5881bb8 q=1074c9539b",
+      "gustos text=d36fa4b597 std=e9c4eb69ac q=8b22e9b02f",
+      "sobre-mi text=8d8ab79cae std=abb6b5215a q=d4ac49825c",
+      "fiestas text=705d12c072 std=e64520304e q=d84d35d37b"
     ]
   },
   "6/language": {
@@ -480,6 +556,16 @@
       "world-beliefs text=cc74370028 std=ad2888582a q=eaa6186bca",
       "trade-networks text=37074f947d std=fb1af33fe5 q=bfbd39ee46",
       "nj-g6-world-regions text=4bba08603a std=faa2126e19 q=d07c73a40c"
+    ]
+  },
+  "6/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "preguntas text=a185455eef std=ed20ce18ba q=d44b56c84c",
+      "comida text=125b021db0 std=1246d6d4dd q=ffef28847f",
+      "pasatiempos text=c33589e083 std=4cd3a86ef5 q=cc01218407",
+      "emociones text=a925cf1d90 std=289704dd77 q=a82624e446",
+      "personas text=3f99f93025 std=0deaff300e q=4ab03f6e6a"
     ]
   },
   "7/language": {
@@ -559,6 +645,16 @@
       "nj-g7-japan text=490a5fc02e std=bc2e85d192 q=b3ff2d05e0"
     ]
   },
+  "7/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "verbos-ar text=fc3d64d1c7 std=6c4ba3089b q=2a9f9c0c73",
+      "describir text=0dc4ce0abf std=bcf0bcf6a1 q=b504bae3cb",
+      "comparaciones text=32f5de1457 std=21d56ee848 q=6e43c85246",
+      "paises text=1827fc7cb2 std=e5fa08cacb q=26617a81ba",
+      "direcciones text=246e0580ed std=3d3546530b q=525b6d4747"
+    ]
+  },
   "8/language": {
     "overview": "2bb7940c84",
     "units": [
@@ -632,6 +728,16 @@
       "nj-g8-new-jersey-and-nation text=7f57b79923 std=22d4a35692 q=11d01b32ad",
       "nj-g8-us-timeline text=c166dc438a std=e84f25f22f q=41ed0ad7fb",
       "nj-g8-new-jersey-plan text=3e1f073ffb std=3de6fb28ef q=648b280250"
+    ]
+  },
+  "8/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "verbos-er-ir text=16633c38db std=21430181d8 q=2a4bf2332c",
+      "ir-a text=418d5f16ce std=deb65aab31 q=13df3f558e",
+      "hora-y-frecuencia text=d2c28828a0 std=d5d00e2856 q=439e808472",
+      "compras text=e832882aee std=c953c869f4 q=2c2a3e610b",
+      "medio-ambiente text=6393bb902f std=6fd14b0904 q=1980351cc5"
     ]
   },
   "9/language": {
@@ -726,6 +832,16 @@
       "nj-g9-us-government text=7fc665a7aa std=1f7a183e31 q=0803c01c6f",
       "nj-g9-personal-finance text=3cd052be69 std=f0263e949d q=d41af634b9",
       "nj-g9-economics text=87a2dbe779 std=38b4853c8d q=326b557a6a"
+    ]
+  },
+  "9/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "preterito text=92cdef7045 std=09bf56e5b4 q=ccac7e09a5",
+      "ser-y-estar text=cf084dc6cc std=f248b63008 q=fd01edeb18",
+      "en-orden text=56d16d8e93 std=3f09b3ef6d q=23cf0bbdba",
+      "profesiones text=55b2e6e3d3 std=69575f4637 q=1c177bd0fb",
+      "cuentos text=942f5f0729 std=ecd51bd440 q=c29106e529"
     ]
   }
 }

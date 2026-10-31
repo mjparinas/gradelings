@@ -10,7 +10,7 @@ import type { FrameworkGuides } from "../guides";
 // four achievement levels, and the reading assessments and reading success plans in kindergarten to 3rd grade (section
 // 167.645, RSMo), under which a parent and the school discuss retention at the end of 3rd grade. Dates change each
 // year, so the page points to the Department of Elementary and Secondary Education. Missouri has no French subject
-// here, so no French guide. Record: docs/research/missouri/README.md.
+// here, so no French guide. Record: gradelings-research/missouri/README.md.
 
 export const MISSOURI_GUIDES: FrameworkGuides = {
   competencies: {
@@ -157,6 +157,10 @@ export const MISSOURI_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Missouri's pre-K year runs in public schools, Head Start and state-funded programs for four-year-olds. It follows the Missouri Early Learning Standards (2021).",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in Missouri is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. In social studies they learn about themselves, families, rules, maps, the flag and the people remembered on national holidays. Schools check each child's reading at the start and end of the year.",
       lookFor: "Report cards vary by district, and many use standards-based marks. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

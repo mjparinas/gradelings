@@ -19,6 +19,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.WASHINGTON_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Washington: no French subject. Its world-language programs are mostly Spanish (see docs/research/washington/README.md).
+  // Washington: no French subject. Its world-language programs are mostly Spanish (see gradelings-research/washington/README.md).
   french: { immersion: [], "core-french": [] },
 });

@@ -6,7 +6,7 @@ import type { Entry } from "../kit";
 // "4.R.3.a"), Integrated Reading ("5.IR.2"), Writing ("4.W.4"), Communication ("3.C.2") and Language ("4.L.1b"); Grade
 // 9 cites the Grades 9-10 standards ("9-10.R.4"). The placement follows Michigan's (and so California's), and each
 // Common Core code was carried to the 2023 standards through the Department's 2017-to-2023 crosswalk
-// (docs/research/north-dakota/source/ela-crosswalk-2017-2023.pdf).
+// (gradelings-research/north-dakota/source/ela-crosswalk-2017-2023.pdf).
 export const PLAN_LANGUAGE: Record<string, Entry[]> = {
   "k/language": [
     ["letter-partners", "share", "K.F.12; K.F.13; K.F.2; K.F.3", "knowing the upper- and lowercase letters"],

@@ -1,12 +1,14 @@
-import { codeCite, research, type FrameworkContract } from "../contract";
+import { codeCite, preKCite, research, type FrameworkContract } from "../contract";
 import { PLAN } from "./plan";
 
 // Maine's official standards, built from the Maine Department of Education's files by
-// docs/research/maine/build_outcomes.py. English language arts and social studies have no codes, so their citations
+// gradelings-research/maine/build_outcomes.py. English language arts and social studies have no codes, so their citations
 // are the standard's name ("Reading 4", "Civics & Government 2"), checked the same way.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("maine/outcomes.json");
 
 export const contract: FrameworkContract = {
+  // Pre-K cites the early-learning document (docs/research/maine/prek).
+  preK: preKCite("maine", "Maine"),
   cite: codeCite(OUTCOMES, "Maine"),
   ownPrefix: "me-",
   adoptsFrom: ["us-ca", "ca-nb", "ca-ns", "ca-mb", "us-or", "us-wa"],

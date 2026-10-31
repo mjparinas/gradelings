@@ -3,7 +3,7 @@ import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
 // Mississippi's official standards (the Mississippi College- and Career-Readiness Standards), built from the Mississippi
-// Department of Education's files by docs/research/mississippi/build_outcomes.py.
+// Department of Education's files by gradelings-research/mississippi/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("mississippi/outcomes.json");
 
 export const contract: FrameworkContract = {

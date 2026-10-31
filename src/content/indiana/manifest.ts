@@ -5,6 +5,7 @@ export const manifest = defineFramework({
   id: "us-in",
   framework: INDIANA,
   grades: {
+    pk: () => import("./pk"),
     k: () => import("./k"),
     "1": () => import("./g1"),
     "2": () => import("./g2"),
@@ -18,6 +19,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.INDIANA_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Indiana: no French subject (see docs/research/indiana/README.md).
+  // Indiana: no French subject (see gradelings-research/indiana/README.md).
   french: { immersion: [], "core-french": [] },
 });

@@ -9,7 +9,7 @@ import type { FrameworkGuides } from "../guides";
 // (Montana Aligned to Standards Through-Year: English language arts and math, grades 3 to 8, short testlets through the
 // year, four levels), the Montana Science Assessment (grades 5 and 8), the ACT in grade 11 and the alternate
 // assessments. Dates change each year, so the page points to the Montana Office of Public Instruction (OPI). No French
-// here, so no French guide. Record: docs/research/montana/README.md.
+// here, so no French guide. Record: gradelings-research/montana/README.md.
 
 export const MONTANA_GUIDES: FrameworkGuides = {
   competencies: {

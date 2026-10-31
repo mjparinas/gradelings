@@ -7,7 +7,7 @@
 ## Standards
 
 - Adopted by the Vermont State Board of Education: math (the Common Core, 2010; `4.NBT.1`; Grade 9 cites the high school standards, `A-SSE.1`), English language arts (the Common Core, 2010; `RL.4.2`; Grade 9 cites the 9-10 band, `RI.9-10.2`), science (the Next Generation Science Standards, 2013; `4-PS3-2`; middle school `MS-LS1-1` in any of Grades 6 to 8, high school `HS-LS2-6` in Grade 9) and social studies (the College, Career, and Civic Life (C3) Framework, adopted September 20, 2017, written for grade bands; `D2.Civ.1.3-5`; Kindergarten to Grade 2 cite K-2, Grades 3 to 5 cite 3-5, Grades 6 to 8 cite 6-8, Grade 9 cites 9-12).
-- Citations are `"CODES · text"` (`vts()` in `src/content/vermont/cite.ts`), checked by `src/content/vermont/contract.ts` against `docs/research/vermont/outcomes.json`, which `python3 -I build_outcomes.py` rebuilds from the Achievement Standards Network copies in `docs/research/vermont/source/`. The Agency of Education's adoption record, social studies framework and grade documents, the VTCAP guide and the statutes are committed beside them. Record: `docs/research/vermont/README.md`.
+- Citations are `"CODES · text"` (`vts()` in `src/content/vermont/cite.ts`), checked by `src/content/vermont/contract.ts` against `docs/research/vermont/outcomes.json`, which `python3 -I build_outcomes.py` rebuilds from the Achievement Standards Network copies in `gradelings-research/vermont/source/`. The Agency of Education's adoption record, social studies framework and grade documents, the VTCAP guide and the statutes are committed beside them. Record: `gradelings-research/vermont/README.md`.
 
 ## Content
 

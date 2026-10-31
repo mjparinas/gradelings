@@ -5,7 +5,7 @@ import { bankUnit, type Q } from "../own";
 // from Biology 1, Earth and Space Science and Physical Science: Florida's geology, the ocean, weather and climate,
 // space exploration, ecology and resources, energy and forces, chemistry, classification and evolution, cell
 // technology and genetics, and the nature of science. Benchmarks that belong to other courses (for example Anatomy and
-// Physiology, Chemistry or Physics Honors) are listed in docs/research/florida/gaps-science.txt.
+// Physiology, Chemistry or Physics Honors) are listed in gradelings-research/florida/gaps-science.txt.
 
 const FLORIDA_GEOLOGY: Q[] = [
   ["Florida sits on a thick platform of…", "limestone", ["granite", "basalt", "ice"], "Ancient shells and corals built it."],

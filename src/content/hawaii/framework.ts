@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Hawaiʻi, a US state. Standards are the Hawaiʻi State Department of Education's (HIDOE), the one statewide school
 // system: the Hawaiʻi Common Core Standards for Mathematics (HCCS-M, approved by the Board of Education in 2026 and
@@ -75,9 +76,9 @@ export const HAWAII: Framework = {
   standardLabel: "Standard",
   sourceName: "Hawaiʻi State Department of Education",
   sourceUrl: "https://hawaiipublicschools.org/academics/subject-matter-standards/",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Hawaiʻi report cards",
     intro:

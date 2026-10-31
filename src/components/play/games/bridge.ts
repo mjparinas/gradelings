@@ -1,18 +1,22 @@
 import { gradeNumber } from "@/content/subjects";
 import { pick, sample, shuffle } from "@/content/random";
-import type { GradeId, SubjectId } from "@/content/types";
+import type { GradeId, QuestionLanguage, SubjectId } from "@/content/types";
+import { spanishBridgeQuestion } from "./bridgeSpanish";
 
-// Word Bridge: French words and grammar. Each right answer lays a plank on the bridge.
-// The step depends on the French the child takes: Immersion moves faster than Core French.
+// Word Bridge: French or Spanish words and grammar. Each right answer lays a plank on the bridge.
+// The step depends on the French the child takes: Immersion moves faster than Core French. Spanish rounds are in
+// ./bridgeSpanish; a child with both languages on gets a mix.
 
 export interface BridgeQuestion {
   /** A picture or English word, or a French sentence with a gap. */
   prompt: string;
   /** Shown bigger above the prompt (an emoji), when there is one. */
   picture?: string;
-  /** Read aloud in English (Core French) or French (Immersion). */
+  /** Read aloud in English (Core French, Spanish) or French (Immersion). */
   speak: string;
-  speakLang: "en" | "fr";
+  speakLang: "en" | QuestionLanguage;
+  /** The language of the choices: French unless set. */
+  answerLang?: QuestionLanguage;
   answer: string;
   choices: string[];
 }
@@ -160,7 +164,15 @@ function passe(): BridgeQuestion {
   return { prompt: sentence, speak: "Avoir ou être ?", speakLang: "fr", answer, choices: choicesFrom(answer, ["ai", "as", "a", "avons", "avez", "ont", "suis", "es", "est", "sommes", "êtes", "sont"], 4) };
 }
 
+/** A question in French or Spanish, whichever the child has on (either, when both are). */
 export function bridgeQuestion(grade: GradeId, subjects: readonly SubjectId[] = []): BridgeQuestion {
+  const french = subjects.some((s) => s === "immersion" || s === "core-french");
+  const spanish = subjects.includes("spanish");
+  if (spanish && (!french || pick([true, false]))) return spanishBridgeQuestion(grade);
+  return frenchQuestion(grade, subjects);
+}
+
+function frenchQuestion(grade: GradeId, subjects: readonly SubjectId[]): BridgeQuestion {
   const step = frenchStep(grade, subjects);
   const immersion = subjects.includes("immersion");
   const options: (() => BridgeQuestion)[] =

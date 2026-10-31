@@ -7,7 +7,7 @@ import type { FrameworkGuides } from "../guides";
 // Measures of Academic Success (CMAS: English language arts and math in grades 3 to 8, science in grades 5, 8 and 11,
 // social studies in grade 4 or 7 at a sample of schools), the PSAT and SAT in high school, CoAlt, and the READ Act's
 // reading checks in Kindergarten to Grade 3. Dates change each year, so the page points to the Colorado Department of
-// Education (CDE). Colorado has no French subject here, so no French guide. Record: docs/research/colorado/README.md.
+// Education (CDE). Colorado has no French subject here, so no French guide. Record: gradelings-research/colorado/README.md.
 
 export const COLORADO_GUIDES: FrameworkGuides = {
   competencies: {
@@ -154,6 +154,10 @@ export const COLORADO_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-K in Colorado is Universal Preschool (UPK Colorado): every child gets free preschool hours in the year before kindergarten, in school districts, Head Start and community programs, with more hours for families who qualify. The Colorado Academic Standards start at preschool, alongside the state's Early Learning and Development Guidelines: reading, writing and talking, math, science, social studies, health and the arts.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in Colorado is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. In social studies they learn about themselves, families, rules and maps. Teachers also check each child's reading under the READ Act and use a school readiness assessment early in the year.",
       lookFor: "Many Colorado districts use standards-based report cards. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

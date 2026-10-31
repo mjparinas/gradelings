@@ -7,8 +7,8 @@ import type { FrameworkGuides } from "../guides";
 // repeated reasoning. They are taught inside math lessons, not graded as a subject of their own. The assessment page
 // covers the Rhode Island Comprehensive Assessment System (RICAS, English language arts and math, grades 3 to 8), the
 // Next Generation Science Assessment (NGSA, grades 5, 8 and 11) and the PSAT 10 and SAT in high school, from RIDE's
-// family guides to RICAS and the NGSA (both in docs/research/rhode-island/source); dates change each year, so the page
-// points to the department. No French here, so no French guide. Record: docs/research/rhode-island/README.md.
+// family guides to RICAS and the NGSA (both in gradelings-research/rhode-island/source); dates change each year, so the page
+// points to the department. No French here, so no French guide. Record: gradelings-research/rhode-island/README.md.
 
 export const RHODE_ISLAND_GUIDES: FrameworkGuides = {
   competencies: {
@@ -201,6 +201,10 @@ export const RHODE_ISLAND_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "RI Pre-K funds a year for four-year-olds in public schools, Head Start and community programs. It follows the Rhode Island Early Learning and Development Standards (2023 edition).",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in Rhode Island is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. In social studies they learn about families, schools and neighborhoods, classroom rules and community helpers, and symbols such as the American flag and Rhode Island's anchor flag with the word Hope.",
       lookFor: "Many Rhode Island districts use standards-based report cards. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

@@ -1,0 +1,702 @@
+{
+ "pk/math": [
+  {
+   "idx": "MP.P.1",
+   "text": "Approaches math with enthusiasm."
+  },
+  {
+   "idx": "MP.P.2",
+   "text": "Associates math with engaging classroom materials and activities"
+  },
+  {
+   "idx": "MP.P.3",
+   "text": "Recognizes the usefulness of math in everyday tasks"
+  },
+  {
+   "idx": "MP.P.4",
+   "text": "Uses math to solve problems in the context of classroom and home experiences"
+  },
+  {
+   "idx": "MP.P.5",
+   "text": "Represents mathematical concepts using manipulatives"
+  },
+  {
+   "idx": "MP.P.6",
+   "text": "Uses math-related skills, such as sorting, counting, and matching in the course of everyday classroom experiences"
+  },
+  {
+   "idx": "MP.P.7",
+   "text": "Uses math terms in the course of everyday conversations"
+  },
+  {
+   "idx": "CC.P.1",
+   "text": "Rote counts to 20 and beyond by ones with increasing accuracy"
+  },
+  {
+   "idx": "CC.P.2",
+   "text": "Recognizes and names written numerals 0 -10"
+  },
+  {
+   "idx": "CC.P.3",
+   "text": "Subitizes to determine how many (recognizes small quantities immediately)"
+  },
+  {
+   "idx": "CC.P.4",
+   "text": "Recognizes the relationship between numbers and quantities: connect counting to cardinality (0-10)"
+  },
+  {
+   "idx": "CC.P.5",
+   "text": "Shows understanding that the last number name spoken tells the number of objects counted up to 10 (cardinality)"
+  },
+  {
+   "idx": "CC.P.6",
+   "text": "Shows understanding that the number of objects is the same regardless of their arrangement or the order in which they were counted"
+  },
+  {
+   "idx": "CC.P.7",
+   "text": "Begins to write number symbols 0-10"
+  },
+  {
+   "idx": "CC.P.8",
+   "text": "Identifies whether the number of objects in one group is greater than, less than, or equal to the number of objects in another group up to 10"
+  },
+  {
+   "idx": "OA.P.1",
+   "text": "Associates quantity with a number name or written numeral"
+  },
+  {
+   "idx": "OA.P.2",
+   "text": "Counts using 1:1 correspondence with increasing accuracy"
+  },
+  {
+   "idx": "OA.P.3",
+   "text": "Represents addition and subtraction with fingers, drawing, acting out situations and verbal explanation"
+  },
+  {
+   "idx": "OA.P.4",
+   "text": "Uses concrete objects to model real-world addition and subtraction up to 5 (composing and decomposing numbers)"
+  },
+  {
+   "idx": "OA.P.5",
+   "text": "Acts out and solves story problems using sets of up to ten objects"
+  },
+  {
+   "idx": "G.P.1",
+   "text": "Describes, sorts and classifies shapes using some attributes such as size, sides, and other properties"
+  },
+  {
+   "idx": "G.P.2",
+   "text": "Discovers connections between formal geometric shapes and the surrounding environment"
+  },
+  {
+   "idx": "G.P.3",
+   "text": "Combines materials to make three-dimensional and two-dimensional shapes"
+  },
+  {
+   "idx": "G.P.4",
+   "text": "Breaks down shapes into parts and wholes"
+  },
+  {
+   "idx": "G.P.5",
+   "text": "Initiates activities that indicate understanding of directionality"
+  },
+  {
+   "idx": "G.P.6",
+   "text": "Uses orientation and directionality words such as slides, flips and turns as shapes are manipulated"
+  },
+  {
+   "idx": "G.P.7",
+   "text": "Uses symbols and/or objects to indicate beginning understanding of relative positions in space (i.e. creates simple maps; follows directions during nature walks)"
+  },
+  {
+   "idx": "G.P.8",
+   "text": "Demonstrates or describes relative positions of objects, using words such as up, down, beside, over"
+  },
+  {
+   "idx": "MD.P.1",
+   "text": "Describes, sorts and classifies groups of objects using one or more attribute"
+  },
+  {
+   "idx": "MD.P.2",
+   "text": "Identifies and compares measurable attributes of everyday objects, using appropriate vocabulary (e.g., long, short, tall, heavy, light, big, small, full, empty)"
+  },
+  {
+   "idx": "MD.P.3",
+   "text": "Begins to identify such words as \"first\", \"next\", and \"last"
+  },
+  {
+   "idx": "MD.P.4",
+   "text": "Uses discrete attributes to order and seriate materials"
+  },
+  {
+   "idx": "MD.P.5",
+   "text": "Recognizes, duplicates, creates, and extends simple patterns using objects"
+  },
+  {
+   "idx": "MD.P.6",
+   "text": "Uses past and future tenses and time words appropriately"
+  },
+  {
+   "idx": "MD.P.7",
+   "text": "Begins to understand concepts such as yesterday, today, and tomorrow"
+  },
+  {
+   "idx": "MD.P.8",
+   "text": "Responds to questions that can be answered through data analysis"
+  },
+  {
+   "idx": "MD.P.9",
+   "text": "Represents data using simple charts and graphs (2-D or 3-D)"
+  },
+  {
+   "idx": "MD.P.10",
+   "text": "Uses non-standard units of measurement to measure objects; notices similarities and differences"
+  },
+  {
+   "idx": "MD.P.11",
+   "text": "Connects measurement terms and concepts in everyday life"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "SL.P.1",
+   "text": "Increases ability to engage in collaborative conversations about preschool topics and texts with peers and adults in small & larger groups: Follows agreed-upon rules for discussions (e.g., listening to other & taking turn speaking about the topics & texts under discussion) Engages in conversations with multiple exchanges"
+  },
+  {
+   "idx": "SL.P.2",
+   "text": "Confirms understanding of a text read aloud or information presented orally or through other media by asking and answering questions"
+  },
+  {
+   "idx": "SL.P.3",
+   "text": "Asks questions in order to seek help, get information, or clarify something that is not understood"
+  },
+  {
+   "idx": "SL.P.4",
+   "text": "Describes familiar people, places, things, and events, and, with prompting and support, begins to provide additional detail"
+  },
+  {
+   "idx": "SL.P.5",
+   "text": "Begins to add drawing or other visual displays to descriptions to provide additional detail"
+  },
+  {
+   "idx": "SL.P.6",
+   "text": "Speaks audibly most of the time and expresses thoughts, feelings, and ideas"
+  },
+  {
+   "idx": "LA.P.1",
+   "text": "Begins to demonstrate understanding of the conventions of standard English grammar and usage when writing or speaking: Prints some upper- and lowercase letters, and can write own name Uses frequently occurring nouns and verbs Begins to form regular plural nouns orally by adding /s/ or /es/ (e.g. dog, dogs; wish, wishes) Responds to and uses more question words (interrogatives, e.g. who, what, where, when, why, how) Begins to use the most frequently occurring prepositions (e.g. to, from, in, out, on, off, for, of, by, with) Demonstrates the ability to speak in complete sentences"
+  },
+  {
+   "idx": "LA.P.2",
+   "text": "Begins to use standard English capitalization, punctuation, and spelling when writing: Capitalizes the first letter in own name Begins to recognize punctuation (e.g., ., ?, !) Begins to write letters to represent sounds Begins to spell simple words phonetically, drawing on knowledge of sound-letter relationships"
+  },
+  {
+   "idx": "LA.P.3",
+   "text": "Asks & answers questions about the meanings of new words and phrases introduced through books, activities and play: With prompting and support, generates words that are similar in meaning (e.g. happy/glad, angry/mad)"
+  },
+  {
+   "idx": "LA.P.4",
+   "text": "Explores word relationships and meanings: Sorts common objects into categories (e.g. big/small, living/nonliving) Applies words learned in classroom activities to real-life examples (e.g., names places in school that are fun, quiet, or noisy) Begins to distinguish shades of meaning among verbs describing the same general action by acting out the meanings"
+  },
+  {
+   "idx": "LA.P.5",
+   "text": "Uses words and phrases acquired through conversations, listening to books read aloud, activities, and play"
+  },
+  {
+   "idx": "RL.P.1",
+   "text": "Asks and answers questions about simple stories"
+  },
+  {
+   "idx": "RL.P.2",
+   "text": "Retells at least one major event from a simple story"
+  },
+  {
+   "idx": "RL.P.3",
+   "text": "Identifies main characters in simple stories"
+  },
+  {
+   "idx": "RL.P.4",
+   "text": "Asks questions about unknown words and phrases in stories"
+  },
+  {
+   "idx": "RL.P.5",
+   "text": "Begins to recognize that there are different text structures, such as stories, poems, and songs"
+  },
+  {
+   "idx": "RL.P.6",
+   "text": "Begins to describe the roles of authors & illustrators"
+  },
+  {
+   "idx": "RL.P.7",
+   "text": "Retells stories using both storybook language and pictures"
+  },
+  {
+   "idx": "RL.P.8",
+   "text": "Begins to make connections between characters in familiar stories"
+  },
+  {
+   "idx": "RL.P.9",
+   "text": "Participates in (individually and in groups) a variety of age-appropriate print materials"
+  },
+  {
+   "idx": "RI.P.1",
+   "text": "Asks and answers questions about an informational text read aloud"
+  },
+  {
+   "idx": "RI.P.2",
+   "text": "Recalls important facts from an informational text after hearing it read aloud or studying particular pages/visuals"
+  },
+  {
+   "idx": "RI.P.3",
+   "text": "Represents or acts out concepts learned from hearing an informational text read aloud (e.g. makes a skyscraper out of blocks at the sensory table)"
+  },
+  {
+   "idx": "RI.P.4",
+   "text": "Asks questions about unknown words and phrases in informational texts read aloud or shared visually"
+  },
+  {
+   "idx": "RI.P.5",
+   "text": "Identifies front cover and back cover of a book and title"
+  },
+  {
+   "idx": "RI.P.6",
+   "text": "Begins to describe the role of authors and illustrators"
+  },
+  {
+   "idx": "RI.P.7",
+   "text": "Describes important information from text and pictures/photos/graphics"
+  },
+  {
+   "idx": "RI.P.8",
+   "text": "Recognizes that information on a topic can be found in more than one text"
+  },
+  {
+   "idx": "RI.P.9",
+   "text": "Participates individually and in groups in a variety of age-appropriate informational text materials"
+  },
+  {
+   "idx": "RF.P.1",
+   "text": "Displays appropriate book-handling skills and knowledge of print conventions: Begins to track print from left to right and top to bottom Recognizes that print is something that is read and has specific meaning Begins to demonstrate that words are separated by spaces in print Recognizes and names at least 15-20 upper and 15-20 lower case letters."
+  },
+  {
+   "idx": "RF.P.2",
+   "text": "Demonstrates understanding of spoken words, syllables, and some beginning sounds (phonemes): Recognizes and produces rhyming words Counts, pronounces, blends, and segments syllables in spoken words Blends and segments onsets and rimes of single-syllable words Isolates and pronounces the initial and final sounds (phonemes) in single syllable words and their name Begins to add or substitute individual sounds (phonemes) in simple, one-syllable words to make new words"
+  },
+  {
+   "idx": "RF.P.3",
+   "text": "With prompting and support, applies beginning phonics and word analysis skills: Links a sound to a picture of an object that begins with that sound. Begins to link a sound to the corresponding printed letter Recognizes names of other children in the classroom and common print around the classroom."
+  },
+  {
+   "idx": "RF.P.4",
+   "text": "Attends to fluent models of reading"
+  },
+  {
+   "idx": "RF.P.5",
+   "text": "Imitates fluent models of reading"
+  },
+  {
+   "idx": "W.P.1",
+   "text": "With prompting and support, uses a combination of drawing, dictating and writing to: Communicate opinions on topics of interest (e.g., My favorite food is…) Communicate information about a topic Tell a story"
+  },
+  {
+   "idx": "W.P.2",
+   "text": "With prompting and support:"
+  },
+  {
+   "idx": "W.P.3",
+   "text": "Shares drawing and writing with peers to gather additional ideas and/or answer questions"
+  },
+  {
+   "idx": "W.P.4",
+   "text": "Recognizes that digital tools are used for communication and, with support and guidance uses them to convey messages in picture and/or words"
+  },
+  {
+   "idx": "W.P.5",
+   "text": "Participates in shared research and writing projects modeled by adults (e.g. class explores how tadpoles become frogs and create visuals)"
+  },
+  {
+   "idx": "W.P.6",
+   "text": "With guidance and support, begins to recall information from experiences or gather information from different sources"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "PS.P.1",
+   "text": "Uses senses, tools (including technology) to observe, describe, discuss and attempt to explain the effects of different strengths or different directions of pushes and pulls on the object"
+  },
+  {
+   "idx": "PS.P.2",
+   "text": "Plans and carries out, with teacher support, comparisons of motion and force using common objects and materials (e.g., which objects move faster or slower, which object goes faster or further when you just let go or give it a push)"
+  },
+  {
+   "idx": "PS.P.3",
+   "text": "Records results of observations, with teacher support, using simple drawings, discussions, charts, photos or models and reflects on what was learned"
+  },
+  {
+   "idx": "PS.P.4",
+   "text": "Uses knowledge and skills learned through observation and exploration to create new and improved objects or processes (e.g., changes the surface material of a ramp or put bigger wheels on a car to make a difference in speed"
+  },
+  {
+   "idx": "PS.P.5",
+   "text": "Listens to stories, poems, and finger plays about physical knowledge and uses vocabulary about speed, motion and stability in daily conversations"
+  },
+  {
+   "idx": "PS.P.6",
+   "text": "Constructs a system of tubes and/or ramps for a marble to travel through; and discovers that steeper ramps will cause a marble to travel faster"
+  },
+  {
+   "idx": "ES.P.1",
+   "text": "Uses senses and tools (including technology) to observe, describe, discuss and generate questions about changes in weather over time (e,g., why ice melts faster in the sun than in the woods, why puddles evaporate in the sun but remain longer in the shade, why metal gets hot on a sunny day but not a rainy one)"
+  },
+  {
+   "idx": "ES.P.2",
+   "text": "Plans and carries out simple experiments about water and heat (turning water to ice when brought outdoors in winter or mud turning to dirt in the sun) and records observations using drawings, discussions, graphs and technology"
+  },
+  {
+   "idx": "ES.P.3",
+   "text": "Asks questions and investigates the ways that weather can affect things that can be done outside"
+  },
+  {
+   "idx": "ES.P.4",
+   "text": "Uses knowledge and skills learned through observation of the earth and sun to create new and improved objects or processes (e.g. creating shade on a hot day or changing the path of water away from the playground after rain)"
+  },
+  {
+   "idx": "ES.P.5",
+   "text": "Demonstrates, through observation and investigation, an understanding that human action impacts the earth (i.e., use of resources and recycling, the process from cutting trees to recycling paper)"
+  },
+  {
+   "idx": "ES.P.6",
+   "text": "Demonstrates an understanding of how weather forecasts are used to select appropriate garments to wear or bring along when leaving home"
+  },
+  {
+   "idx": "ES.P.7",
+   "text": "Develops a sense of dangerous/severe weather in Maine"
+  },
+  {
+   "idx": "LS.P.1",
+   "text": "Uses senses to observe and describe properties of familiar plants and animals"
+  },
+  {
+   "idx": "LS.P.2",
+   "text": "Uses vocabulary for naming plants and animals moving beyond generic labels (e.g. \"bug\") to names of specific creatures (e.g. \"ant\", \"beetle\") and use symbols or icons to identify where they see such creatures"
+  },
+  {
+   "idx": "LS.P.3",
+   "text": "Develops plans, based on observations and guided inquiry, to care for plants and animals in the classroom and surrounding area"
+  },
+  {
+   "idx": "LS.P.4",
+   "text": "Observes and describes animals in his/her immediate environment to learn what they need to live"
+  },
+  {
+   "idx": "LS.P.5",
+   "text": "Uses nature journals, tally sheets and resource materials, with support, to summarize observations (e.g., make connections between the types and numbers of birds coming to a feeder in summer or winter by counting and categorizing)"
+  },
+  {
+   "idx": "LS.P.6",
+   "text": "Listens to accounts and discusses pictures found in fictional or non-fictional books or media to enhance vocabulary and concept knowledge of living things and their environments"
+  },
+  {
+   "idx": "LS.P.7",
+   "text": "Identifies problems affecting the lives of plants and animals (including themselves) and generates possible solutions"
+  },
+  {
+   "idx": "LS.P.8",
+   "text": "With teacher support, creates drawings or models for possible solutions"
+  },
+  {
+   "idx": "LS.P.9",
+   "text": "Compares tools or solutions and reflects on what works well"
+  },
+  {
+   "idx": "LS.P.10",
+   "text": "Designs and creates materials to change the behavior or incidence of creatures (e.g. bird feeders, butterfly gardens) in places"
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "ED.P.1",
+   "text": "Has an awareness of self as having certain abilities, characteristics, preferences and rights"
+  },
+  {
+   "idx": "ED.P.2",
+   "text": "Demonstrates self-direction by making choices among peers, activities and materials"
+  },
+  {
+   "idx": "ED.P.3",
+   "text": "Takes on new tasks and improves skills with practice"
+  },
+  {
+   "idx": "ED.P.4",
+   "text": "Initiates actions or activities with peers"
+  },
+  {
+   "idx": "ED.P.5",
+   "text": "Expresses delight over a successful project and want others to like it too"
+  },
+  {
+   "idx": "ED.P.6",
+   "text": "Demonstrates confidence in own abilities and delights in the mastery of a skill"
+  },
+  {
+   "idx": "ED.P.7",
+   "text": "Demonstrates an understanding of and follows through with basic responsibilities"
+  },
+  {
+   "idx": "ED.P.8",
+   "text": "Expresses self in safe and appropriate ways through words and actions"
+  },
+  {
+   "idx": "ED.P.9",
+   "text": "Seeks peaceful resolutions to conflict"
+  },
+  {
+   "idx": "ED.P.10",
+   "text": "Stops and listens to instructions before jumping into activity, with guidance"
+  },
+  {
+   "idx": "ED.P.11",
+   "text": "Follows rules and routines"
+  },
+  {
+   "idx": "ED.P.12",
+   "text": "Respects the rights and property of others"
+  },
+  {
+   "idx": "ED.P.13",
+   "text": "Uses materials appropriately"
+  },
+  {
+   "idx": "ED.P.14",
+   "text": "Is able to share materials or caregiver's/teacher's attention"
+  },
+  {
+   "idx": "ED.P.15",
+   "text": "Can wait for turn in simple game or use of equipment"
+  },
+  {
+   "idx": "ED.P.16",
+   "text": "Accepts consequences of own actions"
+  },
+  {
+   "idx": "ED.P.17",
+   "text": "Regulates own emotions and behaviors"
+  },
+  {
+   "idx": "ED.P.18",
+   "text": "Refrains from disruptive, aggressive, angry or defiant behaviors"
+  },
+  {
+   "idx": "ED.P.19",
+   "text": "Asks what and why questions to understand effects of behavior"
+  },
+  {
+   "idx": "ED.P.20",
+   "text": "Expresses empathy for others"
+  },
+  {
+   "idx": "ED.P.21",
+   "text": "Comforts physically hurt or emotionally upset child through appropriate words or actions"
+  },
+  {
+   "idx": "ED.P.22",
+   "text": "Labels own emotions and, increasingly, the emotions of others"
+  },
+  {
+   "idx": "ED.P.23",
+   "text": "Demonstrates understanding of the consequences of own actions on others"
+  },
+  {
+   "idx": "ED.P.24",
+   "text": "Understands the reasons for rules and routines within the group and accepts them"
+  },
+  {
+   "idx": "ED.P.25",
+   "text": "Asks \"what\" and \"why\" questions to understand effects of behavior"
+  },
+  {
+   "idx": "ED.P.26",
+   "text": "Shows progress in expressing feelings, needs, and opinions, in difficult situations and conflicts, without harming self, others, or property"
+  },
+  {
+   "idx": "ED.P.27",
+   "text": "Demonstrates ability to be flexible or adjust to routine or unexpected changes including physical setting, daily schedule, staffing and group size/ attendance"
+  },
+  {
+   "idx": "ED.P.28",
+   "text": "Adjusts to transitions from one activity setting to the next during the day with appropriate emotions and behaviors"
+  },
+  {
+   "idx": "ED.P.29",
+   "text": "Anticipates with assistance what will be needed in diverse settings"
+  },
+  {
+   "idx": "ED.P.30",
+   "text": "Follows rules in diverse settings"
+  },
+  {
+   "idx": "SD.P.1",
+   "text": "Asks questions and checks with an adult before deviating from rules and routines"
+  },
+  {
+   "idx": "SD.P.2",
+   "text": "Seeks adult help when needed for emotional support"
+  },
+  {
+   "idx": "SD.P.3",
+   "text": "Confides in at least one adult"
+  },
+  {
+   "idx": "SD.P.4",
+   "text": "Works independently and asks for help only when necessary"
+  },
+  {
+   "idx": "SD.P.5",
+   "text": "Works cooperatively with an adult to plan and organize activities and solve problems"
+  },
+  {
+   "idx": "SD.P.6",
+   "text": "Uses socially appropriate behavior with peers and adults such as helping, sharing and taking turns"
+  },
+  {
+   "idx": "SD.P.7",
+   "text": "Participates cooperatively in large and small group activities"
+  },
+  {
+   "idx": "SD.P.8",
+   "text": "Participates in classroom and group routines"
+  },
+  {
+   "idx": "SD.P.9",
+   "text": "Uses different turn-taking strategies"
+  },
+  {
+   "idx": "SD.P.10",
+   "text": "Shows increasing abilities to use compromise and discussion in play, and resolution of conflicts with peers"
+  },
+  {
+   "idx": "SD.P.11",
+   "text": "Develops consideration for the needs or interests of peers"
+  },
+  {
+   "idx": "SD.P.12",
+   "text": "Develops friendships with peers"
+  },
+  {
+   "idx": "SD.P.13",
+   "text": "Notices and comments on who is absent from routine group settings"
+  },
+  {
+   "idx": "SD.P.14",
+   "text": "Shows concern for personal fairness within a peer group"
+  },
+  {
+   "idx": "SD.P.15",
+   "text": "Defends own rights and the rights of others"
+  },
+  {
+   "idx": "SD.P.16",
+   "text": "Gives social support to others"
+  },
+  {
+   "idx": "SD.P.17",
+   "text": "Demonstrates knowledge that fairness involves a recognition that respects the needs of individuals as well as sharing and turn-taking"
+  },
+  {
+   "idx": "SD.P.18",
+   "text": "Identifies and expresses self a part of several groups (e.g. family, preschool class, faith community, etc.)"
+  },
+  {
+   "idx": "SD.P.19",
+   "text": "Uses play to explore, practice and understand social roles"
+  },
+  {
+   "idx": "SD.P.20",
+   "text": "Joins in the middle of an on-going group activity with friends independently"
+  },
+  {
+   "idx": "SD.P.21",
+   "text": "Invents and sets up activities that include more than one child"
+  },
+  {
+   "idx": "SD.P.22",
+   "text": "Gives social support to others"
+  },
+  {
+   "idx": "SD.P.23",
+   "text": "Names and accepts differences and similarities in preferences"
+  },
+  {
+   "idx": "SD.P.24",
+   "text": "Notices that other children might communicate differently or use different words for the same object"
+  },
+  {
+   "idx": "SD.P.25",
+   "text": "Begins to examine a situation from others' perspective"
+  },
+  {
+   "idx": "SD.P.26",
+   "text": "Shows concern about personal fairness within a peer group"
+  },
+  {
+   "idx": "CG.P.1",
+   "text": "Understands the reasons for rules in the home and classroom and for laws in the community"
+  },
+  {
+   "idx": "CG.P.2",
+   "text": "Understands and discusses why responsibilities are important"
+  },
+  {
+   "idx": "CG.P.3",
+   "text": "Displays awareness that rules and laws change"
+  },
+  {
+   "idx": "CG.P.4",
+   "text": "Participates in developing classroom rules and decisions"
+  },
+  {
+   "idx": "CG.P.5",
+   "text": "Assists, with support and guidance, in developing and participating in activity designed to care for the environment and/or community"
+  },
+  {
+   "idx": "E.P.1",
+   "text": "Explores and discusses differences between needs and wants"
+  },
+  {
+   "idx": "E.P.2",
+   "text": "Understands individuals may have to wait before buying a good or service they want"
+  },
+  {
+   "idx": "SSG.P.1",
+   "text": "Develops an understanding of the use and representation of simple maps, globes, and other geographic tools"
+  },
+  {
+   "idx": "SSG.P.2",
+   "text": "Describes some physical features of the community"
+  },
+  {
+   "idx": "SSG.P.3",
+   "text": "Recognizes that environmental changes can impact people, animals, and plants"
+  },
+  {
+   "idx": "SSG.P.4",
+   "text": "Displays awareness that geographic features influence how people live and work in their community and in other geographic regions"
+  },
+  {
+   "idx": "H.P.1",
+   "text": "Differentiates between past, present, and future"
+  },
+  {
+   "idx": "H.P.2",
+   "text": "Demonstrates a basic understanding of how things, people, and places change over time"
+  },
+  {
+   "idx": "H.P.3",
+   "text": "Recalls events that happened in the past, such as a family or personal history"
+  },
+  {
+   "idx": "H.P.4",
+   "text": "Displays awareness of similarities and differences among individuals and families"
+  }
+ ]
+}

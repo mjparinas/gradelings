@@ -1,10 +1,11 @@
-import type { AgeBand, GradeId, SubjectId } from "./types";
+import type { FlagKey } from "@/lib/flags";
+import type { AgeBand, GradeId, QuestionLanguage, SubjectId } from "./types";
 
 /** A language a second-language subject is taught in. Read-aloud picks its voice by this. */
-export type SubjectLanguage = "fr";
+export type SubjectLanguage = QuestionLanguage;
 
 /** A language's name in English, for parent-facing copy ("Math · Science · French"). */
-export const LANGUAGE_NAME: Record<SubjectLanguage, string> = { fr: "French" };
+export const LANGUAGE_NAME: Record<SubjectLanguage, string> = { fr: "French", es: "Spanish" };
 
 // The subject registry: every subject the app knows, and what sets it apart. A new second-language subject (Spanish,
 // say) is its id in SubjectId plus one entry here with `language` set; the rest of the app reads the lists below
@@ -27,6 +28,16 @@ export interface SubjectMeta {
   tagline: Record<AgeBand, string>;
   /** Which mascot guides this subject. */
   mascot: string;
+  /**
+   * For a subject every province and state offers in the same grades (Spanish), those grades. It is in no framework's
+   * `subjects`: one shared course cites each framework's own standards (see ./spanish).
+   */
+  everywhere?: readonly GradeId[];
+  /**
+   * A subject still being tried: parents can turn it on only while this feature flag is on for the family, and the
+   * public pages leave it out (see `publicSubject`).
+   */
+  flag?: FlagKey;
 }
 
 export const SUBJECTS: SubjectMeta[] = [
@@ -98,6 +109,20 @@ export const SUBJECTS: SubjectMeta[] = [
     tagline: { little: "Bonjour!", middle: "Bonjour!", big: "Speak and read French" },
     mascot: "ollie",
   },
+  {
+    id: "spanish",
+    seoTitle: "Spanish",
+    language: "es",
+    title: { little: "Spanish", middle: "Spanish", big: "Spanish" },
+    emoji: "💬",
+    colour: "#f2b631",
+    colourDark: "#b8820c",
+    colourSoft: "#fff5d9",
+    tagline: { little: "¡Hola!", middle: "¡Hola!", big: "Speak and read Spanish" },
+    mascot: "ollie",
+    everywhere: ["3", "4", "5", "6", "7", "8", "9"],
+    flag: "spanish",
+  },
 ];
 
 /** The subjects every child studies. Second languages are opt-in (Settings), so they never count toward "every unit" goals. */
@@ -113,8 +138,21 @@ export function languagesOf(subjects: readonly (SubjectId | string)[]): SubjectL
   return [...new Set(subjects.map((id) => SUBJECTS.find((s) => s.id === id)?.language).filter((l): l is SubjectLanguage => !!l))];
 }
 
+/**
+ * The subjects a parent can turn on for a child: the framework's own, plus a subject offered everywhere (Spanish) in the
+ * grades it is taught, while its flag is on.
+ */
+export function subjectsOffered(framework: { subjects: readonly SubjectId[] }, grade: GradeId, isOn: (flag: FlagKey) => boolean): SubjectId[] {
+  return SUBJECTS.filter((s) => framework.subjects.includes(s.id) || (s.everywhere?.includes(grade) && (!s.flag || isOn(s.flag)))).map((s) => s.id);
+}
+
+/** Whether the public pages show a subject: not while it is still being tried behind a flag. */
+export function publicSubject(id: SubjectId | string): boolean {
+  return !SUBJECTS.find((s) => s.id === id)?.flag;
+}
+
 // Language names and French program names stay capitalized mid-sentence.
-const PROPER_SUBJECT_WORDS = new Set(["English", "French", "Français", "Core", "Immersion"]);
+const PROPER_SUBJECT_WORDS = new Set(["English", "French", "Français", "Core", "Immersion", "Spanish"]);
 
 /** A subject name for use mid-sentence: "Language Arts" → "language arts", "French Immersion" stays as is. */
 export function subjectInSentence(title: string): string {

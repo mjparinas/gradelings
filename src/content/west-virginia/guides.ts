@@ -8,7 +8,7 @@ import type { FrameworkGuides } from "../guides";
 // subject. The assessment page covers the West Virginia General Summative Assessment (English language arts and math in
 // grades 3 to 8, science in grades 5 and 8, four achievement levels) and the SAT School Day in grade 11. Dates change
 // each year, so the page points to the West Virginia Department of Education (WVDE). No French here, so no French guide.
-// Record: docs/research/west-virginia/README.md.
+// Record: gradelings-research/west-virginia/README.md.
 
 export const WEST_VIRGINIA_GUIDES: FrameworkGuides = {
   competencies: {

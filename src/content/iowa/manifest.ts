@@ -5,6 +5,7 @@ export const manifest = defineFramework({
   id: "us-ia",
   framework: IOWA,
   grades: {
+    pk: () => import("./pk"),
     k: () => import("./k"),
     "1": () => import("./g1"),
     "2": () => import("./g2"),
@@ -18,6 +19,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.IOWA_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Iowa: no French subject in the app (see docs/research/iowa/README.md).
+  // Iowa: no French subject in the app (see gradelings-research/iowa/README.md).
   french: { immersion: [], "core-french": [] },
 });

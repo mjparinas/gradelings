@@ -10,4 +10,4 @@
 
 ## Known gaps
 
-- Alberta Immersion Grades 7–9 cites general outcomes only; the Grade 8 and 9 editions of the program were not found online (see `docs/research/alberta/README.md`).
+- Alberta Immersion Grades 7–9 cites general outcomes only; the Grade 8 and 9 editions of the program were not found online (see `gradelings-research/alberta/README.md`).

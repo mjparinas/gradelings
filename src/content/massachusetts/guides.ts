@@ -10,7 +10,7 @@ import type { FrameworkGuides } from "../guides";
 // science and technology/engineering in grades 5 and 8 and once in high school, four achievement levels) and the 2024
 // ballot question that removed passing MCAS as a graduation requirement. Dates change each year, so the page points to
 // the Department of Elementary and Secondary Education (DESE). Massachusetts has no French subject here, so no French
-// guide. Record: docs/research/massachusetts/README.md.
+// guide. Record: gradelings-research/massachusetts/README.md.
 
 export const MASSACHUSETTS_GUIDES: FrameworkGuides = {
   competencies: {
@@ -161,6 +161,10 @@ export const MASSACHUSETTS_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Massachusetts has no statewide pre-K program; four-year-olds attend public school preschools, Head Start and community programs, many funded through the Commonwealth Preschool Partnership Initiative. The Massachusetts Curriculum Frameworks set pre-K standards in every subject.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in Massachusetts is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. In social studies they learn about rules, maps, their own address, holidays and the nation's symbols. Schools also check each child's early reading skills during the year.",
       lookFor: "Many Massachusetts districts use standards-based report cards. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

@@ -1,0 +1,566 @@
+{
+ "pk/math": [
+  {
+   "idx": "CD-MA1.4a",
+   "text": "Recites numbers up to 20 in sequence."
+  },
+  {
+   "idx": "CD-MA1.4b",
+   "text": "Recognizes numerals and uses counting as part of play and as a means for determining quantity."
+  },
+  {
+   "idx": "CD-MA1.4c",
+   "text": "Matches numerals to sets of objects with the same number, 0-10."
+  },
+  {
+   "idx": "CD-MA1.4d",
+   "text": "Describes sets as having more, less, same as/equal."
+  },
+  {
+   "idx": "CD-MA1.4e",
+   "text": "Quickly recognizes and names how many items are in a set up to four items."
+  },
+  {
+   "idx": "CD-MA1.4f",
+   "text": "Tells numbers that come before and after a given number up to 10."
+  },
+  {
+   "idx": "CD-MA2.4a",
+   "text": "Matches two equal sets using one-to-one correspondence and understands they are the same."
+  },
+  {
+   "idx": "CD-MA2.4b",
+   "text": "Counts at least 10 objects using one-to-one correspondence."
+  },
+  {
+   "idx": "CD-MA2.4c",
+   "text": "Practices combining, separating, and naming quantities."
+  },
+  {
+   "idx": "CD-MA2.4d",
+   "text": "Describes data from classroom graphs using numerical math language."
+  },
+  {
+   "idx": "CD-MA2.4e",
+   "text": "With adult guidance and when counting, understands and can respond with the last number counted to represent quantity (cardinality)."
+  },
+  {
+   "idx": "CD-MA3.4a",
+   "text": "Uses mathematical terms to describe experiences involving measurement."
+  },
+  {
+   "idx": "CD-MA3.4b",
+   "text": "Compares objects using two or more attributes, such as length, weight, and size."
+  },
+  {
+   "idx": "CD-MA3.4c",
+   "text": "Uses a variety of techniques and standard and nonstandard tools to measure and compare length, volume (capacity) and weight."
+  },
+  {
+   "idx": "CD-MA3.4d",
+   "text": "Associates and describes the passage of time with actual events."
+  },
+  {
+   "idx": "CD-MA4.4a",
+   "text": "Independently orders objects using one characteristic and describes the criteria used."
+  },
+  {
+   "idx": "CD-MA4.4b",
+   "text": "Sorts and classifies objects using one or more attributes or relationships."
+  },
+  {
+   "idx": "CD-MA4.4c",
+   "text": "Creates and extends simple, repeating patterns."
+  },
+  {
+   "idx": "CD-MA5.4a",
+   "text": "Uses appropriate directional language to indicate where things are in their environment: positions, distances, order."
+  },
+  {
+   "idx": "CD-MA5.4b",
+   "text": "Uses deliberate manipulation and describes process for fitting objects together."
+  },
+  {
+   "idx": "CD-MA6.4a",
+   "text": "Recognizes and names common two-dimensional and three-dimensional shapes, their parts, and attributes."
+  },
+  {
+   "idx": "CD-MA6.4b",
+   "text": "Combines simple shapes to form new shapes."
+  },
+  {
+   "idx": "CD-MA7.4a",
+   "text": "Estimates using mathematical terms and understands how to check the estimate."
+  },
+  {
+   "idx": "CD-MA7.4b",
+   "text": "Uses simple strategies to solve mathematical problems and communicates how he/she solved it."
+  },
+  {
+   "idx": "CD-MA7.4c",
+   "text": "Uses reasoning skills to determine the solution to a mathematical problem and communicates why."
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "CLL1.4a",
+   "text": "Listens and responds on topic to conversations and group discussions for an extended period."
+  },
+  {
+   "idx": "CLL1.4b",
+   "text": "Listens to and follows multi-step directions."
+  },
+  {
+   "idx": "CLL1.4c",
+   "text": "Extends/expands thoughts or ideas expressed."
+  },
+  {
+   "idx": "CLL2.4a",
+   "text": "Demonstrates understanding of more complex vocabulary through everyday conversations."
+  },
+  {
+   "idx": "CLL2.4b",
+   "text": "Connects new vocabulary from activities, stories, and/or books with prior experiences and conversations."
+  },
+  {
+   "idx": "CLL3.4a",
+   "text": "Uses more complex gestures and actions to enhance verbal communication of needs and wants."
+  },
+  {
+   "idx": "CLL3.4b",
+   "text": "Communicates feelings using appropriate non-verbal gestures, body language, and actions."
+  },
+  {
+   "idx": "CLL4.4a",
+   "text": "Uses spoken language that can be understood with ease."
+  },
+  {
+   "idx": "CLL4.4b",
+   "text": "Demonstrates use of expanded sentences and sentence structures to ask questions and/or respond verbally."
+  },
+  {
+   "idx": "CLL4.4c",
+   "text": "Describes activities, experiences, and stories with more detail."
+  },
+  {
+   "idx": "CLL4.4d",
+   "text": "Uses new and expanded vocabulary in a variety of situations."
+  },
+  {
+   "idx": "CLL5.4a",
+   "text": "Prior to reading, uses prior knowledge, story title, and pictures to make predictions about story content."
+  },
+  {
+   "idx": "CLL5.4b",
+   "text": "Retells familiar stories."
+  },
+  {
+   "idx": "CLL5.4c",
+   "text": "Discusses books or stories read aloud and can identify characters and setting in a story."
+  },
+  {
+   "idx": "CLL5.4d",
+   "text": "Makes real-world connections between stories and real-life experiences."
+  },
+  {
+   "idx": "CLL5.4e",
+   "text": "Develops an alternate ending for a story."
+  },
+  {
+   "idx": "CLL6.4a",
+   "text": "Listens and differentiates between sounds that are the same and different."
+  },
+  {
+   "idx": "CLL6.4b",
+   "text": "Identifies and produces rhyming words."
+  },
+  {
+   "idx": "CLL6.4c",
+   "text": "Isolates the initial (beginning) sounds in words with adult guidance."
+  },
+  {
+   "idx": "CLL6.4d",
+   "text": "Segments sentences into individual words."
+  },
+  {
+   "idx": "CLL6.4e",
+   "text": "Segments words into syllables."
+  },
+  {
+   "idx": "CLL6.4f",
+   "text": "Manipulates and blends sounds (phonemes) with adult guidance."
+  },
+  {
+   "idx": "CLL7.4a",
+   "text": "With prompting and support, recognizes and names some upper and lower case letters of the alphabet."
+  },
+  {
+   "idx": "CLL8.4a",
+   "text": "Demonstrates interest in different kinds of literature, such as fiction books, non-fiction books, and poetry, on a range of topics."
+  },
+  {
+   "idx": "CLL8.4b",
+   "text": "Understands that letters form words. Understands that words are separated by spaces in print."
+  },
+  {
+   "idx": "CLL8.4c",
+   "text": "With prompting and support, tracks words from left to right, top to bottom, and page to page."
+  },
+  {
+   "idx": "CLL8.4d",
+   "text": "Recognizes and reads environmental print."
+  },
+  {
+   "idx": "CLL8.4e",
+   "text": "Identifies the front, back, top, and bottom of a book. Points to the title of familiar books or stories and where to begin reading a story."
+  },
+  {
+   "idx": "CLL9.4a",
+   "text": "Draws pictures and copies letters and/or numbers to communicate."
+  },
+  {
+   "idx": "CLL9.4b",
+   "text": "Uses writing tools."
+  },
+  {
+   "idx": "CLL9.4c",
+   "text": "Uses writing for a variety of purposes."
+  },
+  {
+   "idx": "CLL9.4d",
+   "text": "Writes some letters of the alphabet."
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "CD-SC1.4a",
+   "text": "Uses senses to observe, classify, and learn about objects and environment."
+  },
+  {
+   "idx": "CD-SC1.4b",
+   "text": "Uses simple tools correctly to experiment, observe, and increase understanding."
+  },
+  {
+   "idx": "CD-SC1.4c",
+   "text": "Records observations through dictating to an adult and drawing pictures or using other forms of writing."
+  },
+  {
+   "idx": "CD-SC1.4d",
+   "text": "Experiments, compares, and formulates hypotheses related to scientific properties."
+  },
+  {
+   "idx": "CD-SC2.4a",
+   "text": "Describes properties of water, including changes to the states of water."
+  },
+  {
+   "idx": "CD-SC2.4b",
+   "text": "Explores and begins to describe properties of rocks, soil, sand, and mud."
+  },
+  {
+   "idx": "CD-SC2.4c",
+   "text": "Makes simple observations of the characteristics, movement, and seasonal changes of sun, moon, stars, and clouds. Compares the day time/night time cycle."
+  },
+  {
+   "idx": "CD-SC2.4d",
+   "text": "Uses appropriate vocabulary to discuss climate and changes in weather."
+  },
+  {
+   "idx": "CD-SC3.4a",
+   "text": "Observes, explores and describes a variety of animals and plants. Describes their basic needs and life cycles of living things."
+  },
+  {
+   "idx": "CD-SC3.4b",
+   "text": "Discriminates between living and non-living things."
+  },
+  {
+   "idx": "CD-SC3.4c",
+   "text": "Identifies and describes the functions of many body parts."
+  },
+  {
+   "idx": "CD-SC4.4a",
+   "text": "Explores and describes position and movement of objects and toys."
+  },
+  {
+   "idx": "CD-SC4.4b",
+   "text": "Investigates and describes different types or speeds of motion."
+  },
+  {
+   "idx": "CD-SC4.4c",
+   "text": "Describes materials by their physical properties and states of matter."
+  },
+  {
+   "idx": "CD-SC4.4d",
+   "text": "Uses classroom objects to function as simple machines to enhance child directed play."
+  },
+  {
+   "idx": "CD-SC5.4a",
+   "text": "Understands that people have an impact on the environment and participates in efforts to protect the environment."
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "SED1.4a",
+   "text": "Identifies self as a unique member of a specific group or demographic that fits into a larger world picture."
+  },
+  {
+   "idx": "SED1.4b",
+   "text": "Identifies personal characteristics, preferences, thoughts, and feelings."
+  },
+  {
+   "idx": "SED1.4c",
+   "text": "Shows confidence in a range of abilities and the capacity to accomplish tasks and take on new tasks."
+  },
+  {
+   "idx": "SED1.4d",
+   "text": "Shows independence in his/her own choices."
+  },
+  {
+   "idx": "SED2.4a",
+   "text": "Effectively uses words, sentences, and actions to communicate needs, ideas, opinions, and preferences."
+  },
+  {
+   "idx": "SED2.4b",
+   "text": "With adult guidance, uses verbal and non-verbal expressions to describe and explain a full range of emotions."
+  },
+  {
+   "idx": "SED2.4c",
+   "text": "Uses pretend play to present emotions of self and others."
+  },
+  {
+   "idx": "SED2.4d",
+   "text": "With adult guidance, distinguishes between positive and negative emotions and the conditions that evoke each."
+  },
+  {
+   "idx": "SED3.4a",
+   "text": "Independently follows rules and routines."
+  },
+  {
+   "idx": "SED3.4b",
+   "text": "Regulates own emotions and behaviors and seeks out adult support when needed."
+  },
+  {
+   "idx": "SED3.4c",
+   "text": "Regulates a range of impulses."
+  },
+  {
+   "idx": "SED3.4d",
+   "text": "Manages transitions and adapts to changes in schedules and routines independently."
+  },
+  {
+   "idx": "SED4.4a",
+   "text": "Transitions well into new, unfamiliar settings."
+  },
+  {
+   "idx": "SED4.4b",
+   "text": "Uses a familiar adult’s suggestions to decide how to respond to a specific situation."
+  },
+  {
+   "idx": "SED4.4c",
+   "text": "Shows affection to familiar adults by using more complex words and actions."
+  },
+  {
+   "idx": "SED4.4d",
+   "text": "Seeks out adults as a resource for help and assistance."
+  },
+  {
+   "idx": "SED5.4a",
+   "text": "Develops and maintains friendships with other children."
+  },
+  {
+   "idx": "SED5.4b",
+   "text": "Plays cooperatively with a few peers for a sustained period of time."
+  },
+  {
+   "idx": "SED5.4c",
+   "text": "Attempts to resolve conflicts using appropriate strategies."
+  },
+  {
+   "idx": "SED5.4d",
+   "text": "Shows emerging empathy and understanding of peers by attempting to comfort and help."
+  },
+  {
+   "idx": "SED5.4e",
+   "text": "Shows respect for peers’ personal space and belongings."
+  },
+  {
+   "idx": "APL1.4a",
+   "text": "Takes initiative to learn new concepts and tries new experiences. Initiates and completes new tasks by himself/herself."
+  },
+  {
+   "idx": "APL1.4b",
+   "text": "Selects and carries out activities without adult prompting."
+  },
+  {
+   "idx": "APL1.4c",
+   "text": "Sets goals and develops and follows through on plans."
+  },
+  {
+   "idx": "APL2.4a",
+   "text": "Demonstrates eagerness to learn about and discuss new topics, ideas and tasks."
+  },
+  {
+   "idx": "APL2.4b",
+   "text": "Asks questions and seeks new information. With assistance, looks for new information and wants to know more."
+  },
+  {
+   "idx": "APL2.4c",
+   "text": "Increasingly seeks out and explores unfamiliar objects in the environment."
+  },
+  {
+   "idx": "APL3.4a",
+   "text": "Engages in independent activities and continues tasks over a period of time."
+  },
+  {
+   "idx": "APL3.4b",
+   "text": "Practices to improve skills that have been accomplished."
+  },
+  {
+   "idx": "APL3.4c",
+   "text": "Works cooperatively with others to successfully achieve a goal or accomplish a task."
+  },
+  {
+   "idx": "APL3.4d",
+   "text": "Persists in trying to complete a task after previous attempts have failed."
+  },
+  {
+   "idx": "APL4.4a",
+   "text": "Engages in elaborate and sustained imagined play and can distinguish between real life and fantasy."
+  },
+  {
+   "idx": "APL5.4a",
+   "text": "Willingly joins in sustained cooperative play and learning with others to complete a task."
+  },
+  {
+   "idx": "APL5.4b",
+   "text": "Demonstrates flexibility in taking on various roles in a group setting."
+  },
+  {
+   "idx": "APL5.4c",
+   "text": "Demonstrates inventiveness, imagination, and creativity to solve a problem."
+  },
+  {
+   "idx": "APL5.4d",
+   "text": "Considers a variety of possible solutions and exhibits flexibility if an alternate approach is suggested by a peer or an adult."
+  },
+  {
+   "idx": "APL5.4e",
+   "text": "Recovers quickly from setbacks and differences in opinion in a group setting."
+  },
+  {
+   "idx": "CD-SS1.4a",
+   "text": "Describes his/her family structure and family roles."
+  },
+  {
+   "idx": "CD-SS1.4b",
+   "text": "Describes similarities and differences between self and others."
+  },
+  {
+   "idx": "CD-SS2.4a",
+   "text": "Identifies and follows rules of the classroom community and displays competence at engaging in appropriate social behavior."
+  },
+  {
+   "idx": "CD-SS2.4b",
+   "text": "Explains diverse customs and cultural celebrations within the home, classroom and community."
+  },
+  {
+   "idx": "CD-SS2.4c",
+   "text": "Recognizes similarities and differences between own cultures and that of others."
+  },
+  {
+   "idx": "CD-SS3.4a",
+   "text": "Creates simple representations of home, school, and community."
+  },
+  {
+   "idx": "CD-SS3.4b",
+   "text": "Identifies and describes aspects of his/her community."
+  },
+  {
+   "idx": "CD-SS4.4a",
+   "text": "Completes jobs to contribute to his/her community and communicates why it is important."
+  },
+  {
+   "idx": "CD-SS4.4b",
+   "text": "Describes the roles and responsibilities of a variety of occupations."
+  },
+  {
+   "idx": "CD-SS4.4c",
+   "text": "Describes how people interact economically and how goods and services are exchanged."
+  },
+  {
+   "idx": "CD-SS4.4d",
+   "text": "Explores the uses of technology and understands its role in the environment."
+  },
+  {
+   "idx": "CD-SS5.4a",
+   "text": "Recognizes and describes sequence of events with accuracy."
+  },
+  {
+   "idx": "CD-SS5.4b",
+   "text": "Differentiates between past, present, and future."
+  },
+  {
+   "idx": "CD-SC1.4a",
+   "text": "Uses senses to observe, classify, and learn about objects and environment."
+  },
+  {
+   "idx": "CD-SC1.4b",
+   "text": "Uses simple tools correctly to experiment, observe, and increase understanding."
+  },
+  {
+   "idx": "CD-SC1.4c",
+   "text": "Records observations through dictating to an adult and drawing pictures or using other forms of writing."
+  },
+  {
+   "idx": "CD-SC1.4d",
+   "text": "Experiments, compares, and formulates hypotheses related to scientific properties."
+  },
+  {
+   "idx": "CD-SC2.4a",
+   "text": "Describes properties of water, including changes to the states of water."
+  },
+  {
+   "idx": "CD-SC2.4b",
+   "text": "Explores and begins to describe properties of rocks, soil, sand, and mud."
+  },
+  {
+   "idx": "CD-SC2.4c",
+   "text": "Makes simple observations of the characteristics, movement, and seasonal changes of sun, moon, stars, and clouds. Compares the day time/night time cycle."
+  },
+  {
+   "idx": "CD-SC2.4d",
+   "text": "Uses appropriate vocabulary to discuss climate and changes in weather."
+  },
+  {
+   "idx": "CD-SC3.4a",
+   "text": "Observes, explores and describes a variety of animals and plants. Describes their basic needs and life cycles of living things."
+  },
+  {
+   "idx": "CD-SC3.4b",
+   "text": "Discriminates between living and non-living things."
+  },
+  {
+   "idx": "CD-SC3.4c",
+   "text": "Identifies and describes the functions of many body parts."
+  },
+  {
+   "idx": "CD-SC4.4a",
+   "text": "Explores and describes position and movement of objects and toys."
+  },
+  {
+   "idx": "CD-SC4.4b",
+   "text": "Investigates and describes different types or speeds of motion."
+  },
+  {
+   "idx": "CD-SC4.4c",
+   "text": "Describes materials by their physical properties and states of matter."
+  },
+  {
+   "idx": "CD-SC4.4d",
+   "text": "Uses classroom objects to function as simple machines to enhance child directed play."
+  },
+  {
+   "idx": "CD-SC5.4a",
+   "text": "Understands that people have an impact on the environment and participates in efforts to protect the environment."
+  }
+ ]
+}

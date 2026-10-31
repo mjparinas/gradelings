@@ -8,7 +8,7 @@ import type { FrameworkGuides } from "../guides";
 // a subject of their own. The assessment page covers the New Hampshire Statewide Assessment System (NH SAS: language arts
 // and math in grades 3 to 8, science in grades 5, 8 and 11) and the SAT in grade 11. The Department of Education's site
 // refuses automated downloads, so the page keeps to the program's lasting facts and points families to the department
-// for dates. No French here, so no French guide. Record: docs/research/new-hampshire/README.md.
+// for dates. No French here, so no French guide. Record: gradelings-research/new-hampshire/README.md.
 
 export const NEW_HAMPSHIRE_GUIDES: FrameworkGuides = {
   competencies: {
@@ -201,6 +201,10 @@ export const NEW_HAMPSHIRE_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "New Hampshire has no statewide pre-K program; four-year-olds attend public school preschools, Head Start and child care. Programs follow the New Hampshire Early Learning Standards, Birth through Age Five (2016).",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in New Hampshire is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. In social studies they learn about themselves, families, rules and community helpers, and state and national symbols such as the American flag and New Hampshire's purple finch.",
       lookFor: "Many New Hampshire schools use competency-based report cards. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

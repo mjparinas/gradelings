@@ -19,6 +19,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.NEWFOUNDLAND_AND_LABRADOR_GUIDES),
   // Newfoundland and Labrador: Core French is organized from Grade 4. French Immersion (early from Kindergarten, late from Grade 7)
-  // is not built, because its curriculum guides are not public (see docs/research/newfoundland-and-labrador/README.md).
+  // is not built, because its curriculum guides are not public (see gradelings-research/newfoundland-and-labrador/README.md).
   french: { immersion: [], "core-french": gradeRange("4", "9") },
 });

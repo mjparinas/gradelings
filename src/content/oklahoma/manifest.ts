@@ -5,6 +5,7 @@ export const manifest = defineFramework({
   id: "us-ok",
   framework: OKLAHOMA,
   grades: {
+    pk: () => import("./pk"),
     k: () => import("./k"),
     "1": () => import("./g1"),
     "2": () => import("./g2"),
@@ -18,6 +19,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.OKLAHOMA_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Oklahoma: no French subject (see docs/research/oklahoma/README.md).
+  // Oklahoma: no French subject (see gradelings-research/oklahoma/README.md).
   french: { immersion: [], "core-french": [] },
 });

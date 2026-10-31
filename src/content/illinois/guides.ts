@@ -8,7 +8,7 @@ import type { FrameworkGuides } from "../guides";
 // Illinois Assessment of Readiness (IAR: English language arts and math, grades 3 to 8), the Illinois Science
 // Assessment (ISA: grades 5 and 8), PreACT 9 and PreACT (grades 9 and 10), the ACT in grade 11 and the KIDS
 // observation in kindergarten. Dates change each year, so the page points to the Illinois State Board of Education
-// (ISBE). Illinois has no French subject here, so no French guide. Record: docs/research/illinois/README.md.
+// (ISBE). Illinois has no French subject here, so no French guide. Record: gradelings-research/illinois/README.md.
 
 export const ILLINOIS_GUIDES: FrameworkGuides = {
   competencies: {
@@ -170,6 +170,10 @@ export const ILLINOIS_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-K in Illinois is the year before kindergarten, offered by public schools and community programs through Preschool for All, which is free for many families, and Head Start. Programs follow the Illinois Early Learning and Development Standards: language arts, math, science, social studies, social and emotional development, physical development and the arts.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in Illinois is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. In social studies (My Social World) they learn about themselves, families, rules and jobs. Teachers also observe each child with the KIDS survey in the first weeks of school.",
       lookFor: "Many Illinois districts use standards-based report cards. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

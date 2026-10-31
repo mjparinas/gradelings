@@ -2,12 +2,13 @@
 
 ## Framework
 
-- **Id and slug:** `us-ky`, `kentucky`. Kindergarten to Grade 9 in math, reading and writing, science and social studies (no French). It is in `FRAMEWORKS`, offered to families and in classroom mode, like the other states.
+- **Id and slug:** `us-ky`, `kentucky`. Pre-K and Kindergarten to Grade 9 in math, reading and writing, science and social studies (no French). It is in `FRAMEWORKS`, offered to families and in classroom mode, like the other states.
+- **Pre-K:** the 26 shared Pre-K units (`src/content/grades/pk/`), each citing a benchmark of the Kentucky Early Childhood Standards for three- and four-year-olds as domain and number (`Mathematics 1.1`, `Social Studies 1.5`; `src/content/kentucky/pk.ts`), checked against `docs/research/kentucky/prek/outcomes.json` (PDF in `source/`, `fetch.sh`, `build_outcomes.py`). Practice steps only.
 
 ## Standards
 
 - The Kentucky Academic Standards, published by the Kentucky Department of Education: mathematics (2019; `KY.4.NBT.1`, Grade 9 cites the high school codes, `KY.HS.A.12`), reading and writing (2025; `RL.4.2`, `RI.4.5`, composition `C.4.1`, language `L.4.4`, foundational skills `RF.2.3`; Grade 9 cites the 9-10 band, `RL.9-10.1`), science (2022, built on the Next Generation Science Standards; `4-PS3-2`; Kentucky places each middle school expectation in one grade and numbers it with that grade, `6-ESS2-4`, `7-PS3-1`, `8-LS4-4`, with engineering as `MS-ETS1-1`; Grade 9 cites `HS-` expectations) and social studies (2022; `4.H.CH.1`, `K.C.KGO.2`; Grade 9 cites the high school civics, economics and Kentucky government codes, `HS.C.KGO.1`, `HS.E.MA.5`).
-- Citations are `"CODES · text"` (`kyc()` in `src/content/kentucky/cite.ts`), checked by `src/content/kentucky/contract.ts` against `docs/research/kentucky/outcomes.json` (1,359 standards). `fetch.sh` downloads the sources again with plain `curl` and a browser user agent; `python3 -I build_outcomes.py` rebuilds the JSON exactly, and `--check` says whether it is up to date. Record: `docs/research/kentucky/README.md`.
+- Citations are `"CODES · text"` (`kyc()` in `src/content/kentucky/cite.ts`), checked by `src/content/kentucky/contract.ts` against `docs/research/kentucky/outcomes.json` (1,359 standards). `fetch.sh` downloads the sources again with plain `curl` and a browser user agent; `python3 -I build_outcomes.py` rebuilds the JSON exactly, and `--check` says whether it is up to date. Record: `gradelings-research/kentucky/README.md`.
 
 ## Content
 
@@ -22,7 +23,7 @@
 
 ## Parent guides
 
-- `src/content/kentucky/guides.ts`, US English: the hub, grade notes for Kindergarten to Grade 9, the eight Standards for Mathematical Practice from the 2019 math standards (`/guides/kentucky/math-practices/`) and KSA (`/guides/kentucky/state-tests/`; dates point to the Department). No French guide.
+- `src/content/kentucky/guides.ts`, US English: the hub, grade notes for Pre-K to Grade 9, the eight Standards for Mathematical Practice from the 2019 math standards (`/guides/kentucky/math-practices/`) and KSA (`/guides/kentucky/state-tests/`; dates point to the Department). No French guide.
 
 ## Schools
 

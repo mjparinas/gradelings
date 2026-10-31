@@ -18,6 +18,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.NEBRASKA_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Nebraska: no French subject in the app (see docs/research/nebraska/README.md).
+  // Nebraska: no French subject in the app (see gradelings-research/nebraska/README.md).
   french: { immersion: [], "core-french": [] },
 });

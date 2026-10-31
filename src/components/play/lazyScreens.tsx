@@ -40,10 +40,12 @@ function once<T>(load: () => Promise<T>) {
 }
 const arcade = once(() => import("./Arcade"));
 const stories = once(() => import("./Stories"));
+const facts = once(() => import("./Facts"));
 
 export const Arcade = lazyScreen(() => arcade().then((m) => m.Arcade));
 export const GameScreen = lazyScreen(() => arcade().then((m) => m.GameScreen));
-export const FactsPicker = lazyScreen(() => import("./Facts").then((m) => m.FactsPicker));
+export const FactsPicker = lazyScreen(() => facts().then((m) => m.FactsPicker));
+export const FactChart = lazyScreen(() => facts().then((m) => m.FactChart));
 export const PlacementTest = lazyScreen(() => import("./PlacementTest").then((m) => m.PlacementTest));
 export const Room = lazyScreen(() => import("./Room").then((m) => m.Room));
 export const Shop = lazyScreen(() => import("./Shop").then((m) => m.Shop));

@@ -5,7 +5,7 @@ import type { FrameworkGuides } from "../guides";
 // social and emotional learning guidance: the California SEL Guiding Principles and the Transformative SEL (T-SEL)
 // Competencies and Conditions for Thriving, "developed for voluntary use", with five competencies (Self-Awareness,
 // Self-Management, Social Awareness, Relationship Skills, Responsible Decision-Making). They are guidance, not graded
-// standards (docs/research/california/README.md). It uses the existing `sel-standards` URL segment so the shared route
+// standards (gradelings-research/california/README.md). It uses the existing `sel-standards` URL segment so the shared route
 // folder serves California too. The assessment page covers the California Assessment of Student Performance and
 // Progress (CAASPP): Smarter Balanced English language arts/literacy and mathematics in grades 3 to 8 and 11, and the
 // California Science Test (CAST) in grades 5 and 8 and once in high school. Education Code 60615 lets a parent or

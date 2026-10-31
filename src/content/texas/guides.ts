@@ -4,7 +4,7 @@ import type { FrameworkGuides } from "../guides";
 // Parent guide copy for Texas, in US English. Texas has no statewide social and emotional learning standards, so the
 // competencies page explains the process standards the TEKS place at the start of every grade: the mathematical process
 // standards, the scientific and engineering practices, the English language arts strands of inquiry and research and
-// of response, and the social studies skills (docs/research/texas/README.md). The assessment page covers STAAR:
+// of response, and the social studies skills (gradelings-research/texas/README.md). The assessment page covers STAAR:
 // reading language arts and math in grades 3 to 8, science in grades 5 and 8, social studies in grade 8, and the
 // end-of-course tests. House Bill 8 (2025) replaces the grades 3 to 8 tests with three shorter tests a year from
 // 2027–28, so the page points to TEA for the current plan. Texas has no French subject, so no French guide. Grade notes

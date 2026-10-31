@@ -9,7 +9,7 @@ import type { FrameworkGuides } from "../guides";
 // optional 2nd grade reading test and the history, government and social studies classroom-based assessments, from the
 // Kansas State Department of Education's 2026-27 assessment overview and its KAP parent guide to reports; dates change
 // each year, so the page points to the department. No French here, so no French guide. Record:
-// docs/research/kansas/README.md.
+// gradelings-research/kansas/README.md.
 
 export const KANSAS_GUIDES: FrameworkGuides = {
   competencies: {

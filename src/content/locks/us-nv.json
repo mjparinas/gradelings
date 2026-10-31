@@ -1,4 +1,50 @@
 {
+  "pk/language": {
+    "overview": "69b2c105cc",
+    "units": [
+      "letter-names text=4e2d74ab60 std=b59a3bcfd4 q=a8b9337751",
+      "first-sounds text=dd9cd8d5d4 std=dd7a0535a7 q=48ed3455eb",
+      "rhyme-time text=12f8d63dc7 std=12c269c07d q=b73dfecad5",
+      "clap-the-parts text=606ab5cbbd std=b37fce052b q=6215dee4f1",
+      "listen-to-a-story text=8907705eaa std=6462856fb9 q=e4e96571e7",
+      "word-meanings text=fbdee7f0ca std=3b5071e2b7 q=1d5b4d5e30"
+    ]
+  },
+  "pk/math": {
+    "overview": "f1311a45df",
+    "units": [
+      "count-to-5 text=5de441ec7a std=e55d731f54 q=7da6a21961",
+      "find-the-number text=48b0986657 std=6f56bd801d q=cbb1ca9734",
+      "more-or-fewer text=0faa658ba5 std=26bf315cca q=4d8cca7ab1",
+      "shapes text=3eb07867e4 std=d6bc309de6 q=ed58e37c08",
+      "patterns text=4bbf1795ab std=233c9e45fa q=d72ed7b913",
+      "big-and-small text=ec30e0312f std=c7adf95deb q=ac1fcda3f6",
+      "sort-it text=c844f13fda std=2d80722f0a q=11e6557b38"
+    ]
+  },
+  "pk/science": {
+    "overview": "2b0efb9d24",
+    "units": [
+      "five-senses text=ede42da0ab std=909daed20b q=cd1a3c2577",
+      "living-or-not text=9c2f339fb0 std=df5a887138 q=c6b64af68c",
+      "animals-and-babies text=c26be2c8ec std=f47c1ccd49 q=d23f0b3d01",
+      "weather-and-sky text=152ba8b660 std=e863eb9da4 q=04120788f3",
+      "plants-grow text=beae59bc1e std=cef1261351 q=d8f8686f2b",
+      "sink-or-float text=87253513e6 std=adab4148f9 q=80c8fb85a3"
+    ]
+  },
+  "pk/social": {
+    "overview": "82c4bf089b",
+    "units": [
+      "my-family text=81af8740c1 std=bba2917ac6 q=41e53ad242",
+      "feelings text=32db0a0097 std=a19c282c2e q=1e8788180c",
+      "community-helpers text=e038723509 std=22e255309a q=27bacf2a4a",
+      "places-around-me text=659860832c std=54eb8aba08 q=8a8589b026",
+      "taking-turns text=04b975dae4 std=c5c84da634 q=22be788cc9",
+      "first-next-last text=6f92e7037f std=e768d11812 q=1ad086320d",
+      "caring-for-our-world text=0df6123b83 std=387519f299 q=82f9f5197f"
+    ]
+  },
   "k/language": {
     "overview": "bd80c24a54",
     "units": [
@@ -270,6 +316,16 @@
       "nv-g3-money-and-voting text=c3d89bf1d3 std=b95326198c q=3a69ddefaf"
     ]
   },
+  "3/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "saludos text=0e496163f1 std=81fd30989b q=6c47ef34de",
+      "numeros-hasta-20 text=23e8632af0 std=2c8be968c9 q=a349f236c5",
+      "colores text=86a558acac std=1b910c4c55 q=5f3c5730ec",
+      "animales text=badbbecebe std=0f498f10c6 q=128d83d818",
+      "familia text=b2dcc8e66e std=8faa275c49 q=86a8e86e86"
+    ]
+  },
   "4/language": {
     "overview": "285bed1e3b",
     "units": [
@@ -343,6 +399,16 @@
       "nv-g4-nevada-timeline text=3cbb64394d std=27f9c1cfc0 q=dddb3704b6"
     ]
   },
+  "4/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "cuerpo text=8eaaf9bf61 std=8c08a1ee0b q=73f074b2b4",
+      "escuela text=e9996c83b9 std=aae3f690b6 q=ae47848fa7",
+      "dias-y-meses text=34db9dab39 std=024d22536e q=cb10fd8733",
+      "tiempo text=42f12e5fce std=4e118d7e71 q=1cc1215af3",
+      "ropa text=34970c68fc std=efa7f79cc2 q=f0e3970adf"
+    ]
+  },
   "5/language": {
     "overview": "708c47293a",
     "units": [
@@ -410,6 +476,16 @@
       "or-g5-timeline text=d6feb485b6 std=ef9e1ce485 q=750a99801f",
       "nv-g5-eastern-woodland text=82484a5384 std=cbd0e8ad6c q=cc6d2ee4ce",
       "nv-g5-explorers text=57545751db std=5e56aae05f q=6f407b2e37"
+    ]
+  },
+  "5/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "sonidos text=80683d829a std=27fd41838f q=58c17693b8",
+      "el-y-la text=b0dbe3b0fc std=38c5881bb8 q=1074c9539b",
+      "gustos text=d36fa4b597 std=e9c4eb69ac q=8b22e9b02f",
+      "sobre-mi text=8d8ab79cae std=abb6b5215a q=d4ac49825c",
+      "fiestas text=705d12c072 std=e64520304e q=d84d35d37b"
     ]
   },
   "6/language": {
@@ -483,6 +559,16 @@
       "wa-g6-greece-rome text=07d03c3210 std=b90e1739f5 q=c581214fd3",
       "ny-g6-classical-china-india text=3389ff18ee std=eaa6dc3c2c q=9a4731e2a5",
       "or-g7-african-kingdoms text=3ee3cfac21 std=9c89ab0563 q=5a669c38d2"
+    ]
+  },
+  "6/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "preguntas text=a185455eef std=ed20ce18ba q=d44b56c84c",
+      "comida text=125b021db0 std=1246d6d4dd q=ffef28847f",
+      "pasatiempos text=c33589e083 std=4cd3a86ef5 q=cc01218407",
+      "emociones text=a925cf1d90 std=289704dd77 q=a82624e446",
+      "personas text=3f99f93025 std=0deaff300e q=4ab03f6e6a"
     ]
   },
   "7/language": {
@@ -560,6 +646,16 @@
       "nv-g7-nevada-in-the-world text=90f5a379f3 std=d4bea5fafc q=06ef565dc5"
     ]
   },
+  "7/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "verbos-ar text=fc3d64d1c7 std=6c4ba3089b q=2a9f9c0c73",
+      "describir text=0dc4ce0abf std=bcf0bcf6a1 q=b504bae3cb",
+      "comparaciones text=32f5de1457 std=21d56ee848 q=6e43c85246",
+      "paises text=1827fc7cb2 std=e5fa08cacb q=26617a81ba",
+      "direcciones text=246e0580ed std=3d3546530b q=525b6d4747"
+    ]
+  },
   "8/language": {
     "overview": "db2cf9b24a",
     "units": [
@@ -633,6 +729,16 @@
       "or-g8-reconstruction text=693a3316b8 std=06fffa580b q=4c87f1ca5f",
       "nv-g8-nevada-and-the-nation text=ea88de6c48 std=335b79c155 q=b4c944d919",
       "nv-g8-new-nation text=18f2c2ff8f std=235ea81516 q=6de3154187"
+    ]
+  },
+  "8/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "verbos-er-ir text=16633c38db std=21430181d8 q=2a4bf2332c",
+      "ir-a text=418d5f16ce std=deb65aab31 q=13df3f558e",
+      "hora-y-frecuencia text=d2c28828a0 std=d5d00e2856 q=439e808472",
+      "compras text=e832882aee std=c953c869f4 q=2c2a3e610b",
+      "medio-ambiente text=6393bb902f std=6fd14b0904 q=1980351cc5"
     ]
   },
   "9/language": {
@@ -729,6 +835,16 @@
       "nv-g9-personal-finance text=f88dcf17a6 std=c6e700121b q=5c5a70a880",
       "nv-g9-economics text=fadce8e82c std=c6aedf1ae8 q=aec7b0bc3e",
       "nv-g9-supply-demand text=4248ef89ee std=ca69793600 q=6a430256c8"
+    ]
+  },
+  "9/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "preterito text=92cdef7045 std=09bf56e5b4 q=ccac7e09a5",
+      "ser-y-estar text=cf084dc6cc std=f248b63008 q=fd01edeb18",
+      "en-orden text=56d16d8e93 std=3f09b3ef6d q=23cf0bbdba",
+      "profesiones text=55b2e6e3d3 std=69575f4637 q=1c177bd0fb",
+      "cuentos text=942f5f0729 std=ecd51bd440 q=c29106e529"
     ]
   }
 }

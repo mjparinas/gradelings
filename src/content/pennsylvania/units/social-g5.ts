@@ -5,7 +5,7 @@ import { bankUnit, type Q } from "../own";
 // Pennsylvania's part in it: William Penn's colony, Philadelphia and the founding of the nation, and the Commonwealth's
 // own government and resources. The Lenape, Susquehannock, Shawnee, Nanticoke and Seneca are named as living nations
 // with governments today, most of them based in other states; the unit says "many" and "some" and tells nothing sacred
-// or ceremonial. Facts are from docs/research/pennsylvania/FACTS.md.
+// or ceremonial. Facts are from gradelings-research/pennsylvania/FACTS.md.
 
 const PENNS_COLONY: Q[] = [
   ["The land that became Pennsylvania was given to William Penn by…", "King Charles II of England", ["King Louis XIV of France", "George Washington", "the Continental Congress"], "It was a charter from the English king."],

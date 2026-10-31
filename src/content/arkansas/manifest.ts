@@ -5,6 +5,7 @@ export const manifest = defineFramework({
   id: "us-ar",
   framework: ARKANSAS,
   grades: {
+    pk: () => import("./pk"),
     k: () => import("./k"),
     "1": () => import("./g1"),
     "2": () => import("./g2"),
@@ -18,6 +19,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.ARKANSAS_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Arkansas: no French subject (see docs/research/arkansas/README.md).
+  // Arkansas: no French subject (see gradelings-research/arkansas/README.md).
   french: { immersion: [], "core-french": [] },
 });

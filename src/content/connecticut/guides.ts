@@ -8,7 +8,7 @@ import type { FrameworkGuides } from "../guides";
 // arts and math, grades 3 to 8, four achievement levels), the Next Generation Science Assessment (grades 5, 8 and 11),
 // the SAT School Day in grade 11 and the Connecticut Alternate Assessment. Dates change each year, so the page points to
 // the Connecticut State Department of Education (CSDE). No French here, so no French guide. Record:
-// docs/research/connecticut/README.md.
+// gradelings-research/connecticut/README.md.
 
 export const CONNECTICUT_GUIDES: FrameworkGuides = {
   competencies: {
@@ -200,6 +200,10 @@ export const CONNECTICUT_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-K in Connecticut is the preschool year for 4-year-olds, offered by public schools and community programs such as School Readiness and Smart Start, many of them free or on a sliding scale for families who qualify. Programs follow the Connecticut Early Learning and Development Standards (CT ELDS): social and emotional growth, language and early literacy, math, science, social studies and the creative arts.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in Connecticut is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. In social studies (Understanding My Communities) they learn about themselves, families, community leaders and rules, and where the things we buy come from.",
       lookFor: "Many Connecticut districts use standards-based report cards. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

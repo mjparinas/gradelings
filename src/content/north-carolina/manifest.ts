@@ -5,6 +5,7 @@ export const manifest = defineFramework({
   id: "us-nc",
   framework: NORTH_CAROLINA,
   grades: {
+    pk: () => import("./pk"),
     k: () => import("./k"),
     "1": () => import("./g1"),
     "2": () => import("./g2"),
@@ -18,6 +19,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.NORTH_CAROLINA_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // North Carolina: no French subject (see docs/research/north-carolina/README.md).
+  // North Carolina: no French subject (see gradelings-research/north-carolina/README.md).
   french: { immersion: [], "core-french": [] },
 });

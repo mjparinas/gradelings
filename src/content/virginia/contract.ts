@@ -1,11 +1,13 @@
-import { codeCite, research, type FrameworkContract } from "../contract";
+import { codeCite, preKCite, research, type FrameworkContract } from "../contract";
 import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
-// Virginia's official standards (the Standards of Learning), built by docs/research/virginia/build_outcomes.py.
+// Virginia's official standards (the Standards of Learning), built by gradelings-research/virginia/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("virginia/outcomes.json");
 
 export const contract: FrameworkContract = {
+  // Pre-K cites the early-learning document (docs/research/virginia/prek).
+  preK: preKCite("virginia", "Virginia"),
   cite: codeCite(OUTCOMES, "Virginia"),
   ownPrefix: "va-",
   adoptsFrom: ["us-ca", "us-mn", "ca-nb", "us-al", "us-fl", "us-az", "ca-ns", "ca-pe", "ca-mb", "us-tx", "us-or", "us-ny", "us-ak", "us-wa", "us-me"],

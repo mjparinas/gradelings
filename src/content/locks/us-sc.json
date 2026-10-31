@@ -1,4 +1,50 @@
 {
+  "pk/language": {
+    "overview": "9475ed8971",
+    "units": [
+      "letter-names text=4e2d74ab60 std=1127f23a56 q=a8b9337751",
+      "first-sounds text=dd9cd8d5d4 std=f268fcd890 q=48ed3455eb",
+      "rhyme-time text=12f8d63dc7 std=62b82261ea q=b73dfecad5",
+      "clap-the-parts text=606ab5cbbd std=50ba9a5f1c q=6215dee4f1",
+      "listen-to-a-story text=8907705eaa std=68347d3d63 q=e4e96571e7",
+      "word-meanings text=fbdee7f0ca std=33515ff9d0 q=1d5b4d5e30"
+    ]
+  },
+  "pk/math": {
+    "overview": "9aeda87bd4",
+    "units": [
+      "count-to-5 text=5de441ec7a std=229a2605fb q=7da6a21961",
+      "find-the-number text=48b0986657 std=3f32248604 q=cbb1ca9734",
+      "more-or-fewer text=0faa658ba5 std=e7f696b643 q=4d8cca7ab1",
+      "shapes text=3eb07867e4 std=6faae90810 q=ed58e37c08",
+      "patterns text=4bbf1795ab std=25567164e1 q=d72ed7b913",
+      "big-and-small text=ec30e0312f std=440fda48b3 q=ac1fcda3f6",
+      "sort-it text=c844f13fda std=0cfb01e59c q=11e6557b38"
+    ]
+  },
+  "pk/science": {
+    "overview": "391a6ff8ec",
+    "units": [
+      "five-senses text=ede42da0ab std=1dbde45f68 q=cd1a3c2577",
+      "living-or-not text=9c2f339fb0 std=c9c4b5ab09 q=c6b64af68c",
+      "animals-and-babies text=c26be2c8ec std=a5d5bdf7e3 q=d23f0b3d01",
+      "weather-and-sky text=152ba8b660 std=3dd809ed14 q=04120788f3",
+      "plants-grow text=beae59bc1e std=13506c3864 q=d8f8686f2b",
+      "sink-or-float text=87253513e6 std=17bf6e6b2d q=80c8fb85a3"
+    ]
+  },
+  "pk/social": {
+    "overview": "9374426314",
+    "units": [
+      "my-family text=81af8740c1 std=7ebe6d8f4c q=41e53ad242",
+      "feelings text=32db0a0097 std=e1a8ac3372 q=1e8788180c",
+      "community-helpers text=e038723509 std=f475c01cc1 q=27bacf2a4a",
+      "places-around-me text=659860832c std=1777db351d q=8a8589b026",
+      "taking-turns text=04b975dae4 std=211201f754 q=22be788cc9",
+      "first-next-last text=6f92e7037f std=45dfa8b7cc q=1ad086320d",
+      "caring-for-our-world text=0df6123b83 std=3a21fd5ad3 q=82f9f5197f"
+    ]
+  },
   "k/language": {
     "overview": "031da39c4d",
     "units": [
@@ -255,6 +301,16 @@
       "sc-g3-explore-migrate text=673738f68a std=d345746441 q=2751545929"
     ]
   },
+  "3/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "saludos text=0e496163f1 std=81fd30989b q=6c47ef34de",
+      "numeros-hasta-20 text=23e8632af0 std=2c8be968c9 q=a349f236c5",
+      "colores text=86a558acac std=1b910c4c55 q=5f3c5730ec",
+      "animales text=badbbecebe std=0f498f10c6 q=128d83d818",
+      "familia text=b2dcc8e66e std=8faa275c49 q=86a8e86e86"
+    ]
+  },
   "4/language": {
     "overview": "161f3f3bf9",
     "units": [
@@ -329,6 +385,16 @@
       "sc-g4-sc-reconstruction text=f75de5c10c std=5fe07d83e4 q=81841ca3f3"
     ]
   },
+  "4/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "cuerpo text=8eaaf9bf61 std=8c08a1ee0b q=73f074b2b4",
+      "escuela text=e9996c83b9 std=aae3f690b6 q=ae47848fa7",
+      "dias-y-meses text=34db9dab39 std=024d22536e q=cb10fd8733",
+      "tiempo text=42f12e5fce std=4e118d7e71 q=1cc1215af3",
+      "ropa text=34970c68fc std=efa7f79cc2 q=f0e3970adf"
+    ]
+  },
   "5/language": {
     "overview": "82249ec555",
     "units": [
@@ -393,6 +459,16 @@
       "ny-g8-new-era text=47f408325e std=7c9be7b0c0 q=503ac2b076",
       "sc-g5-modern-sc text=a1c3e275aa std=aaa8b677e2 q=c01b1924f3",
       "sc-g5-civil-rights text=134a13abee std=dfd3fd2f57 q=54b0bd20f5"
+    ]
+  },
+  "5/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "sonidos text=80683d829a std=27fd41838f q=58c17693b8",
+      "el-y-la text=b0dbe3b0fc std=38c5881bb8 q=1074c9539b",
+      "gustos text=d36fa4b597 std=e9c4eb69ac q=8b22e9b02f",
+      "sobre-mi text=8d8ab79cae std=abb6b5215a q=d4ac49825c",
+      "fiestas text=705d12c072 std=e64520304e q=d84d35d37b"
     ]
   },
   "6/language": {
@@ -473,6 +549,16 @@
       "sc-g6-cold-war text=1ef5cecab7 std=8b4b0def4f q=e19dc81299"
     ]
   },
+  "6/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "preguntas text=a185455eef std=ed20ce18ba q=d44b56c84c",
+      "comida text=125b021db0 std=1246d6d4dd q=ffef28847f",
+      "pasatiempos text=c33589e083 std=4cd3a86ef5 q=cc01218407",
+      "emociones text=a925cf1d90 std=289704dd77 q=a82624e446",
+      "personas text=3f99f93025 std=0deaff300e q=4ab03f6e6a"
+    ]
+  },
   "7/language": {
     "overview": "4e8b2f562a",
     "units": [
@@ -541,6 +627,16 @@
       "sc-g7-world-regions text=4bba08603a std=8d3d7206a0 q=d07c73a40c",
       "sc-g7-japan text=490a5fc02e std=3e76df466d q=b3ff2d05e0",
       "sc-g7-americas-geography text=8947c04047 std=54597929ac q=9bb48559d5"
+    ]
+  },
+  "7/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "verbos-ar text=fc3d64d1c7 std=6c4ba3089b q=2a9f9c0c73",
+      "describir text=0dc4ce0abf std=bcf0bcf6a1 q=b504bae3cb",
+      "comparaciones text=32f5de1457 std=21d56ee848 q=6e43c85246",
+      "paises text=1827fc7cb2 std=e5fa08cacb q=26617a81ba",
+      "direcciones text=246e0580ed std=3d3546530b q=525b6d4747"
     ]
   },
   "8/language": {
@@ -614,6 +710,16 @@
       "sc-g8-modern-sc text=34d8ad83b9 std=e565ce77e6 q=03f3162580"
     ]
   },
+  "8/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "verbos-er-ir text=16633c38db std=21430181d8 q=2a4bf2332c",
+      "ir-a text=418d5f16ce std=deb65aab31 q=13df3f558e",
+      "hora-y-frecuencia text=d2c28828a0 std=d5d00e2856 q=439e808472",
+      "compras text=e832882aee std=c953c869f4 q=2c2a3e610b",
+      "medio-ambiente text=6393bb902f std=6fd14b0904 q=1980351cc5"
+    ]
+  },
   "9/language": {
     "overview": "0a255ea081",
     "units": [
@@ -682,6 +788,16 @@
       "me-g9-personal-finance text=f88dcf17a6 std=6a5b684c30 q=16138475e0",
       "me-g9-economics text=bbbee0ce00 std=34ee46164f q=b7fe3bf3cc",
       "sc-g9-sc-government text=d0ee6864bb std=79c88aa25a q=8ae2e0cb82"
+    ]
+  },
+  "9/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "preterito text=92cdef7045 std=09bf56e5b4 q=ccac7e09a5",
+      "ser-y-estar text=cf084dc6cc std=f248b63008 q=fd01edeb18",
+      "en-orden text=56d16d8e93 std=3f09b3ef6d q=23cf0bbdba",
+      "profesiones text=55b2e6e3d3 std=69575f4637 q=1c177bd0fb",
+      "cuentos text=942f5f0729 std=ecd51bd440 q=c29106e529"
     ]
   }
 }

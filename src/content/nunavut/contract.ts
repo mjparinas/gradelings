@@ -3,10 +3,10 @@ import { NEW_CURRICULUM_GRADES } from "./overall";
 import { PLAN } from "./plan";
 
 // The approved guides per grade and subject, from the Nunavut Department of Education's Approved Curriculum and Teaching
-// Resources (docs/research/nunavut/README.md).
+// Resources (gradelings-research/nunavut/README.md).
 const APPROVED = research<Record<string, { guides: string[]; areas: string[] | null }>>("nunavut/approved.json");
 // The outcomes of the new Nunavut curriculum, read from the Department's K–6 subject documents
-// (docs/research/nunavut/new-curriculum/README.md).
+// (gradelings-research/nunavut/new-curriculum/README.md).
 const OUTCOMES = research<Record<string, { guide: string; grades: Record<string, { code: string }[]> }>>("nunavut/new-curriculum/outcomes.json");
 
 export const contract: FrameworkContract = {

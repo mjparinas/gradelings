@@ -1,0 +1,130 @@
+{
+ "pk/math": [
+  {
+   "idx": "MT1.1",
+   "text": "Demonstrates number sense and an understanding of quantity"
+  },
+  {
+   "idx": "MT1.2",
+   "text": "Explores combining and separating groups (numerical operations)"
+  },
+  {
+   "idx": "MT2.1",
+   "text": "Uses classification and patterning skills"
+  },
+  {
+   "idx": "MT3.1",
+   "text": "Participates in exploratory measurement activities and compares objects"
+  },
+  {
+   "idx": "MT4.1",
+   "text": "Explores and describes shapes and spatial relationships"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "LD1.1",
+   "text": "Understands and responds to language (in child’s home language)"
+  },
+  {
+   "idx": "LD2.1",
+   "text": "Uses increasingly complex vocabulary, grammar, and sentence structure (in child’s home language)"
+  },
+  {
+   "idx": "LD3.1",
+   "text": "Communicates using social and conversational rules"
+  },
+  {
+   "idx": "LD4.1",
+   "text": "Demonstrates progress in attending to, understanding, and responding to English"
+  },
+  {
+   "idx": "LD4.2",
+   "text": "Demonstrates progress in speaking and expressing self in English"
+  },
+  {
+   "idx": "EL1.1",
+   "text": "Shows interest in literacy experiences"
+  },
+  {
+   "idx": "EL1.2",
+   "text": "Engages in read-alouds and conversations about books and stories"
+  },
+  {
+   "idx": "EL2.1",
+   "text": "Notices and manipulates the sounds of language"
+  },
+  {
+   "idx": "EL3.1",
+   "text": "Responds to features of books and print"
+  },
+  {
+   "idx": "EL3.2",
+   "text": "Shows knowledge of the shapes, names, and sounds of letters"
+  },
+  {
+   "idx": "EL3.3",
+   "text": "Demonstrates emergent writing skills"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "ST1.1",
+   "text": "Engages in the scientific process to collect, analyze, and communicate information"
+  },
+  {
+   "idx": "ST2.1",
+   "text": "Demonstrates knowledge of core science ideas and concepts"
+  },
+  {
+   "idx": "ST3.1",
+   "text": "Demonstrates knowledge of the characteristics of living things, the earth’s environment, and physical objects and materials"
+  },
+  {
+   "idx": "ST3.2",
+   "text": "Uses tools and engineering practices to explore and solve problems"
+  },
+  {
+   "idx": "ST3.3",
+   "text": "Engages in developmentally appropriate interactions with technology and media that support creativity, exploration, and play"
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "SE1.1",
+   "text": "Forms trusting relationships with nurturing adults"
+  },
+  {
+   "idx": "SE1.2",
+   "text": "Interacts with peers"
+  },
+  {
+   "idx": "SE2.1",
+   "text": "Experiences, expresses, and regulates a range of emotions"
+  },
+  {
+   "idx": "SE2.2",
+   "text": "Interprets and responds to the feelings of others"
+  },
+  {
+   "idx": "SE3.1",
+   "text": "Shows awareness of self as unique individual"
+  },
+  {
+   "idx": "SE3.2",
+   "text": "Demonstrates competence and confidence"
+  },
+  {
+   "idx": "SS1.1",
+   "text": "Demonstrates positive connection to family and community"
+  },
+  {
+   "idx": "SS2.1",
+   "text": "Shows awareness of sequence and change over time"
+  },
+  {
+   "idx": "SS2.2",
+   "text": "Demonstrates simple geographic knowledge"
+  }
+ ]
+}

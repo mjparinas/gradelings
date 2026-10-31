@@ -7,7 +7,7 @@ import { MAX_CHILDREN, money, perChildMonthly, PRICES_BY_CURRENCY, type Country,
 const perChild = (c: Currency) =>
   `From ${money(perChildMonthly(c, "year"), c)} a month per child (${c === "USD" ? "US$" : "C$"}${PRICES_BY_CURRENCY[c].year.amount} a year for up to ${MAX_CHILDREN} children).`;
 // Competitor comparison pages for the app. Facts about other products come from their public pages
-// and app store listings (see docs/research/competitors.md) and are dated, because
+// and app store listings (see gradelings-research/competitors.md) and are dated, because
 // prices and features change. Keep the wording factual and fair, and re-check
 // every figure when you change PRICE_CHECKED.
 //

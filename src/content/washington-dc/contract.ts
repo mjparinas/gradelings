@@ -4,7 +4,7 @@ import { PLAN } from "./plan";
 
 // Washington, DC's official standards (the Common Core, the Next Generation Science Standards and the DC Social Studies
 // Standards of 2023), built from the Achievement Standards Network copies and OSSE's social studies PDF by
-// docs/research/washington-dc/build_outcomes.py.
+// gradelings-research/washington-dc/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("washington-dc/outcomes.json");
 
 export const contract: FrameworkContract = {

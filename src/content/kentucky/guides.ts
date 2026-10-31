@@ -8,7 +8,7 @@ import type { FrameworkGuides } from "../guides";
 // Summative Assessments (reading and math in grades 3 to 8 and 10, science in 4, 7 and 11, social studies in 5, 8 and
 // 11) and the Read to Succeed Act's reading screening in kindergarten to 3rd grade. Dates change each year, so the page
 // points to the Kentucky Department of Education. No French here, so no French guide. Record:
-// docs/research/kentucky/README.md.
+// gradelings-research/kentucky/README.md.
 
 export const KENTUCKY_GUIDES: FrameworkGuides = {
   competencies: {
@@ -201,6 +201,10 @@ export const KENTUCKY_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-K in Kentucky is public preschool, free in every school district for 4-year-olds from families at or below 160% of the federal poverty level and for 3- and 4-year-olds with disabilities, and offered in Head Start and child care centers too. Programs follow the Kentucky Early Childhood Standards: approaches to learning, the arts, health and wellness, language and early literacy, math, physical education, science, social studies and technology.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in Kentucky is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. Science looks at pushes and pulls, weather and what plants and animals need, and social studies, called “Myself and My Community”, is about rules, community leaders and the symbols of Kentucky and the United States. Teachers check each child's early reading with a screener.",
       lookFor: "Many Kentucky districts use standards-based report cards in the early grades. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

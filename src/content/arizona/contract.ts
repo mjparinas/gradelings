@@ -1,12 +1,14 @@
-import { codeCite, research, type FrameworkContract } from "../contract";
+import { codeCite, preKCite, research, type FrameworkContract } from "../contract";
 import { PLAN } from "./plan";
 
 // Arizona's official standards, built from the Arizona Department of Education's files by
-// docs/research/arizona/build_outcomes.py: every code as the documents print it ("4.NBT.A.1", "4.RL.1", "4.P4U1.1",
+// gradelings-research/arizona/build_outcomes.py: every code as the documents print it ("4.NBT.A.1", "4.RL.1", "4.P4U1.1",
 // "4.H2.1"; Grade 9 "A1.A-SSE.A.1", "9-10.RL.1", "HS.L2U1.20", "HS.C2.1").
 const OUTCOMES = research<Record<string, { idx: string }[]>>("arizona/outcomes.json");
 
 export const contract: FrameworkContract = {
+  // Pre-K cites the early-learning document (docs/research/arizona/prek).
+  preK: preKCite("arizona", "Arizona"),
   cite: codeCite(OUTCOMES, "Arizona"),
   ownPrefix: "az-",
   adoptsFrom: ["us-ca", "us-mn", "ca-nb", "ca-ns", "ca-pe", "ca-mb", "us-tx", "us-or", "us-ny", "us-wa", "us-me"],

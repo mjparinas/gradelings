@@ -199,6 +199,31 @@ describe("localdb on IndexedDB", () => {
     expect(idb.opened).toEqual(["grademap"]);
   });
 
+  it("opens the database again when the browser closed the connection", async () => {
+    const db = await load();
+    await db.setKV("a", 1);
+    const fake = idb.dbs.get("grademap")!.db;
+    const real = fake.transaction.bind(fake);
+    let calls = 0;
+    fake.transaction = (store: string, mode: string) => {
+      if (!calls++) throw Object.assign(new Error("The database connection is closing."), { name: "InvalidStateError" });
+      return real(store, mode);
+    };
+    expect(await db.getKV("a")).toBe(1);
+    expect(idb.opened).toEqual(["grademap", "grademap"]);
+  });
+
+  it("gives up after one fresh try if the connection still can't be used", async () => {
+    const db = await load();
+    await db.setKV("a", 1);
+    const fake = idb.dbs.get("grademap")!.db;
+    fake.transaction = () => {
+      throw Object.assign(new Error("The database connection is closing."), { name: "InvalidStateError" });
+    };
+    await expect(db.getKV("a")).rejects.toThrow("closing");
+    expect(idb.opened).toEqual(["grademap", "grademap"]);
+  });
+
   it("queues new events for upload and hands them out in batches", async () => {
     const db = await load();
     await db.putEvents([ev("a"), ev("b"), ev("c")]);

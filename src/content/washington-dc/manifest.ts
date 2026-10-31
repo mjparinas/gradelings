@@ -18,6 +18,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.WASHINGTON_DC_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Washington, DC: no French subject in the app (see docs/research/washington-dc/README.md).
+  // Washington, DC: no French subject in the app (see gradelings-research/washington-dc/README.md).
   french: { immersion: [], "core-french": [] },
 });

@@ -2,12 +2,13 @@
 
 ## Framework
 
-- **Id and slug:** `us-nh`, `new-hampshire`. Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: New Hampshire has no statewide French standards the app follows). Offered to families and in classroom mode.
+- **Id and slug:** `us-nh`, `new-hampshire`. Pre-K and Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: New Hampshire has no statewide French standards the app follows). Offered to families and in classroom mode.
+- **Pre-K:** the 26 shared Pre-K units (`src/content/grades/pk/`), cited by the New Hampshire Early Learning Standards' indicators for four- and five-year-olds with the domain (`Numeracy 1.1.7b`) (`src/content/new-hampshire/pk.ts`), checked against `docs/research/new-hampshire/prek/outcomes.json` (sources in `source/`, `fetch.sh`, `build_outcomes.py`). Practice steps only.
 
 ## Standards
 
 - Adopted by the New Hampshire State Board of Education: math (the New Hampshire College and Career Ready Standards, which are the Common Core, 2010; `4.NBT.1`; Grade 9 cites the high school standards, `A-SSE.1`), English language arts (the same, 2010; `RL.4.2`; Grade 9 cites the 9-10 band, `RI.9-10.2`), science (the New Hampshire College and Career Ready Science Standards, which are the NGSS, 2016; `4-PS3-2`; middle school `MS-LS1-1` in any of Grades 6 to 8, high school `HS-LS2-6` in Grade 9) and social studies (the K-12 Social Studies New Hampshire Curriculum Framework, 2006, written for grade spans; `SS:CV:4:2.1`, where the 4 is the last grade of the 3-4 span; Grade 9 cites the 9-12 span, `SS:CV:12:1.1`).
-- Citations are `"CODES · text"` (`nhs()` in `src/content/new-hampshire/cite.ts`), checked by `src/content/new-hampshire/contract.ts` against `docs/research/new-hampshire/outcomes.json`. The Department of Education's site refuses automated downloads, so the sources in `docs/research/new-hampshire/source/` are the Achievement Standards Network's copies of each New Hampshire document; `fetch.sh` downloads them again and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. Record: `docs/research/new-hampshire/README.md`.
+- Citations are `"CODES · text"` (`nhs()` in `src/content/new-hampshire/cite.ts`), checked by `src/content/new-hampshire/contract.ts` against `docs/research/new-hampshire/outcomes.json`. The Department of Education's site refuses automated downloads, so the sources in `gradelings-research/new-hampshire/source/` are the Achievement Standards Network's copies of each New Hampshire document; `fetch.sh` downloads them again and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. Record: `gradelings-research/new-hampshire/README.md`.
 
 ## Content
 
@@ -24,7 +25,7 @@
 
 ## Parent guides
 
-- `src/content/new-hampshire/guides.ts`, US English: the hub, grade notes for Kindergarten to Grade 9, the eight Standards for Mathematical Practice (`/guides/new-hampshire/math-practices/`) and state tests (`/guides/new-hampshire/state-tests/`; dates point to the Department of Education). No French guide.
+- `src/content/new-hampshire/guides.ts`, US English: the hub, grade notes for Pre-K to Grade 9, the eight Standards for Mathematical Practice (`/guides/new-hampshire/math-practices/`) and state tests (`/guides/new-hampshire/state-tests/`; dates point to the Department of Education). No French guide.
 
 ## Schools
 

@@ -7,7 +7,7 @@ import type { FrameworkGuides } from "../guides";
 // are taught inside math lessons, not graded as a subject of their own. The assessment page covers the Idaho Standards
 // Achievement Test (ISAT: English language arts and math in grades 3 to 8 and 11, science in grades 5, 8 and 11, with
 // four achievement levels) and the Idaho Reading Indicator (Kindergarten to 3rd grade, fall and spring, three levels),
-// from the Department's pages and family guides in docs/research/idaho/source/. No French here, so no French guide.
+// from the Department's pages and family guides in gradelings-research/idaho/source/. No French here, so no French guide.
 
 export const IDAHO_GUIDES: FrameworkGuides = {
   competencies: {

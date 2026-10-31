@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Kentucky, a US state. Standards are the Kentucky Academic Standards, adopted by the Kentucky Board of Education and
 // published by the Kentucky Department of Education: mathematics (2019), reading and writing (October 2025), science
@@ -74,9 +75,9 @@ export const KENTUCKY: Framework = {
   standardLabel: "Standard",
   sourceName: "Kentucky Department of Education",
   sourceUrl: "https://www.education.ky.gov/curriculum/standards/kyacadstand/Pages/default.aspx",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Kentucky report cards",
     intro:

@@ -1,7 +1,7 @@
 import "server-only";
 import { loadChildData, loadChildReport, familyProfileIds } from "@/server/reportData";
 import { getUnitRef, loadGrade } from "@/content";
-import { assignedAt, assignmentDue, assignmentGoals, assignmentKeys, classGrades, classProgressAndMisses, type ClassRow } from "@/server/classroom";
+import { assignedAt, assignmentDue, familyClasswork, assignmentGoals, assignmentKeys, assignmentStarts, classGrades, classProgressAndMisses, type ClassRow } from "@/server/classroom";
 import { classDigestLines } from "@/lib/classDigest";
 import { isYearReviewEmailDay, reviewYearOf, schoolYearStart, yearReview, type YearReviewChild } from "@/lib/yearReview";
 import { unsubscribeToken } from "@/server/auth";
@@ -19,6 +19,13 @@ import { pruneLive } from "@/server/live";
 import { isFlagOn } from "@/server/flags";
 import type { Profile } from "@/lib/model";
 import { schoolYearLines } from "@/lib/schoolYear";
+import { childHomework, homeworkEmailLines } from "@/lib/homework";
+import { atHomeIdea, atHomeLine, factsWeekLine, storiesLine, storiesThisWeek } from "@/lib/weeklyExtras";
+import { derive } from "@/lib/derive";
+import { unitLevel } from "@/lib/proficiency";
+import { getFramework } from "@/content/frameworks";
+import { ageBandFor } from "@/content/subjects";
+import type { GradeId, SubjectId } from "@/content/types";
 
 // The daily job (src/app/api/cron/weekly/route.ts), split into phases that can stop and carry on.
 //
@@ -391,12 +398,17 @@ async function weeklyReports(ctx: Ctx): Promise<boolean> {
     try {
       const children: WeeklyChild[] = [];
       const profiles: Profile[] = [];
+      const showHomework = await isFlagOn("parent-homework", p.family_id);
+      const showExtras = await isFlagOn("weekly-email-extras", p.family_id);
+      const classwork = showHomework ? await familyClasswork(p.family_id) : [];
       for (const id of await familyProfileIds(p.family_id)) {
-        const r = await loadChildReport(p.family_id, id, 7, now);
+        const r = await loadChildData(p.family_id, id, 7, now);
         if (!r) continue;
         profiles.push(r.profile);
         const t = r.report.totals;
         const month = firstSunday ? (await loadChildReport(p.family_id, id, 30, now))?.report : undefined;
+        const next = r.report.needs[0]?.ref;
+        const homework = await weeklyHomework(r, classwork, now);
         children.push({
           name: r.profile.name,
           month: month && { minutes: Math.round(month.totals.minutes), answers: month.totals.answers, previousAnswers: month.previous.answers, activeDays: month.totals.activeDays },
@@ -404,7 +416,9 @@ async function weeklyReports(ctx: Ctx): Promise<boolean> {
           answers: t.answers,
           accuracy: t.answers ? Math.round((t.correct / t.answers) * 100) : null,
           strength: r.report.strengths[0]?.ref.unit.title,
-          next: r.report.needs[0]?.ref.unit.title,
+          next: next?.unit.title,
+          homework: homework.lines,
+          extras: showExtras ? weeklyExtraLines(r, next?.course.subject ?? homework.subject, now) : [],
         });
       }
       if (!children.length) continue;
@@ -420,6 +434,28 @@ async function weeklyReports(ctx: Ctx): Promise<boolean> {
   }
   await setSetting(WEEKLY_KEY, JSON.stringify({ sunday, done: true } satisfies WeeklyState));
   return true;
+}
+
+type ChildData = NonNullable<Awaited<ReturnType<typeof loadChildData>>>;
+
+/** The weekly email's homework lines for one child, and the subject of their first unfinished unit (for the at-home idea). */
+async function weeklyHomework(r: ChildData, classwork: Awaited<ReturnType<typeof familyClasswork>>, now: number): Promise<{ lines: string[]; subject?: SubjectId }> {
+  const items = childHomework(classwork, r.profile.id, r.events, (key) => unitLevel(r.derived.units[key]), now);
+  if (!items.length) return { lines: [] };
+  // Assigned units are from the class's grade, which can differ from the child's in a split class.
+  await Promise.all([...new Set(items.map((h) => h.key.split("/")[0]))].map((g) => loadGrade(g as GradeId, r.profile.framework).catch(() => undefined)));
+  const name = (key: string) => getUnitRef(key, r.profile.framework)?.unit.title;
+  const proficient = getFramework(r.profile.framework).scoringFor(r.profile.grade).levels[2]?.label ?? "Proficient";
+  const open = items.find((h) => !h.done);
+  return { lines: homeworkEmailLines(r.profile.name, items, name, proficient, now), subject: open && getUnitRef(open.key)?.course.subject };
+}
+
+/** Math facts known, stories read this week and one idea to try at home. */
+function weeklyExtraLines(r: ChildData, subject: SubjectId | undefined, now: number): string[] {
+  const facts = Object.keys(r.derived.facts).length ? factsWeekLine(r.profile.name, r.profile.grade, r.derived.facts, derive(r.events.filter((e) => e.t <= now - 7 * DAY), now - 7 * DAY).facts) : undefined;
+  const stories = storiesLine(r.profile.name, storiesThisWeek(r.events, now));
+  const idea = atHomeLine(atHomeIdea(subject, ageBandFor(r.profile.grade), r.profile.id, now));
+  return [facts, stories, idea].filter((l): l is string => Boolean(l));
 }
 
 // From June 15 to June 30: the year in review, once per school year, to parents with progress emails on. Families whose
@@ -496,7 +532,7 @@ async function classDigests(ctx: Ctx): Promise<boolean> {
         for (const g of classGrades(cls)) await loadGrade(g, cls.framework);
         const unitName = (key: string) => getUnitRef(key, cls.framework)?.unit.title ?? key;
         const lines = classDigestLines(
-          { name: cls.name, students, assignments: keys, due: await assignmentDue(cls.id), goal: await assignmentGoals(cls.id), assignedAt: await assignedAt(cls.id) },
+          { name: cls.name, students, assignments: keys, due: await assignmentDue(cls.id), goal: await assignmentGoals(cls.id), assignedAt: await assignedAt(cls.id), startsAt: await assignmentStarts(cls.id) },
           unitName,
           now,
         );

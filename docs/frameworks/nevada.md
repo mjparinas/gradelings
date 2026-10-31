@@ -2,12 +2,13 @@
 
 ## Framework
 
-- **Id and slug:** `us-nv`, `nevada`. Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: Nevada has no statewide French standards the app follows). Offered to families and in classroom mode.
+- **Id and slug:** `us-nv`, `nevada`. Pre-K and Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: Nevada has no statewide French standards the app follows). Offered to families and in classroom mode.
+- **Pre-K:** the 26 shared Pre-K units (`src/content/grades/pk/`), cited by the Nevada Pre-Kindergarten Standards' indicators (`M.NQ.PK8`) (`src/content/nevada/pk.ts`), checked against `docs/research/nevada/prek/outcomes.json` (sources in `source/`, `fetch.sh`, `build_outcomes.py`). Practice steps only.
 
 ## Standards
 
 - The Nevada Academic Content Standards (NVACS), adopted by the State Board of Education: math (the Common Core, 2010; `4.NBT.1`; Grade 9 cites the high school standards, `A-SSE.1`), English language arts (the Common Core, 2010; `RL.4.2`; Grade 9 cites the 9-10 band, `RI.9-10.2`), science (the NGSS, 2014; `4-PS3-2`, middle school `MS-LS1-1` in any of Grades 6 to 8, high school `HS-LS2-6` in Grade 9) and social studies (revised 2018; `SS.4.11`; Grades 6-8 courses `SS.6-8.EWC.*`, `SS.6-8.WGGS.*` and `SS.6-8.EUSH.*`; Grade 9 cites Civics and Economics, `SS.9-12.CE.27`, and financial literacy, `SS.9-12.FL.4`).
-- Citations are `"CODES · text"` (`nvs()` in `src/content/nevada/cite.ts`), checked by `src/content/nevada/contract.ts` against `docs/research/nevada/outcomes.json`. Sources are in `docs/research/nevada/source/`; `fetch.sh` downloads them again and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. Record: `docs/research/nevada/README.md`.
+- Citations are `"CODES · text"` (`nvs()` in `src/content/nevada/cite.ts`), checked by `src/content/nevada/contract.ts` against `docs/research/nevada/outcomes.json`. Sources are in `gradelings-research/nevada/source/`; `fetch.sh` downloads them again and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. Record: `gradelings-research/nevada/README.md`.
 
 ## Content
 
@@ -23,7 +24,7 @@
 
 ## Parent guides
 
-- `src/content/nevada/guides.ts`, US English: the hub, grade notes for Kindergarten to Grade 9, the eight Standards for Mathematical Practice (`/guides/nevada/math-practices/`) and state tests (`/guides/nevada/state-tests/`; dates point to the Department). No French guide.
+- `src/content/nevada/guides.ts`, US English: the hub, grade notes for Pre-K to Grade 9, the eight Standards for Mathematical Practice (`/guides/nevada/math-practices/`) and state tests (`/guides/nevada/state-tests/`; dates point to the Department). No French guide.
 
 ## Schools
 

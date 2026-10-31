@@ -4,7 +4,7 @@ import type { FrameworkGuides } from "../guides";
 // Parent guide copy for Arkansas, in US English. Arkansas has no statewide social and emotional learning standards, so the
 // competencies page explains the ways of working the Arkansas Academic Standards build into every grade: problem solving
 // and reasoning in math, the science and engineering practices, the communication, collaboration and research strands
-// of English language arts and the social studies inquiry practices (docs/research/arkansas/README.md). The assessment
+// of English language arts and the social studies inquiry practices (gradelings-research/arkansas/README.md). The assessment
 // page covers ATLAS, the Arkansas Teaching and Learning Assessment System, as DESE describes it: English language arts,
 // math and science in grades 3 to 10 (no 9th grade science test), literacy and math checks in kindergarten to 2nd grade,
 // four achievement levels with Levels 3 and 4 counting as proficient, and the LEARNS Act's 3rd grade reading rule. Dates
@@ -156,6 +156,10 @@ export const ARKANSAS_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Arkansas Better Chance funds a pre-K year for four-year-olds in schools and community programs. It follows the Arkansas Child Development and Early Learning Standards.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in Arkansas is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 by ones and tens, and start adding and taking away within 10. Science looks at pushes and pulls, living things and weather, and social studies covers rules, needs and wants, simple maps, and symbols like the American flag and the Arkansas flag.",
       lookFor: "Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

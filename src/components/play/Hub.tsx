@@ -11,6 +11,7 @@ import { gameTime } from "@/lib/gametime";
 import { effectiveGoal } from "@/lib/goal";
 import { dayKey } from "@/lib/model";
 import { canUse, type Feature } from "@/lib/plan";
+import { subjectsOn } from "@/lib/arcade";
 import { dailyQuests, weekDays, weeklyQuests, weekStart, type Quest } from "@/lib/quests";
 import { nextUp } from "@/lib/nextup";
 import { levelInfo, unitLevel } from "@/lib/proficiency";
@@ -36,6 +37,7 @@ import { useAllowed } from "./useAllowed";
 import { useClasswork } from "./useClasswork";
 import { homeworkDone } from "@/lib/classroom";
 import { ParentNote } from "./ParentNote";
+import { ResumeCard, useUnfinished } from "./ResumeCard";
 import { ClassGoalCard } from "./ClassGoalCard";
 import { RewardCard, TogetherCard } from "./FamilyCards";
 import { FestivalCard } from "./FestivalCard";
@@ -87,7 +89,8 @@ export function Hub() {
   const weak = weakest({ grade: profile.grade, framework: profile.framework, subjectGrades, derived: d, subjects }, 10).length;
   const dailyDone = d.dailyDone.includes(today);
   const stories = storiesFor(settings, isOn("story-library"));
-  const quests = dailyQuests(profile.id, today, band, { stories });
+  const spanish = subjectsOn({ grade: profile.grade, subjects: settings?.enabledSubjects, framework: profile.framework }).includes("spanish");
+  const quests = dailyQuests(profile.id, today, band, { stories, spanish });
   const claimed = d.questsClaimed[today] ?? [];
   const monday = weekStart(now);
   const weekly = weeklyQuests(profile.id, monday, band, { stories });
@@ -104,8 +107,9 @@ export function Hub() {
   const allEvents = useStore((s) => s.events);
   // Little kids see one quest at a time, the first not yet done, and no weekly goals.
   const littleQuest = quests.find((q) => !claimed.includes(q.id));
-  // ...and at most one suggestion card: "Almost there" first.
-  const card = next && nextRef ? "next" : refresher ? "refresher" : suggested ? "suggested" : undefined;
+  const unfinished = useUnfinished(dailyDone);
+  // ...and at most one suggestion card: a lesson left partway first, then "Almost there".
+  const card = unfinished ? "resume" : next && nextRef ? "next" : refresher ? "refresher" : suggested ? "suggested" : undefined;
 
   // Welcome-back and streak copy is always warm and forward-looking, never about something lost.
   const returning = d.totals.answers > 0 && d.streak.current === 0 && d.activeDays > 0 && !d.streak.activeToday;
@@ -236,6 +240,8 @@ export function Hub() {
         </span>
         <span className="text-4xl narrow:hidden">▶</span>
       </button>
+
+      {unfinished && <ResumeCard lesson={unfinished.lesson} onDismiss={unfinished.dismiss} little={little} />}
 
       {!isStudent && <ParentNote />}
 

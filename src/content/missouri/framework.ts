@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Missouri, a US state. Standards are the Missouri Learning Standards' Grade-Level Expectations, adopted by the State
 // Board of Education in April 2016 and published by the Missouri Department of Elementary and Secondary Education (DESE):
@@ -74,9 +75,9 @@ export const MISSOURI: Framework = {
   standardLabel: "Grade-level expectation",
   sourceName: "Missouri Department of Elementary and Secondary Education",
   sourceUrl: "https://dese.mo.gov/college-career-readiness/curriculum/missouri-learning-standards",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Missouri report cards",
     intro:

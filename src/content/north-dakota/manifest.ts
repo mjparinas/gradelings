@@ -18,6 +18,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.NORTH_DAKOTA_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // North Dakota: no French subject in the app (see docs/research/north-dakota/README.md).
+  // North Dakota: no French subject in the app (see gradelings-research/north-dakota/README.md).
   french: { immersion: [], "core-french": [] },
 });

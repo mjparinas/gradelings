@@ -6,9 +6,9 @@ import type { FrameworkGuides } from "../guides";
 // arguing and critiquing, modeling, using tools, precision, structure and repeated reasoning. They are taught inside
 // math lessons, not graded as a subject of their own. The assessment page covers WY-TOPP (the Wyoming Test of
 // Proficiency and Progress: language arts and math in grades 3 to 10, science in grades 4, 8 and 10) and the ACT in
-// grade 11, from the department's cut-score report (docs/research/wyoming/source/wy-topp-cut-scores-faq.pdf); it keeps
+// grade 11, from the department's cut-score report (gradelings-research/wyoming/source/wy-topp-cut-scores-faq.pdf); it keeps
 // to the program's lasting facts and points families to the department for dates. No French here, so no French guide.
-// Record: docs/research/wyoming/README.md.
+// Record: gradelings-research/wyoming/README.md.
 
 export const WYOMING_GUIDES: FrameworkGuides = {
   competencies: {

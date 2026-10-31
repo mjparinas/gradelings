@@ -5,6 +5,7 @@ export const manifest = defineFramework({
   id: "us-ct",
   framework: CONNECTICUT,
   grades: {
+    pk: () => import("./pk"),
     k: () => import("./k"),
     "1": () => import("./g1"),
     "2": () => import("./g2"),
@@ -18,6 +19,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.CONNECTICUT_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Connecticut: no French subject (see docs/research/connecticut/README.md).
+  // Connecticut: no French subject (see gradelings-research/connecticut/README.md).
   french: { immersion: [], "core-french": [] },
 });

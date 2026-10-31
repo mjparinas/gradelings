@@ -5,6 +5,7 @@ export const manifest = defineFramework({
   id: "us-va",
   framework: VIRGINIA,
   grades: {
+    pk: () => import("./pk"),
     k: () => import("./k"),
     "1": () => import("./g1"),
     "2": () => import("./g2"),
@@ -18,6 +19,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.VIRGINIA_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Virginia: no French subject (see docs/research/virginia/README.md).
+  // Virginia: no French subject (see gradelings-research/virginia/README.md).
   french: { immersion: [], "core-french": [] },
 });

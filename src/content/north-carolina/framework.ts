@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // North Carolina, a US state. Standards are the North Carolina Standard Course of Study, as the North Carolina
 // Department of Public Instruction (NCDPI) publishes it: the 2023 mathematics standards, the 2017 English language arts
@@ -74,9 +75,9 @@ export const NORTH_CAROLINA: Framework = {
   standardLabel: "Standard",
   sourceName: "North Carolina Department of Public Instruction",
   sourceUrl: "https://www.dpi.nc.gov/",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding North Carolina report cards",
     intro:

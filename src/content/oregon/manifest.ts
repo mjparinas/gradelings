@@ -18,6 +18,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.OREGON_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Oregon: no French subject (see docs/research/oregon/README.md).
+  // Oregon: no French subject (see gradelings-research/oregon/README.md).
   french: { immersion: [], "core-french": [] },
 });

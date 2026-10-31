@@ -5,6 +5,7 @@ export const manifest = defineFramework({
   id: "us-az",
   framework: ARIZONA,
   grades: {
+    pk: () => import("./pk"),
     k: () => import("./k"),
     "1": () => import("./g1"),
     "2": () => import("./g2"),
@@ -18,6 +19,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.ARIZONA_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Arizona: no French subject (see docs/research/arizona/README.md).
+  // Arizona: no French subject (see gradelings-research/arizona/README.md).
   french: { immersion: [], "core-french": [] },
 });

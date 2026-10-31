@@ -6,7 +6,7 @@ import { getFramework } from "../frameworks";
 import { overall, NEW_CURRICULUM_GRADES } from "./overall";
 
 // The approved guides per grade and subject, from the Nunavut Department of Education's Approved Curriculum and Teaching
-// Resources (docs/research/nunavut/README.md).
+// Resources (gradelings-research/nunavut/README.md).
 const APPROVED = JSON.parse(readFileSync(join(__dirname, "../../../docs/research/nunavut/approved.json"), "utf8")) as Record<
   string,
   { guides: string[]; areas: string[] | null }
@@ -41,7 +41,8 @@ describe("Nunavut", () => {
       expect(overall(grade as never, subject as never).some((line) => line.includes("new Nunavut curriculum")), `${key}: Big Ideas`).toBe(isNew);
     }
     for (const g of ["k", "1", "2", "3"]) {
-      for (const c of COURSES.filter((c) => c.grade === g)) {
+      // The shared Spanish course cites the World-Readiness Standards everywhere (see spanishCite).
+      for (const c of COURSES.filter((c) => c.grade === g && c.subject !== "spanish")) {
         for (const u of c.units) {
           const standard = u.standards["ca-nu"];
           if (standard) expect(standard, `${g}/${c.subject}/${u.id}`).toMatch(/^Nunavut (Mathematics|English Language Arts|Science|Social Studies) K–6 \(2025\), /);

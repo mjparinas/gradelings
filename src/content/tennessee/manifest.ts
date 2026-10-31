@@ -5,6 +5,7 @@ export const manifest = defineFramework({
   id: "us-tn",
   framework: TENNESSEE,
   grades: {
+    pk: () => import("./pk"),
     k: () => import("./k"),
     "1": () => import("./g1"),
     "2": () => import("./g2"),
@@ -18,6 +19,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.TENNESSEE_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Tennessee: no French subject (see docs/research/tennessee/README.md).
+  // Tennessee: no French subject (see gradelings-research/tennessee/README.md).
   french: { immersion: [], "core-french": [] },
 });

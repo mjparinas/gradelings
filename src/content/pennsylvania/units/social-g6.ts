@@ -4,7 +4,7 @@ import { bankUnit, type Q } from "../own";
 // Pennsylvania's own Grade 6 social studies units (`pa-` ids). Grade 6 here is world history and geography with
 // economics and how governments work, so Pennsylvania's own units cover what the shared world units don't: the
 // Commonwealth's businesses and entrepreneurs (6.2.6-8), its local, state and national governments and taxes (5.3.6),
-// and personal finance (17.x.6-8). Facts are from docs/research/pennsylvania/FACTS.md or are well established.
+// and personal finance (17.x.6-8). Facts are from gradelings-research/pennsylvania/FACTS.md or are well established.
 
 const BUSINESS: Q[] = [
   ["A business owned and run by one person is a…", "sole proprietorship", ["partnership", "corporation", "public school"], "One owner."],

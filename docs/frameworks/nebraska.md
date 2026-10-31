@@ -8,7 +8,7 @@
 
 - Nebraska's College and Career Ready Standards, approved by the Nebraska State Board of Education: mathematics (September 2, 2022; `MA.4.N.2.b`, strands Number, Ratios and Proportions in Grades 6 and 7 only, Algebra, Geometry and Data; Grade 9 cites the high school standards, `MA.HS.A.2.c`), English language arts (September 2, 2021; `LA.4.RP.1`, `LA.4.RI.6`, `LA.4.V.1.b`, `LA.4.W.1.c`; Grade 9 cites the Grades 9-10 band, coded with a 10, `LA.10.RI.2`), science (September 6, 2024; `SC.4.4.2.b`, high school `SC.HS.1.1.a`) and social studies (November 8, 2019, kept in place after the 2026 review; `SS 4.1.1.c` with a space, high school `SS HS.1.1.b`).
 - These are Nebraska's own codes, not the Common Core or the NGSS codes, and Nebraska places some skills in other grades (coins and time to the hour in Kindergarten, probability in Grade 6, angle relationships in Grade 7, functions in high school).
-- Citations are `"CODES · text"` (`nes()` in `src/content/nebraska/cite.ts`), checked by `src/content/nebraska/contract.ts` against `docs/research/nebraska/outcomes.json`. Sources are in `docs/research/nebraska/source/`; `fetch.sh` downloads them again and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. Record: `docs/research/nebraska/README.md`.
+- Citations are `"CODES · text"` (`nes()` in `src/content/nebraska/cite.ts`), checked by `src/content/nebraska/contract.ts` against `docs/research/nebraska/outcomes.json`. Sources are in `gradelings-research/nebraska/source/`; `fetch.sh` downloads them again and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. Record: `gradelings-research/nebraska/README.md`.
 
 ## Content
 

@@ -1,12 +1,14 @@
-import { codeCite, research, type FrameworkContract } from "../contract";
+import { codeCite, preKCite, research, type FrameworkContract } from "../contract";
 import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
 // Wisconsin's official standards, built from the Department of Public Instruction's standards server by
-// docs/research/wisconsin/build_outcomes.py.
+// gradelings-research/wisconsin/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("wisconsin/outcomes.json");
 
 export const contract: FrameworkContract = {
+  // Pre-K cites the early-learning document (docs/research/wisconsin/prek).
+  preK: preKCite("wisconsin", "Wisconsin"),
   cite: codeCite(OUTCOMES, "Wisconsin"),
   ownPrefix: "wi-",
   adoptsFrom: ["us-ca", "us-mn", "ca-nb", "us-al", "us-fl", "us-az", "ca-ns", "ca-pe", "ca-mb", "us-tx", "us-or", "us-ny", "us-ak", "us-wa", "us-me"],

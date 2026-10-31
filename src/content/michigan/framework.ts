@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Michigan, a US state. Standards are the Michigan K-12 Standards, adopted by the State Board of Education and published
 // by the Michigan Department of Education: mathematics and English language arts (2010, the Common Core), science (2015,
@@ -74,9 +75,9 @@ export const MICHIGAN: Framework = {
   standardLabel: "Standard",
   sourceName: "Michigan Department of Education",
   sourceUrl: "https://www.michigan.gov/mde/services/academic-standards",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Michigan report cards",
     intro:

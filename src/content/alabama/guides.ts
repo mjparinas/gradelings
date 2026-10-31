@@ -4,7 +4,7 @@ import type { FrameworkGuides } from "../guides";
 // Parent guide copy for Alabama, in US English. Alabama has no statewide social and emotional learning standards, so the
 // competencies page explains the practices the Alabama Courses of Study build into every grade: the Student
 // Mathematical Practices, the science and engineering practices, the recurring English language arts standards and the
-// social studies practices (docs/research/alabama/README.md). The assessment page covers the Alabama Comprehensive
+// social studies practices (gradelings-research/alabama/README.md). The assessment page covers the Alabama Comprehensive
 // Assessment Program (ACAP) as ALSDE describes it: English language arts and math in grades 2 to 8, science in grades 4,
 // 6 and 8, four achievement levels with Levels 3 and 4 counting as proficient, and ACAP Alternate. It also covers the
 // Alabama Literacy Act's 3rd grade reading rule. Dates change each year, so the page points to ALSDE. Alabama has no
@@ -157,6 +157,10 @@ export const ALABAMA_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-K in Alabama is First Class Pre-K, the state's free, voluntary program for 4-year-olds, offered in public schools, child care centers and Head Start classrooms. Programs follow the Alabama Standards for Early Learning and Development: social and emotional growth, approaches to play and learning, language and literacy, math, science, social studies and the creative arts.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in Alabama is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 by ones and tens, and start adding and taking away within 10. Science looks at pushes and pulls, living things and weather, and social studies covers family, school and community, rules and community helpers.",
       lookFor: "Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

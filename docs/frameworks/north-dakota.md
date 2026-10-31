@@ -7,7 +7,7 @@
 ## Standards
 
 - North Dakota's content standards, published by the Department of Public Instruction on its CASE server: math (2023; `4.NO.NBT.1`; Grade 9 cites the 9-10 band, `9-10.AR.9`), English language arts (2023; `4.R.3`; Grade 9 cites `9-10.R.4`), science (2019, built on the NGSS; `4-PS3-2`, engineering `3-5-ET1-1`; middle school `MS-LS1-1` in any of Grades 6 to 8, high school `HS-LS2-1` in Grade 9) and social studies (2019, revised 2023; `H.3_5.10`; Grades 6 to 9 cite the 6-12 benchmarks, `ND.6_12.4.1`, `US.6_12.1-6.E2.3`).
-- Citations are `"CODES · text"` (`nds()` in `src/content/north-dakota/cite.ts`), checked by `src/content/north-dakota/contract.ts` against `docs/research/north-dakota/outcomes.json`. Sources are in `docs/research/north-dakota/source/`; `fetch.sh` downloads them again and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. Record: `docs/research/north-dakota/README.md`.
+- Citations are `"CODES · text"` (`nds()` in `src/content/north-dakota/cite.ts`), checked by `src/content/north-dakota/contract.ts` against `docs/research/north-dakota/outcomes.json`. Sources are in `gradelings-research/north-dakota/source/`; `fetch.sh` downloads them again and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. Record: `gradelings-research/north-dakota/README.md`.
 
 ## Content
 

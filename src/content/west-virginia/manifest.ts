@@ -18,6 +18,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.WEST_VIRGINIA_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // West Virginia: no French subject (see docs/research/west-virginia/README.md).
+  // West Virginia: no French subject (see gradelings-research/west-virginia/README.md).
   french: { immersion: [], "core-french": [] },
 });

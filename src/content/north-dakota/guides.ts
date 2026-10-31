@@ -7,7 +7,7 @@ import type { FrameworkGuides } from "../guides";
 // math lessons, not graded as a subject of their own. The assessment page covers the ND A+ Summative (English language
 // arts and math in grades 3 to 8 and 10, science in grades 4, 8 and 10) and the ACT or WorkKeys that 11th graders may
 // take (NDCC 15.1-21-19), from the Department of Public Instruction's assessment pages; dates and score scales change,
-// so the page points to the Department. No French here, so no French guide. Record: docs/research/north-dakota/README.md.
+// so the page points to the Department. No French here, so no French guide. Record: gradelings-research/north-dakota/README.md.
 
 export const NORTH_DAKOTA_GUIDES: FrameworkGuides = {
   competencies: {

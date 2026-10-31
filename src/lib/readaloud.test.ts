@@ -76,3 +76,22 @@ describe("read-aloud for sort questions", () => {
     expect(segs[1].pause).toBe(PAUSE_BEFORE_OPTIONS);
   });
 });
+
+describe("Spanish read-aloud", () => {
+  it("reads « » quotations in Spanish when a question says so, and in French otherwise", () => {
+    const es = readAloudSegments(choice("What does « gracias » mean?", { quoteLang: "es", choicesLang: undefined }));
+    expect(es.map((s) => [s.text.trim(), s.lang])).toEqual([
+      ["What does", "en"],
+      ["gracias", "es"],
+      ["mean?", "en"],
+      ["bonjour", "en"],
+      ["merci", "en"],
+    ]);
+    expect(readAloudSegments(choice("What does « merci » mean?"))[1].lang).toBe("fr");
+  });
+
+  it("reads Spanish choices in a Spanish voice", () => {
+    const segs = readAloudSegments(choice("How do you say “thank you”?", { quoteLang: "es", choicesLang: "es" }));
+    expect(segs.slice(1).every((s) => s.lang === "es")).toBe(true);
+  });
+});

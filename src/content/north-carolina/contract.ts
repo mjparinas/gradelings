@@ -1,12 +1,14 @@
-import { codeCite, research, type FrameworkContract } from "../contract";
+import { codeCite, preKCite, research, type FrameworkContract } from "../contract";
 import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
 // North Carolina's official standards (the North Carolina Standard Course of Study), built by
-// docs/research/north-carolina/build_outcomes.py.
+// gradelings-research/north-carolina/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("north-carolina/outcomes.json");
 
 export const contract: FrameworkContract = {
+  // Pre-K cites the early-learning document (docs/research/north-carolina/prek).
+  preK: preKCite("north-carolina", "North Carolina"),
   cite: codeCite(OUTCOMES, "North Carolina"),
   ownPrefix: "nc-",
   adoptsFrom: ["us-ca", "us-mn", "ca-nb", "us-al", "us-az", "ca-pe", "ca-mb", "us-tx", "us-or", "us-ny", "us-wa"],

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { COURSES } from "./all";
-import type { FrameworkContract } from "./contract";
+import { spanishCite, type FrameworkContract } from "./contract";
 import { canadianWords, localeOf, localizeUnit, questionText } from "./locale";
 import type { FrameworkManifest } from "./manifest";
 import { withSeed } from "./random";
@@ -58,7 +58,16 @@ describe.each(REGISTRY.map((m) => [m.framework.name, m] as const))("%s keeps the
   });
 
   it.runIf(contract?.cite)("cites real standards for each unit's own grade and subject", () => {
-    const wrong = units.filter(({ c }) => c.grade !== "pk").flatMap(({ c, u, key }) => contract.cite!({ grade: c.grade, subject: c.subject, unitId: u.id, standard: u.standards[m.id]! }).map((p) => `${key}: ${p}`));
+    const wrong = units.filter(({ c }) => c.grade !== "pk" && c.subject !== "spanish").flatMap(({ c, u, key }) => contract.cite!({ grade: c.grade, subject: c.subject, unitId: u.id, standard: u.standards[m.id]! }).map((p) => `${key}: ${p}`));
+    expect(wrong).toEqual([]);
+  });
+
+  it("cites its own Spanish sources for each unit of the shared Spanish course", () => {
+    // One course for every framework (src/content/spanish.ts), so one check: see spanishCite.
+    const cite = spanishCite(m.id);
+    const spanish = units.filter(({ c }) => c.subject === "spanish");
+    expect(spanish.length, `${m.id} offers Spanish in every grade from 3 to 9`).toBeGreaterThan(0);
+    const wrong = spanish.flatMap(({ c, u, key }) => cite({ grade: c.grade, subject: c.subject, unitId: u.id, standard: u.standards[m.id]! }).map((p) => `${key}: ${p}`));
     expect(wrong).toEqual([]);
   });
 

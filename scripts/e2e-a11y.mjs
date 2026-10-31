@@ -51,7 +51,7 @@ await page.getByRole("button", { name: "Stop", exact: true }).waitFor();
 await scan(page, "question");
 for (let i = 0; i < 40 && !(await vis(page.locator("[role=status]").getByRole("button"))); i++) await step(page);
 await scan(page, "feedback bar");
-for (const route of ["trophies", "shop", "stickers", "room", "practice", "map", "arcade", "treasures", "stories", "stories/wiggly-tooth"]) {
+for (const route of ["trophies", "shop", "stickers", "room", "practice", "map", "arcade", "treasures", "stories", "stories/wiggly-tooth", "facts", "facts/mul"]) {
   await page.goto(`${BASE}/play/#/${route}`);
   await scan(page, `/play/#/${route}`);
 }
@@ -63,6 +63,16 @@ await scan(page, "hub with the weekly recap card");
 await page.goto(`${BASE}/play/#/grew`);
 await page.getByRole("region", { name: "Days you practised" }).waitFor();
 await scan(page, "/play/#/grew");
+// A lesson left partway: its "Finish your lesson?" card, and picking it up again at the next question.
+await page.goto(`${BASE}/play/#/session?mode=daily&scope=mix`);
+await page.getByRole("button", { name: "Stop", exact: true }).waitFor();
+for (let i = 0; i < 40 && !(await vis(page.getByRole("button", { name: /^Next →$/ }))); i++) await step(page);
+await page.goto(`${BASE}/play/#/`);
+await page.getByTestId("resume-lesson").waitFor();
+await scan(page, "hub with the finish-your-lesson card");
+await page.getByTestId("resume-lesson").getByRole("link").click();
+await page.getByRole("progressbar", { name: "Questions answered" }).waitFor();
+if ((await page.getByRole("progressbar", { name: "Questions answered" }).getAttribute("aria-valuenow")) !== "1") throw new Error("the lesson didn't pick up at its second question");
 
 console.log("Teacher area");
 const teacher = await teacherFixture(BASE);
@@ -133,64 +143,74 @@ const bar = page.locator("[role=status]");
 let sawChoice = false;
 let done = false;
 let sawRetry = false;
-// Click the choices in order on each multiple-choice question until one question has been played
-// through a miss and then the right answer, so both feedback states and both button looks exist.
+// Which choice is right, read from the question the ChoiceQuestion component was given (its React
+// props on the first choice button's fiber), so the test can miss once and then answer right on
+// purpose. Guessing blind only gets "a miss, then right" on about 1 question in 4, so on a slow
+// runner the old loop sometimes ran out of time (October 2026). -1 when it can't tell.
+const answerIndex = () =>
+  page.evaluate(() => {
+    const first = document.querySelector('[data-testid="choice"]');
+    const key = first && Object.keys(first).find((k) => k.startsWith("__reactFiber$"));
+    for (let f = key ? first[key] : null; f; f = f.return) {
+      const q = f.memoizedProps?.q;
+      if (q && Array.isArray(q.choices) && q.answer) return q.choices.findIndex((c) => c.id === q.answer);
+    }
+    return -1;
+  });
+// Wait for the feedback bar rather than a fixed pause: on a slow runner it can take longer than 450 ms.
+const feedback = async () => {
+  await page.waitForFunction(() => /🤔|✓/.test(document.querySelector("[role=status]")?.textContent ?? ""), null, { timeout: 4000 }).catch(() => {});
+  await page.waitForTimeout(450); // and let the bar finish sliding in, so its buttons are on screen
+  return bar.innerText().catch(() => "");
+};
+// Play one multiple-choice question through a miss and then the right answer, so both feedback
+// states and both button looks exist.
 const deadline = Date.now() + 120_000;
-for (let i = 0; Date.now() < deadline && !done; i++) {
+while (Date.now() < deadline && !done) {
   // The adaptive mode pauses every 10 questions; `step` leaves that to the caller.
   const keepGoing = page.getByRole("button", { name: /Keep going/ });
   if (await vis(keepGoing)) {
     await keepGoing.click({ force: true });
     continue;
   }
-  if (!(await vis(choices.locator(":scope:not([disabled])")))) {
+  const n = await choices.count();
+  const open = n >= 2 && (await choices.locator(":scope:not([disabled])").count()) === n;
+  const right = open ? await answerIndex() : -1;
+  if (right < 0) {
+    // Not a fresh multiple-choice question: answer whatever is there and look again.
     await step(page);
     await page.waitForTimeout(100);
     continue;
   }
   sawChoice = true;
-  // Start from a different choice each question, so a miss doesn't depend on where the answer sits.
-  const n = await choices.count();
-  // Only a miss seen here counts: `step` above can answer wrongly while the next question loads,
-  // leaving a shaken choice whose "try again" bar this loop never saw.
-  let missedHere = false;
-  for (let j = 0; j < n && !done; j++) {
-    const pick = choices.nth((i + j) % n);
-    if (await pick.isDisabled()) continue;
-    await pick.click({ force: true });
-    // Wait for the feedback bar rather than a fixed pause: on a slow runner it can take longer than 450 ms.
-    await page.waitForFunction(() => /🤔|✓/.test(document.querySelector("[role=status]")?.textContent ?? ""), null, { timeout: 4000 }).catch(() => {});
-    await page.waitForTimeout(450); // and let the bar finish sliding in, so its buttons are on screen
-    const text = await bar.innerText().catch(() => "");
-    if (text.includes("🤔")) {
-      // A miss: "try again" must be an icon and words, not just orange.
-      if (!sawRetry) {
-        check(/\w{3,}/.test(text.replace("OK", "")), "'try again' bar has an icon and words, not just orange");
-        await shootAll(page, cdp, SHOTS, "feedback-retry");
-      }
-      sawRetry = true;
-      missedHere = true;
-      await bar.getByRole("button", { name: "OK", exact: true }).click({ force: true });
-      // Wait for the retry bar to unmount and the remaining choices to unlock before
-      // attempting the next answer. Playwright's click can resolve before React commits.
-      await bar.waitFor({ state: "detached" });
-      await choices.locator(":scope:not([disabled])").first().waitFor({ state: "visible" });
-    } else if (text.includes("✓")) {
-      // The "correct" bar carries a tick as well as turning green (that is how we got here).
-      const missed = page.locator('[data-testid="choice"].animate-shake');
-      if (!missedHere || !(await missed.count())) break; // right first time: nothing to compare with, next question
-      await shootAll(page, cdp, SHOTS, "feedback-correct");
-      check(/✓/.test(await pick.innerText()), "the right answer has a tick as well as turning green");
-      const [good, bad] = await Promise.all([pick.evaluate(visibleColour), missed.first().evaluate(visibleColour)]);
-      for (const type of DEFICIENCIES) {
-        const ratio = contrastAs(good, bad, type);
-        check(ratio >= 1.3, `right and missed answers differ in lightness as seen with ${type} (${ratio.toFixed(2)}:1)`);
-      }
-      done = true;
-    } else {
-      break; // the answer was revealed after two misses; move on
-    }
+  const wrong = choices.nth(right === 0 ? 1 : 0);
+  await wrong.click({ force: true });
+  const missText = await feedback();
+  if (!missText.includes("🤔")) {
+    await step(page); // something else answered; move on
+    continue;
   }
+  // A miss: "try again" must be an icon and words, not just orange.
+  check(/\w{3,}/.test(missText.replace("OK", "")), "'try again' bar has an icon and words, not just orange");
+  await shootAll(page, cdp, SHOTS, "feedback-retry");
+  sawRetry = true;
+  await bar.getByRole("button", { name: "OK", exact: true }).click({ force: true });
+  // Wait for the retry bar to unmount and the remaining choices to unlock before
+  // answering again. Playwright's click can resolve before React commits.
+  await bar.waitFor({ state: "detached" });
+  const pick = choices.nth(right);
+  await pick.waitFor({ state: "visible" });
+  await pick.click({ force: true });
+  await feedback();
+  const missed = page.locator('[data-testid="choice"].animate-shake');
+  await shootAll(page, cdp, SHOTS, "feedback-correct");
+  check(/✓/.test(await pick.innerText()), "the right answer has a tick as well as turning green");
+  const [good, bad] = await Promise.all([pick.evaluate(visibleColour), missed.first().evaluate(visibleColour)]);
+  for (const type of DEFICIENCIES) {
+    const ratio = contrastAs(good, bad, type);
+    check(ratio >= 1.3, `right and missed answers differ in lightness as seen with ${type} (${ratio.toFixed(2)}:1)`);
+  }
+  done = true;
 }
 check(sawChoice && sawRetry && done, `played a multiple-choice question through a miss and a right answer (saw a choice: ${sawChoice}, a miss: ${sawRetry}, then the right answer: ${done})`);
 await cdp.send("Emulation.setEmulatedVisionDeficiency", { type: "none" });

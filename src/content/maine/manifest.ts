@@ -5,6 +5,7 @@ export const manifest = defineFramework({
   id: "us-me",
   framework: MAINE,
   grades: {
+    pk: () => import("./pk"),
     k: () => import("./k"),
     "1": () => import("./g1"),
     "2": () => import("./g2"),
@@ -18,6 +19,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.MAINE_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Maine: no French subject (see docs/research/maine/README.md).
+  // Maine: no French subject (see gradelings-research/maine/README.md).
   french: { immersion: [], "core-french": [] },
 });

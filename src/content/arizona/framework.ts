@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Arizona. Standards are the Arizona Department of Education's (ADE) Arizona Academic Standards: Mathematics (2016, cited
 // "4.NBT.A.1", Algebra 1 "A1.A-SSE.A.1"; the January 2025 update only marks the essential standards) and English Language
@@ -66,9 +67,9 @@ export const ARIZONA: Framework = {
   standardLabel: "Learning standard",
   sourceName: "Arizona Department of Education",
   sourceUrl: "https://www.azed.gov/standards-practices",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Arizona report cards",
     intro:

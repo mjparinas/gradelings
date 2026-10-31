@@ -71,6 +71,7 @@ const answers = () => h.log.mock.calls.flatMap((c) => c[0]).filter((e: { type: s
 const click = (name: string | RegExp) => userEvent.click(screen.getByRole("button", { name }));
 
 beforeEach(() => {
+  localStorage.clear();
   h.log.mockClear();
   h.go.mockClear();
   h.settings = {};
@@ -257,5 +258,72 @@ describe("Session answer flow", () => {
     expect(screen.getByText("Every answer you gave is already saved.")).toBeInTheDocument();
     await userEvent.click(screen.getAllByRole("button", { name: "Stop" }).at(-1)!);
     expect(h.go).toHaveBeenCalledWith("/");
+  });
+});
+
+describe("finishing a lesson later", () => {
+  const saved = () => JSON.parse(localStorage.getItem("grademap.resume.p1") ?? "null");
+
+  it("keeps the lesson's place after each answer", async () => {
+    h.plan = makePlan({ total: 4 });
+    start();
+    await click("Yes");
+    expect(saved()).toMatchObject({ mode: "practice", scope: "math-1", title: "Practice", icon: "✏️", results: [true], total: 4 });
+    await click(/next/i);
+    await click("No");
+    await click("Nope");
+    expect(saved().results).toEqual([true, false]);
+  });
+
+  it("forgets it once the lesson ends", async () => {
+    h.plan = makePlan({ total: 2 });
+    start();
+    await click("Yes");
+    expect(saved()).not.toBeNull();
+    await click(/next/i);
+    await click("Yes");
+    expect(saved()).toBeNull();
+  });
+
+  it("forgets it when the child taps Stop", async () => {
+    h.plan = makePlan({ total: 4 });
+    start();
+    await click("Yes");
+    await click("Stop");
+    await userEvent.click(screen.getAllByRole("button", { name: "Stop" }).at(-1)!);
+    expect(saved()).toBeNull();
+  });
+
+  it("picks up at the next question with the answers so far still counted", async () => {
+    h.plan = makePlan({ total: 4 });
+    localStorage.setItem(
+      "grademap.resume.p1",
+      JSON.stringify({ mode: "practice", scope: "math-1", title: "Practice", icon: "✏️", results: [true, false, true], total: 4, ms: 30_000, at: Date.now() - 1000 }),
+    );
+    render(<Session mode="practice" scope="math-1" resume />);
+    expect(screen.getByText("Question number 4")).toBeInTheDocument();
+    expect(screen.getByRole("progressbar", { name: "Questions answered" })).toHaveAttribute("aria-valuenow", "3");
+    await click("Yes");
+    await click(/finish|next|done/i);
+    const session = h.log.mock.calls.flatMap((c) => c[0]).find((e: { type: string }) => e.type === "session");
+    expect(session).toMatchObject({ total: 4, correct: 3 });
+    expect(saved()).toBeNull();
+  });
+
+  it("starts from the beginning without the resume link, or when the saved lesson is a different one", () => {
+    localStorage.setItem(
+      "grademap.resume.p1",
+      JSON.stringify({ mode: "practice", scope: "math-2", title: "Other", icon: "✏️", results: [true], total: 4, ms: 0, at: Date.now() }),
+    );
+    h.plan = makePlan({ total: 4 });
+    render(<Session mode="practice" scope="math-1" resume />);
+    expect(screen.getByText("Question number 1")).toBeInTheDocument();
+  });
+
+  it("doesn't keep a place in endless or timed modes", async () => {
+    h.plan = makePlan({ mode: "adventure", scope: "mix", total: undefined, checkpoint: 10 });
+    render(<Session mode="adventure" scope="mix" />);
+    await click("Yes");
+    expect(saved()).toBeNull();
   });
 });

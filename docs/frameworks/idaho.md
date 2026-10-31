@@ -1,6 +1,6 @@
 # Idaho
 
-Sources, codes and the checking record are in `docs/research/idaho/README.md`.
+Sources, codes and the checking record are in `gradelings-research/idaho/README.md`.
 
 ## Framework
 

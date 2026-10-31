@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Pennsylvania, a US state. Standards are the Pennsylvania Department of Education's academic standards: the PA Core
 // Standards for mathematics and for English language arts, the Pennsylvania Integrated Standards for Science, Environment,
@@ -75,9 +76,9 @@ export const PENNSYLVANIA: Framework = {
   standardLabel: "Standard",
   sourceName: "Pennsylvania Department of Education",
   sourceUrl: "https://www.pa.gov/agencies/education",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Pennsylvania report cards",
     intro:

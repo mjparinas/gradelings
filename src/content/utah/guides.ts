@@ -8,7 +8,7 @@ import type { FrameworkGuides } from "../guides";
 // assessment page covers RISE (English language arts and math in grades 3 to 10, science in grades 4 to 10 and writing
 // in grades 5 and 8; USBE family guides, June 2026) and the Acadience Reading and Math checks in the early grades.
 // Dates change each year, so the page points to the Utah State Board of Education. No French here, so no French guide.
-// Record: docs/research/utah/README.md.
+// Record: gradelings-research/utah/README.md.
 
 export const UTAH_GUIDES: FrameworkGuides = {
   competencies: {

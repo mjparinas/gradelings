@@ -1,5 +1,5 @@
 import type { Currency } from "@/content/money";
-import type { Choice, Visual } from "@/content/types";
+import type { Choice, QuestionLanguage, Visual } from "@/content/types";
 
 // Live questions in class (teacher asks, students tap an answer). Shared by the server, the teacher
 // area and the kids' app. Live questions are online only; practice keeps working offline beside them.
@@ -8,9 +8,11 @@ import type { Choice, Visual } from "@/content/types";
 export interface LiveQuestionData {
   prompt: string;
   speak?: string;
-  lang?: "fr";
-  choicesLang?: "fr";
-  visualLang?: "fr";
+  lang?: QuestionLanguage;
+  choicesLang?: QuestionLanguage;
+  visualLang?: QuestionLanguage;
+  /** The language of « » quotations in an English prompt (Spanish questions); French when left out. */
+  quoteLang?: QuestionLanguage;
   visual?: Visual;
   currency?: Currency;
   hint: string;

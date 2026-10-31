@@ -1,0 +1,186 @@
+{
+ "pk/math": [
+  {
+   "idx": "Mathematics 1.1",
+   "text": "Demonstrates understanding of counting and cardinality."
+  },
+  {
+   "idx": "Mathematics 1.2",
+   "text": "Identifies and uses common shapes and concepts about position."
+  },
+  {
+   "idx": "Mathematics 1.3",
+   "text": "Uses the attributes of objects for comparison and patterning."
+  },
+  {
+   "idx": "Mathematics 1.4",
+   "text": "Describes and compares measurable attributes of objects."
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "Language and Early Literacy 1.1",
+   "text": "Attends and responds to nonverbal and verbal communication of others in a variety of situations."
+  },
+  {
+   "idx": "Language and Early Literacy 2.1",
+   "text": "Uses non-verbal communication for a variety of purposes."
+  },
+  {
+   "idx": "Language and Early Literacy 2.2",
+   "text": "Uses language (verbal, signed, symbolic) for a variety of purposes."
+  },
+  {
+   "idx": "Language and Early Literacy 2.3",
+   "text": "Communicates with increasing clarity and use of conventional grammar."
+  },
+  {
+   "idx": "Language and Early Literacy 3.1",
+   "text": "Listens to and/or responds to a variety of literacy-related experiences with interest and engagement."
+  },
+  {
+   "idx": "Language and Early Literacy 3.2",
+   "text": "Shows interest in and understanding of the basic concepts and conventions of print."
+  },
+  {
+   "idx": "Language and Early Literacy 3.3",
+   "text": "Demonstrates knowledge of the alphabet."
+  },
+  {
+   "idx": "Language and Early Literacy 3.4",
+   "text": "Demonstrates emergent phonological awareness, including early phonemic awareness."
+  },
+  {
+   "idx": "Language and Early Literacy 3.5",
+   "text": "Draws meaning and recalls information from pictures, print, and text that is read to them."
+  },
+  {
+   "idx": "Language and Early Literacy 3.6",
+   "text": "Tells and retells a story."
+  },
+  {
+   "idx": "Language and Early Literacy 4.1",
+   "text": "Recognizes that the purpose of writing is communication."
+  },
+  {
+   "idx": "Language and Early Literacy 4.2",
+   "text": "Produces marks, symbols, letters and/or words to represent ideas."
+  },
+  {
+   "idx": "Language and Early Literacy 4.3",
+   "text": "Explores the physical aspect of writing."
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "Science 1.1",
+   "text": "Observes and compares observable phenomena (objects, materials, plants, animals, and events)."
+  },
+  {
+   "idx": "Science 1.2",
+   "text": "Uses a variety of tools to explore the environment."
+  },
+  {
+   "idx": "Science 1.3",
+   "text": "Uses aspects of the scientific process to learn about the world."
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "Approaches to Learning 1.1",
+   "text": "Maintains focus and sustains attention."
+  },
+  {
+   "idx": "Approaches to Learning 1.2",
+   "text": "Persists at challenging tasks."
+  },
+  {
+   "idx": "Approaches to Learning 1.3",
+   "text": "Makes a plan and engages in the planned activity or project to completion."
+  },
+  {
+   "idx": "Approaches to Learning 2.1",
+   "text": "Uses creative approaches for learning."
+  },
+  {
+   "idx": "Approaches to Learning 2.2",
+   "text": "Uses imagination in play and interactions with others."
+  },
+  {
+   "idx": "Approaches to Learning 3.1",
+   "text": "Explores a wide range of topics, ideas, and interests."
+  },
+  {
+   "idx": "Approaches to Learning 3.2",
+   "text": "Initiates explorations, investigations, and interactions."
+  },
+  {
+   "idx": "Approaches to Learning 4.1",
+   "text": "Takes risks and attempts new experiences that are challenging."
+  },
+  {
+   "idx": "Approaches to Learning 4.2",
+   "text": "Demonstrates flexibility in solving problems and accomplishing tasks."
+  },
+  {
+   "idx": "Health/Mental Wellness 1.1",
+   "text": "Demonstrates knowledge and skills that contribute to healthy lifestyles."
+  },
+  {
+   "idx": "Health/Mental Wellness 1.2",
+   "text": "Demonstrates knowledge and skills needed to participate successfully in groups."
+  },
+  {
+   "idx": "Health/Mental Wellness 1.3",
+   "text": "Demonstrates the ability to participate in classroom activities and follow classroom rules."
+  },
+  {
+   "idx": "Health/Mental Wellness 1.4",
+   "text": "Demonstrates self-identity and sense of self."
+  },
+  {
+   "idx": "Health/Mental Wellness 1.5",
+   "text": "Uses a variety of strategies to solve social problems and conflicts with guidance."
+  },
+  {
+   "idx": "Health/Mental Wellness 1.6",
+   "text": "Follows through to complete an activity or achieve a goal."
+  },
+  {
+   "idx": "Science 1.1",
+   "text": "Observes and compares observable phenomena (objects, materials, plants, animals, and events)."
+  },
+  {
+   "idx": "Science 1.2",
+   "text": "Uses a variety of tools to explore the environment."
+  },
+  {
+   "idx": "Science 1.3",
+   "text": "Uses aspects of the scientific process to learn about the world."
+  },
+  {
+   "idx": "Social Studies 1.1",
+   "text": "Differentiates between events that happen in the past, present, and future."
+  },
+  {
+   "idx": "Social Studies 1.2",
+   "text": "Identifies important physical features in the environment and uses them to describe and navigate surroundings."
+  },
+  {
+   "idx": "Social Studies 1.3",
+   "text": "Shows an awareness of fundamental economic concepts."
+  },
+  {
+   "idx": "Social Studies 1.4",
+   "text": "Contributes as a member of the classroom community or group by following rules."
+  },
+  {
+   "idx": "Social Studies 1.5",
+   "text": "Demonstrates understanding of roles and relationships within families and the community."
+  },
+  {
+   "idx": "Social Studies 1.6",
+   "text": "Identifies and respects similarities and differences among familiar people and their cultural traditions."
+  }
+ ]
+}

@@ -1,6 +1,8 @@
 // Puts the Piper read-aloud files in public/piper/{version}/ so the site serves them itself:
 // the speech engine is copied from node_modules, and the voices are downloaded from our own
-// GitHub release (`piper-voices-{version}`, copied from rhasspy/piper-voices) and checked by sha256. Files already in place are kept, so
+// GitHub release (`piper-voices-{version}`, copied from rhasspy/piper-voices) and checked by sha256. A voice with its own
+// `source` comes from there instead (a pinned rhasspy/piper-voices revision), and an `optional` voice that can't be
+// downloaded is left out of files.json (the app reads that language with the device voice) instead of failing the build. Files already in place are kept, so
 // it only downloads once. Runs before `next dev` and `next build` (see package.json).
 //
 //   node scripts/fetch-piper.mjs             fails if a voice can't be downloaded
@@ -33,11 +35,12 @@ for (const [name, from] of Object.entries(manifest.engine)) {
 let failed = false;
 for (const [lang, voice] of Object.entries(manifest.voices)) {
   list.voices[lang] = {};
+  let missing = false;
   for (const [name, hash] of Object.entries(voice.files)) {
     const dest = path.join(OUT, name);
     if (!(fs.existsSync(dest) && sha256(dest) === hash)) {
       try {
-        const res = await fetch(manifest.voiceSource + name);
+        const res = await fetch((voice.source ?? manifest.voiceSource) + name);
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const bytes = Buffer.from(await res.arrayBuffer());
         const got = createHash("sha256").update(bytes).digest("hex");
@@ -46,12 +49,16 @@ for (const [lang, voice] of Object.entries(manifest.voices)) {
         console.log(`fetch-piper: downloaded ${name} (${(bytes.length / 1e6).toFixed(1)} MB)`);
       } catch (e) {
         console.error(`fetch-piper: could not download ${name}: ${e instanceof Error ? e.message : e}`);
-        failed = true;
+        missing = true;
         continue;
       }
     }
     list.voices[lang][name] = fs.statSync(dest).size;
   }
+  if (missing && voice.optional) {
+    console.warn(`fetch-piper: the ${lang} voice is left out; read-aloud uses the device voice for it`);
+    delete list.voices[lang];
+  } else if (missing) failed = true;
 }
 
 if (failed) {

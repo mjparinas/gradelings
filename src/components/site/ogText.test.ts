@@ -77,7 +77,8 @@ describe("share cards", () => {
       }
     }
     expect(asked / total).toBeGreaterThan(0.6);
-  });
+    // Every unit page of every framework: as slow as the other whole-library sweeps, so it gets their time limit.
+  }, 120_000);
 
   it("asks \"Can your Grade 4 solve this?\" on a grade's pages, math first, the same on every build", () => {
     const card = gradeQuestionCard({ framework: "bc", grade: "grade-4" });

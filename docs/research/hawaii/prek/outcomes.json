@@ -1,0 +1,734 @@
+{
+ "pk/math": [
+  {
+   "idx": "GK.KE.a",
+   "text": "Verbally count to 20 by ones"
+  },
+  {
+   "idx": "GK.KE.b",
+   "text": "Demonstrate ability to count in sequence"
+  },
+  {
+   "idx": "GK.KE.c",
+   "text": "Recognize and name written numerals to 10"
+  },
+  {
+   "idx": "GK.KE.d",
+   "text": "Count many kinds of concrete objects and actions up to 10 using one-to-one correspondence"
+  },
+  {
+   "idx": "GK.KE.e",
+   "text": "Count as many as 7 things in a scattered configuration with no errors"
+  },
+  {
+   "idx": "GK.KE.f",
+   "text": "Recognize, create, and repeat simple patterns"
+  },
+  {
+   "idx": "GK.KE.g",
+   "text": "Use a range of strategies (e.g. counting, subtracting, matching) to compare quantity in two sets of objects and describe the comparison with terms, such as more/less, greater than/fewer/equal to"
+  },
+  {
+   "idx": "GK.KE.h",
+   "text": "Recognize the attributes of length, area, weight, and capacity of everyday objects, and use appropriate vocabulary (e.g. long, short, light, big, small, wide, narrow)"
+  },
+  {
+   "idx": "GK.KE.i",
+   "text": "Compare the attributes of length and weight for two objects including: larger/shorter/same length, heavier/lighter/same, more/less/same"
+  },
+  {
+   "idx": "GK.KE.j",
+   "text": "Sort, classify, and serialize objects using attributes, such as color, shape, or size"
+  },
+  {
+   "idx": "GK.KE.k",
+   "text": "Use positional words to describe an object's location (e.g. up, down, above, under, inside, outside)"
+  },
+  {
+   "idx": "GK.KE.l",
+   "text": "Recognize and name common shapes, their parts and attributes"
+  },
+  {
+   "idx": "GK.KE.m",
+   "text": "Create and represent three-dimensional shapes (e.g. ball/sphere, square/box/cube, tube/cylinder using various manipulative materials)"
+  },
+  {
+   "idx": "GK.KE.n",
+   "text": "Use the senses and tools, including technology, to gather information, investigate materials, and observe processes and relationships"
+  },
+  {
+   "idx": "GK.KE.o",
+   "text": "Make predictions about changes in materials or objects based on past experience"
+  },
+  {
+   "idx": "GK.KE.p",
+   "text": "With adult assistance, ask and seek out answers to questions about objects and events"
+  },
+  {
+   "idx": "GK.KE.r",
+   "text": "Explore different kinds of matter (e.g. wood, metal, water) and describe by observing properties (e.g. visual, aural, textural)"
+  },
+  {
+   "idx": "GK.KE.s",
+   "text": "Explore and describe various actions that can change an object’s motion, such as pulling, pushing, twisting, rolling, and throwing"
+  },
+  {
+   "idx": "GK.KE.t",
+   "text": "Investigate, describe, and compare the characteristics that differentiate living from non-living things"
+  },
+  {
+   "idx": "GK.KE.v",
+   "text": "Observe and describe ways in which many plants and animals resemble their parents"
+  },
+  {
+   "idx": "GK.KE.w",
+   "text": "Describe and anticipate weather changes"
+  },
+  {
+   "idx": "GK.KE.x",
+   "text": "Name any celestial object seen in the day or night sky"
+  },
+  {
+   "idx": "GK.KE.y",
+   "text": "With adult assistance, recognize examples of technologies (e.g. knife, pencil, computer, pencil sharpener, refrigerator) at home or in the classroom"
+  },
+  {
+   "idx": "GK.KE.u",
+   "text": "Observe and describe plants and animals as they go through predictable life cycles"
+  },
+  {
+   "idx": "GK.KE.z",
+   "text": "Recognize calendars and simple timelines"
+  },
+  {
+   "idx": "GK.KE.aa",
+   "text": "Construct and describe simple maps of the classroom or home"
+  },
+  {
+   "idx": "GK.KE.bb",
+   "text": "Engage in activities that build understanding of words for locations and direction"
+  },
+  {
+   "idx": "GK.KE.dd",
+   "text": "Identify people's basic needs and explain how they fulfill them"
+  },
+  {
+   "idx": "GK.KE.ee",
+   "text": "Identify buyers and sellers"
+  },
+  {
+   "idx": "GK.KE.ff",
+   "text": "Identify one or two workers, and their jobs in the community"
+  },
+  {
+   "idx": "GK.KE.gg",
+   "text": "Use self-identifying information (e.g. name, age) in situations outside the classroom"
+  },
+  {
+   "idx": "GK.KE.hh",
+   "text": "Talk about, compare, and explore similarities and differences in daily practices across cultures"
+  },
+  {
+   "idx": "GK.KE.ii",
+   "text": "Describe texture, color, and shape in artwork"
+  },
+  {
+   "idx": "GK.KE.jj",
+   "text": "Explore a variety of age-appropriate materials and media to create two-and three-dimensional artwork"
+  },
+  {
+   "idx": "GK.KE.kk",
+   "text": "Express an opinion about a work of art"
+  },
+  {
+   "idx": "GK.KE.ll",
+   "text": "Explore how color can convey mood and emotion"
+  },
+  {
+   "idx": "GK.KE.mm",
+   "text": "Play instruments using different beats, tempos, dynamics, and interpretation"
+  },
+  {
+   "idx": "GK.KE.nn",
+   "text": "Sing a variety of songs with repetitive phrases and rhythmic patterns independently and with others"
+  },
+  {
+   "idx": "GK.KE.oo",
+   "text": "Sing songs varying voice and sounds (e.g. high and low, short and long, loud and soft, or fast and slow)"
+  },
+  {
+   "idx": "GK.KE.pp",
+   "text": "Identify one source of music that can be heard in daily life"
+  },
+  {
+   "idx": "GK.KE.qq",
+   "text": "Use body, energy, space, and time to move in a few different ways"
+  },
+  {
+   "idx": "GK.KE.rr",
+   "text": "Express self freely through movement"
+  },
+  {
+   "idx": "GK.KE.ss",
+   "text": "Create characters through physical movement, gesture, sound, speech, and facial expressions"
+  },
+  {
+   "idx": "GK.KE.tt",
+   "text": "Develop audience skills by observing performances or artists at work in various aspects of the Arts"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "AL/LA.KE.a",
+   "text": "Show eagerness to learn about a variety of topics and ideas"
+  },
+  {
+   "idx": "AL/LA.KE.d",
+   "text": "Begin to think problems through, considering several possibilities and analyzing results"
+  },
+  {
+   "idx": "AL/LA.KE.f",
+   "text": "Use knowledge of everyday experiences to apply to a new situation"
+  },
+  {
+   "idx": "AL/LA.KE.h",
+   "text": "Experiment with a variety of writing tools and surfaces"
+  },
+  {
+   "idx": "LA.KE.c",
+   "text": "Identify story-related problems, events, and resolutions during conversations with adult"
+  },
+  {
+   "idx": "LA.KE.g",
+   "text": "With adult assistance, retell a simple story in sequence"
+  },
+  {
+   "idx": "LA.KE.i",
+   "text": "Identify characters and recall major events in a story"
+  },
+  {
+   "idx": "LA.KE.j",
+   "text": "Respond appropriately to statements, questions, vocabulary, and stories"
+  },
+  {
+   "idx": "LA.KE.k",
+   "text": "Begin to demonstrate an understanding of the differences between fantasy and reality"
+  },
+  {
+   "idx": "LA.KE.l",
+   "text": "Know some features of a book (e.g. title, author, illustrator)"
+  },
+  {
+   "idx": "LA.KE.m",
+   "text": "Pretend to read, using intonation and referring to images in the illustrations"
+  },
+  {
+   "idx": "LA.KE.o",
+   "text": "Identify factual information and events during conversations with adult"
+  },
+  {
+   "idx": "LA.KE.p",
+   "text": "Listen actively as an individual and as a member of a group to a variety of age-appropriate informational texts read aloud"
+  },
+  {
+   "idx": "LA.KE.q",
+   "text": "Practice tracking from top to bottom and left to right with scaffolding"
+  },
+  {
+   "idx": "LA.KE.r",
+   "text": "Identify parts of a book (e.g. front cover, back cover, spine)"
+  },
+  {
+   "idx": "LA.KE.s",
+   "text": "Show understanding that sequence of letters represents a sequence of spoken sounds (e.g. asks how to spell a word)"
+  },
+  {
+   "idx": "LA.KE.t",
+   "text": "With adult assistance, segment words in a simple sentence by clapping and naming number of words in a sentence"
+  },
+  {
+   "idx": "LA.KE.u",
+   "text": "Recognize and name 10 upper-and lower-case letters"
+  },
+  {
+   "idx": "LA.KE.v",
+   "text": "With adult assistance, generate rhyming words"
+  },
+  {
+   "idx": "LA.KE.w",
+   "text": "Clap out the syllables in own name"
+  },
+  {
+   "idx": "LA.KE.x",
+   "text": "With adult assistance, match the initial sound of spoken words"
+  },
+  {
+   "idx": "LA.KE.y",
+   "text": "Associate three or more letters with their sounds"
+  },
+  {
+   "idx": "LA.KE.z",
+   "text": "Identify some letters in own name"
+  },
+  {
+   "idx": "LA.KE.aa",
+   "text": "Recognize and “read” familiar words or environmental print"
+  },
+  {
+   "idx": "LA.KE.bb",
+   "text": "Add detail to drawings and other products with simple descriptive words, letters or letter forms"
+  },
+  {
+   "idx": "LA.KE.cc",
+   "text": "Plan and then use drawings, constructions, movements, and dramatizations to represent ideas"
+  },
+  {
+   "idx": "LA.KE.dd",
+   "text": "Tell detailed stories that refer to other times and places"
+  },
+  {
+   "idx": "LA.KE.ee",
+   "text": "Begin to use sound spelling (e.g. uses initial sound of words to write words, writes several sounds heard in words)"
+  },
+  {
+   "idx": "LA.KE.ff",
+   "text": "Recall three or four items removed from view"
+  },
+  {
+   "idx": "LA.KE.gg",
+   "text": "Listen and respond attentively to conversations (e.g. engages in at least three exchanges, poses questions and listens to the ideas of others, shares experiences when asked)"
+  },
+  {
+   "idx": "LA.KE.hh",
+   "text": "Be understood by most adults and peers"
+  },
+  {
+   "idx": "LA.KE.ii",
+   "text": "Use a variety of nouns, verbs, and descriptive phrases in meaningful contexts (vocabulary)"
+  },
+  {
+   "idx": "LA.KE.jj",
+   "text": "Use a variety of sentence structures from simple to more complex in meaningful contexts (sentence structure)"
+  },
+  {
+   "idx": "LA.KE.kk",
+   "text": "Describe and tell the use of many familiar items"
+  },
+  {
+   "idx": "LA.KE.ll",
+   "text": "With adult assistance, use word relationships to sort, classify, and serialize objects using attributes such as color, shape, or size"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "GK.KE.a",
+   "text": "Verbally count to 20 by ones"
+  },
+  {
+   "idx": "GK.KE.b",
+   "text": "Demonstrate ability to count in sequence"
+  },
+  {
+   "idx": "GK.KE.c",
+   "text": "Recognize and name written numerals to 10"
+  },
+  {
+   "idx": "GK.KE.d",
+   "text": "Count many kinds of concrete objects and actions up to 10 using one-to-one correspondence"
+  },
+  {
+   "idx": "GK.KE.e",
+   "text": "Count as many as 7 things in a scattered configuration with no errors"
+  },
+  {
+   "idx": "GK.KE.f",
+   "text": "Recognize, create, and repeat simple patterns"
+  },
+  {
+   "idx": "GK.KE.g",
+   "text": "Use a range of strategies (e.g. counting, subtracting, matching) to compare quantity in two sets of objects and describe the comparison with terms, such as more/less, greater than/fewer/equal to"
+  },
+  {
+   "idx": "GK.KE.h",
+   "text": "Recognize the attributes of length, area, weight, and capacity of everyday objects, and use appropriate vocabulary (e.g. long, short, light, big, small, wide, narrow)"
+  },
+  {
+   "idx": "GK.KE.i",
+   "text": "Compare the attributes of length and weight for two objects including: larger/shorter/same length, heavier/lighter/same, more/less/same"
+  },
+  {
+   "idx": "GK.KE.j",
+   "text": "Sort, classify, and serialize objects using attributes, such as color, shape, or size"
+  },
+  {
+   "idx": "GK.KE.k",
+   "text": "Use positional words to describe an object's location (e.g. up, down, above, under, inside, outside)"
+  },
+  {
+   "idx": "GK.KE.l",
+   "text": "Recognize and name common shapes, their parts and attributes"
+  },
+  {
+   "idx": "GK.KE.m",
+   "text": "Create and represent three-dimensional shapes (e.g. ball/sphere, square/box/cube, tube/cylinder using various manipulative materials)"
+  },
+  {
+   "idx": "GK.KE.n",
+   "text": "Use the senses and tools, including technology, to gather information, investigate materials, and observe processes and relationships"
+  },
+  {
+   "idx": "GK.KE.o",
+   "text": "Make predictions about changes in materials or objects based on past experience"
+  },
+  {
+   "idx": "GK.KE.p",
+   "text": "With adult assistance, ask and seek out answers to questions about objects and events"
+  },
+  {
+   "idx": "GK.KE.r",
+   "text": "Explore different kinds of matter (e.g. wood, metal, water) and describe by observing properties (e.g. visual, aural, textural)"
+  },
+  {
+   "idx": "GK.KE.s",
+   "text": "Explore and describe various actions that can change an object’s motion, such as pulling, pushing, twisting, rolling, and throwing"
+  },
+  {
+   "idx": "GK.KE.t",
+   "text": "Investigate, describe, and compare the characteristics that differentiate living from non-living things"
+  },
+  {
+   "idx": "GK.KE.v",
+   "text": "Observe and describe ways in which many plants and animals resemble their parents"
+  },
+  {
+   "idx": "GK.KE.w",
+   "text": "Describe and anticipate weather changes"
+  },
+  {
+   "idx": "GK.KE.x",
+   "text": "Name any celestial object seen in the day or night sky"
+  },
+  {
+   "idx": "GK.KE.y",
+   "text": "With adult assistance, recognize examples of technologies (e.g. knife, pencil, computer, pencil sharpener, refrigerator) at home or in the classroom"
+  },
+  {
+   "idx": "GK.KE.u",
+   "text": "Observe and describe plants and animals as they go through predictable life cycles"
+  },
+  {
+   "idx": "GK.KE.z",
+   "text": "Recognize calendars and simple timelines"
+  },
+  {
+   "idx": "GK.KE.aa",
+   "text": "Construct and describe simple maps of the classroom or home"
+  },
+  {
+   "idx": "GK.KE.bb",
+   "text": "Engage in activities that build understanding of words for locations and direction"
+  },
+  {
+   "idx": "GK.KE.dd",
+   "text": "Identify people's basic needs and explain how they fulfill them"
+  },
+  {
+   "idx": "GK.KE.ee",
+   "text": "Identify buyers and sellers"
+  },
+  {
+   "idx": "GK.KE.ff",
+   "text": "Identify one or two workers, and their jobs in the community"
+  },
+  {
+   "idx": "GK.KE.gg",
+   "text": "Use self-identifying information (e.g. name, age) in situations outside the classroom"
+  },
+  {
+   "idx": "GK.KE.hh",
+   "text": "Talk about, compare, and explore similarities and differences in daily practices across cultures"
+  },
+  {
+   "idx": "GK.KE.ii",
+   "text": "Describe texture, color, and shape in artwork"
+  },
+  {
+   "idx": "GK.KE.jj",
+   "text": "Explore a variety of age-appropriate materials and media to create two-and three-dimensional artwork"
+  },
+  {
+   "idx": "GK.KE.kk",
+   "text": "Express an opinion about a work of art"
+  },
+  {
+   "idx": "GK.KE.ll",
+   "text": "Explore how color can convey mood and emotion"
+  },
+  {
+   "idx": "GK.KE.mm",
+   "text": "Play instruments using different beats, tempos, dynamics, and interpretation"
+  },
+  {
+   "idx": "GK.KE.nn",
+   "text": "Sing a variety of songs with repetitive phrases and rhythmic patterns independently and with others"
+  },
+  {
+   "idx": "GK.KE.oo",
+   "text": "Sing songs varying voice and sounds (e.g. high and low, short and long, loud and soft, or fast and slow)"
+  },
+  {
+   "idx": "GK.KE.pp",
+   "text": "Identify one source of music that can be heard in daily life"
+  },
+  {
+   "idx": "GK.KE.qq",
+   "text": "Use body, energy, space, and time to move in a few different ways"
+  },
+  {
+   "idx": "GK.KE.rr",
+   "text": "Express self freely through movement"
+  },
+  {
+   "idx": "GK.KE.ss",
+   "text": "Create characters through physical movement, gesture, sound, speech, and facial expressions"
+  },
+  {
+   "idx": "GK.KE.tt",
+   "text": "Develop audience skills by observing performances or artists at work in various aspects of the Arts"
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "PHM/GK.KE.q",
+   "text": "Discuss examples of authority, rules, fairness, and personal responsibilities in own experiences and in stories read to him/her"
+  },
+  {
+   "idx": "SE.KE.a",
+   "text": "Sometimes use appropriate social conventions in greetings, introductions, and conversations"
+  },
+  {
+   "idx": "SE.KE.c",
+   "text": "Use turn-taking in conversations and in play"
+  },
+  {
+   "idx": "SE.KE.d",
+   "text": "Share materials, toys, and ideas during play"
+  },
+  {
+   "idx": "SE.KE.e",
+   "text": "Show respect and recognize the feelings of others and the causes of their reactions"
+  },
+  {
+   "idx": "SE.KE.f",
+   "text": "Follow schedule and typical classroom routines (e.g. comes when called, sits attentively at circle, participates in clean-up)"
+  },
+  {
+   "idx": "SE.KE.g",
+   "text": "Show satisfaction in accomplishments"
+  },
+  {
+   "idx": "SE.KE.i",
+   "text": "Regulate emotions and begin to show self-control in handling frustration and disappointment"
+  },
+  {
+   "idx": "SE.KE.j",
+   "text": "Express emotions through socially appropriate actions and words"
+  },
+  {
+   "idx": "SE.KE.k",
+   "text": "Communicate personal experiences or interests"
+  },
+  {
+   "idx": "SE.KE.l",
+   "text": "Recognize and describe own feelings"
+  },
+  {
+   "idx": "SE.KE.h",
+   "text": "Follow routines for care of own belongings and school supplies"
+  },
+  {
+   "idx": "AL.KE.c",
+   "text": "Sustain work on age-appropriate, interesting tasks (can ignore most distractions and interruptions)"
+  },
+  {
+   "idx": "AL.KE.i",
+   "text": "Identify technology that can be used to gain information"
+  },
+  {
+   "idx": "GK.KE.a",
+   "text": "Verbally count to 20 by ones"
+  },
+  {
+   "idx": "GK.KE.b",
+   "text": "Demonstrate ability to count in sequence"
+  },
+  {
+   "idx": "GK.KE.c",
+   "text": "Recognize and name written numerals to 10"
+  },
+  {
+   "idx": "GK.KE.d",
+   "text": "Count many kinds of concrete objects and actions up to 10 using one-to-one correspondence"
+  },
+  {
+   "idx": "GK.KE.e",
+   "text": "Count as many as 7 things in a scattered configuration with no errors"
+  },
+  {
+   "idx": "GK.KE.f",
+   "text": "Recognize, create, and repeat simple patterns"
+  },
+  {
+   "idx": "GK.KE.g",
+   "text": "Use a range of strategies (e.g. counting, subtracting, matching) to compare quantity in two sets of objects and describe the comparison with terms, such as more/less, greater than/fewer/equal to"
+  },
+  {
+   "idx": "GK.KE.h",
+   "text": "Recognize the attributes of length, area, weight, and capacity of everyday objects, and use appropriate vocabulary (e.g. long, short, light, big, small, wide, narrow)"
+  },
+  {
+   "idx": "GK.KE.i",
+   "text": "Compare the attributes of length and weight for two objects including: larger/shorter/same length, heavier/lighter/same, more/less/same"
+  },
+  {
+   "idx": "GK.KE.j",
+   "text": "Sort, classify, and serialize objects using attributes, such as color, shape, or size"
+  },
+  {
+   "idx": "GK.KE.k",
+   "text": "Use positional words to describe an object's location (e.g. up, down, above, under, inside, outside)"
+  },
+  {
+   "idx": "GK.KE.l",
+   "text": "Recognize and name common shapes, their parts and attributes"
+  },
+  {
+   "idx": "GK.KE.m",
+   "text": "Create and represent three-dimensional shapes (e.g. ball/sphere, square/box/cube, tube/cylinder using various manipulative materials)"
+  },
+  {
+   "idx": "GK.KE.n",
+   "text": "Use the senses and tools, including technology, to gather information, investigate materials, and observe processes and relationships"
+  },
+  {
+   "idx": "GK.KE.o",
+   "text": "Make predictions about changes in materials or objects based on past experience"
+  },
+  {
+   "idx": "GK.KE.p",
+   "text": "With adult assistance, ask and seek out answers to questions about objects and events"
+  },
+  {
+   "idx": "GK.KE.r",
+   "text": "Explore different kinds of matter (e.g. wood, metal, water) and describe by observing properties (e.g. visual, aural, textural)"
+  },
+  {
+   "idx": "GK.KE.s",
+   "text": "Explore and describe various actions that can change an object’s motion, such as pulling, pushing, twisting, rolling, and throwing"
+  },
+  {
+   "idx": "GK.KE.t",
+   "text": "Investigate, describe, and compare the characteristics that differentiate living from non-living things"
+  },
+  {
+   "idx": "GK.KE.v",
+   "text": "Observe and describe ways in which many plants and animals resemble their parents"
+  },
+  {
+   "idx": "GK.KE.w",
+   "text": "Describe and anticipate weather changes"
+  },
+  {
+   "idx": "GK.KE.x",
+   "text": "Name any celestial object seen in the day or night sky"
+  },
+  {
+   "idx": "GK.KE.y",
+   "text": "With adult assistance, recognize examples of technologies (e.g. knife, pencil, computer, pencil sharpener, refrigerator) at home or in the classroom"
+  },
+  {
+   "idx": "GK.KE.u",
+   "text": "Observe and describe plants and animals as they go through predictable life cycles"
+  },
+  {
+   "idx": "GK.KE.z",
+   "text": "Recognize calendars and simple timelines"
+  },
+  {
+   "idx": "GK.KE.aa",
+   "text": "Construct and describe simple maps of the classroom or home"
+  },
+  {
+   "idx": "GK.KE.bb",
+   "text": "Engage in activities that build understanding of words for locations and direction"
+  },
+  {
+   "idx": "GK.KE.dd",
+   "text": "Identify people's basic needs and explain how they fulfill them"
+  },
+  {
+   "idx": "GK.KE.ee",
+   "text": "Identify buyers and sellers"
+  },
+  {
+   "idx": "GK.KE.ff",
+   "text": "Identify one or two workers, and their jobs in the community"
+  },
+  {
+   "idx": "GK.KE.gg",
+   "text": "Use self-identifying information (e.g. name, age) in situations outside the classroom"
+  },
+  {
+   "idx": "GK.KE.hh",
+   "text": "Talk about, compare, and explore similarities and differences in daily practices across cultures"
+  },
+  {
+   "idx": "GK.KE.ii",
+   "text": "Describe texture, color, and shape in artwork"
+  },
+  {
+   "idx": "GK.KE.jj",
+   "text": "Explore a variety of age-appropriate materials and media to create two-and three-dimensional artwork"
+  },
+  {
+   "idx": "GK.KE.kk",
+   "text": "Express an opinion about a work of art"
+  },
+  {
+   "idx": "GK.KE.ll",
+   "text": "Explore how color can convey mood and emotion"
+  },
+  {
+   "idx": "GK.KE.mm",
+   "text": "Play instruments using different beats, tempos, dynamics, and interpretation"
+  },
+  {
+   "idx": "GK.KE.nn",
+   "text": "Sing a variety of songs with repetitive phrases and rhythmic patterns independently and with others"
+  },
+  {
+   "idx": "GK.KE.oo",
+   "text": "Sing songs varying voice and sounds (e.g. high and low, short and long, loud and soft, or fast and slow)"
+  },
+  {
+   "idx": "GK.KE.pp",
+   "text": "Identify one source of music that can be heard in daily life"
+  },
+  {
+   "idx": "GK.KE.qq",
+   "text": "Use body, energy, space, and time to move in a few different ways"
+  },
+  {
+   "idx": "GK.KE.rr",
+   "text": "Express self freely through movement"
+  },
+  {
+   "idx": "GK.KE.ss",
+   "text": "Create characters through physical movement, gesture, sound, speech, and facial expressions"
+  },
+  {
+   "idx": "GK.KE.tt",
+   "text": "Develop audience skills by observing performances or artists at work in various aspects of the Arts"
+  }
+ ]
+}

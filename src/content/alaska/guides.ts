@@ -8,7 +8,7 @@ import type { FrameworkGuides } from "../guides";
 // world around them is connected. They are guidance for schools, not graded subjects. The assessment page covers AK STAR
 // (English language arts and math, grades 3 to 9) and the Alaska Science Assessment (grades 5, 8 and 10), from the
 // Department of Education and Early Development's quick guide to statewide assessments; dates change each year, so the
-// page points to the department. No French here, so no French guide. Record: docs/research/alaska/README.md.
+// page points to the department. No French here, so no French guide. Record: gradelings-research/alaska/README.md.
 
 export const ALASKA_GUIDES: FrameworkGuides = {
   competencies: {

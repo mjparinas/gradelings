@@ -4,11 +4,11 @@ import type { FrameworkGuides } from "../guides";
 // Parent guide copy for Pennsylvania, in US English. The Pennsylvania Department of Education (PDE) has no statewide social
 // and emotional learning standards, but it publishes the Pennsylvania Career Ready Skills (PA CRS), optional social emotional
 // learning progressions for every grade band, so the competencies page explains those three domains
-// (docs/research/pennsylvania/FACTS.md, section 4). The assessment page covers the PSSA and the Keystone Exams as PDE
+// (gradelings-research/pennsylvania/FACTS.md, section 4). The assessment page covers the PSSA and the Keystone Exams as PDE
 // describes them, including the religious-belief review and excusal route in 22 Pa. Code 4.4(d)(4) and the early-literacy
 // screening in Act 47 of 2025. Dates change each year, so the page points to PDE and the district. Pennsylvania has no French
 // subject here, so no French guide. Grade notes follow the PA Core Standards, the Pennsylvania science standards (STEELS) and
-// the state's civics, economics, geography and history standards, placed as in docs/research/pennsylvania/README.md.
+// the state's civics, economics, geography and history standards, placed as in gradelings-research/pennsylvania/README.md.
 
 export const PENNSYLVANIA_GUIDES: FrameworkGuides = {
   competencies: {
@@ -141,6 +141,10 @@ export const PENNSYLVANIA_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pennsylvania funds a pre-K year for many four-year-olds through Pre-K Counts and Head Start, in schools, child care and community programs. Programs follow the Pennsylvania Learning Standards for Early Childhood, Pre-Kindergarten (2024).",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten is optional in Pennsylvania, and most districts offer it. It is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. Science looks at plants, animals, weather and pushes and pulls, and social studies covers rules, needs and wants, jobs, and simple maps.",
       lookFor: "Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

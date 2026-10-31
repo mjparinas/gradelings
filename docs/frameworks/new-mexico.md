@@ -7,7 +7,7 @@
 ## Standards
 
 - The New Mexico content standards, adopted by rule in title 6, chapter 29 of the New Mexico Administrative Code: math (the Common Core, 2010, 6.29.14 NMAC; `4.NBT.1`; Grade 9 cites the high school standards, `A-SSE.1`), English language arts (the Common Core, 2010, 6.29.13 NMAC; `RL.4.2`; Grade 9 cites the 9-10 band, `RI.9-10.2`), science (the New Mexico STEM Ready! Science Standards, 2018, 6.29.10 NMAC: the NGSS, `4-PS3-2`, plus six New Mexico expectations such as `MS-ESS3-3 NM`; middle school `MS-LS1-1` in any of Grades 6 to 8, high school `HS-LS2-6` in Grade 9) and social studies (2022, 6.29.11 NMAC; `4.12`; Grade 9 cites the high school Civics and Economics strands, `9-12.Civ.29` and `9-12.Econ.47`).
-- Citations are `"CODES · text"` (`nms()` in `src/content/new-mexico/cite.ts`), checked by `src/content/new-mexico/contract.ts` against `docs/research/new-mexico/outcomes.json`. Sources are in `docs/research/new-mexico/source/`; `fetch.sh` downloads them again and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. Record: `docs/research/new-mexico/README.md`.
+- Citations are `"CODES · text"` (`nms()` in `src/content/new-mexico/cite.ts`), checked by `src/content/new-mexico/contract.ts` against `docs/research/new-mexico/outcomes.json`. Sources are in `gradelings-research/new-mexico/source/`; `fetch.sh` downloads them again and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. Record: `gradelings-research/new-mexico/README.md`.
 
 ## Content
 

@@ -3,7 +3,7 @@ import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
 // New Mexico's official standards (the New Mexico Content Standards), built from the Public Education Department's
-// files by docs/research/new-mexico/build_outcomes.py.
+// files by gradelings-research/new-mexico/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("new-mexico/outcomes.json");
 
 export const contract: FrameworkContract = {

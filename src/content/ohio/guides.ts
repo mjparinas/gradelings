@@ -9,7 +9,7 @@ import type { FrameworkGuides } from "../guides";
 // Advanced), the high school end-of-course exams, the Kindergarten Readiness Assessment and the Third Grade Reading
 // Guarantee, under which a parent decides since 2023 whether a child who scores below the promotion score moves on to
 // 4th grade. Dates change each year, so the page points to the Ohio Department of Education and Workforce. Ohio has
-// no French subject here, so no French guide. Record: docs/research/ohio/README.md.
+// no French subject here, so no French guide. Record: gradelings-research/ohio/README.md.
 
 export const OHIO_GUIDES: FrameworkGuides = {
   competencies: {
@@ -171,6 +171,10 @@ export const OHIO_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Ohio's preschool year runs in public preschool, Head Start and Step Up To Quality programs for four-year-olds. It follows Ohio's Early Learning and Development Standards (2022).",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in Ohio is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. In social studies they learn about themselves, families, rules, maps and Ohio's symbols. Teachers give the Kindergarten Readiness Assessment near the start of the year and check each child's reading under the Third Grade Reading Guarantee.",
       lookFor: "Many Ohio districts use standards-based report cards. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",
