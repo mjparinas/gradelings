@@ -225,6 +225,10 @@ export interface WeeklyChild {
   next?: string;
   /** Set on the first Sunday of the month: the last 30 days against the 30 before. */
   month?: { minutes: number; answers: number; previousAnswers: number; activeDays: number };
+  /** Homework from the child's class (`homeworkEmailLines`), already indented. */
+  homework?: string[];
+  /** Math facts, stories and an idea to try at home (`weeklyExtras.ts`), already indented. */
+  extras?: string[];
 }
 
 /** One sentence about a month of practice. Warm either way: a quieter month is never framed as a loss. */
@@ -244,6 +248,8 @@ export function weeklyEmail(to: string, origin: string, children: WeeklyChild[],
       : `${c.name} didn't practise this week. A short session today is a great restart.`,
     ...(c.strength ? [`  Going well: ${c.strength}`] : []),
     ...(c.next ? [`  Next up: ${c.next}`] : []),
+    ...(c.homework ?? []),
+    ...(c.extras ?? []),
     ...(c.month ? [monthLine(c.name, c.month)] : []),
   ]);
   return layout({

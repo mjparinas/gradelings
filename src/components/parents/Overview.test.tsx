@@ -206,3 +206,32 @@ describe("Overview", () => {
     expect(screen.queryByText(/^Sent:/)).not.toBeInTheDocument();
   });
 });
+
+describe("Homework on the Overview", () => {
+  it("shows the teacher's current homework with progress, due date and what's done", () => {
+    const now = Date.now();
+    const other = allUnitRefs("3", "ca-bc").find((r) => r.course.subject === "math" && r.key !== math.key)!;
+    useStore.setState({
+      events: answers("a", now - DAY, 4, 4),
+      classwork: [
+        { profileId: "a", classId: "c", className: "Room 4", unitKeys: [math.key, other.key], due: { [math.key]: now + 2 * DAY, [other.key]: now - DAY }, goal: { [math.key]: 10 }, since: { [math.key]: now - 2 * DAY, [other.key]: now - 3 * DAY } },
+        // Another child's homework stays off Ava's card.
+        { profileId: "b", classId: "c", className: "Room 9", unitKeys: [math.key], since: { [math.key]: now } },
+      ],
+    });
+    render(<Overview />);
+    const hw = within(card("Ava")).getByRole("group", { name: "Homework for Ava" });
+    expect(within(hw).getByText("🍎 Homework from Room 4")).toBeInTheDocument();
+    expect(within(hw).getByText("0 of 2 done")).toBeInTheDocument();
+    expect(within(hw).getByText(/4 of 10 questions · due/)).toBeInTheDocument();
+    expect(within(hw).getByText(/Working toward Proficient · was due/)).toBeInTheDocument();
+    expect(within(hw).getByText(/not a report-card mark/)).toBeInTheDocument();
+    expect(within(hw).queryByText(/Room 9/)).not.toBeInTheDocument();
+  });
+
+  it("shows nothing for a child with no class homework", () => {
+    useStore.setState({ classwork: [] });
+    render(<Overview />);
+    expect(within(card("Ava")).queryByRole("group", { name: "Homework for Ava" })).not.toBeInTheDocument();
+  });
+});

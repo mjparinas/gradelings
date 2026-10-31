@@ -12,6 +12,7 @@ import { FeedbackCard } from "./FeedbackCard";
 import { FamilyGoal } from "./FamilyGoal";
 import { FocusUnit } from "./FocusUnit";
 import { HelpAsks } from "./HelpAsks";
+import { Homework } from "./Homework";
 import { InstallNudge } from "./InstallNudge";
 import { Milestones } from "./Milestones";
 import { RewardGoal } from "./RewardGoal";
@@ -60,6 +61,7 @@ function ChildCard({ p }: { p: Profile }) {
           <dd className="text-2xl font-bold">{answers ? `${Math.round((correct / answers) * 100)}%` : "–"}</dd>
         </div>
       </dl>
+      <Homework p={p} />
       <FamilyGoal p={p} />
       <FocusUnit p={p} />
       <RewardGoal p={p} />
