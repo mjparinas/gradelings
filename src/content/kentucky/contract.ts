@@ -3,7 +3,7 @@ import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
 // Kentucky's official standards, built from the Kentucky Department of Education's files by
-// docs/research/kentucky/build_outcomes.py.
+// gradelings-research/kentucky/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("kentucky/outcomes.json");
 
 export const contract: FrameworkContract = {

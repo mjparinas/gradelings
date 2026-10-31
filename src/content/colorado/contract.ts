@@ -3,7 +3,7 @@ import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
 // Colorado's official standards (the Colorado Academic Standards), built by
-// docs/research/colorado/build_outcomes.py.
+// gradelings-research/colorado/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("colorado/outcomes.json");
 
 export const contract: FrameworkContract = {

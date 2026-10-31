@@ -10,7 +10,7 @@ import type { FrameworkGuides } from "../guides";
 // science and technology/engineering in grades 5 and 8 and once in high school, four achievement levels) and the 2024
 // ballot question that removed passing MCAS as a graduation requirement. Dates change each year, so the page points to
 // the Department of Elementary and Secondary Education (DESE). Massachusetts has no French subject here, so no French
-// guide. Record: docs/research/massachusetts/README.md.
+// guide. Record: gradelings-research/massachusetts/README.md.
 
 export const MASSACHUSETTS_GUIDES: FrameworkGuides = {
   competencies: {

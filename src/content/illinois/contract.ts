@@ -3,7 +3,7 @@ import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
 // Illinois's official standards, built from the Illinois State Board of Education's files by
-// docs/research/illinois/build_outcomes.py.
+// gradelings-research/illinois/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("illinois/outcomes.json");
 
 export const contract: FrameworkContract = {

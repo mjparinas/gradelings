@@ -19,6 +19,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.TEXAS_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Texas: no French subject (see docs/research/texas/README.md).
+  // Texas: no French subject (see gradelings-research/texas/README.md).
   french: { immersion: [], "core-french": [] },
 });

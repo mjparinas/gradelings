@@ -9,7 +9,7 @@ import type { FrameworkGuides } from "../guides";
 // grades 5, 8 and 10, moving to 11 from 2026-27), the four achievement levels the Department proposed in 2026, and the
 // early reading screenings of Iowa Code section 279.68, from the Department's 2026 announcements and the Code; the levels
 // are awaiting State Board approval, so the page says they are proposed. No French here, so no French guide. Record:
-// docs/research/iowa/README.md.
+// gradelings-research/iowa/README.md.
 
 export const IOWA_GUIDES: FrameworkGuides = {
   competencies: {

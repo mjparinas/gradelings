@@ -18,6 +18,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.MARYLAND_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Maryland: no French subject (see docs/research/maryland/README.md).
+  // Maryland: no French subject (see gradelings-research/maryland/README.md).
   french: { immersion: [], "core-french": [] },
 });

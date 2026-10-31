@@ -18,6 +18,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.SOUTH_DAKOTA_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // South Dakota: no French subject in the app (see docs/research/south-dakota/README.md).
+  // South Dakota: no French subject in the app (see gradelings-research/south-dakota/README.md).
   french: { immersion: [], "core-french": [] },
 });

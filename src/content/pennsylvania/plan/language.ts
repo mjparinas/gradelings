@@ -4,7 +4,7 @@ import type { Entry } from "../kit";
 // are the PA Core ELA standards as printed: "CC.1.1.<grade>.<letter>" foundational skills (Kindergarten to Grade 5),
 // "CC.1.2" reading informational text, "CC.1.3" reading literature, "CC.1.4" writing (including the letters for conventions
 // and word choice) and "CC.1.5" speaking and listening. Grade 9 cites the 9-10 band ("CC.1.2.9-10.A"). The writing,
-// research and speaking standards that need free text or a voice have no unit (see docs/research/pennsylvania/gaps-language.txt).
+// research and speaking standards that need free text or a voice have no unit (see gradelings-research/pennsylvania/gaps-language.txt).
 export const PLAN_LANGUAGE: Record<string, Entry[]> = {
   "k/language": [
     ["letter-partners", "share", "CC.1.1.K.B; CC.1.1.K.D", "recognizing and naming upper- and lowercase letters and the sounds they make"],

@@ -7,7 +7,7 @@
 ## Standards
 
 - The Louisiana Student Standards, adopted by the Board of Elementary and Secondary Education (BESE): math (2016; `4.NBT.A.1`, with the cluster letter; Grade 9 is Algebra I, `A1: A-SSE.A.1`), English language arts (2026; `RL.4.2`, `L.2.1c`; Grade 9 cites the 9-10 band, `RI.9-10.2`), science (2017; `4-PS3-2`, with the grade in middle school codes, `6-MS-PS1-1`; Grade 9 cites Biology, `HS-LS1-1`, and Physical Science, `HS-PS1-1`) and social studies (2022, updated July 2026; `K.5`, `6.10`; Grade 9 cites High School Civics, `C.9`).
-- Citations are `"CODES · text"` (`las()` in `src/content/louisiana/cite.ts`), checked by `src/content/louisiana/contract.ts` against `docs/research/louisiana/outcomes.json`. Sources are in `docs/research/louisiana/source/`; `fetch.sh` downloads them again (plain `curl` works) and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. Record: `docs/research/louisiana/README.md`.
+- Citations are `"CODES · text"` (`las()` in `src/content/louisiana/cite.ts`), checked by `src/content/louisiana/contract.ts` against `docs/research/louisiana/outcomes.json`. Sources are in `gradelings-research/louisiana/source/`; `fetch.sh` downloads them again (plain `curl` works) and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. Record: `gradelings-research/louisiana/README.md`.
 
 ## Content
 

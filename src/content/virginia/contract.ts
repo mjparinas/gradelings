@@ -2,7 +2,7 @@ import { codeCite, preKCite, research, type FrameworkContract } from "../contrac
 import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
-// Virginia's official standards (the Standards of Learning), built by docs/research/virginia/build_outcomes.py.
+// Virginia's official standards (the Standards of Learning), built by gradelings-research/virginia/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("virginia/outcomes.json");
 
 export const contract: FrameworkContract = {

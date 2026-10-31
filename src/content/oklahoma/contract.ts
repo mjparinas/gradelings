@@ -3,7 +3,7 @@ import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
 // Oklahoma's official standards (the Oklahoma Academic Standards), built by
-// docs/research/oklahoma/build_outcomes.py.
+// gradelings-research/oklahoma/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("oklahoma/outcomes.json");
 
 export const contract: FrameworkContract = {

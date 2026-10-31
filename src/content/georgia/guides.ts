@@ -10,7 +10,7 @@ import type { FrameworkGuides } from "../guides";
 // 8, science in 5 and 8 and social studies in 8; End-of-Course tests in high school; four achievement levels), the
 // promotion rules in O.C.G.A. 20-2-283 and the Georgia Early Literacy Act's reading checks. Dates change each year, so
 // the page points to the Georgia Department of Education (GaDOE). Georgia has no French subject here, so no French
-// guide. Record: docs/research/georgia/README.md.
+// guide. Record: gradelings-research/georgia/README.md.
 
 export const GEORGIA_GUIDES: FrameworkGuides = {
   competencies: {

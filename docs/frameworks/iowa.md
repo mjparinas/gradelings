@@ -13,7 +13,7 @@
   - **Science** (May 2025, built on the NGSS). Middle school expectations are each placed in one grade and carry that grade in the code (`6-PS4-1`, `7-LS2-1`, `8-ESS2-5`). Grade 9 cites the high school expectations.
   - **Social studies** (January 2026). Codes are numbered within each grade, as in `SS.4.14`. Grade 9 cites the high school government, economics and financial literacy courses: `SS.9-12.Gov.13`, `SS.9-12.Econ.5` and `SS.9-12.FL.4`.
 - **Citations** are `"CODES · text"` (`ias()` in `src/content/iowa/cite.ts`). `src/content/iowa/contract.ts` checks them against `docs/research/iowa/outcomes.json`.
-- **Sources** are in `docs/research/iowa/source/`. `fetch.sh` downloads them again, and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. The full record is in `docs/research/iowa/README.md`.
+- **Sources** are in `gradelings-research/iowa/source/`. `fetch.sh` downloads them again, and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. The full record is in `gradelings-research/iowa/README.md`.
 
 ## Content
 

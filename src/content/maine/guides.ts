@@ -8,7 +8,7 @@ import type { FrameworkGuides } from "../guides";
 // (MeCAS): the Maine Through Year Assessment in mathematics and reading in grades 3 to 8 and the second year of high
 // school (fall and spring required, winter optional) and the Maine Science Assessment in grades 5 and 8 and the third
 // year of high school. Dates change each year, so the page points to the Maine Department of Education. Maine has no
-// French subject here, so no French guide. Record: docs/research/maine/README.md.
+// French subject here, so no French guide. Record: gradelings-research/maine/README.md.
 
 export const MAINE_GUIDES: FrameworkGuides = {
   competencies: {

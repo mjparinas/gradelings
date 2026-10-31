@@ -18,6 +18,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.WYOMING_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Wyoming: no French subject in the app (see docs/research/wyoming/README.md).
+  // Wyoming: no French subject in the app (see gradelings-research/wyoming/README.md).
   french: { immersion: [], "core-french": [] },
 });

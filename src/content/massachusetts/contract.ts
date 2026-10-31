@@ -3,7 +3,7 @@ import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
 // Massachusetts's official standards (the Massachusetts Curriculum Frameworks), built by
-// docs/research/massachusetts/build_outcomes.py.
+// gradelings-research/massachusetts/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("massachusetts/outcomes.json");
 
 export const contract: FrameworkContract = {

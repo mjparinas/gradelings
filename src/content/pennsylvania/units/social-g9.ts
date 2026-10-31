@@ -5,7 +5,7 @@ import { bankUnit, type Q } from "../own";
 // column of the 9-12 codes (5.x.9, and the banded 6.x.9-12 and 17.x.9-12). The units cover Pennsylvania's constitution and
 // government (5.1.9.E, 5.3.9.A to 5.3.9.C), elections (5.3.9.D, 5.3.9.E, 5.2.9.D), local government and taxes (5.3.9.B, 5.3.9.I),
 // foreign policy (5.4.9, 5.1.9.F), economics (6.x.9-12) and personal finance (17.x.9-12). Facts are from
-// docs/research/pennsylvania/FACTS.md or are well established.
+// gradelings-research/pennsylvania/FACTS.md or are well established.
 
 const PA_CONSTITUTION: Q[] = [
   ["When a state law conflicts with the US Constitution, which one wins?", "the US Constitution", ["the state law", "whichever is newer", "the governor's order"], "Article VI makes it the supreme law of the land."],

@@ -7,7 +7,7 @@ import type { FrameworkGuides } from "../guides";
 // reasoning. They are taught inside math lessons, not graded as a subject of their own. The assessment page covers the
 // Vermont Comprehensive Assessment Program (VTCAP: language arts and math in grades 3 to 9, science in grades 5, 8 and
 // 11), from the Agency of Education's assessment page and the VTCAP score interpretation guide. No French here, so no
-// French guide. Record: docs/research/vermont/README.md.
+// French guide. Record: gradelings-research/vermont/README.md.
 
 export const VERMONT_GUIDES: FrameworkGuides = {
   competencies: {

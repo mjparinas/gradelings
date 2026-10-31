@@ -3,7 +3,7 @@ import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
 // Wisconsin's official standards, built from the Department of Public Instruction's standards server by
-// docs/research/wisconsin/build_outcomes.py.
+// gradelings-research/wisconsin/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("wisconsin/outcomes.json");
 
 export const contract: FrameworkContract = {

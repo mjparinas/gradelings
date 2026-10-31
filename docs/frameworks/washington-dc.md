@@ -8,7 +8,7 @@
 ## Standards
 
 - Approved by the DC State Board of Education: math (the Common Core, 2010; `4.NBT.1`; Grade 9 cites the high school standards, `A-SSE.1`), English language arts (the Common Core, 2010; `RL.4.2`; Grade 9 cites the 9-10 band, `RI.9-10.2`), science (the Next Generation Science Standards, adopted December 2013; `4-PS3-2`; middle school `MS-LS1-1` in any of Grades 6 to 8, high school `HS-LS2-6` in Grade 9) and social studies (the DC Social Studies Standards, approved June 21, 2023 by resolution SR23-7 and used from 2024-25; numbered within each grade, `3.20`; Grade 9 cites World History and Geography I, `WH1.1`).
-- Citations are `"CODES · text"` (`dcs()` in `src/content/washington-dc/cite.ts`), checked by `src/content/washington-dc/contract.ts` against `docs/research/washington-dc/outcomes.json`, which `python3 -I build_outcomes.py` rebuilds from the ASN copies and OSSE's social studies PDF in `docs/research/washington-dc/source/`. Record: `docs/research/washington-dc/README.md`.
+- Citations are `"CODES · text"` (`dcs()` in `src/content/washington-dc/cite.ts`), checked by `src/content/washington-dc/contract.ts` against `docs/research/washington-dc/outcomes.json`, which `python3 -I build_outcomes.py` rebuilds from the ASN copies and OSSE's social studies PDF in `gradelings-research/washington-dc/source/`. Record: `gradelings-research/washington-dc/README.md`.
 
 ## Content
 

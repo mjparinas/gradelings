@@ -8,7 +8,7 @@ import type { FrameworkGuides } from "../guides";
 // their own. The assessment page covers the DC Comprehensive Assessments of Progress in Education (DC CAPE: DC ELA and
 // DC Math in grades 3 to 8 and high school courses, DC Science in grades 5 and 8 and high school biology), from OSSE's
 // DC CAPE page, its introduction for families and its performance level tables. No French here, so no French guide.
-// Record: docs/research/washington-dc/README.md.
+// Record: gradelings-research/washington-dc/README.md.
 
 export const WASHINGTON_DC_GUIDES: FrameworkGuides = {
   competencies: {

@@ -8,7 +8,7 @@ import type { FrameworkGuides } from "../guides";
 // Illinois Assessment of Readiness (IAR: English language arts and math, grades 3 to 8), the Illinois Science
 // Assessment (ISA: grades 5 and 8), PreACT 9 and PreACT (grades 9 and 10), the ACT in grade 11 and the KIDS
 // observation in kindergarten. Dates change each year, so the page points to the Illinois State Board of Education
-// (ISBE). Illinois has no French subject here, so no French guide. Record: docs/research/illinois/README.md.
+// (ISBE). Illinois has no French subject here, so no French guide. Record: gradelings-research/illinois/README.md.
 
 export const ILLINOIS_GUIDES: FrameworkGuides = {
   competencies: {

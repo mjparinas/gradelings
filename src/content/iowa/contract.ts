@@ -3,7 +3,7 @@ import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
 // Iowa's official standards (the Iowa Academic Standards), built from the Iowa Department of Education's
-// files by docs/research/iowa/build_outcomes.py.
+// files by gradelings-research/iowa/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("iowa/outcomes.json");
 
 export const contract: FrameworkContract = {

@@ -18,6 +18,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.MINNESOTA_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Minnesota: no French subject (see docs/research/minnesota/README.md).
+  // Minnesota: no French subject (see gradelings-research/minnesota/README.md).
   french: { immersion: [], "core-french": [] },
 });

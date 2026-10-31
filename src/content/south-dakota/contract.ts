@@ -3,7 +3,7 @@ import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
 // South Dakota's official standards (mathematics 2018, English language arts 2025, science 2024 and social studies
-// 2023), built from the Department of Education's documents by docs/research/south-dakota/build_outcomes.py.
+// 2023), built from the Department of Education's documents by gradelings-research/south-dakota/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("south-dakota/outcomes.json");
 
 export const contract: FrameworkContract = {

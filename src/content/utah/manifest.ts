@@ -18,6 +18,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.UTAH_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Utah: no French subject in the app (see docs/research/utah/README.md).
+  // Utah: no French subject in the app (see gradelings-research/utah/README.md).
   french: { immersion: [], "core-french": [] },
 });

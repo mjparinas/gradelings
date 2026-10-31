@@ -4,7 +4,7 @@ import { bankUnit, type Q } from "../own";
 // exploration in Grade 4 (what exploration is, why people explore, explorers’ stories, and the tools of exploration then
 // and now). The grade guide is not public, so the units cite the Grade 6 key stage of the matching strands. These units
 // stay with world and space exploration; how European exploration affected Indigenous peoples is left to the existing,
-// partner-reviewed units (see docs/research/newfoundland-and-labrador/README.md, "Review needed").
+// partner-reviewed units (see gradelings-research/newfoundland-and-labrador/README.md, "Review needed").
 //
 // Sources checked (anything that could not be confirmed was left out):
 // - The Canadian Encyclopedia: "Jacques Cartier", "Samuel de Champlain", "Henry Hudson", "Northwest Passage",

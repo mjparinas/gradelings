@@ -3,7 +3,7 @@ import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
 // Nevada's official standards (the Nevada Academic Content Standards), built from the Nevada Department of Education's
-// files by docs/research/nevada/build_outcomes.py.
+// files by gradelings-research/nevada/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("nevada/outcomes.json");
 
 export const contract: FrameworkContract = {

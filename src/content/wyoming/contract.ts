@@ -3,7 +3,7 @@ import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
 // Wyoming's official standards (the Wyoming Content and Performance Standards), built from the Wyoming Department of
-// Education's grade-level documents by docs/research/wyoming/build_outcomes.py.
+// Education's grade-level documents by gradelings-research/wyoming/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("wyoming/outcomes.json");
 
 export const contract: FrameworkContract = {

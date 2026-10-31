@@ -7,7 +7,7 @@ import type { FrameworkGuides } from "../guides";
 // Measures of Academic Success (CMAS: English language arts and math in grades 3 to 8, science in grades 5, 8 and 11,
 // social studies in grade 4 or 7 at a sample of schools), the PSAT and SAT in high school, CoAlt, and the READ Act's
 // reading checks in Kindergarten to Grade 3. Dates change each year, so the page points to the Colorado Department of
-// Education (CDE). Colorado has no French subject here, so no French guide. Record: docs/research/colorado/README.md.
+// Education (CDE). Colorado has no French subject here, so no French guide. Record: gradelings-research/colorado/README.md.
 
 export const COLORADO_GUIDES: FrameworkGuides = {
   competencies: {

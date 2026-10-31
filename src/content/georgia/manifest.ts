@@ -19,6 +19,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.GEORGIA_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Georgia: no French subject (see docs/research/georgia/README.md).
+  // Georgia: no French subject (see gradelings-research/georgia/README.md).
   french: { immersion: [], "core-french": [] },
 });

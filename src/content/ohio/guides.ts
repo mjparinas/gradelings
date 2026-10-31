@@ -9,7 +9,7 @@ import type { FrameworkGuides } from "../guides";
 // Advanced), the high school end-of-course exams, the Kindergarten Readiness Assessment and the Third Grade Reading
 // Guarantee, under which a parent decides since 2023 whether a child who scores below the promotion score moves on to
 // 4th grade. Dates change each year, so the page points to the Ohio Department of Education and Workforce. Ohio has
-// no French subject here, so no French guide. Record: docs/research/ohio/README.md.
+// no French subject here, so no French guide. Record: gradelings-research/ohio/README.md.
 
 export const OHIO_GUIDES: FrameworkGuides = {
   competencies: {

@@ -5,7 +5,7 @@ import { bankUnit, type Q } from "../own";
 // century, so Pennsylvania's units cover Gettysburg and the war at home (8.2.8.B, 8.3.8.B), freedom seekers and the fight
 // against slavery (8.2.8.A, 8.2.8.D), industry and immigration (8.2.8.C, 8.3.8.C), how Pennsylvania's government compares with
 // the national one (5.1.8.E, 5.3.8.A to 5.3.8.G) and the world beyond the borders (5.4.8, 5.1.8.F). Slavery, the Civil War and
-// the struggles of workers are told plainly. Facts are from docs/research/pennsylvania/FACTS.md or are well established.
+// the struggles of workers are told plainly. Facts are from gradelings-research/pennsylvania/FACTS.md or are well established.
 
 const GETTYSBURG: Q[] = [
   ["The Battle of Gettysburg was fought in…", "July 1863", ["April 1861", "May 1865", "December 1860"], "It was the middle of the Civil War."],

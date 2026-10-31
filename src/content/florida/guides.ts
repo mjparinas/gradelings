@@ -4,7 +4,7 @@ import type { FrameworkGuides } from "../guides";
 // Parent guide copy for Florida, in US English. Florida has no statewide social and emotional learning standards for
 // kindergarten to 9th grade, so the competencies page explains the ways of thinking its standards build into every grade:
 // the Mathematical Thinking and Reasoning Standards (MTRs) in B.E.S.T. math, the K-12 Expectations in B.E.S.T. English
-// language arts, the Nature of Science benchmarks and the social studies inquiry skills (docs/research/florida/README.md).
+// language arts, the Nature of Science benchmarks and the social studies inquiry skills (gradelings-research/florida/README.md).
 // The assessment page covers the Florida Assessment of Student Thinking (FAST) and the statewide science, writing and
 // end-of-course tests as the Florida Department of Education (FLDOE) describes them, including the 3rd grade reading
 // rule in section 1008.25 of the Florida Statutes. Dates change each year, so the page points to FLDOE and the district.

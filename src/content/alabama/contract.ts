@@ -3,7 +3,7 @@ import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
 // Alabama's content standards, built from the Alabama Courses of Study (Mathematics 2019, English Language Arts 2021,
-// Science 2023, Social Studies 2024) by docs/research/alabama/build_outcomes.py.
+// Science 2023, Social Studies 2024) by gradelings-research/alabama/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("alabama/outcomes.json");
 
 export const contract: FrameworkContract = {

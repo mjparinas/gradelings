@@ -1,7 +1,7 @@
 import { codeCite, research, type FrameworkContract } from "../contract";
 import { PLAN } from "./plan";
 
-// Oregon's official standards, built from ODE's files by docs/research/oregon/build_outcomes.py.
+// Oregon's official standards, built from ODE's files by gradelings-research/oregon/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("oregon/outcomes.json");
 
 export const contract: FrameworkContract = {

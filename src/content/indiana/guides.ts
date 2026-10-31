@@ -8,7 +8,7 @@ import type { FrameworkGuides } from "../guides";
 // The assessment page covers ILEARN (English/language arts and math in grades 3 to 8, science in grades 4 and 6, social
 // studies in grade 5, and Biology in high school) and IREAD, Indiana's reading test in grades 2 and 3, with the 3rd
 // grade reading rule in state law. Dates change each year, so the page points to the Indiana Department of Education
-// (IDOE). Indiana has no French subject here, so no French guide. Record: docs/research/indiana/README.md.
+// (IDOE). Indiana has no French subject here, so no French guide. Record: gradelings-research/indiana/README.md.
 
 export const INDIANA_GUIDES: FrameworkGuides = {
   competencies: {

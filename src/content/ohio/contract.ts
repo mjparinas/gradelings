@@ -3,7 +3,7 @@ import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
 // Ohio's official standards (Ohio's Learning Standards), built by
-// docs/research/ohio/build_outcomes.py.
+// gradelings-research/ohio/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("ohio/outcomes.json");
 
 export const contract: FrameworkContract = {

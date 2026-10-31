@@ -2,7 +2,7 @@ import { APP_NAME } from "@/lib/brand";
 import type { SchoolsNotice } from "../manifest";
 
 // What /privacy/ tells Louisiana schools: the student privacy law that applies and our commitments under it (Louisiana
-// Revised Statutes 17:3914, Subsections F and J; source in docs/research/louisiana/source/). Keep it true to
+// Revised Statutes 17:3914, Subsections F and J; source in gradelings-research/louisiana/source/). Keep it true to
 // docs/frameworks/louisiana.md and docs/school/.
 export const SCHOOLS: SchoolsNotice = {
   heading: "Schools in Louisiana.",

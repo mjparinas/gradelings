@@ -2,7 +2,7 @@ import { codeCite, research, type FrameworkContract } from "../contract";
 import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
-// Louisiana's official standards (the Louisiana Student Standards), built by docs/research/louisiana/build_outcomes.py.
+// Louisiana's official standards (the Louisiana Student Standards), built by gradelings-research/louisiana/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("louisiana/outcomes.json");
 
 export const contract: FrameworkContract = {

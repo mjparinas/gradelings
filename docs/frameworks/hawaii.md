@@ -12,7 +12,7 @@
   - **English language arts:** the Hawaiʻi Common Core Standards for English Language Arts (approved April 2024): `4.RL.2`, `K.RF.3`, `2.WF.1`, `6.L.1`; Grade 9 cites the Grades 9/10 standards (`9/10.RI.2`). Writing Foundations (WF) holds handwriting, spelling and conventions in Kindergarten to Grade 5.
   - **Science:** the Next Generation Science Standards, by performance expectation (`4-PS3-2`, `MS-LS1-1`, `HS-ESS2-4`).
   - **Social studies:** the Hawaiʻi Core Standards for Social Studies (HCSSS, 2018): `SS.4.1.18.1`; Grade 9 cites the high school courses Modern History of Hawaiʻi (`SS.MHH.…`) and Participation in Democracy (`SS.PID.…`); the inquiry standards (`SS.3-5.2.1`) are listed under each grade of their band. Grade 7 cites its two semester courses, the Hawaiian Kingdom and Pacific Island Studies.
-- Citations are `"CODES · text"` (`his()` in `src/content/hawaii/cite.ts`), checked by `src/content/hawaii/contract.ts` against `docs/research/hawaii/outcomes.json`. Sources are in `docs/research/hawaii/source/`; `fetch.sh` downloads them again and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. Record: `docs/research/hawaii/README.md`.
+- Citations are `"CODES · text"` (`his()` in `src/content/hawaii/cite.ts`), checked by `src/content/hawaii/contract.ts` against `docs/research/hawaii/outcomes.json`. Sources are in `gradelings-research/hawaii/source/`; `fetch.sh` downloads them again and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. Record: `gradelings-research/hawaii/README.md`.
 
 ## Content
 

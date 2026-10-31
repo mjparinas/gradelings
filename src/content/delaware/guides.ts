@@ -9,7 +9,7 @@ import type { FrameworkGuides } from "../guides";
 // language arts and math in grades 3 to 8, science in grades 5 and 8 and high school Biology, social studies in grades
 // 4 to 8 and 11, four performance levels, and the SAT in grade 11. The Department of Education's site refuses
 // automated downloads, so the page keeps to the program's lasting facts and points families to the department for
-// dates. No French here, so no French guide. Record: docs/research/delaware/README.md.
+// dates. No French here, so no French guide. Record: gradelings-research/delaware/README.md.
 
 export const DELAWARE_GUIDES: FrameworkGuides = {
   competencies: {

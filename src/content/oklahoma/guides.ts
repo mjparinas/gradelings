@@ -9,7 +9,7 @@ import type { FrameworkGuides } from "../guides";
 // language arts and math in grades 3 to 8, science in grades 5 and 8, in the last four weeks of the school year under
 // HB 4359 (2026)) and the Strong Readers Act's reading screening in kindergarten to 3rd grade. Dates change each year, so
 // the page points to the Oklahoma State Department of Education. No French here, so no French guide. Record:
-// docs/research/oklahoma/README.md.
+// gradelings-research/oklahoma/README.md.
 
 export const OKLAHOMA_GUIDES: FrameworkGuides = {
   competencies: {

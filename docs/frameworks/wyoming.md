@@ -7,7 +7,7 @@
 ## Standards
 
 - The Wyoming Content and Performance Standards, adopted by the State Board of Education (Chapter 10 rules): English language arts (2012, the Common Core; `RL.4.1`, `L.4.1.a`; Grade 9 cites `RL.9-10.1`), mathematics (2023, a priority set built on the Common Core; `4.OA.3a` with no dot before the letter, high school `A.REI.3`), science (2023, a priority set from the NGSS; `4-PS3-4`, middle school `MS-LS1-3` in any of Grades 6 to 8, high school `HS-LS2-6` in Grade 9) and social studies (2014 with the 2018 Indian Education for All benchmarks; bands `SS2.1.2`, `SS5.4.2`, `SS8.4.4.a`, `SS12.1.5.a`).
-- Citations are `"CODES · text"` (`wys()` in `src/content/wyoming/cite.ts`), checked by `src/content/wyoming/contract.ts` against `docs/research/wyoming/outcomes.json`. Sources are in `docs/research/wyoming/source/`; `fetch.sh` downloads them again and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. Record: `docs/research/wyoming/README.md`.
+- Citations are `"CODES · text"` (`wys()` in `src/content/wyoming/cite.ts`), checked by `src/content/wyoming/contract.ts` against `docs/research/wyoming/outcomes.json`. Sources are in `gradelings-research/wyoming/source/`; `fetch.sh` downloads them again and `python3 -I build_outcomes.py` rebuilds `outcomes.json` exactly. Record: `gradelings-research/wyoming/README.md`.
 
 ## Content
 

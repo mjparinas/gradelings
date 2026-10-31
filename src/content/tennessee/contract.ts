@@ -3,7 +3,7 @@ import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
 // Tennessee's official standards (the Tennessee Academic Standards), built by
-// docs/research/tennessee/build_outcomes.py.
+// gradelings-research/tennessee/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("tennessee/outcomes.json");
 
 export const contract: FrameworkContract = {

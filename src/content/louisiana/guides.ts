@@ -8,7 +8,7 @@ import type { FrameworkGuides } from "../guides";
 // The assessment page covers LEAP 2025 (English language arts, math, science and social studies in grades 3 to 8, and
 // English I and II, Algebra I, Geometry, Biology, Civics and U.S. History in high school) and the 3rd grade literacy
 // law (Act 422 of 2023, R.S. 17:24.11). Dates change each year, so the page points to the Louisiana Department of
-// Education. No French here, so no French guide. Record: docs/research/louisiana/README.md.
+// Education. No French here, so no French guide. Record: gradelings-research/louisiana/README.md.
 
 export const LOUISIANA_GUIDES: FrameworkGuides = {
   competencies: {

@@ -7,7 +7,7 @@ import type { FrameworkGuides } from "../guides";
 // graded on their own. The assessment page covers the Maryland Comprehensive Assessment Program (MCAP: English language
 // arts and math in grades 3 to 8, science in grades 5 and 8, social studies in grade 8, and high school tests) and the
 // Kindergarten Readiness Assessment. Dates change each year, so the page points to the Maryland State Department of
-// Education (MSDE). Maryland has no French subject here, so no French guide. Record: docs/research/maryland/README.md.
+// Education (MSDE). Maryland has no French subject here, so no French guide. Record: gradelings-research/maryland/README.md.
 
 export const MARYLAND_GUIDES: FrameworkGuides = {
   competencies: {

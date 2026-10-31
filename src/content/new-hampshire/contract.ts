@@ -3,7 +3,7 @@ import { OTHER_STATE } from "./units/kit";
 import { PLAN } from "./plan";
 
 // New Hampshire's official standards (the College and Career Ready Standards and the K-12 Social Studies Curriculum
-// Framework), built from the Achievement Standards Network copies by docs/research/new-hampshire/build_outcomes.py.
+// Framework), built from the Achievement Standards Network copies by gradelings-research/new-hampshire/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("new-hampshire/outcomes.json");
 
 export const contract: FrameworkContract = {

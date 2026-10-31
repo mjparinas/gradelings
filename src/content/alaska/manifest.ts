@@ -18,6 +18,6 @@ export const manifest = defineFramework({
   },
   guides: () => import("./guides").then((m) => m.ALASKA_GUIDES),
   schools: () => import("./schools").then((m) => m.SCHOOLS),
-  // Alaska: no French subject (see docs/research/alaska/README.md).
+  // Alaska: no French subject (see gradelings-research/alaska/README.md).
   french: { immersion: [], "core-french": [] },
 });
