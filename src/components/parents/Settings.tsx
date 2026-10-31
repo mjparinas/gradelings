@@ -2,10 +2,11 @@
 
 import type { ReactNode } from "react";
 import { getFramework } from "@/content/frameworks";
-import { getSubjectMeta, SUBJECTS } from "@/content/subjects";
+import { getSubjectMeta, SUBJECTS, subjectsOffered } from "@/content/subjects";
 import type { SubjectId } from "@/content/types";
 import { defaultChildSettings, type ChildSettings, type ReadingTint } from "@/lib/model";
 import { calmOn, calmPatch, gamesChoice, gamesPatch, soundChoice, soundPatch, type GamesChoice, type SoundChoice } from "@/lib/settingChoices";
+import { useIsOn } from "@/lib/remoteFlags";
 import { useStore } from "@/lib/store";
 import { timerChoice, timerPatch, type TimerChoice } from "@/lib/timers";
 import { CheckBox, ChildTabs, Choice, NoChildren, PageTitle, Panel, Slider, Switch, useChild } from "./common";
@@ -41,6 +42,7 @@ export function SettingsPage({ childId }: { childId?: string }) {
   const child = useChild(childId);
   const stored = useStore((s) => (child ? s.settings[child.id] : undefined));
   const update = useStore((s) => s.updateSettings);
+  const isOn = useIsOn();
   if (!child) return <NoChildren />;
   const s: ChildSettings = stored ?? defaultChildSettings(child.id, false, child.grade);
   const set = (patch: Partial<ChildSettings>) => update(child.id, patch);
@@ -62,7 +64,7 @@ export function SettingsPage({ childId }: { childId?: string }) {
         <Panel title="📚 Subjects">
           <p className="mb-3 text-sm text-ink-soft">Choose what shows up in lessons, Adventure and the Daily Challenge.</p>
           <div className="grid grid-cols-2 gap-2">
-            {SUBJECTS.filter((sub) => getFramework(child.framework).subjects.includes(sub.id)).map((sub) => (
+            {SUBJECTS.filter((sub) => subjectsOffered(getFramework(child.framework), child.grade, isOn).includes(sub.id)).map((sub) => (
               <CheckBox key={sub.id} checked={s.enabledSubjects.includes(sub.id)} onChange={() => toggleSubject(sub.id)}>
                 {getSubjectMeta(sub.id).emoji} {sub.title.big}
               </CheckBox>

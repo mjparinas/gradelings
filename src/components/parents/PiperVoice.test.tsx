@@ -37,8 +37,8 @@ import { PIPER_VOICES } from "@/lib/piper";
 import { PiperVoice } from "./PiperVoice";
 
 const voice = (state: PiperVoiceState, over: { loaded?: number; total?: number; error?: string } = {}) => ({ state, loaded: 0, total: 0, ...over });
-const setState = (en: ReturnType<typeof voice>, fr = voice("missing"), enabled = false) => {
-  h.state = { enabled, voices: { en, fr } };
+const setState = (en: ReturnType<typeof voice>, fr = voice("missing"), enabled = false, es = voice("missing")) => {
+  h.state = { enabled, voices: { en, fr, es } };
 };
 const publish = () => act(() => h.listeners.forEach((l) => l()));
 

@@ -24,7 +24,7 @@ import { celebrate, setCalmCheck } from "./juice";
 import { setHapticsCheck } from "./haptics";
 import { vibrationOn } from "./settingChoices";
 import { effectiveGoal, STRETCH_QUEST, STRETCH_REWARD } from "./goal";
-import { gamesOpenedBetween } from "./arcade";
+import { gamesOpenedBetween, subjectsOn } from "./arcade";
 import { growthStage } from "./buddy";
 import { dailyQuests, weekDays, weeklyQuests, weekStart } from "./quests";
 import { hasTestCoins, isOn, useFlag } from "./remoteFlags";
@@ -289,7 +289,10 @@ export const useStore = create<State>()((set, get) => ({
     const day = dayKey(now);
     const claimed = after.questsClaimed[day] ?? [];
     const questEvents: AppEvent[] = [];
-    const questOpts = { stories: storiesFor(state.settings[profile.id], isOn("story-library")) };
+    const questOpts = {
+      stories: storiesFor(state.settings[profile.id], isOn("story-library")),
+      spanish: subjectsOn({ grade: profile.grade, subjects: state.settings[profile.id]?.enabledSubjects, framework: profile.framework }).includes("spanish"),
+    };
     for (const q of dailyQuests(profile.id, day, ageBandFor(profile.grade), questOpts)) {
       if (!claimed.includes(q.id) && q.progress(after.days[day]) >= q.target) {
         questEvents.push({ type: "quest", quest: q.id, day, reward: q.reward, id: newId(), t: now + 50, profileId: profile.id });

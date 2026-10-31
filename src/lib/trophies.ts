@@ -1,4 +1,5 @@
 import { getSubjectMeta, isCoreSubject, subjectsIn } from "@/content/subjects";
+import { isOn } from "./deviceFlags";
 import { allUnitRefs } from "@/content";
 import type { FrameworkId, GradeId, SubjectId } from "@/content/types";
 import type { Derived } from "./derive";
@@ -26,7 +27,7 @@ export const TIER_STYLE: Record<Tier, { label: string; colour: string; dark: str
   platinum: { label: "Platinum", colour: "#8fd3f0", dark: "#3d93b8", glow: "#e0f6ff", text: "#1f6a8a" },
 };
 
-export type TrophyCategory = "Getting started" | "Practice" | "Streaks" | "Mastery" | "Modes" | "Stories" | "Arcade" | "Collector" | "Journey" | "French" | "Secret";
+export type TrophyCategory = "Getting started" | "Practice" | "Streaks" | "Mastery" | "Modes" | "Stories" | "Arcade" | "Collector" | "Journey" | "French" | "Spanish" | "Secret";
 
 export interface TrophyContext {
   grade: GradeId;
@@ -99,6 +100,12 @@ const gradeName = (g: GradeId) => (g === "pk" ? "Pre-K" : g === "k" ? "Kindergar
 /** Units at a level across every grade, read from the unit stats alone so it never depends on loaded content. */
 const unitsEverAt = (d: Derived, min: number) => Object.values(d.units).filter((u) => unitLevel(u) >= min).length;
 
+/** A subject's trophies show where the grade has units in it, and for a subject behind a flag (Spanish) only once it's on. */
+const offers = (subject: SubjectId) => (ctx: TrophyContext) => {
+  const flag = getSubjectMeta(subject).flag;
+  return (!flag || isOn(flag)) && unitsInGrade(ctx.grade, ctx.framework, subject) > 0;
+};
+
 const subjectMastery = (grade: GradeId, subject: SubjectId, name: string, icon: string, description: string, category: TrophyCategory = "Mastery"): Trophy => ({
   id: `master-${subject}-${grade}`,
   name: `${name} · ${gradeName(grade)}`,
@@ -107,7 +114,7 @@ const subjectMastery = (grade: GradeId, subject: SubjectId, name: string, icon: 
   icon,
   category,
   grade,
-  applies: (ctx) => unitsInGrade(grade, ctx.framework, subject) > 0,
+  applies: offers(subject),
   progress: (d, ctx) => ({ value: unitsAtLevel(d, grade, ctx.framework, 2, subject), target: Math.max(1, unitsInGrade(grade, ctx.framework, subject)) }),
 });
 
@@ -119,6 +126,7 @@ const gradeTrophies = (grade: GradeId): Trophy[] => [
   subjectMastery(grade, "social", "World Explorer", "🗺️", "Reach Proficient in every Social Studies unit"),
   subjectMastery(grade, "immersion", "Maître du français", "🎓", "Reach Proficient in every French Immersion unit", "French"),
   subjectMastery(grade, "core-french", "Core French Champion", "🍁", "Reach Proficient in every Core French unit", "French"),
+  subjectMastery(grade, "spanish", "Campeón de español", "💬", "Reach Proficient in every Spanish unit", "Spanish"),
   {
     id: `grade-champion-${grade}`,
     name: `${gradeName(grade)} Champion`,
@@ -164,7 +172,6 @@ const frenchUnits = (d: Derived, grade: GradeId, framework: FrameworkId, min: nu
 const hasFrench = (ctx: TrophyContext) => sum((s) => unitsInGrade(ctx.grade, ctx.framework, s)) > 0;
 
 const FRENCH_TROPHIES: Trophy[] = ([
-  { id: "bridge-300", name: "Bridge Builder", description: "Score 300 in Word Bridge.", tier: "silver", icon: "🌉", category: "French", progress: count(300, (d) => d.gameBest.bridge ?? 0) },
   { id: "french-first", name: "Bonjour!", description: "Answer your first French question.", tier: "bronze", icon: "👋", category: "French", progress: count(1, frenchAnswers) },
   { id: "french-100", name: "Petit à petit", description: "Answer 100 French questions.", tier: "silver", icon: "🥐", category: "French", progress: count(100, frenchAnswers) },
   { id: "french-500", name: "Très bien!", description: "Get 500 French questions right.", tier: "gold", icon: "🥖", category: "French", progress: count(500, frenchCorrect) },
@@ -172,6 +179,32 @@ const FRENCH_TROPHIES: Trophy[] = ([
   { id: "french-proficient-5", name: "Parlez-vous?", description: "Reach Proficient in 5 French units.", tier: "silver", icon: "💬", category: "French", progress: count(5, (d, ctx) => frenchUnits(d, ctx.grade, ctx.framework, 2)) },
   { id: "french-extending-1", name: "Étoile du français", description: "Reach Extending in any French unit.", tier: "silver", icon: "⭐", category: "French", progress: count(1, (d, ctx) => frenchUnits(d, ctx.grade, ctx.framework, 3)) },
 ] satisfies Omit<Trophy, "applies">[]).map((t) => ({ ...t, applies: hasFrench }));
+
+// Spanish (opt-in, Grades 3 to 9 everywhere, behind the "spanish" flag): the same shape as the French list.
+const spanishAnswers = (d: Derived) => d.subjects.spanish?.answers ?? 0;
+const spanishCorrect = (d: Derived) => d.subjects.spanish?.correct ?? 0;
+const spanishUnits = (min: number) => (d: Derived, ctx: TrophyContext) => unitsAtLevel(d, ctx.grade, ctx.framework, min, "spanish");
+
+const SPANISH_TROPHIES: Trophy[] = ([
+  { id: "spanish-first", name: "¡Hola!", description: "Answer your first Spanish question.", tier: "bronze", icon: "👋", category: "Spanish", progress: count(1, spanishAnswers) },
+  { id: "spanish-100", name: "Poco a poco", description: "Answer 100 Spanish questions.", tier: "silver", icon: "🐢", category: "Spanish", progress: count(100, spanishAnswers) },
+  { id: "spanish-500", name: "¡Muy bien!", description: "Get 500 Spanish questions right.", tier: "gold", icon: "🏅", category: "Spanish", progress: count(500, spanishCorrect) },
+  { id: "spanish-proficient-1", name: "Spanish Sprout", description: "Reach Proficient in any Spanish unit.", tier: "bronze", icon: "🌱", category: "Spanish", progress: count(1, spanishUnits(2)) },
+  { id: "spanish-proficient-5", name: "¿Hablas español?", description: "Reach Proficient in 5 Spanish units.", tier: "silver", icon: "💬", category: "Spanish", progress: count(5, spanishUnits(2)) },
+  { id: "spanish-extending-1", name: "Estrella del español", description: "Reach Extending in any Spanish unit.", tier: "silver", icon: "⭐", category: "Spanish", progress: count(1, spanishUnits(3)) },
+] satisfies Omit<Trophy, "applies">[]).map((t) => ({ ...t, applies: offers("spanish") }));
+
+/** Word Bridge has French and Spanish rounds, so it shows wherever either is taught. */
+const BRIDGE_TROPHY: Trophy = {
+  id: "bridge-300",
+  name: "Bridge Builder",
+  description: "Score 300 in Word Bridge.",
+  tier: "silver",
+  icon: "🌉",
+  category: "Arcade",
+  applies: (ctx) => hasFrench(ctx) || offers("spanish")(ctx),
+  progress: count(300, (d) => d.gameBest.bridge ?? 0),
+};
 
 /** Different stories read to the end, and those with every question right. */
 const storiesRead = (d: Derived) => Object.keys(d.stories).length;
@@ -213,6 +246,7 @@ const SUBJECT_LADDERS: { subject: SubjectId; category: TrophyCategory; steps: [n
   { subject: "social", category: "Practice", steps: [[100, "bronze", "Map Reader", "🧭"], [500, "silver", "Globetrotter", "🌍"], [2000, "gold", "Social Studies Legend", "🏛️"]] },
   { subject: "immersion", category: "French", steps: [[250, "silver", "Je parle français", "🗣️"]] },
   { subject: "core-french", category: "French", steps: [[250, "silver", "Bon début", "🍁"]] },
+  { subject: "spanish", category: "Spanish", steps: [[250, "silver", "Hablo español", "🗣️"]] },
 ];
 
 const SUBJECT_TROPHIES: Trophy[] = SUBJECT_LADDERS.flatMap(({ subject, category, steps }) =>
@@ -223,7 +257,7 @@ const SUBJECT_TROPHIES: Trophy[] = SUBJECT_LADDERS.flatMap(({ subject, category,
     tier,
     icon,
     category,
-    applies: isCoreSubject(subject) ? undefined : (ctx) => unitsInGrade(ctx.grade, ctx.framework, subject) > 0,
+    applies: isCoreSubject(subject) ? undefined : offers(subject),
     progress: count(n, subjectCorrect(subject)),
   })),
 );
@@ -308,6 +342,8 @@ export const TROPHIES: Trophy[] = [
   ...STORY_TROPHIES,
   ...SURPRISE_TROPHIES,
   ...FRENCH_TROPHIES,
+  ...SPANISH_TROPHIES,
+  BRIDGE_TROPHY,
   ...SUBJECT_TROPHIES,
 
   // Secret
