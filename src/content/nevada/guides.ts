@@ -202,6 +202,10 @@ export const NEVADA_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Nevada's state-funded pre-K year runs in school districts and community programs for four-year-olds. It follows the Nevada Pre-Kindergarten Standards, revised in 2023.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in Nevada is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. In social studies (Building Community) they learn about themselves, families, rules, fairness, the American flag and Nevada's symbols. Schools also check reading with i-Ready.",
       lookFor: "Many Nevada districts use standards-based report cards. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

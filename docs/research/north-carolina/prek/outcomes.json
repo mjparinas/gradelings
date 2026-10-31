@@ -1,0 +1,1086 @@
+{
+ "pk/math": [
+  {
+   "idx": "CD-10j",
+   "text": "Rote count in order to 10 with increasing accuracy."
+  },
+  {
+   "idx": "CD-10k",
+   "text": "Count up to 5 objects arranged in a line using one-to-one correspondence with increasing accuracy, and answer the question “How many?”"
+  },
+  {
+   "idx": "CD-10l",
+   "text": "Compare visually two groups of objects that are obviously equal or unequal in quantity and communicate that they are the same or different, and which one has more (choose a plate with four cookies rather than a plate with one cookie)."
+  },
+  {
+   "idx": "CD-10n",
+   "text": "Rote count in order to 20 with increasing accuracy."
+  },
+  {
+   "idx": "CD-10o",
+   "text": "Without counting, state the number of objects in a small collection (1-3) (when a friend holds up two fingers, look at her hand and say, “Two fingers” without counting)."
+  },
+  {
+   "idx": "CD-10p",
+   "text": "Count up to 10 objects arranged in a line using one-to-one correspondence with increasing accuracy, and answer the question “How many?”"
+  },
+  {
+   "idx": "CD-10q",
+   "text": "Given a number 0-5, count out that many objects."
+  },
+  {
+   "idx": "CD-10r",
+   "text": "Compare the amount of items in small sets of objects (up to 5 objects) by matching or counting and use language such as “more than” and “less than” to describe the sets of objects."
+  },
+  {
+   "idx": "CD-10m",
+   "text": "Show they understand that adding objects to a group will make a bigger group, and taking away objects will make a smaller group."
+  },
+  {
+   "idx": "CD-10s",
+   "text": "Show they understand that putting two groups of objects together will make a bigger group and that a group of objects can be taken apart into smaller groups."
+  },
+  {
+   "idx": "CD-10t",
+   "text": "Write numerals or number-like forms during play and daily activities."
+  },
+  {
+   "idx": "CD-10u",
+   "text": "Match numerals 1-5 to sets of objects, with guidance and support."
+  },
+  {
+   "idx": "CD-10v",
+   "text": "Recognize some numerals and attempt to write them during play and daily activities."
+  },
+  {
+   "idx": "CD-10w",
+   "text": "Show understanding of first, next, and last during play and daily activities (answer questions about who is first and last to slide down the slide; say, “The engine is first, and the caboose is last” when making a train)."
+  },
+  {
+   "idx": "CD-11f",
+   "text": "Use descriptive language for size, length, or weight (short, tall, long, heavy, big)."
+  },
+  {
+   "idx": "CD-11g",
+   "text": "Use simple measurement tools with guidance and support to measure objects (a ruler, measuring cup, scale)."
+  },
+  {
+   "idx": "CD-11h",
+   "text": "Compare the size or weight of two objects and identify which one is longer/ taller/heavier than the other (“That rock is heavier than this one; I can’t lift it.” “A snake is longer than a worm.”)."
+  },
+  {
+   "idx": "CD-11i",
+   "text": "Identify familiar objects as the same or different."
+  },
+  {
+   "idx": "CD-11j",
+   "text": "Sort familiar objects into categories with increasing accuracy (tools for woodworking and utensils for cooking; rectangle blocks on one shelf and square blocks on another shelf)."
+  },
+  {
+   "idx": "CD-11k",
+   "text": "Recognize simple repeating patterns and attempt to create them during play (repeat a movement pattern during a song, make a line of blocks in alternating colors)."
+  },
+  {
+   "idx": "CD-11l",
+   "text": "Use descriptive language for size, length, or weight (short, tall, long, heavy, big)."
+  },
+  {
+   "idx": "CD-11m",
+   "text": "Use simple measurement tools with guidance and support to measure objects (a ruler, measuring cup, scale)."
+  },
+  {
+   "idx": "CD-11n",
+   "text": "Directly compare more than two objects by size, length, or weight (“That rock is heavier than these others; I can’t lift it.” Look at three strings that are different lengths and select the longest string)."
+  },
+  {
+   "idx": "CD-11o",
+   "text": "Put a few objects in order by length (arrange a group of 3 blocks in order from the shortest to the longest)."
+  },
+  {
+   "idx": "CD-11p",
+   "text": "Sort a group of objects (0-10) using one attribute (color, size, shape, quantity) with increasing accuracy (sort blocks by shape and place like-shaped blocks on the shelf; sort beads by color)."
+  },
+  {
+   "idx": "CD-11q",
+   "text": "Duplicate and extend simple patterns using concrete objects (look at a pattern of beads and tell what bead comes next in the pattern)."
+  },
+  {
+   "idx": "CD-12h",
+   "text": "Show they understand positions in space by using position words during play and by following directions from an adult (say, “Stand behind the chair.” “Put the ball in the box.”)."
+  },
+  {
+   "idx": "CD-12i",
+   "text": "Use 2- and 3-dimensional shapes to create pictures, designs, or structures."
+  },
+  {
+   "idx": "CD-12j",
+   "text": "Find shapes in the environment and describe them in their own words."
+  },
+  {
+   "idx": "CD-12k",
+   "text": "Consistently use a variety of words for positions in space, and follow directions using these words."
+  },
+  {
+   "idx": "CD-12l",
+   "text": "Use 2- and 3-dimensional shapes to represent realworld objects (say, “We are building a castle and we need a round block for the tunnel.” “I glued a circle and a square on my picture to make a house.”)."
+  },
+  {
+   "idx": "CD-12m",
+   "text": "Name basic shapes and describe their characteristics using descriptive and geometric attributes (“That’s a triangle; it’s pointy.” “It’s a circle because it’s round.”)."
+  },
+  {
+   "idx": "CD-13b",
+   "text": "Seek answers to questions by using mathematical thinking during play and daily activities (determine who is taller by standing next to classmate; find two smaller blocks to replace larger block)."
+  },
+  {
+   "idx": "CD-13c",
+   "text": "Use observation and counting (not always correctly) to find out how many things are needed during play and other daily activities (figure out how many spoons are needed for snack, find enough dolls so each person has one when playing in the dramatic play area)."
+  },
+  {
+   "idx": "CD-13d",
+   "text": "Use drawing and concrete materials to represent mathematical ideas (draw many circles to show “lots of people,” put Popsicle® sticks in a pile to show the number of children who want crackers for snack)."
+  },
+  {
+   "idx": "CD-13e",
+   "text": "Seek answers to questions during play and daily activities using an increasing variety of mathematical strategies."
+  },
+  {
+   "idx": "CD-13f",
+   "text": "Use observation and counting with increasing accuracy to answer questions such as “How many do we need?” and “How many more do we need?” during play and other daily activities (count new children to see how many more plates are needed for snack; return extra drinks to cooler at picnic to arrive at the correct number)."
+  },
+  {
+   "idx": "CD-13g",
+   "text": "Use drawing and concrete materials to represent an increasing variety of mathematical ideas (draw shapes to represent pattern; stack different-colored blocks to represent classmates’ answers to a survey question)."
+  },
+  {
+   "idx": "CD-13h",
+   "text": "Begin to explain how a mathematical problem was solved (“I saw that there was always a blue flower after a red flower so I knew to put a blue one next.” “I counted four friends who didn’t have cookies so I got four more.”)."
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "LDC-1k",
+   "text": "Show understanding of increasingly complex sentences."
+  },
+  {
+   "idx": "LDC-1l",
+   "text": "With prompting and support, respond to requests for information or action."
+  },
+  {
+   "idx": "LDC-1m",
+   "text": "Follow simple multistep directions with visual cues if needed."
+  },
+  {
+   "idx": "LDC-1n",
+   "text": "Show understanding of increasingly complex sentences."
+  },
+  {
+   "idx": "LDC-1o",
+   "text": "Respond to requests for information or action."
+  },
+  {
+   "idx": "LDC-1p",
+   "text": "Follow more detailed multistep directions."
+  },
+  {
+   "idx": "LDC-2i",
+   "text": "Demonstrate an understanding that people communicate in many ways (gestures, facial expressions, multiple spoken languages, sign language, augmentative communication)."
+  },
+  {
+   "idx": "LDC-2j",
+   "text": "Initiate and carry on conversations, and ask questions about things that interest them."
+  },
+  {
+   "idx": "LDC-2k",
+   "text": "With prompting and support, make comments and ask questions related to the topic of discussion."
+  },
+  {
+   "idx": "LDC-2l",
+   "text": "Express an understanding that people communicate in many ways (gestures, facial expressions, multiple spoken languages, sign language, and augmentative communication)."
+  },
+  {
+   "idx": "LDC-2m",
+   "text": "Initiate and carry on conversations that involve multiple back and forth communications or turns between the persons involved in the conversation."
+  },
+  {
+   "idx": "LDC-2n",
+   "text": "Initiate and participate in conversations related to interests of their own or the persons they are communicating with."
+  },
+  {
+   "idx": "LDC-2o",
+   "text": "Participate in a group discussion, making comments and asking questions related to the topic."
+  },
+  {
+   "idx": "LDC-2p",
+   "text": "Appreciate and use humor."
+  },
+  {
+   "idx": "LDC-3d",
+   "text": "Answer longer questions using more detail."
+  },
+  {
+   "idx": "LDC-3e",
+   "text": "Use sentences or questions to ask for things (people, actions, objects, pets) or gain information."
+  },
+  {
+   "idx": "LDC-3f",
+   "text": "Answer more complex questions with more explanation (“I didn’t like camping out because it rained.” “Emily is my friend because she’s nice to me.”)."
+  },
+  {
+   "idx": "LDC-3g",
+   "text": "Ask specific questions to learn more about their world, understand tasks, and solve problems."
+  },
+  {
+   "idx": "LDC-4h",
+   "text": "Communicate messages with expression, tone, and inflection appropriate to the situation."
+  },
+  {
+   "idx": "LDC-4i",
+   "text": "Speak clearly enough to be understood by familiar adults and children."
+  },
+  {
+   "idx": "LDC-4j",
+   "text": "Use language and nonverbal cues to communicate thoughts, beliefs, feelings, and intentions."
+  },
+  {
+   "idx": "LDC-4k",
+   "text": "Adapt their communication to meet social expectations (speak quietly in library, speak politely to older relative)."
+  },
+  {
+   "idx": "LDC-4l",
+   "text": "Speak clearly enough to be understood by most people."
+  },
+  {
+   "idx": "LDC-5d",
+   "text": "Talk to themselves and others about what they are “working on,” what they are doing, routines, and events of the day."
+  },
+  {
+   "idx": "LDC-5e",
+   "text": "Describe experiences and create or retell short narratives."
+  },
+  {
+   "idx": "LDC-5f",
+   "text": "Describe experiences and create and/or retell longer narratives."
+  },
+  {
+   "idx": "LDC-6g",
+   "text": "Communicate in longer sentences and use more conventional grammar in their home language (plurals, tenses, prepositions)."
+  },
+  {
+   "idx": "LDC-6h",
+   "text": "Make grammatical errors that follow language rules (say, “mouses” instead of “mice”)."
+  },
+  {
+   "idx": "LDC-6i",
+   "text": "Speak in full sentences that are grammatically correct most of the time."
+  },
+  {
+   "idx": "LDC-7k",
+   "text": "Repeat familiar songs, chants, or rhymes."
+  },
+  {
+   "idx": "LDC-7l",
+   "text": "Use more than one word for the same object and use words for parts of objects (e.g., dog, beagle, Rover; arm, leg)."
+  },
+  {
+   "idx": "LDC-7m",
+   "text": "Make up names for things using words they know (e.g., dog doctor for veterinarian)."
+  },
+  {
+   "idx": "LDC-7n",
+   "text": "Use many kinds of cues in the environment to figure out what words mean."
+  },
+  {
+   "idx": "LDC-7o",
+   "text": "Repeat familiar songs, chants, or rhymes."
+  },
+  {
+   "idx": "LDC-7p",
+   "text": "Use a growing vocabulary that includes many different kinds of words to express ideas clearly."
+  },
+  {
+   "idx": "LDC-7q",
+   "text": "Infer the meaning of different kinds of new words from the context in which they are used (for example, hear “sandals” and “boots” used to describe two pairs of shoes, and infer that the unfamiliar shoes must be sandals because they know that the other pair of shoes are boots)."
+  },
+  {
+   "idx": "LDC-8j",
+   "text": "Engage in reading behaviors independently (choose books, turn pages but not always in order, tell the story)."
+  },
+  {
+   "idx": "LDC-8k",
+   "text": "Show an interest in books, other print, and readingrelated activities."
+  },
+  {
+   "idx": "LDC-8l",
+   "text": "Listen to and discuss storybooks, simple information books, and poetry."
+  },
+  {
+   "idx": "LDC-8m",
+   "text": "Engage in reading behaviors independently with increased focus for longer periods of time."
+  },
+  {
+   "idx": "LDC-8n",
+   "text": "Use and share books and print in their play."
+  },
+  {
+   "idx": "LDC-8o",
+   "text": "Listen to and discuss increasingly complex storybooks, information books, and poetry."
+  },
+  {
+   "idx": "LDC-9i",
+   "text": "Imitate the special language in storybooks and story dialogue with some accuracy and detail."
+  },
+  {
+   "idx": "LDC-9j",
+   "text": "With prompting and support, use books and other media that communicate information to learn about the world by looking at pictures, asking questions, and talking about the information."
+  },
+  {
+   "idx": "LDC-9k",
+   "text": "Use their knowledge of the world (what things are, how things work) to make sense of stories and information texts."
+  },
+  {
+   "idx": "LDC-9l",
+   "text": "Relate personal experiences to events described in familiar books, with prompting and support."
+  },
+  {
+   "idx": "LDC-9m",
+   "text": "Ask questions about a story or the information in a book."
+  },
+  {
+   "idx": "LDC-9n",
+   "text": "With prompting and support, discuss storybooks by responding to questions about what is happening and predicting what will happen next."
+  },
+  {
+   "idx": "LDC-9o",
+   "text": "Imitate the special language in storybooks and story dialogue with accuracy and detail."
+  },
+  {
+   "idx": "LDC-9p",
+   "text": "Use informational texts and other media to learn about the world, and infer from illustrations, ask questions and talk about the information."
+  },
+  {
+   "idx": "LDC-9q",
+   "text": "Use knowledge of the world to make sense of more challenging texts."
+  },
+  {
+   "idx": "LDC-9r",
+   "text": "Relate personal experiences to an increasing variety of events described in familiar and new books."
+  },
+  {
+   "idx": "LDC-9s",
+   "text": "Ask more focused and detailed questions about a story or the information in a book."
+  },
+  {
+   "idx": "LDC-9t",
+   "text": "Discuss storybooks by responding to questions about what is happening and predicting what will happen next."
+  },
+  {
+   "idx": "LDC-10h",
+   "text": "Hold a book upright while turning pages one by one front to back, but not always in order."
+  },
+  {
+   "idx": "LDC-10i",
+   "text": "With prompting and support, recognize print occurs in different forms and is used for a variety of functions (sign naming block structure, “message” on card for family member)."
+  },
+  {
+   "idx": "LDC-10j",
+   "text": "Demonstrate an understanding that print can tell people what to do (such as print and symbols to organize classroom activities—where to store things, when they will have a turn)."
+  },
+  {
+   "idx": "LDC-10k",
+   "text": "Hold a book upright while turning pages one by one from front to back."
+  },
+  {
+   "idx": "LDC-10l",
+   "text": "Recognize print in different forms for a variety of functions (writing message to friend, pointing to print and saying, “Those words tell the story.”)."
+  },
+  {
+   "idx": "LDC-10m",
+   "text": "Recognize print and symbols used to organize classroom activities and show understanding of their meaning (put toys in box with correct symbol and name; check sign-up sheet for popular activity; check schedule to learn next activity)."
+  },
+  {
+   "idx": "LDC-10n",
+   "text": "With prompting and support, run their finger under or over print as they pretend to read text."
+  },
+  {
+   "idx": "LDC-10o",
+   "text": "Demonstrate understanding of some basic print conventions (the concept of what a letter is, the concept of words, directionality of print)."
+  },
+  {
+   "idx": "LDC-10p",
+   "text": "Identify their name and the names of some friends when they see them in print."
+  },
+  {
+   "idx": "LDC-11f",
+   "text": "Participate in experiences with songs, poems, and books that have rhyme and wordplay, and learn words well enough to complete refrains and fill in missing words and sounds."
+  },
+  {
+   "idx": "LDC-11g",
+   "text": "Repeat rhythmic patterns in poems and songs using words, clapping, marching, and/or using instruments."
+  },
+  {
+   "idx": "LDC-11h",
+   "text": "Play with the sounds of language and begin to identify rhymes (make up silly-sounding words, repeat rhyming words)."
+  },
+  {
+   "idx": "LDC-11i",
+   "text": "Enjoy rhymes and wordplay, and sometimes add their own variations."
+  },
+  {
+   "idx": "LDC-11j",
+   "text": "Repeat a variety of rhythmic patterns in poems and songs using words, clapping, marching, and/or instruments to repeat the rhythm or beat syllables."
+  },
+  {
+   "idx": "LDC-11k",
+   "text": "Play with the sounds of language, identify a variety of rhymes, create some rhymes, and recognize the first sounds in some words."
+  },
+  {
+   "idx": "LDC-11l",
+   "text": "Associate sounds with specific words, such as awareness that different words begin with the same sound"
+  },
+  {
+   "idx": "LDC-12b",
+   "text": "Demonstrate an interest in learning the alphabet."
+  },
+  {
+   "idx": "LDC-12c",
+   "text": "Recognize letters of the alphabet as a special category of print, different from pictures, shapes, and numerals."
+  },
+  {
+   "idx": "LDC-12d",
+   "text": "Recognize and name some letters of the alphabet, especially those in their own name."
+  },
+  {
+   "idx": "LDC-12e",
+   "text": "Demonstrate an interest in learning the alphabet."
+  },
+  {
+   "idx": "LDC-12f",
+   "text": "Show they know that letters function to represent sounds in spoken words."
+  },
+  {
+   "idx": "LDC-12g",
+   "text": "Recognize and name several letters of the alphabet, especially those in their own name and in the names of others who are important to them."
+  },
+  {
+   "idx": "LDC-12h",
+   "text": "Make some sound-to-letter matches, using letter name knowledge (notice the letter B with picture of ball and say, “Ball”; say, “ A-a-apple.”)."
+  },
+  {
+   "idx": "LDC-12i",
+   "text": "Associate sounds with the letters at the beginning of some words, such as awareness that two words begin with the same letter and the same sound."
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "CD-1h",
+   "text": "Explore objects, tools, and materials systematically to learn about their properties (weigh an object, observe something from the top of the object to the bottom)."
+  },
+  {
+   "idx": "CD-1i",
+   "text": "Express knowledge gathered through their senses using play, art, language, and other forms of representation."
+  },
+  {
+   "idx": "CD-1j",
+   "text": "Group familiar objects that go together (shoe and sock, brush and paint, hammer and nail)."
+  },
+  {
+   "idx": "CD-1k",
+   "text": "Explore objects, tools, and materials systematically to learn about their properties (weigh an object, observe something from the top of the object to the bottom)."
+  },
+  {
+   "idx": "CD-1l",
+   "text": "Express knowledge gathered through their senses using play, art, language, and other forms of representation."
+  },
+  {
+   "idx": "CD-1m",
+   "text": "Distinguish appearance from reality (the person behind a mask is still the same person; recognize that a fantasy story could not be real)."
+  },
+  {
+   "idx": "CD-1n",
+   "text": "Organize and use information through matching, grouping, and sequencing."
+  },
+  {
+   "idx": "CD-2o",
+   "text": "Recognize whether a picture or object is the same as or different from something they have seen before."
+  },
+  {
+   "idx": "CD-2p",
+   "text": "Apply what they know about everyday experiences to new situations (look for the seatbelt on the bus)."
+  },
+  {
+   "idx": "CD-2q",
+   "text": "Describe or act out a memory of a situation or action, with adult support."
+  },
+  {
+   "idx": "CD-2r",
+   "text": "Make predictions about what will happen using what they know."
+  },
+  {
+   "idx": "CD-2s",
+   "text": "Introduce ideas or actions in play based on previous knowledge or experience."
+  },
+  {
+   "idx": "CD-2t",
+   "text": "Ask questions about why things happen and try to understand cause and effect."
+  },
+  {
+   "idx": "CD-2u",
+   "text": "Demonstrate their ability to apply what they know about everyday experiences to new situations."
+  },
+  {
+   "idx": "CD-2v",
+   "text": "Describe past events in an organized way, including details or personal reactions."
+  },
+  {
+   "idx": "CD-2w",
+   "text": "Improve their ability to make predictions and explain why things happen using what they know."
+  },
+  {
+   "idx": "CD-2x",
+   "text": "Introduce more elaborate or detailed ideas or actions into play based on previous knowledge or experience."
+  },
+  {
+   "idx": "CD-2y",
+   "text": "Try to reach logical conclusions (including conclusions regarding cause and effect) about familiar situations and materials, based on information gathered with their senses."
+  },
+  {
+   "idx": "CD-3f",
+   "text": "Use language to identify pretend or fantasy situations (say, “Let’s pretend we’re going on a trip.” “That’s a pretend story.”)."
+  },
+  {
+   "idx": "CD-3g",
+   "text": "Use words like “think” and “know” to talk about thoughts and beliefs."
+  },
+  {
+   "idx": "CD-3h",
+   "text": "Recognize that beliefs and desires can determine what people do (e.g., a person will look for a missing object based on where they think it is rather than where it actually is)."
+  },
+  {
+   "idx": "CD-3i",
+   "text": "Use language to identify pretend or fantasy situations (say, “Let’s pretend we’re going on a trip.” “That’s a pretend story.”)."
+  },
+  {
+   "idx": "CD-3j",
+   "text": "Express understanding that others may have different thoughts, beliefs, or feelings than their own (“I like ketchup and you don’t.”)."
+  },
+  {
+   "idx": "CD-3k",
+   "text": "Use language to describe their thinking processes with adult support."
+  },
+  {
+   "idx": "CD-14e",
+   "text": "Participate in the care of living things, with guidance and support (water plants, help to feed classroom pet)."
+  },
+  {
+   "idx": "CD-14f",
+   "text": "Notice and react to the natural world and the outdoor environment."
+  },
+  {
+   "idx": "CD-14g",
+   "text": "Notice and describe characteristics of plants and animals, such as appearance, similarities, differences, behavior, and habitat."
+  },
+  {
+   "idx": "CD-14h",
+   "text": "Notice and describe current weather conditions."
+  },
+  {
+   "idx": "CD-14i",
+   "text": "Notice and describe properties of materials and changes in substances (water freezes into ice, pudding thickens, clay hardens)."
+  },
+  {
+   "idx": "CD-14j",
+   "text": "Participate in activities that help to care for the environment, with guidance and support (pick up trash, recycle paper)."
+  },
+  {
+   "idx": "CD-14k",
+   "text": "Collect items from nature (rocks, leaves, insects) and classify them using physical characteristics (color, size, shape, texture)."
+  },
+  {
+   "idx": "CD-14l",
+   "text": "Notice and react to the natural world and the outdoor environment."
+  },
+  {
+   "idx": "CD-14m",
+   "text": "Describe some things plants and animals need to live and grow (sunlight, water, food)."
+  },
+  {
+   "idx": "CD-14n",
+   "text": "Take responsibility for the care of living things (independently feed classroom pet as daily chore, water plant when dry, weed vegetable garden)."
+  },
+  {
+   "idx": "CD-14o",
+   "text": "Notice and describe weather conditions, position of the sun and moon at different times, and seasonal changes."
+  },
+  {
+   "idx": "CD-14p",
+   "text": "Notice, describe, and attempt to explain properties of materials and changes in substances (metal railing is hot because the sun shines on it; ice melts when it gets warmer)."
+  },
+  {
+   "idx": "CD-14q",
+   "text": "Participate in activities that help to care for the environment and explain why they are important with guidance and support (gathering cans for recycling, planting trees)."
+  },
+  {
+   "idx": "CD-15i",
+   "text": "Represent what they learn during scientific exploration through drawing, modeling, building, movement, or other methods."
+  },
+  {
+   "idx": "CD-15j",
+   "text": "Observe objects, materials, and phenomena and describe what they notice (temperature, texture, size, weight, color, etc.)."
+  },
+  {
+   "idx": "CD-15k",
+   "text": "Ask questions to find out more about the natural world."
+  },
+  {
+   "idx": "CD-15l",
+   "text": "Use simple tools to investigate objects and materials, with guidance and support (magnifying glass, sifter, ramps for rolling balls and cars)."
+  },
+  {
+   "idx": "CD-15m",
+   "text": "Describe and predict changes that take place when mixing and manipulating materials."
+  },
+  {
+   "idx": "CD-15n",
+   "text": "Represent what they learn during scientific exploration through drawing, modeling, building, movement, or other methods."
+  },
+  {
+   "idx": "CD-15o",
+   "text": "Ask questions and identify ways to find answers (look in a book, use the computer, try something and watch what happens)."
+  },
+  {
+   "idx": "CD-15p",
+   "text": "Compare objects, materials, and phenomena by observing and describing their physical characteristics."
+  },
+  {
+   "idx": "CD-15q",
+   "text": "Use an increasing variety of tools to investigate the world around them (measuring tools, balance, prism, droppers)."
+  },
+  {
+   "idx": "CD-15r",
+   "text": "Make and check predictions through observations and experimentation, with adult support and guidance."
+  },
+  {
+   "idx": "CD-15s",
+   "text": "Manipulate the environment to produce desired effects and invent solutions to problems (attach a piece of string to the light switch so they can independently turn off the lights)."
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "CD-6h",
+   "text": "Talk about close family members, name their relationships to each other, and describe family routines (“Marika is my sister.” “My grandma takes care of me at night.”)."
+  },
+  {
+   "idx": "CD-6i",
+   "text": "Adopt roles of family and community members during play, given support and realistic props."
+  },
+  {
+   "idx": "CD-6j",
+   "text": "Recognize and identify the roles of some community helpers (police, fire fighters, garbage collectors)."
+  },
+  {
+   "idx": "CD-6k",
+   "text": "Talk about a wide circle of family members and other people important to the family, their relationships to each other, and shared experiences."
+  },
+  {
+   "idx": "CD-6l",
+   "text": "Adopt roles of a wide variety of family and community members during dramatic play, using props, language, and actions to add detail to their play."
+  },
+  {
+   "idx": "CD-6m",
+   "text": "Recognize and identify the roles of a wide variety of community helpers (police, fire fighters, garbage collectors, doctors, dentists)."
+  },
+  {
+   "idx": "CD-7d",
+   "text": "Identify self as a part of a specific family, preschool class, or other familiar group (e.g., point to picture and say, “That’s my family,” or “I’m in Ms. Emily’s class.”)."
+  },
+  {
+   "idx": "CD-7e",
+   "text": "Identify and express self as a part of several groups (e.g., family, preschool class, faith community)."
+  },
+  {
+   "idx": "CD-8d",
+   "text": "Show acceptance of people who are different from themselves as well as people who are similar."
+  },
+  {
+   "idx": "CD-8e",
+   "text": "Given support and guidance, explore different cultural practices during play and planned activities."
+  },
+  {
+   "idx": "CD-8f",
+   "text": "Show acceptance of people who are different from themselves as well as people who are similar."
+  },
+  {
+   "idx": "CD-8g",
+   "text": "Talk about how other children have different family members and family structures than their own (“I live with my Grandma and Shanika lives with her Mom and Dad.” “David’s dad works but my Daddy stays home and takes care of me.”)."
+  },
+  {
+   "idx": "CD-8h",
+   "text": "Show acceptance of different cultures through exploration of varying customs and traditions, past and present (how people dress, how people speak, food, music, art, etc.)."
+  },
+  {
+   "idx": "CD-9b",
+   "text": "Describe characteristics of the places where they live and play (say, “My house is big and there are trees in my yard.” “The playground has swings and a sandbox.”)."
+  },
+  {
+   "idx": "CD-9c",
+   "text": "Notice changes that happen over time (seasons, self or others growing bigger)."
+  },
+  {
+   "idx": "CD-9d",
+   "text": "Notice and talk about weather conditions."
+  },
+  {
+   "idx": "CD-9e",
+   "text": "With prompting and support, participate as a member of a democratic classroom community (vote for name of class pet, wait turn to paint when easels are full)."
+  },
+  {
+   "idx": "CD-9f",
+   "text": "Describe characteristics of the places where they live and play (say, “My house is big and there are trees in my yard.” “The playground has swings and a sandbox.”)."
+  },
+  {
+   "idx": "CD-9g",
+   "text": "Observe and talk about changes in themselves and their families over time."
+  },
+  {
+   "idx": "CD-9h",
+   "text": "Observe and talk about how people adapt to seasons and weather conditions (put out salt in icy weather, wear rain gear)."
+  },
+  {
+   "idx": "CD-9i",
+   "text": "Show awareness of the basic needs all families have (food, shelter, clothing) and how needs are met (work, help each other)."
+  },
+  {
+   "idx": "CD-9j",
+   "text": "Demonstrate positive social behaviors and take personal responsibility as a member of a group (share, take turns, follow rules, take responsibility for classroom jobs)."
+  },
+  {
+   "idx": "CD-14e",
+   "text": "Participate in the care of living things, with guidance and support (water plants, help to feed classroom pet)."
+  },
+  {
+   "idx": "CD-14f",
+   "text": "Notice and react to the natural world and the outdoor environment."
+  },
+  {
+   "idx": "CD-14g",
+   "text": "Notice and describe characteristics of plants and animals, such as appearance, similarities, differences, behavior, and habitat."
+  },
+  {
+   "idx": "CD-14h",
+   "text": "Notice and describe current weather conditions."
+  },
+  {
+   "idx": "CD-14i",
+   "text": "Notice and describe properties of materials and changes in substances (water freezes into ice, pudding thickens, clay hardens)."
+  },
+  {
+   "idx": "CD-14j",
+   "text": "Participate in activities that help to care for the environment, with guidance and support (pick up trash, recycle paper)."
+  },
+  {
+   "idx": "CD-14k",
+   "text": "Collect items from nature (rocks, leaves, insects) and classify them using physical characteristics (color, size, shape, texture)."
+  },
+  {
+   "idx": "CD-14l",
+   "text": "Notice and react to the natural world and the outdoor environment."
+  },
+  {
+   "idx": "CD-14m",
+   "text": "Describe some things plants and animals need to live and grow (sunlight, water, food)."
+  },
+  {
+   "idx": "CD-14n",
+   "text": "Take responsibility for the care of living things (independently feed classroom pet as daily chore, water plant when dry, weed vegetable garden)."
+  },
+  {
+   "idx": "CD-14o",
+   "text": "Notice and describe weather conditions, position of the sun and moon at different times, and seasonal changes."
+  },
+  {
+   "idx": "CD-14p",
+   "text": "Notice, describe, and attempt to explain properties of materials and changes in substances (metal railing is hot because the sun shines on it; ice melts when it gets warmer)."
+  },
+  {
+   "idx": "CD-14q",
+   "text": "Participate in activities that help to care for the environment and explain why they are important with guidance and support (gathering cans for recycling, planting trees)."
+  },
+  {
+   "idx": "CD-15i",
+   "text": "Represent what they learn during scientific exploration through drawing, modeling, building, movement, or other methods."
+  },
+  {
+   "idx": "CD-15j",
+   "text": "Observe objects, materials, and phenomena and describe what they notice (temperature, texture, size, weight, color, etc.)."
+  },
+  {
+   "idx": "CD-15k",
+   "text": "Ask questions to find out more about the natural world."
+  },
+  {
+   "idx": "CD-15l",
+   "text": "Use simple tools to investigate objects and materials, with guidance and support (magnifying glass, sifter, ramps for rolling balls and cars)."
+  },
+  {
+   "idx": "CD-15m",
+   "text": "Describe and predict changes that take place when mixing and manipulating materials."
+  },
+  {
+   "idx": "CD-15n",
+   "text": "Represent what they learn during scientific exploration through drawing, modeling, building, movement, or other methods."
+  },
+  {
+   "idx": "CD-15o",
+   "text": "Ask questions and identify ways to find answers (look in a book, use the computer, try something and watch what happens)."
+  },
+  {
+   "idx": "CD-15p",
+   "text": "Compare objects, materials, and phenomena by observing and describing their physical characteristics."
+  },
+  {
+   "idx": "CD-15q",
+   "text": "Use an increasing variety of tools to investigate the world around them (measuring tools, balance, prism, droppers)."
+  },
+  {
+   "idx": "CD-15r",
+   "text": "Make and check predictions through observations and experimentation, with adult support and guidance."
+  },
+  {
+   "idx": "CD-15s",
+   "text": "Manipulate the environment to produce desired effects and invent solutions to problems (attach a piece of string to the light switch so they can independently turn off the lights)."
+  },
+  {
+   "idx": "ESD-1k",
+   "text": "Describe self (characteristics that can be seen, things they can do, things they like, possessions)."
+  },
+  {
+   "idx": "ESD-1l",
+   "text": "Express a sense of belonging to a group (say “There’s Kirby from my class,” move to stand with own group upon request, “I am a girl.”)."
+  },
+  {
+   "idx": "ESD-1m",
+   "text": "Use own first and last name."
+  },
+  {
+   "idx": "ESD-1n",
+   "text": "Choose activities they like and name their favorite activities."
+  },
+  {
+   "idx": "ESD-1o",
+   "text": "Describe themselves in concrete ways, with greater detail and accuracy (“My eyes are brown.” “I am tall.”)."
+  },
+  {
+   "idx": "ESD-1p",
+   "text": "Express awareness that they are members of different groups (e.g., family, preschool class, ethnic group)."
+  },
+  {
+   "idx": "ESD-1q",
+   "text": "Choose to spend more time on preferred activities, and express awareness of skills they are developing."
+  },
+  {
+   "idx": "ESD-2k",
+   "text": "Express positive feelings about themselves by showing and/or telling others about themselves, things they like, or things they have done."
+  },
+  {
+   "idx": "ESD-2l",
+   "text": "Express the belief that they can do many things."
+  },
+  {
+   "idx": "ESD-2m",
+   "text": "Try new activities and attempt new challenges."
+  },
+  {
+   "idx": "ESD-2n",
+   "text": "Express positive feelings about themselves by showing and/or telling others about themselves, things they like, or things they have done."
+  },
+  {
+   "idx": "ESD-2o",
+   "text": "Express the belief that they can do many things."
+  },
+  {
+   "idx": "ESD-2p",
+   "text": "Stick with tasks even when they are challenging."
+  },
+  {
+   "idx": "ESD-2q",
+   "text": "Express opinions about their abilities in different areas (“I’m a good friend.” I can run fast.” “I know all my letters!”)."
+  },
+  {
+   "idx": "ESD-3m",
+   "text": "Seek out trusted teachers and caregivers as needed (for emotional support, physical assistance, social interaction, problemsolving, and approval)."
+  },
+  {
+   "idx": "ESD-3n",
+   "text": "Show affection for adults they are close to."
+  },
+  {
+   "idx": "ESD-3o",
+   "text": "Given time, form positive relationships with new teachers or caregivers."
+  },
+  {
+   "idx": "ESD-3p",
+   "text": "Show ease and comfort in their interactions with familiar adults."
+  },
+  {
+   "idx": "ESD-3q",
+   "text": "Seek out trusted teachers and caregivers as needed (for emotional support, physical assistance, social interaction, problemsolving, and approval)."
+  },
+  {
+   "idx": "ESD-3r",
+   "text": "Form positive relationships with new teachers or caregivers over time."
+  },
+  {
+   "idx": "ESD-3s",
+   "text": "Use language effectively to continue conversations with familiar adults and to influence their behavior (ask for help, ask an adult to do something)."
+  },
+  {
+   "idx": "ESD-4k",
+   "text": "Demonstrate social skills when interacting with other children (turntaking, conflict resolution, sharing)."
+  },
+  {
+   "idx": "ESD-4l",
+   "text": "Form and maintain friendships with a few other children."
+  },
+  {
+   "idx": "ESD-4m",
+   "text": "Identify another child as a friend."
+  },
+  {
+   "idx": "ESD-4n",
+   "text": "Approach other children easily, expecting positive interactions."
+  },
+  {
+   "idx": "ESD-4o",
+   "text": "Show ease and comfort in their interactions with familiar children."
+  },
+  {
+   "idx": "ESD-4p",
+   "text": "Demonstrate social skills when interacting with other children (turntaking, conflict resolution, sharing)."
+  },
+  {
+   "idx": "ESD-4q",
+   "text": "Form and maintain friendships with other children of diverse cultural backgrounds and abilities."
+  },
+  {
+   "idx": "ESD-4r",
+   "text": "Seek and give support with children they identify as friends."
+  },
+  {
+   "idx": "ESD-4s",
+   "text": "Use language effectively to have conversations with other children and influence another child’s behavior (negotiate sharing a toy, plan how to build a block tower together)."
+  },
+  {
+   "idx": "ESD-4t",
+   "text": "Play and interact cooperatively with other children (work on project together, exchange ideas)."
+  },
+  {
+   "idx": "ESD-5k",
+   "text": "Follow social rules, transitions, and routines that have been explained to them, with reminders and practice."
+  },
+  {
+   "idx": "ESD-5l",
+   "text": "Often make requests clearly and effectively."
+  },
+  {
+   "idx": "ESD-5m",
+   "text": "Show awareness that their actions affect others (move carefully around classmate’s block structure)."
+  },
+  {
+   "idx": "ESD-5n",
+   "text": "Wait for a short time to get what they want (a turn with a toy, a snack)."
+  },
+  {
+   "idx": "ESD-5o",
+   "text": "Work to resolve conflicts effectively, with guidance and support."
+  },
+  {
+   "idx": "ESD-5p",
+   "text": "Notice and accept similarities and differences among all people, including people with disabilities and those from different cultures."
+  },
+  {
+   "idx": "ESD-5q",
+   "text": "Follow social rules, transitions, and routines that have been explained to them."
+  },
+  {
+   "idx": "ESD-5r",
+   "text": "Make requests clearly and effectively most of the time."
+  },
+  {
+   "idx": "ESD-5s",
+   "text": "Balance their own needs with those of others in the group."
+  },
+  {
+   "idx": "ESD-5t",
+   "text": "Anticipate consequences and plan ways to solve problems effectively, with guidance and support."
+  },
+  {
+   "idx": "ESD-5u",
+   "text": "Use a variety of strategies to solve problems and conflicts with increasing independence."
+  },
+  {
+   "idx": "ESD-5v",
+   "text": "Express respect and caring for all people, including people with disabilities and those from different cultures."
+  },
+  {
+   "idx": "ESD-6l",
+   "text": "Express a range of emotions (happiness, sadness, fear, anger, disgust, tenderness, hostility, shame, guilt, satisfaction, and love) with their face, body, vocal sounds, and words."
+  },
+  {
+   "idx": "ESD-6m",
+   "text": "Use a variety of words or signs to express and manage feelings more clearly."
+  },
+  {
+   "idx": "ESD-6n",
+   "text": "Describe reasons for their feelings (“I’m sad because Grandma’s leaving.” “That makes me mad when you do that!”)."
+  },
+  {
+   "idx": "ESD-6o",
+   "text": "Express a range of emotions (happiness, sadness, fear, anger, disgust, tenderness, hostility, shame, guilt, satisfaction, and love) with their face, body, vocal sounds, and words."
+  },
+  {
+   "idx": "ESD-6p",
+   "text": "Independently manage and express feelings effectively most of the time."
+  },
+  {
+   "idx": "ESD-6q",
+   "text": "Use a larger vocabulary for talking about different feelings (“I’m frustrated with that puzzle!” “I’m excited about our trip.”)."
+  },
+  {
+   "idx": "ESD-6r",
+   "text": "Give reasons for their feelings that may include thoughts and beliefs as well as outside events (“I’m happy because I wanted to win and I did.”)."
+  },
+  {
+   "idx": "ESD-6s",
+   "text": "Use problem-solving strategies when feeling angry or frustrated."
+  },
+  {
+   "idx": "ESD-7j",
+   "text": "Try to comfort another child or an adult who is upset (bring a comfort object, pat the person on the back)."
+  },
+  {
+   "idx": "ESD-7k",
+   "text": "Communicate concern for others (share a toy with someone who doesn’t have one, ask, “Are you OK?”)."
+  },
+  {
+   "idx": "ESD-7l",
+   "text": "Offer help to meet the needs of others (pick up item someone dropped, help another child who is having trouble building a block tower)."
+  },
+  {
+   "idx": "ESD-7m",
+   "text": "Show awareness that other people have different feelings (“I like raisins but he doesn’t.” “I’m scared on that ride but she isn’t.”)."
+  },
+  {
+   "idx": "ESD-7n",
+   "text": "Communicate understanding and empathy for others’ feelings."
+  },
+  {
+   "idx": "ESD-7o",
+   "text": "Show awareness that their behavior can affect the feelings of others (say, “I didn’t mean to scare you when I yelled.”)."
+  },
+  {
+   "idx": "ESD-7p",
+   "text": "Choose to act in ways that show respect for others’ feelings and points of view most of the time with guidance and support (compliment each other during play, work out conflicts, show respect for opinions expressed by others)."
+  }
+ ]
+}

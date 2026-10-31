@@ -155,6 +155,10 @@ export const INDIANA_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Indiana's pre-K year runs in schools, Head Start and On My Way Pre-K programs for four-year-olds. It follows the Indiana Early Learning Standards (2023).",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in Indiana is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. In social studies they learn about families, rules, holidays, maps and the jobs people do, and in science they explore pushes and pulls, sunlight, weather and what living things need.",
       lookFor: "Many Indiana school corporations use standards-based report cards in the early grades. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

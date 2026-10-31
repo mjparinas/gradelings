@@ -169,6 +169,10 @@ export const MAINE_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-K in Maine is public pre-K for 4-year-olds, free and offered by most school districts, often with Head Start and child care partners. Programs follow the Maine Early Learning and Development Standards: social and emotional growth, approaches to learning, language and literacy, math, science, social studies, creative arts and physical health.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in Maine is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. In social studies they learn about themselves, families, rules and jobs, and how people work together.",
       lookFor: "Many Maine schools use standards-based report cards. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

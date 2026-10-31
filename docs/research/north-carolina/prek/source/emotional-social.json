@@ -1,0 +1,1272 @@
+{
+ "data": {
+  "cspStatus": {
+   "notes": null,
+   "value": "visible"
+  },
+  "document": {
+   "publicationStatus": "Published",
+   "sourceURL": "https://ncchildcare.ncdhhs.gov/Portals/0/documents/pdf/N/NC_Foundations.pdf?ver=2017-05-16-105950-953",
+   "title": "North Carolina Foundations for Early Learning and Development"
+  },
+  "educationLevels": [
+   "Pre-K"
+  ],
+  "id": "60FC76F539F04B58B9784031946D36F4",
+  "jurisdiction": {
+   "id": "8A257771396B4F0792EB9D6020CC9089",
+   "title": "North Carolina"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/4.0/us/",
+   "rightsHolder": "Common Curriculum, Inc.",
+   "title": "CC BY 4.0 US"
+  },
+  "normalizedSubject": null,
+  "standards": {
+   "04F46CE579D7454E9E9792943BBD137D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D2B94157A2A94DBB8C72690C5FBC903D",
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use language effectively\nto have conversations\nwith other children and\ninfluence another child’s\nbehavior (negotiate sharing\na toy, plan how to build\na block tower together).",
+    "id": "04F46CE579D7454E9E9792943BBD137D",
+    "listId": "",
+    "parentId": "D2B94157A2A94DBB8C72690C5FBC903D",
+    "position": 1036,
+    "statementLabel": null,
+    "statementNotation": "ESD-4s"
+   },
+   "06675A88664649AEA6B582E2D339D663": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EF18027C646B411E949369C334BD3D8D",
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Wait for a short time to get\nwhat they want (a turn with a\ntoy, a snack).",
+    "id": "06675A88664649AEA6B582E2D339D663",
+    "listId": "",
+    "parentId": "EF18027C646B411E949369C334BD3D8D",
+    "position": 1042,
+    "statementLabel": null,
+    "statementNotation": "ESD-5n"
+   },
+   "07E5383A590E4E9894578391DAEFEE1D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B2A7C7258D27430786C428D8A7CD58D3",
+     "6DD3DADB2F5F4BDE8BA1BC9292C955E3",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Express opinions about\ntheir abilities in different\nareas (“I’m a good friend.” I\ncan run fast.” “I know all my\nletters!”).",
+    "id": "07E5383A590E4E9894578391DAEFEE1D",
+    "listId": "",
+    "parentId": "B2A7C7258D27430786C428D8A7CD58D3",
+    "position": 1017,
+    "statementLabel": null,
+    "statementNotation": "ESD-2q"
+   },
+   "121B27B69F354CC0A93296AB996EA8D0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A8E8076C1FB749D68812F0A81458C62B",
+     "7ED4226B59074EF6B16E176B8CCD3D32",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Give reasons for their feelings\nthat may include thoughts and\nbeliefs as well as outside events\n(“I’m happy because I wanted to\nwin and I did.”). ",
+    "id": "121B27B69F354CC0A93296AB996EA8D0",
+    "listId": "",
+    "parentId": "A8E8076C1FB749D68812F0A81458C62B",
+    "position": 1059,
+    "statementLabel": null,
+    "statementNotation": "ESD-6r"
+   },
+   "17A0FEE663534DF097914902B1A08156": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D2B94157A2A94DBB8C72690C5FBC903D",
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Show ease and comfort\nin their interactions with\nfamiliar children.",
+    "id": "17A0FEE663534DF097914902B1A08156",
+    "listId": "",
+    "parentId": "D2B94157A2A94DBB8C72690C5FBC903D",
+    "position": 1032,
+    "statementLabel": null,
+    "statementNotation": "ESD-4o"
+   },
+   "2196C195E46F42DFA10664D0E5FA9A74": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B2A7C7258D27430786C428D8A7CD58D3",
+     "6DD3DADB2F5F4BDE8BA1BC9292C955E3",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Try new activities and\nattempt new challenges.",
+    "id": "2196C195E46F42DFA10664D0E5FA9A74",
+    "listId": "",
+    "parentId": "B2A7C7258D27430786C428D8A7CD58D3",
+    "position": 1013,
+    "statementLabel": null,
+    "statementNotation": "ESD-2m"
+   },
+   "21CA3CBB90AF48C5BF2E4D92AB525842": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A8E8076C1FB749D68812F0A81458C62B",
+     "7ED4226B59074EF6B16E176B8CCD3D32",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Express a range of emotions\n(happiness, sadness, fear,\nanger, disgust, tenderness,\nhostility, shame, guilt,\nsatisfaction, and love) with their\nface, body, vocal sounds, and\nwords.",
+    "id": "21CA3CBB90AF48C5BF2E4D92AB525842",
+    "listId": "",
+    "parentId": "A8E8076C1FB749D68812F0A81458C62B",
+    "position": 1056,
+    "statementLabel": null,
+    "statementNotation": "ESD-6o"
+   },
+   "24D0648EF266490AAFD123E460E4E379": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A8E8076C1FB749D68812F0A81458C62B",
+     "7ED4226B59074EF6B16E176B8CCD3D32",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describe reasons for\ntheir feelings (“I’m sad\nbecause Grandma’s\nleaving.” “That makes\nme mad when you do\nthat!”).",
+    "id": "24D0648EF266490AAFD123E460E4E379",
+    "listId": "",
+    "parentId": "A8E8076C1FB749D68812F0A81458C62B",
+    "position": 1055,
+    "statementLabel": null,
+    "statementNotation": "ESD-6n"
+   },
+   "2689293DBE6546F587E04F97C4DAA8FC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6DD3DADB2F5F4BDE8BA1BC9292C955E3",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children demonstrate a positive sense of self-identity and self-awareness.",
+    "id": "2689293DBE6546F587E04F97C4DAA8FC",
+    "listId": "",
+    "parentId": "6DD3DADB2F5F4BDE8BA1BC9292C955E3",
+    "position": 1002,
+    "statementLabel": null,
+    "statementNotation": "Goal ESD-1"
+   },
+   "2795497A8EE5467FAE5BD4F8DED1A89A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B2A7C7258D27430786C428D8A7CD58D3",
+     "6DD3DADB2F5F4BDE8BA1BC9292C955E3",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Express positive feelings\nabout themselves by\nshowing and/or telling\nothers about themselves,\nthings they like, or things\nthey have done.",
+    "id": "2795497A8EE5467FAE5BD4F8DED1A89A",
+    "listId": "",
+    "parentId": "B2A7C7258D27430786C428D8A7CD58D3",
+    "position": 1011,
+    "statementLabel": null,
+    "statementNotation": "ESD-2k"
+   },
+   "2A80BA8F9AE3411F82A3856B381D73B8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B2A7C7258D27430786C428D8A7CD58D3",
+     "6DD3DADB2F5F4BDE8BA1BC9292C955E3",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Express the belief that\nthey can do many\nthings.",
+    "id": "2A80BA8F9AE3411F82A3856B381D73B8",
+    "listId": "",
+    "parentId": "B2A7C7258D27430786C428D8A7CD58D3",
+    "position": 1012,
+    "statementLabel": null,
+    "statementNotation": "ESD-2l"
+   },
+   "3D17CE67D2A54093996E8B6D74373327": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2689293DBE6546F587E04F97C4DAA8FC",
+     "6DD3DADB2F5F4BDE8BA1BC9292C955E3",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Choose to spend more time\non preferred activities, and\nexpress awareness of skills\nthey are developing.",
+    "id": "3D17CE67D2A54093996E8B6D74373327",
+    "listId": "",
+    "parentId": "2689293DBE6546F587E04F97C4DAA8FC",
+    "position": 1009,
+    "statementLabel": null,
+    "statementNotation": "ESD-1q"
+   },
+   "42162205E32F4CA484AFFE4358881D5B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EF18027C646B411E949369C334BD3D8D",
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use a variety of strategies\nto solve problems and\nconflicts with increasing\nindependence.",
+    "id": "42162205E32F4CA484AFFE4358881D5B",
+    "listId": "",
+    "parentId": "EF18027C646B411E949369C334BD3D8D",
+    "position": 1049,
+    "statementLabel": null,
+    "statementNotation": "ESD-5u"
+   },
+   "45B8ADCDB502402E85F7D9C980311C5A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A8E8076C1FB749D68812F0A81458C62B",
+     "7ED4226B59074EF6B16E176B8CCD3D32",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use a larger vocabulary for\ntalking about different feelings\n(“I’m frustrated with that puzzle!”\n“I’m excited about our trip.”).",
+    "id": "45B8ADCDB502402E85F7D9C980311C5A",
+    "listId": "",
+    "parentId": "A8E8076C1FB749D68812F0A81458C62B",
+    "position": 1058,
+    "statementLabel": null,
+    "statementNotation": "ESD-6q"
+   },
+   "4769976DE76F4FF2B1950B76798A1FD1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EF18027C646B411E949369C334BD3D8D",
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Anticipate consequences\nand plan ways to solve\nproblems effectively, with\nguidance and support.",
+    "id": "4769976DE76F4FF2B1950B76798A1FD1",
+    "listId": "",
+    "parentId": "EF18027C646B411E949369C334BD3D8D",
+    "position": 1048,
+    "statementLabel": null,
+    "statementNotation": "ESD-5t"
+   },
+   "4D19A2F46DDB4AD18429A7F6A2F9BACA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A8E8076C1FB749D68812F0A81458C62B",
+     "7ED4226B59074EF6B16E176B8CCD3D32",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Independently manage and\nexpress feelings effectively most\nof the time.",
+    "id": "4D19A2F46DDB4AD18429A7F6A2F9BACA",
+    "listId": "",
+    "parentId": "A8E8076C1FB749D68812F0A81458C62B",
+    "position": 1057,
+    "statementLabel": null,
+    "statementNotation": "ESD-6p"
+   },
+   "59AE0FA46DC74800906B11CCFFC54517": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "",
+    "id": "59AE0FA46DC74800906B11CCFFC54517",
+    "listId": "",
+    "parentId": "DCD739DD4887473789542C04FA3A4705",
+    "position": 2068,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "5CCCF98925514468B8608C63B416440B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CE1CECE38CBE4620A18D571E60263920",
+     "7ED4226B59074EF6B16E176B8CCD3D32",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Show awareness that their\nbehavior can affect the\nfeelings of others (say, “I\ndidn’t mean to scare you\nwhen I yelled.”).",
+    "id": "5CCCF98925514468B8608C63B416440B",
+    "listId": "",
+    "parentId": "CE1CECE38CBE4620A18D571E60263920",
+    "position": 1067,
+    "statementLabel": null,
+    "statementNotation": "ESD-7o"
+   },
+   "5E3D31C74D084D99B92AA16C162FC213": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2689293DBE6546F587E04F97C4DAA8FC",
+     "6DD3DADB2F5F4BDE8BA1BC9292C955E3",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describe themselves in\nconcrete ways, with greater\ndetail and accuracy (“My\neyes are brown.” “I am\ntall.”).",
+    "id": "5E3D31C74D084D99B92AA16C162FC213",
+    "listId": "",
+    "parentId": "2689293DBE6546F587E04F97C4DAA8FC",
+    "position": 1007,
+    "statementLabel": null,
+    "statementNotation": "ESD-1o"
+   },
+   "5EB0D4CDFCC548BCA8F31E130425A38E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D2B94157A2A94DBB8C72690C5FBC903D",
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Form and maintain\nfriendships with a few\nother children.",
+    "id": "5EB0D4CDFCC548BCA8F31E130425A38E",
+    "listId": "",
+    "parentId": "D2B94157A2A94DBB8C72690C5FBC903D",
+    "position": 1029,
+    "statementLabel": null,
+    "statementNotation": "ESD-4l"
+   },
+   "677ECA6B8CF54245A1E27EB125194AC8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2689293DBE6546F587E04F97C4DAA8FC",
+     "6DD3DADB2F5F4BDE8BA1BC9292C955E3",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use own first and last\nname.",
+    "id": "677ECA6B8CF54245A1E27EB125194AC8",
+    "listId": "",
+    "parentId": "2689293DBE6546F587E04F97C4DAA8FC",
+    "position": 1005,
+    "statementLabel": null,
+    "statementNotation": "ESD-1m"
+   },
+   "6DD3DADB2F5F4BDE8BA1BC9292C955E3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Developing a Sense of Self",
+    "id": "6DD3DADB2F5F4BDE8BA1BC9292C955E3",
+    "listId": "",
+    "parentId": "DCD739DD4887473789542C04FA3A4705",
+    "position": 1001,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "7068DCC918ED4A32BA43C9336E3EAC3D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EF18027C646B411E949369C334BD3D8D",
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Express respect and caring\nfor all people, including\npeople with disabilities\nand those from different\ncultures.",
+    "id": "7068DCC918ED4A32BA43C9336E3EAC3D",
+    "listId": "",
+    "parentId": "EF18027C646B411E949369C334BD3D8D",
+    "position": 1050,
+    "statementLabel": null,
+    "statementNotation": "ESD-5v"
+   },
+   "79270AEFD6824AC9B9D2D4895473F493": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CE1CECE38CBE4620A18D571E60263920",
+     "7ED4226B59074EF6B16E176B8CCD3D32",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Choose to act in ways that\nshow respect for others’\nfeelings and points of\nview most of the time with\nguidance and support\n(compliment each other\nduring play, work out\nconflicts, show respect\nfor opinions expressed by\nothers).",
+    "id": "79270AEFD6824AC9B9D2D4895473F493",
+    "listId": "",
+    "parentId": "CE1CECE38CBE4620A18D571E60263920",
+    "position": 1068,
+    "statementLabel": null,
+    "statementNotation": "ESD-7p"
+   },
+   "7A4254D5C5BE4152BC7070842A687161": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CE1CECE38CBE4620A18D571E60263920",
+     "7ED4226B59074EF6B16E176B8CCD3D32",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Try to comfort another\nchild or an adult who is\nupset (bring a comfort\nobject, pat the person on\nthe back). ",
+    "id": "7A4254D5C5BE4152BC7070842A687161",
+    "listId": "",
+    "parentId": "CE1CECE38CBE4620A18D571E60263920",
+    "position": 1062,
+    "statementLabel": null,
+    "statementNotation": "ESD-7j"
+   },
+   "7DC3CA5A521B4E0EAA3341BFE61AE86B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A8E8076C1FB749D68812F0A81458C62B",
+     "7ED4226B59074EF6B16E176B8CCD3D32",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Express a range\nof emotions\n(happiness, sadness,\nfear, anger, disgust,\ntenderness, hostility,\nshame, guilt,\nsatisfaction, and love)\nwith their face, body,\nvocal sounds, and\nwords.",
+    "id": "7DC3CA5A521B4E0EAA3341BFE61AE86B",
+    "listId": "",
+    "parentId": "A8E8076C1FB749D68812F0A81458C62B",
+    "position": 1053,
+    "statementLabel": null,
+    "statementNotation": "ESD-6l"
+   },
+   "7ED4226B59074EF6B16E176B8CCD3D32": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Learning About Feelings",
+    "id": "7ED4226B59074EF6B16E176B8CCD3D32",
+    "listId": "",
+    "parentId": "DCD739DD4887473789542C04FA3A4705",
+    "position": 1051,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "7F005E7C51084C2689330D4B2962491D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CE1CECE38CBE4620A18D571E60263920",
+     "7ED4226B59074EF6B16E176B8CCD3D32",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Communicate\nunderstanding and\nempathy for others’\nfeelings.",
+    "id": "7F005E7C51084C2689330D4B2962491D",
+    "listId": "",
+    "parentId": "CE1CECE38CBE4620A18D571E60263920",
+    "position": 1066,
+    "statementLabel": null,
+    "statementNotation": "ESD-7n"
+   },
+   "855924348BD34F66BC499B594F1CB2A5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B2A7C7258D27430786C428D8A7CD58D3",
+     "6DD3DADB2F5F4BDE8BA1BC9292C955E3",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Express the belief that\nthey can do many\nthings.",
+    "id": "855924348BD34F66BC499B594F1CB2A5",
+    "listId": "",
+    "parentId": "B2A7C7258D27430786C428D8A7CD58D3",
+    "position": 1015,
+    "statementLabel": null,
+    "statementNotation": "ESD-2o"
+   },
+   "856AB9EA5A154CC1879A08B3577A17B7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EF18027C646B411E949369C334BD3D8D",
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Show awareness that their\nactions affect others (move\ncarefully around classmate’s\nblock structure).",
+    "id": "856AB9EA5A154CC1879A08B3577A17B7",
+    "listId": "",
+    "parentId": "EF18027C646B411E949369C334BD3D8D",
+    "position": 1041,
+    "statementLabel": null,
+    "statementNotation": "ESD-5m"
+   },
+   "874DD15BB72848A0B587EF89B412E98A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2689293DBE6546F587E04F97C4DAA8FC",
+     "6DD3DADB2F5F4BDE8BA1BC9292C955E3",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": " Choose activities they like\nand name their favorite\nactivities. ",
+    "id": "874DD15BB72848A0B587EF89B412E98A",
+    "listId": "",
+    "parentId": "2689293DBE6546F587E04F97C4DAA8FC",
+    "position": 1006,
+    "statementLabel": null,
+    "statementNotation": "ESD-1n"
+   },
+   "892348B61ABE4B69BBF7CF17A87AA027": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EF18027C646B411E949369C334BD3D8D",
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Follow social rules,\ntransitions, and routines\nthat have been explained\nto them.",
+    "id": "892348B61ABE4B69BBF7CF17A87AA027",
+    "listId": "",
+    "parentId": "EF18027C646B411E949369C334BD3D8D",
+    "position": 1045,
+    "statementLabel": null,
+    "statementNotation": "ESD-5q"
+   },
+   "8DA591DF4407418B8C30BD2EEA13ED00": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D2B94157A2A94DBB8C72690C5FBC903D",
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify another child as a\nfriend.",
+    "id": "8DA591DF4407418B8C30BD2EEA13ED00",
+    "listId": "",
+    "parentId": "D2B94157A2A94DBB8C72690C5FBC903D",
+    "position": 1030,
+    "statementLabel": null,
+    "statementNotation": "ESD-4m"
+   },
+   "8E59497E5CF24C91B47845142C608E66": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A8E8076C1FB749D68812F0A81458C62B",
+     "7ED4226B59074EF6B16E176B8CCD3D32",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use a variety of words\nor signs to express and\nmanage feelings more\nclearly.",
+    "id": "8E59497E5CF24C91B47845142C608E66",
+    "listId": "",
+    "parentId": "A8E8076C1FB749D68812F0A81458C62B",
+    "position": 1054,
+    "statementLabel": null,
+    "statementNotation": "ESD-6m"
+   },
+   "918FC79055CD4DF7AD749D91498B8E16": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CE1CECE38CBE4620A18D571E60263920",
+     "7ED4226B59074EF6B16E176B8CCD3D32",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Communicate concern for\nothers (share a toy with\nsomeone who doesn’t\nhave one, ask, “Are you\nOK?”).",
+    "id": "918FC79055CD4DF7AD749D91498B8E16",
+    "listId": "",
+    "parentId": "CE1CECE38CBE4620A18D571E60263920",
+    "position": 1063,
+    "statementLabel": null,
+    "statementNotation": "ESD-7k"
+   },
+   "933940DCCC54466396B89CC065D966BE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D2B94157A2A94DBB8C72690C5FBC903D",
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Form and maintain\nfriendships with other\nchildren of diverse cultural\nbackgrounds and abilities.",
+    "id": "933940DCCC54466396B89CC065D966BE",
+    "listId": "",
+    "parentId": "D2B94157A2A94DBB8C72690C5FBC903D",
+    "position": 1034,
+    "statementLabel": null,
+    "statementNotation": "ESD-4q"
+   },
+   "96E24DA8DA4B429789276FB53F83BA71": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EF18027C646B411E949369C334BD3D8D",
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Balance their own needs\nwith those of others in the\ngroup.",
+    "id": "96E24DA8DA4B429789276FB53F83BA71",
+    "listId": "",
+    "parentId": "EF18027C646B411E949369C334BD3D8D",
+    "position": 1047,
+    "statementLabel": null,
+    "statementNotation": "ESD-5s"
+   },
+   "99EE4060A8FE435E8BB74256CD213DC4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children form relationships and interact positively with familiar adults who are\nconsistent and responsive to their needs.",
+    "id": "99EE4060A8FE435E8BB74256CD213DC4",
+    "listId": "",
+    "parentId": "A65CA4EDB97042488F1EC838E6BF7D60",
+    "position": 1019,
+    "statementLabel": null,
+    "statementNotation": "Goal ESD-3"
+   },
+   "9FFE1A1A68154E618F49D2A23C1E3A82": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "99EE4060A8FE435E8BB74256CD213DC4",
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Given time, form positive\nrelationships with new\nteachers or caregivers.",
+    "id": "9FFE1A1A68154E618F49D2A23C1E3A82",
+    "listId": "",
+    "parentId": "99EE4060A8FE435E8BB74256CD213DC4",
+    "position": 1022,
+    "statementLabel": null,
+    "statementNotation": "ESD-3o"
+   },
+   "A02F46781E79481EAC601B54E8EB922A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "99EE4060A8FE435E8BB74256CD213DC4",
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Show ease and comfort\nin their interactions with\nfamiliar adults.",
+    "id": "A02F46781E79481EAC601B54E8EB922A",
+    "listId": "",
+    "parentId": "99EE4060A8FE435E8BB74256CD213DC4",
+    "position": 1023,
+    "statementLabel": null,
+    "statementNotation": "ESD-3p"
+   },
+   "A3390DE6BBD442009B464F015814C48C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "99EE4060A8FE435E8BB74256CD213DC4",
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Form positive relationships\nwith new teachers or\ncaregivers over time. ",
+    "id": "A3390DE6BBD442009B464F015814C48C",
+    "listId": "",
+    "parentId": "99EE4060A8FE435E8BB74256CD213DC4",
+    "position": 1025,
+    "statementLabel": null,
+    "statementNotation": "ESD-3r"
+   },
+   "A5967602A4574D30984FB7E82437E4B6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D2B94157A2A94DBB8C72690C5FBC903D",
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Play and interact\ncooperatively with other\nchildren (work on project\ntogether, exchange ideas).",
+    "id": "A5967602A4574D30984FB7E82437E4B6",
+    "listId": "",
+    "parentId": "D2B94157A2A94DBB8C72690C5FBC903D",
+    "position": 1037,
+    "statementLabel": null,
+    "statementNotation": "ESD-4t"
+   },
+   "A65CA4EDB97042488F1EC838E6BF7D60": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Developing a Sense of Self With Others",
+    "id": "A65CA4EDB97042488F1EC838E6BF7D60",
+    "listId": "",
+    "parentId": "DCD739DD4887473789542C04FA3A4705",
+    "position": 1018,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "A71933CE1C424CCB9463ADA8CCBFA954": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EF18027C646B411E949369C334BD3D8D",
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Follow social rules,\ntransitions, and routines\nthat have been explained to\nthem, with reminders and\npractice.",
+    "id": "A71933CE1C424CCB9463ADA8CCBFA954",
+    "listId": "",
+    "parentId": "EF18027C646B411E949369C334BD3D8D",
+    "position": 1039,
+    "statementLabel": null,
+    "statementNotation": "ESD-5k"
+   },
+   "A7EEE9E33D54484A8BFD6996F9903298": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EF18027C646B411E949369C334BD3D8D",
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Work to resolve conflicts\neffectively, with guidance\nand support.",
+    "id": "A7EEE9E33D54484A8BFD6996F9903298",
+    "listId": "",
+    "parentId": "EF18027C646B411E949369C334BD3D8D",
+    "position": 1043,
+    "statementLabel": null,
+    "statementNotation": "ESD-5o"
+   },
+   "A8168F460BFC434094797F63EB4CD20C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2689293DBE6546F587E04F97C4DAA8FC",
+     "6DD3DADB2F5F4BDE8BA1BC9292C955E3",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Express a sense of\nbelonging to a group (say\n“There’s Kirby from my\nclass,” move to stand with\nown group upon request,\n“I am a girl.”).",
+    "id": "A8168F460BFC434094797F63EB4CD20C",
+    "listId": "",
+    "parentId": "2689293DBE6546F587E04F97C4DAA8FC",
+    "position": 1004,
+    "statementLabel": null,
+    "statementNotation": "ESD-1l"
+   },
+   "A8E8076C1FB749D68812F0A81458C62B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7ED4226B59074EF6B16E176B8CCD3D32",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children identify, manage, and express their feelings. ",
+    "id": "A8E8076C1FB749D68812F0A81458C62B",
+    "listId": "",
+    "parentId": "7ED4226B59074EF6B16E176B8CCD3D32",
+    "position": 1052,
+    "statementLabel": null,
+    "statementNotation": "Goal ESD-6"
+   },
+   "B2A7C7258D27430786C428D8A7CD58D3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "6DD3DADB2F5F4BDE8BA1BC9292C955E3",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children express positive feelings about themselves and\nconfidence in what they can do.",
+    "id": "B2A7C7258D27430786C428D8A7CD58D3",
+    "listId": "",
+    "parentId": "6DD3DADB2F5F4BDE8BA1BC9292C955E3",
+    "position": 1010,
+    "statementLabel": null,
+    "statementNotation": "Goal ESD-2"
+   },
+   "B4EE2B95E1704FFF9144644A3E36CECD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D2B94157A2A94DBB8C72690C5FBC903D",
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Seek and give support with\nchildren they identify as\nfriends.",
+    "id": "B4EE2B95E1704FFF9144644A3E36CECD",
+    "listId": "",
+    "parentId": "D2B94157A2A94DBB8C72690C5FBC903D",
+    "position": 1035,
+    "statementLabel": null,
+    "statementNotation": "ESD-4r"
+   },
+   "B723C61E08C64CE0A1618E9FC85C28B1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D2B94157A2A94DBB8C72690C5FBC903D",
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Approach other children\neasily, expecting positive\ninteractions.",
+    "id": "B723C61E08C64CE0A1618E9FC85C28B1",
+    "listId": "",
+    "parentId": "D2B94157A2A94DBB8C72690C5FBC903D",
+    "position": 1031,
+    "statementLabel": null,
+    "statementNotation": "ESD-4n"
+   },
+   "BBDB560D18FC435E83EC93152DDFA09E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B2A7C7258D27430786C428D8A7CD58D3",
+     "6DD3DADB2F5F4BDE8BA1BC9292C955E3",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Stick with tasks even when\nthey are challenging.",
+    "id": "BBDB560D18FC435E83EC93152DDFA09E",
+    "listId": "",
+    "parentId": "B2A7C7258D27430786C428D8A7CD58D3",
+    "position": 1016,
+    "statementLabel": null,
+    "statementNotation": "ESD-2p"
+   },
+   "C044E31DBF9C41FEADB0EA04AD961FCC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "99EE4060A8FE435E8BB74256CD213DC4",
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Seek out trusted teachers\nand caregivers as\nneeded (for emotional\nsupport, physical\nassistance, social\ninteraction, problemsolving, and approval). ",
+    "id": "C044E31DBF9C41FEADB0EA04AD961FCC",
+    "listId": "",
+    "parentId": "99EE4060A8FE435E8BB74256CD213DC4",
+    "position": 1020,
+    "statementLabel": null,
+    "statementNotation": "ESD-3m"
+   },
+   "C2A3DD2091B64400BB35BB64A5173E8C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CE1CECE38CBE4620A18D571E60263920",
+     "7ED4226B59074EF6B16E176B8CCD3D32",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Offer help to meet the\nneeds of others (pick up\nitem someone dropped,\nhelp another child who is\nhaving trouble building a\nblock tower).",
+    "id": "C2A3DD2091B64400BB35BB64A5173E8C",
+    "listId": "",
+    "parentId": "CE1CECE38CBE4620A18D571E60263920",
+    "position": 1064,
+    "statementLabel": null,
+    "statementNotation": "ESD-7l"
+   },
+   "C3060E2E666F4062BBB4668F2A881B35": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2689293DBE6546F587E04F97C4DAA8FC",
+     "6DD3DADB2F5F4BDE8BA1BC9292C955E3",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describe self\n(characteristics that can\nbe seen, things they\ncan do, things they like,\npossessions).",
+    "id": "C3060E2E666F4062BBB4668F2A881B35",
+    "listId": "",
+    "parentId": "2689293DBE6546F587E04F97C4DAA8FC",
+    "position": 1003,
+    "statementLabel": null,
+    "statementNotation": "ESD-1k"
+   },
+   "C82407C590224AF0B2C5731688E07D36": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CE1CECE38CBE4620A18D571E60263920",
+     "7ED4226B59074EF6B16E176B8CCD3D32",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": " Show awareness that\nother people have\ndifferent feelings (“I like\nraisins but he doesn’t.”\n“I’m scared on that ride\nbut she isn’t.”). ",
+    "id": "C82407C590224AF0B2C5731688E07D36",
+    "listId": "",
+    "parentId": "CE1CECE38CBE4620A18D571E60263920",
+    "position": 1065,
+    "statementLabel": null,
+    "statementNotation": "ESD-7m"
+   },
+   "CE1CECE38CBE4620A18D571E60263920": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7ED4226B59074EF6B16E176B8CCD3D32",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children recognize and respond to the needs and feelings of others.",
+    "id": "CE1CECE38CBE4620A18D571E60263920",
+    "listId": "",
+    "parentId": "7ED4226B59074EF6B16E176B8CCD3D32",
+    "position": 1061,
+    "statementLabel": null,
+    "statementNotation": "Goal ESD-7"
+   },
+   "D0941C05B46A4F45AEFB98E67D17EBE9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D2B94157A2A94DBB8C72690C5FBC903D",
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Demonstrate social\nskills when interacting\nwith other children (turntaking, conflict resolution,\nsharing).",
+    "id": "D0941C05B46A4F45AEFB98E67D17EBE9",
+    "listId": "",
+    "parentId": "D2B94157A2A94DBB8C72690C5FBC903D",
+    "position": 1033,
+    "statementLabel": null,
+    "statementNotation": "ESD-4p"
+   },
+   "D2B94157A2A94DBB8C72690C5FBC903D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children form relationships and interact positively with other children.",
+    "id": "D2B94157A2A94DBB8C72690C5FBC903D",
+    "listId": "",
+    "parentId": "A65CA4EDB97042488F1EC838E6BF7D60",
+    "position": 1027,
+    "statementLabel": null,
+    "statementNotation": "Goal ESD-4"
+   },
+   "D504557F3EB74AB38D65C1B6CB752EBB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EF18027C646B411E949369C334BD3D8D",
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Notice and accept\nsimilarities and differences\namong all people, including\npeople with disabilities and\nthose from different cultures.",
+    "id": "D504557F3EB74AB38D65C1B6CB752EBB",
+    "listId": "",
+    "parentId": "EF18027C646B411E949369C334BD3D8D",
+    "position": 1044,
+    "statementLabel": null,
+    "statementNotation": "ESD-5p"
+   },
+   "D7868D0678B14626A22097A3C05D63AA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B2A7C7258D27430786C428D8A7CD58D3",
+     "6DD3DADB2F5F4BDE8BA1BC9292C955E3",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Express positive feelings\nabout themselves by\nshowing and/or telling\nothers about themselves,\nthings they like, or things\nthey have done.",
+    "id": "D7868D0678B14626A22097A3C05D63AA",
+    "listId": "",
+    "parentId": "B2A7C7258D27430786C428D8A7CD58D3",
+    "position": 1014,
+    "statementLabel": null,
+    "statementNotation": "ESD-2n"
+   },
+   "DC5130B90EB04B68B0B0BB8838FB2A2A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "99EE4060A8FE435E8BB74256CD213DC4",
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Show affection for adults\nthey are close to.",
+    "id": "DC5130B90EB04B68B0B0BB8838FB2A2A",
+    "listId": "",
+    "parentId": "99EE4060A8FE435E8BB74256CD213DC4",
+    "position": 1021,
+    "statementLabel": null,
+    "statementNotation": "ESD-3n"
+   },
+   "DCD739DD4887473789542C04FA3A4705": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Emotional and\nSocial Development (ESD)",
+    "id": "DCD739DD4887473789542C04FA3A4705",
+    "listId": "",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "ECA5C71E2A4B4CA38EB98C07B5058867": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D2B94157A2A94DBB8C72690C5FBC903D",
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Demonstrate social\nskills when interacting\nwith other children (turntaking, conflict resolution,\nsharing).",
+    "id": "ECA5C71E2A4B4CA38EB98C07B5058867",
+    "listId": "",
+    "parentId": "D2B94157A2A94DBB8C72690C5FBC903D",
+    "position": 1028,
+    "statementLabel": null,
+    "statementNotation": "ESD-4k"
+   },
+   "EDAE0327528446FE9625A51BB26169E9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "99EE4060A8FE435E8BB74256CD213DC4",
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use language effectively\nto continue conversations\nwith familiar adults and to\ninfluence their behavior\n(ask for help, ask an adult\nto do something).  ",
+    "id": "EDAE0327528446FE9625A51BB26169E9",
+    "listId": "",
+    "parentId": "99EE4060A8FE435E8BB74256CD213DC4",
+    "position": 1026,
+    "statementLabel": null,
+    "statementNotation": "ESD-3s"
+   },
+   "EF18027C646B411E949369C334BD3D8D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Children demonstrate the social and behavioral skills needed to\nsuccessfully participate in groups.",
+    "id": "EF18027C646B411E949369C334BD3D8D",
+    "listId": "",
+    "parentId": "A65CA4EDB97042488F1EC838E6BF7D60",
+    "position": 1038,
+    "statementLabel": null,
+    "statementNotation": "Goal ESD-5"
+   },
+   "F57965D4FA534347B563E4815EB074A3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EF18027C646B411E949369C334BD3D8D",
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Make requests clearly and\neffectively most of the time.",
+    "id": "F57965D4FA534347B563E4815EB074A3",
+    "listId": "",
+    "parentId": "EF18027C646B411E949369C334BD3D8D",
+    "position": 1046,
+    "statementLabel": null,
+    "statementNotation": "ESD-5r"
+   },
+   "F7592E9CA31C42D6BC78C6926FD9931C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2689293DBE6546F587E04F97C4DAA8FC",
+     "6DD3DADB2F5F4BDE8BA1BC9292C955E3",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Express awareness that\nthey are members of\ndifferent groups (e.g.,\nfamily, preschool class,\nethnic group).",
+    "id": "F7592E9CA31C42D6BC78C6926FD9931C",
+    "listId": "",
+    "parentId": "2689293DBE6546F587E04F97C4DAA8FC",
+    "position": 1008,
+    "statementLabel": null,
+    "statementNotation": "ESD-1p"
+   },
+   "F8202FC25E034A3A9AD8D4EABEBD3C2C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A8E8076C1FB749D68812F0A81458C62B",
+     "7ED4226B59074EF6B16E176B8CCD3D32",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use problem-solving strategies\nwhen feeling angry or frustrated.",
+    "id": "F8202FC25E034A3A9AD8D4EABEBD3C2C",
+    "listId": "",
+    "parentId": "A8E8076C1FB749D68812F0A81458C62B",
+    "position": 1060,
+    "statementLabel": null,
+    "statementNotation": "ESD-6s"
+   },
+   "F8F2A8F63B8D452CA30BD304EA7BA10A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "99EE4060A8FE435E8BB74256CD213DC4",
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Seek out trusted teachers\nand caregivers as\nneeded (for emotional\nsupport, physical\nassistance, social\ninteraction, problemsolving, and approval). ",
+    "id": "F8F2A8F63B8D452CA30BD304EA7BA10A",
+    "listId": "",
+    "parentId": "99EE4060A8FE435E8BB74256CD213DC4",
+    "position": 1024,
+    "statementLabel": null,
+    "statementNotation": "ESD-3q"
+   },
+   "FD3ABB5E788E4AD281493F578D70ED56": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EF18027C646B411E949369C334BD3D8D",
+     "A65CA4EDB97042488F1EC838E6BF7D60",
+     "DCD739DD4887473789542C04FA3A4705"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Often make requests clearly\nand effectively.",
+    "id": "FD3ABB5E788E4AD281493F578D70ED56",
+    "listId": "",
+    "parentId": "EF18027C646B411E949369C334BD3D8D",
+    "position": 1040,
+    "statementLabel": null,
+    "statementNotation": "ESD-5l"
+   }
+  },
+  "subject": "Foundations for Early Learning and Development (2013-)",
+  "title": "Emotional and Social Development (ESD)"
+ }
+}

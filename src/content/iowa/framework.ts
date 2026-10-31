@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Iowa, a US state. Standards are the Iowa Academic Standards, adopted by the State Board of Education and published
 // by the Iowa Department of Education: mathematics (2024) and English language arts (2024), both built on the Common
@@ -75,9 +76,9 @@ export const IOWA: Framework = {
   standardLabel: "Standard",
   sourceName: "Iowa Department of Education",
   sourceUrl: "https://educate.iowa.gov/pk-12/standards",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Iowa report cards",
     intro:

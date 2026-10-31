@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Ohio, a US state. Standards are Ohio's Learning Standards, adopted by the State Board of Education and published by the
 // Ohio Department of Education and Workforce: mathematics (2017), English language arts (Kindergarten to Grade 8 revised
@@ -74,9 +75,9 @@ export const OHIO: Framework = {
   standardLabel: "Standard",
   sourceName: "Ohio Department of Education and Workforce",
   sourceUrl: "https://education.ohio.gov/Topics/Learning-in-Ohio/OLS-Graphic-Sections/Learning-Standards",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Ohio report cards",
     intro:

@@ -1,0 +1,364 @@
+{
+ "data": {
+  "cspStatus": {
+   "notes": null,
+   "value": "visible"
+  },
+  "document": {
+   "sourceURL": "https://www.azed.gov/sites/default/files/2015/02/Arizona%20Early%20Learning%20Standards_4th%20Edition_2021.pdf",
+   "title": "ARIZONA EARLY LEARNING STANDARDS 4th Edition May 2018"
+  },
+  "educationLevels": [
+   "Pre-K",
+   "K"
+  ],
+  "id": "A3E8F1D81A7E40D3A4FCC6ECCAC22757",
+  "jurisdiction": {
+   "id": "0B41FFF6B5114EB0B8A89CE0E70E22D8",
+   "title": "Arizona"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/4.0/us/",
+   "rightsHolder": "Common Curriculum, Inc.",
+   "title": "CC BY 4.0 US"
+  },
+  "normalizedSubject": null,
+  "standards": {
+   "1B9077B50F2547F08BC7B179B78FDE6F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "472BE78F94E149BA9D90A974EE9AEA4D",
+     "5687D51C2080469B862C0216695943F2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Asks and responds to questions about relationships of objects, living things, and events in the natural\nenvironment.",
+    "id": "1B9077B50F2547F08BC7B179B78FDE6F",
+    "listId": "e",
+    "parentId": "472BE78F94E149BA9D90A974EE9AEA4D",
+    "position": 1006,
+    "statementLabel": null,
+    "statementNotation": "1.1.e"
+   },
+   "26800619BE564DC08DDC39B0D4A6A8DB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3DDF49CB39C6461696A663A00A77FB65",
+     "5687D51C2080469B862C0216695943F2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Constructs theories to explain their investigations.",
+    "id": "26800619BE564DC08DDC39B0D4A6A8DB",
+    "listId": "c",
+    "parentId": "3DDF49CB39C6461696A663A00A77FB65",
+    "position": 1015,
+    "statementLabel": null,
+    "statementNotation": "1.3.c"
+   },
+   "2EE6CC98CCCC42F2962DC2CC8D93FACE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5687D51C2080469B862C0216695943F2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Investigation: The child researches their own predictions and the ideas of others through active exploration and experimentation.",
+    "id": "2EE6CC98CCCC42F2962DC2CC8D93FACE",
+    "listId": "2",
+    "parentId": "5687D51C2080469B862C0216695943F2",
+    "position": 1007,
+    "statementLabel": null,
+    "statementNotation": "1.2"
+   },
+   "3DDF49CB39C6461696A663A00A77FB65": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5687D51C2080469B862C0216695943F2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Analysis and Conclusion",
+    "id": "3DDF49CB39C6461696A663A00A77FB65",
+    "listId": "3",
+    "parentId": "5687D51C2080469B862C0216695943F2",
+    "position": 1012,
+    "statementLabel": null,
+    "statementNotation": "1.3"
+   },
+   "472BE78F94E149BA9D90A974EE9AEA4D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5687D51C2080469B862C0216695943F2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Exploration, Observations, and Hypotheses: The child observes, explores, and interacts with materials, others, and the environment.",
+    "id": "472BE78F94E149BA9D90A974EE9AEA4D",
+    "listId": "1",
+    "parentId": "5687D51C2080469B862C0216695943F2",
+    "position": 1001,
+    "statementLabel": null,
+    "statementNotation": "1.1"
+   },
+   "4F86CFB53E3F4323BA6BC5052F6EB15C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2EE6CC98CCCC42F2962DC2CC8D93FACE",
+     "5687D51C2080469B862C0216695943F2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Adjusts their approach if results are different than expected and continues testing. ",
+    "id": "4F86CFB53E3F4323BA6BC5052F6EB15C",
+    "listId": "c",
+    "parentId": "2EE6CC98CCCC42F2962DC2CC8D93FACE",
+    "position": 1010,
+    "statementLabel": null,
+    "statementNotation": "1.2.c"
+   },
+   "53082A90C65E48E5A6ED432F9045309D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "472BE78F94E149BA9D90A974EE9AEA4D",
+     "5687D51C2080469B862C0216695943F2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identifies attributes of objects, living things, and natural events in the environment.",
+    "id": "53082A90C65E48E5A6ED432F9045309D",
+    "listId": "b",
+    "parentId": "472BE78F94E149BA9D90A974EE9AEA4D",
+    "position": 1003,
+    "statementLabel": null,
+    "statementNotation": "1.1.b"
+   },
+   "5687D51C2080469B862C0216695943F2": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "SCIENTFIC INQUIRY AND APPLICATION",
+    "id": "5687D51C2080469B862C0216695943F2",
+    "listId": "1",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": null,
+    "statementNotation": "1"
+   },
+   "5A5EFE3D731443BA9DFD3B274929AA0D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2EE6CC98CCCC42F2962DC2CC8D93FACE",
+     "5687D51C2080469B862C0216695943F2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Uses a variety of tools and materials to investigate.",
+    "id": "5A5EFE3D731443BA9DFD3B274929AA0D",
+    "listId": "a",
+    "parentId": "2EE6CC98CCCC42F2962DC2CC8D93FACE",
+    "position": 1008,
+    "statementLabel": null,
+    "statementNotation": "1.2.a"
+   },
+   "5D96B1CA236A4BBAA0C393BBC1717C97": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2EE6CC98CCCC42F2962DC2CC8D93FACE",
+     "5687D51C2080469B862C0216695943F2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Persists with an investigation.",
+    "id": "5D96B1CA236A4BBAA0C393BBC1717C97",
+    "listId": "d",
+    "parentId": "2EE6CC98CCCC42F2962DC2CC8D93FACE",
+    "position": 1011,
+    "statementLabel": null,
+    "statementNotation": "1.2.d"
+   },
+   "60CA517E2EC84F9EBE88D53B3F03380C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "472BE78F94E149BA9D90A974EE9AEA4D",
+     "5687D51C2080469B862C0216695943F2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Begins to describe the similarities, differences and relationships between objects, living things and natural events.",
+    "id": "60CA517E2EC84F9EBE88D53B3F03380C",
+    "listId": "d",
+    "parentId": "472BE78F94E149BA9D90A974EE9AEA4D",
+    "position": 1005,
+    "statementLabel": null,
+    "statementNotation": "1.1.d"
+   },
+   "7567ED70E5714563B11414D0B171ECB0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3DDF49CB39C6461696A663A00A77FB65",
+     "5687D51C2080469B862C0216695943F2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Uses a variety of materials to record and organize data.",
+    "id": "7567ED70E5714563B11414D0B171ECB0",
+    "listId": "a",
+    "parentId": "3DDF49CB39C6461696A663A00A77FB65",
+    "position": 1013,
+    "statementLabel": null,
+    "statementNotation": "1.3.a"
+   },
+   "766C76B0E47C4861A301BED8538F16D0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2EE6CC98CCCC42F2962DC2CC8D93FACE",
+     "5687D51C2080469B862C0216695943F2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Makes predictions and researches hypotheses through active investigation.",
+    "id": "766C76B0E47C4861A301BED8538F16D0",
+    "listId": "b",
+    "parentId": "2EE6CC98CCCC42F2962DC2CC8D93FACE",
+    "position": 1009,
+    "statementLabel": null,
+    "statementNotation": "1.2.b"
+   },
+   "793D2D6DCA5246868815B26A1A8DD85C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "472BE78F94E149BA9D90A974EE9AEA4D",
+     "5687D51C2080469B862C0216695943F2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Exhibits curiosity about objects, living things, and other natural events in the environment. ",
+    "id": "793D2D6DCA5246868815B26A1A8DD85C",
+    "listId": "a",
+    "parentId": "472BE78F94E149BA9D90A974EE9AEA4D",
+    "position": 1002,
+    "statementLabel": null,
+    "statementNotation": "1.1.a"
+   },
+   "93B5F863856F43A39F53679BD092E8DD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D5E5A2BA08874EBCB9A6AF104BA0A74A",
+     "5687D51C2080469B862C0216695943F2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Presents their scientific ideas in a variety of ways.",
+    "id": "93B5F863856F43A39F53679BD092E8DD",
+    "listId": "b",
+    "parentId": "D5E5A2BA08874EBCB9A6AF104BA0A74A",
+    "position": 1018,
+    "statementLabel": null,
+    "statementNotation": "1.4.b"
+   },
+   "AB9BCF2DF6994C59AB934B6B95F5D7B1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "472BE78F94E149BA9D90A974EE9AEA4D",
+     "5687D51C2080469B862C0216695943F2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Describes changes in objects, living things, and natural events in the environment.",
+    "id": "AB9BCF2DF6994C59AB934B6B95F5D7B1",
+    "listId": "c",
+    "parentId": "472BE78F94E149BA9D90A974EE9AEA4D",
+    "position": 1004,
+    "statementLabel": null,
+    "statementNotation": "1.1.c"
+   },
+   "D5E5A2BA08874EBCB9A6AF104BA0A74A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "5687D51C2080469B862C0216695943F2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Communication: The child discusses, communicates, and reflects upon the scientific investigation and its findings.",
+    "id": "D5E5A2BA08874EBCB9A6AF104BA0A74A",
+    "listId": "4",
+    "parentId": "5687D51C2080469B862C0216695943F2",
+    "position": 1016,
+    "statementLabel": null,
+    "statementNotation": "1.4"
+   },
+   "DD0962F594A54615BF3ACAD99191049E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3DDF49CB39C6461696A663A00A77FB65",
+     "5687D51C2080469B862C0216695943F2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identifies cause and effect relationships.",
+    "id": "DD0962F594A54615BF3ACAD99191049E",
+    "listId": "b",
+    "parentId": "3DDF49CB39C6461696A663A00A77FB65",
+    "position": 1014,
+    "statementLabel": null,
+    "statementNotation": "1.3.b"
+   },
+   "E3DCF2B669C4445EABB6BE4F007225FF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D5E5A2BA08874EBCB9A6AF104BA0A74A",
+     "5687D51C2080469B862C0216695943F2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Conducts further investigation based on prior experience and information gained.",
+    "id": "E3DCF2B669C4445EABB6BE4F007225FF",
+    "listId": "c",
+    "parentId": "D5E5A2BA08874EBCB9A6AF104BA0A74A",
+    "position": 1019,
+    "statementLabel": null,
+    "statementNotation": "1.4.c"
+   },
+   "EC3D2052515F4C6D9CEADB28FBF46509": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D5E5A2BA08874EBCB9A6AF104BA0A74A",
+     "5687D51C2080469B862C0216695943F2"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Displays and interprets data.",
+    "id": "EC3D2052515F4C6D9CEADB28FBF46509",
+    "listId": "a",
+    "parentId": "D5E5A2BA08874EBCB9A6AF104BA0A74A",
+    "position": 1017,
+    "statementLabel": null,
+    "statementNotation": "1.4.a"
+   }
+  },
+  "subject": "Early Learning (2018-)",
+  "title": "Science"
+ }
+}

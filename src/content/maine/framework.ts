@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Maine, the fourth US state. Standards are the Maine Learning Results of the Maine Department of Education (DOE): the
 // 2020 mathematics standards (the Common Core performance expectations, cited with their cluster letters, "4.NBT.A.1"),
@@ -68,9 +69,9 @@ export const MAINE: Framework = {
   standardLabel: "Learning standard",
   sourceName: "Maine Department of Education",
   sourceUrl: "https://www.maine.gov/doe/learning/standards",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Maine report cards",
     intro:

@@ -1,0 +1,894 @@
+{
+ "pk/math": [
+  {
+   "idx": "Math 1.a.1",
+   "text": "Recognizes and communicates some number words."
+  },
+  {
+   "idx": "Math 1.a.2",
+   "text": "Recites small parts of the counting sequence."
+  },
+  {
+   "idx": "Math 1.a.3",
+   "text": "Recites the counting sequence up to five with some errors."
+  },
+  {
+   "idx": "Math 1.a.4",
+   "text": "Recites the counting sequence to five accurately and beyond five with some errors."
+  },
+  {
+   "idx": "Math 1.a.5",
+   "text": "Recites the counting sequence to 10 by ones accurately and beyond 10 with some errors."
+  },
+  {
+   "idx": "Math 1.a.6",
+   "text": "Recites the counting sequence to 20 by ones in order accurately."
+  },
+  {
+   "idx": "Math 1.b.1",
+   "text": "Discriminates and compares quantities of objects."
+  },
+  {
+   "idx": "Math 1.b.2",
+   "text": "Shows awareness or attends to quantities when interacting with objects."
+  },
+  {
+   "idx": "Math 1.b.3",
+   "text": "Uses words or actions to demonstrate awareness of quantities."
+  },
+  {
+   "idx": "Math 1.b.4",
+   "text": "Uses number words or signs to count the items in small groups of one to four objects."
+  },
+  {
+   "idx": "Math 1.b.5",
+   "text": "Uses number words or signs to count up to 10 objects, people, or events to determine how many."
+  },
+  {
+   "idx": "Math 1.b.6",
+   "text": "Understands that the last number spoken tells the number of objects counted."
+  },
+  {
+   "idx": "Math 1.c.1",
+   "text": "Attends to quantity and notices when objects are added or removed."
+  },
+  {
+   "idx": "Math 1.c.2",
+   "text": "Recognizes a single item as “one.”"
+  },
+  {
+   "idx": "Math 1.c.3",
+   "text": "Recognizes a set of one to three items or events and can tell how many without counting."
+  },
+  {
+   "idx": "Math 1.c.4",
+   "text": "Identifies without counting small quantities of up to five items."
+  },
+  {
+   "idx": "Math 1.d.1",
+   "text": "Recognizes a few written numerals."
+  },
+  {
+   "idx": "Math 1.d.2",
+   "text": "Names a few written numerals."
+  },
+  {
+   "idx": "Math 1.d.3",
+   "text": "Associates a quantity with written numerals up to five."
+  },
+  {
+   "idx": "Math 1.d.4",
+   "text": "Names some written numerals one to 10."
+  },
+  {
+   "idx": "Math 2.a.1",
+   "text": "Notices changes in quantity of objects (especially ones that can be detected visually with ease)."
+  },
+  {
+   "idx": "Math 2.a.2",
+   "text": "Uses words or actions that show understanding of the concepts of more, all, and/or none."
+  },
+  {
+   "idx": "Math 2.a.3",
+   "text": "Demonstrates understanding that adding objects to a group will make a bigger group."
+  },
+  {
+   "idx": "Math 2.a.4",
+   "text": "Demonstrates understanding that taking away objects will make a smaller group."
+  },
+  {
+   "idx": "Math 2.a.5",
+   "text": "Compares two small groups of objects (up to five) by matching or counting using language such as, “More than,” “Less than,” or “Same,” to describe the relationship between the groups."
+  },
+  {
+   "idx": "Math 2.a.6",
+   "text": "Understands that a group of objects can be taken apart into smaller groups and combined into one group."
+  },
+  {
+   "idx": "Math 2.a.7",
+   "text": "Adds and subtracts within a total set of up to six concrete objects."
+  },
+  {
+   "idx": "Math 3.a.1",
+   "text": "Explores objects."
+  },
+  {
+   "idx": "Math 3.a.2",
+   "text": "Shows awareness of the size or length of objects using words or actions."
+  },
+  {
+   "idx": "Math 3.a.3",
+   "text": "Describes objects by measurable attributes (e.g., size, length, and weight) using words such as, “Big,” “Small,” “Heavy,” and “Long,” but not always correctly."
+  },
+  {
+   "idx": "Math 3.a.4",
+   "text": "Describes and compares objects using measurable attributes (e.g., length, size, and weight) using words such as, “Bigger,” “Smaller,” “Heavier,” and “Longer.”"
+  },
+  {
+   "idx": "Math 3.a.5",
+   "text": "Orders objects according to observable differences in their attributes (e.g., biggest to smallest)."
+  },
+  {
+   "idx": "Math 3.b.1",
+   "text": "Notices differences between familiar and unfamiliar people, objects, and places."
+  },
+  {
+   "idx": "Math 3.b.2",
+   "text": "Matches two objects that are the same and selects similar objects from a group."
+  },
+  {
+   "idx": "Math 3.b.3",
+   "text": "Sorts objects into two or more groups by their similarities or differences."
+  },
+  {
+   "idx": "Math 3.b.4",
+   "text": "Sorts and classifies objects by one or more attributes (e.g., color, size, shape)."
+  },
+  {
+   "idx": "Math 3.c.1",
+   "text": "Initiates repeated movements."
+  },
+  {
+   "idx": "Math 3.c.2",
+   "text": "Copies a repeating pattern."
+  },
+  {
+   "idx": "Math 3.c.3",
+   "text": "Recognizes, duplicates, and extends simple patterns (i.e., ABAB) using attributes such as color, shape, or size."
+  },
+  {
+   "idx": "Math 4.a.1",
+   "text": "Explores properties of objects."
+  },
+  {
+   "idx": "Math 4.a.2",
+   "text": "Matches shapes/objects that are visually similar in any way."
+  },
+  {
+   "idx": "Math 4.a.3",
+   "text": "Recognizes basic shapes (i.e., circle, triangle, square or rectangle of different sizes)."
+  },
+  {
+   "idx": "Math 4.a.4",
+   "text": "Understands and uses names of shapes when identifying objects."
+  },
+  {
+   "idx": "Math 4.a.5",
+   "text": "Uses 2D and 3D objects to represent real-world objects."
+  },
+  {
+   "idx": "Math 4.a.6",
+   "text": "Recognizes and compares shapes of different sizes and orientations."
+  },
+  {
+   "idx": "Math 4.a.7",
+   "text": "Uses shapes to create objects or pictures."
+  },
+  {
+   "idx": "Math 4.b.1",
+   "text": "Explores movement of own body and objects in surrounding environment."
+  },
+  {
+   "idx": "Math 4.b.2",
+   "text": "Explores and demonstrates how things fit and move in space."
+  },
+  {
+   "idx": "Math 4.b.3",
+   "text": "Responds to and begins to use words or actions that describe the position or direction of an object."
+  },
+  {
+   "idx": "Math 4.b.4",
+   "text": "Shows understanding of positions in space by using position words (prepositions) and by following directions from an adult."
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "Language 1.a.1",
+   "text": "Attends to language."
+  },
+  {
+   "idx": "Language 1.a.2",
+   "text": "Engages in back-and-forth interactions with caregiver."
+  },
+  {
+   "idx": "Language 1.a.3",
+   "text": "Shows understanding of simple requests and statements referring to nearby people and objects."
+  },
+  {
+   "idx": "Language 1.a.4",
+   "text": "Shows understanding of requests and statements referring to people, objects, ideas, and feelings."
+  },
+  {
+   "idx": "Language 1.a.5",
+   "text": "Demonstrates understanding of complex concepts and longer sentences."
+  },
+  {
+   "idx": "Language 1.b.1",
+   "text": "Attends to language."
+  },
+  {
+   "idx": "Language 1.b.2",
+   "text": "Engages in back-and-forth interactions with caregiver."
+  },
+  {
+   "idx": "Language 1.b.3",
+   "text": "Connects words with objects."
+  },
+  {
+   "idx": "Language 1.b.4",
+   "text": "Attends to an unfamiliar word."
+  },
+  {
+   "idx": "Language 1.b.5",
+   "text": "Demonstrates interest in new vocabulary and uses new words."
+  },
+  {
+   "idx": "Language 1.b.6",
+   "text": "Demonstrates understanding of categories of words (nouns, verbs, adjectives, pronouns, prepositions) and relationships between word meanings."
+  },
+  {
+   "idx": "Language 1.c.1",
+   "text": "Expresses needs and feelings in a variety of ways."
+  },
+  {
+   "idx": "Language 1.c.2",
+   "text": "Engages in back-and-forth interactions with caregiver."
+  },
+  {
+   "idx": "Language 1.c.3",
+   "text": "Makes vowel and consonant sounds (babbles)."
+  },
+  {
+   "idx": "Language 1.c.4",
+   "text": "Communicates purposefully using single words and gestures."
+  },
+  {
+   "idx": "Language 1.c.5",
+   "text": "Combines words into simple two-word phrases."
+  },
+  {
+   "idx": "Language 1.c.6",
+   "text": "Communicates using simple three- and four-word phrases or sentences to express complex ideas or requests."
+  },
+  {
+   "idx": "Language 1.c.7",
+   "text": "Communicates using sentences that include the following components: subject, verb, object, descriptive words, and prepositions."
+  },
+  {
+   "idx": "Language 1.d.1",
+   "text": "Directs attention to caregiver’s communication."
+  },
+  {
+   "idx": "Language 1.d.2",
+   "text": "Engages in back-and-forth interactions with caregiver."
+  },
+  {
+   "idx": "Language 1.d.3",
+   "text": "Participates in and initiates basic communications with family members or others who are familiar."
+  },
+  {
+   "idx": "Language 1.d.4",
+   "text": "Participates in and initiates communication by switching communication skills to fit the need of the audience."
+  },
+  {
+   "idx": "Language 1.d.5",
+   "text": "Follows typical patterns when communicating with others (e.g., listens to others, takes turns talking and speaking about the topic or text being discussed)."
+  },
+  {
+   "idx": "Language 1.e.1",
+   "text": "Attends to language."
+  },
+  {
+   "idx": "Language 1.e.2",
+   "text": "Shows interest in books, pictures, songs, and rhymes."
+  },
+  {
+   "idx": "Language 1.e.3",
+   "text": "Participates in book reading, storytelling, and singing."
+  },
+  {
+   "idx": "Language 1.e.4",
+   "text": "Demonstrates understanding of a read-aloud text by answering literal questions."
+  },
+  {
+   "idx": "Language 1.e.5",
+   "text": "Demonstrates understanding of a read-aloud text by answering inferential questions."
+  },
+  {
+   "idx": "Language 2.a.1",
+   "text": "Attends to language and sounds."
+  },
+  {
+   "idx": "Language 2.a.2",
+   "text": "Vocalizes sounds."
+  },
+  {
+   "idx": "Language 2.a.3",
+   "text": "Engages in back-and-forth interactions with caregiver."
+  },
+  {
+   "idx": "Language 2.a.4",
+   "text": "Imitates and uses single words."
+  },
+  {
+   "idx": "Language 2.a.5",
+   "text": "Uses spoken words with meaning in phrases."
+  },
+  {
+   "idx": "Language 2.a.6",
+   "text": "Recognizes individual words that make up a spoken sentence."
+  },
+  {
+   "idx": "Language 2.a.7",
+   "text": "Blends and segments spoken compound words."
+  },
+  {
+   "idx": "Language 2.a.8",
+   "text": "Blends and segments syllables in spoken words."
+  },
+  {
+   "idx": "Language 2.b.1",
+   "text": "Attends to language and sounds."
+  },
+  {
+   "idx": "Language 2.b.2",
+   "text": "Vocalizes sounds."
+  },
+  {
+   "idx": "Language 2.b.3",
+   "text": "Engages in back-and-forth interactions with caregiver."
+  },
+  {
+   "idx": "Language 2.b.4",
+   "text": "Imitates and uses single words."
+  },
+  {
+   "idx": "Language 2.b.5",
+   "text": "Uses spoken words with meaning in phrases."
+  },
+  {
+   "idx": "Language 2.b.6",
+   "text": "Recognizes words in spoken sentences."
+  },
+  {
+   "idx": "Language 2.b.7",
+   "text": "Segments syllables in spoken words."
+  },
+  {
+   "idx": "Language 2.b.8",
+   "text": "Recognizes when the beginning sounds of words are the same or different."
+  },
+  {
+   "idx": "Language 2.b.9",
+   "text": "Isolates the initial sound in a spoken word."
+  },
+  {
+   "idx": "Language 2.b.10",
+   "text": "Blends and segments onset and rime in a single-syllable spoken word."
+  },
+  {
+   "idx": "Language 2.c.1",
+   "text": "Attends to language and sounds."
+  },
+  {
+   "idx": "Language 2.c.2",
+   "text": "Vocalizes sounds."
+  },
+  {
+   "idx": "Language 2.c.3",
+   "text": "Engages in back-and-forth interactions with caregiver."
+  },
+  {
+   "idx": "Language 2.c.4",
+   "text": "Recognizes familiar environmental sounds."
+  },
+  {
+   "idx": "Language 2.c.5",
+   "text": "Distinguishes between sounds that are the same and different."
+  },
+  {
+   "idx": "Language 2.c.6",
+   "text": "Repeats rhyming words."
+  },
+  {
+   "idx": "Language 2.c.7",
+   "text": "Identifies rhyming words."
+  },
+  {
+   "idx": "Language 3.a.1",
+   "text": "Demonstrates interest in books."
+  },
+  {
+   "idx": "Language 3.a.2",
+   "text": "Selects books for adult to read."
+  },
+  {
+   "idx": "Language 3.a.3",
+   "text": "Shows an understanding of book covers by self-selecting books to explore independently."
+  },
+  {
+   "idx": "Language 3.a.4",
+   "text": "Orients books correctly and turns pages when “reading” from beginning to end."
+  },
+  {
+   "idx": "Language 3.a.5",
+   "text": "Knows some characteristics of books, such as cover, author and illustrator."
+  },
+  {
+   "idx": "Language 3.a.6",
+   "text": "Demonstrates understanding of book and print organization in nonfiction and fiction books."
+  },
+  {
+   "idx": "Language 3.b.1",
+   "text": "Notices when adult points to print."
+  },
+  {
+   "idx": "Language 3.b.2",
+   "text": "Says the names of some letters by rote (without print)."
+  },
+  {
+   "idx": "Language 3.b.3",
+   "text": "Recognizes first letter and sound of own name and names a few letters in own name."
+  },
+  {
+   "idx": "Language 3.b.4",
+   "text": "Recognizes some letters and their sounds in addition to those in first name."
+  },
+  {
+   "idx": "Language 3.b.5",
+   "text": "Demonstrates understanding that letters can be uppercase and lowercase."
+  },
+  {
+   "idx": "Language 3.b.6",
+   "text": "Identifies and names 18 uppercase and 15 lowercase letters."
+  },
+  {
+   "idx": "Language 4.a.1",
+   "text": "Tracks objects visually and focuses on an object or person.9"
+  },
+  {
+   "idx": "Language 4.a.2",
+   "text": "Notices familiar environmental signs and symbols."
+  },
+  {
+   "idx": "Language 4.a.3",
+   "text": "Scribbles or makes marks."
+  },
+  {
+   "idx": "Language 4.a.4",
+   "text": "Imitates adults reading and writing."
+  },
+  {
+   "idx": "Language 4.a.5",
+   "text": "Recognizes that print conveys a message."
+  },
+  {
+   "idx": "Language 4.a.6",
+   "text": "Interprets own writing for others."
+  },
+  {
+   "idx": "Language 4.a.7",
+   "text": "Uses a combination of drawing, dictating, and emergent writing for a variety of purposes."
+  },
+  {
+   "idx": "Language 4.b.1",
+   "text": "Transfers objects from one hand to the other."
+  },
+  {
+   "idx": "Language 4.b.2",
+   "text": "Holds object with one hand while the other manipulates the object."
+  },
+  {
+   "idx": "Language 4.b.3",
+   "text": "Makes marks and scribbles using a fist to hold writing tool against the palm of the hand (palmar grasp)."
+  },
+  {
+   "idx": "Language 4.b.4",
+   "text": "Scribbles and draws using thumb and fingers (five-finger grasp) of one hand to hold writing tool."
+  },
+  {
+   "idx": "Language 4.b.5",
+   "text": "Imitates drawing prewriting strokes (|, −, +, O) using an inconsistent threeor four-finger grasp of dominant hand to hold a writing tool."
+  },
+  {
+   "idx": "Language 4.b.6",
+   "text": "Copies letters of own name and other meaningful words with letter approximations and some actual letters using a stable three-finger grasp."
+  },
+  {
+   "idx": "Language 4.b.7",
+   "text": "Prints letters of own name with letter approximations and some actual letters using a stable three-finger grasp."
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "Science 1.a.1",
+   "text": "Observes and explores objects using the senses and a variety of simple actions (holding, kicking, manipulating)."
+  },
+  {
+   "idx": "Science 1.a.2",
+   "text": "Intentionally explores and manipulates objects to discover what happens and how things work."
+  },
+  {
+   "idx": "Science 1.a.3",
+   "text": "Engages in focused observations and purposeful explorations of objects and events in the environment."
+  },
+  {
+   "idx": "Science 1.a.4",
+   "text": "Asks questions about objects and events in the environment and engages in sustained and complex manipulation of objects."
+  },
+  {
+   "idx": "Science 1.a.5",
+   "text": "Engages in investigations, makes comparisons between two or more items or events, and makes predictions based on previous observations."
+  },
+  {
+   "idx": "Science 1.b.1",
+   "text": "Repeats simple actions to make things happen."
+  },
+  {
+   "idx": "Science 1.b.2",
+   "text": "Repeats an action to cause a known reaction."
+  },
+  {
+   "idx": "Science 1.b.3",
+   "text": "Purposefully acts on objects to make things happen."
+  },
+  {
+   "idx": "Science 1.b.4",
+   "text": "Demonstrates understanding that events have a cause."
+  },
+  {
+   "idx": "Science 1.b.5",
+   "text": "Makes predictions based on actions on objects to cause an effect."
+  },
+  {
+   "idx": "Science 1.b.6",
+   "text": "Makes inferences, generalizations, and explanations (may not be correct) based on prior knowledge or evidence."
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "Social Studies 1.a.1",
+   "text": "Shows awareness of self and other people."
+  },
+  {
+   "idx": "Social Studies 1.a.2",
+   "text": "Demonstrates preference for familiar adults and recognizes familiar actions and routines."
+  },
+  {
+   "idx": "Social Studies 1.a.3",
+   "text": "Identifies self and others as belonging to one or more groups by observable characteristics."
+  },
+  {
+   "idx": "Social Studies 1.a.4",
+   "text": "Demonstrates an understanding of own family experiences, routines, and traditions."
+  },
+  {
+   "idx": "Social Studies 1.a.5",
+   "text": "Identifies traditions of own family and others’ cultures and customs."
+  },
+  {
+   "idx": "Social Studies 1.b.1",
+   "text": "Signals needs to others."
+  },
+  {
+   "idx": "Social Studies 1.b.2",
+   "text": "Seeks help and begins to meet observable physical needs."
+  },
+  {
+   "idx": "Social Studies 1.b.3",
+   "text": "Identifies and expresses own needs and wants."
+  },
+  {
+   "idx": "Social Studies 1.b.4",
+   "text": "Shows awareness that peers or familiar adults have needs and wants."
+  },
+  {
+   "idx": "Social Studies 1.b.5",
+   "text": "Recognizes not all needs and wants can be met because of limited resources."
+  },
+  {
+   "idx": "Social Studies 1.c.1",
+   "text": "Responds to changes in adult voice, expression, or visual cues."
+  },
+  {
+   "idx": "Social Studies 1.c.2",
+   "text": "Shows awareness of familiar people and objects in own environment."
+  },
+  {
+   "idx": "Social Studies 1.c.3",
+   "text": "Responds to guidance when redirected."
+  },
+  {
+   "idx": "Social Studies 1.c.4",
+   "text": "Participates in simple routines."
+  },
+  {
+   "idx": "Social Studies 1.c.5",
+   "text": "Follows simple rules."
+  },
+  {
+   "idx": "Social Studies 1.c.6",
+   "text": "Identifies simple rules at home and school."
+  },
+  {
+   "idx": "Social Studies 1.c.7",
+   "text": "Carries out responsibilities and chores."
+  },
+  {
+   "idx": "Social Studies 1.c.8",
+   "text": "Uses rules to promote the common good."
+  },
+  {
+   "idx": "Social Studies 1.d.1",
+   "text": "Interacts with objects in surrounding environment."
+  },
+  {
+   "idx": "Social Studies 1.d.2",
+   "text": "Puts materials in a container."
+  },
+  {
+   "idx": "Social Studies 1.d.3",
+   "text": "Returns materials to the correct locations."
+  },
+  {
+   "idx": "Social Studies 1.d.4",
+   "text": "Shows awareness of own responsibility to care for the environment."
+  },
+  {
+   "idx": "Social Studies 1.d.5",
+   "text": "Demonstrates responsible use and care of resources."
+  },
+  {
+   "idx": "Social-Emotional 1.a.1",
+   "text": "Shows awareness of self and other people."
+  },
+  {
+   "idx": "Social-Emotional 1.a.2",
+   "text": "Begins to understand self as a separate person from others."
+  },
+  {
+   "idx": "Social-Emotional 1.a.3",
+   "text": "Recognizes self as a unique person with distinct characteristics."
+  },
+  {
+   "idx": "Social-Emotional 1.a.4",
+   "text": "Shows awareness of self as belonging to one or more groups."
+  },
+  {
+   "idx": "Social-Emotional 1.a.5",
+   "text": "Compares own characteristics to those of others."
+  },
+  {
+   "idx": "Social-Emotional 1.a.6",
+   "text": "Identifies the diversity in human characteristics and how people are similar and different."
+  },
+  {
+   "idx": "Social-Emotional 1.a.7",
+   "text": "Appreciates similarities and differences between self and others."
+  },
+  {
+   "idx": "Social-Emotional 1.b.1",
+   "text": "Demonstrates a variety of emotions through facial expressions, gestures, movement, and/or sounds."
+  },
+  {
+   "idx": "Social-Emotional 1.b.2",
+   "text": "Expresses a variety of emotions nonverbally and possibly with a few familiar words."
+  },
+  {
+   "idx": "Social-Emotional 1.b.3",
+   "text": "Begins to show awareness of own emotions in order to meet needs or wants, both verbally and nonverbally."
+  },
+  {
+   "idx": "Social-Emotional 1.b.4",
+   "text": "Recognizes and identifies own emotions and the emotions of others."
+  },
+  {
+   "idx": "Social-Emotional 2.a.1",
+   "text": "Expresses and acts on impulses."
+  },
+  {
+   "idx": "Social-Emotional 2.a.2",
+   "text": "Comforts self through a variety of means, including seeking help from a familiar adult."
+  },
+  {
+   "idx": "Social-Emotional 2.a.3",
+   "text": "Accepts limits and choices offered by adults to help guide behavior."
+  },
+  {
+   "idx": "Social-Emotional 2.a.4",
+   "text": "Manages actions and emotional expressions."
+  },
+  {
+   "idx": "Social-Emotional 2.a.5",
+   "text": "Uses senses to regulate reactions and focus."
+  },
+  {
+   "idx": "Social-Emotional 2.a.6",
+   "text": "Demonstrates the ability to delay gratification for short periods of time."
+  },
+  {
+   "idx": "Social-Emotional 3.a.1",
+   "text": "Reacts to emotional expressions of others."
+  },
+  {
+   "idx": "Social-Emotional 3.a.2",
+   "text": "Demonstrates understanding what others may feel."
+  },
+  {
+   "idx": "Social-Emotional 3.a.3",
+   "text": "Responds in caring ways to the distress and thinking of others."
+  },
+  {
+   "idx": "Social-Emotional 3.a.4",
+   "text": "Empathizes with and understands the perspectives of others."
+  },
+  {
+   "idx": "Social-Emotional 4.a.1",
+   "text": "Responds differently to familiar and unfamiliar adults."
+  },
+  {
+   "idx": "Social-Emotional 4.a.2",
+   "text": "Expresses emotions and engages in back-and-forth interactions with familiar adults."
+  },
+  {
+   "idx": "Social-Emotional 4.a.3",
+   "text": "Initiates interactions with familiar adults and seeks close proximity to familiar adults."
+  },
+  {
+   "idx": "Social-Emotional 4.a.4",
+   "text": "Separates from familiar adults in a familiar setting with minimal distress."
+  },
+  {
+   "idx": "Social-Emotional 4.a.5",
+   "text": "Seeks help from trusted adults when needed."
+  },
+  {
+   "idx": "Social-Emotional 4.a.6",
+   "text": "Interacts readily with trusted adults and begins to engage in some positive interactions with less familiar adults."
+  },
+  {
+   "idx": "Social-Emotional 4.b.1",
+   "text": "Shows interest in other children."
+  },
+  {
+   "idx": "Social-Emotional 4.b.2",
+   "text": "Repeats actions that elicit social responses from others."
+  },
+  {
+   "idx": "Social-Emotional 4.b.3",
+   "text": "Participates in simple back-and-forth interactions with peers for a short period of time."
+  },
+  {
+   "idx": "Social-Emotional 4.b.4",
+   "text": "Engages in simple associative and cooperative play with peers."
+  },
+  {
+   "idx": "Social-Emotional 4.b.5",
+   "text": "Interacts with peers in more complex play including planning, pretending, coordination of roles and cooperation."
+  },
+  {
+   "idx": "Social-Emotional 4.c.1",
+   "text": "Reacts to conflict."
+  },
+  {
+   "idx": "Social-Emotional 4.c.2",
+   "text": "Expresses feelings in a conflict situation through actions."
+  },
+  {
+   "idx": "Social-Emotional 4.c.3",
+   "text": "Identifies and communicates needs in a conflict situation."
+  },
+  {
+   "idx": "Social-Emotional 4.c.4",
+   "text": "Uses a variety of simple strategies to resolve conflict with peers."
+  },
+  {
+   "idx": "Cognitive 1.a.1",
+   "text": "Responds differently to familiar and unfamiliar people, events, objects, and their features."
+  },
+  {
+   "idx": "Cognitive 1.a.2",
+   "text": "Anticipates next steps in simple, familiar routines and games."
+  },
+  {
+   "idx": "Cognitive 1.a.3",
+   "text": "Remembers people, events, and objects over a period of time with contextual cues."
+  },
+  {
+   "idx": "Cognitive 1.a.4",
+   "text": "Recalls information over a longer period of time with or without contextual cues."
+  },
+  {
+   "idx": "Cognitive 1.a.5",
+   "text": "Recreates or retells a sequence of events in a familiar activity or routine based on past experiences."
+  },
+  {
+   "idx": "Cognitive 2.a.1",
+   "text": "Explores real objects, people, and actions."
+  },
+  {
+   "idx": "Cognitive 2.a.2",
+   "text": "Demonstrates understanding that objects and people continue to exist even when no longer within sight."
+  },
+  {
+   "idx": "Cognitive 2.a.3",
+   "text": "Uses objects for their intended purposes."
+  },
+  {
+   "idx": "Cognitive 2.a.4",
+   "text": "Uses objects and materials in new and unconventional ways to represent something else."
+  },
+  {
+   "idx": "Cognitive 2.a.5",
+   "text": "Engages in increasingly complex and sequenced pretend play."
+  },
+  {
+   "idx": "Cognitive 2.a.6",
+   "text": "Identifies a variety of everyday symbols and their meanings."
+  },
+  {
+   "idx": "Cognitive 2.a.7",
+   "text": "Uses symbols to represent thinking or ideas."
+  },
+  {
+   "idx": "Cognitive 3.a.1",
+   "text": "Actively uses the body to find out about the world or reach a goal."
+  },
+  {
+   "idx": "Cognitive 3.a.2",
+   "text": "Uses simple strategies to solve problems."
+  },
+  {
+   "idx": "Cognitive 3.a.3",
+   "text": "Tries different strategies to find the solution to a question, problem, or task."
+  },
+  {
+   "idx": "Cognitive 3.a.4",
+   "text": "Solves problems by questioning, planning, and carrying out a sequence of actions."
+  },
+  {
+   "idx": "Cognitive 3.a.5",
+   "text": "Explains reasoning for the solution selected."
+  },
+  {
+   "idx": "Cognitive 4.a.1",
+   "text": "Repeats an action to cause a known reaction."
+  },
+  {
+   "idx": "Cognitive 4.a.2",
+   "text": "Uses simple strategies to solve problems."
+  },
+  {
+   "idx": "Cognitive 4.a.3",
+   "text": "Begins to modify actions or behaviors when shifting focus or adjusting to a new activity."
+  },
+  {
+   "idx": "Cognitive 4.a.4",
+   "text": "Applies different rules in contexts that require different behaviors.6"
+  },
+  {
+   "idx": "Cognitive 4.a.5",
+   "text": "Modifies and adapts behavior during transitions, daily routines, and unexpected events when prompted by an adult."
+  }
+ ]
+}

@@ -156,6 +156,10 @@ export const ARKANSAS_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Arkansas Better Chance funds a pre-K year for four-year-olds in schools and community programs. It follows the Arkansas Child Development and Early Learning Standards.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in Arkansas is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 by ones and tens, and start adding and taking away within 10. Science looks at pushes and pulls, living things and weather, and social studies covers rules, needs and wants, simple maps, and symbols like the American flag and the Arkansas flag.",
       lookFor: "Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

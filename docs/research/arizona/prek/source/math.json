@@ -1,0 +1,977 @@
+{
+ "data": {
+  "cspStatus": {
+   "notes": null,
+   "value": "visible"
+  },
+  "document": {
+   "sourceURL": "https://www.azed.gov/sites/default/files/2015/02/Arizona%20Early%20Learning%20Standards_4th%20Edition_2021.pdf",
+   "title": "ARIZONA EARLY LEARNING STANDARDS 4th Edition May 2018"
+  },
+  "educationLevels": [
+   "Pre-K",
+   "K"
+  ],
+  "id": "081D4E23CBB247018B2580AAAE07F5D0",
+  "jurisdiction": {
+   "id": "0B41FFF6B5114EB0B8A89CE0E70E22D8",
+   "title": "Arizona"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/4.0/us/",
+   "rightsHolder": "Common Curriculum, Inc.",
+   "title": "CC BY 4.0 US"
+  },
+  "normalizedSubject": null,
+  "standards": {
+   "0624A9E7902B42F89B742063BF568E59": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "29FF45C8D2CD44ED819D76B83AA1524A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Counts to Tell Number of Objects: The child uses number words and counting to identify quantity.",
+    "id": "0624A9E7902B42F89B742063BF568E59",
+    "listId": "4",
+    "parentId": "29FF45C8D2CD44ED819D76B83AA1524A",
+    "position": 1012,
+    "statementLabel": null,
+    "statementNotation": "1.4"
+   },
+   "07D31F29EF91470CA80407C1FCA26F0D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4A5D2BDDDD084E60A923340FD893C25F",
+     "10EFF5632313458A84A63EEC39683463"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Compares, describes, analyzes, and sorts two- and three- dimensional objects in the environment using\nformal and informal mathematical language with prompting and support based on their attributes.",
+    "id": "07D31F29EF91470CA80407C1FCA26F0D",
+    "listId": "e",
+    "parentId": "4A5D2BDDDD084E60A923340FD893C25F",
+    "position": 1053,
+    "statementLabel": null,
+    "statementNotation": "4.1.e"
+   },
+   "085852F17AFE419C84643BD4EDEE6F7D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B781036A0892433FB92009F7F8B72AF8",
+     "29FF45C8D2CD44ED819D76B83AA1524A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Shows interest in and awareness of counting.",
+    "id": "085852F17AFE419C84643BD4EDEE6F7D",
+    "listId": "a",
+    "parentId": "B781036A0892433FB92009F7F8B72AF8",
+    "position": 1002,
+    "statementLabel": null,
+    "statementNotation": "1.1.a"
+   },
+   "0904C28EA32147B4A1939E2C4605C2FC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4A5D2BDDDD084E60A923340FD893C25F",
+     "10EFF5632313458A84A63EEC39683463"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Recognizes basic two-dimensional shapes when presented in different orientations. 22 ",
+    "id": "0904C28EA32147B4A1939E2C4605C2FC",
+    "listId": "a",
+    "parentId": "4A5D2BDDDD084E60A923340FD893C25F",
+    "position": 1049,
+    "statementLabel": null,
+    "statementNotation": "4.1.a"
+   },
+   "09470931A3D94C42821BEF618BFDFE55": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B62BEE24A0DD4BD6B74E59AC1A04A3BF",
+     "D84D2290FC8B4AF7B0E86ECEF2A473F1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Asks questions to gather measurable data.",
+    "id": "09470931A3D94C42821BEF618BFDFE55",
+    "listId": "a",
+    "parentId": "B62BEE24A0DD4BD6B74E59AC1A04A3BF",
+    "position": 1037,
+    "statementLabel": null,
+    "statementNotation": "3.2.a"
+   },
+   "0A43505F1ED04388B6930E3011D4307E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "29FF45C8D2CD44ED819D76B83AA1524A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Compares Numbers and Quantities: The child applies a range of strategies such as matching or counting to compare sets of objects.",
+    "id": "0A43505F1ED04388B6930E3011D4307E",
+    "listId": "3",
+    "parentId": "29FF45C8D2CD44ED819D76B83AA1524A",
+    "position": 1010,
+    "statementLabel": null,
+    "statementNotation": "1.3"
+   },
+   "0ABEE912DE594316B760FD24C1EB19CE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E59F57C6D08741AAB232718D2483F155",
+     "29FF45C8D2CD44ED819D76B83AA1524A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identifies numerals zero to ten.",
+    "id": "0ABEE912DE594316B760FD24C1EB19CE",
+    "listId": "d",
+    "parentId": "E59F57C6D08741AAB232718D2483F155",
+    "position": 1008,
+    "statementLabel": null,
+    "statementNotation": "1.2.d"
+   },
+   "10B6C8230CC049A9B2FAEF2F3BE52408": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "18D6C8BE50BC46F0A1CA18B1011D1C3F",
+     "E361FEB144594524ACB35E1D4CE52F6A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Describes similarities and differences in patterns.",
+    "id": "10B6C8230CC049A9B2FAEF2F3BE52408",
+    "listId": "f",
+    "parentId": "18D6C8BE50BC46F0A1CA18B1011D1C3F",
+    "position": 1031,
+    "statementLabel": null,
+    "statementNotation": "2.2.f"
+   },
+   "10EFF5632313458A84A63EEC39683463": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "GEOMETRY",
+    "id": "10EFF5632313458A84A63EEC39683463",
+    "listId": "4",
+    "parentId": null,
+    "position": 1047,
+    "statementLabel": null,
+    "statementNotation": "4"
+   },
+   "1143190DD0424D629BE4307F621BC754": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4A5D2BDDDD084E60A923340FD893C25F",
+     "10EFF5632313458A84A63EEC39683463"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Creates two-dimensional shapes during play.",
+    "id": "1143190DD0424D629BE4307F621BC754",
+    "listId": "c",
+    "parentId": "4A5D2BDDDD084E60A923340FD893C25F",
+    "position": 1051,
+    "statementLabel": null,
+    "statementNotation": "4.1.c"
+   },
+   "18D6C8BE50BC46F0A1CA18B1011D1C3F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E361FEB144594524ACB35E1D4CE52F6A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Patterning: The child recognizes, fixes, duplicates, extends, describes, and creates patterns.",
+    "id": "18D6C8BE50BC46F0A1CA18B1011D1C3F",
+    "listId": "2",
+    "parentId": "E361FEB144594524ACB35E1D4CE52F6A",
+    "position": 1025,
+    "statementLabel": null,
+    "statementNotation": "2.2"
+   },
+   "214C477B3B2546EBACAA8BF0B06F3476": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "732A4E5AAEB74FD0B238F461E041D0CF",
+     "D84D2290FC8B4AF7B0E86ECEF2A473F1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Explains how items were sorted into groups.",
+    "id": "214C477B3B2546EBACAA8BF0B06F3476",
+    "listId": "b",
+    "parentId": "732A4E5AAEB74FD0B238F461E041D0CF",
+    "position": 1035,
+    "statementLabel": null,
+    "statementNotation": "3.1.b"
+   },
+   "24F97DD274C941A7A551A93EAA72208B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "496FDB3C30844AD0BCAB4C805A9D4E5B",
+     "E361FEB144594524ACB35E1D4CE52F6A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Describes changes in two or more sets of objects when they are combined.",
+    "id": "24F97DD274C941A7A551A93EAA72208B",
+    "listId": "b",
+    "parentId": "496FDB3C30844AD0BCAB4C805A9D4E5B",
+    "position": 1021,
+    "statementLabel": null,
+    "statementNotation": "2.1.b"
+   },
+   "29FF45C8D2CD44ED819D76B83AA1524A": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "COUNTING AND CARDINALITY ",
+    "id": "29FF45C8D2CD44ED819D76B83AA1524A",
+    "listId": "1",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": null,
+    "statementNotation": "1"
+   },
+   "35C1943654624C4DA3578B7364EB6145": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B62BEE24A0DD4BD6B74E59AC1A04A3BF",
+     "D84D2290FC8B4AF7B0E86ECEF2A473F1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Uses descriptive language to compare data in picture graphs or other concrete representations. ",
+    "id": "35C1943654624C4DA3578B7364EB6145",
+    "listId": "c",
+    "parentId": "B62BEE24A0DD4BD6B74E59AC1A04A3BF",
+    "position": 1039,
+    "statementLabel": null,
+    "statementNotation": "3.2.c"
+   },
+   "384F0AE2034F4D1CBEE03CD3E1CE015C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B62BEE24A0DD4BD6B74E59AC1A04A3BF",
+     "D84D2290FC8B4AF7B0E86ECEF2A473F1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Analyzes data from charts and graphs to answer questions.",
+    "id": "384F0AE2034F4D1CBEE03CD3E1CE015C",
+    "listId": "d",
+    "parentId": "B62BEE24A0DD4BD6B74E59AC1A04A3BF",
+    "position": 1040,
+    "statementLabel": null,
+    "statementNotation": "3.2.d"
+   },
+   "4039E67C3C9E4E0589A8A735C189EF80": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A5401E7105E34DCBBA397B2392261426",
+     "D84D2290FC8B4AF7B0E86ECEF2A473F1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Orders objects by measurable attributes.",
+    "id": "4039E67C3C9E4E0589A8A735C189EF80",
+    "listId": "d",
+    "parentId": "A5401E7105E34DCBBA397B2392261426",
+    "position": 1045,
+    "statementLabel": null,
+    "statementNotation": "3.3.d"
+   },
+   "496FDB3C30844AD0BCAB4C805A9D4E5B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E361FEB144594524ACB35E1D4CE52F6A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Explores Addition and Subtraction: The child recognizes addition as adding to and subtraction as taking away from.",
+    "id": "496FDB3C30844AD0BCAB4C805A9D4E5B",
+    "listId": "1",
+    "parentId": "E361FEB144594524ACB35E1D4CE52F6A",
+    "position": 1019,
+    "statementLabel": null,
+    "statementNotation": "2.1"
+   },
+   "4A5D2BDDDD084E60A923340FD893C25F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "10EFF5632313458A84A63EEC39683463"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Shapes: The child recognizes names and describes common shapes and their properties.",
+    "id": "4A5D2BDDDD084E60A923340FD893C25F",
+    "listId": "1",
+    "parentId": "10EFF5632313458A84A63EEC39683463",
+    "position": 1048,
+    "statementLabel": null,
+    "statementNotation": "4.1"
+   },
+   "4DBCFA6676C8410AAC771AC291244FEA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B62BEE24A0DD4BD6B74E59AC1A04A3BF",
+     "D84D2290FC8B4AF7B0E86ECEF2A473F1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Displays data to answer simple questions about themselves or the environment.",
+    "id": "4DBCFA6676C8410AAC771AC291244FEA",
+    "listId": "b",
+    "parentId": "B62BEE24A0DD4BD6B74E59AC1A04A3BF",
+    "position": 1038,
+    "statementLabel": null,
+    "statementNotation": "3.2.b"
+   },
+   "536CE21C402B4C138AC403DEE11BCDDE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "18D6C8BE50BC46F0A1CA18B1011D1C3F",
+     "E361FEB144594524ACB35E1D4CE52F6A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Recognizes patterns in the real world. ",
+    "id": "536CE21C402B4C138AC403DEE11BCDDE",
+    "listId": "a",
+    "parentId": "18D6C8BE50BC46F0A1CA18B1011D1C3F",
+    "position": 1026,
+    "statementLabel": null,
+    "statementNotation": "2.2.a"
+   },
+   "5ACC98A2C66D4A71BDFED540A9B58EE8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E59F57C6D08741AAB232718D2483F155",
+     "29FF45C8D2CD44ED819D76B83AA1524A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Uses a variety of materials (i.e. clay, sand, shaving cream) to write and form numerals and numeral-like symbols.",
+    "id": "5ACC98A2C66D4A71BDFED540A9B58EE8",
+    "listId": "c",
+    "parentId": "E59F57C6D08741AAB232718D2483F155",
+    "position": 1007,
+    "statementLabel": null,
+    "statementNotation": "1.2.c"
+   },
+   "621AD46D49AD49919A04FA44580C532C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "496FDB3C30844AD0BCAB4C805A9D4E5B",
+     "E361FEB144594524ACB35E1D4CE52F6A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Recognizes that taking away (subtracting) decreases the number of objects in a group",
+    "id": "621AD46D49AD49919A04FA44580C532C",
+    "listId": "c",
+    "parentId": "496FDB3C30844AD0BCAB4C805A9D4E5B",
+    "position": 1022,
+    "statementLabel": null,
+    "statementNotation": "2.1.c"
+   },
+   "63870EE49C864316963A467B2ECB51EA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0A43505F1ED04388B6930E3011D4307E",
+     "29FF45C8D2CD44ED819D76B83AA1524A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Compares two sets of objects using terms such as greater than, less than, or equal to.",
+    "id": "63870EE49C864316963A467B2ECB51EA",
+    "listId": "a",
+    "parentId": "0A43505F1ED04388B6930E3011D4307E",
+    "position": 1011,
+    "statementLabel": null,
+    "statementNotation": "1.3.a"
+   },
+   "732A4E5AAEB74FD0B238F461E041D0CF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D84D2290FC8B4AF7B0E86ECEF2A473F1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Sorts and Classifies: The child sorts and groups objects by a variety of attributes.",
+    "id": "732A4E5AAEB74FD0B238F461E041D0CF",
+    "listId": "1",
+    "parentId": "D84D2290FC8B4AF7B0E86ECEF2A473F1",
+    "position": 1033,
+    "statementLabel": null,
+    "statementNotation": "3.1"
+   },
+   "7588630B6C4F463594073C4E771C77B4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "18D6C8BE50BC46F0A1CA18B1011D1C3F",
+     "E361FEB144594524ACB35E1D4CE52F6A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Creates patterns.",
+    "id": "7588630B6C4F463594073C4E771C77B4",
+    "listId": "e",
+    "parentId": "18D6C8BE50BC46F0A1CA18B1011D1C3F",
+    "position": 1030,
+    "statementLabel": null,
+    "statementNotation": "2.2.e"
+   },
+   "7A5B5E48F30B43CCB2FBD9D663809559": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A5401E7105E34DCBBA397B2392261426",
+     "D84D2290FC8B4AF7B0E86ECEF2A473F1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Compares objects and uses terms (e.g. lighter-heavier, hotter-colder, and faster-slower).",
+    "id": "7A5B5E48F30B43CCB2FBD9D663809559",
+    "listId": "a",
+    "parentId": "A5401E7105E34DCBBA397B2392261426",
+    "position": 1042,
+    "statementLabel": null,
+    "statementNotation": "3.3.a"
+   },
+   "7C9F657ED4E04D40A5D1399F8BB41558": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "496FDB3C30844AD0BCAB4C805A9D4E5B",
+     "E361FEB144594524ACB35E1D4CE52F6A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Recognizes that adding increases the number of objects in a group.",
+    "id": "7C9F657ED4E04D40A5D1399F8BB41558",
+    "listId": "a",
+    "parentId": "496FDB3C30844AD0BCAB4C805A9D4E5B",
+    "position": 1020,
+    "statementLabel": null,
+    "statementNotation": "2.1.a"
+   },
+   "81B9538D2A6D480A8FFF4D3C806C2688": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0624A9E7902B42F89B742063BF568E59",
+     "29FF45C8D2CD44ED819D76B83AA1524A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Counts groups of objects using a number word for each object (Rational counting).",
+    "id": "81B9538D2A6D480A8FFF4D3C806C2688",
+    "listId": "c",
+    "parentId": "0624A9E7902B42F89B742063BF568E59",
+    "position": 1015,
+    "statementLabel": null,
+    "statementNotation": "1.4.c"
+   },
+   "867648C4BA8244798A106E2EF55933F3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4A5D2BDDDD084E60A923340FD893C25F",
+     "10EFF5632313458A84A63EEC39683463"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Uses the names of geometric shapes when describing objects found in the environment.",
+    "id": "867648C4BA8244798A106E2EF55933F3",
+    "listId": "b",
+    "parentId": "4A5D2BDDDD084E60A923340FD893C25F",
+    "position": 1050,
+    "statementLabel": null,
+    "statementNotation": "4.1.b"
+   },
+   "8706EEDD05DA4883A7B929CA6E89CCA0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EDAA99C8DA7E43A7A5B3357139F7F5CC",
+     "10EFF5632313458A84A63EEC39683463"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Uses and responds to spatial language (e.g., between, inside, under, above, behind).",
+    "id": "8706EEDD05DA4883A7B929CA6E89CCA0",
+    "listId": "a",
+    "parentId": "EDAA99C8DA7E43A7A5B3357139F7F5CC",
+    "position": 1055,
+    "statementLabel": null,
+    "statementNotation": "4.2.a"
+   },
+   "8D1712CCFCFF47E4A53B2EC84A727CE0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EDAA99C8DA7E43A7A5B3357139F7F5CC",
+     "10EFF5632313458A84A63EEC39683463"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Describes the relative position or location of objects in relation to self or to other objects with mathematical\nprecision.",
+    "id": "8D1712CCFCFF47E4A53B2EC84A727CE0",
+    "listId": "b",
+    "parentId": "EDAA99C8DA7E43A7A5B3357139F7F5CC",
+    "position": 1056,
+    "statementLabel": null,
+    "statementNotation": "4.2.b"
+   },
+   "8D933F9998F14A34A20FD66C1CF85831": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0624A9E7902B42F89B742063BF568E59",
+     "29FF45C8D2CD44ED819D76B83AA1524A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Matches numerals to quantities using manipulatives.",
+    "id": "8D933F9998F14A34A20FD66C1CF85831",
+    "listId": "e",
+    "parentId": "0624A9E7902B42F89B742063BF568E59",
+    "position": 1017,
+    "statementLabel": null,
+    "statementNotation": "1.4.e"
+   },
+   "9628764F8994436C8D575ACB1D216D8E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A5401E7105E34DCBBA397B2392261426",
+     "D84D2290FC8B4AF7B0E86ECEF2A473F1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Uses non-standard units of measurement (e.g., hands, bodies, containers) to estimate measurable attributes.",
+    "id": "9628764F8994436C8D575ACB1D216D8E",
+    "listId": "b",
+    "parentId": "A5401E7105E34DCBBA397B2392261426",
+    "position": 1043,
+    "statementLabel": null,
+    "statementNotation": "3.3.b"
+   },
+   "991BEF64931A4180B5F362FEB4EBFA0C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E59F57C6D08741AAB232718D2483F155",
+     "29FF45C8D2CD44ED819D76B83AA1524A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Uses numerals and number symbols in the context of daily routines, activities, and play.",
+    "id": "991BEF64931A4180B5F362FEB4EBFA0C",
+    "listId": "a",
+    "parentId": "E59F57C6D08741AAB232718D2483F155",
+    "position": 1005,
+    "statementLabel": null,
+    "statementNotation": "1.2.a"
+   },
+   "9C240FADEA184A37BE30110516ED58EC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B781036A0892433FB92009F7F8B72AF8",
+     "29FF45C8D2CD44ED819D76B83AA1524A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Rote counts zero to ten and beyond with increasing accuracy.18",
+    "id": "9C240FADEA184A37BE30110516ED58EC",
+    "listId": "b",
+    "parentId": "B781036A0892433FB92009F7F8B72AF8",
+    "position": 1003,
+    "statementLabel": null,
+    "statementNotation": "1.1.b"
+   },
+   "A1F66759EEC94A63898145B24AA7DFA3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E59F57C6D08741AAB232718D2483F155",
+     "29FF45C8D2CD44ED819D76B83AA1524A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Uses and creates symbols to represent numbers.",
+    "id": "A1F66759EEC94A63898145B24AA7DFA3",
+    "listId": "b",
+    "parentId": "E59F57C6D08741AAB232718D2483F155",
+    "position": 1006,
+    "statementLabel": null,
+    "statementNotation": "1.2.b"
+   },
+   "A5401E7105E34DCBBA397B2392261426": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D84D2290FC8B4AF7B0E86ECEF2A473F1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Measures: The child uses measurement to describe and compare objects in the environment.",
+    "id": "A5401E7105E34DCBBA397B2392261426",
+    "listId": "3",
+    "parentId": "D84D2290FC8B4AF7B0E86ECEF2A473F1",
+    "position": 1041,
+    "statementLabel": null,
+    "statementNotation": "3.3"
+   },
+   "A62ACC2CB28F4B599A3058E220A4D4F4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "18D6C8BE50BC46F0A1CA18B1011D1C3F",
+     "E361FEB144594524ACB35E1D4CE52F6A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Fixes simple patterns.",
+    "id": "A62ACC2CB28F4B599A3058E220A4D4F4",
+    "listId": "b",
+    "parentId": "18D6C8BE50BC46F0A1CA18B1011D1C3F",
+    "position": 1027,
+    "statementLabel": null,
+    "statementNotation": "2.2.b"
+   },
+   "A7FA7789B7D34ED2AE253E7F59ADE843": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "18D6C8BE50BC46F0A1CA18B1011D1C3F",
+     "E361FEB144594524ACB35E1D4CE52F6A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Duplicates simple patterns.",
+    "id": "A7FA7789B7D34ED2AE253E7F59ADE843",
+    "listId": "c",
+    "parentId": "18D6C8BE50BC46F0A1CA18B1011D1C3F",
+    "position": 1028,
+    "statementLabel": null,
+    "statementNotation": "2.2.c"
+   },
+   "B1B9842FB1A34F3889AA700516047EF6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0624A9E7902B42F89B742063BF568E59",
+     "29FF45C8D2CD44ED819D76B83AA1524A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Counts a collection of up to ten items using the last counting word to tell, “How many?” (Cardinality) ",
+    "id": "B1B9842FB1A34F3889AA700516047EF6",
+    "listId": "d",
+    "parentId": "0624A9E7902B42F89B742063BF568E59",
+    "position": 1016,
+    "statementLabel": null,
+    "statementNotation": "1.4.d"
+   },
+   "B62BEE24A0DD4BD6B74E59AC1A04A3BF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D84D2290FC8B4AF7B0E86ECEF2A473F1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Data Analysis: With prompting and support the child collects, organizes, displays, and describes relevant data.",
+    "id": "B62BEE24A0DD4BD6B74E59AC1A04A3BF",
+    "listId": "2",
+    "parentId": "D84D2290FC8B4AF7B0E86ECEF2A473F1",
+    "position": 1036,
+    "statementLabel": null,
+    "statementNotation": "3.2"
+   },
+   "B781036A0892433FB92009F7F8B72AF8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "29FF45C8D2CD44ED819D76B83AA1524A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Counts Out Loud: The child counts out loud and uses number words in daily conversations. ",
+    "id": "B781036A0892433FB92009F7F8B72AF8",
+    "listId": "1",
+    "parentId": "29FF45C8D2CD44ED819D76B83AA1524A",
+    "position": 1001,
+    "statementLabel": null,
+    "statementNotation": "1.1"
+   },
+   "C03761100A32498F9AF993126B5F814C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A5401E7105E34DCBBA397B2392261426",
+     "D84D2290FC8B4AF7B0E86ECEF2A473F1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Uses various standard measuring tools for simple measuring tasks.",
+    "id": "C03761100A32498F9AF993126B5F814C",
+    "listId": "c",
+    "parentId": "A5401E7105E34DCBBA397B2392261426",
+    "position": 1044,
+    "statementLabel": null,
+    "statementNotation": "3.3.c"
+   },
+   "C480AC253FCF4D679C25A1F36F07242D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "496FDB3C30844AD0BCAB4C805A9D4E5B",
+     "E361FEB144594524ACB35E1D4CE52F6A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Describes changes in a set of objects when they are separated into parts.",
+    "id": "C480AC253FCF4D679C25A1F36F07242D",
+    "listId": "d",
+    "parentId": "496FDB3C30844AD0BCAB4C805A9D4E5B",
+    "position": 1023,
+    "statementLabel": null,
+    "statementNotation": "2.1.d"
+   },
+   "CA48F3EAFFC04A2B828BC6E9FF9C4A7E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A5401E7105E34DCBBA397B2392261426",
+     "D84D2290FC8B4AF7B0E86ECEF2A473F1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Uses appropriate vocabulary to describe time and sequence related to daily routines (e.g. tomorrow,\nyesterday,next, this morning).",
+    "id": "CA48F3EAFFC04A2B828BC6E9FF9C4A7E",
+    "listId": "e",
+    "parentId": "A5401E7105E34DCBBA397B2392261426",
+    "position": 1046,
+    "statementLabel": null,
+    "statementNotation": "3.3.e"
+   },
+   "CB32338C776B44E7BB2D05DBE83F19B3": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "18D6C8BE50BC46F0A1CA18B1011D1C3F",
+     "E361FEB144594524ACB35E1D4CE52F6A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Extends Patterns",
+    "id": "CB32338C776B44E7BB2D05DBE83F19B3",
+    "listId": "d",
+    "parentId": "18D6C8BE50BC46F0A1CA18B1011D1C3F",
+    "position": 1029,
+    "statementLabel": null,
+    "statementNotation": "2.2.d"
+   },
+   "D5B2120387624BB3901D1A730DB52893": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0624A9E7902B42F89B742063BF568E59",
+     "29FF45C8D2CD44ED819D76B83AA1524A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identifies quantities of three to five objects without counting using visual approximation (Subitize).",
+    "id": "D5B2120387624BB3901D1A730DB52893",
+    "listId": "a",
+    "parentId": "0624A9E7902B42F89B742063BF568E59",
+    "position": 1013,
+    "statementLabel": null,
+    "statementNotation": "1.4.a"
+   },
+   "D84D2290FC8B4AF7B0E86ECEF2A473F1": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "MEASUREMENT AND DATA ",
+    "id": "D84D2290FC8B4AF7B0E86ECEF2A473F1",
+    "listId": "3",
+    "parentId": null,
+    "position": 1032,
+    "statementLabel": null,
+    "statementNotation": "3"
+   },
+   "DC35093D5E314F4EB2A5AA77FEC8AE73": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "496FDB3C30844AD0BCAB4C805A9D4E5B",
+     "E361FEB144594524ACB35E1D4CE52F6A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Counts on from the larger number for addition.",
+    "id": "DC35093D5E314F4EB2A5AA77FEC8AE73",
+    "listId": "e",
+    "parentId": "496FDB3C30844AD0BCAB4C805A9D4E5B",
+    "position": 1024,
+    "statementLabel": null,
+    "statementNotation": "2.1.e"
+   },
+   "E361FEB144594524ACB35E1D4CE52F6A": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "OPERATIONS AND ALGEBRAIC THINKING",
+    "id": "E361FEB144594524ACB35E1D4CE52F6A",
+    "listId": "2",
+    "parentId": null,
+    "position": 1018,
+    "statementLabel": null,
+    "statementNotation": "2"
+   },
+   "E59F57C6D08741AAB232718D2483F155": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "29FF45C8D2CD44ED819D76B83AA1524A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Knows Number Names and Symbols: The child identifies numerals and uses number words in daily activities. ",
+    "id": "E59F57C6D08741AAB232718D2483F155",
+    "listId": "2",
+    "parentId": "29FF45C8D2CD44ED819D76B83AA1524A",
+    "position": 1004,
+    "statementLabel": null,
+    "statementNotation": "1.2"
+   },
+   "E82FCEA6A1024AB0856EAEA6D1814E6A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0624A9E7902B42F89B742063BF568E59",
+     "29FF45C8D2CD44ED819D76B83AA1524A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Demonstrates the ability to match object to object in a group (One-to-one correspondence).",
+    "id": "E82FCEA6A1024AB0856EAEA6D1814E6A",
+    "listId": "b",
+    "parentId": "0624A9E7902B42F89B742063BF568E59",
+    "position": 1014,
+    "statementLabel": null,
+    "statementNotation": "1.4.b"
+   },
+   "EB5597B082DF48C2B65ACC833E6A4D20": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4A5D2BDDDD084E60A923340FD893C25F",
+     "10EFF5632313458A84A63EEC39683463"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Creates three-dimensional (solid) shapes during play.",
+    "id": "EB5597B082DF48C2B65ACC833E6A4D20",
+    "listId": "d",
+    "parentId": "4A5D2BDDDD084E60A923340FD893C25F",
+    "position": 1052,
+    "statementLabel": null,
+    "statementNotation": "4.1.d"
+   },
+   "EDAA99C8DA7E43A7A5B3357139F7F5CC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "10EFF5632313458A84A63EEC39683463"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "Spatial Reasoning: The child uses and demonstrates an understanding of positional terms.",
+    "id": "EDAA99C8DA7E43A7A5B3357139F7F5CC",
+    "listId": "2",
+    "parentId": "10EFF5632313458A84A63EEC39683463",
+    "position": 1054,
+    "statementLabel": null,
+    "statementNotation": "4.2"
+   },
+   "EF414D37CD7E4314938CAEF2172F6F8B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "732A4E5AAEB74FD0B238F461E041D0CF",
+     "D84D2290FC8B4AF7B0E86ECEF2A473F1"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Sorts and classifies objects by one or more attributes (e.g., size, color, shape, texture, use).",
+    "id": "EF414D37CD7E4314938CAEF2172F6F8B",
+    "listId": "a",
+    "parentId": "732A4E5AAEB74FD0B238F461E041D0CF",
+    "position": 1034,
+    "statementLabel": null,
+    "statementNotation": "3.1.a"
+   },
+   "F80A5C15211E492885BDE5C8C0E3DA4C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E59F57C6D08741AAB232718D2483F155",
+     "29FF45C8D2CD44ED819D76B83AA1524A"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Differentiates some written numerals from written letters.",
+    "id": "F80A5C15211E492885BDE5C8C0E3DA4C",
+    "listId": "e",
+    "parentId": "E59F57C6D08741AAB232718D2483F155",
+    "position": 1009,
+    "statementLabel": null,
+    "statementNotation": "1.2.e"
+   }
+  },
+  "subject": "Early Learning (2018-)",
+  "title": "Mathematics"
+ }
+}
