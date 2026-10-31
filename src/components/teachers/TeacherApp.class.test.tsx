@@ -538,6 +538,42 @@ describe("TeacherApp class page", () => {
     expect([due.getDate(), due.getHours(), due.getMinutes()]).toEqual([20, 23, 59]);
   });
 
+  it("assigns a unit to start on a later day, from the start of that day", async () => {
+    serve(detail, (url, method) => (url === "/api/classes/?id=class-1" && method === "GET" ? { ...detail, assignments: ["3/math/counting"] } : undefined));
+    const user = await openClass();
+    await openTab(user, "Homework");
+    await user.click(screen.getByRole("combobox", { name: "Add a unit" }));
+    await user.click(screen.getByRole("option", { name: /Patterns/ }));
+    await user.click(screen.getByRole("button", { name: "Starts (optional)" }));
+    await user.click(within(screen.getByRole("dialog", { name: "Starts (optional)" })).getByRole("button", { name: /^20 / }));
+    await user.click(screen.getByRole("button", { name: "Assign" }));
+    const body = mocks.call.mock.calls.find(([u, m]) => u === "/api/classes/assignments/" && m === "POST")![2] as { startsAt: number; dueAt?: number };
+    const starts = new Date(body.startsAt);
+    expect([starts.getDate(), starts.getHours(), starts.getMinutes()]).toEqual([20, 0, 0]);
+    expect(body.dueAt).toBeUndefined();
+  });
+
+  it("shows a unit scheduled ahead as scheduled, with its start date in each student's cell", async () => {
+    const start = new Date(now + 3 * DAY);
+    start.setHours(0, 0, 0, 0);
+    const scheduled = {
+      ...detail,
+      startsAt: { "3/math/patterns": start.getTime() },
+      students: detail.students.map((s) => ({ ...s, units: s.units.map((u) => (u.key === "3/math/patterns" ? { ...u, assigned: false } : u)) })),
+    };
+    serve(scheduled);
+    const user = await openClass();
+    const shown = start.toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" });
+    const table = await screen.findByRole("table");
+    expect(within(table).getByRole("rowheader", { name: /^Maya/ }).parentElement!.children[2]).toHaveTextContent(`Starts ${shown}`);
+    await openTab(user, "Homework");
+    expect(screen.getByText(`students see it from ${shown}.`, { exact: false })).toBeInTheDocument();
+    // Clearing the start date gives it out now.
+    await user.click(screen.getByRole("button", { name: "Start date for Patterns" }));
+    await user.click(within(await screen.findByRole("dialog", { name: "Start date for Patterns" })).getByRole("button", { name: "Clear date" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/assignments/", "PATCH", { classId: "class-1", unitKey: "3/math/patterns", startsAt: null }));
+  });
+
   it("assigns a unit to chosen students only, and won't assign to nobody", async () => {
     serve(detail, (url, method) => (url === "/api/classes/?id=class-1" && method === "GET" ? { ...detail, assignments: ["3/math/counting"] } : undefined));
     const user = await openClass();
