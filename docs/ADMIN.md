@@ -110,6 +110,7 @@ Each tab has its own address (`/admin/?tab=Funnel`; a family's page is `/admin/?
 `src/server/alerts.ts`. Both go to every admin account (a confirmed email in `ADMIN_EMAILS`) and can be switched off under **Automations**.
 
 - **Alerts** when something goes wrong: a payment fails (`invoice.payment_failed`) or is disputed (`charge.dispute.created`), with a link to the family; the daily job fails or throws; or a System check goes down, and again when it's working again. The same alert goes out at most once every 6 hours.
+- **New paying customer:** good news too. When a family's first real payment comes in (`invoice.paid`, `alertNewCustomer`), the admins get "New paying customer: parent@example.com" with the amount, plan, country, how long ago they signed up, the number of paying families so far and a link to the family. A free trial's $0 invoice isn't a payment, so a family that subscribes during the trial is announced when its card is first charged. Renewals, and a family that paid before and came back, aren't announced. The alerts switch under Automations turns it off.
 - **System watching:** `/api/cron/watch/` (needs `CRON_SECRET` as a bearer token) runs the System checks and alerts on any that changed. Nothing calls it on a schedule today; call it from any scheduler that can send the header. Site-down alerts come from UptimeRobot (`docs/DEPLOY.md`).
 - **Morning digest:** sent with the daily job. The last 24 hours' sign-ups, payments, revenue and cancellations, what waits in **To Do**, and any System problems. Counts only, never children.
 

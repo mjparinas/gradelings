@@ -146,6 +146,57 @@ describe("alerts", () => {
     expect(mail.text).toContain(`/admin/?family=${payer.familyId}`);
   });
 
+  it("tell the admins about a new paying customer once: not for a trial's C$0 invoice, not for a renewal", async () => {
+    process.env.STRIPE_WEBHOOK_SECRET = "whsec_tools";
+    const fam = await account("new-customer@example.com", { createdAgo: 31 * DAY });
+    await addChild(fam.familyId, "Quinn");
+    await dbm.run("UPDATE families SET stripe_customer = 'cus_new' WHERE id = ?", [fam.familyId]);
+    const send = async (invoice: Record<string, unknown>) => {
+      const payload = JSON.stringify({ id: `evt_${Math.random()}`, created: Math.floor(Date.now() / 1000), type: "invoice.paid", data: { object: invoice } });
+      const ts = Math.floor(Date.now() / 1000);
+      const sig = `t=${ts},v1=${createHmac("sha256", "whsec_tools").update(`${ts}.${payload}`).digest("hex")}`;
+      expect((await webhook.POST(new Request("http://localhost/api/billing/webhook/", { method: "POST", headers: { "stripe-signature": sig }, body: payload }))).status).toBe(200);
+    };
+    const year = { lines: { data: [{ price: { recurring: { interval: "year" } } }] } };
+    const announced = () => sentTo(ADMIN_EMAIL).filter((m) => m.subject.startsWith("New paying customer"));
+    // The free trial starts with a C$0 invoice: nothing to announce yet.
+    await send({ id: "in_trial", customer: "cus_new", amount_paid: 0, currency: "cad", ...year, subscription_details: { metadata: { family_id: fam.familyId } } });
+    expect(announced()).toHaveLength(0);
+    // The trial ends and the card is charged: that's the new customer.
+    await send({ id: "in_first", customer: "cus_new", amount_paid: 11999, currency: "cad", ...year, subscription_details: { metadata: { family_id: fam.familyId } } });
+    expect(announced()).toHaveLength(1);
+    const mail = announced()[0];
+    expect(mail.subject).toBe("New paying customer: new-customer@example.com");
+    expect(mail.text).toContain("paid $119.99 for the yearly plan");
+    expect(mail.text).toContain("A Canadian family, signed up 31 days ago");
+    expect(mail.text).toMatch(/That makes \d+ paying famil/);
+    expect(mail.text).toContain(`/admin/?family=${fam.familyId}`);
+    expect(mail.text).not.toContain("Quinn");
+    // A renewal a year later is not a new customer.
+    await send({ id: "in_renewal", customer: "cus_new", amount_paid: 11999, currency: "cad", ...year, subscription_details: { metadata: { family_id: fam.familyId } } });
+    expect(announced()).toHaveLength(1);
+  });
+
+  it("say a US family paid in US dollars", async () => {
+    const fam = await account("us-customer@example.com");
+    await dbm.run("UPDATE families SET country = 'US' WHERE id = ?", [fam.familyId]);
+    await dbm.run("INSERT INTO payments (id, family_id, amount, currency, interval, paid_at) VALUES ('in_us', ?, 1499, 'USD', 'month', ?)", [fam.familyId, Date.now()]);
+    expect(await alerts.alertNewCustomer("in_us")).toBe(true);
+    const mail = sentTo(ADMIN_EMAIL).at(-1)!;
+    expect(mail.text).toContain("paid US$14.99 for the monthly plan");
+    expect(mail.text).toContain("A US family, signed up today");
+    // An invoice that isn't stored is nothing to announce.
+    expect(await alerts.alertNewCustomer("in_missing")).toBe(false);
+    // Alerts switched off: nothing goes.
+    const quiet = await account("quiet-customer@example.com");
+    await dbm.run("INSERT INTO payments (id, family_id, amount, currency, interval, paid_at) VALUES ('in_quiet', ?, 1499, 'CAD', 'month', ?)", [quiet.familyId, Date.now()]);
+    await post(automations, "/api/admin/automations/", { action: "alerts", instant: false, digest: true });
+    const n = sentTo(ADMIN_EMAIL).length;
+    expect(await alerts.alertNewCustomer("in_quiet")).toBe(false);
+    expect(sentTo(ADMIN_EMAIL)).toHaveLength(n);
+    await post(automations, "/api/admin/automations/", { action: "alerts", instant: true, digest: true });
+  });
+
   it("watch the System checks: an alert when one goes down, and when it's working again", async () => {
     process.env.CRON_SECRET = "watch-secret";
     expect((await watch.GET(req("/api/cron/watch/"))).status).toBe(401);
