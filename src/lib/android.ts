@@ -3,7 +3,7 @@
 // /.well-known/assetlinks.json. See docs/ANDROID.md.
 
 /** Must match `packageId` in android/twa-manifest.json and the Play Console listing. It can never change after publishing. */
-export const ANDROID_PACKAGE = "ca.grademap.app";
+export const ANDROID_PACKAGE = "com.gradelings.app";
 
 /** A SHA-256 certificate fingerprint as printed by keytool: 32 pairs of hex digits separated by colons. */
 const FINGERPRINT = /^([0-9A-F]{2}:){31}[0-9A-F]{2}$/;

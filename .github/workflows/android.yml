@@ -114,7 +114,7 @@ jobs:
       - name: Check the package id didn't change
         working-directory: android
         run: |
-          test "$(jq -r .packageId twa-manifest.json)" = ca.grademap.app
+          test "$(jq -r .packageId twa-manifest.json)" = com.gradelings.app
           git diff --exit-code -- twa-manifest.json || { echo "::error::Bubblewrap changed twa-manifest.json; commit the change or fix the config"; exit 1; }
       - name: Build and sign
         working-directory: android

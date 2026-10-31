@@ -31,7 +31,7 @@ One universal app for iPhone and iPad, in `ios/`. It is a small native Swift she
 | `src/lib/ios.test.ts` | Keeps the web app and `ios/` agreeing (start path, user agent, domain, orientations). |
 | `scripts/ios-screenshots.mjs` | App Store screenshots at iPhone 6.9" and iPad 13" sizes. |
 
-The bundle id is `ca.grademap.app`, the same as the Android package. **It can never change once the app is in App Store Connect.**
+The bundle id is `ca.grademap.app` (the Android package is `com.gradelings.app`). **It can never change once the app is in App Store Connect.**
 
 ## Paying: not inside the iOS app
 
@@ -96,4 +96,4 @@ For later releases, raise `MARKETING_VERSION` in `ios/project.yml` when `ios/` c
 - **In-App Purchase.** Not built. The app sells nothing, which Apple usually accepts for an app that works free. Adding Apple's In-App Purchase (StoreKit, Apple's 15% small-business commission, server receipt checks, and a second billing system beside Stripe) is the fallback if review insists.
 - **US link-out.** Since 2025, apps on the US storefront may link to a web checkout. Gradelings sells in Canada, where that isn't allowed, so the app links to none.
 - **Kids Category or Education.** See above; the default is Education, 4+, because Kids Category can't be undone.
-- **Bundle id.** `ca.grademap.app`, the same as Android. It can't change once the app record exists.
+- **Bundle id.** `ca.grademap.app` (Android uses `com.gradelings.app`). It can't change once the app record exists.
