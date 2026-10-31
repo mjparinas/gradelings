@@ -1,0 +1,2187 @@
+{
+ "data": {
+  "cspStatus": {
+   "notes": null,
+   "value": "visible"
+  },
+  "document": {
+   "publicationStatus": "Published",
+   "sourceURL": "https://www.pa.gov/agencies/education/programs-and-services/instruction/early-learning/early-learning-standards.html",
+   "title": "Pennsylvania Learning Standards for Early Childhood PRE-KINDERGARTEN"
+  },
+  "educationLevels": [
+   "Pre-K"
+  ],
+  "id": "E89F133B347242E4921BB952C0BA6AAE",
+  "jurisdiction": {
+   "id": "5A99211C6D874994A2CFEE2AE40023DD",
+   "title": "Pennsylvania"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/4.0/us/",
+   "rightsHolder": "Common Curriculum, Inc.",
+   "title": "CC BY 4.0 US"
+  },
+  "normalizedSubject": null,
+  "standards": {
+   "02415A133582491B84FFB46A98ECF3D6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0412F6F543D64B1E87226B9ABC308C47",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Plan and conduct an investigation to describe and classify different kinds of materials by their observable properties.",
+    "id": "02415A133582491B84FFB46A98ECF3D6",
+    "listId": "A",
+    "parentId": "0412F6F543D64B1E87226B9ABC308C47",
+    "position": 22000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.A"
+   },
+   "0331DDD0BE4D40D3A9DFAF5D7EFED38B": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Physical Science",
+    "id": "0331DDD0BE4D40D3A9DFAF5D7EFED38B",
+    "listId": "2",
+    "parentId": null,
+    "position": 20000,
+    "statementLabel": null,
+    "statementNotation": "3.2"
+   },
+   "0412F6F543D64B1E87226B9ABC308C47": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "STRUCTURE AND PROPERTIES OF MATTER",
+    "id": "0412F6F543D64B1E87226B9ABC308C47",
+    "listId": "A",
+    "parentId": "0331DDD0BE4D40D3A9DFAF5D7EFED38B",
+    "position": 21000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "078BFB4045684D198F08D9D76EEEADA1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F026FD7B53BF45948A723F86441ED6F1",
+     "0A031798AB5C4121A6B0F4BCCFB34E36"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identify seasons that correspond with observable conditions and identify how weather affects daily life.\r\n",
+    "id": "078BFB4045684D198F08D9D76EEEADA1",
+    "listId": "A",
+    "parentId": "F026FD7B53BF45948A723F86441ED6F1",
+    "position": 62000,
+    "statementLabel": null,
+    "statementNotation": "3.3 PK.A"
+   },
+   "081FBD67F27C42E3A9E83C34F501B57F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "02415A133582491B84FFB46A98ECF3D6",
+     "0412F6F543D64B1E87226B9ABC308C47",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Collect items and sort them according to shape, color, or other attributes .",
+    "id": "081FBD67F27C42E3A9E83C34F501B57F",
+    "listId": "3",
+    "parentId": "02415A133582491B84FFB46A98ECF3D6",
+    "position": 25000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.A.3"
+   },
+   "09CC9A5B654F4197812E7912B7768E72": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4A0D9DD49B8249B98DB463A22CCE5569",
+     "9D8639E6D4C048B985A813C571C02766",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Make predictions about an outcome (e .g ., What might happen to a kite when the wind blows or slows down?) .",
+    "id": "09CC9A5B654F4197812E7912B7768E72",
+    "listId": "5",
+    "parentId": "4A0D9DD49B8249B98DB463A22CCE5569",
+    "position": 41000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.B.5"
+   },
+   "0A031798AB5C4121A6B0F4BCCFB34E36": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Earth and Space Science",
+    "id": "0A031798AB5C4121A6B0F4BCCFB34E36",
+    "listId": "3",
+    "parentId": null,
+    "position": 60000,
+    "statementLabel": null,
+    "statementNotation": "3.3"
+   },
+   "0AFE07EBDECE42E49E35498F796A602B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "12A31F309BF443A3BBA53A574532AB1D",
+     "30856276638C4E7D9E42A514DEF9390E",
+     "CFF8A2C60B064C01AAA181DE408966DC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describe observations accurately .",
+    "id": "0AFE07EBDECE42E49E35498F796A602B",
+    "listId": "10",
+    "parentId": "12A31F309BF443A3BBA53A574532AB1D",
+    "position": 13000,
+    "statementLabel": null,
+    "statementNotation": "3.1 PK.A.10"
+   },
+   "0B5348A6C6194DEBAF77A8080817C6A0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "APPLYING, MAINTAINING, AND ASSESSING TECHNOLOGICAL PRODUCTS AND SYSTEMS\r\n",
+    "id": "0B5348A6C6194DEBAF77A8080817C6A0",
+    "listId": "A",
+    "parentId": "FBAC89CDBA074AECA41F012C39BB26E8",
+    "position": 84000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "0BFFB86716BB44A4B4CAD2422F6B49E0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0B5348A6C6194DEBAF77A8080817C6A0",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identify various technologies used in everyday life.\r\n",
+    "id": "0BFFB86716BB44A4B4CAD2422F6B49E0",
+    "listId": "C",
+    "parentId": "0B5348A6C6194DEBAF77A8080817C6A0",
+    "position": 88000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.C"
+   },
+   "0D61E49F691849BF92B3412D17FEA9F4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "95A291A767AD4FD488D5B699DE4C8C2C",
+     "4A96EE0188734156A71A6F6EC6D591F8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identify natural resources available to people in their daily lives.\r\n",
+    "id": "0D61E49F691849BF92B3412D17FEA9F4",
+    "listId": "A",
+    "parentId": "95A291A767AD4FD488D5B699DE4C8C2C",
+    "position": 69000,
+    "statementLabel": null,
+    "statementNotation": "3.4 PK.A"
+   },
+   "12A31F309BF443A3BBA53A574532AB1D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "30856276638C4E7D9E42A514DEF9390E",
+     "CFF8A2C60B064C01AAA181DE408966DC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Use observations to identify and describe what plants and animals (including humans) need to survive.",
+    "id": "12A31F309BF443A3BBA53A574532AB1D",
+    "listId": "A",
+    "parentId": "30856276638C4E7D9E42A514DEF9390E",
+    "position": 3000,
+    "statementLabel": null,
+    "statementNotation": "3.1 PK.A"
+   },
+   "18E16C13CFF5476B9B359A7F28B4EB7B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7E5CC50269A64DEAAA322B8A579BCAD7",
+     "EB06C89B88794468BEAEAD1D692215CC",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Engage is listening, questioning, and discussing .",
+    "id": "18E16C13CFF5476B9B359A7F28B4EB7B",
+    "listId": "1",
+    "parentId": "7E5CC50269A64DEAAA322B8A579BCAD7",
+    "position": 113000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.N.1"
+   },
+   "19B44BC436084762851CD1361FB4F149": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EB06C89B88794468BEAEAD1D692215CC",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Demonstrate essential skills of the engineering design process.",
+    "id": "19B44BC436084762851CD1361FB4F149",
+    "listId": "M",
+    "parentId": "EB06C89B88794468BEAEAD1D692215CC",
+    "position": 104000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.M"
+   },
+   "1C82A5DD6FBA41ACADE9C350A6FF4E42": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3207D0551EDF4B9FA04BF2C74547F762",
+     "19B44BC436084762851CD1361FB4F149",
+     "EB06C89B88794468BEAEAD1D692215CC",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 4,
+    "description": "Plan – Research ideas and explore possibilities . Establish criteria and constraints . Consider alternative solutions and select an approach .",
+    "id": "1C82A5DD6FBA41ACADE9C350A6FF4E42",
+    "listId": "c",
+    "parentId": "3207D0551EDF4B9FA04BF2C74547F762",
+    "position": 109000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.M.2.c"
+   },
+   "1FD99EA177C34D748F88F5926B31BD9E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "12A31F309BF443A3BBA53A574532AB1D",
+     "30856276638C4E7D9E42A514DEF9390E",
+     "CFF8A2C60B064C01AAA181DE408966DC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Tell the parts of a person, animal, or plant .",
+    "id": "1FD99EA177C34D748F88F5926B31BD9E",
+    "listId": "5",
+    "parentId": "12A31F309BF443A3BBA53A574532AB1D",
+    "position": 8000,
+    "statementLabel": null,
+    "statementNotation": "3.1 PK.A.5"
+   },
+   "20F6FAC5C547443E96924C2B6809FBE5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "02415A133582491B84FFB46A98ECF3D6",
+     "0412F6F543D64B1E87226B9ABC308C47",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Observe differences in water (e .g ., ice cube or snow melting and freezing) .",
+    "id": "20F6FAC5C547443E96924C2B6809FBE5",
+    "listId": "9",
+    "parentId": "02415A133582491B84FFB46A98ECF3D6",
+    "position": 31000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.A.9"
+   },
+   "26F9B69890AA43F283250CF780E51997": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9626D31D725947859D19C8E4DE2090FB",
+     "0B5348A6C6194DEBAF77A8080817C6A0",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Choose tools that are appropriate for an identified task .",
+    "id": "26F9B69890AA43F283250CF780E51997",
+    "listId": "5",
+    "parentId": "9626D31D725947859D19C8E4DE2090FB",
+    "position": 102000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.K.5"
+   },
+   "2B2E9B93E2EF462D80D0E1E6944118AF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4A96EE0188734156A71A6F6EC6D591F8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "SUSTAINABILITY AND STEWARDSHIP",
+    "id": "2B2E9B93E2EF462D80D0E1E6944118AF",
+    "listId": "D",
+    "parentId": "4A96EE0188734156A71A6F6EC6D591F8",
+    "position": 76000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "30856276638C4E7D9E42A514DEF9390E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CFF8A2C60B064C01AAA181DE408966DC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "ORGANIZATION FOR MATTER AND ENERGY FLOW IN ORGANISMS",
+    "id": "30856276638C4E7D9E42A514DEF9390E",
+    "listId": "A",
+    "parentId": "CFF8A2C60B064C01AAA181DE408966DC",
+    "position": 2000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "310E56C9C04A476F9ACDDD1286361F64": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7E5CC50269A64DEAAA322B8A579BCAD7",
+     "EB06C89B88794468BEAEAD1D692215CC",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Take things apart and put them back together",
+    "id": "310E56C9C04A476F9ACDDD1286361F64",
+    "listId": "4",
+    "parentId": "7E5CC50269A64DEAAA322B8A579BCAD7",
+    "position": 116000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.N.4"
+   },
+   "3207D0551EDF4B9FA04BF2C74547F762": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "19B44BC436084762851CD1361FB4F149",
+     "EB06C89B88794468BEAEAD1D692215CC",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Participate in activities that use the steps of the engineering design process",
+    "id": "3207D0551EDF4B9FA04BF2C74547F762",
+    "listId": "2",
+    "parentId": "19B44BC436084762851CD1361FB4F149",
+    "position": 106000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.M.2"
+   },
+   "333BA5DA470F411ABFB05363E2AED827": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "12A31F309BF443A3BBA53A574532AB1D",
+     "30856276638C4E7D9E42A514DEF9390E",
+     "CFF8A2C60B064C01AAA181DE408966DC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Observe the effect of darkness and light on growing plants .",
+    "id": "333BA5DA470F411ABFB05363E2AED827",
+    "listId": "4",
+    "parentId": "12A31F309BF443A3BBA53A574532AB1D",
+    "position": 7000,
+    "statementLabel": null,
+    "statementNotation": "3.1 PK.A.4"
+   },
+   "3380F7C08E86402BAE96A2A7A399D0F0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F85C1C084957473C9F7B2494781546BD",
+     "0B5348A6C6194DEBAF77A8080817C6A0",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify how technology affects daily lives .",
+    "id": "3380F7C08E86402BAE96A2A7A399D0F0",
+    "listId": "3",
+    "parentId": "F85C1C084957473C9F7B2494781546BD",
+    "position": 94000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.E.3"
+   },
+   "3604E14D3EF3482699B25829AD40F4D2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F85C1C084957473C9F7B2494781546BD",
+     "0B5348A6C6194DEBAF77A8080817C6A0",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Label technology with appropriate vocabulary when using or shown (e .g ., telephone, cell phone, computer, TV, camera, tablet, e-reader, Smart board) .",
+    "id": "3604E14D3EF3482699B25829AD40F4D2",
+    "listId": "1",
+    "parentId": "F85C1C084957473C9F7B2494781546BD",
+    "position": 92000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.E.1"
+   },
+   "3617E391BD9D4E978094182D6340F6F1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "078BFB4045684D198F08D9D76EEEADA1",
+     "F026FD7B53BF45948A723F86441ED6F1",
+     "0A031798AB5C4121A6B0F4BCCFB34E36"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use a thermometer as a tool for measuring temperature .",
+    "id": "3617E391BD9D4E978094182D6340F6F1",
+    "listId": "3",
+    "parentId": "078BFB4045684D198F08D9D76EEEADA1",
+    "position": 65000,
+    "statementLabel": null,
+    "statementNotation": "3.3 PK.A.3"
+   },
+   "36815D784BB4418B9408EB72B80A2CC7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "02415A133582491B84FFB46A98ECF3D6",
+     "0412F6F543D64B1E87226B9ABC308C47",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Make a prediction about the results of the experiment .",
+    "id": "36815D784BB4418B9408EB72B80A2CC7",
+    "listId": "7",
+    "parentId": "02415A133582491B84FFB46A98ECF3D6",
+    "position": 29000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.A.7"
+   },
+   "37879E0678E24577AE93832AD2FC5734": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "12A31F309BF443A3BBA53A574532AB1D",
+     "30856276638C4E7D9E42A514DEF9390E",
+     "CFF8A2C60B064C01AAA181DE408966DC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describe changes in people and animals over time (e .g ., losing teeth, growing out of clothing, beans sprouting) .",
+    "id": "37879E0678E24577AE93832AD2FC5734",
+    "listId": "14",
+    "parentId": "12A31F309BF443A3BBA53A574532AB1D",
+    "position": 17000,
+    "statementLabel": null,
+    "statementNotation": "3.1 PK.A.14"
+   },
+   "37AA9DE7418941FE937D2EC8A006C34C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "NATURE AND CHARACTERISTICS OF TECHNOLOGY AND ENGINEERING",
+    "id": "37AA9DE7418941FE937D2EC8A006C34C",
+    "listId": "CC",
+    "parentId": "FBAC89CDBA074AECA41F012C39BB26E8",
+    "position": 120000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "3A74E0F7F22447AD821260779A8D1FAB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "50EBB574EDC34C67A81603AA22AE8B55",
+     "4DEAA17406E740C284009D0F07A22D75",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use tools and materials to design and build a structure that will reduce the warming effect of sunlight on an area .",
+    "id": "3A74E0F7F22447AD821260779A8D1FAB",
+    "listId": "2",
+    "parentId": "50EBB574EDC34C67A81603AA22AE8B55",
+    "position": 59000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.E.2"
+   },
+   "3D4F74C0234F45699A5B7CC5F91B126A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0D61E49F691849BF92B3412D17FEA9F4",
+     "95A291A767AD4FD488D5B699DE4C8C2C",
+     "4A96EE0188734156A71A6F6EC6D591F8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Discuss and use natural items collected from the immediate environment .",
+    "id": "3D4F74C0234F45699A5B7CC5F91B126A",
+    "listId": "5",
+    "parentId": "0D61E49F691849BF92B3412D17FEA9F4",
+    "position": 74000,
+    "statementLabel": null,
+    "statementNotation": "3.4 PK.A.5"
+   },
+   "3DAFC7D7107F4CD2BDA4BFDBBD76105D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "078BFB4045684D198F08D9D76EEEADA1",
+     "F026FD7B53BF45948A723F86441ED6F1",
+     "0A031798AB5C4121A6B0F4BCCFB34E36"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Talk about current weather events that affect the community .",
+    "id": "3DAFC7D7107F4CD2BDA4BFDBBD76105D",
+    "listId": "4",
+    "parentId": "078BFB4045684D198F08D9D76EEEADA1",
+    "position": 66000,
+    "statementLabel": null,
+    "statementNotation": "3.3 PK.A.4"
+   },
+   "404FC20C046D4DDE9BF3249CA4061DFC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CD3D5A1F184E4F52917611AC32D13414",
+     "2B2E9B93E2EF462D80D0E1E6944118AF",
+     "4A96EE0188734156A71A6F6EC6D591F8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify ways that litter should be handled .",
+    "id": "404FC20C046D4DDE9BF3249CA4061DFC",
+    "listId": "3",
+    "parentId": "CD3D5A1F184E4F52917611AC32D13414",
+    "position": 80000,
+    "statementLabel": null,
+    "statementNotation": "3.4 PK.D.3"
+   },
+   "40562DDE47D342FFB6FED84DB0992290": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "TYPES OF INTERACTIONS",
+    "id": "40562DDE47D342FFB6FED84DB0992290",
+    "listId": "C",
+    "parentId": "0331DDD0BE4D40D3A9DFAF5D7EFED38B",
+    "position": 45000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "412499420F994F49B684C58579597BC5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "53F2F3E42BE34917B47B9B399413C912",
+     "40562DDE47D342FFB6FED84DB0992290",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Demonstrate an understanding of push and pull .",
+    "id": "412499420F994F49B684C58579597BC5",
+    "listId": "1",
+    "parentId": "53F2F3E42BE34917B47B9B399413C912",
+    "position": 47000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.C.1"
+   },
+   "41EAAD0A0E624DED80200E5D8F15CB9F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F85C1C084957473C9F7B2494781546BD",
+     "0B5348A6C6194DEBAF77A8080817C6A0",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describe different types of technology .",
+    "id": "41EAAD0A0E624DED80200E5D8F15CB9F",
+    "listId": "4",
+    "parentId": "F85C1C084957473C9F7B2494781546BD",
+    "position": 95000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.E.4"
+   },
+   "421AF5EFC109495DB6B292EDC0FB4647": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0D61E49F691849BF92B3412D17FEA9F4",
+     "95A291A767AD4FD488D5B699DE4C8C2C",
+     "4A96EE0188734156A71A6F6EC6D591F8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Understand that the things we use can be made from things found in the environment .",
+    "id": "421AF5EFC109495DB6B292EDC0FB4647",
+    "listId": "2",
+    "parentId": "0D61E49F691849BF92B3412D17FEA9F4",
+    "position": 71000,
+    "statementLabel": null,
+    "statementNotation": "3.4 PK.A.2"
+   },
+   "42495D2BA12647CC8102ED60B1D42136": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "INTEGRATION OF KNOWLEDGE, TECHNOLOGIES, AND PRACTICES",
+    "id": "42495D2BA12647CC8102ED60B1D42136",
+    "listId": "X",
+    "parentId": "FBAC89CDBA074AECA41F012C39BB26E8",
+    "position": 118000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "4391FC0950044043B48007A877D6A91B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "12A31F309BF443A3BBA53A574532AB1D",
+     "30856276638C4E7D9E42A514DEF9390E",
+     "CFF8A2C60B064C01AAA181DE408966DC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Observe and document the growth of a living thing through drawings, writing, and/or photos .",
+    "id": "4391FC0950044043B48007A877D6A91B",
+    "listId": "13",
+    "parentId": "12A31F309BF443A3BBA53A574532AB1D",
+    "position": 16000,
+    "statementLabel": null,
+    "statementNotation": "3.1 PK.A.13"
+   },
+   "4606843B935948B69EC7EF9B1117B97B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CD3D5A1F184E4F52917611AC32D13414",
+     "2B2E9B93E2EF462D80D0E1E6944118AF",
+     "4A96EE0188734156A71A6F6EC6D591F8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Participate in experiments that show how litter can impact the environment .",
+    "id": "4606843B935948B69EC7EF9B1117B97B",
+    "listId": "2",
+    "parentId": "CD3D5A1F184E4F52917611AC32D13414",
+    "position": 79000,
+    "statementLabel": null,
+    "statementNotation": "3.4 PK.D.2"
+   },
+   "4A0D9DD49B8249B98DB463A22CCE5569": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9D8639E6D4C048B985A813C571C02766",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Participate in investigations to determine if a design solution works as intended to change the speed or direction of an object with a push or a pull.\r\n",
+    "id": "4A0D9DD49B8249B98DB463A22CCE5569",
+    "listId": "B",
+    "parentId": "9D8639E6D4C048B985A813C571C02766",
+    "position": 36000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.B"
+   },
+   "4A96EE0188734156A71A6F6EC6D591F8": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Environmental Literacy and Sustainability",
+    "id": "4A96EE0188734156A71A6F6EC6D591F8",
+    "listId": "4",
+    "parentId": null,
+    "position": 67000,
+    "statementLabel": null,
+    "statementNotation": "3.4"
+   },
+   "4B5E84F7B68E41CB858812A574704E7C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "12A31F309BF443A3BBA53A574532AB1D",
+     "30856276638C4E7D9E42A514DEF9390E",
+     "CFF8A2C60B064C01AAA181DE408966DC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Compare observations with others .",
+    "id": "4B5E84F7B68E41CB858812A574704E7C",
+    "listId": "11",
+    "parentId": "12A31F309BF443A3BBA53A574532AB1D",
+    "position": 14000,
+    "statementLabel": null,
+    "statementNotation": "3.1 PK.A.11"
+   },
+   "4CEDE5079CBD4AF4AAE429313B76D1C8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A38852C931114164A19FFDEB117F6BE1",
+     "4DEAA17406E740C284009D0F07A22D75",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Participate in investigations of the effect of the sun on the earth’s surface .",
+    "id": "4CEDE5079CBD4AF4AAE429313B76D1C8",
+    "listId": "2",
+    "parentId": "A38852C931114164A19FFDEB117F6BE1",
+    "position": 56000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.D.2"
+   },
+   "4DEAA17406E740C284009D0F07A22D75": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "CONSERVATION OF ENERGY AND ENERGY TRANSFER",
+    "id": "4DEAA17406E740C284009D0F07A22D75",
+    "listId": "D",
+    "parentId": "0331DDD0BE4D40D3A9DFAF5D7EFED38B",
+    "position": 53000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "4DFA443B43FD45E08BF333BDFF132275": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "53F2F3E42BE34917B47B9B399413C912",
+     "40562DDE47D342FFB6FED84DB0992290",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Push or pull objects using varying strengths and directions",
+    "id": "4DFA443B43FD45E08BF333BDFF132275",
+    "listId": "6",
+    "parentId": "53F2F3E42BE34917B47B9B399413C912",
+    "position": 52000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.C.6"
+   },
+   "4F723420F27A47658920BC9AEAA330F6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7E5CC50269A64DEAAA322B8A579BCAD7",
+     "EB06C89B88794468BEAEAD1D692215CC",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Ask questions about how things work .",
+    "id": "4F723420F27A47658920BC9AEAA330F6",
+    "listId": "2",
+    "parentId": "7E5CC50269A64DEAAA322B8A579BCAD7",
+    "position": 114000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.N.2"
+   },
+   "4F9357BF7F5543A28D962E86B9E8218E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "42495D2BA12647CC8102ED60B1D42136",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Develop a plan in order to complete a task.",
+    "id": "4F9357BF7F5543A28D962E86B9E8218E",
+    "listId": "X",
+    "parentId": "42495D2BA12647CC8102ED60B1D42136",
+    "position": 119000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.X"
+   },
+   "50EBB574EDC34C67A81603AA22AE8B55": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4DEAA17406E740C284009D0F07A22D75",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Participate in simple investigations that will reduce the warming effect of sunlight.\r\n",
+    "id": "50EBB574EDC34C67A81603AA22AE8B55",
+    "listId": "E",
+    "parentId": "4DEAA17406E740C284009D0F07A22D75",
+    "position": 57000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.E"
+   },
+   "52F8D286453E4BC58180AE2F9A09FDF1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "02415A133582491B84FFB46A98ECF3D6",
+     "0412F6F543D64B1E87226B9ABC308C47",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use the five senses and simple equipment to gather data .",
+    "id": "52F8D286453E4BC58180AE2F9A09FDF1",
+    "listId": "6",
+    "parentId": "02415A133582491B84FFB46A98ECF3D6",
+    "position": 28000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.A.6"
+   },
+   "53F2F3E42BE34917B47B9B399413C912": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "40562DDE47D342FFB6FED84DB0992290",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Participate in investigations to compare the effects of different strengths or different directions of pushes and pulls on the motion of an object.",
+    "id": "53F2F3E42BE34917B47B9B399413C912",
+    "listId": "C",
+    "parentId": "40562DDE47D342FFB6FED84DB0992290",
+    "position": 46000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.C"
+   },
+   "57EE8D8BDBD04F2B8DDE7CDB58AD314D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CD3D5A1F184E4F52917611AC32D13414",
+     "2B2E9B93E2EF462D80D0E1E6944118AF",
+     "4A96EE0188734156A71A6F6EC6D591F8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify how litter can have a negative impact on the environment .",
+    "id": "57EE8D8BDBD04F2B8DDE7CDB58AD314D",
+    "listId": "1",
+    "parentId": "CD3D5A1F184E4F52917611AC32D13414",
+    "position": 78000,
+    "statementLabel": null,
+    "statementNotation": "3.4 PK.D.1"
+   },
+   "59991D5F6ECD4AAD9A4114034B1F94FD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4A0D9DD49B8249B98DB463A22CCE5569",
+     "9D8639E6D4C048B985A813C571C02766",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Experiment with objects or ideas to obtain a result .",
+    "id": "59991D5F6ECD4AAD9A4114034B1F94FD",
+    "listId": "4",
+    "parentId": "4A0D9DD49B8249B98DB463A22CCE5569",
+    "position": 40000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.B.4"
+   },
+   "5A4E001195E94F65959031B6A86BAF21": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F85C1C084957473C9F7B2494781546BD",
+     "0B5348A6C6194DEBAF77A8080817C6A0",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Discuss personal experiences with technology .",
+    "id": "5A4E001195E94F65959031B6A86BAF21",
+    "listId": "2",
+    "parentId": "F85C1C084957473C9F7B2494781546BD",
+    "position": 93000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.E.2"
+   },
+   "5F17939A86CE4448BDDB6E4DC0B33128": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4A0D9DD49B8249B98DB463A22CCE5569",
+     "9D8639E6D4C048B985A813C571C02766",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use the five sense and simple equipment to gather data .",
+    "id": "5F17939A86CE4448BDDB6E4DC0B33128",
+    "listId": "3",
+    "parentId": "4A0D9DD49B8249B98DB463A22CCE5569",
+    "position": 39000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.B.3"
+   },
+   "5FCFA79FCF5C4D50BF864F06A03C2DBD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "02415A133582491B84FFB46A98ECF3D6",
+     "0412F6F543D64B1E87226B9ABC308C47",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describe objects according to size, shape, color, or properties of matter .",
+    "id": "5FCFA79FCF5C4D50BF864F06A03C2DBD",
+    "listId": "2",
+    "parentId": "02415A133582491B84FFB46A98ECF3D6",
+    "position": 24000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.A.2"
+   },
+   "66A7A704C2574D6F8BBD22A96A35EB29": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A38852C931114164A19FFDEB117F6BE1",
+     "4DEAA17406E740C284009D0F07A22D75",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Understand the earth’s surface could include rocks, sand, soil, water .",
+    "id": "66A7A704C2574D6F8BBD22A96A35EB29",
+    "listId": "1",
+    "parentId": "A38852C931114164A19FFDEB117F6BE1",
+    "position": 55000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.D.1"
+   },
+   "67273ECF5C014F2AB90EDB0F62B37777": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "19B44BC436084762851CD1361FB4F149",
+     "EB06C89B88794468BEAEAD1D692215CC",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify the steps of the engineering design process (Ask, Imagine, Plan, Create, Improve) .",
+    "id": "67273ECF5C014F2AB90EDB0F62B37777",
+    "listId": "1",
+    "parentId": "19B44BC436084762851CD1361FB4F149",
+    "position": 105000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.M.1"
+   },
+   "6DC15EE32AC145849748E8F9B76B596C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "02415A133582491B84FFB46A98ECF3D6",
+     "0412F6F543D64B1E87226B9ABC308C47",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize the different types of matter (e .g ., solid, liquid, gas) .",
+    "id": "6DC15EE32AC145849748E8F9B76B596C",
+    "listId": "1",
+    "parentId": "02415A133582491B84FFB46A98ECF3D6",
+    "position": 23000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.A.1"
+   },
+   "7339198FD2ED4DDDBA871A89DEB26333": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "53F2F3E42BE34917B47B9B399413C912",
+     "40562DDE47D342FFB6FED84DB0992290",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Participate in activities that involve changes in strength and direction in the pushing and pulling of objects and discuss the outcomes .",
+    "id": "7339198FD2ED4DDDBA871A89DEB26333",
+    "listId": "2",
+    "parentId": "53F2F3E42BE34917B47B9B399413C912",
+    "position": 48000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.C.2"
+   },
+   "7940C5496D314EFBB32AA4FA6E667996": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9626D31D725947859D19C8E4DE2090FB",
+     "0B5348A6C6194DEBAF77A8080817C6A0",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use tools for intended purpose .",
+    "id": "7940C5496D314EFBB32AA4FA6E667996",
+    "listId": "2",
+    "parentId": "9626D31D725947859D19C8E4DE2090FB",
+    "position": 99000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.K.2"
+   },
+   "7970847490FF4D03ACC6BA9C3DD6EB60": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "12A31F309BF443A3BBA53A574532AB1D",
+     "30856276638C4E7D9E42A514DEF9390E",
+     "CFF8A2C60B064C01AAA181DE408966DC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Ask questions about objects, organisms, and events .",
+    "id": "7970847490FF4D03ACC6BA9C3DD6EB60",
+    "listId": "7",
+    "parentId": "12A31F309BF443A3BBA53A574532AB1D",
+    "position": 10000,
+    "statementLabel": null,
+    "statementNotation": "3.1 PK.A.7"
+   },
+   "7D1768EA998347CFA3E192E5ADE624E2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "12A31F309BF443A3BBA53A574532AB1D",
+     "30856276638C4E7D9E42A514DEF9390E",
+     "CFF8A2C60B064C01AAA181DE408966DC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify changes that occur to animals during the seasons",
+    "id": "7D1768EA998347CFA3E192E5ADE624E2",
+    "listId": "16",
+    "parentId": "12A31F309BF443A3BBA53A574532AB1D",
+    "position": 19000,
+    "statementLabel": null,
+    "statementNotation": "3.1 PK.A.16"
+   },
+   "7DD4E18C6356489788E7B59B61283C99": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9626D31D725947859D19C8E4DE2090FB",
+     "0B5348A6C6194DEBAF77A8080817C6A0",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Follow established rules (e .g ., time limit, handling with care, putting away) when using tools .",
+    "id": "7DD4E18C6356489788E7B59B61283C99",
+    "listId": "4",
+    "parentId": "9626D31D725947859D19C8E4DE2090FB",
+    "position": 101000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.K.4"
+   },
+   "7E4C395E7A9B4984A1AC01B3E81BA5C4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "53F2F3E42BE34917B47B9B399413C912",
+     "40562DDE47D342FFB6FED84DB0992290",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Compare observations with others .",
+    "id": "7E4C395E7A9B4984A1AC01B3E81BA5C4",
+    "listId": "5",
+    "parentId": "53F2F3E42BE34917B47B9B399413C912",
+    "position": 51000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.C.5"
+   },
+   "7E5CC50269A64DEAAA322B8A579BCAD7": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EB06C89B88794468BEAEAD1D692215CC",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Participate in simple investigations to determine how things work.\r",
+    "id": "7E5CC50269A64DEAAA322B8A579BCAD7",
+    "listId": "N",
+    "parentId": "EB06C89B88794468BEAEAD1D692215CC",
+    "position": 112000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.N"
+   },
+   "7F98213906F34F9E9E4337C3697765A8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3207D0551EDF4B9FA04BF2C74547F762",
+     "19B44BC436084762851CD1361FB4F149",
+     "EB06C89B88794468BEAEAD1D692215CC",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 4,
+    "description": "Create – Develop a design proposal . Make or model a prototype . Test and evaluate .",
+    "id": "7F98213906F34F9E9E4337C3697765A8",
+    "listId": "d",
+    "parentId": "3207D0551EDF4B9FA04BF2C74547F762",
+    "position": 110000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.M.2.d"
+   },
+   "8AA2703590E84C2C817B08E0B16DD107": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4A0D9DD49B8249B98DB463A22CCE5569",
+     "9D8639E6D4C048B985A813C571C02766",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Compare observations with others .",
+    "id": "8AA2703590E84C2C817B08E0B16DD107",
+    "listId": "7",
+    "parentId": "4A0D9DD49B8249B98DB463A22CCE5569",
+    "position": 43000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.B.7"
+   },
+   "8BEDC8C5077F476A8246051ED4844DB6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F85C1C084957473C9F7B2494781546BD",
+     "0B5348A6C6194DEBAF77A8080817C6A0",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Discuss how technology use could be helpful or harmful .",
+    "id": "8BEDC8C5077F476A8246051ED4844DB6",
+    "listId": "5",
+    "parentId": "F85C1C084957473C9F7B2494781546BD",
+    "position": 96000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.E.5"
+   },
+   "8D7813289CC94B7C845EF92D66114251": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "12A31F309BF443A3BBA53A574532AB1D",
+     "30856276638C4E7D9E42A514DEF9390E",
+     "CFF8A2C60B064C01AAA181DE408966DC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Draw a picture of a person, an animal, or a plant including most of the major observable features .",
+    "id": "8D7813289CC94B7C845EF92D66114251",
+    "listId": "6",
+    "parentId": "12A31F309BF443A3BBA53A574532AB1D",
+    "position": 9000,
+    "statementLabel": null,
+    "statementNotation": "3.1 PK.A.6"
+   },
+   "9163C50046994D7E86E9B1363F988ECD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "50EBB574EDC34C67A81603AA22AE8B55",
+     "4DEAA17406E740C284009D0F07A22D75",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Comment on the impact an object has when placed between the sun and the earth’s surface (e .g ., umbrellas, canopies, and tents) .",
+    "id": "9163C50046994D7E86E9B1363F988ECD",
+    "listId": "1",
+    "parentId": "50EBB574EDC34C67A81603AA22AE8B55",
+    "position": 58000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.E.1"
+   },
+   "9167B2CB91254561BE81EC281CB2B926": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "12A31F309BF443A3BBA53A574532AB1D",
+     "30856276638C4E7D9E42A514DEF9390E",
+     "CFF8A2C60B064C01AAA181DE408966DC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Care for plants and animals in the classroom .",
+    "id": "9167B2CB91254561BE81EC281CB2B926",
+    "listId": "15",
+    "parentId": "12A31F309BF443A3BBA53A574532AB1D",
+    "position": 18000,
+    "statementLabel": null,
+    "statementNotation": "3.1 PK.A.15"
+   },
+   "95A291A767AD4FD488D5B699DE4C8C2C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4A96EE0188734156A71A6F6EC6D591F8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "AGRICULTURAL AND ENVIRONMENTAL SYSTEMS AND RESOURCES\r\n",
+    "id": "95A291A767AD4FD488D5B699DE4C8C2C",
+    "listId": "A",
+    "parentId": "4A96EE0188734156A71A6F6EC6D591F8",
+    "position": 68000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "9626D31D725947859D19C8E4DE2090FB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0B5348A6C6194DEBAF77A8080817C6A0",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Safely use tools to complete tasks.\r\n",
+    "id": "9626D31D725947859D19C8E4DE2090FB",
+    "listId": "K",
+    "parentId": "0B5348A6C6194DEBAF77A8080817C6A0",
+    "position": 97000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.K"
+   },
+   "97529EFB840B4638AAD566EA726E5716": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7E5CC50269A64DEAAA322B8A579BCAD7",
+     "EB06C89B88794468BEAEAD1D692215CC",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Observe and discuss how things work .",
+    "id": "97529EFB840B4638AAD566EA726E5716",
+    "listId": "3",
+    "parentId": "7E5CC50269A64DEAAA322B8A579BCAD7",
+    "position": 115000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.N.3"
+   },
+   "9D8639E6D4C048B985A813C571C02766": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "FORCES AND MOTION",
+    "id": "9D8639E6D4C048B985A813C571C02766",
+    "listId": "B",
+    "parentId": "0331DDD0BE4D40D3A9DFAF5D7EFED38B",
+    "position": 35000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "A2B30D826440411EB9CD95F6FA22AEF6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "12A31F309BF443A3BBA53A574532AB1D",
+     "30856276638C4E7D9E42A514DEF9390E",
+     "CFF8A2C60B064C01AAA181DE408966DC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use the five senses and simple equipment to gather data .",
+    "id": "A2B30D826440411EB9CD95F6FA22AEF6",
+    "listId": "8",
+    "parentId": "12A31F309BF443A3BBA53A574532AB1D",
+    "position": 11000,
+    "statementLabel": null,
+    "statementNotation": "3.1 PK.A.8"
+   },
+   "A38852C931114164A19FFDEB117F6BE1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4DEAA17406E740C284009D0F07A22D75",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Recognize that light from the sun has an effect on the earth’s surface.",
+    "id": "A38852C931114164A19FFDEB117F6BE1",
+    "listId": "D",
+    "parentId": "4DEAA17406E740C284009D0F07A22D75",
+    "position": 54000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.D"
+   },
+   "A7FA033F7BBC44FAB295E97339439AD8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D4427BB907F74EAF909A5C08C628A5C9",
+     "0B5348A6C6194DEBAF77A8080817C6A0",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Label symbols including road signs, symbols for persons with disabilities, and icons on a screen .",
+    "id": "A7FA033F7BBC44FAB295E97339439AD8",
+    "listId": "1",
+    "parentId": "D4427BB907F74EAF909A5C08C628A5C9",
+    "position": 86000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.A.1"
+   },
+   "A810299B6C7A4D9CA70A274F2EFF7173": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C67C07E3C5CC4982BECDE2725E5A62ED",
+     "0B5348A6C6194DEBAF77A8080817C6A0",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Discuss personal experiences with technology .",
+    "id": "A810299B6C7A4D9CA70A274F2EFF7173",
+    "listId": "2",
+    "parentId": "C67C07E3C5CC4982BECDE2725E5A62ED",
+    "position": 90000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.C.2"
+   },
+   "A816C12ACD2A483EBF61C53C312E840F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CD3D5A1F184E4F52917611AC32D13414",
+     "2B2E9B93E2EF462D80D0E1E6944118AF",
+     "4A96EE0188734156A71A6F6EC6D591F8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Sort waste into those things that can be recycled and those things that cannot .",
+    "id": "A816C12ACD2A483EBF61C53C312E840F",
+    "listId": "4",
+    "parentId": "CD3D5A1F184E4F52917611AC32D13414",
+    "position": 81000,
+    "statementLabel": null,
+    "statementNotation": "3.4 PK.D.4"
+   },
+   "A9F7112E523A42489E11D6EB056073C8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EB06C89B88794468BEAEAD1D692215CC",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Apply design concepts, principles, and processes through play and exploration.\r",
+    "id": "A9F7112E523A42489E11D6EB056073C8",
+    "listId": "S",
+    "parentId": "EB06C89B88794468BEAEAD1D692215CC",
+    "position": 117000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.S"
+   },
+   "ACD729ECB5AA480D9D4D4852B018D9BF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4A0D9DD49B8249B98DB463A22CCE5569",
+     "9D8639E6D4C048B985A813C571C02766",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Push or pull objects with varying size, shape, and weights .",
+    "id": "ACD729ECB5AA480D9D4D4852B018D9BF",
+    "listId": "8",
+    "parentId": "4A0D9DD49B8249B98DB463A22CCE5569",
+    "position": 44000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.B.8"
+   },
+   "ADBA780104AE4FEC9C72EFFE0C43526C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "53F2F3E42BE34917B47B9B399413C912",
+     "40562DDE47D342FFB6FED84DB0992290",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describe observations accurately .",
+    "id": "ADBA780104AE4FEC9C72EFFE0C43526C",
+    "listId": "4",
+    "parentId": "53F2F3E42BE34917B47B9B399413C912",
+    "position": 50000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.C.4"
+   },
+   "ADC8C617180B4F9DB7DC23B82EDC9BC0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "12A31F309BF443A3BBA53A574532AB1D",
+     "30856276638C4E7D9E42A514DEF9390E",
+     "CFF8A2C60B064C01AAA181DE408966DC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Make a prediction about the result of the experiment",
+    "id": "ADC8C617180B4F9DB7DC23B82EDC9BC0",
+    "listId": "12",
+    "parentId": "12A31F309BF443A3BBA53A574532AB1D",
+    "position": 15000,
+    "statementLabel": null,
+    "statementNotation": "3.1 PK.A.12"
+   },
+   "B019EBF896A84B9F9BA25E8F5D27F06E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0D61E49F691849BF92B3412D17FEA9F4",
+     "95A291A767AD4FD488D5B699DE4C8C2C",
+     "4A96EE0188734156A71A6F6EC6D591F8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "State that living things need air, food, and water to survive .",
+    "id": "B019EBF896A84B9F9BA25E8F5D27F06E",
+    "listId": "1",
+    "parentId": "0D61E49F691849BF92B3412D17FEA9F4",
+    "position": 70000,
+    "statementLabel": null,
+    "statementNotation": "3.4 PK.A.1"
+   },
+   "B0FA3CBF2EF04F0EBE9834E9EE7F263D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "02415A133582491B84FFB46A98ECF3D6",
+     "0412F6F543D64B1E87226B9ABC308C47",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Notice changes in food substances during cooking .",
+    "id": "B0FA3CBF2EF04F0EBE9834E9EE7F263D",
+    "listId": "10",
+    "parentId": "02415A133582491B84FFB46A98ECF3D6",
+    "position": 32000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.A.10"
+   },
+   "B24A3CBD30284083A69D941D1765C707": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0D61E49F691849BF92B3412D17FEA9F4",
+     "95A291A767AD4FD488D5B699DE4C8C2C",
+     "4A96EE0188734156A71A6F6EC6D591F8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Understand that natural resources are materials that come from the environment and are used by people .",
+    "id": "B24A3CBD30284083A69D941D1765C707",
+    "listId": "4",
+    "parentId": "0D61E49F691849BF92B3412D17FEA9F4",
+    "position": 73000,
+    "statementLabel": null,
+    "statementNotation": "3.4 PK.A.4"
+   },
+   "B2D058FE787541459D2434A39D09710C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9626D31D725947859D19C8E4DE2090FB",
+     "0B5348A6C6194DEBAF77A8080817C6A0",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Discuss the ways in which tools can be used safely .",
+    "id": "B2D058FE787541459D2434A39D09710C",
+    "listId": "3",
+    "parentId": "9626D31D725947859D19C8E4DE2090FB",
+    "position": 100000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.K.3"
+   },
+   "B2FD1AF287FD4273844320F39FBFFCFD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "02415A133582491B84FFB46A98ECF3D6",
+     "0412F6F543D64B1E87226B9ABC308C47",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Point out when a change in matter occurs .",
+    "id": "B2FD1AF287FD4273844320F39FBFFCFD",
+    "listId": "8",
+    "parentId": "02415A133582491B84FFB46A98ECF3D6",
+    "position": 30000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.A.8"
+   },
+   "B704DCD2EC054EC9872B0F20A44C2094": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0D61E49F691849BF92B3412D17FEA9F4",
+     "95A291A767AD4FD488D5B699DE4C8C2C",
+     "4A96EE0188734156A71A6F6EC6D591F8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Match simple items used by people to its natural resource (e .g ., milk to cow, wood for building to tree, wool to sheep) .",
+    "id": "B704DCD2EC054EC9872B0F20A44C2094",
+    "listId": "3",
+    "parentId": "0D61E49F691849BF92B3412D17FEA9F4",
+    "position": 72000,
+    "statementLabel": null,
+    "statementNotation": "3.4 PK.A.3"
+   },
+   "B83DD1BF75EE4043B1E7B9CFBEBBEAF9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4A0D9DD49B8249B98DB463A22CCE5569",
+     "9D8639E6D4C048B985A813C571C02766",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describe observations accurately .",
+    "id": "B83DD1BF75EE4043B1E7B9CFBEBBEAF9",
+    "listId": "6",
+    "parentId": "4A0D9DD49B8249B98DB463A22CCE5569",
+    "position": 42000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.B.6"
+   },
+   "BF1F7488BCF14DE0BB94CF1A40C959D8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4A0D9DD49B8249B98DB463A22CCE5569",
+     "9D8639E6D4C048B985A813C571C02766",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Demonstrate an understanding of fast, slow, back, forth, start and stop .",
+    "id": "BF1F7488BCF14DE0BB94CF1A40C959D8",
+    "listId": "2",
+    "parentId": "4A0D9DD49B8249B98DB463A22CCE5569",
+    "position": 38000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.B.2"
+   },
+   "C49010D3B63B4C55844ACA76542140FA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "37AA9DE7418941FE937D2EC8A006C34C",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Discuss the roles of scientists, engineers, technologists, and others who work with technology.\r\n",
+    "id": "C49010D3B63B4C55844ACA76542140FA",
+    "listId": "CC",
+    "parentId": "37AA9DE7418941FE937D2EC8A006C34C",
+    "position": 121000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.CC"
+   },
+   "C67C07E3C5CC4982BECDE2725E5A62ED": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0B5348A6C6194DEBAF77A8080817C6A0",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Label technology with appropriate vocabulary when using or shown (e .g ., telephone, cell phone, computer, TV, camera, tablet, e-reader, Smart board) .",
+    "id": "C67C07E3C5CC4982BECDE2725E5A62ED",
+    "listId": "1",
+    "parentId": "0B5348A6C6194DEBAF77A8080817C6A0",
+    "position": 89000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.C"
+   },
+   "CB5F003A1864498488DC0CC30EFFA183": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CD3D5A1F184E4F52917611AC32D13414",
+     "2B2E9B93E2EF462D80D0E1E6944118AF",
+     "4A96EE0188734156A71A6F6EC6D591F8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Practice recycling as part of classroom routine .",
+    "id": "CB5F003A1864498488DC0CC30EFFA183",
+    "listId": "5",
+    "parentId": "CD3D5A1F184E4F52917611AC32D13414",
+    "position": 82000,
+    "statementLabel": null,
+    "statementNotation": "3.4 PK.D.5"
+   },
+   "CC85A1B711604A088A9DEAF38A87F058": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "02415A133582491B84FFB46A98ECF3D6",
+     "0412F6F543D64B1E87226B9ABC308C47",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Experiment with changes in matter .",
+    "id": "CC85A1B711604A088A9DEAF38A87F058",
+    "listId": "11",
+    "parentId": "02415A133582491B84FFB46A98ECF3D6",
+    "position": 33000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.A.11"
+   },
+   "CD2B4402828146D1B3D96AC987BB553D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0D61E49F691849BF92B3412D17FEA9F4",
+     "95A291A767AD4FD488D5B699DE4C8C2C",
+     "4A96EE0188734156A71A6F6EC6D591F8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Label human needs as air, food, water, shelter, clothing .",
+    "id": "CD2B4402828146D1B3D96AC987BB553D",
+    "listId": "6",
+    "parentId": "0D61E49F691849BF92B3412D17FEA9F4",
+    "position": 75000,
+    "statementLabel": null,
+    "statementNotation": "3.4 PK.A.6"
+   },
+   "CD3D5A1F184E4F52917611AC32D13414": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2B2E9B93E2EF462D80D0E1E6944118AF",
+     "4A96EE0188734156A71A6F6EC6D591F8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Engage in activities that reduce the impact of humans on the local environment.\r\n",
+    "id": "CD3D5A1F184E4F52917611AC32D13414",
+    "listId": "D",
+    "parentId": "2B2E9B93E2EF462D80D0E1E6944118AF",
+    "position": 77000,
+    "statementLabel": null,
+    "statementNotation": "3.4 PK.D"
+   },
+   "CE13D0EF4B344A21A8147DD56F3998C1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "53F2F3E42BE34917B47B9B399413C912",
+     "40562DDE47D342FFB6FED84DB0992290",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Make predictions about an outcome (e .g ., What might happen to a car that is pushed up or down a hill?) .",
+    "id": "CE13D0EF4B344A21A8147DD56F3998C1",
+    "listId": "3",
+    "parentId": "53F2F3E42BE34917B47B9B399413C912",
+    "position": 49000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.C.3"
+   },
+   "CFF8A2C60B064C01AAA181DE408966DC": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Life Science",
+    "id": "CFF8A2C60B064C01AAA181DE408966DC",
+    "listId": "1",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": null,
+    "statementNotation": "3.1"
+   },
+   "D4427BB907F74EAF909A5C08C628A5C9": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0B5348A6C6194DEBAF77A8080817C6A0",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identify and use everyday symbols.\r\n",
+    "id": "D4427BB907F74EAF909A5C08C628A5C9",
+    "listId": "A",
+    "parentId": "0B5348A6C6194DEBAF77A8080817C6A0",
+    "position": 85000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.A"
+   },
+   "D6A5E10463AA465A98DDD4E4CBB27982": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "078BFB4045684D198F08D9D76EEEADA1",
+     "F026FD7B53BF45948A723F86441ED6F1",
+     "0A031798AB5C4121A6B0F4BCCFB34E36"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Match types of clothing or activities to seasonal weather conditions (e .g ., we use an umbrella when it is raining; we wear coats, hats, scarves, and mittens when it’s cold outside) .",
+    "id": "D6A5E10463AA465A98DDD4E4CBB27982",
+    "listId": "2",
+    "parentId": "078BFB4045684D198F08D9D76EEEADA1",
+    "position": 64000,
+    "statementLabel": null,
+    "statementNotation": "3.3 PK.A.2"
+   },
+   "DB3F6DEA2C884E5BA6DBD0C910DFC947": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D4427BB907F74EAF909A5C08C628A5C9",
+     "0B5348A6C6194DEBAF77A8080817C6A0",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use symbols to represent or communicate an idea or a solution to a problem .",
+    "id": "DB3F6DEA2C884E5BA6DBD0C910DFC947",
+    "listId": "2",
+    "parentId": "D4427BB907F74EAF909A5C08C628A5C9",
+    "position": 87000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.A.2"
+   },
+   "DDB8A4A95B1046E1A8C8413901B80580": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9626D31D725947859D19C8E4DE2090FB",
+     "0B5348A6C6194DEBAF77A8080817C6A0",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify different tools .",
+    "id": "DDB8A4A95B1046E1A8C8413901B80580",
+    "listId": "1",
+    "parentId": "9626D31D725947859D19C8E4DE2090FB",
+    "position": 98000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.K.1"
+   },
+   "E2EFD20EE072414D8DBC7C6956E20EC5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "078BFB4045684D198F08D9D76EEEADA1",
+     "F026FD7B53BF45948A723F86441ED6F1",
+     "0A031798AB5C4121A6B0F4BCCFB34E36"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Name the four seasons and an observable condition for that season (e .g ., falling leaves, snow, rain, buds on trees, or green grass) .",
+    "id": "E2EFD20EE072414D8DBC7C6956E20EC5",
+    "listId": "1",
+    "parentId": "078BFB4045684D198F08D9D76EEEADA1",
+    "position": 63000,
+    "statementLabel": null,
+    "statementNotation": "3.3 PK.A.1"
+   },
+   "E54DA7FE16A24615966DA02C524E408B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3207D0551EDF4B9FA04BF2C74547F762",
+     "19B44BC436084762851CD1361FB4F149",
+     "EB06C89B88794468BEAEAD1D692215CC",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 4,
+    "description": "Imagine – Brainstorm possible solutions .",
+    "id": "E54DA7FE16A24615966DA02C524E408B",
+    "listId": "b",
+    "parentId": "3207D0551EDF4B9FA04BF2C74547F762",
+    "position": 108000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.M.2.b"
+   },
+   "E5A6C8D7588F41819D38E3EC50871233": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "12A31F309BF443A3BBA53A574532AB1D",
+     "30856276638C4E7D9E42A514DEF9390E",
+     "CFF8A2C60B064C01AAA181DE408966DC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "State that living things need air, food, and water to survive .",
+    "id": "E5A6C8D7588F41819D38E3EC50871233",
+    "listId": "3",
+    "parentId": "12A31F309BF443A3BBA53A574532AB1D",
+    "position": 6000,
+    "statementLabel": null,
+    "statementNotation": "3.1 PK.A.3"
+   },
+   "E622796F603D410086EE493341ECD76F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C49010D3B63B4C55844ACA76542140FA",
+     "37AA9DE7418941FE937D2EC8A006C34C",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Act out roles’ scientists, engineers, technologists, and others who work with technology .",
+    "id": "E622796F603D410086EE493341ECD76F",
+    "listId": "1",
+    "parentId": "C49010D3B63B4C55844ACA76542140FA",
+    "position": 122000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.CC.1"
+   },
+   "E7F9E68464A64CF39E8867ADF2D9E3E4": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "12A31F309BF443A3BBA53A574532AB1D",
+     "30856276638C4E7D9E42A514DEF9390E",
+     "CFF8A2C60B064C01AAA181DE408966DC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Sort objects by living and non-living .",
+    "id": "E7F9E68464A64CF39E8867ADF2D9E3E4",
+    "listId": "1",
+    "parentId": "12A31F309BF443A3BBA53A574532AB1D",
+    "position": 4000,
+    "statementLabel": null,
+    "statementNotation": "3.1 PK.A.1"
+   },
+   "E8F25FE9EB3F407FB639D4382C1B955C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3207D0551EDF4B9FA04BF2C74547F762",
+     "19B44BC436084762851CD1361FB4F149",
+     "EB06C89B88794468BEAEAD1D692215CC",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 4,
+    "description": "Ask – Define the problem .",
+    "id": "E8F25FE9EB3F407FB639D4382C1B955C",
+    "listId": "a",
+    "parentId": "3207D0551EDF4B9FA04BF2C74547F762",
+    "position": 107000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.M.2.a"
+   },
+   "EA8AE97D35204F3C8B267E7546C03B7A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "02415A133582491B84FFB46A98ECF3D6",
+     "0412F6F543D64B1E87226B9ABC308C47",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize that matter takes on different shapes depending upon its type (e .g ., solids have a definite shape, liquids take the shape of their container, gas lacks shape and is present everywhere) .",
+    "id": "EA8AE97D35204F3C8B267E7546C03B7A",
+    "listId": "4",
+    "parentId": "02415A133582491B84FFB46A98ECF3D6",
+    "position": 26000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.A.4"
+   },
+   "EB06C89B88794468BEAEAD1D692215CC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "DESIGN AND DESIGN THINKING IN TECHNOLOGY AND ENGINEERING EDUCATION\r",
+    "id": "EB06C89B88794468BEAEAD1D692215CC",
+    "listId": "M",
+    "parentId": "FBAC89CDBA074AECA41F012C39BB26E8",
+    "position": 103000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "EB2ED75E9A9D4A099641478B61384AAE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "02415A133582491B84FFB46A98ECF3D6",
+     "0412F6F543D64B1E87226B9ABC308C47",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Experiment with changes in substances when combined .",
+    "id": "EB2ED75E9A9D4A099641478B61384AAE",
+    "listId": "12",
+    "parentId": "02415A133582491B84FFB46A98ECF3D6",
+    "position": 34000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.A.12"
+   },
+   "EE2601B08FCA45B780702632A78E21F0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "02415A133582491B84FFB46A98ECF3D6",
+     "0412F6F543D64B1E87226B9ABC308C47",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Ask questions about objects .",
+    "id": "EE2601B08FCA45B780702632A78E21F0",
+    "listId": "5",
+    "parentId": "02415A133582491B84FFB46A98ECF3D6",
+    "position": 27000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.A.5"
+   },
+   "EE807D14093347EA82449F409530753C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "12A31F309BF443A3BBA53A574532AB1D",
+     "30856276638C4E7D9E42A514DEF9390E",
+     "CFF8A2C60B064C01AAA181DE408966DC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Categorize common living things into plants and animals .",
+    "id": "EE807D14093347EA82449F409530753C",
+    "listId": "2",
+    "parentId": "12A31F309BF443A3BBA53A574532AB1D",
+    "position": 5000,
+    "statementLabel": null,
+    "statementNotation": "3.1 PK.A.2"
+   },
+   "EE8F706EA3844C57B80652DFE2F98C00": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "3207D0551EDF4B9FA04BF2C74547F762",
+     "19B44BC436084762851CD1361FB4F149",
+     "EB06C89B88794468BEAEAD1D692215CC",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 4,
+    "description": "Improve – Refine the design, create the solution, communicate the results .",
+    "id": "EE8F706EA3844C57B80652DFE2F98C00",
+    "listId": "e",
+    "parentId": "3207D0551EDF4B9FA04BF2C74547F762",
+    "position": 111000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.M.2.e"
+   },
+   "F026FD7B53BF45948A723F86441ED6F1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0A031798AB5C4121A6B0F4BCCFB34E36"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "WEATHER AND CLIMATE",
+    "id": "F026FD7B53BF45948A723F86441ED6F1",
+    "listId": "A",
+    "parentId": "0A031798AB5C4121A6B0F4BCCFB34E36",
+    "position": 61000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "F85C1C084957473C9F7B2494781546BD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0B5348A6C6194DEBAF77A8080817C6A0",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Explain the helpful and harmful effects of technology.",
+    "id": "F85C1C084957473C9F7B2494781546BD",
+    "listId": "E",
+    "parentId": "0B5348A6C6194DEBAF77A8080817C6A0",
+    "position": 91000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.E"
+   },
+   "FBAC89CDBA074AECA41F012C39BB26E8": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Technology and Engineering\r\n",
+    "id": "FBAC89CDBA074AECA41F012C39BB26E8",
+    "listId": "5",
+    "parentId": null,
+    "position": 83000,
+    "statementLabel": null,
+    "statementNotation": "3.5"
+   },
+   "FC2AFFCEB62B4BEB965EBAB366E848F0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C49010D3B63B4C55844ACA76542140FA",
+     "37AA9DE7418941FE937D2EC8A006C34C",
+     "FBAC89CDBA074AECA41F012C39BB26E8"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Examine and explore different careers and discuss the similarities and differences in the way that those careers use technology .",
+    "id": "FC2AFFCEB62B4BEB965EBAB366E848F0",
+    "listId": "2",
+    "parentId": "C49010D3B63B4C55844ACA76542140FA",
+    "position": 123000,
+    "statementLabel": null,
+    "statementNotation": "3.5 PK.CC.2"
+   },
+   "FC8DE2EF28994BDA98ACBD84E85BF496": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "12A31F309BF443A3BBA53A574532AB1D",
+     "30856276638C4E7D9E42A514DEF9390E",
+     "CFF8A2C60B064C01AAA181DE408966DC"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Collect objects during a nature walk .",
+    "id": "FC8DE2EF28994BDA98ACBD84E85BF496",
+    "listId": "9",
+    "parentId": "12A31F309BF443A3BBA53A574532AB1D",
+    "position": 12000,
+    "statementLabel": null,
+    "statementNotation": "3.1 PK.A.9"
+   },
+   "FF0FC74613224FD1A66CA106D8643951": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4A0D9DD49B8249B98DB463A22CCE5569",
+     "9D8639E6D4C048B985A813C571C02766",
+     "0331DDD0BE4D40D3A9DFAF5D7EFED38B"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "omment about the speed or direction of objects during play .",
+    "id": "FF0FC74613224FD1A66CA106D8643951",
+    "listId": "1",
+    "parentId": "4A0D9DD49B8249B98DB463A22CCE5569",
+    "position": 37000,
+    "statementLabel": null,
+    "statementNotation": "3.2 PK.B.1"
+   }
+  },
+  "subject": "Learning Standards for Early Childhood (2024-)",
+  "title": "Scientific Thinking and Technology – Exploring, Scientific Inquiry, and Discovery"
+ }
+}

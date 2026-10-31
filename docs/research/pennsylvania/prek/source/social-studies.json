@@ -1,0 +1,2093 @@
+{
+ "data": {
+  "cspStatus": {
+   "notes": null,
+   "value": "visible"
+  },
+  "document": {
+   "publicationStatus": "Published",
+   "sourceURL": "https://www.pa.gov/agencies/education/programs-and-services/instruction/early-learning/early-learning-standards.html",
+   "title": "Pennsylvania Learning Standards for Early Childhood PRE-KINDERGARTEN"
+  },
+  "educationLevels": [
+   "Pre-K"
+  ],
+  "id": "5736F5B28A8442BAA3154D14CB8CA401",
+  "jurisdiction": {
+   "id": "5A99211C6D874994A2CFEE2AE40023DD",
+   "title": "Pennsylvania"
+  },
+  "license": {
+   "URL": "http://creativecommons.org/licenses/by/4.0/us/",
+   "rightsHolder": "Common Curriculum, Inc.",
+   "title": "CC BY 4.0 US"
+  },
+  "normalizedSubject": null,
+  "standards": {
+   "0106451669914D76AAC6419B912A5EC2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "44AD09F4CBE04B2C900C7EB5B74E22B6",
+     "D82EC75DE0374FAA8903F4DFD69B4827",
+     "655421D7AC474EB995DF17292C19D619"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Work cooperatively with other children to achieve an outcome .",
+    "id": "0106451669914D76AAC6419B912A5EC2",
+    "listId": "5",
+    "parentId": "44AD09F4CBE04B2C900C7EB5B74E22B6",
+    "position": 19000,
+    "statementLabel": null,
+    "statementNotation": "5.2 PK.A.5"
+   },
+   "03954274360B44EC8DC534665093428C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A721038447E94ABD9CAF9788F5BBAEB6",
+     "A1C36F7DF37247F0B4D434A98D1B817C",
+     "D784731D308346A4BED7303CC198E298"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Practice exchanging play money for goods .",
+    "id": "03954274360B44EC8DC534665093428C",
+    "listId": "4",
+    "parentId": "A721038447E94ABD9CAF9788F5BBAEB6",
+    "position": 73000,
+    "statementLabel": null,
+    "statementNotation": "6.2 PK.D.4"
+   },
+   "042598521316484483B1F165D1788207": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ACC5904F325240E49229DA25B2F8BDAE"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "FACTORS INFLUENCING WAGES\r\n",
+    "id": "042598521316484483B1F165D1788207",
+    "listId": "A",
+    "parentId": "ACC5904F325240E49229DA25B2F8BDAE",
+    "position": 80000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "0550BA9BA29E44A78E2B42133FCD79F5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1BE5F8F677774E999CF9F833E4F69789",
+     "CF99C9C92A824C28A163BDD4F9C57377",
+     "465FF0CDB9DD4EDD85360E6C007B1D17"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Locate information on identified topics using media (e .g ., music, books, maps, TV programming, newspapers, magazines, movies, Internet, applications, advertising)",
+    "id": "0550BA9BA29E44A78E2B42133FCD79F5",
+    "listId": "2",
+    "parentId": "1BE5F8F677774E999CF9F833E4F69789",
+    "position": 121000,
+    "statementLabel": null,
+    "statementNotation": "8.1 PK.C.2"
+   },
+   "0B827A625CC947D1B33154687D7E0898": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "4FB1AEE454BA45FCB86379E903755E52",
+     "A6B47977A188436BA91E04E4A6AE3056"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "State rules and their consequences.\r\n",
+    "id": "0B827A625CC947D1B33154687D7E0898",
+    "listId": "A",
+    "parentId": "4FB1AEE454BA45FCB86379E903755E52",
+    "position": 4000,
+    "statementLabel": null,
+    "statementNotation": "5.1 PK.A"
+   },
+   "0D8FC51BCADC468EA5E5CE3A860FA1BB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A87F871C4EC3410BA3BDEAE9B09DDD55"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "PHYSICAL CHARACTERISTICS",
+    "id": "0D8FC51BCADC468EA5E5CE3A860FA1BB",
+    "listId": "A",
+    "parentId": "A87F871C4EC3410BA3BDEAE9B09DDD55",
+    "position": 105000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "13F34FBEF75646D1B712EED005F85C09": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9D2ACDFA5C2C4B9F8BB27049F82976DF",
+     "28A6D27F8ABC48B09D988E4D779A8B45",
+     "B9E3EDE1C1814264B1E9235398700FEE"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify personal wants .",
+    "id": "13F34FBEF75646D1B712EED005F85C09",
+    "listId": "3",
+    "parentId": "9D2ACDFA5C2C4B9F8BB27049F82976DF",
+    "position": 58000,
+    "statementLabel": null,
+    "statementNotation": "6.1 PK.B.3"
+   },
+   "14641423782D44BCB229E249E55C8095": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F1D52907AC1A4BBAA6CF22F3980C4A2E"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "GOVERNMENT SERVICES",
+    "id": "14641423782D44BCB229E249E55C8095",
+    "listId": "C",
+    "parentId": "F1D52907AC1A4BBAA6CF22F3980C4A2E",
+    "position": 33000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "1BE5F8F677774E999CF9F833E4F69789": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CF99C9C92A824C28A163BDD4F9C57377",
+     "465FF0CDB9DD4EDD85360E6C007B1D17"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Understand that information comes from many sources such as books, computers, and newspapers.\r\n",
+    "id": "1BE5F8F677774E999CF9F833E4F69789",
+    "listId": "C",
+    "parentId": "CF99C9C92A824C28A163BDD4F9C57377",
+    "position": 119000,
+    "statementLabel": null,
+    "statementNotation": "8.1 PK.C"
+   },
+   "1C512E00927941B98936F4BE37F5D114": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C4DE51DB0DF14E99AC595A3CA045A47C",
+     "2EC0CD8E797642C7ADDC3A35A4658EFF"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Explain how a map is a\r\nrepresentation of places.\r\n",
+    "id": "1C512E00927941B98936F4BE37F5D114",
+    "listId": "A",
+    "parentId": "C4DE51DB0DF14E99AC595A3CA045A47C",
+    "position": 92000,
+    "statementLabel": null,
+    "statementNotation": "7.1 PK.A"
+   },
+   "1DCA345C835144769DB06E10188D4619": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A721038447E94ABD9CAF9788F5BBAEB6",
+     "A1C36F7DF37247F0B4D434A98D1B817C",
+     "D784731D308346A4BED7303CC198E298"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use pretend money while engaging in dramatic play activities .",
+    "id": "1DCA345C835144769DB06E10188D4619",
+    "listId": "3",
+    "parentId": "A721038447E94ABD9CAF9788F5BBAEB6",
+    "position": 72000,
+    "statementLabel": null,
+    "statementNotation": "6.2 PK.D.3"
+   },
+   "1E92DCC9B2E34184ABD52AAF91CDB2D0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "DA8F3100154B4E20A0113C2282DECBFB",
+     "B9E3EDE1C1814264B1E9235398700FEE"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identify how scarcity\r\ninfluences choice.\r\n",
+    "id": "1E92DCC9B2E34184ABD52AAF91CDB2D0",
+    "listId": "A",
+    "parentId": "DA8F3100154B4E20A0113C2282DECBFB",
+    "position": 49000,
+    "statementLabel": null,
+    "statementNotation": "6.1 PK.A"
+   },
+   "221C98675F2B4D85934AD5F21B2BFC73": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "898C0DECC89B404B8DE1DDA60A859835",
+     "465FF0CDB9DD4EDD85360E6C007B1D17"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identify a sequence of events through a day.\r\n",
+    "id": "221C98675F2B4D85934AD5F21B2BFC73",
+    "listId": "A",
+    "parentId": "898C0DECC89B404B8DE1DDA60A859835",
+    "position": 113000,
+    "statementLabel": null,
+    "statementNotation": "8.1 PK.A"
+   },
+   "2273A4EB930C46EBA25BB8927ABAACE5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C548E693B2DC42E398C6D0D6E3BF0E86",
+     "D5329B92F79A48A790AACD8845E90F20",
+     "A6B47977A188436BA91E04E4A6AE3056"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Discuss images, pictures or items that are symbols of America .",
+    "id": "2273A4EB930C46EBA25BB8927ABAACE5",
+    "listId": "1",
+    "parentId": "C548E693B2DC42E398C6D0D6E3BF0E86",
+    "position": 9000,
+    "statementLabel": null,
+    "statementNotation": "5.1 PK.F.1"
+   },
+   "261AFB8B5C544155921A5C63E76A3DF2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C02253803F634804ADB64CD47BFB02D5",
+     "0D8FC51BCADC468EA5E5CE3A860FA1BB",
+     "A87F871C4EC3410BA3BDEAE9B09DDD55"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describe simple characteristics of home (e .g ., type of dwelling, where located, what surrounds it) .",
+    "id": "261AFB8B5C544155921A5C63E76A3DF2",
+    "listId": "1",
+    "parentId": "C02253803F634804ADB64CD47BFB02D5",
+    "position": 107000,
+    "statementLabel": null,
+    "statementNotation": "7.2 PK.A.1"
+   },
+   "265299D13C294351B3567B9854B73916": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "E9DAB6C356634733AE4650A1B005E8F6",
+     "98671A78A2FC4BD29C76AA6FDE8E96EA"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identify products produced locally.",
+    "id": "265299D13C294351B3567B9854B73916",
+    "listId": "D",
+    "parentId": "E9DAB6C356634733AE4650A1B005E8F6",
+    "position": 76000,
+    "statementLabel": null,
+    "statementNotation": "6.3 PK.D"
+   },
+   "27B0F235A2134895AFBD34D2665AE2FC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1C512E00927941B98936F4BE37F5D114",
+     "C4DE51DB0DF14E99AC595A3CA045A47C",
+     "2EC0CD8E797642C7ADDC3A35A4658EFF"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use available materials (e .g ., blocks) to represent buildings, roads, or houses .",
+    "id": "27B0F235A2134895AFBD34D2665AE2FC",
+    "listId": "2",
+    "parentId": "1C512E00927941B98936F4BE37F5D114",
+    "position": 94000,
+    "statementLabel": null,
+    "statementNotation": "7.1 PK.A.2"
+   },
+   "28A6D27F8ABC48B09D988E4D779A8B45": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B9E3EDE1C1814264B1E9235398700FEE"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "LIMITED RESOURCES",
+    "id": "28A6D27F8ABC48B09D988E4D779A8B45",
+    "listId": "B",
+    "parentId": "B9E3EDE1C1814264B1E9235398700FEE",
+    "position": 54000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "2BF64CD8113349E7926A3AAF39A2F278": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "042598521316484483B1F165D1788207",
+     "ACC5904F325240E49229DA25B2F8BDAE"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Differentiate between work and play.\r\n",
+    "id": "2BF64CD8113349E7926A3AAF39A2F278",
+    "listId": "A",
+    "parentId": "042598521316484483B1F165D1788207",
+    "position": 81000,
+    "statementLabel": null,
+    "statementNotation": "6.5 PK.A"
+   },
+   "2BF995ED284D4B928D3AA52589F08D92": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7130039E1B274E26A68E5A2902E4B79B",
+     "B9E3EDE1C1814264B1E9235398700FEE"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identify a choice based on individual interest.\r\n",
+    "id": "2BF995ED284D4B928D3AA52589F08D92",
+    "listId": "D",
+    "parentId": "7130039E1B274E26A68E5A2902E4B79B",
+    "position": 60000,
+    "statementLabel": null,
+    "statementNotation": "6.1 PK.D"
+   },
+   "2D79B3C5F47D4EC5853C442489CD3AFE": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F1D52907AC1A4BBAA6CF22F3980C4A2E"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "CONFLICT AND THE COURT SYSTEM\r\n",
+    "id": "2D79B3C5F47D4EC5853C442489CD3AFE",
+    "listId": "F",
+    "parentId": "F1D52907AC1A4BBAA6CF22F3980C4A2E",
+    "position": 38000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "2EC0CD8E797642C7ADDC3A35A4658EFF": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "BASIC GEOGRAPHIC LITERACY\r\n",
+    "id": "2EC0CD8E797642C7ADDC3A35A4658EFF",
+    "listId": "8",
+    "parentId": null,
+    "position": 90000,
+    "statementLabel": null,
+    "statementNotation": "7.1"
+   },
+   "2FF8DC2ECA274016849A125D6984B833": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1C512E00927941B98936F4BE37F5D114",
+     "C4DE51DB0DF14E99AC595A3CA045A47C",
+     "2EC0CD8E797642C7ADDC3A35A4658EFF"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Discuss tools used to locate places .",
+    "id": "2FF8DC2ECA274016849A125D6984B833",
+    "listId": "4",
+    "parentId": "1C512E00927941B98936F4BE37F5D114",
+    "position": 96000,
+    "statementLabel": null,
+    "statementNotation": "7.1 PK.A.4"
+   },
+   "322BD0364C924A558ED76F141607B202": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9941E61CC8714F80B010BDA06ED3DB1F",
+     "FFAE1A021DE547BB8E0E6AD7280CDC94",
+     "655421D7AC474EB995DF17292C19D619"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Ask to be the line leader .",
+    "id": "322BD0364C924A558ED76F141607B202",
+    "listId": "3",
+    "parentId": "9941E61CC8714F80B010BDA06ED3DB1F",
+    "position": 30000,
+    "statementLabel": null,
+    "statementNotation": "5.2 PK.C.3"
+   },
+   "33757BBC3FE84D22AC4C646D835C01AA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F697A87F16644E8784122AE2DE6F3F86",
+     "B0C6874B1E1D455A8EF03392DCFF514B",
+     "2EC0CD8E797642C7ADDC3A35A4658EFF"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Listen to directions and retrieve items .",
+    "id": "33757BBC3FE84D22AC4C646D835C01AA",
+    "listId": "4",
+    "parentId": "F697A87F16644E8784122AE2DE6F3F86",
+    "position": 103000,
+    "statementLabel": null,
+    "statementNotation": "7.1 PK.B.4"
+   },
+   "37247A5CE54C4CA3B0DC85BCF0517C55": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9D2ACDFA5C2C4B9F8BB27049F82976DF",
+     "28A6D27F8ABC48B09D988E4D779A8B45",
+     "B9E3EDE1C1814264B1E9235398700FEE"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify what people need to survive .",
+    "id": "37247A5CE54C4CA3B0DC85BCF0517C55",
+    "listId": "1",
+    "parentId": "9D2ACDFA5C2C4B9F8BB27049F82976DF",
+    "position": 56000,
+    "statementLabel": null,
+    "statementNotation": "6.1 PK.B.1"
+   },
+   "43BDB95FD9C64A19AA9A63924E721124": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "DA8186A76DA24F29965C91874D17B556",
+     "2D79B3C5F47D4EC5853C442489CD3AFE",
+     "F1D52907AC1A4BBAA6CF22F3980C4A2E"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize when someone needs help and offer assistance .",
+    "id": "43BDB95FD9C64A19AA9A63924E721124",
+    "listId": "5",
+    "parentId": "DA8186A76DA24F29965C91874D17B556",
+    "position": 44000,
+    "statementLabel": null,
+    "statementNotation": "5.3 PK.F.5"
+   },
+   "449E094FE4DA47CBB1A33EBBAE2E6C70": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "44AD09F4CBE04B2C900C7EB5B74E22B6",
+     "D82EC75DE0374FAA8903F4DFD69B4827",
+     "655421D7AC474EB995DF17292C19D619"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Participate in group decision-making .",
+    "id": "449E094FE4DA47CBB1A33EBBAE2E6C70",
+    "listId": "2",
+    "parentId": "44AD09F4CBE04B2C900C7EB5B74E22B6",
+    "position": 16000,
+    "statementLabel": null,
+    "statementNotation": "5.2 PK.A.2"
+   },
+   "44AD09F4CBE04B2C900C7EB5B74E22B6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D82EC75DE0374FAA8903F4DFD69B4827",
+     "655421D7AC474EB995DF17292C19D619"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identify self- membership of a group such as the class or family.",
+    "id": "44AD09F4CBE04B2C900C7EB5B74E22B6",
+    "listId": "A",
+    "parentId": "D82EC75DE0374FAA8903F4DFD69B4827",
+    "position": 14000,
+    "statementLabel": null,
+    "statementNotation": "5.2 PK.A"
+   },
+   "456D3566615640BDB4EEA320EBC70BF8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9941E61CC8714F80B010BDA06ED3DB1F",
+     "FFAE1A021DE547BB8E0E6AD7280CDC94",
+     "655421D7AC474EB995DF17292C19D619"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Request to help teacher .",
+    "id": "456D3566615640BDB4EEA320EBC70BF8",
+    "listId": "4",
+    "parentId": "9941E61CC8714F80B010BDA06ED3DB1F",
+    "position": 31000,
+    "statementLabel": null,
+    "statementNotation": "5.2 PK.C.4"
+   },
+   "465FF0CDB9DD4EDD85360E6C007B1D17": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "HISTORICAL ANALYSIS AND SKILLS DEVELOPMENT\r\n",
+    "id": "465FF0CDB9DD4EDD85360E6C007B1D17",
+    "listId": "10",
+    "parentId": null,
+    "position": 111000,
+    "statementLabel": null,
+    "statementNotation": "8.1"
+   },
+   "466F316C7C9848D29177182BBDBC1222": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "7355F85321354C529F7069626E0C7DCD",
+     "ACC5904F325240E49229DA25B2F8BDAE"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identify local businesses.",
+    "id": "466F316C7C9848D29177182BBDBC1222",
+    "listId": "C",
+    "parentId": "7355F85321354C529F7069626E0C7DCD",
+    "position": 86000,
+    "statementLabel": null,
+    "statementNotation": "6.5 PK.C"
+   },
+   "494A6700B87D473E80E985C489679215": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C02253803F634804ADB64CD47BFB02D5",
+     "0D8FC51BCADC468EA5E5CE3A860FA1BB",
+     "A87F871C4EC3410BA3BDEAE9B09DDD55"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describe simple characteristics of business or community structures (e .g ., type of dwelling, where located, what surrounds it) .",
+    "id": "494A6700B87D473E80E985C489679215",
+    "listId": "3",
+    "parentId": "C02253803F634804ADB64CD47BFB02D5",
+    "position": 109000,
+    "statementLabel": null,
+    "statementNotation": "7.2 PK.A.3"
+   },
+   "4B68647077804C3DA0FC7FBE0C7E022A": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Economics",
+    "id": "4B68647077804C3DA0FC7FBE0C7E022A",
+    "listId": "",
+    "parentId": null,
+    "position": 46000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "4EEAD680B89246469CA4697A17D640EC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "265299D13C294351B3567B9854B73916",
+     "E9DAB6C356634733AE4650A1B005E8F6",
+     "98671A78A2FC4BD29C76AA6FDE8E96EA"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Name items that come from farms, factories, and/or businesses within the community .",
+    "id": "4EEAD680B89246469CA4697A17D640EC",
+    "listId": "1",
+    "parentId": "265299D13C294351B3567B9854B73916",
+    "position": 77000,
+    "statementLabel": null,
+    "statementNotation": "6.3 PK.D.1"
+   },
+   "4FB1AEE454BA45FCB86379E903755E52": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A6B47977A188436BA91E04E4A6AE3056"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "RULE OF LAW",
+    "id": "4FB1AEE454BA45FCB86379E903755E52",
+    "listId": "A",
+    "parentId": "A6B47977A188436BA91E04E4A6AE3056",
+    "position": 3000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "507D3373CC134098868846C845572357": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1E92DCC9B2E34184ABD52AAF91CDB2D0",
+     "DA8F3100154B4E20A0113C2282DECBFB",
+     "B9E3EDE1C1814264B1E9235398700FEE"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Understand that some resources are limited .",
+    "id": "507D3373CC134098868846C845572357",
+    "listId": "1",
+    "parentId": "1E92DCC9B2E34184ABD52AAF91CDB2D0",
+    "position": 50000,
+    "statementLabel": null,
+    "statementNotation": "6.1 PK.A.1"
+   },
+   "50AE1A9E11144540859A2F2FF1D1FB61": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2BF995ED284D4B928D3AA52589F08D92",
+     "7130039E1B274E26A68E5A2902E4B79B",
+     "B9E3EDE1C1814264B1E9235398700FEE"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Make a choice and explain the reason for the choice .",
+    "id": "50AE1A9E11144540859A2F2FF1D1FB61",
+    "listId": "1",
+    "parentId": "2BF995ED284D4B928D3AA52589F08D92",
+    "position": 61000,
+    "statementLabel": null,
+    "statementNotation": "6.1 PK.D.1"
+   },
+   "533C46EBD4B64D0584FD3E61245B9BFC": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1C512E00927941B98936F4BE37F5D114",
+     "C4DE51DB0DF14E99AC595A3CA045A47C",
+     "2EC0CD8E797642C7ADDC3A35A4658EFF"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Include representations of roads, bodies of water, and buildings in play .",
+    "id": "533C46EBD4B64D0584FD3E61245B9BFC",
+    "listId": "3",
+    "parentId": "1C512E00927941B98936F4BE37F5D114",
+    "position": 95000,
+    "statementLabel": null,
+    "statementNotation": "7.1 PK.A.3"
+   },
+   "5484EA30186D48FF8201CAA08C2687FA": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F697A87F16644E8784122AE2DE6F3F86",
+     "B0C6874B1E1D455A8EF03392DCFF514B",
+     "2EC0CD8E797642C7ADDC3A35A4658EFF"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Place pictures of common household items in the proper rooms of a floor plan .",
+    "id": "5484EA30186D48FF8201CAA08C2687FA",
+    "listId": "3",
+    "parentId": "F697A87F16644E8784122AE2DE6F3F86",
+    "position": 102000,
+    "statementLabel": null,
+    "statementNotation": "7.1 PK.B.3"
+   },
+   "56E1F4B908BB47099B5A577F43FF95B0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "DA8186A76DA24F29965C91874D17B556",
+     "2D79B3C5F47D4EC5853C442489CD3AFE",
+     "F1D52907AC1A4BBAA6CF22F3980C4A2E"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Follow rules and routines in classroom .",
+    "id": "56E1F4B908BB47099B5A577F43FF95B0",
+    "listId": "3",
+    "parentId": "DA8186A76DA24F29965C91874D17B556",
+    "position": 42000,
+    "statementLabel": null,
+    "statementNotation": "5.3 PK.F.3"
+   },
+   "5926168FC68D46499C328BECDA016260": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CA4253C619D346BE86DE4A9A3AD9704C",
+     "A52E608DEED74AF29B8D50A6722B6101",
+     "655421D7AC474EB995DF17292C19D619"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify one or two solutions to a problem .",
+    "id": "5926168FC68D46499C328BECDA016260",
+    "listId": "1",
+    "parentId": "CA4253C619D346BE86DE4A9A3AD9704C",
+    "position": 22000,
+    "statementLabel": null,
+    "statementNotation": "5.2 PK.B.1"
+   },
+   "59F436189EDA43A295C764A2DDD01B44": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A721038447E94ABD9CAF9788F5BBAEB6",
+     "A1C36F7DF37247F0B4D434A98D1B817C",
+     "D784731D308346A4BED7303CC198E298"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "State that money can be saved .",
+    "id": "59F436189EDA43A295C764A2DDD01B44",
+    "listId": "2",
+    "parentId": "A721038447E94ABD9CAF9788F5BBAEB6",
+    "position": 71000,
+    "statementLabel": null,
+    "statementNotation": "6.2 PK.D.2"
+   },
+   "5BC08EA447204014A0B86DB9E815A632": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Civics and Government",
+    "id": "5BC08EA447204014A0B86DB9E815A632",
+    "listId": "",
+    "parentId": null,
+    "position": 1000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "6084F3103EF643008F53C15C2BC4749E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2BF64CD8113349E7926A3AAF39A2F278",
+     "042598521316484483B1F165D1788207",
+     "ACC5904F325240E49229DA25B2F8BDAE"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Respond that adults work to earn money .",
+    "id": "6084F3103EF643008F53C15C2BC4749E",
+    "listId": "1",
+    "parentId": "2BF64CD8113349E7926A3AAF39A2F278",
+    "position": 82000,
+    "statementLabel": null,
+    "statementNotation": "6.5 PK.A.1"
+   },
+   "62528D11834D467891DA8F7485D71004": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F697A87F16644E8784122AE2DE6F3F86",
+     "B0C6874B1E1D455A8EF03392DCFF514B",
+     "2EC0CD8E797642C7ADDC3A35A4658EFF"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describe the location of items/areas in the classroom and at home .",
+    "id": "62528D11834D467891DA8F7485D71004",
+    "listId": "1",
+    "parentId": "F697A87F16644E8784122AE2DE6F3F86",
+    "position": 100000,
+    "statementLabel": null,
+    "statementNotation": "7.1 PK.B.1"
+   },
+   "630724776F6C4FB1A4DF9C893B01CC24": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8A906FB8E8DC4E26AC1C088C092513C5",
+     "14641423782D44BCB229E249E55C8095",
+     "F1D52907AC1A4BBAA6CF22F3980C4A2E"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Act out roles of community workers in dramatic play .",
+    "id": "630724776F6C4FB1A4DF9C893B01CC24",
+    "listId": "2",
+    "parentId": "8A906FB8E8DC4E26AC1C088C092513C5",
+    "position": 36000,
+    "statementLabel": null,
+    "statementNotation": "5.3 PK.C.2"
+   },
+   "638CBEC905EB43A88C2FA5C06BC4F0DB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2BF64CD8113349E7926A3AAF39A2F278",
+     "042598521316484483B1F165D1788207",
+     "ACC5904F325240E49229DA25B2F8BDAE"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Relate that work involves performing an activity that is chosen and directed by someone else, and has a specific goal .",
+    "id": "638CBEC905EB43A88C2FA5C06BC4F0DB",
+    "listId": "2",
+    "parentId": "2BF64CD8113349E7926A3AAF39A2F278",
+    "position": 83000,
+    "statementLabel": null,
+    "statementNotation": "6.5 PK.A.2"
+   },
+   "646C1423C450489B90D6116F7A04E684": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D784731D308346A4BED7303CC198E298"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "ADVERTISING AND MEDIA",
+    "id": "646C1423C450489B90D6116F7A04E684",
+    "listId": "C",
+    "parentId": "D784731D308346A4BED7303CC198E298",
+    "position": 64000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "655421D7AC474EB995DF17292C19D619": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "RIGHTS AND RESPONSIBILITIES OF CITIZENSHIP\r\n",
+    "id": "655421D7AC474EB995DF17292C19D619",
+    "listId": "2",
+    "parentId": null,
+    "position": 12000,
+    "statementLabel": null,
+    "statementNotation": "5.2"
+   },
+   "6984CCDF2A374203916FDBE4DC368BF0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "221C98675F2B4D85934AD5F21B2BFC73",
+     "898C0DECC89B404B8DE1DDA60A859835",
+     "465FF0CDB9DD4EDD85360E6C007B1D17"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Show anticipation for regularly- scheduled events .",
+    "id": "6984CCDF2A374203916FDBE4DC368BF0",
+    "listId": "3",
+    "parentId": "221C98675F2B4D85934AD5F21B2BFC73",
+    "position": 116000,
+    "statementLabel": null,
+    "statementNotation": "8.1 PK.A.3"
+   },
+   "69DB9B6F8CE94DD3840E50E1CDD9D767": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "DA8186A76DA24F29965C91874D17B556",
+     "2D79B3C5F47D4EC5853C442489CD3AFE",
+     "F1D52907AC1A4BBAA6CF22F3980C4A2E"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Respond with empathy to others who are upset .",
+    "id": "69DB9B6F8CE94DD3840E50E1CDD9D767",
+    "listId": "4",
+    "parentId": "DA8186A76DA24F29965C91874D17B556",
+    "position": 43000,
+    "statementLabel": null,
+    "statementNotation": "5.3 PK.F.4"
+   },
+   "6A0B30763BAB4E80BC0B39F71A520B8C": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "History",
+    "id": "6A0B30763BAB4E80BC0B39F71A520B8C",
+    "listId": "",
+    "parentId": null,
+    "position": 110000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "6BAEB94D30B44B7A802648EE12DDE24D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9941E61CC8714F80B010BDA06ED3DB1F",
+     "FFAE1A021DE547BB8E0E6AD7280CDC94",
+     "655421D7AC474EB995DF17292C19D619"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Choose a leader for a classroom project .",
+    "id": "6BAEB94D30B44B7A802648EE12DDE24D",
+    "listId": "2",
+    "parentId": "9941E61CC8714F80B010BDA06ED3DB1F",
+    "position": 29000,
+    "statementLabel": null,
+    "statementNotation": "5.2 PK.C.2"
+   },
+   "6C9554BE17594D41B249CA406CDD2638": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A721038447E94ABD9CAF9788F5BBAEB6",
+     "A1C36F7DF37247F0B4D434A98D1B817C",
+     "D784731D308346A4BED7303CC198E298"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify that money is used to buy things .",
+    "id": "6C9554BE17594D41B249CA406CDD2638",
+    "listId": "1",
+    "parentId": "A721038447E94ABD9CAF9788F5BBAEB6",
+    "position": 70000,
+    "statementLabel": null,
+    "statementNotation": "6.2 PK.D.1"
+   },
+   "6F033965E000438CAA7D07C2DFC60F50": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CA4253C619D346BE86DE4A9A3AD9704C",
+     "A52E608DEED74AF29B8D50A6722B6101",
+     "655421D7AC474EB995DF17292C19D619"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Work with a peer to develop a solution to a problem (e .g ., ways to share the playdough when there isn’t enough) .",
+    "id": "6F033965E000438CAA7D07C2DFC60F50",
+    "listId": "3",
+    "parentId": "CA4253C619D346BE86DE4A9A3AD9704C",
+    "position": 24000,
+    "statementLabel": null,
+    "statementNotation": "5.2 PK.B.3"
+   },
+   "706CFB49C76A4B21AB74507FD29E39E0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2BF64CD8113349E7926A3AAF39A2F278",
+     "042598521316484483B1F165D1788207",
+     "ACC5904F325240E49229DA25B2F8BDAE"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Relate that play is a self-selected activity that may or may not have a specific purpose .",
+    "id": "706CFB49C76A4B21AB74507FD29E39E0",
+    "listId": "3",
+    "parentId": "2BF64CD8113349E7926A3AAF39A2F278",
+    "position": 84000,
+    "statementLabel": null,
+    "statementNotation": "6.5 PK.A.3"
+   },
+   "7130039E1B274E26A68E5A2902E4B79B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B9E3EDE1C1814264B1E9235398700FEE"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "INCENTIVES AND CHOICE",
+    "id": "7130039E1B274E26A68E5A2902E4B79B",
+    "listId": "D",
+    "parentId": "B9E3EDE1C1814264B1E9235398700FEE",
+    "position": 59000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "7355F85321354C529F7069626E0C7DCD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "ACC5904F325240E49229DA25B2F8BDAE"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "TYPES OF BUSINESS\r\n",
+    "id": "7355F85321354C529F7069626E0C7DCD",
+    "listId": "C",
+    "parentId": "ACC5904F325240E49229DA25B2F8BDAE",
+    "position": 85000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "735ABB9CCC814EDBB2C11A89E8797126": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EA2A0BEAAE1E4219961A656790A8D6F6",
+     "646C1423C450489B90D6116F7A04E684",
+     "D784731D308346A4BED7303CC198E298"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Discuss advertisements (e .g ., radio, print, TV)",
+    "id": "735ABB9CCC814EDBB2C11A89E8797126",
+    "listId": "2",
+    "parentId": "EA2A0BEAAE1E4219961A656790A8D6F6",
+    "position": 67000,
+    "statementLabel": null,
+    "statementNotation": "6.2 PK.C.2"
+   },
+   "78214B7A11DD4341A7ECBB49CE2ED73F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8A906FB8E8DC4E26AC1C088C092513C5",
+     "14641423782D44BCB229E249E55C8095",
+     "F1D52907AC1A4BBAA6CF22F3980C4A2E"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Match descriptions of people’s work in a community with picture illustrating the job .",
+    "id": "78214B7A11DD4341A7ECBB49CE2ED73F",
+    "listId": "1",
+    "parentId": "8A906FB8E8DC4E26AC1C088C092513C5",
+    "position": 35000,
+    "statementLabel": null,
+    "statementNotation": "5.3 PK.C.1"
+   },
+   "7CF4EBF6A5BC45A0A83293523D9E0F3C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C02253803F634804ADB64CD47BFB02D5",
+     "0D8FC51BCADC468EA5E5CE3A860FA1BB",
+     "A87F871C4EC3410BA3BDEAE9B09DDD55"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify familiar places in the neighborhood .",
+    "id": "7CF4EBF6A5BC45A0A83293523D9E0F3C",
+    "listId": "2",
+    "parentId": "C02253803F634804ADB64CD47BFB02D5",
+    "position": 108000,
+    "statementLabel": null,
+    "statementNotation": "7.2 PK.A.2"
+   },
+   "81374225748D4AAF81205211E6888E02": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "8A906FB8E8DC4E26AC1C088C092513C5",
+     "14641423782D44BCB229E249E55C8095",
+     "F1D52907AC1A4BBAA6CF22F3980C4A2E"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Relay personal experiences to describe the work that community workers do .",
+    "id": "81374225748D4AAF81205211E6888E02",
+    "listId": "3",
+    "parentId": "8A906FB8E8DC4E26AC1C088C092513C5",
+    "position": 37000,
+    "statementLabel": null,
+    "statementNotation": "5.3 PK.C.3"
+   },
+   "8177A174704F45998685C06749CC043D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C548E693B2DC42E398C6D0D6E3BF0E86",
+     "D5329B92F79A48A790AACD8845E90F20",
+     "A6B47977A188436BA91E04E4A6AE3056"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Replicate the American flag using art materials .",
+    "id": "8177A174704F45998685C06749CC043D",
+    "listId": "3",
+    "parentId": "C548E693B2DC42E398C6D0D6E3BF0E86",
+    "position": 11000,
+    "statementLabel": null,
+    "statementNotation": "5.1 PK.F.3"
+   },
+   "8515C5D7E0384CBAA0675C14CBAAD770": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "Geography",
+    "id": "8515C5D7E0384CBAA0675C14CBAAD770",
+    "listId": "",
+    "parentId": null,
+    "position": 89000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "898C0DECC89B404B8DE1DDA60A859835": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "465FF0CDB9DD4EDD85360E6C007B1D17"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "CONTINUITY AND CHANGE OVER TIME\r",
+    "id": "898C0DECC89B404B8DE1DDA60A859835",
+    "listId": "A",
+    "parentId": "465FF0CDB9DD4EDD85360E6C007B1D17",
+    "position": 112000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "8A906FB8E8DC4E26AC1C088C092513C5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "14641423782D44BCB229E249E55C8095",
+     "F1D52907AC1A4BBAA6CF22F3980C4A2E"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identify community workers through their uniforms and equipment.\r\n",
+    "id": "8A906FB8E8DC4E26AC1C088C092513C5",
+    "listId": "C",
+    "parentId": "14641423782D44BCB229E249E55C8095",
+    "position": 34000,
+    "statementLabel": null,
+    "statementNotation": "5.3 PK.C"
+   },
+   "8D881C32A67F4334B3A56109A6C2FDA0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0B827A625CC947D1B33154687D7E0898",
+     "4FB1AEE454BA45FCB86379E903755E52",
+     "A6B47977A188436BA91E04E4A6AE3056"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Explain a consequence for breaking a classroom rule .",
+    "id": "8D881C32A67F4334B3A56109A6C2FDA0",
+    "listId": "2",
+    "parentId": "0B827A625CC947D1B33154687D7E0898",
+    "position": 6000,
+    "statementLabel": null,
+    "statementNotation": "5.1 PK.A.2"
+   },
+   "924F213A4D44481B946C99D75BEC3684": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "221C98675F2B4D85934AD5F21B2BFC73",
+     "898C0DECC89B404B8DE1DDA60A859835",
+     "465FF0CDB9DD4EDD85360E6C007B1D17"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Demonstrate an understanding of past, present, and future (e .g ., today is   , yesterday was   , and tomorrow will be   , recall information from the immediate past, sequence pictures of self from birth to present) .",
+    "id": "924F213A4D44481B946C99D75BEC3684",
+    "listId": "1",
+    "parentId": "221C98675F2B4D85934AD5F21B2BFC73",
+    "position": 114000,
+    "statementLabel": null,
+    "statementNotation": "8.1 PK.A.1"
+   },
+   "938B9C14ACE34ABBA6097AC50199493B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1C512E00927941B98936F4BE37F5D114",
+     "C4DE51DB0DF14E99AC595A3CA045A47C",
+     "2EC0CD8E797642C7ADDC3A35A4658EFF"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use the term “map .",
+    "id": "938B9C14ACE34ABBA6097AC50199493B",
+    "listId": "5",
+    "parentId": "1C512E00927941B98936F4BE37F5D114",
+    "position": 97000,
+    "statementLabel": null,
+    "statementNotation": "7.1 PK.A.5"
+   },
+   "98671A78A2FC4BD29C76AA6FDE8E96EA": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "FUNCTIONS OF GOVERNMENT\r",
+    "id": "98671A78A2FC4BD29C76AA6FDE8E96EA",
+    "listId": "6",
+    "parentId": null,
+    "position": 74000,
+    "statementLabel": null,
+    "statementNotation": "6.3"
+   },
+   "9941E61CC8714F80B010BDA06ED3DB1F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "FFAE1A021DE547BB8E0E6AD7280CDC94",
+     "655421D7AC474EB995DF17292C19D619"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identify classroom projects/activities that support leadership and service.\r\n",
+    "id": "9941E61CC8714F80B010BDA06ED3DB1F",
+    "listId": "C",
+    "parentId": "FFAE1A021DE547BB8E0E6AD7280CDC94",
+    "position": 27000,
+    "statementLabel": null,
+    "statementNotation": "5.2 PK.C"
+   },
+   "9B1EEC34083B4C8685642D73826A94C0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "DA8186A76DA24F29965C91874D17B556",
+     "2D79B3C5F47D4EC5853C442489CD3AFE",
+     "F1D52907AC1A4BBAA6CF22F3980C4A2E"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use inside voices while indoors and outside voices when outdoors .",
+    "id": "9B1EEC34083B4C8685642D73826A94C0",
+    "listId": "1",
+    "parentId": "DA8186A76DA24F29965C91874D17B556",
+    "position": 40000,
+    "statementLabel": null,
+    "statementNotation": "5.3 PK.F.1"
+   },
+   "9CF3949AA58443A98596D746F49B4F0C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "C548E693B2DC42E398C6D0D6E3BF0E86",
+     "D5329B92F79A48A790AACD8845E90F20",
+     "A6B47977A188436BA91E04E4A6AE3056"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Identify the American flag .",
+    "id": "9CF3949AA58443A98596D746F49B4F0C",
+    "listId": "2",
+    "parentId": "C548E693B2DC42E398C6D0D6E3BF0E86",
+    "position": 10000,
+    "statementLabel": null,
+    "statementNotation": "5.1 PK.F.2"
+   },
+   "9D2ACDFA5C2C4B9F8BB27049F82976DF": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "28A6D27F8ABC48B09D988E4D779A8B45",
+     "B9E3EDE1C1814264B1E9235398700FEE"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identify family wants and needs.",
+    "id": "9D2ACDFA5C2C4B9F8BB27049F82976DF",
+    "listId": "B",
+    "parentId": "28A6D27F8ABC48B09D988E4D779A8B45",
+    "position": 55000,
+    "statementLabel": null,
+    "statementNotation": "6.1 PK.B"
+   },
+   "9ECADBDBA9FA4B899A9ABA83355B7983": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "265299D13C294351B3567B9854B73916",
+     "E9DAB6C356634733AE4650A1B005E8F6",
+     "98671A78A2FC4BD29C76AA6FDE8E96EA"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Talk about products that can be found around their homes .",
+    "id": "9ECADBDBA9FA4B899A9ABA83355B7983",
+    "listId": "2",
+    "parentId": "265299D13C294351B3567B9854B73916",
+    "position": 78000,
+    "statementLabel": null,
+    "statementNotation": "6.3 PK.D.2"
+   },
+   "9EF281A5760848918F6479ABBFB7A69A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "44AD09F4CBE04B2C900C7EB5B74E22B6",
+     "D82EC75DE0374FAA8903F4DFD69B4827",
+     "655421D7AC474EB995DF17292C19D619"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Talk about responsibilities at home .",
+    "id": "9EF281A5760848918F6479ABBFB7A69A",
+    "listId": "4",
+    "parentId": "44AD09F4CBE04B2C900C7EB5B74E22B6",
+    "position": 18000,
+    "statementLabel": null,
+    "statementNotation": "5.2 PK.A.4"
+   },
+   "A0DDDCC034154539B4ECFAE276058F8D": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0B827A625CC947D1B33154687D7E0898",
+     "4FB1AEE454BA45FCB86379E903755E52",
+     "A6B47977A188436BA91E04E4A6AE3056"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describe classroom rules .",
+    "id": "A0DDDCC034154539B4ECFAE276058F8D",
+    "listId": "1",
+    "parentId": "0B827A625CC947D1B33154687D7E0898",
+    "position": 5000,
+    "statementLabel": null,
+    "statementNotation": "5.1 PK.A.1"
+   },
+   "A1C36F7DF37247F0B4D434A98D1B817C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D784731D308346A4BED7303CC198E298"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "PRICE DETERMINATION",
+    "id": "A1C36F7DF37247F0B4D434A98D1B817C",
+    "listId": "D",
+    "parentId": "D784731D308346A4BED7303CC198E298",
+    "position": 68000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "A4B252E6230D4517B30453E162D35DC8": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9D2ACDFA5C2C4B9F8BB27049F82976DF",
+     "28A6D27F8ABC48B09D988E4D779A8B45",
+     "B9E3EDE1C1814264B1E9235398700FEE"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Demonstrates awareness of one’s own preferences .",
+    "id": "A4B252E6230D4517B30453E162D35DC8",
+    "listId": "2",
+    "parentId": "9D2ACDFA5C2C4B9F8BB27049F82976DF",
+    "position": 57000,
+    "statementLabel": null,
+    "statementNotation": "6.1 PK.B.2"
+   },
+   "A52E608DEED74AF29B8D50A6722B6101": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "655421D7AC474EB995DF17292C19D619"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "CONFLICT AND RESOLUTION\r\n",
+    "id": "A52E608DEED74AF29B8D50A6722B6101",
+    "listId": "B",
+    "parentId": "655421D7AC474EB995DF17292C19D619",
+    "position": 20000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "A6B47977A188436BA91E04E4A6AE3056": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "PRINCIPLES AND DOCUMENTS OF GOVERNMENT\r\n",
+    "id": "A6B47977A188436BA91E04E4A6AE3056",
+    "listId": "1",
+    "parentId": null,
+    "position": 2000,
+    "statementLabel": null,
+    "statementNotation": "5.1"
+   },
+   "A721038447E94ABD9CAF9788F5BBAEB6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A1C36F7DF37247F0B4D434A98D1B817C",
+     "D784731D308346A4BED7303CC198E298"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Explain how money is used.\r\n",
+    "id": "A721038447E94ABD9CAF9788F5BBAEB6",
+    "listId": "D",
+    "parentId": "A1C36F7DF37247F0B4D434A98D1B817C",
+    "position": 69000,
+    "statementLabel": null,
+    "statementNotation": "6.2 PK.D"
+   },
+   "A87F871C4EC3410BA3BDEAE9B09DDD55": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "PHYSICAL CHARACTERISTICS OF PLACES AND REGIONS\r",
+    "id": "A87F871C4EC3410BA3BDEAE9B09DDD55",
+    "listId": "9",
+    "parentId": null,
+    "position": 104000,
+    "statementLabel": null,
+    "statementNotation": "7.2"
+   },
+   "ACC5904F325240E49229DA25B2F8BDAE": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "INCOME, PROFIT, AND WEALTH\r\n",
+    "id": "ACC5904F325240E49229DA25B2F8BDAE",
+    "listId": "7",
+    "parentId": null,
+    "position": 79000,
+    "statementLabel": null,
+    "statementNotation": "6.5"
+   },
+   "AFC3CCABBB7C47F5B1D08F53366458E1": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1E92DCC9B2E34184ABD52AAF91CDB2D0",
+     "DA8F3100154B4E20A0113C2282DECBFB",
+     "B9E3EDE1C1814264B1E9235398700FEE"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Notice when materials are running low (e .g ., “We need more paper in the art area .”) .",
+    "id": "AFC3CCABBB7C47F5B1D08F53366458E1",
+    "listId": "2",
+    "parentId": "1E92DCC9B2E34184ABD52AAF91CDB2D0",
+    "position": 51000,
+    "statementLabel": null,
+    "statementNotation": "6.1 PK.A.2"
+   },
+   "B0C6874B1E1D455A8EF03392DCFF514B": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2EC0CD8E797642C7ADDC3A35A4658EFF"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "LOCATION OF PLACES AND REGIONS\r\n",
+    "id": "B0C6874B1E1D455A8EF03392DCFF514B",
+    "listId": "B",
+    "parentId": "2EC0CD8E797642C7ADDC3A35A4658EFF",
+    "position": 98000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "B9E3EDE1C1814264B1E9235398700FEE": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "SCARCITY AND CHOICE\r\n",
+    "id": "B9E3EDE1C1814264B1E9235398700FEE",
+    "listId": "4",
+    "parentId": null,
+    "position": 47000,
+    "statementLabel": null,
+    "statementNotation": "6.1"
+   },
+   "C02253803F634804ADB64CD47BFB02D5": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "0D8FC51BCADC468EA5E5CE3A860FA1BB",
+     "A87F871C4EC3410BA3BDEAE9B09DDD55"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Describe the characteristics of home and\r\nfrequently visited locations to gain an understanding of physical features.\r",
+    "id": "C02253803F634804ADB64CD47BFB02D5",
+    "listId": "A",
+    "parentId": "0D8FC51BCADC468EA5E5CE3A860FA1BB",
+    "position": 106000,
+    "statementLabel": null,
+    "statementNotation": "7.2 PK.A"
+   },
+   "C2A9817AFBBD459CAF646726C9385A20": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1E92DCC9B2E34184ABD52AAF91CDB2D0",
+     "DA8F3100154B4E20A0113C2282DECBFB",
+     "B9E3EDE1C1814264B1E9235398700FEE"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Offer to share materials when materials are scarce (e .g ., one shovel in sensory table) .",
+    "id": "C2A9817AFBBD459CAF646726C9385A20",
+    "listId": "3",
+    "parentId": "1E92DCC9B2E34184ABD52AAF91CDB2D0",
+    "position": 52000,
+    "statementLabel": null,
+    "statementNotation": "6.1 PK.A.3"
+   },
+   "C4DE51DB0DF14E99AC595A3CA045A47C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2EC0CD8E797642C7ADDC3A35A4658EFF"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "GEOGRAPHIC TOOLS\r\n",
+    "id": "C4DE51DB0DF14E99AC595A3CA045A47C",
+    "listId": "A",
+    "parentId": "2EC0CD8E797642C7ADDC3A35A4658EFF",
+    "position": 91000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "C548E693B2DC42E398C6D0D6E3BF0E86": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "D5329B92F79A48A790AACD8845E90F20",
+     "A6B47977A188436BA91E04E4A6AE3056"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identify basic American symbols. (e.g., American flag)\r\n",
+    "id": "C548E693B2DC42E398C6D0D6E3BF0E86",
+    "listId": "F",
+    "parentId": "D5329B92F79A48A790AACD8845E90F20",
+    "position": 8000,
+    "statementLabel": null,
+    "statementNotation": "5.1 PK.F"
+   },
+   "C56B8222F1E34A1C85966543FC2F2B18": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CA4253C619D346BE86DE4A9A3AD9704C",
+     "A52E608DEED74AF29B8D50A6722B6101",
+     "655421D7AC474EB995DF17292C19D619"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Attempt to solve a conflict with a peer .",
+    "id": "C56B8222F1E34A1C85966543FC2F2B18",
+    "listId": "2",
+    "parentId": "CA4253C619D346BE86DE4A9A3AD9704C",
+    "position": 23000,
+    "statementLabel": null,
+    "statementNotation": "5.2 PK.B.2"
+   },
+   "C7183C657D4E4D4DBADB24214897F3DD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "DA8186A76DA24F29965C91874D17B556",
+     "2D79B3C5F47D4EC5853C442489CD3AFE",
+     "F1D52907AC1A4BBAA6CF22F3980C4A2E"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Cooperate in both large and small group activities that are facilitated by adult .",
+    "id": "C7183C657D4E4D4DBADB24214897F3DD",
+    "listId": "2",
+    "parentId": "DA8186A76DA24F29965C91874D17B556",
+    "position": 41000,
+    "statementLabel": null,
+    "statementNotation": "5.3 PK.F.2"
+   },
+   "CA4253C619D346BE86DE4A9A3AD9704C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A52E608DEED74AF29B8D50A6722B6101",
+     "655421D7AC474EB995DF17292C19D619"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identify a problem and discuss possible solutions with adult assistance.\r\n*See also 16.2 PK.D\r\n",
+    "id": "CA4253C619D346BE86DE4A9A3AD9704C",
+    "listId": "B",
+    "parentId": "A52E608DEED74AF29B8D50A6722B6101",
+    "position": 21000,
+    "statementLabel": null,
+    "statementNotation": "5.2 PK.B"
+   },
+   "CCD55EF537F64929BACA3DC0DCF5F81F": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "44AD09F4CBE04B2C900C7EB5B74E22B6",
+     "D82EC75DE0374FAA8903F4DFD69B4827",
+     "655421D7AC474EB995DF17292C19D619"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Display awareness of role as member of a group .",
+    "id": "CCD55EF537F64929BACA3DC0DCF5F81F",
+    "listId": "1",
+    "parentId": "44AD09F4CBE04B2C900C7EB5B74E22B6",
+    "position": 15000,
+    "statementLabel": null,
+    "statementNotation": "5.2 PK.A.1"
+   },
+   "CF99C9C92A824C28A163BDD4F9C57377": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "465FF0CDB9DD4EDD85360E6C007B1D17"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "RESEARCH",
+    "id": "CF99C9C92A824C28A163BDD4F9C57377",
+    "listId": "C",
+    "parentId": "465FF0CDB9DD4EDD85360E6C007B1D17",
+    "position": 118000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "D5329B92F79A48A790AACD8845E90F20": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "A6B47977A188436BA91E04E4A6AE3056"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "SYMBOLS",
+    "id": "D5329B92F79A48A790AACD8845E90F20",
+    "listId": "F",
+    "parentId": "A6B47977A188436BA91E04E4A6AE3056",
+    "position": 7000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "D784731D308346A4BED7303CC198E298": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "MARKETS AND ECONOMIC SYSTEMS\r\n",
+    "id": "D784731D308346A4BED7303CC198E298",
+    "listId": "5",
+    "parentId": null,
+    "position": 63000,
+    "statementLabel": null,
+    "statementNotation": "6.2"
+   },
+   "D82EC75DE0374FAA8903F4DFD69B4827": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "655421D7AC474EB995DF17292C19D619"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "CIVIC RIGHTS AND RESPONSIBILITIES",
+    "id": "D82EC75DE0374FAA8903F4DFD69B4827",
+    "listId": "A",
+    "parentId": "655421D7AC474EB995DF17292C19D619",
+    "position": 13000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "D96DC94C242B45C48DEE6BD484327014": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2BF995ED284D4B928D3AA52589F08D92",
+     "7130039E1B274E26A68E5A2902E4B79B",
+     "B9E3EDE1C1814264B1E9235398700FEE"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Provide a reason for choosing to play in a particular center that shows interest in specific materials or people .",
+    "id": "D96DC94C242B45C48DEE6BD484327014",
+    "listId": "2",
+    "parentId": "2BF995ED284D4B928D3AA52589F08D92",
+    "position": 62000,
+    "statementLabel": null,
+    "statementNotation": "6.1 PK.D.2"
+   },
+   "DA8186A76DA24F29965C91874D17B556": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "2D79B3C5F47D4EC5853C442489CD3AFE",
+     "F1D52907AC1A4BBAA6CF22F3980C4A2E"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identify appropriate behaviors for responsible classroom citizens.\r\n",
+    "id": "DA8186A76DA24F29965C91874D17B556",
+    "listId": "F",
+    "parentId": "2D79B3C5F47D4EC5853C442489CD3AFE",
+    "position": 39000,
+    "statementLabel": null,
+    "statementNotation": "5.3 PK.F"
+   },
+   "DA8F3100154B4E20A0113C2282DECBFB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B9E3EDE1C1814264B1E9235398700FEE"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "SCARCITY AND CHOICE\r",
+    "id": "DA8F3100154B4E20A0113C2282DECBFB",
+    "listId": "A",
+    "parentId": "B9E3EDE1C1814264B1E9235398700FEE",
+    "position": 48000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "DAC49B6B24F94D39BD5B5C878A30BBE6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "221C98675F2B4D85934AD5F21B2BFC73",
+     "898C0DECC89B404B8DE1DDA60A859835",
+     "465FF0CDB9DD4EDD85360E6C007B1D17"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describe the daily routine (e .g ., what happens first, before lunch, after lunch, at end of day) .",
+    "id": "DAC49B6B24F94D39BD5B5C878A30BBE6",
+    "listId": "2",
+    "parentId": "221C98675F2B4D85934AD5F21B2BFC73",
+    "position": 115000,
+    "statementLabel": null,
+    "statementNotation": "8.1 PK.A.2"
+   },
+   "DACF3573D2834358B5BE926D713C77F6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1E92DCC9B2E34184ABD52AAF91CDB2D0",
+     "DA8F3100154B4E20A0113C2282DECBFB",
+     "B9E3EDE1C1814264B1E9235398700FEE"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Show preference for one material/center, but choose a different material/center when materials are scarce or center is full",
+    "id": "DACF3573D2834358B5BE926D713C77F6",
+    "listId": "4",
+    "parentId": "1E92DCC9B2E34184ABD52AAF91CDB2D0",
+    "position": 53000,
+    "statementLabel": null,
+    "statementNotation": "6.1 PK.A.4"
+   },
+   "DC90BA36FBFA4793A67F0080D79BFC60": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1BE5F8F677774E999CF9F833E4F69789",
+     "CF99C9C92A824C28A163BDD4F9C57377",
+     "465FF0CDB9DD4EDD85360E6C007B1D17"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Label types of media and what information can be gained (e .g ., recipes from a cookbook, prices from an advertisement) .",
+    "id": "DC90BA36FBFA4793A67F0080D79BFC60",
+    "listId": "1",
+    "parentId": "1BE5F8F677774E999CF9F833E4F69789",
+    "position": 120000,
+    "statementLabel": null,
+    "statementNotation": "8.1 PK.C.1"
+   },
+   "DFCE6E324F3C429BB79AF1458BE7AE9C": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "9941E61CC8714F80B010BDA06ED3DB1F",
+     "FFAE1A021DE547BB8E0E6AD7280CDC94",
+     "655421D7AC474EB995DF17292C19D619"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Show interest in leadership opportunities .",
+    "id": "DFCE6E324F3C429BB79AF1458BE7AE9C",
+    "listId": "1",
+    "parentId": "9941E61CC8714F80B010BDA06ED3DB1F",
+    "position": 28000,
+    "statementLabel": null,
+    "statementNotation": "5.2 PK.C.1"
+   },
+   "E4265BBBE4C5427D8775F4A1106D4AA2": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "466F316C7C9848D29177182BBDBC1222",
+     "7355F85321354C529F7069626E0C7DCD",
+     "ACC5904F325240E49229DA25B2F8BDAE"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Describe where customers go to acquire specific goods or services (e .g ., food purchased at grocery store, hammer and nails purchased at hardware store) .",
+    "id": "E4265BBBE4C5427D8775F4A1106D4AA2",
+    "listId": "2",
+    "parentId": "466F316C7C9848D29177182BBDBC1222",
+    "position": 88000,
+    "statementLabel": null,
+    "statementNotation": "6.5 PK.C.2"
+   },
+   "E9DA251D2FFE43F39EB8384600E2B3C0": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "CA4253C619D346BE86DE4A9A3AD9704C",
+     "A52E608DEED74AF29B8D50A6722B6101",
+     "655421D7AC474EB995DF17292C19D619"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Suggest simple solutions to conflict which are most often based upon own needs and desires .",
+    "id": "E9DA251D2FFE43F39EB8384600E2B3C0",
+    "listId": "4",
+    "parentId": "CA4253C619D346BE86DE4A9A3AD9704C",
+    "position": 25000,
+    "statementLabel": null,
+    "statementNotation": "5.2 PK.B.4"
+   },
+   "E9DAB6C356634733AE4650A1B005E8F6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "98671A78A2FC4BD29C76AA6FDE8E96EA"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "GOVERNMENT’S ROLE IN INTERNATIONAL TRADE",
+    "id": "E9DAB6C356634733AE4650A1B005E8F6",
+    "listId": "D",
+    "parentId": "98671A78A2FC4BD29C76AA6FDE8E96EA",
+    "position": 75000,
+    "statementLabel": null,
+    "statementNotation": ""
+   },
+   "EA2A0BEAAE1E4219961A656790A8D6F6": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "646C1423C450489B90D6116F7A04E684",
+     "D784731D308346A4BED7303CC198E298"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Identify advertisements that encourage us to buy things.",
+    "id": "EA2A0BEAAE1E4219961A656790A8D6F6",
+    "listId": "C",
+    "parentId": "646C1423C450489B90D6116F7A04E684",
+    "position": 65000,
+    "statementLabel": null,
+    "statementNotation": "6.2 PK.C"
+   },
+   "EC012799563942AAB5DF19B8055B8EAB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "F697A87F16644E8784122AE2DE6F3F86",
+     "B0C6874B1E1D455A8EF03392DCFF514B",
+     "2EC0CD8E797642C7ADDC3A35A4658EFF"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use directionality, size, and position (e .g ., left, right, first, last, little, big, top, bottom) to describe location .",
+    "id": "EC012799563942AAB5DF19B8055B8EAB",
+    "listId": "2",
+    "parentId": "F697A87F16644E8784122AE2DE6F3F86",
+    "position": 101000,
+    "statementLabel": null,
+    "statementNotation": "7.1 PK.B.2"
+   },
+   "EFFDF5B752794441A4FF897310AD03DB": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "EA2A0BEAAE1E4219961A656790A8D6F6",
+     "646C1423C450489B90D6116F7A04E684",
+     "D784731D308346A4BED7303CC198E298"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Recognize logos (environmental print) from local businesses .",
+    "id": "EFFDF5B752794441A4FF897310AD03DB",
+    "listId": "1",
+    "parentId": "EA2A0BEAAE1E4219961A656790A8D6F6",
+    "position": 66000,
+    "statementLabel": null,
+    "statementNotation": "6.2 PK.C.1"
+   },
+   "F0F861E02C2E427297D764D84D5E05FD": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "44AD09F4CBE04B2C900C7EB5B74E22B6",
+     "D82EC75DE0374FAA8903F4DFD69B4827",
+     "655421D7AC474EB995DF17292C19D619"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Participate in classroom and family responsibilities .",
+    "id": "F0F861E02C2E427297D764D84D5E05FD",
+    "listId": "3",
+    "parentId": "44AD09F4CBE04B2C900C7EB5B74E22B6",
+    "position": 17000,
+    "statementLabel": null,
+    "statementNotation": "5.2 PK.A.3"
+   },
+   "F1D52907AC1A4BBAA6CF22F3980C4A2E": {
+    "altStatementNotation": null,
+    "ancestorIds": [],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 0,
+    "description": "HOW GOVERNMENT WORKS\r",
+    "id": "F1D52907AC1A4BBAA6CF22F3980C4A2E",
+    "listId": "3",
+    "parentId": null,
+    "position": 32000,
+    "statementLabel": null,
+    "statementNotation": "5.3"
+   },
+   "F697A87F16644E8784122AE2DE6F3F86": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "B0C6874B1E1D455A8EF03392DCFF514B",
+     "2EC0CD8E797642C7ADDC3A35A4658EFF"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 2,
+    "description": "Describe the location of places in the home, school, and community to gain an\r\nunderstanding of relative location.\r\n",
+    "id": "F697A87F16644E8784122AE2DE6F3F86",
+    "listId": "B",
+    "parentId": "B0C6874B1E1D455A8EF03392DCFF514B",
+    "position": 99000,
+    "statementLabel": null,
+    "statementNotation": "7.1 PK.B"
+   },
+   "F6D73562E7F546BCAB2DF9976A0A6E82": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "221C98675F2B4D85934AD5F21B2BFC73",
+     "898C0DECC89B404B8DE1DDA60A859835",
+     "465FF0CDB9DD4EDD85360E6C007B1D17"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use words to describe time (e .g ., yesterday, today, tomorrow, o’clock) .",
+    "id": "F6D73562E7F546BCAB2DF9976A0A6E82",
+    "listId": "4",
+    "parentId": "221C98675F2B4D85934AD5F21B2BFC73",
+    "position": 117000,
+    "statementLabel": null,
+    "statementNotation": "8.1 PK.A.4"
+   },
+   "F7256DDDDDEE4DF5872C8D4A26328383": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "DA8186A76DA24F29965C91874D17B556",
+     "2D79B3C5F47D4EC5853C442489CD3AFE",
+     "F1D52907AC1A4BBAA6CF22F3980C4A2E"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Respect another’s attempts to complete tasks independently .",
+    "id": "F7256DDDDDEE4DF5872C8D4A26328383",
+    "listId": "6",
+    "parentId": "DA8186A76DA24F29965C91874D17B556",
+    "position": 45000,
+    "statementLabel": null,
+    "statementNotation": "5.3 PK.F.6"
+   },
+   "F7853A23B03A460D8BB792BDD214233E": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "1C512E00927941B98936F4BE37F5D114",
+     "C4DE51DB0DF14E99AC595A3CA045A47C",
+     "2EC0CD8E797642C7ADDC3A35A4658EFF"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Use a simple map .",
+    "id": "F7853A23B03A460D8BB792BDD214233E",
+    "listId": "1",
+    "parentId": "1C512E00927941B98936F4BE37F5D114",
+    "position": 93000,
+    "statementLabel": null,
+    "statementNotation": "7.1 PK.A.1"
+   },
+   "FC7D8105FCD7490E9DC918E5577E939A": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "466F316C7C9848D29177182BBDBC1222",
+     "7355F85321354C529F7069626E0C7DCD",
+     "ACC5904F325240E49229DA25B2F8BDAE"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 3,
+    "description": "Participate in role-play that is related to a local business (e .g ., pet store, hair salon, restaurant) .",
+    "id": "FC7D8105FCD7490E9DC918E5577E939A",
+    "listId": "1",
+    "parentId": "466F316C7C9848D29177182BBDBC1222",
+    "position": 87000,
+    "statementLabel": null,
+    "statementNotation": "6.5 PK.C.1"
+   },
+   "FFAE1A021DE547BB8E0E6AD7280CDC94": {
+    "altStatementNotation": null,
+    "ancestorIds": [
+     "655421D7AC474EB995DF17292C19D619"
+    ],
+    "asnIdentifier": null,
+    "comments": [],
+    "depth": 1,
+    "description": "LEADERSHIP AND PUBLIC SERVICE\r",
+    "id": "FFAE1A021DE547BB8E0E6AD7280CDC94",
+    "listId": "C",
+    "parentId": "655421D7AC474EB995DF17292C19D619",
+    "position": 26000,
+    "statementLabel": null,
+    "statementNotation": ""
+   }
+  },
+  "subject": "Learning Standards for Early Childhood (2024-)",
+  "title": "Scientific Thinking and Technology – Exploring, Scientific Inquiry, and Discovery"
+ }
+}
