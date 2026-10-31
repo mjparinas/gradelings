@@ -7,6 +7,7 @@ import { course as science } from "./science";
 import { course as social } from "./social";
 import { course as immersion } from "./immersion";
 import { course as coreFrench } from "./core-french";
+import { course as spanish } from "./spanish";
 
-export const courses: Course[] = withLessons([math, language, science, social, immersion, coreFrench], lessons);
+export const courses: Course[] = withLessons([math, language, science, social, immersion, coreFrench, spanish], lessons);
 export { lessons, moreLessons };

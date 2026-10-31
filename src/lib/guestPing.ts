@@ -1,6 +1,6 @@
 import { countryOf } from "./country";
 import { familyCountry } from "./coppa";
-import { deviceId } from "./remoteFlags";
+import { deviceId } from "./deviceFlags";
 import type { AppEvent, FamilyInfo, Profile } from "./model";
 
 // Tells the server, once a day, that this device was played with no parent account, so the admin dashboard can count

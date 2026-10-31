@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState, type FormEvent, type ReactNod
 import { coursesForGrade, getUnitRef, loadGrade } from "@/content";
 import { FRAMEWORKS, getFramework } from "@/content/frameworks";
 import { GRADE_ORDER, getSubjectMeta, gradeSlug } from "@/content/subjects";
+import { isOn } from "@/lib/remoteFlags";
 import type { FrameworkId, GradeId } from "@/content/types";
 import { DateField } from "@/components/DateField";
 import { SelectMenu } from "@/components/SelectMenu";
@@ -1322,7 +1323,14 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
   const goalOptions = [{ value: "", label: `Until ${meeting}` }, ...HOMEWORK_GOALS.map((n) => ({ value: String(n), label: `${n} questions` }))];
   /** The class's units by subject, for a picker. Units in `taken` are shown but can't be picked. */
   const unitGroups = (taken: string[]) =>
-    [cls.grade, ...(cls.grade2 ? [cls.grade2] : [])].flatMap((g) => coursesForGrade(g, cls.framework)).map((course) => ({
+    [cls.grade, ...(cls.grade2 ? [cls.grade2] : [])]
+      .flatMap((g) => coursesForGrade(g, cls.framework))
+      // A subject behind a flag (Spanish) can be assigned once it's on.
+      .filter((course) => {
+        const flag = getSubjectMeta(course.subject).flag;
+        return !flag || isOn(flag);
+      })
+      .map((course) => ({
       // A split class's units are grouped by grade too.
       label: getSubjectMeta(course.subject).title.big + (cls.grade2 ? ` · ${gradeLabel(course.grade, cls.framework)}` : ""),
       options: course.units.map((u) => {

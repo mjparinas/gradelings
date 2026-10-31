@@ -1,7 +1,7 @@
 "use client";
 
 import manifest from "./piper-manifest.json";
-import { isOn } from "./remoteFlags";
+import { isOn } from "./deviceFlags";
 import type { SpeechLanguage } from "./speech";
 
 // Piper: a natural-sounding voice that runs on the device, so it works offline and the same on
@@ -49,10 +49,14 @@ export interface PiperState {
 export interface PiperFileList {
   version: string;
   engine: Record<string, number>;
-  voices: Record<SpeechLanguage, Record<string, number>>;
+  // An optional voice that could not be downloaded at build time is left out (scripts/fetch-piper.mjs).
+  voices: Partial<Record<SpeechLanguage, Record<string, number>>>;
 }
 
 export const PIPER_VOICES = manifest.voices as Record<SpeechLanguage, { id: string; name: string; credit: string }>;
+
+/** Every language with a Piper voice: English, French and Spanish. */
+export const PIPER_LANGUAGES = Object.keys(manifest.voices) as SpeechLanguage[];
 
 /** The files one language needs, as URLs, with their sizes. */
 export function filesFor(list: PiperFileList, language: SpeechLanguage): [url: string, bytes: number][] {
@@ -65,51 +69,56 @@ const MAX_CHUNK = 300;
 // ("3/4" as "three slash four"), where device voices say them. So they are put into words first.
 type Words = Record<SpeechLanguage, string>;
 const SYMBOLS: [RegExp, Words][] = [
-  [/≠/g, { en: " does not equal ", fr: " n'égale pas " }],
-  [/≤/g, { en: " is less than or equal to ", fr: " est plus petit ou égal à " }],
-  [/≥/g, { en: " is greater than or equal to ", fr: " est plus grand ou égal à " }],
-  [/≈/g, { en: " is about ", fr: " environ " }],
-  [/≅/g, { en: " is congruent to ", fr: " est isométrique à " }],
-  [/=/g, { en: " equals ", fr: " égale " }],
-  [/</g, { en: " is less than ", fr: " est plus petit que " }],
-  [/>/g, { en: " is greater than ", fr: " est plus grand que " }],
-  [/[×✕]/g, { en: " times ", fr: " fois " }],
-  [/÷/g, { en: " divided by ", fr: " divisé par " }],
-  [/√/g, { en: " the square root of ", fr: " la racine carrée de " }],
-  [/∛/g, { en: " the cube root of ", fr: " la racine cubique de " }],
-  [/π/g, { en: " pi ", fr: " pi " }],
-  [/[µμ]/g, { en: " mu ", fr: " mu " }],
-  [/Ω/g, { en: " ohms ", fr: " ohms " }],
-  [/°\s*C\b/g, { en: " degrees Celsius", fr: " degrés Celsius" }],
-  [/°\s*F\b/g, { en: " degrees Fahrenheit", fr: " degrés Fahrenheit" }],
-  [/°/g, { en: " degrees", fr: " degrés" }],
-  [/%/g, { en: " percent", fr: " pour cent" }],
-  [/\^/g, { en: " to the power of ", fr: " exposant " }],
-  [/′/g, { en: " prime ", fr: " prime " }],
-  [/△/g, { en: " triangle ", fr: " triangle " }],
-  [/[□■]/g, { en: " blank ", fr: " mot manquant " }],
+  [/≠/g, { en: " does not equal ", fr: " n'égale pas " , es: " no es igual a " }],
+  [/≤/g, { en: " is less than or equal to ", fr: " est plus petit ou égal à " , es: " es menor o igual que " }],
+  [/≥/g, { en: " is greater than or equal to ", fr: " est plus grand ou égal à " , es: " es mayor o igual que " }],
+  [/≈/g, { en: " is about ", fr: " environ " , es: " es aproximadamente " }],
+  [/≅/g, { en: " is congruent to ", fr: " est isométrique à " , es: " es congruente con " }],
+  [/=/g, { en: " equals ", fr: " égale " , es: " es igual a " }],
+  [/</g, { en: " is less than ", fr: " est plus petit que " , es: " es menor que " }],
+  [/>/g, { en: " is greater than ", fr: " est plus grand que " , es: " es mayor que " }],
+  [/[×✕]/g, { en: " times ", fr: " fois " , es: " por " }],
+  [/÷/g, { en: " divided by ", fr: " divisé par " , es: " dividido entre " }],
+  [/√/g, { en: " the square root of ", fr: " la racine carrée de " , es: " la raíz cuadrada de " }],
+  [/∛/g, { en: " the cube root of ", fr: " la racine cubique de " , es: " la raíz cúbica de " }],
+  [/π/g, { en: " pi ", fr: " pi " , es: " pi " }],
+  [/[µμ]/g, { en: " mu ", fr: " mu " , es: " mu " }],
+  [/Ω/g, { en: " ohms ", fr: " ohms " , es: " ohmios " }],
+  [/°\s*C\b/g, { en: " degrees Celsius", fr: " degrés Celsius" , es: " grados Celsius" }],
+  [/°\s*F\b/g, { en: " degrees Fahrenheit", fr: " degrés Fahrenheit" , es: " grados Fahrenheit" }],
+  [/°/g, { en: " degrees", fr: " degrés" , es: " grados" }],
+  [/%/g, { en: " percent", fr: " pour cent" , es: " por ciento" }],
+  [/\^/g, { en: " to the power of ", fr: " exposant " , es: " elevado a " }],
+  [/′/g, { en: " prime ", fr: " prime " , es: " prima " }],
+  [/△/g, { en: " triangle ", fr: " triangle " , es: " triángulo " }],
+  [/[□■]/g, { en: " blank ", fr: " mot manquant " , es: " palabra que falta " }],
 ];
 const FRACTIONS: Record<string, [number, number]> = { "½": [1, 2], "⅓": [1, 3], "⅔": [2, 3], "¼": [1, 4], "¾": [3, 4], "⅕": [1, 5], "⅛": [1, 8] };
 const DENOMINATORS: Record<SpeechLanguage, [one: string, many: string][]> = {
   en: [["", ""], ["", ""], ["half", "halves"], ["third", "thirds"], ["fourth", "fourths"], ["fifth", "fifths"], ["sixth", "sixths"], ["seventh", "sevenths"], ["eighth", "eighths"], ["ninth", "ninths"], ["tenth", "tenths"], ["eleventh", "elevenths"], ["twelfth", "twelfths"]],
+  es: [["", ""], ["", ""], ["medio", "medios"], ["tercio", "tercios"], ["cuarto", "cuartos"], ["quinto", "quintos"], ["sexto", "sextos"], ["séptimo", "séptimos"], ["octavo", "octavos"], ["noveno", "novenos"], ["décimo", "décimos"], ["onceavo", "onceavos"], ["doceavo", "doceavos"]],
   fr: [["", ""], ["", ""], ["demi", "demis"], ["tiers", "tiers"], ["quart", "quarts"], ["cinquième", "cinquièmes"], ["sixième", "sixièmes"], ["septième", "septièmes"], ["huitième", "huitièmes"], ["neuvième", "neuvièmes"], ["dixième", "dixièmes"], ["onzième", "onzièmes"], ["douzième", "douzièmes"]],
 };
+
+const OVER: Words = { en: "over", fr: "sur", es: "sobre" };
+const AND: Words = { en: "and", fr: "et", es: "y" };
+const ABSOLUTE: Words = { en: " the absolute value of $1 ", fr: " la valeur absolue de $1 ", es: " el valor absoluto de $1 " };
 
 /** A fraction in words: "3 fourths", "1 half", and "7 over 15" past twelfths. */
 function fraction(top: number, bottom: number, language: SpeechLanguage): string {
   const name = DENOMINATORS[language][bottom];
-  if (!name?.[0]) return ` ${top} ${language === "fr" ? "sur" : "over"} ${bottom} `;
+  if (!name?.[0]) return ` ${top} ${OVER[language]} ${bottom} `;
   return ` ${top} ${top === 1 ? name[0] : name[1]} `;
 }
 
 /** Puts the symbols Piper can't say into words (only for Piper: device voices say them already). */
 export function piperText(text: string, language: SpeechLanguage): string {
   // Absolute value bars, "|−3|".
-  let t = text.replace(/\|([^|]{1,12})\|/g, language === "fr" ? " la valeur absolue de $1 " : " the absolute value of $1 ");
+  let t = text.replace(/\|([^|]{1,12})\|/g, ABSOLUTE[language]);
   t = t.replace(/(\d+)\s*\/\s*(\d+)/g, (_, a: string, b: string) => fraction(Number(a), Number(b), language));
   t = t.replace(/(\d*)([½⅓⅔¼¾⅕⅛])/g, (_, whole: string, f: string) => {
     const [a, b] = FRACTIONS[f];
-    return `${whole ? ` ${whole} ${language === "fr" ? "et" : "and"}` : ""}${fraction(a, b, language)}`;
+    return `${whole ? ` ${whole} ${AND[language]}` : ""}${fraction(a, b, language)}`;
   });
   for (const [re, words] of SYMBOLS) t = t.replace(re, words[language]);
   // Counting dots aren't read; arrows and bullets between items are a short pause.
@@ -140,7 +149,7 @@ export function splitSentences(text: string): string[] {
 // ---- State (per device) ----
 
 const blank = () => ({ state: "checking" as PiperVoiceState, loaded: 0, total: 0 });
-let state: PiperState = { enabled: false, voices: { en: blank(), fr: blank() } };
+let state: PiperState = { enabled: false, voices: Object.fromEntries(PIPER_LANGUAGES.map((l) => [l, blank()])) as PiperState["voices"] };
 const listeners = new Set<() => void>();
 
 function update(next: Partial<PiperState>, language?: SpeechLanguage, voice?: Partial<PiperState["voices"]["en"]>) {
@@ -174,8 +183,8 @@ function check(): Promise<void> {
   checked ??= (async () => {
     const enabled = readEnabled();
     if (!piperSupported()) {
-      update({ enabled: false }, "en", { state: "missing" });
-      update({}, "fr", { state: "missing" });
+      update({ enabled: false });
+      for (const language of PIPER_LANGUAGES) update({}, language, { state: "missing" });
       return;
     }
     // The Kokoro and Supertonic files are no use any more.
@@ -187,7 +196,7 @@ function check(): Promise<void> {
       if (pathname !== WORKER_URL && !pathname.startsWith(PIPER_BASE)) await cache.delete(req);
     }
     const list = (await (await cache.match(LIST_URL))?.json().catch(() => undefined)) as PiperFileList | undefined;
-    for (const language of ["en", "fr"] as const) {
+    for (const language of PIPER_LANGUAGES) {
       let ready = false;
       if (list) {
         const files = filesFor(list, language);
@@ -198,8 +207,7 @@ function check(): Promise<void> {
     }
     update({ enabled });
   })().catch(() => {
-    update({}, "en", { state: "missing" });
-    update({}, "fr", { state: "missing" });
+    for (const language of PIPER_LANGUAGES) update({}, language, { state: "missing" });
   });
   return checked;
 }
@@ -263,8 +271,7 @@ export async function piperDownloadBytes(language: SpeechLanguage): Promise<numb
     const res = await fetch(LIST_URL, { cache: "no-cache" });
     if (!res.ok) return undefined;
     const list = (await res.json()) as PiperFileList;
-    const other: SpeechLanguage = language === "en" ? "fr" : "en";
-    const engineHere = state.voices[other].state === "ready";
+    const engineHere = PIPER_LANGUAGES.some((l) => l !== language && state.voices[l].state === "ready");
     const voice = Object.values(list.voices[language] ?? {}).reduce((n, b) => n + b, 0);
     if (!voice) return undefined;
     return voice + (engineHere ? 0 : Object.values(list.engine).reduce((n, b) => n + b, 0));
@@ -275,7 +282,7 @@ export async function piperDownloadBytes(language: SpeechLanguage): Promise<numb
 
 /** Downloads the engine and one language's voice into the Piper cache, reporting progress. */
 export function downloadPiper(language: SpeechLanguage, { quiet = false } = {}): Promise<void> {
-  // One download at a time: the two languages share the engine files.
+  // One download at a time: the languages share the engine files.
   const run = downloading.then(() => (state.voices[language].state === "ready" ? undefined : fetchVoice(language, quiet)));
   downloading = run.catch(() => undefined);
   return run;
@@ -357,7 +364,7 @@ export async function autoDownloadPiper(language: SpeechLanguage): Promise<boole
   if (!isOn("piper-auto-download")) return false;
   await check();
   if (!state.enabled || state.voices[language].state !== "missing") return false;
-  if (state.voices.en.state === "downloading" || state.voices.fr.state === "downloading") return false;
+  if (PIPER_LANGUAGES.some((l) => state.voices[l].state === "downloading")) return false;
   autoTried[language] = Date.now();
   try {
     const { quota, usage } = (await navigator.storage?.estimate?.()) ?? {};
@@ -379,8 +386,7 @@ export async function preloadPiperVoices(languages: readonly SpeechLanguage[]): 
 export async function removePiper(language: SpeechLanguage): Promise<void> {
   const cache = await caches.open(PIPER_CACHE);
   const list = (await (await cache.match(LIST_URL))?.json().catch(() => undefined)) as PiperFileList | undefined;
-  const other: SpeechLanguage = language === "en" ? "fr" : "en";
-  if (!list || state.voices[other].state !== "ready") await caches.delete(PIPER_CACHE);
+  if (!list || !PIPER_LANGUAGES.some((l) => l !== language && state.voices[l].state === "ready")) await caches.delete(PIPER_CACHE);
   else for (const name of Object.keys(list.voices[language] ?? {})) await cache.delete(PIPER_BASE + name);
   if (language === "en") setPiperEnabled(false);
   update({}, language, { state: "missing", loaded: 0, total: 0, error: undefined });

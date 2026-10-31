@@ -7,8 +7,8 @@ import type { SpeechLanguage, VoiceOption } from "@/lib/speech";
 // The device's voices are faked at the speech module; the offline voice is off here (it has its own tests).
 const h = vi.hoisted(() => ({
   canSpeak: true,
-  voices: { en: [] as VoiceOption[], fr: [] as VoiceOption[] },
-  prefs: { en: null as string | null, fr: null as string | null },
+  voices: { en: [] as VoiceOption[], fr: [] as VoiceOption[], es: [] as VoiceOption[] },
+  prefs: { en: null as string | null, fr: null as string | null, es: null as string | null },
   setPref: vi.fn(),
   preview: vi.fn(),
   previewPiper: vi.fn(),
@@ -52,8 +52,8 @@ const setOnline = (online: boolean) => Object.defineProperty(navigator, "onLine"
 
 beforeEach(() => {
   h.canSpeak = true;
-  h.voices = { en: [aria, karen, fred], fr: [] };
-  h.prefs = { en: null, fr: null };
+  h.voices = { en: [aria, karen, fred], fr: [], es: [] };
+  h.prefs = { en: null, fr: null, es: null };
   h.setPref.mockReset();
   h.preview.mockReset();
   h.previewPiper.mockReset().mockResolvedValue(undefined);

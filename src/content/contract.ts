@@ -110,3 +110,38 @@ export function codeCite(outcomes: Record<string, { idx: string }[]>, region: st
     return out;
   };
 }
+
+/** What the shared Spanish course may cite (docs/research/spanish/outcomes.json, built by its build_outcomes.py). */
+interface SpanishSources {
+  wrs: string[];
+  levels: string[];
+  bc: Record<string, string>;
+  ab: Record<string, string>;
+  mb: Record<string, string>;
+}
+
+/**
+ * The citation check for the shared Spanish course, the same for every framework (see ../spanish): British Columbia's
+ * Content for its grade (Grades 5 to 9), Alberta's Nine-Year Program clusters (Grades 4 to 9), Manitoba's numbered
+ * strands (Grades 7 to 9), and everywhere else World-Readiness Standards with the proficiency sublevel for the grade.
+ */
+export function spanishCite(framework: FrameworkId): (c: Citation) => string[] {
+  const src = research<SpanishSources>("spanish/outcomes.json");
+  const flat = (s: string) => s.toLowerCase().replace(/\s+/g, " ");
+  return ({ grade, standard }) => {
+    // Yukon and the Northwest Territories follow BC's curriculum (followBcGrade), so they carry BC's citations.
+    const bc = framework === "ca-bc" || framework === "ca-yt" || framework === "ca-nt";
+    if (bc && src.bc[grade]) return flat(src.bc[grade]).includes(flat(standard)) ? [] : [`"${standard}" is not in BC's Grade ${grade} Spanish content`];
+    const [codes, text] = standard.split(" · ");
+    const out = text?.trim() ? [] : ["needs a plain description after the codes"];
+    const list = codes.split("; ");
+    const known =
+      framework === "ca-ab" && grade !== "3" ? Object.keys(src.ab) : framework === "ca-mb" && ["7", "8", "9"].includes(grade) ? Object.keys(src.mb) : [...src.wrs, ...src.levels];
+    for (const code of list) if (!known.includes(code)) out.push(`cites "${code}", not a standard ${framework} uses for Grade ${grade} Spanish`);
+    if (known.includes(src.levels[0])) {
+      const level = list.filter((c) => src.levels.includes(c));
+      if (level.length !== 1) out.push("names one proficiency sublevel");
+    }
+    return out;
+  };
+}

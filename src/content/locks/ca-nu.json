@@ -259,6 +259,16 @@
       "mb-world-maps text=1e325a2118 std=342ec91a59 q=36735875ac"
     ]
   },
+  "3/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "saludos text=0e496163f1 std=81fd30989b q=6eb3a6e66f",
+      "numeros-hasta-20 text=23e8632af0 std=2c8be968c9 q=a349f236c5",
+      "colores text=3ed4b7d140 std=1b910c4c55 q=4763b47770",
+      "animales text=badbbecebe std=0f498f10c6 q=128d83d818",
+      "familia text=b2dcc8e66e std=8faa275c49 q=86a8e86e86"
+    ]
+  },
   "4/core-french": {
     "overview": "bcc12d049c",
     "units": [
@@ -326,6 +336,16 @@
       "nu-map-directions-4 text=6417c4cb46 std=4a07145ce2 q=fa4796d05a",
       "nu-map-scale-4 text=17b305f4e0 std=d174137997 q=3a478ee88e",
       "mb-power-conflict text=f2fba13657 std=a7cdf4612a q=77f54522e1"
+    ]
+  },
+  "4/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "cuerpo text=8eaaf9bf61 std=8c08a1ee0b q=73f074b2b4",
+      "escuela text=e9996c83b9 std=aae3f690b6 q=ae47848fa7",
+      "dias-y-meses text=34db9dab39 std=024d22536e q=cb10fd8733",
+      "tiempo text=42f12e5fce std=4e118d7e71 q=1cc1215af3",
+      "ropa text=34970c68fc std=efa7f79cc2 q=f0e3970adf"
     ]
   },
   "5/core-french": {
@@ -404,6 +424,16 @@
       "informed-citizens-ab text=89128c1970 std=c2d5239479 q=f1bdcfafc9"
     ]
   },
+  "5/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "sonidos text=80683d829a std=27fd41838f q=58c17693b8",
+      "el-y-la text=cb225e5d39 std=38c5881bb8 q=1074c9539b",
+      "gustos text=d36fa4b597 std=e9c4eb69ac q=810c4ba7db",
+      "sobre-mi text=8d8ab79cae std=abb6b5215a q=d4ac49825c",
+      "fiestas text=97e8a47873 std=e64520304e q=d84d35d37b"
+    ]
+  },
   "6/core-french": {
     "overview": "bcc12d049c",
     "units": [
@@ -478,6 +508,16 @@
       "inquiry-6 text=66a2b7f908 std=b24e71447f q=484d6ef20b",
       "cities-and-migration text=7cab62633f std=2a593d19d6 q=94adb1b304",
       "media-literacy text=d3829ef067 std=d09e98c7fd q=4c2a7a1811"
+    ]
+  },
+  "6/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "preguntas text=a185455eef std=ed20ce18ba q=d44b56c84c",
+      "comida text=125b021db0 std=1246d6d4dd q=ffef28847f",
+      "pasatiempos text=c33589e083 std=4cd3a86ef5 q=cc01218407",
+      "emociones text=a925cf1d90 std=289704dd77 q=a82624e446",
+      "personas text=3f99f93025 std=0deaff300e q=4ab03f6e6a"
     ]
   },
   "7/core-french": {
@@ -562,6 +602,16 @@
       "sk-democracy-7 text=109082b62b std=1a175ce8f3 q=c2d8439f06"
     ]
   },
+  "7/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "verbos-ar text=fc3d64d1c7 std=6c4ba3089b q=2a9f9c0c73",
+      "describir text=0dc4ce0abf std=bcf0bcf6a1 q=44675bd803",
+      "comparaciones text=32f5de1457 std=21d56ee848 q=6e43c85246",
+      "paises text=1827fc7cb2 std=e5fa08cacb q=26617a81ba",
+      "direcciones text=246e0580ed std=3d3546530b q=525b6d4747"
+    ]
+  },
   "8/core-french": {
     "overview": "bcc12d049c",
     "units": [
@@ -640,6 +690,16 @@
       "maps-graphs-8 text=5bc38c81cc std=84d1385dba q=4ccfa270cf"
     ]
   },
+  "8/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "verbos-er-ir text=16633c38db std=21430181d8 q=2a4bf2332c",
+      "ir-a text=418d5f16ce std=deb65aab31 q=13df3f558e",
+      "hora-y-frecuencia text=d2c28828a0 std=d5d00e2856 q=439e808472",
+      "compras text=e832882aee std=c953c869f4 q=aa1245d3bb",
+      "medio-ambiente text=6393bb902f std=6fd14b0904 q=1980351cc5"
+    ]
+  },
   "9/core-french": {
     "overview": "bcc12d049c",
     "units": [
@@ -707,6 +767,16 @@
       "nu-circumpolar-9 text=a5469de50e std=3c49c3a7c6 q=a9d1c81be0",
       "nu-population-data-9 text=6d444beed6 std=45442e8fee q=4a35e73e9f",
       "population-issues-9 text=b5e7899c1d std=581ddf7339 q=a62dc487a7"
+    ]
+  },
+  "9/spanish": {
+    "overview": "4b4f3fb439",
+    "units": [
+      "preterito text=92cdef7045 std=09bf56e5b4 q=ccac7e09a5",
+      "ser-y-estar text=cf084dc6cc std=f248b63008 q=fd01edeb18",
+      "en-orden text=56d16d8e93 std=3f09b3ef6d q=23cf0bbdba",
+      "profesiones text=55b2e6e3d3 std=69575f4637 q=1c177bd0fb",
+      "cuentos text=942f5f0729 std=ecd51bd440 q=c29106e529"
     ]
   }
 }

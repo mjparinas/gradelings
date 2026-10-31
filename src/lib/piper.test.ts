@@ -703,3 +703,22 @@ describe("speakPiper", () => {
     await second;
   });
 });
+
+describe("the Spanish voice", () => {
+  it("is listed with its own pinned source, and left out of the build's file list rather than failing it if it can't download", () => {
+    const es = manifest.voices.es as (typeof manifest.voices)["es"] & { source?: string; optional?: boolean };
+    expect(es.id).toBe("es_MX-ald-medium");
+    expect(es.source).toMatch(/^https:\/\/huggingface\.co\/rhasspy\/piper-voices\/resolve\/[0-9a-f]{40}\/es\/es_MX\/ald\/medium\/$/);
+    expect(es.optional).toBe(true);
+    for (const hash of Object.values(es.files)) expect(hash).toMatch(/^[0-9a-f]{64}$/);
+    // Without the Spanish files the list has no Spanish voice, so the app reads Spanish with the device voice.
+    const list: PiperFileList = { version: "3", engine: { "ort.wasm.min.js": 10 }, voices: { en: { "en.onnx": 5 } } };
+    expect(filesFor(list, "es")).toEqual([[`${PIPER_BASE}ort.wasm.min.js`, 10]]);
+  });
+
+  it("says maths symbols in Spanish", () => {
+    expect(piperText("6 + 4 = 10. 3 < 5", "es")).toBe("6 + 4 es igual a 10. 3 es menor que 5");
+    expect(piperText("¾ de 8 son 6", "es")).toBe("3 cuartos de 8 son 6");
+    expect(piperText("2½", "es")).toBe("2 y 1 medio");
+  });
+});
