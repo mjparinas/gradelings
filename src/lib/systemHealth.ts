@@ -113,10 +113,14 @@ export function stripeStatusState(state: unknown): CheckState {
   return "warn";
 }
 
-/** Share of uptime pings that passed, as a percentage with one decimal, or null with no pings. */
-export function uptimePercent(runs: { ok: boolean }[]): number | null {
-  if (!runs.length) return null;
-  return Math.round((runs.filter((r) => r.ok).length / runs.length) * 1000) / 10;
+/** An UptimeRobot monitor's `status`: 0 paused, 1 not checked yet, 2 up, 8 seems down, 9 down. */
+export function uptimeRobotStatus(status: unknown): { state: CheckState; label: string } {
+  if (status === 2) return { state: "ok", label: "Up" };
+  if (status === 9) return { state: "down", label: "Down" };
+  if (status === 8) return { state: "down", label: "Seems down" };
+  if (status === 0) return { state: "warn", label: "Paused" };
+  if (status === 1) return { state: "warn", label: "Not checked yet" };
+  return { state: "warn", label: "Unknown" };
 }
 
 /**
@@ -223,7 +227,8 @@ export const SETTINGS: { names: string[]; label: string; need: "required" | "rec
   { names: ["GOOGLE_CLIENT_SECRET"], label: "Google sign-in secret", need: "recommended", what: "The \"Continue with Google\" button (with the ID above)." },
   { names: ["ANTHROPIC_API_KEY"], label: "AI drafts key", need: "optional", what: "Draft with AI in the Inbox." },
   { names: ["DATABASE_SIZE_LIMIT_MB"], label: "Database size limit", need: "optional", what: "Your Turso plan's storage, in megabytes, for the Capacity card's warning." },
-  { names: ["GITHUB_TOKEN"], label: "GitHub read token", need: "optional", what: "Uptime and builds on this page." },
+  { names: ["GITHUB_TOKEN"], label: "GitHub read token", need: "optional", what: "Builds on this page." },
+  { names: ["UPTIMEROBOT_API_KEY"], label: "UptimeRobot read-only key", need: "optional", what: "Uptime on this page." },
 ];
 
 /** Settings that must never be on in production. */

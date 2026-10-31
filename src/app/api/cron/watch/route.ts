@@ -1,8 +1,8 @@
 import { secretsMatch } from "@/server/auth";
 import { watchSystem } from "@/server/alerts";
 
-// Called every 15 minutes by the uptime workflow (.github/workflows/uptime.yml) with
-// `Authorization: Bearer $CRON_SECRET`. Runs the admin panel's System checks and emails the admins when one
+// Called by any scheduler with `Authorization: Bearer $CRON_SECRET` (none calls it on a schedule
+// today; UptimeRobot watches /api/health/ instead). Runs the admin panel's System checks and emails the admins when one
 // goes down, and again when it's working.
 export const maxDuration = 60;
 

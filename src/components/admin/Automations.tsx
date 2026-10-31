@@ -73,7 +73,7 @@ function Alerts({ data, reload }: { data: Data; reload: () => void }) {
       </ul>
       {data.alertRecipients === 0 && <p className="mt-2 text-sm text-nudge-dark">No admin account has a confirmed email, so nothing can be sent.</p>}
       <p className="mt-2 text-sm text-ink-soft">
-        System checks are watched every 15 minutes by the Uptime workflow once the repository secret CRON_SECRET is set (docs/ADMIN.md).
+        UptimeRobot alerts when the site is down. Alerts for the other System checks go out when /api/cron/watch/ is called with CRON_SECRET (docs/ADMIN.md).
       </p>
       <Notice {...msg} />
     </div>
