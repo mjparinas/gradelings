@@ -65,6 +65,32 @@ describe("sign-in links", () => {
     expect((await verify.POST(post("/api/auth/magic/verify/", { token }))).status).toBe(400);
   });
 
+  it("takes over an unconfirmed account: whoever signed up with the address is signed out and their password stops working", async () => {
+    const login = (await import("@/app/api/auth/login/route")) as unknown as Mod;
+    const made = await signup.POST(post("/api/auth/signup/", { email: "squat-magic@example.com", password: "squatter pw" }));
+    const squatter = cookieOf(made);
+    const whoAmI = (cookie: string) => me.GET(new Request("http://localhost/api/auth/me/", { headers: { cookie } }));
+    expect((await whoAmI(squatter)).status).toBe(200);
+
+    await ask("squat-magic@example.com");
+    const done = await verify.POST(post("/api/auth/magic/verify/", { token: tokenIn(email.outbox().at(-1)!.text) }));
+    expect(done.status).toBe(200);
+    expect((await whoAmI(cookieOf(done))).status).toBe(200);
+    expect((await whoAmI(squatter)).status).toBe(401);
+    expect((await login.POST(post("/api/auth/login/", { email: "squat-magic@example.com", password: "squatter pw" }))).status).toBe(401);
+  });
+
+  it("keeps other sessions and the password of an account whose email was already confirmed", async () => {
+    const login = (await import("@/app/api/auth/login/route")) as unknown as Mod;
+    const made = await signup.POST(post("/api/auth/signup/", { email: "confirmed-magic@example.com", password: "correct horse" }));
+    const first = cookieOf(made);
+    await dbm.run("UPDATE parents SET email_verified_at = ? WHERE email = ?", [Date.now(), "confirmed-magic@example.com"]);
+    await ask("confirmed-magic@example.com");
+    expect((await verify.POST(post("/api/auth/magic/verify/", { token: tokenIn(email.outbox().at(-1)!.text) }))).status).toBe(200);
+    expect((await me.GET(new Request("http://localhost/api/auth/me/", { headers: { cookie: first } }))).status).toBe(200);
+    expect((await login.POST(post("/api/auth/login/", { email: "confirmed-magic@example.com", password: "correct horse" }))).status).toBe(200);
+  });
+
   it("sends teachers back to the teacher area", async () => {
     await account("m2@example.com");
     await ask("m2@example.com", { to: "teachers" });
