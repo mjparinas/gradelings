@@ -5,7 +5,7 @@ import { assignedAt, assignmentDue, familyClasswork, assignmentGoals, assignment
 import { classDigestLines } from "@/lib/classDigest";
 import { isYearReviewEmailDay, reviewYearOf, schoolYearStart, yearReview, type YearReviewChild } from "@/lib/yearReview";
 import { unsubscribeToken } from "@/server/auth";
-import { toCountryCode } from "@/lib/country";
+import { countryOf, toCountryCode, type CountryCode } from "@/lib/country";
 import { query, run } from "@/server/db";
 import { sendEmail } from "@/server/email";
 import { classDigestEmail, inactiveClassEmail, reminderEmail, yearReviewEmail, trialEndingEmail, trialRecapEmail, weeklyEmail, type ReminderChild, type TrialChild, type WeeklyChild } from "@/server/emailTemplates";
@@ -20,6 +20,10 @@ import { isFlagOn } from "@/server/flags";
 import type { Profile } from "@/lib/model";
 import { schoolYearLines } from "@/lib/schoolYear";
 import { childHomework, homeworkEmailLines } from "@/lib/homework";
+import { goalEmailLines, goalProgress } from "@/lib/goalPlan";
+import { goalName } from "@/lib/goalPlanText";
+import { canUse } from "@/lib/plan";
+import { getFamilyRow, toFamilyInfo } from "@/server/family";
 import { atHomeIdea, atHomeLine, factsWeekLine, storiesLine, storiesThisWeek } from "@/lib/weeklyExtras";
 import { derive } from "@/lib/derive";
 import { unitLevel } from "@/lib/proficiency";
@@ -401,6 +405,8 @@ async function weeklyReports(ctx: Ctx): Promise<boolean> {
       const showHomework = await isFlagOn("parent-homework", p.family_id);
       const showExtras = await isFlagOn("weekly-email-extras", p.family_id);
       const classwork = showHomework ? await familyClasswork(p.family_id) : [];
+      const familyRow = (await isFlagOn("goal-plans", p.family_id)) ? await getFamilyRow(p.family_id) : undefined;
+      const showGoals = Boolean(familyRow && canUse(toFamilyInfo(familyRow, p.email), "goalPlan", now));
       for (const id of await familyProfileIds(p.family_id)) {
         const r = await loadChildData(p.family_id, id, 7, now);
         if (!r) continue;
@@ -418,6 +424,7 @@ async function weeklyReports(ctx: Ctx): Promise<boolean> {
           strength: r.report.strengths[0]?.ref.unit.title,
           next: next?.unit.title,
           homework: homework.lines,
+          goal: showGoals ? await weeklyGoal(r, toCountryCode(p.country), now) : [],
           extras: showExtras ? weeklyExtraLines(r, next?.course.subject ?? homework.subject, now) : [],
         });
       }
@@ -448,6 +455,20 @@ async function weeklyHomework(r: ChildData, classwork: Awaited<ReturnType<typeof
   const proficient = getFramework(r.profile.framework).scoringFor(r.profile.grade).levels[2]?.label ?? "Proficient";
   const open = items.find((h) => !h.done);
   return { lines: homeworkEmailLines(r.profile.name, items, name, proficient, now), subject: open && getUnitRef(open.key)?.course.subject };
+}
+
+/** The weekly email's lines for a child's goal plan (`goalPlan.ts`), or none when the child has no goal. */
+async function weeklyGoal(r: ChildData, country: CountryCode, now: number): Promise<string[]> {
+  const goal = r.settings?.goalPlan;
+  if (!goal?.units?.length) return [];
+  // The goal's units can be from another grade than the child's (a subject set to another grade, or a grade moved since).
+  await Promise.all([...new Set(goal.units.map((k) => k.split("/")[0]))].map((g) => loadGrade(g as GradeId, r.profile.framework).catch(() => undefined)));
+  const progress = goalProgress(goal, (key) => unitLevel(r.derived.units[key]), now);
+  const proficient = getFramework(r.profile.framework).scoringFor(r.profile.grade).levels[2]?.label ?? "Proficient";
+  const [y, m, d] = goal.until.split("-").map(Number);
+  const day = new Date(Date.UTC(y, m - 1, d)).toLocaleDateString(countryOf(country).locale, { month: "short", day: "numeric", timeZone: "UTC" });
+  const name = (key: string) => getUnitRef(key, r.profile.framework)?.unit.title;
+  return goalEmailLines(r.profile.name, goalName(goal, r.profile.framework), progress, name, proficient, day);
 }
 
 /** Math facts known, stories read this week and one idea to try at home. */

@@ -73,6 +73,19 @@ describe("a parent's focus unit", () => {
   });
 });
 
+describe("a parent's goal plan", () => {
+  const learning = { ...stat(6, 0.5), recent: [true, false, true, false, true, false], challengePassed: false };
+  const proficient = { ...stat(12, 0.9), recent: Array(12).fill(true), challengePassed: false };
+  const withGoal = (units: Record<string, Partial<UnitStat>>, goalUnits?: string[], key = "2/math/a") =>
+    unitWeight(opts({ goalUnits, derived: derived(units) }), ref(key));
+
+  it("makes Adventure pick the units up next more often, like a focus unit, until Proficient", () => {
+    expect(withGoal({ "2/math/a": learning }, ["2/math/a"])).toBeCloseTo(withGoal({ "2/math/a": learning }) * 3);
+    expect(withGoal({ "2/math/b": learning }, ["2/math/a"], "2/math/b")).toBeCloseTo(withGoal({ "2/math/b": learning }, undefined, "2/math/b"));
+    expect(withGoal({ "2/math/a": proficient }, ["2/math/a"])).toBeCloseTo(withGoal({ "2/math/a": proficient }));
+  });
+});
+
 describe("difficultyFor", () => {
   it("steps up at 50% and 80% mastery, one step easier in Review and Speed Run", () => {
     expect([0.49, 0.5, 0.79, 0.8].map((m) => difficultyFor(m, "adventure"))).toEqual([1, 2, 2, 3]);

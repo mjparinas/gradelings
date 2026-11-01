@@ -1,3 +1,4 @@
+import type { GoalPlan } from "./goalPlan";
 import type { PlacementResult } from "./placement";
 import type { FrameworkId, GradeId, SubjectId } from "@/content/types";
 
@@ -71,6 +72,8 @@ export interface ChildSettings {
   weeklyGoalDays?: number;
   /** A unit a parent picked for the child to work on, optionally until a day (see `focus.ts`). */
   focus?: { unit: string; until?: string; setAt: number };
+  /** A goal a parent set, turned into a week-by-week plan of units (see `goalPlan.ts`). Family plan only. */
+  goalPlan?: GoalPlan;
   /** A reward a parent promised for coins earned (see `familyReward.ts`). Given outside the app; coins are not spent. */
   reward?: { id: string; name: string; coins: number; startCoins: number; setAt: number };
   /** A short kind note a parent sent from a fixed list; the child sees it once on the home screen. */
