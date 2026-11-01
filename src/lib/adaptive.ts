@@ -31,6 +31,8 @@ export interface PickOptions {
   allowed?: (ref: UnitRef) => boolean;
   /** A unit a parent wants practised: Adventure picks it more often until the child reaches Proficient. */
   focus?: string;
+  /** Units up next in a parent's goal plan (`goalPlan.ts`): picked more often, like the focus unit, until Proficient. */
+  goalUnits?: readonly string[];
   now?: number;
   random?: () => number;
 }
@@ -54,7 +56,7 @@ export function unitWeight(opts: PickOptions, ref: UnitRef): number {
   } else {
     const novelty = attempts < 5 ? 1.2 : attempts < 12 ? 0.4 : 0;
     w = 0.15 + need * 1.6 + novelty + spaced * 0.6;
-    if (opts.focus === ref.key && unitLevel(stat) < 2) w = Math.max(w, 0.8) * FOCUS_BOOST;
+    if ((opts.focus === ref.key || opts.goalUnits?.includes(ref.key)) && unitLevel(stat) < 2) w = Math.max(w, 0.8) * FOCUS_BOOST;
   }
 
   const last = opts.recent.slice(-2);
