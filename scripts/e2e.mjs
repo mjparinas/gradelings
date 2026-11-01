@@ -304,7 +304,12 @@ async function eventsWaiting(page) {
     // Placement and Report card are views under Reports; the old Privacy link opens Account.
     await page.goto(`${BASE}/parents/#/report-cards`);
     await page.waitForTimeout(500);
-    if ((await page.getByRole("navigation", { name: "Report views" }).getByRole("link").count()) !== 4) errors.push("reports: the Progress / Placement / Report card / Year in review views are missing");
+    if ((await page.getByRole("navigation", { name: "Report views" }).getByRole("link").count()) !== 5) errors.push("reports: the Progress / Placement / Report card / Year in review / Practice sheet views are missing");
+    // The practice sheet is made from the child's tricky units, so after a played session it has questions and a key.
+    await page.goto(`${BASE}/parents/#/sheet`);
+    await page.waitForTimeout(700);
+    await shot(page, "22-parent-sheet", true);
+    if (!(await page.getByRole("heading", { name: /practice sheet|Practice sheets/ }).first().isVisible().catch(() => false))) errors.push("reports: the practice sheet view didn't open");
     await page.goto(`${BASE}/parents/#/privacy`);
     await page.waitForTimeout(500);
     if (!(await vis(page.getByRole("heading", { name: "Your data, your choice" })))) errors.push("old privacy link: Account didn't show the privacy panels");
