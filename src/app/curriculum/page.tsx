@@ -11,7 +11,7 @@ import { curriculumIndexFaqs } from "@/components/site/pageFaqs";
 
 export const metadata: Metadata = pageMeta({
   title: "Curriculum: what kids practise in each grade",
-  description: `Browse every unit ${APP_NAME} covers from Kindergarten to Grade 9, by curriculum, grade and subject, with sample questions and the learning standards each one matches.`,
+  description: `Browse every unit ${APP_NAME} covers from Pre-K to Grade 9, by curriculum, grade and subject, with sample questions and the learning standards each one matches.`,
   path: curriculumPath.index(),
 });
 
@@ -21,7 +21,7 @@ export default function CurriculumIndex() {
       <Crumbs items={[{ label: "Home", href: "/" }, { label: "Curriculum" }]} />
       <h1 className="text-4xl font-bold">Curriculum</h1>
       <p className="mt-2 max-w-2xl font-read text-lg text-ink-soft">
-        {APP_NAME} follows {FRAMEWORKS.length} curricula from Kindergarten to Grade 9, with{" "}
+        {APP_NAME} follows {FRAMEWORKS.length} curricula from Pre-K to Grade 9, with{" "}
         {FRAMEWORKS.reduce((n, f) => n + gradesWithContent(f).reduce((m, g) => m + coursesFor(f, g).reduce((k, c) => k + c.units.length, 0), 0), 0).toLocaleString("en-CA")} units
         between them. Pick a curriculum to see the units for each grade and subject, with sample questions and the learning standard each one practises.
       </p>

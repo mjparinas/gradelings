@@ -110,7 +110,7 @@ export function provinceCoverage(frameworks: readonly Framework[]): ProvinceCove
   });
 
   // The grades every province teaches: they all end on the same grade, and the range starts where the last of them
-  // starts, so "Kindergarten to Grade 9" stays true while Pre-K reaches the provinces one at a time.
+  // starts (Kindergarten until every region has Pre-K; copy that names the range says "Pre-K to Grade 9" and `preKRegions` says where Pre-K is offered), and stays true while Pre-K reaches the provinces one at a time.
   const first = frameworks[0];
   const to = first ? first.grades[first.grades.length - 1] : undefined;
   const starts = frameworks.map((f) => GRADE_ORDER.indexOf(f.grades[0]));
@@ -122,6 +122,12 @@ export function provinceCoverage(frameworks: readonly Framework[]): ProvinceCove
     range: sameRange && from && to ? { from, to } : null,
     gaps,
   };
+}
+
+/** How many provinces and states offer Pre-K, in words for copy: "21 of 48 provinces and states", or "every province and state". */
+export function preKRegions(frameworks: readonly Pick<Framework, "grades">[]): string {
+  const n = frameworks.filter((f) => f.grades.includes("pk")).length;
+  return n === frameworks.length ? "every province and state" : `${n} of ${frameworks.length} provinces and states`;
 }
 
 /** True once a US curriculum is offered, so public pages show US dollars beside Canadian dollars. */

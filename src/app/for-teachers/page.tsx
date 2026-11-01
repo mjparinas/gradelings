@@ -18,7 +18,7 @@ const regions = regionSummary(TEACHER_FRAMEWORKS);
 const region = regionWord(TEACHER_FRAMEWORKS);
 
 export const metadata: Metadata = pageMeta({
-  title: "Classroom practice for teachers, Kindergarten to Grade 9",
+  title: "Classroom practice for teachers, Pre-K to Grade 9",
   description: `Create a class, assign curriculum-matched units and see how each student is practising. Free for teachers for now, ad-free, and families stay in control of what is shared.`,
   path: teacherPath.hub(),
 });
@@ -65,7 +65,7 @@ const FAQS = [
   },
   ...(usClasses ? [{ q: "Do US schools need parent consent?", a: US_CLASS_CONSENT }] : []),
   { q: "Is this a report-card mark?", a: `No. ${APP_NAME} shows how a student is practising. The teacher decides proficiency, as on the report card.` },
-  { q: "Which curriculum does it follow?", a: `Each class follows one ${region}, chosen when you create it, with units matched to its own curriculum from Kindergarten to Grade 9. We cover ${regions}, listed under “Find your curriculum” above. Other provinces and states are on the way.` },
+  { q: "Which curriculum does it follow?", a: `Each class follows one ${region}, chosen when you create it, with units matched to its own curriculum from Pre-K to Grade 9. We cover ${regions}, listed under “Find your curriculum” above. Other provinces and states are on the way.` },
   { q: "Are there ads?", a: "No ads and no selling of data. Kids cannot buy anything." },
 ];
 
@@ -77,7 +77,7 @@ export default function TeachersHub() {
       <Crumbs items={crumbs} />
       <section className="grid items-center gap-8 py-4 md:grid-cols-[1.1fr_1fr]">
         <div>
-          <p className="mb-3 inline-flex rounded-full bg-[#fff4cc] px-3 py-1 text-sm font-bold text-[#8a6400]">For teachers · Kindergarten to Grade 9</p>
+          <p className="mb-3 inline-flex rounded-full bg-[#fff4cc] px-3 py-1 text-sm font-bold text-[#8a6400]">For teachers · Pre-K to Grade 9</p>
           <h1 className="text-4xl leading-tight font-bold sm:text-5xl">Classroom practice your students will want to do</h1>
           <p className="mt-4 max-w-2xl font-read text-lg text-ink-soft">
             Assign units matched to your curriculum, see how your students are practising, and let learning games be the reward for focused work. Available in {regions}. No ads, no student passwords, and families stay in control.

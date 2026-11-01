@@ -10,7 +10,7 @@ import { pageMeta } from "@/lib/pageMeta";
 
 export const metadata: Metadata = pageMeta({
   title: "About us",
-  description: `Why ${APP_NAME} exists, who makes it and what we believe: curriculum-matched practice for Kindergarten to Grade 9 that kids enjoy and parents understand.`,
+  description: `Why ${APP_NAME} exists, who makes it and what we believe: curriculum-matched practice for Pre-K to Grade 9 that kids enjoy and parents understand.`,
   path: "/about/",
 });
 
@@ -49,7 +49,7 @@ export default function AboutPage() {
       <article className="mx-auto max-w-3xl">
         <h1 className="text-4xl font-bold">About {APP_NAME}</h1>
         <p className="mt-4 font-read text-lg">
-          {APP_NAME} is curriculum-matched practice, learning games and progress reports for Kindergarten to Grade 9, across {regionSummary(FRAMEWORKS)}. Kids use it to practise math, reading, science and social studies. Parents choose it, set it up and see how it’s going.
+          {APP_NAME} is curriculum-matched practice, learning games and progress reports for Pre-K to Grade 9, across {regionSummary(FRAMEWORKS)}. Kids use it to practise math, reading, science and social studies. Parents choose it, set it up and see how it’s going.
         </p>
         <div className="mt-8 flex flex-col gap-8">
           <Section title="Why we made it">

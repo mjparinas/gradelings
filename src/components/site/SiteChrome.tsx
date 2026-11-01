@@ -140,7 +140,7 @@ export function SiteFooter({ build }: { /** A build line such as "Build 3f9a1c2"
       <div className="mx-auto grid max-w-6xl gap-6 px-4 py-10 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <p className="text-xl font-bold">{APP_NAME}</p>
-          <p className="mt-1 font-read text-sm text-ink-soft">Curriculum-matched practice, games and progress reports for Kindergarten to Grade 9.</p>
+          <p className="mt-1 font-read text-sm text-ink-soft">Curriculum-matched practice, games and progress reports for Pre-K to Grade 9.</p>
           <SocialLinks />
         </div>
         <FooterColumn
@@ -201,7 +201,7 @@ export function PageCta({ play, lead = "subscribe" }: { play?: string; lead?: Le
         Ready to try {APP_NAME}?
       </h2>
       <p className="font-read text-ink-soft">
-        Curriculum-matched practice for Kindergarten to Grade 9 in {provinces}, with kind hints, learning games and no ads. {lead === "trial" ? `Try everything free for ${TRIAL_DAYS} days with no card, then subscribe if it helps.` : `Subscribe now, or try everything free for ${TRIAL_DAYS} days with no card.`}
+        Curriculum-matched practice for Pre-K to Grade 9 in {provinces}, with kind hints, learning games and no ads. {lead === "trial" ? `Try everything free for ${TRIAL_DAYS} days with no card, then subscribe if it helps.` : `Subscribe now, or try everything free for ${TRIAL_DAYS} days with no card.`}
       </p>
       <div className="flex flex-wrap gap-3">
         <SubscribeActions play={play} lead={lead} />
