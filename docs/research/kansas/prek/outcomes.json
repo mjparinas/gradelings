@@ -1,0 +1,422 @@
+{
+ "pk/language": [
+  {
+   "idx": "CL.SL.p4.1",
+   "text": "Participates in conversations in increasing group sizes."
+  },
+  {
+   "idx": "CL.SL.p4.2",
+   "text": "Asks and answers questions and makes predictions."
+  },
+  {
+   "idx": "CL.SL.p4.3",
+   "text": "Able to describe familiar people, places, things and events with support."
+  },
+  {
+   "idx": "CL.SL.p4.4",
+   "text": "Able to tell another person about what they have drawn."
+  },
+  {
+   "idx": "CL.SL.p4.5",
+   "text": "Speaks understandably to express ideas, feelings and needs."
+  },
+  {
+   "idx": "CL.LS.p4.1",
+   "text": "Demonstrates an emerging command of the conventions of grammar and usage when writing or speaking."
+  },
+  {
+   "idx": "CL.LS.p4.2",
+   "text": "Demonstrates a beginning awareness of the conventions of writing by using some letters to match sounds in words and usually writing from left to right (may reverse some letters)."
+  },
+  {
+   "idx": "CL.LS.p4.3",
+   "text": "Determines or clarifies the meaning of unknown and multiple meaning words with assistance or cues from an adult."
+  },
+  {
+   "idx": "CL.LS.p4.4",
+   "text": "Demonstrates an understanding of some frequently occurring verbs and adjectives to name opposites."
+  },
+  {
+   "idx": "CL.LS.p4.5",
+   "text": "With prompting and support, begins to use new words and phrases acquired through conversations, reading and being read to and responding to texts."
+  },
+  {
+   "idx": "CL.L.p4.1",
+   "text": "With prompting and support, asks and answers questions about key details in a book or story."
+  },
+  {
+   "idx": "CL.L.p4.2",
+   "text": "With prompting and support, retells books or stories with increasing detail and accuracy."
+  },
+  {
+   "idx": "CL.L.p4.3",
+   "text": "With prompting and support, identifies characters, settings and major events or facts from a book or story."
+  },
+  {
+   "idx": "CL.L.p4.4",
+   "text": "Asks and answers questions about unknown words in a book."
+  },
+  {
+   "idx": "CL.L.p4.5",
+   "text": "Interacts with a larger variety of books and text."
+  },
+  {
+   "idx": "CL.L.p4.6",
+   "text": "With prompting and support, describes the role of an author and an illustrator."
+  },
+  {
+   "idx": "CL.L.p4.7",
+   "text": "With prompting and support, uses the illustrations to retell major events in the story."
+  },
+  {
+   "idx": "CL.L.p4.8",
+   "text": "With prompting and support, begins to compare and contrast the adventures and experiences of characters in familiar stories."
+  },
+  {
+   "idx": "CL.L.p4.9",
+   "text": "With prompting and support, answers “wh” questions, such as what, when, where or why, based on information presented in the book or story."
+  },
+  {
+   "idx": "CL.L.p4.10",
+   "text": "Actively engages in large and small group reading activities with purpose and understanding."
+  },
+  {
+   "idx": "CL.F.p4.1",
+   "text": "Begins to demonstrate understanding of the organization and basic features of print."
+  },
+  {
+   "idx": "CL.F.p4.2",
+   "text": "Demonstrates understanding of spoken words, syllables and sounds."
+  },
+  {
+   "idx": "CL.F.p4.3",
+   "text": "Demonstrates basic knowledge of letter-sound correspondence by producing the sound of some letters."
+  },
+  {
+   "idx": "CL.F.p4.4",
+   "text": "Identifies own name in print."
+  },
+  {
+   "idx": "CL.W.p4.1",
+   "text": "Uses a combination of drawing, dictating or emergent writing to express thoughts and ideas."
+  },
+  {
+   "idx": "CL.W.p4.2",
+   "text": "Recognizably writes most of the letters in their name."
+  },
+  {
+   "idx": "CL.W.p4.3",
+   "text": "With guidance and support, responds to questions and suggestions and adds details to drawings or emergent writing as needed."
+  },
+  {
+   "idx": "CL.W.p4.4",
+   "text": "With guidance and support, explores a variety of digital tools to produce and publish emergent writing."
+  },
+  {
+   "idx": "CL.W.p4.5",
+   "text": "Participates in shared research and writing projects."
+  },
+  {
+   "idx": "CL.W.p4.6",
+   "text": "With guidance and support from adults, recalls information from experiences or gathers information from provided sources to answer a question."
+  }
+ ],
+ "pk/math": [
+  {
+   "idx": "M.CC.p4.1",
+   "text": "Counts in sequence to 20."
+  },
+  {
+   "idx": "M.CC.p4.2",
+   "text": "Represents a group of objects with a written numeral 0-12 (with 0 representing a count of no objects)."
+  },
+  {
+   "idx": "M.CC.p4.3",
+   "text": "Counts forward beginning from a given number (under 10) within the known sequence (instead of having to begin at 1)."
+  },
+  {
+   "idx": "M.CC.p4.4",
+   "text": "Understands that numbers represent quantities and that the last number name identifies the quantity of objects counted (cardinality)."
+  },
+  {
+   "idx": "M.CC.p4.5",
+   "text": "Counts to answer “how many?” questions about as many as 10 things arranged in a line, a rectangular array or a circle or as many as five things in a scattered configuration."
+  },
+  {
+   "idx": "M.CC.p4.6",
+   "text": "Identifies whether the number of objects in one group is greater than, less than or equal to the number of objects in another group up to 10."
+  },
+  {
+   "idx": "M.CC.p4.7",
+   "text": "Subitizes to five."
+  },
+  {
+   "idx": "M.CC.p4.8",
+   "text": "Compares two numbers between 1 and 5 when presented as written numerals."
+  },
+  {
+   "idx": "M.OA.p3.2",
+   "text": "Uses concrete objects including shapes to copy simple patterns."
+  },
+  {
+   "idx": "M.MD.p4.1",
+   "text": "Describes and compares objects using measurable attributes (length, size, capacity and weight)."
+  },
+  {
+   "idx": "M.MD.p4.2",
+   "text": "Directly compares two objects with a measurable attribute in common to see which objects has “more than”/“less than” the attribute."
+  },
+  {
+   "idx": "M.MD.p4.3",
+   "text": "Sorts objects into categories, counts the numbers of objects in each category (limit category counts to less than or equal to 10), and makes comparisons between the categories based on quantity."
+  },
+  {
+   "idx": "M.MD.p4.4",
+   "text": "Collects data by categories to answer simple questions."
+  },
+  {
+   "idx": "M.G.p4.1",
+   "text": "Correctly names shapes regardless of their orientations or overall size. (Squares, circles, triangles, rectangles, cubes, cones, cylinders and spheres)"
+  },
+  {
+   "idx": "M.G.p4.2",
+   "text": "Describes objects in the environment using names of shapes, describes the relative positions of these objects using terms."
+  },
+  {
+   "idx": "M.G.p4.3",
+   "text": "Analyzes and compares two- and threedimensional shapes of different sizes and orientations. Describes similarities, differences, parts and other attributes."
+  },
+  {
+   "idx": "M.G.p4.4",
+   "text": "Creates shapes during play by building, drawing, etc."
+  },
+  {
+   "idx": "M.G.p4.5",
+   "text": "Puts together several shapes to make a picture and fill simple outline puzzles."
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "S.SI.p4.1",
+   "text": "Makes increasingly complex observations of objects, materials, organisms and events."
+  },
+  {
+   "idx": "S.SI.p4.2",
+   "text": "Provides greater detail in descriptions."
+  },
+  {
+   "idx": "S.SI.p4.3",
+   "text": "Asks questions, predicts, experiments, draws conclusions and explains results."
+  },
+  {
+   "idx": "S.MS.p4.1",
+   "text": "Describes and compares the effects of common forces (like push and pull) on objects and the impact of gravity, magnetism and mechanical forces, such as ramps, gears, pendulums and other simple machines."
+  },
+  {
+   "idx": "S.MS.p4.2",
+   "text": "Recognizes and describes the effect of his/her own actions on objects."
+  },
+  {
+   "idx": "S.LT.p4.1",
+   "text": "Asks/answers questions about objects, organisms and events in their environments."
+  },
+  {
+   "idx": "S.LT.p4.2",
+   "text": "Understands plants and animals need air, food and water."
+  },
+  {
+   "idx": "S.EC.p4.1",
+   "text": "Observes and discusses changes in weather and seasons using common weather-related vocabulary."
+  },
+  {
+   "idx": "S.EC.p4.2",
+   "text": "Observes and explains how plants and animals respond to changes in the environment and in seasons."
+  },
+  {
+   "idx": "S.EC.p4.3",
+   "text": "Understands how actions people take may change the environment and the impact actions have on the environment."
+  },
+  {
+   "idx": "S.EC.p4.4",
+   "text": "Demonstrates an understanding that the sun provides light and warmth."
+  },
+  {
+   "idx": "S.EC.p4.5",
+   "text": "Demonstrates an understanding that different weather conditions require different clothing or accessories."
+  },
+  {
+   "idx": "S.HHI.p4.1",
+   "text": "Demonstrates an understanding that living things exist in different habitats."
+  },
+  {
+   "idx": "S.HHI.p4.2",
+   "text": "Demonstrates ways in which the environment provides natural resources that are needed by people."
+  },
+  {
+   "idx": "S.HHI.p4.3",
+   "text": "Recognizes actions impact the environment."
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "SS.C.p4.1",
+   "text": "Identifies leaders at home and school."
+  },
+  {
+   "idx": "SS.E.p4.2",
+   "text": "Recognizes that people have wants and must make choices because resources and materials are limited."
+  },
+  {
+   "idx": "SS.E.p4.3",
+   "text": "Demonstrates an understanding that money can be exchanged for goods and services."
+  },
+  {
+   "idx": "SS.G.p3.6",
+   "text": "Demonstrates an emerging understanding that helping with home and classroom routines improves the quality of the environment."
+  },
+  {
+   "idx": "SS.G.p4.4",
+   "text": "Identifies and correctly uses terms related to location, direction and distance."
+  },
+  {
+   "idx": "SS.G.p4.5",
+   "text": "Creates simple “maps” or drawings of familiar places."
+  },
+  {
+   "idx": "SS.G.p4.6",
+   "text": "Matches objects to usual locations and identifies features of familiar places."
+  },
+  {
+   "idx": "SS.H.p4.7",
+   "text": "Describes some of the holidays, foods and special events related to his/ her own culture or acts them out in dramatic play."
+  },
+  {
+   "idx": "SS.H.p4.8",
+   "text": "Names city and state where he/she lives."
+  },
+  {
+   "idx": "SS.H.p4.9",
+   "text": "Demonstrates an understanding of time in the context of daily experiences."
+  },
+  {
+   "idx": "SED.CD.p4.1",
+   "text": "Follows adult guidelines and expectations for appropriate behavior."
+  },
+  {
+   "idx": "SED.CD.p4.2",
+   "text": "Recognizes effect of own behavior on others most of the time."
+  },
+  {
+   "idx": "SED.CD.p4.3",
+   "text": "Recognizes examples and nonexamples of words and actions that are helpful or hurtful."
+  },
+  {
+   "idx": "SED.CD.p4.4",
+   "text": "Shows awareness of and responds to feelings of others with adult guidance and support."
+  },
+  {
+   "idx": "SED.CD.p4.5",
+   "text": "Demonstrates an understanding of what it means to be a friend."
+  },
+  {
+   "idx": "SED.R.p4.1",
+   "text": "Anticipates and usually accepts consequences of own actions."
+  },
+  {
+   "idx": "SED.R.p4.2",
+   "text": "Follows predictable classroom routines and manages transitions positively in most situations with minimal adult support as needed."
+  },
+  {
+   "idx": "SED.R.p4.3",
+   "text": "Manages emotions, impulses and behaviors with minimal guidance from adults."
+  },
+  {
+   "idx": "SED.R.p4.4",
+   "text": "Attempts to solve social problems independently, by negotiation or with adult assistance."
+  },
+  {
+   "idx": "SED.PD.p4.1",
+   "text": "Recognizes and identifies more complex emotions in self and others, with accuracy with adult support."
+  },
+  {
+   "idx": "SED.PD.p4.2",
+   "text": "Expresses and responds to a range of emotions in socially acceptable ways."
+  },
+  {
+   "idx": "SED.PD.p4.3",
+   "text": "Describes characteristics of self and in relationship to others."
+  },
+  {
+   "idx": "SED.PD.p4.4",
+   "text": "States more complex personal information, like names of family members or names of neighbors."
+  },
+  {
+   "idx": "SED.PD.p4.5",
+   "text": "Expresses preferences in a socially acceptable way most of the time."
+  },
+  {
+   "idx": "SED.PD.p4.6",
+   "text": "Develops strategies to express strong emotion and calm self with adult help."
+  },
+  {
+   "idx": "SED.PD.p4.7",
+   "text": "Recognizes and accurately describes own feelings most of the time."
+  },
+  {
+   "idx": "SED.PD.p4.8",
+   "text": "Demonstrates age-appropriate independence in decisionmaking regarding activities and materials."
+  },
+  {
+   "idx": "SED.SD.p4.1",
+   "text": "Responds to needs of others and people in distress in caring ways."
+  },
+  {
+   "idx": "SED.SD.p4.2",
+   "text": "Demonstrates an understanding of which forms of emotional expression are acceptable for a given environment."
+  },
+  {
+   "idx": "SED.SD.p4.3",
+   "text": "Recognizes and respects similarities and differences between self and others."
+  },
+  {
+   "idx": "SED.SD.p4.4",
+   "text": "Treats others with respect when conflict or differences occur, given adult support."
+  },
+  {
+   "idx": "SED.SD.p4.5",
+   "text": "Displays socially competent behavior with peers."
+  },
+  {
+   "idx": "SED.SD.p4.6",
+   "text": "Participates in conversational turn-taking by listening and responding to what was said."
+  },
+  {
+   "idx": "SED.SD.p4.7",
+   "text": "Demonstrates strategies to join a play group with adult support."
+  },
+  {
+   "idx": "SED.SD.p4.8",
+   "text": "Invites other children to join groups or activities."
+  },
+  {
+   "idx": "SED.SD.p4.9",
+   "text": "Develops friendships with one or two preferred peers."
+  },
+  {
+   "idx": "SED.SD.p4.10",
+   "text": "Demonstrates an understanding of which forms of emotional expression are acceptable for a given environment."
+  },
+  {
+   "idx": "SED.SD.p4.11",
+   "text": "Adjusts behavior to different settings."
+  },
+  {
+   "idx": "SED.SD.p4.12",
+   "text": "Resolves conflicts with peers, seeking adult assistance when necessary."
+  },
+  {
+   "idx": "SED.SD.p4.13",
+   "text": "Demonstrates flexibility in solving problems; will change plans if a better idea is thought of or proposed."
+  }
+ ]
+}

@@ -172,6 +172,10 @@ export const OREGON_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-K in Oregon is the year before kindergarten, for children around 4. Programs include Oregon Pre-Kindergarten, Head Start, preschool and child care, and follow the Oregon Early Learning and Kindergarten Guidelines: approaches to learning, social-emotional development, language and communication, literacy and math.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in Oregon is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. Social studies starts with “Me and My World”: rules, fairness and maps of familiar places.",
       lookFor: "Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

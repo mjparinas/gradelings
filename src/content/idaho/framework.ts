@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Idaho, a US state. Standards are the Idaho Content Standards, adopted by the State Board of Education and published
 // by the Idaho Department of Education: mathematics, English language arts/literacy and science (all 2022) and social
@@ -73,9 +74,9 @@ export const IDAHO: Framework = {
   standardLabel: "Standard",
   sourceName: "Idaho Department of Education",
   sourceUrl: "https://www.sde.idaho.gov/about-us/departments/content-and-curriculum/idaho-content-standards/",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Idaho report cards",
     intro:

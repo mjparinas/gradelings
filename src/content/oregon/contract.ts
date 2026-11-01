@@ -1,10 +1,12 @@
-import { codeCite, research, type FrameworkContract } from "../contract";
+import { codeCite, preKCite, research, type FrameworkContract } from "../contract";
 import { PLAN } from "./plan";
 
 // Oregon's official standards, built from ODE's files by gradelings-research/oregon/build_outcomes.py.
 const OUTCOMES = research<Record<string, { idx: string }[]>>("oregon/outcomes.json");
 
 export const contract: FrameworkContract = {
+  // Pre-K cites the early-learning document (docs/research/oregon/prek).
+  preK: preKCite("oregon", "Oregon"),
   cite: codeCite(OUTCOMES, "Oregon"),
   ownPrefix: "or-",
   adoptsFrom: ["ca-nb", "ca-ns", "ca-mb", "us-wa"],

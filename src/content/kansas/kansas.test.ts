@@ -38,9 +38,9 @@ describe("Kansas", () => {
   });
 
   it("cites social studies by the five standards' benchmarks, only those each early grade teaches", () => {
-    // Kindergarten teaches standard 1, Grade 1 standards 1 and 2, Grade 2 standards 1, 2 and 4, Grade 3 standards 1 to 4.
+    // Pre-K cites the early learning standards instead (the framework contract checks them). Kindergarten teaches standard 1, Grade 1 standards 1 and 2, Grade 2 standards 1, 2 and 4, Grade 3 standards 1 to 4.
     const allowed: Record<string, string[]> = { k: ["1"], "1": ["1", "2"], "2": ["1", "2", "4"], "3": ["1", "2", "3", "4"] };
-    for (const { c, u, key } of kansas.filter(({ c }) => c.subject === "social")) {
+    for (const { c, u, key } of kansas.filter(({ c }) => c.subject === "social" && c.grade !== "pk")) {
       const codes = u.standards["us-ks"]!.split(" · ")[0].split("; ");
       for (const code of codes) {
         expect(code, `${key} cites a benchmark`).toMatch(/^[1-5]\.[1-4]$/);

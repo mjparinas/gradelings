@@ -1,0 +1,198 @@
+{
+ "pk/math": [
+  {
+   "idx": "M.1",
+   "text": "Child knows number names and the count sequence."
+  },
+  {
+   "idx": "M.2",
+   "text": "Child recognizes the number of objects in a small set."
+  },
+  {
+   "idx": "M.3",
+   "text": "Child understands the relationship between numbers and quantities."
+  },
+  {
+   "idx": "M.4",
+   "text": "Child compares numbers."
+  },
+  {
+   "idx": "M.5",
+   "text": "Child associates a quantity with written numerals and begins to write numbers."
+  },
+  {
+   "idx": "M.6",
+   "text": "Child understands addition as adding to and understands subtraction as taking away from."
+  },
+  {
+   "idx": "M.7",
+   "text": "Child understands simple patterns."
+  },
+  {
+   "idx": "M.8",
+   "text": "Child works with numbers 11 to 19 to gain foundations for place value."
+  },
+  {
+   "idx": "M.9",
+   "text": "Child measures objects by their various attributes using standard and non-standard measurement and uses differences in attributes to make comparisons."
+  },
+  {
+   "idx": "M.10",
+   "text": "Child classifies objects into given categories; counts the numbers of objects in each category and sorts the categories by count. (Limit category counts to be less than or equal to 10)."
+  },
+  {
+   "idx": "M.11",
+   "text": "Child identifies, describes, compares, and composes shapes."
+  },
+  {
+   "idx": "M.12",
+   "text": "Child explores the positions of objects in space."
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "LIT.1",
+   "text": "Child demonstrates awareness that spoken language is composed of smaller segments of sound."
+  },
+  {
+   "idx": "LIT.2",
+   "text": "Child demonstrates an understanding of how print is used (functions of print) and the rules that govern how print works (conventions of print)."
+  },
+  {
+   "idx": "LIT.3",
+   "text": "Child identifies letters of the alphabet and produces correct sounds associated with letters."
+  },
+  {
+   "idx": "LIT.4",
+   "text": "Child demonstrates an understanding of narrative structure through storytelling/re-telling."
+  },
+  {
+   "idx": "LIT.5",
+   "text": "Child asks and answers questions about a book that was read aloud."
+  },
+  {
+   "idx": "LIT.6",
+   "text": "Child writes for a variety of purposes using increasingly sophisticated marks."
+  },
+  {
+   "idx": "LC.1",
+   "text": "Child attends to communication and language from others."
+  },
+  {
+   "idx": "LC.2",
+   "text": "Child understands and responds to increasingly complex communication and language from others."
+  },
+  {
+   "idx": "LC.3",
+   "text": "Child varies the amount of information provided to meet the demands of the situation."
+  },
+  {
+   "idx": "LC.4",
+   "text": "Child understands, follows, and uses appropriate social and conversational rules."
+  },
+  {
+   "idx": "LC.5",
+   "text": "Child expresses self in increasingly long, detailed, and sophisticated ways."
+  },
+  {
+   "idx": "LC.6",
+   "text": "Child understands and uses a wide variety of words for a variety of purposes."
+  },
+  {
+   "idx": "LC.7",
+   "text": "Child shows understanding of word categories and relationships among words."
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "P-ATL10",
+   "text": "Child demonstrates initiative and independence."
+  },
+  {
+   "idx": "P-ATL11",
+   "text": "Child shows interest in and curiosity about the world around them."
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "SE.1",
+   "text": "Child recognizes self as a unique individual having own abilities, characteristics, emotions, and interests"
+  },
+  {
+   "idx": "SE.2",
+   "text": "Child expresses confidence in own skills and positive feelings about self."
+  },
+  {
+   "idx": "SE.3",
+   "text": "Child has a sense of belonging to family, community, and other groups."
+  },
+  {
+   "idx": "SE.4",
+   "text": "Child expresses a broad range of emotions and recognizes these emotions in self and others."
+  },
+  {
+   "idx": "SE.5",
+   "text": "Child expresses care and concern toward others."
+  },
+  {
+   "idx": "SE.6",
+   "text": "Child manages emotions with increasing independence."
+  },
+  {
+   "idx": "SE.7",
+   "text": "Child engages in and maintains positive relationships and interactions with a trusted adult."
+  },
+  {
+   "idx": "SE.8",
+   "text": "Child engages in prosocial and cooperative behavior with trusted adult."
+  },
+  {
+   "idx": "SE.9",
+   "text": "Child engages in and maintains positive interactions and relationships with other children."
+  },
+  {
+   "idx": "SE.10",
+   "text": "Child engages in cooperative play with other children."
+  },
+  {
+   "idx": "SE.11",
+   "text": "Child uses basic problem-solving skills to resolve conflicts with other children."
+  },
+  {
+   "idx": "P-ATL1",
+   "text": "Child manages emotions with increasing independence."
+  },
+  {
+   "idx": "P-ATL2",
+   "text": "Child follows rules and routines with increasing independence."
+  },
+  {
+   "idx": "P-ATL3",
+   "text": "Child appropriately handles and takes care of materials."
+  },
+  {
+   "idx": "P-ATL4",
+   "text": "Child manages actions, words, and behavior with increasing independence."
+  },
+  {
+   "idx": "P-ATL5",
+   "text": "Child demonstrates an increasing ability to control impulses."
+  },
+  {
+   "idx": "P-ATL6",
+   "text": "Child maintains focus and sustains attention with minimal trusted adult support."
+  },
+  {
+   "idx": "P-ATL7",
+   "text": "Child persists in tasks."
+  },
+  {
+   "idx": "P-ATL8",
+   "text": "Child holds information in mind and manipulates it to perform tasks."
+  },
+  {
+   "idx": "P-ATL9",
+   "text": "Child demonstrates flexibility in thinking and learning."
+  }
+ ]
+}
