@@ -28,6 +28,7 @@ import { ChildrenPage } from "./Children";
 import { ConferenceSheet } from "./ConferenceSheet";
 import { Overview } from "./Overview";
 import { PlacementPage } from "./Placement";
+import { PracticeSheetPage } from "./PracticeSheet";
 import { ReportCardsPage } from "./ReportCards";
 import { ReportsPage } from "./Reports";
 import { SettingsPage } from "./Settings";
@@ -85,6 +86,7 @@ describe("the parent area for a US family", () => {
   it("Conference sheet", () => expectUs(<ConferenceSheet childId="a" />));
   it("Placement", () => expectUs(<PlacementPage childId="a" />));
   it("Year in review", () => expectUs(<YearReviewPage childId="a" />));
+  it("Practice sheet", () => expectUs(<PracticeSheetPage childId="a" />));
   it("Children", () => expectUs(<ChildrenPage />));
   it("Editing a child", async () => {
     await expectUs(<ChildrenPage />, [/Edit/]);

@@ -24,6 +24,7 @@ import { Overview } from "./Overview";
 import { PlacementPage } from "./Placement";
 import { ReportCardsPage } from "./ReportCards";
 import { YearReviewPage } from "./YearReview";
+import { PracticeSheetPage } from "./PracticeSheet";
 import { ReportsPage } from "./Reports";
 import { SettingsPage } from "./Settings";
 import { SubscriptionPage } from "./Subscription";
@@ -43,7 +44,7 @@ const NAV = [
 ];
 
 /** Older links still open: Placement and Report cards live under Reports, Privacy under Account. */
-const NAV_PARENT: Record<string, string> = { placement: "reports", "report-cards": "reports", year: "reports", privacy: "account" };
+const NAV_PARENT: Record<string, string> = { placement: "reports", "report-cards": "reports", year: "reports", sheet: "reports", privacy: "account" };
 
 const noSubscribe = () => () => {};
 
@@ -78,7 +79,7 @@ function Shell({ children, active, pending }: { children: ReactNode; active: str
   return (
     <div className="min-h-dvh bg-[#f6f5f1]">
       <SkipLink />
-      <header className="sticky top-0 z-30 border-b border-line bg-white/90 backdrop-blur" style={{ paddingTop: "env(safe-area-inset-top)" }}>
+      <header className="sticky top-0 z-30 border-b print:hidden border-line bg-white/90 backdrop-blur" style={{ paddingTop: "env(safe-area-inset-top)" }}>
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-2 px-4 py-3">
           <div className="flex items-center gap-3">
             <Link href="/play/" className="rounded-xl bg-[#4f8ef7] px-3 py-2 text-sm font-bold text-[#0f172a]">
@@ -131,11 +132,16 @@ function Shell({ children, active, pending }: { children: ReactNode; active: str
       </header>
       <RouteProgress pending={pending} />
       <main id={MAIN_ID} tabIndex={-1} className="mx-auto max-w-6xl px-4 py-6" style={{ paddingBottom: "max(2rem, env(safe-area-inset-bottom))" }}>
-        <UsConsent />
-        <UpgradeBanner />
+        {/* Printed pages (sheets, reports) are the page alone, without the header or the plan banner. */}
+        <div className="print:hidden">
+          <UsConsent />
+          <UpgradeBanner />
+        </div>
         {children}
       </main>
-      <FeedbackLink audience="parent" signedIn={Boolean(family.account)} />
+      <div className="print:hidden">
+        <FeedbackLink audience="parent" signedIn={Boolean(family.account)} />
+      </div>
     </div>
   );
 }
@@ -188,6 +194,9 @@ const Section = memo(function Section({ hash, billing, onBilling }: { hash: stri
       break;
     case "year":
       page = <YearReviewPage childId={path[1]} />;
+      break;
+    case "sheet":
+      page = <PracticeSheetPage childId={path[1]} />;
       break;
     case "children":
       page = <ChildrenPage />;

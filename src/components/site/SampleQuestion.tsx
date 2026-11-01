@@ -112,7 +112,7 @@ function Body({ q, seed }: { q: Question; seed: number }) {
  * `tryIt`: on a unit's page, a tap-to-answer question can be answered right there (`TryChoices`), with the app
  * link after it. Elsewhere (worksheets) the answer stays behind "Show answer".
  */
-export function SampleQuestion({ q, n, seedText, className = "", tryIt }: { q: Question; n: number; seedText: string; className?: string; tryIt?: { play: string; playLabel: string } }) {
+export function SampleQuestion({ q, n, seedText, className = "", tryIt, hideAnswer }: { q: Question; n: number; seedText: string; className?: string; tryIt?: { play: string; playLabel: string }; /** No "Show answer" (the parent practice sheet keeps answers to its key). */ hideAnswer?: boolean }) {
   return (
     <li className={`card flex flex-col gap-3 p-4 sm:p-5 ${className}`}>
       <p className="text-sm font-bold text-ink-soft">Question {n}</p>
@@ -136,7 +136,7 @@ export function SampleQuestion({ q, n, seedText, className = "", tryIt }: { q: Q
       ) : (
         <>
           <Body q={q} seed={hashSeed(seedText)} />
-          <Answer q={q} />
+          {!hideAnswer && <Answer q={q} />}
         </>
       )}
     </li>

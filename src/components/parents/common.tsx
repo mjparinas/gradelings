@@ -3,6 +3,7 @@
 import { useId, type ReactNode } from "react";
 import { gradeLabel } from "@/lib/gradeLabel";
 import type { Profile } from "@/lib/model";
+import { useFlag } from "@/lib/remoteFlags";
 import { useSay } from "@/lib/say";
 import { useProfiles } from "@/lib/store";
 import { CritterSvg } from "../Critter";
@@ -209,14 +210,16 @@ const REPORT_TABS = [
   { path: "placement", label: "Placement test" },
   { path: "report-cards", label: "Report card" },
   { path: "year", label: "Year in review" },
+  { path: "sheet", label: "Practice sheet", flag: "practice-sheets" },
 ];
 
 /** The views under Reports, keeping the chosen child. */
 export function ReportTabs({ current, childId }: { current: string; childId?: string }) {
+  const sheets = useFlag("practice-sheets");
   return (
     <nav aria-label="Report views" className="mb-5 print:hidden">
       <ul className="flex flex-wrap gap-2">
-        {REPORT_TABS.map((t) => (
+        {REPORT_TABS.filter((t) => !t.flag || (t.flag === "practice-sheets" && sheets)).map((t) => (
           <li key={t.path}>
             <a
               href={`#/${t.path}${childId ? `/${childId}` : ""}`}
