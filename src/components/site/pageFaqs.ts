@@ -216,7 +216,7 @@ export function pricingFaqs(usd: boolean): Faq[] {
     },
     {
       q: "Can my children be in different grades?",
-      a: "Yes. Each child has their own grade, curriculum and settings, and every grade from Kindergarten to Grade 9 is included.",
+      a: "Yes. Each child has their own grade, curriculum and settings, and every grade from Pre-K to Grade 9 is included (Pre-K where your province or state offers it).",
     },
     {
       q: "Can I get a refund?",

@@ -7,7 +7,7 @@ import { QuestionGallery } from "@/components/site/QuestionGallery";
 import { SitePage } from "@/components/site/SiteChrome";
 import { appJsonLd } from "@/components/site/jsonld";
 import { curriculumPath } from "@/components/site/curriculum";
-import { byCountry, kidPracticeSteps, offersUsd, provinceCoverage, regionList, regionSummary, regionWord, siteCurrencies } from "@/components/site/provinces";
+import { byCountry, kidPracticeSteps, offersUsd, preKRegions, provinceCoverage, regionList, regionSummary, regionWord, siteCurrencies } from "@/components/site/provinces";
 import { DEFAULT_GOAL_MINUTES } from "@/lib/model";
 import { GAMES } from "@/components/play/games/types";
 import { FRAMEWORKS } from "@/content/frameworks";
@@ -23,8 +23,8 @@ import { buildLabel } from "@/lib/build";
 import { AppLink } from "@/components/site/AppLink";
 
 export const metadata: Metadata = pageMeta({
-  title: { absolute: `${APP_NAME} · Curriculum practice and games for Kindergarten to Grade 9` },
-  description: `Ad-free practice for Kindergarten to Grade 9 that follows the curriculum. An adaptive Adventure mode, learning games earned with focused practice, trophies, offline play, and progress reports in the same language as the report card. Free for ${TRIAL_DAYS} days.`,
+  title: { absolute: `${APP_NAME} · Curriculum practice and games for Pre-K to Grade 9` },
+  description: `Ad-free practice for Pre-K to Grade 9 that follows the curriculum. An adaptive Adventure mode, learning games earned with focused practice, trophies, offline play, and progress reports in the same language as the report card. Free for ${TRIAL_DAYS} days.`,
   path: "/",
 });
 
@@ -61,7 +61,7 @@ const FAQS = [
   },
   {
     q: `Which grades does ${APP_NAME} cover?`,
-    a: `Kindergarten to Grade 9, in math, English language arts, science and social studies, plus French Immersion and Core French where your province teaches them${offersUsd(FRAMEWORKS) ? " (US states have no French yet)" : ""}. The text, buttons and read-aloud adapt to the child's age: big pictures and spoken prompts for Kindergarten and Grade 1, more independence for older kids.`,
+    a: `Pre-K to Grade 9 (Pre-K where your province or state offers it; ${preKRegions(FRAMEWORKS)} do today), in math, English language arts, science and social studies, plus French Immersion and Core French where your province teaches them${offersUsd(FRAMEWORKS) ? " (US states have no French yet)" : ""}. The text, buttons and read-aloud adapt to the child's age: big pictures and spoken prompts for Kindergarten and Grade 1, more independence for older kids.`,
   },
   {
     q: offersUsd(FRAMEWORKS) ? "Is it matched to our province's or state's curriculum?" : "Is it matched to our provincial curriculum?",
@@ -138,7 +138,7 @@ export default function Home() {
       {/* Hero */}
       <section className="grid items-center gap-8 pb-6 md:grid-cols-[1.1fr_1fr] md:pt-4 md:pb-12">
         <div>
-          <p className="mb-3 inline-flex rounded-full bg-[#fff4cc] px-3 py-1 text-sm font-bold text-[#8a6400]">{offersUsd(FRAMEWORKS) ? "Canadian and US curriculum" : "Canadian curriculum"} · Kindergarten to Grade 9</p>
+          <p className="mb-3 inline-flex rounded-full bg-[#fff4cc] px-3 py-1 text-sm font-bold text-[#8a6400]">{offersUsd(FRAMEWORKS) ? "Canadian and US curriculum" : "Canadian curriculum"} · Pre-K to Grade 9</p>
           <h1 className="text-4xl leading-tight font-bold sm:text-5xl lg:text-6xl">
             Practice that feels like play. <span className="text-[#4f8ef7]">Progress you can read.</span>
           </h1>
@@ -223,6 +223,7 @@ export default function Home() {
         </h2>
         <p className="mb-6 max-w-2xl font-read text-lg text-ink-soft">
           {coverage.range ? `${GRADE_LABEL[coverage.range.from]} to ${GRADE_LABEL[coverage.range.to]} across ${regionSummary(FRAMEWORKS)}. ` : ""}
+          {preKRegions(FRAMEWORKS) !== "every province and state" ? `Pre-K is in ${preKRegions(FRAMEWORKS)}, with more on the way. ` : ""}
           Pick yours to see every unit your child will practise.
         </p>
         {byCountry(FRAMEWORKS).map((group, i, groups) => (

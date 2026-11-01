@@ -24,7 +24,7 @@ export function MilestonePage({ card, image }: { card: MilestoneCard; image: str
         {card.title}
       </h1>
       <p className="font-read text-lg text-ink-soft">{card.line}</p>
-      <p className="font-read">A grown-up shared this to celebrate. {APP_NAME} is curriculum-matched practice for Kindergarten to Grade 9, with kind feedback and learning games.</p>
+      <p className="font-read">A grown-up shared this to celebrate. {APP_NAME} is curriculum-matched practice for Pre-K to Grade 9, with kind feedback and learning games.</p>
       <div className="flex flex-wrap justify-center gap-3">
         <AppLink href="/play/" className="btn btn-good min-h-14 px-8 text-xl">
           Try it free

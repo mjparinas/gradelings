@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { FRAMEWORKS, getFramework, type Framework } from "@/content/frameworks";
 import type { GradeId, SubjectId } from "@/content/types";
-import { byCountry, kidPracticeSteps, offersUsd, provinceCoverage, regionList, regionSummary, regionWord, subjectList } from "./provinces";
+import { byCountry, kidPracticeSteps, offersUsd, preKRegions, provinceCoverage, regionList, regionSummary, regionWord, subjectList } from "./provinces";
 
 describe("homepage province coverage", () => {
   it("names shared subjects once and keeps proper nouns", () => {
@@ -124,5 +124,12 @@ describe("provinces and states in marketing copy", () => {
         ? `${FRAMEWORKS.length - us.length} Canadian provinces and territories, ${named.slice(0, -1).join(", ")} and ${named.at(-1)}`
         : `${FRAMEWORKS.length - us.length} Canadian provinces and territories and ${named[0]}`,
     );
+  });
+});
+
+describe("preKRegions", () => {
+  it("counts the regions that list Pre-K, and says every region once all do", () => {
+    expect(preKRegions([{ grades: ["pk", "k"] }, { grades: ["k"] }])).toBe("1 of 2 provinces and states");
+    expect(preKRegions([{ grades: ["pk", "k"] }, { grades: ["pk"] }])).toBe("every province and state");
   });
 });
