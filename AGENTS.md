@@ -568,6 +568,25 @@ Full guide: `docs/CONTENT_GUIDE.md`. The essentials:
   - never treat all Nations as one ("some", "many");
   - no sacred or ceremonial details and no stereotyped emoji;
 
+## Decisions
+
+Melvin's product and technical decisions are recorded here, newest last, so they survive outside Claude's memory. **Agents: when Melvin makes a product or technical decision, add it here in the PR for that work (or a small docs PR), not only in memory.** Put a decision that belongs to an existing topic in that section too.
+
+- **Test account** (November 1, 2026): `mjparinas@gmail.com` is Melvin's own test account, used for checkout testing. Leave it out of customer and revenue counts. The first real customer arrived on November 1, 2026.
+- **Video help for stuck kids** (November 1, 2026): members only, narrated with Supertonic TTS.
+- **Holiday themes** (November 1, 2026): a theme changes the favicon only. The iOS and Android app icons stay as they are for now.
+
+## Features at a glance
+
+Details are in the sections above; this list only names features that aren't described elsewhere in this file.
+
+- **What's new** (`/whats-new/`, `src/lib/whatsNew.ts`, `docs/WHATS_NEW.md`): a short daily post for parents and teachers about what changed and what got fixed, in plain words, one page per day (`/whats-new/YYYY-MM-DD/`) and in the sitemap. Add a day when a change a family or class would notice ships; leave out CI, dependency bumps, admin-only work and anything behind a flag that is still off.
+- **Sign-in links** (flag `magic-link`): parents and teachers can be emailed a one-time link that signs them in without a password. Never for admin or support accounts or accounts with two-step sign-in. A link takes over an unconfirmed account.
+- **Feedback** (flag `app-feedback`): a quiet "How's Gradelings?" rating card on the parent Overview after a good week, and a Feedback link in the parent and teacher areas.
+- **Server kill switches** (flags `signups`, `new-classes`, `redeem-codes`): pause new accounts, new classes or code redemption from the admin panel. Existing classes and accounts keep working.
+- **Admin email on a new customer:** admins are emailed when a family becomes a paying customer.
+- **Bundle ids:** the Android package and the iOS bundle id are both `com.gradelings.app`.
+
 ## Open items
 
 - **Known content gaps** are listed in each framework's own file, `docs/frameworks/<slug>.md` ("Known gaps"), so a new state never edits this list. Cross-cutting gaps:
