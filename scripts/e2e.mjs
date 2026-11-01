@@ -244,6 +244,17 @@ async function eventsWaiting(page) {
     await page.getByRole("listbox", { name: "Note for Maya" }).getByRole("option", { name: /Love you lots/ }).click();
     await page.getByRole("button", { name: "Send", exact: true }).click();
     if (!(await page.getByRole("status").filter({ hasText: 'Sent: "Love you lots! 💕"' }).count())) errors.push("parent note: sending from the dropdown didn't confirm");
+    // Goal plan (family plan; this device is on the trial): get ready for next grade's math, a week-by-week plan.
+    const goal = page.getByRole("group", { name: "Goal plan for Maya" });
+    await goal.getByRole("button", { name: "Set a goal" }).click();
+    await goal.getByRole("button", { name: "Make the plan" }).click();
+    if (!(await vis(goal.getByRole("progressbar", { name: "Maya's goal" })))) errors.push("goal plan: no progress bar after making the plan");
+    if (!(await vis(goal.getByText(/Week 1 of \d+: up next/)))) errors.push("goal plan: this week's units aren't shown");
+    await goal.getByRole("button", { name: "See the whole plan" }).click();
+    await goal.scrollIntoViewIfNeeded();
+    await shot(page, "20b-parent-goal-plan");
+    await goal.getByRole("button", { name: "Remove goal" }).click();
+    if (!(await vis(goal.getByRole("button", { name: "Set a goal" })))) errors.push("goal plan: removing it didn't bring back Set a goal");
     await page.goto(`${BASE}/parents/#/settings`);
     await page.waitForTimeout(500);
     await page.getByRole("radio", { name: "Free play" }).click();
