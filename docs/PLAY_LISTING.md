@@ -8,27 +8,73 @@ Google Play's payments policy doesn't let an app sell digital content outside Go
 
 ## Store listing
 
-- **App name:** Gradelings: K-9 Practice (30 characters at most).
-- **Short description** (80 at most): `Curriculum practice and learning games for Kindergarten to Grade 9.` (68 characters)
-- **Full description:**
+Paste these into Play Console > Grow users > Store presence > Main store listing. Counts are checked by `src/lib/playListing.test.ts`.
 
-  > Gradelings is kind, curriculum-matched practice for Kindergarten to Grade 9, for families in Canada and the United States.
-  >
-  > • Matched to your province, territory or state's curriculum: math, language arts, science and social studies, plus French Immersion or Core French where your province teaches them.
-  > • Speaks the language of the report card, so you can see where your child is growing.
-  > • Gentle feedback: a wrong answer gets a hint and another try. No buzzers, no shame.
-  > • Learning earns game time, with limits you set.
-  > • Works offline once a grade has downloaded. Read-aloud for early readers.
-  > • Calm mode turns off timers, motion and noise for children who find them hard.
-  > • Up to 5 children on one family plan, each with their own grade and settings.
-  >
-  > No ads, ever. We never sell data. Children can never buy anything; coins are earned only by learning.
-  >
-  > Start with a free trial. After it ends, the first units of every subject stay free.
+- **App name** (30 at most): `Gradelings: K-9 Practice`
+- **Short description** (80 at most): `Curriculum-matched practice and learning games for Kindergarten to Grade 9.`
+- **Full description** (4,000 at most):
 
-- **Category:** Education. **Tags:** Education, Kids, Math.
-- **Contact email:** `CONTACT_EMAIL` in `src/lib/brand.ts`. **Website:** the production domain. **Privacy policy:** `https://www.gradelings.com/privacy/`.
-- **Graphics:** a 512×512 icon (the PWA icon), a 1024×500 feature graphic, and at least 4 screenshots each for phone, 7-inch tablet and 10-inch tablet. `node scripts/e2e-devices.mjs` already drives the app at those sizes; take the screenshots from a demo child with some practice, with no real child's name.
+```text
+Practice that matches your child's school curriculum, with feedback that is kind and games that are worth playing.
+
+Gradelings is for children from Kindergarten to Grade 9, for families in Canada and the United States. Pick your child's province, territory or state and grade, and every question follows what their class is learning.
+
+WHAT YOUR CHILD GETS
+• Math, language arts, science and social studies, written for your province, territory or state.
+• French Immersion and Core French where your province teaches them, with read-aloud in French.
+• Adventure mode: endless questions picked just for your child, a mix of what is new, what is tricky and what is due for a refresher.
+• Short lessons that explain how it works before the questions begin, so little ones are never left guessing.
+• Hints and another try after a wrong answer. Soft sounds, never a buzzer. Never any shame.
+• Math Facts practice for adding, taking away, times tables and division.
+• Stories to read along with, at the right level for your child.
+• Trophies, stickers, coins, a buddy that grows, and a room to decorate, all earned by learning.
+• Arcade games that teach something. Learning earns game time, with limits you set.
+• Read-aloud for early readers, in a natural voice that works offline.
+
+WHAT YOU GET AS A GROWN-UP
+• Reports in the language of the report card, with your province's own levels and a plain "at home" note for each. They show practice, so you can see where your child is growing and what to work on next. The teacher decides the mark.
+• A weekly progress email, if you want one.
+• A printable sheet for the conversation at parent-teacher interviews.
+• A parent area behind a PIN, so settings, accounts and reports stay with you.
+• Up to 5 children on one family plan, each with their own grade, subjects and settings.
+• Calm mode, for children who find timers, motion or noise hard: it quiets sounds, slows animation and hides the clocks.
+• Dyslexia-friendly font, roomy text and high contrast options.
+
+FOR TEACHERS
+Create a class, add students with a simple login code (no emails and no passwords for children), assign units, and see who needs a hand. Classes are free.
+
+WORKS WELL OFFLINE
+Once a grade has downloaded, lessons and progress keep working without a connection, and sync when you are back online.
+
+OUR PROMISES
+• No ads. Ever.
+• We never sell data.
+• Children can never buy anything. Coins are earned only by learning.
+• Children can't type free text, share photos or talk to other people in the app.
+• You can export or delete everything, any time.
+• A real person replies to your questions within one business day.
+
+Sign in with your family account to unlock everything your plan includes. Everything on this page is practice that goes with school, not a replacement for your child's teacher.
+```
+
+Why no price or trial in the text: the Android app sells nothing (see "Payments in the app" above), and Play's payments policy limits text that points people elsewhere to pay. "Sign in with your family account" is the only line about plans.
+
+- **Category:** Education. **Tags:** Education, Kids, Math (pick from Play's list).
+- **Contact email:** `CONTACT_EMAIL` in `src/lib/brand.ts`. **Website:** `https://www.gradelings.com`. **Privacy policy:** `https://www.gradelings.com/privacy/`.
+
+## Graphics
+
+All in `store-assets/android/`, made by scripts in the repo, so they can be redone after a design change:
+
+| Play field | File | How it is made |
+| --- | --- | --- |
+| App icon, 512 × 512 | `icon-512.png` | `node scripts/android-graphics.mjs` draws `public/icon.svg` full bleed (Play rounds the corners itself). |
+| Feature graphic, 1024 × 500 | `feature-graphic-1024x500.png` | Same script: brand blue, the bear and one line. No prices or claims, since Play rejects them. |
+| Phone screenshots (1080 × 1920) | `phone/` | Captioned shots. The same shots without captions are in `raw/phone-*.png`. |
+| 7-inch tablet (1200 × 1920) | `tablet-7/` | Same. |
+| 10-inch tablet (1600 × 2560) | `tablet-10/` | Same. |
+
+Every screenshot is the real app: `node scripts/android-screenshots.mjs http://localhost:3000 store-assets/android/raw` plays a few questions as a demo child called "Maya" (no real child), opening pages as the Android app does (`?app=android`), and fails if a price or Subscribe button shows. `node scripts/android-captions.mjs` adds the captions. Use a production build when you redo them (`npm run build && npm start`); with `next dev` the script hides the dev badge itself. Set `CHROMIUM_PATH` if Playwright's pinned browser isn't installed. Upload either set; Play wants 2 to 8 per device type, and these are 5 each. The arcade is left out because a new child sees it locked until they have learned for a while.
 
 ## Target audience and content (App content page)
 
