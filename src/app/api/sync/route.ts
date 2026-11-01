@@ -22,7 +22,7 @@ const MAX_FAMILY_EVENTS = 250_000;
 const MAX_JSON = 4000;
 /** Most child records (deleted ones included) one family can store. Families have at most 5 children at a time. */
 const MAX_FAMILY_PROFILES = 50;
-const EVENT_TYPES = new Set(["answer", "session", "play", "game", "trophy", "secret", "buy", "quest", "goal", "placement", "help", "story", "mystery"]);
+const EVENT_TYPES = new Set(["answer", "session", "play", "game", "trophy", "secret", "buy", "quest", "goal", "placement", "help", "video", "story", "mystery"]);
 
 interface SyncBody {
   cursor?: number;
