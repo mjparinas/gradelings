@@ -2,7 +2,7 @@ import { cancelReason } from "@/lib/cancelReasons";
 import { appOrigin } from "@/server/auth";
 import { query, run } from "@/server/db";
 import { recordConsent } from "@/server/consent";
-import { familyPath, sendAlert } from "@/server/alerts";
+import { alertNewCustomer, familyPath, sendAlert } from "@/server/alerts";
 import { recordWebhook } from "@/server/monitor";
 import { recordInvoice, recordRefund } from "@/server/payments";
 import { fulfilGift, isPaidGift } from "@/server/gifts";
@@ -61,7 +61,8 @@ async function isStale(event: StripeEvent, familyId: string | undefined, custome
 async function apply(req: Request, event: StripeEvent, obj: Record<string, unknown>, now: number) {
   const at = (event.created ?? 0) * 1000;
 
-  if (event.type === "invoice.paid") await recordInvoice(obj, at || now);
+  // A family's first real payment is good news for the admins (not a trial's C$0 invoice, not a renewal).
+  if (event.type === "invoice.paid" && (await recordInvoice(obj, at || now))) await alertNewCustomer(String(obj.id), now, appOrigin(req));
   if (event.type === "charge.refunded") await recordRefund(obj);
   if (event.type === "invoice.payment_failed" || event.type === "charge.dispute.created") await alertBilling(event.type, obj, now);
 

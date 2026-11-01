@@ -9,6 +9,8 @@ import { recordStaffFailure, STAFF_ALERT_KEY, staffFailuresSince, type StaffStep
 import { systemReport } from "./systemHealth";
 import { staffEmails } from "./admin";
 import { STAFF_FLOOD } from "@/lib/systemHealth";
+import { money } from "@/lib/plan";
+import { toCountryCode } from "@/lib/country";
 
 // Email to the owner: instant alerts (a payment failed, a dispute, the daily job failed, a System check went
 // down) and a morning digest from the daily job. They go only to confirmed accounts listed in ADMIN_EMAILS.
@@ -53,7 +55,7 @@ const originOf = (fallback?: string) => (process.env.NEXT_PUBLIC_SITE_URL ?? "")
  * Sends an alert to every admin, unless alerts are off or the same alert (`key`) went out in the last few hours.
  * Never throws: an alert failing must not break the webhook or job that raised it.
  */
-export async function sendAlert(key: string, a: { subject: string; lines: string[]; path?: string }, now = Date.now(), origin?: string): Promise<boolean> {
+export async function sendAlert(key: string, a: { subject: string; lines: string[]; path?: string; news?: boolean }, now = Date.now(), origin?: string): Promise<boolean> {
   try {
     if (!(await alertSettings()).instant) return false;
     const last = Number((await getSetting(`alert-sent:${key}`)) ?? 0);
@@ -61,7 +63,7 @@ export async function sendAlert(key: string, a: { subject: string; lines: string
     const to = await adminRecipients();
     if (!to.length) return false;
     await setSetting(`alert-sent:${key}`, String(now));
-    for (const t of to) await sendEmail(alertEmail(t, originOf(origin), { subject: `Alert: ${a.subject}`, heading: a.subject, lines: a.lines, path: a.path }));
+    for (const t of to) await sendEmail(alertEmail(t, originOf(origin), { subject: a.news ? a.subject : `Alert: ${a.subject}`, heading: a.subject, lines: a.lines, path: a.path }));
     return true;
   } catch (e) {
     console.error("[alert] could not send", (e as Error).message);
@@ -96,6 +98,51 @@ export async function reportStaffFailure(email: string, step: StaffStep, now = D
 
 /** A link to one family's page in the admin panel. */
 export const familyPath = (familyId: string) => `/admin/?family=${encodeURIComponent(familyId)}`;
+
+/**
+ * Good news for the admins: a family's first payment ever (a paid invoice already in `payments`). A free trial's
+ * C$0 invoice is never stored, so a family that subscribes during the trial is announced when the trial ends and
+ * the card is first charged. Renewals, and a family that paid before and came back, are not announced.
+ * Account email, plan and amount only, never children. Never throws.
+ */
+export async function alertNewCustomer(invoiceId: string, now = Date.now(), origin?: string): Promise<boolean> {
+  try {
+    const row = (
+      await query<{ family_id: string; amount: number; currency: string; interval: string | null; email: string | null; country: string | null; created_at: number }>(
+        `SELECT p.family_id, p.amount, p.currency, p.interval, f.country, f.created_at,
+           (SELECT e.email FROM parents e WHERE e.family_id = p.family_id ORDER BY e.created_at LIMIT 1) AS email
+         FROM payments p JOIN families f ON f.id = p.family_id WHERE p.id = ?`,
+        [invoiceId],
+      )
+    )[0];
+    if (!row) return false;
+    const earlier = await query("SELECT 1 FROM payments WHERE family_id = ? AND id != ? AND amount > 0 LIMIT 1", [row.family_id, invoiceId]);
+    if (earlier.length) return false;
+    const paying = Number((await query<{ n: number }>("SELECT COUNT(DISTINCT family_id) AS n FROM payments WHERE family_id IS NOT NULL AND amount > refunded"))[0]?.n ?? 0);
+    const currency = String(row.currency).toUpperCase() === "USD" ? "USD" : "CAD";
+    const plan = row.interval === "year" ? "the yearly plan" : row.interval === "month" ? "the monthly plan" : "the family plan";
+    const days = Math.max(0, Math.floor((now - Number(row.created_at)) / DAY));
+    const who = row.email ?? "A family";
+    return await sendAlert(
+      `new-customer:${row.family_id}`,
+      {
+        news: true,
+        subject: `New paying customer: ${who}`,
+        lines: [
+          `${who} paid ${money(Number(row.amount) / 100, currency)} for ${plan}.`,
+          `${toCountryCode(row.country ?? "") === "US" ? "A US family" : "A Canadian family"}, signed up ${days === 0 ? "today" : days === 1 ? "yesterday" : `${days} days ago`}.`,
+          `That makes ${paying} paying ${paying === 1 ? "family" : "families"} so far.`,
+        ],
+        path: familyPath(row.family_id),
+      },
+      now,
+      origin,
+    );
+  } catch (e) {
+    console.error("[alert] could not announce a new customer", (e as Error).message);
+    return false;
+  }
+}
 
 /** Alerts when a System check goes down, and says so again once it's working. Run by `/api/cron/watch/`. */
 export async function watchSystem(now = Date.now(), origin?: string): Promise<{ down: string[]; alerted: boolean }> {

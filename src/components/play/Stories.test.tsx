@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { act, fireEvent, render, screen, within } from "@testing-library/react";
+import { act, fireEvent, render, screen, waitFor, within } from "@testing-library/react";
 import { beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 import type { Question } from "@/content/types";
 import type { AgeBand } from "@/content/types";
@@ -126,6 +126,8 @@ describe("StoryReader", () => {
     h.settings = { ...h.settings, autoRead: true };
     inBand(<StoryReader id="ollie-splash" />, "little");
     await screen.findByTestId("story-text");
+    // The page is read from an effect, which a busy machine can run after the text first shows.
+    await waitFor(() => expect(h.speakSegments).toHaveBeenCalled());
     const [pieces, events] = lastRead();
     expect(pieces.map((p) => p.text)).toEqual(["Ollie is an otter.", "Ollie likes to swim."]);
     act(() => events.onStart!(1));
