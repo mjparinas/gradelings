@@ -4,7 +4,7 @@ Sources, codes and the checking record are in `gradelings-research/idaho/README.
 
 ## Framework
 
-- **Id and slug:** `us-id`, `idaho`. Math, language arts, science and social studies, Kindergarten to Grade 9; no French. Offered to families and in classroom mode.
+- **Id and slug:** `us-id`, `idaho`. Math, language arts, science and social studies, Pre-K and Kindergarten to Grade 9; no French. Offered to families and in classroom mode.
 
 ## Standards
 
@@ -23,9 +23,10 @@ Sources, codes and the checking record are in `gradelings-research/idaho/README.
 - Idaho has no statewide report-card scale; districts and charter schools choose their own. The app uses the four practice steps (Beginning, Approaching, Meeting, Exceeding).
 - State tests: the ISAT (English language arts and math in grades 3 to 8 and 11, science in 5, 8 and 11; Levels 1 to 4) and the Idaho Reading Indicator (Kindergarten to Grade 3, fall and spring, three tiers).
 
+- **Pre-K:** the 26 shared Pre-K units (`src/content/grades/pk/`), each citing a goal of the Idaho Early Learning eGuidelines (`G.39`, `G.56`; the Common Standards Project's copy, as the state's site refuses scripted downloads) (`src/content/idaho/pk.ts`), checked against `docs/research/idaho/prek/outcomes.json` (sources in `source/`, `fetch.sh`, `build_outcomes.py` in gradelings-research). Practice steps only.
 ## Parent guides
 
-- `src/content/idaho/guides.ts`, US English: the hub, grade notes for Kindergarten to Grade 9, Mathematical Practices (`/guides/idaho/math-practices/`) and ISAT and IRI (`/guides/idaho/isat/`).
+- `src/content/idaho/guides.ts`, US English: the hub, grade notes for Pre-K to Grade 9, Mathematical Practices (`/guides/idaho/math-practices/`) and ISAT and IRI (`/guides/idaho/isat/`).
 
 ## Schools
 

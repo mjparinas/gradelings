@@ -2,7 +2,7 @@
 
 ## Framework
 
-- **Id and slug:** `us-ks`, `kansas`. Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: Kansas has no statewide French standards the app follows). Offered to families and in classroom mode.
+- **Id and slug:** `us-ks`, `kansas`. Pre-K and Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: Kansas has no statewide French standards the app follows). Offered to families and in classroom mode.
 
 ## Standards
 
@@ -21,9 +21,10 @@
 - Kansas has no statewide report card; each district chooses its own, so the app uses the same four practice steps as the other states (Beginning, Approaching, Meeting, Exceeding).
 - State tests: the Kansas Assessment Program (KAP) in English language arts and math (grades 3 to 8 and 10) and science (grades 5, 8 and 11), reported as scale scores from 400 to 700 in four levels (Levels 3 and 4 meet expectations; cut scores 510 and 540 on every test; a new scale since 2025). Social studies has classroom-based assessments in grades 4, 7 and once in high school. The Kansas Report Card website reports on schools. The Blueprint for Literacy (2024) is on the report card page.
 
+- **Pre-K:** the 26 shared Pre-K units (`src/content/grades/pk/`), each citing a statement of the Kansas Early Learning Standards for four-year-olds (`M.CC.p4.4`, `SED.PD.p4.2`; the Common Standards Project's copy, as the state's site refuses scripted downloads) (`src/content/kansas/pk.ts`), checked against `docs/research/kansas/prek/outcomes.json` (sources in `source/`, `fetch.sh`, `build_outcomes.py` in gradelings-research). Practice steps only.
 ## Parent guides
 
-- `src/content/kansas/guides.ts`, US English: the hub, grade notes for Kindergarten to Grade 9, the eight Standards for Mathematical Practice (`/guides/kansas/math-practices/`) and state tests (`/guides/kansas/state-tests/`; dates point to KSDE). No French guide.
+- `src/content/kansas/guides.ts`, US English: the hub, grade notes for Pre-K to Grade 9, the eight Standards for Mathematical Practice (`/guides/kansas/math-practices/`) and state tests (`/guides/kansas/state-tests/`; dates point to KSDE). No French guide.
 
 ## Schools
 

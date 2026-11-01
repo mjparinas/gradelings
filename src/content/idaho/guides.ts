@@ -199,6 +199,10 @@ export const IDAHO_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-K in Idaho is the year before kindergarten, for children around 4. Programs vary, from school districts to Head Start and child care, and follow the Idaho Early Learning eGuidelines: approaches to learning, social and emotional growth, language and literacy, math, science, social studies and creative arts.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in Idaho is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. In social studies they learn about themselves, their families and school, where things are, jobs in the community, and the flag, the Pledge and holidays. Children take the Idaho Reading Indicator in the fall and spring.",
       lookFor: "Many Idaho districts use standards-based report cards. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

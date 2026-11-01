@@ -1,0 +1,122 @@
+{
+ "pk/math": [
+  {
+   "idx": "G.39",
+   "text": "Children demonstrate understanding of numbers, ways of representing numbers, relationships among numbers, and number systems"
+  },
+  {
+   "idx": "G.40",
+   "text": "Children demonstrate understanding of measurable attributes of objects and the units, systems, and processes of measurement (including size, volume, height, weight, length, area, and time)."
+  },
+  {
+   "idx": "G.41",
+   "text": "Children demonstrate understanding of patterns, relations, and functions used to organize their world and facilitate problem solving."
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "G.42",
+   "text": "Children observe, describe, and collect information by exploring the world around them."
+  },
+  {
+   "idx": "G.43",
+   "text": "Children further engage in exploring and making sense of the natural world by asking questions and making predictions about cause and effect relations that can lead to generalizations."
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "G.26",
+   "text": "Children demonstrate awareness and understanding of safety rules."
+  },
+  {
+   "idx": "G.27",
+   "text": "Children trust, interact with, and seek assistance from adults."
+  },
+  {
+   "idx": "G.29",
+   "text": "Children demonstrate positive negotiation skills."
+  },
+  {
+   "idx": "G.30",
+   "text": "Children demonstrate awareness of behavior and its effects on others."
+  },
+  {
+   "idx": "G.31",
+   "text": "Children participate positively in group activities."
+  },
+  {
+   "idx": "G.38",
+   "text": "Children regulate their feelings and impulses."
+  },
+  {
+   "idx": "G.44",
+   "text": "Children differentiate between people, places, activities, and events in the past and present that relate to self, group identity, and a sense of their community."
+  },
+  {
+   "idx": "G.45",
+   "text": "Children demonstrate awareness and understanding of individual fairness, group rights, and responsibilities (democratic ideals) for membership and participation in group activities (successful citizenship)."
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "G.48",
+   "text": "Children demonstrate the meaning of language by listening."
+  },
+  {
+   "idx": "G.49",
+   "text": "Children communicate effectively."
+  },
+  {
+   "idx": "G.51",
+   "text": "Children use receptive vocabulary."
+  },
+  {
+   "idx": "G.52",
+   "text": "Children use expressive vocabulary."
+  },
+  {
+   "idx": "G.53",
+   "text": "Children demonstrate progression in grammar and syntax."
+  },
+  {
+   "idx": "G.54",
+   "text": "Children demonstrate comprehension and meaning in language."
+  },
+  {
+   "idx": "G.55",
+   "text": "Children use language for a variety of purposes."
+  },
+  {
+   "idx": "G.56",
+   "text": "Children develop phonological awareness."
+  },
+  {
+   "idx": "G.57",
+   "text": "Children demonstrate awareness of letters and symbols."
+  },
+  {
+   "idx": "G.58",
+   "text": "Children demonstrate awareness of print concepts."
+  },
+  {
+   "idx": "G.59",
+   "text": "Children demonstrate comprehension of printed materials and oral stories."
+  },
+  {
+   "idx": "G.60",
+   "text": "Children demonstrate awareness that written materials can be used for a variety of purposes."
+  },
+  {
+   "idx": "G.61",
+   "text": "Children demonstrate knowledge and use of letters and symbols"
+  },
+  {
+   "idx": "G.62",
+   "text": "Children use writing skills and demonstrate knowledge of writing conventions."
+  },
+  {
+   "idx": "G.63",
+   "text": "Children use writing for a variety of purposes."
+  }
+ ]
+}
