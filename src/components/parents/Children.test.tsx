@@ -125,10 +125,10 @@ describe("ChildrenPage", () => {
     expect(live()).toHaveLength(0);
   });
 
-  it("stops offering to add a child at the family limit of 3", () => {
-    useStore.setState({ profiles: [kid("a", "Ava"), kid("b", "Ben"), kid("c", "Cal")] });
+  it("stops offering to add a child at the family limit of 5", () => {
+    useStore.setState({ profiles: [kid("a", "Ava"), kid("b", "Ben"), kid("c", "Cal"), kid("d", "Dee"), kid("e", "Eli")] });
     render(<ChildrenPage />);
-    expect(screen.getByText("Up to 3 children per family.")).toBeInTheDocument();
+    expect(screen.getByText("Up to 5 children per family.")).toBeInTheDocument();
     expect(screen.queryByRole("button", { name: "+ Add a child" })).not.toBeInTheDocument();
   });
 
