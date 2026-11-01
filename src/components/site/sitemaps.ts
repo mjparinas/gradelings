@@ -1,3 +1,4 @@
+import { WHATS_NEW } from "@/lib/whatsNew";
 import type { MetadataRoute } from "next";
 import { FRAMEWORKS } from "@/content/frameworks";
 import { guidesUpdated, latest } from "@/content/updated";
@@ -28,6 +29,8 @@ function otherPages(): SitemapPath[] {
     { path: "/contact/" },
     { path: "/status/" },
     { path: "/trust/" },
+    { path: "/whats-new/", updated: WHATS_NEW[0].day },
+    ...WHATS_NEW.map((d) => ({ path: `/whats-new/${d.day}/`, updated: d.day })),
     { path: "/accessibility/" },
     { path: "/privacy/", updated: legal },
     { path: "/terms/", updated: legal },
