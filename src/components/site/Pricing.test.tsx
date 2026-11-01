@@ -44,17 +44,17 @@ describe("PricingCards", () => {
   });
 
   it("leads with the cost per child, worked out from the prices", () => {
-    expect(perChildMonthly("CAD", "year")).toBe(3.33);
-    expect(perChildMonthly("CAD", "month")).toBe(5);
+    expect(perChildMonthly("CAD", "year")).toBe(2);
+    expect(perChildMonthly("CAD", "month")).toBe(3);
     render(<PricingCards />);
-    expect(screen.getByText(/^From \$3\.33 a month per child\./)).toBeInTheDocument();
-    expect(card("Family · yearly")).toHaveTextContent(`$3.33 a month per childwith ${MAX_CHILDREN} children`);
-    expect(card("Family · monthly")).toHaveTextContent("$5.00 a month per child");
+    expect(screen.getByText(/^From \$2\.00 a month per child\./)).toBeInTheDocument();
+    expect(card("Family · yearly")).toHaveTextContent(`$2.00 a month per childwith ${MAX_CHILDREN} children`);
+    expect(card("Family · monthly")).toHaveTextContent("$3.00 a month per child");
   });
 
   it("says the cost per child in US dollars on the US cards", () => {
     render(<PricingCards currency="USD" />);
-    expect(card("Family · yearly")).toHaveTextContent("US$3.33 a month per child");
+    expect(card("Family · yearly")).toHaveTextContent("US$2.00 a month per child");
   });
 
   it("says every price is before tax, in each currency", () => {

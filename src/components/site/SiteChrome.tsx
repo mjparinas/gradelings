@@ -168,6 +168,7 @@ export function SiteFooter({ build }: { /** A build line such as "Build 3f9a1c2"
             { label: "About us", href: "/about/" },
             { label: "Help", href: "/help/" },
             { label: "Contact", href: "/contact/" },
+            { label: "What’s new", href: "/whats-new/" },
             { label: "Status", href: "/status/" },
             { label: "Trust centre", href: "/trust/" },
             { label: "Privacy policy", href: "/privacy/" },

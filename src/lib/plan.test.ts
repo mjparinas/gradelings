@@ -64,8 +64,8 @@ describe("family plan access", () => {
     expect([0, 1, 2, FREE_UNITS_PER_COURSE].map((index) => unitOpen(expired, index, 100))).toEqual([true, true, false, false]);
   });
 
-  it("covers three children on one family plan", () => {
-    expect(MAX_CHILDREN).toBe(3);
+  it("covers five children on one family plan", () => {
+    expect(MAX_CHILDREN).toBe(5);
   });
 
   it("charges C$14.99 a month or C$119.99 a year, saving 33%", () => {

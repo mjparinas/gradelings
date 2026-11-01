@@ -20,7 +20,7 @@ Google Play's payments policy doesn't let an app sell digital content outside Go
   > • Learning earns game time, with limits you set.
   > • Works offline once a grade has downloaded. Read-aloud for early readers.
   > • Calm mode turns off timers, motion and noise for children who find them hard.
-  > • Up to 3 children on one family plan, each with their own grade and settings.
+  > • Up to 5 children on one family plan, each with their own grade and settings.
   >
   > No ads, ever. We never sell data. Children can never buy anything; coins are earned only by learning.
   >

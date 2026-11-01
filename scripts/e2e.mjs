@@ -314,7 +314,7 @@ async function eventsWaiting(page) {
     // Placement and Report card are views under Reports; the old Privacy link opens Account.
     await page.goto(`${BASE}/parents/#/report-cards`);
     await page.waitForTimeout(500);
-    if ((await page.getByRole("navigation", { name: "Report views" }).getByRole("link").count()) !== 6) errors.push("reports: the Progress / Placement / Report card / Year in review / Hours log / Portfolio views are missing");
+    if ((await page.getByRole("navigation", { name: "Report views" }).getByRole("link").count()) !== 7) errors.push("reports: the Progress / Placement / Report card / Year in review / Practice sheet / Hours log / Portfolio views are missing");
     // The homeschool pack. With the lessons played (not in "--part parents" alone), the hours log has a row and the portfolio a unit.
     await page.goto(`${BASE}/parents/#/hours`);
     await page.waitForTimeout(500);
@@ -324,6 +324,13 @@ async function eventsWaiting(page) {
     await page.waitForTimeout(500);
     if (!(await vis(page.getByRole("heading", { name: /learning portfolio/ })))) errors.push("portfolio: the page didn't open");
     else if (MODES && (await vis(page.getByText(/hasn't practised between these days/)))) errors.push("portfolio: empty after a played session");
+    if (MODES) {
+      // The practice sheet is made from the child's tricky units, so after a played session it has questions and a key.
+      await page.goto(`${BASE}/parents/#/sheet`);
+      await page.waitForTimeout(700);
+      await shot(page, "22-parent-sheet", true);
+      if (!(await vis(page.getByRole("heading", { name: /practice sheet|Practice sheets/ })))) errors.push("reports: the practice sheet view didn't open");
+    }
     await page.goto(`${BASE}/parents/#/privacy`);
     await page.waitForTimeout(500);
     if (!(await vis(page.getByRole("heading", { name: "Your data, your choice" })))) errors.push("old privacy link: Account didn't show the privacy panels");
