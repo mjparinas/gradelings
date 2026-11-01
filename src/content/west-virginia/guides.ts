@@ -200,6 +200,10 @@ export const WEST_VIRGINIA_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-K in West Virginia is the year before kindergarten, for children around 4. West Virginia Universal Pre-K is offered through school districts working with Head Start and child care partners, and follows the West Virginia Early Learning Standards Framework: social and emotional development, language and literacy, math, science, the arts and physical health.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for joining in, taking turns, naming feelings, rhyming, knowing letters and counting small groups.",
+    },
     k: {
       overview: "Kindergarten in West Virginia is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. Social studies starts with their own community and their place in West Virginia: rules, helpers, needs and wants, and the state's flag, bird and flower.",
       lookFor: "Report cards are chosen by each county, and many use standards-based marks. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

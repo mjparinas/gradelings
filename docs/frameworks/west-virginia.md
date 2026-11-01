@@ -2,7 +2,7 @@
 
 ## Framework
 
-- **Id and slug:** `us-wv`, `west-virginia`. Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: West Virginia's world language standards aren't a subject the app follows yet). Offered to families and in classroom mode.
+- **Id and slug:** `us-wv`, `west-virginia`. Pre-K and Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: West Virginia's world language standards aren't a subject the app follows yet). Offered to families and in classroom mode.
 
 ## Standards
 
@@ -22,9 +22,10 @@
 - West Virginia has no statewide report card for kindergarten to Grade 8; each county chooses its own, so the app uses the same four practice steps as the other states (Beginning, Approaching, Meeting, Exceeding). Courses that earn high school credit use the state's uniform A to F scale (Policy 2510).
 - State tests are the West Virginia General Summative Assessment (English language arts and math in grades 3 to 8, science in grades 5 and 8; Does Not Meet, Partially Meets, Meets and Exceeds Standard) and the SAT School Day (grade 11). The Third Grade Success Act (W. Va. Code § 18-2E-10) adds reading and math screening in kindergarten to Grade 3 and, from 2026-27, retention in Grade 3 for a Does Not Meet result unless an exception applies.
 
+- **Pre-K:** the 26 shared Pre-K units (`src/content/grades/pk/`), each citing a statement of the West Virginia Early Learning Standards Framework (`M.1.3`, `SE.3.2`; numbered in document order by the build script, as the framework has no codes; the Common Standards Project's copy, as the state's site refuses scripted downloads) (`src/content/west-virginia/pk.ts`), checked against `docs/research/west-virginia/prek/outcomes.json` (sources in `source/`, `fetch.sh`, `build_outcomes.py` in gradelings-research). Practice steps only.
 ## Parent guides
 
-- `src/content/west-virginia/guides.ts`, US English: the hub, grade notes for Kindergarten to Grade 9, the eight Mathematical Habits of Mind (`/guides/west-virginia/math-habits-of-mind/`) and the state tests (`/guides/west-virginia/state-tests/`; dates point to the West Virginia Department of Education). No French guide.
+- `src/content/west-virginia/guides.ts`, US English: the hub, grade notes for Pre-K to Grade 9, the eight Mathematical Habits of Mind (`/guides/west-virginia/math-habits-of-mind/`) and the state tests (`/guides/west-virginia/state-tests/`; dates point to the West Virginia Department of Education). No French guide.
 
 ## Schools
 

@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Maryland, a US state. Standards are the Maryland College and Career Ready Standards and frameworks adopted by the
 // Maryland State Board of Education and published by the Maryland State Department of Education (MSDE): mathematics
@@ -74,9 +75,9 @@ export const MARYLAND: Framework = {
   standardLabel: "Standard",
   sourceName: "Maryland State Department of Education",
   sourceUrl: "https://marylandpublicschools.org/",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Maryland report cards",
     intro:

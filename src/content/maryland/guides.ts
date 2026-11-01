@@ -155,6 +155,10 @@ export const MARYLAND_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-K in Maryland is the year before kindergarten, for children who are 4 by September 1. Maryland Public Pre-K runs in public schools and approved community programs, and follows the Maryland Prekindergarten standards. Children learn through play and stories: counting to 20, shapes, patterns, letters and rhymes, plus first ideas about rules, jobs and where things are.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for counting small groups, naming letters, hearing rhymes, sharing, taking turns and talking about feelings.",
+    },
     k: {
       overview: "Kindergarten in Maryland is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. In social studies they talk about freedom, fairness and rules, find Maryland on a map and learn about jobs and trade. Teachers also use the Kindergarten Readiness Assessment in the first weeks of school.",
       lookFor: "Many Maryland school systems use standards-based report cards. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",
