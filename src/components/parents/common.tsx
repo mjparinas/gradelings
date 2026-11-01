@@ -211,15 +211,18 @@ const REPORT_TABS = [
   { path: "report-cards", label: "Report card" },
   { path: "year", label: "Year in review" },
   { path: "sheet", label: "Practice sheet", flag: "practice-sheets" },
+  { path: "hours", label: "Hours log", flag: "homeschool-pack" },
+  { path: "portfolio", label: "Portfolio", flag: "homeschool-pack" },
 ];
 
 /** The views under Reports, keeping the chosen child. */
 export function ReportTabs({ current, childId }: { current: string; childId?: string }) {
   const sheets = useFlag("practice-sheets");
+  const homeschool = useFlag("homeschool-pack");
   return (
     <nav aria-label="Report views" className="mb-5 print:hidden">
       <ul className="flex flex-wrap gap-2">
-        {REPORT_TABS.filter((t) => !t.flag || (t.flag === "practice-sheets" && sheets)).map((t) => (
+        {REPORT_TABS.filter((t) => !t.flag || (t.flag === "practice-sheets" && sheets) || (t.flag === "homeschool-pack" && homeschool)).map((t) => (
           <li key={t.path}>
             <a
               href={`#/${t.path}${childId ? `/${childId}` : ""}`}
