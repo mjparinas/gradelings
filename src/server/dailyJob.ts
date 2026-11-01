@@ -17,6 +17,7 @@ import { deleteInactiveClass, pruneOldCodes } from "@/server/students";
 import { pruneGuests } from "@/server/guests";
 import { pruneLive } from "@/server/live";
 import { isFlagOn } from "@/server/flags";
+import { stakeFor } from "@/lib/paywall";
 import type { Profile } from "@/lib/model";
 import { schoolYearLines } from "@/lib/schoolYear";
 import { childHomework, homeworkEmailLines } from "@/lib/homework";
@@ -275,11 +276,21 @@ async function cleanup(ctx: Ctx): Promise<boolean> {
 /** What each child did during the trial (first name and totals only). */
 async function trialChildren(familyId: string, now: number): Promise<TrialChild[]> {
   const out: TrialChild[] = [];
+  // Name the units that lock when the trial ends (flag `personal-paywall`).
+  const stakes = await isFlagOn("personal-paywall", familyId);
   for (const id of await familyProfileIds(familyId)) {
     const r = await loadChildReport(familyId, id, 30, now);
     if (!r) continue;
     const t = r.report.totals;
-    out.push({ name: r.profile.name, answers: t.answers, activeDays: t.activeDays, minutes: Math.round(t.minutes), strength: r.report.strengths[0]?.ref.unit.title });
+    const stake = stakes ? stakeFor(r.profile.name, r.profile.framework, r.report.units) : undefined;
+    out.push({
+      name: r.profile.name,
+      answers: t.answers,
+      activeDays: t.activeDays,
+      minutes: Math.round(t.minutes),
+      strength: r.report.strengths[0]?.ref.unit.title,
+      ...(stake && { started: stake.started, locking: stake.locking }),
+    });
   }
   return out;
 }

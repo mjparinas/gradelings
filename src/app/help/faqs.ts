@@ -137,7 +137,7 @@ export const HELP: HelpSection[] = [
       },
       {
         q: "What changes after the trial or if I cancel?",
-        a: `You go back to the free plan. The first ${FREE_UNITS_PER_COURSE} units of every course stay open. Adventure, Review, Speed Run, Challenge, the arcade games and later units need the family plan. Nothing is deleted: your children’s progress, trophies and coins are kept, and everything is there again if you subscribe.`,
+        a: `You go back to the free plan. The first ${FREE_UNITS_PER_COURSE} units of every course stay open. Adventure, Review, Speed Run, Challenge, the arcade games, later units and the full parent reports need the family plan; a summary of each child’s report stays free. Nothing is deleted: your children’s progress, trophies and coins are kept, and everything is there again if you subscribe.`,
       },
       {
         q: "Does the plan renew automatically?",

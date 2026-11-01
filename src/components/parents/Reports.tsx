@@ -17,6 +17,11 @@ import { ColumnChart, LevelStacks, LineChart, RowBars, StatTile } from "./charts
 import { ShareReport } from "./ShareReport";
 import { Disclosure } from "../Disclosure";
 import { ChildTabs, NoChildren, PageTitle, Panel, useChild } from "./common";
+import { MembersOnly, useFullReports } from "./MembersOnly";
+
+/** Report periods; the free plan keeps the first two (flag `members-reports`). */
+const PERIODS = [7, 14, 30, 90];
+const FREE_PERIODS = 2;
 
 const pct = (v: number) => `${Math.round(v * 100)}%`;
 
@@ -25,7 +30,10 @@ export function ReportsPage({ childId }: { childId?: string }) {
   const events = useStore((s) => s.events);
   const d = useDerived(child?.id ?? null);
   const settings = useChildSettings(child?.id);
-  const [period, setPeriod] = useState(14);
+  const [picked, setPeriod] = useState(14);
+  const full = useFullReports();
+  const lastFree = PERIODS[FREE_PERIODS - 1];
+  const period = full || picked <= lastFree ? picked : lastFree;
   const say = useSay();
   const subjectGrades = useSubjectGrades(child?.id ?? null);
   const report = useMemo(
@@ -50,15 +58,19 @@ export function ReportsPage({ childId }: { childId?: string }) {
         sub={`${gradeLabel(child.grade, child.framework)} · ${getFramework(child.framework).curriculumName}`}
         action={
           <div className="flex flex-wrap gap-2 print:hidden">
-            {[7, 14, 30, 90].map((p) => (
+            {(full ? PERIODS : PERIODS.slice(0, FREE_PERIODS)).map((p) => (
               <button key={p} type="button" onClick={() => setPeriod(p)} className={`rounded-xl border px-3 py-2 text-sm font-semibold ${period === p ? "border-[#253047] bg-[#253047] text-white" : "border-line bg-white"}`}>
                 {p} days
               </button>
             ))}
-            <ShareReport profileId={child.id} name={child.name} days={period} />
-            <button type="button" onClick={() => window.print()} className="rounded-xl border border-line bg-white px-3 py-2 text-sm font-semibold">
-              🖨️ Print
-            </button>
+            {full && (
+              <>
+                <ShareReport profileId={child.id} name={child.name} days={period} />
+                <button type="button" onClick={() => window.print()} className="rounded-xl border border-line bg-white px-3 py-2 text-sm font-semibold">
+                  🖨️ Print
+                </button>
+              </>
+            )}
           </div>
         }
       />
@@ -67,7 +79,7 @@ export function ReportsPage({ childId }: { childId?: string }) {
       </div>
 
       <Milestones p={child} />
-      <GrowthPanel p={child} />
+      {full && <GrowthPanel p={child} />}
 
       <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
         <StatTile
@@ -102,7 +114,7 @@ export function ReportsPage({ childId }: { childId?: string }) {
 
       <FactsLine name={child.name} grade={child.grade} facts={d.facts} />
 
-      <div className="mt-5 grid gap-5 lg:grid-cols-2">
+      {full && <div className="mt-5 grid gap-5 lg:grid-cols-2">
         <ColumnChart
           title="Minutes learning per day"
           subtitle={`Last ${period} days`}
@@ -138,7 +150,7 @@ export function ReportsPage({ childId }: { childId?: string }) {
             };
           }).filter((r) => r.counts.some(Boolean) || r.notStarted)}
         />
-      </div>
+      </div>}
 
       <div className="mt-5 grid gap-5 lg:grid-cols-2">
         <Panel title="🌟 Strengths">
@@ -179,7 +191,9 @@ export function ReportsPage({ childId }: { childId?: string }) {
         </Panel>
       </div>
 
-      <Panel title="Every unit" className="mt-5">
+      {!full && <FullReportPreview name={child.name} units={report.units} proficientLabel={scheme.levels[2]?.label} />}
+
+      {full && <Panel title="Every unit" className="mt-5">
         <p className="mb-3 text-sm text-ink-soft">
           Levels use the {scheme.name}, based on recent first-try answers. They show progress in practice, not a report card mark: your child&apos;s teacher decides proficiency.
         </p>
@@ -221,7 +235,7 @@ export function ReportsPage({ childId }: { childId?: string }) {
             </Disclosure>
           );
         })}
-      </Panel>
+      </Panel>}
 
       <Panel title="🏆 Trophies this period" className="mt-5">
         {report.trophies.length ? (
@@ -267,5 +281,25 @@ export function FactsLine({ name, grade, facts }: { name: string; grade: GradeId
       .{tricky.length > 0 && <> Still practising: {tricky.map(factText).join(", ")}.</>} A fact counts as known after two right answers in a row on the first
       try. This is practice, not a report-card mark.
     </p>
+  );
+}
+
+/** What the full report adds, with the child's own numbers, on the free plan (flag `members-reports`). */
+export function FullReportPreview({ name, units, proficientLabel }: { name: string; units: { level: number; attempts: number }[]; proficientLabel?: string }) {
+  const started = units.filter((u) => u.attempts > 0).length;
+  const grown = units.filter((u) => u.level >= 2).length;
+  return (
+    <MembersOnly title={`${name}'s full report`} className="mt-5">
+      <p>The family plan opens the rest of this report:</p>
+      <ul className="mt-2 flex list-disc flex-col gap-1 pl-5">
+        <li>
+          Every unit: {started} of {units.length} started{proficientLabel ? `, ${grown} at ${proficientLabel} or higher` : ""}, with each one&apos;s level, learning standard and recent answers
+        </li>
+        <li>Charts of minutes per day and right-on-the-first-try week by week</li>
+        <li>&ldquo;Is it working?&rdquo;: units grown since 30, 90 or 180 days ago</li>
+        <li>30 and 90 day views, printing, and a link to share with a teacher</li>
+        <li>The report-card conversation sheet and Year in review</li>
+      </ul>
+    </MembersOnly>
   );
 }

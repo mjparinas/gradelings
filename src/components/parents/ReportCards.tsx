@@ -5,16 +5,24 @@ import { gradeLabel } from "@/lib/gradeLabel";
 import { ReportCardGuide } from "../ReportCardGuide";
 import { ChildTabs, Panel, useChild } from "./common";
 import { ConferenceSheet } from "./ConferenceSheet";
+import { MembersOnly, useFullReports } from "./MembersOnly";
 
 export function ReportCardsPage({ childId }: { childId?: string }) {
   const child = useChild(childId);
   const framework = getFramework(child?.framework);
+  const full = useFullReports();
   return (
     <div className="flex flex-col gap-5">
       <div className="print:hidden">
         <ChildTabs base="report-cards" current={child} />
       </div>
-      <ConferenceSheet childId={child?.id} />
+      {full ? (
+        <ConferenceSheet childId={child?.id} />
+      ) : (
+        <MembersOnly title="Report-card conversation sheet">
+          A printable page for parent-teacher conferences{child ? ` about ${child.name}` : ""}: where practice stands in each subject on your report card&apos;s own scale, what to ask the teacher, and a two-week plan for home.
+        </MembersOnly>
+      )}
       <Panel className="print:hidden">
         <ReportCardGuide framework={framework} grade={child?.grade} />
       </Panel>

@@ -15,6 +15,7 @@ import { useNow } from "@/lib/useNow";
 import { isYearReviewSeason, reviewYearOf, schoolYearName, schoolYearStart, yearReview } from "@/lib/yearReview";
 import { ChildTabs, NoChildren, Panel, useChild } from "./common";
 import { ShareMilestone } from "./ShareMilestone";
+import { MembersOnly, useFullReports } from "./MembersOnly";
 
 /** How many grown units the page lists before saying "and n more". */
 const LIST = 12;
@@ -35,7 +36,22 @@ export function YearReviewPage({ childId }: { childId?: string }) {
   const say = useSay();
   const locale = useLocale();
   const review = useMemo(() => (child ? yearReview(eventsFor(events, child), now, d) : null), [child, events, now, d]);
+  const full = useFullReports();
   if (!child || !review) return <NoChildren />;
+  if (!full)
+    return (
+      <div className="flex flex-col gap-5">
+        <div className="print:hidden">
+          <ChildTabs base="year" current={child} />
+        </div>
+        <MembersOnly title={`${child.name}'s ${schoolYearName(review.year)} school year`}>
+          {review.answers > 0
+            ? `${child.name} has practised on ${review.daysPractised} ${review.daysPractised === 1 ? "day" : "days"} since ${new Date(review.from).toLocaleDateString(locale, { month: "long", day: "numeric" })}. `
+            : ""}
+          Year in review is a printable page of the school year so far: days practised, minutes, questions, units grown, stickers, trophies and the longest run of days, with a card to share.
+        </MembersOnly>
+      </div>
+    );
   const framework = getFramework(child.framework);
   const scheme = framework.scoringFor(child.grade);
   const date = (t: number) => new Date(t).toLocaleDateString(locale, { month: "long", day: "numeric" });

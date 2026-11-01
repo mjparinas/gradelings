@@ -5,6 +5,7 @@ import { firstChargeAt, FREE_UNITS_PER_COURSE, MAX_CHILDREN, pricesFor, TAX_NOTE
 import { useRoute } from "@/lib/router";
 import { useStore } from "@/lib/store";
 import { isStoreApp } from "@/lib/twa";
+import { StakeLines } from "./MembersOnly";
 
 const noSubscribe = () => () => {};
 
@@ -35,6 +36,7 @@ export function UpgradeBanner() {
           </>
         )}
       </p>
+      <StakeLines className="mt-2" />
       {offer === "trial" && (
         <p className="mt-1 text-sm text-ink-soft">
           {firstChargeAt(family.trialEndsAt, Boolean(family.subscription))

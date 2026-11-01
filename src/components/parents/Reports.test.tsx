@@ -17,6 +17,7 @@ vi.mock("@/lib/localdb", () => ({
 }));
 
 import { useStore } from "@/lib/store";
+import * as twa from "@/lib/twa";
 import { ReportsPage } from "./Reports";
 
 const DAY = 86_400_000;
@@ -51,7 +52,7 @@ function practice(): AppEvent[] {
 }
 
 beforeEach(() => {
-  useStore.setState({ profiles: [kid("a", "Ava")], settings: {}, events: practice(), activeId: "a", family: { plan: "trial", trialEndsAt: 0, updatedAt: 1 } });
+  useStore.setState({ profiles: [kid("a", "Ava")], settings: {}, events: practice(), activeId: "a", family: { plan: "premium", trialEndsAt: 0, updatedAt: 1 } });
 });
 afterEach(() => vi.restoreAllMocks());
 
@@ -173,5 +174,35 @@ describe("ReportsPage", () => {
     await userEvent.click(within(subjects).getByRole("button", { name: "Table" }));
     expect(within(subjects).getByRole("row", { name: /Math 10/ })).toHaveTextContent("100% first try");
     expect(within(subjects).getByRole("row", { name: /Science 4/ })).toHaveTextContent("25% first try");
+  });
+
+  describe("on the free plan (flag members-reports)", () => {
+    beforeEach(() => useStore.setState({ family: { plan: "trial", trialEndsAt: 0, updatedAt: 1 } }));
+
+    it("keeps the summary and shows what the full report adds, with the child's own numbers", () => {
+      render(<ReportsPage />);
+      expect(screen.getByText("Questions answered").nextSibling).toHaveTextContent("14");
+      expect(screen.getByText("🌟 Strengths")).toBeInTheDocument();
+      expect(screen.getByText("🌱 Worth practising")).toBeInTheDocument();
+      expect(screen.getByRole("heading", { name: "Ava's full report" })).toBeInTheDocument();
+      expect(screen.getByText(/Every unit: 2 of \d+ started, 1 at Proficient or higher/)).toBeInTheDocument();
+      expect(screen.getByRole("link", { name: "See the family plan" })).toBeInTheDocument();
+      expect(screen.queryByText("Every unit")).toBeNull();
+      expect(screen.queryByText("Minutes learning per day")).toBeNull();
+    });
+
+    it("offers 7 and 14 days only, with no printing or share link", () => {
+      render(<ReportsPage />);
+      expect(screen.getByRole("button", { name: "7 days" })).toBeInTheDocument();
+      expect(screen.queryByRole("button", { name: "30 days" })).toBeNull();
+      expect(screen.queryByRole("button", { name: /Print/ })).toBeNull();
+    });
+
+    it("names no payment in the store apps", () => {
+      vi.spyOn(twa, "isStoreApp").mockReturnValue(true);
+      render(<ReportsPage />);
+      expect(screen.queryByRole("link", { name: "See the family plan" })).toBeNull();
+      expect(screen.getByText("This part of the reports opens with a family membership.")).toBeInTheDocument();
+    });
   });
 });

@@ -6,6 +6,7 @@ import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, REFUND_DAYS, SUBSCRIBE_HREF } from
 import { countryOf, type CountryCode } from "@/lib/country";
 import type { EmailKind } from "@/lib/emailKinds";
 import { localizeCopy } from "@/content/locale";
+import { stakeLine } from "@/lib/paywall";
 import type { Email } from "./email";
 import { schoolYearName, yearReviewLines, type YearReviewChild } from "@/lib/yearReview";
 
@@ -166,18 +167,25 @@ export interface TrialChild {
   activeDays: number;
   minutes: number;
   strength?: string;
+  /** Units started, and the titles of those that lock when the trial ends (flag `personal-paywall`). */
+  started?: number;
+  locking?: string[];
 }
 
 function recapLines(children: TrialChild[]): string[] {
   return children
     .filter((c) => c.answers > 0)
-    .flatMap((c) => [
-      `${c.name} has practised on ${c.activeDays} ${c.activeDays === 1 ? "day" : "days"}: ${c.minutes} min and ${c.answers} questions so far.`,
-      ...(c.strength ? [`  Going well: ${c.strength}`] : []),
-    ]);
+    .flatMap((c) => {
+      const stake = c.locking && stakeLine({ name: c.name, started: c.started ?? c.locking.length, locking: c.locking }, "trial");
+      return [
+        `${c.name} has practised on ${c.activeDays} ${c.activeDays === 1 ? "day" : "days"}: ${c.minutes} min and ${c.answers} questions so far.`,
+        ...(c.strength ? [`  Going well: ${c.strength}`] : []),
+        ...(stake ? [`  ${stake}`] : []),
+      ];
+    });
 }
 
-const KEEP_FREE = `After the trial, the first ${FREE_UNITS_PER_COURSE} units of every course stay free forever. The family plan keeps everything unlocked for up to ${MAX_CHILDREN} children.`;
+const KEEP_FREE = `After the trial, the first ${FREE_UNITS_PER_COURSE} units of every course and a summary of each child's report stay free forever. The family plan keeps every unit, mode, game and full report open for up to ${MAX_CHILDREN} children.`;
 
 /** Mid-trial: what the trial has done so far. Sent once, to parents whose children have practised. */
 export function trialRecapEmail(to: string, origin: string, daysLeft: number, children: TrialChild[], country?: CountryCode): Email {
@@ -192,7 +200,7 @@ export function trialRecapEmail(to: string, origin: string, daysLeft: number, ch
       ...recapLines(children),
       `${daysLeft} ${daysLeft === 1 ? "day" : "days"} of the free trial left. This reflects practice in the app, not a report-card mark.`,
       KEEP_FREE,
-      "You can subscribe now, before the trial ends. You'll be charged at checkout and the paid plan starts that day. Full reports stay in the Parent area.",
+      "You can subscribe now, before the trial ends. You'll be charged at checkout and the paid plan starts that day. Full reports are in the Parent area during the trial, and with the family plan after it.",
     ],
     button: { label: "Subscribe", url: `${origin}${SUBSCRIBE_HREF}` },
   });

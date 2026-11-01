@@ -119,6 +119,20 @@ describe("emails to a US family", () => {
   });
 });
 
+describe("trial emails name the units that lock (flag personal-paywall)", () => {
+  it("adds one line per child under their totals, and none when nothing would lock", () => {
+    const kids = [
+      { name: "Maya", answers: 40, activeDays: 3, minutes: 30, started: 5, locking: ["Fractions", "Place value", "Patterns"] },
+      { name: "Leo", answers: 12, activeDays: 1, minutes: 8, started: 2, locking: [] },
+    ];
+    const text = t.trialEndingEmail("a@example.com", O, 2, kids).text;
+    expect(text).toContain("Maya has started 5 units. 3 of them lock when the trial ends: Fractions, Place value and 1 more.");
+    expect(text).not.toMatch(/Leo has started/);
+    expect(t.trialRecapEmail("a@example.com", O, 5, kids).text).toContain("3 of them lock when the trial ends");
+  });
+});
+
+
 describe("goal plan lines in the weekly email", () => {
   it("come under the child, before homework", () => {
     const goal = ["  Maya's goal: Ready for Grade 5 Math by Sep 1. 3 of 12 units at Proficient, on track.", "  Up next: Fractions."];
