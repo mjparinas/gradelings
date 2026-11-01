@@ -1,0 +1,810 @@
+{
+ "pk/language": [
+  {
+   "idx": "RL.PK.1",
+   "text": "With modeling and support, answer questions about details in a text."
+  },
+  {
+   "idx": "RL.PK.2",
+   "text": "With modeling and support, retell familiar stories/poems."
+  },
+  {
+   "idx": "RL.PK.3",
+   "text": "With modeling and support, identify characters, settings, and major events in a story."
+  },
+  {
+   "idx": "RL.PK.4",
+   "text": "With modeling and support, answer questions about unknown words in stories and poems."
+  },
+  {
+   "idx": "RL.PK.5",
+   "text": "Gain exposure to common types of literary texts (e.g., storybooks, poems)."
+  },
+  {
+   "idx": "RL.PK.6",
+   "text": "With modeling and support, identify the role of author and illustrator."
+  },
+  {
+   "idx": "RL.PK.7",
+   "text": "With modeling and support, tell how the illustrations support the story."
+  },
+  {
+   "idx": "RL.PK.8",
+   "text": "(Not applicable to literature)"
+  },
+  {
+   "idx": "RL.PK.9",
+   "text": "With modeling and support, compare adventures and experiences of characters in familiar stories."
+  },
+  {
+   "idx": "RL.PK.10",
+   "text": "Actively engage in-group reading activities with purpose and understanding."
+  },
+  {
+   "idx": "RI.PK.1",
+   "text": "With modeling and support, answer questions about details in an informational text."
+  },
+  {
+   "idx": "RI.PK.2",
+   "text": "With modeling and support, recall one or more detail(s) related to the main topic from an informational text."
+  },
+  {
+   "idx": "RI.PK.3",
+   "text": "With modeling and support, connect individuals, events, and pieces of information in text to life experiences."
+  },
+  {
+   "idx": "RI.PK.4",
+   "text": "With modeling and support, answer questions about unknown words in a text."
+  },
+  {
+   "idx": "RI.PK.5",
+   "text": "With modeling and support, identify the front cover and back cover of a book."
+  },
+  {
+   "idx": "RI.PK.6",
+   "text": "With modeling and support, define the role of the author and illustrator/photographer in presenting the ideas or information in a text."
+  },
+  {
+   "idx": "RI.PK.7",
+   "text": "With modeling and support, tell how the illustrations/ photographs support the text."
+  },
+  {
+   "idx": "RI.PK.8",
+   "text": "With modeling and support, identify the reasons an author gives to support points in a text."
+  },
+  {
+   "idx": "RI.PK.9",
+   "text": "With prompting and support, discuss similarities and differences between two texts on the same topic (e.g., in illustrations or descriptions)."
+  },
+  {
+   "idx": "RI.PK.10",
+   "text": "Actively engage in-group reading activities with purpose and understanding."
+  },
+  {
+   "idx": "RF.PK.1",
+   "text": "Demonstrate understanding of basic features of print."
+  },
+  {
+   "idx": "RF.PK.1.a",
+   "text": "Demonstrate an awareness that words are read from left to right, top to bottom, and page by page."
+  },
+  {
+   "idx": "RF.PK.1.b",
+   "text": "RF.PK.1.b Recognize that spoken words can be written and read."
+  },
+  {
+   "idx": "RF.PK.1.c",
+   "text": "Understand that words are separated by spaces in print."
+  },
+  {
+   "idx": "RF.PK.1.d",
+   "text": "Recognize and name some upper- and lowercase letters of the alphabet."
+  },
+  {
+   "idx": "RF.PK.2",
+   "text": "Demonstrate understanding of spoken words and sounds (phonemes)."
+  },
+  {
+   "idx": "RF.PK.2.a",
+   "text": "Recognize rhyming words in spoken language."
+  },
+  {
+   "idx": "RF.PK.2.b",
+   "text": "Identify and isolate individual words in a spoken sentence."
+  },
+  {
+   "idx": "RF.PK.2.c",
+   "text": "Count, pronounce, blend, and segment syllables in spoken words."
+  },
+  {
+   "idx": "RF.PK.2.d",
+   "text": "Blend and segment onsets and rimes of single-syllable spoken words."
+  },
+  {
+   "idx": "RF.PK.2.e",
+   "text": "Isolate and pronounce the initial sound in spoken words."
+  },
+  {
+   "idx": "RF.PK.2.f",
+   "text": "Orally blend and segment individual phonemes in twoto-three phoneme words."
+  },
+  {
+   "idx": "RF.PK.3",
+   "text": "Know and apply grade-level phonics and word analysis skills in decoding words."
+  },
+  {
+   "idx": "RF.PK.3.a",
+   "text": "Recognize that words are made up of letters and their sounds."
+  },
+  {
+   "idx": "RF.PK.3.b",
+   "text": "Demonstrate basic knowledge of one-to-one letter sound correspondences by producing the most frequent sound for some consonants."
+  },
+  {
+   "idx": "RF.PK.3.c",
+   "text": "Recognize name in print as well as some environmental print (symbols/words)."
+  },
+  {
+   "idx": "RF.PK.4",
+   "text": "Engage with a variety of texts (e.g., a variety of structures and/ or genres) with purpose and understanding."
+  },
+  {
+   "idx": "W.PK.1",
+   "text": "With modeling and support, use a combination of drawing, dictating, and developmentally appropriate writing to share opinion about an experience or book."
+  },
+  {
+   "idx": "W.PK.2",
+   "text": "Use a combination of drawing, dictating, or developmentally appropriate writing to state information on a topic."
+  },
+  {
+   "idx": "W.PK.3",
+   "text": "With modeling and support, use a combination of drawing, dictating, or developmentally appropriate writing to communicate a personal story about a single event and tell about the event in a meaningful sequence."
+  },
+  {
+   "idx": "W.PK.4",
+   "text": "(Begins in Grade 3.)"
+  },
+  {
+   "idx": "W.PK.5",
+   "text": "With modeling, guidance, and support from adults, review drawing, dictation, or developmentally appropriate writing."
+  },
+  {
+   "idx": "W.PK.6",
+   "text": "With prompting and support from adults, explore a variety of digital tools to express ideas."
+  },
+  {
+   "idx": "W.PK.7",
+   "text": "Participate in shared research and shared writing projects."
+  },
+  {
+   "idx": "W.PK.8",
+   "text": "With modeling and support from adults, recall information from experiences or information from provided sources to answer a question."
+  },
+  {
+   "idx": "W.PK.9",
+   "text": "(Begins in Grade 4.)"
+  },
+  {
+   "idx": "W.PK.10",
+   "text": "(Begins in Grade 3.)"
+  },
+  {
+   "idx": "SL.PK.1",
+   "text": "Participate in collaborative conversations with diverse partners about pre-kindergarten topics and texts with peers and adults in small and larger groups."
+  },
+  {
+   "idx": "SL.PK.1.a",
+   "text": "Follow agreed-upon rules for discussions (e.g., listening to others and taking turns speaking about the topics and texts under discussion)."
+  },
+  {
+   "idx": "SL.PK.1.b",
+   "text": "During scaffolded conversations, continue a conversation through multiple exchanges."
+  },
+  {
+   "idx": "SL.PK.2",
+   "text": "Confirm understanding of a text read aloud or information presented orally or through other media by asking and answering questions about key details with modeling and support."
+  },
+  {
+   "idx": "SL.PK.3",
+   "text": "Ask and answer questions in order to seek help, get information, or clarify something that is not understood."
+  },
+  {
+   "idx": "SL.PK.4",
+   "text": "Describe familiar people, places, things, and events with modeling and support."
+  },
+  {
+   "idx": "SL.PK.5",
+   "text": "Add drawings or visual displays to descriptions as desired to provide additional detail."
+  },
+  {
+   "idx": "SL.PK.6",
+   "text": "With modeling and support, speak audibly and express thoughts, feelings, and ideas clearly."
+  },
+  {
+   "idx": "L.PK.1",
+   "text": "Demonstrate beginning understanding of the conventions of standard English grammar and usage when engaged in literacy activities."
+  },
+  {
+   "idx": "L.PK.1.a",
+   "text": "Print upper- and lowercase letters in first name."
+  },
+  {
+   "idx": "L.PK.1.b",
+   "text": "Use frequently occurring nouns and verbs."
+  },
+  {
+   "idx": "L.PK.1.c",
+   "text": "Develop understanding of singular and plural nouns (e.g., dog means one dog; dogs means more than one)."
+  },
+  {
+   "idx": "L.PK.1.d",
+   "text": "Understand and begin to use question words (e.g., interrogatives who, what, where, when, why, how)."
+  },
+  {
+   "idx": "L.PK.1.e",
+   "text": "Gain exposure to the most frequently occurring prepositions (e.g. to, from, in, out, on, off, for, of, by, with)."
+  },
+  {
+   "idx": "L.PK.1.f",
+   "text": "Produce complete sentences in shared language activities."
+  },
+  {
+   "idx": "L.PK.2",
+   "text": "Gain exposure to conventions of standard English capitalization, punctuation, and spelling during shared reading and writing experiences."
+  },
+  {
+   "idx": "L.PK.2.a",
+   "text": "Recognize that their name begins with a capital letter."
+  },
+  {
+   "idx": "L.PK.2.b",
+   "text": "Demonstrate awareness of name and function of end punctuation (e.g., period, question mark, exclamation point)."
+  },
+  {
+   "idx": "L.PK.2.c",
+   "text": "Use letter-like shapes, symbols, letters, and words to convey meaning."
+  },
+  {
+   "idx": "L.PK.2.d",
+   "text": "Develop fine motor skills necessary to control and sustain handwriting."
+  },
+  {
+   "idx": "L.PK.3",
+   "text": "(Begins in grade 2.)"
+  },
+  {
+   "idx": "L.PK.4",
+   "text": "Determine or clarify the meaning of unknown words and phrases based on pre-kindergarten reading and content."
+  },
+  {
+   "idx": "L.PK.5",
+   "text": "With modeling and support from adults, explore word relationships and nuances in word meanings."
+  },
+  {
+   "idx": "L.PK.5.a",
+   "text": "With modeling and support, sort common objects into categories (e.g., shapes, foods) to gain a sense of the concepts the categories represent."
+  },
+  {
+   "idx": "L.PK.5.b",
+   "text": "With modeling and support, demonstrate understanding of frequently occurring verbs and adjectives by relating them to their opposites (antonyms)."
+  },
+  {
+   "idx": "L.PK.5.c",
+   "text": "Identify real-life connections between words and their use (e.g., note objects in the classroom that are small)."
+  },
+  {
+   "idx": "L.PK.6",
+   "text": "Use words and phrases acquired through conversations, being read to, and responding to texts."
+  }
+ ],
+ "pk/math": [
+  {
+   "idx": "PK.NOS.A.1",
+   "text": "Count to 20 by ones."
+  },
+  {
+   "idx": "PK.NOS.A.2",
+   "text": "Count backward from 10 by ones."
+  },
+  {
+   "idx": "PK.NOS.A.3",
+   "text": "Identify which number comes just after or just before a given number in the counting sequence to 10."
+  },
+  {
+   "idx": "PK.NOS.A.4",
+   "text": "Identify written numerals 0-10."
+  },
+  {
+   "idx": "PK.NOS.B.5",
+   "text": "Use the relationship between numbers and quantities within 10 to count objects with one-to-one correspondence and verbalizing the last number stated is the total when asked \"How many…?” (cardinality)."
+  },
+  {
+   "idx": "PK.NOS.B.6",
+   "text": "When counting objects within 10, recognize that each successive number name refers to a quantity that is one larger."
+  },
+  {
+   "idx": "PK.NOS.B.7",
+   "text": "Represent a number within 10 by producing a set of objects with concrete materials, drawing pictures, and/or writing numerals. Correctly respond when asked \"How many\" after counting concrete objects."
+  },
+  {
+   "idx": "PK.NOS.B.8",
+   "text": "Recognize the number of objects in a set without counting (subitizing) with both unfamiliar patterns within 3 and familiar patterns within 5."
+  },
+  {
+   "idx": "PK.NOS.C.9",
+   "text": "Compare two groups of objects within 10. Identify whether the number of objects in one group is more than, equal to, or less than the number of objects in another group by using one-to-one correspondence, matching, and counting."
+  },
+  {
+   "idx": "PK.NOS.D.10",
+   "text": "Decompose numbers less than or equal to 5 in more than one way by using objects, fingers, drawings and/or verbal explanations."
+  },
+  {
+   "idx": "PK.AT.A.1",
+   "text": "Represent addition and subtraction situations (presented verbally, without the use of numerals or mathematical symbols) within quantities of 5 with objects, fingers, drawings, sounds (e.g., claps), acting out situations, and/or verbal explanations."
+  },
+  {
+   "idx": "PK.AT.A.2",
+   "text": "Given a quantity within 5, identify the quantity that must be added to equal 5 using objects, fingers, drawings and/or verbal explanations."
+  },
+  {
+   "idx": "PK.AT.B.3",
+   "text": "Identify and extend a repeating pattern (ABAB, AABB, or ABCABC) using concrete objects, shapes, sounds, or movements."
+  },
+  {
+   "idx": "PK.GR.A.1",
+   "text": "Describe a measurable attribute of an object, such as length, height, weight, and capacity using appropriate vocabulary (e.g., long, short, tall, heavy, light, wide, narrow)."
+  },
+  {
+   "idx": "PK.GR.A.2",
+   "text": "Directly compare two objects with a measurable attribute in common, using words such as “more/less,” “longer/shorter,” “lighter/heavier,” or “taller/shorter.”"
+  },
+  {
+   "idx": "PK.GR.B.3",
+   "text": "Sort two-dimensional shapes (circles, triangles, and rectangles-including a square which is a special rectangle) by like attributes and distinguish between examples and non-examples."
+  },
+  {
+   "idx": "PK.GR.B.4",
+   "text": "Match and name two-dimensional shapes (circles, triangles, and rectangles- including a square which is a special rectangle) regardless of their orientations or overall size."
+  },
+  {
+   "idx": "PK.GR.B.5",
+   "text": "Match and sort three-dimensional shapes (cubes, spheres, and cylinders) by like attributes and distinguish between examples and non-examples."
+  },
+  {
+   "idx": "PK.DS.A.1",
+   "text": "Organize data sets by sorting objects into categories."
+  },
+  {
+   "idx": "PK.DS.A.2",
+   "text": "Analyze data sets by comparing the categories using words such as more than, less than, and equal to/same (Limit the total in any one category to maximum of 10)."
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "1.A.1",
+   "text": "Raise questions about the world around them and be willing to seek answers to some of them by making careful observations and trying things out."
+  },
+  {
+   "idx": "1.B.1",
+   "text": "People are more likely to believe your ideas if you can give good reasons for them."
+  },
+  {
+   "idx": "1.C.1",
+   "text": "Ask, \"How do you know?\" in appropriate situations and attempt reasonable answers when others ask them the same question."
+  },
+  {
+   "idx": "1.D.1",
+   "text": "Design and make things with simple tools and a variety of materials."
+  },
+  {
+   "idx": "1.D.2",
+   "text": "Practice identifying the parts of things and how one part connects to and affects another."
+  },
+  {
+   "idx": "1.D.3",
+   "text": "Examine a variety of physical models and describe what they teach about the real things they are meant to resemble."
+  },
+  {
+   "idx": "2.E.2",
+   "text": "Describe the weather using observations."
+  },
+  {
+   "idx": "2.A.1",
+   "text": "Observe a variety of familiar plants and animals to describe how they are alike and how they are different."
+  },
+  {
+   "idx": "2.C.1",
+   "text": "Observe, describe and compare different kinds of animals and their offspring."
+  },
+  {
+   "idx": "3.A.1",
+   "text": "Use evidence from investigations to describe the observable properties of a variety of objects."
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "C.1.a",
+   "text": "defining freedom as being able to choose what your life looks like without interference from others."
+  },
+  {
+   "idx": "C.1.b",
+   "text": "defining equality as the same freedoms that are held by all people."
+  },
+  {
+   "idx": "C.2.a",
+   "text": "identifying school or community conflicts that require working with groups to resolve."
+  },
+  {
+   "idx": "C.2.b",
+   "text": "identifying how multiple perspectives and the freedom to express varied opinion in a democratic society can complicate conflict resolution."
+  },
+  {
+   "idx": "C.2.c",
+   "text": "explaining the role of authority in promoting compromise and how it can resolve conflict."
+  },
+  {
+   "idx": "C.2.d",
+   "text": "exploring how compromise is used in civic life at home, school, and community."
+  },
+  {
+   "idx": "C.3.a",
+   "text": "explaining that rules serve to support order and protect individual rights."
+  },
+  {
+   "idx": "C.3.b",
+   "text": "comparing rules at home, school, and community."
+  },
+  {
+   "idx": "C.3.c",
+   "text": "explaining why rules are different based on location."
+  },
+  {
+   "idx": "C.3.d",
+   "text": "evaluating classroom rules for their ability to promote freedom and equality."
+  },
+  {
+   "idx": "G.1.a",
+   "text": "identifying important objects in the classroom using the terms near/far, left/right, behind/in front, and up/down."
+  },
+  {
+   "idx": "G.1.b",
+   "text": "describing the location of the school in relationship to other locations near and far away."
+  },
+  {
+   "idx": "G.2.a",
+   "text": "identifying ways that people in Maryland adapt to their environment including wearing different types of clothing throughout the year in their school."
+  },
+  {
+   "idx": "G.2.b",
+   "text": "identifying ways that people in Maryland adapt their environment to meet their own individual and group, and family needs including cutting down trees for development."
+  },
+  {
+   "idx": "G.3.a",
+   "text": "explaining how transportation is used to move people from place to place."
+  },
+  {
+   "idx": "G.3.b",
+   "text": "identifying means of transportation available both in their community and beyond."
+  },
+  {
+   "idx": "E.1.a",
+   "text": "explaining why people can't have everything they want using classroom and school examples."
+  },
+  {
+   "idx": "E.2.a",
+   "text": "determining that people make choices because of limited resources."
+  },
+  {
+   "idx": "E.3.a",
+   "text": "identifying barter as a form of trade."
+  },
+  {
+   "idx": "E.3.b",
+   "text": "explaining that people benefit when they trade voluntarily."
+  },
+  {
+   "idx": "E.3.c",
+   "text": "describing times when they have traded, the goods or services that were exchanged, and the benefit they got from the trade."
+  },
+  {
+   "idx": "E.4.a",
+   "text": "identifying jobs and careers in their community."
+  },
+  {
+   "idx": "E.4.b",
+   "text": "identifying the personal characteristics and interests that are needed for certain jobs and careers."
+  },
+  {
+   "idx": "H.1.a",
+   "text": "defining a historian as someone who learns about the past."
+  },
+  {
+   "idx": "H.1.b",
+   "text": "applying chronology to daily and weekly schedules."
+  },
+  {
+   "idx": "H.2.a",
+   "text": "explaining how photographs help raise questions about the past and show what happened in an event."
+  },
+  {
+   "idx": "H.2.b",
+   "text": "analyzing photographs of familiar objects like toys and technology from the past."
+  },
+  {
+   "idx": "P4.1.1.1.1",
+   "text": "Seeks new and varied experiences and challenges (e.g., puts materials together in new ways to test results; joins a peer-created game or activity)."
+  },
+  {
+   "idx": "P4.1.1.1.2",
+   "text": "Requires fewer prompts to follow classroom routines and can independently anticipate what happens next."
+  },
+  {
+   "idx": "P4.1.2.1.1",
+   "text": "Communicates negative and positive emotions verbally and responds to teacher prompts or directions."
+  },
+  {
+   "idx": "P4.1.2.1.2",
+   "text": "Understands a wider array of feelings (e.g., frustrated, scared, lonely) and expresses them to others."
+  },
+  {
+   "idx": "P4.1.2.1.3",
+   "text": "Seeks adult assistance for classmates who need support."
+  },
+  {
+   "idx": "P4.1.2.1.4",
+   "text": "Shows concern for peers who are upset or hurt."
+  },
+  {
+   "idx": "P4.1.2.2.1",
+   "text": "Has one or more special friendships."
+  },
+  {
+   "idx": "P4.1.2.2.2",
+   "text": "Initiates interactions (e.g., talking, playing)."
+  },
+  {
+   "idx": "P4.1.2.2.3",
+   "text": "Shares materials and equipment with other children with adult modeling and support."
+  },
+  {
+   "idx": "P4.1.2.3.1",
+   "text": "Identifies differences or similarities between self and others (e.g., children with disabilities, gender, hair color, etc.)."
+  },
+  {
+   "idx": "P4.1.2.3.2",
+   "text": "Identifies and negotiates when a peer is not given the same instructions or structure (e.g., “William’s mommy lets him watch Dora. Why can’t I?”)."
+  },
+  {
+   "idx": "P4.1.2.4.1",
+   "text": "Identifies interpersonal conflicts and begins to manage emotions more effectively using self-talk with adult support and modeling (e.g., “Take three deep breaths, and then ask Caleb for another turn.”)."
+  },
+  {
+   "idx": "P4.1.2.4.2",
+   "text": "Seeks adult help when solving interpersonal conflicts."
+  },
+  {
+   "idx": "P4.1.2.4.3",
+   "text": "Discusses possible solutions with peers with adult assistance."
+  },
+  {
+   "idx": "P4.1.2.4.4",
+   "text": "Has an awareness of conflict resolution strategies but is not yet able to implement them consistently (e.g., understands a story where a social strategy was used but struggles to apply it functionally)."
+  },
+  {
+   "idx": "P4.2.1.1.1",
+   "text": "Avoids imitating the negative behavior of peers with minimal prompting from adults."
+  },
+  {
+   "idx": "P4.2.1.1.2",
+   "text": "More reliably controls impulses during structured activities that are familiar (e.g., raising a hand to talk)."
+  },
+  {
+   "idx": "P4.2.1.1.3",
+   "text": "Can play the role of a teacher in a game, monitor other children’s behavior, and remind them to follow the rules."
+  },
+  {
+   "idx": "P4.2.1.1.4",
+   "text": "Sometimes able to resist habits when they are no longer appropriate (e.g., may remember while walking to the bathroom that the paper towels have moved and adjust accordingly)."
+  },
+  {
+   "idx": "P4.2.1.1.5",
+   "text": "Able to play games like Red Light, Green Light that require waiting for a signal to act, with adult support."
+  },
+  {
+   "idx": "P4.2.1.2.1",
+   "text": "Independently waits for an object without grabbing most of the time."
+  },
+  {
+   "idx": "P4.2.1.2.2",
+   "text": "Able to take turns with preferred toys or classroom materials (e.g., waits for an object without grabbing, with minimal prompting)."
+  },
+  {
+   "idx": "P4.2.1.2.3",
+   "text": "Can wait for a highly desired food or object, though may occasionally need reminders."
+  },
+  {
+   "idx": "P4.2.1.3.1",
+   "text": "Learns coping strategies (e.g., using words, pretend play, drawing) to establish greater control and competence in managing intense emotions (e.g., after going to the emergency room, a child may repeatedly play out the experience with dolls and stuffed animals) resist impulses to harm self, others, or property."
+  },
+  {
+   "idx": "P4.2.1.4.1",
+   "text": "Increases ability to ignore distractions and sustain attention on topics of interest (e.g., can focus on a drawing even when other children are nearby; might say, “I’ll play with you later. I want to finish this.”)."
+  },
+  {
+   "idx": "P4.2.1.4.2",
+   "text": "Capable of sustaining focus on longer-term or complex projects with support from an adult."
+  },
+  {
+   "idx": "P4.2.1.5.1",
+   "text": "Remains on task during a teacher-set activity for short periods despite distractions, with minimal prompting from adults (e.g., can ignore nearby activities and maintain focus on a teacher-directed small group activity)."
+  },
+  {
+   "idx": "P4.2.1.5.2",
+   "text": "May need a reminder to return to an earlier task after an interruption."
+  },
+  {
+   "idx": "P4.2.2.1.1",
+   "text": "Can remember recent events in a story and use this information to shape predictions and questions."
+  },
+  {
+   "idx": "P4.2.2.1.2",
+   "text": "Frequently considers multiple possibilities before making a choice."
+  },
+  {
+   "idx": "P4.2.2.1.3",
+   "text": "Can remember and follow multiple classroom rules with visual and auditory cues."
+  },
+  {
+   "idx": "P4.2.2.1.4",
+   "text": "Can remember and follow two-step directions without prompting."
+  },
+  {
+   "idx": "P4.2.2.1.5",
+   "text": "Can hold in mind the comments of peers and respond appropriately during a short class discussion."
+  },
+  {
+   "idx": "P4.2.2.1.6",
+   "text": "Can keep track of a few different objects for short periods of time."
+  },
+  {
+   "idx": "P4.2.2.1.7",
+   "text": "Can enjoy more complex memory games with more cards or objects."
+  },
+  {
+   "idx": "P4.2.3.1.1",
+   "text": "Can independently sustain a character in pretend play for 10 minutes or longer."
+  },
+  {
+   "idx": "P4.2.3.1.2",
+   "text": "Can switch roles in dramatic play."
+  },
+  {
+   "idx": "P4.2.3.1.3",
+   "text": "Enjoys games like Simon Says that require following two different rules when cued (e.g., copying and not copying)."
+  },
+  {
+   "idx": "P4.2.3.1.4",
+   "text": "Can follow different rules in familiar contexts with minimal reminders (e.g., takes off shoes at home but not at school)."
+  },
+  {
+   "idx": "P4.2.3.1.5",
+   "text": "Often recognizes and corrects mistakes independently."
+  },
+  {
+   "idx": "P4.2.3.1.6",
+   "text": "Able to change sorting categories with help (e.g., sorting by color, then by shape)."
+  },
+  {
+   "idx": "P4.2.3.2.1",
+   "text": "Begins to employ their own solutions to problems through trial and error (e.g., tries different pegs to see which one fits)."
+  },
+  {
+   "idx": "P4.2.3.2.2",
+   "text": "Continues to become more cognitively flexible and is able to draw on varied resources to solve problems (e.g., tries to build a large structure with blocks, but it keeps falling down. After several failed attempts, they try making a larger base. May also observe how other children have built their structures)."
+  },
+  {
+   "idx": "P4.2.3.2.3",
+   "text": "When in conflict with another child, is increasingly able to suggest possible solutions."
+  },
+  {
+   "idx": "P4.2.3.2.4",
+   "text": "When faced with a problem, can be reminded to slow down and think about what to do."
+  },
+  {
+   "idx": "P4.2.4.1.1",
+   "text": "Asks questions about future events as well as about the present (e.g., asks, \"When will we go to Val’s?\")."
+  },
+  {
+   "idx": "P4.2.4.1.2",
+   "text": "Poses questions to seek explanations about topics of interest with adult support and modeling."
+  },
+  {
+   "idx": "P4.2.4.1.3",
+   "text": "Elaborates on experiments by attempting to replicate results using different materials (e.g., gathers various materials to drop in the water table, then sorts what sinks vs. what floats)."
+  },
+  {
+   "idx": "P4.2.4.1.4",
+   "text": "Asks to participate in new experiences they have observed or heard others talk about (e.g., says, \"Janice goes fishing. Can I?\")."
+  },
+  {
+   "idx": "P4.2.4.2.1",
+   "text": "Asks questions about future events as well as about the present (e.g., asks, \"When will we go to Sarah's house again?\")."
+  },
+  {
+   "idx": "P4.2.4.2.2",
+   "text": "Begins to show increased enthusiasm for learning letters, shapes, and numbers (e.g., while looking at a book with a parent, points to a word that contains the letter \"S\" and says, \"S! That's in my name! What is that word?\")."
+  },
+  {
+   "idx": "P4.2.4.2.3",
+   "text": "Seeks new and varied experiences and challenges (e.g., puts materials together in new ways to test results, joins a peer-created game or activity, tries to dress a new doll, or builds a new construction toy)."
+  },
+  {
+   "idx": "P4.2.4.3.1",
+   "text": "When prompted, initiates a plan for activities."
+  },
+  {
+   "idx": "P4.2.4.3.2",
+   "text": "Shows interest in leading activities and taking responsibility during cleanup."
+  },
+  {
+   "idx": "P4.2.4.3.3",
+   "text": "Expands decision-making skills (e.g., a child may say, \"This morning, I'm going to work on my Lego building.\")."
+  },
+  {
+   "idx": "P4.2.4.3.4",
+   "text": "Develops a greater ability to set goals and follow a plan (e.g., a child says, \"I'm going to pick up all these branches,\" and then works until the task is complete)."
+  },
+  {
+   "idx": "P4.2.6.1.1",
+   "text": "Responds more appropriately and sympathetically to peers who are in need, upset, hurt, or angry (e.g., says, \"Don't cry, Willy. My daddy can fix that bike. He knows how.\")."
+  },
+  {
+   "idx": "P4.2.6.1.2",
+   "text": "Shows further progress in developing friendships with peers, even if a bond is formed with just one other child."
+  },
+  {
+   "idx": "P4.2.6.1.3",
+   "text": "Begins to try to please other children (e.g., says, \"You can come to my birthday party, ok?\")."
+  },
+  {
+   "idx": "P4.2.6.1.4",
+   "text": "Suggests solutions to problems with other children while continuing to seek adults' help (e.g., says, \"Hey, Benjamin! We can BOTH be firemen!\")."
+  },
+  {
+   "idx": "P4.2.7.1.1",
+   "text": "Helps to create classroom rules."
+  },
+  {
+   "idx": "P4.2.7.1.2",
+   "text": "Responds to teacher directions or signals consistently."
+  },
+  {
+   "idx": "P4.2.7.1.3",
+   "text": "Takes initiative with assigned or chosen tasks relating to classroom routines."
+  },
+  {
+   "idx": "P4.2.7.1.4",
+   "text": "Behaves appropriately within the context of classroom routines with adult modeling and support (i.e., listens when someone else is talking or raises a hand to share)."
+  },
+  {
+   "idx": "P4.2.7.1.5",
+   "text": "Requires fewer prompts to follow classroom routines and is able to independently anticipate what happens next."
+  },
+  {
+   "idx": "P4.2.7.3.1",
+   "text": "Helps with cleanup after activities with prompting."
+  },
+  {
+   "idx": "P4.2.7.3.2",
+   "text": "Begins to demonstrate appropriate use of classroom materials with modeling (e.g., using glue in an art project appropriately or turning book pages with care)."
+  },
+  {
+   "idx": "P4.2.7.3.3",
+   "text": "Recognizes and is responsible for returning items to the appropriate location with prompting."
+  },
+  {
+   "idx": "P4.2.7.3.4",
+   "text": "Begins identifying when things are not put away in designated areas."
+  }
+ ]
+}

@@ -1,0 +1,350 @@
+{
+ "pk/social": [
+  {
+   "idx": "SE.1.1",
+   "text": "Describe self by using several basic characteristics."
+  },
+  {
+   "idx": "SE.1.2",
+   "text": "Demonstrates growing confidence in a range of abilities and expresses pride in accomplishments."
+  },
+  {
+   "idx": "SE.1.3",
+   "text": "Develops growing capacity for independence in a range of activities, routines, and tasks."
+  },
+  {
+   "idx": "SE.1.4",
+   "text": "Demonstrates progress in expressing needs, wants and feelings appropriately."
+  },
+  {
+   "idx": "SE.1.5",
+   "text": "Acts out roles by imitating typical actions associated with the roles."
+  },
+  {
+   "idx": "SE.2.1",
+   "text": "Develops positive relationships with children and adults."
+  },
+  {
+   "idx": "SE.2.2",
+   "text": "Shows empathy and caring for others."
+  },
+  {
+   "idx": "SE.2.3",
+   "text": "Demonstrates increasing capacity to follow rules and routines and use materials purposefully, safely, and respectfully."
+  },
+  {
+   "idx": "SE.2.4",
+   "text": "Shows progress in developing and sustaining friendship with peers."
+  },
+  {
+   "idx": "SE.2.5",
+   "text": "Manages transitions and begins to adapt to change in routines."
+  },
+  {
+   "idx": "SE.2.6",
+   "text": "Uses appropriate communication skills to initiate or join classroom activities."
+  },
+  {
+   "idx": "SE.2.7",
+   "text": "Engages in cooperative group play."
+  },
+  {
+   "idx": "SE.2.8",
+   "text": "Begins to share materials and experiences and take turns."
+  },
+  {
+   "idx": "SE.2.9",
+   "text": "Uses and accepts negotiation, compromise, and discussion to resolve conflicts."
+  },
+  {
+   "idx": "SE.2.10",
+   "text": "Accepts guidance and directions from a variety of familiar adults."
+  },
+  {
+   "idx": "SE.2.11",
+   "text": "Follows basic routines and rules for play and group participation."
+  },
+  {
+   "idx": "SE.3.1",
+   "text": "Understands and describes the interactive roles and relationships among family members."
+  },
+  {
+   "idx": "SE.3.2",
+   "text": "Identifies and describes roles and relationships of community members."
+  },
+  {
+   "idx": "SE.3.3",
+   "text": "Understands similarities and respects differences among people, such as genders, race, special needs, cultures, language, and family structures."
+  },
+  {
+   "idx": "SE.3.4",
+   "text": "Identifies themselves as a member of groups within a community."
+  },
+  {
+   "idx": "SE.3.5",
+   "text": "Identifies and describes locations and places in their environment."
+  },
+  {
+   "idx": "SE.4.1",
+   "text": "Participates in a variety of classroom activities and tasks."
+  },
+  {
+   "idx": "SE.4.2",
+   "text": "Develops increased ability to make independent choices."
+  },
+  {
+   "idx": "SE.4.3",
+   "text": "Approaches tasks and activities with flexibility, imagination, and inventiveness."
+  },
+  {
+   "idx": "SE.4.4",
+   "text": "Persists in and completes tasks, activities, projects, and experiences."
+  },
+  {
+   "idx": "SE.4.5",
+   "text": "Demonstrates increasing ability to set goals and develop and follow through on plans."
+  },
+  {
+   "idx": "SE.4.6",
+   "text": "Maintains increasing concentration over a reasonable amount of time despite distractions and interruptions."
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "L.1.1",
+   "text": "Demonstrates an increasing ability to attend to and understand communication."
+  },
+  {
+   "idx": "L.1.2",
+   "text": "Communicates needs and wants through a variety of verbal and symbolic forms."
+  },
+  {
+   "idx": "L.1.3",
+   "text": "Understands and uses increasingly complex and varied vocabulary/sentences in listening and speaking."
+  },
+  {
+   "idx": "L.1.4",
+   "text": "Comprehends and expands on oral language."
+  },
+  {
+   "idx": "L.1.5",
+   "text": "Participates in conversations with peers and adults about topics of interest."
+  },
+  {
+   "idx": "L.1.6",
+   "text": "Listens to others and takes turns speaking."
+  },
+  {
+   "idx": "L.1.7",
+   "text": "Asks questions to get information, seeks help, or clarifies something that is not understood."
+  },
+  {
+   "idx": "L.2.1",
+   "text": "Holds book upright and identifies the front and back of a book."
+  },
+  {
+   "idx": "L.2.2",
+   "text": "Progresses in learning how to handle and care for books; knows how to view one page at a time in sequence from front to back; and understands that a book has a title, author, and illustrator."
+  },
+  {
+   "idx": "L.2.3",
+   "text": "Demonstrates increasing awareness of concepts of print, such as reading moves from top to bottom and from left to right, speech can be written down, and print conveys a message."
+  },
+  {
+   "idx": "L.2.4",
+   "text": "Develops an awareness of environmental print such as signs, letters, newspapers, lists, messages, and menus."
+  },
+  {
+   "idx": "L.2.5",
+   "text": "Knows that letters of the alphabet are a special category of visual graphics that can be individually named."
+  },
+  {
+   "idx": "L.2.6",
+   "text": "Recognizes and names letters such as those in his/her name, names of family and friends, and those seen in environmental print."
+  },
+  {
+   "idx": "L.2.7",
+   "text": "Recognizes words as units of print that are separated by spaces."
+  },
+  {
+   "idx": "L.2.8",
+   "text": "Listens to and identifies sounds that are in the environment."
+  },
+  {
+   "idx": "L.2.9",
+   "text": "Shows growing ability to hear and discriminate separate syllables in words."
+  },
+  {
+   "idx": "L.2.10",
+   "text": "Progresses in recognizing matching sounds and rhymes in familiar words, games, songs, stories, and poems."
+  },
+  {
+   "idx": "L.2.11",
+   "text": "Shows growing awareness of beginning and ending sounds of words."
+  },
+  {
+   "idx": "L.2.12",
+   "text": "Recognizes a word as a unit of print."
+  },
+  {
+   "idx": "L.2.13",
+   "text": "Recognize words such as his/her name, names of family and friends, and familiar environmental print."
+  },
+  {
+   "idx": "L.3.1",
+   "text": "Shows growing interest and involvement in listening to and discussing a variety of fiction and nonfiction books and poetry."
+  },
+  {
+   "idx": "L.3.2",
+   "text": "Looks through books independently and asks to have books read to them."
+  },
+  {
+   "idx": "L.3.3",
+   "text": "Recognizes story elements such as characters, sequence of events, and theme of a story."
+  },
+  {
+   "idx": "L.3.4",
+   "text": "Demonstrates progress in retelling and dictating stories from books and experiences; acts out stories in dramatic play; asks to take home books; goes to the library; and engages in pretend reading with other children."
+  },
+  {
+   "idx": "L.3.5",
+   "text": "Engages in questioning, reflecting, and relating a story to personal experiences including use of new vocabulary."
+  },
+  {
+   "idx": "L.4.1",
+   "text": "Progresses from using scribble shapes or pictures to represent ideas, to using letter-like symbols or invented spelling, to copying or writing familiar words such as his/her own name."
+  },
+  {
+   "idx": "L.4.2",
+   "text": "Uses a combination of drawing, dictating, and writing to communicate ideas, thoughts, and feelings."
+  },
+  {
+   "idx": "L.4.3",
+   "text": "Demonstrates an understanding that writing relays a message that can be read."
+  },
+  {
+   "idx": "L.4.4",
+   "text": "Begins to use functional print in play."
+  },
+  {
+   "idx": "L.4.5",
+   "text": "Uses a variety of writing tools and materials, such as pencils, crayons and computers."
+  },
+  {
+   "idx": "L.4.6",
+   "text": "Begins to recognize that writing patterns progress from top to bottom, left to right, and words are separated by spaces."
+  }
+ ],
+ "pk/math": [
+  {
+   "idx": "M.1.1",
+   "text": "Develops increased ability to counts in sequence to ten and beyond."
+  },
+  {
+   "idx": "M.1.2",
+   "text": "Begins to identify number symbols one to ten."
+  },
+  {
+   "idx": "M.1.3",
+   "text": "Uses one-to-one correspondence in counting objects and matching groups of objects."
+  },
+  {
+   "idx": "M.1.4",
+   "text": "Matches quantity with number symbols."
+  },
+  {
+   "idx": "M.1.5",
+   "text": "Uses comparative words such as more, less, fewer, equal to."
+  },
+  {
+   "idx": "M.1.6",
+   "text": "Begins to recognize the order of numbers, e.g. before, after and between."
+  },
+  {
+   "idx": "M.2.1",
+   "text": "Develops increased ability to recognize addition as putting objects together and subtraction as taking objects apart."
+  },
+  {
+   "idx": "M.2.2",
+   "text": "Identifies parts in relationship to the whole."
+  },
+  {
+   "idx": "M.3.1",
+   "text": "Understand that objects have measurable attributes, such as length or weight. A single object might have several measurable attributes of interest."
+  },
+  {
+   "idx": "M.3.2",
+   "text": "Estimates the size of objects in comparison to a common unit of measurement, such as more/less, short/tall, long/short, big/little, and light/heavy."
+  },
+  {
+   "idx": "M.3.3",
+   "text": "Begins to construct a sense of time through participation in daily activities."
+  },
+  {
+   "idx": "M.3.4",
+   "text": "Classify objects according to common characteristics, such as color, size, or shape."
+  },
+  {
+   "idx": "M.3.5",
+   "text": "Begins to incorporate estimating and measuring activities into play."
+  },
+  {
+   "idx": "M.3.6",
+   "text": "Begins to recognize and interpret information presented in tables, graphs and symbols."
+  },
+  {
+   "idx": "M.4.1",
+   "text": "Recognizes, duplicates, and creates simple patterns using a variety of materials."
+  },
+  {
+   "idx": "M.4.2",
+   "text": "Progresses in ability to recognize terms of directionality, order, and positions of themselves and objects in their environment, such as up, down, over, under, top, bottom, inside, outside, in front, and behind."
+  },
+  {
+   "idx": "M.4.3",
+   "text": "Recognizes, describes, compares, and names common shapes."
+  },
+  {
+   "idx": "M.4.4",
+   "text": "Determines whether or not two shapes are the same size and shape."
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "S.1.1",
+   "text": "Expresses wonder and asks questions about the world around them."
+  },
+  {
+   "idx": "S.1.2",
+   "text": "Observes and discusses similarities and differences among objects and materials, including cause and effect"
+  },
+  {
+   "idx": "S.1.3",
+   "text": "Investigates and problem solves through active exploration of the environment."
+  },
+  {
+   "idx": "S.1.4",
+   "text": "Progresses in ability to describe and discuss predictions, explanations, and generalizations."
+  },
+  {
+   "idx": "S.1.5",
+   "text": "Uses senses and a variety of tools to gather information, investigate materials, and observe processes and relationships"
+  },
+  {
+   "idx": "S.1.6",
+   "text": "Collects, describes, and records information through a variety of means to lead to new understanding of the world around them."
+  },
+  {
+   "idx": "S.2.1",
+   "text": "Observes and describes the immediate and familiar world, such as the natural world, materials, living things, and natural processes."
+  },
+  {
+   "idx": "S.2.2",
+   "text": "Shows increased awareness and beginning understanding of changes in materials and cause-effect relationships, such as recognize that materials can exist in several physical states."
+  },
+  {
+   "idx": "S.2.3",
+   "text": "Demonstrates expanding knowledge of and respect for the environment."
+  }
+ ]
+}
