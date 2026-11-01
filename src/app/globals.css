@@ -460,6 +460,47 @@ html.dyslexic i {
   font-style: normal;
 }
 
+/* Holiday themes (src/lib/holidays.ts): a tinted page and a ribbon along the top. Reading tints, further down, win. */
+html.holiday body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 6px;
+  z-index: 60;
+  pointer-events: none;
+  background: var(--holiday-ribbon);
+}
+html.holiday-valentines {
+  --color-paper: #fff0f4;
+  --color-line: #f3d5de;
+  --holiday-ribbon: repeating-linear-gradient(90deg,#ff4f7b 0 24px,#ffb3c7 24px 48px);
+}
+html.holiday-stpatricks {
+  --color-paper: #eefaec;
+  --color-line: #d3e8cf;
+  --holiday-ribbon: repeating-linear-gradient(90deg,#2fae62 0 24px,#f0bd2a 24px 48px);
+}
+html.holiday-easter {
+  --color-paper: #fbf4ff;
+  --color-line: #e6d9f0;
+  --holiday-ribbon: repeating-linear-gradient(90deg,#b9a4e8 0 24px,#ffb3c7 24px 48px,#ffe27a 48px 72px,#9fe3c4 72px 96px);
+}
+html.holiday-halloween {
+  --color-paper: #fff2e4;
+  --color-line: #f1d9bd;
+  --holiday-ribbon: repeating-linear-gradient(90deg,#ff8a1f 0 24px,#4b3480 24px 48px);
+}
+html.holiday-thanksgiving {
+  --color-paper: #fff5e2;
+  --color-line: #ecd9b8;
+  --holiday-ribbon: repeating-linear-gradient(90deg,#e8741c 0 24px,#f0bd2a 24px 48px,#c8402a 48px 72px);
+}
+html.holiday-christmas {
+  --color-paper: #f4faf4;
+  --color-line: #d5e6d6;
+  --holiday-ribbon: repeating-linear-gradient(135deg,#d93a3a 0 12px,#ffffff 12px 24px,#2f9e5b 24px 36px,#ffffff 36px 48px);
+}
+
 /* Reading tint: a soft page colour behind the cards. Text contrast stays above WCAG AA. */
 html.tint-cream {
   --color-paper: #f7edcf;

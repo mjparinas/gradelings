@@ -1,6 +1,7 @@
 // The pure SVG drawing of every critter, with no hooks, so server code (share
 // images) can draw one too. `Critter` in Critter.tsx adds motion and eye-follow.
 
+import { currentHoliday, type HolidayId } from "@/lib/holidays";
 import type { CSSProperties } from "react";
 
 // The mascot cast, all drawn from one parametric SVG so they share a style,
@@ -507,7 +508,80 @@ function GrowthTop({ stage }: { stage: number }) {
   );
 }
 
-export function CritterSvg({ id, mood = "happy", stage = 1 }: { id: string; mood?: Mood; stage?: number }) {
+const heart = (x: number, y: number, scale: number, rotate: number, fill: string) => (
+  <path
+    d="M0 6 C-14 -4 -12 -16 -5 -16 C-2 -16 0 -13 0 -11 C0 -13 2 -16 5 -16 C12 -16 14 -4 0 6Z"
+    transform={`translate(${x} ${y}) rotate(${rotate}) scale(${scale})`}
+    fill={fill}
+  />
+);
+
+/** The hat or ears a character wears while a holiday theme is on (see src/lib/holidays.ts). Sits on the top of the head. */
+export function HolidayHat({ holiday }: { holiday: HolidayId }) {
+  switch (holiday) {
+    case "christmas":
+      return (
+        <g data-holiday="christmas">
+          <path d="M62 42 Q64 8 104 6 Q136 6 152 30 L142 42 Z" fill="#d93a3a" />
+          <rect x="56" y="34" width="90" height="15" rx="7.5" fill="#ffffff" />
+          <circle cx="152" cy="30" r="10" fill="#ffffff" />
+        </g>
+      );
+    case "easter":
+      return (
+        <g data-holiday="easter">
+          <g transform="rotate(-12 80 40)">
+            <ellipse cx="80" cy="8" rx="13" ry="34" fill="#ffffff" stroke="#e4d9ee" strokeWidth="2" />
+            <ellipse cx="80" cy="10" rx="6.5" ry="24" fill="#ffb3c7" />
+          </g>
+          <g transform="rotate(12 120 40)">
+            <ellipse cx="120" cy="8" rx="13" ry="34" fill="#ffffff" stroke="#e4d9ee" strokeWidth="2" />
+            <ellipse cx="120" cy="10" rx="6.5" ry="24" fill="#ffb3c7" />
+          </g>
+          <path d="M62 44 Q100 30 138 44" fill="none" stroke="#b9a4e8" strokeWidth="7" strokeLinecap="round" />
+        </g>
+      );
+    case "halloween":
+      return (
+        <g data-holiday="halloween">
+          <ellipse cx="100" cy="42" rx="60" ry="11" fill="#2f2350" />
+          <path d="M70 42 Q86 16 108 -10 Q116 -14 118 -6 Q116 14 130 42 Z" fill="#4b3480" />
+          <path d="M70 40 Q100 48 130 40 L129 30 Q100 38 71 30 Z" fill="#ff8a1f" />
+          <rect x="94" y="30" width="12" height="12" rx="2" fill="none" stroke="#ffd166" strokeWidth="3" />
+        </g>
+      );
+    case "stpatricks":
+      return (
+        <g data-holiday="stpatricks">
+          <ellipse cx="100" cy="42" rx="58" ry="10" fill="#1f8f4e" />
+          <rect x="72" y="4" width="56" height="38" rx="6" fill="#2fae62" />
+          <rect x="72" y="28" width="56" height="9" fill="#0f5132" />
+          <rect x="94" y="26" width="12" height="13" rx="2" fill="none" stroke="#f0bd2a" strokeWidth="3" />
+        </g>
+      );
+    case "valentines":
+      return (
+        <g data-holiday="valentines">
+          <path d="M76 40 Q74 28 74 24 M124 40 Q126 28 126 24" fill="none" stroke="#e0507a" strokeWidth="3" strokeLinecap="round" />
+          <path d="M62 44 Q100 32 138 44" fill="none" stroke="#e0507a" strokeWidth="6" strokeLinecap="round" />
+          {heart(74, 16, 1.5, -14, "#ff4f7b")}
+          {heart(126, 16, 1.5, 14, "#ff4f7b")}
+        </g>
+      );
+    case "thanksgiving":
+      return (
+        <g data-holiday="thanksgiving">
+          <path d="M60 44 Q100 30 140 44" fill="none" stroke="#9a5a22" strokeWidth="6" strokeLinecap="round" />
+          <ellipse cx="72" cy="30" rx="8" ry="15" fill="#e8741c" transform="rotate(-35 72 30)" />
+          <ellipse cx="88" cy="22" rx="8" ry="16" fill="#f0bd2a" transform="rotate(-12 88 22)" />
+          <ellipse cx="112" cy="22" rx="8" ry="16" fill="#c8402a" transform="rotate(12 112 22)" />
+          <ellipse cx="128" cy="30" rx="8" ry="15" fill="#e8741c" transform="rotate(35 128 30)" />
+        </g>
+      );
+  }
+}
+
+export function CritterSvg({ id, mood = "happy", stage = 1, holiday = currentHoliday() }: { id: string; mood?: Mood; stage?: number; holiday?: HolidayId | null }) {
   const c = getCritter(id);
   const headFill = c.extras.includes("panda") ? "#ffffff" : c.fur;
   return (
@@ -550,6 +624,7 @@ export function CritterSvg({ id, mood = "happy", stage = 1 }: { id: string; mood
         <Mouth mood={mood} c={c} />
         <TopExtras c={c} />
         <GrowthTop stage={stage} />
+        {holiday && stage < 5 && <HolidayHat holiday={holiday} />}
         {mood === "sleepy" && (
           // Drawn as lines, not <text>: letters inside the SVG would join the name of a button the critter
           // sits in ("Pat your buddy"), which axe flags as a label mismatch.
