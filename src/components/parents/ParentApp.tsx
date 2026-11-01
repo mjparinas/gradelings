@@ -24,6 +24,7 @@ import { Overview } from "./Overview";
 import { PlacementPage } from "./Placement";
 import { ReportCardsPage } from "./ReportCards";
 import { YearReviewPage } from "./YearReview";
+import { HoursLogPage, PortfolioPage } from "./Homeschool";
 import { ReportsPage } from "./Reports";
 import { SettingsPage } from "./Settings";
 import { SubscriptionPage } from "./Subscription";
@@ -43,7 +44,7 @@ const NAV = [
 ];
 
 /** Older links still open: Placement and Report cards live under Reports, Privacy under Account. */
-const NAV_PARENT: Record<string, string> = { placement: "reports", "report-cards": "reports", year: "reports", privacy: "account" };
+const NAV_PARENT: Record<string, string> = { placement: "reports", "report-cards": "reports", year: "reports", hours: "reports", portfolio: "reports", privacy: "account" };
 
 const noSubscribe = () => () => {};
 
@@ -188,6 +189,12 @@ const Section = memo(function Section({ hash, billing, onBilling }: { hash: stri
       break;
     case "year":
       page = <YearReviewPage childId={path[1]} />;
+      break;
+    case "hours":
+      page = <HoursLogPage childId={path[1]} />;
+      break;
+    case "portfolio":
+      page = <PortfolioPage childId={path[1]} />;
       break;
     case "children":
       page = <ChildrenPage />;
