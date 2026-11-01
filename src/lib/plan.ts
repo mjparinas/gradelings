@@ -7,7 +7,7 @@ import type { FamilyInfo } from "./model";
 
 export const TRIAL_DAYS = 30;
 export const FREE_UNITS_PER_COURSE = 2;
-export const MAX_CHILDREN = 3;
+export const MAX_CHILDREN = 5;
 /** Any payment is refunded in full when the parent asks within this many days of it. */
 export const REFUND_DAYS = 14;
 
@@ -76,15 +76,15 @@ export const pricesFor = (country: Country | null | undefined) => PRICES_BY_CURR
 
 /**
  * What the plan costs per child per month with a full family of MAX_CHILDREN, to the nearest cent
- * (yearly: 119.99 / 12 / 3 = 3.33; monthly: 14.99 / 3 = 5.00). Pricing copy leads with this, always saying
- * "with 3 children".
+ * (yearly: 119.99 / 12 / 5 = 2.00; monthly: 14.99 / 5 = 3.00). Pricing copy leads with this, always saying
+ * "with 5 children".
  */
 export function perChildMonthly(currency: Currency, interval: "month" | "year"): number {
   const price = PRICES_BY_CURRENCY[currency][interval].amount;
   return Math.round(((interval === "year" ? price / 12 : price) / MAX_CHILDREN) * 100) / 100;
 }
 
-/** "$3.33" or "US$3.33". */
+/** "$2.00" or "US$2.00". */
 export const money = (amount: number, currency: Currency) => `${currency === "USD" ? "US$" : "$"}${amount.toFixed(2)}`;
 
 /**

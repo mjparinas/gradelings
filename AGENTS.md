@@ -89,7 +89,7 @@ Tests are duplicated across screen sizes only where layout can break:
 
 ### Money
 - **No ads, ever. Never sell data.** Kids can never buy anything; coins are earned only by learning. The one exception is testing: a device signed in to an admin account shows unlimited coins (`TEST_COINS`, `docs/ADMIN.md`), never stored or synced.
-- **Family plan:** C$14.99/month or C$119.99/year, with "Save 33%" on the yearly plan, for up to 3 children.
+- **Family plan:** C$14.99/month or C$119.99/year, with "Save 33%" on the yearly plan, for up to 5 children.
   - The plan includes a 30-day free trial with everything on and no card needed.
   - Subscribing during the trial keeps the days left: checkout saves the card and starts a Stripe trial that ends with ours (`firstChargeAt` in `plan.ts`), unless fewer than 49 hours are left or the family had a paid plan before.
   - A device with no account gets a quiet "For grown-ups" card at the end of a lesson (after the first lesson, then daily in the trial's last week; `src/lib/saveNudge.ts`, `SaveProgress.tsx`, flag `save-progress-card`), because trial emails need an account. It asks for an email only (owner, October 2026): "Send me the reports" makes an account with no password (`passwordless` on `/api/auth/signup/`, `password_hash = '!'`, like a Google-only account) and the weekly report on, signs the device in and sends the confirmation email; the weekly report goes only once the email is confirmed. There is no grown-ups screen before the first question any more (the `email-at-start` step was removed).
@@ -307,7 +307,7 @@ Tests are duplicated across screen sizes only where layout can break:
   - Overview.
   - Reports: 7/14/30/90 days, with charts, strengths, next steps, a table of every unit and a print view.
   - Report cards, with a printable conversation sheet for each child (`src/lib/conference.ts`): where practice stands per subject in the province's own scale, what to ask the teacher and a two-week plan. It says it is practice, not a report-card mark.
-  - Children: up to 3; a birth year suggests a grade; a curriculum can be picked per child.
+  - Children: up to 5; a birth year suggests a grade; a curriculum can be picked per child.
   - Settings per child.
   - Account (sign-in and sync, progress emails, the read-aloud voice and parent PIN for this device, privacy: JSON export, erase device, delete account) and Subscription.
   - **Six tabs:** Overview, Subscription, Reports, Children, Settings and Account. Reports has three views (Progress, Placement test, Report card; `ReportTabs`), and the old `#/placement/`, `#/report-cards/` and `#/privacy/` links still open.

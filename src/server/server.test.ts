@@ -264,33 +264,33 @@ describe("sync", () => {
     expect((await sync.POST(post("/api/sync/", {}))).status).toBe(401);
   });
 
-  it("stores at most three children, and a removed child frees a place", async () => {
-    const { cookie } = await newAccount("three-children@example.com");
+  it("stores at most five children, and a removed child frees a place", async () => {
+    const { cookie } = await newAccount("five-children@example.com");
     const t = Date.now();
     const child = (id: string, updatedAt: number, extra: Record<string, unknown> = {}) => ({ ...profile(id), updatedAt, ...extra });
-    const ids = ["lim-a", "lim-b", "lim-c", "lim-d"];
+    const ids = ["lim-a", "lim-b", "lim-c", "lim-d", "lim-e", "lim-f"];
     const first = await (await sync.POST(post("/api/sync/", { profiles: ids.map((id, i) => child(id, t + i)) }, cookie))).json();
-    expect(first.profiles.map((p: { id: string }) => p.id).sort()).toEqual(["lim-a", "lim-b", "lim-c"]);
+    expect(first.profiles.map((p: { id: string }) => p.id).sort()).toEqual(["lim-a", "lim-b", "lim-c", "lim-d", "lim-e"]);
     const renamed = await (await sync.POST(post("/api/sync/", { profiles: [child("lim-a", t + 10, { name: "Ada" })] }, cookie))).json();
     expect(renamed.profiles.find((p: { id: string }) => p.id === "lim-a").name).toBe("Ada");
-    await sync.POST(post("/api/sync/", { profiles: [child("lim-c", t + 20, { deleted: true })] }, cookie));
-    const added = await (await sync.POST(post("/api/sync/", { profiles: [child("lim-d", t + 30)] }, cookie))).json();
-    expect(added.profiles.filter((p: { deleted?: boolean }) => !p.deleted).map((p: { id: string }) => p.id).sort()).toEqual(["lim-a", "lim-b", "lim-d"]);
+    await sync.POST(post("/api/sync/", { profiles: [child("lim-e", t + 20, { deleted: true })] }, cookie));
+    const added = await (await sync.POST(post("/api/sync/", { profiles: [child("lim-f", t + 30)] }, cookie))).json();
+    expect(added.profiles.filter((p: { deleted?: boolean }) => !p.deleted).map((p: { id: string }) => p.id).sort()).toEqual(["lim-a", "lim-b", "lim-c", "lim-d", "lim-f"]);
   });
 
   it("keeps children already on an account when the family is past the limit", async () => {
     const { cookie, body } = await newAccount("already-four@example.com");
     const familyId = body.family.account.familyId as string;
     const t = Date.now();
-    const ids = ["keep-a", "keep-b", "keep-c", "keep-d"];
+    const ids = ["keep-a", "keep-b", "keep-c", "keep-d", "keep-e", "keep-f"];
     await dbm.batch(ids.map((id, i) => ({
       sql: "INSERT INTO profiles (id, family_id, data, updated_at) VALUES (?, ?, ?, ?)",
       args: [id, familyId, JSON.stringify({ ...profile(id), updatedAt: t + i }), t + i],
     })));
-    const renamed = await (await sync.POST(post("/api/sync/", { profiles: [{ ...profile("keep-d"), name: "Dee", updatedAt: t + 20 }] }, cookie))).json();
+    const renamed = await (await sync.POST(post("/api/sync/", { profiles: [{ ...profile("keep-f"), name: "Dee", updatedAt: t + 20 }] }, cookie))).json();
     expect(renamed.profiles.map((p: { id: string }) => p.id).sort()).toEqual(ids);
-    expect(renamed.profiles.find((p: { id: string }) => p.id === "keep-d").name).toBe("Dee");
-    const extra = await (await sync.POST(post("/api/sync/", { profiles: [{ ...profile("keep-e"), updatedAt: t + 30 }] }, cookie))).json();
+    expect(renamed.profiles.find((p: { id: string }) => p.id === "keep-f").name).toBe("Dee");
+    const extra = await (await sync.POST(post("/api/sync/", { profiles: [{ ...profile("keep-g"), updatedAt: t + 30 }] }, cookie))).json();
     expect(extra.profiles.map((p: { id: string }) => p.id).sort()).toEqual(ids);
   });
 

@@ -3,7 +3,7 @@ import { listRegions } from "@/content/regions";
 import { APP_NAME } from "@/lib/brand";
 import { MAX_CHILDREN, money, perChildMonthly, PRICES_BY_CURRENCY, type Country, type Currency } from "@/lib/plan";
 
-/** "From $3.33 a month per child (C$119.99 a year for up to 3 children)": our price, led by the cost per child. */
+/** "From $2.00 a month per child (C$119.99 a year for up to 5 children)": our price, led by the cost per child. */
 const perChild = (c: Currency) =>
   `From ${money(perChildMonthly(c, "year"), c)} a month per child (${c === "USD" ? "US$" : "C$"}${PRICES_BY_CURRENCY[c].year.amount} a year for up to ${MAX_CHILDREN} children).`;
 // Competitor comparison pages for the app. Facts about other products come from their public pages

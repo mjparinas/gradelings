@@ -20,7 +20,7 @@ const PAGE = 2000;
 /** Most events one family can store; a real child makes a few thousand a year. */
 const MAX_FAMILY_EVENTS = 250_000;
 const MAX_JSON = 4000;
-/** Most child records (deleted ones included) one family can store. Families have at most 3 children at a time. */
+/** Most child records (deleted ones included) one family can store. Families have at most 5 children at a time. */
 const MAX_FAMILY_PROFILES = 50;
 const EVENT_TYPES = new Set(["answer", "session", "play", "game", "trophy", "secret", "buy", "quest", "goal", "placement", "help", "story", "mystery"]);
 

@@ -336,8 +336,8 @@ describe("Picker", () => {
     expect(screen.getByText("Who's learning today?")).toBeInTheDocument();
   });
 
-  it("has no Add player once the family has three children", () => {
-    h.profiles = [kid("a", "Ava"), kid("b", "Ben"), kid("c", "Cy")];
+  it("has no Add player once the family has five children", () => {
+    h.profiles = [kid("a", "Ava"), kid("b", "Ben"), kid("c", "Cy"), kid("d", "Dee"), kid("e", "Eli")];
     render(<Picker />);
     expect(screen.queryByRole("button", { name: /Add player/ })).not.toBeInTheDocument();
   });
