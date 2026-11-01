@@ -20,7 +20,8 @@ import { YearReviewCard, YearReviewPage } from "./YearReview";
 const at = (y: number, m: number, d: number, h = 12) => new Date(y, m - 1, d, h).getTime();
 const ava: Profile = { id: "a", name: "Ava", avatar: "ollie", colour: "#fff", grade: "2", framework: "ca-bc", createdAt: at(2026, 3, 1), updatedAt: 1 };
 const leo: Profile = { ...ava, id: "b", name: "Leo" };
-const family: FamilyInfo = { plan: "trial", trialEndsAt: 0, updatedAt: 1 };
+// A member: Year in review is for members (flag `members-reports`).
+const family: FamilyInfo = { plan: "premium", trialEndsAt: 0, updatedAt: 1 };
 let n = 0;
 /** Ten right answers on one unit for a child, one a minute from `t`. */
 const tens = (profileId: string, t: number): AppEvent[] =>
@@ -79,5 +80,16 @@ describe("the year in review card on the Overview", () => {
   it("doesn't show outside June and July", () => {
     on(at(2027, 5, 20));
     expect(render(<YearReviewCard />).container).toBeEmptyDOMElement();
+  });
+
+  it("shows the free plan what Year in review holds, with the child's days, and no printing", () => {
+    on(at(2027, 6, 20));
+    useStore.setState({ family: { plan: "trial", trialEndsAt: 0, updatedAt: 1 } });
+    render(<YearReviewPage childId="a" />);
+    expect(screen.getByRole("heading", { name: /Ava's 2026–27 school year/ })).toBeInTheDocument();
+    expect(screen.getByText(/Ava has practised on 1 day since August 1\./)).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "See the family plan" })).toHaveAttribute("href", "#/account?next=subscription");
+    expect(screen.queryByRole("button", { name: /Print or save as PDF/ })).toBeNull();
+    expect(screen.queryByText("Units grown")).toBeNull();
   });
 });

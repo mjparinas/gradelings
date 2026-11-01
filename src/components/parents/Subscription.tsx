@@ -13,6 +13,7 @@ import { useStore } from "@/lib/store";
 import { isIosApp, isStoreApp } from "@/lib/twa";
 import { PromoBanner } from "@/components/site/PromoBanner";
 import { PageTitle, Panel } from "./common";
+import { StakeLines } from "./MembersOnly";
 
 const noSubscribe = () => () => {};
 /**
@@ -30,7 +31,7 @@ export const includedFor = (country?: "CA" | "US") => [
   `Every unit in every subject, ${countryOf(country).gradeRange}`,
   "Adventure, Review, Speed Run and Challenge modes",
   "The arcade games, with your learn-to-play timer",
-  "Full progress reports over time",
+  "Full progress reports: every unit, charts over time, \"Is it working?\", the report-card conversation sheet and Year in review",
   `Up to ${MAX_CHILDREN} children`,
   "Sync across all your devices",
 ];
@@ -127,6 +128,7 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
                 ? `Free trial · ${trialDaysLeft(family)} ${trialDaysLeft(family) === 1 ? "day" : "days"} left`
                 : "Free plan"}
           </p>
+          {!inStoreApp && <StakeLines className="mt-2" />}
           {codeAccess && !lifetime && <p className="text-ink-soft">Free access until {longDate(family.accessUntil!)}</p>}
           {subscribed && family.subscription?.cancelAt ? (
             <p className="text-ink-soft">
@@ -145,7 +147,7 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
           )}
           {!premium && (
             <p className="mt-2 font-read text-ink-soft">
-              The free plan keeps the first {FREE_UNITS_PER_COURSE} units of each subject, the Daily Challenge, trophies and the report card guide.
+              The free plan keeps the first {FREE_UNITS_PER_COURSE} units of each subject, the Daily Challenge, trophies, a summary of each report and the report card guide.
             </p>
           )}
           <ul className="mt-4 flex flex-col gap-1.5">

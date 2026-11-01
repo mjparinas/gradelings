@@ -135,10 +135,7 @@ export function buildReport(events: AppEvent[], derived: Derived, grade: GradeId
 
   // French is opt-in, so its units only appear once the child has started them.
   // A subject set to another grade lists that grade's units, plus any of the child's own grade's units already started.
-  const practised = practiceUnitRefs(grade, framework, subjectGrades);
-  const keys = new Set(practised.map((r) => r.key));
-  const own = allUnitRefs(grade, framework).filter((ref) => !keys.has(ref.key) && derived.units[ref.key]);
-  const units: UnitRow[] = [...practised, ...own].filter((ref) => isCoreSubject(ref.course.subject) || derived.units[ref.key]).map((ref) => {
+  const units: UnitRow[] = reportUnitRefs(grade, framework, derived.units, subjectGrades).map((ref) => {
     const s = derived.units[ref.key];
     return { ref, level: unitLevel(s), attempts: s?.attempts ?? 0, accuracy: s ? recentAccuracy(s) : 0, lastT: s?.lastT ?? 0 };
   });
@@ -159,4 +156,15 @@ export function buildReport(events: AppEvent[], derived: Derived, grade: GradeId
       .map(([id, t]) => ({ id, t }))
       .sort((a, b) => b.t - a.t),
   };
+}
+
+/**
+ * The units a report lists for a child: their practice courses (a subject set to another grade lists that grade's
+ * units), plus their own grade's units already started there. French and other second languages appear only once started.
+ */
+export function reportUnitRefs(grade: GradeId, framework: FrameworkId, started: Derived["units"], subjectGrades: SubjectGrades = {}): UnitRef[] {
+  const practised = practiceUnitRefs(grade, framework, subjectGrades);
+  const keys = new Set(practised.map((r) => r.key));
+  const own = allUnitRefs(grade, framework).filter((ref) => !keys.has(ref.key) && started[ref.key]);
+  return [...practised, ...own].filter((ref) => isCoreSubject(ref.course.subject) || started[ref.key]);
 }

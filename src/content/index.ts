@@ -293,6 +293,16 @@ export function getCourse(grade: GradeId, subject: SubjectId | string, framework
   return coursesForGrade(grade, framework).find((c) => c.subject === subject);
 }
 
+/**
+ * A unit's place in its course as a framework teaches it, which is what the free plan's "first few units" counts.
+ * A ref's own `course` is every framework's units merged, and a US child's units are localized copies, so neither
+ * its index there nor `indexOf` would do. -1 when the framework's course doesn't have the unit.
+ */
+export function unitIndexIn(ref: Pick<UnitRef, "course" | "unit">, framework: FrameworkId): number {
+  const course = getCourse(ref.course.grade, ref.course.subject, framework);
+  return course ? course.units.findIndex((u) => u.id === ref.unit.id) : -1;
+}
+
 /** A unit by key. Pass the child's framework to get it in that framework's spelling (US English for a state). */
 export function getUnitRef(key: string, framework?: FrameworkId): UnitRef | undefined {
   const ref = refs.get(key);

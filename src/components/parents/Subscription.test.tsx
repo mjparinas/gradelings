@@ -14,7 +14,10 @@ const state = vi.hoisted(() => ({
 }));
 
 vi.mock("@/lib/store", () => ({
-  useStore: (sel: (s: { family: FamilyInfo }) => unknown) => sel({ family: state.family }),
+  useStore: (sel: (s: { family: FamilyInfo; events: []; profiles: []; settings: object }) => unknown) => sel({ family: state.family, events: [], profiles: [], settings: {} }),
+  // No children here: the "what you'd lose" lines are tested in MembersOnly.test.tsx.
+  useProfiles: () => [],
+  derivedFor: vi.fn(),
 }));
 vi.mock("@/lib/router", () => ({
   useRoute: () => ({ path: ["subscription"], query: state.query }),
