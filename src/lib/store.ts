@@ -28,6 +28,8 @@ import { gamesOpenedBetween, subjectsOn } from "./arcade";
 import { growthStage } from "./buddy";
 import { dailyQuests, weekDays, weeklyQuests, weekStart } from "./quests";
 import { hasTestCoins, isOn, useFlag } from "./remoteFlags";
+import { HOLIDAYS, holidayOn, setCurrentHoliday } from "./holidays";
+import { familyCountry } from "./coppa";
 import { storiesFor } from "./stories";
 import { SEASON_REWARD, seasonOn, seasonQuestId, seasonStickers } from "./seasons";
 import { getRoomItem, isRoomOwned } from "./room";
@@ -568,6 +570,12 @@ if (typeof document !== "undefined") {
     root.toggle("contrast", Boolean(s?.highContrast));
     root.toggle("dyslexic", Boolean(s?.dyslexiaFont));
     for (const tint of READING_TINTS) root.toggle(`tint-${tint}`, s?.readingTint === tint);
+    // Holiday theme: a class for the look, and the id for the characters' hats (see holidays.ts).
+    const state = useStore.getState();
+    const holiday = isOn("holiday-themes") ? holidayOn(dayKey(Date.now()), familyCountry(state.profiles)) : null;
+    setCurrentHoliday(holiday?.id ?? null);
+    for (const h of HOLIDAYS) root.toggle(`holiday-${h.id}`, h.id === holiday?.id);
+    root.toggle("holiday", Boolean(holiday));
   };
   useStore.subscribe(apply);
   apply();

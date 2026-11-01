@@ -181,3 +181,27 @@ describe("SpeechBubble", () => {
     expect(bubble.querySelector('[aria-hidden="true"]')).not.toBeNull();
   });
 });
+
+describe("holiday hats", () => {
+  const ids = ["valentines", "stpatricks", "easter", "halloween", "thanksgiving", "christmas"] as const;
+
+  it("draws a hat for each holiday and none otherwise", () => {
+    expect(render(<CritterSvg id="ollie" />).container.querySelector("[data-holiday]")).toBeNull();
+    for (const holiday of ids) {
+      const { container } = render(<CritterSvg id="hoot" holiday={holiday} />);
+      expect(container.querySelector(`[data-holiday="${holiday}"]`)).not.toBeNull();
+    }
+  });
+
+  it("puts one on every character", () => {
+    for (const c of CRITTERS) {
+      const { container } = render(<CritterSvg id={c.id} holiday="christmas" />);
+      expect(container.querySelectorAll('[data-holiday="christmas"]')).toHaveLength(1);
+    }
+  });
+
+  it("leaves the Legend's crown alone", () => {
+    const { container } = render(<CritterSvg id="ollie" stage={5} holiday="easter" />);
+    expect(container.querySelector("[data-holiday]")).toBeNull();
+  });
+});
