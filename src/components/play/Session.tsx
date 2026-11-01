@@ -14,6 +14,8 @@ import type { Question } from "@/content/types";
 import { burstFrom, celebrate, floatText, replay } from "@/lib/juice";
 import { pick } from "@/content/random";
 import { activeFocus } from "@/lib/focus";
+import { goalBoostUnits } from "@/lib/goalPlan";
+import { canUse } from "@/lib/plan";
 import { effectiveGoal } from "@/lib/goal";
 import { dayKey, type Mode } from "@/lib/model";
 import { levelInfo, nextStep, unitLevel } from "@/lib/proficiency";
@@ -94,6 +96,8 @@ export function Session({ mode, scope, resume = false }: { mode: Mode; scope: st
   const matchReading = useFlag("reading-level-match");
   const subjectGrades = useSubjectGrades();
   const resumeOn = useFlag("resume-lesson");
+  const goalsOn = useFlag("goal-plans");
+  const family = useStore((s) => s.family);
   const [plan] = useState<Plan | null>(() =>
     makePlan({
       mode,
@@ -109,6 +113,7 @@ export function Session({ mode, scope, resume = false }: { mode: Mode; scope: st
       short: settings?.shortSessions,
       readingLevel: matchReading ? estimateReadingLevel(derivedNow.reading ?? [], profile.grade) : undefined,
       focus: activeFocus(settings, Date.now())?.unit,
+      goalUnits: goalsOn && settings?.goalPlan && family && canUse(family, "goalPlan") ? goalBoostUnits(settings?.goalPlan, (k) => unitLevel(derivedNow.units[k]), Date.now()) : undefined,
     }),
   );
   if (!plan) {

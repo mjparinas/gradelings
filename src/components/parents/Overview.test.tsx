@@ -68,6 +68,49 @@ describe("Overview", () => {
     expect(useStore.getState().settings.a.focus).toBeUndefined();
   });
 
+  it("shows families without the plan what a goal plan does, with a link to subscribe", () => {
+    render(<Overview />);
+    const goal = within(card("Ava")).getByRole("group", { name: "Goal plan for Ava" });
+    expect(goal).toHaveTextContent("week-by-week plan for Ava");
+    expect(within(goal).getByRole("link", { name: "Part of the family plan" })).toHaveAttribute("href", "#/subscription");
+    expect(within(goal).queryByRole("button", { name: "Set a goal" })).not.toBeInTheDocument();
+  });
+
+  it("lets a member set a catch-up goal, see the week's units and the whole plan, and remove it", async () => {
+    useStore.setState({ family: { ...guest, plan: "premium" } });
+    const units = allUnitRefs("3", "ca-bc").filter((r) => r.course.subject === "math");
+    render(<Overview />);
+    const goal = () => within(card("Ava")).getByRole("group", { name: "Goal plan for Ava" });
+    await userEvent.click(within(goal()).getByRole("button", { name: "Set a goal" }));
+    await userEvent.click(within(goal()).getByRole("radio", { name: "Catch up on a few units" }));
+    await userEvent.click(within(goal()).getByRole("checkbox", { name: new RegExp(units[0].unit.title) }));
+    await userEvent.click(within(goal()).getByRole("checkbox", { name: new RegExp(units[1].unit.title) }));
+    await userEvent.click(within(goal()).getByRole("button", { name: "Make the plan" }));
+    const saved = useStore.getState().settings.a.goalPlan!;
+    expect(saved).toMatchObject({ kind: "units", subject: "math", grade: "3", units: [units[0].key, units[1].key] });
+    expect(goal()).toHaveTextContent(`Catch up on ${units[0].unit.title} and ${units[1].unit.title}`);
+    expect(goal()).toHaveTextContent("0 of 2 units at Proficient");
+    expect(goal()).toHaveTextContent("Week 1 of 5: up next");
+    expect(within(goal()).getByRole("progressbar", { name: "Ava's goal" })).toHaveAttribute("aria-valuenow", "0");
+    await userEvent.click(within(goal()).getByRole("button", { name: "See the whole plan" }));
+    expect(within(goal()).getByRole("list", { name: "Week-by-week plan for Ava" }).children).toHaveLength(5);
+    await userEvent.click(within(goal()).getByRole("button", { name: "Remove goal" }));
+    expect(useStore.getState().settings.a.goalPlan).toBeUndefined();
+  });
+
+  it("plans every unit of the subject not yet Proficient for a next-grade goal", async () => {
+    useStore.setState({ family: { ...guest, plan: "premium" }, events: answers("a", Date.now() - DAY, 12, 12) });
+    const units = allUnitRefs("3", "ca-bc").filter((r) => r.course.subject === "math");
+    render(<Overview />);
+    const goal = () => within(card("Ava")).getByRole("group", { name: "Goal plan for Ava" });
+    await userEvent.click(within(goal()).getByRole("button", { name: "Set a goal" }));
+    expect(within(goal()).getByRole("radio", { name: "Get ready for Grade 4" })).toBeChecked();
+    await userEvent.click(within(goal()).getByRole("button", { name: "Make the plan" }));
+    // The unit Ava already has at Proficient is left out.
+    expect(useStore.getState().settings.a.goalPlan!.units).toEqual(units.slice(1).map((r) => r.key));
+    expect(goal()).toHaveTextContent("Ready for Grade 4 Math");
+  });
+
   it("lets a parent set a reward for coins earned, then mark it as given", async () => {
     render(<Overview />);
     await userEvent.click(within(card("Ava")).getByRole("button", { name: "Set a reward" }));

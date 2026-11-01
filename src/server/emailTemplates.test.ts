@@ -118,3 +118,12 @@ describe("emails to a US family", () => {
     expect(t.trialRecapEmail("a@example.com", O, 5, kids, "CA").text).toContain("Maya has practised on 3 days");
   });
 });
+
+describe("goal plan lines in the weekly email", () => {
+  it("come under the child, before homework", () => {
+    const goal = ["  Maya's goal: Ready for Grade 5 Math by Sep 1. 3 of 12 units at Proficient, on track.", "  Up next: Fractions."];
+    const mail = t.weeklyEmail("a@example.com", O, [{ name: "Maya", minutes: 30, answers: 40, accuracy: 80, goal, homework: ["  Homework: Decimals"] }], "u");
+    expect(mail.text.indexOf("Maya: 30 min")).toBeLessThan(mail.text.indexOf("Maya's goal"));
+    expect(mail.text.indexOf("Up next: Fractions")).toBeLessThan(mail.text.indexOf("Homework: Decimals"));
+  });
+});

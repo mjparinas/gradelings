@@ -182,6 +182,31 @@ describe("daily email job", () => {
     expect(email.outbox().length).toBe(count); // not twice in one week
   });
 
+  it("carries a member's goal plan in the weekly email, and leaves it out once the plan has ended", async () => {
+    const f = await family("goal@example.com");
+    await prefs.POST(req("/api/account/prefs/", "POST", { weeklyReport: true }, f.cookie));
+    vi.useFakeTimers({ toFake: ["Date"] });
+    const d = new Date();
+    d.setUTCHours(12, 0, 0, 0);
+    vi.setSystemTime(new Date(d.getTime() + ((7 - d.getUTCDay()) % 7 || 7) * 86_400_000));
+    const { dayKey } = await import("@/lib/model");
+    const now = Date.now();
+    const goalPlan = { kind: "units", subject: "math", grade: "2", units: ["2/math/tens-and-ones"], start: dayKey(now - 86_400_000), until: dayKey(now + 27 * 86_400_000), setAt: now };
+    await sync.POST(req("/api/sync/", "POST", { settings: [{ profileId: f.ids[0], updatedAt: now, goalPlan }] }, f.cookie));
+    const mailTo = () => email.outbox().filter((m) => m.to === "goal@example.com" && m.subject.includes("week")).at(-1)?.text ?? "";
+    await run();
+    expect(mailTo()).toMatch(/Maya's goal: Catch up on .+ by \w{3} \d{1,2}\. 0 of 1 units at Proficient, on track\./);
+    expect(mailTo()).toContain("Up next:");
+
+    // A family whose trial is over keeps the goal saved, but the email no longer carries it.
+    await dbm.run("UPDATE families SET trial_ends_at = ? WHERE id = ?", [now - 1000, f.familyId]);
+    await dbm.run("UPDATE parents SET last_weekly_at = NULL WHERE email = ?", ["goal@example.com"]);
+    vi.setSystemTime(new Date(now + 7 * 86_400_000));
+    await run();
+    expect(mailTo()).toContain("Maya");
+    expect(mailTo()).not.toContain("goal:");
+  });
+
   it("puts the postal address in every email's footer", async () => {
     const { MAILING_ADDRESS } = await import("@/lib/brand");
     const { verifyEmail, weeklyEmail } = await import("@/server/emailTemplates");

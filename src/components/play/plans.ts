@@ -85,6 +85,8 @@ export interface PlanInput {
   readingLevel?: number;
   /** The unit key a parent picked as this child's focus, if any. */
   focus?: string;
+  /** Units up next in a parent's goal plan, picked more often in Adventure. */
+  goalUnits?: readonly string[];
 }
 
 export function makePlan(input: PlanInput): Plan | null {
@@ -99,6 +101,7 @@ export function makePlan(input: PlanInput): Plan | null {
     mode: m,
     allowed,
     focus: input.focus,
+    goalUnits: input.goalUnits,
     subject: subjects.includes(scope as SubjectId) ? (scope as SubjectId) : undefined,
   });
 

@@ -227,6 +227,8 @@ export interface WeeklyChild {
   month?: { minutes: number; answers: number; previousAnswers: number; activeDays: number };
   /** Homework from the child's class (`homeworkEmailLines`), already indented. */
   homework?: string[];
+  /** The child's goal plan and what's up next (`goalEmailLines`), already indented. Family plan only. */
+  goal?: string[];
   /** Math facts, stories and an idea to try at home (`weeklyExtras.ts`), already indented. */
   extras?: string[];
 }
@@ -248,6 +250,7 @@ export function weeklyEmail(to: string, origin: string, children: WeeklyChild[],
       : `${c.name} didn't practise this week. A short session today is a great restart.`,
     ...(c.strength ? [`  Going well: ${c.strength}`] : []),
     ...(c.next ? [`  Next up: ${c.next}`] : []),
+    ...(c.goal ?? []),
     ...(c.homework ?? []),
     ...(c.extras ?? []),
     ...(c.month ? [monthLine(c.name, c.month)] : []),
