@@ -28,7 +28,7 @@ describe("Play listing text", () => {
     for (const text of [name, short]) expect(text).not.toMatch(/#1|\bbest\b|\bfree\b|\bnew\b|\bsale\b|download now|\bTeacher Approved\b/i);
   });
   it("keeps the grade range and leaves out Quebec", () => {
-    expect(short).toContain("Kindergarten to Grade 9");
+    expect(short).toContain("Pre-K to Grade 9");
     expect(full).not.toMatch(/Qu[eé]bec/);
   });
 });

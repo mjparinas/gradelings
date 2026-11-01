@@ -10,14 +10,14 @@ Google Play's payments policy doesn't let an app sell digital content outside Go
 
 Paste these into Play Console > Grow users > Store presence > Main store listing. Counts are checked by `src/lib/playListing.test.ts`.
 
-- **App name** (30 at most): `Gradelings: K-9 Practice`
-- **Short description** (80 at most): `Curriculum-matched practice and learning games for Kindergarten to Grade 9.`
+- **App name** (30 at most): `Gradelings: Pre-K-9 Practice`
+- **Short description** (80 at most): `Curriculum-matched practice and learning games for Pre-K to Grade 9.`
 - **Full description** (4,000 at most):
 
 ```text
 Practice that matches your child's school curriculum, with feedback that is kind and games that are worth playing.
 
-Gradelings is for children from Kindergarten to Grade 9, for families in Canada and the United States. Pick your child's province, territory or state and grade, and every question follows what their class is learning.
+Gradelings is for children from Pre-K to Grade 9, for families in Canada and the United States. Pick your child's province, territory or state and grade, and every question follows what their class is learning.
 
 WHAT YOUR CHILD GETS
 • Math, language arts, science and social studies, written for your province, territory or state.
@@ -109,5 +109,5 @@ Collected (sent to our server), only when a parent makes an account and turns on
 
 ## After it's live
 
-- Keep the listing's grade range and province list matched to `FRAMEWORKS` (Kindergarten to Grade 9; no Quebec).
+- Keep the listing's grade range and province list matched to `FRAMEWORKS` (Pre-K to Grade 9; no Quebec).
 - When the data we keep changes, update this file, the Data safety form, `/privacy/` and `docs/school/` together.
