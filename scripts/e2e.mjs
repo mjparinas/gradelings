@@ -306,7 +306,7 @@ async function eventsWaiting(page) {
     await page.getByRole("dialog").getByRole("button", { name: "Stop", exact: true }).click({ force: true });
     await page.goto(`${BASE}/parents/`);
     await enterPin(page, false);
-    for (const p of ["reports", "placement", "report-cards", "children", "subscription"]) {
+    for (const p of ["reports", "placement", "report-cards", "hours", "portfolio", "children", "subscription"]) {
       await page.goto(`${BASE}/parents/#/${p}`);
       await page.waitForTimeout(700);
       await shot(page, `22-parent-${p}`, true);
@@ -314,7 +314,16 @@ async function eventsWaiting(page) {
     // Placement and Report card are views under Reports; the old Privacy link opens Account.
     await page.goto(`${BASE}/parents/#/report-cards`);
     await page.waitForTimeout(500);
-    if ((await page.getByRole("navigation", { name: "Report views" }).getByRole("link").count()) !== 4) errors.push("reports: the Progress / Placement / Report card / Year in review views are missing");
+    if ((await page.getByRole("navigation", { name: "Report views" }).getByRole("link").count()) !== 6) errors.push("reports: the Progress / Placement / Report card / Year in review / Hours log / Portfolio views are missing");
+    // The homeschool pack. With the lessons played (not in "--part parents" alone), the hours log has a row and the portfolio a unit.
+    await page.goto(`${BASE}/parents/#/hours`);
+    await page.waitForTimeout(500);
+    if (!(await vis(page.getByRole("heading", { name: /hours log/ })))) errors.push("hours log: the page didn't open");
+    else if (MODES && (await page.getByRole("table").locator("tbody tr").count()) < 1) errors.push("hours log: no day of learning listed after a played session");
+    await page.goto(`${BASE}/parents/#/portfolio`);
+    await page.waitForTimeout(500);
+    if (!(await vis(page.getByRole("heading", { name: /learning portfolio/ })))) errors.push("portfolio: the page didn't open");
+    else if (MODES && (await vis(page.getByText(/hasn't practised between these days/)))) errors.push("portfolio: empty after a played session");
     await page.goto(`${BASE}/parents/#/privacy`);
     await page.waitForTimeout(500);
     if (!(await vis(page.getByRole("heading", { name: "Your data, your choice" })))) errors.push("old privacy link: Account didn't show the privacy panels");
