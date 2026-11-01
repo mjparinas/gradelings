@@ -11,6 +11,7 @@ import { useNow } from "@/lib/useNow";
 import { FeedbackCard } from "./FeedbackCard";
 import { FamilyGoal } from "./FamilyGoal";
 import { FocusUnit } from "./FocusUnit";
+import { GoalPlanCard } from "./GoalPlanCard";
 import { HelpAsks } from "./HelpAsks";
 import { Homework } from "./Homework";
 import { InstallNudge } from "./InstallNudge";
@@ -64,6 +65,7 @@ function ChildCard({ p }: { p: Profile }) {
       <Homework p={p} />
       <FamilyGoal p={p} />
       <FocusUnit p={p} />
+      <GoalPlanCard p={p} />
       <RewardGoal p={p} />
       <HelpAsks p={p} />
       <ul className="mt-4 flex flex-col gap-2">

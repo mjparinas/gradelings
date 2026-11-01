@@ -32,7 +32,7 @@ export async function loadChildReport(familyId: string, profileId: string, days:
 }
 
 /** The report plus the events and stats it was built from (the class view and the weekly email count homework from them). */
-export async function loadChildData(familyId: string, profileId: string, days: number, now = Date.now()): Promise<(ChildReport & { events: AppEvent[]; derived: Derived }) | null> {
+export async function loadChildData(familyId: string, profileId: string, days: number, now = Date.now()): Promise<(ChildReport & { events: AppEvent[]; derived: Derived; settings?: ChildSettings }) | null> {
   const rows = await query<{ data: string }>("SELECT data FROM profiles WHERE id = ? AND family_id = ?", [profileId, familyId]);
   if (!rows[0]) return null;
   const stored = JSON.parse(rows[0].data) as Profile;
@@ -44,11 +44,12 @@ export async function loadChildData(familyId: string, profileId: string, days: n
     .filter((e) => e.t > (profile.resetAt ?? 0) && wellFormed(e));
   // Subjects a parent set to another grade (`subjectGrades.ts`) list that grade's units, as in the Parent area.
   const settingsRow = (await query<{ data: string }>("SELECT data FROM child_settings WHERE profile_id = ? AND family_id = ?", [profileId, familyId]))[0];
-  const subjectGrades = settingsRow && (await isFlagOn("subject-levels", familyId)) ? subjectGradesFor(profile, JSON.parse(settingsRow.data) as ChildSettings) : {};
+  const settings = settingsRow ? (JSON.parse(settingsRow.data) as ChildSettings) : undefined;
+  const subjectGrades = settings && (await isFlagOn("subject-levels", familyId)) ? subjectGradesFor(profile, settings) : {};
   await Promise.all(practiceTargets(profile, { subjectGrades }).map((t) => loadGrade(t.grade, t.framework)));
   const derived = derive(events, now);
   const report = buildReport(events, derived, profile.grade, profile.framework, days, now, subjectGrades);
-  return { profile, report, events, derived };
+  return { profile, report, events, derived, settings };
 }
 
 export async function familyProfileIds(familyId: string): Promise<string[]> {
