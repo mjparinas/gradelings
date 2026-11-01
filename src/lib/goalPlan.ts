@@ -117,6 +117,17 @@ export function goalWeeks(goal: Pick<GoalPlan, "units" | "start" | "until">): Go
   return weeks;
 }
 
+/** The plan as rows to show: each week with units on its own, and each run of empty weeks folded into one row. */
+export function goalRows(weeks: readonly GoalWeek[]): { first: number; last: number; start: string; units: string[] }[] {
+  const rows: { first: number; last: number; start: string; units: string[] }[] = [];
+  for (const w of weeks) {
+    const prev = rows.at(-1);
+    if (!w.units.length && prev && !prev.units.length) prev.last = w.index;
+    else rows.push({ first: w.index, last: w.index, start: w.start, units: w.units });
+  }
+  return rows;
+}
+
 /** Where the plan stands today. `level` is the child's level in a unit (`unitLevel`), -1 or 0 when not started. */
 export function goalProgress(goal: GoalPlan, level: (key: string) => number, now: number): GoalProgress {
   const weeks = goalWeeks(goal);

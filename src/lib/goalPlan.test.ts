@@ -7,6 +7,7 @@ import {
   goalBoostUnits,
   goalEmailLines,
   goalProgress,
+  goalRows,
   goalTitle,
   goalWeeks,
   makeGoalPlan,
@@ -71,6 +72,18 @@ describe("goalWeeks", () => {
   it("leaves catch-up weeks between units when there are more weeks than units", () => {
     const weeks = goalWeeks(plan({ units: units.slice(0, 2), until: "2026-12-13" }));
     expect(weeks.map((w) => w.units)).toEqual([["4/math/a"], [], [], ["4/math/b"], [], []]);
+  });
+});
+
+describe("goalRows", () => {
+  it("folds each run of empty weeks into one row", () => {
+    const rows = goalRows(goalWeeks(plan({ units: units.slice(0, 2), until: "2026-12-13" })));
+    expect(rows).toEqual([
+      { first: 0, last: 0, start: "2026-11-02", units: ["4/math/a"] },
+      { first: 1, last: 2, start: "2026-11-09", units: [] },
+      { first: 3, last: 3, start: "2026-11-23", units: ["4/math/b"] },
+      { first: 4, last: 5, start: "2026-11-30", units: [] },
+    ]);
   });
 });
 

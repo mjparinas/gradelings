@@ -13,6 +13,7 @@ import {
   defaultCatchUpDay,
   defaultReadyDay,
   goalProgress,
+  goalRows,
   makeGoalPlan,
   type GoalPlan,
 } from "@/lib/goalPlan";
@@ -150,29 +151,32 @@ function GoalPlanBody({ p }: { p: Profile }) {
       </div>
       {whole && (
         <ol className="mt-1 flex flex-col gap-2" aria-label={`Week-by-week plan for ${p.name}`}>
-          {progress.weeks.map((w) => (
-            <li key={w.index} className="text-sm" aria-current={w.index === progress.current && !progress.over ? "step" : undefined}>
-              <span className={w.index === progress.current && !progress.over ? "font-bold" : "font-semibold"}>
-                Week {w.index + 1} · {dayLabel(w.start, locale)}
-              </span>
-              {w.units.length ? (
-                <ul className="ml-4">
-                  {w.units.map((key) => {
-                    const ref = unit(key);
-                    const done = level(key) >= 2;
-                    return (
-                      <li key={key} className={done ? "text-good-dark" : undefined}>
-                        {ref ? `${ref.unit.emoji} ${ref.unit.title}` : "A unit from another grade"}
-                        {done && " ✓"}
-                      </li>
-                    );
-                  })}
-                </ul>
-              ) : (
-                <span className="text-ink-soft"> · catch-up and review week</span>
-              )}
-            </li>
-          ))}
+          {goalRows(progress.weeks).map((w) => {
+            const thisRow = !progress.over && progress.current >= w.first && progress.current <= w.last;
+            return (
+              <li key={w.first} className="text-sm" aria-current={thisRow ? "step" : undefined}>
+                <span className={thisRow ? "font-bold" : "font-semibold"}>
+                  {w.first === w.last ? `Week ${w.first + 1}` : `Weeks ${w.first + 1} to ${w.last + 1}`} · {dayLabel(w.start, locale)}
+                </span>
+                {w.units.length ? (
+                  <ul className="ml-4">
+                    {w.units.map((key) => {
+                      const ref = unit(key);
+                      const done = level(key) >= 2;
+                      return (
+                        <li key={key} className={done ? "text-good-dark" : undefined}>
+                          {ref ? `${ref.unit.emoji} ${ref.unit.title}` : "A unit from another grade"}
+                          {done && " ✓"}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                ) : (
+                  <span className="text-ink-soft"> · catch-up and review</span>
+                )}
+              </li>
+            );
+          })}
         </ol>
       )}
       <p className="mt-2 text-xs text-ink-soft">

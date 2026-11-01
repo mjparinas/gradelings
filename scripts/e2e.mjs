@@ -251,8 +251,7 @@ async function eventsWaiting(page) {
     if (!(await vis(goal.getByRole("progressbar", { name: "Maya's goal" })))) errors.push("goal plan: no progress bar after making the plan");
     if (!(await vis(goal.getByText(/Week 1 of \d+: up next/)))) errors.push("goal plan: this week's units aren't shown");
     await goal.getByRole("button", { name: "See the whole plan" }).click();
-    await goal.scrollIntoViewIfNeeded();
-    await shot(page, "20b-parent-goal-plan");
+    await goal.screenshot({ path: `${OUT}/20b-parent-goal-plan.png` });
     await goal.getByRole("button", { name: "Remove goal" }).click();
     if (!(await vis(goal.getByRole("button", { name: "Set a goal" })))) errors.push("goal plan: removing it didn't bring back Set a goal");
     await page.goto(`${BASE}/parents/#/settings`);

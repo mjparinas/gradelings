@@ -93,7 +93,7 @@ describe("Overview", () => {
     expect(goal()).toHaveTextContent("Week 1 of 5: up next");
     expect(within(goal()).getByRole("progressbar", { name: "Ava's goal" })).toHaveAttribute("aria-valuenow", "0");
     await userEvent.click(within(goal()).getByRole("button", { name: "See the whole plan" }));
-    expect(within(goal()).getByRole("list", { name: "Week-by-week plan for Ava" }).children).toHaveLength(5);
+    expect(within(goal()).getByRole("list", { name: "Week-by-week plan for Ava" }).children).toHaveLength(4);
     await userEvent.click(within(goal()).getByRole("button", { name: "Remove goal" }));
     expect(useStore.getState().settings.a.goalPlan).toBeUndefined();
   });
