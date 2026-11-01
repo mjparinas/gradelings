@@ -28,6 +28,7 @@ import { gamesOpenedBetween, subjectsOn } from "./arcade";
 import { growthStage } from "./buddy";
 import { dailyQuests, weekDays, weeklyQuests, weekStart } from "./quests";
 import { hasTestCoins, isOn, useFlag } from "./remoteFlags";
+import { applyHolidayIcon } from "./holidayIcon";
 import { HOLIDAYS, holidayOn, setCurrentHoliday } from "./holidays";
 import { familyCountry } from "./coppa";
 import { storiesFor } from "./stories";
@@ -574,6 +575,7 @@ if (typeof document !== "undefined") {
     const state = useStore.getState();
     const holiday = isOn("holiday-themes") ? holidayOn(dayKey(Date.now()), familyCountry(state.profiles)) : null;
     setCurrentHoliday(holiday?.id ?? null);
+    applyHolidayIcon(holiday?.id ?? null);
     for (const h of HOLIDAYS) root.toggle(`holiday-${h.id}`, h.id === holiday?.id);
     root.toggle("holiday", Boolean(holiday));
   };

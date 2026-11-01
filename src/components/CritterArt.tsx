@@ -517,7 +517,7 @@ const heart = (x: number, y: number, scale: number, rotate: number, fill: string
 );
 
 /** The hat or ears a character wears while a holiday theme is on (see src/lib/holidays.ts). Sits on the top of the head. */
-function HolidayHat({ holiday }: { holiday: HolidayId }) {
+export function HolidayHat({ holiday }: { holiday: HolidayId }) {
   switch (holiday) {
     case "christmas":
       return (
