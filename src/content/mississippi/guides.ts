@@ -203,6 +203,10 @@ export const MISSISSIPPI_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-K in Mississippi is the year before kindergarten, for children who are 4. Public school, Head Start and child care classrooms follow the Mississippi Early Learning Standards for four-year-olds. Children learn through play, stories and songs: counting, shapes and patterns, letters and rhymes, plus first ideas about families, communities and the world around them.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for counting small groups, naming letters, hearing rhymes, taking turns and talking about feelings.",
+    },
     k: {
       overview: "Kindergarten in Mississippi is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. In social studies (Citizenship at Home and School) they learn about rules and leaders, money, families and traditions, maps, and the symbols of Mississippi and the United States. Kindergartners take the Kindergarten Readiness Assessment at the start and end of the year.",
       lookFor: "Many Mississippi districts use standards-based report cards in the early grades. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

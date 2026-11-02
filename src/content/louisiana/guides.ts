@@ -201,6 +201,10 @@ export const LOUISIANA_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-K in Louisiana is the year before kindergarten, for children who are 4. Public school, Head Start and child care programs follow Louisiana's Birth to Five Early Learning and Development Standards. Children learn through play, stories and songs: counting, shapes and patterns, letters and rhymes, plus first ideas about families, communities and the world around them.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for counting small groups, naming letters, hearing rhymes, taking turns and talking about feelings.",
+    },
     k: {
       overview: "Kindergarten in Louisiana is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. Science looks at pushes and pulls, sunlight, weather and what living things need, and social studies is about themselves, families, rules, jobs, and the traditions and symbols of Louisiana and the United States. Teachers check each child's early reading with a screener.",
       lookFor: "Many Louisiana school systems use skills-based report cards in the early grades. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

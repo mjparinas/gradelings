@@ -1,4 +1,4 @@
-import { codeCite, research, type FrameworkContract } from "../contract";
+import { codeCite, preKCite, research, type FrameworkContract } from "../contract";
 import { PLAN } from "./plan";
 
 // Delaware's official standards (the Common Core, the Next Generation Science Standards and the Delaware Standards
@@ -6,6 +6,8 @@ import { PLAN } from "./plan";
 const OUTCOMES = research<Record<string, { idx: string }[]>>("delaware/outcomes.json");
 
 export const contract: FrameworkContract = {
+  // Pre-K cites the early-learning document (docs/research/delaware/prek).
+  preK: preKCite("delaware", "Delaware"),
   cite: codeCite(OUTCOMES, "Delaware"),
   ownPrefix: "de-",
   adoptsFrom: ["us-az", "us-ca", "ca-nb", "ca-ns", "ca-mb", "us-or", "us-ny", "us-wa"],
