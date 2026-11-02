@@ -61,7 +61,7 @@ const FAQS = [
   },
   {
     q: `Which grades does ${APP_NAME} cover?`,
-    a: `Pre-K to Grade 9 (Pre-K where your province or state offers it; ${preKRegions(FRAMEWORKS)} do today), in math, English language arts, science and social studies, plus French Immersion and Core French where your province teaches them${offersUsd(FRAMEWORKS) ? " (US states have no French yet)" : ""}. The text, buttons and read-aloud adapt to the child's age: big pictures and spoken prompts for Kindergarten and Grade 1, more independence for older kids.`,
+    a: `Pre-K to Grade 9 (${preKRegions(FRAMEWORKS) === "every province and state" ? "Pre-K is offered in every province and state" : `Pre-K where your province or state offers it; ${preKRegions(FRAMEWORKS)} do today`}), in math, English language arts, science and social studies, plus French Immersion and Core French where your province teaches them${offersUsd(FRAMEWORKS) ? " (US states have no French yet)" : ""}. The text, buttons and read-aloud adapt to the child's age: big pictures and spoken prompts for Kindergarten and Grade 1, more independence for older kids.`,
   },
   {
     q: offersUsd(FRAMEWORKS) ? "Is it matched to our province's or state's curriculum?" : "Is it matched to our provincial curriculum?",
