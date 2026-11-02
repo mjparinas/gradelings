@@ -39,6 +39,10 @@ const config = {
   thresholds: { high: 85, low: 70, break: null },
   concurrency: 4,
   timeoutMS: 20000,
+  // The first test run takes about 15 minutes on a 4-core machine (Stryker's default limit is 5), and mutants in
+  // module-level code would rerun every test for each one (an estimated 700+ hours), so they are skipped.
+  dryRunTimeoutMinutes: 40,
+  ignoreStatic: true,
 };
 
 export default config;
