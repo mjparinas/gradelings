@@ -1,0 +1,170 @@
+{
+ "pk/math": [
+  {
+   "idx": "Goal 34",
+   "text": "Children demonstrate knowledge of numbers and counting"
+  },
+  {
+   "idx": "Goal 35",
+   "text": "Children demonstrate knowledge of measurement: size, volume, height, weight, and length"
+  },
+  {
+   "idx": "Goal 36",
+   "text": "Children sort, classify, and organize objects"
+  },
+  {
+   "idx": "Goal 41",
+   "text": "Children demonstrate awareness of location and spatial relationships"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "Goal 48",
+   "text": "Children demonstrate understanding of social communication"
+  },
+  {
+   "idx": "Goal 49",
+   "text": "Children listen and understand communication (receptive language)"
+  },
+  {
+   "idx": "Goal 50",
+   "text": "Children communicate their thoughts, feelings and ideas with others (expressive language)"
+  },
+  {
+   "idx": "Goal 51",
+   "text": "Children demonstrate appreciation and enjoyment of reading"
+  },
+  {
+   "idx": "Goal 52",
+   "text": "Children use writing for a variety of purposes"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "Goal 30",
+   "text": "Children gain reasoning and critical thinking"
+  },
+  {
+   "idx": "Goal 31",
+   "text": "Children find multiple solutions to questions, tasks, problems, and challenges"
+  },
+  {
+   "idx": "Goal 37",
+   "text": "Children collect information through observation and manipulation"
+  },
+  {
+   "idx": "Goal 38",
+   "text": "Children make predictions and experiment"
+  },
+  {
+   "idx": "Goal 39",
+   "text": "Children observe and describe the natural world"
+  },
+  {
+   "idx": "Goal 45",
+   "text": "Children use technology appropriately"
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "Goal 9",
+   "text": "Children develop positive relationships with adults"
+  },
+  {
+   "idx": "Goal 10",
+   "text": "Children develop positive relationships with other children"
+  },
+  {
+   "idx": "Goal 11",
+   "text": "Children demonstrate awareness of behavior and its effects"
+  },
+  {
+   "idx": "Goal 12",
+   "text": "Children participate positively in group activities"
+  },
+  {
+   "idx": "Goal 13",
+   "text": "Children adapt to diverse settings"
+  },
+  {
+   "idx": "Goal 14",
+   "text": "Children demonstrate empathy for others"
+  },
+  {
+   "idx": "Goal 15",
+   "text": "Children recognize, appreciate, and respect similarities and differences in people"
+  },
+  {
+   "idx": "Goal 16",
+   "text": "Children show awareness of their unique self"
+  },
+  {
+   "idx": "Goal 17",
+   "text": "Children demonstrate belief in their abilities to control motivation, behavior and social environment"
+  },
+  {
+   "idx": "Goal 18",
+   "text": "Children understand and follow rules and routines"
+  },
+  {
+   "idx": "Goal 19",
+   "text": "Children regulate their feelings and impulses"
+  },
+  {
+   "idx": "Goal 20",
+   "text": "Children express appropriately a range of emotions"
+  },
+  {
+   "idx": "Goal 21",
+   "text": "Children demonstrate awareness of family characteristics and functions"
+  },
+  {
+   "idx": "Goal 22",
+   "text": "Children demonstrate awareness of their community, human interdependence, and social roles"
+  },
+  {
+   "idx": "Goal 23",
+   "text": "Children demonstrate civic responsibility"
+  },
+  {
+   "idx": "Goal 24",
+   "text": "Children demonstrate awareness and appreciation of their own and others’ cultures"
+  },
+  {
+   "idx": "Goal 25",
+   "text": "Children show curiosity and interest in learning"
+  },
+  {
+   "idx": "Goal 26",
+   "text": "Children persist when facing challenges"
+  },
+  {
+   "idx": "Goal 27",
+   "text": "Children demonstrate initiative"
+  },
+  {
+   "idx": "Goal 28",
+   "text": "Children approach daily activities with creativity and Imagination"
+  },
+  {
+   "idx": "Goal 29",
+   "text": "Childen learn through play and exploration"
+  },
+  {
+   "idx": "Goal 40",
+   "text": "Children differentiate between events that happen in the past, present, and future"
+  },
+  {
+   "idx": "Goal 42",
+   "text": "Children demonstrate knowledge of the relationship among people, places and geography"
+  },
+  {
+   "idx": "Goal 43",
+   "text": "Children demonstrate awareness of economic concepts"
+  },
+  {
+   "idx": "Goal 44",
+   "text": "Children demonstrate awareness of the relationship between humans and the environment"
+  }
+ ]
+}

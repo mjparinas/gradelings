@@ -1,4 +1,4 @@
-import { codeCite, research, type FrameworkContract } from "../contract";
+import { codeCite, preKCite, research, type FrameworkContract } from "../contract";
 import { PLAN } from "./plan";
 
 // Alaska's official standards, built from the Department of Education and Early Development's files by
@@ -7,6 +7,8 @@ import { PLAN } from "./plan";
 const OUTCOMES = research<Record<string, { idx: string }[]>>("alaska/outcomes.json");
 
 export const contract: FrameworkContract = {
+  // Pre-K cites the early-learning document (docs/research/alaska/prek).
+  preK: preKCite("alaska", "Alaska"),
   cite: codeCite(OUTCOMES, "Alaska"),
   ownPrefix: "ak-",
   adoptsFrom: ["us-ca", "ca-nb", "ca-ns", "ca-mb", "us-tx", "us-or", "us-wa", "us-me"],
