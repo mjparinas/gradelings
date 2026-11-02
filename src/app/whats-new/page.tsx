@@ -18,7 +18,7 @@ export default function WhatsNewPage() {
       <div className="mx-auto max-w-3xl">
         <h1 className="text-4xl font-bold">What’s new</h1>
         <p className="mt-2 font-read text-lg">
-          A short note for parents and teachers on what changed in {APP_NAME} each day, including bug fixes. Days with nothing you would notice are left out.
+          A short note for parents and teachers on what changed in {APP_NAME} each day, including bug fixes.
         </p>
         <div className="mt-6 flex flex-col gap-5">
           {WHATS_NEW.map((d) => (
