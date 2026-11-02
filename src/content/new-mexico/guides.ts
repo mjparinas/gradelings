@@ -202,6 +202,10 @@ export const NEW_MEXICO_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-K in New Mexico is the year before kindergarten, for children who are 4 by September 1. New Mexico PreK is offered in public schools and community programs, and follows the New Mexico Early Learning Standards. Children learn through play, stories and songs: counting, shapes and patterns, letters and rhymes, plus first ideas about family, community and the world around them.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for counting small groups, naming letters, hearing rhymes, taking turns and talking about feelings.",
+    },
     k: {
       overview: "Kindergarten in New Mexico is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. In social studies they learn about themselves, families, rules, community leaders (including Tribal leaders), and local, state and national symbols such as New Mexico's Zia sun flag.",
       lookFor: "Many New Mexico districts use standards-based report cards. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

@@ -1,0 +1,206 @@
+{
+ "pk/math": [
+  {
+   "idx": "5.1.A",
+   "text": "The child develops a sense of numbers and demonstrates early knowledge of counting"
+  },
+  {
+   "idx": "5.1.B",
+   "text": "The child recognizes and names basic shapes"
+  },
+  {
+   "idx": "5.1.C",
+   "text": "The child recognizes spatial concepts"
+  },
+  {
+   "idx": "5.1.D",
+   "text": "The child demonstrates an understanding of measurement"
+  },
+  {
+   "idx": "5.1.E",
+   "text": "The child sorts, compares, and creates patterns with objects"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "2.1.A",
+   "text": "The child attends and responds to others in joint attention"
+  },
+  {
+   "idx": "2.1.B",
+   "text": "The child listens and/or attends demonstrating understanding of language"
+  },
+  {
+   "idx": "2.1.C",
+   "text": "The child develops the capacity to communicate using speech (in English and/or their native language), nonverbal gestures, and/or sign language"
+  },
+  {
+   "idx": "2.1.D",
+   "text": "The child understands and uses an expanding vocabulary"
+  },
+  {
+   "idx": "2.1.E",
+   "text": "The child engages in conversation in their native language, English, and/or sign language"
+  },
+  {
+   "idx": "2.1.F",
+   "text": "The child uses conventions of language in one or more languages (grammar)"
+  },
+  {
+   "idx": "2.2.A",
+   "text": "The child demonstrates an understanding of print awareness"
+  },
+  {
+   "idx": "2.2.B",
+   "text": "The child understands print conventions"
+  },
+  {
+   "idx": "2.2.C",
+   "text": "The child develops phonological awareness (an understanding that words are made up of sounds)"
+  },
+  {
+   "idx": "2.2.D",
+   "text": "The child participates in rhyming and word play"
+  },
+  {
+   "idx": "2.2.E",
+   "text": "The child can identify letters in English and other alphabetic languages"
+  },
+  {
+   "idx": "2.2.F",
+   "text": "The child learns letter-sound correspondence in English and other alphabetic languages"
+  },
+  {
+   "idx": "2.3.A",
+   "text": "The child demonstrates an interest in literacy activities (e.g., community and cultural knowledge experiences, storytelling, read-alouds, chanting, singing, engaging with books, and writing)"
+  },
+  {
+   "idx": "2.3.B",
+   "text": "The child demonstrates story comprehension"
+  },
+  {
+   "idx": "2.3.C",
+   "text": "The child demonstrates emergent reading behaviors"
+  },
+  {
+   "idx": "2.4.A",
+   "text": "The child understands writing as a form of communication and recording information"
+  },
+  {
+   "idx": "2.4.B",
+   "text": "The child develops awareness and representation of their own identity through name recognition and writing"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "5.2.A",
+   "text": "The child investigates the physical and natural worlds"
+  },
+  {
+   "idx": "5.2.B",
+   "text": "The child recognizes their actions impact the environment"
+  },
+  {
+   "idx": "5.2.C",
+   "text": "The child uses senses and tools to investigate objects and identify solutions"
+  },
+  {
+   "idx": "5.2.D",
+   "text": "The child develops an understanding of cause and effect"
+  },
+  {
+   "idx": "5.2.E",
+   "text": "The child designs builds, and tests solutions to solve problems"
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "1.1.A",
+   "text": "The child exhibits imagination and creativity"
+  },
+  {
+   "idx": "1.1.B",
+   "text": "The child engages in the dramatic arts"
+  },
+  {
+   "idx": "1.1.C",
+   "text": "The child engages in the musical arts"
+  },
+  {
+   "idx": "1.1.D",
+   "text": "The child engages in the visual and tactile arts"
+  },
+  {
+   "idx": "1.2.A",
+   "text": "The child shows curiosity and initiative in interactions and experiences"
+  },
+  {
+   "idx": "1.2.B",
+   "text": "The child displays persistence and pursues challenges through problem-solving"
+  },
+  {
+   "idx": "1.3.A",
+   "text": "The child builds their capacity to retain and use information immediately (working memory)"
+  },
+  {
+   "idx": "1.3.B",
+   "text": "The child enhances their ability to regulate impulses and responses (inhibitory control)"
+  },
+  {
+   "idx": "1.3.C",
+   "text": "The child enhances their ability to adapt attention, actions, and behaviors (cognitive flexibility)"
+  },
+  {
+   "idx": "4.1.A",
+   "text": "The child demonstrates self-awareness"
+  },
+  {
+   "idx": "4.1.B",
+   "text": "The child demonstrates emotional development and expression"
+  },
+  {
+   "idx": "4.1.C",
+   "text": "The child develops emotional regulation"
+  },
+  {
+   "idx": "4.1.D",
+   "text": "The child demonstrates personal responsibility"
+  },
+  {
+   "idx": "4.2.A",
+   "text": "The child develops an understanding of their identity and belonging in relation to their family, culture, and community"
+  },
+  {
+   "idx": "4.2.B",
+   "text": "The child develops a sense of social awareness and inclusion of others in their learning community"
+  },
+  {
+   "idx": "4.2.C",
+   "text": "The child demonstrates knowledge of their community"
+  },
+  {
+   "idx": "4.2.D",
+   "text": "The child develops a sense of rights and responsibilities within a democratic society (civics)"
+  },
+  {
+   "idx": "4.3.A",
+   "text": "The child engages and interacts with adults"
+  },
+  {
+   "idx": "4.3.B",
+   "text": "The child develops relationships of mutual trust and respect with adults"
+  },
+  {
+   "idx": "4.4.A",
+   "text": "The child engages and interacts with other children"
+  },
+  {
+   "idx": "4.4.B",
+   "text": "The child develops relationships of mutual trust and respect with other children"
+  },
+  {
+   "idx": "4.4.C",
+   "text": "The child works cooperatively with other children"
+  }
+ ]
+}
