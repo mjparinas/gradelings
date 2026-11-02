@@ -13,6 +13,7 @@ import { FamilyGoal } from "./FamilyGoal";
 import { FocusUnit } from "./FocusUnit";
 import { GoalPlanCard } from "./GoalPlanCard";
 import { HelpAsks } from "./HelpAsks";
+import { VideoHelpCard } from "./VideoHelpCard";
 import { Homework } from "./Homework";
 import { InstallNudge } from "./InstallNudge";
 import { Milestones } from "./Milestones";
@@ -68,6 +69,7 @@ function ChildCard({ p }: { p: Profile }) {
       <GoalPlanCard p={p} />
       <RewardGoal p={p} />
       <HelpAsks p={p} />
+      <VideoHelpCard p={p} />
       <ul className="mt-4 flex flex-col gap-2">
         {subjectSummaries(d, p.grade, p.framework).map((s) => {
           const level = scheme.levels[s.level];

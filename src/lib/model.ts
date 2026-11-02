@@ -161,6 +161,8 @@ export type AppEvent = EventBase &
     | { type: "story"; story: string; rl: number; results: boolean[]; pages: number; ms: number }
     /** The child asked a grown-up to help with this unit after missing a question twice. Not practice: it never counts toward XP or proficiency. */
     | { type: "help"; unit: string }
+    /** The child watched a help video (`videoHelp.ts`) after missing a question twice. `watched` is the seconds played (capped at the video's length). Not practice: it never counts toward XP, time or proficiency. */
+    | { type: "video"; unit: string; video: string; watched: number; done: boolean }
     | { type: "play"; game: string; seconds: number }
     | { type: "game"; game: string; score: number; level: number }
     | { type: "trophy"; trophy: string }

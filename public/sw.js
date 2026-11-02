@@ -104,6 +104,8 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(request.url);
   if (request.method !== "GET" || url.origin !== self.location.origin) return;
   if (url.pathname.startsWith("/api/") || url.pathname.startsWith("/shared/")) return;
+  // Help videos are played with range requests, which a cache can't answer; the app keeps its own copy in Cache Storage (src/lib/videoCache.ts).
+  if (url.pathname.startsWith("/videos/")) return;
   // Client-side navigation data. If it fails offline, Next falls back to a full
   // page load, which the navigation branch below serves from the cache.
   if (request.headers.get("RSC") || url.searchParams.has("_rsc")) return;

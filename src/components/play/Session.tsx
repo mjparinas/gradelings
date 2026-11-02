@@ -8,7 +8,9 @@ import { reportDetails, type ReportDetails } from "@/lib/questionReport";
 import { SaveProgress } from "./SaveProgress";
 import { MysteryBox } from "./MysteryBox";
 import { LessonBody } from "./LessonScreen";
-import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
+import { Suspense, useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
+import { HelpVideoPlayer } from "./lazyScreens";
+import { helpVideoFor } from "@/lib/videoHelp";
 import { getUnitRef } from "@/content";
 import type { Question } from "@/content/types";
 import { burstFrom, celebrate, floatText, replay } from "@/lib/juice";
@@ -142,6 +144,8 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
   const settings = useChildSettings();
   const band = useBand();
   const log = useStore((s) => s.log);
+  const family = useStore((s) => s.family);
+  const videosOn = useFlag("video-help");
   const logSoon = useStore((s) => s.logSoon);
   const startDerived = useMemo(() => derivedFor(useStore.getState(), profile.id), [profile.id]);
 
@@ -166,6 +170,7 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
   // After two misses a child can tell a grown-up they need help, or look at how the unit works.
   const [helpAsked, setHelpAsked] = useState(false);
   const [showLesson, setShowLesson] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
   const [flash, setFlash] = useState<"good" | "bad" | null>(null);
   const stage = useRef<HTMLDivElement>(null);
   const loggedUpTo = useRef(0);
@@ -180,6 +185,8 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
   const unitRef = getUnitRef(item?.unitKey ?? "", profile.framework);
   const guide = item?.fact ? "math" : unitRef?.course.subject;
   const lesson = plan.lesson ?? unitRef?.unit.lesson;
+  // A short video for this unit, for members, when the flag is on (a fact isn't a unit).
+  const helpVideo = videosOn && family && canUse(family, "videoHelp") && item && !item.fact ? helpVideoFor(item.unitKey) : undefined;
   const lessonTitle = unitRef ? `${unitRef.unit.emoji} How ${unitRef.unit.title} works` : `${plan.icon} ${plan.title}: how it works`;
   const companion = profile.companion ?? "ollie";
 
@@ -305,6 +312,7 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
     setHinted(false);
     setHelpAsked(false);
     setShowLesson(false);
+    setShowVideo(false);
     setMood("happy");
     setMessage("");
   }
@@ -529,11 +537,24 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
                         log([{ type: "help", unit: item.unitKey }]);
                       },
                   onLesson: lesson ? () => setShowLesson(true) : undefined,
+                  onVideo: helpVideo ? () => setShowVideo(true) : undefined,
                 }
               : undefined
           }
           last={plan.total !== undefined && index + 1 >= plan.total}
         />
+      )}
+
+      {showVideo && helpVideo && item && (
+        <Suspense fallback={null}>
+          <HelpVideoPlayer
+            video={helpVideo}
+            onClose={() => setShowVideo(false)}
+            onNext={advance}
+            onLesson={lesson ? () => setShowLesson(true) : undefined}
+            onWatched={(seconds, done) => log([{ type: "video", unit: item.unitKey, video: helpVideo.id, watched: seconds, done }])}
+          />
+        </Suspense>
       )}
 
       {showLesson && lesson && (
@@ -596,7 +617,7 @@ function FeedbackBar({
   hint: string;
   report?: { unitKey: string; prompt: string; framework?: string; details?: ReportDetails };
   /** After two misses: ask a grown-up for help, or look at the unit's "how it works". */
-  help?: { asked: boolean; onAsk?: () => void; onLesson?: () => void };
+  help?: { asked: boolean; onAsk?: () => void; onLesson?: () => void; onVideo?: () => void };
   onNext: () => void;
   onDismiss: () => void;
   last: boolean;
@@ -618,6 +639,11 @@ function FeedbackBar({
             <p className="font-read text-lg leading-snug text-ink sm:text-xl">{hint}</p>
             {help && (
               <div className="mt-2 flex flex-wrap items-center gap-2">
+                {help.onVideo && (
+                  <button type="button" className="btn btn-soft min-h-12 px-4 text-base" onClick={help.onVideo}>
+                    <span aria-hidden="true">🎬</span> Watch a short video
+                  </button>
+                )}
                 {help.onLesson && (
                   <button type="button" className="btn btn-soft min-h-12 px-4 text-base" onClick={help.onLesson}>
                     <span aria-hidden="true">📖</span> Show me another way
