@@ -178,6 +178,10 @@ export const MINNESOTA_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-K in Minnesota is the year before kindergarten, for children who are 4. Public school, Head Start and child care programs follow the 4-5 years column of Minnesota's Early Childhood Indicators of Progress. Children learn through play, stories and songs: counting, shapes and patterns, letters and rhymes, plus first ideas about families, communities and the world around them.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for counting small groups, naming letters, hearing rhymes, taking turns and talking about feelings.",
+    },
     k: {
       overview: "Kindergarten in Minnesota is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 by ones and tens, and add and subtract within 5. Science explores what plants and animals need, pushes and pulls, weather and the sun's warmth, and social studies is “Family and Community”: belonging, rules, needs and wants, maps of nearby places and words for past and future.",
       lookFor: "Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

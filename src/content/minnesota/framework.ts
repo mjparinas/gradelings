@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Minnesota, a US state. Standards are the Minnesota K-12 Academic Standards adopted by the Minnesota Department of
 // Education (MDE) in Minnesota Rules chapter 3501: Mathematics (2022, in schools by 2027-28), English Language Arts
@@ -74,9 +75,9 @@ export const MINNESOTA: Framework = {
   standardLabel: "Benchmark",
   sourceName: "Minnesota Department of Education (MDE)",
   sourceUrl: "https://education.mn.gov/MDE/dse/stds/",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Minnesota report cards",
     intro:
