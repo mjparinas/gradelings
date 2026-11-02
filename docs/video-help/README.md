@@ -9,6 +9,7 @@ Nine math videos, Grades 1 to 6, listed in `HELP_VIDEOS` (`src/lib/videoHelp.ts`
 `scripts/help-videos/` makes everything from text, so a video is cheap to fix or add:
 - `specs.py`: each video's narration and what is drawn on screen, step by step.
 - `engine.py`: draws whiteboard frames with Pillow (Fredoka from `assets/fonts/`), times them to the narration, writes the captions (word for word the narration) and encodes with ffmpeg.
+- Every frame carries the Gradelings character and wordmark in the bottom-right corner (`logo-icon.png` is `public/icon.svg` rendered; wordmark colours are `WORDMARK_COLOURS` in `src/lib/brand.ts`), and text is shrunk to stay inside a 36 px margin so nothing is cut off at the edges. Keep new elements out of the bottom-right corner.
 - `build.py`: runs it. Narration is **Supertonic TTS** (owner, November 2026; voice F1), made ahead of time and baked into the file. In-app read-aloud stays Piper.
 - `narration/<id>.txt`: the narration, one step per line (checked against the captions by `videoHelp.test.ts`).
 

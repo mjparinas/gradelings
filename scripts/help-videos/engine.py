@@ -26,8 +26,45 @@ def ease(x):
 
 
 # ---- elements: each draws onto an RGBA layer; q (0..1) animates counts for shapes that grow ----
+MARGIN = 36  # nothing is drawn closer than this to the left or right edge
+WORDMARK = ["#4f8ef7", "#e9559a", "#25b47e", "#ff9636", "#8b5cf6", "#06b6d4"]  # WORDMARK_COLOURS in src/lib/brand.ts
+
+
+def fit_font(d, kind, size, s, x, anchor):
+    """The largest font up to `size` whose text stays inside the margins, so nothing is cut off at the edge."""
+    while size > 14:
+        f = font(kind, size)
+        w = d.textlength(s, font=f)
+        left = x - w / 2 if anchor[0] == "m" else (x if anchor[0] == "l" else x - w)
+        if left >= MARGIN and left + w <= W - MARGIN:
+            return f
+        size -= 2
+    return font(kind, size)
+
+
 def e_text(d, el, q):
-    d.text((el["x"], el["y"]), el["s"], font=font(el.get("font", "f"), el.get("size", 40)), fill=el.get("color", INK), anchor=el.get("anchor", "mm"))
+    anchor = el.get("anchor", "mm")
+    f = fit_font(d, el.get("font", "f"), el.get("size", 40), el["s"], el["x"], anchor)
+    d.text((el["x"], el["y"]), el["s"], font=f, fill=el.get("color", INK), anchor=anchor)
+
+
+def make_logo():
+    """The Gradelings character and wordmark for the bottom-right corner."""
+    icon = Image.open(Path(__file__).parent / "logo-icon.png").convert("RGBA").resize((46, 46), Image.LANCZOS)
+    f = font("f", 30)
+    tw = int(sum(ImageDraw.Draw(icon).textlength(ch, font=f) for ch in "Gradelings")) + 4
+    img = Image.new("RGBA", (46 + 10 + tw, 46), (0, 0, 0, 0))
+    img.paste(icon, (0, 0), icon)
+    d = ImageDraw.Draw(img)
+    x = 56
+    for i, ch in enumerate("Gradelings"):
+        d.text((x, 23), ch, font=f, fill=WORDMARK[i % len(WORDMARK)], anchor="lm")
+        x += d.textlength(ch, font=f)
+    return img
+
+
+LOGO = None
+LOGO_POS = None
 
 
 def e_frac(d, el, q):
@@ -144,7 +181,7 @@ DRAW = {"text": e_text, "frac": e_frac, "pie": e_pie, "bar": e_bar, "grid": e_gr
 def frame(spec_title, els, p):
     img = Image.new("RGBA", (W, H), BG + (255,))
     d = ImageDraw.Draw(img)
-    d.text((W / 2, 46), spec_title, font=font("f", 40), fill=BLUE, anchor="mm")
+    d.text((W / 2, 46), spec_title, font=fit_font(d, "f", 40, spec_title, W / 2, "mm"), fill=BLUE, anchor="mm")
     d.line([(60, 82), (W - 60, 82)], fill=PALE, width=4)
     for el in els:
         at = el.get("at", 0)
@@ -160,6 +197,11 @@ def frame(spec_title, els, p):
             layer.putalpha(layer.getchannel("A").point(lambda v: int(v * alpha)))
             img = Image.alpha_composite(img, layer)
             d = ImageDraw.Draw(img)
+    global LOGO, LOGO_POS
+    if LOGO is None:
+        LOGO = make_logo()
+        LOGO_POS = (W - 22 - LOGO.width, H - 14 - LOGO.height)
+    img.alpha_composite(LOGO, LOGO_POS)
     return img.convert("RGB")
 
 
