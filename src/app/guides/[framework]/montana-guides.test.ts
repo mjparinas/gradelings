@@ -19,7 +19,7 @@ describe("Montana parent guides", () => {
 
   it("has a note for every grade and no French guide", () => {
     expect(g.french).toBeUndefined();
-    expect(mt.grades).toEqual(["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"]);
+    expect(mt.grades).toEqual(["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"]);
     for (const grade of mt.grades) {
       expect(g.gradeNotes[grade]?.overview, grade).toBeTruthy();
       expect(g.gradeNotes[grade]?.lookFor, grade).toBeTruthy();
