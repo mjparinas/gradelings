@@ -162,7 +162,7 @@ describe("the Sales API", () => {
 
 describe("the friends-and-family code", () => {
   it("is seeded as a lifetime access code with 10 uses", async () => {
-    const row = (await dbm.query<{ kind: string; days: number | null; max_uses: number }>("SELECT * FROM redeem_codes WHERE code = 'FRIENDS-3DCAE2'"))[0];
+    const row = (await dbm.query<{ kind: string; days: number | null; max_uses: number }>("SELECT * FROM redeem_codes WHERE code = 'FRIENDS'"))[0];
     expect(row.kind).toBe("access");
     expect(row.days).toBeNull();
     expect(row.max_uses).toBe(10);

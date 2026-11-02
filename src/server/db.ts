@@ -266,7 +266,7 @@ const SCHEMA = [
   // Friends-and-family code (owner, November 2026): free access for life, 10 uses. Seeded once because production
   // admin access isn't reachable from the agent; an existing row is left alone, so changing or disabling it in the admin sticks.
   `INSERT OR IGNORE INTO redeem_codes (code, kind, days, max_uses, note, created_at)
-    VALUES ('FRIENDS-3DCAE2', 'access', NULL, 10, 'Friends and family: lifetime access, 10 uses', CAST(strftime('%s', 'now') AS INTEGER) * 1000)`,
+    VALUES ('FRIENDS', 'access', NULL, 10, 'Friends and family: lifetime access, 10 uses', CAST(strftime('%s', 'now') AS INTEGER) * 1000)`,
   // Site-wide sales (src/server/promo.ts): a banner on the public pages naming a redeem code, from starts_at to ends_at.
   `CREATE TABLE IF NOT EXISTS promotions (
     id TEXT PRIMARY KEY,
