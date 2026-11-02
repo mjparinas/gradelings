@@ -23,9 +23,9 @@ describe("homepage province coverage", () => {
     expect(immersion.included.map((f) => f.id)).toEqual(FRAMEWORKS.filter((f) => f.country === "CA" && !["ca-nl", "ca-pe", "ca-nu"].includes(f.id)).map((f) => f.id));
   });
 
-  it("keeps the shared grade range and core subjects once a US state is offered, and French as a gap", () => {
+  it("starts the shared grade range at Pre-K once a US state is offered, with the core subjects shared and French as a gap", () => {
     const coverage = provinceCoverage(FRAMEWORKS);
-    expect(coverage.range).toEqual({ from: "k", to: "9" });
+    expect(coverage.range).toEqual({ from: "pk", to: "9" });
     expect(coverage.sharedSubjects).toEqual(["math", "language", "science", "social"]);
     for (const gap of coverage.gaps) expect(gap.missing.map((f) => f.id)).toContain("us-wa");
   });
