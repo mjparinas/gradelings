@@ -24,7 +24,7 @@ import { Room } from "./Room";
 
 const item = (name: RegExp) => screen.getByRole("button", { name });
 const tab = (name: string) => fireEvent.click(screen.getByRole("tab", { name }));
-const paid = ROOM_ITEMS.filter((i) => i.cost > 0).length;
+const paid = ROOM_ITEMS.filter((i) => i.cost > 0 && !i.holiday).length;
 
 beforeEach(() => {
   vi.clearAllMocks();

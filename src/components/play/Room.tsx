@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { isRoomOwned, ROOM_ITEMS, ROOM_SLOTS, roomLayout, type RoomItem, type RoomSlot } from "@/lib/room";
+import { currentHoliday } from "@/lib/holidays";
+import { isRoomOwned, roomItemsFor, ROOM_ITEMS, ROOM_SLOTS, roomLayout, type RoomItem, type RoomSlot } from "@/lib/room";
 import { sounds } from "@/lib/sound";
 import { useChildSay } from "@/lib/say";
 import { useActiveProfile, useDerived, useStore } from "@/lib/store";
@@ -45,10 +46,10 @@ export function Room() {
   const updateProfile = useStore((s) => s.updateProfile);
   const [slot, setSlot] = useState<RoomSlot>("wall");
   const layout = roomLayout(profile.room, d.owned);
-  const items = ROOM_ITEMS.filter((i) => i.slot === slot);
+  const items = roomItemsFor(slot, d.owned, currentHoliday());
   const optional = slot !== "wall" && slot !== "floor";
   const bought = ROOM_ITEMS.filter((i) => i.cost > 0 && d.owned.includes(i.id)).length;
-  const total = ROOM_ITEMS.filter((i) => i.cost > 0).length;
+  const total = ROOM_ITEMS.filter((i) => i.cost > 0 && (!i.holiday || d.owned.includes(i.id))).length;
 
   return (
     <Page className="gap-5">

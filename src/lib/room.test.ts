@@ -3,7 +3,8 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 vi.mock("./localdb", () => ({ setKV: vi.fn(), putEvents: vi.fn(), deleteProfileEvents: vi.fn() }));
 
 import { type AppEvent, type Profile } from "./model";
-import { getRoomItem, isRoomOwned, ROOM_ITEMS, ROOM_SLOTS, ROOM_STARTER, roomLayout } from "./room";
+import { HOLIDAYS } from "./holidays";
+import { getRoomItem, isRoomOwned, roomItemsFor, ROOM_ITEMS, ROOM_SLOTS, ROOM_STARTER, roomLayout } from "./room";
 import { SHOP } from "./shop";
 import { useStore } from "./store";
 
@@ -78,5 +79,24 @@ describe("placing room items", () => {
     useStore.setState({ events: coins(250) });
     expect(useStore.getState().placeRoomItem("room-wall-sunset")).toBe(false);
     expect(useStore.getState().profiles[0].room).toBeUndefined();
+  });
+});
+
+describe("holiday keepsakes", () => {
+  it("are offered only during their holiday, and kept once bought", () => {
+    const item = ROOM_ITEMS.find((i) => i.holiday === "diwali")!;
+    expect(roomItemsFor(item.slot, [], null).some((i) => i.id === item.id)).toBe(false);
+    expect(roomItemsFor(item.slot, [], "halloween").some((i) => i.id === item.id)).toBe(false);
+    expect(roomItemsFor(item.slot, [], "diwali").some((i) => i.id === item.id)).toBe(true);
+    expect(roomItemsFor(item.slot, [item.id], null).some((i) => i.id === item.id)).toBe(true);
+  });
+  it("cover every holiday once, and cost between 50 and 100 coins", () => {
+    const seen = ROOM_ITEMS.flatMap((i) => (i.holiday ? [i.holiday] : []));
+    expect(new Set(seen).size).toBe(HOLIDAYS.length);
+    expect(seen).toHaveLength(HOLIDAYS.length);
+    for (const i of ROOM_ITEMS.filter((i) => i.holiday)) {
+      expect(i.cost).toBeGreaterThanOrEqual(50);
+      expect(i.cost).toBeLessThanOrEqual(100);
+    }
   });
 });
