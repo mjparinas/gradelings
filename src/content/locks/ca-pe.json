@@ -1,4 +1,50 @@
 {
+  "pk/language": {
+    "overview": "74c07d135e",
+    "units": [
+      "letter-names text=4e2d74ab60 std=0eaaa0e70b q=a8b9337751",
+      "first-sounds text=dd9cd8d5d4 std=58a3e6f436 q=48ed3455eb",
+      "rhyme-time text=12f8d63dc7 std=fadcb8e95d q=b73dfecad5",
+      "clap-the-parts text=606ab5cbbd std=72ee85a710 q=6215dee4f1",
+      "listen-to-a-story text=8907705eaa std=87064ae717 q=e4e96571e7",
+      "word-meanings text=fbdee7f0ca std=cfc4c33ef7 q=1d5b4d5e30"
+    ]
+  },
+  "pk/math": {
+    "overview": "5238f4a5e0",
+    "units": [
+      "count-to-5 text=5de441ec7a std=75eaa98dfd q=7da6a21961",
+      "find-the-number text=48b0986657 std=8c5bd9fc32 q=cbb1ca9734",
+      "more-or-fewer text=0faa658ba5 std=e94a571a08 q=4d8cca7ab1",
+      "shapes text=3eb07867e4 std=3544cb5095 q=ed58e37c08",
+      "patterns text=e9db8c53c8 std=54a9b863f9 q=d72ed7b913",
+      "big-and-small text=ec30e0312f std=81d36f0e7d q=ac1fcda3f6",
+      "sort-it text=6f36cd219c std=6493264071 q=d255478c19"
+    ]
+  },
+  "pk/science": {
+    "overview": "33f112a886",
+    "units": [
+      "five-senses text=ede42da0ab std=8be04893f9 q=18b2cf96c9",
+      "living-or-not text=9c2f339fb0 std=1ab43ad5a4 q=c6b64af68c",
+      "animals-and-babies text=c26be2c8ec std=0ee8a04939 q=d23f0b3d01",
+      "weather-and-sky text=152ba8b660 std=901517839b q=9ab5b99907",
+      "plants-grow text=beae59bc1e std=71bb965da0 q=d37c124eee",
+      "sink-or-float text=87253513e6 std=a889c9c090 q=80c8fb85a3"
+    ]
+  },
+  "pk/social": {
+    "overview": "a70f1b5588",
+    "units": [
+      "my-family text=81af8740c1 std=3d2cfda5d4 q=5f47bd5b99",
+      "feelings text=32db0a0097 std=a7197d0ea8 q=1e8788180c",
+      "community-helpers text=e038723509 std=77746a6623 q=27bacf2a4a",
+      "places-around-me text=659860832c std=56f3a1b597 q=8a8589b026",
+      "taking-turns text=04b975dae4 std=0b738a05a0 q=22be788cc9",
+      "first-next-last text=6f92e7037f std=3e9ee6063c q=c643395606",
+      "caring-for-our-world text=0df6123b83 std=735fa69594 q=82f9f5197f"
+    ]
+  },
   "k/language": {
     "overview": "a5828a1656",
     "units": [
