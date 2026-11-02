@@ -1,0 +1,5 @@
+An equation says two things are equal. We want to find the unknown number, x.
+To solve it, undo the steps in reverse order. First, undo the plus three by subtracting three from both sides.
+Next, undo the times two by dividing both sides by two.
+Now check. Put four in place of x. Two times four is eight, and eight plus three is eleven. It works.
+Whatever we do to one side, we do to the other side. That keeps the equation balanced.

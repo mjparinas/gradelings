@@ -1,0 +1,5 @@
+When a problem has more than one operation, we follow a set order so everyone gets the same answer.
+The order is: brackets first. Then multiply and divide, from left to right. Then add and subtract, from left to right.
+In three plus four times two, multiply first. Four times two is eight. Then add: three plus eight is eleven.
+Brackets change the order. In bracket three plus four bracket, times two, do the brackets first. Seven times two is fourteen.
+Same numbers, different order, different answer. That is why the order matters.

@@ -175,7 +175,20 @@ def e_numberline(d, el, q):
         d.text((px, y - 50), label, font=font("f", 34), fill=col, anchor="mm")
 
 
-DRAW = {"text": e_text, "frac": e_frac, "pie": e_pie, "bar": e_bar, "grid": e_grid, "groups": e_groups, "blocks": e_blocks, "line": e_line, "rect": e_rect, "numberline": e_numberline}
+def e_clock(d, el, q):
+    cx, cy, r, h, m = el["cx"], el["cy"], el["r"], el["h"], el["m"]
+    d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(255, 255, 255), outline=INK, width=6)
+    for i in range(1, 13):
+        a = math.radians(i * 30 - 90)
+        d.text((cx + r * 0.80 * math.cos(a), cy + r * 0.80 * math.sin(a)), str(i), font=font("f", max(18, int(r * 0.17))), fill=INK, anchor="mm")
+    ha = math.radians(((h % 12) + m / 60) * 30 - 90)
+    ma = math.radians(m * 6 - 90)
+    d.line([(cx, cy), (cx + r * 0.45 * math.cos(ha), cy + r * 0.45 * math.sin(ha))], fill=BLUE, width=10)
+    d.line([(cx, cy), (cx + r * 0.68 * math.cos(ma), cy + r * 0.68 * math.sin(ma))], fill=PINK, width=7)
+    d.ellipse([cx - 8, cy - 8, cx + 8, cy + 8], fill=INK)
+
+
+DRAW = {"clock": e_clock, "text": e_text, "frac": e_frac, "pie": e_pie, "bar": e_bar, "grid": e_grid, "groups": e_groups, "blocks": e_blocks, "line": e_line, "rect": e_rect, "numberline": e_numberline}
 
 
 def frame(spec_title, els, p):

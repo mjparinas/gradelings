@@ -1,0 +1,5 @@
+Integers are whole numbers that can be positive or negative. Zero is in the middle.
+Positive numbers are to the right of zero. Negative numbers are to the left.
+Adding a positive number moves right. Start at negative two, add three, and hop right three times. You land on positive one.
+Adding a negative number moves left. Start at one, add negative four, and hop left four times. You land on negative three.
+A positive one and a negative one cancel each other out, and make zero. We call them a zero pair.
