@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Mississippi, a US state. Standards are the Mississippi College- and Career-Readiness Standards, adopted by the State
 // Board of Education and published by the Mississippi Department of Education: mathematics (2025), English language arts
@@ -74,9 +75,9 @@ export const MISSISSIPPI: Framework = {
   standardLabel: "Standard",
   sourceName: "Mississippi Department of Education",
   sourceUrl: "https://mdek12.org/academiceducation/mississipp-college-and-career-readiness-standards/",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Mississippi report cards",
     intro:

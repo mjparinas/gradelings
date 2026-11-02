@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Delaware, a US state. Standards are Delaware's content standards, adopted by the State Board of Education
 // (14 DE Admin. Code 501): mathematics and English language arts (2010, the Common Core State Standards), science
@@ -75,9 +76,9 @@ export const DELAWARE: Framework = {
   standardLabel: "Standard",
   sourceName: "Delaware Department of Education",
   sourceUrl: "https://education.delaware.gov/",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Delaware report cards",
     intro:

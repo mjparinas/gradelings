@@ -2,7 +2,7 @@
 
 ## Framework
 
-- **Id and slug:** `us-de`, `delaware`. Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: Delaware's standards have no French Immersion or Core French program the app follows). Offered to families and in classroom mode.
+- **Id and slug:** `us-de`, `delaware`. Pre-K and Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: Delaware's standards have no French Immersion or Core French program the app follows). Offered to families and in classroom mode.
 
 ## Standards
 
@@ -21,9 +21,10 @@
 - Delaware has no statewide report card; each district and charter school chooses its own, and many elementary schools use standards-based report cards. The app uses the same four practice steps as the other states (Beginning, Approaching, Meeting, Exceeding).
 - State tests (14 DE Admin. Code 101): the Delaware System of Student Assessments (DeSSA), with Smarter Balanced English language arts and math in grades 3 to 8, science in grades 5 and 8 and high school Biology, and social studies in grades 4 to 8 and 11, each with four performance levels; the SAT in 11th grade for language arts and math.
 
+- **Pre-K:** the 26 shared Pre-K units (`src/content/grades/pk/`), each citing a Foundation in the Delaware Early Learning Foundations: Preschool (`MA34`, `LL53`, `MM45`; Delaware Department of Education) (`src/content/delaware/pk.ts`), checked against `docs/research/delaware/prek/outcomes.json` (sources in `source/`, `fetch.sh`, `build_outcomes.py` in gradelings-research). Practice steps only.
 ## Parent guides
 
-- `src/content/delaware/guides.ts`, US English: the hub, grade notes for Kindergarten to Grade 9, the eight Standards for Mathematical Practice (`/guides/delaware/math-practices/`) and state tests (`/guides/delaware/state-tests/`; dates point to the Department of Education). No French guide.
+- `src/content/delaware/guides.ts`, US English: the hub, grade notes for Pre-K to Grade 9, the eight Standards for Mathematical Practice (`/guides/delaware/math-practices/`) and state tests (`/guides/delaware/state-tests/`; dates point to the Department of Education). No French guide.
 
 ## Schools
 

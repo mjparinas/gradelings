@@ -1,0 +1,574 @@
+{
+ "pk/math": [
+  {
+   "idx": "MA31",
+   "text": "Develop an awareness of numbers and counting as a means for understanding quantity"
+  },
+  {
+   "idx": "MA32",
+   "text": "Recite numbers in sequence"
+  },
+  {
+   "idx": "MA33",
+   "text": "Recognize numbers"
+  },
+  {
+   "idx": "MA34",
+   "text": "Use one-to-one correspondence when counting"
+  },
+  {
+   "idx": "MA35",
+   "text": "Use language to compare numbers of objects (Ex: more, less, same)"
+  },
+  {
+   "idx": "MA36",
+   "text": "Determine quantity or “how many”"
+  },
+  {
+   "idx": "MA37",
+   "text": "Understand numbers and number concepts as they relate to everyday life"
+  },
+  {
+   "idx": "MA38",
+   "text": "Use ordinal number words to describe the position of objects (Ex: “first,” “second,” “third,” etc.)"
+  },
+  {
+   "idx": "MA39",
+   "text": "Understand the concept of how numbers relate to quantity"
+  },
+  {
+   "idx": "MA40",
+   "text": "Begin to recognize, name, describe, build, and draw two and three dimensional shapes"
+  },
+  {
+   "idx": "MA41",
+   "text": "Put together and take apart increasingly more difficult puzzles"
+  },
+  {
+   "idx": "MA42",
+   "text": "Describe how shapes are the same or different (Ex: size, shape, color)"
+  },
+  {
+   "idx": "MA43",
+   "text": "Demonstrate and describe positions of objects"
+  },
+  {
+   "idx": "MA44",
+   "text": "Recognize, copy, and extend simple patterns with a variety of materials"
+  },
+  {
+   "idx": "MA45",
+   "text": "Arrange objects in a series according to one attribute (Ex: shape, size, texture)"
+  },
+  {
+   "idx": "MA46",
+   "text": "Develop an awareness of concepts of time as it relates to daily lives (Ex: snack, circle, bedtime)"
+  },
+  {
+   "idx": "MA47",
+   "text": "Sort and match a variety of concrete objects according to attributes (Ex: color, size, shape)"
+  },
+  {
+   "idx": "MA48",
+   "text": "Use non-standard (feet, hands, shoes, blocks, yarn) and standard (ruler, yardstick, measuring tape) measures"
+  },
+  {
+   "idx": "MA49",
+   "text": "Explore concepts of measurable attributes (Ex: weight, volume, length, time, and temperature)"
+  },
+  {
+   "idx": "MA50",
+   "text": "Begin to compare and sort according to measurement attributes (length, size, weight)"
+  },
+  {
+   "idx": "MA51",
+   "text": "Begin to represent data using concrete objects, pictures, and simple graphs"
+  },
+  {
+   "idx": "MA52",
+   "text": "Begin to compare and interpret data collected"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "LL31",
+   "text": "Respond to their names, requests for action, or information"
+  },
+  {
+   "idx": "LL32",
+   "text": "Develop listening, watching, attention, and comprehension skills"
+  },
+  {
+   "idx": "LL33",
+   "text": "Follow two- or three-step directions"
+  },
+  {
+   "idx": "LL34",
+   "text": "Identify particular sounds in the environment through different media"
+  },
+  {
+   "idx": "LL35",
+   "text": "Respond to questions"
+  },
+  {
+   "idx": "LL36",
+   "text": "Increase vocabulary to include prepositions and basic concepts"
+  },
+  {
+   "idx": "LL37",
+   "text": "Be aware that people communicate in a variety of ways (verbal and non-verbal)"
+  },
+  {
+   "idx": "LL38",
+   "text": "Communicate so they will be understood by peers and adults"
+  },
+  {
+   "idx": "LL39",
+   "text": "Play with language such as rhyming"
+  },
+  {
+   "idx": "LL40",
+   "text": "Use language to enter play situation"
+  },
+  {
+   "idx": "LL41",
+   "text": "Participate in turn taking conversations"
+  },
+  {
+   "idx": "LL42",
+   "text": "Dictate a story to an adult"
+  },
+  {
+   "idx": "LL43",
+   "text": "Communicate using multiple words/phrases including nouns, verbs, descriptive phrases, prepositions and/or American Sign Language (ASL) grammatical features"
+  },
+  {
+   "idx": "LL44",
+   "text": "Use volume and tone or ASL facial grammar appropriate to the situation"
+  },
+  {
+   "idx": "LL45",
+   "text": "Respond appropriately to messages in conversation"
+  },
+  {
+   "idx": "LL46",
+   "text": "Express emotions through language"
+  },
+  {
+   "idx": "LL47",
+   "text": "Use language appropriately during play situations"
+  },
+  {
+   "idx": "LL48",
+   "text": "Experiment with patterns in words"
+  },
+  {
+   "idx": "LL49",
+   "text": "Show an interest in rhymes, songs, books, • Pick up a book and look stories, writings, and other literacy or through it reading-related activities"
+  },
+  {
+   "idx": "LL50",
+   "text": "Show increasing awareness of print, • Say aloud/sign names of familiar signs, labels, and symbols pictures seen on"
+  },
+  {
+   "idx": "LL51",
+   "text": "Identify and name letters of the alphabet"
+  },
+  {
+   "idx": "LL52",
+   "text": "Recognize their first name in print written other media with the first letter in upper case followed by lower-case letters • Request favorite stories or"
+  },
+  {
+   "idx": "LL53",
+   "text": "Recognize common letter sounds at the beginning, middle, and end of words"
+  },
+  {
+   "idx": "LL54",
+   "text": "Know the difference between upper- and lower-case letters"
+  },
+  {
+   "idx": "LL55",
+   "text": "Show comprehension by answering through pages front to b k"
+  },
+  {
+   "idx": "LL56",
+   "text": "Understand the parts of a book and how it • Identify pictures or objects is used • with same Identify beginning pictures or objects"
+  },
+  {
+   "idx": "LL57",
+   "text": "Hold a book upright, turn the pages sounds or letters with same beginning starting at the front of the book, and scan sounds or letters pages left to right and top to bottom"
+  },
+  {
+   "idx": "LL58",
+   "text": "Explore different types of literature such as • Point to an upper-case narrative (story) and informative (non-fiction) letter"
+  },
+  {
+   "idx": "LL59",
+   "text": "Demonstrate that print represents someone’s thoughts and ideas • Name some upper-case"
+  },
+  {
+   "idx": "LL60",
+   "text": "Interpret pictures letters"
+  },
+  {
+   "idx": "LL61",
+   "text": "Hear words in a sentence and syllables in words"
+  },
+  {
+   "idx": "LL62",
+   "text": "Know that print is read and pictures are not sounds • Stomp words in a sentence • Clap syllables in words"
+  },
+  {
+   "idx": "LL63",
+   "text": "Use scribbles, symbols, or drawings to share • Write on paper with crayon experiences or pencil"
+  },
+  {
+   "idx": "LL64",
+   "text": "Use a variety of writing tools and materials • Draw pictures to describe"
+  },
+  {
+   "idx": "LL65",
+   "text": "Trace and copy shapes and letters experiences"
+  },
+  {
+   "idx": "LL66",
+   "text": "Begin to print the letters of their first name • Write his/her name"
+  },
+  {
+   "idx": "LL67",
+   "text": "Express self through pretend writing • Trace letters or shapes"
+  },
+  {
+   "idx": "LL68",
+   "text": "Write in a variety of formats • Copy letters or shapes"
+  },
+  {
+   "idx": "LL69",
+   "text": "Practice writing left to right and top to bottom • Write and/or draw letters or"
+  },
+  {
+   "idx": "LL70",
+   "text": "Use inventive spelling shapes"
+  },
+  {
+   "idx": "LL71",
+   "text": "Develop strength, dexterity, and control • Use pretend writing to needed to use writing tools and materials make shopping list during"
+  },
+  {
+   "idx": "LL72",
+   "text": "Develop hand-eye coordination required for dramatic play written communication"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "SC31",
+   "text": "Use senses in purposeful ways to gather information and explore the environment"
+  },
+  {
+   "idx": "SC32",
+   "text": "Begin to identify and recognize the differences among the senses, their functions, and the kinds of information they get from each sense"
+  },
+  {
+   "idx": "SC33",
+   "text": "Express their curiosity and investigate questions of interest through play and exploration"
+  },
+  {
+   "idx": "SC34",
+   "text": "Use materials and tools appropriate for problem solving and exploration"
+  },
+  {
+   "idx": "SC35",
+   "text": "Ask scientific questions"
+  },
+  {
+   "idx": "SC36",
+   "text": "Investigate and explore their questions using observations and previous experience to make predictions"
+  },
+  {
+   "idx": "SC37",
+   "text": "Provide their own explanations for “how” and “why” things happen"
+  },
+  {
+   "idx": "SC38",
+   "text": "Use data from an investigation or exploration to draw conclusions and communicate results"
+  },
+  {
+   "idx": "SC39",
+   "text": "Observe, describe, and discuss the natural world of people, animals and plants"
+  },
+  {
+   "idx": "SC40",
+   "text": "Recognize categories of people, plants and animals; describe similarities and differences among them"
+  },
+  {
+   "idx": "SC41",
+   "text": "Recognize people, plants and animals grow and change over time and need certain things to survive"
+  },
+  {
+   "idx": "SC42",
+   "text": "Demonstrate respect for living things"
+  },
+  {
+   "idx": "SC43",
+   "text": "Observe, describe, and discuss physical properties of non-living things, both natural and human-made"
+  },
+  {
+   "idx": "SC44",
+   "text": "Recognize categories of non-living things and describe similarities and differences among them"
+  },
+  {
+   "idx": "SC45",
+   "text": "Explore objects, machines, technology and structures"
+  },
+  {
+   "idx": "SC46",
+   "text": "Experiment with effects of their own actions on objects"
+  },
+  {
+   "idx": "SC47",
+   "text": "Observe, describe, and discuss changes in the seasons and the weather"
+  },
+  {
+   "idx": "SC48",
+   "text": "Observe, describe and discuss landforms, bodies of water, and the properties of earth’s materials (Ex: rocks, dirt, sand and water)"
+  },
+  {
+   "idx": "SC49",
+   "text": "Observe, describe, and discuss the characteristics of the sun, moon, stars, and sky"
+  },
+  {
+   "idx": "SC50",
+   "text": "Explore how the environment is affected by what people do"
+  },
+  {
+   "idx": "SC51",
+   "text": "Describe and engage in activities that preserve the environment"
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "AL31",
+   "text": "Participate in a variety of tasks and activities using all five senses"
+  },
+  {
+   "idx": "AL32",
+   "text": "Make independent choices during play and throughout the daily routine"
+  },
+  {
+   "idx": "AL33",
+   "text": "Approach tasks and activities with flexibility, imagination, inventiveness, and confidence"
+  },
+  {
+   "idx": "AL34",
+   "text": "Show eagerness and curiosity to learn about and discuss a variety of topics, ideas, and tasks"
+  },
+  {
+   "idx": "AL35",
+   "text": "Begin to develop the ability to focus and complete a variety of tasks, activities, projects, and experiences"
+  },
+  {
+   "idx": "AL36",
+   "text": "Begin to develop and follow through with plan for play and other activities"
+  },
+  {
+   "idx": "AL37",
+   "text": "Begin to demonstrate the ability to follow a sequence of steps to create a finished project"
+  },
+  {
+   "idx": "AL38",
+   "text": "Develop the ability to recognize and solve problems through active exploration, including trial and error, interactions and discussions with peers and adults"
+  },
+  {
+   "idx": "AL39",
+   "text": "Develop the ability to classify, compare, and contrast objects, events, and experiences"
+  },
+  {
+   "idx": "AL40",
+   "text": "Demonstrate the ability to sequence events"
+  },
+  {
+   "idx": "AL41",
+   "text": "Begin to develop the ability to explain and demonstrate strategies to solve problems"
+  },
+  {
+   "idx": "MM31",
+   "text": "Understand the concept of belonging to a family"
+  },
+  {
+   "idx": "MM32",
+   "text": "Begin to develop an awareness of their family's culture"
+  },
+  {
+   "idx": "MM33",
+   "text": "Begin to develop an awareness of the cultures of other children and adults in their group and community"
+  },
+  {
+   "idx": "MM34",
+   "text": "Build an awareness and respect for differences in people (Ex: language, skin tone, race, abilities/disabilities, family structure, age, clothing)"
+  },
+  {
+   "idx": "MM35",
+   "text": "Understand the concept of belonging to different groups (Ex: family, early childhood group, friends, community)"
+  },
+  {
+   "idx": "MM36",
+   "text": "Develop emerging concept of time through daily schedule and routines"
+  },
+  {
+   "idx": "MM40",
+   "text": "Be familiar with information about where they live, including their address"
+  },
+  {
+   "idx": "MM41",
+   "text": "Develop concepts and describe location, directionality, and spatial relationships (Ex: on top of/ under, inside/outside, next to, beside, up/down, left/right)"
+  },
+  {
+   "idx": "MM42",
+   "text": "Understand the world around them by using tools such as maps and globes, GPS (Global Positioning Satellite)"
+  },
+  {
+   "idx": "MM43",
+   "text": "Develop an awareness of the natural environment surrounding them outdoors"
+  },
+  {
+   "idx": "MM44",
+   "text": "Begin to understand the relationship between humans and the natural environment"
+  },
+  {
+   "idx": "MM45",
+   "text": "Develop awareness of community people, including the services and products they provide, and the skills needed to perform their jobs"
+  },
+  {
+   "idx": "MM46",
+   "text": "With support begin to develop problem solving skills"
+  },
+  {
+   "idx": "MM47",
+   "text": "Help to create rules"
+  },
+  {
+   "idx": "MM48",
+   "text": "Develop an awareness that people living in a family, early childhood group, or community have roles, responsibilities, and rules to help each other"
+  },
+  {
+   "idx": "MM49",
+   "text": "Perform simple tasks within the home, early childhood group, or community"
+  },
+  {
+   "idx": "MM50",
+   "text": "Participate in group decision making"
+  },
+  {
+   "idx": "MM51",
+   "text": "Explore the concept of money, including what it is and how it is used"
+  },
+  {
+   "idx": "MM52",
+   "text": "Develop an awareness that people work for money in order to provide for basic necessities, including the concept that people can trade and barter to get goods and services"
+  },
+  {
+   "idx": "MM53",
+   "text": "Begin to understand how people make and consume goods and services"
+  },
+  {
+   "idx": "MM54",
+   "text": "Begin to understand wants versus basic necessities"
+  },
+  {
+   "idx": "SE31",
+   "text": "Be with adults who are consistent, responsive, and caring"
+  },
+  {
+   "idx": "SE32",
+   "text": "Make meaningful choices and experience the outcomes of those choices in a safe and supportive environment"
+  },
+  {
+   "idx": "SE33",
+   "text": "Participate in activities that are challenging but within their reach"
+  },
+  {
+   "idx": "SE34",
+   "text": "Assume a role in determining how they will learn"
+  },
+  {
+   "idx": "SE35",
+   "text": "Participate in meaningful responsibilities"
+  },
+  {
+   "idx": "SE36",
+   "text": "Explore and participate in activities and materials designed to build understanding of individual characteristics and of diversity in culture, family structure, ability, language, age and gender in non-stereotypical ways"
+  },
+  {
+   "idx": "SE37",
+   "text": "Be a part of the classroom community so that each child feels accepted and gains a sense of belonging"
+  },
+  {
+   "idx": "SE38",
+   "text": "Recognize, label and express a range of feelings and needs appropriately (Ex: happy, sad, frustrated, angry, fearful, etc.)"
+  },
+  {
+   "idx": "SE39",
+   "text": "Begin to understand that feelings are separate from actions and that it is acceptable to have a range of feelings (Ex: from frustrated to really mad)"
+  },
+  {
+   "idx": "SE40",
+   "text": "Express feelings through play and artistic representation"
+  },
+  {
+   "idx": "SE41",
+   "text": "Begin to understand that actions have consequences"
+  },
+  {
+   "idx": "SE42",
+   "text": "Follow simple rules and routines with minimal help"
+  },
+  {
+   "idx": "SE43",
+   "text": "Experience logical and natural consequences"
+  },
+  {
+   "idx": "SE44",
+   "text": "Complete activities that he/she has started"
+  },
+  {
+   "idx": "SE45",
+   "text": "Use materials purposefully, safely, and respectfully"
+  },
+  {
+   "idx": "SE46",
+   "text": "Attempt to solve problems in a positive manner"
+  },
+  {
+   "idx": "SE47",
+   "text": "Develop trust in familiar adults and close peers"
+  },
+  {
+   "idx": "SE48",
+   "text": "Receive guidance, support and directions from a range of familiar adults"
+  },
+  {
+   "idx": "SE49",
+   "text": "Develop and maintain friendships with peers"
+  },
+  {
+   "idx": "SE50",
+   "text": "Develop awareness of other’s perspectives and gain an understanding of how their actions impact those around them"
+  },
+  {
+   "idx": "SE51",
+   "text": "Develop and demonstrate positive social skills (Ex: please, thank you, helping a friend, sharing, etc.)"
+  },
+  {
+   "idx": "SE52",
+   "text": "Develop ability to initiate and sustain play with peers"
+  },
+  {
+   "idx": "SE53",
+   "text": "Be a helpful member of a group or household through sharing tasks or chores"
+  },
+  {
+   "idx": "SE54",
+   "text": "Develop turn taking and negotiation skills"
+  }
+ ]
+}
