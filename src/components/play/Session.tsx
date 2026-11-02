@@ -480,7 +480,7 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
         </button>
       </header>
 
-      <section ref={stage} key={index} className={`flex flex-1 flex-col gap-5 py-5 short:gap-3 short:py-3 ${run === 11 ? "animate-flip" : ""}`}>
+      <section ref={stage} key={index} className={`flex flex-1 flex-col gap-5 py-5 short:gap-3 short:py-3 ${run === 11 ? "animate-flip" : index > startAt ? "animate-question-in" : ""}`}>
         <div className="flex animate-rise-in items-start gap-2 sm:gap-4">
           <Critter id={guide && band !== "little" ? subjectGuide(guide, companion) : companion} mood={mood} size={band === "little" ? 110 : 88} className="sm:hidden short:hidden" />
           <Critter id={guide && band !== "little" ? subjectGuide(guide, companion) : companion} mood={mood} size={band === "little" ? 140 : 116} className="hidden sm:block short:hidden" />

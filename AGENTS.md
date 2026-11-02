@@ -444,6 +444,7 @@ Tests are duplicated across screen sizes only where layout can break:
   - Use them for subject identity in the kids' UI only, never in charts.
   - **Text on these bright fills is very dark navy (`#0f172a`), not white,** because white fails the WCAG AA contrast rules (see `src/lib/contrast.ts`, `onColour`). The arcade purple is `#7c4fe0` for the same reason. Don't put white text on a bright fill; `node scripts/e2e-a11y.mjs` will catch it.
 - **Mascots:** an original cast drawn from one parametric SVG (`src/components/Critter.tsx`). Every critter shares the same moods, and their eyes follow the pointer.
+  - **Idle moves and question transitions** (owner request, November 2026): a resting buddy (happy or thinking) hops, tilts, stretches or spins every 6 to 14 seconds (`IDLE_MOVES`, `nextIdle` in `Critter.tsx`; skipped in calm mode, with reduced motion and while the tab is hidden), and each next question in a session slides in from the side (`animate-question-in`).
   - Ollie the Otter is the guide.
   - Each subject has its own guide: Hoot the owl (math), Ruby the fox (reading), Bolt the beaver (science) and Juniper the bear (social studies).
   - Twenty-five more critters can be bought in the shop (ten of them also picked as avatars; the fifteen marked `shopOnly` are shop-only buddies, some locked behind a level or trophy).
