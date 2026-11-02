@@ -580,6 +580,7 @@ Melvin's product and technical decisions are recorded here, newest last, so they
 - **Test account** (November 1, 2026): `mjparinas@gmail.com` is Melvin's own test account, used for checkout testing. Leave it out of customer and revenue counts. The first real customer arrived on November 1, 2026.
 - **Video help for stuck kids** (November 1, 2026): members only, narrated with Supertonic TTS.
 - **Holiday themes** (November 1, 2026): a theme changes the favicon only. The iOS and Android app icons stay as they are for now.
+- **Help videos stay self-hosted** (November 2, 2026): no YouTube. Offline play, no third-party player or tracking in the kids' app, and members-only access all need our own files. Every video carries the Gradelings character and wordmark in the bottom-right corner.
 
 ## Features at a glance
 
