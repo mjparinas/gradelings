@@ -53,4 +53,11 @@ describe("Play graphics", () => {
       }
     }
   });
+
+  it("has a promo video and its poster, small enough to upload to YouTube", () => {
+    const video = readFileSync(`${dir}/video/gradelings-play-demo.mp4`);
+    expect(video.subarray(4, 8).toString()).toBe("ftyp");
+    expect(video.length).toBeLessThan(100 * 1024 * 1024);
+    expect(pngSize(`${dir}/video/poster.png`)).toEqual([1920, 1080]);
+  });
 });

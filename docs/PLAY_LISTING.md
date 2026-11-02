@@ -76,6 +76,16 @@ All in `store-assets/android/`, made by scripts in the repo, so they can be redo
 
 Every screenshot is the real app: `node scripts/android-screenshots.mjs http://localhost:3000 store-assets/android/raw` plays a few questions as a demo child called "Maya" (no real child), opening pages as the Android app does (`?app=android`), and fails if a price or Subscribe button shows. `node scripts/android-captions.mjs` adds the captions. Use a production build when you redo them (`npm run build && npm start`); with `next dev` the script hides the dev badge itself. Set `CHROMIUM_PATH` if Playwright's pinned browser isn't installed. Upload either set; Play wants 2 to 8 per device type, and these are 5 each. The arcade is left out because a new child sees it locked until they have learned for a while.
 
+## Promo video
+
+Play accepts a promo video only as a **YouTube link** (Store listing > Graphics > Promo video), never a file, so the owner uploads `store-assets/android/video/gradelings-play-demo.mp4` to YouTube first:
+
+- Upload it as **Public** or **Unlisted**, with **ads off** (monetization off) and "Made for kids" set to **Yes, it's made for kids** (it is a children's app; this also turns comments off, which Play wants). Play ignores videos with ads, age restriction or a private setting.
+- Title: `Gradelings: Pre-K to Grade 9 practice and learning games`. Description: the short description above and the link to `https://www.gradelings.com`.
+- Use `store-assets/android/video/poster.png` (the title card) as the thumbnail.
+
+The video is 48 seconds, 1920 × 1080, with captions and original music. It is the real app played by a demo child ("Maya"): starting out, a hint and another try, Adventure, coins and trophies, stickers, and the parent report. It shows no price, trial or Subscribe button and has no voice-over. The music is made in the script from a few synthesised notes, so there is nothing to license. Redo it with `node scripts/android-demo-video.mjs http://localhost:3000` (needs ffmpeg; use a production build when you can, because `next dev` is slower to load screens and the script hides its dev badge).
+
 ## Target audience and content (App content page)
 
 - **US children (COPPA):** a US family's children and progress don't leave the device until a parent gives consent in the parent area (`UsConsent.tsx`), and no guest count is sent for a US child. Say so if the Families declaration or a reviewer asks how parental consent is collected.
