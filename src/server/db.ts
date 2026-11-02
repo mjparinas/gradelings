@@ -263,6 +263,10 @@ const SCHEMA = [
   // every payment. Disabling or changing it in the admin panel sticks, because an existing row is left alone.
   `INSERT OR IGNORE INTO redeem_codes (code, kind, percent_off, duration, note, created_at)
     VALUES ('FOUNDER', 'discount', 33, 'forever', 'Founding families: 33% off for life', CAST(strftime('%s', 'now') AS INTEGER) * 1000)`,
+  // Friends-and-family code (owner, November 2026): free access for life, 10 uses. Seeded once because production
+  // admin access isn't reachable from the agent; an existing row is left alone, so changing or disabling it in the admin sticks.
+  `INSERT OR IGNORE INTO redeem_codes (code, kind, days, max_uses, note, created_at)
+    VALUES ('FRIENDS', 'access', NULL, 10, 'Friends and family: lifetime access, 10 uses', CAST(strftime('%s', 'now') AS INTEGER) * 1000)`,
   // Site-wide sales (src/server/promo.ts): a banner on the public pages naming a redeem code, from starts_at to ends_at.
   `CREATE TABLE IF NOT EXISTS promotions (
     id TEXT PRIMARY KEY,
