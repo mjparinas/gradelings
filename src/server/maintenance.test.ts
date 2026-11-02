@@ -20,7 +20,7 @@ let m: typeof import("@/server/maintenance");
 let proxy: typeof import("@/proxy").proxy;
 
 beforeAll(async () => {
-  signup = (await import("@/app/api/auth/signup/route")) as unknown as Mod;
+  signup = (await import("@/server/testing/signupWithSession")) as unknown as Mod;
   route = (await import("@/app/api/admin/maintenance/route")) as unknown as Mod;
   dbm = await import("@/server/db");
   m = await import("@/server/maintenance");

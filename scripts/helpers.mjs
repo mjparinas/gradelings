@@ -102,6 +102,33 @@ export async function enterPin(page, create) {
   await page.waitForTimeout(500);
 }
 
+/**
+ * Sign-up signs nobody in and keeps the typed password aside until the email is confirmed (from the emailed link).
+ * Scripts have no inbox, so they confirm in the database the way that link would from the browser that signed up.
+ */
+export async function confirmEmailInDb(db, email) {
+  await db.execute({
+    sql: "UPDATE parents SET email_verified_at = ?, password_hash = COALESCE(pending_password_hash, password_hash), pending_password_hash = NULL, signup_cookie_hash = NULL WHERE email = ?",
+    args: [Date.now(), email],
+  });
+}
+
+/** Opens the confirmation link for an address in this page's browser, using a token made in the database (the real one is only in the email). */
+export async function openConfirmLink(page, base, email) {
+  const { createClient } = await import("@libsql/client");
+  const { createHash, randomBytes } = await import("node:crypto");
+  const db = createClient({ url: process.env.DATABASE_URL ?? "file:./data/grademap.db", authToken: process.env.DATABASE_AUTH_TOKEN });
+  const token = randomBytes(24).toString("base64url");
+  const row = (await db.execute({ sql: "SELECT id FROM parents WHERE email = ?", args: [email] })).rows[0];
+  await db.execute({ sql: "DELETE FROM auth_tokens WHERE parent_id = ? AND kind = 'verify'", args: [row.id] });
+  await db.execute({
+    sql: "INSERT INTO auth_tokens (token_hash, parent_id, kind, expires_at) VALUES (?, ?, 'verify', ?)",
+    args: [createHash("sha256").update(token).digest("hex"), row.id, Date.now() + 3_600_000],
+  });
+  await page.goto(`${base}/account/verify/?token=${token}`);
+  await page.getByRole("heading", { name: "Email confirmed" }).waitFor();
+}
+
 /** Fills in the new-player screen and starts. */
 export async function newChild(page, name, grade) {
   await page.getByLabel("Name").fill(name);
@@ -177,8 +204,8 @@ export async function teacherFixture(base, { framework = "ca-bc", grade = "3" } 
   };
   must(await api("/api/auth/signup/", "POST", { email, password: "correct horse" }), "sign up");
   const db = createClient({ url: process.env.DATABASE_URL ?? "file:./data/grademap.db", authToken: process.env.DATABASE_AUTH_TOKEN });
-  await db.execute({ sql: "UPDATE parents SET email_verified_at = ? WHERE email = ?", args: [Date.now(), email] });
-  // The session was made before the email was confirmed, so sign in again.
+  await confirmEmailInDb(db, email);
+  // Sign-up signs nobody in, and the password only counts once the email is confirmed, so sign in now.
   must(await api("/api/auth/login/", "POST", { email, password: "correct horse" }), "sign in");
   const cls = must(await api("/api/classes/", "POST", { name: "Room 3", grade, framework }), "create a class").class;
   must(await api("/api/classes/assignments/", "POST", { classId: cls.id, unitKey: `${grade}/math/multiplication`, dueAt: Date.now() + 3 * 86_400_000, goal: 5 }), "assign a unit");

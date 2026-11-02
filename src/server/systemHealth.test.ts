@@ -51,7 +51,7 @@ let monitor: typeof import("@/server/monitor");
 
 beforeAll(async () => {
   [signup, system, cron, stripeHook, resendHook] = (await Promise.all([
-    import("@/app/api/auth/signup/route"),
+    import("@/server/testing/signupWithSession"),
     import("@/app/api/admin/system/route"),
     import("@/app/api/cron/weekly/route"),
     import("@/app/api/billing/webhook/route"),
