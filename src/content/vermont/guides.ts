@@ -200,6 +200,10 @@ export const VERMONT_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-K in Vermont is the year before kindergarten, for children who are 4. Universal Pre-K programs follow the Vermont Early Learning Standards. Children learn through play, stories and songs: counting, shapes and sorting, letters and rhymes, plus first ideas about families, communities and the world around them.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for counting small groups, naming letters, hearing rhymes, taking turns and talking about feelings.",
+    },
     k: {
       overview: "Kindergarten in Vermont is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. In social studies they learn about themselves, families, rules and community helpers, and state and national symbols such as the American flag and Vermont's hermit thrush.",
       lookFor: "Many Vermont schools use proficiency-based report cards. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

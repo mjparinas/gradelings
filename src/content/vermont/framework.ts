@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Vermont, a US state. Standards are Vermont's, adopted by the State Board of Education: mathematics and English
 // language arts (2010, the Common Core State Standards), science (2013, the Next Generation Science Standards) and social
@@ -75,9 +76,9 @@ export const VERMONT: Framework = {
   standardLabel: "Standard",
   sourceName: "Vermont Agency of Education",
   sourceUrl: "https://education.vermont.gov/",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Vermont report cards",
     intro:

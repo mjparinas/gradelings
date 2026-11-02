@@ -2,7 +2,7 @@
 
 ## Framework
 
-- **Id and slug:** `us-vt`, `vermont`. Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: Vermont has no statewide French standards the app follows). Offered to families and in classroom mode.
+- **Id and slug:** `us-vt`, `vermont`. Pre-K and Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: Vermont has no statewide French standards the app follows). Offered to families and in classroom mode.
 
 ## Standards
 
@@ -21,9 +21,10 @@
 - Vermont has no statewide report card; each supervisory union or district chooses its own, and schools use proficiency-based learning and proficiency-based graduation requirements under the Education Quality Standards. The app uses the same four practice steps as the other states (Beginning, Approaching, Meeting, Exceeding).
 - State tests: the Vermont Comprehensive Assessment Program (VTCAP) in English language arts and math (grades 3 to 9) and science (grades 5, 8 and 11), scale scores from 1500 to 2000 and four performance levels (Level 3 and above is proficient); the MSAA is the alternate assessment.
 
+- **Pre-K:** the 26 shared Pre-K units (`src/content/grades/pk/`), each citing an element of the Vermont Early Learning Standards for Older Preschoolers (`MA Number Sense and Quantity`, `LI Writing`, `SC Inquiry`; Vermont Agency of Education) (`src/content/vermont/pk.ts`), checked against `docs/research/vermont/prek/outcomes.json` (sources in `source/`, `fetch.sh`, `build_outcomes.py` in gradelings-research). Practice steps only.
 ## Parent guides
 
-- `src/content/vermont/guides.ts`, US English: the hub, grade notes for Kindergarten to Grade 9, the eight Standards for Mathematical Practice (`/guides/vermont/math-practices/`) and VTCAP (`/guides/vermont/vtcap-tests/`; dates point to the Agency of Education). No French guide.
+- `src/content/vermont/guides.ts`, US English: the hub, grade notes for Pre-K to Grade 9, the eight Standards for Mathematical Practice (`/guides/vermont/math-practices/`) and VTCAP (`/guides/vermont/vtcap-tests/`; dates point to the Agency of Education). No French guide.
 
 ## Schools
 
