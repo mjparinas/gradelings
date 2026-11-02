@@ -46,7 +46,8 @@ describe("Nebraska", () => {
     // codes with a 10.
     const prefix = { math: "MA", language: "LA", science: "SC", social: "SS" } as const;
     // The shared Spanish course cites the World-Readiness Standards, checked by spanishCite in the contract tests.
-    for (const { c, u, key } of nebraska.filter(({ c }) => c.subject !== "spanish")) {
+    // Pre-K cites the early learning guidelines (`LL.03`), checked by the contract tests.
+    for (const { c, u, key } of nebraska.filter(({ c }) => c.subject !== "spanish" && c.grade !== "pk")) {
       const g = c.grade === "k" ? "K" : c.grade === "9" ? (c.subject === "language" ? "10" : "HS") : c.grade;
       const p = prefix[c.subject as keyof typeof prefix];
       const sep = c.subject === "social" ? " " : ".";

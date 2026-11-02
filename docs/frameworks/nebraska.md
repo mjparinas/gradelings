@@ -2,7 +2,7 @@
 
 ## Framework
 
-- **Id and slug:** `us-ne`, `nebraska`. Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: Nebraska has no statewide French standards the app follows). Offered to families and in classroom mode.
+- **Id and slug:** `us-ne`, `nebraska`. Pre-K and Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: Nebraska has no statewide French standards the app follows). Offered to families and in classroom mode.
 
 ## Standards
 
@@ -23,9 +23,10 @@
 - State tests: the Nebraska Student-Centered Assessment System (NSCAS General) in English language arts and math (grades 3 to 8) and science (grades 5 and 8), with the ACT in 11th grade. Results come in three levels, Developing, On Track and Advanced, with school results on the Nebraska Education Profile in the fall. The through-year tests have ended; NSCAS is one spring test (2025-26 window March 23 to May 1, 2026), and the 2024 science standards are first tested in spring 2026.
 - The Nebraska Reading Improvement Act (Neb. Rev. Stat. 79-2,601 to 79-2,607) is on the report card page: reading checks three times a year from Kindergarten to Grade 3, the family told within 15 working days, an individualized reading improvement plan and summer reading.
 
+- **Pre-K:** the 26 shared Pre-K units (`src/content/grades/pk/`), each citing a standard in Nebraska's Early Learning Guidelines: Birth to Five Learning and Development (`M.01`, `LL.03`, `S.01`, `SE.03`; Nebraska Department of Education). The guidelines give standards by domain and their indicators carry no codes, so units cite the standards (`src/content/nebraska/pk.ts`), checked against `docs/research/nebraska/prek/outcomes.json` (sources in `source/`, `fetch.sh`, `build_outcomes.py` in gradelings-research). Practice steps only.
 ## Parent guides
 
-- `src/content/nebraska/guides.ts`, US English: the hub, grade notes for Kindergarten to Grade 9, the five Nebraska Mathematical Processes (`/guides/nebraska/math-processes/`) and state tests (`/guides/nebraska/state-tests/`; dates point to the Nebraska Department of Education). No French guide.
+- `src/content/nebraska/guides.ts`, US English: the hub, grade notes for Pre-K to Grade 9, the five Nebraska Mathematical Processes (`/guides/nebraska/math-processes/`) and state tests (`/guides/nebraska/state-tests/`; dates point to the Nebraska Department of Education). No French guide.
 
 ## Schools
 
