@@ -78,6 +78,8 @@ Every screenshot is the real app: `node scripts/android-screenshots.mjs http://l
 
 ## Promo video
 
+**Uploaded:** https://www.youtube.com/watch?v=c_6yNeQp8Mc (November 2, 2026). Paste this link in Play Console > Grow users > Store presence > Main store listing > Graphics > Promo video.
+
 Play accepts a promo video only as a **YouTube link** (Store listing > Graphics > Promo video), never a file, so the owner uploads `store-assets/android/video/gradelings-play-demo.mp4` to YouTube first:
 
 - Upload it as **Public** or **Unlisted**, with **ads off** (monetization off) and "Made for kids" set to **Yes, it's made for kids** (it is a children's app; this also turns comments off, which Play wants). Play ignores videos with ads, age restriction or a private setting.
