@@ -532,6 +532,21 @@ html.holiday-christmas {
   --color-line: #d5e6d6;
   --holiday-ribbon: repeating-linear-gradient(135deg,#d93a3a 0 12px,#ffffff 12px 24px,#2f9e5b 24px 36px,#ffffff 36px 48px);
 }
+html.holiday-lunarnewyear {
+  --color-paper: #fff1ee;
+  --color-line: #f1d4cc;
+  --holiday-ribbon: repeating-linear-gradient(90deg,#d93a3a 0 24px,#f0bd2a 24px 48px);
+}
+html.holiday-diwali {
+  --color-paper: #fff6e6;
+  --color-line: #f0dcb6;
+  --holiday-ribbon: repeating-linear-gradient(90deg,#e8741c 0 24px,#f0bd2a 24px 48px,#b0407a 48px 72px);
+}
+html.holiday-eid {
+  --color-paper: #effaf8;
+  --color-line: #cfe8e4;
+  --holiday-ribbon: repeating-linear-gradient(90deg,#1f8f8a 0 24px,#f0bd2a 24px 48px);
+}
 
 /* Reading tint: a soft page colour behind the cards. Text contrast stays above WCAG AA. */
 html.tint-cream {

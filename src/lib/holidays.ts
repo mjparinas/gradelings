@@ -9,7 +9,7 @@ import type { CountryCode } from "./country";
 // holiday, add an entry here, a `html.holiday-<id>` block in globals.css and a hat in `HolidayHat`
 // (CritterArt.tsx). Thanksgiving falls on a different day in Canada and the US, so it names its country.
 
-export type HolidayId = "valentines" | "stpatricks" | "easter" | "halloween" | "thanksgiving" | "christmas";
+export type HolidayId = "valentines" | "stpatricks" | "easter" | "halloween" | "thanksgiving" | "christmas" | "lunarnewyear" | "diwali" | "eid";
 
 export interface Holiday {
   id: HolidayId;
@@ -17,8 +17,8 @@ export interface Holiday {
   emoji: string;
   /** How many days before the holiday the theme starts, counting the day itself (21 = three weeks). */
   windowDays: number;
-  /** Where the date falls, as year, month (1-12) and day. */
-  date: (year: number, country: CountryCode) => { month: number; day: number };
+  /** Where the date falls, as year, month (1-12) and day. Null when the year is not known (see the tables below). */
+  date: (year: number, country: CountryCode) => { month: number; day: number } | null;
 }
 
 /** Western Easter Sunday (the Gregorian "computus" of Meeus, Jones and Butcher). */
@@ -46,6 +46,37 @@ export function nthWeekday(year: number, month: number, weekday: number, n: numb
   return 1 + ((weekday - first + 7) % 7) + (n - 1) * 7;
 }
 
+const DAY = 86_400_000;
+
+// Holidays on moving calendars. Lunar New Year and Diwali come from a table, because their dates follow the
+// lunar calendar and there is no short rule; a year outside the table simply has no theme, so extend the table
+// (and the test that checks it) each year. Eid al-Fitr is worked out from the tabular Islamic calendar, which can be
+// a day or two off the day the moon is sighted, so it is only ever a "this week" theme. When a Gregorian year holds
+// two Eids (about every 33 years) only the first is themed.
+const LUNAR_NEW_YEAR: Record<number, [number, number]> = {
+  2026: [2, 17], 2027: [2, 6], 2028: [1, 26], 2029: [2, 13], 2030: [2, 3],
+};
+const DIWALI: Record<number, [number, number]> = {
+  2026: [11, 8], 2027: [10, 29], 2028: [10, 17], 2029: [11, 5], 2030: [10, 26],
+};
+const fromTable = (table: Record<number, [number, number]>, year: number) => (table[year] ? { month: table[year][0], day: table[year][1] } : null);
+
+/** Gregorian date of 1 Shawwal (Eid al-Fitr) in a Hijri year, by the tabular Islamic calendar. */
+export function eidAlFitr(hijriYear: number): { year: number; month: number; day: number } {
+  const jd = 1 + Math.ceil(29.5 * 9) + (hijriYear - 1) * 354 + Math.floor((3 + 11 * hijriYear) / 30) + 1948439.5 - 1;
+  const date = new Date((jd - 2440587.5) * DAY);
+  return { year: date.getUTCFullYear(), month: date.getUTCMonth() + 1, day: date.getUTCDate() };
+}
+
+function eidIn(year: number): { month: number; day: number } | null {
+  const around = Math.round(((year - 622) * 33) / 32);
+  for (let h = around - 1; h <= around + 1; h++) {
+    const e = eidAlFitr(h);
+    if (e.year === year) return { month: e.month, day: e.day };
+  }
+  return null;
+}
+
 export const HOLIDAYS: Holiday[] = [
   { id: "valentines", name: "Valentine's Day", emoji: "💝", windowDays: 14, date: () => ({ month: 2, day: 14 }) },
   { id: "stpatricks", name: "St. Patrick's Day", emoji: "☘️", windowDays: 14, date: () => ({ month: 3, day: 17 }) },
@@ -60,9 +91,10 @@ export const HOLIDAYS: Holiday[] = [
     date: (y, country) => (country === "US" ? { month: 11, day: nthWeekday(y, 11, 4, 4) } : { month: 10, day: nthWeekday(y, 10, 1, 2) }),
   },
   { id: "christmas", name: "Christmas", emoji: "🎄", windowDays: 21, date: () => ({ month: 12, day: 25 }) },
+  { id: "lunarnewyear", name: "Lunar New Year", emoji: "🧧", windowDays: 14, date: (y) => fromTable(LUNAR_NEW_YEAR, y) },
+  { id: "diwali", name: "Diwali", emoji: "🪔", windowDays: 14, date: (y) => fromTable(DIWALI, y) },
+  { id: "eid", name: "Eid al-Fitr", emoji: "🌙", windowDays: 14, date: (y) => eidIn(y) },
 ];
-
-const DAY = 86_400_000;
 const dayNumber = (year: number, month: number, day: number) => Math.round(Date.UTC(year, month - 1, day) / DAY);
 
 /** The holiday whose window covers a day ("2026-12-10"), if any. The nearest one wins when two windows overlap. */
@@ -72,7 +104,9 @@ export function holidayOn(day: string, country: CountryCode = "CA", holidays: Ho
   const today = dayNumber(y, m, d);
   let best: { holiday: Holiday; left: number } | null = null;
   for (const holiday of holidays) {
-    const { month, day: dom } = holiday.date(y, country);
+    const when = holiday.date(y, country);
+    if (!when) continue;
+    const { month, day: dom } = when;
     const left = dayNumber(y, month, dom) - today; // days until the holiday; 0 on the day
     if (left >= 0 && left < holiday.windowDays && (!best || left < best.left)) best = { holiday, left };
   }
