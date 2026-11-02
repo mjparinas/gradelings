@@ -25,8 +25,23 @@ export const NEWS_KIND_LABEL: Record<NewsItem["kind"], string> = {
 export const WHATS_NEW: NewsDay[] = [
   {
     day: "2026-11-01",
-    headline: "Goal plans for parents, and safer sign-in links",
+    headline: "Goal plans, holiday looks, Pre-K in more places, and safer sign-in links",
     items: [
+      {
+        kind: "new",
+        title: "A festive look for the holidays",
+        body: "For a couple of weeks before Valentine’s Day, St. Patrick’s Day, Easter, Halloween, Thanksgiving and Christmas, the kids’ app and parent area get a festive tint and every character wears a matching hat or ears. Nothing changes the rest of the year.",
+      },
+      {
+        kind: "new",
+        title: "Pre-K in more places",
+        body: "Pre-K, the year before Kindergarten, is now available for more provinces and states, with picture-only questions and read-aloud.",
+      },
+      {
+        kind: "fixed",
+        title: "No more stuck “Getting ready” in Safari",
+        body: "On some Safari devices the app could sit on “Getting ready” and never open. It now carries on after a few seconds.",
+      },
       {
         kind: "new",
         title: "Goal plans on the family plan",
