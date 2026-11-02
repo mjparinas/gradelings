@@ -24,6 +24,32 @@ export const NEWS_KIND_LABEL: Record<NewsItem["kind"], string> = {
 
 export const WHATS_NEW: NewsDay[] = [
   {
+    day: "2026-11-02",
+    headline: "More holidays, friendlier buddies, and certificates for the fridge",
+    items: [
+      {
+        kind: "new",
+        title: "Lunar New Year, Diwali and Eid al-Fitr",
+        body: "For two weeks before each one, the app gets a festive look and every character wears a matching hat. There is a limited-time keepsake for My Room too.",
+      },
+      {
+        kind: "new",
+        title: "Buddies with more personality",
+        body: "Characters now hop, tilt and stretch when they have nothing to do, the next question slides in, and praise is warmer and more varied. Calm mode and reduced motion keep everything still.",
+      },
+      {
+        kind: "new",
+        title: "Streak days, graduations and fun facts",
+        body: "Big streaks get a celebration, a child who moves up a grade gets a little graduation, and each lesson can end with a short \u201cDid you know?\u201d.",
+      },
+      {
+        kind: "new",
+        title: "Printable certificates",
+        body: "Parents can print a certificate when a child finishes a grade or grows a unit into a Tree or a Star. It is labelled as practice, not a report-card mark.",
+      },
+    ],
+  },
+  {
     day: "2026-11-01",
     headline: "Goal plans, holiday looks, Pre-K in more places, and safer sign-in links",
     items: [
