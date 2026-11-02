@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import type { CSSProperties, ReactNode } from "react";
+import { useEffect, useState, type CSSProperties, type ReactNode } from "react";
 import type { SubjectMeta } from "@/content/subjects";
 import { Critter } from "./Critter";
 
@@ -122,11 +122,32 @@ export function BackgroundDecor() {
   );
 }
 
+/** What the buddy "does" while something loads. The first line stays put; later ones change every few seconds. */
+export const LOADING_LINES = [
+  "Getting ready…",
+  "Sharpening pencils…",
+  "Stacking the books…",
+  "Polishing the stars…",
+  "Almost there…",
+];
+
+/** A line that moves on every `every` ms, stopping on the last one. */
+export function useRotatingLine(lines: readonly string[], every = 2800): string {
+  const [i, setI] = useState(0);
+  useEffect(() => {
+    if (i >= lines.length - 1) return;
+    const t = setTimeout(() => setI(i + 1), every);
+    return () => clearTimeout(t);
+  }, [i, lines.length, every]);
+  return lines[i];
+}
+
 export function LoadingScreen() {
+  const line = useRotatingLine(LOADING_LINES);
   return (
     <main className="flex min-h-dvh flex-col items-center justify-center gap-4">
       <Critter id="ollie" mood="happy" size={140} />
-      <p className="text-xl font-semibold text-ink-soft">Getting ready…</p>
+      <p className="text-xl font-semibold text-ink-soft">{line}</p>
     </main>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState, useSyncExternalStore } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { AVAILABLE_GRADES } from "@/content";
 import { DEFAULT_FRAMEWORK, FRAMEWORKS, getFramework } from "@/content/frameworks";
 import { GRADE_SHORT } from "@/content/subjects";
@@ -60,6 +60,28 @@ function GrownUpsLink() {
 /** First visit: meet the cast, then set up the first child. */
 const HELLO = "Hi! I'm Ollie the Otter. My friends and I can't wait to learn and play with you!";
 
+/** A character on the hello screen: tap to say hi and it cheers. */
+function MeetCritter({ id, size }: { id: string; size: number }) {
+  const [cheering, setCheering] = useState(false);
+  const timer = useRef(0);
+  useEffect(() => () => window.clearTimeout(timer.current), []);
+  return (
+    <button
+      type="button"
+      aria-label={`Say hi to ${id[0].toUpperCase()}${id.slice(1)}`}
+      className="rounded-3xl"
+      onClick={() => {
+        sounds.pop(2);
+        setCheering(true);
+        window.clearTimeout(timer.current);
+        timer.current = window.setTimeout(() => setCheering(false), 1100);
+      }}
+    >
+      <Critter id={id} mood={cheering ? "cheer" : id === "ollie" ? "wave" : "happy"} size={size} />
+    </button>
+  );
+}
+
 export function FirstRun() {
   const cardLink = useClassSignInLink();
   // A login card's QR code goes straight to the class sign-in, with the codes filled in; the header's "Sign in with a code" opens it empty.
@@ -82,7 +104,7 @@ export function FirstRun() {
         <div className="flex items-end justify-center gap-1 sm:gap-3 short:hidden">
           {["hoot", "ruby", "ollie", "bolt", "juniper"].map((id, i) => (
             <div key={id} className="animate-drop-in" style={{ animationDelay: `${300 + i * 120}ms` }}>
-              <Critter id={id} mood={id === "ollie" ? "wave" : "happy"} size={id === "ollie" ? 150 : 92} />
+              <MeetCritter id={id} size={id === "ollie" ? 150 : 92} />
             </div>
           ))}
         </div>
