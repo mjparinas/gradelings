@@ -42,3 +42,16 @@ describe("haptics", () => {
     expect(() => vibrate(buzz.tap)).not.toThrow();
   });
 });
+
+describe("haptic patterns", () => {
+  it("are all brief, so nothing buzzes for long", () => {
+    for (const [name, pattern] of Object.entries(buzz)) {
+      const total = Array.isArray(pattern) ? pattern.reduce((a, b) => a + b, 0) : pattern;
+      expect(total, name).toBeLessThanOrEqual(250);
+    }
+  });
+  it("give big moments a longer pattern than a tap", () => {
+    expect((buzz.levelUp as number[]).length).toBeGreaterThan(buzz.correct.length);
+    expect((buzz.complete as number[]).length).toBeGreaterThan(buzz.correct.length);
+  });
+});
