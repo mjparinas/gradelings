@@ -1,0 +1,546 @@
+{
+ "pk/math": [
+  {
+   "idx": "M1.10",
+   "text": "Says or signs numbers forward up to at least 20, with some mistakes."
+  },
+  {
+   "idx": "M1.11",
+   "text": "Says or signs numbers backwards from 10."
+  },
+  {
+   "idx": "M1.12",
+   "text": "Names the next number for numbers up to 10 (e.g., using a number line, can answer the question, “What number comes after 4?”)."
+  },
+  {
+   "idx": "M1.13",
+   "text": "Reads some numbers from 0 to 10, saying number words in the correct order, with some mistakes possible."
+  },
+  {
+   "idx": "M1.14",
+   "text": "Names or says some numbers from 0 to 10, saying number words in the correct order, with some mistakes possible."
+  },
+  {
+   "idx": "M2.3",
+   "text": "Demonstrates and uses one-to-one counting to count with sets up to 10 items."
+  },
+  {
+   "idx": "M3.5",
+   "text": "Identifies a correct quantity (between four and 10 items) with a number word (e.g., or “four” or “six”)."
+  },
+  {
+   "idx": "M3.6",
+   "text": "Gives the correct number of items consistently when asked, for between four and 10 items."
+  },
+  {
+   "idx": "M3.7",
+   "text": "Identifies that the final number word used when counting out an item set represents the exact number of items in the set. M3.8 Understands the number of objects in a set does not change and is the same regardless of the arrangement or order in which they were counted (e.g., when there are five different animals in a group, the quantity is the same whether they are in a circle or a line)."
+  },
+  {
+   "idx": "M4.6",
+   "text": "Associates numerals (e.g., three or four) with the correct number word or number (e.g., “three” or “four”) up to 10."
+  },
+  {
+   "idx": "M4.7",
+   "text": "Names small sets quickly and accurately, labeling groups as \"four\" or \"five\" (e.g., when a child sees five dots on a die, they know without counting that it is “five”). This skill is often referred to as “subitizing.”"
+  },
+  {
+   "idx": "M5.5",
+   "text": "Estimates quantities verbally without counting, although inconsistently and sometimes with mistakes."
+  },
+  {
+   "idx": "M6.6",
+   "text": "States the number that comes before or after (up to the number 10)."
+  },
+  {
+   "idx": "M6.7",
+   "text": "Understands that a quantity changes (increases or decreases) when a set of objects (more than four and up to 10) are combined or separated."
+  },
+  {
+   "idx": "M6.8",
+   "text": "Names the next number in a set of up to 10 items without recounting, even when the set isn’t visible."
+  },
+  {
+   "idx": "M6.9",
+   "text": "Produces different sets that equal a specific sum of up to 10 (e.g., both “two and three” and “one and four” equal five)."
+  },
+  {
+   "idx": "M7.5",
+   "text": "Recognizes that a number word can be used to represent a position in a sequence (e.g., puts a specific object first or second when making a pattern)."
+  },
+  {
+   "idx": "M8.9",
+   "text": "Uses standardized units, common and unconventional, to measure."
+  },
+  {
+   "idx": "M8.10",
+   "text": "Compares and orders more than two items in some way (e.g., shortest to longest, smallest to biggest)."
+  },
+  {
+   "idx": "M8.11",
+   "text": "Uses comparison vocabulary (e.g., “longer” and “shorter,” “taller” and “shorter,” and “farthest” and “closest”) with both discrete sets (e.g., blocks, books) and continuous properties (e.g., water, sand, height)."
+  },
+  {
+   "idx": "M9.9",
+   "text": "Uses words or pictures to describe a simple pattern."
+  },
+  {
+   "idx": "M9.10",
+   "text": "Applies a simple pattern rule to different materials or modes (sound, body, color, size, movement)."
+  },
+  {
+   "idx": "M9.11",
+   "text": "Copies an example of a complex pattern."
+  },
+  {
+   "idx": "M10.7",
+   "text": "Begins to describe the attributes (round, straight, curved, etc.) that define 2D and 3D shapes, including sides and corners regardless of the shape’s size or position (e.g., notices that “this block won’t roll because it’s not round”)."
+  },
+  {
+   "idx": "M10.8",
+   "text": "Puts together (composes) and takes apart (decomposes) shapes."
+  },
+  {
+   "idx": "M11.9",
+   "text": "Recognizes and creates shapes that have symmetry."
+  },
+  {
+   "idx": "M11.10",
+   "text": "Recognizes that complex shapes need to be rotated, flipped, or turned around before objects fit together (e.g., puzzle pieces)."
+  },
+  {
+   "idx": "M12.6",
+   "text": "Recognizes and describes the position of objects in their environment."
+  },
+  {
+   "idx": "M12.7",
+   "text": "Produces a simple map."
+  },
+  {
+   "idx": "M13.8",
+   "text": "Says or shows the attribute used for sorting or comparing objects."
+  },
+  {
+   "idx": "M13.9",
+   "text": "Sorts objects by using flexible rules (e.g., sort first by color, then sort the same objects by size)."
+  },
+  {
+   "idx": "M14.3",
+   "text": "Helps to chart or graph information as part of group activity (e.g., writes X on chart to indicate choice between 2 items)."
+  },
+  {
+   "idx": "M14.4",
+   "text": "Sorts information by one or more attributes with assistance from a caregiver (e.g., creates a chart of animals that are awake at night versus day)."
+  },
+  {
+   "idx": "M14.5",
+   "text": "Collects and shares data independently (e.g., asks peers about preferences for group chart activity)."
+  },
+  {
+   "idx": "M15.4",
+   "text": "Uses data to answer questions and solve problems (e.g., “If there are 10 name cards on the name chart, we need 10 chairs at the table”)."
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "LLC1.11",
+   "text": "Follows directions that involve three or more steps."
+  },
+  {
+   "idx": "LLC1.12",
+   "text": "Responds to increasingly complex vocabulary that indicates location, such as “besides,” “around,” and “next to.”"
+  },
+  {
+   "idx": "LLC1.13",
+   "text": "Responds appropriately to “wh-” questions or understands a question has been asked."
+  },
+  {
+   "idx": "LLC2.11",
+   "text": "Initiates or extends conversations with varied comments or questions."
+  },
+  {
+   "idx": "LLC2.12",
+   "text": "Communicates clearly enough to be understood by the majority of those who speak the same language."
+  },
+  {
+   "idx": "LLC3.11",
+   "text": "Uses increasingly longer sentences to share information about experiences with people, places, or things."
+  },
+  {
+   "idx": "LLC3.12",
+   "text": "Uses more new words that more precisely name and describe objects."
+  },
+  {
+   "idx": "LLC3.13",
+   "text": "Applies language rules to words or sentences, accurately or inaccurately (e.g., “We goed to the store”)."
+  },
+  {
+   "idx": "LLC4.9",
+   "text": "Points to both pictures and text when engaging with print books (e.g., points to letters in their name)."
+  },
+  {
+   "idx": "LLC4.10",
+   "text": "Shows persistence with longer and more complex narratives and informational text (e.g., maintains attention throughout read aloud)."
+  },
+  {
+   "idx": "LLC4.11",
+   "text": "Offers a personal response to stories read aloud."
+  },
+  {
+   "idx": "LLC5.11",
+   "text": "Shows interest in and associates sounds with words (e.g., child shows reaction when hearing the first letter of their name)."
+  },
+  {
+   "idx": "LLC5.12",
+   "text": "Plays with sounds, words, and language (e.g., rhyming and matching first sounds in words) with or without attention to meaning."
+  },
+  {
+   "idx": "LLC6.5",
+   "text": "Points to or names some shapes, colors, letters, and other familiar symbols (e.g., first letter in child’s name)."
+  },
+  {
+   "idx": "LLC7.7",
+   "text": "Looks at and shares books and other print materials with others from front to back."
+  },
+  {
+   "idx": "LLC8.10",
+   "text": "Retells important information from a story or text."
+  },
+  {
+   "idx": "LLC8.11",
+   "text": "Tells simple stories and experiences from their own life."
+  },
+  {
+   "idx": "LLC8.12",
+   "text": "Uses vocabulary related to key concepts and central themes from a story or text."
+  },
+  {
+   "idx": "LLC9.10",
+   "text": "Writes own name and words about familiar and interesting things."
+  },
+  {
+   "idx": "LLC9.11",
+   "text": "Understands the different purposes for writing (e.g., stories, lists, or labels)."
+  },
+  {
+   "idx": "LLC9.12",
+   "text": "Uses invented spelling (e.g., chooses incorrect or unusual letters to spell words)."
+  },
+  {
+   "idx": "LLC9.13",
+   "text": "Uses words, pictures, letters, or letter- like symbols to communicate information and ideas, or to create original stories."
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "ST1.7",
+   "text": "Describes differences and similarities."
+  },
+  {
+   "idx": "ST1.8",
+   "text": "Expresses curiosity and/or makes predictions after observing something that occurs repeatedly."
+  },
+  {
+   "idx": "ST2.10",
+   "text": "Starts with a useful, general approach to investigation even if details may be lacking."
+  },
+  {
+   "idx": "ST2.11",
+   "text": "Explores objects with the intention of finding out something specific."
+  },
+  {
+   "idx": "ST2.12",
+   "text": "Uses tools in new and creative ways."
+  },
+  {
+   "idx": "ST3.14",
+   "text": "Makes a plan in advance with an intended outcome."
+  },
+  {
+   "idx": "ST3.15",
+   "text": "Demonstrates awareness that different materials and variables impact strategies and outcomes."
+  },
+  {
+   "idx": "ST3.16",
+   "text": "Makes a logical prediction of an expected outcome."
+  },
+  {
+   "idx": "ST3.17",
+   "text": "Changes a plan or actions when the outcome is not as expected."
+  },
+  {
+   "idx": "ST4.9",
+   "text": "Offers detailed observations of why the result occurred."
+  },
+  {
+   "idx": "ST4.10",
+   "text": "Is open to more than one solution or answer to a problem."
+  },
+  {
+   "idx": "ST4.11",
+   "text": "Reflects on results and develops understanding when guided by an adult."
+  },
+  {
+   "idx": "ST5.9",
+   "text": "Retells or describes own actions when experimenting."
+  },
+  {
+   "idx": "ST5.10",
+   "text": "Communicates with others about questions, actions, ideas, observations, or results."
+  },
+  {
+   "idx": "ST6.6",
+   "text": "Develops and applies rules."
+  },
+  {
+   "idx": "ST6.7",
+   "text": "Uses previous experience to solve problems."
+  },
+  {
+   "idx": "ST6.8",
+   "text": "Compares findings to predictions or expected results and notices patterns in the findings."
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "AL1.6",
+   "text": "Seeks out new experiences, objects, or materials for own enjoyment."
+  },
+  {
+   "idx": "AL2.9",
+   "text": "Notices and communicates curiosity about new objects, materials, and activities."
+  },
+  {
+   "idx": "AL2.10",
+   "text": "Investigates new things and seeks novel experiences eagerly."
+  },
+  {
+   "idx": "AL2.11",
+   "text": "Asks focused questions about topics of interest."
+  },
+  {
+   "idx": "AL3.10",
+   "text": "Participates in large group activities led by a teacher for sustained periods."
+  },
+  {
+   "idx": "AL3.11",
+   "text": "Participates in large group activities and discussions."
+  },
+  {
+   "idx": "AL3.12",
+   "text": "Makes a plan to complete tasks."
+  },
+  {
+   "idx": "AL4.5",
+   "text": "Creates a plan to achieve a goal and follows through to completion with occasional adult support."
+  },
+  {
+   "idx": "AL5.11",
+   "text": "Develops more elaborate imaginative play that includes complex scenarios and storylines."
+  },
+  {
+   "idx": "AL5.12",
+   "text": "Uses humor and laughter during play (e.g., tells a joke or a funny story)."
+  },
+  {
+   "idx": "AL5.13",
+   "text": "Uses a variety of voice inflections and facial expressions in play."
+  },
+  {
+   "idx": "AL6.5",
+   "text": "Begins to intentionally plan how to use materials to express an idea (e.g., setting up a pretend store)."
+  },
+  {
+   "idx": "AL6.6",
+   "text": "Notices written letters and words represent objects, people, or events, and begins to use written letters or words in play."
+  },
+  {
+   "idx": "AL7.5",
+   "text": "Explores different materials, tools, and processes to create unique products of their own choosing."
+  },
+  {
+   "idx": "AL8.9",
+   "text": "Carries out the steps in daily routines on their own or with minimal support (e.g., putting toys away or brushing teeth)."
+  },
+  {
+   "idx": "AL8.10",
+   "text": "Participates in and contributes to discussions about familiar topics."
+  },
+  {
+   "idx": "AL9.12",
+   "text": "Maintains focus and perseverance on a task of interest for a minimum of five minutes independently."
+  },
+  {
+   "idx": "AL9.13",
+   "text": "Begins to develop ways to think about and solve problems, seeking adult support as needed."
+  },
+  {
+   "idx": "AL10.7",
+   "text": "Considers other points of view and may change opinion or idea when faced with new information."
+  },
+  {
+   "idx": "AL11.6",
+   "text": "Attempts to solve problems independently."
+  },
+  {
+   "idx": "AL11.7",
+   "text": "Explains the possible solutions of problems and outcomes."
+  },
+  {
+   "idx": "AL12.7",
+   "text": "Draws conclusions and explains thinking."
+  },
+  {
+   "idx": "SE1.10",
+   "text": "Demonstrates increasing security in ability to communicate opinions, feelings, and ideas."
+  },
+  {
+   "idx": "SE1.11",
+   "text": "Engages in extended group- based activities and self-directed activities, when appropriate."
+  },
+  {
+   "idx": "SE1.12",
+   "text": "Tolerates corrective feedback, manages setbacks, and seeks adult support when needed."
+  },
+  {
+   "idx": "SE2.6",
+   "text": "Demonstrates increasingly accurate understanding of own strengths, preferences, limitations, and personal qualities."
+  },
+  {
+   "idx": "SE2.7",
+   "text": "Expresses understanding of and interest in similarities and differences between self and others."
+  },
+  {
+   "idx": "SE3.9",
+   "text": "Demonstrates or describes an increasing understanding of cause and effect around their own emotional reactions."
+  },
+  {
+   "idx": "SE3.10",
+   "text": "Understands and anticipates emotional reactions of others based on their personal experiences and their own emotional reactions."
+  },
+  {
+   "idx": "SE4.12",
+   "text": "Expresses feelings, needs, opinions, and desires more frequently through preferred communication methods."
+  },
+  {
+   "idx": "SE4.13",
+   "text": "Shows increasing understanding of changing expectations for behavior and emotional expression in different settings (e.g., home, school, or grocery store)."
+  },
+  {
+   "idx": "SE4.14",
+   "text": "Shows ability to manage challenging feelings and behaviors, with caregiver support."
+  },
+  {
+   "idx": "SE4.15",
+   "text": "Shows increasing ability to understand the connection between actions and consequences, including the ability to stop and think in situations."
+  },
+  {
+   "idx": "SE5.6",
+   "text": "Anticipates changes and demonstrates the ability to adjust to changes."
+  },
+  {
+   "idx": "SE6.9",
+   "text": "Attempts to label increasingly complex emotions in others (e.g., pride, embarrassment, or jealousy)."
+  },
+  {
+   "idx": "SE6.10",
+   "text": "Acknowledges others’ emotions (e.g., responds to peers' complex emotions)."
+  },
+  {
+   "idx": "SE6.11",
+   "text": "Expresses curiosity and interest in others’ perspectives when presented with different viewpoints."
+  },
+  {
+   "idx": "SE7.10",
+   "text": "Builds friendships/peer connections through play, learning activities, and conversation with peers."
+  },
+  {
+   "idx": "SE8.11",
+   "text": "Shows flexibility in roles during play."
+  },
+  {
+   "idx": "SE8.12",
+   "text": "Shows increasing ability to initiate, engage in, and sustain positive interactions with peers and adults."
+  },
+  {
+   "idx": "SE8.13",
+   "text": "Takes turns without adult support."
+  },
+  {
+   "idx": "Soc1.10",
+   "text": "Describes similarities and differences in people."
+  },
+  {
+   "idx": "Soc1.11",
+   "text": "Identifies the ways an individual belongs to a family, community, and culture."
+  },
+  {
+   "idx": "Soc1.12",
+   "text": "Understands that families and communities have similarities and differences."
+  },
+  {
+   "idx": "Soc2.7",
+   "text": "Demonstrates an understanding of community agreements (e.g., rules), and the consequences when rules are not followed."
+  },
+  {
+   "idx": "Soc2.8",
+   "text": "Provides help to the caregiver in the early childhood environment."
+  },
+  {
+   "idx": "Soc3.11",
+   "text": "Uses language to recall and anticipate events in time with increasing understanding and accuracy."
+  },
+  {
+   "idx": "Soc3.12",
+   "text": "Compares self to older and younger family members and friends with specific examples."
+  },
+  {
+   "idx": "Soc3.13",
+   "text": "Describes a chronological order in a series of familiar events."
+  },
+  {
+   "idx": "Soc3.14",
+   "text": "Reflects on the impact of past, present, and some future events on self and family."
+  },
+  {
+   "idx": "Soc4.7",
+   "text": "Compares their own cultural traditions with others’ to understand similarities and differences."
+  },
+  {
+   "idx": "Soc5.5",
+   "text": "Participates in community conservation activities that help manage, preserve, and protect the environment (e.g., planting a tree)."
+  },
+  {
+   "idx": "Soc6.6",
+   "text": "Begins to use geographic and spatial language to identify features of familiar environments (e.g., Identifies hills, ponds, rivers, and uses words like “near,” “far,” or “over”)."
+  },
+  {
+   "idx": "Soc6.7",
+   "text": "Uses objects (e.g., drawing materials or building blocks) to recreate a familiar environment (e.g., the park or the zoo)."
+  },
+  {
+   "idx": "Soc7.13",
+   "text": "Negotiates and shares with other children during play."
+  },
+  {
+   "idx": "Soc7.14",
+   "text": "Labels individual needs and wants with support."
+  },
+  {
+   "idx": "Soc7.15",
+   "text": "Asks for items that they need or would like (e.g., a toy or a favorite food at the store)."
+  },
+  {
+   "idx": "Soc8.8",
+   "text": "Knows when, how, and why to use a variety of digital and non- digital tools for learning (e.g., knows that a key opens a lock or a passcode unlocks a mobile device)."
+  },
+  {
+   "idx": "Soc9.6",
+   "text": "Engages in developmentally appropriate use of all tools, including technology, with support from a caregiver."
+  },
+  {
+   "idx": "Soc9.7",
+   "text": "Transitions to another activity after technology use."
+  }
+ ]
+}
