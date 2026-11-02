@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // New Mexico, a US state. Standards are New Mexico's content standards, adopted by the Public Education Department as
 // rules in Title 6, Chapter 29 of the New Mexico Administrative Code: mathematics and English language arts (2010, the
@@ -75,9 +76,9 @@ export const NEW_MEXICO: Framework = {
   standardLabel: "Standard",
   sourceName: "New Mexico Public Education Department",
   sourceUrl: "https://web.ped.nm.gov/educators/instructional-resources/new-mexico-adopted-content-standards/",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding New Mexico report cards",
     intro:

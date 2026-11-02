@@ -2,7 +2,7 @@
 
 ## Framework
 
-- **Id and slug:** `us-nm`, `new-mexico`. Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: New Mexico has no statewide French standards the app follows). Offered to families and in classroom mode.
+- **Id and slug:** `us-nm`, `new-mexico`. Pre-K and Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: New Mexico has no statewide French standards the app follows). Offered to families and in classroom mode.
 
 ## Standards
 
@@ -21,9 +21,10 @@
 - New Mexico has no statewide report card; each district and charter school chooses its own, so the app uses the same four practice steps as the other states (Beginning, Approaching, Meeting, Exceeding).
 - State tests: NM-MSSA in language arts and math (grades 3 to 8, with Lexile and Quantile measures), NM-ASR in science (grades 5, 8 and 11), each reported in four levels (Novice, Nearing Proficiency, Proficient, Advanced), and the SAT in grade 11. New Mexico screens 1st graders for signs of dyslexia.
 
+- **Pre-K:** the 26 shared Pre-K units (`src/content/grades/pk/`), each citing a standard in the New Mexico Early Learning Standards (`5.1.A`, `2.2.D`, `5.2.A`, `4.1.B`; New Mexico Early Childhood Education and Care Department, 2026), which cover birth to kindergarten (`src/content/new-mexico/pk.ts`), checked against `docs/research/new-mexico/prek/outcomes.json` (sources in `source/`, `fetch.sh`, `build_outcomes.py` in gradelings-research). Practice steps only.
 ## Parent guides
 
-- `src/content/new-mexico/guides.ts`, US English: the hub, grade notes for Kindergarten to Grade 9, the eight Standards for Mathematical Practice (`/guides/new-mexico/math-practices/`) and state tests (`/guides/new-mexico/state-tests/`; dates point to the Department). No French guide.
+- `src/content/new-mexico/guides.ts`, US English: the hub, grade notes for Pre-K to Grade 9, the eight Standards for Mathematical Practice (`/guides/new-mexico/math-practices/`) and state tests (`/guides/new-mexico/state-tests/`; dates point to the Department). No French guide.
 
 ## Schools
 
