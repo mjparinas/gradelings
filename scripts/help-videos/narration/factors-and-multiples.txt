@@ -1,0 +1,6 @@
+A factor is a number that multiplies with another number to make a product. Let's find the factors of twelve.
+Twelve counters can make a row of twelve. One times twelve is twelve. So one and twelve are factors.
+They can make two rows of six. Two times six is twelve. So two and six are factors.
+They can make three rows of four. Three times four is twelve. So three and four are factors.
+The factors of twelve are one, two, three, four, six and twelve.
+Multiples go the other way. They are the numbers in a times table. The multiples of four are four, eight, twelve, sixteen and so on.

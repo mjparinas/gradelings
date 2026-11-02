@@ -1,0 +1,5 @@
+Like terms have the same letter and the same exponent. We can combine them. Here is an expression.
+Find the x squared terms. Two x squared plus x squared is three x squared.
+Now find the x terms. Three x plus five x is eight x.
+Put them together. The answer is three x squared plus eight x.
+We can only combine like terms. An x squared term and an x term are different, so they stay apart.
