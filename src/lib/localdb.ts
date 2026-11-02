@@ -8,6 +8,8 @@ import type { AppEvent } from "./model";
 
 const DB_NAME = "grademap";
 const VERSION = 1;
+/** How long to wait for the browser to open the database before using memory instead. */
+export const OPEN_TIMEOUT_MS = 4000;
 
 export interface StoredEvent {
   event: AppEvent;
@@ -24,6 +26,14 @@ const memory = { kv: new Map<string, unknown>(), events: new Map<string, StoredE
 function open(): Promise<IDBDatabase | null> {
   if (typeof indexedDB === "undefined") return Promise.resolve(null);
   dbPromise ??= new Promise((resolve) => {
+    // Safari can leave indexedDB.open() pending forever (no success, error or blocked event), most often on a first
+    // visit that arrives from another site, such as the return from Google. Without a way out the app sits on
+    // "Getting ready…" even after a refresh, so after a while we carry on with the in-memory fallback.
+    let timedOut = false;
+    setTimeout(() => {
+      timedOut = true;
+      resolve(null);
+    }, OPEN_TIMEOUT_MS);
     try {
       const req = indexedDB.open(DB_NAME, VERSION);
       req.onupgradeneeded = () => {
@@ -37,6 +47,10 @@ function open(): Promise<IDBDatabase | null> {
       };
       req.onsuccess = () => {
         const db = req.result;
+        if (timedOut) {
+          db.close();
+          return;
+        }
         // The browser can close the connection under us (storage cleared, the tab frozen, another
         // tab upgrading the database). Open a fresh one next time rather than keep a dead handle.
         db.onclose = () => forget(db);
