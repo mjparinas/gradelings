@@ -101,7 +101,8 @@ describe("Montana", () => {
   });
 
   it("cites the 2026 math standards and has no high school standard for linear inequalities", () => {
-    const math = montana.filter(({ c }) => c.subject === "math").map(({ u }) => u.standards["us-mt"]!);
+    // Pre-K cites the Early Learning Standards (`Std 4.10`), checked by the contract tests.
+    const math = montana.filter(({ c }) => c.subject === "math" && c.grade !== "pk").map(({ u }) => u.standards["us-mt"]!);
     expect(math.every((s) => /^MT\./.test(s))).toBe(true);
     expect(montana.some(({ u }) => u.id === "wa-g9-inequalities")).toBe(false);
   });

@@ -1,4 +1,4 @@
-import { codeCite, research, type FrameworkContract } from "../contract";
+import { codeCite, preKCite, research, type FrameworkContract } from "../contract";
 import { PLAN } from "./plan";
 
 // Montana's official standards, built from the Office of Public Instruction's machine-readable standards (its CASE
@@ -6,6 +6,8 @@ import { PLAN } from "./plan";
 const OUTCOMES = research<Record<string, { idx: string }[]>>("montana/outcomes.json");
 
 export const contract: FrameworkContract = {
+  // Pre-K cites the early-learning document (docs/research/montana/prek).
+  preK: preKCite("montana", "Montana"),
   cite: codeCite(OUTCOMES, "Montana"),
   ownPrefix: "mt-",
   adoptsFrom: ["us-ca", "ca-nb", "ca-ns", "ca-mb", "ca-pe", "us-or", "us-wa", "us-ny", "us-tx", "us-az", "us-fl", "us-ga"],

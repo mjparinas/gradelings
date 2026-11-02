@@ -2,7 +2,7 @@
 
 ## Framework
 
-- **Id and slug:** `us-mt`, `montana`. Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: Montana's world languages standards aren't a subject the app follows yet). Offered to families and in classroom mode.
+- **Id and slug:** `us-mt`, `montana`. Pre-K and Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: Montana's world languages standards aren't a subject the app follows yet). Offered to families and in classroom mode.
 
 ## Standards
 
@@ -22,9 +22,10 @@
 - Montana has no statewide report-card scale; each district chooses its own, so the app uses the same four practice steps as the other states (Beginning, Approaching, Meeting, Exceeding).
 - State tests are MAST (Montana Aligned to Standards Through-Year: English language arts and math in grades 3 to 8, short testlets through the year; Novice, Nearing Proficient, Proficient and Advanced; first full year 2024-25), the Montana Science Assessment (grades 5 and 8) and the ACT (grade 11), with alternate assessments (MSAA, AMSA).
 
+- **Pre-K:** the 26 shared Pre-K units (`src/content/grades/pk/`), each citing a standard in the Montana Early Learning Standards (`Std 4.10`, `Std 3.5`; Montana Office of Public Instruction). The standards have benchmarks and indicators with no codes of their own, so units cite the standards (`src/content/montana/pk.ts`), checked against `docs/research/montana/prek/outcomes.json` (sources in `source/`, `fetch.sh`, `build_outcomes.py` in gradelings-research). Practice steps only.
 ## Parent guides
 
-- `src/content/montana/guides.ts`, US English: the hub, grade notes for Kindergarten to Grade 9, the seven Montana Mathematical Practices (`/guides/montana/math-practices/`, including 7, Culturally Connect) and the state tests (`/guides/montana/mast-tests/`; dates point to the OPI). No French guide.
+- `src/content/montana/guides.ts`, US English: the hub, grade notes for Pre-K to Grade 9, the seven Montana Mathematical Practices (`/guides/montana/math-practices/`, including 7, Culturally Connect) and the state tests (`/guides/montana/mast-tests/`; dates point to the OPI). No French guide.
 
 ## Schools
 

@@ -1,0 +1,134 @@
+{
+ "pk/math": [
+  {
+   "idx": "Std 4.10",
+   "text": "Children develop the ability to think and work with numbers to understand their uses, and describe numerical relationships through structured and everyday experiences"
+  },
+  {
+   "idx": "Std 4.11",
+   "text": "Children develop skills in using measurement instruments to explore and discover measurement relationships and characteristics, such as length, quantity, volume, distance, weight, area, and time"
+  },
+  {
+   "idx": "Std 4.12",
+   "text": "Children apply mathematical skills in data analysis, such as counting, sorting, and comparing objects"
+  },
+  {
+   "idx": "Std 4.13",
+   "text": "Children learn to identify, describe, produce, and create patterns using mathematical language and materials"
+  },
+  {
+   "idx": "Std 4.14",
+   "text": "Children build the foundation for recognizing and describing shapes by manipulating, playing with, tracing, and making common shapes. Children learn spatial reasoning"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "Std 3.1",
+   "text": "Children use listening and observation skills to make sense of and respond to spoken language and other forms of communication. Children enter into the exchange of information around what they see, hear, and experience"
+  },
+  {
+   "idx": "Std 3.2",
+   "text": "Children develop skills in using sounds, facial expressions, gestures, and words for a variety of purposes, such as to help adults and others understand their needs, ask questions, express feelings and ideas, and solve problems"
+  },
+  {
+   "idx": "Std 3.3",
+   "text": "Children develop skills that help them interact and communicate with others in effective ways"
+  },
+  {
+   "idx": "Std 3.4",
+   "text": "Children develop competency in their home language while becoming proficient in English"
+  },
+  {
+   "idx": "Std 3.5",
+   "text": "Children develop an understanding, skills, and interest in the symbols, sounds, and rhythms of written language as they also develop interest in reading, enjoyment from books, and awareness that the printed word can be used for various purposes"
+  },
+  {
+   "idx": "Std 3.6",
+   "text": "Children develop interest and skills in using symbols as a meaningful form of communication"
+  },
+  {
+   "idx": "Std 3.7",
+   "text": "Children develop an understanding that print carries a message through symbols and words, and that there is a connection between sounds and letters (the alphabetic principle)"
+  },
+  {
+   "idx": "Std 3.8",
+   "text": "Children develop an awareness of the sounds of letters and the combination of letters that make up words and use this awareness to manipulate syllables and sounds of speech"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "Std 4.15",
+   "text": "As children seek to understand their environment and test new knowledge, they engage in scientific investigations using their senses to observe, manipulate objects, ask questions, make predictions, and develop conclusions and generalizations"
+  },
+  {
+   "idx": "Std 4.16",
+   "text": "Children develop understanding of and compassion for living things"
+  },
+  {
+   "idx": "Std 4.17",
+   "text": "Children develop an understanding of the physical world (the nature and properties of energy, non-living matter, and the forces that give order to the natural world)"
+  },
+  {
+   "idx": "Std 4.18",
+   "text": "Children develop an understanding of the earth and planets"
+  },
+  {
+   "idx": "Std 4.19",
+   "text": "Children develop an understanding of the processes that assist people in designing and building"
+  },
+  {
+   "idx": "Std 4.22",
+   "text": "Children become mindful of their environment and their interdependence on the natural world; they learn how to care for the environment and why it is important"
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "Std 1.1",
+   "text": "Children develop an awareness of and appreciation for the similarities and differences between themselves and others"
+  },
+  {
+   "idx": "Std 1.2",
+   "text": "Children develop an awareness of and appreciation for the functions, contributions, and diverse characteristics of families"
+  },
+  {
+   "idx": "Std 1.3",
+   "text": "Children develop an understanding of the basic principles of how communities function, including work roles and commerce"
+  },
+  {
+   "idx": "Std 1.4",
+   "text": "Children develop an awareness and appreciation of themselves as unique, competent, and capable individuals"
+  },
+  {
+   "idx": "Std 1.5",
+   "text": "Children demonstrate a belief in their abilities"
+  },
+  {
+   "idx": "Std 1.6",
+   "text": "Children manage their internal states, feelings, and behavior, and develop the ability to adapt to diverse situations and environments"
+  },
+  {
+   "idx": "Std 1.7",
+   "text": "Children express a wide and varied range of feelings through their facial expressions, gestures, behaviors, and words"
+  },
+  {
+   "idx": "Std 1.8",
+   "text": "Children show trust, develop emotional bonds, and interact comfortably with adults"
+  },
+  {
+   "idx": "Std 1.9",
+   "text": "Children interact and build relationships with peers as they expand their world beyond the family and develop skills in cooperation, negotiation, and showing empathy"
+  },
+  {
+   "idx": "Std 4.20",
+   "text": "Children develop an understanding of the concept of time, including past, present, and future as they are able to recognize recurring experiences that are part of the daily routine"
+  },
+  {
+   "idx": "Std 4.21",
+   "text": "Children develop an understanding that each place has its own unique characteristics"
+  },
+  {
+   "idx": "Std 4.22",
+   "text": "Children become mindful of their environment and their interdependence on the natural world; they learn how to care for the environment and why it is important"
+  }
+ ]
+}

@@ -188,6 +188,10 @@ export const MONTANA_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-K in Montana is the year before kindergarten, for children who are 4. Montana's public preschool and Head Start programs follow the Montana Early Learning Standards. Children learn through play, stories and songs: counting, shapes and patterns, letters and rhymes, plus first ideas about family, community, weather and living things.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for counting small groups, naming letters, hearing rhymes, taking turns and talking about feelings.",
+    },
     k: {
       overview: "Kindergarten in Montana is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. In social studies they learn about past, present and future, classroom rules and the people who make them, and the goods made in Montana.",
       lookFor: "Many Montana districts use standards-based report cards. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",
