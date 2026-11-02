@@ -17,7 +17,7 @@ let reportData: typeof import("@/server/reportData");
 
 beforeAll(async () => {
   [signup, verify, login, sync, share, prefs, unsub, cron, feedback, classes, students, contact] = (await Promise.all([
-    import("@/app/api/auth/signup/route"),
+    import("@/server/testing/signupWithSession"),
     import("@/app/api/auth/verify/route"),
     import("@/app/api/auth/login/route"),
     import("@/app/api/sync/route"),

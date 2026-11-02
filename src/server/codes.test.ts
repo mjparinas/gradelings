@@ -20,7 +20,7 @@ let codes: typeof import("@/server/codes");
 
 beforeAll(async () => {
   [signup, me, redeem, admin, checkout, webhook, account] = (await Promise.all([
-    import("@/app/api/auth/signup/route"),
+    import("@/server/testing/signupWithSession"),
     import("@/app/api/auth/me/route"),
     import("@/app/api/codes/redeem/route"),
     import("@/app/api/admin/codes/route"),

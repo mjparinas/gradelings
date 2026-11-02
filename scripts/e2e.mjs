@@ -9,7 +9,7 @@
 //   node scripts/e2e.mjs http://localhost:3000 e2e-shots --offline [--speed] [--part modes|parents|sync]
 import fs from "node:fs";
 import { chromium } from "playwright";
-import { EDGE_VOICES, enterPin, installFakeVoices, newChild, spoken, step, vis } from "./helpers.mjs";
+import { EDGE_VOICES, enterPin, installFakeVoices, newChild, openConfirmLink, spoken, step, vis } from "./helpers.mjs";
 const BASE = process.argv[2] || "http://localhost:3100";
 const OUT = process.argv[3] || "e2e-shots";
 const OFFLINE = process.argv.includes("--offline");
@@ -381,6 +381,12 @@ async function eventsWaiting(page) {
     await page.getByLabel("Email").fill(email);
     await page.getByLabel("Password").fill("correct horse 42");
     await page.getByRole("button", { name: /Create account/ }).last().click();
+    await page.getByText(/Check your email/).first().waitFor();
+    // Nobody is signed in by sign-up; the emailed link does that. Scripts have no inbox, so open it from a token made in the database.
+    await openConfirmLink(page, BASE, email);
+    await page.goto(`${BASE}/parents/?signedin=1#/account`);
+    await page.waitForTimeout(700);
+    if (await vis(page.getByRole("heading", { name: "Parents only" }))) await enterPin(page, false);
     await page.waitForTimeout(4000);
     await shot(page, "25-account");
     const afterSync = await eventsWaiting(page);

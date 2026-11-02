@@ -450,6 +450,10 @@ const SCHEMA = [
 /** Columns added after the first release. SQLite has no "ADD COLUMN IF NOT EXISTS". */
 const PARENT_COLUMNS: [string, string][] = [
   ["email_verified_at", "INTEGER"],
+  // Sign-up never signs a device in. The password typed there waits here, and joins the account only when the
+  // email is confirmed in the same browser that signed up (that browser's cookie hashes to signup_cookie_hash).
+  ["pending_password_hash", "TEXT"],
+  ["signup_cookie_hash", "TEXT"],
   ["weekly_report", "INTEGER NOT NULL DEFAULT 0"],
   ["unsub_token", "TEXT"],
   ["last_weekly_at", "INTEGER"],
