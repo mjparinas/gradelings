@@ -1,0 +1,5 @@
+To multiply decimals, first forget the decimal points and multiply like whole numbers.
+Four times three is twelve.
+Now count the decimal places in both numbers. Zero point four has one place. Zero point three has one place. That is two places in all.
+Put two decimal places in the answer. Twelve becomes zero point one two.
+Check with sense. Zero point four is less than one half, and zero point three is less than one. So the answer should be small. Zero point one two makes sense.
