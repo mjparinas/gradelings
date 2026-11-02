@@ -47,7 +47,7 @@ export const courses = preKCourses("us-sd", {
       "places-around-me": "CD 10 · the families and communities I belong to",
       "taking-turns": "SDED 3; SDED 4 · taking turns, sharing and following rules",
       "first-next-last": "CD 2 · remembering and putting events in order",
-      "caring-for-our-world": "CD 8 · caring for living things and our surroundings",
+      "caring-for-our-world": "AL 2 · actively seeking to understand the world around them and caring for it",
     },
   },
 });
