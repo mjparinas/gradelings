@@ -1,0 +1,158 @@
+{
+ "pk/math": [
+  {
+   "idx": "CD 4",
+   "text": "Through their explorations, play, and social interactions, children count with understanding and use numbers to tell how many, describe order, and compare."
+  },
+  {
+   "idx": "CD 5",
+   "text": "Through their explorations, play, and social interactions, children demonstrate concepts about position, as well as identify and describe simple geometric shapes."
+  },
+  {
+   "idx": "CD 6",
+   "text": "Through their explorations, play, and social interactions, children compare, sort, group, organize, measure, and create simple patterns using concrete objects."
+  },
+  {
+   "idx": "CD 7",
+   "text": "Through their explorations, play, and social interactions, children use mathematical thinking to ask questions and solve problems."
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "CLL 1",
+   "text": "Through their explorations, play, and social interactions, children successfully communicate for multiple purposes."
+  },
+  {
+   "idx": "CLL 2",
+   "text": "Through their explorations, play, and social interactions, children speak clearly and use the grammar of their home language."
+  },
+  {
+   "idx": "CLL 3",
+   "text": "Through their explorations, play, and social interactions, children understand and use an ever-expanding vocabulary."
+  },
+  {
+   "idx": "CLL 4",
+   "text": "Through their explorations, play and social interactions, children develop interest, motivation, and appreciation for literacy-based materials and activities."
+  },
+  {
+   "idx": "CLL 5",
+   "text": "Through their explorations, play, and social interactions, children comprehend, use, and begin to reflect on and analyze information in books and other media."
+  },
+  {
+   "idx": "CLL 6",
+   "text": "Through their explorations, play, and social interactions, children begin to recognize basic concepts of print and discover that they can get meaning from print."
+  },
+  {
+   "idx": "CLL 7",
+   "text": "Through their explorations, play, and social interactions, children listen, identify, and respond to sounds, and develop phonological awareness."
+  },
+  {
+   "idx": "CLL 8",
+   "text": "Through their explorations, play, and social interactions, children develop knowledge of letters and the alphabetic principle."
+  },
+  {
+   "idx": "CLL 9",
+   "text": "Through their explorations, play, and social interactions, children use writing and drawing as means of communication."
+  },
+  {
+   "idx": "CLL 10",
+   "text": "Through their explorations, play, and social interactions, children grow in their understanding of letters and writing skills."
+  },
+  {
+   "idx": "CLL 11",
+   "text": "Through their explorations, play, and social interactions, children demonstrate an understanding that there are multiple languages and begin to communicate in another language other than their home language."
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "CD 1",
+   "text": "Through their explorations, play, and social interactions, children use their senses to discover and construct knowledge about the world around them."
+  },
+  {
+   "idx": "CD 3",
+   "text": "Through their explorations, play, and social interactions, children demonstrate the ability to think about their own thinking, reasoning, taking perspectives, and making decisions."
+  },
+  {
+   "idx": "CD 8",
+   "text": "As a result of their explorations and participation in simple investigations through play, children observe, describe, and demonstrate respect for living things, the environment, and the physical world."
+  },
+  {
+   "idx": "CD 9",
+   "text": "As a result of their explorations and participation in simple investigations through play, children demonstrate their ability to use scientific inquiry by observing, manipulating objects, asking questions, making predictions, and developing generalizations."
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "AL 1",
+   "text": "Children demonstrate curiosity and eagerness and express interest in the world around them."
+  },
+  {
+   "idx": "AL 2",
+   "text": "Children actively seek to understand the world around them in play and everyday tasks."
+  },
+  {
+   "idx": "AL 3",
+   "text": "Children demonstrate initiative and effort in play and everyday tasks."
+  },
+  {
+   "idx": "AL 4",
+   "text": "Children are engaged and maintain focus in play and everyday tasks."
+  },
+  {
+   "idx": "AL 5",
+   "text": "Children persist at challenging activities in play and everyday tasks."
+  },
+  {
+   "idx": "AL 6",
+   "text": "Children are willing to try new and challenging experiences in play and everyday tasks."
+  },
+  {
+   "idx": "AL 7",
+   "text": "Children use a variety of strategies to solve problems in play and everyday tasks."
+  },
+  {
+   "idx": "AL 8",
+   "text": "Children engage in increasingly complex play."
+  },
+  {
+   "idx": "AL 9",
+   "text": "Children demonstrate creativity, imagination, and inventiveness in play and everyday tasks."
+  },
+  {
+   "idx": "SDED 1",
+   "text": "Children demonstrate a positive sense of themselves as unique and capable individuals in play and everyday tasks."
+  },
+  {
+   "idx": "SDED 2",
+   "text": "Children form relationships and interact positively with familiar adults in play and everyday tasks."
+  },
+  {
+   "idx": "SDED 3",
+   "text": "Children form relationships and interact positively with other children in play and everyday tasks."
+  },
+  {
+   "idx": "SDED 4",
+   "text": "Children demonstrate self-regulation, pro-social behaviors, and participate cooperatively as members of a group in play and everyday tasks."
+  },
+  {
+   "idx": "SDED 5",
+   "text": "Children demonstrate an ability to identify and regulate their emotions in play and everyday tasks."
+  },
+  {
+   "idx": "SDED 6",
+   "text": "Children recognize and respond to the needs and feelings of others in play and everyday tasks."
+  },
+  {
+   "idx": "CD 2",
+   "text": "Through their explorations, play, and social interactions, children recall information and apply it to new situations and problems."
+  },
+  {
+   "idx": "CD 10",
+   "text": "Through their explorations, play, and social interactions, children demonstrate an understanding of relationships, roles, and what it means to be a participating member of their families and the diverse groups/communities they belong to."
+  },
+  {
+   "idx": "CD 11",
+   "text": "Through their explorations, play, and social interactions, children identify and demonstrate appreciation of similarities and differences between themselves and others."
+  }
+ ]
+}

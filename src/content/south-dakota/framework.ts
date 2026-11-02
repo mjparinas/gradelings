@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // South Dakota, a US state. Standards are the ones the South Dakota Board of Education Standards adopted: the South
 // Dakota State Standards for Mathematics (2018, built on the Common Core), the English Language Arts Standards (April
@@ -74,9 +75,9 @@ export const SOUTH_DAKOTA: Framework = {
   standardLabel: "Standard",
   sourceName: "South Dakota Department of Education",
   sourceUrl: "https://doe.sd.gov/contentstandards/",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding South Dakota report cards",
     intro:
