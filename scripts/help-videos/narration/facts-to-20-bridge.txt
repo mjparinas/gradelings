@@ -1,0 +1,6 @@
+Here is a trick for adding past ten. Make a ten first.
+Eight needs two more to make ten. So split the five into two and three.
+Start at eight. Add two to reach ten.
+Then add the three that is left. Ten plus three makes thirteen.
+So eight plus five is thirteen. Make a ten, and then add what is left.
+Try it with nine plus four. Nine needs one more to make ten. Take one from the four, and three is left. Ten plus three is thirteen.

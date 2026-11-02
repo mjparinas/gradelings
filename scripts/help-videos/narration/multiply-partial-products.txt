@@ -1,0 +1,6 @@
+To multiply a bigger number, split it into tens and ones.
+Thirty-four is thirty plus four. We multiply each part by six.
+Thirty times six is one hundred eighty.
+Four times six is twenty-four.
+Add the two parts. One hundred eighty plus twenty-four makes two hundred four.
+Try another one. Twenty-five times three is twenty times three, which is sixty, plus five times three, which is fifteen. That makes seventy-five.
