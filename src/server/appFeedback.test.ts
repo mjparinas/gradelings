@@ -19,7 +19,7 @@ let queue: typeof import("@/server/adminQueue");
 let del: typeof import("@/server/deleteFamily");
 
 beforeAll(async () => {
-  [signup, send, adminList] = (await Promise.all([import("@/app/api/auth/signup/route"), import("@/app/api/app-feedback/route"), import("@/app/api/admin/app-feedback/route")])) as unknown as Mod[];
+  [signup, send, adminList] = (await Promise.all([import("@/server/testing/signupWithSession"), import("@/app/api/app-feedback/route"), import("@/app/api/admin/app-feedback/route")])) as unknown as Mod[];
   dbm = await import("@/server/db");
   queue = await import("@/server/adminQueue");
   del = await import("@/server/deleteFamily");

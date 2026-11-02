@@ -43,8 +43,13 @@ export function AuthForm({ onDone, initialMode = "signup" }: { onDone: () => voi
         setNotice(await (mode === "forgot" ? forgotPassword : emailSignInLink)(email));
         return;
       }
-      if (mode === "signup") await signUp(email, password);
-      else await signIn(email, password);
+      if (mode === "signup") {
+        // Nobody is signed in yet: the link in the email does that. The answer is the same for every address.
+        await signUp(email, password);
+        setNotice("Check your email. We've sent a link to open your account. If you already have one, the email says so and tells you how to sign in.");
+        return;
+      }
+      await signIn(email, password);
       onDone();
     } catch (err) {
       setError((err as Error).message);
@@ -81,7 +86,7 @@ export function AuthForm({ onDone, initialMode = "signup" }: { onDone: () => voi
         {mode === "signup" && <span className="text-sm text-ink-soft">At least 8 characters.</span>}
       </label>
       )}
-      {notice && <p className="rounded-xl bg-[#e8f7f0] p-3 font-semibold">{notice}</p>}
+      {notice && <p role="status" className="rounded-xl bg-[#e8f7f0] p-3 font-semibold">{notice}</p>}
       {(error || googleError) && <p className="font-semibold text-nudge-dark">{error || googleError}</p>}
       {mode === "signup" && invited && (
         <p className="rounded-xl bg-[#e8f7f0] p-3 font-semibold">🎁 A friend invited you. When you confirm your email, they get a free month. Thank you!</p>

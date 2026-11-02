@@ -2,7 +2,7 @@
 
 ## Framework
 
-- **Id and slug:** `us-ms`, `mississippi`. Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: Mississippi has no statewide French standards the app follows). Offered to families and in classroom mode.
+- **Id and slug:** `us-ms`, `mississippi`. Pre-K and Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: Mississippi has no statewide French standards the app follows). Offered to families and in classroom mode.
 
 ## Standards
 
@@ -22,9 +22,10 @@
 - Mississippi has no statewide report card; each district chooses its own, so the app uses the same four practice steps as the other states (Beginning, Approaching, Meeting, Exceeding).
 - State tests: the Mississippi Academic Assessment Program (MAAP) in English language arts and math (grades 3 to 8), science (grades 5 and 8) and Algebra I, Biology and English II, reported in five levels (Level 1 Minimal, Level 2 Basic, Level 3 Passing, Level 4 Proficient, Level 5 Advanced). Schools get A to F grades. The Literacy-Based Promotion Act's 3rd grade reading requirement (with two retests and good-cause exemptions) is on the MAAP guide and the report card page.
 
+- **Pre-K:** the 26 shared Pre-K units (`src/content/grades/pk/`), each citing a statement in the Mississippi Early Learning Standards for Classrooms Serving Four-Year-Old Children (`RF 2`, `CC 4`, `FC 7`; Mississippi Department of Education) (`src/content/mississippi/pk.ts`), checked against `docs/research/mississippi/prek/outcomes.json` (sources in `source/`, `fetch.sh`, `build_outcomes.py` in gradelings-research). Practice steps only.
 ## Parent guides
 
-- `src/content/mississippi/guides.ts`, US English: the hub, grade notes for Kindergarten to Grade 9, the eight Standards for Mathematical Practice (`/guides/mississippi/math-practices/`) and the MAAP tests (`/guides/mississippi/maap-tests/`; dates point to the Department). No French guide.
+- `src/content/mississippi/guides.ts`, US English: the hub, grade notes for Pre-K to Grade 9, the eight Standards for Mathematical Practice (`/guides/mississippi/math-practices/`) and the MAAP tests (`/guides/mississippi/maap-tests/`; dates point to the Department). No French guide.
 
 ## Schools
 

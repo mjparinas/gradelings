@@ -24,7 +24,7 @@ let email: typeof import("@/server/email");
 
 beforeAll(async () => {
   [signup, login, users, emailRoute, queue, inbox, webhook, unsub, inboxView] = (await Promise.all([
-    import("@/app/api/auth/signup/route"),
+    import("@/server/testing/signupWithSession"),
     import("@/app/api/auth/login/route"),
     import("@/app/api/admin/users/route"),
     import("@/app/api/admin/email/route"),

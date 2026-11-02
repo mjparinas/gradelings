@@ -42,7 +42,7 @@ async function account(address: string) {
 const signIn = (email: string, password = PASSWORD) => login.POST(req("/api/auth/login/", "POST", { email, password }));
 
 beforeAll(async () => {
-  [signup, login, system] = (await Promise.all([import("@/app/api/auth/signup/route"), import("@/app/api/auth/login/route"), import("@/app/api/admin/system/route")])) as unknown as Mod[];
+  [signup, login, system] = (await Promise.all([import("@/server/testing/signupWithSession"), import("@/app/api/auth/login/route"), import("@/app/api/admin/system/route")])) as unknown as Mod[];
   dbm = await import("@/server/db");
   health = await import("@/server/systemHealth");
   alerts = await import("@/server/alerts");

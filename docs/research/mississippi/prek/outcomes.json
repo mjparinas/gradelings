@@ -1,0 +1,494 @@
+{
+ "pk/math": [
+  {
+   "idx": "CC 1",
+   "text": "With prompting and support, recite numbers 1 to 30 in the correct order."
+  },
+  {
+   "idx": "CC 2",
+   "text": "With prompting and support, recognize, name, and attempt writing numerals 0 – 10."
+  },
+  {
+   "idx": "CC 3",
+   "text": "With guidance and support, understand the relationship between numerals and quantities."
+  },
+  {
+   "idx": "CC 4",
+   "text": "Count many kinds of concrete objects and actions up to 10, using one-to-one correspondence; and, with guidance and support, count up to 7 things in a scattered design."
+  },
+  {
+   "idx": "CC 5",
+   "text": "Use comparative language (e.g., more than, less than, equal to, same, and different) to compare objects, using developmentally appropriate pre-kindergarten materials."
+  },
+  {
+   "idx": "OA 1",
+   "text": "With guidance and support, experiment with adding and subtracting by using developmentally appropriate pre-kindergarten materials."
+  },
+  {
+   "idx": "OA 2",
+   "text": "With guidance and support, model real-world addition and subtraction problems up to 5 using developmentally appropriate pre-kindergarten materials."
+  },
+  {
+   "idx": "OA 3",
+   "text": "With guidance and support, demonstrate an understanding of patterns using developmentally appropriate pre-kindergarten materials."
+  },
+  {
+   "idx": "MD 1",
+   "text": "With guidance and support, recognize measurable attributes of everyday objects such as length, weight, and size, using appropriate vocabulary (e.g., small, big, short, tall, empty, full, heavy, light)."
+  },
+  {
+   "idx": "MD 2",
+   "text": "With guidance and support, compare two objects using attributes of length, weight, and size (e.g., bigger, longer, taller, heavier, same weight, same amount)."
+  },
+  {
+   "idx": "MD 3",
+   "text": "With guidance and support, sort, categorize, or classify objects (e.g., color, size, length, height, weight, area, temperature)."
+  },
+  {
+   "idx": "G 1",
+   "text": "With guidance and support, correctly name shapes."
+  },
+  {
+   "idx": "G 2",
+   "text": "With guidance and support, recognize and correctly name shapes in the environment, regardless of their orientation or overall size."
+  },
+  {
+   "idx": "G 3",
+   "text": "With guidance and support, explore the differences between two-dimensional and three-dimensional shapes."
+  },
+  {
+   "idx": "G 4",
+   "text": "With guidance and support, create and represent shapes using developmentally appropriate pre-kindergarten materials (e.g., popsicle sticks, play dough, blocks, pipe cleaners, pattern blocks)."
+  },
+  {
+   "idx": "G 5",
+   "text": "With guidance and support, explore using shapes to create representation of common objects (e.g., use a square and a triangle to make a house)."
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "RL 1",
+   "text": "With prompting and support, ask and/or answer questions with details related to a variety of print materials (e.g., ask, “What is the duck doing?” or respond to, “Tell me about the duck.”)."
+  },
+  {
+   "idx": "RL 2",
+   "text": "With prompting and support, retell familiar stories (from books, oral presentations, songs, plays) using diverse media (e.g., conversation, drama, props throughout the classroom, creative movement, art, and creative writing)."
+  },
+  {
+   "idx": "RL 3",
+   "text": "With prompting and support, identify some characters, settings, and/or major events in a story."
+  },
+  {
+   "idx": "RL 4",
+   "text": "Exhibit curiosity and interest in learning words in print."
+  },
+  {
+   "idx": "RL 5",
+   "text": "With prompting and support, interact with common types of texts (e.g., fantasy; factual; animals; books about people demonstrating racial, cultural, age, gender, ability and diversity)."
+  },
+  {
+   "idx": "RL 6",
+   "text": "With prompting and support, identify the role of the author and illustrator."
+  },
+  {
+   "idx": "RL 7",
+   "text": "With prompting and support, make connections among self, illustrations, and the story (e.g., picture walk, small group questions and answers, props in drama)."
+  },
+  {
+   "idx": "RL 9",
+   "text": "With prompting and support, compare and contrast adventures and experiences of characters in familiar stories (e.g., how are two stories similar and/or different)."
+  },
+  {
+   "idx": "RL 10",
+   "text": "Actively engage in a variety of shared reading experiences (e.g., small group, whole group, with a peer or teacher) with purpose and understanding through extension activities (e.g., art activities, dramatic play, creative writing, movement)."
+  },
+  {
+   "idx": "RI 1",
+   "text": "With prompting and support, ask and/or answer questions with details related to a variety of informational print materials (e.g., charts, graphs, maps, lists, and other reference materials)."
+  },
+  {
+   "idx": "RI 2",
+   "text": "With prompting and support, identify the main topic/idea and retell some details using diverse media (e.g., drama, creative writing, art, conversation)."
+  },
+  {
+   "idx": "RI 3",
+   "text": "With prompting and support, demonstrate the connections among individuals, events, ideas, or pieces of information in a text (e.g., art, dramatic play, creative writing, conversation)."
+  },
+  {
+   "idx": "RI 4",
+   "text": "Exhibit curiosity and interest about words in a variety of informational texts."
+  },
+  {
+   "idx": "RI 5",
+   "text": "With prompting and support, identify the front cover, back cover, and title page of a book."
+  },
+  {
+   "idx": "RI 6",
+   "text": "With prompting and support, identify the role of the author and illustrator in informational text."
+  },
+  {
+   "idx": "RI 7",
+   "text": "With prompting and support, make connections between self and text and/or information and text."
+  },
+  {
+   "idx": "RI 8",
+   "text": "With prompting and support, explore the purpose of the informational text as it relates to self."
+  },
+  {
+   "idx": "RI 9",
+   "text": "With prompting and support, identify similarities and differences in illustrations between two texts on the same topic."
+  },
+  {
+   "idx": "RI 10",
+   "text": "With prompting and support, actively engage in a variety of shared reading experiences (e.g., small group, whole group, with a peer or teacher) with purpose and understanding through extension activities (e.g., experiments, observations, topic studies, conversations, illustrated journals)."
+  },
+  {
+   "idx": "RF 1",
+   "text": "With prompting and support, demonstrate understanding of conventions of print."
+  },
+  {
+   "idx": "RF 2",
+   "text": "With prompting and support, demonstrate an emerging (developing) understanding of spoken words, syllables, and sounds."
+  },
+  {
+   "idx": "RF 3",
+   "text": "With prompting and support, demonstrate emergent phonics and word analysis skills."
+  },
+  {
+   "idx": "RF 4",
+   "text": "Display emergent reading behavior with purpose and understanding (e.g., pretend reading, picture reading)."
+  },
+  {
+   "idx": "W 1",
+   "text": "With prompting and support, recognize that writing is a way of communicating for a variety of purposes."
+  },
+  {
+   "idx": "W 5",
+   "text": "With prompting and support, focus on a topic and draw pictures or add details to an illustration that will clarify responses to questions or suggestions from adults and peers."
+  },
+  {
+   "idx": "W 6",
+   "text": "With prompting and support, use a variety of tools (e.g., digital media, art materials) to share in the creation and publication of creative writing."
+  },
+  {
+   "idx": "W 7",
+   "text": "With prompting and support, participate in and demonstrate understanding of written representation in collaborative research projects (e.g., explore a number of books by a favorite author on the same topic) and express opinions about them."
+  },
+  {
+   "idx": "W 8",
+   "text": "With prompting and support, recall information from experiences to answer questions."
+  },
+  {
+   "idx": "SL 1",
+   "text": "With guidance and support, participate in small-group as well as large-group shared conversations about pre-kindergarten topics and texts with peers and adults."
+  },
+  {
+   "idx": "SL 2",
+   "text": "With prompting and support, confirm understanding of information presented orally, from read-alouds, or through other media by asking and answering questions about details."
+  },
+  {
+   "idx": "SL 3",
+   "text": "With prompting and support, ask and answer questions in order to seek help, obtain information, or clarify something that is not understood."
+  },
+  {
+   "idx": "SL 4",
+   "text": "With prompting and support, describe familiar people, places, things, and events."
+  },
+  {
+   "idx": "SL 5",
+   "text": "With prompting and support, add drawings or other visual displays to descriptions."
+  },
+  {
+   "idx": "SL 6",
+   "text": "With prompting and support, demonstrate an emergent (developing) ability to express thoughts, feelings, and ideas clearly."
+  },
+  {
+   "idx": "L 1",
+   "text": "With prompting and support, demonstrate awareness of the conventions of standard English grammar and usage when speaking."
+  },
+  {
+   "idx": "L 2",
+   "text": "With prompting and support, demonstrate awareness of the conventions of standard English."
+  },
+  {
+   "idx": "L 4",
+   "text": "With prompting and support, explore unknown and multiple-meaning words based on pre-kindergarten reading and content."
+  },
+  {
+   "idx": "L 5",
+   "text": "With guidance and support, explore word relationships and word meanings."
+  },
+  {
+   "idx": "L 6",
+   "text": "With prompting and support, use words and phrases that have been acquired through responses to text or stories, experiences, conversations, and/or from hearing a story."
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "SI 1",
+   "text": "Make observations, make predictions, and ask questions about natural occurrences or events."
+  },
+  {
+   "idx": "SI 2",
+   "text": "Describe, compare, sort and classify, and order objects."
+  },
+  {
+   "idx": "SI 3",
+   "text": "Use a variety of simple tools to make investigations (e.g., use a magnifying glass to look at a bug)."
+  },
+  {
+   "idx": "SI 4",
+   "text": "Explore materials, objects, and events and notice cause and effect."
+  },
+  {
+   "idx": "SI 5",
+   "text": "Describe and communicate observations, results, and ideas."
+  },
+  {
+   "idx": "SI 6",
+   "text": "Work collaboratively with others."
+  },
+  {
+   "idx": "SI 7",
+   "text": "Name and identify the body parts associated with the use of each of the five senses."
+  },
+  {
+   "idx": "SI 8",
+   "text": "Describe similarities and differences in the environment using the five senses."
+  },
+  {
+   "idx": "PS 1",
+   "text": "Manipulate and explore a wide variety of objects and materials."
+  },
+  {
+   "idx": "PS 2",
+   "text": "Describe and compare objects and materials by observable properties (e.g., color, size, shape, weight, texture, temperature)."
+  },
+  {
+   "idx": "PS 3",
+   "text": "Identify position and movement of people and objects (e.g., over, under, in, out, sink, float)."
+  },
+  {
+   "idx": "PS 4",
+   "text": "Explore what happens to objects in relation to other forces (e.g., throwing rocks, bouncing ball)."
+  },
+  {
+   "idx": "LS 1",
+   "text": "Name, describe, and distinguish plants, animals, and people by observable characteristics."
+  },
+  {
+   "idx": "LS 2",
+   "text": "Describe plant, animal, and human life cycles."
+  },
+  {
+   "idx": "LS 3",
+   "text": "Describe the needs of living things."
+  },
+  {
+   "idx": "LS 4",
+   "text": "Compare and contrast characteristics of living and nonliving things."
+  },
+  {
+   "idx": "ES 1",
+   "text": "Describe daily weather changes and seasonal patterns using weather vocabulary ( e.g., hot, cold, warm, sunny, cloudy)."
+  },
+  {
+   "idx": "ES 2",
+   "text": "Identify characteristics of the clouds, sun, moon, and stars."
+  },
+  {
+   "idx": "ES 3",
+   "text": "Collect, sort, identify, and describe natural objects in the natural world (e.g., rocks, soil, leaves)."
+  },
+  {
+   "idx": "TE 1",
+   "text": "Use appropriate technology tools (e.g., magnifying glass, telescope, microscope, computer, simple machines) to explore objects and/or to discover new information."
+  },
+  {
+   "idx": "TE 2",
+   "text": "Use technology tools to gather and/or communicate information."
+  },
+  {
+   "idx": "TE 3",
+   "text": "With prompting and support, invent and construct simple objects or structures using technology tools."
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "PLAY 1",
+   "text": "Cooperate with peers during play by taking turns, sharing materials, and inviting others to play."
+  },
+  {
+   "idx": "PLAY 2",
+   "text": "Initiate and make decisions regarding play and learning activities (e.g., choose learning centers and materials)."
+  },
+  {
+   "idx": "PLAY 3",
+   "text": "Exhibit creativity and imagination in a variety of forms (e.g., roles, props, and language)."
+  },
+  {
+   "idx": "PLAY 4",
+   "text": "Demonstrate active engagement in play."
+  },
+  {
+   "idx": "CUR 1",
+   "text": "Demonstrate interest in new experiences by interacting with peers, using familiar materials in creative ways, and investigating new environments."
+  },
+  {
+   "idx": "CUR 2",
+   "text": "Ask questions to seek new information."
+  },
+  {
+   "idx": "CUR 3",
+   "text": "Make independent choices."
+  },
+  {
+   "idx": "CUR 4",
+   "text": "Approach tasks and activities with flexibility, imagination, and inventiveness."
+  },
+  {
+   "idx": "PER 1",
+   "text": "Follow through to complete a task or activity."
+  },
+  {
+   "idx": "PER 2",
+   "text": "Demonstrate the ability to remain engaged in an activity or experience."
+  },
+  {
+   "idx": "PER 3",
+   "text": "Seek out and accept help or information from adults and peers when needed to accomplish a task or an activity (e.g., using a step stool to reach the sink)."
+  },
+  {
+   "idx": "PSS 1",
+   "text": "Identify a problem or ask a question."
+  },
+  {
+   "idx": "PSS 2",
+   "text": "Use a variety of strategies to solve a problem, reach a goal, or answer a question (e.g., work with others, use a variety of materials, use trial and error)."
+  },
+  {
+   "idx": "PSS 3",
+   "text": "Apply prior learning and experiences to build new knowledge."
+  },
+  {
+   "idx": "SD 1",
+   "text": "Interact appropriately with familiar adults."
+  },
+  {
+   "idx": "SD 2",
+   "text": "Interact appropriately with other children."
+  },
+  {
+   "idx": "SD 3",
+   "text": "Express empathy and care for others."
+  },
+  {
+   "idx": "SD 4",
+   "text": "Participate successfully as a member of a group."
+  },
+  {
+   "idx": "SD 5",
+   "text": "Join ongoing activities in acceptable ways."
+  },
+  {
+   "idx": "SD 6",
+   "text": "Resolve conflicts with others."
+  },
+  {
+   "idx": "ED 1",
+   "text": "Demonstrate trust in self."
+  },
+  {
+   "idx": "ED 2",
+   "text": "Develop personal preferences."
+  },
+  {
+   "idx": "ED 3",
+   "text": "Show flexibility, inventiveness, and interest in solving problems."
+  },
+  {
+   "idx": "ED 4",
+   "text": "Know personal information."
+  },
+  {
+   "idx": "ED 5",
+   "text": "Show impulse control with body and actions."
+  },
+  {
+   "idx": "ED 6",
+   "text": "Manage emotions."
+  },
+  {
+   "idx": "ED 7",
+   "text": "Follow procedures and routines with teacher support."
+  },
+  {
+   "idx": "ED 8",
+   "text": "Demonstrate flexibility in adapting to different environments."
+  },
+  {
+   "idx": "FC 1",
+   "text": "Identify self as a member of a family, the learning community, and local community."
+  },
+  {
+   "idx": "FC 2",
+   "text": "With prompting and support, identify similarities and differences in people."
+  },
+  {
+   "idx": "FC 3",
+   "text": "With prompting and support, describe some family traditions."
+  },
+  {
+   "idx": "FC 4",
+   "text": "Identify some similarities and differences in family structure, culture, ability, language, age and gender."
+  },
+  {
+   "idx": "FC 5",
+   "text": "With prompting and support, demonstrate responsible behavior related to daily routines."
+  },
+  {
+   "idx": "FC 6",
+   "text": "With prompting and support, explain some rules in the home and in the classroom."
+  },
+  {
+   "idx": "FC 7",
+   "text": "With prompting and support, identify some community members (e.g., parents, teachers, principals/directors, community helpers)."
+  },
+  {
+   "idx": "FC 8",
+   "text": "With prompting and support, identify some positive character traits of self and others(e.g., fair, friendly, respectful, responsibile)."
+  },
+  {
+   "idx": "FC 9",
+   "text": "With prompting and support, describe a simple sequence of familiar events."
+  },
+  {
+   "idx": "OW 1",
+   "text": "Treat classroom materials and the belongings of others with care."
+  },
+  {
+   "idx": "OW 2",
+   "text": "With prompting and support, identify location and some physical features of familiar places in the environment."
+  },
+  {
+   "idx": "OW 3",
+   "text": "With prompting and support, use money in pretend play to demonstrate understanding of the role money plays in the environment (e.g., play store or restaurant)."
+  },
+  {
+   "idx": "OW 4",
+   "text": "Use a variety of technology tools (e.g., telephone, cash register, computer), either real or pretend, that affect daily life interactions and activities."
+  },
+  {
+   "idx": "OW 5",
+   "text": "Demonstrate an understanding of the role that people play in caring for the environment (e.g., recycling, keeping the environment clean, conserving water)."
+  },
+  {
+   "idx": "HE 1",
+   "text": "With prompting and support, describe a simple series of familiar events."
+  },
+  {
+   "idx": "HE 2",
+   "text": "Recognize events that happened in the past."
+  }
+ ]
+}

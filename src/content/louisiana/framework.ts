@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Louisiana, a US state. Standards are the Louisiana Student Standards, adopted by the Board of Elementary and Secondary
 // Education (BESE) and published by the Louisiana Department of Education: mathematics (2016), English language arts
@@ -74,9 +75,9 @@ export const LOUISIANA: Framework = {
   standardLabel: "Standard",
   sourceName: "Louisiana Department of Education",
   sourceUrl: "https://doe.louisiana.gov/school-system-leaders/academic-strategy/louisiana-student-standards",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Louisiana report cards",
     intro:

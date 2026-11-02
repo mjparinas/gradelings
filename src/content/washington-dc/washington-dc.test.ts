@@ -54,7 +54,7 @@ describe("Washington, DC", () => {
   it("cites social studies standards from the unit's own grade", () => {
     // DC numbers its standards within each grade ("3.20") and World History and Geography I as "WH1.1".
     const prefix: Record<string, string> = { k: "K", "9": "WH1" };
-    for (const { c, u, key } of dc.filter(({ c }) => c.subject === "social")) {
+    for (const { c, u, key } of dc.filter(({ c }) => c.subject === "social" && c.grade !== "pk")) {
       const codes = (u.standards["us-dc"] ?? "").split(" · ")[0].split("; ");
       for (const code of codes) expect(code.split(".")[0], `${key} cites ${code}`).toBe(prefix[c.grade] ?? c.grade);
     }

@@ -24,7 +24,7 @@ let traffic: typeof import("@/server/traffic");
 
 beforeAll(async () => {
   for (const k of KEYS) delete process.env[k];
-  signup = (await import("@/app/api/auth/signup/route")) as unknown as Mod;
+  signup = (await import("@/server/testing/signupWithSession")) as unknown as Mod;
   route = (await import("@/app/api/admin/traffic/route")) as unknown as Mod;
   dbm = await import("@/server/db");
   traffic = await import("@/server/traffic");

@@ -31,7 +31,13 @@ export function AuthForm({ onDone, initialMode = "in" }: { onDone: () => void; i
         // Always answers the same way, so it never says whether an email has an account.
         setNotice((await call<{ message: string }>("/api/auth/forgot/", "POST", { email })).message);
       } else {
-        await call(mode === "in" ? "/api/auth/login/" : "/api/auth/signup/", "POST", { email, password });
+        if (mode === "up") {
+          // Nobody is signed in yet: the link in the email does that, and the answer is the same for every address.
+          await call("/api/auth/signup/", "POST", { email, password, to: "teachers" });
+          setNotice("Check your email. We've sent a link to open your account. If you already have one, the email says so and tells you how to sign in.");
+          return;
+        }
+        await call("/api/auth/login/", "POST", { email, password });
         onDone();
       }
     } catch (x) {
