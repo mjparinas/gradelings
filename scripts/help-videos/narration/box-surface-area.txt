@@ -1,0 +1,5 @@
+Surface area is the total area of all the faces of a shape. Think of the wrapping paper.
+A box has six faces, in three matching pairs. Say it is four by three by two.
+The top and bottom are four by three. That is twelve each, so twenty-four for the pair.
+The front and back are four by two. That is eight each, so sixteen for the pair. The two sides are three by two, six each, so twelve.
+Add the three pairs. Twenty-four plus sixteen plus twelve is fifty-two square units.

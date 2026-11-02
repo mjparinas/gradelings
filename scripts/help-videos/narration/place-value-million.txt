@@ -1,0 +1,6 @@
+Big numbers are easier when we use place value. Look at this number.
+Each digit has a place. From the right: ones, tens, hundreds. Then thousands.
+The first group is the thousands. Three hundred forty-five thousand.
+The second group is the ones. Six hundred seventy-eight.
+Put them together. Three hundred forty-five thousand, six hundred seventy-eight.
+Each place is ten times the one to its right. Ten thousands make a hundred thousand.

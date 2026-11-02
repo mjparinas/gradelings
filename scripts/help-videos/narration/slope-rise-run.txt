@@ -1,0 +1,5 @@
+Slope tells us how steep a line is. We measure it as rise over run.
+Pick two points on the line. The run is how far we go across. The rise is how far we go up.
+Say we go across four, and up two. The rise is two. The run is four.
+Slope is rise divided by run. Two divided by four is one half.
+A bigger slope means a steeper line. A negative slope means the line goes down.

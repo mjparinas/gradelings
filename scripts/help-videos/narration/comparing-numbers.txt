@@ -1,0 +1,5 @@
+To compare numbers, look at the tens first. Which is bigger, thirty-six or forty-two?
+Thirty-six has three tens. Forty-two has four tens. Four tens is more than three tens.
+So forty-two is bigger. We write it with the open mouth facing the bigger number.
+If the tens are the same, look at the ones. Forty-seven and forty-three both have four tens.
+Seven ones is more than three ones. So forty-seven is bigger than forty-three.
