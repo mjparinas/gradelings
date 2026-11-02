@@ -2,7 +2,7 @@
 
 ## Framework
 
-- **Id and slug:** `us-dc`, `washington-dc`. Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: the District has no French standards the app follows). Offered to families and in classroom mode.
+- **Id and slug:** `us-dc`, `washington-dc`. Pre-K and Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: the District has no French standards the app follows). Offered to families and in classroom mode.
 - **A district, not a state:** the framework sets `regionKind: "district"`, so copy that names the region says "district" (`regionKind` in `src/content/locale.ts`), a missing scale is "District-wide" (`scaleReach`), and `regionSummary` names it after the states ("..., N US states and Washington, DC") instead of counting it as one. US English, US dollars and COPPA consent apply as for every US framework.
 
 ## Standards
@@ -23,9 +23,10 @@
 - The District has no single report card; DCPS and each public charter school (each its own LEA) choose their own. The app uses the same four practice steps as the states (Beginning, Approaching, Meeting, Exceeding).
 - Statewide tests: DC CAPE (the DC Comprehensive Assessments of Progress in Education, named in 2024 after PARCC ended): DC ELA and DC Math in grades 3 to 8 and the high school courses ELA I and II, Algebra I, Geometry and Algebra II; DC Science in grades 5 and 8 and high school biology. Scale scores from 650 to 850 and five performance levels (Level 4 met expectations, Level 5 exceeded); the MSAA is the alternate assessment.
 
+- **Pre-K:** the 26 shared Pre-K units (`src/content/grades/pk/`), each citing a standard in the District of Columbia Early Learning Standards (`S15`, `S11`, `S29`; OSSE) (`src/content/washington-dc/pk.ts`), checked against `docs/research/washington-dc/prek/outcomes.json` (sources in `source/`, `fetch.sh`, `build_outcomes.py` in gradelings-research). Practice steps only.
 ## Parent guides
 
-- `src/content/washington-dc/guides.ts`, US English: the hub, grade notes for Kindergarten to Grade 9, the eight Standards for Mathematical Practice (`/guides/washington-dc/math-practices/`) and DC CAPE (`/guides/washington-dc/dc-cape-tests/`; dates point to OSSE). No French guide.
+- `src/content/washington-dc/guides.ts`, US English: the hub, grade notes for Pre-K to Grade 9, the eight Standards for Mathematical Practice (`/guides/washington-dc/math-practices/`) and DC CAPE (`/guides/washington-dc/dc-cape-tests/`; dates point to OSSE). No French guide.
 
 ## Schools
 

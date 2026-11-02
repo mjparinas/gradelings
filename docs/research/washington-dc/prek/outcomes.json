@@ -1,0 +1,134 @@
+{
+ "pk/social": [
+  {
+   "idx": "S1",
+   "text": "Attends and engages with curiosity"
+  },
+  {
+   "idx": "S2",
+   "text": "Shows persistence"
+  },
+  {
+   "idx": "S3",
+   "text": "Approaches tasks flexibly"
+  },
+  {
+   "idx": "S4",
+   "text": "Uses symbols and takes on pretend roles"
+  },
+  {
+   "idx": "S23",
+   "text": "Demonstrates an understanding of self, family and a diverse community"
+  },
+  {
+   "idx": "S24",
+   "text": "Demonstrates an understanding of the relationship between people and the environments in which they live"
+  },
+  {
+   "idx": "S25",
+   "text": "Demonstrates an understanding of time as it relates to self, family and community"
+  },
+  {
+   "idx": "S29",
+   "text": "Expresses a variety of feelings and learns to manage them"
+  },
+  {
+   "idx": "S30",
+   "text": "Recognizes the feelings and rights of others and responds appropriately"
+  },
+  {
+   "idx": "S31",
+   "text": "Manages own behavior"
+  },
+  {
+   "idx": "S32",
+   "text": "Develops positive relationships with adults"
+  },
+  {
+   "idx": "S33",
+   "text": "Engages and plays with peers"
+  },
+  {
+   "idx": "S34",
+   "text": "Resolves conflicts with others"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "S5",
+   "text": "Demonstrates understanding of spoken language"
+  },
+  {
+   "idx": "S6",
+   "text": "Uses language to express self"
+  },
+  {
+   "idx": "S7",
+   "text": "Uses conventional grammar and syntax"
+  },
+  {
+   "idx": "S8",
+   "text": "Uses conventional conversational and other social communication skills"
+  },
+  {
+   "idx": "S9",
+   "text": "Demonstrates understanding of print concepts"
+  },
+  {
+   "idx": "S10",
+   "text": "Demonstrates comprehension of printed materials read aloud"
+  },
+  {
+   "idx": "S11",
+   "text": "Hears and discriminates the sounds of English and/or home languages"
+  },
+  {
+   "idx": "S12",
+   "text": "Writes letters and words"
+  },
+  {
+   "idx": "S13",
+   "text": "Understands the purpose of writing and drawing"
+  }
+ ],
+ "pk/math": [
+  {
+   "idx": "S14",
+   "text": "Matches, groups and classifies objects"
+  },
+  {
+   "idx": "S15",
+   "text": "Demonstrates knowledge of numbers and counting"
+  },
+  {
+   "idx": "S16",
+   "text": "Demonstrates knowledge of volume, height, weight and length"
+  },
+  {
+   "idx": "S17",
+   "text": "Identifies and labels shapes"
+  },
+  {
+   "idx": "S18",
+   "text": "Demonstrates understanding of positional words"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "S19",
+   "text": "Investigates living things"
+  },
+  {
+   "idx": "S20",
+   "text": "Investigates physical objects"
+  },
+  {
+   "idx": "S21",
+   "text": "Investigates characteristics of Earth and space"
+  },
+  {
+   "idx": "S22",
+   "text": "Investigates engineering"
+  }
+ ]
+}

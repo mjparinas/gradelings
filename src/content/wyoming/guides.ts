@@ -201,6 +201,10 @@ export const WYOMING_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-K in Wyoming is the year before kindergarten, for children who are 4. Programs follow Wyoming's early learning standards. Children learn through play, stories and songs: counting, shapes and patterns, letters and rhymes, plus first ideas about families, communities and the world around them.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for counting small groups, naming letters, hearing rhymes, taking turns and talking about feelings.",
+    },
     k: {
       overview: "Kindergarten in Wyoming is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. In social studies they learn about rules, families and community helpers, and state and national symbols such as the American flag, Wyoming's bison flag and the flags of the Eastern Shoshone and Northern Arapaho.",
       lookFor: "Many Wyoming schools use standards-based report cards. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",
