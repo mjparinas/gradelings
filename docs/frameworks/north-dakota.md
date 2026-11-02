@@ -2,7 +2,7 @@
 
 ## Framework
 
-- **Id and slug:** `us-nd`, `north-dakota`. Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: North Dakota has no statewide French standards the app follows). Offered to families and in classroom mode.
+- **Id and slug:** `us-nd`, `north-dakota`. Pre-K and Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: North Dakota has no statewide French standards the app follows). Offered to families and in classroom mode.
 
 ## Standards
 
@@ -21,9 +21,10 @@
 - North Dakota has no statewide report card; each district chooses its own, so the app uses the same four practice steps as the other states (Beginning, Approaching, Meeting, Exceeding).
 - State tests: the ND A+ Summative in English language arts and math (grades 3 to 8 and 10) and science (grades 4, 8 and 10), first aligned to the 2023 standards in 2025, and the ACT or WorkKeys in grade 11. A civics test from the 100 citizenship questions (at least 70 right) is required to graduate (NDCC 15.1-21-27), and can be taken from grade 7.
 
+- **Pre-K:** the 26 shared Pre-K units (`src/content/grades/pk/`), each citing a goal in the North Dakota Early Learning Standards for children 36 to 60 months (`P-MATH 7`, `P-LIT 3`, `P-SCI 1`, `P-SE 6`; North Dakota Department of Public Instruction) (`src/content/north-dakota/pk.ts`), checked against `docs/research/north-dakota/prek/outcomes.json` (sources in `source/`, `fetch.sh`, `build_outcomes.py` in gradelings-research). Practice steps only.
 ## Parent guides
 
-- `src/content/north-dakota/guides.ts`, US English: the hub, grade notes for Kindergarten to Grade 9, the three Math Attributes (`/guides/north-dakota/math-attributes/`) and state tests (`/guides/north-dakota/state-tests/`; dates and score scales point to the Department). No French guide.
+- `src/content/north-dakota/guides.ts`, US English: the hub, grade notes for Pre-K to Grade 9, the three Math Attributes (`/guides/north-dakota/math-attributes/`) and state tests (`/guides/north-dakota/state-tests/`; dates and score scales point to the Department). No French guide.
 
 ## Schools
 
