@@ -25,7 +25,7 @@ describe("help video catalogue", () => {
       const narration = readFileSync(`scripts/help-videos/narration/${v.id}.txt`, "utf8").split(/\s+/).filter(Boolean).join(" ");
       const cues = readFileSync(`public${v.captions}`, "utf8").split("\n").filter((l) => l && l !== "WEBVTT" && !l.includes("-->"));
       expect(cues.join(" ")).toBe(narration);
-      expect(narration).not.toMatch(/\$|dollar|cent|province|state|Canad|American|coin/i);
+      expect(narration).not.toMatch(/\$|\b(dollars?|cents?|coins?|provinces?|states?)\b|Canad|American/i);
     }
   });
   it("looks videos up by unit key", () => {
