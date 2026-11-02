@@ -1,10 +1,12 @@
-import { head, research, type FrameworkContract } from "../contract";
+import { head, preKCite, research, type FrameworkContract } from "../contract";
 import { PLAN } from "./plan";
 
 // The specific curriculum outcomes of Prince Edward Island (docs/research/prince-edward-island), cited by code.
 const OUTCOMES = research<Record<string, { code: string }[]>>("prince-edward-island/outcomes.json");
 
 export const contract: FrameworkContract = {
+  // Pre-K cites the early-learning document (docs/research/prince-edward-island/prek).
+  preK: preKCite("prince-edward-island", "Prince Edward Island"),
   cite: ({ grade, subject, standard }) => {
     const codes = new Set((OUTCOMES[`${grade}/${subject}`] ?? []).map((o) => o.code));
     if (codes.size === 0) return [`${grade}/${subject} has no Prince Edward Island outcomes`];

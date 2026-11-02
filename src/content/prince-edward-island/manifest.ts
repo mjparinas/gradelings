@@ -5,6 +5,7 @@ export const manifest = defineFramework({
   id: "ca-pe",
   framework: PRINCE_EDWARD_ISLAND,
   grades: {
+    pk: () => import("./pk"),
     k: () => import("./k"),
     "1": () => import("./g1"),
     "2": () => import("./g2"),

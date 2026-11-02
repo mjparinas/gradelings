@@ -98,6 +98,10 @@ export const PRINCE_EDWARD_ISLAND_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-K in Prince Edward Island is the year before Kindergarten, for children who are 4. Early Years Centres follow the PEI Early Learning Framework, which is built on play and has no marks or report card. Children learn through play, stories and songs: counting, shapes and patterns, letters and rhymes, plus first ideas about families, communities and the world around them.",
+      lookFor: "Early Years Centres share learning stories and progress notes, not grades. Look for counting small groups, naming letters, hearing rhymes, taking turns and talking about feelings.",
+    },
     k: {
       overview: "Kindergarten builds early learning through play. Children explore language and literacy, counting and shapes, and the world around them: who they are as a unique person, their family and their community. In science they begin to explore the world using their senses.",
       lookFor: "Look for comments on listening, early letters and sounds, counting, patterns, sharing ideas, and getting along with classmates.",

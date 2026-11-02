@@ -1,4 +1,5 @@
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Prince Edward Island (English program). Standards are the specific curriculum outcomes in the Department of Education and
 // Lifelong Learning's "Specific Curriculum Outcomes Framework" for Kindergarten to Grade 6 (2013) and its Grade 9 guides,
@@ -65,9 +66,9 @@ export const PRINCE_EDWARD_ISLAND: Framework = {
   standardLabel: "Curriculum outcome",
   sourceName: "Prince Edward Island Department of Education and Lifelong Learning",
   sourceUrl: "https://www.princeedwardisland.ca/en/information/education-and-early-years/programs-of-study",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social", "core-french"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Prince Edward Island report cards",
     intro:
