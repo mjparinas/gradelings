@@ -705,3 +705,63 @@ main[tabindex="-1"]:focus {
 .print-landscape {
   page: summary-wide;
 }
+
+/* Printable certificate (src/components/parents/Certificate.tsx): never on screen, and alone on the page when printing it. */
+.certificate {
+  display: none;
+}
+@media print {
+  body.printing-certificate > *:not([data-certificate]) {
+    display: none !important;
+  }
+  body.printing-certificate .certificate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #ffffff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .certificate-frame {
+    box-sizing: border-box;
+    width: 92%;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border: 10px double #e0a100;
+    border-radius: 1.5rem;
+    color: #0f172a;
+  }
+  .certificate-critter {
+    width: 9rem;
+    height: 9rem;
+    margin: 0 auto 0.5rem;
+  }
+  .certificate-brand {
+    font-family: var(--font-display), sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #6d3fd6;
+  }
+  .certificate h1 {
+    margin: 0.5rem 0 1.5rem;
+    font-family: var(--font-display), sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  .certificate-line {
+    font-family: var(--font-display), sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .certificate-date {
+    margin-top: 1.5rem;
+    font-size: 1.125rem;
+  }
+  .certificate-note {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #475569;
+  }
+}
