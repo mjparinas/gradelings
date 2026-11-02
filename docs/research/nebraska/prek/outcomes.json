@@ -1,0 +1,74 @@
+{
+ "pk/language": [
+  {
+   "idx": "LL.01",
+   "text": "Demonstrates continual growth in understanding increasingly complex and varied vocabulary"
+  },
+  {
+   "idx": "LL.02",
+   "text": "Develops foundational skills to communicate effectively for a variety of purposes"
+  },
+  {
+   "idx": "LL.03",
+   "text": "Demonstrates knowledge of phonological awareness"
+  },
+  {
+   "idx": "LL.04",
+   "text": "Demonstrates interest in and appreciation of reading-related activities"
+  },
+  {
+   "idx": "LL.05",
+   "text": "Conveys meaning through drawing, letters, and words"
+  }
+ ],
+ "pk/math": [
+  {
+   "idx": "M.01",
+   "text": "Demonstrates awareness of quantity, counting, and numeric competencies"
+  },
+  {
+   "idx": "M.02",
+   "text": "Develops understanding of geometric shapes and spatial relationships"
+  },
+  {
+   "idx": "M.03",
+   "text": "Demonstrates awareness of routines, predictable patterns, and attributes that can be measured"
+  },
+  {
+   "idx": "M.04",
+   "text": "Develops foundational skills in learning to understand concepts of classification, data collection, organization, and description"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "S.01",
+   "text": "Demonstrates a basic awareness and use of scientific concepts"
+  },
+  {
+   "idx": "S.02",
+   "text": "Develops foundational skills in learning and understanding about the world through exploration and investigation"
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "SE.01",
+   "text": "Develops self-awareness and sense of self"
+  },
+  {
+   "idx": "SE.02",
+   "text": "Manages emotions with increasing independence"
+  },
+  {
+   "idx": "SE.03",
+   "text": "Develops foundational skills to support cooperation and prosocial behavior"
+  },
+  {
+   "idx": "SE.04",
+   "text": "Shows interest in, interacts with, and develops personal relationships with others"
+  },
+  {
+   "idx": "SE.05",
+   "text": "Develops a sense of belonging to family, community, and other groups"
+  }
+ ]
+}

@@ -166,6 +166,10 @@ export const NEBRASKA_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-K in Nebraska is the year before kindergarten, for children who are 4. Public preschool programs follow Nebraska's Early Learning Guidelines: Birth to Five, which cover language and literacy, math, science, social and emotional growth and physical health. Children learn through play, stories and songs.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for counting small groups, naming letters, hearing rhymes, taking turns and talking about feelings.",
+    },
     k: {
       overview: "Kindergarten in Nebraska is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. Social studies, called Myself and Others, is about themselves and their families, rules and good citizens, maps of the classroom, the weather and seasons, and the American flag and Nebraska's symbols. Schools check reading three times a year.",
       lookFor: "Many Nebraska districts use standards-based report cards. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

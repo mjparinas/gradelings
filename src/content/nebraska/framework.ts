@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Nebraska, a US state. The State Board of Education adopts Nebraska's College and Career Ready Standards, published by
 // the Nebraska Department of Education: mathematics (2022), English language arts (2021), science (2017, updated in
@@ -73,9 +74,9 @@ export const NEBRASKA: Framework = {
   standardLabel: "Standard",
   sourceName: "Nebraska Department of Education",
   sourceUrl: "https://www.education.ne.gov/contentareastandards/",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Nebraska report cards",
     intro:
