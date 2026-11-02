@@ -488,14 +488,20 @@ async function eventsWaiting(page) {
     log("deep link practice:", first.r, JSON.stringify(first.kinds));
     const card = p3.getByRole("region", { name: "For grown-ups" });
     await card.waitFor({ timeout: 15000 });
-    await card.getByLabel("Your email").fill(`reports-${Date.now()}@example.com`);
+    const reportsEmail = `reports-${Date.now()}@example.com`;
+    await card.getByLabel("Your email").fill(reportsEmail);
     await shot(p3, "42-email-card");
     await card.getByRole("button", { name: "Send me the reports" }).click();
-    await p3.getByRole("status").filter({ hasText: /Check .* for a link to confirm/ }).waitFor({ timeout: 15000 });
+    await p3.getByRole("status").filter({ hasText: /We sent .* a link/ }).waitFor({ timeout: 15000 });
     await shot(p3, "43-email-sent");
+    // Sign-up signs nobody in; the emailed link does. Scripts have no inbox, so open it from a token made in the database,
+    // in the same browser that signed up.
+    const before = await p3.evaluate(async () => (await fetch("/api/auth/me/")).status);
+    if (before === 200) errors.push("email card: sign-up signed the device in before the email was confirmed");
+    await openConfirmLink(p3, BASE, reportsEmail);
     const me = await p3.evaluate(async () => (await fetch("/api/auth/me/")).json());
-    if (!me?.family?.account?.email?.startsWith("reports-")) errors.push("email card: this device isn't signed in to the new account");
-    log("email card: account made and signed in");
+    if (!me?.family?.account?.email?.startsWith("reports-")) errors.push("email card: confirming the email didn't sign this device in");
+    log("email card: account made, confirmed and signed in");
     await fresh.close();
   }
 
