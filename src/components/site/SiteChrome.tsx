@@ -190,18 +190,19 @@ export function SiteFooter({ build }: { /** A build line such as "Build 3f9a1c2"
  * explains the curriculum or a guide ends with it (`<SitePage cta>`), so a parent who has read
  * enough always has a button to start practising.
  */
-export function PageCta({ play, lead = "subscribe" }: { play?: string; lead?: Lead }) {
+export function PageCta({ play, lead = "subscribe", short = false }: { play?: string; lead?: Lead; short?: boolean }) {
   // Every region by name, Canadian provinces and territories first, then US states.
   const provinces = byCountry(FRAMEWORKS)
     .map((g) => regionList(g.frameworks))
     .join(", and in ");
+  const offer = lead === "trial" ? `Try everything free for ${TRIAL_DAYS} days with no card, then subscribe if it helps.` : `Subscribe now, or try everything free for ${TRIAL_DAYS} days with no card.`;
   return (
     <section aria-labelledby="page-cta" className="card mt-10 flex flex-col gap-3 p-6">
       <h2 id="page-cta" className="text-2xl font-bold">
         Ready to try {APP_NAME}?
       </h2>
       <p className="font-read text-ink-soft">
-        Curriculum-matched practice for Pre-K to Grade 9 in {provinces}, with kind hints, learning games and no ads. {lead === "trial" ? `Try everything free for ${TRIAL_DAYS} days with no card, then subscribe if it helps.` : `Subscribe now, or try everything free for ${TRIAL_DAYS} days with no card.`}
+        {short ? "Curriculum-matched practice with kind hints, learning games and no ads." : `Curriculum-matched practice for Pre-K to Grade 9 in ${provinces}, with kind hints, learning games and no ads.`} {offer}
       </p>
       <div className="flex flex-wrap gap-3">
         <SubscribeActions play={play} lead={lead} />
@@ -257,8 +258,8 @@ export function SitePage({
   build,
 }: {
   children: ReactNode;
-  /** Ends the page with the call to action. */
-  cta?: boolean;
+  /** Ends the page with the call to action; "short" leaves out the list of provinces and states. */
+  cta?: boolean | "short";
   /** Which button leads on this page (`Lead`); Subscribe unless said. */
   lead?: Lead;
   /** Where this page's "Try it free" buttons open the app (`playHref`): the page's province or state, grade and unit. */
@@ -275,7 +276,7 @@ export function SitePage({
       <SiteHeader play={play} lead={lead} />
       <main id={MAIN_ID} tabIndex={-1} className="mx-auto max-w-6xl px-4 py-8">
         {children}
-        {cta && <PageCta play={play} lead={lead} />}
+        {cta && <PageCta play={play} lead={lead} short={cta === "short"} />}
       </main>
       <SiteFooter build={build} />
     </>
