@@ -1,0 +1,5 @@
+A circle has a diameter, the distance straight across through the centre. The radius is half of that.
+The distance around a circle is called the circumference. It is always a little more than three times the diameter. That number is called pi, about three point one four.
+To find the circumference, multiply pi by the diameter. With a diameter of ten, three point one four times ten is thirty-one point four.
+The area is the space inside. Multiply pi by the radius, and by the radius again. With a radius of five, that is three point one four times twenty-five.
+Three point one four times twenty-five is seventy-eight point five. Circumference is the distance around. Area is the space inside.

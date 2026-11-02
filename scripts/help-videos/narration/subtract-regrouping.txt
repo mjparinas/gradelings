@@ -1,0 +1,6 @@
+To subtract bigger numbers, we work one place at a time. Let's find fifty-two minus twenty-seven.
+Start with the ones. Two minus seven? We can't take seven away from two.
+So we regroup. We borrow one ten from the five tens. Now there are four tens, and the two ones become twelve ones.
+Now we can subtract the ones. Twelve minus seven is five.
+Then the tens. Four tens minus two tens is two tens.
+Put the parts together. Twenty plus five makes twenty-five. Check it by adding. Twenty-five plus twenty-seven is fifty-two.

@@ -1,0 +1,5 @@
+Some equations have x on both sides. Let's solve three x plus two equals x plus ten.
+First, get the x terms together. Take one x away from both sides.
+Next, get the plain numbers together. Take two away from both sides.
+Now divide both sides by two. Two x divided by two is x. Eight divided by two is four.
+Always check. Put four in for x. Three times four plus two is fourteen. Four plus ten is also fourteen. It works.

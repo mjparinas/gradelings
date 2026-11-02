@@ -1,0 +1,5 @@
+To add fractions, the pieces must be the same size. Let's add one half and one third.
+Halves and thirds are different sizes. We need a common denominator. Six works for both, because two and three both go into six.
+Change each fraction to sixths. One half is three sixths, because we multiply the top and bottom by three.
+One third is two sixths, because we multiply the top and bottom by two.
+Now the pieces match, so we add the tops. Three sixths plus two sixths is five sixths. The bottom stays six.
