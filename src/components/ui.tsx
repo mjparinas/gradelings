@@ -1,5 +1,6 @@
 "use client";
 
+import { Ambient } from "./Ambient";
 import Link from "next/link";
 import { useEffect, useState, type CSSProperties, type ReactNode } from "react";
 import type { SubjectMeta } from "@/content/subjects";
@@ -103,6 +104,7 @@ export function BackgroundDecor() {
   ];
   return (
     <div aria-hidden="true" className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+      <Ambient />
       {shapes.map((s, i) => (
         <svg
           key={i}

@@ -40,6 +40,7 @@
   --animate-correct-pop: correct-pop 0.55s cubic-bezier(0.2, 1.6, 0.4, 1);
   --animate-star-land: star-land 0.55s cubic-bezier(0.3, 1.5, 0.5, 1) both;
   --animate-screen-thump: screen-thump 0.3s ease-out;
+  --animate-ambient-fall: ambient-fall 18s linear infinite;
   --animate-drift: drift 18s ease-in-out infinite;
   --animate-shine: shine 2.8s ease-in-out infinite;
   --animate-drop-in: drop-in 0.5s cubic-bezier(0.3, 1.6, 0.5, 1) both;
@@ -165,6 +166,11 @@
     25% { transform: translate(0, 5px); }
     50% { transform: translate(-3px, -2px); }
     75% { transform: translate(2px, 1px); }
+  }
+  @keyframes ambient-fall {
+    0% { transform: translate(0, -10vh) rotate(0deg); }
+    50% { transform: translate(24px, 50vh) rotate(90deg); }
+    100% { transform: translate(-12px, 110vh) rotate(180deg); }
   }
   @keyframes drift {
     0%, 100% { transform: translate(0, 0) rotate(0deg); }
@@ -449,6 +455,16 @@
     animation-delay: 0s !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* Drifting holiday emoji are pure decoration: gone entirely when motion is calmed. */
+html.calm .ambient {
+  display: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ambient {
+    display: none;
   }
 }
 
