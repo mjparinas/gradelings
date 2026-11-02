@@ -1,0 +1,126 @@
+{
+ "pk/math": [
+  {
+   "idx": "MA Geometry and Spatial Sense",
+   "text": "Children increasingly recognize two- and three-dimensional objects and use spatial reasoning.: Names common two- and three-dimensional shapes, and their parts and attributes (e.g., “A triangle has three points.”). Combines (e.g., compose) and separate (e.g., decompose) shapes to make other shapes. Uses terms such as on top of, beside, in front, etc. to communicate ideas about the relative position of objects."
+  },
+  {
+   "idx": "MA Measurement, Comparison, Classification, and Time",
+   "text": "Children develop awareness of the differences of the objects and learn to sort, compare and classify objects by their attributes and properties. They also develop a rudimentary sense of time based mostly on common routines.: Compares and group objects using attributes of length, weight, and size, and explain reasoning (e.g., “I put all the big black buttons in this pile and the small black ones there.”). Sorts objects using two or more attributes (e.g., sets of large blue bears, small blue bears, large red bears, small red bears) and compares number of objects in each set. Classifies familiar objects into categories ("
+  },
+  {
+   "idx": "MA Number Relationships and Operations",
+   "text": "Uses simple strategies to solve mathematical problems and communicate how they solved the problems. Combines and separates small groups of objects to make new groupings, and identify the resulting number in the group. Matches two equal sets using one-to-one correspondence and understands they are the same."
+  },
+  {
+   "idx": "MA Number Sense and Quantity",
+   "text": "Children count in sequence, recognize numerals, connect numerals with quantities, and compare quantities.: Recites numbers to 20 in sequence with only occasional errors. Says the next number that comes before or after in a sequence of 1-10. Counts a group of up to 10 objects and understand that the last number represents the number of objects in the group."
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "CR Dance",
+   "text": "Children use movement to creatively express their ideas and feelings and to learn.: Move to different patterns of beat and rhythm in music. Express what is felt and heard in various musical tempos and styles. Use creative movement to express concepts, ideas, or feelings."
+  },
+  {
+   "idx": "LA Expressive Language (Speaking)",
+   "text": "Young children use increasingly complex vocabulary and grammar to express their thoughts, feelings, and ideas.: Uses sentences with more complex grammatical structures when speaking (e.g., embedded clauses, such as “My teacher, who likes dogs, is nice”). Engages in storytelling. Combines 5-8 words into sentences."
+  },
+  {
+   "idx": "LI Foundational Reading Skills",
+   "text": "Children develop the foundational skills needed for engaging with print, reading and writing.: Print Concepts Indicates where to start reading on a page and how to move across and down a page. Demonstrates knowledge of the association between written words and spoken words."
+  },
+  {
+   "idx": "CR Music",
+   "text": "Children engage in making and listening to music as a vehicle for expression and learning.: Experiments with musical instruments. Recalls and imitates different musical tones, rhythms, as they make music. Expresses creativity through music."
+  },
+  {
+   "idx": "LI Engagement with Literature and Informational Text",
+   "text": "Children develop “book language” and demonstrate comprehension.: Identifies characters and setting in a story read aloud. Uses story title, pictures, content and prior knowledge to predict story content. Makes connections between stories and real-life experiences."
+  },
+  {
+   "idx": "LA Receptive Language (Listening)",
+   "text": "Young children attend to, comprehend, and respond to increasingly complex language.: Follows multistep directions especially when these are familiar activities (e.g., steps in getting ready to play outdoors). Demonstrates an understanding of complex statements having 1 or 2 phrases (e.g., \"Please put the toothbrush in the box under the sink.\"). Demonstrates an understanding of different language forms such as questions and exclamations."
+  },
+  {
+   "idx": "LA Social Rules of Language",
+   "text": "Young children initiate and maintain conversations with others while developing knowledge and use of the social rules of language.: Listens and responds on topic during longer conversations with others and in group discussions. Uses simpler language when talking with younger children. Initiates conversations with others and maintain topic of conversation 2-4 turns."
+  },
+  {
+   "idx": "CR Theatre (Dramatic Play)",
+   "text": "Children engage in dramatic play and theatre as a way to represent real-life experiences, communicate their ideas and feelings, learn, and use their imaginations.: Initiates role-playing experiences and playing with props and costumes. Uses dialogue, actions, and objects to tell a story or express thoughts and feelings of themselves or of a character. Uses various facial expressions and voice inflections when playing a character."
+  },
+  {
+   "idx": "CR Visual Arts",
+   "text": "Children create art using a variety of tools and art media to express their ideas, feelings, creativity; and develop appreciation of the art created by others.: Creates artistic works through an open-ended process that reflect thoughts, feelings, experiences, or knowledge. Independently plans and completes artistic creations such as drawings, paintings, and collages. Discusses own artistic creations and those of others."
+  },
+  {
+   "idx": "LI Writing",
+   "text": "Children demonstrate the understanding that writing is a means for communication. With increasing fine motor skills and experiences with literacy, children begin to use writing conventions.: Uses writing and drawing for various purposes, such as giving information, narrating stories, or giving an opinion. Copies, traces, or independently writes letters or words. Prints or copies own name and identifies some of the letters."
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "SC Earth and Space Sciences",
+   "text": "Children construct concepts about Earth’s systems, the impacts of human activity on these systems, and Earth’s place in the universe through observations, exploration, and investigations.: Records daily weather (e.g., sunny, rainy, snowy). Describes patterns of weather over time (e.g., in the winter it is cold and snowy). Recycled materials appropriately (e.g., compost food scraps)."
+  },
+  {
+   "idx": "SC Engineering Design",
+   "text": "Children design, experiment, construct, alter, and problem solve to modify the natural world and meet their needs and wants.: Draws pictures that represent physical structures. Follows a simple visual plan to construct a structure. Asks why and how questions to figure out how objects work."
+  },
+  {
+   "idx": "SC Inquiry",
+   "text": "Children make sense of the world around them by actively gathering and interpreting information.: Asks questions and participates in simple investigations to form hypotheses, gather observations, draw conclusions, and form generalizations. Collects, describes and records information through discussions, simple drawings, maps and charts. Describes and discusses predictions, explanations and generalizations based on past experience."
+  },
+  {
+   "idx": "SC Life Sciences",
+   "text": "Children construct concepts about the characteristics of living organisms, their biology and ecosystems through exploration and investigations.: Describes how plants and animals, including people, grow and change over time. Explains how animals including people use their senses to gather information (e.g., noses are for smelling). Describes how baby animals are similar yet different from their parents."
+  },
+  {
+   "idx": "SC Physical Sciences",
+   "text": "Children construct concepts of the properties of matter, sound, motion and energy through inquiry, exploration and investigations.: Uses evidence to discuss what makes something move the way it does and how some movements can be controlled. Describes objects by their physical properties and states of matter. Investigates the differences between liquids and solids and explore how liquids can become solids, and solids become liquids."
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "SE Emotions and Self-Regulation",
+   "text": "Children express a range of emotions and regulate their emotional and social responses.: Expresses needs of self and others and stands up for rights of self and others. Makes choices and shows understanding of consequences. Independently adapts behavior to fit different expectations and situations."
+  },
+  {
+   "idx": "AL Initiative",
+   "text": "Children show curiosity about the world around them and take action to interact with it and learn.: Demonstrates flexibility, imagination and inventiveness in approaching task and activities through play. Explores and discusses a range of topics, ideas and tasks. Attempts to master new skills (e.g., riding a bike)."
+  },
+  {
+   "idx": "AL Play and Exploration",
+   "text": "Children engage in play to understand the world around them.: Engages solidly in “solitary”, “parallel”, “associative” and “cooperative play” (e.g., play that involves engagement, negotiation and pre-planning). Engages in sustained play episodes (e.g., stays in a dramatic play role like “the baby”). Practices concepts through play (e.g., emergent writing: restaurant menu, geometry: naming the block shapes used in building a garage)."
+  },
+  {
+   "idx": "AL Problem Solving",
+   "text": "Children display an interest in novel situations and demonstrate flexibility, creativity and innovation in solving challenging tasks.: Uses imagination and creativity to interact with objects and materials. Uses a new skill in a variety of contexts. Engages in learning through attempting, repeating, experimenting, refining, and elaborating on experiences and activities."
+  },
+  {
+   "idx": "SE Relationships with Adults and Peers",
+   "text": "Children develop healthy positive relationships with adults and peers.: Plays and cooperates with other children sharing objects, conversations, and ideas. Respects the rights of others recognizing their feelings and responding with courtesy and kindness. Accepts guidance and direction from familiar adults and seeks their support when needed."
+  },
+  {
+   "idx": "SE Self-Awareness",
+   "text": "Children demonstrate an awareness of own personal characteristics, skills and abilities.: Expresses needs of self and others. Stands up for rights of self and others. Makes choices and understand consequences."
+  },
+  {
+   "idx": "SS Economics",
+   "text": "Children describe how people interact economically and the occupations that people do to support themselves and society. They also learn about the economic interdependent relationships among people in our society.: Describes how people interact economically (e.g., use money to purchase things or services). Describes roles and responsibilities of several occupations, especially those the child is familiar with (e.g., dentist, janitor, farmer). Identifies basic needs people have (e.g., food, clothing)."
+  },
+  {
+   "idx": "SS Family and Community, Civics, Government and Society",
+   "text": "Children identify themselves initially as belonging to a family, a group and a community; eventually they develop awareness of themselves as members of increasingly wider circles of society and learn the skills needed to be a contributing member of society.: Identifies various groups they belong to (e.g., family, class, neighborhood). Defines group membership according to different contexts (e.g., class member, family members, T-ball team). Describes their own family structure and family roles."
+  },
+  {
+   "idx": "SS History",
+   "text": "Children develop concepts about the passage of time, how the past has been interpreted, and the ability to connect the past with the present.: Differentiates between past, present, and future. Describes events that happened in the past (e.g., family or personal history). Explains how people live and what they do changes over time."
+  },
+  {
+   "idx": "SS Physical and Cultural Geography",
+   "text": "Children construct concepts about the physical characteristics and locations of familiar to more distant places, and the impacts of people on the environment. They also construct concepts about their own cultural identity and learn to appreciate others’ cultures.: Identifies features of the physical environment around them (e.g., roads, buildings, bodies of water). Describes or draw features of the geography of their classroom, home, and community. Explains that people share the environment with other people, animals, and plants."
+  }
+ ]
+}
