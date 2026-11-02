@@ -2,7 +2,7 @@
 
 ## Framework
 
-- **Id and slug:** `us-sd`, `south-dakota`. Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: South Dakota has no statewide French standards the app follows). Offered to families and in classroom mode.
+- **Id and slug:** `us-sd`, `south-dakota`. Pre-K and Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: South Dakota has no statewide French standards the app follows). Offered to families and in classroom mode.
 
 ## Standards
 
@@ -22,9 +22,10 @@
 - South Dakota has no statewide report card; each district chooses its own, so the app uses the same four practice steps as the other states (Beginning, Approaching, Meeting, Exceeding).
 - State tests: the South Dakota ELA and Math Assessments (grades 3 to 8; a scale score and four achievement levels, Level 1 to Level 4), the South Dakota Science Assessment (grades 5 and 8) and the SD-ACT in grade 11.
 
+- **Pre-K:** the 26 shared Pre-K units (`src/content/grades/pk/`), each citing a goal in the South Dakota Early Learning Guidelines for older preschoolers (`CD 4`, `CLL 7`, `SDED 6`; South Dakota Department of Social Services) (`src/content/south-dakota/pk.ts`), checked against `docs/research/south-dakota/prek/outcomes.json` (sources in `source/`, `fetch.sh`, `build_outcomes.py` in gradelings-research). Practice steps only.
 ## Parent guides
 
-- `src/content/south-dakota/guides.ts`, US English: the hub, grade notes for Kindergarten to Grade 9, the eight Standards for Mathematical Practice (`/guides/south-dakota/math-practices/`) and state tests (`/guides/south-dakota/state-tests/`; dates point to the Department). No French guide.
+- `src/content/south-dakota/guides.ts`, US English: the hub, grade notes for Pre-K to Grade 9, the eight Standards for Mathematical Practice (`/guides/south-dakota/math-practices/`) and state tests (`/guides/south-dakota/state-tests/`; dates point to the Department). No French guide.
 
 ## Schools
 

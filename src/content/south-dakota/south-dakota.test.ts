@@ -38,7 +38,7 @@ describe("South Dakota", () => {
   });
 
   it("cites the South Dakota Social Studies Standards by grade, and high school civics as 9-12.C", () => {
-    for (const { c, u, key } of southDakota.filter(({ c }) => c.subject === "social")) {
+    for (const { c, u, key } of southDakota.filter(({ c }) => c.subject === "social" && c.grade !== "pk")) {
       const code = c.grade === "9" ? /^9-12\.C\.\d/ : new RegExp(`^${c.grade === "k" ? "K" : c.grade}\\.SS\\.\\d`);
       expect(u.standards["us-sd"], key).toMatch(code);
     }
