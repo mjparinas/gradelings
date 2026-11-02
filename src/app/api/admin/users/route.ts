@@ -1,4 +1,4 @@
-import { error, json } from "@/server/auth";
+import { ADMIN_BODY_LIMIT, error, json, readJson } from "@/server/auth";
 import { audit, requireStaff } from "@/server/admin";
 import { extendAccess } from "@/server/codes";
 import { query, run } from "@/server/db";
@@ -196,7 +196,7 @@ export async function POST(req: Request) {
   const gate = await requireStaff(req);
   if ("response" in gate) return gate.response;
   const admin = gate.admin;
-  const body = (await req.json().catch(() => null)) as ActionBody | null;
+  const body = (await readJson(req, ADMIN_BODY_LIMIT)) as ActionBody | null;
   const familyId = typeof body?.familyId === "string" ? body.familyId : "";
   if (gate.role === "support" && !SUPPORT_ACTIONS.has(String(body?.action))) return error(403, "Support accounts can only read and add notes.");
   const detail = familyId ? await familyDetail(familyId) : null;

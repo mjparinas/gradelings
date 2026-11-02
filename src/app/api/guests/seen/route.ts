@@ -1,4 +1,4 @@
-import { clientIp, error, getSession, json, rateLimited, sameOrigin } from "@/server/auth";
+import { clientIp, error, getSession, json, rateLimited, readJson, sameOrigin } from "@/server/auth";
 import { forgetGuest, recordGuest } from "@/server/guests";
 
 const DEVICE = /^[A-Za-z0-9_-]{8,64}$/;
@@ -11,7 +11,7 @@ const DEVICE = /^[A-Za-z0-9_-]{8,64}$/;
  */
 export async function POST(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
-  const body = (await req.json().catch(() => null)) as { d?: unknown } | null;
+  const body = (await readJson(req)) as { d?: unknown } | null;
   const d = typeof body?.d === "string" && DEVICE.test(body.d) ? body.d : null;
   if (!d) return error(400, "Bad request");
   if (await rateLimited(`guest:${clientIp(req)}`, 60, 60 * 60_000)) return error(429, "Try again later.");

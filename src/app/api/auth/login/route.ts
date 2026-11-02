@@ -1,4 +1,4 @@
-import { burnPasswordCheck, appOrigin, clientIp, createSession, deviceLabel, error, json, rateLimited, sameOrigin, sessionCookie, verifyPassword } from "@/server/auth";
+import { appOrigin, burnPasswordCheck, clientIp, createSession, deviceLabel, error, json, rateLimited, readJson, sameOrigin, sessionCookie, verifyPassword } from "@/server/auth";
 import { query } from "@/server/db";
 import { reportStaffFailure } from "@/server/alerts";
 import { sendEmail } from "@/server/email";
@@ -12,7 +12,7 @@ export async function POST(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
   const ip = clientIp(req);
   if (await rateLimited(`login:${ip}`, 10)) return error(429, TOO_MANY);
-  const body = (await req.json().catch(() => null)) as { email?: unknown; password?: unknown; code?: unknown } | null;
+  const body = (await readJson(req)) as { email?: unknown; password?: unknown; code?: unknown } | null;
   const email = typeof body?.email === "string" ? body.email.trim().toLowerCase() : "";
   const password = typeof body?.password === "string" ? body.password : "";
   const code = typeof body?.code === "string" ? body.code : "";

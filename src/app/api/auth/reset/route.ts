@@ -1,11 +1,11 @@
-import { clientIp, consumeAuthToken, createSession, error, hashPassword, json, rateLimited, sameOrigin, sessionCookie } from "@/server/auth";
+import { clientIp, consumeAuthToken, createSession, error, hashPassword, json, rateLimited, readJson, sameOrigin, sessionCookie } from "@/server/auth";
 import { query, run } from "@/server/db";
 import { getFamilyRow, toFamilyInfo } from "@/server/family";
 
 export async function POST(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
   if (await rateLimited(`reset:${clientIp(req)}`, 10)) return error(429, "Too many attempts. Try again in a few minutes.");
-  const body = (await req.json().catch(() => null)) as { token?: string; password?: string } | null;
+  const body = (await readJson(req)) as { token?: string; password?: string } | null;
   const password = body?.password ?? "";
   if (password.length < 8 || password.length > 200) return error(400, "Use a password of at least 8 characters.");
   const parentId = await consumeAuthToken(body?.token ?? "", "reset");

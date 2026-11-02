@@ -1,4 +1,4 @@
-import { error, getSession, json, sameOrigin } from "@/server/auth";
+import { error, getSession, json, readJson, sameOrigin } from "@/server/auth";
 import { teachingClass } from "@/server/classroom";
 import { changeTimer, classTimer, startTimer, stopTimer } from "@/server/classTimer";
 import { isFlagOn } from "@/server/flags";
@@ -24,7 +24,7 @@ export async function POST(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
   const session = await getSession(req);
   if (!session) return error(401, "Not signed in");
-  const body = (await req.json().catch(() => null)) as { classId?: unknown; minutes?: unknown; label?: unknown } | null;
+  const body = (await readJson(req)) as { classId?: unknown; minutes?: unknown; label?: unknown } | null;
   const found = await teacherClass(body?.classId, session.parentId);
   if (!found) return error(404, "Class not found");
   if (!(await isFlagOn("class-timer", session.familyId))) return error(503, "The class timer is switched off just now. Practice and homework still work.");
@@ -38,7 +38,7 @@ export async function PATCH(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
   const session = await getSession(req);
   if (!session) return error(401, "Not signed in");
-  const body = (await req.json().catch(() => null)) as { classId?: unknown; action?: unknown } | null;
+  const body = (await readJson(req)) as { classId?: unknown; action?: unknown } | null;
   const found = await teacherClass(body?.classId, session.parentId);
   if (!found) return error(404, "Class not found");
   const action = body?.action;

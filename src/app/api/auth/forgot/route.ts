@@ -1,4 +1,4 @@
-import { appOrigin, clientIp, createAuthToken, error, json, rateLimited, sameOrigin } from "@/server/auth";
+import { appOrigin, clientIp, createAuthToken, error, json, rateLimited, readJson, sameOrigin } from "@/server/auth";
 import { query } from "@/server/db";
 import { sendEmail } from "@/server/email";
 import { resetEmail } from "@/server/emailTemplates";
@@ -7,7 +7,7 @@ import { resetEmail } from "@/server/emailTemplates";
 export async function POST(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
   if (await rateLimited(`forgot-ip:${clientIp(req)}`, 5, 60 * 60_000)) return error(429, "Too many requests. Try again later.");
-  const body = (await req.json().catch(() => null)) as { email?: string } | null;
+  const body = (await readJson(req)) as { email?: string } | null;
   const email = body?.email?.trim().toLowerCase() ?? "";
   const reply = json({ ok: true, message: "If that email has an account, we've sent a link to reset the password." });
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 200) return reply;

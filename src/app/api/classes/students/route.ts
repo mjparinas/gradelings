@@ -1,4 +1,4 @@
-import { error, getSession, json, rateLimited, sameOrigin } from "@/server/auth";
+import { error, getSession, json, rateLimited, readJson, sameOrigin } from "@/server/auth";
 import { classGrades, MAX_STUDENTS, ownedClass, teachingClass, type ClassRow } from "@/server/classroom";
 import { addStudents, cleanStudentName, removeStudent, resetStudentCode, restoreStudentCode, updateStudent, upgradeClassCodes } from "@/server/students";
 
@@ -18,7 +18,7 @@ async function teacherClass(req: Request, classId: string, ownerOnly = false) {
 
 /** Adds students by first name or nickname. */
 export async function POST(req: Request) {
-  const body = (await req.json().catch(() => null)) as { classId?: unknown; names?: unknown; grade?: unknown } | null;
+  const body = (await readJson(req)) as { classId?: unknown; names?: unknown; grade?: unknown } | null;
   const found = await teacherClass(req, typeof body?.classId === "string" ? body.classId : "");
   if (found.fail) return found.fail;
   const { session, cls } = found;
@@ -56,7 +56,7 @@ export async function PATCH(req: Request) {
   const found = await teacherClass(req, params.get("classId") ?? "");
   if (found.fail) return found.fail;
   if (params.get("all") === "1") return json({ changed: await upgradeClassCodes(found.cls!.id) });
-  const body = (await req.json().catch(() => null)) as { name?: unknown; grade?: unknown; undo?: unknown } | null;
+  const body = (await readJson(req)) as { name?: unknown; grade?: unknown; undo?: unknown } | null;
   if (body?.undo === true) {
     const restored = await restoreStudentCode(found.cls!.id, params.get("studentId") ?? "");
     return restored ? json({ loginCode: restored }) : error(409, "It’s too late to undo that code change. Get a new code instead.");

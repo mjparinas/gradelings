@@ -1,4 +1,4 @@
-import { error, json } from "@/server/auth";
+import { ADMIN_BODY_LIMIT, error, json, readJson } from "@/server/auth";
 import { audit, requireAdmin } from "@/server/admin";
 import { countWaiting, getInboxMessage, inboxConfigured, listInbox, markArchived, markHandled, replyToInbox } from "@/server/inbox";
 import { draftConfigured, draftReply } from "@/server/replyDraft";
@@ -30,7 +30,7 @@ export async function POST(req: Request) {
   const gate = await requireAdmin(req);
   if ("response" in gate) return gate.response;
   if (!inboxConfigured()) return error(400, "Email isn't set up.");
-  const body = ((await req.json().catch(() => null)) ?? {}) as { action?: unknown; id?: unknown; text?: unknown; handled?: unknown; archived?: unknown };
+  const body = ((await readJson(req, ADMIN_BODY_LIMIT)) ?? {}) as { action?: unknown; id?: unknown; text?: unknown; handled?: unknown; archived?: unknown };
   if (typeof body.id !== "string" || !ID.test(body.id)) return error(400, "Bad request");
   try {
     if (body.action === "handled") {

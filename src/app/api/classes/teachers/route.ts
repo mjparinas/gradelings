@@ -1,4 +1,4 @@
-import { error, getSession, json, appOrigin, rateLimited, sameOrigin } from "@/server/auth";
+import { appOrigin, error, getSession, json, rateLimited, readJson, sameOrigin } from "@/server/auth";
 import { INVITE_TTL, MAX_CO_TEACHERS, MAX_PENDING_INVITES, ownedClass, teachingClass } from "@/server/classroom";
 import { query, run } from "@/server/db";
 import { sendEmail } from "@/server/email";
@@ -15,7 +15,7 @@ export async function POST(req: Request) {
   const session = await getSession(req);
   if (!session) return error(401, "Not signed in");
   if (!session.verified) return error(403, "Please confirm your email first.");
-  const body = (await req.json().catch(() => null)) as { classId?: unknown; email?: unknown } | null;
+  const body = (await readJson(req)) as { classId?: unknown; email?: unknown } | null;
   const cls = typeof body?.classId === "string" ? await ownedClass(body.classId, session.parentId) : undefined;
   if (!cls) return error(404, "Class not found");
   const email = typeof body?.email === "string" ? body.email.trim().toLowerCase() : "";

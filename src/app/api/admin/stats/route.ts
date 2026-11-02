@@ -1,5 +1,5 @@
 import { toCountryCode } from "@/lib/country";
-import { error, json } from "@/server/auth";
+import { ADMIN_BODY_LIMIT, error, json, readJson } from "@/server/auth";
 import { audit, requireAdmin } from "@/server/admin";
 import { query } from "@/server/db";
 import { guestCounts } from "@/server/guests";
@@ -138,7 +138,7 @@ export async function GET(req: Request) {
 export async function POST(req: Request) {
   const gate = await requireAdmin(req);
   if ("response" in gate) return gate.response;
-  const body = (await req.json().catch(() => null)) as { action?: string; monthlyCosts?: number } | null;
+  const body = (await readJson(req, ADMIN_BODY_LIMIT)) as { action?: string; monthlyCosts?: number } | null;
   if (body?.action === "costs") {
     const dollars = Number(body.monthlyCosts);
     if (!Number.isFinite(dollars) || dollars < 0 || dollars > 10_000_000) return error(400, "Enter the monthly costs in dollars, 0 or more.");

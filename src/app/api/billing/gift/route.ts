@@ -1,4 +1,4 @@
-import { clientIp, appOrigin, error, json, rateLimited, sameOrigin } from "@/server/auth";
+import { appOrigin, clientIp, error, json, rateLimited, readJson, sameOrigin } from "@/server/auth";
 import { isFlagOn } from "@/server/flags";
 import { createGiftCheckout, stripeConfigured, stripePrices } from "@/server/stripe";
 
@@ -17,7 +17,7 @@ export async function GET() {
 export async function POST(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
   if (await rateLimited(`gift:${clientIp(req)}`, 10)) return error(429, "Too many tries. Please wait a few minutes.");
-  const body = (await req.json().catch(() => ({}))) as { currency?: string };
+  const body = ((await readJson(req)) ?? {}) as { currency?: string };
   const currency = body.currency === "USD" ? "USD" : "CAD";
   if (!(await open())[currency]) return error(503, "Gifts aren't open yet. Please check back soon.");
   try {

@@ -1,4 +1,4 @@
-import { clientIp, error, getSession, json, rateLimited, sameOrigin } from "@/server/auth";
+import { clientIp, error, getSession, json, rateLimited, readJson, sameOrigin } from "@/server/auth";
 import { redeemCode } from "@/server/codes";
 import { getFamilyRow, toFamilyInfo } from "@/server/family";
 import { isFlagOn } from "@/server/flags";
@@ -13,7 +13,7 @@ export async function POST(req: Request) {
   if ((await rateLimited(`redeem:${session.familyId}`, 10, 60 * 60_000)) || (await rateLimited(`redeem-ip:${clientIp(req)}`, 30, 60 * 60_000))) {
     return error(429, "Too many tries. Please wait a while and try again.");
   }
-  const body = (await req.json().catch(() => null)) as { code?: unknown } | null;
+  const body = (await readJson(req)) as { code?: unknown } | null;
   const code = typeof body?.code === "string" ? body.code.slice(0, 64) : "";
   const result = await redeemCode(session.familyId, code);
   if (!result.ok) return error(result.status, result.error);

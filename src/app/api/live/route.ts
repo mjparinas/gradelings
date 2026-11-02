@@ -1,4 +1,4 @@
-import { error, getSession, json, sameOrigin } from "@/server/auth";
+import { error, getSession, json, readJson, sameOrigin } from "@/server/auth";
 import { isFlagOn } from "@/server/flags";
 import { answerLive, liveForChild } from "@/server/live";
 import { timerForChild } from "@/server/classTimer";
@@ -36,7 +36,7 @@ export async function POST(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
   const session = await getSession(req, { student: true });
   if (!session) return error(401, "Not signed in");
-  const body = (await req.json().catch(() => null)) as { questionId?: unknown; profileId?: unknown; choice?: unknown } | null;
+  const body = (await readJson(req)) as { questionId?: unknown; profileId?: unknown; choice?: unknown } | null;
   if (typeof body?.questionId !== "string" || typeof body.profileId !== "string" || typeof body.choice !== "string") return error(400, "Missing answer.");
   const result = await answerLive(session.familyId, body.profileId, body.questionId, body.choice);
   if (result === "invalid") return error(404, "Question not found");

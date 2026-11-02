@@ -1,4 +1,4 @@
-import { error, json } from "@/server/auth";
+import { ADMIN_BODY_LIMIT, error, json, readJson } from "@/server/auth";
 import { audit, requireAdmin } from "@/server/admin";
 import { getMaintenance, setMaintenance } from "@/server/maintenance";
 import { TURN_ON } from "@/lib/automations";
@@ -14,7 +14,7 @@ export async function GET(req: Request) {
 export async function PUT(req: Request) {
   const gate = await requireAdmin(req);
   if ("response" in gate) return gate.response;
-  const body = (await req.json().catch(() => null)) as { on?: unknown; confirm?: unknown } | null;
+  const body = (await readJson(req, ADMIN_BODY_LIMIT)) as { on?: unknown; confirm?: unknown } | null;
   if (typeof body?.on !== "boolean") return error(400, "Say whether maintenance mode is on.");
   if (body.on && body.confirm !== TURN_ON) return error(400, `Type ${TURN_ON} to confirm.`);
   const state = await setMaintenance(body.on);

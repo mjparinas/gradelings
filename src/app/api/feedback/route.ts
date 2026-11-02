@@ -1,4 +1,4 @@
-import { clientIp, error, getSession, json, newId, rateLimited, sameOrigin } from "@/server/auth";
+import { clientIp, error, getSession, json, newId, rateLimited, readJson, sameOrigin } from "@/server/auth";
 import { run } from "@/server/db";
 import { REPORT_REASONS } from "@/lib/reportReasons";
 import { cleanReportDetails } from "@/lib/questionReport";
@@ -14,7 +14,7 @@ export async function POST(req: Request) {
   const who = session ? `report:p:${session.parentId}` : `report:${clientIp(req)}`;
   if (await rateLimited(who, session ? 20 : 5, 60 * 60_000)) return error(429, "Thanks! You’ve sent a lot of reports. Please try again later.");
   if (await rateLimited("report:all", 200, 60 * 60_000)) return error(429, "Thanks! We’ve had a lot of reports just now. Please try again later.");
-  const body = (await req.json().catch(() => null)) as { unitKey?: unknown; prompt?: unknown; reason?: unknown; framework?: unknown; details?: unknown } | null;
+  const body = (await readJson(req)) as { unitKey?: unknown; prompt?: unknown; reason?: unknown; framework?: unknown; details?: unknown } | null;
   const reason = REPORT_REASONS.find((r) => r.id === body?.reason);
   if (typeof body?.unitKey !== "string" || !UNIT_KEY.test(body.unitKey) || typeof body.prompt !== "string" || !reason) return error(400, "Bad report");
   const prompt = body.prompt.replace(/\s+/g, " ").trim().slice(0, 300);

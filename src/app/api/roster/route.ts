@@ -1,4 +1,4 @@
-import { error, getSession, json, sameOrigin } from "@/server/auth";
+import { error, getSession, json, readJson, sameOrigin } from "@/server/auth";
 import { applyImport, discardImport, pendingImport, reviewSections, rosterAccessFor, rosterStatus } from "@/server/rostering";
 import { rosterProviderLabel, type ImportChoice } from "@/lib/rostering";
 
@@ -23,7 +23,7 @@ export async function POST(req: Request) {
   if (!session) return error(401, "Not signed in");
   if (!session.verified) return error(403, "Please confirm your email first.");
   if ((await rosterAccessFor(session.familyId)) !== "ok") return error(403, "Importing classes isn't available for this account.");
-  const body = (await req.json().catch(() => null)) as { import?: unknown; classes?: unknown } | null;
+  const body = (await readJson(req)) as { import?: unknown; classes?: unknown } | null;
   const pending = typeof body?.import === "string" ? await pendingImport(body.import, session.parentId) : null;
   if (!pending) return error(404, "That import has expired. Start it again.");
   const classes = Array.isArray(body?.classes) ? body.classes.slice(0, 40) : [];

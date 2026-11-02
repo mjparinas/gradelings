@@ -1,4 +1,4 @@
-import { error, json } from "@/server/auth";
+import { ADMIN_BODY_LIMIT, error, json, readJson } from "@/server/auth";
 import { audit, requireAdmin } from "@/server/admin";
 import { createExperiment, deleteExperiment, experimentResults, getExperiment, listExperiments, startExperiment, stopExperiment, updateDraft } from "@/server/flags";
 import { validateExperiment, type Variant } from "@/lib/flags";
@@ -16,7 +16,7 @@ export async function GET(req: Request) {
 export async function POST(req: Request) {
   const gate = await requireAdmin(req);
   if ("response" in gate) return gate.response;
-  const body = (await req.json().catch(() => null)) as { key?: unknown; description?: unknown; variants?: unknown } | null;
+  const body = (await readJson(req, ADMIN_BODY_LIMIT)) as { key?: unknown; description?: unknown; variants?: unknown } | null;
   if (!body) return error(400, "Send a JSON body.");
   const problem = validateExperiment(body);
   if (problem) return error(400, problem);
@@ -30,7 +30,7 @@ export async function POST(req: Request) {
 export async function PATCH(req: Request) {
   const gate = await requireAdmin(req);
   if ("response" in gate) return gate.response;
-  const body = (await req.json().catch(() => null)) as { key?: unknown; action?: unknown; description?: unknown; variants?: unknown; winner?: unknown } | null;
+  const body = (await readJson(req, ADMIN_BODY_LIMIT)) as { key?: unknown; action?: unknown; description?: unknown; variants?: unknown; winner?: unknown } | null;
   const exp = typeof body?.key === "string" ? await getExperiment(body.key) : null;
   if (!exp) return error(404, "No such experiment.");
   if (body!.action === "edit") {

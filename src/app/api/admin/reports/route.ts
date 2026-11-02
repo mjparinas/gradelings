@@ -1,4 +1,4 @@
-import { error, json } from "@/server/auth";
+import { ADMIN_BODY_LIMIT, error, json, readJson } from "@/server/auth";
 import { audit, requireAdmin } from "@/server/admin";
 import { query, run } from "@/server/db";
 import { cleanReportDetails } from "@/lib/questionReport";
@@ -32,7 +32,7 @@ export async function GET(req: Request) {
 export async function DELETE(req: Request) {
   const gate = await requireAdmin(req);
   if ("response" in gate) return gate.response;
-  const body = (await req.json().catch(() => null)) as { unitKey?: unknown; prompt?: unknown } | null;
+  const body = (await readJson(req, ADMIN_BODY_LIMIT)) as { unitKey?: unknown; prompt?: unknown } | null;
   if (typeof body?.unitKey !== "string" || typeof body.prompt !== "string") return error(400, "Say which question.");
   const removed = await run("DELETE FROM question_reports WHERE unit_key = ? AND prompt = ?", [body.unitKey, body.prompt]);
   await audit(gate.admin.email, "reports.clear", body.unitKey, { prompt: body.prompt.slice(0, 120), removed });

@@ -1,4 +1,4 @@
-import { error, getSession, json, newId, rateLimited, sameOrigin } from "@/server/auth";
+import { error, getSession, json, newId, rateLimited, readJson, sameOrigin } from "@/server/auth";
 import { assignedAt, assignmentAudience, cleanClassName, cleanSecondGrade, offersGrade, assignmentDue, assignmentGoals, assignmentKeys, assignmentStarts, classProgressAndMisses, classTeachers, hiddenClassIds, isFramework, MAX_CLASSES, newJoinCode, ownedClass, pendingInvites, removeClassTeachers, teachingClass } from "@/server/classroom";
 import { batch, query, run } from "@/server/db";
 import { liveClassStatements } from "@/server/live";
@@ -80,7 +80,7 @@ export async function POST(req: Request) {
   if (!(await isFlagOn("new-classes", session.familyId))) return error(503, "New classes can't be created just now. Please try again later.");
   if (!session.verified) return error(403, "Please confirm your email first. Classes show children's progress, so we only allow them for confirmed accounts.");
   if (await rateLimited(`class:${session.parentId}`, 20, 60 * 60_000)) return error(429, "Too many classes created. Try again later.");
-  const body = (await req.json().catch(() => null)) as { name?: unknown; grade?: unknown; grade2?: unknown; framework?: unknown } | null;
+  const body = (await readJson(req)) as { name?: unknown; grade?: unknown; grade2?: unknown; framework?: unknown } | null;
   // One line of plain text: it appears in invitation emails and on printed cards.
   const name = cleanClassName(body?.name);
   const grade = String(body?.grade ?? "");
@@ -119,7 +119,7 @@ export async function PATCH(req: Request) {
   const id = new URL(req.url).searchParams.get("id") ?? "";
   const cls = await ownedClass(id, session.parentId);
   if (!cls) return error(404, "Class not found");
-  const body = (await req.json().catch(() => null)) as { name?: unknown; action?: unknown } | null;
+  const body = (await readJson(req)) as { name?: unknown; action?: unknown } | null;
   if (body && "name" in body) {
     const name = cleanClassName(body.name);
     if (!name) return error(400, "Give the class a name.");

@@ -1,5 +1,6 @@
 import "server-only";
 import { createClient, type Client, type InValue } from "@libsql/client";
+import { createHash } from "node:crypto";
 import { mkdirSync } from "node:fs";
 import { dirname } from "node:path";
 
@@ -436,6 +437,14 @@ const SCHEMA = [
     step TEXT NOT NULL
   )`,
   `CREATE INDEX IF NOT EXISTS staff_sign_in_failures_at ON staff_sign_in_failures (at)`,
+  // Unsubscribe links in emails. Only the SHA-256 of each token is kept, like sessions and one-time tokens, so a copy of the
+  // database can't unsubscribe anyone. created_at is null for tokens made before they were hashed (they never expire).
+  `CREATE TABLE IF NOT EXISTS unsub_tokens (
+    token_hash TEXT PRIMARY KEY,
+    parent_id TEXT NOT NULL,
+    created_at INTEGER
+  )`,
+  `CREATE INDEX IF NOT EXISTS unsub_tokens_parent ON unsub_tokens (parent_id)`,
 ];
 
 /** Columns added after the first release. SQLite has no "ADD COLUMN IF NOT EXISTS". */
@@ -546,6 +555,19 @@ async function addColumns(c: Client, table: string, columns: [string, string][])
   for (const [name, type] of columns) if (!have.has(name)) await c.execute(`ALTER TABLE ${table} ADD COLUMN ${name} ${type}`);
 }
 
+/**
+ * Unsubscribe tokens used to be stored as they were emailed. Keeps the links already sent working by storing their hash, then
+ * forgets the plain text. Safe to run again: it only touches rows that still hold a plain token.
+ */
+export async function hashLegacyUnsubTokens(c: Client) {
+  const legacy = (await c.execute("SELECT id, unsub_token FROM parents WHERE unsub_token IS NOT NULL")).rows;
+  for (const r of legacy) {
+    // Hash first, forget second: if it stops in between, the next start finishes the job.
+    await c.execute({ sql: "INSERT OR IGNORE INTO unsub_tokens (token_hash, parent_id, created_at) VALUES (?, ?, NULL)", args: [createHash("sha256").update(String(r.unsub_token)).digest("hex"), String(r.id)] });
+    await c.execute({ sql: "UPDATE parents SET unsub_token = NULL WHERE id = ?", args: [String(r.id)] });
+  }
+}
+
 async function migrate(c: Client) {
   await addColumns(c, "sessions", SESSION_COLUMNS);
   await addColumns(c, "inbox_state", INBOX_COLUMNS);
@@ -569,6 +591,7 @@ async function migrate(c: Client) {
   for (const [name, type] of PARENT_COLUMNS) {
     if (!have.has(name)) await c.execute(`ALTER TABLE parents ADD COLUMN ${name} ${type}`);
   }
+  await hashLegacyUnsubTokens(c);
   await c.execute("CREATE UNIQUE INDEX IF NOT EXISTS students_external ON students (class_id, external_id) WHERE external_id IS NOT NULL");
   await c.execute("CREATE UNIQUE INDEX IF NOT EXISTS parents_google_sub ON parents (google_sub) WHERE google_sub IS NOT NULL");
 }
