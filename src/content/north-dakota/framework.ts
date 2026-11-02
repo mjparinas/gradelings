@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // North Dakota, a US state. Standards are the ones the North Dakota Department of Public Instruction published:
 // mathematics and English language arts (2023, North Dakota's own standards, which grew out of the Common Core), science
@@ -74,9 +75,9 @@ export const NORTH_DAKOTA: Framework = {
   standardLabel: "Standard",
   sourceName: "North Dakota Department of Public Instruction",
   sourceUrl: "https://www.nd.gov/dpi/",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding North Dakota report cards",
     intro:

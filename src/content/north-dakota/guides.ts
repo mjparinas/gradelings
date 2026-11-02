@@ -139,6 +139,10 @@ export const NORTH_DAKOTA_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-K in North Dakota is the year before kindergarten, for children who are 4. Public and Head Start preschool programs follow the North Dakota Early Learning Standards. Children learn through play, stories and songs: counting, shapes and patterns, letters and rhymes, plus first ideas about families, communities and the world around them.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for counting small groups, naming letters, hearing rhymes, taking turns and talking about feelings.",
+    },
     k: {
       overview: "Kindergarten in North Dakota is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. In social studies they learn about families, rules and community helpers, needs and wants, and symbols such as the American flag and North Dakota's own flag with its eagle.",
       lookFor: "Many North Dakota districts use standards-based report cards. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",

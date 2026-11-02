@@ -1,0 +1,198 @@
+{
+ "pk/math": [
+  {
+   "idx": "P-MATH 1",
+   "text": "Child knows number names and the count sequence"
+  },
+  {
+   "idx": "P-MATH 2",
+   "text": "Child recognizes the number of objects in a small set"
+  },
+  {
+   "idx": "P-MATH 3",
+   "text": "Child understands the relationship between numbers and quantities"
+  },
+  {
+   "idx": "P-MATH 4",
+   "text": "Child compares numbers"
+  },
+  {
+   "idx": "P-MATH 5",
+   "text": "Child associates a quantity with written numerals up to 5 and begins to write numbers"
+  },
+  {
+   "idx": "P-MATH 6",
+   "text": "Child understands addition as adding to and understands subtraction as taking away from"
+  },
+  {
+   "idx": "P-MATH 7",
+   "text": "Child understands simple patterns"
+  },
+  {
+   "idx": "P-MATH 8",
+   "text": "Child measures objects by their various attributes using standard and non-standard measurement. Uses differences in attributes to make comparisons"
+  },
+  {
+   "idx": "P-MATH 9",
+   "text": "Child identifies, describes, compares, and composes shapes"
+  },
+  {
+   "idx": "P-MATH 10",
+   "text": "Child explores the positions of objects in space"
+  },
+  {
+   "idx": "P-SCI 3",
+   "text": "Child compares and categorizes observable phenomena"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "P-LC 1",
+   "text": "Child attends to communication and language from others"
+  },
+  {
+   "idx": "P-LC 2",
+   "text": "Child understands and responds to increasingly complex communication and language from others"
+  },
+  {
+   "idx": "P-LC 3",
+   "text": "Child varies the amount of information provided to meet the demands of the situation"
+  },
+  {
+   "idx": "P-LC 4",
+   "text": "Child understands, follows, and uses appropriate social and conversational rules"
+  },
+  {
+   "idx": "P-LC 5",
+   "text": "Child expresses self in increasingly long, detailed, and sophisticated ways"
+  },
+  {
+   "idx": "P-LC 6",
+   "text": "Child understands and uses a wide variety of words for a variety of purposes"
+  },
+  {
+   "idx": "P-LC 7",
+   "text": "Child shows understanding of word categories and relationships among words"
+  },
+  {
+   "idx": "P-LIT 1",
+   "text": "Child demonstrates awareness that spoken language is composed of smaller segments of sound"
+  },
+  {
+   "idx": "P-LIT 2",
+   "text": "Child demonstrates an understanding of how print is used (functions of print) and the rules that govern how print works (conventions of print)"
+  },
+  {
+   "idx": "P-LIT 3",
+   "text": "Child identifies letters of the alphabet and produces correct sounds associated with letters"
+  },
+  {
+   "idx": "P-LIT 4",
+   "text": "Child demonstrates an understanding of narrative structure through storytelling/re-telling"
+  },
+  {
+   "idx": "P-LIT 5",
+   "text": "Child asks and answers questions about a book that was read aloud"
+  },
+  {
+   "idx": "P-LIT 6",
+   "text": "Child writes for a variety of purposes using increasingly sophisticated marks"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "P-SCI 1",
+   "text": "Child observes and describes observable phenomena (objects, materials, organisms, and events)"
+  },
+  {
+   "idx": "P-SCI 2",
+   "text": "Child engages in scientific talk"
+  },
+  {
+   "idx": "P-SCI 3",
+   "text": "Child compares and categorizes observable phenomena"
+  },
+  {
+   "idx": "P-SCI 4",
+   "text": "Child asks a question, gathers information, and makes predictions"
+  },
+  {
+   "idx": "P-SCI 5",
+   "text": "Child plans and conducts investigations and experiments"
+  },
+  {
+   "idx": "P-SCI 6",
+   "text": "Child analyzes results, draws conclusions, and communicates results"
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "P-SE 1",
+   "text": "Child engages in and maintains positive relationships and interactions with adults"
+  },
+  {
+   "idx": "P-SE 2",
+   "text": "Child engages in prosocial and cooperative behavior with adults"
+  },
+  {
+   "idx": "P-SE 3",
+   "text": "Child engages in and maintains positive interactions and relationships with other children"
+  },
+  {
+   "idx": "P-SE 4",
+   "text": "Child engages in cooperative play with other children"
+  },
+  {
+   "idx": "P-SE 5",
+   "text": "Child uses basic problem-solving skills to resolve conflicts with other children"
+  },
+  {
+   "idx": "P-SE 6",
+   "text": "Child expresses a broad range of emotions and recognizes these emotions in self and others"
+  },
+  {
+   "idx": "P-SE 7",
+   "text": "Child expresses care and concern toward others"
+  },
+  {
+   "idx": "P-SE 8",
+   "text": "Child manages emotions with increasing independence"
+  },
+  {
+   "idx": "P-SE 9",
+   "text": "Child recognizes self as a unique individual having own abilities, characteristics, emotions, and interests"
+  },
+  {
+   "idx": "P-SE 10",
+   "text": "Child expresses confidence in own skills and positive feelings about self"
+  },
+  {
+   "idx": "P-SE 11",
+   "text": "Child has sense of belonging to family, community, and other groups"
+  },
+  {
+   "idx": "P-SS 1",
+   "text": "Child demonstrates a basic understanding of past, present, and future and how things, people, and places change over time"
+  },
+  {
+   "idx": "P-SS 4",
+   "text": "Child demonstrates and exhibits an awareness of rules and routines in the classroom, community, and family life"
+  },
+  {
+   "idx": "P-SS 3",
+   "text": "Child shares responsibility for caring for their environment"
+  },
+  {
+   "idx": "P-SS 5",
+   "text": "Child begins to understand various group decision-making processes"
+  },
+  {
+   "idx": "P-SS 6",
+   "text": "Child understands relationships and roles within families, homes, and classroom, and demonstrate awareness of differences among families"
+  },
+  {
+   "idx": "P-SS 7",
+   "text": "Demonstrate awareness of differences among families and communities to which they belong"
+  }
+ ]
+}
