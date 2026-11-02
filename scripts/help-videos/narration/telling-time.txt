@@ -1,0 +1,5 @@
+A clock has two hands. The short hand shows the hour.
+The long hand shows the minutes. When it points straight up at the twelve, it is o'clock. This clock says three o'clock.
+When the long hand points straight down at the six, it is half past. That is thirty minutes. This clock says half past three.
+Each number stands for five minutes. Count by fives to the three. Five, ten, fifteen. This clock says quarter past three.
+To tell time, look at the short hand for the hour first. Then look at the long hand for the minutes.

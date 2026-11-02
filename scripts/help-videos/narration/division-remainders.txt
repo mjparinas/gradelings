@@ -1,0 +1,5 @@
+Sometimes things do not share out evenly. What is left over is called the remainder.
+We have thirteen counters to share between four friends.
+Hand them out one at a time. Each friend gets three counters. That uses twelve.
+One counter is left over. We write that as three remainder one.
+We can check. Four times three is twelve, and twelve plus the remainder one makes thirteen.

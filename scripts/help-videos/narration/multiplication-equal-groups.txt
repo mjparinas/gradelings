@@ -1,0 +1,6 @@
+Multiplication is a quick way to add equal groups.
+Here are three groups, and each group has four dots. We can add: four plus four plus four.
+That makes twelve. So three groups of four is twelve.
+We write it like this: three times four equals twelve. The first number is how many groups. The second number is how many are in each group.
+We can also see it as an array, which is rows and columns. Three rows of four make twelve.
+To multiply, count the groups, count how many are in each group, and then multiply.

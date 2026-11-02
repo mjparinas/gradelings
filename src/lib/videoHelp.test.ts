@@ -15,11 +15,21 @@ describe("help video catalogue", () => {
       expect(unit.split("/")).toHaveLength(3);
       expect(existsSync(`public${v.src}`)).toBe(true);
       expect(readFileSync(`public${v.captions}`, "utf8").startsWith("WEBVTT")).toBe(true);
-      if (!v.placeholder) expect(v.seconds).toBeGreaterThanOrEqual(30);
+      expect(v.seconds).toBeGreaterThanOrEqual(30);
+      expect(v.seconds).toBeLessThanOrEqual(90);
+      expect(existsSync(`scripts/help-videos/narration/${v.id}.txt`)).toBe(true);
+    }
+  });
+  it("has captions that match the narration word for word, and narration that names no region or money", () => {
+    for (const v of Object.values(HELP_VIDEOS)) {
+      const narration = readFileSync(`scripts/help-videos/narration/${v.id}.txt`, "utf8").split(/\s+/).filter(Boolean).join(" ");
+      const cues = readFileSync(`public${v.captions}`, "utf8").split("\n").filter((l) => l && l !== "WEBVTT" && !l.includes("-->"));
+      expect(cues.join(" ")).toBe(narration);
+      expect(narration).not.toMatch(/\$|\b(dollars?|cents?|coins?|provinces?|states?)\b|Canad|American/i);
     }
   });
   it("looks videos up by unit key", () => {
-    expect(helpVideoFor("3/math/fractions")?.id).toBe("sample-fractions");
+    expect(helpVideoFor("3/math/fractions")?.id).toBe("fractions-equal-parts");
     expect(helpVideoFor("3/math/nothing")).toBeUndefined();
   });
 });

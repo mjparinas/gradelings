@@ -1,0 +1,5 @@
+Times tables get easier with tricks. Let's learn one for fives and one for nines.
+Multiples of five always end in zero or five. Five, ten, fifteen, twenty, twenty-five, thirty.
+For five times six, think of half of ten times six. Ten times six is sixty. Half of sixty is thirty.
+For nines, multiply by ten and then take away the number. Nine times six is ten times six, which is sixty, take away six. That is fifty-four.
+Here is a check. The digits of every nine fact add up to nine. Fifty-four has a five and a four, and five plus four is nine.

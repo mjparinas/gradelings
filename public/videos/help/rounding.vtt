@@ -1,0 +1,22 @@
+WEBVTT
+
+00:00.500 --> 00:04.401
+Rounding means finding the nearest friendly number.
+
+00:04.851 --> 00:13.132
+Let's round four thousand six hundred twenty-eight to the nearest hundred. First find the hundreds on each side.
+
+00:13.132 --> 00:18.086
+They are four thousand six hundred and four thousand seven hundred.
+
+00:18.536 --> 00:25.007
+Now look at the digit one place to the right of the hundreds. That is the tens digit.
+
+00:25.007 --> 00:25.920
+It is a two.
+
+00:26.370 --> 00:32.361
+If that digit is zero to four, round down. If it is five to nine, round up.
+
+00:32.811 --> 00:41.588
+Two is less than five, so we round down. Four thousand six hundred twenty-eight rounds to four thousand six hundred.

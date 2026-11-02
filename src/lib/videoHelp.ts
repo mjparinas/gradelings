@@ -11,19 +11,163 @@ export interface HelpVideo {
   seconds: number;
   src: string;
   captions: string;
-  /** A stand-in clip, not narrated. Never switch the flag on while one is listed. */
-  placeholder?: boolean;
 }
 
 /** Videos by unit key (`<grade>/<subject>/<unit id>`). Shared units share the video, so it names no region or money. */
 export const HELP_VIDEOS: Record<string, HelpVideo> = {
   "3/math/fractions": {
-    id: "sample-fractions",
+    id: "fractions-equal-parts",
     title: "What a fraction is",
-    seconds: 8,
-    src: "/videos/help/sample-fractions.mp4",
-    captions: "/videos/help/sample-fractions.vtt",
-    placeholder: true,
+    seconds: 47,
+    src: "/videos/help/fractions-equal-parts.mp4",
+    captions: "/videos/help/fractions-equal-parts.vtt",
+  },
+  "3/math/multiplication": {
+    id: "multiplication-equal-groups",
+    title: "Multiplying with equal groups",
+    seconds: 44,
+    src: "/videos/help/multiplication-equal-groups.mp4",
+    captions: "/videos/help/multiplication-equal-groups.vtt",
+  },
+  "3/math/division": {
+    id: "division-sharing-equally",
+    title: "Dividing means sharing equally",
+    seconds: 30,
+    src: "/videos/help/division-sharing-equally.mp4",
+    captions: "/videos/help/division-sharing-equally.vtt",
+  },
+  "2/math/tens-and-ones": {
+    id: "tens-and-ones",
+    title: "Tens and ones",
+    seconds: 32,
+    src: "/videos/help/tens-and-ones.mp4",
+    captions: "/videos/help/tens-and-ones.vtt",
+  },
+  "5/math/equivalent-fractions": {
+    id: "equivalent-fractions",
+    title: "Equivalent fractions",
+    seconds: 34,
+    src: "/videos/help/equivalent-fractions.mp4",
+    captions: "/videos/help/equivalent-fractions.vtt",
+  },
+  "4/math/decimals": {
+    id: "decimals-tenths",
+    title: "Tenths as decimals",
+    seconds: 31,
+    src: "/videos/help/decimals-tenths.mp4",
+    captions: "/videos/help/decimals-tenths.vtt",
+  },
+  "5/math/area-and-perimeter": {
+    id: "area-square-units",
+    title: "Finding area",
+    seconds: 33,
+    src: "/videos/help/area-square-units.mp4",
+    captions: "/videos/help/area-square-units.vtt",
+  },
+  "6/math/percents-and-budgets": {
+    id: "percent-out-of-100",
+    title: "What percent means",
+    seconds: 33,
+    src: "/videos/help/percent-out-of-100.mp4",
+    captions: "/videos/help/percent-out-of-100.vtt",
+  },
+  "1/math/make-ten": {
+    id: "make-ten",
+    title: "Making ten",
+    seconds: 32,
+    src: "/videos/help/make-ten.mp4",
+    captions: "/videos/help/make-ten.vtt",
+  },
+  "1/math/adding": {
+    id: "adding-put-together",
+    title: "Adding means putting together",
+    seconds: 40,
+    src: "/videos/help/adding-put-together.mp4",
+    captions: "/videos/help/adding-put-together.vtt",
+  },
+  "1/math/take-away": {
+    id: "take-away-how-many-left",
+    title: "Taking away",
+    seconds: 34,
+    src: "/videos/help/take-away-how-many-left.mp4",
+    captions: "/videos/help/take-away-how-many-left.vtt",
+  },
+  "2/math/patterns": {
+    id: "skip-counting",
+    title: "Skip counting",
+    seconds: 35,
+    src: "/videos/help/skip-counting.mp4",
+    captions: "/videos/help/skip-counting.vtt",
+  },
+  "3/math/time": {
+    id: "telling-time",
+    title: "Telling time",
+    seconds: 41,
+    src: "/videos/help/telling-time.mp4",
+    captions: "/videos/help/telling-time.vtt",
+  },
+  "4/math/times-tables": {
+    id: "times-tables-tricks",
+    title: "Tricks for fives and nines",
+    seconds: 45,
+    src: "/videos/help/times-tables-tricks.mp4",
+    captions: "/videos/help/times-tables-tricks.vtt",
+  },
+  "3/math/numbers-to-1000": {
+    id: "hundreds-tens-ones",
+    title: "Hundreds, tens and ones",
+    seconds: 40,
+    src: "/videos/help/hundreds-tens-ones.mp4",
+    captions: "/videos/help/hundreds-tens-ones.vtt",
+  },
+  "4/math/numbers-to-10000": {
+    id: "rounding",
+    title: "Rounding numbers",
+    seconds: 42,
+    src: "/videos/help/rounding.mp4",
+    captions: "/videos/help/rounding.vtt",
+  },
+  "4/math/fractions": {
+    id: "comparing-fractions",
+    title: "Comparing fractions",
+    seconds: 41,
+    src: "/videos/help/comparing-fractions.mp4",
+    captions: "/videos/help/comparing-fractions.vtt",
+  },
+  "5/math/divide": {
+    id: "division-remainders",
+    title: "Division with a remainder",
+    seconds: 32,
+    src: "/videos/help/division-remainders.mp4",
+    captions: "/videos/help/division-remainders.vtt",
+  },
+  "6/math/mixed-numbers-and-ratios": {
+    id: "ratios",
+    title: "What a ratio is",
+    seconds: 34,
+    src: "/videos/help/ratios.mp4",
+    captions: "/videos/help/ratios.vtt",
+  },
+  "6/math/equations": {
+    id: "order-of-operations",
+    title: "Order of operations",
+    seconds: 44,
+    src: "/videos/help/order-of-operations.mp4",
+    captions: "/videos/help/order-of-operations.vtt",
+  },
+  "7/math/integer-add-subtract": {
+    id: "negative-numbers",
+    title: "Adding with negative numbers",
+    seconds: 42,
+    src: "/videos/help/negative-numbers.mp4",
+    captions: "/videos/help/negative-numbers.vtt",
+  },
+  "7/math/two-step-equations": {
+    id: "two-step-equations",
+    title: "Solving two-step equations",
+    seconds: 36,
+    src: "/videos/help/two-step-equations.mp4",
+    captions: "/videos/help/two-step-equations.vtt",
   },
 };
 

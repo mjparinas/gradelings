@@ -1,0 +1,6 @@
+A three digit number is made of hundreds, tens and ones.
+The three is in the hundreds place. It means three hundreds. That is three hundred.
+The four is in the tens place. It means four tens, which is forty.
+The seven is in the ones place. It means seven ones.
+Put them together. Three hundred plus forty plus seven makes three hundred forty-seven.
+Try another. Two hundreds, five tens and nine ones. That is two hundred, plus fifty, plus nine, which makes two hundred fifty-nine.
