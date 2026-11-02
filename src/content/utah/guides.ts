@@ -201,6 +201,10 @@ export const UTAH_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-K in Utah is the year before kindergarten, for children who are 4. Utah's public preschool programs follow the Utah Core State Standards for Early Learning, Ages 3 to 5. Children learn through play: counting, shapes and patterns, letters, sounds and rhymes, plus the first ideas about weather, living things, community and getting along.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for counting small groups, naming letters, hearing rhymes, taking turns and talking about feelings.",
+    },
     k: {
       overview: "Kindergarten in Utah is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. Science looks at weather, sunlight, pushes and pulls and what living things need, and social studies is about families, traditions, maps, rules and needs and wants. Teachers check early reading and math with short Acadience checks during the year.",
       lookFor: "Many Utah schools use skills-based report cards in the early grades. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",
