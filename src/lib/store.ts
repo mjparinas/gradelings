@@ -169,6 +169,7 @@ export const useStore = create<State>()((set, get) => ({
 
   init: async () => {
     if (get().ready) return;
+    // A failed read (storage blocked or broken) must not leave the app on "Getting ready…" for good: start empty instead.
     const [deviceId, profiles, activeId, settings, family, pin, sync, classwork, events] = await Promise.all([
       localdb.getKV<string>("deviceId"),
       localdb.getKV<Profile[]>("profiles"),
@@ -179,7 +180,7 @@ export const useStore = create<State>()((set, get) => ({
       localdb.getKV<SyncState>("sync"),
       localdb.getKV<Classwork[]>("classwork"),
       localdb.allEvents(),
-    ]);
+    ]).catch(() => [undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined, [] as AppEvent[]] as const);
     const id = deviceId ?? newId();
     if (!deviceId) save("deviceId", id);
     const fam = family ?? newFamily();

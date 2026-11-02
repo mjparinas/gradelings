@@ -289,6 +289,21 @@ describe("localdb on IndexedDB", () => {
     expect(await db.getKV("k")).toBe(1);
   });
 
+  it("works from memory when Safari never answers the open request", async () => {
+    vi.useFakeTimers();
+    try {
+      vi.stubGlobal("indexedDB", { open: () => new FakeRequest() });
+      const db = await load();
+      const read = db.getKV("k");
+      await vi.advanceTimersByTimeAsync(db.OPEN_TIMEOUT_MS + 1);
+      expect(await read).toBeUndefined();
+      await db.setKV("k", 2);
+      expect(await db.getKV("k")).toBe(2);
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
   it("works from memory when opening is blocked or throws", async () => {
     vi.stubGlobal("indexedDB", {
       open() {
