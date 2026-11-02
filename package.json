@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@libsql/client": "^0.18.0",
-    "@sentry/nextjs": "^11.8.0",
+    "@sentry/nextjs": "^11.10.0",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
     "canvas-confetti": "^1.9.4",
@@ -27,7 +27,7 @@
     "react-dom": "19.3.1",
     "sanitize-html": "2.18.1",
     "server-only": "^0.0.1",
-    "zustand": "^5.0.15"
+    "zustand": "^5.0.16"
   },
   "overrides": {
     "qs": "^6.17.1",
@@ -38,15 +38,15 @@
   "devDependencies": {
     "@axe-core/playwright": "^4.14.0",
     "@diffusionstudio/piper-wasm": "1.0.0",
-    "@stryker-mutator/api": "10.0.0",
-    "@stryker-mutator/core": "10.0.0",
-    "@stryker-mutator/vitest-runner": "10.0.0",
+    "@stryker-mutator/api": "10.1.1",
+    "@stryker-mutator/core": "10.1.1",
+    "@stryker-mutator/vitest-runner": "10.1.1",
     "@tailwindcss/turbopack": "^4",
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.3",
     "@testing-library/user-event": "^14.6.8",
     "@types/canvas-confetti": "^1.9.0",
-    "@types/node": "26.6.5",
+    "@types/node": "26.6.6",
     "@types/react": "19.3.0",
     "@types/react-dom": "^19",
     "@types/sanitize-html": "^2.16.2",
@@ -56,7 +56,7 @@
     "eslint-config-next": "16.4.3",
     "jsdom": "^30.1.3",
     "jsqr": "1.4.0",
-    "onnxruntime-web": "1.30.0",
+    "onnxruntime-web": "1.31.1",
     "playwright": "^1.56.1",
     "tailwindcss": "^4",
     "typescript": "npm:@typescript/typescript6@^6.0.2",
