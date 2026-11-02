@@ -120,6 +120,12 @@ export const sounds = {
     [523, 659, 784, 1047].forEach((f, i) => tone(f, i * 0.07, 0.18, "square", 0.05));
     tone(1568, 0.3, 0.45, "sine", 0.14);
   }),
+  /** A warm rising run for a streak milestone. */
+  streakMoment: loud(() => {
+    vibrate(buzz.levelUp);
+    SCALE.slice(0, 7).forEach((f, i) => tone(f, i * 0.08, 0.22, "triangle", 0.09));
+    tone(SCALE[8], 0.65, 0.6, "sine", 0.13);
+  }),
   /** A soft tick for countdowns. */
   tick: loud(() => tone(1200, 0, 0.04, "square", 0.025)),
   /** Wrong in a fast game: a quick, low boop. */
