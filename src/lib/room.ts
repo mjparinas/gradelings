@@ -2,6 +2,8 @@
 // like anything in the shop (a `buy` event, so ownership merges across devices), and where each one
 // sits is a small per-child setting on the profile.
 
+import type { HolidayId } from "./holidays";
+
 export type RoomSlot = "wall" | "floor" | "decor" | "lamp" | "plant" | "corner" | "toy";
 
 export interface RoomItem {
@@ -14,6 +16,8 @@ export interface RoomItem {
   /** Background for walls and floors. */
   paint?: string;
   unlock?: { level: number; label: string };
+  /** A holiday item: it can be bought only while that holiday's theme is on, and is kept for good once bought. */
+  holiday?: HolidayId;
 }
 
 export const ROOM_SLOTS: { slot: RoomSlot; label: string; icon: string; /** Where it sits in the scene, as percentages of its width and height, and a font size in px. */ at?: { x: number; y: number; size: number } }[] = [
@@ -123,7 +127,23 @@ export const ROOM_ITEMS: RoomItem[] = [
   { id: "room-toy-wand", slot: "toy", name: "Magic wand", cost: 200, icon: "🪄", unlock: { level: 10, label: "Reach level 10" } },
   { id: "room-toy-ufo", slot: "toy", name: "Flying saucer", cost: 250, icon: "🛸", unlock: { level: 15, label: "Reach level 15" } },
   { id: "room-toy-dragon", slot: "toy", name: "Dragon", cost: 350, icon: "🐉", unlock: { level: 20, label: "Reach level 20" } },
+
+  // Holiday keepsakes: on sale only while the holiday's theme is on (src/lib/holidays.ts), kept for good once bought.
+  { id: "room-holiday-valentines", slot: "decor", name: "Love letter", cost: 60, icon: "💌", holiday: "valentines" },
+  { id: "room-holiday-stpatricks", slot: "plant", name: "Lucky clover", cost: 60, icon: "🍀", holiday: "stpatricks" },
+  { id: "room-holiday-easter", slot: "toy", name: "Hatching chick", cost: 60, icon: "🐣", holiday: "easter" },
+  { id: "room-holiday-halloween", slot: "lamp", name: "Glowing pumpkin", cost: 60, icon: "🎃", holiday: "halloween" },
+  { id: "room-holiday-thanksgiving", slot: "decor", name: "Autumn leaves", cost: 60, icon: "🍂", holiday: "thanksgiving" },
+  { id: "room-holiday-christmas", slot: "plant", name: "Little fir tree", cost: 60, icon: "🎄", holiday: "christmas" },
+  { id: "room-holiday-lunarnewyear", slot: "decor", name: "Red envelope", cost: 60, icon: "🧧", holiday: "lunarnewyear" },
+  { id: "room-holiday-diwali", slot: "lamp", name: "Diya lamp", cost: 60, icon: "🪔", holiday: "diwali" },
+  { id: "room-holiday-eid", slot: "toy", name: "Crescent lantern", cost: 60, icon: "🌙", holiday: "eid" },
 ];
+
+/** Items the picker offers: everything normal, plus a holiday item while its holiday is on or once it is owned. */
+export function roomItemsFor(slot: RoomSlot, owned: string[], holiday: HolidayId | null): RoomItem[] {
+  return ROOM_ITEMS.filter((i) => i.slot === slot && (!i.holiday || i.holiday === holiday || owned.includes(i.id)));
+}
 
 export function getRoomItem(id: string | undefined): RoomItem | undefined {
   return ROOM_ITEMS.find((i) => i.id === id);

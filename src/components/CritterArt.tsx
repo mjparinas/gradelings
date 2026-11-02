@@ -1,7 +1,7 @@
 // The pure SVG drawing of every critter, with no hooks, so server code (share
 // images) can draw one too. `Critter` in Critter.tsx adds motion and eye-follow.
 
-import { currentHoliday, type HolidayId } from "@/lib/holidays";
+import type { HolidayId } from "@/lib/holidays";
 import type { CSSProperties } from "react";
 
 // The mascot cast, all drawn from one parametric SVG so they share a style,
@@ -568,6 +568,49 @@ export function HolidayHat({ holiday }: { holiday: HolidayId }) {
           {heart(126, 16, 1.5, 14, "#ff4f7b")}
         </g>
       );
+    case "lunarnewyear":
+      return (
+        <g data-holiday="lunarnewyear">
+          <path d="M62 44 Q100 30 138 44" fill="none" stroke="#d93a3a" strokeWidth="7" strokeLinecap="round" />
+          <g>
+            <path d="M82 38 L82 20" stroke="#f0bd2a" strokeWidth="2.5" strokeLinecap="round" />
+            <ellipse cx="82" cy="26" rx="11" ry="9" fill="#d93a3a" />
+            <rect x="77" y="17" width="10" height="3" rx="1.5" fill="#f0bd2a" />
+            <path d="M82 35 L82 44" stroke="#f0bd2a" strokeWidth="2" strokeLinecap="round" />
+          </g>
+          <g>
+            <path d="M118 38 L118 20" stroke="#f0bd2a" strokeWidth="2.5" strokeLinecap="round" />
+            <ellipse cx="118" cy="26" rx="11" ry="9" fill="#d93a3a" />
+            <rect x="113" y="17" width="10" height="3" rx="1.5" fill="#f0bd2a" />
+            <path d="M118 35 L118 44" stroke="#f0bd2a" strokeWidth="2" strokeLinecap="round" />
+          </g>
+          <circle cx="100" cy="30" r="9" fill="#f0bd2a" />
+          <rect x="97" y="27" width="6" height="6" fill="#d93a3a" />
+        </g>
+      );
+    case "diwali":
+      return (
+        <g data-holiday="diwali">
+          <path d="M62 44 Q100 30 138 44" fill="none" stroke="#e8741c" strokeWidth="6" strokeLinecap="round" />
+          <circle cx="72" cy="40" r="6" fill="#f0bd2a" />
+          <circle cx="84" cy="35" r="6" fill="#e8741c" />
+          <circle cx="116" cy="35" r="6" fill="#e8741c" />
+          <circle cx="128" cy="40" r="6" fill="#f0bd2a" />
+          <path d="M88 32 Q100 38 112 32 L108 24 Q100 28 92 24 Z" fill="#b8541a" />
+          <path d="M100 22 Q92 12 100 2 Q108 12 100 22 Z" fill="#ffd166" />
+          <path d="M100 20 Q96 14 100 8 Q104 14 100 20 Z" fill="#ff8a1f" />
+        </g>
+      );
+    case "eid":
+      return (
+        <g data-holiday="eid">
+          <path d="M62 44 Q100 30 138 44" fill="none" stroke="#1f8f8a" strokeWidth="6" strokeLinecap="round" />
+          <path d="M92 30 A16 16 0 1 1 108 30 A12 12 0 1 0 92 30 Z" fill="#f0bd2a" />
+          <path d="M122 14 l2.6 5.6 6 .7 -4.5 4.1 1.2 6 -5.3 -3 -5.3 3 1.2 -6 -4.5 -4.1 6 -.7 Z" fill="#ffd166" />
+          <circle cx="76" cy="38" r="3.5" fill="#f0bd2a" />
+          <circle cx="124" cy="38" r="3.5" fill="#f0bd2a" />
+        </g>
+      );
     case "thanksgiving":
       return (
         <g data-holiday="thanksgiving">
@@ -581,7 +624,8 @@ export function HolidayHat({ holiday }: { holiday: HolidayId }) {
   }
 }
 
-export function CritterSvg({ id, mood = "happy", stage = 1, holiday = currentHoliday() }: { id: string; mood?: Mood; stage?: number; holiday?: HolidayId | null }) {
+/** The drawing itself. A hat is worn only when `holiday` is passed; `CritterSvg` in Critter.tsx picks the current one. */
+export function CritterDrawing({ id, mood = "happy", stage = 1, holiday = null }: { id: string; mood?: Mood; stage?: number; holiday?: HolidayId | null }) {
   const c = getCritter(id);
   const headFill = c.extras.includes("panda") ? "#ffffff" : c.fur;
   return (

@@ -15,6 +15,10 @@ import { getUnitRef } from "@/content";
 import type { Question } from "@/content/types";
 import { burstFrom, celebrate, floatText, replay } from "@/lib/juice";
 import { pick } from "@/content/random";
+import { getSubjectMeta } from "@/content/subjects";
+import { buddyFact, factSubjectFor } from "@/lib/buddyFacts";
+import { nudgeFor, praiseFor } from "@/lib/feedback";
+import { streakMoment } from "@/lib/streakMoments";
 import { activeFocus } from "@/lib/focus";
 import { goalBoostUnits } from "@/lib/goalPlan";
 import { canUse } from "@/lib/plan";
@@ -50,8 +54,6 @@ import { timerChoice } from "@/lib/timers";
 import { isLivePaused } from "@/lib/livePause";
 import { clearUnfinished, isResumable, saveUnfinished, unfinishedFor, type Unfinished } from "@/lib/resume";
 
-const PRAISE = ["Great job!", "You got it!", "Super!", "Awesome!", "Way to go!", "Nailed it!", "Brilliant!"];
-const NUDGE = ["Almost! Try again.", "So close! Have another go.", "Good try! Look again."];
 
 export function QuestionBody(props: QuestionProps<Question>) {
   const { q } = props;
@@ -354,8 +356,7 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
       }
       setStatus("correct");
       setMood("cheer");
-      const praise = newRun >= 3 ? `${newRun} in a row! 🔥` : pick(PRAISE);
-      setMessage(praise);
+      setMessage(praiseFor({ run: newRun, comeback: misses > 0, helped: misses === 0 && helped }));
       return;
     }
 
@@ -380,7 +381,7 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
     } else {
       setStatus("retry");
       setMood("oops");
-      setMessage(pick(NUDGE));
+      setMessage(nudgeFor());
     }
   }
 
@@ -480,7 +481,7 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
         </button>
       </header>
 
-      <section ref={stage} key={index} className={`flex flex-1 flex-col gap-5 py-5 short:gap-3 short:py-3 ${run === 11 ? "animate-flip" : ""}`}>
+      <section ref={stage} key={index} className={`flex flex-1 flex-col gap-5 py-5 short:gap-3 short:py-3 ${run === 11 ? "animate-flip" : index > startAt ? "animate-question-in" : ""}`}>
         <div className="flex animate-rise-in items-start gap-2 sm:gap-4">
           <Critter id={guide && band !== "little" ? subjectGuide(guide, companion) : companion} mood={mood} size={band === "little" ? 110 : 88} className="sm:hidden short:hidden" />
           <Critter id={guide && band !== "little" ? subjectGuide(guide, companion) : companion} mood={mood} size={band === "little" ? 140 : 116} className="hidden sm:block short:hidden" />
@@ -718,10 +719,18 @@ function Summary({ plan, results, startDerived }: { plan: Plan; results: Result[
   const facts = factSet ? factSummary(factSet, d.facts) : undefined;
   const factsBefore = factSet ? factSummary(factSet, startDerived.facts).known : 0;
   const celebration = celebrationOf(profile.confetti);
+  const factsOn = useFlag("buddy-facts");
+  const enabled = useChildSettings()?.enabledSubjects ?? ["math", "language", "science", "social"];
+  const factSeed = `${profile.id}${dayKey(now)}${plan.scope}${total}`;
+  const factSubject = unit?.course.subject ?? factSubjectFor(enabled, factSeed);
+  const factText = factsOn && total > 0 && plan.mode !== "speed" && plan.mode !== "facts" && factSubject ? buddyFact(factSubject, factSeed) : undefined;
+  const fact = factText && factSubject ? { text: factText, critter: getSubjectMeta(factSubject).mascot } : undefined;
+  const moment = total > 0 ? streakMoment(startDerived.streak?.current ?? 0, d.streak?.current ?? 0) : undefined;
 
   useEffect(() => {
     if (total === 0) return;
     sounds.complete();
+    if (moment) setTimeout(() => sounds.streakMoment(), 600);
     celebrate(celebration.emoji, celebration.pattern);
     const timers = Array.from({ length: stars }, (_, i) =>
       setTimeout(() => {
@@ -778,6 +787,26 @@ function Summary({ plan, results, startDerived }: { plan: Plan; results: Result[
           <span className="rounded-full bg-[#ede9fe] px-4 py-2 text-lg font-bold text-[#6d3fd6]">+{xp} XP</span>
           <span className="rounded-full bg-[#fff4cc] px-4 py-2 text-lg font-bold text-[#7a5700]">🪙 +{coins}</span>
         </div>
+
+        {fact && (
+          <div className="card flex w-full items-center gap-3 p-3 text-left animate-rise-in" style={{ animationDelay: "1.3s" }} data-testid="buddy-fact">
+            <Critter id={fact.critter} mood="happy" size={56} />
+            <div>
+              <p className="text-sm font-bold text-ink-soft">Did you know?</p>
+              <p className="font-read text-lg">{say(fact.text)}</p>
+            </div>
+          </div>
+        )}
+
+        {moment && (
+          <div className="card flex w-full items-center gap-4 p-4 text-left animate-rise-in" style={{ animationDelay: "1.4s" }}>
+            <span aria-hidden="true" className="text-5xl animate-wiggle">🔥</span>
+            <div>
+              <p className="text-2xl font-bold">{moment.title}</p>
+              <p className="font-read text-base text-ink-soft">{moment.line}</p>
+            </div>
+          </div>
+        )}
 
         {unit && info && (
           <div className="card flex w-full items-center gap-4 p-4 text-left animate-rise-in" style={{ animationDelay: "1.5s" }}>

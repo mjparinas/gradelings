@@ -1,8 +1,8 @@
 // @vitest-environment jsdom
-import { render, screen } from "@testing-library/react";
+import { act, render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import { getSubjectMeta } from "@/content/subjects";
-import { BackLink, BackgroundDecor, LoadingScreen, ProgressBar, Stars, subjectVars } from "./ui";
+import { BackLink, BackgroundDecor, LOADING_LINES, LoadingScreen, ProgressBar, Stars, subjectVars } from "./ui";
 
 // next.config.ts sets trailingSlash, which next/link reads from this variable.
 vi.stubEnv("__NEXT_TRAILING_SLASH", "1");
@@ -71,5 +71,21 @@ describe("BackgroundDecor and LoadingScreen", () => {
   it("tells the child the app is getting ready", () => {
     render(<LoadingScreen />);
     expect(screen.getByRole("main")).toHaveTextContent("Getting ready…");
+  });
+});
+
+describe("LoadingScreen lines", () => {
+  it("starts with the usual line and moves on to friendlier ones", async () => {
+    vi.useFakeTimers();
+    try {
+      render(<LoadingScreen />);
+      expect(screen.getByText("Getting ready…")).toBeInTheDocument();
+      await act(async () => {
+        vi.advanceTimersByTime(2900);
+      });
+      expect(screen.getByText(LOADING_LINES[1])).toBeInTheDocument();
+    } finally {
+      vi.useRealTimers();
+    }
   });
 });

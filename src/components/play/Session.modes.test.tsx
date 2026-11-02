@@ -282,7 +282,7 @@ describe("Session extras", () => {
     right();
     expect(screen.getByLabelText("2 in a row")).toBeInTheDocument();
     click("Yes");
-    expect(screen.getByText("3 in a row! 🔥")).toBeInTheDocument();
+    expect(screen.getByText(/3 in a row/)).toBeInTheDocument();
   });
 
   it("each subject's guide hosts mixed modes", () => {

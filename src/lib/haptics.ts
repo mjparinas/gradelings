@@ -19,6 +19,9 @@ export const buzz = {
   correct: [10, 40, 18],
   tryAgain: 28,
   pop: 10,
+  levelUp: [12, 50, 12, 50, 30],
+  trophy: [14, 60, 22],
+  complete: [10, 40, 10, 40, 24],
 } satisfies Record<string, Pattern>;
 
 export function vibrate(pattern: Pattern) {

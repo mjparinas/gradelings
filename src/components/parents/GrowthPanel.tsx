@@ -11,6 +11,8 @@ import { useSay } from "@/lib/say";
 import { eventsFor, useDerived, useStore } from "@/lib/store";
 import { useNow } from "@/lib/useNow";
 import { Panel } from "./common";
+import { PrintCertificate } from "./Certificate";
+import { unitCertificate } from "@/lib/certificate";
 import { ShareMilestone } from "./ShareMilestone";
 
 const PERIODS = [30, 90, 180] as const;
@@ -73,6 +75,7 @@ export function GrowthPanel({ p }: { p: Profile }) {
                   {ref && LEVEL_WORDS[m.to] && getCourse(ref.course.grade, ref.course.subject, framework.id)?.units.some((u) => u.id === ref.unit.id && u.standards[framework.id]) && (
                     <ShareMilestone path={unitMilestonePath(framework.slug, gradeSlug(ref.course.grade), ref.course.subject, ref.unit.id, m.to)} what={`${LEVEL_WORDS[m.to].verb} in ${ref.unit.title}`} />
                   )}
+                  {ref && LEVEL_WORDS[m.to] && <PrintCertificate text={unitCertificate(p.name, ref.unit.title, m.to === 3 ? "Star" : "Tree")} companion={p.companion} label="Certificate" />}
                 </span>
               </li>
             );

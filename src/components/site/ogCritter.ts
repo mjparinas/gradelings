@@ -1,5 +1,5 @@
 import { isValidElement, type ReactNode } from "react";
-import { CritterSvg, type Mood } from "@/components/CritterArt";
+import { CritterDrawing, type Mood } from "@/components/CritterArt";
 
 // Share images draw the subject's guide from the same SVG the app uses. The
 // image renderer can't run CSS (eye-follow variables, animation classes), so
@@ -39,7 +39,7 @@ function markup(node: ReactNode): string {
 
 /** A critter as standalone SVG markup, sized `px` square. */
 export function critterSvg(id: string, mood: Mood = "cheer", px = 400): string {
-  return markup(CritterSvg({ id, mood }))
+  return markup(CritterDrawing({ id, mood }))
     .replace('width="100%" height="100%"', `width="${px}" height="${px}" xmlns="http://www.w3.org/2000/svg"`);
 }
 

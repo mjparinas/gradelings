@@ -193,6 +193,27 @@ describe("holiday hats", () => {
     }
   });
 
+  it("waits for hydration before wearing the current holiday's hat", async () => {
+    const { renderToString } = await import("react-dom/server");
+    const { hydrateRoot } = await import("react-dom/client");
+    const { setCurrentHoliday } = await import("@/lib/holidays");
+    setCurrentHoliday("christmas");
+    const html = renderToString(<CritterSvg id="ollie" />);
+    expect(html).not.toContain("data-holiday");
+    const el = document.createElement("div");
+    el.innerHTML = html;
+    document.body.append(el);
+    (globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT = true;
+    const errors = vi.spyOn(console, "error").mockImplementation(() => {});
+    const { act } = await import("react");
+    await act(async () => { hydrateRoot(el, <CritterSvg id="ollie" />); });
+    expect(errors.mock.calls.map((c) => String(c[0]).slice(0, 120))).toEqual([]);
+    expect(el.querySelector('[data-holiday="christmas"]')).not.toBeNull();
+    errors.mockRestore();
+    setCurrentHoliday(null);
+    el.remove();
+  });
+
   it("puts one on every character", () => {
     for (const c of CRITTERS) {
       const { container } = render(<CritterSvg id={c.id} holiday="christmas" />);

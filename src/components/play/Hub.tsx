@@ -1,5 +1,6 @@
 "use client";
 
+import { welcomeBack } from "@/lib/streakMoments";
 import { onColour } from "@/lib/contrast";
 import Link from "next/link";
 import { useState, type CSSProperties } from "react";
@@ -37,6 +38,7 @@ import { useAllowed } from "./useAllowed";
 import { useClasswork } from "./useClasswork";
 import { homeworkDone } from "@/lib/classroom";
 import { ParentNote } from "./ParentNote";
+import { GraduationCard } from "./GraduationCard";
 import { ResumeCard, useUnfinished } from "./ResumeCard";
 import { ClassGoalCard } from "./ClassGoalCard";
 import { RewardCard, TogetherCard } from "./FamilyCards";
@@ -113,6 +115,8 @@ export function Hub() {
 
   // Welcome-back and streak copy is always warm and forward-looking, never about something lost.
   const returning = d.totals.answers > 0 && d.streak.current === 0 && d.activeDays > 0 && !d.streak.activeToday;
+  const lastDay = Object.keys(d.days).filter((k) => d.days[k].answers > 0).sort().pop();
+  const daysAway = lastDay ? Math.max(0, Math.round((new Date(`${today}T12:00:00`).getTime() - new Date(`${lastDay}T12:00:00`).getTime()) / 86_400_000) - 1) : 0;
   const hello = greeting(profile.name, new Date(now).getHours());
   // Little kids get one short line: most can't read yet, and it is read aloud.
   const raw = little
@@ -124,7 +128,7 @@ export function Hub() {
     : minutes >= goal
       ? `You hit today's goal! ${minutes} minutes of learning. Amazing!`
       : returning
-        ? `*Yawn* You're back, ${profile.name}! You've practised ${d.activeDays} ${d.activeDays === 1 ? "day" : "days"} so far. Let's start a new streak! 🔥`
+        ? (welcomeBack(profile.name, daysAway) ?? `*Yawn* You're back, ${profile.name}! You've practised ${d.activeDays} ${d.activeDays === 1 ? "day" : "days"} so far. Let's start a new streak! 🔥`)
         : d.streak.current > 1 && !d.streak.activeToday
           ? d.streak.saved
             ? `A rest-day shield kept your ${d.streak.current}-day streak safe. 🛡️ Play today to keep it going!`
@@ -240,6 +244,8 @@ export function Hub() {
         </span>
         <span className="text-4xl narrow:hidden">▶</span>
       </button>
+
+      <GraduationCard />
 
       {unfinished && <ResumeCard lesson={unfinished.lesson} onDismiss={unfinished.dismiss} little={little} />}
 

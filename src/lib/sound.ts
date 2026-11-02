@@ -109,6 +109,7 @@ export const sounds = {
   }),
   /** A console-style trophy chime; bigger for gold and platinum. */
   trophy: loud((big = false) => {
+    vibrate(buzz.trophy);
     tone(1319, 0, 0.12, "sine", 0.12);
     tone(1760, 0.09, 0.35, "sine", 0.14);
     if (big) {
@@ -117,8 +118,15 @@ export const sounds = {
     }
   }),
   levelUp: loud(() => {
+    vibrate(buzz.levelUp);
     [523, 659, 784, 1047].forEach((f, i) => tone(f, i * 0.07, 0.18, "square", 0.05));
     tone(1568, 0.3, 0.45, "sine", 0.14);
+  }),
+  /** A warm rising run for a streak milestone. */
+  streakMoment: loud(() => {
+    vibrate(buzz.levelUp);
+    SCALE.slice(0, 7).forEach((f, i) => tone(f, i * 0.08, 0.22, "triangle", 0.09));
+    tone(SCALE[8], 0.65, 0.6, "sine", 0.13);
   }),
   /** A soft tick for countdowns. */
   tick: loud(() => tone(1200, 0, 0.04, "square", 0.025)),
@@ -128,6 +136,7 @@ export const sounds = {
     tone(220, 0, 0.12, "triangle", 0.1, 150);
   },
   complete: loud(() => {
+    vibrate(buzz.complete);
     [523, 659, 784, 1047, 1319].forEach((f, i) => tone(f, i * 0.1, 0.35, "sine", 0.15));
   }),
 };

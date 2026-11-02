@@ -8,6 +8,8 @@ import { useSay } from "@/lib/say";
 import { cardDismissed, dismissCard, gradeUpFor, reportCardSeason, schoolYearOf, summerCardId, summerPeekFor } from "@/lib/schoolYear";
 import { useProfiles, useStore } from "@/lib/store";
 import { useNow } from "@/lib/useNow";
+import { gradeCertificate } from "@/lib/certificate";
+import { PrintCertificate } from "./Certificate";
 import { Panel } from "./common";
 
 // Cards on the Overview that follow the school year (src/lib/schoolYear.ts): move each child up a grade when
@@ -22,6 +24,26 @@ function GradeUp({ p, now }: { p: Profile; now: number }) {
   const say = useSay();
   const updateProfile = useStore((s) => s.updateProfile);
   const next = gradeUpFor(p, now);
+  const [movedFrom, setMovedFrom] = useState<string | null>(null);
+  if (movedFrom)
+    return (
+      <Panel className="mb-5 border-[#25b47e]/40 bg-[#eefaf4]">
+        <div className="flex items-start gap-3">
+          <span className="text-3xl" aria-hidden="true">
+            🎓
+          </span>
+          <div className="flex-1">
+            <p className="font-bold">
+              {p.name} is in {gradeLabel(p.grade, p.framework)}! Congratulations!
+            </p>
+            <p className="font-read text-sm">A certificate for the fridge, to celebrate finishing {movedFrom}.</p>
+            <div className="mt-3">
+              <PrintCertificate text={gradeCertificate(p.name, movedFrom)} companion={p.companion} label="Print certificate" className="bg-[#253047] !text-white" />
+            </div>
+          </div>
+        </div>
+      </Panel>
+    );
   if (!next) return null;
   const nextName = gradeLabel(next, p.framework);
   const current = gradeLabel(p.grade, p.framework);
@@ -37,7 +59,10 @@ function GradeUp({ p, now }: { p: Profile; now: number }) {
           </p>
           <p className="font-read text-sm">{say(`A new school year has started. Moving up gives ${p.name} this year's lessons; everything practised so far is kept.`)}</p>
           <div className="mt-3 flex flex-wrap gap-2">
-            <button type="button" onClick={() => updateProfile(p.id, { grade: next })} className={`${btn} bg-[#253047] text-white`}>
+            <button type="button" onClick={() => {
+                setMovedFrom(current);
+                updateProfile(p.id, { grade: next });
+              }} className={`${btn} bg-[#253047] text-white`}>
               Move up to {nextName}
             </button>
             <button type="button" onClick={() => updateProfile(p.id, { gradeYear: schoolYearOf(now) })} className={`${btn} border border-line bg-white`}>
