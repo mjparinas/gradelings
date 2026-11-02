@@ -1,5 +1,5 @@
 import { cancelReason } from "@/lib/cancelReasons";
-import { appOrigin } from "@/server/auth";
+import { appOrigin, readText } from "@/server/auth";
 import { query, run } from "@/server/db";
 import { recordConsent } from "@/server/consent";
 import { alertNewCustomer, familyPath, sendAlert } from "@/server/alerts";
@@ -22,7 +22,7 @@ interface StripeEvent {
 }
 
 export async function POST(req: Request) {
-  const payload = await req.text();
+  const payload = (await readText(req, 1_000_000)) ?? ""; // a larger body can't carry a valid signature
   if (!verifyWebhook(payload, req.headers.get("stripe-signature"))) {
     await recordWebhook("stripe", false, null, "Bad signature");
     return new Response("Bad signature", { status: 400 });

@@ -1,4 +1,4 @@
-import { error, getSession, json, rateLimited, sameOrigin } from "@/server/auth";
+import { error, getSession, json, rateLimited, readJson, sameOrigin } from "@/server/auth";
 import { classGrades, teachingClass, validUnit } from "@/server/classroom";
 import { isFlagOn } from "@/server/flags";
 import { endLive, liveAnswers, openLive, cachedPreview, recentLive, revealLive, setLiveReadAloud, startLive, swapNextLive, type LiveRow } from "@/server/live";
@@ -45,7 +45,7 @@ export async function POST(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
   const session = await getSession(req);
   if (!session) return error(401, "Not signed in");
-  const body = (await req.json().catch(() => null)) as { classId?: unknown; unitKey?: unknown; readAloud?: unknown } | null;
+  const body = (await readJson(req)) as { classId?: unknown; unitKey?: unknown; readAloud?: unknown } | null;
   const found = typeof body?.classId === "string" ? await teachingClass(body.classId, session.parentId) : undefined;
   if (!found) return error(404, "Class not found");
   if (!(await isFlagOn("live-questions", session.familyId))) return error(503, "Live questions are switched off just now. Homework and practice still work.");
@@ -66,7 +66,7 @@ export async function PATCH(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
   const session = await getSession(req);
   if (!session) return error(401, "Not signed in");
-  const body = (await req.json().catch(() => null)) as { classId?: unknown; action?: unknown; on?: unknown } | null;
+  const body = (await readJson(req)) as { classId?: unknown; action?: unknown; on?: unknown } | null;
   const found = typeof body?.classId === "string" ? await teachingClass(body.classId, session.parentId) : undefined;
   if (!found) return error(404, "Class not found");
   if (body?.action === "read-aloud") {

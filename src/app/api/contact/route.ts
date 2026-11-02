@@ -1,4 +1,4 @@
-import { appOrigin, clientIp, error, json, rateLimited, sameOrigin } from "@/server/auth";
+import { appOrigin, clientIp, error, json, rateLimited, readJson, sameOrigin } from "@/server/auth";
 import { sendEmail } from "@/server/email";
 import { contactMessageEmail } from "@/server/emailTemplates";
 import { CONTACT_EMAIL } from "@/lib/brand";
@@ -11,7 +11,7 @@ import { checkContact, topicLabel } from "@/lib/contact";
  */
 export async function POST(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
-  const body = (await req.json().catch(() => null)) as Record<string, unknown> | null;
+  const body = (await readJson(req)) as Record<string, unknown> | null;
   // A field people never see: bots fill it in. They get the same answer as a real send.
   if (typeof body?.website === "string" && body.website.trim()) return json({ ok: true });
   const checked = checkContact(body);

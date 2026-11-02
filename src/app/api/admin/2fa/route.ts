@@ -1,5 +1,5 @@
 import { audit, getAdminSetup, twoFactorMode } from "@/server/admin";
-import { error, json, rateLimited, readCookieToken, sameOrigin, verifyPassword } from "@/server/auth";
+import { ADMIN_BODY_LIMIT, error, json, rateLimited, readCookieToken, readJson, sameOrigin, verifyPassword } from "@/server/auth";
 import { query } from "@/server/db";
 import { checkSecondFactor, confirmEnrolment, disableTwoFactor, regenerateBackupCodes, startEnrolment, twoFactorState } from "@/server/twoFactor";
 
@@ -20,7 +20,7 @@ export async function POST(req: Request) {
   const found = await getAdminSetup(req);
   if (!found) return error(404, "Not found");
   const { admin, ready } = found;
-  const body = (await req.json().catch(() => null)) as { action?: unknown; code?: unknown; password?: unknown } | null;
+  const body = (await readJson(req, ADMIN_BODY_LIMIT)) as { action?: unknown; code?: unknown; password?: unknown } | null;
   const code = typeof body?.code === "string" ? body.code.slice(0, 40) : "";
   const state = await twoFactorState(admin.parentId);
   const sessionHash = readCookieToken(req);

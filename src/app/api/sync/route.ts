@@ -2,7 +2,7 @@ import { countryOf, toCountryCode } from "@/lib/country";
 import type { InValue } from "@libsql/client";
 import type { AppEvent, ChildSettings, Profile } from "@/lib/model";
 import { MAX_CHILDREN } from "@/lib/plan";
-import { error, getSession, json, rateLimited, sameOrigin } from "@/server/auth";
+import { error, getSession, json, rateLimited, readJson, sameOrigin, SYNC_BODY_LIMIT } from "@/server/auth";
 import { batch, query, run } from "@/server/db";
 import { familyClasswork, isFramework } from "@/server/classroom";
 import { UPCOMING_FRAMEWORKS } from "@/content/frameworks";
@@ -55,7 +55,7 @@ export async function POST(req: Request) {
   const family = session.familyId;
   // The app syncs every couple of minutes and after changes; this is far above that.
   if (await rateLimited(`sync:${family}`, 300, 10 * 60_000)) return error(429, "Syncing too often. Try again in a few minutes.");
-  const body = (await req.json().catch(() => null)) as SyncBody | null;
+  const body = (await readJson(req, SYNC_BODY_LIMIT)) as SyncBody | null;
   if (!body) return error(400, "Bad request");
   const list = <T,>(v: unknown): T[] => (Array.isArray(v) ? (v as T[]) : []);
   let incomingEvents = list<AppEvent>(body.events).slice(0, MAX_EVENTS);

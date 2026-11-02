@@ -270,15 +270,70 @@ export function json(data: unknown, init: ResponseInit & { cookie?: string } = {
   return new Response(JSON.stringify(data), { ...init, headers });
 }
 
+/** Largest JSON body most routes read. Everything we accept from a browser is small; sync and admin have their own limits. */
+export const BODY_LIMIT = 64_000;
+/** The admin panel sends longer text (email bodies, saved replies). */
+export const ADMIN_BODY_LIMIT = 256_000;
+/** A sync batch of events and profiles; Vercel itself refuses more than about 4.5 MB. */
+export const SYNC_BODY_LIMIT = 4_000_000;
+
+/**
+ * Reads a JSON request body no larger than `limit` bytes, or returns null when it is missing, too big or not JSON. The
+ * declared length is checked first and the stream is cut off at the limit, so a client can't make a route buffer a huge body.
+ */
+export async function readJson(req: Request, limit = BODY_LIMIT): Promise<unknown> {
+  const text = await readText(req, limit);
+  if (text == null) return null;
+  try {
+    return JSON.parse(text);
+  } catch {
+    return null;
+  }
+}
+
+/** The request body as text, or null when it is larger than `limit` bytes. */
+export async function readText(req: Request, limit = BODY_LIMIT): Promise<string | null> {
+  const declared = Number(req.headers.get("content-length"));
+  if (Number.isFinite(declared) && declared > limit) return null;
+  if (!req.body) return "";
+  const reader = req.body.getReader();
+  const chunks: Uint8Array[] = [];
+  let size = 0;
+  for (;;) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    size += value.byteLength;
+    if (size > limit) {
+      await reader.cancel().catch(() => {});
+      return null;
+    }
+    chunks.push(value);
+  }
+  return Buffer.concat(chunks).toString("utf8");
+}
+
 export function error(status: number, message: string): Response {
   return json({ error: message }, { status });
 }
 
-/** A long-lived secret that lets an email's unsubscribe link work without signing in. */
+/** How long an unsubscribe link in a sent email keeps working (links made before they were hashed never expire). */
+const UNSUB_DAYS = 400;
+
+/**
+ * A secret that lets an email's unsubscribe link work without signing in. Each email gets its own random token and only its
+ * hash is stored (`unsub_tokens`), so the link can't be read back from the database. Links stay valid for 400 days.
+ */
 export async function unsubscribeToken(parentId: string): Promise<string> {
-  const rows = await query<{ unsub_token: string | null }>("SELECT unsub_token FROM parents WHERE id = ?", [parentId]);
-  if (rows[0]?.unsub_token) return rows[0].unsub_token;
   const token = randomBytes(24).toString("base64url");
-  await run("UPDATE parents SET unsub_token = ? WHERE id = ? AND unsub_token IS NULL", [token, parentId]);
-  return (await query<{ unsub_token: string }>("SELECT unsub_token FROM parents WHERE id = ?", [parentId]))[0].unsub_token;
+  const now = Date.now();
+  await run("INSERT INTO unsub_tokens (token_hash, parent_id, created_at) VALUES (?, ?, ?)", [sha(token), parentId, now]);
+  await run("DELETE FROM unsub_tokens WHERE parent_id = ? AND created_at IS NOT NULL AND created_at < ?", [parentId, now - UNSUB_DAYS * 86_400_000]);
+  return token;
+}
+
+/** The account an unsubscribe token belongs to, or null. */
+export async function unsubscribeOwner(token: string): Promise<string | null> {
+  if (!token || token.length > 100) return null;
+  const rows = await query<{ parent_id: string }>("SELECT parent_id FROM unsub_tokens WHERE token_hash = ?", [sha(token)]);
+  return rows[0]?.parent_id ?? null;
 }

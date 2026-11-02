@@ -1,4 +1,4 @@
-import { appOrigin, clientIp, createAuthToken, createSession, error, hashPassword, json, newId, rateLimited, sameOrigin, sessionCookie } from "@/server/auth";
+import { appOrigin, clientIp, createAuthToken, createSession, error, hashPassword, json, newId, rateLimited, readJson, sameOrigin, sessionCookie } from "@/server/auth";
 import { batch, query } from "@/server/db";
 import { sendEmail } from "@/server/email";
 import { verifyEmail } from "@/server/emailTemplates";
@@ -12,7 +12,7 @@ export async function POST(req: Request) {
   // The admin panel can pause sign-ups (the "signups" flag).
   if (!(await isFlagOn("signups", null))) return error(503, "New accounts are paused for a little while. Please try again later.");
   if (await rateLimited(`signup:${clientIp(req)}`, 5)) return error(429, "Too many attempts. Try again in a few minutes.");
-  const body = (await req.json().catch(() => null)) as { email?: string; password?: string; passwordless?: boolean; trialEndsAt?: number; referralCode?: string } | null;
+  const body = (await readJson(req)) as { email?: string; password?: string; passwordless?: boolean; trialEndsAt?: number; referralCode?: string } | null;
   const email = body?.email?.trim().toLowerCase() ?? "";
   const password = body?.password ?? "";
   // "Send me the reports" at the end of a lesson: an account from an email alone, like one made with Google. The

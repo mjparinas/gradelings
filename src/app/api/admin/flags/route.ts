@@ -1,4 +1,4 @@
-import { error, json } from "@/server/auth";
+import { ADMIN_BODY_LIMIT, error, json, readJson } from "@/server/auth";
 import { audit, requireAdmin } from "@/server/admin";
 import { flagStates, overrideCounts, setFlag } from "@/server/flags";
 import { FLAGS, flagDef } from "@/lib/flags";
@@ -20,7 +20,7 @@ export async function GET(req: Request) {
 export async function PUT(req: Request) {
   const gate = await requireAdmin(req);
   if ("response" in gate) return gate.response;
-  const body = (await req.json().catch(() => null)) as { key?: unknown; enabled?: unknown; rollout?: unknown } | null;
+  const body = (await readJson(req, ADMIN_BODY_LIMIT)) as { key?: unknown; enabled?: unknown; rollout?: unknown } | null;
   const def = typeof body?.key === "string" ? flagDef(body.key) : undefined;
   if (!def) return error(400, "Unknown flag.");
   if (typeof body!.enabled !== "boolean") return error(400, "Say whether the flag is on.");

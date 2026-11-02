@@ -138,10 +138,53 @@ describe("weekly email preference and unsubscribe", () => {
     const { unsubscribeToken } = await import("@/server/auth");
     const parentId = (await dbm.query<{ id: string }>("SELECT id FROM parents WHERE email = ?", ["pref-b@example.com"]))[0].id;
     const token = await unsubscribeToken(parentId);
-    expect(await unsubscribeToken(parentId)).toBe(token); // stable
+    const newer = await unsubscribeToken(parentId); // every email gets its own link, and an older email's link keeps working
+    expect(newer).not.toBe(token);
+    expect((await unsub.POST(req(`/api/email/unsubscribe/?token=${newer}`, "POST"))).status).toBe(200);
     expect((await unsub.POST(req("/api/email/unsubscribe/?token=wrong", "POST"))).status).toBe(400);
     expect((await unsub.POST(req(`/api/email/unsubscribe/?token=${token}`, "POST"))).status).toBe(200);
     expect(await (await prefs.GET(req("/api/account/prefs/", "GET", undefined, ok.cookie))).json()).toEqual({ weeklyReport: false, practiceReminders: false, adminMail: true });
+  });
+});
+
+describe("unsubscribe tokens at rest", () => {
+  it("stores only a hash, and turns an old plain-text token into one that still works", async () => {
+    const f = await family("unsub-hash@example.com");
+    await prefs.POST(req("/api/account/prefs/", "POST", { weeklyReport: true }, f.cookie));
+    const { unsubscribeToken } = await import("@/server/auth");
+    const parentId = (await dbm.query<{ id: string }>("SELECT id FROM parents WHERE email = ?", ["unsub-hash@example.com"]))[0].id;
+    const token = await unsubscribeToken(parentId);
+    const stored = await dbm.query<{ token_hash: string }>("SELECT token_hash FROM unsub_tokens WHERE parent_id = ?", [parentId]);
+    expect(stored.some((r) => r.token_hash === token)).toBe(false);
+    expect((await dbm.query("SELECT 1 FROM parents WHERE id = ? AND unsub_token IS NOT NULL", [parentId])).length).toBe(0);
+
+    // A token written before hashing: still in the parents row, as it was emailed.
+    await dbm.run("UPDATE parents SET unsub_token = ? WHERE id = ?", ["legacy-token-from-an-old-email", parentId]);
+    expect((await unsub.POST(req("/api/email/unsubscribe/?token=legacy-token-from-an-old-email", "POST"))).status).toBe(400);
+    await dbm.hashLegacyUnsubTokens(await dbm.db());
+    expect((await dbm.query("SELECT 1 FROM parents WHERE id = ? AND unsub_token IS NOT NULL", [parentId])).length).toBe(0);
+    expect((await unsub.POST(req("/api/email/unsubscribe/?token=legacy-token-from-an-old-email", "POST"))).status).toBe(200);
+    expect(await (await prefs.GET(req("/api/account/prefs/", "GET", undefined, f.cookie))).json()).toMatchObject({ weeklyReport: false });
+  });
+});
+
+describe("request body limits", () => {
+  it("refuses a JSON body over the limit, declared or streamed, and reads one under it", async () => {
+    const { readJson, readText } = await import("@/server/auth");
+    const big = JSON.stringify({ pad: "x".repeat(70_000) });
+    expect(await readJson(new Request("http://localhost/x", { method: "POST", body: big }))).toBeNull();
+    expect(await readJson(new Request("http://localhost/x", { method: "POST", body: big, headers: { "content-length": "5" } }))).toBeNull(); // lies about its size: cut at the limit
+    expect(await readJson(new Request("http://localhost/x", { method: "POST", body: big, headers: { "content-length": String(big.length) } }))).toBeNull();
+    expect(await readJson(new Request("http://localhost/x", { method: "POST", body: big }), 100_000)).toEqual({ pad: "x".repeat(70_000) });
+    expect(await readJson(new Request("http://localhost/x", { method: "POST", body: "not json" }))).toBeNull();
+    expect(await readText(new Request("http://localhost/x", { method: "POST" }))).toBe("");
+  });
+
+  it("answers an oversized body like a bad one", async () => {
+    const res = await login.POST(req("/api/auth/login/", "POST", { email: "a@example.com", password: "x".repeat(70_000) }));
+    expect(res.status).toBe(401);
+    const forgot = await signup.POST(req("/api/auth/signup/", "POST", { email: "huge@example.com", password: "x".repeat(70_000) }));
+    expect(forgot.status).toBe(400);
   });
 });
 

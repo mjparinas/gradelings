@@ -1,4 +1,4 @@
-import { appOrigin, error, json } from "@/server/auth";
+import { ADMIN_BODY_LIMIT, appOrigin, error, json, readJson } from "@/server/auth";
 import { CANCEL_CONFIRM, REFUND_CONFIRM } from "@/lib/adminBilling";
 import { audit, requireAdmin } from "@/server/admin";
 import { familyBilling, noteRefund } from "@/server/adminBilling";
@@ -37,7 +37,7 @@ export async function POST(req: Request) {
   const gate = await requireAdmin(req);
   if ("response" in gate) return gate.response;
   const admin = gate.admin.email;
-  const body = ((await req.json().catch(() => null)) ?? {}) as Body;
+  const body = ((await readJson(req, ADMIN_BODY_LIMIT)) ?? {}) as Body;
   const familyId = typeof body.familyId === "string" ? body.familyId : "";
   if (!(await isFamily(familyId))) return error(404, "No such family.");
   const log = (action: string, detail?: unknown) => audit(admin, action, familyId, detail);

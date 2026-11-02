@@ -1,4 +1,4 @@
-import { appOrigin, createAuthToken, error, json } from "@/server/auth";
+import { ADMIN_BODY_LIMIT, appOrigin, createAuthToken, error, json, readJson } from "@/server/auth";
 import { audit, requireAdmin } from "@/server/admin";
 import { familyRecipient, segmentAudience, sendMessage } from "@/server/adminEmail";
 import { query } from "@/server/db";
@@ -42,7 +42,7 @@ export async function POST(req: Request) {
   const gate = await requireAdmin(req);
   if ("response" in gate) return gate.response;
   const admin = gate.admin.email;
-  const body = ((await req.json().catch(() => null)) ?? {}) as Body;
+  const body = ((await readJson(req, ADMIN_BODY_LIMIT)) ?? {}) as Body;
   const origin = appOrigin(req);
 
   if (body.action === "verify") {

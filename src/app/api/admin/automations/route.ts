@@ -1,4 +1,4 @@
-import { error, json } from "@/server/auth";
+import { ADMIN_BODY_LIMIT, error, json, readJson } from "@/server/auth";
 import { audit, requireAdmin } from "@/server/admin";
 import { adminRecipients, alertSettings, saveAlertSettings } from "@/server/alerts";
 import { automationStatuses, getAutomation, saveAutomation } from "@/server/automations";
@@ -34,7 +34,7 @@ export async function POST(req: Request) {
   const gate = await requireAdmin(req);
   if ("response" in gate) return gate.response;
   const admin = gate.admin.email;
-  const body = ((await req.json().catch(() => null)) ?? {}) as Body;
+  const body = ((await readJson(req, ADMIN_BODY_LIMIT)) ?? {}) as Body;
 
   if (body.action === "alerts") {
     if (typeof body.instant !== "boolean" || typeof body.digest !== "boolean") return error(400, "Bad request");

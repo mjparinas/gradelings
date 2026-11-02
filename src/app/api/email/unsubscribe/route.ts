@@ -1,4 +1,4 @@
-import { clientIp, error, json, rateLimited } from "@/server/auth";
+import { clientIp, error, json, rateLimited, unsubscribeOwner } from "@/server/auth";
 import { run } from "@/server/db";
 
 /**
@@ -13,7 +13,8 @@ export async function POST(req: Request) {
   // Each email type turns off only itself, so unsubscribing from reminders keeps the weekly report.
   const kind = new URL(req.url).searchParams.get("kind");
   const column = kind === "reminders" ? "practice_reminders" : kind === "updates" ? "admin_mail" : kind === "class" ? "class_digest" : "weekly_report";
-  const changed = await run(`UPDATE parents SET ${column} = 0 WHERE unsub_token = ?`, [token]);
-  if (!changed) return error(400, "This link isn’t valid.");
+  const owner = await unsubscribeOwner(token);
+  if (!owner) return error(400, "This link isn’t valid.");
+  await run(`UPDATE parents SET ${column} = 0 WHERE id = ?`, [owner]);
   return json({ ok: true });
 }

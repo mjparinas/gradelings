@@ -36,6 +36,7 @@ export async function deleteFamilyData(f: string): Promise<void> {
   await releaseTeacherAccounts(accountIds);
   await removeStudentsOfOwner(accountIds);
   await batch([
+    { sql: "DELETE FROM unsub_tokens WHERE parent_id IN (SELECT id FROM parents WHERE family_id = ?)", args: [f] },
     { sql: "DELETE FROM auth_tokens WHERE parent_id IN (SELECT id FROM parents WHERE family_id = ?)", args: [f] },
     { sql: "DELETE FROM totp_backup_codes WHERE parent_id IN (SELECT id FROM parents WHERE family_id = ?)", args: [f] },
     ...childDataStatements(f),

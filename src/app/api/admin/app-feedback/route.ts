@@ -1,4 +1,4 @@
-import { error, json } from "@/server/auth";
+import { ADMIN_BODY_LIMIT, error, json, readJson } from "@/server/auth";
 import { audit, requireAdmin } from "@/server/admin";
 import { query, run } from "@/server/db";
 
@@ -34,7 +34,7 @@ export async function GET(req: Request) {
 export async function PATCH(req: Request) {
   const gate = await requireAdmin(req);
   if ("response" in gate) return gate.response;
-  const body = (await req.json().catch(() => null)) as { id?: unknown; remove?: unknown } | null;
+  const body = (await readJson(req, ADMIN_BODY_LIMIT)) as { id?: unknown; remove?: unknown } | null;
   if (typeof body?.id !== "string") return error(400, "Say which feedback.");
   if (body.remove === true) await run("DELETE FROM app_feedback WHERE id = ?", [body.id]);
   else await run("UPDATE app_feedback SET handled_at = ? WHERE id = ? AND handled_at IS NULL", [Date.now(), body.id]);

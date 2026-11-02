@@ -1,4 +1,4 @@
-import { error, json, sameOrigin, secretsMatch } from "@/server/auth";
+import { ADMIN_BODY_LIMIT, error, json, readJson, sameOrigin, secretsMatch } from "@/server/auth";
 import { audit, getAdmin } from "@/server/admin";
 import { createCode, disableCode, formatCode, listCodes, validateNewCode, type NewCode } from "@/server/codes";
 
@@ -33,7 +33,7 @@ export async function GET(req: Request) {
 export async function POST(req: Request) {
   const who = await caller(req);
   if (!who) return notFound();
-  const body = (await req.json().catch(() => null)) as NewCode | null;
+  const body = (await readJson(req, ADMIN_BODY_LIMIT)) as NewCode | null;
   if (!body || typeof body !== "object") return error(400, "Send a JSON body.");
   const problem = validateNewCode(body);
   if (problem) return error(400, problem);
@@ -47,7 +47,7 @@ export async function POST(req: Request) {
 export async function DELETE(req: Request) {
   const who = await caller(req);
   if (!who) return notFound();
-  const body = (await req.json().catch(() => null)) as { code?: unknown } | null;
+  const body = (await readJson(req, ADMIN_BODY_LIMIT)) as { code?: unknown } | null;
   if (typeof body?.code !== "string") return error(400, "Send the code to disable.");
   if (!(await disableCode(body.code))) return error(404, "No such active code.");
   await audit(who, "code.disable", body.code.toUpperCase());

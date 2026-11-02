@@ -1,4 +1,4 @@
-import { error, json } from "@/server/auth";
+import { ADMIN_BODY_LIMIT, error, json, readJson } from "@/server/auth";
 import { requireAdmin } from "@/server/admin";
 import { isCheckId, isStatusPageName, recordRestoreDrill, runCheck, runStatusPage, systemReport } from "@/server/systemHealth";
 
@@ -23,7 +23,7 @@ export async function GET(req: Request) {
 export async function POST(req: Request) {
   const gate = await requireAdmin(req);
   if ("response" in gate) return gate.response;
-  const body = (await req.json().catch(() => null)) as { restoreDrill?: unknown } | null;
+  const body = (await readJson(req, ADMIN_BODY_LIMIT)) as { restoreDrill?: unknown } | null;
   const day = typeof body?.restoreDrill === "string" && /^\d{4}-\d{2}-\d{2}$/.test(body.restoreDrill) ? body.restoreDrill : "";
   const at = day ? Date.parse(`${day}T12:00:00Z`) : NaN;
   if (!Number.isFinite(at)) return error(400, "Pick the day the restore was practised.");

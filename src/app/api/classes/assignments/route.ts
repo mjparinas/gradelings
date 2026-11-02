@@ -1,4 +1,4 @@
-import { error, getSession, json, sameOrigin } from "@/server/auth";
+import { error, getSession, json, readJson, sameOrigin } from "@/server/auth";
 import { classGrades, cleanAudience, cleanDueAt, cleanGoal, cleanStartsAt, MAX_ASSIGNMENTS, setAudience, teachingClass, validUnit } from "@/server/classroom";
 import { query, run } from "@/server/db";
 
@@ -11,7 +11,7 @@ export async function POST(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
   const session = await getSession(req);
   if (!session) return error(401, "Not signed in");
-  const body = (await req.json().catch(() => null)) as { classId?: unknown; unitKey?: unknown; dueAt?: unknown; startsAt?: unknown; goal?: unknown; students?: unknown; since?: unknown } | null;
+  const body = (await readJson(req)) as { classId?: unknown; unitKey?: unknown; dueAt?: unknown; startsAt?: unknown; goal?: unknown; students?: unknown; since?: unknown } | null;
   const cls = typeof body?.classId === "string" ? (await teachingClass(body.classId, session.parentId))?.cls : undefined;
   if (!cls) return error(404, "Class not found");
   const students = await cleanAudience(cls.id, body?.students);
@@ -37,7 +37,7 @@ export async function PATCH(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
   const session = await getSession(req);
   if (!session) return error(401, "Not signed in");
-  const body = (await req.json().catch(() => null)) as { classId?: unknown; unitKey?: unknown; dueAt?: unknown; startsAt?: unknown; goal?: unknown; students?: unknown } | null;
+  const body = (await readJson(req)) as { classId?: unknown; unitKey?: unknown; dueAt?: unknown; startsAt?: unknown; goal?: unknown; students?: unknown } | null;
   const cls = typeof body?.classId === "string" ? (await teachingClass(body.classId, session.parentId))?.cls : undefined;
   if (!cls) return error(404, "Class not found");
   const unitKey = typeof body?.unitKey === "string" ? body.unitKey : "";

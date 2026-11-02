@@ -1,5 +1,5 @@
 import { toCountryCode } from "@/lib/country";
-import { appOrigin, error, getSession, json, sameOrigin } from "@/server/auth";
+import { appOrigin, error, getSession, json, readJson, sameOrigin } from "@/server/auth";
 import { pendingDiscount, stripeCouponFor } from "@/server/codes";
 import { currencyFor, firstChargeAt } from "@/lib/plan";
 import { getFamilyRow } from "@/server/family";
@@ -11,7 +11,7 @@ export async function POST(req: Request) {
   if (!session) return error(401, "Please sign in first.");
   if (!session.verified) return error(403, "Please confirm your email first. We sent a link when you signed up; you can ask for another under Account.");
   if (!stripeConfigured()) return error(503, "Payments aren't set up yet.");
-  const body = (await req.json().catch(() => ({}))) as { interval?: string };
+  const body = ((await readJson(req)) ?? {}) as { interval?: string };
   const interval = body.interval === "year" ? "year" : "month";
   const family = await getFamilyRow(session.familyId);
   if (family && ["active", "trialing", "past_due"].includes(family.subscription_status ?? "")) {

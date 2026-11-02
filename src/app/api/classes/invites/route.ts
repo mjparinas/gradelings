@@ -1,4 +1,4 @@
-import { error, getSession, json, rateLimited, sameOrigin } from "@/server/auth";
+import { error, getSession, json, rateLimited, readJson, sameOrigin } from "@/server/auth";
 import { INVITE_TTL, MAX_CO_TEACHERS } from "@/server/classroom";
 import { query, run } from "@/server/db";
 
@@ -43,7 +43,7 @@ export async function POST(req: Request) {
   if (!session) return error(401, "Not signed in");
   if (!session.verified) return error(403, "Please confirm your email first. Co-teachers see children's first names and results, so we only allow it for confirmed accounts.");
   if (await rateLimited(`invite:${session.parentId}`, 30, 60 * 60_000)) return error(429, "Too many attempts. Try again later.");
-  const body = (await req.json().catch(() => null)) as { classId?: unknown } | null;
+  const body = (await readJson(req)) as { classId?: unknown } | null;
   const classId = typeof body?.classId === "string" ? body.classId : "";
   const invite = (await invitesFor(session.email, Date.now())).find((r) => r.class_id === classId);
   if (!invite) return error(404, "That invitation is no longer open.");

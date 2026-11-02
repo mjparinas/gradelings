@@ -1,4 +1,4 @@
-import { appOrigin, clearCookie, clientIp, error, getSession, json, rateLimited, sameOrigin, verifyPassword } from "@/server/auth";
+import { appOrigin, clearCookie, clientIp, error, getSession, json, rateLimited, readJson, sameOrigin, verifyPassword } from "@/server/auth";
 import { query } from "@/server/db";
 import { deleteFamilyData } from "@/server/deleteFamily";
 import { sendEmail } from "@/server/email";
@@ -17,7 +17,7 @@ export async function DELETE(req: Request) {
   const f = session.familyId;
   // Deleting is permanent, so it asks for the password again.
   if (await rateLimited(`delete:${session.parentId}:${clientIp(req)}`, 5, 60 * 60_000)) return error(429, "Too many attempts. Try again later.");
-  const body = (await req.json().catch(() => null)) as { password?: unknown; email?: unknown } | null;
+  const body = (await readJson(req)) as { password?: unknown; email?: unknown } | null;
   const stored = await query<{ password_hash: string }>("SELECT password_hash FROM parents WHERE id = ?", [session.parentId]);
   if (stored[0] && !stored[0].password_hash.startsWith("scrypt$")) {
     // A Google-only account has no password to type, so it confirms with its email and a recent sign-in instead.

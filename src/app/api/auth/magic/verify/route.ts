@@ -1,4 +1,4 @@
-import { clientIp, consumeAuthToken, createSession, error, json, rateLimited, sameOrigin, sessionCookie } from "@/server/auth";
+import { clientIp, consumeAuthToken, createSession, error, json, rateLimited, readJson, sameOrigin, sessionCookie } from "@/server/auth";
 import { query, run } from "@/server/db";
 import { getFamilyRow, toFamilyInfo } from "@/server/family";
 import { magicAccountId } from "@/server/magic";
@@ -9,7 +9,7 @@ const BAD = "This link has expired or was already used. Please ask for a new one
 export async function POST(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
   if (await rateLimited(`magic-verify:${clientIp(req)}`, 10)) return error(429, "Too many attempts. Try again in a few minutes.");
-  const body = (await req.json().catch(() => null)) as { token?: unknown } | null;
+  const body = (await readJson(req)) as { token?: unknown } | null;
   const parentId = await consumeAuthToken(typeof body?.token === "string" ? body.token : "", "magic");
   if (!parentId) return error(400, BAD);
   const rows = await query<{ family_id: string; email: string; email_verified_at: number | null }>("SELECT family_id, email, email_verified_at FROM parents WHERE id = ?", [parentId]);

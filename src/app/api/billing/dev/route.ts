@@ -1,4 +1,4 @@
-import { error, getSession, json, sameOrigin } from "@/server/auth";
+import { error, getSession, json, readJson, sameOrigin } from "@/server/auth";
 import { run } from "@/server/db";
 import { getFamilyRow, toFamilyInfo } from "@/server/family";
 import { devBillingAllowed } from "@/server/stripe";
@@ -9,7 +9,7 @@ export async function POST(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
   const session = await getSession(req);
   if (!session) return error(401, "Please sign in first.");
-  const body = (await req.json().catch(() => ({}))) as { action?: string; interval?: string };
+  const body = ((await readJson(req)) ?? {}) as { action?: string; interval?: string };
   const now = Date.now();
   if (body.action === "cancel") {
     await run("UPDATE families SET subscription_status = 'canceled', plan = 'free', cancelled_at = ?, updated_at = ? WHERE id = ?", [now, now, session.familyId]);

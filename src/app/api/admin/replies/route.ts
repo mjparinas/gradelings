@@ -1,4 +1,4 @@
-import { error, json } from "@/server/auth";
+import { ADMIN_BODY_LIMIT, error, json, readJson } from "@/server/auth";
 import { audit, requireAdmin } from "@/server/admin";
 import { getSetting, setSetting } from "@/server/payments";
 import { DEFAULT_REPLIES, repliesProblem, type SavedReply } from "@/lib/savedReplies";
@@ -21,7 +21,7 @@ export async function GET(req: Request) {
 export async function PUT(req: Request) {
   const gate = await requireAdmin(req);
   if ("response" in gate) return gate.response;
-  const body = (await req.json().catch(() => null)) as { replies?: unknown } | null;
+  const body = (await readJson(req, ADMIN_BODY_LIMIT)) as { replies?: unknown } | null;
   const problem = repliesProblem(body?.replies);
   if (problem) return error(400, problem);
   const replies = (body!.replies as SavedReply[]).map((r) => ({ id: r.id, title: r.title.trim(), body: r.body.trim() }));

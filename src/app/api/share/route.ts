@@ -1,5 +1,5 @@
 import { createHash, randomBytes } from "node:crypto";
-import { appOrigin, error, getSession, json, rateLimited, sameOrigin } from "@/server/auth";
+import { appOrigin, error, getSession, json, rateLimited, readJson, sameOrigin } from "@/server/auth";
 import { query, run } from "@/server/db";
 
 const sha = (s: string) => createHash("sha256").update(s).digest("hex");
@@ -13,7 +13,7 @@ export async function POST(req: Request) {
   const session = await getSession(req);
   if (!session) return error(401, "Sign in to share a report.");
   if (await rateLimited(`share:${session.parentId}`, 20, 60 * 60_000)) return error(429, "Too many links created. Try again later.");
-  const body = (await req.json().catch(() => null)) as { profileId?: unknown; days?: unknown } | null;
+  const body = (await readJson(req)) as { profileId?: unknown; days?: unknown } | null;
   const days = Number(body?.days);
   if (typeof body?.profileId !== "string" || !DAYS.includes(days)) return error(400, "Bad request");
   const owns = await query("SELECT 1 FROM profiles WHERE id = ? AND family_id = ?", [body.profileId, session.familyId]);

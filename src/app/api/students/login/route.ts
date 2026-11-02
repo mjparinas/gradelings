@@ -1,4 +1,4 @@
-import { clientIp, createSession, error, json, rateLimited, refundRateLimit, sameOrigin, sessionCookie } from "@/server/auth";
+import { clientIp, createSession, error, json, rateLimited, readJson, refundRateLimit, sameOrigin, sessionCookie } from "@/server/auth";
 import { sendAlert } from "@/server/alerts";
 import { normalizeCode } from "@/server/classroom";
 import { query, run } from "@/server/db";
@@ -37,7 +37,7 @@ export async function POST(req: Request) {
   const ip = clientIp(req);
   const network = `student-login:${ip}`;
   if (await rateLimited(network, WRONG_PER_NETWORK)) return error(429, TOO_MANY);
-  const body = (await req.json().catch(() => null)) as { code?: unknown; classCode?: unknown; studentCode?: unknown } | null;
+  const body = (await readJson(req)) as { code?: unknown; classCode?: unknown; studentCode?: unknown } | null;
   const classCode = normalizeCode(body?.classCode);
   const refunds = [network];
   let student: StudentRow | undefined;

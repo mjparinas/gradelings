@@ -1,7 +1,7 @@
 import { getFramework } from "@/content/frameworks";
 import type { FrameworkId, GradeId } from "@/content/types";
 import { regionKind } from "@/content/locale";
-import { error, getSession, json, rateLimited, sameOrigin } from "@/server/auth";
+import { error, getSession, json, rateLimited, readJson, sameOrigin } from "@/server/auth";
 import { classGrades, MAX_STUDENTS, normalizeCode } from "@/server/classroom";
 import { query, run } from "@/server/db";
 
@@ -25,7 +25,7 @@ export async function POST(req: Request) {
   const session = await getSession(req);
   if (!session) return error(401, "Sign in to join a class.");
   if (await rateLimited(`join:${session.parentId}`, 10, 60 * 60_000)) return error(429, "Too many tries. Try again later.");
-  const body = (await req.json().catch(() => null)) as { code?: unknown; profileId?: unknown } | null;
+  const body = (await readJson(req)) as { code?: unknown; profileId?: unknown } | null;
   const code = normalizeCode(body?.code);
   const profileId = typeof body?.profileId === "string" ? body.profileId : "";
   const owns = await query<{ data: string }>("SELECT data FROM profiles WHERE id = ? AND family_id = ?", [profileId, session.familyId]);

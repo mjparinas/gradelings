@@ -1,4 +1,4 @@
-import { error, json } from "@/server/auth";
+import { ADMIN_BODY_LIMIT, error, json, readJson } from "@/server/auth";
 import { audit, requireAdmin } from "@/server/admin";
 import { createPromo, deletePromo, listPromos, promoStatus, stopPromo, type NewPromo } from "@/server/promo";
 
@@ -14,7 +14,7 @@ export async function GET(req: Request) {
 export async function POST(req: Request) {
   const gate = await requireAdmin(req);
   if ("response" in gate) return gate.response;
-  const body = (await req.json().catch(() => null)) as NewPromo | null;
+  const body = (await readJson(req, ADMIN_BODY_LIMIT)) as NewPromo | null;
   if (!body || typeof body !== "object") return error(400, "Send a JSON body.");
   const made = await createPromo(body, gate.admin.email);
   if (typeof made === "string") return error(400, made);
@@ -26,7 +26,7 @@ export async function POST(req: Request) {
 export async function PATCH(req: Request) {
   const gate = await requireAdmin(req);
   if ("response" in gate) return gate.response;
-  const body = (await req.json().catch(() => null)) as { id?: unknown } | null;
+  const body = (await readJson(req, ADMIN_BODY_LIMIT)) as { id?: unknown } | null;
   if (typeof body?.id !== "string") return error(400, "Send the sale to stop.");
   if (!(await stopPromo(body.id))) return error(404, "No such running sale.");
   await audit(gate.admin.email, "promo.stop", body.id);
@@ -37,7 +37,7 @@ export async function PATCH(req: Request) {
 export async function DELETE(req: Request) {
   const gate = await requireAdmin(req);
   if ("response" in gate) return gate.response;
-  const body = (await req.json().catch(() => null)) as { id?: unknown } | null;
+  const body = (await readJson(req, ADMIN_BODY_LIMIT)) as { id?: unknown } | null;
   if (typeof body?.id !== "string") return error(400, "Send the sale to delete.");
   if (!(await deletePromo(body.id))) return error(404, "No such sale.");
   await audit(gate.admin.email, "promo.delete", body.id);
