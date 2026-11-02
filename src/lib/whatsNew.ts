@@ -34,6 +34,11 @@ export const WHATS_NEW: NewsDay[] = [
       },
       {
         kind: "new",
+        title: "Short help videos for members",
+        body: "After a second miss on a question, members can watch a short captioned video that explains the idea, then try one more. There are 36 for math, from Grade 1 to Grade 9, and they also play without a connection once watched.",
+      },
+      {
+        kind: "new",
         title: "Pre-K in more places",
         body: "Pre-K, the year before Kindergarten, is now available for more provinces and states, with picture-only questions and read-aloud.",
       },
