@@ -1,9 +1,22 @@
 "use client";
 
-import { useEffect, useRef, useState, type ReactNode } from "react";
-import { CritterSvg, type Mood } from "./CritterArt";
+import { useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
+import { currentHoliday, type HolidayId } from "@/lib/holidays";
+import { CritterDrawing, type Mood } from "./CritterArt";
 
 export * from "./CritterArt";
+
+const noSubscribe = () => () => {};
+
+/**
+ * A character wearing the current holiday's hat. The theme is set from the device's date in the browser, so the hat
+ * is chosen after hydration (the server snapshot is "no hat") to match the prerendered page. Pass `holiday`
+ * (or null) to choose one outright.
+ */
+export function CritterSvg({ holiday, ...rest }: { id: string; mood?: Mood; stage?: number; holiday?: HolidayId | null }) {
+  const live = useSyncExternalStore(noSubscribe, currentHoliday, () => null);
+  return <CritterDrawing {...rest} holiday={holiday === undefined ? live : holiday} />;
+}
 
 const MOOD_MOTION: Record<Mood, string> = {
   happy: "animate-float",

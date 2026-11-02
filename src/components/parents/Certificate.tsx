@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { CritterSvg } from "@/components/CritterArt";
+import { CritterDrawing } from "@/components/CritterArt";
 import { APP_NAME } from "@/lib/brand";
 import { useNow } from "@/lib/useNow";
 import { certificateDate, type CertificateText } from "@/lib/certificate";
@@ -37,7 +37,7 @@ export function PrintCertificate({ text, companion = "ollie", label = "Print cer
           <div data-certificate className="certificate" aria-hidden="true">
             <div className="certificate-frame">
               <div className="certificate-critter">
-                <CritterSvg id={companion} mood="cheer" holiday={null} />
+                <CritterDrawing id={companion} mood="cheer" />
               </div>
               <p className="certificate-brand">{APP_NAME}</p>
               <h1>{text.heading}</h1>

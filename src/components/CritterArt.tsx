@@ -1,7 +1,7 @@
 // The pure SVG drawing of every critter, with no hooks, so server code (share
 // images) can draw one too. `Critter` in Critter.tsx adds motion and eye-follow.
 
-import { currentHoliday, type HolidayId } from "@/lib/holidays";
+import type { HolidayId } from "@/lib/holidays";
 import type { CSSProperties } from "react";
 
 // The mascot cast, all drawn from one parametric SVG so they share a style,
@@ -624,7 +624,8 @@ export function HolidayHat({ holiday }: { holiday: HolidayId }) {
   }
 }
 
-export function CritterSvg({ id, mood = "happy", stage = 1, holiday = currentHoliday() }: { id: string; mood?: Mood; stage?: number; holiday?: HolidayId | null }) {
+/** The drawing itself. A hat is worn only when `holiday` is passed; `CritterSvg` in Critter.tsx picks the current one. */
+export function CritterDrawing({ id, mood = "happy", stage = 1, holiday = null }: { id: string; mood?: Mood; stage?: number; holiday?: HolidayId | null }) {
   const c = getCritter(id);
   const headFill = c.extras.includes("panda") ? "#ffffff" : c.fur;
   return (
