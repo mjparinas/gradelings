@@ -583,6 +583,7 @@ Melvin's product and technical decisions are recorded here, newest last, so they
 - **Video help for stuck kids** (November 1, 2026): members only, narrated with Supertonic TTS.
 - **Holiday themes** (November 1, 2026): a theme changes the favicon only. The iOS and Android app icons stay as they are for now.
 - **Help videos stay self-hosted** (November 2, 2026): no YouTube. Offline play, no third-party player or tracking in the kids' app, and members-only access all need our own files. Every video carries the Gradelings character and wordmark in the bottom-right corner.
+- **Nunavut Pre-K** (November 2, 2026): Nunavut publishes no learning outcomes before Kindergarten, so its Pre-K units cite the four guiding principles of the Nunavut Early Learning and Child Care Quality Framework (`GP 1` to `GP 4`). Owner: if no document exists, use a reasonable alternative and document it (`gradelings-research/nunavut/prek/README.md`). Replace the citations if Nunavut publishes Pre-K outcomes.
 
 ## Features at a glance
 

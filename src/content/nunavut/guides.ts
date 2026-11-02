@@ -95,6 +95,10 @@ export const NUNAVUT_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-K in Nunavut is the year before Kindergarten, for children who are 4, often with Inuktut at the centre. Nunavut has no set Pre-K curriculum; early learning programs follow the Early Learning and Child Care Quality Framework, which builds on Inuit societal values. Children learn through play, stories and time with family and community: counting, shapes and patterns, letters and sounds, plus the land and people around them.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades, and Nunavut sets no outcomes for this year. Look for counting small groups, naming letters, hearing rhymes, taking turns and talking about feelings.",
+    },
     k: {
       overview: "Kindergarten builds early learning through play, stories and songs, often in Inuktut. Children explore language, early number ideas, their community and the land around them. Since fall 2025, Kindergarten follows the new made-in-Nunavut curriculum.",
       lookFor: "Look for comments on listening, early letters and sounds, counting and comparing, and getting along with classmates.",
