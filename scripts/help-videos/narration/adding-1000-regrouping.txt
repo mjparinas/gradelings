@@ -1,0 +1,5 @@
+To add three digit numbers, line up the ones, the tens and the hundreds.
+Start with the ones. Eight plus seven makes fifteen. Write the five and carry the one ten.
+Now the tens. Five plus six plus the carried one makes twelve. Write the two and carry the one hundred.
+Last, the hundreds. Two plus one plus the carried one makes four.
+The answer is four hundred twenty-five. We can check with an estimate: two hundred sixty plus one hundred seventy is about four hundred thirty.

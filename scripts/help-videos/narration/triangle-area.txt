@@ -1,0 +1,5 @@
+A triangle is half of a rectangle. That helps us find its area.
+Here is a rectangle, six units wide and four units tall. Its area is six times four, which is twenty-four.
+Draw a line from corner to corner. It cuts the rectangle into two equal triangles.
+One triangle is half of the rectangle. Half of twenty-four is twelve square units.
+So the area of a triangle is the base times the height, divided by two.

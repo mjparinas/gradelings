@@ -1,0 +1,5 @@
+The Pythagorean theorem is about right triangles. A right triangle has one square corner.
+The two shorter sides are called the legs. The longest side, across from the square corner, is the hypotenuse.
+Take a triangle with legs three and four. Square each leg. Three squared is nine. Four squared is sixteen.
+Add the squares. Nine plus sixteen is twenty-five. That equals the longest side squared.
+What number times itself is twenty-five? It is five. So the longest side is five. The rule is a squared plus b squared equals c squared.

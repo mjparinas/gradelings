@@ -1,0 +1,5 @@
+To multiply by a two digit number, break it into tens and ones.
+Fourteen is ten plus four. So we find twenty-three times ten, and twenty-three times four.
+Twenty-three times ten is two hundred thirty. Just put a zero after twenty-three.
+Twenty-three times four is ninety-two. Twenty times four is eighty, and three times four is twelve.
+Add the two parts. Two hundred thirty plus ninety-two makes three hundred twenty-two.

@@ -1,0 +1,5 @@
+A square number is what you get when you multiply a number by itself.
+Picture it as a square of tiles. Four rows of four tiles make sixteen.
+Sixteen is a perfect square, because the tiles make a square exactly.
+The square root asks the question backwards. What number times itself makes sixteen? It is four. So the square root of sixteen is four.
+The first perfect squares are one, four, nine, sixteen and twenty-five. It helps to know them.

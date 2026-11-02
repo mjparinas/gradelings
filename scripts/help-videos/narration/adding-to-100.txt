@@ -1,0 +1,5 @@
+To add bigger numbers, we add the ones and the tens one at a time.
+Break each number apart. Twenty-seven is two tens and seven ones. Thirty-six is three tens and six ones.
+Add the ones first. Seven plus six makes thirteen.
+Thirteen is one ten and three ones. Keep the three ones, and trade the ten ones for one more ten.
+Now add the tens. Two tens, three tens and the new ten make six tens. Sixty plus three is sixty-three.

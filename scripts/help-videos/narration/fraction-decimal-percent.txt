@@ -1,0 +1,5 @@
+A fraction, a decimal and a percent can all show the same amount.
+To change a fraction to a decimal, divide the top by the bottom. Three divided by four is zero point seven five.
+To change a decimal to a percent, multiply by one hundred. Zero point seven five times one hundred is seventy-five percent.
+To go back, divide the percent by one hundred. Seventy-five percent is seventy-five out of one hundred.
+Fractions, decimals and percents are three names for the same amount.

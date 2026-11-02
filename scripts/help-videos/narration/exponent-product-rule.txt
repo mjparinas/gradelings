@@ -1,0 +1,5 @@
+An exponent tells us how many times to multiply a number by itself.
+Two to the power of three is eight, because we multiply three twos.
+What happens when we multiply powers with the same base? Take two to the power of three, times two to the power of two.
+Write them out. Three twos, times two more twos. That is five twos multiplied together.
+So we just add the exponents. Three plus two is five. Two to the power of five is thirty-two.

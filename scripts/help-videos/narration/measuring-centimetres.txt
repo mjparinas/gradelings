@@ -1,0 +1,5 @@
+A ruler measures how long something is. We can measure in centimetres.
+Line up one end of the object with the zero on the ruler.
+Now find where the other end stops. Read that number. This object ends at the six, so it is six centimetres long.
+Each space between two numbers is one centimetre. You can count the spaces to check.
+If the object does not start at zero, count the spaces instead of reading the end number.
