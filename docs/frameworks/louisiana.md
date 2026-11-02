@@ -2,7 +2,7 @@
 
 ## Framework
 
-- **Id and slug:** `us-la`, `louisiana`. Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: Louisiana has French immersion schools, but no statewide French standards the app follows yet). Offered to families and in classroom mode.
+- **Id and slug:** `us-la`, `louisiana`. Pre-K and Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: Louisiana has French immersion schools, but no statewide French standards the app follows yet). Offered to families and in classroom mode.
 
 ## Standards
 
@@ -22,9 +22,10 @@
 - Louisiana has no statewide report card. Act 428 of 2024 (R.S. 17:184) sets one ten-point letter scale for every public school that uses letter grades, so the app uses the same four practice steps as the other states (Beginning, Approaching, Meeting, Exceeding).
 - State tests are LEAP 2025: English language arts, math, science and social studies in grades 3 to 8, and English I and II, Algebra I, Geometry, Biology, Civics and U.S. History in high school, reported in five levels (Unsatisfactory to Advanced). The early literacy law (Act 422 of 2023, R.S. 17:24.11) and its 3rd grade retention rule are on the LEAP guide and the report card page.
 
+- **Pre-K:** the 26 shared Pre-K units (`src/content/grades/pk/`), each citing a Standard in Louisiana's Birth to Five Early Learning & Development Standards (`CM 1`, `LL 6`, `SE 4`; Louisiana Department of Education) (`src/content/louisiana/pk.ts`), checked against `docs/research/louisiana/prek/outcomes.json` (sources in `source/`, `fetch.sh`, `build_outcomes.py` in gradelings-research). Practice steps only.
 ## Parent guides
 
-- `src/content/louisiana/guides.ts`, US English: the hub, grade notes for Kindergarten to Grade 9, the eight Standards for Mathematical Practice (`/guides/louisiana/math-practices/`; Louisiana has no statewide SEL standards for students) and LEAP 2025 (`/guides/louisiana/leap-tests/`; dates point to the Department). No French guide.
+- `src/content/louisiana/guides.ts`, US English: the hub, grade notes for Pre-K to Grade 9, the eight Standards for Mathematical Practice (`/guides/louisiana/math-practices/`; Louisiana has no statewide SEL standards for students) and LEAP 2025 (`/guides/louisiana/leap-tests/`; dates point to the Department). No French guide.
 
 ## Schools
 

@@ -13,7 +13,7 @@ import fs from "node:fs";
 import AxeBuilder from "@axe-core/playwright";
 import { createClient } from "@libsql/client";
 import { chromium } from "playwright";
-import { newChild, vis } from "./helpers.mjs";
+import { confirmEmailInDb, newChild, vis } from "./helpers.mjs";
 
 const BASE = process.argv[2] || "http://localhost:3000";
 const OUT = process.argv[3] || "e2e-shots/admin";
@@ -37,7 +37,7 @@ async function account(email) {
   const res = await fetch(`${BASE}/api/auth/signup/`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ email, password: PASSWORD }) });
   check(res.status === 200 || res.status === 409, `account ${email} exists`);
   db ??= createClient({ url: process.env.DATABASE_URL ?? "file:./data/grademap.db", authToken: process.env.DATABASE_AUTH_TOKEN });
-  await db.execute({ sql: "UPDATE parents SET email_verified_at = ? WHERE email = ?", args: [Date.now(), email] });
+  await confirmEmailInDb(db, email);
 }
 const parentEmail = `parent-${Date.now()}@example.com`;
 await account(ADMIN);

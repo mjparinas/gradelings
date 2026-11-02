@@ -13,13 +13,14 @@ delete process.env.RESEND_API_KEY;
 delete process.env.NEXT_PUBLIC_SITE_URL;
 
 type Mod = Record<string, (req: Request) => Promise<Response>>;
-let signup: Mod, login: Mod, forgot: Mod, reset: Mod, verify: Mod, resend: Mod, me: Mod, sync: Mod, account: Mod, webhook: Mod, checkout: Mod, sessions: Mod, password: Mod;
+let signup: Mod, realSignup: Mod, login: Mod, forgot: Mod, reset: Mod, verify: Mod, resend: Mod, me: Mod, sync: Mod, account: Mod, webhook: Mod, checkout: Mod, sessions: Mod, password: Mod;
 let auth: typeof import("@/server/auth");
 let dbm: typeof import("@/server/db");
 let email: typeof import("@/server/email");
 
 beforeAll(async () => {
-  [signup, login, forgot, reset, verify, resend, me, sync, account, webhook, checkout, sessions, password] = (await Promise.all([
+  [signup, realSignup, login, forgot, reset, verify, resend, me, sync, account, webhook, checkout, sessions, password] = (await Promise.all([
+    import("@/server/testing/signupWithSession"),
     import("@/app/api/auth/signup/route"),
     import("@/app/api/auth/login/route"),
     import("@/app/api/auth/forgot/route"),
@@ -85,9 +86,8 @@ describe("signup, login and email confirmation", () => {
     expect((await login.POST(post("/api/auth/login/", { email: "squat@example.com", password: "squatter pw 1" }))).status).toBe(401);
   });
 
-  it("rejects duplicates, short passwords and wrong passwords", async () => {
+  it("rejects short passwords and wrong passwords", async () => {
     await newAccount("b@example.com");
-    expect((await signup.POST(post("/api/auth/signup/", { email: "b@example.com", password: "another long one" }))).status).toBe(409);
     expect((await signup.POST(post("/api/auth/signup/", { email: "c@example.com", password: "short" }))).status).toBe(400);
     expect((await login.POST(post("/api/auth/login/", { email: "b@example.com", password: "nope nope nope" }))).status).toBe(401);
     expect((await login.POST(post("/api/auth/login/", { email: "b@example.com", password: "correct horse" }))).status).toBe(200);
@@ -102,7 +102,6 @@ describe("signup, login and email confirmation", () => {
     expect(lastEmail().text).toContain("weekly progress report");
     // No password ever matches it, and the address can't be taken twice.
     expect((await login.POST(post("/api/auth/login/", { email: "reports@example.com", password: "!" }))).status).toBe(401);
-    expect((await signup.POST(post("/api/auth/signup/", { email: "reports@example.com", passwordless: true }))).status).toBe(409);
     // A password sign-up still needs a real password and leaves the weekly report off.
     await newAccount("with-password@example.com");
     expect((await dbm.query<{ weekly_report: number }>("SELECT weekly_report FROM parents WHERE email = 'with-password@example.com'"))[0].weekly_report).toBe(0);
@@ -535,11 +534,81 @@ describe("Stripe webhook", () => {
   });
 });
 
-describe("signup race", () => {
-  it("answers a duplicate email with 409 and leaves no empty family", async () => {
+describe("sign-up answers everyone the same", () => {
+  const signupReq = (address: string, extra: Record<string, unknown> = {}, cookie?: string) => post("/api/auth/signup/", { email: address, password: "typed at signup", ...extra }, cookie);
+  const mails = (address: string) => email.outbox().filter((m) => m.to === address);
+  const whoAmI = (c: string) => me.GET(new Request("http://localhost/api/auth/me/", { headers: { cookie: c } }));
+
+  it("signs nobody in, keeps the typed password aside and answers 'check your email'", async () => {
+    const res = await realSignup.POST(signupReq("fresh@example.com"));
+    expect(res.status).toBe(200);
+    expect(await res.json()).toEqual({ ok: true, checkEmail: true });
+    expect(res.headers.get("set-cookie")).not.toContain("gm_session");
+    const row = (await dbm.query<{ password_hash: string; pending_password_hash: string | null }>("SELECT password_hash, pending_password_hash FROM parents WHERE email = 'fresh@example.com'"))[0];
+    expect(row.password_hash).toBe("!");
+    expect(row.pending_password_hash).toBeTruthy();
+    expect((await login.POST(post("/api/auth/login/", { email: "fresh@example.com", password: "typed at signup" }))).status).toBe(401);
+    expect(mails("fresh@example.com")[0].text).toContain("/account/verify/?token=");
+  });
+
+  it("applies the password when the browser that signed up confirms, and signs it in", async () => {
+    const res = await realSignup.POST(signupReq("same@example.com"));
+    const mark = (res.headers.get("set-cookie") ?? "").split(";")[0];
+    const done = await verify.POST(post("/api/auth/verify/", { token: tokenIn(lastEmail().text) }, mark));
+    expect((await done.json()).signedIn).toBe(true);
+    expect((await whoAmI(cookieOf(done))).status).toBe(200);
+    expect((await login.POST(post("/api/auth/login/", { email: "same@example.com", password: "typed at signup" }))).status).toBe(200);
+  });
+
+  it("drops the password when another browser confirms, so a squatter's password never works", async () => {
+    const squat = await realSignup.POST(signupReq("victim@example.com", { password: "squatter password" }));
+    expect(squat.status).toBe(200);
+    // The owner opens the emailed link on their own device, which never held the squatter's mark.
+    const done = await verify.POST(post("/api/auth/verify/", { token: tokenIn(lastEmail().text) }));
+    const body = await done.json();
+    expect(body).toMatchObject({ signedIn: true, passwordSet: false });
+    expect((await whoAmI(cookieOf(done))).status).toBe(200);
+    expect((await login.POST(post("/api/auth/login/", { email: "victim@example.com", password: "squatter password" }))).status).toBe(401);
+    const row = (await dbm.query<{ password_hash: string; pending_password_hash: string | null; signup_cookie_hash: string | null }>("SELECT password_hash, pending_password_hash, signup_cookie_hash FROM parents WHERE email = 'victim@example.com'"))[0];
+    expect(row).toEqual({ password_hash: "!", pending_password_hash: null, signup_cookie_hash: null });
+  });
+
+  it("answers an address that already has an account the same way, with a different email and no new family", async () => {
+    await newAccount("owner@example.com");
     const before = (await dbm.query<{ n: number }>("SELECT COUNT(*) AS n FROM families"))[0].n;
-    const results = await Promise.all([1, 2, 3].map(() => signup.POST(post("/api/auth/signup/", { email: "race@example.com", password: "correct horse" }))));
-    expect(results.map((r) => r.status).sort()).toEqual([200, 409, 409]);
+    const sent = mails("owner@example.com").length;
+    const res = await realSignup.POST(signupReq("owner@example.com", { password: "someone else" }));
+    expect(res.status).toBe(200);
+    expect(await res.json()).toEqual({ ok: true, checkEmail: true });
+    expect(res.headers.get("set-cookie")).toBeTruthy(); // same headers as for a new address
+    expect((await dbm.query<{ n: number }>("SELECT COUNT(*) AS n FROM families"))[0].n).toBe(before);
+    const added = mails("owner@example.com").slice(sent);
+    expect(added).toHaveLength(1);
+    expect(added[0].subject).toContain("already have");
+    expect(added[0].text).not.toContain("token=");
+    // Their password is untouched.
+    expect((await login.POST(post("/api/auth/login/", { email: "owner@example.com", password: "correct horse" }))).status).toBe(200);
+  });
+
+  it("limits how often one address can be emailed, without changing the answer", async () => {
+    const before = mails("bomb@example.com").length;
+    for (let i = 0; i < 5; i++) {
+      const res = await realSignup.POST(signupReq("bomb@example.com"));
+      expect(res.status).toBe(200);
+      expect(await res.json()).toEqual({ ok: true, checkEmail: true });
+    }
+    expect(mails("bomb@example.com").length - before).toBe(3);
+  });
+
+  it("still rejects an invalid address or a short password", async () => {
+    expect((await realSignup.POST(signupReq("not-an-email"))).status).toBe(400);
+    expect((await realSignup.POST(signupReq("short@example.com", { password: "short" }))).status).toBe(400);
+  });
+
+  it("leaves one family when several requests race for a new address", async () => {
+    const before = (await dbm.query<{ n: number }>("SELECT COUNT(*) AS n FROM families"))[0].n;
+    const results = await Promise.all([1, 2, 3].map(() => realSignup.POST(signupReq("race@example.com"))));
+    expect(results.map((r) => r.status)).toEqual([200, 200, 200]);
     expect((await dbm.query<{ n: number }>("SELECT COUNT(*) AS n FROM families"))[0].n).toBe(Number(before) + 1);
   });
 });

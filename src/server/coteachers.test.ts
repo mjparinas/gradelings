@@ -16,7 +16,7 @@ let studentsMod: typeof import("@/server/students");
 
 beforeAll(async () => {
   [signup, login, classes, assignments, studentRoutes, teachers, invites, account, hiddenRoute] = (await Promise.all([
-    import("@/app/api/auth/signup/route"),
+    import("@/server/testing/signupWithSession"),
     import("@/app/api/auth/login/route"),
     import("@/app/api/classes/route"),
     import("@/app/api/classes/assignments/route"),

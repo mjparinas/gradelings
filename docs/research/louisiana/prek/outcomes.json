@@ -1,0 +1,130 @@
+{
+ "pk/math": [
+  {
+   "idx": "CM 1",
+   "text": "Understand numbers, ways of representing numbers, and relationships between number and quantities."
+  },
+  {
+   "idx": "CM 2",
+   "text": "Understand basic patterns, concepts, and operations."
+  },
+  {
+   "idx": "CM 3",
+   "text": "Understand attributes and relative properties of objects as related to size, capacity, and area."
+  },
+  {
+   "idx": "CM 4",
+   "text": "Understand shapes, their properties, and how objects are related to one another in space."
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "LL 1",
+   "text": "Comprehend or understand and use language."
+  },
+  {
+   "idx": "LL 2",
+   "text": "Comprehend and use increasingly complex and varied vocabulary."
+  },
+  {
+   "idx": "LL 3",
+   "text": "Develop an interest in books and their characteristics."
+  },
+  {
+   "idx": "LL 4",
+   "text": "Comprehend stories and information from books and other print materials."
+  },
+  {
+   "idx": "LL 5",
+   "text": "Demonstrate understanding of the organization and basic features of print."
+  },
+  {
+   "idx": "LL 6",
+   "text": "Demonstrate understanding of different units of sound in language (words, syllables, phonemes)."
+  },
+  {
+   "idx": "LL 7",
+   "text": "Develop familiarity with writing implements, conventions, and emerging skills to communicate through written representations, symbols, and letters."
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "CS 1",
+   "text": "Develop the ability to carry out the scientific inquiry process (ask questions, predict, make observations, explain observations, and draw conclusions)."
+  },
+  {
+   "idx": "CS 2",
+   "text": "Acquire scientific knowledge related to physical science (properties of objects and materials)."
+  },
+  {
+   "idx": "CS 3",
+   "text": "Acquire scientific knowledge related to life science (properties of living things)."
+  },
+  {
+   "idx": "CS 4",
+   "text": "Acquire scientific knowledge related to earth science (properties of the earth and objects in the sky)."
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "AL 1",
+   "text": "Engage in play-based learning to explore, investigate, and acquire knowledge about themselves and their world."
+  },
+  {
+   "idx": "AL 2",
+   "text": "Demonstrate attention, engagement, and persistence in learning."
+  },
+  {
+   "idx": "AL 3",
+   "text": "Recognize, understand, and analyze a problem and draw on knowledge or experience to seek solutions."
+  },
+  {
+   "idx": "AL 4",
+   "text": "Demonstrate creative thinking when using materials, solving problems, and/or learning new information."
+  },
+  {
+   "idx": "CSS 1",
+   "text": "Develop the understanding that events happened in the past and how these events relate to one’s self, family, and community."
+  },
+  {
+   "idx": "CSS 2",
+   "text": "Describe people, events, and symbols of the past and present."
+  },
+  {
+   "idx": "CSS 3",
+   "text": "Develop an awareness of geographic locations, maps, and landforms."
+  },
+  {
+   "idx": "CSS 4",
+   "text": "Demonstrate awareness of culture and other characteristics of groups of people."
+  },
+  {
+   "idx": "CSS 5",
+   "text": "Develop an awareness of the importance of rules and responsibilities within their community and the actions/behaviors necessary for effective citizenship."
+  },
+  {
+   "idx": "CSS 6",
+   "text": "Demonstrate an awareness of basic economic concepts."
+  },
+  {
+   "idx": "SE 1",
+   "text": "Develop healthy relationships and interactions with peers and adults."
+  },
+  {
+   "idx": "SE 2",
+   "text": "Develop positive self-identify and sense of belonging."
+  },
+  {
+   "idx": "SE 3",
+   "text": "Express feelings and beliefs that he/she is capable of successfully making decisions, accomplishing tasks, and meeting goals."
+  },
+  {
+   "idx": "SE 4",
+   "text": "Regulate own emotions and behavior."
+  },
+  {
+   "idx": "SE 5",
+   "text": "Regulate attention, impulses, and behavior."
+  }
+ ]
+}

@@ -9,7 +9,7 @@
 //   node scripts/e2e.mjs http://localhost:3000 e2e-shots --offline [--speed] [--part modes|parents|sync]
 import fs from "node:fs";
 import { chromium } from "playwright";
-import { EDGE_VOICES, enterPin, installFakeVoices, newChild, spoken, step, vis } from "./helpers.mjs";
+import { EDGE_VOICES, enterPin, installFakeVoices, newChild, openConfirmLink, spoken, step, vis } from "./helpers.mjs";
 const BASE = process.argv[2] || "http://localhost:3100";
 const OUT = process.argv[3] || "e2e-shots";
 const OFFLINE = process.argv.includes("--offline");
@@ -381,6 +381,12 @@ async function eventsWaiting(page) {
     await page.getByLabel("Email").fill(email);
     await page.getByLabel("Password").fill("correct horse 42");
     await page.getByRole("button", { name: /Create account/ }).last().click();
+    await page.getByText(/Check your email/).first().waitFor();
+    // Nobody is signed in by sign-up; the emailed link does that. Scripts have no inbox, so open it from a token made in the database.
+    await openConfirmLink(page, BASE, email);
+    await page.goto(`${BASE}/parents/?signedin=1#/account`);
+    await page.waitForTimeout(700);
+    if (await vis(page.getByRole("heading", { name: "Parents only" }))) await enterPin(page, false);
     await page.waitForTimeout(4000);
     await shot(page, "25-account");
     const afterSync = await eventsWaiting(page);
@@ -482,14 +488,20 @@ async function eventsWaiting(page) {
     log("deep link practice:", first.r, JSON.stringify(first.kinds));
     const card = p3.getByRole("region", { name: "For grown-ups" });
     await card.waitFor({ timeout: 15000 });
-    await card.getByLabel("Your email").fill(`reports-${Date.now()}@example.com`);
+    const reportsEmail = `reports-${Date.now()}@example.com`;
+    await card.getByLabel("Your email").fill(reportsEmail);
     await shot(p3, "42-email-card");
     await card.getByRole("button", { name: "Send me the reports" }).click();
-    await p3.getByRole("status").filter({ hasText: /Check .* for a link to confirm/ }).waitFor({ timeout: 15000 });
+    await p3.getByRole("status").filter({ hasText: /We sent .* a link/ }).waitFor({ timeout: 15000 });
     await shot(p3, "43-email-sent");
+    // Sign-up signs nobody in; the emailed link does. Scripts have no inbox, so open it from a token made in the database,
+    // in the same browser that signed up.
+    const before = await p3.evaluate(async () => (await fetch("/api/auth/me/")).status);
+    if (before === 200) errors.push("email card: sign-up signed the device in before the email was confirmed");
+    await openConfirmLink(p3, BASE, reportsEmail);
     const me = await p3.evaluate(async () => (await fetch("/api/auth/me/")).json());
-    if (!me?.family?.account?.email?.startsWith("reports-")) errors.push("email card: this device isn't signed in to the new account");
-    log("email card: account made and signed in");
+    if (!me?.family?.account?.email?.startsWith("reports-")) errors.push("email card: confirming the email didn't sign this device in");
+    log("email card: account made, confirmed and signed in");
     await fresh.close();
   }
 

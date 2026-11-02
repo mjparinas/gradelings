@@ -101,7 +101,7 @@ ${MAILING_ADDRESS ? `<p style="font-size:12px;color:#5b6478;margin:4px 4px 0">${
 }
 
 /** `reports`: the account was made from an email alone to get the weekly report, so it has no password yet. */
-export function verifyEmail(to: string, origin: string, token: string, reports = false): Email {
+export function verifyEmail(to: string, origin: string, token: string, reports = false, dest: "parents" | "teachers" = "parents"): Email {
   return layout({
     kind: "verify",
     to,
@@ -114,8 +114,28 @@ export function verifyEmail(to: string, origin: string, token: string, reports =
           "Your child's progress is now backed up. To open the parent area on another device, ask for a sign-in link there: there's no password to remember.",
         ]
       : ["Please confirm your email address so we can reach you about your account, and so you can reset your password if you ever forget it."],
-    button: { label: "Confirm my email", url: `${origin}/account/verify/?token=${encodeURIComponent(token)}` },
+    button: { label: "Confirm my email", url: `${origin}/account/verify/?token=${encodeURIComponent(token)}${dest === "teachers" ? "&to=teachers" : ""}` },
     footnote: "This link works for 3 days. If you didn't create an account, you can ignore this email.",
+  });
+}
+
+/**
+ * Sign-up never says whether an address is already registered, so an owner who "signs up" again gets this instead of
+ * a confirmation link: where to sign in, and how to get back in if the password is forgotten.
+ */
+export function accountExistsEmail(to: string, origin: string): Email {
+  return layout({
+    kind: "reset",
+    to,
+    origin,
+    subject: `You already have a ${APP_NAME} account`,
+    heading: "You already have an account",
+    body: [
+      `Someone, maybe you, just tried to create a ${APP_NAME} account with this email address. It already has one, so nothing was changed.`,
+      "To get in, sign in as usual. If you've forgotten your password, choose \"Forgot password\" on the sign-in form and we'll email you a link.",
+    ],
+    button: { label: "Go to sign in", url: `${origin}/account/sign-in/` },
+    footnote: "If this wasn't you, you can ignore this email; your account is safe and nothing has changed.",
   });
 }
 

@@ -22,7 +22,7 @@ let rs: typeof import("@/server/rostering");
 
 beforeAll(async () => {
   [signup, roster, start, callback, classes] = (await Promise.all([
-    import("@/app/api/auth/signup/route"),
+    import("@/server/testing/signupWithSession"),
     import("@/app/api/roster/route"),
     import("@/app/api/roster/start/route"),
     import("@/app/api/roster/callback/route"),

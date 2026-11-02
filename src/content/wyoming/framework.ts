@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Wyoming, a US state. Standards are the Wyoming Content and Performance Standards (WYCPS), adopted by the State
 // Board of Education: English language arts (2012, the Common Core), mathematics (2023, a priority set built on the
@@ -75,9 +76,9 @@ export const WYOMING: Framework = {
   standardLabel: "Standard",
   sourceName: "Wyoming Department of Education",
   sourceUrl: "https://edu.wyoming.gov/",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Wyoming report cards",
     intro:

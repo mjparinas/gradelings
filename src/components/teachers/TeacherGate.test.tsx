@@ -47,15 +47,15 @@ describe("TeacherGate", () => {
     expect(mocks.call).not.toHaveBeenCalled();
   });
 
-  it("opens the teacher area after creating an account, and remembers the device", async () => {
+  it("asks a new teacher to check their email, without opening the teacher area", async () => {
     mocks.call.mockImplementation((url: string) => (url === "/api/auth/signup/" ? Promise.resolve({}) : Promise.reject(new Error("Not signed in"))));
     const user = userEvent.setup();
     render(<TeacherGate />);
     await user.type(await screen.findByLabelText("Email"), "t@example.com");
     await user.type(screen.getByLabelText("Password"), "correct horse");
     await user.click(screen.getByRole("button", { name: "Create account" }));
-    expect(await screen.findByText("The teacher area")).toBeInTheDocument();
-    expect(knownTeacher()).toBe(true);
+    expect(await screen.findByRole("status")).toHaveTextContent("Check your email");
+    expect(screen.queryByText("The teacher area")).not.toBeInTheDocument();
   });
 
   it("lets a returning teacher switch to signing in", async () => {

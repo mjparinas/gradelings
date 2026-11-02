@@ -17,7 +17,7 @@ let live: typeof import("@/server/live");
 
 beforeAll(async () => {
   [signup, sync, classes, join_, teacherGoal, childLive] = (await Promise.all([
-    import("@/app/api/auth/signup/route"),
+    import("@/server/testing/signupWithSession"),
     import("@/app/api/sync/route"),
     import("@/app/api/classes/route"),
     import("@/app/api/classes/join/route"),

@@ -87,8 +87,10 @@ describe("TeacherApp", () => {
     await user.type(screen.getByLabelText("Password"), "long-enough-password");
     await user.click(screen.getByRole("button", { name: "Create account" }));
 
-    expect(await screen.findByRole("heading", { name: "Your classes" })).toBeInTheDocument();
-    expect(mocks.call).toHaveBeenCalledWith("/api/auth/signup/", "POST", { email: "teacher@example.com", password: "long-enough-password" });
+    // Sign-up signs nobody in: the emailed link does, and the answer is the same for every address.
+    expect(await screen.findByRole("status")).toHaveTextContent("Check your email");
+    expect(screen.queryByRole("heading", { name: "Your classes" })).not.toBeInTheDocument();
+    expect(mocks.call).toHaveBeenCalledWith("/api/auth/signup/", "POST", { email: "teacher@example.com", password: "long-enough-password", to: "teachers" });
   });
 
   it("shows a useful sign-in error and lets the teacher try again", async () => {

@@ -9,7 +9,7 @@
 import fs from "node:fs";
 import { createClient } from "@libsql/client";
 import { chromium } from "playwright";
-import { step, vis } from "./helpers.mjs";
+import { confirmEmailInDb, step, vis } from "./helpers.mjs";
 
 const BASE = process.argv[2] || "http://localhost:3000";
 const OUT = process.argv[3] || "e2e-shots/classroom";
@@ -40,7 +40,10 @@ async function api(path, method = "GET", body) {
 
 check((await api("/api/auth/signup/", "POST", { email, password: "correct horse" })).status === 200, "teacher signs up");
 const db = createClient({ url: process.env.DATABASE_URL ?? "file:./data/grademap.db", authToken: process.env.DATABASE_AUTH_TOKEN });
-await db.execute({ sql: "UPDATE parents SET email_verified_at = ? WHERE email = ?", args: [Date.now(), email] });
+await confirmEmailInDb(db, email);
+// Sign-up signs nobody in (and its cookie only marks the browser), so sign in with the password now confirmed.
+cookie = "";
+check((await api("/api/auth/login/", "POST", { email, password: "correct horse" })).status === 200, "teacher signs in");
 const made = await api("/api/classes/", "POST", { name: "Room 3", grade: "3", framework: "ca-bc" });
 check(made.status === 200, "teacher creates a class");
 const cls = made.data.class;
@@ -279,8 +282,10 @@ const ownerCookie = cookie;
 const coEmail = `coteacher-${Date.now()}@example.com`;
 cookie = "";
 check((await api("/api/auth/signup/", "POST", { email: coEmail, password: "correct horse" })).status === 200, "a second teacher signs up");
+await confirmEmailInDb(db, coEmail);
+cookie = "";
+check((await api("/api/auth/login/", "POST", { email: coEmail, password: "correct horse" })).status === 200, "the second teacher signs in");
 const coCookie = cookie;
-await db.execute({ sql: "UPDATE parents SET email_verified_at = ? WHERE email = ?", args: [Date.now(), coEmail] });
 cookie = ownerCookie;
 check((await api("/api/classes/teachers/", "POST", { classId: cls.id, email: coEmail })).status === 200, "the owner invites a co-teacher by email");
 cookie = coCookie;

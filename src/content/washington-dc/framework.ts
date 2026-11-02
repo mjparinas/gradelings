@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Washington, DC, the District of Columbia: a federal district, not a state, so pages call it "the District" where they
 // would say "the state" (`regionKind: "district"`). Its standards are approved by the DC State Board of Education on the
@@ -78,9 +79,9 @@ export const WASHINGTON_DC: Framework = {
   standardLabel: "Standard",
   sourceName: "Office of the State Superintendent of Education (OSSE)",
   sourceUrl: "https://osse.dc.gov/service/dc-standards-learning",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Washington, DC report cards",
     intro:

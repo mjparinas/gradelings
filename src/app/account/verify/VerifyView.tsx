@@ -7,9 +7,13 @@ import { LinkCard } from "../AccountLinkPage";
 export function VerifyView() {
   const [state, setState] = useState<"working" | "ok" | "failed">("working");
   const [error, setError] = useState("");
+  const [signedIn, setSignedIn] = useState(false);
+  const [teacher, setTeacher] = useState(false);
 
   useEffect(() => {
-    const token = new URLSearchParams(window.location.search).get("token") ?? "";
+    const q = new URLSearchParams(window.location.search);
+    const token = q.get("token") ?? "";
+    if (q.get("to") === "teachers") queueMicrotask(() => setTeacher(true));
     window.history.replaceState(null, "", window.location.pathname);
     const request = token
       ? fetch("/api/auth/verify/", {
@@ -21,8 +25,16 @@ export function VerifyView() {
       : Promise.reject(new Error("This link isn’t valid. Open the link from your email."));
     void request
       .then(async (res) => {
-        const data = (await res.json().catch(() => ({}))) as { error?: string };
+        const data = (await res.json().catch(() => ({}))) as { error?: string; signedIn?: boolean };
         if (!res.ok) throw new Error(data.error ?? "Something went wrong.");
+        if (data.signedIn) {
+          setSignedIn(true);
+          if (q.get("to") === "teachers") {
+            const { rememberTeacher } = await import("@/lib/teacherHint");
+            rememberTeacher(true);
+          }
+          // For a parent, the parent area takes the account the server just signed in (?signedin=1) and uploads this device's practice.
+        }
         setState("ok");
       })
       .catch((e: Error) => {
@@ -33,10 +45,10 @@ export function VerifyView() {
 
   return (
     <LinkCard title={state === "ok" ? "Email confirmed" : state === "failed" ? "We couldn’t confirm that" : "Confirming…"}>
-      {state === "ok" && <p className="font-read text-lg">Thank you! Your email address is confirmed.</p>}
+      {state === "ok" && <p className="font-read text-lg">Thank you! Your email address is confirmed{signedIn ? ", and you’re signed in on this device" : ""}.</p>}
       {state === "failed" && <p className="font-read text-lg">{error}</p>}
-      <Link href="/parents/" className="btn btn-good min-h-14 text-xl">
-        Go to the Parent area
+      <Link href={teacher ? "/teachers/" : signedIn ? "/parents/?signedin=1#/account" : "/parents/"} className="btn btn-good min-h-14 text-xl">
+        {teacher ? "Go to the teacher area" : "Go to the Parent area"}
       </Link>
     </LinkCard>
   );

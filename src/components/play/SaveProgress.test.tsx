@@ -48,30 +48,23 @@ describe("SaveProgress", () => {
   it("makes the account from the email and says to check the inbox", async () => {
     render(<SaveProgress />);
     send(" parent@example.com ");
-    await waitFor(() => expect(screen.getByRole("status")).toHaveTextContent("Check parent@example.com for a link to confirm"));
+    await waitFor(() => expect(screen.getByRole("status")).toHaveTextContent("We sent parent@example.com a link"));
     expect(h.signUp).toHaveBeenCalledWith("parent@example.com");
-    expect(screen.getByRole("status")).toHaveTextContent("Ava's progress is backed up.");
+    expect(screen.getByRole("status")).toHaveTextContent("back up Ava's progress");
   });
 
   it("tells a US family the progress waits for the privacy notice", async () => {
     h.framework = "us-wa";
     render(<SaveProgress />);
     send("parent@example.com");
-    await waitFor(() => expect(screen.getByRole("status")).toHaveTextContent("To back up Ava's progress, open the Parent area and agree to the privacy notice."));
-    expect(screen.getByRole("status")).not.toHaveTextContent("is backed up");
+    await waitFor(() => expect(screen.getByRole("status")).toHaveTextContent("Then open the Parent area and agree to the privacy notice."));
   });
 
-  it("points to sign-in when the email already has an account, and shows other errors", async () => {
-    h.signUp.mockRejectedValueOnce(new Error("That email already has an account. Try signing in."));
-    render(<SaveProgress />);
-    send("taken@example.com");
-    await waitFor(() => expect(screen.getByRole("alert")).toHaveTextContent("already has an account"));
-    expect(screen.getByRole("link", { name: "Sign in" })).toHaveAttribute("href", "/parents/#/account");
-
+  it("shows an error such as being offline", async () => {
     h.signUp.mockRejectedValueOnce(new Error("You're offline. Connect to the internet and try again."));
+    render(<SaveProgress />);
     send("new@example.com");
     await waitFor(() => expect(screen.getByRole("alert")).toHaveTextContent("You're offline"));
-    expect(screen.queryByRole("link", { name: "Sign in" })).toBeNull();
   });
 
   it("stays away once the family has an account", () => {
