@@ -76,8 +76,8 @@ describe("Piper files", () => {
       expect(Object.keys(v.files).sort()).toEqual([`${v.id}.onnx`, `${v.id}.onnx.json`]);
       for (const hash of Object.values(v.files)) expect(hash).toMatch(/^[0-9a-f]{64}$/);
     }
-    // The voices are the unchanged files of our piper-voices-2 release.
-    expect(manifest.voiceSource).toBe("https://github.com/mjparinas/gradelings/releases/download/piper-voices-2/");
+    // The voices are the files of our piper-voices-3 release (Amy and Siwis unchanged from piper-voices-2).
+    expect(manifest.voiceSource).toBe("https://github.com/mjparinas/gradelings/releases/download/piper-voices-3/");
   });
 
   it("copies engine files that exist in node_modules", () => {
@@ -705,11 +705,12 @@ describe("speakPiper", () => {
 });
 
 describe("the Spanish voice", () => {
-  it("is listed with its own pinned source, and left out of the build's file list rather than failing it if it can't download", () => {
+  it("is mirrored in our own release with the other voices, and left out of the file list if a build can't get it", () => {
     const es = manifest.voices.es as (typeof manifest.voices)["es"] & { source?: string; optional?: boolean };
     expect(es.id).toBe("es_MX-ald-medium");
-    expect(es.source).toMatch(/^https:\/\/huggingface\.co\/rhasspy\/piper-voices\/resolve\/[0-9a-f]{40}\/es\/es_MX\/ald\/medium\/$/);
-    expect(es.optional).toBe(true);
+    expect(es.source).toBeUndefined();
+    expect(es.optional).toBeUndefined();
+    expect(Object.keys(es.files).sort()).toEqual([`${es.id}.onnx`, `${es.id}.onnx.json`]);
     for (const hash of Object.values(es.files)) expect(hash).toMatch(/^[0-9a-f]{64}$/);
     // Without the Spanish files the list has no Spanish voice, so the app reads Spanish with the device voice.
     const list: PiperFileList = { version: "3", engine: { "ort.wasm.min.js": 10 }, voices: { en: { "en.onnx": 5 } } };
