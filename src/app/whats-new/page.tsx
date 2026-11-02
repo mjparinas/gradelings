@@ -13,7 +13,7 @@ export const metadata: Metadata = pageMeta({
 
 export default function WhatsNewPage() {
   return (
-    <SitePage cta>
+    <SitePage cta="short">
       <Crumbs items={[{ label: "Home", href: "/" }, { label: "What’s new" }]} />
       <div className="mx-auto max-w-3xl">
         <h1 className="text-4xl font-bold">What’s new</h1>
