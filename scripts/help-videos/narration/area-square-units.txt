@@ -1,0 +1,5 @@
+Area tells us how much flat space a shape covers.
+We measure area in square units. This rectangle is four squares long and three squares tall.
+Count the squares inside. There are three rows of four.
+That is twelve square units. Instead of counting every square, multiply the length by the width. Four times three is twelve.
+Area is the space inside a shape. It is not the distance around the edge.

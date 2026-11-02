@@ -1,0 +1,5 @@
+A decimal shows parts of a whole, just like a fraction.
+Cut a whole into ten equal parts. Each part is one tenth, or zero point one.
+Shade three parts. That is three tenths, or zero point three.
+The digit after the decimal point is in the tenths place. So zero point three means three tenths.
+On a number line, zero point three sits three tenths of the way from zero to one.

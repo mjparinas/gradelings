@@ -1,0 +1,5 @@
+Division means sharing equally.
+We have twelve counters and three friends. We want everyone to get the same amount.
+Hand them out one at a time, round and round, until none are left.
+Each friend gets four. So twelve divided by three is four.
+We can check with multiplication. Three groups of four make twelve. Division and multiplication are partners.

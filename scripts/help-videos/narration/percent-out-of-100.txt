@@ -1,0 +1,5 @@
+Percent means out of one hundred.
+Here is a grid of one hundred squares. If twenty-five squares are shaded, that is twenty-five percent.
+Twenty-five out of one hundred is the same as one fourth. So twenty-five percent equals one fourth.
+Fifty percent is fifty out of one hundred. That is the same as one half.
+To find twenty-five percent of a number, find one fourth of it. Twenty-five percent of eighty is twenty.

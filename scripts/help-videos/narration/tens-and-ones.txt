@@ -1,0 +1,5 @@
+Every two digit number is made of tens and ones.
+Look at the three. It is in the tens place, so it means three tens. Each stick holds ten.
+Now look at the four. It is in the ones place, so it means four ones.
+Three tens is thirty. Four ones is four. Thirty plus four makes thirty-four.
+So the place of a digit tells you its value. Look at the tens first, and then the ones.
