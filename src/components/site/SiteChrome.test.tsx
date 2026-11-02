@@ -95,6 +95,18 @@ describe("which button leads", () => {
   });
 });
 
+describe("the short closing call to action", () => {
+  it("leaves out the list of provinces and states but keeps the offer and buttons", () => {
+    const full = render(<PageCta />).container.textContent ?? "";
+    const { container } = render(<PageCta short />);
+    const text = container.textContent ?? "";
+    expect(text).not.toMatch(/ in /);
+    expect(text.length).toBeLessThan(full.length);
+    expect(text).toMatch(/try everything free for 30 days with no card/i);
+    expect(screen.getAllByRole("link", { name: "See pricing" }).length).toBeGreaterThan(0);
+  });
+});
+
 describe("About and Contact links", () => {
   it("puts About in the header and both pages in the footer", () => {
     render(<SiteHeader />);

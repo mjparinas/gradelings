@@ -26,7 +26,7 @@ export default async function WhatsNewDayPage({ params }: { params: Promise<{ da
   const entry = newsDay((await params).day);
   if (!entry) notFound();
   return (
-    <SitePage cta>
+    <SitePage cta="short">
       <Crumbs items={[{ label: "Home", href: "/" }, { label: "What’s new", href: "/whats-new/" }, { label: dayLabel(entry.day) }]} />
       <div className="mx-auto max-w-3xl">
         <NewsDayCard entry={entry} />
