@@ -12,9 +12,9 @@ describe("homepage province coverage", () => {
 
   it("states the subjects every province shares, and which provinces are without French Immersion", () => {
     const coverage = provinceCoverage(FRAMEWORKS.filter((f) => f.country === "CA"));
-    // Every province has Core French; Newfoundland and Labrador, Prince Edward Island and Nunavut have no French Immersion.
+    // Every province has Core French; Newfoundland and Labrador, Prince Edward Island and Nunavut have no French Immersion. Every province now offers Pre-K, so the Canadian range starts there.
     expect(coverage.sharedSubjects).toEqual(["math", "language", "science", "social", "core-french"]);
-    expect(coverage.range).toEqual({ from: "k", to: "9" });
+    expect(coverage.range).toEqual({ from: "pk", to: "9" });
     expect(coverage.gaps).toHaveLength(1);
     const [immersion] = coverage.gaps;
     expect(immersion.subjects).toEqual(["immersion"]);

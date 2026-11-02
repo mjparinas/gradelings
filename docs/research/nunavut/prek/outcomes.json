@@ -1,0 +1,74 @@
+{
+ "pk/math": [
+  {
+   "idx": "GP 1",
+   "text": "Children are curious, capable, and competent"
+  },
+  {
+   "idx": "GP 2",
+   "text": "Children have social, emotional, physical, spiritual and intellectual dimensions"
+  },
+  {
+   "idx": "GP 3",
+   "text": "Children want to belong and contribute to their families and communities"
+  },
+  {
+   "idx": "GP 4",
+   "text": "Children need to play, experiment and practise"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "GP 1",
+   "text": "Children are curious, capable, and competent"
+  },
+  {
+   "idx": "GP 2",
+   "text": "Children have social, emotional, physical, spiritual and intellectual dimensions"
+  },
+  {
+   "idx": "GP 3",
+   "text": "Children want to belong and contribute to their families and communities"
+  },
+  {
+   "idx": "GP 4",
+   "text": "Children need to play, experiment and practise"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "GP 1",
+   "text": "Children are curious, capable, and competent"
+  },
+  {
+   "idx": "GP 2",
+   "text": "Children have social, emotional, physical, spiritual and intellectual dimensions"
+  },
+  {
+   "idx": "GP 3",
+   "text": "Children want to belong and contribute to their families and communities"
+  },
+  {
+   "idx": "GP 4",
+   "text": "Children need to play, experiment and practise"
+  }
+ ],
+ "pk/social": [
+  {
+   "idx": "GP 1",
+   "text": "Children are curious, capable, and competent"
+  },
+  {
+   "idx": "GP 2",
+   "text": "Children have social, emotional, physical, spiritual and intellectual dimensions"
+  },
+  {
+   "idx": "GP 3",
+   "text": "Children want to belong and contribute to their families and communities"
+  },
+  {
+   "idx": "GP 4",
+   "text": "Children need to play, experiment and practise"
+  }
+ ]
+}

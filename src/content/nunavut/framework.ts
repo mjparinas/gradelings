@@ -1,4 +1,5 @@
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Nunavut. The Department of Education makes the approved curriculum mandatory. It mixes guides adopted from Alberta
 // (mathematics, Grades 7 to 9 science) and the Northwest Territories (English language arts, Kindergarten to Grade 6
@@ -67,9 +68,9 @@ export const NUNAVUT: Framework = {
   standardLabel: "Approved guide",
   sourceName: "Nunavut Department of Education",
   sourceUrl: "https://www.gov.nu.ca/en/education-and-schools/approved-curriculum",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social", "core-french"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Nunavut report cards",
     intro:
