@@ -1,0 +1,5 @@
+Perimeter is the distance around the outside of a shape.
+Say a rectangle has sides of six and four. Opposite sides match, so we have two sixes and two fours.
+Add all four sides. Six plus four plus six plus four.
+So the perimeter is twenty units. Always add every side, and write the unit.
+A shortcut. Add the two different sides, then double it. Six plus four is ten. Ten doubled is twenty.
