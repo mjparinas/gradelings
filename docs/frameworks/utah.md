@@ -2,7 +2,7 @@
 
 ## Framework
 
-- **Id and slug:** `us-ut`, `utah`. Math, English language arts, science and social studies, Kindergarten to Grade 9 (no French: Utah has no statewide French course in these grades). Offered to families and in classroom mode.
+- **Id and slug:** `us-ut`, `utah`. Math, English language arts, science and social studies, Pre-K and Kindergarten to Grade 9 (no French: Utah has no statewide French course in these grades). Offered to families and in classroom mode.
 
 ## Standards
 
@@ -23,9 +23,10 @@
 - Utah has no statewide report card or grading scale: each school district or charter school chooses its own, and many elementary schools use standards-based report cards. So Utah uses the four practice steps (Beginning, Approaching, Meeting, Exceeding).
 - **State tests:** RISE (Readiness, Improvement, Success and Empowerment) in English language arts and math in grades 3 to 10, science in grades 4 to 10 and writing in grades 5 and 8; computer adaptive and not timed; four levels, Below Proficient, Approaching Proficient, Proficient and Highly Proficient, on a separate Individual Student Report. Acadience Reading and Acadience Math checks in the early grades, three times a year.
 
+- **Pre-K:** the 26 shared Pre-K units (`src/content/grades/pk/`), each citing a standard for four-year-olds in the Utah Core State Standards for Early Learning, Ages 3 to 5 (`Math 4.1.4`, `P4.R.2.a`, `Sci 3-4.1.1`, `SS 4.7.2`, `LLP 4.5.2`; Utah State Board of Education) (`src/content/utah/pk.ts`), checked against `docs/research/utah/prek/outcomes.json` (sources in `source/`, `fetch.sh`, `build_outcomes.py` in gradelings-research). Practice steps only.
 ## Parent guides
 
-- `src/content/utah/guides.ts`, US English: the hub, grade notes for Kindergarten to Grade 9, **Mathematical Practices** (`/guides/utah/math-practices/`, the eight Standards for Mathematical Practice printed in every grade, `1.MP.1` and so on) and **RISE tests** (`/guides/utah/rise-tests/`, from the USBE family guides of June 2026). No French guide.
+- `src/content/utah/guides.ts`, US English: the hub, grade notes for Pre-K to Grade 9, **Mathematical Practices** (`/guides/utah/math-practices/`, the eight Standards for Mathematical Practice printed in every grade, `1.MP.1` and so on) and **RISE tests** (`/guides/utah/rise-tests/`, from the USBE family guides of June 2026). No French guide.
 
 ## Schools
 
