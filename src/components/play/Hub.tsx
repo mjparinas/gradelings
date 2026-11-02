@@ -38,6 +38,7 @@ import { useAllowed } from "./useAllowed";
 import { useClasswork } from "./useClasswork";
 import { homeworkDone } from "@/lib/classroom";
 import { ParentNote } from "./ParentNote";
+import { GraduationCard } from "./GraduationCard";
 import { ResumeCard, useUnfinished } from "./ResumeCard";
 import { ClassGoalCard } from "./ClassGoalCard";
 import { RewardCard, TogetherCard } from "./FamilyCards";
@@ -243,6 +244,8 @@ export function Hub() {
         </span>
         <span className="text-4xl narrow:hidden">▶</span>
       </button>
+
+      <GraduationCard />
 
       {unfinished && <ResumeCard lesson={unfinished.lesson} onDismiss={unfinished.dismiss} little={little} />}
 
