@@ -67,10 +67,22 @@ describe("signup, login and email confirmation", () => {
     expect(mail.text).toContain("/account/verify/?token=");
 
     const token = tokenIn(mail.text);
-    expect((await verify.POST(post("/api/auth/verify/", { token }))).status).toBe(200);
+    const confirmReq = post("/api/auth/verify/", { token });
+    confirmReq.headers.set("cookie", cookie); // confirmed from the device that signed up
+    expect((await verify.POST(confirmReq)).status).toBe(200);
     expect((await verify.POST(post("/api/auth/verify/", { token }))).status).toBe(400); // used
     const info = await (await me.GET(new Request("http://localhost/api/auth/me/", { headers: { cookie } }))).json();
     expect(info.family.account.verified).toBe(true);
+  });
+
+  it("takes over an unconfirmed account when the owner confirms from another browser", async () => {
+    const { cookie: squatter } = await newAccount("squat@example.com", "squatter pw 1");
+    const done = await verify.POST(post("/api/auth/verify/", { token: tokenIn(lastEmail().text) }));
+    expect(done.status).toBe(200);
+    const whoAmI = (c: string) => me.GET(new Request("http://localhost/api/auth/me/", { headers: { cookie: c } }));
+    expect((await whoAmI(squatter)).status).toBe(401);
+    expect((await whoAmI(cookieOf(done))).status).toBe(200);
+    expect((await login.POST(post("/api/auth/login/", { email: "squat@example.com", password: "squatter pw 1" }))).status).toBe(401);
   });
 
   it("rejects duplicates, short passwords and wrong passwords", async () => {

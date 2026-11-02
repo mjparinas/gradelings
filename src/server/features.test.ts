@@ -52,7 +52,7 @@ async function family(address: string, opts: { verified?: boolean; children?: nu
   const cookie = (res.headers.get("set-cookie") ?? "").split(";")[0];
   if (opts.verified !== false) {
     const mail = email.outbox().filter((m) => m.to === address).at(-1)!;
-    await verify.POST(req("/api/auth/verify/", "POST", { token: tokenIn(mail.text) }));
+    await verify.POST(req("/api/auth/verify/", "POST", { token: tokenIn(mail.text) }, cookie));
   }
   const now = Date.now();
   const ids: string[] = [];

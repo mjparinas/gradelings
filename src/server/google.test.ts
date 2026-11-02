@@ -175,7 +175,9 @@ describe("coming back from Google", () => {
     const created = await signup.POST(post("/api/auth/signup/", { email: "joined@example.com", password: "correct horse" }));
     expect(created.status).toBe(200);
     const token = decodeURIComponent(/token=([^\s&"]+)/.exec(email.outbox().at(-1)!.text)![1]);
-    await (await import("@/app/api/auth/verify/route")).POST(post("/api/auth/verify/", { token }));
+    const confirm = post("/api/auth/verify/", { token });
+    confirm.headers.set("cookie", (created.headers.get("set-cookie") ?? "").split(";")[0]); // confirmed on the device that signed up
+    await (await import("@/app/api/auth/verify/route")).POST(confirm);
     const before = (await parentRow("joined@example.com")).id;
 
     const { session } = await signInWithGoogle({ sub: "g-joined", email: "joined@example.com" });
