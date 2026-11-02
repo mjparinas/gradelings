@@ -2,7 +2,7 @@
 
 ## Framework
 
-- **Id and slug:** `us-wy`, `wyoming`. Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: Wyoming has no statewide French standards the app follows). Offered to families and in classroom mode.
+- **Id and slug:** `us-wy`, `wyoming`. Pre-K and Kindergarten to Grade 9 in math, English language arts, science and social studies (no French: Wyoming has no statewide French standards the app follows). Offered to families and in classroom mode.
 
 ## Standards
 
@@ -22,9 +22,10 @@
 - Wyoming has no statewide report card; each district chooses its own, so the app uses the same four practice steps as the other states (Beginning, Approaching, Meeting, Exceeding).
 - State tests: WY-TOPP in English language arts and math (grades 3 to 10) and science (grades 4, 8 and 10), with four levels (Below Basic, Basic, Proficient, Advanced); WY-ALT is the alternate test; juniors take the ACT. W.S. 21-9-102 requires instruction in the United States and Wyoming constitutions and an exam on them to graduate.
 
+- **Pre-K:** the 26 shared Pre-K units (`src/content/grades/pk/`), each citing a standard in the Wyoming Early Learning Standards (`MATH 1`, `LIT 2`, `EMO 2`; Wyoming Department of Education) (`src/content/wyoming/pk.ts`), checked against `docs/research/wyoming/prek/outcomes.json` (sources in `source/`, `fetch.sh`, `build_outcomes.py` in gradelings-research). Practice steps only.
 ## Parent guides
 
-- `src/content/wyoming/guides.ts`, US English: the hub, grade notes for Kindergarten to Grade 9, the eight Math Practices (`/guides/wyoming/math-practices/`) and state tests (`/guides/wyoming/state-tests/`; dates point to the Department). No French guide.
+- `src/content/wyoming/guides.ts`, US English: the hub, grade notes for Pre-K to Grade 9, the eight Math Practices (`/guides/wyoming/math-practices/`) and state tests (`/guides/wyoming/state-tests/`; dates point to the Department). No French guide.
 
 ## Schools
 

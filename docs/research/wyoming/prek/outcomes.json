@@ -1,0 +1,94 @@
+{
+ "pk/social": [
+  {
+   "idx": "EMO 1",
+   "text": "Children develop a sense of identity and belonging"
+  },
+  {
+   "idx": "EMO 2",
+   "text": "Children demonstrate healthy emotional expression and functioning"
+  },
+  {
+   "idx": "SOC 1",
+   "text": "Children build relationships with adults"
+  },
+  {
+   "idx": "SOC 2",
+   "text": "Children build relationships with peers"
+  },
+  {
+   "idx": "SOC 3",
+   "text": "Children demonstrate pro-social behavior"
+  },
+  {
+   "idx": "CFC 1",
+   "text": "Children develop an understanding of culture, family, and community"
+  },
+  {
+   "idx": "ATL 1",
+   "text": "Children foster initiative and curiosity"
+  },
+  {
+   "idx": "ATL 2",
+   "text": "Children practice cognitive self-regulation and executive function skills"
+  },
+  {
+   "idx": "ATL 3",
+   "text": "Children demonstrate symbolic representation"
+  }
+ ],
+ "pk/language": [
+  {
+   "idx": "COM 1",
+   "text": "Children demonstrate receptive language skills"
+  },
+  {
+   "idx": "COM 2",
+   "text": "Children demonstrate expressive language skills"
+  },
+  {
+   "idx": "LIT 1",
+   "text": "Children gain early reading skills and an appreciation for books"
+  },
+  {
+   "idx": "LIT 2",
+   "text": "Children build awareness of phonological skills"
+  },
+  {
+   "idx": "LIT 3",
+   "text": "Children develop writing skills"
+  },
+  {
+   "idx": "LIT 4",
+   "text": "Children gain knowledge of print concepts and the alphabet"
+  }
+ ],
+ "pk/math": [
+  {
+   "idx": "MATH 1",
+   "text": "Children build an understanding of number sense and operations"
+  },
+  {
+   "idx": "MATH 2",
+   "text": "Children practice measurement and comparison"
+  },
+  {
+   "idx": "MATH 3",
+   "text": "Children develop spatial sense and an understanding of geometry"
+  },
+  {
+   "idx": "MATH 4",
+   "text": "Children practice sequencing and patterns"
+  }
+ ],
+ "pk/science": [
+  {
+   "idx": "SCI 1",
+   "text": "Children engage in scientific inquiry"
+  },
+  {
+   "idx": "SCI 2",
+   "text": "Children practice science and engineering skills"
+  }
+ ]
+}

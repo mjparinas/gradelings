@@ -201,6 +201,10 @@ export const WASHINGTON_DC_GUIDES: FrameworkGuides = {
     ],
   },
   gradeNotes: {
+    pk: {
+      overview: "Pre-K in the District of Columbia is the year before kindergarten, for children who are 4. Programs follow the District of Columbia's early learning standards. Children learn through play, stories and songs: counting, shapes and patterns, letters and rhymes, plus first ideas about families, communities and the world around them.",
+      lookFor: "Pre-K reports are usually progress notes or a checklist of skills, not grades. Look for counting small groups, naming letters, hearing rhymes, taking turns and talking about feelings.",
+    },
     k: {
       overview: "Kindergarten in Washington, DC is a year of learning through play, stories and hands-on activities. Children learn letters and sounds, count to 100 and start adding and taking away within 10. In social studies they learn about themselves, families, rules and fairness, needs and wants, and their city: the DC flag, the mayor and the president.",
       lookFor: "Report cards differ between DCPS and public charter schools. Expect comments on letters and sounds, counting, following routines, getting along with classmates and how your child shares ideas.",
