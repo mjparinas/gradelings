@@ -22,7 +22,7 @@ beforeAll(async () => {
   [webhook, gift, signup, redeem, me] = (await Promise.all([
     import("@/app/api/billing/webhook/route"),
     import("@/app/api/billing/gift/route"),
-    import("@/app/api/auth/signup/route"),
+    import("@/server/testing/signupWithSession"),
     import("@/app/api/codes/redeem/route"),
     import("@/app/api/auth/me/route"),
   ])) as unknown as Mod[];

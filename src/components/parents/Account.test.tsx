@@ -93,8 +93,8 @@ describe("AccountPage signed out", () => {
     expect(screen.getByRole("heading", { name: "Create a free account" })).toBeInTheDocument();
   });
 
-  it("creates an account at /api/auth/signup/, adopts the family and reports billing", async () => {
-    routes["POST /api/auth/signup/"] = () => json({ family: signedIn(false) });
+  it("asks for an account at /api/auth/signup/ and says to check the email, signing nobody in", async () => {
+    routes["POST /api/auth/signup/"] = () => json({ ok: true, checkEmail: true });
     const onBilling = vi.fn();
     const trialEndsAt = useStore.getState().family.trialEndsAt;
     render(<AccountPage onBilling={onBilling} />);
@@ -104,14 +104,14 @@ describe("AccountPage signed out", () => {
     fill("Email", "parent@example.com");
     fill(/^Password/, "longenough");
     await userEvent.click(screen.getByRole("button", { name: "Create account & sync" }));
-    await waitFor(() => expect(onBilling).toHaveBeenCalledWith({ stripe: true, dev: false }));
+    await waitFor(() => expect(screen.getByRole("status")).toHaveTextContent("Check your email"));
     const body = bodyOf("POST", "/api/auth/signup/");
     expect(body).toMatchObject({ email: "parent@example.com", password: "longenough" });
     // The device's trial carries over into the new account.
     expect(body.trialEndsAt).toBe(trialEndsAt);
-    expect(useStore.getState().family.account?.email).toBe("parent@example.com");
-    expect(h.syncNow).toHaveBeenCalled();
-    expect(calls("GET", "/api/auth/me/")).toHaveLength(1);
+    expect(useStore.getState().family.account).toBeUndefined();
+    expect(onBilling).not.toHaveBeenCalled();
+    expect(h.syncNow).not.toHaveBeenCalled();
   });
 
   it("signs in at /api/auth/login/ and downloads the whole history from cursor 0", async () => {
@@ -178,18 +178,6 @@ describe("AccountPage signed out", () => {
     await userEvent.click(screen.getByRole("button", { name: "Create account & sync" }));
     await waitFor(() => expect(calls("POST", "/api/auth/signup/")).toHaveLength(1));
     expect(bodyOf("POST", "/api/auth/signup/").referralCode).toBe("FRND2345");
-  });
-
-  it("goes on to the plans after creating an account from the Subscribe button", async () => {
-    window.location.hash = "#/account?next=subscription";
-    routes["POST /api/auth/signup/"] = () => json({ family: signedIn(false) });
-    render(<AccountPage onBilling={vi.fn()} />);
-    expect(screen.getByRole("heading", { name: "Create an account to subscribe" })).toBeInTheDocument();
-    expect(screen.getByText(/you'll pick monthly or yearly/)).toBeInTheDocument();
-    fill("Email", "parent@example.com");
-    fill(/^Password/, "longenough");
-    await userEvent.click(screen.getByRole("button", { name: "Create account & sync" }));
-    await waitFor(() => expect(window.location.hash).toBe("#/subscription"));
   });
 
   it("hides the security and delete panels until signed in", () => {

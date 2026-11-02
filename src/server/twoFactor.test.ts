@@ -110,7 +110,7 @@ const signIn = (body: Record<string, unknown>) => login.POST(req("/api/auth/logi
 
 beforeAll(async () => {
   [signup, login, adminMe, mfa, stats, auditLog, reset] = (await Promise.all([
-    import("@/app/api/auth/signup/route"),
+    import("@/server/testing/signupWithSession"),
     import("@/app/api/auth/login/route"),
     import("@/app/api/admin/me/route"),
     import("@/app/api/admin/2fa/route"),

@@ -17,7 +17,7 @@ let plan: typeof import("@/lib/plan");
 
 beforeAll(async () => {
   [signup, verify, referral] = (await Promise.all([
-    import("@/app/api/auth/signup/route"),
+    import("@/server/testing/signupWithSession"),
     import("@/app/api/auth/verify/route"),
     import("@/app/api/referral/route"),
   ])) as unknown as Mod[];
@@ -140,6 +140,7 @@ describe("thanking the referrer", () => {
     const { code } = (await (await referral.GET(req("/api/referral/", "GET", undefined, cookie))).json()) as { code: string };
     const start = (await familyOf("farmer@example.com")).trial_ends_at;
     for (let i = 0; i < plan.REFERRAL_MAX_REWARDS + 3; i++) {
+      await dbm.run("DELETE FROM rate_limits"); // one address may ask for an account only 3 times an hour
       await join_("sock@example.com", code);
       await confirm("sock@example.com");
       await deleteFamilyData((await familyOf("sock@example.com")).id);

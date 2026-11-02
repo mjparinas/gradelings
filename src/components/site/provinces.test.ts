@@ -12,9 +12,9 @@ describe("homepage province coverage", () => {
 
   it("states the subjects every province shares, and which provinces are without French Immersion", () => {
     const coverage = provinceCoverage(FRAMEWORKS.filter((f) => f.country === "CA"));
-    // Every province has Core French; Newfoundland and Labrador, Prince Edward Island and Nunavut have no French Immersion.
+    // Every province has Core French; Newfoundland and Labrador, Prince Edward Island and Nunavut have no French Immersion. Every province now offers Pre-K, so the Canadian range starts there.
     expect(coverage.sharedSubjects).toEqual(["math", "language", "science", "social", "core-french"]);
-    expect(coverage.range).toEqual({ from: "k", to: "9" });
+    expect(coverage.range).toEqual({ from: "pk", to: "9" });
     expect(coverage.gaps).toHaveLength(1);
     const [immersion] = coverage.gaps;
     expect(immersion.subjects).toEqual(["immersion"]);
@@ -23,9 +23,9 @@ describe("homepage province coverage", () => {
     expect(immersion.included.map((f) => f.id)).toEqual(FRAMEWORKS.filter((f) => f.country === "CA" && !["ca-nl", "ca-pe", "ca-nu"].includes(f.id)).map((f) => f.id));
   });
 
-  it("keeps the shared grade range and core subjects once a US state is offered, and French as a gap", () => {
+  it("starts the shared grade range at Pre-K once a US state is offered, with the core subjects shared and French as a gap", () => {
     const coverage = provinceCoverage(FRAMEWORKS);
-    expect(coverage.range).toEqual({ from: "k", to: "9" });
+    expect(coverage.range).toEqual({ from: "pk", to: "9" });
     expect(coverage.sharedSubjects).toEqual(["math", "language", "science", "social"]);
     for (const gap of coverage.gaps) expect(gap.missing.map((f) => f.id)).toContain("us-wa");
   });

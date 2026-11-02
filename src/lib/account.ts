@@ -33,32 +33,31 @@ function adopt(family: FamilyInfo) {
   useStore.getState().setSync({ status: "idle" });
 }
 
-export async function signUp(email: string, password: string) {
-  const { family } = await post<{ family: FamilyInfo }>("/api/auth/signup/", {
+/**
+ * Asks for an account. Nobody is signed in by this: the server answers the same way whether or not the address
+ * already has an account, and the owner opens the account from the email it sends. Progress on this device uploads
+ * once the email is confirmed in this browser.
+ */
+export async function signUp(email: string, password: string, to?: "teachers") {
+  await post("/api/auth/signup/", {
     email,
     password,
+    to,
     trialEndsAt: useStore.getState().family.trialEndsAt,
     referralCode: savedReferralCode() ?? undefined,
   });
   clearReferralCode();
-  adopt(family);
-  await syncNow();
 }
 
-/**
- * "Send me the reports" from the end of a lesson: an account from an email alone, with the weekly report on.
- * This device is signed in at once and its progress uploads; the email asks the parent to confirm.
- */
+/** "Send me the reports" from the end of a lesson: an account from an email alone, with the weekly report on. The email asks the parent to confirm. */
 export async function signUpForReports(email: string) {
-  const { family } = await post<{ family: FamilyInfo }>("/api/auth/signup/", {
+  await post("/api/auth/signup/", {
     email,
     passwordless: true,
     trialEndsAt: useStore.getState().family.trialEndsAt,
     referralCode: savedReferralCode() ?? undefined,
   });
   clearReferralCode();
-  adopt(family);
-  await syncNow();
 }
 
 export async function signIn(email: string, password: string) {

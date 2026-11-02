@@ -1,4 +1,4 @@
-import { head, research, type FrameworkContract } from "../contract";
+import { head, preKCite, research, type FrameworkContract } from "../contract";
 import { NEW_CURRICULUM_GRADES } from "./overall";
 import { PLAN } from "./plan";
 
@@ -10,6 +10,8 @@ const APPROVED = research<Record<string, { guides: string[]; areas: string[] | n
 const OUTCOMES = research<Record<string, { guide: string; grades: Record<string, { code: string }[]> }>>("nunavut/new-curriculum/outcomes.json");
 
 export const contract: FrameworkContract = {
+  // Pre-K cites the early-learning document (docs/research/nunavut/prek).
+  preK: preKCite("nunavut", "Nunavut"),
   // An approved guide, and a real strand where the guide has them. In the grades already taught with the new Nunavut
   // curriculum, real outcome codes of that curriculum for the unit's own grade and subject.
   cite: ({ grade, subject, standard }) => {

@@ -9,6 +9,9 @@ const scryptAsync = promisify(scrypt) as (pw: string, salt: Buffer, len: number)
 // has Path=/ and no Domain, so a sibling subdomain can't plant or overwrite it.
 const COOKIE = process.env.NODE_ENV === "production" ? "__Host-gm_session" : "gm_session";
 const SESSION_DAYS = 90;
+// Marks the browser that filled in the sign-up form, so a password typed there is kept only if the same browser confirms the email.
+const SIGNUP_COOKIE = process.env.NODE_ENV === "production" ? "__Host-gm_signup" : "gm_signup";
+const SIGNUP_COOKIE_DAYS = 3;
 
 export interface SessionInfo {
   parentId: string;
@@ -156,6 +159,18 @@ export async function endSession(req: Request): Promise<void> {
 
 export function sessionCookie(token: string, maxAge: number): string {
   return `${COOKIE}=${encodeURIComponent(token)}; Path=/; HttpOnly; SameSite=Lax; Max-Age=${maxAge}${secureFlag()}`;
+}
+
+/** A fresh random mark for the sign-up browser: its cookie, and the hash to store on the account. */
+export function newSignupMark(): { cookie: string; hash: string } {
+  const token = randomBytes(24).toString("base64url");
+  return { cookie: `${SIGNUP_COOKIE}=${token}; Path=/; HttpOnly; SameSite=Lax; Max-Age=${SIGNUP_COOKIE_DAYS * 86_400}${secureFlag()}`, hash: sha(token) };
+}
+
+/** Whether the request comes from the browser that signed up this account. */
+export function isSignupBrowser(req: Request, hash: string | null): boolean {
+  const token = readCookie(req, SIGNUP_COOKIE);
+  return !!token && !!hash && sha(token) === hash;
 }
 
 export function clearCookie(): string {

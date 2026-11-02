@@ -74,9 +74,9 @@ beforeEach(() => {
 afterEach(() => vi.unstubAllGlobals());
 
 describe("signing up and in", () => {
-  it("signs up with the device's trial end and a saved invite code, then syncs", async () => {
+  it("signs up with the device's trial end and a saved invite code, signing nobody in", async () => {
     storage.set("gradelings.referral", "ABCD2345");
-    routes["POST /api/auth/signup/"] = () => json({ family: signedIn });
+    routes["POST /api/auth/signup/"] = () => json({ ok: true, checkEmail: true });
     await account.signUp("p@example.com", "correct horse");
 
     expect(calls[0]).toEqual({
@@ -85,13 +85,9 @@ describe("signing up and in", () => {
       body: { email: "p@example.com", password: "correct horse", trialEndsAt: 5_000, referralCode: "ABCD2345" },
     });
     expect(storage.has("gradelings.referral")).toBe(false);
-    const s = useStore.getState();
-    expect(s.family.account?.email).toBe("p@example.com");
-    // The server's record is adopted as-is, not marked as a change to upload.
-    expect(s.family.updatedAt).toBe(10);
-    expect(s.sync.dirtyFamily).toBe(false);
-    expect(s.sync.status).toBe("idle");
-    expect(syncNow).toHaveBeenCalledOnce();
+    // Sign-up signs nobody in: the emailed link does, and the device uploads once it is confirmed here.
+    expect(useStore.getState().family.account).toBeUndefined();
+    expect(syncNow).not.toHaveBeenCalled();
   });
 
   it("shows the server's reason when sign-up is refused, and stays signed out", async () => {

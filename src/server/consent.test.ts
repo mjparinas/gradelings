@@ -21,7 +21,7 @@ let consent: typeof import("@/server/consent");
 
 beforeAll(async () => {
   [signup, sync, consentRoute, withdrawRoute, checkout, webhook, me] = (await Promise.all([
-    import("@/app/api/auth/signup/route"),
+    import("@/server/testing/signupWithSession"),
     import("@/app/api/sync/route"),
     import("@/app/api/account/consent/route"),
     import("@/app/api/account/consent/withdraw/route"),

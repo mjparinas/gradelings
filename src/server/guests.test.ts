@@ -17,7 +17,7 @@ let dbm: typeof import("@/server/db");
 let guests: typeof import("@/server/guests");
 
 beforeAll(async () => {
-  [seen, signup, publicFlags] = (await Promise.all([import("@/app/api/guests/seen/route"), import("@/app/api/auth/signup/route"), import("@/app/api/flags/route")])) as unknown as Mod[];
+  [seen, signup, publicFlags] = (await Promise.all([import("@/app/api/guests/seen/route"), import("@/server/testing/signupWithSession"), import("@/app/api/flags/route")])) as unknown as Mod[];
   dbm = await import("@/server/db");
   guests = await import("@/server/guests");
 });

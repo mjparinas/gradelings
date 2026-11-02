@@ -26,7 +26,7 @@ let health: typeof import("@/server/systemHealth");
 beforeAll(async () => {
   for (const k of KEYS) delete process.env[k];
   [signup, automations, billing, funnel, replies, exportRoute, cron, watch, webhook] = (await Promise.all([
-    import("@/app/api/auth/signup/route"),
+    import("@/server/testing/signupWithSession"),
     import("@/app/api/admin/automations/route"),
     import("@/app/api/admin/billing/route"),
     import("@/app/api/admin/funnel/route"),

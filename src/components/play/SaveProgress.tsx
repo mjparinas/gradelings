@@ -25,7 +25,6 @@ export function SaveProgress() {
   const [email, setEmail] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
-  const [taken, setTaken] = useState(false);
   const [sent, setSent] = useState("");
 
   if (sent) {
@@ -35,8 +34,8 @@ export function SaveProgress() {
     return (
       <section className="w-full rounded-2xl border-2 border-dashed border-line bg-white/70 p-4 text-left" aria-label="For grown-ups" role="status">
         <p className="font-read text-base">
-          <b>📬 Done!</b> Check <b>{sent}</b> for a link to confirm, and the weekly report will start.{" "}
-          {consent ? `To back up ${name}'s progress, open the Parent area and agree to the privacy notice.` : `${name}'s progress is backed up.`}
+          <b>📬 Check your email!</b> We sent <b>{sent}</b> a link. Open it on this device to start the weekly report and back up {name}&apos;s progress.{" "}
+          {consent ? "Then open the Parent area and agree to the privacy notice." : ""}
         </p>
       </section>
     );
@@ -49,14 +48,11 @@ export function SaveProgress() {
     if (busy) return;
     setBusy(true);
     setError("");
-    setTaken(false);
     try {
       await signUpForReports(email.trim());
       setSent(email.trim());
     } catch (err) {
-      const message = (err as Error).message;
-      setTaken(/already has an account/.test(message));
-      setError(message);
+      setError((err as Error).message);
     } finally {
       setBusy(false);
     }
@@ -88,12 +84,7 @@ export function SaveProgress() {
       </form>
       {error && (
         <p className="mt-2 font-read text-base text-[#b42318]" role="alert">
-          {error}{" "}
-          {taken && (
-            <a href="/parents/#/account" className="inline-flex min-h-12 items-center font-bold underline">
-              Sign in
-            </a>
-          )}
+          {error}
         </p>
       )}
       <p className="mt-2 font-read text-sm text-ink-soft">

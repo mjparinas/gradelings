@@ -15,7 +15,7 @@ let dbm: typeof import("@/server/db");
 
 beforeAll(async () => {
   [signup, sync, classes, assignments, join_, account, students_] = (await Promise.all([
-    import("@/app/api/auth/signup/route"),
+    import("@/server/testing/signupWithSession"),
     import("@/app/api/sync/route"),
     import("@/app/api/classes/route"),
     import("@/app/api/classes/assignments/route"),

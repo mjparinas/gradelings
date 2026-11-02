@@ -25,7 +25,7 @@ beforeAll(async () => {
     import("@/app/api/auth/google/route"),
     import("@/app/api/auth/google/callback/route"),
     import("@/app/api/auth/providers/route"),
-    import("@/app/api/auth/signup/route"),
+    import("@/server/testing/signupWithSession"),
     import("@/app/api/auth/login/route"),
     import("@/app/api/auth/sessions/route"),
     import("@/app/api/auth/password/route"),
