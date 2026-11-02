@@ -1,5 +1,6 @@
 import { APP_NAME } from "@/lib/brand";
 import type { Framework, ProficiencyLevel, ScoringScheme } from "../frameworks";
+import { preKScale } from "../prek";
 
 // Montana, a US state. Standards are the ones the Montana Board of Public Education adopted: the Montana Content
 // Standards for Mathematics (2026 edition), for English Language Arts and Literacy (2011, in force until the 2027
@@ -74,9 +75,9 @@ export const MONTANA: Framework = {
   standardLabel: "Standard",
   sourceName: "Montana Office of Public Instruction",
   sourceUrl: "https://opi.mt.gov/Educators/Teaching-Learning/K-12-Content-Standards/",
-  grades: ["k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+  grades: ["pk", "k", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
   subjects: ["math", "language", "science", "social"],
-  scoringFor: () => SCHEME,
+  scoringFor: (grade) => (grade === "pk" ? preKScale(SCHEME) : SCHEME),
   reportCard: {
     title: "Understanding Montana report cards",
     intro:
