@@ -5,7 +5,7 @@
 //   npm run build && npm start      # in one terminal
 //   node scripts/e2e-classroom.mjs http://localhost:3000 e2e-shots/classroom
 // It marks the teacher's email as confirmed straight in the local database file (DATABASE_URL, or
-// ./data/grademap.db), because no email is sent in tests.
+// ./data/gradelings.db), because no email is sent in tests.
 import fs from "node:fs";
 import { createClient } from "@libsql/client";
 import { chromium } from "playwright";
@@ -39,7 +39,7 @@ async function api(path, method = "GET", body) {
 }
 
 check((await api("/api/auth/signup/", "POST", { email, password: "correct horse" })).status === 200, "teacher signs up");
-const db = createClient({ url: process.env.DATABASE_URL ?? "file:./data/grademap.db", authToken: process.env.DATABASE_AUTH_TOKEN });
+const db = createClient({ url: process.env.DATABASE_URL ?? "file:./data/gradelings.db", authToken: process.env.DATABASE_AUTH_TOKEN });
 await confirmEmailInDb(db, email);
 // Sign-up signs nobody in (and its cookie only marks the browser), so sign in with the password now confirmed.
 cookie = "";

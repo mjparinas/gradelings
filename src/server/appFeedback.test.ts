@@ -5,7 +5,7 @@ import { afterAll, beforeAll, describe, expect, it } from "vitest";
 
 // "How's Gradelings?": the submit route, the admin list and the to-do item, against a throwaway SQLite file.
 
-const dir = mkdtempSync(join(tmpdir(), "grademap-appfeedback-"));
+const dir = mkdtempSync(join(tmpdir(), "gradelings-appfeedback-"));
 process.env.DATABASE_URL = `file:${join(dir, "test.db")}`;
 delete process.env.RESEND_API_KEY;
 delete process.env.ADMIN_TOKEN;

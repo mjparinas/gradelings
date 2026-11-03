@@ -7,7 +7,7 @@ import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } 
 // The admin panel's System page: each check against a stubbed fetch, the job and webhook records, and the
 // route's gate. Real route handlers against a throwaway SQLite file.
 
-const dir = mkdtempSync(join(tmpdir(), "grademap-system-"));
+const dir = mkdtempSync(join(tmpdir(), "gradelings-system-"));
 process.env.DATABASE_URL = `file:${join(dir, "test.db")}`;
 const ADMIN_EMAIL = "owner@example.com";
 const DAY = 86_400_000;

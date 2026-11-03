@@ -3,7 +3,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { afterEach, describe, expect, it, vi } from "vitest";
 
-process.env.DATABASE_URL = `file:${join(mkdtempSync(join(tmpdir(), "grademap-health-")), "test.db")}`;
+process.env.DATABASE_URL = `file:${join(mkdtempSync(join(tmpdir(), "gradelings-health-")), "test.db")}`;
 
 afterEach(() => {
   vi.doUnmock("@/server/db");

@@ -607,7 +607,7 @@ async function migrate(c: Client) {
 let client: Client | null = null;
 let ready: Promise<void> | null = null;
 
-const LOCAL_DATABASE_URL = "file:./data/grademap.db";
+const LOCAL_DATABASE_URL = "file:./data/gradelings.db";
 
 /** Each URL is paired with its own token, so a token from one database is never sent to another. */
 export function databaseConfig(): { url: string; authToken?: string } {

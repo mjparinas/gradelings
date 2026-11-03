@@ -5,7 +5,7 @@ import { afterAll, beforeAll, describe, expect, it } from "vitest";
 
 // Teacher-made student accounts against the real route handlers and a throwaway SQLite file.
 
-const dir = mkdtempSync(join(tmpdir(), "grademap-students-"));
+const dir = mkdtempSync(join(tmpdir(), "gradelings-students-"));
 process.env.DATABASE_URL = `file:${join(dir, "test.db")}`;
 delete process.env.RESEND_API_KEY;
 

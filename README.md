@@ -64,14 +64,14 @@ Browser tests (Playwright; instructions at the top of each file):
 - `scripts/e2e-devices.mjs`: layout checks on 14 common Android, iPhone, iPad and tablet screens, in portrait and landscape. The riskier flows run once per class of device.
 - `scripts/e2e-offline.mjs`: real offline. It stops the server and checks the service worker serves the app and the lessons.
 
-With no configuration it uses a local SQLite file (`./data/grademap.db`) and **simulated billing**, so you can try sign-up, sync and subscriptions end to end.
+With no configuration it uses a local SQLite file (`./data/gradelings.db`) and **simulated billing**, so you can try sign-up, sync and subscriptions end to end.
 
 ### Environment variables
 
 | Variable | Purpose |
 | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | Public address for canonical links and the sitemap (default `https://gradelings.com`). |
-| `DATABASE_URL` | libsql URL. Default `file:./data/grademap.db`; use a [Turso](https://turso.tech) URL in production. |
+| `DATABASE_URL` | libsql URL. Default `file:./data/gradelings.db`; use a [Turso](https://turso.tech) URL in production. |
 | `DATABASE_AUTH_TOKEN` | Turso auth token. |
 | `TURSO_DATABASE_URL`, `TURSO_AUTH_TOKEN` | Used instead when `DATABASE_URL` is unset (the names the Vercel Marketplace Turso integration sets). |
 | `STRIPE_SECRET_KEY` | Stripe secret key. Billing is simulated until this and both price IDs are set. |

@@ -7,7 +7,7 @@ import { LIFETIME_ACCESS } from "@/lib/plan";
 
 // Redeem codes, through the real route handlers against a throwaway SQLite file.
 
-const dir = mkdtempSync(join(tmpdir(), "grademap-codes-"));
+const dir = mkdtempSync(join(tmpdir(), "gradelings-codes-"));
 process.env.DATABASE_URL = `file:${join(dir, "test.db")}`;
 process.env.STRIPE_WEBHOOK_SECRET = "whsec_test";
 const ADMIN = "admin-token-that-is-long-enough-123";
