@@ -245,6 +245,8 @@ describe("A/B tests", () => {
   });
 });
 
+const DAY_MS = 86_400_000;
+
 describe("users", () => {
   const detail = async (familyId: string) => (await as(admin.cookie).get(users, `/api/admin/users/?id=${familyId}`)).json();
   const act = (body: Record<string, unknown>) => as(admin.cookie).send(users, "POST", "/api/admin/users/", body);
@@ -265,8 +267,18 @@ describe("users", () => {
   it("shows a family's plan and children's grades, never their names", async () => {
     await dbm.run("INSERT INTO profiles (id, family_id, data, updated_at) VALUES ('kid-1', ?, ?, 1)", [parent.familyId, JSON.stringify({ id: "kid-1", name: "Secretname", grade: "3", framework: "ca-on" })]);
     const d = await detail(parent.familyId);
-    expect(d.children).toEqual([{ grade: "3", framework: "ca-on" }]);
-    expect(JSON.stringify(d)).not.toContain("Secretname");
+    // Counts and dates per child, labelled by order added: no name, no answers.
+    const now = Date.now();
+    await dbm.run("INSERT INTO events (id, family_id, profile_id, t, data) VALUES ('kd-1', ?, 'kid-1', ?, ?)", [parent.familyId, now - 1000, JSON.stringify({ type: "answer", unit: "3/math/secret-unit" })]);
+    await dbm.run("INSERT INTO events (id, family_id, profile_id, t, data) VALUES ('kd-2', ?, 'kid-1', ?, ?)", [parent.familyId, now - 20 * DAY_MS, JSON.stringify({ type: "answer" })]);
+    const d2 = await detail(parent.familyId);
+    expect(d2.children).toEqual([
+      { label: "Child 1", id: "kid-1", grade: "3", framework: "ca-on", addedAt: null, events: 2, lastActive: now - 1000, answers7: 1, daysPractised30: 2 },
+    ]);
+    expect(d.children[0]).toMatchObject({ grade: "3", framework: "ca-on", events: 0, lastActive: null });
+    expect(JSON.stringify(d2)).not.toContain("Secretname");
+    expect(JSON.stringify(d2)).not.toContain("secret-unit");
+    expect(d2.family.country).toBe("CA");
     expect(d.parents[0]).toMatchObject({ email: "parent@example.com", verified: true });
   });
 
