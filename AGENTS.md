@@ -598,6 +598,7 @@ Details are in the sections above; this list only names features that aren't des
 - **Feedback** (flag `app-feedback`): a quiet "How's Gradelings?" rating card on the parent Overview after a good week, and a Feedback link in the parent and teacher areas.
 - **Server kill switches** (flags `signups`, `new-classes`, `redeem-codes`): pause new accounts, new classes or code redemption from the admin panel. Existing classes and accounts keep working.
 - **Admin email on a new customer:** admins are emailed when a family becomes a paying customer.
+- **No XR:** the Play listing leaves the Android XR slots empty (owner's decision, November 3, 2026); only desktop screenshots are uploaded for the extra form factors.
 - **Bundle ids:** the Android package and the iOS bundle id are both `com.gradelings.app`.
 
 ## Open items
