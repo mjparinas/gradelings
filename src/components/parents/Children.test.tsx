@@ -153,6 +153,16 @@ describe("ChildrenPage", () => {
     expect(live()[0]).toMatchObject({ id: "a", name: "Avery", grade: "5", birthYear: thisYear - 6 });
   });
 
+  it("hides the avatar picker once the child has chosen a shop buddy", async () => {
+    useStore.setState({ profiles: [kid("a", "Ava", { avatar: "hoot", avatarLocked: true })] });
+    render(<ChildrenPage />);
+    await userEvent.click(screen.getByRole("button", { name: "✏️ Edit" }));
+    expect(screen.queryByText("Avatar")).not.toBeInTheDocument();
+    expect(screen.getByText(/picture is the buddy they chose in the shop/)).toBeInTheDocument();
+    await userEvent.click(screen.getByRole("button", { name: "Save" }));
+    expect(live()[0]).toMatchObject({ id: "a", avatar: "hoot" });
+  });
+
   it("names a Washington child's grade the US way", () => {
     useStore.setState({ profiles: [kid("a", "Ava", { grade: "4", framework: "us-wa" }), kid("b", "Ben")] });
     render(<ChildrenPage />);
