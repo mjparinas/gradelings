@@ -5,6 +5,7 @@ import { guidesUpdated, latest } from "@/content/updated";
 import { LEGAL_UPDATED } from "@/lib/brand";
 import { absolute } from "@/lib/site";
 import { allCurriculumPaths, type SitemapPath } from "./curriculum";
+import { MATH_FACTS_PAGES, mathFactsPath } from "./mathFacts";
 import { allGuidePaths } from "./guides";
 import { allTeacherPaths } from "./teachers";
 
@@ -31,6 +32,8 @@ function otherPages(): SitemapPath[] {
     { path: "/trust/" },
     { path: "/whats-new/", updated: WHATS_NEW[0].day },
     ...WHATS_NEW.map((d) => ({ path: `/whats-new/${d.day}/`, updated: d.day })),
+    { path: mathFactsPath.hub() },
+    ...MATH_FACTS_PAGES.map((p) => ({ path: mathFactsPath.set(p) })),
     { path: "/accessibility/" },
     { path: "/privacy/", updated: legal },
     { path: "/terms/", updated: legal },
