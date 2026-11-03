@@ -8,6 +8,7 @@ import { allCurriculumPaths, type SitemapPath } from "./curriculum";
 import { MATH_FACTS_PAGES, mathFactsPath } from "./mathFacts";
 import { allGuidePaths } from "./guides";
 import { allTeacherPaths } from "./teachers";
+import { allWorksheetPaths } from "./worksheets";
 
 // The sitemap is an index (/sitemap.xml) of one sitemap per kind of page, so Search Console reports how many pages of
 // each kind are indexed. Each entry carries the day its content last changed where we know it (see src/content/updated.ts);
@@ -48,6 +49,7 @@ export const SITEMAP_SECTIONS = {
   curriculum: allCurriculumPaths,
   guides: allGuidePaths,
   teachers: allTeacherPaths,
+  worksheets: allWorksheetPaths,
 } satisfies Record<string, () => SitemapPath[]>;
 
 export type SitemapSection = keyof typeof SITEMAP_SECTIONS;
