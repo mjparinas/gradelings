@@ -57,7 +57,7 @@ describe("WeekRecapCard", () => {
     expect(screen.queryByTestId("week-recap-card")).not.toBeInTheDocument();
     cleanup();
     // A recap of a different week is a new card.
-    localStorage.setItem("grademap.grew.seen.p1", "2026-10-12");
+    localStorage.setItem("gradelings.grew.seen.p1", "2026-10-12");
     inBand("middle");
     expect(screen.getByTestId("week-recap-card")).toBeInTheDocument();
   });

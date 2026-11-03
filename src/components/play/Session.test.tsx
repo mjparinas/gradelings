@@ -262,7 +262,7 @@ describe("Session answer flow", () => {
 });
 
 describe("finishing a lesson later", () => {
-  const saved = () => JSON.parse(localStorage.getItem("grademap.resume.p1") ?? "null");
+  const saved = () => JSON.parse(localStorage.getItem("gradelings.resume.p1") ?? "null");
 
   it("keeps the lesson's place after each answer", async () => {
     h.plan = makePlan({ total: 4 });
@@ -297,7 +297,7 @@ describe("finishing a lesson later", () => {
   it("picks up at the next question with the answers so far still counted", async () => {
     h.plan = makePlan({ total: 4 });
     localStorage.setItem(
-      "grademap.resume.p1",
+      "gradelings.resume.p1",
       JSON.stringify({ mode: "practice", scope: "math-1", title: "Practice", icon: "✏️", results: [true, false, true], total: 4, ms: 30_000, at: Date.now() - 1000 }),
     );
     render(<Session mode="practice" scope="math-1" resume />);
@@ -312,7 +312,7 @@ describe("finishing a lesson later", () => {
 
   it("starts from the beginning without the resume link, or when the saved lesson is a different one", () => {
     localStorage.setItem(
-      "grademap.resume.p1",
+      "gradelings.resume.p1",
       JSON.stringify({ mode: "practice", scope: "math-2", title: "Other", icon: "✏️", results: [true], total: 4, ms: 0, at: Date.now() }),
     );
     h.plan = makePlan({ total: 4 });

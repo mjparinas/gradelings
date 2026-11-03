@@ -81,12 +81,12 @@ try {
   await page.waitForTimeout(5000); // let the worker take control and keep the lessons
 
   // Grade 5 doesn't read aloud by default, so nothing downloads until a parent turns it on.
-  if (await page.evaluate(async () => (await caches.keys()).includes("grademap-piper") && (await (await caches.open("grademap-piper")).keys()).length > 0)) throw new Error("the voice downloaded with read-aloud off");
+  if (await page.evaluate(async () => (await caches.keys()).includes("gradelings-piper") && (await (await caches.open("gradelings-piper")).keys()).length > 0)) throw new Error("the voice downloaded with read-aloud off");
   await page.goto(BASE + "/parents/#/settings");
   await enterPin(page, true);
   await page.getByRole("switch", { name: /Read questions out loud/ }).first().click();
   // The list of files is saved last, once everything else is in.
-  const voiceSaved = () => page.evaluate(async () => (await (await caches.open("grademap-piper")).keys()).some((r) => r.url.endsWith("/files.json")));
+  const voiceSaved = () => page.evaluate(async () => (await (await caches.open("gradelings-piper")).keys()).some((r) => r.url.endsWith("/files.json")));
   for (const t0 = Date.now(); !(await voiceSaved()); await sleep(1000)) if (Date.now() - t0 > 180000) throw new Error("the offline voice didn't download by itself");
 
   // Account shows it on and ready, without a parent doing anything.

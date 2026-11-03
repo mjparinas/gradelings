@@ -13,18 +13,18 @@ import type { SpeechLanguage } from "./speech";
 // which the service worker leaves alone when the app updates.
 
 export const PIPER_BASE = `/piper/${manifest.version}/`;
-export const PIPER_CACHE = "grademap-piper";
+export const PIPER_CACHE = "gradelings-piper";
 const LIST_URL = `${PIPER_BASE}files.json`;
 const WORKER_URL = "/piper-worker.js";
-const PREF_KEY = "grademap.piper";
+const PREF_KEY = "gradelings.piper";
 // The voices tried after Piper (Kokoro, then Supertonic) kept their files under these names.
 const OLD_CACHES = ["grademap-kokoro", "grademap-supertonic"];
 // Piper came back as everyone's voice in October 2026, after Kokoro and Supertonic didn't sound as
 // good. Every device's earlier voice choices (an older voice switched on or off, a device voice
 // picked for English or French) are cleared once, so Piper reads; choices made after that stick.
-const RESET_KEY = "grademap.voiceReset";
+const RESET_KEY = "gradelings.voiceReset";
 const RESET_VERSION = "piper-amy-1";
-const RESET_KEYS = ["grademap.piper", "grademap.supertonic", "grademap.kokoro", "grademap.voice", "grademap.voice.fr"];
+const RESET_KEYS = ["gradelings.piper", "gradelings.supertonic", "gradelings.kokoro", "gradelings.voice", "gradelings.voice.fr"];
 
 /** Clears the voice choices saved before Piper came back, once per device (see RESET_KEYS). */
 export function resetOldVoiceChoices() {

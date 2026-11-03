@@ -30,7 +30,7 @@ async function seedHistory(page) {
   await page.evaluate(
     async ({ n, units }) => {
       const db = await new Promise((res, rej) => {
-        const r = indexedDB.open("grademap", 1);
+        const r = indexedDB.open("gradelings", 1);
         r.onsuccess = () => res(r.result);
         r.onerror = () => rej(r.error);
       });

@@ -2,7 +2,7 @@
 // back is a full page load, but the parent has only just typed the PIN, so the trip back skips the gate once.
 // The pass is kept in sessionStorage (this tab only), lasts BILLING_PASS_MS and is used up on return.
 
-const KEY = "grademap.billing-pass";
+const KEY = "gradelings.billing-pass";
 /** How long after leaving for Stripe the way back skips the PIN. */
 export const BILLING_PASS_MS = 30 * 60_000;
 

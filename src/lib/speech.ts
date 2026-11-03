@@ -85,8 +85,8 @@ export function chooseVoice(ranked: readonly VoiceOption[], preferredUri: string
 
 // ---- Browser state ----
 
-// grademap.voice for English, grademap.voice.fr and grademap.voice.es for the others.
-const prefKey = (language: SpeechLanguage) => (language === "en" ? "grademap.voice" : `grademap.voice.${language}`);
+// gradelings.voice for English, gradelings.voice.fr and gradelings.voice.es for the others.
+const prefKey = (language: SpeechLanguage) => (language === "en" ? "gradelings.voice" : `gradelings.voice.${language}`);
 const EMPTY: VoiceOption[] = [];
 const LANGUAGES: readonly SpeechLanguage[] = ["en", "fr", "es"];
 let ranked: Record<SpeechLanguage, VoiceOption[]> = { en: EMPTY, fr: EMPTY, es: EMPTY };

@@ -127,7 +127,7 @@ describe("Piper worker", () => {
   it("uses the engine files the download fetches, and the Piper cache", () => {
     for (const name of Object.keys(manifest.engine)) expect(source).toContain(name);
     expect(source).toContain(".onnx.json");
-    expect(source).toContain('const CACHE = "grademap-piper"');
+    expect(source).toContain('const CACHE = "gradelings-piper"');
   });
 });
 
@@ -279,15 +279,15 @@ describe("Piper as the default voice", () => {
   });
 
   it("is on even where a device voice was picked before, and stays off once a parent switches it off", async () => {
-    storage.set("grademap.voice", "Samantha");
+    storage.set("gradelings.voice", "Samantha");
     let piper = await import("./piper");
     expect(await piper.autoDownloadPiper("en")).toBe(true);
     expect(piper.getPiperState().enabled).toBe(true);
-    expect(storage.has("grademap.voice")).toBe(false);
+    expect(storage.has("gradelings.voice")).toBe(false);
 
     storage.clear();
     piper.setPiperEnabled(false);
-    expect(storage.get("grademap.piper")).toBe("off");
+    expect(storage.get("gradelings.piper")).toBe("off");
     vi.resetModules();
     piper = await import("./piper");
     expect(await piper.autoDownloadPiper("fr")).toBe(false);
@@ -295,34 +295,34 @@ describe("Piper as the default voice", () => {
   });
 
   it.each([
-    ["grademap.supertonic", "grademap-supertonic", "/supertonic/1/files.json"],
-    ["grademap.kokoro", "grademap-kokoro", "/kokoro/1/files.json"],
-    ["grademap.piper", undefined, undefined],
+    ["gradelings.supertonic", "grademap-supertonic", "/supertonic/1/files.json"],
+    ["gradelings.kokoro", "grademap-kokoro", "/kokoro/1/files.json"],
+    ["gradelings.piper", undefined, undefined],
   ])("switches Piper back on where an earlier choice (%s) was off, and removes the replaced voice's files", async (pref, cache, file) => {
     localStorage.setItem(pref, "off");
-    localStorage.setItem("grademap.voice", "Samantha");
-    localStorage.setItem("grademap.voice.fr", "Amélie");
+    localStorage.setItem("gradelings.voice", "Samantha");
+    localStorage.setItem("gradelings.voice.fr", "Amélie");
     if (cache && file) await (await caches.api.open(cache)).put(file, new Response("{}"));
     const piper = await import("./piper");
     await piper.piperWanted("en");
     expect(piper.getPiperState().enabled).toBe(true);
     expect(await piper.autoDownloadPiper("en")).toBe(true);
-    for (const key of [pref, "grademap.voice", "grademap.voice.fr"]) expect(localStorage.getItem(key)).toBeNull();
-    expect(localStorage.getItem("grademap.voiceReset")).toBe("piper-amy-1");
+    for (const key of [pref, "gradelings.voice", "gradelings.voice.fr"]) expect(localStorage.getItem(key)).toBeNull();
+    expect(localStorage.getItem("gradelings.voiceReset")).toBe("piper-amy-1");
     if (cache) expect(caches.stores.has(cache)).toBe(false);
   });
 
   it("clears the old choices only once, so a parent's later choice sticks", async () => {
-    localStorage.setItem("grademap.supertonic", "off");
+    localStorage.setItem("gradelings.supertonic", "off");
     let piper = await import("./piper");
     piper.resetOldVoiceChoices();
     piper.setPiperEnabled(false);
-    localStorage.setItem("grademap.voice", "Samantha");
+    localStorage.setItem("gradelings.voice", "Samantha");
     vi.resetModules();
     piper = await import("./piper");
     await piper.piperWanted("en");
     expect(piper.getPiperState().enabled).toBe(false);
-    expect(localStorage.getItem("grademap.voice")).toBe("Samantha");
+    expect(localStorage.getItem("gradelings.voice")).toBe("Samantha");
   });
 
   it("keeps the Piper files it already has", async () => {
@@ -341,7 +341,7 @@ describe("Piper as the default voice", () => {
   });
 
   it("doesn't download when the admin flag is off", async () => {
-    storage.set("grademap.flags", JSON.stringify({ flags: { "piper-auto-download": false }, variants: {} }));
+    storage.set("gradelings.flags", JSON.stringify({ flags: { "piper-auto-download": false }, variants: {} }));
     const piper = await import("./piper");
     expect(await piper.autoDownloadPiper("en")).toBe(false);
   });

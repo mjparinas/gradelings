@@ -6,10 +6,15 @@ import type { AppEvent } from "./model";
 // the sync engine copies unsynced events to the server when it can.
 // Falls back to memory if IndexedDB is unavailable (e.g. some private modes).
 
-const DB_NAME = "grademap";
+const DB_NAME = "gradelings";
+/** The product used to be called GradeMap; its database is copied into the new one once (see copyLegacyDatabase). */
+const LEGACY_DB_NAME = "grademap";
+const LEGACY_FLAG = "legacyDatabaseCopied";
 const VERSION = 1;
 /** How long to wait for the browser to open the database before using memory instead. */
 export const OPEN_TIMEOUT_MS = 4000;
+/** How long copying the old database may take before the app carries on (the copy is finished on the next visit). */
+export const LEGACY_COPY_TIMEOUT_MS = 10_000;
 
 export interface StoredEvent {
   event: AppEvent;
@@ -30,7 +35,7 @@ function open(): Promise<IDBDatabase | null> {
     // visit that arrives from another site, such as the return from Google. Without a way out the app sits on
     // "Getting ready…" even after a refresh, so after a while we carry on with the in-memory fallback.
     let timedOut = false;
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       timedOut = true;
       resolve(null);
     }, OPEN_TIMEOUT_MS);
@@ -51,6 +56,7 @@ function open(): Promise<IDBDatabase | null> {
           db.close();
           return;
         }
+        clearTimeout(timer);
         // The browser can close the connection under us (storage cleared, the tab frozen, another
         // tab upgrading the database). Open a fresh one next time rather than keep a dead handle.
         db.onclose = () => forget(db);
@@ -59,7 +65,8 @@ function open(): Promise<IDBDatabase | null> {
           forget(db);
         };
         current = db;
-        resolve(db);
+        // What was saved before the rename must be in place before anything reads, or a child would look new.
+        void withTimeout(copyLegacyDatabase(db), LEGACY_COPY_TIMEOUT_MS).then(() => resolve(db));
       };
       req.onerror = () => resolve(null);
       req.onblocked = () => resolve(null);
@@ -68,6 +75,87 @@ function open(): Promise<IDBDatabase | null> {
     }
   });
   return dbPromise;
+}
+
+function withTimeout(work: Promise<unknown>, ms: number): Promise<unknown> {
+  return Promise.race([work.catch(() => undefined), new Promise((r) => setTimeout(r, ms))]);
+}
+
+/** Runs a request set on an open database and resolves when its transaction completes. */
+function run(db: IDBDatabase, stores: string[], mode: IDBTransactionMode, fn: (t: IDBTransaction) => void): Promise<void> {
+  return new Promise((resolve, reject) => {
+    const t = db.transaction(stores, mode);
+    t.oncomplete = () => resolve();
+    t.onerror = () => reject(t.error);
+    t.onabort = () => reject(t.error);
+    fn(t);
+  });
+}
+
+/** Opens the database that exists under the old name, or null when there is none (it is never created). */
+async function openLegacyDatabase(): Promise<IDBDatabase | null> {
+  if (typeof indexedDB.databases !== "function") return null;
+  const names = await indexedDB.databases();
+  if (!names.some((d) => d.name === LEGACY_DB_NAME)) return null;
+  return new Promise((resolve) => {
+    const req = indexedDB.open(LEGACY_DB_NAME);
+    req.onsuccess = () => resolve(req.result);
+    req.onerror = () => resolve(null);
+    req.onblocked = () => resolve(null);
+  });
+}
+
+/**
+ * The product used to be called GradeMap and its on-device database was named after it. The first time the new
+ * database opens, everything in the old one (the profiles and settings, and every event, including those not
+ * yet uploaded) is copied across, without overwriting anything the new one already has; then the old one is
+ * deleted. If anything fails the old database is kept and the copy is tried again on the next visit.
+ */
+async function copyLegacyDatabase(db: IDBDatabase): Promise<void> {
+  if (typeof indexedDB === "undefined") return;
+  const old = await openLegacyDatabase();
+  if (!old) return;
+  try {
+    if (!(await getFlag(db))) {
+      let keys!: IDBRequest<IDBValidKey[]>;
+      let values!: IDBRequest<unknown[]>;
+      let rows!: IDBRequest<StoredEvent[]>;
+      await run(old, ["kv", "events"], "readonly", (t) => {
+        keys = t.objectStore("kv").getAllKeys();
+        values = t.objectStore("kv").getAll();
+        rows = t.objectStore("events").getAll();
+      });
+      await run(db, ["kv", "events"], "readwrite", (t) => {
+        const kvStore = t.objectStore("kv");
+        keys.result.forEach((key, i) => {
+          const get = kvStore.get(key);
+          get.onsuccess = () => {
+            if (get.result === undefined) kvStore.put(values.result[i], key);
+          };
+        });
+        const eventStore = t.objectStore("events");
+        for (const row of rows.result) {
+          const get = eventStore.get(row.id);
+          get.onsuccess = () => {
+            if (!get.result) eventStore.put(row);
+          };
+        }
+      });
+      await run(db, ["kv"], "readwrite", (t) => void t.objectStore("kv").put(1, LEGACY_FLAG));
+    }
+  } finally {
+    old.close();
+  }
+  indexedDB.deleteDatabase(LEGACY_DB_NAME);
+}
+
+async function getFlag(db: IDBDatabase): Promise<boolean> {
+  let flag: unknown;
+  await run(db, ["kv"], "readonly", (t) => {
+    const get = t.objectStore("kv").get(LEGACY_FLAG);
+    get.onsuccess = () => (flag = get.result);
+  });
+  return flag === 1;
 }
 
 /** Drops a connection the browser closed, if it is still the one in use, so the next call opens a new one. */

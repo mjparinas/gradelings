@@ -2,7 +2,7 @@
 // first ("Welcome back", "My account"): the server still decides who is signed in. It holds a flag and nothing
 // about the family.
 
-const KEY = "grademap.parent";
+const KEY = "gradelings.parent";
 
 export function knownParent(): boolean {
   try {

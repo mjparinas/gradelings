@@ -8,7 +8,7 @@ import type { AppEvent, FamilyInfo, Profile } from "./model";
 // the children or their practice. Skipped for a US child: their curriculum asks for a parent's consent before
 // anything about them is stored, and a guest has no parent to give it.
 
-const KEY = "grademap.guestPing";
+const KEY = "gradelings.guestPing";
 const DAY = 86_400_000;
 const RETRY_MS = 10 * 60_000;
 let lastTry = 0;

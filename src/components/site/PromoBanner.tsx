@@ -10,7 +10,7 @@ import { isStoreApp } from "@/lib/twa";
 // and the page is unchanged. The store apps sell nothing, so it never shows there, and the one-task account
 // pages (reset a password, confirm an email, unsubscribe) stay free of selling.
 
-const HIDDEN = "grademap.promo.hidden";
+const HIDDEN = "gradelings.promo.hidden";
 
 // The sale fetched on this page load. Each page renders its own banner, so without this a click in the nav
 // bar would drop the banner and add it back a moment later, shifting the page.

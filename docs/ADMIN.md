@@ -134,9 +134,9 @@ Flags are defined in code, in `FLAGS` in `src/lib/flags.ts`, so the panel can on
 | `redeem-codes` | Server | Redeeming codes |
 | `new-classes` | Server | Creating classes (existing classes keep working) |
 
-A flag is decided in this order (`flagOn`): a per-family override (Users), then off for everyone if switched off, then the rollout. A partial rollout uses a stable hash of the flag and the family id, so the same families keep it and raising the percentage only adds families. Signed-out devices are bucketed by a random device id (`grademap.device` in `localStorage`); class student sessions count as signed out.
+A flag is decided in this order (`flagOn`): a per-family override (Users), then off for everyone if switched off, then the rollout. A partial rollout uses a stable hash of the flag and the family id, so the same families keep it and raising the percentage only adds families. Signed-out devices are bucketed by a random device id (`gradelings.device` in `localStorage`); class student sessions count as signed out.
 
-The kids' app fetches `/api/flags/` when it opens, when it comes back into view and when the signed-in account changes, and keeps the last answer in `localStorage` (`grademap.flags`) so it still applies offline. Read a flag with `useFlag("key")` or `useIsOn()` from `src/lib/remoteFlags.ts`; on the server use `isFlagOn("key", familyId)` from `src/server/flags.ts`.
+The kids' app fetches `/api/flags/` when it opens, when it comes back into view and when the signed-in account changes, and keeps the last answer in `localStorage` (`gradelings.flags`) so it still applies offline. Read a flag with `useFlag("key")` or `useIsOn()` from `src/lib/remoteFlags.ts`; on the server use `isFlagOn("key", familyId)` from `src/server/flags.ts`.
 
 **Adding a flag:** add it to `FLAGS`, read it where the feature is shown (and on the server if the feature has an API), and add a test.
 

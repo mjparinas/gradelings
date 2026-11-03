@@ -37,7 +37,7 @@ describe("billing pass", () => {
     const { grantBillingPass, takeBillingPass } = await load();
     grantBillingPass(1_000);
     expect(takeBillingPass("#/reports", 2_000)).toBe(false);
-    expect(sessionStorage.getItem("grademap.billing-pass")).toBeNull();
+    expect(sessionStorage.getItem("gradelings.billing-pass")).toBeNull();
   });
 
   it("asks for the PIN when nobody left for Stripe, or the clock went backwards", async () => {
