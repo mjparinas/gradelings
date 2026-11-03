@@ -10,7 +10,7 @@ Google Play's payments policy doesn't let an app sell digital content outside Go
 
 Paste these into Play Console > Grow users > Store presence > Main store listing. Counts are checked by `src/lib/playListing.test.ts`.
 
-- **App name** (30 at most): `Gradelings: Pre-K-9 Practice`
+- **App name** (30 at most): `Gradelings: Pre-K to Grade 9`
 - **Short description** (80 at most): `Curriculum-matched practice and learning games for Pre-K to Grade 9.`
 - **Full description** (4,000 at most):
 

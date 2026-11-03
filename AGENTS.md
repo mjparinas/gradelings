@@ -599,6 +599,7 @@ Details are in the sections above; this list only names features that aren't des
 - **Server kill switches** (flags `signups`, `new-classes`, `redeem-codes`): pause new accounts, new classes or code redemption from the admin panel. Existing classes and accounts keep working.
 - **Admin email on a new customer:** admins are emailed when a family becomes a paying customer.
 - **Bundle ids:** the Android package and the iOS bundle id are both `com.gradelings.app`.
+- **Play Console answers** (November 3, 2026): the Play store name is `Gradelings: Pre-K to Grade 9` (say "Pre-K to Grade 9", never "Pre-K-9"), and what was entered in each form is recorded in `docs/PLAY_CONSOLE_ANSWERS.md`.
 
 ## Open items
 
