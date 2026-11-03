@@ -1,0 +1,56 @@
+name: Promote staging
+
+# Pull requests merge into `staging`; this job lands them on `main` once a night, so Vercel makes one production
+# build a day instead of one per merge (build minutes were most of the Vercel bill). It promotes only when CI
+# passed on staging's latest commit, and merges `main` back into `staging` afterwards so the two stay level.
+# Run it by hand from the Actions tab (Run workflow) to ship sooner.
+#
+# One-time setup: the merge into `main` is made by this workflow's token, so branch protection on `main` must let
+# it through. Either allow "github-actions" to bypass the rule, or add a repository secret PROMOTE_TOKEN (a
+# fine-grained token with Contents write on this repository) that is allowed to push to `main`.
+
+on:
+  schedule:
+    - cron: "0 9 * * *" # 09:00 UTC, about 1-2 am Pacific
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  checks: read
+
+concurrency:
+  group: promote-staging
+  cancel-in-progress: false
+
+jobs:
+  promote:
+    name: Merge staging into main
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/github-script@v9
+        with:
+          github-token: ${{ secrets.PROMOTE_TOKEN || github.token }}
+          script: |
+            const { owner, repo } = context.repo;
+            const staging = (await github.rest.repos.getBranch({ owner, repo, branch: 'staging' })).data.commit.sha;
+            const cmp = await github.rest.repos.compareCommitsWithBasehead({ owner, repo, basehead: `main...${staging}` });
+            if (cmp.data.ahead_by === 0) {
+              core.notice('staging has nothing that main lacks.');
+              return;
+            }
+            const checks = await github.paginate(github.rest.checks.listForRef, { owner, repo, ref: staging, per_page: 100 });
+            const passed = checks.filter((c) => c.name === 'CI passed').sort((a, b) => b.id - a.id)[0];
+            if (!passed || passed.status !== 'completed' || passed.conclusion !== 'success') {
+              core.setFailed(`CI has not passed on staging (${staging.slice(0, 7)}): ${passed ? `${passed.status} / ${passed.conclusion}` : 'no "CI passed" check yet'}. Nothing promoted.`);
+              return;
+            }
+            core.info(`${cmp.data.ahead_by} commit(s) ahead, CI passed on ${staging.slice(0, 7)}.`);
+            // A merge commit rather than a fast-forward, so a change that went straight to main (a Dependabot update, a hotfix) doesn't block the night's promotion.
+            const merged = await github.rest.repos.merge({ owner, repo, base: 'main', head: staging, commit_message: `Promote staging to main (${new Date().toISOString().slice(0, 10)})` });
+            core.notice(`main is now ${merged.data?.sha?.slice(0, 7) ?? 'up to date'}.`);
+            try {
+              await github.rest.repos.merge({ owner, repo, base: 'staging', head: 'main', commit_message: 'Bring main back into staging' });
+            } catch (e) {
+              core.warning(`Could not merge main back into staging: ${e.message}`);
+            }

@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    branches: [main, staging]
   pull_request:
 
 # A newer push to the same branch cancels the older run.
@@ -28,7 +28,7 @@ env:
 jobs:
   # A pull request that changes only documents, the iOS app or the Android app can't break the site, so the
   # jobs below are skipped for it ("CI passed" still reports, because a skipped job is not a failure).
-  # Every push to main runs everything.
+  # Every push to main or staging runs everything.
   changes:
     name: What changed
     runs-on: ubuntu-latest
