@@ -340,6 +340,24 @@ describe("the shop", () => {
     expect(st().profiles[0]).toMatchObject({ title: "rookie", confetti: "classic" });
   });
 
+  it("makes the chosen shop buddy the avatar and stops a parent changing it", () => {
+    const id = st().addProfile({ ...child, avatar: "ruby" });
+    expect(st().profiles[0].avatarLocked).toBeUndefined();
+    // Before a pick, the parent's avatar edit works.
+    st().updateProfile(id, { avatar: "bolt" });
+    expect(st().profiles[0].avatar).toBe("bolt");
+    useStore.setState({ events: [coins(id, 500)] });
+    st().buy("hoot");
+    expect(st().profiles[0]).toMatchObject({ companion: "hoot", avatar: "hoot", avatarLocked: true });
+    // The parent can still edit other things, but not the picture.
+    st().updateProfile(id, { name: "Ava", avatar: "ruby", colour: "#000" });
+    expect(st().profiles[0]).toMatchObject({ name: "Ava", avatar: "hoot" });
+    expect(st().profiles[0].colour).not.toBe("#000");
+    // The child picking another buddy changes it.
+    st().buy("ollie");
+    expect(st().profiles[0].avatar).toBe("ollie");
+  });
+
   it("gives an admin account's children unlimited coins, without storing any", () => {
     const id = st().addProfile(child);
     expect(st().buy("hoot")).toBe(false);
