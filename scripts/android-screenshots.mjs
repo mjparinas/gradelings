@@ -1,5 +1,5 @@
-// Google Play screenshots for the Android app (docs/PLAY_LISTING.md): phone, 7-inch tablet and
-// 10-inch tablet, portrait, at sizes Play accepts (each side 320 to 3840 px, long side at most
+// Google Play screenshots for the Android app (docs/PLAY_LISTING.md): phone, 7-inch tablet,
+// 10-inch tablet (portrait) and desktop/XR (landscape), at sizes Play accepts (each side 320 to 3840 px, long side at most
 // twice the short one). It plays a few questions as a demo Grade 3 child ("Maya", no real
 // child), opening pages the way the Android app does (?app=android), so no prices or subscribe
 // buttons show.
@@ -23,6 +23,8 @@ const SIZES = [
   { name: "phone", viewport: { width: 360, height: 640 }, deviceScaleFactor: 3 }, // 1080 × 1920
   { name: "tablet-7", viewport: { width: 600, height: 960 }, deviceScaleFactor: 2 }, // 1200 × 1920
   { name: "tablet-10", viewport: { width: 800, height: 1280 }, deviceScaleFactor: 2 }, // 1600 × 2560
+  // Landscape 16:9 for Play's desktop and Android XR slots (each side 1080 to 7680 px; XR from 720).
+  { name: "desktop", viewport: { width: 1280, height: 720 }, deviceScaleFactor: 1.5, desktop: true }, // 1920 × 1080
 ];
 
 const browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || undefined });
@@ -34,8 +36,8 @@ for (const size of SIZES.filter((s) => !ONLY || s.name === ONLY)) {
     viewport: size.viewport,
     deviceScaleFactor: size.deviceScaleFactor,
     userAgent: AGENT,
-    isMobile: true,
-    hasTouch: true,
+    isMobile: !size.desktop,
+    hasTouch: !size.desktop,
     reducedMotion: "reduce",
   });
   const page = await context.newPage();
