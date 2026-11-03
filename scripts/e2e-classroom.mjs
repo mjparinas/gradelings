@@ -241,7 +241,7 @@ check(true, "signing out returns to the welcome screen");
 const stored = await page.evaluate(
   () =>
     new Promise((resolve) => {
-      const req = indexedDB.open("grademap");
+      const req = indexedDB.open("gradelings");
       req.onsuccess = () => {
         const names = [...req.result.objectStoreNames];
         if (!names.includes("events")) return resolve(0);

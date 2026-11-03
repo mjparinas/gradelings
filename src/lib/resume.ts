@@ -25,7 +25,7 @@ export interface Unfinished {
   at: number;
 }
 
-const key = (profileId: string) => `grademap.resume.${profileId}`;
+const key = (profileId: string) => `gradelings.resume.${profileId}`;
 
 export function isResumable(mode: Mode): boolean {
   return RESUMABLE.includes(mode);

@@ -53,9 +53,9 @@ describe("unfinished lessons", () => {
   });
 
   it("ignores a saved value it can't read", () => {
-    localStorage.setItem("grademap.resume.p1", "{oops");
+    localStorage.setItem("gradelings.resume.p1", "{oops");
     expect(loadUnfinished("p1", NOW)).toBeNull();
-    localStorage.setItem("grademap.resume.p1", JSON.stringify({ mode: "practice" }));
+    localStorage.setItem("gradelings.resume.p1", JSON.stringify({ mode: "practice" }));
     expect(loadUnfinished("p1", NOW)).toBeNull();
   });
 

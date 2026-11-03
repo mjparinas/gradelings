@@ -4,8 +4,8 @@ import { isIosApp } from "./twa";
 
 export const INSTALL_SNOOZE_DAYS = 30;
 export const KIDS_SNOOZE_DAYS = 7;
-const KEY = "grademap.install.dismissed";
-const KIDS_KEY = "grademap.install.kids.dismissed";
+const KEY = "gradelings.install.dismissed";
+const KIDS_KEY = "gradelings.install.kids.dismissed";
 
 /** The event Chromium browsers fire when the app can be installed. It isn't in lib.dom yet. */
 export type InstallPromptEvent = Event & {

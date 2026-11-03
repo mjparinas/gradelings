@@ -213,13 +213,13 @@ describe("TeacherApp class page", () => {
     expect(write).toHaveBeenCalledWith(expect.stringContaining("not a report-card mark"));
     await user.click(within(results).getByRole("button", { name: "Done" }));
     expect(await within(section).findByRole("button", { name: "Start an exit ticket" })).toBeInTheDocument();
-    expect(sessionStorage.getItem("grademap.ticket.class-1")).toBeNull();
+    expect(sessionStorage.getItem("gradelings.ticket.class-1")).toBeNull();
     expect(asked).toEqual(["q1", "q2", "q3"]);
   });
 
   it("keeps an exit ticket across a reload, and shows its results if it was ended early", async () => {
     const question = { prompt: "How many?", hint: "", choices: [{ id: "a", label: "3" }, { id: "b", label: "4" }], answer: "b" };
-    sessionStorage.setItem("grademap.ticket.class-1", JSON.stringify({ total: 4, ids: ["q1"] }));
+    sessionStorage.setItem("gradelings.ticket.class-1", JSON.stringify({ total: 4, ids: ["q1"] }));
     serve(detail, (url) =>
       url === "/api/classes/live/?classId=class-1&recap=1"
         ? { recap: [{ id: "q1", unitKey: "3/math/counting", question, revealed: true, createdAt: now, answers: [{ profileId: "p1", choice: "b", correct: true }] }] }
@@ -233,11 +233,11 @@ describe("TeacherApp class page", () => {
     const results = await within(section).findByLabelText("Exit ticket results");
     expect(within(results).getByLabelText("Each student")).toHaveTextContent("Maya: 1 of 1 right");
     await user.click(within(results).getByRole("button", { name: "Done" }));
-    expect(sessionStorage.getItem("grademap.ticket.class-1")).toBeNull();
+    expect(sessionStorage.getItem("gradelings.ticket.class-1")).toBeNull();
   });
 
   it("says so when the questions of an exit ticket are gone", async () => {
-    sessionStorage.setItem("grademap.ticket.class-1", JSON.stringify({ total: 3, ids: ["gone"] }));
+    sessionStorage.setItem("gradelings.ticket.class-1", JSON.stringify({ total: 3, ids: ["gone"] }));
     serve(detail, (url) => (url === "/api/classes/live/?classId=class-1&recap=1" ? { recap: [] } : url.startsWith("/api/classes/live/") ? { live: null } : undefined));
     const user = await openClass();
     await openTab(user, "Live");

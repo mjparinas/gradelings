@@ -233,7 +233,7 @@ export const TEACHER_TABS = ["", "/homework", "/live", "/students", "/settings"]
 export async function seedLastWeek(page, units = ["3/math/numbers-to-1000", "3/math/facts-to-20", "3/science/grouping-living-things"]) {
   await page.evaluate(async (units) => {
     const db = await new Promise((res, rej) => {
-      const r = indexedDB.open("grademap", 1);
+      const r = indexedDB.open("gradelings", 1);
       r.onsuccess = () => res(r.result);
       r.onerror = () => rej(r.error);
     });

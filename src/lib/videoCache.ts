@@ -2,7 +2,7 @@
 // worker doesn't touch /videos/ (video uses range requests, which a cache can't answer), so the player plays a
 // saved copy through a blob URL. Nothing here throws: a missing cache just means the plain network URL.
 
-const CACHE = "grademap-video";
+const CACHE = "gradelings-video";
 
 export async function cachedVideoUrl(src: string): Promise<string | null> {
   try {

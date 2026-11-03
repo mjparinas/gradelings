@@ -26,7 +26,7 @@ const ICON: Record<CheckState, string> = { ok: "✓", warn: "!", down: "✕", of
  */
 export const AUTO_REFRESH_MS = 5 * 60_000;
 /** Remembered per browser, so the choice survives a reload. */
-export const AUTO_REFRESH_KEY = "grademap.admin.systemAutoRefresh";
+export const AUTO_REFRESH_KEY = "gradelings.admin.systemAutoRefresh";
 
 const autoListeners = new Set<() => void>();
 function readAuto() {

@@ -7,7 +7,7 @@ beforeEach(() => localStorage.clear());
 describe("graduatedFrom", () => {
   it("says nothing the first time a device sees a child, then remembers the grade", () => {
     expect(graduatedFrom("p1", "4")).toBeNull();
-    expect(localStorage.getItem("grademap.grad.p1")).toBe("4");
+    expect(localStorage.getItem("gradelings.grad.p1")).toBe("4");
     expect(graduatedFrom("p1", "4")).toBeNull();
   });
   it("names the grade just finished after a move up, until it is remembered", () => {
@@ -24,7 +24,7 @@ describe("graduatedFrom", () => {
     expect(graduatedFrom("p2", "k")).toBe("pk");
     rememberGrade("p3", "5");
     expect(graduatedFrom("p3", "4")).toBeNull();
-    expect(localStorage.getItem("grademap.grad.p3")).toBe("4");
+    expect(localStorage.getItem("gradelings.grad.p3")).toBe("4");
   });
   it("keeps children apart", () => {
     rememberGrade("p1", "2");

@@ -5,7 +5,7 @@ import type { GradeId } from "@/content/types";
 // the grade the child had the last time this device looked, kept per device in localStorage, so nothing is
 // synced or stored on the server. A device that has never seen the child just records the grade and says nothing.
 
-const key = (profileId: string) => `grademap.grad.${profileId}`;
+const key = (profileId: string) => `gradelings.grad.${profileId}`;
 
 function read(profileId: string): string | null {
   try {

@@ -25,7 +25,7 @@ The first run downloads the Supertonic model from Hugging Face. Output goes to `
 3. Narration names no region, money or brand (units shared by several provinces and states share the video). `npm test` checks the files, captions and wording.
 
 ## Behaviour
-Hosted on our own domain, no third-party player or tracking. A native `<video>` with captions on; the file is copied to Cache Storage (`grademap-video`) when first watched, so it plays offline later (the service worker skips `/videos/`). Offline and never watched, or a failed load: the player says so and offers the text lesson. A watch is a `video` event; the parent Overview shows videos watched and how the next answer on that unit went.
+Hosted on our own domain, no third-party player or tracking. A native `<video>` with captions on; the file is copied to Cache Storage (`gradelings-video`) when first watched, so it plays offline later (the service worker skips `/videos/`). Offline and never watched, or a failed load: the player says so and offers the text lesson. A watch is a `video` event; the parent Overview shows videos watched and how the next answer on that unit went.
 
 ## Before turning the flag on
 Someone should watch each video once with sound. They are computer-voiced, drawn programmatically and have not been tried with children.

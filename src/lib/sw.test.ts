@@ -34,6 +34,7 @@ const storage = {
     if (!caches.has(name)) caches.set(name, new FakeCache());
     return caches.get(name)!;
   },
+  has: async (name: string) => caches.has(name),
   keys: async () => [...caches.keys()],
   delete: async (name: string) => caches.delete(name),
   match: async (req: Request | string) => {
@@ -71,7 +72,7 @@ async function get(path: string) {
   return res;
 }
 
-const app = () => storage.open("grademap-v4");
+const app = () => storage.open("gradelings-v4");
 
 describe("service worker build files", () => {
   it("keeps a real script, cache-first", async () => {
@@ -96,6 +97,18 @@ describe("service worker build files", () => {
     await (await app()).put(`${ORIGIN}/_next/static/immutable/chunks/c.js`, html());
     network = () => js("real c");
     expect(await (await get("/_next/static/immutable/chunks/c.js")).text()).toBe("real c");
+  });
+
+  it("moves the voice cache from before the rename to the new name when it activates", async () => {
+    caches.clear();
+    const old = await storage.open("grademap-piper");
+    await old.put("/piper/1/voice.onnx", js("VOICE"));
+    await storage.open("grademap-v3");
+    let done: Promise<unknown> = Promise.resolve();
+    listeners.get("activate")!({ waitUntil: (p: Promise<unknown>) => (done = p) });
+    await done;
+    expect(await (await (await storage.open("gradelings-piper")).match("/piper/1/voice.onnx"))?.text()).toBe("VOICE");
+    expect([...caches.keys()].filter((k) => k.startsWith("grademap"))).toEqual([]);
   });
 
   it("drops HTML copies of build files when it activates, and keeps the rest", async () => {

@@ -97,7 +97,7 @@ async function seedArcade(page) {
   await page.evaluate(
     () =>
       new Promise((resolve, reject) => {
-        const req = indexedDB.open("grademap");
+        const req = indexedDB.open("gradelings");
         req.onerror = () => reject(req.error);
         req.onsuccess = () => {
           const db = req.result;
@@ -130,7 +130,7 @@ async function eventsWaiting(page) {
   return page.evaluate(
     () =>
       new Promise((resolve) => {
-        const req = indexedDB.open("grademap");
+        const req = indexedDB.open("gradelings");
         req.onsuccess = () => {
           const tx = req.result.transaction("events", "readonly");
           const all = tx.objectStore("events").getAll();
@@ -430,7 +430,7 @@ async function eventsWaiting(page) {
     const names = await page.evaluate(
       () =>
         new Promise((resolve) => {
-          const req = indexedDB.open("grademap");
+          const req = indexedDB.open("gradelings");
           req.onsuccess = () => {
             const get = req.result.transaction("kv", "readonly").objectStore("kv").get("profiles");
             get.onsuccess = () => resolve((get.result ?? []).filter((p) => !p.deleted).map((p) => p.name));

@@ -2,7 +2,7 @@
 // the sale ends so the parent area's "Have a code?" box is already filled in. Storage can be blocked or
 // cleared at any time, so every read and write is allowed to fail.
 
-const KEY = "grademap.promo.code";
+const KEY = "gradelings.promo.code";
 
 export function rememberPromoCode(code: string, until: number): void {
   try {

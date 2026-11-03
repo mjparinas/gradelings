@@ -15,8 +15,11 @@
 // - The Piper voice (/piper/{version}/, /piper-worker.js) lives in its own cache, which only
 //   the app's voice download fills (src/lib/piper.ts), and which is kept across updates
 //   because it is about 100 MB.
-const CACHE = "grademap-v4";
-const PIPER_CACHE = "grademap-piper";
+const CACHE = "gradelings-v4";
+const PIPER_CACHE = "gradelings-piper";
+// The product used to be called GradeMap. Its voice cache is copied to the new name when a worker activates,
+// before the clean-up below deletes every cache it doesn't know (the voice is about 100 MB).
+const LEGACY_PIPER_CACHE = "grademap-piper";
 const SHELLS = ["/play/", "/parents/", "/"];
 const EXTRAS = ["/manifest.webmanifest", "/icon.svg", "/icon-192.png", "/icon-512.png"];
 
@@ -60,11 +63,28 @@ async function dropFakeAssets() {
   }
 }
 
+/** Copies the old voice cache into the new one, then drops it. A failure leaves the old cache for the page to copy. */
+async function moveLegacyPiper() {
+  try {
+    if (!(await caches.has(LEGACY_PIPER_CACHE))) return;
+    const source = await caches.open(LEGACY_PIPER_CACHE);
+    const target = await caches.open(PIPER_CACHE);
+    for (const request of await source.keys()) {
+      if (await target.match(request)) continue;
+      const response = await source.match(request);
+      if (response) await target.put(request, response);
+    }
+    await caches.delete(LEGACY_PIPER_CACHE);
+  } catch {
+    // Kept: the filter below spares it, and the app's own migration (src/lib/legacyStorage.ts) tries again.
+  }
+}
+
 self.addEventListener("activate", (event) => {
   event.waitUntil(
-    caches
-      .keys()
-      .then((keys) => Promise.all(keys.filter((k) => k !== CACHE && k !== PIPER_CACHE).map((k) => caches.delete(k))))
+    moveLegacyPiper()
+      .then(() => caches.keys())
+      .then((keys) => Promise.all(keys.filter((k) => k !== CACHE && k !== PIPER_CACHE && k !== LEGACY_PIPER_CACHE).map((k) => caches.delete(k))))
       .then(() => dropFakeAssets().catch(() => undefined))
       .then(() => self.clients.claim()),
   );
