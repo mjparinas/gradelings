@@ -9,7 +9,6 @@ process.env.DATABASE_URL = `file:${join(dir, "test.db")}`;
 let dbm: typeof import("@/server/db");
 let st: typeof import("@/server/students");
 let classroom: typeof import("@/server/classroom");
-const DAY = 86_400_000;
 
 beforeAll(async () => {
   dbm = await import("@/server/db");
