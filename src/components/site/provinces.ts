@@ -174,6 +174,11 @@ export function regionSummary(frameworks: readonly Framework[]): string {
   return ca ? `${ca} Canadian provinces and territories, ${joinAnd([named, ...districts])}` : joinAnd([named, ...districts]);
 }
 
+/** The countries offered, short enough for a call to action: "Canada", or "Canada and the US" once a US state is offered. */
+export function countryBrief(frameworks: readonly Pick<Framework, "country">[]): string {
+  return offersUsd(frameworks) ? "Canada and the US" : "Canada";
+}
+
 /** The currencies public pages list prices in: Canadian dollars, plus US dollars once a US curriculum is offered. */
 export function siteCurrencies(frameworks: readonly Pick<Framework, "country">[]): ("CAD" | "USD")[] {
   const offered = new Set(frameworks.map((f) => countryOf(f).currency));

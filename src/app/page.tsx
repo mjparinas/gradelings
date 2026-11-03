@@ -7,7 +7,7 @@ import { QuestionGallery } from "@/components/site/QuestionGallery";
 import { SitePage } from "@/components/site/SiteChrome";
 import { appJsonLd } from "@/components/site/jsonld";
 import { curriculumPath } from "@/components/site/curriculum";
-import { byCountry, kidPracticeSteps, offersUsd, preKRegions, provinceCoverage, regionList, regionSummary, regionWord, siteCurrencies } from "@/components/site/provinces";
+import { byCountry, kidPracticeSteps, offersUsd, preKRegions, provinceCoverage, regionSummary, regionWord, siteCurrencies } from "@/components/site/provinces";
 import { DEFAULT_GOAL_MINUTES } from "@/lib/model";
 import { GAMES } from "@/components/play/games/types";
 import { FRAMEWORKS } from "@/content/frameworks";
@@ -66,8 +66,8 @@ const FAQS = [
   {
     q: offersUsd(FRAMEWORKS) ? "Is it matched to our province's or state's curriculum?" : "Is it matched to our provincial curriculum?",
     a: offersUsd(FRAMEWORKS)
-      ? `Yes. Choose ${regionList(FRAMEWORKS)} when you add a child. Every unit is tagged with that province's or state's learning standard, and parent reports use its report-card levels. More provinces and states are on the way.`
-      : `Yes. Choose ${regionList(FRAMEWORKS)} when you add a child. Every unit is tagged with that province's learning standard, and parent reports use that province's report-card levels. More provinces and states are on the way.`,
+      ? `Yes. Choose your province or state when you add a child. Every unit is tagged with that province's or state's learning standard, and parent reports use its report-card levels. More provinces and states are on the way.`
+      : `Yes. Choose your province when you add a child. Every unit is tagged with that province's learning standard, and parent reports use that province's report-card levels. More provinces and states are on the way.`,
   },
   {
     q: "Does it work without internet?",
