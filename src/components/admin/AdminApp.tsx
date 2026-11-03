@@ -185,6 +185,8 @@ interface FamilyDetail {
     schoolUntil: number | null;
     discountCode: string | null;
     stripeCustomer: string | null;
+    country?: string;
+    consentAt?: number | null;
     subscriptionStatus: string | null;
     subscriptionInterval: string | null;
     currentPeriodEnd: number | null;
@@ -201,7 +203,7 @@ interface FamilyDetail {
     lastLogin: number | null;
   }[];
   emails: EmailRow[];
-  children: { grade: string; framework: string }[];
+  children: { label?: string; id?: string; grade: string; framework: string; addedAt?: number | null; events?: number; lastActive?: number | null; answers7?: number; daysPractised30?: number }[];
   activity: { events: number; lastActive: number | null };
   sessions: { active: number; lastSignIn: number | null };
   classes: number;
@@ -371,13 +373,31 @@ function UserDetail({ id, flags, role, email, onBack }: { id: string; flags: Fla
             </dd>
           </div>
           <div><dt className="inline font-semibold">Open classes: </dt><dd className="inline">{d.classes}</dd></div>
+          <div><dt className="inline font-semibold">Country: </dt><dd className="inline">{f.country ?? "CA"}{f.country === "US" ? (f.consentAt ? `, consent given ${day(f.consentAt)}` : ", no consent yet (children don't sync)") : ""}</dd></div>
           <div><dt className="inline font-semibold">Family id: </dt><dd className="inline break-all font-mono text-sm">{f.id}</dd></div>
         </dl>
         <h3 className="mt-4 font-bold">Children</h3>
-        <p className="font-read">
-          {d.children.length === 0 ? "None yet." : d.children.map((c) => `${GRADE_LABEL[c.grade as GradeId] ?? c.grade} (${regionName(c.framework)})`).join(", ")}
-        </p>
-        <p className="text-sm text-ink-soft">Names and results stay private to the family.</p>
+        {d.children.length === 0 ? (
+          <p className="font-read">None yet.</p>
+        ) : (
+          <ul className="mt-1 flex flex-col gap-2">
+            {d.children.map((c, i) => (
+              <li key={c.id ?? i} className="rounded-xl border border-line p-3">
+                <p className="font-semibold">
+                  {c.label ?? `Child ${i + 1}`}: {GRADE_LABEL[c.grade as GradeId] ?? c.grade} ({regionName(c.framework)})
+                </p>
+                {c.events !== undefined && (
+                  <p className="font-read text-sm text-ink-soft">
+                    {c.addedAt ? `Added ${day(c.addedAt)}. ` : ""}
+                    Last practice: {c.lastActive ? formatAgo(c.lastActive) : "never"}. {c.answers7} answers in 7 days, practised on {c.daysPractised30} of the last 30 days, {c.events.toLocaleString("en-CA")} events in all.
+                  </p>
+                )}
+                {c.id && <p className="break-all font-mono text-xs text-ink-soft">{c.id}</p>}
+              </li>
+            ))}
+          </ul>
+        )}
+        <p className="text-sm text-ink-soft">First names, counts and dates only. Answers and units stay private to the family.</p>
         {d.redemptions.length > 0 && (
           <>
             <h3 className="mt-4 font-bold">Codes Used</h3>
