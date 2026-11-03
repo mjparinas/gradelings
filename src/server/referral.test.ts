@@ -3,7 +3,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { afterAll, afterEach, beforeAll, describe, expect, it, vi } from "vitest";
 
-const dir = mkdtempSync(join(tmpdir(), "grademap-referral-"));
+const dir = mkdtempSync(join(tmpdir(), "gradelings-referral-"));
 process.env.DATABASE_URL = `file:${join(dir, "test.db")}`;
 delete process.env.RESEND_API_KEY;
 delete process.env.STRIPE_SECRET_KEY;

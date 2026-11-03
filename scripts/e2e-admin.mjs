@@ -8,7 +8,7 @@
 //   ADMIN_EMAILS=admin-e2e@example.com npm start      # in one terminal, after npm run build
 //   node scripts/e2e-admin.mjs http://localhost:3000 e2e-shots/admin
 // It marks the accounts' emails as confirmed straight in the local database file (DATABASE_URL, or
-// ./data/grademap.db), because no email is sent in tests.
+// ./data/gradelings.db), because no email is sent in tests.
 import fs from "node:fs";
 import AxeBuilder from "@axe-core/playwright";
 import { createClient } from "@libsql/client";
@@ -36,7 +36,7 @@ let db;
 async function account(email) {
   const res = await fetch(`${BASE}/api/auth/signup/`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ email, password: PASSWORD }) });
   check(res.status === 200 || res.status === 409, `account ${email} exists`);
-  db ??= createClient({ url: process.env.DATABASE_URL ?? "file:./data/grademap.db", authToken: process.env.DATABASE_AUTH_TOKEN });
+  db ??= createClient({ url: process.env.DATABASE_URL ?? "file:./data/gradelings.db", authToken: process.env.DATABASE_AUTH_TOKEN });
   await confirmEmailInDb(db, email);
 }
 const parentEmail = `parent-${Date.now()}@example.com`;

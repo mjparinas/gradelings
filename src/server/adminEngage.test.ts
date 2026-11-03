@@ -9,7 +9,7 @@ import { missingSocialPlatforms } from "@/lib/brand";
 // group, the to-do list and the inbox. Real route handlers against a throwaway SQLite file; email goes to the
 // test outbox, and Resend's API is a stubbed fetch.
 
-const dir = mkdtempSync(join(tmpdir(), "grademap-engage-"));
+const dir = mkdtempSync(join(tmpdir(), "gradelings-engage-"));
 process.env.DATABASE_URL = `file:${join(dir, "test.db")}`;
 delete process.env.RESEND_API_KEY;
 delete process.env.EMAIL_FROM;

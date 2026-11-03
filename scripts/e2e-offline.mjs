@@ -145,7 +145,7 @@ try {
   console.log("✓ online again: Try again loads Kindergarten");
 
   // Maintenance mode, switched straight in the database; the server reads it again within 15 seconds.
-  const db = createClient({ url: process.env.DATABASE_URL ?? "file:./data/grademap.db", authToken: process.env.DATABASE_AUTH_TOKEN });
+  const db = createClient({ url: process.env.DATABASE_URL ?? "file:./data/gradelings.db", authToken: process.env.DATABASE_AUTH_TOKEN });
   const maintenance = (on) =>
     db.execute({
       sql: "INSERT INTO admin_settings (key, value, updated_at) VALUES ('maintenance', ?, ?) ON CONFLICT (key) DO UPDATE SET value = excluded.value, updated_at = excluded.updated_at",

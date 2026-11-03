@@ -5,7 +5,7 @@ import { afterAll, beforeAll, describe, expect, it } from "vitest";
 
 // Co-teachers against the real route handlers and a throwaway SQLite file.
 
-const dir = mkdtempSync(join(tmpdir(), "grademap-coteach-"));
+const dir = mkdtempSync(join(tmpdir(), "gradelings-coteach-"));
 process.env.DATABASE_URL = `file:${join(dir, "test.db")}`;
 delete process.env.RESEND_API_KEY;
 

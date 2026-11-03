@@ -599,6 +599,7 @@ Details are in the sections above; this list only names features that aren't des
 - **Server kill switches** (flags `signups`, `new-classes`, `redeem-codes`): pause new accounts, new classes or code redemption from the admin panel. Existing classes and accounts keep working.
 - **Admin email on a new customer:** admins are emailed when a family becomes a paying customer.
 - **No XR:** the Play listing leaves the Android XR slots empty (owner's decision, November 3, 2026); only desktop screenshots are uploaded for the extra form factors.
+- **No "GradeMap" name** (owner, November 3, 2026): the product is Gradelings everywhere. Names a user never sees were renamed (CI, Android key file and alias, local database file `./data/gradelings.db`, test folders). Identifiers stored on users' devices (`grademap.*` localStorage keys, the `grademap` IndexedDB, `grademap-*` caches) and the production Turso database name `grademap` still carry the old name, because renaming them without a migration would lose offline progress; renaming them is a separate change with a one-time migration.
 - **Bundle ids:** the Android package and the iOS bundle id are both `com.gradelings.app`.
 - **Play Console answers** (November 3, 2026): the Play store name is `Gradelings: Pre-K to Grade 9` (say "Pre-K to Grade 9", never "Pre-K-9"), and what was entered in each form is recorded in `docs/PLAY_CONSOLE_ANSWERS.md`.
 

@@ -7,7 +7,7 @@ import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } 
 // The Traffic tab's server side: Search Console through a read-only service account and Vercel Web Analytics,
 // against a stubbed fetch. No credential may reach the response.
 
-const dir = mkdtempSync(join(tmpdir(), "grademap-traffic-"));
+const dir = mkdtempSync(join(tmpdir(), "gradelings-traffic-"));
 process.env.DATABASE_URL = `file:${join(dir, "test.db")}`;
 const KEYS = ["GOOGLE_SERVICE_ACCOUNT_KEY", "SEARCH_CONSOLE_SITE", "VERCEL_TOKEN", "VERCEL_PROJECT_ID", "VERCEL_TEAM_ID", "RESEND_API_KEY", "EMAIL_FROM"];
 const saved = Object.fromEntries(KEYS.map((k) => [k, process.env[k]]));

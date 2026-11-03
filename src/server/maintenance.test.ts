@@ -8,7 +8,7 @@ import { MAINTENANCE_CACHE_MS, MAINTENANCE_MESSAGE } from "@/lib/maintenance";
 // Maintenance mode: the admin switch, the cached state, and the proxy that answers every other page with the
 // maintenance message while it is on.
 
-const dir = mkdtempSync(join(tmpdir(), "grademap-maintenance-"));
+const dir = mkdtempSync(join(tmpdir(), "gradelings-maintenance-"));
 process.env.DATABASE_URL = `file:${join(dir, "test.db")}`;
 const savedAdmins = process.env.ADMIN_EMAILS;
 const ADMIN_EMAIL = "owner@example.com";

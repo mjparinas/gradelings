@@ -6,7 +6,7 @@ import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } 
 
 // These tests run the real Google sign-in routes against a throwaway SQLite file, with Google's token endpoint faked.
 
-const dir = mkdtempSync(join(tmpdir(), "grademap-google-"));
+const dir = mkdtempSync(join(tmpdir(), "gradelings-google-"));
 process.env.DATABASE_URL = `file:${join(dir, "test.db")}`;
 process.env.NEXT_PUBLIC_SITE_URL = "https://gradelings.test";
 delete process.env.RESEND_API_KEY;

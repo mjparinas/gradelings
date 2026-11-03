@@ -7,7 +7,7 @@ import { afterAll, beforeAll, describe, expect, it, vi } from "vitest";
 // US families: country from the first child, the COPPA consent gate in sync, consent and withdraw routes,
 // the confirmation emails and the USD checkout. Real route handlers against a throwaway SQLite file.
 
-const dir = mkdtempSync(join(tmpdir(), "grademap-consent-"));
+const dir = mkdtempSync(join(tmpdir(), "gradelings-consent-"));
 process.env.DATABASE_URL = `file:${join(dir, "test.db")}`;
 process.env.STRIPE_WEBHOOK_SECRET = "whsec_test";
 delete process.env.RESEND_API_KEY;

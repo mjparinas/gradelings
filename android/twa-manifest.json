@@ -25,6 +25,6 @@
   "minSdkVersion": 24,
   "appVersionName": "1.0.0",
   "appVersionCode": 1,
-  "signingKey": { "path": "./grademap-upload.keystore", "alias": "grademap-upload" },
+  "signingKey": { "path": "./gradelings-upload.keystore", "alias": "gradelings-upload" },
   "generatorApp": "bubblewrap-cli"
 }
