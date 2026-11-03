@@ -1,0 +1,5 @@
+The three angles inside any triangle always add up to one hundred eighty degrees.
+Say two angles are fifty and sixty degrees. We want the third one.
+First add the two angles we know. Fifty plus sixty is one hundred ten.
+Then take that away from one hundred eighty. One hundred eighty minus one hundred ten is seventy.
+So the third angle is seventy degrees. Check: fifty plus sixty plus seventy is one hundred eighty.

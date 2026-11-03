@@ -5,8 +5,10 @@ import { guidesUpdated, latest } from "@/content/updated";
 import { LEGAL_UPDATED } from "@/lib/brand";
 import { absolute } from "@/lib/site";
 import { allCurriculumPaths, type SitemapPath } from "./curriculum";
+import { MATH_FACTS_PAGES, mathFactsPath } from "./mathFacts";
 import { allGuidePaths } from "./guides";
 import { allTeacherPaths } from "./teachers";
+import { allWorksheetPaths } from "./worksheets";
 
 // The sitemap is an index (/sitemap.xml) of one sitemap per kind of page, so Search Console reports how many pages of
 // each kind are indexed. Each entry carries the day its content last changed where we know it (see src/content/updated.ts);
@@ -31,6 +33,8 @@ function otherPages(): SitemapPath[] {
     { path: "/trust/" },
     { path: "/whats-new/", updated: WHATS_NEW[0].day },
     ...WHATS_NEW.map((d) => ({ path: `/whats-new/${d.day}/`, updated: d.day })),
+    { path: mathFactsPath.hub() },
+    ...MATH_FACTS_PAGES.map((p) => ({ path: mathFactsPath.set(p) })),
     { path: "/accessibility/" },
     { path: "/privacy/", updated: legal },
     { path: "/terms/", updated: legal },
@@ -45,6 +49,7 @@ export const SITEMAP_SECTIONS = {
   curriculum: allCurriculumPaths,
   guides: allGuidePaths,
   teachers: allTeacherPaths,
+  worksheets: allWorksheetPaths,
 } satisfies Record<string, () => SitemapPath[]>;
 
 export type SitemapSection = keyof typeof SITEMAP_SECTIONS;

@@ -1,0 +1,5 @@
+A bar graph shows how many in each group. The taller the bar, the more there are.
+Each bar has a label. Say these show the pets in a class. Fish, dogs and cats.
+Look at the scale on the side. Each line is one more. We read the top of a bar against the scale.
+The dogs bar is the tallest. So dogs is the most popular. The cats bar is the shortest.
+To compare, subtract. Eight dogs and two cats. Eight minus two is six more dogs.

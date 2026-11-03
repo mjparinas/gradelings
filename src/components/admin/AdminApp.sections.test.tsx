@@ -23,7 +23,10 @@ const family = (over: Record<string, unknown> = {}) => ({
     { id: "p-1", email: "pat@example.com", createdAt: 1, verified: true, weeklyReport: true },
     { id: "p-2", email: "sam@example.com", createdAt: 1, verified: false, weeklyReport: false },
   ],
-  children: [{ grade: "k", framework: "ca-bc" }, { grade: "7", framework: "ca-nu" }],
+  children: [
+    { label: "Child 1", id: "kid-a", grade: "k", framework: "ca-bc", addedAt: 1, events: 40, lastActive: Date.now(), answers7: 12, daysPractised30: 5 },
+    { label: "Child 2", id: "kid-b", grade: "7", framework: "ca-nu", addedAt: 1, events: 0, lastActive: null, answers7: 0, daysPractised30: 0 },
+  ],
   activity: { events: 12345, lastActive: Date.now() },
   sessions: { active: 2, lastSignIn: null },
   classes: 1,
@@ -169,7 +172,10 @@ describe("AdminApp users", () => {
     expect(details).toHaveTextContent("(12,345 events)");
     expect(details).toHaveTextContent("Signed in on: 2 devices");
     // Only grade and province, never a child's name.
-    expect(details).toHaveTextContent("Kindergarten (British Columbia), Grade 7 (Nunavut)");
+    expect(details).toHaveTextContent("Child 1: Kindergarten (British Columbia)");
+    expect(details).toHaveTextContent("12 answers in 7 days, practised on 5 of the last 30 days");
+    expect(details).toHaveTextContent("Child 2: Grade 7 (Nunavut)");
+    expect(details).toHaveTextContent("Last practice: never");
     expect(details).toHaveTextContent("ABCD (access)");
     expect(details).toHaveTextContent("GONE (deleted)");
     expect(details).toHaveTextContent("home-colours: variant");

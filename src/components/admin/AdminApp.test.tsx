@@ -163,7 +163,9 @@ describe("AdminApp", () => {
     await user.click(await screen.findByRole("button", { name: "Users" }));
     await user.click(await screen.findByRole("button", { name: "pat@example.com" }));
     // An unknown province is shown as saved, not as the default; no province means the default.
-    expect(await screen.findByText("Grade 3 (Ontario), Grade 5 (zz-unknown), Grade 1 (British Columbia)")).toBeInTheDocument();
+    expect(await screen.findByText("Child 1: Grade 3 (Ontario)")).toBeInTheDocument();
+    expect(screen.getByText("Child 2: Grade 5 (zz-unknown)")).toBeInTheDocument();
+    expect(screen.getByText("Child 3: Grade 1 (British Columbia)")).toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "Give Lifetime Access" }));
     expect(sent("/api/admin/users/", "POST")).toEqual({ familyId: "fam-1", action: "grant-access", days: null });
     expect(await screen.findByText("Lifetime access given.")).toBeInTheDocument();

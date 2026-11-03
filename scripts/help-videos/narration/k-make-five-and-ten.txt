@@ -1,0 +1,6 @@
+Let's make five. Here is a row of five boxes. Three boxes have a counter.
+How many empty boxes? Two. Three and two make five.
+Now let's make ten. A ten frame has ten boxes. Seven boxes have a counter.
+How many are empty? Three. Seven and three make ten.
+Fill the frame to make ten. You can do it.
+Now you try. Pick a number up to five. How many more make five? Count the empty boxes.

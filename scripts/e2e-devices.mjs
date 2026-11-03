@@ -349,7 +349,22 @@ async function deepChecks(device, browser, descriptor, page) {
   await page.getByText("Customize calm mode").click();
   await page.getByRole("switch", { name: /Calm motion/ }).click();
   await page.getByRole("radio", { name: "Hide all" }).click();
-  await page.waitForTimeout(600); // let the settings reach IndexedDB before leaving the page
+  // Leave only once the last change has reached IndexedDB: the next page reads the settings from there,
+  // and a fixed pause was not enough on a busy runner.
+  await page.waitForFunction(
+    () =>
+      new Promise((res) => {
+        const r = indexedDB.open("grademap", 1);
+        r.onerror = () => res(false);
+        r.onsuccess = () => {
+          const g = r.result.transaction("kv").objectStore("kv").get("settings");
+          g.onsuccess = () => res(Object.values(g.result ?? {}).some((c) => c?.calmMotion && c?.hideTimers && c?.freePlay));
+          g.onerror = () => res(false);
+        };
+      }),
+    undefined,
+    { timeout: 10000 },
+  );
   await page.goto(`${BASE}/play/#/arcade/ninja`);
   const calmClass = await page
     .waitForFunction(() => document.documentElement.classList.contains("calm"), undefined, { timeout: 5000 })

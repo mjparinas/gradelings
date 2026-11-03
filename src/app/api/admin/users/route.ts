@@ -12,7 +12,7 @@ import { hasPaidPlan, isPremium, trialDaysLeft } from "@/lib/plan";
 import { flagsFor } from "@/server/flags";
 
 // Families, for support. The panel shows account emails, plan and billing state, and each child's grade
-// and province, but never children's names or practice details. Support staff (SUPPORT_EMAILS) may read
+// and province, plus per-child counts and dates for debugging, but never children's names, answers or units. Support staff (SUPPORT_EMAILS) may read
 // all of it and keep private notes, and nothing else; every other action is for admins. Class student accounts are left out:
 // they belong to their teacher's class.
 
@@ -97,7 +97,7 @@ async function familyDetail(id: string) {
   if (!parents.length || parents.some((p) => p.role === "student")) return null;
   const [payments, profiles, activity, sessions, redemptions, overrides, experiments, classes, emails, notes, flagValues] = await Promise.all([
     query<{ amount: number; refunded: number; currency: string; paid_at: number }>("SELECT amount, refunded, currency, paid_at FROM payments WHERE family_id = ? ORDER BY paid_at", [id]),
-    query<{ data: string }>("SELECT data FROM profiles WHERE family_id = ?", [id]),
+    query<{ id: string; data: string }>("SELECT id, data FROM profiles WHERE family_id = ?", [id]),
     query<{ n: number; last: number | null }>("SELECT COUNT(*) AS n, MAX(t) AS last FROM events WHERE family_id = ?", [id]),
     query<{ n: number; last: number | null }>("SELECT COUNT(*) AS n, MAX(created_at) AS last FROM sessions WHERE family_id = ? AND expires_at > ?", [id, Date.now()]),
     query<{ code: string; redeemed_at: number; kind: string }>(
@@ -111,13 +111,39 @@ async function familyDetail(id: string) {
     query<{ id: number; author: string; body: string; created_at: number }>("SELECT id, author, body, created_at FROM family_notes WHERE family_id = ? ORDER BY id DESC", [id]),
     flagsFor(id, null),
   ]);
-  const children = profiles.flatMap((p) => {
+  // Per-child first name (owner request, November 3, 2026), counts and dates for debugging ("did their practice
+  // reach the server?"). No answers or units. A child with no name is "Child 1", "Child 2" in the order added.
+  const now = Date.now();
+  const stats = await query<{ profile_id: string; n: number; last: number | null; answers7: number; days30: number }>(
+    `SELECT profile_id, COUNT(*) AS n, MAX(t) AS last,
+       SUM(CASE WHEN t >= ? AND json_extract(data, '$.type') = 'answer' THEN 1 ELSE 0 END) AS answers7,
+       COUNT(DISTINCT CASE WHEN t >= ? THEN t / ${DAY} END) AS days30
+     FROM events WHERE family_id = ? GROUP BY profile_id`,
+    [now - 7 * DAY, now - 30 * DAY, id],
+  );
+  const statsBy = new Map(stats.map((s) => [s.profile_id, s]));
+  const kids = profiles.flatMap((p) => {
     try {
-      const d = JSON.parse(p.data) as { grade?: string; framework?: string; deleted?: boolean };
-      return d.deleted ? [] : [{ grade: String(d.grade ?? ""), framework: String(d.framework ?? "") }];
+      const d = JSON.parse(p.data) as { id?: string; name?: string; grade?: string; framework?: string; deleted?: boolean; createdAt?: number };
+      return d.deleted ? [] : [{ id: p.id, name: String(d.name ?? "").slice(0, 60), createdAt: Number(d.createdAt ?? 0), grade: String(d.grade ?? ""), framework: String(d.framework ?? "") }];
     } catch {
       return [];
     }
+  });
+  kids.sort((a, b) => a.createdAt - b.createdAt);
+  const children = kids.map((k, i) => {
+    const s = statsBy.get(k.id);
+    return {
+      label: k.name || `Child ${i + 1}`,
+      id: k.id,
+      grade: k.grade,
+      framework: k.framework,
+      addedAt: k.createdAt || null,
+      events: Number(s?.n ?? 0),
+      lastActive: s?.last == null ? null : Number(s.last),
+      answers7: Number(s?.answers7 ?? 0),
+      daysPractised30: Number(s?.days30 ?? 0),
+    };
   });
   const n = (v: unknown) => (v == null ? null : Number(v));
   // What the family itself sees: their plan as the Subscription page reads it, and which features are on for
@@ -146,6 +172,8 @@ async function familyDetail(id: string) {
       schoolUntil: n(family.school_until),
       discountCode: family.discount_code ?? null,
       stripeCustomer: family.stripe_customer ?? null,
+      country: String(family.country ?? "CA"),
+      consentAt: n(family.consent_at),
       subscriptionStatus: family.subscription_status ?? null,
       subscriptionInterval: family.subscription_interval ?? null,
       currentPeriodEnd: n(family.current_period_end),

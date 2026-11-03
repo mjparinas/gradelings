@@ -9,7 +9,7 @@ import { HeaderSignIn } from "./HeaderSignIn";
 import { NavLink } from "./NavLink";
 import { PromoBanner } from "./PromoBanner";
 import { RefCapture } from "./ShareButton";
-import { byCountry, regionList } from "./provinces";
+import { countryBrief } from "./provinces";
 import { AppLink } from "./AppLink";
 
 /**
@@ -149,6 +149,8 @@ export function SiteFooter({ build }: { /** A build line such as "Build 3f9a1c2"
             { label: "Curriculum", href: "/curriculum/" },
             { label: "Report cards explained", href: "/report-cards/" },
             { label: "Parent guides", href: "/guides/" },
+            { label: "Math facts practice", href: "/math-facts/" },
+            { label: "Math worksheets", href: "/worksheets/" },
             { label: "Compare apps", href: "/compare/" },
             { label: "Pricing", href: "/pricing/" },
           ]}
@@ -191,10 +193,6 @@ export function SiteFooter({ build }: { /** A build line such as "Build 3f9a1c2"
  * enough always has a button to start practising.
  */
 export function PageCta({ play, lead = "subscribe", short = false }: { play?: string; lead?: Lead; short?: boolean }) {
-  // Every region by name, Canadian provinces and territories first, then US states.
-  const provinces = byCountry(FRAMEWORKS)
-    .map((g) => regionList(g.frameworks))
-    .join(", and in ");
   const offer = lead === "trial" ? `Try everything free for ${TRIAL_DAYS} days with no card, then subscribe if it helps.` : `Subscribe now, or try everything free for ${TRIAL_DAYS} days with no card.`;
   return (
     <section aria-labelledby="page-cta" className="card mt-10 flex flex-col gap-3 p-6">
@@ -202,7 +200,7 @@ export function PageCta({ play, lead = "subscribe", short = false }: { play?: st
         Ready to try {APP_NAME}?
       </h2>
       <p className="font-read text-ink-soft">
-        {short ? "Curriculum-matched practice with kind hints, learning games and no ads." : `Curriculum-matched practice for Pre-K to Grade 9 in ${provinces}, with kind hints, learning games and no ads.`} {offer}
+        {short ? "Curriculum-matched practice with kind hints, learning games and no ads." : `Curriculum-matched practice for Pre-K to Grade 9 across ${countryBrief(FRAMEWORKS)}, with kind hints, learning games and no ads.`} {offer}
       </p>
       <div className="flex flex-wrap gap-3">
         <SubscribeActions play={play} lead={lead} />

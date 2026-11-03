@@ -1,0 +1,6 @@
+Multiplying with negative numbers follows a pattern. First, two positive numbers. Three times four is twelve.
+Three times negative four means three groups of negative four. That is negative twelve.
+Negative three times four is also negative twelve. The order does not matter.
+And a negative times a negative is positive. Negative three times negative four is positive twelve.
+Here is the rule. If the signs are the same, the answer is positive. If the signs are different, the answer is negative.
+Dividing works the same way. Negative twelve divided by three is negative four.

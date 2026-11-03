@@ -1,0 +1,5 @@
+Volume tells us how much space a box takes up. We count it in cubes.
+Say a box is four cubes long and three cubes wide. One layer on the bottom has four times three, which is twelve cubes.
+Now say the box is two cubes tall. That means two layers of twelve.
+Twelve plus twelve is twenty-four. Or multiply the three numbers together.
+So the volume is length times width times height.

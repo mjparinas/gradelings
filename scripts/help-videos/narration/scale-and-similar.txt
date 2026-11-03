@@ -1,0 +1,5 @@
+Similar shapes have the same shape, but can be different sizes. One is an enlargement of the other.
+Everything is multiplied by the same number. This is the scale factor. Here we multiply by two.
+A small rectangle is three long and two tall. With a scale factor of two, it becomes six long and four tall.
+Scale also works on maps. If one centimetre stands for ten kilometres, five centimetres stand for fifty.
+To use a scale, multiply or divide by the same number for every length.

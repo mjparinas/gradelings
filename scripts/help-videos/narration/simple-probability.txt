@@ -1,0 +1,5 @@
+Probability tells us how likely something is. We can write it as a fraction.
+Say a bag has ten counters. Three are blue, and seven are not.
+We pick one without looking. There are three blue out of ten counters.
+So the probability of picking blue is three out of ten. That is zero point three, or thirty percent.
+Probability is always between zero and one. Zero means impossible. One means certain.

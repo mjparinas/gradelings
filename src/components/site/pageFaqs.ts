@@ -1,5 +1,5 @@
 import { coursesFor, gradeLabel, gradeSpan, gradesWithContent, say, subjectSeoTitle } from "./curriculum";
-import { regionList, regionWord } from "./provinces";
+import { regionList, regionSummary, regionWord } from "./provinces";
 import type { Framework, ScoringScheme } from "@/content/frameworks";
 import { guidesFor } from "@/content/guides";
 import { CORE_SUBJECTS, getSubjectMeta, subjectInSentence, subjectsIn } from "@/content/subjects";
@@ -110,7 +110,7 @@ export function curriculumIndexFaqs(frameworks: readonly Framework[]): Faq[] {
   return [
     {
       q: `Which curricula does ${APP_NAME} follow?`,
-      a: `${regionList(frameworks)}, from Kindergarten to Grade 9. Each ${word} has its own units, matched to its own curriculum and report card.`,
+      a: `${regionSummary(frameworks)}, from Pre-K to Grade 9. Each ${word} has its own units, matched to its own curriculum and report card.`,
     },
     {
       q: "How are units matched to the curriculum?",

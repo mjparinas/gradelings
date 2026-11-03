@@ -1,0 +1,5 @@
+A discount takes a percent off a price. Say something costs fifty, and it is twenty percent off.
+An easy start is ten percent. To find ten percent, divide by ten. Fifty divided by ten is five.
+Twenty percent is double ten percent. Double five is ten. So the discount is ten.
+Now take the discount off the price. Fifty minus ten is forty. That is the sale price.
+Tax and tips work the same way, but you add the amount instead of taking it away.
