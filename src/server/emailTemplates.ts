@@ -270,8 +270,8 @@ export function monthLine(name: string, m: NonNullable<WeeklyChild["month"]>): s
   return `${base}.`;
 }
 
-/** `schoolYear`: lines from `schoolYearLines` (src/lib/schoolYear.ts), shown after the children. */
-export function weeklyEmail(to: string, origin: string, children: WeeklyChild[], unsubToken: string, country?: CountryCode, schoolYear: string[] = []): Email {
+/** `schoolYear`: lines from `schoolYearLines` (src/lib/schoolYear.ts), shown after the children. `inviteLink`: the parent's invite link, for the monthly "share with a friend" line. */
+export function weeklyEmail(to: string, origin: string, children: WeeklyChild[], unsubToken: string, country?: CountryCode, schoolYear: string[] = [], inviteLink?: string): Email {
   const lines = children.flatMap((c) => [
     c.answers
       ? `${c.name}: ${c.minutes} min of practice, ${c.answers} questions${c.accuracy === null ? "" : `, ${c.accuracy}% right on the first try`}.`
@@ -292,7 +292,7 @@ export function weeklyEmail(to: string, origin: string, children: WeeklyChild[],
     unsubscribePage: `${origin}/account/unsubscribe/?token=${encodeURIComponent(unsubToken)}`,
     subject: `${APP_NAME}: your week in learning`,
     heading: "Your week in learning",
-    body: [...lines, ...schoolYear, "This reflects practice in the app. It isn't a report-card mark; your child's teacher decides proficiency."],
+    body: [...lines, ...schoolYear, ...(inviteLink ? [`Know a family who might like ${APP_NAME}? Share your link: ${inviteLink} When they sign up and confirm their email, you get a free month.`] : []), "This reflects practice in the app. It isn't a report-card mark; your child's teacher decides proficiency."],
     button: { label: "Open full reports", url: `${origin}/parents/#/reports` },
   });
 }
