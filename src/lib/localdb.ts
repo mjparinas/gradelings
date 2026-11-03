@@ -15,6 +15,11 @@ const VERSION = 1;
 export const OPEN_TIMEOUT_MS = 4000;
 /** How long copying the old database may take before the app carries on (the copy is finished on the next visit). */
 export const LEGACY_COPY_TIMEOUT_MS = 10_000;
+/** How long to wait for the old database to open; Safari can leave an open pending forever, as with the new one. */
+export const LEGACY_OPEN_TIMEOUT_MS = 3000;
+/** After this many visits where the old database never opened, stop waiting for it (it is left alone). */
+const LEGACY_MAX_TIMEOUTS = 3;
+const LEGACY_TIMEOUTS_KEY = "gradelings.legacyDbTimeouts";
 
 export interface StoredEvent {
   event: AppEvent;
@@ -95,14 +100,39 @@ function run(db: IDBDatabase, stores: string[], mode: IDBTransactionMode, fn: (t
 /** Opens the database that exists under the old name, or null when there is none (it is never created). */
 async function openLegacyDatabase(): Promise<IDBDatabase | null> {
   if (typeof indexedDB.databases !== "function") return null;
-  const names = await indexedDB.databases();
-  if (!names.some((d) => d.name === LEGACY_DB_NAME)) return null;
-  return new Promise((resolve) => {
-    const req = indexedDB.open(LEGACY_DB_NAME);
-    req.onsuccess = () => resolve(req.result);
-    req.onerror = () => resolve(null);
-    req.onblocked = () => resolve(null);
-  });
+  const timeouts = Number(safeStorage()?.getItem(LEGACY_TIMEOUTS_KEY) ?? 0);
+  if (timeouts >= LEGACY_MAX_TIMEOUTS) return null;
+  let timedOut = false;
+  const opened = (async () => {
+    const names = await indexedDB.databases();
+    if (!names.some((d) => d.name === LEGACY_DB_NAME)) return null;
+    return new Promise<IDBDatabase | null>((resolve) => {
+      const req = indexedDB.open(LEGACY_DB_NAME);
+      req.onsuccess = () => {
+        if (timedOut) req.result.close();
+        resolve(timedOut ? null : req.result);
+      };
+      req.onerror = () => resolve(null);
+      req.onblocked = () => resolve(null);
+    });
+  })().catch(() => null);
+  const result = await Promise.race([opened, new Promise<"timeout">((r) => setTimeout(() => r("timeout"), LEGACY_OPEN_TIMEOUT_MS))]);
+  if (result !== "timeout") return result;
+  timedOut = true;
+  try {
+    safeStorage()?.setItem(LEGACY_TIMEOUTS_KEY, String(timeouts + 1));
+  } catch {
+    // Storage blocked: the wait is simply repeated next visit.
+  }
+  return null;
+}
+
+function safeStorage(): Storage | null {
+  try {
+    return typeof localStorage === "undefined" ? null : localStorage;
+  } catch {
+    return null;
+  }
 }
 
 /**
