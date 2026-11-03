@@ -8,6 +8,8 @@ import { unsubscribeToken } from "@/server/auth";
 import { countryOf, toCountryCode, type CountryCode } from "@/lib/country";
 import { query, run } from "@/server/db";
 import { sendEmail } from "@/server/email";
+import { inviteLink } from "@/lib/referral";
+import { ensureReferralCode } from "@/server/referral";
 import { classDigestEmail, inactiveClassEmail, reminderEmail, yearReviewEmail, trialEndingEmail, trialRecapEmail, weeklyEmail, type ReminderChild, type TrialChild, type WeeklyChild } from "@/server/emailTemplates";
 import { sendDigest } from "@/server/alerts";
 import { runAutomations } from "@/server/automations";
@@ -441,7 +443,10 @@ async function weeklyReports(ctx: Ctx): Promise<boolean> {
       }
       if (!children.length) continue;
       const school = (await isFlagOn("school-year", p.family_id)) ? schoolYearLines(profiles, now) : [];
-      const sent = await sendEmail(weeklyEmail(p.email, origin, children, await unsubscribeToken(p.id), toCountryCode(p.country), school));
+      // Once a month (the first Sunday), a week with practice also carries the parent's invite link.
+      const practised = children.some((c) => c.answers > 0);
+      const code = firstSunday && practised && (await isFlagOn("weekly-email-invite", p.family_id)) ? await ensureReferralCode(p.family_id) : null;
+      const sent = await sendEmail(weeklyEmail(p.email, origin, children, await unsubscribeToken(p.id), toCountryCode(p.country), school, code ? inviteLink(origin, code) : undefined));
       if (sent.ok) {
         await run("UPDATE parents SET last_weekly_at = ? WHERE id = ?", [now, p.id]);
         result.weekly++;

@@ -141,3 +141,15 @@ describe("goal plan lines in the weekly email", () => {
     expect(mail.text.indexOf("Up next: Fractions")).toBeLessThan(mail.text.indexOf("Homework: Decimals"));
   });
 });
+
+describe("invite line in the weekly email", () => {
+  const kids = [{ name: "Maya", minutes: 30, answers: 40, accuracy: 80 }];
+  it("carries the invite link before the practice note when given, and is absent otherwise", () => {
+    const link = `${O}/account/invite/?ref=ABCD2345`;
+    const withLink = t.weeklyEmail("a@example.com", O, kids, "u", "CA", [], link);
+    expect(withLink.text).toContain(link);
+    expect(withLink.text).toContain("you get a free month");
+    expect(withLink.text.indexOf(link)).toBeLessThan(withLink.text.indexOf("This reflects practice"));
+    expect(t.weeklyEmail("a@example.com", O, kids, "u").text).not.toContain("free month");
+  });
+});
