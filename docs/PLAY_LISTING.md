@@ -73,6 +73,7 @@ All in `store-assets/android/`, made by scripts in the repo, so they can be redo
 | Phone screenshots (1080 × 1920) | `phone/` | Captioned shots. The same shots without captions are in `raw/phone-*.png`. |
 | 7-inch tablet (1200 × 1920) | `tablet-7/` | Same. |
 | 10-inch tablet (1600 × 2560) | `tablet-10/` | Same. |
+| Desktop (and Android XR), 1920 × 1080 | `desktop/` | `ONLY=desktop node scripts/android-screenshots.mjs http://localhost:3000 store-assets/android/raw`, uncaptioned, landscape. Play wants 4 to 8; there are 5. Upload the same files in the Android XR slot (it accepts 16:9 from 720 px), and leave the XR videos empty. |
 
 Every screenshot is the real app: `node scripts/android-screenshots.mjs http://localhost:3000 store-assets/android/raw` plays a few questions as a demo child called "Maya" (no real child), opening pages as the Android app does (`?app=android`), and fails if a price or Subscribe button shows. `node scripts/android-captions.mjs` adds the captions. Use a production build when you redo them (`npm run build && npm start`); with `next dev` the script hides the dev badge itself. Set `CHROMIUM_PATH` if Playwright's pinned browser isn't installed. Upload either set; Play wants 2 to 8 per device type, and these are 5 each. The arcade is left out because a new child sees it locked until they have learned for a while.
 
