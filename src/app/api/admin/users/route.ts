@@ -111,8 +111,8 @@ async function familyDetail(id: string) {
     query<{ id: number; author: string; body: string; created_at: number }>("SELECT id, author, body, created_at FROM family_notes WHERE family_id = ? ORDER BY id DESC", [id]),
     flagsFor(id, null),
   ]);
-  // Per-child counts for debugging ("did their practice reach the server?"). Counts and dates only: no names,
-  // no answers, no units. Children are labelled "Child 1", "Child 2" in the order they were added.
+  // Per-child first name (owner request, November 3, 2026), counts and dates for debugging ("did their practice
+  // reach the server?"). No answers or units. A child with no name is "Child 1", "Child 2" in the order added.
   const now = Date.now();
   const stats = await query<{ profile_id: string; n: number; last: number | null; answers7: number; days30: number }>(
     `SELECT profile_id, COUNT(*) AS n, MAX(t) AS last,
@@ -124,8 +124,8 @@ async function familyDetail(id: string) {
   const statsBy = new Map(stats.map((s) => [s.profile_id, s]));
   const kids = profiles.flatMap((p) => {
     try {
-      const d = JSON.parse(p.data) as { id?: string; grade?: string; framework?: string; deleted?: boolean; createdAt?: number };
-      return d.deleted ? [] : [{ id: p.id, createdAt: Number(d.createdAt ?? 0), grade: String(d.grade ?? ""), framework: String(d.framework ?? "") }];
+      const d = JSON.parse(p.data) as { id?: string; name?: string; grade?: string; framework?: string; deleted?: boolean; createdAt?: number };
+      return d.deleted ? [] : [{ id: p.id, name: String(d.name ?? "").slice(0, 60), createdAt: Number(d.createdAt ?? 0), grade: String(d.grade ?? ""), framework: String(d.framework ?? "") }];
     } catch {
       return [];
     }
@@ -134,7 +134,7 @@ async function familyDetail(id: string) {
   const children = kids.map((k, i) => {
     const s = statsBy.get(k.id);
     return {
-      label: `Child ${i + 1}`,
+      label: k.name || `Child ${i + 1}`,
       id: k.id,
       grade: k.grade,
       framework: k.framework,

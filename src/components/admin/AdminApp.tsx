@@ -397,7 +397,7 @@ function UserDetail({ id, flags, role, email, onBack }: { id: string; flags: Fla
             ))}
           </ul>
         )}
-        <p className="text-sm text-ink-soft">Counts and dates only. Names, answers and units stay private to the family.</p>
+        <p className="text-sm text-ink-soft">First names, counts and dates only. Answers and units stay private to the family.</p>
         {d.redemptions.length > 0 && (
           <>
             <h3 className="mt-4 font-bold">Codes Used</h3>
