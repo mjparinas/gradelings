@@ -354,7 +354,7 @@ async function deepChecks(device, browser, descriptor, page) {
   await page.waitForFunction(
     () =>
       new Promise((res) => {
-        const r = indexedDB.open("grademap", 1);
+        const r = indexedDB.open("gradelings", 1);
         r.onerror = () => res(false);
         r.onsuccess = () => {
           const g = r.result.transaction("kv").objectStore("kv").get("settings");
