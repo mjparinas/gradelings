@@ -593,6 +593,8 @@ Melvin's product and technical decisions are recorded here, newest last, so they
 
 - **"Pre-K to Grade 9" in marketing** (November 3, 2026): Pre-K is live in every province, territory and state, so marketing copy and social posts say "Pre-K to Grade 9". The first Instagram post uses it.
 
+- **Build memory** (November 3, 2026): the ~54,000-page production build peaked at 14.2 GB and was OOM-killed on 15 GB machines. Turbopack's build cache (`turbopackFileSystemCacheForBuild`) holds the compile graph in memory; it is off by default now (peak 10.6 GB, cold compile 4.0 min instead of 5.9). `TURBOPACK_BUILD_CACHE=1` turns it back on. The CI step that restores `.next/cache` no longer speeds up compiling. Static generation uses about 5.5 GB across 3 workers.
+
 ## Features at a glance
 
 Details are in the sections above; this list only names features that aren't described elsewhere in this file.

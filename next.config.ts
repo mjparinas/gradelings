@@ -69,6 +69,12 @@ const nextConfig: NextConfig = {
   // (tsc --noEmit) at the same time, and CI fails if it fails. Every other build, Vercel's included,
   // still checks types.
   typescript: { ignoreBuildErrors: process.env.SKIP_BUILD_TYPECHECK === "1" },
+  experimental: {
+    // Turbopack keeps its whole build graph in memory while it saves a cache. With ~54,000 pages that
+    // peaked at 14.2 GB (OOM on 15 GB machines); without it the same build peaks at 10.6 GB and compiles
+    // faster from cold (4.0 vs 5.9 min). Set TURBOPACK_BUILD_CACHE=1 to bring the cache back on a big machine.
+    turbopackFileSystemCacheForBuild: process.env.TURBOPACK_BUILD_CACHE === "1",
+  },
   turbopack: {
     // Pin the project root so Turbopack never picks up a lockfile from a parent folder.
     root: path.join(__dirname),
