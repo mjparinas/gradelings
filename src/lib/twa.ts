@@ -9,8 +9,8 @@
 // every page it loads knows, even after a reload. The flag is kept in sessionStorage, so the parent
 // area (a separate page load) still knows, but ordinary browser tabs never get it.
 
-const KEY = "grademap.android-app";
-const IOS_KEY = "grademap.ios-app";
+const KEY = "gradelings.android-app";
+const IOS_KEY = "gradelings.ios-app";
 
 /** Added to the user agent by the iOS app (applicationNameForUserAgent in WebViewController.swift). */
 export const IOS_APP_AGENT = "GradelingsApp-iOS";

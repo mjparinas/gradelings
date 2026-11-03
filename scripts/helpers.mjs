@@ -117,7 +117,7 @@ export async function confirmEmailInDb(db, email) {
 export async function openConfirmLink(page, base, email) {
   const { createClient } = await import("@libsql/client");
   const { createHash, randomBytes } = await import("node:crypto");
-  const db = createClient({ url: process.env.DATABASE_URL ?? "file:./data/grademap.db", authToken: process.env.DATABASE_AUTH_TOKEN });
+  const db = createClient({ url: process.env.DATABASE_URL ?? "file:./data/gradelings.db", authToken: process.env.DATABASE_AUTH_TOKEN });
   const token = randomBytes(24).toString("base64url");
   const row = (await db.execute({ sql: "SELECT id FROM parents WHERE email = ?", args: [email] })).rows[0];
   await db.execute({ sql: "DELETE FROM auth_tokens WHERE parent_id = ? AND kind = 'verify'", args: [row.id] });
@@ -182,7 +182,7 @@ export function spoken(page) {
 /**
  * A confirmed teacher with a class: three students, two assigned units (one with a due date and a question
  * count). Made through the API; the email is marked confirmed straight in the local database file
- * (DATABASE_URL, or ./data/grademap.db), because no email is sent in tests. Returns the session cookie and the class.
+ * (DATABASE_URL, or ./data/gradelings.db), because no email is sent in tests. Returns the session cookie and the class.
  */
 export async function teacherFixture(base, { framework = "ca-bc", grade = "3" } = {}) {
   const { createClient } = await import("@libsql/client");
@@ -203,7 +203,7 @@ export async function teacherFixture(base, { framework = "ca-bc", grade = "3" } 
     return res.data;
   };
   must(await api("/api/auth/signup/", "POST", { email, password: "correct horse" }), "sign up");
-  const db = createClient({ url: process.env.DATABASE_URL ?? "file:./data/grademap.db", authToken: process.env.DATABASE_AUTH_TOKEN });
+  const db = createClient({ url: process.env.DATABASE_URL ?? "file:./data/gradelings.db", authToken: process.env.DATABASE_AUTH_TOKEN });
   await confirmEmailInDb(db, email);
   // Sign-up signs nobody in, and the password only counts once the email is confirmed, so sign in now.
   must(await api("/api/auth/login/", "POST", { email, password: "correct horse" }), "sign in");
@@ -233,7 +233,7 @@ export const TEACHER_TABS = ["", "/homework", "/live", "/students", "/settings"]
 export async function seedLastWeek(page, units = ["3/math/numbers-to-1000", "3/math/facts-to-20", "3/science/grouping-living-things"]) {
   await page.evaluate(async (units) => {
     const db = await new Promise((res, rej) => {
-      const r = indexedDB.open("grademap", 1);
+      const r = indexedDB.open("gradelings", 1);
       r.onsuccess = () => res(r.result);
       r.onerror = () => rej(r.error);
     });

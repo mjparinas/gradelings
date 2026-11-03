@@ -7,7 +7,7 @@ import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } 
 // The System page's Backups, Speed, Admin security and Capacity cards, and the failed staff sign-ins they read.
 // Real route handlers against a throwaway SQLite file; Sentry is a stubbed fetch.
 
-const dir = mkdtempSync(join(tmpdir(), "grademap-monitoring-"));
+const dir = mkdtempSync(join(tmpdir(), "gradelings-monitoring-"));
 process.env.DATABASE_URL = `file:${join(dir, "test.db")}`;
 const ADMIN = "owner@example.com";
 const SUPPORT = "helper@example.com";

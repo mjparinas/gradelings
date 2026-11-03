@@ -7,7 +7,7 @@ import { FOUNDER_CODE } from "@/lib/promo";
 // Site-wide sales: the seeded FOUNDER code, the admin Sales API and the public banner feed, through the real
 // route handlers against a throwaway SQLite file.
 
-const dir = mkdtempSync(join(tmpdir(), "grademap-promo-"));
+const dir = mkdtempSync(join(tmpdir(), "gradelings-promo-"));
 process.env.DATABASE_URL = `file:${join(dir, "test.db")}`;
 delete process.env.RESEND_API_KEY;
 delete process.env.ADMIN_TOKEN;

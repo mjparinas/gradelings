@@ -3,7 +3,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 
-const dir = mkdtempSync(join(tmpdir(), "grademap-payments-"));
+const dir = mkdtempSync(join(tmpdir(), "gradelings-payments-"));
 process.env.DATABASE_URL = `file:${join(dir, "test.db")}`;
 
 let dbm: typeof import("./db");

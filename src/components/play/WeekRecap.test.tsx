@@ -57,7 +57,7 @@ describe("WeekRecap", () => {
     expect(screen.getByRole("link", { name: /2 new stickers/ })).toHaveAttribute("href", "#/stickers");
     expect(screen.getByRole("link", { name: /1 story read/ })).toHaveAttribute("href", "#/stories");
     expect(screen.getByRole("link", { name: /First Steps/i })).toHaveAttribute("href", "#/trophies");
-    expect(localStorage.getItem("grademap.grew.seen.p1")).toBe("2026-10-19");
+    expect(localStorage.getItem("gradelings.grew.seen.p1")).toBe("2026-10-19");
   });
 
   it("leaves out what didn't happen, so nothing reads as missed", () => {

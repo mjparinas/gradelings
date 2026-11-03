@@ -7,7 +7,7 @@ import { GIFT_DAYS, giftCents } from "@/lib/plan";
 
 // Gifts, through the real webhook and gift routes against a throwaway SQLite file.
 
-const dir = mkdtempSync(join(tmpdir(), "grademap-gifts-"));
+const dir = mkdtempSync(join(tmpdir(), "gradelings-gifts-"));
 process.env.DATABASE_URL = `file:${join(dir, "test.db")}`;
 process.env.STRIPE_WEBHOOK_SECRET = "whsec_test";
 delete process.env.RESEND_API_KEY;

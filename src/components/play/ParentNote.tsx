@@ -7,7 +7,7 @@ import { sayFor } from "@/lib/say";
 import { useActiveProfile, useChildSettings } from "@/lib/store";
 import { useNow } from "@/lib/useNow";
 
-const key = (profileId: string) => `grademap.note.seen.${profileId}`;
+const key = (profileId: string) => `gradelings.note.seen.${profileId}`;
 const seen = (profileId: string): string | null => {
   try {
     return localStorage.getItem(key(profileId));

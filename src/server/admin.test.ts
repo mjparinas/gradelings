@@ -7,7 +7,7 @@ import { LIFETIME_ACCESS } from "@/lib/plan";
 
 // The admin panel's API, through the real route handlers against a throwaway SQLite file.
 
-const dir = mkdtempSync(join(tmpdir(), "grademap-admin-"));
+const dir = mkdtempSync(join(tmpdir(), "gradelings-admin-"));
 process.env.DATABASE_URL = `file:${join(dir, "test.db")}`;
 delete process.env.RESEND_API_KEY;
 delete process.env.ADMIN_TOKEN;

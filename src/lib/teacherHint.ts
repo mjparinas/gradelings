@@ -2,7 +2,7 @@
 // its own; this hint lets a first-time visitor see the sign-up form at once instead of waiting for the server to
 // say "not signed in". It only decides what to show first: the server still decides who is signed in.
 
-const KEY = "grademap.teacher";
+const KEY = "gradelings.teacher";
 
 export function knownTeacher(): boolean {
   try {

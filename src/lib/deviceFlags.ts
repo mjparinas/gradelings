@@ -7,8 +7,8 @@ import { flagDef, type FlagKey } from "./flags";
 // when it comes back into view and when the signed-in account changes, then kept in localStorage so the
 // last known values still apply offline. Until the first answer arrives, every flag has its default.
 
-const KEY = "grademap.flags";
-const DEVICE_KEY = "grademap.device";
+const KEY = "gradelings.flags";
+const DEVICE_KEY = "gradelings.device";
 
 export interface Remote {
   flags: Record<string, boolean>;

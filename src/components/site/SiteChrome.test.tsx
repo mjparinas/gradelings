@@ -35,14 +35,14 @@ describe("SiteHeader sign in", () => {
   });
 
   it("says My account and goes straight to the parent area on a device with a parent account", () => {
-    localStorage.setItem("grademap.parent", "1");
+    localStorage.setItem("gradelings.parent", "1");
     render(<SiteHeader />);
     expect(screen.getByRole("link", { name: "My account" })).toHaveAttribute("href", "/parents/#/account");
     localStorage.clear();
   });
 
   it("goes to the teacher area on a device with a teacher", () => {
-    localStorage.setItem("grademap.teacher", "1");
+    localStorage.setItem("gradelings.teacher", "1");
     render(<SiteHeader />);
     expect(screen.getByRole("link", { name: "My account" })).toHaveAttribute("href", "/teachers/");
     localStorage.clear();

@@ -5,7 +5,7 @@
 // Files come from the Piper cache first, so this works offline whether or not the service
 // worker controls this worker. Scripts are loaded from blob URLs of the cached copies.
 /* global ort, createPiperPhonemize */
-const CACHE = "grademap-piper";
+const CACHE = "gradelings-piper";
 
 let engine;
 const voices = new Map();

@@ -64,7 +64,7 @@ describe("FirstRun", () => {
     expect(screen.getByText("What's your name?")).toBeInTheDocument();
     expect(screen.queryByText(/I'm Ollie the Otter/)).not.toBeInTheDocument();
     unmount();
-    localStorage.setItem("grademap.parent", "1");
+    localStorage.setItem("gradelings.parent", "1");
     render(<FirstRun />);
     expect(screen.getByText(/I'm Ollie the Otter/)).toBeInTheDocument();
   });
@@ -87,7 +87,7 @@ describe("FirstRun sign-in", () => {
   });
 
   it("welcomes back a device a parent has signed in on, still letting a new child start", () => {
-    localStorage.setItem("grademap.parent", "1");
+    localStorage.setItem("gradelings.parent", "1");
     render(<FirstRun />);
     expect(screen.getByRole("link", { name: "Welcome back! Sign in" })).toHaveAttribute("href", "/parents/#/account?mode=signin");
     expect(screen.queryByRole("link", { name: "Already have an account? Sign in" })).not.toBeInTheDocument();

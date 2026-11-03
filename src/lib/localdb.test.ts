@@ -81,6 +81,9 @@ class FakeObjectStore {
   getAll() {
     return this.t.request(() => [...this.data.rows.values()].map((v) => structuredClone(v)));
   }
+  getAllKeys() {
+    return this.t.request(() => [...this.data.rows.keys()]);
+  }
   clear() {
     this.t.write();
     return this.t.request(() => void this.data.rows.clear());
@@ -135,9 +138,10 @@ class FakeDb {
     this.stores.set(name, data);
     return { createIndex: (index: string, field: string) => void data.indexes.set(index, field) };
   }
-  transaction(_store: string, mode: string) {
+  transaction(_store: string | string[], mode: string) {
     return new FakeTransaction(this, mode);
   }
+  close() {}
 }
 
 function fakeIndexedDB() {
@@ -146,7 +150,15 @@ function fakeIndexedDB() {
   return {
     dbs,
     opened,
-    open(name: string, version: number) {
+    async databases() {
+      return [...dbs.keys()].map((name) => ({ name }));
+    },
+    deleted: [] as string[],
+    deleteDatabase(name: string) {
+      this.deleted.push(name);
+      dbs.delete(name);
+    },
+    open(name: string, version = dbs.get(name)?.version ?? 1) {
       opened.push(name);
       const req = new FakeRequest<FakeDb>();
       setTimeout(() => {
@@ -188,21 +200,89 @@ describe("localdb on IndexedDB", () => {
     db = await load();
     expect(await db.getKV("profiles")).toEqual([{ id: "a" }]);
     expect(await db.getKV("activeId")).toBe("a");
-    const stores = idb.dbs.get("grademap")!.db.stores;
+    const stores = idb.dbs.get("gradelings")!.db.stores;
     expect([...stores.keys()]).toEqual(["kv", "events"]);
     expect([...stores.get("events")!.indexes.keys()]).toEqual(["profileId", "synced"]);
+  });
+
+  describe("copying the database from before the rename", () => {
+    // What the app saved when it was still called GradeMap.
+    const seedLegacy = (events: AppEvent[] = [ev("a"), ev("b")]) => {
+      const old = new FakeDb();
+      old.createObjectStore("kv");
+      const store = old.createObjectStore("events", { keyPath: "id" });
+      store.createIndex("synced", "synced");
+      old.stores.get("kv")!.rows.set("profiles", [{ id: "kid1" }]);
+      old.stores.get("kv")!.rows.set("activeId", "kid1");
+      events.forEach((e, i) => old.stores.get("events")!.rows.set(e.id, { event: e, id: e.id, profileId: e.profileId, synced: i === 0 ? 1 : 0 }));
+      idb.dbs.set("grademap", { db: old, version: 1 });
+    };
+
+    it("brings the profiles, settings and every event across, keeping what was waiting to upload", async () => {
+      seedLegacy();
+      const db = await load();
+      expect(await db.getKV("profiles")).toEqual([{ id: "kid1" }]);
+      expect(await db.getKV("activeId")).toBe("kid1");
+      expect((await db.allEvents()).map((e) => e.id).sort()).toEqual(["a", "b"]);
+      expect((await db.unsyncedEvents()).map((e) => e.id)).toEqual(["b"]);
+    });
+
+    it("deletes the old database once it is copied, and does not copy again", async () => {
+      seedLegacy();
+      let db = await load();
+      await db.getKV("profiles");
+      expect(idb.deleted).toEqual(["grademap"]);
+      expect(idb.dbs.has("grademap")).toBe(false);
+      // A later visit finds nothing to do, even if the old name reappears (a blocked delete, say).
+      await db.setKV("activeId", "kid2");
+      seedLegacy();
+      db = await load();
+      expect(await db.getKV("activeId")).toBe("kid2");
+    });
+
+    it("does not overwrite what the new database already has", async () => {
+      seedLegacy();
+      const fresh = new FakeDb();
+      fresh.createObjectStore("kv");
+      fresh.createObjectStore("events", { keyPath: "id" }).createIndex("synced", "synced");
+      fresh.stores.get("kv")!.rows.set("activeId", "kid9");
+      fresh.stores.get("events")!.rows.set("a", { event: ev("a"), id: "a", profileId: "kid1", synced: 0 });
+      idb.dbs.set("gradelings", { db: fresh, version: 1 });
+      const db = await load();
+      expect(await db.getKV("activeId")).toBe("kid9");
+      expect(await db.getKV("profiles")).toEqual([{ id: "kid1" }]);
+      expect((await db.unsyncedEvents()).map((e) => e.id).sort()).toEqual(["a", "b"]);
+    });
+
+    it("never creates the old database when there is none", async () => {
+      const db = await load();
+      await db.getKV("x");
+      expect(idb.opened).toEqual(["gradelings"]);
+      expect(idb.deleted).toEqual([]);
+    });
+
+    it("keeps the old database when the copy fails, to try again next visit", async () => {
+      seedLegacy();
+      idb.dbs.get("grademap")!.db.transaction = () => {
+        throw new Error("boom");
+      };
+      const db = await load();
+      expect(await db.getKV("profiles")).toBeUndefined();
+      expect(idb.deleted).toEqual([]);
+      expect(idb.dbs.has("grademap")).toBe(true);
+    });
   });
 
   it("opens the database once per page load", async () => {
     const db = await load();
     await Promise.all([db.getKV("a"), db.getKV("b"), db.allEvents()]);
-    expect(idb.opened).toEqual(["grademap"]);
+    expect(idb.opened).toEqual(["gradelings"]);
   });
 
   it("opens the database again when the browser closed the connection", async () => {
     const db = await load();
     await db.setKV("a", 1);
-    const fake = idb.dbs.get("grademap")!.db;
+    const fake = idb.dbs.get("gradelings")!.db;
     const real = fake.transaction.bind(fake);
     let calls = 0;
     fake.transaction = (store: string, mode: string) => {
@@ -210,18 +290,18 @@ describe("localdb on IndexedDB", () => {
       return real(store, mode);
     };
     expect(await db.getKV("a")).toBe(1);
-    expect(idb.opened).toEqual(["grademap", "grademap"]);
+    expect(idb.opened).toEqual(["gradelings", "gradelings"]);
   });
 
   it("gives up after one fresh try if the connection still can't be used", async () => {
     const db = await load();
     await db.setKV("a", 1);
-    const fake = idb.dbs.get("grademap")!.db;
+    const fake = idb.dbs.get("gradelings")!.db;
     fake.transaction = () => {
       throw Object.assign(new Error("The database connection is closing."), { name: "InvalidStateError" });
     };
     await expect(db.getKV("a")).rejects.toThrow("closing");
-    expect(idb.opened).toEqual(["grademap", "grademap"]);
+    expect(idb.opened).toEqual(["gradelings", "gradelings"]);
   });
 
   it("queues new events for upload and hands them out in batches", async () => {
@@ -232,7 +312,7 @@ describe("localdb on IndexedDB", () => {
     expect((await db.unsyncedEvents()).map((e) => e.id)).toEqual(["b"]);
     expect((await db.allEvents()).map((e) => e.id).sort()).toEqual(["a", "b", "c"]);
     // An unknown id is skipped, not invented.
-    expect(idb.dbs.get("grademap")!.db.stores.get("events")!.rows.has("missing")).toBe(false);
+    expect(idb.dbs.get("gradelings")!.db.stores.get("events")!.rows.has("missing")).toBe(false);
   });
 
   it("queues every event for upload again when asked", async () => {

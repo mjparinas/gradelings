@@ -34,7 +34,7 @@ describe("ParentNote", () => {
   });
 
   it("a newer note shows even after an older one was closed", () => {
-    localStorage.setItem("grademap.note.seen.p1", "n0");
+    localStorage.setItem("gradelings.note.seen.p1", "n0");
     render(<ParentNote />);
     expect(note()).not.toBeNull();
   });

@@ -8,7 +8,7 @@ import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } 
 // cancelling, the failed-payment email), the sign-up funnel, saved replies and CSV downloads. Real route
 // handlers against a throwaway SQLite file; email goes to the test outbox and Stripe is a stubbed fetch.
 
-const dir = mkdtempSync(join(tmpdir(), "grademap-tools-"));
+const dir = mkdtempSync(join(tmpdir(), "gradelings-tools-"));
 process.env.DATABASE_URL = `file:${join(dir, "test.db")}`;
 const KEYS = ["RESEND_API_KEY", "EMAIL_FROM", "STRIPE_SECRET_KEY", "STRIPE_WEBHOOK_SECRET", "CRON_SECRET", "GITHUB_TOKEN", "VERCEL_TOKEN", "SENTRY_AUTH_TOKEN", "NEXT_PUBLIC_SITE_URL"];
 const saved = Object.fromEntries(KEYS.map((k) => [k, process.env[k]]));

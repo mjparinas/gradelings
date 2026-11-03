@@ -82,7 +82,7 @@ describe("PromoBanner", () => {
 
   it("never shows in the store apps, which sell nothing", async () => {
     serve(promo);
-    sessionStorage.setItem("grademap.android-app", "1");
+    sessionStorage.setItem("gradelings.android-app", "1");
     const { container } = render(<PromoBanner />);
     await act(async () => {});
     expect(container).toBeEmptyDOMElement();

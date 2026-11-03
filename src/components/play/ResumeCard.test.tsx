@@ -25,7 +25,7 @@ function Home({ dailyDone = false }: { dailyDone?: boolean }) {
 
 const save = (over: Record<string, unknown> = {}) =>
   localStorage.setItem(
-    "grademap.resume.p1",
+    "gradelings.resume.p1",
     JSON.stringify({ mode: "practice", scope: "4/math/add", title: "Adding big numbers", icon: "➕", results: [true, true, false], total: 8, ms: 1000, at: Date.now() - 1000, ...over }),
   );
 
@@ -51,7 +51,7 @@ describe("Finish your lesson card", () => {
     render(<Home />);
     fireEvent.click(screen.getByRole("button", { name: "Not now" }));
     expect(screen.getByText("No card")).toBeInTheDocument();
-    expect(localStorage.getItem("grademap.resume.p1")).toBeNull();
+    expect(localStorage.getItem("gradelings.resume.p1")).toBeNull();
   });
 
   it("shows nothing when there is no lesson to finish", () => {

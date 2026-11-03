@@ -6,7 +6,7 @@ import { afterAll, beforeAll, describe, expect, it, vi } from "vitest";
 
 // These tests run the real route handlers against a throwaway SQLite file.
 
-const dir = mkdtempSync(join(tmpdir(), "grademap-test-"));
+const dir = mkdtempSync(join(tmpdir(), "gradelings-test-"));
 process.env.DATABASE_URL = `file:${join(dir, "test.db")}`;
 process.env.STRIPE_WEBHOOK_SECRET = "whsec_test";
 delete process.env.RESEND_API_KEY;

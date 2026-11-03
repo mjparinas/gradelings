@@ -6,7 +6,7 @@ import { afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vite
 
 // The System page's Live site card: a stubbed site stands in for gradelings.com.
 
-process.env.DATABASE_URL = `file:${join(mkdtempSync(join(tmpdir(), "grademap-site-")), "test.db")}`;
+process.env.DATABASE_URL = `file:${join(mkdtempSync(join(tmpdir(), "gradelings-site-")), "test.db")}`;
 
 const POLICY = "script-src 'self' 'sha256-abc='; style-src 'self'";
 const tag = (policy = POLICY) => `<meta http-equiv="Content-Security-Policy" content="${policy}"/>`;

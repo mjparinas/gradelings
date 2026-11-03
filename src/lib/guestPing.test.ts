@@ -11,7 +11,7 @@ const state = (over: Record<string, unknown> = {}) => ({ family: {}, profiles: [
 let calls: { url: string; body: string }[];
 beforeEach(() => {
   localStorage.clear();
-  localStorage.setItem("grademap.device", "abcdef0123456789abcdef01");
+  localStorage.setItem("gradelings.device", "abcdef0123456789abcdef01");
   calls = [];
   vi.stubGlobal(
     "fetch",

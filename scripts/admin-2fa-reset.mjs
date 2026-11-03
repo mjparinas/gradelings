@@ -3,7 +3,7 @@
 // there is no button for this in the panel.
 //
 //   DATABASE_URL=... DATABASE_AUTH_TOKEN=... node scripts/admin-2fa-reset.mjs owner@example.com
-//   (or TURSO_DATABASE_URL / TURSO_AUTH_TOKEN; with neither it uses ./data/grademap.db)
+//   (or TURSO_DATABASE_URL / TURSO_AUTH_TOKEN; with neither it uses ./data/gradelings.db)
 //
 // The admin then signs in with the password and sets two-step up again.
 import { createClient } from "@libsql/client";
@@ -14,7 +14,7 @@ if (!email.includes("@")) {
   process.exit(1);
 }
 const env = process.env;
-const url = env.DATABASE_URL ?? env.TURSO_DATABASE_URL ?? "file:./data/grademap.db";
+const url = env.DATABASE_URL ?? env.TURSO_DATABASE_URL ?? "file:./data/gradelings.db";
 const authToken = env.DATABASE_URL ? env.DATABASE_AUTH_TOKEN : env.TURSO_AUTH_TOKEN;
 const db = createClient({ url, authToken: authToken || undefined });
 

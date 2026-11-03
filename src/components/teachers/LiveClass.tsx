@@ -22,7 +22,7 @@ interface Ticket {
   total: number;
   ids: string[];
 }
-const ticketKey = (classId: string) => `grademap.ticket.${classId}`;
+const ticketKey = (classId: string) => `gradelings.ticket.${classId}`;
 function readTicket(classId: string): Ticket | null {
   try {
     const t = JSON.parse(sessionStorage.getItem(ticketKey(classId)) ?? "null") as Ticket | null;

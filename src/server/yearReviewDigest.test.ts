@@ -5,7 +5,7 @@ import { afterAll, afterEach, beforeAll, describe, expect, it, vi } from "vitest
 
 // The June year-in-review email and the teacher's Monday class email, sent by the daily job.
 
-const dir = mkdtempSync(join(tmpdir(), "grademap-year-digest-"));
+const dir = mkdtempSync(join(tmpdir(), "gradelings-year-digest-"));
 process.env.DATABASE_URL = `file:${join(dir, "test.db")}`;
 process.env.CRON_SECRET = "cron-secret";
 delete process.env.RESEND_API_KEY;

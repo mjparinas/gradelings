@@ -44,9 +44,9 @@ describe("install nudge helpers", () => {
   it("keeps the kids' snooze separate and shorter", () => {
     const t = Date.UTC(2026, 0, 1);
     snoozeKids(t);
-    expect(isSnoozed(t, "grademap.install.dismissed")).toBe(false);
-    expect(isSnoozed(t + 86_400_000, "grademap.install.kids.dismissed", KIDS_SNOOZE_DAYS)).toBe(true);
-    expect(isSnoozed(t + 8 * 86_400_000, "grademap.install.kids.dismissed", KIDS_SNOOZE_DAYS)).toBe(false);
+    expect(isSnoozed(t, "gradelings.install.dismissed")).toBe(false);
+    expect(isSnoozed(t + 86_400_000, "gradelings.install.kids.dismissed", KIDS_SNOOZE_DAYS)).toBe(true);
+    expect(isSnoozed(t + 8 * 86_400_000, "gradelings.install.kids.dismissed", KIDS_SNOOZE_DAYS)).toBe(false);
   });
 
   it("words the bookmark shortcut for the device", () => {

@@ -5,7 +5,7 @@ import { afterAll, beforeAll, describe, expect, it } from "vitest";
 
 // Guest players: devices with no parent account that say they were played today, counted for the admin dashboard.
 
-const dir = mkdtempSync(join(tmpdir(), "grademap-guests-"));
+const dir = mkdtempSync(join(tmpdir(), "gradelings-guests-"));
 process.env.DATABASE_URL = `file:${join(dir, "test.db")}`;
 delete process.env.RESEND_API_KEY;
 const DAY = 86_400_000;

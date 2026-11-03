@@ -2,11 +2,20 @@
 
 import { useEffect } from "react";
 import { replay, warmConfetti } from "@/lib/juice";
+import { migrateLegacyCaches, migrateLegacyStorage } from "@/lib/legacyStorage";
 import { cacheLoadedScripts } from "@/lib/offline";
 import { sounds } from "@/lib/sound";
 
+// Before any component reads what is saved on the device: the product used to be called GradeMap, and the
+// entries kept under that name move to the new one (src/lib/legacyStorage.ts, and localdb.ts for the database).
+if (typeof window !== "undefined") migrateLegacyStorage();
+
 /** Registers the offline service worker and makes every button juicy. */
 export function AppEffects() {
+  useEffect(() => {
+    void migrateLegacyCaches();
+  }, []);
+
   useEffect(() => {
     if (process.env.NODE_ENV !== "production" || !("serviceWorker" in navigator)) return;
     const register = () =>

@@ -5,7 +5,7 @@ import { afterAll, afterEach, beforeAll, describe, expect, it, vi } from "vitest
 
 // Roster import against the real route handlers and a throwaway SQLite file. The providers are played by a fake fetch.
 
-const dir = mkdtempSync(join(tmpdir(), "grademap-roster-"));
+const dir = mkdtempSync(join(tmpdir(), "gradelings-roster-"));
 process.env.DATABASE_URL = `file:${join(dir, "test.db")}`;
 process.env.GOOGLE_CLASSROOM_CLIENT_ID = "gc-id";
 process.env.GOOGLE_CLASSROOM_CLIENT_SECRET = "gc-secret";

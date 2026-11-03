@@ -48,7 +48,7 @@ describe("databaseConfig", () => {
   it("uses the local file when nothing is set", async () => {
     setEnv({});
     const { databaseConfig } = await import("./db");
-    expect(databaseConfig()).toEqual({ url: "file:./data/grademap.db" });
+    expect(databaseConfig()).toEqual({ url: "file:./data/gradelings.db" });
   });
 });
 

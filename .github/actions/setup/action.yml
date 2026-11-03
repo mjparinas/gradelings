@@ -1,4 +1,4 @@
-name: Set up GradeMap
+name: Set up Gradelings
 description: Node 22 and the exact locked dependencies, with node_modules cached by lockfile.
 inputs:
   flavor:

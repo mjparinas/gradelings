@@ -84,7 +84,7 @@ describe("secrets at rest", () => {
 
 // ---------- Through the real routes, against a throwaway SQLite file ----------
 
-const dir = mkdtempSync(join(tmpdir(), "grademap-2fa-"));
+const dir = mkdtempSync(join(tmpdir(), "gradelings-2fa-"));
 process.env.DATABASE_URL = `file:${join(dir, "test.db")}`;
 delete process.env.RESEND_API_KEY;
 const ADMIN_EMAIL = "owner-2fa@example.com";

@@ -81,7 +81,7 @@ describe("AccountPage signed out", () => {
   });
 
   it("opens on sign-in on a device that has had a parent account", () => {
-    localStorage.setItem("grademap.parent", "1");
+    localStorage.setItem("gradelings.parent", "1");
     render(<AccountPage onBilling={vi.fn()} />);
     expect(screen.getByRole("heading", { name: "Sign in" })).toBeInTheDocument();
     localStorage.clear();
@@ -127,7 +127,7 @@ describe("AccountPage signed out", () => {
     expect(bodyOf("POST", "/api/auth/login/")).toEqual({ email: "parent@example.com", password: "secret-pass" });
     expect(useStore.getState().sync.cursor).toBe(0);
     // The device remembers a parent signed in here, so the site can say "My account" and "Welcome back".
-    expect(localStorage.getItem("grademap.parent")).toBe("1");
+    expect(localStorage.getItem("gradelings.parent")).toBe("1");
     localStorage.clear();
   });
 

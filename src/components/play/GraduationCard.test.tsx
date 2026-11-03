@@ -14,12 +14,12 @@ beforeEach(() => localStorage.clear());
 
 describe("GraduationCard", () => {
   it("shows nothing for a child who has not moved up", () => {
-    localStorage.setItem("grademap.grad.p1", "5");
+    localStorage.setItem("gradelings.grad.p1", "5");
     render(<GraduationCard />);
     expect(screen.queryByTestId("graduation-card")).toBeNull();
   });
   it("congratulates a child who moved up, once", () => {
-    localStorage.setItem("grademap.grad.p1", "4");
+    localStorage.setItem("gradelings.grad.p1", "4");
     const { unmount } = render(<GraduationCard />);
     expect(screen.getByText("You finished Grade 4!")).toBeInTheDocument();
     expect(screen.getByText(/Welcome to Grade 5, Maya/)).toBeInTheDocument();

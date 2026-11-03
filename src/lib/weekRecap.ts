@@ -122,7 +122,7 @@ export function recapHeadline(r: WeekRecap): string {
 }
 
 // Which week's card a child has closed on this device. A convenience only: losing it shows the card again.
-const seenKey = (profileId: string) => `grademap.grew.seen.${profileId}`;
+const seenKey = (profileId: string) => `gradelings.grew.seen.${profileId}`;
 
 export function recapSeen(profileId: string): string | null {
   try {
