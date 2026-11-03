@@ -55,7 +55,9 @@ describe("home page", () => {
     );
     const faq = screen.getByRole("heading", { name: "Questions from parents" }).closest("section")!;
     expect(faq.textContent).toContain(PRICES_BY_CURRENCY.USD.month.label);
-    expect(faq.textContent).toContain("Washington");
+    // The curriculum FAQ no longer lists every region; it points families to choosing their own.
+    expect(faq.textContent).toContain("Choose your province or state when you add a child");
+    expect(faq.textContent).not.toContain("Washington");
   });
 });
 
