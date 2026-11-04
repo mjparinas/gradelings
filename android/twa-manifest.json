@@ -17,14 +17,14 @@
   "maskableIconUrl": "https://www.gradelings.com/icon-maskable-512.png",
   "webManifestUrl": "https://www.gradelings.com/manifest.webmanifest",
   "enableNotifications": false,
-  "enableSiteSettingsShortcut": false,
+  "enableSiteSettingsShortcut": true,
   "isChromeOSOnly": false,
   "isMetaQuest": false,
   "splashScreenFadeOutDuration": 300,
   "fallbackType": "customtabs",
   "minSdkVersion": 24,
-  "appVersionName": "1.0.0",
-  "appVersionCode": 1,
+  "appVersionName": "1.0.1",
+  "appVersionCode": 2,
   "signingKey": { "path": "./gradelings-upload.keystore", "alias": "gradelings-upload" },
   "generatorApp": "bubblewrap-cli"
 }
