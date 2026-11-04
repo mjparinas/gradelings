@@ -34,7 +34,7 @@ function listSubjects(f: Framework): string {
   return names.length > 1 ? `${names.slice(0, -1).join(", ")} and ${names[names.length - 1]}` : names[0];
 }
 
-function ChildForm({ draft, onChange, isNew }: { draft: Draft; onChange: (d: Draft) => void; isNew: boolean }) {
+function ChildForm({ draft, onChange, isNew, locked = false }: { draft: Draft; onChange: (d: Draft) => void; isNew: boolean; locked?: boolean }) {
   // A new child's grade follows the birth year until the parent picks a grade themselves.
   const [gradePicked, setGradePicked] = useState(false);
   const chosen = getFramework(draft.framework);
@@ -90,6 +90,9 @@ function ChildForm({ draft, onChange, isNew }: { draft: Draft; onChange: (d: Dra
           )}
         </span>
       </div>
+      {locked ? (
+        <p className="font-read text-ink-soft">{draft.name || "Your child"}&apos;s picture is the buddy they chose in the shop. They can change it there.</p>
+      ) : (
       <div>
         <p className="mb-2 font-semibold">Avatar</p>
         <div className="grid grid-cols-6 gap-2">
@@ -108,6 +111,7 @@ function ChildForm({ draft, onChange, isNew }: { draft: Draft; onChange: (d: Dra
           ))}
         </div>
       </div>
+      )}
     </div>
   );
 }
@@ -192,7 +196,7 @@ export function ChildrenPage() {
       <Dialog open={!!editing && !!draft} title={editing === "new" ? "Add a child" : "Edit child"} onClose={() => setEditing(null)}>
         {draft && (
           <div className="flex flex-col gap-4">
-            <ChildForm key={editing === "new" ? "new" : editing?.id} draft={draft} onChange={setDraft} isNew={editing === "new"} />
+            <ChildForm key={editing === "new" ? "new" : editing?.id} draft={draft} onChange={setDraft} isNew={editing === "new"} locked={editing !== "new" && !!editing?.avatarLocked} />
             <button type="button" disabled={!draft.name.trim()} className="btn btn-good min-h-14 text-xl" onClick={save}>
               Save
             </button>

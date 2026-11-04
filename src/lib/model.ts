@@ -15,6 +15,8 @@ export interface Profile {
   grade: GradeId;
   framework: FrameworkId;
   birthYear?: number;
+  /** Set once the child has picked a buddy in the shop: the avatar then follows the buddy and only the child changes it, by picking another (`equip` in the store). */
+  avatarLocked?: boolean;
   /** Equipped cosmetics. */
   companion?: string;
   title?: string;

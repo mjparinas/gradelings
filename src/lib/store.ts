@@ -232,6 +232,12 @@ export const useStore = create<State>()((set, get) => ({
     // A grade a parent changes is the grade for this school year, so the back-to-school prompt doesn't ask again.
     const year = (p: Profile) => (patch.grade && patch.grade !== p.grade && patch.gradeYear === undefined ? { gradeYear: schoolYearOf(now) } : {});
     const before = get().profiles.find((p) => p.id === id);
+    // Once the child has chosen a shop buddy it is their picture; a parent's edit can't change it (a buddy pick sends the new avatar with `companion`).
+    if (before?.avatarLocked && patch.companion === undefined) {
+      patch = { ...patch };
+      delete patch.avatar;
+      delete patch.colour;
+    }
     const profiles = get().profiles.map((p) => (p.id === id ? { ...p, ...patch, ...year(p), updatedAt: now } : p));
     set({ profiles });
     save("profiles", profiles);
@@ -415,7 +421,7 @@ export const useStore = create<State>()((set, get) => ({
     const item = getItem(itemId);
     const id = get().activeId;
     if (!item || !id) return;
-    get().updateProfile(id, item.kind === "companion" ? { companion: itemId } : item.kind === "title" ? { title: itemId } : { confetti: itemId });
+    get().updateProfile(id, item.kind === "companion" ? { companion: itemId, avatar: item.critter ?? itemId, avatarLocked: true } : item.kind === "title" ? { title: itemId } : { confetti: itemId });
   },
 
   setPin: async (pin) => {

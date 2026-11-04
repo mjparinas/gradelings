@@ -261,6 +261,35 @@ describe("localdb on IndexedDB", () => {
       expect(idb.deleted).toEqual([]);
     });
 
+    it("carries on after a few seconds when the old database never opens, and stops trying after three visits", async () => {
+      vi.useFakeTimers();
+      const store = new Map<string, string>();
+      vi.stubGlobal("localStorage", { getItem: (k: string) => store.get(k) ?? null, setItem: (k: string, v: string) => void store.set(k, v) });
+      try {
+        seedLegacy();
+        const realOpen = idb.open.bind(idb);
+        idb.open = ((name: string, version?: number) => {
+          if (name === "grademap") return new FakeRequest(); // never answers, like Safari's stuck open
+          return realOpen(name, version as number);
+        }) as typeof idb.open;
+        for (let visit = 1; visit <= 3; visit++) {
+          const db = await load();
+          const ready = db.getKV("x");
+          await vi.advanceTimersByTimeAsync(3100);
+          expect(await ready).toBeUndefined();
+          expect(store.get("gradelings.legacyDbTimeouts")).toBe(String(visit));
+        }
+        const db = await load();
+        const ready = db.getKV("x");
+        await vi.advanceTimersByTimeAsync(10);
+        expect(await ready).toBeUndefined();
+        expect(store.get("gradelings.legacyDbTimeouts")).toBe("3");
+        expect(idb.dbs.has("grademap")).toBe(true);
+      } finally {
+        vi.useRealTimers();
+      }
+    });
+
     it("keeps the old database when the copy fails, to try again next visit", async () => {
       seedLegacy();
       idb.dbs.get("grademap")!.db.transaction = () => {

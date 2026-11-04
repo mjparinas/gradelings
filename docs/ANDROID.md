@@ -37,6 +37,14 @@ The host is `www.gradelings.com`, not the bare domain: the bare domain answers w
 
 For later releases, raise `appVersionCode` and `appVersionName` in `android/twa-manifest.json`, run the `build` task again, and upload the new bundle. (On your own computer instead: `npx @bubblewrap/cli update --skipVersionUpgrade` then `npx @bubblewrap/cli build` in `android/`, which needs JDK 17 and the Android SDK.) Site changes need no new release.
 
+## Launch crash fixed by the site settings shortcut (November 2026)
+
+The first internal-testing build crashed on launch (Samsung S25+): `Component class R.u does not exist` from `LauncherActivity.onCreate` calling `setComponentEnabledSetting`. The browser-helper library toggles its `ManageDataLauncherActivity`, which Bubblewrap only declares in the manifest when `enableSiteSettingsShortcut` is true. Keep it `true` in `android/twa-manifest.json`; with `false` the app crashes on launch.
+
+## Look of the app (November 2026)
+
+Dark-mode status and navigation bars are deep navy (`#14213d`); light mode stays cream. `monochromeIconUrl` points at `public/icon-monochrome-512.png`, a one-colour bear for Android 13+ themed icons. Bubblewrap draws the splash screen from the icon, so there is no separate splash image. Orientation stays `default`, the fallback stays Custom Tabs, and notifications and Play Billing stay off (no push, no purchases in the store apps).
+
 ## Paying: not inside the Android app
 
 Google Play generally requires subscriptions for digital content sold inside an app to use Google Play Billing (with a fee), and doesn't allow sending people from the app to an outside checkout such as Stripe. Decision: **the Android app has no purchase screens** and families subscribe on the website. Their plan syncs to the app like any other device.
