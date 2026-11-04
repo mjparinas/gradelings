@@ -467,6 +467,9 @@ const PARENT_COLUMNS: [string, string][] = [
   ["last_nudge_at", "INTEGER"],
   // 'parent' for ordinary accounts, 'student' for a class-owned student account (no email, no password).
   ["role", "TEXT NOT NULL DEFAULT 'parent'"],
+  // 'parent' (default) or 'teacher': set when the account is made from the teacher area, or when it starts teaching a class.
+  // Emails choose their content by it (src/server/audience.ts). Not a permission: a teacher can still be a parent.
+  ["account_type", "TEXT NOT NULL DEFAULT 'parent'"],
   // Google's permanent id for the person who signs in with "Continue with Google" (src/server/google.ts). Null for password-only accounts.
   ["google_sub", "TEXT"],
   ["last_login_at", "INTEGER"],
@@ -599,6 +602,11 @@ async function migrate(c: Client) {
   for (const [name, type] of PARENT_COLUMNS) {
     if (!have.has(name)) await c.execute(`ALTER TABLE parents ADD COLUMN ${name} ${type}`);
   }
+  if (!have.has("account_type")) {
+    // Once, when the column arrives: people who already teach a class are teachers.
+    await c.execute("UPDATE parents SET account_type = 'teacher' WHERE role = 'parent' AND (id IN (SELECT owner_parent_id FROM classes) OR id IN (SELECT parent_id FROM class_teachers))");
+  }
+
   await hashLegacyUnsubTokens(c);
   await c.execute("CREATE UNIQUE INDEX IF NOT EXISTS students_external ON students (class_id, external_id) WHERE external_id IS NOT NULL");
   await c.execute("CREATE UNIQUE INDEX IF NOT EXISTS parents_google_sub ON parents (google_sub) WHERE google_sub IS NOT NULL");

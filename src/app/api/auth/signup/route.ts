@@ -55,8 +55,8 @@ export async function POST(req: Request) {
     await batch([
       { sql: "INSERT INTO families (id, created_at, trial_ends_at, plan, updated_at, referred_by) VALUES (?, ?, ?, 'trial', ?, ?)", args: [familyId, now, trialEndsAt, now, referrer] },
       {
-        sql: "INSERT INTO parents (id, family_id, email, password_hash, pending_password_hash, signup_cookie_hash, created_at, weekly_report) VALUES (?, ?, ?, '!', ?, ?, ?, ?)",
-        args: [parentId, familyId, email, hash, mark.hash, now, passwordless ? 1 : 0],
+        sql: "INSERT INTO parents (id, family_id, email, password_hash, pending_password_hash, signup_cookie_hash, created_at, weekly_report, account_type) VALUES (?, ?, ?, '!', ?, ?, ?, ?, ?)",
+        args: [parentId, familyId, email, hash, mark.hash, now, passwordless ? 1 : 0, dest === "teachers" ? "teacher" : "parent"],
       },
     ]);
   } catch (e) {

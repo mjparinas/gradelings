@@ -1,12 +1,13 @@
 import "server-only";
 import { funnelSteps, type FunnelStep } from "@/lib/funnel";
 import { LIVE_PROFILE, PRACTICE_DAYS } from "./adminEmail";
+import { teacherOnly } from "./audience";
 import { query } from "./db";
 
 const DAY = 86_400_000;
 const REAL = "NOT EXISTS (SELECT 1 FROM parents s WHERE s.family_id = f.id AND s.role = 'student')";
 
-/** How far families who signed up in the last `days` days got. Counts only; class student accounts are left out. */
+/** How far families who signed up in the last `days` days got. Counts only; class student accounts and teachers (who have no child to add) are left out. */
 export async function funnel(days: number, now = Date.now()): Promise<FunnelStep[]> {
   const rows = await query<Record<string, number | null>>(
     `SELECT COUNT(*) AS signed_up,
@@ -15,7 +16,7 @@ export async function funnel(days: number, now = Date.now()): Promise<FunnelStep
        SUM(CASE WHEN EXISTS (SELECT 1 FROM events e WHERE e.family_id = f.id) THEN 1 ELSE 0 END) AS practised,
        SUM(CASE WHEN ${PRACTICE_DAYS} >= 3 THEN 1 ELSE 0 END) AS regular,
        SUM(CASE WHEN f.plan = 'premium' OR EXISTS (SELECT 1 FROM payments pay WHERE pay.family_id = f.id) THEN 1 ELSE 0 END) AS paying
-     FROM families f WHERE ${REAL} AND f.created_at > ?`,
+     FROM families f WHERE ${REAL} AND NOT EXISTS (SELECT 1 FROM parents tp WHERE tp.family_id = f.id AND ${teacherOnly("tp")}) AND f.created_at > ?`,
     [now - days * DAY],
   );
   const r = rows[0] ?? {};
