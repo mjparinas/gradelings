@@ -24,6 +24,27 @@ export const NEWS_KIND_LABEL: Record<NewsItem["kind"], string> = {
 
 export const WHATS_NEW: NewsDay[] = [
   {
+    day: "2026-11-03",
+    headline: "Free math facts pages and printable worksheets for every grade",
+    items: [
+      {
+        kind: "new",
+        title: "Math facts pages",
+        body: "Addition, subtraction, times tables and division each have a page with the strategies we teach in the app, a few questions to try, a chart where it helps, and answers to common questions. Anyone can use them, no account needed.",
+      },
+      {
+        kind: "new",
+        title: "Free printable math worksheets",
+        body: "Pick a grade, then a skill such as fractions, and print a sheet of 10 questions with an answer key. They are the same for every province and state, so they suit any family.",
+      },
+      {
+        kind: "new",
+        title: "An invite line in the weekly email",
+        body: "On the first Sunday of the month, a weekly email for a week with practice adds one line with your invite link. A family that joins through it earns you a free month.",
+      },
+    ],
+  },
+  {
     day: "2026-11-02",
     headline: "More holidays, friendlier buddies, and certificates for the fridge",
     items: [
