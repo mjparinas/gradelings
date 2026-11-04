@@ -1,5 +1,6 @@
 import { error, getSession, json, newId, rateLimited, readJson, sameOrigin } from "@/server/auth";
 import { assignedAt, assignmentAudience, cleanClassName, cleanSecondGrade, offersGrade, assignmentDue, assignmentGoals, assignmentKeys, assignmentStarts, classProgressAndMisses, classTeachers, hiddenClassIds, isFramework, MAX_CLASSES, newJoinCode, ownedClass, pendingInvites, removeClassTeachers, teachingClass } from "@/server/classroom";
+import { markTeacher } from "@/server/audience";
 import { batch, query, run } from "@/server/db";
 import { liveClassStatements } from "@/server/live";
 import { isFlagOn } from "@/server/flags";
@@ -99,6 +100,7 @@ export async function POST(req: Request) {
     try {
       const now = Date.now();
       await run("INSERT INTO classes (id, owner_parent_id, name, grade, grade2, framework, join_code, created_at, last_activity_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", [id, session.parentId, name, grade, grade2, framework, code, now, now]);
+      await markTeacher(session.parentId);
       return json({ class: { id, name, grade, grade2, framework, joinCode: code, students: 0 } });
     } catch {
       // Join code collision: try another.

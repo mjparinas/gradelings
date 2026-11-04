@@ -169,7 +169,7 @@ const COLUMNS = "id, family_id, email, role, google_sub, email_verified_at";
  * Finds the account for a Google sign-in, joining or making one when there isn't one yet:
  * the same Google person signs in again; the same email joins the existing account; a new email makes a new one.
  */
-export async function accountForGoogle(profile: GoogleProfile, opts: { trialEndsAt?: number; referral?: string } = {}, now = Date.now()): Promise<GoogleAccount> {
+export async function accountForGoogle(profile: GoogleProfile, opts: { trialEndsAt?: number; referral?: string; teacher?: boolean } = {}, now = Date.now()): Promise<GoogleAccount> {
   const admins = staffEmails();
   // Admin accounts keep to their own sign-in, whichever way the email got here.
   if (admins.has(profile.email)) return { ok: false, reason: "admin" };
@@ -211,7 +211,7 @@ export async function accountForGoogle(profile: GoogleProfile, opts: { trialEnds
     await batch([
       { sql: "INSERT INTO families (id, created_at, trial_ends_at, plan, updated_at, referred_by) VALUES (?, ?, ?, 'trial', ?, ?)", args: [familyId, now, trialEndsAt, now, referrer] },
       // No password: '!' never matches one (see verifyPassword). Google has confirmed the email.
-      { sql: "INSERT INTO parents (id, family_id, email, password_hash, created_at, email_verified_at, google_sub) VALUES (?, ?, ?, '!', ?, ?, ?)", args: [parentId, familyId, profile.email, now, now, profile.sub] },
+      { sql: "INSERT INTO parents (id, family_id, email, password_hash, created_at, email_verified_at, google_sub, account_type) VALUES (?, ?, ?, '!', ?, ?, ?, ?)", args: [parentId, familyId, profile.email, now, now, profile.sub, opts.teacher ? "teacher" : "parent"] },
     ]);
   } catch (e) {
     // Two sign-ins at once: the other one made the account, so this one is a plain sign-in to it.
