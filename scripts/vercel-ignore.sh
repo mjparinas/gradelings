@@ -5,6 +5,10 @@
 # commits is judged as a whole, not by its last commit. If that commit can't be found, or git fails
 # for any other reason, the build runs.
 [ "$VERCEL_GIT_COMMIT_REF" = "main" ] || exit 0
+# Set FORCE_BUILD=1 in the Vercel project's environment variables, then Redeploy, to build an unchanged commit
+# (a redeploy of the same commit is otherwise skipped as "no changes", which also means a changed environment
+# variable never reaches the live site). Remove the variable afterwards.
+[ -z "$FORCE_BUILD" ] || exit 1
 BASE="${VERCEL_GIT_PREVIOUS_SHA:-HEAD^}"
 git diff --quiet "$BASE" HEAD -- . \
   ':!docs' ':!ios' ':!android' ':!.github' ':!reports' ':!*.md' \
