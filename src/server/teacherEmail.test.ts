@@ -112,3 +112,38 @@ describe("content", () => {
     }
   });
 });
+
+describe("admin users tab", () => {
+  it("lists the type, filters by it and lets an admin change it", async () => {
+    process.env.ADMIN_EMAILS = "type-admin@example.com";
+    process.env.ADMIN_2FA = "optional";
+    const users = (await import("@/app/api/admin/users/route")) as unknown as Mod;
+    const admin = await account("type-admin@example.com");
+    const cookieRes = await signup.POST(
+      new Request("http://localhost/api/auth/signup/", { method: "POST", headers: { "content-type": "application/json", host: "localhost", "x-forwarded-for": "10.9.9.9" }, body: JSON.stringify({ email: "type-admin2@example.com", password: "correct horse" }) }),
+    );
+    expect(cookieRes.status).toBe(200);
+    // Sign the admin in with a session cookie from the real login route.
+    const login = (await import("@/app/api/auth/login/route")) as unknown as Mod;
+    const res = await login.POST(
+      new Request("http://localhost/api/auth/login/", { method: "POST", headers: { "content-type": "application/json", host: "localhost", "x-forwarded-for": "10.9.9.8" }, body: JSON.stringify({ email: "type-admin@example.com", password: "correct horse" }) }),
+    );
+    const cookie = (res.headers.get("set-cookie") ?? "").split(";")[0];
+    const call = (path: string, method = "GET", body?: unknown) =>
+      (method === "GET" ? users.GET : users.POST)(
+        new Request(`http://localhost${path}`, { method, headers: { "content-type": "application/json", host: "localhost", cookie, "x-forwarded-for": "10.9.9.7" }, body: body === undefined ? undefined : JSON.stringify(body) }),
+      );
+
+    const t = await account("filter-teacher@example.com", "teachers");
+    const teachers = (await (await call("/api/admin/users/?type=teacher")).json()).users as { email: string; accountType: string }[];
+    expect(teachers.map((u) => u.email)).toContain("filter-teacher@example.com");
+    expect(teachers.every((u) => u.accountType === "teacher")).toBe(true);
+    const parents = (await (await call("/api/admin/users/?type=parent")).json()).users as { email: string }[];
+    expect(parents.map((u) => u.email)).not.toContain("filter-teacher@example.com");
+
+    expect((await call("/api/admin/users/", "POST", { familyId: t.familyId, action: "set-account-type", parentId: t.parentId, type: "parent" })).status).toBe(200);
+    expect((await dbm.query<{ account_type: string }>("SELECT account_type FROM parents WHERE id = ?", [t.parentId]))[0].account_type).toBe("parent");
+    expect((await call("/api/admin/users/", "POST", { familyId: t.familyId, action: "set-account-type", parentId: t.parentId, type: "wizard" })).status).toBe(400);
+    expect(admin.type).toBe("parent");
+  });
+});
