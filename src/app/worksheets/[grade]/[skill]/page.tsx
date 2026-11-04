@@ -1,160 +1,86 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { PrintButton } from "@/components/site/PrintButton";
-import { SampleQuestion, answerText } from "@/components/site/SampleQuestion";
-import { ShareButton } from "@/components/site/ShareButton";
-import { articleJsonLd, breadcrumbJsonLd, typicalAgeRange } from "@/components/site/jsonld";
-import { Crumbs, SitePage, SubscribeActions } from "@/components/site/SiteChrome";
-import { allWorksheetSkills, resolveSkill, sheetQuestions, sourceFramework, worksheetGradeLabel, worksheetPath, worksheetSkills, type WorksheetSkill } from "@/components/site/worksheets";
+import { breadcrumbJsonLd, itemListJsonLd } from "@/components/site/jsonld";
+import { Crumbs, SitePage } from "@/components/site/SiteChrome";
+import { WorksheetSheet } from "@/components/site/WorksheetSheet";
+import { allWorksheetSkills, resolveSkill, sheetQuestions, sheetSize, subjectSlug, subjectWord, worksheetGradeLabel, worksheetPath, worksheetSkills, subjectPages } from "@/components/site/worksheets";
 import { gradeSlug } from "@/content/subjects";
-import { unitUpdated } from "@/content/updated";
 import { APP_NAME } from "@/lib/brand";
 import { pageMeta } from "@/lib/pageMeta";
-import { playHref } from "@/lib/playLink";
-import { TRIAL_DAYS } from "@/lib/plan";
-import { JsonLd, ORG_REF, absolute } from "@/lib/site";
+import { JsonLd } from "@/lib/site";
 
 export const dynamicParams = false;
 
+// One address, two pages: Kindergarten to Grade 9 math skills keep their first addresses (/worksheets/{grade}/{skill}/),
+// and a grade's other subjects have a page listing their skills (/worksheets/{grade}/{subject}/).
 export function generateStaticParams() {
-  return allWorksheetSkills().map((s) => ({ grade: gradeSlug(s.grade), skill: s.unit.id }));
+  const skills = allWorksheetSkills()
+    .filter((s) => worksheetPath.skill(s.grade, s.unit.id, s.subject).split("/").length === 5)
+    .map((s) => ({ grade: gradeSlug(s.grade), skill: s.unit.id }));
+  const subjects = subjectPages().map((p) => ({ grade: gradeSlug(p.grade), skill: subjectSlug(p.subject) }));
+  return [...skills, ...subjects];
 }
 
 type Props = PageProps<"/worksheets/[grade]/[skill]">;
 
-function find(params: { grade: string; skill: string }): WorksheetSkill | undefined {
-  const r = resolveSkill(params);
-  return r && "unit" in r ? r : undefined;
-}
-
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const s = find(await params);
-  if (!s) return {};
-  const label = worksheetGradeLabel(s.grade);
+  const r = resolveSkill(await params);
+  if (!r) return {};
+  const label = worksheetGradeLabel(r.grade);
+  if ("unit" in r) {
+    return pageMeta({
+      title: [`${label} ${r.unit.title} worksheet: free printable with answers`, `${label} ${r.unit.title} worksheet (free, printable)`, `${label} ${r.unit.title} worksheet`],
+      description: `A free printable ${label} math worksheet on ${r.unit.title.toLowerCase()} with ${sheetQuestions(r).length} questions and an answer key. Print it, or practice the same skill on screen with ${APP_NAME}.`,
+      path: worksheetPath.skill(r.grade, r.unit.id),
+    });
+  }
+  const subject = r.subject!;
+  const word = subjectWord(subject);
+  const skills = worksheetSkills(r.grade, subject);
   return pageMeta({
-    title: [`${label} ${s.unit.title} worksheet: free printable with answers`, `${label} ${s.unit.title} worksheet (free, printable)`, `${label} ${s.unit.title} worksheet`],
-    description: `A free printable ${label} ${s.unit.title.toLowerCase()} worksheet with 10 questions and an answer key. Print it, or practice the same skill on screen with ${APP_NAME}.`,
-    path: worksheetPath.skill(s.grade, s.unit.id),
+    title: [`Free printable ${label} ${word} worksheets with answers`, `${label} ${word} worksheets`],
+    description: `${skills.length} free printable ${label} ${word} worksheets with answer keys: ${skills
+      .slice(0, 4)
+      .map((s) => s.unit.title.toLowerCase())
+      .join(", ")} and more. Print one, or practice on screen with ${APP_NAME}.`,
+    path: worksheetPath.subject(r.grade, subject),
   });
 }
 
-export default async function WorksheetPage({ params }: Props) {
-  const s = find(await params);
-  if (!s) notFound();
-  const { grade, unit } = s;
+export default async function WorksheetSkillPage({ params }: Props) {
+  const r = resolveSkill(await params);
+  if (!r) notFound();
+  if ("unit" in r) return <WorksheetSheet s={r} />;
+  const grade = r.grade;
+  const subject = r.subject!;
   const label = worksheetGradeLabel(grade);
-  const items = sheetQuestions(s);
-  const path = worksheetPath.skill(grade, unit.id);
-  const updated = unitUpdated(sourceFramework().id, grade, "math", unit.id);
-  const play = playHref({ framework: sourceFramework().id, grade, subject: "math", unit: unit.id });
-  const others = worksheetSkills(grade).filter((o) => o.unit.id !== unit.id);
-  const crumbs = [{ label: "Home", href: "/" }, { label: "Math worksheets", href: worksheetPath.hub() }, { label, href: worksheetPath.grade(grade) }, { label: unit.title }];
+  const word = subjectWord(subject);
+  const skills = worksheetSkills(grade, subject);
+  const crumbs = [{ label: "Home", href: "/" }, { label: "Worksheets", href: worksheetPath.hub() }, { label, href: worksheetPath.grade(grade) }, { label: `${word.charAt(0).toUpperCase()}${word.slice(1)}` }];
   return (
-    <SitePage lead="trial" play={play}>
-      <JsonLd
-        data={[
-          breadcrumbJsonLd(crumbs),
-          {
-            "@context": "https://schema.org",
-            "@type": "LearningResource",
-            name: `${label} ${unit.title} worksheet`,
-            description: `A free printable ${label} math worksheet on ${unit.title.toLowerCase()}, with an answer key.`,
-            url: absolute(path),
-            inLanguage: "en-CA",
-            learningResourceType: "Worksheet",
-            educationalUse: "practice",
-            isAccessibleForFree: true,
-            educationalLevel: label,
-            typicalAgeRange: typicalAgeRange(grade),
-            about: "Mathematics",
-            ...(updated ? { dateModified: updated } : {}),
-            provider: ORG_REF,
-          },
-          articleJsonLd({ headline: `${label} ${unit.title} worksheet`, description: unit.blurb, path, updated }),
-        ]}
-      />
-      <div className="print:hidden">
-        <Crumbs items={crumbs} />
-      </div>
-      <header className="flex flex-col gap-3 rounded-3xl bg-white p-6 sm:flex-row sm:items-center print:rounded-none print:p-0">
-        <span className="text-5xl print:hidden" aria-hidden="true">
-          {unit.emoji}
-        </span>
-        <div className="flex-1">
-          <h1 className="text-4xl font-bold print:text-3xl">
-            {label} {unit.title} worksheet
-          </h1>
-          <p className="font-read text-lg">from {APP_NAME} · Name: ______________________</p>
-        </div>
-        <div className="flex flex-wrap gap-2 sm:flex-col">
-          <PrintButton label="Print this worksheet" />
-          <ShareButton path={path} title={`${label} ${unit.title} worksheet`} text={`A free ${label} ${unit.title.toLowerCase()} worksheet with answers:`} label="Share this worksheet" />
-        </div>
-      </header>
-
-      {unit.lesson && (
-        <section aria-labelledby="how" className="mt-6 max-w-3xl print:hidden">
-          <h2 id="how" className="text-2xl font-bold">
-            How to explain it
-          </h2>
-          <ol className="mt-2 list-decimal space-y-1 pl-6 font-read text-lg">
-            {unit.lesson.steps.map((step, i) => (
-              <li key={i}>{step}</li>
-            ))}
-          </ol>
-          <p className="mt-3 rounded-2xl bg-white p-4 font-read text-lg">
-            <b>Example:</b> {unit.lesson.example.question} {unit.lesson.example.work.join(" ")} <b>Answer: {unit.lesson.example.answer}</b>
-          </p>
-        </section>
-      )}
-
-      <ol className="mt-6 grid items-start gap-4 md:grid-cols-2 print:block print:space-y-4">
-        {items.map((q, i) => (
-          <SampleQuestion key={i} q={q} n={i + 1} seedText={`${path}#${i}`} className="print:break-inside-avoid" />
-        ))}
-      </ol>
-      <p className="mt-6 hidden rounded-xl border-2 border-line p-3 font-read text-lg print:block print:break-inside-avoid">
-        <b>More {label} math practice, with new questions every time:</b> {absolute(worksheetPath.hub()).replace(/^https?:\/\//, "")} · Free for {TRIAL_DAYS} days, no card needed.
+    <SitePage cta lead="trial" play="/play/">
+      <JsonLd data={[breadcrumbJsonLd(crumbs), itemListJsonLd(`${label} ${word} worksheets`, skills.map((s) => ({ name: `${label} ${s.unit.title} worksheet`, path: worksheetPath.skill(grade, s.unit.id, subject) })))]} />
+      <Crumbs items={crumbs} />
+      <h1 className="text-4xl font-bold">
+        {label} {word} worksheets
+      </h1>
+      <p className="mt-2 max-w-3xl font-read text-lg text-ink-soft">
+        Free printable {label} {word} worksheets, one for each skill. Each has up to {sheetSize(grade)} questions and an answer key.
       </p>
-
-      <section aria-labelledby="key" className="mt-10 rounded-3xl bg-white p-6 print:break-before-page">
-        <h2 id="key" className="text-2xl font-bold">
-          Answer key
-        </h2>
-        <ol className="mt-3 grid gap-x-8 gap-y-1 font-read text-lg sm:grid-cols-2">
-          {items.map((q, i) => (
-            <li key={i}>
-              <b>{i + 1}.</b> {answerText(q)}
-            </li>
-          ))}
-        </ol>
-      </section>
-
-      <section className="card mt-10 flex flex-col flex-wrap gap-3 p-6 print:hidden sm:flex-row sm:items-center">
-        <div className="flex-1">
-          <p className="text-xl font-bold">Want more than 10 questions?</p>
-          <p className="font-read text-ink-soft">In {APP_NAME} the questions change every time and adjust to your child, with hints and kind feedback.</p>
-        </div>
-        <SubscribeActions lead="trial" size="md" play={play} />
-      </section>
-
-      {others.length > 0 && (
-        <section aria-labelledby="more" className="mt-10 print:hidden">
-          <h2 id="more" className="text-2xl font-bold">
-            More {label} math worksheets
-          </h2>
-          <ul className="mt-3 flex flex-wrap gap-2">
-            {others.map((o) => (
-              <li key={o.unit.id}>
-                <Link href={worksheetPath.skill(grade, o.unit.id)} className="inline-flex min-h-11 items-center rounded-xl border-2 border-line bg-white px-3 py-1.5 font-read text-lg hover:border-[#4f8ef7]">
-                  {o.unit.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
+      <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+        {skills.map((s) => (
+          <li key={s.unit.id} className="rounded-2xl border border-line bg-white p-4">
+            <Link href={worksheetPath.skill(grade, s.unit.id, subject)} className="text-xl font-bold underline-offset-4 hover:underline">
+              {s.unit.title}
+            </Link>
+            <p className="font-read text-ink-soft">{s.unit.blurb}</p>
+          </li>
+        ))}
+      </ul>
+      <p className="mt-8 font-read text-lg">
+        More: <Link href={worksheetPath.grade(grade)} className="font-bold underline">all {label} worksheets</Link>, or <Link href={worksheetPath.hub()} className="font-bold underline">every grade</Link>.
+      </p>
     </SitePage>
   );
 }
