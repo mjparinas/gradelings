@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { CITIZEN_DEEP, MAPS_DEEP, WORLD_DEEP, CONFLICT_DEEP, POVERTY_DEEP, INQUIRY_DEEP } from "./g9-social-deeper";
 
 // Grade 9 social studies, Canada in the Contemporary World: citizenship, maps, Canada's place in the world,
 // conflict and cooperation, poverty and sustainability, and inquiry skills.
@@ -180,7 +181,7 @@ export const units = [
     blurb: "Leaders, democratic ideals, rights, responsibilities and taking part.",
     parentNote: "Practises contemporary political leaders at each level, democratic ideals, the rights and responsibilities of citizens, the effects of the Charter, and ways to take part in Canada's political system.",
     standards: ["9-KC-009, 9-KC-011, 9-KC-013, 9-KC-014, 9-KC-015, 9-KP-046, 9-VC-001, 9-VC-002, 9-VC-003, 9-VP-015", "political leaders, democratic ideals, citizenship rights and responsibilities and participation"],
-    items: CITIZEN,
+    items: [...CITIZEN, ...CITIZEN_DEEP],
   }),
   bankUnit({
     id: "mb-canada-on-the-map",
@@ -189,7 +190,7 @@ export const units = [
     blurb: "Capitals, regions, population clusters and map skills.",
     parentNote: "Practises locating Canada's capitals, regions and population clusters, finding world locations, and using map tools such as scale, legends, latitude and longitude, GPS and GIS.",
     standards: ["9-KL-024, 9-KL-025, 9-S-203, 9-S-204", "Canada's physical and human geography, world locations and using maps"],
-    items: MAPS,
+    items: [...MAPS, ...MAPS_DEEP],
   }),
   bankUnit({
     id: "mb-canada-and-the-world",
@@ -198,7 +199,7 @@ export const units = [
     blurb: "Peacekeeping, Remembrance Day, contributions and neighbours.",
     parentNote: "Practises Canada's military and peacekeeping role, Remembrance Day, contributions of Canadians to the global community, refugees and development, and relations with the United States.",
     standards: ["9-KG-040, 9-KG-041, 9-KG-042, 9-KP-047, 9-VG-011, 9-VG-012, 9-VG-013", "Canada's role in global conflict, contributions to the global community and Canadian-American relationships"],
-    items: WORLD,
+    items: [...WORLD, ...WORLD_DEEP],
   }),
   bankUnit({
     id: "mb-conflict-and-cooperation",
@@ -207,7 +208,7 @@ export const units = [
     blurb: "Resolving conflict, working together and preventing crimes against humanity.",
     parentNote: "Practises peaceful approaches to conflict, fairness and collaboration, and an age-appropriate look at the conditions that allow genocide and crimes against humanity and how they can be prevented.",
     standards: ["9-KG-035, 9-KP-043, 9-VP-014, 9-S-100, 9-S-101, 9-S-102, 9-S-104, 9-S-107", "conflict resolution, collaboration, fairness and global crimes against humanity"],
-    items: CONFLICT,
+    items: [...CONFLICT, ...CONFLICT_DEEP],
   }),
   bankUnit({
     id: "mb-poverty-and-sustainability",
@@ -216,7 +217,7 @@ export const units = [
     blurb: "Fair sharing, stewardship and choices that last.",
     parentNote: "Practises poverty issues in Canada and ideas for a more equitable society, environmental stewardship and sustainability, and the effect of consumer choices.",
     standards: ["9-KE-052, 9-KL-028, 9-VE-017, 9-VE-018, 9-VL-007, 9-S-103", "poverty, environmental stewardship, consumer choices and sustainable development"],
-    items: POVERTY,
+    items: [...POVERTY, ...POVERTY_DEEP],
   }),
   bankUnit({
     id: "mb-social-studies-inquiry",
@@ -225,6 +226,6 @@ export const units = [
     blurb: "Sources, bias, evidence and respectful debate.",
     parentNote: "Practises social studies inquiry skills: choosing and judging sources, spotting bias, organizing information, supporting an opinion with evidence and discussing issues respectfully.",
     standards: ["9-S-200, 9-S-201, 9-S-202, 9-S-300, 9-S-301, 9-S-302, 9-S-303, 9-S-304, 9-S-305, 9-S-306, 9-S-307, 9-S-308, 9-S-400, 9-S-401, 9-S-402, 9-S-403, 9-S-404, 9-S-405, 9-S-406", "researching with sources, judging reliability and bias, and communicating reasoned views"],
-    items: INQUIRY,
+    items: [...INQUIRY, ...INQUIRY_DEEP],
   }),
 ];

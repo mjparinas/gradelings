@@ -309,7 +309,7 @@
       "ny-g3-globes-and-maps text=2d930f5588 std=81bf34c77a q=7becb7a790",
       "ny-g3-culture text=31f8c6dcc1 std=dfdd4f337b q=ed4ddf3452",
       "ny-g3-world-communities text=324e7d4970 std=87cd1f892a q=8268800b99",
-      "mb-working-together text=37a3eb9cfb std=e36b5b9ae1 q=2cd3b963a8",
+      "mb-working-together text=37a3eb9cfb std=e36b5b9ae1 q=c53402c2aa",
       "or-g5-earn-and-save text=c264e57498 std=2e42c6ee71 q=9f54445f7e",
       "id-g3-idaho-home text=0d45609bac std=8161eb2be1 q=f7f162fc82",
       "id-g3-local-government text=18193ea8d8 std=088a115d7e q=17ebef5852"
@@ -727,13 +727,13 @@
   "8/social": {
     "overview": "def6d945d0",
     "units": [
-      "ca-g8-revolutionary-ideas text=543eb450c3 std=55a66ba98c q=4a5af23c80",
+      "ca-g8-revolutionary-ideas text=543eb450c3 std=55a66ba98c q=1bdb99ec2b",
       "or-g8-founding-ideas text=6fa3d530b3 std=607bd7528d q=83494b4253",
-      "ca-g8-constitution-at-work text=570053022e std=ed31cfbbf5 q=aa72f4ae5f",
+      "ca-g8-constitution-at-work text=570053022e std=ed31cfbbf5 q=bde16fe66b",
       "or-g8-new-nation text=cc6041cefc std=dcaf4ad779 q=c142cf5842",
       "wa-g8-westward text=1972f22db2 std=c034073f09 q=8fbee01b9a",
       "wa-g8-industry-reform text=11ff8e526a std=2c399bb2eb q=74fb1c42a2",
-      "ca-g8-divided-nation text=d7d0c32f41 std=774f663caa q=15ef8274da",
+      "ca-g8-divided-nation text=d7d0c32f41 std=774f663caa q=1308ba94ab",
       "wa-g8-civil-war text=f9c859e052 std=7903bc73e0 q=958ab14484",
       "wa-g8-reconstruction text=1edd1a0616 std=1b85314de9 q=9d549444e2",
       "id-g8-idaho-territory text=272a812840 std=c61641ac40 q=9d8d3bbcf1"
@@ -833,12 +833,12 @@
   "9/social": {
     "overview": "de75086b18",
     "units": [
-      "ca-g9-foundations text=7e73500361 std=7fcd0ca42e q=366cc13a3d",
+      "ca-g9-foundations text=7e73500361 std=7fcd0ca42e q=88c273c390",
       "ca-g9-three-branches text=439ea561c4 std=3ad5e909e7 q=4b4a891d5e",
       "ca-g9-rights text=593eeeff61 std=b764196053 q=064d36f990",
       "ca-g9-elections text=2e075ddbe7 std=a1d5f97047 q=3a9cee2d15",
       "ca-g9-civic-action text=7ff067ec0c std=1494a88c38 q=c1c8ac6d15",
-      "ca-g9-media text=67bc186bc5 std=0438104497 q=d8967e0b75",
+      "ca-g9-media text=67bc186bc5 std=0438104497 q=0fc3f3ad1e",
       "id-g9-governing-idaho text=0e116ac0f0 std=d09698737b q=2acb4dec90",
       "id-g9-us-government text=ab231c5c78 std=0465378192 q=daca1a3c64",
       "id-g9-personal-finance text=f808d6128e std=63a2064ba1 q=19049c2050",

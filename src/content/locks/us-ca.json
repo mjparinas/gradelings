@@ -315,7 +315,7 @@
     "overview": "d5b1566ba1",
     "units": [
       "meeting-needs text=40a76a9522 std=33afcdea58 q=3ac35931e2",
-      "mb-working-together text=37a3eb9cfb std=6967068773 q=2cd3b963a8",
+      "mb-working-together text=37a3eb9cfb std=6967068773 q=c53402c2aa",
       "ca-g3-money-and-voting text=a588867f2f std=a7e9617d66 q=ea72b2782a",
       "ca-g3-culture text=aa945e74be std=50ec223735 q=2078cd4bb9",
       "ca-g3-changemakers text=aa4d63a00e std=f94540fc9c q=49c957a6b2",
@@ -759,12 +759,12 @@
       "ca-g8-westward text=0f5e5bb604 std=aed79be295 q=fb25eccecb",
       "ca-g8-industry-reform text=8cfcde45ec std=d0067d52ef q=7b6a2b6d3d",
       "ca-g8-civil-war text=639e5bd6fb std=b3ca1b39a4 q=538b60ca99",
-      "ca-g8-divided-nation text=d7d0c32f41 std=047566096f q=15ef8274da",
-      "ca-g8-industrial-america text=e3d798938c std=fce72ddc6a q=a19df580ed",
-      "ca-g8-revolutionary-ideas text=543eb450c3 std=b885a04310 q=4a5af23c80",
-      "ca-g8-constitution-at-work text=570053022e std=d8fddc8165 q=aa72f4ae5f",
-      "ca-g8-early-republic text=333777247e std=a5c2b04df8 q=2a27a181ff",
-      "ca-g8-freedom-and-change text=6cb981689b std=342347a0e5 q=7504264316"
+      "ca-g8-divided-nation text=d7d0c32f41 std=047566096f q=1308ba94ab",
+      "ca-g8-industrial-america text=e3d798938c std=fce72ddc6a q=14f2ec92f7",
+      "ca-g8-revolutionary-ideas text=543eb450c3 std=b885a04310 q=1bdb99ec2b",
+      "ca-g8-constitution-at-work text=570053022e std=d8fddc8165 q=bde16fe66b",
+      "ca-g8-early-republic text=333777247e std=a5c2b04df8 q=e3e0adfeda",
+      "ca-g8-freedom-and-change text=6cb981689b std=342347a0e5 q=94abbe4e2c"
     ]
   },
   "8/spanish": {
@@ -863,18 +863,18 @@
   "9/social": {
     "overview": "22f435fd22",
     "units": [
-      "ca-g9-foundations text=7e73500361 std=b1d5d0356e q=366cc13a3d",
+      "ca-g9-foundations text=7e73500361 std=b1d5d0356e q=88c273c390",
       "ca-g9-three-branches text=439ea561c4 std=3a054218d4 q=4b4a891d5e",
       "ca-g9-rights text=593eeeff61 std=2e3c2ceff2 q=064d36f990",
-      "ca-g9-supreme-court text=d497c2ea6b std=dc4d9fd20f q=5b4496ce00",
+      "ca-g9-supreme-court text=d497c2ea6b std=dc4d9fd20f q=0110fb9ee8",
       "ca-g9-elections text=2e075ddbe7 std=5aba58b753 q=3a9cee2d15",
       "ca-g9-lawmaking text=2a409ee163 std=587ce61dc3 q=83325c4e69",
       "ca-g9-civic-action text=7ff067ec0c std=d161c9241f q=c1c8ac6d15",
       "ca-g9-forms-of-government text=47a5b003ba std=9a9aeb824f q=46e402dbc2",
       "ca-g9-california-government text=d8fcabc239 std=2d34f0c908 q=6854e2df36",
-      "ca-g9-media text=67bc186bc5 std=727c0ac09e q=d8967e0b75",
-      "ca-g9-citizens-and-society text=38d1323b68 std=6d63466c05 q=0cff828e06",
-      "ca-g9-dictatorship-democracy text=98ddf5cd16 std=7c3543d508 q=7bb3553944"
+      "ca-g9-media text=67bc186bc5 std=727c0ac09e q=0fc3f3ad1e",
+      "ca-g9-citizens-and-society text=38d1323b68 std=6d63466c05 q=8510077a72",
+      "ca-g9-dictatorship-democracy text=98ddf5cd16 std=7c3543d508 q=cde1f59fc7"
     ]
   },
   "9/spanish": {

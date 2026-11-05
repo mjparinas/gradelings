@@ -471,8 +471,8 @@
       "ca-g5-constitution text=f0912d934b std=b70cb57adb q=f053d97871",
       "wa-g8-bill-of-rights text=edcc86640b std=360096d4ce q=6898ac27d5",
       "ca-g8-civil-war text=01b158a689 std=04f441473b q=538b60ca99",
-      "ca-g8-divided-nation text=d7d0c32f41 std=9cda390ba5 q=15ef8274da",
-      "ca-g8-industrial-america text=59fae20492 std=b6ff828768 q=a19df580ed",
+      "ca-g8-divided-nation text=d7d0c32f41 std=9cda390ba5 q=1308ba94ab",
+      "ca-g8-industrial-america text=59fae20492 std=b6ff828768 q=14f2ec92f7",
       "ny-g8-civil-rights text=2a5251702b std=56ddcf6336 q=8f81d3992c",
       "ia-g5-iowa-and-change text=887f204f8b std=ebac61e25a q=7170a8740c",
       "ia-g5-money-choices text=6a98404f33 std=dfc3ef503f q=99f842dceb"
@@ -727,13 +727,13 @@
   "8/social": {
     "overview": "8c37d5b9fa",
     "units": [
-      "ca-g8-revolutionary-ideas text=543eb450c3 std=2d84e7e031 q=4a5af23c80",
+      "ca-g8-revolutionary-ideas text=543eb450c3 std=2d84e7e031 q=1bdb99ec2b",
       "or-g8-founding-ideas text=6fa3d530b3 std=bc043d6365 q=83494b4253",
-      "ca-g8-constitution-at-work text=570053022e std=d41760ea15 q=aa72f4ae5f",
+      "ca-g8-constitution-at-work text=570053022e std=d41760ea15 q=bde16fe66b",
       "or-g8-new-nation text=cc6041cefc std=c7eeba8a8a q=c142cf5842",
       "wa-g8-westward text=1972f22db2 std=f23e323d88 q=8fbee01b9a",
       "wa-g8-industry-reform text=11ff8e526a std=32243df83c q=74fb1c42a2",
-      "ca-g8-divided-nation text=d7d0c32f41 std=f2349e3a59 q=15ef8274da",
+      "ca-g8-divided-nation text=d7d0c32f41 std=f2349e3a59 q=1308ba94ab",
       "wa-g8-civil-war text=f9c859e052 std=3c507a4417 q=958ab14484",
       "wa-g8-reconstruction text=1edd1a0616 std=ab29f8b2b8 q=9d549444e2",
       "ia-g8-iowa-and-the-nation text=5bb933afd0 std=8a2eb4f739 q=30bafc64df"
@@ -833,12 +833,12 @@
   "9/social": {
     "overview": "7f3cead5a1",
     "units": [
-      "ca-g9-foundations text=7e73500361 std=a6988790de q=366cc13a3d",
+      "ca-g9-foundations text=7e73500361 std=a6988790de q=88c273c390",
       "ca-g9-three-branches text=439ea561c4 std=0d64da9f00 q=4b4a891d5e",
       "ca-g9-rights text=593eeeff61 std=fc8fb248de q=064d36f990",
       "ca-g9-elections text=2e075ddbe7 std=13c234abb0 q=3a9cee2d15",
       "ca-g9-civic-action text=7ff067ec0c std=06bb220d3e q=c1c8ac6d15",
-      "ca-g9-media text=67bc186bc5 std=b73b359304 q=d8967e0b75",
+      "ca-g9-media text=67bc186bc5 std=b73b359304 q=0fc3f3ad1e",
       "ia-g9-governing-iowa text=45e99c1cfe std=8c94ecbcdf q=7ed350aae0",
       "ia-g9-us-government text=b2b1785d0f std=6ef2a4a92c q=dec935ad77",
       "ia-g9-personal-finance text=f88dcf17a6 std=68e681458f q=42b306e043",

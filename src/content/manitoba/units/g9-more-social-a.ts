@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { FRANCOPHONE_DEEP, FNMI_TODAY_DEEP, INJUSTICES_DEEP, POPULATION_DEEP } from "./g9-social-deeper";
 
 // Grade 9 social studies, Canada in the Contemporary World: items for the second set of units
 // (francophone communities, First Nations, Métis and Inuit today, injustices and change, people and population).
@@ -124,7 +125,7 @@ export const units = [
     blurb: "Language rights, Article 23 and francophone life in Manitoba.",
     parentNote: "Practises Article 23 of the Charter, the history of French language rights in Manitoba, the effects of language and education laws, and how media and community support francophone identity.",
     standards: ["9-KC-002F, 9-KC-013F, 9-KI-018F, 9-KI-020F, 9-VI-005, 9-VI-005F", "minority-language rights, francophone identity, media and cultural pluralism"],
-    items: FRANCOPHONE,
+    items: [...FRANCOPHONE, ...FRANCOPHONE_DEEP],
   }),
   bankUnit({
     id: "mb-first-nations-metis-inuit-today",
@@ -133,7 +134,7 @@ export const units = [
     blurb: "Residential schools, media, rights and renewal in communities today.",
     parentNote: "Practises the effects of residential schools, the influence of media and pop culture on Indigenous identities, rights and responsibilities, and language renewal.",
     standards: ["9-KC-013A, 9-KI-018A, 9-KI-020A, 9-VI-005A, 9-VL-006", "residential school effects, media influence, rights and responsibilities, and respect for relationships with the land"],
-    items: FNMI_TODAY,
+    items: [...FNMI_TODAY, ...FNMI_TODAY_DEEP],
   }),
   bankUnit({
     id: "mb-injustices-and-change",
@@ -142,7 +143,7 @@ export const units = [
     blurb: "Past injustices, discrimination and the people who worked for rights.",
     parentNote: "Practises injustices in Canada's past, prejudice, stereotypes and systemic racism, ways to respond, and Canadians who have promoted human rights.",
     standards: ["9-KH-030, 9-KI-022, 9-KI-023, 9-VI-004, 9-VH-008, 9-VH-010, 9-VP-016, 9-S-105", "injustices and discrimination in Canada's past, responding to racism and recognizing those who promoted human rights"],
-    items: INJUSTICES,
+    items: [...INJUSTICES, ...INJUSTICES_DEEP],
   }),
   bankUnit({
     id: "mb-people-and-population",
@@ -151,6 +152,6 @@ export const units = [
     blurb: "Demographics, women's rights and changes in quality of life.",
     parentNote: "Practises factors that shape Canada's population (immigration, birth rate, life expectancy, urbanization), changes in the status of women, and social and technological changes that affect quality of life.",
     standards: ["9-KH-029, 9-KH-032, 9-KH-033, 9-KL-026, 9-VH-009", "demographic patterns, the status of women, quality of life and the contributions of diverse groups"],
-    items: POPULATION,
+    items: [...POPULATION, ...POPULATION_DEEP],
   }),
 ];

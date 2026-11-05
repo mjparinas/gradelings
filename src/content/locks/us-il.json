@@ -306,8 +306,8 @@
     "overview": "3ddd8ecd70",
     "units": [
       "meeting-needs text=40a76a9522 std=a24ad254ba q=3ac35931e2",
-      "mb-global-communities text=fdc10e0b47 std=00d3e5c4c7 q=a05e20d345",
-      "mb-working-together text=37a3eb9cfb std=59f95b03d6 q=2cd3b963a8",
+      "mb-global-communities text=fdc10e0b47 std=00d3e5c4c7 q=faf830a84e",
+      "mb-working-together text=37a3eb9cfb std=59f95b03d6 q=c53402c2aa",
       "or-g2-world-maps text=8a70a67868 std=b29c568d7f q=f54db7af64",
       "il-g3-illinois-land text=47b966087f std=559901f4cc q=167d1382ae",
       "il-g3-illinois-communities text=eceb241fb4 std=839e17e599 q=99bc8ff7ff",
@@ -825,9 +825,9 @@
   "9/social": {
     "overview": "3a9538aeb5",
     "units": [
-      "ca-g9-foundations text=7e73500361 std=e04df2d7e2 q=366cc13a3d",
+      "ca-g9-foundations text=7e73500361 std=e04df2d7e2 q=88c273c390",
       "ca-g9-civic-action text=7ff067ec0c std=682ff838ae q=c1c8ac6d15",
-      "ca-g9-media text=67bc186bc5 std=df669320b0 q=d8967e0b75",
+      "ca-g9-media text=67bc186bc5 std=df669320b0 q=0fc3f3ad1e",
       "il-g9-governing-illinois text=4e61e4d805 std=19fbcb14a2 q=88ae4b92d9",
       "il-g9-us-government text=82a80278e2 std=31cd790e7a q=6e39291bd1",
       "il-g9-personal-finance text=3cd052be69 std=b2b456c060 q=7657767e94",

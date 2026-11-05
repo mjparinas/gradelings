@@ -360,18 +360,18 @@
   "3/social": {
     "overview": "04c67bf4b0",
     "units": [
-      "mb-citizenship text=76016c0088 std=aaead6fe63 q=2ec1aab6f4",
-      "mb-groups-and-leaders text=990b1bdfbd std=ce78b701c5 q=35d1447b68",
-      "mb-world-maps text=1e325a2118 std=509b3a8799 q=36735875ac",
-      "mb-global-communities text=c8d53b307e std=5301b95db3 q=ab21575e05",
-      "mb-needs-and-rights text=ad434b6f13 std=e6adf0fe51 q=5f9541da2a",
-      "mb-ancient-egypt text=43b3bd980c std=16058ae7b1 q=66bc250282",
-      "mb-who-i-am text=8deeb7f6dc std=e63b4588fc q=93a73af289",
-      "mb-living-with-the-land text=42767b84c3 std=04a827e8ce q=9636e3804e",
-      "mb-contributions-and-connections text=487d7cc01e std=c4e22c6e8c q=8917c6e7aa",
-      "mb-working-together text=a30ec2699b std=3395fb8a75 q=14569aa629",
-      "mb-ask-and-find text=b829c8f176 std=cfd3d5d4b9 q=c0817be621",
-      "mb-think-it-through text=cb94f6637a std=eeadb11e38 q=a04fb67a3a"
+      "mb-citizenship text=76016c0088 std=aaead6fe63 q=9fddf9a7be",
+      "mb-groups-and-leaders text=990b1bdfbd std=ce78b701c5 q=340efa8ad8",
+      "mb-world-maps text=1e325a2118 std=509b3a8799 q=258838d062",
+      "mb-global-communities text=c8d53b307e std=5301b95db3 q=137089294c",
+      "mb-needs-and-rights text=ad434b6f13 std=e6adf0fe51 q=4df1b40b9f",
+      "mb-ancient-egypt text=43b3bd980c std=16058ae7b1 q=c0b0670e31",
+      "mb-who-i-am text=8deeb7f6dc std=e63b4588fc q=803b5e7ccd",
+      "mb-living-with-the-land text=42767b84c3 std=04a827e8ce q=b1db53a5a1",
+      "mb-contributions-and-connections text=487d7cc01e std=c4e22c6e8c q=558eb793a1",
+      "mb-working-together text=a30ec2699b std=3395fb8a75 q=9c2d570a5e",
+      "mb-ask-and-find text=b829c8f176 std=cfd3d5d4b9 q=fe95740ddd",
+      "mb-think-it-through text=cb94f6637a std=eeadb11e38 q=fe300cb58a"
     ]
   },
   "3/spanish": {
@@ -1060,21 +1060,21 @@
   "9/social": {
     "overview": "38797be51b",
     "units": [
-      "mb-rights-and-citizenship text=576989a7e8 std=3e83aa3b55 q=effbfb6991",
-      "mb-government-and-democracy text=1692ed2cb7 std=f919467b14 q=7820eaff7e",
-      "mb-identity-and-diversity text=3f8a0571dc std=2f25a7ade5 q=215d317fba",
-      "mb-global-citizenship-and-economy text=96b516438a std=a4fd15ca11 q=e5b5b1d1ea",
-      "mb-treaties-and-justice text=1e4b2e9109 std=d4143a2dc8 q=2143db5266",
-      "mb-francophone-communities text=813dd26c4a std=c053afc4ee q=d7d2f0ea41",
-      "mb-first-nations-metis-inuit-today text=5fa81bff95 std=adfc15f766 q=287b68408d",
-      "mb-injustices-and-change text=58ed844efb std=4910631aee q=6f733dd9cd",
-      "mb-people-and-population text=6c5e092dd3 std=aa84fb0ee3 q=d586e42ada",
-      "mb-citizens-and-democracy text=22d8a84096 std=2ef48d5940 q=c39ab7c152",
-      "mb-canada-on-the-map text=7639f4e070 std=62d940ea02 q=6d1879bf22",
-      "mb-canada-and-the-world text=af7ad6a43f std=9517ac5e86 q=ab15a0be89",
-      "mb-conflict-and-cooperation text=d9e1b95f49 std=8152b4b2e6 q=5b76f115fc",
-      "mb-poverty-and-sustainability text=f0db3d7fa5 std=9686b6a5f4 q=d77279bb81",
-      "mb-social-studies-inquiry text=cac8f3bba3 std=9a7f8a31b9 q=c40cf75160"
+      "mb-rights-and-citizenship text=576989a7e8 std=3e83aa3b55 q=605bd54788",
+      "mb-government-and-democracy text=1692ed2cb7 std=f919467b14 q=c5d2846f1e",
+      "mb-identity-and-diversity text=3f8a0571dc std=2f25a7ade5 q=c1f4e9fdfa",
+      "mb-global-citizenship-and-economy text=96b516438a std=a4fd15ca11 q=716015afc7",
+      "mb-treaties-and-justice text=1e4b2e9109 std=d4143a2dc8 q=65bd2950bc",
+      "mb-francophone-communities text=813dd26c4a std=c053afc4ee q=a297cbd6ad",
+      "mb-first-nations-metis-inuit-today text=5fa81bff95 std=adfc15f766 q=5e368e6c23",
+      "mb-injustices-and-change text=58ed844efb std=4910631aee q=0dce81171a",
+      "mb-people-and-population text=6c5e092dd3 std=aa84fb0ee3 q=f7b9064aa0",
+      "mb-citizens-and-democracy text=22d8a84096 std=2ef48d5940 q=a2aa459e00",
+      "mb-canada-on-the-map text=7639f4e070 std=62d940ea02 q=c8c9179600",
+      "mb-canada-and-the-world text=af7ad6a43f std=9517ac5e86 q=48c61e578d",
+      "mb-conflict-and-cooperation text=d9e1b95f49 std=8152b4b2e6 q=4861d2c041",
+      "mb-poverty-and-sustainability text=f0db3d7fa5 std=9686b6a5f4 q=8389db1e66",
+      "mb-social-studies-inquiry text=cac8f3bba3 std=9a7f8a31b9 q=ca0fbf11de"
     ]
   },
   "9/spanish": {
