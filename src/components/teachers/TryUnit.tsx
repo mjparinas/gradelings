@@ -8,7 +8,15 @@ import { ChoiceQuestion } from "../questions/ChoiceQuestion";
 import { CoinsQuestion } from "../questions/CoinsQuestion";
 import { InputQuestion } from "../questions/InputQuestion";
 import { OrderQuestion } from "../questions/OrderQuestion";
+import { PlaceQuestion } from "../questions/PlaceQuestion";
+import { ShadeQuestion } from "../questions/ShadeQuestion";
 import { SortQuestion } from "../questions/SortQuestion";
+import { FillQuestion } from "../questions/FillQuestion";
+import { HighlightQuestion } from "../questions/HighlightQuestion";
+import { MatchQuestion } from "../questions/MatchQuestion";
+import { MistakeQuestion } from "../questions/MistakeQuestion";
+import { MultiQuestion } from "../questions/MultiQuestion";
+import { TilesQuestion } from "../questions/TilesQuestion";
 import type { QuestionProps, Status } from "../questions/types";
 import { QuestionVisual } from "../visuals";
 import { TeacherDialog } from "./Dialog";
@@ -34,6 +42,22 @@ function Body(props: QuestionProps<Question>) {
       return <SortQuestion {...props} q={q} />;
     case "input":
       return <InputQuestion {...props} q={q} />;
+    case "shade":
+      return <ShadeQuestion {...props} q={q} />;
+    case "place":
+      return <PlaceQuestion {...props} q={q} />;
+    case "match":
+      return <MatchQuestion {...props} q={q} />;
+    case "multi":
+      return <MultiQuestion {...props} q={q} />;
+    case "highlight":
+      return <HighlightQuestion {...props} q={q} />;
+    case "mistake":
+      return <MistakeQuestion {...props} q={q} />;
+    case "fill":
+      return <FillQuestion {...props} q={q} />;
+    case "tiles":
+      return <TilesQuestion {...props} q={q} />;
   }
 }
 
