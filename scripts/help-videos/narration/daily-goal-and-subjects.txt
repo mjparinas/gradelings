@@ -1,0 +1,5 @@
+Each child has their own settings. Open Settings and pick the child at the top.
+The daily goal sets how many minutes of learning fill their progress bar on the home screen.
+Subjects lets you choose what shows up in lessons, Adventure and the Daily Challenge. French is optional and off by default.
+Arcade games are earned with learning time. You can change the ratio, allow free play, or turn games off.
+Changes save automatically and sync to your other devices.

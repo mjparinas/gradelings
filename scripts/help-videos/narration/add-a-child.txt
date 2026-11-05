@@ -1,0 +1,5 @@
+To add a child, open the Children tab.
+Tap Add a child.
+Type a first name or nickname. That is all we keep. No last names, photos or free text from children.
+Pick their grade, and the province or state they follow, so practice matches their school curriculum.
+Save, and the new child shows up with their own settings and reports. You can add up to five children.
