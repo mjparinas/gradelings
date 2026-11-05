@@ -104,6 +104,7 @@ vi.mock("./Trophies", () => ({ TrophyRoom: screenStub("TrophyRoom") }));
 vi.mock("./Treasures", () => ({ Treasures: screenStub("Treasures") }));
 vi.mock("./WeekRecap", () => ({ WeekRecap: screenStub("WeekRecap") }));
 vi.mock("./BrainBreak", () => ({ BrainBreak: screenStub("BrainBreak") }));
+vi.mock("./Explore", () => ({ ExploreLibrary: screenStub("ExploreLibrary"), ExploreReader: screenStub("ExploreReader") }));
 vi.mock("./Rhymes", () => ({ RhymeLibrary: screenStub("RhymeLibrary"), RhymeReader: screenStub("RhymeReader") }));
 vi.mock("./Stories", () => ({ StoryLibrary: screenStub("StoryLibrary"), StoryReader: screenStub("StoryReader") }));
 
@@ -278,6 +279,8 @@ describe("PlayApp routes", () => {
     ["stories", "StoryLibrary"],
     ["stories/theo-kite", "StoryReader id=theo-kite"],
     ["break", "BrainBreak"],
+    ["explore", "ExploreLibrary"],
+    ["explore/busy-bees", "ExploreReader id=busy-bees"],
     ["rhymes", "RhymeLibrary"],
     ["rhymes/sleepy-bear", "RhymeReader id=sleepy-bear"],
     ["nowhere", "Hub"],
@@ -342,6 +345,8 @@ describe("PlayApp routes", () => {
     ["stories/theo-kite", "story-library"],
     ["grew", "weekly-recap"],
     ["break", "brain-breaks"],
+    ["explore", "explore-cards"],
+    ["explore/busy-bees", "explore-cards"],
     ["rhymes", "rhymes"],
     ["rhymes/sleepy-bear", "rhymes"],
     ["session?mode=daily", "daily-challenge"],
