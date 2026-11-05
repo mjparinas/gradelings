@@ -103,6 +103,8 @@ vi.mock("./TrailMap", () => ({ TrailMap: screenStub("TrailMap") }));
 vi.mock("./Trophies", () => ({ TrophyRoom: screenStub("TrophyRoom") }));
 vi.mock("./Treasures", () => ({ Treasures: screenStub("Treasures") }));
 vi.mock("./WeekRecap", () => ({ WeekRecap: screenStub("WeekRecap") }));
+vi.mock("./BrainBreak", () => ({ BrainBreak: screenStub("BrainBreak") }));
+vi.mock("./Rhymes", () => ({ RhymeLibrary: screenStub("RhymeLibrary"), RhymeReader: screenStub("RhymeReader") }));
 vi.mock("./Stories", () => ({ StoryLibrary: screenStub("StoryLibrary"), StoryReader: screenStub("StoryReader") }));
 
 import { PlayApp } from "./PlayApp";
@@ -275,6 +277,9 @@ describe("PlayApp routes", () => {
     ["shop", "Shop"],
     ["stories", "StoryLibrary"],
     ["stories/theo-kite", "StoryReader id=theo-kite"],
+    ["break", "BrainBreak"],
+    ["rhymes", "RhymeLibrary"],
+    ["rhymes/sleepy-bear", "RhymeReader id=sleepy-bear"],
     ["nowhere", "Hub"],
   ])("#/%s shows %s", (route, expected) => {
     h.route = route;
@@ -310,6 +315,13 @@ describe("PlayApp routes", () => {
     expect(shown()).toMatch(/^Hub/);
   });
 
+  it("keeps the rhymes for the younger readers: a Grade 6 child goes home", () => {
+    h.route = "rhymes";
+    h.active = { id: "b", grade: "6", framework: "ca-bc" };
+    render(<PlayApp />);
+    expect(shown()).toMatch(/^Hub/);
+  });
+
   it("an unknown session mode or placement subject goes home", () => {
     h.route = "session?mode=cheat";
     const { unmount } = render(<PlayApp />);
@@ -329,6 +341,9 @@ describe("PlayApp routes", () => {
     ["stories", "story-library"],
     ["stories/theo-kite", "story-library"],
     ["grew", "weekly-recap"],
+    ["break", "brain-breaks"],
+    ["rhymes", "rhymes"],
+    ["rhymes/sleepy-bear", "rhymes"],
     ["session?mode=daily", "daily-challenge"],
     ["session?mode=speed&scope=mix", "speed-run"],
     ["facts", "math-facts"],

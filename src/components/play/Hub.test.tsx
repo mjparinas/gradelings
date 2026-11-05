@@ -273,6 +273,22 @@ describe("Hub tiles", () => {
     expect(screen.queryByText("Brain Break")).not.toBeInTheDocument();
   });
 
+  it("has a Rhymes tile for Grades 2 to 4 only (little kids find it in Treasures), and none when switched off", () => {
+    const { unmount } = show("middle");
+    fireEvent.click(tile("Rhymes"));
+    expect(window.location.hash).toBe("#/rhymes");
+    unmount();
+    const big = show("big");
+    expect(screen.queryByText("Rhymes")).not.toBeInTheDocument();
+    big.unmount();
+    const little = show("little");
+    expect(screen.queryByText("Rhymes")).not.toBeInTheDocument();
+    little.unmount();
+    h.off = new Set(["rhymes"]);
+    show("middle");
+    expect(screen.queryByText("Rhymes")).not.toBeInTheDocument();
+  });
+
   it("hides the tiles the admin switched off", () => {
     h.off = new Set(["arcade", "shop", "daily-challenge"]);
     show();
