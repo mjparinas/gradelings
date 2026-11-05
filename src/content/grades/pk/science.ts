@@ -1,6 +1,7 @@
-import { sample, shuffle, textChoice } from "../../random";
+import { pick, sample, shuffle, textChoice } from "../../random";
 import { sortQuestion, type SortSet } from "../../bank";
 import type { Choice, Course, GenerateOptions, OrderQuestion, Question } from "../../types";
+import { ANIMAL_MORE, FLOAT_MORE, LIVING_MORE, PLANT_MORE, SENSE_MORE, WEATHER_MORE } from "./science-more";
 
 // Pre-K science: noticing the world with the senses. Picture choices only (at most 3), small sorts, and
 // first-next-last orders of up to 4 pictures, all read aloud.
@@ -78,7 +79,7 @@ const SENSE_ITEMS: Item[] = [
 ];
 
 function fiveSenses(opts?: GenerateOptions): Question[] {
-  return fromItems(SENSE_ITEMS, 8, level(opts));
+  return fromItems([...SENSE_ITEMS, ...SENSE_MORE], 8, level(opts));
 }
 
 // ---------- Living or Not ----------
@@ -121,7 +122,8 @@ const LIVING_ITEMS: Item[] = [
 
 function livingOrNot(opts?: GenerateOptions): Question[] {
   const d = level(opts);
-  return shuffle([sortFor(LIVING_SORT, d), sortFor(LIVING_SORT, d), ...fromItems(LIVING_ITEMS, 6, d)]);
+  const set = () => pick([LIVING_SORT, LIVING_MORE.sort]);
+  return shuffle([sortFor(set(), d), sortFor(set(), d), ...fromItems([...LIVING_ITEMS, ...LIVING_MORE.items], 6, d)]);
 }
 
 // ---------- Animals and Their Babies ----------
@@ -158,7 +160,7 @@ function animalsAndBabies(opts?: GenerateOptions): Question[] {
   const d = level(opts);
   const life = order("Tap them in order, from egg to chicken.", [["egg", "🥚"], ["chick", "🐣"], ["chicken", "🐔"]], "First the egg, then a chick hatches, then it grows into a chicken.");
   const butterfly = order("Tap them in order, from egg to butterfly.", [["egg", "🥚"], ["caterpillar", "🐛"], ["butterfly", "🦋"]], "A butterfly lays an egg, a caterpillar hatches, and the caterpillar grows into a butterfly.");
-  return shuffle([...fromItems(ANIMAL_ITEMS, 7, d), d === 3 ? butterfly : life]);
+  return shuffle([...fromItems([...ANIMAL_ITEMS, ...ANIMAL_MORE], 7, d), d === 3 ? butterfly : life]);
 }
 
 // ---------- Weather and Sky ----------
@@ -194,7 +196,7 @@ const WEATHER_ITEMS: Item[] = [
 function weatherAndSky(opts?: GenerateOptions): Question[] {
   const d = level(opts);
   const day = order("Tap them in order: what comes first?", [["morning", "🌅"], ["afternoon", "☀️"], ["night", "🌙"]], "The sun comes up in the morning and the moon comes out at night.");
-  return shuffle([...fromItems(WEATHER_ITEMS, 7, d), day]);
+  return shuffle([...fromItems([...WEATHER_ITEMS, ...WEATHER_MORE], 7, d), day]);
 }
 
 // ---------- How Plants Grow ----------
@@ -227,7 +229,7 @@ const PLANT_ITEMS: Item[] = [
 function plantsGrow(opts?: GenerateOptions): Question[] {
   const d = level(opts);
   const grow = order("How does a plant grow? Tap them in order.", d === 1 ? [["seed", "🌰"], ["sprout", "🌱"], ["flower", "🌷"]] : [["seed", "🌰"], ["sprout", "🌱"], ["plant", "🪴"], ["flower", "🌷"]], "First a seed, then a little sprout, then it grows big and flowers.");
-  return shuffle([...fromItems(PLANT_ITEMS, 7, d), grow]);
+  return shuffle([...fromItems([...PLANT_ITEMS, ...PLANT_MORE], 7, d), grow]);
 }
 
 // ---------- Sink or Float ----------
@@ -266,7 +268,8 @@ const MOVE_ITEMS: Item[] = [
 
 function sinkOrFloat(opts?: GenerateOptions): Question[] {
   const d = level(opts);
-  return shuffle([sortFor(FLOAT_SORT, d), ...(d === 1 ? [] : [sortFor(FLOAT_SORT, d)]), ...fromItems(MOVE_ITEMS, d === 1 ? 7 : 6, d)]);
+  const set = () => pick([FLOAT_SORT, FLOAT_MORE.sort]);
+  return shuffle([sortFor(set(), d), ...(d === 1 ? [] : [sortFor(set(), d)]), ...fromItems([...MOVE_ITEMS, ...FLOAT_MORE.items], d === 1 ? 7 : 6, d)]);
 }
 
 export const course: Course = {
