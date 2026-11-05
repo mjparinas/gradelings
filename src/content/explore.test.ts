@@ -19,7 +19,9 @@ describe("explore cards", () => {
 
   it("is short, plain and the same for every province and state", () => {
     const text = EXPLORE_CARDS.flatMap((c) => [c.title, ...c.facts, c.ask.prompt, c.ask.right, ...c.ask.wrong, c.ask.why]).join(" ");
-    expect(text).not.toMatch(/curriculum|province|state\b|canad|america|\bU\.?S\b|\$|¢|dollar|christmas|halloween|easter|colour|metre|litre|vapour|centre|favour/i);
+    expect(text).not.toMatch(/curriculum|province|state\b|canad|america|\$|¢|dollar|christmas|halloween|easter|colour|metre|litre|vapour|centre|favour/i);
+    // "US" as an abbreviation (capitals only), since "us" is an ordinary word.
+    expect(text).not.toMatch(/\bU\.?S\.?\b/);
     for (const c of EXPLORE_CARDS) {
       for (const f of c.facts) expect(f.length, f).toBeLessThanOrEqual(80);
       expect(c.ask.prompt.length, c.id).toBeLessThanOrEqual(80);
