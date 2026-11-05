@@ -590,7 +590,7 @@
       "ca-g6-greece-rome text=becfd03e78 std=138094bb17 q=248e19dbff",
       "wa-g6-greece-rome text=07d03c3210 std=664c9ffe77 q=c581214fd3",
       "world-beliefs text=cc74370028 std=845dee8bfd q=eaa6186bca",
-      "ca-g7-rome-byzantium text=28311c0922 std=79cddb5265 q=1158574fa3"
+      "ca-g7-rome-byzantium text=28311c0922 std=79cddb5265 q=6ce9a18bea"
     ]
   },
   "6/spanish": {
@@ -663,18 +663,18 @@
   "7/social": {
     "overview": "32c08413ba",
     "units": [
-      "ca-g7-rome-byzantium text=c53fc6377b std=23fc0fcacd q=1158574fa3",
+      "ca-g7-rome-byzantium text=c53fc6377b std=23fc0fcacd q=6ce9a18bea",
       "islamic-world text=1f09d059f3 std=427754cebf q=d3b20da097",
       "or-g7-african-kingdoms text=3ee3cfac21 std=b7229ad456 q=5a669c38d2",
-      "ca-g7-imperial-china text=74baee3065 std=fc6de28f5c q=261f938ea5",
+      "ca-g7-imperial-china text=74baee3065 std=fc6de28f5c q=f511a37acb",
       "ny-g6-mongols-travelers text=d39841d4bd std=81c680e26c q=302fd11184",
-      "ca-g7-medieval-japan text=0118a21400 std=ddb18c9d36 q=20d2476fb0",
+      "ca-g7-medieval-japan text=0118a21400 std=ddb18c9d36 q=b396c3c43c",
       "medieval-europe text=e168f1071c std=319977cf77 q=e0e0a48023",
       "ny-g9-crusades-plague text=af175865dd std=43bed78f45 q=bbbc23b16e",
       "renaissance-and-reformation text=e5d4fca376 std=47eac02520 q=6c1b369fe8",
-      "ca-g7-science-enlightenment text=21d3f8a8dc std=d16f541b23 q=4b16ea2b89",
-      "ca-g7-aztec-inca text=d2c994043b std=cdb3d6c8c4 q=98dd6df2a5",
-      "ca-g7-exploration-and-empire text=91fd18d7c8 std=66f4213631 q=7b8763aec9",
+      "ca-g7-science-enlightenment text=21d3f8a8dc std=d16f541b23 q=fad5c3978d",
+      "ca-g7-aztec-inca text=d2c994043b std=cdb3d6c8c4 q=b409112db4",
+      "ca-g7-exploration-and-empire text=91fd18d7c8 std=66f4213631 q=2d3e0d7a38",
       "ny-g5-columbian-exchange text=d1e9c8a03f std=b316db50ee q=625d765c55"
     ]
   },

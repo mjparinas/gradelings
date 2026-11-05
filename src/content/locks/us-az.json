@@ -361,9 +361,9 @@
     "units": [
       "ny-g5-hemisphere-geography text=8947c04047 std=60f71d2985 q=e896b27d17",
       "ny-g5-early-civilizations text=bab328e224 std=10a43d0cc2 q=42bf230f2d",
-      "ca-g7-aztec-inca text=f5c6a6c40b std=eea9b66569 q=98dd6df2a5",
+      "ca-g7-aztec-inca text=f5c6a6c40b std=eea9b66569 q=b409112db4",
       "ny-g5-columbian-exchange text=d1e9c8a03f std=265f7f626f q=625d765c55",
-      "ca-g7-exploration-and-empire text=7405c0aa52 std=6c9cf9f248 q=7b8763aec9",
+      "ca-g7-exploration-and-empire text=7405c0aa52 std=6c9cf9f248 q=2d3e0d7a38",
       "wa-g5-thirteen-colonies text=268bab3377 std=a72380a9ea q=dd5f1aba73",
       "ca-g5-colonial-economy text=302c8d93ea std=a99a371dd6 q=78476c23e0",
       "or-g5-history-detective text=919878e133 std=2e9cacf09c q=0a67d0e45b",
@@ -590,7 +590,7 @@
   "7/social": {
     "overview": "5dce26da20",
     "units": [
-      "ca-g7-science-enlightenment text=21d3f8a8dc std=6d957ce873 q=4b16ea2b89",
+      "ca-g7-science-enlightenment text=21d3f8a8dc std=6d957ce873 q=fad5c3978d",
       "or-g7-age-of-revolutions text=bb22392eb0 std=ff8cad176b q=53220de395",
       "az-g7-industry-and-empire text=6a2f13bde7 std=f2a5e9908b q=f2b10d6352",
       "az-g7-world-war-i text=14255033b7 std=2866675344 q=285833fa0a",

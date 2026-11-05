@@ -394,7 +394,7 @@
     "overview": "85c48e6c6f",
     "units": [
       "ca-g6-roman-empire text=f7bd3cb7bd std=d397813b51 q=852a5927d2",
-      "ca-g7-rome-byzantium text=28311c0922 std=fb8b41b031 q=1158574fa3",
+      "ca-g7-rome-byzantium text=28311c0922 std=fb8b41b031 q=6ce9a18bea",
       "medieval-europe text=c481f7adac std=b517bf028d q=e0e0a48023",
       "ny-g9-crusades-plague text=66370fd7dd std=6aa2b3343a q=bbbc23b16e",
       "ca-g5-road-to-revolution text=f43acaa35e std=3ef7f8a1b4 q=348033ff6d",
@@ -475,7 +475,7 @@
     "units": [
       "ga-g6-europe text=0a5a447f24 std=22c2c34026 q=66235eec8e",
       "renaissance-and-reformation text=4c8ff6b55a std=b70d9929b7 q=6c1b369fe8",
-      "ca-g7-exploration-and-empire text=4ff3d3e2e6 std=9fe0427b15 q=7b8763aec9",
+      "ca-g7-exploration-and-empire text=4ff3d3e2e6 std=9fe0427b15 q=2d3e0d7a38",
       "ca-g5-westward text=50c4e7b9be std=f1af22182b q=e7d1d74cc6",
       "ca-g5-slavery-and-resistance text=75582d2903 std=0b557248b4 q=6cc22a069b",
       "ca-g8-civil-war text=01b158a689 std=0685910db1 q=538b60ca99",
@@ -644,7 +644,7 @@
   "7/social": {
     "overview": "7ecd4499db",
     "units": [
-      "ca-g7-exploration-and-empire text=91fd18d7c8 std=ebb01cb6b0 q=7b8763aec9",
+      "ca-g7-exploration-and-empire text=91fd18d7c8 std=ebb01cb6b0 q=2d3e0d7a38",
       "ca-g5-thirteen-colonies text=b2ab7c1f74 std=1140d09b55 q=17e62378ec",
       "ca-g5-revolution text=ef5fd4d37f std=9fd1b757cd q=77d806ef60",
       "ca-g8-founding-ideals text=c6cb5590e8 std=a73ae9083a q=26fd931b32",

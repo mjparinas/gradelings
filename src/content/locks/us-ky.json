@@ -646,18 +646,18 @@
   "7/social": {
     "overview": "2af714f871",
     "units": [
-      "ca-g7-rome-byzantium text=c53fc6377b std=6a4295c35b q=1158574fa3",
+      "ca-g7-rome-byzantium text=c53fc6377b std=6a4295c35b q=6ce9a18bea",
       "islamic-world text=1f09d059f3 std=c87c8b10fb q=d3b20da097",
       "or-g7-african-kingdoms text=3ee3cfac21 std=c2e4eee4c4 q=5a669c38d2",
-      "ca-g7-imperial-china text=74baee3065 std=6c0d8692fe q=261f938ea5",
+      "ca-g7-imperial-china text=74baee3065 std=6c0d8692fe q=f511a37acb",
       "ny-g6-mongols-travelers text=d39841d4bd std=06c3d2cdad q=302fd11184",
-      "ca-g7-medieval-japan text=0118a21400 std=e7f20ae6d4 q=20d2476fb0",
+      "ca-g7-medieval-japan text=0118a21400 std=e7f20ae6d4 q=b396c3c43c",
       "medieval-europe text=e168f1071c std=18809bc2e1 q=e0e0a48023",
       "ny-g9-crusades-plague text=af175865dd std=007c50c0c9 q=bbbc23b16e",
       "renaissance-and-reformation text=e5d4fca376 std=30ab75e47a q=6c1b369fe8",
-      "ca-g7-science-enlightenment text=21d3f8a8dc std=ad584a027f q=4b16ea2b89",
-      "ca-g7-aztec-inca text=d2c994043b std=e3e5021a56 q=98dd6df2a5",
-      "ca-g7-exploration-and-empire text=91fd18d7c8 std=9370ae7a37 q=7b8763aec9",
+      "ca-g7-science-enlightenment text=21d3f8a8dc std=ad584a027f q=fad5c3978d",
+      "ca-g7-aztec-inca text=d2c994043b std=e3e5021a56 q=b409112db4",
+      "ca-g7-exploration-and-empire text=91fd18d7c8 std=9370ae7a37 q=2d3e0d7a38",
       "ny-g5-economics text=c6e08cdf26 std=8d1569ae6e q=b1deb4ea50"
     ]
   },
