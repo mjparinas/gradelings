@@ -736,14 +736,14 @@
   "8/math": {
     "overview": "cf506db1ae",
     "units": [
-      "squares-and-roots text=0c3411fb05 std=46140f60dc q=d7dfc2d1fe",
+      "squares-and-roots text=0c3411fb05 std=46140f60dc q=44906b78d6",
       "percents-and-money text=99da083c23 std=a5cb5f2883 q=1333637e1e",
       "ratios-and-rates text=fe38c24acc std=85ab97ff04 q=62d248cf82",
-      "fraction-operations text=43b349e643 std=2daafd8fea q=d7ba9bcf9d",
+      "fraction-operations text=43b349e643 std=2daafd8fea q=4755d31e4a",
       "integers-8 text=4840f100ae std=4f806eebcd q=9c4f44dc17",
       "patterns-8 text=7c93ec8f67 std=b65deecb4c q=353e03d493",
-      "linear-equations text=1e22122340 std=171d9d6835 q=0e7b5b65c5",
-      "pythagorean-theorem text=014e1086f2 std=f8ea581095 q=901991b35a",
+      "linear-equations text=1e22122340 std=171d9d6835 q=4ba669b446",
+      "pythagorean-theorem text=014e1086f2 std=f8ea581095 q=99835d112c",
       "surface-area-volume text=a5298071b5 std=f9cc7b10b7 q=5c73cae8f9",
       "transformations-8 text=872e7f5b99 std=9cf2a8206e q=d810f846d6",
       "probability-and-data text=49496b876e std=351a191acb q=6bec01e463"
@@ -831,10 +831,10 @@
   "9/math": {
     "overview": "fb543bea04",
     "units": [
-      "exponent-laws text=14558089af std=b897559587 q=2ce4ff5a2c",
-      "rational-numbers text=023c4c6316 std=51d5ada126 q=6f2f9a3df7",
+      "exponent-laws text=14558089af std=b897559587 q=8fb7aa1d0b",
+      "rational-numbers text=023c4c6316 std=51d5ada126 q=29cdd814c4",
       "linear-relations text=d5718915ca std=f402f882f7 q=1e254a9707",
-      "multi-step-equations text=834b6c0c60 std=079e53ca74 q=beb185035d",
+      "multi-step-equations text=834b6c0c60 std=079e53ca74 q=4823df05ba",
       "polynomials text=608ddf33d1 std=47679e163f q=3a3e17fe5c",
       "similarity-and-scale text=541110d627 std=184b3ad3d8 q=07a8d2770d",
       "statistics-in-society text=9e4081b498 std=9859400427 q=bae78cb576"

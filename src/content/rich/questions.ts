@@ -415,3 +415,107 @@ export const sayCount = (low: number, high: number) => (): Question[] => {
     ),
   ];
 };
+
+// ---------- Grades 8 and 9 ----------
+
+const SQUARES = [16, 25, 36, 49, 64, 81, 100, 121, 144];
+const NOT_SQUARES = [15, 24, 35, 48, 50, 65, 80, 90, 120, 140];
+export const perfectSquares = (): Question[] => [
+  multi(
+    "Tap every perfect square.",
+    "A perfect square is a whole number times itself, like 6 × 6 = 36. Try the square root of each number.",
+    sample(SQUARES, 2).map((n) => [String(n)] as [string]),
+    sample(NOT_SQUARES, 2).map((n) => [String(n)] as [string]),
+  ),
+];
+
+const TRIPLES: [number, number, number][] = [
+  [3, 4, 5],
+  [6, 8, 10],
+  [5, 12, 13],
+  [8, 15, 17],
+  [7, 24, 25],
+];
+export const rightTriangles = (): Question[] => [
+  match(
+    "Match the two short sides to the long side (hypotenuse) of a right triangle.",
+    "Square the two short sides and add them. The long side is the square root of that total.",
+    sample(TRIPLES, 4).map(([a, b, c]) => ({ left: `${a} and ${b}`, right: String(c) })),
+  ),
+];
+
+export const fractionAddMistake = (): Question[] => {
+  const who = aName();
+  const [b, d] = pick([[2, 3], [3, 4], [2, 5], [3, 5], [4, 5]]);
+  const a = 1;
+  const c = randInt(1, d - 1);
+  const bd = b * d;
+  const top = a * d + c * b;
+  const steps = [`${a}/${b} + ${c}/${d}`, `= ${a * d}/${bd} + ${c * b}/${bd}`, `= ${top}/${bd + bd}`];
+  return [mistake(`${who} added ${a}/${b} + ${c}/${d}. Which step has the mistake?`, "Fractions with the same bottom number add by adding the tops only. The bottom number stays the same.", steps, 2)];
+};
+
+export const linearEquationMistake = (): Question[] => {
+  const who = aName();
+  const p = randInt(2, 5);
+  const x = randInt(2, 9);
+  const a = randInt(1, 3);
+  const b = p * x - a;
+  const early = pick([true, false]);
+  const steps = early
+    ? [`${p}x − ${a} = ${b}`, `${p}x = ${b - a}`, `x = ${b - a} ÷ ${p}`]
+    : [`${p}x − ${a} = ${b}`, `${p}x = ${b + a}`, `x = ${b + a} × ${p}`];
+  return [mistake(`${who} solved ${p}x − ${a} = ${b}. Which step has the mistake?`, "To undo taking away, add the same number to both sides. Then divide by the number multiplying x.", steps, early ? 1 : 2)];
+};
+
+const SUP = "⁰¹²³⁴⁵⁶⁷⁸⁹";
+const sup = (n: number) => String(n).split("").map((d) => SUP[Number(d)]).join("");
+export const exponentLaws = (): Question[] => {
+  for (;;) {
+    const ops = shuffle(["mul", "div", "pow", pick(["mul", "div", "pow"])]);
+    const rows = ops.map((op) => {
+      if (op === "mul") {
+        const a = randInt(2, 5);
+        const b = randInt(2, 5);
+        return { left: `x${sup(a)} · x${sup(b)}`, right: `x${sup(a + b)}`, n: a + b };
+      }
+      if (op === "div") {
+        const b = randInt(2, 4);
+        const r = randInt(2, 5);
+        return { left: `x${sup(b + r)} ÷ x${sup(b)}`, right: `x${sup(r)}`, n: r };
+      }
+      const a = randInt(2, 4);
+      const b = randInt(2, 3);
+      return { left: `(x${sup(a)})${sup(b)}`, right: `x${sup(a * b)}`, n: a * b };
+    });
+    const lefts = new Set(rows.map((r) => r.left));
+    const rights = new Set(rows.map((r) => r.n));
+    if (lefts.size === 4 && rights.size === 4) {
+      return [match("Match each expression to its simplest form.", "Multiplying powers with the same base: add the exponents. Dividing: subtract. Power of a power: multiply.", rows.map((r) => ({ left: r.left, right: r.right })))];
+    }
+  }
+};
+
+export const distributeMistake = (): Question[] => {
+  const who = aName();
+  const p = randInt(2, 5);
+  const a = randInt(2, 6);
+  const x = randInt(2, 9);
+  const b = p * (x + a);
+  const early = pick([true, false]);
+  const steps = early
+    ? [`${p}(x + ${a}) = ${b}`, `${p}x + ${a} = ${b}`, `${p}x = ${b} − ${a}`]
+    : [`${p}(x + ${a}) = ${b}`, `x + ${a} = ${b} ÷ ${p}`, `x = ${b / p} + ${a}`];
+  return [mistake(`${who} solved ${p}(x + ${a}) = ${b}. Which step has the mistake?`, "Either multiply everything inside the brackets by the number outside, or divide both sides by it first. Then undo the adding by taking it away.", steps, early ? 1 : 2)];
+};
+
+const BETWEEN_RIGHT = ["−1/2", "−1/4", "−3/4", "−0.5", "−0.9"];
+const BETWEEN_WRONG = ["1/2", "−2", "0.3", "−1.5", "−3/2", "1/4"];
+export const betweenZeroAndNegativeOne = (): Question[] => [
+  multi(
+    "Tap every rational number between −1 and 0.",
+    "Between −1 and 0 means smaller than 0 and bigger than −1. Change fractions to decimals if that helps.",
+    sample(BETWEEN_RIGHT, 2).map((n) => [n] as [string]),
+    sample(BETWEEN_WRONG, 2).map((n) => [n] as [string]),
+  ),
+];

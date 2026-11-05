@@ -711,9 +711,9 @@
   "8/math": {
     "overview": "05ccf33d35",
     "units": [
-      "squares-and-roots text=0c3411fb05 std=5d43fa0bc6 q=d7dfc2d1fe",
-      "linear-equations text=1e22122340 std=54c70eeefc q=0e7b5b65c5",
-      "pythagorean-theorem text=014e1086f2 std=f76f89e826 q=901991b35a",
+      "squares-and-roots text=0c3411fb05 std=5d43fa0bc6 q=44906b78d6",
+      "linear-equations text=1e22122340 std=54c70eeefc q=4ba669b446",
+      "pythagorean-theorem text=014e1086f2 std=f76f89e826 q=99835d112c",
       "surface-area-volume text=96a6eb6597 std=e11806c51b q=79cdef4798",
       "numbers-8 text=8bc8425026 std=42f95ff00e q=9e9e88cf93",
       "data-8 text=f67cb7cc17 std=9bc2e6b6b9 q=61afebfaea",
@@ -801,7 +801,7 @@
     "overview": "18f4d53681",
     "units": [
       "polynomials text=608ddf33d1 std=d7ade548c0 q=3a3e17fe5c",
-      "multi-step-equations text=834b6c0c60 std=344035981a q=beb185035d",
+      "multi-step-equations text=834b6c0c60 std=344035981a q=4823df05ba",
       "linear-relations text=d5718915ca std=d9394ff2ab q=1e254a9707",
       "statistics-in-society text=9e4081b498 std=1a06dc50ab q=bae78cb576",
       "expressions-9 text=c4cbafb40c std=cfaa05744c q=a48fbbb76c",

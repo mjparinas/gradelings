@@ -750,14 +750,14 @@
   "8/math": {
     "overview": "74da280b37",
     "units": [
-      "squares-and-roots text=0c3411fb05 std=09f5bb8d0d q=d7dfc2d1fe",
+      "squares-and-roots text=0c3411fb05 std=09f5bb8d0d q=44906b78d6",
       "integers-8 text=4840f100ae std=1ef1e0f2e9 q=9c4f44dc17",
-      "fraction-operations text=43b349e643 std=503b848c39 q=d7ba9bcf9d",
+      "fraction-operations text=43b349e643 std=503b848c39 q=4755d31e4a",
       "ratios-and-rates text=fe38c24acc std=0caa88c907 q=62d248cf82",
-      "linear-equations text=1e22122340 std=b5384eb7b0 q=0e7b5b65c5",
+      "linear-equations text=1e22122340 std=b5384eb7b0 q=4ba669b446",
       "linear-relations-ab text=3ef9188889 std=9769e840ac q=8f11287d9e",
       "bracket-equations-ab text=d802eb7882 std=83a749eadc q=3719a7ef86",
-      "pythagorean-theorem text=014e1086f2 std=e654c89cdc q=901991b35a",
+      "pythagorean-theorem text=014e1086f2 std=e654c89cdc q=99835d112c",
       "nets-views-ab text=6df5a9626c std=bbe48f7ad9 q=27eb75caed",
       "mb-views-8 text=a8a1c5ce3a std=e6d8342a4b q=690b083f51",
       "surface-area-volume text=a5298071b5 std=0e77be2317 q=5c73cae8f9",
@@ -844,11 +844,11 @@
   "9/math": {
     "overview": "570d09698e",
     "units": [
-      "exponent-laws text=14558089af std=91a2b4fd8a q=2ce4ff5a2c",
-      "rational-numbers text=023c4c6316 std=752e7825c7 q=6f2f9a3df7",
+      "exponent-laws text=14558089af std=91a2b4fd8a q=8fb7aa1d0b",
+      "rational-numbers text=023c4c6316 std=752e7825c7 q=29cdd814c4",
       "square-roots-ab text=9dac6ac303 std=1135d0f0b3 q=20b8564979",
       "linear-relations text=d5718915ca std=0845b544ca q=1e254a9707",
-      "multi-step-equations text=834b6c0c60 std=b157c918cb q=beb185035d",
+      "multi-step-equations text=834b6c0c60 std=b157c918cb q=4823df05ba",
       "polynomials text=608ddf33d1 std=519880cf28 q=3a3e17fe5c",
       "geometry-9 text=d3083b3128 std=12cf471458 q=0d88280b03",
       "surface-area-ab text=c4da6bfbc4 std=d62ecd3cac q=5db736f014",

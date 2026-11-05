@@ -658,9 +658,9 @@
   "8/math": {
     "overview": "a5215102c7",
     "units": [
-      "squares-and-roots text=0c3411fb05 std=f0a78b4608 q=d7dfc2d1fe",
-      "linear-equations text=1e22122340 std=b6bfd17f0e q=0e7b5b65c5",
-      "pythagorean-theorem text=014e1086f2 std=8c84802a1a q=901991b35a",
+      "squares-and-roots text=0c3411fb05 std=f0a78b4608 q=44906b78d6",
+      "linear-equations text=1e22122340 std=b6bfd17f0e q=4ba669b446",
+      "pythagorean-theorem text=014e1086f2 std=8c84802a1a q=99835d112c",
       "surface-area-volume text=96a6eb6597 std=16b3457d3f q=79cdef4798",
       "numbers-8 text=8bc8425026 std=3b39e1856a q=9e9e88cf93",
       "data-8 text=f67cb7cc17 std=1cd31d3df1 q=61afebfaea",

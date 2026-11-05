@@ -704,9 +704,9 @@
   "8/math": {
     "overview": "f3acf3a9d9",
     "units": [
-      "squares-and-roots text=0c3411fb05 std=069686a37e q=d7dfc2d1fe",
-      "linear-equations text=1e22122340 std=0096269510 q=0e7b5b65c5",
-      "pythagorean-theorem text=014e1086f2 std=a838f9574f q=901991b35a",
+      "squares-and-roots text=0c3411fb05 std=069686a37e q=44906b78d6",
+      "linear-equations text=1e22122340 std=0096269510 q=4ba669b446",
+      "pythagorean-theorem text=014e1086f2 std=a838f9574f q=99835d112c",
       "numbers-8 text=8bc8425026 std=8b3fe3df24 q=9e9e88cf93",
       "data-8 text=f67cb7cc17 std=152bedcc69 q=61afebfaea",
       "linear-relations-ab text=3ef9188889 std=c8c0733130 q=8f11287d9e",
