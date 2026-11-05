@@ -289,7 +289,7 @@
       "nb-our-province-3 text=f70e65dbe7 std=458d4003ca q=8aca460175",
       "nb-wabanaki-nations-3 text=bcbc180a36 std=ceee311d34 q=f2dbd31e8b",
       "nb-peoples-3 text=a0a6332ab9 std=f29d9753a6 q=ca7f5cfdd2",
-      "mb-groups-and-leaders text=990b1bdfbd std=8fd0f4f966 q=35d1447b68",
+      "mb-groups-and-leaders text=990b1bdfbd std=8fd0f4f966 q=340efa8ad8",
       "nb-government-3 text=3b8909fb79 std=94891f434d q=d8aa2d190d",
       "nb-citizens-3 text=e88ddc8fdf std=8b865917c6 q=660a435a74",
       "nb-treaties-3 text=b4a30e740d std=f67ba27e2f q=697ea0b1bc",
@@ -768,12 +768,12 @@
     "overview": "b8d5d69225",
     "units": [
       "nb-bna-life-8 text=c68eeccf7e std=f79fcccf1c q=ca41086645",
-      "nb-confederation-8 text=b9860d943f std=230cfcd67c q=cbdcef9368",
+      "nb-confederation-8 text=b9860d943f std=230cfcd67c q=cdd63dfb3b",
       "nb-canada-grows-8 text=92137c701f std=37c689587e q=69df51ddea",
-      "nb-black-history-8 text=862bd22213 std=b3cb7e956f q=81d5b43d82",
+      "nb-black-history-8 text=862bd22213 std=b3cb7e956f q=4ae6cb4e6b",
       "nb-newcomers-8 text=68623ba25c std=3a2b154094 q=d8ceb3f453",
-      "nb-wabanaki-empowerment-8 text=10d690f306 std=9d6dce815c q=0d27235009",
-      "nb-rights-reform-8 text=60cbb18ff3 std=013d0353b0 q=dd756aa128",
+      "nb-wabanaki-empowerment-8 text=10d690f306 std=9d6dce815c q=324b985744",
+      "nb-rights-reform-8 text=60cbb18ff3 std=013d0353b0 q=0e17614687",
       "nb-making-a-living-8 text=f00de35ca1 std=adf5ba9d9b q=7c4ffe8953",
       "nb-youth-action-8 text=afc0776bd1 std=57d86d15cc q=434300fc46"
     ]
@@ -868,12 +868,12 @@
     "overview": "93c378b937",
     "units": [
       "canadas-landscapes text=5175fa39ff std=5f65803b23 q=0867df985a",
-      "nb-places-people-9 text=1c02d184bb std=7e2cd4307b q=e0ebad6619",
-      "nb-identity-migration-9 text=104d79215f std=2ef77e3f9d q=9ed5a44901",
+      "nb-places-people-9 text=1c02d184bb std=7e2cd4307b q=496d490116",
+      "nb-identity-migration-9 text=104d79215f std=2ef77e3f9d q=435053ca11",
       "nb-governance-9 text=b8225aad8b std=06685b5fcf q=479758c960",
-      "nb-rights-roles-9 text=6962efbb2e std=461541d981 q=d78c7b200f",
+      "nb-rights-roles-9 text=6962efbb2e std=461541d981 q=bf34f28682",
       "ns-engaged-citizenship-9 text=78648596ab std=999e8f7ec3 q=8e202d350b",
-      "nb-treaty-relationships-9 text=2b706ebcf4 std=4ecee694a1 q=06b73d96c3"
+      "nb-treaty-relationships-9 text=2b706ebcf4 std=4ecee694a1 q=d8cc40db2d"
     ]
   },
   "9/spanish": {

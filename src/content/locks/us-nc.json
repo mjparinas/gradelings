@@ -317,7 +317,7 @@
     "overview": "bcb698412a",
     "units": [
       "meeting-needs text=40a76a9522 std=86b345a7aa q=3ac35931e2",
-      "mb-global-communities text=fdc10e0b47 std=cf638f3b30 q=a05e20d345",
+      "mb-global-communities text=fdc10e0b47 std=cf638f3b30 q=faf830a84e",
       "communities-compared text=38aa387c10 std=29a81b6a92 q=20e81812b4",
       "nc-g3-nc-regions-communities text=2c11e780db std=078f5de388 q=cf8182df78",
       "nc-g3-state-local-government text=18c18078a9 std=4a00f9fa31 q=823e0bd75c",
@@ -870,14 +870,14 @@
   "9/social": {
     "overview": "f24a072755",
     "units": [
-      "ca-g9-foundations text=7e73500361 std=df894828ce q=366cc13a3d",
+      "ca-g9-foundations text=7e73500361 std=df894828ce q=88c273c390",
       "ca-g9-three-branches text=439ea561c4 std=cfcbf659e7 q=4b4a891d5e",
       "ca-g9-lawmaking text=2a409ee163 std=f612790e31 q=83325c4e69",
       "ca-g9-rights text=593eeeff61 std=2549bee015 q=064d36f990",
-      "ca-g9-supreme-court text=d497c2ea6b std=23d7f632a2 q=5b4496ce00",
+      "ca-g9-supreme-court text=d497c2ea6b std=23d7f632a2 q=0110fb9ee8",
       "ca-g9-elections text=2e075ddbe7 std=c2219f3a1a q=3a9cee2d15",
       "ca-g9-civic-action text=7ff067ec0c std=f0e58b7eeb q=c1c8ac6d15",
-      "ca-g9-media text=67bc186bc5 std=48ee326513 q=d8967e0b75",
+      "ca-g9-media text=67bc186bc5 std=48ee326513 q=0fc3f3ad1e",
       "ca-g9-forms-of-government text=47a5b003ba std=edd5f8e03a q=46e402dbc2",
       "or-g9-supply-demand text=7ec267d851 std=ff5c186731 q=bc22a4bd51",
       "az-g8-personal-finance text=901cb5bfef std=b0a9653b68 q=2b320ea4ea",

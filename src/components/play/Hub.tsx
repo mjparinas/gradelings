@@ -176,6 +176,7 @@ export function Hub() {
     },
     lessonsTile,
     ...(stories ? [storiesTile] : []),
+    { id: "break", title: "Brain Break", desc: "A short rest with puzzles", icon: "🧠", colour: "#7c4fe0", dark: "#5d34c4", href: "#/break", flag: "brain-breaks" },
     { id: "trail", title: "Trail Map", desc: "See how far you've come", icon: "🧭", colour: "#f08a4b", dark: "#c46a2c", href: "#/map" },
     ...(hasFacts
       ? [{ id: "facts", title: "Math Facts", desc: factsDesc, icon: "🧮", colour: "#14b8a6", dark: "#0f8f81", href: "#/facts", feature: "facts" as Feature, flag: "math-facts" as FlagKey }]

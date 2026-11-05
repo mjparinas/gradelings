@@ -1,6 +1,7 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
 import { copyOf, from } from "./kit";
+import { CITIZENS_MORE, COURT_MORE, DICTATORSHIP_MORE, FOUNDATIONS_MORE, MEDIA_MORE } from "./social-g9-more";
 import { G9 as WASHINGTON } from "../../washington/units/social-59-g9";
 import { OWN_SOCIAL_9 as OREGON } from "../../oregon/units/social-g9";
 
@@ -837,7 +838,7 @@ export const SOCIAL_9: Unit[] = [
       "12.1.1; 12.1.2; 12.1.3; 12.1.4; 12.1.5; 12.1.6",
       "the influence of earlier thinkers, Tocqueville on American democracy, the Constitution's balance of ideas, separated powers and the Bill of Rights as limits on government",
     ],
-    items: FOUNDATIONS_9,
+    items: [...FOUNDATIONS_9, ...FOUNDATIONS_MORE],
   }),
   copyOf(K("wa-g9-three-branches"), {
     id: "ca-g9-three-branches",
@@ -874,7 +875,7 @@ export const SOCIAL_9: Unit[] = [
       "12.5.1; 12.5.2; 12.5.3; 12.5.4",
       "landmark Supreme Court interpretations of the Constitution, judicial activism and restraint, and changing readings of rights",
     ],
-    items: COURT_9,
+    items: [...COURT_9, ...COURT_MORE],
   }),
   copyOf(
     K("wa-g9-elections"),
@@ -1054,7 +1055,7 @@ export const SOCIAL_9: Unit[] = [
       "12.8.1; 12.8.2; 12.8.3",
       "a free and responsible press, the roles of broadcast, print and electronic media, and how officials use media to shape public opinion",
     ],
-    items: MEDIA_9,
+    items: [...MEDIA_9, ...MEDIA_MORE],
   }),
   bankUnit({
     id: "ca-g9-citizens-and-society",
@@ -1067,7 +1068,7 @@ export const SOCIAL_9: Unit[] = [
       "12.2.2; 12.2.6; 12.3.3; 12.3.4; 12.4.3",
       "economic rights, becoming a citizen through naturalization, the role of religion and religious diversity, civil society in democracies and authoritarian states, and identifying one's representatives in Congress",
     ],
-    items: CITIZENS_SOCIETY_9,
+    items: [...CITIZENS_SOCIETY_9, ...CITIZENS_MORE],
   }),
   bankUnit({
     id: "ca-g9-dictatorship-democracy",
@@ -1080,6 +1081,6 @@ export const SOCIAL_9: Unit[] = [
       "12.9.4; 12.9.5; 12.9.6; 12.9.7; 12.9.8",
       "how tyrannies arose, the illegitimate power of dictators, Latin American revolutions, communism and the movements against it, and new democracies",
     ],
-    items: DICTATORSHIP_DEMOCRACY_9,
+    items: [...DICTATORSHIP_DEMOCRACY_9, ...DICTATORSHIP_MORE],
   }),
 ];

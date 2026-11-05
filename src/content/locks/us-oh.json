@@ -306,7 +306,7 @@
     "units": [
       "meeting-needs text=40a76a9522 std=c3620b95a3 q=3ac35931e2",
       "or-g2-world-maps text=8a70a67868 std=d39a64decd q=f54db7af64",
-      "mb-global-communities text=fdc10e0b47 std=bc50826369 q=a05e20d345",
+      "mb-global-communities text=fdc10e0b47 std=bc50826369 q=faf830a84e",
       "or-g5-history-detective text=919878e133 std=09d35b12e3 q=0a67d0e45b",
       "oh-g3-ohio-environment text=f3fb77ebbd std=8b6be5cc1d q=c50aee2bf1",
       "oh-g3-ohio-communities text=5a6e98dc21 std=c82971d4a7 q=840a462a09",
@@ -716,7 +716,7 @@
     "overview": "ff464093fe",
     "units": [
       "wa-g5-thirteen-colonies text=268bab3377 std=6478341045 q=dd5f1aba73",
-      "ca-g8-revolutionary-ideas text=543eb450c3 std=6b3ab25291 q=4a5af23c80",
+      "ca-g8-revolutionary-ideas text=543eb450c3 std=6b3ab25291 q=1bdb99ec2b",
       "or-g8-founding-ideas text=6fa3d530b3 std=c1de6c5762 q=83494b4253",
       "wa-g8-bill-of-rights text=edcc86640b std=c3ab631bfa q=6898ac27d5",
       "ca-g8-industry-reform text=8cfcde45ec std=20614dd463 q=7b6a2b6d3d",
@@ -809,9 +809,9 @@
   "9/social": {
     "overview": "4f3085f8bc",
     "units": [
-      "ca-g9-foundations text=7e73500361 std=e3c9277e08 q=366cc13a3d",
+      "ca-g9-foundations text=7e73500361 std=e3c9277e08 q=88c273c390",
       "ca-g9-civic-action text=7ff067ec0c std=90027ea14c q=c1c8ac6d15",
-      "ca-g9-media text=67bc186bc5 std=ea049651e1 q=d8967e0b75",
+      "ca-g9-media text=67bc186bc5 std=ea049651e1 q=0fc3f3ad1e",
       "oh-g9-governing-ohio text=9f26321f35 std=6a742757c3 q=9b8fbb6691",
       "oh-g9-us-government text=b2b1785d0f std=0fc07d9ff4 q=21618460d4",
       "oh-g9-personal-finance text=f88dcf17a6 std=5e0863b99e q=fe31eeb80b",

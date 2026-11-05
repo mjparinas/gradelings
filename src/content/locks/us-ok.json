@@ -712,7 +712,7 @@
     "overview": "265475ad55",
     "units": [
       "ca-g5-road-to-revolution text=0db76d8612 std=897bcc07cf q=8ff3e277fb",
-      "ca-g8-revolutionary-ideas text=543eb450c3 std=46c77e39e9 q=4a5af23c80",
+      "ca-g8-revolutionary-ideas text=543eb450c3 std=46c77e39e9 q=1bdb99ec2b",
       "ca-g5-revolution text=ef5fd4d37f std=dca495c44a q=8de8201d9a",
       "ca-g5-constitution text=316951e733 std=bbfabebed2 q=f053d97871",
       "ca-g8-founding-ideals text=acee6a08c8 std=102c98c155 q=26fd931b32",
@@ -720,7 +720,7 @@
       "ca-g8-new-nation text=80ae97aef6 std=d223db092c q=43ff2d5a2f",
       "ca-g8-westward text=0f5e5bb604 std=6afdbca4cd q=fb25eccecb",
       "ca-g8-industry-reform text=8cfcde45ec std=745abe8273 q=7b6a2b6d3d",
-      "ca-g8-divided-nation text=d7d0c32f41 std=ae6419d9d8 q=15ef8274da",
+      "ca-g8-divided-nation text=d7d0c32f41 std=ae6419d9d8 q=1308ba94ab",
       "ca-g8-civil-war text=639e5bd6fb std=db377fcec7 q=538b60ca99",
       "or-g8-reconstruction text=693a3316b8 std=51655fb56b q=4c87f1ca5f"
     ]
@@ -809,12 +809,12 @@
       "ok-g9-modern-oklahoma text=6fa85e1069 std=20404b4ce9 q=9a10ce6000",
       "ok-g9-oklahoma-timeline text=58b73c9f39 std=2617694079 q=34f71c8152",
       "ok-g9-elections text=e841e8edec std=2d41c64f77 q=a38614dd3a",
-      "ca-g9-foundations text=7e73500361 std=cff57d3f5a q=366cc13a3d",
+      "ca-g9-foundations text=7e73500361 std=cff57d3f5a q=88c273c390",
       "ca-g9-forms-of-government text=47a5b003ba std=01cb49682d q=46e402dbc2",
       "ca-g9-three-branches text=439ea561c4 std=50fb559e80 q=4b4a891d5e",
       "ca-g9-rights text=593eeeff61 std=16fb6b07dc q=064d36f990",
-      "ca-g9-supreme-court text=d497c2ea6b std=67229853c8 q=5b4496ce00",
-      "ca-g9-media text=67bc186bc5 std=04013c2f69 q=d8967e0b75",
+      "ca-g9-supreme-court text=d497c2ea6b std=67229853c8 q=0110fb9ee8",
+      "ca-g9-media text=67bc186bc5 std=04013c2f69 q=0fc3f3ad1e",
       "ca-g9-civic-action text=7ff067ec0c std=601b9213d4 q=c1c8ac6d15"
     ]
   },
