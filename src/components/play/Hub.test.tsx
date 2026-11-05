@@ -273,6 +273,22 @@ describe("Hub tiles", () => {
     expect(screen.queryByText("Brain Break")).not.toBeInTheDocument();
   });
 
+  it("has an Explore tile for Grades 2 to 9 (little kids find it in Treasures), and none when switched off", () => {
+    const mid = show("middle");
+    fireEvent.click(tile("Explore"));
+    expect(window.location.hash).toBe("#/explore");
+    mid.unmount();
+    const big = show("big");
+    expect(tile("Explore")).toBeInTheDocument();
+    big.unmount();
+    const little = show("little");
+    expect(screen.queryByText("Explore")).not.toBeInTheDocument();
+    little.unmount();
+    h.off = new Set(["explore-cards"]);
+    show("middle");
+    expect(screen.queryByText("Explore")).not.toBeInTheDocument();
+  });
+
   it("has a Rhymes tile for Grades 2 to 4 only (little kids find it in Treasures), and none when switched off", () => {
     const { unmount } = show("middle");
     fireEvent.click(tile("Rhymes"));

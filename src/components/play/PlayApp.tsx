@@ -32,13 +32,13 @@ import { getCourse, parseUnitKey } from "@/content";
 import { nextGrade } from "@/lib/schoolYear";
 import { go } from "@/lib/router";
 import { Toasts } from "./Toasts";
-import { Arcade, BrainBreak, FactChart, FactsPicker, GameScreen, LazyScreen, PlacementTest, prefetchScreens, RhymeLibrary, RhymeReader, Room, Shop, SneakPeek, StickerBook, StoryLibrary, StoryReader, TrailMap, Treasures, TrophyRoom, WeekRecap } from "./lazyScreens";
+import { Arcade, BrainBreak, ExploreLibrary, ExploreReader, FactChart, FactsPicker, GameScreen, LazyScreen, PlacementTest, prefetchScreens, RhymeLibrary, RhymeReader, Room, Shop, SneakPeek, StickerBook, StoryLibrary, StoryReader, TrailMap, Treasures, TrophyRoom, WeekRecap } from "./lazyScreens";
 import { LessonScreen } from "./LessonScreen";
 
 const MODES: Mode[] = ["practice", "adventure", "review", "speed", "daily", "challenge", "facts"];
 
 /** Screens the admin panel can switch off for everyone (src/lib/flags.ts). A switched-off screen shows the home screen. */
-const SCREEN_FLAGS: Record<string, FlagKey> = { stickers: "sticker-book", room: "my-room", speed: "speed-run", facts: "math-facts", arcade: "arcade", shop: "shop", stories: "story-library", grew: "weekly-recap", break: "brain-breaks", rhymes: "rhymes" };
+const SCREEN_FLAGS: Record<string, FlagKey> = { stickers: "sticker-book", room: "my-room", speed: "speed-run", facts: "math-facts", arcade: "arcade", shop: "shop", stories: "story-library", grew: "weekly-recap", break: "brain-breaks", rhymes: "rhymes", explore: "explore-cards" };
 /** Sessions whose mode the admin panel can switch off. */
 const MODE_FLAGS: Partial<Record<Mode, FlagKey>> = { daily: "daily-challenge", speed: "speed-run", facts: "math-facts" };
 
@@ -108,6 +108,8 @@ const Routes = memo(function Routes({ hash }: { hash: string }) {
       // Rhymes are for the younger readers; older kids go home.
       if (ageBandFor(profile.grade) === "big") return <Hub />;
       return path[1] ? <RhymeReader key={path[1]} id={path[1]} /> : <RhymeLibrary />;
+    case "explore":
+      return path[1] ? <ExploreReader key={path[1]} id={path[1]} /> : <ExploreLibrary />;
     case "break":
       return <BrainBreak />;
     case "treasures":
