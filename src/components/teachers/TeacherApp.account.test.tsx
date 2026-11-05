@@ -15,6 +15,7 @@ vi.mock("@/content", () => ({
   loadGrade: vi.fn().mockResolvedValue(undefined),
 }));
 
+import { TEACHER_VIDEOS } from "@/lib/trainingVideos";
 import { TeacherApp } from "./TeacherApp";
 
 const room3 = { id: "class-1", name: "Room 3", grade: "3", framework: "ca-bc", joinCode: "AB12CD", students: 2 };
@@ -27,6 +28,8 @@ beforeEach(() => {
   window.location.hash = "";
   window.scrollTo = vi.fn() as unknown as typeof window.scrollTo;
   localStorage.clear();
+  // The training videos open by themselves the first time; these tests are about something else.
+  localStorage.setItem("gradelings.trainvideo.seen", JSON.stringify(TEACHER_VIDEOS.map((v) => v.id)));
   detail = { class: empty, assignments: [], due: {}, students: [], roster: [] };
   mocks.call.mockReset();
   mocks.call.mockImplementation((url: string, method = "GET") => {

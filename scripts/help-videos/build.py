@@ -1,14 +1,22 @@
 """Builds the help videos: python3 build.py [video-id ...]. Needs `pip install supertonic` (downloads the model
-on first run), Pillow, numpy and ffmpeg. Writes public/videos/help/<id>.mp4 + .vtt and narration/<id>.txt."""
+on first run), Pillow, numpy and ffmpeg. Writes public/videos/<set>/<id>.mp4 (set: help, or teachers with --set teachers) + .vtt and narration/<id>.txt."""
 import sys, tempfile
 from pathlib import Path
 from engine import ROOT, build
-from specs import VIDEOS
 
 def main():
     from supertonic import TTS
-    want = set(sys.argv[1:])
-    out = ROOT / "public" / "videos" / "help"
+    args = sys.argv[1:]
+    # `--set teachers` builds the teacher training videos (teacher_specs.py) into public/videos/teachers/.
+    group = args[args.index("--set") + 1] if "--set" in args else "help"
+    if "--set" in args:
+        del args[args.index("--set"):args.index("--set") + 2]
+    if group == "teachers":
+        from teacher_specs import VIDEOS
+    else:
+        from specs import VIDEOS
+    want = set(args)
+    out = ROOT / "public" / "videos" / group
     nar = Path(__file__).parent / "narration"
     out.mkdir(parents=True, exist_ok=True); nar.mkdir(exist_ok=True)
     tts = TTS(auto_download=True)

@@ -39,7 +39,7 @@ describe("ClassTimerChip", () => {
     fetchMock.mockImplementation(() => respond({ live: null, timer }));
     render(<ClassTimerChip />);
     await act(() => vi.advanceTimersByTimeAsync(0));
-    expect(fetchMock).toHaveBeenCalledWith("/api/live/?profile=p1", expect.objectContaining({ cache: "no-store" }));
+    expect(fetchMock).toHaveBeenCalledWith("/api/live/?profile=p1&watch=1", expect.objectContaining({ cache: "no-store" }));
     expect(screen.getByText("Silent reading")).toBeInTheDocument();
     expect(screen.getByRole("timer")).toHaveTextContent("0:10");
     // It takes no taps, so it can never sit on top of a button.

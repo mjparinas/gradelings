@@ -1,0 +1,5 @@
+Homework is how you choose what your class practises. Students see it on their home screen, and they can do it offline.
+Each assigned unit can have a start date, a due date, and a number of questions. Without a number, a unit is done when the student reaches Proficient.
+To add a unit, pick it from Add a unit. Or choose Pick several units at once to assign a whole set.
+Choose the whole class, or pick certain students, then tap Assign.
+Not sure about a unit? Tap Preview, or Try it, to play its first questions as a student would. Nothing is saved.
