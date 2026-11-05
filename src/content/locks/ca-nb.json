@@ -3,7 +3,7 @@
     "overview": "910258b54a",
     "units": [
       "letter-names text=4e2d74ab60 std=4dad3d7566 q=a8b9337751",
-      "first-sounds text=dd9cd8d5d4 std=b38a1138d5 q=48ed3455eb",
+      "first-sounds text=dd9cd8d5d4 std=b38a1138d5 q=68c5e7f975",
       "rhyme-time text=12f8d63dc7 std=39d34bcb1b q=b73dfecad5",
       "clap-the-parts text=606ab5cbbd std=dc767e7e03 q=6215dee4f1",
       "listen-to-a-story text=8907705eaa std=faef5e3b03 q=e4e96571e7",
@@ -13,7 +13,7 @@
   "pk/math": {
     "overview": "f1bac3dbd1",
     "units": [
-      "count-to-5 text=5de441ec7a std=8e4b8f5d27 q=7da6a21961",
+      "count-to-5 text=5de441ec7a std=8e4b8f5d27 q=0092517696",
       "find-the-number text=48b0986657 std=36dd9f0ec0 q=cbb1ca9734",
       "more-or-fewer text=0faa658ba5 std=3b6716b9de q=4d8cca7ab1",
       "shapes text=3eb07867e4 std=d13a15d35a q=ed58e37c08",
@@ -50,7 +50,7 @@
     "units": [
       "book-detectives text=1f5750b2af std=092905e85b q=adc3ae2dbb",
       "letter-partners text=c48f27422d std=4ce4a31a0e q=b88f284367",
-      "first-sounds text=cc4fb336eb std=3b1e0e4687 q=1e9600b156",
+      "first-sounds text=cc4fb336eb std=3b1e0e4687 q=ca82eff12c",
       "rhyme-time text=280911bb80 std=49294738f2 q=7ff630edf6",
       "clap-the-beat text=13b130a737 std=867a71d4ac q=d798eaba52",
       "blend-a-word text=3d99132c91 std=5d3543994e q=16d2ff7d7d",
@@ -62,7 +62,7 @@
   "k/math": {
     "overview": "578493c8a5",
     "units": [
-      "count-to-10 text=76d9d2a726 std=bfac2925dd q=eedf7bffb7",
+      "count-to-10 text=76d9d2a726 std=bfac2925dd q=99e62fe722",
       "numbers-to-20 text=e677449710 std=ea7d700167 q=d5b884b629",
       "more-less-same text=732df234df std=3295bdc408 q=52a520ca19",
       "make-5-and-10 text=c234a6f52c std=dc1cb8f6ad q=e9e4baabe2",
@@ -125,7 +125,7 @@
   "1/math": {
     "overview": "578493c8a5",
     "units": [
-      "numbers-to-20 text=b0719f21fd std=cf0fbd106d q=d3300826e4",
+      "numbers-to-20 text=b0719f21fd std=cf0fbd106d q=8f20e555b4",
       "make-ten text=384e300d0c std=c22f228e1b q=74dafe97b0",
       "adding text=e38d25027e std=b1a6a26a56 q=9eb9a94364",
       "take-away text=15b94111e3 std=159211588b q=169ab153d9",

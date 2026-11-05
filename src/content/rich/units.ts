@@ -4,7 +4,16 @@ import * as q from "./questions";
 // Which units mix in the newer question kinds, by grade. Add a unit here to give it some variety.
 
 export const RICH: Record<string, GradeRich> = {
+  pk: {
+    "math/count-to-5": q.sayCount(2, 5),
+    "language/first-sounds": q.sayPicture,
+  },
+  k: {
+    "math/count-to-10": q.sayCount(3, 10),
+    "language/first-sounds": q.sayPicture,
+  },
   g1: {
+    "math/numbers-to-20": q.sayCount(6, 20),
     "language/word-families": q.wordPictures,
     "language/blend-it": q.buildWord,
     "science/living-things": q.livingThings,

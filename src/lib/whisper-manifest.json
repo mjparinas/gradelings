@@ -1,0 +1,22 @@
+{
+  "version": "1",
+  "note": "On-device speech recognition for voice practice. Whisper tiny.en (OpenAI, MIT; ONNX conversion by Xenova, Apache-2.0) run by transformers.js 3.8.1 (Apache-2.0) with onnxruntime-web. Every file is served from our own site. `release` is our GitHub release `whisper-tiny-en-1` (the files copied unchanged, flat names); until it exists, scripts/fetch-whisper.mjs falls back to the pinned `fallback` sources and checks the same sha256. Never replace a release's assets: make `whisper-tiny-en-{n}`, update this file and bump `version`.",
+  "release": "https://github.com/mjparinas/gradelings/releases/download/whisper-tiny-en-1/",
+  "fallback": {
+    "model": "https://huggingface.co/Xenova/whisper-tiny.en/resolve/79fb389fc764e7c395bd330e9531d9d32ada7049/",
+    "engine": "https://registry.npmjs.org/@huggingface/transformers/-/transformers-3.8.1.tgz"
+  },
+  "credit": "Speech recognition: Whisper tiny.en by OpenAI (MIT), ONNX conversion by Xenova (Apache-2.0), run on this device with transformers.js and ONNX Runtime Web.",
+  "files": [
+    { "name": "transformers.min.js", "path": "transformers.min.js", "sha256": "aa5002b70e789798da263f5f99c62bd3e8fcd0c119258a493c40c180648365fa", "bytes": 888173, "from": "npm:package/dist/transformers.min.js" },
+    { "name": "ort-wasm-simd-threaded.jsep.mjs", "path": "ort-wasm-simd-threaded.jsep.mjs", "sha256": "08fb86ec433c78bfb032c5d84a68b8e8e5a8d81268fa39e24314179a5767a5b9", "bytes": 44484, "from": "npm:package/dist/ort-wasm-simd-threaded.jsep.mjs" },
+    { "name": "ort-wasm-simd-threaded.jsep.wasm", "path": "ort-wasm-simd-threaded.jsep.wasm", "sha256": "c46655e8a94afc45338d4cb2b840475f88e5012d524509916e505079c00bfa39", "bytes": 21596019, "from": "npm:package/dist/ort-wasm-simd-threaded.jsep.wasm" },
+    { "name": "config.json", "path": "model/config.json", "sha256": "37a1073be00d19118c06557896c7c148598f4d8277edc0f5bc07c9f5554839f1", "bytes": 2202, "from": "model:config.json" },
+    { "name": "generation_config.json", "path": "model/generation_config.json", "sha256": "132c95ba9db45f4498f2eab3fea7c1d6a174005010f8f6b7d20cfd5e9795996b", "bytes": 1590, "from": "model:generation_config.json" },
+    { "name": "preprocessor_config.json", "path": "model/preprocessor_config.json", "sha256": "a6a76d28c93edb273669eb9e0b0636a2bddbb1272c3261e47b7ca6dfdbac1b8d", "bytes": 339, "from": "model:preprocessor_config.json" },
+    { "name": "tokenizer.json", "path": "model/tokenizer.json", "sha256": "c6ee8f089220a5b1188f6426456772572671c6141ae007eecb83c6a8349f5deb", "bytes": 2128494, "from": "model:tokenizer.json" },
+    { "name": "tokenizer_config.json", "path": "model/tokenizer_config.json", "sha256": "e082c1ad251541bf277967a703252cddd4bb37a71a43737e03d050c22ec08238", "bytes": 835, "from": "model:tokenizer_config.json" },
+    { "name": "encoder_model_quantized.onnx", "path": "model/onnx/encoder_model_quantized.onnx", "sha256": "8cc3c6f8563d1b3fbd2c5af9f64c2bed8b020bc593c402d1ef53b9f08fbf1b90", "bytes": 10124913, "from": "model:onnx/encoder_model_quantized.onnx" },
+    { "name": "decoder_model_merged_quantized.onnx", "path": "model/onnx/decoder_model_merged_quantized.onnx", "sha256": "dbb2e063b7fbc41d9803b9698f93ecb035c50cbb3fb87b56cb131e4a5eb99059", "bytes": 30727382, "from": "model:onnx/decoder_model_merged_quantized.onnx" }
+  ]
+}

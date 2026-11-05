@@ -10,7 +10,7 @@ import { RICH } from "./units";
 
 const seeds = Array.from({ length: 12 }, (_, i) => i);
 const levels = [1, 2, 3] as const;
-const gradeId = (g: string) => g.slice(1);
+const gradeId = (g: string) => (/^g\d$/.test(g) ? g.slice(1) : g);
 
 describe("units that mix in newer question kinds", () => {
   for (const [grade, units] of Object.entries(RICH)) {
@@ -109,6 +109,24 @@ describe("question kinds shape", () => {
   it("every rich question is one of the new kinds", () => {
     const kinds = new Set<Question["kind"]>();
     for (const units of Object.values(RICH)) for (const source of Object.values(units)) for (const q of withSeed(3, () => source({ difficulty: 2 }))) kinds.add(q.kind);
-    expect([...kinds].sort()).toEqual(["fill", "highlight", "match", "mistake", "multi", "tiles"]);
+    expect([...kinds].sort()).toEqual(["fill", "highlight", "match", "mistake", "multi", "say", "tiles"]);
+  });
+});
+
+describe("every framework gets the same mixed-in questions", () => {
+  it("Pre-K and Kindergarten counting asks say-it questions in every framework that has the unit", () => {
+    const frameworks = [...new Set(COURSES.flatMap((c) => Object.keys(c.bigIdeas ?? {})))];
+    expect(frameworks.length).toBeGreaterThan(5);
+    const missing: string[] = [];
+    for (const f of frameworks) {
+      for (const [grade, id] of [["pk", "count-to-5"], ["k", "count-to-10"]]) {
+        const unit = coursesInFramework(COURSES, f as never).find((c) => String(c.grade) === grade && c.subject === "math")?.units.find((u) => u.id === id);
+        if (!unit) continue;
+        let found = 0;
+        for (let s = 0; s < 4; s++) found += withSeed(s, () => unit.generate({ difficulty: 2 })).filter((q) => q.kind === "say").length;
+        if (!found) missing.push(`${f}/${grade}/${id}`);
+      }
+    }
+    expect(missing).toEqual([]);
   });
 });

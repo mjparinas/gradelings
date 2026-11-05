@@ -3,7 +3,7 @@
     "overview": "df457e886f",
     "units": [
       "letter-names text=4e2d74ab60 std=80152fced9 q=a8b9337751",
-      "first-sounds text=dd9cd8d5d4 std=660f4c5a3d q=48ed3455eb",
+      "first-sounds text=dd9cd8d5d4 std=660f4c5a3d q=68c5e7f975",
       "rhyme-time text=12f8d63dc7 std=0b4aab99e6 q=b73dfecad5",
       "clap-the-parts text=606ab5cbbd std=8d41553753 q=6215dee4f1",
       "listen-to-a-story text=8907705eaa std=079ec61d2b q=e4e96571e7",
@@ -13,7 +13,7 @@
   "pk/math": {
     "overview": "2ea3538fa0",
     "units": [
-      "count-to-5 text=5de441ec7a std=870a301b87 q=7da6a21961",
+      "count-to-5 text=5de441ec7a std=870a301b87 q=0092517696",
       "find-the-number text=48b0986657 std=2b17f8884e q=cbb1ca9734",
       "more-or-fewer text=0faa658ba5 std=7acd65322f q=4d8cca7ab1",
       "shapes text=3eb07867e4 std=3ce18f9df6 q=ed58e37c08",
@@ -49,7 +49,7 @@
     "overview": "e274fba31b",
     "units": [
       "letter-partners text=c48f27422d std=ca72635856 q=b88f284367",
-      "first-sounds text=cc4fb336eb std=f5ea35d1cb q=1e9600b156",
+      "first-sounds text=cc4fb336eb std=f5ea35d1cb q=ca82eff12c",
       "rhyme-time text=280911bb80 std=5d3b563d44 q=7ff630edf6",
       "clap-the-beat text=13b130a737 std=c809e098f5 q=d798eaba52",
       "blend-a-word text=3d99132c91 std=e5a513ec97 q=16d2ff7d7d",
@@ -67,7 +67,7 @@
   "k/math": {
     "overview": "1393e084c1",
     "units": [
-      "count-to-10 text=76d9d2a726 std=3aaae1e179 q=eedf7bffb7",
+      "count-to-10 text=76d9d2a726 std=3aaae1e179 q=99e62fe722",
       "numbers-to-20 text=e677449710 std=ae222e98d2 q=d5b884b629",
       "mb-k-quick-look text=76349a9cdd std=eb2b2745cf q=70f74ab815",
       "make-5-and-10 text=c234a6f52c std=e3259a4a00 q=e9e4baabe2",
@@ -131,7 +131,7 @@
   "1/math": {
     "overview": "1393e084c1",
     "units": [
-      "numbers-to-20 text=b0719f21fd std=5d8f344271 q=d3300826e4",
+      "numbers-to-20 text=b0719f21fd std=5d8f344271 q=8f20e555b4",
       "numbers-to-100-ab text=51a27f242d std=1b826fad68 q=644dec890c",
       "mb-g1-estimate-groups text=1a3101398e std=1c18b2a0e8 q=7168007363",
       "halves-ab text=b9c9618edc std=9dafa930d6 q=8b70b39da7",

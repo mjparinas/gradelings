@@ -3,7 +3,7 @@
     "overview": "9dcb473fba",
     "units": [
       "letter-names text=4e2d74ab60 std=9b77244a56 q=a8b9337751",
-      "first-sounds text=dd9cd8d5d4 std=bcaae13794 q=48ed3455eb",
+      "first-sounds text=dd9cd8d5d4 std=bcaae13794 q=68c5e7f975",
       "rhyme-time text=12f8d63dc7 std=87949f38a3 q=b73dfecad5",
       "clap-the-parts text=606ab5cbbd std=0988392a4b q=6215dee4f1",
       "listen-to-a-story text=8907705eaa std=40e2db89cf q=e4e96571e7",
@@ -13,7 +13,7 @@
   "pk/math": {
     "overview": "30158fb969",
     "units": [
-      "count-to-5 text=5de441ec7a std=a37eaa0502 q=7da6a21961",
+      "count-to-5 text=5de441ec7a std=a37eaa0502 q=0092517696",
       "find-the-number text=48b0986657 std=98ea892a30 q=cbb1ca9734",
       "more-or-fewer text=0faa658ba5 std=ad9493fd24 q=4d8cca7ab1",
       "shapes text=3eb07867e4 std=4d6df1e0c4 q=ed58e37c08",
@@ -49,7 +49,7 @@
     "overview": "dc57ece4e6",
     "units": [
       "letter-partners text=c48f27422d std=24796a5070 q=b88f284367",
-      "first-sounds text=cc4fb336eb std=081df42eba q=1e9600b156",
+      "first-sounds text=cc4fb336eb std=081df42eba q=ca82eff12c",
       "rhyme-time text=280911bb80 std=0061c6a300 q=7ff630edf6",
       "clap-the-beat text=13b130a737 std=29125dba3e q=d798eaba52",
       "blend-a-word text=3d99132c91 std=ccc4dc6396 q=16d2ff7d7d",
@@ -65,7 +65,7 @@
   "k/math": {
     "overview": "c681088fff",
     "units": [
-      "count-to-10 text=76d9d2a726 std=f082ed606a q=eedf7bffb7",
+      "count-to-10 text=76d9d2a726 std=f082ed606a q=99e62fe722",
       "numbers-to-20 text=e677449710 std=3d7fed69ed q=d5b884b629",
       "see-it-fast-ab text=17dd33cad4 std=ed7aa7ed3a q=38a80937a2",
       "more-less-same text=732df234df std=f7f4fd05fb q=ab4ef5dcd9",
@@ -122,7 +122,7 @@
   "1/math": {
     "overview": "939408a6c0",
     "units": [
-      "numbers-to-20 text=b0719f21fd std=83bb4faf85 q=d3300826e4",
+      "numbers-to-20 text=b0719f21fd std=83bb4faf85 q=8f20e555b4",
       "numbers-to-100-ab text=51a27f242d std=b90243bb79 q=644dec890c",
       "counting-patterns-ab text=77625cf770 std=79a22e2ac5 q=96d2e37204",
       "make-ten text=384e300d0c std=daa9a63be6 q=74dafe97b0",

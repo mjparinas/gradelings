@@ -3,7 +3,7 @@
     "overview": "910258b54a",
     "units": [
       "letter-names text=4e2d74ab60 std=4dad3d7566 q=a8b9337751",
-      "first-sounds text=dd9cd8d5d4 std=b38a1138d5 q=48ed3455eb",
+      "first-sounds text=dd9cd8d5d4 std=b38a1138d5 q=68c5e7f975",
       "rhyme-time text=12f8d63dc7 std=39d34bcb1b q=b73dfecad5",
       "clap-the-parts text=606ab5cbbd std=dc767e7e03 q=6215dee4f1",
       "listen-to-a-story text=8907705eaa std=faef5e3b03 q=e4e96571e7",
@@ -13,7 +13,7 @@
   "pk/math": {
     "overview": "f1bac3dbd1",
     "units": [
-      "count-to-5 text=5de441ec7a std=8e4b8f5d27 q=7da6a21961",
+      "count-to-5 text=5de441ec7a std=8e4b8f5d27 q=0092517696",
       "find-the-number text=48b0986657 std=36dd9f0ec0 q=cbb1ca9734",
       "more-or-fewer text=0faa658ba5 std=3b6716b9de q=4d8cca7ab1",
       "shapes text=3eb07867e4 std=d13a15d35a q=ed58e37c08",
@@ -65,7 +65,7 @@
       "clap-the-beat text=13b130a737 std=caf1665290 q=d798eaba52",
       "story-order text=f874c5f317 std=761dae5258 q=9e24988535",
       "letter-partners text=c48f27422d std=33f86f648a q=b88f284367",
-      "first-sounds text=cc4fb336eb std=6d46840778 q=1e9600b156",
+      "first-sounds text=cc4fb336eb std=6d46840778 q=ca82eff12c",
       "blend-a-word text=3d99132c91 std=0eca852d91 q=16d2ff7d7d",
       "sight-words text=2cc8b0433d std=452f04da40 q=50140fdbd6",
       "book-detectives text=1f5750b2af std=bb4b36c445 q=adc3ae2dbb",
@@ -76,7 +76,7 @@
   "k/math": {
     "overview": "76bb9940f1",
     "units": [
-      "count-to-10 text=76d9d2a726 std=dcdf4af34c q=eedf7bffb7",
+      "count-to-10 text=76d9d2a726 std=dcdf4af34c q=99e62fe722",
       "see-it-fast-ab text=d62a66c092 std=133e9de058 q=38a80937a2",
       "more-less-same text=732df234df std=2edf2bfde9 q=52a520ca19",
       "make-5-and-10 text=c234a6f52c std=2de570286a q=e9e4baabe2",
@@ -144,7 +144,7 @@
   "1/math": {
     "overview": "0e7eaa93bc",
     "units": [
-      "numbers-to-20 text=b0719f21fd std=9e202f313d q=d3300826e4",
+      "numbers-to-20 text=b0719f21fd std=9e202f313d q=8f20e555b4",
       "numbers-to-100-ab text=51a27f242d std=b78e7a31b2 q=644dec890c",
       "counting-patterns-ab text=77625cf770 std=77ef531f5f q=96d2e37204",
       "equal-or-not text=d523ef7361 std=3f8f6d35d1 q=67dfb0baf5",

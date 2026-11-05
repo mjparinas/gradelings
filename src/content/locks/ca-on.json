@@ -3,7 +3,7 @@
     "overview": "6345191a5f",
     "units": [
       "letter-names text=4e2d74ab60 std=96276878f2 q=a8b9337751",
-      "first-sounds text=dd9cd8d5d4 std=e048680d03 q=48ed3455eb",
+      "first-sounds text=dd9cd8d5d4 std=e048680d03 q=68c5e7f975",
       "rhyme-time text=12f8d63dc7 std=5b72916d42 q=b73dfecad5",
       "clap-the-parts text=606ab5cbbd std=3b904c1e86 q=6215dee4f1",
       "listen-to-a-story text=8907705eaa std=564d6a8074 q=e4e96571e7",
@@ -13,7 +13,7 @@
   "pk/math": {
     "overview": "49771f5a2c",
     "units": [
-      "count-to-5 text=5de441ec7a std=adfc12d1af q=7da6a21961",
+      "count-to-5 text=5de441ec7a std=adfc12d1af q=0092517696",
       "find-the-number text=48b0986657 std=9d8caa2ed9 q=cbb1ca9734",
       "more-or-fewer text=0faa658ba5 std=5f71c4a0e8 q=4d8cca7ab1",
       "shapes text=3eb07867e4 std=8a99ddf59e q=ed58e37c08",
@@ -49,7 +49,7 @@
     "overview": "1f699eb398",
     "units": [
       "letter-partners text=c48f27422d std=8ee6a3e992 q=b88f284367",
-      "first-sounds text=cc4fb336eb std=5eba838b81 q=1e9600b156",
+      "first-sounds text=cc4fb336eb std=5eba838b81 q=ca82eff12c",
       "rhyme-time text=280911bb80 std=5ad374d8ea q=7ff630edf6",
       "clap-the-beat text=13b130a737 std=82a8526edc q=d798eaba52",
       "blend-a-word text=3d99132c91 std=56f6dbe774 q=16d2ff7d7d",

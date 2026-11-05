@@ -1,6 +1,6 @@
 import { pick, randInt, sample, shuffle } from "../random";
 import type { Question, Visual } from "../types";
-import { aName, fill, highlight, match, mistake, multi, tiles } from "./make";
+import { aName, fill, highlight, match, mistake, multi, say, tiles } from "./make";
 
 // ---------- Language ----------
 
@@ -238,5 +238,42 @@ export const equivalentFill = (): Question[] => {
   const decoys = [...new Set([String(a), String(a * 2 + 1), String(a * 3 + 1), String(a + 1)])].filter((d) => !answers.includes(d)).slice(0, 2);
   return [
     fill("Fill in the equivalent fractions.", `Multiply the top and the bottom by the same number. Here the bottom goes from ${b} to ${b * 2}, so the top doubles.`, `${a}/${b} = ___/${b * 2} = ___/${b * 3}`, answers, shuffle([...answers, ...decoys])),
+  ];
+};
+
+// ---------- Say it out loud (voice practice; plain tap questions where voice is off) ----------
+
+const PICTURE_WORDS: [string, string][] = [
+  ["cat", "🐱"], ["dog", "🐶"], ["sun", "☀️"], ["ball", "⚽"], ["fish", "🐟"], ["bus", "🚌"], ["hat", "🎩"], ["pig", "🐷"], ["cow", "🐄"], ["duck", "🦆"],
+];
+
+/** Name the picture: `startsWith` ones begin with a sound the hint names. */
+export const sayPicture = (): Question[] => {
+  const [target, ...rest] = sample(PICTURE_WORDS, 3);
+  return [
+    say(
+      "What is this? Say it out loud, or tap it.",
+      `Say it slowly. It starts with the sound “${target[0][0]}”.`,
+      { word: target[0] },
+      [target, ...rest].map(([w, e]) => ({ label: w, emoji: e })),
+      0,
+      { type: "emoji", emoji: target[1] },
+    ),
+  ];
+};
+
+/** Count the stars out loud, from 1 up to n. */
+export const sayCount = (low: number, high: number) => (): Question[] => {
+  const n = randInt(low, high);
+  const nearby = [...new Set([n - 1, n + 1, n + 2, n - 2].filter((x) => x >= 1 && x !== n))].slice(0, 2);
+  return [
+    say(
+      "Count the stars out loud, or tap how many.",
+      `Point to each star and count: ${Array.from({ length: Math.min(n, 5) }, (_, i) => i + 1).join(", ")}${n > 5 ? " …" : ""}`,
+      { count: n },
+      [n, ...nearby].map((x) => ({ label: String(x) })),
+      0,
+      { type: "dots", count: n, emoji: "⭐" },
+    ),
   ];
 };

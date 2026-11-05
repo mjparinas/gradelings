@@ -145,9 +145,9 @@ function checkMath(q: Question, answerText: string) {
  * choice is a picture, a shape or one letter or number. Tapping in order uses up to 4 pictures; sorting needs pictures.
  */
 function checkPreK(q: Question) {
-  expect(["choice", "order", "sort", "match"], `Pre-K "${q.prompt}" is a ${q.kind} question`).toContain(q.kind);
+  expect(["choice", "say", "order", "sort", "match"], `Pre-K "${q.prompt}" is a ${q.kind} question`).toContain(q.kind);
   expect(q.visual?.type ?? "", `Pre-K "${q.prompt}" can't need reading a passage`).not.toMatch(/^(passage|story|table)$/);
-  if (q.kind === "choice") {
+  if (q.kind === "choice" || q.kind === "say") {
     expect(q.choices.length, `Pre-K "${q.prompt}" has more than 3 choices`).toBeLessThanOrEqual(3);
     for (const c of q.choices) expect(Boolean(c.emoji || c.shape || c.label.length <= 2), `Pre-K choice "${c.label}" needs a picture`).toBe(true);
   }
@@ -224,6 +224,22 @@ export function checkQuestion(q: Question, course: Pick<Course, "grade">) {
       const at = (q.target - q.min) / q.step;
       expect(Math.abs(at - Math.round(at)) < 1e-9 && q.target >= q.min && q.target <= q.max, `place target ${q.target} must sit on a tick`).toBe(true);
       expect(band, "place needs a pointer or keys, not for the littlest").not.toBe("little");
+      break;
+    }
+    case "say": {
+      expect(q.choices.length).toBeGreaterThanOrEqual(2);
+      expect(q.choices.length).toBeLessThanOrEqual(band === "little" ? 4 : 5);
+      expect(new Set(q.choices.map((c) => c.id)).size).toBe(q.choices.length);
+      expect(new Set(q.choices.map((c) => c.label)).size, `duplicate choices in "${q.prompt}"`).toBe(q.choices.length);
+      expect(q.choices.map((c) => c.id)).toContain(q.answer);
+      if ("count" in q.say) {
+        expect(Number.isInteger(q.say.count) && q.say.count >= 2 && q.say.count <= 20, `count ${q.say.count}`).toBe(true);
+        expect(q.choices.find((c) => c.id === q.answer)?.label).toBe(String(q.say.count));
+      } else {
+        // The word to say is the answer's own label, so a child who taps gets the same thing right.
+        expect(q.say.word.trim()).not.toBe("");
+        expect(q.choices.find((c) => c.id === q.answer)?.label.toLowerCase()).toBe(q.say.word.toLowerCase());
+      }
       break;
     }
     case "match": {

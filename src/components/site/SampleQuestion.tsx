@@ -29,6 +29,10 @@ export function answerText(q: Question): string {
       return `${q.target} of ${q.parts} parts shaded`;
     case "place":
       return placeLabel(q, q.target);
+    case "say": {
+      const c = q.choices.find((x) => x.id === q.answer);
+      return c ? [c.emoji, c.label].filter(Boolean).join(" ") : q.answer;
+    }
     case "match":
       return q.pairs.map((x) => `${x.left.label} → ${x.right.label}`).join(" · ");
     case "multi":
@@ -117,6 +121,16 @@ function Body({ q, seed }: { q: Question; seed: number }) {
       return <p className="font-read text-ink-soft">Tap the parts to shade them, in a bar or circle cut into {q.parts} equal parts.</p>;
     case "place":
       return <p className="font-read text-ink-soft">Slide the marker along a number line from {placeLabel(q, q.min)} to {placeLabel(q, q.max)}.</p>;
+    case "say":
+      return (
+        <ul className="flex flex-wrap gap-2" aria-label="Choices">
+          {q.choices.map((c) => (
+            <li key={c.id} className={chip}>
+              <ChoiceContent c={c} q={{ ...q, kind: "choice" }} />
+            </li>
+          ))}
+        </ul>
+      );
     case "match":
       return (
         <div className="flex flex-col gap-2">
