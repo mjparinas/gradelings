@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/components/site/jsonld";
+import { activitiesPath } from "@/components/site/activitiesData";
 import { HELP_FAQS, HELP_GRADES, gradeName, helpAtHomePath, helpGradeFromSlug, tipsFor } from "@/components/site/helpAtHome";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { gradeSlug } from "@/content/subjects";
@@ -73,7 +74,7 @@ export default async function HelpAtHomeGradePage({ params }: Props) {
         </dl>
       </section>
       <p className="mt-10 font-read text-lg">
-        Other grades: <Link href={helpAtHomePath.hub()} className="font-bold underline">all help at home pages</Link>. These are ideas for a few minutes at home, not a report-card mark; your child&apos;s teacher decides how they are doing at school.
+        Other grades: <Link href={helpAtHomePath.hub()} className="font-bold underline">all help at home pages</Link>. Something to print: <Link href={activitiesPath.hub()} className="font-bold underline">free activities</Link>. These are ideas for a few minutes at home, not a report-card mark; your child&apos;s teacher decides how they are doing at school.
       </p>
     </SitePage>
   );
