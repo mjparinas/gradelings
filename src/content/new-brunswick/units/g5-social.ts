@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { ACADIA_DEEP, CONFEDERACY_DEEP, WORLDVIEW_DEEP } from "./g4-g5-social-deeper";
 
 // Grade 5 social studies, New Brunswick: the Wabanaki Confederacy and the French and British in Atlantic Canada. Wabanaki
 // content is light and in the present tense for living communities.
@@ -99,7 +100,7 @@ export const wabanakiConfederacy = bankUnit({
   parentNote:
     "Practises the governance structure and role of the Wabanaki Confederacy and the Peace and Friendship treaties. The content is light and in the present tense. It follows the Grade 5 social studies skill descriptors on power and governance and on reconciliation in the New Brunswick curriculum.",
   standards: ["Civics: Power and Governance, Wabanaki: Reconciliation", "the governance structure and role of the Wabanaki Confederacy, and contact and colonization from Wabanaki perspectives"],
-  items: CONFEDERACY,
+  items: [...CONFEDERACY, ...CONFEDERACY_DEEP],
 });
 
 export const acadiaLoyalists = bankUnit({
@@ -110,7 +111,7 @@ export const acadiaLoyalists = bankUnit({
   parentNote:
     "Practises the evidence of British and French presence in Atlantic Canada, using primary and secondary sources. It follows the Grade 5 social studies skill descriptors on human systems and on historical sources in the New Brunswick curriculum.",
   standards: ["Geography: Human Systems and Interactions, History: Sources and Methods", "evidence of British and French presence in Atlantic Canada, and using primary and secondary sources"],
-  items: ACADIA,
+  items: [...ACADIA, ...ACADIA_DEEP],
 });
 
 export const worldviewEconomics = bankUnit({
@@ -121,5 +122,5 @@ export const worldviewEconomics = bankUnit({
   parentNote:
     "Practises how different worldviews lead to different approaches to economic decisions, with examples such as barter, the fur trade and Netukulimk. It follows the Grade 5 social studies skill descriptors on economic decision-making in the New Brunswick curriculum.",
   standards: ["Economics: Decision-Making", "worldview, and how different worldviews lead to different approaches to economic decision-making"],
-  items: WORLDVIEW,
+  items: [...WORLDVIEW, ...WORLDVIEW_DEEP],
 });

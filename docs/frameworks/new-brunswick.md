@@ -13,4 +13,4 @@
 - New Brunswick Kindergarten to Grade 5 math is provisional: the department's new K–2 and 3–5 documents are on a staff-only SharePoint (see `gradelings-research/new-brunswick/README.md`).
 
 ## Social studies depth
-- Grade 8 (Confederation, Black history, rights and reform, Wabanaki empowerment) and Grade 9 (rights and roles, identity and migration, treaties, places) social studies units have about 40 questions each, added November 2026 in `g8-g9-social-deeper.ts`. Grade 4 and 5 social studies are still near 30 questions per unit.
+- Grade 8 (Confederation, Black history, rights and reform, Wabanaki empowerment) and Grade 9 (rights and roles, identity and migration, treaties, places) social studies units have about 40 questions each, added November 2026 in `g8-g9-social-deeper.ts`. Grade 4 (lands, regions, explorers) and Grade 5 (confederacy, Acadia and Loyalists, worldview and economics, Atlantic meetings) social studies units hold about 45 questions each, added November 2026 in `g4-g5-social-deeper.ts`. The Wabanaki items there were written without Wabanaki review.
