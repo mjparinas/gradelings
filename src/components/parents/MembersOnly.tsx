@@ -1,6 +1,7 @@
 "use client";
 
-import { useMemo, useSyncExternalStore, type ReactNode } from "react";
+import { useEffect, useMemo, useSyncExternalStore, type ReactNode } from "react";
+import { reportPaywallSeen } from "@/lib/appSignals";
 import { reportUnitRefs } from "@/lib/reports";
 import { stakeFor, stakeLine, type ChildStake } from "@/lib/paywall";
 import { canUse, upgradeOffer } from "@/lib/plan";
@@ -28,6 +29,8 @@ export function MembersOnly({ title, children, className = "" }: { title: string
   const say = useSay();
   const inStoreApp = useSyncExternalStore(noSubscribe, isStoreApp, () => false);
   const href = family.account ? "#/subscription" : "#/account?next=subscription";
+  const signedIn = Boolean(family.account);
+  useEffect(() => reportPaywallSeen("members-reports", signedIn), [signedIn]);
   return (
     <section className={`rounded-2xl border-2 border-dashed border-line bg-paper p-5 print:hidden ${className}`} data-members-only="">
       <h2 className="mb-2 text-xl font-bold">

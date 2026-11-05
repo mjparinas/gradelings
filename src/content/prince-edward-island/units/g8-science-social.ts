@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { CITIZENSHIP_MORE, DECADES_MORE, ECONOMY_MORE, GEOGRAPHY_MORE, GOVERNMENT_MORE, IDENTITY_MORE, NEWCOMERS_MORE, WAR_PEACE_MORE } from "./g8-social-more";
 
 // Grade 8 science and social studies, Prince Edward Island: Water Systems, and Canadian identity from the 1920s to now.
 // The PEI Grade 8 guide is not available, so social studies questions use only well-documented, nationally standard facts
@@ -248,7 +249,7 @@ export const peCanadianIdentity8 = bankUnit({
   blurb: "Roots of who we are",
   parentNote: "Practises the idea of Canadian identity and its cultural, political and societal roots from the 1920s to present-day Canada.",
   standards: ["Canadian identity", "the idea of Canadian identity and its cultural, political and societal roots from the 1920s to now"],
-  items: IDENTITY,
+  items: [...IDENTITY, ...IDENTITY_MORE],
 });
 
 export const peGeographicInfluences8 = bankUnit({
@@ -258,7 +259,7 @@ export const peGeographicInfluences8 = bankUnit({
   blurb: "How geography shapes who we are",
   parentNote: "Practises how geography has influenced Canadian identity, using maps and geographic thinking.",
   standards: ["Geographic influences", "how geographic influences have shaped Canadian identity"],
-  items: GEOGRAPHY,
+  items: [...GEOGRAPHY, ...GEOGRAPHY_MORE],
 });
 
 export const peDecadesOfChange8 = bankUnit({
@@ -268,7 +269,7 @@ export const peDecadesOfChange8 = bankUnit({
   blurb: "From the 1920s to today",
   parentNote: "Practises how events and changes in the decades from the 1920s to present-day Canada have shaped Canadian identity.",
   standards: ["Decades of change", "how changes in the decades since the 1920s have shaped Canadian identity"],
-  items: DECADES,
+  items: [...DECADES, ...DECADES_MORE],
 });
 
 export const peCitizenship8 = bankUnit({
@@ -278,7 +279,7 @@ export const peCitizenship8 = bankUnit({
   blurb: "Rights, responsibilities and belonging",
   parentNote: "Practises how citizenship connects to Canadian identity, including rights, responsibilities and taking part in society.",
   standards: ["Citizenship", "how citizenship is part of Canadian identity"],
-  items: CITIZENSHIP,
+  items: [...CITIZENSHIP, ...CITIZENSHIP_MORE],
 });
 
 // Decades of change: Canada in the Second World War, the Cold War and peacekeeping. Standard national history only.
@@ -327,7 +328,7 @@ export const peWarAndPeace8 = bankUnit({
   parentNote:
     "Practises how the Second World War, the Korean War, the Cold War and peacekeeping changed Canada, and how Canadians remember those who served.",
   standards: ["Decades of change", "how the Second World War, the Cold War and peacekeeping shaped Canada and Canadian identity"],
-  items: WAR_PEACE,
+  items: [...WAR_PEACE, ...WAR_PEACE_MORE],
 });
 
 // Citizenship: how Canada is governed. Standard civics facts only.
@@ -378,7 +379,7 @@ export const peHowCanadaIsGoverned8 = bankUnit({
   parentNote:
     "Practises how Canadian government works: the monarchy, Parliament and the Legislative Assembly, how a bill becomes law, elections, the courts and the three levels of government.",
   standards: ["Citizenship", "how Canada’s federal, provincial and municipal governments work and how citizens take part"],
-  items: GOVERNMENT,
+  items: [...GOVERNMENT, ...GOVERNMENT_MORE],
 });
 
 // Decades of change: work, money and everyday life from the 1920s to now. Standard national history only.
@@ -426,7 +427,7 @@ export const peWorkAndMoney8 = bankUnit({
   parentNote:
     "Practises how work, money and government programs changed in Canada from the Great Depression to today, from the family allowance and pensions to free trade and the loonie.",
   standards: ["Decades of change", "how the economy, work and social programs changed in Canada from the 1920s to now"],
-  items: ECONOMY,
+  items: [...ECONOMY, ...ECONOMY_MORE],
 });
 
 // Canadian identity: newcomers, rights and diverse communities since the 1920s. Standard national history only.
@@ -475,5 +476,5 @@ export const peNewcomers8 = bankUnit({
   parentNote:
     "Practises how immigration, refugees, Acadian and Black Canadian communities, and the fight against discrimination have shaped Canadian identity since the 1920s.",
   standards: ["Canadian identity", "how immigration, diverse communities and the struggle for equal rights have shaped Canadian identity"],
-  items: NEWCOMERS,
+  items: [...NEWCOMERS, ...NEWCOMERS_MORE],
 });

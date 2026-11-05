@@ -28,7 +28,7 @@ export async function GET(req: Request) {
 
   const profile = await exchangeGoogleCode(req, code, state);
   if (!profile) return fail("failed");
-  const account = await accountForGoogle(profile, { trialEndsAt: state.trialEndsAt, referral: state.referral });
+  const account = await accountForGoogle(profile, { trialEndsAt: state.trialEndsAt, referral: state.referral, teacher: state.from === "teachers" });
   if (!account.ok) return fail(account.reason);
 
   const { token, maxAge } = await createSession(account.parentId, account.familyId, req);

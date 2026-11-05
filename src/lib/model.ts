@@ -63,6 +63,8 @@ export interface ChildSettings {
   /** Reading comfort: extra space between letters, words and lines. */
   /** A hint opened before answering still counts as a first-try answer. Off by default: it counts like a retry. */
   freeHints?: boolean;
+  /** Answer some questions out loud (on-device speech recognition; flag voice-practice). Off unless a parent turns it on. */
+  voice?: boolean;
   roomyText?: boolean;
   /** Stronger text colours and outlines. */
   highContrast?: boolean;

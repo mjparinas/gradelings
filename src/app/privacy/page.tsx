@@ -25,7 +25,7 @@ export default async function PrivacyPage() {
           <li>We show no ads and never sell or rent your family’s information.</li>
           <li>We measure visits to our public website, and our email provider tells us when an email we send you is opened or a link in it is clicked. See “Who we share it with” below.</li>
           <li>We keep a child’s first name or nickname, grade, an optional birth year, an avatar and their practice results. Nothing else about them.</li>
-          <li>Children don’t type free text, upload photos or record their voice.</li>
+          <li>Children don’t type free text or upload photos. If you turn on “answer out loud” for a child (off unless you do), their voice is understood on the device while they answer: it is never sent to us or anyone else, never saved, and never used for a class student account.</li>
           <li>You can export or delete everything yourself, at any time, from the Parent area.</li>
         </ul>
       </Section>
@@ -47,6 +47,7 @@ export default async function PrivacyPage() {
           <li>Your email address and a password. Passwords are stored only as a salted scrypt hash, never in readable form.</li>
           <li>Subscription details: your plan, billing interval, renewal date and the amounts paid (when you delete your account, the amounts stay in our totals with nothing linking them to you). Payments are handled by Stripe, so we never see or store your card number.</li>
           <li>Gift plans: if you buy a gift, Stripe takes your payment and email; we keep the gift code we made, the Stripe checkout id and whether the code was used. The code is emailed to you, and we do not ask for or store the recipient’s name or email.</li>
+          <li>Which kind of app your family uses (the website, the Android app or the iPhone and iPad app), as the last time each one synced, and whether the app showed a locked part to you or your child (a unit the free plan keeps closed, or a members-only part of the reports), as a count of days for each of the two kinds. We use it to see how the apps are used and where the plan is unclear. It names no child, unit or answer, and is deleted with your account.</li>
           <li>Referrals: a referral code for your family, and, if you signed up through a friend’s link, which family’s code you used. A parent can’t see who used their code, only how many families joined and how many free months that earned.</li>
         </ul>
         <p>

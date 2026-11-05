@@ -15,10 +15,11 @@ const h = vi.hoisted(() => ({
   unitRef: undefined as unknown,
   family: { plan: "free", trialEndsAt: 0 } as unknown,
   flag: true,
+  seen: true,
 }));
 
 vi.mock("@/lib/store", () => {
-  const derived = { xp: 0, coins: 0, units: {}, speedBest: {}, days: {}, goalPicks: {}, dailyDone: [] as string[], level: 1, levelXp: 0, levelNeed: 80 };
+  const derived = { xp: 0, coins: 0, get units() { return h.seen ? { "math-1:u1": { attempts: 5 } } : {}; }, speedBest: {}, days: {}, goalPicks: {}, dailyDone: [] as string[], level: 1, levelXp: 0, levelNeed: 80 };
   const useStore = Object.assign((select: (s: unknown) => unknown) => select({ log: h.log, logSoon: h.log, family: h.family }), { getState: () => ({}) });
   return {
     useStore,
@@ -46,8 +47,8 @@ vi.mock("./ReportQuestion", () => ({ ReportQuestion: () => null }));
 vi.mock("@/lib/remoteFlags", () => ({ useFlag: (k: string) => (k === "video-help" ? h.flag : false) }));
 vi.mock("@/lib/videoHelp", () => ({ helpVideoFor: (k: string) => (k === "math-1:u1" ? { id: "vid", title: "A video", seconds: 40, src: "/v.mp4", captions: "/v.vtt" } : undefined) }));
 vi.mock("./lazyScreens", () => ({
-  HelpVideoPlayer: ({ onWatched, onNext }: { onWatched: (s: number, d: boolean) => void; onNext: () => void }) => (
-    <button type="button" onClick={() => { onWatched(30, true); onNext(); }}>Try one more</button>
+  HelpVideoPlayer: ({ onWatched, onNext, onClose, intro }: { onWatched: (s: number, d: boolean) => void; onNext: () => void; onClose: () => void; intro?: boolean }) => (
+    <button type="button" onClick={() => { onWatched(30, true); onClose(); if (!intro) onNext(); }}>{intro ? "Let's start" : "Try one more"}</button>
   ),
 }));
 
@@ -67,6 +68,7 @@ beforeEach(() => {
   localStorage.clear();
   h.log.mockClear();
   h.flag = true;
+  h.seen = true;
   h.family = { plan: "premium", trialEndsAt: 0 };
   h.plan = makePlan();
 });
@@ -101,5 +103,38 @@ describe("help video after a second miss", () => {
     render(<Session mode="practice" scope="math-1" />);
     await click("No");
     expect(screen.queryByRole("button", { name: /watch a short video/i })).not.toBeInTheDocument();
+  });
+});
+
+describe("help video before a unit's first question", () => {
+  it("shows once for a unit the child has never tried, logs the watch and lets them start", async () => {
+    h.seen = false;
+    render(<Session mode="practice" scope="math-1" />);
+    await click(/let's start/i);
+    expect(events().filter((e) => e.type === "video")).toHaveLength(1);
+    expect(screen.getByText("Question number 1")).toBeInTheDocument();
+    await click("Yes");
+    await click(/next|keep going|continue/i);
+    expect(screen.queryByRole("button", { name: /let's start/i })).not.toBeInTheDocument();
+  });
+
+  it("is skipped for a unit already tried, for non-members, with the flag off, and when resuming modes without retries", async () => {
+    render(<Session mode="practice" scope="math-1" />);
+    expect(screen.queryByRole("button", { name: /let's start/i })).not.toBeInTheDocument();
+    cleanup();
+    h.seen = false;
+    h.family = { plan: "free", trialEndsAt: 0 };
+    render(<Session mode="practice" scope="math-1" />);
+    expect(screen.queryByRole("button", { name: /let's start/i })).not.toBeInTheDocument();
+    cleanup();
+    h.family = { plan: "premium", trialEndsAt: 0 };
+    h.flag = false;
+    render(<Session mode="practice" scope="math-1" />);
+    expect(screen.queryByRole("button", { name: /let's start/i })).not.toBeInTheDocument();
+    cleanup();
+    h.flag = true;
+    h.plan = { ...makePlan(), retries: false };
+    render(<Session mode="practice" scope="math-1" />);
+    expect(screen.queryByRole("button", { name: /let's start/i })).not.toBeInTheDocument();
   });
 });

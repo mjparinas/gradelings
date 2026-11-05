@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { EXPLORATION_MORE, EXPLORERS_MORE, IMPACTS_MORE } from "./g4-social-more";
 
 // Grade 4 social studies, Nova Scotia: what exploration is, stories of explorers and the impacts of exploration.
 // Mi'kmaw and African content is factual and in the past or present tense as fits.
@@ -101,7 +102,7 @@ export const exploration = bankUnit({
   parentNote:
     "Practises what exploration is, why people explore, the tools they use and the fact that people already lived in the places explorers reached. It follows the Grade 4 Nova Scotia social studies outcome on the concept of exploration.",
   standards: ["Investigate the concept of exploration", "reasons, ways and tools of exploration"],
-  items: EXPLORATION,
+  items: [...EXPLORATION, ...EXPLORATION_MORE],
 });
 
 export const explorers = bankUnit({
@@ -112,7 +113,7 @@ export const explorers = bankUnit({
   parentNote:
     "Practises well-known facts about explorers connected to Nova Scotia and Canada, including Mi’kmaw travellers, Cabot, Cartier, Champlain, Mathieu Da Costa and Hudson. It follows the Grade 4 Nova Scotia social studies outcome on the stories of explorers.",
   standards: ["Investigate the stories of various explorers", "who explored, when, where and why"],
-  items: EXPLORERS,
+  items: [...EXPLORERS, ...EXPLORERS_MORE],
 });
 
 export const explorationImpacts = bankUnit({
@@ -123,5 +124,5 @@ export const explorationImpacts = bankUnit({
   parentNote:
     "Practises thinking about the positive and negative impacts of exploration, including trade and new maps as well as disease and loss of land for First Nations, and how the same event looks different to different people. It follows the Grade 4 Nova Scotia social studies outcome on the impacts of exploration. Content about First Nations is handled carefully.",
   standards: ["Evaluate the impacts of exploration", "positive and negative effects and different perspectives"],
-  items: IMPACTS,
+  items: [...IMPACTS, ...IMPACTS_MORE],
 });

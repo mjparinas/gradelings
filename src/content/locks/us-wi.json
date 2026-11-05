@@ -3,7 +3,7 @@
     "overview": "c5cd0f3e35",
     "units": [
       "letter-names text=4e2d74ab60 std=76c3cdfad9 q=a8b9337751",
-      "first-sounds text=dd9cd8d5d4 std=d1bdd08c46 q=48ed3455eb",
+      "first-sounds text=dd9cd8d5d4 std=d1bdd08c46 q=68c5e7f975",
       "rhyme-time text=12f8d63dc7 std=afe5c5623a q=b73dfecad5",
       "clap-the-parts text=606ab5cbbd std=ad8858ca95 q=6215dee4f1",
       "listen-to-a-story text=8907705eaa std=4a5f5cfacc q=e4e96571e7",
@@ -13,7 +13,7 @@
   "pk/math": {
     "overview": "4c7c91bf72",
     "units": [
-      "count-to-5 text=5de441ec7a std=40360e002f q=7da6a21961",
+      "count-to-5 text=5de441ec7a std=40360e002f q=0092517696",
       "find-the-number text=48b0986657 std=069e8ee86f q=cbb1ca9734",
       "more-or-fewer text=0faa658ba5 std=49b50deef1 q=4d8cca7ab1",
       "shapes text=3eb07867e4 std=5832ebd596 q=ed58e37c08",
@@ -25,31 +25,31 @@
   "pk/science": {
     "overview": "7e5c53a53c",
     "units": [
-      "five-senses text=ede42da0ab std=5c29f83e13 q=cd1a3c2577",
-      "living-or-not text=9c2f339fb0 std=fc429a42ae q=c6b64af68c",
-      "animals-and-babies text=c26be2c8ec std=3266787f85 q=d23f0b3d01",
-      "weather-and-sky text=152ba8b660 std=517545ceed q=04120788f3",
-      "plants-grow text=beae59bc1e std=a4199f48c9 q=d8f8686f2b",
-      "sink-or-float text=87253513e6 std=761179a26b q=80c8fb85a3"
+      "five-senses text=ede42da0ab std=5c29f83e13 q=cd19f59f3e",
+      "living-or-not text=9c2f339fb0 std=fc429a42ae q=28feb0fe3d",
+      "animals-and-babies text=c26be2c8ec std=3266787f85 q=628e0c3ebe",
+      "weather-and-sky text=152ba8b660 std=517545ceed q=e38fb3dc80",
+      "plants-grow text=beae59bc1e std=a4199f48c9 q=63e8055882",
+      "sink-or-float text=87253513e6 std=761179a26b q=fb450f2fce"
     ]
   },
   "pk/social": {
     "overview": "9018601ee6",
     "units": [
-      "my-family text=81af8740c1 std=4b4d39f92a q=41e53ad242",
-      "feelings text=32db0a0097 std=5ce7194770 q=1e8788180c",
-      "community-helpers text=e038723509 std=3834bcf210 q=27bacf2a4a",
-      "places-around-me text=659860832c std=0af8750f32 q=8a8589b026",
-      "taking-turns text=04b975dae4 std=b5276ac356 q=22be788cc9",
-      "first-next-last text=6f92e7037f std=e2d9fa9d4b q=1ad086320d",
-      "caring-for-our-world text=0df6123b83 std=4b1c41655d q=82f9f5197f"
+      "my-family text=81af8740c1 std=4b4d39f92a q=5900be8ff3",
+      "feelings text=32db0a0097 std=5ce7194770 q=13ad31eeb7",
+      "community-helpers text=e038723509 std=3834bcf210 q=9b79a20332",
+      "places-around-me text=659860832c std=0af8750f32 q=c5c6f817fe",
+      "taking-turns text=04b975dae4 std=b5276ac356 q=b3c8ff817f",
+      "first-next-last text=6f92e7037f std=e2d9fa9d4b q=32446dfd5f",
+      "caring-for-our-world text=0df6123b83 std=4b1c41655d q=974620c174"
     ]
   },
   "k/language": {
     "overview": "bd80c24a54",
     "units": [
       "letter-partners text=c48f27422d std=c9f662d68c q=b88f284367",
-      "first-sounds text=cc4fb336eb std=6abff3bdc3 q=1e9600b156",
+      "first-sounds text=cc4fb336eb std=6abff3bdc3 q=ca82eff12c",
       "rhyme-time text=280911bb80 std=64e9e2f937 q=7ff630edf6",
       "clap-the-beat text=13b130a737 std=463d44ef07 q=d798eaba52",
       "sight-words text=550b9e49a9 std=330476b00d q=50140fdbd6",
@@ -68,7 +68,7 @@
   "k/math": {
     "overview": "b7f9217fcd",
     "units": [
-      "count-to-10 text=76d9d2a726 std=662e0d0d0d q=eedf7bffb7",
+      "count-to-10 text=76d9d2a726 std=662e0d0d0d q=99e62fe722",
       "make-5-and-10 text=c234a6f52c std=3cf9db4a24 q=e9e4baabe2",
       "add-and-take-away text=359b696b1c std=9511a850ba q=133932d7ef",
       "more-less-same text=732df234df std=c5e8043029 q=ab4ef5dcd9",
@@ -112,9 +112,9 @@
   "1/language": {
     "overview": "4bf525065b",
     "units": [
-      "blend-it text=9a1273c4bc std=925fbb5b22 q=711a61ce87",
+      "blend-it text=9a1273c4bc std=925fbb5b22 q=5b9245f2d7",
       "short-vowels text=c3991944bf std=2a43e294b6 q=6e80d0c71e",
-      "word-families text=47cdbc2e26 std=a7adc35d86 q=e1c00b110b",
+      "word-families text=47cdbc2e26 std=a7adc35d86 q=8b534665ec",
       "sh-ch-th text=8867585eda std=a246b91330 q=53b8ec49fb",
       "sight-words text=0bac05a422 std=2d669daa0d q=4aba5945bd",
       "sentences text=dc477bff6b std=1575429a98 q=3a12a2876f",
@@ -133,7 +133,7 @@
   "1/math": {
     "overview": "010a1ac37a",
     "units": [
-      "numbers-to-20 text=b0719f21fd std=a3d03fe970 q=d3300826e4",
+      "numbers-to-20 text=b0719f21fd std=a3d03fe970 q=8f20e555b4",
       "make-ten text=384e300d0c std=30885fa91a q=74dafe97b0",
       "adding text=e38d25027e std=a1838b91b7 q=9eb9a94364",
       "take-away text=15b94111e3 std=ea44d7a096 q=169ab153d9",
@@ -253,12 +253,12 @@
     "units": [
       "read-and-think text=7444ce52ca std=1e3e7ad7d4 q=1e8f8e94c9",
       "story-elements text=4bc5317466 std=cb8a9a0056 q=78ac3fb273",
-      "word-jobs text=828a9a1b85 std=826f16fb1c q=fe0d330ceb",
+      "word-jobs text=828a9a1b85 std=826f16fb1c q=067788c97e",
       "punctuation-power text=4ba2179323 std=1c9c28d2ad q=ac19eee914",
       "spelling-patterns text=7009096615 std=5cd3bef61c q=cfca6a919b",
       "prefixes-suffixes text=c0cf5dc731 std=92678ce950 q=41860cdfd6",
       "word-pairs text=17c5d8704a std=d13bde12b1 q=2558b1d793",
-      "sentence-smarts text=440a0ed7a6 std=04b240f11a q=8336139ed3",
+      "sentence-smarts text=440a0ed7a6 std=04b240f11a q=be609c5403",
       "abc-dictionary text=0dded2dd30 std=50969c9879 q=8cac6b9b16",
       "devices-3 text=7d654f8f52 std=0aa1a73d13 q=510abb9c40",
       "grammar-3 text=a9deaa03d1 std=5a40e87b5c q=4cef04ee6f",
@@ -272,7 +272,7 @@
     "overview": "816c838636",
     "units": [
       "add-subtract-1000 text=abcc5b81ab std=7ce9cd5039 q=ebf0b5c179",
-      "multiplication text=7016aa3933 std=3c797787c7 q=5ae1f5ddc7",
+      "multiplication text=7016aa3933 std=3c797787c7 q=249bc57054",
       "division text=bbe2ad47e7 std=7278b64260 q=aa74a94c19",
       "fractions text=f6af4c5918 std=2531566558 q=7875833e1e",
       "patterns-and-equations text=38e948b1ed std=c6c80083f7 q=32db6b6541",
@@ -331,7 +331,7 @@
       "text-features text=374a334dcb std=4a725bbbb9 q=a6e3f6bea6",
       "figurative-language text=cc806294d3 std=5e8a01fc98 q=43c2a4606f",
       "point-of-view text=317d5169eb std=97ee14b0a9 q=c401cf50e0",
-      "parts-of-speech text=a8c86f7934 std=2f20b7dc5a q=aef8a9a24b",
+      "parts-of-speech text=a8c86f7934 std=2f20b7dc5a q=4cef0e2d63",
       "super-sentences text=127a9846e3 std=74f79426ed q=cee1adb645",
       "word-builders text=31c0e4d41e std=98372c6183 q=ca7b8000df",
       "sound-alikes text=810d4b50da std=2ca7d36c3a q=f98b14b28a",
@@ -354,7 +354,7 @@
       "fractions text=35fc876177 std=4dc967efbf q=9ea0b54c2a",
       "decimals text=ccaab39e33 std=a77961183b q=503916ff7a",
       "patterns-and-tables text=223238d646 std=bcdce28ca0 q=3c0880cdc8",
-      "equations text=5aa54c6ad3 std=58ecee7da4 q=fa61d5ad58",
+      "equations text=5aa54c6ad3 std=58ecee7da4 q=9d644407e2",
       "polygons-and-perimeter text=1f1f7acbfe std=3a1631f9c3 q=0ca495ff7c",
       "fractions-4 text=0e102ed1c5 std=182ad28736 q=61419c0a19",
       "angles-and-area text=270704dc2f std=03809ae307 q=6c57d1d7dc",
@@ -431,7 +431,7 @@
       "numbers-to-a-million text=89d19d764c std=2fdfbe4434 q=0160db959a",
       "multiply text=5470ec5ee2 std=9198c1ffe7 q=57e21909b3",
       "divide text=8852642ad6 std=da81e97db3 q=55ed922eee",
-      "equivalent-fractions text=cf635b163a std=95c36f910e q=2ff4c287ec",
+      "equivalent-fractions text=cf635b163a std=95c36f910e q=937dbe7300",
       "decimals text=5aeaecae0c std=2ff927e695 q=df303e4d1a",
       "patterns-and-equations text=d0038d1743 std=4146fda163 q=0d4d16b1ef",
       "mb-mental-math-5 text=d109457dda std=2f1fcad283 q=ca9e0eeb41",
@@ -510,7 +510,7 @@
       "decimal-multiply-divide text=fc458a18fb std=3960082079 q=bd81c6eb6d",
       "percents-and-budgets text=136c6c6ae5 std=d666650c48 q=99bdc2230a",
       "patterns-and-graphs text=dab33ccdd4 std=c4145440cb q=dfa60e317e",
-      "equations text=5c61d003c6 std=409e1b9aa7 q=0e4e24070f",
+      "equations text=5c61d003c6 std=409e1b9aa7 q=16e4656f8c",
       "perimeter-and-area text=44afdbe788 std=95525111bb q=a0bb87355d",
       "volume-and-capacity text=5ad359431d std=70f9357eea q=fa063e47a1",
       "numbers-6 text=54d144b67b std=d2173fb48b q=e4fdd9f708",

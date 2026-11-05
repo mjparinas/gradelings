@@ -1,6 +1,7 @@
 import "server-only";
-import { ADMIN_MAIL_GAP_DAYS, fillMessage, paragraphs, SEND_BATCH, type AdminMessage, type Segment } from "@/lib/adminEmails";
+import { ADMIN_MAIL_GAP_DAYS, fillMessage, paragraphs, SEGMENTS, SEND_BATCH, type AdminMessage, type Segment } from "@/lib/adminEmails";
 import { unsubscribeToken } from "./auth";
+import { LIVE_PROFILE, teacherOnly } from "./audience";
 import { query } from "./db";
 import { emailConfigured, sendEmail } from "./email";
 import { adminMessageEmail } from "./emailTemplates";
@@ -15,10 +16,15 @@ const REAL = "NOT EXISTS (SELECT 1 FROM parents s WHERE s.family_id = f.id AND s
 const LAST_PRACTICE = "(SELECT MAX(e.t) FROM events e WHERE e.family_id = f.id)";
 /** Days (UTC) with any practice. */
 export const PRACTICE_DAYS = "(SELECT COUNT(DISTINCT e.t / 86400000) FROM events e WHERE e.family_id = f.id)";
-/** A child profile that hasn't been deleted (deleted ones stay as tombstones for sync). */
-export const LIVE_PROFILE = "COALESCE(json_extract(pr.data, '$.deleted'), 0) = 0";
+export { LIVE_PROFILE };
 
 function segmentWhere(segment: Segment, now: number): { sql: string; args: number[] } {
+  const w = rawWhere(segment, now);
+  // Groups written for parents (children, trials, the family plan) never reach an account that only teaches.
+  return SEGMENTS[segment].audience === "parents" ? { sql: `NOT ${teacherOnly("p")} AND (${w.sql})`, args: w.args } : w;
+}
+
+function rawWhere(segment: Segment, now: number): { sql: string; args: number[] } {
   switch (segment) {
     case "quiet-7":
       return { sql: `${LAST_PRACTICE} BETWEEN ? AND ?`, args: [now - 60 * DAY, now - 7 * DAY] };
@@ -36,6 +42,22 @@ function segmentWhere(segment: Segment, now: number): { sql: string; args: numbe
       return { sql: "f.plan != 'premium' AND f.trial_ends_at <= ? AND f.trial_ends_at > ? AND COALESCE(f.access_until, 0) <= ?", args: [now, now - 60 * DAY, now] };
     case "cancelled":
       return { sql: "f.plan != 'premium' AND f.subscription_status = 'canceled' AND f.billing_event_at > ?", args: [now - 90 * DAY] };
+    case "teacher-no-class":
+      return {
+        sql: `${teacherOnly("p")} AND f.created_at < ? AND f.created_at > ?
+          AND NOT EXISTS (SELECT 1 FROM classes c WHERE c.closed_at IS NULL AND (c.owner_parent_id = p.id OR c.id IN (SELECT t.class_id FROM class_teachers t WHERE t.parent_id = p.id)))`,
+        args: [now - 2 * DAY, now - 60 * DAY],
+      };
+    case "teacher-no-students":
+      return {
+        sql: `p.account_type = 'teacher' AND EXISTS (SELECT 1 FROM classes c WHERE c.closed_at IS NULL AND c.owner_parent_id = p.id AND c.created_at < ? AND c.created_at > ?)
+          AND NOT EXISTS (SELECT 1 FROM classes c JOIN class_members m ON m.class_id = c.id WHERE c.closed_at IS NULL AND c.owner_parent_id = p.id)`,
+        args: [now - 3 * DAY, now - 60 * DAY],
+      };
+    case "teachers":
+      return { sql: "p.account_type = 'teacher'", args: [] };
+    case "parents":
+      return { sql: `NOT ${teacherOnly("p")}`, args: [] };
     case "everyone":
       return { sql: "1 = 1", args: [] };
   }

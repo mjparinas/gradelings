@@ -17,6 +17,7 @@ export function HelpVideoPlayer({
   onNext,
   onWatched,
   onLesson,
+  intro = false,
 }: {
   video: Video;
   onClose: () => void;
@@ -25,6 +26,8 @@ export function HelpVideoPlayer({
   /** Called once when the player closes, with the seconds played and whether the video reached its end. */
   onWatched: (seconds: number, done: boolean) => void;
   onLesson?: () => void;
+  /** Shown before a unit's first question: the button says "Let's start" and closes without moving on. */
+  intro?: boolean;
 }) {
   const ref = useRef<HTMLVideoElement>(null);
   const [src, setSrc] = useState<string>();
@@ -126,8 +129,8 @@ export function HelpVideoPlayer({
             </div>
           </>
         )}
-        <button type="button" className="btn btn-good min-h-14 text-xl" onClick={() => finish(true)}>
-          Try one more
+        <button type="button" className="btn btn-good min-h-14 text-xl" onClick={() => finish(!intro)}>
+          {intro ? "Let\u2019s start" : "Try one more"}
         </button>
       </div>
     </div>

@@ -3,7 +3,7 @@
     "overview": "0b50a038ee",
     "units": [
       "letter-names text=4e2d74ab60 std=3165186af6 q=a8b9337751",
-      "first-sounds text=dd9cd8d5d4 std=a636c301fd q=48ed3455eb",
+      "first-sounds text=dd9cd8d5d4 std=a636c301fd q=68c5e7f975",
       "rhyme-time text=12f8d63dc7 std=2ca9f39c38 q=b73dfecad5",
       "clap-the-parts text=606ab5cbbd std=da7b3991bd q=6215dee4f1",
       "listen-to-a-story text=8907705eaa std=c434811610 q=e4e96571e7",
@@ -13,7 +13,7 @@
   "pk/math": {
     "overview": "531edf77a5",
     "units": [
-      "count-to-5 text=5de441ec7a std=5d6d210346 q=7da6a21961",
+      "count-to-5 text=5de441ec7a std=5d6d210346 q=0092517696",
       "find-the-number text=48b0986657 std=710a326c74 q=cbb1ca9734",
       "more-or-fewer text=0faa658ba5 std=21deca1bad q=4d8cca7ab1",
       "shapes text=3eb07867e4 std=cd399fd306 q=ed58e37c08",
@@ -25,24 +25,24 @@
   "pk/science": {
     "overview": "d1c39113f5",
     "units": [
-      "five-senses text=ede42da0ab std=6112303697 q=18b2cf96c9",
-      "living-or-not text=9c2f339fb0 std=8671ab6ef1 q=c6b64af68c",
-      "animals-and-babies text=c26be2c8ec std=7eb50c255a q=d23f0b3d01",
-      "weather-and-sky text=152ba8b660 std=095748aa46 q=9ab5b99907",
-      "plants-grow text=beae59bc1e std=018df37b7d q=d37c124eee",
-      "sink-or-float text=87253513e6 std=a793e2f0a9 q=80c8fb85a3"
+      "five-senses text=ede42da0ab std=6112303697 q=ab5e62249c",
+      "living-or-not text=9c2f339fb0 std=8671ab6ef1 q=28feb0fe3d",
+      "animals-and-babies text=c26be2c8ec std=7eb50c255a q=628e0c3ebe",
+      "weather-and-sky text=152ba8b660 std=095748aa46 q=f141ea266d",
+      "plants-grow text=beae59bc1e std=018df37b7d q=18a3c821f1",
+      "sink-or-float text=87253513e6 std=a793e2f0a9 q=fb450f2fce"
     ]
   },
   "pk/social": {
     "overview": "484f320b52",
     "units": [
-      "my-family text=81af8740c1 std=7f28ba7b9f q=5f47bd5b99",
-      "feelings text=32db0a0097 std=c640bd0dd6 q=1e8788180c",
-      "community-helpers text=e038723509 std=0ead2089bc q=27bacf2a4a",
-      "places-around-me text=659860832c std=5cda7c19e2 q=8a8589b026",
-      "taking-turns text=04b975dae4 std=2b5a88f5df q=22be788cc9",
-      "first-next-last text=6f92e7037f std=d2e40de291 q=c643395606",
-      "caring-for-our-world text=0df6123b83 std=27b9715d82 q=82f9f5197f"
+      "my-family text=81af8740c1 std=7f28ba7b9f q=42a8b83d0d",
+      "feelings text=32db0a0097 std=c640bd0dd6 q=b7d33a8640",
+      "community-helpers text=e038723509 std=0ead2089bc q=d4dc1c6f50",
+      "places-around-me text=659860832c std=5cda7c19e2 q=808ad0d644",
+      "taking-turns text=04b975dae4 std=2b5a88f5df q=b3c8ff817f",
+      "first-next-last text=6f92e7037f std=d2e40de291 q=772b705727",
+      "caring-for-our-world text=0df6123b83 std=27b9715d82 q=974620c174"
     ]
   },
   "k/immersion": {
@@ -62,7 +62,7 @@
     "units": [
       "talk-and-listen-ab text=6b71ddbc74 std=320a12c394 q=a01feb4799",
       "letter-partners text=c48f27422d std=0dfd942db7 q=b88f284367",
-      "first-sounds text=cc4fb336eb std=d961145db2 q=1e9600b156",
+      "first-sounds text=cc4fb336eb std=d961145db2 q=ca82eff12c",
       "rhyme-time text=280911bb80 std=0bffd39293 q=7ff630edf6",
       "clap-the-beat text=13b130a737 std=d9453e50d5 q=d798eaba52",
       "blend-a-word text=3d99132c91 std=c79c38c05d q=16d2ff7d7d",
@@ -75,7 +75,7 @@
   "k/math": {
     "overview": "a09f48d257",
     "units": [
-      "count-to-10 text=76d9d2a726 std=5b9fea1b34 q=eedf7bffb7",
+      "count-to-10 text=76d9d2a726 std=5b9fea1b34 q=99e62fe722",
       "numbers-to-20 text=e677449710 std=e0c9f6360e q=d5b884b629",
       "see-it-fast-ab text=d62a66c092 std=684b9b1529 q=38a80937a2",
       "make-5-and-10 text=c234a6f52c std=6d683f6646 q=e9e4baabe2",
@@ -121,9 +121,9 @@
   "1/language": {
     "overview": "8111cb6cd0",
     "units": [
-      "blend-it text=9a1273c4bc std=ef66edcecb q=711a61ce87",
+      "blend-it text=9a1273c4bc std=ef66edcecb q=5b9245f2d7",
       "short-vowels text=c3991944bf std=d4f3567505 q=6e80d0c71e",
-      "word-families text=47cdbc2e26 std=8979e2e907 q=e1c00b110b",
+      "word-families text=47cdbc2e26 std=8979e2e907 q=8b534665ec",
       "sh-ch-th text=8867585eda std=43855da097 q=53b8ec49fb",
       "sight-words text=b86fac70b4 std=a84ddd00a6 q=4aba5945bd",
       "sentences text=dc477bff6b std=e93f547259 q=3a12a2876f",
@@ -137,7 +137,7 @@
   "1/math": {
     "overview": "a09f48d257",
     "units": [
-      "numbers-to-20 text=b0719f21fd std=e26e2dc3e7 q=d3300826e4",
+      "numbers-to-20 text=b0719f21fd std=e26e2dc3e7 q=8f20e555b4",
       "make-ten text=384e300d0c std=fb00348a1c q=74dafe97b0",
       "adding text=e38d25027e std=2e88307ee7 q=9eb9a94364",
       "take-away text=15b94111e3 std=7b40caa9e0 q=169ab153d9",
@@ -151,7 +151,7 @@
     "overview": "755396791c",
     "units": [
       "sky-and-seasons text=2b33fef4e8 std=c6c380600a q=ac8def5d18",
-      "living-things text=a7c0d5737e std=d1ffa9e8c6 q=0c9f1698f1",
+      "living-things text=a7c0d5737e std=d1ffa9e8c6 q=ca29bd85de",
       "animal-survival text=d692902e1f std=8e040c2728 q=7f8e04fe9f",
       "a-healthy-environment text=668a600827 std=f152147b88 q=d3d8cb7ada",
       "materials text=c7b2a3d6a2 std=3c9a4ff275 q=c42fe5ecc8",
@@ -218,7 +218,7 @@
     "units": [
       "water-world text=480292c15d std=6c743e2934 q=ba7ac16719",
       "air-and-water-for-life text=4e765ea390 std=df2aa67d9b q=15d5213606",
-      "life-cycles text=703995c5bc std=e479b4e273 q=9fef756575",
+      "life-cycles text=703995c5bc std=e479b4e273 q=199c044e78",
       "animal-life-cycles text=b5655d2717 std=ae7488909d q=f056a72232",
       "solids-and-liquids text=4a5edc47f5 std=62fceff651 q=5f9e4053f8",
       "mixtures-and-materials text=4690be4cd3 std=81024c3515 q=ead8968844",
@@ -230,7 +230,7 @@
     "units": [
       "then-and-now text=adcb461d8f std=cdf36218bf q=ae17feafab",
       "ns-community-change-2 text=c3a5db157e std=c7e25a26fd q=eb68856c23",
-      "ns-contributions-2 text=0632d37b80 std=cbfd08ed3b q=4bbdeac06a",
+      "ns-contributions-2 text=0632d37b80 std=cbfd08ed3b q=83fd4c46a2",
       "needs-and-wants text=8192b43423 std=7e3a319fb0 q=d91ff3aeff",
       "ns-consumers-2 text=feadf6924e std=22de75921c q=8ce83945fd",
       "ns-sustainable-communities-2 text=65e9fc8a3f std=7a3d3388cd q=4e480a9cec"
@@ -256,8 +256,8 @@
       "prefixes-suffixes text=c0cf5dc731 std=8093f87060 q=41860cdfd6",
       "word-pairs text=17c5d8704a std=9db572a8e5 q=ff8f2e33d3",
       "abc-dictionary text=0dded2dd30 std=d23a3bdd03 q=d1cefa52ca",
-      "word-jobs text=828a9a1b85 std=f91ece3d25 q=d9493f4590",
-      "sentence-smarts text=440a0ed7a6 std=8ebc519b09 q=8336139ed3",
+      "word-jobs text=828a9a1b85 std=f91ece3d25 q=2444d1b9e4",
+      "sentence-smarts text=440a0ed7a6 std=8ebc519b09 q=be609c5403",
       "punctuation-power text=4ba2179323 std=1d1f2337f2 q=456663fb55",
       "text-patterns text=66f9e7deb8 std=bf3c679416 q=58f0f448b9",
       "read-and-think text=7444ce52ca std=e2d27924a6 q=e29d97d68f",
@@ -271,7 +271,7 @@
       "numbers-to-1000 text=3dd8e5bf76 std=706f47f8e9 q=b34f016c90",
       "add-subtract-1000 text=abcc5b81ab std=b47274989f q=ebf0b5c179",
       "facts-to-20 text=ded4f70391 std=edb1b2b415 q=04bf009956",
-      "multiplication text=7016aa3933 std=3090401fbe q=5ae1f5ddc7",
+      "multiplication text=7016aa3933 std=3090401fbe q=249bc57054",
       "division text=bbe2ad47e7 std=1f1f2452c7 q=aa74a94c19",
       "fractions text=f6af4c5918 std=e6d1e7789f q=7875833e1e",
       "patterns-and-equations text=38e948b1ed std=788e9652df q=32db6b6541",
@@ -297,10 +297,10 @@
     "overview": "954d346b6c",
     "units": [
       "maps-and-globes text=6a6a9ae26b std=d976b35f4c q=fd8314b02c",
-      "ns-atlantic-canada-3 text=f4abd6b02b std=540b1301aa q=663b32d8f7",
-      "ns-cultures-3 text=af1856f99e std=b265b765bc q=556f3c08d3",
+      "ns-atlantic-canada-3 text=f4abd6b02b std=540b1301aa q=a6d84a679e",
+      "ns-cultures-3 text=af1856f99e std=b265b765bc q=9eaa0ed489",
       "mb-groups-and-leaders text=990b1bdfbd std=b1e058f94b q=35d1447b68",
-      "ns-democracy-3 text=0d7d64a4e6 std=9859490576 q=8857babc7f"
+      "ns-democracy-3 text=0d7d64a4e6 std=9859490576 q=61d37902bd"
     ]
   },
   "3/spanish": {
@@ -344,7 +344,7 @@
       "listening-speaking-ab text=93bdfb462c std=ae759f9848 q=721b6760ea",
       "word-builders text=31c0e4d41e std=c367b626c2 q=ca7b8000df",
       "sound-alikes text=810d4b50da std=b87513042e q=8f260eb511",
-      "parts-of-speech text=a8c86f7934 std=9737fc5286 q=aef8a9a24b",
+      "parts-of-speech text=a8c86f7934 std=9737fc5286 q=4cef0e2d63",
       "super-sentences text=127a9846e3 std=62af3a75eb q=cee1adb645",
       "punctuation-power text=4d8fc1b29b std=60931a601a q=becd5bff7e",
       "text-features text=374a334dcb std=34dff4efb5 q=a6e3f6bea6",
@@ -360,12 +360,12 @@
     "units": [
       "numbers-to-10000 text=4ad943850c std=54786c0f51 q=301886db85",
       "add-subtract text=69dd4eb751 std=05ded67252 q=c26d8c40de",
-      "times-tables text=c3027c0b04 std=cb9409b60d q=2d5acff7a6",
+      "times-tables text=c3027c0b04 std=cb9409b60d q=8b6bbaf8b4",
       "multiply-divide text=64281bfafd std=5c14259205 q=3036a902e9",
       "fractions text=35fc876177 std=b33c9ae671 q=9ea0b54c2a",
       "decimals text=ccaab39e33 std=f4b3081231 q=503916ff7a",
       "patterns-and-tables text=223238d646 std=08906d545a q=43715233d3",
-      "equations text=5aa54c6ad3 std=4aadca2819 q=fa61d5ad58",
+      "equations text=5aa54c6ad3 std=4aadca2819 q=9d644407e2",
       "telling-time text=da04fa8ef5 std=a5dc37572e q=4b7225993f",
       "angles-and-area text=270704dc2f std=387b4c82ff q=8453462612",
       "polygons-and-perimeter text=1f1f7acbfe std=f88e99958e q=0ca495ff7c",
@@ -385,9 +385,9 @@
   "4/social": {
     "overview": "7f9eded9e4",
     "units": [
-      "ns-exploration-4 text=5bf2af3240 std=d9162af1d0 q=1f6e410d53",
-      "ns-explorers-4 text=0669095af9 std=029f0cc31b q=aec46c28cb",
-      "ns-exploration-impacts-4 text=78e0073526 std=cef7cbda50 q=3a4b7befc7",
+      "ns-exploration-4 text=5bf2af3240 std=d9162af1d0 q=8394d30be1",
+      "ns-explorers-4 text=0669095af9 std=029f0cc31b q=1fb83323c1",
+      "ns-exploration-impacts-4 text=78e0073526 std=cef7cbda50 q=790d4394ed",
       "environment-4 text=c995c5d534 std=b98ffddc4c q=223eb62473",
       "provinces-and-regions text=57d19f24c1 std=417d8b4b2a q=383103dd3d"
     ]
@@ -405,12 +405,12 @@
   "5/core-french": {
     "overview": "adc1390dd0",
     "units": [
-      "salutations text=34aad2270e std=466554ecc5 q=bebc4e7fa8",
+      "salutations text=34aad2270e std=466554ecc5 q=85b8db961b",
       "sons-et-accents text=c2600c3971 std=fe22be3be4 q=42ec9fcbd3",
       "nombres text=64f42c031e std=466554ecc5 q=ec7f3851db",
-      "genre-et-nombre text=6fc35772c5 std=df306139b2 q=9bd55d2bf1",
-      "gouts text=be0812c122 std=466554ecc5 q=86251f9e2c",
-      "descriptions text=66785fc698 std=df306139b2 q=c9012bbc01",
+      "genre-et-nombre text=6fc35772c5 std=df306139b2 q=ee09044759",
+      "gouts text=be0812c122 std=466554ecc5 q=51ab4a36e1",
+      "descriptions text=66785fc698 std=df306139b2 q=8607aadf86",
       "communautes-francophones text=86bfbbfa4b std=89d663ef07 q=7aff41852e",
       "respect text=d02cfdf800 std=89d663ef07 q=a0feb345ec"
     ]
@@ -434,7 +434,7 @@
       "spelling-ab text=3147b604d9 std=2a0966a36f q=32a7b0125e",
       "context-clues text=022a00b494 std=2d1268eac4 q=1fa090fae4",
       "word-roots text=2558284043 std=24ce491942 q=f41c90a8a3",
-      "verb-tenses text=584119bb1d std=861ae6bcaf q=0124694411",
+      "verb-tenses text=584119bb1d std=861ae6bcaf q=19a2201812",
       "complex-sentences text=ac4c5531ea std=e018c9c60d q=e9b1d0fa47",
       "punctuation-power text=fb7f3d7d02 std=141f91994a q=c61867de33",
       "purpose-and-structure text=d1e9ccc6e8 std=571744dca0 q=8fd8837f55",
@@ -454,7 +454,7 @@
       "mb-mental-math-5 text=d109457dda std=315991b91d q=5f92d222a6",
       "multiply text=5470ec5ee2 std=8d2854c092 q=f6bb06f6ba",
       "divide text=8852642ad6 std=03588bd9df q=d29f08f12e",
-      "equivalent-fractions text=cf635b163a std=db8b7d2b30 q=2ff4c287ec",
+      "equivalent-fractions text=cf635b163a std=db8b7d2b30 q=937dbe7300",
       "decimals text=5aeaecae0c std=5aa309ede0 q=df303e4d1a",
       "patterns-and-equations text=d0038d1743 std=13797d21df q=63c8c98922",
       "area-and-perimeter text=dd2c32445d std=7d2e1b9c8b q=a117b4fc31",
@@ -546,7 +546,7 @@
       "percents-and-budgets text=136c6c6ae5 std=77b49a167d q=99bdc2230a",
       "decimal-multiply-divide text=fc458a18fb std=43cd9df9e0 q=74b38a2450",
       "patterns-and-graphs text=dab33ccdd4 std=b41bc218c8 q=3278e6bf42",
-      "equations text=5c61d003c6 std=cea02d83ce q=0e4e24070f",
+      "equations text=5c61d003c6 std=cea02d83ce q=16e4656f8c",
       "angles-and-triangles text=f87da09706 std=5eb19e9774 q=87011990e1",
       "perimeter-and-area text=44afdbe788 std=07ce0df51a q=8a2b7b1158",
       "volume-and-capacity text=57006408db std=31f488d5a9 q=0c1a7e8d2f",
@@ -619,7 +619,7 @@
   "7/language": {
     "overview": "4f4fb08902",
     "units": [
-      "ns-cultural-expressions-7 text=a9df4aa856 std=e9792fec9e q=65cfd611f7",
+      "ns-cultural-expressions-7 text=a9df4aa856 std=e9792fec9e q=1c7090f6d0",
       "close-reading text=0b6ee269e5 std=1082bb7724 q=3fd92d2337",
       "literary-devices text=75012dadfd std=0e6c0dad69 q=ca1f4ae5d6",
       "tone-mood text=1a78ad0bc3 std=49088010be q=5fe5a6766c",
@@ -671,12 +671,12 @@
   "7/social": {
     "overview": "8ff23a44dd",
     "units": [
-      "ns-mikmaw-treaties-7 text=a1b0d3eefe std=e7f2881722 q=5501a6fc2d",
-      "ns-maritimes-history-7 text=4b6c4ea09d std=29674d55e5 q=7cd9256792",
-      "ns-political-change-7 text=4182c36d2b std=7774fa4c9f q=935872573e",
-      "ns-changing-society-7 text=ac74078204 std=b3cdb71040 q=a956b397ab",
-      "ns-world-war-1-7 text=7671f9a52a std=4457beea35 q=f1de46fc88",
-      "ns-communities-today-7 text=fc7a24e822 std=d36a418084 q=997dbb849d"
+      "ns-mikmaw-treaties-7 text=a1b0d3eefe std=e7f2881722 q=a3b078deac",
+      "ns-maritimes-history-7 text=4b6c4ea09d std=29674d55e5 q=033db32661",
+      "ns-political-change-7 text=4182c36d2b std=7774fa4c9f q=4e94ce8f19",
+      "ns-changing-society-7 text=ac74078204 std=b3cdb71040 q=db7f35e7ad",
+      "ns-world-war-1-7 text=7671f9a52a std=4457beea35 q=2b9e8d514a",
+      "ns-communities-today-7 text=fc7a24e822 std=d36a418084 q=86c42558de"
     ]
   },
   "7/spanish": {
@@ -722,7 +722,7 @@
   "8/language": {
     "overview": "b6eac74f2e",
     "units": [
-      "ns-cultural-expressions-8 text=66f3ea6382 std=192e92d91e q=8590729750",
+      "ns-cultural-expressions-8 text=66f3ea6382 std=192e92d91e q=139ca46fd3",
       "word-study text=e9a31820f1 std=80496704d9 q=816e78a8ea",
       "strategies-8 text=14cb61c3b0 std=0746bcafe9 q=24feac4146",
       "forms-features-8 text=612838fad2 std=0be2472676 q=b91eed85d6",
@@ -766,12 +766,12 @@
   "8/social": {
     "overview": "773f2b0432",
     "units": [
-      "ns-indigenous-experiences-8 text=49bdcb2dcc std=08a5c35aa6 q=a6b523c79b",
-      "ns-equity-8 text=f6d81222bd std=0756fd65ca q=fd92a4108b",
-      "ns-changing-canada-8 text=62cc840d11 std=33aca7baf2 q=92e1dffe9a",
-      "ns-conflicts-8 text=50612231e1 std=6256df1109 q=cf8ca74049",
-      "ns-world-war-2-8 text=83d00d78f4 std=69a21ecbb9 q=fe12269d9e",
-      "ns-advocacy-8 text=0e068e64c4 std=8e69efbf16 q=7808be4690"
+      "ns-indigenous-experiences-8 text=49bdcb2dcc std=08a5c35aa6 q=15ca553bd5",
+      "ns-equity-8 text=f6d81222bd std=0756fd65ca q=83e9d33ff9",
+      "ns-changing-canada-8 text=62cc840d11 std=33aca7baf2 q=76e9d9d317",
+      "ns-conflicts-8 text=50612231e1 std=6256df1109 q=23cb788115",
+      "ns-world-war-2-8 text=83d00d78f4 std=69a21ecbb9 q=ca152cbe38",
+      "ns-advocacy-8 text=0e068e64c4 std=8e69efbf16 q=8f0f704467"
     ]
   },
   "8/spanish": {
@@ -861,13 +861,13 @@
   "9/social": {
     "overview": "f1bfa5947c",
     "units": [
-      "ns-citizen-rights-9 text=4cd87ff68c std=2b7959098b q=475015cdbf",
-      "ns-governance-9 text=74b23705fa std=c1060dd63f q=4e2efe1734",
-      "ns-lawmaking-9 text=5a70995586 std=dadf35bc4a q=919edcef6b",
-      "ns-digital-citizenship-9 text=55fa99b297 std=3a9514ac4e q=1932b9b9c7",
-      "ns-financial-citizenship-9 text=21a9783654 std=b659dcda6e q=c037b10744",
-      "ns-global-citizenship-9 text=e40557e5c6 std=7986a9cc2c q=e646972441",
-      "ns-engaged-citizenship-9 text=78648596ab std=d9a3dcf11c q=ebb9412bb9"
+      "ns-citizen-rights-9 text=4cd87ff68c std=2b7959098b q=deb550ee42",
+      "ns-governance-9 text=74b23705fa std=c1060dd63f q=f15e481a6d",
+      "ns-lawmaking-9 text=5a70995586 std=dadf35bc4a q=d5d4134f99",
+      "ns-digital-citizenship-9 text=55fa99b297 std=3a9514ac4e q=e8db33fffc",
+      "ns-financial-citizenship-9 text=21a9783654 std=b659dcda6e q=7e6d8e5b5f",
+      "ns-global-citizenship-9 text=e40557e5c6 std=7986a9cc2c q=839757c90e",
+      "ns-engaged-citizenship-9 text=78648596ab std=d9a3dcf11c q=8e202d350b"
     ]
   },
   "9/spanish": {

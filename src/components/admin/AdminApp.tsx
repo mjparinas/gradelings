@@ -166,6 +166,7 @@ function Overview({ onOpenFamily }: { onOpenFamily: (id: string) => void }) {
 interface UserRow {
   familyId: string;
   email: string;
+  accountType: "parent" | "teacher";
   createdAt: number;
   plan: string;
   trialEndsAt: number;
@@ -194,6 +195,7 @@ interface FamilyDetail {
   parents: {
     id: string;
     email: string;
+    accountType: "parent" | "teacher";
     createdAt: number;
     verified: boolean;
     weeklyReport: boolean;
@@ -228,10 +230,11 @@ function planText(u: { plan: string; trialEndsAt: number; subscriptionStatus: st
 function Users({ flags, role, email, initialOpen = null }: { flags: FlagRow[]; role: Role; email: string; initialOpen?: string | null }) {
   const [q, setQ] = useState("");
   const [users, setUsers] = useState<UserRow[] | null>(null);
+  const [type, setType] = useState("");
   const [open, setOpen] = useState<string | null>(initialOpen);
   const [err, setErr] = useState("");
-  const search = useCallback((query: string) => {
-    call<{ users: UserRow[] }>(`/api/admin/users/?q=${encodeURIComponent(query)}`).then(
+  const search = useCallback((query: string, kind = "") => {
+    call<{ users: UserRow[] }>(`/api/admin/users/?q=${encodeURIComponent(query)}${kind ? `&type=${kind}` : ""}`).then(
       (r) => {
         setErr("");
         setUsers(r.users);
@@ -241,7 +244,7 @@ function Users({ flags, role, email, initialOpen = null }: { flags: FlagRow[]; r
   }, []);
   useEffect(() => search(""), [search]);
 
-  if (open) return <UserDetail id={open} flags={flags} role={role} email={email} onBack={() => { setOpen(null); search(q); }} />;
+  if (open) return <UserDetail id={open} flags={flags} role={role} email={email} onBack={() => { setOpen(null); search(q, type); }} />;
   return (
     <section aria-labelledby="users-h">
       <div className="flex flex-wrap items-baseline justify-between gap-2">
@@ -261,12 +264,27 @@ function Users({ flags, role, email, initialOpen = null }: { flags: FlagRow[]; r
         className="mt-3 flex flex-wrap items-end gap-2"
         onSubmit={(e) => {
           e.preventDefault();
-          search(q);
+          search(q, type);
         }}
       >
         <label className="flex min-w-60 flex-1 flex-col text-sm font-semibold">
           Search by email or family id
           <input className={field} type="search" value={q} onChange={(e) => setQ(e.target.value)} />
+        </label>
+        <label className="flex flex-col text-sm font-semibold">
+          Account type
+          <select
+            className={field}
+            value={type}
+            onChange={(e) => {
+              setType(e.target.value);
+              search(q, e.target.value);
+            }}
+          >
+            <option value="">All accounts</option>
+            <option value="parent">Parents</option>
+            <option value="teacher">Teachers</option>
+          </select>
         </label>
         <button className={primary}>Search</button>
       </form>
@@ -277,6 +295,7 @@ function Users({ flags, role, email, initialOpen = null }: { flags: FlagRow[]; r
             <thead>
               <tr className="border-b border-line">
                 <th scope="col" className="p-3">Email</th>
+                <th scope="col" className="p-3">Type</th>
                 <th scope="col" className="p-3">Joined</th>
                 <th scope="col" className="p-3">Plan</th>
                 <th scope="col" className="p-3">Code access</th>
@@ -285,10 +304,10 @@ function Users({ flags, role, email, initialOpen = null }: { flags: FlagRow[]; r
               </tr>
             </thead>
             <tbody>
-              {!users && <TableRowsShape cols={6} rows={6} />}
+              {!users && <TableRowsShape cols={7} rows={6} />}
               {users?.length === 0 && (
                 <tr>
-                  <td colSpan={6} className="p-3 text-ink-soft">No accounts match.</td>
+                  <td colSpan={7} className="p-3 text-ink-soft">No accounts match.</td>
                 </tr>
               )}
               {users?.map((u) => (
@@ -298,6 +317,7 @@ function Users({ flags, role, email, initialOpen = null }: { flags: FlagRow[]; r
                       {u.email}
                     </button>
                   </th>
+                  <td className="p-3">{u.accountType === "teacher" ? "Teacher" : "Parent"}</td>
                   <td className="p-3">{day(u.createdAt)}</td>
                   <td className="p-3">{planText(u)}</td>
                   <td className="p-3">{accessText(u.accessUntil)}</td>
@@ -355,6 +375,7 @@ function UserDetail({ id, flags, role, email, onBack }: { id: string; flags: Fla
         <h2 id="user-h" className="break-all text-2xl font-bold">{d.parents.map((p) => p.email).join(", ")}</h2>
         <dl className="mt-3 grid gap-x-6 gap-y-1 sm:grid-cols-2">
           <div><dt className="inline font-semibold">Joined: </dt><dd className="inline">{day(f.createdAt)}</dd></div>
+          <div><dt className="inline font-semibold">Account type: </dt><dd className="inline">{d.parents[0]?.accountType === "teacher" ? "Teacher" : "Parent"}</dd></div>
           <div><dt className="inline font-semibold">Plan: </dt><dd className="inline">{planText(f)}</dd></div>
           <div><dt className="inline font-semibold">Trial ends: </dt><dd className="inline">{day(f.trialEndsAt)}</dd></div>
           <div><dt className="inline font-semibold">Code or admin access: </dt><dd className="inline">{accessText(f.accessUntil)}</dd></div>
@@ -424,6 +445,26 @@ function UserDetail({ id, flags, role, email, onBack }: { id: string; flags: Fla
 
       {role === "admin" && (
         <>
+      <div className={card}>
+        <h3 className="text-xl font-bold">Account Type</h3>
+        <p className="mt-1 text-ink-soft">
+          Decides which emails this account gets: teachers hear about their classes and are left out of the parent groups, trial notices and weekly reports. It changes nothing else.
+        </p>
+        <div className="mt-2">
+          <button
+            type="button"
+            disabled={busy}
+            className={quiet}
+            onClick={() => {
+              const teacher = d.parents[0]?.accountType === "teacher";
+              void run("set-account-type", { parentId: d.parents[0]?.id, type: teacher ? "parent" : "teacher" }, teacher ? "Marked as a parent." : "Marked as a teacher.");
+            }}
+          >
+            {d.parents[0]?.accountType === "teacher" ? "Mark as a Parent" : "Mark as a Teacher"}
+          </button>
+        </div>
+      </div>
+
       <div className={card}>
         <h3 className="text-xl font-bold">Access</h3>
         <div className="mt-2 flex flex-wrap items-end gap-2">

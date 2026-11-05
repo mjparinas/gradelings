@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { CULTURAL8_MORE } from "./language-more";
 
 // Grade 8 English language arts, cultural expressions: influence between cultures, language and culture, point of
 // view and audience, and respectful interpretation. Mi’kmaw and Acadian content is light.
@@ -42,5 +43,5 @@ export const culturalExpressions8 = bankUnit({
   parentNote:
     "Practises how cultures influence each other, how language and culture are connected, how point of view and audience shape a text, and how to interpret cultural expressions respectfully, with Mi’kmaw, Acadian and Gaelic examples. Ties to the Nova Scotia Grade 8 English language arts outcome on cultural expressions.",
   standards: ["Cultural expressions", "Analyse how language, point of view and audience shape cultural expressions and interpret them respectfully"],
-  items: CULTURAL,
+  items: [...CULTURAL, ...CULTURAL8_MORE],
 });

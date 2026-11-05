@@ -1,5 +1,6 @@
 import { error, getSession, json, rateLimited, readJson, sameOrigin } from "@/server/auth";
 import { INVITE_TTL, MAX_CO_TEACHERS } from "@/server/classroom";
+import { markTeacher } from "@/server/audience";
 import { query, run } from "@/server/db";
 
 // Invitations to co-teach a class. They belong to an email address: only the signed-in, confirmed
@@ -53,6 +54,7 @@ export async function POST(req: Request) {
   if (owner?.owner_parent_id !== session.parentId) {
     await run("INSERT OR IGNORE INTO class_teachers (class_id, parent_id, joined_at) VALUES (?, ?, ?)", [classId, session.parentId, Date.now()]);
   }
+  await markTeacher(session.parentId);
   await run("DELETE FROM class_invites WHERE class_id = ? AND email = ?", [classId, session.email.toLowerCase()]);
   // Joining counts as a sign-in for the class's inactivity period.
   await run("UPDATE classes SET last_activity_at = ?, inactive_warning_at = NULL WHERE id = ? AND closed_at IS NULL", [Date.now(), classId]);
