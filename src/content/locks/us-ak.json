@@ -626,7 +626,7 @@
       "medieval-europe text=e168f1071c std=1043b1ea34 q=e0e0a48023",
       "islamic-world text=1f09d059f3 std=8aa52b310a q=d3b20da097",
       "or-g7-african-kingdoms text=3ee3cfac21 std=d7bc68185c q=5a669c38d2",
-      "ca-g7-aztec-inca text=d2c994043b std=22d3f5d06e q=98dd6df2a5",
+      "ca-g7-aztec-inca text=d2c994043b std=22d3f5d06e q=b409112db4",
       "ak-g7-landforms-biomes text=16efdcc3c8 std=b8e18661c9 q=5631791d67",
       "ak-g7-circumpolar-north text=596c5c6841 std=6b42e3a3f4 q=35111efb88",
       "ak-g7-russian-america text=49de9569d6 std=7ba0cbb851 q=4bd2e3d0ab"
@@ -703,7 +703,7 @@
   "8/social": {
     "overview": "23256d93ba",
     "units": [
-      "ca-g7-exploration-and-empire text=12bafe7e5a std=425d44ce8f q=7b8763aec9",
+      "ca-g7-exploration-and-empire text=12bafe7e5a std=425d44ce8f q=2d3e0d7a38",
       "or-g8-founding-ideas text=6fa3d530b3 std=bcf3837d62 q=83494b4253",
       "ca-g8-new-nation text=80ae97aef6 std=3997e6679a q=43ff2d5a2f",
       "wa-g8-bill-of-rights text=edcc86640b std=8617e5c21b q=6898ac27d5",

@@ -743,19 +743,19 @@
   "8/social": {
     "overview": "6e1b2bf1b3",
     "units": [
-      "ca-g7-rome-byzantium text=4f12cc828c std=cb35c0ac1c q=1158574fa3",
+      "ca-g7-rome-byzantium text=4f12cc828c std=cb35c0ac1c q=6ce9a18bea",
       "islamic-world text=519dee9dfb std=1143b4ce67 q=d3b20da097",
       "or-g7-asian-empires text=b6f0c56084 std=51fccafc88 q=529fe22420",
       "or-g7-african-kingdoms text=73f11fffb2 std=3470bfa444 q=5a669c38d2",
-      "ca-g7-aztec-inca text=b288b8809c std=6c53127804 q=98dd6df2a5",
+      "ca-g7-aztec-inca text=b288b8809c std=6c53127804 q=b409112db4",
       "medieval-europe text=987243264f std=5535c25c2e q=e0e0a48023",
       "ny-g9-crusades-plague text=af175865dd std=b15e26f60e q=bbbc23b16e",
       "renaissance-and-reformation text=abe1fd7fbc std=017ba8e4c7 q=6c1b369fe8",
-      "ca-g7-exploration-and-empire text=12bafe7e5a std=cd1ad818c6 q=7b8763aec9",
+      "ca-g7-exploration-and-empire text=12bafe7e5a std=cd1ad818c6 q=2d3e0d7a38",
       "ny-g9-atlantic-world text=3a0e213288 std=0d02f4be73 q=040a2bae94",
       "ny-g9-absolutism-enlightenment text=eae970d7a2 std=544cd3a3a8 q=7b5381806f",
       "ny-g9-ottoman-ming text=442dd9ce7e std=efeea5a981 q=4acf893e49",
-      "ca-g7-science-enlightenment text=50f9b9f5fb std=019645b860 q=4b16ea2b89"
+      "ca-g7-science-enlightenment text=50f9b9f5fb std=019645b860 q=fad5c3978d"
     ]
   },
   "8/spanish": {

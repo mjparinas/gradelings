@@ -665,17 +665,17 @@
       "medieval-europe text=e168f1071c std=de5bff09a9 q=e0e0a48023",
       "renaissance-and-reformation text=e5d4fca376 std=39a4cdf3ae q=6c1b369fe8",
       "or-g7-age-of-revolutions text=bb22392eb0 std=1a9656c790 q=53220de395",
-      "ca-g7-rome-byzantium text=c53fc6377b std=a3178baad1 q=1158574fa3",
-      "ca-g7-aztec-inca text=d2c994043b std=1f5d6e89d0 q=98dd6df2a5",
-      "ca-g7-exploration-and-empire text=91fd18d7c8 std=50edb6090d q=7b8763aec9",
-      "ca-g7-science-enlightenment text=21d3f8a8dc std=4a77b16587 q=4b16ea2b89",
-      "ca-g7-arabia-islam text=7f26d322b2 std=f47d2bf63b q=787e237d78",
-      "ca-g7-imperial-china text=74baee3065 std=5f2d3882e0 q=261f938ea5",
-      "ca-g7-west-african-life text=685d7c7774 std=957fe89ea8 q=928cf5a9aa",
-      "ca-g7-medieval-japan text=0118a21400 std=459ca76678 q=20d2476fb0",
-      "ca-g7-church-and-crowns text=0780a3859b std=04c9c18bc3 q=770bd9dc79",
-      "ca-g7-renaissance-cities text=f41a39b429 std=749c4af6cd q=83f2505121",
-      "ca-g7-reformation-world text=ca815aacd3 std=d27abc47a3 q=652b270ec6"
+      "ca-g7-rome-byzantium text=c53fc6377b std=a3178baad1 q=6ce9a18bea",
+      "ca-g7-aztec-inca text=d2c994043b std=1f5d6e89d0 q=b409112db4",
+      "ca-g7-exploration-and-empire text=91fd18d7c8 std=50edb6090d q=2d3e0d7a38",
+      "ca-g7-science-enlightenment text=21d3f8a8dc std=4a77b16587 q=fad5c3978d",
+      "ca-g7-arabia-islam text=7f26d322b2 std=f47d2bf63b q=9919f37954",
+      "ca-g7-imperial-china text=74baee3065 std=5f2d3882e0 q=f511a37acb",
+      "ca-g7-west-african-life text=685d7c7774 std=957fe89ea8 q=4bcd844d98",
+      "ca-g7-medieval-japan text=0118a21400 std=459ca76678 q=b396c3c43c",
+      "ca-g7-church-and-crowns text=0780a3859b std=04c9c18bc3 q=787709caa6",
+      "ca-g7-renaissance-cities text=f41a39b429 std=749c4af6cd q=7b08d9a85a",
+      "ca-g7-reformation-world text=ca815aacd3 std=d27abc47a3 q=bf5a54db55"
     ]
   },
   "7/spanish": {

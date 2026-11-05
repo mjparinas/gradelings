@@ -640,7 +640,7 @@
   "7/social": {
     "overview": "db578bd151",
     "units": [
-      "ca-g7-aztec-inca text=d2c994043b std=5c643df8fd q=98dd6df2a5",
+      "ca-g7-aztec-inca text=d2c994043b std=5c643df8fd q=b409112db4",
       "or-g5-encounters text=587d82c097 std=07d35d2b70 q=a7dd237b7c",
       "ca-g8-revolutionary-ideas text=543eb450c3 std=759245cf89 q=1bdb99ec2b",
       "wa-g5-revolution text=61cc174b3f std=288eaa41dc q=183c2fe968",
@@ -842,11 +842,11 @@
       "ny-g6-classical-china-india text=3389ff18ee std=9aa894e1a5 q=9a4731e2a5",
       "world-beliefs text=cc74370028 std=1280f0aed7 q=eaa6186bca",
       "trade-networks text=f346b3ae63 std=efd50a0158 q=bfbd39ee46",
-      "ca-g7-rome-byzantium text=8166ea1dfd std=3b9104ce6b q=1158574fa3",
+      "ca-g7-rome-byzantium text=8166ea1dfd std=3b9104ce6b q=6ce9a18bea",
       "or-g7-african-kingdoms text=02d794f28f std=30ba85bd9f q=5a669c38d2",
-      "ca-g7-arabia-islam text=7f26d322b2 std=783af4cc21 q=787e237d78",
+      "ca-g7-arabia-islam text=7f26d322b2 std=783af4cc21 q=9919f37954",
       "medieval-europe text=b4fe2b0edd std=18198b216d q=e0e0a48023",
-      "ca-g7-imperial-china text=74baee3065 std=27ed1586fa q=261f938ea5",
+      "ca-g7-imperial-china text=74baee3065 std=27ed1586fa q=f511a37acb",
       "ny-g9-ottoman-ming text=a46f6559f1 std=3e0feff381 q=4acf893e49",
       "dc-g9-early-humans text=48472b3919 std=b877b24c46 q=7c779702c4",
       "dc-g9-world-heritage text=8f1d645e9d std=d91573a40d q=9036b8c510"
