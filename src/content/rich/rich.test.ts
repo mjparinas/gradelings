@@ -5,7 +5,7 @@ import { coursesInFramework } from "../index";
 import { hashSeed, withSeed } from "../random";
 import type { MistakeQuestion, Question } from "../types";
 import { withRich } from "./index";
-import { equivalentFill, multiplyMistake, oneStepMistake, twoStepMistake } from "./questions";
+import { decimalFractions, equalFractions, fractionDecimals, fractionWords, integerLineMistake, mixedNumberMistake, multiplyMistake, oneStepMistake, percentFractions, twoStepMistake, equivalentFill } from "./questions";
 import { RICH } from "./units";
 
 const seeds = Array.from({ length: 12 }, (_, i) => i);
@@ -128,5 +128,55 @@ describe("every framework gets the same mixed-in questions", () => {
       }
     }
     expect(missing).toEqual([]);
+  });
+});
+
+describe("fraction, decimal and number-line questions", () => {
+  const value = (t: string) => (t.includes("/") ? Number(t.split("/")[0]) / Number(t.split("/")[1]) : t.endsWith("%") ? Number(t.slice(0, -1)) / 100 : Number(t));
+  it("equal-fraction choices: the right ones are equal and no wrong one is", () => {
+    for (let s = 0; s < 200; s++)
+      withSeed(s, () => {
+        const q = equalFractions()[0];
+        if (q.kind !== "multi") throw new Error("kind");
+        const target = value(/equal to (\d+\/\d+)/.exec(q.prompt)![1]);
+        for (const c of q.choices) expect(q.answers.includes(c.id), `${q.prompt} ${c.label}`).toBe(Math.abs(value(c.label) - target) < 1e-9);
+      });
+  });
+  it("matching pairs hold the same value on both sides", () => {
+    const words: Record<string, number> = { "one half": 1 / 2, "one third": 1 / 3, "one quarter": 1 / 4, "two thirds": 2 / 3, "three quarters": 3 / 4 };
+    for (let s = 0; s < 60; s++)
+      withSeed(s, () => {
+        for (const q of [...fractionWords(), ...decimalFractions(), ...percentFractions(), ...fractionDecimals()]) {
+          if (q.kind !== "match") throw new Error("kind");
+          for (const p of q.pairs) {
+            const l = words[p.left.label] ?? value(p.left.label);
+            const r = words[p.right.label] ?? value(p.right.label);
+            expect(l, `${p.left.label} = ${p.right.label}`).toBeCloseTo(r, 9);
+          }
+        }
+      });
+  });
+  it("the mixed-number step marked wrong is the only wrong one", () => {
+    for (let s = 0; s < 100; s++)
+      withSeed(s, () => {
+        const q = mixedNumberMistake()[0] as MistakeQuestion;
+        const [, n, d] = /(\d+)\/(\d+) as/.exec(q.prompt)!.map(Number);
+        const w = Math.floor(n / d);
+        const r = n % d;
+        const good = [`${n} ÷ ${d} = ${w} remainder ${r}`, `The whole number is ${w}`, `The fraction part is ${r}/${d}`, `${n}/${d} = ${w} ${r}/${d}`];
+        // The marked step differs from the correct one; steps after it follow from it, so only that step is the first to go wrong.
+        expect(q.steps[q.wrong]).not.toBe(good[q.wrong]);
+        for (let i = 0; i < q.wrong; i++) expect(q.steps[i]).toBe(good[i]);
+      });
+  });
+  it("the integer number-line step marked wrong is the first wrong one", () => {
+    for (let s = 0; s < 100; s++)
+      withSeed(s, () => {
+        const q = integerLineMistake()[0] as MistakeQuestion;
+        const [, a, b] = /−(\d+) \+ (\d+) on/.exec(q.prompt)!.map(Number);
+        const good = [`Start at −${a} on the number line`, `Move ${b} steps to the right`, `−${a} + ${b} = ${b - a}`];
+        expect(q.steps[q.wrong]).not.toBe(good[q.wrong]);
+        for (let i = 0; i < q.wrong; i++) expect(q.steps[i]).toBe(good[i]);
+      });
   });
 });

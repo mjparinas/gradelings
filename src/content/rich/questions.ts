@@ -241,6 +241,144 @@ export const equivalentFill = (): Question[] => {
   ];
 };
 
+// ---------- Fractions, decimals, percents and the number line ----------
+
+const FRACTION_WORDS: [string, string][] = [
+  ["1/2", "one half"],
+  ["1/3", "one third"],
+  ["1/4", "one quarter"],
+  ["2/3", "two thirds"],
+  ["3/4", "three quarters"],
+];
+export const fractionWords = (): Question[] => [
+  match(
+    "Match each fraction with its name.",
+    "The bottom number says how many equal parts. The top number says how many you have.",
+    sample(FRACTION_WORDS, 4).map(([f, w]) => ({ left: f, right: w })),
+  ),
+];
+
+/** Tap every fraction equal to a/b. Wrong choices are checked so none is secretly equal. */
+export const equalFractions = (): Question[] => {
+  const b = randInt(2, 5);
+  const a = randInt(1, b - 1);
+  const ks = sample([2, 3, 4], 2);
+  const right = ks.map((k) => `${a * k}/${b * k}`);
+  const candidates = [`${a + 1}/${b + 1}`, `${a * 2}/${b * 3}`, `${a}/${b + 1}`, `${a + 1}/${b * 2}`, `${a * 3}/${b * 2}`];
+  const wrong = candidates.filter((f) => {
+    const [x, y] = f.split("/").map(Number);
+    return x * b !== y * a && x < y;
+  });
+  return [
+    multi(
+      `Tap every fraction equal to ${a}/${b}.`,
+      `Equal fractions have the same value. Multiply the top and the bottom of ${a}/${b} by the same number to make one.`,
+      right.map((f) => [f] as [string]),
+      sample(wrong, Math.min(2, wrong.length)).map((f) => [f] as [string]),
+    ),
+  ];
+};
+
+const DECIMAL_FRACTIONS: [string, string][] = [
+  ["0.1", "1/10"],
+  ["0.2", "1/5"],
+  ["0.25", "1/4"],
+  ["0.5", "1/2"],
+  ["0.75", "3/4"],
+];
+export const decimalFractions = (): Question[] => [
+  match(
+    "Match each decimal with its fraction.",
+    "Think of tenths and hundredths. 0.5 is 5 tenths, which is the same as one half.",
+    sample(DECIMAL_FRACTIONS, 4).map(([d, f]) => ({ left: d, right: f })),
+  ),
+];
+
+/** Tap every decimal greater than a benchmark. */
+export const biggerDecimals = (): Question[] => {
+  const right = sample(["0.6", "0.75", "0.8", "0.9", "0.55"], 2);
+  const wrong = sample(["0.45", "0.09", "0.35", "0.05", "0.4", "0.5"], 3);
+  return [
+    multi(
+      "Tap every decimal greater than 0.5.",
+      "Line the decimals up by place value. Compare the tenths first.",
+      right.map((d) => [d] as [string]),
+      wrong.map((d) => [d] as [string]),
+    ),
+  ];
+};
+
+const PERCENT_FRACTIONS: [string, string][] = [
+  ["50%", "1/2"],
+  ["25%", "1/4"],
+  ["75%", "3/4"],
+  ["10%", "1/10"],
+  ["20%", "1/5"],
+  ["40%", "2/5"],
+];
+export const percentFractions = (): Question[] => [
+  match(
+    "Match each percent with its fraction.",
+    "A percent is a fraction out of 100. Write each fraction out of 100 to compare.",
+    sample(PERCENT_FRACTIONS, 4).map(([p, f]) => ({ left: p, right: f })),
+  ),
+];
+
+export const mixedNumberMistake = (): Question[] => {
+  const who = aName();
+  const d = randInt(3, 9);
+  const w = randInt(1, 5);
+  const r = randInt(1, d - 2);
+  const n = d * w + r;
+  const flip = pick([true, false]);
+  const steps = flip
+    ? [`${n} ÷ ${d} = ${w} remainder ${r}`, `The whole number is ${w}`, `The fraction part is ${d}/${r}`, `${n}/${d} = ${w} ${d}/${r}`]
+    : [`${n} ÷ ${d} = ${w} remainder ${r + 1}`, `The whole number is ${w}`, `The fraction part is ${r + 1}/${d}`, `${n}/${d} = ${w} ${r + 1}/${d}`];
+  return [
+    mistake(
+      `${who} wrote ${n}/${d} as a mixed number. Which step has the mistake?`,
+      "Divide the top by the bottom. The remainder goes over the bottom number. Check each line yourself.",
+      steps,
+      flip ? 2 : 0,
+    ),
+  ];
+};
+
+const FRACTION_DECIMALS: [string, string][] = [
+  ["1/8", "0.125"],
+  ["3/8", "0.375"],
+  ["1/5", "0.2"],
+  ["3/5", "0.6"],
+  ["1/20", "0.05"],
+  ["3/20", "0.15"],
+];
+export const fractionDecimals = (): Question[] => [
+  match(
+    "Match each fraction with its decimal.",
+    "Divide the top by the bottom, or make the bottom 10, 100 or 1000 and read the decimal.",
+    sample(FRACTION_DECIMALS, 4).map(([f, d]) => ({ left: f, right: d })),
+  ),
+];
+
+/** Adding a positive number to a negative one on a number line: one step goes the wrong way, or the sum is off. */
+export const integerLineMistake = (): Question[] => {
+  const who = aName();
+  const a = randInt(3, 9);
+  const b = a + randInt(2, 9);
+  const wrongWay = pick([true, false]);
+  const steps = wrongWay
+    ? [`Start at −${a} on the number line`, `Move ${b} steps to the left`, `−${a} + ${b} = −${a + b}`]
+    : [`Start at −${a} on the number line`, `Move ${b} steps to the right`, `−${a} + ${b} = ${b + a}`];
+  return [
+    mistake(
+      `${who} worked out −${a} + ${b} on a number line. Which step has the mistake?`,
+      "Adding a positive number moves right. Count the steps from the start yourself to check the answer.",
+      steps,
+      wrongWay ? 1 : 2,
+    ),
+  ];
+};
+
 // ---------- Say it out loud (voice practice; plain tap questions where voice is off) ----------
 
 const PICTURE_WORDS: [string, string][] = [

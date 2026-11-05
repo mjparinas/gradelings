@@ -258,7 +258,7 @@
       "add-subtract-1000 text=abcc5b81ab std=9ae98402ab q=ebf0b5c179",
       "multiplication text=7016aa3933 std=53bf4ba05e q=249bc57054",
       "division text=bbe2ad47e7 std=72188049ed q=aa74a94c19",
-      "fractions text=f6af4c5918 std=29797a00aa q=7875833e1e",
+      "fractions text=f6af4c5918 std=29797a00aa q=06970f9aa3",
       "area-and-perimeter-3 text=582456883a std=c2bc6afca9 q=7795bd1723",
       "mb-polygons text=7e887af0b4 std=2084cbad54 q=678e5f603a",
       "wa-g3-two-step text=7b9287746b std=e2c55c4b3a q=2025f14040",
@@ -326,8 +326,8 @@
     "units": [
       "numbers-to-10000 text=6b18002946 std=bc98a53000 q=0c95306c0b",
       "multiply-divide text=64281bfafd std=8615819348 q=3036a902e9",
-      "fractions text=35fc876177 std=76aec356d5 q=9ea0b54c2a",
-      "decimals text=ccaab39e33 std=301feaed7b q=503916ff7a",
+      "fractions text=35fc876177 std=76aec356d5 q=5112e846a4",
+      "decimals text=ccaab39e33 std=301feaed7b q=039b7ff1c4",
       "equations text=5aa54c6ad3 std=cf9285a937 q=9d644407e2",
       "polygons-and-perimeter text=1f1f7acbfe std=b36d30f405 q=0ca495ff7c",
       "fractions-4 text=0e102ed1c5 std=82f2a8d49f q=61419c0a19",
@@ -394,7 +394,7 @@
     "units": [
       "numbers-to-a-million text=89d19d764c std=4ab5138bc5 q=0160db959a",
       "equivalent-fractions text=cf635b163a std=6e3431c4dd q=937dbe7300",
-      "decimals text=5aeaecae0c std=5caf7a2aeb q=df303e4d1a",
+      "decimals text=5aeaecae0c std=5caf7a2aeb q=5335794b27",
       "mb-mental-math-5 text=d109457dda std=a5863e8ba4 q=ca9e0eeb41",
       "wa-g5-expressions text=f8c1c787f7 std=01f5db4b8b q=c5649c8235",
       "wa-g5-coordinates text=1aa95047d3 std=721cd59b5f q=d163d8de21",
@@ -461,9 +461,9 @@
   "6/math": {
     "overview": "9045ce6537",
     "units": [
-      "mixed-numbers-and-ratios text=9a52ba7712 std=91ebd31b26 q=5eedd9b35d",
+      "mixed-numbers-and-ratios text=9a52ba7712 std=91ebd31b26 q=74038d96a2",
       "decimal-multiply-divide text=fc458a18fb std=400d9f78f7 q=bd81c6eb6d",
-      "percents-and-budgets text=136c6c6ae5 std=7923d8176b q=99bdc2230a",
+      "percents-and-budgets text=136c6c6ae5 std=7923d8176b q=75b08d5346",
       "equations text=5c61d003c6 std=67974cf536 q=16e4656f8c",
       "perimeter-and-area text=44afdbe788 std=5111380631 q=a0bb87355d",
       "numbers-6 text=54d144b67b std=1394925e2b q=e4fdd9f708",
@@ -538,9 +538,9 @@
   "7/math": {
     "overview": "5fe12b9753",
     "units": [
-      "integer-add-subtract text=0f49d1bba6 std=175e950b35 q=688da6d68b",
+      "integer-add-subtract text=0f49d1bba6 std=175e950b35 q=1e24134b03",
       "decimal-operations text=56ab979d6a std=bb7d81a479 q=7f89d319c6",
-      "fractions-decimals-percents text=12d27e2a2e std=310505dc07 q=720141998e",
+      "fractions-decimals-percents text=12d27e2a2e std=310505dc07 q=1030c5dd8d",
       "two-step-equations text=ddaa3cce54 std=20cf6f327e q=4d67a1e779",
       "circles text=9910166981 std=7ffa1333e1 q=2f9fffb18b",
       "volume text=edb22b36a3 std=460f0f5d50 q=609393c28a",
