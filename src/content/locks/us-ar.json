@@ -614,11 +614,11 @@
   "7/social": {
     "overview": "7df91f36d0",
     "units": [
-      "ca-g5-thirteen-colonies text=b2ab7c1f74 std=fbf266e8ba q=9a9a2e4720",
-      "ca-g5-colonial-economy text=ce14c5ad17 std=f1ba6ae52f q=964b882147",
-      "ca-g5-road-to-revolution text=0db76d8612 std=3a172e2fef q=8ff3e277fb",
-      "ca-g5-revolution text=ef5fd4d37f std=a0e43e8351 q=8de8201d9a",
-      "ca-g5-constitution text=316951e733 std=a268f084bf q=f053d97871",
+      "ca-g5-thirteen-colonies text=b2ab7c1f74 std=fbf266e8ba q=17e62378ec",
+      "ca-g5-colonial-economy text=ce14c5ad17 std=f1ba6ae52f q=78476c23e0",
+      "ca-g5-road-to-revolution text=0db76d8612 std=3a172e2fef q=348033ff6d",
+      "ca-g5-revolution text=ef5fd4d37f std=a0e43e8351 q=77d806ef60",
+      "ca-g5-constitution text=316951e733 std=a268f084bf q=f7d329903c",
       "wa-g8-bill-of-rights text=51f41862e9 std=384783cbd4 q=6898ac27d5",
       "ca-g8-new-nation text=d2432dc34d std=59230e1123 q=43ff2d5a2f",
       "ar-g7-arkansas-land text=d610271bff std=12119ec462 q=a88aa8d00f",

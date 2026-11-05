@@ -394,7 +394,7 @@
       "ny-g5-encounters text=3fa15d8dd4 std=65211dcdcc q=5a05dd56e1",
       "ny-g5-columbian-exchange text=d1e9c8a03f std=4f6a5d2611 q=625d765c55",
       "tx-g5-growing-nation text=481f3e4633 std=4b482f977a q=535a8221ac",
-      "ca-g5-westward text=50c4e7b9be std=a3ae5e10c8 q=659ed16382",
+      "ca-g5-westward text=50c4e7b9be std=a3ae5e10c8 q=e7d1d74cc6",
       "ca-g8-divided-nation text=d7d0c32f41 std=9c5d7dc9c6 q=1308ba94ab",
       "ma-g4-first-peoples text=6c46b4e0a1 std=b35931e088 q=d41937c7c5",
       "ma-g4-us-regions text=aebf4d1b89 std=a31a380a9f q=f490813227"
@@ -469,7 +469,7 @@
     "units": [
       "wa-g5-thirteen-colonies text=b218e8efce std=a7f8900870 q=dd5f1aba73",
       "wa-g5-colonial-economy text=982da5c94c std=89def64ead q=edbe11a49f",
-      "ca-g5-slavery-and-resistance text=75582d2903 std=af952e1c09 q=2ffe26deae",
+      "ca-g5-slavery-and-resistance text=75582d2903 std=af952e1c09 q=6cc22a069b",
       "wa-g5-road-to-revolution text=a11f358f51 std=d082c7f1d4 q=2aba492c38",
       "wa-g5-revolution text=61cc174b3f std=dbf47fd018 q=183c2fe968",
       "wa-g5-constitution text=4fce7c7602 std=8fad0e1c18 q=2d1d2c254b",

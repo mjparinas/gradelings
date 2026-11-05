@@ -390,12 +390,12 @@
   "4/social": {
     "overview": "f0c4032634",
     "units": [
-      "ca-g5-american-creed text=a13ba29021 std=3e02ef7b59 q=8383768f39",
+      "ca-g5-american-creed text=a13ba29021 std=3e02ef7b59 q=c416613dc7",
       "wa-g5-us-geography text=753ee44cf5 std=3261de2f01 q=0d34129e50",
       "or-g5-states-capitals text=9aea604693 std=53995bf2c2 q=6b5387c192",
-      "ca-g5-first-nations text=f796428324 std=4a8fea8fa6 q=e5c78ad910",
+      "ca-g5-first-nations text=f796428324 std=4a8fea8fa6 q=d0bc223517",
       "ny-g5-early-civilizations text=bab328e224 std=25769d8b37 q=42bf230f2d",
-      "ca-g5-explorers text=31163461fe std=9936a70fbe q=87d27db1bb",
+      "ca-g5-explorers text=31163461fe std=9936a70fbe q=cb62d83b04",
       "ny-g5-columbian-exchange text=d1e9c8a03f std=07a9f5098b q=625d765c55",
       "or-g5-earn-and-save text=3f858f4d88 std=105e4de51d q=9f54445f7e"
     ]
@@ -469,12 +469,12 @@
     "overview": "a73eaf16ec",
     "units": [
       "ny-g5-first-peoples text=76ff89a473 std=aac4a758a4 q=ad3f5cd6dc",
-      "ca-g5-thirteen-colonies text=b2ab7c1f74 std=d2c71c8794 q=9a9a2e4720",
-      "ca-g5-colonial-economy text=469755cd16 std=8eb48a48c5 q=964b882147",
-      "ca-g5-slavery-and-resistance text=75582d2903 std=810199a275 q=2ffe26deae",
-      "ca-g5-road-to-revolution text=f43acaa35e std=95221b3352 q=8ff3e277fb",
-      "ca-g5-revolution text=9f9c895b95 std=2323f8956e q=8de8201d9a",
-      "ca-g5-constitution text=f0912d934b std=3de35d9b73 q=f053d97871",
+      "ca-g5-thirteen-colonies text=b2ab7c1f74 std=d2c71c8794 q=17e62378ec",
+      "ca-g5-colonial-economy text=469755cd16 std=8eb48a48c5 q=78476c23e0",
+      "ca-g5-slavery-and-resistance text=75582d2903 std=810199a275 q=6cc22a069b",
+      "ca-g5-road-to-revolution text=f43acaa35e std=95221b3352 q=348033ff6d",
+      "ca-g5-revolution text=9f9c895b95 std=2323f8956e q=77d806ef60",
+      "ca-g5-constitution text=f0912d934b std=3de35d9b73 q=f7d329903c",
       "wa-g8-bill-of-rights text=edcc86640b std=d210a2e932 q=6898ac27d5",
       "ca-g8-new-nation text=a71e0f4725 std=bfb5dd3167 q=43ff2d5a2f",
       "or-g5-timeline text=d6feb485b6 std=fe4d5d9228 q=750a99801f"
@@ -711,10 +711,10 @@
   "8/social": {
     "overview": "265475ad55",
     "units": [
-      "ca-g5-road-to-revolution text=0db76d8612 std=897bcc07cf q=8ff3e277fb",
+      "ca-g5-road-to-revolution text=0db76d8612 std=897bcc07cf q=348033ff6d",
       "ca-g8-revolutionary-ideas text=543eb450c3 std=46c77e39e9 q=1bdb99ec2b",
-      "ca-g5-revolution text=ef5fd4d37f std=dca495c44a q=8de8201d9a",
-      "ca-g5-constitution text=316951e733 std=bbfabebed2 q=f053d97871",
+      "ca-g5-revolution text=ef5fd4d37f std=dca495c44a q=77d806ef60",
+      "ca-g5-constitution text=316951e733 std=bbfabebed2 q=f7d329903c",
       "ca-g8-founding-ideals text=acee6a08c8 std=102c98c155 q=26fd931b32",
       "wa-g8-bill-of-rights text=edcc86640b std=6d7298dd7d q=6898ac27d5",
       "ca-g8-new-nation text=80ae97aef6 std=d223db092c q=43ff2d5a2f",

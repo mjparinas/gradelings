@@ -692,10 +692,10 @@
   "7/social": {
     "overview": "07c1ddb12e",
     "units": [
-      "ca-g5-colonial-economy text=ce14c5ad17 std=47a66a4579 q=964b882147",
-      "ca-g5-road-to-revolution text=0db76d8612 std=50cadd6dbf q=8ff3e277fb",
-      "ca-g5-revolution text=ef5fd4d37f std=8649ab61d7 q=8de8201d9a",
-      "ca-g5-constitution text=316951e733 std=3f741f73d6 q=f053d97871",
+      "ca-g5-colonial-economy text=ce14c5ad17 std=47a66a4579 q=78476c23e0",
+      "ca-g5-road-to-revolution text=0db76d8612 std=50cadd6dbf q=348033ff6d",
+      "ca-g5-revolution text=ef5fd4d37f std=8649ab61d7 q=77d806ef60",
+      "ca-g5-constitution text=316951e733 std=3f741f73d6 q=f7d329903c",
       "ca-g8-founding-ideals text=c6cb5590e8 std=5e4bfc3d9f q=26fd931b32",
       "wa-g8-bill-of-rights text=51f41862e9 std=d41001bec6 q=6898ac27d5",
       "ca-g8-new-nation text=d2432dc34d std=564c93f6ee q=43ff2d5a2f",

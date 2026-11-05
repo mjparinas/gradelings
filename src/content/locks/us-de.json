@@ -468,13 +468,13 @@
     "units": [
       "ny-g5-columbian-exchange text=18b9dc4878 std=bd3662f626 q=625d765c55",
       "wa-g5-thirteen-colonies text=b218e8efce std=55e1c0bcc2 q=dd5f1aba73",
-      "ca-g5-colonial-economy text=469755cd16 std=0d0f5fad1d q=964b882147",
-      "ca-g5-road-to-revolution text=f43acaa35e std=19a575a505 q=8ff3e277fb",
-      "ca-g5-revolution text=9f9c895b95 std=aa849558ea q=8de8201d9a",
+      "ca-g5-colonial-economy text=469755cd16 std=0d0f5fad1d q=78476c23e0",
+      "ca-g5-road-to-revolution text=f43acaa35e std=19a575a505 q=348033ff6d",
+      "ca-g5-revolution text=9f9c895b95 std=aa849558ea q=77d806ef60",
       "wa-g5-constitution text=4fce7c7602 std=e6762f2416 q=2d1d2c254b",
       "or-g5-timeline text=d6feb485b6 std=9bd0c1e114 q=750a99801f",
       "de-g5-eastern-woodland text=feaeec50ef std=631ca75920 q=dbb0bc345b",
-      "de-g5-explorers text=471a0d3f43 std=20ca713b5c q=7847cf984d"
+      "de-g5-explorers text=471a0d3f43 std=20ca713b5c q=a3fe0e4b27"
     ]
   },
   "5/spanish": {

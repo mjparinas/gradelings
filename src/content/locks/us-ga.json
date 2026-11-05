@@ -311,13 +311,13 @@
     "units": [
       "meeting-needs text=40a76a9522 std=e820a99111 q=3ac35931e2",
       "or-g2-world-maps text=8a70a67868 std=4b5243024d q=f54db7af64",
-      "ca-g5-thirteen-colonies text=b2ab7c1f74 std=c204f84f1d q=9a9a2e4720",
+      "ca-g5-thirteen-colonies text=b2ab7c1f74 std=c204f84f1d q=17e62378ec",
       "ny-g3-trade text=e9671f4b33 std=b2fa86a8a5 q=7164350409",
       "ga-g3-american-indian-regions text=313319cfd5 std=7868c86e0e q=a0c8c18562",
       "ga-g3-three-branches text=01233458c9 std=5d31ef4e74 q=17d00a39dc",
       "ga-g3-us-map text=7cad400f9b std=9df3c907d7 q=d0e258a44d",
       "ga-g3-productive-resources text=c5bf472e61 std=da90c67cfe q=045c406b94",
-      "ga-g3-explorers text=31163461fe std=71808fe84a q=6a253a955c",
+      "ga-g3-explorers text=31163461fe std=71808fe84a q=2f9bff5aff",
       "ga-g3-money-and-voting text=597d8b1e1b std=5151c25532 q=a3fe66b0b5"
     ]
   },
@@ -394,11 +394,11 @@
     "overview": "b4a04dbf05",
     "units": [
       "wa-g5-road-to-revolution text=a11f358f51 std=c207712b20 q=2aba492c38",
-      "ca-g5-revolution text=9f9c895b95 std=cfe29ce765 q=8de8201d9a",
-      "ca-g5-constitution text=f0912d934b std=d704af5b6b q=f053d97871",
+      "ca-g5-revolution text=9f9c895b95 std=cfe29ce765 q=77d806ef60",
+      "ca-g5-constitution text=f0912d934b std=d704af5b6b q=f7d329903c",
       "wa-g8-bill-of-rights text=edcc86640b std=86e4eb2033 q=6898ac27d5",
       "ca-g8-new-nation text=a71e0f4725 std=d9579d5028 q=43ff2d5a2f",
-      "ca-g5-westward text=50c4e7b9be std=3c678d880e q=659ed16382",
+      "ca-g5-westward text=50c4e7b9be std=3c678d880e q=e7d1d74cc6",
       "ca-g8-divided-nation text=d7d0c32f41 std=5d2dd6fbd7 q=1308ba94ab",
       "ca-g8-civil-war text=01b158a689 std=0328d86dcf q=538b60ca99",
       "or-g8-reconstruction text=733e5c4399 std=a3c46721ec q=4c87f1ca5f",

@@ -394,11 +394,11 @@
   "4/social": {
     "overview": "bc6aa8f482",
     "units": [
-      "ca-g5-explorers text=31163461fe std=bb746b2ffc q=87d27db1bb",
+      "ca-g5-explorers text=31163461fe std=bb746b2ffc q=cb62d83b04",
       "ny-g5-columbian-exchange text=d1e9c8a03f std=c05142e0ec q=625d765c55",
       "wa-g5-thirteen-colonies text=268bab3377 std=84832830f1 q=dd5f1aba73",
-      "ca-g5-colonial-economy text=302c8d93ea std=2132d8f4b2 q=964b882147",
-      "ca-g5-slavery-and-resistance text=75582d2903 std=f02608616d q=2ffe26deae",
+      "ca-g5-colonial-economy text=302c8d93ea std=2132d8f4b2 q=78476c23e0",
+      "ca-g5-slavery-and-resistance text=75582d2903 std=f02608616d q=6cc22a069b",
       "ky-g4-colonial-kentucky text=f00231be0d std=6890ddc301 q=a9e80b756b",
       "ky-g4-colonial-government text=4be6850770 std=affbd23bf2 q=7384744c1c",
       "ky-g4-market-economy text=e267fb5f2a std=0bc9d621e3 q=b19c2f6bb4"
@@ -472,11 +472,11 @@
   "5/social": {
     "overview": "182a4b24d0",
     "units": [
-      "ca-g5-road-to-revolution text=f43acaa35e std=fc532ae17b q=8ff3e277fb",
-      "ca-g5-revolution text=9f9c895b95 std=bbc8539a4c q=8de8201d9a",
+      "ca-g5-road-to-revolution text=f43acaa35e std=fc532ae17b q=348033ff6d",
+      "ca-g5-revolution text=9f9c895b95 std=bbc8539a4c q=77d806ef60",
       "ca-g8-revolutionary-ideas text=543eb450c3 std=0284b88042 q=1bdb99ec2b",
       "wa-g5-constitution text=4fce7c7602 std=9542270d83 q=2d1d2c254b",
-      "ca-g5-constitution text=f0912d934b std=54181bb90f q=f053d97871",
+      "ca-g5-constitution text=f0912d934b std=54181bb90f q=f7d329903c",
       "or-g5-timeline text=d6feb485b6 std=bd42a5b2db q=750a99801f",
       "or-g5-states-capitals text=565d8f1d6b std=d31f223870 q=6b5387c192",
       "ky-g5-kentucky-settlers text=ab43779ec3 std=e45323ab05 q=b5fc91e0d9",
@@ -734,11 +734,11 @@
   "8/social": {
     "overview": "9162761d3b",
     "units": [
-      "ca-g5-thirteen-colonies text=b2ab7c1f74 std=a45747f6a4 q=9a9a2e4720",
+      "ca-g5-thirteen-colonies text=b2ab7c1f74 std=a45747f6a4 q=17e62378ec",
       "or-g8-founding-ideas text=6fa3d530b3 std=4e31afc95b q=83494b4253",
       "wa-g8-bill-of-rights text=edcc86640b std=b28fe3200d q=6898ac27d5",
       "ca-g8-new-nation text=80ae97aef6 std=600ffc872f q=43ff2d5a2f",
-      "ca-g5-westward text=50c4e7b9be std=f58c8bade7 q=659ed16382",
+      "ca-g5-westward text=50c4e7b9be std=f58c8bade7 q=e7d1d74cc6",
       "ca-g8-industry-reform text=8cfcde45ec std=b68e65865b q=7b6a2b6d3d",
       "ca-g8-divided-nation text=d7d0c32f41 std=bc85c9236c q=1308ba94ab",
       "ca-g8-civil-war text=639e5bd6fb std=ec2145543b q=538b60ca99",
