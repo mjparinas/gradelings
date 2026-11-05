@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { MARITIMES_MORE, POLITICAL_MORE, SOCIETY_MORE, TODAY_MORE, TREATIES_MORE, WW1_MORE } from "./g7-social-more";
 
 // Grade 7 social studies, the Maritimes and Mi’kma’ki: treaties, settlement, political change, changing society,
 // World War I and Maritime communities today. Indigenous, African Nova Scotian and Acadian content is factual,
@@ -334,7 +335,7 @@ export const mikmawTreaties = bankUnit({
     "Reflect on the impact of government policies and the denial of treaty rights on Mi’kmaw communities and individuals in Mi’kma’ki",
     "Mi’kma’ki, the treaties and how policies affected Mi’kmaw communities",
   ],
-  items: TREATIES,
+  items: [...TREATIES, ...TREATIES_MORE],
 });
 
 export const maritimesHistory = bankUnit({
@@ -348,7 +349,7 @@ export const maritimesHistory = bankUnit({
     "Reflect on historical opportunities and challenges in the Maritimes",
     "Early settlement and the chances and hardships groups faced",
   ],
-  items: MARITIMES,
+  items: [...MARITIMES, ...MARITIMES_MORE],
 });
 
 export const politicalChange = bankUnit({
@@ -362,7 +363,7 @@ export const politicalChange = bankUnit({
     "Evaluate the impacts of political changes in the Maritimes up to the early 20th century",
     "Government, Confederation and who could vote",
   ],
-  items: POLITICAL,
+  items: [...POLITICAL, ...POLITICAL_MORE],
 });
 
 export const changingSociety = bankUnit({
@@ -376,7 +377,7 @@ export const changingSociety = bankUnit({
     "Create a response to changing societal conditions in the Maritimes",
     "Industry, work, Africville and community responses to change",
   ],
-  items: SOCIETY,
+  items: [...SOCIETY, ...SOCIETY_MORE],
 });
 
 export const worldWarOne = bankUnit({
@@ -390,7 +391,7 @@ export const worldWarOne = bankUnit({
     "Evaluate the impacts of World War I on the Maritimes",
     "Halifax in wartime, the Explosion and life at home",
   ],
-  items: WW1,
+  items: [...WW1, ...WW1_MORE],
 });
 
 export const maritimeCommunitiesToday = bankUnit({
@@ -404,5 +405,5 @@ export const maritimeCommunitiesToday = bankUnit({
     "Create responses to opportunities and challenges in present-day Maritime communities",
     "Ocean economy, newcomers, languages, climate and community responses",
   ],
-  items: TODAY,
+  items: [...TODAY, ...TODAY_MORE],
 });

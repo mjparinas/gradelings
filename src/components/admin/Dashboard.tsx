@@ -9,6 +9,7 @@ import type { Part, VisitsReport } from "@/lib/traffic";
 import { cancelReasonRows } from "@/lib/cancelReasons";
 import { FREE_UNITS_PER_COURSE } from "@/lib/plan";
 import { DetailModal } from "./DetailModal";
+import { Insights } from "./Insights";
 import { ChartShape, Loading, TileShape } from "./Skeleton";
 
 // The admin overview: customers, growth, practice and money, with charts. Counts and sums only here; most
@@ -455,6 +456,7 @@ export function Dashboard({ onOpenFamily }: { onOpenFamily?: (id: string) => voi
         {failed("practice") ?? (!parts.practice ? <SectionLoading tiles={4} charts={2} /> : <Practice e={parts.practice.engagement} show={show} />)}
       </Section>
 
+      <Insights />
     </div>
   );
 }

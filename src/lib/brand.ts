@@ -6,6 +6,9 @@ export const MASCOT_NAME = "Ollie";
 
 // Used by the privacy policy and terms. Replace both before launch (see docs/DEPLOY.md).
 export const LEGAL_NAME = "Gradelings";
+
+/** The owner's own test accounts (checkout testing). Admin metrics leave them out, along with ADMIN_EMAILS and SUPPORT_EMAILS accounts. */
+export const TEST_ACCOUNT_EMAILS: readonly string[] = ["mjparinas@gmail.com"];
 export const CONTACT_EMAIL = "hello@gradelings.com";
 /**
  * The brand's own social profiles (full https URLs), listed as `sameAs` in the site's Organization structured data so

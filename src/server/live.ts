@@ -2,7 +2,7 @@ import "server-only";
 import { getCourse, loadGrade, parseUnitKey } from "@/content";
 import { hashSeed, withSeed } from "@/content/random";
 import type { ChoiceQuestion } from "@/content/types";
-import { type LiveQuestionData } from "@/lib/live";
+import { LIVE_AWAY_AFTER_MS, type LiveQuestionData } from "@/lib/live";
 import { newId } from "./auth";
 import { batch, query, run } from "./db";
 import { classGrades, type ClassRow } from "./classroom";
@@ -217,6 +217,32 @@ export async function answerLive(familyId: string, profileId: string, questionId
   return "saved";
 }
 
+/**
+ * Notes that a child's device just asked for a live question (`leaving` false) or said it is going away, because
+ * the tab was hidden or closed (`leaving` true). One row per class the child is in; times only.
+ */
+export async function recordPresence(familyId: string, profileId: string, leaving: boolean, now = Date.now()): Promise<void> {
+  if (leaving) {
+    await run("UPDATE live_presence SET left_at = ? WHERE family_id = ? AND profile_id = ?", [now, familyId, profileId]);
+    return;
+  }
+  await run(
+    `INSERT INTO live_presence (class_id, profile_id, family_id, seen_at, left_at)
+     SELECT m.class_id, m.profile_id, m.family_id, ?, NULL FROM class_members m WHERE m.family_id = ? AND m.profile_id = ?
+     ON CONFLICT (class_id, profile_id) DO UPDATE SET seen_at = excluded.seen_at, left_at = NULL`,
+    [now, familyId, profileId],
+  );
+}
+
+/** The class's students we have heard from before but not lately: they said they were leaving, or went quiet. */
+export async function awayProfiles(classId: string, now = Date.now()): Promise<string[]> {
+  const rows = await query<{ profile_id: string }>(
+    "SELECT profile_id FROM live_presence WHERE class_id = ? AND seen_at > ? AND (left_at IS NOT NULL OR seen_at < ?)",
+    [classId, now - LIVE_KEEP, now - LIVE_AWAY_AFTER_MS],
+  );
+  return rows.map((r) => r.profile_id);
+}
+
 /** The open question in any class this child is in, with their own answer (one query). */
 export async function liveForChild(familyId: string, profileId: string, now = Date.now()): Promise<{ row: LiveRow; className: string; mine: string | null } | null> {
   const rows = await query<LiveRow & { class_name: string; mine: string | null }>(
@@ -238,6 +264,7 @@ export async function pruneLive(now = Date.now()): Promise<void> {
   await batch([
     { sql: "DELETE FROM live_answers WHERE question_id IN (SELECT id FROM live_questions WHERE created_at < ?)", args: [cutoff] },
     { sql: "DELETE FROM live_questions WHERE created_at < ?", args: [cutoff] },
+    { sql: "DELETE FROM live_presence WHERE seen_at < ?", args: [cutoff] },
   ]);
 }
 
@@ -246,6 +273,7 @@ export function liveClassStatements(classIdSql: string, args: (string | number)[
   return [
     { sql: `DELETE FROM live_answers WHERE question_id IN (SELECT id FROM live_questions WHERE class_id IN (${classIdSql}))`, args },
     { sql: `DELETE FROM live_questions WHERE class_id IN (${classIdSql})`, args },
+    { sql: `DELETE FROM live_presence WHERE class_id IN (${classIdSql})`, args },
     // The class timer goes the same way (a new school year, closing the class, deleting an account).
     { sql: `DELETE FROM class_timers WHERE class_id IN (${classIdSql})`, args },
     { sql: `DELETE FROM class_presence WHERE class_id IN (${classIdSql})`, args },

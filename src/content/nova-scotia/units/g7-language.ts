@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { CULTURAL7_MORE } from "./language-more";
 
 // Grade 7 English language arts, cultural expressions: communication forms, first-voice texts, perspectives and
 // the choices creators make. Mi’kmaw, Acadian, African Nova Scotian and Gaelic examples are factual and light;
@@ -44,5 +45,5 @@ export const culturalExpressions7 = bankUnit({
   parentNote:
     "Practises how oral stories, songs, poems, plays, film and social media express culture, what first-voice texts are, and how creators' choices shape meaning, with Mi’kmaw, Acadian, African Nova Scotian and Gaelic examples. Ties to the Nova Scotia Grade 7 English language arts outcome on cultural expressions.",
   standards: ["Cultural expressions", "Explore how communication forms express culture, identity and different voices"],
-  items: CULTURAL,
+  items: [...CULTURAL, ...CULTURAL7_MORE],
 });

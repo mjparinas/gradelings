@@ -139,12 +139,13 @@ describe("AdminApp users", () => {
     const user = await openTab("Users");
     const rows = within(await screen.findByRole("table")).getAllByRole("row").slice(1);
     const cells = rows.map((r) => [...r.children].map((c) => c.textContent));
-    expect(cells[0][2]).toBe("Paying (past_due)");
-    expect(cells[0][3]).toBe("—");
-    expect(cells[1][2]).toMatch(/^Trial until /);
-    expect(cells[1][3]).toBe("Lifetime");
-    expect(cells[2][2]).toBe("Free");
-    expect(cells[2][3]).toMatch(/^Ended /);
+    expect(cells.map((c) => c[1])).toEqual(["Parent", "Parent", "Parent"]);
+    expect(cells[0][3]).toBe("Paying (past_due)");
+    expect(cells[0][4]).toBe("—");
+    expect(cells[1][3]).toMatch(/^Trial until /);
+    expect(cells[1][4]).toBe("Lifetime");
+    expect(cells[2][3]).toBe("Free");
+    expect(cells[2][4]).toMatch(/^Ended /);
 
     await user.type(screen.getByLabelText("Search by email or family id"), "nobody@example.com");
     await user.click(screen.getByRole("button", { name: "Search" }));
@@ -289,7 +290,7 @@ describe("AdminApp codes", () => {
     const cells = rows.map((r) => [...r.children].map((c) => c.textContent));
     expect(cells.map((c) => c[1])).toEqual(["30 days free", "Lifetime access", "25% off first payment", "10% off 3 months", "50% off every payment"]);
     expect(cells[0].slice(2, 5)).toEqual(["3 of 10", "Never", "Newsletter"]);
-    expect(cells[1][3]).not.toBe("Never");
+    expect(cells[1][4]).not.toBe("Never");
     expect(cells[4][5]).toMatch(/^Disabled /);
 
     await user.click(within(rows[0]).getByRole("button", { name: "Disable" }));
@@ -591,7 +592,7 @@ describe("AdminApp engagement", () => {
     });
     const user = await openTab("Users");
     const row = within(await screen.findByRole("table")).getAllByRole("row")[1];
-    expect([...row.children].slice(4).map((c) => c.textContent)).toEqual(["2 days ago", "Never"]);
+    expect([...row.children].slice(5).map((c) => c.textContent)).toEqual(["2 days ago", "Never"]);
     await user.click(screen.getByRole("button", { name: "pat@example.com" }));
     expect(await screen.findByRole("heading", { name: "Email This Family" })).toBeInTheDocument();
     expect(screen.getByText(/Last emailed from here 3 days ago/)).toBeInTheDocument();

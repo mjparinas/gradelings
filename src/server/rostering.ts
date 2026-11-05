@@ -17,6 +17,7 @@ import {
 } from "@/lib/rostering";
 import { appOrigin, newId } from "./auth";
 import { classOwnedCount, isFramework, offersGrade, MAX_CLASSES, MAX_STUDENTS, newJoinCode, type ClassRow } from "./classroom";
+import { markTeacher } from "./audience";
 import { batch, query, run } from "./db";
 import { isFlagOn } from "./flags";
 import { addStudents, cleanStudentName } from "./students";
@@ -407,6 +408,7 @@ export async function applyImport(parentId: string, pending: PendingImport, choi
       "SELECT * FROM classes WHERE owner_parent_id = ? AND roster_provider = ? AND roster_course_id = ? AND closed_at IS NULL",
       [parentId, pending.provider, section.id],
     ))[0];
+    await markTeacher(parentId);
     const created = !cls;
     if (!cls) {
       const name = choice.name.replace(/[\u0000-\u001f\u007f]/g, " ").replace(/\s+/g, " ").trim().slice(0, 60);

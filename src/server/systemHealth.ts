@@ -732,17 +732,23 @@ export async function emailCheck(now = Date.now()): Promise<HealthCheck> {
 
 // ---------- The daily job ----------
 
+/** A run that began this recently and hasn't finished is still going, not stopped. The morning digest is sent from inside the run, so it always sees its own run this way. */
+export const JOB_RUNNING_MS = 15 * 60_000;
+
 export async function jobCheck(now = Date.now()): Promise<HealthCheck> {
   const runs = await recentJobRuns("daily", 7);
-  const last = runs[0];
+  const going = runs[0]?.ok === null && now - runs[0].startedAt < JOB_RUNNING_MS ? runs[0] : null;
+  // Judge the job by the run before the one in progress.
+  const last = going ? runs[1] : runs[0];
   const unfinished = (r: (typeof runs)[number]) => r.ok === true && (jobRemaining(r.detail)?.length ?? 0) > 0;
   const rows: CheckRow[] = runs.map((r) => ({
-    label: r.ok === null ? "Still running or stopped" : r.ok ? (unfinished(r) ? "Ran out of time" : "Ran") : "Failed",
+    label: r === going ? "Running now" : r.ok === null ? "Still running or stopped" : r.ok ? (unfinished(r) ? "Ran out of time" : "Ran") : "Failed",
     value: r.ok === false ? (r.detail ?? "") : r.detail ? summarizeJob(r.detail) : "",
     at: r.startedAt,
-    state: r.ok === false ? "down" : r.ok === null || unfinished(r) ? "warn" : "ok",
+    state: r.ok === false ? "down" : r === going ? "ok" : r.ok === null || unfinished(r) ? "warn" : "ok",
   }));
   if (!env("CRON_SECRET")) return { id: "job", title: "Daily email job", state: "down", summary: "CRON_SECRET isn't set, so the daily job refuses to run.", rows, setup: "Set CRON_SECRET (docs/DEPLOY.md)." };
+  if (!last && going) return { id: "job", title: "Daily email job", state: "ok", summary: "The first run is in progress.", rows };
   if (!last) return { id: "job", title: "Daily email job", state: "warn", summary: "The daily job hasn't run yet. It runs at 15:00 UTC.", rows };
   const late = last.startedAt < now - 26 * 60 * 60 * 1000;
   const left = last.ok ? jobRemaining(last.detail) : null;

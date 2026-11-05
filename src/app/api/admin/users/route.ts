@@ -21,6 +21,7 @@ const DAY = 86_400_000;
 interface FamilyListRow {
   family_id: string;
   email: string;
+  account_type: string;
   created_at: number;
   plan: string;
   trial_ends_at: number;
@@ -45,18 +46,21 @@ export async function GET(req: Request) {
   }
   const q = (url.searchParams.get("q") ?? "").trim().toLowerCase().slice(0, 200);
   const like = `%${q.replace(/[\\%_]/g, (c) => `\\${c}`)}%`;
+  const type = url.searchParams.get("type");
+  const typeSql = type === "teacher" || type === "parent" ? "AND p.account_type = ?" : "";
   const rows = await query<FamilyListRow>(
-    `SELECT p.family_id, p.email, p.created_at, f.plan, f.trial_ends_at, f.access_until, f.subscription_status, p.last_login_at,
+    `SELECT p.family_id, p.email, p.account_type, p.created_at, f.plan, f.trial_ends_at, f.access_until, f.subscription_status, p.last_login_at,
        (SELECT MAX(e.t) FROM events e WHERE e.family_id = p.family_id) AS last_practice
      FROM parents p JOIN families f ON f.id = p.family_id
-     WHERE p.role != 'student' AND (? = '' OR p.email LIKE ? ESCAPE '\\' OR p.family_id = ?)
+     WHERE p.role != 'student' AND (? = '' OR p.email LIKE ? ESCAPE '\\' OR p.family_id = ?) ${typeSql}
      ORDER BY p.created_at DESC LIMIT 50`,
-    [q, like, q],
+    typeSql ? [q, like, q, type!] : [q, like, q],
   );
   return json({
     users: rows.map((r) => ({
       familyId: r.family_id,
       email: r.email,
+      accountType: r.account_type === "teacher" ? "teacher" : "parent",
       createdAt: Number(r.created_at),
       plan: r.plan,
       trialEndsAt: Number(r.trial_ends_at),
@@ -85,13 +89,14 @@ async function familyDetail(id: string) {
     created_at: number;
     email_verified_at: number | null;
     role: string;
+    account_type: string;
     weekly_report: number;
     practice_reminders: number;
     admin_mail: number;
     email_bounced_at: number | null;
     last_login_at: number | null;
   }>(
-    "SELECT id, email, created_at, email_verified_at, role, weekly_report, practice_reminders, admin_mail, email_bounced_at, last_login_at FROM parents WHERE family_id = ? ORDER BY created_at",
+    "SELECT id, email, created_at, email_verified_at, role, account_type, weekly_report, practice_reminders, admin_mail, email_bounced_at, last_login_at FROM parents WHERE family_id = ? ORDER BY created_at",
     [id],
   );
   if (!parents.length || parents.some((p) => p.role === "student")) return null;
@@ -181,6 +186,7 @@ async function familyDetail(id: string) {
     parents: parents.map((p) => ({
       id: p.id,
       email: p.email,
+      accountType: p.account_type === "teacher" ? "teacher" : "parent",
       createdAt: Number(p.created_at),
       verified: p.email_verified_at != null,
       weeklyReport: Boolean(Number(p.weekly_report)),
@@ -211,6 +217,7 @@ interface ActionBody {
   confirm?: unknown;
   body?: unknown;
   noteId?: unknown;
+  type?: unknown;
 }
 
 const NOTE_MAX = 1000;
@@ -249,6 +256,15 @@ export async function POST(req: Request) {
       if (gate.role === "support" && row.author !== admin.email) return error(403, "You can only remove your own notes.");
       await run("DELETE FROM family_notes WHERE id = ? AND family_id = ?", [Number(body!.noteId), familyId]);
       await log("user.delete-note");
+      return json({ ok: true });
+    }
+    case "set-account-type": {
+      // Which emails the account gets (src/server/audience.ts). It changes nothing about what the account can do.
+      const type = body!.type === "teacher" ? "teacher" : body!.type === "parent" ? "parent" : null;
+      if (!type) return error(400, "Choose parent or teacher.");
+      if (!detail.parents.some((p) => p.id === body!.parentId)) return error(404, "No such account in this family.");
+      await run("UPDATE parents SET account_type = ? WHERE id = ? AND role = 'parent'", [type, String(body!.parentId)]);
+      await log("user.set-account-type", { type });
       return json({ ok: true });
     }
     case "extend-trial": {

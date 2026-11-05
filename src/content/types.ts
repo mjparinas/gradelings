@@ -192,6 +192,76 @@ export interface PlaceQuestion extends BaseQuestion {
   fractionDenominator?: number;
 }
 
+/**
+ * Name the picture or count the objects out loud, with a tap-to-answer fallback. Where voice practice is off (the flag,
+ * the child's setting, or no downloaded model) it is simply a choice question, so it needs `choices` and `answer`.
+ * `say` is what a child should say: a word (with other spellings that also count), or a number to count up to.
+ */
+export interface SayQuestion extends BaseQuestion {
+  kind: "say";
+  choices: Choice[];
+  answer: string;
+  say: { word: string; accept?: string[] } | { count: number };
+}
+
+/** Match each item on the left with its partner on the right. Tap one, then its partner. */
+export interface MatchQuestion extends BaseQuestion {
+  kind: "match";
+  /** 2 to 5 pairs. Every pair needs a different left and a different right. */
+  pairs: { id: string; left: MatchSide; right: MatchSide }[];
+}
+
+export interface MatchSide {
+  /** The words. With `picture`, these are only the picture's name for screen readers. */
+  label: string;
+  emoji?: string;
+  /** Show just the emoji, large (a picture to match a word with). */
+  picture?: boolean;
+}
+
+/** Tap every option that fits ("select all that apply"). `answers` holds the ids of the right choices. */
+export interface MultiQuestion extends BaseQuestion {
+  kind: "multi";
+  choices: Choice[];
+  answers: string[];
+}
+
+/** Tap the word or words in a sentence that answer the prompt. `words` is the sentence split on spaces. */
+export interface HighlightQuestion extends BaseQuestion {
+  kind: "highlight";
+  words: string[];
+  /** Positions in `words` that are right. */
+  answers: number[];
+}
+
+/** A worked solution shown as steps; tap the step with the mistake. */
+export interface MistakeQuestion extends BaseQuestion {
+  kind: "mistake";
+  steps: string[];
+  /** The position of the step with the mistake. */
+  wrong: number;
+}
+
+/** Fill the blanks from a word bank. `text` marks each blank with `___`; `answers` has the word for each blank in order. */
+export interface FillQuestion extends BaseQuestion {
+  kind: "fill";
+  text: string;
+  bank: string[];
+  answers: string[];
+}
+
+/**
+ * Build a word, sentence or equation from tiles. `tiles` is the right sequence; `extra` tiles are decoys.
+ * The tiles are joined with `join` ("" for letters, " " for words). `accept` lists other joined answers that count.
+ */
+export interface TilesQuestion extends BaseQuestion {
+  kind: "tiles";
+  tiles: string[];
+  extra?: string[];
+  join?: "" | " ";
+  accept?: string[];
+}
+
 export type Question =
   | ChoiceQuestion
   | BuildQuestion
@@ -200,7 +270,14 @@ export type Question =
   | SortQuestion
   | InputQuestion
   | ShadeQuestion
-  | PlaceQuestion;
+  | PlaceQuestion
+  | MatchQuestion
+  | MultiQuestion
+  | HighlightQuestion
+  | MistakeQuestion
+  | FillQuestion
+  | TilesQuestion
+  | SayQuestion;
 
 export interface GenerateOptions {
   /** 1 = easier, 2 = on level, 3 = stretch. Units may ignore it. */

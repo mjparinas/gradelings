@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { DIGITAL_MORE, ENGAGED_MORE, FINANCIAL_MORE, GLOBAL_MORE, GOVERNANCE_MORE, LAWMAKING_MORE, RIGHTS_MORE } from "./g9-social-more";
 
 // Grade 9 social studies, Citizenship 9: service learning, rights and responsibilities, financial, digital,
 // governance and global citizenship. Balanced and non-partisan: no party is named and platform examples are generic.
@@ -279,7 +280,7 @@ export const engagedCitizenship = bankUnit({
   blurb: "Plan a project that helps your community.",
   parentNote: "Practises choosing a real community need, setting goals, planning roles and timelines, working with community partners and reflecting on citizenship, as in the Engaged Citizenship strand of Nova Scotia's Citizenship 9 course.",
   standards: ["Engaged Citizenship", "plan, carry out and reflect on a service learning project"],
-  items: ENGAGED,
+  items: [...ENGAGED, ...ENGAGED_MORE],
 });
 
 export const citizenRights = bankUnit({
@@ -289,7 +290,7 @@ export const citizenRights = bankUnit({
   blurb: "Rights, responsibilities and how they have grown.",
   parentNote: "Practises citizens' rights and responsibilities, worldview, how rights have changed for groups once shut out, treaties, the Charter and reconciliation, as in Nova Scotia's Citizenship 9 course. Indigenous content is light.",
   standards: ["Who Am I as a Citizen?", "rights and responsibilities, worldview, treaties, the Charter and reconciliation"],
-  items: RIGHTS,
+  items: [...RIGHTS, ...RIGHTS_MORE],
 });
 
 export const financialCitizenship = bankUnit({
@@ -299,7 +300,7 @@ export const financialCitizenship = bankUnit({
   blurb: "Needs, wants, taxes and smart money choices.",
   parentNote: "Practises needs and wants, taxes and what they pay for, economic fairness, budgets, saving, credit, interest and scams, as in the Financial Citizenship strand of Nova Scotia's Citizenship 9 course.",
   standards: ["Financial Citizenship", "needs, wants and value, taxes, fairness, budgets, credit and informed financial choices"],
-  items: FINANCIAL,
+  items: [...FINANCIAL, ...FINANCIAL_MORE],
 });
 
 export const digitalCitizenship = bankUnit({
@@ -309,7 +310,7 @@ export const digitalCitizenship = bankUnit({
   blurb: "Be a kind, careful and smart citizen online.",
   parentNote: "Practises how media represent groups, bias and misinformation, algorithms, digital footprints, privacy, consent, cyberbullying, copyright and respectful online behaviour, as in the Digital Citizenship strand of Nova Scotia's Citizenship 9 course.",
   standards: ["Digital Citizenship", "media, bias, misinformation, privacy, consent and respectful online behaviour"],
-  items: DIGITAL,
+  items: [...DIGITAL, ...DIGITAL_MORE],
 });
 
 export const governance = bankUnit({
@@ -319,7 +320,7 @@ export const governance = bankUnit({
   blurb: "How governments work and how you can take part.",
   parentNote: "Practises federal, provincial, municipal and Indigenous governments, Nova Scotia's House of Assembly, Canada's Parliament, elections and ways to take part, as in the Governance strand of Nova Scotia's Citizenship 9 course. Questions are non-partisan and name no party.",
   standards: ["Governance", "levels of government, elections, platforms and ways citizens engage"],
-  items: GOVERNANCE,
+  items: [...GOVERNANCE, ...GOVERNANCE_MORE],
 });
 
 export const globalCitizenship = bankUnit({
@@ -329,7 +330,7 @@ export const globalCitizenship = bankUnit({
   blurb: "How our choices connect us to the world.",
   parentNote: "Practises global issues such as climate change, clean water, refugees and pandemics, the United Nations and Sustainable Development Goals, and weighing short-term and long-term consequences, as in the Global Citizenship strand of Nova Scotia's Citizenship 9 course.",
   standards: ["Global Citizenship", "global issues, consequences of action and inaction, and informed action"],
-  items: GLOBAL,
+  items: [...GLOBAL, ...GLOBAL_MORE],
 });
 
 const LAWMAKING: Q[] = [
@@ -380,5 +381,5 @@ export const lawmaking = bankUnit({
   blurb: "Bills, branches and how citizens shape laws.",
   parentNote: "Practises how a bill becomes law, the three branches of government, federalism and the courts, municipal and Mi’kmaw governments, elections and how issues become priorities, as in the Governance strand of Nova Scotia's Citizenship 9 course. Questions are non-partisan and name no party.",
   standards: ["Governance", "how laws are made, the branches of government and how issues become priorities"],
-  items: LAWMAKING,
+  items: [...LAWMAKING, ...LAWMAKING_MORE],
 });

@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { ADVOCACY_MORE, CHANGE8_MORE, CONFLICTS_MORE, EQUITY_MORE, INDIGENOUS8_MORE, WW2_MORE } from "./g8-social-more";
 
 // Grade 8 social studies, Canada from 1920 to the present: conflicts, the Second World War and taking action.
 // Sensitive events are stated factually. Indigenous content is light.
@@ -188,7 +189,7 @@ export const conflicts = bankUnit({
   parentNote:
     "Practises how conflicts such as the world wars, the Cold War, Korea, peacekeeping and crises at home changed Canadian laws, communities and who has a voice. Ties to the Nova Scotia Grade 8 social studies outcome on the impact of conflicts. Sensitive events are stated factually.",
   standards: ["Evaluate how various conflicts have impacted Canadian society", "Explain how conflicts changed Canada from 1920 to today"],
-  items: CONFLICTS,
+  items: [...CONFLICTS, ...CONFLICTS_MORE],
 });
 
 export const worldWarTwo = bankUnit({
@@ -199,7 +200,7 @@ export const worldWarTwo = bankUnit({
   parentNote:
     "Practises Canada's role in World War II, Halifax and the Battle of the Atlantic, the home front, Japanese Canadian internment, and how Canada changed after the war. Ties to the Nova Scotia Grade 8 social studies outcome on the impact of World War II. Hard topics are stated factually.",
   standards: ["Evaluate the impact of World War II on a changing Canadian society", "Explain Canada's role in the war and how Canada changed"],
-  items: WW2,
+  items: [...WW2, ...WW2_MORE],
 });
 
 export const advocacy = bankUnit({
@@ -210,7 +211,7 @@ export const advocacy = bankUnit({
   parentNote:
     "Practises the steps of an advocacy plan, choosing an audience and message, judging evidence and sources, and real examples such as Viola Desmond. Ties to the Nova Scotia Grade 8 social studies outcome on planning an advocacy action.",
   standards: ["Plan an advocacy action in response to an issue", "Plan, carry out and reflect on a respectful action for a cause"],
-  items: ADVOCACY,
+  items: [...ADVOCACY, ...ADVOCACY_MORE],
 });
 
 const EQUITY: Q[] = [
@@ -358,7 +359,7 @@ export const equity = bankUnit({
   parentNote:
     "Practises the difference between equality and equity, and how rights changed in Canada from 1920 on: the Persons Case, the vote, the Chinese head tax, immigration rules, the Charter, social programs, accessibility and human rights in Nova Scotia. It follows the Grade 8 social studies outcome on equity and inequity. Hard topics are stated factually.",
   standards: ["Evaluate the impact of equity and inequity in a changing Canadian society", "Explain how rights and fairness changed for different groups in Canada"],
-  items: EQUITY,
+  items: [...EQUITY, ...EQUITY_MORE],
 });
 
 export const changingCanada = bankUnit({
@@ -369,7 +370,7 @@ export const changingCanada = bankUnit({
   parentNote:
     "Practises how Canadian society changed from 1920 to today, from the Depression and the baby boom to new symbols, technology, immigration, the economy and the pandemic, and how people, communities and governments respond to change. It follows the Grade 8 social studies outcome on responses to change in Canadian society.",
   standards: ["Formulate responses to change in Canadian society", "Explain changes in Canadian society and weigh responses to them"],
-  items: CHANGE8,
+  items: [...CHANGE8, ...CHANGE8_MORE],
 });
 
 export const indigenousExperiences = bankUnit({
@@ -380,5 +381,5 @@ export const indigenousExperiences = bankUnit({
   parentNote:
     "Practises 20th and 21st century Indigenous experiences in Canada, stated factually and in the present tense for living communities: the Indian Act, residential schools, the right to vote, rights in the Constitution, the Truth and Reconciliation Commission, Mi’kmaw education and treaty rights, and reconciliation. It follows the Grade 8 social studies outcome on Indigenous experiences. The content is deliberately light and needs review by Mi’kmaw partners.",
   standards: ["Reflect on 20th and 21st century Indigenous experiences in Canada", "Learn about Indigenous experiences in Canada since 1900"],
-  items: INDIGENOUS8,
+  items: [...INDIGENOUS8, ...INDIGENOUS8_MORE],
 });

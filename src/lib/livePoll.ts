@@ -52,6 +52,7 @@ class Poller {
   constructor(private profileId: string) {
     document.addEventListener("visibilitychange", this.onVisible);
     window.addEventListener("online", this.onVisible);
+    window.addEventListener("pagehide", this.leaving);
     void this.poll();
   }
 
@@ -72,6 +73,7 @@ class Poller {
     clearTimeout(this.timer);
     document.removeEventListener("visibilitychange", this.onVisible);
     window.removeEventListener("online", this.onVisible);
+    window.removeEventListener("pagehide", this.leaving);
   }
 
   private emit(event: LivePollEvent): void {
@@ -85,6 +87,16 @@ class Poller {
       // A hidden page doesn't hold a request open; it asks again when it is shown.
       this.gen++;
       this.ctrl?.abort();
+      this.leaving();
+    }
+  };
+
+  /** Tells the server this device is going away (tab hidden or closing), so the teacher's desk can say so. Best effort. */
+  private leaving = (): void => {
+    try {
+      if (typeof navigator.sendBeacon === "function") navigator.sendBeacon("/api/live/", new Blob([JSON.stringify({ profileId: this.profileId, leaving: true })], { type: "application/json" }));
+    } catch {
+      // A browser that refuses the beacon: the teacher's desk falls back to "not heard from lately".
     }
   };
 

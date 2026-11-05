@@ -241,7 +241,7 @@ describe("automatic nudges", () => {
 
   it("start off, and only turn on with TURN ON typed", async () => {
     const r = await (await get(automations, "/api/admin/automations/")).json();
-    expect(r.automations.map((a: { id: string }) => a.id)).toEqual(["quiet-7", "no-child", "tried-few", "trial-over"]);
+    expect(r.automations.map((a: { id: string }) => a.id)).toEqual(["quiet-7", "no-child", "tried-few", "teacher-no-class", "teacher-no-students", "trial-over"]);
     expect(r.automations.every((a: { config: { on: boolean } }) => !a.config.on)).toBe(true);
     expect((await nudge({ action: "switch", on: true })).status).toBe(400);
     expect((await nudge({ action: "switch", on: true, confirm: "turn on" })).status).toBe(400);

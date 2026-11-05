@@ -17,6 +17,8 @@
 //   because it is about 100 MB.
 const CACHE = "gradelings-v4";
 const PIPER_CACHE = "gradelings-piper";
+// The voice practice model (/whisper/{version}/, /whisper-worker.js), about 65 MB, filled only by the app (src/lib/whisper.ts).
+const WHISPER_CACHE = "gradelings-whisper";
 // The product used to be called GradeMap. Its voice cache is copied to the new name when a worker activates,
 // before the clean-up below deletes every cache it doesn't know (the voice is about 100 MB).
 const LEGACY_PIPER_CACHE = "grademap-piper";
@@ -84,7 +86,7 @@ self.addEventListener("activate", (event) => {
   event.waitUntil(
     moveLegacyPiper()
       .then(() => caches.keys())
-      .then((keys) => Promise.all(keys.filter((k) => k !== CACHE && k !== PIPER_CACHE && k !== LEGACY_PIPER_CACHE).map((k) => caches.delete(k))))
+      .then((keys) => Promise.all(keys.filter((k) => k !== CACHE && k !== PIPER_CACHE && k !== WHISPER_CACHE && k !== LEGACY_PIPER_CACHE).map((k) => caches.delete(k))))
       .then(() => dropFakeAssets().catch(() => undefined))
       .then(() => self.clients.claim()),
   );
@@ -135,10 +137,15 @@ self.addEventListener("fetch", (event) => {
     event.respondWith(caches.open(PIPER_CACHE).then((cache) => cache.match(request).then((hit) => hit || fetch(request))));
     return;
   }
-  // The worker script isn't versioned: fresh when online, and the cached copy kept up to date.
-  if (url.pathname === "/piper-worker.js") {
+  if (url.pathname.startsWith("/whisper/")) {
+    event.respondWith(caches.open(WHISPER_CACHE).then((cache) => cache.match(request).then((hit) => hit || fetch(request))));
+    return;
+  }
+  // The worker scripts aren't versioned: fresh when online, and the cached copy kept up to date.
+  if (url.pathname === "/piper-worker.js" || url.pathname === "/whisper-worker.js") {
+    const workerCache = url.pathname === "/whisper-worker.js" ? WHISPER_CACHE : PIPER_CACHE;
     event.respondWith(
-      caches.open(PIPER_CACHE).then((cache) =>
+      caches.open(workerCache).then((cache) =>
         fetch(request)
           .then((res) => {
             if (res.ok) {
