@@ -22,6 +22,8 @@ import * as guidesSubject from "./guides/[framework]/[grade]/[subject]/page";
 import * as worksheet from "./guides/[framework]/[grade]/[subject]/worksheet/page";
 import * as french from "./guides/[framework]/french/page";
 import * as help from "./help/page";
+import * as helpAtHome from "./help-at-home/page";
+import * as helpAtHomeGrade from "./help-at-home/[grade]/page";
 import * as mathFacts from "./math-facts/page";
 import * as mathFactsSet from "./math-facts/[set]/page";
 import * as worksheets from "./worksheets/page";
@@ -49,7 +51,7 @@ const PAGES: Record<string, Page> = {
   "/for-teachers/": teachers, "/for-teachers/[framework]/": teachersFw, "/for-teachers/[framework]/[grade]/": teachersGrade,
   "/guides/": guides, "/guides/[framework]/": guidesFw, "/guides/[framework]/[grade]/": guidesGrade, "/guides/[framework]/[grade]/[subject]/": guidesSubject,
   "/guides/[framework]/[grade]/[subject]/worksheet/": worksheet, "/guides/[framework]/french/": french,
-  "/help/": help, "/math-facts/": mathFacts, "/math-facts/[set]/": mathFactsSet, "/worksheets/": worksheets, "/worksheets/[grade]/": worksheetsGrade, "/worksheets/[grade]/[skill]/": worksheetsSkill, "/pricing/": pricing, "/privacy/": privacy, "/report-cards/": reportCards, "/report-cards/[framework]/": reportCardsFw,
+  "/help/": help, "/help-at-home/": helpAtHome, "/help-at-home/[grade]/": helpAtHomeGrade, "/math-facts/": mathFacts, "/math-facts/[set]/": mathFactsSet, "/worksheets/": worksheets, "/worksheets/[grade]/": worksheetsGrade, "/worksheets/[grade]/[skill]/": worksheetsSkill, "/pricing/": pricing, "/privacy/": privacy, "/report-cards/": reportCards, "/report-cards/[framework]/": reportCardsFw,
   "/status/": status, "/terms/": terms, "/trust/": trust,
 };
 
