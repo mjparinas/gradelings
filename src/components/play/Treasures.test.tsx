@@ -30,7 +30,7 @@ describe("Treasures", () => {
     inBand("little", <Treasures />);
     expect(screen.getByRole("heading", { name: /My Treasures/ })).toBeInTheDocument();
     const links = screen.getAllByRole("link");
-    expect(links.map((a) => a.getAttribute("href"))).toEqual(["#/stickers", "#/trophies", "#/room", "#/shop", "#/break", "#/map"]);
+    expect(links.map((a) => a.getAttribute("href"))).toEqual(["#/stickers", "#/trophies", "#/room", "#/shop", "#/rhymes", "#/break", "#/map"]);
     expect(screen.getByRole("link", { name: /Trophies/ })).toHaveTextContent("2");
     expect(screen.getByRole("link", { name: /Shop/ })).toHaveTextContent("🪙 120");
   });
@@ -45,13 +45,15 @@ describe("Treasures", () => {
   it("leaves out the screens the admin switched off", () => {
     h.off = new Set(["sticker-book", "my-room", "shop"]);
     inBand("little", <Treasures />);
-    expect(screen.getAllByRole("link").map((a) => a.getAttribute("href"))).toEqual(["#/trophies", "#/break", "#/map"]);
+    expect(screen.getAllByRole("link").map((a) => a.getAttribute("href"))).toEqual(["#/trophies", "#/rhymes", "#/break", "#/map"]);
   });
 
-  it("leaves out Brain Break when its flag is off", () => {
-    h.off = new Set(["brain-breaks"]);
+  it("leaves out Brain Break and Rhymes when their flags are off", () => {
+    h.off = new Set(["brain-breaks", "rhymes"]);
     inBand("little", <Treasures />);
-    expect(screen.getAllByRole("link").map((a) => a.getAttribute("href"))).not.toContain("#/break");
+    const hrefs = screen.getAllByRole("link").map((a) => a.getAttribute("href"));
+    expect(hrefs).not.toContain("#/break");
+    expect(hrefs).not.toContain("#/rhymes");
   });
 
   it("goes back home from the chest", () => {
