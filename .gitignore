@@ -82,3 +82,6 @@ __pycache__/
 
 # tsc and ESLint incremental state (CI caches it)
 /.cache
+
+# Voice practice speech recognition files, written by scripts/fetch-whisper.mjs
+/public/whisper/

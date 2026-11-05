@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import { shuffle } from "@/content/random";
+import { useDrag } from "@/lib/drag";
 import { replay } from "@/lib/juice";
 import { useCheckShortcut } from "@/lib/keys";
 import { sounds } from "@/lib/sound";
@@ -33,6 +34,10 @@ export function OrderQuestion({ q, status, onAttempt }: QuestionProps<Q>) {
     setPlaced((p) => [...p, id]);
   };
 
+  const drag = useDrag((id) => {
+    if (!locked && !placed.includes(id)) place(id);
+  }, !locked);
+
   const unplace = (id: string) => {
     sounds.whoosh();
     setWrongFrom(null);
@@ -56,6 +61,7 @@ export function OrderQuestion({ q, status, onAttempt }: QuestionProps<Q>) {
     <div className="mx-auto flex w-full max-w-3xl flex-col items-center gap-5">
       <div
         ref={slotsRef}
+        data-drop="slots"
         className={compact ? "flex flex-wrap justify-center gap-3" : "flex w-full flex-col gap-2.5"}
       >
         {q.items.map((_, i) => {
@@ -111,6 +117,7 @@ export function OrderQuestion({ q, status, onAttempt }: QuestionProps<Q>) {
                   data-quiet
                   data-testid="pool-item"
                   onClick={() => place(item.id)}
+                  {...drag(item.id)}
                   className={`btn ${compact ? "h-20 min-w-20 px-3 text-4xl" : "min-h-16 px-4 font-read text-xl sm:text-2xl"}`}
                 >
                   {item.emoji && <span className="text-3xl">{item.emoji}</span>}
