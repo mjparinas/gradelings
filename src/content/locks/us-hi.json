@@ -819,11 +819,11 @@
   "9/social": {
     "overview": "0acce30a44",
     "units": [
-      "ca-g9-foundations text=7e73500361 std=eb3640e9f8 q=366cc13a3d",
+      "ca-g9-foundations text=7e73500361 std=eb3640e9f8 q=88c273c390",
       "ca-g9-civic-action text=7ff067ec0c std=67b816516e q=c1c8ac6d15",
       "ca-g9-three-branches text=439ea561c4 std=cff6025f37 q=4b4a891d5e",
-      "ca-g9-supreme-court text=d497c2ea6b std=187261b9bf q=5b4496ce00",
-      "ca-g9-media text=67bc186bc5 std=d3260098d6 q=d8967e0b75",
+      "ca-g9-supreme-court text=d497c2ea6b std=187261b9bf q=0110fb9ee8",
+      "ca-g9-media text=67bc186bc5 std=d3260098d6 q=0fc3f3ad1e",
       "hi-g9-annexation text=69e028c923 std=503813c577 q=f83ca382f8",
       "hi-g9-plantation-era text=4f41732b72 std=0d99fcdef1 q=f46d01d8fb",
       "hi-g9-war-statehood text=4201f3283c std=9ad34efa36 q=8559ac6a24",

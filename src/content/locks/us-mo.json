@@ -859,14 +859,14 @@
   "9/social": {
     "overview": "19dc443c41",
     "units": [
-      "ca-g9-foundations text=7e73500361 std=048819e977 q=366cc13a3d",
-      "ca-g9-dictatorship-democracy text=98ddf5cd16 std=3a54acec60 q=7bb3553944",
+      "ca-g9-foundations text=7e73500361 std=048819e977 q=88c273c390",
+      "ca-g9-dictatorship-democracy text=98ddf5cd16 std=3a54acec60 q=cde1f59fc7",
       "me-g9-us-government text=b2b1785d0f std=b4d8041ee0 q=70fdf0e3c3",
       "or-g9-three-branches text=e836dbcca1 std=0234554422 q=9fe9c33054",
       "ga-g9-congress-president text=54e81ddb69 std=aa10448ab0 q=16fa431c47",
       "ga-g9-criminal-justice text=1bb7de6760 std=b5aa1fdd6a q=1b89a45ae0",
       "ca-g9-civic-action text=7ff067ec0c std=0a52c153d8 q=c1c8ac6d15",
-      "ca-g9-media text=67bc186bc5 std=2b5af14c94 q=d8967e0b75",
+      "ca-g9-media text=67bc186bc5 std=2b5af14c94 q=0fc3f3ad1e",
       "mo-g9-governing-missouri text=ebbdcbeb98 std=9e6db7f3ea q=335caf39c9",
       "mo-g9-civics-test text=f7dd4976d8 std=ce2234095b q=33951a339e"
     ]

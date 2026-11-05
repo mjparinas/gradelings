@@ -671,11 +671,11 @@
       "or-g8-founding-ideas text=6fa3d530b3 std=7e9845ea22 q=83494b4253",
       "wa-g8-bill-of-rights text=edcc86640b std=7b5c7d7ae1 q=6898ac27d5",
       "ca-g9-civic-action text=a2a6e65f8d std=f0e05a43aa q=c1c8ac6d15",
-      "ca-g9-media text=4dd2a6936f std=e17a62247e q=d8967e0b75",
+      "ca-g9-media text=4dd2a6936f std=e17a62247e q=0fc3f3ad1e",
       "mb-evidence-8 text=29b0073788 std=2e787afa2a q=d69f09c163",
       "maps-graphs-8 text=78520d151d std=7281a3670e q=db3f6f1744",
       "az-g8-elections text=44619d8e30 std=c042e8d847 q=dfc921394c",
-      "az-g8-citizens-and-society text=1d389d98ec std=efbdcf579b q=7042d3ca45",
+      "az-g8-citizens-and-society text=1d389d98ec std=efbdcf579b q=86c2bdcfef",
       "az-g8-personal-finance text=901cb5bfef std=4f10c1eea2 q=2b320ea4ea",
       "az-g8-supply-demand text=1c77997248 std=bd34a5a6c7 q=46468612cb",
       "az-g8-economy text=2041d0b32c std=e0ca59cc79 q=09fd175dbd",
@@ -749,12 +749,12 @@
   "9/social": {
     "overview": "6288f8afea",
     "units": [
-      "ca-g9-foundations text=7e73500361 std=22c3266a29 q=366cc13a3d",
+      "ca-g9-foundations text=7e73500361 std=22c3266a29 q=88c273c390",
       "tx-g9-rights text=924c2250fc std=f57acf379a q=992013aede",
       "ca-g9-forms-of-government text=47a5b003ba std=8f56b49d7b q=46e402dbc2",
       "az-g9-three-branches text=07205c0610 std=8c396611a9 q=92f7bc9d65",
       "az-g9-elections text=a737c318c5 std=f3181096f0 q=b55f49b927",
-      "az-g9-supreme-court text=1e910e2bfe std=1935d0566f q=fe821fc415",
+      "az-g9-supreme-court text=1e910e2bfe std=1935d0566f q=aaf391ff1d",
       "az-g9-arizona-constitution text=1578bb63fd std=e3e7de31da q=0ec90814c3",
       "az-g9-governing-arizona text=0af0096202 std=f0983f5325 q=5f7a8d3e4c",
       "az-g9-civics-test text=abd8f0119b std=5480583d47 q=3ce0167ba7"

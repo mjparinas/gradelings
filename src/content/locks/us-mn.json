@@ -722,12 +722,12 @@
     "overview": "aaa8bf6140",
     "units": [
       "ca-g9-civic-action text=7ff067ec0c std=dde475f2ae q=c1c8ac6d15",
-      "ca-g9-media text=67bc186bc5 std=4f850cab3b q=d8967e0b75",
+      "ca-g9-media text=67bc186bc5 std=4f850cab3b q=0fc3f3ad1e",
       "mn-g9-minnesota-government text=81edb60fd2 std=dca9587a60 q=9e4f3f84bd",
-      "mn-g9-foundations text=445f5fb29e std=8a849623f3 q=4f355315d4",
+      "mn-g9-foundations text=445f5fb29e std=8a849623f3 q=4141319f01",
       "mn-g9-three-branches text=822b0de4ba std=d2c129ecf0 q=b1722e53eb",
       "mn-g9-rights text=67731c6f28 std=e10902d732 q=0b185891f7",
-      "mn-g9-supreme-court text=72fe569efc std=852a01ec69 q=be5683f133",
+      "mn-g9-supreme-court text=72fe569efc std=852a01ec69 q=a897b9be32",
       "mn-g9-elections text=d13bf12ef0 std=bc8ac270aa q=1d564d383c",
       "mn-g9-lawmaking text=f663eba5a5 std=831aa8974d q=e5031c26e4",
       "mn-g9-supply-demand text=bcf8fa1f56 std=66acccd0de q=6482205c9a"
