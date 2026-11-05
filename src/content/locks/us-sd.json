@@ -841,16 +841,16 @@
   "9/social": {
     "overview": "e837f2d926",
     "units": [
-      "ca-g9-foundations text=7e73500361 std=46695b30f6 q=366cc13a3d",
+      "ca-g9-foundations text=7e73500361 std=46695b30f6 q=88c273c390",
       "ca-g9-three-branches text=439ea561c4 std=73eaeed5c0 q=4b4a891d5e",
       "ca-g9-rights text=593eeeff61 std=a674a40c89 q=064d36f990",
-      "ca-g9-supreme-court text=d497c2ea6b std=4d41d44601 q=5b4496ce00",
+      "ca-g9-supreme-court text=d497c2ea6b std=4d41d44601 q=0110fb9ee8",
       "ca-g9-elections text=2e075ddbe7 std=45b7f76d86 q=3a9cee2d15",
-      "ca-g9-citizens-and-society text=38d1323b68 std=bee58cc597 q=0cff828e06",
-      "ca-g9-dictatorship-democracy text=98ddf5cd16 std=46257a5aa9 q=7bb3553944",
+      "ca-g9-citizens-and-society text=38d1323b68 std=bee58cc597 q=8510077a72",
+      "ca-g9-dictatorship-democracy text=98ddf5cd16 std=46257a5aa9 q=cde1f59fc7",
       "ca-g9-forms-of-government text=47a5b003ba std=407f1585b9 q=46e402dbc2",
       "ca-g9-lawmaking text=2a409ee163 std=4989a249f3 q=83325c4e69",
-      "ca-g9-media text=67bc186bc5 std=af0c04fa7c q=d8967e0b75",
+      "ca-g9-media text=67bc186bc5 std=af0c04fa7c q=0fc3f3ad1e",
       "pa-g9-foreign-policy text=b348a17deb std=e07824f734 q=fb77c5203c",
       "sd-g9-governing-south-dakota text=0d622c3ff0 std=27f3478643 q=1036b40a0c"
     ]

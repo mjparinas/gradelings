@@ -733,11 +733,11 @@
       "wa-g8-bill-of-rights text=edcc86640b std=746227831d q=6898ac27d5",
       "ca-g9-three-branches text=439ea561c4 std=5bf91c1974 q=4b4a891d5e",
       "ca-g8-constitution-at-work text=570053022e std=fefdce6378 q=bde16fe66b",
-      "ca-g9-supreme-court text=d497c2ea6b std=2406a0886c q=5b4496ce00",
+      "ca-g9-supreme-court text=d497c2ea6b std=2406a0886c q=0110fb9ee8",
       "ca-g9-civic-action text=a2a6e65f8d std=6c90031ed0 q=c1c8ac6d15",
       "ny-g8-civil-rights text=2a5251702b std=4d3d65f5e6 q=8f81d3992c",
       "pe-human-rights-6 text=de8d8f7360 std=9f6cdc95e4 q=ee6f748dea",
-      "ca-g9-media text=4dd2a6936f std=ff279ef61c q=d8967e0b75",
+      "ca-g9-media text=4dd2a6936f std=ff279ef61c q=0fc3f3ad1e",
       "ri-g8-governing-rhode-island text=0ad771b2d2 std=2d74646a71 q=ef0c07a46c"
     ]
   },
@@ -837,13 +837,13 @@
   "9/social": {
     "overview": "1e6aca056f",
     "units": [
-      "ca-g9-foundations text=7e73500361 std=1b6f48df48 q=366cc13a3d",
+      "ca-g9-foundations text=7e73500361 std=1b6f48df48 q=88c273c390",
       "ca-g9-forms-of-government text=47a5b003ba std=63d5209e9d q=46e402dbc2",
       "ca-g9-rights text=593eeeff61 std=174e0911c3 q=064d36f990",
       "ca-g9-three-branches text=439ea561c4 std=7a4114dc82 q=4b4a891d5e",
       "ca-g9-lawmaking text=2a409ee163 std=2b91788964 q=83325c4e69",
-      "ca-g9-supreme-court text=d497c2ea6b std=a5cefde65e q=5b4496ce00",
-      "ca-g9-citizens-and-society text=38d1323b68 std=ccd73f5bc5 q=0cff828e06",
+      "ca-g9-supreme-court text=d497c2ea6b std=a5cefde65e q=0110fb9ee8",
+      "ca-g9-citizens-and-society text=38d1323b68 std=ccd73f5bc5 q=8510077a72",
       "ca-g9-elections text=2e075ddbe7 std=b3499090c4 q=3a9cee2d15",
       "ca-g9-civic-action text=7ff067ec0c std=4e0ea4b9ba q=c1c8ac6d15",
       "pa-g9-foreign-policy text=b348a17deb std=272769babb q=fb77c5203c",
