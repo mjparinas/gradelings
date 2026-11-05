@@ -405,12 +405,12 @@
   "5/core-french": {
     "overview": "adc1390dd0",
     "units": [
-      "salutations text=34aad2270e std=466554ecc5 q=bebc4e7fa8",
+      "salutations text=34aad2270e std=466554ecc5 q=85b8db961b",
       "sons-et-accents text=c2600c3971 std=fe22be3be4 q=42ec9fcbd3",
       "nombres text=64f42c031e std=466554ecc5 q=ec7f3851db",
-      "genre-et-nombre text=6fc35772c5 std=df306139b2 q=9bd55d2bf1",
-      "gouts text=be0812c122 std=466554ecc5 q=86251f9e2c",
-      "descriptions text=66785fc698 std=df306139b2 q=c9012bbc01",
+      "genre-et-nombre text=6fc35772c5 std=df306139b2 q=ee09044759",
+      "gouts text=be0812c122 std=466554ecc5 q=51ab4a36e1",
+      "descriptions text=66785fc698 std=df306139b2 q=8607aadf86",
       "communautes-francophones text=86bfbbfa4b std=89d663ef07 q=7aff41852e",
       "respect text=d02cfdf800 std=89d663ef07 q=a0feb345ec"
     ]
@@ -619,7 +619,7 @@
   "7/language": {
     "overview": "4f4fb08902",
     "units": [
-      "ns-cultural-expressions-7 text=a9df4aa856 std=e9792fec9e q=65cfd611f7",
+      "ns-cultural-expressions-7 text=a9df4aa856 std=e9792fec9e q=1c7090f6d0",
       "close-reading text=0b6ee269e5 std=1082bb7724 q=3fd92d2337",
       "literary-devices text=75012dadfd std=0e6c0dad69 q=ca1f4ae5d6",
       "tone-mood text=1a78ad0bc3 std=49088010be q=5fe5a6766c",
@@ -722,7 +722,7 @@
   "8/language": {
     "overview": "b6eac74f2e",
     "units": [
-      "ns-cultural-expressions-8 text=66f3ea6382 std=192e92d91e q=8590729750",
+      "ns-cultural-expressions-8 text=66f3ea6382 std=192e92d91e q=139ca46fd3",
       "word-study text=e9a31820f1 std=80496704d9 q=816e78a8ea",
       "strategies-8 text=14cb61c3b0 std=0746bcafe9 q=24feac4146",
       "forms-features-8 text=612838fad2 std=0be2472676 q=b91eed85d6",
