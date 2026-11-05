@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { ANCIENT_DEEP, LIFE_DEEP, MAPS_DEEP, NEEDS_DEEP } from "./g3-social-deeper";
 
 // Grade 3 social studies, Global Communities: maps and globes (3-KL-014 to 3-KL-016, 3-KL-020, 3-S-205 to 3-S-207),
 // life in communities around the world, needs and rights, and an ancient society (3-KH-021 to 3-KH-026).
@@ -42,7 +43,7 @@ export const maps = bankUnit({
   parentNote:
     "Practises the equator and the Northern and Southern Hemispheres, the continents and oceans, and reading maps, aerial photographs and satellite images with a title, legend, compass rose and the four cardinal directions.",
   standards: ["3-KL-014, 3-KL-015, 3-KL-016, 3-KL-020, 3-S-205, 3-S-206, 3-S-207", "the equator and hemispheres, continents and oceans, map tools and cardinal directions"],
-  items: MAPS,
+  items: [...MAPS, ...MAPS_DEEP],
 });
 
 const LIFE: Q[] = [
@@ -84,7 +85,7 @@ export const life = bankUnit({
   parentNote:
     "Practises daily life in communities around the world: homes, food, work and technology that suit the land and weather, cultural expression, respectful language about differences and how media can show only part of a place.",
   standards: ["3-KI-009, 3-KI-010, 3-KI-011, 3-KI-012, 3-KI-013, 3-KL-017, 3-KL-018, 3-KE-035, 3-KE-036, 3-KE-038, 3-S-401", "ways of life, culture and how land and resources shape work, goods and homes"],
-  items: LIFE,
+  items: [...LIFE, ...LIFE_DEEP],
 });
 
 const NEEDS: Q[] = [
@@ -126,7 +127,7 @@ export const needs = bankUnit({
   parentNote:
     "Practises basic human rights and needs, fairness and sharing, countries as communities with borders, concerns common to communities worldwide, organizations such as UNICEF and the Red Cross, and personal choices that can help people elsewhere.",
   standards: ["3-KC-005, 3-KC-006, 3-KI-008, 3-KG-027, 3-KG-028, 3-KG-029, 3-KG-030, 3-KG-031, 3-VC-001, 3-VC-003, 3-VG-009, 3-KE-037", "basic rights and needs, fairness and sharing, and organizations that support communities"],
-  items: NEEDS,
+  items: [...NEEDS, ...NEEDS_DEEP],
 });
 
 const ANCIENT: Q[] = [
@@ -167,5 +168,5 @@ export const ancient = bankUnit({
   parentNote:
     "Practises daily life, customs, ways of expression and lasting contributions of ancient Egypt as one example of an ancient society, plus how communities and traditions change or continue over time and how timelines help.",
   standards: ["3-KH-021, 3-KH-022, 3-KH-023, 3-KH-024, 3-KH-025, 3-KH-026, 3-VH-007, 3-VH-008, 3-S-202, 3-S-204", "daily life, customs, expression and contributions of an ancient society, and change over time"],
-  items: ANCIENT,
+  items: [...ANCIENT, ...ANCIENT_DEEP],
 });
