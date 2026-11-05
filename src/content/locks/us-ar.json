@@ -3,7 +3,7 @@
     "overview": "41caa415dc",
     "units": [
       "letter-names text=4e2d74ab60 std=8b821923c5 q=a8b9337751",
-      "first-sounds text=dd9cd8d5d4 std=3adff2faef q=48ed3455eb",
+      "first-sounds text=dd9cd8d5d4 std=3adff2faef q=68c5e7f975",
       "rhyme-time text=12f8d63dc7 std=f6123147a8 q=b73dfecad5",
       "clap-the-parts text=606ab5cbbd std=a3587c61bd q=6215dee4f1",
       "listen-to-a-story text=8907705eaa std=d350bb511e q=e4e96571e7",
@@ -13,7 +13,7 @@
   "pk/math": {
     "overview": "082b389c94",
     "units": [
-      "count-to-5 text=5de441ec7a std=9f4e6cc8d1 q=7da6a21961",
+      "count-to-5 text=5de441ec7a std=9f4e6cc8d1 q=0092517696",
       "find-the-number text=48b0986657 std=d684746865 q=cbb1ca9734",
       "more-or-fewer text=0faa658ba5 std=b36fd177ed q=4d8cca7ab1",
       "shapes text=3eb07867e4 std=9e74b79954 q=ed58e37c08",
@@ -49,7 +49,7 @@
     "overview": "031da39c4d",
     "units": [
       "letter-partners text=c48f27422d std=07bb1598f3 q=b88f284367",
-      "first-sounds text=cc4fb336eb std=b34bc55365 q=1e9600b156",
+      "first-sounds text=cc4fb336eb std=b34bc55365 q=ca82eff12c",
       "rhyme-time text=280911bb80 std=e18c54db61 q=7ff630edf6",
       "clap-the-beat text=13b130a737 std=bb255e851b q=d798eaba52",
       "sight-words text=550b9e49a9 std=697852a22e q=50140fdbd6",
@@ -65,7 +65,7 @@
   "k/math": {
     "overview": "46923ca001",
     "units": [
-      "count-to-10 text=76d9d2a726 std=6a45acbeaf q=eedf7bffb7",
+      "count-to-10 text=76d9d2a726 std=6a45acbeaf q=99e62fe722",
       "make-5-and-10 text=c234a6f52c std=908ba506a7 q=e9e4baabe2",
       "add-and-take-away text=359b696b1c std=f465034505 q=133932d7ef",
       "more-less-same text=732df234df std=f24195e923 q=ab4ef5dcd9",
@@ -129,7 +129,7 @@
   "1/math": {
     "overview": "aec28680dc",
     "units": [
-      "numbers-to-20 text=b0719f21fd std=f39ba80585 q=d3300826e4",
+      "numbers-to-20 text=b0719f21fd std=f39ba80585 q=8f20e555b4",
       "make-ten text=384e300d0c std=de3c50c8e9 q=74dafe97b0",
       "adding text=e38d25027e std=ee4388063e q=9eb9a94364",
       "take-away text=15b94111e3 std=69f0a5dbee q=169ab153d9",

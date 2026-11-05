@@ -192,6 +192,18 @@ export interface PlaceQuestion extends BaseQuestion {
   fractionDenominator?: number;
 }
 
+/**
+ * Name the picture or count the objects out loud, with a tap-to-answer fallback. Where voice practice is off (the flag,
+ * the child's setting, or no downloaded model) it is simply a choice question, so it needs `choices` and `answer`.
+ * `say` is what a child should say: a word (with other spellings that also count), or a number to count up to.
+ */
+export interface SayQuestion extends BaseQuestion {
+  kind: "say";
+  choices: Choice[];
+  answer: string;
+  say: { word: string; accept?: string[] } | { count: number };
+}
+
 /** Match each item on the left with its partner on the right. Tap one, then its partner. */
 export interface MatchQuestion extends BaseQuestion {
   kind: "match";
@@ -264,7 +276,8 @@ export type Question =
   | HighlightQuestion
   | MistakeQuestion
   | FillQuestion
-  | TilesQuestion;
+  | TilesQuestion
+  | SayQuestion;
 
 export interface GenerateOptions {
   /** 1 = easier, 2 = on level, 3 = stretch. Units may ignore it. */

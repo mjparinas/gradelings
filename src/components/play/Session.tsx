@@ -44,6 +44,7 @@ import { HighlightQuestion } from "../questions/HighlightQuestion";
 import { MatchQuestion } from "../questions/MatchQuestion";
 import { MistakeQuestion } from "../questions/MistakeQuestion";
 import { MultiQuestion } from "../questions/MultiQuestion";
+import { SayQuestion } from "../questions/SayQuestion";
 import { TilesQuestion } from "../questions/TilesQuestion";
 import { OrderQuestion } from "../questions/OrderQuestion";
 import { PlaceQuestion } from "../questions/PlaceQuestion";
@@ -97,6 +98,8 @@ export function QuestionBody(props: QuestionProps<Question>) {
       return <FillQuestion {...props} q={q} />;
     case "tiles":
       return <TilesQuestion {...props} q={q} />;
+    case "say":
+      return <SayQuestion {...props} q={q} />;
   }
 }
 

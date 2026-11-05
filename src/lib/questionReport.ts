@@ -34,6 +34,10 @@ export function reportDetails(q: Question): ReportDetails {
       out.choices = q.choices.map((c: Choice) => choiceText(c));
       out.answer = choiceText(q.choices.find((c) => c.id === q.answer) ?? { label: q.answer });
       break;
+    case "say":
+      out.choices = q.choices.map((c: Choice) => choiceText(c));
+      out.answer = choiceText(q.choices.find((c) => c.id === q.answer) ?? { label: q.answer });
+      break;
     case "input":
       out.answer = [q.answer, q.suffix].filter(Boolean).join(" ");
       break;

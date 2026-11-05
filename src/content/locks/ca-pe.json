@@ -3,7 +3,7 @@
     "overview": "74c07d135e",
     "units": [
       "letter-names text=4e2d74ab60 std=0eaaa0e70b q=a8b9337751",
-      "first-sounds text=dd9cd8d5d4 std=58a3e6f436 q=48ed3455eb",
+      "first-sounds text=dd9cd8d5d4 std=58a3e6f436 q=68c5e7f975",
       "rhyme-time text=12f8d63dc7 std=fadcb8e95d q=b73dfecad5",
       "clap-the-parts text=606ab5cbbd std=72ee85a710 q=6215dee4f1",
       "listen-to-a-story text=8907705eaa std=87064ae717 q=e4e96571e7",
@@ -13,7 +13,7 @@
   "pk/math": {
     "overview": "5238f4a5e0",
     "units": [
-      "count-to-5 text=5de441ec7a std=75eaa98dfd q=7da6a21961",
+      "count-to-5 text=5de441ec7a std=75eaa98dfd q=0092517696",
       "find-the-number text=48b0986657 std=8c5bd9fc32 q=cbb1ca9734",
       "more-or-fewer text=0faa658ba5 std=e94a571a08 q=4d8cca7ab1",
       "shapes text=3eb07867e4 std=3544cb5095 q=ed58e37c08",
@@ -52,7 +52,7 @@
       "talk-and-listen-ab text=6b71ddbc74 std=e12a7935ca q=a01feb4799",
       "clap-the-beat text=13b130a737 std=8c6f8b6fc0 q=d798eaba52",
       "rhyme-time text=280911bb80 std=4399da3abb q=7ff630edf6",
-      "first-sounds text=cc4fb336eb std=72b3afaa5e q=1e9600b156",
+      "first-sounds text=cc4fb336eb std=72b3afaa5e q=ca82eff12c",
       "blend-a-word text=3d99132c91 std=abb4a317a9 q=16d2ff7d7d",
       "picture-clues text=c447e46412 std=12d56d1bb7 q=3ade8d2d47",
       "sight-words text=2cc8b0433d std=758fa4433c q=50140fdbd6",
@@ -66,7 +66,7 @@
   "k/math": {
     "overview": "55735b4111",
     "units": [
-      "count-to-10 text=76d9d2a726 std=0012654802 q=eedf7bffb7",
+      "count-to-10 text=76d9d2a726 std=0012654802 q=99e62fe722",
       "numbers-to-20 text=e677449710 std=41a3c2dfe5 q=d5b884b629",
       "mb-k-quick-look text=76349a9cdd std=992fb64fc6 q=70f74ab815",
       "make-5-and-10 text=c234a6f52c std=d9e5f5c614 q=e9e4baabe2",
@@ -129,7 +129,7 @@
     "units": [
       "counting-patterns-ab text=77625cf770 std=3048983a15 q=96d2e37204",
       "mb-g1-quick-counting text=a15db2aabc std=c589c2838e q=fa5bc7fa90",
-      "numbers-to-20 text=b0719f21fd std=88132a777d q=d3300826e4",
+      "numbers-to-20 text=b0719f21fd std=88132a777d q=8f20e555b4",
       "mb-g1-estimate-groups text=1a3101398e std=1a495b0fbc q=7168007363",
       "make-ten text=384e300d0c std=a8c6cfaf33 q=74dafe97b0",
       "adding text=e38d25027e std=a20e783dde q=9eb9a94364",

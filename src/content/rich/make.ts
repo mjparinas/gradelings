@@ -1,5 +1,5 @@
 import { pick, randInt, sample, shuffle } from "../random";
-import type { FillQuestion, HighlightQuestion, MatchQuestion, MistakeQuestion, MultiQuestion, TilesQuestion } from "../types";
+import type { Choice, FillQuestion, HighlightQuestion, MatchQuestion, MistakeQuestion, MultiQuestion, SayQuestion, TilesQuestion, Visual } from "../types";
 
 // Builders for the newer question kinds. Each takes plain data, so a unit's pool reads like a list.
 
@@ -59,3 +59,17 @@ export function tiles(prompt: string, hint: string, parts: string[], opts: Parti
 export const NAMES = ["Mia", "Ravi", "Zoe", "Kai", "Ana", "Omar", "Priya", "Leo"];
 export const aName = () => pick(NAMES);
 export { randInt, sample };
+
+/** A say-it question: `choices` are the tap fallback, and the one at `answerIndex` is right. */
+export function say(
+  prompt: string,
+  hint: string,
+  target: SayQuestion["say"],
+  choices: { label: string; emoji?: string }[],
+  answerIndex: number,
+  visual?: Visual,
+): SayQuestion {
+  const all: Choice[] = choices.map((c, i) => ({ id: `s${i}`, ...c }));
+  const shuffled = shuffle(all);
+  return { kind: "say", prompt, hint, say: target, choices: shuffled, answer: all[answerIndex].id, ...(visual ? { visual } : {}) };
+}

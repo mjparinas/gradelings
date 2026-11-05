@@ -25,7 +25,7 @@ export default async function PrivacyPage() {
           <li>We show no ads and never sell or rent your family’s information.</li>
           <li>We measure visits to our public website, and our email provider tells us when an email we send you is opened or a link in it is clicked. See “Who we share it with” below.</li>
           <li>We keep a child’s first name or nickname, grade, an optional birth year, an avatar and their practice results. Nothing else about them.</li>
-          <li>Children don’t type free text, upload photos or record their voice.</li>
+          <li>Children don’t type free text or upload photos. If you turn on “answer out loud” for a child (off unless you do), their voice is understood on the device while they answer: it is never sent to us or anyone else, never saved, and never used for a class student account.</li>
           <li>You can export or delete everything yourself, at any time, from the Parent area.</li>
         </ul>
       </Section>
