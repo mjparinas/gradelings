@@ -25,24 +25,24 @@
   "pk/science": {
     "overview": "85b18faddd",
     "units": [
-      "five-senses text=ede42da0ab std=02bd3a2c6b q=cd1a3c2577",
-      "living-or-not text=9c2f339fb0 std=31944be9fd q=c6b64af68c",
-      "animals-and-babies text=c26be2c8ec std=33603a9544 q=d23f0b3d01",
-      "weather-and-sky text=152ba8b660 std=e90b5f9f4f q=04120788f3",
-      "plants-grow text=beae59bc1e std=d39fada3cd q=d8f8686f2b",
-      "sink-or-float text=87253513e6 std=d484c7f136 q=80c8fb85a3"
+      "five-senses text=ede42da0ab std=02bd3a2c6b q=cd19f59f3e",
+      "living-or-not text=9c2f339fb0 std=31944be9fd q=28feb0fe3d",
+      "animals-and-babies text=c26be2c8ec std=33603a9544 q=628e0c3ebe",
+      "weather-and-sky text=152ba8b660 std=e90b5f9f4f q=e38fb3dc80",
+      "plants-grow text=beae59bc1e std=d39fada3cd q=63e8055882",
+      "sink-or-float text=87253513e6 std=d484c7f136 q=fb450f2fce"
     ]
   },
   "pk/social": {
     "overview": "cebd355918",
     "units": [
-      "my-family text=81af8740c1 std=5a22094834 q=41e53ad242",
-      "feelings text=32db0a0097 std=81058d4912 q=1e8788180c",
-      "community-helpers text=e038723509 std=4472ff25b2 q=27bacf2a4a",
-      "places-around-me text=659860832c std=95be97512a q=8a8589b026",
-      "taking-turns text=04b975dae4 std=6cdfd917b3 q=22be788cc9",
-      "first-next-last text=6f92e7037f std=990eaec749 q=1ad086320d",
-      "caring-for-our-world text=0df6123b83 std=ba1f8539d7 q=82f9f5197f"
+      "my-family text=81af8740c1 std=5a22094834 q=5900be8ff3",
+      "feelings text=32db0a0097 std=81058d4912 q=13ad31eeb7",
+      "community-helpers text=e038723509 std=4472ff25b2 q=9b79a20332",
+      "places-around-me text=659860832c std=95be97512a q=c5c6f817fe",
+      "taking-turns text=04b975dae4 std=6cdfd917b3 q=b3c8ff817f",
+      "first-next-last text=6f92e7037f std=990eaec749 q=32446dfd5f",
+      "caring-for-our-world text=0df6123b83 std=ba1f8539d7 q=974620c174"
     ]
   },
   "k/language": {
