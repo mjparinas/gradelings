@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { useDrag } from "@/lib/drag";
 import { burstFrom, replay } from "@/lib/juice";
 import { sounds } from "@/lib/sound";
 import type { SortQuestion as Q } from "@/content/types";
@@ -15,8 +16,9 @@ export function SortQuestion({ q, status, onAttempt, onSlip, onSpeak }: Question
   const binRefs = useRef<Record<string, HTMLButtonElement | null>>({});
   const locked = isLocked(status);
 
-  const drop = (binId: string) => {
-    if (!selected || locked) return;
+  const drop = (binId: string, item = selected) => {
+    if (!item || locked) return;
+    const selected = item;
     const el = binRefs.current[binId];
     if (selected.bin !== binId) {
       onSpeak?.(q.bins.find((b) => b.id === binId)?.label ?? "");
@@ -40,6 +42,11 @@ export function SortQuestion({ q, status, onAttempt, onSlip, onSpeak }: Question
     }
   };
 
+  const drag = useDrag((itemId, binId) => {
+    const item = remaining.find((i) => i.id === itemId);
+    if (item) drop(binId, item);
+  }, !locked);
+
   return (
     <div className="mx-auto flex w-full max-w-3xl flex-col items-center gap-5">
       <div className="flex min-h-24 flex-wrap justify-center gap-3">
@@ -55,6 +62,7 @@ export function SortQuestion({ q, status, onAttempt, onSlip, onSpeak }: Question
                   onSpeak?.(item.label);
                 }}
                 aria-pressed={isSel}
+                {...drag(item.id)}
                 className={`btn min-h-20 px-4 font-read text-xl transition-transform sm:text-2xl ${
                   isSel ? "btn-soft -translate-y-2 scale-105 ring-4 ring-[color:var(--c)]/50" : ""
                 }`}
@@ -86,6 +94,7 @@ export function SortQuestion({ q, status, onAttempt, onSlip, onSpeak }: Question
               type="button"
               data-quiet
               data-testid="bin"
+              data-drop={bin.id}
               disabled={locked}
               onClick={() => drop(bin.id)}
               className="btn btn-soft min-h-52 flex-col justify-start gap-2 p-4"

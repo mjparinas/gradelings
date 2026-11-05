@@ -34,6 +34,8 @@ const req = (path: string, cookie?: string) => new Request(`http://localhost${pa
 const cookieOf = (res: Response) => (res.headers.get("set-cookie") ?? "").split(";")[0]!;
 
 async function account(address: string, createdAgo = 0) {
+  const existing = await dbm.query<{ family_id: string }>("SELECT family_id FROM parents WHERE email = ?", [address]);
+  if (existing[0]) return { cookie: "", familyId: existing[0].family_id };
   const res = await signup.POST(new Request("http://localhost/api/auth/signup/", { method: "POST", headers: { "content-type": "application/json", host: "localhost", "x-forwarded-for": `10.6.0.${++ip % 250}` }, body: JSON.stringify({ email: address, password: "correct horse" }) }));
   expect(res.status).toBe(200);
   await dbm.run("UPDATE parents SET email_verified_at = ? WHERE email = ?", [NOW - 60_000, address]);
@@ -106,6 +108,64 @@ describe("the parts", () => {
 
   it("never carries a child's name", async () => {
     for (const part of ins.INSIGHT_PARTS) expect(JSON.stringify(await ins.insight(part, NOW))).not.toContain("Secretname");
+  });
+});
+
+describe("app and paywall signals", () => {
+  let appMod: typeof import("@/server/appSignals");
+  let seen: Mod, sync: Mod;
+  beforeAll(async () => {
+    appMod = await import("@/server/appSignals");
+    [seen, sync] = (await Promise.all([import("@/app/api/paywall/seen/route"), import("@/app/api/sync/route")])) as unknown as Mod[];
+  });
+  const post = (path: string, cookie: string, body: unknown, headers: Record<string, string> = {}) =>
+    new Request(`http://localhost${path}`, { method: "POST", headers: { "content-type": "application/json", host: "localhost", "x-forwarded-for": `10.7.0.${++ip % 250}`, cookie, ...headers }, body: JSON.stringify(body) });
+
+  it("records the kind of app a family syncs from", async () => {
+    const f = await account("app-user@example.com");
+    const res = await sync.POST!(post("/api/sync/", f.cookie, { cursor: 0, events: [], profiles: [], settings: [] }, { "x-gradelings-app": "android" }));
+    expect(res.status).toBe(200);
+    const row = (await dbm.query<{ a: number | null; w: number | null }>("SELECT app_android_at AS a, app_web_at AS w FROM families WHERE id = ?", [f.familyId]))[0]!;
+    expect(row.a).toBeGreaterThan(0);
+    expect(row.w).toBeNull();
+    expect(appMod.appOf(new Request("http://x", { headers: { "x-gradelings-app": "weird" } }))).toBe("web");
+  });
+
+  it("counts a family in the app mix only inside the window and not the test account", async () => {
+    const test = await account("mjparinas@gmail.com");
+    await dbm.run("UPDATE families SET app_ios_at = ? WHERE id = ?", [Date.now(), test.familyId]);
+    const mix = await ins.insight("apps", NOW);
+    expect("active" in mix && mix.active).toBeGreaterThan(0);
+    expect("ios" in mix && mix.ios.n).toBe(0);
+  });
+
+  it("records a locked part once a day per kind and rejects anything else", async () => {
+    const f = await account("wall@example.com");
+    for (let i = 0; i < 2; i++) expect((await seen.POST!(post("/api/paywall/seen/", f.cookie, { kind: "locked-unit" }))).status).toBe(200);
+    expect((await seen.POST!(post("/api/paywall/seen/", f.cookie, { kind: "anything-else" }))).status).toBe(400);
+    expect((await seen.POST!(post("/api/paywall/seen/", "", { kind: "locked-unit" }))).status).toBe(401);
+    const rows = await dbm.query<{ kind: string; days: number }>("SELECT kind, days FROM paywall_seen WHERE family_id = ?", [f.familyId]);
+    expect(rows).toEqual([{ kind: "locked-unit", days: 1 }]);
+    await appMod.recordPaywallSeen(f.familyId, "locked-unit", NOW + 2 * DAY);
+    expect((await dbm.query<{ days: number }>("SELECT days FROM paywall_seen WHERE family_id = ?", [f.familyId]))[0]!.days).toBe(2);
+  });
+
+  it("links a locked part to a later payment and leaves out the test account", async () => {
+    const f = await account("buyer@example.com");
+    const test = await account("mjparinas@gmail.com");
+    for (const id of [f.familyId, test.familyId]) await appMod.recordPaywallSeen(id, "members-reports", NOW - 10 * DAY);
+    await dbm.run("INSERT INTO payments (id, family_id, amount, refunded, currency, interval, paid_at) VALUES ('pay-wall', ?, 1499, 0, 'cad', 'month', ?)", [f.familyId, NOW - 8 * DAY]);
+    const out = await ins.insight("paywall", NOW);
+    const row = "rows" in out ? out.rows.find((r) => r.kind === "members-reports") : undefined;
+    expect(row).toMatchObject({ families: 1, paidWithin7: 1, paidAfter: 1 });
+  });
+
+  it("deletes the signals with the family", async () => {
+    const f = await account("leaver@example.com");
+    await appMod.recordPaywallSeen(f.familyId, "locked-unit");
+    const { deleteFamilyData } = await import("@/server/deleteFamily");
+    await deleteFamilyData(f.familyId);
+    expect(await dbm.query("SELECT 1 FROM paywall_seen WHERE family_id = ?", [f.familyId])).toEqual([]);
   });
 });
 

@@ -34,6 +34,10 @@ export function reportDetails(q: Question): ReportDetails {
       out.choices = q.choices.map((c: Choice) => choiceText(c));
       out.answer = choiceText(q.choices.find((c) => c.id === q.answer) ?? { label: q.answer });
       break;
+    case "say":
+      out.choices = q.choices.map((c: Choice) => choiceText(c));
+      out.answer = choiceText(q.choices.find((c) => c.id === q.answer) ?? { label: q.answer });
+      break;
     case "input":
       out.answer = [q.answer, q.suffix].filter(Boolean).join(" ");
       break;
@@ -56,6 +60,30 @@ export function reportDetails(q: Question): ReportDetails {
       break;
     case "place":
       out.answer = `${q.target} (from ${q.min} to ${q.max})`;
+      break;
+    case "match":
+      out.choices = q.pairs.map((x) => `${choiceText(x.left)} → ${choiceText(x.right)}`);
+      out.answer = "Each item with the partner listed";
+      break;
+    case "multi":
+      out.choices = q.choices.map((c: Choice) => choiceText(c));
+      out.answer = q.choices.filter((c) => q.answers.includes(c.id)).map((c) => choiceText(c)).join(", ");
+      break;
+    case "highlight":
+      out.choices = q.words;
+      out.answer = q.answers.map((i) => q.words[i]).join(" ");
+      break;
+    case "mistake":
+      out.choices = q.steps;
+      out.answer = `Step ${q.wrong + 1}`;
+      break;
+    case "fill":
+      out.choices = q.bank;
+      out.answer = q.answers.join(", ");
+      break;
+    case "tiles":
+      out.choices = [...q.tiles, ...(q.extra ?? [])];
+      out.answer = q.tiles.join(q.join ?? "");
       break;
   }
   if (q.visual) out.visual = q.visual;

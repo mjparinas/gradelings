@@ -44,7 +44,9 @@ function fingerprint(q: Question): string {
         ? q.answer
         : q.kind === "build" || q.kind === "coins" || q.kind === "shade" || q.kind === "place"
           ? q.target
-          : JSON.stringify(q.items);
+          : q.kind === "order" || q.kind === "sort"
+            ? JSON.stringify(q.items)
+            : JSON.stringify(q);
   return `${q.prompt}|${JSON.stringify(q.visual ?? "")}|${right}`;
 }
 
