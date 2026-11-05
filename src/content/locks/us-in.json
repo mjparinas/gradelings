@@ -570,8 +570,8 @@
       "wa-g7-research-skills text=a0906b3c59 std=c224b68b6d q=4901d7cfd4",
       "wa-g7-media-framing text=dfd5377178 std=60754e271d q=1f917ebc68",
       "wa-g7-spelling-rules text=2551a36a70 std=ae5e8d03da q=a7dae53aa2",
-      "in-g7-story-analysis text=95aaab6c6b std=392c956b7b q=cb0b531002",
-      "in-g7-info-analysis text=b56dff11be std=a1e5c49d24 q=673cb3baa7"
+      "in-g7-story-analysis text=95aaab6c6b std=392c956b7b q=201e4b853b",
+      "in-g7-info-analysis text=b56dff11be std=a1e5c49d24 q=84b8cb1732"
     ]
   },
   "7/math": {
@@ -649,9 +649,9 @@
       "mb-word-power-8 text=3f40ceb555 std=44ced7f1b7 q=434b58489d",
       "wa-g8-media-influence text=17e98c9229 std=be70f80445 q=d957e11aea",
       "or-g8-weigh-the-evidence text=d58b9eae3f std=f002f6f3e2 q=a6a4434e5b",
-      "ca-g8-literary-connections text=b809fd29ef std=66b8974dfb q=e8f4c470c3",
-      "ca-g8-arguments-and-sources text=4f3991e0e7 std=8e9eb822d7 q=37ede18531",
-      "ca-g8-verbs-voice-mood text=1bfe2d958c std=260b6e6ce7 q=0d31094a75"
+      "ca-g8-literary-connections text=b809fd29ef std=66b8974dfb q=cb28432094",
+      "ca-g8-arguments-and-sources text=4f3991e0e7 std=8e9eb822d7 q=4674ede1f1",
+      "ca-g8-verbs-voice-mood text=1bfe2d958c std=260b6e6ce7 q=d817db6295"
     ]
   },
   "8/math": {
@@ -736,7 +736,7 @@
       "wa-g9-research-and-credibility text=255a2e9598 std=da448bee79 q=447c001fd3",
       "wa-g9-proofreading text=91e8cd490d std=17dba13eea q=06b9dd8ced",
       "or-g9-media-analysis text=72d67adead std=99f9681c48 q=e34931ec0d",
-      "ca-g9-rhetoric-and-sources text=9868a8e5a1 std=c79dbd8330 q=de1b5ca7c4"
+      "ca-g9-rhetoric-and-sources text=9868a8e5a1 std=c79dbd8330 q=d33b2c131f"
     ]
   },
   "9/math": {

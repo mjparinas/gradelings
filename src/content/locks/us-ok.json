@@ -669,8 +669,8 @@
       "mb-word-power-8 text=3f40ceb555 std=1b3b5647e8 q=434b58489d",
       "wa-g8-media-influence text=17e98c9229 std=973d1d21ee q=d957e11aea",
       "or-g8-weigh-the-evidence text=d58b9eae3f std=6533ce83df q=a6a4434e5b",
-      "ca-g8-literary-connections text=b809fd29ef std=efad6b1d9f q=e8f4c470c3",
-      "ca-g8-verbs-voice-mood text=1bfe2d958c std=99459eadd9 q=0d31094a75"
+      "ca-g8-literary-connections text=b809fd29ef std=efad6b1d9f q=cb28432094",
+      "ca-g8-verbs-voice-mood text=1bfe2d958c std=99459eadd9 q=d817db6295"
     ]
   },
   "8/math": {
@@ -750,8 +750,8 @@
       "wa-g9-research-and-credibility text=255a2e9598 std=e58dc294a4 q=447c001fd3",
       "wa-g9-proofreading text=91e8cd490d std=36b341d0a3 q=06b9dd8ced",
       "or-g9-media-analysis text=72d67adead std=a9c8ea32d3 q=e34931ec0d",
-      "ca-g9-world-literature text=5c986bd78c std=f135f50ce0 q=c70e6e0d95",
-      "ca-g9-rhetoric-and-sources text=9868a8e5a1 std=c5b4729945 q=de1b5ca7c4"
+      "ca-g9-world-literature text=5c986bd78c std=f135f50ce0 q=25ec7ee5db",
+      "ca-g9-rhetoric-and-sources text=9868a8e5a1 std=c5b4729945 q=d33b2c131f"
     ]
   },
   "9/math": {
