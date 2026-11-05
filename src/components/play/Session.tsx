@@ -39,6 +39,12 @@ import { BuildQuestion } from "../questions/BuildQuestion";
 import { ChoiceQuestion } from "../questions/ChoiceQuestion";
 import { CoinsQuestion } from "../questions/CoinsQuestion";
 import { InputQuestion } from "../questions/InputQuestion";
+import { FillQuestion } from "../questions/FillQuestion";
+import { HighlightQuestion } from "../questions/HighlightQuestion";
+import { MatchQuestion } from "../questions/MatchQuestion";
+import { MistakeQuestion } from "../questions/MistakeQuestion";
+import { MultiQuestion } from "../questions/MultiQuestion";
+import { TilesQuestion } from "../questions/TilesQuestion";
 import { OrderQuestion } from "../questions/OrderQuestion";
 import { PlaceQuestion } from "../questions/PlaceQuestion";
 import { ShadeQuestion } from "../questions/ShadeQuestion";
@@ -79,6 +85,18 @@ export function QuestionBody(props: QuestionProps<Question>) {
       return <ShadeQuestion {...props} q={q} />;
     case "place":
       return <PlaceQuestion {...props} q={q} />;
+    case "match":
+      return <MatchQuestion {...props} q={q} />;
+    case "multi":
+      return <MultiQuestion {...props} q={q} />;
+    case "highlight":
+      return <HighlightQuestion {...props} q={q} />;
+    case "mistake":
+      return <MistakeQuestion {...props} q={q} />;
+    case "fill":
+      return <FillQuestion {...props} q={q} />;
+    case "tiles":
+      return <TilesQuestion {...props} q={q} />;
   }
 }
 
@@ -390,7 +408,7 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
     setRun(0);
     setStatus("retry");
     setMood("oops");
-    setMessage(pick(["Not that basket. Try another one!", "Hmm, try a different basket."]));
+    setMessage(pick(["Not that one. Try another!", "Hmm, try a different one."]));
     sounds.tryAgain();
   }
 
