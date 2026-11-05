@@ -572,13 +572,13 @@
       "wa-g6-india-china text=cc9a696797 std=0424b080bf q=13133eb41e",
       "world-beliefs text=cc74370028 std=41ab328e2e q=eaa6186bca",
       "trade-networks text=37074f947d std=9076624234 q=bfbd39ee46",
-      "ca-g6-greece-rome text=becfd03e78 std=8ca5fed032 q=f72c056861",
-      "ca-g6-hebrews-kush text=6d86e5dd61 std=9e4a877e1e q=604146d5e1",
-      "ca-g6-pharaohs-persia-alexander text=9dc4d7d92d std=bb8c21c598 q=5fa21137eb",
-      "ca-g6-greek-world text=55a9a9670f std=adaf1a508a q=95718700fd",
-      "ca-g6-ancient-india text=59ebe86493 std=5bb8918d32 q=2ef3d42430",
-      "ca-g6-qin-and-han text=81076d1349 std=7ab6077564 q=8dad53ae97",
-      "ca-g6-roman-empire text=f7bd3cb7bd std=d6379e5d01 q=6a3877ad86"
+      "ca-g6-greece-rome text=becfd03e78 std=8ca5fed032 q=248e19dbff",
+      "ca-g6-hebrews-kush text=6d86e5dd61 std=9e4a877e1e q=f08540383b",
+      "ca-g6-pharaohs-persia-alexander text=9dc4d7d92d std=bb8c21c598 q=09d170f0f3",
+      "ca-g6-greek-world text=55a9a9670f std=adaf1a508a q=c58c0c168a",
+      "ca-g6-ancient-india text=59ebe86493 std=5bb8918d32 q=86361754ed",
+      "ca-g6-qin-and-han text=81076d1349 std=7ab6077564 q=400b252dba",
+      "ca-g6-roman-empire text=f7bd3cb7bd std=d6379e5d01 q=852a5927d2"
     ]
   },
   "6/spanish": {

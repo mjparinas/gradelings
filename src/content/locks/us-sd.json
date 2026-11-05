@@ -314,7 +314,7 @@
       "ny-g3-globes-and-maps text=2d930f5588 std=2172812b4e q=7becb7a790",
       "wa-g6-mesopotamia-egypt text=7b07716040 std=56972d9738 q=232c3963ae",
       "wa-g6-india-china text=73f6627d42 std=e5f2d44ffe q=13133eb41e",
-      "ca-g6-greece-rome text=cadd1d7424 std=2cb0822423 q=f72c056861",
+      "ca-g6-greece-rome text=cadd1d7424 std=2cb0822423 q=248e19dbff",
       "ga-g3-explorers text=31163461fe std=36a32a4127 q=2f9bff5aff",
       "ca-g5-thirteen-colonies text=b2ab7c1f74 std=f06370f764 q=17e62378ec",
       "ca-g5-colonial-economy text=302c8d93ea std=5bab45698f q=78476c23e0",
@@ -393,7 +393,7 @@
   "4/social": {
     "overview": "85c48e6c6f",
     "units": [
-      "ca-g6-roman-empire text=f7bd3cb7bd std=d397813b51 q=6a3877ad86",
+      "ca-g6-roman-empire text=f7bd3cb7bd std=d397813b51 q=852a5927d2",
       "ca-g7-rome-byzantium text=28311c0922 std=fb8b41b031 q=1158574fa3",
       "medieval-europe text=c481f7adac std=b517bf028d q=e0e0a48023",
       "ny-g9-crusades-plague text=66370fd7dd std=6aa2b3343a q=bbbc23b16e",
@@ -558,9 +558,9 @@
     "units": [
       "ga-g7-southern-eastern-asia text=ff3822bd69 std=a8350db0f9 q=8096a11c26",
       "wa-g6-mesopotamia-egypt text=074c2d63a6 std=d80696a7e4 q=232c3963ae",
-      "ca-g6-hebrews-kush text=6d86e5dd61 std=c9adb768ad q=604146d5e1",
+      "ca-g6-hebrews-kush text=6d86e5dd61 std=c9adb768ad q=f08540383b",
       "wa-g6-greece-rome text=07d03c3210 std=decac1ad6c q=c581214fd3",
-      "ca-g6-roman-empire text=f7bd3cb7bd std=9708ef2f6e q=6a3877ad86",
+      "ca-g6-roman-empire text=f7bd3cb7bd std=9708ef2f6e q=852a5927d2",
       "medieval-europe text=c481f7adac std=ea74e3d4d7 q=e0e0a48023",
       "renaissance-and-reformation text=4c8ff6b55a std=c18cc3eeb7 q=6c1b369fe8",
       "ny-g9-absolutism-enlightenment text=eae970d7a2 std=694332cf36 q=7b5381806f",
