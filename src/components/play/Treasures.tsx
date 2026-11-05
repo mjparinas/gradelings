@@ -36,6 +36,7 @@ export function Treasures() {
     { id: "trophies", title: "Trophies", icon: "🏆", colour: "#f0bd2a", dark: "#b88905", href: "#/trophies", count: Object.keys(d.trophies).length },
     { id: "room", title: "My Room", icon: "🏠", colour: "#f08a4b", dark: "#c46a2c", href: "#/room", flag: "my-room" },
     { id: "shop", title: "Shop", icon: "🛍️", colour: "#06b6d4", dark: "#0891b2", href: "#/shop", flag: "shop", count: d.coins },
+    { id: "break", title: "Brain Break", icon: "🧠", colour: "#7c4fe0", dark: "#5d34c4", href: "#/break", flag: "brain-breaks" },
     { id: "trail", title: "Trail Map", icon: "🧭", colour: "#4f8ef7", dark: "#2f6fd6", href: "#/map" },
   ];
   const shown = treasures.filter((t) => !t.flag || isOn(t.flag));

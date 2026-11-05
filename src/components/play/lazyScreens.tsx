@@ -48,6 +48,7 @@ export const FactsPicker = lazyScreen(() => facts().then((m) => m.FactsPicker));
 export const FactChart = lazyScreen(() => facts().then((m) => m.FactChart));
 export const HelpVideoPlayer = lazyScreen(() => import("./HelpVideo").then((m) => m.HelpVideoPlayer));
 export const PlacementTest = lazyScreen(() => import("./PlacementTest").then((m) => m.PlacementTest));
+export const BrainBreak = lazyScreen(() => import("./BrainBreak").then((m) => m.BrainBreak));
 export const Room = lazyScreen(() => import("./Room").then((m) => m.Room));
 export const Shop = lazyScreen(() => import("./Shop").then((m) => m.Shop));
 export const SneakPeek = lazyScreen(() => import("./SneakPeek").then((m) => m.SneakPeek));

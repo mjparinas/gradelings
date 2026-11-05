@@ -258,6 +258,21 @@ describe("Hub tiles", () => {
     expect(screen.queryByText("Stories")).not.toBeInTheDocument();
   });
 
+  it("has a free Brain Break tile for older kids, none on the little kids' home screen, and none when switched off", () => {
+    h.family = free;
+    const { unmount } = show();
+    expect(within(tile("Brain Break")).queryByText("🔒")).not.toBeInTheDocument();
+    fireEvent.click(tile("Brain Break"));
+    expect(window.location.hash).toBe("#/break");
+    unmount();
+    const little = show("little");
+    expect(screen.queryByText("Brain Break")).not.toBeInTheDocument();
+    little.unmount();
+    h.off = new Set(["brain-breaks"]);
+    show();
+    expect(screen.queryByText("Brain Break")).not.toBeInTheDocument();
+  });
+
   it("hides the tiles the admin switched off", () => {
     h.off = new Set(["arcade", "shop", "daily-challenge"]);
     show();
