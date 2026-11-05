@@ -1,0 +1,6 @@
+Live questions let you ask the whole class one question and watch the answers arrive. First, the class timer.
+Pick a length from one minute to thirty, add a note like Silent reading if you like, and start the timer. Students see it at the top of their screen. It never locks anything.
+To ask a question, choose a unit under Ask from. Gradelings makes the question for you.
+As students answer, the bars fill, and each desk turns green for right or red for wrong. Students who haven't answered yet stay grey.
+Only you see the next question while the class works on this one. Choose a different question if you like. Then show the answer, or tap Next question.
+Everything from live questions is deleted after a day, and it never changes anyone's levels. Look back at today's questions to see who to check in with.

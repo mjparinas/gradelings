@@ -82,3 +82,4 @@ __pycache__/
 
 # tsc and ESLint incremental state (CI caches it)
 /.cache
+scripts/help-videos/shots/

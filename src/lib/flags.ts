@@ -63,6 +63,7 @@ export const FLAGS: readonly FlagDef[] = [
   { key: "class-timer", label: "Class timer", description: "A countdown a teacher starts for the whole class, shown on the teacher's screen and on students' devices. Off: no new timers start and devices stop showing them; practice is unchanged.", scope: "server", defaultOn: true },
   { key: "class-goal", label: "Class goal", description: "A weekly question goal a teacher sets for the whole class, shown to students as a shared progress bar with counts only. Off: no new goals are set and devices stop showing them; practice is unchanged.", scope: "server", defaultOn: true },
   { key: "live-away", label: "Live questions: away on desks", description: "A teacher's live-question desks show a quiet \"away\" for a student whose device has gone quiet or said it was leaving (tab hidden or closed). Times only, kept for a day, never shown to students or parents. Off: no presence is recorded and desks show no away.", scope: "server", defaultOn: true },
+  { key: "training-videos", label: "Training videos", description: "Short how-to videos for teachers (and parents once their set is added): each opens once the first time a person uses its feature, and a Training videos library lets them watch any of them again. Off: nothing opens by itself and the library link goes away.", scope: "app", defaultOn: true },
 ];
 
 export type FlagKey = (typeof FLAGS)[number]["key"];

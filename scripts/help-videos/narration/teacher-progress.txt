@@ -1,0 +1,6 @@
+The Progress tab shows every student and every unit you've assigned, with their level.
+Each cell shows the level, the percent right on the first try, and how many questions the student has answered.
+Use Sort by to put the students who need help, or the most active students, first.
+Print a class summary, or download everything as a spreadsheet. It always says it reflects practice, not a report-card mark. You decide proficiency.
+Below the table, What to look at next names the units worth a quick reteach and the students to check in with, and why. You can assign extra practice to them in one tap.
+You can also set a weekly question goal for the whole class. Students see one shared bar with counts only: no names and no ranking.
