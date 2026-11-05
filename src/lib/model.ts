@@ -102,6 +102,8 @@ export interface FamilyInfo {
     verified?: boolean;
     /** A class account a teacher made for this child: no parent area, no billing, no email. */
     student?: boolean;
+    /** A second adult on someone else's family: no billing, codes, or other adults. */
+    adult?: boolean;
   };
   plan: "trial" | "free" | "premium";
   trialEndsAt: number;

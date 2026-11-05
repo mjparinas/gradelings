@@ -211,6 +211,36 @@ export async function changePassword(current: string, password: string) {
   await post("/api/auth/password/", { current, password });
 }
 
+export interface FamilyAdults {
+  /** False for a second adult, who sees no list. */
+  owner: boolean;
+  adults: { id: string; email: string; since: number }[];
+  invites: { email: string; createdAt: number }[];
+}
+
+export async function loadAdults(): Promise<FamilyAdults> {
+  const res = await fetch("/api/account/adults/", { credentials: "same-origin" });
+  if (!res.ok) throw new Error("Couldn't load the other adults.");
+  return (await res.json()) as FamilyAdults;
+}
+
+/** Emails an invitation to a second adult. */
+export async function inviteAdult(email: string): Promise<FamilyAdults> {
+  return post<FamilyAdults>("/api/account/adults/", { email });
+}
+
+/** Cancels an invitation (by email) or removes an adult (by id). */
+export async function removeAdultOrInvite(by: { email: string } | { id: string }): Promise<FamilyAdults> {
+  const q = "email" in by ? `email=${encodeURIComponent(by.email)}` : `id=${encodeURIComponent(by.id)}`;
+  return post<FamilyAdults>(`/api/account/adults/?${q}`, undefined, "DELETE");
+}
+
+/** A second adult leaving the family: signs this device out and clears it. */
+export async function leaveFamily() {
+  await post("/api/account/adults/?id=me", undefined, "DELETE");
+  await useStore.getState().wipeDevice();
+}
+
 export interface DeviceSession {
   id: string;
   createdAt: number;

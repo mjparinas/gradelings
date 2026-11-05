@@ -32,9 +32,9 @@ export async function getFamilyRow(id: string): Promise<FamilyRow | undefined> {
   )[0];
 }
 
-export function toFamilyInfo(row: FamilyRow, email: string, verified = true, student = false): FamilyInfo {
+export function toFamilyInfo(row: FamilyRow, email: string, verified = true, student = false, adult = false): FamilyInfo {
   return {
-    account: { email, familyId: row.id, verified, ...(student ? { student: true } : {}) },
+    account: { email, familyId: row.id, verified, ...(student ? { student: true } : {}), ...(adult ? { adult: true } : {}) },
     plan: row.plan as FamilyInfo["plan"],
     trialEndsAt: Number(row.trial_ends_at),
     subscription: row.subscription_status

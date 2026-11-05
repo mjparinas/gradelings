@@ -475,6 +475,21 @@ export function classDigestEmail(to: string, origin: string, classes: string[][]
   });
 }
 
+export function familyInviteEmail(to: string, origin: string, token: string, ownerEmail: string): Email {
+  return layout({
+    kind: "family-invite",
+    to,
+    origin,
+    subject: `${ownerEmail} invited you to follow a child's practice on ${APP_NAME}`,
+    heading: "You were invited to a family",
+    body: [
+      `${ownerEmail} invited you to see and manage the children in their ${APP_NAME} family: reports, settings and goals. Billing and deleting the family stay with them.`,
+      "Choose the button to make your own sign-in with this email address. The invitation lasts 7 days. If you weren't expecting it, ignore this email and nothing is shared.",
+    ],
+    button: { label: "Accept the invitation", url: `${origin}/account/join/?token=${encodeURIComponent(token)}` },
+  });
+}
+
 export function classInviteEmail(to: string, origin: string, className: string, ownerEmail: string): Email {
   return layout({
     kind: "class-invite",

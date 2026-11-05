@@ -4,6 +4,7 @@ import { deleteFamilyData } from "@/server/deleteFamily";
 import { sendEmail } from "@/server/email";
 import { accountDeletedEmail } from "@/server/emailTemplates";
 import { getFamilyRow } from "@/server/family";
+import { removeAdult } from "@/server/familyAdults";
 import { cancelSubscriptions, stripeCancellationConfigured } from "@/server/stripe";
 
 /** How recent a sign-in must be to delete an account that has no password. */
@@ -27,6 +28,12 @@ export async function DELETE(req: Request) {
   } else {
     const password = typeof body?.password === "string" ? body.password : "";
     if (!stored[0] || password.length > 200 || !(await verifyPassword(password, stored[0].password_hash))) return error(403, "Please type your password to confirm.");
+  }
+  // A second adult deleting their account leaves the family: only their own sign-in goes, and the children stay.
+  if (!session.owner) {
+    await removeAdult(f, session.parentId);
+    if (session.verified) await sendEmail(accountDeletedEmail(session.email, appOrigin(req)));
+    return json({ ok: true, left: true }, { cookie: clearCookie() });
   }
   // Stop billing first. If Stripe can't be reached, keep the account so the parent can try again.
   const family = await getFamilyRow(f);
