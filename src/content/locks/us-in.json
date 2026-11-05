@@ -479,7 +479,7 @@
     "units": [
       "connotation-tone text=9c068d912c std=f6165bc006 q=220849e9fa",
       "persuasive-writing text=143cf3561b std=930f221ac5 q=247878bf5e",
-      "agreement text=5714f96d51 std=f38e333147 q=fcb9f1ba72",
+      "agreement text=5714f96d51 std=f38e333147 q=031995e7f5",
       "sentence-repair text=404e6c9477 std=f07483a5d5 q=2784e88c73",
       "commas-clauses text=78c6d03749 std=e0eac803fb q=afd3a46d44",
       "roots-analogies text=34da7ba9e2 std=554ba8c442 q=01e03fc8c3",
@@ -558,11 +558,11 @@
   "7/language": {
     "overview": "18cc4e53aa",
     "units": [
-      "literary-devices text=75012dadfd std=beb53ce3cb q=ca1f4ae5d6",
+      "literary-devices text=75012dadfd std=beb53ce3cb q=9f862df281",
       "tone-mood text=1a78ad0bc3 std=00e3bef3f6 q=104d70a39d",
       "persuasion text=002e89452f std=9637dd165d q=5e50a03d63",
       "clauses-sentences text=5017dd13d0 std=d9d6cc7135 q=a49f421344",
-      "modifiers-parallelism text=a0c6970207 std=74fec42754 q=64a9bf0a96",
+      "modifiers-parallelism text=a0c6970207 std=74fec42754 q=adb03492fb",
       "word-mix-ups text=7bb5032b8a std=c0c53b60b3 q=d64ff1637c",
       "poetry-lab text=e3769835d8 std=b74ff64077 q=a8dd8516cd",
       "punctuation-7 text=9342af658b std=236b5f1c47 q=4fd2e17eaa",
@@ -642,7 +642,7 @@
     "overview": "e64c4ae05b",
     "units": [
       "close-reading text=b5e48e1704 std=4a9571f613 q=9a7ad6cfde",
-      "word-study text=e9a31820f1 std=4052dd835a q=816e78a8ea",
+      "word-study text=e9a31820f1 std=4052dd835a q=e40812d304",
       "strategies-8 text=14cb61c3b0 std=4111ecae12 q=ee43aae812",
       "digital-8 text=742bfe22d6 std=46ed7eb48c q=a2bbd968e9",
       "writing-8 text=d9bb3a4cad std=44bdaaaccb q=42e0b48505",
@@ -726,7 +726,7 @@
     "overview": "860323e17f",
     "units": [
       "close-reading text=1934195db9 std=31aca70520 q=f9de480cb6",
-      "literary-elements text=c987189fb1 std=c6cbc2087b q=93113ee225",
+      "literary-elements text=c987189fb1 std=c6cbc2087b q=4dd3b74498",
       "grammar-and-style text=8039e9ed51 std=5025d270d0 q=37d6dcd28c",
       "word-parts-9 text=2f90f3f2bb std=16fdbb75d5 q=584e86af3f",
       "devices-9 text=320de0c79d std=ddff5f9f68 q=2531ff43de",

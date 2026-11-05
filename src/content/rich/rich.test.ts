@@ -5,7 +5,7 @@ import { coursesInFramework } from "../index";
 import { hashSeed, withSeed } from "../random";
 import type { MistakeQuestion, Question } from "../types";
 import { withRich } from "./index";
-import { betweenZeroAndNegativeOne, distributeMistake, exponentLaws, fractionAddMistake, linearEquationMistake, perfectSquares, rightTriangles, decimalFractions, equalFractions, fractionDecimals, fractionWords, integerLineMistake, mixedNumberMistake, multiplyMistake, oneStepMistake, percentFractions, twoStepMistake, equivalentFill } from "./questions";
+import { agreementError, deviceExamples, ecosystemRoles, elementSymbols, gasGiants, heatAdded, idiomMeanings, newtonsLaws, notParallel, rootMeanings, storyElements, betweenZeroAndNegativeOne, distributeMistake, exponentLaws, fractionAddMistake, linearEquationMistake, perfectSquares, rightTriangles, decimalFractions, equalFractions, fractionDecimals, fractionWords, integerLineMistake, mixedNumberMistake, multiplyMistake, oneStepMistake, percentFractions, twoStepMistake, equivalentFill } from "./questions";
 import { RICH } from "./units";
 
 const seeds = Array.from({ length: 12 }, (_, i) => i);
@@ -270,6 +270,61 @@ describe("Grade 8 and 9 questions", () => {
         const q = betweenZeroAndNegativeOne()[0];
         if (q.kind !== "multi") throw new Error("kind");
         for (const c of q.choices) expect(q.answers.includes(c.id), c.label).toBe(val(c.label) > -1 && val(c.label) < 0);
+      });
+  });
+});
+
+describe("Grade 6 to 9 language and science questions", () => {
+  // Facts are checked against a table kept here, not the builders' own lists.
+  const TRUTH: Record<string, Record<string, string>> = {
+    elementSymbols: { H: "Hydrogen", O: "Oxygen", Na: "Sodium", Fe: "Iron", C: "Carbon", Au: "Gold" },
+    rootMeanings: { bio: "life", geo: "earth", aqua: "water", tele: "far", port: "carry", chron: "time" },
+    ecosystemRoles: { Producer: "Grass", "Primary consumer": "Rabbit", "Secondary consumer": "Fox", Decomposer: "Mushroom" },
+  };
+  const builders = { elementSymbols, rootMeanings, ecosystemRoles } as const;
+  for (const [name, make] of Object.entries(builders)) {
+    it(`${name}: every pair is a true fact and every left side is used once`, () => {
+      for (let s = 0; s < 60; s++)
+        withSeed(s, () => {
+          const q = make()[0];
+          if (q.kind !== "match") throw new Error("kind");
+          expect(new Set(q.pairs.map((p) => p.left.label)).size).toBe(q.pairs.length);
+          for (const p of q.pairs) expect(TRUTH[name][p.left.label], p.left.label).toBe(p.right.label);
+        });
+    });
+  }
+  it("matching questions for sayings, devices, story elements and Newton's laws have distinct sides", () => {
+    for (let s = 0; s < 60; s++)
+      withSeed(s, () => {
+        for (const q of [...idiomMeanings(), ...deviceExamples(), ...storyElements(), ...newtonsLaws()]) {
+          if (q.kind !== "match") throw new Error("kind");
+          expect(new Set(q.pairs.map((p) => p.left.label)).size).toBe(q.pairs.length);
+          expect(new Set(q.pairs.map((p) => p.right.label)).size).toBe(q.pairs.length);
+        }
+      });
+  });
+  it("gas giants and heat-added choices are sorted correctly", () => {
+    const giants = new Set(["Jupiter", "Saturn", "Uranus", "Neptune"]);
+    const heat = new Set(["Melting", "Boiling", "Evaporating"]);
+    for (let s = 0; s < 60; s++)
+      withSeed(s, () => {
+        for (const [make, truth] of [[gasGiants, giants], [heatAdded, heat]] as const) {
+          const q = make()[0];
+          if (q.kind !== "multi") throw new Error("kind");
+          for (const c of q.choices) expect(q.answers.includes(c.id), c.label).toBe(truth.has(c.label));
+        }
+      });
+  });
+  it("highlight questions mark the odd word, and only the odd words", () => {
+    for (let s = 0; s < 60; s++)
+      withSeed(s, () => {
+        const a = agreementError()[0];
+        const n = notParallel()[0];
+        if (a.kind !== "highlight" || n.kind !== "highlight") throw new Error("kind");
+        expect(a.answers.length).toBe(1);
+        expect(["are", "have", "were", "howl"]).toContain(a.words[a.answers[0]]);
+        const marked = n.answers.map((i) => n.words[i].replace(/\W/g, "")).join(" ");
+        expect(marked).toMatch(/^(to ride bikes|drawing pictures|to eat leftovers|leaving by noon|resting)$/);
       });
   });
 });

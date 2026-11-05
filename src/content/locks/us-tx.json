@@ -544,7 +544,7 @@
       "point-of-view text=181ec2a506 std=44c675c3ab q=e32473aa03",
       "connotation-tone text=9c068d912c std=9e1e022724 q=220849e9fa",
       "persuasive-writing text=143cf3561b std=2e70656d6b q=247878bf5e",
-      "agreement text=5714f96d51 std=388a337087 q=fcb9f1ba72",
+      "agreement text=5714f96d51 std=388a337087 q=031995e7f5",
       "sentence-repair text=404e6c9477 std=016d2e3127 q=2784e88c73",
       "commas-clauses text=78c6d03749 std=a82b6aef78 q=afd3a46d44",
       "roots-analogies text=34da7ba9e2 std=56fd31645a q=01e03fc8c3",
@@ -589,7 +589,7 @@
       "density-buoyancy-8 text=c2491145a6 std=298989ff1e q=f407b6c023",
       "wa-g7-reactions text=786ae9bc11 std=879fc90cff q=cfd3d54d6f",
       "forces-at-work text=5f5393489c std=93364fee21 q=4430fad17e",
-      "newtons-laws text=22bc06c840 std=4501bec7ae q=de7396dbf8",
+      "newtons-laws text=22bc06c840 std=4501bec7ae q=2ebfc6b71c",
       "wa-g8-energy text=655dfe6f3b std=b596787a10 q=cdf3dadeb8",
       "mb-stored-energy text=d781d845f3 std=6d2d3a2466 q=c71f816ca3",
       "ecosystems-7 text=da82b56903 std=321040bd62 q=2aeec5ed64",
@@ -630,11 +630,11 @@
   "7/language": {
     "overview": "5c2f0bab52",
     "units": [
-      "literary-devices text=75012dadfd std=451a836334 q=ca1f4ae5d6",
+      "literary-devices text=75012dadfd std=451a836334 q=9f862df281",
       "tone-mood text=1a78ad0bc3 std=e21d0fd815 q=104d70a39d",
       "persuasion text=002e89452f std=51c5fe3bac q=5e50a03d63",
       "clauses-sentences text=5017dd13d0 std=a76d9a9c0a q=a49f421344",
-      "modifiers-parallelism text=a0c6970207 std=368ade13bd q=64a9bf0a96",
+      "modifiers-parallelism text=a0c6970207 std=368ade13bd q=adb03492fb",
       "word-mix-ups text=7bb5032b8a std=d685a8169c q=d64ff1637c",
       "poetry-lab text=e3769835d8 std=8e009ce804 q=a8dd8516cd",
       "punctuation-7 text=9342af658b std=24f8b6d03a q=4fd2e17eaa",
@@ -677,7 +677,7 @@
   "7/science": {
     "overview": "49067d036b",
     "units": [
-      "atoms-and-elements text=7c83b3e634 std=a7575a6d81 q=7e2eecbebf",
+      "atoms-and-elements text=7c83b3e634 std=a7575a6d81 q=278466d671",
       "matter-changes-5 text=76ddfb727a std=49a22efb4a q=d36ded63b1",
       "solutions-separation-7 text=2f7dc8f574 std=70444cff8f q=65a2517d87",
       "nb-motion-forces-8 text=a3e4ee29f0 std=1b2aad70d1 q=4f1a481301",
@@ -730,7 +730,7 @@
     "units": [
       "close-reading text=b5e48e1704 std=67696f7db4 q=9a7ad6cfde",
       "literary-devices text=807aa8d25d std=59aca7122f q=dbc870fffd",
-      "word-study text=e9a31820f1 std=d6cad4a2bf q=816e78a8ea",
+      "word-study text=e9a31820f1 std=d6cad4a2bf q=e40812d304",
       "irony-satire-8 text=4b6cba0527 std=d81a070d85 q=bd88cc209f",
       "narrator-8 text=b609477509 std=140110b689 q=6c18973e7e",
       "forms-features-8 text=612838fad2 std=8b307d1a8c q=1d74ce249f",
@@ -811,7 +811,7 @@
     "overview": "af5bda4cda",
     "units": [
       "close-reading text=1934195db9 std=5a04080a18 q=f9de480cb6",
-      "literary-elements text=c987189fb1 std=afd78def48 q=93113ee225",
+      "literary-elements text=c987189fb1 std=afd78def48 q=4dd3b74498",
       "grammar-and-style text=8039e9ed51 std=d08f112f08 q=37d6dcd28c",
       "word-parts-9 text=2f90f3f2bb std=99b14a9932 q=584e86af3f",
       "devices-9 text=320de0c79d std=958814951b q=2531ff43de",

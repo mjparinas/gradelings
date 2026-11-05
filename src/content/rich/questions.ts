@@ -519,3 +519,120 @@ export const betweenZeroAndNegativeOne = (): Question[] => [
     sample(BETWEEN_WRONG, 2).map((n) => [n] as [string]),
   ),
 ];
+
+// ---------- Grades 6 to 9: language arts and science ----------
+
+const IDIOMS: [string, string][] = [
+  ["It's raining cats and dogs", "It is raining very hard"],
+  ["A piece of cake", "Very easy to do"],
+  ["Break the ice", "Start a friendly conversation"],
+  ["Under the weather", "Feeling a little sick"],
+  ["Spill the beans", "Tell a secret"],
+  ["Hit the books", "Study hard"],
+];
+export const idiomMeanings = (): Question[] => [
+  match("Match each saying to what it means.", "These sayings are not meant word for word. Think about what the whole saying means in the story.", sample(IDIOMS, 4).map(([l, r]) => ({ left: l, right: r }))),
+];
+
+const AGREEMENT = [
+  "The box of pencils [[are]] on the desk.",
+  "Each of the students [[have]] a library card.",
+  "The team of players [[were]] ready to start.",
+  "A bag of apples [[are]] in the kitchen.",
+  "The pack of wolves [[howl]] at night.",
+];
+export const agreementError = (): Question[] => [
+  highlight("Tap the verb that does not agree with its subject.", pick(AGREEMENT), "Find the subject first. It is usually not the word right before the verb. Then ask whether the verb matches it."),
+];
+
+const NOT_PARALLEL = [
+  "She likes swimming, hiking, and [[to]] [[ride]] [[bikes]].",
+  "He wanted to read, to write, and [[drawing]] [[pictures]].",
+  "They enjoy cooking, baking, and [[to]] [[eat]] [[leftovers]].",
+  "Our plan is to arrive early, to set up, and [[leaving]] [[by]] [[noon]].",
+  "The coach asked us to stretch, to drink water, and [[resting]].",
+];
+export const notParallel = (): Question[] => [
+  highlight("Tap the part that does not match the others in the list.", pick(NOT_PARALLEL), "Items in a list should have the same form. Look for the one that sounds different from the rest."),
+];
+
+const DEVICES: [string, string][] = [
+  ["Simile", "She was as brave as a lion"],
+  ["Metaphor", "Time is a thief"],
+  ["Personification", "The wind whispered through the trees"],
+  ["Hyperbole", "I have told you a million times"],
+  ["Alliteration", "Silent snakes slither slowly"],
+];
+export const deviceExamples = (): Question[] => [
+  match("Match each device to an example.", "A simile uses like or as. A metaphor says one thing is another. Personification gives a thing human actions.", sample(DEVICES, 4).map(([l, r]) => ({ left: l, right: r }))),
+];
+
+const ROOTS: [string, string][] = [
+  ["bio", "life"],
+  ["geo", "earth"],
+  ["aqua", "water"],
+  ["tele", "far"],
+  ["port", "carry"],
+  ["chron", "time"],
+];
+export const rootMeanings = (): Question[] => [
+  match("Match each word root to its meaning.", "Think of a word you know with that root, like biology, geography or telephone.", sample(ROOTS, 4).map(([l, r]) => ({ left: l, right: r }))),
+];
+
+const ELEMENTS: [string, string][] = [
+  ["protagonist", "The main character"],
+  ["setting", "When and where a story happens"],
+  ["conflict", "A struggle between opposing forces"],
+  ["theme", "The big message of a story"],
+  ["irony", "The opposite of what is expected"],
+];
+export const storyElements = (): Question[] => [
+  match("Match each story element to what it means.", "Think about how each word is used when we talk about a story.", sample(ELEMENTS, 4).map(([l, r]) => ({ left: l, right: r }))),
+];
+
+export const gasGiants = (): Question[] => [
+  multi(
+    "Tap every planet that is a gas giant.",
+    "Gas giants are the big outer planets without a solid surface to stand on.",
+    sample(["Jupiter", "Saturn", "Uranus", "Neptune"], 2).map((n) => [n] as [string]),
+    sample(["Mars", "Venus", "Mercury", "Earth"], 2).map((n) => [n] as [string]),
+  ),
+];
+
+export const newtonsLaws = (): Question[] => [
+  match("Match each of Newton's laws to its idea.", "The first law is about things staying as they are. The second links force and acceleration. The third is about pairs of forces.", [
+    { left: "First law", right: "A moving or resting object keeps doing so unless a force acts" },
+    { left: "Second law", right: "A bigger force makes a bigger acceleration" },
+    { left: "Third law", right: "Every action has an equal and opposite reaction" },
+  ]),
+];
+
+const SYMBOLS: [string, string][] = [
+  ["H", "Hydrogen"],
+  ["O", "Oxygen"],
+  ["Na", "Sodium"],
+  ["Fe", "Iron"],
+  ["C", "Carbon"],
+  ["Au", "Gold"],
+];
+export const elementSymbols = (): Question[] => [
+  match("Match each symbol to its element.", "Some symbols come from the element's old Latin name, like Na for sodium and Fe for iron.", sample(SYMBOLS, 4).map(([l, r]) => ({ left: l, right: r }))),
+];
+
+export const heatAdded = (): Question[] => [
+  multi(
+    "Tap every change of state that needs heat added.",
+    "Particles must gain energy to move apart. Melting and boiling take in heat. Freezing and condensing give it off.",
+    sample(["Melting", "Boiling", "Evaporating"], 2).map((n) => [n] as [string]),
+    sample(["Freezing", "Condensing"], 2).map((n) => [n] as [string]),
+  ),
+];
+
+export const ecosystemRoles = (): Question[] => [
+  match("Match each role in a food web to an example.", "Producers make their own food. Consumers eat other living things. Decomposers break down what is left.", [
+    { left: "Producer", right: "Grass" },
+    { left: "Primary consumer", right: "Rabbit" },
+    { left: "Secondary consumer", right: "Fox" },
+    { left: "Decomposer", right: "Mushroom" },
+  ]),
+];

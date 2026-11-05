@@ -573,12 +573,12 @@
     "units": [
       "close-reading text=8f2caa5060 std=7f3a7bc353 q=2400e20887",
       "point-of-view text=181ec2a506 std=b149028141 q=e32473aa03",
-      "figurative-language text=49d680fa8d std=6fd2fed88d q=f3824fdea7",
+      "figurative-language text=49d680fa8d std=6fd2fed88d q=d1d2a09b3f",
       "connotation-tone text=9c068d912c std=bceb386534 q=220849e9fa",
       "text-forms-6 text=bdd4c3fd20 std=309a501c3d q=68961ed57a",
       "sources-bias text=30e9961fd3 std=6815d87530 q=ebdde5983f",
       "persuasive-writing text=143cf3561b std=e1cf7e2c84 q=d9dd316334",
-      "agreement text=5714f96d51 std=36bbaa3a02 q=0d4b2b814c",
+      "agreement text=5714f96d51 std=36bbaa3a02 q=25e1f4e98f",
       "sentence-repair text=404e6c9477 std=539f3b5f02 q=2784e88c73",
       "commas-clauses text=78c6d03749 std=162fefbee0 q=df67ee4c04",
       "punctuation-6 text=f3d82b8594 std=eb80c9cf76 q=d4e254c99a"
@@ -668,7 +668,7 @@
     "units": [
       "close-reading text=0b6ee269e5 std=6fedf82b70 q=3fd92d2337",
       "point-of-view-7 text=9446c4e22a std=ca23ad2c23 q=ee7ee4f5b5",
-      "literary-devices text=75012dadfd std=677028bda9 q=ca1f4ae5d6",
+      "literary-devices text=75012dadfd std=677028bda9 q=9f862df281",
       "tone-mood text=1a78ad0bc3 std=0a1c491e6e q=5fe5a6766c",
       "poetry-lab text=e3769835d8 std=ff63c45fd8 q=fe038cecf2",
       "text-patterns-7 text=3ba5dd0d6a std=45b26283e3 q=ff11db607e",
@@ -676,7 +676,7 @@
       "persuasion text=002e89452f std=5f53b9ae42 q=9332cae44a",
       "clauses-sentences text=5017dd13d0 std=fd0c63dc97 q=5cd8987fd7",
       "grammar-7 text=2d628d53ad std=5c9404778a q=d05807d429",
-      "modifiers-parallelism text=a0c6970207 std=5988b4e131 q=d8f6db8d51",
+      "modifiers-parallelism text=a0c6970207 std=5988b4e131 q=4826f70a56",
       "punctuation-7 text=9342af658b std=33200c9637 q=3172ccc51c",
       "semicolons-colons-dashes text=40cb0d089d std=66cbba1d2a q=9b3d9ab0c8",
       "word-mix-ups text=7bb5032b8a std=6c7bb1fc2c q=bb5c3889a5"
@@ -791,7 +791,7 @@
       "digital-8 text=742bfe22d6 std=806835c2a6 q=a2bbd968e9",
       "writing-8 text=d9bb3a4cad std=173a410708 q=6ef1ed34f8",
       "grammar-and-style text=4cac16a8c8 std=d7d76f5a1c q=3d25d60229",
-      "word-study text=e9a31820f1 std=bb595f96bb q=816e78a8ea"
+      "word-study text=e9a31820f1 std=bb595f96bb q=e40812d304"
     ]
   },
   "8/math": {
@@ -816,7 +816,7 @@
     "overview": "0a9fdb532d",
     "units": [
       "mixtures-solutions-ab text=7dedba19d8 std=300cc23928 q=c955826ffd",
-      "particles-and-matter text=b03be68ce0 std=d4b03b0538 q=32ed88ecbe",
+      "particles-and-matter text=b03be68ce0 std=d4b03b0538 q=2a50bf2bae",
       "viscosity-flow-8 text=309af1469c std=c9a20825a9 q=7c31cccec1",
       "density-buoyancy-8 text=44abadf5f7 std=67c0a4c2d9 q=e8b7d870a3",
       "pressure-pascal-8 text=61b1e34882 std=bcd6db5ee5 q=bbd1e7ea70",
@@ -898,7 +898,7 @@
     "overview": "ed6b60abf0",
     "units": [
       "close-reading text=1934195db9 std=fdc45899e6 q=95e83bca39",
-      "literary-elements text=c987189fb1 std=61b7d739f0 q=064ab3c334",
+      "literary-elements text=c987189fb1 std=61b7d739f0 q=b7a0a5844a",
       "voices-and-perspectives text=4a64b8eb2c std=60f695bdc1 q=bcac63bd34",
       "argument-and-rhetoric text=b5525b0494 std=ed21d9804e q=ce069191ec",
       "digital-9 text=a08ac85319 std=a7bd89ef20 q=e7a0f9e175",
