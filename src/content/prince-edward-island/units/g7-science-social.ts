@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { CULTURAL_MORE, ECONOMIC_MORE, HISTORIAN_MORE, ISLAND_LIFE_MORE, NATIONAL_MORE, POLITICAL_MORE, SOCIETAL_MORE, TECHNOLOGY_MORE } from "./g7-social-more";
 
 // Grade 7 science and social studies, Prince Edward Island: Earth’s Crust (rocks and minerals, weathering and erosion)
 // and the five contexts of empowerment and disempowerment in Canada, 1830 to 1920. The PEI Grade 7 social studies guide
@@ -313,7 +314,7 @@ export const peEmpowerEconomic7 = bankUnit({
   blurb: "Power over work, money and resources",
   parentNote: "Practises what empowerment and disempowerment mean in an economic context in Canada between 1830 and 1920, using inquiry and geography skills.",
   standards: ["Economic empowerment", "empowerment and disempowerment in the economic context in Canada, 1830-1920"],
-  items: ECONOMIC,
+  items: [...ECONOMIC, ...ECONOMIC_MORE],
 });
 
 export const peEmpowerPolitical7 = bankUnit({
@@ -323,7 +324,7 @@ export const peEmpowerPolitical7 = bankUnit({
   blurb: "Power, voice and decisions",
   parentNote: "Practises what empowerment and disempowerment mean in a political context in Canada between 1830 and 1920, using inquiry and geography skills.",
   standards: ["Political empowerment", "empowerment and disempowerment in the political context in Canada, 1830-1920"],
-  items: POLITICAL,
+  items: [...POLITICAL, ...POLITICAL_MORE],
 });
 
 export const peEmpowerCultural7 = bankUnit({
@@ -333,7 +334,7 @@ export const peEmpowerCultural7 = bankUnit({
   blurb: "Identity, language and traditions",
   parentNote: "Practises what empowerment and disempowerment mean in a cultural context in Canada between 1830 and 1920, using inquiry and geography skills.",
   standards: ["Cultural empowerment", "empowerment and disempowerment in the cultural context in Canada, 1830-1920"],
-  items: CULTURAL,
+  items: [...CULTURAL, ...CULTURAL_MORE],
 });
 
 export const peEmpowerSocietal7 = bankUnit({
@@ -343,7 +344,7 @@ export const peEmpowerSocietal7 = bankUnit({
   blurb: "Fairness and belonging in society",
   parentNote: "Practises what empowerment and disempowerment mean in a societal context in Canada between 1830 and 1920, using inquiry and geography skills.",
   standards: ["Societal empowerment", "empowerment and disempowerment in the societal context in Canada, 1830-1920"],
-  items: SOCIETAL,
+  items: [...SOCIETAL, ...SOCIETAL_MORE],
 });
 
 export const peEmpowerNational7 = bankUnit({
@@ -353,7 +354,7 @@ export const peEmpowerNational7 = bankUnit({
   blurb: "Building a country",
   parentNote: "Practises what empowerment and disempowerment mean in a national context in Canada between 1830 and 1920, using inquiry and geography skills.",
   standards: ["National empowerment", "empowerment and disempowerment in the national context in Canada, 1830-1920"],
-  items: NATIONAL,
+  items: [...NATIONAL, ...NATIONAL_MORE],
 });
 
 // Historical thinking for the empowerment contexts: sources, perspective, cause and consequence, continuity and change.
@@ -404,7 +405,7 @@ export const peHistoricalThinking7 = bankUnit({
   parentNote:
     "Practises the thinking tools used across the empowerment unit: primary and secondary sources, perspective and bias, cause and consequence, continuity and change, and time lines.",
   standards: ["Cultural empowerment; Societal empowerment", "using sources, perspective, cause and consequence, and continuity and change to study 1830-1920"],
-  items: HISTORIAN,
+  items: [...HISTORIAN, ...HISTORIAN_MORE],
 });
 
 // Economic empowerment: technology and work, 1830-1920. Standard Canadian history facts only.
@@ -455,7 +456,7 @@ export const peTechnologyChange7 = bankUnit({
   parentNote:
     "Practises how steam power, railways, the telegraph and the telephone changed work and trade from 1830 to 1920, and who gained or lost economic power as a result.",
   standards: ["Economic empowerment", "how new technology and industry changed work, trade and economic power in Canada, 1830-1920"],
-  items: TECHNOLOGY,
+  items: [...TECHNOLOGY, ...TECHNOLOGY_MORE],
 });
 
 // Societal empowerment: everyday life on the Island around 1900. Standard references only.
@@ -506,5 +507,5 @@ export const peIslandLife7 = bankUnit({
   parentNote:
     "Practises what everyday life was like on Prince Edward Island around 1900 (school, farm work, travel, health and community) and how changes gave some groups more or less power.",
   standards: ["Societal empowerment", "everyday life, schooling, health and community on Prince Edward Island around 1900"],
-  items: ISLAND_LIFE,
+  items: [...ISLAND_LIFE, ...ISLAND_LIFE_MORE],
 });

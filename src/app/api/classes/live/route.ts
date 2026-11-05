@@ -1,6 +1,7 @@
 import { error, getSession, json, rateLimited, readJson, sameOrigin } from "@/server/auth";
 import { classGrades, teachingClass, validUnit } from "@/server/classroom";
 import { isFlagOn } from "@/server/flags";
+import { markTeacherHere } from "@/server/liveWatch";
 import { awayProfiles, endLive, liveAnswers, openLive, cachedPreview, recentLive, revealLive, setLiveReadAloud, startLive, swapNextLive, type LiveRow } from "@/server/live";
 import type { ClassRow } from "@/server/classroom";
 import type { LiveForTeacher, LiveQuestionData } from "@/lib/live";
@@ -61,6 +62,7 @@ export async function POST(req: Request) {
 /**
  * `{ classId, action: "reveal" }` shows the answer to the class (the question then takes no more answers);
  * `{ classId, action: "swap-next" }` swaps the previewed next question for a different one;
+ * `{ classId, action: "here" }` says the Live tab is open;
  * `{ classId, action: "read-aloud", on }` lets students hear the open question read aloud, or not.
  */
 export async function PATCH(req: Request) {
@@ -70,6 +72,11 @@ export async function PATCH(req: Request) {
   const body = (await readJson(req)) as { classId?: unknown; action?: unknown; on?: unknown } | null;
   const found = typeof body?.classId === "string" ? await teachingClass(body.classId, session.parentId) : undefined;
   if (!found) return error(404, "Class not found");
+  // The Live tab is open (sent every 20 s while it is visible): students' devices look often meanwhile.
+  if (body?.action === "here") {
+    await markTeacherHere(found.cls.id);
+    return json({ ok: true });
+  }
   if (body?.action === "read-aloud") {
     if (typeof body.on !== "boolean") return error(400, "Say whether to read the question aloud.");
     await setLiveReadAloud(found.cls.id, body.on);

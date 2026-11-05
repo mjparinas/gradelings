@@ -3,7 +3,7 @@
     "overview": "6345191a5f",
     "units": [
       "letter-names text=4e2d74ab60 std=96276878f2 q=a8b9337751",
-      "first-sounds text=dd9cd8d5d4 std=e048680d03 q=48ed3455eb",
+      "first-sounds text=dd9cd8d5d4 std=e048680d03 q=68c5e7f975",
       "rhyme-time text=12f8d63dc7 std=5b72916d42 q=b73dfecad5",
       "clap-the-parts text=606ab5cbbd std=3b904c1e86 q=6215dee4f1",
       "listen-to-a-story text=8907705eaa std=564d6a8074 q=e4e96571e7",
@@ -13,7 +13,7 @@
   "pk/math": {
     "overview": "49771f5a2c",
     "units": [
-      "count-to-5 text=5de441ec7a std=adfc12d1af q=7da6a21961",
+      "count-to-5 text=5de441ec7a std=adfc12d1af q=0092517696",
       "find-the-number text=48b0986657 std=9d8caa2ed9 q=cbb1ca9734",
       "more-or-fewer text=0faa658ba5 std=5f71c4a0e8 q=4d8cca7ab1",
       "shapes text=3eb07867e4 std=8a99ddf59e q=ed58e37c08",
@@ -25,31 +25,31 @@
   "pk/science": {
     "overview": "6c3b20df5a",
     "units": [
-      "five-senses text=ede42da0ab std=1ac126a96e q=18b2cf96c9",
-      "living-or-not text=9c2f339fb0 std=5af3a9c242 q=c6b64af68c",
-      "animals-and-babies text=c26be2c8ec std=4115db46ba q=d23f0b3d01",
-      "weather-and-sky text=152ba8b660 std=69c4699a96 q=9ab5b99907",
-      "plants-grow text=beae59bc1e std=d7174fecd9 q=d37c124eee",
-      "sink-or-float text=87253513e6 std=a7a089ceac q=80c8fb85a3"
+      "five-senses text=ede42da0ab std=1ac126a96e q=ab5e62249c",
+      "living-or-not text=9c2f339fb0 std=5af3a9c242 q=28feb0fe3d",
+      "animals-and-babies text=c26be2c8ec std=4115db46ba q=628e0c3ebe",
+      "weather-and-sky text=152ba8b660 std=69c4699a96 q=f141ea266d",
+      "plants-grow text=beae59bc1e std=d7174fecd9 q=18a3c821f1",
+      "sink-or-float text=87253513e6 std=a7a089ceac q=fb450f2fce"
     ]
   },
   "pk/social": {
     "overview": "9e4c6e0e98",
     "units": [
-      "my-family text=81af8740c1 std=9713d9bad5 q=5f47bd5b99",
-      "feelings text=32db0a0097 std=08b3ce6902 q=1e8788180c",
-      "community-helpers text=e038723509 std=64a2ee6be8 q=27bacf2a4a",
-      "places-around-me text=659860832c std=dd7d927add q=8a8589b026",
-      "taking-turns text=04b975dae4 std=d8434b58e8 q=22be788cc9",
-      "first-next-last text=6f92e7037f std=a9f58b77cb q=c643395606",
-      "caring-for-our-world text=0df6123b83 std=42645eda90 q=82f9f5197f"
+      "my-family text=81af8740c1 std=9713d9bad5 q=42a8b83d0d",
+      "feelings text=32db0a0097 std=08b3ce6902 q=b7d33a8640",
+      "community-helpers text=e038723509 std=64a2ee6be8 q=d4dc1c6f50",
+      "places-around-me text=659860832c std=dd7d927add q=808ad0d644",
+      "taking-turns text=04b975dae4 std=d8434b58e8 q=b3c8ff817f",
+      "first-next-last text=6f92e7037f std=a9f58b77cb q=772b705727",
+      "caring-for-our-world text=0df6123b83 std=42645eda90 q=974620c174"
     ]
   },
   "k/language": {
     "overview": "1f699eb398",
     "units": [
       "letter-partners text=c48f27422d std=8ee6a3e992 q=b88f284367",
-      "first-sounds text=cc4fb336eb std=5eba838b81 q=1e9600b156",
+      "first-sounds text=cc4fb336eb std=5eba838b81 q=ca82eff12c",
       "rhyme-time text=280911bb80 std=5ad374d8ea q=7ff630edf6",
       "clap-the-beat text=13b130a737 std=82a8526edc q=d798eaba52",
       "blend-a-word text=3d99132c91 std=56f6dbe774 q=16d2ff7d7d",
@@ -115,10 +115,10 @@
   "1/language": {
     "overview": "a7949f25b9",
     "units": [
-      "blend-it text=9a1273c4bc std=d81468678d q=711a61ce87",
+      "blend-it text=9a1273c4bc std=d81468678d q=5b9245f2d7",
       "short-vowels text=c3991944bf std=9e97be8602 q=6e80d0c71e",
       "sh-ch-th text=8867585eda std=3c8faed4e8 q=53b8ec49fb",
-      "word-families text=47cdbc2e26 std=0d4e82a441 q=e1c00b110b",
+      "word-families text=47cdbc2e26 std=0d4e82a441 q=8b534665ec",
       "sight-words text=b86fac70b4 std=0843a6deb7 q=4aba5945bd",
       "word-jobs text=42c752e4c1 std=7ec49ee012 q=406781a673",
       "more-than-one text=10c2382c04 std=3252488388 q=4bb1ec800f",
@@ -154,7 +154,7 @@
     "overview": "e0f7b7074a",
     "units": [
       "think-like-a-scientist text=f01fb7f6d3 std=0eb81856ed q=ffeec80ec4",
-      "living-things text=a7c0d5737e std=3a32f9527d q=0c9f1698f1",
+      "living-things text=a7c0d5737e std=3a32f9527d q=ca29bd85de",
       "what-living-things-need text=0a99f83515 std=961e6af9d0 q=1f338f792c",
       "our-bodies-and-senses text=a3c2daa3a0 std=161c0cbf0d q=e50e4990b1",
       "animal-survival text=d692902e1f std=53ce19935a q=7f8e04fe9f",
@@ -293,7 +293,7 @@
       "numbers-to-1000 text=3dd8e5bf76 std=acb0c3b5ba q=b34f016c90",
       "round-and-count text=25b93a377a std=9ea0385c38 q=41a9e3cb30",
       "add-subtract-1000 text=abcc5b81ab std=dbd2fc5dc3 q=ebf0b5c179",
-      "multiplication text=7016aa3933 std=5b48883201 q=5ae1f5ddc7",
+      "multiplication text=7016aa3933 std=5b48883201 q=249bc57054",
       "division text=bbe2ad47e7 std=c5ace0a8da q=aa74a94c19",
       "fair-shares-3 text=d6df1e9193 std=4be1a42c00 q=1353378d79",
       "patterns-and-equations text=38e948b1ed std=853a8480c9 q=32db6b6541",
@@ -390,7 +390,7 @@
     "units": [
       "numbers-to-10000 text=4ad943850c std=0cc6de1807 q=301886db85",
       "add-subtract text=69dd4eb751 std=546268b0d7 q=c26d8c40de",
-      "times-tables text=c3027c0b04 std=49c657ea8a q=2d5acff7a6",
+      "times-tables text=c3027c0b04 std=49c657ea8a q=8b6bbaf8b4",
       "multiply-divide text=64281bfafd std=1f25258524 q=3036a902e9",
       "big-multiply text=f669a3c13d std=44fabe1f95 q=0cc4407b67",
       "fractions-4 text=0e102ed1c5 std=6eab27ff54 q=61419c0a19",
@@ -596,7 +596,7 @@
       "percents-6 text=cafd90fd05 std=6905131c41 q=e36a7b237c",
       "patterns-and-graphs text=dab33ccdd4 std=d406e29010 q=3278e6bf42",
       "algebra-6 text=b1dfde1d22 std=51b16bc306 q=abb19f6abc",
-      "equations text=5c61d003c6 std=0c346e719d q=0e4e24070f",
+      "equations text=5c61d003c6 std=0c346e719d q=16e4656f8c",
       "data-6 text=169dca7ba6 std=a506ba5a3a q=e02081dd94",
       "probability-6 text=74ab1e6ceb std=4e085eca79 q=6b1c51ad5d",
       "shapes-6 text=d97a7618fe std=03745dcfae q=26f8f1c978",

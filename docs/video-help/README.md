@@ -39,3 +39,9 @@ BASE=http://localhost:3000 CHROMIUM_PATH=/path/to/chromium /tmp/st/bin/python sc
 ```
 Run it against a server in dev or production mode; `next dev`'s badge is hidden in the recording. Narration names no price or payment, so every video can show in the store apps; a billing video would be web only. Re-record after a parent-area change that moves the screens a video shows.
 Videos: a tour of the parent area, adding a child, daily goal and subjects, reading the report, goals, notes and rewards, calm mode and reading options, practice sheets, account and PIN. Not yet: the voice practice switch (the feature is not in `staging`), subscription (web only).
+
+## Training videos for grown-ups (teachers, parents)
+The same pipeline makes screen-recording style videos from screenshots of the real app (owner, November 2026): each one opens once the first time its feature is used, and a library lets people watch it again.
+- **Teachers:** `node scripts/help-videos/capture-teacher.mjs http://localhost:3100 scripts/help-videos/shots` (needs `npm run dev -- -p 3100`, `CHROMIUM_PATH` for a Chromium not found by Playwright) makes a demo teacher, class, students, practice and a live question, takes the screenshots and writes `boxes.json` with where parts of the screen are. Demo data only. `teacher_specs.py` lists each video's narration, crop and highlights (`SHOT`, `HL`); `/tmp/st/bin/python scripts/help-videos/build.py --set teachers [id]` writes `public/videos/teachers/<id>.mp4` and `.vtt` (screenshots in `scripts/help-videos/shots/` are not committed).
+- **App:** list the video in `src/lib/trainingVideos.ts` (`seconds` from the file), show it with `<FirstUseVideo video enabled />` where the feature first appears, and list it in a `<TrainingLibrary>`. `src/lib/trainingVideos.test.ts` checks files, captions and narration.
+- Re-record a video when its screen changes. Narration says "Gradelings" and names no real school or person.

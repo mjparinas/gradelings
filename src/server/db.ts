@@ -235,6 +235,11 @@ const SCHEMA = [
     paused_left INTEGER,
     updated_at INTEGER NOT NULL
   )`,
+  // When a teacher last had a class's Live tab open, so students' devices look often while someone is there. A time only.
+  `CREATE TABLE IF NOT EXISTS class_presence (
+    class_id TEXT PRIMARY KEY,
+    seen_at INTEGER NOT NULL
+  )`,
   // A weekly question goal a teacher sets for the whole class: a target and the teacher's time zone offset, nothing about a child.
   `CREATE TABLE IF NOT EXISTS class_goals (
     class_id TEXT PRIMARY KEY,
@@ -460,6 +465,17 @@ const SCHEMA = [
     created_at INTEGER
   )`,
   `CREATE INDEX IF NOT EXISTS unsub_tokens_parent ON unsub_tokens (parent_id)`,
+  // That a locked part (a unit the free plan keeps closed, or a members-only part of the reports) was shown to a family's
+  // device: when first and last, and on how many days. Family-level only, for the admin panel's paywall numbers.
+  `CREATE TABLE IF NOT EXISTS paywall_seen (
+    family_id TEXT NOT NULL,
+    kind TEXT NOT NULL,
+    first_at INTEGER NOT NULL,
+    last_at INTEGER NOT NULL,
+    days INTEGER NOT NULL DEFAULT 1,
+    PRIMARY KEY (family_id, kind)
+  )`,
+  `CREATE INDEX IF NOT EXISTS paywall_seen_first ON paywall_seen (first_at)`,
 ];
 
 /** Columns added after the first release. SQLite has no "ADD COLUMN IF NOT EXISTS". */
@@ -537,6 +553,10 @@ const REPORT_COLUMNS: [string, string][] = [
   ["details", "TEXT"],
 ];
 const FAMILY_COLUMNS: [string, string][] = [
+  // When this family last synced from the web, the Android app and the iPhone and iPad app (ms), for the admin panel's app mix.
+  ["app_web_at", "INTEGER"],
+  ["app_android_at", "INTEGER"],
+  ["app_ios_at", "INTEGER"],
   // The school plan (ms): a teacher account with this in the future may import rosters while the `school-plan` flag is on.
   ["school_until", "INTEGER"],
   ["billing_event_at", "INTEGER NOT NULL DEFAULT 0"],

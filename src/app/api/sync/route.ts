@@ -2,6 +2,7 @@ import { countryOf, toCountryCode } from "@/lib/country";
 import type { InValue } from "@libsql/client";
 import type { AppEvent, ChildSettings, Profile } from "@/lib/model";
 import { MAX_CHILDREN } from "@/lib/plan";
+import { appOf, recordApp } from "@/server/appSignals";
 import { error, getSession, json, rateLimited, readJson, sameOrigin, SYNC_BODY_LIMIT } from "@/server/auth";
 import { batch, query, run } from "@/server/db";
 import { familyClasswork, isFramework } from "@/server/classroom";
@@ -53,6 +54,8 @@ export async function POST(req: Request) {
   const session = await getSession(req, { student: true });
   if (!session) return error(401, "Not signed in");
   const family = session.familyId;
+  // Which kind of app this family syncs from, for the admin panel (class students are not families to count).
+  if (!session.student) await recordApp(family, appOf(req));
   // The app syncs every couple of minutes and after changes; this is far above that.
   if (await rateLimited(`sync:${family}`, 300, 10 * 60_000)) return error(429, "Syncing too often. Try again in a few minutes.");
   const body = (await readJson(req, SYNC_BODY_LIMIT)) as SyncBody | null;

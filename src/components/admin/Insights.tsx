@@ -2,7 +2,7 @@
 
 import { useEffect, useState, type ReactNode } from "react";
 import { call } from "@/lib/classroom";
-import { MIN_GROUP } from "@/lib/adminInsights";
+import { MIN_GROUP, type appMix, type paywallImpact } from "@/lib/adminInsights";
 import type { Bucket, EngagementDepth, AfterTrialReport, RevenueQuality, SourceRow, TeacherStep, UnitGap, UnitStat } from "@/lib/adminInsights";
 import { Loading, TileShape } from "./Skeleton";
 
@@ -31,6 +31,11 @@ interface Teachers {
 interface Content {
   hardest: UnitGap[];
   flagged: UnitStat[];
+  windowDays: number;
+}
+type Apps = ReturnType<typeof appMix> & { windowDays: number };
+interface Paywall {
+  rows: ReturnType<typeof paywallImpact>;
   windowDays: number;
 }
 interface Sources {
@@ -258,6 +263,47 @@ export function Insights() {
             </>
           );
         }}
+      </Part>
+
+      <Part<Paywall>
+        part="paywall"
+        id="ins-paywall"
+        title="When a Locked Part Was Shown"
+        intro="Signed-in families whose device showed a locked part (at most once a day per kind), and how many subscribed after. The within-a-week rate counts only families who first saw it at least 7 days ago. Nothing about the child, the unit or the answer is recorded, and counts start from when this shipped."
+      >
+        {(p) =>
+          p.rows.length === 0 ? (
+            <p className="mt-3 text-sm text-ink-soft">Nothing recorded yet.</p>
+          ) : (
+            <Table
+              caption="Locked parts shown"
+              head={["What was shown", "Seen by", "Subscribed within 7 days", "Subscribed since"]}
+              rows={p.rows.map((r) => [r.label, num(r.families), `${pct(r.paidWithin7Rate)} (${num(r.paidWithin7)} of ${num(r.matured)})`, `${pct(r.paidAfterRate)} (${num(r.paidAfter)})`])}
+            />
+          )
+        }
+      </Part>
+
+      <Part<Apps>
+        part="apps"
+        id="ins-apps"
+        title="Which App Families Use"
+        intro="Families who synced in the last 30 days, by kind of app. A family that uses the web and a store app is in both, so the shares add up to more than 100%. Counts start from when this shipped."
+      >
+        {(a) => (
+          <>
+            <Stats>
+              <Stat label="Active families" value={num(a.active)} sub="synced in 30 days" />
+              <Stat label="Store app" value={pct(a.storeApp.share)} sub={`${num(a.storeApp.n)} families${small(a.active)}`} />
+              <Stat label="Android app" value={pct(a.android.share)} sub={`${num(a.android.n)} families`} />
+              <Stat label="iPhone and iPad app" value={pct(a.ios.share)} sub={`${num(a.ios.n)} families`} />
+            </Stats>
+            <Stats>
+              <Stat label="Web" value={pct(a.web.share)} sub={`${num(a.web.n)} families`} />
+              <Stat label="Store app only" value={pct(a.storeOnly.share)} sub={`${num(a.storeOnly.n)} families`} />
+            </Stats>
+          </>
+        )}
       </Part>
     </div>
   );

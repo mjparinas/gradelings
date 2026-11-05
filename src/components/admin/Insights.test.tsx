@@ -8,7 +8,7 @@ vi.mock("@/lib/classroom", async (importOriginal) => {
   return { ...actual, call: mocks.call };
 });
 
-import { afterTrial, classActivity, contentGaps, engagementDepth, mostFlagged, revenueQuality, signupSources, teacherFunnel, trialByWeek, trialCurve, type TrialFamily } from "@/lib/adminInsights";
+import { afterTrial, appMix, paywallImpact, classActivity, contentGaps, engagementDepth, mostFlagged, revenueQuality, signupSources, teacherFunnel, trialByWeek, trialCurve, type TrialFamily } from "@/lib/adminInsights";
 import { Insights } from "./Insights";
 
 const DAY = 86_400_000;
@@ -26,6 +26,8 @@ const answers: Record<string, unknown> = {
     flagged: mostFlagged([{ unit: "5/math/decimals", answers: 0, firstTry: 0, revealed: 0, families: 0, helpAsks: 2, reports: 0 }]),
     windowDays: 90,
   },
+  paywall: { rows: paywallImpact([{ kind: "locked-unit", firstAt: now - 20 * DAY, paidAfter: true, paidWithin7: true }], now), windowDays: 120 },
+  apps: { ...appMix([{ web: true, android: false, ios: false }]), windowDays: 30 },
   sources: signupSources([{ path: "google", referred: false, code: false, country: "CA", framework: "bc", practised: true, paid: false }]),
 };
 
@@ -49,6 +51,8 @@ describe("Insights", () => {
     expect(await screen.findByText("4/math/fractions")).toBeTruthy();
     expect(await screen.findByText("Signed up as a teacher")).toBeTruthy();
     expect(await screen.findByText("Continue with Google")).toBeTruthy();
+    expect(await screen.findByText("A child opened a unit the free plan keeps closed")).toBeTruthy();
+    expect(await screen.findByText("Store app")).toBeTruthy();
   });
 
   it("shows a dash instead of a rate for a small group", async () => {
