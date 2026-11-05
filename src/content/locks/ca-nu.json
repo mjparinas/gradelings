@@ -296,7 +296,7 @@
   "3/social": {
     "overview": "ed50de224f",
     "units": [
-      "nu-our-territory-3 text=82ba2a0b6d std=b0e2b6aa31 q=5be1c45342",
+      "nu-our-territory-3 text=82ba2a0b6d std=b0e2b6aa31 q=6af971247e",
       "mb-global-communities text=c8d53b307e std=6621e94175 q=137089294c",
       "meeting-needs text=40a76a9522 std=48aef6583a q=3ac35931e2",
       "mb-groups-and-leaders text=990b1bdfbd std=d97432d7f3 q=340efa8ad8",
@@ -376,9 +376,9 @@
   "4/social": {
     "overview": "1ebed1b010",
     "units": [
-      "nu-iq-principles-4 text=baa6654433 std=9684ea3c87 q=69be427724",
-      "nu-languages-4 text=bd115c8a77 std=2e2a46db27 q=50247cd587",
-      "nu-regions-communities-4 text=70dfbbaef3 std=8ff8c7df20 q=49fdf8b00a",
+      "nu-iq-principles-4 text=baa6654433 std=9684ea3c87 q=5898028c09",
+      "nu-languages-4 text=bd115c8a77 std=2e2a46db27 q=2bb8ce67aa",
+      "nu-regions-communities-4 text=70dfbbaef3 std=8ff8c7df20 q=2477ab2e44",
       "nu-map-directions-4 text=6417c4cb46 std=4a07145ce2 q=fa4796d05a",
       "nu-map-scale-4 text=17b305f4e0 std=d174137997 q=3a478ee88e",
       "mb-power-conflict text=f2fba13657 std=a7cdf4612a q=77f54522e1"
@@ -728,7 +728,7 @@
   "8/social": {
     "overview": "1ebed1b010",
     "units": [
-      "nu-making-nunavut-8 text=d9af00056f std=5e2ea8a7ed q=2dd3c38101",
+      "nu-making-nunavut-8 text=d9af00056f std=5e2ea8a7ed q=af3cc9fdc7",
       "nu-time-zones-8 text=922dc2bfc3 std=f46c5bcc86 q=9b3df1318a",
       "mb-history-skills-8 text=972426b6fe std=45cba8fd02 q=7f13aae257",
       "mb-evidence-8 text=d3ac9b959b std=9b8d35ff88 q=bb1e47eed7",

@@ -33,6 +33,30 @@ export const TEACHER_TAB_VIDEOS: Record<string, string> = {
   students: "teacher-add-students",
 };
 
+/**
+ * The parent-area videos (recorded in the app's store-app mode, so none names a price or a payment). Practice sheets is
+ * library-only: it shows a members' page.
+ */
+export const PARENT_VIDEOS: readonly TrainingVideo[] = [
+  { id: "parent-tour", title: "A tour of the parent area", blurb: "The six tabs and what each one is for.", seconds: 45, ...file("parents", "parent-tour") },
+  { id: "add-a-child", title: "Adding a child", blurb: "Add a child, pick their grade and curriculum.", seconds: 31, ...file("parents", "add-a-child") },
+  { id: "daily-goal-and-subjects", title: "Daily goal and subjects", blurb: "Set the daily goal and turn subjects on or off.", seconds: 37, ...file("parents", "daily-goal-and-subjects") },
+  { id: "reading-the-report", title: "Reading your child's report", blurb: "Levels, strengths and what to practise next.", seconds: 40, ...file("parents", "reading-the-report") },
+  { id: "goals-notes-rewards", title: "Goals, notes and rewards", blurb: "A weekly goal, a kind note and a reward to work toward.", seconds: 39, ...file("parents", "goals-notes-rewards") },
+  { id: "calm-and-reading-options", title: "Calm mode and reading options", blurb: "Gentler sounds and motion, roomy text and read-aloud.", seconds: 38, ...file("parents", "calm-and-reading-options") },
+  { id: "practice-sheets", title: "Printable practice sheets", blurb: "A sheet made from the trickiest units, with an answer key.", seconds: 21, ...file("parents", "practice-sheets") },
+  { id: "account-sign-in-pin", title: "Account, sync and your PIN", blurb: "Sign in to sync devices and set the parent PIN.", seconds: 24, ...file("parents", "account-sign-in-pin") },
+];
+
+/** Which video explains each parent-area section, shown the first time it opens ("" is the Overview). */
+export const PARENT_TAB_VIDEOS: Record<string, string> = {
+  "": "parent-tour",
+  children: "add-a-child",
+  settings: "daily-goal-and-subjects",
+  reports: "reading-the-report",
+  account: "account-sign-in-pin",
+};
+
 export const videoById = (list: readonly TrainingVideo[], id: string) => list.find((v) => v.id === id);
 
 const SEEN_KEY = "gradelings.trainvideo.seen";

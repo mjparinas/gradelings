@@ -21,4 +21,11 @@ describe("Sentry noise", () => {
     expect(ignored("ReferenceError: Can't find variable: zaloJSV2")).toBe(true);
     expect(ignored("ReferenceError: Can't find variable: speak")).toBe(false);
   });
+
+  it("ignores a device with a full disk", () => {
+    const ignored = (m: string) => IGNORE_ERRORS.some((r) => r.test(m));
+    expect(ignored("QuotaExceededError: Encountered disk full while committing transaction.")).toBe(true);
+    expect(ignored("UnknownError: Connection is closing because of: IO error: 000003.log: FILE_ERROR_NO_SPACE (ChromeMethodBFE)")).toBe(true);
+    expect(ignored("UnknownError: Connection is closing because of: IO error: corrupt")).toBe(false);
+  });
 });

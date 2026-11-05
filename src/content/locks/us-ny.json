@@ -598,7 +598,7 @@
       "wa-g6-mesopotamia-egypt text=074c2d63a6 std=05fcd1a69b q=232c3963ae",
       "wa-g6-india-china text=cc9a696797 std=bb90fe6748 q=13133eb41e",
       "world-beliefs text=cc74370028 std=8e40dad230 q=eaa6186bca",
-      "ca-g6-greece-rome text=becfd03e78 std=8e1c01ccb0 q=f72c056861",
+      "ca-g6-greece-rome text=becfd03e78 std=8e1c01ccb0 q=248e19dbff",
       "ca-g7-rome-byzantium text=28311c0922 std=2301a0b1a7 q=1158574fa3",
       "medieval-europe text=c481f7adac std=d74588ca87 q=e0e0a48023",
       "islamic-world text=d94ae39095 std=1099a4ca0e q=d3b20da097",
@@ -692,10 +692,10 @@
   "7/social": {
     "overview": "07c1ddb12e",
     "units": [
-      "ca-g5-colonial-economy text=ce14c5ad17 std=47a66a4579 q=964b882147",
-      "ca-g5-road-to-revolution text=0db76d8612 std=50cadd6dbf q=8ff3e277fb",
-      "ca-g5-revolution text=ef5fd4d37f std=8649ab61d7 q=8de8201d9a",
-      "ca-g5-constitution text=316951e733 std=3f741f73d6 q=f053d97871",
+      "ca-g5-colonial-economy text=ce14c5ad17 std=47a66a4579 q=78476c23e0",
+      "ca-g5-road-to-revolution text=0db76d8612 std=50cadd6dbf q=348033ff6d",
+      "ca-g5-revolution text=ef5fd4d37f std=8649ab61d7 q=77d806ef60",
+      "ca-g5-constitution text=316951e733 std=3f741f73d6 q=f7d329903c",
       "ca-g8-founding-ideals text=c6cb5590e8 std=5e4bfc3d9f q=26fd931b32",
       "wa-g8-bill-of-rights text=51f41862e9 std=d41001bec6 q=6898ac27d5",
       "ca-g8-new-nation text=d2432dc34d std=564c93f6ee q=43ff2d5a2f",
@@ -897,7 +897,7 @@
     "units": [
       "first-farmers text=4979c3fbcf std=5cbb149c83 q=b3720d7bbf",
       "where-civilizations-grew text=7faae12117 std=dd940bdea9 q=227eb500ef",
-      "ca-g6-greece-rome text=eddbef37e2 std=e183692038 q=f72c056861",
+      "ca-g6-greece-rome text=eddbef37e2 std=e183692038 q=248e19dbff",
       "trade-networks text=f346b3ae63 std=69fc7c3dfb q=bfbd39ee46",
       "ca-g7-rome-byzantium text=8166ea1dfd std=94085efcbe q=1158574fa3",
       "medieval-europe text=b4fe2b0edd std=e892acebe1 q=e0e0a48023",
