@@ -6,6 +6,7 @@ import { type LiveQuestionData } from "@/lib/live";
 import { newId } from "./auth";
 import { batch, query, run } from "./db";
 import { classGrades, type ClassRow } from "./classroom";
+import { notifyClass } from "./liveNotify";
 
 // Live questions: a teacher asks the class one multiple-choice question at a time, in real time.
 // They need a connection (devices poll for the open question), so they sit beside offline practice
@@ -160,11 +161,14 @@ export async function startLive(cls: ClassRow, unitKey: string, teacherId: strin
     { sql: "UPDATE live_questions SET ended_at = ? WHERE class_id = ? AND ended_at IS NULL", args: [now, cls.id] },
     { sql: "INSERT INTO live_questions (id, class_id, unit_key, n, data, started_by, created_at) VALUES (?, ?, ?, ?, ?, ?, ?)", args: [id, cls.id, unitKey, n, JSON.stringify(data), teacherId, now] },
   ]);
+  notifyClass(cls.id);
   return { id, class_id: cls.id, unit_key: unitKey, n, data: JSON.stringify(data), created_at: now, revealed_at: null, ended_at: null };
 }
 
 export async function revealLive(classId: string, now = Date.now()): Promise<boolean> {
-  return (await run("UPDATE live_questions SET revealed_at = ? WHERE class_id = ? AND ended_at IS NULL AND revealed_at IS NULL", [now, classId])) > 0;
+  const changed = (await run("UPDATE live_questions SET revealed_at = ? WHERE class_id = ? AND ended_at IS NULL AND revealed_at IS NULL", [now, classId])) > 0;
+  notifyClass(classId);
+  return changed;
 }
 
 /** Lets students hear the open question read aloud, or not. Returns false when no question is open. */
@@ -172,11 +176,14 @@ export async function setLiveReadAloud(classId: string, on: boolean, now = Date.
   const row = await openLive(classId, now);
   if (!row) return false;
   const data = { ...(JSON.parse(row.data) as LiveQuestionData), readAloud: on };
-  return (await run("UPDATE live_questions SET data = ? WHERE id = ? AND ended_at IS NULL", [JSON.stringify(data), row.id])) > 0;
+  const changed = (await run("UPDATE live_questions SET data = ? WHERE id = ? AND ended_at IS NULL", [JSON.stringify(data), row.id])) > 0;
+  notifyClass(classId);
+  return changed;
 }
 
 export async function endLive(classId: string, now = Date.now()): Promise<void> {
   await run("UPDATE live_questions SET ended_at = ? WHERE class_id = ? AND ended_at IS NULL", [now, classId]);
+  notifyClass(classId);
 }
 
 export interface LiveTally {
@@ -241,6 +248,7 @@ export function liveClassStatements(classIdSql: string, args: (string | number)[
     { sql: `DELETE FROM live_questions WHERE class_id IN (${classIdSql})`, args },
     // The class timer goes the same way (a new school year, closing the class, deleting an account).
     { sql: `DELETE FROM class_timers WHERE class_id IN (${classIdSql})`, args },
+    { sql: `DELETE FROM class_presence WHERE class_id IN (${classIdSql})`, args },
     { sql: `DELETE FROM class_goals WHERE class_id IN (${classIdSql})`, args },
   ];
 }

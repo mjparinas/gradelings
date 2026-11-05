@@ -46,7 +46,7 @@ describe("useLiveQuestion", () => {
     }
     render(<Probe />);
     await act(() => vi.advanceTimersByTimeAsync(0));
-    expect(fetchMock).toHaveBeenCalledWith("/api/live/?profile=p1", expect.objectContaining({ cache: "no-store" }));
+    expect(fetchMock).toHaveBeenCalledWith("/api/live/?profile=p1&watch=1", expect.objectContaining({ cache: "no-store" }));
     expect(screen.getByText("What is 2 + 2?")).toBeInTheDocument();
 
     fireEvent.click(screen.getByRole("button", { name: "4" }));
