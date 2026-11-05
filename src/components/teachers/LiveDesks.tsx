@@ -21,8 +21,9 @@ function Desk({ state }: { state: DeskState }) {
   );
 }
 
-export function LiveDesks({ students, answers, hideNames }: { students: { profileId: string; name: string }[]; answers: { profileId: string; correct: boolean }[]; hideNames: boolean }) {
-  const desks = liveDesks(students, answers);
+export function LiveDesks({ students, answers, away = [], hideNames }: { students: { profileId: string; name: string }[]; answers: { profileId: string; correct: boolean }[]; away?: string[]; hideNames: boolean }) {
+  const desks = liveDesks(students, answers, away);
+  const awayN = desks.filter((d) => d.away).length;
   const pct = livePercents(desks);
   const rightN = desks.filter((d) => d.state === "right").length;
   const wrongN = desks.filter((d) => d.state === "wrong").length;
@@ -31,11 +32,15 @@ export function LiveDesks({ students, answers, hideNames }: { students: { profil
       <p className="font-read font-bold" role="status">
         <span className="mr-4">✓ {pct.right}% got it right ({rightN})</span>
         <span>✗ {pct.wrong}% got it wrong ({wrongN})</span>
+        {awayN > 0 && <span className="ml-4 text-sm font-normal text-slate-600">{awayN} away</span>}
       </p>
       <ul className="mt-2 grid grid-cols-[repeat(auto-fill,minmax(5.5rem,1fr))] gap-3">
         {desks.map((d, i) => (
-          <li key={d.profileId} className="relative text-center" aria-label={`${hideNames ? `Desk ${i + 1}` : d.name}: ${LOOK[d.state].word}`}>
-            <Desk state={d.state} />
+          <li key={d.profileId} className="relative text-center" aria-label={`${hideNames ? `Desk ${i + 1}` : d.name}: ${LOOK[d.state].word}${d.away ? ", away (not heard from lately)" : ""}`}>
+            <div className={d.away ? "opacity-50" : undefined}>
+              <Desk state={d.state} />
+            </div>
+            {d.away && <span className="absolute left-1 top-0 rounded bg-slate-100 px-1 text-xs font-bold text-slate-700" aria-hidden="true">away</span>}
             {LOOK[d.state].mark && <b className="absolute right-1 top-0 text-lg text-[#0f172a]" aria-hidden="true">{LOOK[d.state].mark}</b>}
             <span className="block truncate text-sm font-bold" aria-hidden="true">{hideNames ? i + 1 : d.name}</span>
           </li>

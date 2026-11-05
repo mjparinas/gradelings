@@ -214,6 +214,17 @@ const SCHEMA = [
     PRIMARY KEY (question_id, profile_id)
   )`,
   `CREATE INDEX IF NOT EXISTS live_answers_family ON live_answers (family_id)`,
+  // When a class student's device last asked for a live question, and when it last said it was leaving (tab hidden
+  // or closed). Times only, kept for a day, shown to the class's teachers as a quiet "away" on the desk.
+  `CREATE TABLE IF NOT EXISTS live_presence (
+    class_id TEXT NOT NULL,
+    profile_id TEXT NOT NULL,
+    family_id TEXT NOT NULL,
+    seen_at INTEGER NOT NULL,
+    left_at INTEGER,
+    PRIMARY KEY (class_id, profile_id)
+  )`,
+  `CREATE INDEX IF NOT EXISTS live_presence_family ON live_presence (family_id)`,
   // A class timer a teacher starts for the whole class: one row per class, deleted when stopped or with the class.
   // It holds a note and times only, nothing about a child.
   `CREATE TABLE IF NOT EXISTS class_timers (

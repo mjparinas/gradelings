@@ -297,3 +297,39 @@ describe("read-aloud on live questions", () => {
     expect((await patch({ action: "other" })).status).toBe(400);
   });
 });
+
+describe("away on the desks", () => {
+  it("shows a student as away once they say they are leaving or go quiet, and as here again when they ask", async () => {
+    const { teacher, parent, cls, kid } = await classWithChild("away");
+    await teacherLive.POST(req("/api/classes/live/", "POST", { classId: cls.id, unitKey: UNIT }, teacher));
+    const away = async () => (await (await teacherLive.GET(req(`/api/classes/live/?classId=${cls.id}`, "GET", undefined, teacher))).json()).live.away as string[];
+    // Never heard from: not claimed to be away.
+    expect(await away()).toEqual([]);
+    await childLive.GET(req(`/api/live/?profile=${kid}`, "GET", undefined, parent));
+    expect(await away()).toEqual([]);
+    // The device says it is leaving (the tab was hidden or closed).
+    expect((await childLive.POST(req("/api/live/", "POST", { profileId: kid, leaving: true }, parent))).status).toBe(200);
+    expect(await away()).toEqual([kid]);
+    // Back and asking again.
+    await childLive.GET(req(`/api/live/?profile=${kid}`, "GET", undefined, parent));
+    expect(await away()).toEqual([]);
+    // Gone quiet for longer than the polls allow.
+    await dbm.run("UPDATE live_presence SET seen_at = ? WHERE profile_id = ?", [Date.now() - 60_000, kid]);
+    expect(await away()).toEqual([kid]);
+  });
+
+  it("does not record a child who is in no class, and is deleted with the class and with old data", async () => {
+    const { parent, cls, kid, teacher } = await classWithChild("away2");
+    await childLive.GET(req("/api/live/?profile=stranger", "GET", undefined, parent));
+    expect(await dbm.query("SELECT * FROM live_presence WHERE profile_id = ?", ["stranger"])).toHaveLength(0);
+    await childLive.GET(req(`/api/live/?profile=${kid}`, "GET", undefined, parent));
+    expect(await dbm.query("SELECT * FROM live_presence WHERE class_id = ?", [cls.id])).toHaveLength(1);
+    await dbm.run("UPDATE live_presence SET seen_at = ? WHERE class_id = ?", [Date.now() - 2 * 86_400_000, cls.id]);
+    await live.pruneLive();
+    expect(await dbm.query("SELECT * FROM live_presence WHERE class_id = ?", [cls.id])).toHaveLength(0);
+    await childLive.GET(req(`/api/live/?profile=${kid}`, "GET", undefined, parent));
+    await dbm.batch(live.liveClassStatements("?", [cls.id]));
+    expect(await dbm.query("SELECT * FROM live_presence WHERE class_id = ?", [cls.id])).toHaveLength(0);
+    void teacher;
+  });
+});
