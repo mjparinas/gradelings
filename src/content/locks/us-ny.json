@@ -3,7 +3,7 @@
     "overview": "c381238132",
     "units": [
       "letter-names text=4e2d74ab60 std=6fb3cf4fbe q=a8b9337751",
-      "first-sounds text=dd9cd8d5d4 std=8a0f34572f q=48ed3455eb",
+      "first-sounds text=dd9cd8d5d4 std=8a0f34572f q=68c5e7f975",
       "rhyme-time text=12f8d63dc7 std=1b967ed918 q=b73dfecad5",
       "clap-the-parts text=606ab5cbbd std=08f443dcf4 q=6215dee4f1",
       "listen-to-a-story text=8907705eaa std=4aaa78256e q=e4e96571e7",
@@ -13,7 +13,7 @@
   "pk/math": {
     "overview": "52c28799b5",
     "units": [
-      "count-to-5 text=5de441ec7a std=011867cec8 q=7da6a21961",
+      "count-to-5 text=5de441ec7a std=011867cec8 q=0092517696",
       "find-the-number text=48b0986657 std=f8bc998e24 q=cbb1ca9734",
       "more-or-fewer text=0faa658ba5 std=032bd64fa0 q=4d8cca7ab1",
       "shapes text=3eb07867e4 std=e3d80fc327 q=ed58e37c08",
@@ -49,7 +49,7 @@
     "overview": "0eedc9aabc",
     "units": [
       "letter-partners text=c48f27422d std=a07ad9180b q=b88f284367",
-      "first-sounds text=cc4fb336eb std=3dea69ebb2 q=1e9600b156",
+      "first-sounds text=cc4fb336eb std=3dea69ebb2 q=ca82eff12c",
       "rhyme-time text=280911bb80 std=d2cb2db593 q=7ff630edf6",
       "clap-the-beat text=13b130a737 std=711167e4cb q=d798eaba52",
       "sight-words text=550b9e49a9 std=fc3946991c q=50140fdbd6",
@@ -69,7 +69,7 @@
   "k/math": {
     "overview": "399f527910",
     "units": [
-      "count-to-10 text=76d9d2a726 std=3851d7376f q=eedf7bffb7",
+      "count-to-10 text=76d9d2a726 std=3851d7376f q=99e62fe722",
       "make-5-and-10 text=c234a6f52c std=a50d7ba19c q=e9e4baabe2",
       "add-and-take-away text=359b696b1c std=1c49cfc39c q=133932d7ef",
       "more-less-same text=732df234df std=1d74e42793 q=ab4ef5dcd9",
@@ -118,9 +118,9 @@
   "1/language": {
     "overview": "d126651af5",
     "units": [
-      "blend-it text=9a1273c4bc std=2f2dabbf5d q=711a61ce87",
+      "blend-it text=9a1273c4bc std=2f2dabbf5d q=5b9245f2d7",
       "short-vowels text=c3991944bf std=ff5212bfac q=6e80d0c71e",
-      "word-families text=47cdbc2e26 std=608317be4a q=e1c00b110b",
+      "word-families text=47cdbc2e26 std=608317be4a q=8b534665ec",
       "sh-ch-th text=8867585eda std=06b00cfd0f q=53b8ec49fb",
       "sight-words text=0bac05a422 std=1829084153 q=4aba5945bd",
       "sentences text=dc477bff6b std=fc17120865 q=3a12a2876f",
@@ -142,7 +142,7 @@
   "1/math": {
     "overview": "b71a7b6ae2",
     "units": [
-      "numbers-to-20 text=b0719f21fd std=5c99c1b587 q=d3300826e4",
+      "numbers-to-20 text=b0719f21fd std=5c99c1b587 q=8f20e555b4",
       "make-ten text=384e300d0c std=993c224c1b q=74dafe97b0",
       "adding text=e38d25027e std=1524787ffc q=9eb9a94364",
       "take-away text=15b94111e3 std=2c57c23a52 q=169ab153d9",
@@ -274,12 +274,12 @@
     "units": [
       "read-and-think text=7444ce52ca std=c62d63a0d3 q=1e8f8e94c9",
       "story-elements text=4bc5317466 std=ce465e638d q=78ac3fb273",
-      "word-jobs text=828a9a1b85 std=25ccdd48aa q=fe0d330ceb",
+      "word-jobs text=828a9a1b85 std=25ccdd48aa q=067788c97e",
       "punctuation-power text=4ba2179323 std=41495acfea q=ac19eee914",
       "spelling-patterns text=7009096615 std=c05a85ffff q=cfca6a919b",
       "prefixes-suffixes text=c0cf5dc731 std=0eafbd3983 q=41860cdfd6",
       "word-pairs text=17c5d8704a std=c7a8204a84 q=2558b1d793",
-      "sentence-smarts text=440a0ed7a6 std=8b56edde62 q=8336139ed3",
+      "sentence-smarts text=440a0ed7a6 std=8b56edde62 q=be609c5403",
       "abc-dictionary text=0dded2dd30 std=c358b8a403 q=8cac6b9b16",
       "grammar-3 text=a9deaa03d1 std=2b2b5824f3 q=4cef04ee6f",
       "text-patterns text=66f9e7deb8 std=5d4c147164 q=2d33abb1d7",
@@ -299,7 +299,7 @@
     "overview": "7b2c9dd1bd",
     "units": [
       "add-subtract-1000 text=abcc5b81ab std=89a57e2de2 q=ebf0b5c179",
-      "multiplication text=7016aa3933 std=813741c5d0 q=5ae1f5ddc7",
+      "multiplication text=7016aa3933 std=813741c5d0 q=249bc57054",
       "division text=bbe2ad47e7 std=48ea2c4a2d q=aa74a94c19",
       "fractions text=f6af4c5918 std=139afc0cd4 q=7875833e1e",
       "patterns-and-equations text=38e948b1ed std=42031baafb q=32db6b6541",
@@ -360,7 +360,7 @@
       "text-features text=374a334dcb std=bbd2530961 q=a6e3f6bea6",
       "figurative-language text=cc806294d3 std=e36754d572 q=43c2a4606f",
       "point-of-view text=317d5169eb std=dc6a8f7734 q=c401cf50e0",
-      "parts-of-speech text=a8c86f7934 std=901e9c8e51 q=aef8a9a24b",
+      "parts-of-speech text=a8c86f7934 std=901e9c8e51 q=4cef0e2d63",
       "super-sentences text=127a9846e3 std=670501d16e q=cee1adb645",
       "word-builders text=31c0e4d41e std=d6b47be459 q=ca7b8000df",
       "sound-alikes text=810d4b50da std=d2da8ad2d4 q=f98b14b28a",
@@ -387,7 +387,7 @@
       "fractions text=35fc876177 std=383b475ea0 q=9ea0b54c2a",
       "decimals text=ccaab39e33 std=ed6ae7493a q=503916ff7a",
       "patterns-and-tables text=223238d646 std=277e985722 q=3c0880cdc8",
-      "equations text=5aa54c6ad3 std=c5aff78774 q=fa61d5ad58",
+      "equations text=5aa54c6ad3 std=c5aff78774 q=9d644407e2",
       "polygons-and-perimeter text=1f1f7acbfe std=547a1e215c q=0ca495ff7c",
       "fractions-4 text=0e102ed1c5 std=c89cb42cda q=61419c0a19",
       "angles-and-area text=270704dc2f std=9a32fceca5 q=6c57d1d7dc",
@@ -469,7 +469,7 @@
       "numbers-to-a-million text=89d19d764c std=1061538b97 q=0160db959a",
       "multiply text=5470ec5ee2 std=812724b6dc q=57e21909b3",
       "divide text=8852642ad6 std=5c7b98601c q=55ed922eee",
-      "equivalent-fractions text=cf635b163a std=ccc3ce0356 q=2ff4c287ec",
+      "equivalent-fractions text=cf635b163a std=ccc3ce0356 q=937dbe7300",
       "decimals text=5aeaecae0c std=f05f55f519 q=df303e4d1a",
       "patterns-and-equations text=d0038d1743 std=a37ca378ce q=0d4d16b1ef",
       "mb-mental-math-5 text=d109457dda std=2690e127cf q=ca9e0eeb41",
@@ -557,7 +557,7 @@
       "decimal-multiply-divide text=fc458a18fb std=ce583e3eac q=bd81c6eb6d",
       "percents-and-budgets text=136c6c6ae5 std=7cfb7fa56b q=99bdc2230a",
       "patterns-and-graphs text=dab33ccdd4 std=e066810fab q=dfa60e317e",
-      "equations text=5c61d003c6 std=fec613ba69 q=0e4e24070f",
+      "equations text=5c61d003c6 std=fec613ba69 q=16e4656f8c",
       "perimeter-and-area text=44afdbe788 std=d4a8cc7299 q=a0bb87355d",
       "volume-and-capacity text=5ad359431d std=52d93e422f q=fa063e47a1",
       "probability text=fcd0522d2d std=a9eb0ab1a2 q=b39d76b364",

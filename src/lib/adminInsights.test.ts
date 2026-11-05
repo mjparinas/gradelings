@@ -1,11 +1,13 @@
 import { describe, expect, it } from "vitest";
 import {
   afterTrial,
+  appMix,
   classActivity,
   contentGaps,
   engagementDepth,
   median,
   mostFlagged,
+  paywallImpact,
   rate,
   revenueQuality,
   signupSources,
@@ -157,5 +159,34 @@ describe("sign-up sources", () => {
     expect(s.channels.map((c) => c.signups)).toEqual([1, 1, 5]);
     expect(s.countries.map((c) => [c.id, c.signups])).toEqual([["CA", 6], ["US", 1]]);
     expect(s.regions.find((r) => r.id === "none")?.label).toBe("No child added yet");
+  });
+});
+
+describe("app mix", () => {
+  const use = (web: boolean, android = false, ios = false) => ({ web, android, ios });
+  it("counts each app, store apps together and store-only families", () => {
+    const m = appMix([use(true), use(true), use(true, true), use(false, true), use(false, false, true), use(false)]);
+    expect(m.active).toBe(5);
+    expect(m.web.n).toBe(3);
+    expect(m.storeApp).toEqual({ n: 3, share: 0.6 });
+    expect(m.storeOnly.n).toBe(2);
+    expect(m.android.n).toBe(2);
+    expect(m.ios.n).toBe(1);
+  });
+  it("shows no share for a handful of families", () => {
+    expect(appMix([use(true), use(false, true)]).storeApp.share).toBeNull();
+  });
+});
+
+describe("paywall impact", () => {
+  const row = (kind: string, ago: number, paidWithin7 = false, paidAfter = paidWithin7) => ({ kind, firstAt: NOW - ago * DAY, paidAfter, paidWithin7 });
+  it("only judges the week for families who have had the whole week", () => {
+    const rows = [...Array.from({ length: 5 }, () => row("locked-unit", 20, true)), ...Array.from({ length: 5 }, () => row("locked-unit", 20)), row("locked-unit", 2), row("members-reports", 3, false, true)];
+    const out = paywallImpact(rows, NOW);
+    const unit = out.find((o) => o.kind === "locked-unit")!;
+    expect(unit).toMatchObject({ families: 11, matured: 10, paidWithin7: 5, paidWithin7Rate: 0.5, paidAfter: 5 });
+    const members = out.find((o) => o.kind === "members-reports")!;
+    expect(members).toMatchObject({ families: 1, matured: 0, paidWithin7Rate: null, paidAfterRate: null });
+    expect(out[0]!.kind).toBe("locked-unit");
   });
 });
