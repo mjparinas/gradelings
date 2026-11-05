@@ -103,13 +103,13 @@
   "1/immersion": {
     "overview": "67e42711d6",
     "units": [
-      "je-me-presente text=1381462ccd std=3fd125ca07 q=05ad9397f1",
-      "majuscule-et-point text=dc5fe31c85 std=8ce9e2a60c q=970b8e3bf9",
-      "est-ce-que text=ec53105df0 std=3fd125ca07 q=db11e944fa",
-      "verbes-d-action text=4dfeea3109 std=8ce9e2a60c q=c240761d0d",
-      "couleurs-et-adjectifs text=2b7900578c std=8ce9e2a60c q=ec6fc6b1e4",
+      "je-me-presente text=1381462ccd std=3fd125ca07 q=d36ab27c04",
+      "majuscule-et-point text=dc5fe31c85 std=8ce9e2a60c q=1ffd19f1b3",
+      "est-ce-que text=ec53105df0 std=3fd125ca07 q=da6d70c852",
+      "verbes-d-action text=4dfeea3109 std=8ce9e2a60c q=57528b5d6f",
+      "couleurs-et-adjectifs text=2b7900578c std=8ce9e2a60c q=ebdf337a97",
       "histoire-ou-texte text=6bda9802ab std=301bb88f44 q=9bd8255a2d",
-      "elements-d-une-histoire text=df0e8c15fe std=301bb88f44 q=09dd5689f7"
+      "elements-d-une-histoire text=df0e8c15fe std=301bb88f44 q=72a0a198a1"
     ]
   },
   "1/language": {
@@ -186,11 +186,11 @@
     "overview": "67e42711d6",
     "units": [
       "le-la-un-une text=dd9498612e std=8ce9e2a60c q=767f777fd2",
-      "accord-des-adjectifs text=ecb46dd7a9 std=8ce9e2a60c q=abe8e2730d",
-      "ordre-des-mots text=7485d6ae2a std=8ce9e2a60c q=36db762541",
-      "les-contes text=42f1e4fd2e std=301bb88f44 q=240379d8b7",
-      "dabord-ensuite-enfin text=b5429f56fd std=8ce9e2a60c q=9feb26a74c",
-      "etre-et-avoir text=c2c7e4c41a std=8ce9e2a60c q=c94953589f"
+      "accord-des-adjectifs text=ecb46dd7a9 std=8ce9e2a60c q=f0976549b4",
+      "ordre-des-mots text=7485d6ae2a std=8ce9e2a60c q=67db72cbca",
+      "les-contes text=42f1e4fd2e std=301bb88f44 q=81e5927ff8",
+      "dabord-ensuite-enfin text=b5429f56fd std=8ce9e2a60c q=cf28ae6c05",
+      "etre-et-avoir text=c2c7e4c41a std=8ce9e2a60c q=1c87633579"
     ]
   },
   "2/language": {
