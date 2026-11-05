@@ -1,0 +1,5 @@
+Reports shows what your child has practised. Choose 7, 14, 30 or 90 days.
+Is it working compares today with the past, so you can see which units moved up a level.
+The charts show minutes per day and how many answers were right on the first try. Every chart has a table view.
+Strengths and Worth practising point to what to celebrate and what to practise next.
+Every unit lists each level. These reflect practice, not a report-card mark. Your child's teacher decides proficiency.

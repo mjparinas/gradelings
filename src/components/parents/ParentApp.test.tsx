@@ -294,3 +294,23 @@ describe("ParentApp", () => {
     expect(isGradeLoaded("3", "ca-bc")).toBe(true);
   });
 });
+
+describe("ParentApp training videos", () => {
+  beforeEach(() => localStorage.clear());
+
+  it("opens the tour once on the Overview, then not again", async () => {
+    await open("#/");
+    expect(await screen.findByRole("dialog", { name: "A tour of the parent area" }, { timeout: 4000 })).toBeInTheDocument();
+    await userEvent.click(screen.getByRole("button", { name: "Close" }));
+    expect(screen.queryByRole("dialog")).toBeNull();
+    window.location.hash = "#/children";
+    await screen.findByText("page:children");
+    expect(await screen.findByRole("dialog", { name: "Adding a child" }, { timeout: 4000 })).toBeInTheDocument();
+  });
+
+  it("lists every video in the library under #/videos", async () => {
+    await open("#/videos");
+    const { PARENT_VIDEOS } = await import("@/lib/trainingVideos");
+    for (const v of PARENT_VIDEOS) expect(await screen.findByRole("button", { name: `Watch: ${v.title}` })).toBeInTheDocument();
+  });
+});

@@ -1,0 +1,58 @@
+{
+  "audience": "parents",
+  "videos": [
+    {"id": "parent-tour", "title": "A tour of the parent area", "steps": [
+      {"say": "Welcome to the parent area. It is a grown-ups-only space, behind a PIN that only you know.", "do": [{"tab": "Overview"}]},
+      {"say": "Overview shows how each child is doing this week: time, questions answered and how many were right on the first try.", "do": [{"mark": "First-try right"}]},
+      {"say": "Under each child you can see how every subject is going, and tap Full report for the details.", "do": [{"scroll": "units started"}, {"mark": "Math"}]},
+      {"say": "Reports has charts, strengths, and a table of every unit.", "do": [{"tab": "Reports"}, {"mark": "Every unit"}]},
+      {"say": "Children is where you add or edit your children, and Settings lets you tune each child's experience.", "do": [{"tab": "Children"}, {"wait": 1200}, {"tab": "Settings"}]},
+      {"say": "Account is for signing in, syncing between devices, your PIN and the read-aloud voice.", "do": [{"tab": "Account"}, {"mark": "Parent PIN"}]}
+    ]},
+    {"id": "add-a-child", "title": "Adding a child", "steps": [
+      {"say": "To add a child, open the Children tab.", "do": [{"tab": "Children"}]},
+      {"say": "Tap Add a child.", "do": [{"click": "+ Add a child"}]},
+      {"say": "Type a first name or nickname. That is all we keep. No last names, photos or free text from children.", "do": [{"fill": ["Name", "Sam"]}]},
+      {"say": "Pick their grade, and the province or state they follow, so practice matches their school curriculum.", "do": [{"wait": 1500}]},
+      {"say": "Save, and the new child shows up with their own settings and reports. You can add up to five children.", "do": [{"click": "Save"}, {"wait": 1200}]}
+    ]},
+    {"id": "daily-goal-and-subjects", "title": "Daily goal and subjects", "steps": [
+      {"say": "Each child has their own settings. Open Settings and pick the child at the top.", "do": [{"tab": "Settings"}]},
+      {"say": "The daily goal sets how many minutes of learning fill their progress bar on the home screen.", "do": [{"mark": "daily goal"}]},
+      {"say": "Subjects lets you choose what shows up in lessons, Adventure and the Daily Challenge. French is optional and off by default.", "do": [{"mark": "Choose what shows up"}]},
+      {"say": "Arcade games are earned with learning time. You can change the ratio, allow free play, or turn games off.", "do": [{"scroll": "Arcade games"}, {"mark": "Earn game time"}]},
+      {"say": "Changes save automatically and sync to your other devices.", "do": [{"wait": 1500}]}
+    ]},
+    {"id": "reading-the-report", "title": "Reading your child's report", "steps": [
+      {"say": "Reports shows what your child has practised. Choose 7, 14, 30 or 90 days.", "do": [{"tab": "Reports"}, {"mark": "14 days"}]},
+      {"say": "Is it working compares today with the past, so you can see which units moved up a level.", "do": [{"mark": "Is it working"}]},
+      {"say": "The charts show minutes per day and how many answers were right on the first try. Every chart has a table view.", "do": [{"scroll": "Minutes learning per day"}, {"mark": "Minutes learning per day"}]},
+      {"say": "Strengths and Worth practising point to what to celebrate and what to practise next.", "do": [{"scroll": "Strengths"}, {"mark": "Worth practising"}]},
+      {"say": "Every unit lists each level. These reflect practice, not a report-card mark. Your child's teacher decides proficiency.", "do": [{"scroll": "Every unit"}, {"mark": "Every unit"}]}
+    ]},
+    {"id": "goals-notes-rewards", "title": "Goals, notes and rewards", "steps": [
+      {"say": "On Overview you can set a weekly goal for how many days your child practises.", "do": [{"tab": "Overview"}, {"scroll": "Weekly goal"}, {"mark": "Weekly goal"}]},
+      {"say": "Send a kind note from a short list. It shows once on their home screen. We never send push messages to children.", "do": [{"mark": "Send Maya a note"}]},
+      {"say": "Focus picks one unit, like a test coming up, and it comes up more in Adventure.", "do": [{"scroll": "Focus for Maya"}, {"mark": "Focus for Maya"}]},
+      {"say": "A goal plan spreads a set of units over the weeks, to get ready for next grade or catch up.", "do": [{"mark": "Goal plan for Maya"}]},
+      {"say": "A reward is something small you promise for the coins they earn by learning. You give it yourself. Coins are never spent.", "do": [{"mark": "Reward for Maya"}]}
+    ]},
+    {"id": "calm-and-reading-options", "title": "Calm mode and reading options", "steps": [
+      {"say": "Some children find motion, noise or time pressure hard. In Settings, Calm and focus can help.", "do": [{"tab": "Settings"}, {"scroll": "Calm and focus"}, {"mark": "Calm mode"}]},
+      {"say": "One switch turns on calm motion, gentle sounds, hidden timers, trophy pop-ups after the lesson and shorter sessions. Scoring stays the same.", "do": [{"wait": 1500}]},
+      {"say": "Customize calm mode lets you set each one separately.", "do": [{"click": "Customize calm mode"}, {"wait": 1200}]},
+      {"say": "Reading and sound has read-aloud, sound choices, roomy text and high contrast.", "do": [{"scroll": "Reading and sound"}, {"mark": "Read questions out loud"}]},
+      {"say": "Everything here changes presentation only, so your child's progress is always scored the same way.", "do": [{"wait": 1500}]}
+    ]},
+    {"id": "practice-sheets", "title": "Printable practice sheets", "web": true, "steps": [
+      {"say": "Practice sheet makes a printable page from your child's trickiest units. Find it in Reports.", "do": [{"tab": "Reports"}, {"goto": "#/sheet"}, {"top": "Placement test"}]},
+      {"say": "There are ten questions, chosen at the right level, with a separate page for the answer key.", "do": [{"wait": 2000}]},
+      {"say": "Tap New questions for a fresh sheet any time, then print it for the table or the car ride.", "do": [{"mark": "New questions"}]}
+    ]},
+    {"id": "account-sign-in-pin", "title": "Account, sync and your PIN", "steps": [
+      {"say": "Account is where you sign in, so progress is backed up and synced between tablets, phones and computers.", "do": [{"tab": "Account"}, {"mark": "Create a free account"}]},
+      {"say": "Your parent PIN keeps this area grown-ups only. It is saved on this device.", "do": [{"scroll": "Parent PIN"}, {"mark": "Parent PIN"}]},
+      {"say": "Pick the read-aloud voice, hear a sample, and see what we store. You can export or delete everything at any time.", "do": [{"scroll": "Your data, your choice"}, {"mark": "Your data, your choice"}]}
+    ]}
+  ]
+}

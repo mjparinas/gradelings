@@ -30,6 +30,16 @@ Hosted on our own domain, no third-party player or tracking. A native `<video>` 
 ## Before turning the flag on
 Someone should watch each video once with sound. They are computer-voiced, drawn programmatically and have not been tried with children.
 
+## How-to videos for the parent area
+Screen recordings of the real parent area with a demo child ("Maya", no real family data), narrated with Supertonic like the help videos, with the logo bottom-right on a light pill and captions (owner, November 2026). They share the format with the help videos (own folder `public/videos/parents/`, `.vtt`, `narration/<id>.txt`).
+- `scripts/help-videos/screens/parent.json`: each video's steps. A step is a line of narration (`say`) and what to do on screen (`do`: `tab`, `click` (exact name), `scroll`, `mark` (a pulsing outline), `fill` [label, value], `wait` in ms).
+- `screens.py <spec> [id ...]` makes the narration first, `record-screens.mjs` plays the steps in a headless browser (a fresh device with a child and some practice, PIN 2468) for at least as long as each line, then ffmpeg joins video, narration and logo.
+```bash
+BASE=http://localhost:3000 CHROMIUM_PATH=/path/to/chromium /tmp/st/bin/python scripts/help-videos/screens.py scripts/help-videos/screens/parent.json [video-id ...]
+```
+Run it against a server in dev or production mode; `next dev`'s badge is hidden in the recording. Narration names no price or payment, so every video can show in the store apps; a billing video would be web only. Re-record after a parent-area change that moves the screens a video shows.
+Videos: a tour of the parent area, adding a child, daily goal and subjects, reading the report, goals, notes and rewards, calm mode and reading options, practice sheets, account and PIN. Not yet: the voice practice switch (the feature is not in `staging`), subscription (web only).
+
 ## Training videos for grown-ups (teachers, parents)
 The same pipeline makes screen-recording style videos from screenshots of the real app (owner, November 2026): each one opens once the first time its feature is used, and a library lets people watch it again.
 - **Teachers:** `node scripts/help-videos/capture-teacher.mjs http://localhost:3100 scripts/help-videos/shots` (needs `npm run dev -- -p 3100`, `CHROMIUM_PATH` for a Chromium not found by Playwright) makes a demo teacher, class, students, practice and a live question, takes the screenshots and writes `boxes.json` with where parts of the screen are. Demo data only. `teacher_specs.py` lists each video's narration, crop and highlights (`SHOT`, `HL`); `/tmp/st/bin/python scripts/help-videos/build.py --set teachers [id]` writes `public/videos/teachers/<id>.mp4` and `.vtt` (screenshots in `scripts/help-videos/shots/` are not committed).
