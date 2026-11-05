@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { EXPLORERS_DEEP, LANDS_DEEP, REGIONS_DEEP } from "./g4-g5-social-deeper";
 
 // Grade 4 social studies, New Brunswick: Wabanaki lands and Canada's physical regions. Wabanaki content is light, in the present
 // tense for living communities.
@@ -101,7 +102,7 @@ export const wabanakiLands = bankUnit({
   parentNote:
     "Practises the districts of Mi’kma’ki and the traditional territories of the Wolastoqiyik and Peskotomuhkatiyik, and Wabanaki Peoples’ relationships with the natural environment. The content is light and in the present tense.",
   standards: ["Geography: Places and Regions, Wabanaki: Identity", "the districts of Mi’kma’ki, Wolastoqiyik and Peskotomuhkatiyik territory, and Wabanaki relationships with the land"],
-  items: LANDS,
+  items: [...LANDS, ...LANDS_DEEP],
 });
 
 export const physicalRegions = bankUnit({
@@ -112,7 +113,7 @@ export const physicalRegions = bankUnit({
   parentNote:
     "Practises Canada's seven physiographic regions, including the Appalachian Region where New Brunswick sits, and the major physical features of the world. It follows the Grade 4 social studies skill descriptors on places and regions in the New Brunswick curriculum.",
   standards: ["Geography: Places and Regions", "the importance of major physical features of the world and Canada's seven physiographic regions"],
-  items: REGIONS,
+  items: [...REGIONS, ...REGIONS_DEEP],
 });
 
 export const exploration = bankUnit({
@@ -123,5 +124,5 @@ export const exploration = bankUnit({
   parentNote:
     "Practises the stories of explorers of land, ocean, space and ideas, how to use primary and secondary sources, and the impact of European exploration. It follows the Grade 4 social studies skill descriptors on history in the New Brunswick curriculum.",
   standards: ["History: Events and Peoples, History: Sources and Methods", "the stories of explorers, evidence from sources, and the impact of European exploration over time"],
-  items: EXPLORERS,
+  items: [...EXPLORERS, ...EXPLORERS_DEEP],
 });

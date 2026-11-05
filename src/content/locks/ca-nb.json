@@ -381,11 +381,11 @@
   "4/social": {
     "overview": "ff06110916",
     "units": [
-      "nb-physical-regions-4 text=8fa1cd02b6 std=28548999f6 q=b965c87c01",
+      "nb-physical-regions-4 text=8fa1cd02b6 std=28548999f6 q=3c35b36df6",
       "provinces-and-regions text=57d19f24c1 std=1254273532 q=383103dd3d",
       "environment-4 text=c995c5d534 std=ef54cba7e9 q=223eb62473",
-      "nb-wabanaki-lands-4 text=6771cfdec3 std=41afc8fd00 q=c6ed9e2cfc",
-      "nb-exploration-4 text=93f1238d5a std=6c8015c09a q=5e59037846"
+      "nb-wabanaki-lands-4 text=6771cfdec3 std=41afc8fd00 q=fca7537751",
+      "nb-exploration-4 text=93f1238d5a std=6c8015c09a q=4a50616aa6"
     ]
   },
   "4/spanish": {
@@ -478,10 +478,10 @@
     "units": [
       "learning-from-the-past text=8357a42575 std=d97fe9b7be q=21d19f3da5",
       "explorers-5 text=d9ad957742 std=96d31a8d53 q=f18ea2ef0a",
-      "nb-atlantic-meetings-5 text=84778e85f7 std=96d31a8d53 q=47e59a79c1",
-      "nb-acadia-loyalists-5 text=d538510009 std=80598f5708 q=5e20963c06",
-      "nb-wabanaki-confederacy-5 text=f72754b2a6 std=20e9386114 q=795171ab77",
-      "nb-worldview-economics-5 text=ec9790e4f8 std=b270b279a9 q=1da5fb9949"
+      "nb-atlantic-meetings-5 text=84778e85f7 std=96d31a8d53 q=e0c87c5fd5",
+      "nb-acadia-loyalists-5 text=d538510009 std=80598f5708 q=1ffc086ded",
+      "nb-wabanaki-confederacy-5 text=f72754b2a6 std=20e9386114 q=9eb3e96c1d",
+      "nb-worldview-economics-5 text=ec9790e4f8 std=b270b279a9 q=912073fcbb"
     ]
   },
   "5/spanish": {

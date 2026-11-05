@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { MEETINGS_DEEP } from "./g4-g5-social-deeper";
 
 // More Grade 5 social studies for New Brunswick: interactions between the first and founding peoples of Atlantic Canada.
 // Wabanaki content is light and in the present tense for living communities.
@@ -50,5 +51,5 @@ export const atlanticMeetings = bankUnit({
   parentNote:
     "Practises the interactions between the first and founding peoples of Atlantic Canada: early French settlements, trade and alliances, Acadian dykes, conflict between empires, and how contact affected Wabanaki Peoples. The content is light and in the present tense for living communities. It follows the Grade 5 social studies skill descriptor on events and peoples in the New Brunswick curriculum.",
   standards: ["History: Events and Peoples", "interactions between the first and founding peoples of Atlantic Canada"],
-  items: MEETINGS,
+  items: [...MEETINGS, ...MEETINGS_DEEP],
 });
