@@ -193,7 +193,16 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
   // After two misses a child can tell a grown-up they need help, or look at how the unit works.
   const [helpAsked, setHelpAsked] = useState(false);
   const [showLesson, setShowLesson] = useState(false);
-  const [showVideo, setShowVideo] = useState(false);
+  // A unit's help video is also offered once, before its first question, the first time a child starts that unit.
+  const videoIntroOn = videosOn && !!family && canUse(family, "videoHelp") && plan.retries && !resume;
+  const introduced = useRef(new Set<string>());
+  const needsIntro = (it: Item | undefined) => {
+    if (!videoIntroOn || !it || it.fact || introduced.current.has(it.unitKey)) return false;
+    introduced.current.add(it.unitKey);
+    return !!helpVideoFor(it.unitKey) && !startDerived.units[it.unitKey]?.attempts;
+  };
+  const [showVideo, setShowVideo] = useState(() => needsIntro(item));
+  const [videoIntro, setVideoIntro] = useState(showVideo);
   const [flash, setFlash] = useState<"good" | "bad" | null>(null);
   const stage = useRef<HTMLDivElement>(null);
   const loggedUpTo = useRef(0);
@@ -335,7 +344,9 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
     setHinted(false);
     setHelpAsked(false);
     setShowLesson(false);
-    setShowVideo(false);
+    const intro = needsIntro(nextItem);
+    setShowVideo(intro);
+    setVideoIntro(intro);
     setMood("happy");
     setMessage("");
   }
@@ -559,7 +570,7 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
                         log([{ type: "help", unit: item.unitKey }]);
                       },
                   onLesson: lesson ? () => setShowLesson(true) : undefined,
-                  onVideo: helpVideo ? () => setShowVideo(true) : undefined,
+                  onVideo: helpVideo ? () => { setVideoIntro(false); setShowVideo(true); } : undefined,
                 }
               : undefined
           }
@@ -572,6 +583,7 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
           <HelpVideoPlayer
             video={helpVideo}
             onClose={() => setShowVideo(false)}
+            intro={videoIntro}
             onNext={advance}
             onLesson={lesson ? () => setShowLesson(true) : undefined}
             onWatched={(seconds, done) => log([{ type: "video", unit: item.unitKey, video: helpVideo.id, watched: seconds, done }])}

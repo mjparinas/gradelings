@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { ATLANTIC_MORE, CULTURES_MORE, DEMOCRACY_MORE } from "./g3-social-more";
 
 // Grade 3 social studies, Nova Scotia: where we live in Atlantic Canada, the cultures of the province and the
 // rights and responsibilities of citizens. Indigenous, African Nova Scotian, Acadian and Gaelic content is light,
@@ -103,7 +104,7 @@ export const atlanticCanada = bankUnit({
   parentNote:
     "Practises where Nova Scotia is in Atlantic Canada: the four provinces and capitals, nearby waters, directions and why the ocean matters. It follows the Grade 3 Nova Scotia social studies outcome on the location of Nova Scotia.",
   standards: ["Investigate the location of Nova Scotia in Atlantic Canada", "Atlantic provinces, capitals, waters and map directions"],
-  items: ATLANTIC,
+  items: [...ATLANTIC, ...ATLANTIC_MORE],
 });
 
 export const cultures = bankUnit({
@@ -114,7 +115,7 @@ export const cultures = bankUnit({
   parentNote:
     "Practises how groups in Nova Scotia, including the Mi’kmaq, Acadians, African Nova Scotians and Gaels, share their cultures. It follows the Grade 3 Nova Scotia social studies outcome on expressions of culture. Content about First Nations is light.",
   standards: ["Investigate various groups through their expressions of culture", "language, music, art and celebrations of cultures in Nova Scotia"],
-  items: CULTURES,
+  items: [...CULTURES, ...CULTURES_MORE],
 });
 
 export const democracy = bankUnit({
@@ -125,5 +126,5 @@ export const democracy = bankUnit({
   parentNote:
     "Practises the rights and responsibilities of citizens in a democracy: voting, fair rules, local and national leaders, and solving problems together. It follows the Grade 3 Nova Scotia social studies outcome on citizenship.",
   standards: ["Investigate the rights and responsibilities of citizens in a democracy", "rights, responsibilities, leaders, rules and voting"],
-  items: DEMOCRACY,
+  items: [...DEMOCRACY, ...DEMOCRACY_MORE],
 });

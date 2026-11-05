@@ -298,7 +298,7 @@ export function LiveClass({ data, label, unitGroups }: { data: ClassDetail; labe
             </b>{" "}
             answered{live.revealed ? " · answer shown to the class" : ""}
           </p>
-          <LiveDesks students={data.students} answers={live.answers} hideNames={present} />
+          <LiveDesks students={data.students} answers={live.answers} away={live.away} hideNames={present} />
           {!present && live.answers.length > 0 && (
             <p className="font-read text-sm text-ink-soft">
               Answered: {live.answers.map((a) => `${names.get(a.profileId) ?? "Student"}${live.revealed ? (a.correct ? " ✓" : "") : ""}`).join(", ")}

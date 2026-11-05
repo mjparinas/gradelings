@@ -63,6 +63,7 @@ export const FLAGS: readonly FlagDef[] = [
   { key: "class-timer", label: "Class timer", description: "A countdown a teacher starts for the whole class, shown on the teacher's screen and on students' devices. Off: no new timers start and devices stop showing them; practice is unchanged.", scope: "server", defaultOn: true },
   { key: "voice-practice", label: "Voice practice", description: "Children can answer some Pre-K to Grade 1 questions (naming a picture, counting) out loud. Speech is recognised on the device by a downloaded model; audio is never sent or saved. A parent also turns it on per child in Settings > Advanced options and downloads the model. Off: those questions are plain tap-to-answer questions and the switch is hidden. Turn it on for specific families under Users > Flags.", scope: "app", defaultOn: false },
   { key: "class-goal", label: "Class goal", description: "A weekly question goal a teacher sets for the whole class, shown to students as a shared progress bar with counts only. Off: no new goals are set and devices stop showing them; practice is unchanged.", scope: "server", defaultOn: true },
+  { key: "live-away", label: "Live questions: away on desks", description: "A teacher's live-question desks show a quiet \"away\" for a student whose device has gone quiet or said it was leaving (tab hidden or closed). Times only, kept for a day, never shown to students or parents. Off: no presence is recorded and desks show no away.", scope: "server", defaultOn: true },
 ];
 
 export type FlagKey = (typeof FLAGS)[number]["key"];
