@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { CANADA_MAP_MORE, CANADA_PEOPLE_MORE, EXPLORERS_MORE, FEATURES_MORE, LANDFORMS_MORE, NATURE_MORE, PEOPLE_LAND_MORE, SYMBOLS_MORE, WHAT_IS_MORE, WHY_MORE } from "./g4-social-more";
 
 // Grade 4 science and social studies, Prince Edward Island: rocks, minerals and erosion; habitats; exploration; world
 // features; Canada’s landscapes. Indigenous content is light, in the present tense for living communities, and needs
@@ -244,7 +245,7 @@ export const peWhatIsExploration4 = bankUnit({
   blurb: "Why people explore",
   parentNote: "Children explore what exploration means, and what it means to explore land, ocean, space and ideas.",
   standards: ["4.1.1", "the concept of exploration"],
-  items: WHAT_IS,
+  items: [...WHAT_IS, ...WHAT_IS_MORE],
 });
 
 const EXPLORERS: Q[] = [
@@ -286,7 +287,7 @@ export const peExplorers4 = bankUnit({
   blurb: "Explorers of land, sea and space",
   parentNote: "Children learn the stories of explorers of land, ocean, space and ideas.",
   standards: ["4.2.1", "stories of various explorers of land, ocean, space and ideas"],
-  items: EXPLORERS,
+  items: [...EXPLORERS, ...EXPLORERS_MORE],
 });
 
 const WHY: Q[] = [
@@ -328,7 +329,7 @@ export const peWhyExplore4 = bankUnit({
   blurb: "What drives exploration",
   parentNote: "Children look at what motivates exploration, and the effects of exploration over time.",
   standards: ["4.2.2; 4.2.3", "motivations for exploration and its impact over time"],
-  items: WHY,
+  items: [...WHY, ...WHY_MORE],
 });
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -376,7 +377,7 @@ export const peWorldFeatures4 = bankUnit({
   blurb: "Mountains, rivers, islands, oceans",
   parentNote: "Children examine major physical features of the world and describe rivers, islands, mountains and oceans.",
   standards: ["4.3.1; 4.3.2", "major physical features of the world and the characteristics of rivers, islands, mountains and oceans"],
-  items: FEATURES,
+  items: [...FEATURES, ...FEATURES_MORE],
 });
 
 const PEOPLE_LAND: Q[] = [
@@ -417,7 +418,7 @@ export const pePeopleAndLand4 = bankUnit({
   blurb: "How people and land affect each other",
   parentNote: "Children examine the relationship between humans and the physical environment.",
   standards: ["4.3.3", "the relationship between humans and the physical environment"],
-  items: PEOPLE_LAND,
+  items: [...PEOPLE_LAND, ...PEOPLE_LAND_MORE],
 });
 
 // ---------------------------------------------------------------------------------------------------------------------
@@ -463,7 +464,7 @@ export const peCanadaPeople4 = bankUnit({
   blurb: "Human landscape of Canada",
   parentNote: "Children examine the human landscape of Canada, including where people live and what they do.",
   standards: ["4.4.2", "the human landscape of Canada"],
-  items: CANADA_PEOPLE,
+  items: [...CANADA_PEOPLE, ...CANADA_PEOPLE_MORE],
 });
 
 const CANADA_MAP: Q[] = [
@@ -507,7 +508,7 @@ export const peCanadaMap4 = bankUnit({
   blurb: "Provinces, territories, capitals",
   parentNote: "Children come to understand the political landscape of Canada, including provinces, territories and capitals.",
   standards: ["4.4.3", "the political landscape of Canada"],
-  items: CANADA_MAP,
+  items: [...CANADA_MAP, ...CANADA_MAP_MORE],
 });
 
 const SYMBOLS: Q[] = [
@@ -550,7 +551,7 @@ export const peCanadaSymbols4 = bankUnit({
   blurb: "Flags, emblems and landscapes",
   parentNote: "Children examine the symbols associated with Canada’s landscapes.",
   standards: ["4.4.4", "symbols associated with Canada’s landscapes"],
-  items: SYMBOLS,
+  items: [...SYMBOLS, ...SYMBOLS_MORE],
 });
 
 // 4.4.1 the physical landscape of Canada. Standard Canadian geography facts (physical regions, rivers, lakes, climate);
@@ -603,7 +604,7 @@ export const peCanadaLandforms4 = bankUnit({
   blurb: "Regions, mountains, lakes, rivers",
   parentNote: "Children describe the physical landscape of Canada: its landform regions, mountains, lakes, rivers and oceans.",
   standards: ["4.4.1", "the physical landscape of Canada: landform regions, rivers, lakes and oceans"],
-  items: CANADA_LANDFORMS,
+  items: [...CANADA_LANDFORMS, ...LANDFORMS_MORE],
 });
 
 const CANADA_NATURE: Q[] = [
@@ -652,5 +653,5 @@ export const peCanadaNature4 = bankUnit({
   blurb: "Climate, forests, animals, parks",
   parentNote: "Children describe more of Canada’s physical landscape: its climates, forests, grasslands, wetlands, wildlife and national parks.",
   standards: ["4.4.1", "the physical landscape of Canada: climate, vegetation, wildlife and protected places"],
-  items: CANADA_NATURE,
+  items: [...CANADA_NATURE, ...NATURE_MORE],
 });

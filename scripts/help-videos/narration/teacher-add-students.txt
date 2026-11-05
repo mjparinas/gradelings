@@ -1,0 +1,6 @@
+Open the Students tab to add your class. You don't need any email addresses or passwords.
+Type each student's first name or a nickname, one per line, then tap Add students.
+Each student gets their own code. If a code is lost, tap New code to make a fresh one.
+Students open Gradelings, tap My teacher gave me a code, and type it in. That's all they need.
+Tap Print login cards to give every student a card with their code and a scan code. Larger print puts fewer cards on a page.
+To change a name, tap Edit. To take a student out, tap Remove, and everything about them is deleted.

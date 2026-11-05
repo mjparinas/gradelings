@@ -28,6 +28,8 @@ import { ClassTimerPanel } from "./ClassTimerPanel";
 import { TeacherDialog } from "./Dialog";
 import { TryUnit } from "./TryUnit";
 import { LiveClass } from "./LiveClass";
+import { FirstUseVideo, TrainingLibrary } from "@/components/TrainingVideo";
+import { TEACHER_TAB_VIDEOS, TEACHER_VIDEOS, videoById } from "@/lib/trainingVideos";
 import { QrCode } from "./QrCode";
 import { RosterConnect, RosterReview } from "./RosterImport";
 import { AuthForm } from "./TeacherAuth";
@@ -265,6 +267,7 @@ function ClassList({ onOpen, account }: { onOpen: (id: string) => void; account:
   return (
     <>
       <h1 className="text-3xl font-bold">Your classes</h1>
+      <FirstUseVideo video={videoById(TEACHER_VIDEOS, "teacher-class-setup")} enabled={isOn("training-videos")} />
       {account.verified === false && <ConfirmEmail email={account.email} />}
       {classes?.length === 0 && <p className="mt-2 font-read text-ink-soft">No classes yet. Create one below, then give families the class code.</p>}
       {invites.length > 0 && (
@@ -1414,6 +1417,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
       <p className="font-read text-ink-soft">
         {classGradeText(cls)} · {getFramework(cls.framework).curriculumName}
       </p>
+      <FirstUseVideo key={tab} video={videoById(TEACHER_VIDEOS, TEACHER_TAB_VIDEOS[tab])} enabled={isOn("training-videos") && (tab !== "progress" || students.length > 0)} />
       {trying && <TryUnit unitKey={trying} framework={cls.framework} onClose={() => setTrying(null)} />}
 
       {tab === "progress" && (
@@ -1758,12 +1762,13 @@ export function TeacherApp() {
   // #/class/{id}/{tab} opens a class on one tab; anything else is the class list.
   const classId = path[0] === "class" && path[1] ? path[1] : null;
   const onAccount = path[0] === "account";
+  const onVideos = path[0] === "videos";
   const importId = path[0] === "import" && path[1] ? path[1] : null;
   const tab = CLASS_TABS.find((t) => t.path === path[2])?.path ?? "progress";
 
   useEffect(() => {
-    if (!classId) setPageTitle(signedIn === false ? "Sign in" : onAccount ? "Your account" : importId ? "Bring in classes" : "Your classes");
-  }, [classId, signedIn, onAccount, importId]);
+    if (!classId) setPageTitle(signedIn === false ? "Sign in" : onAccount ? "Your account" : onVideos ? "Training videos" : importId ? "Bring in classes" : "Your classes");
+  }, [classId, signedIn, onAccount, onVideos, importId]);
 
   useEffect(() => {
     // A class student's login is not a teacher's: only a real account counts.
@@ -1792,6 +1797,11 @@ export function TeacherApp() {
           </span>
           <div className="flex flex-wrap items-center gap-x-3">
             <Link href="/" className="inline-flex min-h-11 min-w-11 items-center font-semibold underline">Home</Link>
+            {signedIn && isOn("training-videos") && (
+              <a href="#/videos" aria-current={onVideos ? "page" : undefined} className="inline-flex min-h-11 items-center font-semibold underline">
+                Training videos
+              </a>
+            )}
             {signedIn && (
               <a href="#/account" aria-current={onAccount ? "page" : undefined} className="inline-flex min-h-11 items-center font-semibold underline">
                 Account
@@ -1845,6 +1855,11 @@ export function TeacherApp() {
               .catch(() => undefined)
               .finally(() => setSignedIn(true));
           }} />
+        ) : onVideos ? (
+          <>
+            <a href="#/" className="inline-flex min-h-11 items-center font-semibold underline">← All classes</a>
+            <TrainingLibrary heading="Training videos" intro="Short how-tos for the teacher area, about a minute each. They play on their own the first time you open each part, and you can watch any of them again here." videos={TEACHER_VIDEOS} />
+          </>
         ) : onAccount ? (
           <AccountPage email={account.email} onSignedOut={() => setSignedIn(false)} />
         ) : importId ? (

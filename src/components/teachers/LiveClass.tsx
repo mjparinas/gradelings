@@ -6,7 +6,7 @@ import { QuestionVisual } from "@/components/visuals";
 import { call } from "@/lib/classroom";
 import { APP_NAME } from "@/lib/brand";
 import { TICKET_SIZES, ticketItems, ticketSummary, ticketText } from "@/lib/exitTicket";
-import { LIVE_POLL_TEACHER_MS, liveCounts, liveRecapItem, liveRecapText, type LiveForTeacher } from "@/lib/live";
+import { LIVE_HERE_MS, LIVE_POLL_TEACHER_MS, liveCounts, liveRecapItem, liveRecapText, type LiveForTeacher } from "@/lib/live";
 import { LiveDesks } from "./LiveDesks";
 import type { ClassDetail } from "./TeacherApp";
 
@@ -79,6 +79,20 @@ export function LiveClass({ data, label, unitGroups }: { data: ClassDetail; labe
     }, LIVE_POLL_TEACHER_MS);
     return () => clearInterval(t);
   }, [open, refresh]);
+
+  // Tell the class's devices a teacher is here, so they look for new questions often.
+  useEffect(() => {
+    const here = () => {
+      if (document.visibilityState === "visible") void call("/api/classes/live/", "PATCH", { classId, action: "here" }).catch(() => {});
+    };
+    here();
+    const t = setInterval(here, LIVE_HERE_MS);
+    document.addEventListener("visibilitychange", here);
+    return () => {
+      clearInterval(t);
+      document.removeEventListener("visibilitychange", here);
+    };
+  }, [classId]);
 
   const act = async (method: string, body?: unknown, url = "/api/classes/live/") => {
     setErr("");

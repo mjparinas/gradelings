@@ -256,8 +256,18 @@ export async function teacherFixture(base, { framework = "ca-bc", grade = "3" } 
   return { cookie: { name, value: value.join("=") }, classId: cls.id, joinCode: cls.joinCode };
 }
 
+/** The training videos open by themselves the first time; scripts that are about something else mark them all as seen. */
+export async function markTeacherVideosSeen(context) {
+  await context.addInitScript(() => {
+    try {
+      localStorage.setItem("gradelings.trainvideo.seen", JSON.stringify(["teacher-class-setup", "teacher-add-students", "teacher-homework", "teacher-progress", "teacher-live"]));
+    } catch {}
+  });
+}
+
 /** Signs a browser context in as the fixture's teacher. */
 export async function signInTeacher(context, base, fixture) {
+  await markTeacherVideosSeen(context);
   // A production build names the cookie with the __Host- prefix, which browsers accept only when it is Secure.
   const secure = fixture.cookie.name.startsWith("__Host-");
   // The __Host- prefix also forbids a Domain, which Playwright's url form adds, so name the host and path instead.

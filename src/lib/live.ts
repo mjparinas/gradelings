@@ -50,9 +50,13 @@ export interface LiveForTeacher {
 
 /** How often a child's device asks for a live question: quickly while one is open, slowly otherwise. */
 export const LIVE_POLL_OPEN_MS = 3_000;
-export const LIVE_POLL_IDLE_MS = 12_000;
-/** A student whose device hasn't asked for a question in this long shows as away on the teacher's desks (idle polls are 12 s apart). */
-export const LIVE_AWAY_AFTER_MS = 30_000;
+export const LIVE_POLL_IDLE_MS = 15_000;
+/** Short polling while a teacher has the Live tab open but nothing is showing yet (the fallback to long-polling). */
+export const LIVE_POLL_HOT_MS = 3_000;
+/** How often the teacher's Live tab says it is open. */
+export const LIVE_HERE_MS = 20_000;
+/** A student whose device hasn't asked for a question in this long shows as away on the teacher's desks (an idle poll is up to 15 s apart, and a held request answers within about that). */
+export const LIVE_AWAY_AFTER_MS = 45_000;
 /** How often the teacher's screen refreshes the answers while a question is open. */
 export const LIVE_POLL_TEACHER_MS = 2_500;
 
