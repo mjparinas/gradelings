@@ -273,6 +273,19 @@ describe("Hub tiles", () => {
     expect(screen.queryByText("Brain Break")).not.toBeInTheDocument();
   });
 
+  it("has a Story Problems tile for older kids, none on the little kids' home screen, and none when switched off", () => {
+    const { unmount } = show("middle");
+    fireEvent.click(tile("Story Problems"));
+    expect(window.location.hash).toBe("#/problems");
+    unmount();
+    const little = show("little");
+    expect(screen.queryByText("Story Problems")).not.toBeInTheDocument();
+    little.unmount();
+    h.off = new Set(["story-problems"]);
+    show("middle");
+    expect(screen.queryByText("Story Problems")).not.toBeInTheDocument();
+  });
+
   it("has an Explore tile for Grades 2 to 9 (little kids find it in Treasures), and none when switched off", () => {
     const mid = show("middle");
     fireEvent.click(tile("Explore"));

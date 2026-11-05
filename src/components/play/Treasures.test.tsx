@@ -4,13 +4,13 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 import type { AgeBand } from "@/content/types";
 import { BandProvider } from "../band";
 
-const h = vi.hoisted(() => ({ off: new Set<string>(), go: vi.fn() }));
+const h = vi.hoisted(() => ({ off: new Set<string>(), go: vi.fn(), grade: "1" }));
 vi.mock("./FestivalCard", () => ({ FestivalCard: () => <div data-testid="festival-card" /> }));
 vi.mock("./WeekRecapCard", () => ({ WeekRecapCard: () => <div data-testid="week-recap-card" /> }));
 vi.mock("@/lib/router", () => ({ go: h.go }));
 vi.mock("@/lib/remoteFlags", () => ({ useIsOn: () => (key: string) => !h.off.has(key) }));
 vi.mock("@/lib/store", () => ({
-  useActiveProfile: () => ({ id: "p1", name: "Leo", grade: "k", framework: "ca-bc" }),
+  useActiveProfile: () => ({ id: "p1", name: "Leo", grade: h.grade, framework: "ca-bc" }),
   useDerived: () => ({ coins: 120, trophies: { "first-steps": 1, "streak-3": 2 } }),
 }));
 
@@ -22,6 +22,7 @@ const inBand = (band: AgeBand, ui: React.ReactElement) => render(<BandProvider v
 
 beforeEach(() => {
   h.off = new Set();
+  h.grade = "1";
   h.go.mockClear();
 });
 
@@ -30,7 +31,7 @@ describe("Treasures", () => {
     inBand("little", <Treasures />);
     expect(screen.getByRole("heading", { name: /My Treasures/ })).toBeInTheDocument();
     const links = screen.getAllByRole("link");
-    expect(links.map((a) => a.getAttribute("href"))).toEqual(["#/stickers", "#/trophies", "#/room", "#/shop", "#/rhymes", "#/explore", "#/break", "#/map"]);
+    expect(links.map((a) => a.getAttribute("href"))).toEqual(["#/stickers", "#/trophies", "#/room", "#/shop", "#/rhymes", "#/explore", "#/problems", "#/break", "#/map"]);
     expect(screen.getByRole("link", { name: /Trophies/ })).toHaveTextContent("2");
     expect(screen.getByRole("link", { name: /Shop/ })).toHaveTextContent("🪙 120");
   });
@@ -45,16 +46,23 @@ describe("Treasures", () => {
   it("leaves out the screens the admin switched off", () => {
     h.off = new Set(["sticker-book", "my-room", "shop"]);
     inBand("little", <Treasures />);
-    expect(screen.getAllByRole("link").map((a) => a.getAttribute("href"))).toEqual(["#/trophies", "#/rhymes", "#/explore", "#/break", "#/map"]);
+    expect(screen.getAllByRole("link").map((a) => a.getAttribute("href"))).toEqual(["#/trophies", "#/rhymes", "#/explore", "#/problems", "#/break", "#/map"]);
   });
 
-  it("leaves out Brain Break, Rhymes and Explore when their flags are off", () => {
-    h.off = new Set(["brain-breaks", "rhymes", "explore-cards"]);
+  it("leaves out Brain Break, Rhymes, Explore and Story Problems when their flags are off", () => {
+    h.off = new Set(["brain-breaks", "rhymes", "explore-cards", "story-problems"]);
     inBand("little", <Treasures />);
     const hrefs = screen.getAllByRole("link").map((a) => a.getAttribute("href"));
     expect(hrefs).not.toContain("#/break");
     expect(hrefs).not.toContain("#/rhymes");
     expect(hrefs).not.toContain("#/explore");
+    expect(hrefs).not.toContain("#/problems");
+  });
+
+  it("keeps Story Problems for Grade 1 and up: Kindergarten does not see it", () => {
+    h.grade = "k";
+    inBand("little", <Treasures />);
+    expect(screen.getAllByRole("link").map((a) => a.getAttribute("href"))).not.toContain("#/problems");
   });
 
   it("goes back home from the chest", () => {

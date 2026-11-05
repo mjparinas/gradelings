@@ -6,7 +6,7 @@ import { StorageFullNotice } from "@/components/StorageFullNotice";
 import { ClassTimerChip } from "./ClassTimer";
 import type { FlagKey } from "@/lib/flags";
 import { refreshFlags, useIsOn } from "@/lib/remoteFlags";
-import { ageBandFor } from "@/content/subjects";
+import { ageBandFor, gradeNumber } from "@/content/subjects";
 import type { FrameworkId, GradeId, SubjectId } from "@/content/types";
 import type { Mode } from "@/lib/model";
 import { PLACEMENT_SUBJECTS } from "@/lib/placement";
@@ -32,13 +32,13 @@ import { getCourse, parseUnitKey } from "@/content";
 import { nextGrade } from "@/lib/schoolYear";
 import { go } from "@/lib/router";
 import { Toasts } from "./Toasts";
-import { Arcade, BrainBreak, ExploreLibrary, ExploreReader, FactChart, FactsPicker, GameScreen, LazyScreen, PlacementTest, prefetchScreens, RhymeLibrary, RhymeReader, Room, Shop, SneakPeek, StickerBook, StoryLibrary, StoryReader, TrailMap, Treasures, TrophyRoom, WeekRecap } from "./lazyScreens";
+import { Arcade, BrainBreak, ExploreLibrary, ExploreReader, FactChart, FactsPicker, GameScreen, LazyScreen, PlacementTest, prefetchScreens, RhymeLibrary, RhymeReader, Room, Shop, SneakPeek, StickerBook, StoryLibrary, StoryProblems, StoryReader, TrailMap, Treasures, TrophyRoom, WeekRecap } from "./lazyScreens";
 import { LessonScreen } from "./LessonScreen";
 
 const MODES: Mode[] = ["practice", "adventure", "review", "speed", "daily", "challenge", "facts"];
 
 /** Screens the admin panel can switch off for everyone (src/lib/flags.ts). A switched-off screen shows the home screen. */
-const SCREEN_FLAGS: Record<string, FlagKey> = { stickers: "sticker-book", room: "my-room", speed: "speed-run", facts: "math-facts", arcade: "arcade", shop: "shop", stories: "story-library", grew: "weekly-recap", break: "brain-breaks", rhymes: "rhymes", explore: "explore-cards" };
+const SCREEN_FLAGS: Record<string, FlagKey> = { stickers: "sticker-book", room: "my-room", speed: "speed-run", facts: "math-facts", arcade: "arcade", shop: "shop", stories: "story-library", grew: "weekly-recap", break: "brain-breaks", rhymes: "rhymes", explore: "explore-cards", problems: "story-problems" };
 /** Sessions whose mode the admin panel can switch off. */
 const MODE_FLAGS: Partial<Record<Mode, FlagKey>> = { daily: "daily-challenge", speed: "speed-run", facts: "math-facts" };
 
@@ -108,6 +108,10 @@ const Routes = memo(function Routes({ hash }: { hash: string }) {
       // Rhymes are for the younger readers; older kids go home.
       if (ageBandFor(profile.grade) === "big") return <Hub />;
       return path[1] ? <RhymeReader key={path[1]} id={path[1]} /> : <RhymeLibrary />;
+    case "problems":
+      // Word problems need reading and number sense: Pre-K and Kindergarten go home.
+      if (gradeNumber(profile.grade) < 1) return <Hub />;
+      return <StoryProblems />;
     case "explore":
       return path[1] ? <ExploreReader key={path[1]} id={path[1]} /> : <ExploreLibrary />;
     case "break":

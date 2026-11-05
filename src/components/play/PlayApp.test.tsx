@@ -104,6 +104,7 @@ vi.mock("./Trophies", () => ({ TrophyRoom: screenStub("TrophyRoom") }));
 vi.mock("./Treasures", () => ({ Treasures: screenStub("Treasures") }));
 vi.mock("./WeekRecap", () => ({ WeekRecap: screenStub("WeekRecap") }));
 vi.mock("./BrainBreak", () => ({ BrainBreak: screenStub("BrainBreak") }));
+vi.mock("./StoryProblems", () => ({ StoryProblems: screenStub("StoryProblems") }));
 vi.mock("./Explore", () => ({ ExploreLibrary: screenStub("ExploreLibrary"), ExploreReader: screenStub("ExploreReader") }));
 vi.mock("./Rhymes", () => ({ RhymeLibrary: screenStub("RhymeLibrary"), RhymeReader: screenStub("RhymeReader") }));
 vi.mock("./Stories", () => ({ StoryLibrary: screenStub("StoryLibrary"), StoryReader: screenStub("StoryReader") }));
@@ -279,6 +280,7 @@ describe("PlayApp routes", () => {
     ["stories", "StoryLibrary"],
     ["stories/theo-kite", "StoryReader id=theo-kite"],
     ["break", "BrainBreak"],
+    ["problems", "StoryProblems"],
     ["explore", "ExploreLibrary"],
     ["explore/busy-bees", "ExploreReader id=busy-bees"],
     ["rhymes", "RhymeLibrary"],
@@ -318,6 +320,13 @@ describe("PlayApp routes", () => {
     expect(shown()).toMatch(/^Hub/);
   });
 
+  it("keeps story problems for Grade 1 and up: a Kindergartener goes home", () => {
+    h.route = "problems";
+    h.active = { id: "b", grade: "k", framework: "ca-bc" };
+    render(<PlayApp />);
+    expect(shown()).toMatch(/^Hub/);
+  });
+
   it("keeps the rhymes for the younger readers: a Grade 6 child goes home", () => {
     h.route = "rhymes";
     h.active = { id: "b", grade: "6", framework: "ca-bc" };
@@ -345,6 +354,7 @@ describe("PlayApp routes", () => {
     ["stories/theo-kite", "story-library"],
     ["grew", "weekly-recap"],
     ["break", "brain-breaks"],
+    ["problems", "story-problems"],
     ["explore", "explore-cards"],
     ["explore/busy-bees", "explore-cards"],
     ["rhymes", "rhymes"],
