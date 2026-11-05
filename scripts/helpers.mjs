@@ -41,6 +41,47 @@ export async function stepOnce(page) {
     await page.waitForTimeout(600);
     return "order";
   }
+  // The newer question kinds: answer them at random, as above.
+  if (await vis(page.getByTestId("mistake-step"))) {
+    const steps = page.getByTestId("mistake-step");
+    await steps.nth(Math.floor(Math.random() * (await steps.count()))).click({ force: true });
+    return "mistake";
+  }
+  if (await vis(page.getByTestId("match-left"))) {
+    const open = (side) => page.locator(`[data-testid="match-${side}"]:not([data-state="right"])`);
+    for (let i = 0; i < 20 && (await open("left").count()) > 0; i++) {
+      await open("left").first().click({ force: true });
+      await open("right").first().click({ force: true });
+      await page.waitForTimeout(150);
+      const ok = page.locator("[role=status]").getByRole("button", { name: "OK", exact: true });
+      if (await vis(ok)) await ok.click({ force: true });
+    }
+    return "match";
+  }
+  if (await vis(page.getByTestId("multi-choice"))) {
+    await page.getByTestId("multi-choice").first().click({ force: true });
+    await page.getByRole("button", { name: /Check/ }).click({ force: true });
+    return "multi";
+  }
+  if (await vis(page.getByTestId("highlight-word"))) {
+    await page.getByTestId("highlight-word").first().click({ force: true });
+    await page.getByRole("button", { name: /Check/ }).click({ force: true });
+    return "highlight";
+  }
+  if (await vis(page.getByTestId("bank-word"))) {
+    const blanks = await page.getByTestId("fill-blank").count();
+    for (let i = 0; i < blanks; i++) {
+      await page.getByTestId("bank-word").first().click({ force: true });
+      await page.waitForTimeout(80);
+    }
+    await page.getByRole("button", { name: /Check/ }).click({ force: true });
+    return "fill";
+  }
+  if (await vis(page.getByTestId("tile"))) {
+    for (let i = 0; i < 12 && (await vis(page.getByTestId("tile"))); i++) await page.getByTestId("tile").first().click({ force: true });
+    await page.getByRole("button", { name: /Check/ }).click({ force: true });
+    return "tiles";
+  }
   if (await vis(page.getByTestId("bin"))) {
     const before = await page.getByTestId("sort-item").count();
     const bins = page.getByTestId("bin");

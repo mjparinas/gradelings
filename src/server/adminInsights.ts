@@ -1,10 +1,12 @@
 import "server-only";
 import {
   afterTrial,
+  appMix,
   classActivity,
   contentGaps,
   engagementDepth,
   mostFlagged,
+  paywallImpact,
   revenueQuality,
   signupSources,
   teacherFunnel,
@@ -12,7 +14,9 @@ import {
   trialCurve,
   type ChildActivity,
   type ClassActivity,
+  type AppUse,
   type FirstPayment,
+  type PaywallFamily,
   type SignupFact,
   type SignupPath,
   type TrialFamily,
@@ -33,7 +37,7 @@ const WEEK = 7 * DAY;
 /** Practice time per answer is capped, as in the kids' app. */
 const MS_CAP = 60_000;
 
-export const INSIGHT_PARTS = ["trial", "revenue", "engagement", "teachers", "content", "sources"] as const;
+export const INSIGHT_PARTS = ["trial", "revenue", "engagement", "teachers", "content", "sources", "paywall", "apps"] as const;
 export type InsightPart = (typeof INSIGHT_PARTS)[number];
 export const isInsightPart = (s: string): s is InsightPart => (INSIGHT_PARTS as readonly string[]).includes(s);
 
@@ -272,6 +276,32 @@ async function sources(now: number) {
   return { ...signupSources(facts), windowDays: 90 };
 }
 
+async function paywall(now: number) {
+  const real = realFamilies();
+  const rows = await query<{ kind: string; first_at: number; paid_after: number; paid_within7: number }>(
+    `SELECT w.kind, w.first_at,
+       EXISTS (SELECT 1 FROM payments p WHERE p.family_id = f.id AND p.paid_at >= w.first_at AND p.amount > p.refunded) AS paid_after,
+       EXISTS (SELECT 1 FROM payments p WHERE p.family_id = f.id AND p.paid_at >= w.first_at AND p.paid_at < w.first_at + ${7 * DAY} AND p.amount > p.refunded) AS paid_within7
+     FROM paywall_seen w JOIN families f ON f.id = w.family_id
+     WHERE w.first_at >= ? AND ${real.sql}`,
+    [now - 120 * DAY, ...real.args],
+  );
+  const facts: PaywallFamily[] = rows.map((r) => ({ kind: r.kind, firstAt: Number(r.first_at), paidAfter: Boolean(Number(r.paid_after)), paidWithin7: Boolean(Number(r.paid_within7)) }));
+  return { rows: paywallImpact(facts, now), windowDays: 120 };
+}
+
+async function apps(now: number) {
+  const real = realFamilies();
+  const since = now - 30 * DAY;
+  const rows = await query<{ web: number; android: number; ios: number }>(
+    `SELECT COALESCE(f.app_web_at, 0) >= ? AS web, COALESCE(f.app_android_at, 0) >= ? AS android, COALESCE(f.app_ios_at, 0) >= ? AS ios
+     FROM families f WHERE ${real.sql}`,
+    [since, since, since, ...real.args],
+  );
+  const use: AppUse[] = rows.map((r) => ({ web: Boolean(Number(r.web)), android: Boolean(Number(r.android)), ios: Boolean(Number(r.ios)) }));
+  return { ...appMix(use), windowDays: 30 };
+}
+
 /** One part of the insights. */
 export async function insight(part: InsightPart, now = Date.now()) {
   switch (part) {
@@ -287,5 +317,9 @@ export async function insight(part: InsightPart, now = Date.now()) {
       return { generatedAt: now, ...(await content(now)) };
     case "sources":
       return { generatedAt: now, ...(await sources(now)) };
+    case "paywall":
+      return { generatedAt: now, ...(await paywall(now)) };
+    case "apps":
+      return { generatedAt: now, ...(await apps(now)) };
   }
 }
