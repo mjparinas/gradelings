@@ -15,7 +15,8 @@ import type { Course, FrameworkId, Unit } from "./types";
 // short hash of each unit's text, its standard and its questions at fixed seeds. Units are shared between frameworks, so a
 // change to one unit can change several frameworks at once: the lock files make that visible in the pull request. When a
 // change is intended, run `npm run curriculum:lock` and commit the new locks. The same run records each grade's download
-// size per framework (locks/sizes/<id>.json); a download that grows by more than SIZE_SLACK fails until the sizes are re-recorded.
+// size per framework (locks/sizes/<id>.json); a download that grows by more than SIZE_SLACK fails until the sizes are re-recorded,
+// and a recorded size is left alone while the real one is within SIZE_SLACK of it (so most changes touch no sizes file).
 // It also keeps locks/dates/<id>.json: the day each unit, course and set of guides last changed, which the sitemap and the
 // public pages' structured data give search engines. A date moves only when that part's lock entry changes.
 
@@ -182,7 +183,15 @@ describe("curriculum locks", () => {
   it("records each grade's download size, and no download has grown unnoticed", () => {
     const actual = sizes();
     if (UPDATE) {
-      for (const [id, grades] of Object.entries(actual)) compare(`sizes/${id}.json`, grades, "");
+      // A recorded size is kept while the real one is still within SIZE_SLACK of it (either way), so a change to a shared
+      // grade file doesn't rewrite every framework's sizes file and conflict with the next pull request. Only a grade that
+      // is new, or whose download moved by more than the slack, is re-recorded.
+      for (const [id, grades] of Object.entries(actual)) {
+        const file = join(LOCKS, "sizes", `${id}.json`);
+        const old = existsSync(file) ? (JSON.parse(readFileSync(file, "utf8")) as Record<string, number>) : {};
+        const kept = Object.fromEntries(Object.entries(grades).map(([g, kb]) => [g, g in old && kb <= Math.ceil(old[g] * SIZE_SLACK) + 1 && kb >= Math.floor(old[g] / SIZE_SLACK) - 1 ? old[g] : kb]));
+        compare(`sizes/${id}.json`, kept, "");
+      }
       return;
     }
     const recorded = Object.fromEntries(

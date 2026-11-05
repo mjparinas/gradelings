@@ -1,5 +1,15 @@
+import { readdirSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { defineConfig } from "vitest/config";
+
+// Pure logic tests in src/lib (no DOM, no mocks, no stubbed globals, no timers, no storage) can share workers like the content
+// tests do: a worker per file spent about a minute of an 8-minute run just starting up. A test that needs anything below is
+// picked out here by its text and keeps its own worker, so adding such a test needs no config change.
+const libDir = fileURLToPath(new URL("./src/lib", import.meta.url));
+const needsOwnWorker = /vi\.(mock|doMock|stubGlobal|stubEnv|spyOn|useFakeTimers|setSystemTime|resetModules|unmock)|jsdom|process\.env|globalThis|indexedDB|localStorage|sessionStorage|\bwindow\b|\bdocument\b|navigator|vi\.hoisted|loadGrade|loadMoreLessons|loadStories|fetch\b|Date\.now\s*=|Math\.random\s*=/;
+const sharedLib = readdirSync(libDir)
+  .filter((f) => f.endsWith(".test.ts") && !needsOwnWorker.test(readFileSync(`${libDir}/${f}`, "utf8")))
+  .map((f) => `src/lib/${f}`);
 
 const alias = {
   "@": fileURLToPath(new URL("./src", import.meta.url)),
@@ -35,13 +45,24 @@ export default defineConfig({
         },
       },
       {
+        // Pure logic tests in src/lib (see sharedLib above).
+        resolve: { alias },
+        test: {
+          name: "lib",
+          include: sharedLib,
+          setupFiles: ["./src/test/setup.ts"],
+          testTimeout,
+          isolate: false,
+        },
+      },
+      {
         // Component, server and page tests mock modules and use the DOM, so each file keeps its own worker.
         // Component tests opt in to jsdom with `// @vitest-environment jsdom`; everything else stays in node.
         resolve: { alias },
         test: {
           name: "app",
           include: ["src/**/*.test.{ts,tsx}"],
-          exclude: ["src/content/**"],
+          exclude: ["src/content/**", ...sharedLib],
           setupFiles: ["./src/test/setup.ts"],
           testTimeout,
         },

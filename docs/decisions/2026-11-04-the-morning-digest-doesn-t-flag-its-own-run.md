@@ -1,0 +1,3 @@
+# The morning digest doesn't flag its own run
+
+**The morning digest doesn't flag its own run** (November 4, 2026): the digest is sent from inside the daily job, so it saw that run as "still running or stopped" and listed "Daily email job (needs a look)" every day. A run that began under 15 minutes ago and hasn't finished is "Running now" (ok) and the job is judged by the run before it (`JOB_RUNNING_MS` in `src/server/systemHealth.ts`). Backups (no restore practice recorded, or over 35 days old) and Settings (a recommended setting missing) are real warnings that the admin System tab shows too; clear them there, don't hide them from the digest.
