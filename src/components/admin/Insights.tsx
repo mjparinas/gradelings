@@ -143,11 +143,11 @@ export function Insights() {
               <Stat label="Trials that ended" value={num(t.curve.overall.families)} sub={`${num(t.curve.overall.paid)} paid`} />
               <Stat label="Trial to paid" value={pct(t.curve.overall.rate)} sub={small(t.curve.overall.families) || "of those trials"} />
             </Stats>
-            <Table caption="Paid by days practised in the trial" head={["Days practised", "Families", "Paid", "Rate"]} rows={bucketRows(t.curve.byPractice)} />
-            <Table caption="Paid by whether something would lock" head={["Group", "Families", "Paid", "Rate"]} rows={bucketRows(t.curve.byLock)} />
+            <Table caption="Paid by days practised in the trial" head={["Days practised", "Trials", "Paid", "Rate"]} rows={bucketRows(t.curve.byPractice)} />
+            <Table caption="Paid by whether something would lock" head={["Group", "Trials", "Paid", "Rate"]} rows={bucketRows(t.curve.byLock)} />
             <Table
               caption="Paid by sign-up week (trials that have ended)"
-              head={["Week of", "Families", "Paid", "Rate"]}
+              head={["Week of", "Trials", "Paid", "Rate"]}
               rows={t.weeks.map((w) => [w.label, num(w.families), num(w.paid), pct(w.rate)])}
             />
             <h4 className="mt-6 text-lg font-bold">After the Trial</h4>
@@ -175,7 +175,7 @@ export function Insights() {
               <Stat label="Median day paid" value={r.medianDaysAfterTrial === null ? "—" : `${r.medianDaysAfterTrial > 0 ? "+" : ""}${r.medianDaysAfterTrial}`} sub="days from the trial's end" />
               <Stat label="Refund rate" value={pct(r.refundRate)} sub={`${num(r.refunded)} of ${num(r.payments)} payments`} />
             </Stats>
-            <Table caption="When they first paid" head={["Timing", "Families"]} rows={r.timing.map((x) => [x.label, num(x.n)])} />
+            <Table caption="When they first paid" head={["Timing", "Customers"]} rows={r.timing.map((x) => [x.label, num(x.n)])} />
             <p className="mt-2 max-w-3xl text-sm text-ink-soft">Failed-payment recovery isn&apos;t tracked yet: Stripe&apos;s history of a payment going past due and coming back isn&apos;t stored.</p>
           </>
         )}
