@@ -27,6 +27,8 @@ export interface SessionInfo {
   mfaAt: number | null;
   /** Whether the account has two-step sign-in turned on. */
   twoFactor: boolean;
+  /** True for the account that made the family. A second adult (false) can't touch billing, codes, other adults or deleting the family. */
+  owner: boolean;
 }
 
 export async function hashPassword(password: string): Promise<string> {
@@ -140,8 +142,8 @@ export function readCookieToken(req: Request): string {
 export async function getSession(req: Request, opts: { student?: boolean } = {}): Promise<SessionInfo | null> {
   const token = readCookie(req, COOKIE);
   if (!token) return null;
-  const rows = await query<{ parent_id: string; family_id: string; expires_at: number; created_at: number; mfa_at: number | null; email: string; email_verified_at: number | null; role: string; totp_enabled_at: number | null }>(
-    `SELECT s.parent_id, s.family_id, s.expires_at, s.created_at, s.mfa_at, p.email, p.email_verified_at, p.role, p.totp_enabled_at FROM sessions s JOIN parents p ON p.id = s.parent_id WHERE s.token_hash = ?`,
+  const rows = await query<{ parent_id: string; family_id: string; expires_at: number; created_at: number; mfa_at: number | null; email: string; email_verified_at: number | null; role: string; totp_enabled_at: number | null; family_role: string | null }>(
+    `SELECT s.parent_id, s.family_id, s.expires_at, s.created_at, s.mfa_at, p.email, p.email_verified_at, p.role, p.totp_enabled_at, p.family_role FROM sessions s JOIN parents p ON p.id = s.parent_id WHERE s.token_hash = ?`,
     [sha(token)],
   );
   const row = rows[0];
@@ -149,7 +151,7 @@ export async function getSession(req: Request, opts: { student?: boolean } = {})
   const student = row.role === "student";
   if (student && !opts.student) return null;
   const verifiedAt = row.email_verified_at == null ? null : Number(row.email_verified_at);
-  return { parentId: row.parent_id, familyId: row.family_id, email: row.email, verified: verifiedAt != null, student, createdAt: Number(row.created_at), verifiedAt, mfaAt: row.mfa_at == null ? null : Number(row.mfa_at), twoFactor: row.totp_enabled_at != null };
+  return { parentId: row.parent_id, familyId: row.family_id, email: row.email, verified: verifiedAt != null, student, createdAt: Number(row.created_at), verifiedAt, mfaAt: row.mfa_at == null ? null : Number(row.mfa_at), twoFactor: row.totp_enabled_at != null, owner: row.family_role !== "adult" };
 }
 
 export async function endSession(req: Request): Promise<void> {

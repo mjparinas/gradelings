@@ -14,6 +14,7 @@ import { syncNow } from "@/lib/sync";
 import { Dialog } from "../ui";
 import { GoogleButton, useGoogleError } from "../GoogleButton";
 import { emailChoice, emailPatch, type EmailChoice, type EmailPrefs } from "@/lib/settingChoices";
+import { AdultsPanel } from "./Adults";
 import { Choice, PageTitle, Panel } from "./common";
 import { ParentPin } from "./ParentPin";
 import { PrivacyPanels } from "./Privacy";
@@ -385,11 +386,16 @@ export function AccountPage({ onBilling }: { onBilling: (b: BillingInfo | null) 
             </Panel>
           )}
           {account && <SecurityPanel />}
+          {account && !account.student && <AdultsPanel />}
           <ParentPin />
           <PrivacyPanels />
           {account && (
             <Panel title="Delete account">
-              <p className="mb-3 font-read text-ink-soft">Permanently deletes your account and all progress stored on our servers, and clears this device.</p>
+              <p className="mb-3 font-read text-ink-soft">
+                {account.adult
+                  ? "Deletes your own sign-in and clears this device. The family's children and their progress stay with the person who made the account."
+                  : "Permanently deletes your account and all progress stored on our servers, and clears this device."}
+              </p>
               <button type="button" className="rounded-xl border border-[#e57a12] px-4 py-2 font-semibold text-nudge-dark" onClick={() => setConfirmDelete(true)}>
                 Delete my account…
               </button>

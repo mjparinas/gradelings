@@ -8,6 +8,7 @@ export async function POST(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
   const session = await getSession(req);
   if (!session) return error(401, "Please sign in first.");
+  if (!session.owner) return error(403, "Codes are entered by the person who made the family account.");
   if (!(await isFlagOn("redeem-codes", session.familyId))) return error(503, "Codes can't be used just now. Please try again later.");
   // Codes are long and random, but limit guessing anyway: per account and per address.
   if ((await rateLimited(`redeem:${session.familyId}`, 10, 60 * 60_000)) || (await rateLimited(`redeem-ip:${clientIp(req)}`, 30, 60 * 60_000))) {

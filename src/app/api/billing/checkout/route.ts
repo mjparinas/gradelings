@@ -9,6 +9,7 @@ export async function POST(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
   const session = await getSession(req);
   if (!session) return error(401, "Please sign in first.");
+  if (!session.owner) return error(403, "Billing is managed by the person who made the family account.");
   if (!session.verified) return error(403, "Please confirm your email first. We sent a link when you signed up; you can ask for another under Account.");
   if (!stripeConfigured()) return error(503, "Payments aren't set up yet.");
   const body = ((await readJson(req)) ?? {}) as { interval?: string };

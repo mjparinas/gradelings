@@ -15,6 +15,7 @@ export const EMAIL_KINDS = {
   "class-digest": "Monday class email",
   "class-inactive": "Class inactivity warning",
   "class-invite": "Co-teacher invitation",
+  "family-invite": "Second adult invitation",
   consent: "US parental consent",
   admin: "Sent from the admin panel",
   billing: "Payment problem notice",

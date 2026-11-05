@@ -9,6 +9,7 @@ export async function POST(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
   const session = await getSession(req);
   if (!session) return error(401, "Please sign in first.");
+  if (!session.owner) return error(403, "Billing is managed by the person who made the family account.");
   const body = ((await readJson(req)) ?? {}) as { action?: string; interval?: string };
   const now = Date.now();
   if (body.action === "cancel") {

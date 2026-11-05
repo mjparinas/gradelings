@@ -465,6 +465,16 @@ const SCHEMA = [
     created_at INTEGER
   )`,
   `CREATE INDEX IF NOT EXISTS unsub_tokens_parent ON unsub_tokens (parent_id)`,
+  // A family owner's invitation to a second adult. Only the SHA-256 of the token is kept; the invitation names an email, expires and is used once.
+  `CREATE TABLE IF NOT EXISTS family_invites (
+    token_hash TEXT PRIMARY KEY,
+    family_id TEXT NOT NULL,
+    email TEXT NOT NULL,
+    invited_by TEXT NOT NULL,
+    created_at INTEGER NOT NULL,
+    expires_at INTEGER NOT NULL
+  )`,
+  `CREATE INDEX IF NOT EXISTS family_invites_family ON family_invites (family_id)`,
   // That a locked part (a unit the free plan keeps closed, or a members-only part of the reports) was shown to a family's
   // device: when first and last, and on how many days. Family-level only, for the admin panel's paywall numbers.
   `CREATE TABLE IF NOT EXISTS paywall_seen (
@@ -517,6 +527,9 @@ const PARENT_COLUMNS: [string, string][] = [
   ["totp_pending", "TEXT"],
   ["totp_enabled_at", "INTEGER"],
   ["totp_last_step", "INTEGER"],
+  // 'owner' for the account that made the family (and pays), 'adult' for a second grown-up the owner invited
+  // (src/server/familyAdults.ts). An adult sees and manages the children but not billing, codes or deleting the family.
+  ["family_role", "TEXT NOT NULL DEFAULT 'owner'"],
 ];
 
 /** Which province's curriculum a class assigns units from, and its inactivity-retention state. */

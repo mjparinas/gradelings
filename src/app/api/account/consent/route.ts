@@ -18,5 +18,5 @@ export async function POST(req: Request) {
   else if (body?.agree === true) await recordConsent(session.familyId, "email-plus", session.email, appOrigin(req));
   else return error(400, "Please tick the box to agree.");
   const fresh = await getFamilyRow(session.familyId);
-  return json({ family: toFamilyInfo(fresh!, session.email, session.verified) });
+  return json({ family: toFamilyInfo(fresh!, session.email, session.verified, false, !session.owner) });
 }
