@@ -395,7 +395,7 @@
       "ny-g5-columbian-exchange text=d1e9c8a03f std=4f6a5d2611 q=625d765c55",
       "tx-g5-growing-nation text=481f3e4633 std=4b482f977a q=535a8221ac",
       "ca-g5-westward text=50c4e7b9be std=a3ae5e10c8 q=659ed16382",
-      "ca-g8-divided-nation text=d7d0c32f41 std=9c5d7dc9c6 q=15ef8274da",
+      "ca-g8-divided-nation text=d7d0c32f41 std=9c5d7dc9c6 q=1308ba94ab",
       "ma-g4-first-peoples text=6c46b4e0a1 std=b35931e088 q=d41937c7c5",
       "ma-g4-us-regions text=aebf4d1b89 std=a31a380a9f q=f490813227"
     ]
@@ -827,16 +827,16 @@
   "9/social": {
     "overview": "4b2807a64a",
     "units": [
-      "ca-g8-revolutionary-ideas text=543eb450c3 std=4ecb7d359d q=4a5af23c80",
+      "ca-g8-revolutionary-ideas text=543eb450c3 std=4ecb7d359d q=1bdb99ec2b",
       "wa-g5-road-to-revolution text=a11f358f51 std=c4839ec087 q=2aba492c38",
       "wa-g5-revolution text=61cc174b3f std=15ea256fd3 q=183c2fe968",
       "wa-g5-constitution text=4fce7c7602 std=657a9764b5 q=2d1d2c254b",
-      "ca-g8-early-republic text=333777247e std=4356b129d9 q=2a27a181ff",
+      "ca-g8-early-republic text=333777247e std=4356b129d9 q=e3e0adfeda",
       "wa-g8-westward text=1972f22db2 std=36e0c1ca88 q=8fbee01b9a",
       "wa-g8-industry-reform text=11ff8e526a std=b13dcacba1 q=74fb1c42a2",
-      "ca-g8-divided-nation text=d7d0c32f41 std=21dc78edb3 q=15ef8274da",
+      "ca-g8-divided-nation text=d7d0c32f41 std=21dc78edb3 q=1308ba94ab",
       "ca-g8-civil-war text=01b158a689 std=6ac5b3d570 q=538b60ca99",
-      "ca-g8-industrial-america text=59fae20492 std=631d8e3828 q=a19df580ed",
+      "ca-g8-industrial-america text=59fae20492 std=631d8e3828 q=14f2ec92f7",
       "ny-g8-workers-progressives text=03eeff0222 std=0aab051e44 q=781d4434ec",
       "ny-g8-expansion-empire text=231ab34b20 std=33f6b9ed5b q=3f36b6e0f8",
       "ny-g8-world-war-i text=27e8a6ecc9 std=bda7ad882f q=b50f9bc37b",

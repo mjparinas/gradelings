@@ -1,6 +1,14 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
 import { copyOf, from } from "./kit";
+import {
+  ANTEBELLUM_MORE,
+  CONSTITUTION_AT_WORK_MORE,
+  EARLY_REPUBLIC_MORE,
+  FREEDOM_CHANGE_MORE,
+  INDUSTRIAL_MORE,
+  REVOLUTION_IDEAS_MORE,
+} from "./social-g8-more";
 import { G8 as WASHINGTON } from "../../washington/units/social-59-g8";
 
 // California social studies, Grade 8: the United States to 1914. Washington's and Oregon's units are copied without
@@ -804,7 +812,7 @@ export const SOCIAL_8: Unit[] = [
       "8.7.1; 8.7.2; 8.7.4; 8.9.1; 8.9.2; 8.9.3; 8.9.4; 8.9.5; 8.9.6",
       "the South's economy and slavery, free Black Americans, the abolition movement, and the compromises and conflicts over slavery's spread",
     ],
-    items: ANTEBELLUM,
+    items: [...ANTEBELLUM, ...ANTEBELLUM_MORE],
   }),
   bankUnit({
     id: "ca-g8-industrial-america",
@@ -817,7 +825,7 @@ export const SOCIAL_8: Unit[] = [
       "8.12.1; 8.12.2; 8.12.3; 8.12.4; 8.12.5; 8.12.6; 8.12.7; 8.12.8; 8.12.9",
       "the transformation of the economy after the Civil War: industry, federal Indian policy, business, immigration and cities, labor, farmers' movements and inventors",
     ],
-    items: INDUSTRIAL,
+    items: [...INDUSTRIAL, ...INDUSTRIAL_MORE],
   }),
   bankUnit({
     id: "ca-g8-revolutionary-ideas",
@@ -830,7 +838,7 @@ export const SOCIAL_8: Unit[] = [
       "8.1.1; 8.1.3; 8.1.4; 8.2.5; 8.3.1",
       "the Great Awakening and revolutionary fervor, the Revolution's effect on other nations, the nation's blend of political traditions, the Statute for Religious Freedom, and the state constitutions of 1777 to 1781",
     ],
-    items: REVOLUTION_IDEAS_8,
+    items: [...REVOLUTION_IDEAS_8, ...REVOLUTION_IDEAS_MORE],
   }),
   bankUnit({
     id: "ca-g8-constitution-at-work",
@@ -843,7 +851,7 @@ export const SOCIAL_8: Unit[] = [
       "8.3.2; 8.3.3; 8.3.6; 8.3.7",
       "the land ordinances, a common market among the states, the law-making process and citizen participation, and a free press",
     ],
-    items: CONSTITUTION_AT_WORK_8,
+    items: [...CONSTITUTION_AT_WORK_8, ...CONSTITUTION_AT_WORK_MORE],
   }),
   bankUnit({
     id: "ca-g8-early-republic",
@@ -856,7 +864,7 @@ export const SOCIAL_8: Unit[] = [
       "8.4.3; 8.4.4; 8.5.3; 8.6.7",
       "the rise of capitalism and its conflicts, art, music and literature of the early nation, treaties with American Indian nations under the first four presidents, and transcendentalism and individualism",
     ],
-    items: EARLY_REPUBLIC_8,
+    items: [...EARLY_REPUBLIC_8, ...EARLY_REPUBLIC_MORE],
   }),
   bankUnit({
     id: "ca-g8-freedom-and-change",
@@ -869,6 +877,6 @@ export const SOCIAL_8: Unit[] = [
       "8.6.4; 8.7.3; 8.8.3; 8.11.2",
       "free Black communities in the North, white Southern society, pioneer women in the West, and the movement of former slaves to Northern cities and the West",
     ],
-    items: FREEDOM_CHANGE_8,
+    items: [...FREEDOM_CHANGE_8, ...FREEDOM_CHANGE_MORE],
   }),
 ];
