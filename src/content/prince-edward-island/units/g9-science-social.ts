@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { ACTION_MORE, CITIZEN_MORE, GLOBALIZATION_MORE, INFORMATION_MORE, SETTLEMENT_MORE, SUSTAIN_MORE, THINKING_MORE } from "./g9-social-more";
 
 // Grade 9 science and social studies, Prince Edward Island: sustainability of ecosystems, what good science looks like,
 // and the Grade 9 social studies "Global Connections" units (geographic thinking, geographical information, settlement
@@ -329,7 +330,7 @@ export const peGeographicThinking9 = bankUnit({
   parentNote:
     "Practises the disciplinary thinking used throughout Grade 9 social studies: what makes a place significant, how people and the environment affect each other, continuity and change, and weighing implications.",
   standards: ["DT1; DT2; DT3; DT4", "the geographic thinking skills of significance, cause and effect, continuity and change, and implications"],
-  items: GEOGRAPHIC_THINKING,
+  items: [...GEOGRAPHIC_THINKING, ...THINKING_MORE],
 });
 
 export const peGeographicInformation9 = bankUnit({
@@ -340,7 +341,7 @@ export const peGeographicInformation9 = bankUnit({
   parentNote:
     "Practises analysing geographical information with geographical tools such as maps, graphs and data tables, and communicating it clearly.",
   standards: ["SCO1; SCO2", "analysing geographical information with maps, graphs and data, and sharing it clearly"],
-  items: GEOGRAPHIC_INFORMATION,
+  items: [...GEOGRAPHIC_INFORMATION, ...INFORMATION_MORE],
 });
 
 export const peSettlementPatterns9 = bankUnit({
@@ -351,7 +352,7 @@ export const peSettlementPatterns9 = bankUnit({
   parentNote:
     "Practises how natural and human factors influence where people settle, and how settlement patterns look on a map.",
   standards: ["SCO3", "how natural and human factors influence settlement patterns"],
-  items: SETTLEMENT_PATTERNS,
+  items: [...SETTLEMENT_PATTERNS, ...SETTLEMENT_MORE],
 });
 
 export const peSustainabilitySocial9 = bankUnit({
@@ -362,7 +363,7 @@ export const peSustainabilitySocial9 = bankUnit({
   parentNote:
     "Practises the factors that contribute to environmental issues and ways that individuals and communities can become more sustainable.",
   standards: ["SCO5; SCO6", "factors behind environmental issues and ways to become more sustainable"],
-  items: SUSTAINABILITY_SOCIAL,
+  items: [...SUSTAINABILITY_SOCIAL, ...SUSTAIN_MORE],
 });
 
 export const peGlobalization9 = bankUnit({
@@ -372,7 +373,7 @@ export const peGlobalization9 = bankUnit({
   blurb: "A connected world",
   parentNote: "Practises the benefits and challenges of globalization, past and present, and its effect on culture.",
   standards: ["SCO7; SCO8", "benefits and challenges of globalization, and its impact on culture"],
-  items: GLOBALIZATION,
+  items: [...GLOBALIZATION, ...GLOBALIZATION_MORE],
 });
 
 export const peGlobalCitizenship9 = bankUnit({
@@ -383,7 +384,7 @@ export const peGlobalCitizenship9 = bankUnit({
   parentNote:
     "Practises the factors behind global inequalities, the link between human rights and globalization, and how to analyse current issues from several points of view.",
   standards: ["SCO9; SCO10; SCO11", "global inequalities, universal human rights and current issues seen from many perspectives"],
-  items: GLOBAL_CITIZENSHIP,
+  items: [...GLOBAL_CITIZENSHIP, ...CITIZEN_MORE],
 });
 
 export const peSocialAction9 = bankUnit({
@@ -394,7 +395,7 @@ export const peSocialAction9 = bankUnit({
   parentNote:
     "Practises how people affect societal change locally and globally, and how to plan action on an issue using the concepts of geographical thinking.",
   standards: ["SCO12; SCO13", "ways people create change, and planning action on a local or global issue"],
-  items: SOCIAL_ACTION,
+  items: [...SOCIAL_ACTION, ...ACTION_MORE],
 });
 
 // DT1 and DT2: the physical features that make places significant, and how climate and people affect each other.
