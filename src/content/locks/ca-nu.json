@@ -462,8 +462,8 @@
   "5/social": {
     "overview": "1ebed1b010",
     "units": [
-      "nu-land-claim-5 text=763ab2ae18 std=0090208bab q=1d3d4cff39",
-      "nu-wayfinding-5 text=473247f788 std=898d8a9119 q=00c42bfeca",
+      "nu-land-claim-5 text=763ab2ae18 std=0090208bab q=b6cebfc5f5",
+      "nu-wayfinding-5 text=473247f788 std=898d8a9119 q=acf0214c57",
       "mb-history-skills-5 text=f3324a2d72 std=3824b64806 q=3eb55f7c94",
       "mb-respectful-talk-5 text=71a00cc969 std=f43eac6252 q=7bc4d74370",
       "making-laws text=d16e9a0e8b std=ad2a4a8177 q=78db584c15",
@@ -549,7 +549,7 @@
   "6/social": {
     "overview": "1ebed1b010",
     "units": [
-      "nu-governing-6 text=4895ae77ab std=6eccc52352 q=33ecdcc99f",
+      "nu-governing-6 text=4895ae77ab std=6eccc52352 q=0a87ba6031",
       "mb-fairness-and-respect text=d77ed7ea9b std=94cdc92312 q=3ac375d6ce",
       "inquiry-6 text=66a2b7f908 std=b24e71447f q=484d6ef20b",
       "cities-and-migration text=7cab62633f std=2a593d19d6 q=94adb1b304",
@@ -641,8 +641,8 @@
   "7/social": {
     "overview": "1ebed1b010",
     "units": [
-      "nu-circumpolar-7 text=d02d561cbc std=1cba843167 q=8720157762",
-      "nu-iq-in-practice-7 text=55435571aa std=43b167aa5e q=e166f976af",
+      "nu-circumpolar-7 text=d02d561cbc std=1cba843167 q=189fbc81bd",
+      "nu-iq-in-practice-7 text=55435571aa std=43b167aa5e q=fcd2f37e26",
       "mb-7-working-together text=898f2e650b std=f5b1c48a9b q=8c753eb23b",
       "landforms-processes-7 text=3cca4be029 std=f6034c1244 q=f2812fdbed",
       "sk-democracy-7 text=109082b62b std=1a175ce8f3 q=c2d8439f06"
@@ -808,9 +808,9 @@
   "9/social": {
     "overview": "1ebed1b010",
     "units": [
-      "nu-governing-9 text=765a0630d5 std=b07a199d4d q=9f33a6a220",
-      "nu-land-claim-9 text=d23ec86ed4 std=58880df484 q=fc7ef01e5e",
-      "nu-circumpolar-9 text=a5469de50e std=3c49c3a7c6 q=a9d1c81be0",
+      "nu-governing-9 text=765a0630d5 std=b07a199d4d q=d43758e910",
+      "nu-land-claim-9 text=d23ec86ed4 std=58880df484 q=62514378c4",
+      "nu-circumpolar-9 text=a5469de50e std=3c49c3a7c6 q=29c2eb5e15",
       "nu-population-data-9 text=6d444beed6 std=45442e8fee q=4a35e73e9f",
       "population-issues-9 text=b5e7899c1d std=581ddf7339 q=a62dc487a7"
     ]

@@ -9,4 +9,4 @@
 
 ## Social studies depth
 
-Grades 3, 4 and 8 social studies units have extra practice banks in `src/content/nunavut/units/social-deeper.ts` (territory, Inuit Qaujimajatuqangit, languages, regions and communities, making Nunavut). Inuktut words and the IQ items were written without Inuit review; community review is pending. Grades 5, 6, 7 and 9 are still near 30 items per unit.
+Grades 3, 4 and 8 social studies units have extra practice banks in `src/content/nunavut/units/social-deeper.ts` (territory, Inuit Qaujimajatuqangit, languages, regions and communities, making Nunavut). Grades 5, 6, 7 and 9 (land claim, wayfinding, governing, circumpolar world, IQ in practice, land claim institutions) have the same in `social-deeper-g5-g9.ts`, about 43 questions per unit. Inuktut words and the IQ items were written without Inuit review; community review is pending. Grades 5, 6, 7 and 9 are still near 30 items per unit.
