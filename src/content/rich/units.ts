@@ -23,17 +23,29 @@ export const RICH: Record<string, GradeRich> = {
     "language/word-jobs": q.wordJobs,
     "language/sentence-smarts": q.sentenceBuild,
     "math/multiplication": q.multiplyMistake,
+    "math/fractions": q.fractionWords,
     "science/grouping-living-things": q.mammals,
   },
   g4: {
     "language/parts-of-speech": q.partsOfSpeech,
     "math/times-tables": q.timesTableMultiples,
     "math/equations": q.oneStepMistake,
+    "math/fractions": q.equalFractions,
+    "math/decimals": q.decimalFractions,
     "science/phase-changes": q.phaseChanges,
   },
   g5: {
     "language/verb-tenses": q.verbTenses,
     "math/equivalent-fractions": q.equivalentFill,
+    "math/decimals": q.biggerDecimals,
   },
-  g6: { "math/equations": q.twoStepMistake },
+  g6: {
+    "math/equations": q.twoStepMistake,
+    "math/mixed-numbers-and-ratios": q.mixedNumberMistake,
+    "math/percents-and-budgets": q.percentFractions,
+  },
+  g7: {
+    "math/fractions-decimals-percents": q.fractionDecimals,
+    "math/integer-add-subtract": q.integerLineMistake,
+  },
 };

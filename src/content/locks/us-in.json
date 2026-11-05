@@ -269,7 +269,7 @@
       "add-subtract-1000 text=abcc5b81ab std=0b092c3b67 q=ebf0b5c179",
       "multiplication text=7016aa3933 std=63b80f500e q=249bc57054",
       "division text=bbe2ad47e7 std=b6db054998 q=aa74a94c19",
-      "fractions text=f6af4c5918 std=812fd388f0 q=7875833e1e",
+      "fractions text=f6af4c5918 std=812fd388f0 q=06970f9aa3",
       "patterns-and-equations text=38e948b1ed std=8401da24b1 q=32db6b6541",
       "measuring text=46348de0e3 std=2d2c073103 q=62d407b771",
       "time text=b4e7404035 std=27ffcae0d3 q=150c2972a2",
@@ -343,8 +343,8 @@
     "units": [
       "numbers-to-10000 text=6b18002946 std=6b083a999f q=0c95306c0b",
       "multiply-divide text=64281bfafd std=b9c481ec7a q=3036a902e9",
-      "fractions text=35fc876177 std=0e8ee76fef q=9ea0b54c2a",
-      "decimals text=ccaab39e33 std=4c877359c7 q=503916ff7a",
+      "fractions text=35fc876177 std=0e8ee76fef q=5112e846a4",
+      "decimals text=ccaab39e33 std=4c877359c7 q=039b7ff1c4",
       "patterns-and-tables text=223238d646 std=771bd2dc37 q=3c0880cdc8",
       "polygons-and-perimeter text=1f1f7acbfe std=188cc250c7 q=0ca495ff7c",
       "fractions-4 text=0e102ed1c5 std=cabd810fc8 q=61419c0a19",
@@ -420,7 +420,7 @@
     "units": [
       "divide text=8852642ad6 std=917341f264 q=55ed922eee",
       "equivalent-fractions text=cf635b163a std=69f536b5bd q=937dbe7300",
-      "decimals text=5aeaecae0c std=0b84249c29 q=df303e4d1a",
+      "decimals text=5aeaecae0c std=0b84249c29 q=5335794b27",
       "mb-mental-math-5 text=d109457dda std=dee2b2386b q=ca9e0eeb41",
       "wa-g5-conversions text=88f9478a3b std=1543187f8d q=93c01b2ebc",
       "wa-g5-coordinates text=1aa95047d3 std=b9fe4ed47c q=d163d8de21",
@@ -496,7 +496,7 @@
     "overview": "8cd74f6957",
     "units": [
       "facts-and-factors text=8f9365a330 std=6e4df87414 q=ceb9f65a75",
-      "percents-and-budgets text=136c6c6ae5 std=571d14b6a1 q=99bdc2230a",
+      "percents-and-budgets text=136c6c6ae5 std=571d14b6a1 q=75b08d5346",
       "patterns-and-graphs text=dab33ccdd4 std=e09d1ae989 q=dfa60e317e",
       "equations text=5c61d003c6 std=4ed590668b q=16e4656f8c",
       "perimeter-and-area text=44afdbe788 std=043dd140b7 q=a0bb87355d",
@@ -577,9 +577,9 @@
   "7/math": {
     "overview": "3aa0712136",
     "units": [
-      "integer-add-subtract text=0f49d1bba6 std=56047d9d17 q=688da6d68b",
+      "integer-add-subtract text=0f49d1bba6 std=56047d9d17 q=1e24134b03",
       "decimal-operations text=56ab979d6a std=6b1788ed5c q=7f89d319c6",
-      "fractions-decimals-percents text=12d27e2a2e std=85813824f5 q=720141998e",
+      "fractions-decimals-percents text=12d27e2a2e std=85813824f5 q=1030c5dd8d",
       "two-step-equations text=ddaa3cce54 std=d339b0f004 q=4d67a1e779",
       "circles text=9910166981 std=7c2545e447 q=2f9fffb18b",
       "volume text=edb22b36a3 std=19701f0c65 q=609393c28a",
