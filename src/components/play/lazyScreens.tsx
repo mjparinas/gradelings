@@ -55,6 +55,7 @@ export const RhymeLibrary = lazyScreen(() => rhymes().then((m) => m.RhymeLibrary
 export const RhymeReader = lazyScreen(() => rhymes().then((m) => m.RhymeReader));
 export const ExploreLibrary = lazyScreen(() => explore().then((m) => m.ExploreLibrary));
 export const ExploreReader = lazyScreen(() => explore().then((m) => m.ExploreReader));
+export const StoryProblems = lazyScreen(() => import("./StoryProblems").then((m) => m.StoryProblems));
 export const Room = lazyScreen(() => import("./Room").then((m) => m.Room));
 export const Shop = lazyScreen(() => import("./Shop").then((m) => m.Shop));
 export const SneakPeek = lazyScreen(() => import("./SneakPeek").then((m) => m.SneakPeek));
