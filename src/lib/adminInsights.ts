@@ -361,3 +361,68 @@ export function signupSources(facts: SignupFact[]) {
     regions: by((f) => f.framework ?? "none", (k) => (k === "none" ? "No child added yet" : k)).slice(0, 12),
   };
 }
+
+// ---------- Which app families use ----------
+
+/** Which kinds of app one family synced from in the last 30 days. */
+export interface AppUse {
+  web: boolean;
+  android: boolean;
+  ios: boolean;
+}
+
+export function appMix(families: AppUse[]) {
+  const active = families.filter((f) => f.web || f.android || f.ios);
+  const count = (pick: (f: AppUse) => boolean) => {
+    const n = active.filter(pick).length;
+    return { n, share: rate(n, active.length) };
+  };
+  return {
+    active: active.length,
+    web: count((f) => f.web),
+    android: count((f) => f.android),
+    ios: count((f) => f.ios),
+    // A family that uses a store app and the web counts in both, so the shares add up to more than 100%.
+    storeApp: count((f) => f.android || f.ios),
+    storeOnly: count((f) => (f.android || f.ios) && !f.web),
+  };
+}
+
+// ---------- When a locked part was shown ----------
+
+export const PAYWALL_LABELS: Record<string, string> = {
+  "locked-unit": "A child opened a unit the free plan keeps closed",
+  "members-reports": "A grown-up saw a members-only part of the reports",
+};
+
+export interface PaywallFamily {
+  kind: string;
+  firstAt: number;
+  /** Paid at any time after first seeing it. */
+  paidAfter: boolean;
+  /** Paid within 7 days of first seeing it. */
+  paidWithin7: boolean;
+}
+
+export function paywallImpact(rows: PaywallFamily[], now: number) {
+  const kinds = [...new Set(rows.map((r) => r.kind))];
+  return kinds
+    .map((kind) => {
+      const mine = rows.filter((r) => r.kind === kind);
+      // Only families that first saw it at least 7 days ago have had the whole week to subscribe.
+      const matured = mine.filter((r) => r.firstAt <= now - 7 * DAY);
+      const within = matured.filter((r) => r.paidWithin7).length;
+      const after = mine.filter((r) => r.paidAfter).length;
+      return {
+        kind,
+        label: PAYWALL_LABELS[kind] ?? kind,
+        families: mine.length,
+        matured: matured.length,
+        paidWithin7: within,
+        paidWithin7Rate: rate(within, matured.length),
+        paidAfter: after,
+        paidAfterRate: rate(after, mine.length),
+      };
+    })
+    .sort((a, b) => b.families - a.families);
+}

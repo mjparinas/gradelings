@@ -1,6 +1,8 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
+import { useEffect, useSyncExternalStore } from "react";
+import { reportPaywallSeen } from "@/lib/appSignals";
+import { useStore } from "@/lib/store";
 import { SUBSCRIBE_HREF } from "@/lib/plan";
 import { isStoreApp } from "@/lib/twa";
 import { Dialog } from "../ui";
@@ -11,6 +13,10 @@ const noSubscribe = () => () => {};
 /** Shown when a child opens something the free plan doesn't include. Kids can't buy; a grown-up subscribes from the parent area. */
 export function MembershipLock({ open, onClose }: { open: boolean; onClose: () => void }) {
   const inStoreApp = useSyncExternalStore(noSubscribe, isStoreApp, () => false);
+  const signedIn = useStore((s) => Boolean(s.family.account));
+  useEffect(() => {
+    if (open) reportPaywallSeen("locked-unit", signedIn);
+  }, [open, signedIn]);
   return (
     <Dialog open={open} title="Ask a grown-up" onClose={onClose}>
       <div className="mb-4 flex justify-center">
