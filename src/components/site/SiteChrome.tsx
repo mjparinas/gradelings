@@ -151,6 +151,7 @@ export function SiteFooter({ build }: { /** A build line such as "Build 3f9a1c2"
             { label: "Parent guides", href: "/guides/" },
             { label: "Math facts practice", href: "/math-facts/" },
             { label: "Worksheets", href: "/worksheets/" },
+            { label: "Help at home", href: "/help-at-home/" },
             { label: "Compare apps", href: "/compare/" },
             { label: "Pricing", href: "/pricing/" },
           ]}
