@@ -299,11 +299,11 @@
     "overview": "0717d4b119",
     "units": [
       "ny-g3-globes-and-maps text=2d930f5588 std=8670de2048 q=7becb7a790",
-      "mb-global-communities text=fdc10e0b47 std=5859363fb4 q=a05e20d345",
+      "mb-global-communities text=fdc10e0b47 std=5859363fb4 q=faf830a84e",
       "ny-g3-culture text=31f8c6dcc1 std=c8fbabeb8c q=ed4ddf3452",
       "ny-g3-trade text=e9671f4b33 std=1ba9324885 q=7164350409",
       "ny-g3-governments-rights text=0f98a251ba std=73600805b1 q=cb19239eaa",
-      "mb-ask-and-find text=5e266ff8ca std=65d2488ec3 q=b527a35006",
+      "mb-ask-and-find text=5e266ff8ca std=65d2488ec3 q=ed1bb10ee9",
       "ar-g3-land-regions text=857c5e21be std=5f3fecebae q=b10dac6bc4",
       "ar-g3-rivers-resources text=311e584fe5 std=ea804d7bb0 q=9dcdbf026e",
       "ar-g3-government text=758356bbda std=fe2b9a200a q=010a0d9bc4",
@@ -695,10 +695,10 @@
   "8/social": {
     "overview": "684c38dfe1",
     "units": [
-      "tx-g8-divided-nation text=7d2a3275f0 std=1909bcdff6 q=0d2be14919",
+      "tx-g8-divided-nation text=7d2a3275f0 std=1909bcdff6 q=71564b579b",
       "wa-g8-civil-war text=f9c859e052 std=29f9cb63e3 q=958ab14484",
       "or-g8-reconstruction text=693a3316b8 std=43bd4e2550 q=4c87f1ca5f",
-      "ca-g8-industrial-america text=e3d798938c std=0151ceeb59 q=a19df580ed",
+      "ca-g8-industrial-america text=e3d798938c std=0151ceeb59 q=14f2ec92f7",
       "ny-g8-workers-progressives text=03eeff0222 std=f187c5ca7d q=781d4434ec",
       "ny-g8-expansion-empire text=231ab34b20 std=5706e2c79e q=3f36b6e0f8",
       "ny-g8-world-war-i text=27e8a6ecc9 std=6e6fc37b7f q=b50f9bc37b",
@@ -773,17 +773,17 @@
   "9/social": {
     "overview": "1e2f0ce8b7",
     "units": [
-      "ca-g9-foundations text=7e73500361 std=7598e9c870 q=366cc13a3d",
+      "ca-g9-foundations text=7e73500361 std=7598e9c870 q=88c273c390",
       "ca-g9-forms-of-government text=47a5b003ba std=bb050fc9eb q=46e402dbc2",
       "me-g9-us-government text=b2b1785d0f std=f0993d453c q=70fdf0e3c3",
       "tx-g9-rights text=924c2250fc std=dde38262d7 q=992013aede",
-      "ca-g9-media text=67bc186bc5 std=2e51f4d927 q=d8967e0b75",
+      "ca-g9-media text=67bc186bc5 std=2e51f4d927 q=0fc3f3ad1e",
       "ca-g9-civic-action text=7ff067ec0c std=16970d30d6 q=c1c8ac6d15",
       "ar-g9-arkansas-government text=c41e6bd131 std=7316d164c5 q=6c3a8da1d1",
       "ar-g9-three-branches text=42d00d23ed std=3dcfcabda0 q=e91a2ea5ec",
       "ar-g9-elections text=4a90d25637 std=bb3c29b4c9 q=a907f76a86",
       "ar-g9-lawmaking text=cd150642fd std=623e345453 q=7f12d441b6",
-      "ar-g9-supreme-court text=54df1fe008 std=5fdad4b049 q=edbd7373b6"
+      "ar-g9-supreme-court text=54df1fe008 std=5fdad4b049 q=ca2cdb2199"
     ]
   },
   "9/spanish": {

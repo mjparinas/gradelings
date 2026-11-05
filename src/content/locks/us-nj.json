@@ -308,8 +308,8 @@
     "overview": "3bb123eeff",
     "units": [
       "meeting-needs text=40a76a9522 std=79fa42b08e q=3ac35931e2",
-      "mb-global-communities text=fdc10e0b47 std=44c3cd7d5c q=a05e20d345",
-      "mb-working-together text=37a3eb9cfb std=8f9d1a49c7 q=2cd3b963a8",
+      "mb-global-communities text=fdc10e0b47 std=44c3cd7d5c q=faf830a84e",
+      "mb-working-together text=37a3eb9cfb std=8f9d1a49c7 q=c53402c2aa",
       "or-g2-world-maps text=8a70a67868 std=783f870e13 q=f54db7af64",
       "nj-g3-new-jersey-land text=998800910e std=b3ea1e5de3 q=47b22ed4da",
       "nj-g3-communities text=e15d0bea97 std=4b08df089e q=fa61bfc49b",
@@ -825,9 +825,9 @@
   "9/social": {
     "overview": "b3f0220284",
     "units": [
-      "ca-g9-foundations text=7e73500361 std=eba4315aed q=366cc13a3d",
+      "ca-g9-foundations text=7e73500361 std=eba4315aed q=88c273c390",
       "ca-g9-civic-action text=7ff067ec0c std=fd651ba95d q=c1c8ac6d15",
-      "ca-g9-media text=67bc186bc5 std=c132c31291 q=d8967e0b75",
+      "ca-g9-media text=67bc186bc5 std=c132c31291 q=0fc3f3ad1e",
       "nj-g9-governing-new-jersey text=df8f348d7a std=d7f36bf1d4 q=05ffc30ab3",
       "nj-g9-us-government text=7fc665a7aa std=1f7a183e31 q=0803c01c6f",
       "nj-g9-personal-finance text=3cd052be69 std=f0263e949d q=d41af634b9",

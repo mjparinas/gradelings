@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { CITIZEN_DEEP, GROUPS_DEEP } from "./g3-social-deeper";
 
 // Grade 3 social studies, Connecting and Belonging: citizenship (3-KC-001 to 3-KC-004) and groups, leaders and
 // getting along (3-KP-032 to 3-KP-034, 3-S-101).
@@ -42,7 +43,7 @@ export const citizenship = bankUnit({
   parentNote:
     "Practises what it means to be a citizen of Canada: examples of rights and responsibilities, the national anthem in English and French (and sometimes a local Indigenous language), and Remembrance Day as a time to think about peace and war.",
   standards: ["3-KC-001, 3-KC-002, 3-KC-003, 3-KC-004, 3-VP-011", "citizenship, rights and responsibilities, the national anthem and Remembrance Day"],
-  items: CITIZEN,
+  items: [...CITIZEN, ...CITIZEN_DEEP],
 });
 
 const GROUPS: Q[] = [
@@ -84,5 +85,5 @@ export const groups = bankUnit({
   parentNote:
     "Practises formal and informal leadership, fair group decisions, peaceful ways of solving conflicts and what to do about bullying, including respect for the teachings of Elders and community members.",
   standards: ["3-KP-032, 3-KP-033, 3-KP-034, 3-VC-002, 3-VP-011A, 3-S-101", "leadership in groups, resolving conflict and dealing with bullying"],
-  items: GROUPS,
+  items: [...GROUPS, ...GROUPS_DEEP],
 });

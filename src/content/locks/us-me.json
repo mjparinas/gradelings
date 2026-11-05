@@ -286,8 +286,8 @@
     "overview": "e8ad6e7cc9",
     "units": [
       "meeting-needs text=40a76a9522 std=12f1c40b30 q=3ac35931e2",
-      "mb-global-communities text=fdc10e0b47 std=dd9f1b0d66 q=a05e20d345",
-      "mb-working-together text=37a3eb9cfb std=a023ec01fc q=2cd3b963a8",
+      "mb-global-communities text=fdc10e0b47 std=dd9f1b0d66 q=faf830a84e",
+      "mb-working-together text=37a3eb9cfb std=a023ec01fc q=c53402c2aa",
       "me-g3-maine-land text=ad1bc4a8fa std=0fcce8afa0 q=9e870dfe77",
       "me-g3-town-and-state text=56d28bbe92 std=031c89a0d0 q=30b9d39f4d",
       "me-g3-many-communities text=6f34fa2293 std=87b666e9e4 q=3388f0142c"
@@ -732,9 +732,9 @@
   "9/social": {
     "overview": "608c032c66",
     "units": [
-      "ca-g9-foundations text=7e73500361 std=af35df3cba q=366cc13a3d",
+      "ca-g9-foundations text=7e73500361 std=af35df3cba q=88c273c390",
       "ca-g9-civic-action text=7ff067ec0c std=b4a9fe4376 q=c1c8ac6d15",
-      "ca-g9-media text=67bc186bc5 std=34e90b28e7 q=d8967e0b75",
+      "ca-g9-media text=67bc186bc5 std=34e90b28e7 q=0fc3f3ad1e",
       "me-g9-governing-maine text=85ddefd753 std=1442ad37c5 q=b8b168b4fb",
       "me-g9-us-government text=b2b1785d0f std=8fb806f568 q=70fdf0e3c3",
       "me-g9-personal-finance text=f88dcf17a6 std=599a08d61f q=16138475e0",

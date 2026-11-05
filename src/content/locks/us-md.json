@@ -305,8 +305,8 @@
     "overview": "51d71df7da",
     "units": [
       "meeting-needs text=40a76a9522 std=86531b2e20 q=3ac35931e2",
-      "mb-global-communities text=fdc10e0b47 std=6b984c3e40 q=a05e20d345",
-      "mb-working-together text=37a3eb9cfb std=a4fae621bb q=2cd3b963a8",
+      "mb-global-communities text=fdc10e0b47 std=6b984c3e40 q=faf830a84e",
+      "mb-working-together text=37a3eb9cfb std=a4fae621bb q=c53402c2aa",
       "md-g3-maryland-economy text=c2fac68f16 std=7865e75fa3 q=a79046d731",
       "md-g3-maryland-land text=e0fd59f5fa std=9d11dc8cfe q=0ad92b6a84",
       "md-g3-maryland-government text=2ae52a8112 std=7b81b7d3a8 q=ebbe4ba371",
@@ -715,9 +715,9 @@
   "8/social": {
     "overview": "e71ca7fb90",
     "units": [
-      "ca-g8-revolutionary-ideas text=543eb450c3 std=fc474036d9 q=4a5af23c80",
+      "ca-g8-revolutionary-ideas text=543eb450c3 std=fc474036d9 q=1bdb99ec2b",
       "or-g8-founding-ideas text=6fa3d530b3 std=bc5126d34e q=83494b4253",
-      "ca-g8-constitution-at-work text=570053022e std=82c28d58b4 q=aa72f4ae5f",
+      "ca-g8-constitution-at-work text=570053022e std=82c28d58b4 q=bde16fe66b",
       "wa-g8-bill-of-rights text=edcc86640b std=9391f4f9c5 q=6898ac27d5",
       "ca-g8-industry-reform text=8cfcde45ec std=5d25e8e75c q=7b6a2b6d3d",
       "wa-g8-civil-war text=f9c859e052 std=96e409bb19 q=958ab14484",
@@ -821,9 +821,9 @@
   "9/social": {
     "overview": "c86faff982",
     "units": [
-      "ca-g9-foundations text=7e73500361 std=7667cef714 q=366cc13a3d",
+      "ca-g9-foundations text=7e73500361 std=7667cef714 q=88c273c390",
       "ca-g9-civic-action text=7ff067ec0c std=7aaad5181a q=c1c8ac6d15",
-      "ca-g9-media text=67bc186bc5 std=ea6b896ab5 q=d8967e0b75",
+      "ca-g9-media text=67bc186bc5 std=ea6b896ab5 q=0fc3f3ad1e",
       "md-g9-governing-maryland text=6eca7b83a6 std=0c821fa07a q=f73f889f5a",
       "md-g9-courts-and-rights text=d99df3ac72 std=30ccfdc3d1 q=73400564af",
       "md-g9-us-government text=6b5b7ceeb0 std=d2934a0551 q=6cef27b27d",

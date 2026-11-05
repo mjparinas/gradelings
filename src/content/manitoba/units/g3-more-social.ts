@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { FIND_DEEP, IDENTITY_DEEP, LAND_DEEP, PEOPLE_DEEP, TEAM_DEEP, THINK_DEEP } from "./g3-social-deeper";
 
 // More Grade 3 social studies: identities (3-KI-007, 3-KI-007A, 3-KI-007F, 3-VI-004), the land (3-KL-019, 3-VL-005, 3-VL-006,
 // 3-VL-006A, 3-S-103), people and places (3-VG-010, 3-VE-012, 3-KI-009A), working together (3-S-100, 3-S-102, 3-S-104, 3-S-400,
@@ -40,7 +41,7 @@ export const identity = bankUnit({
   parentNote:
     "Practises factors that shape identity (culture, language, place, groups and communities, arts and media), describing a First Nations, Métis, Inuit or francophone community in general terms, and showing interest in the ways of life of other communities.",
   standards: ["3-KI-007, 3-KI-007A, 3-KI-007F, 3-VI-004", "factors that shape identity, personal community connections and interest in other cultures"],
-  items: IDENTITY,
+  items: [...IDENTITY, ...IDENTITY_DEEP],
 });
 
 const LAND: Q[] = [
@@ -79,7 +80,7 @@ export const land = bankUnit({
   parentNote:
     "Practises how people live on and with the land in different places, valuing what the land provides, appreciating the variety of natural environments, and making choices that care for the environment. Many First Nations, Métis and Inuit communities see living with the land as sacred; this unit stays general and respectful.",
   standards: ["3-KL-019, 3-VL-005, 3-VL-006, 3-VL-006A, 3-S-103", "diverse ways of living with the land, valuing and caring for the environment"],
-  items: LAND,
+  items: [...LAND, ...LAND_DEEP],
 });
 
 const PEOPLE: Q[] = [
@@ -118,7 +119,7 @@ export const people = bankUnit({
   parentNote:
     "Practises valuing what individuals contribute to their communities, our connections to people elsewhere in the world, and the idea of respectful protocols in Indigenous cultures, which differ from community to community.",
   standards: ["3-VE-012, 3-VG-010, 3-KI-009A", "valuing contributions, connections to communities elsewhere and respectful protocols"],
-  items: PEOPLE,
+  items: [...PEOPLE, ...PEOPLE_DEEP],
 });
 
 const TEAM: Q[] = [
@@ -157,7 +158,7 @@ export const team = bankUnit({
   parentNote:
     "Practises group skills: sharing ideas, decisions and responsibilities, being fair and respectful, considering other people's views, listening actively and choosing ways to present information.",
   standards: ["3-S-100, 3-S-102, 3-S-104, 3-S-400, 3-S-403", "collaborating, interacting fairly, listening to perspectives and presenting information"],
-  items: TEAM,
+  items: [...TEAM, ...TEAM_DEEP],
 });
 
 const FIND: Q[] = [
@@ -196,7 +197,7 @@ export const findOut = bankUnit({
   parentNote:
     "Practises the first steps of social studies research: gathering information from oral, visual, material, print and electronic sources, organizing and recording it in charts and maps, naming sources, choosing tools and forming research questions.",
   standards: ["3-S-200, 3-S-201, 3-S-203, 3-S-300", "gathering and recording information, using tools and forming research questions"],
-  items: FIND,
+  items: [...FIND, ...FIND_DEEP],
 });
 
 const THINK: Q[] = [
@@ -236,5 +237,5 @@ export const think = bankUnit({
   parentNote:
     "Practises telling fact from opinion, drawing conclusions from evidence, supporting an opinion with a reason, changing ideas with new information, and weighing advantages and disadvantages of solutions.",
   standards: ["3-S-301, 3-S-302, 3-S-303, 3-S-304, 3-S-402", "advantages and disadvantages, conclusions from evidence, revising ideas, fact and opinion and supporting ideas"],
-  items: THINK,
+  items: [...THINK, ...THINK_DEEP],
 });

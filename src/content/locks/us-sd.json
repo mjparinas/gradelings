@@ -480,7 +480,7 @@
       "ca-g5-slavery-and-resistance text=75582d2903 std=0b557248b4 q=2ffe26deae",
       "ca-g8-civil-war text=01b158a689 std=0685910db1 q=538b60ca99",
       "or-g8-reconstruction text=90b606a220 std=63f74e52c7 q=4c87f1ca5f",
-      "ca-g8-industrial-america text=59fae20492 std=630f505c2c q=a19df580ed",
+      "ca-g8-industrial-america text=59fae20492 std=630f505c2c q=14f2ec92f7",
       "ny-g8-city-immigrants text=404df69c6c std=c7cbcd02b1 q=7c69f670c0",
       "sd-g5-dakota-territory text=c5dd37c4f0 std=cf9dd7b898 q=9136a7c137"
     ]
@@ -648,7 +648,7 @@
       "ca-g5-thirteen-colonies text=b2ab7c1f74 std=1140d09b55 q=9a9a2e4720",
       "ca-g5-revolution text=ef5fd4d37f std=9fd1b757cd q=8de8201d9a",
       "ca-g8-founding-ideals text=c6cb5590e8 std=a73ae9083a q=26fd931b32",
-      "ca-g8-constitution-at-work text=570053022e std=a553fb3b4c q=aa72f4ae5f",
+      "ca-g8-constitution-at-work text=570053022e std=a553fb3b4c q=bde16fe66b",
       "ca-g9-three-branches text=439ea561c4 std=281f02e023 q=4b4a891d5e",
       "ca-g8-westward text=0f5e5bb604 std=0cb0d97f41 q=fb25eccecb",
       "ca-g8-civil-war text=01b158a689 std=36d98d640f q=538b60ca99",
@@ -731,7 +731,7 @@
   "8/social": {
     "overview": "5a7c6e27e8",
     "units": [
-      "ca-g8-industrial-america text=e3d798938c std=3caa55bdba q=a19df580ed",
+      "ca-g8-industrial-america text=e3d798938c std=3caa55bdba q=14f2ec92f7",
       "ny-g8-workers-progressives text=03eeff0222 std=8ad97b95a4 q=781d4434ec",
       "ny-g8-world-war-i text=27e8a6ecc9 std=ff91d20548 q=b50f9bc37b",
       "ny-g8-roaring-twenties text=3119d7f8d8 std=27b40d97e5 q=e9c1aa2909",
@@ -841,16 +841,16 @@
   "9/social": {
     "overview": "e837f2d926",
     "units": [
-      "ca-g9-foundations text=7e73500361 std=46695b30f6 q=366cc13a3d",
+      "ca-g9-foundations text=7e73500361 std=46695b30f6 q=88c273c390",
       "ca-g9-three-branches text=439ea561c4 std=73eaeed5c0 q=4b4a891d5e",
       "ca-g9-rights text=593eeeff61 std=a674a40c89 q=064d36f990",
-      "ca-g9-supreme-court text=d497c2ea6b std=4d41d44601 q=5b4496ce00",
+      "ca-g9-supreme-court text=d497c2ea6b std=4d41d44601 q=0110fb9ee8",
       "ca-g9-elections text=2e075ddbe7 std=45b7f76d86 q=3a9cee2d15",
-      "ca-g9-citizens-and-society text=38d1323b68 std=bee58cc597 q=0cff828e06",
-      "ca-g9-dictatorship-democracy text=98ddf5cd16 std=46257a5aa9 q=7bb3553944",
+      "ca-g9-citizens-and-society text=38d1323b68 std=bee58cc597 q=8510077a72",
+      "ca-g9-dictatorship-democracy text=98ddf5cd16 std=46257a5aa9 q=cde1f59fc7",
       "ca-g9-forms-of-government text=47a5b003ba std=407f1585b9 q=46e402dbc2",
       "ca-g9-lawmaking text=2a409ee163 std=4989a249f3 q=83325c4e69",
-      "ca-g9-media text=67bc186bc5 std=af0c04fa7c q=d8967e0b75",
+      "ca-g9-media text=67bc186bc5 std=af0c04fa7c q=0fc3f3ad1e",
       "pa-g9-foreign-policy text=b348a17deb std=e07824f734 q=fb77c5203c",
       "sd-g9-governing-south-dakota text=0d622c3ff0 std=27f3478643 q=1036b40a0c"
     ]

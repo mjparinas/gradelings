@@ -30,7 +30,7 @@ describe("Treasures", () => {
     inBand("little", <Treasures />);
     expect(screen.getByRole("heading", { name: /My Treasures/ })).toBeInTheDocument();
     const links = screen.getAllByRole("link");
-    expect(links.map((a) => a.getAttribute("href"))).toEqual(["#/stickers", "#/trophies", "#/room", "#/shop", "#/map"]);
+    expect(links.map((a) => a.getAttribute("href"))).toEqual(["#/stickers", "#/trophies", "#/room", "#/shop", "#/break", "#/map"]);
     expect(screen.getByRole("link", { name: /Trophies/ })).toHaveTextContent("2");
     expect(screen.getByRole("link", { name: /Shop/ })).toHaveTextContent("🪙 120");
   });
@@ -45,7 +45,13 @@ describe("Treasures", () => {
   it("leaves out the screens the admin switched off", () => {
     h.off = new Set(["sticker-book", "my-room", "shop"]);
     inBand("little", <Treasures />);
-    expect(screen.getAllByRole("link").map((a) => a.getAttribute("href"))).toEqual(["#/trophies", "#/map"]);
+    expect(screen.getAllByRole("link").map((a) => a.getAttribute("href"))).toEqual(["#/trophies", "#/break", "#/map"]);
+  });
+
+  it("leaves out Brain Break when its flag is off", () => {
+    h.off = new Set(["brain-breaks"]);
+    inBand("little", <Treasures />);
+    expect(screen.getAllByRole("link").map((a) => a.getAttribute("href"))).not.toContain("#/break");
   });
 
   it("goes back home from the chest", () => {

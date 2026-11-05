@@ -820,12 +820,12 @@
   "9/social": {
     "overview": "a16ecbec8d",
     "units": [
-      "ca-g9-foundations text=7e73500361 std=d7e5a6213a q=366cc13a3d",
+      "ca-g9-foundations text=7e73500361 std=d7e5a6213a q=88c273c390",
       "ca-g9-civic-action text=7ff067ec0c std=415da360de q=c1c8ac6d15",
-      "ca-g9-media text=67bc186bc5 std=1a54bb394b q=d8967e0b75",
-      "az-g8-citizens-and-society text=1d389d98ec std=e76bd4b158 q=7042d3ca45",
+      "ca-g9-media text=67bc186bc5 std=1a54bb394b q=0fc3f3ad1e",
+      "az-g8-citizens-and-society text=1d389d98ec std=e76bd4b158 q=86c2bdcfef",
       "ga-g9-criminal-justice text=1bb7de6760 std=4bf928a0a8 q=1b89a45ae0",
-      "ca-g9-dictatorship-democracy text=98ddf5cd16 std=3760ed0534 q=7bb3553944",
+      "ca-g9-dictatorship-democracy text=98ddf5cd16 std=3760ed0534 q=cde1f59fc7",
       "mt-g9-governing-montana text=66c88db856 std=513ab4b751 q=51028043a7",
       "mt-g9-us-government text=82a80278e2 std=e64c5f7eb7 q=4e355aa854",
       "mt-g9-economics text=d47e615c90 std=8fdd01c9e2 q=64e38ed9f3"

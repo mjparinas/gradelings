@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { RIGHTS_ROLES_DEEP, IDENTITY_DEEP, TREATIES_DEEP, PLACES_DEEP } from "./g8-g9-social-deeper";
 
 // Grade 9 social studies, New Brunswick: governance, rights, identities and migration, treaties, and places and people.
 // Wabanaki and treaty content is light and in the present tense.
@@ -176,7 +177,7 @@ export const rightsRoles = bankUnit({
   parentNote:
     "Practises the Canadian Charter of Rights and Freedoms, the rights, responsibilities, roles and status of individuals and groups in Canada, and how citizens take part. It follows the Grade 9 social studies skill descriptors on rights, responsibilities and civic engagement in the New Brunswick curriculum.",
   standards: ["Civics: Rights and Responsibilities, Civics: Civic Engagement", "persistent issues involving rights, responsibilities, roles and status, and actions that show citizenship"],
-  items: RIGHTS_ROLES,
+  items: [...RIGHTS_ROLES, ...RIGHTS_ROLES_DEEP],
 });
 
 export const identityMigration = bankUnit({
@@ -187,7 +188,7 @@ export const identityMigration = bankUnit({
   parentNote:
     "Practises various perceptions of identities in Canada and the impact of migration and immigration on those identities. It follows the Grade 9 social studies skill descriptors on history in the New Brunswick curriculum.",
   standards: ["History: Events and Peoples", "various perceptions of identities in Canada and the impact of migration and immigration"],
-  items: IDENTITY,
+  items: [...IDENTITY, ...IDENTITY_DEEP],
 });
 
 export const treatyRelationships = bankUnit({
@@ -198,7 +199,7 @@ export const treatyRelationships = bankUnit({
   parentNote:
     "Practises key issues involving treaty relationships in Canada, including the Peace and Friendship treaties, the Numbered Treaties, modern treaties and reconciliation. The content is light and in the present tense. It follows the Grade 9 social studies skill descriptor on treaty education in the New Brunswick curriculum.",
   standards: ["Wabanaki: Treaty Education", "key issues involving treaty relationships in Canada"],
-  items: TREATIES,
+  items: [...TREATIES, ...TREATIES_DEEP],
 });
 
 export const placesAndPeople = bankUnit({
@@ -209,5 +210,5 @@ export const placesAndPeople = bankUnit({
   parentNote:
     "Practises the effect of human settlement on place over time and living conditions for groups in Canada. It follows the Grade 9 social studies skill descriptors on human systems and on economics and sustainability in the New Brunswick curriculum.",
   standards: ["Geography: Human Systems and Interactions, Economics: Sustainability", "the effect of human settlement on place over time, and living conditions for groups in Canada"],
-  items: PLACES,
+  items: [...PLACES, ...PLACES_DEEP],
 });
