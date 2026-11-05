@@ -44,11 +44,15 @@ export interface LiveForTeacher {
   answers: { profileId: string; choice: string; correct: boolean }[];
   /** What "Next question" will ask, for the teacher to look at first. Null when the unit has nothing else. */
   next?: LiveQuestionData | null;
+  /** Students heard from before who have since gone quiet or said they were leaving. Shown quietly on the desks. */
+  away?: string[];
 }
 
 /** How often a child's device asks for a live question: quickly while one is open, slowly otherwise. */
 export const LIVE_POLL_OPEN_MS = 3_000;
 export const LIVE_POLL_IDLE_MS = 12_000;
+/** A student whose device hasn't asked for a question in this long shows as away on the teacher's desks (idle polls are 12 s apart). */
+export const LIVE_AWAY_AFTER_MS = 30_000;
 /** How often the teacher's screen refreshes the answers while a question is open. */
 export const LIVE_POLL_TEACHER_MS = 2_500;
 
@@ -79,10 +83,11 @@ export function liveRecapText(items: LiveForTeacher[], names: Map<string, string
 
 export type DeskState = "waiting" | "right" | "wrong";
 
-/** Each student's desk for the open question: white until they answer, then green or red. */
-export function liveDesks(students: { profileId: string; name: string }[], answers: { profileId: string; correct: boolean }[]): { profileId: string; name: string; state: DeskState }[] {
+/** Each student's desk for the open question: white until they answer, then green or red; `away` is a separate, quiet flag. */
+export function liveDesks(students: { profileId: string; name: string }[], answers: { profileId: string; correct: boolean }[], away: string[] = []): { profileId: string; name: string; state: DeskState; away: boolean }[] {
   const byProfile = new Map(answers.map((a) => [a.profileId, a.correct]));
-  return students.map((s) => ({ ...s, state: !byProfile.has(s.profileId) ? "waiting" : byProfile.get(s.profileId) ? "right" : "wrong" }));
+  const gone = new Set(away);
+  return students.map((s) => ({ ...s, state: !byProfile.has(s.profileId) ? "waiting" : byProfile.get(s.profileId) ? "right" : "wrong", away: gone.has(s.profileId) }));
 }
 
 /** Whole-number percentages of the class (everyone counts, answered or not). Zero for an empty class. */

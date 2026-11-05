@@ -19,6 +19,12 @@ describe("liveDesks and livePercents", () => {
     expect(desks.map((d) => d.state)).toEqual(["right", "wrong", "waiting", "waiting"]);
     expect(livePercents(desks)).toEqual({ right: 25, wrong: 25, waiting: 50 });
   });
+  it("flags away students without changing their desk state or the percentages", () => {
+    const desks = liveDesks(students, [{ profileId: "a", correct: true }], ["a", "c", "nobody"]);
+    expect(desks.map((d) => d.away)).toEqual([true, false, true, false]);
+    expect(desks.map((d) => d.state)).toEqual(["right", "waiting", "waiting", "waiting"]);
+    expect(livePercents(desks)).toEqual({ right: 25, wrong: 0, waiting: 75 });
+  });
   it("handles an empty class", () => {
     expect(livePercents([])).toEqual({ right: 0, wrong: 0, waiting: 0 });
   });

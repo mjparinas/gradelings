@@ -44,4 +44,22 @@ describe("the device's live poll", () => {
     await act(() => vi.advanceTimersByTimeAsync(60_000));
     expect(fetchMock).toHaveBeenCalledTimes(3);
   });
+
+  it("tells the server when the tab is hidden or the page closes, and only then", async () => {
+    const beacon = vi.fn((url: string, data?: BodyInit) => Boolean(url || data));
+    Object.defineProperty(navigator, "sendBeacon", { configurable: true, value: beacon });
+    const live = renderHook(() => useLiveQuestion());
+    await act(() => vi.advanceTimersByTimeAsync(0));
+    expect(beacon).not.toHaveBeenCalled();
+    Object.defineProperty(document, "visibilityState", { configurable: true, value: "hidden" });
+    document.dispatchEvent(new Event("visibilitychange"));
+    expect(beacon).toHaveBeenCalledTimes(1);
+    expect(beacon.mock.calls[0]?.[0]).toBe("/api/live/");
+    window.dispatchEvent(new Event("pagehide"));
+    expect(beacon).toHaveBeenCalledTimes(2);
+    Object.defineProperty(document, "visibilityState", { configurable: true, value: "visible" });
+    live.unmount();
+    window.dispatchEvent(new Event("pagehide"));
+    expect(beacon).toHaveBeenCalledTimes(2);
+  });
 });

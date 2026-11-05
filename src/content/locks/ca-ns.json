@@ -230,7 +230,7 @@
     "units": [
       "then-and-now text=adcb461d8f std=cdf36218bf q=ae17feafab",
       "ns-community-change-2 text=c3a5db157e std=c7e25a26fd q=eb68856c23",
-      "ns-contributions-2 text=0632d37b80 std=cbfd08ed3b q=4bbdeac06a",
+      "ns-contributions-2 text=0632d37b80 std=cbfd08ed3b q=83fd4c46a2",
       "needs-and-wants text=8192b43423 std=7e3a319fb0 q=d91ff3aeff",
       "ns-consumers-2 text=feadf6924e std=22de75921c q=8ce83945fd",
       "ns-sustainable-communities-2 text=65e9fc8a3f std=7a3d3388cd q=4e480a9cec"
@@ -297,10 +297,10 @@
     "overview": "954d346b6c",
     "units": [
       "maps-and-globes text=6a6a9ae26b std=d976b35f4c q=fd8314b02c",
-      "ns-atlantic-canada-3 text=f4abd6b02b std=540b1301aa q=663b32d8f7",
-      "ns-cultures-3 text=af1856f99e std=b265b765bc q=556f3c08d3",
+      "ns-atlantic-canada-3 text=f4abd6b02b std=540b1301aa q=a6d84a679e",
+      "ns-cultures-3 text=af1856f99e std=b265b765bc q=9eaa0ed489",
       "mb-groups-and-leaders text=990b1bdfbd std=b1e058f94b q=35d1447b68",
-      "ns-democracy-3 text=0d7d64a4e6 std=9859490576 q=8857babc7f"
+      "ns-democracy-3 text=0d7d64a4e6 std=9859490576 q=61d37902bd"
     ]
   },
   "3/spanish": {
@@ -385,9 +385,9 @@
   "4/social": {
     "overview": "7f9eded9e4",
     "units": [
-      "ns-exploration-4 text=5bf2af3240 std=d9162af1d0 q=1f6e410d53",
-      "ns-explorers-4 text=0669095af9 std=029f0cc31b q=aec46c28cb",
-      "ns-exploration-impacts-4 text=78e0073526 std=cef7cbda50 q=3a4b7befc7",
+      "ns-exploration-4 text=5bf2af3240 std=d9162af1d0 q=8394d30be1",
+      "ns-explorers-4 text=0669095af9 std=029f0cc31b q=1fb83323c1",
+      "ns-exploration-impacts-4 text=78e0073526 std=cef7cbda50 q=790d4394ed",
       "environment-4 text=c995c5d534 std=b98ffddc4c q=223eb62473",
       "provinces-and-regions text=57d19f24c1 std=417d8b4b2a q=383103dd3d"
     ]
@@ -671,12 +671,12 @@
   "7/social": {
     "overview": "8ff23a44dd",
     "units": [
-      "ns-mikmaw-treaties-7 text=a1b0d3eefe std=e7f2881722 q=5501a6fc2d",
-      "ns-maritimes-history-7 text=4b6c4ea09d std=29674d55e5 q=7cd9256792",
-      "ns-political-change-7 text=4182c36d2b std=7774fa4c9f q=935872573e",
-      "ns-changing-society-7 text=ac74078204 std=b3cdb71040 q=a956b397ab",
-      "ns-world-war-1-7 text=7671f9a52a std=4457beea35 q=f1de46fc88",
-      "ns-communities-today-7 text=fc7a24e822 std=d36a418084 q=997dbb849d"
+      "ns-mikmaw-treaties-7 text=a1b0d3eefe std=e7f2881722 q=a3b078deac",
+      "ns-maritimes-history-7 text=4b6c4ea09d std=29674d55e5 q=033db32661",
+      "ns-political-change-7 text=4182c36d2b std=7774fa4c9f q=4e94ce8f19",
+      "ns-changing-society-7 text=ac74078204 std=b3cdb71040 q=db7f35e7ad",
+      "ns-world-war-1-7 text=7671f9a52a std=4457beea35 q=2b9e8d514a",
+      "ns-communities-today-7 text=fc7a24e822 std=d36a418084 q=86c42558de"
     ]
   },
   "7/spanish": {
@@ -766,12 +766,12 @@
   "8/social": {
     "overview": "773f2b0432",
     "units": [
-      "ns-indigenous-experiences-8 text=49bdcb2dcc std=08a5c35aa6 q=a6b523c79b",
-      "ns-equity-8 text=f6d81222bd std=0756fd65ca q=fd92a4108b",
-      "ns-changing-canada-8 text=62cc840d11 std=33aca7baf2 q=92e1dffe9a",
-      "ns-conflicts-8 text=50612231e1 std=6256df1109 q=cf8ca74049",
-      "ns-world-war-2-8 text=83d00d78f4 std=69a21ecbb9 q=fe12269d9e",
-      "ns-advocacy-8 text=0e068e64c4 std=8e69efbf16 q=7808be4690"
+      "ns-indigenous-experiences-8 text=49bdcb2dcc std=08a5c35aa6 q=15ca553bd5",
+      "ns-equity-8 text=f6d81222bd std=0756fd65ca q=83e9d33ff9",
+      "ns-changing-canada-8 text=62cc840d11 std=33aca7baf2 q=76e9d9d317",
+      "ns-conflicts-8 text=50612231e1 std=6256df1109 q=23cb788115",
+      "ns-world-war-2-8 text=83d00d78f4 std=69a21ecbb9 q=ca152cbe38",
+      "ns-advocacy-8 text=0e068e64c4 std=8e69efbf16 q=8f0f704467"
     ]
   },
   "8/spanish": {
@@ -861,13 +861,13 @@
   "9/social": {
     "overview": "f1bfa5947c",
     "units": [
-      "ns-citizen-rights-9 text=4cd87ff68c std=2b7959098b q=475015cdbf",
-      "ns-governance-9 text=74b23705fa std=c1060dd63f q=4e2efe1734",
-      "ns-lawmaking-9 text=5a70995586 std=dadf35bc4a q=919edcef6b",
-      "ns-digital-citizenship-9 text=55fa99b297 std=3a9514ac4e q=1932b9b9c7",
-      "ns-financial-citizenship-9 text=21a9783654 std=b659dcda6e q=c037b10744",
-      "ns-global-citizenship-9 text=e40557e5c6 std=7986a9cc2c q=e646972441",
-      "ns-engaged-citizenship-9 text=78648596ab std=d9a3dcf11c q=ebb9412bb9"
+      "ns-citizen-rights-9 text=4cd87ff68c std=2b7959098b q=deb550ee42",
+      "ns-governance-9 text=74b23705fa std=c1060dd63f q=f15e481a6d",
+      "ns-lawmaking-9 text=5a70995586 std=dadf35bc4a q=d5d4134f99",
+      "ns-digital-citizenship-9 text=55fa99b297 std=3a9514ac4e q=e8db33fffc",
+      "ns-financial-citizenship-9 text=21a9783654 std=b659dcda6e q=7e6d8e5b5f",
+      "ns-global-citizenship-9 text=e40557e5c6 std=7986a9cc2c q=839757c90e",
+      "ns-engaged-citizenship-9 text=78648596ab std=d9a3dcf11c q=8e202d350b"
     ]
   },
   "9/spanish": {
