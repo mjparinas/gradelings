@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { CHANGES_DEEP, FUTURE_DEEP, LAND_DEEP, MAKERS_DEEP, TECH_DEEP, WORK_DEEP } from "./k3-social-deeper";
 
 // Grade 2 science and social studies, Prince Edward Island. Indigenous content is light and needs review by Mi’kmaq
 // partners (for example the Mi’kmaq Confederacy of PEI) and the PEI Department of Education before launch. This file
@@ -353,7 +354,7 @@ export const peChangesInMyLife2 = bankUnit({
   blurb: "How I have changed and how I feel",
   parentNote: "Practises talking about changes in a child’s own life, such as starting school or a move, and the feelings that go with them.",
   standards: ["2.1.1", "describing changes in our lives and our reactions to them"],
-  items: CHANGES,
+  items: [...CHANGES, ...CHANGES_DEEP],
 });
 
 export const pePeopleWhoChangeThings2 = bankUnit({
@@ -363,7 +364,7 @@ export const pePeopleWhoChangeThings2 = bankUnit({
   blurb: "How people and groups change things",
   parentNote: "Practises how individuals and groups contribute to change, and how decisions made by diverse groups lead to change in a community.",
   standards: ["2.1.2; 2.1.3", "how individuals and groups contribute to change and how their decisions lead to change"],
-  items: MAKERS,
+  items: [...MAKERS, ...MAKERS_DEEP],
 });
 
 export const peOurFutureCommunity2 = bankUnit({
@@ -373,7 +374,7 @@ export const peOurFutureCommunity2 = bankUnit({
   blurb: "How our community might change",
   parentNote: "Practises predicting how a community might change in the future, and what children can do to help shape that future.",
   standards: ["2.1.4", "predicting how our community might change and how we can help"],
-  items: FUTURE,
+  items: [...FUTURE, ...FUTURE_DEEP],
 });
 
 export const peTechnology2 = bankUnit({
@@ -383,7 +384,7 @@ export const peTechnology2 = bankUnit({
   blurb: "Tools that help us, past and present",
   parentNote: "Practises the role of technology in our lives, how to judge whether it helps, and how people have changed technology over time to meet their needs.",
   standards: ["2.2.1; 2.2.2", "the role of technology in our lives and how it has changed over time"],
-  items: TECH,
+  items: [...TECH, ...TECH_DEEP],
 });
 
 export const peWorkAndPrices2 = bankUnit({
@@ -393,7 +394,7 @@ export const peWorkAndPrices2 = bankUnit({
   blurb: "How work and prices change",
   parentNote: "Introduces why prices go up or down when something is hard to find or easy to find, and how jobs and work have changed over time.",
   standards: ["2.3.2; 2.3.3", "how supply and demand affect price and how work has changed over time"],
-  items: WORK,
+  items: [...WORK, ...WORK_DEEP],
 });
 
 export const peChangingLand2 = bankUnit({
@@ -403,5 +404,5 @@ export const peChangingLand2 = bankUnit({
   blurb: "How the land and our care of it change",
   parentNote: "Practises how and why places change over time, how people’s use of the environment has changed, and why caring for resources for the future matters.",
   standards: ["2.4.1; 2.4.2; 2.4.3", "how places change, how people use the environment, and caring for it for the future"],
-  items: LAND,
+  items: [...LAND, ...LAND_DEEP],
 });
