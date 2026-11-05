@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { CONTRIB_MORE } from "./g2-social-more";
 
 // Grade 2 social studies: people who shaped communities, smart shopping and sustainable communities in Nova
 // Scotia. Indigenous, Acadian, African Nova Scotian and Gaelic content is light and factual, and needs community
@@ -42,7 +43,7 @@ export const contributions = bankUnit({
   parentNote:
     "Practises how Mi’kmaw, Acadian, African Nova Scotian, Gaelic and other communities and individuals brought change to Nova Scotia communities. It follows the Grade 2 outcome on individuals and cultural groups who contributed to change.",
   standards: ["Investigate how individuals and diverse cultural groups have contributed to change", "Learn how people and groups changed Nova Scotia communities"],
-  items: CONTRIB,
+  items: [...CONTRIB, ...CONTRIB_MORE],
 });
 
 const SHOP: Q[] = [

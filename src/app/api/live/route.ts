@@ -1,6 +1,6 @@
 import { error, getSession, json, readJson, sameOrigin } from "@/server/auth";
 import { isFlagOn } from "@/server/flags";
-import { answerLive, liveForChild } from "@/server/live";
+import { answerLive, liveForChild, recordPresence } from "@/server/live";
 import { timerForChild } from "@/server/classTimer";
 import { goalForChild } from "@/server/classGoal";
 import type { LiveForChild, LiveQuestionData } from "@/lib/live";
@@ -20,7 +20,9 @@ export async function GET(req: Request) {
   const profileId = params.get("profile") ?? "";
   const timerOnly = Boolean(params.get("timer"));
   if (!profileId) return json({ live: null, timer: null, goal: null });
-  const [liveOn, timerOn, goalOn] = await Promise.all([timerOnly ? false : isFlagOn("live-questions", session.familyId), isFlagOn("class-timer", session.familyId), timerOnly ? false : isFlagOn("class-goal", session.familyId)]);
+  const [liveOn, timerOn, goalOn, awayOn] = await Promise.all([timerOnly ? false : isFlagOn("live-questions", session.familyId), isFlagOn("class-timer", session.familyId), timerOnly ? false : isFlagOn("class-goal", session.familyId), timerOnly ? false : isFlagOn("live-away", session.familyId)]);
+  // A visible device just asked: the teacher's desks can show this student as here.
+  if (awayOn) await recordPresence(session.familyId, profileId, false);
   const [found, foundTimer, goal] = await Promise.all([liveOn ? liveForChild(session.familyId, profileId) : null, timerOn ? timerForChild(session.familyId, profileId) : null, goalOn ? goalForChild(session.familyId, profileId) : null]);
   const timer = foundTimer ? { ...foundTimer.timer, className: foundTimer.className } : null;
   if (timerOnly) return json({ timer });
@@ -36,7 +38,12 @@ export async function POST(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
   const session = await getSession(req, { student: true });
   if (!session) return error(401, "Not signed in");
-  const body = (await readJson(req)) as { questionId?: unknown; profileId?: unknown; choice?: unknown } | null;
+  const body = (await readJson(req)) as { questionId?: unknown; profileId?: unknown; choice?: unknown; leaving?: unknown } | null;
+  // `{ profileId, leaving: true }`: the device's tab was hidden or is closing (sent with sendBeacon).
+  if (body?.leaving === true) {
+    if (typeof body.profileId === "string" && (await isFlagOn("live-away", session.familyId))) await recordPresence(session.familyId, body.profileId, true);
+    return json({ ok: true });
+  }
   if (typeof body?.questionId !== "string" || typeof body.profileId !== "string" || typeof body.choice !== "string") return error(400, "Missing answer.");
   const result = await answerLive(session.familyId, body.profileId, body.questionId, body.choice);
   if (result === "invalid") return error(404, "Question not found");

@@ -4,6 +4,8 @@ import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
 const mocks = vi.hoisted(() => ({ call: vi.fn() }));
+// The extra insights have their own tests (Insights.test.tsx); here they would answer these mocks with the wrong shape.
+vi.mock("./Insights", () => ({ Insights: () => null }));
 vi.mock("@/lib/classroom", async (importOriginal) => {
   const actual = await importOriginal<typeof import("@/lib/classroom")>();
   return { ...actual, call: mocks.call };
