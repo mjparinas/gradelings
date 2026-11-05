@@ -235,6 +235,11 @@ const SCHEMA = [
     paused_left INTEGER,
     updated_at INTEGER NOT NULL
   )`,
+  // When a teacher last had a class's Live tab open, so students' devices look often while someone is there. A time only.
+  `CREATE TABLE IF NOT EXISTS class_presence (
+    class_id TEXT PRIMARY KEY,
+    seen_at INTEGER NOT NULL
+  )`,
   // A weekly question goal a teacher sets for the whole class: a target and the teacher's time zone offset, nothing about a child.
   `CREATE TABLE IF NOT EXISTS class_goals (
     class_id TEXT PRIMARY KEY,

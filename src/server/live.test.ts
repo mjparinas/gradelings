@@ -298,6 +298,68 @@ describe("read-aloud on live questions", () => {
   });
 });
 
+describe("waiting for a change (long-polling)", () => {
+  it("answers at once with a signature, holds an unchanged one, and wakes the moment the teacher asks, shows or ends", async () => {
+    const { resetLiveWatch } = await import("@/server/liveWatch");
+    resetLiveWatch();
+    const { teacher, parent, cls, kid } = await classWithChild("watch");
+    const get = async (query: string) => (await childLive.GET(req(`/api/live/?profile=${kid}&watch=1${query}`, "GET", undefined, parent))).json();
+    // Without ?watch the answer is as it always was; with it, it carries a signature and whether to look often.
+    expect(await (await childLive.GET(req(`/api/live/?profile=${kid}`, "GET", undefined, parent))).json()).not.toHaveProperty("v");
+    const first = await get("");
+    expect(first).toMatchObject({ live: null, hot: false });
+    expect(typeof first.v).toBe("string");
+
+    // Nothing changes: the request is held for the wait, then answered with the same signature.
+    const { waitForChange } = await import("@/server/liveWatch");
+    const t0 = Date.now();
+    expect((await waitForChange("x", "y", "", 5)).sig).toBe("");
+    const familyId = (await dbm.query<{ family_id: string }>("SELECT family_id FROM class_members WHERE profile_id = ?", [kid]))[0].family_id;
+    const held = await waitForChange(familyId, kid, first.v, 1_200);
+    expect(held.sig).toBe(first.v);
+    expect(Date.now() - t0).toBeGreaterThanOrEqual(1_000);
+
+    // A request waiting with the old signature is answered the moment the teacher asks a question.
+    const waiting = get(`&v=${encodeURIComponent(first.v)}`);
+    await new Promise((r) => setTimeout(r, 100));
+    const start = Date.now();
+    await teacherLive.POST(req("/api/classes/live/", "POST", { classId: cls.id, unitKey: UNIT }, teacher));
+    const asked = await waiting;
+    expect(Date.now() - start).toBeLessThan(1_500);
+    expect(asked.live).not.toBeNull();
+    expect(asked).toMatchObject({ hot: true });
+    expect(asked.v).not.toBe(first.v);
+
+    // Showing the answer and ending the question change the signature too.
+    const shownWait = get(`&v=${encodeURIComponent(asked.v)}`);
+    await new Promise((r) => setTimeout(r, 100));
+    await teacherLive.PATCH(req("/api/classes/live/", "PATCH", { classId: cls.id, action: "reveal" }, teacher));
+    const shown = await shownWait;
+    expect(shown.live.answer).toBeDefined();
+    const endWait = get(`&v=${encodeURIComponent(shown.v)}`);
+    await new Promise((r) => setTimeout(r, 100));
+    await teacherLive.DELETE(req(`/api/classes/live/?classId=${cls.id}`, "DELETE", undefined, teacher));
+    expect((await endWait).live).toBeNull();
+  });
+
+  it("marks devices hot while a teacher's Live tab is open, and only for that teacher's class", async () => {
+    const { resetLiveWatch } = await import("@/server/liveWatch");
+    resetLiveWatch();
+    const { teacher, parent, cls, kid } = await classWithChild("here");
+    const hot = async () => (await (await childLive.GET(req(`/api/live/?profile=${kid}&watch=1`, "GET", undefined, parent))).json()).hot;
+    expect(await hot()).toBe(false);
+    const stranger = await account("here-stranger@example.com");
+    expect((await teacherLive.PATCH(req("/api/classes/live/", "PATCH", { classId: cls.id, action: "here" }, stranger))).status).toBe(404);
+    expect((await teacherLive.PATCH(req("/api/classes/live/", "PATCH", { classId: cls.id, action: "here" }, teacher))).status).toBe(200);
+    resetLiveWatch();
+    expect(await hot()).toBe(true);
+    // Long ago, it no longer counts.
+    await dbm.run("UPDATE class_presence SET seen_at = ?", [Date.now() - 120_000]);
+    resetLiveWatch();
+    expect(await hot()).toBe(false);
+  });
+});
+
 describe("away on the desks", () => {
   it("shows a student as away once they say they are leaving or go quiet, and as here again when they ask", async () => {
     const { teacher, parent, cls, kid } = await classWithChild("away");

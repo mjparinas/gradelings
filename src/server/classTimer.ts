@@ -1,6 +1,7 @@
 import "server-only";
 import { cleanTimerLabel, TIMER_ADD_MS, TIMER_DONE_SHOW_MS, TIMER_MAX_MINUTES, TIMER_PAUSED_KEEP_MS, type ClassTimer } from "@/lib/classTimer";
 import { query, run } from "./db";
+import { notifyClass } from "./liveNotify";
 
 // One timer per class. Running: `ends_at` is set. Paused: `paused_left` is set. Stopping deletes the row.
 // Short-lived by design: a finished timer stops showing after a few minutes and an abandoned one is deleted
@@ -41,6 +42,7 @@ export async function startTimer(classId: string, minutes: number, label: unknow
      ON CONFLICT(class_id) DO UPDATE SET label = excluded.label, total_ms = excluded.total_ms, ends_at = excluded.ends_at, paused_left = NULL, updated_at = excluded.updated_at`,
     [classId, cleanTimerLabel(label), ms, now + ms, now],
   );
+  notifyClass(classId);
   return (await classTimer(classId, now))!;
 }
 
@@ -63,11 +65,13 @@ export async function changeTimer(classId: string, action: "pause" | "resume" | 
     if (cur.running || cur.left <= 0) await run("UPDATE class_timers SET ends_at = ?, paused_left = NULL, total_ms = ?, updated_at = ? WHERE class_id = ?", [now + left, total, now, classId]);
     else await run("UPDATE class_timers SET paused_left = ?, total_ms = ?, updated_at = ? WHERE class_id = ?", [left, total, now, classId]);
   }
+  notifyClass(classId);
   return classTimer(classId, now);
 }
 
 export async function stopTimer(classId: string): Promise<void> {
   await run("DELETE FROM class_timers WHERE class_id = ?", [classId]);
+  notifyClass(classId);
 }
 
 /** The timer of a class this child is in (any class that has one running). */
