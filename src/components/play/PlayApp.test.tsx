@@ -105,6 +105,7 @@ vi.mock("./Treasures", () => ({ Treasures: screenStub("Treasures") }));
 vi.mock("./WeekRecap", () => ({ WeekRecap: screenStub("WeekRecap") }));
 vi.mock("./BrainBreak", () => ({ BrainBreak: screenStub("BrainBreak") }));
 vi.mock("./StoryProblems", () => ({ StoryProblems: screenStub("StoryProblems") }));
+vi.mock("./Articles", () => ({ ArticleLibrary: screenStub("ArticleLibrary"), ArticleReader: screenStub("ArticleReader") }));
 vi.mock("./Explore", () => ({ ExploreLibrary: screenStub("ExploreLibrary"), ExploreReader: screenStub("ExploreReader") }));
 vi.mock("./Rhymes", () => ({ RhymeLibrary: screenStub("RhymeLibrary"), RhymeReader: screenStub("RhymeReader") }));
 vi.mock("./Stories", () => ({ StoryLibrary: screenStub("StoryLibrary"), StoryReader: screenStub("StoryReader") }));
@@ -281,6 +282,8 @@ describe("PlayApp routes", () => {
     ["stories/theo-kite", "StoryReader id=theo-kite"],
     ["break", "BrainBreak"],
     ["problems", "StoryProblems"],
+    ["articles", "ArticleLibrary"],
+    ["articles/how-bees-make-honey", "ArticleReader id=how-bees-make-honey"],
     ["explore", "ExploreLibrary"],
     ["explore/busy-bees", "ExploreReader id=busy-bees"],
     ["rhymes", "RhymeLibrary"],
@@ -327,6 +330,13 @@ describe("PlayApp routes", () => {
     expect(shown()).toMatch(/^Hub/);
   });
 
+  it("keeps articles for Grade 2 and up: a Grade 1 child goes home", () => {
+    h.route = "articles";
+    h.active = { id: "b", grade: "1", framework: "ca-bc" };
+    render(<PlayApp />);
+    expect(shown()).toMatch(/^Hub/);
+  });
+
   it("keeps the rhymes for the younger readers: a Grade 6 child goes home", () => {
     h.route = "rhymes";
     h.active = { id: "b", grade: "6", framework: "ca-bc" };
@@ -355,6 +365,8 @@ describe("PlayApp routes", () => {
     ["grew", "weekly-recap"],
     ["break", "brain-breaks"],
     ["problems", "story-problems"],
+    ["articles", "articles"],
+    ["articles/how-bees-make-honey", "articles"],
     ["explore", "explore-cards"],
     ["explore/busy-bees", "explore-cards"],
     ["rhymes", "rhymes"],
