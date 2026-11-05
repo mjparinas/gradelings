@@ -2,6 +2,7 @@
 
 import { memo, useEffect, useState, type ReactNode } from "react";
 import { VoicePreload } from "@/components/VoicePreload";
+import { StorageFullNotice } from "@/components/StorageFullNotice";
 import { ClassTimerChip } from "./ClassTimer";
 import type { FlagKey } from "@/lib/flags";
 import { refreshFlags, useIsOn } from "@/lib/remoteFlags";
@@ -217,6 +218,7 @@ export function PlayApp() {
         {/* Only while the child's teacher is asking the class something, and only online. */}
         <LiveQuestionCard state={live} />
         <Toasts />
+        <StorageFullNotice />
         <ClassTimerChip />
         {isOn("secrets") && <SecretsListener />}
       </BandProvider>

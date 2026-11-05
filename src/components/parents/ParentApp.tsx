@@ -1,5 +1,6 @@
 "use client";
 
+import { StorageFullNotice } from "@/components/StorageFullNotice";
 import Link from "next/link";
 import { memo, useEffect, useState, useSyncExternalStore, type ReactNode } from "react";
 import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
@@ -297,6 +298,7 @@ export function ParentApp() {
   return (
     <ContentGate targets={profiles.flatMap((p) => (levels ? practiceTargets(p, childSettings[p.id]) : [{ grade: p.grade, framework: p.framework }]))} optional>
       <VoicePreload />
+      <StorageFullNotice />
       <Shell active={tab} pending={pending}>
         <ShownRoute value={shown}>
           <Section hash={shown} billing={billing} onBilling={setBilling} />

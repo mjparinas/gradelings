@@ -1,6 +1,7 @@
 "use client";
 
 import type { AppEvent } from "./model";
+import { isStorageFull, reportStorageFull } from "./storageFull";
 
 // The on-device database (IndexedDB). Everything works offline from here;
 // the sync engine copies unsynced events to the server when it can.
@@ -231,9 +232,15 @@ export async function setKV(key: string, value: unknown): Promise<void> {
     memory.kv.set(key, value);
     return;
   }
-  await tx("kv", "readwrite", (s) => {
-    s.put(value, key);
-  });
+  try {
+    await tx("kv", "readwrite", (s) => {
+      s.put(value, key);
+    });
+  } catch (err) {
+    // No room on the device: tell the grown-up. The app keeps what it has in memory for this visit.
+    if (!isStorageFull(err)) throw err;
+    reportStorageFull();
+  }
 }
 
 export async function putEvents(events: AppEvent[], synced: 0 | 1 = 0): Promise<void> {
@@ -247,18 +254,23 @@ export async function putEvents(events: AppEvent[], synced: 0 | 1 = 0): Promise<
     }
     return;
   }
-  await tx("events", "readwrite", (s) => {
-    for (const r of rows) {
-      if (synced) s.put(r);
-      else {
-        // Don't downgrade an event that's already synced.
-        const get = s.get(r.id);
-        get.onsuccess = () => {
-          if (!get.result) s.put(r);
-        };
+  try {
+    await tx("events", "readwrite", (s) => {
+      for (const r of rows) {
+        if (synced) s.put(r);
+        else {
+          // Don't downgrade an event that's already synced.
+          const get = s.get(r.id);
+          get.onsuccess = () => {
+            if (!get.result) s.put(r);
+          };
+        }
       }
-    }
-  });
+    });
+  } catch (err) {
+    if (!isStorageFull(err)) throw err;
+    reportStorageFull();
+  }
 }
 
 export async function allEvents(): Promise<AppEvent[]> {
