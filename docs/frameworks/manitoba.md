@@ -6,4 +6,5 @@
 - **First Nations, Métis and Inuit content** is light.
 
 ## Social studies depth
-- Grade 9 social studies units have about 40 questions each (the original bank plus `g9-social-deeper.ts`, 15 units), added November 2026 so a child who practises daily meets fewer repeats. Grade 3 is deepened in its own change.
+- Grade 3 social studies units have about 40 questions each (the original bank plus `g3-social-deeper.ts`), added November 2026 so a child who practises every day sees few repeats.
+- Grade 9 social studies units have about 40 questions each (the original bank plus `g9-social-deeper.ts`, 15 units), added November 2026 for the same reason.

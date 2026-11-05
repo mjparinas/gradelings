@@ -311,7 +311,7 @@
     "units": [
       "meeting-needs text=40a76a9522 std=8b12c07c15 q=3ac35931e2",
       "tx-g3-money-and-voting text=b81bd641d4 std=e07489e369 q=010ee7b55a",
-      "mb-working-together text=37a3eb9cfb std=b4c981c572 q=2cd3b963a8",
+      "mb-working-together text=37a3eb9cfb std=b4c981c572 q=c53402c2aa",
       "wv-g3-wv-regions text=7b3e6662eb std=be24f2d660 q=b19f19ccf5",
       "wv-g3-wv-at-work text=da1dfd6bee std=757c0749b9 q=425fd6b908"
     ]
@@ -470,11 +470,11 @@
   "5/social": {
     "overview": "894baae788",
     "units": [
-      "ca-g8-divided-nation text=d7d0c32f41 std=8823a2ba1b q=15ef8274da",
+      "ca-g8-divided-nation text=d7d0c32f41 std=8823a2ba1b q=1308ba94ab",
       "wa-g8-civil-war text=c3ae583596 std=067fd1c2c8 q=958ab14484",
       "or-g8-reconstruction text=90b606a220 std=1e4d50bf45 q=4c87f1ca5f",
       "ny-g8-expansion-empire text=231ab34b20 std=e3f81186c1 q=3f36b6e0f8",
-      "ca-g8-industrial-america text=59fae20492 std=7748aaa2c2 q=a19df580ed",
+      "ca-g8-industrial-america text=59fae20492 std=7748aaa2c2 q=14f2ec92f7",
       "ny-g8-city-immigrants text=404df69c6c std=1fd932d11e q=7c69f670c0",
       "ga-g5-amendments text=90d09fb075 std=9ee105da0c q=9d42b39d15",
       "or-g5-states-capitals text=565d8f1d6b std=4d3849b897 q=6b5387c192",

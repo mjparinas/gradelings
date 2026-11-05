@@ -730,9 +730,9 @@
     "units": [
       "or-g8-founding-ideas text=6fa3d530b3 std=353506eee9 q=83494b4253",
       "wa-g8-bill-of-rights text=edcc86640b std=76a9af3b9b q=6898ac27d5",
-      "ca-g8-constitution-at-work text=570053022e std=ef654bb142 q=aa72f4ae5f",
-      "ca-g9-supreme-court text=d497c2ea6b std=d8c5298721 q=5b4496ce00",
-      "az-g8-citizens-and-society text=1d389d98ec std=576af5733f q=7042d3ca45",
+      "ca-g8-constitution-at-work text=570053022e std=ef654bb142 q=bde16fe66b",
+      "ca-g9-supreme-court text=d497c2ea6b std=d8c5298721 q=0110fb9ee8",
+      "az-g8-citizens-and-society text=1d389d98ec std=576af5733f q=86c2bdcfef",
       "az-g8-personal-finance text=901cb5bfef std=96de57072b q=2b320ea4ea",
       "az-g8-supply-demand text=1c77997248 std=d46eca3a6d q=46468612cb",
       "vt-g8-vermont-in-action text=47d89e0bd2 std=cb9d609e4f q=acf9e2c356"
@@ -834,9 +834,9 @@
   "9/social": {
     "overview": "37cdba99de",
     "units": [
-      "ca-g9-foundations text=7e73500361 std=4ecb89636f q=366cc13a3d",
+      "ca-g9-foundations text=7e73500361 std=4ecb89636f q=88c273c390",
       "ca-g9-civic-action text=7ff067ec0c std=8efc7980c1 q=c1c8ac6d15",
-      "ca-g9-media text=67bc186bc5 std=0bdf353a2d q=d8967e0b75",
+      "ca-g9-media text=67bc186bc5 std=0bdf353a2d q=0fc3f3ad1e",
       "vt-g9-governing-vermont text=54a833609c std=70acecf820 q=c06ba33f08",
       "vt-g9-us-government text=b2b1785d0f std=9f0e822532 q=799964604c",
       "vt-g9-personal-finance text=f88dcf17a6 std=3fbc5b5cb4 q=c55feb0039",

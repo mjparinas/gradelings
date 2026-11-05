@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { breadcrumbJsonLd, itemListJsonLd } from "@/components/site/jsonld";
+import { activitiesPath } from "@/components/site/activitiesData";
 import { HELP_GRADES, gradeName, helpAtHomePath } from "@/components/site/helpAtHome";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { APP_NAME } from "@/lib/brand";
@@ -35,6 +36,9 @@ export default function HelpAtHomeHub() {
           </li>
         ))}
       </ul>
+      <p className="mt-8 font-read text-lg">
+        Want something to print? Try the <Link href={activitiesPath.hub()} className="font-bold underline">free printable activities</Link>: practice calendars, math games, a reading log and conversation cards.
+      </p>
     </SitePage>
   );
 }

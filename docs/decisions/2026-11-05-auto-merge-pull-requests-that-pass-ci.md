@@ -1,0 +1,3 @@
+# Auto-merge pull requests that pass CI
+
+**Auto-merge pull requests that pass CI** (owner, November 5, 2026): agents may merge a pull request into `staging` once all of its CI checks (including "CI passed") are green, without asking again. Never merge into `main` (the nightly promotion does that), never merge with a red or cancelled check, and leave a pull request open when it carries a question for the owner. A cancelled or failed job is investigated, not retried blindly (see the flaky-tests decision). After each merge, bring the other open pull requests up to date with `staging` (regenerate locks with `npm run curriculum:lock` on a conflict) and wait for their CI before merging them.
