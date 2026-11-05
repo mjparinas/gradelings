@@ -365,7 +365,7 @@
       "ny-g5-columbian-exchange text=d1e9c8a03f std=265f7f626f q=625d765c55",
       "ca-g7-exploration-and-empire text=7405c0aa52 std=6c9cf9f248 q=7b8763aec9",
       "wa-g5-thirteen-colonies text=268bab3377 std=a72380a9ea q=dd5f1aba73",
-      "ca-g5-colonial-economy text=302c8d93ea std=a99a371dd6 q=964b882147",
+      "ca-g5-colonial-economy text=302c8d93ea std=a99a371dd6 q=78476c23e0",
       "or-g5-history-detective text=919878e133 std=2e9cacf09c q=0a67d0e45b",
       "ny-g5-timeline text=886ba86f4e std=87e70d32ab q=85bacd099d"
     ]
@@ -433,8 +433,8 @@
   "5/social": {
     "overview": "3b7ea1704a",
     "units": [
-      "ca-g5-road-to-revolution text=f43acaa35e std=72b0d37680 q=8ff3e277fb",
-      "ca-g5-revolution text=9f9c895b95 std=4f1840ea22 q=8de8201d9a",
+      "ca-g5-road-to-revolution text=f43acaa35e std=72b0d37680 q=348033ff6d",
+      "ca-g5-revolution text=9f9c895b95 std=4f1840ea22 q=77d806ef60",
       "wa-g5-constitution text=4fce7c7602 std=74810a64c0 q=2d1d2c254b",
       "or-g5-states-capitals text=565d8f1d6b std=d60ed23d89 q=6b5387c192",
       "ca-g8-new-nation text=a71e0f4725 std=fd82e0f344 q=43ff2d5a2f",

@@ -469,13 +469,13 @@
     "units": [
       "ny-g5-columbian-exchange text=18b9dc4878 std=03dc44d90c q=625d765c55",
       "wa-g5-thirteen-colonies text=b218e8efce std=20ea34557b q=dd5f1aba73",
-      "ca-g5-colonial-economy text=469755cd16 std=2afc90ea56 q=964b882147",
-      "ca-g5-road-to-revolution text=f43acaa35e std=7f298ea8e3 q=8ff3e277fb",
-      "ca-g5-revolution text=9f9c895b95 std=cafd6aa740 q=8de8201d9a",
+      "ca-g5-colonial-economy text=469755cd16 std=2afc90ea56 q=78476c23e0",
+      "ca-g5-road-to-revolution text=f43acaa35e std=7f298ea8e3 q=348033ff6d",
+      "ca-g5-revolution text=9f9c895b95 std=cafd6aa740 q=77d806ef60",
       "wa-g5-constitution text=4fce7c7602 std=0bb308a4ad q=2d1d2c254b",
       "or-g5-timeline text=d6feb485b6 std=b7128106b3 q=750a99801f",
       "hi-g5-native-nations text=e25c871ed7 std=093f7570fc q=1b9245a5b2",
-      "hi-g5-explorers text=a45cdeb87f std=4438faa0cb q=d758279b88"
+      "hi-g5-explorers text=a45cdeb87f std=4438faa0cb q=f808a2eb7e"
     ]
   },
   "5/spanish": {
