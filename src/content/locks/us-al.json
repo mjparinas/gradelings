@@ -700,9 +700,9 @@
   "8/math": {
     "overview": "7f4683d008",
     "units": [
-      "squares-and-roots text=0c3411fb05 std=f23a9edf41 q=d7dfc2d1fe",
-      "linear-equations text=1e22122340 std=e9dc021469 q=0e7b5b65c5",
-      "pythagorean-theorem text=014e1086f2 std=483e05324e q=901991b35a",
+      "squares-and-roots text=0c3411fb05 std=f23a9edf41 q=44906b78d6",
+      "linear-equations text=1e22122340 std=e9dc021469 q=4ba669b446",
+      "pythagorean-theorem text=014e1086f2 std=483e05324e q=99835d112c",
       "surface-area-volume text=96a6eb6597 std=ac519b581c q=79cdef4798",
       "numbers-8 text=8bc8425026 std=dc14346aed q=9e9e88cf93",
       "data-8 text=f67cb7cc17 std=a77ba9cd06 q=61afebfaea",

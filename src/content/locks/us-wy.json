@@ -622,8 +622,8 @@
   "8/math": {
     "overview": "05ccf33d35",
     "units": [
-      "linear-equations text=1e22122340 std=c2d8403fd9 q=0e7b5b65c5",
-      "pythagorean-theorem text=014e1086f2 std=74026662ee q=901991b35a",
+      "linear-equations text=1e22122340 std=c2d8403fd9 q=4ba669b446",
+      "pythagorean-theorem text=014e1086f2 std=74026662ee q=99835d112c",
       "numbers-8 text=8bc8425026 std=ab9c9b6726 q=9e9e88cf93",
       "transformations-8 text=872e7f5b99 std=d5d3267be1 q=861609ebde",
       "angles-8 text=899ecf6fe2 std=6ab4c0f115 q=547f9529ab",
@@ -696,9 +696,9 @@
   "9/math": {
     "overview": "18f4d53681",
     "units": [
-      "exponent-laws text=14558089af std=dfd042762e q=2ce4ff5a2c",
+      "exponent-laws text=14558089af std=dfd042762e q=8fb7aa1d0b",
       "polynomials text=608ddf33d1 std=d788501ae3 q=3a3e17fe5c",
-      "multi-step-equations text=834b6c0c60 std=1b735b1f6d q=beb185035d",
+      "multi-step-equations text=834b6c0c60 std=1b735b1f6d q=4823df05ba",
       "linear-relations text=d5718915ca std=a762a74b0c q=1e254a9707",
       "statistics-in-society text=9e4081b498 std=51ae8d30c0 q=bae78cb576",
       "lines-9 text=a0d34ff620 std=f86035d234 q=952170d895",

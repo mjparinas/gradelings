@@ -48,4 +48,15 @@ export const RICH: Record<string, GradeRich> = {
     "math/fractions-decimals-percents": q.fractionDecimals,
     "math/integer-add-subtract": q.integerLineMistake,
   },
+  g8: {
+    "math/fraction-operations": q.fractionAddMistake,
+    "math/squares-and-roots": q.perfectSquares,
+    "math/linear-equations": q.linearEquationMistake,
+    "math/pythagorean-theorem": q.rightTriangles,
+  },
+  g9: {
+    "math/rational-numbers": q.betweenZeroAndNegativeOne,
+    "math/exponent-laws": q.exponentLaws,
+    "math/multi-step-equations": q.distributeMistake,
+  },
 };

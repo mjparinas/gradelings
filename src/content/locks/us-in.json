@@ -657,8 +657,8 @@
   "8/math": {
     "overview": "0e12fb632d",
     "units": [
-      "linear-equations text=1e22122340 std=d2491f07b2 q=0e7b5b65c5",
-      "pythagorean-theorem text=014e1086f2 std=615e16b0e0 q=901991b35a",
+      "linear-equations text=1e22122340 std=d2491f07b2 q=4ba669b446",
+      "pythagorean-theorem text=014e1086f2 std=615e16b0e0 q=99835d112c",
       "surface-area-volume text=96a6eb6597 std=b54173b8c5 q=79cdef4798",
       "numbers-8 text=8bc8425026 std=6f0d78c325 q=9e9e88cf93",
       "data-8 text=f67cb7cc17 std=c07b7e6602 q=61afebfaea",
@@ -743,7 +743,7 @@
     "overview": "6994e47e95",
     "units": [
       "polynomials text=608ddf33d1 std=f9162cf5a9 q=3a3e17fe5c",
-      "multi-step-equations text=834b6c0c60 std=a5901a482a q=beb185035d",
+      "multi-step-equations text=834b6c0c60 std=a5901a482a q=4823df05ba",
       "linear-relations text=d5718915ca std=0a7f7e42e4 q=1e254a9707",
       "lines-9 text=a0d34ff620 std=866ece55e1 q=952170d895",
       "data-9 text=d107431976 std=47fed3cef1 q=03d4d4469f",

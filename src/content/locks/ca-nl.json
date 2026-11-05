@@ -623,12 +623,12 @@
   "8/math": {
     "overview": "74c95f63ca",
     "units": [
-      "fraction-operations text=43b349e643 std=a4f205873f q=d7ba9bcf9d",
-      "squares-and-roots text=0c3411fb05 std=8bfa7aa664 q=d7dfc2d1fe",
+      "fraction-operations text=43b349e643 std=a4f205873f q=4755d31e4a",
+      "squares-and-roots text=0c3411fb05 std=8bfa7aa664 q=44906b78d6",
       "ratios-and-rates text=fe38c24acc std=05aa7d3b90 q=62d248cf82",
       "percents-and-money text=99da083c23 std=99d09cbf1d q=1333637e1e",
-      "linear-equations text=1e22122340 std=85cddc7bc0 q=0e7b5b65c5",
-      "pythagorean-theorem text=014e1086f2 std=16c2ceb9ca q=901991b35a",
+      "linear-equations text=1e22122340 std=85cddc7bc0 q=4ba669b446",
+      "pythagorean-theorem text=014e1086f2 std=16c2ceb9ca q=99835d112c",
       "surface-area-volume text=a5298071b5 std=b0dcd3ac2d q=5c73cae8f9",
       "probability-and-data text=49496b876e std=41218355d4 q=6bec01e463",
       "integers-8 text=4840f100ae std=f6ceb8f2b3 q=9c4f44dc17",
@@ -702,10 +702,10 @@
   "9/math": {
     "overview": "74c95f63ca",
     "units": [
-      "rational-numbers text=023c4c6316 std=4630621e3a q=6f2f9a3df7",
-      "exponent-laws text=14558089af std=b0c75370db q=2ce4ff5a2c",
+      "rational-numbers text=023c4c6316 std=4630621e3a q=29cdd814c4",
+      "exponent-laws text=14558089af std=b0c75370db q=8fb7aa1d0b",
       "polynomials text=608ddf33d1 std=758e3baf21 q=3a3e17fe5c",
-      "multi-step-equations text=834b6c0c60 std=a0b688418f q=beb185035d",
+      "multi-step-equations text=834b6c0c60 std=a0b688418f q=4823df05ba",
       "linear-relations text=d5718915ca std=a58b6f67ad q=1e254a9707",
       "statistics-in-society text=9e4081b498 std=32c345f567 q=bae78cb576",
       "surface-area-ab text=c4da6bfbc4 std=ea1376e3b0 q=5db736f014"

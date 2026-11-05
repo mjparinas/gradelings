@@ -679,8 +679,8 @@
   "8/math": {
     "overview": "5f7f4a4326",
     "units": [
-      "squares-and-roots text=0c3411fb05 std=1ce947f374 q=d7dfc2d1fe",
-      "linear-equations text=1e22122340 std=0787cbe103 q=0e7b5b65c5",
+      "squares-and-roots text=0c3411fb05 std=1ce947f374 q=44906b78d6",
+      "linear-equations text=1e22122340 std=0787cbe103 q=4ba669b446",
       "surface-area-volume text=96a6eb6597 std=95a5ca0810 q=79cdef4798",
       "numbers-8 text=8bc8425026 std=742d25fa81 q=9e9e88cf93",
       "data-8 text=f67cb7cc17 std=f1bb745f88 q=61afebfaea",
@@ -762,9 +762,9 @@
   "9/math": {
     "overview": "393f1a4e84",
     "units": [
-      "exponent-laws text=14558089af std=07728ce5b4 q=2ce4ff5a2c",
+      "exponent-laws text=14558089af std=07728ce5b4 q=8fb7aa1d0b",
       "polynomials text=608ddf33d1 std=662d116cad q=3a3e17fe5c",
-      "multi-step-equations text=834b6c0c60 std=d7395d7e8d q=beb185035d",
+      "multi-step-equations text=834b6c0c60 std=d7395d7e8d q=4823df05ba",
       "linear-relations text=d5718915ca std=530008b1f9 q=1e254a9707",
       "expressions-9 text=c4cbafb40c std=83c2bdaf33 q=a48fbbb76c",
       "lines-9 text=a0d34ff620 std=0bbe2435e2 q=952170d895",

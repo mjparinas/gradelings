@@ -5,7 +5,7 @@ import { coursesInFramework } from "../index";
 import { hashSeed, withSeed } from "../random";
 import type { MistakeQuestion, Question } from "../types";
 import { withRich } from "./index";
-import { decimalFractions, equalFractions, fractionDecimals, fractionWords, integerLineMistake, mixedNumberMistake, multiplyMistake, oneStepMistake, percentFractions, twoStepMistake, equivalentFill } from "./questions";
+import { betweenZeroAndNegativeOne, distributeMistake, exponentLaws, fractionAddMistake, linearEquationMistake, perfectSquares, rightTriangles, decimalFractions, equalFractions, fractionDecimals, fractionWords, integerLineMistake, mixedNumberMistake, multiplyMistake, oneStepMistake, percentFractions, twoStepMistake, equivalentFill } from "./questions";
 import { RICH } from "./units";
 
 const seeds = Array.from({ length: 12 }, (_, i) => i);
@@ -177,6 +177,99 @@ describe("fraction, decimal and number-line questions", () => {
         const good = [`Start at −${a} on the number line`, `Move ${b} steps to the right`, `−${a} + ${b} = ${b - a}`];
         expect(q.steps[q.wrong]).not.toBe(good[q.wrong]);
         for (let i = 0; i < q.wrong; i++) expect(q.steps[i]).toBe(good[i]);
+      });
+  });
+});
+
+describe("Grade 8 and 9 questions", () => {
+  const SUP = "⁰¹²³⁴⁵⁶⁷⁸⁹";
+  const unsup = (t: string) => Number(t.split("").map((c) => SUP.indexOf(c)).join(""));
+  it("perfect squares: right choices are squares and wrong ones are not", () => {
+    for (let s = 0; s < 100; s++)
+      withSeed(s, () => {
+        const q = perfectSquares()[0];
+        if (q.kind !== "multi") throw new Error("kind");
+        for (const c of q.choices) expect(q.answers.includes(c.id), c.label).toBe(Number.isInteger(Math.sqrt(Number(c.label))));
+      });
+  });
+  it("right triangles: each pair of short sides gives that long side", () => {
+    for (let s = 0; s < 60; s++)
+      withSeed(s, () => {
+        const q = rightTriangles()[0];
+        if (q.kind !== "match") throw new Error("kind");
+        for (const p of q.pairs) {
+          const [a, b] = p.left.label.split(" and ").map(Number);
+          expect(a * a + b * b).toBe(Number(p.right.label) ** 2);
+        }
+      });
+  });
+  it("fraction addition: only the last step is wrong", () => {
+    for (let s = 0; s < 100; s++)
+      withSeed(s, () => {
+        const q = fractionAddMistake()[0] as MistakeQuestion;
+        const [, a, b, c, d] = /^(\d+)\/(\d+) \+ (\d+)\/(\d+)$/.exec(q.steps[0])!.map(Number);
+        expect(q.steps[1]).toBe(`= ${a * d}/${b * d} + ${c * b}/${b * d}`);
+        expect(q.steps[2]).not.toBe(`= ${a * d + c * b}/${b * d}`);
+        expect(q.wrong).toBe(2);
+      });
+  });
+  it("linear equation: the marked step is the first wrong one", () => {
+    for (let s = 0; s < 100; s++)
+      withSeed(s, () => {
+        const q = linearEquationMistake()[0] as MistakeQuestion;
+        const [, p, a, b] = /^(\d+)x − (\d+) = (\d+)$/.exec(q.steps[0])!.map(Number);
+        const good1 = `${p}x = ${b + a}`;
+        if (q.wrong === 1) expect(q.steps[1]).not.toBe(good1);
+        else {
+          expect(q.steps[1]).toBe(good1);
+          expect(q.steps[2]).not.toBe(`x = ${b + a} ÷ ${p}`);
+        }
+      });
+  });
+  it("exponent laws: every pair is equal", () => {
+    for (let s = 0; s < 100; s++)
+      withSeed(s, () => {
+        const q = exponentLaws()[0];
+        if (q.kind !== "match") throw new Error("kind");
+        const rights = new Set(q.pairs.map((p) => p.right.label));
+        expect(rights.size).toBe(q.pairs.length);
+        for (const p of q.pairs) {
+          const out = unsup(p.right.label.slice(1));
+          const l = p.left.label;
+          let n: number;
+          let m: RegExpExecArray | null;
+          if ((m = /^x(\S+) · x(\S+)$/.exec(l))) n = unsup(m[1]) + unsup(m[2]);
+          else if ((m = /^x(\S+) ÷ x(\S+)$/.exec(l))) n = unsup(m[1]) - unsup(m[2]);
+          else {
+            m = /^\(x(\S+)\)(\S+)$/.exec(l)!;
+            n = unsup(m[1]) * unsup(m[2]);
+          }
+          expect(out, l).toBe(n);
+        }
+      });
+  });
+  it("distributing: the marked step is the first wrong one", () => {
+    for (let s = 0; s < 100; s++)
+      withSeed(s, () => {
+        const q = distributeMistake()[0] as MistakeQuestion;
+        const [, p, a, b] = /^(\d+)\(x \+ (\d+)\) = (\d+)$/.exec(q.steps[0])!.map(Number);
+        if (q.wrong === 1) expect(q.steps[1]).not.toBe(`${p}x + ${p * a} = ${b}`);
+        else {
+          expect(q.steps[1]).toBe(`x + ${a} = ${b} ÷ ${p}`);
+          expect(q.steps[2]).not.toBe(`x = ${b / p} − ${a}`);
+        }
+      });
+  });
+  it("between −1 and 0: right choices are, wrong ones are not", () => {
+    const val = (t: string) => {
+      const n = t.replace("−", "-");
+      return n.includes("/") ? Number(n.split("/")[0]) / Number(n.split("/")[1]) : Number(n);
+    };
+    for (let s = 0; s < 100; s++)
+      withSeed(s, () => {
+        const q = betweenZeroAndNegativeOne()[0];
+        if (q.kind !== "multi") throw new Error("kind");
+        for (const c of q.choices) expect(q.answers.includes(c.id), c.label).toBe(val(c.label) > -1 && val(c.label) < 0);
       });
   });
 });

@@ -679,9 +679,9 @@
   "8/math": {
     "overview": "05ccf33d35",
     "units": [
-      "squares-and-roots text=0c3411fb05 std=6fbe2b00c0 q=d7dfc2d1fe",
-      "linear-equations text=1e22122340 std=0a90986981 q=0e7b5b65c5",
-      "pythagorean-theorem text=014e1086f2 std=26ab9a7487 q=901991b35a",
+      "squares-and-roots text=0c3411fb05 std=6fbe2b00c0 q=44906b78d6",
+      "linear-equations text=1e22122340 std=0a90986981 q=4ba669b446",
+      "pythagorean-theorem text=014e1086f2 std=26ab9a7487 q=99835d112c",
       "numbers-8 text=8bc8425026 std=e83e64cc1a q=9e9e88cf93",
       "data-8 text=f67cb7cc17 std=96c06ffaeb q=61afebfaea",
       "angles-8 text=899ecf6fe2 std=58f3505084 q=547f9529ab",
@@ -760,9 +760,9 @@
   "9/math": {
     "overview": "05cc3fee7e",
     "units": [
-      "exponent-laws text=14558089af std=1a6ae26cae q=2ce4ff5a2c",
+      "exponent-laws text=14558089af std=1a6ae26cae q=8fb7aa1d0b",
       "polynomials text=608ddf33d1 std=5d6407f2e4 q=3a3e17fe5c",
-      "multi-step-equations text=834b6c0c60 std=370fec7648 q=beb185035d",
+      "multi-step-equations text=834b6c0c60 std=370fec7648 q=4823df05ba",
       "linear-relations text=d5718915ca std=4949fc7703 q=1e254a9707",
       "number-sets-9 text=2e841b16e4 std=d63848f2dc q=0bb5534a95",
       "expressions-9 text=c4cbafb40c std=40ecfca44f q=a48fbbb76c",

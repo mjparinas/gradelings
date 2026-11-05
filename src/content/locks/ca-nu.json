@@ -693,11 +693,11 @@
     "units": [
       "squares-roots-ab text=59b89a2eeb std=82c402c1b6 q=a260173743",
       "ratios-and-rates text=fe38c24acc std=641a8255d2 q=62d248cf82",
-      "fraction-operations text=43b349e643 std=86bc2053a6 q=d7ba9bcf9d",
+      "fraction-operations text=43b349e643 std=86bc2053a6 q=4755d31e4a",
       "integers-8 text=4840f100ae std=866ebb5c52 q=9c4f44dc17",
       "linear-relations-ab text=3ef9188889 std=6bc31ced39 q=8f11287d9e",
       "bracket-equations-ab text=d802eb7882 std=96f350273f q=3719a7ef86",
-      "pythagorean-theorem text=014e1086f2 std=8546f7f3d2 q=901991b35a",
+      "pythagorean-theorem text=014e1086f2 std=8546f7f3d2 q=99835d112c",
       "nets-views-ab text=6df5a9626c std=ad0189268f q=27eb75caed",
       "surface-area-volume text=a5298071b5 std=33deb11d98 q=5c73cae8f9",
       "congruence-ab text=2124f8bea5 std=5669f63f10 q=0fa6ddeb25",
@@ -779,11 +779,11 @@
   "9/math": {
     "overview": "4285fccafc",
     "units": [
-      "exponent-laws text=14558089af std=200f67ac0f q=2ce4ff5a2c",
-      "rational-numbers text=023c4c6316 std=e6037b46de q=6f2f9a3df7",
+      "exponent-laws text=14558089af std=200f67ac0f q=8fb7aa1d0b",
+      "rational-numbers text=023c4c6316 std=e6037b46de q=29cdd814c4",
       "square-roots-ab text=9dac6ac303 std=b304c7866e q=20b8564979",
       "polynomials text=608ddf33d1 std=e494406dbf q=3a3e17fe5c",
-      "multi-step-equations text=834b6c0c60 std=ab55687ee6 q=beb185035d",
+      "multi-step-equations text=834b6c0c60 std=ab55687ee6 q=4823df05ba",
       "linear-relations text=d5718915ca std=13bc45502f q=1e254a9707",
       "circles-ab text=0bfecda34b std=02121cc7fe q=92547dc066",
       "surface-area-ab text=c4da6bfbc4 std=bcb255dfac q=5db736f014",

@@ -692,9 +692,9 @@
   "8/math": {
     "overview": "05ccf33d35",
     "units": [
-      "squares-and-roots text=0c3411fb05 std=115cfdf852 q=d7dfc2d1fe",
-      "linear-equations text=1e22122340 std=c2d8403fd9 q=0e7b5b65c5",
-      "pythagorean-theorem text=014e1086f2 std=bb965960aa q=901991b35a",
+      "squares-and-roots text=0c3411fb05 std=115cfdf852 q=44906b78d6",
+      "linear-equations text=1e22122340 std=c2d8403fd9 q=4ba669b446",
+      "pythagorean-theorem text=014e1086f2 std=bb965960aa q=99835d112c",
       "surface-area-volume text=96a6eb6597 std=7eb0314c69 q=79cdef4798",
       "numbers-8 text=8bc8425026 std=674b74a729 q=9e9e88cf93",
       "data-8 text=f67cb7cc17 std=946eabec5e q=61afebfaea",
@@ -786,7 +786,7 @@
   "9/math": {
     "overview": "a8c8ee7132",
     "units": [
-      "multi-step-equations text=834b6c0c60 std=ce7b5f5d97 q=beb185035d",
+      "multi-step-equations text=834b6c0c60 std=ce7b5f5d97 q=4823df05ba",
       "linear-relations text=d5718915ca std=f16172c43a q=1e254a9707",
       "statistics-in-society text=9e4081b498 std=6779b21a75 q=bae78cb576",
       "expressions-9 text=c4cbafb40c std=8d9fdcd12a q=a48fbbb76c",

@@ -738,13 +738,13 @@
   "8/math": {
     "overview": "1384de325d",
     "units": [
-      "squares-and-roots text=0c3411fb05 std=dd6a46b91f q=d7dfc2d1fe",
-      "pythagorean-theorem text=014e1086f2 std=3abe1722e7 q=901991b35a",
+      "squares-and-roots text=0c3411fb05 std=dd6a46b91f q=44906b78d6",
+      "pythagorean-theorem text=014e1086f2 std=3abe1722e7 q=99835d112c",
       "integers-8 text=4840f100ae std=3a02153581 q=9c4f44dc17",
-      "fraction-operations text=43b349e643 std=17b7a53c91 q=d7ba9bcf9d",
+      "fraction-operations text=43b349e643 std=17b7a53c91 q=4755d31e4a",
       "percents-and-money text=99da083c23 std=6a7343b10f q=1333637e1e",
       "ratios-and-rates text=fe38c24acc std=91ba02938c q=62d248cf82",
-      "linear-equations text=1e22122340 std=19be789c31 q=0e7b5b65c5",
+      "linear-equations text=1e22122340 std=19be789c31 q=4ba669b446",
       "surface-area-volume text=a5298071b5 std=b503de6b30 q=5c73cae8f9",
       "nets-views-ab text=6df5a9626c std=e054524809 q=27eb75caed",
       "probability-and-data text=49496b876e std=05ffed99b0 q=6bec01e463"
@@ -833,10 +833,10 @@
   "9/math": {
     "overview": "c48eb133bd",
     "units": [
-      "exponent-laws text=14558089af std=ff56384543 q=2ce4ff5a2c",
-      "rational-numbers text=023c4c6316 std=f1179eb5af q=6f2f9a3df7",
+      "exponent-laws text=14558089af std=ff56384543 q=8fb7aa1d0b",
+      "rational-numbers text=023c4c6316 std=f1179eb5af q=29cdd814c4",
       "linear-relations text=d5718915ca std=6aad81f849 q=1e254a9707",
-      "multi-step-equations text=834b6c0c60 std=45dde1a105 q=beb185035d",
+      "multi-step-equations text=834b6c0c60 std=45dde1a105 q=4823df05ba",
       "polynomials text=608ddf33d1 std=00f63938dd q=3a3e17fe5c",
       "surface-area-ab text=c4da6bfbc4 std=ca96445d28 q=5db736f014",
       "statistics-in-society text=9e4081b498 std=8a6c53031a q=bae78cb576"
