@@ -1,5 +1,6 @@
 "use client";
 
+import { APP_HEADER, appKind } from "./appSignals";
 import type { Classwork } from "./classroom";
 import { consentNeeded } from "./coppa";
 import { pingGuestDevice } from "./guestPing";
@@ -57,7 +58,7 @@ async function doSync(): Promise<void> {
       const res = await fetch("/api/sync/", {
         method: "POST",
         credentials: "same-origin",
-        headers: { "content-type": "application/json" },
+        headers: { "content-type": "application/json", [APP_HEADER]: appKind() },
         body: JSON.stringify({
           cursor: state.sync.cursor,
           events,
