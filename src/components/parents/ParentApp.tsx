@@ -51,6 +51,9 @@ const NAV_PARENT: Record<string, string> = { placement: "reports", "report-cards
 
 const noSubscribe = () => () => {};
 
+/** Browser test runs (Playwright) would find the first-use video over every page, so it stays quiet there, as the voice download does. */
+const automated = () => typeof navigator !== "undefined" && navigator.webdriver === true;
+
 function SyncBadge() {
   const sync = useStore((s) => s.sync);
   const account = useStore((s) => s.family.account);
@@ -243,7 +246,7 @@ const Section = memo(function Section({ hash, billing, onBilling }: { hash: stri
   }
   return (
     <>
-      <FirstUseVideo key={section} video={videoById(PARENT_VIDEOS, PARENT_TAB_VIDEOS[section] ?? "")} enabled={videosOn} />
+      <FirstUseVideo key={section} video={videoById(PARENT_VIDEOS, PARENT_TAB_VIDEOS[section] ?? "")} enabled={videosOn && !automated()} />
       {page}
     </>
   );
