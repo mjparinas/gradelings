@@ -29,3 +29,9 @@ Hosted on our own domain, no third-party player or tracking. A native `<video>` 
 
 ## Before turning the flag on
 Someone should watch each video once with sound. They are computer-voiced, drawn programmatically and have not been tried with children.
+
+## Training videos for grown-ups (teachers, parents)
+The same pipeline makes screen-recording style videos from screenshots of the real app (owner, November 2026): each one opens once the first time its feature is used, and a library lets people watch it again.
+- **Teachers:** `node scripts/help-videos/capture-teacher.mjs http://localhost:3100 scripts/help-videos/shots` (needs `npm run dev -- -p 3100`, `CHROMIUM_PATH` for a Chromium not found by Playwright) makes a demo teacher, class, students, practice and a live question, takes the screenshots and writes `boxes.json` with where parts of the screen are. Demo data only. `teacher_specs.py` lists each video's narration, crop and highlights (`SHOT`, `HL`); `/tmp/st/bin/python scripts/help-videos/build.py --set teachers [id]` writes `public/videos/teachers/<id>.mp4` and `.vtt` (screenshots in `scripts/help-videos/shots/` are not committed).
+- **App:** list the video in `src/lib/trainingVideos.ts` (`seconds` from the file), show it with `<FirstUseVideo video enabled />` where the feature first appears, and list it in a `<TrainingLibrary>`. `src/lib/trainingVideos.test.ts` checks files, captions and narration.
+- Re-record a video when its screen changes. Narration says "Gradelings" and names no real school or person.

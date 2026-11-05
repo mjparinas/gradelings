@@ -9,7 +9,7 @@
 import fs from "node:fs";
 import { createClient } from "@libsql/client";
 import { chromium } from "playwright";
-import { confirmEmailInDb, step, vis } from "./helpers.mjs";
+import { confirmEmailInDb, markTeacherVideosSeen, step, vis } from "./helpers.mjs";
 
 const BASE = process.argv[2] || "http://localhost:3000";
 const OUT = process.argv[3] || "e2e-shots/classroom";
@@ -123,12 +123,32 @@ check(
 );
 
 // The teacher in a browser of their own, signed in with the session the API calls above made.
-async function teacherBrowser() {
+async function teacherBrowser({ videos = false } = {}) {
   const teacherContext = await browser.newContext({ viewport: { width: 1100, height: 900 } });
+  // The training videos open on their own the first time; only the check below wants that.
+  if (!videos) await markTeacherVideosSeen(teacherContext);
   const [name, value] = cookie.split("=");
   // The production cookie carries the __Host- prefix: Secure, no Domain, path "/". Chromium refuses that when set from a plain http url, so give the host and path (localhost counts as secure).
   await teacherContext.addCookies([{ name, value, domain: new URL(BASE).hostname, path: "/", httpOnly: true, ...(name.startsWith("__Host-") ? { secure: true } : {}) }]);
   return { teacherContext, teacherPage: await teacherContext.newPage() };
+}
+
+// The first time a teacher opens a tab its training video opens once, and the library lists them all.
+{
+  const { teacherContext, teacherPage } = await teacherBrowser({ videos: true });
+  await teacherPage.goto(`${BASE}/teachers/#/class/${encodeURIComponent(cls.id)}/homework`);
+  const intro = teacherPage.getByRole("dialog", { name: "Assign homework" });
+  check(await intro.waitFor({ timeout: 60000 }).then(() => true, () => false), "the Homework tab's training video opens the first time");
+  await teacherPage.screenshot({ path: `${OUT}/teacher-training-video.png` });
+  await teacherPage.getByRole("button", { name: "Close" }).click();
+  await teacherPage.reload();
+  await teacherPage.getByRole("button", { name: /Print class summary|Add a unit|Assign/ }).first().waitFor({ timeout: 60000 }).catch(() => undefined);
+  await teacherPage.waitForTimeout(1500);
+  check(!(await vis(teacherPage.getByRole("dialog"))), "the training video does not open a second time");
+  await teacherPage.goto(`${BASE}/teachers/#/videos`);
+  await teacherPage.reload();
+  check(await teacherPage.getByRole("button", { name: "Watch: Ask live questions" }).waitFor({ timeout: 30000 }).then(() => true, () => false), "the Training videos library lists every video to watch again");
+  await teacherContext.close();
 }
 
 // The teacher tries the assigned unit as a student: it plays, and nothing is recorded.
