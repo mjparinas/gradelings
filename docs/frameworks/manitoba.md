@@ -8,3 +8,4 @@
 ## Social studies depth
 - Grade 3 social studies units have about 40 questions each (the original bank plus `g3-social-deeper.ts`), added November 2026 so a child who practises every day sees few repeats.
 - Grade 9 social studies units have about 40 questions each (the original bank plus `g9-social-deeper.ts`, 15 units), added November 2026 for the same reason.
+- Grade 4 social studies (11 units, `g4-social-deeper.ts`) and Grade 7 social studies (5 units, `g7-social-deeper.ts`) gained about 14 questions each, November 2026. `mb-power-conflict` is adopted by Nunavut and US states, so its added questions name no province or Manitoba.

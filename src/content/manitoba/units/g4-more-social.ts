@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { CITIZEN_DEEP, GOV_DEEP, HERITAGE_DEEP, MAPSKILLS_DEEP, NAMES_DEEP, NORTH_CHANGE_DEEP, NUNAVUT_LAND_DEEP, NUNAVUT_PEOPLE_DEEP, PLACES_DEEP, POWER_DEEP, RESEARCH_DEEP } from "./g4-social-deeper";
 
 // More Grade 4 social studies: the northern territory studied (Nunavut), citizenship and identity, power and
 // conflict, government and property, Manitoba places and heritage, and the skills strand (maps, research,
@@ -325,7 +326,7 @@ export const units = [
     blurb: "Nunavut's islands, tundra, animals and resources",
     parentNote: "Practises where Nunavut is, its physical features, resources, climate and how few people live there across a very large land.",
     standards: ["4-KL-028, 4-KL-029, 4-KL-030", "locating and describing the physical features, natural resources and population of Nunavut"],
-    items: NUNAVUT_LAND,
+    items: [...NUNAVUT_LAND, ...NUNAVUT_LAND_DEEP],
   }),
   bankUnit({
     id: "mb-north-names",
@@ -334,7 +335,7 @@ export const units = [
     blurb: "Place names, inuksuit and finding your way",
     parentNote: "Practises why northern place names have changed back to Inuit names, what inuksuit are used for, and ways of finding direction (landmarks, sun, stars, compass, GPS).",
     standards: ["4-KL-031, 4-KL-032, 4-S-208", "changes to place names, the purposes of inuksuit and ways to orient yourself"],
-    items: NAMES,
+    items: [...NAMES, ...NAMES_DEEP],
   }),
   bankUnit({
     id: "mb-north-people",
@@ -343,7 +344,7 @@ export const units = [
     blurb: "Inuit languages, art, music and stories today",
     parentNote: "A light introduction to Inuit languages, arts, games and stories in Nunavut today, and to the idea that Inuit cultures are living and continue to change.",
     standards: ["4-KI-013, 4-KI-014, 4-KH-036, 4-VL-007", "Indigenous contributions, languages and communities, stories and traditions of Nunavut, and the North's place in Canada"],
-    items: NUNAVUT_PEOPLE,
+    items: [...NUNAVUT_PEOPLE, ...NUNAVUT_PEOPLE_DEEP],
   }),
   bankUnit({
     id: "mb-north-change",
@@ -352,7 +353,7 @@ export const units = [
     blurb: "How Nunavut began and how northern life has changed",
     parentNote: "Practises why Nunavut and the new Northwest Territories were created in 1999 and how food, clothing, travel, schools and recreation have changed in the last century.",
     standards: ["4-KH-037, 4-KH-038", "the reasons for creating Nunavut and the new Northwest Territories, and changes in ways of life in the last century"],
-    items: NORTH_CHANGE,
+    items: [...NORTH_CHANGE, ...NORTH_CHANGE_DEEP],
   }),
   bankUnit({
     id: "mb-citizen-identity",
@@ -361,7 +362,7 @@ export const units = [
     blurb: "Belonging, rights, responsibilities and who we are",
     parentNote: "Practises what being a Canadian citizen means, contributing to a community, and how culture, community, place and region (including First Nations, Métis, Inuit and francophone identities) shape identity.",
     standards: ["4-KC-004, 4-KC-004A, 4-KC-004F, 4-KI-009, 4-KI-009A, 4-KI-009F, 4-VC-001, 4-VC-002", "what citizenship means, belonging, contributing to groups and communities, and the factors that shape identity"],
-    items: CITIZEN,
+    items: [...CITIZEN, ...CITIZEN_DEEP],
   }),
   bankUnit({
     id: "mb-power-conflict",
@@ -370,7 +371,7 @@ export const units = [
     blurb: "Authority, fairness and settling conflict kindly",
     parentNote: "Practises formal and informal power and authority in children's lives, using authority respectfully, solving conflict peacefully and reaching group decisions.",
     standards: ["4-KP-045, 4-KP-046, 4-VP-011, 4-S-100, 4-S-101, 4-S-102, 4-S-104", "power and authority, positive ways to handle conflict, respecting others' rights, and working together fairly"],
-    items: POWER,
+    items: [...POWER, ...POWER_DEEP],
   }),
   bankUnit({
     id: "mb-government-property",
@@ -379,7 +380,7 @@ export const units = [
     blurb: "Public and private property, services and media",
     parentNote: "Practises public and private property, the services governments provide, elected First Nations, Métis and Inuit representatives, and how media shape what we think about people and places.",
     standards: ["4-KP-044, 4-KP-044A, 4-KE-047, 4-KE-048, 4-KE-049, 4-VE-012", "elected Indigenous representatives, public and private property, services governments provide, and media influences"],
-    items: GOV,
+    items: [...GOV, ...GOV_DEEP],
   }),
   bankUnit({
     id: "mb-special-places",
@@ -388,7 +389,7 @@ export const units = [
     blurb: "Parks, historic sites and caring for the land",
     parentNote: "Practises Manitoba's places of historic, cultural or environmental importance, such as The Forks, Lower Fort Garry, Riding Mountain and Wapusk, and respect for the land, water and sky.",
     standards: ["4-KL-024, 4-KL-025, 4-VL-006, 4-VL-006A, 4-S-103", "special places in Manitoba, relationships with the land, and care for the natural environment"],
-    items: PLACES,
+    items: [...PLACES, ...PLACES_DEEP],
   }),
   bankUnit({
     id: "mb-heritage",
@@ -397,7 +398,7 @@ export const units = [
     blurb: "Métis, First Nations and francophone contributions",
     parentNote: "Practises contributions of First Nations, Métis and francophone Manitobans to the province's culture, place names and history, the effects of European settlement, and why oral tradition matters.",
     standards: ["4-KI-006A, 4-KI-006F, 4-KI-007A, 4-KI-008F, 4-KI-011, 4-KI-011A, 4-KI-012, 4-KI-012F, 4-KH-034, 4-VH-008, 4-VH-009, 4-VI-003, 4-VI-004", "Indigenous and francophone achievements and contributions, the impact of European settlement, and valuing oral tradition and diversity"],
-    items: HERITAGE,
+    items: [...HERITAGE, ...HERITAGE_DEEP],
   }),
   bankUnit({
     id: "mb-map-skills",
@@ -406,7 +407,7 @@ export const units = [
     blurb: "Titles, legends, compass roses and grids",
     parentNote: "Practises reading and building maps with a title, legend, compass rose and grid, and finding direction by landmarks, the Sun and stars, compass or GPS.",
     standards: ["4-S-205, 4-S-206", "constructing and interpreting maps with a title, legend, compass rose and grid"],
-    items: MAPSKILLS,
+    items: [...MAPSKILLS, ...MAPSKILLS_DEEP],
   }),
   bankUnit({
     id: "mb-research-skills",
@@ -415,6 +416,6 @@ export const units = [
     blurb: "Sources, facts and opinions, timelines and conclusions",
     parentNote: "Practises choosing sources, asking research questions, telling fact from opinion, measuring time (decade, century, generation), timelines, weighing solutions and drawing conclusions from evidence.",
     standards: ["4-S-200, 4-S-201, 4-S-202, 4-S-203, 4-S-204, 4-S-300, 4-S-301, 4-S-302, 4-S-303, 4-S-304, 4-S-305, 4-S-402", "finding and organizing information, time words and timelines, asking questions, fact and opinion, and drawing conclusions"],
-    items: RESEARCH,
+    items: [...RESEARCH, ...RESEARCH_DEEP],
   }),
 ];
