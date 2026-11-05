@@ -302,6 +302,22 @@ describe("Hub tiles", () => {
     expect(screen.queryByText("Explore")).not.toBeInTheDocument();
   });
 
+  it("has an Articles tile for Grades 2 to 9 only, and none when switched off", () => {
+    const mid = show("middle");
+    fireEvent.click(tile("Articles"));
+    expect(window.location.hash).toBe("#/articles");
+    mid.unmount();
+    const big = show("big");
+    expect(tile("Articles")).toBeInTheDocument();
+    big.unmount();
+    const little = show("little");
+    expect(screen.queryByText("Articles")).not.toBeInTheDocument();
+    little.unmount();
+    h.off = new Set(["articles"]);
+    show("middle");
+    expect(screen.queryByText("Articles")).not.toBeInTheDocument();
+  });
+
   it("has a Rhymes tile for Grades 2 to 4 only (little kids find it in Treasures), and none when switched off", () => {
     const { unmount } = show("middle");
     fireEvent.click(tile("Rhymes"));
