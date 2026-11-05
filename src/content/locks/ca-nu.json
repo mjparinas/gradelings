@@ -397,12 +397,12 @@
   "5/core-french": {
     "overview": "bcc12d049c",
     "units": [
-      "salutations text=34aad2270e std=5e7018dbda q=bebc4e7fa8",
+      "salutations text=34aad2270e std=5e7018dbda q=85b8db961b",
       "sons-et-accents text=c2600c3971 std=6c96743e9e q=42ec9fcbd3",
       "nombres text=64f42c031e std=5e7018dbda q=ec7f3851db",
-      "genre-et-nombre text=6fc35772c5 std=63a33c56c2 q=9bd55d2bf1",
-      "gouts text=be0812c122 std=5e7018dbda q=86251f9e2c",
-      "descriptions text=66785fc698 std=63a33c56c2 q=c9012bbc01",
+      "genre-et-nombre text=6fc35772c5 std=63a33c56c2 q=ee09044759",
+      "gouts text=be0812c122 std=5e7018dbda q=51ab4a36e1",
+      "descriptions text=66785fc698 std=63a33c56c2 q=8607aadf86",
       "respect text=d02cfdf800 std=f0b8a2de32 q=a0feb345ec"
     ]
   },
