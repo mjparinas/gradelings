@@ -22,6 +22,11 @@ import * as guidesSubject from "./guides/[framework]/[grade]/[subject]/page";
 import * as worksheet from "./guides/[framework]/[grade]/[subject]/worksheet/page";
 import * as french from "./guides/[framework]/french/page";
 import * as help from "./help/page";
+import * as activities from "./activities/page";
+import * as activitiesCalendar from "./activities/practice-calendar/[band]/page";
+import * as activitiesGames from "./activities/math-games/[band]/page";
+import * as activitiesLog from "./activities/reading-log/page";
+import * as activitiesTalk from "./activities/talk-cards/page";
 import * as helpAtHome from "./help-at-home/page";
 import * as helpAtHomeGrade from "./help-at-home/[grade]/page";
 import * as mathFacts from "./math-facts/page";
@@ -51,7 +56,7 @@ const PAGES: Record<string, Page> = {
   "/for-teachers/": teachers, "/for-teachers/[framework]/": teachersFw, "/for-teachers/[framework]/[grade]/": teachersGrade,
   "/guides/": guides, "/guides/[framework]/": guidesFw, "/guides/[framework]/[grade]/": guidesGrade, "/guides/[framework]/[grade]/[subject]/": guidesSubject,
   "/guides/[framework]/[grade]/[subject]/worksheet/": worksheet, "/guides/[framework]/french/": french,
-  "/help/": help, "/help-at-home/": helpAtHome, "/help-at-home/[grade]/": helpAtHomeGrade, "/math-facts/": mathFacts, "/math-facts/[set]/": mathFactsSet, "/worksheets/": worksheets, "/worksheets/[grade]/": worksheetsGrade, "/worksheets/[grade]/[skill]/": worksheetsSkill, "/pricing/": pricing, "/privacy/": privacy, "/report-cards/": reportCards, "/report-cards/[framework]/": reportCardsFw,
+  "/help/": help, "/activities/": activities, "/activities/practice-calendar/[band]/": activitiesCalendar, "/activities/math-games/[band]/": activitiesGames, "/activities/reading-log/": activitiesLog, "/activities/talk-cards/": activitiesTalk, "/help-at-home/": helpAtHome, "/help-at-home/[grade]/": helpAtHomeGrade, "/math-facts/": mathFacts, "/math-facts/[set]/": mathFactsSet, "/worksheets/": worksheets, "/worksheets/[grade]/": worksheetsGrade, "/worksheets/[grade]/[skill]/": worksheetsSkill, "/pricing/": pricing, "/privacy/": privacy, "/report-cards/": reportCards, "/report-cards/[framework]/": reportCardsFw,
   "/status/": status, "/terms/": terms, "/trust/": trust,
 };
 
