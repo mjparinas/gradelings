@@ -1,5 +1,6 @@
 import type { Unit } from "../../types";
 import { passage, readingUnit, type R } from "./language-kit";
+import { RHETORIC_AND_SOURCES_9_MORE, WORLD_LITERATURE_9_MORE } from "./language-more";
 
 // California's own Grade 9 English language arts units (the 9–10 band): cultural points of view, a scene in two
 // artistic forms and how authors transform source material (CA CCSS RL.9-10.3, RL.9-10.6, RL.9-10.7, RL.9-10.9), and
@@ -123,7 +124,7 @@ export const WORLD_LITERATURE_9: Unit = readingUnit({
     "RL.9-10.3; RL.9-10.6; RL.9-10.7; RL.9-10.9",
     "complex characters, cultural experience and point of view in world literature, a scene in two artistic forms, and how authors transform source material",
   ],
-  items: WORLD_LITERATURE,
+  items: [...WORLD_LITERATURE, ...WORLD_LITERATURE_9_MORE],
 });
 
 export const RHETORIC_AND_SOURCES_9: Unit = readingUnit({
@@ -137,7 +138,7 @@ export const RHETORIC_AND_SOURCES_9: Unit = readingUnit({
     "RI.9-10.3; RI.9-10.8; RI.9-10.9; L.9-10.6",
     "how a series of events or ideas unfolds, evaluating arguments, reasoning and evidence, themes of founding US documents, and academic and subject words",
   ],
-  items: RHETORIC_AND_SOURCES,
+  items: [...RHETORIC_AND_SOURCES, ...RHETORIC_AND_SOURCES_9_MORE],
 });
 
 export const LANGUAGE_9: Unit[] = [WORLD_LITERATURE_9, RHETORIC_AND_SOURCES_9];
