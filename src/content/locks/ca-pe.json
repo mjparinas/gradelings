@@ -99,8 +99,8 @@
       "families text=2e5f849268 std=450814c226 q=843d50e41d",
       "mb-k-canada-and-celebrations text=752ecc556b std=27233855a7 q=23b251c87c",
       "places-near-me text=76b31e159b std=eb1c926f40 q=4476443638",
-      "pe-communities-connect-k text=a897115f55 std=deb40ffa69 q=1e6abef18e",
-      "pe-first-maps-k text=9483be9a58 std=51eb05787c q=455113855b"
+      "pe-communities-connect-k text=a897115f55 std=deb40ffa69 q=85a0fca219",
+      "pe-first-maps-k text=9483be9a58 std=51eb05787c q=6cc404ad7e"
     ]
   },
   "1/language": {
@@ -168,10 +168,10 @@
       "places-in-my-community text=1356595ff7 std=e834846d2d q=760957f148",
       "maps text=0393b6b3b0 std=3fa023fea0 q=5413590a99",
       "measure-and-map text=8532beeb10 std=5e1c76d54a q=aa750bda62",
-      "pe-then-and-now-1 text=0e9ae638d9 std=dcc5ff323b q=deb1bf37c3",
-      "pe-first-peoples-place-1 text=17ab6eff37 std=43d6077cbf q=634074e2b3",
-      "pe-needs-and-wants-1 text=1435ccbdb5 std=731b02c659 q=056f9470aa",
-      "pe-goods-and-services-1 text=55be22b8f4 std=6848b622a6 q=8bc43fa881"
+      "pe-then-and-now-1 text=0e9ae638d9 std=dcc5ff323b q=5f8085517b",
+      "pe-first-peoples-place-1 text=17ab6eff37 std=43d6077cbf q=8032152318",
+      "pe-needs-and-wants-1 text=1435ccbdb5 std=731b02c659 q=ab4a4e507f",
+      "pe-goods-and-services-1 text=55be22b8f4 std=6848b622a6 q=43e8316788"
     ]
   },
   "2/language": {
@@ -228,14 +228,14 @@
     "overview": "488cee304b",
     "units": [
       "then-and-now text=adcb461d8f std=dca7a8be3c q=ae17feafab",
-      "pe-changes-in-my-life-2 text=5212fdb012 std=b55466b98b q=509524df7b",
-      "pe-people-who-change-things-2 text=f326a5a13c std=80e9bf0d48 q=f04db9c0a8",
+      "pe-changes-in-my-life-2 text=5212fdb012 std=b55466b98b q=3a28ac66a8",
+      "pe-people-who-change-things-2 text=f326a5a13c std=80e9bf0d48 q=5be22b0bdc",
       "caring-citizens text=774323e412 std=2d3e723b72 q=8411a16f0e",
-      "pe-our-future-community-2 text=3fa56ef19c std=682e3e97e0 q=34efd3dc12",
-      "pe-technology-2 text=ff00ab1306 std=e3a5c6a3e2 q=96d768daf9",
+      "pe-our-future-community-2 text=3fa56ef19c std=682e3e97e0 q=7dbc8bd11e",
+      "pe-technology-2 text=ff00ab1306 std=e3a5c6a3e2 q=7dac23e322",
       "needs-and-wants text=8192b43423 std=777f5ba558 q=d91ff3aeff",
-      "pe-work-and-prices-2 text=f115b62ac5 std=3932659968 q=5b31b61441",
-      "pe-changing-land-2 text=df84ddac53 std=c207e3303d q=a546c38fb7"
+      "pe-work-and-prices-2 text=f115b62ac5 std=3932659968 q=94cd3b1395",
+      "pe-changing-land-2 text=df84ddac53 std=c207e3303d q=46f5fa8a58"
     ]
   },
   "3/language": {
@@ -299,17 +299,17 @@
     "units": [
       "mb-world-maps text=1e325a2118 std=3e7c6e17dd q=258838d062",
       "maps-and-globes text=6a6a9ae26b std=89581008dd q=fd8314b02c",
-      "pe-our-province-3 text=141798bf8d std=1103d4a678 q=a7dd70062b",
+      "pe-our-province-3 text=141798bf8d std=1103d4a678 q=13f6f69b55",
       "mb-global-communities text=c8d53b307e std=38f368272a q=137089294c",
-      "pe-how-people-live-3 text=2516daea2b std=a73b475e60 q=31f3c303f3",
-      "pe-peoples-of-our-province-3 text=2d5413994b std=de10ee4604 q=695fc530e0",
+      "pe-how-people-live-3 text=2516daea2b std=a73b475e60 q=f2fb607ddd",
+      "pe-peoples-of-our-province-3 text=2d5413994b std=de10ee4604 q=6539c0194e",
       "world-cultures text=7b3656a51b std=3649dee398 q=b3c1eb8a42",
       "mb-contributions-and-connections text=487d7cc01e std=6dea3ade5b q=558eb793a1",
       "mb-working-together text=a30ec2699b std=5a46144986 q=9c2d570a5e",
       "mb-groups-and-leaders text=990b1bdfbd std=21623bc029 q=340efa8ad8",
-      "pe-governments-3 text=1f72cec1a8 std=4034463537 q=c464bdab36",
+      "pe-governments-3 text=1f72cec1a8 std=4034463537 q=79425d325e",
       "mb-citizenship text=76016c0088 std=dc6be792ae q=9fddf9a7be",
-      "pe-citizens-take-part-3 text=d264293111 std=dbe372dac8 q=df378794c9"
+      "pe-citizens-take-part-3 text=d264293111 std=dbe372dac8 q=78122c5335"
     ]
   },
   "3/spanish": {

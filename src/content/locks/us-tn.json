@@ -107,7 +107,7 @@
       "needs-and-wants text=1e0a92c2a9 std=aabc059a1a q=4c0cd8ade8",
       "or-k-money-and-work text=779c3d6e1e std=28bcf2e265 q=62e27d59bb",
       "places-near-me text=76b31e159b std=7cbf7325bd q=36dace6804",
-      "pe-first-maps-k text=b04702d986 std=739f5aea69 q=e26baafdd6",
+      "pe-first-maps-k text=b04702d986 std=739f5aea69 q=126a44e9aa",
       "mb-k-jobs-and-rules text=bde5eb779e std=9880f125d2 q=d98352f7c4",
       "ca-k-good-citizens text=d7b0dbd711 std=dc9e3bc04e q=ba47e020d0",
       "ca-k-calendar text=21e33a54d0 std=44be55877d q=82ad20cecd",
@@ -177,7 +177,7 @@
     "units": [
       "my-community text=f4b6495f7a std=1fea03fbac q=e0548ab0f6",
       "respect-and-inclusion text=2f7448bf67 std=68978dce4d q=2bd238d5a9",
-      "pe-goods-and-services-1 text=55be22b8f4 std=f9ff202ba4 q=8bc43fa881",
+      "pe-goods-and-services-1 text=55be22b8f4 std=f9ff202ba4 q=43e8316788",
       "wa-g1-earn-save-share text=ff3274fdf3 std=e158e5f7dd q=2bb7ea855e",
       "maps text=0393b6b3b0 std=03a3029834 q=671d944151",
       "our-land text=9250f303b3 std=1ccc4ad2b9 q=c1704cb4f1",
@@ -253,7 +253,7 @@
     "units": [
       "ny-g3-culture text=4215bb54e3 std=0bab35644d q=ed4ddf3452",
       "ca-g2-work-and-money text=29d8f69f16 std=d6a7adec9d q=3daba19f0f",
-      "pe-work-and-prices-2 text=f115b62ac5 std=b7620f61f4 q=73b6adf560",
+      "pe-work-and-prices-2 text=f115b62ac5 std=b7620f61f4 q=d1ae87d40e",
       "ny-g3-trade text=fbd8dd742e std=09a1c031ae q=7164350409",
       "or-g2-world-maps text=5be3d98572 std=410f6ff756 q=f54db7af64",
       "az-g2-continents-oceans text=3c092e19d9 std=68ba80bebc q=73975f9cd7",

@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { CITIZENS_DEEP, GOVERNMENTS_DEEP, LIVING_DEEP, PEOPLES_DEEP, PROVINCE_DEEP } from "./k3-social-deeper";
 
 // Grade 3 science and social studies, Prince Edward Island. Indigenous content is light, in the present tense for
 // living communities, and needs review by Mi’kmaq partners (for example the Mi’kmaq Confederacy of PEI) and the PEI
@@ -351,7 +352,7 @@ export const peOurProvince3 = bankUnit({
   parentNote:
     "Children place their province in the Atlantic region, Canada, North America and the world, and learn about its landforms, climate and plants. This is practice, not a report-card mark.",
   standards: ["3.1.1; 3.1.2", "locating their province and describing its physical features, climate and vegetation"],
-  items: PROVINCE,
+  items: [...PROVINCE, ...PROVINCE_DEEP],
 });
 
 export const peHowPeopleLive3 = bankUnit({
@@ -362,7 +363,7 @@ export const peHowPeopleLive3 = bankUnit({
   parentNote:
     "Children look at where people live in their province and how they make a living. This is practice, not a report-card mark.",
   standards: ["3.1.3", "where people live and how people make a living in their province"],
-  items: LIVING,
+  items: [...LIVING, ...LIVING_DEEP],
 });
 
 export const pePeoplesOfOurProvince3 = bankUnit({
@@ -373,7 +374,7 @@ export const pePeoplesOfOurProvince3 = bankUnit({
   parentNote:
     "Children learn about the diverse peoples in their province and how they express their culture, and how to promote positive interactions. This is practice, not a report-card mark.",
   standards: ["3.2.1; 3.2.2; 3.2.3", "the diverse peoples of their province, how they express culture and how to build positive interactions"],
-  items: PEOPLES,
+  items: [...PEOPLES, ...PEOPLES_DEEP],
 });
 
 export const peGovernments3 = bankUnit({
@@ -384,7 +385,7 @@ export const peGovernments3 = bankUnit({
   parentNote:
     "Children examine the purpose, function and structure of government in their province. This is practice, not a report-card mark.",
   standards: ["3.3.1", "the purpose, function and structure of governments in their province"],
-  items: GOVERNMENTS,
+  items: [...GOVERNMENTS, ...GOVERNMENTS_DEEP],
 });
 
 export const peCitizensTakePart3 = bankUnit({
@@ -395,5 +396,5 @@ export const peCitizensTakePart3 = bankUnit({
   parentNote:
     "Children explore the rights and responsibilities of citizens and how citizens take part in public decision making. This is practice, not a report-card mark.",
   standards: ["3.3.2; 3.3.3", "the rights and responsibilities of citizens and how citizens take part in public decision making"],
-  items: CITIZENS,
+  items: [...CITIZENS, ...CITIZENS_DEEP],
 });

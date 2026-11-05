@@ -100,7 +100,7 @@
       "families text=2e5f849268 std=6eac209e48 q=843d50e41d",
       "fair-and-kind text=eddef586f9 std=0987348f45 q=abb3784cb4",
       "mb-k-jobs-and-rules text=bde5eb779e std=7ee5c74bd1 q=d98352f7c4",
-      "pe-first-maps-k text=b04702d986 std=cc5248cd53 q=e26baafdd6",
+      "pe-first-maps-k text=b04702d986 std=cc5248cd53 q=126a44e9aa",
       "places-near-me text=76b31e159b std=0d95dffe53 q=36dace6804",
       "mb-k-yesterday-today-tomorrow text=ded5c52b8a std=ffe11ad95e q=ee4fa47f81",
       "needs-and-wants text=1e0a92c2a9 std=5828a18fe4 q=4c0cd8ade8",
@@ -167,8 +167,8 @@
       "my-roles text=6c48ae23b8 std=ad7cd92430 q=f34e0b2c23",
       "maps text=0393b6b3b0 std=14ab9cb46a q=671d944151",
       "our-land text=9250f303b3 std=61759cca24 q=c1704cb4f1",
-      "pe-needs-and-wants-1 text=feb7f0d4f1 std=97091a1fba q=9a2de87a9a",
-      "pe-goods-and-services-1 text=55be22b8f4 std=19ec99122c q=8bc43fa881",
+      "pe-needs-and-wants-1 text=feb7f0d4f1 std=97091a1fba q=ab4a4e507f",
+      "pe-goods-and-services-1 text=55be22b8f4 std=19ec99122c q=43e8316788",
       "wa-g1-earn-save-share text=ff3274fdf3 std=aa518b203d q=2bb7ea855e"
     ]
   },
@@ -230,7 +230,7 @@
       "ca-g2-citizens-and-leaders text=c362a6e3f6 std=a8cdde001a q=deb671fc39",
       "then-and-now text=adcb461d8f std=d3f60fbecb q=db6aba9849",
       "ns-community-change-2 text=153e1a1ea0 std=37f1434503 q=4a8dbf6467",
-      "pe-work-and-prices-2 text=f115b62ac5 std=416e41c238 q=73b6adf560",
+      "pe-work-and-prices-2 text=f115b62ac5 std=416e41c238 q=d1ae87d40e",
       "ca-g2-work-and-money text=29d8f69f16 std=dbca04419e q=3daba19f0f",
       "mn-g2-seasons text=0cfe83c659 std=9289f7a586 q=aa8b154034"
     ]
