@@ -535,6 +535,7 @@ Tests are duplicated across screen sizes only where layout can break:
   - keeps grade files loaded on demand: the app posts the files it has loaded (`cache-urls`), including those fetched before the worker took control on a first visit;
   - serves pages network-first and hashed build files cache-first;
   - never caches `/api/` or client-navigation data.
+  - turns a build file a school web filter answered with an HTML page into a failed download. A page with no worker yet notices the filter's "Unexpected token '<'" instead (`src/lib/blockedScripts.ts`), because Turbopack would otherwise wait for that file forever; the app then shows "This network blocked part of the app", and Try again reloads the page.
 - **Each grade's lessons are a separate download.** The client content store `src/content/index.ts` loads a grade with `loadGrade` (a dynamic `import()` from each framework's manifest).
   - The kids' app waits for the active child's grade, and the parent area for its children's grades (`ContentGate`, `useGradeContent`).
   - After that, the other profiles' grades and the grades either side are prefetched when the browser is idle, so switching players or moving up a grade works offline.

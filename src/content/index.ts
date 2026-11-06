@@ -1,3 +1,4 @@
+import { failIfBlocked } from "@/lib/blockedScripts";
 import { DEFAULT_FRAMEWORK, getFramework } from "./frameworks";
 import { localeOf, localizeUnit } from "./locale";
 import { GRADE_ORDER } from "./subjects";
@@ -182,13 +183,16 @@ function loadPart(id: string, grade: GradeId, loader: Loader, store: () => void,
   let p = pending.get(id);
   if (!p) {
     failed.delete(id);
-    p = loader()
-      .then((m) => {
-        register(m);
-        store();
-      })
+    const download = loader().then((m) => {
+      register(m);
+      store();
+    });
+    // A grade that arrives after its wait was cut short (below) still counts: its screen turns ready.
+    download.then(notify, () => {});
+    // A file a school filter answered with a web page never settles on its own (src/lib/blockedScripts.ts).
+    p = failIfBlocked(download)
       .catch((err: unknown) => {
-        // Usually offline before this grade was ever downloaded. Allow a retry.
+        // Usually offline before this grade was ever downloaded, or a blocked file. Allow a retry.
         failed.add(id);
         throw err;
       })
