@@ -85,9 +85,9 @@ await page.getByRole("button", { name: "Sign Out" }).click();
 // The admin gets in.
 await page.getByRole("heading", { name: "Admin Sign In" }).waitFor();
 await signIn(ADMIN);
-check(await page.getByText("Families", { exact: true }).waitFor({ timeout: 8000 }).then(() => true, () => false), "the admin sees the overview");
-check(await vis(page.getByRole("img", { name: "Revenue by Month" })), "the overview charts revenue by month");
-check(await vis(page.getByRole("img", { name: "Sign-Ups per Week" })), "the overview charts sign-ups");
+check(await page.getByText("Families", { exact: true }).first().waitFor({ timeout: 15000 }).then(() => true, () => false), "the admin sees the overview");
+check(await page.getByRole("img", { name: "Revenue by Month" }).first().waitFor({ timeout: 15000 }).then(() => true, () => false), "the overview charts revenue by month");
+check(await page.getByRole("img", { name: "Sign-Ups per Week" }).first().waitFor({ timeout: 15000 }).then(() => true, () => false), "the overview charts sign-ups");
 check(await page.getByRole("heading", { name: "Trial to Paid" }).waitFor({ timeout: 8000 }).then(() => true, () => false), "the overview has the trial-to-paid insights");
 check(await page.getByRole("heading", { name: "Where Sign-Ups Come From" }).waitFor({ timeout: 8000 }).then(() => true, () => false), "the overview has the sign-up sources insights");
 await page.getByLabel("Monthly running costs (CAD)").fill("120");

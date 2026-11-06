@@ -136,15 +136,28 @@ function resolveImport(from: string, spec: string): string | undefined {
   return undefined;
 }
 
+// Each source file is read and its imports found once, however many frameworks and grades reach it.
+const sourceCache = new Map<string, { text: string; imports: string[] }>();
+function sourceOf(entry: string) {
+  let hit = sourceCache.get(entry);
+  if (!hit) {
+    const text = readFileSync(entry, "utf8");
+    const imports: string[] = [];
+    for (const m of text.matchAll(/^\s*(?:import|export)\s+(?!type\b)(?:[^;]*?\sfrom\s+)?"([^"]+)"/gm)) {
+      const file = resolveImport(entry, m[1]);
+      if (file) imports.push(file);
+    }
+    hit = { text, imports };
+    sourceCache.set(entry, hit);
+  }
+  return hit;
+}
+
 /** Every source file reachable from `entry` through value imports (type-only imports ship nothing). */
 function reach(entry: string, seen = new Set<string>()): Set<string> {
   if (seen.has(entry)) return seen;
   seen.add(entry);
-  const text = readFileSync(entry, "utf8");
-  for (const m of text.matchAll(/^\s*(?:import|export)\s+(?!type\b)(?:[^;]*?\sfrom\s+)?"([^"]+)"/gm)) {
-    const file = resolveImport(entry, m[1]);
-    if (file) reach(file, seen);
-  }
+  for (const file of sourceOf(entry).imports) reach(file, seen);
   return seen;
 }
 
@@ -158,7 +171,7 @@ function sizes(): Record<string, Record<string, number>> {
       const seen = new Set<string>();
       const parts = [...new Set([DEFAULT_FRAMEWORK, f.id, ...(EXTRA_DEPENDS[f.id] ?? [])])].map((id) => files[id]?.[grade]).filter(Boolean) as string[];
       for (const p of parts) reach(resolveImport(join(__dirname, "index.ts"), `./${p}`)!, seen);
-      const source = [...seen].sort().map((file) => readFileSync(file, "utf8")).join("\n");
+      const source = [...seen].sort().map((file) => sourceOf(file).text).join("\n");
       out[f.id][grade] = Math.round(gzipSync(source).length / 1024);
     }
   }

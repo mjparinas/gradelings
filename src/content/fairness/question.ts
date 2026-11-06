@@ -1,7 +1,64 @@
-import { expect } from "vitest";
 import { moneyOf } from "../money";
 import { ageBandFor } from "../subjects";
 import type { Course, Question, Visual } from "../types";
+
+// A small stand-in for vitest's `expect` with the matchers these checks use. Every question is checked with dozens of
+// assertions and a unit's questions are generated over and over, so vitest's own `expect` (a proxy chain and a result
+// object per call) was about 90% of the time of the content suite. This one throws the same kind of error with the
+// same message and costs almost nothing. Add a matcher here when a check needs one.
+class Check {
+  constructor(
+    private readonly actual: unknown,
+    private readonly message: string | undefined,
+    private readonly negate = false,
+  ) {}
+
+  get not(): Check {
+    return new Check(this.actual, this.message, !this.negate);
+  }
+
+  private assert(pass: boolean, wanted: string, expected?: unknown) {
+    if (pass !== this.negate) return;
+    const show = (v: unknown) => {
+      try {
+        return typeof v === "string" ? JSON.stringify(v) : (JSON.stringify(v) ?? String(v));
+      } catch {
+        return String(v);
+      }
+    };
+    const detail = `expected ${show(this.actual)} ${this.negate ? "not " : ""}to ${wanted}${expected === undefined ? "" : ` ${show(expected)}`}`;
+    throw new Error(this.message ? `${this.message}: ${detail}` : detail);
+  }
+
+  toBe(expected: unknown) {
+    this.assert(Object.is(this.actual, expected), "be", expected);
+  }
+  toBeGreaterThan(n: number) {
+    this.assert((this.actual as number) > n, "be greater than", n);
+  }
+  toBeGreaterThanOrEqual(n: number) {
+    this.assert((this.actual as number) >= n, "be greater than or equal to", n);
+  }
+  toBeLessThan(n: number) {
+    this.assert((this.actual as number) < n, "be less than", n);
+  }
+  toBeLessThanOrEqual(n: number) {
+    this.assert((this.actual as number) <= n, "be less than or equal to", n);
+  }
+  toBeCloseTo(n: number, digits = 2) {
+    this.assert(Math.abs((this.actual as number) - n) < 10 ** -digits / 2, `be close to (${digits} digits)`, n);
+  }
+  toContain(item: unknown) {
+    this.assert((this.actual as { includes(x: unknown): boolean }).includes(item), "contain", item);
+  }
+  toMatch(pattern: RegExp) {
+    this.assert(pattern.test(this.actual as string), "match", String(pattern));
+  }
+}
+
+function expect(actual: unknown, message?: string): Check {
+  return new Check(actual, message);
+}
 
 // The checks every generated question must pass (fair choices, a fitting keypad, the maths right).
 // Shared by the curriculum's per-grade fairness tests and by Math Facts (`src/lib/facts.test.ts`).

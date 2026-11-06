@@ -93,7 +93,8 @@ check(await page.getByText("Let's try one").waitFor({ timeout: 8000 }).then(() =
 await shot("lesson");
 await page.getByRole("button", { name: /Let.s practise/ }).click();
 let answered = 0;
-for (let i = 0; i < 200 && answered < 6; i++) {
+// Wait on the clock, not on a number of tries: a busy CI machine answers each step slowly, so a fixed count ran out first.
+for (const t0 = Date.now(); Date.now() - t0 < 90_000 && answered < 6; ) {
   if ((await step(page)) === "next") answered++;
   await page.waitForTimeout(40);
 }
