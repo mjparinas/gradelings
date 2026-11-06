@@ -1,5 +1,6 @@
 import { frQuestions, type FrItem } from "../../french";
 import type { Course } from "../../types";
+import { HYPOTHETICAL_DEEP, PAST_DEEP, PRONOUNS_DEEP, STYLES_DEEP } from "./immersion-deeper";
 
 const FR = { lang: "fr" } as const;
 
@@ -378,7 +379,7 @@ export const course: Course = {
       blurb: "Métaphore, comparaison, hyperbole…",
       parentNote: "Stylistic elements: personification, metaphor, alliteration, comparison and hyperbole.",
       standards: { "ca-bc": "Literary elements: stylistic elements (personification, metaphor, alliteration, comparison, hyperbole)" },
-      generate: (o) => frQuestions(STYLES, o, 8, FR),
+      generate: (o) => frQuestions([...STYLES, ...STYLES_DEEP], o, 8, FR),
     },
     {
       id: "sequence-descriptive",
@@ -396,7 +397,7 @@ export const course: Course = {
       blurb: "Passé composé, imparfait, plus-que-parfait",
       parentNote: "Choosing among the passé composé, imparfait and plus-que-parfait, and making past participles agree.",
       standards: { "ca-bc": "Language elements: agreement of past tenses: passé composé, imparfait and plus-que-parfait" },
-      generate: (o) => frQuestions(PAST, o, 8, FR),
+      generate: (o) => frQuestions([...PAST, ...PAST_DEEP], o, 8, FR),
     },
     {
       id: "pronoms-complements",
@@ -405,7 +406,7 @@ export const course: Course = {
       blurb: "le, la, lui, leur, y, en",
       parentNote: "Direct pronouns (me, te, se, le, la, les) and indirect pronouns (me, te, nous, vous, lui, leur, y, en).",
       standards: { "ca-bc": "Language elements: pronouns used as direct and indirect object complements" },
-      generate: (o) => frQuestions(PRONOUNS, o, 8, FR),
+      generate: (o) => frQuestions([...PRONOUNS, ...PRONOUNS_DEEP], o, 8, FR),
     },
     {
       id: "phrases-hypothetiques",
@@ -414,7 +415,7 @@ export const course: Course = {
       blurb: "Si + présent, si + imparfait",
       parentNote: "Hypothetical sentences with si: matching the tense after si with the tense of the result.",
       standards: { "ca-bc": "Language elements: hypothetical sentences" },
-      generate: (o) => frQuestions(HYPOTHETICAL, o, 8, FR),
+      generate: (o) => frQuestions([...HYPOTHETICAL, ...HYPOTHETICAL_DEEP], o, 8, FR),
     },
     {
       id: "passe-simple",

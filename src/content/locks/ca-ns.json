@@ -806,11 +806,11 @@
       "registres-et-expose text=9fcfc18a91 std=15b44340cf q=ec12e484f3",
       "fable text=11ae2dabb3 std=4ecfa6468a q=63fa4f952e",
       "roman text=a85739e695 std=4ecfa6468a q=508498f190",
-      "figures-de-style text=91a17e6046 std=4ecfa6468a q=d9af6a372b",
+      "figures-de-style text=91a17e6046 std=4ecfa6468a q=0e6878d544",
       "sequence-descriptive text=aaba16ad4c std=60078d5e3a q=13ebd7c653",
-      "temps-du-passe text=8582fd429c std=60078d5e3a q=80f9d53dbc",
-      "pronoms-complements text=71e6b53871 std=60078d5e3a q=7553c89099",
-      "phrases-hypothetiques text=a7809ecb7b std=60078d5e3a q=f73deaf2a0",
+      "temps-du-passe text=8582fd429c std=60078d5e3a q=054dadf947",
+      "pronoms-complements text=71e6b53871 std=60078d5e3a q=761022744f",
+      "phrases-hypothetiques text=a7809ecb7b std=60078d5e3a q=5681581067",
       "passe-simple text=073b3b8eb7 std=60078d5e3a q=8f2bd618e1"
     ]
   },
