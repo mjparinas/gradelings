@@ -1,7 +1,7 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
-import { firstChargeAt, FREE_UNITS_PER_COURSE, MAX_CHILDREN, pricesFor, TAX_NOTE, trialDaysLeft, upgradeOffer } from "@/lib/plan";
+import { firstChargeAt, FREE_UNITS_PER_COURSE, MAX_CHILDREN, pricesFor, REFUND_DAYS, TAX_NOTE, trialDaysLeft, upgradeOffer } from "@/lib/plan";
 import { useRoute } from "@/lib/router";
 import { useStore } from "@/lib/store";
 import { isStoreApp } from "@/lib/twa";
@@ -37,6 +37,7 @@ export function UpgradeBanner() {
         )}
       </p>
       <StakeLines className="mt-2" />
+      <p className="mt-1 text-sm text-ink-soft">Not for you? Ask within {REFUND_DAYS} days of any payment for a full refund.</p>
       {offer === "trial" && (
         <p className="mt-1 text-sm text-ink-soft">
           {firstChargeAt(family.trialEndsAt, Boolean(family.subscription))

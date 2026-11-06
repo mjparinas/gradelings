@@ -79,6 +79,18 @@ describe("SubscriptionPage", () => {
     expect(screen.getByText(/keeps your free days.*first payment is on/i)).toBeInTheDocument();
   });
 
+  it("states the refund promise beside the plan buttons on the web, and not in the Android app", () => {
+    state.android = false;
+    state.ios = false;
+    state.family = { plan: "trial", trialEndsAt: Date.now() + 5 * 86_400_000, updatedAt: 1, account: { email: "parent@example.com", familyId: "fam", verified: true } };
+    const { unmount } = render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
+    expect(screen.getByTestId("refund-promise")).toHaveTextContent(/within 14 days.*refund it in full/i);
+    unmount();
+    state.android = true;
+    render(<SubscriptionPage billing={billing} onBilling={() => {}} />);
+    expect(screen.queryByTestId("refund-promise")).not.toBeInTheDocument();
+  });
+
   it("never points Android parents to the website, and shows no plan buttons", () => {
     state.android = true;
     state.family = { plan: "trial", trialEndsAt: Date.now() + 5 * 86_400_000, updatedAt: 1 };
