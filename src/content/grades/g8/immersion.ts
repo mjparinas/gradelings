@@ -1,5 +1,6 @@
 import { frOrder, frQuestions, type FrItem } from "../../french";
 import type { Course, GenerateOptions, Question } from "../../types";
+import { COMMUNICATION_DEEP, MOODS_DEEP, REGISTERS_DEEP } from "./immersion-deeper";
 
 const FR = { lang: "fr" } as const;
 
@@ -436,7 +437,7 @@ export const course: Course = {
       blurb: "Familier, courant, soutenu",
       parentNote: "Recognizing colloquial, standard and formal language, and choosing the right register for the audience.",
       standards: { "ca-bc": "Registers of language: colloquial, standard and formal language" },
-      generate: (o) => frQuestions(REGISTERS, o, 8, FR),
+      generate: (o) => frQuestions([...REGISTERS, ...REGISTERS_DEEP], o, 8, FR),
     },
     {
       id: "communication-verbale",
@@ -445,7 +446,7 @@ export const course: Course = {
       blurb: "Voix, gestes et mimiques",
       parentNote: "Verbal communication (intonation, volume, speed, tone, pauses) and non-verbal communication (gestures and facial expressions).",
       standards: { "ca-bc": "Communication strategies: verbal (intonation, voice, volume, speed, tone, pauses) and non-verbal (gestures and mimicry)" },
-      generate: (o) => frQuestions(COMMUNICATION, o, 8, FR),
+      generate: (o) => frQuestions([...COMMUNICATION, ...COMMUNICATION_DEEP], o, 8, FR),
     },
     {
       id: "legende",
@@ -526,7 +527,7 @@ export const course: Course = {
       blurb: "Demain et les demandes polies",
       parentNote: "Forming and using the simple future and the present conditional, including polite requests.",
       standards: { "ca-bc": "Language elements: verb moods and tenses: present conditional and simple future" },
-      generate: (o) => frQuestions(MOODS, o, 8, FR),
+      generate: (o) => frQuestions([...MOODS, ...MOODS_DEEP], o, 8, FR),
     },
   ],
 };
