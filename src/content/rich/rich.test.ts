@@ -5,7 +5,7 @@ import { coursesInFramework } from "../index";
 import { hashSeed, withSeed } from "../random";
 import type { MistakeQuestion, Question } from "../types";
 import { withRich } from "./index";
-import { agreementError, deviceExamples, ecosystemRoles, elementSymbols, gasGiants, heatAdded, idiomMeanings, newtonsLaws, notParallel, rootMeanings, storyElements, betweenZeroAndNegativeOne, distributeMistake, exponentLaws, fractionAddMistake, linearEquationMistake, perfectSquares, rightTriangles, decimalFractions, equalFractions, fractionDecimals, fractionWords, integerLineMistake, mixedNumberMistake, multiplyMistake, oneStepMistake, percentFractions, twoStepMistake, equivalentFill } from "./questions";
+import { factsAndOpinions, frenchHobbies, frenchLinkers, mapLines, spanishFoods, agreementError, deviceExamples, ecosystemRoles, elementSymbols, gasGiants, heatAdded, idiomMeanings, newtonsLaws, notParallel, rootMeanings, storyElements, betweenZeroAndNegativeOne, distributeMistake, exponentLaws, fractionAddMistake, linearEquationMistake, perfectSquares, rightTriangles, decimalFractions, equalFractions, fractionDecimals, fractionWords, integerLineMistake, mixedNumberMistake, multiplyMistake, oneStepMistake, percentFractions, twoStepMistake, equivalentFill } from "./questions";
 import { RICH } from "./units";
 
 const seeds = Array.from({ length: 12 }, (_, i) => i);
@@ -325,6 +325,26 @@ describe("Grade 6 to 9 language and science questions", () => {
         expect(["are", "have", "were", "howl"]).toContain(a.words[a.answers[0]]);
         const marked = n.answers.map((i) => n.words[i].replace(/\W/g, "")).join(" ");
         expect(marked).toMatch(/^(to ride bikes|drawing pictures|to eat leftovers|leaving by noon|resting)$/);
+      });
+  });
+  it("social studies, French and Spanish builders are fair", () => {
+    for (let s = 0; s < 60; s++)
+      withSeed(s, () => {
+        const map = mapLines()[0];
+        const hobbies = frenchHobbies()[0];
+        const foods = spanishFoods()[0];
+        for (const m of [map, hobbies, foods]) {
+          if (m.kind !== "match") throw new Error("kind");
+          expect(new Set(m.pairs.map((p) => p.left.label)).size).toBe(m.pairs.length);
+          expect(new Set(m.pairs.map((p) => p.right.label)).size).toBe(m.pairs.length);
+        }
+        const facts = factsAndOpinions()[0];
+        const linkers = frenchLinkers()[0];
+        if (facts.kind !== "multi" || linkers.kind !== "multi") throw new Error("kind");
+        const opinion = /best|better|tastiest|gloomy|most fun/;
+        for (const c of facts.choices) expect(facts.answers.includes(c.id), c.label).toBe(opinion.test(c.label));
+        expect(linkers.lang).toBe("fr");
+        for (const c of linkers.choices) expect(linkers.answers.includes(c.id), c.label).toBe(["mais", "parce que", "donc", "pourtant", "cependant"].includes(c.label));
       });
   });
 });

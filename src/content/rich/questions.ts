@@ -636,3 +636,74 @@ export const ecosystemRoles = (): Question[] => [
     { left: "Decomposer", right: "Mushroom" },
   ]),
 ];
+
+// ---------- Social studies, French and Spanish (nothing here names a place) ----------
+
+const MAP_LINES: [string, string][] = [
+  ["Equator", "Splits Earth into north and south"],
+  ["Prime meridian", "Splits Earth into east and west"],
+  ["Latitude lines", "Run east and west around Earth"],
+  ["Longitude lines", "Run north and south from pole to pole"],
+  ["North Pole", "The farthest point north"],
+  ["South Pole", "The farthest point south"],
+];
+export const mapLines = (): Question[] => [
+  match("Match each map term to what it means.", "Latitude lines run east to west and measure north or south. Longitude lines run pole to pole and measure east or west.", sample(MAP_LINES, 4).map(([l, r]) => ({ left: l, right: r }))),
+];
+
+const FACTS = ["A week has seven days.", "Ice is frozen water.", "The Moon goes around Earth.", "A triangle has three sides.", "Spiders have eight legs."];
+const OPINIONS = ["Summer is the best season.", "Dogs are better pets than cats.", "Pizza is the tastiest food.", "Rainy days are gloomy.", "Soccer is the most fun sport."];
+export const factsAndOpinions = (): Question[] => [
+  multi(
+    "Tap every sentence that is an opinion.",
+    "A fact can be checked and proved. An opinion says what someone thinks or feels, like best, tastiest or most fun.",
+    sample(OPINIONS, randInt(2, 3)).map((s) => [s] as [string]),
+    sample(FACTS, 2).map((s) => [s] as [string]),
+  ),
+];
+
+const FR_HOBBIES: [string, string, string][] = [
+  ["nager", "🏊", "swimming"],
+  ["lire", "📖", "reading"],
+  ["danser", "💃", "dancing"],
+  ["chanter", "🎤", "singing"],
+  ["dessiner", "🎨", "drawing"],
+  ["faire du vélo", "🚲", "riding a bike"],
+  ["jouer au soccer", "⚽", "playing soccer"],
+  ["jouer de la guitare", "🎸", "playing the guitar"],
+  ["jouer du piano", "🎹", "playing the piano"],
+];
+export const frenchHobbies = (): Question[] => [
+  match("Match each French hobby to its picture.", "For sports and games we say jouer à (au soccer). For instruments we say jouer de (de la guitare, du piano).", sample(FR_HOBBIES, 4).map(([fr, e, en]) => ({ left: fr, right: [en, e] as [string, string], picture: "right" as const }))),
+];
+
+const ES_FOODS: [string, string, string][] = [
+  ["la manzana", "🍎", "apple"],
+  ["el pan", "🍞", "bread"],
+  ["la leche", "🥛", "milk"],
+  ["el queso", "🧀", "cheese"],
+  ["el huevo", "🥚", "egg"],
+  ["la sopa", "🍲", "soup"],
+  ["el pollo", "🍗", "chicken"],
+  ["el arroz", "🍚", "rice"],
+];
+export const spanishFoods = (): Question[] => [
+  {
+    ...match("Match each Spanish food to its picture.", "«El» and «la» both mean “the”. «El» goes with masculine words and «la» with feminine ones.", sample(ES_FOODS, 4).map(([es, e, en]) => ({ left: es, right: [en, e] as [string, string], picture: "right" as const }))),
+    quoteLang: "es",
+  },
+];
+
+const LINKERS = ["mais", "parce que", "donc", "pourtant", "cependant"];
+const NOT_LINKERS = ["chat", "rapidement", "bleu", "maison", "souvent"];
+export const frenchLinkers = (): Question[] => [
+  {
+    ...multi(
+      "Touche tous les mots qui relient deux idées.",
+      "Linking words like mais (but), parce que (because) and donc (so) join two ideas in a sentence.",
+      sample(LINKERS, randInt(2, 3)).map((w) => [w] as [string]),
+      sample(NOT_LINKERS, 2).map((w) => [w] as [string]),
+    ),
+    lang: "fr",
+  },
+];

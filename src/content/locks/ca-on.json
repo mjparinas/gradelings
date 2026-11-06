@@ -550,7 +550,7 @@
     "units": [
       "motifs-de-lettres text=33c165f11e std=9ec21a66d6 q=e7aba7baaa",
       "mots-interrogatifs text=2502c4b5bd std=3fd125ca07 q=d046f6cca0",
-      "loisirs text=128d6f0a63 std=3fd125ca07 q=7324702c71",
+      "loisirs text=128d6f0a63 std=3fd125ca07 q=ae5e28e2ba",
       "parce-que text=dcb7703bff std=3fd125ca07 q=9b5eb6a892",
       "emotions-et-etats text=408f0d8124 std=3fd125ca07 q=90f8604097",
       "famille text=6a732a57db std=8ce9e2a60c q=17180cb37c",
@@ -566,7 +566,7 @@
       "legendes text=c4bffe9333 std=301bb88f44 q=1af1b566c2",
       "temps-et-lieux text=76da345b5d std=301bb88f44 q=71168dccf7",
       "roman-jeunesse text=b00b6388f2 std=301bb88f44 q=5f98ff5b31",
-      "marqueurs-de-relation text=5ee8aa715b std=8ce9e2a60c q=1b11b81e08",
+      "marqueurs-de-relation text=5ee8aa715b std=8ce9e2a60c q=0e32cf2de4",
       "resumer text=b9a79648e8 std=8ce9e2a60c q=c259ad5bc3"
     ]
   },
@@ -631,7 +631,7 @@
       "indigenous-histories-6 text=ca34d80fdb std=4cad70e6db q=979d941c19",
       "canada-and-world-6 text=191f7e8709 std=a9927296cb q=e6b2a80645",
       "global-help-6 text=a8bf784f87 std=359ad04e62 q=2274317bca",
-      "map-skills text=cdfb7253da std=c226adaf62 q=24cfcc3e54",
+      "map-skills text=cdfb7253da std=c226adaf62 q=3c08e0106d",
       "canada-partners-6 text=32cc5a4bf2 std=0f2851b9cb q=9b4ae2db40",
       "global-challenges text=e6d834ab65 std=d29f9242b3 q=a4c2095188",
       "trade-and-globalization text=5973228b70 std=fbe72b8179 q=15577023bc",
@@ -642,7 +642,7 @@
     "overview": "4b4f3fb439",
     "units": [
       "preguntas text=a185455eef std=ed20ce18ba q=d44b56c84c",
-      "comida text=125b021db0 std=1246d6d4dd q=ffef28847f",
+      "comida text=125b021db0 std=1246d6d4dd q=981e1d9c54",
       "pasatiempos text=c33589e083 std=4cd3a86ef5 q=cc01218407",
       "emociones text=a925cf1d90 std=289704dd77 q=a82624e446",
       "personas text=3f99f93025 std=0deaff300e q=4ab03f6e6a"

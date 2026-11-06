@@ -485,7 +485,7 @@
     "units": [
       "motifs-de-lettres text=33c165f11e std=6c96743e9e q=e7aba7baaa",
       "mots-interrogatifs text=2502c4b5bd std=5e7018dbda q=d046f6cca0",
-      "loisirs text=128d6f0a63 std=5e7018dbda q=7324702c71",
+      "loisirs text=128d6f0a63 std=5e7018dbda q=ae5e28e2ba",
       "parce-que text=dcb7703bff std=5e7018dbda q=9b5eb6a892",
       "emotions-et-etats text=408f0d8124 std=5e7018dbda q=90f8604097",
       "famille text=6a732a57db std=63a33c56c2 q=17180cb37c",
@@ -553,14 +553,14 @@
       "mb-fairness-and-respect text=d77ed7ea9b std=94cdc92312 q=3ac375d6ce",
       "inquiry-6 text=66a2b7f908 std=b24e71447f q=484d6ef20b",
       "cities-and-migration text=7cab62633f std=2a593d19d6 q=94adb1b304",
-      "media-literacy text=d3829ef067 std=d09e98c7fd q=4c2a7a1811"
+      "media-literacy text=d3829ef067 std=d09e98c7fd q=deb7759345"
     ]
   },
   "6/spanish": {
     "overview": "4b4f3fb439",
     "units": [
       "preguntas text=a185455eef std=ed20ce18ba q=d44b56c84c",
-      "comida text=125b021db0 std=1246d6d4dd q=ffef28847f",
+      "comida text=125b021db0 std=1246d6d4dd q=981e1d9c54",
       "pasatiempos text=c33589e083 std=4cd3a86ef5 q=cc01218407",
       "emociones text=a925cf1d90 std=289704dd77 q=a82624e446",
       "personas text=3f99f93025 std=0deaff300e q=4ab03f6e6a"
