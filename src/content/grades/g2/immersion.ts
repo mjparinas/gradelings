@@ -1,5 +1,6 @@
 import { frOrder, frQuestions, type FrItem } from "../../french";
 import { sample } from "../../random";
+import { ADJECTIVES_DEEP, BE_HAVE_DEEP, CONTES_DEEP, MARKERS_DEEP, SENTENCE_CHOICES_DEEP, SEQUENCES_DEEP, WORD_ORDERS_DEEP } from "./immersion-deeper";
 import type { Course, GenerateOptions, Question } from "../../types";
 
 const FR = { lang: "fr" } as const;
@@ -90,8 +91,8 @@ const WORD_ORDERS: { items: string[] }[] = [
 
 function ordreDesMots(opts?: GenerateOptions): Question[] {
   return [
-    ...frQuestions(SENTENCE_CHOICES, opts, 5, FR),
-    ...sample(WORD_ORDERS, 3).map((o) => frOrder("Remets les mots dans l'ordre.", "Start with who is doing something, then say what they do.", o.items, FR)),
+    ...frQuestions([...SENTENCE_CHOICES, ...SENTENCE_CHOICES_DEEP], opts, 5, FR),
+    ...sample([...WORD_ORDERS, ...WORD_ORDERS_DEEP], 3).map((o) => frOrder("Remets les mots dans l'ordre.", "Start with who is doing something, then say what they do.", o.items, FR)),
   ];
 }
 
@@ -160,8 +161,8 @@ const SEQUENCES = [
 
 function marqueurs(opts?: GenerateOptions): Question[] {
   return [
-    ...frQuestions(MARKERS, opts, 6, FR),
-    ...sample(SEQUENCES, 2).map((s) => frOrder(s.prompt, "Look for the clue words: d'abord (first), ensuite (next), enfin (last).", s.items, FR)),
+    ...frQuestions([...MARKERS, ...MARKERS_DEEP], opts, 6, FR),
+    ...sample([...SEQUENCES, ...SEQUENCES_DEEP], 2).map((s) => frOrder(s.prompt, "Look for the clue words: d'abord (first), ensuite (next), enfin (last).", s.items, FR)),
   ];
 }
 
@@ -225,7 +226,7 @@ export const course: Course = {
       blurb: "Petit ou petite?",
       parentNote: "Making an adjective agree in gender and number with the noun it describes.",
       standards: { "ca-bc": "Language elements: adjectives; spelling conventions" },
-      generate: (o) => frQuestions(ADJECTIVES, o, 8, FR),
+      generate: (o) => frQuestions([...ADJECTIVES, ...ADJECTIVES_DEEP], o, 8, FR),
     },
     {
       id: "ordre-des-mots",
@@ -243,7 +244,7 @@ export const course: Course = {
       blurb: "Il était une fois…",
       parentNote: "Features of fairy tales and folk tales, including well-known French tales, and why cultures share stories.",
       standards: { "ca-bc": "Literary elements: characteristics of fairy tales and folk tales; cultural elements" },
-      generate: (o) => frQuestions(CONTES, o, 8, FR),
+      generate: (o) => frQuestions([...CONTES, ...CONTES_DEEP], o, 8, FR),
     },
     {
       id: "dabord-ensuite-enfin",
@@ -261,7 +262,7 @@ export const course: Course = {
       blurb: "Je suis, j'ai",
       parentNote: "The present tense of the two most important verbs in French, être (to be) and avoir (to have).",
       standards: { "ca-bc": "Language elements: verb moods and tenses (present indicative)" },
-      generate: (o) => frQuestions(BE_HAVE, o, 8, FR),
+      generate: (o) => frQuestions([...BE_HAVE, ...BE_HAVE_DEEP], o, 8, FR),
     },
   ],
 };

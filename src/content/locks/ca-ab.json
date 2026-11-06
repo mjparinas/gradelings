@@ -116,13 +116,13 @@
   "1/immersion": {
     "overview": "7258658b13",
     "units": [
-      "je-me-presente text=1381462ccd std=c52d851b81 q=05ad9397f1",
-      "majuscule-et-point text=dc5fe31c85 std=b36c5bf197 q=970b8e3bf9",
-      "est-ce-que text=ec53105df0 std=c52d851b81 q=db11e944fa",
-      "verbes-d-action text=4dfeea3109 std=b36c5bf197 q=c240761d0d",
-      "couleurs-et-adjectifs text=2b7900578c std=b36c5bf197 q=ec6fc6b1e4",
+      "je-me-presente text=1381462ccd std=c52d851b81 q=d36ab27c04",
+      "majuscule-et-point text=dc5fe31c85 std=b36c5bf197 q=1ffd19f1b3",
+      "est-ce-que text=ec53105df0 std=c52d851b81 q=da6d70c852",
+      "verbes-d-action text=4dfeea3109 std=b36c5bf197 q=57528b5d6f",
+      "couleurs-et-adjectifs text=2b7900578c std=b36c5bf197 q=ebdf337a97",
       "histoire-ou-texte text=6bda9802ab std=a9953e1d9d q=9bd8255a2d",
-      "elements-d-une-histoire text=df0e8c15fe std=a9953e1d9d q=09dd5689f7"
+      "elements-d-une-histoire text=df0e8c15fe std=a9953e1d9d q=72a0a198a1"
     ]
   },
   "1/language": {
@@ -190,11 +190,11 @@
     "overview": "7258658b13",
     "units": [
       "le-la-un-une text=dd9498612e std=faf82c9a12 q=767f777fd2",
-      "accord-des-adjectifs text=ecb46dd7a9 std=faf82c9a12 q=abe8e2730d",
-      "ordre-des-mots text=7485d6ae2a std=faf82c9a12 q=36db762541",
-      "les-contes text=42f1e4fd2e std=a82eff150a q=240379d8b7",
-      "dabord-ensuite-enfin text=b5429f56fd std=faf82c9a12 q=9feb26a74c",
-      "etre-et-avoir text=c2c7e4c41a std=faf82c9a12 q=c94953589f"
+      "accord-des-adjectifs text=ecb46dd7a9 std=faf82c9a12 q=f0976549b4",
+      "ordre-des-mots text=7485d6ae2a std=faf82c9a12 q=67db72cbca",
+      "les-contes text=42f1e4fd2e std=a82eff150a q=81e5927ff8",
+      "dabord-ensuite-enfin text=b5429f56fd std=faf82c9a12 q=cf28ae6c05",
+      "etre-et-avoir text=c2c7e4c41a std=faf82c9a12 q=1c87633579"
     ]
   },
   "2/language": {
