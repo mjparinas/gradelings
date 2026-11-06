@@ -2,6 +2,7 @@
 
 import { Component, createElement, Suspense, use, type ComponentType, type ReactNode } from "react";
 import { Critter } from "@/components/Critter";
+import { BLOCKED_TITLE, blockedText, failIfBlocked, retryDownloads, scriptBlocked } from "@/lib/blockedScripts";
 import { cacheLoadedScripts } from "@/lib/offline";
 import { go } from "@/lib/router";
 
@@ -19,7 +20,8 @@ const resets: (() => void)[] = [];
 export function lazyScreen<P extends object>(load: () => Promise<ComponentType<P>>) {
   let loaded: ComponentType<P> | undefined;
   let pending: Promise<ComponentType<P>> | undefined;
-  const get = () => (pending ??= load().then((c) => (loaded = c)));
+  // A file a school filter answered with a web page would otherwise keep this waiting forever (src/lib/blockedScripts.ts).
+  const get = () => (pending ??= failIfBlocked(load().then((c) => (loaded = c))));
   loaders.push(get);
   // A failed download is kept until "Try again", so React sees the failure instead of a new download each render.
   resets.push(() => {
@@ -115,18 +117,23 @@ class ScreenBoundary extends Component<{ children: ReactNode }, { failed: boolea
     return { failed: true };
   }
 
-  retry = () => {
-    for (const reset of resets) reset();
-    this.setState({ failed: false });
-  };
+  // After a file came back as a web page, only a fresh page load fetches it again.
+  retry = () =>
+    retryDownloads(() => {
+      for (const reset of resets) reset();
+      this.setState({ failed: false });
+    });
 
   render() {
     if (!this.state.failed) return this.props.children;
+    const blocked = scriptBlocked();
     return (
       <main className="flex min-h-dvh flex-col items-center justify-center gap-5 px-4 text-center">
         <Critter id="ollie" mood="think" size={140} />
-        <h1 className="text-3xl font-bold">We need the internet for a moment</h1>
-        <p className="max-w-md font-read text-xl text-ink-soft">Ask a grown-up to connect to the internet once. After that this works offline.</p>
+        <h1 className="text-3xl font-bold">{blocked ? BLOCKED_TITLE : "We need the internet for a moment"}</h1>
+        <p className="max-w-md font-read text-xl text-ink-soft">
+          {blocked ? blockedText() : "Ask a grown-up to connect to the internet once. After that this works offline."}
+        </p>
         <div className="flex w-full max-w-sm flex-col gap-3">
           <button type="button" className="btn btn-good min-h-16 text-2xl" onClick={this.retry}>
             Try again

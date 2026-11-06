@@ -3,6 +3,7 @@
 import { useEffect, type ReactNode } from "react";
 import { GRADE_LABEL } from "@/content/subjects";
 import type { ContentTarget } from "@/content";
+import { BLOCKED_TITLE, blockedText, scriptBlocked } from "@/lib/blockedScripts";
 import { cacheContent, useGradeContent } from "@/lib/useGradeContent";
 import { Critter } from "./Critter";
 import { LoadingScreen } from "./ui";
@@ -34,6 +35,7 @@ export function ContentGate({
   if (status === "loading") return <LoadingScreen />;
 
   const names = [...new Set(targets.map((t) => t.grade))].map((g) => GRADE_LABEL[g]).join(" and ");
+  const blocked = scriptBlocked();
   if (optional) {
     return (
       <>
@@ -50,9 +52,11 @@ export function ContentGate({
   return (
     <main className="flex min-h-dvh flex-col items-center justify-center gap-5 px-4 text-center">
       <Critter id="ollie" mood="think" size={140} />
-      <h1 className="text-3xl font-bold">We need the internet for a moment</h1>
+      <h1 className="text-3xl font-bold">{blocked ? BLOCKED_TITLE : "We need the internet for a moment"}</h1>
       <p className="max-w-md font-read text-xl text-ink-soft">
-        Ask a grown-up to connect to the internet once, so we can download the {names} lessons. After that they work offline.
+        {blocked
+          ? blockedText()
+          : `Ask a grown-up to connect to the internet once, so we can download the ${names} lessons. After that they work offline.`}
       </p>
       <div className="flex w-full max-w-sm flex-col gap-3">
         <button type="button" className="btn btn-good min-h-16 text-2xl" onClick={retry}>
