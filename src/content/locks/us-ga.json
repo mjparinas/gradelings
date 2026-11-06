@@ -503,7 +503,7 @@
       "point-of-view text=181ec2a506 std=868dbd80c8 q=e32473aa03",
       "connotation-tone text=9c068d912c std=a058a7d981 q=220849e9fa",
       "persuasive-writing text=143cf3561b std=b4855a9052 q=247878bf5e",
-      "agreement text=5714f96d51 std=1b97b88c77 q=fcb9f1ba72",
+      "agreement text=5714f96d51 std=1b97b88c77 q=031995e7f5",
       "sentence-repair text=404e6c9477 std=c87c94901c q=2784e88c73",
       "commas-clauses text=78c6d03749 std=3e7d57abf2 q=afd3a46d44",
       "roots-analogies text=34da7ba9e2 std=9a06325e56 q=01e03fc8c3",
@@ -545,7 +545,7 @@
     "overview": "c77db219a7",
     "units": [
       "ny-g9-stars-universe text=080ebb0b79 std=55ab4e34c0 q=4056461a05",
-      "solar-system text=6be0e2dfe8 std=0485ece865 q=a095f63422",
+      "solar-system text=6be0e2dfe8 std=0485ece865 q=ec7758be5b",
       "tx-g6-earth-systems text=9aa0271c8d std=aac7590b44 q=411cb8438d",
       "rock-cycle text=c0862523ac std=5924580da1 q=6a0197b296",
       "tx-g6-resources text=7e5172964d std=50a6b80af4 q=7053aa8394",
@@ -586,11 +586,11 @@
   "7/language": {
     "overview": "e6f3af6c84",
     "units": [
-      "literary-devices text=75012dadfd std=dd1ae0f924 q=ca1f4ae5d6",
+      "literary-devices text=75012dadfd std=dd1ae0f924 q=9f862df281",
       "tone-mood text=1a78ad0bc3 std=aa838b109e q=104d70a39d",
       "persuasion text=002e89452f std=758ffb9621 q=5e50a03d63",
       "clauses-sentences text=5017dd13d0 std=1ea4b4d996 q=a49f421344",
-      "modifiers-parallelism text=a0c6970207 std=2773323e9a q=64a9bf0a96",
+      "modifiers-parallelism text=a0c6970207 std=2773323e9a q=adb03492fb",
       "word-mix-ups text=7bb5032b8a std=66b0c913a8 q=d64ff1637c",
       "poetry-lab text=e3769835d8 std=e47104cf4f q=a8dd8516cd",
       "punctuation-7 text=9342af658b std=d198ab1a02 q=4fd2e17eaa",
@@ -671,7 +671,7 @@
     "units": [
       "close-reading text=b5e48e1704 std=e7370f96ee q=9a7ad6cfde",
       "literary-devices text=807aa8d25d std=9271bb6959 q=dbc870fffd",
-      "word-study text=e9a31820f1 std=576720847e q=816e78a8ea",
+      "word-study text=e9a31820f1 std=576720847e q=e40812d304",
       "irony-satire-8 text=4b6cba0527 std=3179c2d1ca q=bd88cc209f",
       "narrator-8 text=b609477509 std=70c7c6cb6e q=6c18973e7e",
       "forms-features-8 text=612838fad2 std=1b812260db q=1d74ce249f",
@@ -752,7 +752,7 @@
     "overview": "430ab3e8a5",
     "units": [
       "close-reading text=1934195db9 std=13c6335f22 q=f9de480cb6",
-      "literary-elements text=c987189fb1 std=dfc3369605 q=93113ee225",
+      "literary-elements text=c987189fb1 std=dfc3369605 q=4dd3b74498",
       "grammar-and-style text=8039e9ed51 std=367635af28 q=37d6dcd28c",
       "word-parts-9 text=2f90f3f2bb std=020987e89d q=584e86af3f",
       "devices-9 text=320de0c79d std=dba615d004 q=2531ff43de",

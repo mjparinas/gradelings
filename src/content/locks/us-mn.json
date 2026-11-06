@@ -451,7 +451,7 @@
       "point-of-view text=181ec2a506 std=2b6417f4c7 q=e32473aa03",
       "connotation-tone text=9c068d912c std=2ebcf10232 q=220849e9fa",
       "persuasive-writing text=143cf3561b std=c0c30efe98 q=247878bf5e",
-      "agreement text=5714f96d51 std=7bfbcfd50e q=fcb9f1ba72",
+      "agreement text=5714f96d51 std=7bfbcfd50e q=031995e7f5",
       "sentence-repair text=404e6c9477 std=d749d3a2e2 q=2784e88c73",
       "commas-clauses text=78c6d03749 std=138e2edfa1 q=afd3a46d44",
       "roots-analogies text=34da7ba9e2 std=b5ff053361 q=01e03fc8c3",
@@ -487,7 +487,7 @@
   "6/science": {
     "overview": "6493a4087b",
     "units": [
-      "solar-system text=6be0e2dfe8 std=6bb905a7ee q=a095f63422",
+      "solar-system text=6be0e2dfe8 std=6bb905a7ee q=ec7758be5b",
       "rock-cycle text=c0862523ac std=4900e4cec3 q=6a0197b296",
       "mn-g6-plate-tectonics text=c060119be2 std=63972823f9 q=a22dde157d",
       "mn-g6-earth-surface text=72923a1f5e std=974dcfc774 q=89a6f83ed4",
@@ -522,11 +522,11 @@
   "7/language": {
     "overview": "490bbbcb7f",
     "units": [
-      "literary-devices text=75012dadfd std=8257f1b114 q=ca1f4ae5d6",
+      "literary-devices text=75012dadfd std=8257f1b114 q=9f862df281",
       "tone-mood text=1a78ad0bc3 std=df2e014d26 q=104d70a39d",
       "persuasion text=002e89452f std=91e86685ac q=5e50a03d63",
       "clauses-sentences text=5017dd13d0 std=eb35b16f6a q=a49f421344",
-      "modifiers-parallelism text=a0c6970207 std=94940e6059 q=64a9bf0a96",
+      "modifiers-parallelism text=a0c6970207 std=94940e6059 q=adb03492fb",
       "word-mix-ups text=7bb5032b8a std=0c7c55a501 q=d64ff1637c",
       "poetry-lab text=e3769835d8 std=f4e3941997 q=a8dd8516cd",
       "punctuation-7 text=9342af658b std=8794f57bc1 q=4fd2e17eaa",
@@ -602,7 +602,7 @@
     "units": [
       "close-reading text=b5e48e1704 std=14f08ebbc6 q=9a7ad6cfde",
       "literary-devices text=807aa8d25d std=fdbf179dca q=dbc870fffd",
-      "word-study text=e9a31820f1 std=1501dadd0d q=816e78a8ea",
+      "word-study text=e9a31820f1 std=1501dadd0d q=e40812d304",
       "irony-satire-8 text=4b6cba0527 std=68db7c5463 q=bd88cc209f",
       "narrator-8 text=b609477509 std=1fb075b746 q=6c18973e7e",
       "forms-features-8 text=612838fad2 std=b6029646db q=1d74ce249f",
@@ -633,7 +633,7 @@
   "8/science": {
     "overview": "76c94a7f4d",
     "units": [
-      "particles-and-matter text=5f907e8fe3 std=06b38d35bc q=40c6ce763e",
+      "particles-and-matter text=5f907e8fe3 std=06b38d35bc q=0be7609581",
       "light-and-radiation text=9e640798cf std=5e00e92c32 q=9cc1a70761",
       "atoms-and-elements text=7c83b3e634 std=4ff2eb1fd3 q=7e2eecbebf",
       "circuits-and-static text=b28ece42b0 std=b96fd8241f q=b84f825935",
@@ -671,7 +671,7 @@
     "overview": "7d6e4523b9",
     "units": [
       "close-reading text=1934195db9 std=b18f177537 q=f9de480cb6",
-      "literary-elements text=c987189fb1 std=356a145309 q=93113ee225",
+      "literary-elements text=c987189fb1 std=356a145309 q=4dd3b74498",
       "grammar-and-style text=8039e9ed51 std=632bcf4ab6 q=37d6dcd28c",
       "word-parts-9 text=2f90f3f2bb std=9991cd76ef q=584e86af3f",
       "devices-9 text=320de0c79d std=9b32c8bc49 q=2531ff43de",

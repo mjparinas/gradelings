@@ -465,7 +465,7 @@
       "persuasive-writing text=143cf3561b std=880803a62a q=247878bf5e",
       "connotation-tone text=9c068d912c std=b09cad24e6 q=220849e9fa",
       "roots-analogies text=34da7ba9e2 std=693c7c346d q=01e03fc8c3",
-      "agreement text=5714f96d51 std=07e8494ed8 q=fcb9f1ba72",
+      "agreement text=5714f96d51 std=07e8494ed8 q=031995e7f5",
       "sentence-repair text=404e6c9477 std=41e0587d74 q=2784e88c73",
       "commas-clauses text=78c6d03749 std=f353ea54bc q=afd3a46d44",
       "punctuation-6 text=f3d82b8594 std=418713c3a0 q=e4acd9743f",
@@ -540,13 +540,13 @@
   "7/language": {
     "overview": "3030c0e329",
     "units": [
-      "literary-devices text=75012dadfd std=ed360b7d50 q=ca1f4ae5d6",
+      "literary-devices text=75012dadfd std=ed360b7d50 q=9f862df281",
       "tone-mood text=1a78ad0bc3 std=61560eb91a q=104d70a39d",
       "point-of-view-7 text=9446c4e22a std=17dbb4134f q=ee7ee4f5b5",
       "poetry-lab text=e3769835d8 std=57ca8f8317 q=a8dd8516cd",
       "persuasion text=002e89452f std=4a0eee118f q=5e50a03d63",
       "clauses-sentences text=5017dd13d0 std=6a7d00b6d4 q=a49f421344",
-      "modifiers-parallelism text=a0c6970207 std=2bbde93514 q=64a9bf0a96",
+      "modifiers-parallelism text=a0c6970207 std=2bbde93514 q=adb03492fb",
       "punctuation-7 text=9342af658b std=a6f092b991 q=4fd2e17eaa",
       "word-mix-ups text=7bb5032b8a std=33ce064275 q=d64ff1637c",
       "mb-word-roots text=f8f825870e std=45d2f98e2a q=a13fe4ad77",
@@ -580,7 +580,7 @@
   "7/science": {
     "overview": "92c170ce05",
     "units": [
-      "atoms-and-elements text=7c83b3e634 std=048abe8cac q=7e2eecbebf",
+      "atoms-and-elements text=7c83b3e634 std=048abe8cac q=278466d671",
       "mixtures text=a0c891d276 std=751546ba7a q=36dfdadbba",
       "particles-mixtures-7 text=03fc7e2a6b std=8070722bc2 q=f719092f87",
       "particles-heat-ab text=6901bc2124 std=3f7289736d q=26cfcc3a0f",
@@ -629,7 +629,7 @@
       "narrator-8 text=b609477509 std=b596020f75 q=6c18973e7e",
       "strategies-8 text=14cb61c3b0 std=5468e92a49 q=ee43aae812",
       "forms-features-8 text=612838fad2 std=f67584398c q=1d74ce249f",
-      "word-study text=e9a31820f1 std=7b1930a268 q=816e78a8ea",
+      "word-study text=e9a31820f1 std=7b1930a268 q=e40812d304",
       "mb-word-power-8 text=3f40ceb555 std=ef9d1b237a q=434b58489d",
       "writing-8 text=d9bb3a4cad std=4fb4cd7620 q=42e0b48505",
       "digital-8 text=742bfe22d6 std=a497666a57 q=a2bbd968e9",
@@ -701,7 +701,7 @@
     "overview": "11aa4334d3",
     "units": [
       "close-reading text=1934195db9 std=b382c7d506 q=f9de480cb6",
-      "literary-elements text=c987189fb1 std=987374e00f q=93113ee225",
+      "literary-elements text=c987189fb1 std=987374e00f q=4dd3b74498",
       "devices-9 text=320de0c79d std=4b2e49b9b0 q=2531ff43de",
       "mb-summarizing text=a1c214cb62 std=ac2856e241 q=1544e41082",
       "forms-features-9 text=4d4a0e13b8 std=f449e09190 q=322e0e55fc",
