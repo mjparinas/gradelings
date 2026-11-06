@@ -461,11 +461,11 @@
   "5/immersion": {
     "overview": "67e42711d6",
     "units": [
-      "pronoms-relatifs text=0d1d4f2f09 std=8ce9e2a60c q=ba4837503f",
-      "negation text=715304529d std=8ce9e2a60c q=1c3b28c4f4",
-      "adverbes text=f3d17ffd67 std=8ce9e2a60c q=622e0c5ddc",
-      "ponctuation text=e473f9e4cd std=8ce9e2a60c q=e1e98220bb",
-      "bande-dessinee text=39408874d4 std=301bb88f44 q=ae914b7fb4",
+      "pronoms-relatifs text=0d1d4f2f09 std=8ce9e2a60c q=a43f4749a5",
+      "negation text=715304529d std=8ce9e2a60c q=2e8eb7eed0",
+      "adverbes text=f3d17ffd67 std=8ce9e2a60c q=dbe0e393a6",
+      "ponctuation text=e473f9e4cd std=8ce9e2a60c q=950fbfab67",
+      "bande-dessinee text=39408874d4 std=301bb88f44 q=5e51b9d597",
       "biographie text=5657db047e std=301bb88f44 q=2d05ec729d",
       "fait-ou-opinion text=125aecb360 std=301bb88f44 q=917bb0c7ce"
     ]
