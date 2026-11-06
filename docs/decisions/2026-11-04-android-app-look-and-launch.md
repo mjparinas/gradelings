@@ -1,0 +1,3 @@
+# Android app look and launch
+
+**Android app look and launch** (November 4, 2026): the Android app needs `enableSiteSettingsShortcut: true` in `android/twa-manifest.json` (with it off, the browser-helper library crashed on launch), and the full-screen look needs `ANDROID_CERT_SHA256` set to Play's app signing fingerprint in Vercel plus a production deploy and a clean reinstall (`docs/ANDROID.md`). Owner chose navy dark-mode bars (`#14213d`) and a one-colour bear monochrome icon; orientation, Custom Tabs fallback, no notifications and no Play Billing stay as they were. A redeploy of an unchanged commit is skipped by the build-skip rule; set `FORCE_BUILD=1` in Vercel to force one, then remove it.

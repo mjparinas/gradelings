@@ -126,7 +126,7 @@ export function Composer({ familyId, segment, preset = "miss-you", onSent }: { f
         label="Message"
         value={presetId}
         onChange={pick}
-        options={MESSAGE_PRESETS.map((p) => ({ value: p.id, label: `${p.name} (${p.when.toLowerCase()})` }))}
+        options={MESSAGE_PRESETS.map((p) => ({ value: p.id, label: `${p.name} (${p.when.toLowerCase()}${p.audience === "teachers" ? ", teachers" : ""})` }))}
       />
       <label className="flex flex-col text-sm font-semibold" htmlFor={`${ids}-s`}>
         Subject
@@ -339,6 +339,10 @@ const SEGMENT_PRESET: Record<Segment, string> = {
   "trial-ending": "trial-ending",
   "trial-over": "come-back",
   cancelled: "feedback",
+  "teacher-no-class": "teacher-getting-started",
+  "teacher-no-students": "teacher-add-students",
+  teachers: "teacher-hello",
+  parents: "custom",
   everyone: "custom",
 };
 

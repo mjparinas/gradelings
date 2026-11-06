@@ -1,6 +1,7 @@
 import { pick, sample, shuffle, textChoice } from "../../random";
 import { sortQuestion, type SortSet } from "../../bank";
 import type { Choice, Course, GenerateOptions, OrderQuestion, Question } from "../../types";
+import { CARE_MORE, FAMILY_MORE, FEELING_MORE, HELPER_MORE, PLACE_MORE, ROUTINES_MORE, RULE_MORE, THEN_NOW_MORE } from "./social-more";
 
 // Pre-K social studies ("My World" for little kids): me and my family, feelings, helpers, places, rules and caring for
 // the world. Picture choices only, read aloud. Families come in many shapes, so no question has one right family.
@@ -68,7 +69,7 @@ function meAndMyFamily(opts?: GenerateOptions): Question[] {
     d === 1 ? [["baby", "👶"], ["child", "🧒"], ["grown-up", "🧑"]] : [["baby", "👶"], ["child", "🧒"], ["grown-up", "🧑"], ["grandparent", "🧓"]],
     "Babies grow into children, children grow into grown-ups, and grown-ups grow older.",
   );
-  return shuffle([...fromItems(FAMILY_ITEMS, 7, d), ages]);
+  return shuffle([...fromItems([...FAMILY_ITEMS, ...FAMILY_MORE], 7, d), ages]);
 }
 
 // ---------- Feelings ----------
@@ -111,7 +112,7 @@ const FEELING_ITEMS: Item[] = [
 ];
 
 function feelings(opts?: GenerateOptions): Question[] {
-  return fromItems(FEELING_ITEMS, 8, level(opts));
+  return fromItems([...FEELING_ITEMS, ...FEELING_MORE], 8, level(opts));
 }
 
 // ---------- Community Helpers ----------
@@ -144,7 +145,7 @@ const HELPER_ITEMS: Item[] = [
 ];
 
 function helpers(opts?: GenerateOptions): Question[] {
-  return fromItems(HELPER_ITEMS, 8, level(opts));
+  return fromItems([...HELPER_ITEMS, ...HELPER_MORE], 8, level(opts));
 }
 
 // ---------- Places Around Me ----------
@@ -177,7 +178,7 @@ const PLACE_ITEMS: Item[] = [
 ];
 
 function placesAroundMe(opts?: GenerateOptions): Question[] {
-  return fromItems(PLACE_ITEMS, 8, level(opts));
+  return fromItems([...PLACE_ITEMS, ...PLACE_MORE], 8, level(opts));
 }
 
 // ---------- Taking Turns ----------
@@ -214,7 +215,7 @@ const RULE_ITEMS: Item[] = [
 
 function takingTurns(opts?: GenerateOptions): Question[] {
   const d = level(opts);
-  return shuffle([sortQuestion(KIND_SORT, d === 1 ? 2 : 3), ...fromItems(RULE_ITEMS, 7, d)]);
+  return shuffle([sortQuestion(pick([KIND_SORT, RULE_MORE.sort]), d === 1 ? 2 : 3), ...fromItems([...RULE_ITEMS, ...RULE_MORE.items], 7, d)]);
 }
 
 // ---------- First, Next, Last ----------
@@ -252,9 +253,9 @@ const THEN_NOW_ITEMS: Item[] = [
 
 function firstNextLast(opts?: GenerateOptions): Question[] {
   const d = level(opts);
-  const routines = ROUTINES.filter((r) => d > 1 || r.steps.length === 3);
+  const routines = [...ROUTINES, ...ROUTINES_MORE].filter((r) => d > 1 || r.steps.length === 3);
   const orders = sample(routines, 5).map((r) => order(r.prompt, r.steps, r.hint));
-  return shuffle([...orders, ...fromItems(THEN_NOW_ITEMS, 3, d)]);
+  return shuffle([...orders, ...fromItems([...THEN_NOW_ITEMS, ...THEN_NOW_MORE], 3, d)]);
 }
 
 // ---------- Caring for Our World ----------
@@ -290,7 +291,9 @@ const CARE_ITEMS: Item[] = [
 
 function caringForOurWorld(opts?: GenerateOptions): Question[] {
   const d = level(opts);
-  return shuffle([sortQuestion(CARE_SORT, d === 1 ? 2 : 3), ...fromItems(CARE_ITEMS, 6, d), pick([sortQuestion(CARE_SORT, 2), ...fromItems(CARE_ITEMS, 1, d)])]);
+  const sort = () => pick([CARE_SORT, CARE_MORE.sort]);
+  const items = [...CARE_ITEMS, ...CARE_MORE.items];
+  return shuffle([sortQuestion(sort(), d === 1 ? 2 : 3), ...fromItems(items, 6, d), pick([sortQuestion(sort(), 2), ...fromItems(items, 1, d)])]);
 }
 
 export const course: Course = {

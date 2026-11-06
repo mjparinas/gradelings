@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { IQ_DEEP, LANGUAGES_DEEP, REGIONS_DEEP, TERRITORY_DEEP } from "./social-deeper";
 
 // Nunavut-only social studies units for Grades 3 and 4. Facts about Nunavut's places, symbols and languages come from the
 // Government of Nunavut. Inuktut words vary by community.
@@ -126,7 +127,7 @@ export const ourTerritory3 = bankUnit({
   parentNote:
     "Covers Nunavut's regions, capital, communities, symbols and landscape. Some names are written in Inuktitut. Nunavut-only content, written from Government of Nunavut sources.",
   standards: ["Nunavut Social Studies K–6 (2025), 3.C.2; 3.L.5", "Nunavut's regions, communities, symbols and landscape"],
-  items: territory,
+  items: [...territory, ...TERRITORY_DEEP],
 });
 
 export const iqPrinciples4 = bankUnit({
@@ -137,7 +138,7 @@ export const iqPrinciples4 = bankUnit({
   parentNote:
     "Introduces the eight Inuit Qaujimajatuqangit principles used by the Government of Nunavut, with everyday examples. The Inuktut spellings vary by community; Inuit partners should review this unit.",
   standards: ["Inuuqatigiit (NWT, 1996), Heritage and culture", "the Inuit Qaujimajatuqangit principles and how they show up in daily life"],
-  items: iq,
+  items: [...iq, ...IQ_DEEP],
 });
 
 export const languages4 = bankUnit({
@@ -148,7 +149,7 @@ export const languages4 = bankUnit({
   parentNote:
     "Covers Nunavut's official languages, Inuit words and the writing systems used for Inuktitut and Inuinnaqtun. A few words are given in Inuktitut; spellings and words vary by community. This does not replace Inuktut language arts.",
   standards: ["Inuuqatigiit (NWT, 1996), Heritage and culture", "the languages of Nunavut, Inuit words, and syllabics and Roman letters"],
-  items: languages,
+  items: [...languages, ...LANGUAGES_DEEP],
 });
 
 export const regions4 = bankUnit({
@@ -159,5 +160,5 @@ export const regions4 = bankUnit({
   parentNote:
     "Practises where Nunavut's communities, islands and bodies of water are, and how the three regions fit together. Use a map of Nunavut alongside.",
   standards: ["Elementary Social Studies (NWT, 1993), Geography", "locating Nunavut's communities, regions and landforms on a map"],
-  items: regions,
+  items: [...regions, ...REGIONS_DEEP],
 });

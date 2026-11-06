@@ -1,5 +1,6 @@
 import type { Unit } from "../../types";
 import { passage, readingUnit, type R } from "./language-kit";
+import { INFO_ANALYSIS_7_MORE, STORY_ANALYSIS_7_MORE } from "./language-more";
 
 // California's own Grade 7 English language arts units: analyzing stories with several pieces of evidence, comparing
 // a text with its staged or filmed version and fiction with history (CA CCSS RL.7.1, RL.7.2, RL.7.7, RL.7.9), and
@@ -124,7 +125,7 @@ export const STORY_ANALYSIS_7: Unit = readingUnit({
     "RL.7.1; RL.7.2; RL.7.7; RL.7.9",
     "citing several pieces of evidence, theme and objective summary, comparing a text with its staged, filmed or audio version, and fiction compared with history",
   ],
-  items: STORY_ANALYSIS,
+  items: [...STORY_ANALYSIS, ...STORY_ANALYSIS_7_MORE],
 });
 
 export const INFO_ANALYSIS_7: Unit = readingUnit({
@@ -138,7 +139,7 @@ export const INFO_ANALYSIS_7: Unit = readingUnit({
     "RI.7.1; RI.7.2; RI.7.3; RI.7.4; RI.7.5; RI.7.7; RI.7.9; L.7.6",
     "evidence, central ideas, how people, events and ideas interact, word choice, text structure, comparing media versions, comparing two writers, and academic words",
   ],
-  items: INFO_ANALYSIS,
+  items: [...INFO_ANALYSIS, ...INFO_ANALYSIS_7_MORE],
 });
 
 export const LANGUAGE_7: Unit[] = [STORY_ANALYSIS_7, INFO_ANALYSIS_7];

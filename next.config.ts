@@ -32,8 +32,8 @@ const securityHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   { key: "X-Frame-Options", value: "DENY" },
-  // The app uses speech output only. Camera, microphone, location and payments aren't needed.
-  { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()" },
+  // Camera, location and payments aren't needed. The microphone is used only for voice practice, which a parent turns on for one child (src/lib/recorder.ts); class student accounts never use it.
+  { key: "Permissions-Policy", value: "camera=(), microphone=(self), geolocation=(), payment=(), usb=(), interest-cohort=()" },
   { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
   { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
 ];

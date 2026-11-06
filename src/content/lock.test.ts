@@ -15,7 +15,8 @@ import type { Course, FrameworkId, Unit } from "./types";
 // short hash of each unit's text, its standard and its questions at fixed seeds. Units are shared between frameworks, so a
 // change to one unit can change several frameworks at once: the lock files make that visible in the pull request. When a
 // change is intended, run `npm run curriculum:lock` and commit the new locks. The same run records each grade's download
-// size per framework (locks/sizes/<id>.json); a download that grows by more than SIZE_SLACK fails until the sizes are re-recorded.
+// size per framework (locks/sizes/<id>.json); a download that grows by more than SIZE_SLACK fails until the sizes are re-recorded,
+// and a recorded size is left alone while the real one is within SIZE_SLACK of it (so most changes touch no sizes file).
 // It also keeps locks/dates/<id>.json: the day each unit, course and set of guides last changed, which the sitemap and the
 // public pages' structured data give search engines. A date moves only when that part's lock entry changes.
 
@@ -135,15 +136,28 @@ function resolveImport(from: string, spec: string): string | undefined {
   return undefined;
 }
 
+// Each source file is read and its imports found once, however many frameworks and grades reach it.
+const sourceCache = new Map<string, { text: string; imports: string[] }>();
+function sourceOf(entry: string) {
+  let hit = sourceCache.get(entry);
+  if (!hit) {
+    const text = readFileSync(entry, "utf8");
+    const imports: string[] = [];
+    for (const m of text.matchAll(/^\s*(?:import|export)\s+(?!type\b)(?:[^;]*?\sfrom\s+)?"([^"]+)"/gm)) {
+      const file = resolveImport(entry, m[1]);
+      if (file) imports.push(file);
+    }
+    hit = { text, imports };
+    sourceCache.set(entry, hit);
+  }
+  return hit;
+}
+
 /** Every source file reachable from `entry` through value imports (type-only imports ship nothing). */
 function reach(entry: string, seen = new Set<string>()): Set<string> {
   if (seen.has(entry)) return seen;
   seen.add(entry);
-  const text = readFileSync(entry, "utf8");
-  for (const m of text.matchAll(/^\s*(?:import|export)\s+(?!type\b)(?:[^;]*?\sfrom\s+)?"([^"]+)"/gm)) {
-    const file = resolveImport(entry, m[1]);
-    if (file) reach(file, seen);
-  }
+  for (const file of sourceOf(entry).imports) reach(file, seen);
   return seen;
 }
 
@@ -157,7 +171,7 @@ function sizes(): Record<string, Record<string, number>> {
       const seen = new Set<string>();
       const parts = [...new Set([DEFAULT_FRAMEWORK, f.id, ...(EXTRA_DEPENDS[f.id] ?? [])])].map((id) => files[id]?.[grade]).filter(Boolean) as string[];
       for (const p of parts) reach(resolveImport(join(__dirname, "index.ts"), `./${p}`)!, seen);
-      const source = [...seen].sort().map((file) => readFileSync(file, "utf8")).join("\n");
+      const source = [...seen].sort().map((file) => sourceOf(file).text).join("\n");
       out[f.id][grade] = Math.round(gzipSync(source).length / 1024);
     }
   }
@@ -182,7 +196,15 @@ describe("curriculum locks", () => {
   it("records each grade's download size, and no download has grown unnoticed", () => {
     const actual = sizes();
     if (UPDATE) {
-      for (const [id, grades] of Object.entries(actual)) compare(`sizes/${id}.json`, grades, "");
+      // A recorded size is kept while the real one is still within SIZE_SLACK of it (either way), so a change to a shared
+      // grade file doesn't rewrite every framework's sizes file and conflict with the next pull request. Only a grade that
+      // is new, or whose download moved by more than the slack, is re-recorded.
+      for (const [id, grades] of Object.entries(actual)) {
+        const file = join(LOCKS, "sizes", `${id}.json`);
+        const old = existsSync(file) ? (JSON.parse(readFileSync(file, "utf8")) as Record<string, number>) : {};
+        const kept = Object.fromEntries(Object.entries(grades).map(([g, kb]) => [g, g in old && kb <= Math.ceil(old[g] * SIZE_SLACK) + 1 && kb >= Math.floor(old[g] / SIZE_SLACK) - 1 ? old[g] : kb]));
+        compare(`sizes/${id}.json`, kept, "");
+      }
       return;
     }
     const recorded = Object.fromEntries(

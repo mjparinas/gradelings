@@ -9,6 +9,7 @@ import { calmOn, calmPatch, gamesChoice, gamesPatch, soundChoice, soundPatch, ty
 import { useIsOn } from "@/lib/remoteFlags";
 import { useStore } from "@/lib/store";
 import { timerChoice, timerPatch, type TimerChoice } from "@/lib/timers";
+import { VoicePractice } from "./VoicePractice";
 import { CheckBox, ChildTabs, Choice, NoChildren, PageTitle, Panel, Slider, Switch, useChild } from "./common";
 
 const TIMER_HELP: Record<TimerChoice, string> = {
@@ -163,6 +164,7 @@ export function SettingsPage({ childId }: { childId?: string }) {
           <More summary="🛠️ Advanced options">
             <Switch label="Let them pick a lighter or stretch goal" value={!s.lockGoal} onChange={(v) => set({ lockGoal: !v })} help="Each day your child can choose Easy, Regular (your goal) or Stretch, which is a little longer. Turn off to always use your goal." />
             <Switch label="Hints count as first try" value={Boolean(s.freeHints)} onChange={(v) => set({ freeHints: v })} help="Children can open a hint before answering. Normally that counts like a retry. Turn this on if asking for help should never lower their accuracy." />
+            {isOn("voice-practice") && <VoicePractice value={Boolean(s.voice)} onChange={(v) => set({ voice: v })} />}
             {games === "earn" && (
               <>
                 <Slider label="Learning needed for a game break" value={s.learnMinutesPerReward} min={5} max={60} step={5} unit="min" onChange={(v) => set({ learnMinutesPerReward: v })} />

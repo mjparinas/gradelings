@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { CLIMATE_DEEP, LAT_LONG_DEEP, LIFE_DEEP, RIGHTS_DEEP, WORLD_DEEP } from "./g7-social-deeper";
 
 // Grade 7 social studies, Canada in the Contemporary World (Manitoba): mapping the world, time zones, human rights,
 // quality of life, and climate change and sustainability.
@@ -39,7 +40,7 @@ export const latLong = bankUnit({
   blurb: "Locate places and tell time around the world",
   parentNote: "Children use latitude and longitude to describe where places are, and learn how time zones, Universal Time and the International Date Line work.",
   standards: ["7-KL-015, 7-KL-020, 7-KL-021, 7-S-205, 7-S-207", "latitude, longitude, parallels and meridians, time zones, and using coordinates on maps"],
-  items: LAT_LONG,
+  items: [...LAT_LONG, ...LAT_LONG_DEEP],
 });
 
 const WORLD: Q[] = [
@@ -79,7 +80,7 @@ export const worldMap = bankUnit({
   blurb: "Continents, oceans, climates and people",
   parentNote: "Children locate continents, oceans, climate and vegetation zones and population clusters on a world map, and see how map projections change the way places look.",
   standards: ["7-KL-016, 7-KL-017, 7-KL-018, 7-KL-018F, 7-KP-038, 7-S-206", "continents and oceans, climate and vegetation zones, population clusters, francophone countries, and map projections"],
-  items: WORLD,
+  items: [...WORLD, ...WORLD_DEEP],
 });
 
 const RIGHTS: Q[] = [
@@ -119,7 +120,7 @@ export const humanRights = bankUnit({
   blurb: "Rights, freedoms and groups that help",
   parentNote: "Children learn about universal human rights, the Canadian Charter, discrimination, and organizations that work for people around the world.",
   standards: ["7-KC-001, 7-KC-003, 7-KC-005, 7-KI-007, 7-KG-035, 7-KG-036, 7-KG-037, 7-VC-001, 7-VC-002", "universal human rights, citizenship and democracy, the effects of discrimination, and international organizations"],
-  items: RIGHTS,
+  items: [...RIGHTS, ...RIGHTS_DEEP],
 });
 
 const LIFE: Q[] = [
@@ -158,7 +159,7 @@ export const qualityOfLife = bankUnit({
   blurb: "Needs, wealth, fairness and what we can do",
   parentNote: "Children compare quality of life in Canada and elsewhere, learn how wealth and resources are shared unevenly, and think about how their own choices can help.",
   standards: ["7-KC-002, 7-KC-004, 7-KI-006, 7-KI-008, 7-KG-032, 7-KG-034, 7-KP-039, 7-KP-040, 7-KP-041, 7-KE-045, 7-VE-016", "factors in quality of life, developed and less developed nations, uneven distribution of wealth, and personal actions"],
-  items: LIFE,
+  items: [...LIFE, ...LIFE_DEEP],
 });
 
 const CLIMATE: Q[] = [
@@ -197,5 +198,5 @@ export const climateChange = bankUnit({
   blurb: "Causes, effects and what can be done",
   parentNote: "Children learn what causes climate change, how it affects people and places including Manitoba, and what governments and individuals can do to live more sustainably.",
   standards: ["7-KL-026, 7-KL-027, 7-KP-044, 7-KE-053, 7-KE-054, 7-VL-009, 7-VE-017, 7-S-103", "causes and consequences of climate change, sustainable development, and environmental stewardship"],
-  items: CLIMATE,
+  items: [...CLIMATE, ...CLIMATE_DEEP],
 });

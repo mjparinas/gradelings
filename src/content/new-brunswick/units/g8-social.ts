@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { CONFEDERATION_DEEP, BLACK_HISTORY_DEEP, RIGHTS_REFORM_DEEP, WABANAKI_DEEP } from "./g8-g9-social-deeper";
 
 // Grade 8 social studies, New Brunswick: Confederation and early Black communities in the Atlantic region.
 
@@ -125,7 +126,7 @@ export const confederation = bankUnit({
   parentNote:
     "Practises the causes and consequences of Confederation from a New Brunswick view, including the 1865 and 1866 elections. It follows the Grade 8 social studies skill descriptors on historical sources and methods in the New Brunswick curriculum.",
   standards: ["History: Sources and Methods", "the causes and consequences of Confederation"],
-  items: CONFEDERATION,
+  items: [...CONFEDERATION, ...CONFEDERATION_DEEP],
 });
 
 export const blackHistory = bankUnit({
@@ -136,7 +137,7 @@ export const blackHistory = bankUnit({
   parentNote:
     "Practises the lives of early Black inhabitants in the Atlantic region, including Black Loyalists and Black refugees, and ideas about empowerment. It follows the Grade 8 social studies skill descriptors on history and empowerment in the New Brunswick curriculum.",
   standards: ["History: Events and Peoples, Civics: Power and Governance", "the lives of early Black inhabitants in the Atlantic region and ideas of empowerment"],
-  items: BLACK_HISTORY,
+  items: [...BLACK_HISTORY, ...BLACK_HISTORY_DEEP],
 });
 
 export const rightsReform = bankUnit({
@@ -147,7 +148,7 @@ export const rightsReform = bankUnit({
   parentNote:
     "Practises the idea of empowerment, the development of rights and social reform movements in Canada, and how young people can take age-appropriate action. It follows the Grade 8 social studies skill descriptors on empowerment, rights and civic engagement in the New Brunswick curriculum.",
   standards: ["Civics: Rights and Responsibilities, Civics: Civic Engagement, Economics: Sustainability", "empowerment, the development of rights and social reform movements in Canada, and taking action on youth issues"],
-  items: RIGHTS,
+  items: [...RIGHTS, ...RIGHTS_REFORM_DEEP],
 });
 
 export const wabanakiEmpowerment = bankUnit({
@@ -158,5 +159,5 @@ export const wabanakiEmpowerment = bankUnit({
   parentNote:
     "Practises how Wabanaki governance empowered Wabanaki Peoples and the effects of contact and colonization on that empowerment. The content is light and in the present tense. It follows the Grade 8 social studies skill descriptors on power and governance and on reconciliation in the New Brunswick curriculum.",
   standards: ["Civics: Power and Governance, Wabanaki: Reconciliation", "how Wabanaki governance empowered Wabanaki Peoples, and the impact of contact and colonization on that empowerment"],
-  items: WABANAKI_EMPOWERMENT,
+  items: [...WABANAKI_EMPOWERMENT, ...WABANAKI_DEEP],
 });

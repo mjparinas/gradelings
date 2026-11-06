@@ -1,4 +1,5 @@
 import { frQuestions, type FrItem } from "../../french";
+import { REFLEXIVE_DEEP, LINKS_DEEP, NEGATIVES_DEEP, FUTURE_DEEP, PLURALS_DEEP, AFFIXES_DEEP, MAIN_IDEA_DEEP } from "./immersion-deeper";
 import type { Course } from "../../types";
 
 const FR = { lang: "fr" } as const;
@@ -394,7 +395,7 @@ export const course: Course = {
       blurb: "Les verbes pronominaux",
       parentNote: "Reflexive pronouns (me, te, se, nous, vous) with everyday routines like se laver and se coucher.",
       standards: { "ca-bc": "Language elements: reflexive personal pronouns" },
-      generate: (o) => frQuestions(REFLEXIVE, o, 8, FR),
+      generate: (o) => frQuestions([...REFLEXIVE, ...REFLEXIVE_DEEP], o, 8, FR),
     },
     {
       id: "et-mais-ou-avec",
@@ -403,7 +404,7 @@ export const course: Course = {
       blurb: "Relier des idées",
       parentNote: "Joining ideas into longer sentences with coordinating conjunctions and simple prepositions.",
       standards: { "ca-bc": "Language elements: complex sentences joined by coordinating conjunctions and simple prepositions (et, mais, ou, avec)" },
-      generate: (o) => frQuestions(LINKS, o, 8, FR),
+      generate: (o) => frQuestions([...LINKS, ...LINKS_DEEP], o, 8, FR),
     },
     {
       id: "ne-pas",
@@ -412,7 +413,7 @@ export const course: Course = {
       blurb: "Dire non",
       parentNote: "The negative form ne… pas, including n' before a vowel sound.",
       standards: { "ca-bc": "Language elements: affirmative and negative forms, including ne… pas" },
-      generate: (o) => frQuestions(NEGATIVES, o, 8, FR),
+      generate: (o) => frQuestions([...NEGATIVES, ...NEGATIVES_DEEP], o, 8, FR),
     },
     {
       id: "futur-proche",
@@ -421,7 +422,7 @@ export const course: Course = {
       blurb: "Je vais jouer",
       parentNote: "Talking about what is about to happen with aller + a verb, and telling past from future.",
       standards: { "ca-bc": "Language elements: verb moods and tenses (present, near future, introduction to past tenses)" },
-      generate: (o) => frQuestions(FUTURE, o, 8, FR),
+      generate: (o) => frQuestions([...FUTURE, ...FUTURE_DEEP], o, 8, FR),
     },
     {
       id: "pluriels-en-x",
@@ -430,7 +431,7 @@ export const course: Course = {
       blurb: "Bateaux et chevaux",
       parentNote: "Plural spellings: -eau/-eu/-ou nouns add an x, and -al nouns become -aux.",
       standards: { "ca-bc": "Spelling conventions: plural nouns ending in “x”" },
-      generate: (o) => frQuestions(PLURALS, o, 8, FR),
+      generate: (o) => frQuestions([...PLURALS, ...PLURALS_DEEP], o, 8, FR),
     },
     {
       id: "prefixes-et-suffixes",
@@ -439,7 +440,7 @@ export const course: Course = {
       blurb: "Les morceaux des mots",
       parentNote: "Using prefixes and suffixes (re-, dé-, in-, -ette, -eur, -ier) to work out the meaning of new words.",
       standards: { "ca-bc": "Language elements: word roots, prefixes and suffixes" },
-      generate: (o) => frQuestions(AFFIXES, o, 8, FR),
+      generate: (o) => frQuestions([...AFFIXES, ...AFFIXES_DEEP], o, 8, FR),
     },
     {
       id: "idee-principale",
@@ -448,7 +449,7 @@ export const course: Course = {
       blurb: "De quoi parle le texte?",
       parentNote: "Reading a short text and telling the main idea apart from smaller details.",
       standards: { "ca-bc": "Identify the main idea in oral, written or visual texts" },
-      generate: (o) => frQuestions(MAIN_IDEA, o, 6, FR),
+      generate: (o) => frQuestions([...MAIN_IDEA, ...MAIN_IDEA_DEEP], o, 6, FR),
     },
   ],
 };

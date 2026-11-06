@@ -1,0 +1,7 @@
+Welcome to Gradelings for teachers. Let's set up your first class. It takes about a minute.
+On the Your classes page, type a class name, pick the grade, and choose your province or state. Then tap Create class.
+If you teach two neighbouring grades, choose a second grade, and your class can use units from both.
+Every class has a class code. Families can use it to link their own child, and you only ever see first names, grade and practice results for the units you assign.
+Along the top are five tabs: Progress, Homework, Live, Students and Settings. Progress is where you'll look every day.
+If you'd like a weekly summary, tick Email me every Monday. It lists who practised, how homework is going, and who to check in with.
+Next, add your students. That's the next video.

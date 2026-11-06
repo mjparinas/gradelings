@@ -39,6 +39,13 @@ import { BuildQuestion } from "../questions/BuildQuestion";
 import { ChoiceQuestion } from "../questions/ChoiceQuestion";
 import { CoinsQuestion } from "../questions/CoinsQuestion";
 import { InputQuestion } from "../questions/InputQuestion";
+import { FillQuestion } from "../questions/FillQuestion";
+import { HighlightQuestion } from "../questions/HighlightQuestion";
+import { MatchQuestion } from "../questions/MatchQuestion";
+import { MistakeQuestion } from "../questions/MistakeQuestion";
+import { MultiQuestion } from "../questions/MultiQuestion";
+import { SayQuestion } from "../questions/SayQuestion";
+import { TilesQuestion } from "../questions/TilesQuestion";
 import { OrderQuestion } from "../questions/OrderQuestion";
 import { PlaceQuestion } from "../questions/PlaceQuestion";
 import { ShadeQuestion } from "../questions/ShadeQuestion";
@@ -79,6 +86,20 @@ export function QuestionBody(props: QuestionProps<Question>) {
       return <ShadeQuestion {...props} q={q} />;
     case "place":
       return <PlaceQuestion {...props} q={q} />;
+    case "match":
+      return <MatchQuestion {...props} q={q} />;
+    case "multi":
+      return <MultiQuestion {...props} q={q} />;
+    case "highlight":
+      return <HighlightQuestion {...props} q={q} />;
+    case "mistake":
+      return <MistakeQuestion {...props} q={q} />;
+    case "fill":
+      return <FillQuestion {...props} q={q} />;
+    case "tiles":
+      return <TilesQuestion {...props} q={q} />;
+    case "say":
+      return <SayQuestion {...props} q={q} />;
   }
 }
 
@@ -172,7 +193,16 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
   // After two misses a child can tell a grown-up they need help, or look at how the unit works.
   const [helpAsked, setHelpAsked] = useState(false);
   const [showLesson, setShowLesson] = useState(false);
-  const [showVideo, setShowVideo] = useState(false);
+  // A unit's help video is also offered once, before its first question, the first time a child starts that unit.
+  const videoIntroOn = videosOn && !!family && canUse(family, "videoHelp") && plan.retries && !resume;
+  const introduced = useRef(new Set<string>());
+  const needsIntro = (it: Item | undefined) => {
+    if (!videoIntroOn || !it || it.fact || introduced.current.has(it.unitKey)) return false;
+    introduced.current.add(it.unitKey);
+    return !!helpVideoFor(it.unitKey) && !startDerived.units[it.unitKey]?.attempts;
+  };
+  const [showVideo, setShowVideo] = useState(() => needsIntro(item));
+  const [videoIntro, setVideoIntro] = useState(showVideo);
   const [flash, setFlash] = useState<"good" | "bad" | null>(null);
   const stage = useRef<HTMLDivElement>(null);
   const loggedUpTo = useRef(0);
@@ -314,7 +344,9 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
     setHinted(false);
     setHelpAsked(false);
     setShowLesson(false);
-    setShowVideo(false);
+    const intro = needsIntro(nextItem);
+    setShowVideo(intro);
+    setVideoIntro(intro);
     setMood("happy");
     setMessage("");
   }
@@ -390,7 +422,7 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
     setRun(0);
     setStatus("retry");
     setMood("oops");
-    setMessage(pick(["Not that basket. Try another one!", "Hmm, try a different basket."]));
+    setMessage(pick(["Not that one. Try another!", "Hmm, try a different one."]));
     sounds.tryAgain();
   }
 
@@ -538,7 +570,7 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
                         log([{ type: "help", unit: item.unitKey }]);
                       },
                   onLesson: lesson ? () => setShowLesson(true) : undefined,
-                  onVideo: helpVideo ? () => setShowVideo(true) : undefined,
+                  onVideo: helpVideo ? () => { setVideoIntro(false); setShowVideo(true); } : undefined,
                 }
               : undefined
           }
@@ -551,6 +583,7 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
           <HelpVideoPlayer
             video={helpVideo}
             onClose={() => setShowVideo(false)}
+            intro={videoIntro}
             onNext={advance}
             onLesson={lesson ? () => setShowLesson(true) : undefined}
             onWatched={(seconds, done) => log([{ type: "video", unit: item.unitKey, video: helpVideo.id, watched: seconds, done }])}

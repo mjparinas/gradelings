@@ -1,5 +1,6 @@
 import { frOrder, frQuestions, vocabQuestions, type FrItem, type Pair } from "../../french";
 import { sample } from "../../random";
+import { ABOUT_ME_DEEP, DESCRIBE_DEEP, ORDERS_DEEP, QUESTIONS_DEEP, SENTENCES_DEEP, TALES_DEEP, VERBS_DEEP } from "./immersion-deeper";
 import type { Course, GenerateOptions, Question } from "../../types";
 
 const FR = { lang: "fr" } as const;
@@ -43,7 +44,7 @@ const SENTENCES = [
 ];
 
 function sentenceItems(): FrItem[] {
-  return SENTENCES.map((s): FrItem => {
+  return [...SENTENCES, ...SENTENCES_DEEP].map((s): FrItem => {
     const lower = s[0].toLowerCase() + s.slice(1);
     const noDots = s.slice(0, -1);
     return [
@@ -121,7 +122,7 @@ const VERBS: Verb[] = [
 ];
 
 function verbItems(): FrItem[] {
-  return VERBS.map((v): FrItem => [
+  return [...VERBS, ...VERBS_DEEP].map((v): FrItem => [
     `Complète : ${v.sentence}`,
     v.right,
     v.wrong,
@@ -156,7 +157,7 @@ const DESCRIBE: FrItem[] = [
 ];
 
 function couleurs(opts?: GenerateOptions): Question[] {
-  return [...vocabQuestions(COLOURS, "Cette couleur est…", opts, 4, FR), ...frQuestions(DESCRIBE, opts, 4, FR)];
+  return [...vocabQuestions(COLOURS, "Cette couleur est…", opts, 4, FR), ...frQuestions([...DESCRIBE, ...DESCRIBE_DEEP], opts, 4, FR)];
 }
 
 // ---------- Histoire ou texte qui informe? ----------
@@ -284,7 +285,7 @@ const ORDERS: { prompt: string; hint: string; items: string[] }[] = [
 ];
 
 function elements(opts?: GenerateOptions): Question[] {
-  const items: FrItem[] = TALES.flatMap((t): FrItem[] => {
+  const items: FrItem[] = [...TALES, ...TALES_DEEP].flatMap((t): FrItem[] => {
     const visual = { type: "story" as const, lines: t.lines };
     return [
       ["Qui est le personnage?", t.who, t.whoWrong, "The character is who the story is about.", visual],
@@ -293,7 +294,7 @@ function elements(opts?: GenerateOptions): Question[] {
     ];
   });
   const choices = frQuestions(items, opts, 6, FR);
-  const orders = sample(ORDERS, 2).map((o) => frOrder(o.prompt, o.hint, o.items, FR));
+  const orders = sample([...ORDERS, ...ORDERS_DEEP], 2).map((o) => frOrder(o.prompt, o.hint, o.items, FR));
   return [...choices, ...orders];
 }
 
@@ -317,7 +318,7 @@ export const course: Course = {
       blurb: "Parler de moi",
       parentNote: "Speaking about oneself and one's daily life with simple sentence patterns: my name, age, likes and feelings.",
       standards: { "ca-bc": "Speak about oneself and one's daily life; reproduce simple sentence structures in oral self-expression" },
-      generate: (o) => frQuestions(ABOUT_ME, o, 8, FR),
+      generate: (o) => frQuestions([...ABOUT_ME, ...ABOUT_ME_DEEP], o, 8, FR),
     },
     {
       id: "majuscule-et-point",
@@ -335,7 +336,7 @@ export const course: Course = {
       blurb: "Poser des questions",
       parentNote: "Forming questions with “est-ce que” and recognizing the question mark.",
       standards: { "ca-bc": "Language elements: formulation of questions using “est-ce que”" },
-      generate: (o) => frQuestions(QUESTIONS, o, 8, FR),
+      generate: (o) => frQuestions([...QUESTIONS, ...QUESTIONS_DEEP], o, 8, FR),
     },
     {
       id: "verbes-d-action",

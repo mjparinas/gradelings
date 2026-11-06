@@ -23,8 +23,8 @@ export async function POST(req: Request) {
     if (await rateLimited(`login-email-ip:${email}:${ip}`, 10)) return error(429, TOO_MANY);
     if (await rateLimited(`login-email:${email}`, 60, 60 * 60_000)) return error(429, TOO_MANY);
   }
-  const rows = await query<{ id: string; family_id: string; password_hash: string; email_verified_at: number | null; totp_enabled_at: number | null }>(
-    "SELECT id, family_id, password_hash, email_verified_at, totp_enabled_at FROM parents WHERE email = ?",
+  const rows = await query<{ id: string; family_id: string; password_hash: string; email_verified_at: number | null; totp_enabled_at: number | null; family_role: string | null }>(
+    "SELECT id, family_id, password_hash, email_verified_at, totp_enabled_at, family_role FROM parents WHERE email = ?",
     [email],
   );
   const parent = rows[0];
@@ -44,7 +44,7 @@ export async function POST(req: Request) {
     if (step === "bad") return json({ error: "That code didn't work. Check the code in your authenticator app, or use a recovery code.", mfaRequired: true }, { status: 401 });
   }
   const { token, maxAge } = await createSession(parent.id, parent.family_id, req, { mfa: twoStep });
-  const family = toFamilyInfo((await getFamilyRow(parent.family_id))!, email, Boolean(parent.email_verified_at));
+  const family = toFamilyInfo((await getFamilyRow(parent.family_id))!, email, Boolean(parent.email_verified_at), false, parent.family_role === "adult");
   // A heads-up for the parent; a failed email never blocks signing in.
   if (parent.email_verified_at) await sendEmail(newSignInEmail(email, appOrigin(req), deviceLabel(req.headers.get("user-agent") ?? "")));
   return json({ family }, { cookie: sessionCookie(token, maxAge) });

@@ -2,6 +2,7 @@ import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
 import { copyOf, from } from "./kit";
 import { G6 as WASHINGTON } from "../../washington/units/social-59-g6";
+import { CHINA_MORE, EMPIRES_MORE, GREECE_ROME_MORE, GREEK_WORLD_MORE, HEBREWS_KUSH_MORE, INDIA_MORE, ROME_EMPIRE_MORE } from "./social-g6-more";
 
 // California social studies, Grade 6: ancient civilizations. Washington's and Oregon's units are copied without their
 // state's places or their Tribal items, with California items added; California's own units fill the rest. Content
@@ -353,7 +354,7 @@ export const SOCIAL_6: Unit[] = [
       "6.4.2; 6.4.3; 6.4.6; 6.7.1; 6.7.2",
       "early democracy in Greece, Athens and Sparta, and the Roman Republic and its influence on the US",
     ],
-  }),
+  }, GREECE_ROME_MORE),
   bankUnit({
     id: "ca-g6-hebrews-kush",
     title: "Ancient Israel & Kush",
@@ -365,7 +366,7 @@ export const SOCIAL_6: Unit[] = [
       "6.2.8; 6.3.1; 6.3.2; 6.3.3; 6.3.4; 6.3.5",
       "the location and culture of Kush, and the origins, teachings, settlements and survival of Judaism among the ancient Hebrews",
     ],
-    items: HEBREWS_KUSH,
+    items: [...HEBREWS_KUSH, ...HEBREWS_KUSH_MORE],
   }),
   bankUnit({
     id: "ca-g6-pharaohs-persia-alexander",
@@ -378,7 +379,7 @@ export const SOCIAL_6: Unit[] = [
       "6.2.7; 6.4.5; 6.4.7",
       "Queen Hatshepsut and Ramses the Great, the Persian Empire, and Alexander the Great and the spread of Greek culture",
     ],
-    items: EMPIRES_6,
+    items: [...EMPIRES_6, ...EMPIRES_MORE],
   }),
   bankUnit({
     id: "ca-g6-greek-world",
@@ -391,7 +392,7 @@ export const SOCIAL_6: Unit[] = [
       "6.4.1; 6.4.4; 6.4.8",
       "geography and the city-states of the Aegean, Greek mythology and literature, and the contributions of Greek figures in the arts and sciences",
     ],
-    items: GREEK_WORLD_6,
+    items: [...GREEK_WORLD_6, ...GREEK_WORLD_MORE],
   }),
   bankUnit({
     id: "ca-g6-ancient-india",
@@ -404,7 +405,7 @@ export const SOCIAL_6: Unit[] = [
       "6.5.2; 6.5.4; 6.5.6; 6.5.7",
       "the Indo-Aryan migrations, the caste system, the Maurya Empire and Ashoka, and India's literary and scientific traditions",
     ],
-    items: INDIA_6,
+    items: [...INDIA_6, ...INDIA_MORE],
   }),
   bankUnit({
     id: "ca-g6-qin-and-han",
@@ -417,7 +418,7 @@ export const SOCIAL_6: Unit[] = [
       "6.6.2; 6.6.4; 6.6.5; 6.6.6; 6.6.8",
       "China's geography, Confucius's times and ideas, Shi Huangdi and the Qin, the Han dynasty's imperial state and the spread of Buddhism to China",
     ],
-    items: CHINA_6,
+    items: [...CHINA_6, ...CHINA_MORE],
   }),
   bankUnit({
     id: "ca-g6-roman-empire",
@@ -430,6 +431,6 @@ export const SOCIAL_6: Unit[] = [
       "6.7.3; 6.7.4; 6.7.5; 6.7.7; 6.7.8",
       "Rome's expansion, Julius Caesar and Augustus, the Jews under Rome, the spread of Christianity, and the legacies of Roman art, technology, language and law",
     ],
-    items: ROME_EMPIRE_6,
+    items: [...ROME_EMPIRE_6, ...ROME_EMPIRE_MORE],
   }),
 ];

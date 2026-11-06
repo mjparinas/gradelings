@@ -1,7 +1,8 @@
 import { error, getSession, json, rateLimited, readJson, sameOrigin } from "@/server/auth";
 import { classGrades, teachingClass, validUnit } from "@/server/classroom";
 import { isFlagOn } from "@/server/flags";
-import { endLive, liveAnswers, openLive, cachedPreview, recentLive, revealLive, setLiveReadAloud, startLive, swapNextLive, type LiveRow } from "@/server/live";
+import { markTeacherHere } from "@/server/liveWatch";
+import { awayProfiles, endLive, liveAnswers, openLive, cachedPreview, recentLive, revealLive, setLiveReadAloud, startLive, swapNextLive, type LiveRow } from "@/server/live";
 import type { ClassRow } from "@/server/classroom";
 import type { LiveForTeacher, LiveQuestionData } from "@/lib/live";
 
@@ -20,9 +21,10 @@ async function view(row: LiveRow | undefined): Promise<LiveForTeacher | null> {
 }
 
 /** The open question with a preview of the next one, which only the teacher's side ever gets. */
-async function viewWithNext(row: LiveRow | undefined, cls: ClassRow): Promise<LiveForTeacher | null> {
+async function viewWithNext(row: LiveRow | undefined, cls: ClassRow, familyId: string): Promise<LiveForTeacher | null> {
   const live = await view(row);
   if (live && row) live.next = (await cachedPreview(cls, row))?.data ?? null;
+  if (live && (await isFlagOn("live-away", familyId))) live.away = await awayProfiles(cls.id);
   return live;
 }
 
@@ -37,7 +39,7 @@ export async function GET(req: Request) {
     const rows = await recentLive(found.cls.id);
     return json({ recap: (await Promise.all(rows.map(view))).filter(Boolean) });
   }
-  return json({ live: await viewWithNext(await openLive(found.cls.id), found.cls) });
+  return json({ live: await viewWithNext(await openLive(found.cls.id), found.cls, session.familyId) });
 }
 
 /** Asks a new question from a unit (ending any open one). */
@@ -54,12 +56,13 @@ export async function POST(req: Request) {
   if (!(await validUnit(key, classGrades(found.cls), found.cls.framework))) return error(400, "That unit isn’t part of this class’s grade.");
   const row = await startLive(found.cls, key, session.parentId, Date.now(), { readAloud: body?.readAloud !== false });
   if (!row) return error(400, "This unit’s questions are typed or built rather than tapped, so pick another unit for a live question.");
-  return json({ live: await viewWithNext(row, found.cls) });
+  return json({ live: await viewWithNext(row, found.cls, session.familyId) });
 }
 
 /**
  * `{ classId, action: "reveal" }` shows the answer to the class (the question then takes no more answers);
  * `{ classId, action: "swap-next" }` swaps the previewed next question for a different one;
+ * `{ classId, action: "here" }` says the Live tab is open;
  * `{ classId, action: "read-aloud", on }` lets students hear the open question read aloud, or not.
  */
 export async function PATCH(req: Request) {
@@ -69,15 +72,20 @@ export async function PATCH(req: Request) {
   const body = (await readJson(req)) as { classId?: unknown; action?: unknown; on?: unknown } | null;
   const found = typeof body?.classId === "string" ? await teachingClass(body.classId, session.parentId) : undefined;
   if (!found) return error(404, "Class not found");
+  // The Live tab is open (sent every 20 s while it is visible): students' devices look often meanwhile.
+  if (body?.action === "here") {
+    await markTeacherHere(found.cls.id);
+    return json({ ok: true });
+  }
   if (body?.action === "read-aloud") {
     if (typeof body.on !== "boolean") return error(400, "Say whether to read the question aloud.");
     await setLiveReadAloud(found.cls.id, body.on);
-    return json({ live: await viewWithNext(await openLive(found.cls.id), found.cls) });
+    return json({ live: await viewWithNext(await openLive(found.cls.id), found.cls, session.familyId) });
   }
   if (body?.action !== "reveal" && body?.action !== "swap-next") return error(400, "Unknown action.");
   if (body.action === "reveal") await revealLive(found.cls.id);
   else if (!(await swapNextLive(found.cls))) return error(409, "There's no other question to show from this unit just now.");
-  return json({ live: await viewWithNext(await openLive(found.cls.id), found.cls) });
+  return json({ live: await viewWithNext(await openLive(found.cls.id), found.cls, session.familyId) });
 }
 
 /** Ends the open question (?classId=). Students' screens stop showing it. */

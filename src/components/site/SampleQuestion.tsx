@@ -29,6 +29,22 @@ export function answerText(q: Question): string {
       return `${q.target} of ${q.parts} parts shaded`;
     case "place":
       return placeLabel(q, q.target);
+    case "say": {
+      const c = q.choices.find((x) => x.id === q.answer);
+      return c ? [c.emoji, c.label].filter(Boolean).join(" ") : q.answer;
+    }
+    case "match":
+      return q.pairs.map((x) => `${x.left.label} → ${x.right.label}`).join(" · ");
+    case "multi":
+      return q.choices.filter((c) => q.answers.includes(c.id)).map((c) => [c.emoji, c.label].filter(Boolean).join(" ")).join(", ");
+    case "highlight":
+      return q.answers.map((i) => q.words[i]).join(" ");
+    case "mistake":
+      return `Step ${q.wrong + 1}: ${q.steps[q.wrong]}`;
+    case "fill":
+      return q.answers.join(", ");
+    case "tiles":
+      return q.tiles.join(q.join ?? "");
   }
 }
 
@@ -105,6 +121,79 @@ function Body({ q, seed }: { q: Question; seed: number }) {
       return <p className="font-read text-ink-soft">Tap the parts to shade them, in a bar or circle cut into {q.parts} equal parts.</p>;
     case "place":
       return <p className="font-read text-ink-soft">Slide the marker along a number line from {placeLabel(q, q.min)} to {placeLabel(q, q.max)}.</p>;
+    case "say":
+      return (
+        <ul className="flex flex-wrap gap-2" aria-label="Choices">
+          {q.choices.map((c) => (
+            <li key={c.id} className={chip}>
+              <ChoiceContent c={c} q={{ ...q, kind: "choice" }} />
+            </li>
+          ))}
+        </ul>
+      );
+    case "match":
+      return (
+        <div className="flex flex-col gap-2">
+          <p className="font-read text-ink-soft">Match each one with its partner.</p>
+          <ul className="grid grid-cols-2 gap-2">
+            {q.pairs.map((x) => (
+              <li key={x.id} className={chip}>
+                {x.left.emoji && <span className="text-2xl">{x.left.emoji}</span>}
+                {x.left.label}
+              </li>
+            ))}
+            {withSeed(seed, () => shuffle(q.pairs)).map((x) => (
+              <li key={`r${x.id}`} className={chip}>
+                {x.right.emoji && <span className="text-2xl">{x.right.emoji}</span>}
+                {x.right.label}
+              </li>
+            ))}
+          </ul>
+        </div>
+      );
+    case "multi":
+      return (
+        <ul className="flex flex-wrap gap-2" aria-label="Choices (pick every one that fits)">
+          {q.choices.map((c) => (
+            <li key={c.id} className={chip}>
+              <ChoiceContent c={c} q={{ ...q, kind: "choice", answer: "" }} />
+            </li>
+          ))}
+        </ul>
+      );
+    case "highlight":
+      return <p className="font-read text-lg">{q.words.join(" ")}</p>;
+    case "mistake":
+      return (
+        <ol className="flex list-decimal flex-col gap-1 pl-6 font-read text-lg">
+          {q.steps.map((s, i) => (
+            <li key={i}>{s}</li>
+          ))}
+        </ol>
+      );
+    case "fill":
+      return (
+        <div className="flex flex-col gap-2">
+          <p className="font-read text-lg">{q.text.replace(/___/g, "＿＿＿")}</p>
+          <ul className="flex flex-wrap gap-2" aria-label="Word bank">
+            {withSeed(seed, () => shuffle(q.bank)).map((w) => (
+              <li key={w} className={chip}>
+                {w}
+              </li>
+            ))}
+          </ul>
+        </div>
+      );
+    case "tiles":
+      return (
+        <ul className="flex flex-wrap gap-2" aria-label="Tiles">
+          {withSeed(seed, () => shuffle([...q.tiles, ...(q.extra ?? [])])).map((t, i) => (
+            <li key={i} className={chip}>
+              {t}
+            </li>
+          ))}
+        </ul>
+      );
   }
 }
 

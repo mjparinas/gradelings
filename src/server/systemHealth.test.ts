@@ -570,6 +570,18 @@ describe("the daily job", () => {
     expect(done.rows[1].label).toBe("Ran out of time");
   });
 
+  it("doesn't flag the run it is part of: the digest is sent from inside the run", async () => {
+    process.env.CRON_SECRET = "c";
+    const now = Date.now() + 10 * 60_000;
+    await dbm.run("INSERT INTO job_runs (job, started_at) VALUES ('daily', ?)", [now - 5_000]);
+    const during = await health.jobCheck(now);
+    expect(during.state).toBe("ok");
+    expect(during.rows[0].label).toBe("Running now");
+    // A run that never finished is a problem once it is old.
+    expect((await health.jobCheck(now + 20 * 60_000)).state).toBe("warn");
+    await dbm.run("DELETE FROM job_runs WHERE finished_at IS NULL");
+  });
+
   it("records a failed run and passes the error on", async () => {
     await expect(monitor.trackJob("test", async () => Promise.reject(new Error("nope")), () => NOW)).rejects.toThrow("nope");
     expect((await monitor.recentJobRuns("test"))[0]).toMatchObject({ ok: false, detail: "nope", finishedAt: NOW });

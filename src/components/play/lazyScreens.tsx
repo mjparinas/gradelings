@@ -41,6 +41,9 @@ function once<T>(load: () => Promise<T>) {
 const arcade = once(() => import("./Arcade"));
 const stories = once(() => import("./Stories"));
 const facts = once(() => import("./Facts"));
+const rhymes = once(() => import("./Rhymes"));
+const explore = once(() => import("./Explore"));
+const articles = once(() => import("./Articles"));
 
 export const Arcade = lazyScreen(() => arcade().then((m) => m.Arcade));
 export const GameScreen = lazyScreen(() => arcade().then((m) => m.GameScreen));
@@ -48,6 +51,14 @@ export const FactsPicker = lazyScreen(() => facts().then((m) => m.FactsPicker));
 export const FactChart = lazyScreen(() => facts().then((m) => m.FactChart));
 export const HelpVideoPlayer = lazyScreen(() => import("./HelpVideo").then((m) => m.HelpVideoPlayer));
 export const PlacementTest = lazyScreen(() => import("./PlacementTest").then((m) => m.PlacementTest));
+export const BrainBreak = lazyScreen(() => import("./BrainBreak").then((m) => m.BrainBreak));
+export const RhymeLibrary = lazyScreen(() => rhymes().then((m) => m.RhymeLibrary));
+export const RhymeReader = lazyScreen(() => rhymes().then((m) => m.RhymeReader));
+export const ExploreLibrary = lazyScreen(() => explore().then((m) => m.ExploreLibrary));
+export const ExploreReader = lazyScreen(() => explore().then((m) => m.ExploreReader));
+export const ArticleLibrary = lazyScreen(() => articles().then((m) => m.ArticleLibrary));
+export const ArticleReader = lazyScreen(() => articles().then((m) => m.ArticleReader));
+export const StoryProblems = lazyScreen(() => import("./StoryProblems").then((m) => m.StoryProblems));
 export const Room = lazyScreen(() => import("./Room").then((m) => m.Room));
 export const Shop = lazyScreen(() => import("./Shop").then((m) => m.Shop));
 export const SneakPeek = lazyScreen(() => import("./SneakPeek").then((m) => m.SneakPeek));

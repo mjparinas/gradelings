@@ -1,5 +1,6 @@
 import { frOrder, frQuestions, type FrItem } from "../../french";
 import { sample } from "../../random";
+import { TU_VOUS_DEEP, QUESTION_WORDS_DEEP, ADVERBS_DEEP, COMPARE_DEEP, PASSE_DEEP, IMPARFAIT_DEEP, COMPREHENSION_DEEP } from "./immersion-deeper";
 import type { Course, GenerateOptions, Question } from "../../types";
 
 const FR = { lang: "fr" } as const;
@@ -324,7 +325,7 @@ export const course: Course = {
       blurb: "Parler poliment",
       parentNote: "Choosing between “tu” and “vous” depending on who is being spoken to, an important courtesy in French.",
       standards: { "ca-bc": "Communication strategies: expressions of courtesy, specifically the use of “tu” and “vous”" },
-      generate: (o) => frQuestions(TU_VOUS, o, 8, FR),
+      generate: (o) => frQuestions([...TU_VOUS, ...TU_VOUS_DEEP], o, 8, FR),
     },
     {
       id: "poser-des-questions",
@@ -333,7 +334,7 @@ export const course: Course = {
       blurb: "Où? Quand? Pourquoi?",
       parentNote: "Question words (qui, où, quand, pourquoi, comment, combien) and questions formed by inverting the subject and verb.",
       standards: { "ca-bc": "Language elements: structure of interrogative sentences, including subject-verb inversion and interrogative pronouns" },
-      generate: (o) => frQuestions(QUESTION_WORDS, o, 8, FR),
+      generate: (o) => frQuestions([...QUESTION_WORDS, ...QUESTION_WORDS_DEEP], o, 8, FR),
     },
     {
       id: "synonymes-et-contraires",
@@ -351,7 +352,7 @@ export const course: Course = {
       blurb: "Lentement, doucement",
       parentNote: "Forming adverbs from the feminine form of an adjective plus -ment.",
       standards: { "ca-bc": "Language elements: forming adverbs from the feminine form of a regular adjective plus “-ment”" },
-      generate: (o) => frQuestions(ADVERBS, o, 8, FR),
+      generate: (o) => frQuestions([...ADVERBS, ...ADVERBS_DEEP], o, 8, FR),
     },
     {
       id: "comparer",
@@ -360,7 +361,7 @@ export const course: Course = {
       blurb: "Plus, moins, aussi",
       parentNote: "Comparing with plus… que, moins… que and aussi… que, with adjectives and adverbs.",
       standards: { "ca-bc": "Language elements: comparative adverbs and their structure with adjectives" },
-      generate: (o) => frQuestions(COMPARE, o, 8, FR),
+      generate: (o) => frQuestions([...COMPARE, ...COMPARE_DEEP], o, 8, FR),
     },
     {
       id: "passe-compose",
@@ -369,7 +370,7 @@ export const course: Course = {
       blurb: "J'ai mangé, tu as chanté",
       parentNote: "The passé composé of first-group (-er) verbs, formed with avoir and the past participle.",
       standards: { "ca-bc": "Language elements: the passé composé of first-group verbs" },
-      generate: (o) => frQuestions(PASSE, o, 8, FR),
+      generate: (o) => frQuestions([...PASSE, ...PASSE_DEEP], o, 8, FR),
     },
     {
       id: "imparfait",
@@ -378,7 +379,7 @@ export const course: Course = {
       blurb: "Il était une fois…",
       parentNote: "The imparfait, the tense used to describe and to set the scene in stories and tales.",
       standards: { "ca-bc": "Language elements: the imparfait, used with the genres studied" },
-      generate: (o) => frQuestions(IMPARFAIT, o, 8, FR),
+      generate: (o) => frQuestions([...IMPARFAIT, ...IMPARFAIT_DEEP], o, 8, FR),
     },
     {
       id: "comprendre-un-texte",
@@ -387,7 +388,7 @@ export const course: Course = {
       blurb: "Idées et indices",
       parentNote: "Reading a short text, finding the main idea and making inferences from clues.",
       standards: { "ca-bc": "Identify a text's main idea and supporting details; draw inferences from texts" },
-      generate: (o) => frQuestions(COMPREHENSION, o, 8, FR),
+      generate: (o) => frQuestions([...COMPREHENSION, ...COMPREHENSION_DEEP], o, 8, FR),
     },
     {
       id: "structure-du-recit",

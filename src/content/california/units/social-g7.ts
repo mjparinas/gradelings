@@ -1,6 +1,10 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
 import { copyOf, from } from "./kit";
+import {
+  ARABIA_ISLAM_MORE, AZTEC_INCA_MORE, CHURCH_CROWNS_MORE, EXPLORATION_MORE, IMPERIAL_CHINA_MORE, JAPAN_MORE,
+  REFORMATION_WORLD_MORE, RENAISSANCE_CITIES_MORE, ROME_BYZANTIUM_MORE, SCIENCE_ENLIGHTENMENT_MORE, WEST_AFRICA_MORE,
+} from "./social-g7-more";
 import { OWN_SOCIAL_7 as OREGON } from "../../oregon/units/social-g67";
 
 // California social studies, Grade 7: medieval and early modern times. Washington's and Oregon's units are copied
@@ -594,7 +598,7 @@ export const SOCIAL_7: Unit[] = [
       "7.1.1; 7.1.2; 7.1.3",
       "Rome's strengths and lasting contributions, the reasons for its decline, and the rise of Constantinople and the Byzantine Empire",
     ],
-    items: ROME_BYZANTIUM,
+    items: [...ROME_BYZANTIUM, ...ROME_BYZANTIUM_MORE],
   }),
   copyOf(
     K("or-g7-aztec-inca"),
@@ -635,6 +639,7 @@ export const SOCIAL_7: Unit[] = [
         ["only Latin", "only English", "Greek"],
         "These languages are living today.",
       ],
+      ...AZTEC_INCA_MORE,
     ],
   ),
   copyOf(
@@ -664,6 +669,7 @@ export const SOCIAL_7: Unit[] = [
         ["it showed true sizes", "it was round", "it had no lines"],
         "It made navigation easier.",
       ],
+      ...EXPLORATION_MORE,
     ],
   ),
   bankUnit({
@@ -677,7 +683,7 @@ export const SOCIAL_7: Unit[] = [
       "7.10.1; 7.10.2; 7.10.3; 7.11.4; 7.11.5; 7.11.6",
       "the roots and theories of the Scientific Revolution, the scientific method, and how Enlightenment ideas and the Magna Carta shaped democratic thought",
     ],
-    items: SCIENCE_ENLIGHTENMENT,
+    items: [...SCIENCE_ENLIGHTENMENT, ...SCIENCE_ENLIGHTENMENT_MORE],
   }),
   bankUnit({
     id: "ca-g7-arabia-islam",
@@ -690,7 +696,7 @@ export const SOCIAL_7: Unit[] = [
       "7.2.1; 7.2.3; 7.2.4",
       "the geography and climate of Arabia, the Qur'an and the Sunnah, and the expansion of Muslim rule and the spread of Islam and Arabic",
     ],
-    items: ARABIA_ISLAM_7,
+    items: [...ARABIA_ISLAM_7, ...ARABIA_ISLAM_MORE],
   }),
   bankUnit({
     id: "ca-g7-imperial-china",
@@ -703,7 +709,7 @@ export const SOCIAL_7: Unit[] = [
       "7.3.2; 7.3.3; 7.3.6",
       "Tang and Song agriculture, technology and commerce, Confucian thought under the Song and Mongols, and the imperial state and the scholar-official class",
     ],
-    items: IMPERIAL_CHINA_7,
+    items: [...IMPERIAL_CHINA_7, ...IMPERIAL_CHINA_MORE],
   }),
   bankUnit({
     id: "ca-g7-west-african-life",
@@ -716,7 +722,7 @@ export const SOCIAL_7: Unit[] = [
       "7.4.2; 7.4.4",
       "family, labor specialization and regional commerce in West African states and cities, and the growth of Arabic in government, trade and scholarship",
     ],
-    items: WEST_AFRICA_7,
+    items: [...WEST_AFRICA_7, ...WEST_AFRICA_MORE],
   }),
   bankUnit({
     id: "ca-g7-medieval-japan",
@@ -729,7 +735,7 @@ export const SOCIAL_7: Unit[] = [
       "7.5.2; 7.5.4; 7.5.5; 7.5.6",
       "Prince Shotoku and Japanese society, Japanese Buddhism, the Heian golden age of literature and art, and the rise of a military society and the samurai",
     ],
-    items: JAPAN_7,
+    items: [...JAPAN_7, ...JAPAN_MORE],
   }),
   bankUnit({
     id: "ca-g7-church-and-crowns",
@@ -742,7 +748,7 @@ export const SOCIAL_7: Unit[] = [
       "7.6.2; 7.6.4; 7.6.6; 7.6.7; 7.6.8; 7.6.9",
       "the spread of Christianity, popes and monarchs, the Crusades, the bubonic plague, the Church as a political, intellectual and artistic institution, and the Reconquista",
     ],
-    items: CHURCH_CROWNS_7,
+    items: [...CHURCH_CROWNS_7, ...CHURCH_CROWNS_MORE],
   }),
   bankUnit({
     id: "ca-g7-renaissance-cities",
@@ -755,7 +761,7 @@ export const SOCIAL_7: Unit[] = [
       "7.8.2; 7.8.3; 7.8.5",
       "Florence and the trading cities, the reopened Silk Road and Marco Polo, and Renaissance advances in the arts and sciences",
     ],
-    items: RENAISSANCE_CITIES_7,
+    items: [...RENAISSANCE_CITIES_7, ...RENAISSANCE_CITIES_MORE],
   }),
   bankUnit({
     id: "ca-g7-reformation-world",
@@ -768,6 +774,6 @@ export const SOCIAL_7: Unit[] = [
       "7.9.3; 7.9.4; 7.9.5; 7.9.6; 7.9.7",
       "Protestant self-government, Catholic and Protestant Europe, the Counter-Reformation, missionaries, and the Golden Age of cooperation between Jews and Muslims in medieval Spain",
     ],
-    items: REFORMATION_WORLD_7,
+    items: [...REFORMATION_WORLD_7, ...REFORMATION_WORLD_MORE],
   }),
 ];

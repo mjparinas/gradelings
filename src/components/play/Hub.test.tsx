@@ -258,6 +258,82 @@ describe("Hub tiles", () => {
     expect(screen.queryByText("Stories")).not.toBeInTheDocument();
   });
 
+  it("has a free Brain Break tile for older kids, none on the little kids' home screen, and none when switched off", () => {
+    h.family = free;
+    const { unmount } = show();
+    expect(within(tile("Brain Break")).queryByText("🔒")).not.toBeInTheDocument();
+    fireEvent.click(tile("Brain Break"));
+    expect(window.location.hash).toBe("#/break");
+    unmount();
+    const little = show("little");
+    expect(screen.queryByText("Brain Break")).not.toBeInTheDocument();
+    little.unmount();
+    h.off = new Set(["brain-breaks"]);
+    show();
+    expect(screen.queryByText("Brain Break")).not.toBeInTheDocument();
+  });
+
+  it("has a Story Problems tile for older kids, none on the little kids' home screen, and none when switched off", () => {
+    const { unmount } = show("middle");
+    fireEvent.click(tile("Story Problems"));
+    expect(window.location.hash).toBe("#/problems");
+    unmount();
+    const little = show("little");
+    expect(screen.queryByText("Story Problems")).not.toBeInTheDocument();
+    little.unmount();
+    h.off = new Set(["story-problems"]);
+    show("middle");
+    expect(screen.queryByText("Story Problems")).not.toBeInTheDocument();
+  });
+
+  it("has an Explore tile for Grades 2 to 9 (little kids find it in Treasures), and none when switched off", () => {
+    const mid = show("middle");
+    fireEvent.click(tile("Explore"));
+    expect(window.location.hash).toBe("#/explore");
+    mid.unmount();
+    const big = show("big");
+    expect(tile("Explore")).toBeInTheDocument();
+    big.unmount();
+    const little = show("little");
+    expect(screen.queryByText("Explore")).not.toBeInTheDocument();
+    little.unmount();
+    h.off = new Set(["explore-cards"]);
+    show("middle");
+    expect(screen.queryByText("Explore")).not.toBeInTheDocument();
+  });
+
+  it("has an Articles tile for Grades 2 to 9 only, and none when switched off", () => {
+    const mid = show("middle");
+    fireEvent.click(tile("Articles"));
+    expect(window.location.hash).toBe("#/articles");
+    mid.unmount();
+    const big = show("big");
+    expect(tile("Articles")).toBeInTheDocument();
+    big.unmount();
+    const little = show("little");
+    expect(screen.queryByText("Articles")).not.toBeInTheDocument();
+    little.unmount();
+    h.off = new Set(["articles"]);
+    show("middle");
+    expect(screen.queryByText("Articles")).not.toBeInTheDocument();
+  });
+
+  it("has a Rhymes tile for Grades 2 to 4 only (little kids find it in Treasures), and none when switched off", () => {
+    const { unmount } = show("middle");
+    fireEvent.click(tile("Rhymes"));
+    expect(window.location.hash).toBe("#/rhymes");
+    unmount();
+    const big = show("big");
+    expect(screen.queryByText("Rhymes")).not.toBeInTheDocument();
+    big.unmount();
+    const little = show("little");
+    expect(screen.queryByText("Rhymes")).not.toBeInTheDocument();
+    little.unmount();
+    h.off = new Set(["rhymes"]);
+    show("middle");
+    expect(screen.queryByText("Rhymes")).not.toBeInTheDocument();
+  });
+
   it("hides the tiles the admin switched off", () => {
     h.off = new Set(["arcade", "shop", "daily-challenge"]);
     show();

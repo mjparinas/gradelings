@@ -1,4 +1,5 @@
 import "server-only";
+import { teacherOnly } from "@/server/audience";
 import { loadChildData, loadChildReport, familyProfileIds } from "@/server/reportData";
 import { getUnitRef, loadGrade } from "@/content";
 import { assignedAt, assignmentDue, familyClasswork, assignmentGoals, assignmentKeys, assignmentStarts, classGrades, classProgressAndMisses, type ClassRow } from "@/server/classroom";
@@ -302,7 +303,7 @@ async function trialRecaps(ctx: Ctx): Promise<boolean> {
   const { now, origin, result } = ctx;
   const recaps = await query<{ id: string; email: string; family_id: string; trial_ends_at: number; country: string | null }>(
     `SELECT p.id, p.email, p.family_id, f.trial_ends_at, f.country FROM parents p JOIN families f ON f.id = p.family_id
-     WHERE p.email_verified_at IS NOT NULL AND p.trial_recap_at IS NULL AND p.trial_notice_at IS NULL AND f.plan = 'trial'
+     WHERE p.family_role = 'owner' AND p.email_verified_at IS NOT NULL AND NOT ${teacherOnly("p")} AND p.trial_recap_at IS NULL AND p.trial_notice_at IS NULL AND f.plan = 'trial'
        AND f.subscription_status IS NULL AND COALESCE(f.access_until, 0) < f.trial_ends_at AND f.trial_ends_at > ? AND f.trial_ends_at <= ?`,
     [now + 3 * DAY, now + 10 * DAY],
   );
@@ -330,7 +331,7 @@ async function trialNotices(ctx: Ctx): Promise<boolean> {
   const { now, origin, result } = ctx;
   const trials = await query<{ id: string; email: string; family_id: string; trial_ends_at: number; country: string | null }>(
     `SELECT p.id, p.email, p.family_id, f.trial_ends_at, f.country FROM parents p JOIN families f ON f.id = p.family_id
-     WHERE p.email_verified_at IS NOT NULL AND p.trial_notice_at IS NULL AND f.plan = 'trial'
+     WHERE p.family_role = 'owner' AND p.email_verified_at IS NOT NULL AND NOT ${teacherOnly("p")} AND p.trial_notice_at IS NULL AND f.plan = 'trial'
        AND f.subscription_status IS NULL AND COALESCE(f.access_until, 0) < f.trial_ends_at AND f.trial_ends_at > ? AND f.trial_ends_at <= ?`,
     [now, now + 3 * DAY],
   );
@@ -353,7 +354,7 @@ async function practiceReminders(ctx: Ctx): Promise<boolean> {
   const { now, origin, result } = ctx;
   const nudgeParents = await query<{ id: string; email: string; family_id: string; country: string | null }>(
     `SELECT p.id, p.email, p.family_id, f.country FROM parents p LEFT JOIN families f ON f.id = p.family_id
-     WHERE p.practice_reminders = 1 AND p.email_verified_at IS NOT NULL AND (p.last_nudge_at IS NULL OR p.last_nudge_at < ?)`,
+     WHERE p.practice_reminders = 1 AND p.email_verified_at IS NOT NULL AND NOT ${teacherOnly("p")} AND (p.last_nudge_at IS NULL OR p.last_nudge_at < ?)`,
     [now - 6 * DAY],
   );
   for (const p of nudgeParents) {
@@ -403,7 +404,7 @@ async function weeklyReports(ctx: Ctx): Promise<boolean> {
 
   const parents = await query<{ id: string; email: string; family_id: string; country: string | null }>(
     `SELECT p.id, p.email, p.family_id, f.country FROM parents p LEFT JOIN families f ON f.id = p.family_id
-     WHERE p.weekly_report = 1 AND p.email_verified_at IS NOT NULL AND (p.last_weekly_at IS NULL OR p.last_weekly_at < ?)`,
+     WHERE p.weekly_report = 1 AND p.email_verified_at IS NOT NULL AND NOT ${teacherOnly("p")} AND (p.last_weekly_at IS NULL OR p.last_weekly_at < ?)`,
     [now - 5 * DAY],
   );
   // On the first Sunday of the month the weekly email also carries a short month summary.

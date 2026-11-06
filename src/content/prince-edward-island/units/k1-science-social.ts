@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { CONNECT_DEEP, GOODS_DEEP, MAPS_DEEP, NEEDS_DEEP, PLACE_DEEP, THEN_NOW_DEEP } from "./k3-social-deeper";
 
 // Kindergarten and Grade 1 science and social studies, Prince Edward Island. Indigenous content is light, in the present
 // tense for living communities, and needs review by Mi’kmaq partners (for example the Mi’kmaq Confederacy of PEI) and the
@@ -91,7 +92,7 @@ export const peCommunitiesConnectK = bankUnit({
   parentNote:
     "Introduces the idea that our community is connected to other communities, for example by roads, mail, food and visits. Your child begins to see that people depend on places beyond their own.",
   standards: ["3.2", "how our community is connected to other communities"],
-  items: CONNECT,
+  items: [...CONNECT, ...CONNECT_DEEP],
 });
 
 const MAPS: Q[] = [
@@ -130,7 +131,7 @@ export const peFirstMapsK = bankUnit({
   parentNote:
     "Introduces maps as pictures that show where places are. Your child finds familiar places on a simple map of a classroom or neighbourhood.",
   standards: ["3.3", "beginning to understand maps as pictures of places"],
-  items: MAPS,
+  items: [...MAPS, ...MAPS_DEEP],
 });
 
 const TOYS: Q[] = [
@@ -245,7 +246,7 @@ export const peNeedsAndWants1 = bankUnit({
   blurb: "What we need and what we want",
   parentNote: "Practises telling needs from wants, and what affects how families meet their needs and wants.",
   standards: ["1.4.1; 1.4.2", "telling needs from wants and what affects how they are met"],
-  items: NEEDS,
+  items: [...NEEDS, ...NEEDS_DEEP],
 });
 
 const GOODS: Q[] = [
@@ -284,7 +285,7 @@ export const peGoodsAndServices1 = bankUnit({
   parentNote:
     "Introduces goods (things) and services (work people do), and how communities depend on each other to exchange them.",
   standards: ["1.4.3", "how communities depend on each other for goods and services"],
-  items: GOODS,
+  items: [...GOODS, ...GOODS_DEEP],
 });
 
 const THEN_NOW: Q[] = [
@@ -322,7 +323,7 @@ export const peThenAndNow1 = bankUnit({
   parentNote:
     "Looks at how the way people live in their community has changed over time, and how contact between communities has changed.",
   standards: ["1.3.2; 1.3.4", "how life in a community and links between communities change over time"],
-  items: THEN_NOW,
+  items: [...THEN_NOW, ...THEN_NOW_DEEP],
 });
 
 const PLACE: Q[] = [
@@ -360,7 +361,7 @@ export const peFirstPeoplesPlace1 = bankUnit({
   parentNote:
     "Introduces, with respect and in the present tense, that Indigenous peoples have a long relationship with the land and that this relationship has changed over time. Needs review with Indigenous partners before launch.",
   standards: ["1.3.3", "how Indigenous peoples' relationship with place has changed over time"],
-  items: PLACE,
+  items: [...PLACE, ...PLACE_DEEP],
 });
 
 // Kindergarten science: using the senses to observe, identify things and stay safe. Standard textbook facts only.

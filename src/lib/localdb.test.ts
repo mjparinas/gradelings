@@ -333,6 +333,25 @@ describe("localdb on IndexedDB", () => {
     expect(idb.opened).toEqual(["gradelings", "gradelings"]);
   });
 
+  it("reports a full device instead of failing, and still throws other errors", async () => {
+    const db = await load();
+    // Imported after load(), which resets modules, so it is the copy localdb reports to.
+    const storage = await import("./storageFull");
+    await db.setKV("a", 1);
+    const fake = idb.dbs.get("gradelings")!.db;
+    fake.transaction = () => {
+      throw Object.assign(new Error("Encountered disk full while committing transaction."), { name: "QuotaExceededError" });
+    };
+    await expect(db.setKV("a", 2)).resolves.toBeUndefined();
+    await expect(db.putEvents([ev("x")])).resolves.toBeUndefined();
+    expect(storage.storageIsFull()).toBe(true);
+    fake.transaction = () => {
+      throw new Error("boom");
+    };
+    await expect(db.setKV("a", 3)).rejects.toThrow("boom");
+    storage.resetStorageFull();
+  });
+
   it("queues new events for upload and hands them out in batches", async () => {
     const db = await load();
     await db.putEvents([ev("a"), ev("b"), ev("c")]);

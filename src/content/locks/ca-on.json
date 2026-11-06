@@ -3,7 +3,7 @@
     "overview": "6345191a5f",
     "units": [
       "letter-names text=4e2d74ab60 std=96276878f2 q=a8b9337751",
-      "first-sounds text=dd9cd8d5d4 std=e048680d03 q=48ed3455eb",
+      "first-sounds text=dd9cd8d5d4 std=e048680d03 q=68c5e7f975",
       "rhyme-time text=12f8d63dc7 std=5b72916d42 q=b73dfecad5",
       "clap-the-parts text=606ab5cbbd std=3b904c1e86 q=6215dee4f1",
       "listen-to-a-story text=8907705eaa std=564d6a8074 q=e4e96571e7",
@@ -13,7 +13,7 @@
   "pk/math": {
     "overview": "49771f5a2c",
     "units": [
-      "count-to-5 text=5de441ec7a std=adfc12d1af q=7da6a21961",
+      "count-to-5 text=5de441ec7a std=adfc12d1af q=0092517696",
       "find-the-number text=48b0986657 std=9d8caa2ed9 q=cbb1ca9734",
       "more-or-fewer text=0faa658ba5 std=5f71c4a0e8 q=4d8cca7ab1",
       "shapes text=3eb07867e4 std=8a99ddf59e q=ed58e37c08",
@@ -25,31 +25,31 @@
   "pk/science": {
     "overview": "6c3b20df5a",
     "units": [
-      "five-senses text=ede42da0ab std=1ac126a96e q=18b2cf96c9",
-      "living-or-not text=9c2f339fb0 std=5af3a9c242 q=c6b64af68c",
-      "animals-and-babies text=c26be2c8ec std=4115db46ba q=d23f0b3d01",
-      "weather-and-sky text=152ba8b660 std=69c4699a96 q=9ab5b99907",
-      "plants-grow text=beae59bc1e std=d7174fecd9 q=d37c124eee",
-      "sink-or-float text=87253513e6 std=a7a089ceac q=80c8fb85a3"
+      "five-senses text=ede42da0ab std=1ac126a96e q=ab5e62249c",
+      "living-or-not text=9c2f339fb0 std=5af3a9c242 q=28feb0fe3d",
+      "animals-and-babies text=c26be2c8ec std=4115db46ba q=628e0c3ebe",
+      "weather-and-sky text=152ba8b660 std=69c4699a96 q=f141ea266d",
+      "plants-grow text=beae59bc1e std=d7174fecd9 q=18a3c821f1",
+      "sink-or-float text=87253513e6 std=a7a089ceac q=fb450f2fce"
     ]
   },
   "pk/social": {
     "overview": "9e4c6e0e98",
     "units": [
-      "my-family text=81af8740c1 std=9713d9bad5 q=5f47bd5b99",
-      "feelings text=32db0a0097 std=08b3ce6902 q=1e8788180c",
-      "community-helpers text=e038723509 std=64a2ee6be8 q=27bacf2a4a",
-      "places-around-me text=659860832c std=dd7d927add q=8a8589b026",
-      "taking-turns text=04b975dae4 std=d8434b58e8 q=22be788cc9",
-      "first-next-last text=6f92e7037f std=a9f58b77cb q=c643395606",
-      "caring-for-our-world text=0df6123b83 std=42645eda90 q=82f9f5197f"
+      "my-family text=81af8740c1 std=9713d9bad5 q=42a8b83d0d",
+      "feelings text=32db0a0097 std=08b3ce6902 q=b7d33a8640",
+      "community-helpers text=e038723509 std=64a2ee6be8 q=d4dc1c6f50",
+      "places-around-me text=659860832c std=dd7d927add q=808ad0d644",
+      "taking-turns text=04b975dae4 std=d8434b58e8 q=b3c8ff817f",
+      "first-next-last text=6f92e7037f std=a9f58b77cb q=772b705727",
+      "caring-for-our-world text=0df6123b83 std=42645eda90 q=974620c174"
     ]
   },
   "k/language": {
     "overview": "1f699eb398",
     "units": [
       "letter-partners text=c48f27422d std=8ee6a3e992 q=b88f284367",
-      "first-sounds text=cc4fb336eb std=5eba838b81 q=1e9600b156",
+      "first-sounds text=cc4fb336eb std=5eba838b81 q=ca82eff12c",
       "rhyme-time text=280911bb80 std=5ad374d8ea q=7ff630edf6",
       "clap-the-beat text=13b130a737 std=82a8526edc q=d798eaba52",
       "blend-a-word text=3d99132c91 std=56f6dbe774 q=16d2ff7d7d",
@@ -103,22 +103,22 @@
   "1/immersion": {
     "overview": "67e42711d6",
     "units": [
-      "je-me-presente text=1381462ccd std=3fd125ca07 q=05ad9397f1",
-      "majuscule-et-point text=dc5fe31c85 std=8ce9e2a60c q=970b8e3bf9",
-      "est-ce-que text=ec53105df0 std=3fd125ca07 q=db11e944fa",
-      "verbes-d-action text=4dfeea3109 std=8ce9e2a60c q=c240761d0d",
-      "couleurs-et-adjectifs text=2b7900578c std=8ce9e2a60c q=ec6fc6b1e4",
+      "je-me-presente text=1381462ccd std=3fd125ca07 q=d36ab27c04",
+      "majuscule-et-point text=dc5fe31c85 std=8ce9e2a60c q=1ffd19f1b3",
+      "est-ce-que text=ec53105df0 std=3fd125ca07 q=da6d70c852",
+      "verbes-d-action text=4dfeea3109 std=8ce9e2a60c q=57528b5d6f",
+      "couleurs-et-adjectifs text=2b7900578c std=8ce9e2a60c q=ebdf337a97",
       "histoire-ou-texte text=6bda9802ab std=301bb88f44 q=9bd8255a2d",
-      "elements-d-une-histoire text=df0e8c15fe std=301bb88f44 q=09dd5689f7"
+      "elements-d-une-histoire text=df0e8c15fe std=301bb88f44 q=72a0a198a1"
     ]
   },
   "1/language": {
     "overview": "a7949f25b9",
     "units": [
-      "blend-it text=9a1273c4bc std=d81468678d q=711a61ce87",
+      "blend-it text=9a1273c4bc std=d81468678d q=5b9245f2d7",
       "short-vowels text=c3991944bf std=9e97be8602 q=6e80d0c71e",
       "sh-ch-th text=8867585eda std=3c8faed4e8 q=53b8ec49fb",
-      "word-families text=47cdbc2e26 std=0d4e82a441 q=e1c00b110b",
+      "word-families text=47cdbc2e26 std=0d4e82a441 q=8b534665ec",
       "sight-words text=b86fac70b4 std=0843a6deb7 q=4aba5945bd",
       "word-jobs text=42c752e4c1 std=7ec49ee012 q=406781a673",
       "more-than-one text=10c2382c04 std=3252488388 q=4bb1ec800f",
@@ -154,7 +154,7 @@
     "overview": "e0f7b7074a",
     "units": [
       "think-like-a-scientist text=f01fb7f6d3 std=0eb81856ed q=ffeec80ec4",
-      "living-things text=a7c0d5737e std=3a32f9527d q=0c9f1698f1",
+      "living-things text=a7c0d5737e std=3a32f9527d q=ca29bd85de",
       "what-living-things-need text=0a99f83515 std=961e6af9d0 q=1f338f792c",
       "our-bodies-and-senses text=a3c2daa3a0 std=161c0cbf0d q=e50e4990b1",
       "animal-survival text=d692902e1f std=53ce19935a q=7f8e04fe9f",
@@ -186,11 +186,11 @@
     "overview": "67e42711d6",
     "units": [
       "le-la-un-une text=dd9498612e std=8ce9e2a60c q=767f777fd2",
-      "accord-des-adjectifs text=ecb46dd7a9 std=8ce9e2a60c q=abe8e2730d",
-      "ordre-des-mots text=7485d6ae2a std=8ce9e2a60c q=36db762541",
-      "les-contes text=42f1e4fd2e std=301bb88f44 q=240379d8b7",
-      "dabord-ensuite-enfin text=b5429f56fd std=8ce9e2a60c q=9feb26a74c",
-      "etre-et-avoir text=c2c7e4c41a std=8ce9e2a60c q=c94953589f"
+      "accord-des-adjectifs text=ecb46dd7a9 std=8ce9e2a60c q=f0976549b4",
+      "ordre-des-mots text=7485d6ae2a std=8ce9e2a60c q=67db72cbca",
+      "les-contes text=42f1e4fd2e std=301bb88f44 q=81e5927ff8",
+      "dabord-ensuite-enfin text=b5429f56fd std=8ce9e2a60c q=cf28ae6c05",
+      "etre-et-avoir text=c2c7e4c41a std=8ce9e2a60c q=1c87633579"
     ]
   },
   "2/language": {
@@ -263,13 +263,13 @@
   "3/immersion": {
     "overview": "67e42711d6",
     "units": [
-      "verbes-pronominaux text=61e4ea62bb std=8ce9e2a60c q=cda2cb5e6b",
-      "et-mais-ou-avec text=2b5573d7a6 std=8ce9e2a60c q=0a0011a51a",
-      "ne-pas text=84f2ba0956 std=8ce9e2a60c q=c0e3f1984a",
-      "futur-proche text=11dc1d0120 std=8ce9e2a60c q=43d52cd94f",
-      "pluriels-en-x text=7a2960bfbe std=8ce9e2a60c q=a165577c7e",
-      "prefixes-et-suffixes text=c5502db35f std=301bb88f44 q=708fe525c0",
-      "idee-principale text=c4f1f57829 std=301bb88f44 q=21e4584c51"
+      "verbes-pronominaux text=61e4ea62bb std=8ce9e2a60c q=5322c0921b",
+      "et-mais-ou-avec text=2b5573d7a6 std=8ce9e2a60c q=de6dac1255",
+      "ne-pas text=84f2ba0956 std=8ce9e2a60c q=79281ac8cf",
+      "futur-proche text=11dc1d0120 std=8ce9e2a60c q=cb28be202b",
+      "pluriels-en-x text=7a2960bfbe std=8ce9e2a60c q=b77b85a70b",
+      "prefixes-et-suffixes text=c5502db35f std=301bb88f44 q=5e78f0fe31",
+      "idee-principale text=c4f1f57829 std=301bb88f44 q=b2cf499947"
     ]
   },
   "3/language": {
@@ -293,7 +293,7 @@
       "numbers-to-1000 text=3dd8e5bf76 std=acb0c3b5ba q=b34f016c90",
       "round-and-count text=25b93a377a std=9ea0385c38 q=41a9e3cb30",
       "add-subtract-1000 text=abcc5b81ab std=dbd2fc5dc3 q=ebf0b5c179",
-      "multiplication text=7016aa3933 std=5b48883201 q=5ae1f5ddc7",
+      "multiplication text=7016aa3933 std=5b48883201 q=249bc57054",
       "division text=bbe2ad47e7 std=c5ace0a8da q=aa74a94c19",
       "fair-shares-3 text=d6df1e9193 std=4be1a42c00 q=1353378d79",
       "patterns-and-equations text=38e948b1ed std=853a8480c9 q=32db6b6541",
@@ -360,14 +360,14 @@
   "4/immersion": {
     "overview": "67e42711d6",
     "units": [
-      "tu-ou-vous text=4180ec02f0 std=3fd125ca07 q=51c8b322bf",
-      "poser-des-questions text=d753cee400 std=3fd125ca07 q=57b4d33803",
+      "tu-ou-vous text=4180ec02f0 std=3fd125ca07 q=ffce6e6f3f",
+      "poser-des-questions text=d753cee400 std=3fd125ca07 q=a28b8c582d",
       "synonymes-et-contraires text=185b8fa6ab std=301bb88f44 q=3c7c8a4ead",
-      "adverbes-en-ment text=1a37ebc5ea std=8ce9e2a60c q=c4a193af2f",
-      "comparer text=4d1e56eb18 std=8ce9e2a60c q=a4747dfa1e",
-      "passe-compose text=06a246d7d0 std=8ce9e2a60c q=a7ee84ab42",
-      "imparfait text=d03c097c04 std=8ce9e2a60c q=c980e65ab1",
-      "comprendre-un-texte text=e9911322b5 std=301bb88f44 q=b4f799c740",
+      "adverbes-en-ment text=1a37ebc5ea std=8ce9e2a60c q=ea9c52ce35",
+      "comparer text=4d1e56eb18 std=8ce9e2a60c q=0318df5ca4",
+      "passe-compose text=06a246d7d0 std=8ce9e2a60c q=d0d055f099",
+      "imparfait text=d03c097c04 std=8ce9e2a60c q=602735c6a4",
+      "comprendre-un-texte text=e9911322b5 std=301bb88f44 q=bc8ceeed49",
       "structure-du-recit text=d803a7cd8d std=301bb88f44 q=c8ee384b32"
     ]
   },
@@ -390,7 +390,7 @@
     "units": [
       "numbers-to-10000 text=4ad943850c std=0cc6de1807 q=301886db85",
       "add-subtract text=69dd4eb751 std=546268b0d7 q=c26d8c40de",
-      "times-tables text=c3027c0b04 std=49c657ea8a q=2d5acff7a6",
+      "times-tables text=c3027c0b04 std=49c657ea8a q=8b6bbaf8b4",
       "multiply-divide text=64281bfafd std=1f25258524 q=3036a902e9",
       "big-multiply text=f669a3c13d std=44fabe1f95 q=0cc4407b67",
       "fractions-4 text=0e102ed1c5 std=6eab27ff54 q=61419c0a19",
@@ -448,12 +448,12 @@
   "5/core-french": {
     "overview": "8dc2c1a80e",
     "units": [
-      "salutations text=34aad2270e std=3fd125ca07 q=bebc4e7fa8",
+      "salutations text=34aad2270e std=3fd125ca07 q=85b8db961b",
       "sons-et-accents text=c2600c3971 std=9ec21a66d6 q=42ec9fcbd3",
       "nombres text=64f42c031e std=3fd125ca07 q=ec7f3851db",
-      "genre-et-nombre text=6fc35772c5 std=8ce9e2a60c q=9bd55d2bf1",
-      "gouts text=be0812c122 std=3fd125ca07 q=86251f9e2c",
-      "descriptions text=66785fc698 std=8ce9e2a60c q=c9012bbc01",
+      "genre-et-nombre text=6fc35772c5 std=8ce9e2a60c q=ee09044759",
+      "gouts text=be0812c122 std=3fd125ca07 q=51ab4a36e1",
+      "descriptions text=66785fc698 std=8ce9e2a60c q=8607aadf86",
       "communautes-francophones text=86bfbbfa4b std=4ff06841d1 q=7aff41852e",
       "respect text=d02cfdf800 std=4ff06841d1 q=a0feb345ec"
     ]
@@ -461,11 +461,11 @@
   "5/immersion": {
     "overview": "67e42711d6",
     "units": [
-      "pronoms-relatifs text=0d1d4f2f09 std=8ce9e2a60c q=ba4837503f",
-      "negation text=715304529d std=8ce9e2a60c q=1c3b28c4f4",
-      "adverbes text=f3d17ffd67 std=8ce9e2a60c q=622e0c5ddc",
-      "ponctuation text=e473f9e4cd std=8ce9e2a60c q=e1e98220bb",
-      "bande-dessinee text=39408874d4 std=301bb88f44 q=ae914b7fb4",
+      "pronoms-relatifs text=0d1d4f2f09 std=8ce9e2a60c q=a43f4749a5",
+      "negation text=715304529d std=8ce9e2a60c q=2e8eb7eed0",
+      "adverbes text=f3d17ffd67 std=8ce9e2a60c q=dbe0e393a6",
+      "ponctuation text=e473f9e4cd std=8ce9e2a60c q=950fbfab67",
+      "bande-dessinee text=39408874d4 std=301bb88f44 q=5e51b9d597",
       "biographie text=5657db047e std=301bb88f44 q=2d05ec729d",
       "fait-ou-opinion text=125aecb360 std=301bb88f44 q=917bb0c7ce"
     ]
@@ -550,7 +550,7 @@
     "units": [
       "motifs-de-lettres text=33c165f11e std=9ec21a66d6 q=e7aba7baaa",
       "mots-interrogatifs text=2502c4b5bd std=3fd125ca07 q=d046f6cca0",
-      "loisirs text=128d6f0a63 std=3fd125ca07 q=7324702c71",
+      "loisirs text=128d6f0a63 std=3fd125ca07 q=ae5e28e2ba",
       "parce-que text=dcb7703bff std=3fd125ca07 q=9b5eb6a892",
       "emotions-et-etats text=408f0d8124 std=3fd125ca07 q=90f8604097",
       "famille text=6a732a57db std=8ce9e2a60c q=17180cb37c",
@@ -561,12 +561,12 @@
   "6/immersion": {
     "overview": "67e42711d6",
     "units": [
-      "imparfait-ou-passe-compose text=3ae5888507 std=8ce9e2a60c q=7e1b58f82e",
-      "familles-de-mots text=96e0754be2 std=301bb88f44 q=04925e2cb5",
+      "imparfait-ou-passe-compose text=3ae5888507 std=8ce9e2a60c q=35a81a69cc",
+      "familles-de-mots text=96e0754be2 std=301bb88f44 q=5f5a84c22d",
       "legendes text=c4bffe9333 std=301bb88f44 q=1af1b566c2",
-      "temps-et-lieux text=76da345b5d std=301bb88f44 q=71168dccf7",
+      "temps-et-lieux text=76da345b5d std=301bb88f44 q=fd97a86c36",
       "roman-jeunesse text=b00b6388f2 std=301bb88f44 q=5f98ff5b31",
-      "marqueurs-de-relation text=5ee8aa715b std=8ce9e2a60c q=1b11b81e08",
+      "marqueurs-de-relation text=5ee8aa715b std=8ce9e2a60c q=7a33e7b98a",
       "resumer text=b9a79648e8 std=8ce9e2a60c q=c259ad5bc3"
     ]
   },
@@ -580,7 +580,7 @@
       "punctuation-6 text=f3d82b8594 std=5eb1a783f5 q=d4e254c99a",
       "close-reading text=8f2caa5060 std=f0344069aa q=2400e20887",
       "point-of-view text=181ec2a506 std=2ba55ec833 q=e32473aa03",
-      "figurative-language text=49d680fa8d std=fd5656aaa9 q=f3824fdea7",
+      "figurative-language text=49d680fa8d std=fd5656aaa9 q=d1d2a09b3f",
       "connotation-tone text=9c068d912c std=c690084570 q=220849e9fa",
       "sources-bias text=30e9961fd3 std=9eff8f0964 q=ebdde5983f",
       "text-forms-6 text=bdd4c3fd20 std=b96ec7142e q=68961ed57a"
@@ -596,7 +596,7 @@
       "percents-6 text=cafd90fd05 std=6905131c41 q=e36a7b237c",
       "patterns-and-graphs text=dab33ccdd4 std=d406e29010 q=3278e6bf42",
       "algebra-6 text=b1dfde1d22 std=51b16bc306 q=abb19f6abc",
-      "equations text=5c61d003c6 std=0c346e719d q=0e4e24070f",
+      "equations text=5c61d003c6 std=0c346e719d q=16e4656f8c",
       "data-6 text=169dca7ba6 std=a506ba5a3a q=e02081dd94",
       "probability-6 text=74ab1e6ceb std=4e085eca79 q=6b1c51ad5d",
       "shapes-6 text=d97a7618fe std=03745dcfae q=26f8f1c978",
@@ -616,7 +616,7 @@
       "electrical-energy-6 text=e2a59e9295 std=70280c5fad q=6d804aacd9",
       "flight-6 text=11653360ba std=89b1b97aac q=6c940cc325",
       "earth-moon-sun-6 text=c2c46cb4eb std=485f12e999 q=cdd9a703f4",
-      "solar-system text=6be0e2dfe8 std=46911887cb q=09e18d2c12",
+      "solar-system text=6be0e2dfe8 std=46911887cb q=80b6cb3757",
       "weight-and-space-tech-6 text=b331f772e6 std=8acfb4fb6e q=8a90828d65",
       "science-skills-6 text=794b9d1b09 std=5574658ab3 q=ae0ec36880"
     ]
@@ -631,7 +631,7 @@
       "indigenous-histories-6 text=ca34d80fdb std=4cad70e6db q=979d941c19",
       "canada-and-world-6 text=191f7e8709 std=a9927296cb q=e6b2a80645",
       "global-help-6 text=a8bf784f87 std=359ad04e62 q=2274317bca",
-      "map-skills text=cdfb7253da std=c226adaf62 q=24cfcc3e54",
+      "map-skills text=cdfb7253da std=c226adaf62 q=3c08e0106d",
       "canada-partners-6 text=32cc5a4bf2 std=0f2851b9cb q=9b4ae2db40",
       "global-challenges text=e6d834ab65 std=d29f9242b3 q=a4c2095188",
       "trade-and-globalization text=5973228b70 std=fbe72b8179 q=15577023bc",
@@ -642,7 +642,7 @@
     "overview": "4b4f3fb439",
     "units": [
       "preguntas text=a185455eef std=ed20ce18ba q=d44b56c84c",
-      "comida text=125b021db0 std=1246d6d4dd q=ffef28847f",
+      "comida text=125b021db0 std=1246d6d4dd q=981e1d9c54",
       "pasatiempos text=c33589e083 std=4cd3a86ef5 q=cc01218407",
       "emociones text=a925cf1d90 std=289704dd77 q=a82624e446",
       "personas text=3f99f93025 std=0deaff300e q=4ab03f6e6a"
@@ -664,9 +664,9 @@
   "7/immersion": {
     "overview": "67e42711d6",
     "units": [
-      "superlatif text=b545ea30ab std=8ce9e2a60c q=498742ad8c",
-      "concordance-des-temps text=9fed3d96fc std=8ce9e2a60c q=626ccd43b0",
-      "figures-de-style text=961b40f4c8 std=301bb88f44 q=58fb4c55d6",
+      "superlatif text=b545ea30ab std=8ce9e2a60c q=cf9fe954c4",
+      "concordance-des-temps text=9fed3d96fc std=8ce9e2a60c q=33da57f056",
+      "figures-de-style text=961b40f4c8 std=301bb88f44 q=db6daeb98b",
       "poesie text=b198f38e31 std=301bb88f44 q=3510f9d353",
       "paragraphe-argumentatif text=83c3482eb9 std=8ce9e2a60c q=987fe40c39",
       "inferences-et-themes text=27d35e5fa0 std=301bb88f44 q=bac4a013d8",
@@ -678,12 +678,12 @@
     "units": [
       "clauses-sentences text=5017dd13d0 std=9de8e49513 q=5cd8987fd7",
       "grammar-7 text=2d628d53ad std=3e8d8c72d3 q=d05807d429",
-      "modifiers-parallelism text=a0c6970207 std=fcf0250987 q=d8f6db8d51",
+      "modifiers-parallelism text=a0c6970207 std=fcf0250987 q=4826f70a56",
       "punctuation-7 text=9342af658b std=ceb62cb34e q=3172ccc51c",
       "semicolons-colons-dashes text=40cb0d089d std=62570f1546 q=9b3d9ab0c8",
       "close-reading text=0b6ee269e5 std=da489a05f7 q=3fd92d2337",
       "point-of-view-7 text=9446c4e22a std=95fc690638 q=ee7ee4f5b5",
-      "literary-devices text=75012dadfd std=0226f19fd1 q=ca1f4ae5d6",
+      "literary-devices text=75012dadfd std=0226f19fd1 q=9f862df281",
       "tone-mood text=1a78ad0bc3 std=c690084570 q=5fe5a6766c",
       "text-patterns-7 text=3ba5dd0d6a std=53e691b9d2 q=ff11db607e",
       "persuasion text=002e89452f std=e57e076044 q=9332cae44a",
@@ -696,10 +696,10 @@
     "units": [
       "numbers-7 text=aa9954670f std=09ad3840ad q=c67d87d9b4",
       "powers-7 text=87b1cf29e3 std=d0ecc433b1 q=0c20b63e65",
-      "integer-add-subtract text=0f49d1bba6 std=32988e4886 q=688da6d68b",
+      "integer-add-subtract text=0f49d1bba6 std=32988e4886 q=1e24134b03",
       "decimal-operations text=56ab979d6a std=5ae013552d q=7f89d319c6",
       "fractions-7 text=7c1f63c272 std=aee5a1feb7 q=bacf9d4e33",
-      "fractions-decimals-percents text=12d27e2a2e std=7bc2b8ebdc q=720141998e",
+      "fractions-decimals-percents text=12d27e2a2e std=7bc2b8ebdc q=1030c5dd8d",
       "percents-7 text=16d88b1ceb std=a815b5b6d3 q=5a9bd8b3e8",
       "linear-relations text=8a41482ba7 std=aef8c88fc3 q=52c3309ac5",
       "algebra-7 text=b1ecf615eb std=6a379fd587 q=775245a3a8",
@@ -725,7 +725,7 @@
       "human-impact-7 text=f6bc8439e8 std=ba0edde4d4 q=c4030de692",
       "particles-mixtures-7 text=03fc7e2a6b std=0c43c062cd q=c8c3cfefc6",
       "solutions-separation-7 text=2f7dc8f574 std=51dd84ec65 q=00f34299b3",
-      "atoms-and-elements text=7c83b3e634 std=f6e8d7b1ac q=b5c6872ade",
+      "atoms-and-elements text=7c83b3e634 std=f6e8d7b1ac q=00783af555",
       "structures-forces-7 text=9f0c621a9c std=e04afb532a q=eef17aedf3",
       "safe-structures-7 text=1a9ceadc58 std=1ba5edd905 q=8e849ccaad",
       "heat-particles-7 text=0b575e82c8 std=9972d363db q=ec2f2fb08f",
@@ -761,11 +761,11 @@
   "8/core-french": {
     "overview": "8dc2c1a80e",
     "units": [
-      "passe-present-futur text=59001d8dfa std=8ce9e2a60c q=51db2ee03f",
+      "passe-present-futur text=59001d8dfa std=8ce9e2a60c q=01558b86d0",
       "questions text=c22ed39a30 std=3fd125ca07 q=a58d8811e8",
-      "frequence text=55ada4bc61 std=8ce9e2a60c q=7168a26c56",
-      "opinions-et-raisons text=18d2475ddc std=3fd125ca07 q=279f7c6000",
-      "comparer-et-opposer text=cd48bef620 std=8ce9e2a60c q=100faa0286",
+      "frequence text=55ada4bc61 std=8ce9e2a60c q=eb5ab04a02",
+      "opinions-et-raisons text=18d2475ddc std=3fd125ca07 q=68253644fc",
+      "comparer-et-opposer text=cd48bef620 std=8ce9e2a60c q=b619713420",
       "sons-et-lettres text=b96fdcc4c7 std=9ec21a66d6 q=d72a98a614",
       "histoires text=8017f84d91 std=301bb88f44 q=78f5cc8700",
       "monde-francophone text=cf85dc9873 std=4ff06841d1 q=504f08976c",
@@ -775,8 +775,8 @@
   "8/immersion": {
     "overview": "67e42711d6",
     "units": [
-      "registres-de-langue text=fb0b255525 std=3fd125ca07 q=d6d8243d06",
-      "communication-verbale text=dd999fda74 std=3fd125ca07 q=a8d17c4eed",
+      "registres-de-langue text=fb0b255525 std=3fd125ca07 q=f01b37b7a0",
+      "communication-verbale text=dd999fda74 std=3fd125ca07 q=35d2d44865",
       "legende text=839077dc9a std=301bb88f44 q=83dfa4fb28",
       "theatre text=a7bae2d3dd std=301bb88f44 q=31210bdbb5",
       "schema-narratif text=119c9cf6ed std=301bb88f44 q=129a7590a3",
@@ -785,7 +785,7 @@
       "subordonnees-relatives text=afe7d42397 std=8ce9e2a60c q=211caa5b26",
       "accord-du-participe text=3dd54ce0c6 std=8ce9e2a60c q=07df4f377e",
       "complements text=ceb893d285 std=8ce9e2a60c q=b8afd27c35",
-      "futur-et-conditionnel text=2acba8aa78 std=8ce9e2a60c q=ae7d677304"
+      "futur-et-conditionnel text=2acba8aa78 std=8ce9e2a60c q=1565753bef"
     ]
   },
   "8/language": {
@@ -800,7 +800,7 @@
       "argument-and-media text=38bdc7838c std=22f2c61fde q=e3455a12dd",
       "digital-8 text=742bfe22d6 std=185dce5635 q=a2bbd968e9",
       "grammar-and-style text=4cac16a8c8 std=68e528c583 q=3d25d60229",
-      "word-study text=e9a31820f1 std=802371f642 q=816e78a8ea",
+      "word-study text=e9a31820f1 std=802371f642 q=e40812d304",
       "writing-8 text=d9bb3a4cad std=e6d5c78928 q=6ef1ed34f8"
     ]
   },
@@ -808,20 +808,20 @@
     "overview": "0341084079",
     "units": [
       "numbers-8 text=b9ab60c645 std=707a4bdbe8 q=58139be2bc",
-      "squares-and-roots text=0c3411fb05 std=e9f805223a q=d7dfc2d1fe",
+      "squares-and-roots text=0c3411fb05 std=e9f805223a q=44906b78d6",
       "integers-8 text=4840f100ae std=5db0f0e242 q=9c4f44dc17",
-      "fraction-operations text=43b349e643 std=ab6cc0a93f q=d7ba9bcf9d",
+      "fraction-operations text=43b349e643 std=ab6cc0a93f q=4755d31e4a",
       "percents-8 text=9dce3ce17a std=93e922a151 q=c42a468c4f",
       "ratios-and-rates text=fe38c24acc std=ed79b36cda q=62d248cf82",
       "patterns-8 text=7c93ec8f67 std=c4160bcaa4 q=353e03d493",
       "algebra-8 text=50bbd3d3fd std=c2e6547d3a q=118ffccf35",
-      "linear-equations text=1e22122340 std=6e88a22fb4 q=0e7b5b65c5",
+      "linear-equations text=1e22122340 std=6e88a22fb4 q=4ba669b446",
       "data-8 text=f67cb7cc17 std=bbe387204a q=68d5f0cd99",
       "chance-8 text=475485675c std=d8b8a1087d q=e2d7736f0d",
       "transformations-8 text=872e7f5b99 std=820b188b55 q=d810f846d6",
       "scale-8 text=48a98db8d4 std=c7005b4712 q=ebe2d4d25c",
       "angles-8 text=899ecf6fe2 std=535a930a49 q=547f9529ab",
-      "pythagorean-theorem text=014e1086f2 std=c99ed9e47f q=901991b35a",
+      "pythagorean-theorem text=014e1086f2 std=c99ed9e47f q=99835d112c",
       "measure-8 text=06fddecfd2 std=a0617902c6 q=b1d0530bc4",
       "surface-area-volume text=a5298071b5 std=b65dc334dd q=5c73cae8f9",
       "money-8 text=2173e29066 std=84e85d108d q=ceff3908c3"
@@ -878,11 +878,11 @@
   "9/core-french": {
     "overview": "8dc2c1a80e",
     "units": [
-      "temps-9 text=ce329b2a73 std=8ce9e2a60c q=48e5776dcc",
-      "poser-des-questions text=86571547db std=3fd125ca07 q=7241698734",
+      "temps-9 text=ce329b2a73 std=8ce9e2a60c q=0654695545",
+      "poser-des-questions text=86571547db std=3fd125ca07 q=923e715d92",
       "sequences text=5183a12069 std=8ce9e2a60c q=ac5daa7753",
-      "besoins-et-opinions text=89c2c249ad std=3fd125ca07 q=174b7b6249",
-      "comparer-9 text=81fa6d9d9d std=8ce9e2a60c q=cc12e8ff41",
+      "besoins-et-opinions text=89c2c249ad std=3fd125ca07 q=b37ea810f1",
+      "comparer-9 text=81fa6d9d9d std=8ce9e2a60c q=282a19362c",
       "descriptions text=88851e69eb std=8ce9e2a60c q=5b407d61b3",
       "types-de-textes text=b045b66776 std=301bb88f44 q=302036a673",
       "traditions text=b071ad9133 std=4ff06841d1 q=b8880c6a2f",
@@ -897,11 +897,11 @@
       "registres-et-expose text=9fcfc18a91 std=3fd125ca07 q=ec12e484f3",
       "fable text=11ae2dabb3 std=301bb88f44 q=63fa4f952e",
       "roman text=a85739e695 std=301bb88f44 q=508498f190",
-      "figures-de-style text=91a17e6046 std=301bb88f44 q=d9af6a372b",
+      "figures-de-style text=91a17e6046 std=301bb88f44 q=0e6878d544",
       "sequence-descriptive text=aaba16ad4c std=8ce9e2a60c q=13ebd7c653",
-      "temps-du-passe text=8582fd429c std=8ce9e2a60c q=80f9d53dbc",
-      "pronoms-complements text=71e6b53871 std=8ce9e2a60c q=7553c89099",
-      "phrases-hypothetiques text=a7809ecb7b std=8ce9e2a60c q=f73deaf2a0",
+      "temps-du-passe text=8582fd429c std=8ce9e2a60c q=054dadf947",
+      "pronoms-complements text=71e6b53871 std=8ce9e2a60c q=761022744f",
+      "phrases-hypothetiques text=a7809ecb7b std=8ce9e2a60c q=5681581067",
       "passe-simple text=073b3b8eb7 std=8ce9e2a60c q=8f2bd618e1"
     ]
   },
@@ -924,13 +924,13 @@
     "overview": "25e028e2ab",
     "units": [
       "number-sets-9 text=2e841b16e4 std=9ac88c73e1 q=a0f74fc11b",
-      "rational-numbers text=023c4c6316 std=e4c7e5b98a q=6f2f9a3df7",
+      "rational-numbers text=023c4c6316 std=e4c7e5b98a q=29cdd814c4",
       "powers-9 text=54fddff77e std=2a7ca7dfc2 q=efd7e9ab57",
-      "exponent-laws text=14558089af std=00643403ed q=2ce4ff5a2c",
+      "exponent-laws text=14558089af std=00643403ed q=8fb7aa1d0b",
       "rates-percents-9 text=c142869bb8 std=114b7ba247 q=f4bb198ede",
       "expressions-9 text=c4cbafb40c std=a79253561a q=a48fbbb76c",
       "polynomials text=608ddf33d1 std=99417a2240 q=3a3e17fe5c",
-      "multi-step-equations text=834b6c0c60 std=31900fbd6a q=beb185035d",
+      "multi-step-equations text=834b6c0c60 std=31900fbd6a q=4823df05ba",
       "coding-9 text=d2b06c6c90 std=0636b8871e q=abc3756092",
       "linear-relations text=d5718915ca std=34c01dc78c q=1e254a9707",
       "lines-9 text=a0d34ff620 std=a4f3e7e922 q=952170d895",

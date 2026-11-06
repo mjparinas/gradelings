@@ -1,5 +1,6 @@
 "use client";
 
+import { StorageFullNotice } from "@/components/StorageFullNotice";
 import Link from "next/link";
 import { memo, useEffect, useState, useSyncExternalStore, type ReactNode } from "react";
 import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
@@ -34,6 +35,8 @@ import { UsConsent } from "./UsConsent";
 import { ReportTabs } from "./common";
 import { FeedbackLink } from "@/components/FeedbackLink";
 import { MAIN_ID, SkipLink } from "@/components/SkipLink";
+import { FirstUseVideo, TrainingLibrary } from "@/components/TrainingVideo";
+import { PARENT_TAB_VIDEOS, PARENT_VIDEOS, videoById } from "@/lib/trainingVideos";
 
 const NAV = [
   { path: "", label: "Overview", icon: "🏠" },
@@ -48,6 +51,9 @@ const NAV = [
 const NAV_PARENT: Record<string, string> = { placement: "reports", "report-cards": "reports", year: "reports", sheet: "reports", hours: "reports", portfolio: "reports", privacy: "account" };
 
 const noSubscribe = () => () => {};
+
+/** Browser test runs (Playwright) would find the first-use video over every page, so it stays quiet there, as the voice download does. */
+const automated = () => typeof navigator !== "undefined" && navigator.webdriver === true;
 
 function SyncBadge() {
   const sync = useStore((s) => s.sync);
@@ -77,6 +83,7 @@ function Shell({ children, active, pending }: { children: ReactNode; active: str
   const paid = hasPaidPlan(family);
   const inStoreApp = useSyncExternalStore(noSubscribe, isStoreApp, () => false);
   const days = trialDaysLeft(family);
+  const videosOn = useFlag("training-videos");
   return (
     <div className="min-h-dvh bg-[#f6f5f1]">
       <SkipLink />
@@ -142,6 +149,11 @@ function Shell({ children, active, pending }: { children: ReactNode; active: str
       </main>
       <div className="print:hidden">
         <FeedbackLink audience="parent" signedIn={Boolean(family.account)} />
+        {videosOn && (
+          <p className="pb-6 text-center">
+            <a href="#/videos" className="text-sm font-semibold text-ink-soft underline">Training videos</a>
+          </p>
+        )}
       </div>
     </div>
   );
@@ -182,8 +194,12 @@ function SignInOnly() {
 const Section = memo(function Section({ hash, billing, onBilling }: { hash: string; billing: BillingInfo | null; onBilling: (b: BillingInfo | null) => void }) {
   const { path } = parse(hash);
   const section = path[0] ?? "";
+  const videosOn = useFlag("training-videos");
   let page: ReactNode;
   switch (section) {
+    case "videos":
+      page = <TrainingLibrary heading="Training videos" intro="Short how-tos for the parent area, under a minute each. They play on their own the first time you open each part, and you can watch any of them again here." videos={PARENT_VIDEOS} />;
+      break;
     case "reports":
       page = <ReportsPage childId={path[1]} />;
       break;
@@ -229,7 +245,12 @@ const Section = memo(function Section({ hash, billing, onBilling }: { hash: stri
       </>
     );
   }
-  return page;
+  return (
+    <>
+      <FirstUseVideo key={section} video={videoById(PARENT_VIDEOS, PARENT_TAB_VIDEOS[section] ?? "")} enabled={videosOn && !automated()} />
+      {page}
+    </>
+  );
 });
 
 export function ParentApp() {
@@ -277,6 +298,7 @@ export function ParentApp() {
   return (
     <ContentGate targets={profiles.flatMap((p) => (levels ? practiceTargets(p, childSettings[p.id]) : [{ grade: p.grade, framework: p.framework }]))} optional>
       <VoicePreload />
+      <StorageFullNotice />
       <Shell active={tab} pending={pending}>
         <ShownRoute value={shown}>
           <Section hash={shown} billing={billing} onBilling={setBilling} />

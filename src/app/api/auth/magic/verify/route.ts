@@ -12,7 +12,7 @@ export async function POST(req: Request) {
   const body = (await readJson(req)) as { token?: unknown } | null;
   const parentId = await consumeAuthToken(typeof body?.token === "string" ? body.token : "", "magic");
   if (!parentId) return error(400, BAD);
-  const rows = await query<{ family_id: string; email: string; email_verified_at: number | null }>("SELECT family_id, email, email_verified_at FROM parents WHERE id = ?", [parentId]);
+  const rows = await query<{ family_id: string; email: string; email_verified_at: number | null; family_role: string | null }>("SELECT family_id, email, email_verified_at, family_role FROM parents WHERE id = ?", [parentId]);
   const parent = rows[0];
   // The account may have turned on two-step sign-in or become staff since the link was sent.
   if (!parent || (await magicAccountId(parent.email.toLowerCase())) !== parentId) return error(400, BAD);
@@ -24,6 +24,6 @@ export async function POST(req: Request) {
     await run("DELETE FROM sessions WHERE parent_id = ?", [parentId]);
   }
   const { token, maxAge } = await createSession(parentId, parent.family_id, req);
-  const family = toFamilyInfo((await getFamilyRow(parent.family_id))!, parent.email, true);
+  const family = toFamilyInfo((await getFamilyRow(parent.family_id))!, parent.email, true, false, parent.family_role === "adult");
   return json({ family }, { cookie: sessionCookie(token, maxAge) });
 }

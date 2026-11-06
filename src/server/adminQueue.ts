@@ -8,6 +8,7 @@ import { CONTACT_EMAIL, missingSocialPlatforms } from "@/lib/brand";
 // The admin can snooze an item or dismiss it; a family emailed from the panel recently is left out for a week.
 
 const DAY = 86_400_000;
+const NOT_TEACHER = "NOT EXISTS (SELECT 1 FROM parents tp WHERE tp.family_id = f.id AND tp.account_type = 'teacher' AND NOT EXISTS (SELECT 1 FROM profiles pr WHERE pr.family_id = f.id AND COALESCE(json_extract(pr.data, '$.deleted'), 0) = 0))";
 const REAL = "NOT EXISTS (SELECT 1 FROM parents s WHERE s.family_id = f.id AND s.role = 'student')";
 const EMAIL = "(SELECT p.email FROM parents p WHERE p.family_id = f.id ORDER BY p.created_at LIMIT 1)";
 const VERIFIED = "EXISTS (SELECT 1 FROM parents p WHERE p.family_id = f.id AND p.email_verified_at IS NOT NULL)";
@@ -58,10 +59,10 @@ export async function queueItems(now = Date.now()): Promise<QueueItem[]> {
   const weekAgo = now - 7 * DAY;
   const [pastDue, trialEnding, cancelled, quiet, never, unconfirmed, bounced, reports, feedback] = await Promise.all([
     fam("f.subscription_status = 'past_due'", [], "f.billing_event_at"),
-    fam(`f.plan != 'premium' AND f.trial_ends_at > ? AND f.trial_ends_at <= ? AND COALESCE(f.access_until, 0) <= ? AND ${VERIFIED} AND ${LAST_PRACTICE} IS NOT NULL AND NOT ${RECENT_PANEL_MAIL}`, [now, now + 3 * DAY, now, weekAgo], "f.trial_ends_at"),
+    fam(`f.plan != 'premium' AND f.trial_ends_at > ? AND f.trial_ends_at <= ? AND COALESCE(f.access_until, 0) <= ? AND ${VERIFIED} AND ${LAST_PRACTICE} IS NOT NULL AND ${NOT_TEACHER} AND NOT ${RECENT_PANEL_MAIL}`, [now, now + 3 * DAY, now, weekAgo], "f.trial_ends_at"),
     fam(`f.plan != 'premium' AND f.subscription_status = 'canceled' AND f.billing_event_at > ? AND ${VERIFIED} AND NOT ${RECENT_PANEL_MAIL}`, [now - 14 * DAY, weekAgo], "f.billing_event_at DESC"),
     fam(`f.plan = 'premium' AND f.created_at < ? AND COALESCE(${LAST_PRACTICE}, 0) < ? AND ${VERIFIED} AND NOT ${RECENT_PANEL_MAIL}`, [now - 14 * DAY, now - 14 * DAY, weekAgo], "last"),
-    fam(`f.created_at < ? AND f.created_at > ? AND ${LAST_PRACTICE} IS NULL AND ${VERIFIED} AND NOT ${RECENT_PANEL_MAIL}`, [now - 2 * DAY, now - 14 * DAY, weekAgo], "f.created_at"),
+    fam(`f.created_at < ? AND f.created_at > ? AND ${LAST_PRACTICE} IS NULL AND ${VERIFIED} AND ${NOT_TEACHER} AND NOT ${RECENT_PANEL_MAIL}`, [now - 2 * DAY, now - 14 * DAY, weekAgo], "f.created_at"),
     fam(
       `f.created_at < ? AND f.created_at > ? AND NOT ${VERIFIED} AND NOT EXISTS (SELECT 1 FROM email_log l WHERE l.family_id = f.id AND l.kind = 'verify' AND l.sent_at > ?)`,
       [now - DAY, now - 14 * DAY, now - 2 * DAY],

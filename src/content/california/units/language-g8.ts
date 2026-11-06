@@ -1,5 +1,6 @@
 import type { Unit } from "../../types";
 import { passage, readingUnit, type R } from "./language-kit";
+import { ARGUMENTS_AND_SOURCES_8_MORE, LITERARY_CONNECTIONS_8_MORE, VERBS_VOICE_MOOD_8_MORE } from "./language-more";
 
 // California's own Grade 8 English language arts units: comparing structures, film and stage versions and modern
 // retellings of old stories (CA CCSS RL.8.5, RL.8.7, RL.8.9); connections, word meaning, point of view and
@@ -170,7 +171,7 @@ export const LITERARY_CONNECTIONS_8: Unit = readingUnit({
     "RL.8.5; RL.8.7; RL.8.9",
     "comparing text structures, film and stage versions of a text, and modern stories that draw on myths and traditional tales",
   ],
-  items: LITERARY_CONNECTIONS,
+  items: [...LITERARY_CONNECTIONS, ...LITERARY_CONNECTIONS_8_MORE],
 });
 
 export const ARGUMENTS_AND_SOURCES_8: Unit = readingUnit({
@@ -184,7 +185,7 @@ export const ARGUMENTS_AND_SOURCES_8: Unit = readingUnit({
     "RI.8.3; RI.8.4; RI.8.6; RI.8.9",
     "comparisons, analogies and categories, word meaning and allusions, an author's point of view and response to conflicting evidence, and texts that disagree",
   ],
-  items: ARGUMENTS_AND_SOURCES,
+  items: [...ARGUMENTS_AND_SOURCES, ...ARGUMENTS_AND_SOURCES_8_MORE],
 });
 
 export const VERBS_VOICE_MOOD_8: Unit = readingUnit({
@@ -198,7 +199,7 @@ export const VERBS_VOICE_MOOD_8: Unit = readingUnit({
     "L.8.1; L.8.3",
     "verbals, active and passive voice, verb moods and shifts, and choosing voice and mood for effect",
   ],
-  items: VERBS_VOICE_MOOD,
+  items: [...VERBS_VOICE_MOOD, ...VERBS_VOICE_MOOD_8_MORE],
 });
 
 export const LANGUAGE_8: Unit[] = [LITERARY_CONNECTIONS_8, ARGUMENTS_AND_SOURCES_8, VERBS_VOICE_MOOD_8];

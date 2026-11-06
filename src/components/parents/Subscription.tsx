@@ -99,6 +99,17 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
     }
   };
 
+  if (family.account?.adult) {
+    return (
+      <>
+        <PageTitle title="Subscription" sub="The plan covers the whole family." />
+        <Panel title="Managed by the family owner">
+          <p className="font-read text-lg">{paid || premium ? "Your family has full access." : "Your family is on the free plan."} The person who made the family account manages the plan and billing, so there is nothing to do here.</p>
+        </Panel>
+      </>
+    );
+  }
+
   return (
     <>
       <PageTitle

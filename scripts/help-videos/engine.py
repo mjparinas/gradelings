@@ -188,7 +188,42 @@ def e_clock(d, el, q):
     d.ellipse([cx - 8, cy - 8, cx + 8, cy + 8], fill=INK)
 
 
-DRAW = {"clock": e_clock, "text": e_text, "frac": e_frac, "pie": e_pie, "bar": e_bar, "grid": e_grid, "groups": e_groups, "blocks": e_blocks, "line": e_line, "rect": e_rect, "numberline": e_numberline}
+def e_hl(d, el, q):
+    """A rounded outline around part of a screenshot, with an optional label pill above or below it."""
+    x0, y0, x1, y1 = el["box"]
+    col = el.get("color", ORANGE)
+    d.rounded_rectangle([x0 - 6, y0 - 6, x1 + 6, y1 + 6], radius=14, outline=col, width=5)
+    if el.get("label"):
+        f = font("f", 24)
+        w = d.textlength(el["label"], font=f) + 28
+        cx = min(max((x0 + x1) / 2, MARGIN + w / 2), W - MARGIN - w / 2)
+        cy = y1 + 36 if el.get("side", "below") == "below" else y0 - 36
+        d.rounded_rectangle([cx - w / 2, cy - 19, cx + w / 2, cy + 19], radius=19, fill=col)
+        d.text((cx, cy), el["label"], font=f, fill=INK, anchor="mm")
+
+
+def e_pill(d, el, q):
+    f = font("f", el.get("size", 28))
+    w = d.textlength(el["s"], font=f) + 36
+    d.rounded_rectangle([el["x"] - w / 2, el["y"] - 22, el["x"] + w / 2, el["y"] + 22], radius=22, fill=el.get("fill", BLUE))
+    d.text((el["x"], el["y"]), el["s"], font=f, fill=el.get("color", INK), anchor="mm")
+
+
+DRAW = {"hl": e_hl, "pill": e_pill, "clock": e_clock, "text": e_text, "frac": e_frac, "pie": e_pie, "bar": e_bar, "grid": e_grid, "groups": e_groups, "blocks": e_blocks, "line": e_line, "rect": e_rect, "numberline": e_numberline}
+
+
+_shots = {}
+
+
+def shot_image(el):
+    """The cropped, scaled screenshot for a "shot" element, with a thin border."""
+    key = (el["file"], tuple(el["crop"]), el["w"])
+    if key not in _shots:
+        im = Image.open(el["file"]).convert("RGB").crop(tuple(el["crop"]))
+        im = im.resize((el["w"], int(im.height * el["w"] / im.width)), Image.LANCZOS)
+        ImageDraw.Draw(im).rectangle([0, 0, im.width - 1, im.height - 1], outline=GRID, width=2)
+        _shots[key] = im
+    return _shots[key]
 
 
 def frame(spec_title, els, p):
@@ -199,6 +234,10 @@ def frame(spec_title, els, p):
     for el in els:
         at = el.get("at", 0)
         if p < at:
+            continue
+        if el["t"] == "shot":
+            img.paste(shot_image(el), (el["dx"], el["dy"]))
+            d = ImageDraw.Draw(img)
             continue
         q = ease((p - at) / 0.3)
         alpha = 1.0 if at == 0 else ease((p - at) / 0.1)

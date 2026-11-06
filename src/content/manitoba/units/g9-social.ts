@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { RIGHTS_DEEP, GOVERNMENT_DEEP, IDENTITY_DEEP, GLOBAL_DEEP, TREATIES_DEEP } from "./g9-social-deeper";
 
 // Grade 9 social studies, Canada in the Contemporary World. Units are written for the Manitoba outcomes
 // (9-KC, 9-KI, 9-KG, 9-KE, 9-KL, 9-KP, 9-KH). Treaty, residential school and Métis content is light.
@@ -163,7 +164,7 @@ export const units = [
     blurb: "The Charter, human rights and becoming a citizen.",
     parentNote: "Practises the rights listed in the Universal Declaration of Human Rights and the Canadian Charter of Rights and Freedoms, the requirements for citizenship, and Canadians such as Nellie McClung and Viola Desmond who worked for human rights.",
     standards: ["9-KC-001, 9-KC-002, 9-KC-003, 9-KC-004, 9-KH-031", "human rights, the Charter, citizenship and the development of human rights in Canada"],
-    items: RIGHTS,
+    items: [...RIGHTS, ...RIGHTS_DEEP],
   }),
   bankUnit({
     ...common,
@@ -173,7 +174,7 @@ export const units = [
     blurb: "Parliament, elections, courts and who decides what.",
     parentNote: "Practises Canadian parliamentary democracy: the three branches of government, the federal, provincial, First Nations and municipal levels, how elections work and the strengths and weaknesses of majority rule.",
     standards: ["9-KC-005, 9-KC-006, 9-KC-007, 9-KC-008, 9-KC-012, 9-KP-044", "parliamentary democracy, branches and levels of government, elections and majority rule"],
-    items: GOVERNMENT,
+    items: [...GOVERNMENT, ...GOVERNMENT_DEEP],
   }),
   bankUnit({
     ...common,
@@ -183,7 +184,7 @@ export const units = [
     blurb: "What shapes who we are, and how Canada protects culture.",
     parentNote: "Practises the factors that shape personal and national identity, the effects of assimilative policies and discrimination, the influence of media, and how identity, language and culture are protected in Canada.",
     standards: ["9-KI-016, 9-KI-017, 9-KI-018, 9-KI-019, 9-KI-020, 9-KI-021", "identity, assimilation, stereotyping, media influence and the protection of culture"],
-    items: IDENTITY,
+    items: [...IDENTITY, ...IDENTITY_DEEP],
   }),
   bankUnit({
     ...common,
@@ -193,7 +194,7 @@ export const units = [
     blurb: "Canada in the world, trade and the choices consumers make.",
     parentNote: "Practises Canada's connections with other nations, its place in international organizations, characteristics of an industrialized economy, globalization and the effects of consumer choices.",
     standards: ["9-KG-034, 9-KG-036, 9-KG-037, 9-KG-038, 9-KG-039, 9-KE-048, 9-KE-049, 9-KE-050, 9-KE-051", "global citizenship, international organizations, the Canadian economy, globalization and consumer choices"],
-    items: GLOBAL,
+    items: [...GLOBAL, ...GLOBAL_DEEP],
   }),
   bankUnit({
     ...common,
@@ -203,6 +204,6 @@ export const units = [
     blurb: "Treaties, self-determination and the justice system in Manitoba.",
     parentNote: "Practises how treaties, self-government and land agreements connect First Nations, Métis and Inuit peoples with Canada, and how the justice system in Manitoba works, including Indigenous approaches to justice.",
     standards: ["9-KC-010, 9-KC-010A, 9-KL-027, 9-KP-045", "the justice system in Manitoba, Indigenous perspectives on justice, treaties and self-determination"],
-    items: TREATIES,
+    items: [...TREATIES, ...TREATIES_DEEP],
   }),
 ];

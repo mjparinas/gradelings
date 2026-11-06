@@ -1,5 +1,6 @@
 import { coreQuestions, type FrItem } from "../../french";
 import type { Course } from "../../types";
+import { COMPARE_DEEP, FREQUENCY_DEEP, OPINIONS_DEEP, TIMES_DEEP } from "./core-french-deeper";
 
 // Core French 8: instructions are in English, the French is what students learn.
 
@@ -383,7 +384,7 @@ export const course: Course = {
       blurb: "Hier, aujourd'hui, demain",
       parentNote: "Telling when things happen: yesterday, today and tomorrow, with the passé composé and the near future (aller + infinitive).",
       standards: { "ca-bc": "Common, high-frequency vocabulary and sentence structures for communication in past, present and future time frames" },
-      generate: (o) => coreQuestions(TIMES, o, 8),
+      generate: (o) => coreQuestions([...TIMES, ...TIMES_DEEP], o, 8),
     },
     {
       id: "questions",
@@ -401,7 +402,7 @@ export const course: Course = {
       blurb: "Toujours, parfois, jamais",
       parentNote: "Words for time and frequency: toujours, souvent, parfois, jamais and chaque jour.",
       standards: { "ca-bc": "Time and frequency: aujourd'hui, hier, demain, chaque jour, toujours, parfois, jamais" },
-      generate: (o) => coreQuestions(FREQUENCY, o, 8),
+      generate: (o) => coreQuestions([...FREQUENCY, ...FREQUENCY_DEEP], o, 8),
     },
     {
       id: "opinions-et-raisons",
@@ -410,7 +411,7 @@ export const course: Course = {
       blurb: "À mon avis, parce que",
       parentNote: "Sharing opinions (à mon avis, je pense que), preferences, emotions and physical states, and giving a reason with parce que.",
       standards: { "ca-bc": "Beliefs and opinions; reasons for preferences, emotions and physical states" },
-      generate: (o) => coreQuestions(OPINIONS, o, 8),
+      generate: (o) => coreQuestions([...OPINIONS, ...OPINIONS_DEEP], o, 8),
     },
     {
       id: "comparer-et-opposer",
@@ -419,7 +420,7 @@ export const course: Course = {
       blurb: "Plus que, aussi que, mais",
       parentNote: "Comparing with plus… que, moins… que and aussi… que, and contrasting ideas with mais.",
       standards: { "ca-bc": "Comparisons and contrasts using expressions such as aussi, mais, plus que, aussi que, moins que" },
-      generate: (o) => coreQuestions(COMPARE, o, 8),
+      generate: (o) => coreQuestions([...COMPARE, ...COMPARE_DEEP], o, 8),
     },
     {
       id: "sons-et-lettres",

@@ -1,5 +1,6 @@
 import { frOrder, frQuestions, type FrItem } from "../../french";
 import type { Course, GenerateOptions, Question } from "../../types";
+import { RELATIVES_DEEP, NEGATION_DEEP, ADVERB_TYPES_DEEP, PUNCTUATION_DEEP, COMICS_DEEP } from "./immersion-deeper";
 
 const FR = { lang: "fr" } as const;
 
@@ -297,7 +298,7 @@ export const course: Course = {
       blurb: "Les pronoms relatifs",
       parentNote: "Using the simple relative pronouns qui, que, où and dont to join two ideas in one sentence.",
       standards: { "ca-bc": "Language elements: simple relative pronouns (qui, que, quoi, dont, où)" },
-      generate: (o) => frQuestions(RELATIVES, o, 8, FR),
+      generate: (o) => frQuestions([...RELATIVES, ...RELATIVES_DEEP], o, 8, FR),
     },
     {
       id: "negation",
@@ -306,7 +307,7 @@ export const course: Course = {
       blurb: "La négation",
       parentNote: "Negative forms ne… plus, ne… jamais and ne… rien, and where each word goes in the sentence.",
       standards: { "ca-bc": "Language elements: negation (ne… plus, ne… jamais, ne… rien)" },
-      generate: (o) => frQuestions(NEGATION, o, 8, FR),
+      generate: (o) => frQuestions([...NEGATION, ...NEGATION_DEEP], o, 8, FR),
     },
     {
       id: "adverbes",
@@ -315,7 +316,7 @@ export const course: Course = {
       blurb: "Temps, lieu, manière",
       parentNote: "Adverbs of time, place, manner and quantity, and what each one tells us about the action.",
       standards: { "ca-bc": "Language elements: adverbs of time, place, manner and quantity" },
-      generate: (o) => frQuestions(ADVERB_TYPES, o, 8, FR),
+      generate: (o) => frQuestions([...ADVERB_TYPES, ...ADVERB_TYPES_DEEP], o, 8, FR),
     },
     {
       id: "ponctuation",
@@ -324,7 +325,7 @@ export const course: Course = {
       blurb: "Guillemets et deux-points",
       parentNote: "Quotation marks, the colon and parentheses used correctly in French.",
       standards: { "ca-bc": "Text organization: punctuation (quotation marks, colon and parentheses)" },
-      generate: (o) => frQuestions(PUNCTUATION, o, 8, FR),
+      generate: (o) => frQuestions([...PUNCTUATION, ...PUNCTUATION_DEEP], o, 8, FR),
     },
     {
       id: "bande-dessinee",
@@ -333,7 +334,7 @@ export const course: Course = {
       blurb: "Cases, bulles, onomatopées",
       parentNote: "The features of a comic book: panels, speech and thought bubbles, sound words and how pictures and text work together.",
       standards: { "ca-bc": "Literary elements: characteristics of the comic book (panels, dialogue, text/image relationship, onomatopoeia, personification)" },
-      generate: (o) => frQuestions(COMICS, o, 8, FR),
+      generate: (o) => frQuestions([...COMICS, ...COMICS_DEEP], o, 8, FR),
     },
     {
       id: "biographie",

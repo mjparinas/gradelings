@@ -214,6 +214,17 @@ const SCHEMA = [
     PRIMARY KEY (question_id, profile_id)
   )`,
   `CREATE INDEX IF NOT EXISTS live_answers_family ON live_answers (family_id)`,
+  // When a class student's device last asked for a live question, and when it last said it was leaving (tab hidden
+  // or closed). Times only, kept for a day, shown to the class's teachers as a quiet "away" on the desk.
+  `CREATE TABLE IF NOT EXISTS live_presence (
+    class_id TEXT NOT NULL,
+    profile_id TEXT NOT NULL,
+    family_id TEXT NOT NULL,
+    seen_at INTEGER NOT NULL,
+    left_at INTEGER,
+    PRIMARY KEY (class_id, profile_id)
+  )`,
+  `CREATE INDEX IF NOT EXISTS live_presence_family ON live_presence (family_id)`,
   // A class timer a teacher starts for the whole class: one row per class, deleted when stopped or with the class.
   // It holds a note and times only, nothing about a child.
   `CREATE TABLE IF NOT EXISTS class_timers (
@@ -223,6 +234,11 @@ const SCHEMA = [
     ends_at INTEGER,
     paused_left INTEGER,
     updated_at INTEGER NOT NULL
+  )`,
+  // When a teacher last had a class's Live tab open, so students' devices look often while someone is there. A time only.
+  `CREATE TABLE IF NOT EXISTS class_presence (
+    class_id TEXT PRIMARY KEY,
+    seen_at INTEGER NOT NULL
   )`,
   // A weekly question goal a teacher sets for the whole class: a target and the teacher's time zone offset, nothing about a child.
   `CREATE TABLE IF NOT EXISTS class_goals (
@@ -449,6 +465,27 @@ const SCHEMA = [
     created_at INTEGER
   )`,
   `CREATE INDEX IF NOT EXISTS unsub_tokens_parent ON unsub_tokens (parent_id)`,
+  // A family owner's invitation to a second adult. Only the SHA-256 of the token is kept; the invitation names an email, expires and is used once.
+  `CREATE TABLE IF NOT EXISTS family_invites (
+    token_hash TEXT PRIMARY KEY,
+    family_id TEXT NOT NULL,
+    email TEXT NOT NULL,
+    invited_by TEXT NOT NULL,
+    created_at INTEGER NOT NULL,
+    expires_at INTEGER NOT NULL
+  )`,
+  `CREATE INDEX IF NOT EXISTS family_invites_family ON family_invites (family_id)`,
+  // That a locked part (a unit the free plan keeps closed, or a members-only part of the reports) was shown to a family's
+  // device: when first and last, and on how many days. Family-level only, for the admin panel's paywall numbers.
+  `CREATE TABLE IF NOT EXISTS paywall_seen (
+    family_id TEXT NOT NULL,
+    kind TEXT NOT NULL,
+    first_at INTEGER NOT NULL,
+    last_at INTEGER NOT NULL,
+    days INTEGER NOT NULL DEFAULT 1,
+    PRIMARY KEY (family_id, kind)
+  )`,
+  `CREATE INDEX IF NOT EXISTS paywall_seen_first ON paywall_seen (first_at)`,
 ];
 
 /** Columns added after the first release. SQLite has no "ADD COLUMN IF NOT EXISTS". */
@@ -467,6 +504,9 @@ const PARENT_COLUMNS: [string, string][] = [
   ["last_nudge_at", "INTEGER"],
   // 'parent' for ordinary accounts, 'student' for a class-owned student account (no email, no password).
   ["role", "TEXT NOT NULL DEFAULT 'parent'"],
+  // 'parent' (default) or 'teacher': set when the account is made from the teacher area, or when it starts teaching a class.
+  // Emails choose their content by it (src/server/audience.ts). Not a permission: a teacher can still be a parent.
+  ["account_type", "TEXT NOT NULL DEFAULT 'parent'"],
   // Google's permanent id for the person who signs in with "Continue with Google" (src/server/google.ts). Null for password-only accounts.
   ["google_sub", "TEXT"],
   ["last_login_at", "INTEGER"],
@@ -487,6 +527,9 @@ const PARENT_COLUMNS: [string, string][] = [
   ["totp_pending", "TEXT"],
   ["totp_enabled_at", "INTEGER"],
   ["totp_last_step", "INTEGER"],
+  // 'owner' for the account that made the family (and pays), 'adult' for a second grown-up the owner invited
+  // (src/server/familyAdults.ts). An adult sees and manages the children but not billing, codes or deleting the family.
+  ["family_role", "TEXT NOT NULL DEFAULT 'owner'"],
 ];
 
 /** Which province's curriculum a class assigns units from, and its inactivity-retention state. */
@@ -523,6 +566,10 @@ const REPORT_COLUMNS: [string, string][] = [
   ["details", "TEXT"],
 ];
 const FAMILY_COLUMNS: [string, string][] = [
+  // When this family last synced from the web, the Android app and the iPhone and iPad app (ms), for the admin panel's app mix.
+  ["app_web_at", "INTEGER"],
+  ["app_android_at", "INTEGER"],
+  ["app_ios_at", "INTEGER"],
   // The school plan (ms): a teacher account with this in the future may import rosters while the `school-plan` flag is on.
   ["school_until", "INTEGER"],
   ["billing_event_at", "INTEGER NOT NULL DEFAULT 0"],
@@ -599,6 +646,11 @@ async function migrate(c: Client) {
   for (const [name, type] of PARENT_COLUMNS) {
     if (!have.has(name)) await c.execute(`ALTER TABLE parents ADD COLUMN ${name} ${type}`);
   }
+  if (!have.has("account_type")) {
+    // Once, when the column arrives: people who already teach a class are teachers.
+    await c.execute("UPDATE parents SET account_type = 'teacher' WHERE role = 'parent' AND (id IN (SELECT owner_parent_id FROM classes) OR id IN (SELECT parent_id FROM class_teachers))");
+  }
+
   await hashLegacyUnsubTokens(c);
   await c.execute("CREATE UNIQUE INDEX IF NOT EXISTS students_external ON students (class_id, external_id) WHERE external_id IS NOT NULL");
   await c.execute("CREATE UNIQUE INDEX IF NOT EXISTS parents_google_sub ON parents (google_sub) WHERE google_sub IS NOT NULL");
