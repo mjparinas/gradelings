@@ -119,6 +119,13 @@ async function playByKeys(page, target, label, until = async () => false) {
       if (document.querySelector('[data-testid="bin"]')) return { kind: "sort" };
       if (document.querySelector('[data-testid="shade-part"]')) return { kind: "shade" };
       if (document.querySelector('[data-testid="place-marker"]')) return { kind: "place" };
+      // The newer kinds are all buttons, so Tab and Enter drive them like the others.
+      if (document.querySelector('[data-testid="mistake-step"]')) return { kind: "mistake" };
+      if (document.querySelector('[data-testid="multi-choice"]')) return { kind: "multi" };
+      if (document.querySelector('[data-testid="highlight-word"]')) return { kind: "highlight" };
+      if (document.querySelector('[data-testid="bank-word"]')) return { kind: "fill" };
+      if (document.querySelector('[data-testid="tile"]')) return { kind: "tiles" };
+      if (document.querySelector('[data-testid="match-left"]')) return { kind: "match" };
       if (buttons.some((b) => /^\+ Ten$/.test(b.textContent.trim()))) return { kind: "build" };
       if (buttons.some((b) => /nickel|dime|quarter|loonie|toonie|bill/i.test(b.textContent) && !b.getAttribute("aria-label"))) return { kind: "coins" };
       return { kind: "wait" };
@@ -170,6 +177,42 @@ async function playByKeys(page, target, label, until = async () => false) {
       await page.keyboard.press("ArrowRight");
       ok = ok && (await tabTo(page, /Check/));
       await page.keyboard.press("Enter");
+    } else if (state.kind === "mistake") {
+      ok = await tabToSelector(page, '[data-testid="mistake-step"]:not([disabled])');
+      await page.keyboard.press("Enter");
+    } else if (state.kind === "multi" || state.kind === "highlight") {
+      // After a miss the earlier picks stay on, and pressing one again would clear it, so pick one that isn't on yet.
+      ok = await tabToSelector(page, `[data-testid="${state.kind === "multi" ? "multi-choice" : "highlight-word"}"][aria-pressed="false"]`);
+      await page.keyboard.press("Enter");
+      ok = ok && (await tabTo(page, /Check/));
+      await page.keyboard.press("Enter");
+    } else if (state.kind === "fill") {
+      const blanks = await page.locator('[data-testid="fill-blank"]').count();
+      for (let i = 0; ok && i < blanks; i++) {
+        ok = await tabToSelector(page, '[data-testid="bank-word"]:not([disabled])');
+        await page.keyboard.press("Enter");
+      }
+      ok = ok && (await tabTo(page, /Check/));
+      await page.keyboard.press("Enter");
+    } else if (state.kind === "tiles") {
+      // One tile is enough for Check to open (a used tile is disabled, so Tab skips it).
+      ok = await tabToSelector(page, '[data-testid="tile"]:not([disabled])');
+      await page.keyboard.press("Enter");
+      ok = ok && (await tabTo(page, /Check/));
+      await page.keyboard.press("Enter");
+    } else if (state.kind === "match") {
+      for (let i = 0; ok && i < 8 && (await page.locator('[data-testid="match-left"]:not([data-state="right"])').count()); i++) {
+        ok = await tabToSelector(page, '[data-testid="match-left"]:not([data-state="right"])');
+        await page.keyboard.press("Enter");
+        ok = ok && (await tabToSelector(page, '[data-testid="match-right"]:not([data-state="right"])'));
+        await page.keyboard.press("Enter");
+        await page.waitForTimeout(150);
+        // A wrong pair opens the "try again" bar: OK closes it.
+        if (await page.locator("[role=status]").getByRole("button", { name: "OK", exact: true }).isVisible()) {
+          ok = await tabTo(page, /^OK$/, 40);
+          await page.keyboard.press("Enter");
+        }
+      }
     } else if (state.kind === "build") {
       ok = await tabTo(page, /^\+ Ten$/);
       await page.keyboard.press("Enter");
