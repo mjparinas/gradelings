@@ -813,10 +813,10 @@
   "9/core-french": {
     "overview": "325e20d4f7",
     "units": [
-      "besoins-et-opinions text=89c2c249ad std=2ab29d5abb q=174b7b6249",
-      "poser-des-questions text=86571547db std=65637b9176 q=7241698734",
+      "besoins-et-opinions text=89c2c249ad std=2ab29d5abb q=b37ea810f1",
+      "poser-des-questions text=86571547db std=65637b9176 q=923e715d92",
       "sequences text=5183a12069 std=cc161fc752 q=ac5daa7753",
-      "comparer-9 text=81fa6d9d9d std=c78649f993 q=cc12e8ff41",
+      "comparer-9 text=81fa6d9d9d std=c78649f993 q=282a19362c",
       "types-de-textes text=b045b66776 std=8dc47f7eea q=302036a673",
       "histoires-9 text=01f8c78c44 std=c574a5df1e q=744b5c9d5f",
       "culture-et-respect-9 text=fbd363f0e0 std=bcbeb00be5 q=578a69ad5d"

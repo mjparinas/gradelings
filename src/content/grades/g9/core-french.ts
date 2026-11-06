@@ -1,5 +1,6 @@
 import { coreQuestions, frOrder, type FrItem } from "../../french";
 import type { Course, GenerateOptions, Question } from "../../types";
+import { COMPARE_DEEP, NEEDS_DEEP, QUESTIONS_DEEP, TIMES_DEEP } from "./core-french-deeper";
 
 // Core French 9: instructions are in English, the French is what students learn.
 
@@ -439,7 +440,7 @@ export const course: Course = {
       blurb: "Passé composé, imparfait, futur",
       parentNote: "Using past, present and future time frames: the passé composé, the imparfait for habits, and the near future.",
       standards: { "ca-bc": "Commonly used vocabulary and sentence structures for communication in past, present and future time frames" },
-      generate: (o) => coreQuestions(TIMES, o, 8),
+      generate: (o) => coreQuestions([...TIMES, ...TIMES_DEEP], o, 8),
     },
     {
       id: "poser-des-questions",
@@ -448,7 +449,7 @@ export const course: Course = {
       blurb: "Intonation, est-ce que, inversion",
       parentNote: "Three ways to ask questions (intonation, est-ce que, inversion) and question words.",
       standards: { "ca-bc": "Various types of questions: intonated, est-ce que, inversion, and questions using different interrogative words" },
-      generate: (o) => coreQuestions(QUESTIONS, o, 8),
+      generate: (o) => coreQuestions([...QUESTIONS, ...QUESTIONS_DEEP], o, 8),
     },
     {
       id: "sequences",
@@ -466,7 +467,7 @@ export const course: Course = {
       blurb: "J'ai besoin de, je trouve que",
       parentNote: "Expressing simple needs, asking politely, and sharing opinions about familiar topics.",
       standards: { "ca-bc": "Simple needs; opinions about familiar topics" },
-      generate: (o) => coreQuestions(NEEDS, o, 8),
+      generate: (o) => coreQuestions([...NEEDS, ...NEEDS_DEEP], o, 8),
     },
     {
       id: "comparer-9",
@@ -475,7 +476,7 @@ export const course: Course = {
       blurb: "Plus de, moins de, autant de",
       parentNote: "Comparing adjectives (aussi… que) and amounts (plus de, moins de, autant de… que).",
       standards: { "ca-bc": "Comparisons and contrasts using aussi, mais, plus que, aussi que, moins que, plus de, autant de, moins de" },
-      generate: (o) => coreQuestions(COMPARE, o, 8),
+      generate: (o) => coreQuestions([...COMPARE, ...COMPARE_DEEP], o, 8),
     },
     {
       id: "descriptions",
