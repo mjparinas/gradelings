@@ -12,6 +12,8 @@ export interface StoryPage {
   text: string;
   /** A few emoji that set the scene. */
   art: string;
+  /** Spanish stories: the page in English, shown on request ("Show English"). */
+  en?: string;
   /** A critter from the cast who appears on this page. */
   critter?: { id: string; mood?: StoryMood };
 }
@@ -30,6 +32,11 @@ export interface Story {
   /** Cover emoji. */
   cover: string;
   tier: StoryTier;
+  /**
+   * The language the pages are written in when it isn't English ("es"). Spanish stories are for children learning
+   * Spanish: they are read aloud in a Spanish voice, shelved on their own and never feed the English reading estimate.
+   */
+  lang?: "es";
   pages: StoryPage[];
   quiz: StoryQuiz[];
 }

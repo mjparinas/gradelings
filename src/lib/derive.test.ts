@@ -281,6 +281,14 @@ describe("derive: stories", () => {
     expect(d.totals.stories).toBe(2);
   });
 
+  it("counts a Spanish story like any story but keeps its answers out of the English reading level", () => {
+    const d = derive([story(T0, [true, false, true], { story: "es-mercado", rl: 2.25 })]);
+    expect(d.reading).toEqual([]);
+    expect(d.stories["es-mercado"]).toEqual({ reads: 1, best: 2, questions: 3, lastT: T0 });
+    expect(d.totals.stories).toBe(1);
+    expect(d.xp).toBe(15 + 20);
+  });
+
   it("counts reading time, capped at a minute a page and a minute a question", () => {
     expect(derive([story(T0, [true, true, true])]).totals.learnSeconds).toBe(240);
     expect(derive([story(T0, [true, true, true], { ms: 60 * 60_000 })]).totals.learnSeconds).toBe(9 * 60);

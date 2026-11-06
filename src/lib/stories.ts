@@ -9,6 +9,13 @@ import { estimateReadingLevel } from "./readingLevel";
 // passage and story answers, see readingLevel.ts), or around their grade until there are enough answers.
 
 
+/** Spanish stories have ids that start with this; their answers never feed the English reading-level estimate. */
+export const SPANISH_STORY_PREFIX = "es-";
+
+export function isSpanishStoryId(id: string): boolean {
+  return id.startsWith(SPANISH_STORY_PREFIX);
+}
+
 /** How far either side of the child's level a story still counts as "just right". */
 export const JUST_RIGHT_SPAN = 1.2;
 /** The "just right" shelf always offers at least this many stories, taking the nearest ones when few are in the span. */
@@ -49,4 +56,9 @@ export function storyLearnSeconds(ms: number, pages: number, questions: number):
 /** Whether a child gets the Story Library (and its quests): the flag is on and language arts is one of their subjects. */
 export function storiesFor(settings: Pick<ChildSettings, "enabledSubjects"> | undefined, flagOn: boolean): boolean {
   return flagOn && (settings?.enabledSubjects ?? ["language"]).includes("language");
+}
+
+/** Whether a child gets the Spanish stories: the library, the `spanish` flag, and Spanish switched on for them. */
+export function spanishStoriesFor(settings: Pick<ChildSettings, "enabledSubjects"> | undefined, spanishFlagOn: boolean): boolean {
+  return spanishFlagOn && (settings?.enabledSubjects ?? []).includes("spanish");
 }
