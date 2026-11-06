@@ -24,6 +24,73 @@ export const NEWS_KIND_LABEL: Record<NewsItem["kind"], string> = {
 
 export const WHATS_NEW: NewsDay[] = [
   {
+    day: "2026-11-05",
+    headline: "New things to read, puzzle over and print, plus a second grown-up on your family",
+    items: [
+      {
+        kind: "new",
+        title: "Brain breaks, rhymes, explore cards, story problems and articles",
+        body: "Five new ways to learn without a score. Brain breaks are short puzzles for a rest between lessons. Rhymes are read along line by line. Explore cards are quick \"did you know\" facts about science and our world. Story problems give five fresh word problems each round. Articles are short non-fiction reading with two questions. Nothing is scored or saved, so they never count as practice. Little kids find them in My Treasures and older kids on the home screen.",
+      },
+      {
+        kind: "new",
+        title: "Add a second grown-up to your family",
+        body: "A co-parent, grandparent or tutor can now sign in with their own password and see the same children and reports. You stay in charge of the plan and payments. Find it under Account.",
+      },
+      {
+        kind: "new",
+        title: "Printable activity packs",
+        body: "Free 30-day practice calendars, math games that need only dice or cards, a reading log and conversation cards for every age group. Find them from the Help at home pages.",
+      },
+      {
+        kind: "new",
+        title: "Short how-to videos for parents",
+        body: "The first time you use a part of the parent area, a short video explains it. You can watch any of them again from the Training videos list.",
+      },
+      {
+        kind: "new",
+        title: "More practice questions",
+        body: "Many French Immersion, Core French and social studies units (Nunavut, New Brunswick, Manitoba, PEI and several US states) have more questions, so practice stays fresh for longer. Many fractions, decimals, percents, integers and Grade 6 to 9 language arts and science units also mix in new kinds of questions, such as matching pairs and finding the mistake.",
+      },
+      {
+        kind: "fixed",
+        title: "A full device now says so",
+        body: "When a phone or tablet has no storage left, the app now shows a friendly note asking a grown-up to free up some space, instead of failing quietly.",
+      },
+    ],
+  },
+  {
+    day: "2026-11-04",
+    headline: "Help at home pages, quicker live questions and teacher how-to videos",
+    items: [
+      {
+        kind: "new",
+        title: "Help at home pages",
+        body: "For each grade from Pre-K to Grade 9, three quick no-supplies ideas each for math, reading and writing, science and social studies, plus what children usually work on that year. They are free for anyone and suit every province and state.",
+      },
+      {
+        kind: "new",
+        title: "New kinds of questions",
+        body: "Practice now includes more ways to answer: matching pairs, picking every right answer, spotting the mistake, filling in blanks, tapping words and building answers from tiles. They appear gradually in the units where they fit.",
+      },
+      {
+        kind: "new",
+        title: "More questions in Pre-K, French and social studies",
+        body: "Pre-K science and social studies, Nova Scotia and PEI social studies, and Grade 5 Core French all have many more questions to practise with.",
+      },
+      {
+        kind: "teachers",
+        title: "Live questions arrive in about a second",
+        body: "When you ask a live question, children's devices now get it almost at once instead of after a short wait.",
+      },
+      {
+        kind: "teachers",
+        title: "Training videos for teachers",
+        body: "Short narrated videos show how to set up a class, add students, give homework, check progress and run live questions. Each plays once the first time you use that part, and you can watch them again any time from Training videos.",
+      },
+    ],
+  },
+  {
     day: "2026-11-03",
     headline: "Free math facts pages and printable worksheets for every grade",
     items: [
