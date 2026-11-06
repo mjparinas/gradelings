@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type ReactNode } from "react";
+import { TRIAL_DAYS } from "@/lib/plan";
 import { AppLink } from "./AppLink";
 
 // A sample question a visitor can answer on the unit's public page, the way the app asks it: a miss shows the hint
@@ -86,6 +87,9 @@ export function TryChoices({
             <AppLink href={play} className="btn btn-good min-h-12 self-start px-5 text-lg">
               {playLabel}: new questions every time →
             </AppLink>
+            <p className="font-read text-sm text-ink-soft" data-testid="try-free-note">
+              Free for {TRIAL_DAYS} days with everything open. No card needed.
+            </p>
           </>
         )}
         {!done && missed.length === 0 && <p className="font-read text-sm text-ink-soft">Tap an answer to try it.</p>}
