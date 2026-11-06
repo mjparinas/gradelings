@@ -201,10 +201,14 @@ async function playByKeys(page, target, label, until = async () => false) {
       ok = ok && (await tabTo(page, /Check/));
       await page.keyboard.press("Enter");
     } else if (state.kind === "match") {
-      for (let i = 0; ok && i < 8 && (await page.locator('[data-testid="match-left"]:not([data-state="right"])').count()); i++) {
-        ok = await tabToSelector(page, '[data-testid="match-left"]:not([data-state="right"])');
+      // Pair the first open left with each open right in turn: always trying the same right would repeat a wrong pair forever.
+      const lefts = '[data-testid="match-left"]:not([data-state="right"])';
+      const rights = '[data-testid="match-right"]:not([data-state="right"])';
+      let tries = 0;
+      for (let n = await page.locator(lefts).count(); ok && n > 0 && tries < 12; ) {
+        ok = await tabToSelector(page, lefts);
         await page.keyboard.press("Enter");
-        ok = ok && (await tabToSelector(page, '[data-testid="match-right"]:not([data-state="right"])'));
+        ok = ok && (await tabToSelector(page, rights, tries));
         await page.keyboard.press("Enter");
         await page.waitForTimeout(150);
         // A wrong pair opens the "try again" bar: OK closes it.
@@ -212,6 +216,9 @@ async function playByKeys(page, target, label, until = async () => false) {
           ok = await tabTo(page, /^OK$/, 40);
           await page.keyboard.press("Enter");
         }
+        const left = await page.locator(lefts).count();
+        tries = left < n ? 0 : tries + 1;
+        n = left;
       }
     } else if (state.kind === "build") {
       ok = await tabTo(page, /^\+ Ten$/);
