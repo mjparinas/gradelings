@@ -661,10 +661,10 @@
   "8/core-french": {
     "overview": "bcc12d049c",
     "units": [
-      "passe-present-futur text=59001d8dfa std=63a33c56c2 q=51db2ee03f",
-      "frequence text=55ada4bc61 std=63a33c56c2 q=7168a26c56",
-      "opinions-et-raisons text=18d2475ddc std=5e7018dbda q=279f7c6000",
-      "comparer-et-opposer text=cd48bef620 std=63a33c56c2 q=100faa0286",
+      "passe-present-futur text=59001d8dfa std=63a33c56c2 q=01558b86d0",
+      "frequence text=55ada4bc61 std=63a33c56c2 q=eb5ab04a02",
+      "opinions-et-raisons text=18d2475ddc std=5e7018dbda q=68253644fc",
+      "comparer-et-opposer text=cd48bef620 std=63a33c56c2 q=b619713420",
       "sons-et-lettres text=b96fdcc4c7 std=6c96743e9e q=d72a98a614",
       "histoires text=8017f84d91 std=ce240cf703 q=78f5cc8700",
       "culture-et-respect text=be0e54b470 std=f0b8a2de32 q=a4be45297f"

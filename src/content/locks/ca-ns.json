@@ -692,11 +692,11 @@
   "8/core-french": {
     "overview": "adc1390dd0",
     "units": [
-      "passe-present-futur text=59001d8dfa std=df306139b2 q=51db2ee03f",
+      "passe-present-futur text=59001d8dfa std=df306139b2 q=01558b86d0",
       "questions text=c22ed39a30 std=466554ecc5 q=a58d8811e8",
-      "frequence text=55ada4bc61 std=df306139b2 q=7168a26c56",
-      "opinions-et-raisons text=18d2475ddc std=466554ecc5 q=279f7c6000",
-      "comparer-et-opposer text=cd48bef620 std=df306139b2 q=100faa0286",
+      "frequence text=55ada4bc61 std=df306139b2 q=eb5ab04a02",
+      "opinions-et-raisons text=18d2475ddc std=466554ecc5 q=68253644fc",
+      "comparer-et-opposer text=cd48bef620 std=df306139b2 q=b619713420",
       "sons-et-lettres text=b96fdcc4c7 std=fe22be3be4 q=d72a98a614",
       "histoires text=8017f84d91 std=2f95610ccb q=78f5cc8700",
       "monde-francophone text=cf85dc9873 std=89d663ef07 q=504f08976c",
