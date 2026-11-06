@@ -225,13 +225,13 @@
   "3/immersion": {
     "overview": "e8f1321b42",
     "units": [
-      "verbes-pronominaux text=61e4ea62bb std=6dae0c597b q=cda2cb5e6b",
-      "et-mais-ou-avec text=2b5573d7a6 std=6dae0c597b q=0a0011a51a",
-      "ne-pas text=84f2ba0956 std=6dae0c597b q=c0e3f1984a",
-      "futur-proche text=11dc1d0120 std=6dae0c597b q=43d52cd94f",
-      "pluriels-en-x text=7a2960bfbe std=6dae0c597b q=a165577c7e",
-      "prefixes-et-suffixes text=c5502db35f std=9e0de2827c q=708fe525c0",
-      "idee-principale text=c4f1f57829 std=9e0de2827c q=21e4584c51"
+      "verbes-pronominaux text=61e4ea62bb std=6dae0c597b q=5322c0921b",
+      "et-mais-ou-avec text=2b5573d7a6 std=6dae0c597b q=de6dac1255",
+      "ne-pas text=84f2ba0956 std=6dae0c597b q=79281ac8cf",
+      "futur-proche text=11dc1d0120 std=6dae0c597b q=cb28be202b",
+      "pluriels-en-x text=7a2960bfbe std=6dae0c597b q=b77b85a70b",
+      "prefixes-et-suffixes text=c5502db35f std=9e0de2827c q=5e78f0fe31",
+      "idee-principale text=c4f1f57829 std=9e0de2827c q=b2cf499947"
     ]
   },
   "3/language": {
@@ -320,14 +320,14 @@
   "4/immersion": {
     "overview": "6e4fdf4f27",
     "units": [
-      "tu-ou-vous text=4180ec02f0 std=4d57e5d9c7 q=51c8b322bf",
-      "poser-des-questions text=d753cee400 std=4d57e5d9c7 q=57b4d33803",
+      "tu-ou-vous text=4180ec02f0 std=4d57e5d9c7 q=ffce6e6f3f",
+      "poser-des-questions text=d753cee400 std=4d57e5d9c7 q=a28b8c582d",
       "synonymes-et-contraires text=185b8fa6ab std=9e0de2827c q=3c7c8a4ead",
-      "adverbes-en-ment text=1a37ebc5ea std=6dae0c597b q=c4a193af2f",
-      "comparer text=4d1e56eb18 std=6dae0c597b q=a4747dfa1e",
-      "passe-compose text=06a246d7d0 std=6dae0c597b q=a7ee84ab42",
-      "imparfait text=d03c097c04 std=6dae0c597b q=c980e65ab1",
-      "comprendre-un-texte text=e9911322b5 std=9e0de2827c q=b4f799c740",
+      "adverbes-en-ment text=1a37ebc5ea std=6dae0c597b q=ea9c52ce35",
+      "comparer text=4d1e56eb18 std=6dae0c597b q=0318df5ca4",
+      "passe-compose text=06a246d7d0 std=6dae0c597b q=d0d055f099",
+      "imparfait text=d03c097c04 std=6dae0c597b q=602735c6a4",
+      "comprendre-un-texte text=e9911322b5 std=9e0de2827c q=bc8ceeed49",
       "structure-du-recit text=d803a7cd8d std=9e0de2827c q=c8ee384b32"
     ]
   },
