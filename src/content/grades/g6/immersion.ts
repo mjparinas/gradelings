@@ -1,5 +1,6 @@
 import { frQuestions, type FrItem } from "../../french";
 import type { Course } from "../../types";
+import { TENSES_DEEP, WORD_FAMILY_DEEP, INDICATORS_DEEP, MARKERS_DEEP } from "./immersion-deeper";
 
 const FR = { lang: "fr" } as const;
 
@@ -384,7 +385,7 @@ export const course: Course = {
       blurb: "Choisir le bon temps",
       parentNote: "Choosing between the imparfait (description, habits) and the passé composé (completed events), including verbs that take être.",
       standards: { "ca-bc": "Language elements: agreement of tenses (imparfait and passé composé)" },
-      generate: (o) => frQuestions(TENSES, o, 8, FR),
+      generate: (o) => frQuestions([...TENSES, ...TENSES_DEEP], o, 8, FR),
     },
     {
       id: "familles-de-mots",
@@ -393,7 +394,7 @@ export const course: Course = {
       blurb: "Les familles de mots",
       parentNote: "Using word roots, prefixes and suffixes to work out the meaning of unfamiliar French words.",
       standards: { "ca-bc": "Language elements: the roots of words and affixes (prefixes and suffixes)" },
-      generate: (o) => frQuestions(WORD_FAMILY, o, 8, FR),
+      generate: (o) => frQuestions([...WORD_FAMILY, ...WORD_FAMILY_DEEP], o, 8, FR),
     },
     {
       id: "legendes",
@@ -411,7 +412,7 @@ export const course: Course = {
       blurb: "Indicateurs de temps et de lieu",
       parentNote: "Spotting spatial and temporal clues in a text to picture the setting and follow the order of events.",
       standards: { "ca-bc": "Text organization: spatial and temporal indicators" },
-      generate: (o) => frQuestions(INDICATORS, o, 8, FR),
+      generate: (o) => frQuestions([...INDICATORS, ...INDICATORS_DEEP], o, 8, FR),
     },
     {
       id: "roman-jeunesse",
@@ -429,7 +430,7 @@ export const course: Course = {
       blurb: "Donc, parce que, pourtant",
       parentNote: "Linking words that show cause, consequence, opposition, addition and order.",
       standards: { "ca-bc": "Text organization: transitions between ideas (discourse markers)" },
-      generate: (o) => frQuestions(MARKERS, o, 8, FR),
+      generate: (o) => frQuestions([...MARKERS, ...MARKERS_DEEP], o, 8, FR),
     },
     {
       id: "resumer",
