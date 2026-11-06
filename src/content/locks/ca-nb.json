@@ -724,13 +724,13 @@
     "overview": "abeb7ba251",
     "units": [
       "word-study text=e9a31820f1 std=c6befb80fd q=e40812d304",
-      "strategies-8 text=14cb61c3b0 std=a6917613b6 q=24feac4146",
-      "forms-features-8 text=612838fad2 std=90ee15a44e q=b91eed85d6",
+      "strategies-8 text=14cb61c3b0 std=a6917613b6 q=7ec3688b00",
+      "forms-features-8 text=612838fad2 std=90ee15a44e q=d9c6eb4303",
       "close-reading text=b5e48e1704 std=e799a3a1d1 q=9ae7c5a9fa",
       "narrator-8 text=b609477509 std=2896a382a0 q=ce56cbb1e0",
       "literary-devices text=807aa8d25d std=1869f88745 q=dbc870fffd",
       "argument-and-media text=38bdc7838c std=7967dbddc2 q=e3455a12dd",
-      "digital-8 text=742bfe22d6 std=e42f9c7d2b q=a2bbd968e9",
+      "digital-8 text=742bfe22d6 std=e42f9c7d2b q=a25584c75b",
       "writing-8 text=d9bb3a4cad std=17e78a0e6b q=6ef1ed34f8",
       "grammar-and-style text=4cac16a8c8 std=f3cfa96f37 q=3d25d60229"
     ]
@@ -821,17 +821,17 @@
   "9/language": {
     "overview": "8f97bb3c77",
     "units": [
-      "word-parts-9 text=2f90f3f2bb std=e9e1a2942c q=679acb1717",
-      "forms-features-9 text=507223d4ab std=05b96d5e0a q=328ee620b5",
+      "word-parts-9 text=2f90f3f2bb std=e9e1a2942c q=12c40c9d05",
+      "forms-features-9 text=507223d4ab std=05b96d5e0a q=58dfee8ebc",
       "close-reading text=1934195db9 std=1488893039 q=95e83bca39",
       "literary-elements text=c987189fb1 std=cb78ddf0e8 q=b7a0a5844a",
       "devices-9 text=320de0c79d std=2890a2aa27 q=37465042ac",
       "voices-and-perspectives text=4a64b8eb2c std=4ef362f97c q=bcac63bd34",
       "argument-and-rhetoric text=b5525b0494 std=acd5cf07f3 q=ce069191ec",
-      "digital-9 text=a08ac85319 std=c32dd4671f q=e7a0f9e175",
+      "digital-9 text=a08ac85319 std=c32dd4671f q=d6d4822cdd",
       "language-and-style text=f2649185d5 std=d1ebc6ae95 q=2f3d7024fe",
       "grammar-and-style text=8039e9ed51 std=5d3256a1fa q=37d6dcd28c",
-      "revise-edit-9 text=0d1fec0a1b std=086f67c26a q=21b6373b52"
+      "revise-edit-9 text=0d1fec0a1b std=086f67c26a q=55444ac3bb"
     ]
   },
   "9/math": {

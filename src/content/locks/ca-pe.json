@@ -647,7 +647,7 @@
       "mb-7-word-choice-voice text=5a9707a65e std=0c76e76952 q=e831d937a7",
       "clauses-sentences text=5017dd13d0 std=c76fc725a4 q=5cd8987fd7",
       "modifiers-parallelism text=a0c6970207 std=c91d6359f5 q=4826f70a56",
-      "punctuation-7 text=9342af658b std=38eac889be q=3172ccc51c",
+      "punctuation-7 text=9342af658b std=38eac889be q=c08722cbbd",
       "word-mix-ups text=7bb5032b8a std=c7d537a1dc q=bb5c3889a5",
       "mb-7-presenting-design text=585d7da752 std=84a767cb07 q=1a5c13b7df",
       "mb-7-discussion-skills text=96e5764e5e std=ffecddc821 q=84ac8587c2"
@@ -730,14 +730,14 @@
   "8/language": {
     "overview": "5998d21adc",
     "units": [
-      "strategies-8 text=14cb61c3b0 std=66364396f5 q=24feac4146",
+      "strategies-8 text=14cb61c3b0 std=66364396f5 q=7ec3688b00",
       "word-study text=e9a31820f1 std=78a2eb6fde q=e40812d304",
       "close-reading text=b5e48e1704 std=ca3f1d81a7 q=9ae7c5a9fa",
       "narrator-8 text=b609477509 std=62906baea9 q=ce56cbb1e0",
       "literary-devices text=807aa8d25d std=0bd40f8482 q=dbc870fffd",
-      "irony-satire-8 text=3ba9c87062 std=d1344adb4e q=b08216d98d",
-      "forms-features-8 text=612838fad2 std=3bc62a1177 q=b91eed85d6",
-      "digital-8 text=742bfe22d6 std=4c4e6dd539 q=a2bbd968e9",
+      "irony-satire-8 text=3ba9c87062 std=d1344adb4e q=202c839ad1",
+      "forms-features-8 text=612838fad2 std=3bc62a1177 q=d9c6eb4303",
+      "digital-8 text=742bfe22d6 std=4c4e6dd539 q=a25584c75b",
       "mb-research-8 text=a3abfca114 std=da46518d59 q=dc6aaab94d",
       "mb-fair-language-8 text=9aead0a363 std=64e9725d3a q=e890e80e2b",
       "respectful-talk-ab text=15d28f6dc7 std=62c234dff3 q=de4da1ceb1",
@@ -830,15 +830,15 @@
       "mb-summarizing text=13b7c7c265 std=139b0e9c18 q=bf72a01d31",
       "literary-elements text=c987189fb1 std=b208dde4be q=b7a0a5844a",
       "devices-9 text=320de0c79d std=18128ddba3 q=37465042ac",
-      "forms-features-9 text=507223d4ab std=2e0e7b1372 q=328ee620b5",
+      "forms-features-9 text=507223d4ab std=2e0e7b1372 q=58dfee8ebc",
       "language-and-style text=f2649185d5 std=f0b4cdb4f2 q=2f3d7024fe",
       "argument-and-rhetoric text=b5525b0494 std=4eda95ada8 q=ce069191ec",
-      "digital-9 text=a08ac85319 std=866961fc2d q=e7a0f9e175",
+      "digital-9 text=a08ac85319 std=866961fc2d q=d6d4822cdd",
       "mb-choose-form-and-compose text=b0657c8b73 std=9124d4815e q=25db8fae08",
-      "word-parts-9 text=2f90f3f2bb std=510aa97ac7 q=679acb1717",
+      "word-parts-9 text=2f90f3f2bb std=510aa97ac7 q=12c40c9d05",
       "mb-vocabulary-and-spelling text=18b81880f0 std=e50ef13a69 q=5fcc39c8d0",
       "grammar-and-style text=8039e9ed51 std=6979302950 q=37d6dcd28c",
-      "revise-edit-9 text=0d1fec0a1b std=0e21eb8ca2 q=21b6373b52"
+      "revise-edit-9 text=0d1fec0a1b std=0e21eb8ca2 q=55444ac3bb"
     ]
   },
   "9/math": {

@@ -677,7 +677,7 @@
       "clauses-sentences text=5017dd13d0 std=fd0c63dc97 q=5cd8987fd7",
       "grammar-7 text=2d628d53ad std=5c9404778a q=d05807d429",
       "modifiers-parallelism text=a0c6970207 std=5988b4e131 q=4826f70a56",
-      "punctuation-7 text=9342af658b std=33200c9637 q=3172ccc51c",
+      "punctuation-7 text=9342af658b std=33200c9637 q=c08722cbbd",
       "semicolons-colons-dashes text=40cb0d089d std=66cbba1d2a q=9b3d9ab0c8",
       "word-mix-ups text=7bb5032b8a std=6c7bb1fc2c q=bb5c3889a5"
     ]
@@ -782,13 +782,13 @@
     "units": [
       "respectful-talk-ab text=15d28f6dc7 std=50a2ae887e q=de4da1ceb1",
       "close-reading text=b5e48e1704 std=6fedf82b70 q=9ae7c5a9fa",
-      "strategies-8 text=14cb61c3b0 std=142ddcd122 q=24feac4146",
+      "strategies-8 text=14cb61c3b0 std=142ddcd122 q=7ec3688b00",
       "narrator-8 text=b609477509 std=ddff7a3177 q=ce56cbb1e0",
       "literary-devices text=807aa8d25d std=5325d05bbd q=dbc870fffd",
-      "irony-satire-8 text=3ba9c87062 std=385f3e5a22 q=b08216d98d",
-      "forms-features-8 text=612838fad2 std=c3991a4184 q=b91eed85d6",
+      "irony-satire-8 text=3ba9c87062 std=385f3e5a22 q=202c839ad1",
+      "forms-features-8 text=612838fad2 std=c3991a4184 q=d9c6eb4303",
       "argument-and-media text=38bdc7838c std=bfe08b6fb4 q=e3455a12dd",
-      "digital-8 text=742bfe22d6 std=806835c2a6 q=a2bbd968e9",
+      "digital-8 text=742bfe22d6 std=806835c2a6 q=a25584c75b",
       "writing-8 text=d9bb3a4cad std=173a410708 q=6ef1ed34f8",
       "grammar-and-style text=4cac16a8c8 std=d7d76f5a1c q=3d25d60229",
       "word-study text=e9a31820f1 std=bb595f96bb q=e40812d304"
@@ -901,10 +901,10 @@
       "literary-elements text=c987189fb1 std=61b7d739f0 q=b7a0a5844a",
       "voices-and-perspectives text=4a64b8eb2c std=60f695bdc1 q=bcac63bd34",
       "argument-and-rhetoric text=b5525b0494 std=ed21d9804e q=ce069191ec",
-      "digital-9 text=a08ac85319 std=a7bd89ef20 q=e7a0f9e175",
+      "digital-9 text=a08ac85319 std=a7bd89ef20 q=d6d4822cdd",
       "language-and-style text=f2649185d5 std=dbb708cc38 q=2f3d7024fe",
       "grammar-and-style text=8039e9ed51 std=9089d14ab9 q=37d6dcd28c",
-      "revise-edit-9 text=0d1fec0a1b std=3161b4609b q=21b6373b52"
+      "revise-edit-9 text=0d1fec0a1b std=3161b4609b q=55444ac3bb"
     ]
   },
   "9/math": {
