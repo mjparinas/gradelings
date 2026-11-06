@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { TIME_DEEP, PEOPLE_DEEP, TRANSPORT_DEEP, GOVERNMENT_DEEP, ECONOMY_DEEP, LIFESTYLES_DEEP, CULTURE_DEEP } from "./g5-g6-social-deeper";
 
 // Grade 6 social studies, Prince Edward Island: the Prince Edward Island History course (time, people, transportation,
 // government, economy, lifestyles, culture). Indigenous content is light, in the present tense for living communities,
@@ -245,7 +246,7 @@ export const peIslandTime6 = bankUnit({
   blurb: "Put Island history events in order",
   parentNote: "Practises reading and building time lines to place selected events of the Contemporary/European period of Prince Edward Island history in order.",
   standards: ["6.1.1", "placing selected events of the Contemporary/European period of Island history on a time line"],
-  items: TIME,
+  items: [...TIME, ...TIME_DEEP],
 });
 
 export const peIslandPeople6 = bankUnit({
@@ -255,7 +256,7 @@ export const peIslandPeople6 = bankUnit({
   blurb: "Many people, one Island story",
   parentNote: "Practises how people from many parts of the world are part of Prince Edward Island history, and how to research the historical contributions of one individual.",
   standards: ["6.2.1; 6.2.2", "people from many parts of the world in Island history, and researching one person's contributions"],
-  items: PEOPLE,
+  items: [...PEOPLE, ...PEOPLE_DEEP],
 });
 
 export const peIslandTransport6 = bankUnit({
@@ -265,7 +266,7 @@ export const peIslandTransport6 = bankUnit({
   blurb: "Transportation on the Island over time",
   parentNote: "Practises how the modes of transportation on the Island have developed over time.",
   standards: ["6.3.1", "how the modes of transportation on the Island developed over time"],
-  items: TRANSPORT,
+  items: [...TRANSPORT, ...TRANSPORT_DEEP],
 });
 
 export const peIslandGovernment6 = bankUnit({
@@ -275,7 +276,7 @@ export const peIslandGovernment6 = bankUnit({
   blurb: "How past decisions shape today",
   parentNote: "Practises how past political decisions have affected present-day life on Prince Edward Island.",
   standards: ["6.4.1", "how past political decisions have shaped present-day life on the Island"],
-  items: GOVERNMENT,
+  items: [...GOVERNMENT, ...GOVERNMENT_DEEP],
 });
 
 export const peIslandEconomy6 = bankUnit({
@@ -285,7 +286,7 @@ export const peIslandEconomy6 = bankUnit({
   blurb: "Jobs and trade through the years",
   parentNote: "Practises the economic activities carried out on Prince Edward Island over time and how they have changed.",
   standards: ["6.5.1", "the economic activities on the Island and how they have changed over time"],
-  items: ECONOMY,
+  items: [...ECONOMY, ...ECONOMY_DEEP],
 });
 
 export const peIslandLifestyles6 = bankUnit({
@@ -295,7 +296,7 @@ export const peIslandLifestyles6 = bankUnit({
   blurb: "Then and now",
   parentNote: "Practises how the lifestyles of people on Prince Edward Island have changed over time.",
   standards: ["6.6.1", "how the lifestyles of people on the Island have changed over time"],
-  items: LIFESTYLES,
+  items: [...LIFESTYLES, ...LIFESTYLES_DEEP],
 });
 
 export const peIslandCulture6 = bankUnit({
@@ -305,5 +306,5 @@ export const peIslandCulture6 = bankUnit({
   blurb: "Culture and a significant event",
   parentNote: "Practises how Island cultural traditions influence life on Prince Edward Island today, and the importance of a significant event of Island history.",
   standards: ["6.7.1; 6.7.2", "the cultural traditions of the Island today, and a significant event of Island history"],
-  items: CULTURE,
+  items: [...CULTURE, ...CULTURE_DEEP],
 });
