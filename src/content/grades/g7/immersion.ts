@@ -1,5 +1,6 @@
 import { frQuestions, type FrItem, type Opt } from "../../french";
 import type { Course, GenerateOptions, Question } from "../../types";
+import { SUPERLATIVES_DEEP, TENSES_DEEP, FIGURES_DEEP } from "./immersion-deeper";
 
 const FR = { lang: "fr" } as const;
 
@@ -366,7 +367,7 @@ export const course: Course = {
       blurb: "Le plus, le moins, très",
       parentNote: "The relative superlative (le plus, la moins…) and the absolute superlative (très, extrêmement).",
       standards: { "ca-bc": "Language elements: structure of the superlative (relative with adjectives and absolute with adverbs)" },
-      generate: (o) => frQuestions(SUPERLATIVES, o, 8, FR),
+      generate: (o) => frQuestions([...SUPERLATIVES, ...SUPERLATIVES_DEEP], o, 8, FR),
     },
     {
       id: "concordance-des-temps",
@@ -375,7 +376,7 @@ export const course: Course = {
       blurb: "Concordance des temps",
       parentNote: "Choosing verb tenses that fit together logically in a text, using clues such as hier, chaque été and demain.",
       standards: { "ca-bc": "Language elements: agreement of tenses (logical choice of verb moods and tenses in a text)" },
-      generate: (o) => frQuestions(TENSES, o, 8, FR),
+      generate: (o) => frQuestions([...TENSES, ...TENSES_DEEP], o, 8, FR),
     },
     {
       id: "figures-de-style",
@@ -384,7 +385,7 @@ export const course: Course = {
       blurb: "Comparaison, métaphore…",
       parentNote: "Recognizing comparisons, metaphors, personification and hyperbole, and how they create an effect.",
       standards: { "ca-bc": "Identify poetic elements and explain their effects on readers; use figures of speech" },
-      generate: (o) => frQuestions(FIGURES, o, 8, FR),
+      generate: (o) => frQuestions([...FIGURES, ...FIGURES_DEEP], o, 8, FR),
     },
     {
       id: "poesie",
