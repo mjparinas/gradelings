@@ -1,0 +1,7 @@
+# Spanish public pages and stories
+
+**Decision** (Melvin, November 6, 2026: "Can you create spanish public pages and stories please"): Spanish gets its own public pages and read-along stories. The `spanish` flag stays off, so nothing changes in the app until the owner turns it on.
+
+- **One set of public pages, not one per curriculum.** Spanish is a single shared course for every province and state, so `/spanish/`, `/spanish/{grade}/` and `/spanish/{grade}/{unit}/` (Grades 3 to 9, 35 units) are written once. Repeating them under all `/curriculum/{framework}/` addresses would have added about 2,600 near-identical pages (around 6,600 prerendered outputs, against a 150,000 budget that each new state already eats 2,000 of) and nothing to tell them apart. Each unit page names the standards of the places with their own Spanish curriculum (British Columbia, Alberta, Manitoba) and the World-Readiness Standards for everywhere else. The per-framework `publicSubject` rule is unchanged, so `/curriculum/...` still has no Spanish.
+- **Stories in Spanish:** six original stories (three beginner, three Novice High to Intermediate Low) in their own file, downloaded only for a child with Spanish on. Each page has its English one tap away, questions are in English, read-aloud uses the Spanish voice, and their answers never feed the English reading-level estimate.
+- **Launch still needs the flag.** The public pages point to "Settings > Subjects", which exists only once the `spanish` flag is on for the family.

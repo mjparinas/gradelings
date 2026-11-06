@@ -298,7 +298,7 @@ function PortfolioView({ child }: { child: NonNullable<ReturnType<typeof useChil
   useEffect(() => {
     if (!work.stories.length || stories) return;
     let live = true;
-    loadStories()
+    loadStories(true)
       .then((all) => live && setStories(new Map(all.map((s) => [s.id, s]))))
       .catch(() => {});
     return () => {

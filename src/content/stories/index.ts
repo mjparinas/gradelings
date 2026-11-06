@@ -31,6 +31,11 @@ const levels = new WeakMap<Story, number>();
 
 /** The story's reading level on the grade scale (Flesch-Kincaid, like every passage), from its text. */
 export function storyLevel(story: Story): number {
+  // Flesch-Kincaid is for English text; a Spanish story reads at the middle of its tier.
+  if (story.lang) {
+    const [lo, hi] = TIER_LEVELS[story.tier];
+    return (lo + hi) / 2;
+  }
   let level = levels.get(story);
   if (level === undefined) {
     level = textReadingLevel(storyText(story)) ?? 0;
@@ -41,7 +46,7 @@ export function storyLevel(story: Story): number {
 
 /** Open on the free plan: the first few stories of each tier, in the order the library lists them. */
 export function isFreeStory(story: Story, all: readonly Story[]): boolean {
-  return all.filter((s) => s.tier === story.tier).indexOf(story) < FREE_STORIES_PER_TIER;
+  return all.filter((s) => s.tier === story.tier && s.lang === story.lang).indexOf(story) < FREE_STORIES_PER_TIER;
 }
 
 const localized: Record<Locale, WeakMap<Story, Story>> = { "en-CA": new WeakMap(), "en-US": new WeakMap() };
@@ -52,10 +57,11 @@ export function localizeStory(story: Story, locale: Locale): Story {
   const hit = localized[locale].get(story);
   if (hit) return hit;
   const t = (s: string) => localizeText(s, locale);
+  // A Spanish story's own words stay as written; only its English (gloss, title, questions) changes spelling.
   const out: Story = {
     ...story,
     title: t(story.title),
-    pages: story.pages.map((p) => ({ ...p, text: t(p.text) })),
+    pages: story.pages.map((p) => ({ ...p, text: story.lang ? p.text : t(p.text), ...(p.en ? { en: t(p.en) } : {}) })),
     quiz: story.quiz.map((q) => ({ ...q, q: t(q.q), a: t(q.a), wrong: q.wrong.map(t) })),
   };
   localized[locale].set(story, out);
@@ -83,12 +89,17 @@ export function storyQuestions(story: Story): ChoiceQuestion[] {
     withSeed(hashSeed(`${story.id}:${i}`), () => {
       const choices = shuffle([item.a, ...item.wrong].map((label, n) => ({ id: `c${n}`, label })));
       const page = story.pages[item.page - 1];
-      return { kind: "choice", prompt: item.q, hint: `Page ${item.page} says: ${page?.text ?? ""}`, answer: "c0", choices };
+      const says = page?.en ? `${page.text} (${page.en})` : (page?.text ?? "");
+      return { kind: "choice", prompt: item.q, hint: `Page ${item.page} says: ${says}`, answer: "c0", choices };
     }),
   );
 }
 
-/** Downloads the library. Its own file, cached by the service worker once loaded. */
-export async function loadStories(): Promise<Story[]> {
-  return (await import("./library")).STORIES;
+/**
+ * Downloads the library. Its own file, cached by the service worker once loaded. The Spanish stories are one more file,
+ * fetched only for a child who has Spanish on (`spanish`), so nobody else downloads them.
+ */
+export async function loadStories(spanish = false): Promise<Story[]> {
+  const english = (await import("./library")).STORIES;
+  return spanish ? [...english, ...(await import("./spanish")).SPANISH_STORIES] : english;
 }

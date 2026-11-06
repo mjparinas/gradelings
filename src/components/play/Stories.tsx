@@ -14,7 +14,7 @@ import { celebrationOf } from "@/lib/shop";
 import { celebrate } from "@/lib/juice";
 import { sounds } from "@/lib/sound";
 import { speakSegments, stopSpeaking } from "@/lib/speech";
-import { shelves, storyTarget } from "@/lib/stories";
+import { shelves, spanishStoriesFor, storyTarget } from "@/lib/stories";
 import { useActiveProfile, useChildSettings, useDerived, useStore } from "@/lib/store";
 import type { Status } from "../questions/types";
 import { useBand } from "../band";
@@ -32,31 +32,41 @@ import { QuestionBody } from "./Session";
 
 const TINT = { colour: "#ff7a59", dark: "#d4553a" };
 
-let library: Promise<Story[]> | undefined;
+// One download for the English library and one that adds the Spanish stories, for children with Spanish on.
+const libraries: Record<"en" | "es", Promise<Story[]> | undefined> = { en: undefined, es: undefined };
+
+/** Whether the active child gets the Spanish stories (flag `spanish` on and Spanish one of their subjects). */
+function useSpanishStories(): boolean {
+  const isOn = useIsOn();
+  const settings = useChildSettings();
+  return spanishStoriesFor(settings, isOn("spanish"));
+}
 
 /** The stories, downloaded once (and kept by the service worker for offline use). */
 function useStories(): { stories?: Story[]; failed: boolean; retry: () => void } {
   const [stories, setStories] = useState<Story[]>();
   const [failed, setFailed] = useState(false);
   const [attempt, setAttempt] = useState(0);
+  const spanish = useSpanishStories();
   useEffect(() => {
     let live = true;
-    library ??= loadStories();
-    library.then(
+    const key = spanish ? "es" : "en";
+    const load = (libraries[key] ??= loadStories(spanish));
+    load.then(
       (all) => {
         if (!live) return;
         setStories(all);
         cacheLoadedScripts();
       },
       () => {
-        library = undefined;
+        libraries[key] = undefined;
         if (live) setFailed(true);
       },
     );
     return () => {
       live = false;
     };
-  }, [attempt]);
+  }, [attempt, spanish]);
   return { stories, failed, retry: () => (setFailed(false), setAttempt((n) => n + 1)) };
 }
 
@@ -106,11 +116,16 @@ export function StoryLibrary() {
 
   if (!stories) return <Waiting failed={failed} retry={retry} />;
   const target = storyTarget(d, profile.grade, isOn("reading-level-match"));
-  const { justRight, easier, harder } = shelves(stories, target);
+  // The shelves are by English reading level; Spanish stories get a shelf of their own, in the order written.
+  const { justRight, easier, harder } = shelves(
+    stories.filter((s) => !s.lang),
+    target,
+  );
   const sections: [string, Story[]][] = [
     [little ? "For you" : "Just right for you", justRight],
     [little ? "Easier" : "A little easier", easier],
     [little ? "Harder" : "A bit of a stretch", harder],
+    ["Cuentos en español (stories in Spanish)", stories.filter((s) => s.lang === "es")],
   ];
 
   return (
@@ -206,10 +221,13 @@ function Reader({ story }: { story: Story }) {
 
   const sentences = splitSentences(story.pages[page]?.text ?? "");
 
+  const lang = story.lang ?? "en";
+  const [showEnglish, setShowEnglish] = useState(false);
+
   function read(from = 0, only = false) {
     const list = only ? [sentences[from]] : sentences.slice(from);
     speakSegments(
-      list.map((text) => ({ text, lang: "en" as const })),
+      list.map((text) => ({ text, lang })),
       { onStart: (i) => setLit(from + i), onDone: () => setLit(-1) },
     );
   }
@@ -327,7 +345,7 @@ function Reader({ story }: { story: Story }) {
             <span className="text-6xl leading-none tracking-widest sm:text-7xl">{current.art}</span>
           </div>
           {/* The picture is decoration, so phones held sideways drop it to keep the page buttons on screen. Tap a sentence to hear it. The read button and the switch above do the same by keyboard. */}
-          <p className={`font-read leading-relaxed font-bold ${textSize}`} data-testid="story-text">
+          <p className={`font-read leading-relaxed font-bold ${textSize}`} data-testid="story-text" lang={lang}>
             {sentences.map((s, i) => (
               <span key={i}>
                 <span
@@ -340,6 +358,18 @@ function Reader({ story }: { story: Story }) {
               </span>
             ))}
           </p>
+          {current.en && (
+            <div className="flex flex-col items-start gap-2">
+              <button type="button" className="btn btn-soft min-h-12 px-4 text-lg" aria-pressed={showEnglish} onClick={() => setShowEnglish(!showEnglish)}>
+                {showEnglish ? "Hide English" : "Show English"}
+              </button>
+              {showEnglish && (
+                <p className="rounded-2xl bg-white px-4 py-3 font-read text-lg leading-snug text-ink-soft" lang="en" data-testid="story-english">
+                  {current.en}
+                </p>
+              )}
+            </div>
+          )}
         </section>
         <nav className="flex items-center gap-3" aria-label="Pages">
           <button type="button" className="btn h-16 w-20 shrink-0 text-2xl" aria-label="Previous page" disabled={page === 0} onClick={() => turn(page - 1)}>
