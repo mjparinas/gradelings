@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { MIDDLE_AGES_DEEP, FIRST_NATIONS_INUIT_DEEP, DECISION_MAKING_DEEP, MEETING_DEEP } from "./g5-g6-social-deeper";
 
 // Grade 5 science and social studies, Prince Edward Island: weather, the body, the Middle Ages, and First Nations and
 // Inuit societies. Indigenous content is light, in the present tense for living communities, and needs review by
@@ -315,7 +316,7 @@ export const peMiddleAges5 = bankUnit({
   blurb: "Who did what in the Middle Ages",
   parentNote: "Children explain why social structure mattered in a society of the Middle Ages.",
   standards: ["5.3.1", "the importance of social structure in a society from the Middle Ages"],
-  items: MIDDLE_AGES,
+  items: [...MIDDLE_AGES, ...MIDDLE_AGES_DEEP],
 });
 
 export const peFirstNationsInuit5 = bankUnit({
@@ -325,7 +326,7 @@ export const peFirstNationsInuit5 = bankUnit({
   blurb: "Diverse societies before contact",
   parentNote: "Children learn about the diverse societies of First Nations and Inuit in what later became Canada.",
   standards: ["5.4.1", "the diverse societies of First Nations and Inuit in what later became Canada"],
-  items: FIRST_NATIONS_INUIT,
+  items: [...FIRST_NATIONS_INUIT, ...FIRST_NATIONS_INUIT_DEEP],
 });
 
 export const peDecisionMaking5 = bankUnit({
@@ -336,7 +337,7 @@ export const peDecisionMaking5 = bankUnit({
   parentNote:
     "Children examine how decisions were made in First Nations and Inuit societies in what later became Atlantic Canada.",
   standards: ["5.4.2", "decision-making practices in First Nations and Inuit societies in what later became Atlantic Canada"],
-  items: DECISION_MAKING,
+  items: [...DECISION_MAKING, ...DECISION_MAKING_DEEP],
 });
 
 export const peMeetingInAtlanticCanada5 = bankUnit({
@@ -347,5 +348,5 @@ export const peMeetingInAtlanticCanada5 = bankUnit({
   parentNote:
     "Children examine interactions between the English, the French, and First Nations and Inuit in what later became Atlantic Canada.",
   standards: ["5.5.1", "interactions among the English, French, First Nations and Inuit in what later became Atlantic Canada"],
-  items: MEETING,
+  items: [...MEETING, ...MEETING_DEEP],
 });
