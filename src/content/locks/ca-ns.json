@@ -501,7 +501,7 @@
     "units": [
       "motifs-de-lettres text=33c165f11e std=fe22be3be4 q=e7aba7baaa",
       "mots-interrogatifs text=2502c4b5bd std=466554ecc5 q=d046f6cca0",
-      "loisirs text=128d6f0a63 std=466554ecc5 q=7324702c71",
+      "loisirs text=128d6f0a63 std=466554ecc5 q=ae5e28e2ba",
       "parce-que text=dcb7703bff std=466554ecc5 q=9b5eb6a892",
       "emotions-et-etats text=408f0d8124 std=466554ecc5 q=90f8604097",
       "famille text=6a732a57db std=df306139b2 q=17180cb37c",
@@ -517,7 +517,7 @@
       "legendes text=c4bffe9333 std=28ae63438c q=1af1b566c2",
       "temps-et-lieux text=76da345b5d std=28ae63438c q=71168dccf7",
       "roman-jeunesse text=b00b6388f2 std=28ae63438c q=5f98ff5b31",
-      "marqueurs-de-relation text=5ee8aa715b std=47435628fa q=1b11b81e08",
+      "marqueurs-de-relation text=5ee8aa715b std=47435628fa q=0e32cf2de4",
       "resumer text=b9a79648e8 std=47435628fa q=c259ad5bc3"
     ]
   },
@@ -585,7 +585,7 @@
     "overview": "4b4f3fb439",
     "units": [
       "preguntas text=a185455eef std=ed20ce18ba q=d44b56c84c",
-      "comida text=125b021db0 std=1246d6d4dd q=ffef28847f",
+      "comida text=125b021db0 std=1246d6d4dd q=981e1d9c54",
       "pasatiempos text=c33589e083 std=4cd3a86ef5 q=cc01218407",
       "emociones text=a925cf1d90 std=289704dd77 q=a82624e446",
       "personas text=3f99f93025 std=0deaff300e q=4ab03f6e6a"

@@ -47,6 +47,11 @@ export const RICH: Record<string, GradeRich> = {
     "language/agreement": q.agreementError,
     "science/solar-system": q.gasGiants,
     "science/newtons-laws": q.newtonsLaws,
+    "social/map-skills": q.mapLines,
+    "social/media-literacy": q.factsAndOpinions,
+    "core-french/loisirs": q.frenchHobbies,
+    "immersion/marqueurs-de-relation": q.frenchLinkers,
+    "spanish/comida": q.spanishFoods,
   },
   g7: {
     "math/fractions-decimals-percents": q.fractionDecimals,

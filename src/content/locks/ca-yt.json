@@ -472,7 +472,7 @@
     "units": [
       "motifs-de-lettres text=33c165f11e std=46a5357096 q=e7aba7baaa",
       "mots-interrogatifs text=2502c4b5bd std=fe8160f9ae q=d046f6cca0",
-      "loisirs text=128d6f0a63 std=ec24188c45 q=7324702c71",
+      "loisirs text=128d6f0a63 std=ec24188c45 q=ae5e28e2ba",
       "parce-que text=dcb7703bff std=ba58ff3c8c q=9b5eb6a892",
       "emotions-et-etats text=408f0d8124 std=13aac2b76e q=90f8604097",
       "famille text=6a732a57db std=c1c3c0eb6f q=17180cb37c",
@@ -488,7 +488,7 @@
       "legendes text=c4bffe9333 std=19699998a3 q=1af1b566c2",
       "temps-et-lieux text=76da345b5d std=a00fdd47ba q=71168dccf7",
       "roman-jeunesse text=b00b6388f2 std=abb09f9ae3 q=5f98ff5b31",
-      "marqueurs-de-relation text=5ee8aa715b std=9c62d270b1 q=1b11b81e08",
+      "marqueurs-de-relation text=5ee8aa715b std=9c62d270b1 q=0e32cf2de4",
       "resumer text=b9a79648e8 std=5ffe2417c2 q=c259ad5bc3"
     ]
   },
@@ -538,19 +538,19 @@
   "6/social": {
     "overview": "77673d896e",
     "units": [
-      "map-skills text=cdfb7253da std=cbc664c623 q=24cfcc3e54",
+      "map-skills text=cdfb7253da std=cbc664c623 q=3c08e0106d",
       "cities-and-migration text=7cab62633f std=bb956f235a q=94adb1b304",
       "global-challenges text=e6d834ab65 std=9b5faa248a q=a4c2095188",
       "governments-and-rights text=f4a4c532fc std=3c2dae63c8 q=6718f32406",
       "trade-and-globalization text=5973228b70 std=fec6c2de78 q=15577023bc",
-      "media-literacy text=d3829ef067 std=098203a47b q=4c2a7a1811"
+      "media-literacy text=d3829ef067 std=098203a47b q=deb7759345"
     ]
   },
   "6/spanish": {
     "overview": "b6dae10110",
     "units": [
       "preguntas text=a185455eef std=bab06435a7 q=d44b56c84c",
-      "comida text=125b021db0 std=f222558841 q=ffef28847f",
+      "comida text=125b021db0 std=f222558841 q=981e1d9c54",
       "pasatiempos text=c33589e083 std=7e6e1db28f q=cc01218407",
       "emociones text=a925cf1d90 std=9282780fe9 q=a82624e446",
       "personas text=3f99f93025 std=2a5050dfb6 q=4ab03f6e6a"
