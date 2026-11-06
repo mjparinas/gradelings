@@ -791,11 +791,11 @@
   "9/core-french": {
     "overview": "9348271890",
     "units": [
-      "temps-9 text=ce329b2a73 std=64fb9f414b q=48e5776dcc",
-      "poser-des-questions text=86571547db std=aeb4fca9dc q=7241698734",
+      "temps-9 text=ce329b2a73 std=64fb9f414b q=0654695545",
+      "poser-des-questions text=86571547db std=aeb4fca9dc q=923e715d92",
       "sequences text=5183a12069 std=64fb9f414b q=ac5daa7753",
-      "besoins-et-opinions text=89c2c249ad std=aeb4fca9dc q=174b7b6249",
-      "comparer-9 text=81fa6d9d9d std=64fb9f414b q=cc12e8ff41",
+      "besoins-et-opinions text=89c2c249ad std=aeb4fca9dc q=b37ea810f1",
+      "comparer-9 text=81fa6d9d9d std=64fb9f414b q=282a19362c",
       "descriptions text=88851e69eb std=64fb9f414b q=5b407d61b3",
       "types-de-textes text=b045b66776 std=04e1c8fa33 q=302036a673",
       "traditions text=b071ad9133 std=07d95db91b q=b8880c6a2f",
