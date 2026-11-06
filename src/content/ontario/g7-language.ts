@@ -40,6 +40,21 @@ const GRAMMAR: BankItem[] = [
   { prompt: "Which phrase is a participial phrase? Frightened by the thunder, the dog hid.", right: "Frightened by the thunder", wrong: ["the dog hid", "by the thunder, the dog"], hint: "It begins with a participle and describes the dog." },
   { prompt: "Which sentence has a direct object and an indirect object?", right: "Lena told Amir a joke.", wrong: ["Lena laughed loudly.", "Lena is funny."], hint: "A joke is told, and Amir receives it." },
   { prompt: "Which sentence has a predicate noun?", right: "Noah is a talented drummer.", wrong: ["Noah drums loudly.", "Noah is in the band room."], hint: "Drummer renames Noah after the linking verb." },
+  { prompt: "Which word is the direct object? Ravi kicked the ball over the fence.", right: "ball", wrong: ["Ravi", "fence"], hint: "Ask: kicked what?" },
+  { prompt: "Which word is the indirect object? Nora lent her friend a pencil.", right: "friend", wrong: ["pencil", "lent"], hint: "Ask: lent a pencil to whom?" },
+  { prompt: "Which word is a predicate adjective? The soup tastes salty.", right: "salty", wrong: ["soup", "tastes"], hint: "Salty follows the linking verb tastes and describes the soup." },
+  { prompt: "Which word is a predicate noun? My cousin is a nurse.", right: "nurse", wrong: ["cousin", "is"], hint: "Nurse renames the cousin after the linking verb is." },
+  { prompt: "Which word is a participle? The laughing children ran outside.", right: "laughing", wrong: ["children", "ran"], hint: "Laughing is a verb form that describes the children." },
+  { prompt: "Which phrase is a participial phrase? Holding her breath, Mia dove under.", right: "Holding her breath", wrong: ["Mia dove under", "her breath, Mia"], hint: "It begins with a participle and describes Mia." },
+  { prompt: "What does the adverbial phrase tell? The bus leaves at noon.", right: "when", wrong: ["where", "how"], hint: "At noon tells the time." },
+  { prompt: "What does the adverbial phrase tell? He answered with a smile.", right: "how", wrong: ["when", "where"], hint: "With a smile tells the way he answered." },
+  { prompt: "Which word is a linking verb? The milk smells sour.", right: "smells", wrong: ["milk", "sour"], hint: "Here smells links the milk to a word that describes it." },
+  { prompt: "Which sentence has a direct object?", right: "The chef stirred the sauce.", wrong: ["The chef is tired.", "The chef waited by the door."], hint: "The sauce receives the action of stirring." },
+  { prompt: "Which word is a participle? The wrapped gift sat on the table.", right: "wrapped", wrong: ["gift", "sat"], hint: "Wrapped is a verb form that describes the gift." },
+  { prompt: "Which word does the participial phrase describe? Covered in mud, the puppy wagged its tail.", right: "puppy", wrong: ["mud", "tail"], hint: "Who was covered in mud? The phrase describes the puppy." },
+  { prompt: "What does the adverbial phrase tell? We sang to cheer her up.", right: "why", wrong: ["when", "where"], hint: "To cheer her up gives the reason." },
+  { prompt: "Which sentence has a predicate adjective?", right: "The night air felt cool.", wrong: ["The night air moved the curtains.", "The night air arrived at ten."], hint: "Cool follows the linking verb felt and describes the air." },
+  { prompt: "Which word is the indirect object? Dad made us pancakes.", right: "us", wrong: ["pancakes", "made"], hint: "Ask: made pancakes for whom?" },
 ];
 
 function grammar(): Question[] {
