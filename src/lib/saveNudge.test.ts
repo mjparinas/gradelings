@@ -12,6 +12,10 @@ describe("asking a grown-up to save progress", () => {
     expect(askToSaveProgress(family(), 2, 1, NOW)).toBe(false);
   });
 
+  it("asks again after the third and seventh lessons for a grown-up who missed it, and in between not at all", () => {
+    expect([1, 2, 3, 4, 5, 6, 7, 8].map((n) => askToSaveProgress(family(), n, 1, NOW))).toEqual([true, false, true, false, false, false, true, false]);
+  });
+
   it("asks once a day in the last week of the trial", () => {
     const ending = family({ trialEndsAt: NOW + 5 * DAY });
     expect(askToSaveProgress(ending, 9, 1, NOW)).toBe(true);

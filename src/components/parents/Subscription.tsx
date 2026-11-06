@@ -4,7 +4,7 @@ import { countryOf } from "@/lib/country";
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { APP_NAME } from "@/lib/brand";
 import { billingPortalUrl, devBilling, goToStripe, loadReferral, openBillingPortal, redeemCode, refreshAccount, resendVerification, startCheckout, type BillingInfo, type ReferralInfo } from "@/lib/account";
-import { firstChargeAt, FREE_UNITS_PER_COURSE, hasCodeAccess, hasPaidPlan, isLifetime, isPremium, LIFETIME_ACCESS, MAX_CHILDREN, CURRENCY_NAME, pricesFor, TAX_NOTE, trialDaysLeft, upgradeOffer } from "@/lib/plan";
+import { firstChargeAt, FREE_UNITS_PER_COURSE, hasCodeAccess, hasPaidPlan, isLifetime, isPremium, LIFETIME_ACCESS, MAX_CHILDREN, CURRENCY_NAME, pricesFor, REFUND_DAYS, TAX_NOTE, trialDaysLeft, upgradeOffer } from "@/lib/plan";
 import { savedPromoCode } from "@/lib/promoCode";
 import { inviteLink, rememberMyInvite } from "@/lib/referral";
 import { useRoute } from "@/lib/router";
@@ -252,6 +252,9 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
                   </button>
                 </div>
               )}
+              <p className="text-sm text-ink-soft" data-testid="refund-promise">
+                🛡️ Not for you? Ask within {REFUND_DAYS} days of any payment and we refund it in full, no reason needed.
+              </p>
               <PlanChoices
                 disabled={busy || (needsEmail && Boolean(billing?.stripe)) || (!billing?.stripe && !billing?.dev)}
                 onPick={(interval) => void run(() => (billing?.stripe ? startCheckout(interval) : devBilling("subscribe", interval)))}

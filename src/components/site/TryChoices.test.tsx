@@ -19,6 +19,7 @@ describe("TryChoices", () => {
     expect(screen.getByText(/That's right!/)).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "4" })).toHaveAttribute("data-state", "right");
     expect(app()).toHaveAttribute("href", "/play/#/start?framework=ca-bc&grade=1");
+    expect(screen.getByTestId("try-free-note")).toHaveTextContent("Free for 30 days with everything open. No card needed.");
   });
 
   it("gives the hint and another try after a miss, and the answer after a second", () => {

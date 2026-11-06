@@ -36,6 +36,15 @@ describe("UpgradeBanner", () => {
     expect(screen.getByRole("link", { name: "Create an account to subscribe" })).toHaveAttribute("href", "#/account?next=subscription");
   });
 
+  it("tells a family the refund promise before they pay", () => {
+    state.family = { plan: "trial", trialEndsAt: Date.now() + 3 * 86_400_000, updatedAt: 1 };
+    state.path = [""];
+    state.android = false;
+    state.ios = false;
+    render(<UpgradeBanner />);
+    expect(screen.getByText(/within 14 days of any payment for a full refund/)).toBeInTheDocument();
+  });
+
   it("quotes Canadian prices to Canadian families and US prices to US families", () => {
     state.path = [""];
     state.android = false;
