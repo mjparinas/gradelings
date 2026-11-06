@@ -532,12 +532,12 @@
     "units": [
       "close-reading text=8f2caa5060 std=d7a24f2fdb q=2400e20887",
       "point-of-view text=181ec2a506 std=e746a6430f q=e32473aa03",
-      "figurative-language text=49d680fa8d std=17ed38e667 q=f3824fdea7",
+      "figurative-language text=49d680fa8d std=17ed38e667 q=d1d2a09b3f",
       "connotation-tone text=9c068d912c std=18bedeb938 q=220849e9fa",
       "sources-bias text=30e9961fd3 std=6207de0ca7 q=ebdde5983f",
       "roots-analogies text=34da7ba9e2 std=d62e5c1c34 q=3ceab8afb2",
       "persuasive-writing text=143cf3561b std=6674d107b1 q=d9dd316334",
-      "agreement text=5714f96d51 std=a79a134697 q=0d4b2b814c",
+      "agreement text=5714f96d51 std=a79a134697 q=25e1f4e98f",
       "sentence-repair text=404e6c9477 std=c5f5f44fd7 q=2784e88c73",
       "commas-clauses text=78c6d03749 std=d89b450c1a q=df67ee4c04"
     ]
@@ -570,7 +570,7 @@
       "static-electricity-6 text=ec58626304 std=54c5221040 q=79cb8b85db",
       "circuits-6 text=27c1c49ae7 std=a8119a3987 q=075569a1ba",
       "flight-6 text=11653360ba std=eae1b0a0e1 q=6c940cc325",
-      "solar-system text=6be0e2dfe8 std=c35b4d4f2a q=09e18d2c12",
+      "solar-system text=6be0e2dfe8 std=c35b4d4f2a q=80b6cb3757",
       "earth-moon-sun-6 text=c2c46cb4eb std=a0c82366c8 q=cdd9a703f4",
       "weight-and-space-tech-6 text=b331f772e6 std=f7bc8570fe q=8a90828d65",
       "sk-electricity-use text=ec67a661ec std=a72cd09b7b q=a05054b1a7"
@@ -626,13 +626,13 @@
     "overview": "357d87fdc6",
     "units": [
       "close-reading text=0b6ee269e5 std=223adb785a q=3fd92d2337",
-      "literary-devices text=75012dadfd std=2901028cdb q=ca1f4ae5d6",
+      "literary-devices text=75012dadfd std=2901028cdb q=9f862df281",
       "tone-mood text=1a78ad0bc3 std=9286150db4 q=5fe5a6766c",
       "poetry-lab text=e3769835d8 std=c2bc777a65 q=fe038cecf2",
       "source-check text=6ca3f2abea std=542f4b5f0e q=9ea6c94a48",
       "persuasion text=002e89452f std=191afacad8 q=9332cae44a",
       "clauses-sentences text=5017dd13d0 std=de1badad7f q=5cd8987fd7",
-      "modifiers-parallelism text=a0c6970207 std=95209bc3a4 q=d8f6db8d51",
+      "modifiers-parallelism text=a0c6970207 std=95209bc3a4 q=4826f70a56",
       "semicolons-colons-dashes text=40cb0d089d std=77796da7ad q=9b3d9ab0c8",
       "word-mix-ups text=7bb5032b8a std=c46e4f5c9e q=bb5c3889a5"
     ]
@@ -728,7 +728,7 @@
       "argument-and-media text=38bdc7838c std=666bbc1a10 q=e3455a12dd",
       "digital-8 text=742bfe22d6 std=bb1f111c57 q=a2bbd968e9",
       "forms-features-8 text=612838fad2 std=d814b11a31 q=b91eed85d6",
-      "word-study text=e9a31820f1 std=a2d5a170ad q=816e78a8ea",
+      "word-study text=e9a31820f1 std=a2d5a170ad q=e40812d304",
       "grammar-and-style text=4cac16a8c8 std=bb72623629 q=3d25d60229",
       "writing-8 text=d9bb3a4cad std=30a22e4bbd q=6ef1ed34f8"
     ]
@@ -817,7 +817,7 @@
     "overview": "aae79d5369",
     "units": [
       "close-reading text=1934195db9 std=7db4e677d1 q=95e83bca39",
-      "literary-elements text=c987189fb1 std=e12396dac1 q=064ab3c334",
+      "literary-elements text=c987189fb1 std=e12396dac1 q=b7a0a5844a",
       "devices-9 text=320de0c79d std=2929f86745 q=37465042ac",
       "voices-and-perspectives text=4a64b8eb2c std=446ec4246c q=bcac63bd34",
       "argument-and-rhetoric text=b5525b0494 std=ba2b23f06a q=ce069191ec",

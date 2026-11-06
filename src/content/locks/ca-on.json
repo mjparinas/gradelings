@@ -580,7 +580,7 @@
       "punctuation-6 text=f3d82b8594 std=5eb1a783f5 q=d4e254c99a",
       "close-reading text=8f2caa5060 std=f0344069aa q=2400e20887",
       "point-of-view text=181ec2a506 std=2ba55ec833 q=e32473aa03",
-      "figurative-language text=49d680fa8d std=fd5656aaa9 q=f3824fdea7",
+      "figurative-language text=49d680fa8d std=fd5656aaa9 q=d1d2a09b3f",
       "connotation-tone text=9c068d912c std=c690084570 q=220849e9fa",
       "sources-bias text=30e9961fd3 std=9eff8f0964 q=ebdde5983f",
       "text-forms-6 text=bdd4c3fd20 std=b96ec7142e q=68961ed57a"
@@ -616,7 +616,7 @@
       "electrical-energy-6 text=e2a59e9295 std=70280c5fad q=6d804aacd9",
       "flight-6 text=11653360ba std=89b1b97aac q=6c940cc325",
       "earth-moon-sun-6 text=c2c46cb4eb std=485f12e999 q=cdd9a703f4",
-      "solar-system text=6be0e2dfe8 std=46911887cb q=09e18d2c12",
+      "solar-system text=6be0e2dfe8 std=46911887cb q=80b6cb3757",
       "weight-and-space-tech-6 text=b331f772e6 std=8acfb4fb6e q=8a90828d65",
       "science-skills-6 text=794b9d1b09 std=5574658ab3 q=ae0ec36880"
     ]
@@ -678,12 +678,12 @@
     "units": [
       "clauses-sentences text=5017dd13d0 std=9de8e49513 q=5cd8987fd7",
       "grammar-7 text=2d628d53ad std=3e8d8c72d3 q=d05807d429",
-      "modifiers-parallelism text=a0c6970207 std=fcf0250987 q=d8f6db8d51",
+      "modifiers-parallelism text=a0c6970207 std=fcf0250987 q=4826f70a56",
       "punctuation-7 text=9342af658b std=ceb62cb34e q=3172ccc51c",
       "semicolons-colons-dashes text=40cb0d089d std=62570f1546 q=9b3d9ab0c8",
       "close-reading text=0b6ee269e5 std=da489a05f7 q=3fd92d2337",
       "point-of-view-7 text=9446c4e22a std=95fc690638 q=ee7ee4f5b5",
-      "literary-devices text=75012dadfd std=0226f19fd1 q=ca1f4ae5d6",
+      "literary-devices text=75012dadfd std=0226f19fd1 q=9f862df281",
       "tone-mood text=1a78ad0bc3 std=c690084570 q=5fe5a6766c",
       "text-patterns-7 text=3ba5dd0d6a std=53e691b9d2 q=ff11db607e",
       "persuasion text=002e89452f std=e57e076044 q=9332cae44a",
@@ -725,7 +725,7 @@
       "human-impact-7 text=f6bc8439e8 std=ba0edde4d4 q=c4030de692",
       "particles-mixtures-7 text=03fc7e2a6b std=0c43c062cd q=c8c3cfefc6",
       "solutions-separation-7 text=2f7dc8f574 std=51dd84ec65 q=00f34299b3",
-      "atoms-and-elements text=7c83b3e634 std=f6e8d7b1ac q=b5c6872ade",
+      "atoms-and-elements text=7c83b3e634 std=f6e8d7b1ac q=00783af555",
       "structures-forces-7 text=9f0c621a9c std=e04afb532a q=eef17aedf3",
       "safe-structures-7 text=1a9ceadc58 std=1ba5edd905 q=8e849ccaad",
       "heat-particles-7 text=0b575e82c8 std=9972d363db q=ec2f2fb08f",
@@ -800,7 +800,7 @@
       "argument-and-media text=38bdc7838c std=22f2c61fde q=e3455a12dd",
       "digital-8 text=742bfe22d6 std=185dce5635 q=a2bbd968e9",
       "grammar-and-style text=4cac16a8c8 std=68e528c583 q=3d25d60229",
-      "word-study text=e9a31820f1 std=802371f642 q=816e78a8ea",
+      "word-study text=e9a31820f1 std=802371f642 q=e40812d304",
       "writing-8 text=d9bb3a4cad std=e6d5c78928 q=6ef1ed34f8"
     ]
   },

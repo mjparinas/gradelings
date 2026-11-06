@@ -523,14 +523,14 @@
     "overview": "bca3ab742e",
     "units": [
       "roots-analogies text=34da7ba9e2 std=0d8be3975d q=3ceab8afb2",
-      "agreement text=5714f96d51 std=db63b956b1 q=0d4b2b814c",
+      "agreement text=5714f96d51 std=db63b956b1 q=25e1f4e98f",
       "sentence-repair text=404e6c9477 std=b2aba42941 q=2784e88c73",
       "commas-clauses text=78c6d03749 std=31d897e28b q=df67ee4c04",
       "text-forms-6 text=bdd4c3fd20 std=4aef46948e q=68961ed57a",
       "close-reading text=8f2caa5060 std=e799a3a1d1 q=2400e20887",
       "connotation-tone text=9c068d912c std=f24889fdda q=220849e9fa",
       "point-of-view text=181ec2a506 std=f8c642e31c q=e32473aa03",
-      "figurative-language text=49d680fa8d std=20abe3ddf5 q=f3824fdea7",
+      "figurative-language text=49d680fa8d std=20abe3ddf5 q=d1d2a09b3f",
       "sources-bias text=30e9961fd3 std=1249772a74 q=ebdde5983f",
       "persuasive-writing text=143cf3561b std=a3256010a0 q=d9dd316334"
     ]
@@ -563,7 +563,7 @@
       "circuits-6 text=27c1c49ae7 std=903087a57f q=075569a1ba",
       "flight-6 text=11653360ba std=bbea212400 q=6c940cc325",
       "earth-moon-sun-6 text=c2c46cb4eb std=8e4e1d5ea7 q=cdd9a703f4",
-      "solar-system text=6be0e2dfe8 std=55feb57108 q=09e18d2c12",
+      "solar-system text=6be0e2dfe8 std=55feb57108 q=80b6cb3757",
       "galaxies-and-space text=a968869b94 std=ae160b9a64 q=c47b6e7282",
       "weight-and-space-tech-6 text=b331f772e6 std=a6170cd1ac q=8a90828d65",
       "classifying-life-6 text=f18d17f8bb std=1876db4d0d q=c30b8171b9",
@@ -622,13 +622,13 @@
     "overview": "66b365f573",
     "units": [
       "close-reading text=0b6ee269e5 std=e799a3a1d1 q=3fd92d2337",
-      "literary-devices text=75012dadfd std=6e107c18af q=ca1f4ae5d6",
+      "literary-devices text=75012dadfd std=6e107c18af q=9f862df281",
       "tone-mood text=1a78ad0bc3 std=9fa9534b8e q=5fe5a6766c",
       "point-of-view-7 text=9446c4e22a std=f8c642e31c q=ee7ee4f5b5",
       "persuasion text=002e89452f std=75c1e0c85b q=9332cae44a",
       "source-check text=6ca3f2abea std=66defca334 q=9ea6c94a48",
       "clauses-sentences text=5017dd13d0 std=66ad6bc150 q=5cd8987fd7",
-      "modifiers-parallelism text=a0c6970207 std=7c3918079c q=d8f6db8d51",
+      "modifiers-parallelism text=a0c6970207 std=7c3918079c q=4826f70a56",
       "semicolons-colons-dashes text=40cb0d089d std=22003582e3 q=9b3d9ab0c8",
       "word-mix-ups text=7bb5032b8a std=bfdd947f22 q=bb5c3889a5",
       "poetry-lab text=e3769835d8 std=48f87485e3 q=fe038cecf2"
@@ -723,7 +723,7 @@
   "8/language": {
     "overview": "abeb7ba251",
     "units": [
-      "word-study text=e9a31820f1 std=c6befb80fd q=816e78a8ea",
+      "word-study text=e9a31820f1 std=c6befb80fd q=e40812d304",
       "strategies-8 text=14cb61c3b0 std=a6917613b6 q=24feac4146",
       "forms-features-8 text=612838fad2 std=90ee15a44e q=b91eed85d6",
       "close-reading text=b5e48e1704 std=e799a3a1d1 q=9ae7c5a9fa",
@@ -756,7 +756,7 @@
       "nb-motion-forces-8 text=6ee4e6b737 std=aa4cd10246 q=01ce7859fe",
       "nb-space-exploration-8 text=7e0cbd7341 std=2158b703fb q=37bdaf9b6b",
       "cells-and-life text=26001b2c5a std=ad89ee2370 q=27792065ca",
-      "particles-and-matter text=b03be68ce0 std=5533f29638 q=32ed88ecbe",
+      "particles-and-matter text=b03be68ce0 std=5533f29638 q=2a50bf2bae",
       "viscosity-flow-8 text=309af1469c std=b066220d71 q=7c31cccec1",
       "density-buoyancy-8 text=44abadf5f7 std=c71cbfe72b q=e8b7d870a3",
       "pressure-pascal-8 text=61b1e34882 std=1b62aa85a6 q=bbd1e7ea70",
@@ -824,7 +824,7 @@
       "word-parts-9 text=2f90f3f2bb std=e9e1a2942c q=679acb1717",
       "forms-features-9 text=507223d4ab std=05b96d5e0a q=328ee620b5",
       "close-reading text=1934195db9 std=1488893039 q=95e83bca39",
-      "literary-elements text=c987189fb1 std=cb78ddf0e8 q=064ab3c334",
+      "literary-elements text=c987189fb1 std=cb78ddf0e8 q=b7a0a5844a",
       "devices-9 text=320de0c79d std=2890a2aa27 q=37465042ac",
       "voices-and-perspectives text=4a64b8eb2c std=4ef362f97c q=bcac63bd34",
       "argument-and-rhetoric text=b5525b0494 std=acd5cf07f3 q=ce069191ec",

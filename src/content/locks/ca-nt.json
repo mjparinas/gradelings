@@ -496,11 +496,11 @@
     "units": [
       "close-reading text=8f2caa5060 std=23e8e10a52 q=2400e20887",
       "point-of-view text=181ec2a506 std=10a3383cb4 q=e32473aa03",
-      "figurative-language text=49d680fa8d std=01e182436b q=f3824fdea7",
+      "figurative-language text=49d680fa8d std=01e182436b q=d1d2a09b3f",
       "connotation-tone text=9c068d912c std=5f6f5b2c12 q=220849e9fa",
       "persuasive-writing text=143cf3561b std=f0fcd4114a q=d9dd316334",
       "sources-bias text=30e9961fd3 std=ed09a30b09 q=ebdde5983f",
-      "agreement text=5714f96d51 std=0ce22f2c44 q=0d4b2b814c",
+      "agreement text=5714f96d51 std=0ce22f2c44 q=25e1f4e98f",
       "sentence-repair text=404e6c9477 std=43e713a577 q=2784e88c73",
       "commas-clauses text=78c6d03749 std=c49e8e9fc8 q=df67ee4c04",
       "roots-analogies text=34da7ba9e2 std=daac4a769a q=3ceab8afb2"
@@ -528,9 +528,9 @@
     "units": [
       "body-systems text=c3cee90dd9 std=17a63adcc1 q=4892144c2a",
       "mixtures text=1f68b1ad4d std=f91167f88c q=8382e443e9",
-      "newtons-laws text=22bc06c840 std=deba842bb6 q=d9925fa3ce",
+      "newtons-laws text=22bc06c840 std=deba842bb6 q=f67bc963e4",
       "forces-at-work text=5f5393489c std=5959e916a0 q=4430fad17e",
-      "solar-system text=6be0e2dfe8 std=ad59da10d4 q=09e18d2c12",
+      "solar-system text=6be0e2dfe8 std=ad59da10d4 q=80b6cb3757",
       "galaxies-and-space text=a968869b94 std=6eeeb9e7b7 q=c47b6e7282"
     ]
   },
@@ -585,12 +585,12 @@
     "overview": "5932eb7947",
     "units": [
       "close-reading text=0b6ee269e5 std=b104d409e8 q=3fd92d2337",
-      "literary-devices text=75012dadfd std=85fbe8cca1 q=ca1f4ae5d6",
+      "literary-devices text=75012dadfd std=85fbe8cca1 q=9f862df281",
       "tone-mood text=1a78ad0bc3 std=f64a357463 q=5fe5a6766c",
       "persuasion text=002e89452f std=fadb57f5d0 q=9332cae44a",
       "source-check text=6ca3f2abea std=542cdb5e3b q=9ea6c94a48",
       "clauses-sentences text=5017dd13d0 std=cbf4b8a034 q=5cd8987fd7",
-      "modifiers-parallelism text=a0c6970207 std=fd88b4fb5e q=d8f6db8d51",
+      "modifiers-parallelism text=a0c6970207 std=fd88b4fb5e q=4826f70a56",
       "semicolons-colons-dashes text=40cb0d089d std=89fccd7240 q=9b3d9ab0c8",
       "word-mix-ups text=7bb5032b8a std=0d9ead870f q=bb5c3889a5",
       "poetry-lab text=e3769835d8 std=37ef9ffdd2 q=fe038cecf2"
@@ -617,7 +617,7 @@
     "overview": "74b0a1314e",
     "units": [
       "natural-selection text=516fbb1811 std=831c0f0785 q=beaf3b1417",
-      "atoms-and-elements text=7c83b3e634 std=217abb133b q=b5c6872ade",
+      "atoms-and-elements text=7c83b3e634 std=217abb133b q=00783af555",
       "circuits-and-static text=b28ece42b0 std=121d9ceb63 q=b84f825935",
       "magnets-and-motors text=3fa65cfc41 std=ea29bd5e07 q=d74ab5996f",
       "restless-earth text=eacf7084dc std=b2d2885d2a q=ce71954c06",
@@ -682,7 +682,7 @@
       "literary-devices text=807aa8d25d std=60b69c8acd q=dbc870fffd",
       "argument-and-media text=38bdc7838c std=3b64c0d916 q=e3455a12dd",
       "grammar-and-style text=4cac16a8c8 std=7f858a31a7 q=3d25d60229",
-      "word-study text=e9a31820f1 std=ea60c8ad95 q=816e78a8ea"
+      "word-study text=e9a31820f1 std=ea60c8ad95 q=e40812d304"
     ]
   },
   "8/math": {
@@ -703,7 +703,7 @@
     "units": [
       "cells-and-life text=26001b2c5a std=749188d278 q=27792065ca",
       "microbes-and-immunity text=32d95f5719 std=64bd981bab q=0df44d1c56",
-      "particles-and-matter text=b03be68ce0 std=92e67df3e4 q=32ed88ecbe",
+      "particles-and-matter text=b03be68ce0 std=92e67df3e4 q=2a50bf2bae",
       "light-and-radiation text=29b61253cf std=5a8e248f11 q=6d059d1d2d",
       "plate-tectonics text=3a5b818b03 std=abb4530a64 q=5003368d17"
     ]
@@ -763,7 +763,7 @@
     "overview": "e76fc27703",
     "units": [
       "close-reading text=1934195db9 std=bff49aaa41 q=95e83bca39",
-      "literary-elements text=c987189fb1 std=de9a22ce0a q=064ab3c334",
+      "literary-elements text=c987189fb1 std=de9a22ce0a q=b7a0a5844a",
       "argument-and-rhetoric text=b5525b0494 std=2fa8289c26 q=ce069191ec",
       "grammar-and-style text=8039e9ed51 std=6a64fd2823 q=37d6dcd28c",
       "language-and-style text=f2649185d5 std=cea1c4f2b6 q=2f3d7024fe",
@@ -791,7 +791,7 @@
       "atoms-and-electrons text=5dc2e26422 std=a527ea9a78 q=157481b107",
       "bonding-and-reactions text=8a0ea04bc7 std=85ce2722db q=a326d57dc9",
       "electric-current text=2c145f84d8 std=d788d90110 q=7692c8ff45",
-      "ecosystems text=6e11cab288 std=8fcbd39f11 q=fd7c603426"
+      "ecosystems text=6e11cab288 std=8fcbd39f11 q=135b633d91"
     ]
   },
   "9/social": {
