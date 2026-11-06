@@ -718,10 +718,10 @@
   "8/core-french": {
     "overview": "325e20d4f7",
     "units": [
-      "passe-present-futur text=59001d8dfa std=6ab769fbd2 q=51db2ee03f",
-      "frequence text=55ada4bc61 std=a4a0bf00a2 q=7168a26c56",
-      "opinions-et-raisons text=18d2475ddc std=50e0c9797f q=279f7c6000",
-      "comparer-et-opposer text=cd48bef620 std=e909c495bb q=100faa0286",
+      "passe-present-futur text=59001d8dfa std=6ab769fbd2 q=01558b86d0",
+      "frequence text=55ada4bc61 std=a4a0bf00a2 q=eb5ab04a02",
+      "opinions-et-raisons text=18d2475ddc std=50e0c9797f q=68253644fc",
+      "comparer-et-opposer text=cd48bef620 std=e909c495bb q=b619713420",
       "sons-et-lettres text=b96fdcc4c7 std=d277cf9edf q=d72a98a614",
       "histoires text=8017f84d91 std=77fe305484 q=78f5cc8700",
       "culture-et-respect text=be0e54b470 std=72f8c22626 q=a4be45297f"
