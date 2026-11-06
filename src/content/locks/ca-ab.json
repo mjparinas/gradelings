@@ -675,7 +675,7 @@
       "source-check text=6ca3f2abea std=1f451f0841 q=9ea6c94a48",
       "persuasion text=002e89452f std=5f53b9ae42 q=9332cae44a",
       "clauses-sentences text=5017dd13d0 std=fd0c63dc97 q=5cd8987fd7",
-      "grammar-7 text=2d628d53ad std=5c9404778a q=d05807d429",
+      "grammar-7 text=2d628d53ad std=5c9404778a q=2941e00079",
       "modifiers-parallelism text=a0c6970207 std=5988b4e131 q=4826f70a56",
       "punctuation-7 text=9342af658b std=33200c9637 q=c08722cbbd",
       "semicolons-colons-dashes text=40cb0d089d std=66cbba1d2a q=9b3d9ab0c8",
@@ -789,7 +789,7 @@
       "forms-features-8 text=612838fad2 std=c3991a4184 q=d9c6eb4303",
       "argument-and-media text=38bdc7838c std=bfe08b6fb4 q=e3455a12dd",
       "digital-8 text=742bfe22d6 std=806835c2a6 q=a25584c75b",
-      "writing-8 text=d9bb3a4cad std=173a410708 q=6ef1ed34f8",
+      "writing-8 text=d9bb3a4cad std=173a410708 q=1d05d6ba80",
       "grammar-and-style text=4cac16a8c8 std=d7d76f5a1c q=3d25d60229",
       "word-study text=e9a31820f1 std=bb595f96bb q=e40812d304"
     ]
