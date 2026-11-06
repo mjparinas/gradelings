@@ -679,7 +679,7 @@
       "clauses-sentences text=5017dd13d0 std=9de8e49513 q=5cd8987fd7",
       "grammar-7 text=2d628d53ad std=3e8d8c72d3 q=d05807d429",
       "modifiers-parallelism text=a0c6970207 std=fcf0250987 q=4826f70a56",
-      "punctuation-7 text=9342af658b std=ceb62cb34e q=3172ccc51c",
+      "punctuation-7 text=9342af658b std=ceb62cb34e q=c08722cbbd",
       "semicolons-colons-dashes text=40cb0d089d std=62570f1546 q=9b3d9ab0c8",
       "close-reading text=0b6ee269e5 std=da489a05f7 q=3fd92d2337",
       "point-of-view-7 text=9446c4e22a std=95fc690638 q=ee7ee4f5b5",
@@ -792,13 +792,13 @@
     "overview": "a986489bb1",
     "units": [
       "close-reading text=b5e48e1704 std=da489a05f7 q=9ae7c5a9fa",
-      "strategies-8 text=14cb61c3b0 std=dfc4012c4b q=24feac4146",
+      "strategies-8 text=14cb61c3b0 std=dfc4012c4b q=7ec3688b00",
       "narrator-8 text=b609477509 std=4b8416e62a q=ce56cbb1e0",
       "literary-devices text=807aa8d25d std=4e498e1ef7 q=dbc870fffd",
-      "irony-satire-8 text=3ba9c87062 std=6755976cff q=b08216d98d",
-      "forms-features-8 text=612838fad2 std=c2e6129026 q=b91eed85d6",
+      "irony-satire-8 text=3ba9c87062 std=6755976cff q=202c839ad1",
+      "forms-features-8 text=612838fad2 std=c2e6129026 q=d9c6eb4303",
       "argument-and-media text=38bdc7838c std=22f2c61fde q=e3455a12dd",
-      "digital-8 text=742bfe22d6 std=185dce5635 q=a2bbd968e9",
+      "digital-8 text=742bfe22d6 std=185dce5635 q=a25584c75b",
       "grammar-and-style text=4cac16a8c8 std=68e528c583 q=3d25d60229",
       "word-study text=e9a31820f1 std=802371f642 q=e40812d304",
       "writing-8 text=d9bb3a4cad std=e6d5c78928 q=6ef1ed34f8"
@@ -850,14 +850,14 @@
     "units": [
       "historical-thinking-8 text=616df08c09 std=3c8592b329 q=7cecad383b",
       "confederation-8 text=89ef838266 std=f34dcbae8b q=51a6877a11",
-      "railway-west-8 text=d18ff00cc6 std=8a29fd21f2 q=09e56d85da",
+      "railway-west-8 text=d18ff00cc6 std=8a29fd21f2 q=cc50fd0c08",
       "treaties-indian-act-8 text=65934a6d86 std=13f2a37743 q=3f1495eeb2",
       "metis-resistance-8 text=6377cae74c std=02e178b4ca q=67a1fb4336",
       "residential-schools-8 text=a079a07602 std=c92d52c8aa q=5c0e50d8ad",
-      "black-communities-8 text=e291df8e29 std=17cf6ba1c3 q=576fc4c92f",
+      "black-communities-8 text=e291df8e29 std=17cf6ba1c3 q=e7b5cb7cfc",
       "newcomers-rights-8 text=162b932a8a std=d822e62852 q=9d7b787a9b",
       "canada-1890-1914-8 text=3e17506989 std=b6e52f8ddb q=5e481ec3b3",
-      "work-cities-reform-8 text=351d15609c std=2fdbb3d385 q=300173fa50",
+      "work-cities-reform-8 text=351d15609c std=2fdbb3d385 q=a75f5b7b9d",
       "settlement-patterns-8 text=6570a33a98 std=ab8535f5fe q=f044e31726",
       "sustainable-settlement-8 text=902844fd0e std=60ecefb340 q=2dc582c376",
       "maps-graphs-8 text=5bc38c81cc std=69ade90753 q=4ccfa270cf",
@@ -908,16 +908,16 @@
   "9/language": {
     "overview": "a5ab863f9d",
     "units": [
-      "word-parts-9 text=2f90f3f2bb std=be79904b6d q=679acb1717",
+      "word-parts-9 text=2f90f3f2bb std=be79904b6d q=12c40c9d05",
       "grammar-and-style text=8039e9ed51 std=68e528c583 q=37d6dcd28c",
-      "revise-edit-9 text=0d1fec0a1b std=48d6ae95de q=21b6373b52",
+      "revise-edit-9 text=0d1fec0a1b std=48d6ae95de q=55444ac3bb",
       "close-reading text=1934195db9 std=da489a05f7 q=95e83bca39",
       "devices-9 text=320de0c79d std=5d459f7321 q=37465042ac",
       "language-and-style text=f2649185d5 std=17214190b8 q=2f3d7024fe",
       "voices-and-perspectives text=4a64b8eb2c std=37abdabd1d q=bcac63bd34",
-      "forms-features-9 text=507223d4ab std=96b772a5a6 q=328ee620b5",
+      "forms-features-9 text=507223d4ab std=96b772a5a6 q=58dfee8ebc",
       "argument-and-rhetoric text=b5525b0494 std=7a6e8071a3 q=ce069191ec",
-      "digital-9 text=a08ac85319 std=4b2371635b q=e7a0f9e175"
+      "digital-9 text=a08ac85319 std=4b2371635b q=d6d4822cdd"
     ]
   },
   "9/math": {
