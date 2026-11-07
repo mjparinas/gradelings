@@ -2,6 +2,7 @@ import { sortQuestion, type SortSet } from "../../bank";
 import { sample, shuffle } from "../../random";
 import type { Course, GenerateOptions, Question, Visual } from "../../types";
 import { ask, choose, fromParts, levelOf, perBin, q, qe, type Item, type Level } from "../kit";
+import { DEVICES_DEEP, GRAMMAR_DEEP, WORDS_DEEP } from "./language-deeper";
 
 // Grade 8 English language arts: close reading, literary devices, argument and media,
 // grammar and style, and word study. Passages are original.
@@ -312,7 +313,7 @@ const WORD_PARTS: SortSet = {
 
 function devices(opts?: GenerateOptions): Question[] {
   const level = levelOf(opts);
-  return shuffle([...choose(DEVICES, level, 6), ...choose(POINT_OF_VIEW, level, 2)]).map(ask);
+  return shuffle([...choose([...DEVICES, ...DEVICES_DEEP], level, 6), ...choose(POINT_OF_VIEW, level, 2)]).map(ask);
 }
 
 function argumentAndMedia(opts?: GenerateOptions): Question[] {
@@ -320,12 +321,12 @@ function argumentAndMedia(opts?: GenerateOptions): Question[] {
 }
 
 function grammarAndStyle(opts?: GenerateOptions): Question[] {
-  return fromParts({ items: GRAMMAR }, opts);
+  return fromParts({ items: [...GRAMMAR, ...GRAMMAR_DEEP] }, opts);
 }
 
 function wordStudy(opts?: GenerateOptions): Question[] {
   const level = levelOf(opts);
-  return shuffle([...choose(WORDS, level, 7).map(ask), sortQuestion(WORD_PARTS, perBin(level))]);
+  return shuffle([...choose([...WORDS, ...WORDS_DEEP], level, 7).map(ask), sortQuestion(WORD_PARTS, perBin(level))]);
 }
 
 // ---------- Course ----------
