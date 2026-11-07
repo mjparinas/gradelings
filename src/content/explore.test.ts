@@ -4,14 +4,14 @@ import { EXPLORE_CARDS, exploreCards, exploreQuestion, findCard } from "./explor
 const BANDS = ["little", "middle", "big"] as const;
 
 describe("explore cards", () => {
-  it("has eight unique cards for each age band, four science and four world", () => {
+  it("has sixteen unique cards for each age band, eight science and eight world", () => {
     expect(new Set(EXPLORE_CARDS.map((c) => c.id)).size).toBe(EXPLORE_CARDS.length);
     expect(new Set(EXPLORE_CARDS.map((c) => c.title)).size).toBe(EXPLORE_CARDS.length);
     for (const band of BANDS) {
       const cards = exploreCards(band);
-      expect(cards, band).toHaveLength(8);
-      expect(cards.filter((c) => c.topic === "science")).toHaveLength(4);
-      expect(cards.filter((c) => c.topic === "world")).toHaveLength(4);
+      expect(cards, band).toHaveLength(16);
+      expect(cards.filter((c) => c.topic === "science")).toHaveLength(8);
+      expect(cards.filter((c) => c.topic === "world")).toHaveLength(8);
     }
     expect(findCard("busy-bees")?.title).toBe("Busy bees");
     expect(findCard("nope")).toBeUndefined();
