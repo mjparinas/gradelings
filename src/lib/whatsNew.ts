@@ -24,6 +24,32 @@ export const NEWS_KIND_LABEL: Record<NewsItem["kind"], string> = {
 
 export const WHATS_NEW: NewsDay[] = [
   {
+    day: "2026-11-06",
+    headline: "A clearer refund promise, a nudge to save progress, and more Ontario practice",
+    items: [
+      {
+        kind: "new",
+        title: "Our refund promise, where you decide",
+        body: "When you look at the plans, you now see that any payment is refunded in full if you ask within 14 days, no reason needed. It shows beside the plan buttons on Subscription and in the upgrade banner.",
+      },
+      {
+        kind: "new",
+        title: "A reminder to save your child's progress",
+        body: "On a device with no account, a quiet card at the end of a lesson now also appears after the third and seventh lessons, asking for an email so you can get progress reports. It only asks for an email, and you can ignore it.",
+      },
+      {
+        kind: "new",
+        title: "Free trial note on practice question pages",
+        body: "Sample questions on our public unit pages now say that the app is free for 30 days with everything open and no card needed.",
+      },
+      {
+        kind: "new",
+        title: "More Ontario practice questions",
+        body: "Ontario Grade 7, 8 and 9 language units (grammar, writing, punctuation and more) and Grade 8 social studies have many more questions, so practice stays fresh for longer.",
+      },
+    ],
+  },
+  {
     day: "2026-11-05",
     headline: "New things to read, puzzle over and print, plus a second grown-up on your family",
     items: [
