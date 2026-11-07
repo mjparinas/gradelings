@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/PublicLink";
 import { notFound } from "next/navigation";
 import { Critter } from "@/components/Critter";
 import { ReportCardGuide } from "@/components/ReportCardGuide";

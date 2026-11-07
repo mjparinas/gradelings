@@ -51,6 +51,13 @@ const nextConfig: NextConfig = {
         source: "/:file(icon-192\\.png|icon-512\\.png|icon-maskable-512\\.png|apple-touch-icon\\.png|icon\\.svg)",
         headers: [{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" }],
       },
+      // The voice files live in a versioned folder (/piper/3/, /whisper/1/) and never change in place, so browsers and
+      // the CDN can keep them for good. Without this Vercel answers "max-age=0, must-revalidate" and each load is a
+      // request (about 100 MB of voice per new device, the largest part of the bandwidth).
+      { source: "/:dir(piper|whisper)/:path+", headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }] },
+      // Help and training videos and the holiday tab icons keep their names when they are re-made, so a day in the
+      // browser and a week stale-while-revalidate (videos are also copied into Cache Storage by the app).
+      { source: "/:dir(videos|icons)/:path+", headers: [{ key: "Cache-Control", value: "public, max-age=86400, stale-while-revalidate=604800" }] },
       // Email images carry a version in their name (src/lib/emailImages.ts), so they never change in place.
       { source: "/email/:file*", headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }] },
       // Mail apps load the email font from another origin, and browsers only use cross-origin fonts with CORS.

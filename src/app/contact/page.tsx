@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/PublicLink";
 import { ContactForm } from "@/components/site/ContactForm";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { teacherPath } from "@/components/site/teachers";

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/PublicLink";
 import { SitePage } from "@/components/site/SiteChrome";
 import { PARENT_SIGN_IN, STUDENT_SIGN_IN } from "@/lib/accountLinks";
 import { TEACHER_SIGNUP } from "@/components/site/teachers";

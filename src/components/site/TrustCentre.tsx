@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/PublicLink";
 import { APP_NAME, CONTACT_EMAIL, REPLY_TIME } from "@/lib/brand";
 
 // The public trust centre (/trust/): one short line per control, each with a shield. Every "live" line must be true

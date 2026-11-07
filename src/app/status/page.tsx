@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/PublicLink";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { StatusCheck } from "@/components/site/StatusCheck";
 import { APP_NAME, CONTACT_EMAIL, REPLY_TIME } from "@/lib/brand";

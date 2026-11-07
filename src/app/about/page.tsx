@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/PublicLink";
 import { Section } from "@/components/site/Legal";
 import { regionSummary, regionWord } from "@/components/site/provinces";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/PublicLink";
 import { Critter } from "@/components/Critter";
 
 export default function NotFound() {
