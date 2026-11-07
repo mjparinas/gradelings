@@ -114,7 +114,11 @@ export function startBackgroundSync() {
     if (document.visibilityState === "visible") soon(500);
     else void syncNow();
   });
-  setInterval(() => void syncNow(), 120_000);
+  // Not while the app is hidden: it already synced when it went to the background, and a timer that wakes a
+  // backgrounded Android app (or the Trusted Web Activity) for a network call only costs battery.
+  setInterval(() => {
+    if (document.visibilityState === "visible") void syncNow();
+  }, 120_000);
   // New progress gets uploaded a few seconds after it happens.
   useStore.subscribe((s, prev) => {
     if (s.events !== prev.events || s.profiles !== prev.profiles || s.settings !== prev.settings) soon();
