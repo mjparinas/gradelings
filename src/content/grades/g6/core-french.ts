@@ -1,6 +1,7 @@
 import { coreQuestions, tagCoreFrench, type FrItem } from "../../french";
 import { sample, textChoice } from "../../random";
 import type { Course, GenerateOptions, Question } from "../../types";
+import { BECAUSE_DEEP, FAMILY_DEEP, HOBBIES_DEEP, QUESTIONS_DEEP, STATES_DEEP } from "./core-french-deeper";
 
 // Core French: instructions are in English, the French is what students learn.
 
@@ -295,7 +296,7 @@ export const course: Course = {
       blurb: "Qui, où, quand, pourquoi",
       parentNote: "Asking and answering questions with qui, où, quand, pourquoi, comment and combien.",
       standards: { "ca-bc": "Common high-frequency vocabulary and sentence structures: questions" },
-      generate: (o) => coreQuestions(QUESTIONS, o, 8),
+      generate: (o) => coreQuestions([...QUESTIONS, ...QUESTIONS_DEEP], o, 8),
     },
     {
       id: "loisirs",
@@ -304,7 +305,7 @@ export const course: Course = {
       blurb: "Jouer à, jouer de, faire de",
       parentNote: "Talking about hobbies and interests, including the difference between jouer à (sports) and jouer de (instruments).",
       standards: { "ca-bc": "Hobbies and topics of interest" },
-      generate: (o) => coreQuestions(HOBBIES, o, 8),
+      generate: (o) => coreQuestions([...HOBBIES, ...HOBBIES_DEEP], o, 8),
     },
     {
       id: "parce-que",
@@ -313,7 +314,7 @@ export const course: Course = {
       blurb: "Parce que…",
       parentNote: "Explaining likes, dislikes and preferences with “parce que”.",
       standards: { "ca-bc": "Reasons for likes, dislikes and preferences" },
-      generate: (o) => coreQuestions(BECAUSE, o, 8),
+      generate: (o) => coreQuestions([...BECAUSE, ...BECAUSE_DEEP], o, 8),
     },
     {
       id: "emotions-et-etats",
@@ -322,7 +323,7 @@ export const course: Course = {
       blurb: "J'ai faim, je suis content",
       parentNote: "Common emotions and physical states, including the French habit of saying “I have hunger” (j'ai faim) instead of “I am hungry”.",
       standards: { "ca-bc": "Common emotions and physical states" },
-      generate: (o) => coreQuestions(STATES, o, 8),
+      generate: (o) => coreQuestions([...STATES, ...STATES_DEEP], o, 8),
     },
     {
       id: "famille",
@@ -331,7 +332,7 @@ export const course: Course = {
       blurb: "Mon, ma, mes, son, sa, ses",
       parentNote: "Describing family members and friends, with the possessive words that match what is owned.",
       standards: { "ca-bc": "Descriptions of people and items" },
-      generate: (o) => coreQuestions(FAMILY, o, 8),
+      generate: (o) => coreQuestions([...FAMILY, ...FAMILY_DEEP], o, 8),
     },
     {
       id: "communautes-francophones",

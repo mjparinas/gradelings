@@ -547,11 +547,11 @@
     "overview": "f69df6b915",
     "units": [
       "motifs-de-lettres text=33c165f11e std=d2195c1bf0 q=e7aba7baaa",
-      "mots-interrogatifs text=2502c4b5bd std=823c99f92d q=d046f6cca0",
-      "loisirs text=128d6f0a63 std=823c99f92d q=ae5e28e2ba",
-      "parce-que text=dcb7703bff std=823c99f92d q=9b5eb6a892",
-      "emotions-et-etats text=408f0d8124 std=823c99f92d q=90f8604097",
-      "famille text=6a732a57db std=9d98c8edd4 q=17180cb37c",
+      "mots-interrogatifs text=2502c4b5bd std=823c99f92d q=b2df70a40e",
+      "loisirs text=128d6f0a63 std=823c99f92d q=98aba443f2",
+      "parce-que text=dcb7703bff std=823c99f92d q=cd705df6d5",
+      "emotions-et-etats text=408f0d8124 std=823c99f92d q=4b11642ffb",
+      "famille text=6a732a57db std=9d98c8edd4 q=a1fe1d8345",
       "communautes-francophones text=e0c77ffd2c std=060e918dfc q=85365c4a10",
       "sources-et-respect text=aaa4a4bec8 std=060e918dfc q=e7ad95f529"
     ]
