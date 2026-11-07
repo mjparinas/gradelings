@@ -514,11 +514,11 @@
   "6/core-french": {
     "overview": "5fe5c84985",
     "units": [
-      "mots-interrogatifs text=2502c4b5bd std=c7e2d374a8 q=d046f6cca0",
-      "famille text=6a732a57db std=5a1f623a7d q=17180cb37c",
-      "loisirs text=128d6f0a63 std=9653f938c5 q=ae5e28e2ba",
-      "parce-que text=dcb7703bff std=871d0be922 q=9b5eb6a892",
-      "emotions-et-etats text=408f0d8124 std=b556a57ef7 q=90f8604097",
+      "mots-interrogatifs text=2502c4b5bd std=c7e2d374a8 q=b2df70a40e",
+      "famille text=6a732a57db std=5a1f623a7d q=a1fe1d8345",
+      "loisirs text=128d6f0a63 std=9653f938c5 q=98aba443f2",
+      "parce-que text=dcb7703bff std=871d0be922 q=cd705df6d5",
+      "emotions-et-etats text=408f0d8124 std=b556a57ef7 q=4b11642ffb",
       "motifs-de-lettres text=33c165f11e std=7a5ddfddeb q=e7aba7baaa",
       "sources-et-respect text=aaa4a4bec8 std=9d34f8b4f3 q=e7ad95f529"
     ]
