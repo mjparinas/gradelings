@@ -1,5 +1,6 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { GOVERNING_MORE } from "./social-more";
 
 // South Dakota Grade 9 social studies: South Dakota and Native American government and politics (9-12.C.17): how South
 // Dakota became a state, its constitution and branches, local government and elections, the governments of the nine
@@ -43,6 +44,6 @@ export const SOCIAL_9: Unit[] = [
     parentNote:
       "South Dakota and Native American government: the 1889 constitution, the legislature, governor and Supreme Court, the initiative and referendum (first adopted in 1898), counties, cities and elections, the sovereign governments, councils and courts of the nine Tribal Nations, and how federal, state, local and Tribal governments relate.",
     standards: ["9-12.C.17", "South Dakota and Native American government and politics"],
-    items: GOVERNING,
+    items: [...GOVERNING, ...GOVERNING_MORE],
   }),
 ];

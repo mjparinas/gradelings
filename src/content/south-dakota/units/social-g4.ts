@@ -1,5 +1,6 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { REGIONS_MORE, CORPS_MORE } from "./social-more";
 
 // South Dakota Grade 4 social studies: South Dakota's regions and historic cities and the features of the West
 // (4.SS.2), and the Corps of Discovery on the Missouri River, with the winter counts in which the Lakota recorded these
@@ -69,7 +70,7 @@ export const SOCIAL_4: Unit[] = [
     parentNote:
       "South Dakota's regions (the Coteau des Prairies, James River Valley, Prairie Plains, Missouri Plateau, Minnesota Valley Lowland and the Traverse Gap continental divide) and its historic cities (Aberdeen, Deadwood, Pierre, Rapid City, Sioux Falls and Yankton), with the Great Plains, Rocky Mountains, Missouri and Columbia Rivers and the cities of westward expansion.",
     standards: ["4.SS.2", "America's physical features, the cities of westward expansion, and South Dakota's regions and historic cities"],
-    items: REGIONS,
+    items: [...REGIONS, ...REGIONS_MORE],
   }),
   bankUnit({
     id: "sd-g4-corps-of-discovery",
@@ -79,6 +80,6 @@ export const SOCIAL_4: Unit[] = [
     parentNote:
       "The early United States from Washington to the War of 1812, centered on the Louisiana Purchase and the Corps of Discovery's journey up the Missouri River through South Dakota in 1804, including its meetings with the Yankton, Lakota and Arikara peoples, Sacagawea and York, and how Lakota winter counts and petroglyphs record history.",
     standards: ["4.SS.11", "American history from Washington's presidency through the War of 1812, including the Corps of Discovery and winter counts"],
-    items: CORPS,
+    items: [...CORPS, ...CORPS_MORE],
   }),
 ];

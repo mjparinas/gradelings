@@ -1,5 +1,6 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { TERRITORY_MORE } from "./social-more";
 
 // South Dakota Grade 5 social studies: the fur trade and the treaties of Dakota's early years (5.SS.6), and Dakota
 // Territory to statehood: homesteaders and immigrants, the railroad and the Black Hills gold rush, the Treaty of 1868
@@ -42,6 +43,6 @@ export const SOCIAL_5: Unit[] = [
     parentNote:
       "South Dakota's 1800s: the fur trade at Fort Pierre, Dakota Territory and its first capital at Yankton, homesteaders, immigrants and sod houses, the railroad, the Black Hills gold rush and the Homestake Mine, the Fort Laramie Treaty of 1868, the Agreement of 1877 and the 1980 Supreme Court ruling on the Black Hills, the Battle of the Little Bighorn, Wounded Knee and boarding schools, and statehood on November 2, 1889.",
     standards: ["5.SS.6; 5.SS.9", "settlers, governments and Native Americans in South Dakota, and the Gilded Age in South Dakota: homesteading, gold, treaties and statehood"],
-    items: TERRITORY,
+    items: [...TERRITORY, ...TERRITORY_MORE],
   }),
 ];

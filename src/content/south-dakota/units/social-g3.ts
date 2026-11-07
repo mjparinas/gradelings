@@ -1,5 +1,6 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { PLACES_MORE } from "./social-more";
 
 // South Dakota Grade 3 social studies: South Dakota and American geography (3.SS.2), from the state's cities, rivers and
 // landforms and its reservations to the regions of the United States.
@@ -42,6 +43,6 @@ export const SOCIAL_3: Unit[] = [
     parentNote:
       "Finding South Dakota's cities (Pierre, Sioux Falls and Rapid City), landforms and rivers (the Black Hills, Black Elk Peak, the Badlands, Bear Butte, Spearfish Canyon and the Missouri, James and Big Sioux Rivers) and its reservations on a map, and America's physical features and regions, from the Great Lakes and the Mississippi River to New England and the Great Plains.",
     standards: ["3.SS.2", "American and South Dakota geography: physical features, regions, cities, reservations and South Dakota's landforms"],
-    items: PLACES,
+    items: [...PLACES, ...PLACES_MORE],
   }),
 ];
