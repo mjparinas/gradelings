@@ -298,7 +298,7 @@
       "wa-g3-survival text=8148e373a0 std=23285f6805 q=b593b45148",
       "wa-g3-hazards text=06e07390fc std=07ff82269e q=b58e997d4c",
       "or-g3-magnet-design text=6e359c124e std=540bf4a56d q=b0eac72564",
-      "il-g3-fossils text=08f1f70258 std=d7890df2f1 q=797802fd01",
+      "il-g3-fossils text=08f1f70258 std=d7890df2f1 q=58b8ef8b16",
       "il-g3-weather-climate text=7d337b9922 std=415a6cc55d q=a142db7670"
     ]
   },
@@ -466,7 +466,7 @@
     "units": [
       "wa-g5-thirteen-colonies text=b218e8efce std=c8c2467565 q=dd5f1aba73",
       "ca-g5-colonial-economy text=469755cd16 std=fd2c37c7d7 q=78476c23e0",
-      "ca-g5-road-to-revolution text=f43acaa35e std=22627af4f0 q=348033ff6d",
+      "ca-g5-road-to-revolution text=f43acaa35e std=22627af4f0 q=547def255f",
       "ca-g5-revolution text=9f9c895b95 std=8eb6b539da q=77d806ef60",
       "wa-g5-constitution text=4fce7c7602 std=c95af6cfb2 q=2d1d2c254b",
       "or-g5-timeline text=d6feb485b6 std=0c932b63a1 q=750a99801f",
@@ -538,7 +538,7 @@
       "ca-g6-human-impact text=8d04fb23b9 std=a0f6568d2c q=e8e81a8802",
       "il-g6-weather text=8db206caec std=bf76790cc6 q=aa589bc1a6",
       "il-g6-climate text=5ef5df0f4a std=5ac511bf6d q=1c896471cc",
-      "il-g6-growth text=64b4beb925 std=b0947d3c39 q=86e816c692",
+      "il-g6-growth text=64b4beb925 std=b0947d3c39 q=6bf48eb4e3",
       "il-g6-design text=d0b4389208 std=98b2d7be6a q=0708faf63a"
     ]
   },
@@ -819,7 +819,7 @@
       "ca-g9-earth-interior text=5353771af0 std=197d3d87a4 q=ce35f414aa",
       "ca-g9-climate-feedbacks text=294b68d3fa std=37abc57bb4 q=1c06419890",
       "ca-g9-resources text=8c64d966db std=55e8f59000 q=4e2c013ca5",
-      "il-g9-ecosystems text=33f4ef7f64 std=fe2118a95a q=09c991e39b"
+      "il-g9-ecosystems text=33f4ef7f64 std=fe2118a95a q=463bf7bf08"
     ]
   },
   "9/social": {

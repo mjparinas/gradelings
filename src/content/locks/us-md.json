@@ -297,7 +297,7 @@
       "wa-g3-survival text=8148e373a0 std=23285f6805 q=b593b45148",
       "wa-g3-hazards text=06e07390fc std=07ff82269e q=b58e997d4c",
       "or-g3-magnet-design text=6e359c124e std=540bf4a56d q=b0eac72564",
-      "md-g3-fossils text=36a70f44db std=d7890df2f1 q=44eec3278e",
+      "md-g3-fossils text=36a70f44db std=d7890df2f1 q=24c3b4800d",
       "md-g3-weather-climate text=b1bea10bdc std=415a6cc55d q=13ebaccf7a"
     ]
   },
@@ -387,7 +387,7 @@
       "ny-g5-columbian-exchange text=d1e9c8a03f std=48cd9b6eae q=625d765c55",
       "ca-g5-thirteen-colonies text=b2ab7c1f74 std=044d1808b1 q=17e62378ec",
       "ca-g5-colonial-economy text=302c8d93ea std=8a3307d27d q=78476c23e0",
-      "ca-g5-road-to-revolution text=f43acaa35e std=7ec2d1132e q=348033ff6d",
+      "ca-g5-road-to-revolution text=f43acaa35e std=7ec2d1132e q=547def255f",
       "ca-g5-revolution text=9f9c895b95 std=4259070a84 q=77d806ef60",
       "md-g4-worlds-collide text=982cf3cd8d std=ccb533eef5 q=10c8b30c18",
       "md-g4-maryland-colony text=0cd4f1ae34 std=194a4b9ff2 q=b764e6aeed",
@@ -541,7 +541,7 @@
       "ca-g6-human-impact text=8d04fb23b9 std=a0f6568d2c q=e8e81a8802",
       "md-g6-weather text=f6979f7be0 std=bf76790cc6 q=c46882c8c0",
       "md-g6-climate text=6fc38806d1 std=5ac511bf6d q=d4d75adf74",
-      "md-g6-growth text=a26b1a5120 std=b0947d3c39 q=fda5ffbf3f",
+      "md-g6-growth text=a26b1a5120 std=b0947d3c39 q=c7d8482263",
       "md-g6-design text=d0b4389208 std=98b2d7be6a q=ed367fe370"
     ]
   },
@@ -815,7 +815,7 @@
       "ca-g9-earth-interior text=5353771af0 std=197d3d87a4 q=ce35f414aa",
       "ca-g9-climate-feedbacks text=294b68d3fa std=37abc57bb4 q=1c06419890",
       "ca-g9-resources text=8c64d966db std=55e8f59000 q=4e2c013ca5",
-      "md-g9-ecosystems text=8e0de75386 std=fe2118a95a q=d2daac6f89"
+      "md-g9-ecosystems text=8e0de75386 std=fe2118a95a q=89a0857e34"
     ]
   },
   "9/social": {

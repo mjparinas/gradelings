@@ -387,7 +387,7 @@
       "ca-g4-design text=b9db64360f std=de3146f1fb q=0d1888c149",
       "ky-g4-earth-hazards text=d13f81bb9b std=dd73fd2072 q=44e22106b3",
       "ky-g4-energy-resources text=7b93c5131e std=66ea9f37b9 q=06aa28d839",
-      "ky-g4-fossils text=c578450bb4 std=08d4bca21e q=c41efdd47e",
+      "ky-g4-fossils text=c578450bb4 std=08d4bca21e q=16450a1378",
       "ky-g4-rocks-erosion text=0768276dde std=a8b6764ecd q=87ce948cc0"
     ]
   },
@@ -472,7 +472,7 @@
   "5/social": {
     "overview": "182a4b24d0",
     "units": [
-      "ca-g5-road-to-revolution text=f43acaa35e std=fc532ae17b q=348033ff6d",
+      "ca-g5-road-to-revolution text=f43acaa35e std=fc532ae17b q=547def255f",
       "ca-g5-revolution text=9f9c895b95 std=bbc8539a4c q=77d806ef60",
       "ca-g8-revolutionary-ideas text=543eb450c3 std=0284b88042 q=1bdb99ec2b",
       "wa-g5-constitution text=4fce7c7602 std=9542270d83 q=2d1d2c254b",
@@ -563,7 +563,7 @@
       "ca-g6-hebrews-kush text=6d86e5dd61 std=7a9235adc9 q=f08540383b",
       "ca-g6-ancient-india text=59ebe86493 std=16c9fe59ba q=86361754ed",
       "ny-g6-classical-china-india text=3389ff18ee std=d0e5d01e83 q=9a4731e2a5",
-      "ca-g6-greece-rome text=becfd03e78 std=fe5911e610 q=248e19dbff",
+      "ca-g6-greece-rome text=becfd03e78 std=fe5911e610 q=66c3129534",
       "wa-g6-greece-rome text=07d03c3210 std=591d769613 q=c581214fd3",
       "world-beliefs text=cc74370028 std=9782be80ab q=eaa6186bca",
       "trade-networks text=37074f947d std=8f96c449a2 q=bfbd39ee46",
@@ -725,7 +725,7 @@
       "ca-g8-embryos text=46f9510ea2 std=15ab5b489a q=594a94b5eb",
       "ca-g8-population-resources text=ad02402e3c std=76f5c364c1 q=7d3a017855",
       "ca-g8-design text=a660cd8c37 std=90565d3996 q=2d2421bc23",
-      "ky-g8-growth text=4507cd1943 std=4563204650 q=4b158d7b4f",
+      "ky-g8-growth text=4507cd1943 std=4563204650 q=685380ebc5",
       "ky-g8-resources text=6a7c29c604 std=6671b2e459 q=3549a34c6f",
       "ky-g8-biodiversity text=e9229cd4c6 std=77cef0b559 q=3b25b8e4da",
       "ky-g8-earth-history text=190dd4f0f8 std=479d140a4a q=e8d7db4e52"
@@ -838,7 +838,7 @@
       "ca-g9-earth-interior text=5353771af0 std=197d3d87a4 q=ce35f414aa",
       "ca-g9-climate-feedbacks text=294b68d3fa std=37abc57bb4 q=1c06419890",
       "ca-g9-resources text=8c64d966db std=55e8f59000 q=4e2c013ca5",
-      "ky-g9-ecosystems text=548fbcee63 std=fe2118a95a q=302773441c"
+      "ky-g9-ecosystems text=548fbcee63 std=fe2118a95a q=f60e3f9a50"
     ]
   },
   "9/social": {
