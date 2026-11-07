@@ -760,10 +760,10 @@
     "overview": "e76fc27703",
     "units": [
       "close-reading text=1934195db9 std=bff49aaa41 q=95e83bca39",
-      "literary-elements text=c987189fb1 std=de9a22ce0a q=b7a0a5844a",
+      "literary-elements text=c987189fb1 std=de9a22ce0a q=3f207a363a",
       "argument-and-rhetoric text=b5525b0494 std=2fa8289c26 q=ce069191ec",
-      "grammar-and-style text=8039e9ed51 std=6a64fd2823 q=37d6dcd28c",
-      "language-and-style text=f2649185d5 std=cea1c4f2b6 q=2f3d7024fe",
+      "grammar-and-style text=8039e9ed51 std=6a64fd2823 q=dba6ff55c7",
+      "language-and-style text=f2649185d5 std=cea1c4f2b6 q=8a7146632d",
       "voices-and-perspectives text=4a64b8eb2c std=20d3f378d4 q=bcac63bd34"
     ]
   },

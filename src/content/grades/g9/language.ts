@@ -2,6 +2,7 @@ import { sample, shuffle } from "../../random";
 import type { SortSet } from "../../bank";
 import type { Course, GenerateOptions, Question, Visual } from "../../types";
 import { ask, choose, fromParts, levelOf, q, qe, type Item, type Level } from "../kit";
+import { ELEMENTS_DEEP, GRAMMAR_DEEP, STYLE_DEEP, TONE_DEEP } from "./language-deeper";
 
 // Grade 9 English language arts: close reading, literary elements, argument and rhetoric,
 // grammar and style, and voices and perspectives. Passages are original.
@@ -355,13 +356,13 @@ const REGISTER: SortSet = {
 
 function literaryElements(opts?: GenerateOptions): Question[] {
   const level = levelOf(opts);
-  return shuffle([...choose(ELEMENTS, level, 6), ...choose(TONE_MOOD, level, 2)]).map(ask);
+  return shuffle([...choose([...ELEMENTS, ...ELEMENTS_DEEP], level, 6), ...choose([...TONE_MOOD, ...TONE_DEEP], level, 2)]).map(ask);
 }
 
 const rhetoric = (opts?: GenerateOptions): Question[] => fromParts({ items: RHETORIC, sorts: [APPEALS] }, opts);
-const grammar = (opts?: GenerateOptions): Question[] => fromParts({ items: GRAMMAR, sorts: [PUNCTUATION_SORT] }, opts);
+const grammar = (opts?: GenerateOptions): Question[] => fromParts({ items: [...GRAMMAR, ...GRAMMAR_DEEP], sorts: [PUNCTUATION_SORT] }, opts);
 const voices = (opts?: GenerateOptions): Question[] => fromParts({ items: VOICES }, opts);
-const style = (opts?: GenerateOptions): Question[] => fromParts({ items: STYLE, sorts: [REGISTER] }, opts);
+const style = (opts?: GenerateOptions): Question[] => fromParts({ items: [...STYLE, ...STYLE_DEEP], sorts: [REGISTER] }, opts);
 
 // ---------- Course ----------
 
