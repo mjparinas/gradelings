@@ -124,6 +124,166 @@ export const ARTICLES: Article[] = [
       { prompt: "Who discusses and votes on a bill?", right: "Elected representatives", wrong: ["Only the newest citizens", "Anyone who walks past"], why: "Elected representatives read, discuss and vote." },
     ],
   },
+
+  // ——— More for Grades 2 to 4 ———
+  {
+    id: "why-the-sky-is-blue", band: "middle", topic: "science", title: "Why the sky is blue", emoji: "🌤️",
+    paragraphs: [
+      "Sunlight looks white, but it is really a mix of many kinds of light. It holds red, orange, yellow, green, blue and purple, like a rainbow.",
+      "Air is made of tiny bits of gas. When sunlight hits them, the light bounces in every direction. Blue light bounces much more than red light does.",
+      "So blue light reaches your eyes from all over the sky. That is why the sky looks blue on a clear day.",
+      "At sunset, the light has a long way to travel through the air. Most of the blue bounces away, and we see orange and red.",
+    ],
+    asks: [
+      { prompt: "What bounces around the most when sunlight meets the air?", right: "Blue light", wrong: ["Red light", "Sound"], why: "Blue light bounces much more than red light, so blue fills the sky." },
+      { prompt: "Why does the sky look orange and red at sunset?", right: "Most of the blue light bounces away", wrong: ["The Sun turns off", "The air turns into paint"], why: "The light travels a long way through the air, and the blue bounces away." },
+    ],
+  },
+  {
+    id: "why-we-have-seasons", band: "middle", topic: "science", title: "Why we have seasons", emoji: "🍂",
+    paragraphs: [
+      "Earth takes one year to travel all the way around the Sun. While it travels, it spins like a top that is tilted a little to one side.",
+      "The tilt matters. When your part of Earth leans toward the Sun, the sunlight is stronger and the days are longer. That is summer.",
+      "Six months later, your part of Earth leans away. The sunlight is weaker and the days are shorter. That is winter.",
+      "Spring and fall come in between. Seasons happen because of the tilt, not because Earth moves closer to or farther from the Sun.",
+    ],
+    asks: [
+      { prompt: "What causes the seasons?", right: "Earth is tilted as it goes around the Sun", wrong: ["Earth moves much closer to the Sun", "The Sun gets bigger and smaller"], why: "Seasons happen because of Earth's tilt." },
+      { prompt: "What is true in summer where you live?", right: "Your part of Earth leans toward the Sun", wrong: ["Your part of Earth leans away from the Sun", "The Sun is turned off at night"], why: "In summer, your part of Earth leans toward the Sun." },
+    ],
+  },
+  {
+    id: "what-is-a-food-chain", band: "middle", topic: "science", title: "What is a food chain?", emoji: "🦊",
+    paragraphs: [
+      "Every living thing needs energy. A food chain shows how that energy moves from one living thing to the next.",
+      "A food chain starts with a plant. Plants use sunlight to make their own food, so they are called producers.",
+      "A rabbit eats the plant. Then a fox eats the rabbit. Animals that eat other living things are called consumers.",
+      "In a picture of a food chain, the arrows point the way the energy goes. The arrow points from the food to the animal that eats it.",
+    ],
+    asks: [
+      { prompt: "What do plants use to make their own food?", right: "Sunlight", wrong: ["Rabbits", "Moonlight"], why: "Plants use sunlight to make food, so they are producers." },
+      { prompt: "In a food chain picture, which way does an arrow point?", right: "From the food to the one that eats it", wrong: ["From the eater to its food", "Straight up to the clouds"], why: "Arrows show where the energy goes: from food to eater." },
+    ],
+  },
+  {
+    id: "why-we-recycle", band: "middle", topic: "world", title: "Why we recycle", emoji: "♻️",
+    paragraphs: [
+      "Every day, people throw away cans, bottles, paper and boxes. If all of it went into a big hole in the ground, the holes would soon fill up.",
+      "Recycling gives old things a second life. Trucks carry paper, metal, glass and some plastic to a factory.",
+      "At the factory, workers sort the pieces. Then machines clean them, melt or mash them, and make them into new things.",
+      "Recycling saves materials from nature and keeps trash out of the ground. A little effort at home helps all of us.",
+    ],
+    asks: [
+      { prompt: "What happens to recycled glass at a factory?", right: "It is made into new things", wrong: ["It is buried in the ground", "It is turned into water"], why: "Recycled materials are cleaned, melted or mashed, and made into new things." },
+      { prompt: "Why is recycling a good idea?", right: "It saves materials and keeps trash out of the ground", wrong: ["It makes more trash", "It uses up all the metal"], why: "Recycling saves materials and cuts down on trash." },
+    ],
+  },
+  {
+    id: "communities-big-and-small", band: "middle", topic: "world", title: "Communities big and small", emoji: "🏘️",
+    paragraphs: [
+      "A community is a group of people who live, work or play in one place. Some are big cities. Some are tiny villages.",
+      "In every community, people share things. They use the same parks, roads and schools.",
+      "Many people have jobs that help us all. Nurses, bus drivers, teachers and firefighters help the whole community.",
+      "Big or small, a community works best when people take turns, follow rules and help each other.",
+    ],
+    asks: [
+      { prompt: "What is a community?", right: "A group of people who share a place", wrong: ["A kind of weather", "A tool for measuring"], why: "People who live, work or play in the same place make a community." },
+      { prompt: "Which is something people in a community share?", right: "A park", wrong: ["A toothbrush", "A dream they had last night"], why: "People share parks, roads, libraries and schools." },
+    ],
+  },
+  {
+    id: "the-wheel", band: "middle", topic: "world", title: "The wheel", emoji: "🛞",
+    paragraphs: [
+      "Long ago, people had to drag heavy loads across the ground. It was slow, hard work.",
+      "More than five thousand years ago, people began to use wheels. A wheel turns on a bar called an axle, and a round wheel rolls much more easily than a flat sled slides.",
+      "Carts with wheels could carry food, tools and people from place to place. Trading and travel grew faster.",
+      "Today, wheels are everywhere. They turn on bikes, cars, wagons and suitcases, and gears inside clocks and machines are wheels with teeth.",
+    ],
+    asks: [
+      { prompt: "What does a wheel turn on?", right: "An axle", wrong: ["A rope", "A sail"], why: "A wheel turns on a bar called an axle." },
+      { prompt: "Why were carts with wheels so useful?", right: "They carried heavy loads more easily", wrong: ["They made loads heavier", "They stopped people from moving things"], why: "A rolling wheel makes it much easier to move loads." },
+    ],
+  },
+
+  // ——— More for Grades 5 to 9 ———
+  {
+    id: "how-volcanoes-erupt", band: "big", topic: "science", title: "How a volcano erupts", emoji: "🌋",
+    paragraphs: [
+      "Deep underground, some rock is so hot that it melts. This molten rock is called magma, and it is lighter than the solid rock around it, so it slowly rises.",
+      "Magma also holds dissolved gases. As it climbs and the pressure drops, the gases form bubbles, much like the bubbles that appear when you open a bottle of sparkling water.",
+      "If the magma is thick and the gas cannot escape easily, pressure builds until the magma bursts out. When magma reaches the surface, it is called lava.",
+      "Lava cools into new rock. Many volcanoes form where Earth's moving plates meet, which is why they often appear in long chains.",
+    ],
+    asks: [
+      { prompt: "What is magma called once it reaches the surface?", right: "Lava", wrong: ["Ash", "Granite"], why: "Magma underground becomes lava when it flows out onto the surface." },
+      { prompt: "Why does magma rise through solid rock?", right: "It is lighter than the rock around it", wrong: ["It is heavier than the rock around it", "It is pulled up by the Moon"], why: "Hot, melted magma is lighter than the solid rock around it." },
+    ],
+  },
+  {
+    id: "why-sleep-matters", band: "big", topic: "science", title: "Why your body needs sleep", emoji: "😴",
+    paragraphs: [
+      "Sleep may look like doing nothing, but your body and brain are working hard. Muscles and other tissues repair themselves, and growth hormones are released.",
+      "Your brain is busy too. During sleep, it sorts through the day's experiences and strengthens the memories that matter, which helps you learn.",
+      "Children and teenagers need more sleep than adults do. School-age children generally need about nine to twelve hours a night, and teenagers about eight to ten.",
+      "Too little sleep can make it harder to focus, remember things and manage feelings. Regular bedtimes and screen-free evenings help many people sleep better.",
+    ],
+    asks: [
+      { prompt: "What does the brain do with the day's experiences during sleep?", right: "Sorts them and strengthens important memories", wrong: ["Erases all of them", "Turns them into muscles"], why: "Sleep helps the brain sort and store memories." },
+      { prompt: "Who generally needs more sleep?", right: "Children and teenagers", wrong: ["Only adults", "Nobody needs it"], why: "Growing children and teenagers need more sleep than adults do." },
+    ],
+  },
+  {
+    id: "how-the-heart-works", band: "big", topic: "science", title: "How your heart works", emoji: "❤️",
+    paragraphs: [
+      "Your heart is a muscle about the size of your fist. It never rests: at rest, an adult's heart beats about once every second, pushing blood around the body.",
+      "Blood carries oxygen and nutrients to every part of you. The heart has two sides. One side sends blood to the lungs to pick up oxygen, and the other sends oxygen-rich blood out to the body.",
+      "Inside the heart, small flaps called valves open and close. They make sure that blood moves in only one direction.",
+      "Each beat is a squeeze followed by a relaxing. Exercise makes the heart beat faster, because muscles then need more oxygen.",
+    ],
+    asks: [
+      { prompt: "What does blood carry to every part of the body?", right: "Oxygen and nutrients", wrong: ["Light and sound", "Bones and skin"], why: "Blood delivers oxygen and nutrients to the whole body." },
+      { prompt: "What do the valves inside the heart do?", right: "Keep blood moving in one direction", wrong: ["Make the heart grow", "Pump air into the lungs"], why: "Valves open and close so blood flows only one way." },
+    ],
+  },
+  {
+    id: "the-printing-press", band: "big", topic: "world", title: "How the printing press changed the world", emoji: "📚",
+    paragraphs: [
+      "Long ago, every book had to be copied by hand. A single book could take months to finish, so books were rare and expensive, and most people never owned one.",
+      "People in China and Korea had already printed with movable pieces of type. Around the year 1450, a German goldsmith named Johannes Gutenberg built a press in Europe that used movable metal letters.",
+      "The letters could be rearranged and reused, so a printer could produce many copies of a page quickly.",
+      "Books became cheaper, and ideas spread farther and faster. More people learned to read, and knowledge about science, history and religion reached many new readers.",
+    ],
+    asks: [
+      { prompt: "Before the printing press, how were books made?", right: "Copied by hand", wrong: ["Printed by machines in factories", "Downloaded from the internet"], why: "Every book was copied by hand, which took months." },
+      { prompt: "What made the movable-type press so useful?", right: "Letters could be reused to print many copies quickly", wrong: ["It made paper from trees", "It only printed one book ever"], why: "Reusable letters let printers make many copies quickly." },
+    ],
+  },
+  {
+    id: "why-time-zones-exist", band: "big", topic: "world", title: "Why the world has time zones", emoji: "🕒",
+    paragraphs: [
+      "Earth spins once every twenty-four hours, so the Sun is high in the sky in one place while it is dark in another. If every town set its clock by its own noon, nearby towns would have slightly different times.",
+      "This became a real problem in the 1800s, when trains let people travel quickly between towns. Train timetables were confusing, so countries began to agree on standard times.",
+      "Today the world is divided into time zones. Moving from one zone to the next usually changes the time by one hour, although a few places use half-hour or other differences.",
+      "Time zones help people schedule flights, phone calls and meetings with friends far away. When it is morning for you, it may already be evening somewhere else.",
+    ],
+    asks: [
+      { prompt: "Why is it dark in one place while it is daytime in another?", right: "Earth spins, so only part of it faces the Sun", wrong: ["The Moon blocks the Sun in some places", "Clocks are set differently by mistake"], why: "Earth spins, so the Sun lights only part of it at a time." },
+      { prompt: "Why did countries start using standard times?", right: "Train timetables were confusing", wrong: ["The Sun stopped moving", "Clocks were invented that day"], why: "Fast trains made each town's own time a problem." },
+    ],
+  },
+  {
+    id: "how-to-judge-a-source", band: "big", topic: "world", title: "How to tell if a source is trustworthy", emoji: "🔎",
+    paragraphs: [
+      "Anyone can post anything online, so not everything you read is true. Learning to judge a source is an important skill for school and for life.",
+      "Start by asking who made it. A source is more trustworthy when the author is named, has real knowledge of the topic, and explains where the facts came from.",
+      "Next, check the date and whether the information is still current. Then look for the same facts in other reliable places, such as encyclopedias, museums or respected news organizations.",
+      "Be careful with sources that try to make you angry or sell you something. Strong feelings can make a weak claim feel true, so pause and check before you share.",
+    ],
+    asks: [
+      { prompt: "Which is a good sign that a source is trustworthy?", right: "It names the author and explains where facts came from", wrong: ["It uses lots of capital letters", "It has the most likes"], why: "Trustworthy sources are open about who wrote them and where the facts came from." },
+      { prompt: "What should you do after reading a surprising claim?", right: "Check other reliable sources", wrong: ["Share it right away", "Ignore the date"], why: "Finding the same facts in other reliable places helps you decide if a claim is true." },
+    ],
+  },
 ];
 
 export function articlesFor(band: AgeBand): Article[] {

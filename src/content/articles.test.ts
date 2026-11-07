@@ -2,9 +2,9 @@ import { describe, expect, it } from "vitest";
 import { ARTICLES, articleLevel, articleQuestion, articlesFor, findArticle } from "./articles";
 
 describe("articles", () => {
-  it("has four articles for Grades 2 to 4 and four for Grades 5 to 9, none for little kids", () => {
-    expect(articlesFor("middle")).toHaveLength(4);
-    expect(articlesFor("big")).toHaveLength(4);
+  it("has ten articles for Grades 2 to 4 and ten for Grades 5 to 9, none for little kids", () => {
+    expect(articlesFor("middle")).toHaveLength(10);
+    expect(articlesFor("big")).toHaveLength(10);
     expect(articlesFor("little")).toHaveLength(0);
     expect(new Set(ARTICLES.map((a) => a.id)).size).toBe(ARTICLES.length);
     expect(findArticle(ARTICLES[0].id)).toBe(ARTICLES[0]);
@@ -13,7 +13,9 @@ describe("articles", () => {
 
   it("has a mix of science and world in each band", () => {
     for (const band of ["middle", "big"] as const) {
-      expect(new Set(articlesFor(band).map((a) => a.topic))).toEqual(new Set(["science", "world"]));
+      const list = articlesFor(band);
+      expect(list.filter((a) => a.topic === "science")).toHaveLength(5);
+      expect(list.filter((a) => a.topic === "world")).toHaveLength(5);
     }
   });
 
