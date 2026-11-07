@@ -109,7 +109,7 @@
       "ca-k-good-citizens text=d7b0dbd711 std=39024cdb0f q=ba47e020d0",
       "ca-k-american-stories text=988c06d381 std=d24de02fec q=b7f85514af",
       "ny-k-symbols-holidays text=c6f7569025 std=7430244aaa q=580dcd0e4e",
-      "sd-k-our-state text=1589aec2fe std=8eab594828 q=90945102e6"
+      "sd-k-our-state text=1589aec2fe std=8eab594828 q=e6c228029f"
     ]
   },
   "1/language": {
@@ -177,7 +177,7 @@
       "ny-g1-rules-and-government text=ec41bb8674 std=497d8a6c7c q=94953413c5",
       "ny-g1-american-symbols text=2a7c05d064 std=93c01236fb q=8d619485e3",
       "ga-g1-american-heroes text=cc9eb82a29 std=1962eaeaf4 q=b4c3ba359d",
-      "sd-g1-south-dakota text=696d770f0a std=17070bcf0c q=94bb914ebd",
+      "sd-g1-south-dakota text=696d770f0a std=17070bcf0c q=c0889105cc",
       "sd-g1-first-peoples text=1ae1142af4 std=ca4fcfef88 q=b3ecaae8f0",
       "sd-g1-ancient-world text=28f650e956 std=dc25394b02 q=8efe37ce48",
       "sd-g1-founding-stories text=19af2ba3d9 std=73f7562875 q=d4275f6f9a"
@@ -318,7 +318,7 @@
       "ga-g3-explorers text=31163461fe std=36a32a4127 q=2f9bff5aff",
       "ca-g5-thirteen-colonies text=b2ab7c1f74 std=f06370f764 q=17e62378ec",
       "ca-g5-colonial-economy text=302c8d93ea std=5bab45698f q=78476c23e0",
-      "sd-g3-south-dakota-places text=c77a8586a2 std=4fa5411774 q=5818d40c4b"
+      "sd-g3-south-dakota-places text=c77a8586a2 std=4fa5411774 q=cb4f9a34fe"
     ]
   },
   "3/spanish": {
@@ -401,8 +401,8 @@
       "ca-g5-revolution text=9f9c895b95 std=cc8d5800a6 q=77d806ef60",
       "ca-g5-constitution text=f0912d934b std=202bc7ad4c q=f7d329903c",
       "wa-g8-bill-of-rights text=edcc86640b std=37489e9bc4 q=6898ac27d5",
-      "sd-g4-regions text=2a1036012a std=d466973849 q=3d70d98b42",
-      "sd-g4-corps-of-discovery text=60f0a64d11 std=814338941d q=03774d1d2d"
+      "sd-g4-regions text=2a1036012a std=d466973849 q=372d46bff2",
+      "sd-g4-corps-of-discovery text=60f0a64d11 std=814338941d q=f00c6a305d"
     ]
   },
   "4/spanish": {
@@ -482,7 +482,7 @@
       "or-g8-reconstruction text=90b606a220 std=63f74e52c7 q=4c87f1ca5f",
       "ca-g8-industrial-america text=59fae20492 std=630f505c2c q=14f2ec92f7",
       "ny-g8-city-immigrants text=404df69c6c std=c7cbcd02b1 q=7c69f670c0",
-      "sd-g5-dakota-territory text=c5dd37c4f0 std=cf9dd7b898 q=9136a7c137"
+      "sd-g5-dakota-territory text=c5dd37c4f0 std=cf9dd7b898 q=70b1c47a3f"
     ]
   },
   "5/spanish": {
@@ -654,7 +654,7 @@
       "ca-g8-civil-war text=01b158a689 std=36d98d640f q=538b60ca99",
       "or-g8-reconstruction text=0da2eecd65 std=28164d35b9 q=4c87f1ca5f",
       "sd-g7-oceti-sakowin text=9d5f7e3ad3 std=d69f13f98e q=92a5ff0763",
-      "sd-g7-south-dakota-geography text=42ec00024f std=e7fef24cf5 q=1ca5c4d5fe"
+      "sd-g7-south-dakota-geography text=42ec00024f std=e7fef24cf5 q=76e06abc13"
     ]
   },
   "7/spanish": {
@@ -741,8 +741,8 @@
       "ny-g8-civil-rights text=2a5251702b std=ed25382508 q=8f81d3992c",
       "ny-g8-great-society text=5e0e756027 std=a1f57a4412 q=2924363d91",
       "ny-g8-new-era text=47f408325e std=2943e6b5e9 q=503ac2b076",
-      "sd-g8-dakota-1800s text=4256041f24 std=2d629af662 q=38341c7a96",
-      "sd-g8-depression-and-war text=4511078f22 std=9ef04e05b4 q=a5ee0233f9"
+      "sd-g8-dakota-1800s text=4256041f24 std=2d629af662 q=daac9509f4",
+      "sd-g8-depression-and-war text=4511078f22 std=9ef04e05b4 q=23b52f9741"
     ]
   },
   "8/spanish": {
@@ -852,7 +852,7 @@
       "ca-g9-lawmaking text=2a409ee163 std=4989a249f3 q=83325c4e69",
       "ca-g9-media text=67bc186bc5 std=af0c04fa7c q=0fc3f3ad1e",
       "pa-g9-foreign-policy text=b348a17deb std=e07824f734 q=fb77c5203c",
-      "sd-g9-governing-south-dakota text=0d622c3ff0 std=27f3478643 q=1036b40a0c"
+      "sd-g9-governing-south-dakota text=0d622c3ff0 std=27f3478643 q=d8844314a2"
     ]
   },
   "9/spanish": {

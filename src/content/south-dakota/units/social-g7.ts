@@ -1,5 +1,6 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { GEOGRAPHY_MORE } from "./social-more";
 
 // South Dakota Grade 7 social studies: Native American peoples of North America before Europeans arrived, centered on
 // the Oceti Sakowin Oyate and the other Nations of South Dakota (7.SS.3), and South Dakota's geography: its landforms,
@@ -80,6 +81,6 @@ export const SOCIAL_7: Unit[] = [
     parentNote:
       "South Dakota's geography: Black Elk Peak, the Black Hills and their rivers, the Missouri River's lakes (Oahe, Francis Case and Lewis and Clark), the Drift Prairie and Dissected Till Plains, landmarks such as Wind Cave, Custer State Park, the Crazy Horse Memorial and the Homestake Mine, the nine reservations of the Oceti Sakowin Oyate, and how the state compares with other regions.",
     standards: ["7.SS.2", "the geographic features, regions, cities, landmarks and reservations of South Dakota, and America's regions compared with South Dakota"],
-    items: GEOGRAPHY,
+    items: [...GEOGRAPHY, ...GEOGRAPHY_MORE],
   }),
 ];
