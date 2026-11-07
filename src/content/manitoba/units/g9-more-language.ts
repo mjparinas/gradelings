@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { COMPOSE_DEEP, FEEDBACK_DEEP, PURPOSE_DEEP, RESEARCH_DEEP, SUMMARY_DEEP, VOCAB_DEEP } from "./g9-more-language-deeper";
 
 // More Grade 9 English language arts units written for Manitoba outcomes that the shared units do not cover:
 // reading with a purpose (ELA.9.B1, B2.2, B2.4, B4.1), summarizing (B2.5), planning and research (C1.1 to C1.4),
@@ -182,7 +183,7 @@ export const units = [
     blurb: "Prior knowledge, connections, questions and reflecting on what you learn.",
     parentNote: "Practises setting a purpose for reading, using prior knowledge and making connections, monitoring understanding, fluency and reflecting on new learning.",
     standards: ["ELA.9.B1.1, ELA.9.B1.2, ELA.9.B2.2, ELA.9.B2.4, ELA.9.B4.1", "purpose, prior knowledge, connections, fluency and reflecting on new learning"],
-    items: PURPOSE,
+    items: [...PURPOSE, ...PURPOSE_DEEP],
   }),
   bankUnit({
     id: "mb-summarizing",
@@ -191,7 +192,7 @@ export const units = [
     blurb: "Find the main ideas and put them in your own words.",
     parentNote: "Practises summarizing: grouping related ideas, separating important from less important information, paraphrasing and keeping the author's message.",
     standards: ["ELA.9.B2.5", "summarizing key ideas while keeping the author's message"],
-    items: SUMMARY,
+    items: [...SUMMARY, ...SUMMARY_DEEP],
   }),
   bankUnit({
     id: "mb-plan-and-research",
@@ -200,7 +201,7 @@ export const units = [
     blurb: "Choose topics, find reliable sources and plan before you write.",
     parentNote: "Practises generating and narrowing topics, using multiple sources, judging reliability, taking notes, citing sources and choosing planning tools.",
     standards: ["ELA.9.C1.1, ELA.9.C1.2, ELA.9.C1.4", "generating ideas, using sources and planning texts"],
-    items: RESEARCH,
+    items: [...RESEARCH, ...RESEARCH_DEEP],
   }),
   bankUnit({
     id: "mb-choose-form-and-compose",
@@ -209,7 +210,7 @@ export const units = [
     blurb: "Pick the right form for your audience and shape a clear text.",
     parentNote: "Practises choosing a form for purpose and audience, tone, organization, transitions, text features and design choices when composing and publishing.",
     standards: ["ELA.9.C1.5, ELA.9.C1.6, ELA.9.C1.7, ELA.9.C2.1, ELA.9.C3.4", "choosing form, composing, reorganizing and publishing texts"],
-    items: COMPOSE,
+    items: [...COMPOSE, ...COMPOSE_DEEP],
   }),
   bankUnit({
     id: "mb-feedback-and-goals",
@@ -218,7 +219,7 @@ export const units = [
     blurb: "Use feedback, set goals and show your growth as a learner.",
     parentNote: "Practises applying descriptive feedback, using criteria, setting clear learning goals and tracking progress with evidence.",
     standards: ["ELA.9.D2.1, ELA.9.D2.2", "using feedback, setting goals and monitoring progress"],
-    items: FEEDBACK,
+    items: [...FEEDBACK, ...FEEDBACK_DEEP],
   }),
   bankUnit({
     id: "mb-vocabulary-and-spelling",
@@ -227,6 +228,6 @@ export const units = [
     blurb: "Word parts, subject words and tricky spellings.",
     parentNote: "Practises specialized vocabulary, Greek and Latin word parts, context clues and commonly misspelled words, using Canadian spelling.",
     standards: ["ELA.9.A2.1, ELA.9.A2.2, ELA.9.A2.3, ELA.9.A2.4", "foundational word knowledge applied to specialized vocabulary and spelling"],
-    items: VOCAB,
+    items: [...VOCAB, ...VOCAB_DEEP],
   }),
 ];
