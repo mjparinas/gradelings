@@ -1,5 +1,6 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { CIVICS_MORE, GOVERNMENT_MORE, LAND_MORE, MAPS_MORE } from "./social-g4-more";
 
 // Washington Grade 4 social studies (theme: Washington State): the land and regions, maps and movement, and the
 // state's government and constitution.
@@ -160,7 +161,7 @@ export const OWN_SOCIAL_4A: Unit[] = [
     parentNote:
       "Practises Washington's physical and political geography: the capital and largest cities, the Cascade and Olympic Mountains, volcanoes, the Columbia and Snake Rivers, Puget Sound, neighbouring states, counties and how the land shaped where people settled and travelled.",
     standards: ["G1.4.2; G2.4.1", "physical, political and cultural characteristics of the Pacific Northwest and how geography influenced movement"],
-    items: LAND,
+    items: [...LAND, ...LAND_MORE],
   }),
   bankUnit({
     id: "wa-g4-maps-movement",
@@ -170,7 +171,7 @@ export const OWN_SOCIAL_4A: Unit[] = [
     parentNote:
       "Practises latitude and longitude, map scales, thematic maps, Washington's regions and maps that show how people moved, from Tribal trade routes to the Oregon Trail and railroads.",
     standards: ["G1.4.1; G1.4.2; G2.4.2", "using maps to explain the movement of people and the regions of the Pacific Northwest"],
-    items: MAPS,
+    items: [...MAPS, ...MAPS_MORE],
   }),
   bankUnit({
     id: "wa-g4-state-government",
@@ -180,7 +181,7 @@ export const OWN_SOCIAL_4A: Unit[] = [
     parentNote:
       "Practises the three branches of Washington's government, the Legislature (Senate and House), the governor, the Supreme Court, the 1889 constitution and its Declaration of Rights, local, state and Tribal government, taxes and ways citizens take part.",
     standards: ["C1.4.2; C1.4.3; C1.4.5; C2.4.1; C2.4.2; C2.4.3; C4.4.1; C4.4.2; E3.4.1", "the Washington constitution and rights, the branches and levels of government, civic participation and taxes"],
-    items: GOVERNMENT,
+    items: [...GOVERNMENT, ...GOVERNMENT_MORE],
   }),
   bankUnit({
     id: "wa-g4-civic-virtues",
@@ -190,6 +191,6 @@ export const OWN_SOCIAL_4A: Unit[] = [
     parentNote:
       "Practises civic virtues and democratic principles, deciding fairly as a group, unity and diversity in Washington, rights and responsibilities, and ways citizens influence state government, such as voting, petitions and testifying.",
     standards: ["C1.4.1; C1.4.3; C1.4.4; C2.4.3; C4.4.1; C4.4.2", "civic virtues and democratic principles, group decisions, unity and diversity, and influencing state government"],
-    items: CIVICS,
+    items: [...CIVICS, ...CIVICS_MORE],
   }),
 ];

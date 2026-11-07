@@ -1,5 +1,6 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { ECONOMY_MORE, HISTORY_MORE, PEOPLE_MORE } from "./social-g4-more";
 
 // Washington Grade 4 social studies (theme: Washington State history, including local Tribal history): Tribal
 // sovereignty and treaties, eras of Washington history to statehood in 1889, the state's economy, and the people who
@@ -162,7 +163,7 @@ export const OWN_SOCIAL_4B: Unit[] = [
     parentNote:
       "Practises the eras of Washington history: Tribes since time immemorial, exploration, the fur trade, the Oregon Trail, Washington Territory, treaties, railroads and statehood in 1889, plus why people saw events differently.",
     standards: ["H1.4.1; H1.4.2; H1.4.3; H3.4.1; H3.4.3; H3.4.4", "eras of Washington history to 1889 and the different perspectives of Native and non-Native people"],
-    items: HISTORY,
+    items: [...HISTORY, ...HISTORY_MORE],
   }),
   bankUnit({
     id: "wa-g4-economy",
@@ -172,7 +173,7 @@ export const OWN_SOCIAL_4B: Unit[] = [
     parentNote:
       "Practises Washington's economy: farming, aerospace, technology, timber, fishing and tourism, hydroelectric dams and irrigation, ports and trade across the Pacific, Tribal economies, human and physical capital, and inflation and deflation.",
     standards: ["E2.4.1; E2.4.2; E2.4.3; E2.4.4; E2.4.5; E3.4.2; E4.4.1; E4.4.3; G3.4.1", "Washington's economy, resources, specialization and trade in the Pacific Northwest"],
-    items: ECONOMY,
+    items: [...ECONOMY, ...ECONOMY_MORE],
   }),
   bankUnit({
     id: "wa-g4-people-and-change",
@@ -182,6 +183,6 @@ export const OWN_SOCIAL_4B: Unit[] = [
     parentNote:
       "Practises how people from many cultural groups shaped Washington, why people moved here and what it cost them, how technology such as railroads changed lives, and how to compare primary and secondary sources.",
     standards: ["E1.4.1; H2.4.1; H2.4.2; H2.4.3; H4.4.3", "people and groups who shaped Washington, the costs and benefits of moving, technology and historical sources"],
-    items: PEOPLE,
+    items: [...PEOPLE, ...PEOPLE_MORE],
   }),
 ];
