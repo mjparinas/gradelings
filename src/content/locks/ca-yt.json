@@ -679,10 +679,10 @@
     "overview": "e76fc27703",
     "units": [
       "close-reading text=b5e48e1704 std=7cb436e0c3 q=9ae7c5a9fa",
-      "literary-devices text=807aa8d25d std=60b69c8acd q=dbc870fffd",
+      "literary-devices text=807aa8d25d std=60b69c8acd q=92bd771be1",
       "argument-and-media text=38bdc7838c std=3b64c0d916 q=e3455a12dd",
-      "grammar-and-style text=4cac16a8c8 std=7f858a31a7 q=3d25d60229",
-      "word-study text=e9a31820f1 std=ea60c8ad95 q=e40812d304"
+      "grammar-and-style text=4cac16a8c8 std=7f858a31a7 q=19aa427fa0",
+      "word-study text=e9a31820f1 std=ea60c8ad95 q=15f2dda6fa"
     ]
   },
   "8/math": {
