@@ -723,16 +723,16 @@
   "8/language": {
     "overview": "abeb7ba251",
     "units": [
-      "word-study text=e9a31820f1 std=c6befb80fd q=e40812d304",
+      "word-study text=e9a31820f1 std=c6befb80fd q=15f2dda6fa",
       "strategies-8 text=14cb61c3b0 std=a6917613b6 q=7ec3688b00",
       "forms-features-8 text=612838fad2 std=90ee15a44e q=d9c6eb4303",
       "close-reading text=b5e48e1704 std=e799a3a1d1 q=9ae7c5a9fa",
       "narrator-8 text=b609477509 std=2896a382a0 q=ce56cbb1e0",
-      "literary-devices text=807aa8d25d std=1869f88745 q=dbc870fffd",
+      "literary-devices text=807aa8d25d std=1869f88745 q=92bd771be1",
       "argument-and-media text=38bdc7838c std=7967dbddc2 q=e3455a12dd",
       "digital-8 text=742bfe22d6 std=e42f9c7d2b q=a25584c75b",
       "writing-8 text=d9bb3a4cad std=17e78a0e6b q=1d05d6ba80",
-      "grammar-and-style text=4cac16a8c8 std=f3cfa96f37 q=3d25d60229"
+      "grammar-and-style text=4cac16a8c8 std=f3cfa96f37 q=19aa427fa0"
     ]
   },
   "8/math": {
