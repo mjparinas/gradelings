@@ -1,6 +1,7 @@
 import { coreQuestions, tagCoreFrench, type FrItem } from "../../french";
 import { randInt, shuffle, textChoice } from "../../random";
 import type { Course, GenerateOptions, Question } from "../../types";
+import { SOUNDS_DEEP } from "./core-french-deeper";
 
 // Core French: instructions are in English, the French is what students learn.
 
@@ -390,7 +391,7 @@ export const course: Course = {
       blurb: "Letters, accents, nasal vowels",
       parentNote: "French sounds (including nasal vowels), accents (é, è, ê, ç) and silent letters.",
       standards: { "ca-bc": "The French alphabet; French phonemes, including diphthongs and nasal vowels" },
-      generate: (o) => coreQuestions(SOUNDS, o, 8),
+      generate: (o) => coreQuestions([...SOUNDS, ...SOUNDS_DEEP], o, 8),
     },
     {
       id: "nombres",
