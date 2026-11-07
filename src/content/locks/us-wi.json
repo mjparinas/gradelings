@@ -707,11 +707,11 @@
       "wa-g8-fields text=8fbd720783 std=75a08ac3ad q=603f693f54",
       "wa-g8-heredity text=023de89543 std=d02d776ef2 q=0889381c05",
       "wa-g8-selection text=9af384fbd6 std=20e0640721 q=a225d53251",
-      "ca-g8-embryos text=46f9510ea2 std=1cde0c7d17 q=59154e5533",
-      "ca-g8-signals text=5d529d090d std=190a2eaa6f q=0897cd6d70",
-      "ca-g8-population-resources text=ad02402e3c std=ea00645b21 q=5db958f8c6",
-      "ca-g8-design text=a660cd8c37 std=bd0b6e2f9d q=2c436537ea",
-      "wi-g8-space text=9e73e8bdc0 std=7c05758f1c q=bdb18975af",
+      "ca-g8-embryos text=46f9510ea2 std=1cde0c7d17 q=594a94b5eb",
+      "ca-g8-signals text=5d529d090d std=190a2eaa6f q=455bd082a4",
+      "ca-g8-population-resources text=ad02402e3c std=ea00645b21 q=7d3a017855",
+      "ca-g8-design text=a660cd8c37 std=bd0b6e2f9d q=2d2421bc23",
+      "wi-g8-space text=9e73e8bdc0 std=7c05758f1c q=36c7d39cd3",
       "wi-g8-earth-history text=c69bcd1250 std=c78ce3206a q=260cbaae74"
     ]
   },

@@ -2,6 +2,7 @@ import type { Unit } from "../../types";
 import { SCIENCE_8 } from "../../washington/units/science-68";
 import { bankUnit } from "../own";
 import { copyOf, from } from "./kit";
+import { DESIGN_MORE, EMBRYOS_MORE, POPULATION_MORE, SIGNALS_MORE, SPACE_MORE } from "./science-g8-more";
 
 // California copies of Washington and Oregon science units built around Pacific Northwest places. Each keeps the
 // original's questions, leaves out the ones about Washington, Oregon or Puget Sound, and adds California items: the
@@ -41,6 +42,7 @@ export const SCIENCE_COPIES: Unit[] = [
         "Tilt away from the sun.",
         true,
       ],
+      ...SPACE_MORE,
     ],
   ),
 ];
@@ -213,6 +215,7 @@ export const OWN_SCIENCE: Unit[] = [
         "Shared features suggest shared ancestry.",
         true,
       ],
+      ...EMBRYOS_MORE,
     ],
   }),
   bankUnit({
@@ -379,6 +382,7 @@ export const OWN_SCIENCE: Unit[] = [
         "Digital is all or nothing.",
         true,
       ],
+      ...SIGNALS_MORE,
     ],
   }),
   bankUnit({
@@ -545,6 +549,7 @@ export const OWN_SCIENCE: Unit[] = [
         "Consumption differs.",
         true,
       ],
+      ...POPULATION_MORE,
     ],
   }),
   bankUnit({
@@ -715,6 +720,7 @@ export const OWN_SCIENCE: Unit[] = [
         "Kinetic energy grows with speed squared.",
         true,
       ],
+      ...DESIGN_MORE,
     ],
   }),
 ];
