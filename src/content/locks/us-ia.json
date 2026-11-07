@@ -541,7 +541,7 @@
       "wa-g6-thermal text=fa4c935e2b std=adbe787bdb q=369cdfaaee",
       "particles-heat-ab text=75de918104 std=7d6f5bb279 q=26cfcc3a0f",
       "light-and-radiation text=9e640798cf std=33c4fdea6e q=9cc1a70761",
-      "ca-g8-signals text=5d529d090d std=9c0c363b1b q=0897cd6d70",
+      "ca-g8-signals text=5d529d090d std=9c0c363b1b q=455bd082a4",
       "ia-g6-design text=d0b4389208 std=3b31f071bc q=b3756a8805",
       "ia-g6-earth-surface text=a786b42c8e std=ddeb9826cd q=6e8cc4ec77",
       "ia-g6-resources text=95e4746657 std=c2f6541616 q=4933039cdb",
@@ -634,7 +634,7 @@
       "cycles-succession-7 text=966cbdbe7e std=0c6a5f9e4d q=c45e49da11",
       "ca-g7-design text=e8352f4c89 std=20d3efb944 q=684ce59010",
       "ia-g7-biodiversity text=ba9a169324 std=5acaa04b2e q=c3c0f1f901",
-      "ia-g7-space text=9ca5da50ab std=b491b6c36c q=e181bda698"
+      "ia-g7-space text=9ca5da50ab std=b491b6c36c q=051aec299a"
     ]
   },
   "7/social": {
@@ -715,10 +715,10 @@
       "ca-g7-food-molecules text=e1df7f815c std=d4dc1488ff q=bcca467e71",
       "wa-g8-heredity text=023de89543 std=af7ab86499 q=0889381c05",
       "wa-g8-selection text=9af384fbd6 std=8b4ea14b27 q=a225d53251",
-      "ca-g8-embryos text=46f9510ea2 std=15ab5b489a q=59154e5533",
+      "ca-g8-embryos text=46f9510ea2 std=15ab5b489a q=594a94b5eb",
       "ca-g6-human-impact text=8d04fb23b9 std=d21f78ba60 q=e8e81a8802",
-      "ca-g8-population-resources text=ad02402e3c std=2885d1334d q=5db958f8c6",
-      "ca-g8-design text=a660cd8c37 std=09bdac777a q=2c436537ea",
+      "ca-g8-population-resources text=ad02402e3c std=2885d1334d q=7d3a017855",
+      "ca-g8-design text=a660cd8c37 std=09bdac777a q=2d2421bc23",
       "ia-g8-weather text=5f700ed46e std=de23a60cd3 q=b5dbd2e46e",
       "ia-g8-climate text=21dcb35786 std=f406a91480 q=638c1ed865",
       "ia-g8-growth text=fef2bdf025 std=8019f93a5b q=543b12e464"

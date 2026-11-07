@@ -622,7 +622,7 @@
       "plant-parts-ab text=394b7ee530 std=4bfff18050 q=8526f00423",
       "ca-g7-food-molecules text=e1df7f815c std=d33daf52a3 q=bcca467e71",
       "ca-g6-human-impact text=8d04fb23b9 std=91ec6501e9 q=e8e81a8802",
-      "ca-g8-population-resources text=ad02402e3c std=d74fa87a10 q=5db958f8c6",
+      "ca-g8-population-resources text=ad02402e3c std=d74fa87a10 q=7d3a017855",
       "ca-g7-design text=e8352f4c89 std=bacdceff85 q=684ce59010",
       "ok-g7-resources text=cfc7dde284 std=5984c193a9 q=8c16ce1910",
       "ok-g7-biodiversity text=0bd99a8573 std=ac5b6d4883 q=015a8971a4"
@@ -699,11 +699,11 @@
       "light-and-radiation text=9e640798cf std=0ac3b2e11f q=9cc1a70761",
       "nb-motion-forces-8 text=a3e4ee29f0 std=ba892d1d9d q=4f1a481301",
       "wa-g8-fields text=8fbd720783 std=5a26fb9f0d q=603f693f54",
-      "ca-g8-signals text=5d529d090d std=68ab7b5028 q=0897cd6d70",
+      "ca-g8-signals text=5d529d090d std=68ab7b5028 q=455bd082a4",
       "wa-g8-heredity text=023de89543 std=d2d1fb7df7 q=0889381c05",
       "wa-g8-selection text=9af384fbd6 std=5ec1bcd464 q=a225d53251",
-      "ca-g8-embryos text=46f9510ea2 std=85b3b7e250 q=59154e5533",
-      "ca-g8-design text=a660cd8c37 std=bacdceff85 q=2c436537ea",
+      "ca-g8-embryos text=46f9510ea2 std=85b3b7e250 q=594a94b5eb",
+      "ca-g8-design text=a660cd8c37 std=bacdceff85 q=2d2421bc23",
       "ok-g8-space text=1bb9eaa59d std=24e60bd77f q=9094f32154",
       "ok-g8-growth text=8263312295 std=17d614fe04 q=61cb1c6b17"
     ]

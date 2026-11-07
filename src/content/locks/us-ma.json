@@ -541,8 +541,8 @@
       "body-systems text=c3cee90dd9 std=15b3b273f8 q=aa5f3b59c6",
       "wa-g6-cells text=dda472f3bf std=1a808215ce q=23e69bce93",
       "light-and-radiation text=9e640798cf std=1d6551d1e1 q=9cc1a70761",
-      "ca-g8-signals text=5d529d090d std=b79997a612 q=0897cd6d70",
-      "ca-g8-embryos text=46f9510ea2 std=95a0515f20 q=59154e5533",
+      "ca-g8-signals text=5d529d090d std=b79997a612 q=455bd082a4",
+      "ca-g8-embryos text=46f9510ea2 std=95a0515f20 q=594a94b5eb",
       "ma-g6-earth-history text=42af7b8fd4 std=e142c51e25 q=9e34fd7c5f"
     ]
   },
@@ -626,7 +626,7 @@
       "cycles-succession-7 text=966cbdbe7e std=4662caaa6a q=c45e49da11",
       "wa-g8-energy text=655dfe6f3b std=39525c6951 q=cdf3dadeb8",
       "wa-g8-fields text=1371ff764a std=84e4587b4f q=603f693f54",
-      "ca-g8-population-resources text=ad02402e3c std=80bd297f82 q=5db958f8c6",
+      "ca-g8-population-resources text=ad02402e3c std=80bd297f82 q=7d3a017855",
       "ma-g7-design text=d0b4389208 std=cb8411384c q=5e871fd856",
       "ma-g7-earth-surface text=560e183d27 std=ce6a3c6b00 q=c56205b083"
     ]
