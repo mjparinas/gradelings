@@ -1,6 +1,7 @@
 import { familyQuestions, frQuestions, soundItems, vocabQuestions, type FrItem, type Pair } from "../../french";
 import { sample, shuffle, textChoice } from "../../random";
 import type { Course, Question } from "../../types";
+import { POLITE_DEEP, SOUND_GROUPS_DEEP, SYLLABLES_DEEP } from "./immersion-deeper";
 
 const FR = { lang: "fr" } as const;
 
@@ -112,7 +113,7 @@ const SOUND_GROUPS: Pair[][] = [
   [["🚚", "camion"], ["🦆", "canard"], ["🥕", "carotte"]],
 ];
 
-const SOUND_ITEMS = soundItems(SOUND_GROUPS);
+const SOUND_ITEMS = soundItems([...SOUND_GROUPS, ...SOUND_GROUPS_DEEP]);
 
 // ---------- Syllabes ----------
 
@@ -126,7 +127,7 @@ const SYLLABLES: [string, string, number][] = [
 
 function syllabes(opts?: { difficulty?: 1 | 2 | 3 }): Question[] {
   const wrongCount = opts?.difficulty === 1 ? 1 : 2;
-  return sample(SYLLABLES, 8).map(([emoji, word, n]) => {
+  return sample([...SYLLABLES, ...SYLLABLES_DEEP], 8).map(([emoji, word, n]) => {
     const q = textChoice(
       `Combien de syllabes dans « ${word} »?`,
       String(n),
@@ -226,7 +227,7 @@ export const course: Course = {
       blurb: "Politesse et salutations",
       parentNote: "Greetings and courtesy words in French (bonjour, au revoir, merci, s'il vous plaît, Madame, Monsieur) and good listening habits.",
       standards: { "ca-bc": "Communication strategies: active listening, taking turns, expressions of courtesy and greetings" },
-      generate: (o) => frQuestions(POLITE, o, 8, FR),
+      generate: (o) => frQuestions([...POLITE, ...POLITE_DEEP], o, 8, FR),
     },
     {
       id: "mes-premiers-mots",

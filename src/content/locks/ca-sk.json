@@ -48,11 +48,11 @@
   "k/immersion": {
     "overview": "b08f187d9a",
     "units": [
-      "bonjour-et-merci text=5224610a90 std=cebdb654b4 q=5e22b8d4d3",
+      "bonjour-et-merci text=5224610a90 std=cebdb654b4 q=248070fa1d",
       "mes-premiers-mots text=e69c083f8e std=e827b31cf8 q=89ef4af94a",
       "lettres text=4c42f9b9f7 std=3fe2a21cd2 q=df9dd1cc36",
-      "sons-du-debut text=c106181397 std=5972a60d0c q=85ba265c23",
-      "syllabes text=f35047ec37 std=5972a60d0c q=c0c7af97f7",
+      "sons-du-debut text=c106181397 std=5972a60d0c q=ef803a1e46",
+      "syllabes text=f35047ec37 std=5972a60d0c q=e1ba7c6063",
       "rimes text=d126130fee std=45a974f16d q=1595be861e",
       "histoires text=22fadbb691 std=46cf60a4e4 q=1de4de49e2"
     ]
