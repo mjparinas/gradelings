@@ -621,10 +621,10 @@
   "7/core-french": {
     "overview": "325e20d4f7",
     "units": [
-      "personnalite text=b1fc0e15e8 std=dfe9413102 q=abd99aa1d9",
-      "lieux text=f028e63618 std=bcafaf5724 q=228bc0d463",
-      "directions text=18d3bb469c std=4b617a0797 q=a3f4dfc9e6",
-      "comparaisons text=f89fc8dd81 std=ff47c05ed8 q=05e24c98e6",
+      "personnalite text=b1fc0e15e8 std=dfe9413102 q=bb8ff43336",
+      "lieux text=f028e63618 std=bcafaf5724 q=536e393586",
+      "directions text=18d3bb469c std=4b617a0797 q=5c58b6fb7c",
+      "comparaisons text=f89fc8dd81 std=ff47c05ed8 q=ad816277aa",
       "mots-amis text=7a8e96300f std=f1e285dd45 q=b8dd2f9ecb",
       "histoires text=f192cb51a7 std=23410d0c19 q=dac590e998",
       "cultures-et-respect text=d3e3a37ee5 std=72f8c22626 q=16bb26fa32"

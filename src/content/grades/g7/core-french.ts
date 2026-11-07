@@ -1,5 +1,6 @@
 import { coreQuestions, type FrItem } from "../../french";
 import type { Course } from "../../types";
+import { COMPARE_DEEP, DIRECTIONS_DEEP, PERSONALITY_DEEP, PLACES_DEEP } from "./core-french-deeper";
 
 // Core French: instructions are in English, the French is what students learn.
 
@@ -332,7 +333,7 @@ export const course: Course = {
       blurb: "Left, right, straight ahead",
       parentNote: "Asking for and giving directions, and describing where places are (à gauche, devant, derrière, à côté de).",
       standards: { "ca-bc": "Common, high-frequency vocabulary and sentence structures for locations and directions" },
-      generate: (o) => coreQuestions(DIRECTIONS, o, 8),
+      generate: (o) => coreQuestions([...DIRECTIONS, ...DIRECTIONS_DEEP], o, 8),
     },
     {
       id: "lieux",
@@ -341,7 +342,7 @@ export const course: Course = {
       blurb: "La ville et les magasins",
       parentNote: "Vocabulary for places in a community and the contractions au, à la, à l'.",
       standards: { "ca-bc": "Locations and directions; cultural aspects of communities" },
-      generate: (o) => coreQuestions(PLACES, o, 8),
+      generate: (o) => coreQuestions([...PLACES, ...PLACES_DEEP], o, 8),
     },
     {
       id: "comparaisons",
@@ -350,7 +351,7 @@ export const course: Course = {
       blurb: "Plus, moins, aussi… que",
       parentNote: "Making simple comparisons with plus… que, moins… que and aussi… que, and the special forms meilleur and mieux.",
       standards: { "ca-bc": "Simple comparisons" },
-      generate: (o) => coreQuestions(COMPARE, o, 8),
+      generate: (o) => coreQuestions([...COMPARE, ...COMPARE_DEEP], o, 8),
     },
     {
       id: "personnalite",
@@ -359,7 +360,7 @@ export const course: Course = {
       blurb: "Family, friends, teachers",
       parentNote: "Describing the personality of family, friends and teachers, with adjectives that agree in gender and number.",
       standards: { "ca-bc": "Describing others, such as family, friends and teachers" },
-      generate: (o) => coreQuestions(PERSONALITY, o, 8),
+      generate: (o) => coreQuestions([...PERSONALITY, ...PERSONALITY_DEEP], o, 8),
     },
     {
       id: "mots-amis",
