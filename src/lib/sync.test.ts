@@ -321,4 +321,28 @@ describe("startBackgroundSync", () => {
       vi.useRealTimers();
     }
   });
+
+  it("does not run the 2-minute timer while the app is hidden", async () => {
+    vi.resetModules();
+    const store = (await import("./store")).useStore;
+    const sync = await import("./sync");
+    store.setState({ ...useStore.getState() });
+    vi.useFakeTimers();
+    const vis = vi.spyOn(document, "visibilityState", "get");
+    try {
+      fetchMock.mockImplementation(async () => reply({ cursor: 7 }));
+      sync.startBackgroundSync();
+      await vi.advanceTimersByTimeAsync(10_000);
+      fetchMock.mockClear();
+      vis.mockReturnValue("hidden");
+      await vi.advanceTimersByTimeAsync(600_000);
+      expect(fetchMock).not.toHaveBeenCalled();
+      vis.mockReturnValue("visible");
+      await vi.advanceTimersByTimeAsync(120_000);
+      expect(fetchMock).toHaveBeenCalled();
+    } finally {
+      vis.mockRestore();
+      vi.useRealTimers();
+    }
+  });
 });
