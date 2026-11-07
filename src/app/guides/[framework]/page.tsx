@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/PublicLink";
 import { notFound } from "next/navigation";
 import { articleJsonLd, breadcrumbJsonLd } from "@/components/site/jsonld";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";

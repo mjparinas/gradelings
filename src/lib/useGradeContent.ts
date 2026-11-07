@@ -3,6 +3,7 @@
 import { useEffect, useSyncExternalStore } from "react";
 import { AVAILABLE_GRADES, gradeLoadFailed, isGradeLoaded, lessonsSettled, loadGrade, loadGrades, subscribeToContent, type ContentTarget } from "@/content";
 import type { FrameworkId, GradeId } from "@/content/types";
+import { retryDownloads } from "./blockedScripts";
 import { cacheLoadedScripts } from "./offline";
 
 export type GradeStatus = "ready" | "loading" | "failed";
@@ -23,7 +24,7 @@ function statusOf(targets: ContentTarget[]): GradeStatus {
 
 /**
  * Loads these grades' content (once) and reports when it's ready. A grade that
- * fails (usually offline before it was ever downloaded) reports "failed";
+ * fails (usually offline before it was ever downloaded, or a file blocked by a school filter) reports "failed";
  * call `retry` to try again.
  */
 export function useGradeContent(targets: ContentTarget[]): { status: GradeStatus; retry: () => void } {
@@ -33,7 +34,8 @@ export function useGradeContent(targets: ContentTarget[]): { status: GradeStatus
     () => statusOf(decode(key)),
     () => "loading" as const,
   );
-  const retry = () => void loadGrades(decode(key)).catch(() => {});
+  // After a file came back as a web page, only a fresh page load fetches it again (src/lib/blockedScripts.ts).
+  const retry = () => retryDownloads(() => void loadGrades(decode(key)).catch(() => {}));
   useEffect(() => {
     if (!key) return;
     void loadGrades(decode(key)).catch(() => {});

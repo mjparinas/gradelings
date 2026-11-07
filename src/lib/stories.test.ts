@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { storyLevel } from "@/content/stories";
 import { STORIES } from "@/content/stories/library";
-import { MIN_JUST_RIGHT, JUST_RIGHT_SPAN, shelves, storiesFor, storyLearnSeconds, storyTarget } from "./stories";
+import { MIN_JUST_RIGHT, JUST_RIGHT_SPAN, isSpanishStoryId, shelves, spanishStoriesFor, storiesFor, storyLearnSeconds, storyTarget } from "./stories";
 
 describe("storyTarget", () => {
   const reading = (rl: number, ok: boolean, n: number) => Array.from({ length: n }, () => ({ rl, ok }));
@@ -65,5 +65,19 @@ describe("storyLearnSeconds", () => {
   it("caps time at a minute a page and a minute a question", () => {
     expect(storyLearnSeconds(90_000, 6, 3)).toBe(90);
     expect(storyLearnSeconds(3_600_000, 6, 3)).toBe(540);
+  });
+});
+
+describe("Spanish stories", () => {
+  it("go to a child only with the spanish flag on and Spanish switched on for them", () => {
+    expect(spanishStoriesFor({ enabledSubjects: ["math", "language", "spanish"] }, true)).toBe(true);
+    expect(spanishStoriesFor({ enabledSubjects: ["math", "language", "spanish"] }, false)).toBe(false);
+    expect(spanishStoriesFor({ enabledSubjects: ["math", "language"] }, true)).toBe(false);
+    expect(spanishStoriesFor(undefined, true)).toBe(false);
+  });
+
+  it("never feed the English reading-level estimate", () => {
+    expect(isSpanishStoryId("es-mercado")).toBe(true);
+    expect(isSpanishStoryId("ollie-splash")).toBe(false);
   });
 });

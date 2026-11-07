@@ -109,7 +109,7 @@
       "ca-k-good-citizens text=d7b0dbd711 std=39024cdb0f q=ba47e020d0",
       "ca-k-american-stories text=988c06d381 std=d24de02fec q=b7f85514af",
       "ny-k-symbols-holidays text=c6f7569025 std=7430244aaa q=580dcd0e4e",
-      "sd-k-our-state text=1589aec2fe std=8eab594828 q=90945102e6"
+      "sd-k-our-state text=1589aec2fe std=8eab594828 q=e6c228029f"
     ]
   },
   "1/language": {
@@ -177,7 +177,7 @@
       "ny-g1-rules-and-government text=ec41bb8674 std=497d8a6c7c q=94953413c5",
       "ny-g1-american-symbols text=2a7c05d064 std=93c01236fb q=8d619485e3",
       "ga-g1-american-heroes text=cc9eb82a29 std=1962eaeaf4 q=b4c3ba359d",
-      "sd-g1-south-dakota text=696d770f0a std=17070bcf0c q=94bb914ebd",
+      "sd-g1-south-dakota text=696d770f0a std=17070bcf0c q=c0889105cc",
       "sd-g1-first-peoples text=1ae1142af4 std=ca4fcfef88 q=b3ecaae8f0",
       "sd-g1-ancient-world text=28f650e956 std=dc25394b02 q=8efe37ce48",
       "sd-g1-founding-stories text=19af2ba3d9 std=73f7562875 q=d4275f6f9a"
@@ -304,7 +304,7 @@
       "wa-g3-survival text=8148e373a0 std=23285f6805 q=b593b45148",
       "wa-g3-hazards text=06e07390fc std=07ff82269e q=b58e997d4c",
       "or-g3-magnet-design text=6e359c124e std=540bf4a56d q=b0eac72564",
-      "sd-g3-fossils text=480badf8f5 std=d7890df2f1 q=cdbcb1f704",
+      "sd-g3-fossils text=480badf8f5 std=d7890df2f1 q=3dc6cff599",
       "sd-g3-weather-climate text=0f9ef8ce74 std=415a6cc55d q=a1cb3aa502"
     ]
   },
@@ -314,11 +314,11 @@
       "ny-g3-globes-and-maps text=2d930f5588 std=2172812b4e q=7becb7a790",
       "wa-g6-mesopotamia-egypt text=7b07716040 std=56972d9738 q=232c3963ae",
       "wa-g6-india-china text=73f6627d42 std=e5f2d44ffe q=13133eb41e",
-      "ca-g6-greece-rome text=cadd1d7424 std=2cb0822423 q=248e19dbff",
+      "ca-g6-greece-rome text=cadd1d7424 std=2cb0822423 q=66c3129534",
       "ga-g3-explorers text=31163461fe std=36a32a4127 q=2f9bff5aff",
       "ca-g5-thirteen-colonies text=b2ab7c1f74 std=f06370f764 q=17e62378ec",
       "ca-g5-colonial-economy text=302c8d93ea std=5bab45698f q=78476c23e0",
-      "sd-g3-south-dakota-places text=c77a8586a2 std=4fa5411774 q=5818d40c4b"
+      "sd-g3-south-dakota-places text=c77a8586a2 std=4fa5411774 q=cb4f9a34fe"
     ]
   },
   "3/spanish": {
@@ -397,12 +397,12 @@
       "ca-g7-rome-byzantium text=28311c0922 std=fb8b41b031 q=6ce9a18bea",
       "medieval-europe text=c481f7adac std=b517bf028d q=e0e0a48023",
       "ny-g9-crusades-plague text=66370fd7dd std=6aa2b3343a q=bbbc23b16e",
-      "ca-g5-road-to-revolution text=f43acaa35e std=3ef7f8a1b4 q=348033ff6d",
+      "ca-g5-road-to-revolution text=f43acaa35e std=3ef7f8a1b4 q=547def255f",
       "ca-g5-revolution text=9f9c895b95 std=cc8d5800a6 q=77d806ef60",
       "ca-g5-constitution text=f0912d934b std=202bc7ad4c q=f7d329903c",
       "wa-g8-bill-of-rights text=edcc86640b std=37489e9bc4 q=6898ac27d5",
-      "sd-g4-regions text=2a1036012a std=d466973849 q=3d70d98b42",
-      "sd-g4-corps-of-discovery text=60f0a64d11 std=814338941d q=03774d1d2d"
+      "sd-g4-regions text=2a1036012a std=d466973849 q=372d46bff2",
+      "sd-g4-corps-of-discovery text=60f0a64d11 std=814338941d q=f00c6a305d"
     ]
   },
   "4/spanish": {
@@ -482,7 +482,7 @@
       "or-g8-reconstruction text=90b606a220 std=63f74e52c7 q=4c87f1ca5f",
       "ca-g8-industrial-america text=59fae20492 std=630f505c2c q=14f2ec92f7",
       "ny-g8-city-immigrants text=404df69c6c std=c7cbcd02b1 q=7c69f670c0",
-      "sd-g5-dakota-territory text=c5dd37c4f0 std=cf9dd7b898 q=9136a7c137"
+      "sd-g5-dakota-territory text=c5dd37c4f0 std=cf9dd7b898 q=70b1c47a3f"
     ]
   },
   "5/spanish": {
@@ -549,7 +549,7 @@
       "ca-g6-human-impact text=8d04fb23b9 std=a0f6568d2c q=e8e81a8802",
       "sd-g6-weather text=248843cc5d std=bf76790cc6 q=e581d410bf",
       "sd-g6-climate text=9e4075b4ae std=5ac511bf6d q=c217e93d99",
-      "sd-g6-growth text=187910d0f6 std=b0947d3c39 q=2e085121f5",
+      "sd-g6-growth text=187910d0f6 std=b0947d3c39 q=0d75b9c2d3",
       "sd-g6-design text=d0b4389208 std=98b2d7be6a q=34fef781b9"
     ]
   },
@@ -588,7 +588,7 @@
       "word-mix-ups text=7bb5032b8a std=6397db834b q=d64ff1637c",
       "poetry-lab text=e3769835d8 std=2e97a20fc7 q=a8dd8516cd",
       "punctuation-7 text=9342af658b std=fb57b28ba8 q=f4766ca186",
-      "point-of-view-7 text=9446c4e22a std=8ead38c3bc q=ee7ee4f5b5",
+      "point-of-view-7 text=9446c4e22a std=8ead38c3bc q=fc62f4db46",
       "mb-word-roots text=f8f825870e std=55e37ed18b q=a13fe4ad77",
       "wa-g7-research-skills text=a0906b3c59 std=b91988c216 q=4901d7cfd4",
       "wa-g7-media-framing text=dfd5377178 std=c202945961 q=1f917ebc68",
@@ -654,7 +654,7 @@
       "ca-g8-civil-war text=01b158a689 std=36d98d640f q=538b60ca99",
       "or-g8-reconstruction text=0da2eecd65 std=28164d35b9 q=4c87f1ca5f",
       "sd-g7-oceti-sakowin text=9d5f7e3ad3 std=d69f13f98e q=92a5ff0763",
-      "sd-g7-south-dakota-geography text=42ec00024f std=e7fef24cf5 q=1ca5c4d5fe"
+      "sd-g7-south-dakota-geography text=42ec00024f std=e7fef24cf5 q=76e06abc13"
     ]
   },
   "7/spanish": {
@@ -671,8 +671,8 @@
     "overview": "db2cf9b24a",
     "units": [
       "close-reading text=b5e48e1704 std=431598ea81 q=9a7ad6cfde",
-      "literary-devices text=807aa8d25d std=622fcf5dd4 q=dbc870fffd",
-      "word-study text=e9a31820f1 std=1f0f222c68 q=e40812d304",
+      "literary-devices text=807aa8d25d std=622fcf5dd4 q=92bd771be1",
+      "word-study text=e9a31820f1 std=1f0f222c68 q=15f2dda6fa",
       "irony-satire-8 text=4b6cba0527 std=f27b17cdc2 q=291e5761a1",
       "narrator-8 text=b609477509 std=4989337f19 q=6c18973e7e",
       "forms-features-8 text=612838fad2 std=699c7d87a1 q=bb2163dc62",
@@ -720,11 +720,11 @@
       "wa-g8-fields text=8fbd720783 std=e6ba17a642 q=603f693f54",
       "wa-g8-heredity text=023de89543 std=69440a404c q=0889381c05",
       "wa-g8-selection text=9af384fbd6 std=94b06cbe36 q=a225d53251",
-      "ca-g8-embryos text=46f9510ea2 std=a53c1b64f0 q=59154e5533",
-      "ca-g8-signals text=5d529d090d std=3f698c9ecf q=0897cd6d70",
-      "ca-g8-population-resources text=ad02402e3c std=e6a8f884be q=5db958f8c6",
-      "ca-g8-design text=a660cd8c37 std=90565d3996 q=2c436537ea",
-      "sd-g8-space text=82fe78117d std=f11706d175 q=19f37acfea",
+      "ca-g8-embryos text=46f9510ea2 std=a53c1b64f0 q=594a94b5eb",
+      "ca-g8-signals text=5d529d090d std=3f698c9ecf q=455bd082a4",
+      "ca-g8-population-resources text=ad02402e3c std=e6a8f884be q=7d3a017855",
+      "ca-g8-design text=a660cd8c37 std=90565d3996 q=2d2421bc23",
+      "sd-g8-space text=82fe78117d std=f11706d175 q=776b9e9b17",
       "sd-g8-earth-history text=c69bcd1250 std=76b660873b q=abc3916bb3"
     ]
   },
@@ -741,8 +741,8 @@
       "ny-g8-civil-rights text=2a5251702b std=ed25382508 q=8f81d3992c",
       "ny-g8-great-society text=5e0e756027 std=a1f57a4412 q=2924363d91",
       "ny-g8-new-era text=47f408325e std=2943e6b5e9 q=503ac2b076",
-      "sd-g8-dakota-1800s text=4256041f24 std=2d629af662 q=38341c7a96",
-      "sd-g8-depression-and-war text=4511078f22 std=9ef04e05b4 q=a5ee0233f9"
+      "sd-g8-dakota-1800s text=4256041f24 std=2d629af662 q=daac9509f4",
+      "sd-g8-depression-and-war text=4511078f22 std=9ef04e05b4 q=23b52f9741"
     ]
   },
   "8/spanish": {
@@ -759,14 +759,14 @@
     "overview": "11aa4334d3",
     "units": [
       "close-reading text=1934195db9 std=4d537abbdd q=f9de480cb6",
-      "literary-elements text=c987189fb1 std=b4b328bc35 q=4dd3b74498",
-      "grammar-and-style text=8039e9ed51 std=f1de6a7ca3 q=37d6dcd28c",
+      "literary-elements text=c987189fb1 std=b4b328bc35 q=6bb0625bc1",
+      "grammar-and-style text=8039e9ed51 std=f1de6a7ca3 q=dba6ff55c7",
       "word-parts-9 text=2f90f3f2bb std=41eb161971 q=12c40c9d05",
       "devices-9 text=320de0c79d std=161c042726 q=2531ff43de",
       "digital-9 text=a08ac85319 std=2ec9c7d093 q=f654422b22",
       "forms-features-9 text=4d4a0e13b8 std=313d752df2 q=8b093065a8",
-      "mb-summarizing text=a1c214cb62 std=7bb71b02cf q=1544e41082",
-      "mb-choose-form-and-compose text=b0b438e003 std=1bc5f579f8 q=515bb10e15",
+      "mb-summarizing text=a1c214cb62 std=7bb71b02cf q=c42d0bfeb2",
+      "mb-choose-form-and-compose text=b0b438e003 std=1bc5f579f8 q=cf661011eb",
       "wa-g9-research-and-credibility text=255a2e9598 std=9646616b00 q=447c001fd3",
       "wa-g9-proofreading text=91e8cd490d std=d4cf29aefe q=06b9dd8ced",
       "or-g9-media-analysis text=72d67adead std=e42941431c q=e34931ec0d",
@@ -835,7 +835,7 @@
       "ca-g9-earth-interior text=5353771af0 std=197d3d87a4 q=ce35f414aa",
       "ca-g9-climate-feedbacks text=294b68d3fa std=37abc57bb4 q=1c06419890",
       "ca-g9-resources text=8c64d966db std=55e8f59000 q=4e2c013ca5",
-      "sd-g9-ecosystems text=02da80d3df std=fe2118a95a q=1a3f3d1f05"
+      "sd-g9-ecosystems text=02da80d3df std=fe2118a95a q=f487d4f54d"
     ]
   },
   "9/social": {
@@ -852,7 +852,7 @@
       "ca-g9-lawmaking text=2a409ee163 std=4989a249f3 q=83325c4e69",
       "ca-g9-media text=67bc186bc5 std=af0c04fa7c q=0fc3f3ad1e",
       "pa-g9-foreign-policy text=b348a17deb std=e07824f734 q=fb77c5203c",
-      "sd-g9-governing-south-dakota text=0d622c3ff0 std=27f3478643 q=1036b40a0c"
+      "sd-g9-governing-south-dakota text=0d622c3ff0 std=27f3478643 q=d8844314a2"
     ]
   },
   "9/spanish": {

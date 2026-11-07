@@ -1,5 +1,6 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { OUR_STATE_MORE } from "./social-more";
 
 // South Dakota Kindergarten social studies: naming our town, state, country and continent (K.SS.1), South Dakota and its
 // neighbors, Alaska and Hawaii on a map of the United States (K.SS.2), and symbols of America, Mount Rushmore among them
@@ -45,6 +46,6 @@ export const SOCIAL_K: Unit[] = [
     parentNote:
       "Naming our state, country and continent, finding South Dakota, its neighbors, Alaska, Hawaii and the two oceans on a map of the United States, maps and globes, and symbols of America such as the flag, the bald eagle, the Statue of Liberty and Mount Rushmore in the Black Hills.",
     standards: ["K.SS.1; K.SS.2; K.SS.4", "naming our state, country and continent, South Dakota and its neighbors on a map, and symbols of America"],
-    items: OUR_STATE,
+    items: [...OUR_STATE, ...OUR_STATE_MORE],
   }),
 ];

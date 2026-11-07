@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/PublicLink";
 import { breadcrumbJsonLd, itemListJsonLd } from "@/components/site/jsonld";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { allWorksheetSkills, gradeSkills, subjectWord, subjectsWithSheets, worksheetGradeLabel, worksheetGrades, worksheetPath, worksheetSkills } from "@/components/site/worksheets";

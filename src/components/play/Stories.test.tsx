@@ -54,7 +54,7 @@ const inBand = (ui: React.ReactElement, band: AgeBand = "middle") => render(<Ban
 
 // The library is a dynamic import. Load it once up front, so the first test doesn't spend its
 // 1-second wait on that cold import: on a busy CI machine it sometimes didn't fit (October 2026).
-beforeAll(() => loadStories(), 30_000);
+beforeAll(() => loadStories(true), 30_000);
 
 beforeEach(() => {
   vi.clearAllMocks();
@@ -210,5 +210,60 @@ describe("StoryReader", () => {
     first.unmount();
     inBand(<StoryReader id="no-such-story" />);
     expect(await screen.findByRole("heading", { name: /Story Library/ })).toBeInTheDocument();
+  });
+});
+
+describe("Spanish stories", () => {
+  const spanishChild = () => {
+    h.settings = { autoRead: false, enabledSubjects: ["math", "language", "spanish"] };
+    h.profile = { id: "p1", name: "Ava", grade: "5", framework: "ca-bc" };
+  };
+
+  it("get a shelf of their own for a child with Spanish on", async () => {
+    spanishChild();
+    inBand(<StoryLibrary />);
+    await screen.findByRole("heading", { name: /Story Library/ });
+    expect(titles("Cuentos en español (stories in Spanish)")).toEqual(expect.arrayContaining(["es-luna-gato", "es-dia-lluvia"]));
+    // The English shelves hold English stories only.
+    for (const name of ["Just right for you", "A little easier", "A bit of a stretch"]) {
+      for (const id of within(screen.queryByRole("region", { name }) ?? document.body).queryAllByRole("button").map((b) => b.getAttribute("data-story"))) expect(id?.startsWith("es-")).toBeFalsy();
+    }
+  });
+
+  it("stay out of the library when Spanish is off for the child or the flag is off", async () => {
+    inBand(<StoryLibrary />);
+    await screen.findByRole("heading", { name: /Story Library/ });
+    expect(screen.queryByRole("region", { name: /Cuentos/ })).toBeNull();
+  });
+
+  it("stay out when the spanish flag is off", async () => {
+    spanishChild();
+    h.off = new Set(["spanish"]);
+    inBand(<StoryLibrary />);
+    await screen.findByRole("heading", { name: /Story Library/ });
+    expect(screen.queryByRole("region", { name: /Cuentos/ })).toBeNull();
+  });
+
+  it("are read aloud in a Spanish voice, with the English one tap away", async () => {
+    spanishChild();
+    h.settings = { ...h.settings, autoRead: true };
+    inBand(<StoryReader id="es-luna-gato" />);
+    await screen.findByTestId("story-text");
+    await waitFor(() => expect(h.speakSegments).toHaveBeenCalled());
+    const [pieces] = h.speakSegments.mock.calls.at(-1) as [SpeechPiece[]];
+    expect(pieces.map((p) => p.text)).toEqual(["Me llamo Luna.", "Tengo un gato."]);
+    expect(pieces.every((p) => p.lang === "es")).toBe(true);
+    expect(screen.getByTestId("story-text")).toHaveAttribute("lang", "es");
+    expect(screen.queryByTestId("story-english")).toBeNull();
+    fireEvent.click(screen.getByRole("button", { name: "Show English" }));
+    expect(screen.getByTestId("story-english")).toHaveTextContent("My name is Luna. I have a cat.");
+    fireEvent.click(screen.getByRole("button", { name: "Hide English" }));
+    expect(screen.queryByTestId("story-english")).toBeNull();
+  });
+
+  it("show no English button on an English story", async () => {
+    inBand(<StoryReader id="ollie-splash" />, "little");
+    await screen.findByTestId("story-text");
+    expect(screen.queryByRole("button", { name: "Show English" })).toBeNull();
   });
 });

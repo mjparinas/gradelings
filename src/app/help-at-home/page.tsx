@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/PublicLink";
 import { breadcrumbJsonLd, itemListJsonLd } from "@/components/site/jsonld";
 import { activitiesPath } from "@/components/site/activitiesData";
 import { HELP_GRADES, gradeName, helpAtHomePath } from "@/components/site/helpAtHome";

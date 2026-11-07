@@ -356,14 +356,14 @@
   "4/social": {
     "overview": "08b154c8dc",
     "units": [
-      "wa-g4-washington-land text=a705f90313 std=2d96442021 q=0e2d69ef4b",
-      "wa-g4-maps-movement text=f3e396088e std=c4acc37437 q=00100be0af",
-      "wa-g4-state-government text=5d4813b0ba std=752a5f0519 q=6df3ab3609",
-      "wa-g4-civic-virtues text=332e265de4 std=0fd852424c q=8028ad5856",
+      "wa-g4-washington-land text=a705f90313 std=2d96442021 q=219877cc59",
+      "wa-g4-maps-movement text=f3e396088e std=c4acc37437 q=2d654b4b65",
+      "wa-g4-state-government text=5d4813b0ba std=752a5f0519 q=e02981b2e7",
+      "wa-g4-civic-virtues text=332e265de4 std=0fd852424c q=48f81ccfc7",
       "wa-g4-tribal-sovereignty text=c67ca2424c std=2268de333c q=2adad3c0e2",
-      "wa-g4-history-to-1889 text=7e47a826ad std=0c6dba7a94 q=abb804d18d",
-      "wa-g4-economy text=d78c80c536 std=2a9f024eb4 q=f63d026810",
-      "wa-g4-people-and-change text=a79694acf2 std=f028a6a2a2 q=50f17a16bf"
+      "wa-g4-history-to-1889 text=7e47a826ad std=0c6dba7a94 q=015a18ac18",
+      "wa-g4-economy text=d78c80c536 std=2a9f024eb4 q=9f4a35cc80",
+      "wa-g4-people-and-change text=a79694acf2 std=f028a6a2a2 q=d873e02e6a"
     ]
   },
   "4/spanish": {
@@ -531,7 +531,7 @@
     "units": [
       "literary-devices text=75012dadfd std=91adc90556 q=9f862df281",
       "tone-mood text=1a78ad0bc3 std=847298af3d q=104d70a39d",
-      "point-of-view-7 text=9446c4e22a std=bfd2c79528 q=ee7ee4f5b5",
+      "point-of-view-7 text=9446c4e22a std=bfd2c79528 q=fc62f4db46",
       "poetry-lab text=e3769835d8 std=6ff5133c47 q=a8dd8516cd",
       "persuasion text=002e89452f std=325489ed45 q=5e50a03d63",
       "clauses-sentences text=5017dd13d0 std=2365ba3519 q=a49f421344",
@@ -608,12 +608,12 @@
     "overview": "56b236dc8d",
     "units": [
       "close-reading text=b5e48e1704 std=ff482320fc q=9a7ad6cfde",
-      "literary-devices text=807aa8d25d std=69f07ae018 q=dbc870fffd",
+      "literary-devices text=807aa8d25d std=69f07ae018 q=92bd771be1",
       "irony-satire-8 text=4b6cba0527 std=94bd026444 q=291e5761a1",
       "narrator-8 text=b609477509 std=8889e990b8 q=6c18973e7e",
       "strategies-8 text=14cb61c3b0 std=5278103ee2 q=e9e599784b",
       "forms-features-8 text=612838fad2 std=8167f33742 q=bb2163dc62",
-      "word-study text=e9a31820f1 std=235f80b33f q=e40812d304",
+      "word-study text=e9a31820f1 std=235f80b33f q=15f2dda6fa",
       "mb-word-power-8 text=3f40ceb555 std=9b71324c5d q=434b58489d",
       "writing-8 text=d9bb3a4cad std=4fb4cd7620 q=0d80919dc4",
       "digital-8 text=742bfe22d6 std=91625ff1ac q=314d5c282f",
@@ -685,13 +685,13 @@
     "overview": "1f8f4dc8cc",
     "units": [
       "close-reading text=1934195db9 std=e25627e6dc q=f9de480cb6",
-      "literary-elements text=c987189fb1 std=362f510762 q=4dd3b74498",
+      "literary-elements text=c987189fb1 std=362f510762 q=6bb0625bc1",
       "devices-9 text=320de0c79d std=e5500f3e83 q=2531ff43de",
-      "mb-summarizing text=a1c214cb62 std=5e4eb47336 q=1544e41082",
+      "mb-summarizing text=a1c214cb62 std=5e4eb47336 q=c42d0bfeb2",
       "forms-features-9 text=4d4a0e13b8 std=b66237d25c q=8b093065a8",
       "word-parts-9 text=2f90f3f2bb std=45b33f7b3c q=12c40c9d05",
-      "grammar-and-style text=8039e9ed51 std=c682fd9628 q=37d6dcd28c",
-      "mb-choose-form-and-compose text=b0b438e003 std=1aeac93c3b q=515bb10e15",
+      "grammar-and-style text=8039e9ed51 std=c682fd9628 q=dba6ff55c7",
+      "mb-choose-form-and-compose text=b0b438e003 std=1aeac93c3b q=cf661011eb",
       "digital-9 text=a08ac85319 std=86690d0187 q=f654422b22",
       "wa-g9-research-and-credibility text=255a2e9598 std=79c39ca8e2 q=447c001fd3",
       "wa-g9-media-analysis text=3d5e81d564 std=f96b67fd91 q=3459006e97",

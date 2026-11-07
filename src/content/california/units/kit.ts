@@ -125,6 +125,21 @@ export function copyOf(base: Unit, meta: Meta, extra: Q[] = []): Unit {
       const added = fromItems(extra, nExtra, level(opts)).filter(
         (q) => !seen.has(q.prompt),
       );
+      // Dropping an extra that repeats a copied prompt, or running out of tries, can leave the set short (5 of 8 was
+      // seen about once in 3,000 runs), so top it up from more sets of the original.
+      for (
+        let tries = 0;
+        tries < 30 && out.length + added.length < size;
+        tries++
+      ) {
+        for (const q of base.generate(opts)) {
+          if (out.length + added.length >= size) break;
+          if (mentionsOtherState(q) || mentionsTribes(q) || seen.has(q.prompt))
+            continue;
+          seen.add(q.prompt);
+          out.push(q);
+        }
+      }
       return shuffle([...out, ...added]);
     },
   };

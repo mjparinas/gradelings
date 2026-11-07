@@ -433,7 +433,7 @@
   "5/social": {
     "overview": "3b7ea1704a",
     "units": [
-      "ca-g5-road-to-revolution text=f43acaa35e std=72b0d37680 q=348033ff6d",
+      "ca-g5-road-to-revolution text=f43acaa35e std=72b0d37680 q=547def255f",
       "ca-g5-revolution text=9f9c895b95 std=4f1840ea22 q=77d806ef60",
       "wa-g5-constitution text=4fce7c7602 std=74810a64c0 q=2d1d2c254b",
       "or-g5-states-capitals text=565d8f1d6b std=d60ed23d89 q=6b5387c192",
@@ -546,7 +546,7 @@
       "word-mix-ups text=7bb5032b8a std=6397db834b q=d64ff1637c",
       "poetry-lab text=e3769835d8 std=2e97a20fc7 q=a8dd8516cd",
       "punctuation-7 text=9342af658b std=fb57b28ba8 q=f4766ca186",
-      "point-of-view-7 text=9446c4e22a std=8ead38c3bc q=ee7ee4f5b5",
+      "point-of-view-7 text=9446c4e22a std=8ead38c3bc q=fc62f4db46",
       "mb-word-roots text=f8f825870e std=55e37ed18b q=a13fe4ad77",
       "wa-g7-research-skills text=a0906b3c59 std=b91988c216 q=4901d7cfd4",
       "wa-g7-media-framing text=dfd5377178 std=c202945961 q=1f917ebc68",
@@ -616,8 +616,8 @@
     "overview": "db2cf9b24a",
     "units": [
       "close-reading text=b5e48e1704 std=a8d9143091 q=9a7ad6cfde",
-      "literary-devices text=807aa8d25d std=622fcf5dd4 q=dbc870fffd",
-      "word-study text=e9a31820f1 std=1f0f222c68 q=e40812d304",
+      "literary-devices text=807aa8d25d std=622fcf5dd4 q=92bd771be1",
+      "word-study text=e9a31820f1 std=1f0f222c68 q=15f2dda6fa",
       "irony-satire-8 text=4b6cba0527 std=f27b17cdc2 q=291e5761a1",
       "narrator-8 text=b609477509 std=4989337f19 q=6c18973e7e",
       "forms-features-8 text=612838fad2 std=699c7d87a1 q=bb2163dc62",
@@ -696,14 +696,14 @@
     "overview": "11aa4334d3",
     "units": [
       "close-reading text=1934195db9 std=df2ecc16b5 q=f9de480cb6",
-      "literary-elements text=c987189fb1 std=b4b328bc35 q=4dd3b74498",
-      "grammar-and-style text=8039e9ed51 std=f1de6a7ca3 q=37d6dcd28c",
+      "literary-elements text=c987189fb1 std=b4b328bc35 q=6bb0625bc1",
+      "grammar-and-style text=8039e9ed51 std=f1de6a7ca3 q=dba6ff55c7",
       "word-parts-9 text=2f90f3f2bb std=41eb161971 q=12c40c9d05",
       "devices-9 text=320de0c79d std=161c042726 q=2531ff43de",
       "digital-9 text=a08ac85319 std=2ec9c7d093 q=f654422b22",
       "forms-features-9 text=4d4a0e13b8 std=313d752df2 q=8b093065a8",
-      "mb-summarizing text=a1c214cb62 std=7bb71b02cf q=1544e41082",
-      "mb-choose-form-and-compose text=b0b438e003 std=1bc5f579f8 q=515bb10e15",
+      "mb-summarizing text=a1c214cb62 std=7bb71b02cf q=c42d0bfeb2",
+      "mb-choose-form-and-compose text=b0b438e003 std=1bc5f579f8 q=cf661011eb",
       "wa-g9-research-and-credibility text=255a2e9598 std=9646616b00 q=447c001fd3",
       "wa-g9-proofreading text=91e8cd490d std=d4cf29aefe q=06b9dd8ced",
       "or-g9-media-analysis text=72d67adead std=e42941431c q=e34931ec0d"

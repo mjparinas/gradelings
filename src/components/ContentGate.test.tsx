@@ -7,6 +7,7 @@ import type { GradeStatus } from "@/lib/useGradeContent";
 const mocks = vi.hoisted(() => ({ status: "loading" as GradeStatus, retry: vi.fn(), cacheLoadedScripts: vi.fn(), useGradeContent: vi.fn() }));
 vi.mock("@/lib/useGradeContent", () => ({ useGradeContent: mocks.useGradeContent, cacheContent: mocks.cacheLoadedScripts }));
 
+import { noticeError, resetBlockedScripts } from "@/lib/blockedScripts";
 import { ContentGate } from "./ContentGate";
 
 const targets = [
@@ -74,5 +75,14 @@ describe("ContentGate", () => {
     expect(screen.getByRole("status")).toHaveTextContent("Grade 3 and Kindergarten lessons haven't downloaded to this device yet, so some reports are incomplete.");
     await userEvent.click(screen.getByRole("button", { name: "Try again" }));
     expect(mocks.retry).toHaveBeenCalledOnce();
+  });
+
+  it("says the network blocked part of the app when a school filter answered a file with a web page", () => {
+    mocks.status = "failed";
+    noticeError({ message: "Unexpected token '<'", filename: `${location.origin}/_next/static/chunks/a.js`, error: new SyntaxError("Unexpected token '<'") });
+    gate();
+    expect(screen.getByRole("heading", { name: "This network blocked part of the app" })).toBeInTheDocument();
+    expect(screen.getByText(/through the web filter/)).toBeInTheDocument();
+    resetBlockedScripts();
   });
 });

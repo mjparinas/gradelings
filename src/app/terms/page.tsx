@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/PublicLink";
 import { LegalPage, Section } from "@/components/site/Legal";
 import { APP_NAME, CONTACT_EMAIL, LEGAL_NAME, MAILING_ADDRESS } from "@/lib/brand";
 import { CURRENCY_NAME, FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, PRICES_BY_CURRENCY, REFUND_DAYS, TAX_NOTE, TRIAL_DAYS } from "@/lib/plan";

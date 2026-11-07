@@ -5,7 +5,7 @@ import { dayKey, type AppEvent, type Mode } from "./model";
 import { unitLevel } from "./proficiency";
 import { READING_SAMPLES_KEPT, type ReadingSample } from "./readingLevel";
 import { mysteryReward } from "./mystery";
-import { storyLearnSeconds } from "./stories";
+import { isSpanishStoryId, storyLearnSeconds } from "./stories";
 import { TIER_COINS, TIER_POINTS, trophyTier } from "./trophies";
 
 // Everything a child has achieved is computed from their event log. Because
@@ -301,8 +301,8 @@ export function derive(events: AppEvent[], now = Date.now()): Derived {
       case "story": {
         const s = d.stories[e.story];
         const right = e.results.filter(Boolean).length;
-        // The first read is the honest one: re-reading teaches the answers, so only it feeds the reading level.
-        if (!s && e.results.length) {
+        // The first read is the honest one: re-reading teaches the answers, so only it feeds the reading level (never a Spanish story: the level is for English).
+        if (!s && e.results.length && !isSpanishStoryId(e.story)) {
           for (const ok of e.results) d.reading.push({ rl: e.rl, ok });
           while (d.reading.length > READING_SAMPLES_KEPT) d.reading.shift();
         }

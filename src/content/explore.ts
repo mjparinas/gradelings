@@ -248,6 +248,132 @@ export const EXPLORE_CARDS: ExploreCard[] = [
     facts: ["Weather is what the air is doing today.", "Climate is the usual pattern of weather over many years.", "Climate helps decide which plants grow and how people live."],
     ask: { prompt: "Which one describes climate?", right: "Winters here are usually cold", wrong: ["It is raining right now", "I need an umbrella today"], why: "Climate is the long-term pattern. Today's rain is weather." },
   },
+
+  // ——— More for Pre-K to Grade 1 ———
+  {
+    id: "sink-or-float", band: "little", topic: "science", title: "Sink or float?", emoji: "🛁",
+    facts: ["Some things sink in water.", "Some things float on top.", "A rock sinks. A leaf can float."],
+    ask: { prompt: "What does a rock do in water?", right: "It sinks", wrong: ["It floats away", "It flies"], why: "A rock sinks. A leaf can float." },
+  },
+  {
+    id: "day-and-night", band: "little", topic: "science", title: "Day and night", emoji: "🌙",
+    facts: ["The Earth spins around slowly.", "The side facing the Sun has daytime.", "The side facing away has night."],
+    ask: { prompt: "When do we have night?", right: "When our side faces away", wrong: ["When our side faces the Sun", "When it is cloudy"], why: "Night comes when our side of Earth faces away from the Sun." },
+  },
+  {
+    id: "baby-animals", band: "little", topic: "science", title: "Baby animals", emoji: "🐶",
+    facts: ["A baby cat is called a kitten.", "A baby dog is called a puppy.", "A baby frog is called a tadpole."],
+    ask: { prompt: "What is a baby dog called?", right: "A puppy", wrong: ["A kitten", "A tadpole"], why: "A baby dog is a puppy." },
+  },
+  {
+    id: "animal-homes", band: "little", topic: "science", title: "Animal homes", emoji: "🪺",
+    facts: ["A bird lives in a nest.", "A bee lives in a hive.", "A bear sleeps in a den."],
+    ask: { prompt: "What do we call a bird's home?", right: "A nest", wrong: ["A hive", "A pond"], why: "A bird's home is a nest." },
+  },
+  {
+    id: "places-in-community", band: "little", topic: "world", title: "Places we go", emoji: "🏫",
+    facts: ["A library lends books to read.", "A park is a place to play.", "A store sells things we need."],
+    ask: { prompt: "Where can you borrow a book?", right: "A library", wrong: ["A park", "A bakery"], why: "A library lends books." },
+  },
+  {
+    id: "days-of-the-week", band: "little", topic: "world", title: "Days of the week", emoji: "📆",
+    facts: ["A week has seven days.", "Days have names, like Monday and Friday.", "After Saturday comes Sunday."],
+    ask: { prompt: "How many days are in a week?", right: "Seven", wrong: ["Three", "Ten"], why: "A week has seven days." },
+  },
+  {
+    id: "being-kind", band: "little", topic: "world", title: "Being kind", emoji: "💛",
+    facts: ["Kind words help people feel good.", "Sharing is a way to be kind.", "We can help a friend who is sad."],
+    ask: { prompt: "Which one is a kind thing to do?", right: "Share a toy", wrong: ["Take a toy away", "Say mean words"], why: "Sharing is a kind thing to do." },
+  },
+  {
+    id: "homes-for-people", band: "little", topic: "world", title: "Homes for people", emoji: "🏠",
+    facts: ["People live in houses and apartments.", "Some homes are tall and some are small.", "A home keeps us safe and warm."],
+    ask: { prompt: "What does a home do for us?", right: "Keeps us safe and warm", wrong: ["Makes us fly", "Turns us into birds"], why: "A home keeps us safe and warm." },
+  },
+
+  // ——— More for Grades 2 to 4 ———
+  {
+    id: "your-skeleton", band: "middle", topic: "science", title: "Your skeleton", emoji: "🦴",
+    facts: ["Bones hold up your body and give it shape.", "Your skull protects your brain.", "Your ribs protect your heart and lungs."],
+    ask: { prompt: "What does your skull protect?", right: "Your brain", wrong: ["Your stomach", "Your toes"], why: "The skull is a hard shell around the brain." },
+  },
+  {
+    id: "what-roots-do", band: "middle", topic: "science", title: "What roots do", emoji: "🌿",
+    facts: ["Roots hold a plant in the soil.", "Roots soak up water and nutrients.", "The water travels up the stem to the leaves."],
+    ask: { prompt: "What do roots take in from the soil?", right: "Water and nutrients", wrong: ["Sunlight", "Wind"], why: "Roots soak up water and nutrients." },
+  },
+  {
+    id: "how-sound-travels", band: "middle", topic: "science", title: "How sound travels", emoji: "🔊",
+    facts: ["Sounds are made by things that vibrate.", "Vibrations travel through the air as waves.", "Your ears collect them so you can hear."],
+    ask: { prompt: "What makes a sound?", right: "Something vibrating", wrong: ["Something perfectly still", "Something invisible"], why: "Sound comes from vibrations." },
+  },
+  {
+    id: "habitats", band: "middle", topic: "science", title: "Habitats", emoji: "🏞️",
+    facts: ["A habitat is where a plant or animal lives.", "It gives food, water and shelter.", "A pond, a forest and a desert are habitats."],
+    ask: { prompt: "What does a habitat give an animal?", right: "Food, water and shelter", wrong: ["A school and a bus", "A phone and a map"], why: "A habitat meets an animal's needs: food, water and shelter." },
+  },
+  {
+    id: "natural-resources", band: "middle", topic: "world", title: "Natural resources", emoji: "⛏️",
+    facts: ["Natural resources come from nature.", "Water, wood, soil and sunlight are resources.", "We use resources wisely so they last."],
+    ask: { prompt: "Which one is a natural resource?", right: "Water", wrong: ["A television", "A school bus"], why: "Water comes from nature. The others are made by people." },
+  },
+  {
+    id: "calendars", band: "middle", topic: "world", title: "Calendars", emoji: "📅",
+    facts: ["A year has twelve months.", "Most months have thirty or thirty-one days.", "A calendar helps us plan ahead."],
+    ask: { prompt: "How many months are in a year?", right: "Twelve", wrong: ["Ten", "Seven"], why: "A year has twelve months." },
+  },
+  {
+    id: "getting-around", band: "middle", topic: "world", title: "Getting around, then and now", emoji: "🚂",
+    facts: ["Long ago, people walked or rode animals.", "Later, trains and ships carried many people.", "Today cars, planes and buses are common."],
+    ask: { prompt: "Which way of getting around is the oldest?", right: "Walking", wrong: ["Flying in a plane", "Riding a train"], why: "People have always walked. Trains and planes came much later." },
+  },
+  {
+    id: "libraries", band: "middle", topic: "world", title: "Libraries", emoji: "📚",
+    facts: ["A library shares books and more with everyone.", "People borrow books, music and movies.", "Many libraries also have story times."],
+    ask: { prompt: "What can you do at a library?", right: "Borrow a book", wrong: ["Plant a tree", "Fix a car"], why: "Libraries lend books to their community." },
+  },
+
+  // ——— More for Grades 5 to 9 ———
+  {
+    id: "atoms", band: "big", topic: "science", title: "Atoms", emoji: "⚛️",
+    facts: ["Everything around you is made of tiny atoms.", "Atoms are far too small to see with your eyes.", "Different kinds of atoms are called elements."],
+    ask: { prompt: "What are all materials made of?", right: "Atoms", wrong: ["Shadows", "Sound waves"], why: "All matter is made of atoms." },
+  },
+  {
+    id: "inherited-traits", band: "big", topic: "science", title: "Traits from your family", emoji: "🧬",
+    facts: ["Traits are features, like eye shape or hair type.", "Many traits are passed down in genes from parents.", "Genes are instructions found in almost every cell."],
+    ask: { prompt: "Which trait is inherited?", right: "Eye shape", wrong: ["Knowing how to ride a bike", "A scar from a fall"], why: "Eye shape comes from genes. Skills and scars are not passed down." },
+  },
+  {
+    id: "simple-circuits", band: "big", topic: "science", title: "Simple circuits", emoji: "💡",
+    facts: ["A circuit is a path that electricity can follow.", "A bulb lights when the path is a complete loop.", "A switch opens or closes the loop."],
+    ask: { prompt: "Why does a bulb go out when a wire in its circuit is cut?", right: "Electricity can't flow around the loop", wrong: ["The battery turns into a magnet", "The bulb grows too heavy"], why: "A cut wire breaks the loop, so the electricity has nowhere to flow." },
+  },
+  {
+    id: "gravity", band: "big", topic: "science", title: "Gravity", emoji: "🍎",
+    facts: ["Gravity is a force that pulls objects toward each other.", "Earth's gravity pulls you toward the ground.", "Gravity keeps the Moon moving around Earth."],
+    ask: { prompt: "Which force keeps the Moon moving around Earth?", right: "Gravity", wrong: ["Friction", "Magnetism"], why: "Earth's gravity keeps the Moon in its path." },
+  },
+  {
+    id: "rivers-and-early-cities", band: "big", topic: "world", title: "Rivers and early cities", emoji: "🏺",
+    facts: ["Many early cities grew beside big rivers.", "Rivers gave water for drinking and for crops.", "Boats on rivers carried food and goods."],
+    ask: { prompt: "Why did early cities grow near rivers?", right: "Rivers gave water and ways to travel", wrong: ["Rivers kept the weather cold", "Rivers stopped all floods"], why: "Rivers provided water for crops and routes for boats." },
+  },
+  {
+    id: "latitude-and-longitude", band: "big", topic: "world", title: "Latitude and longitude", emoji: "🧭",
+    facts: ["Latitude lines run east to west around the globe.", "Longitude lines run from the North Pole to the South Pole.", "Together they give any place an exact address."],
+    ask: { prompt: "Which lines run from pole to pole?", right: "Longitude", wrong: ["Latitude", "The equator"], why: "Longitude lines run from pole to pole. Latitude lines, like the equator, run east to west." },
+  },
+  {
+    id: "rights-for-everyone", band: "big", topic: "world", title: "Rights for everyone", emoji: "🕊️",
+    facts: ["Human rights belong to every person.", "They include safety, education and fair treatment.", "In 1948 the United Nations adopted a Universal Declaration of Human Rights."],
+    ask: { prompt: "Who do human rights belong to?", right: "Every person", wrong: ["Only adults", "Only people who vote"], why: "Human rights belong to every person." },
+  },
+  {
+    id: "where-energy-comes-from", band: "big", topic: "world", title: "Where our energy comes from", emoji: "⚡",
+    facts: ["Fossil fuels took millions of years to form.", "Sunlight, wind and moving water are renewable.", "Renewable energy does not run out when we use it."],
+    ask: { prompt: "Which energy source is renewable?", right: "Wind", wrong: ["Coal", "Oil"], why: "Wind keeps blowing. Coal and oil take millions of years to form." },
+  },
 ];
 
 export function exploreCards(band: AgeBand): ExploreCard[] {

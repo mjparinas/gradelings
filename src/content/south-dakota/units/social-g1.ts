@@ -1,5 +1,6 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { SOUTH_DAKOTA_MORE } from "./social-more";
 
 // South Dakota Grade 1 social studies: South Dakota's flag, motto, Capitol and cities, with land and water words (1.SS.1,
 // 1.SS.2); the Oceti Sakowin and other Nations of the northern plains before Columbus (1.SS.6); the ancient world and Rome
@@ -123,7 +124,7 @@ export const SOCIAL_1: Unit[] = [
     parentNote:
       "South Dakota's capital, Pierre, its State Capitol and governor, its flag, motto (\"Under God the people rule\") and nickname, the cities of Sioux Falls and Rapid City, the Missouri River, and land and water words from the standards: prairie, valley, desert, coast, island, bay, harbor and peninsula.",
     standards: ["1.SS.1; 1.SS.2", "the state flag, motto, Capitol and governor of South Dakota, and American and South Dakota geography"],
-    items: SOUTH_DAKOTA,
+    items: [...SOUTH_DAKOTA, ...SOUTH_DAKOTA_MORE],
   }),
   bankUnit({
     id: "sd-g1-first-peoples",

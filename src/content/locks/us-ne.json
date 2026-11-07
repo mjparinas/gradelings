@@ -299,7 +299,7 @@
       "wa-g3-survival text=8148e373a0 std=588d980a03 q=b593b45148",
       "wa-g3-hazards text=06e07390fc std=52eb0e4d80 q=b58e997d4c",
       "or-g3-magnet-design text=6e359c124e std=d73d3bc409 q=b0eac72564",
-      "neb-g3-fossils text=21ee038c28 std=095c2b3474 q=54748bd5ad",
+      "neb-g3-fossils text=21ee038c28 std=095c2b3474 q=e8a001d12c",
       "neb-g3-weather-climate text=a321d05834 std=0366d8802e q=43f81d4417"
     ]
   },
@@ -469,7 +469,7 @@
       "ny-g5-columbian-exchange text=18b9dc4878 std=50d75d07db q=625d765c55",
       "wa-g5-thirteen-colonies text=b218e8efce std=d1d9b169c5 q=dd5f1aba73",
       "ca-g5-colonial-economy text=469755cd16 std=1137b66f2a q=78476c23e0",
-      "ca-g5-road-to-revolution text=f43acaa35e std=0da4382d08 q=348033ff6d",
+      "ca-g5-road-to-revolution text=f43acaa35e std=0da4382d08 q=547def255f",
       "ca-g5-revolution text=9f9c895b95 std=c827c36c82 q=77d806ef60",
       "wa-g5-constitution text=4fce7c7602 std=0f47c87fd3 q=2d1d2c254b",
       "or-g5-timeline text=d6feb485b6 std=1f4e0d8899 q=750a99801f",
@@ -542,7 +542,7 @@
       "work-energy-8 text=6af421d21c std=fab39e8c29 q=db86881bac",
       "neb-g6-weather text=a73689c1e8 std=426022b192 q=efc253221d",
       "neb-g6-climate text=c81d76ea00 std=903c3e5176 q=e58b611b63",
-      "neb-g6-growth text=80ee6c2693 std=a036e1b345 q=b320b28c96",
+      "neb-g6-growth text=80ee6c2693 std=a036e1b345 q=ca74e6aeab",
       "neb-g6-design text=d0b4389208 std=d1b3897197 q=a5cbc6a3be"
     ]
   },
@@ -581,7 +581,7 @@
       "word-mix-ups text=7bb5032b8a std=eae782694c q=d64ff1637c",
       "poetry-lab text=e3769835d8 std=52736f872c q=a8dd8516cd",
       "punctuation-7 text=9342af658b std=b7c6e7b0ad q=f4766ca186",
-      "point-of-view-7 text=9446c4e22a std=8c76cc3d22 q=ee7ee4f5b5",
+      "point-of-view-7 text=9446c4e22a std=8c76cc3d22 q=fc62f4db46",
       "mb-word-roots text=f8f825870e std=bd869154d1 q=a13fe4ad77",
       "wa-g7-research-skills text=a0906b3c59 std=b57493f3bf q=4901d7cfd4",
       "wa-g7-media-framing text=dfd5377178 std=44e8f04780 q=1f917ebc68",
@@ -664,8 +664,8 @@
     "overview": "318fbdabbe",
     "units": [
       "close-reading text=b5e48e1704 std=9876399b4f q=9a7ad6cfde",
-      "literary-devices text=807aa8d25d std=22bc66e8df q=dbc870fffd",
-      "word-study text=e9a31820f1 std=1fe46eea62 q=e40812d304",
+      "literary-devices text=807aa8d25d std=22bc66e8df q=92bd771be1",
+      "word-study text=e9a31820f1 std=1fe46eea62 q=15f2dda6fa",
       "irony-satire-8 text=4b6cba0527 std=338cbe24f8 q=291e5761a1",
       "narrator-8 text=b609477509 std=d608b37cba q=6c18973e7e",
       "forms-features-8 text=612838fad2 std=1f16c43b35 q=bb2163dc62",
@@ -707,10 +707,10 @@
       "wa-g8-fields text=8fbd720783 std=5988eca0b9 q=603f693f54",
       "wa-g8-heredity text=023de89543 std=3f20d4ce0d q=0889381c05",
       "wa-g8-selection text=9af384fbd6 std=92374001f6 q=a225d53251",
-      "ca-g8-embryos text=46f9510ea2 std=f71fee6bba q=59154e5533",
-      "ca-g8-signals text=5d529d090d std=8c745ca154 q=0897cd6d70",
-      "ca-g8-design text=a660cd8c37 std=30f0d8ef54 q=2c436537ea",
-      "neb-g8-space text=6db743b3e7 std=11c4167d72 q=5907957876",
+      "ca-g8-embryos text=46f9510ea2 std=f71fee6bba q=594a94b5eb",
+      "ca-g8-signals text=5d529d090d std=8c745ca154 q=455bd082a4",
+      "ca-g8-design text=a660cd8c37 std=30f0d8ef54 q=2d2421bc23",
+      "neb-g8-space text=6db743b3e7 std=11c4167d72 q=4d9c789bd8",
       "neb-g8-earth-history text=c69bcd1250 std=22c9a824b3 q=c09db623e7"
     ]
   },
@@ -742,14 +742,14 @@
     "overview": "6f4aff926d",
     "units": [
       "close-reading text=1934195db9 std=4fbcf353af q=f9de480cb6",
-      "literary-elements text=c987189fb1 std=20ff3b7b85 q=4dd3b74498",
-      "grammar-and-style text=8039e9ed51 std=454d16c758 q=37d6dcd28c",
+      "literary-elements text=c987189fb1 std=20ff3b7b85 q=6bb0625bc1",
+      "grammar-and-style text=8039e9ed51 std=454d16c758 q=dba6ff55c7",
       "word-parts-9 text=2f90f3f2bb std=86b770e80a q=12c40c9d05",
       "devices-9 text=320de0c79d std=cf47144293 q=2531ff43de",
       "digital-9 text=a08ac85319 std=bfa229260d q=f654422b22",
       "forms-features-9 text=4d4a0e13b8 std=bb7f0315d4 q=8b093065a8",
-      "mb-summarizing text=a1c214cb62 std=6f8566595f q=1544e41082",
-      "mb-choose-form-and-compose text=b0b438e003 std=dcae9f7b04 q=515bb10e15",
+      "mb-summarizing text=a1c214cb62 std=6f8566595f q=c42d0bfeb2",
+      "mb-choose-form-and-compose text=b0b438e003 std=dcae9f7b04 q=cf661011eb",
       "wa-g9-research-and-credibility text=255a2e9598 std=a52334a696 q=447c001fd3",
       "wa-g9-proofreading text=91e8cd490d std=9a8bd27a50 q=06b9dd8ced",
       "or-g9-media-analysis text=72d67adead std=f1d215b9f2 q=e34931ec0d",
@@ -816,7 +816,7 @@
       "ca-g9-earth-interior text=5353771af0 std=abd93447a7 q=ce35f414aa",
       "ca-g9-climate-feedbacks text=294b68d3fa std=330b5fba88 q=1c06419890",
       "ca-g9-resources text=8c64d966db std=ea292635ce q=4e2c013ca5",
-      "neb-g9-ecosystems text=f91e5128a5 std=d6b8240922 q=45e79e9aec"
+      "neb-g9-ecosystems text=f91e5128a5 std=d6b8240922 q=7c45bff058"
     ]
   },
   "9/social": {

@@ -82,10 +82,11 @@ describe("service worker build files", () => {
     expect(await (await get("/_next/static/immutable/chunks/a.js")).text()).toBe("real");
   });
 
-  it("never keeps an HTML page that answered a script request", async () => {
+  it("never keeps an HTML page that answered a script request, and answers it as a failed download", async () => {
     network = html;
     const res = await get("/_next/static/immutable/chunks/b.js");
-    expect(res.headers.get("content-type")).toMatch(/html/);
+    // A failed download fires the <script>'s error, so the app can offer "Try again" instead of waiting forever.
+    expect(res.type).toBe("error");
     expect(await (await app()).match(`${ORIGIN}/_next/static/immutable/chunks/b.js`)).toBeUndefined();
     // Off the filtered network, the real file arrives and is kept.
     network = () => js("real b");

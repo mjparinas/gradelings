@@ -1,5 +1,6 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { LATE_1800S_MORE, MODERN_MORE } from "./social-more";
 
 // South Dakota Grade 8 social studies: Dakota Territory in the late 1800s, from the railroad and the gold rush to the
 // Dawes Act and statehood (8.SS.2), and South Dakota in the Great Depression and World War II, with Mount Rushmore, the
@@ -68,7 +69,7 @@ export const SOCIAL_8: Unit[] = [
     parentNote:
       "Dakota Territory in the late 1800s: the Homestead Act and the Great Dakota Boom, immigrants and their heritage, railroads, the Black Hills gold rush and the Homestake Mine, the Fort Laramie Treaty of 1868, the Agreement of 1877, the Dawes Act, the 1889 Sioux Agreement, Wounded Knee, boarding schools and the Meriam Report, Populism and statehood in 1889.",
     standards: ["8.SS.2", "the Gilded Age in South Dakota: railroads, homesteading, gold, treaties kept and broken, Wounded Knee and statehood"],
-    items: LATE_1800S,
+    items: [...LATE_1800S, ...LATE_1800S_MORE],
   }),
   bankUnit({
     id: "sd-g8-depression-and-war",
@@ -78,6 +79,6 @@ export const SOCIAL_8: Unit[] = [
     parentNote:
       "The Great Depression and World War II with South Dakota's part in them: the Dust Bowl and grasshoppers, the New Deal and the CCC in the Black Hills, the Indian Reorganization Act, the carving of Mount Rushmore and the Crazy Horse Memorial, the Lakota Code Talkers, Joe Foss, the Rapid City air base, and the war's major events and crimes.",
     standards: ["8.SS.5", "the Great Depression and World War II, the carving of Mount Rushmore and the Crazy Horse Memorial, and the Lakota Code Talkers"],
-    items: MODERN,
+    items: [...MODERN, ...MODERN_MORE],
   }),
 ];

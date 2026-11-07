@@ -11,7 +11,8 @@
 //   report stops opening on a device once its link is revoked or expires.
 // - A build file is only kept when it really is one: a school web filter or a captive portal can
 //   answer a script request with its own HTML page (status 200), and keeping that cache-first
-//   would break the app on that device for good. Such copies are dropped when a worker activates.
+//   would break the app on that device for good. Such copies are dropped when a worker activates, and
+//   the page gets a failed download instead of the filter's page, so the app can show "Try again".
 // - The Piper voice (/piper/{version}/, /piper-worker.js) lives in its own cache, which only
 //   the app's voice download fills (src/lib/piper.ts), and which is kept across updates
 //   because it is about 100 MB.
@@ -107,6 +108,15 @@ self.addEventListener("message", (event) => {
   );
 });
 
+/**
+ * A build file answered with an HTML page (a school web filter) becomes a failed download. Run as a script, the page
+ * would fail with "Unexpected token '<'" while the <script> still reports it loaded, and the app would wait for that
+ * file forever; a failed download lets it show its "Try again" screen instead (src/lib/blockedScripts.ts).
+ */
+function notAPage(res) {
+  return res.ok && /text\/html/i.test(res.headers.get("content-type") || "") ? Response.error() : res;
+}
+
 function store(request, response, keep = (r) => r.ok) {
   if (keep(response) && response.type === "basic" && !/no-store/i.test(response.headers.get("cache-control") || "")) {
     const copy = response.clone();
@@ -162,7 +172,7 @@ self.addEventListener("fetch", (event) => {
 
   if (url.pathname.startsWith("/_next/static/") || /\.(png|svg|ico|webmanifest|woff2?)$/.test(url.pathname)) {
     event.respondWith(
-      caches.match(request).then((hit) => (hit && isAsset(hit) ? hit : fetch(request).then((res) => store(request, res, isAsset)))),
+      caches.match(request).then((hit) => (hit && isAsset(hit) ? hit : fetch(request).then((res) => store(request, res, isAsset)).then(notAPage))),
     );
     return;
   }

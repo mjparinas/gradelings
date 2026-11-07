@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/PublicLink";
 import { appJsonLd, breadcrumbJsonLd } from "@/components/site/jsonld";
 import { PricingWithCurrency } from "@/components/site/PricingSwitch";
 import { offersUsd, siteCurrencies } from "@/components/site/provinces";

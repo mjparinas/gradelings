@@ -415,7 +415,7 @@
     "overview": "594bbe9277",
     "units": [
       "salutations text=34aad2270e std=c36ca2d35d q=85b8db961b",
-      "sons-et-accents text=c2600c3971 std=bcf01bc5ab q=42ec9fcbd3",
+      "sons-et-accents text=c2600c3971 std=bcf01bc5ab q=238e2c16a1",
       "nombres text=64f42c031e std=b87b5d83db q=ec7f3851db",
       "genre-et-nombre text=6fc35772c5 std=f9c1f8d906 q=ee09044759",
       "gouts text=be0812c122 std=385a5d24e2 q=51ab4a36e1",
@@ -514,11 +514,11 @@
   "6/core-french": {
     "overview": "5fe5c84985",
     "units": [
-      "mots-interrogatifs text=2502c4b5bd std=c7e2d374a8 q=d046f6cca0",
-      "famille text=6a732a57db std=5a1f623a7d q=17180cb37c",
-      "loisirs text=128d6f0a63 std=9653f938c5 q=ae5e28e2ba",
-      "parce-que text=dcb7703bff std=871d0be922 q=9b5eb6a892",
-      "emotions-et-etats text=408f0d8124 std=b556a57ef7 q=90f8604097",
+      "mots-interrogatifs text=2502c4b5bd std=c7e2d374a8 q=b2df70a40e",
+      "famille text=6a732a57db std=5a1f623a7d q=a1fe1d8345",
+      "loisirs text=128d6f0a63 std=9653f938c5 q=98aba443f2",
+      "parce-que text=dcb7703bff std=871d0be922 q=cd705df6d5",
+      "emotions-et-etats text=408f0d8124 std=b556a57ef7 q=4b11642ffb",
       "motifs-de-lettres text=33c165f11e std=7a5ddfddeb q=e7aba7baaa",
       "sources-et-respect text=aaa4a4bec8 std=9d34f8b4f3 q=e7ad95f529"
     ]
@@ -621,10 +621,10 @@
   "7/core-french": {
     "overview": "325e20d4f7",
     "units": [
-      "personnalite text=b1fc0e15e8 std=dfe9413102 q=abd99aa1d9",
-      "lieux text=f028e63618 std=bcafaf5724 q=228bc0d463",
-      "directions text=18d3bb469c std=4b617a0797 q=a3f4dfc9e6",
-      "comparaisons text=f89fc8dd81 std=ff47c05ed8 q=05e24c98e6",
+      "personnalite text=b1fc0e15e8 std=dfe9413102 q=bb8ff43336",
+      "lieux text=f028e63618 std=bcafaf5724 q=536e393586",
+      "directions text=18d3bb469c std=4b617a0797 q=5c58b6fb7c",
+      "comparaisons text=f89fc8dd81 std=ff47c05ed8 q=ad816277aa",
       "mots-amis text=7a8e96300f std=f1e285dd45 q=b8dd2f9ecb",
       "histoires text=f192cb51a7 std=23410d0c19 q=dac590e998",
       "cultures-et-respect text=d3e3a37ee5 std=72f8c22626 q=16bb26fa32"
@@ -638,7 +638,7 @@
       "close-reading text=0b6ee269e5 std=6be6d61d0f q=3fd92d2337",
       "literary-devices text=75012dadfd std=9f5a72b450 q=9f862df281",
       "tone-mood text=1a78ad0bc3 std=2ad61b8018 q=5fe5a6766c",
-      "point-of-view-7 text=9446c4e22a std=844ceaf104 q=ee7ee4f5b5",
+      "point-of-view-7 text=9446c4e22a std=844ceaf104 q=fc62f4db46",
       "poetry-lab text=e3769835d8 std=8199554e0c q=fe038cecf2",
       "mb-7-critical-reading text=e2e8a8fc19 std=cb77459541 q=6f958897f2",
       "persuasion text=002e89452f std=7558a236f9 q=9332cae44a",
@@ -731,10 +731,10 @@
     "overview": "5998d21adc",
     "units": [
       "strategies-8 text=14cb61c3b0 std=66364396f5 q=7ec3688b00",
-      "word-study text=e9a31820f1 std=78a2eb6fde q=e40812d304",
+      "word-study text=e9a31820f1 std=78a2eb6fde q=15f2dda6fa",
       "close-reading text=b5e48e1704 std=ca3f1d81a7 q=9ae7c5a9fa",
       "narrator-8 text=b609477509 std=62906baea9 q=ce56cbb1e0",
-      "literary-devices text=807aa8d25d std=0bd40f8482 q=dbc870fffd",
+      "literary-devices text=807aa8d25d std=0bd40f8482 q=92bd771be1",
       "irony-satire-8 text=3ba9c87062 std=d1344adb4e q=202c839ad1",
       "forms-features-8 text=612838fad2 std=3bc62a1177 q=d9c6eb4303",
       "digital-8 text=742bfe22d6 std=4c4e6dd539 q=a25584c75b",
@@ -744,7 +744,7 @@
       "mb-planning-forms-8 text=a00a7d9744 std=1362c3bbf3 q=f212a6d2be",
       "writing-8 text=d9bb3a4cad std=643f2368c8 q=1d05d6ba80",
       "mb-word-power-8 text=3f40ceb555 std=1c58bd6280 q=bc89f91ef1",
-      "grammar-and-style text=4cac16a8c8 std=fa2e486810 q=3d25d60229"
+      "grammar-and-style text=4cac16a8c8 std=fa2e486810 q=19aa427fa0"
     ]
   },
   "8/math": {
@@ -825,19 +825,19 @@
   "9/language": {
     "overview": "5998d21adc",
     "units": [
-      "mb-reading-with-purpose text=3a6f6dc998 std=b69dca335c q=428f41f867",
+      "mb-reading-with-purpose text=3a6f6dc998 std=b69dca335c q=4c0ddc8417",
       "close-reading text=1934195db9 std=b22447119d q=95e83bca39",
-      "mb-summarizing text=13b7c7c265 std=139b0e9c18 q=bf72a01d31",
-      "literary-elements text=c987189fb1 std=b208dde4be q=b7a0a5844a",
+      "mb-summarizing text=13b7c7c265 std=139b0e9c18 q=a020ff03b2",
+      "literary-elements text=c987189fb1 std=b208dde4be q=3f207a363a",
       "devices-9 text=320de0c79d std=18128ddba3 q=37465042ac",
       "forms-features-9 text=507223d4ab std=2e0e7b1372 q=58dfee8ebc",
-      "language-and-style text=f2649185d5 std=f0b4cdb4f2 q=2f3d7024fe",
+      "language-and-style text=f2649185d5 std=f0b4cdb4f2 q=8a7146632d",
       "argument-and-rhetoric text=b5525b0494 std=4eda95ada8 q=ce069191ec",
       "digital-9 text=a08ac85319 std=866961fc2d q=d6d4822cdd",
-      "mb-choose-form-and-compose text=b0657c8b73 std=9124d4815e q=25db8fae08",
+      "mb-choose-form-and-compose text=b0657c8b73 std=9124d4815e q=ee4c49b508",
       "word-parts-9 text=2f90f3f2bb std=510aa97ac7 q=12c40c9d05",
-      "mb-vocabulary-and-spelling text=18b81880f0 std=e50ef13a69 q=5fcc39c8d0",
-      "grammar-and-style text=8039e9ed51 std=6979302950 q=37d6dcd28c",
+      "mb-vocabulary-and-spelling text=18b81880f0 std=e50ef13a69 q=6f1dd36970",
+      "grammar-and-style text=8039e9ed51 std=6979302950 q=dba6ff55c7",
       "revise-edit-9 text=0d1fec0a1b std=0e21eb8ca2 q=55444ac3bb"
     ]
   },
