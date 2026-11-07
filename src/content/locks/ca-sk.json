@@ -600,10 +600,10 @@
   "7/core-french": {
     "overview": "e0c0c9ff97",
     "units": [
-      "directions text=18d3bb469c std=07ca68918c q=a3f4dfc9e6",
-      "lieux text=f028e63618 std=c8c05038cc q=228bc0d463",
-      "comparaisons text=f89fc8dd81 std=aa6474b5eb q=05e24c98e6",
-      "personnalite text=b1fc0e15e8 std=b27ea9852e q=abd99aa1d9",
+      "directions text=18d3bb469c std=07ca68918c q=5c58b6fb7c",
+      "lieux text=f028e63618 std=c8c05038cc q=536e393586",
+      "comparaisons text=f89fc8dd81 std=aa6474b5eb q=ad816277aa",
+      "personnalite text=b1fc0e15e8 std=b27ea9852e q=bb8ff43336",
       "mots-amis text=7a8e96300f std=9c4a20abfe q=b8dd2f9ecb",
       "histoires text=f192cb51a7 std=0990fa86fa q=dac590e998",
       "monde-francophone text=f7c572832f std=a168789299 q=ffc59c1c6e",

@@ -556,10 +556,10 @@
   "7/core-french": {
     "overview": "ac6ba9db28",
     "units": [
-      "directions text=18d3bb469c std=08230caf1e q=a3f4dfc9e6",
-      "lieux text=f028e63618 std=1c44058d05 q=228bc0d463",
-      "comparaisons text=f89fc8dd81 std=31f134836d q=05e24c98e6",
-      "personnalite text=b1fc0e15e8 std=700bb363f1 q=abd99aa1d9",
+      "directions text=18d3bb469c std=08230caf1e q=5c58b6fb7c",
+      "lieux text=f028e63618 std=1c44058d05 q=536e393586",
+      "comparaisons text=f89fc8dd81 std=31f134836d q=ad816277aa",
+      "personnalite text=b1fc0e15e8 std=700bb363f1 q=bb8ff43336",
       "mots-amis text=7a8e96300f std=b62149dc4b q=b8dd2f9ecb",
       "histoires text=f192cb51a7 std=1dc1800363 q=dac590e998",
       "monde-francophone text=f7c572832f std=688845d847 q=ffc59c1c6e",
