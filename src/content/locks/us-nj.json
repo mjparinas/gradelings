@@ -300,7 +300,7 @@
       "wa-g3-survival text=8148e373a0 std=23285f6805 q=b593b45148",
       "wa-g3-hazards text=06e07390fc std=07ff82269e q=b58e997d4c",
       "or-g3-magnet-design text=6e359c124e std=540bf4a56d q=b0eac72564",
-      "nj-g3-fossils text=226690ed97 std=d7890df2f1 q=272c032205",
+      "nj-g3-fossils text=226690ed97 std=d7890df2f1 q=abd587c0b8",
       "nj-g3-weather-climate text=72f15e8930 std=415a6cc55d q=231942e0b0"
     ]
   },
@@ -468,7 +468,7 @@
     "units": [
       "wa-g5-thirteen-colonies text=b218e8efce std=b12fb4115a q=dd5f1aba73",
       "ca-g5-colonial-economy text=469755cd16 std=6ea9cdeabe q=78476c23e0",
-      "ca-g5-road-to-revolution text=f43acaa35e std=bea7ee18d8 q=348033ff6d",
+      "ca-g5-road-to-revolution text=f43acaa35e std=bea7ee18d8 q=547def255f",
       "ca-g5-revolution text=9f9c895b95 std=7d7785ef3c q=77d806ef60",
       "wa-g5-constitution text=4fce7c7602 std=5eff5a03e5 q=2d1d2c254b",
       "or-g5-timeline text=d6feb485b6 std=a79ef20d1f q=750a99801f",
@@ -540,7 +540,7 @@
       "ca-g6-human-impact text=8d04fb23b9 std=a0f6568d2c q=e8e81a8802",
       "nj-g6-weather text=22b1b910ee std=bf76790cc6 q=0a518ebbb8",
       "nj-g6-climate text=7e3ebb3379 std=5ac511bf6d q=560ad2e05d",
-      "nj-g6-growth text=893b91dfd0 std=b0947d3c39 q=e15d65b92d",
+      "nj-g6-growth text=893b91dfd0 std=b0947d3c39 q=71284602f5",
       "nj-g6-design text=d0b4389208 std=98b2d7be6a q=0a02331f56"
     ]
   },
@@ -819,7 +819,7 @@
       "ca-g9-earth-interior text=5353771af0 std=197d3d87a4 q=ce35f414aa",
       "ca-g9-climate-feedbacks text=294b68d3fa std=37abc57bb4 q=1c06419890",
       "ca-g9-resources text=8c64d966db std=55e8f59000 q=4e2c013ca5",
-      "nj-g9-ecosystems text=d19297b64a std=fe2118a95a q=84c5a357e5"
+      "nj-g9-ecosystems text=d19297b64a std=fe2118a95a q=3b8f39d7ec"
     ]
   },
   "9/social": {

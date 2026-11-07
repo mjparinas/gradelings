@@ -396,7 +396,7 @@
       "ca-g5-thirteen-colonies text=b2ab7c1f74 std=111e9c8059 q=17e62378ec",
       "ca-g5-colonial-economy text=302c8d93ea std=e909998e95 q=78476c23e0",
       "ca-g5-slavery-and-resistance text=75582d2903 std=6b2c83e9e8 q=6cc22a069b",
-      "ca-g5-road-to-revolution text=f43acaa35e std=0bc5266487 q=348033ff6d",
+      "ca-g5-road-to-revolution text=f43acaa35e std=0bc5266487 q=547def255f",
       "ca-g5-revolution text=9f9c895b95 std=8b5e6ea405 q=77d806ef60",
       "ca-g5-home-front text=232384cd25 std=c94e536b5c q=fcc4d2595e",
       "ca-g5-constitution text=f0912d934b std=f7437f062e q=f7d329903c",
@@ -562,7 +562,7 @@
       "ca-g6-human-impact text=8d04fb23b9 std=bf200d1796 q=e8e81a8802",
       "mo-g6-weather text=40a9f02d75 std=f09ea42a26 q=8f0af00c80",
       "mo-g6-climate text=97053eccc5 std=57cae4a266 q=db1ab024cb",
-      "mo-g6-growth text=8ccae22fd6 std=dea943f076 q=42daa35faa",
+      "mo-g6-growth text=8ccae22fd6 std=dea943f076 q=38486abb0d",
       "mo-g6-design text=342e0a2477 std=2cddcd6d1d q=a754e58ef9"
     ]
   },
@@ -853,7 +853,7 @@
       "ca-g9-earth-interior text=5353771af0 std=fda920579a q=ce35f414aa",
       "ca-g9-climate-feedbacks text=294b68d3fa std=cb12734a77 q=1c06419890",
       "ca-g9-resources text=8c64d966db std=2d45a31714 q=4e2c013ca5",
-      "mo-g9-ecosystems text=2d3c84e529 std=14333ee43f q=48062e3396"
+      "mo-g9-ecosystems text=2d3c84e529 std=14333ee43f q=703ef7b7a4"
     ]
   },
   "9/social": {

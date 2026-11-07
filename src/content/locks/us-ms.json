@@ -313,7 +313,7 @@
       "or-g3-magnet-design text=6e359c124e std=8758f82b20 q=b0eac72564",
       "rock-cycle text=c0862523ac std=6699387de2 q=6a0197b296",
       "tx-g5-conservation text=72bfee10bd std=ccfab65413 q=b8c301b7e2",
-      "ms-g3-fossils text=d3c03249c3 std=e29a94e037 q=d04eb1383a"
+      "ms-g3-fossils text=d3c03249c3 std=e29a94e037 q=2c3f3e8b0a"
     ]
   },
   "3/social": {
@@ -494,7 +494,7 @@
       "ny-g5-columbian-exchange text=18b9dc4878 std=bbb7fa76dd q=625d765c55",
       "ca-g5-thirteen-colonies text=b2ab7c1f74 std=6403c0b307 q=17e62378ec",
       "ca-g5-colonial-economy text=469755cd16 std=7f8bb23271 q=78476c23e0",
-      "ca-g5-road-to-revolution text=f43acaa35e std=f489f09888 q=348033ff6d",
+      "ca-g5-road-to-revolution text=f43acaa35e std=f489f09888 q=547def255f",
       "ca-g5-revolution text=9f9c895b95 std=bf53c445a6 q=77d806ef60",
       "ca-g8-revolutionary-ideas text=543eb450c3 std=919bada2d8 q=1bdb99ec2b",
       "ca-g5-constitution text=f0912d934b std=63c8d2bc81 q=f7d329903c",
@@ -843,7 +843,7 @@
       "ca-g9-waves text=a90a3b2cdf std=16291cd49c q=5707fc5952",
       "ca-g9-energy-systems text=fc350795a3 std=b5007801cf q=89f3453fe5",
       "electrical-energy-9 text=eecdad56b2 std=2e3c5d2d48 q=b633b5b99b",
-      "ms-g9-ecosystems text=0d87026315 std=0cdd598092 q=38f9f4ecfa"
+      "ms-g9-ecosystems text=0d87026315 std=0cdd598092 q=021f5c8bf4"
     ]
   },
   "9/social": {

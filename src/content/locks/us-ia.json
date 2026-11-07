@@ -301,7 +301,7 @@
       "wa-g3-survival text=8148e373a0 std=23285f6805 q=b593b45148",
       "wa-g3-hazards text=06e07390fc std=df90a9763f q=b58e997d4c",
       "or-g3-magnet-design text=6e359c124e std=97108f54b7 q=b0eac72564",
-      "ia-g3-fossils text=aaa6bd4e06 std=d7890df2f1 q=42c69b853e",
+      "ia-g3-fossils text=aaa6bd4e06 std=d7890df2f1 q=52997d0906",
       "ia-g3-weather-climate text=4c7f8db91d std=415a6cc55d q=87007c63e3"
     ]
   },
@@ -389,7 +389,7 @@
   "4/social": {
     "overview": "5631d06ffb",
     "units": [
-      "ca-g5-road-to-revolution text=f43acaa35e std=c39340a55f q=348033ff6d",
+      "ca-g5-road-to-revolution text=f43acaa35e std=c39340a55f q=547def255f",
       "ca-g5-revolution text=9f9c895b95 std=4bf6ae3c67 q=77d806ef60",
       "ca-g5-home-front text=232384cd25 std=8eb5cc5beb q=fcc4d2595e",
       "ca-g5-westward text=50c4e7b9be std=7a6140ebfe q=e7d1d74cc6",
@@ -721,7 +721,7 @@
       "ca-g8-design text=a660cd8c37 std=09bdac777a q=2d2421bc23",
       "ia-g8-weather text=5f700ed46e std=de23a60cd3 q=b5dbd2e46e",
       "ia-g8-climate text=21dcb35786 std=f406a91480 q=638c1ed865",
-      "ia-g8-growth text=fef2bdf025 std=8019f93a5b q=543b12e464"
+      "ia-g8-growth text=fef2bdf025 std=8019f93a5b q=f4a7cedc74"
     ]
   },
   "8/social": {
@@ -827,7 +827,7 @@
       "ca-g9-earth-interior text=5353771af0 std=197d3d87a4 q=ce35f414aa",
       "ca-g9-climate-feedbacks text=294b68d3fa std=37abc57bb4 q=1c06419890",
       "ca-g9-resources text=8c64d966db std=55e8f59000 q=4e2c013ca5",
-      "ia-g9-ecosystems text=ddf1050527 std=fe2118a95a q=13cc9d254f"
+      "ia-g9-ecosystems text=ddf1050527 std=fe2118a95a q=1a03528b75"
     ]
   },
   "9/social": {
