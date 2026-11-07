@@ -2,7 +2,7 @@ import { onColour } from "@/lib/contrast";
 import { PricingCards } from "@/components/site/Pricing";
 import { ParentQuotes } from "@/components/site/ParentQuotes";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/PublicLink";
 import { QuestionGallery } from "@/components/site/QuestionGallery";
 import { SitePage } from "@/components/site/SiteChrome";
 import { appJsonLd } from "@/components/site/jsonld";

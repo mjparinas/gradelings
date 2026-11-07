@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/PublicLink";
 import { useEffect, useState } from "react";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { APP_NAME } from "@/lib/brand";

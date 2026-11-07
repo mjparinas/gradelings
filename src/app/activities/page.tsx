@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/PublicLink";
 import { breadcrumbJsonLd, itemListJsonLd } from "@/components/site/jsonld";
 import { BANDS, BAND_LABEL, activitiesPath } from "@/components/site/activitiesData";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";

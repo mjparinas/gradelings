@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/PublicLink";
 import { notFound } from "next/navigation";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle, subjectTitle, gradeLabel, gradeSpan } from "@/components/site/curriculum";

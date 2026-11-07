@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/PublicLink";
 import { LegalPage, Section } from "@/components/site/Legal";
 import { APP_NAME, CONTACT_EMAIL, LEGAL_NAME, MAILING_ADDRESS } from "@/lib/brand";
 import { CONSENT_NOTICE } from "@/lib/coppa";

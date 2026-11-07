@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/PublicLink";
 import { breadcrumbJsonLd, itemListJsonLd } from "@/components/site/jsonld";
 import { MATH_FACTS_PAGES, factSetOf, mathFactsPath } from "@/components/site/mathFacts";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/PublicLink";
 import type { ReactNode } from "react";
 import { FRAMEWORKS } from "@/content/frameworks";
 import { APP_NAME, LEGAL_NAME, socialLinks, WORDMARK_COLOURS } from "@/lib/brand";

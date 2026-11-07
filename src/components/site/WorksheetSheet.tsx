@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/PublicLink";
 import { PrintButton } from "@/components/site/PrintButton";
 import { SampleQuestion, answerText } from "@/components/site/SampleQuestion";
 import { ShareButton } from "@/components/site/ShareButton";

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/PublicLink";
 import { dayLabel, NEWS_KIND_LABEL, type NewsDay } from "@/lib/whatsNew";
 
 const KIND_STYLE = {

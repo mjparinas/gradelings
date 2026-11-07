@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/PublicLink";
 import { notFound } from "next/navigation";
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "@/components/site/jsonld";
 import { activitiesPath } from "@/components/site/activitiesData";

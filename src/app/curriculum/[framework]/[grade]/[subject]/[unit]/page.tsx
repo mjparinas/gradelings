@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/PublicLink";
 import { notFound } from "next/navigation";
 import { breadcrumbJsonLd, typicalAgeRange } from "@/components/site/jsonld";
 import { SampleQuestion } from "@/components/site/SampleQuestion";

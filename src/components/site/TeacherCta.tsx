@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/PublicLink";
 import { APP_NAME } from "@/lib/brand";
 import { teacherPath, TEACHER_SIGNUP } from "./teachers";
 import { AppLink } from "./AppLink";
