@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { BIG_WORDS_DEEP, CONNECT_DEEP, FAIR_DEEP, LEARN_DEEP, PLAN_DEEP, REVISE_DEEP, TALK_DEEP } from "./g4-more-language-deeper";
 
 // More Grade 4 English language arts: listening and talking together, big words, connecting to texts, fair and
 // trustworthy texts, planning and revising writing, and thinking about learning. Purely oral and presentation
@@ -219,7 +220,7 @@ export const units = [
     blurb: "Good listeners, good questions, kind conversations",
     parentNote: "Practises listening for key ideas, taking turns, asking open-ended questions, giving reasons and using rich words and linking words in conversation.",
     standards: ["ELA.4.A1.1, ELA.4.A1.2, ELA.4.A1.3, ELA.4.A1.4, ELA.4.A1.6", "listening, taking turns, asking open-ended questions and sharing ideas in conversation"],
-    items: TALK,
+    items: [...TALK, ...TALK_DEEP],
   }),
   bankUnit({
     id: "mb-big-words",
@@ -228,7 +229,7 @@ export const units = [
     blurb: "Syllables, spelling and reading with feeling",
     parentNote: "Practises breaking long words into syllables and parts, spelling tricky words, and reading smoothly by noticing punctuation.",
     standards: ["ELA.4.A2.3, ELA.4.A2.6", "decoding and spelling multisyllabic words, and reading fluently with punctuation"],
-    items: BIG_WORDS,
+    items: [...BIG_WORDS, ...BIG_WORDS_DEEP],
   }),
   bankUnit({
     id: "mb-connect-texts",
@@ -237,7 +238,7 @@ export const units = [
     blurb: "Link what you read to your life and the world",
     parentNote: "Practises using what you already know, text-to-self, text-to-text and text-to-world connections, choosing the right text, and deciding what to share from research.",
     standards: ["ELA.4.B1.1, ELA.4.B1.2, ELA.4.B1.3, ELA.4.B1.4, ELA.4.B2.4", "prior knowledge, choosing texts, inquiry questions and making connections to texts"],
-    items: CONNECT,
+    items: [...CONNECT, ...CONNECT_DEEP],
   }),
   bankUnit({
     id: "mb-fair-texts",
@@ -246,7 +247,7 @@ export const units = [
     blurb: "Spot bias, stereotypes and sources you can trust",
     parentNote: "Practises noticing diversity and inclusion in stories, telling fact from opinion, spotting stereotypes and bias, and deciding whether a source can be trusted.",
     standards: ["ELA.4.B3.1, ELA.4.B3.2, ELA.4.B3.4", "diversity and inclusion in texts, trusting sources, stereotypes and bias, and supported opinions"],
-    items: FAIR,
+    items: [...FAIR, ...FAIR_DEEP],
   }),
   bankUnit({
     id: "mb-plan-writing",
@@ -255,7 +256,7 @@ export const units = [
     blurb: "Topics, plans and the four kinds of writing",
     parentNote: "Practises choosing a topic and audience, planning with brainstorming and organizers, and matching narrative, informational, descriptive and persuasive writing to a purpose.",
     standards: ["ELA.4.C1.1, ELA.4.C1.2, ELA.4.C1.3, ELA.4.C1.4, ELA.4.C1.5", "choosing topics, planning, kinds of writing and creating multimodal texts"],
-    items: PLAN,
+    items: [...PLAN, ...PLAN_DEEP],
   }),
   bankUnit({
     id: "mb-revise-writing",
@@ -264,7 +265,7 @@ export const units = [
     blurb: "Vivid details, fixing what's unclear, neat finished work",
     parentNote: "Practises adding sensory details, choosing stronger words, revising to make writing clearer, using feedback and presenting final work neatly with words and images.",
     standards: ["ELA.4.C2.3, ELA.4.C2.5, ELA.4.C3.1, ELA.4.C3.5", "word choice and sensory details, revising, legible and digital writing, and final multimodal texts"],
-    items: REVISE,
+    items: [...REVISE, ...REVISE_DEEP],
   }),
   bankUnit({
     id: "mb-learning-goals",
@@ -273,6 +274,6 @@ export const units = [
     blurb: "Set goals, use feedback, notice how you grow",
     parentNote: "Practises setting specific goals, choosing strategies, using feedback and tracking progress in listening, speaking, reading and writing.",
     standards: ["ELA.4.D2.1, ELA.4.D2.2, ELA.4.D2.3, ELA.4.D2.4, ELA.4.D2.5", "self-monitoring, criteria, feedback, goals and tracking progress"],
-    items: LEARN,
+    items: [...LEARN, ...LEARN_DEEP],
   }),
 ];
