@@ -29,6 +29,15 @@ describe("printable practice sheet", () => {
     }
   });
 
+  it("prints the ten questions compactly on one page, with the answer key starting a new page", async () => {
+    const { container } = await sheet("bc", "grade-3", "math");
+    const list = container.querySelector("main > ol")!;
+    expect(list.className).toContain("print:columns-2");
+    expect(list.className).toContain("print:[zoom:");
+    expect(list.className).not.toContain("print:space-y");
+    expect(screen.getByRole("region", { name: "Answer key" }).className).toContain("print:break-before-page");
+  });
+
   it("has ten numbered questions with a matching ten-line answer key naming each unit", async () => {
     const f = getFramework("ca-bc");
     const course = coursesFor(f, "3").find((c) => c.subject === "math")!;
