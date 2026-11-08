@@ -504,3 +504,40 @@ export function videoStats(events: AppEvent[], profileId: string, now: number, r
   out.units = [...new Set(out.units)];
   return out;
 }
+
+/** A help video a child has met: the first and last time, and how often. */
+export interface UnlockedVideo {
+  video: HelpVideo;
+  unit: string;
+  first: number;
+  last: number;
+  plays: number;
+}
+
+/**
+ * The help videos one child has unlocked, newest first. A video is unlocked once a `video` event names it, so this
+ * is read from events (never stored) and merges across devices. Rewatching from the Videos area logs nothing.
+ */
+export function unlockedVideos(events: AppEvent[], profileId: string, resetAt = 0): UnlockedVideo[] {
+  const byId = new Map(Object.entries(HELP_VIDEOS).map(([unit, video]) => [video.id, { unit, video }]));
+  const found = new Map<string, UnlockedVideo>();
+  const seen = new Set<string>();
+  for (const e of events) {
+    if (e.type !== "video" || e.profileId !== profileId || e.t <= resetAt || seen.has(e.id)) continue;
+    seen.add(e.id);
+    const hit = byId.get(e.video);
+    if (!hit) continue;
+    const cur = found.get(e.video);
+    found.set(e.video, { video: hit.video, unit: hit.unit, first: Math.min(cur?.first ?? e.t, e.t), last: Math.max(cur?.last ?? 0, e.t), plays: (cur?.plays ?? 0) + 1 });
+  }
+  return [...found.values()].sort((a, b) => b.last - a.last);
+}
+
+/** Help videos for the child's own practice units that they haven't unlocked yet, in catalogue order. */
+export function lockedVideos(unitKeys: Iterable<string>, unlocked: UnlockedVideo[]): { unit: string; video: HelpVideo }[] {
+  const have = new Set(unlocked.map((u) => u.video.id));
+  const keys = new Set(unitKeys);
+  return Object.entries(HELP_VIDEOS)
+    .filter(([unit, video]) => keys.has(unit) && !have.has(video.id))
+    .map(([unit, video]) => ({ unit, video }));
+}

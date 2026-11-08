@@ -107,6 +107,7 @@ vi.mock("./BrainBreak", () => ({ BrainBreak: screenStub("BrainBreak") }));
 vi.mock("./StoryProblems", () => ({ StoryProblems: screenStub("StoryProblems") }));
 vi.mock("./Articles", () => ({ ArticleLibrary: screenStub("ArticleLibrary"), ArticleReader: screenStub("ArticleReader") }));
 vi.mock("./Explore", () => ({ ExploreLibrary: screenStub("ExploreLibrary"), ExploreReader: screenStub("ExploreReader") }));
+vi.mock("./Videos", () => ({ Videos: screenStub("Videos") }));
 vi.mock("./Rhymes", () => ({ RhymeLibrary: screenStub("RhymeLibrary"), RhymeReader: screenStub("RhymeReader") }));
 vi.mock("./Stories", () => ({ StoryLibrary: screenStub("StoryLibrary"), StoryReader: screenStub("StoryReader") }));
 
@@ -284,6 +285,7 @@ describe("PlayApp routes", () => {
     ["problems", "StoryProblems"],
     ["articles", "ArticleLibrary"],
     ["articles/how-bees-make-honey", "ArticleReader id=how-bees-make-honey"],
+    ["videos", "Videos"],
     ["explore", "ExploreLibrary"],
     ["explore/busy-bees", "ExploreReader id=busy-bees"],
     ["rhymes", "RhymeLibrary"],
@@ -367,6 +369,7 @@ describe("PlayApp routes", () => {
     ["problems", "story-problems"],
     ["articles", "articles"],
     ["articles/how-bees-make-honey", "articles"],
+    ["videos", "video-help"],
     ["explore", "explore-cards"],
     ["explore/busy-bees", "explore-cards"],
     ["rhymes", "rhymes"],
