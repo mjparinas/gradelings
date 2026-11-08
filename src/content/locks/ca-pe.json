@@ -48,7 +48,7 @@
   "k/language": {
     "overview": "a5828a1656",
     "units": [
-      "mb-k-listening-and-talking text=f0f432415b std=bffc3d1f4a q=1550a25273",
+      "mb-k-listening-and-talking text=f0f432415b std=bffc3d1f4a q=b71ddd8cd9",
       "talk-and-listen-ab text=6b71ddbc74 std=e12a7935ca q=a01feb4799",
       "clap-the-beat text=13b130a737 std=8c6f8b6fc0 q=d798eaba52",
       "rhyme-time text=280911bb80 std=4399da3abb q=7ff630edf6",
@@ -57,10 +57,10 @@
       "picture-clues text=c447e46412 std=12d56d1bb7 q=3ade8d2d47",
       "sight-words text=2cc8b0433d std=758fa4433c q=50140fdbd6",
       "book-detectives text=1f5750b2af std=673c8f25ee q=adc3ae2dbb",
-      "mb-k-before-during-after-reading text=112f823e38 std=b83fe2badb q=c4e7a2bbf3",
+      "mb-k-before-during-after-reading text=112f823e38 std=b83fe2badb q=d8c0c11204",
       "story-order text=f874c5f317 std=ed1fd92103 q=9e24988535",
       "letter-partners text=c48f27422d std=d5ade1195b q=b88f284367",
-      "mb-k-make-a-text text=a67f254a6f std=d9892f90f1 q=0c937c1508"
+      "mb-k-make-a-text text=a67f254a6f std=d9892f90f1 q=01f4aaf0de"
     ]
   },
   "k/math": {
