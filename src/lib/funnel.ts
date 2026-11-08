@@ -42,3 +42,19 @@ export function biggestDrop(steps: FunnelStep[]): FunnelStep | null {
   for (const s of steps.slice(1)) if (steps[steps.indexOf(s) - 1].count && (!worst || s.ofPrevious < worst.ofPrevious)) worst = s;
   return worst;
 }
+
+/** How an account was made (`families.signup_via`); `unknown` is every account made before this was recorded. */
+export const SIGNUP_PATHS = [
+  { id: "card", label: "Email card after a lesson" },
+  { id: "site", label: "Sign-up form" },
+  { id: "google", label: "Google" },
+  { id: "unknown", label: "Before this was recorded" },
+] as const;
+export type SignupPath = (typeof SIGNUP_PATHS)[number]["id"];
+
+/** The first four funnel steps for one sign-up path, where the early drop-off shows. */
+export interface PathRow {
+  path: SignupPath;
+  label: string;
+  counts: [number, number, number, number];
+}

@@ -1,5 +1,6 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { CAPITAL_G7_MORE } from "./social-more";
 
 // Washington, DC Grade 7 social studies, "United States History I" (the DC Social Studies Standards, 2023): the
 // debate over the capital's location and the Compromise of 1790 (7.41), George Washington's presidency and legacy, as a
@@ -45,6 +46,6 @@ export const SOCIAL_7: Unit[] = [
     blurb: "The capital's location, Washington's legacy and freedom in DC to 1877",
     parentNote: "The debate and compromise that put the capital on the Potomac in 1790, George Washington's legacy as a leader who gave up power and as an enslaver, the first peaceful transfer of power in 1800, the lives of enslaved and free Black Washingtonians, the end of the slave trade in DC in 1850 and of slavery there in 1862, how enslaved people freed themselves during the Civil War, and Reconstruction in the District.",
     standards: ["7.41; 7.42; 7.46; 7.57; 7.69; 7.73", "the debate over the capital's location, Washington's presidency and legacy, peaceful transfers of power, the lives of enslaved and free Black Americans, emancipation and Reconstruction"],
-    items: CAPITAL,
+    items: [...CAPITAL, ...CAPITAL_G7_MORE],
   }),
 ];

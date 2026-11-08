@@ -1,5 +1,6 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { INCLUSIVE_DEEP, REFLECT_DEEP, RESEARCH_DEEP, WORDS_DEEP, WRITING_PLAN_DEEP } from "./g8-more-language-deeper";
 
 // Grade 8 English language arts: inquiry and research (strand B1), planning and choosing forms (C1), organizing
 // and word choice (C2, C3), fair and inclusive language (A1.3, B3.4) and reflecting on learning (D2). Oral
@@ -162,7 +163,7 @@ export const units: Unit[] = [
     blurb: "Ask questions, check sources, gather evidence",
     parentNote: "Children practise asking open questions, using what they already know, judging whether sources are reliable or biased, and noting evidence from more than one source.",
     standards: ["ELA.8.B1.1, ELA.8.B1.2, ELA.8.B1.3, ELA.8.B1.4, ELA.8.C1.2", "prior knowledge, open-ended questions, working with others, evidence from multiple sources and judging reliability"],
-    items: RESEARCH,
+    items: [...RESEARCH, ...RESEARCH_DEEP],
   }),
   bankUnit({
     id: "mb-planning-forms-8",
@@ -171,7 +172,7 @@ export const units: Unit[] = [
     blurb: "Pick a text form, organize ideas, find your voice",
     parentNote: "Children choose a text form for a purpose and audience, group ideas with patterns such as cause and effect, and match tone and voice to what they are writing.",
     standards: ["ELA.8.C1.1, ELA.8.C1.3, ELA.8.C1.4, ELA.8.C1.5, ELA.8.C2.1, ELA.8.C2.4, ELA.8.C3.5", "choosing a form for purpose and audience, planning tools, organizational patterns, voice and tone, and multimodal forms"],
-    items: WRITING_PLAN,
+    items: [...WRITING_PLAN, ...WRITING_PLAN_DEEP],
   }),
   bankUnit({
     id: "mb-word-power-8",
@@ -180,7 +181,7 @@ export const units: Unit[] = [
     blurb: "Spelling rules, word parts and exact vocabulary",
     parentNote: "Children use word families, prefixes, suffixes and spelling rules, choose precise words for a subject, and use word-processing tools to format a document.",
     standards: ["ELA.8.C2.3, ELA.8.C3.1, ELA.8.C3.2", "discipline-specific vocabulary, formatting a digital document and spelling strategies, derivatives and bases"],
-    items: WORDS,
+    items: [...WORDS, ...WORDS_DEEP],
   }),
   bankUnit({
     id: "mb-fair-language-8",
@@ -189,7 +190,7 @@ export const units: Unit[] = [
     blurb: "Spot stereotypes and one-sided views",
     parentNote: "Children learn how word choice can include or leave people out, notice stereotypes and one-sided views in texts, and explain their reaction using evidence.",
     standards: ["ELA.8.A1.3, ELA.8.A1.4, ELA.8.B3.4", "language that shapes inclusive environments, asking multifaceted questions, and responding to stereotypes and unfair representations"],
-    items: INCLUSIVE,
+    items: [...INCLUSIVE, ...INCLUSIVE_DEEP],
   }),
   bankUnit({
     id: "mb-reflect-8",
@@ -198,6 +199,6 @@ export const units: Unit[] = [
     blurb: "Set goals, use feedback, track growth",
     parentNote: "Children practise setting specific learning goals, using feedback, tracking evidence of growth and thinking about reading fluency.",
     standards: ["ELA.8.A2.6, ELA.8.D2.1, ELA.8.D2.2, ELA.8.D2.3, ELA.8.D2.4, ELA.8.D2.5", "fluency, comparing strategies, class criteria, feedback, learning goals and tracking progress"],
-    items: REFLECT,
+    items: [...REFLECT, ...REFLECT_DEEP],
   }),
 ];
