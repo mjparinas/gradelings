@@ -252,13 +252,13 @@
       "sentence-smarts text=440a0ed7a6 std=6c65c620eb q=be609c5403",
       "fact-or-opinion text=d5a6ab665c std=34aaf03c57 q=43da4e0ce6",
       "text-patterns text=66f9e7deb8 std=f2acae035e q=58f0f448b9",
-      "mb-listening-talking text=4e1e4060a5 std=b26d3373ce q=04d2b8d67d",
-      "mb-sounds-and-fluency text=166cd2dd7d std=d2bcabb5e8 q=f3502d183d",
-      "mb-wonder-and-find-out text=30ddbf1573 std=ff503a07c2 q=3bbd5f24b0",
-      "mb-plan-your-writing text=a79120e87f std=c81d353377 q=1833294da9",
-      "mb-make-writing-better text=5c910b794b std=014ad16b0e q=a39c1425a8",
-      "mb-media-and-design text=76c9cd6ba3 std=9906c6519f q=55304a366f",
-      "mb-learning-goals text=19a090de5a std=ee6a93f6c5 q=43675bb0d5"
+      "mb-listening-talking text=4e1e4060a5 std=b26d3373ce q=933dfcffeb",
+      "mb-sounds-and-fluency text=166cd2dd7d std=d2bcabb5e8 q=44a5ae0563",
+      "mb-wonder-and-find-out text=30ddbf1573 std=ff503a07c2 q=f9f8dcac4b",
+      "mb-plan-your-writing text=a79120e87f std=c81d353377 q=2b07494750",
+      "mb-make-writing-better text=5c910b794b std=014ad16b0e q=5c4d0d21ff",
+      "mb-media-and-design text=76c9cd6ba3 std=9906c6519f q=10398880da",
+      "mb-learning-goals text=19a090de5a std=ee6a93f6c5 q=6ec6c6a896"
     ]
   },
   "3/math": {
