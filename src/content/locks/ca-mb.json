@@ -422,13 +422,13 @@
       "punctuation-power text=4d8fc1b29b std=0691bf29c4 q=becd5bff7e",
       "sound-alikes text=810d4b50da std=975e7235b4 q=8f260eb511",
       "paragraph-power text=63c57da3d3 std=8b6ee75295 q=ef7adfdbc7",
-      "mb-talk-together text=658241ee0d std=28c9819b26 q=2cf9661c67",
-      "mb-big-words text=ba39881768 std=3553c04a85 q=51ca3a8c3d",
-      "mb-connect-texts text=5ce4e7785e std=f905a40f93 q=b9e69800db",
-      "mb-fair-texts text=4c50656cc5 std=cace121124 q=90f47f0f4f",
-      "mb-plan-writing text=1c85f8327d std=4fc4f199cf q=4970740604",
-      "mb-revise-writing text=8f321fbe02 std=cc2a212628 q=d9b8f4c103",
-      "mb-learning-goals text=f38a4b317e std=2017cf6cd2 q=2dc6f9a3fa"
+      "mb-talk-together text=658241ee0d std=28c9819b26 q=5333faeb80",
+      "mb-big-words text=ba39881768 std=3553c04a85 q=61a2877f1c",
+      "mb-connect-texts text=5ce4e7785e std=f905a40f93 q=17f2dc4e6b",
+      "mb-fair-texts text=4c50656cc5 std=cace121124 q=f2dc312fe5",
+      "mb-plan-writing text=1c85f8327d std=4fc4f199cf q=5b1f15fead",
+      "mb-revise-writing text=8f321fbe02 std=cc2a212628 q=a978279da4",
+      "mb-learning-goals text=f38a4b317e std=2017cf6cd2 q=1aec4e95f9"
     ]
   },
   "4/math": {
