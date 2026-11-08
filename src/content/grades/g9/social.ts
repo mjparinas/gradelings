@@ -69,6 +69,18 @@ const INDUSTRIAL: Item[] = [
   q(3, "Why did the Industrial Revolution increase demand for raw materials from overseas?", "Factories needed cotton, rubber and other materials, which encouraged colonial expansion.", ["Factories needed no materials.", "Colonies were closed.", "Raw materials were free."], "Industrial nations looked to colonies for resources and markets."),
   q(3, "Which was a long-term social effect of industrialization?", "A larger middle class and a growing working class in cities", ["The end of cities", "The end of inequality", "The end of education"], "New groups emerged, and some people became very wealthy while many remained poor."),
   q(3, "In Canada, what role did the Canadian Pacific Railway (completed in 1885) play?", "It linked the country from east to west and helped settlement, but displaced Indigenous peoples and relied on underpaid workers.", ["It only carried mail.", "It ended trade.", "It was built without workers."], "The railway tied BC to the rest of Canada. Thousands of Chinese workers built dangerous sections, and settlement affected many First Nations and Métis."),
+  q(1, "What is a factory?", "a building where machines make goods in large numbers", ["a farm", "a school", "a harbour"], "Factories grew during the Industrial Revolution."),
+  q(1, "What is a raw material?", "a natural resource used to make something, such as cotton or iron", ["a finished product", "a type of machine", "a worker"], "Raw materials go into factories."),
+  q(1, "What is a strike?", "when workers stop working to press for better pay or conditions", ["a type of machine", "a tax", "a holiday"], "Unions used strikes."),
+  q(1, "What was the spinning jenny?", "a machine that spun several threads at once", ["a type of ship", "a steam train", "a printing press"], "It sped up the making of cloth."),
+  q(2, "Why did many people move to cities during the Industrial Revolution?", "Factories offered jobs.", ["Farms were given away.", "Cities were empty.", "Trains were banned."], "Work was in the cities."),
+  q(2, "Why were early industrial cities often crowded and unhealthy?", "Housing was packed and there was little clean water or sanitation.", ["Cities had large parks.", "Everyone had a big house.", "There were few people."], "Rapid growth outran services."),
+  q(2, "What was the effect of the factory system on the work of skilled craftspeople?", "Machines could make goods cheaply, so many handmade goods lost value.", ["Craftspeople became richer.", "Machines were banned.", "Nothing changed."], "Mass production changed prices."),
+  q(2, "Which is a benefit of industrialization?", "More goods were made at lower prices.", ["Goods were scarce.", "Fewer people could buy cloth.", "Travel became slower."], "Machines made production cheaper."),
+  q(2, "How did the steamship change trade?", "It moved goods and people across oceans faster and more reliably.", ["It ended trade.", "It made oceans larger.", "It used only wind."], "Steam did not depend on the wind."),
+  q(3, "Why did reformers push for laws limiting child labour?", "They saw that working long hours harmed children's health and schooling.", ["They wanted children to work longer.", "They wanted fewer schools.", "They did not care."], "Reform grew from concern for children."),
+  q(3, "How did industrialization increase the gap between rich and poor in some places?", "Factory owners often gained wealth while many workers earned low wages.", ["Everyone's wages doubled.", "There were no owners.", "Workers owned all factories."], "Profits and wages were unequal."),
+  q(3, "Why is the Industrial Revolution described as having both costs and benefits?", "It raised production and living standards for some but caused hardship and pollution for others.", ["It had only benefits.", "It had only costs.", "It had no effects."], "Consider multiple perspectives."),
 ];
 
 const IND_SORT: SortSet = {
@@ -266,6 +278,18 @@ const MIGRATION: Item[] = [
   q(3, "Which is an example of forced migration?", "Enslaved Africans being taken to the Americas", ["A family moving for a job", "A student studying abroad", "A tourist visiting Canada"], "Forced migration happens when people have no choice."),
   q(3, "What is a refugee?", "A person forced to leave their country to escape danger or persecution", ["A person who moves for a new job", "A tourist", "A person who travels for school"], "Refugees flee war, violence or persecution."),
   q(3, "Why do historians use population data when studying the past?", "It shows how living standards, health and migration changed over time.", ["It tells exactly who was happy.", "It replaces stories.", "It is never reliable."], "Numbers and personal stories together give a fuller picture."),
+  q(1, "What is emigration?", "leaving your country to live in another", ["moving into a new country", "visiting for a day", "moving house in the same town"], "Emigrate means to exit."),
+  q(1, "What is a refugee?", "a person forced to flee their country because of danger", ["a tourist", "a trader", "a soldier"], "Refugees leave to find safety."),
+  q(1, "What is a migrant worker?", "a person who moves to find work", ["a person who owns a factory", "a person who stays at home", "a type of machine"], "Many migrants follow jobs."),
+  q(2, "Which of these is a push factor?", "war or famine at home", ["good jobs elsewhere", "cheap farmland elsewhere", "a warm welcome elsewhere"], "Push factors drive people away."),
+  q(2, "Which of these is a pull factor?", "the chance of cheap farmland", ["famine", "war", "persecution"], "Pull factors draw people in."),
+  q(2, "Why did many people leave Europe for North America in the 1800s?", "They sought land, jobs and a chance to escape hardship.", ["They wanted to avoid land.", "They wanted to avoid work.", "They wanted to travel only."], "Look at push and pull."),
+  q(2, "What is an urban area?", "a city or town", ["a farm", "a forest", "a desert"], "Urban means city."),
+  q(2, "How did railways help migrants settle new regions?", "They carried people and goods to places that were hard to reach.", ["They blocked travel.", "They stopped trade.", "They closed borders."], "Railways linked regions."),
+  q(2, "What does population density measure?", "how many people live in a given area", ["how old people are", "how rich people are", "how tall people are"], "People per square kilometre."),
+  q(3, "Why might migrants form communities with others from the same homeland?", "to share language, support and traditions", ["to avoid everyone else", "to leave the country", "to stop working"], "Community helps newcomers."),
+  q(3, "Why are census records useful to historians studying migration?", "They count and describe people by place, origin and work.", ["They list only weather.", "They list only buildings.", "They list only prices."], "A census counts the population."),
+  q(3, "A historian reads a letter from a migrant and a government pamphlet. Why use both?", "Each shows a different perspective on the same events.", ["Only one is a source.", "They always agree.", "Letters are never useful."], "Compare perspectives."),
 ];
 
 const PUSH_PULL: SortSet = {
@@ -321,6 +345,18 @@ const LANDSCAPES: Item[] = [
   q(3, "Why do most Canadians live in a band along the southern border?", "The climate is milder, and there is farmland, cities and trade routes.", ["The north has more people.", "The south has no towns.", "It is the coldest region."], "Climate, soil and access to trade shaped where people settled."),
   q(3, "Why is much of the Canadian Shield hard to farm?", "Glaciers left thin, rocky soil.", ["It has too much clay.", "It is always flooded.", "It has deep, rich soil."], "Mining and forestry, rather than farming, shaped its economy."),
   q(3, "How can building a dam change a landscape?", "It can flood valleys and change river flow, affecting ecosystems and communities.", ["It has no effect.", "It removes all water.", "It only changes the weather."], "Dams provide power and water storage but also change the places where people and animals live."),
+  q(1, "Which region is made mostly of flat, fertile land used for farming?", "the Interior Plains", ["the Western Cordillera", "the Canadian Shield", "the Arctic"], "Think of wheat fields."),
+  q(1, "What is a landform?", "a natural feature of Earth's surface, such as a mountain or valley", ["a type of weather", "a type of road", "a kind of tool"], "Hills and plains are landforms."),
+  q(1, "What is climate?", "the usual weather of a place over many years", ["today's weather", "a type of rock", "a kind of soil"], "Climate is a long-term pattern."),
+  q(2, "Which landform region is known for ancient rock and thousands of lakes?", "the Canadian Shield", ["the Western Cordillera", "the Interior Plains", "the Appalachians"], "It is a large region of bedrock."),
+  q(2, "Why do most Canadians live in the south of the country?", "The climate is milder and there is more farmland and transportation.", ["The north has too much farmland.", "The south has no roads.", "The north has no ice."], "Look at climate and land."),
+  q(2, "Which of these helps farmers on the Interior Plains?", "deep, fertile soil and flat land", ["steep mountains", "thin rock", "salt water"], "Good soil grows crops."),
+  q(2, "What is a watershed?", "the land that drains into a river or lake", ["a type of shed", "a mountain peak", "a type of cloud"], "Rain flows downhill."),
+  q(2, "Which human activity can change the landscape?", "clearing forests for farming or building", ["the rotation of the Earth", "the phases of the moon", "the tides"], "Humans can change land."),
+  q(3, "Why might an area with steep mountains be harder to build roads and railways in?", "The slopes and rock make construction difficult and costly.", ["Mountains are flat.", "Mountains have no rock.", "Roads are not needed."], "Physical features can limit transport."),
+  q(3, "How can the physical environment shape culture and daily life?", "People adapt their homes, work and travel to the land and climate.", ["It cannot.", "People ignore the land.", "Everyone lives the same way."], "People adapt to where they live."),
+  q(3, "Why is mining important to the Canadian Shield economy?", "The Shield's rock holds valuable minerals.", ["It holds no minerals.", "It is covered in ice.", "It is only farmland."], "Rock can hold resources."),
+  q(3, "What does a topographic map show?", "the shape of the land, using contour lines", ["only roads", "only borders", "only weather"], "Contour lines show elevation."),
 ];
 
 const REGION_SORT: SortSet = {

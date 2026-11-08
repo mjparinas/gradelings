@@ -714,8 +714,8 @@
   "9/science": {
     "overview": "bd874e932d",
     "units": [
-      "cells-from-cells text=bf9b3d6d2e std=f76daa08aa q=403cd47249",
-      "reproduction text=d702789bd4 std=96b7361b3e q=89792aacac",
+      "cells-from-cells text=bf9b3d6d2e std=f76daa08aa q=d8fef1a729",
+      "reproduction text=d702789bd4 std=96b7361b3e q=c9637838d5",
       "atoms-and-electrons text=5dc2e26422 std=df3b784b47 q=157481b107",
       "electric-current text=2c145f84d8 std=e789108936 q=7692c8ff45",
       "atoms-9 text=0fd6c7ecf2 std=be906f7491 q=5412669a33",
@@ -731,9 +731,9 @@
     "overview": "ab9b35999d",
     "units": [
       "nl-agreements-9 text=f0e0ea2d2a std=85408d0d9d q=8de269c16a",
-      "canadas-landscapes text=5175fa39ff std=a1d2457563 q=0867df985a",
+      "canadas-landscapes text=5175fa39ff std=a1d2457563 q=3b19aa43c2",
       "indigenous-peoples-and-canada text=c0a85083d3 std=d65e1fa358 q=80613d4584",
-      "migration-and-population text=a1bebd9498 std=e87a74debc q=57f835fc81",
+      "migration-and-population text=a1bebd9498 std=e87a74debc q=d91e949706",
       "sustainable-development-9 text=75c820ecc0 std=a869cbe6ad q=b7d498ce75"
     ]
   },
