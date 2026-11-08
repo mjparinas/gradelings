@@ -1,5 +1,6 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { CAPITAL_G3_MORE, CITY_G3_MORE } from "./social-more";
 import { timelineUnit, type Dated } from "./kit";
 
 // Washington, DC Grade 3 social studies, "Washington, DC: Past and Present" (the DC Social Studies Standards, 2023):
@@ -231,7 +232,7 @@ export const SOCIAL_3: Unit[] = [
     blurb: "Why DC became the capital and who built it",
     parentNote: "Why Congress chose a site on the Potomac for the nation's capital in 1790, how Pierre L'Enfant planned it and Benjamin Banneker helped survey it, the enslaved people who did much of the work on the Capitol and the White House, the move of the government in 1800, the burning of 1814, and how slavery shaped institutions such as Georgetown University.",
     standards: ["3.20; 3.21", "the reasons for and consequences of choosing Washington, DC as the capital, and how slavery shaped its neighborhoods and institutions"],
-    items: CAPITAL,
+    items: [...CAPITAL, ...CAPITAL_G3_MORE],
   }),
   bankUnit({
     id: "dc-g3-freedom-and-civil-war",
@@ -249,7 +250,7 @@ export const SOCIAL_3: Unit[] = [
     blurb: "DC's culture and the movements that marched here",
     parentNote: "The culture and movements that make Washington, DC what it is: U Street's \"Black Broadway\" and Duke Ellington, the 1913 suffrage march and the 1963 March on Washington, the disability rights movement, go-go music and Chuck Brown, the Smithsonian, embassies, the cherry trees, and the communities from Asia, Latin America and East Africa who make the city home.",
     standards: ["3.25; 3.26; 3.27; 3.40", "the U Street community, the growth of DC's immigrant communities, political movements in DC, and cultural expressions unique to Washingtonians"],
-    items: CITY,
+    items: [...CITY, ...CITY_G3_MORE],
   }),
   bankUnit({
     id: "dc-g3-governing-dc",
