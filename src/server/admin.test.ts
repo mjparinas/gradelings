@@ -384,6 +384,17 @@ describe("codes, reports, stats and the change log", () => {
     expect(s.stripe).toBe(false);
   });
 
+  it("never counts the owner's test account, and totals accounts over time", async () => {
+    const before = await (await as(admin.cookie).get(stats, "/api/admin/stats/")).json();
+    await account("mjparinas@gmail.com");
+    const after = await (await as(admin.cookie).get(stats, "/api/admin/stats/")).json();
+    expect(after.people.families).toBe(before.people.families);
+    expect(after.people.parents).toBe(before.people.parents);
+    expect(after.acquisition.thisMonth).toBe(before.acquisition.thisMonth);
+    expect(after.acquisition.totals).toHaveLength(26);
+    expect(after.acquisition.totals.at(-1).value).toBe(after.people.families);
+  });
+
   it("answers for one overview section at a time, with the same numbers as the whole", async () => {
     const whole = await (await as(admin.cookie).get(stats, "/api/admin/stats/")).json();
     const part = async (section: string) => (await as(admin.cookie).get(stats, `/api/admin/stats/?section=${section}`)).json();

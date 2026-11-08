@@ -5,14 +5,14 @@ import { query } from "@/server/db";
 import { guestCounts } from "@/server/guests";
 import { getSetting, importPayments, setSetting } from "@/server/payments";
 import { stripeCancellationConfigured } from "@/server/stripe";
-import { LATEST_REFUNDED, OPEN_CLASS_STUDENTS, OPEN_CLASS_TEACHERS } from "@/server/adminDetail";
+import { LATEST_REFUNDED, TEST_EMAILS, OPEN_CLASS_STUDENTS, OPEN_CLASS_TEACHERS } from "@/server/adminDetail";
 import { COHORT_COUNT, computeMetrics, emptyInput, isMetricSection, SECTION_INPUTS, sectionOf, type FamilyFacts, type MetricsInput } from "@/lib/adminMetrics";
 
 const DAY = 86_400_000;
 const WEEK = 7 * DAY;
 /** Families that are class student accounts are not customers, so the numbers leave them out. */
-const REAL = "NOT EXISTS (SELECT 1 FROM parents p WHERE p.family_id = f.id AND p.role = 'student')";
-const REAL_EVENTS = "family_id NOT IN (SELECT family_id FROM parents WHERE role = 'student')";
+const REAL = `NOT EXISTS (SELECT 1 FROM parents p WHERE p.family_id = f.id AND (p.role = 'student' OR lower(p.email) IN (${TEST_EMAILS})))`;
+const REAL_EVENTS = `family_id NOT IN (SELECT family_id FROM parents WHERE role = 'student' OR lower(email) IN (${TEST_EMAILS}))`;
 const COSTS_KEY = "monthly_costs";
 /** Practice time per answer is capped, as in the kids' app, so an answer left open doesn't count for hours. */
 const MS_CAP = 60_000;
@@ -52,7 +52,7 @@ function loaders(now: number): Loaders {
           country: toCountryCode(f.country),
         }),
       ),
-    parents: () => count("SELECT COUNT(*) AS n FROM parents WHERE role != 'student'"),
+    parents: () => count(`SELECT COUNT(*) AS n FROM parents WHERE role != 'student' AND lower(email) NOT IN (${TEST_EMAILS})`),
     children: () => count(`SELECT COUNT(*) AS n FROM profiles pr JOIN families f ON f.id = pr.family_id WHERE ${REAL} AND COALESCE(json_extract(pr.data, '$.deleted'), 0) = 0`),
     teachers: () => count(`SELECT COUNT(*) AS n FROM (${OPEN_CLASS_TEACHERS})`),
     students: () => count(OPEN_CLASS_STUDENTS),

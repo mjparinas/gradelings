@@ -8,13 +8,16 @@ import type { GradeId } from "@/content/types";
 import { DETAIL_LIMIT, type Cell, type Detail, type DetailColumn, type DetailRow, type DetailTable, type DetailView } from "@/lib/adminDetail";
 import { cancelledOn, familyGroup, fee, LIFETIME_YEARS, monthStart, MONTHLY_CENTS, MONTHLY_CENTS_USD, wontRenew, YEARLY_CENTS, YEARLY_CENTS_USD, type FamilyGroup } from "@/lib/adminMetrics";
 import { countryOf, toCountryCode } from "@/lib/country";
+import { TEST_ACCOUNT_EMAILS } from "@/lib/brand";
 
 // The lists behind the admin dashboard's tiles. Like the Users tab, they show account emails and billing,
 // and children only as counts by grade and province: never a child's name or results. Class student
 // accounts are left out.
 
 const DAY = 86_400_000;
-const REAL = "NOT EXISTS (SELECT 1 FROM parents s WHERE s.family_id = f.id AND s.role = 'student')";
+/** The owner's test accounts never count in any metric (constants from `brand.ts`, quoted here). */
+export const TEST_EMAILS = TEST_ACCOUNT_EMAILS.map((e) => `'${e.toLowerCase().replace(/'/g, "''")}'`).join(", ");
+const REAL = `NOT EXISTS (SELECT 1 FROM parents s WHERE s.family_id = f.id AND (s.role = 'student' OR lower(s.email) IN (${TEST_EMAILS})))`;
 const EMAIL = "(SELECT p.email FROM parents p WHERE p.family_id = f.id ORDER BY p.created_at LIMIT 1)";
 const VERIFIED = "EXISTS (SELECT 1 FROM parents p WHERE p.family_id = f.id AND p.email_verified_at IS NOT NULL)";
 /** Everyone teaching an open class, owner or co-teacher, once each: the dashboard's Teachers tile. */
@@ -586,9 +589,9 @@ export async function detailFor(view: DetailView, now = Date.now()): Promise<Det
     case "unconfirmed": {
       const rows = await rowsOf(
         `SELECT p.family_id, p.email, p.created_at FROM parents p JOIN families f ON f.id = p.family_id
-         WHERE p.role != 'student' AND p.email_verified_at IS NULL ORDER BY p.created_at DESC`,
+         WHERE p.role != 'student' AND lower(p.email) NOT IN (${TEST_EMAILS}) AND p.email_verified_at IS NULL ORDER BY p.created_at DESC`,
       );
-      const total = Number((await rowsOf("SELECT COUNT(*) AS n FROM parents WHERE role != 'student'"))[0]?.n ?? 0);
+      const total = Number((await rowsOf(`SELECT COUNT(*) AS n FROM parents WHERE role != 'student' AND lower(email) NOT IN (${TEST_EMAILS})`))[0]?.n ?? 0);
       return {
         title: "Email not confirmed",
         intro: "Accounts that haven't confirmed their email yet. They can't start a paid plan or get the weekly email until they do. You can confirm one by hand in Users.",
@@ -783,7 +786,7 @@ export async function detailFor(view: DetailView, now = Date.now()): Promise<Det
            SUM(CASE WHEN ${inWindow} AND json_extract(e.data, '$.type') = 'answer' THEN 1 ELSE 0 END) AS answers,
            SUM(CASE WHEN ${inWindow} AND json_extract(e.data, '$.type') = 'answer' THEN MIN(MAX(COALESCE(json_extract(e.data, '$.ms'), 0), 0), 60000) ELSE 0 END) AS ms,
            (SELECT p.email FROM parents p WHERE p.family_id = e.family_id ORDER BY p.created_at LIMIT 1) AS email
-         FROM events e WHERE e.t > ? AND e.t <= ? AND e.family_id NOT IN (SELECT family_id FROM parents WHERE role = 'student')
+         FROM events e WHERE e.t > ? AND e.t <= ? AND e.family_id NOT IN (SELECT family_id FROM parents WHERE role = 'student' OR lower(email) IN (${TEST_EMAILS}))
          GROUP BY e.family_id ORDER BY last DESC`,
         [now - 30 * DAY, now],
       );
