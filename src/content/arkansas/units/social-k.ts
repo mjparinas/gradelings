@@ -1,5 +1,6 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { SYMBOLS_MORE } from "./social-more";
 
 // Arkansas's own Kindergarten social studies unit (`ar-` ids): the state and national symbols and patriotic songs the
 // Arkansas standards name for Kindergarten (C.1.K.3).
@@ -44,6 +45,6 @@ export const UNITS: Unit[] = [
     parentNote:
       "The American and Arkansas flags, the Pledge of Allegiance, the national anthem, and the Arkansas state symbols children meet in Kindergarten: the mockingbird, the apple blossom, the honeybee and the pine tree.",
     standards: ["C.1.K.3", "recognizing state and national symbols and patriotic songs, including the Arkansas flag and state symbols"],
-    items: SYMBOLS,
+    items: [...SYMBOLS, ...SYMBOLS_MORE],
   }),
 ];

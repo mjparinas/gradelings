@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { CAPS_SPELLING_DEEP, LEARNING_DEEP, MEDIA_BIAS_DEEP, TEXT_FEATURES_DEEP, WRITING_PLAN_DEEP } from "./g6-more-language-deeper";
 
 // More Grade 6 English language arts units for the Manitoba outcomes (strands B and C and the learning-to-learn strand D).
 
@@ -41,7 +42,7 @@ export const textFeatures = bankUnit({
   parentNote:
     "Practises text features such as the table of contents, index, glossary, captions and diagrams, the names of common text forms, and subject-specific vocabulary.",
   standards: ["ELA.6.B1.3, ELA.6.B2.2, ELA.6.B2.7", "text features, kinds of texts, and subject-specific vocabulary"],
-  items: TEXT_FEATURES,
+  items: [...TEXT_FEATURES, ...TEXT_FEATURES_DEEP],
 });
 
 const WRITING_PLAN: Q[] = [
@@ -82,7 +83,7 @@ export const writingPlan = bankUnit({
   parentNote:
     "Practises choosing a focused topic for an audience, planning with organizers, using organization patterns such as cause and effect, and building introductions, paragraphs and conclusions.",
   standards: ["ELA.6.C1.1, ELA.6.C1.2, ELA.6.C1.3, ELA.6.C2.1", "choosing a topic, planning, gathering information and organizing writing"],
-  items: WRITING_PLAN,
+  items: [...WRITING_PLAN, ...WRITING_PLAN_DEEP],
 });
 
 const CAPS_SPELLING: Q[] = [
@@ -125,7 +126,7 @@ export const capitalsSpelling = bankUnit({
   parentNote:
     "Practises capitals for proper nouns, titles, dialogue and abbreviations, Canadian spelling patterns, commonly confused words, and using spelling strategies and tools.",
   standards: ["ELA.6.C3.2, ELA.6.C3.3", "spelling strategies and consistent, accurate capital letters"],
-  items: CAPS_SPELLING,
+  items: [...CAPS_SPELLING, ...CAPS_SPELLING_DEEP],
 });
 
 const MEDIA_BIAS: Q[] = [
@@ -166,7 +167,7 @@ export const mediaBias = bankUnit({
   parentNote:
     "Practises how multimodal texts combine modes, how audience and purpose shape a text, and how to notice bias, stereotypes, inclusion and equity in texts.",
   standards: ["ELA.6.B3.1, ELA.6.B3.4, ELA.6.C1.5, ELA.6.C3.5", "diversity and bias in texts, and creating multimodal texts"],
-  items: MEDIA_BIAS,
+  items: [...MEDIA_BIAS, ...MEDIA_BIAS_DEEP],
 });
 
 const LEARNING: Q[] = [
@@ -208,5 +209,5 @@ export const learning = bankUnit({
   parentNote:
     "Practises using prior knowledge, asking open-ended questions, making connections, adjusting reading rate, and choosing and tracking learning goals.",
   standards: ["ELA.6.A1.4, ELA.6.A1.5, ELA.6.A2.6, ELA.6.B1.1, ELA.6.B1.2, ELA.6.B2.4, ELA.6.D2.1, ELA.6.D2.3, ELA.6.D2.4, ELA.6.D2.5", "prior knowledge, questions, connections, reading rate, and setting and tracking learning goals"],
-  items: LEARNING,
+  items: [...LEARNING, ...LEARNING_DEEP],
 });
