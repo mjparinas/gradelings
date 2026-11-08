@@ -110,10 +110,14 @@ export function verifyEmail(to: string, origin: string, token: string, reports =
     heading: `Welcome to ${APP_NAME}!`,
     body: reports
       ? [
-          "Please confirm your email address, and we'll start sending the weekly progress report and a note before the free trial ends.",
-          "Your child's progress is now backed up. To open the parent area on another device, ask for a sign-in link there: there's no password to remember.",
+          "Tap the button to confirm your email. That backs up your child's progress and starts the weekly progress report, so you can see what they're learning without asking.",
+          `Next step, about a minute: add your child's first name and grade in the Parent area. ${APP_NAME} then picks lessons that match their grade (Pre-K to Grade 9), and the free trial has every lesson, game and report open.`,
+          "To open the parent area on another device, ask for a sign-in link there: there's no password to remember.",
         ]
-      : ["Please confirm your email address so we can reach you about your account, and so you can reset your password if you ever forget it."],
+      : [
+          "Tap the button to confirm your email. It unlocks your weekly progress report and lets you reset your password if you ever forget it.",
+          `Next step, about a minute: add your child's first name and grade in the Parent area. ${APP_NAME} picks lessons that match their grade (Pre-K to Grade 9), and your free trial has every lesson, game and report open.`,
+        ],
     button: { label: "Confirm my email", url: `${origin}/account/verify/?token=${encodeURIComponent(token)}${dest === "teachers" ? "&to=teachers" : ""}` },
     footnote: "This link works for 3 days. If you didn't create an account, you can ignore this email.",
   });
@@ -205,6 +209,8 @@ function recapLines(children: TrialChild[]): string[] {
     });
 }
 
+const WHAT_YOU_GET = `${APP_NAME} gives children curriculum-matched practice in math, reading and writing, science and social studies from Pre-K to Grade 9, with learning games and offline play, and gives you clear progress reports so you can see what's sinking in and what needs another go.`;
+
 const KEEP_FREE = `After the trial, the first ${FREE_UNITS_PER_COURSE} units of every course and a summary of each child's report stay free forever. The family plan keeps every unit, mode, game and full report open for up to ${MAX_CHILDREN} children.`;
 
 /** Mid-trial: what the trial has done so far. Sent once, to parents whose children have practised. */
@@ -214,15 +220,16 @@ export function trialRecapEmail(to: string, origin: string, daysLeft: number, ch
     kind: "trial-recap",
     to,
     origin,
-    subject: `${APP_NAME}: what your trial has done so far`,
+    subject: `${daysLeft} ${daysLeft === 1 ? "day" : "days"} left: here's what your ${APP_NAME} trial has done`,
     heading: "Your trial so far",
     body: [
       ...recapLines(children),
-      `${daysLeft} ${daysLeft === 1 ? "day" : "days"} of the free trial left. This reflects practice in the app, not a report-card mark.`,
+      `${daysLeft} ${daysLeft === 1 ? "day" : "days"} of the free trial left. Regular short sessions are what make skills stick, and the days you have left are the easiest time to build the habit. This reflects practice in the app, not a report-card mark.`,
+      "Everything is open until then: every unit, the games, Adventure and the full reports in the Parent area. Open the reports to see what each child is strong at and what's worth another go.",
       KEEP_FREE,
-      "You can subscribe now, before the trial ends. You'll be charged at checkout and the paid plan starts that day. Full reports are in the Parent area during the trial, and with the family plan after it.",
+      `You can subscribe now, before the trial ends. You'll be charged at checkout and the paid plan starts that day. If it isn't right for your family, we'll refund any payment in full within ${REFUND_DAYS} days.`,
     ],
-    button: { label: "Subscribe", url: `${origin}${SUBSCRIBE_HREF}` },
+    button: { label: "Keep everything open", url: `${origin}${SUBSCRIBE_HREF}` },
   });
 }
 
@@ -236,11 +243,12 @@ export function trialEndingEmail(to: string, origin: string, daysLeft: number, c
     subject: `Your ${APP_NAME} free trial ends in ${daysLeft} ${daysLeft === 1 ? "day" : "days"}`,
     heading: `Your free trial ends in ${daysLeft} ${daysLeft === 1 ? "day" : "days"}`,
     body: [
-      ...(recap.length ? ["Here's what the trial has done:", ...recap] : []),
+      ...(recap.length ? ["Here's what the trial has done:", ...recap] : [`Your children haven't had a long session yet. Ten minutes today is enough to see how ${APP_NAME} matches their grade before the trial ends.`]),
+      WHAT_YOU_GET,
       KEEP_FREE,
-      "Subscribe before the trial ends to keep everything open. You'll be charged at checkout and the paid plan starts that day. There's nothing to do if you'd like to stay on the free units. No card was needed to start.",
+      `Subscribe before the trial ends to keep everything open. You'll be charged at checkout and the paid plan starts that day, with a full refund within ${REFUND_DAYS} days if it isn't right for your family. There's nothing to do if you'd like to stay on the free units. No card was needed to start.`,
     ],
-    button: { label: "Subscribe", url: `${origin}${SUBSCRIBE_HREF}` },
+    button: { label: "Keep everything open", url: `${origin}${SUBSCRIBE_HREF}` },
   });
 }
 
@@ -339,9 +347,9 @@ export function reminderEmail(to: string, origin: string, children: ReminderChil
     origin,
     unsubscribeUrl: `${origin}/api/email/unsubscribe/?kind=reminders&token=${q}`,
     unsubscribePage: `${origin}/account/unsubscribe/?kind=reminders&token=${q}`,
-    subject: `A good day for a little ${APP_NAME} with ${who}`,
+    subject: `${who} could use ten minutes of ${APP_NAME} today`,
     heading: "A good day for a short session",
-    body: [...lines, "Every bit counts, and there's no streak to lose. Their favourite lessons are always waiting."],
+    body: [...lines, "Short, regular sessions are what make skills stick, and there's no streak to lose. Their favourite lessons are always waiting."],
     button: { label: `Open ${APP_NAME}`, url: `${origin}/play/` },
     footnote: "You asked for practice reminders. We send at most one a week, and only after a few quiet days.",
   });

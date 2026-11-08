@@ -1,5 +1,5 @@
 import { APP_NAME } from "./brand";
-import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, SUBSCRIBE_HREF } from "./plan";
+import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, REFUND_DAYS, SUBSCRIBE_HREF } from "./plan";
 
 // Emails the owner sends from the admin panel: ready-made messages and the groups they can go to. Shared by
 // the panel (to preview) and the server (to send). `{children}` becomes the children's first names only when the
@@ -32,7 +32,7 @@ export const MESSAGE_PRESETS: MessagePreset[] = [
     when: "Families who have gone quiet",
     audience: "parents",
     subject: "Ollie misses {children}!",
-    body: "Ollie the Otter has been looking for {children}. Every lesson is right where it was left.\n\nA short session today, even 10 minutes, picks the momentum right back up. There's no streak to lose and nothing to catch up on.",
+    body: "Ollie the Otter has been looking for {children}. Every lesson is right where it was left.\n\nShort, regular sessions are what make skills stick, so a session today, even 10 minutes, picks the momentum right back up. There's no streak to lose and nothing to catch up on.",
     button: { label: "Play now", path: "/play/" },
   },
   {
@@ -40,18 +40,18 @@ export const MESSAGE_PRESETS: MessagePreset[] = [
     name: "Getting started",
     when: "New families who haven't practised yet",
     audience: "parents",
-    subject: "Getting started with {app}",
-    body: "Thanks for signing up! The quickest way to start: add your child in the Parent area (a first name and grade is all it needs), then tap Adventure. It picks lessons for their grade, so there's nothing to set up.\n\nOne 10-minute session is a great first step, and your free trial has everything switched on.",
-    button: { label: "Start playing", path: "/play/" },
+    subject: "One minute to set up {app}",
+    body: "Thanks for signing up! Right now {app} can't match lessons to your child because it doesn't know who's playing. The fix takes about a minute: add your child in the Parent area (a first name and grade is all it needs), then tap Adventure. It picks lessons for their grade, Pre-K to Grade 9, so there's nothing to set up.\n\nOne 10-minute session is enough to see how it works, and your free trial has every lesson, game and progress report open. The earlier they start, the more of the trial they get to use.",
+    button: { label: "Add my child and start", path: "/parents/" },
   },
   {
     id: "trial-ending",
     name: "Trial ending",
     when: "Trials ending soon",
     audience: "parents",
-    subject: "Your {app} free trial ends soon",
-    body: `Thanks for trying {app} with {children}. Your free trial ends soon.\n\nSubscribe to keep every lesson, game and report open for up to ${MAX_CHILDREN} children. If you'd rather not, the first ${FREE_UNITS_PER_COURSE} units of every course stay free forever.`,
-    button: { label: "See the family plan", path: SUBSCRIBE_HREF },
+    subject: "{children}'s {app} trial ends soon",
+    body: `Thanks for trying {app} with {children}. The free trial ends soon, and after that the first ${FREE_UNITS_PER_COURSE} units of every course stay free while the rest close.\n\nThe family plan keeps every unit, game and full progress report open for up to ${MAX_CHILDREN} children, so what {children} has started can keep going. If it isn't right for your family, any payment is refunded in full within ${REFUND_DAYS} days.`,
+    button: { label: "Keep everything open", path: SUBSCRIBE_HREF },
   },
   {
     id: "come-back",
@@ -59,7 +59,7 @@ export const MESSAGE_PRESETS: MessagePreset[] = [
     when: "Trial over, not paying",
     audience: "parents",
     subject: "Free lessons are still waiting for {children}",
-    body: `Your trial has ended, but the first ${FREE_UNITS_PER_COURSE} units of every course stay free forever, and Ollie is still around.\n\nWhenever you'd like everything unlocked again, the family plan covers up to ${MAX_CHILDREN} children.`,
+    body: `Your trial has ended, but the first ${FREE_UNITS_PER_COURSE} units of every course stay free, and Ollie is still around. Pick up where {children} left off today.\n\nWhen you'd like the rest back, the family plan reopens every unit, game and full progress report for up to ${MAX_CHILDREN} children, with a full refund within ${REFUND_DAYS} days if it isn't right for you.`,
     button: { label: "Open {app}", path: "/play/" },
   },
   {
@@ -77,8 +77,8 @@ export const MESSAGE_PRESETS: MessagePreset[] = [
     when: "Practising often, not paying",
     audience: "parents",
     subject: "{children} is on a roll with {app}",
-    body: `{children} has been practising on several days, which is exactly how skills stick.\n\nThe family plan keeps every lesson, game and report open for up to ${MAX_CHILDREN} children. Either way, the first ${FREE_UNITS_PER_COURSE} units of every course stay free forever.`,
-    button: { label: "See the family plan", path: SUBSCRIBE_HREF },
+    body: `{children} has been practising on several days, which is exactly how skills stick.\n\nThe family plan keeps every unit, game and full progress report open for up to ${MAX_CHILDREN} children, so that momentum doesn't hit a locked unit. Either way, the first ${FREE_UNITS_PER_COURSE} units of every course stay free, and any payment is refunded in full within ${REFUND_DAYS} days.`,
+    button: { label: "Keep everything open", path: SUBSCRIBE_HREF },
   },
   {
     id: "teacher-getting-started",
