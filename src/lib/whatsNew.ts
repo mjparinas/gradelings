@@ -47,6 +47,21 @@ export const WHATS_NEW: NewsDay[] = [
         title: "More Ontario practice questions",
         body: "Ontario Grade 7, 8 and 9 language units (grammar, writing, punctuation and more) and Grade 8 social studies have many more questions, so practice stays fresh for longer.",
       },
+      {
+        kind: "new",
+        title: "More to read and wonder about",
+        body: "Twelve new short articles and 48 new Explore cards, on topics families often search for, are now in the app.",
+      },
+      {
+        kind: "new",
+        title: "More practice in French and language arts",
+        body: "French Immersion, Core French and language arts units from Kindergarten to Grade 9, plus some social studies and Grade 8 science units, have many more questions, so practice stays fresh for longer.",
+      },
+      {
+        kind: "fixed",
+        title: "No more endless loading on school networks",
+        body: "When a school's web filter blocks part of the app, it now says so and offers Try again, instead of waiting forever.",
+      },
     ],
   },
   {

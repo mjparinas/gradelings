@@ -1,5 +1,6 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { THEN_NOW_MORE } from "./social-more";
 
 // Wyoming Grade 1 social studies: how families, including the Indigenous Tribes of Wyoming, meet their needs and how
 // daily life compares with the past (SS2.2.1), and the tools and technologies that made or make life easier
@@ -43,6 +44,6 @@ export const SOCIAL_1: Unit[] = [
     blurb: "Life in Wyoming long ago and today",
     parentNote: "Comparing life in Wyoming long ago and today: sod houses and log cabins, tipis and the travois, wells and wood stoves, one-room schoolhouses, wagons, horses and the railroad, the tools that make life easier, past, present and future, and how families, schools and Tribes meet people's needs. Indigenous content is about living peoples and kept light.",
     standards: ["SS2.2.1; SS2.4.2", "how groups, including the Indigenous Tribes of Wyoming, meet people's needs and how daily life compares with the past, and tools and technologies that made or make life easier"],
-    items: THEN_NOW,
+    items: [...THEN_NOW, ...THEN_NOW_MORE],
   }),
 ];

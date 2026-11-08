@@ -1,5 +1,6 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { TRAILS_MORE } from "./social-more";
 
 // Wyoming Grade 5 social studies: the trails, the Pony Express, the telegraph and the railroad that crossed Wyoming,
 // how one technology grew into the next (SS5.4.2), how small changes led to big ones (SS5.4.1), and how the people who
@@ -46,6 +47,6 @@ export const SOCIAL_5: Unit[] = [
     blurb: "Wagons, the Pony Express and the railroad",
     parentNote: "How the trails, the Pony Express, the telegraph and the Union Pacific Railroad crossed Wyoming: South Pass, Independence Rock, Fort Laramie and Fort Bridger, how messages went from horses to wires to phones, the railroad towns and coal mines, the Homestead Act, and how these changes affected the Shoshone, Arapaho, Lakota and Cheyenne whose lands they crossed.",
     standards: ["SS5.4.1; SS5.4.2; SS5.5.3", "how small changes lead to big changes, how one tool or technology grows into another, and the human features the trails and the railroad brought to Wyoming"],
-    items: TRAILS,
+    items: [...TRAILS, ...TRAILS_MORE],
   }),
 ];

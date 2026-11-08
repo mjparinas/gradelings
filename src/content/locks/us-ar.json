@@ -105,7 +105,7 @@
       "mb-k-yesterday-today-tomorrow text=ded5c52b8a std=a45a144f4e q=ee4fa47f81",
       "al-k-clues-from-the-past text=83e14eac4c std=c5fcbb8f2a q=4f09794c48",
       "ny-k-symbols-holidays text=c6f7569025 std=af4457bf05 q=580dcd0e4e",
-      "ar-k-symbols text=fe5db746c7 std=b9eb0f9d44 q=1b02c613c1"
+      "ar-k-symbols text=fe5db746c7 std=b9eb0f9d44 q=63b839dd2b"
     ]
   },
   "1/language": {
@@ -567,7 +567,7 @@
       "poetry-lab text=e3769835d8 std=07231f59d2 q=a8dd8516cd",
       "punctuation-7 text=9342af658b std=cd186d963f q=f4766ca186",
       "point-of-view-7 text=9446c4e22a std=6644da43af q=fc62f4db46",
-      "mb-word-roots text=f8f825870e std=d3b74e0ddb q=a13fe4ad77",
+      "mb-word-roots text=f8f825870e std=d3b74e0ddb q=6922bca6a8",
       "wa-g7-research-skills text=a0906b3c59 std=807fcd37fd q=4901d7cfd4",
       "wa-g7-media-framing text=dfd5377178 std=4140adf915 q=1f917ebc68",
       "wa-g7-spelling-rules text=2551a36a70 std=00dedbd27a q=a7dae53aa2"
@@ -779,7 +779,7 @@
       "tx-g9-rights text=924c2250fc std=dde38262d7 q=992013aede",
       "ca-g9-media text=67bc186bc5 std=2e51f4d927 q=0fc3f3ad1e",
       "ca-g9-civic-action text=7ff067ec0c std=16970d30d6 q=c1c8ac6d15",
-      "ar-g9-arkansas-government text=c41e6bd131 std=7316d164c5 q=6c3a8da1d1",
+      "ar-g9-arkansas-government text=c41e6bd131 std=7316d164c5 q=a78f144f26",
       "ar-g9-three-branches text=42d00d23ed std=3dcfcabda0 q=e91a2ea5ec",
       "ar-g9-elections text=4a90d25637 std=bb3c29b4c9 q=a907f76a86",
       "ar-g9-lawmaking text=cd150642fd std=623e345453 q=7f12d441b6",
