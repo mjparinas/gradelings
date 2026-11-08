@@ -875,20 +875,20 @@
   "8/language": {
     "overview": "ee7338a944",
     "units": [
-      "mb-research-8 text=a3abfca114 std=830f6eabf6 q=dc6aaab94d",
+      "mb-research-8 text=a3abfca114 std=830f6eabf6 q=ac7e909c99",
       "strategies-8 text=14cb61c3b0 std=684b97e4cd q=7ec3688b00",
       "close-reading text=b5e48e1704 std=4c1bfac87e q=9ae7c5a9fa",
       "narrator-8 text=b609477509 std=d735a1fc5c q=ce56cbb1e0",
       "literary-devices text=807aa8d25d std=0f57665d53 q=92bd771be1",
       "forms-features-8 text=612838fad2 std=15e1d12b4e q=d9c6eb4303",
       "argument-and-media text=38bdc7838c std=8262216c0a q=e3455a12dd",
-      "mb-fair-language-8 text=9aead0a363 std=7d6ffb0eae q=e890e80e2b",
+      "mb-fair-language-8 text=9aead0a363 std=7d6ffb0eae q=20149df1b5",
       "word-study text=e9a31820f1 std=8f8fdff0d2 q=15f2dda6fa",
-      "mb-word-power-8 text=3f40ceb555 std=ac25621ed2 q=bc89f91ef1",
+      "mb-word-power-8 text=3f40ceb555 std=ac25621ed2 q=310f657c1a",
       "grammar-and-style text=4cac16a8c8 std=aef4c0cabd q=19aa427fa0",
-      "mb-planning-forms-8 text=a00a7d9744 std=63e8cf09b3 q=f212a6d2be",
+      "mb-planning-forms-8 text=a00a7d9744 std=63e8cf09b3 q=91a13c9645",
       "writing-8 text=d9bb3a4cad std=85ed554ff5 q=1d05d6ba80",
-      "mb-reflect-8 text=0b1f0fc483 std=f93199fe03 q=93afa46363"
+      "mb-reflect-8 text=0b1f0fc483 std=f93199fe03 q=ec7d989bb5"
     ]
   },
   "8/math": {
