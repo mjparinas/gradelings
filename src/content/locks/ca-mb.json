@@ -69,11 +69,11 @@
       "picture-clues text=c447e46412 std=890d9dca2e q=3ade8d2d47",
       "book-detectives text=1f5750b2af std=f5ba04c4da q=adc3ae2dbb",
       "story-order text=f874c5f317 std=9af61a0064 q=9e24988535",
-      "mb-k-listening-and-talking text=f0f432415b std=ec09b45347 q=1550a25273",
-      "mb-k-word-parts-and-meanings text=bcacb5f9c5 std=4ea0cc33e3 q=2bb72d111e",
-      "mb-k-before-during-after-reading text=112f823e38 std=9637a45443 q=c4e7a2bbf3",
-      "mb-k-make-a-text text=a67f254a6f std=76a5b7c685 q=0c937c1508",
-      "mb-k-i-can-learn text=63637fcc19 std=0e79a5f974 q=9e18c33ed6"
+      "mb-k-listening-and-talking text=f0f432415b std=ec09b45347 q=b71ddd8cd9",
+      "mb-k-word-parts-and-meanings text=bcacb5f9c5 std=4ea0cc33e3 q=c988c37a4b",
+      "mb-k-before-during-after-reading text=112f823e38 std=9637a45443 q=d8c0c11204",
+      "mb-k-make-a-text text=a67f254a6f std=76a5b7c685 q=01f4aaf0de",
+      "mb-k-i-can-learn text=63637fcc19 std=0e79a5f974 q=b3685becc7"
     ]
   },
   "k/math": {
