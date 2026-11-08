@@ -266,7 +266,7 @@
       "devices-3 text=7d654f8f52 std=c14ed21581 q=510abb9c40",
       "grammar-3 text=a9deaa03d1 std=637b940083 q=4cef04ee6f",
       "text-patterns text=66f9e7deb8 std=e2ee308e26 q=2d33abb1d7",
-      "mb-wonder-and-find-out text=63150b7959 std=87429c7bda q=aeacd646ab",
+      "mb-wonder-and-find-out text=63150b7959 std=87429c7bda q=ef051d1eac",
       "wa-g3-media-messages text=fb774641d1 std=bc49e77061 q=feb4e64c34",
       "ca-g3-compare-and-connect text=cb4c2dd345 std=0df7ab3ba4 q=efdb755a12"
     ]
@@ -427,7 +427,7 @@
       "complex-sentences text=ac4c5531ea std=5bc0524faa q=541e2d5520",
       "punctuation-power text=fb7f3d7d02 std=2afdab3129 q=c61867de33",
       "media-smarts text=e34e2d845a std=0f9ef91b68 q=943a38fda8",
-      "mb-multimodal-texts-5 text=adf27e7e3d std=71dda9a24e q=b3c7f7225b",
+      "mb-multimodal-texts-5 text=adf27e7e3d std=71dda9a24e q=afd9881eca",
       "wa-g5-research-ready text=a1d4419e2b std=7b1beacd54 q=e9eb98ac26",
       "wa-g5-spelling-smarts text=27bf16b09c std=7b51a089fc q=2666501efd",
       "ca-g5-story-reader text=0d32d6476e std=829e735c54 q=de8b37bf89",
@@ -795,16 +795,16 @@
   "9/science": {
     "overview": "69a5b0eb2d",
     "units": [
-      "cells-from-cells text=bf9b3d6d2e std=498b746550 q=9c20dd0a12",
+      "cells-from-cells text=bf9b3d6d2e std=498b746550 q=17bf1b2a92",
       "photosynthesis-respiration-9 text=aa7d1dc3bb std=4d55bccc9d q=a8703c2a22",
       "ca-g9-dna-proteins text=84bb9cac1c std=5d8114a09d q=4575b20e9f",
-      "reproduction text=d702789bd4 std=a0d91214e6 q=89792aacac",
+      "reproduction text=d702789bd4 std=a0d91214e6 q=c9637838d5",
       "ca-g9-body-systems text=8ec013e18e std=47aef4833d q=380a6cd41f",
       "ca-g9-populations text=e3ef475f95 std=83ac936e6a q=c047ae9c38",
       "mb-evolution-and-selection text=ad74bb913c std=a067aa8218 q=2382318afc",
       "atoms-and-electrons text=5dc2e26422 std=b9d2b3643c q=77c28ee671",
       "periodic-table-9 text=d006b85cec std=97b87062ad q=0f98494808",
-      "bonding-and-reactions text=8a0ea04bc7 std=4f4ed165b8 q=a326d57dc9",
+      "bonding-and-reactions text=8a0ea04bc7 std=4f4ed165b8 q=05ec43f844",
       "chemical-change-ab text=89d7e56152 std=c8c260eb9c q=16a95d55f4",
       "ca-g9-nuclear text=ee6db6429d std=9a8c0d36d1 q=2b8539412b",
       "ca-g9-structure-materials text=8bf27446b7 std=ce693cab4c q=e5eeea39f0",

@@ -284,7 +284,7 @@
       "devices-3 text=7d654f8f52 std=ea2b31dab6 q=510abb9c40",
       "grammar-3 text=a9deaa03d1 std=e1b5fe73b0 q=4cef04ee6f",
       "text-patterns text=66f9e7deb8 std=e95d2e6c97 q=2d33abb1d7",
-      "mb-wonder-and-find-out text=63150b7959 std=0625ffbe27 q=aeacd646ab",
+      "mb-wonder-and-find-out text=63150b7959 std=0625ffbe27 q=ef051d1eac",
       "wa-g3-media-messages text=fb774641d1 std=c482ebc0ef q=feb4e64c34",
       "ca-g3-compare-and-connect text=cb4c2dd345 std=113b0ba604 q=efdb755a12"
     ]
@@ -442,7 +442,7 @@
       "complex-sentences text=ac4c5531ea std=213a3c4643 q=541e2d5520",
       "punctuation-power text=fb7f3d7d02 std=6da0629756 q=c61867de33",
       "media-smarts text=e34e2d845a std=58f297ff94 q=943a38fda8",
-      "mb-multimodal-texts-5 text=adf27e7e3d std=2d03356b56 q=b3c7f7225b",
+      "mb-multimodal-texts-5 text=adf27e7e3d std=2d03356b56 q=afd9881eca",
       "wa-g5-research-ready text=a1d4419e2b std=00f2b10ee3 q=e9eb98ac26",
       "wa-g5-spelling-smarts text=27bf16b09c std=c8cf144fc7 q=2666501efd",
       "ca-g5-story-reader text=0d32d6476e std=a76a5aac99 q=de8b37bf89",
@@ -805,10 +805,10 @@
       "ca-g9-earth-and-life text=4fdc28b68c std=a3cb782db7 q=6b7bd2236d",
       "ca-g9-resources text=8c64d966db std=eeb9690d18 q=4e2c013ca5",
       "ca-g9-climate-feedbacks text=294b68d3fa std=15ea9439b1 q=1c06419890",
-      "cells-from-cells text=bf9b3d6d2e std=58ef71806b q=9c20dd0a12",
+      "cells-from-cells text=bf9b3d6d2e std=58ef71806b q=17bf1b2a92",
       "photosynthesis-respiration-9 text=aa7d1dc3bb std=735db35f83 q=a8703c2a22",
       "ca-g9-dna-proteins text=84bb9cac1c std=44cfd66967 q=4575b20e9f",
-      "reproduction text=d702789bd4 std=e1f4d8ce81 q=89792aacac",
+      "reproduction text=d702789bd4 std=e1f4d8ce81 q=c9637838d5",
       "microbes-and-immunity text=32d95f5719 std=3be41f729e q=408a5e3641",
       "ca-g9-populations text=e3ef475f95 std=4a1870d737 q=c047ae9c38",
       "mb-evolution-and-selection text=ad74bb913c std=8e27882ab4 q=2382318afc"

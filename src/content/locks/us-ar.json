@@ -259,7 +259,7 @@
       "grammar-3 text=a9deaa03d1 std=c94b5174a1 q=4cef04ee6f",
       "text-patterns text=66f9e7deb8 std=8dcea1973d q=2d33abb1d7",
       "tx-g3-tales-and-poems text=de307f42f4 std=d8311375ec q=36ace37614",
-      "mb-wonder-and-find-out text=63150b7959 std=52bcd322f6 q=aeacd646ab",
+      "mb-wonder-and-find-out text=63150b7959 std=52bcd322f6 q=ef051d1eac",
       "wa-g3-media-messages text=fb774641d1 std=25b85a594c q=feb4e64c34"
     ]
   },
@@ -411,7 +411,7 @@
       "complex-sentences text=ac4c5531ea std=0b410016d0 q=541e2d5520",
       "punctuation-power text=fb7f3d7d02 std=437a9e922d q=c61867de33",
       "media-smarts text=e34e2d845a std=39d9bf8e2f q=943a38fda8",
-      "mb-multimodal-texts-5 text=adf27e7e3d std=cf8c9766c7 q=b3c7f7225b",
+      "mb-multimodal-texts-5 text=adf27e7e3d std=cf8c9766c7 q=afd9881eca",
       "wa-g5-research-ready text=a1d4419e2b std=48bcef1170 q=e9eb98ac26",
       "wa-g5-spelling-smarts text=27bf16b09c std=ffd3997afb q=2666501efd"
     ]
@@ -756,7 +756,7 @@
   "9/science": {
     "overview": "7f22b509f6",
     "units": [
-      "cells-from-cells text=bf9b3d6d2e std=77e9c8e760 q=9c20dd0a12",
+      "cells-from-cells text=bf9b3d6d2e std=77e9c8e760 q=17bf1b2a92",
       "tx-b-dna text=ebdc21299a std=54656824b4 q=d5b44c9a6b",
       "tx-b-systems text=2df2b5e81f std=15cc15b8b0 q=1ea35edf46",
       "photosynthesis-respiration-9 text=aa7d1dc3bb std=1d62485d4a q=a8703c2a22",

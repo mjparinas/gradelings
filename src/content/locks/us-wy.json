@@ -247,7 +247,7 @@
       "devices-3 text=7d654f8f52 std=4ce4bfb0bc q=510abb9c40",
       "grammar-3 text=a9deaa03d1 std=a5a98cf34f q=4cef04ee6f",
       "text-patterns text=66f9e7deb8 std=08324be5c2 q=2d33abb1d7",
-      "mb-wonder-and-find-out text=63150b7959 std=146328706b q=aeacd646ab",
+      "mb-wonder-and-find-out text=63150b7959 std=146328706b q=ef051d1eac",
       "wa-g3-media-messages text=fb774641d1 std=0044552ec2 q=feb4e64c34",
       "ca-g3-compare-and-connect text=cb4c2dd345 std=b489d10ecd q=efdb755a12"
     ]
@@ -381,7 +381,7 @@
       "complex-sentences text=ac4c5531ea std=0c41a02509 q=541e2d5520",
       "punctuation-power text=fb7f3d7d02 std=ee326db520 q=c61867de33",
       "media-smarts text=e34e2d845a std=1a53409f5c q=943a38fda8",
-      "mb-multimodal-texts-5 text=adf27e7e3d std=237ec19ae6 q=b3c7f7225b",
+      "mb-multimodal-texts-5 text=adf27e7e3d std=237ec19ae6 q=afd9881eca",
       "wa-g5-research-ready text=a1d4419e2b std=52c6e316c0 q=e9eb98ac26",
       "wa-g5-spelling-smarts text=27bf16b09c std=82bbb62627 q=2666501efd",
       "ca-g5-story-reader text=0d32d6476e std=1350fc86e5 q=de8b37bf89",
@@ -721,9 +721,9 @@
   "9/science": {
     "overview": "16983219a7",
     "units": [
-      "reproduction text=d702789bd4 std=4a9708d73c q=89792aacac",
+      "reproduction text=d702789bd4 std=4a9708d73c q=c9637838d5",
       "atoms-and-electrons text=5dc2e26422 std=526836febb q=77c28ee671",
-      "bonding-and-reactions text=8a0ea04bc7 std=25c7bedf9e q=a326d57dc9",
+      "bonding-and-reactions text=8a0ea04bc7 std=25c7bedf9e q=05ec43f844",
       "periodic-table-9 text=d006b85cec std=64f4fbd309 q=0f98494808",
       "chemical-change-ab text=89d7e56152 std=fb46227380 q=16a95d55f4",
       "mb-evolution-and-selection text=ad74bb913c std=9bb89b215e q=2382318afc",

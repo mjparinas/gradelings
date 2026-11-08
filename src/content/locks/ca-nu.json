@@ -252,13 +252,13 @@
       "sentence-smarts text=440a0ed7a6 std=6c65c620eb q=be609c5403",
       "fact-or-opinion text=d5a6ab665c std=34aaf03c57 q=43da4e0ce6",
       "text-patterns text=66f9e7deb8 std=f2acae035e q=58f0f448b9",
-      "mb-listening-talking text=4e1e4060a5 std=b26d3373ce q=04d2b8d67d",
-      "mb-sounds-and-fluency text=166cd2dd7d std=d2bcabb5e8 q=f3502d183d",
-      "mb-wonder-and-find-out text=30ddbf1573 std=ff503a07c2 q=3bbd5f24b0",
-      "mb-plan-your-writing text=a79120e87f std=c81d353377 q=1833294da9",
-      "mb-make-writing-better text=5c910b794b std=014ad16b0e q=a39c1425a8",
-      "mb-media-and-design text=76c9cd6ba3 std=9906c6519f q=55304a366f",
-      "mb-learning-goals text=19a090de5a std=ee6a93f6c5 q=43675bb0d5"
+      "mb-listening-talking text=4e1e4060a5 std=b26d3373ce q=933dfcffeb",
+      "mb-sounds-and-fluency text=166cd2dd7d std=d2bcabb5e8 q=44a5ae0563",
+      "mb-wonder-and-find-out text=30ddbf1573 std=ff503a07c2 q=f9f8dcac4b",
+      "mb-plan-your-writing text=a79120e87f std=c81d353377 q=2b07494750",
+      "mb-make-writing-better text=5c910b794b std=014ad16b0e q=5c4d0d21ff",
+      "mb-media-and-design text=76c9cd6ba3 std=9906c6519f q=10398880da",
+      "mb-learning-goals text=19a090de5a std=ee6a93f6c5 q=6ec6c6a896"
     ]
   },
   "3/math": {
@@ -338,10 +338,10 @@
       "super-sentences text=127a9846e3 std=ad6cb71ded q=cee1adb645",
       "sound-alikes text=810d4b50da std=4b595a562e q=8f260eb511",
       "paragraph-power text=63c57da3d3 std=8bfac57267 q=ef7adfdbc7",
-      "mb-talk-together text=658241ee0d std=cac1772e0b q=2cf9661c67",
-      "mb-big-words text=ba39881768 std=7b47f7fad5 q=51ca3a8c3d",
-      "mb-revise-writing text=8f321fbe02 std=af4440013f q=d9b8f4c103",
-      "mb-learning-goals text=f38a4b317e std=06fc8c0ef3 q=2dc6f9a3fa"
+      "mb-talk-together text=658241ee0d std=cac1772e0b q=5333faeb80",
+      "mb-big-words text=ba39881768 std=7b47f7fad5 q=61a2877f1c",
+      "mb-revise-writing text=8f321fbe02 std=af4440013f q=a978279da4",
+      "mb-learning-goals text=f38a4b317e std=06fc8c0ef3 q=1aec4e95f9"
     ]
   },
   "4/math": {
@@ -411,20 +411,20 @@
     "units": [
       "reading-detectives text=de3643af3d std=3eb2b7894d q=82991da95b",
       "plot-and-conflict text=b917a8e0aa std=f4a9d807d4 q=15e53b85a5",
-      "mb-read-with-purpose-5 text=9b1c18b6f8 std=28ca958ad9 q=31fc4c3e85",
+      "mb-read-with-purpose-5 text=9b1c18b6f8 std=28ca958ad9 q=1b0e2acfd3",
       "figurative-language text=dca8bec883 std=424a887c75 q=b4536542fa",
       "purpose-and-structure text=d1e9ccc6e8 std=85d042ce08 q=8fd8837f55",
       "context-clues text=022a00b494 std=61d7c24939 q=1fa090fae4",
       "word-roots text=2558284043 std=8f7510463b q=f41c90a8a3",
-      "mb-long-words-5 text=0015470cf0 std=8a13cbefde q=60e11ab1ab",
+      "mb-long-words-5 text=0015470cf0 std=8a13cbefde q=e839a10246",
       "verb-tenses text=584119bb1d std=c43a26fb08 q=19a2201812",
       "complex-sentences text=ac4c5531ea std=30dab96b9e q=e9b1d0fa47",
       "punctuation-power text=fb7f3d7d02 std=992063fbf3 q=c61867de33",
-      "mb-multimodal-texts-5 text=adf27e7e3d std=ff77ab4c5e q=f4a9fdd207",
-      "mb-revising-spelling-5 text=878085091a std=348a11754e q=0f122d1e85",
-      "mb-talk-and-listen-5 text=a2f0620170 std=5259987b88 q=516513f42b",
+      "mb-multimodal-texts-5 text=adf27e7e3d std=ff77ab4c5e q=c30fc8e45a",
+      "mb-revising-spelling-5 text=878085091a std=348a11754e q=50c7f64f92",
+      "mb-talk-and-listen-5 text=a2f0620170 std=5259987b88 q=9e9a6e4226",
       "media-smarts text=e34e2d845a std=573131e3c5 q=06204a9b34",
-      "mb-learning-goals-5 text=556483eb31 std=e79fc49188 q=7feca0ecd4"
+      "mb-learning-goals-5 text=556483eb31 std=e79fc49188 q=6926b6e8e9"
     ]
   },
   "5/math": {
@@ -794,7 +794,7 @@
     "overview": "b170fa894f",
     "units": [
       "biodiversity-ab text=0ead03ee06 std=0abc75fbaa q=c75a65d1e0",
-      "reproduction text=d702789bd4 std=0f59caf8fb q=89792aacac",
+      "reproduction text=d702789bd4 std=0f59caf8fb q=c9637838d5",
       "compounds-9 text=e809c7578c std=65cbc3f04b q=799a9bf54a",
       "atoms-and-electrons text=5dc2e26422 std=0a94a9a74d q=157481b107",
       "chemical-change-ab text=1ca1c45de5 std=2bd3184420 q=7a00ce3609",

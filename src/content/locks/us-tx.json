@@ -289,7 +289,7 @@
       "grammar-3 text=a9deaa03d1 std=6398c3d7ab q=4cef04ee6f",
       "devices-3 text=7d654f8f52 std=81d7d601d4 q=510abb9c40",
       "text-patterns text=66f9e7deb8 std=59b703610e q=2d33abb1d7",
-      "mb-wonder-and-find-out text=63150b7959 std=0a13a8c73d q=aeacd646ab",
+      "mb-wonder-and-find-out text=63150b7959 std=0a13a8c73d q=ef051d1eac",
       "wa-g3-media-messages text=fb774641d1 std=c777741b60 q=feb4e64c34",
       "tx-g3-tales-and-poems text=de307f42f4 std=6f981f544e q=36ace37614"
     ]
@@ -463,7 +463,7 @@
       "complex-sentences text=ac4c5531ea std=1dd19e7d38 q=541e2d5520",
       "punctuation-power text=fb7f3d7d02 std=f406f18665 q=c61867de33",
       "media-smarts text=e34e2d845a std=19b9781b39 q=943a38fda8",
-      "mb-multimodal-texts-5 text=adf27e7e3d std=82543ba26c q=b3c7f7225b",
+      "mb-multimodal-texts-5 text=adf27e7e3d std=82543ba26c q=afd9881eca",
       "wa-g5-research-ready text=a1d4419e2b std=601293823d q=e9eb98ac26",
       "wa-g5-spelling-smarts text=27bf16b09c std=c1415db72a q=2666501efd",
       "tx-g5-adages-and-puns text=6f27b9e7bd std=70d277d107 q=edaefa6599",
@@ -850,8 +850,8 @@
   "9/science": {
     "overview": "0c6b72a5b8",
     "units": [
-      "cells-from-cells text=bf9b3d6d2e std=70419b9dbe q=9c20dd0a12",
-      "reproduction text=d702789bd4 std=48137cc267 q=89792aacac",
+      "cells-from-cells text=bf9b3d6d2e std=70419b9dbe q=17bf1b2a92",
+      "reproduction text=d702789bd4 std=48137cc267 q=c9637838d5",
       "microbes-and-immunity text=32d95f5719 std=400bd2c1f9 q=408a5e3641",
       "mb-infectious-disease text=780f31a359 std=2e536c9694 q=838012dd92",
       "mb-evolution-and-selection text=ad74bb913c std=e65bee014d q=2382318afc",

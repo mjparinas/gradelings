@@ -164,7 +164,7 @@
       "community-services text=26d27aa27c std=8ce8e4f245 q=22cd5a9649",
       "wa-g1-earn-save-share text=ff3274fdf3 std=a05170263b q=2bb7ea855e",
       "ca-g1-long-ago text=1bee06737a std=d055a584b2 q=71a2f5957a",
-      "me-g1-maine-symbols text=805a4e7744 std=5506166573 q=c61187f7b9",
+      "me-g1-maine-symbols text=805a4e7744 std=5506166573 q=809d2e6b1b",
       "me-g1-wabanaki-traditions text=acdd06df60 std=d851d1ad21 q=5b3324bfe5"
     ]
   },
@@ -246,7 +246,7 @@
       "abc-dictionary text=0dded2dd30 std=e32838615c q=8cac6b9b16",
       "grammar-3 text=a9deaa03d1 std=3a40c6c9af q=4cef04ee6f",
       "text-patterns text=66f9e7deb8 std=e680b48283 q=2d33abb1d7",
-      "mb-wonder-and-find-out text=63150b7959 std=e0d061ede5 q=aeacd646ab",
+      "mb-wonder-and-find-out text=63150b7959 std=e0d061ede5 q=ef051d1eac",
       "wa-g3-media-messages text=fb774641d1 std=5f364a33ae q=feb4e64c34"
     ]
   },
@@ -388,7 +388,7 @@
       "complex-sentences text=ac4c5531ea std=b492da4fc4 q=541e2d5520",
       "punctuation-power text=fb7f3d7d02 std=fd9fd13345 q=c61867de33",
       "media-smarts text=e34e2d845a std=0298a72a3f q=943a38fda8",
-      "mb-multimodal-texts-5 text=adf27e7e3d std=e067992b67 q=b3c7f7225b",
+      "mb-multimodal-texts-5 text=adf27e7e3d std=e067992b67 q=afd9881eca",
       "wa-g5-research-ready text=a1d4419e2b std=4ffda9ceb5 q=e9eb98ac26",
       "wa-g5-spelling-smarts text=27bf16b09c std=367e046630 q=2666501efd"
     ]
@@ -661,7 +661,7 @@
       "or-g8-reconstruction text=693a3316b8 std=e4c0f20d10 q=4c87f1ca5f",
       "maps-graphs-8 text=78520d151d std=81ab1c6164 q=db3f6f1744",
       "mb-evidence-8 text=29b0073788 std=84bdaa1eab q=d69f09c163",
-      "me-g8-maine-and-nation text=5c79d44698 std=da858283fd q=19a9224efa",
+      "me-g8-maine-and-nation text=5c79d44698 std=da858283fd q=e8108b0c63",
       "me-g8-us-timeline text=e248e451f7 std=4aa8852e5f q=e84da8f0a3"
     ]
   },
@@ -717,10 +717,10 @@
   "9/science": {
     "overview": "16983219a7",
     "units": [
-      "cells-from-cells text=bf9b3d6d2e std=3a95627006 q=9c20dd0a12",
-      "reproduction text=d702789bd4 std=4a9708d73c q=89792aacac",
+      "cells-from-cells text=bf9b3d6d2e std=3a95627006 q=17bf1b2a92",
+      "reproduction text=d702789bd4 std=4a9708d73c q=c9637838d5",
       "atoms-and-electrons text=5dc2e26422 std=526836febb q=77c28ee671",
-      "bonding-and-reactions text=8a0ea04bc7 std=25c7bedf9e q=a326d57dc9",
+      "bonding-and-reactions text=8a0ea04bc7 std=25c7bedf9e q=05ec43f844",
       "photosynthesis-respiration-9 text=aa7d1dc3bb std=2d468886b6 q=a8703c2a22",
       "periodic-table-9 text=d006b85cec std=64f4fbd309 q=0f98494808",
       "chemical-change-ab text=89d7e56152 std=355f770542 q=16a95d55f4",

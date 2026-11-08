@@ -851,8 +851,8 @@
     "units": [
       "nb-solar-system-9 text=b4847f50f2 std=9936b5557d q=cad9853070",
       "nb-ecosystems-9 text=1319ff1c1b std=8b47806528 q=529b239707",
-      "reproduction text=d702789bd4 std=4c8db8c62b q=89792aacac",
-      "cells-from-cells text=bf9b3d6d2e std=f85752ede9 q=403cd47249",
+      "reproduction text=d702789bd4 std=4c8db8c62b q=c9637838d5",
+      "cells-from-cells text=bf9b3d6d2e std=f85752ede9 q=d8fef1a729",
       "atoms-and-electrons text=5dc2e26422 std=5ed7f6e91f q=157481b107",
       "atoms-9 text=0fd6c7ecf2 std=b1acd70dd7 q=5412669a33",
       "periodic-table-9 text=d006b85cec std=1522944113 q=0f98494808",
@@ -867,7 +867,7 @@
   "9/social": {
     "overview": "93c378b937",
     "units": [
-      "canadas-landscapes text=5175fa39ff std=5f65803b23 q=0867df985a",
+      "canadas-landscapes text=5175fa39ff std=5f65803b23 q=3b19aa43c2",
       "nb-places-people-9 text=1c02d184bb std=7e2cd4307b q=496d490116",
       "nb-identity-migration-9 text=104d79215f std=2ef77e3f9d q=435053ca11",
       "nb-governance-9 text=b8225aad8b std=06685b5fcf q=479758c960",

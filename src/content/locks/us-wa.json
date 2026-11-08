@@ -242,7 +242,7 @@
       "punctuation-power text=4ba2179323 std=ac914f2e19 q=ac19eee914",
       "word-pairs text=17c5d8704a std=7a53852f9b q=2558b1d793",
       "abc-dictionary text=0dded2dd30 std=6580f3ba6f q=8cac6b9b16",
-      "mb-wonder-and-find-out text=63150b7959 std=7659a4650f q=aeacd646ab",
+      "mb-wonder-and-find-out text=63150b7959 std=7659a4650f q=ef051d1eac",
       "wa-g3-media-messages text=fb774641d1 std=7ba5c122a0 q=feb4e64c34"
     ]
   },
@@ -385,7 +385,7 @@
       "word-roots text=2558284043 std=0ec02a70ef q=09a2072023",
       "figurative-language text=dca8bec883 std=103831f81c q=5d50f18ae7",
       "complex-sentences text=ac4c5531ea std=c614dc079d q=541e2d5520",
-      "mb-multimodal-texts-5 text=adf27e7e3d std=78f37a1cbc q=b3c7f7225b",
+      "mb-multimodal-texts-5 text=adf27e7e3d std=78f37a1cbc q=afd9881eca",
       "punctuation-power text=fb7f3d7d02 std=7dc1a9c0c7 q=c61867de33",
       "media-smarts text=e34e2d845a std=8d7a8daef4 q=943a38fda8",
       "wa-g5-research-ready text=a1d4419e2b std=b795156342 q=e9eb98ac26",
@@ -723,10 +723,10 @@
   "9/science": {
     "overview": "16983219a7",
     "units": [
-      "cells-from-cells text=bf9b3d6d2e std=3a95627006 q=9c20dd0a12",
-      "reproduction text=d702789bd4 std=4a9708d73c q=89792aacac",
+      "cells-from-cells text=bf9b3d6d2e std=3a95627006 q=17bf1b2a92",
+      "reproduction text=d702789bd4 std=4a9708d73c q=c9637838d5",
       "atoms-and-electrons text=5dc2e26422 std=526836febb q=77c28ee671",
-      "bonding-and-reactions text=8a0ea04bc7 std=25c7bedf9e q=a326d57dc9",
+      "bonding-and-reactions text=8a0ea04bc7 std=25c7bedf9e q=05ec43f844",
       "photosynthesis-respiration-9 text=aa7d1dc3bb std=2d468886b6 q=a8703c2a22",
       "periodic-table-9 text=d006b85cec std=64f4fbd309 q=0f98494808",
       "chemical-change-ab text=89d7e56152 std=355f770542 q=16a95d55f4",
