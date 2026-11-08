@@ -841,7 +841,7 @@
   "9/science": {
     "overview": "a2e5f5a13e",
     "units": [
-      "cells-from-cells text=bf9b3d6d2e std=eb17c98158 q=9c20dd0a12",
+      "cells-from-cells text=bf9b3d6d2e std=eb17c98158 q=17bf1b2a92",
       "tx-b-biomolecules text=f558500c32 std=28110e2b6b q=80f1cbcc2a",
       "tx-b-cells text=c2aebee26a std=411282ad73 q=692cb5251c",
       "ca-g9-dna-proteins text=84bb9cac1c std=94539dded4 q=4575b20e9f",
@@ -849,12 +849,12 @@
       "photosynthesis-respiration-9 text=aa7d1dc3bb std=45d26c7a64 q=a8703c2a22",
       "tx-b-matter-cycles text=9fe427999f std=08cd677443 q=09091db496",
       "ca-g9-populations text=e3ef475f95 std=edb679dfde q=c047ae9c38",
-      "reproduction text=d702789bd4 std=8b8d72a709 q=89792aacac",
+      "reproduction text=d702789bd4 std=8b8d72a709 q=c9637838d5",
       "tx-b-inheritance text=4049c449a5 std=759f65febc q=793ec7ba46",
       "mb-evolution-and-selection text=ad74bb913c std=e3e8325d90 q=2382318afc",
       "atoms-and-electrons text=5dc2e26422 std=6054352129 q=77c28ee671",
       "periodic-table-9 text=d006b85cec std=778d2d5929 q=0f98494808",
-      "bonding-and-reactions text=8a0ea04bc7 std=11e0daf7c1 q=a326d57dc9",
+      "bonding-and-reactions text=8a0ea04bc7 std=11e0daf7c1 q=05ec43f844",
       "chemical-change-ab text=89d7e56152 std=727bf39756 q=16a95d55f4",
       "ca-g9-nuclear text=ee6db6429d std=f8826f6e06 q=2b8539412b",
       "wa-g9-motion text=322c25c859 std=1a359d5819 q=47e7cd3e9b",

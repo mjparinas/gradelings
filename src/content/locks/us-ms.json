@@ -824,10 +824,10 @@
   "9/science": {
     "overview": "fdda49e82d",
     "units": [
-      "cells-from-cells text=bf9b3d6d2e std=eaeb7c058b q=9c20dd0a12",
-      "reproduction text=d702789bd4 std=f9cb224ed7 q=89792aacac",
+      "cells-from-cells text=bf9b3d6d2e std=eaeb7c058b q=17bf1b2a92",
+      "reproduction text=d702789bd4 std=f9cb224ed7 q=c9637838d5",
       "atoms-and-electrons text=5dc2e26422 std=4e73767e62 q=77c28ee671",
-      "bonding-and-reactions text=8a0ea04bc7 std=61ba64dea9 q=a326d57dc9",
+      "bonding-and-reactions text=8a0ea04bc7 std=61ba64dea9 q=05ec43f844",
       "cells-diffusion-ab text=caaea79aff std=d6fa4d5780 q=650ba01e94",
       "ca-g9-body-systems text=8ec013e18e std=7ac071a040 q=380a6cd41f",
       "ca-g9-matter-energy text=a6f7c214ac std=6558b1d82a q=5aacd0c1bd",
