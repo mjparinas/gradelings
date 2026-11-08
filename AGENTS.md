@@ -615,6 +615,8 @@ Full guide: `docs/CONTENT_GUIDE.md`. The essentials:
 
 ## Decisions
 
+
+- **Test account** (November 1, 2026): `mjparinas@gmail.com` is Melvin's own test account, used for checkout testing, and is left out of customer and revenue counts: the admin dashboard, the lists behind its tiles and the More Insights parts all skip it (`notTestFamily` in `src/server/testAccounts.ts`, `TEST_ACCOUNT_EMAILS` in `src/lib/brand.ts`).
 Melvin's product and technical decisions are recorded in `docs/decisions/`, **one file per decision** named `YYYY-MM-DD-short-title.md` (list the folder to read them all). They are not kept in this file, because every pull request used to append to the end of one list here, so the next pull request to merge conflicted. **Agents: when Melvin makes a product or technical decision, add a new file there in the PR for that work (or a small docs PR), not only in memory.** A decision that belongs to an existing topic is also put in that topic's section above, edited in place. Never append to the end of a list that every pull request appends to (AGENTS.md, `docs/ADMIN.md` and the like); add a file of your own instead.
 
 - **Live questions are long-polled, with no new provider** (Melvin, November 5, 2026): the delay (up to 12 s for a new question to appear) is cut by holding requests on our own server, not by WebSockets (blocked or broken by many school filters and not hostable on Vercel functions), SSE, push (needs Google/Apple push servers and permission prompts) or a hosted real-time service such as Ably or Pusher (a new third party for kids' data on domains filters block). Ask Melvin before adding any of those.
