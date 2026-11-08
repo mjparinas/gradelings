@@ -30,6 +30,16 @@ describe("HelpVideoPlayer", () => {
     expect(onNext).toHaveBeenCalled();
   });
 
+  it("when rewatching from the Videos area, the button says Done and doesn't move on", async () => {
+    const onNext = vi.fn();
+    const onClose = vi.fn();
+    render(<HelpVideoPlayer video={video} library onClose={onClose} onNext={onNext} onWatched={() => undefined} />);
+    expect(screen.queryByRole("button", { name: /try one more/i })).not.toBeInTheDocument();
+    await userEvent.click(screen.getByRole("button", { name: "Done" }));
+    expect(onClose).toHaveBeenCalled();
+    expect(onNext).not.toHaveBeenCalled();
+  });
+
   it("falls back to the text lesson when the video can't load", async () => {
     const onLesson = vi.fn();
     const onWatched = vi.fn();
