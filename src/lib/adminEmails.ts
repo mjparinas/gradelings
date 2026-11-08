@@ -113,7 +113,7 @@ export const MESSAGE_PRESETS: MessagePreset[] = [
 export const SEGMENTS = {
   "quiet-7": { audience: "parents", name: "Gone quiet", description: "Practised before, but not in the last 7 days (up to 60)." },
   "never-practised": { audience: "parents", name: "Never practised", description: "Signed up 2 or more days ago, and no child has practised yet." },
-  "no-child": { audience: "parents", name: "No child added", description: "Signed up 2 to 60 days ago and hasn't added a child. Teachers are left out." },
+  "no-child": { audience: "parents", name: "No child added", description: "Signed up 1 to 60 days ago and hasn't added a child. Teachers are left out." },
   "tried-few": { audience: "parents", name: "Tried it, then stopped", description: "Practised on only 1 or 2 days, nothing in the last 3 days, not paying." },
   "engaged-not-paying": { audience: "parents", name: "Practising often, not paying", description: "Practised on 3 or more days, not paying, no code access." },
   "trial-ending": { audience: "parents", name: "Trial ending", description: "Trial ends in the next 7 days, not paying, no code access." },
