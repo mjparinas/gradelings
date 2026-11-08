@@ -885,8 +885,8 @@ function FlagItem({ flag, onSaved }: { flag: FlagRow; onSaved: () => void }) {
   const save = (enabled: boolean, r = Number(rollout)) => act("/api/admin/flags/", "PUT", { key: flag.key, enabled, rollout: r }, "Saved.");
   return (
     <li className="flex flex-col gap-2 py-3">
-      <div className="flex flex-wrap items-center justify-between gap-2">
-        <div>
+      <div className="flex items-center justify-between gap-4">
+        <div className="min-w-0">
           <span className="block font-bold">
             {flag.label} <span className="font-mono text-sm font-normal text-ink-soft">{flag.key}</span>
           </span>
@@ -896,9 +896,15 @@ function FlagItem({ flag, onSaved }: { flag: FlagRow; onSaved: () => void }) {
             {flag.overrides ? ` · ${flag.overrides} family ${flag.overrides === 1 ? "override" : "overrides"}` : ""}
           </span>
         </div>
-        <label className="flex items-center gap-2 font-semibold">
-          <input type="checkbox" role="switch" className="h-6 w-6" checked={flag.enabled} disabled={busy} onChange={(e) => void save(e.target.checked)} />
-          {flag.enabled ? "On" : "Off"}
+        <label className="ml-auto flex shrink-0 cursor-pointer items-center gap-2 font-semibold">
+          <input type="checkbox" role="switch" className="peer sr-only" checked={flag.enabled} disabled={busy} onChange={(e) => void save(e.target.checked)} />
+          <span
+            className={`switch-track relative h-8 w-14 shrink-0 rounded-full transition-colors peer-focus-visible:ring-4 peer-focus-visible:ring-ink/40 peer-disabled:opacity-50 ${flag.enabled ? "bg-good" : "bg-ink/20"}`}
+            aria-hidden="true"
+          >
+            <span className={`switch-knob absolute top-1 h-6 w-6 rounded-full bg-white shadow transition-all ${flag.enabled ? "left-7" : "left-1"}`} />
+          </span>
+          <span className="w-8">{flag.enabled ? "On" : "Off"}</span>
         </label>
       </div>
       {flag.enabled && (
