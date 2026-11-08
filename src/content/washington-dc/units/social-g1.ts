@@ -1,5 +1,6 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { LEADERS_G1_MORE } from "./social-more";
 
 // Washington, DC Grade 1 social studies, "Our Community, Our City" (the DC Social Studies Standards, 2023): the roles of
 // current leaders, including the president and the mayor of Washington, DC (1.9), the symbols, songs and holidays that
@@ -45,6 +46,6 @@ export const SOCIAL_1: Unit[] = [
     blurb: "The president, the mayor, voting and DC's wards",
     parentNote: "The leaders children hear about (the president of the United States and the mayor of Washington, DC) and what they do, how voting and elections choose them, the symbols, songs and holidays that bring people together (the flags, the national anthem, the Fourth of July and DC Emancipation Day), and the places on a map from a neighborhood and a ward to the District, the United States and North America.",
     standards: ["1.9; 1.10; 1.12; 1.17", "the roles of the president and the mayor, how voting chooses them, symbols and holidays that unify people, and the wards, the District, the country and the continent on a map"],
-    items: LEADERS,
+    items: [...LEADERS, ...LEADERS_G1_MORE],
   }),
 ];

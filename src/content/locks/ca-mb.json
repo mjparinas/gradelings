@@ -631,21 +631,21 @@
   "6/language": {
     "overview": "d125dfa378",
     "units": [
-      "mb-reading-and-learning-strategies text=1d2627c5f7 std=40c7769399 q=c457cf43cc",
+      "mb-reading-and-learning-strategies text=1d2627c5f7 std=40c7769399 q=200a7cc4b1",
       "close-reading text=8f2caa5060 std=0e315fd3f3 q=2400e20887",
-      "mb-text-features-forms text=889bfcbcab std=7d4990cb03 q=aa5dc0f7a6",
+      "mb-text-features-forms text=889bfcbcab std=7d4990cb03 q=8e8f2d4452",
       "point-of-view text=181ec2a506 std=c9295ecb81 q=e32473aa03",
       "figurative-language text=49d680fa8d std=202f6723ba q=d1d2a09b3f",
       "connotation-tone text=9c068d912c std=d853f17d3b q=220849e9fa",
       "roots-analogies text=34da7ba9e2 std=cfc07f9391 q=3ceab8afb2",
-      "mb-media-and-bias text=b023f775e3 std=69e19030e8 q=d92075cddb",
+      "mb-media-and-bias text=b023f775e3 std=69e19030e8 q=e6f3e98d38",
       "sources-bias text=30e9961fd3 std=c91ed6a407 q=ebdde5983f",
-      "mb-planning-and-organizing text=487a4cd4b0 std=c156453f04 q=0c3d726cd5",
+      "mb-planning-and-organizing text=487a4cd4b0 std=c156453f04 q=41377f5dd7",
       "persuasive-writing text=143cf3561b std=ad7f03b6a9 q=d9dd316334",
       "agreement text=5714f96d51 std=9e3828a171 q=25e1f4e98f",
       "commas-clauses text=78c6d03749 std=4247d59358 q=df67ee4c04",
       "sentence-repair text=404e6c9477 std=0a8bacf75a q=2784e88c73",
-      "mb-capitals-and-spelling text=63a6b734c9 std=0f9fae88d1 q=309147c369"
+      "mb-capitals-and-spelling text=63a6b734c9 std=0f9fae88d1 q=8f4da9551c"
     ]
   },
   "6/math": {
@@ -758,16 +758,16 @@
       "clauses-sentences text=5017dd13d0 std=2c00549672 q=5cd8987fd7",
       "modifiers-parallelism text=a0c6970207 std=d5ce88a041 q=4826f70a56",
       "semicolons-colons-dashes text=40cb0d089d std=0412ffba10 q=9b3d9ab0c8",
-      "mb-word-roots text=f8f825870e std=f7b02ecf7b q=a13fe4ad77",
+      "mb-word-roots text=f8f825870e std=f7b02ecf7b q=dcef7c27ba",
       "word-mix-ups text=7bb5032b8a std=de128e0be8 q=bb5c3889a5",
-      "mb-7-reading-strategies text=8ed92d9088 std=834705df9e q=2b7962d17a",
-      "mb-7-critical-reading text=e2e8a8fc19 std=5fa007e300 q=6f958897f2",
-      "mb-7-writing-forms text=0337c2a4ae std=0e9526ff1d q=9c865c8920",
-      "mb-7-word-choice-voice text=5a9707a65e std=5f85a8e414 q=e831d937a7",
-      "mb-7-capitals-formatting text=44e0048cde std=8c7e19eeb2 q=41dfaeba18",
-      "mb-7-presenting-design text=585d7da752 std=398d3efd97 q=1a5c13b7df",
-      "mb-7-discussion-skills text=96e5764e5e std=e9f460876f q=84ac8587c2",
-      "mb-7-learning-goals text=2c04fde7af std=de5e9c76e4 q=01cbcc9161"
+      "mb-7-reading-strategies text=8ed92d9088 std=834705df9e q=4adbd235b1",
+      "mb-7-critical-reading text=e2e8a8fc19 std=5fa007e300 q=262ffceac2",
+      "mb-7-writing-forms text=0337c2a4ae std=0e9526ff1d q=016b17646d",
+      "mb-7-word-choice-voice text=5a9707a65e std=5f85a8e414 q=fb463b0e8f",
+      "mb-7-capitals-formatting text=44e0048cde std=8c7e19eeb2 q=8f52dd64ae",
+      "mb-7-presenting-design text=585d7da752 std=398d3efd97 q=613f324b16",
+      "mb-7-discussion-skills text=96e5764e5e std=e9f460876f q=252f459d8f",
+      "mb-7-learning-goals text=2c04fde7af std=de5e9c76e4 q=ba9c00cd72"
     ]
   },
   "7/math": {
@@ -875,20 +875,20 @@
   "8/language": {
     "overview": "ee7338a944",
     "units": [
-      "mb-research-8 text=a3abfca114 std=830f6eabf6 q=dc6aaab94d",
+      "mb-research-8 text=a3abfca114 std=830f6eabf6 q=ac7e909c99",
       "strategies-8 text=14cb61c3b0 std=684b97e4cd q=7ec3688b00",
       "close-reading text=b5e48e1704 std=4c1bfac87e q=9ae7c5a9fa",
       "narrator-8 text=b609477509 std=d735a1fc5c q=ce56cbb1e0",
       "literary-devices text=807aa8d25d std=0f57665d53 q=92bd771be1",
       "forms-features-8 text=612838fad2 std=15e1d12b4e q=d9c6eb4303",
       "argument-and-media text=38bdc7838c std=8262216c0a q=e3455a12dd",
-      "mb-fair-language-8 text=9aead0a363 std=7d6ffb0eae q=e890e80e2b",
+      "mb-fair-language-8 text=9aead0a363 std=7d6ffb0eae q=20149df1b5",
       "word-study text=e9a31820f1 std=8f8fdff0d2 q=15f2dda6fa",
-      "mb-word-power-8 text=3f40ceb555 std=ac25621ed2 q=bc89f91ef1",
+      "mb-word-power-8 text=3f40ceb555 std=ac25621ed2 q=310f657c1a",
       "grammar-and-style text=4cac16a8c8 std=aef4c0cabd q=19aa427fa0",
-      "mb-planning-forms-8 text=a00a7d9744 std=63e8cf09b3 q=f212a6d2be",
+      "mb-planning-forms-8 text=a00a7d9744 std=63e8cf09b3 q=91a13c9645",
       "writing-8 text=d9bb3a4cad std=85ed554ff5 q=1d05d6ba80",
-      "mb-reflect-8 text=0b1f0fc483 std=f93199fe03 q=93afa46363"
+      "mb-reflect-8 text=0b1f0fc483 std=f93199fe03 q=ec7d989bb5"
     ]
   },
   "8/math": {

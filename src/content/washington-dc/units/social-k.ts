@@ -1,5 +1,6 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { CITY_K_MORE } from "./social-more";
 
 // Washington, DC Kindergarten social studies, "Me and My Community" (the DC Social Studies Standards, 2023): the local
 // community and its characteristics (K.21), why people live in different parts of Washington, DC (K.22), and the
@@ -45,6 +46,6 @@ export const SOCIAL_K: Unit[] = [
     blurb: "DC's flag, places and leaders",
     parentNote: "Washington, DC as our city and the nation's capital: the DC flag and the American flag, a few of the District's symbols (the wood thrush and the American Beauty rose), places children may know (the Capitol, the White House, the Washington Monument, the Metro, the Potomac and the cherry trees), why so many people live close together in a city, and the people who lead and help, from teachers and firefighters to the mayor and the president.",
     standards: ["K.21; K.22; K.1", "the characteristics of our local community, why people live in different parts of Washington, DC, and the roles of people in a community"],
-    items: CITY,
+    items: [...CITY, ...CITY_K_MORE],
   }),
 ];

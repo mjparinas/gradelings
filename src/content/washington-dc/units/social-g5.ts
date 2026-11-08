@@ -1,5 +1,6 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { JUSTICE_G5_MORE, MIGRATION_G5_MORE } from "./social-more";
 
 // Washington, DC Grade 5 social studies, "The United States: Expansion to the Civil Rights Movement" (the DC Social
 // Studies Standards, 2023): the Great Migration and the Black Renaissance, in Harlem and on DC's own U Street (5.42;
@@ -70,7 +71,7 @@ export const SOCIAL_5: Unit[] = [
     blurb: "Moving north, and the art and music that bloomed",
     parentNote: "The Great Migration, when about 6 million Black Americans moved from the South to Northern and Western cities between about 1910 and 1970, why they moved and what they found, and the Black Renaissance in art, music and writing that bloomed in Harlem and on DC's own U Street, with Langston Hughes, Duke Ellington, Zora Neale Hurston, Jacob Lawrence and Howard University's Alain Locke.",
     standards: ["5.42; 5.43; 5.25", "the reasons for and impact of the Great Migration, the Black Renaissance, and the roots of blues, gospel and jazz"],
-    items: MIGRATION,
+    items: [...MIGRATION, ...MIGRATION_G5_MORE],
   }),
   bankUnit({
     id: "dc-g5-voices-for-justice",
@@ -79,6 +80,6 @@ export const SOCIAL_5: Unit[] = [
     blurb: "Activists, court cases and protests against segregation",
     parentNote: "The people and strategies that fought segregation: Ida B. Wells, W.E.B. Du Bois and A. Philip Randolph, court cases from Plessy v. Ferguson to Brown v. Board of Education and DC's own Bolling v. Sharpe, Mary Church Terrell's fight against segregated restaurants in DC, Howard's civil rights lawyers, boycotts, sit-ins and marches, and the Civil Rights and Voting Rights acts.",
     standards: ["5.49; 5.50; 5.51; 5.53", "activists and organizations for civil rights, landmark court cases on segregation, strategies of resistance to Jim Crow, and the fight for voting rights"],
-    items: JUSTICE,
+    items: [...JUSTICE, ...JUSTICE_G5_MORE],
   }),
 ];

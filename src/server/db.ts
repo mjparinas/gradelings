@@ -566,6 +566,9 @@ const REPORT_COLUMNS: [string, string][] = [
   ["details", "TEXT"],
 ];
 const FAMILY_COLUMNS: [string, string][] = [
+  // How the account was made: 'card' (email-only card at the end of a lesson), 'site' (the sign-up form) or 'google'.
+  // Null for accounts made before this was recorded. Family-level only, for the admin funnel (owner, November 8, 2026).
+  ["signup_via", "TEXT"],
   // When this family last synced from the web, the Android app and the iPhone and iPad app (ms), for the admin panel's app mix.
   ["app_web_at", "INTEGER"],
   ["app_android_at", "INTEGER"],

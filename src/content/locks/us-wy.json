@@ -103,7 +103,7 @@
       "or-k-money-and-work text=779c3d6e1e std=30cd93dc8b q=62e27d59bb",
       "ca-k-calendar text=21e33a54d0 std=906e55a679 q=82ad20cecd",
       "ca-k-good-citizens text=d7b0dbd711 std=73850dd297 q=ba47e020d0",
-      "wy-k-flag-and-state text=adaf020b70 std=0a2fc2cc6e q=4b243c5c22"
+      "wy-k-flag-and-state text=adaf020b70 std=0a2fc2cc6e q=3a90395f37"
     ]
   },
   "1/language": {
@@ -167,7 +167,7 @@
       "community-services text=26d27aa27c std=98ccefb900 q=22cd5a9649",
       "wa-g1-earn-save-share text=ff3274fdf3 std=0f668ab419 q=2bb7ea855e",
       "ca-g1-long-ago text=1bee06737a std=562af317dc q=71a2f5957a",
-      "wy-g1-then-and-now text=72d0bff124 std=b0e688c032 q=c0825c1983"
+      "wy-g1-then-and-now text=72d0bff124 std=b0e688c032 q=1061d4d659"
     ]
   },
   "2/language": {
@@ -425,7 +425,7 @@
       "ca-g5-revolution text=9f9c895b95 std=22355bf332 q=77d806ef60",
       "wa-g5-constitution text=4fce7c7602 std=915e91edaa q=2d1d2c254b",
       "or-g5-timeline text=d6feb485b6 std=f5da4fe9f5 q=750a99801f",
-      "wy-g5-trails-west text=7d7c714ff2 std=0d16c927e4 q=61a5a320c2",
+      "wy-g5-trails-west text=7d7c714ff2 std=0d16c927e4 q=19f9894a26",
       "wy-g5-explorers text=b2af8fe6d8 std=b6621664a0 q=65e3e7029a"
     ]
   },
@@ -527,7 +527,7 @@
       "poetry-lab text=e3769835d8 std=1403b4744a q=a8dd8516cd",
       "punctuation-7 text=9342af658b std=9b259f0bf7 q=f4766ca186",
       "point-of-view-7 text=9446c4e22a std=a43794c5f3 q=fc62f4db46",
-      "mb-word-roots text=f8f825870e std=43c94f64f9 q=a13fe4ad77",
+      "mb-word-roots text=f8f825870e std=43c94f64f9 q=6922bca6a8",
       "wa-g7-research-skills text=a0906b3c59 std=a878aacc9b q=4901d7cfd4",
       "wa-g7-media-framing text=dfd5377178 std=65d225be58 q=1f917ebc68",
       "wa-g7-spelling-rules text=2551a36a70 std=9f147017c9 q=a7dae53aa2",
@@ -611,7 +611,7 @@
       "strategies-8 text=14cb61c3b0 std=9c7c723913 q=e9e599784b",
       "digital-8 text=742bfe22d6 std=869b50ea26 q=314d5c282f",
       "writing-8 text=d9bb3a4cad std=9da8712308 q=0d80919dc4",
-      "mb-word-power-8 text=3f40ceb555 std=f250d892bc q=434b58489d",
+      "mb-word-power-8 text=3f40ceb555 std=f250d892bc q=37cdbb840c",
       "wa-g8-media-influence text=17e98c9229 std=79b1688fe6 q=d957e11aea",
       "or-g8-weigh-the-evidence text=d58b9eae3f std=d20e7554f1 q=a6a4434e5b",
       "ca-g8-literary-connections text=b809fd29ef std=e487da260b q=cb28432094",
