@@ -106,9 +106,9 @@
   "1/language": {
     "overview": "1534ae4327",
     "units": [
-      "mb-g1-true-and-viewpoints text=21573781f7 std=a34f6b4a00 q=dfa7be03de",
+      "mb-g1-true-and-viewpoints text=21573781f7 std=a34f6b4a00 q=91d1d491e7",
       "sentences text=dc477bff6b std=031b29ef67 q=3a12a2876f",
-      "mb-g1-reading-smart text=79fcd9b632 std=e5b24bebc5 q=225b6070a5",
+      "mb-g1-reading-smart text=79fcd9b632 std=e5b24bebc5 q=44f58a515a",
       "blend-it text=9a1273c4bc std=3811efea9e q=5b9245f2d7",
       "short-vowels text=c3991944bf std=3fc17fed57 q=6e80d0c71e",
       "word-families text=47cdbc2e26 std=97e41d96e4 q=8b534665ec",
@@ -118,7 +118,7 @@
       "think-it-through text=58296e2f16 std=7a4bdae26c q=6b9dfcfb01",
       "sound-play text=b2fe23f215 std=03cb05b990 q=160f9c55ca",
       "describing-words text=666b9e7bde std=b49bf87996 q=5343edd9c8",
-      "mb-g1-writing-plan text=1641edd5fb std=3ca2c2e152 q=378651cdb4",
+      "mb-g1-writing-plan text=1641edd5fb std=3ca2c2e152 q=69c01eb71e",
       "build-sentences-ab text=30458150db std=d6ae900eb3 q=f8c4f07434",
       "sentence-types text=56ad0db855 std=82173442c7 q=f64d6d4696",
       "more-than-one text=10c2382c04 std=383e575833 q=4bb1ec800f"

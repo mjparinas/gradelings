@@ -148,11 +148,11 @@
       "more-than-one text=10c2382c04 std=b14607607c q=4bb1ec800f",
       "sentence-types text=56ad0db855 std=c802e0ece0 q=f64d6d4696",
       "think-it-through text=58296e2f16 std=e0816966be q=6b9dfcfb01",
-      "mb-g1-alphabet-match text=eb320c4a3c std=57fd0788fb q=97dac12d36",
-      "mb-g1-reading-smart text=79fcd9b632 std=5ea1d0abdc q=225b6070a5",
-      "mb-g1-true-and-viewpoints text=21573781f7 std=c9648ba0a8 q=dfa7be03de",
-      "mb-g1-writing-plan text=1641edd5fb std=f4761decc3 q=378651cdb4",
-      "mb-g1-talk-and-listen text=16eb282cd2 std=9c5baa31c1 q=8c4810835f"
+      "mb-g1-alphabet-match text=eb320c4a3c std=57fd0788fb q=863953d3aa",
+      "mb-g1-reading-smart text=79fcd9b632 std=5ea1d0abdc q=44f58a515a",
+      "mb-g1-true-and-viewpoints text=21573781f7 std=c9648ba0a8 q=91d1d491e7",
+      "mb-g1-writing-plan text=1641edd5fb std=f4761decc3 q=69c01eb71e",
+      "mb-g1-talk-and-listen text=16eb282cd2 std=9c5baa31c1 q=391845e9fb"
     ]
   },
   "1/math": {
