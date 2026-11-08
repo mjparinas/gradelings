@@ -138,6 +138,19 @@ describe("Funnel", () => {
     await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/admin/funnel/?days=30"));
   });
 
+  it("shows how families signed up, with counts only", async () => {
+    respond((url) =>
+      url.startsWith("/api/admin/funnel/")
+        ? { ...steps([10, 8, 4, 3, 1, 0]), paths: [{ path: "card", label: "Email card after a lesson", counts: [6, 5, 1, 1] }, { path: "unknown", label: "Before this was recorded", counts: [4, 3, 3, 2] }] }
+        : undefined,
+    );
+    render(<Funnel onEmailGroup={vi.fn()} />);
+    expect(await screen.findByRole("heading", { name: "By Sign-Up Path" })).toBeInTheDocument();
+    const row = screen.getByRole("row", { name: /Email card after a lesson/ });
+    expect(row).toHaveTextContent("6");
+    expect(row).toHaveTextContent("1 · 17%");
+  });
+
   it("says when nobody signed up", async () => {
     respond(() => steps([0, 0, 0, 0, 0, 0]));
     render(<Funnel onEmailGroup={vi.fn()} />);
