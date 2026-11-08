@@ -209,7 +209,7 @@ export async function accountForGoogle(profile: GoogleProfile, opts: { trialEnds
   const parentId = newId();
   try {
     await batch([
-      { sql: "INSERT INTO families (id, created_at, trial_ends_at, plan, updated_at, referred_by) VALUES (?, ?, ?, 'trial', ?, ?)", args: [familyId, now, trialEndsAt, now, referrer] },
+      { sql: "INSERT INTO families (id, created_at, trial_ends_at, plan, updated_at, referred_by, signup_via) VALUES (?, ?, ?, 'trial', ?, ?, 'google')", args: [familyId, now, trialEndsAt, now, referrer] },
       // No password: '!' never matches one (see verifyPassword). Google has confirmed the email.
       { sql: "INSERT INTO parents (id, family_id, email, password_hash, created_at, email_verified_at, google_sub, account_type) VALUES (?, ?, ?, '!', ?, ?, ?, ?)", args: [parentId, familyId, profile.email, now, now, profile.sub, opts.teacher ? "teacher" : "parent"] },
     ]);

@@ -399,6 +399,22 @@ describe("the funnel and its groups", () => {
     expect(await ids("engaged-not-paying")).toContain(regular.familyId);
     expect(await ids("engaged-not-paying")).not.toContain(tried.familyId);
   });
+
+  it("records how a family signed up and splits the funnel by that path", async () => {
+    const { db } = await import("@/server/db");
+    const form = await account("path-form@example.com", { createdAgo: 2 * DAY });
+    const card = await account("path-card@example.com", { createdAgo: 2 * DAY });
+    const via = async (id: string) =>
+      (await (await db()).execute({ sql: "SELECT signup_via FROM families WHERE id = ?", args: [id] })).rows[0]?.signup_via;
+    // The real sign-up route records the form; the card and Google are set by their own routes.
+    expect(await via(form.familyId)).toBe("site");
+    await (await db()).execute({ sql: "UPDATE families SET signup_via = 'card' WHERE id = ?", args: [card.familyId] });
+    const r = await (await get(funnel, "/api/admin/funnel/?days=30")).json();
+    const paths = r.paths as { path: string; counts: number[] }[];
+    expect(paths.find((p) => p.path === "site")!.counts[0]).toBeGreaterThanOrEqual(1);
+    expect(paths.find((p) => p.path === "card")!.counts[0]).toBeGreaterThanOrEqual(1);
+    expect(JSON.stringify(paths)).not.toContain("@");
+  });
 });
 
 describe("saved replies", () => {

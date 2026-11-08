@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { SelectMenu } from "@/components/SelectMenu";
 import { SEGMENTS, type Segment } from "@/lib/adminEmails";
 import { call } from "@/lib/classroom";
-import { biggestDrop, FUNNEL_PERIODS, FUNNEL_STEPS, type FunnelStep } from "@/lib/funnel";
+import { biggestDrop, FUNNEL_PERIODS, FUNNEL_STEPS, type FunnelStep, type PathRow } from "@/lib/funnel";
 import { Notice } from "./Engage";
 import { Bars } from "./Skeleton";
 import { titleCase } from "@/lib/titleCase";
@@ -18,9 +18,16 @@ const pct = (x: number) => `${Math.round(x * 100)}%`;
 export function Funnel({ onEmailGroup }: { onEmailGroup: (segment: Segment) => void }) {
   const [days, setDays] = useState("90");
   const [steps, setSteps] = useState<FunnelStep[] | null>(null);
+  const [paths, setPaths] = useState<PathRow[]>([]);
   const [err, setErr] = useState("");
   const load = useCallback(() => {
-    call<{ steps: FunnelStep[] }>(`/api/admin/funnel/?days=${days}`).then((r) => setSteps(r.steps), (e: Error) => setErr(e.message));
+    call<{ steps: FunnelStep[]; paths?: PathRow[] }>(`/api/admin/funnel/?days=${days}`).then(
+      (r) => {
+        setSteps(r.steps);
+        setPaths(r.paths ?? []);
+      },
+      (e: Error) => setErr(e.message),
+    );
   }, [days]);
   useEffect(load, [load]);
   const drop = steps ? biggestDrop(steps) : null;
@@ -94,6 +101,43 @@ export function Funnel({ onEmailGroup }: { onEmailGroup: (segment: Segment) => v
               );
             })}
           </ol>
+          {paths.length > 0 && (
+            <div className={card}>
+              <h3 className="font-bold">By Sign-Up Path</h3>
+              <div className="mt-2 overflow-x-auto">
+                <table className="w-full min-w-[34rem] text-left text-sm">
+                  <thead>
+                    <tr className="text-ink-soft">
+                      <th scope="col" className="py-1 pr-3 font-semibold">
+                        How they signed up
+                      </th>
+                      {FUNNEL_STEPS.slice(0, 4).map((s) => (
+                        <th key={s.id} scope="col" className="py-1 pr-3 text-right font-semibold">
+                          {titleCase(s.label)}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {paths.map((p) => (
+                      <tr key={p.path} className="border-t border-line">
+                        <th scope="row" className="py-1.5 pr-3 font-semibold">
+                          {p.label}
+                        </th>
+                        {p.counts.map((c, i) => (
+                          <td key={i} className="py-1.5 pr-3 text-right tabular-nums">
+                            {c.toLocaleString("en-CA")}
+                            {i > 0 && p.counts[0] > 0 && <span className="text-ink-soft"> · {pct(c / p.counts[0])}</span>}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="mt-2 text-sm text-ink-soft">Counts only, no names. The share is of that row&apos;s sign-ups. Accounts made before November 8, 2026 have no recorded path.</p>
+            </div>
+          )}
           <p className="text-sm text-ink-soft">
             Each email link opens the Emails tab on that group ({FUNNEL_STEPS.filter((s) => s.segment).map((s) => SEGMENTS[s.segment!].name).join(", ")}). The group covers every family at that point, not only
             those who signed up in this period. Nothing is sent until you type the confirmation there.

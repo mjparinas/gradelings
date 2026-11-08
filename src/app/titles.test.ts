@@ -32,6 +32,8 @@ import * as helpAtHomeGrade from "./help-at-home/[grade]/page";
 import * as spanish from "./spanish/page";
 import * as spanishGrade from "./spanish/[grade]/page";
 import * as spanishUnit from "./spanish/[grade]/[unit]/page";
+import * as learn from "./learn/page";
+import * as learnItemPage from "./learn/[id]/page";
 import * as mathFacts from "./math-facts/page";
 import * as mathFactsSet from "./math-facts/[set]/page";
 import * as worksheets from "./worksheets/page";
@@ -59,7 +61,7 @@ const PAGES: Record<string, Page> = {
   "/for-teachers/": teachers, "/for-teachers/[framework]/": teachersFw, "/for-teachers/[framework]/[grade]/": teachersGrade,
   "/guides/": guides, "/guides/[framework]/": guidesFw, "/guides/[framework]/[grade]/": guidesGrade, "/guides/[framework]/[grade]/[subject]/": guidesSubject,
   "/guides/[framework]/[grade]/[subject]/worksheet/": worksheet, "/guides/[framework]/french/": french,
-  "/help/": help, "/activities/": activities, "/activities/practice-calendar/[band]/": activitiesCalendar, "/activities/math-games/[band]/": activitiesGames, "/activities/reading-log/": activitiesLog, "/activities/talk-cards/": activitiesTalk, "/help-at-home/": helpAtHome, "/help-at-home/[grade]/": helpAtHomeGrade, "/spanish/": spanish, "/spanish/[grade]/": spanishGrade, "/spanish/[grade]/[unit]/": spanishUnit, "/math-facts/": mathFacts, "/math-facts/[set]/": mathFactsSet, "/worksheets/": worksheets, "/worksheets/[grade]/": worksheetsGrade, "/worksheets/[grade]/[skill]/": worksheetsSkill, "/pricing/": pricing, "/privacy/": privacy, "/report-cards/": reportCards, "/report-cards/[framework]/": reportCardsFw,
+  "/help/": help, "/activities/": activities, "/activities/practice-calendar/[band]/": activitiesCalendar, "/activities/math-games/[band]/": activitiesGames, "/activities/reading-log/": activitiesLog, "/activities/talk-cards/": activitiesTalk, "/help-at-home/": helpAtHome, "/help-at-home/[grade]/": helpAtHomeGrade, "/spanish/": spanish, "/spanish/[grade]/": spanishGrade, "/spanish/[grade]/[unit]/": spanishUnit, "/learn/": learn, "/learn/[id]/": learnItemPage, "/math-facts/": mathFacts, "/math-facts/[set]/": mathFactsSet, "/worksheets/": worksheets, "/worksheets/[grade]/": worksheetsGrade, "/worksheets/[grade]/[skill]/": worksheetsSkill, "/pricing/": pricing, "/privacy/": privacy, "/report-cards/": reportCards, "/report-cards/[framework]/": reportCardsFw,
   "/status/": status, "/terms/": terms, "/trust/": trust,
 };
 

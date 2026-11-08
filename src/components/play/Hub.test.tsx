@@ -302,6 +302,20 @@ describe("Hub tiles", () => {
     expect(screen.queryByText("Explore")).not.toBeInTheDocument();
   });
 
+  it("has a Videos tile for Grades 2 to 9 (little kids find it in Treasures), none when the flag is off, and a lock for the free plan", () => {
+    h.family = premium;
+    const mid = show("middle");
+    fireEvent.click(tile("Videos"));
+    expect(window.location.hash).toBe("#/videos");
+    mid.unmount();
+    const little = show("little");
+    expect(screen.queryByText("Videos")).not.toBeInTheDocument();
+    little.unmount();
+    h.off = new Set(["video-help"]);
+    show("middle");
+    expect(screen.queryByText("Videos")).not.toBeInTheDocument();
+  });
+
   it("has an Articles tile for Grades 2 to 9 only, and none when switched off", () => {
     const mid = show("middle");
     fireEvent.click(tile("Articles"));
