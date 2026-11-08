@@ -1,0 +1,75 @@
+name: What's new post
+
+# Writes the daily "What's new" entries for parents and teachers (docs/WHATS_NEW.md, src/lib/whatsNew.ts) from the
+# pull requests merged since the newest day, and opens a pull request into `staging` for the owner to review and
+# merge. It replaced a Claude routine (docs/decisions/2026-11-08-whats-new-github-action.md). Nothing is opened when
+# nothing user-visible merged. It never merges the pull request itself.
+#
+# One-time setup:
+#   - Repository secret ANTHROPIC_API_KEY (an Anthropic API key; the script calls the Messages API, one request a day).
+#   - Settings > Actions > General > "Allow GitHub Actions to create and approve pull requests" (the same switch the
+#     nightly "Promote staging" job needs).
+#   - Optional repository secret PROMOTE_TOKEN (fine-grained token, Contents and Pull requests write): pull requests
+#     opened with the built-in token don't start CI, and "CI passed" has to run before this one can merge. With the token,
+#     CI starts as usual. Without it, push an empty commit by hand or close and reopen the pull request.
+# Run it by hand from the Actions tab (Run workflow) to catch up sooner.
+
+on:
+  schedule:
+    - cron: "0 8 * * *" # 08:00 UTC: midnight Pacific in winter, 1 am in summer; the day just ended is complete
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: whats-new
+  cancel-in-progress: false
+
+jobs:
+  post:
+    name: Write the day's post
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GH_TOKEN: ${{ secrets.PROMOTE_TOKEN || github.token }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: staging
+          token: ${{ secrets.PROMOTE_TOKEN || github.token }}
+      - uses: ./.github/actions/setup
+      - name: Write the entries
+        id: write
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/whats-new.mjs
+      - name: Check the entries
+        if: steps.write.outputs.changed == 'true'
+        run: npx vitest run src/lib/whatsNew.test.ts
+      - name: Open the pull request
+        if: steps.write.outputs.changed == 'true'
+        env:
+          DAYS: ${{ steps.write.outputs.days }}
+          THREAD: https://claude.ai/code/project/chan_01UEa1QU9XVNtpsn85joEsR5
+        run: |
+          set -euo pipefail
+          title="What's new: ${DAYS%%,*}"
+          [ "$DAYS" = "${DAYS%%,*}" ] || title="What's new: ${DAYS##*, } to ${DAYS%%,*}"
+          branch="whats-new/$(date -u +%Y-%m-%d-%H%M)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add src/lib/whatsNew.ts
+          git commit -m "$title"
+          git push -u origin "$branch"
+          cat > body.md <<BODY
+          <!-- claude-projects-attribution: {"github_login":"mjparinas"} -->
+          _Requested by **Melvin** · [project thread]($THREAD)_
+
+          Daily "What's new" post for $DAYS, written by the scheduled What's new workflow from the pull requests merged that day. Please read it for tone and accuracy, edit anything that is off, and merge it yourself.
+          BODY
+          url=$(gh pr create --base staging --head "$branch" --title "$title" --body-file body.md)
+          gh pr edit "$url" --add-assignee mjparinas --add-reviewer mjparinas || true
+          echo "Opened $url" >> "$GITHUB_STEP_SUMMARY"
