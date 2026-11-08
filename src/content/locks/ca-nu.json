@@ -178,17 +178,17 @@
     "units": [
       "rhyme-time text=ae896f4b4a std=e6e72c9708 q=c228f52fe5",
       "sound-detectives text=46fe6d54db std=ebf7bbd9a3 q=7ad4b9eb0a",
-      "mb-sight-words-and-phrasing text=3301c4a50e std=d67d76e964 q=a255bd6280",
+      "mb-sight-words-and-phrasing text=3301c4a50e std=d67d76e964 q=f920cb1220",
       "word-power text=b1c58ec0fb std=37d9b85efa q=0308400322",
       "build-sentences text=8cdbdc5f42 std=17ed405ceb q=63b8882a16",
       "word-pictures text=44e4dfbdc5 std=07d63b81b8 q=870ecab164",
       "story-builders text=a75b636655 std=c9901609b0 q=f0517cf382",
       "reading-detectives text=06d742f348 std=00355ab53f q=decd73a013",
       "text-features text=15cb2dc162 std=4a45aa8d60 q=0e6e3d2f57",
-      "mb-finding-information text=b6b5ad0955 std=f2105e4b03 q=091f5a774c",
-      "mb-planning-and-improving text=f7b170a806 std=ac362abbcd q=0418f67d97",
-      "mb-media-and-trust text=3d7bb080e8 std=746750d23b q=c1fa7a06c4",
-      "mb-listening-and-asking text=018eb576ad std=0d0be84aa8 q=a53baabec2"
+      "mb-finding-information text=b6b5ad0955 std=f2105e4b03 q=151ab5e01e",
+      "mb-planning-and-improving text=f7b170a806 std=ac362abbcd q=8b065db2ff",
+      "mb-media-and-trust text=3d7bb080e8 std=746750d23b q=c52ba36f96",
+      "mb-listening-and-asking text=018eb576ad std=0d0be84aa8 q=9f23bfe89c"
     ]
   },
   "2/math": {
