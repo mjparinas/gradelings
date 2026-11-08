@@ -758,16 +758,16 @@
       "clauses-sentences text=5017dd13d0 std=2c00549672 q=5cd8987fd7",
       "modifiers-parallelism text=a0c6970207 std=d5ce88a041 q=4826f70a56",
       "semicolons-colons-dashes text=40cb0d089d std=0412ffba10 q=9b3d9ab0c8",
-      "mb-word-roots text=f8f825870e std=f7b02ecf7b q=a13fe4ad77",
+      "mb-word-roots text=f8f825870e std=f7b02ecf7b q=dcef7c27ba",
       "word-mix-ups text=7bb5032b8a std=de128e0be8 q=bb5c3889a5",
-      "mb-7-reading-strategies text=8ed92d9088 std=834705df9e q=2b7962d17a",
-      "mb-7-critical-reading text=e2e8a8fc19 std=5fa007e300 q=6f958897f2",
-      "mb-7-writing-forms text=0337c2a4ae std=0e9526ff1d q=9c865c8920",
-      "mb-7-word-choice-voice text=5a9707a65e std=5f85a8e414 q=e831d937a7",
-      "mb-7-capitals-formatting text=44e0048cde std=8c7e19eeb2 q=41dfaeba18",
-      "mb-7-presenting-design text=585d7da752 std=398d3efd97 q=1a5c13b7df",
-      "mb-7-discussion-skills text=96e5764e5e std=e9f460876f q=84ac8587c2",
-      "mb-7-learning-goals text=2c04fde7af std=de5e9c76e4 q=01cbcc9161"
+      "mb-7-reading-strategies text=8ed92d9088 std=834705df9e q=4adbd235b1",
+      "mb-7-critical-reading text=e2e8a8fc19 std=5fa007e300 q=262ffceac2",
+      "mb-7-writing-forms text=0337c2a4ae std=0e9526ff1d q=016b17646d",
+      "mb-7-word-choice-voice text=5a9707a65e std=5f85a8e414 q=fb463b0e8f",
+      "mb-7-capitals-formatting text=44e0048cde std=8c7e19eeb2 q=8f52dd64ae",
+      "mb-7-presenting-design text=585d7da752 std=398d3efd97 q=613f324b16",
+      "mb-7-discussion-skills text=96e5764e5e std=e9f460876f q=252f459d8f",
+      "mb-7-learning-goals text=2c04fde7af std=de5e9c76e4 q=ba9c00cd72"
     ]
   },
   "7/math": {
