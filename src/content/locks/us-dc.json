@@ -107,7 +107,7 @@
       "or-k-money-and-work text=779c3d6e1e std=fe1aaf61e2 q=62e27d59bb",
       "ca-k-calendar text=21e33a54d0 std=b99b2f29be q=82ad20cecd",
       "ca-k-good-citizens text=d7b0dbd711 std=4ae3e1807e q=ba47e020d0",
-      "dc-k-my-city text=f6d3f5bee8 std=63019dfe79 q=44418aa2cd"
+      "dc-k-my-city text=f6d3f5bee8 std=63019dfe79 q=acd63e75f6"
     ]
   },
   "1/language": {
@@ -175,7 +175,7 @@
       "community-services text=26d27aa27c std=e690bc96c1 q=22cd5a9649",
       "wa-g1-earn-save-share text=ff3274fdf3 std=65e48d6269 q=2bb7ea855e",
       "ca-g1-long-ago text=1bee06737a std=797dd4c89b q=71a2f5957a",
-      "dc-g1-leaders-and-symbols text=bf1430bc6a std=db2b465eb2 q=736aab5982"
+      "dc-g1-leaders-and-symbols text=bf1430bc6a std=db2b465eb2 q=fa50653723"
     ]
   },
   "2/language": {
@@ -309,9 +309,9 @@
       "ny-g3-culture text=31f8c6dcc1 std=72d1a47c74 q=ed4ddf3452",
       "dc-g3-our-district text=9738b66752 std=84ec7068d8 q=174291bd9c",
       "dc-g3-first-peoples text=197f52633a std=47109885cd q=1333c7aab3",
-      "dc-g3-building-the-capital text=a3a5ed9504 std=8fd7edb3d5 q=5cd339f8d6",
+      "dc-g3-building-the-capital text=a3a5ed9504 std=8fd7edb3d5 q=f5e342994d",
       "dc-g3-freedom-and-civil-war text=722d7d4e0c std=a8dd591fe5 q=89c47d3856",
-      "dc-g3-city-culture text=475af90e98 std=8f83637492 q=4c452ea01a",
+      "dc-g3-city-culture text=475af90e98 std=8f83637492 q=f97987d8e2",
       "dc-g3-governing-dc text=68f15f4455 std=9540b0f45e q=51e4975c02",
       "dc-g3-dc-timeline text=885c3efd99 std=ceb4ae9dc3 q=ceeb17f06f"
     ]
@@ -475,8 +475,8 @@
       "ny-g8-roaring-twenties text=3119d7f8d8 std=4b8288a9cb q=e9c1aa2909",
       "ny-g8-world-war-ii text=d593f8cc7a std=4ae1b0b05b q=8174c186f3",
       "ny-g8-civil-rights text=2a5251702b std=d99a344707 q=8f81d3992c",
-      "dc-g5-great-migration text=642f426180 std=c5e021f395 q=085526f515",
-      "dc-g5-voices-for-justice text=2982735ccc std=4be4032996 q=e8f3846954"
+      "dc-g5-great-migration text=642f426180 std=c5e021f395 q=266b5ac9ad",
+      "dc-g5-voices-for-justice text=2982735ccc std=4be4032996 q=a8530f36f0"
     ]
   },
   "5/spanish": {
@@ -649,7 +649,7 @@
       "wa-g8-civil-war text=c3ae583596 std=49d44b3fa9 q=958ab14484",
       "wa-g8-reconstruction text=1edd1a0616 std=9b019da26a q=9d549444e2",
       "ca-g8-freedom-and-change text=6cb981689b std=3352406c3d q=94abbe4e2c",
-      "dc-g7-capital-of-a-new-nation text=fa75a88a0f std=84e0a311e8 q=3fcd52f3d7"
+      "dc-g7-capital-of-a-new-nation text=fa75a88a0f std=84e0a311e8 q=4c9d847d68"
     ]
   },
   "7/spanish": {
@@ -734,8 +734,8 @@
       "az-g8-personal-finance text=901cb5bfef std=0e58ba566a q=2b320ea4ea",
       "ca-g9-media text=4dd2a6936f std=7e3132d133 q=0fc3f3ad1e",
       "ca-g9-civic-action text=a2a6e65f8d std=30dff54752 q=c1c8ac6d15",
-      "dc-g8-governing-the-district text=d349beb951 std=08d5c24d1a q=2f5f45fdc4",
-      "dc-g8-capital-of-protest text=0ef96d4dea std=4910ac29fc q=fdba64a83f",
+      "dc-g8-governing-the-district text=d349beb951 std=08d5c24d1a q=7bfbd5b4e4",
+      "dc-g8-capital-of-protest text=0ef96d4dea std=4910ac29fc q=74fa5bb76b",
       "dc-g8-human-rights text=10680b5b3c std=38cd4bc1fd q=3d153ea52b"
     ]
   },

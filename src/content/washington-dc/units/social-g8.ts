@@ -1,5 +1,6 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { DISTRICT_G8_MORE, PROTEST_G8_MORE } from "./social-more";
 
 // Washington, DC Grade 8 social studies, "Civics in Action: Power, Rights and Resistance" (the DC Social Studies
 // Standards, 2023): the structure and powers of the District's government, its status in the federal government and
@@ -98,7 +99,7 @@ export const SOCIAL_8: Unit[] = [
     blurb: "DC's government, Congress's power over it and the statehood debate",
     parentNote: "How Washington, DC is governed: the mayor, the 13-member Council, local courts whose judges the president appoints, Advisory Neighborhood Commissions, Congress's review of DC's laws and budget, the House delegate and shadow senators, the 23rd Amendment, how local power has changed from appointed commissioners to Home Rule, and the arguments around statehood and retrocession, presented as a debate.",
     standards: ["8.19; 8.20; 8.42; 8.49; 8.50", "the structure and powers of DC's government, how DC residents are represented federally, the District's status, and how access to power in DC has changed"],
-    items: DISTRICT,
+    items: [...DISTRICT, ...DISTRICT_G8_MORE],
   }),
   bankUnit({
     id: "dc-g8-capital-of-protest",
@@ -107,7 +108,7 @@ export const SOCIAL_8: Unit[] = [
     blurb: "Marches, movements and civil disobedience in DC and the world",
     parentNote: "Why Washington, DC is the nation's stage for protest, from the 1913 suffrage march and the Silent Sentinels to the Bonus Army, the March on Washington, the Capitol Crawl for disability rights and student-led marches, the First Amendment rights behind them, tactics such as boycotts, strikes and civil disobedience, and examples of citizen action in other countries.",
     standards: ["8.53; 8.54; 8.55; 8.58; 8.61", "citizen action around the world, the First Amendment and protest, social movements in the US, DC as a place for national protest, and civil disobedience"],
-    items: PROTEST,
+    items: [...PROTEST, ...PROTEST_G8_MORE],
   }),
   bankUnit({
     id: "dc-g8-human-rights",
