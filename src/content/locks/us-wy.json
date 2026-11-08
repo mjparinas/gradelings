@@ -103,7 +103,7 @@
       "or-k-money-and-work text=779c3d6e1e std=30cd93dc8b q=62e27d59bb",
       "ca-k-calendar text=21e33a54d0 std=906e55a679 q=82ad20cecd",
       "ca-k-good-citizens text=d7b0dbd711 std=73850dd297 q=ba47e020d0",
-      "wy-k-flag-and-state text=adaf020b70 std=0a2fc2cc6e q=4b243c5c22"
+      "wy-k-flag-and-state text=adaf020b70 std=0a2fc2cc6e q=3a90395f37"
     ]
   },
   "1/language": {
@@ -167,7 +167,7 @@
       "community-services text=26d27aa27c std=98ccefb900 q=22cd5a9649",
       "wa-g1-earn-save-share text=ff3274fdf3 std=0f668ab419 q=2bb7ea855e",
       "ca-g1-long-ago text=1bee06737a std=562af317dc q=71a2f5957a",
-      "wy-g1-then-and-now text=72d0bff124 std=b0e688c032 q=c0825c1983"
+      "wy-g1-then-and-now text=72d0bff124 std=b0e688c032 q=1061d4d659"
     ]
   },
   "2/language": {
@@ -425,7 +425,7 @@
       "ca-g5-revolution text=9f9c895b95 std=22355bf332 q=77d806ef60",
       "wa-g5-constitution text=4fce7c7602 std=915e91edaa q=2d1d2c254b",
       "or-g5-timeline text=d6feb485b6 std=f5da4fe9f5 q=750a99801f",
-      "wy-g5-trails-west text=7d7c714ff2 std=0d16c927e4 q=61a5a320c2",
+      "wy-g5-trails-west text=7d7c714ff2 std=0d16c927e4 q=19f9894a26",
       "wy-g5-explorers text=b2af8fe6d8 std=b6621664a0 q=65e3e7029a"
     ]
   },

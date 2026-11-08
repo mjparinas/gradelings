@@ -1,5 +1,6 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { FLAG_MORE } from "./social-more";
 
 // Wyoming Kindergarten social studies: the symbols that honor the United States, including the flags of the Eastern
 // Shoshone and Northern Arapaho, and the rules that schools, Tribes, communities and the country follow (SS2.1.1,
@@ -44,6 +45,6 @@ export const SOCIAL_K: Unit[] = [
     blurb: "The American flag and Wyoming's symbols",
     parentNote: "The American flag as a symbol of the United States (its stars and stripes and the Pledge of Allegiance), Wyoming as our state, with its flag and a few of its symbols (the bison, the western meadowlark, the Indian paintbrush and the bucking horse), the flags of the Eastern Shoshone and Northern Arapaho, why we have rules and laws, and the leaders children meet, from teachers and principals to the governor.",
     standards: ["SS2.1.1; SS2.1.2; SS2.1.4", "the rules schools, Tribes, communities and the country follow, called laws, and the symbols that honor the United States, including Tribal flags"],
-    items: FLAG,
+    items: [...FLAG, ...FLAG_MORE],
   }),
 ];
