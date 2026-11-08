@@ -1,6 +1,7 @@
 import type { Unit } from "../../types";
 import { SOCIAL_9 as CALIFORNIA_9 } from "../../california/units/social-g9";
 import { bankUnit, type Q } from "../own";
+import { ARKANSAS_MORE } from "./social-more";
 import { copyOf, from } from "./kit";
 
 // Arkansas's own Grade 9 social studies units (`ar-` ids), for Civics: Arkansas's state and local government under the
@@ -46,7 +47,7 @@ export const UNITS: Unit[] = [
     parentNote:
       "Arkansas's government under the Constitution of 1874: the General Assembly's Senate and House of Representatives, the governor and other elected officers, the Arkansas Supreme Court and circuit courts, county judges and quorum courts, city governments, and how citizens make laws through initiatives and referendums.",
     standards: ["C.2.CIV.2; C.4.CIV.1; C.4.CIV.5", "Arkansas's state and local government, and how laws are made by initiative and referendum"],
-    items: ARKANSAS,
+    items: [...ARKANSAS, ...ARKANSAS_MORE],
   }),
   copyOf(
     from(CALIFORNIA_9, "ca-g9-three-branches"),
