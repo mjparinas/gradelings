@@ -114,7 +114,7 @@ export function PracticeSheetPage({ childId }: { childId?: string }) {
         </p>
         <p className="mt-1 font-read text-sm text-ink-soft print:hidden">It is practice, not a report-card mark. The answer key prints on its own page, so you can keep it aside.</p>
 
-        <ol className="mt-5 grid items-start gap-4 md:grid-cols-2 print:block print:space-y-4">
+        <ol className="mt-5 grid items-start gap-4 md:grid-cols-2 print:mt-2 print:block print:columns-2 print:gap-2 print:[zoom:0.62]">
           {sheet.items.map((it, i) => (
             <SampleQuestion key={`${round}-${i}`} q={it.question} n={i + 1} seedText={it.seed} hideAnswer className="print:break-inside-avoid" />
           ))}

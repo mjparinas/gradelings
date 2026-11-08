@@ -699,6 +699,9 @@ main[tabindex="-1"]:focus {
 }
 
 /* A class summary with many units prints sideways. Browsers without named pages print it upright, which still works. */
+@page {
+  margin: 0.5in;
+}
 @page summary-wide {
   size: landscape;
 }
