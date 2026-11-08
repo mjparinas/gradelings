@@ -69,7 +69,11 @@ export function reportCardCard(slug: string): OgCardText | undefined {
 
 // The renderer has no emoji font, and a question that leans on a picture makes no sense without it.
 const PICTURE = /\p{Extended_Pictographic}|\uFE0F/u;
-const plain = (s: string) => !PICTURE.test(s);
+// Nor does it have glyphs for symbols the bundled fonts lack (√ ≤ ≥ ☐ ● ▲ ⁻ and the like): the renderer then tries to download a
+// font, which fails in production and leaves a blank box. Only text the fonts can draw goes on a card: Latin, Latin-1 (× ÷ ½ ² ° ...)
+// and the few extra marks both fonts have (dashes, quotes, bullet, ellipsis, euro, minus sign).
+const DRAWABLE = /^[\u0020-\u007E\u00A0-\u00AC\u00AE-\u00FF\u02C6\u02DA\u02DC\u2013\u2014\u2018-\u201A\u201C-\u201E\u2022\u2026\u2039\u203A\u2044\u20AC\u2122\u2212]*$/;
+export const plain = (s: string) => !PICTURE.test(s) && DRAWABLE.test(s);
 
 /** A sample question that reads well on its own on a share card, or undefined. The answer is never included. */
 export function cardQuestion(q: Question): OgQuestion | undefined {

@@ -29,7 +29,7 @@ async function savedReplies(): Promise<SavedReply[]> {
 export async function draftInstructions(): Promise<string> {
   const faqs = ALL_FAQS.map((f) => `Q: ${f.q}\nA: ${f.a}`).join("\n\n");
   const replies = (await savedReplies()).map((r) => `${r.title}:\n${fillReply(r.body)}`).join("\n\n");
-  return `You draft email replies for the owner of ${APP_NAME}, a learning app for children in Kindergarten to Grade 9 (Canadian provinces and some US states), sold to parents. The owner reads every draft and changes it before it is sent.
+  return `You draft email replies for the owner of ${APP_NAME}, a learning app for children in Pre-K to Grade 9 (Canadian provinces and some US states), sold to parents. The owner reads every draft and changes it before it is sent.
 
 How to write:
 - Plain text only, no Markdown. Short paragraphs, warm and direct, in the voice of the saved replies below. Lead with the answer.

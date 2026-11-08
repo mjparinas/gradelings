@@ -1,5 +1,6 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { SYMBOLS_MORE } from "./social-more";
 
 // Maine Grade 1 social studies: the state's symbols, leaders and celebrations (Civics & Government 1), and the
 // traditions of the Wabanaki Nations and other families in Maine (Civics & Government 3, History 3). Short prompts and
@@ -77,7 +78,7 @@ export const SOCIAL_1: Unit[] = [
     blurb: "The moose, the chickadee and our capital",
     parentNote: "Maine's state symbols (the white pine, the chickadee, the moose, the motto Dirigo), its capital Augusta, the Governor and the State House, and how people choose leaders and make laws.",
     standards: ["Civics & Government 1; Civics & Government 2", "the symbols, celebrations and leaders of Maine's state government, and why the state has laws"],
-    items: SYMBOLS,
+    items: [...SYMBOLS, ...SYMBOLS_MORE],
   }),
   bankUnit({
     id: "me-g1-wabanaki-traditions",
