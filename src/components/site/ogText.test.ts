@@ -107,6 +107,12 @@ describe("share cards", () => {
     expect(cardQuestion({ ...base, kind: "choice", answer: "a", choices: [{ id: "a", label: "7" }, { id: "b", label: "3" }] })).toEqual({ prompt: "Which is bigger?", choices: ["7", "3"] });
     expect(cardQuestion({ ...base, kind: "choice", answer: "a", choices: [{ id: "a", label: "🍎" }, { id: "b", label: "3" }] })).toBeUndefined();
     expect(cardQuestion({ ...base, kind: "choice", answer: "a", choices: [{ id: "a", label: "a", emoji: "🍎" }] })).toBeUndefined();
+    // Symbols the card fonts can't draw (√ ≤ ≥ ☐ ● ▲ ⁻) would make the renderer fetch a font that fails in production.
+    for (const symbol of ["√9", "x ≤ 4", "5 ≥ 2", "☐ + 3 = 7", "● ● ●", "▲", "△", "10⁻²", "π", "∛8"]) {
+      expect(cardQuestion({ ...base, prompt: symbol, kind: "input", answer: "4" }), symbol).toBeUndefined();
+      expect(cardQuestion({ ...base, kind: "choice", answer: "a", choices: [{ id: "a", label: symbol }, { id: "b", label: "3" }] }), symbol).toBeUndefined();
+    }
+    expect(cardQuestion({ ...base, prompt: "What is 6 × 7 − ½ of 12 at 20°?", kind: "input", answer: "4" })).toBeDefined();
     expect(cardQuestion({ ...base, kind: "input", answer: "4", suffix: "cm" })).toEqual({ prompt: "Which is bigger?", suffix: "cm" });
     expect(cardQuestion({ ...base, kind: "input", answer: "4", visual: { type: "angle", degrees: 30 } } as Question)).toBeUndefined();
     expect(cardQuestion({ ...base, kind: "order", items: [] })).toBeUndefined();
