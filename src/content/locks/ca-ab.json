@@ -726,14 +726,14 @@
     "overview": "5b72f50c2a",
     "units": [
       "new-france-7 text=f29dceb7f5 std=0a6a64bbd4 q=c7a28fd928",
-      "fur-trade-west-ab text=bfa8d2bcbe std=46c960bf1f q=83b51aa3aa",
+      "fur-trade-west-ab text=bfa8d2bcbe std=46c960bf1f q=28665d225d",
       "power-conflict-7 text=8ec86c1c9b std=8c993027b7 q=4266eb4b25",
       "war-1812-7 text=2d8ddfacd8 std=488e7664ee q=703dc16771",
       "reform-rebellions-7 text=8833dae2a4 std=61c138c7ae q=8a90a3ffd2",
-      "confederation-ab text=fcd0e6db97 std=eeb04369f7 q=4e168f7606",
+      "confederation-ab text=fcd0e6db97 std=eeb04369f7 q=cf4dd253b6",
       "metis-red-river-ab text=eef0b6b6eb std=91950cceb1 q=eea274342c",
       "treaties-west-ab text=dd474f3532 std=0b5e9a0ab0 q=ea11199d30",
-      "railway-settlement-ab text=739a1bb414 std=42436199d2 q=a711736583",
+      "railway-settlement-ab text=739a1bb414 std=42436199d2 q=5aa410c8f7",
       "people-on-the-move-ab text=7ff8448a89 std=f9f6af499c q=e23f8a231b"
     ]
   },
@@ -844,12 +844,12 @@
     "units": [
       "japan-land-values-ab text=7742caed64 std=08a257fb4d q=724b6f3ff8",
       "japan-tokugawa-ab text=5caa8e333d std=7df1880ea7 q=21e727d3af",
-      "japan-meiji-ab text=ae45f22afc std=9ed98a6948 q=ff803f082b",
+      "japan-meiji-ab text=ae45f22afc std=9ed98a6948 q=e8a5b61615",
       "renaissance-origins-ab text=2d8078fe48 std=67748bc56b q=9a4c3a90ac",
       "renaissance-art-ideas-ab text=4a2906ceff std=0a52b1da4e q=b62b633cec",
       "renaissance-and-reformation text=abe1fd7fbc std=409a47a653 q=d867212f95",
       "aztec-empire-ab text=a45b3d61a1 std=bf38c115c5 q=95c758531c",
-      "spain-worldview-ab text=48610543de std=d9fe978410 q=0ee8e684bb",
+      "spain-worldview-ab text=48610543de std=d9fe978410 q=a2d79780a7",
       "conquest-contact-ab text=fd59b7e091 std=63cfe57c90 q=7cf10cd725",
       "worldviews-skills-ab text=c56780fccb std=11a4252d61 q=eba17a9aee"
     ]
