@@ -93,7 +93,7 @@ describe("weekly email lines", () => {
 
   it("mentions the summer peek and report cards once, in the first week of each", () => {
     expect(schoolYearLines([kid()], at(2026, 6, 3))).toEqual([
-      "Report cards often come home around now. The parent area has a printable conversation sheet with what to ask the teacher (it reflects practice, not a report-card mark).",
+      "Report cards often come home around now. The parent area has a printable conversation sheet with what to ask the teacher.",
     ]);
     expect(schoolYearLines([kid()], at(2026, 6, 15))).toEqual(["Summer sneak peek: Ava can try Grade 5 lessons from the Lessons screen. Whatever they practise counts once they move up."]);
     expect(schoolYearLines([kid()], at(2026, 6, 22))).toEqual([]);
