@@ -171,7 +171,7 @@ await tab("To Do");
 const item = page.getByRole("listitem").filter({ hasText: parentEmail });
 check(await item.getByText("Signed up, never practised").waitFor({ timeout: 8000 }).then(() => true, () => false), "the to-do list shows a family that never practised");
 await item.getByRole("button", { name: "Write Email" }).click();
-check(await vis(item.getByLabel("Preview").getByText(/Getting started with/)), "the to-do item opens a getting-started email");
+check(await vis(item.getByLabel("Preview").getByText(/One minute to set up/)), "the to-do item opens a getting-started email");
 await shot("todo");
 await scan("to do");
 

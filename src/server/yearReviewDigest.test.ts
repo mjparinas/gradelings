@@ -91,7 +91,6 @@ describe("the year in review email", () => {
     expect(mail).toHaveLength(1);
     expect(mail[0].text).toContain("Maya practised on 1 day this school year");
     expect(mail[0].text).toContain("10 questions");
-    expect(mail[0].text).toContain("report-card mark");
     expect(mail[0].text).toContain("/parents/#/year");
     expect(mail[0].unsubscribeUrl).toContain("/api/email/unsubscribe/?token=");
     expect(reviews("year-off@example.com")).toHaveLength(0);
@@ -158,7 +157,6 @@ describe("the Monday class email", () => {
     expect(mail[0].text).toContain("Room 4: 1 of 1 student practised in the last week.");
     // Ten right answers made the unit Proficient, which is "done" for homework with no question count.
     expect(mail[0].text).toContain("Homework, Tens & Ones: 1 of 1 done, due this week.");
-    expect(mail[0].text).toContain("report-card mark");
     expect(mail[0].text).toContain(`/teachers/#/class/${t.classId}`);
     expect(mail[0].unsubscribeUrl).toContain("kind=class");
 
@@ -211,7 +209,6 @@ describe("the weekly email for parents", () => {
     expect(mail.text).toContain("Math facts: Maya knows 1 of 45 adding facts to 10 and 1 of 100 addition facts to 20 (1 new this week).");
     expect(mail.text).toContain("Stories: Maya read 1 story in the Story Library.");
     expect(mail.text).toMatch(/Try at home: \S/);
-    expect(mail.text).toContain("report-card mark");
   });
 
   it("leaves the extra lines out for a family with the flags off", async () => {

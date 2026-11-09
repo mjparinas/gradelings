@@ -95,7 +95,7 @@ export function schoolYearLines(children: Pick<Profile, "name" | "grade" | "fram
   if (peeks.length && !isSummer(now - WEEK)) lines.push(`Summer sneak peek: ${peeks.join(", ")} from the Lessons screen. Whatever they practise counts once they move up.`);
   const season = reportCardSeason(now);
   if (season && reportCardSeason(now - WEEK) !== season && children.length) {
-    lines.push("Report cards often come home around now. The parent area has a printable conversation sheet with what to ask the teacher (it reflects practice, not a report-card mark).");
+    lines.push("Report cards often come home around now. The parent area has a printable conversation sheet with what to ask the teacher.");
   }
   return lines;
 }

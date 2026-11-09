@@ -113,6 +113,11 @@ describe("TeacherApp class page", () => {
     expect(checkIn).toHaveTextContent("Sam: Finding Counting tricky; No practice this week");
     expect(checkIn).not.toHaveTextContent("Alex");
     expect(insights).toHaveTextContent("This reflects practice, not a report-card mark.");
+    // Good news is named too: Alex and Maya are doing well in Patterns.
+    const praise = within(insights).getByRole("heading", { name: /Worth a high five/ }).parentElement!;
+    expect(praise).toHaveTextContent("Alex: Doing really well in Counting and Patterns");
+    expect(praise).toHaveTextContent("Maya: Doing really well in Patterns");
+    expect(praise).not.toHaveTextContent("Sam");
   });
 
   it("sets how many questions a homework unit needs and shows each student's count", async () => {

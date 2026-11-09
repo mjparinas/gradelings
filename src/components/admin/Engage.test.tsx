@@ -123,7 +123,7 @@ describe("Queue", () => {
 
     await user.click(screen.getByRole("button", { name: "Write Email" }));
     expect(screen.getByRole("button", { name: "Write Email" })).toHaveAttribute("aria-expanded", "true");
-    expect(screen.getByLabelText("Subject")).toHaveValue("Your {app} free trial ends soon");
+    expect(screen.getByLabelText("Subject")).toHaveValue("{children}'s {app} trial ends soon");
 
     await user.click(screen.getByRole("button", { name: "Resend Confirmation" }));
     expect(sent("/api/admin/email/")).toEqual({ action: "verify", familyId: "fam-2" });

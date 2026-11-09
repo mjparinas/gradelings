@@ -4,9 +4,13 @@ import { getSubjectMeta } from "@/content/subjects";
 import { gradeLabel } from "@/lib/gradeLabel";
 import { getFramework } from "@/content/frameworks";
 import { dayKey, type Profile } from "@/lib/model";
-import { subjectSummaries } from "@/lib/proficiency";
+import { parentHighlight } from "@/lib/parentHighlight";
+import { levelInfo, subjectSummaries } from "@/lib/proficiency";
+import { nextUp } from "@/lib/nextup";
+import { practiceUnitRefs, getUnitRef } from "@/content";
+import { useFlag } from "@/lib/remoteFlags";
 import { useLocale, useSay } from "@/lib/say";
-import { useDerived, useProfiles, useStore } from "@/lib/store";
+import { useDerived, useProfiles, useStore, useSubjectGrades } from "@/lib/store";
 import { useNow } from "@/lib/useNow";
 import { FeedbackCard } from "./FeedbackCard";
 import { FamilyGoal } from "./FamilyGoal";
@@ -34,6 +38,17 @@ function ChildCard({ p }: { p: Profile }) {
   const minutes = Math.round(week.reduce((s, x) => s + (x?.learnSeconds ?? 0), 0) / 60);
   const answers = week.reduce((s, x) => s + (x?.answers ?? 0), 0);
   const correct = week.reduce((s, x) => s + (x?.correct ?? 0), 0);
+  const subjectGrades = useSubjectGrades(p.id);
+  const highlightOn = useFlag("parent-highlight");
+  const nextKey = nextUp(d, practiceUnitRefs(p.grade, p.framework, subjectGrades).map((r) => r.key));
+  const nextRef = nextKey ? getUnitRef(nextKey.key, p.framework) : undefined;
+  const nextLevel = nextKey ? levelInfo(p.framework, p.grade, nextKey.level) : undefined;
+  const highlight = parentHighlight({
+    name: p.name,
+    week,
+    everPractised: d.totals.answers > 0,
+    next: nextKey && nextRef && nextLevel ? { title: nextRef.unit.title, questions: nextKey.questions, levelLabel: nextLevel.label } : undefined,
+  });
   const lastActive = Math.max(0, ...Object.values(d.units).map((u) => u.lastT));
   return (
     <Panel>
@@ -49,6 +64,16 @@ function ChildCard({ p }: { p: Profile }) {
           Full report →
         </a>
       </div>
+      {highlightOn && (
+        <div className="mt-4 rounded-xl bg-[#fff8e6] p-3">
+          <p className="font-read font-bold">
+            <span aria-hidden="true">{highlight.icon} </span>
+            {say(highlight.headline)}
+          </p>
+          {highlight.detail && <p className="mt-1 text-sm text-ink-soft">{say(highlight.detail)}</p>}
+          <p className="mt-1 text-sm">💡 {say(highlight.tip)}</p>
+        </div>
+      )}
       <dl className="mt-4 grid grid-cols-3 gap-3 text-center">
         <div className="rounded-xl bg-paper p-3">
           <dt className="text-xs font-semibold text-ink-soft">This week</dt>
