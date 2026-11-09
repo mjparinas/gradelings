@@ -4,4 +4,5 @@ Melvin asked for a more delightful teacher and parent side. The class page's "Wh
 
 - Wording is framework-neutral ("Doing really well in ..."), so it fits every province's and state's scale.
 - Practice, not a report-card mark; no ranking is shown, only a short list of names.
-- Not added to the Monday email yet.
+
+Update: the Monday class email now carries a "Worth a high five" line too (first names only, up to 5).

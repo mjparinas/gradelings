@@ -44,6 +44,7 @@ describe("the Monday class email", () => {
   it("says so when nobody needs a check-in", () => {
     const happy = cls({ students: [student("Maya", [unit("3/math/fractions", { level: 2, done: 10 }), unit("3/math/old", { level: 2 })])] });
     expect(classDigestLines(happy, name, NOW).at(-1)).toBe("  Nobody needs a check-in this week. 🎉");
+    expect(classDigestLines(happy, name, NOW)).toContain("  Worth a high five: Maya.");
   });
 
   it("counts a unit scheduled ahead as homework only once it starts, from its start date", () => {
