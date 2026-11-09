@@ -221,7 +221,7 @@
   "2/social": {
     "overview": "deb5330606",
     "units": [
-      "needs-and-wants text=8192b43423 std=d87f49dcc8 q=2c4dbe4de2",
+      "needs-and-wants text=8192b43423 std=d87f49dcc8 q=a679c0275b",
       "ny-g3-globes-and-maps text=387663e4b1 std=330436f16c q=7becb7a790",
       "ny-g3-world-communities text=ed14244948 std=d4b225311f q=8268800b99",
       "ny-g3-culture text=4215bb54e3 std=c197325e58 q=ed4ddf3452",
