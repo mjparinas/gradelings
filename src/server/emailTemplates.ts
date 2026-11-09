@@ -224,7 +224,7 @@ export function trialRecapEmail(to: string, origin: string, daysLeft: number, ch
     heading: "Your trial so far",
     body: [
       ...recapLines(children),
-      `${daysLeft} ${daysLeft === 1 ? "day" : "days"} of the free trial left. Regular short sessions are what make skills stick, and the days you have left are the easiest time to build the habit. This reflects practice in the app, not a report-card mark.`,
+      `${daysLeft} ${daysLeft === 1 ? "day" : "days"} of the free trial left. Regular short sessions are what make skills stick, and the days you have left are the easiest time to build the habit.`,
       "Everything is open until then: every unit, the games, Adventure and the full reports in the Parent area. Open the reports to see what each child is strong at and what's worth another go.",
       KEEP_FREE,
       `You can subscribe now, before the trial ends. You'll be charged at checkout and the paid plan starts that day. If it isn't right for your family, we'll refund any payment in full within ${REFUND_DAYS} days.`,
@@ -300,7 +300,7 @@ export function weeklyEmail(to: string, origin: string, children: WeeklyChild[],
     unsubscribePage: `${origin}/account/unsubscribe/?token=${encodeURIComponent(unsubToken)}`,
     subject: `${APP_NAME}: your week in learning`,
     heading: "Your week in learning",
-    body: [...lines, ...schoolYear, ...(inviteLink ? [`Know a family who might like ${APP_NAME}? Share your link: ${inviteLink} When they sign up and confirm their email, you get a free month.`] : []), "This reflects practice in the app. It isn't a report-card mark; your child's teacher decides proficiency."],
+    body: [...lines, ...schoolYear, ...(inviteLink ? [`Know a family who might like ${APP_NAME}? Share your link: ${inviteLink} When they sign up and confirm their email, you get a free month.`] : [])],
     button: { label: "Open full reports", url: `${origin}/parents/#/reports` },
   });
 }
@@ -322,7 +322,6 @@ export function yearReviewEmail(to: string, origin: string, children: YearReview
     body: [
       ...children.flatMap(yearReviewLines),
       "The parent area has a page for each child with stickers, trophies and every unit that grew, ready to print or keep.",
-      "This reflects practice in the app. It isn't a report-card mark; your child's teacher decides proficiency.",
     ],
     button: { label: "See the year in review", url: `${origin}/parents/#/year` },
   });
@@ -477,7 +476,7 @@ export function classDigestEmail(to: string, origin: string, classes: string[][]
     unsubscribePage: `${origin}/account/unsubscribe/?kind=class&token=${q}`,
     subject: `${APP_NAME}: your class this week`,
     heading: "Your class this week",
-    body: [...classes.flat(), "This reflects practice in the app, not a report-card mark. You decide proficiency."],
+    body: [...classes.flat()],
     button: { label: classes.length === 1 ? "Open the class" : "Open your classes", url: `${origin}${buttonPath}` },
     footnote: "You turned on the Monday class email in the teacher area. You can turn it off there, or with the unsubscribe link below.",
   });

@@ -217,7 +217,6 @@ describe("daily email job", () => {
     const mail = email.outbox().filter((m) => m.to === "weekly@example.com" && m.subject.includes("week")).at(-1)!;
     expect(mail.text).toContain("Maya");
     expect(mail.text).toContain("Leo");
-    expect(mail.text).toContain("report-card mark");
     expect(mail.unsubscribeUrl).toContain("/api/email/unsubscribe/?token=");
 
     const count = email.outbox().length;
@@ -356,7 +355,6 @@ describe("daily email job", () => {
     expect(recaps().map((m) => m.to)).not.toContain("recap-idle@example.com");
     const mail = recaps().find((m) => m.to === "recap-yes@example.com")!;
     expect(mail.text).toContain("Maya has practised on 1 day");
-    expect(mail.text).toContain("report-card mark");
     expect(mail.text).toContain("Keep everything open: ");
     expect(mail.text).toContain("/parents/#/subscription");
     const n = recaps().length;
