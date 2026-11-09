@@ -14,6 +14,7 @@ const IDLE = vi.hoisted(() => ({ state: "idle", done: 0, total: 0 }));
 vi.mock("@/lib/remoteFlags", () => ({ useFlag: () => env.flag }));
 vi.mock("@/lib/store", () => ({
   useChildSettings: () => ({ voice: env.on }),
+  useActiveProfile: () => ({ grade: "k" }),
   useStore: (pick: (s: unknown) => unknown) => pick({ family: { account: env.student ? { student: true } : {} } }),
 }));
 vi.mock("@/lib/whisper", () => ({
@@ -67,6 +68,12 @@ describe("SayQuestion", () => {
       expect(screen.getAllByTestId("choice")).toHaveLength(3);
       unmount();
     }
+  });
+
+  it("is on for a Kindergarten child with no saved choice", () => {
+    env.on = undefined as unknown as boolean;
+    show();
+    expect(screen.getByTestId("say-button")).toBeInTheDocument();
   });
 
   it("never listens in a class student account", () => {

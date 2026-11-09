@@ -7,7 +7,8 @@ import { listen, type Listening } from "@/lib/recorder";
 import { countedTo, heardNothing, saidWord } from "@/lib/speechMatch";
 import { sounds } from "@/lib/sound";
 import { speak } from "@/lib/speech";
-import { useChildSettings, useStore } from "@/lib/store";
+import { voiceOn } from "@/lib/model";
+import { useActiveProfile, useChildSettings, useStore } from "@/lib/store";
 import { checkWhisper, subscribeWhisper, transcribe, warmWhisper, whisperSnapshot } from "@/lib/whisper";
 import { ChoiceQuestion } from "./ChoiceQuestion";
 import { isLocked, type QuestionProps } from "./types";
@@ -17,7 +18,8 @@ type Phase = "idle" | "listening" | "thinking";
 /** Is answering out loud switched on for this child, and ready on this device? */
 export function useVoiceReady(): boolean {
   const flag = useFlag("voice-practice");
-  const on = Boolean(useChildSettings()?.voice);
+  const settings = useChildSettings();
+  const on = voiceOn(settings, useActiveProfile()?.grade);
   // A class student account never listens, whatever its settings say: schools are promised no microphone.
   const student = useStore((s) => Boolean(s.family.account?.student));
   const whisper = useSyncExternalStore(subscribeWhisper, whisperSnapshot, whisperSnapshot);

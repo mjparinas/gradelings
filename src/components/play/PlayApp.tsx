@@ -2,6 +2,7 @@
 
 import { memo, useEffect, useState, type ReactNode } from "react";
 import { VoicePreload } from "@/components/VoicePreload";
+import { WhisperPreload } from "@/components/WhisperPreload";
 import { StorageFullNotice } from "@/components/StorageFullNotice";
 import { ClassTimerChip } from "./ClassTimer";
 import type { FlagKey } from "@/lib/flags";
@@ -220,6 +221,7 @@ export function PlayApp() {
     <ContentGate targets={[{ grade: active.grade, framework: active.framework }]} onSwitch={profiles.length > 1 ? () => useStore.getState().setActive(null) : undefined}>
       <Prefetch />
       <VoicePreload />
+      <WhisperPreload />
       <BandProvider value={band}>
         {/* While the teacher's question is up, nothing behind it can be tapped, focused or read. */}
         <div data-band={band} key={active.id} inert={asking}>
