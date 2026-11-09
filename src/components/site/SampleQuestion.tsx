@@ -48,7 +48,7 @@ export function answerText(q: Question): string {
   }
 }
 
-const chip = "inline-flex min-h-11 items-center gap-2 rounded-xl border-2 border-line bg-white px-3 py-1.5 font-read text-lg";
+const chip = "inline-flex min-h-11 items-center gap-2 rounded-xl border-2 border-line bg-white px-3 py-1.5 font-read text-lg print:min-h-0 print:gap-1 print:px-2 print:py-0 print:text-base";
 
 function ChoiceContent({ c, q }: { c: ChoiceQuestion["choices"][number]; q: ChoiceQuestion }) {
   return (
@@ -111,7 +111,7 @@ function Body({ q, seed }: { q: Question; seed: number }) {
     case "input":
       return (
         <p className="flex items-center gap-2 font-read text-lg text-ink-soft">
-          <span className="inline-block h-11 w-24 rounded-xl border-2 border-dashed border-line bg-white">
+          <span className="inline-block h-11 w-24 print:h-8 rounded-xl border-2 border-dashed border-line bg-white">
             <span className="sr-only">answer box</span>
           </span>
           {q.suffix}
@@ -203,13 +203,13 @@ function Body({ q, seed }: { q: Question; seed: number }) {
  */
 export function SampleQuestion({ q, n, seedText, className = "", tryIt, hideAnswer }: { q: Question; n: number; seedText: string; className?: string; tryIt?: { play: string; playLabel: string }; /** No "Show answer" (the parent practice sheet keeps answers to its key). */ hideAnswer?: boolean }) {
   return (
-    <li className={`card flex flex-col gap-3 p-4 sm:p-5 ${className}`}>
+    <li className={`card flex flex-col gap-3 p-4 sm:p-5 print:gap-0.5 print:p-1.5 print:sm:p-1.5 print:mb-2 print:shadow-none ${className}`}>
       <p className="text-sm font-bold text-ink-soft">Question {n}</p>
-      <p className="font-read text-xl font-bold">
+      <p className="font-read text-xl font-bold print:text-base">
         <WithBlanks text={q.prompt} />
       </p>
       {q.visual && (
-        <div className="flex justify-center overflow-x-auto rounded-2xl bg-paper p-3" tabIndex={0}>
+        <div className="flex justify-center overflow-x-auto rounded-2xl bg-paper p-3 print:p-0 print:[zoom:0.45]" tabIndex={0}>
           <QuestionVisual visual={q.visual} />
         </div>
       )}
@@ -234,7 +234,7 @@ export function SampleQuestion({ q, n, seedText, className = "", tryIt, hideAnsw
 
 function Answer({ q }: { q: Question }) {
   return (
-    <Disclosure className="rounded-xl bg-good-soft px-3 py-2" titleClassName="font-semibold text-good-dark" title="Show answer">
+    <Disclosure className="rounded-xl bg-good-soft px-3 py-2 print:hidden" titleClassName="font-semibold text-good-dark" title="Show answer">
       <p className="mt-1 font-read text-lg font-bold">{answerText(q)}</p>
       {q.kind === "build" && (
         <div className="my-2">

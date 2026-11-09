@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { LETTERS_DEEP, READING_DEEP, TALK_DEEP, THINK_DEEP, WRITING_DEEP } from "./g1-more-language-deeper";
 
 // Grade 1 English language arts: letters (A2.2), reading and viewing (B1, B2, B3), writing (C1, C2, C3) and
 // listening and speaking manners (A1, D1, D2). Purely oral and presentation outcomes are only touched through choice questions.
@@ -161,7 +162,7 @@ export const alphabetMatch = bankUnit({
   blurb: "Match capital letters to small ones and know the alphabet order.",
   parentNote: "Practises naming letters and matching capital letters to lowercase ones, and knowing which letter comes before and after.",
   standards: ["ELA.1.A2.2", "naming alphabet letters and matching upper to lowercase"],
-  items: LETTERS,
+  items: [...LETTERS, ...LETTERS_DEEP],
 });
 
 export const readingSmart = bankUnit({
@@ -175,7 +176,7 @@ export const readingSmart = bankUnit({
     "ELA.1.B1.1, ELA.1.B1.2, ELA.1.B1.3, ELA.1.B1.4, ELA.1.B2.1, ELA.1.B2.2, ELA.1.B2.3, ELA.1.B2.4, ELA.1.B2.7",
     "background knowledge, choosing texts, text forms and features, predictions, connections and topic words",
   ],
-  items: READING,
+  items: [...READING, ...READING_DEEP],
 });
 
 export const truthAndViewpoints = bankUnit({
@@ -189,7 +190,7 @@ export const truthAndViewpoints = bankUnit({
     "ELA.1.B3.1, ELA.1.B3.2, ELA.1.B3.3, ELA.1.B3.4",
     "seeing ourselves in texts, what could be true or false, different viewpoints and sharing opinions with reasons",
   ],
-  items: THINK,
+  items: [...THINK, ...THINK_DEEP],
 });
 
 export const writingPlan = bankUnit({
@@ -203,7 +204,7 @@ export const writingPlan = bankUnit({
     "ELA.1.C1.1, ELA.1.C1.2, ELA.1.C1.3, ELA.1.C1.4, ELA.1.C1.5, ELA.1.C2.1, ELA.1.C2.4, ELA.1.C2.5, ELA.1.C3.1, ELA.1.C3.5",
     "planning, kinds of writing, organizing ideas, personal voice, feedback, forming letters and using more than one mode",
   ],
-  items: WRITING,
+  items: [...WRITING, ...WRITING_DEEP],
 });
 
 export const talkAndListen = bankUnit({
@@ -217,5 +218,5 @@ export const talkAndListen = bankUnit({
     "ELA.1.A1.1, ELA.1.A1.2, ELA.1.A1.3, ELA.1.A1.4, ELA.1.A1.5, ELA.1.A1.6, ELA.1.D1.1, ELA.1.D1.2, ELA.1.D1.3, ELA.1.D2.1, ELA.1.D2.2, ELA.1.D2.3, ELA.1.D2.4, ELA.1.D2.5",
     "listening, taking part in talks, questions and answers, complete sentences, speaking for an audience and reflecting on learning",
   ],
-  items: TALK,
+  items: [...TALK, ...TALK_DEEP],
 });

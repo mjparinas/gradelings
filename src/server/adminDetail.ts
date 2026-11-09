@@ -8,13 +8,14 @@ import type { GradeId } from "@/content/types";
 import { DETAIL_LIMIT, type Cell, type Detail, type DetailColumn, type DetailRow, type DetailTable, type DetailView } from "@/lib/adminDetail";
 import { cancelledOn, familyGroup, fee, LIFETIME_YEARS, monthStart, MONTHLY_CENTS, MONTHLY_CENTS_USD, wontRenew, YEARLY_CENTS, YEARLY_CENTS_USD, type FamilyGroup } from "@/lib/adminMetrics";
 import { countryOf, toCountryCode } from "@/lib/country";
+import { notTestFamily, notTestFamilyId } from "./testAccounts";
 
 // The lists behind the admin dashboard's tiles. Like the Users tab, they show account emails and billing,
 // and children only as counts by grade and province: never a child's name or results. Class student
 // accounts are left out.
 
 const DAY = 86_400_000;
-const REAL = "NOT EXISTS (SELECT 1 FROM parents s WHERE s.family_id = f.id AND s.role = 'student')";
+const REAL = `NOT EXISTS (SELECT 1 FROM parents s WHERE s.family_id = f.id AND s.role = 'student') AND ${notTestFamily("f")}`;
 const EMAIL = "(SELECT p.email FROM parents p WHERE p.family_id = f.id ORDER BY p.created_at LIMIT 1)";
 const VERIFIED = "EXISTS (SELECT 1 FROM parents p WHERE p.family_id = f.id AND p.email_verified_at IS NOT NULL)";
 /** Everyone teaching an open class, owner or co-teacher, once each: the dashboard's Teachers tile. */
@@ -62,7 +63,7 @@ async function payments(from: number, to: number, title: string): Promise<Detail
   const all = await rowsOf(
     `SELECT pm.family_id, pm.amount, pm.refunded, pm.interval, pm.paid_at, pm.currency,
        (SELECT p.email FROM parents p WHERE p.family_id = pm.family_id ORDER BY p.created_at LIMIT 1) AS email
-     FROM payments pm WHERE pm.paid_at >= ? AND pm.paid_at < ? ORDER BY pm.paid_at DESC`,
+     FROM payments pm WHERE pm.paid_at >= ? AND pm.paid_at < ? AND ${notTestFamilyId("pm.family_id")} ORDER BY pm.paid_at DESC`,
     [from, to],
   );
   // The dashboard's revenue is CAD only, so the headline numbers are too; US payments get their own table.

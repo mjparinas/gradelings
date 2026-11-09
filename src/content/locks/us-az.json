@@ -58,7 +58,7 @@
       "picture-clues text=c447e46412 std=c0072f9b2d q=3ade8d2d47",
       "blend-a-word text=3d99132c91 std=074289af42 q=16d2ff7d7d",
       "talk-and-listen-ab text=6b71ddbc74 std=0faaee08d3 q=e684468815",
-      "mb-k-word-parts-and-meanings text=e15eb53b01 std=91e303f96d q=a2785c140f",
+      "mb-k-word-parts-and-meanings text=e15eb53b01 std=91e303f96d q=c988c37a4b",
       "wa-gk-ask-and-find-out text=3232fd3739 std=23d55cfe6c q=15f5ec6b8a"
     ]
   },
@@ -181,7 +181,7 @@
       "word-pictures text=44e4dfbdc5 std=3f664abf93 q=870ecab164",
       "reading-detectives text=06d742f348 std=80745d1a50 q=decd73a013",
       "text-features text=15cb2dc162 std=f595f204b0 q=0e6e3d2f57",
-      "mb-finding-information text=b6b5ad0955 std=b824a9cf44 q=95d8977d6e",
+      "mb-finding-information text=b6b5ad0955 std=b824a9cf44 q=89c5768441",
       "wa-g2-media-detectives text=be66a838b4 std=419cf1f4e4 q=7844f5c974"
     ]
   },
@@ -221,7 +221,7 @@
   "2/social": {
     "overview": "deb5330606",
     "units": [
-      "needs-and-wants text=8192b43423 std=d87f49dcc8 q=2c4dbe4de2",
+      "needs-and-wants text=8192b43423 std=d87f49dcc8 q=a679c0275b",
       "ny-g3-globes-and-maps text=387663e4b1 std=330436f16c q=7becb7a790",
       "ny-g3-world-communities text=ed14244948 std=d4b225311f q=8268800b99",
       "ny-g3-culture text=4215bb54e3 std=c197325e58 q=ed4ddf3452",
@@ -247,7 +247,7 @@
       "abc-dictionary text=0dded2dd30 std=8b59ceb387 q=8cac6b9b16",
       "grammar-3 text=a9deaa03d1 std=24979eec56 q=4cef04ee6f",
       "text-patterns text=66f9e7deb8 std=0c90848eaf q=2d33abb1d7",
-      "mb-wonder-and-find-out text=63150b7959 std=15d1e9e2c5 q=aeacd646ab",
+      "mb-wonder-and-find-out text=63150b7959 std=15d1e9e2c5 q=ef051d1eac",
       "wa-g3-media-messages text=fb774641d1 std=b3fb4c29b6 q=feb4e64c34"
     ]
   },
@@ -391,7 +391,7 @@
       "complex-sentences text=ac4c5531ea std=0240a313bf q=541e2d5520",
       "punctuation-power text=fb7f3d7d02 std=8f05f56ede q=c61867de33",
       "media-smarts text=e34e2d845a std=ff0372c9d7 q=943a38fda8",
-      "mb-multimodal-texts-5 text=adf27e7e3d std=81ae3d2fd2 q=b3c7f7225b",
+      "mb-multimodal-texts-5 text=adf27e7e3d std=81ae3d2fd2 q=afd9881eca",
       "wa-g5-research-ready text=a1d4419e2b std=e901151ffe q=e9eb98ac26",
       "wa-g5-spelling-smarts text=27bf16b09c std=bfc1824510 q=2666501efd"
     ]
@@ -503,7 +503,7 @@
       "wa-g8-energy text=655dfe6f3b std=f5368aeb80 q=cdf3dadeb8",
       "tx-g6-seasons-tides text=69acd403c5 std=128226fd79 q=cc7f8f2c62",
       "tx-g7-solar-system text=3b62f9c7f1 std=42d06f2557 q=2473ef744e",
-      "ecosystems-7 text=da82b56903 std=74d2ed0a88 q=2aeec5ed64",
+      "ecosystems-7 text=da82b56903 std=74d2ed0a88 q=041251a723",
       "food-chains-7 text=14036b504e std=31bfeef4b5 q=777910f336",
       "cycles-succession-7 text=6d0d77fb24 std=e81d8032a4 q=c45e49da11"
     ]
@@ -734,10 +734,10 @@
   "9/science": {
     "overview": "444def1f2b",
     "units": [
-      "cells-from-cells text=bf9b3d6d2e std=2476fb2fb5 q=9c20dd0a12",
-      "reproduction text=d702789bd4 std=6b9696ede1 q=89792aacac",
+      "cells-from-cells text=bf9b3d6d2e std=2476fb2fb5 q=17bf1b2a92",
+      "reproduction text=d702789bd4 std=6b9696ede1 q=c9637838d5",
       "atoms-and-electrons text=5dc2e26422 std=6cb71d2580 q=77c28ee671",
-      "bonding-and-reactions text=8a0ea04bc7 std=3bf232ff76 q=a326d57dc9",
+      "bonding-and-reactions text=8a0ea04bc7 std=3bf232ff76 q=05ec43f844",
       "photosynthesis-respiration-9 text=aa7d1dc3bb std=43844aee97 q=a8703c2a22",
       "periodic-table-9 text=d006b85cec std=5291051fb7 q=0f98494808",
       "chemical-change-ab text=89d7e56152 std=adbb79195b q=16a95d55f4",

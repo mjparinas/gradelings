@@ -370,6 +370,21 @@ describe("codes, reports, stats and the change log", () => {
     await as(admin.cookie).send(reports, "DELETE", "/api/admin/reports/", { unitKey: "3/math/multiplication", prompt: "What is 2 × 4?" });
   });
 
+  it("leaves the owner's test account out of the dashboard's numbers", async () => {
+    const before = await (await as(admin.cookie).get(stats, "/api/admin/stats/")).json();
+    const testAccount = await account("mjparinas@gmail.com");
+    const after = await (await as(admin.cookie).get(stats, "/api/admin/stats/")).json();
+    expect(after.people.families).toBe(before.people.families);
+    expect(after.people.parents).toBe(before.people.parents);
+    // A real account added next does count, so the equality above isn't just a stuck number.
+    const realAccount = await account("a-real-parent@example.com");
+    expect((await (await as(admin.cookie).get(stats, "/api/admin/stats/")).json()).people.families).toBe(before.people.families + 1);
+    for (const a of [testAccount, realAccount]) {
+      await dbm.run("DELETE FROM parents WHERE family_id = ?", [a.familyId]);
+      await dbm.run("DELETE FROM families WHERE id = ?", [a.familyId]);
+    }
+  });
+
   it("counts families without class student accounts", async () => {
     const s = await (await as(admin.cookie).get(stats, "/api/admin/stats/")).json();
     const real = Number((await dbm.query<{ n: number }>("SELECT COUNT(*) AS n FROM parents WHERE role != 'student'"))[0].n);

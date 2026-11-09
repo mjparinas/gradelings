@@ -57,7 +57,7 @@
       "book-detectives text=1f5750b2af std=f2c49f7976 q=adc3ae2dbb",
       "picture-clues text=c447e46412 std=6986fa4649 q=3ade8d2d47",
       "story-order text=f874c5f317 std=39e8acb888 q=9e24988535",
-      "mb-k-word-parts-and-meanings text=e15eb53b01 std=4bafc736ea q=a2785c140f",
+      "mb-k-word-parts-and-meanings text=e15eb53b01 std=4bafc736ea q=c988c37a4b",
       "talk-and-listen-ab text=6b71ddbc74 std=ffbd416428 q=e684468815",
       "wa-gk-ask-and-find-out text=3232fd3739 std=9955246bf4 q=15f5ec6b8a"
     ]
@@ -177,7 +177,7 @@
       "word-pictures text=44e4dfbdc5 std=3ccd8d057b q=870ecab164",
       "joining-sentences text=bc83af99c6 std=3e8c4208c3 q=a45f18007f",
       "grammar-2 text=8c16265264 std=c80d210ff3 q=1435b2cc3b",
-      "mb-finding-information text=b6b5ad0955 std=712819aa25 q=95d8977d6e",
+      "mb-finding-information text=b6b5ad0955 std=712819aa25 q=89c5768441",
       "wa-g2-media-detectives text=be66a838b4 std=22f37ce167 q=7844f5c974"
     ]
   },
@@ -218,7 +218,7 @@
   "2/social": {
     "overview": "45423fa140",
     "units": [
-      "needs-and-wants text=8192b43423 std=ceb874152a q=2c4dbe4de2",
+      "needs-and-wants text=8192b43423 std=ceb874152a q=a679c0275b",
       "caring-citizens text=774323e412 std=879006a507 q=bd6579b01b",
       "then-and-now text=adcb461d8f std=1d23613c8d q=db6aba9849",
       "communities-compared text=38aa387c10 std=5141e8941b q=20e81812b4",
@@ -242,7 +242,7 @@
       "punctuation-power text=4ba2179323 std=ac914f2e19 q=ac19eee914",
       "word-pairs text=17c5d8704a std=7a53852f9b q=2558b1d793",
       "abc-dictionary text=0dded2dd30 std=6580f3ba6f q=8cac6b9b16",
-      "mb-wonder-and-find-out text=63150b7959 std=7659a4650f q=aeacd646ab",
+      "mb-wonder-and-find-out text=63150b7959 std=7659a4650f q=ef051d1eac",
       "wa-g3-media-messages text=fb774641d1 std=7ba5c122a0 q=feb4e64c34"
     ]
   },
@@ -385,7 +385,7 @@
       "word-roots text=2558284043 std=0ec02a70ef q=09a2072023",
       "figurative-language text=dca8bec883 std=103831f81c q=5d50f18ae7",
       "complex-sentences text=ac4c5531ea std=c614dc079d q=541e2d5520",
-      "mb-multimodal-texts-5 text=adf27e7e3d std=78f37a1cbc q=b3c7f7225b",
+      "mb-multimodal-texts-5 text=adf27e7e3d std=78f37a1cbc q=afd9881eca",
       "punctuation-power text=fb7f3d7d02 std=7dc1a9c0c7 q=c61867de33",
       "media-smarts text=e34e2d845a std=8d7a8daef4 q=943a38fda8",
       "wa-g5-research-ready text=a1d4419e2b std=b795156342 q=e9eb98ac26",
@@ -570,7 +570,7 @@
     "overview": "92c170ce05",
     "units": [
       "atoms-and-elements text=7c83b3e634 std=0e67da3a21 q=278466d671",
-      "ecosystems-7 text=7f94e0036b std=5b34a7034f q=2aeec5ed64",
+      "ecosystems-7 text=7f94e0036b std=5b34a7034f q=041251a723",
       "food-chains-7 text=fef8ede051 std=29137fe6ea q=777910f336",
       "cycles-succession-7 text=966cbdbe7e std=ff6026d16b q=c45e49da11",
       "particles-mixtures-7 text=03fc7e2a6b std=dbf3f902f4 q=f719092f87",
@@ -723,10 +723,10 @@
   "9/science": {
     "overview": "16983219a7",
     "units": [
-      "cells-from-cells text=bf9b3d6d2e std=3a95627006 q=9c20dd0a12",
-      "reproduction text=d702789bd4 std=4a9708d73c q=89792aacac",
+      "cells-from-cells text=bf9b3d6d2e std=3a95627006 q=17bf1b2a92",
+      "reproduction text=d702789bd4 std=4a9708d73c q=c9637838d5",
       "atoms-and-electrons text=5dc2e26422 std=526836febb q=77c28ee671",
-      "bonding-and-reactions text=8a0ea04bc7 std=25c7bedf9e q=a326d57dc9",
+      "bonding-and-reactions text=8a0ea04bc7 std=25c7bedf9e q=05ec43f844",
       "photosynthesis-respiration-9 text=aa7d1dc3bb std=2d468886b6 q=a8703c2a22",
       "periodic-table-9 text=d006b85cec std=64f4fbd309 q=0f98494808",
       "chemical-change-ab text=89d7e56152 std=355f770542 q=16a95d55f4",

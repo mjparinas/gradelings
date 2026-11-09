@@ -214,7 +214,7 @@
     "overview": "7ab95ba046",
     "units": [
       "nb-community-2 text=f6061a9bb9 std=be6985652e q=aa295adcd0",
-      "needs-and-wants text=8192b43423 std=901c269f2d q=d91ff3aeff",
+      "needs-and-wants text=8192b43423 std=901c269f2d q=619b8574d0",
       "caring-citizens text=774323e412 std=19d7c0f387 q=8411a16f0e",
       "groups-in-our-community text=79a3313355 std=2650720342 q=9f245b3885",
       "traditions-and-celebrations text=7933064ad5 std=2daa500740 q=2ef24cb39f",
@@ -657,13 +657,13 @@
     "overview": "de48cc0f6d",
     "units": [
       "nb-earth-surface-7 text=105cd9a24a std=914906899f q=e785a0539d",
-      "ecosystems-7 text=7f94e0036b std=669e27db4f q=2aeec5ed64",
+      "ecosystems-7 text=7f94e0036b std=669e27db4f q=041251a723",
       "food-chains-7 text=fef8ede051 std=a79dadd970 q=cf2a8de2af",
-      "human-impact-7 text=f6bc8439e8 std=ba6057bedc q=c4030de692",
+      "human-impact-7 text=f6bc8439e8 std=ba6057bedc q=79b173657f",
       "particles-mixtures-7 text=03fc7e2a6b std=f472a7262b q=c8c3cfefc6",
       "heat-particles-7 text=0b575e82c8 std=802d695d2c q=ec2f2fb08f",
       "structures-forces-7 text=9f0c621a9c std=4134c43827 q=eef17aedf3",
-      "safe-structures-7 text=1a9ceadc58 std=dc85aead27 q=8e849ccaad",
+      "safe-structures-7 text=1a9ceadc58 std=dc85aead27 q=6538533612",
       "restless-earth text=eacf7084dc std=1f8fc711ee q=ce71954c06",
       "natural-selection text=516fbb1811 std=63be5db9da q=beaf3b1417"
     ]
@@ -851,8 +851,8 @@
     "units": [
       "nb-solar-system-9 text=b4847f50f2 std=9936b5557d q=cad9853070",
       "nb-ecosystems-9 text=1319ff1c1b std=8b47806528 q=529b239707",
-      "reproduction text=d702789bd4 std=4c8db8c62b q=89792aacac",
-      "cells-from-cells text=bf9b3d6d2e std=f85752ede9 q=403cd47249",
+      "reproduction text=d702789bd4 std=4c8db8c62b q=c9637838d5",
+      "cells-from-cells text=bf9b3d6d2e std=f85752ede9 q=d8fef1a729",
       "atoms-and-electrons text=5dc2e26422 std=5ed7f6e91f q=157481b107",
       "atoms-9 text=0fd6c7ecf2 std=b1acd70dd7 q=5412669a33",
       "periodic-table-9 text=d006b85cec std=1522944113 q=0f98494808",
@@ -867,7 +867,7 @@
   "9/social": {
     "overview": "93c378b937",
     "units": [
-      "canadas-landscapes text=5175fa39ff std=5f65803b23 q=0867df985a",
+      "canadas-landscapes text=5175fa39ff std=5f65803b23 q=3b19aa43c2",
       "nb-places-people-9 text=1c02d184bb std=7e2cd4307b q=496d490116",
       "nb-identity-migration-9 text=104d79215f std=2ef77e3f9d q=435053ca11",
       "nb-governance-9 text=b8225aad8b std=06685b5fcf q=479758c960",

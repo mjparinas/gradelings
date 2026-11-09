@@ -138,6 +138,8 @@ export interface Metrics {
     paidShare: number | null;
     weekly: Point[];
     monthly: Point[];
+    /** Total accounts (families) at the end of each of the last 26 weeks, oldest first. */
+    totals: Point[];
   };
   engagement: { d1: number; d7: number; d30: number; guests: { d1: number; d7: number; d30: number }; stickiness: number | null; retention: { rows: CohortRow[]; all: RetentionCell[] }; daily: { label: string; families: number; answers: number; minutes: number }[]; answers30: number; minutes30: number };
   revenue: {
@@ -300,6 +302,11 @@ export function computeMetrics(input: MetricsInput): Metrics {
     const from = now - (i + 1) * WEEK;
     weekly.push({ label: dayLabel(from), value: inRange(from, from + WEEK) });
   }
+  const totals: Point[] = [];
+  for (let i = 25; i >= 0; i--) {
+    const end = i === 0 ? now + 1 : now - i * WEEK;
+    totals.push({ label: dayLabel(now - (i + 1) * WEEK), value: families.filter((f) => f.createdAt < end).length });
+  }
   const monthly12: Point[] = [];
   for (let i = -11; i <= 0; i++) monthly12.push({ label: monthLabel(monthStart(now, i)), value: inRange(monthStart(now, i), monthStart(now, i + 1)) });
   const recent = families.filter((f) => f.createdAt > now - 90 * DAY);
@@ -404,6 +411,7 @@ export function computeMetrics(input: MetricsInput): Metrics {
       paidShare: rate(paying, families.length),
       weekly,
       monthly: monthly12,
+      totals,
     },
     engagement: {
       ...input.activeFamilies,

@@ -228,8 +228,8 @@ describe("SubscriptionPage", () => {
 
 describe("includedFor", () => {
   it("says the grade range the US way for a US family", () => {
-    expect(includedFor("US")[0]).toBe("Every unit in every subject, kindergarten through 9th grade");
-    expect(includedFor("CA")[0]).toBe("Every unit in every subject, Kindergarten to Grade 9");
+    expect(includedFor("US")[0]).toBe("Every unit in every subject, pre-K through 9th grade");
+    expect(includedFor("CA")[0]).toBe("Every unit in every subject, Pre-K to Grade 9");
     expect(includedFor(undefined)[0]).toBe(includedFor("CA")[0]);
   });
 });

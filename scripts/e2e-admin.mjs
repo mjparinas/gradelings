@@ -123,7 +123,7 @@ await tab("Overview");
 await tab("Flags");
 const shop = page.getByRole("listitem").filter({ hasText: "The pretend coin shop." }).getByRole("switch");
 async function setShop(on) {
-  if ((await shop.isChecked()) !== on) await shop.click();
+  if ((await shop.isChecked()) !== on) await shop.click({ force: true }); // the checkbox is visually hidden behind its switch
   for (let i = 0; i < 40 && (await shop.isChecked()) !== on; i++) await page.waitForTimeout(150);
   return (await shop.isChecked()) === on;
 }

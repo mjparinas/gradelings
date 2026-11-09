@@ -18,7 +18,7 @@ export interface Country {
   thousandsSeparator: " " | ",";
   /** A region's name in sentences when the framework doesn't say otherwise ("province", "state"). */
   regionKind: "province" | "state";
-  /** Kindergarten to Grade 9, in the country's wording, for plan and marketing lines. */
+  /** Pre-K to Grade 9, in the country's wording, for plan and marketing lines. */
   gradeRange: string;
   /** Children's data waits for a parent's consent before it is stored on the server (US: COPPA). */
   parentalConsent: boolean;
@@ -32,7 +32,7 @@ export const COUNTRIES: Record<CountryCode, Country> = {
     currency: "CAD",
     thousandsSeparator: " ",
     regionKind: "province",
-    gradeRange: "Kindergarten to Grade 9",
+    gradeRange: "Pre-K to Grade 9",
     parentalConsent: false,
   },
   US: {
@@ -42,7 +42,7 @@ export const COUNTRIES: Record<CountryCode, Country> = {
     currency: "USD",
     thousandsSeparator: ",",
     regionKind: "state",
-    gradeRange: "kindergarten through 9th grade",
+    gradeRange: "pre-K through 9th grade",
     parentalConsent: true,
   },
 };

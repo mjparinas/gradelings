@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { DIVERSITY_DEEP, GOALS_DEEP, MULTI_DEEP, PLAN_DEEP, READING_DEEP, REVISE_DEEP, TALK_DEEP, WORDS_DEEP } from "./g5-more-language-deeper";
 
 // More Grade 5 English language arts (ELA.5): planning and researching, revising and spelling, diversity and bias,
 // multisyllabic words, reading with purpose, multimodal texts, discussion language and setting learning goals.
@@ -39,7 +40,7 @@ export const planning = bankUnit({
   blurb: "Choose a topic, ask good questions and find sources",
   parentNote: "Choosing a focused topic for an audience and purpose, planning with webs and notes, asking open-ended questions, using several sources and noticing gaps.",
   standards: ["ELA.5.B1.2, ELA.5.B1.4, ELA.5.C1.1, ELA.5.C1.2, ELA.5.C1.3", "choosing a topic, asking questions, gathering sources and planning a piece of writing"],
-  items: PLAN,
+  items: [...PLAN, ...PLAN_DEEP],
 });
 
 const REVISE: Q[] = [
@@ -77,7 +78,7 @@ export const revising = bankUnit({
   blurb: "Make writing clearer and spell tricky words",
   parentNote: "Using checklists and feedback to revise for order and focus, and using spelling patterns, strategies and dictionaries (with Canadian spelling) to check words.",
   standards: ["ELA.5.C2.5, ELA.5.C3.2", "revising with criteria and feedback, and spelling strategies and patterns"],
-  items: REVISE,
+  items: [...REVISE, ...REVISE_DEEP],
 });
 
 const DIVERSITY: Q[] = [
@@ -114,7 +115,7 @@ export const diversity = bankUnit({
   blurb: "Spot who is included and who is left out",
   parentNote: "Recognizing how diversity and inclusion appear in texts, using evidence to support an opinion, and responding thoughtfully to stereotypes, bias and prejudice.",
   standards: ["ELA.5.B3.1, ELA.5.B3.4", "diversity and inclusion in texts, evidence for opinions, and responding to stereotyping and bias"],
-  items: DIVERSITY,
+  items: [...DIVERSITY, ...DIVERSITY_DEEP],
 });
 
 const WORDS: Q[] = [
@@ -156,7 +157,7 @@ export const multisyllabic = bankUnit({
   blurb: "Break long words into parts you know",
   parentNote: "Reading and spelling longer words by finding syllables, prefixes, suffixes and roots, and noticing common spelling patterns.",
   standards: ["ELA.5.A2.3", "decoding and spelling multisyllabic words"],
-  items: WORDS,
+  items: [...WORDS, ...WORDS_DEEP],
 });
 
 const READING: Q[] = [
@@ -193,7 +194,7 @@ export const reading = bankUnit({
   blurb: "Use what you know and read at the right pace",
   parentNote: "Using prior knowledge, choosing varied texts, adjusting reading rate for purpose and checking understanding while reading.",
   standards: ["ELA.5.A2.6, ELA.5.B1.1, ELA.5.B1.3, ELA.5.D2.1", "reading fluency and rate, prior knowledge, choosing multimodal texts and self-monitoring"],
-  items: READING,
+  items: [...READING, ...READING_DEEP],
 });
 
 const MULTI: Q[] = [
@@ -230,7 +231,7 @@ export const multimodal = bankUnit({
   blurb: "Choose fonts, images and modes for your audience",
   parentNote: "Planning and polishing texts that combine words, images, sound and video, and choosing fonts, layout and tools to suit an audience and purpose.",
   standards: ["ELA.5.C1.5, ELA.5.C3.1, ELA.5.C3.5", "creating multimodal texts, legible and word-processed writing, and combining modes for an audience"],
-  items: MULTI,
+  items: [...MULTI, ...MULTI_DEEP],
 });
 
 const TALK: Q[] = [
@@ -267,7 +268,7 @@ export const talk = bankUnit({
   blurb: "Open-ended questions and clear connecting words",
   parentNote: "Listening to summarize, joining a discussion respectfully, asking open-ended questions and using complex sentences with transition words to share ideas.",
   standards: ["ELA.5.A1.1, ELA.5.A1.2, ELA.5.A1.3, ELA.5.A1.4, ELA.5.A1.5", "listening for key ideas, discussion habits, open-ended questions and complex sentences with transitions"],
-  items: TALK,
+  items: [...TALK, ...TALK_DEEP],
 });
 
 const GOALS: Q[] = [
@@ -304,5 +305,5 @@ export const goals = bankUnit({
   blurb: "Use criteria and feedback to get better",
   parentNote: "Setting specific learning goals, using class criteria and descriptive feedback, and collecting evidence to see progress in reading, writing, speaking, listening and representing.",
   standards: ["ELA.5.D2.1, ELA.5.D2.2, ELA.5.D2.3, ELA.5.D2.4, ELA.5.D2.5", "self-assessment, class criteria, feedback, learning goals and tracking progress"],
-  items: GOALS,
+  items: [...GOALS, ...GOALS_DEEP],
 });

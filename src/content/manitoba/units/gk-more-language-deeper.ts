@@ -1,0 +1,101 @@
+import type { Q } from "../own";
+
+// Extra Kindergarten English language arts questions, so a child practising a few minutes a day sees fewer repeats.
+// Region-free: these units are shared by other provinces and states. No typed answers, prompts kept short.
+
+export const TALK_DEEP: Q[] = [
+  ["Your friend is telling you about their dog. What do you do?", "Listen and look at them", ["Look away", "Start to hop"], "Good listeners look at the speaker."],
+  ["Which is a kind way to ask for a turn?", "May I have a turn, please?", ["Give it to me!", "Mine!"], "Kind words help us share."],
+  ["A friend asks, “Do you like cats?” What can you say?", "Yes, I like cats.", ["It is Tuesday.", "Two socks."], "Answer the question you heard."],
+  ["Someone asks, “What is your name?” What do you say?", "Your own name", ["A colour", "A number"], "Tell your name."],
+  ["Which is a question?", "Do you want to play?", ["I want to play.", "Play."], "A question asks something."],
+  ["Which word is a kind word?", "please", ["grab", "no way"], "Kind words are nice to hear."],
+  ["You bump a friend by accident. What can you say?", "I'm sorry.", ["Move!", "Ha ha!"], "Saying sorry is kind."],
+  ["A friend says thank you. What can you say?", "You're welcome.", ["Go away.", "Not me."], "A kind answer to thank you."],
+  ["Which voice is good for the classroom?", "A quiet inside voice", ["A loud shout", "No voice at all"], "We use an inside voice indoors."],
+  ["Which voice is good on the playground?", "A louder outside voice", ["A whisper only", "No voice at all"], "Outside we can use a bigger voice."],
+  ["Which sentence tells about a feeling?", "I am happy.", ["I am a chair.", "I am tall pants."], "Tell how you feel."],
+  ["The teacher says, “Please sit on the mat.” What do you do?", "Sit on the mat", ["Run away", "Lie under a table"], "Listen and follow the directions."],
+  ["The teacher says, “Touch your nose, then clap.” What first?", "Touch your nose", ["Clap", "Jump"], "Do the steps in order."],
+  ["You want to share a story. What do you do first?", "Wait until it is your turn", ["Shout it out", "Leave the circle"], "We take turns."],
+  ["A friend is sad. What kind words can you say?", "Do you want to play with me?", ["Go away.", "That is silly."], "Kind words help a friend."],
+  ["Which is a good way to tell a story?", "Say what happened in order", ["Mix up everything", "Say nothing"], "Tell what happened first, next and last.", true],
+];
+
+export const WORDS_DEEP: Q[] = [
+  ["Add -s to “pig”. What word do you get?", "pigs", ["pig", "piging"], "One pig, two pigs."],
+  ["Add -s to “hat”. What word do you get?", "hats", ["hat", "hating"], "One hat, two hats."],
+  ["Add -ing to “eat”. What word do you get?", "eating", ["eats", "eated"], "Eat plus -ing is eating."],
+  ["Add -ing to “sing”. What word do you get?", "singing", ["sings", "sang"], "Sing plus -ing is singing."],
+  ["Add un- to “tie”. What word do you get?", "untie", ["tied", "ties"], "Untie is the opposite of tie."],
+  ["Add un- to “kind”. What word do you get?", "unkind", ["kindly", "kinder"], "Un- means not."],
+  ["Which word is the opposite of “hot”?", "cold", ["warm", "hat"], "Opposites are very different."],
+  ["Which word is the opposite of “up”?", "down", ["over", "above"], "Up and down are opposites."],
+  ["Which word is the opposite of “big”?", "small", ["tall", "huge"], "Big and small are opposites."],
+  ["Which word is the opposite of “open”?", "closed", ["wide", "door"], "Open and closed are opposites."],
+  ["Which word means almost the same as “happy”?", "glad", ["sad", "mad"], "Glad and happy are alike."],
+  ["Which word means almost the same as “little”?", "small", ["huge", "loud"], "Little and small are alike."],
+  ["Which word is a naming word for a thing?", "ball", ["run", "quickly"], "A ball is a thing."],
+  ["Which word tells what someone does?", "jump", ["table", "blue"], "Jump is an action."],
+  ["Which word names a place?", "park", ["sing", "soft"], "A park is a place."],
+  ["Which word rhymes with “cat”?", "hat", ["dog", "cup"], "Rhyming words end with the same sound."],
+  ["Which word rhymes with “sun”?", "run", ["sit", "cat"], "Sun and run end the same."],
+  ["Which word rhymes with “bed”?", "red", ["bus", "bat"], "Bed and red end the same."],
+  ["Which word begins with the same sound as “moon”?", "milk", ["sun", "fish"], "Moon and milk both start with m.", true],
+  ["Which word begins with the same sound as “sock”?", "sun", ["moon", "hat"], "Sock and sun both start with s.", true],
+];
+
+export const BEFORE_AFTER_DEEP: Q[] = [
+  ["Before reading, you look at the title. It tells you…", "the name of the book", ["the last word", "how many pages"], "The title names the book."],
+  ["Who writes the words in a book?", "the author", ["the shelf", "the cover"], "An author writes the words."],
+  ["Who draws the pictures in a book?", "the illustrator", ["the reader", "the librarian"], "An illustrator draws the pictures."],
+  ["Which part of a book do you read first?", "the front", ["the back", "the middle"], "We start at the front."],
+  ["The cover shows a boat on the water. The book is probably about…", "a boat trip", ["a cake", "a snowman"], "Use clues from the cover."],
+  ["A girl packs a lunch and a blanket. What might she do?", "have a picnic", ["go to sleep", "paint a wall"], "Predict with the clues."],
+  ["The sky is dark and you hear thunder. What might happen?", "it rains", ["it snows in summer", "the sun melts"], "Use clues to predict."],
+  ["Which book tells true things about animals?", "a book about animals with photos", ["a fairy tale", "a rhyme book"], "Nonfiction tells true things."],
+  ["Which story has pretend characters?", "a story about a talking bear", ["a book of real photos", "a map"], "Make-believe stories can have talking animals."],
+  ["What can you do after reading a story?", "tell what happened", ["forget it", "tear it"], "Retell the story."],
+  ["After reading, you tell the beginning, the middle and the…", "end", ["door", "paint"], "Stories have a beginning, middle and end."],
+  ["A story is about a lost puppy. Who is the story about?", "the puppy", ["the moon", "a cake"], "Characters are who the story is about."],
+  ["A story takes place in a barn. Where does it happen?", "in a barn", ["in space", "under the sea"], "The setting is where it happens."],
+  ["You read about a rabbit. You have a rabbit at home. This is a…", "connection", ["mistake", "page"], "You link the story to your life."],
+  ["You see a picture of a snowy day and remember sledding. You are…", "making a connection", ["losing your place", "turning the page"], "You link it to what you know.", true],
+  ["Which helps you understand a word you do not know?", "look at the picture", ["close the book", "turn the book upside down"], "Pictures give clues.", true],
+];
+
+export const WRITE_DEEP: Q[] = [
+  ["Which name is written correctly?", "Ella", ["ella", "eLLA"], "A name starts with a capital letter."],
+  ["Which name is written correctly?", "Omar", ["omar", "oMAR"], "A name starts with a capital letter."],
+  ["Which sentence is written correctly?", "We can play.", ["we can play.", "we Can Play."], "Start with a capital letter."],
+  ["Which sentence is written correctly?", "I see a bird.", ["i see a bird.", "I see A bird"], "Start with a capital and end with a full stop."],
+  ["How does a sentence end?", "with a full stop", ["with a number", "with a picture"], "A full stop ends many sentences."],
+  ["Which mark ends a question?", "?", [".", ","], "A question mark ends a question."],
+  ["Which mark shows excitement?", "!", [".", ","], "An exclamation mark shows strong feeling."],
+  ["Which letter makes the first sound in “dog”?", "d", ["g", "o"], "Dog starts with d."],
+  ["Which letter makes the first sound in “fish”?", "f", ["s", "h"], "Fish starts with f."],
+  ["Which letter makes the last sound in “cat”?", "t", ["c", "a"], "Cat ends with t."],
+  ["Which letter makes the last sound in “sun”?", "n", ["s", "u"], "Sun ends with n."],
+  ["Before you write, you can…", "draw a picture of your idea", ["throw away your paper", "close your eyes and sleep"], "Pictures help you plan."],
+  ["What can you add to a story to help us see it?", "a drawing", ["a hole", "a spill"], "Pictures add to a story."],
+  ["Which tool do we write with on paper?", "a pencil", ["a spoon", "a shoe"], "A pencil makes letters."],
+  ["Which tool helps us write letters on a computer?", "a keyboard", ["a ruler", "a cup"], "Keys make letters."],
+  ["Which of these is a word?", "dog", ["xzq", "d d d"], "A word has letters that mean something.", true],
+  ["Words in a sentence have…", "spaces between them", ["no spaces", "pictures only"], "Leave a space between words.", true],
+  ["Which sentence is written with spaces?", "I like cats.", ["Ilikecats.", "Il ikecats."], "Spaces make words easy to read.", true],
+];
+
+export const REFLECT_DEEP: Q[] = [
+  ["You finished a puzzle. How can you feel?", "proud", ["not sure", "invisible"], "It feels good to finish."],
+  ["You learned a new word today. What can you say?", "I learned something new!", ["I did nothing.", "Nobody learned."], "Notice what you learned."],
+  ["Something is tricky. What can you try?", "Try again", ["Give up", "Hide"], "Trying again helps."],
+  ["You got stuck. Who can help you?", "a teacher or a friend", ["a table", "a sock"], "Ask someone to help."],
+  ["Which sentence shows you are trying hard?", "I will keep trying.", ["I quit.", "I will not."], "Keep going."],
+  ["What can you say when you do something well?", "I did it!", ["I can't.", "Not me."], "Be proud of yourself."],
+  ["What can you say when you want help?", "Can you help me, please?", ["Go away.", "Nothing."], "Ask politely."],
+  ["Which face shows “I am stuck”?", "A puzzled face", ["A sleeping face", "A laughing face"], "A puzzled face shows confusion."],
+  ["Which face shows “I got it!”?", "A big smile", ["A frown", "Closed eyes"], "A smile shows you got it."],
+  ["What is a good goal for today?", "Read one book", ["Do everything at once", "Never try"], "A small goal is easy to reach.", true],
+  ["You moved a sticker up a chart. It shows…", "you are learning", ["you are done forever", "you are lost"], "Charts show how far you have come.", true],
+  ["What can you tell a friend about your day?", "something you learned", ["nothing at all", "a shoe"], "Share what you learned.", true],
+];

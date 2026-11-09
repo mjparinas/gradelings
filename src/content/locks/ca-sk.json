@@ -227,7 +227,7 @@
   "2/social": {
     "overview": "b1dbd65906",
     "units": [
-      "needs-and-wants text=8192b43423 std=bd6af94407 q=d91ff3aeff",
+      "needs-and-wants text=8192b43423 std=bd6af94407 q=619b8574d0",
       "communities-in-canada text=85e762a220 std=4a90fe8e76 q=62daf1b4ed",
       "groups-in-our-community text=79a3313355 std=27bc481c90 q=9f245b3885",
       "then-and-now text=adcb461d8f std=d7320a9959 q=ae17feafab",
@@ -655,10 +655,10 @@
   "7/science": {
     "overview": "d74d9c2d8e",
     "units": [
-      "ecosystems-7 text=7f94e0036b std=ed96b747ae q=2aeec5ed64",
+      "ecosystems-7 text=7f94e0036b std=ed96b747ae q=041251a723",
       "food-chains-7 text=fef8ede051 std=12bba9ff87 q=cf2a8de2af",
       "cycles-succession-7 text=966cbdbe7e std=428ecdec66 q=b441c409c3",
-      "human-impact-7 text=f6bc8439e8 std=a582429b53 q=c4030de692",
+      "human-impact-7 text=f6bc8439e8 std=a582429b53 q=79b173657f",
       "particles-mixtures-7 text=03fc7e2a6b std=098f025632 q=c8c3cfefc6",
       "solutions-separation-7 text=2f7dc8f574 std=f7ec8f5c29 q=00f34299b3",
       "heat-particles-7 text=0b575e82c8 std=0996e9b5ae q=ec2f2fb08f",
@@ -843,8 +843,8 @@
   "9/science": {
     "overview": "f87419bdef",
     "units": [
-      "cells-from-cells text=bf9b3d6d2e std=824392e426 q=403cd47249",
-      "reproduction text=d702789bd4 std=c68d2c82a8 q=89792aacac",
+      "cells-from-cells text=bf9b3d6d2e std=824392e426 q=d8fef1a729",
+      "reproduction text=d702789bd4 std=c68d2c82a8 q=c9637838d5",
       "atoms-9 text=0fd6c7ecf2 std=a9f886ee62 q=5412669a33",
       "periodic-table-9 text=d006b85cec std=c82c6c8417 q=0f98494808",
       "compounds-9 text=e809c7578c std=3af568fca2 q=799a9bf54a",

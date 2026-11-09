@@ -215,7 +215,7 @@
   "2/social": {
     "overview": "7d707dcc35",
     "units": [
-      "needs-and-wants text=8192b43423 std=1e01c36d9e q=d91ff3aeff",
+      "needs-and-wants text=8192b43423 std=1e01c36d9e q=619b8574d0",
       "communities-in-canada text=85e762a220 std=b9efd1a0e1 q=62daf1b4ed",
       "caring-citizens text=774323e412 std=1019f70387 q=8411a16f0e",
       "lands-and-waters text=326183a293 std=0ce3b23e36 q=232220e4f6",
@@ -783,10 +783,10 @@
   "9/science": {
     "overview": "4b69c36362",
     "units": [
-      "cells-from-cells text=bf9b3d6d2e std=fd526a4c9d q=403cd47249",
-      "reproduction text=d702789bd4 std=373c2a2aeb q=89792aacac",
+      "cells-from-cells text=bf9b3d6d2e std=fd526a4c9d q=d8fef1a729",
+      "reproduction text=d702789bd4 std=373c2a2aeb q=c9637838d5",
       "atoms-and-electrons text=5dc2e26422 std=a527ea9a78 q=157481b107",
-      "bonding-and-reactions text=8a0ea04bc7 std=85ce2722db q=a326d57dc9",
+      "bonding-and-reactions text=8a0ea04bc7 std=85ce2722db q=05ec43f844",
       "electric-current text=2c145f84d8 std=d788d90110 q=7692c8ff45",
       "ecosystems text=6e11cab288 std=8fcbd39f11 q=135b633d91"
     ]
@@ -795,12 +795,12 @@
     "overview": "289d85afe3",
     "units": [
       "enlightenment-and-revolutions text=94941f2bbe std=cafac90a03 q=1d7628817f",
-      "industrial-revolution text=690c34bbf6 std=7b1b78bc0a q=53fcb9cba3",
+      "industrial-revolution text=690c34bbf6 std=7b1b78bc0a q=2129df6263",
       "imperialism-and-colonialism text=3b0457b5a1 std=0a7544149d q=4ca64d82d5",
       "confederation-and-expansion text=b8314d79ac std=39437d5391 q=0262e2890d",
       "indigenous-peoples-and-canada text=c0a85083d3 std=e2adf1508d q=80613d4584",
-      "migration-and-population text=a1bebd9498 std=b6f40f828b q=57f835fc81",
-      "canadas-landscapes text=5175fa39ff std=35d46dd04a q=0867df985a",
+      "migration-and-population text=a1bebd9498 std=b6f40f828b q=d91e949706",
+      "canadas-landscapes text=5175fa39ff std=35d46dd04a q=3b19aa43c2",
       "world-war-i text=dff07115c6 std=b0d2dd5883 q=774c446c5f"
     ]
   },

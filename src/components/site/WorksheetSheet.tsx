@@ -56,7 +56,7 @@ export function WorksheetSheet({ s }: { s: WorksheetSkill }) {
           {unit.emoji}
         </span>
         <div className="flex-1">
-          <h1 className="text-4xl font-bold print:text-3xl">
+          <h1 className="text-4xl font-bold print:text-2xl">
             {label} {unit.title} worksheet
           </h1>
           <p className="font-read text-lg">from {APP_NAME} · Name: ______________________</p>
@@ -84,20 +84,17 @@ export function WorksheetSheet({ s }: { s: WorksheetSkill }) {
         </section>
       )}
 
-      <ol className="mt-6 grid items-start gap-4 md:grid-cols-2 print:block print:space-y-4">
+      <ol className="mt-6 grid items-start gap-4 md:grid-cols-2 print:mt-2 print:block print:columns-2 print:gap-2 print:[zoom:0.62]">
         {items.map((q, i) => (
           <SampleQuestion key={i} q={q} n={i + 1} seedText={`${path}#${i}`} className="print:break-inside-avoid" />
         ))}
       </ol>
-      <p className="mt-6 hidden rounded-xl border-2 border-line p-3 font-read text-lg print:block print:break-inside-avoid">
-        <b>More {label} {word} practice, with new questions every time:</b> {absolute(worksheetPath.hub()).replace(/^https?:\/\//, "")} · Free for {TRIAL_DAYS} days, no card needed.
-      </p>
 
-      <section aria-labelledby="key" className="mt-10 rounded-3xl bg-white p-6 print:break-before-page">
+      <section aria-labelledby="key" className="mt-10 rounded-3xl bg-white p-6 print:break-before-page print:mt-0 print:p-0">
         <h2 id="key" className="text-2xl font-bold">
           Answer key
         </h2>
-        <ol className="mt-3 grid gap-x-8 gap-y-1 font-read text-lg sm:grid-cols-2">
+        <ol className="mt-3 grid gap-x-8 gap-y-1 font-read text-lg sm:grid-cols-2 print:mt-1 print:gap-y-0.5 print:text-sm">
           {items.map((q, i) => (
             <li key={i}>
               <b>{i + 1}.</b> {answerText(q)}
@@ -105,6 +102,10 @@ export function WorksheetSheet({ s }: { s: WorksheetSkill }) {
           ))}
         </ol>
       </section>
+
+      <p className="mt-4 hidden rounded-xl border-2 border-line p-3 font-read text-lg print:mt-2 print:block print:p-1.5 print:text-sm print:break-inside-avoid">
+        <b>More {label} {word} practice, with new questions every time:</b> {absolute(worksheetPath.hub()).replace(/^https?:\/\//, "")} · Free for {TRIAL_DAYS} days, no card needed.
+      </p>
 
       <section className="card mt-10 flex flex-col flex-wrap gap-3 p-6 print:hidden sm:flex-row sm:items-center">
         <div className="flex-1">
