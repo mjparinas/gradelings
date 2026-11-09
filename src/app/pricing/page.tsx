@@ -50,7 +50,7 @@ export default function PricingPage() {
         </h2>
         <ol className="mt-4 flex list-decimal flex-col gap-3 pl-6 font-read text-lg">
           <li>
-            <b>Subscribe now, or start free.</b> You can pay straight away. Or your first {TRIAL_DAYS} days have everything switched on, with no card, and we never charge you when the trial ends.
+            <b>Subscribe now, or start free.</b> You can pay straight away. Or your first {TRIAL_DAYS} days have everything switched on, with no card, and nothing is charged when the trial ends. If you subscribe during the trial, you keep your free days and your first payment is taken when it ends.
           </li>
           <li>
             <b>After the trial, the free plan stays.</b> The first {FREE_UNITS_PER_COURSE} units of every course remain open. Adventure, Review, Speed Run, Challenge, the arcade games, units {FREE_UNITS_PER_COURSE + 1} and up, and the full parent reports (every unit, charts, the report-card conversation sheet and Year in review) need the family plan; a report summary stays free. Progress is never deleted: it is waiting if you subscribe later.

@@ -2,6 +2,7 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 import { APP_NAME, socialLinks, WORDMARK_COLOURS } from "@/lib/brand";
+import { TRIAL_DAYS } from "@/lib/plan";
 import { PageCta, SiteFooter, SiteHeader, SubscribeActions } from "./SiteChrome";
 
 // next.config.ts sets trailingSlash, which next/link reads from this variable.
@@ -91,7 +92,7 @@ describe("which button leads", () => {
 
   it("words the closing call to action the same way round", () => {
     render(<PageCta lead="trial" />);
-    expect(screen.getByText(/Try everything free for 30 days with no card, then subscribe if it helps\./)).toBeInTheDocument();
+    expect(screen.getByText(new RegExp(`Try everything free for ${TRIAL_DAYS} days with no card, then subscribe if it helps\\.`))).toBeInTheDocument();
   });
 });
 
@@ -102,7 +103,7 @@ describe("the short closing call to action", () => {
     const text = container.textContent ?? "";
     expect(text).not.toMatch(/ in /);
     expect(text.length).toBeLessThan(full.length);
-    expect(text).toMatch(/try everything free for 30 days with no card/i);
+    expect(text).toMatch(new RegExp(`try everything free for ${TRIAL_DAYS} days with no card`, "i"));
     expect(screen.getAllByRole("link", { name: "See pricing" }).length).toBeGreaterThan(0);
   });
 });
