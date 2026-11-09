@@ -5,7 +5,13 @@ import type { FamilyInfo } from "./model";
 // Subscription plans and what each one unlocks. Tune these numbers freely:
 // the whole app reads them from here.
 
-export const TRIAL_DAYS = 30;
+export const TRIAL_DAYS = 14;
+/** The mid-trial recap email goes out from the trial's halfway point (`TRIAL_DAYS / 2` days left)... */
+export const TRIAL_RECAP_DAYS_LEFT = Math.ceil(TRIAL_DAYS / 2);
+/** ...until the "trial ends soon" notice takes over this many days before the end. */
+export const TRIAL_NOTICE_DAYS = 3;
+/** The last stretch of the trial: the save-progress card asks once a day from here on. */
+export const TRIAL_FINAL_STRETCH_DAYS = Math.ceil(TRIAL_DAYS / 4);
 export const FREE_UNITS_PER_COURSE = 2;
 export const MAX_CHILDREN = 5;
 /** Any payment is refunded in full when the parent asks within this many days of it. */

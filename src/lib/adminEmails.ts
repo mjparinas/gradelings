@@ -1,5 +1,5 @@
 import { APP_NAME } from "./brand";
-import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, SUBSCRIBE_HREF } from "./plan";
+import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, SUBSCRIBE_HREF, TRIAL_RECAP_DAYS_LEFT } from "./plan";
 
 // Emails the owner sends from the admin panel: ready-made messages and the groups they can go to. Shared by
 // the panel (to preview) and the server (to send). `{children}` becomes the children's first names only when the
@@ -116,7 +116,7 @@ export const SEGMENTS = {
   "no-child": { audience: "parents", name: "No child added", description: "Signed up 1 to 60 days ago and hasn't added a child. Teachers are left out." },
   "tried-few": { audience: "parents", name: "Tried it, then stopped", description: "Practised on only 1 or 2 days, nothing in the last 3 days, not paying." },
   "engaged-not-paying": { audience: "parents", name: "Practising often, not paying", description: "Practised on 3 or more days, not paying, no code access." },
-  "trial-ending": { audience: "parents", name: "Trial ending", description: "Trial ends in the next 7 days, not paying, no code access." },
+  "trial-ending": { audience: "parents", name: "Trial ending", description: `Trial ends in the next ${TRIAL_RECAP_DAYS_LEFT} days, not paying, no code access.` },
   "trial-over": { audience: "parents", name: "Trial over, not paying", description: "Trial ended in the last 60 days, not paying, no code access." },
   cancelled: { audience: "parents", name: "Cancelled", description: "Cancelled a subscription in the last 90 days." },
   "teacher-no-class": { audience: "teachers", name: "Teachers: no class yet", description: "Teacher account made 2 to 60 days ago that hasn't started a class." },

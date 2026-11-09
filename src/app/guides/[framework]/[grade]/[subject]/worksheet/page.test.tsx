@@ -6,6 +6,7 @@ import { coursesFor, gradesWithContent } from "@/components/site/curriculum";
 import { getFramework } from "@/content/frameworks";
 import { GUIDE_FRAMEWORKS } from "@/content/guides";
 import { gradeSlug } from "@/content/subjects";
+import { TRIAL_DAYS } from "@/lib/plan";
 import WorksheetPage, { generateMetadata, generateStaticParams } from "./page";
 
 // next.config.ts sets trailingSlash, which next/link reads from this variable.
@@ -71,7 +72,7 @@ describe("printable practice sheet", () => {
     expect(screen.getByRole("link", { name: "See all English language arts units" })).toHaveAttribute("href", "/curriculum/new-brunswick/grade-2/language/");
     expect(screen.getByRole("link", { name: "Try it free" })).toHaveAttribute("href", expect.stringMatching(/^\/play\/#\/start\?framework=[a-z-]+/));
     // The printed sheet says where the rest of the practice is, since paper has no links.
-    expect(screen.getByText(/More Grade 2 English Language Arts practice/).closest("p")).toHaveTextContent(/\/curriculum\/new-brunswick\/grade-2\/language\/ · Free for 30 days, no card needed\./);
+    expect(screen.getByText(/More Grade 2 English Language Arts practice/).closest("p")).toHaveTextContent(new RegExp(`/curriculum/new-brunswick/grade-2/language/ · Free for ${TRIAL_DAYS} days, no card needed\\.`));
   });
 
   it("can be shared, or saved to Pinterest with its tall image", async () => {

@@ -140,7 +140,7 @@ export function Insights() {
         part="trial"
         id="ins-trial"
         title="Trial to Paid"
-        intro="Families whose 30-day trial ended in the last 120 days (code access leaves out). Practice days count days with an answer in the first 30 days after sign-up. Paid means a payment not refunded in full or a live subscription. Taps on locked units and members-only reports aren't recorded; “started more than the free units” is the closest signal."
+        intro="Families whose free trial ended in the last 120 days (code access leaves out). Practice days count days with an answer in the first 30 days after sign-up. Paid means a payment not refunded in full or a live subscription. Taps on locked units and members-only reports aren't recorded; “started more than the free units” is the closest signal."
       >
         {(t) => (
           <>
