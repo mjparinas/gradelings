@@ -41,6 +41,14 @@ beforeEach(() => {
 const card = (name: string) => screen.getByText(name, { selector: "p.text-xl" }).closest("section")!;
 
 describe("Overview", () => {
+  it("opens each child's card with a warm highlight and one next step", () => {
+    render(<Overview />);
+    expect(within(card("Ava")).getByText(/ready to start/)).toBeInTheDocument();
+    act(() => useStore.setState({ events: answers("a", Date.now() - 60_000, 12, 10) }));
+    expect(within(card("Ava")).getByText(/practised on 1 day this week/)).toBeInTheDocument();
+    expect(within(card("Ava")).getByText(/right on the first try/)).toBeInTheDocument();
+  });
+
   it("nudges a parent without an account to back up progress", () => {
     render(<Overview />);
     expect(screen.getByText(/Progress is saved on this device only\./)).toBeInTheDocument();
