@@ -31,7 +31,7 @@ function rawWhere(segment: Segment, now: number): { sql: string; args: number[] 
     case "never-practised":
       return { sql: "f.created_at < ? AND NOT EXISTS (SELECT 1 FROM events e WHERE e.family_id = f.id)", args: [now - 2 * DAY] };
     case "no-child":
-      return { sql: `f.created_at < ? AND f.created_at > ? AND NOT EXISTS (SELECT 1 FROM profiles pr WHERE pr.family_id = f.id AND ${LIVE_PROFILE})`, args: [now - 2 * DAY, now - 60 * DAY] };
+      return { sql: `f.created_at < ? AND f.created_at > ? AND NOT EXISTS (SELECT 1 FROM profiles pr WHERE pr.family_id = f.id AND ${LIVE_PROFILE})`, args: [now - 1 * DAY, now - 60 * DAY] };
     case "tried-few":
       return { sql: `f.plan != 'premium' AND ${PRACTICE_DAYS} BETWEEN 1 AND 2 AND ${LAST_PRACTICE} < ?`, args: [now - 3 * DAY] };
     case "engaged-not-paying":

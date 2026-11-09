@@ -248,6 +248,15 @@ describe("automatic nudges", () => {
     expect((await post(automations, "/api/admin/automations/", { id: "nope", action: "switch", on: true, confirm: "TURN ON" })).status).toBe(404);
   });
 
+  it("the add-your-child group starts the day after sign-up, not before", async () => {
+    await account("no-child-fresh@example.com", { createdAgo: 12 * 3_600_000 });
+    await account("no-child-next-day@example.com", { createdAgo: 30 * 3_600_000 });
+    const status = (await auto.automationStatuses()).find((s) => s.id === "no-child")!;
+    const base = status.waiting;
+    await account("no-child-next-day-2@example.com", { createdAgo: 26 * 3_600_000 });
+    expect((await auto.automationStatuses()).find((s) => s.id === "no-child")!.waiting).toBe(base + 1);
+  });
+
   it("send nothing while off", async () => {
     const quiet = await account("no-child-1@example.com", { createdAgo: 4 * DAY });
     expect(await auto.runAutomations("http://localhost")).toEqual({});

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AVAILABLE_GRADES } from "@/content";
 import { getFramework, type Framework } from "@/content/frameworks";
 import { getSubjectMeta, gradeForAge, subjectInSentence } from "@/content/subjects";
@@ -126,7 +126,26 @@ export function ChildrenPage() {
   const setActive = useStore((s) => s.setActive);
   const [editing, setEditing] = useState<Profile | "new" | null>(null);
   const [draft, setDraft] = useState<Draft | null>(null);
+  /** Set when this page was opened from the email confirmation page: after the first child is saved, the next step is a first session. */
+  const [firstStart, setFirstStart] = useState(false);
+  const [started, setStarted] = useState<string | null>(null);
   const [confirm, setConfirm] = useState<{ kind: "remove" | "reset"; p: Profile } | null>(null);
+
+  // Coming from the email confirmation page (`?addchild=1`) with nobody added yet: open the form at once, because a
+  // confirmed family with no child was the funnel's biggest drop.
+  useEffect(() => {
+    const url = new URL(window.location.href);
+    if (url.searchParams.get("addchild") !== "1") return;
+    url.searchParams.delete("addchild");
+    window.history.replaceState(null, "", url.pathname + url.search + url.hash);
+    if (useStore.getState().profiles.filter((p) => !p.deleted).length === 0) {
+      queueMicrotask(() => {
+        setFirstStart(true);
+        setEditing("new");
+        setDraft({ name: "", grade: "2", framework: "ca-bc", avatar: "ollie", colour: AVATAR_COLOURS[0] });
+      });
+    }
+  }, []);
 
   const startEdit = (p: Profile | "new") => {
     setEditing(p);
@@ -141,8 +160,12 @@ export function ChildrenPage() {
     if (!draft || !draft.name.trim()) return;
     if (editing === "new") {
       const prev = activeId;
-      addProfile(draft);
-      setActive(prev);
+      const id = addProfile(draft);
+      if (firstStart) {
+        // The first child is who plays next, so the "Start" link opens their Adventure.
+        setActive(id);
+        setStarted(draft.name.trim());
+      } else setActive(prev);
     } else if (editing) updateProfile(editing.id, { ...draft, name: draft.name.trim() });
     setEditing(null);
   };
@@ -160,6 +183,14 @@ export function ChildrenPage() {
           )
         }
       />
+      {started && (
+        <Panel>
+          <p className="mb-3 text-lg font-bold">{started} is all set. Ten minutes is enough to see how it works, and the free trial has everything open.</p>
+          <a href="/play/" className="rounded-xl bg-[#25b47e] px-4 py-3 font-bold text-[#0f172a]">
+            Start {started}&rsquo;s first session
+          </a>
+        </Panel>
+      )}
       <div className="grid gap-4 md:grid-cols-2">
         {profiles.map((p) => (
           <Panel key={p.id}>

@@ -91,7 +91,7 @@ describe("printable practice sheet", () => {
 
   it("builds metadata and 404s a subject that isn't taught", async () => {
     const meta = await generateMetadata(props("yukon", "grade-7", "math"));
-    expect(meta.title).toBe("Free printable Grade 7 Math practice sheet (Yukon)");
+    expect(meta.title).toBe("Free printable Grade 7 Math worksheet (Yukon)");
     expect(meta.alternates?.canonical).toBe("/guides/yukon/grade-7/math/worksheet/");
     expect(meta.description).toContain("Yukon Curriculum");
     expect(await generateMetadata(props("ontario", "kindergarten", "core-french"))).toEqual({});
