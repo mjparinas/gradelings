@@ -24,6 +24,27 @@ export const NEWS_KIND_LABEL: Record<NewsItem["kind"], string> = {
 
 export const WHATS_NEW: NewsDay[] = [
   {
+    day: "2026-11-07",
+    headline: "Many more questions to practise, new things to read, and a fix for school networks",
+    items: [
+      {
+        kind: "new",
+        title: "More practice questions in language, science and French",
+        body: "Grade 8 and Grade 9 language arts, Grade 8 science, Grade 5, 6 and 7 Core French and Kindergarten French Immersion have many more questions, so a unit stays fresh for longer. Grade 9 language arts is also deeper in Manitoba, and Washington and South Dakota social studies have more questions too.",
+      },
+      {
+        kind: "new",
+        title: "More articles and Explore cards",
+        body: "Twelve new short articles and 48 new Explore cards, on science and our world topics families often ask about. They are read along, and nothing is scored or saved.",
+      },
+      {
+        kind: "fixed",
+        title: "Lessons no longer get stuck on some school networks",
+        body: "On a few school networks, a web filter could block part of the app and leave a child on a loading screen. The app now says plainly that the network blocked something, and Try again works.",
+      },
+    ],
+  },
+  {
     day: "2026-11-06",
     headline: "A clearer refund promise, a nudge to save progress, and more Ontario practice",
     items: [
