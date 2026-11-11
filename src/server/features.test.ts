@@ -201,7 +201,8 @@ describe("daily email job", () => {
     await prefs.POST(req("/api/account/prefs/", "POST", { weeklyReport: true }, f.cookie));
 
     vi.useFakeTimers({ toFake: ["Date"] });
-    vi.setSystemTime(new Date(Date.now() + ((3 - new Date().getUTCDay() + 7) % 7 || 7) * 86_400_000)); // a Wednesday... then check
+    // Tomorrow, or the day after when tomorrow is a Sunday: a short hop keeps other timed emails (trial recaps) from falling due.
+    vi.setSystemTime(new Date(Date.now() + (new Date(Date.now() + 86_400_000).getUTCDay() === 0 ? 2 : 1) * 86_400_000));
     const notSunday = new Date().getUTCDay() !== 0;
     expect(notSunday).toBe(true);
     const before = email.outbox().length;
