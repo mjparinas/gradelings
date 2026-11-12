@@ -310,12 +310,15 @@ describe("users list", () => {
 
 describe("the inbox", () => {
   const received = { id: "rcv-1", from: "Pat <todo-trial@example.com>", to: ["hello@example.com"], subject: "A question", created_at: new Date().toISOString(), attachments: [] };
+  // Mail the same Resend account received for another product's domain.
+  const other = { id: "rcv-other", from: "Sam <sam@elsewhere.test>", to: ["hello@other-app.test"], subject: "Not ours", created_at: new Date().toISOString(), attachments: [] };
   let sent: { url: string; body: Record<string, unknown> }[] = [];
   beforeEach(() => {
     process.env.RESEND_API_KEY = "re_test";
     process.env.EMAIL_FROM = "App <hello@example.com>";
     process.env.RESEND_API_BASE = "https://resend.test";
     process.env.RESEND_API_URL = "https://resend.test/emails";
+    process.env.INBOX_DOMAINS = "example.com";
     sent = [];
     vi.stubGlobal(
       "fetch",
@@ -324,7 +327,8 @@ describe("the inbox", () => {
           sent.push({ url, body: JSON.parse(String(init.body)) });
           return new Response(JSON.stringify({ id: "re_reply" }));
         }
-        if (url.startsWith("https://resend.test/emails/receiving?")) return new Response(JSON.stringify({ data: [received], has_more: false }));
+        if (url.startsWith("https://resend.test/emails/receiving?")) return new Response(JSON.stringify({ data: [other, received], has_more: false }));
+        if (url === "https://resend.test/emails/receiving/rcv-other") return new Response(JSON.stringify({ ...other, text: "Someone else's mail" }));
         if (url === "https://resend.test/emails/receiving/rcv-1")
           return new Response(
             JSON.stringify({
@@ -340,13 +344,22 @@ describe("the inbox", () => {
   });
   afterEach(() => {
     vi.unstubAllGlobals();
-    for (const k of ["RESEND_API_KEY", "EMAIL_FROM", "RESEND_API_BASE", "RESEND_API_URL"]) delete process.env[k];
+    for (const k of ["RESEND_API_KEY", "EMAIL_FROM", "RESEND_API_BASE", "RESEND_API_URL", "INBOX_DOMAINS"]) delete process.env[k];
   });
 
   it("says when email isn't set up", async () => {
     delete process.env.RESEND_API_KEY;
     expect(await (await get(inbox, "/api/admin/inbox/")).json()).toMatchObject({ configured: false, items: [] });
     expect(await (await get(inbox, "/api/admin/inbox/?count=1")).json()).toMatchObject({ waiting: 0 });
+  });
+
+  it("leaves out mail the shared Resend account received for another domain", async () => {
+    const list = (await (await get(inbox, "/api/admin/inbox/")).json()) as { items: { id: string }[] };
+    expect(list.items.map((i) => i.id)).toEqual(["rcv-1"]);
+    expect((await get(inbox, "/api/admin/inbox/?id=rcv-other")).status).toBe(502);
+    expect((await get(inboxView, "/api/admin/inbox/view/?id=rcv-other")).status).toBe(502);
+    const todo = ((await (await get(queue, "/api/admin/queue/")).json()) as { items: { key: string }[] }).items;
+    expect(todo.some((i) => i.key === "inbox:rcv-other")).toBe(false);
   });
 
   it("lists received mail, matched to the account, and shows it as plain text", async () => {

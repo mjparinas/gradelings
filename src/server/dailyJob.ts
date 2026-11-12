@@ -310,10 +310,12 @@ async function trialRecaps(ctx: Ctx): Promise<boolean> {
   );
   for (const t of recaps) {
     if (ctx.over()) return false;
-    ctx.worked++;
     try {
       const children = await trialChildren(t.family_id, now);
+      // A family with no practice gets no recap and is never marked, so it must not count as work: with a tight budget,
+      // a resumed run would otherwise stop on the same family every time and never reach the later phases.
       if (!children.some((c) => c.answers > 0)) continue;
+      ctx.worked++;
       const daysLeft = Math.max(1, Math.ceil((Number(t.trial_ends_at) - now) / DAY));
       const sent = await sendEmail(trialRecapEmail(t.email, origin, daysLeft, children, toCountryCode(t.country)));
       if (sent.ok) {
