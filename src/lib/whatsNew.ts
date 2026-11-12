@@ -24,6 +24,32 @@ export const NEWS_KIND_LABEL: Record<NewsItem["kind"], string> = {
 
 export const WHATS_NEW: NewsDay[] = [
   {
+    day: "2026-11-07",
+    headline: "More cards and articles to explore, free Spanish pages, and a fix for school web filters",
+    items: [
+      {
+        kind: "new",
+        title: "48 more Explore cards and 12 more articles",
+        body: "Explore cards and Articles have many more topics, chosen from what families search for. Like the rest of that corner, they are read along, nothing is scored, and nothing counts as practice.",
+      },
+      {
+        kind: "new",
+        title: "Free Spanish pages for Grades 3 to 9",
+        body: "Anyone can now look at what a beginner Spanish course covers, grade by grade and unit by unit, with sample questions. The Spanish course in the app itself is not switched on yet.",
+      },
+      {
+        kind: "fixed",
+        title: "A loading screen that never ended on some school networks",
+        body: "On some school networks, a web filter blocked part of a lesson and the app stayed on its loading screen, even after tapping Try again. Now the app says the network blocked part of it, and Try again reloads the page so it can start over.",
+      },
+      {
+        kind: "new",
+        title: "More practice questions in French, language arts, science and social studies",
+        body: "Grade 8 science, Grade 8 and 9 language arts, Kindergarten French Immersion, Grades 5 to 7 Core French, Manitoba Grade 9 language arts, and Washington and South Dakota social studies all have more questions, so practice stays fresh for longer.",
+      },
+    ],
+  },
+  {
     day: "2026-11-06",
     headline: "A clearer refund promise, a nudge to save progress, and more Ontario practice",
     items: [
