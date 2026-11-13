@@ -83,6 +83,11 @@ export const WHATS_NEW: NewsDay[] = [
         title: "Lessons no longer get stuck on some school networks",
         body: "On a few school networks, a web filter could block part of the app and leave a child on a loading screen. The app now says plainly that the network blocked something, and Try again works.",
       },
+      {
+        kind: "new",
+        title: "Free Spanish pages for Grades 3 to 9",
+        body: "Anyone can now look at what a beginner Spanish course covers, grade by grade and unit by unit, with sample questions. The Spanish course in the app itself is not switched on yet.",
+      },
     ],
   },
   {
