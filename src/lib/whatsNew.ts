@@ -24,6 +24,47 @@ export const NEWS_KIND_LABEL: Record<NewsItem["kind"], string> = {
 
 export const WHATS_NEW: NewsDay[] = [
   {
+    day: "2026-11-08",
+    headline: "Answer out loud in the early years, a warm weekly highlight for parents, and shorter free trials",
+    items: [
+      {
+        kind: "new",
+        title: "Children in Pre-K to Grade 1 can answer out loud",
+        body: "Some questions, such as naming a picture or counting, can now be answered by speaking. It is switched on for Pre-K to Grade 1, and a parent can turn it off for any child in Settings. The listening happens on the device, and nothing a child says is sent or saved.",
+      },
+      {
+        kind: "new",
+        title: "A warm highlight for each child on the Overview",
+        body: "Each child's card now opens with a short, kind summary of their last seven days and one small next step, such as the lesson that is closest to growing a level. A quiet week gets a gentle note, never a scolding.",
+      },
+      {
+        kind: "new",
+        title: "More Explore cards and a web page for each one",
+        body: "Eight new Explore cards for children in Pre-K to Grade 1. Every Explore card and article also has its own page on the website, so families can read them together without signing in.",
+      },
+      {
+        kind: "new",
+        title: "The free trial is now 14 days",
+        body: "New families get 14 days with everything open and no card needed. After that, the first 2 units of every course stay free.",
+      },
+      {
+        kind: "fixed",
+        title: "Printable worksheets fit on one page",
+        body: "Each worksheet's questions now fit on a single printed page, with the answer key on page 2.",
+      },
+      {
+        kind: "new",
+        title: "Many more practice questions",
+        body: "Manitoba language arts (Kindergarten to Grade 8), Grade 7 and 8 social studies in Alberta, Grade 8 social studies in Ontario, Grade 7 science units and Grade 9 science and social studies have many more questions, along with several US state social studies courses, so units stay fresh for longer.",
+      },
+      {
+        kind: "teachers",
+        title: "See who is doing really well",
+        body: "The class view and the Monday class email now point out students who are doing especially well, not only the ones who could use a check-in, so there is someone to give a high five to.",
+      },
+    ],
+  },
+  {
     day: "2026-11-07",
     headline: "Many more questions to practise, new things to read, and a fix for school networks",
     items: [
