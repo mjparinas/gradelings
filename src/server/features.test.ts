@@ -201,7 +201,8 @@ describe("daily email job", () => {
     await prefs.POST(req("/api/account/prefs/", "POST", { weeklyReport: true }, f.cookie));
 
     vi.useFakeTimers({ toFake: ["Date"] });
-    vi.setSystemTime(new Date(Date.now() + ((3 - new Date().getUTCDay() + 7) % 7 || 7) * 86_400_000)); // a Wednesday... then check
+    // Tomorrow, or the day after when tomorrow is a Sunday: a short hop keeps other timed emails (trial recaps) from falling due.
+    vi.setSystemTime(new Date(Date.now() + (new Date(Date.now() + 86_400_000).getUTCDay() === 0 ? 2 : 1) * 86_400_000));
     const notSunday = new Date().getUTCDay() !== 0;
     expect(notSunday).toBe(true);
     const before = email.outbox().length;
@@ -217,7 +218,6 @@ describe("daily email job", () => {
     const mail = email.outbox().filter((m) => m.to === "weekly@example.com" && m.subject.includes("week")).at(-1)!;
     expect(mail.text).toContain("Maya");
     expect(mail.text).toContain("Leo");
-    expect(mail.text).toContain("report-card mark");
     expect(mail.unsubscribeUrl).toContain("/api/email/unsubscribe/?token=");
 
     const count = email.outbox().length;
@@ -350,14 +350,13 @@ describe("daily email job", () => {
     await dbm.run("DELETE FROM events WHERE family_id = ?", [idle.familyId]);
     await dbm.run("UPDATE families SET trial_ends_at = ? WHERE id IN (?, ?, ?)", [Date.now() + 7 * 86_400_000, practised.familyId, unconfirmed.familyId, idle.familyId]);
     await run();
-    const recaps = () => email.outbox().filter((m) => m.subject.includes("what your trial has done"));
+    const recaps = () => email.outbox().filter((m) => m.subject.includes("trial has done"));
     expect(recaps().map((m) => m.to)).toEqual(expect.arrayContaining(["recap-yes@example.com"]));
     expect(recaps().map((m) => m.to)).not.toContain("recap-unconfirmed@example.com");
     expect(recaps().map((m) => m.to)).not.toContain("recap-idle@example.com");
     const mail = recaps().find((m) => m.to === "recap-yes@example.com")!;
     expect(mail.text).toContain("Maya has practised on 1 day");
-    expect(mail.text).toContain("report-card mark");
-    expect(mail.text).toContain("Subscribe: ");
+    expect(mail.text).toContain("Keep everything open: ");
     expect(mail.text).toContain("/parents/#/subscription");
     const n = recaps().length;
     await run();
@@ -369,7 +368,7 @@ describe("daily email job", () => {
     const last = email.outbox().filter((m) => m.to === "recap-yes@example.com" && m.subject.includes("free trial ends")).at(-1)!;
     expect(last.text).toContain("Here's what the trial has done");
     expect(last.text).toContain("Maya");
-    expect(last.text).toContain("Subscribe: ");
+    expect(last.text).toContain("Keep everything open: ");
     expect(last.text).toContain("/parents/#/subscription");
   });
 

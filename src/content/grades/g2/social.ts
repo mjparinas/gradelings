@@ -80,10 +80,217 @@ const NEEDS_BANK: BankItem[] = [
     ],
     hint: "Farmers grow fruit, vegetables and grain, and raise animals.",
   },
+  {
+    prompt: "Which one is a need?",
+    right: { label: "healthy food", emoji: "🥕" },
+    wrong: [
+      { label: "a stuffed bunny", emoji: "🧸" },
+      { label: "a big balloon", emoji: "🎈" },
+    ],
+    hint: "A need is something we must have to live and stay healthy.",
+  },
+  {
+    prompt: "Which one is a need?",
+    right: { label: "a warm place to sleep", emoji: "🛏️" },
+    wrong: [
+      { label: "a toy car", emoji: "🚗" },
+      { label: "a movie night", emoji: "🎬" },
+    ],
+    hint: "We need shelter and rest to stay well.",
+  },
+  {
+    prompt: "Which one is a need?",
+    right: { label: "a warm coat in winter", emoji: "🧥" },
+    wrong: [
+      { label: "a sticker book", emoji: "📒" },
+      { label: "a toy drum", emoji: "🥁" },
+    ],
+    hint: "Clothes that keep us warm are a need.",
+  },
+  {
+    prompt: "Which one is a need?",
+    right: { label: "medicine when sick", emoji: "💊" },
+    wrong: [
+      { label: "a party hat", emoji: "🎉" },
+      { label: "a board game", emoji: "🎲" },
+    ],
+    hint: "Getting care when we are sick is a need.",
+  },
+  {
+    prompt: "Which one is a need?",
+    right: { label: "fresh water to drink", emoji: "🚰" },
+    wrong: [
+      { label: "fancy shoelaces", emoji: "👟" },
+      { label: "a puzzle", emoji: "🧩" },
+    ],
+    hint: "Every living thing needs water.",
+  },
+  {
+    prompt: "Which one is a need?",
+    right: { label: "a safe home", emoji: "🏠" },
+    wrong: [
+      { label: "a new bike", emoji: "🚲" },
+      { label: "a toy fish", emoji: "🐠" },
+    ],
+    hint: "A safe home is a need.",
+  },
+  {
+    prompt: "Which one is a want?",
+    right: { label: "a new bike", emoji: "🚲" },
+    wrong: [
+      { label: "clean water", emoji: "💧" },
+      { label: "a place to live", emoji: "🏠" },
+    ],
+    hint: "We can live without a bike, so it is a want.",
+  },
+  {
+    prompt: "Which one is a want?",
+    right: { label: "candy", emoji: "🍬" },
+    wrong: [
+      { label: "fruit", emoji: "🍎" },
+      { label: "bread", emoji: "🍞" },
+    ],
+    hint: "Candy is a treat. We do not need it to live.",
+  },
+  {
+    prompt: "Which one is a want?",
+    right: { label: "a toy robot", emoji: "🤖" },
+    wrong: [
+      { label: "a blanket", emoji: "🛏️" },
+      { label: "soap", emoji: "🧼" },
+    ],
+    hint: "A toy is fun, but we can live without it.",
+  },
+  {
+    prompt: "Which one is a want?",
+    right: { label: "a fancy hat", emoji: "🎩" },
+    wrong: [
+      { label: "a warm coat", emoji: "🧥" },
+      { label: "clean water", emoji: "💧" },
+    ],
+    hint: "A fancy hat is nice to have. A warm coat is a need in cold weather.",
+  },
+  {
+    prompt: "Which one is a want?",
+    right: { label: "a tablet game", emoji: "🎮" },
+    wrong: [
+      { label: "a doctor's visit", emoji: "🩺" },
+      { label: "supper", emoji: "🍲" },
+    ],
+    hint: "We want games, but we need food and care.",
+  },
+  {
+    prompt: "Which one is a want?",
+    right: { label: "a drum set", emoji: "🥁" },
+    wrong: [
+      { label: "healthy food", emoji: "🥕" },
+      { label: "a bed", emoji: "🛏️" },
+    ],
+    hint: "Music toys are fun. They are a want.",
+  },
+  {
+    prompt: "Which one is a want?",
+    right: { label: "ice cream", emoji: "🍦" },
+    wrong: [
+      { label: "milk", emoji: "🥛" },
+      { label: "rice", emoji: "🍚" },
+    ],
+    hint: "Ice cream is a treat, so it is a want.",
+  },
+  {
+    prompt: "Where can people borrow books for free?",
+    right: { label: "a library", emoji: "📚" },
+    wrong: [
+      { label: "a gas station", emoji: "⛽" },
+      { label: "a bakery", emoji: "🥖" },
+    ],
+    hint: "Libraries lend books to people in the community.",
+  },
+  {
+    prompt: "Who helps put out a fire?",
+    right: { label: "a firefighter", emoji: "🧑‍🚒" },
+    wrong: [
+      { label: "a baker", emoji: "🥖" },
+      { label: "a mail carrier", emoji: "📬" },
+    ],
+    hint: "Firefighters help keep a community safe.",
+  },
+  {
+    prompt: "Where can people buy bread and cakes?",
+    right: { label: "a bakery", emoji: "🥖" },
+    wrong: [
+      { label: "a fire hall", emoji: "🚒" },
+      { label: "a library", emoji: "📚" },
+    ],
+    hint: "A bakery is a shop that sells baked goods.",
+  },
+  {
+    prompt: "Who brings letters and parcels to our homes?",
+    right: { label: "a mail carrier", emoji: "📬" },
+    wrong: [
+      { label: "a dentist", emoji: "🦷" },
+      { label: "a farmer", emoji: "🚜" },
+    ],
+    hint: "Mail carriers help people send and get mail.",
+  },
+  {
+    prompt: "Who takes care of our teeth?",
+    right: { label: "a dentist", emoji: "🦷" },
+    wrong: [
+      { label: "a pilot", emoji: "✈️" },
+      { label: "a baker", emoji: "🥖" },
+    ],
+    hint: "Dentists help keep teeth healthy.",
+  },
+  {
+    prompt: "Where do families go to see a doctor?",
+    right: { label: "a clinic", emoji: "🏥" },
+    wrong: [
+      { label: "a toy store", emoji: "🧸" },
+      { label: "a bus stop", emoji: "🚏" },
+    ],
+    hint: "Clinics and hospitals help people stay well.",
+  },
+  {
+    prompt: "What do people use money for?",
+    right: { label: "to buy things", emoji: "💰" },
+    wrong: [
+      { label: "to make it rain", emoji: "🌧️" },
+      { label: "to grow a tree", emoji: "🌳" },
+    ],
+    hint: "People trade money for goods and services.",
+  },
+  {
+    prompt: "Why do people share in a community?",
+    right: { label: "to help each other", emoji: "🤝" },
+    wrong: [
+      { label: "to win a prize", emoji: "🏆" },
+      { label: "to be loud", emoji: "📣" },
+    ],
+    hint: "Sharing helps everyone's needs get met.",
+  },
+  {
+    prompt: "Who drives a bus for the community?",
+    right: { label: "a bus driver", emoji: "🚌" },
+    wrong: [
+      { label: "a nurse", emoji: "🧑‍⚕️" },
+      { label: "a farmer", emoji: "🚜" },
+    ],
+    hint: "Bus drivers help people get around.",
+  },
+  {
+    prompt: "What does a farmer do?",
+    right: { label: "grows our food", emoji: "🚜" },
+    wrong: [
+      { label: "fixes teeth", emoji: "🦷" },
+      { label: "delivers mail", emoji: "📬" },
+    ],
+    hint: "Farmers grow fruit, vegetables and grain.",
+  },
 ];
 
 function needsWants(): Question[] {
-  return shuffle([sortQuestion(NEEDS_SORT, 3), ...fromBank(NEEDS_BANK, 6)]);
+  return shuffle([sortQuestion(NEEDS_SORT, 3), ...fromBank(NEEDS_BANK, 7)]);
 }
 
 // ---------- Communities in Canada ----------

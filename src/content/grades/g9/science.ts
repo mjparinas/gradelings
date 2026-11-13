@@ -28,6 +28,20 @@ const CELL_DIVISION: Item[] = [
   q(3, "Which describes a stem cell?", "An unspecialized cell that can divide and develop into different cell types", ["A cell that is stuck in one job forever", "A cell found only in plant stems", "A dead cell"], "Stem cells can become many kinds of cells."),
   q(3, "A skin cell has 46 chromosomes. How many chromosomes does each daughter cell have after mitosis?", "46", ["23", "92", "12"], "Mitosis makes identical copies, so each daughter cell has the same number of chromosomes."),
   q(3, "Which is a reason that damaged DNA can be harmful?", "Instructions copied incorrectly can lead to cells that do not work properly.", ["DNA only affects colour.", "DNA is not copied.", "DNA is outside the cell."], "Mutations change the instructions, and some change how a cell behaves."),
+  q(1, "What are chromosomes made of?", "DNA wrapped around proteins", ["only water", "only sugar", "cell membrane"], "Chromosomes carry the cell's genes."),
+  q(1, "What is a daughter cell?", "a new cell made when a parent cell divides", ["a cell that never divides", "a cell from a different species", "a dead cell"], "Mitosis makes two daughter cells."),
+  q(1, "What does DNA stand for?", "deoxyribonucleic acid", ["dynamic nuclear acid", "double nitrogen atoms", "dense nucleus area"], "It is the molecule that carries genetic instructions."),
+  q(2, "In which stage of mitosis do sister chromatids pull apart to opposite ends of the cell?", "anaphase", ["prophase", "metaphase", "interphase"], "Ana means apart."),
+  q(2, "In which stage of mitosis do two new nuclei form?", "telophase", ["prophase", "metaphase", "anaphase"], "Telo means end."),
+  q(2, "In which stage of mitosis do chromosomes first become visible as the nuclear membrane breaks down?", "prophase", ["telophase", "interphase", "anaphase"], "Pro means before."),
+  q(2, "What is cytokinesis?", "the division of the cytoplasm that splits one cell into two", ["the copying of DNA", "the joining of two cells", "the growth of a chromosome"], "It follows the division of the nucleus."),
+  q(2, "What is a sister chromatid?", "one of two identical copies of a chromosome joined together", ["a type of cell wall", "a kind of protein", "a daughter cell"], "DNA is copied before mitosis."),
+  q(2, "Which describes the cells made by mitosis?", "They are genetically identical to the parent cell.", ["They are all different.", "They have half the DNA.", "They have no DNA."], "Mitosis copies the cell."),
+  q(2, "Why must DNA be copied before a cell divides?", "so each daughter cell gets a full set of instructions", ["so the cell can get smaller", "so the nucleus can leave", "so the cell can stop working"], "Each new cell needs all the DNA."),
+  q(3, "A cell has 8 chromosomes before mitosis. How many chromosomes does each daughter cell have?", "8", ["4", "16", "2"], "Mitosis makes identical cells."),
+  q(3, "Which tissue would you expect to have many cells dividing?", "the lining of the stomach, which is constantly replaced", ["a mature nerve cell", "a fully grown hair strand", "a bone in an adult"], "Where cells wear out fast, more divide."),
+  q(3, "Why can cancer cells be dangerous?", "They divide without the usual controls and can crowd out healthy cells.", ["They stop dividing completely.", "They make extra oxygen.", "They have no DNA."], "Cell division is normally controlled."),
+  q(3, "Why is it useful for stem cells to be unspecialized?", "They can become many different kinds of cells.", ["They can never change.", "They never divide.", "They have no nucleus."], "Unspecialized cells are flexible."),
 ];
 
 const MITOSIS_ORDER = orderOf(
@@ -59,6 +73,20 @@ const REPRO: Item[] = [
   q(3, "Which is an advantage of asexual reproduction?", "Organisms can reproduce quickly without finding a mate.", ["It creates lots of genetic variety.", "It prevents all diseases.", "It requires two parents."], "Asexual reproduction is fast and needs only one parent."),
   q(3, "Which is a disadvantage of asexual reproduction?", "Little genetic variety, so one disease can harm the whole population.", ["It needs two parents.", "It is slow.", "Offspring are always different."], "Identical organisms share the same weaknesses."),
   q(3, "Meiosis is the type of cell division that produces…", "gametes with half the usual number of chromosomes", ["identical body cells", "two identical nuclei", "new organelles"], "Gametes have half the chromosomes so that fertilization restores the full number."),
+  q(1, "What is a pollinator?", "an animal that carries pollen from flower to flower", ["a plant that makes seeds", "a part of the ovary", "a type of root"], "Bees and butterflies are examples."),
+  q(1, "What is a seed?", "a plant structure that can grow into a new plant", ["a type of pollen", "a part of the stem", "a fruit"], "Seeds hold an embryo and food."),
+  q(1, "What is an embryo?", "an early stage of development of a new organism", ["a type of sperm", "a fully grown adult", "a kind of cell wall"], "It forms after fertilization."),
+  q(1, "What is the male gamete in animals?", "sperm", ["egg", "embryo", "seed"], "Sperm cells join with egg cells."),
+  q(2, "What is pollination?", "the transfer of pollen to the female part of a flower", ["a seed growing in soil", "water leaving a plant", "cell division in roots"], "It happens before fertilization."),
+  q(2, "Which is a way seeds are dispersed?", "by wind, water or animals", ["only by roots", "only by sunlight", "only by planting"], "Seeds need to spread out to find space."),
+  q(2, "Which structure in a flower produces pollen?", "the anther", ["the ovary", "the petal", "the sepal"], "It is part of the stamen."),
+  q(2, "What is binary fission?", "a way bacteria reproduce by splitting in two", ["a way flowers make seeds", "a way eggs are fertilized", "a type of pollination"], "Bi means two."),
+  q(2, "In humans, where does fertilization usually happen?", "in the fallopian tube", ["in the stomach", "in the lungs", "in the skin"], "The egg travels down the tube."),
+  q(2, "What is a clone?", "an organism genetically identical to its parent", ["a mix of two parents", "a type of seed", "a type of sperm"], "Asexual reproduction produces clones."),
+  q(3, "Why is genetic variety helpful for a species when the environment changes?", "Some individuals may have traits that help them survive.", ["Everyone is exactly the same.", "No one survives.", "Variety stops reproduction."], "Variety gives more chances."),
+  q(3, "A gardener grows a plant from a leaf cutting. Is this sexual or asexual reproduction?", "asexual, because it uses one parent", ["sexual, because it uses a leaf", "sexual, because it uses water", "neither"], "Look for how many parents."),
+  q(3, "Which is a disadvantage of sexual reproduction compared with asexual reproduction?", "It takes more time and energy to find a mate.", ["It makes identical copies.", "It needs only one parent.", "It gives no variety."], "Think about the cost of finding a mate."),
+  q(3, "Why do gametes have half the number of chromosomes of body cells?", "so that fertilization restores the full number", ["so they can divide forever", "so they have no DNA", "so they die quickly"], "Two halves make a whole."),
 ];
 
 const REPRO_SORT: SortSet = {
@@ -212,6 +240,20 @@ const BONDING: Item[] = [
   q(3, "A salt crystal such as NaCl conducts electricity when dissolved in water because…", "the ions are free to move and carry charge", ["the atoms melt", "the electrons are destroyed", "the water turns into metal"], "Free-moving ions can carry current in solution."),
   q(3, "Ionic compounds usually have high melting points because…", "the attraction between ions is strong", ["they have no bonds", "they are very light", "they are always gases"], "A lot of energy is needed to pull the ions apart."),
   q(3, "A water molecule has both ionic and covalent bonds. True or false?", "False: it has covalent bonds only", ["True: both", "False: it has ionic bonds only", "True: neither"], "Hydrogen and oxygen are both non-metals, so they share electrons."),
+  q(1, "What is a molecule?", "a group of atoms joined by covalent bonds", ["a single proton", "a kind of mixture", "a type of ion"], "Water is a molecule."),
+  q(1, "What is an ion?", "an atom with a positive or negative charge", ["a neutral atom", "a type of mixture", "a type of mineral"], "It has gained or lost electrons."),
+  q(1, "What are valence electrons?", "the electrons in an atom's outer shell", ["the electrons in the nucleus", "the protons", "the neutrons"], "They take part in bonding."),
+  q(1, "What charge does an atom have when it loses an electron?", "positive", ["negative", "none", "double"], "Fewer negatives means more positive."),
+  q(2, "What is the formula for carbon dioxide?", "CO₂", ["CO", "C₂O", "O₂C₂"], "One carbon and two oxygen."),
+  q(2, "What is the formula for sodium chloride?", "NaCl", ["Na₂Cl", "NaCl₂", "SCl"], "One sodium and one chlorine."),
+  q(2, "How many electrons does a full outer shell usually hold in the second shell?", "8", ["2", "4", "18"], "The octet rule."),
+  q(2, "Which pair would most likely form an ionic bond?", "potassium and chlorine", ["carbon and carbon", "oxygen and oxygen", "hydrogen and carbon"], "Look for a metal and a non-metal."),
+  q(2, "What is the charge on a chloride ion?", "−1", ["+1", "+2", "0"], "Chlorine gains one electron."),
+  q(2, "What is the charge on a magnesium ion?", "+2", ["+1", "−1", "−2"], "Magnesium loses two electrons."),
+  q(2, "Why are covalent compounds often poor conductors of electricity?", "They have no free ions or electrons to carry charge.", ["They have too many ions.", "They are all metals.", "They are too hot."], "Charge needs moving carriers."),
+  q(3, "Why is methane CH₄ and not CH₂?", "Carbon needs four shared electrons, so it bonds with four hydrogens.", ["Carbon needs two electrons.", "Hydrogen has four electrons.", "Carbon is a metal."], "Carbon has four valence electrons."),
+  q(3, "Why do ionic compounds usually dissolve in water and then conduct electricity?", "Their ions separate and are free to move.", ["They turn into metals.", "They lose all their atoms.", "They become covalent."], "Moving charges carry current."),
+  q(3, "An atom has 6 protons and 6 electrons. How many valence electrons does it have?", "4", ["6", "2", "8"], "The first shell holds 2, so 4 are left."),
 ];
 
 const BOND_SORT: SortSet = {

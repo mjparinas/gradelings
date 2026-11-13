@@ -58,7 +58,7 @@
       "picture-clues text=c447e46412 std=4142722365 q=3ade8d2d47",
       "blend-a-word text=3d99132c91 std=b6b33425ab q=16d2ff7d7d",
       "talk-and-listen-ab text=6b71ddbc74 std=cde28440df q=e684468815",
-      "mb-k-word-parts-and-meanings text=e15eb53b01 std=8ec5c15b80 q=a2785c140f",
+      "mb-k-word-parts-and-meanings text=e15eb53b01 std=8ec5c15b80 q=c988c37a4b",
       "wa-gk-ask-and-find-out text=3232fd3739 std=79f8887e62 q=15f5ec6b8a"
     ]
   },
@@ -187,7 +187,7 @@
       "word-pictures text=44e4dfbdc5 std=585d20c96c q=870ecab164",
       "reading-detectives text=06d742f348 std=9290f10751 q=decd73a013",
       "text-features text=15cb2dc162 std=b631a37669 q=0e6e3d2f57",
-      "mb-finding-information text=b6b5ad0955 std=c3126ee29c q=95d8977d6e",
+      "mb-finding-information text=b6b5ad0955 std=c3126ee29c q=89c5768441",
       "wa-g2-media-detectives text=be66a838b4 std=2707c8e7b7 q=7844f5c974"
     ]
   },
@@ -253,7 +253,7 @@
       "grammar-3 text=a9deaa03d1 std=d30eab8110 q=4cef04ee6f",
       "text-patterns text=66f9e7deb8 std=c0f542e8a1 q=2d33abb1d7",
       "tx-g3-tales-and-poems text=de307f42f4 std=e83f58cef6 q=36ace37614",
-      "mb-wonder-and-find-out text=63150b7959 std=96e6f9b581 q=aeacd646ab",
+      "mb-wonder-and-find-out text=63150b7959 std=96e6f9b581 q=ef051d1eac",
       "wa-g3-media-messages text=fb774641d1 std=8dec802128 q=feb4e64c34"
     ]
   },
@@ -406,7 +406,7 @@
       "complex-sentences text=ac4c5531ea std=3a4961d77e q=541e2d5520",
       "punctuation-power text=fb7f3d7d02 std=1c02a812fe q=c61867de33",
       "media-smarts text=e34e2d845a std=d66451a1c1 q=943a38fda8",
-      "mb-multimodal-texts-5 text=adf27e7e3d std=a64aa61ec1 q=b3c7f7225b",
+      "mb-multimodal-texts-5 text=adf27e7e3d std=a64aa61ec1 q=afd9881eca",
       "wa-g5-research-ready text=a1d4419e2b std=e77f5948e5 q=e9eb98ac26",
       "wa-g5-spelling-smarts text=27bf16b09c std=c149ce1d27 q=2666501efd"
     ]
@@ -571,7 +571,7 @@
       "poetry-lab text=e3769835d8 std=8937f72370 q=a8dd8516cd",
       "punctuation-7 text=9342af658b std=6f7a64e299 q=f4766ca186",
       "point-of-view-7 text=9446c4e22a std=d7e0aba264 q=fc62f4db46",
-      "mb-word-roots text=f8f825870e std=46cb253c8e q=a13fe4ad77",
+      "mb-word-roots text=f8f825870e std=46cb253c8e q=6922bca6a8",
       "wa-g7-research-skills text=a0906b3c59 std=7ff6b5a10a q=4901d7cfd4",
       "wa-g7-media-framing text=dfd5377178 std=c809b853da q=1f917ebc68",
       "wa-g7-spelling-rules text=2551a36a70 std=f19741f8ac q=a7dae53aa2"
@@ -607,7 +607,7 @@
       "work-energy-8 text=6af421d21c std=2de19fdcfe q=db86881bac",
       "photosynthesis-respiration-9 text=aa7d1dc3bb std=f1bfa79e62 q=a8703c2a22",
       "ca-g7-food-molecules text=e1df7f815c std=bc819c708d q=bcca467e71",
-      "ecosystems-7 text=7f94e0036b std=de9da75c1d q=2aeec5ed64",
+      "ecosystems-7 text=7f94e0036b std=de9da75c1d q=041251a723",
       "food-chains-7 text=fef8ede051 std=fa0d37d40a q=777910f336",
       "cycles-succession-7 text=966cbdbe7e std=1c4bee0084 q=c45e49da11",
       "biodiversity-6 text=15a9a74baf std=96213761cb q=1a96e551d4",
@@ -651,7 +651,7 @@
       "strategies-8 text=14cb61c3b0 std=31bee0d073 q=e9e599784b",
       "digital-8 text=742bfe22d6 std=be28b32887 q=314d5c282f",
       "writing-8 text=d9bb3a4cad std=4c7c58a451 q=0d80919dc4",
-      "mb-word-power-8 text=3f40ceb555 std=912c4607e1 q=434b58489d",
+      "mb-word-power-8 text=3f40ceb555 std=912c4607e1 q=37cdbb840c",
       "wa-g8-media-influence text=17e98c9229 std=affd9e4fff q=d957e11aea",
       "or-g8-weigh-the-evidence text=d58b9eae3f std=1d6cf04251 q=a6a4434e5b"
     ]
@@ -758,7 +758,7 @@
   "9/science": {
     "overview": "f3ff3d07dc",
     "units": [
-      "cells-from-cells text=bf9b3d6d2e std=0c5f1b308f q=9c20dd0a12",
+      "cells-from-cells text=bf9b3d6d2e std=0c5f1b308f q=17bf1b2a92",
       "tx-b-dna text=ebdc21299a std=500322865b q=d5b44c9a6b",
       "tx-b-systems text=2df2b5e81f std=1425ec7038 q=1ea35edf46",
       "photosynthesis-respiration-9 text=aa7d1dc3bb std=83c2e3d6b4 q=a8703c2a22",

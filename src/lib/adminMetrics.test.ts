@@ -93,6 +93,15 @@ describe("growth", () => {
     expect(m.acquisition.weekly.at(-1)!.value).toBe(1);
   });
 
+  it("totals accounts over time as a running count", () => {
+    const m = metrics({ families: [family({ createdAt: NOW - 200 * DAY }), family({ createdAt: NOW - 20 * DAY }), family({ createdAt: NOW - 1 * DAY })] });
+    const t = m.acquisition.totals;
+    expect(t).toHaveLength(26);
+    expect(t[0].value).toBe(1);
+    expect(t.at(-1)!.value).toBe(3);
+    for (let i = 1; i < t.length; i++) expect(t[i].value).toBeGreaterThanOrEqual(t[i - 1].value);
+  });
+
   it("works out trial conversion, activation, referrals and confirmed emails", () => {
     const m = metrics({
       families: [

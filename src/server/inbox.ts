@@ -1,11 +1,13 @@
 import "server-only";
-import { APP_NAME } from "@/lib/brand";
+import { APP_NAME, CONTACT_EMAIL } from "@/lib/brand";
 import { query, run } from "./db";
 import { emailConfigured, sendEmail } from "./email";
 import { hasRemoteImages } from "./emailHtml";
 
 // Mail people send to us, which Resend receives. The panel reads it live from Resend's receiving API, so message
 // bodies are never copied into our database; we only keep whether the admin has dealt with or answered each one.
+// One Resend account receives for several domains (Liftsmith's getliftsmith.com too), so only mail addressed to our
+// own domain (INBOX_DOMAINS, default the contact address's domain, gradelings.com) is listed or opened here.
 
 const base = () => (process.env.RESEND_API_BASE ?? "https://api.resend.com").replace(/\/$/, "");
 
@@ -19,6 +21,7 @@ interface ResendReceived {
   id: string;
   from: string;
   to?: string[];
+  cc?: string[];
   subject?: string | null;
   created_at: string;
   reply_to?: string[];
@@ -52,6 +55,23 @@ export function addressOf(from: string): string {
 
 export const inboxConfigured = () => emailConfigured();
 
+/** The domains whose mail this panel shows: INBOX_DOMAINS (comma-separated), else the contact address's domain. */
+export function inboxDomains(): string[] {
+  const set = (process.env.INBOX_DOMAINS ?? "")
+    .split(",")
+    .map((d) => d.trim().toLowerCase().replace(/^@/, ""))
+    .filter(Boolean);
+  return set.length ? set : [CONTACT_EMAIL.split("@")[1]!.toLowerCase()];
+}
+
+/** Whether a received message was addressed (to or cc) to one of our domains. */
+export function isOurs(m: Pick<ResendReceived, "to" | "cc">, domains = inboxDomains()): boolean {
+  return [...(m.to ?? []), ...(m.cc ?? [])].some((a) => domains.some((d) => addressOf(a).endsWith(`@${d}`)));
+}
+
+/** Resend pages read at most for one list, so a busy other domain in the same account can't make the panel slow. */
+const MAX_PAGES = 5;
+
 async function enrich(items: ResendReceived[]): Promise<InboxItem[]> {
   if (!items.length) return [];
   const ids = items.map((i) => i.id);
@@ -83,12 +103,29 @@ async function enrich(items: ResendReceived[]): Promise<InboxItem[]> {
   });
 }
 
-/** The newest received mail, a page at a time. */
+/** The newest mail to our domain, a page at a time. `after` continues from the last id of the page before. */
 export async function listInbox(opts: { limit?: number; after?: string } = {}): Promise<{ items: InboxItem[]; hasMore: boolean }> {
-  const q = new URLSearchParams({ limit: String(Math.min(100, Math.max(1, opts.limit ?? 50))) });
-  if (opts.after) q.set("after", opts.after);
-  const page = await resend<{ data?: ResendReceived[]; has_more?: boolean }>(`/emails/receiving?${q}`);
-  return { items: await enrich(page.data ?? []), hasMore: Boolean(page.has_more) };
+  const limit = Math.min(100, Math.max(1, opts.limit ?? 50));
+  const ours: ResendReceived[] = [];
+  let after = opts.after;
+  let more = true;
+  for (let page = 0; page < MAX_PAGES && more && ours.length < limit; page++) {
+    const q = new URLSearchParams({ limit: "100" });
+    if (after) q.set("after", after);
+    const res = await resend<{ data?: ResendReceived[]; has_more?: boolean }>(`/emails/receiving?${q}`);
+    const data = res.data ?? [];
+    let stopped = false;
+    for (const m of data) {
+      after = m.id;
+      if (isOurs(m)) ours.push(m);
+      if (ours.length >= limit) {
+        stopped = m !== data[data.length - 1];
+        break;
+      }
+    }
+    more = stopped || (Boolean(res.has_more) && data.length > 0);
+  }
+  return { items: await enrich(ours), hasMore: more };
 }
 
 /** Mail nobody has answered, marked as done or archived yet: the "Waiting" badge in the Inbox list. */
@@ -128,8 +165,15 @@ export interface InboxMessage extends InboxItem {
   attachmentNames: string[];
 }
 
-export async function getInboxMessage(id: string): Promise<InboxMessage> {
+/** One received message; another domain's mail in the same Resend account is never opened here. */
+async function received(id: string): Promise<ResendReceived> {
   const m = await resend<ResendReceived>(`/emails/receiving/${encodeURIComponent(id)}`);
+  if (!isOurs(m)) throw new Error("Resend has no such message.");
+  return m;
+}
+
+export async function getInboxMessage(id: string): Promise<InboxMessage> {
+  const m = await received(id);
   const [item] = await enrich([m]);
   return {
     ...item,
@@ -146,7 +190,7 @@ const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&l
 
 /** A received email's raw HTML, for `sanitizeEmailHtml`; its text part, escaped, when it has no HTML. */
 export async function getInboxHtml(id: string): Promise<string> {
-  const m = await resend<ResendReceived>(`/emails/receiving/${encodeURIComponent(id)}`);
+  const m = await received(id);
   if (m.html?.trim()) return m.html;
   return `<pre style="white-space:pre-wrap;font-family:inherit">${esc(m.text ?? "")}</pre>`;
 }

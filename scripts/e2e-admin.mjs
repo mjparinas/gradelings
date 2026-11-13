@@ -123,7 +123,7 @@ await tab("Overview");
 await tab("Flags");
 const shop = page.getByRole("listitem").filter({ hasText: "The pretend coin shop." }).getByRole("switch");
 async function setShop(on) {
-  if ((await shop.isChecked()) !== on) await shop.click();
+  if ((await shop.isChecked()) !== on) await shop.click({ force: true }); // the checkbox is visually hidden behind its switch
   for (let i = 0; i < 40 && (await shop.isChecked()) !== on; i++) await page.waitForTimeout(150);
   return (await shop.isChecked()) === on;
 }
@@ -171,7 +171,7 @@ await tab("To Do");
 const item = page.getByRole("listitem").filter({ hasText: parentEmail });
 check(await item.getByText("Signed up, never practised").waitFor({ timeout: 8000 }).then(() => true, () => false), "the to-do list shows a family that never practised");
 await item.getByRole("button", { name: "Write Email" }).click();
-check(await vis(item.getByLabel("Preview").getByText(/Getting started with/)), "the to-do item opens a getting-started email");
+check(await vis(item.getByLabel("Preview").getByText(/One minute to set up/)), "the to-do item opens a getting-started email");
 await shot("todo");
 await scan("to do");
 

@@ -231,7 +231,7 @@
       "then-and-now text=adcb461d8f std=cdf36218bf q=ae17feafab",
       "ns-community-change-2 text=c3a5db157e std=c7e25a26fd q=eb68856c23",
       "ns-contributions-2 text=0632d37b80 std=cbfd08ed3b q=83fd4c46a2",
-      "needs-and-wants text=8192b43423 std=7e3a319fb0 q=d91ff3aeff",
+      "needs-and-wants text=8192b43423 std=7e3a319fb0 q=619b8574d0",
       "ns-consumers-2 text=feadf6924e std=22de75921c q=8ce83945fd",
       "ns-sustainable-communities-2 text=65e9fc8a3f std=7a3d3388cd q=4e480a9cec"
     ]
@@ -655,14 +655,14 @@
   "7/science": {
     "overview": "dcb0718b1d",
     "units": [
-      "ecosystems-7 text=7f94e0036b std=b045daa798 q=2aeec5ed64",
+      "ecosystems-7 text=7f94e0036b std=b045daa798 q=041251a723",
       "food-chains-7 text=fef8ede051 std=8cef4dfa9a q=cf2a8de2af",
-      "human-impact-7 text=f6bc8439e8 std=37b7927a99 q=c4030de692",
+      "human-impact-7 text=f6bc8439e8 std=37b7927a99 q=79b173657f",
       "ns-netukulimk-7 text=4ff87fc926 std=7c3b7091ed q=d5f5a73ba5",
       "particles-mixtures-7 text=03fc7e2a6b std=7c09276355 q=c8c3cfefc6",
       "heat-particles-7 text=0b575e82c8 std=0596f3582b q=ec2f2fb08f",
       "structures-forces-7 text=9f0c621a9c std=b55b4fea54 q=eef17aedf3",
-      "safe-structures-7 text=1a9ceadc58 std=9bc1c5660f q=8e849ccaad",
+      "safe-structures-7 text=1a9ceadc58 std=9bc1c5660f q=6538533612",
       "restless-earth text=eacf7084dc std=c8aebdffb7 q=ce71954c06",
       "natural-selection text=516fbb1811 std=0faf35ce48 q=beaf3b1417",
       "ns-coastlines-7 text=a04815898b std=9a3f231fa0 q=c9ef162f95"
@@ -845,8 +845,8 @@
   "9/science": {
     "overview": "2c2edfeb91",
     "units": [
-      "reproduction text=d702789bd4 std=29595b749b q=89792aacac",
-      "cells-from-cells text=bf9b3d6d2e std=ac3787a0fc q=403cd47249",
+      "reproduction text=d702789bd4 std=29595b749b q=c9637838d5",
+      "cells-from-cells text=bf9b3d6d2e std=ac3787a0fc q=d8fef1a729",
       "atoms-and-electrons text=5dc2e26422 std=0a1d83c24d q=157481b107",
       "atoms-9 text=0fd6c7ecf2 std=77636f9624 q=5412669a33",
       "periodic-table-9 text=d006b85cec std=1131af8c0e q=0f98494808",

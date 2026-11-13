@@ -8,6 +8,17 @@ const student = (profileId: string, units: StudentRow["units"], lastActive: numb
 const name = (k: string) => k.split("/")[2];
 
 describe("classInsights", () => {
+  it("lists students doing really well, most units first, skipping units not given to them", () => {
+    const students = [
+      student("a", [unit("3/math/fractions", 10, 0.9, 2)]),
+      student("b", [unit("3/math/fractions", 10, 0.9, 2), unit("3/math/time", 12, 0.95, 3), { ...unit("3/math/other", 9, 0.9, 2), assigned: false }]),
+      student("c", [unit("3/math/fractions", 10, 0.4, 1)]),
+    ];
+    const r = classInsights(students, ["3/math/fractions", "3/math/time", "3/math/other"], name, NOW);
+    expect(r.celebrate.map((s) => s.name)).toEqual(["B", "A"]);
+    expect(r.celebrate[0].reasons).toEqual(["Doing really well in fractions and time"]);
+  });
+
   it("leaves out students a unit wasn't given to", () => {
     const away = { ...unit("3/math/fractions", 0, 0, -1), assigned: false };
     const students = [

@@ -1,7 +1,7 @@
 import { FRAMEWORKS } from "@/content/frameworks";
 import { listRegions } from "@/content/regions";
 import { APP_NAME } from "@/lib/brand";
-import { MAX_CHILDREN, money, perChildMonthly, PRICES_BY_CURRENCY, type Country, type Currency } from "@/lib/plan";
+import { MAX_CHILDREN, TRIAL_DAYS, money, perChildMonthly, PRICES_BY_CURRENCY, type Country, type Currency } from "@/lib/plan";
 
 /** "From $2.00 a month per child (C$119.99 a year for up to 5 children)": our price, led by the cost per child. */
 const perChild = (c: Currency) =>
@@ -49,13 +49,13 @@ export const COMPETITORS: Competitor[] = [
         topic: "Price in Canada",
         country: "CA",
         them: `IXL Canada lists C$12.95 a month for one subject, C$19.95 for Math and English together, and C$24.95 for All Access, as of ${PRICE_CHECKED}. The free tier limits how many questions a child can answer each day.`,
-        us: `${perChild("CAD")} One family plan covers every subject. There is a 30-day free trial with no card, and the first 2 units of every course stay free afterwards.`,
+        us: `${perChild("CAD")} One family plan covers every subject. There is a ${TRIAL_DAYS}-day free trial with no card, and the first 2 units of every course stay free afterwards.`,
       },
       {
         topic: "Price in the US",
         country: "US",
         them: `IXL's US site lists US$9.95 a month for one subject, US$15.95 for Math and English language arts together, and US$19.95 for Core subjects (Math, English language arts, Science and Social studies), as of ${PRICE_CHECKED}. The free tier limits how many questions a child can answer each day.`,
-        us: `${perChild("USD")} One family plan in US dollars covers every subject. There is a 30-day free trial with no card, and the first 2 units of every course stay free afterwards.`,
+        us: `${perChild("USD")} One family plan in US dollars covers every subject. There is a ${TRIAL_DAYS}-day free trial with no card, and the first 2 units of every course stay free afterwards.`,
       },
       {
         topic: "Curriculum",
@@ -122,7 +122,7 @@ export const COMPETITORS: Competitor[] = [
       {
         topic: "Price",
         them: "Free.",
-        us: `A family plan after a 30-day free trial, from ${money(perChildMonthly("CAD", "year"), "CAD")} a month per child with ${MAX_CHILDREN} children. The first 2 units of every course stay free forever.`,
+        us: `A family plan after a ${TRIAL_DAYS}-day free trial, from ${money(perChildMonthly("CAD", "year"), "CAD")} a month per child with ${MAX_CHILDREN} children. The first 2 units of every course stay free forever.`,
       },
       {
         topic: "Curriculum in Canada",

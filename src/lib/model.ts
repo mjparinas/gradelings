@@ -63,7 +63,7 @@ export interface ChildSettings {
   /** Reading comfort: extra space between letters, words and lines. */
   /** A hint opened before answering still counts as a first-try answer. Off by default: it counts like a retry. */
   freeHints?: boolean;
-  /** Answer some questions out loud (on-device speech recognition; flag voice-practice). Off unless a parent turns it on. */
+  /** Answer some questions out loud (on-device speech recognition; flag voice-practice). Unset follows the grade (`voiceOn`): on for Pre-K to Grade 1, off otherwise; a parent's choice wins. */
   voice?: boolean;
   roomyText?: boolean;
   /** Stronger text colours and outlines. */
@@ -199,6 +199,17 @@ export function dayKey(t: number): string {
 
 /** Grades whose children have read-aloud switched on by default. Parents can still turn it off per child. */
 export const AUTO_READ_GRADES: readonly GradeId[] = ["pk", "k", "1"];
+
+/** Grades whose children can answer out loud by default (flag `voice-practice`). A parent's own choice, on or off, always wins. */
+export const VOICE_GRADES: readonly GradeId[] = ["pk", "k", "1"];
+
+/**
+ * Is answering out loud on for this child? A parent's choice (`voice` true or false) wins; until they choose it
+ * follows the grade, so existing Pre-K to Grade 1 children get it without any settings being rewritten.
+ */
+export function voiceOn(settings: Pick<ChildSettings, "voice"> | undefined, grade: GradeId | undefined): boolean {
+  return settings?.voice ?? (grade !== undefined && VOICE_GRADES.includes(grade));
+}
 
 /** Daily goal a new child starts with. Little kids (Kindergarten and Grade 1) get the shorter one. */
 export const DEFAULT_GOAL_MINUTES = { little: 10, other: 15 } as const;

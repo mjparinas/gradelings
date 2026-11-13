@@ -98,6 +98,7 @@ describe("curriculum unit page", () => {
     expect(meta.title).toBe(`${unit.title}: Grade 1 Math practice (PEI)`);
     expect(meta.alternates?.canonical).toBe(curriculumPath.unit(f, "1", "math", unit.id));
     expect(meta.description).toContain(unit.parentNote);
+    expect(meta.description).toMatch(/^Free .+ practice with answers, matched to the .+\. Try the questions now, no sign-up\./);
     expect(await generateMetadata(props("prince-edward-island", "grade-1", "math", "no-such-unit"))).toEqual({});
     await expect(UnitPage(props("prince-edward-island", "grade-1", "math", "no-such-unit"))).rejects.toMatchObject({ digest: expect.stringContaining("404") });
   });

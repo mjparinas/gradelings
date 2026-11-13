@@ -290,6 +290,46 @@ export const EXPLORE_CARDS: ExploreCard[] = [
     facts: ["People live in houses and apartments.", "Some homes are tall and some are small.", "A home keeps us safe and warm."],
     ask: { prompt: "What does a home do for us?", right: "Keeps us safe and warm", wrong: ["Makes us fly", "Turns us into birds"], why: "A home keeps us safe and warm." },
   },
+  {
+    id: "the-moon", band: "little", topic: "science", title: "The Moon", emoji: "🌕",
+    facts: ["The Moon looks bright in the night sky.", "Its shape seems to change each night.", "It is a big ball of rock far away."],
+    ask: { prompt: "What is the Moon like?", right: "A big ball of rock", wrong: ["A giant cloud", "A tiny light bulb"], why: "The Moon is a big ball of rock far away." },
+  },
+  {
+    id: "warm-and-cold", band: "little", topic: "science", title: "Warm and cold", emoji: "🧣",
+    facts: ["The Sun keeps us warm.", "In winter it can be very cold.", "A coat helps us stay warm."],
+    ask: { prompt: "What helps keep us warm in winter?", right: "A coat", wrong: ["A swimsuit", "An ice cube"], why: "A coat keeps our body heat in." },
+  },
+  {
+    id: "healthy-habits", band: "little", topic: "science", title: "Healthy habits", emoji: "🍎",
+    facts: ["Fruits and vegetables help us grow.", "Water keeps our bodies happy.", "Brushing keeps our teeth healthy."],
+    ask: { prompt: "What keeps our bodies happy?", right: "Water", wrong: ["Mud", "Sand"], why: "Our bodies need water every day." },
+  },
+  {
+    id: "how-animals-move", band: "little", topic: "science", title: "How animals move", emoji: "🐟",
+    facts: ["Fish swim and birds fly.", "Snakes slide and rabbits hop.", "Animals move in many ways."],
+    ask: { prompt: "How does a fish move?", right: "It swims", wrong: ["It hops", "It rolls"], why: "Fish swim with their tails and fins." },
+  },
+  {
+    id: "four-seasons", band: "little", topic: "world", title: "Four seasons", emoji: "🍁",
+    facts: ["Many places have four seasons.", "They are spring, summer, fall and winter.", "The weather changes with each season."],
+    ask: { prompt: "How many seasons do many places have?", right: "Four", wrong: ["Two", "Nine"], why: "Spring, summer, fall and winter make four." },
+  },
+  {
+    id: "telling-time", band: "little", topic: "world", title: "What time is it?", emoji: "⏰",
+    facts: ["A clock tells us the time.", "The short hand shows the hour.", "The long hand shows the minutes."],
+    ask: { prompt: "What does a clock tell us?", right: "The time", wrong: ["The weather", "How tall we are"], why: "A clock tells us the time." },
+  },
+  {
+    id: "street-safety", band: "little", topic: "world", title: "Street safety", emoji: "🚦",
+    facts: ["Look both ways before you cross.", "Hold a grown-up's hand near cars.", "A crosswalk is a safe place to cross."],
+    ask: { prompt: "What should you do before crossing?", right: "Look both ways", wrong: ["Close your eyes", "Run fast"], why: "Looking both ways keeps us safe." },
+  },
+  {
+    id: "our-feelings", band: "little", topic: "world", title: "Our feelings", emoji: "😊",
+    facts: ["Everyone has feelings.", "We can feel happy, sad or excited.", "Talking about feelings can help."],
+    ask: { prompt: "Who has feelings?", right: "Everyone", wrong: ["Only grown-ups", "Only kids"], why: "Everyone has feelings." },
+  },
 
   // ——— More for Grades 2 to 4 ———
   {

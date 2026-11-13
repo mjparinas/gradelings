@@ -118,3 +118,13 @@ describe("prices by country", () => {
     expect(CURRENCY_NAME).toEqual({ CAD: "Canadian dollars", USD: "US dollars" });
   });
 });
+
+describe("trial nudge timings", () => {
+  it("fit inside the trial, in order: recap, then notice, then the final stretch", async () => {
+    const p = await import("./plan");
+    expect(p.TRIAL_RECAP_DAYS_LEFT).toBeLessThan(p.TRIAL_DAYS);
+    expect(p.TRIAL_NOTICE_DAYS).toBeLessThan(p.TRIAL_RECAP_DAYS_LEFT);
+    expect(p.TRIAL_FINAL_STRETCH_DAYS).toBeLessThan(p.TRIAL_DAYS);
+    expect(p.TRIAL_FINAL_STRETCH_DAYS).toBeGreaterThanOrEqual(1);
+  });
+});

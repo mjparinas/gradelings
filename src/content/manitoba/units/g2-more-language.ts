@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { FINDING_DEEP, LETTERS_DEEP, LISTEN_DEEP, MEDIA_DEEP, PLAN_DEEP, RESPOND_DEEP, SIGHT_DEEP } from "./g2-more-language-deeper";
 
 // Grade 2 English language arts: writing mechanics, fluency, responding to texts, finding information, planning and
 // improving writing, media, and polite listening and asking (strands A to D).
@@ -205,23 +206,23 @@ const mkLanguage = (id: string, title: string, emoji: string, blurb: string, par
 export const moreLanguage = [
   mkLanguage("mb-capitals-and-neat-writing", "Capitals, Letters and Spaces", "✏️", "Capital letters, tall and tail letters, and spaces between words.",
     "Using capital and lowercase letters correctly, forming letters with the right size and placement, spacing words, and typing with a keyboard.",
-    "ELA.2.A2.2, ELA.2.C3.1", "capital and lowercase letters, letter formation, spacing and typing", LETTERS),
+    "ELA.2.A2.2, ELA.2.C3.1", "capital and lowercase letters, letter formation, spacing and typing", [...LETTERS, ...LETTERS_DEEP]),
   mkLanguage("mb-sight-words-and-phrasing", "Sight Words and Reading with Expression", "📖", "Read common words quickly and use punctuation to read well.",
     "Recognizing common words quickly and noticing punctuation to read in phrases with the right pausing and expression.",
-    "ELA.2.A2.6", "high-frequency words, and punctuation that guides phrasing", SIGHT),
+    "ELA.2.A2.6", "high-frequency words, and punctuation that guides phrasing", [...SIGHT, ...SIGHT_DEEP]),
   mkLanguage("mb-responding-to-stories", "Connections and Opinions", "💭", "Link stories to your life and share what you think.",
     "Making connections to texts, giving an opinion with reasons, recognizing that others can see things differently, and noticing who is shown in texts.",
-    "ELA.2.B2.4, ELA.2.B3.1, ELA.2.B3.3, ELA.2.B3.4", "connections, opinions with reasons, different viewpoints and who is represented", RESPOND),
+    "ELA.2.B2.4, ELA.2.B3.1, ELA.2.B3.3, ELA.2.B3.4", "connections, opinions with reasons, different viewpoints and who is represented", [...RESPOND, ...RESPOND_DEEP]),
   mkLanguage("mb-finding-information", "Asking Questions and Finding Facts", "🔎", "Ask good questions, choose texts and learn topic words.",
     "Using what you know, asking basic questions, choosing texts and facts for a purpose, and using topic words.",
-    "ELA.2.B1.1, ELA.2.B1.2, ELA.2.B1.3, ELA.2.B1.4, ELA.2.B2.7", "prior knowledge, questions, choosing texts and facts, and topic vocabulary", FINDING),
+    "ELA.2.B1.1, ELA.2.B1.2, ELA.2.B1.3, ELA.2.B1.4, ELA.2.B2.7", "prior knowledge, questions, choosing texts and facts, and topic vocabulary", [...FINDING, ...FINDING_DEEP]),
   mkLanguage("mb-planning-and-improving", "Plan, Write and Make It Better", "🗒️", "Plan ideas, pick a kind of writing and fix parts that do not make sense.",
     "Planning with lists and webs, different types of writing for different readers, revising unclear writing, and combining words, pictures and sound.",
-    "ELA.2.C1.1, ELA.2.C1.2, ELA.2.C1.3, ELA.2.C1.4, ELA.2.C1.5, ELA.2.C2.5, ELA.2.C3.5", "planning, types of writing, revising and multimodal texts", PLAN),
+    "ELA.2.C1.1, ELA.2.C1.2, ELA.2.C1.3, ELA.2.C1.4, ELA.2.C1.5, ELA.2.C2.5, ELA.2.C3.5", "planning, types of writing, revising and multimodal texts", [...PLAN, ...PLAN_DEEP]),
   mkLanguage("mb-media-and-trust", "Media, Trust and Who Is in the Story", "📺", "Notice who made a message and whether to trust it.",
     "Recognizing media, deciding with guidance whether a source or character can be trusted, and noticing who is shown or missing in texts.",
-    "ELA.2.B3.1, ELA.2.B3.2, ELA.2.C3.5", "media messages, trusting sources and characters, and representation", MEDIA),
+    "ELA.2.B3.1, ELA.2.B3.2, ELA.2.C3.5", "media messages, trusting sources and characters, and representation", [...MEDIA, ...MEDIA_DEEP]),
   mkLanguage("mb-listening-and-asking", "Listening, Asking and Polite Talk", "👂", "Show you are listening, ask for more, and talk in the right way.",
     "Using non-verbal cues to show listening, asking questions to learn more, adding to others' ideas and changing how you talk for different people.",
-    "ELA.2.A1.1, ELA.2.A1.2, ELA.2.A1.3, ELA.2.A1.4, ELA.2.A1.5, ELA.2.A1.6, ELA.2.D1.1", "listening, asking questions, speaking clearly and formal or informal talk", LISTEN),
+    "ELA.2.A1.1, ELA.2.A1.2, ELA.2.A1.3, ELA.2.A1.4, ELA.2.A1.5, ELA.2.A1.6, ELA.2.D1.1", "listening, asking questions, speaking clearly and formal or informal talk", [...LISTEN, ...LISTEN_DEEP]),
 ];

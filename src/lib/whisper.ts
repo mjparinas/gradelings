@@ -1,3 +1,5 @@
+import { isOn } from "./deviceFlags";
+import { onMeteredConnection } from "./piper";
 import manifest from "./whisper-manifest.json";
 
 // Voice practice speech recognition (flag `voice-practice`). Whisper tiny.en runs in a web worker
@@ -94,7 +96,8 @@ export async function whisperDownloadBytes(): Promise<number | undefined> {
 let downloading: Promise<void> | undefined;
 
 /** Downloads the model into its own cache. Throws if the files aren't available or the device is out of space. */
-export function downloadWhisper(): Promise<void> {
+export function downloadWhisper({ quiet = false } = {}): Promise<void> {
+  if (!quiet) writeRemoved(false);
   downloading ??= (async () => {
     set("downloading", 0);
     try {
@@ -141,7 +144,45 @@ export function downloadWhisper(): Promise<void> {
   return downloading;
 }
 
+// A parent who removes the download doesn't get it back by itself; downloading by hand clears that.
+const REMOVED_KEY = "gradelings.whisper.removed";
+const readRemoved = () => {
+  try {
+    return localStorage.getItem(REMOVED_KEY) === "1";
+  } catch {
+    return false;
+  }
+};
+const writeRemoved = (on: boolean) => {
+  try {
+    if (on) localStorage.setItem(REMOVED_KEY, "1");
+    else localStorage.removeItem(REMOVED_KEY);
+  } catch {
+    /* storage blocked: the choice lasts until the page reloads */
+  }
+};
+
+export const WHISPER_AUTO_RETRY_MS = 10 * 60_000;
+let autoTried = -Infinity;
+
+/**
+ * Downloads the listening model in the background for children who have voice practice on (flag
+ * `voice-auto-download`). Never on mobile data, Data Saver or a very slow connection, when offline, when the device is
+ * short of space, after a parent removed the download, or in automated browsers. Retries wait 10 minutes. Resolves
+ * with whether a download ran.
+ */
+export async function autoDownloadWhisper(): Promise<boolean> {
+  if (!whisperSupported() || navigator.webdriver || navigator.onLine === false || onMeteredConnection()) return false;
+  if (!isOn("voice-practice") || !isOn("voice-auto-download") || readRemoved()) return false;
+  if (Date.now() - autoTried < WHISPER_AUTO_RETRY_MS) return false;
+  if ((await checkWhisper()) !== "missing") return false;
+  autoTried = Date.now();
+  await downloadWhisper({ quiet: true });
+  return true;
+}
+
 export async function removeWhisper(): Promise<void> {
+  writeRemoved(true);
   stopWhisper();
   await caches.delete(WHISPER_CACHE);
   set("missing", 0);

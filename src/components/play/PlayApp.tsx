@@ -2,6 +2,7 @@
 
 import { memo, useEffect, useState, type ReactNode } from "react";
 import { VoicePreload } from "@/components/VoicePreload";
+import { WhisperPreload } from "@/components/WhisperPreload";
 import { StorageFullNotice } from "@/components/StorageFullNotice";
 import { ClassTimerChip } from "./ClassTimer";
 import type { FlagKey } from "@/lib/flags";
@@ -32,13 +33,13 @@ import { getCourse, parseUnitKey } from "@/content";
 import { nextGrade } from "@/lib/schoolYear";
 import { go } from "@/lib/router";
 import { Toasts } from "./Toasts";
-import { Arcade, ArticleLibrary, ArticleReader, BrainBreak, ExploreLibrary, ExploreReader, FactChart, FactsPicker, GameScreen, LazyScreen, PlacementTest, prefetchScreens, RhymeLibrary, RhymeReader, Room, Shop, SneakPeek, StickerBook, StoryLibrary, StoryProblems, StoryReader, TrailMap, Treasures, TrophyRoom, WeekRecap } from "./lazyScreens";
+import { Arcade, ArticleLibrary, ArticleReader, BrainBreak, ExploreLibrary, ExploreReader, FactChart, FactsPicker, GameScreen, LazyScreen, PlacementTest, prefetchScreens, RhymeLibrary, RhymeReader, Room, Shop, SneakPeek, StickerBook, StoryLibrary, StoryProblems, StoryReader, TrailMap, Treasures, TrophyRoom, Videos, WeekRecap } from "./lazyScreens";
 import { LessonScreen } from "./LessonScreen";
 
 const MODES: Mode[] = ["practice", "adventure", "review", "speed", "daily", "challenge", "facts"];
 
 /** Screens the admin panel can switch off for everyone (src/lib/flags.ts). A switched-off screen shows the home screen. */
-const SCREEN_FLAGS: Record<string, FlagKey> = { stickers: "sticker-book", room: "my-room", speed: "speed-run", facts: "math-facts", arcade: "arcade", shop: "shop", stories: "story-library", grew: "weekly-recap", break: "brain-breaks", rhymes: "rhymes", explore: "explore-cards", problems: "story-problems", articles: "articles" };
+const SCREEN_FLAGS: Record<string, FlagKey> = { stickers: "sticker-book", room: "my-room", speed: "speed-run", facts: "math-facts", arcade: "arcade", shop: "shop", stories: "story-library", grew: "weekly-recap", break: "brain-breaks", rhymes: "rhymes", explore: "explore-cards", problems: "story-problems", articles: "articles", videos: "video-help" };
 /** Sessions whose mode the admin panel can switch off. */
 const MODE_FLAGS: Partial<Record<Mode, FlagKey>> = { daily: "daily-challenge", speed: "speed-run", facts: "math-facts" };
 
@@ -118,6 +119,8 @@ const Routes = memo(function Routes({ hash }: { hash: string }) {
       // Articles need reading: Pre-K to Grade 1 go home.
       if (ageBandFor(profile.grade) === "little") return <Hub />;
       return path[1] ? <ArticleReader key={path[1]} id={path[1]} /> : <ArticleLibrary />;
+    case "videos":
+      return <Videos />;
     case "break":
       return <BrainBreak />;
     case "treasures":
@@ -218,6 +221,7 @@ export function PlayApp() {
     <ContentGate targets={[{ grade: active.grade, framework: active.framework }]} onSwitch={profiles.length > 1 ? () => useStore.getState().setActive(null) : undefined}>
       <Prefetch />
       <VoicePreload />
+      <WhisperPreload />
       <BandProvider value={band}>
         {/* While the teacher's question is up, nothing behind it can be tapped, focused or read. */}
         <div data-band={band} key={active.id} inert={asking}>

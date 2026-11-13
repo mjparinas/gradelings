@@ -180,6 +180,7 @@ export function Hub() {
     { id: "explore", title: "Explore", desc: "Fun facts to find out", icon: "🔭", colour: "#25b47e", dark: "#188a5e", href: "#/explore", flag: "explore-cards" as FlagKey },
     { id: "articles", title: "Articles", desc: "Read and find out", icon: "📰", colour: "#e9559a", dark: "#c43a7c", href: "#/articles", flag: "articles" as FlagKey },
     { id: "problems", title: "Story Problems", desc: "Think it through", icon: "🧮", colour: "#4f8ef7", dark: "#2f6fd6", href: "#/problems", flag: "story-problems" },
+    { id: "videos", title: "Videos", desc: "Watch help videos again", icon: "🎬", colour: "#4f8ef7", dark: "#2f6fd6", href: "#/videos", feature: "videoHelp" as Feature, flag: "video-help" as FlagKey },
     { id: "break", title: "Brain Break", desc: "A short rest with puzzles", icon: "🧠", colour: "#7c4fe0", dark: "#5d34c4", href: "#/break", flag: "brain-breaks" },
     { id: "trail", title: "Trail Map", desc: "See how far you've come", icon: "🧭", colour: "#f08a4b", dark: "#c46a2c", href: "#/map" },
     ...(hasFacts

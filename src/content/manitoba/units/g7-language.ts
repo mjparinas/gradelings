@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { WORD_STUDY_DEEP } from "./g7-more-language-deeper";
 
 // Grade 7 word study: Greek and Latin roots and affixes (ELA.7.A2.4), expanded vocabulary and figures of speech
 // (ELA.7.A2.5) and spelling by word parts (ELA.7.C3.2).
@@ -43,5 +44,5 @@ export const wordRoots = bankUnit({
   blurb: "Greek and Latin roots, prefixes and suffixes",
   parentNote: "Children work out the meaning and spelling of new words from their roots, prefixes and suffixes, and meet figures of speech.",
   standards: ["ELA.7.A2.4, ELA.7.A2.5, ELA.7.C3.2", "Greek and Latin roots and affixes, expanded vocabulary, figures of speech and spelling by word parts"],
-  items: ITEMS,
+  items: [...ITEMS, ...WORD_STUDY_DEEP],
 });

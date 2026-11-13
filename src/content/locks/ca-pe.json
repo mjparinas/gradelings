@@ -48,7 +48,7 @@
   "k/language": {
     "overview": "a5828a1656",
     "units": [
-      "mb-k-listening-and-talking text=f0f432415b std=bffc3d1f4a q=1550a25273",
+      "mb-k-listening-and-talking text=f0f432415b std=bffc3d1f4a q=b71ddd8cd9",
       "talk-and-listen-ab text=6b71ddbc74 std=e12a7935ca q=a01feb4799",
       "clap-the-beat text=13b130a737 std=8c6f8b6fc0 q=d798eaba52",
       "rhyme-time text=280911bb80 std=4399da3abb q=7ff630edf6",
@@ -57,10 +57,10 @@
       "picture-clues text=c447e46412 std=12d56d1bb7 q=3ade8d2d47",
       "sight-words text=2cc8b0433d std=758fa4433c q=50140fdbd6",
       "book-detectives text=1f5750b2af std=673c8f25ee q=adc3ae2dbb",
-      "mb-k-before-during-after-reading text=112f823e38 std=b83fe2badb q=c4e7a2bbf3",
+      "mb-k-before-during-after-reading text=112f823e38 std=b83fe2badb q=d8c0c11204",
       "story-order text=f874c5f317 std=ed1fd92103 q=9e24988535",
       "letter-partners text=c48f27422d std=d5ade1195b q=b88f284367",
-      "mb-k-make-a-text text=a67f254a6f std=d9892f90f1 q=0c937c1508"
+      "mb-k-make-a-text text=a67f254a6f std=d9892f90f1 q=01f4aaf0de"
     ]
   },
   "k/math": {
@@ -106,9 +106,9 @@
   "1/language": {
     "overview": "1534ae4327",
     "units": [
-      "mb-g1-true-and-viewpoints text=21573781f7 std=a34f6b4a00 q=dfa7be03de",
+      "mb-g1-true-and-viewpoints text=21573781f7 std=a34f6b4a00 q=91d1d491e7",
       "sentences text=dc477bff6b std=031b29ef67 q=3a12a2876f",
-      "mb-g1-reading-smart text=79fcd9b632 std=e5b24bebc5 q=225b6070a5",
+      "mb-g1-reading-smart text=79fcd9b632 std=e5b24bebc5 q=44f58a515a",
       "blend-it text=9a1273c4bc std=3811efea9e q=5b9245f2d7",
       "short-vowels text=c3991944bf std=3fc17fed57 q=6e80d0c71e",
       "word-families text=47cdbc2e26 std=97e41d96e4 q=8b534665ec",
@@ -118,7 +118,7 @@
       "think-it-through text=58296e2f16 std=7a4bdae26c q=6b9dfcfb01",
       "sound-play text=b2fe23f215 std=03cb05b990 q=160f9c55ca",
       "describing-words text=666b9e7bde std=b49bf87996 q=5343edd9c8",
-      "mb-g1-writing-plan text=1641edd5fb std=3ca2c2e152 q=378651cdb4",
+      "mb-g1-writing-plan text=1641edd5fb std=3ca2c2e152 q=69c01eb71e",
       "build-sentences-ab text=30458150db std=d6ae900eb3 q=f8c4f07434",
       "sentence-types text=56ad0db855 std=82173442c7 q=f64d6d4696",
       "more-than-one text=10c2382c04 std=383e575833 q=4bb1ec800f"
@@ -177,17 +177,17 @@
   "2/language": {
     "overview": "b2d9493b19",
     "units": [
-      "mb-listening-and-asking text=018eb576ad std=47eafdab21 q=a53baabec2",
+      "mb-listening-and-asking text=018eb576ad std=47eafdab21 q=9f23bfe89c",
       "listen-and-speak-ab text=d581c74d0d std=e856b99a81 q=a2a11a1d09",
       "text-features text=15cb2dc162 std=a709c22fd7 q=0e6e3d2f57",
       "sound-detectives text=46fe6d54db std=71e9d7ee9c q=7ad4b9eb0a",
       "rhyme-time text=ae896f4b4a std=c246cbe229 q=c228f52fe5",
-      "mb-sight-words-and-phrasing text=3301c4a50e std=115fbdc356 q=a255bd6280",
+      "mb-sight-words-and-phrasing text=3301c4a50e std=115fbdc356 q=f920cb1220",
       "story-builders text=a75b636655 std=295b5ef47b q=f0517cf382",
-      "mb-media-and-trust text=3d7bb080e8 std=de29991e90 q=c1fa7a06c4",
+      "mb-media-and-trust text=3d7bb080e8 std=de29991e90 q=c52ba36f96",
       "reading-detectives text=06d742f348 std=fd1f586d10 q=decd73a013",
       "word-pictures text=44e4dfbdc5 std=e99316dcd2 q=870ecab164",
-      "mb-planning-and-improving text=f7b170a806 std=bf8b3fa464 q=0418f67d97",
+      "mb-planning-and-improving text=f7b170a806 std=bf8b3fa464 q=8b065db2ff",
       "build-sentences text=8cdbdc5f42 std=a8635cd6e3 q=63b8882a16",
       "word-power text=b1c58ec0fb std=38f11496b9 q=0308400322"
     ]
@@ -233,7 +233,7 @@
       "caring-citizens text=774323e412 std=2d3e723b72 q=8411a16f0e",
       "pe-our-future-community-2 text=3fa56ef19c std=682e3e97e0 q=7dbc8bd11e",
       "pe-technology-2 text=ff00ab1306 std=e3a5c6a3e2 q=7dac23e322",
-      "needs-and-wants text=8192b43423 std=777f5ba558 q=d91ff3aeff",
+      "needs-and-wants text=8192b43423 std=777f5ba558 q=619b8574d0",
       "pe-work-and-prices-2 text=f115b62ac5 std=3932659968 q=94cd3b1395",
       "pe-changing-land-2 text=df84ddac53 std=c207e3303d q=46f5fa8a58"
     ]
@@ -241,24 +241,24 @@
   "3/language": {
     "overview": "b2d9493b19",
     "units": [
-      "mb-listening-talking text=4e1e4060a5 std=903bf6f903 q=04d2b8d67d",
+      "mb-listening-talking text=4e1e4060a5 std=903bf6f903 q=933dfcffeb",
       "speak-listen-ab text=24aae5260b std=5aead8fbb3 q=0b2ed89795",
       "read-and-think text=7444ce52ca std=163d1660e3 q=e29d97d68f",
       "story-elements text=4bc5317466 std=a1eb90d721 q=9db8428fad",
       "text-patterns text=66f9e7deb8 std=5039e4ebdd q=58f0f448b9",
       "abc-dictionary text=0dded2dd30 std=871f55b6c4 q=d1cefa52ca",
-      "mb-wonder-and-find-out text=30ddbf1573 std=17b04c0f22 q=3bbd5f24b0",
+      "mb-wonder-and-find-out text=30ddbf1573 std=17b04c0f22 q=f9f8dcac4b",
       "fact-or-opinion text=d5a6ab665c std=06e7ff8e5f q=43da4e0ce6",
-      "mb-plan-your-writing text=a79120e87f std=a1bcb9374f q=1833294da9",
-      "mb-make-writing-better text=5c910b794b std=08833d6c79 q=a39c1425a8",
-      "mb-media-and-design text=76c9cd6ba3 std=26af1aa949 q=55304a366f",
+      "mb-plan-your-writing text=a79120e87f std=a1bcb9374f q=2b07494750",
+      "mb-make-writing-better text=5c910b794b std=08833d6c79 q=5c4d0d21ff",
+      "mb-media-and-design text=76c9cd6ba3 std=26af1aa949 q=10398880da",
       "word-jobs text=828a9a1b85 std=4973f4ea65 q=2444d1b9e4",
       "sentence-smarts text=440a0ed7a6 std=a1d3a9309d q=be609c5403",
       "punctuation-power text=4ba2179323 std=9473b20c23 q=456663fb55",
       "spelling-patterns text=7009096615 std=b593a3381d q=cfca6a919b",
       "prefixes-suffixes text=c0cf5dc731 std=7494dda22b q=41860cdfd6",
       "word-pairs text=17c5d8704a std=16695d29fc q=ff8f2e33d3",
-      "mb-learning-goals text=19a090de5a std=43f1a2ba49 q=43675bb0d5"
+      "mb-learning-goals text=19a090de5a std=43f1a2ba49 q=6ec6c6a896"
     ]
   },
   "3/math": {
@@ -336,7 +336,7 @@
   "4/language": {
     "overview": "5998d21adc",
     "units": [
-      "mb-talk-together text=658241ee0d std=580d1c353b q=2cf9661c67",
+      "mb-talk-together text=658241ee0d std=580d1c353b q=5333faeb80",
       "listening-speaking-ab text=93bdfb462c std=0522dbfb50 q=721b6760ea",
       "reading-detectives text=03648abb93 std=59844e5d0d q=f97168e8e1",
       "text-features text=374a334dcb std=909d0d4bc0 q=a6e3f6bea6",
@@ -345,13 +345,13 @@
       "point-of-view text=317d5169eb std=d9548859f5 q=c401cf50e0",
       "sharing-information-ab text=9eca0ce700 std=fb9857d361 q=2eab14a56b",
       "word-builders text=31c0e4d41e std=af387ee24b q=ca7b8000df",
-      "mb-big-words text=ba39881768 std=6bdadee20d q=51ca3a8c3d",
+      "mb-big-words text=ba39881768 std=6bdadee20d q=61a2877f1c",
       "sound-alikes text=810d4b50da std=af66f0c0d1 q=8f260eb511",
       "parts-of-speech text=a8c86f7934 std=222fa27bad q=4cef0e2d63",
       "super-sentences text=127a9846e3 std=8682b87059 q=cee1adb645",
       "paragraph-power text=63c57da3d3 std=1a35e6af03 q=ef7adfdbc7",
-      "mb-revise-writing text=8f321fbe02 std=9cc390ceee q=d9b8f4c103",
-      "mb-learning-goals text=f38a4b317e std=db308ff669 q=2dc6f9a3fa"
+      "mb-revise-writing text=8f321fbe02 std=9cc390ceee q=a978279da4",
+      "mb-learning-goals text=f38a4b317e std=db308ff669 q=1aec4e95f9"
     ]
   },
   "4/math": {
@@ -426,27 +426,27 @@
   "5/language": {
     "overview": "5998d21adc",
     "units": [
-      "mb-talk-and-listen-5 text=a2f0620170 std=638f07949a q=516513f42b",
+      "mb-talk-and-listen-5 text=a2f0620170 std=638f07949a q=9e9a6e4226",
       "group-talk-ab text=11c2211e75 std=e2a2b44359 q=623518f5ee",
       "reading-detectives text=de3643af3d std=a8eacb5099 q=82991da95b",
       "plot-and-conflict text=b917a8e0aa std=5f16dde823 q=15e53b85a5",
-      "mb-read-with-purpose-5 text=9b1c18b6f8 std=2a5bd5bc31 q=31fc4c3e85",
+      "mb-read-with-purpose-5 text=9b1c18b6f8 std=2a5bd5bc31 q=1b0e2acfd3",
       "context-clues text=022a00b494 std=2bae10b540 q=1fa090fae4",
       "word-roots text=2558284043 std=7c4e80931a q=f41c90a8a3",
-      "mb-long-words-5 text=0015470cf0 std=7a93b1da09 q=60e11ab1ab",
+      "mb-long-words-5 text=0015470cf0 std=7a93b1da09 q=e839a10246",
       "purpose-and-structure text=d1e9ccc6e8 std=e071d381c0 q=8fd8837f55",
       "media-smarts text=e34e2d845a std=745c7ba640 q=06204a9b34",
-      "mb-diversity-bias-5 text=175ba2e8e5 std=e247e9202f q=e0840bd68d",
+      "mb-diversity-bias-5 text=175ba2e8e5 std=e247e9202f q=e5ad4ab89b",
       "style-and-perspective text=8264431154 std=ef6d6f5b10 q=531dd646ce",
       "figurative-language text=dca8bec883 std=044ed3c411 q=b4536542fa",
       "writing-audience-ab text=f6c3e7a35d std=cd184aab7d q=7fd87a71ce",
-      "mb-multimodal-texts-5 text=adf27e7e3d std=0189d47227 q=f4a9fdd207",
+      "mb-multimodal-texts-5 text=adf27e7e3d std=0189d47227 q=c30fc8e45a",
       "verb-tenses text=584119bb1d std=c38998162a q=19a2201812",
       "complex-sentences text=ac4c5531ea std=be31540901 q=e9b1d0fa47",
       "punctuation-power text=fb7f3d7d02 std=5e4c43ee99 q=c61867de33",
       "spelling-ab text=3147b604d9 std=d1146784e1 q=32a7b0125e",
-      "mb-revising-spelling-5 text=878085091a std=681deac7bf q=0f122d1e85",
-      "mb-learning-goals-5 text=556483eb31 std=2bf232be6b q=7feca0ecd4"
+      "mb-revising-spelling-5 text=878085091a std=681deac7bf q=50c7f64f92",
+      "mb-learning-goals-5 text=556483eb31 std=2bf232be6b q=6926b6e8e9"
     ]
   },
   "5/math": {
@@ -526,17 +526,17 @@
   "6/language": {
     "overview": "5998d21adc",
     "units": [
-      "mb-reading-and-learning-strategies text=1d2627c5f7 std=819bfb8dbc q=c457cf43cc",
+      "mb-reading-and-learning-strategies text=1d2627c5f7 std=819bfb8dbc q=200a7cc4b1",
       "roots-analogies text=34da7ba9e2 std=598f7ba516 q=3ceab8afb2",
-      "mb-text-features-forms text=889bfcbcab std=e695bd408e q=aa5dc0f7a6",
+      "mb-text-features-forms text=889bfcbcab std=e695bd408e q=8e8f2d4452",
       "text-forms-6 text=bdd4c3fd20 std=b978728318 q=68961ed57a",
       "close-reading text=8f2caa5060 std=bd8c48cbc2 q=2400e20887",
       "point-of-view text=181ec2a506 std=c283371333 q=e32473aa03",
       "figurative-language text=49d680fa8d std=5e16357d09 q=d1d2a09b3f",
       "connotation-tone text=9c068d912c std=5f160e9394 q=220849e9fa",
       "sources-bias text=30e9961fd3 std=d18575e7d1 q=ebdde5983f",
-      "mb-media-and-bias text=b023f775e3 std=9bd3a570d0 q=d92075cddb",
-      "mb-planning-and-organizing text=487a4cd4b0 std=b0854c74c0 q=0c3d726cd5",
+      "mb-media-and-bias text=b023f775e3 std=9bd3a570d0 q=e6f3e98d38",
+      "mb-planning-and-organizing text=487a4cd4b0 std=b0854c74c0 q=41377f5dd7",
       "persuasive-writing text=143cf3561b std=bbc10ca05e q=d9dd316334",
       "agreement text=5714f96d51 std=33333dca25 q=25e1f4e98f",
       "sentence-repair text=404e6c9477 std=cf9093ec41 q=2784e88c73",
@@ -633,24 +633,24 @@
   "7/language": {
     "overview": "5998d21adc",
     "units": [
-      "mb-7-reading-strategies text=8ed92d9088 std=add103190e q=2b7962d17a",
-      "mb-word-roots text=f8f825870e std=bc6216e4b4 q=a13fe4ad77",
+      "mb-7-reading-strategies text=8ed92d9088 std=add103190e q=4adbd235b1",
+      "mb-word-roots text=f8f825870e std=bc6216e4b4 q=dcef7c27ba",
       "close-reading text=0b6ee269e5 std=6be6d61d0f q=3fd92d2337",
       "literary-devices text=75012dadfd std=9f5a72b450 q=9f862df281",
       "tone-mood text=1a78ad0bc3 std=2ad61b8018 q=5fe5a6766c",
       "point-of-view-7 text=9446c4e22a std=844ceaf104 q=fc62f4db46",
       "poetry-lab text=e3769835d8 std=8199554e0c q=fe038cecf2",
-      "mb-7-critical-reading text=e2e8a8fc19 std=cb77459541 q=6f958897f2",
+      "mb-7-critical-reading text=e2e8a8fc19 std=cb77459541 q=262ffceac2",
       "persuasion text=002e89452f std=7558a236f9 q=9332cae44a",
       "source-check text=6ca3f2abea std=ac12c5c926 q=9ea6c94a48",
-      "mb-7-writing-forms text=0337c2a4ae std=a032cdbf52 q=9c865c8920",
-      "mb-7-word-choice-voice text=5a9707a65e std=0c76e76952 q=e831d937a7",
+      "mb-7-writing-forms text=0337c2a4ae std=a032cdbf52 q=016b17646d",
+      "mb-7-word-choice-voice text=5a9707a65e std=0c76e76952 q=fb463b0e8f",
       "clauses-sentences text=5017dd13d0 std=c76fc725a4 q=5cd8987fd7",
       "modifiers-parallelism text=a0c6970207 std=c91d6359f5 q=4826f70a56",
       "punctuation-7 text=9342af658b std=38eac889be q=c08722cbbd",
       "word-mix-ups text=7bb5032b8a std=c7d537a1dc q=bb5c3889a5",
-      "mb-7-presenting-design text=585d7da752 std=84a767cb07 q=1a5c13b7df",
-      "mb-7-discussion-skills text=96e5764e5e std=ffecddc821 q=84ac8587c2"
+      "mb-7-presenting-design text=585d7da752 std=84a767cb07 q=613f324b16",
+      "mb-7-discussion-skills text=96e5764e5e std=ffecddc821 q=252f459d8f"
     ]
   },
   "7/math": {
@@ -678,10 +678,10 @@
   "7/science": {
     "overview": "0de1f14be5",
     "units": [
-      "ecosystems-7 text=7f94e0036b std=9018d1bfcc q=2aeec5ed64",
+      "ecosystems-7 text=7f94e0036b std=9018d1bfcc q=041251a723",
       "food-chains-7 text=fef8ede051 std=002b2eabcd q=cf2a8de2af",
       "cycles-succession-7 text=966cbdbe7e std=07a5f557e3 q=b441c409c3",
-      "human-impact-7 text=f6bc8439e8 std=a955fe8dcc q=c4030de692",
+      "human-impact-7 text=f6bc8439e8 std=a955fe8dcc q=79b173657f",
       "restless-earth text=eacf7084dc std=2085acb1eb q=ce71954c06",
       "pe-rocks-minerals-7 text=d819871b67 std=9ab26d7af3 q=f248909bed",
       "pe-weathering-erosion-7 text=eac0288b54 std=322c896cdd q=c9338b4f0f",
@@ -738,12 +738,12 @@
       "irony-satire-8 text=3ba9c87062 std=d1344adb4e q=202c839ad1",
       "forms-features-8 text=612838fad2 std=3bc62a1177 q=d9c6eb4303",
       "digital-8 text=742bfe22d6 std=4c4e6dd539 q=a25584c75b",
-      "mb-research-8 text=a3abfca114 std=da46518d59 q=dc6aaab94d",
-      "mb-fair-language-8 text=9aead0a363 std=64e9725d3a q=e890e80e2b",
+      "mb-research-8 text=a3abfca114 std=da46518d59 q=ac7e909c99",
+      "mb-fair-language-8 text=9aead0a363 std=64e9725d3a q=20149df1b5",
       "respectful-talk-ab text=15d28f6dc7 std=62c234dff3 q=de4da1ceb1",
-      "mb-planning-forms-8 text=a00a7d9744 std=1362c3bbf3 q=f212a6d2be",
+      "mb-planning-forms-8 text=a00a7d9744 std=1362c3bbf3 q=91a13c9645",
       "writing-8 text=d9bb3a4cad std=643f2368c8 q=1d05d6ba80",
-      "mb-word-power-8 text=3f40ceb555 std=1c58bd6280 q=bc89f91ef1",
+      "mb-word-power-8 text=3f40ceb555 std=1c58bd6280 q=310f657c1a",
       "grammar-and-style text=4cac16a8c8 std=fa2e486810 q=19aa427fa0"
     ]
   },
@@ -781,7 +781,7 @@
       "optics-vision-ab text=e6be59b974 std=f71c2ba673 q=ebcb74c463",
       "cells-and-life text=26001b2c5a std=cf6c36fbc3 q=27792065ca",
       "cells-diffusion-ab text=caaea79aff std=1da715d6d0 q=650ba01e94",
-      "body-systems-ab text=8cf77e1157 std=c4a835281c q=6e677707aa",
+      "body-systems-ab text=8cf77e1157 std=c4a835281c q=75913631d5",
       "mb-circulatory-8 text=d29cd1bb2f std=982b4dfa14 q=8cc89d8cdb"
     ]
   },
@@ -864,7 +864,7 @@
       "atoms-9 text=0fd6c7ecf2 std=e1b73d1c51 q=5412669a33",
       "periodic-table-9 text=d006b85cec std=71b08c5511 q=0f98494808",
       "compounds-9 text=e809c7578c std=315d07299a q=799a9bf54a",
-      "bonding-and-reactions text=8a0ea04bc7 std=a14b64202e q=a326d57dc9",
+      "bonding-and-reactions text=8a0ea04bc7 std=a14b64202e q=05ec43f844",
       "chemical-change-ab text=1ca1c45de5 std=bc8bf33a39 q=7a00ce3609",
       "static-charges-9 text=9a9172f3c2 std=9b4be2d41a q=20a1a92678",
       "circuits-9 text=0dda7abf25 std=0a911f909f q=1788d5792b",

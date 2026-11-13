@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { FamilyInfo } from "./model";
+import { TRIAL_FINAL_STRETCH_DAYS } from "./plan";
 import { askToSaveProgress } from "./saveNudge";
 
 const NOW = 1_800_000_000_000;
@@ -16,8 +17,8 @@ describe("asking a grown-up to save progress", () => {
     expect([1, 2, 3, 4, 5, 6, 7, 8].map((n) => askToSaveProgress(family(), n, 1, NOW))).toEqual([true, false, true, false, false, false, true, false]);
   });
 
-  it("asks once a day in the last week of the trial", () => {
-    const ending = family({ trialEndsAt: NOW + 5 * DAY });
+  it("asks once a day in the last stretch of the trial", () => {
+    const ending = family({ trialEndsAt: NOW + (TRIAL_FINAL_STRETCH_DAYS - 1) * DAY });
     expect(askToSaveProgress(ending, 9, 1, NOW)).toBe(true);
     expect(askToSaveProgress(ending, 10, 2, NOW)).toBe(false);
   });

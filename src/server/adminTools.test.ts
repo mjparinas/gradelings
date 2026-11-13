@@ -248,6 +248,15 @@ describe("automatic nudges", () => {
     expect((await post(automations, "/api/admin/automations/", { id: "nope", action: "switch", on: true, confirm: "TURN ON" })).status).toBe(404);
   });
 
+  it("the add-your-child group starts the day after sign-up, not before", async () => {
+    await account("no-child-fresh@example.com", { createdAgo: 12 * 3_600_000 });
+    await account("no-child-next-day@example.com", { createdAgo: 30 * 3_600_000 });
+    const status = (await auto.automationStatuses()).find((s) => s.id === "no-child")!;
+    const base = status.waiting;
+    await account("no-child-next-day-2@example.com", { createdAgo: 26 * 3_600_000 });
+    expect((await auto.automationStatuses()).find((s) => s.id === "no-child")!.waiting).toBe(base + 1);
+  });
+
   it("send nothing while off", async () => {
     const quiet = await account("no-child-1@example.com", { createdAgo: 4 * DAY });
     expect(await auto.runAutomations("http://localhost")).toEqual({});
@@ -398,6 +407,22 @@ describe("the funnel and its groups", () => {
     expect(await ids("tried-few")).not.toContain(regular.familyId);
     expect(await ids("engaged-not-paying")).toContain(regular.familyId);
     expect(await ids("engaged-not-paying")).not.toContain(tried.familyId);
+  });
+
+  it("records how a family signed up and splits the funnel by that path", async () => {
+    const { db } = await import("@/server/db");
+    const form = await account("path-form@example.com", { createdAgo: 2 * DAY });
+    const card = await account("path-card@example.com", { createdAgo: 2 * DAY });
+    const via = async (id: string) =>
+      (await (await db()).execute({ sql: "SELECT signup_via FROM families WHERE id = ?", args: [id] })).rows[0]?.signup_via;
+    // The real sign-up route records the form; the card and Google are set by their own routes.
+    expect(await via(form.familyId)).toBe("site");
+    await (await db()).execute({ sql: "UPDATE families SET signup_via = 'card' WHERE id = ?", args: [card.familyId] });
+    const r = await (await get(funnel, "/api/admin/funnel/?days=30")).json();
+    const paths = r.paths as { path: string; counts: number[] }[];
+    expect(paths.find((p) => p.path === "site")!.counts[0]).toBeGreaterThanOrEqual(1);
+    expect(paths.find((p) => p.path === "card")!.counts[0]).toBeGreaterThanOrEqual(1);
+    expect(JSON.stringify(paths)).not.toContain("@");
   });
 });
 

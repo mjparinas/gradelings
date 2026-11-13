@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { CAPITALS_DEEP, CRITICAL_DEEP, DESIGN_DEEP, DISCUSSION_DEEP, READING_STRATEGIES_DEEP, REFLECT_DEEP, VOICE_DEEP, WRITING_DEEP } from "./g7-more-language-deeper";
 
 // More Grade 7 English language arts (Manitoba): reading strategies, critical reading, the writing process and text
 // forms, word choice and voice, capitals and formatting, multimodal design, and reflecting on learning.
@@ -42,7 +43,7 @@ export const readingStrategies = bankUnit({
   blurb: "Predict, connect, question and summarize",
   parentNote: "Children practise strategies good readers use: drawing on what they know, predicting, connecting, summarizing and reading fluently.",
   standards: ["ELA.7.A2.6, ELA.7.B1.1, ELA.7.B1.3, ELA.7.B1.4, ELA.7.B2.3, ELA.7.B2.4, ELA.7.B2.7", "fluency, prior knowledge, multimodal text, gathering and summarizing information, predictions, connections and new vocabulary"],
-  items: READING_STRATEGIES,
+  items: [...READING_STRATEGIES, ...READING_STRATEGIES_DEEP],
 });
 
 const CRITICAL: Q[] = [
@@ -83,7 +84,7 @@ export const criticalReading = bankUnit({
   blurb: "Spot stereotypes, one-sided views and inclusive language",
   parentNote: "Children practise noticing stereotypes, unfair or one-sided views and social issues in texts, responding with evidence, and choosing inclusive language.",
   standards: ["ELA.7.A1.3, ELA.7.B3.1, ELA.7.B3.4", "inclusive language, broader social issues in text and responding to stereotypes and one-sided views"],
-  items: CRITICAL,
+  items: [...CRITICAL, ...CRITICAL_DEEP],
 });
 
 const WRITING: Q[] = [
@@ -125,7 +126,7 @@ export const writingForms = bankUnit({
   blurb: "Topics, planning tools, text forms and organization",
   parentNote: "Children practise the steps before and while drafting: choosing a focused topic, planning tools, choosing a text form for the audience, and organizing ideas in a clear pattern.",
   standards: ["ELA.7.C1.1, ELA.7.C1.2, ELA.7.C1.3, ELA.7.C1.4, ELA.7.C1.5, ELA.7.C2.1", "generating ideas, gathering information, planning tools, text forms, multimodal forms and organizational patterns"],
-  items: WRITING,
+  items: [...WRITING, ...WRITING_DEEP],
 });
 
 const VOICE: Q[] = [
@@ -166,7 +167,7 @@ export const wordChoiceVoice = bankUnit({
   blurb: "Choose words and tone for your audience",
   parentNote: "Children practise choosing precise, descriptive and subject-specific words, and matching tone, sentence style and personal voice to the audience and purpose.",
   standards: ["ELA.7.C2.3, ELA.7.C2.4", "descriptive and discipline-specific words, personal voice, and tone and sentence style that fit purpose and audience"],
-  items: VOICE,
+  items: [...VOICE, ...VOICE_DEEP],
 });
 
 const CAPITALS: Q[] = [
@@ -209,7 +210,7 @@ export const capitalsFormatting = bankUnit({
   blurb: "Capitals, titles, abbreviations and tidy layout",
   parentNote: "Children practise capital letters for proper nouns, dialogue, titles and abbreviations, plus basic formatting and keyboarding habits.",
   standards: ["ELA.7.C3.1, ELA.7.C3.3", "legible, well-spaced and formatted writing, and capitals for proper nouns, dialogue, titles and abbreviations"],
-  items: CAPITALS,
+  items: [...CAPITALS, ...CAPITALS_DEEP],
 });
 
 const DESIGN: Q[] = [
@@ -250,7 +251,7 @@ export const presentingDesign = bankUnit({
   blurb: "Design choices and how to organize a talk",
   parentNote: "Children think about layout, visuals and sound that support a message, and how to organize a presentation with an introduction, body and conclusion.",
   standards: ["ELA.7.C1.5, ELA.7.C3.5, ELA.7.D1.2, ELA.7.D1.3", "multimodal forms and final copies, visual and audio aids, layout and design choices, and organizing a presentation"],
-  items: DESIGN,
+  items: [...DESIGN, ...DESIGN_DEEP],
 });
 
 const REFLECT: Q[] = [
@@ -291,7 +292,7 @@ export const learningGoals = bankUnit({
   blurb: "Reflect, set goals and use feedback",
   parentNote: "Children practise thinking about how they learn: describing strategies, using criteria and feedback, setting specific goals and tracking progress.",
   standards: ["ELA.7.D2.1, ELA.7.D2.2, ELA.7.D2.3, ELA.7.D2.4, ELA.7.D2.5", "strategies, class criteria and self-assessment, descriptive feedback, setting goals and tracking growth"],
-  items: REFLECT,
+  items: [...REFLECT, ...REFLECT_DEEP],
 });
 
 const DISCUSSION: Q[] = [
@@ -333,5 +334,5 @@ export const discussionSkills = bankUnit({
   blurb: "Listen well, ask good questions and speak respectfully",
   parentNote: "Children practise skills for classroom talk: paraphrasing, asking and clarifying, respectful non-verbal cues, and matching language and tone to the audience.",
   standards: ["ELA.7.A1.1, ELA.7.A1.2, ELA.7.A1.4, ELA.7.A1.5, ELA.7.A1.6", "listening critically, supportive non-verbal cues, multifaceted questions, oral language rules and tone for audience"],
-  items: DISCUSSION,
+  items: [...DISCUSSION, ...DISCUSSION_DEEP],
 });

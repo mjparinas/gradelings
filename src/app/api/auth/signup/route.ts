@@ -53,7 +53,7 @@ export async function POST(req: Request) {
     // Both rows or neither, so a duplicate email can't leave an empty family behind. No password yet: '!' never
     // matches one (see verifyPassword), and the typed one waits in pending_password_hash.
     await batch([
-      { sql: "INSERT INTO families (id, created_at, trial_ends_at, plan, updated_at, referred_by) VALUES (?, ?, ?, 'trial', ?, ?)", args: [familyId, now, trialEndsAt, now, referrer] },
+      { sql: "INSERT INTO families (id, created_at, trial_ends_at, plan, updated_at, referred_by, signup_via) VALUES (?, ?, ?, 'trial', ?, ?, ?)", args: [familyId, now, trialEndsAt, now, referrer, passwordless ? "card" : "site"] },
       {
         sql: "INSERT INTO parents (id, family_id, email, password_hash, pending_password_hash, signup_cookie_hash, created_at, weekly_report, account_type) VALUES (?, ?, ?, '!', ?, ?, ?, ?, ?)",
         args: [parentId, familyId, email, hash, mark.hash, now, passwordless ? 1 : 0, dest === "teachers" ? "teacher" : "parent"],

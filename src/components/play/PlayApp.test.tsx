@@ -36,6 +36,7 @@ vi.mock("@/lib/remoteFlags", () => ({ refreshFlags: h.refreshFlags, useIsOn: () 
 vi.mock("@/lib/sync", () => ({ startBackgroundSync: h.startBackgroundSync }));
 vi.mock("@/lib/useGradeContent", () => ({ prefetchGrades: h.prefetchGrades, useGradeContent: () => ({ status: "ready" }) }));
 vi.mock("@/components/VoicePreload", () => ({ VoicePreload: () => null }));
+vi.mock("@/components/WhisperPreload", () => ({ WhisperPreload: () => null }));
 vi.mock("./LiveQuestion", () => ({ useLiveQuestion: () => ({ live: null, offline: false, note: "", answer: () => {} }), LiveQuestionCard: () => null }));
 vi.mock("@/lib/store", () => ({
   useReady: () => h.ready,
@@ -107,6 +108,7 @@ vi.mock("./BrainBreak", () => ({ BrainBreak: screenStub("BrainBreak") }));
 vi.mock("./StoryProblems", () => ({ StoryProblems: screenStub("StoryProblems") }));
 vi.mock("./Articles", () => ({ ArticleLibrary: screenStub("ArticleLibrary"), ArticleReader: screenStub("ArticleReader") }));
 vi.mock("./Explore", () => ({ ExploreLibrary: screenStub("ExploreLibrary"), ExploreReader: screenStub("ExploreReader") }));
+vi.mock("./Videos", () => ({ Videos: screenStub("Videos") }));
 vi.mock("./Rhymes", () => ({ RhymeLibrary: screenStub("RhymeLibrary"), RhymeReader: screenStub("RhymeReader") }));
 vi.mock("./Stories", () => ({ StoryLibrary: screenStub("StoryLibrary"), StoryReader: screenStub("StoryReader") }));
 
@@ -284,6 +286,7 @@ describe("PlayApp routes", () => {
     ["problems", "StoryProblems"],
     ["articles", "ArticleLibrary"],
     ["articles/how-bees-make-honey", "ArticleReader id=how-bees-make-honey"],
+    ["videos", "Videos"],
     ["explore", "ExploreLibrary"],
     ["explore/busy-bees", "ExploreReader id=busy-bees"],
     ["rhymes", "RhymeLibrary"],
@@ -367,6 +370,7 @@ describe("PlayApp routes", () => {
     ["problems", "story-problems"],
     ["articles", "articles"],
     ["articles/how-bees-make-honey", "articles"],
+    ["videos", "video-help"],
     ["explore", "explore-cards"],
     ["explore/busy-bees", "explore-cards"],
     ["rhymes", "rhymes"],
