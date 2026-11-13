@@ -7,8 +7,8 @@ import { AppBadges } from "./AppBadges";
 describe("AppBadges", () => {
   it("links Google Play and shows the App Store as coming soon, not a link", () => {
     render(<AppBadges />);
-    expect(screen.getByRole("link", { name: /Google Play/ })).toHaveAttribute("href", PLAY_STORE_URL);
-    expect(screen.getByLabelText("App Store: coming soon")).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Get it on Google Play" })).toHaveAttribute("href", PLAY_STORE_URL);
+    expect(screen.getByText(/Coming soon/)).toBeInTheDocument();
     expect(screen.getAllByRole("link")).toHaveLength(1);
   });
 });
