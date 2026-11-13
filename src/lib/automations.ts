@@ -16,7 +16,7 @@ export interface AutomationDef {
 
 export const AUTOMATIONS: AutomationDef[] = [
   { id: "quiet-7", name: "Ollie misses you", segment: "quiet-7", preset: "miss-you", description: "A child practised before but not in the last 7 days. Families who already get practice reminders are left out." },
-  { id: "no-child", name: "Add your child", segment: "no-child", preset: "getting-started", description: "Signed up 2 or more days ago and hasn't added a child." },
+  { id: "no-child", name: "Add your child", segment: "no-child", preset: "getting-started", description: "Signed up the day before or earlier and hasn't added a child." },
   { id: "tried-few", name: "Come back after a try", segment: "tried-few", preset: "miss-you", description: "Practised on only 1 or 2 days, then stopped for 3 days." },
   { id: "teacher-no-class", name: "Set up your first class", segment: "teacher-no-class", preset: "teacher-getting-started", description: "Teacher account made 2 or more days ago that hasn't started a class." },
   { id: "teacher-no-students", name: "Add your students", segment: "teacher-no-students", preset: "teacher-add-students", description: "A teacher's class is 3 or more days old and has no students yet." },

@@ -264,6 +264,13 @@ function Growth({ g, show }: { g: NonNullable<Parts["growth"]>; show: (view: Det
         <TryItFreeTile show={show} />
       </ul>
       <div className={charts}>
+        <LineChart
+          title="Total Accounts Over Time"
+          subtitle="Family accounts at the end of each of the last 26 weeks"
+          data={a.totals ?? []}
+          format={(v) => num(Math.round(v))}
+          max={niceMax(Math.max(2, ...(a.totals ?? []).map((p) => p.value)))}
+        />
         <ColumnChart title="Sign-Ups per Week" subtitle="Last 26 weeks" data={a.weekly} unit="sign-ups" xLabel="Week of" />
         <ColumnChart title="Sign-Ups per Month" subtitle="Last 12 months" data={a.monthly} unit="sign-ups" xLabel="Month" />
         <RowBars

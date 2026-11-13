@@ -60,6 +60,7 @@ export const ExploreLibrary = lazyScreen(() => explore().then((m) => m.ExploreLi
 export const ExploreReader = lazyScreen(() => explore().then((m) => m.ExploreReader));
 export const ArticleLibrary = lazyScreen(() => articles().then((m) => m.ArticleLibrary));
 export const ArticleReader = lazyScreen(() => articles().then((m) => m.ArticleReader));
+export const Videos = lazyScreen(() => import("./Videos").then((m) => m.Videos));
 export const StoryProblems = lazyScreen(() => import("./StoryProblems").then((m) => m.StoryProblems));
 export const Room = lazyScreen(() => import("./Room").then((m) => m.Room));
 export const Shop = lazyScreen(() => import("./Shop").then((m) => m.Shop));

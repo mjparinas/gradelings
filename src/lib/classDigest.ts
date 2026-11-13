@@ -8,6 +8,7 @@ const DAY = 86_400_000;
 const MAX_HOMEWORK = 5;
 const MAX_RETEACH = 3;
 const MAX_CHECK_IN = 8;
+const MAX_CELEBRATE = 5;
 
 export interface DigestClass {
   name: string;
@@ -43,6 +44,8 @@ export function classDigestLines(c: DigestClass, unitName: (key: string) => stri
   if (reteach.length) lines.push(`  Worth reteaching: ${names(reteach)}.`);
   const checkIn = insights.checkIn.slice(0, MAX_CHECK_IN).map((s) => `${s.name} (${lowerFirst(s.reasons[0])})`);
   if (checkIn.length) lines.push(`  Check in with: ${checkIn.join(", ")}${insights.checkIn.length > MAX_CHECK_IN ? ` and ${insights.checkIn.length - MAX_CHECK_IN} more` : ""}.`);
+  const shining = insights.celebrate.slice(0, MAX_CELEBRATE).map((s) => s.name);
+  if (shining.length) lines.push(`  Worth a high five: ${names(shining)}${insights.celebrate.length > MAX_CELEBRATE ? ` and ${insights.celebrate.length - MAX_CELEBRATE} more` : ""}.`);
   if (!reteach.length && !checkIn.length) lines.push("  Nobody needs a check-in this week. 🎉");
   return lines;
 }

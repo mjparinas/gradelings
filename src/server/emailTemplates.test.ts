@@ -89,11 +89,11 @@ describe("US parental consent emails", () => {
 });
 
 describe("school-year lines in the weekly email", () => {
-  it("come after the children, before the practice note, in the family's English", () => {
+  it("come after the children, in the family's English", () => {
     const line = "Summer sneak peek: Maya can try Grade 5 lessons from the Lessons screen. Whatever they practise counts once they move up.";
     const ca = t.weeklyEmail("a@example.com", O, [{ name: "Maya", minutes: 30, answers: 40, accuracy: 80 }], "u", "CA", [line]);
     expect(ca.text.indexOf("Maya: 30 min")).toBeLessThan(ca.text.indexOf("Summer sneak peek"));
-    expect(ca.text.indexOf("Summer sneak peek")).toBeLessThan(ca.text.indexOf("This reflects practice"));
+    expect(ca.text).not.toContain("report-card mark");
     expect(ca.html).toContain("Whatever they practise counts");
     expect(t.weeklyEmail("a@example.com", O, [{ name: "Maya", minutes: 30, answers: 40, accuracy: 80 }], "u", "US", [line]).text).toContain("Whatever they practice counts");
     expect(t.weeklyEmail("a@example.com", O, [{ name: "Maya", minutes: 30, answers: 40, accuracy: 80 }], "u").text).not.toContain("sneak peek");
@@ -144,12 +144,38 @@ describe("goal plan lines in the weekly email", () => {
 
 describe("invite line in the weekly email", () => {
   const kids = [{ name: "Maya", minutes: 30, answers: 40, accuracy: 80 }];
-  it("carries the invite link before the practice note when given, and is absent otherwise", () => {
+  it("carries the invite link when given, and is absent otherwise", () => {
     const link = `${O}/account/invite/?ref=ABCD2345`;
     const withLink = t.weeklyEmail("a@example.com", O, kids, "u", "CA", [], link);
     expect(withLink.text).toContain(link);
     expect(withLink.text).toContain("you get a free month");
-    expect(withLink.text.indexOf(link)).toBeLessThan(withLink.text.indexOf("This reflects practice"));
+    expect(withLink.text).not.toContain("report-card mark");
     expect(t.weeklyEmail("a@example.com", O, kids, "u").text).not.toContain("free month");
+  });
+});
+
+describe("conversion copy (owner, November 2026)", () => {
+  const kids = [{ name: "Maya", answers: 40, activeDays: 3, minutes: 30 }];
+  const everything = [
+    t.verifyEmail("a@example.com", O, "x", true),
+    t.verifyEmail("a@example.com", O, "x"),
+    t.trialRecapEmail("a@example.com", O, 5, kids),
+    t.trialEndingEmail("a@example.com", O, 2, kids),
+    t.trialEndingEmail("a@example.com", O, 2, []),
+  ];
+  it("never says grademap and names the grade range as Pre-K to Grade 9", () => {
+    const text = everything.map((e) => `${e.subject}\n${e.text}\n${e.html}`).join("\n");
+    expect(text).not.toMatch(/grademap/i);
+    expect(t.trialEndingEmail("a@example.com", O, 2, []).text).toContain("Pre-K to Grade 9");
+    expect(t.verifyEmail("a@example.com", O, "x").text).toContain("Pre-K to Grade 9");
+  });
+  it("trial emails make the deadline and the refund promise clear, and still say no card was needed", () => {
+    const ending = t.trialEndingEmail("a@example.com", O, 2, kids);
+    expect(ending.text).toContain("refund within 14 days");
+    expect(ending.text).toContain("No card was needed to start");
+    expect(t.trialRecapEmail("a@example.com", O, 1, kids).subject).toMatch(/^1 day left/);
+  });
+  it("sends a family with no practice to a first session, not an empty recap", () => {
+    expect(t.trialEndingEmail("a@example.com", O, 2, []).text).toContain("Ten minutes today");
   });
 });

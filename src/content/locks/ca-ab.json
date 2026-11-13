@@ -706,18 +706,18 @@
   "7/science": {
     "overview": "8e6a7dd000",
     "units": [
-      "ecosystems-7 text=7f94e0036b std=ee5fcc48f5 q=2aeec5ed64",
+      "ecosystems-7 text=7f94e0036b std=ee5fcc48f5 q=041251a723",
       "food-chains-7 text=fef8ede051 std=70db12a51f q=cf2a8de2af",
       "cycles-succession-7 text=966cbdbe7e std=f3e1bb78b2 q=b441c409c3",
-      "human-impact-7 text=f6bc8439e8 std=3663885593 q=c4030de692",
+      "human-impact-7 text=f6bc8439e8 std=3663885593 q=79b173657f",
       "plant-parts-ab text=fd48891c37 std=112a92a902 q=228572c07f",
       "plant-uses-ab text=aef6591e7a std=e6ab646ac3 q=91a0f3866d",
       "growing-crops-ab text=8eee8219a8 std=8ce673e6c3 q=6d6fdf10af",
       "heat-particles-7 text=0b575e82c8 std=15f68cd8ec q=ec2f2fb08f",
       "heat-transfer-7 text=ed13580dc2 std=dd7c408382 q=dbbbc479d4",
       "structures-forces-7 text=9f0c621a9c std=a0ec07decd q=eef17aedf3",
-      "safe-structures-7 text=1a9ceadc58 std=06043ef03e q=8e849ccaad",
-      "rocks-minerals-ab text=aba06b2e37 std=cd38dd0346 q=69798a2d80",
+      "safe-structures-7 text=1a9ceadc58 std=06043ef03e q=6538533612",
+      "rocks-minerals-ab text=aba06b2e37 std=cd38dd0346 q=0734a5730c",
       "restless-earth text=eacf7084dc std=79923af28e q=ce71954c06",
       "fossils-time-ab text=bea1eff90f std=92c2e3df8c q=4e1799de60"
     ]
@@ -726,14 +726,14 @@
     "overview": "5b72f50c2a",
     "units": [
       "new-france-7 text=f29dceb7f5 std=0a6a64bbd4 q=c7a28fd928",
-      "fur-trade-west-ab text=bfa8d2bcbe std=46c960bf1f q=83b51aa3aa",
+      "fur-trade-west-ab text=bfa8d2bcbe std=46c960bf1f q=28665d225d",
       "power-conflict-7 text=8ec86c1c9b std=8c993027b7 q=4266eb4b25",
       "war-1812-7 text=2d8ddfacd8 std=488e7664ee q=703dc16771",
       "reform-rebellions-7 text=8833dae2a4 std=61c138c7ae q=8a90a3ffd2",
-      "confederation-ab text=fcd0e6db97 std=eeb04369f7 q=4e168f7606",
+      "confederation-ab text=fcd0e6db97 std=eeb04369f7 q=cf4dd253b6",
       "metis-red-river-ab text=eef0b6b6eb std=91950cceb1 q=eea274342c",
       "treaties-west-ab text=dd474f3532 std=0b5e9a0ab0 q=ea11199d30",
-      "railway-settlement-ab text=739a1bb414 std=42436199d2 q=a711736583",
+      "railway-settlement-ab text=739a1bb414 std=42436199d2 q=5aa410c8f7",
       "people-on-the-move-ab text=7ff8448a89 std=f9f6af499c q=e23f8a231b"
     ]
   },
@@ -825,7 +825,7 @@
       "cells-organisms-8 text=f2fabcc119 std=b41b865591 q=16a9b7cb2d",
       "cells-diffusion-ab text=caaea79aff std=91fbd3f88f q=650ba01e94",
       "systems-8 text=44122ab3da std=3b78393b3f q=c8b9f9ac62",
-      "body-systems-ab text=8cf77e1157 std=5afc549507 q=6e677707aa",
+      "body-systems-ab text=8cf77e1157 std=5afc549507 q=75913631d5",
       "light-behaviour-ab text=cf5c334e0b std=6488052f96 q=68ab4bc916",
       "light-and-radiation text=29b61253cf std=597845ebc1 q=6d059d1d2d",
       "optics-vision-ab text=e6be59b974 std=2a340f1e6b q=ebcb74c463",
@@ -834,7 +834,7 @@
       "gears-efficiency-ab text=ad36be6e8e std=e0e6bba34d q=49e5e6511a",
       "water-systems-8 text=1677ba60fc std=67e530195f q=5520402341",
       "water-quality-ab text=39b3ba2922 std=6328619e36 q=05c1191dc3",
-      "shores-streams-ab text=f893e4ea4c std=d0ec548c00 q=cab89ba928",
+      "shores-streams-ab text=f893e4ea4c std=d0ec548c00 q=e64d13f3ee",
       "aquatic-life-ab text=56084f9e1e std=a3e62f132f q=446bd795bc",
       "water-stewardship-8 text=638b334f28 std=d099631ffd q=e79abdaec8"
     ]
@@ -844,12 +844,12 @@
     "units": [
       "japan-land-values-ab text=7742caed64 std=08a257fb4d q=724b6f3ff8",
       "japan-tokugawa-ab text=5caa8e333d std=7df1880ea7 q=21e727d3af",
-      "japan-meiji-ab text=ae45f22afc std=9ed98a6948 q=ff803f082b",
+      "japan-meiji-ab text=ae45f22afc std=9ed98a6948 q=e8a5b61615",
       "renaissance-origins-ab text=2d8078fe48 std=67748bc56b q=9a4c3a90ac",
       "renaissance-art-ideas-ab text=4a2906ceff std=0a52b1da4e q=b62b633cec",
       "renaissance-and-reformation text=abe1fd7fbc std=409a47a653 q=d867212f95",
       "aztec-empire-ab text=a45b3d61a1 std=bf38c115c5 q=95c758531c",
-      "spain-worldview-ab text=48610543de std=d9fe978410 q=0ee8e684bb",
+      "spain-worldview-ab text=48610543de std=d9fe978410 q=a2d79780a7",
       "conquest-contact-ab text=fd59b7e091 std=63cfe57c90 q=7cf10cd725",
       "worldviews-skills-ab text=c56780fccb std=11a4252d61 q=eba17a9aee"
     ]
@@ -926,7 +926,7 @@
     "overview": "70d606fca2",
     "units": [
       "biodiversity-ab text=0ead03ee06 std=420cd8b087 q=c75a65d1e0",
-      "reproduction text=d702789bd4 std=3a4d8c8444 q=89792aacac",
+      "reproduction text=d702789bd4 std=3a4d8c8444 q=c9637838d5",
       "compounds-9 text=e809c7578c std=f349e5209d q=799a9bf54a",
       "atoms-and-electrons text=5dc2e26422 std=110155b31e q=157481b107",
       "chemical-change-ab text=1ca1c45de5 std=1fea341ad6 q=7a00ce3609",

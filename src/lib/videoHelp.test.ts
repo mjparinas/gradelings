@@ -54,3 +54,20 @@ describe("videoStats", () => {
     expect(videoStats([video("1", "3/math/time", 40), answer("2", "3/math/time", 2, true)], "a", NOW).followed).toBe(0);
   });
 });
+
+describe("unlockedVideos and lockedVideos", () => {
+  const ev = (id: string, unit: string, videoId: string, ago: number, profileId = "a"): AppEvent => ({ ...video(id, unit, ago, profileId), video: videoId }) as AppEvent;
+  it("unlocks a video once an event names it, newest first, per child, counting repeats once per event", async () => {
+    const { unlockedVideos } = await import("./videoHelp");
+    const events = [ev("1", "3/math/fractions", "fractions-equal-parts", 30), ev("2", "3/math/time", "telling-time", 20), ev("3", "3/math/fractions", "fractions-equal-parts", 10), ev("4", "3/math/time", "telling-time", 5, "b"), ev("5", "3/math/x", "nope", 1)];
+    const got = unlockedVideos(events, "a");
+    expect(got.map((u) => u.video.id)).toEqual(["fractions-equal-parts", "telling-time"]);
+    expect(got[0]).toMatchObject({ unit: "3/math/fractions", plays: 2, first: NOW - 30 * H, last: NOW - 10 * H });
+    expect(unlockedVideos(events, "a", NOW - 15 * H).map((u) => u.video.id)).toEqual(["fractions-equal-parts"]);
+  });
+  it("lists the videos still waiting for the child's own units", async () => {
+    const { unlockedVideos, lockedVideos } = await import("./videoHelp");
+    const unlocked = unlockedVideos([ev("1", "3/math/fractions", "fractions-equal-parts", 3)], "a");
+    expect(lockedVideos(["3/math/fractions", "3/math/time", "9/math/nothing"], unlocked).map((l) => l.unit)).toEqual(["3/math/time"]);
+  });
+});

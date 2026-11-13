@@ -917,6 +917,18 @@ function Insights({ data, label }: { data: ClassDetail; label: (key: string) => 
           </div>
         </div>
       )}
+      {insights.celebrate.length > 0 && (
+        <div className="mt-4 rounded-xl bg-emerald-50 p-3">
+          <h3 className="font-bold">🎉 Worth a high five</h3>
+          <ul className="mt-1 font-read">
+            {insights.celebrate.map((s) => (
+              <li key={s.profileId}>
+                <b>{s.name}</b>: {s.reasons[0]}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
       {Object.keys(data.missed ?? {}).length > 0 && (
         <div className="mt-4">
           <h3 className="font-bold">Most-missed questions</h3>

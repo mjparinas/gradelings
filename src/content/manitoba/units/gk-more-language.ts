@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { BEFORE_AFTER_DEEP, REFLECT_DEEP, TALK_DEEP, WORDS_DEEP, WRITE_DEEP } from "./gk-more-language-deeper";
 
 // Kindergarten English language arts, outcomes not covered elsewhere: listening and talking (A1, D1), word parts and
 // vocabulary (A2.4, A2.5, B2.7), before, during and after reading (B1, B2, B3), planning and making text (C1, C2, C3)
@@ -163,7 +164,7 @@ export const languageUnits = [
     parentNote:
       "Practises what a good listener looks like, asking who, what and where questions, speaking in whole sentences, and choosing a voice and words that suit the listener. Take turns chatting with your child and ask them to say back what they heard.",
     standards: ["ELA.K.A1.1, ELA.K.A1.2, ELA.K.A1.3, ELA.K.A1.4, ELA.K.A1.5, ELA.K.A1.6, ELA.K.D1.1", "listening, asking questions, speaking in simple sentences and talking to different audiences"],
-    items: TALK,
+    items: [...TALK, ...TALK_DEEP],
   }),
   bankUnit({
     id: "mb-k-word-parts-and-meanings",
@@ -173,7 +174,7 @@ export const languageUnits = [
     parentNote:
       "Practises how a small word part changes a word (-s for more than one, -ing for happening now, un- for not), grouping words by topic, opposites and same-meaning words, and naming picture parts with labels.",
     standards: ["ELA.K.A2.4, ELA.K.A2.5, ELA.K.B2.7, ELA.K.C2.3", "word parts that change meaning, a growing vocabulary and topic words"],
-    items: WORDS,
+    items: [...WORDS, ...WORDS_DEEP],
   }),
   bankUnit({
     id: "mb-k-before-during-after-reading",
@@ -186,7 +187,7 @@ export const languageUnits = [
       "ELA.K.B1.1, ELA.K.B1.2, ELA.K.B1.3, ELA.K.B1.4, ELA.K.B2.3, ELA.K.B2.4, ELA.K.B2.5, ELA.K.B3.1, ELA.K.B3.3, ELA.K.B3.4",
       "using what we know to predict, connecting, asking questions and responding to texts",
     ],
-    items: BEFORE_AFTER,
+    items: [...BEFORE_AFTER, ...BEFORE_AFTER_DEEP],
   }),
   bankUnit({
     id: "mb-k-make-a-text",
@@ -199,7 +200,7 @@ export const languageUnits = [
       "ELA.K.C1.1, ELA.K.C1.2, ELA.K.C1.3, ELA.K.C1.4, ELA.K.C1.5, ELA.K.C2.1, ELA.K.C2.2, ELA.K.C2.4, ELA.K.C2.5, ELA.K.C3.1, ELA.K.C3.3, ELA.K.C3.4, ELA.K.C3.5",
       "planning and making simple texts, capital letters, periods and exclamation marks",
     ],
-    items: WRITE,
+    items: [...WRITE, ...WRITE_DEEP],
   }),
   bankUnit({
     id: "mb-k-i-can-learn",
@@ -209,6 +210,6 @@ export const languageUnits = [
     parentNote:
       "Practises noticing when something is confusing, asking for help, using a smiley or thumb to show understanding, talking about what went well, and setting small learning goals. It builds a kind, growing way of thinking about learning.",
     standards: ["ELA.K.D2.1, ELA.K.D2.2, ELA.K.D2.3, ELA.K.D2.4, ELA.K.D2.5", "noticing understanding, listening to feedback, simple goals and recognizing progress"],
-    items: REFLECT,
+    items: [...REFLECT, ...REFLECT_DEEP],
   }),
 ];

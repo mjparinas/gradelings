@@ -41,7 +41,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const name = twins.length > 1 && twins[0] !== unit ? `${unit.title}, part ${twins.indexOf(unit) + 1}` : unit.title;
   return pageMeta({
     title: [`${name}: ${g} ${subjectSeoTitle(course.subject)} practice (${f.shortName})`, `${name}: ${g} ${subjectSeoTitle(course.subject)} (${f.shortName})`, `${name}: ${g} (${f.shortName})`, `${name} (${f.shortName})`, `${name}: ${g}`],
-    description: `${unit.parentNote} Free ${gradeLabel(f, grade)} sample questions with answers, matched to the ${f.curriculumName}.`,
+    // Action and value first, since Google shows about the first 155 characters: what the page offers, the curriculum, no sign-up, then the parent note.
+    description: `Free ${g} ${unit.title} practice with answers, matched to the ${f.curriculumName}. Try the questions now, no sign-up. ${unit.parentNote}`,
     path: curriculumPath.unit(f, grade, course.subject, unit.id),
     framework: f,
   });

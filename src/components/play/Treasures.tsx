@@ -43,6 +43,7 @@ export function Treasures() {
     { id: "rhymes", title: "Rhymes", icon: "🎵", colour: "#e9559a", dark: "#c43a7c", href: "#/rhymes", flag: "rhymes" },
     { id: "explore", title: "Explore", icon: "🔭", colour: "#25b47e", dark: "#188a5e", href: "#/explore", flag: "explore-cards" },
     { id: "problems", title: "Story Problems", icon: "🧮", colour: "#4f8ef7", dark: "#2f6fd6", href: "#/problems", flag: "story-problems", from: 1 },
+    { id: "videos", title: "Videos", icon: "🎬", colour: "#4f8ef7", dark: "#2f6fd6", href: "#/videos", flag: "video-help" },
     { id: "break", title: "Brain Break", icon: "🧠", colour: "#7c4fe0", dark: "#5d34c4", href: "#/break", flag: "brain-breaks" },
     { id: "trail", title: "Trail Map", icon: "🧭", colour: "#4f8ef7", dark: "#2f6fd6", href: "#/map" },
   ];

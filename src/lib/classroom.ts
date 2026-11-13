@@ -199,6 +199,8 @@ export interface StudentInsight {
   name: string;
   /** Plain-language reasons, ready to show. */
   reasons: string[];
+  /** Only for celebrate: how many assigned units the student is doing well in. */
+  count?: number;
 }
 
 export interface ClassInsights {
@@ -207,6 +209,8 @@ export interface ClassInsights {
   focusUnits: UnitInsight[];
   /** Students to check in with: tricky units, or no practice for a week. */
   checkIn: StudentInsight[];
+  /** Students doing really well on assigned units (Proficient or higher), most units first. Worth a word of praise. */
+  celebrate: StudentInsight[];
 }
 
 /** Turns the class table into "reteach this" and "check in with these students". Practice only, never a mark. */
@@ -236,7 +240,10 @@ export function classInsights(students: StudentRow[], assignments: string[], uni
     .filter((u) => u.needHand.length > 0 && u.needHand.length / u.started >= 0.3)
     .sort((a, b) => b.needHand.length / b.started - a.needHand.length / a.started || b.needHand.length - a.needHand.length);
   const checkIn: StudentInsight[] = [];
+  const celebrate: StudentInsight[] = [];
   for (const s of students) {
+    const strong = units.filter((u) => s.units.find((x) => x.key === u.key && x.assigned !== false && x.level >= 2)).map((u) => unitName(u.key));
+    if (strong.length) celebrate.push({ profileId: s.profileId, name: s.name, reasons: [`Doing really well in ${strong.slice(0, 2).join(" and ")}${strong.length > 2 ? ` and ${strong.length - 2} more` : ""}`], count: strong.length });
     const reasons: string[] = [];
     const tricky = units.filter((u) => u.needHand.includes(s.profileId)).map((u) => unitName(u.key));
     if (tricky.length) reasons.push(`Finding ${tricky.slice(0, 2).join(" and ")}${tricky.length > 2 ? ` and ${tricky.length - 2} more` : ""} tricky`);
@@ -244,7 +251,8 @@ export function classInsights(students: StudentRow[], assignments: string[], uni
     if (hasWork && (s.lastActive === null || now - s.lastActive > WEEK)) reasons.push(s.lastActive === null ? "Hasn’t started yet" : "No practice this week");
     if (reasons.length) checkIn.push({ profileId: s.profileId, name: s.name, reasons });
   }
-  return { units, focusUnits, checkIn };
+  celebrate.sort((a, b) => (b.count ?? 0) - (a.count ?? 0));
+  return { units, focusUnits, checkIn, celebrate: celebrate.slice(0, 6) };
 }
 
 // ---------- Homework overview ----------

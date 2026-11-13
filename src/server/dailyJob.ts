@@ -26,7 +26,7 @@ import { schoolYearLines } from "@/lib/schoolYear";
 import { childHomework, homeworkEmailLines } from "@/lib/homework";
 import { goalEmailLines, goalProgress } from "@/lib/goalPlan";
 import { goalName } from "@/lib/goalPlanText";
-import { canUse } from "@/lib/plan";
+import { canUse, TRIAL_NOTICE_DAYS, TRIAL_RECAP_DAYS_LEFT } from "@/lib/plan";
 import { getFamilyRow, toFamilyInfo } from "@/server/family";
 import { atHomeIdea, atHomeLine, factsWeekLine, storiesLine, storiesThisWeek } from "@/lib/weeklyExtras";
 import { derive } from "@/lib/derive";
@@ -298,21 +298,24 @@ async function trialChildren(familyId: string, now: number): Promise<TrialChild[
   return out;
 }
 
-// Mid-trial recap, once, 4 to 10 days before the trial ends, only when a child has practised.
+// Mid-trial recap, once, from the trial's halfway point until the notice (TRIAL_RECAP_DAYS_LEFT to TRIAL_NOTICE_DAYS days
+// before it ends), only when a child has practised.
 async function trialRecaps(ctx: Ctx): Promise<boolean> {
   const { now, origin, result } = ctx;
   const recaps = await query<{ id: string; email: string; family_id: string; trial_ends_at: number; country: string | null }>(
     `SELECT p.id, p.email, p.family_id, f.trial_ends_at, f.country FROM parents p JOIN families f ON f.id = p.family_id
      WHERE p.family_role = 'owner' AND p.email_verified_at IS NOT NULL AND NOT ${teacherOnly("p")} AND p.trial_recap_at IS NULL AND p.trial_notice_at IS NULL AND f.plan = 'trial'
        AND f.subscription_status IS NULL AND COALESCE(f.access_until, 0) < f.trial_ends_at AND f.trial_ends_at > ? AND f.trial_ends_at <= ?`,
-    [now + 3 * DAY, now + 10 * DAY],
+    [now + TRIAL_NOTICE_DAYS * DAY, now + TRIAL_RECAP_DAYS_LEFT * DAY],
   );
   for (const t of recaps) {
     if (ctx.over()) return false;
-    ctx.worked++;
     try {
       const children = await trialChildren(t.family_id, now);
+      // A family with no practice gets no recap and is never marked, so it must not count as work: with a tight budget,
+      // a resumed run would otherwise stop on the same family every time and never reach the later phases.
       if (!children.some((c) => c.answers > 0)) continue;
+      ctx.worked++;
       const daysLeft = Math.max(1, Math.ceil((Number(t.trial_ends_at) - now) / DAY));
       const sent = await sendEmail(trialRecapEmail(t.email, origin, daysLeft, children, toCountryCode(t.country)));
       if (sent.ok) {
@@ -326,14 +329,14 @@ async function trialRecaps(ctx: Ctx): Promise<boolean> {
   return true;
 }
 
-// Trial ending within 3 days, not subscribed, not told yet.
+// Trial ending within TRIAL_NOTICE_DAYS days, not subscribed, not told yet.
 async function trialNotices(ctx: Ctx): Promise<boolean> {
   const { now, origin, result } = ctx;
   const trials = await query<{ id: string; email: string; family_id: string; trial_ends_at: number; country: string | null }>(
     `SELECT p.id, p.email, p.family_id, f.trial_ends_at, f.country FROM parents p JOIN families f ON f.id = p.family_id
      WHERE p.family_role = 'owner' AND p.email_verified_at IS NOT NULL AND NOT ${teacherOnly("p")} AND p.trial_notice_at IS NULL AND f.plan = 'trial'
        AND f.subscription_status IS NULL AND COALESCE(f.access_until, 0) < f.trial_ends_at AND f.trial_ends_at > ? AND f.trial_ends_at <= ?`,
-    [now, now + 3 * DAY],
+    [now, now + TRIAL_NOTICE_DAYS * DAY],
   );
   for (const t of trials) {
     if (ctx.over()) return false;

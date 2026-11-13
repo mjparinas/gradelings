@@ -1,5 +1,6 @@
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
+import { NATION_MORE } from "./social-more";
 import { timelineUnit, type Dated } from "./kit";
 
 // Maine Grade 8 social studies: Maine in the history of the United States from statehood to Reconstruction, and the
@@ -79,7 +80,7 @@ export const SOCIAL_8: Unit[] = [
     blurb: "From statehood to Reconstruction",
     parentNote: "Maine in United States history from 1820 to Reconstruction: statehood and the Missouri Compromise, the Aroostook War, the Maine Law and reform, Mainers in the fight over slavery (Stowe, Russwurm, Lovejoy, Hamlin), the 20th Maine and the Civil War, and the Reconstruction amendments.",
     standards: ["History 1; History 2; Civics & Government 3", "turning points, events and people in the history of Maine and the United States, and issues of unity and diversity"],
-    items: NATION,
+    items: [...NATION, ...NATION_MORE],
   }),
   timelineUnit({
     id: "me-g8-us-timeline",

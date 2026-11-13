@@ -52,6 +52,33 @@ beforeEach(() => {
   });
 });
 
+describe("ChildrenPage from the email confirmation page", () => {
+  it("opens the add form at once for a family with no child, and takes ?addchild=1 off the address", async () => {
+    window.history.replaceState(null, "", "/parents/?addchild=1#/children");
+    render(<ChildrenPage />);
+    expect(await screen.findByRole("dialog", { name: "Add a child" })).toBeInTheDocument();
+    expect(window.location.search).toBe("");
+    window.history.replaceState(null, "", "/");
+  });
+  it("after the first child is saved, offers to start their first session", async () => {
+    window.history.replaceState(null, "", "/parents/?addchild=1#/children");
+    render(<ChildrenPage />);
+    const dialog = await screen.findByRole("dialog", { name: "Add a child" });
+    fireEvent.change(within(dialog).getByRole("textbox"), { target: { value: "Ben" } });
+    await userEvent.click(within(dialog).getByRole("button", { name: "Save" }));
+    expect(screen.getByRole("link", { name: "Start Ben’s first session" })).toHaveAttribute("href", "/play/");
+    expect(useStore.getState().activeId).toBe(live()[0].id);
+    window.history.replaceState(null, "", "/");
+  });
+  it("leaves the form closed when a child is already there", () => {
+    useStore.setState({ profiles: [kid("a", "Ava")], activeId: "a" });
+    window.history.replaceState(null, "", "/parents/?addchild=1#/children");
+    render(<ChildrenPage />);
+    expect(screen.queryByRole("dialog")).not.toBeInTheDocument();
+    window.history.replaceState(null, "", "/");
+  });
+});
+
 describe("ChildrenPage", () => {
   it("adds a child with a birth year that suggests the grade, a province and an avatar", async () => {
     useStore.setState({ profiles: [kid("a", "Ava")], activeId: "a" });

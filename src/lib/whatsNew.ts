@@ -25,27 +25,27 @@ export const NEWS_KIND_LABEL: Record<NewsItem["kind"], string> = {
 export const WHATS_NEW: NewsDay[] = [
   {
     day: "2026-11-07",
-    headline: "More cards and articles to explore, free Spanish pages, and a fix for school web filters",
+    headline: "Many more questions to practise, new things to read, and a fix for school networks",
     items: [
       {
         kind: "new",
-        title: "48 more Explore cards and 12 more articles",
-        body: "Explore cards and Articles have many more topics, chosen from what families search for. Like the rest of that corner, they are read along, nothing is scored, and nothing counts as practice.",
+        title: "More practice questions in language, science and French",
+        body: "Grade 8 and Grade 9 language arts, Grade 8 science, Grade 5, 6 and 7 Core French and Kindergarten French Immersion have many more questions, so a unit stays fresh for longer. Grade 9 language arts is also deeper in Manitoba, and Washington and South Dakota social studies have more questions too.",
+      },
+      {
+        kind: "new",
+        title: "More articles and Explore cards",
+        body: "Twelve new short articles and 48 new Explore cards, on science and our world topics families often ask about. They are read along, and nothing is scored or saved.",
+      },
+      {
+        kind: "fixed",
+        title: "Lessons no longer get stuck on some school networks",
+        body: "On a few school networks, a web filter could block part of the app and leave a child on a loading screen. The app now says plainly that the network blocked something, and Try again works.",
       },
       {
         kind: "new",
         title: "Free Spanish pages for Grades 3 to 9",
         body: "Anyone can now look at what a beginner Spanish course covers, grade by grade and unit by unit, with sample questions. The Spanish course in the app itself is not switched on yet.",
-      },
-      {
-        kind: "fixed",
-        title: "A loading screen that never ended on some school networks",
-        body: "On some school networks, a web filter blocked part of a lesson and the app stayed on its loading screen, even after tapping Try again. Now the app says the network blocked part of it, and Try again reloads the page so it can start over.",
-      },
-      {
-        kind: "new",
-        title: "More practice questions in French, language arts, science and social studies",
-        body: "Grade 8 science, Grade 8 and 9 language arts, Kindergarten French Immersion, Grades 5 to 7 Core French, Manitoba Grade 9 language arts, and Washington and South Dakota social studies all have more questions, so practice stays fresh for longer.",
       },
     ],
   },
@@ -72,6 +72,21 @@ export const WHATS_NEW: NewsDay[] = [
         kind: "new",
         title: "More Ontario practice questions",
         body: "Ontario Grade 7, 8 and 9 language units (grammar, writing, punctuation and more) and Grade 8 social studies have many more questions, so practice stays fresh for longer.",
+      },
+      {
+        kind: "new",
+        title: "More to read and wonder about",
+        body: "Twelve new short articles and 48 new Explore cards, on topics families often search for, are now in the app.",
+      },
+      {
+        kind: "new",
+        title: "More practice in French and language arts",
+        body: "French Immersion, Core French and language arts units from Kindergarten to Grade 9, plus some social studies and Grade 8 science units, have many more questions, so practice stays fresh for longer.",
+      },
+      {
+        kind: "fixed",
+        title: "No more endless loading on school networks",
+        body: "When a school's web filter blocks part of the app, it now says so and offers Try again, instead of waiting forever.",
       },
     ],
   },

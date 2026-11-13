@@ -2,6 +2,7 @@ import "server-only";
 import { ADMIN_MAIL_GAP_DAYS, fillMessage, paragraphs, SEGMENTS, SEND_BATCH, type AdminMessage, type Segment } from "@/lib/adminEmails";
 import { unsubscribeToken } from "./auth";
 import { LIVE_PROFILE, teacherOnly } from "./audience";
+import { TRIAL_RECAP_DAYS_LEFT } from "@/lib/plan";
 import { query } from "./db";
 import { emailConfigured, sendEmail } from "./email";
 import { adminMessageEmail } from "./emailTemplates";
@@ -31,13 +32,13 @@ function rawWhere(segment: Segment, now: number): { sql: string; args: number[] 
     case "never-practised":
       return { sql: "f.created_at < ? AND NOT EXISTS (SELECT 1 FROM events e WHERE e.family_id = f.id)", args: [now - 2 * DAY] };
     case "no-child":
-      return { sql: `f.created_at < ? AND f.created_at > ? AND NOT EXISTS (SELECT 1 FROM profiles pr WHERE pr.family_id = f.id AND ${LIVE_PROFILE})`, args: [now - 2 * DAY, now - 60 * DAY] };
+      return { sql: `f.created_at < ? AND f.created_at > ? AND NOT EXISTS (SELECT 1 FROM profiles pr WHERE pr.family_id = f.id AND ${LIVE_PROFILE})`, args: [now - 1 * DAY, now - 60 * DAY] };
     case "tried-few":
       return { sql: `f.plan != 'premium' AND ${PRACTICE_DAYS} BETWEEN 1 AND 2 AND ${LAST_PRACTICE} < ?`, args: [now - 3 * DAY] };
     case "engaged-not-paying":
       return { sql: `f.plan != 'premium' AND COALESCE(f.access_until, 0) <= ? AND ${PRACTICE_DAYS} >= 3`, args: [now] };
     case "trial-ending":
-      return { sql: "f.plan != 'premium' AND f.trial_ends_at > ? AND f.trial_ends_at <= ? AND COALESCE(f.access_until, 0) <= ?", args: [now, now + 7 * DAY, now] };
+      return { sql: "f.plan != 'premium' AND f.trial_ends_at > ? AND f.trial_ends_at <= ? AND COALESCE(f.access_until, 0) <= ?", args: [now, now + TRIAL_RECAP_DAYS_LEFT * DAY, now] };
     case "trial-over":
       return { sql: "f.plan != 'premium' AND f.trial_ends_at <= ? AND f.trial_ends_at > ? AND COALESCE(f.access_until, 0) <= ?", args: [now, now - 60 * DAY, now] };
     case "cancelled":

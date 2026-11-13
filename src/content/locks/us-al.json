@@ -58,7 +58,7 @@
       "picture-clues text=c447e46412 std=8545f168f8 q=3ade8d2d47",
       "blend-a-word text=3d99132c91 std=bd2f6f065b q=16d2ff7d7d",
       "talk-and-listen-ab text=6b71ddbc74 std=73f3d82f96 q=e684468815",
-      "mb-k-word-parts-and-meanings text=e15eb53b01 std=4b162d53f9 q=a2785c140f",
+      "mb-k-word-parts-and-meanings text=e15eb53b01 std=4b162d53f9 q=c988c37a4b",
       "wa-gk-ask-and-find-out text=3232fd3739 std=d36676d77e q=15f5ec6b8a"
     ]
   },
@@ -203,7 +203,7 @@
       "word-pictures text=44e4dfbdc5 std=e06e4f3877 q=870ecab164",
       "reading-detectives text=06d742f348 std=42522457da q=decd73a013",
       "text-features text=15cb2dc162 std=fe62b61089 q=0e6e3d2f57",
-      "mb-finding-information text=b6b5ad0955 std=2f34bdb708 q=95d8977d6e",
+      "mb-finding-information text=b6b5ad0955 std=2f34bdb708 q=89c5768441",
       "wa-g2-media-detectives text=be66a838b4 std=ee0ae8019f q=7844f5c974"
     ]
   },
@@ -279,7 +279,7 @@
       "grammar-3 text=a9deaa03d1 std=69d8554c55 q=4cef04ee6f",
       "text-patterns text=66f9e7deb8 std=a9ec609556 q=2d33abb1d7",
       "tx-g3-tales-and-poems text=de307f42f4 std=b935ecfbaf q=36ace37614",
-      "mb-wonder-and-find-out text=63150b7959 std=6733ed1921 q=aeacd646ab",
+      "mb-wonder-and-find-out text=63150b7959 std=6733ed1921 q=ef051d1eac",
       "wa-g3-media-messages text=fb774641d1 std=770db86733 q=feb4e64c34"
     ]
   },
@@ -440,7 +440,7 @@
       "complex-sentences text=ac4c5531ea std=76c801a923 q=541e2d5520",
       "punctuation-power text=fb7f3d7d02 std=1be5641cad q=c61867de33",
       "media-smarts text=e34e2d845a std=8b64b52e95 q=943a38fda8",
-      "mb-multimodal-texts-5 text=adf27e7e3d std=c6fb7ca14c q=b3c7f7225b",
+      "mb-multimodal-texts-5 text=adf27e7e3d std=c6fb7ca14c q=afd9881eca",
       "wa-g5-research-ready text=a1d4419e2b std=a6150ef763 q=e9eb98ac26",
       "wa-g5-spelling-smarts text=27bf16b09c std=e651d0e59d q=2666501efd"
     ]
@@ -601,7 +601,7 @@
       "poetry-lab text=e3769835d8 std=5ce79467e3 q=a8dd8516cd",
       "punctuation-7 text=9342af658b std=44a6f55920 q=f4766ca186",
       "point-of-view-7 text=9446c4e22a std=c78fb26d1d q=fc62f4db46",
-      "mb-word-roots text=f8f825870e std=ad3e377260 q=a13fe4ad77",
+      "mb-word-roots text=f8f825870e std=ad3e377260 q=6922bca6a8",
       "wa-g7-research-skills text=a0906b3c59 std=9386c8fdd0 q=4901d7cfd4",
       "wa-g7-media-framing text=dfd5377178 std=29a68a9c18 q=1f917ebc68",
       "wa-g7-spelling-rules text=2551a36a70 std=ab55f97d16 q=a7dae53aa2"
@@ -637,12 +637,12 @@
       "cells-and-life text=26001b2c5a std=785cff1bc1 q=fcae7914fa",
       "cells-diffusion-ab text=caaea79aff std=1b4623fa7b q=650ba01e94",
       "photosynthesis-respiration-9 text=aa7d1dc3bb std=15733d82f4 q=a8703c2a22",
-      "cells-from-cells text=bf9b3d6d2e std=d4c720934a q=9c20dd0a12",
+      "cells-from-cells text=bf9b3d6d2e std=d4c720934a q=17bf1b2a92",
       "body-systems text=982982e155 std=bf437094fa q=aa5f3b59c6",
       "heart-bones-muscles text=cbf4eb1eb6 std=68a3f6dbe1 q=747cabbf7f",
       "food-chains-7 text=fef8ede051 std=8d2965b1ad q=777910f336",
       "cycles-succession-7 text=966cbdbe7e std=855e4d42e8 q=c45e49da11",
-      "ecosystems-7 text=7f94e0036b std=644f3924bc q=2aeec5ed64",
+      "ecosystems-7 text=7f94e0036b std=644f3924bc q=041251a723",
       "biodiversity-6 text=15a9a74baf std=72a20fb6a1 q=1a96e551d4",
       "wa-g8-heredity text=023de89543 std=56034a443d q=0889381c05",
       "tx-g7-reproduction text=6239fc4f45 std=af6027ff63 q=4d020b17b8",
@@ -692,7 +692,7 @@
       "strategies-8 text=14cb61c3b0 std=1338553509 q=e9e599784b",
       "digital-8 text=742bfe22d6 std=2d974fdd7d q=314d5c282f",
       "writing-8 text=d9bb3a4cad std=ee93f4a07e q=0d80919dc4",
-      "mb-word-power-8 text=3f40ceb555 std=124999fc9e q=434b58489d",
+      "mb-word-power-8 text=3f40ceb555 std=124999fc9e q=37cdbb840c",
       "wa-g8-media-influence text=17e98c9229 std=e871527b6b q=d957e11aea",
       "or-g8-weigh-the-evidence text=d58b9eae3f std=7a21efbecc q=a6a4434e5b"
     ]
@@ -814,12 +814,12 @@
       "tx-b-cells text=c2aebee26a std=2a88f73528 q=692cb5251c",
       "tx-b-biomolecules text=f558500c32 std=5a8ab91906 q=80f1cbcc2a",
       "tx-b-dna text=ebdc21299a std=4d49f6059e q=d5b44c9a6b",
-      "cells-from-cells text=bf9b3d6d2e std=0a19459b6c q=9c20dd0a12",
+      "cells-from-cells text=bf9b3d6d2e std=0a19459b6c q=17bf1b2a92",
       "tx-b-systems text=2df2b5e81f std=b7e12548cd q=1ea35edf46",
       "photosynthesis-respiration-9 text=aa7d1dc3bb std=692e054463 q=a8703c2a22",
       "tx-b-matter-cycles text=9fe427999f std=e2c780adea q=09091db496",
       "tx-b-inheritance text=4049c449a5 std=673809ea96 q=793ec7ba46",
-      "reproduction text=d702789bd4 std=b98b748f1f q=89792aacac",
+      "reproduction text=d702789bd4 std=b98b748f1f q=c9637838d5",
       "tx-b-evolution text=d8462cb40a std=a8a2f334d9 q=7974b5ee1e",
       "mb-evolution-and-selection text=ad74bb913c std=4265b32911 q=2382318afc",
       "al-g9-alabama-biodiversity text=856d03bf2c std=5a07abeafa q=63688458e7",

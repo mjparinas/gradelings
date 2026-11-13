@@ -1,4 +1,5 @@
 import { bankUnit, type Q } from "../own";
+import { BETTER_DEEP, GOALS_DEEP, LISTEN_DEEP, MEDIA_DEEP, PLAN_DEEP, SOUNDS_DEEP, WONDER_DEEP } from "./g3-more-language-deeper";
 
 // More Grade 3 English language arts: listening and talking (ELA.3.A1.1 to A1.4, A1.6), sounds and words (A2.1, A2.2, A2.6),
 // asking questions and choosing information (B1.1, B1.2, B1.4, C1.2, B3.1), planning writing (C1.1, C1.3, C1.4),
@@ -41,7 +42,7 @@ export const listening = bankUnit({
   parentNote:
     "Practises listening for key ideas, using non-verbal cues and turn taking, asking thoughtful questions, giving evidence, and sharing thoughts and preferences in a group.",
   standards: ["ELA.3.A1.1, ELA.3.A1.2, ELA.3.A1.3, ELA.3.A1.4, ELA.3.A1.6", "listening for key ideas, turn taking, group dialogue, thoughtful questions with evidence, and sharing opinions"],
-  items: LISTEN,
+  items: [...LISTEN, ...LISTEN_DEEP],
 });
 
 const SOUNDS: Q[] = [
@@ -82,7 +83,7 @@ export const sounds = bankUnit({
   parentNote:
     "Practises sound awareness (segmenting, blending and changing sounds), letters in different fonts, recognizing common and tricky words quickly, and using punctuation to read with expression.",
   standards: ["ELA.3.A2.1, ELA.3.A2.2, ELA.3.A2.6", "sound awareness, letters in different fonts, high-frequency words and reading with expression"],
-  items: SOUNDS,
+  items: [...SOUNDS, ...SOUNDS_DEEP],
 });
 
 const WONDER: Q[] = [
@@ -122,7 +123,7 @@ export const wonder = bankUnit({
   parentNote:
     "Practises using what you already know, asking focused questions, choosing information from sources, deciding what to include, and noticing diversity and inclusion in stories.",
   standards: ["ELA.3.B1.1, ELA.3.B1.2, ELA.3.B1.4, ELA.3.B3.1, ELA.3.C1.2", "prior knowledge, focused questions, selecting information, sources and diversity in texts"],
-  items: WONDER,
+  items: [...WONDER, ...WONDER_DEEP],
 });
 
 const PLAN: Q[] = [
@@ -162,7 +163,7 @@ export const plan = bankUnit({
   parentNote:
     "Practises choosing a topic from experience, thinking about audience and purpose, using planning tools such as webs and organizers, and telling narrative, informational, descriptive and persuasive writing apart.",
   standards: ["ELA.3.C1.1, ELA.3.C1.3, ELA.3.C1.4", "choosing a topic for an audience and purpose, planning strategies and types of writing"],
-  items: PLAN,
+  items: [...PLAN, ...PLAN_DEEP],
 });
 
 const BETTER: Q[] = [
@@ -202,7 +203,7 @@ export const better = bankUnit({
   parentNote:
     "Practises adding descriptive words, joining ideas with connecting and transition words, noticing when writing doesn't make sense, revising with feedback, and neat handwriting and word processing.",
   standards: ["ELA.3.A1.5, ELA.3.C2.4, ELA.3.C2.5, ELA.3.C3.1", "complex sentences and transitions, voice, revising with feedback and neat letter formation"],
-  items: BETTER,
+  items: [...BETTER, ...BETTER_DEEP],
 });
 
 const MEDIA: Q[] = [
@@ -242,7 +243,7 @@ export const media = bankUnit({
   parentNote:
     "Practises multimodal texts (posters, slide shows, videos, photo essays), planning a layout, choosing visuals and fonts, and picking the best way to share a message with an audience.",
   standards: ["ELA.3.C1.5, ELA.3.C3.5, ELA.3.D1.2", "multimodal texts, layout and visuals, choosing a mode for an audience and visual aids"],
-  items: MEDIA,
+  items: [...MEDIA, ...MEDIA_DEEP],
 });
 
 const GOALS: Q[] = [
@@ -281,5 +282,5 @@ export const goals = bankUnit({
   parentNote:
     "Practises self-monitoring, choosing strategies, using criteria and rubrics, using feedback, setting specific goals for listening, speaking, reading, writing, viewing and representing, and tracking progress.",
   standards: ["ELA.3.D2.1, ELA.3.D2.2, ELA.3.D2.3, ELA.3.D2.4, ELA.3.D2.5", "self-monitoring, criteria, feedback, learning goals and tracking progress"],
-  items: GOALS,
+  items: [...GOALS, ...GOALS_DEEP],
 });

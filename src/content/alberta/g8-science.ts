@@ -108,6 +108,21 @@ const SYSTEMS = [
   q(3, "How do the respiratory and circulatory systems work together?", "The lungs add oxygen to the blood, and the blood carries it to every cell.", ["The lungs pump the blood.", "The heart breathes air in and out.", "They do not interact."], "Each cell needs oxygen, and the two systems team up to deliver it."),
   q(3, "Why is the small intestine lined with many tiny folds?", "They give more surface for absorbing nutrients.", ["They make food taste better.", "They keep the food from moving.", "They store air."], "More surface area means more nutrients can pass into the blood."),
   q(3, "How have immunization programs improved human health?", "They help the body protect itself against certain diseases.", ["They replace the circulatory system.", "They make bones bigger.", "They stop all illnesses."], "Medical research on cells and body systems has led to new ways to prevent illness."),
+  q(1, "Which organ is the control centre of the nervous system?", "the brain", ["the stomach", "the lungs", "the kidneys"], "The brain sends and receives messages through nerves."),
+  q(1, "Which system holds up the body and protects organs?", "the skeletal system", ["the respiratory system", "the digestive system", "the excretory system"], "Bones protect organs such as the brain and heart."),
+  q(1, "Which body part carries food from the mouth to the stomach?", "the esophagus", ["the trachea", "the aorta", "the kidney"], "Muscles squeeze food down the esophagus."),
+  q(1, "What do red blood cells carry?", "oxygen", ["sunlight", "sound", "pieces of bone"], "Red blood cells carry oxygen to cells."),
+  q(2, "Which two systems work together to move the body?", "the muscular and skeletal systems", ["the excretory and respiratory systems", "the digestive and nervous systems", "the immune and circulatory systems"], "Muscles pull on bones to make them move."),
+  q(2, "What is the job of the veins?", "to carry blood back to the heart", ["to carry blood away from the heart", "to make sounds", "to digest food"], "Veins carry blood toward the heart."),
+  q(2, "Why does the stomach produce acid?", "to help break down food", ["to make bones strong", "to carry oxygen", "to move muscles"], "Stomach acid and churning begin to digest food."),
+  q(2, "Which large muscle under the lungs moves air in and out as it moves?", "the diaphragm", ["the esophagus", "the artery", "the skull"], "The diaphragm contracts and relaxes when you breathe."),
+  q(2, "What do capillaries do?", "They let oxygen and nutrients pass between blood and body cells.", ["They pump blood.", "They store food.", "They filter air."], "Capillaries are the smallest blood vessels."),
+  q(2, "What does the large intestine mostly do?", "absorbs water and forms solid waste", ["makes bile", "takes in air", "pumps blood"], "Water is absorbed before waste leaves the body."),
+  q(3, "A runner breathes faster and her heart beats faster. What is the best explanation?", "Muscles need more oxygen, so the respiratory and circulatory systems work harder.", ["The stomach needs more food right now.", "The bones are cooling.", "The skin needs more oxygen than the muscles."], "Body systems respond together to the body's needs."),
+  q(3, "How does the excretory system help keep the body in balance?", "It removes wastes and extra water from the blood.", ["It makes oxygen.", "It builds new bones.", "It controls thoughts."], "Kidneys filter blood and help control water balance."),
+  q(3, "Why do doctors say a balanced diet supports every body system?", "Nutrients from food are carried by blood to all cells, including bones, muscles and nerves.", ["Only the stomach uses food.", "Food is only used by the brain.", "Food is not used by cells."], "Every system depends on nutrients."),
+  q(3, "A person breaks a leg bone. Which system is mostly affected?", "the skeletal system, with muscles also involved", ["the respiratory system only", "the excretory system only", "the digestive system only"], "Bones, muscles and nerves work together for movement."),
+  q(3, "Why does a cut on your skin sometimes become red and swollen?", "The immune system sends cells to fight germs and heal the area.", ["The bones are growing.", "The lungs are tired.", "The stomach is digesting."], "Swelling shows your body responding to injury."),
 ];
 
 const SYSTEM_SORT: SortSet = {
@@ -287,6 +302,21 @@ const SHORES = [
   q(3, "Why might a river carry more sediment after a heavy rain?", "Fast, high water has more energy to pick up and carry material.", ["The sediment gets lighter.", "The river gets shorter.", "The river flows backward."], "More flow means more erosion and a bigger sediment load."),
   q(3, "The Peace-Athabasca Delta in northern Alberta is one of the world's largest inland freshwater deltas. How did it form?", "Rivers drop sediment where they flow into a lake, building land over time.", ["A volcano erupted under the water.", "A glacier dug a hole in the ground.", "Wind blew soil into a pile."], "Deposition at a river's mouth slowly builds a delta."),
   q(3, "How does a cold ocean current like the Labrador Current affect nearby coastal climate?", "It tends to cool the air along the coast.", ["It always warms the coast.", "It has no effect on climate.", "It stops rain completely."], "Water temperature affects the temperature of the air above it."),
+  q(1, "What is a delta?", "land built where a river drops its sediment as it meets a larger body of water", ["a type of wave", "a deep ocean trench", "a kind of rock"], "Deltas form when a river slows and deposits sediment."),
+  q(1, "What is a meander?", "a bend in a river", ["a type of tide", "a kind of fish", "a mountain peak"], "Rivers curve as they erode one bank and deposit on the other."),
+  q(1, "What is a watershed?", "the land area that drains into a river, lake or ocean", ["a type of shed", "a kind of boat", "a rock layer"], "All the water in a watershed flows toward the same place."),
+  q(1, "Which makes a beach?", "sand and pebbles deposited by waves", ["tall mountains", "tree roots only", "iceberg shapes"], "Waves move and drop sediment on the shore."),
+  q(2, "Why does a river carry more sediment after heavy rain?", "Faster, bigger flows can pick up and move more material.", ["The water gets lighter.", "Rivers stop moving.", "Rain turns into rock."], "Fast water has more energy to carry sediment."),
+  q(2, "Where does a river usually flow fastest?", "in the steep upper part near its source", ["only at the delta", "only in a lake", "in a pond"], "Steep slopes make water move quickly."),
+  q(2, "What is a sea cliff?", "a steep rock face shaped by waves eroding the coast", ["a tall tree", "a new island", "a type of wave"], "Waves crash against rock and wear it away."),
+  q(2, "How do the Moon and Sun cause tides?", "Their gravity pulls on the ocean water.", ["Their light heats the ocean.", "Their wind pushes the water.", "Their colour changes the water."], "The Moon's pull is the strongest."),
+  q(2, "What is a spring tide?", "a very high and very low tide when the Sun and Moon line up", ["a tide in spring only", "a tide with no change", "a tide from rain"], "Spring tides happen about every two weeks."),
+  q(2, "What is a groundwater source?", "water stored underground in soil and rock", ["water in clouds", "water in a cup", "ice in a freezer"], "Wells draw up groundwater."),
+  q(3, "Why do engineers plant grasses or build walls on riverbanks?", "to reduce erosion and protect land", ["to make the water warmer", "to stop rain", "to hide fish"], "Roots hold soil in place and walls slow the flow."),
+  q(3, "A shoreline is losing sand each year. What might explain it?", "Waves and currents carry away more sand than they bring.", ["The Moon is closer.", "Sand turns into water.", "Fish eat sand."], "Erosion and deposition balance changes with storms and currents."),
+  q(3, "How does removing plants from a hillside affect a river below?", "More soil washes into the river, making it muddy and filling channels.", ["The river gets clearer.", "The river stops.", "The hillside grows."], "Plant roots hold soil; without them, erosion increases."),
+  q(3, "Why are floodplains good for farming?", "Floods deposit rich sediment that makes soil fertile.", ["They are always dry.", "They are made of solid rock.", "They have no water."], "Fresh sediment adds nutrients to soil."),
+  q(3, "A map shows a river with many bends and an oxbow lake. How did the oxbow form?", "A meander was cut off from the river and left as a curved lake.", ["Rain filled a crater.", "A glacier made it overnight.", "People always dig them."], "Erosion and deposition change a river's path over time."),
 ];
 
 const ERODE_SORT: SortSet = {
