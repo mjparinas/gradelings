@@ -11,6 +11,7 @@ import { PromoBanner } from "./PromoBanner";
 import { RefCapture } from "./ShareButton";
 import { countryBrief } from "./provinces";
 import { AppLink } from "./AppLink";
+import { AppBadges } from "./AppBadges";
 
 /**
  * `play` is the "Try it free" link for this page (`playHref`), so the app opens on what the visitor was reading.
@@ -141,6 +142,7 @@ export function SiteFooter({ build }: { /** A build line such as "Build 3f9a1c2"
         <div>
           <p className="text-xl font-bold">{APP_NAME}</p>
           <p className="mt-1 font-read text-sm text-ink-soft">Curriculum-matched practice, games and progress reports for Pre-K to Grade 9.</p>
+          <AppBadges />
           <SocialLinks />
         </div>
         <FooterColumn
