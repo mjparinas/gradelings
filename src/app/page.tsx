@@ -13,7 +13,7 @@ import { GAMES } from "@/components/play/games/types";
 import { FRAMEWORKS } from "@/content/frameworks";
 import { GRADE_LABEL } from "@/content/subjects";
 import { TEACHER_FRAMEWORKS } from "@/components/site/teachers";
-import { APP_NAME } from "@/lib/brand";
+import { APP_NAME, PLAY_STORE_URL } from "@/lib/brand";
 import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, PRICES_BY_CURRENCY, TRIAL_DAYS } from "@/lib/plan";
 import { TEACHER_SIGNUP, teacherPath } from "@/components/site/teachers";
 import { Disclosure } from "@/components/Disclosure";
@@ -134,6 +134,14 @@ export default function Home() {
           },
         ]}
       />
+
+      <p className="mb-4 rounded-2xl bg-white px-4 py-3 text-center font-read text-sm text-ink-soft">
+        📱 {APP_NAME} is also an Android app.{" "}
+        <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer" className="font-semibold text-ink underline">
+          Get it on Google Play
+        </a>
+        . The iPhone and iPad app is coming soon.
+      </p>
 
       {/* Hero */}
       <section className="grid items-center gap-8 pb-6 md:grid-cols-[1.1fr_1fr] md:pt-4 md:pb-12">
