@@ -65,3 +65,6 @@ export const MAILING_ADDRESS = "603 Front Street #810, Lynden, WA 98264";
 export const LEGAL_UPDATED = "October 14, 2026";
 /** Date of the AI review of the privacy policy and terms (see docs/DEPLOY.md). This is not a lawyer's review. */
 export const LEGAL_AI_REVIEWED = "October 9, 2026";
+
+/** The Android app's Google Play listing (package `com.gradelings.app`). */
+export const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.gradelings.app";

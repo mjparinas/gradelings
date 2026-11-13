@@ -133,7 +133,7 @@ describe("SiteFooter", () => {
       expect(screen.getByRole("link", { name })).toHaveAttribute("href", href);
     }
     const footer = screen.getByRole("contentinfo");
-    expect(footer.querySelectorAll("a").length).toBeLessThan(25);
+    expect(footer.querySelectorAll("a").length).toBeLessThan(26);
     expect(footer.querySelector('a[href^="/curriculum/bc"]')).toBeNull();
   });
 
