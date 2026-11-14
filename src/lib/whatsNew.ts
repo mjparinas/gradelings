@@ -24,6 +24,58 @@ export const NEWS_KIND_LABEL: Record<NewsItem["kind"], string> = {
 
 export const WHATS_NEW: NewsDay[] = [
   {
+    day: "2026-11-09",
+    headline: "Little ones can answer out loud, and teachers see who is doing really well",
+    items: [
+      {
+        kind: "new",
+        title: "Answering out loud for Pre-K to Grade 1",
+        body: "Children in Pre-K to Grade 1 can now say some answers out loud, like naming a picture or counting. It is on by default, the listening happens on the device, and nothing they say is ever recorded or sent anywhere. The small listening file downloads by itself on Wi-Fi, and you can turn the feature off for a child in Settings.",
+      },
+      {
+        kind: "teachers",
+        title: "Celebrate who is doing really well",
+        body: "The class view now shows students who are doing really well, not only the ones who need a check-in. The Monday class email carries a short high-five line too.",
+      },
+    ],
+  },
+  {
+    day: "2026-11-08",
+    headline: "A warm summary for each child, a 14-day free trial, and more to practise",
+    items: [
+      {
+        kind: "new",
+        title: "A week highlight on each child's card",
+        body: "Each child's card on the parent Overview now opens with a friendly sentence about their last seven days of practice, the numbers behind it, and one small next step. A quiet week is met kindly.",
+      },
+      {
+        kind: "new",
+        title: "Free trial is 14 days",
+        body: "The free trial is now 14 days with everything open and no card needed. After it, the first 2 units of every course stay free.",
+      },
+      {
+        kind: "new",
+        title: "A smoother start after you confirm your email",
+        body: "Once you confirm your email, you land straight on adding your child, then can start their first session. Our emails are also clearer about what your family gets.",
+      },
+      {
+        kind: "new",
+        title: "Worksheets fit on one page",
+        body: "Printable worksheets now fit their questions on one page, with the answer key on page 2.",
+      },
+      {
+        kind: "new",
+        title: "More Explore cards, and pages you can find online",
+        body: "Eight new Explore cards for Pre-K to Grade 1, and every Explore card and article now has its own free page to read.",
+      },
+      {
+        kind: "new",
+        title: "More practice questions",
+        body: "Many more questions in Manitoba language arts from Kindergarten to Grade 8, Grade 7 and Grade 9 science and social studies, Alberta and Ontario social studies and science, and several US states' social studies, so units stay fresh for longer.",
+      },
+    ],
+  },
+  {
     day: "2026-11-07",
     headline: "Many more questions to practise, new things to read, and a fix for school networks",
     items: [
