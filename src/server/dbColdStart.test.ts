@@ -26,7 +26,7 @@ async function coldStart() {
             if (typeof v !== "function") return v;
             const f = (v as (...a: unknown[]) => unknown).bind(target);
             if (prop === "execute") return (s: unknown) => (sent.push(typeof s === "string" ? s : String((s as { sql: string }).sql)), f(s));
-            if (prop === "batch") return (s: unknown[], m: unknown) => (sent.push(`batch: ${s.map(String).join("; ")}`), f(s, m));
+            if (prop === "batch") return (s: unknown[], m: unknown) => (sent.push(`batch: ${s.map((x) => (typeof x === "string" ? x : (x as { sql: string }).sql)).join("; ")}`), f(s, m));
             return f;
           },
         });
@@ -46,23 +46,26 @@ afterAll(() => {
 });
 
 describe("a server's first query", () => {
-  it("makes everything on an empty database, then takes four hops and scans no table", async () => {
+  it("makes everything on an empty database, then takes one read and scans no table", async () => {
     await coldStart();
     const dbm = await coldStart();
-    // The schema batch, the column list, the index batch and the legacy unsubscribe check.
-    expect(sent).toHaveLength(4);
-    expect(sent.join("\n")).not.toMatch(/\bUPDATE\b/);
+    // Only the stored schema fingerprint is read.
+    expect(sent).toHaveLength(1);
+    expect(sent[0]).toMatch(/^SELECT value FROM admin_settings/);
     const plan = await dbm.query<{ detail: string }>("EXPLAIN QUERY PLAN SELECT id, unsub_token FROM parents WHERE unsub_token IS NOT NULL");
-    expect(plan.map((r) => r.detail).join(" ")).toContain("parents_legacy_unsub");
+    expect(plan.map((r) => r.detail).join(" ")).toContain("parents_unsub_legacy");
   });
 
   it("runs a one-off fix only in the start that adds its column", async () => {
     let dbm = await coldStart();
     await dbm.run("ALTER TABLE classes DROP COLUMN last_activity_at");
+    await dbm.run("DELETE FROM admin_settings WHERE key = 'schema-fingerprint'");
     dbm = await coldStart();
     expect(sent.join("\n")).toContain("UPDATE classes SET last_activity_at = created_at");
     expect(await dbm.query("SELECT last_activity_at FROM classes")).toEqual([]);
+    // A start after a schema change that adds no column runs no data fix.
+    await dbm.run("DELETE FROM admin_settings WHERE key = 'schema-fingerprint'");
     await coldStart();
-    expect(sent).toHaveLength(4);
+    expect(sent.join("\n")).not.toMatch(/UPDATE (families|classes|parents) SET/);
   });
 });

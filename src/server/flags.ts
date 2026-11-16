@@ -1,6 +1,7 @@
 import "server-only";
 import { FLAGS, flagDef, flagOn, pickVariant, pValue, type Experiment, type ExperimentStatus, type FlagState, type Variant } from "@/lib/flags";
-import { query, run } from "./db";
+import type { InValue } from "@libsql/client";
+import { batch, query, run } from "./db";
 
 // Stored state for feature flags and A/B tests. The flag list and the rules for who gets what are in
 // src/lib/flags.ts; this file reads and writes the database.
@@ -13,10 +14,25 @@ const FLAG_CACHE_FAMILIES = 500;
 let statesCache: { at: number; states: Map<string, FlagState> } | null = null;
 const overridesCache = new Map<string, { at: number; overrides: Map<string, boolean> }>();
 
+// Every device asks /api/flags/ when the app opens, so the experiment list is kept for a short while too, and a
+// family already recorded in a running test isn't written again (the write is `INSERT OR IGNORE`, so a repeat is harmless).
+let experimentsCache: { at: number; list: (Experiment & { createdAt: number })[] } | null = null;
+const recordedAssignments = new Set<string>();
+const RECORDED_MAX = 20_000;
+
 /** Forgets the remembered flag state (after a change, and in tests). */
 export function clearFlagCache(): void {
   statesCache = null;
   overridesCache.clear();
+  experimentsCache = null;
+  recordedAssignments.clear();
+}
+
+async function cachedExperiments(now = Date.now()) {
+  if (experimentsCache && now - experimentsCache.at < FLAG_CACHE_MS) return experimentsCache.list;
+  const list = await listExperiments();
+  experimentsCache = { at: now, list };
+  return list;
 }
 
 async function cachedStates(now = Date.now()): Promise<Map<string, FlagState>> {
@@ -91,7 +107,8 @@ export async function isFlagOn(key: string, familyId: string | null): Promise<bo
 
 /** Every flag's value for one family, or for a signed-out device bucketed by its own id. */
 export async function flagsFor(familyId: string | null, deviceId: string | null): Promise<Record<string, boolean>> {
-  const [states, overrides] = await Promise.all([flagStates(), familyId ? familyOverrides(familyId) : Promise.resolve(new Map<string, boolean>())]);
+  // The same short-lived copies the server-side checks use, so opening the app doesn't read both tables every time.
+  const [states, overrides] = await Promise.all([cachedStates(), familyId ? cachedOverrides(familyId) : Promise.resolve(new Map<string, boolean>())]);
   return Object.fromEntries(FLAGS.map((f) => [f.key, flagOn(f, states.get(f.key), overrides.get(f.key), familyId ?? deviceId)]));
 }
 
@@ -138,27 +155,38 @@ export async function getExperiment(key: string): Promise<(Experiment & { create
 
 /** Saves a new experiment as a draft. Returns false when the key is taken. */
 export async function createExperiment(e: { key: string; description: string; variants: Variant[] }, now = Date.now()): Promise<boolean> {
-  return (await run("INSERT OR IGNORE INTO experiments (key, description, status, variants, created_at) VALUES (?, ?, 'draft', ?, ?)", [e.key, e.description, JSON.stringify(e.variants), now])) > 0;
+  const created = (await run("INSERT OR IGNORE INTO experiments (key, description, status, variants, created_at) VALUES (?, ?, 'draft', ?, ?)", [e.key, e.description, JSON.stringify(e.variants), now])) > 0;
+  experimentsCache = null;
+  return created;
 }
 
 /** Variants can change only in a draft: changing them mid-test would move families between groups. */
 export async function updateDraft(key: string, e: { description: string; variants: Variant[] }): Promise<boolean> {
-  return (await run("UPDATE experiments SET description = ?, variants = ? WHERE key = ? AND status = 'draft'", [e.description, JSON.stringify(e.variants), key])) > 0;
+  const changed = (await run("UPDATE experiments SET description = ?, variants = ? WHERE key = ? AND status = 'draft'", [e.description, JSON.stringify(e.variants), key])) > 0;
+  experimentsCache = null;
+  return changed;
 }
 
 export async function startExperiment(key: string, now = Date.now()): Promise<boolean> {
-  return (await run("UPDATE experiments SET status = 'running', started_at = ? WHERE key = ? AND status = 'draft'", [now, key])) > 0;
+  const started = (await run("UPDATE experiments SET status = 'running', started_at = ? WHERE key = ? AND status = 'draft'", [now, key])) > 0;
+  experimentsCache = null;
+  return started;
 }
 
 /** Ends a test. Everyone then sees the winner (or the control when no winner is given). */
 export async function stopExperiment(key: string, winner: string | null, now = Date.now()): Promise<boolean> {
-  return (await run("UPDATE experiments SET status = 'stopped', winner = ?, stopped_at = COALESCE(stopped_at, ?) WHERE key = ? AND status IN ('running', 'stopped')", [winner, now, key])) > 0;
+  const stopped = (await run("UPDATE experiments SET status = 'stopped', winner = ?, stopped_at = COALESCE(stopped_at, ?) WHERE key = ? AND status IN ('running', 'stopped')", [winner, now, key])) > 0;
+  experimentsCache = null;
+  return stopped;
 }
 
 /** Deletes an experiment and its recorded assignments. Code that still asks for it gets "control". */
 export async function deleteExperiment(key: string): Promise<boolean> {
   await run("DELETE FROM experiment_assignments WHERE experiment = ?", [key]);
-  return (await run("DELETE FROM experiments WHERE key = ?", [key])) > 0;
+  const deleted = (await run("DELETE FROM experiments WHERE key = ?", [key])) > 0;
+  experimentsCache = null;
+  recordedAssignments.clear();
+  return deleted;
 }
 
 /**
@@ -167,12 +195,24 @@ export async function deleteExperiment(key: string): Promise<boolean> {
  */
 export async function variantsFor(familyId: string | null, deviceId: string | null, now = Date.now()): Promise<Record<string, string>> {
   const out: Record<string, string> = {};
-  for (const e of await listExperiments()) {
+  const fresh: { sql: string; args: InValue[] }[] = [];
+  for (const e of await cachedExperiments(now)) {
     const variant = pickVariant(e, familyId ?? deviceId);
     out[e.key] = variant;
     if (familyId && e.status === "running") {
-      await run("INSERT OR IGNORE INTO experiment_assignments (experiment, family_id, variant, assigned_at) VALUES (?, ?, ?, ?)", [e.key, familyId, variant, now]);
+      const mark = `${e.key}\u0000${familyId}\u0000${variant}`;
+      if (recordedAssignments.has(mark)) continue;
+      fresh.push({ sql: "INSERT OR IGNORE INTO experiment_assignments (experiment, family_id, variant, assigned_at) VALUES (?, ?, ?, ?)", args: [e.key, familyId, variant, now] });
+      if (recordedAssignments.size >= RECORDED_MAX) recordedAssignments.clear();
+      recordedAssignments.add(mark);
     }
+  }
+  // One round trip for every running test, instead of one for each.
+  try {
+    await batch(fresh);
+  } catch (e) {
+    for (const w of fresh) recordedAssignments.delete(`${w.args[0]}\u0000${w.args[1]}\u0000${w.args[2]}`);
+    throw e;
   }
   return out;
 }

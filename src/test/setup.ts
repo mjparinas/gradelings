@@ -1,5 +1,8 @@
 import { afterEach } from "vitest";
 
+// Tests read fresh admin numbers after every change; the dashboard cache has its own test.
+process.env.STATS_CACHE_MS ??= "0";
+
 // Only component tests run in a DOM; skip the setup for the node-environment tests.
 if (typeof document !== "undefined") {
   const { cleanup, configure } = await import("@testing-library/react");

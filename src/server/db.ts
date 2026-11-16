@@ -57,6 +57,12 @@ const SCHEMA = [
   )`,
   `CREATE INDEX IF NOT EXISTS events_family_seq ON events (family_id, seq)`,
   `CREATE INDEX IF NOT EXISTS events_profile ON events (profile_id, t)`,
+  // A family's running event count, so a sync checks its storage cap with one row read, not a count of every event.
+  `CREATE TABLE IF NOT EXISTS family_event_counts (
+    family_id TEXT PRIMARY KEY,
+    n INTEGER NOT NULL,
+    counted_at INTEGER NOT NULL
+  )`,
   // One-time tokens for password reset and email confirmation. Only a hash is stored.
   `CREATE TABLE IF NOT EXISTS auth_tokens (
     token_hash TEXT PRIMARY KEY,
@@ -608,35 +614,8 @@ const FAMILY_COLUMNS: [string, string][] = [
 // preview itself, kept so the teacher's screen doesn't regenerate it on every refresh.
 const LIVE_COLUMNS: [string, string][] = [["next_swaps", "INTEGER DEFAULT 0"], ["next_data", "TEXT"]];
 
-/**
- * Unsubscribe tokens used to be stored as they were emailed. Keeps the links already sent working by storing their hash, then
- * forgets the plain text. Safe to run again: it only touches rows that still hold a plain token.
- */
-export async function hashLegacyUnsubTokens(c: Client) {
-  const legacy = (await c.execute("SELECT id, unsub_token FROM parents WHERE unsub_token IS NOT NULL")).rows;
-  for (const r of legacy) {
-    // Hash first, forget second: if it stops in between, the next start finishes the job.
-    await c.execute({ sql: "INSERT OR IGNORE INTO unsub_tokens (token_hash, parent_id, created_at) VALUES (?, ?, NULL)", args: [createHash("sha256").update(String(r.unsub_token)).digest("hex"), String(r.id)] });
-    await c.execute({ sql: "UPDATE parents SET unsub_token = NULL WHERE id = ?", args: [String(r.id)] });
-  }
-}
-
-/** Each table's columns, read in one query on a server's first query (one hop to Turso instead of one per table). */
-async function columnsByTable(c: Client): Promise<Map<string, Set<string>>> {
-  const r = await c.execute(
-    "SELECT m.name AS t, p.name AS col FROM sqlite_master m JOIN pragma_table_info(m.name) p WHERE m.type = 'table'",
-  );
-  const out = new Map<string, Set<string>>();
-  for (const row of r.rows) {
-    const t = String(row.t);
-    if (!out.has(t)) out.set(t, new Set());
-    out.get(t)!.add(String(row.col));
-  }
-  return out;
-}
-
-/** Columns added after a table was first made, per table, in the order they're added. */
-const ADDED_COLUMNS: [string, [string, string][]][] = [
+/** Every table that gains columns after its first release, with the columns to add. */
+const COLUMNS: [string, [string, string][]][] = [
   ["sessions", SESSION_COLUMNS],
   ["inbox_state", INBOX_COLUMNS],
   ["question_reports", REPORT_COLUMNS],
@@ -650,40 +629,119 @@ const ADDED_COLUMNS: [string, [string, string][]][] = [
 ];
 
 /**
- * Brings an older database up to date on a server's first query. Turso bills every row a query reads and each statement
- * is a network hop, so an up-to-date database costs one read of the column list and one small batch: the one-off data
- * fixes below run only in the start that adds their column, never on every start (they used to scan `classes` and
- * `parents` each time, 2026-11-16), and the legacy unsubscribe check reads a partial index that is empty once done.
+ * Indexes for the columns the app filters, joins and deletes by. Created after the columns exist. Each is
+ * `IF NOT EXISTS`, so a live database gets only the ones it lacks, and none of them changes a query's answer.
+ */
+const INDEXES = [
+  `CREATE UNIQUE INDEX IF NOT EXISTS families_referral_code ON families (referral_code)`,
+  `CREATE INDEX IF NOT EXISTS families_referred_by ON families (referred_by)`,
+  `CREATE UNIQUE INDEX IF NOT EXISTS students_external ON students (class_id, external_id) WHERE external_id IS NOT NULL`,
+  `CREATE UNIQUE INDEX IF NOT EXISTS parents_google_sub ON parents (google_sub) WHERE google_sub IS NOT NULL`,
+  // Every sync reads a family's settings by family_id; the table's key is profile_id, so this was a full scan.
+  `CREATE INDEX IF NOT EXISTS child_settings_family ON child_settings (family_id)`,
+  // A family's accounts (deleting a family, the family page, emails to its parents).
+  `CREATE INDEX IF NOT EXISTS parents_family ON parents (family_id, created_at)`,
+  // The admin dashboard's activity, active-family and cohort figures look at events by time.
+  `CREATE INDEX IF NOT EXISTS events_t ON events (t)`,
+  // Signing out, signing out everywhere and deleting an account look sessions up by parent or family; the
+  // cleanup of expired sessions and rate-limit counters ran as full scans.
+  `CREATE INDEX IF NOT EXISTS sessions_parent ON sessions (parent_id)`,
+  `CREATE INDEX IF NOT EXISTS sessions_family ON sessions (family_id)`,
+  `CREATE INDEX IF NOT EXISTS sessions_expires ON sessions (expires_at)`,
+  `CREATE INDEX IF NOT EXISTS rate_limits_reset ON rate_limits (reset_at)`,
+  // Stripe's webhook finds a family by its customer id, and the consent link by its token.
+  `CREATE INDEX IF NOT EXISTS families_stripe_customer ON families (stripe_customer) WHERE stripe_customer IS NOT NULL`,
+  `CREATE INDEX IF NOT EXISTS families_consent_token ON families (consent_token) WHERE consent_token IS NOT NULL`,
+  // The sweep that forgets an undo window's old code looks only at the few rows that still hold one.
+  `CREATE INDEX IF NOT EXISTS students_prev_code ON students (prev_code_at) WHERE prev_code_at IS NOT NULL`,
+  // The automatic nudges count what each one has sent.
+  `CREATE INDEX IF NOT EXISTS email_log_sent_by ON email_log (sent_by, sent_at)`,
+  // Only rows still holding a plain unsubscribe token match, so the check at start-up reads none instead of every parent.
+  `CREATE INDEX IF NOT EXISTS parents_unsub_legacy ON parents (unsub_token) WHERE unsub_token IS NOT NULL`,
+];
+
+/**
+ * Unsubscribe tokens used to be stored as they were emailed. Keeps the links already sent working by storing their hash, then
+ * forgets the plain text. Safe to run again: it only touches rows that still hold a plain token.
+ */
+export async function hashLegacyUnsubTokens(c: Client) {
+  const legacy = (await c.execute("SELECT id, unsub_token FROM parents WHERE unsub_token IS NOT NULL")).rows;
+  for (const r of legacy) {
+    // Hash first, forget second: if it stops in between, the next start finishes the job.
+    await c.execute({ sql: "INSERT OR IGNORE INTO unsub_tokens (token_hash, parent_id, created_at) VALUES (?, ?, NULL)", args: [createHash("sha256").update(String(r.unsub_token)).digest("hex"), String(r.id)] });
+    await c.execute({ sql: "UPDATE parents SET unsub_token = NULL WHERE id = ?", args: [String(r.id)] });
+  }
+}
+
+/** Bump when `migrate` gains a one-time step that no schema or column change would show, so every database runs it once. */
+const MIGRATION_REVISION = 1;
+
+/** Changes whenever the schema, a column list, an index or the migration changes. */
+function schemaFingerprint(): string {
+  return createHash("sha256").update(JSON.stringify([MIGRATION_REVISION, SCHEMA, COLUMNS, INDEXES])).digest("hex").slice(0, 32);
+}
+
+const FINGERPRINT_KEY = "schema-fingerprint";
+
+/** Whether this database was already brought up to date by this version of the code (one query). */
+async function schemaIsCurrent(c: Client, fingerprint: string): Promise<boolean> {
+  try {
+    const rows = (await c.execute({ sql: "SELECT value FROM admin_settings WHERE key = ?", args: [FINGERPRINT_KEY] })).rows;
+    return rows[0]?.value === fingerprint;
+  } catch (e) {
+    // A brand-new database has no tables yet. Anything else (a network error) must surface, not trigger a rebuild.
+    if (/no such table/i.test((e as Error).message)) return false;
+    throw e;
+  }
+}
+
+/**
+ * Brings the schema up to date in a handful of round trips (a hosted database costs one per statement): the tables in
+ * one batch, every table's columns in one query, the missing columns in one batch, then the one-time steps and indexes.
  */
 async function migrate(c: Client) {
-  const cols = await columnsByTable(c);
-  const has = (table: string, column: string) => cols.get(table)?.has(column) ?? false;
-  const stmts: string[] = [];
-  for (const [table, list] of ADDED_COLUMNS)
-    for (const [name, type] of list) if (!has(table, name)) stmts.push(`ALTER TABLE ${table} ADD COLUMN ${name} ${type}`);
-  if (!has("families", "referral_rewards")) {
+  const have = new Map<string, Set<string>>();
+  for (const r of (await c.execute("SELECT m.name AS tbl, p.name AS col FROM sqlite_master m, pragma_table_info(m.name) p WHERE m.type = 'table'")).rows) {
+    const t = String(r.tbl);
+    if (!have.has(t)) have.set(t, new Set());
+    have.get(t)!.add(String(r.col));
+  }
+  const missing = (table: string, column: string) => !have.get(table)?.has(column);
+  const alters: { sql: string; args: InValue[] }[] = [];
+  for (const [table, columns] of COLUMNS) {
+    for (const [name, type] of columns) if (missing(table, name)) alters.push({ sql: `ALTER TABLE ${table} ADD COLUMN ${name} ${type}`, args: [] });
+  }
+  if (alters.length) await c.batch(alters, "write");
+
+  const after: { sql: string; args: InValue[] }[] = [];
+  if (missing("families", "referral_rewards")) {
     // Once, when the counter arrives: start it from the rewards already given.
-    stmts.push("UPDATE families SET referral_rewards = (SELECT COUNT(*) FROM families r WHERE r.referred_by = families.id AND r.referral_rewarded_at IS NOT NULL)");
+    after.push({ sql: "UPDATE families SET referral_rewards = (SELECT COUNT(*) FROM families r WHERE r.referred_by = families.id AND r.referral_rewarded_at IS NOT NULL)", args: [] });
   }
-  if (!has("classes", "last_activity_at")) {
+  if (missing("classes", "last_activity_at")) {
     // Once, when the column arrives: existing classes start their inactivity period from creation until a later sign-in.
-    stmts.push("UPDATE classes SET last_activity_at = created_at WHERE last_activity_at = 0");
+    after.push({ sql: "UPDATE classes SET last_activity_at = created_at WHERE last_activity_at = 0", args: [] });
   }
-  if (!has("parents", "account_type")) {
+  if (missing("parents", "account_type")) {
     // Once, when the column arrives: people who already teach a class are teachers.
-    stmts.push("UPDATE parents SET account_type = 'teacher' WHERE role = 'parent' AND (id IN (SELECT owner_parent_id FROM classes) OR id IN (SELECT parent_id FROM class_teachers))");
+    after.push({ sql: "UPDATE parents SET account_type = 'teacher' WHERE role = 'parent' AND (id IN (SELECT owner_parent_id FROM classes) OR id IN (SELECT parent_id FROM class_teachers))", args: [] });
   }
-  stmts.push(
-    "CREATE UNIQUE INDEX IF NOT EXISTS families_referral_code ON families (referral_code)",
-    "CREATE INDEX IF NOT EXISTS families_referred_by ON families (referred_by)",
-    "CREATE UNIQUE INDEX IF NOT EXISTS students_external ON students (class_id, external_id) WHERE external_id IS NOT NULL",
-    "CREATE UNIQUE INDEX IF NOT EXISTS parents_google_sub ON parents (google_sub) WHERE google_sub IS NOT NULL",
-    // Parents still holding a plain unsubscribe token (none once hashLegacyUnsubTokens has run), so that check reads
-    // this empty index instead of every parent.
-    "CREATE INDEX IF NOT EXISTS parents_legacy_unsub ON parents (id) WHERE unsub_token IS NOT NULL",
-  );
-  await c.batch(stmts, "write");
+  for (const sql of INDEXES) after.push({ sql, args: [] });
+  await c.batch(after, "write");
+
   await hashLegacyUnsubTokens(c);
+}
+
+/** Creates or updates every table, or does nothing but one read when this version already did. */
+async function setup(c: Client) {
+  const fingerprint = schemaFingerprint();
+  if (await schemaIsCurrent(c, fingerprint)) return;
+  await c.batch(SCHEMA.map((sql) => ({ sql, args: [] as InValue[] })), "write");
+  await migrate(c);
+  await c.execute({
+    sql: "INSERT INTO admin_settings (key, value, updated_at) VALUES (?, ?, ?) ON CONFLICT (key) DO UPDATE SET value = excluded.value, updated_at = excluded.updated_at",
+    args: [FINGERPRINT_KEY, fingerprint, Date.now()],
+  });
 }
 
 let client: Client | null = null;
@@ -713,11 +771,7 @@ export async function db(): Promise<Client> {
       if (url.startsWith("file:")) mkdirSync(dirname(url.slice(5)), { recursive: true });
       const c = createClient({ url, authToken });
       client = c;
-      ready = (async () => {
-        // One batch, not one hop per statement: CREATE … IF NOT EXISTS reads no rows once the database is up to date.
-        await c.batch(SCHEMA, "write");
-        await migrate(c);
-      })();
+      ready = setup(c);
     } catch (e) {
       console.error("[db] could not open the database", (e as Error).message);
       throw e;
