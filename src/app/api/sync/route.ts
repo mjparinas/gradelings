@@ -94,6 +94,8 @@ export async function POST(req: Request) {
   const writes: { sql: string; args: InValue[] }[] = [];
   // Whether this request changes any child record, so the download can reuse the rows already read when it doesn't.
   let profilesChanged = false;
+  // Whether this request deletes events (a child deleted or reset), which makes the stored event count stale.
+  let eventsRemoved = false;
   const mine = new Set(existing.filter((r) => r.family_id === family).map((r) => r.id));
   // Children who were deleted or reset: events they still hold from before must not come back.
   const gone = new Map<string, { deleted: boolean; resetAt: number }>();
@@ -149,12 +151,14 @@ export async function POST(req: Request) {
       });
       // Deleting a child removes their history from the server too.
       if (p.deleted) {
+        eventsRemoved = true;
         writes.push({ sql: "DELETE FROM events WHERE profile_id = ? AND family_id = ?", args: [p.id, family] });
         writes.push({ sql: "DELETE FROM class_assignment_students WHERE profile_id = ?", args: [p.id] });
         writes.push({ sql: "DELETE FROM class_members WHERE profile_id = ? AND family_id = ?", args: [p.id, family] });
         writes.push({ sql: "DELETE FROM report_shares WHERE profile_id = ? AND family_id = ?", args: [p.id, family] });
       }
       else if (p.resetAt) {
+        eventsRemoved = true;
         writes.push({ sql: "DELETE FROM events WHERE profile_id = ? AND family_id = ? AND t <= ?", args: [p.id, family, p.resetAt] });
       }
     }
@@ -174,12 +178,26 @@ export async function POST(req: Request) {
 
   const accepted: string[] = [];
   // A family at its storage cap can still read and sync its profiles, just not add more events.
-  const used = incomingEvents.length ? Number((await query<{ n: number }>("SELECT COUNT(*) AS n FROM events WHERE family_id = ?", [family]))[0].n) : 0;
+  // The family's event count is kept in a small row (one read) instead of counting the whole table on every
+  // push, which Turso bills by the row. It is trusted for a day and while far from the cap; otherwise recounted.
+  const now = Date.now();
+  let used = 0;
+  let countTrusted = false;
+  if (incomingEvents.length) {
+    const row = (await query<{ n: number; counted_at: number }>("SELECT n, counted_at FROM family_event_counts WHERE family_id = ?", [family]))[0];
+    if (row && now - Number(row.counted_at) < 86_400_000 && Number(row.n) < MAX_FAMILY_EVENTS - 10_000 && !eventsRemoved) {
+      used = Number(row.n);
+      countTrusted = true;
+    } else {
+      used = Number((await query<{ n: number }>("SELECT COUNT(*) AS n FROM events WHERE family_id = ?", [family]))[0].n);
+    }
+  }
   const room = Math.max(0, MAX_FAMILY_EVENTS - used);
   let stored = 0;
+  let inserted = 0;
   for (const e of incomingEvents) {
     if (!isId(e?.id) || !isId(e.profileId) || !mine.has(e.profileId) || !EVENT_TYPES.has(e.type)) continue;
-    if (typeof e.t !== "number" || e.t > Date.now() + 86_400_000) continue;
+    if (typeof e.t !== "number" || e.t > now + 86_400_000) continue;
     const data = JSON.stringify(e);
     if (data.length > 2000) continue;
     const state = gone.get(e.profileId);
@@ -189,11 +207,25 @@ export async function POST(req: Request) {
       continue;
     }
     if (stored++ >= room) continue;
+    inserted++;
     writes.push({
       sql: "INSERT OR IGNORE INTO events (id, family_id, profile_id, t, data) VALUES (?, ?, ?, ?, ?)",
       args: [e.id, family, e.profileId, e.t, data],
     });
     accepted.push(e.id);
+  }
+  // Keep the count in step in the same batch. Resent events that were already stored are counted again, which
+  // only makes the count a little high until the daily recount.
+  if (eventsRemoved) {
+    writes.push({ sql: "DELETE FROM family_event_counts WHERE family_id = ?", args: [family] });
+  } else if (inserted && countTrusted) {
+    writes.push({ sql: "UPDATE family_event_counts SET n = n + ? WHERE family_id = ?", args: [inserted, family] });
+  } else if (incomingEvents.length) {
+    writes.push({
+      sql: `INSERT INTO family_event_counts (family_id, n, counted_at) VALUES (?, ?, ?)
+            ON CONFLICT(family_id) DO UPDATE SET n = excluded.n, counted_at = excluded.counted_at`,
+      args: [family, used + inserted, now],
+    });
   }
   await batch(writes);
 

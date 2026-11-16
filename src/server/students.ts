@@ -117,6 +117,7 @@ interface StudentRecord {
 function eraseStatements(s: StudentRecord) {
   return [
     { sql: "DELETE FROM events WHERE family_id = ?", args: [s.family_id] },
+    { sql: "DELETE FROM family_event_counts WHERE family_id = ?", args: [s.family_id] },
     { sql: "DELETE FROM child_settings WHERE family_id = ?", args: [s.family_id] },
     { sql: "DELETE FROM profiles WHERE family_id = ?", args: [s.family_id] },
     { sql: "DELETE FROM report_shares WHERE family_id = ?", args: [s.family_id] },
@@ -158,6 +159,7 @@ export async function deleteInactiveClass(classId: string, cutoff: number, warni
   const guarded = (table: string) => `DELETE FROM ${table} WHERE ${familyIds} AND ${predicate}`;
   await batch([
     { sql: guarded("events"), args: args([classId]) },
+    { sql: guarded("family_event_counts"), args: args([classId]) },
     { sql: guarded("child_settings"), args: args([classId]) },
     { sql: guarded("profiles"), args: args([classId]) },
     { sql: guarded("report_shares"), args: args([classId]) },

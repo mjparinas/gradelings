@@ -17,6 +17,7 @@ export function childDataStatements(f: string): { sql: string; args: string[] }[
     { sql: "DELETE FROM live_answers WHERE family_id = ?", args: [f] },
     { sql: "DELETE FROM live_presence WHERE family_id = ?", args: [f] },
     { sql: "DELETE FROM events WHERE family_id = ?", args: [f] },
+    { sql: "DELETE FROM family_event_counts WHERE family_id = ?", args: [f] },
     { sql: "DELETE FROM child_settings WHERE family_id = ?", args: [f] },
     { sql: "DELETE FROM profiles WHERE family_id = ?", args: [f] },
   ];

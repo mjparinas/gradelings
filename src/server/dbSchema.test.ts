@@ -17,6 +17,7 @@ beforeAll(() => {
 const INDEXES = [
   "child_settings_family",
   "parents_family",
+  "events_t",
   "sessions_parent",
   "sessions_family",
   "sessions_expires",
@@ -44,6 +45,11 @@ describe("schema setup", () => {
     expect(await plan("DELETE FROM sessions WHERE parent_id = ?")).toContain("sessions_parent");
     expect(await plan("SELECT id FROM families WHERE stripe_customer = ?")).toContain("families_stripe_customer");
     expect(await plan("SELECT id FROM parents WHERE family_id = ?")).toContain("parents_family");
+    expect(await plan("SELECT id FROM parents WHERE family_id = ? ORDER BY created_at")).toContain("parents_family");
+    expect(await plan("SELECT id FROM families WHERE consent_token = ? AND consent_token IS NOT NULL")).toContain("families_consent_token");
+    expect(await plan("SELECT COUNT(DISTINCT family_id) FROM events WHERE t > ? AND t <= ?")).toContain("events_t");
+    expect(await plan("SELECT n, counted_at FROM family_event_counts WHERE family_id = ?")).toContain("sqlite_autoindex_family_event_counts");
+    expect(await plan("DELETE FROM sessions WHERE family_id = ?")).toContain("sessions_family");
   });
 
   it("does one read, and no writes, when the database is already current", async () => {

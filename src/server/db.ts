@@ -57,6 +57,12 @@ const SCHEMA = [
   )`,
   `CREATE INDEX IF NOT EXISTS events_family_seq ON events (family_id, seq)`,
   `CREATE INDEX IF NOT EXISTS events_profile ON events (profile_id, t)`,
+  // A family's running event count, so a sync checks its storage cap with one row read, not a count of every event.
+  `CREATE TABLE IF NOT EXISTS family_event_counts (
+    family_id TEXT PRIMARY KEY,
+    n INTEGER NOT NULL,
+    counted_at INTEGER NOT NULL
+  )`,
   // One-time tokens for password reset and email confirmation. Only a hash is stored.
   `CREATE TABLE IF NOT EXISTS auth_tokens (
     token_hash TEXT PRIMARY KEY,
@@ -634,7 +640,9 @@ const INDEXES = [
   // Every sync reads a family's settings by family_id; the table's key is profile_id, so this was a full scan.
   `CREATE INDEX IF NOT EXISTS child_settings_family ON child_settings (family_id)`,
   // A family's accounts (deleting a family, the family page, emails to its parents).
-  `CREATE INDEX IF NOT EXISTS parents_family ON parents (family_id)`,
+  `CREATE INDEX IF NOT EXISTS parents_family ON parents (family_id, created_at)`,
+  // The admin dashboard's activity, active-family and cohort figures look at events by time.
+  `CREATE INDEX IF NOT EXISTS events_t ON events (t)`,
   // Signing out, signing out everywhere and deleting an account look sessions up by parent or family; the
   // cleanup of expired sessions and rate-limit counters ran as full scans.
   `CREATE INDEX IF NOT EXISTS sessions_parent ON sessions (parent_id)`,
