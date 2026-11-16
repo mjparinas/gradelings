@@ -955,22 +955,40 @@ function Insights({ data, label }: { data: ClassDetail; label: (key: string) => 
 }
 
 /** Words a teacher can paste into a newsletter, a message or an email. */
-function SendHome({ cls }: { cls: ClassDetail["class"] }) {
+function SendHome({ cls, onPrintSlips }: { cls: ClassDetail["class"]; onPrintSlips: () => void }) {
   const [copied, setCopied] = useState(false);
+  const [shared, setShared] = useState(false);
   const origin = typeof window === "undefined" ? "" : window.location.origin;
   const framework = getFramework(cls.framework);
-  const text =
+  const say = sayFor(getFramework(cls.framework));
+  const text = say(
     `Hello families,\n\n` +
-    `Our class is using ${APP_NAME} for extra ${framework.curriculumName} practice. It is optional. ` +
-    `To link your child, open ${origin}/play/, tap Grown-ups, go to Children, choose "Join a class" and enter the class code ${cls.joinCode}. ` +
-    `Linking is your choice and you can unlink at any time. I will only see your child's first name, grade and practice results on the units I assign.\n\n` +
-    `Thank you!`;
+      `We are using ${APP_NAME} in class for extra ${framework.curriculumName} practice. It is optional, and it is a friendly way for your child to practise a little at home.\n\n` +
+      `To link your child:\n` +
+      `1. Open ${origin}/play/\n` +
+      `2. Tap Grown-ups, then Children\n` +
+      `3. Choose "Join a class" and enter the class code ${cls.joinCode}\n\n` +
+      `Linking is your choice and you can unlink at any time. Nothing about your child is shared until you link. After that I will only see your child's first name, grade and practice results on the units I assign. This shows practice, not a report-card mark.\n\n` +
+      `Thank you!`,
+  );
+  const canShare = typeof navigator !== "undefined" && typeof navigator.share === "function";
   return (
     <section className="mt-4 rounded-2xl border border-line bg-white p-5 print:hidden">
       <h2 className="text-xl font-bold">Send home</h2>
-      <p className="mt-1 font-read text-ink-soft">A ready-made note for families who will link their own child with the class code. Students you add with login codes above don’t need it.</p>
+      <p className="mt-1 font-read text-ink-soft">A ready-made note for families who will link their own child with the class code. Students you add with login codes above don’t need it. Nothing is sent for you.</p>
       <textarea readOnly className="mt-3 min-h-40 w-full rounded-xl border border-line px-3 py-2 font-read" value={text} aria-label="Note to families" onFocus={(e) => e.currentTarget.select()} />
       <div className="mt-2 flex flex-wrap gap-3">
+        {canShare && (
+          <button
+            type="button"
+            className={`${btn} border border-line`}
+            onClick={() => {
+              void navigator.share({ title: `${cls.name} on ${APP_NAME}`, text }).then(() => setShared(true), () => undefined);
+            }}
+          >
+            {shared ? "Shared" : "Share…"}
+          </button>
+        )}
         <button
           type="button"
           className={`${btn} border border-line`}
@@ -983,6 +1001,9 @@ function SendHome({ cls }: { cls: ClassDetail["class"] }) {
         <a className={`${btn} inline-flex items-center border border-line`} href={`mailto:?subject=${encodeURIComponent(`${cls.name} on ${APP_NAME}`)}&body=${encodeURIComponent(text)}`}>
           Email it
         </a>
+        <button type="button" className={`${btn} border border-line`} onClick={onPrintSlips}>
+          Print take-home slips
+        </button>
       </div>
     </section>
   );
@@ -992,12 +1013,36 @@ function SendHome({ cls }: { cls: ClassDetail["class"] }) {
 const WIDE_SUMMARY_UNITS = 4;
 
 /** What prints: a login card for each student, or a one-page class summary. Hidden on screen. */
-function PrintSheet({ data, label, mode, only, large }: { data: ClassDetail; label: (key: string) => string; mode: "cards" | "summary"; only?: string[]; large?: boolean }) {
+function PrintSheet({ data, label, mode, only, large }: { data: ClassDetail; label: (key: string) => string; mode: "cards" | "summary" | "slips"; only?: string[]; large?: boolean }) {
   const { class: cls, roster, students, assignments } = data;
   const byProfile = new Map(students.map((s) => [s.profileId, s]));
   const levelLabel = (level: number) => (level < 0 ? "Not started" : levelInfo(cls.framework, cls.grade, level)?.label ?? "");
   const [now] = useState(() => Date.now());
   const insights = classInsights(students, assignments, label, now);
+  if (mode === "slips") {
+    const host = typeof window === "undefined" ? "" : window.location.host;
+    const framework = getFramework(cls.framework);
+    const sayHere = sayFor(getFramework(cls.framework));
+    // One slip for each student, plus a few spares, so every family can take one home.
+    const count = Math.max(roster.length + 2, 6);
+    return (
+      <div className="hidden print:grid print:gap-3 print:grid-cols-1">
+        {Array.from({ length: count }, (_, i) => (
+          <div key={i} className="flex break-inside-avoid items-start justify-between gap-4 rounded-xl border-2 border-dashed border-black p-4">
+            <div>
+              <p className="text-xl font-bold">{cls.name} on {APP_NAME}</p>
+              <p>{sayHere(`Optional extra ${framework.curriculumName} practice at home.`)} Open <b>{host}/play</b>, tap Grown-ups, then Children, then “Join a class”.</p>
+              <p className="mt-2">
+                Class code: <b className="font-mono text-2xl tracking-widest">{cls.joinCode}</b>
+              </p>
+              <p className="text-sm">Linking is your choice and you can unlink at any time. I only see first name, grade and practice on the units I assign.</p>
+            </div>
+            {typeof window !== "undefined" && <QrCode text={`${window.location.origin}/play/`} label={`Open ${APP_NAME}`} className="size-28 shrink-0" />}
+          </div>
+        ))}
+      </div>
+    );
+  }
   if (mode === "cards") {
     return (
       <div className={`hidden print:grid print:gap-3 ${large ? "print:grid-cols-1" : "print:grid-cols-2"}`}>
@@ -1263,7 +1308,7 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
     setWho("some");
     setPicked(preselected.split(","));
   }
-  const [printMode, setPrintMode] = useState<"cards" | "summary" | null>(null);
+  const [printMode, setPrintMode] = useState<"cards" | "summary" | "slips" | null>(null);
   const [printOnly, setPrintOnly] = useState<string[] | undefined>();
   const [printLarge, setPrintLarge] = useState(false);
   const heading = useRef<HTMLHeadingElement>(null);
@@ -1671,7 +1716,13 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
               setPrintMode("cards");
             }}
           />
-          <SendHome cls={cls} />
+          <SendHome
+            cls={cls}
+            onPrintSlips={() => {
+              setPrintOnly(undefined);
+              setPrintMode("slips");
+            }}
+          />
         </>
       )}
 
