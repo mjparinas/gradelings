@@ -340,7 +340,27 @@ async function eventsWaiting(page) {
     await page.waitForTimeout(500);
     if (!(await vis(page.getByRole("heading", { name: "Your data, your choice" })))) errors.push("old privacy link: Account didn't show the privacy panels");
 
-    // Arcade with free play on. The newer games start locked.
+    // Arcade with free play on. The newer games start locked. Settings has no free-play switch any more
+    // (November 2026) but a saved value is still honoured, so write it into the device's settings.
+    await page.evaluate(
+      () =>
+        new Promise((res, rej) => {
+          const r = indexedDB.open("gradelings", 1);
+          r.onerror = () => rej(r.error);
+          r.onsuccess = () => {
+            const tx = r.result.transaction("kv", "readwrite");
+            const store = tx.objectStore("kv");
+            const g = store.get("settings");
+            g.onsuccess = () => {
+              const all = g.result ?? {};
+              for (const k of Object.keys(all)) all[k] = { ...all[k], freePlay: true };
+              store.put(all, "settings");
+            };
+            tx.oncomplete = () => res(true);
+            tx.onerror = () => rej(tx.error);
+          };
+        }),
+    );
     await page.goto(`${BASE}/play/#/arcade`);
     await page.waitForTimeout(600);
     await shot(page, "23-arcade", true);
