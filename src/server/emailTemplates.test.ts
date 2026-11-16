@@ -179,3 +179,21 @@ describe("conversion copy (owner, November 2026)", () => {
     expect(t.trialEndingEmail("a@example.com", O, 2, []).text).toContain("Ten minutes today");
   });
 });
+
+describe("warm week headline in the weekly email", () => {
+  const send = (days: number | undefined, answers = 40) => t.weeklyEmail("a@example.com", O, [{ name: "Maya", minutes: 30, answers, accuracy: 80, days }], "u");
+  it("celebrates days practised and names the child in the subject", () => {
+    const mail = send(5);
+    expect(mail.subject).toBe("Maya practised on 5 days this week");
+    expect(mail.text).toContain("Maya practised on 5 days this week. That's a real habit.");
+  });
+  it("uses singular wording and keeps the old subject without a day count", () => {
+    expect(send(1).subject).toBe("Maya practised on 1 day this week");
+    expect(send(undefined).subject).toBe(`${APP_NAME}: your week in learning`);
+  });
+  it("adds no headline for a quiet week", () => {
+    const mail = send(0, 0);
+    expect(mail.text).toContain("didn't practise this week");
+    expect(mail.text).not.toMatch(/Every bit counts|real habit/);
+  });
+});

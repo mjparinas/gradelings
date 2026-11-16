@@ -257,6 +257,8 @@ export interface WeeklyChild {
   minutes: number;
   answers: number;
   accuracy: number | null;
+  /** Days with practice in the last 7. */
+  days?: number;
   strength?: string;
   next?: string;
   /** Set on the first Sunday of the month: the last 30 days against the 30 before. */
@@ -278,9 +280,17 @@ export function monthLine(name: string, m: NonNullable<WeeklyChild["month"]>): s
   return `${base}.`;
 }
 
+/** One warm sentence about how many days a child practised in the week. Never about what was missed. */
+export function weekHeadline(name: string, days: number): string {
+  if (days >= 5) return `🌟 ${name} practised on ${days} days this week. That's a real habit.`;
+  if (days >= 3) return `🌱 ${name} practised on ${days} days this week. A steady rhythm.`;
+  return `👏 ${name} practised on ${days === 1 ? "1 day" : `${days} days`} this week. Every bit counts.`;
+}
+
 /** `schoolYear`: lines from `schoolYearLines` (src/lib/schoolYear.ts), shown after the children. `inviteLink`: the parent's invite link, for the monthly "share with a friend" line. */
 export function weeklyEmail(to: string, origin: string, children: WeeklyChild[], unsubToken: string, country?: CountryCode, schoolYear: string[] = [], inviteLink?: string): Email {
   const lines = children.flatMap((c) => [
+    ...(c.answers && c.days ? [weekHeadline(c.name, c.days)] : []),
     c.answers
       ? `${c.name}: ${c.minutes} min of practice, ${c.answers} questions${c.accuracy === null ? "" : `, ${c.accuracy}% right on the first try`}.`
       : `${c.name} didn't practise this week. A short session today is a great restart.`,
@@ -298,7 +308,7 @@ export function weeklyEmail(to: string, origin: string, children: WeeklyChild[],
     origin,
     unsubscribeUrl: `${origin}/api/email/unsubscribe/?token=${encodeURIComponent(unsubToken)}`,
     unsubscribePage: `${origin}/account/unsubscribe/?token=${encodeURIComponent(unsubToken)}`,
-    subject: `${APP_NAME}: your week in learning`,
+    subject: children.length === 1 && children[0].days ? `${children[0].name} practised on ${children[0].days} ${children[0].days === 1 ? "day" : "days"} this week` : `${APP_NAME}: your week in learning`,
     heading: "Your week in learning",
     body: [...lines, ...schoolYear, ...(inviteLink ? [`Know a family who might like ${APP_NAME}? Share your link: ${inviteLink} When they sign up and confirm their email, you get a free month.`] : [])],
     button: { label: "Open full reports", url: `${origin}/parents/#/reports` },
