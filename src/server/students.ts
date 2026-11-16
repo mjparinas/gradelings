@@ -35,7 +35,7 @@ async function freshCodes(count: number): Promise<string[]> {
   while (codes.size < count) {
     const batchOf = Array.from({ length: count - codes.size }, newStudentCode).filter((c) => !codes.has(c));
     const taken = new Set(
-      (await query<{ login_code: string }>(`SELECT login_code FROM students WHERE login_code IN (${batchOf.map(() => "?").join(",")})`, batchOf)).map((r) => r.login_code),
+      (await query<{ login_code: string }>(`SELECT login_code FROM students WHERE length(login_code) = ${STUDENT_CODE_LENGTH} AND login_code IN (${batchOf.map(() => "?").join(",")})`, batchOf)).map((r) => r.login_code),
     );
     for (const c of batchOf) if (!taken.has(c)) codes.add(c);
   }

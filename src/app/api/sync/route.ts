@@ -2,7 +2,7 @@ import { countryOf, toCountryCode } from "@/lib/country";
 import type { InValue } from "@libsql/client";
 import type { AppEvent, ChildSettings, Profile } from "@/lib/model";
 import { MAX_CHILDREN } from "@/lib/plan";
-import { appOf, recordApp } from "@/server/appSignals";
+import { APP_COLUMN, appOf, recordApp } from "@/server/appSignals";
 import { error, getSession, json, rateLimited, readJson, sameOrigin, SYNC_BODY_LIMIT } from "@/server/auth";
 import { batch, query, run } from "@/server/db";
 import { familyClasswork, isFramework } from "@/server/classroom";
@@ -54,8 +54,6 @@ export async function POST(req: Request) {
   const session = await getSession(req, { student: true });
   if (!session) return error(401, "Not signed in");
   const family = session.familyId;
-  // Which kind of app this family syncs from, for the admin panel (class students are not families to count).
-  if (!session.student) await recordApp(family, appOf(req));
   // The app syncs every couple of minutes and after changes; this is far above that.
   if (await rateLimited(`sync:${family}`, 300, 10 * 60_000)) return error(429, "Syncing too often. Try again in a few minutes.");
   const body = (await readJson(req, SYNC_BODY_LIMIT)) as SyncBody | null;
@@ -65,15 +63,19 @@ export async function POST(req: Request) {
   let incomingProfiles = list<Profile>(body.profiles).slice(0, 20);
   let incomingSettings = list<ChildSettings>(body.settings).slice(0, 20);
 
-  // Which profiles belong to this family (and which belong to someone else).
-  const existing = await query<{ id: string; family_id: string; updated_at: number; data: string }>(
-    `SELECT id, family_id, updated_at, data FROM profiles WHERE family_id = ? OR id IN (${incomingProfiles.map(() => "?").join(",") || "''"})`,
-    [family, ...incomingProfiles.map((p) => p?.id ?? "")],
-  );
+  // Which profiles belong to this family (and which belong to someone else), and the family itself: two
+  // independent reads, so one round trip's wait instead of two.
+  const [existing, firstFamRow] = await Promise.all([
+    query<{ id: string; family_id: string; updated_at: number; data: string }>(
+      `SELECT id, family_id, updated_at, data FROM profiles WHERE family_id = ? OR id IN (${incomingProfiles.map(() => "?").join(",") || "''"})`,
+      [family, ...incomingProfiles.map((p) => p?.id ?? "")],
+    ),
+    getFamilyRow(family),
+  ]);
 
   // The family's country comes from the first child added (src/lib/coppa.ts). It can change only while the
   // server holds no child of this family, so once a child is stored the country stays put.
-  let famRow = await getFamilyRow(family);
+  let famRow = firstFamRow;
   if (famRow && !session.student && !existing.some((r) => r.family_id === family)) {
     const country = familyCountry(incomingProfiles.filter((p) => p && typeof p === "object" && isId(p.id)));
     if (country !== toCountryCode(famRow.country)) {
@@ -90,6 +92,8 @@ export async function POST(req: Request) {
   }
   const owner = new Map(existing.map((r) => [r.id, r]));
   const writes: { sql: string; args: InValue[] }[] = [];
+  // Whether this request changes any child record, so the download can reuse the rows already read when it doesn't.
+  let profilesChanged = false;
   const mine = new Set(existing.filter((r) => r.family_id === family).map((r) => r.id));
   // Children who were deleted or reset: events they still hold from before must not come back.
   const gone = new Map<string, { deleted: boolean; resetAt: number }>();
@@ -132,6 +136,7 @@ export async function POST(req: Request) {
       if (data.length > MAX_JSON) continue; // never store half a JSON document
       if (!row && storedProfiles >= MAX_FAMILY_PROFILES) continue;
       if (!row) storedProfiles++;
+      profilesChanged = true;
       mine.add(p.id);
       gone.set(p.id, { deleted: Boolean(p.deleted), resetAt: p.resetAt ?? 0 });
       if (!p.deleted && !wasActive) activeChildren++;
@@ -192,15 +197,19 @@ export async function POST(req: Request) {
   }
   await batch(writes);
 
-  // Download: everything new for this family since the device's cursor.
+  // Download: everything new for this family since the device's cursor. The reads don't depend on each other, so
+  // they go out together. The child records read above are reused unless this request changed one, and the family
+  // row read above is still current (nothing in the writes touches it).
   const cursor = Math.max(0, Number(body.cursor) || 0);
-  const rows = await query<{ seq: number; data: string }>(
-    "SELECT seq, data FROM events WHERE family_id = ? AND seq > ? ORDER BY seq LIMIT ?",
-    [family, cursor, PAGE],
-  );
-  const profiles = await query<{ data: string }>("SELECT data FROM profiles WHERE family_id = ?", [family]);
-  const settings = await query<{ data: string }>("SELECT data FROM child_settings WHERE family_id = ?", [family]);
-  famRow = await getFamilyRow(family);
+  const [rows, profiles, settings, classwork] = await Promise.all([
+    query<{ seq: number; data: string }>("SELECT seq, data FROM events WHERE family_id = ? AND seq > ? ORDER BY seq LIMIT ?", [family, cursor, PAGE]),
+    profilesChanged ? query<{ data: string }>("SELECT data FROM profiles WHERE family_id = ?", [family]) : Promise.resolve(existing.filter((r) => r.family_id === family)),
+    query<{ data: string }>("SELECT data FROM child_settings WHERE family_id = ?", [family]),
+    familyClasswork(family),
+    // Which kind of app this family syncs from, for the admin panel (class students are not families to count).
+    // Skipped unless the last note is more than half a day old, which the family row already tells us.
+    session.student ? undefined : recordApp(family, appOf(req), Date.now(), famRow?.[APP_COLUMN[appOf(req)]]),
+  ]);
 
   return json({
     accepted,
@@ -210,7 +219,7 @@ export async function POST(req: Request) {
     events: rows.map((r) => JSON.parse(r.data)),
     profiles: profiles.map((r) => JSON.parse(r.data)),
     settings: settings.map((r) => JSON.parse(r.data)),
-    classwork: await familyClasswork(family),
+    classwork,
     family: famRow ? toFamilyInfo(famRow, session.email, session.verified, session.student, !session.owner) : undefined,
   });
 }

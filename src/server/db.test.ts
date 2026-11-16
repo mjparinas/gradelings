@@ -61,6 +61,11 @@ describe("db", () => {
         if (calls <= failFirst) throw new Error("network down");
         return { rows: typeof sql === "string" && sql.startsWith("PRAGMA") ? [] : [{ ok: 1 }], rowsAffected: 0 };
       }),
+      batch: vi.fn(async () => {
+        calls++;
+        if (calls <= failFirst) throw new Error("network down");
+        return [];
+      }),
     };
   }
 

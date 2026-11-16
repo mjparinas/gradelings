@@ -19,6 +19,10 @@ interface FamilyRow {
   country: string | null;
   consent_at: number | null;
   updated_at: number;
+  /** When this family last synced from the web, the Android app and the iPhone and iPad app (ms). */
+  app_web_at?: number | null;
+  app_android_at?: number | null;
+  app_ios_at?: number | null;
 }
 
 export async function getFamilyRow(id: string): Promise<FamilyRow | undefined> {
