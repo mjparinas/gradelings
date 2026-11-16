@@ -14,7 +14,7 @@ const MIC_TEXT: Record<MicResult, string> = {
 };
 
 /**
- * Settings > Advanced options: letting a child answer some questions out loud (flag `voice-practice`). The listening
+ * Settings: letting a child answer some questions out loud (flag `voice-practice`). The listening
  * model downloads once per device (and works offline); the microphone is only ever open while a child is answering.
  */
 export function VoicePractice({ value, onChange }: { value: boolean; onChange: (v: boolean) => void }) {

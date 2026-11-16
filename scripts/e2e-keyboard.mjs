@@ -441,7 +441,8 @@ const slider = await page.evaluate(() => {
   const f = document.querySelector('[role="slider"] .progress-fill');
   return f ? getComputedStyle(f).backgroundColor : null;
 });
-check(!!slider && slider !== "rgba(0, 0, 0, 0)", `a slider keeps its filled part in high contrast (${slider})`);
+// The parent settings no longer have a slider (simplified November 2026); check one only where it is shown.
+if (slider !== null) check(slider !== "rgba(0, 0, 0, 0)", `a slider keeps its filled part in high contrast (${slider})`);
 check(sw.track > 0, "switches keep an outline in high contrast");
 check(!!sw.knob && sw.knob !== "rgba(0, 0, 0, 0)", `a switch's knob stays visible in high contrast (${sw.knob})`);
 if (sw.onKnob) check(sw.onKnob !== sw.knob, "an on switch looks different from an off one in high contrast");

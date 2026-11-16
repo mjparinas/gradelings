@@ -81,7 +81,7 @@ export const HELP: HelpSection[] = [
       },
       {
         q: "Can my child ask for a hint before answering?",
-        a: "Yes. In practice, Adventure, Review and the Daily Challenge there’s a “Need a hint?” button. Because the hint helps, an answer given after opening it counts like a retry: it earns a little XP but doesn’t add to “right on the first try”. If your child tends to avoid asking for help, you can switch on “Hints count as first try” for them in Parent area → Settings → Advanced options. Reports show how many hints were opened.",
+        a: "Yes. In practice, Adventure, Review and the Daily Challenge there’s a “Need a hint?” button. Because the hint helps, an answer given after opening it counts like a retry: it earns a little XP but doesn’t add to “right on the first try”. Reports show how many hints were opened.",
       },
       {
         q: "How are the report levels worked out?",
@@ -89,7 +89,7 @@ export const HELP: HelpSection[] = [
       },
       {
         q: "How does earning game time work?",
-        a: "Learning earns arcade time. By default every 20 minutes of learning unlocks 5 minutes of games, up to 20 minutes a day. In Parent area → Settings you can turn games off, allow free play or change the daily maximum, and change the learning-to-games ratio under Advanced options.",
+        a: "Learning earns arcade time. By default every 20 minutes of learning unlocks 5 minutes of games, up to 20 minutes a day. In Parent area → Settings you can turn games off.",
       },
       {
         q: "What if a question seems wrong?",
