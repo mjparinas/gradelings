@@ -256,13 +256,14 @@ async function eventsWaiting(page) {
     if (!(await vis(goal.getByRole("button", { name: "Set a goal" })))) errors.push("goal plan: removing it didn't bring back Set a goal");
     await page.goto(`${BASE}/parents/#/settings`);
     await page.waitForTimeout(500);
-    await page.getByRole("radio", { name: "Free play" }).click();
-    // One "Calm mode" switch turns on the calm options, and Sounds shows Gentle while it's on.
+    await page.getByRole("switch", { name: /^Arcade games/ }).click();
+    await page.getByRole("switch", { name: /^Arcade games/ }).click();
+    // One "Calm mode" switch turns on the calm options, and the gentle-sounds choice shows On while it's on.
     await page.getByRole("switch", { name: /Calm mode/ }).click();
-    if ((await page.getByRole("radio", { name: "Gentle" }).getAttribute("aria-checked")) !== "true") errors.push("calm mode: sounds didn't switch to Gentle");
-    if ((await page.getByRole("radio", { name: "Hide all" }).getAttribute("aria-checked")) !== "true") errors.push("calm mode: timers weren't hidden");
+    await page.getByText("Customize calm mode").click();
+    if ((await page.getByRole("radiogroup", { name: "Timers in lessons" }).getByRole("radio", { name: "Hide all" }).getAttribute("aria-checked")) !== "true") errors.push("calm mode: timers weren't hidden");
     await page.getByRole("switch", { name: /Calm mode/ }).click();
-    if (await page.getByRole("switch", { name: /Hints count as first try/ }).isVisible()) errors.push("settings: advanced options should start folded");
+    if (await page.getByRole("switch", { name: /Hints count as first try/ }).count()) errors.push("settings: the hints switch should be gone");
     await shot(page, "21-parent-settings", true);
     if ((await page.getByRole("navigation", { name: "Parent sections" }).getByRole("link").count()) !== 6) errors.push("parent nav: expected 6 tabs");
 

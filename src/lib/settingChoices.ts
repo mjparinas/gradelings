@@ -45,6 +45,15 @@ export function calmPatch(on: boolean): Pick<ChildSettings, CalmField> {
   return Object.fromEntries(CALM_FIELDS.map((f) => [f, on])) as Pick<ChildSettings, CalmField>;
 }
 
+/** "Easier reading": roomy text on a cream page. The finer reading options stay under "More reading options". */
+export function easierOn(s: Partial<Pick<ChildSettings, "roomyText" | "readingTint">>): boolean {
+  return Boolean(s.roomyText) && s.readingTint === "cream";
+}
+
+export function easierPatch(on: boolean): Pick<ChildSettings, "roomyText" | "readingTint"> {
+  return { roomyText: on, readingTint: on ? "cream" : undefined };
+}
+
 /** Vibration needs sound on (and motion not calmed). Older devices could turn it off separately. */
 export function vibrationOn(s: Partial<Pick<ChildSettings, "sound" | "haptics" | "calmMotion">> | undefined): boolean {
   return s?.sound !== false && s?.haptics !== false && !s?.calmMotion;

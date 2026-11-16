@@ -165,7 +165,8 @@ function EmailChoicePanel({ verified }: { verified: boolean }) {
         value={value}
         options={[
           { value: "weekly", label: "Weekly summary" },
-          { value: "both", label: "Summary and reminders" },
+          // Reminders are no longer offered; a parent who already has them keeps the option until they pick another.
+          ...(value === "both" ? [{ value: "both" as const, label: "Summary and reminders" }] : []),
           { value: "none", label: "None" },
         ]}
         onChange={(v) => void pick(v)}
@@ -403,7 +404,17 @@ export function AccountPage({ onBilling }: { onBilling: (b: BillingInfo | null) 
           )}
         </div>
         <div className="flex flex-col gap-5">
-          <VoicePicker />
+          <details className="group mb-5 rounded-2xl border-2 border-line bg-white">
+            <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-3 px-5 font-semibold">
+              🗣️ Read-aloud voice: change or fix
+              <span aria-hidden="true" className="transition-transform group-open:rotate-180">
+                ▾
+              </span>
+            </summary>
+            <div className="px-2 pb-2">
+              <VoicePicker />
+            </div>
+          </details>
         </div>
       </div>
       <Dialog open={confirmDelete} title="Delete everything?" onClose={() => setConfirmDelete(false)}>
