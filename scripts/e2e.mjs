@@ -239,6 +239,8 @@ async function eventsWaiting(page) {
     await page.goto(`${BASE}/parents/`);
     await enterPin(page, true);
     await shot(page, "20-parent-overview", true);
+    // The optional tools (goal, notes, focus unit, goal plan, reward) are folded under "Ways to help".
+    await page.getByText("Ways to help (optional)").click();
     // Kind notes: picked from a dropdown, then sent.
     await page.getByRole("combobox", { name: "Note for Maya" }).click();
     await page.getByRole("listbox", { name: "Note for Maya" }).getByRole("option", { name: /Love you lots/ }).click();
