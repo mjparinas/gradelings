@@ -343,12 +343,44 @@ async function deepChecks(device, browser, descriptor, page) {
   // An arcade game: turn on free play, then check the play area fits.
   await page.goto(`${BASE}/parents/#/settings`);
   await enterPin(page, false);
-  const freePlay = page.getByRole("radio", { name: "Free play" });
-  await freePlay.click();
-  await page.waitForFunction((el) => el?.getAttribute("aria-checked") === "true", await freePlay.elementHandle());
   await page.getByText("Customize calm mode").click();
   await page.getByRole("switch", { name: /Calm motion/ }).click();
   await page.getByRole("radio", { name: "Hide all" }).click();
+  // Free play has no switch in Settings any more (November 2026) but saved values are still honoured:
+  // write it straight into the device's settings once the calm changes have landed.
+  await page.waitForFunction(
+    () =>
+      new Promise((res) => {
+        const r = indexedDB.open("gradelings", 1);
+        r.onerror = () => res(false);
+        r.onsuccess = () => {
+          const g = r.result.transaction("kv").objectStore("kv").get("settings");
+          g.onsuccess = () => res(Object.values(g.result ?? {}).some((c) => c?.calmMotion && c?.hideTimers));
+          g.onerror = () => res(false);
+        };
+      }),
+    undefined,
+    { timeout: 10000 },
+  );
+  await page.evaluate(
+    () =>
+      new Promise((res, rej) => {
+        const r = indexedDB.open("gradelings", 1);
+        r.onerror = () => rej(r.error);
+        r.onsuccess = () => {
+          const tx = r.result.transaction("kv", "readwrite");
+          const store = tx.objectStore("kv");
+          const g = store.get("settings");
+          g.onsuccess = () => {
+            const all = g.result ?? {};
+            for (const k of Object.keys(all)) all[k] = { ...all[k], freePlay: true };
+            store.put(all, "settings");
+          };
+          tx.oncomplete = () => res(true);
+          tx.onerror = () => rej(tx.error);
+        };
+      }),
+  );
   // Leave only once the last change has reached IndexedDB: the next page reads the settings from there,
   // and a fixed pause was not enough on a busy runner.
   await page.waitForFunction(
