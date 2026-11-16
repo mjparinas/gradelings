@@ -608,11 +608,6 @@ const FAMILY_COLUMNS: [string, string][] = [
 // preview itself, kept so the teacher's screen doesn't regenerate it on every refresh.
 const LIVE_COLUMNS: [string, string][] = [["next_swaps", "INTEGER DEFAULT 0"], ["next_data", "TEXT"]];
 
-async function addColumns(c: Client, table: string, columns: [string, string][]) {
-  const have = new Set((await c.execute(`PRAGMA table_info(${table})`)).rows.map((r) => String(r.name)));
-  for (const [name, type] of columns) if (!have.has(name)) await c.execute(`ALTER TABLE ${table} ADD COLUMN ${name} ${type}`);
-}
-
 /**
  * Unsubscribe tokens used to be stored as they were emailed. Keeps the links already sent working by storing their hash, then
  * forgets the plain text. Safe to run again: it only touches rows that still hold a plain token.
@@ -626,37 +621,69 @@ export async function hashLegacyUnsubTokens(c: Client) {
   }
 }
 
-async function migrate(c: Client) {
-  await addColumns(c, "sessions", SESSION_COLUMNS);
-  await addColumns(c, "inbox_state", INBOX_COLUMNS);
-  await addColumns(c, "question_reports", REPORT_COLUMNS);
-  const hadRewardCount = (await c.execute("PRAGMA table_info(families)")).rows.some((r) => String(r.name) === "referral_rewards");
-  await addColumns(c, "families", FAMILY_COLUMNS);
-  if (!hadRewardCount) {
-    // Once, when the counter arrives: start it from the rewards already given.
-    await c.execute("UPDATE families SET referral_rewards = (SELECT COUNT(*) FROM families r WHERE r.referred_by = families.id AND r.referral_rewarded_at IS NOT NULL)");
+/** Each table's columns, read in one query on a server's first query (one hop to Turso instead of one per table). */
+async function columnsByTable(c: Client): Promise<Map<string, Set<string>>> {
+  const r = await c.execute(
+    "SELECT m.name AS t, p.name AS col FROM sqlite_master m JOIN pragma_table_info(m.name) p WHERE m.type = 'table'",
+  );
+  const out = new Map<string, Set<string>>();
+  for (const row of r.rows) {
+    const t = String(row.t);
+    if (!out.has(t)) out.set(t, new Set());
+    out.get(t)!.add(String(row.col));
   }
-  await c.execute("CREATE UNIQUE INDEX IF NOT EXISTS families_referral_code ON families (referral_code)");
-  await c.execute("CREATE INDEX IF NOT EXISTS families_referred_by ON families (referred_by)");
-  await addColumns(c, "live_questions", LIVE_COLUMNS);
-  await addColumns(c, "classes", CLASS_COLUMNS);
-  // Existing classes start their inactivity period from creation until a later sign-in.
-  await c.execute("UPDATE classes SET last_activity_at = created_at WHERE last_activity_at = 0");
-  await addColumns(c, "class_assignments", ASSIGNMENT_COLUMNS);
-  await addColumns(c, "class_members", MEMBER_COLUMNS);
-  await addColumns(c, "students", STUDENT_COLUMNS);
-  const have = new Set((await c.execute("PRAGMA table_info(parents)")).rows.map((r) => String(r.name)));
-  for (const [name, type] of PARENT_COLUMNS) {
-    if (!have.has(name)) await c.execute(`ALTER TABLE parents ADD COLUMN ${name} ${type}`);
-  }
-  if (!have.has("account_type")) {
-    // Once, when the column arrives: people who already teach a class are teachers.
-    await c.execute("UPDATE parents SET account_type = 'teacher' WHERE role = 'parent' AND (id IN (SELECT owner_parent_id FROM classes) OR id IN (SELECT parent_id FROM class_teachers))");
-  }
+  return out;
+}
 
+/** Columns added after a table was first made, per table, in the order they're added. */
+const ADDED_COLUMNS: [string, [string, string][]][] = [
+  ["sessions", SESSION_COLUMNS],
+  ["inbox_state", INBOX_COLUMNS],
+  ["question_reports", REPORT_COLUMNS],
+  ["families", FAMILY_COLUMNS],
+  ["live_questions", LIVE_COLUMNS],
+  ["classes", CLASS_COLUMNS],
+  ["class_assignments", ASSIGNMENT_COLUMNS],
+  ["class_members", MEMBER_COLUMNS],
+  ["students", STUDENT_COLUMNS],
+  ["parents", PARENT_COLUMNS],
+];
+
+/**
+ * Brings an older database up to date on a server's first query. Turso bills every row a query reads and each statement
+ * is a network hop, so an up-to-date database costs one read of the column list and one small batch: the one-off data
+ * fixes below run only in the start that adds their column, never on every start (they used to scan `classes` and
+ * `parents` each time, 2026-11-16), and the legacy unsubscribe check reads a partial index that is empty once done.
+ */
+async function migrate(c: Client) {
+  const cols = await columnsByTable(c);
+  const has = (table: string, column: string) => cols.get(table)?.has(column) ?? false;
+  const stmts: string[] = [];
+  for (const [table, list] of ADDED_COLUMNS)
+    for (const [name, type] of list) if (!has(table, name)) stmts.push(`ALTER TABLE ${table} ADD COLUMN ${name} ${type}`);
+  if (!has("families", "referral_rewards")) {
+    // Once, when the counter arrives: start it from the rewards already given.
+    stmts.push("UPDATE families SET referral_rewards = (SELECT COUNT(*) FROM families r WHERE r.referred_by = families.id AND r.referral_rewarded_at IS NOT NULL)");
+  }
+  if (!has("classes", "last_activity_at")) {
+    // Once, when the column arrives: existing classes start their inactivity period from creation until a later sign-in.
+    stmts.push("UPDATE classes SET last_activity_at = created_at WHERE last_activity_at = 0");
+  }
+  if (!has("parents", "account_type")) {
+    // Once, when the column arrives: people who already teach a class are teachers.
+    stmts.push("UPDATE parents SET account_type = 'teacher' WHERE role = 'parent' AND (id IN (SELECT owner_parent_id FROM classes) OR id IN (SELECT parent_id FROM class_teachers))");
+  }
+  stmts.push(
+    "CREATE UNIQUE INDEX IF NOT EXISTS families_referral_code ON families (referral_code)",
+    "CREATE INDEX IF NOT EXISTS families_referred_by ON families (referred_by)",
+    "CREATE UNIQUE INDEX IF NOT EXISTS students_external ON students (class_id, external_id) WHERE external_id IS NOT NULL",
+    "CREATE UNIQUE INDEX IF NOT EXISTS parents_google_sub ON parents (google_sub) WHERE google_sub IS NOT NULL",
+    // Parents still holding a plain unsubscribe token (none once hashLegacyUnsubTokens has run), so that check reads
+    // this empty index instead of every parent.
+    "CREATE INDEX IF NOT EXISTS parents_legacy_unsub ON parents (id) WHERE unsub_token IS NOT NULL",
+  );
+  await c.batch(stmts, "write");
   await hashLegacyUnsubTokens(c);
-  await c.execute("CREATE UNIQUE INDEX IF NOT EXISTS students_external ON students (class_id, external_id) WHERE external_id IS NOT NULL");
-  await c.execute("CREATE UNIQUE INDEX IF NOT EXISTS parents_google_sub ON parents (google_sub) WHERE google_sub IS NOT NULL");
 }
 
 let client: Client | null = null;
@@ -687,7 +714,8 @@ export async function db(): Promise<Client> {
       const c = createClient({ url, authToken });
       client = c;
       ready = (async () => {
-        for (const sql of SCHEMA) await c.execute(sql);
+        // One batch, not one hop per statement: CREATE … IF NOT EXISTS reads no rows once the database is up to date.
+        await c.batch(SCHEMA, "write");
         await migrate(c);
       })();
     } catch (e) {
