@@ -710,8 +710,10 @@ async function migrate(c: Client) {
     // Once, when the counter arrives: start it from the rewards already given.
     after.push({ sql: "UPDATE families SET referral_rewards = (SELECT COUNT(*) FROM families r WHERE r.referred_by = families.id AND r.referral_rewarded_at IS NOT NULL)", args: [] });
   }
-  // Existing classes start their inactivity period from creation until a later sign-in.
-  after.push({ sql: "UPDATE classes SET last_activity_at = created_at WHERE last_activity_at = 0", args: [] });
+  if (missing("classes", "last_activity_at")) {
+    // Once, when the column arrives: existing classes start their inactivity period from creation until a later sign-in.
+    after.push({ sql: "UPDATE classes SET last_activity_at = created_at WHERE last_activity_at = 0", args: [] });
+  }
   if (missing("parents", "account_type")) {
     // Once, when the column arrives: people who already teach a class are teachers.
     after.push({ sql: "UPDATE parents SET account_type = 'teacher' WHERE role = 'parent' AND (id IN (SELECT owner_parent_id FROM classes) OR id IN (SELECT parent_id FROM class_teachers))", args: [] });

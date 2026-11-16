@@ -24,6 +24,88 @@ export const NEWS_KIND_LABEL: Record<NewsItem["kind"], string> = {
 
 export const WHATS_NEW: NewsDay[] = [
   {
+    day: "2026-11-13",
+    headline: "Gradelings is now an app on Google Play",
+    items: [
+      {
+        kind: "new",
+        title: "The Gradelings Android app is here",
+        body: "Gradelings now has an Android app for phones and tablets, with practice for Pre-K to Grade 9. Find it on Google Play at https://play.google.com/store/apps/details?id=com.gradelings.app and sign in with your family account. It is the same Gradelings you know, so your children, progress and settings are already there. The iPhone and iPad app is coming soon.",
+      },
+      {
+        kind: "new",
+        title: "Everything your child practises, in one app",
+        body: "Math, language arts, science and social studies for your province, territory or state, with French Immersion and Core French where they are taught. Adventure mode picks questions just for your child, short lessons explain how it works, and a wrong answer gets a hint and another try. Math Facts, stories to read along with, arcade games that teach something, and trophies, stickers and a buddy that grows are all included, with no ads.",
+      },
+      {
+        kind: "new",
+        title: "Works without a connection",
+        body: "Once a grade has downloaded, lessons and progress keep working offline and sync when you are back online. The natural read-aloud voice also works offline once it has downloaded.",
+      },
+      {
+        kind: "new",
+        title: "Read-aloud and speaking answers for little ones",
+        body: "Questions can be read aloud, in French too. Younger children can answer some Pre-K to Grade 1 questions out loud, such as naming a picture or counting. Speech is recognised on the device, and the audio is never sent or saved. A parent can turn it off for each child.",
+      },
+      {
+        kind: "new",
+        title: "Help when a child is stuck",
+        body: "After a second miss, members can watch a short captioned video that explains the idea, then try one more.",
+      },
+      {
+        kind: "new",
+        title: "A parent area that stays with you",
+        body: "Reports in your province's own report-card levels, the weekly progress email, a printable conversation sheet for parent-teacher interviews, up to 5 children and calm mode, a dyslexia-friendly font and high contrast options. The parent area is behind a PIN. Reports show practice, not a report-card mark.",
+      },
+      {
+        kind: "teachers",
+        title: "Classes work in the app too",
+        body: "Students can sign in to the app with the login code from their teacher, with no email or password, and see the units their teacher assigned.",
+      },
+    ],
+  },
+  {
+    day: "2026-11-08",
+    headline: "Answer out loud in the early years, a warm weekly highlight for parents, and shorter free trials",
+    items: [
+      {
+        kind: "new",
+        title: "Children in Pre-K to Grade 1 can answer out loud",
+        body: "Some questions, such as naming a picture or counting, can now be answered by speaking. It is switched on for Pre-K to Grade 1, and a parent can turn it off for any child in Settings. The listening happens on the device, and nothing a child says is sent or saved.",
+      },
+      {
+        kind: "new",
+        title: "A warm highlight for each child on the Overview",
+        body: "Each child's card now opens with a short, kind summary of their last seven days and one small next step, such as the lesson that is closest to growing a level. A quiet week gets a gentle note, never a scolding.",
+      },
+      {
+        kind: "new",
+        title: "More Explore cards and a web page for each one",
+        body: "Eight new Explore cards for children in Pre-K to Grade 1. Every Explore card and article also has its own page on the website, so families can read them together without signing in.",
+      },
+      {
+        kind: "new",
+        title: "The free trial is now 14 days",
+        body: "New families get 14 days with everything open and no card needed. After that, the first 2 units of every course stay free.",
+      },
+      {
+        kind: "fixed",
+        title: "Printable worksheets fit on one page",
+        body: "Each worksheet's questions now fit on a single printed page, with the answer key on page 2.",
+      },
+      {
+        kind: "new",
+        title: "Many more practice questions",
+        body: "Manitoba language arts (Kindergarten to Grade 8), Grade 7 and 8 social studies in Alberta, Grade 8 social studies in Ontario, Grade 7 science units and Grade 9 science and social studies have many more questions, along with several US state social studies courses, so units stay fresh for longer.",
+      },
+      {
+        kind: "teachers",
+        title: "See who is doing really well",
+        body: "The class view and the Monday class email now point out students who are doing especially well, not only the ones who could use a check-in, so there is someone to give a high five to.",
+      },
+    ],
+  },
+  {
     day: "2026-11-07",
     headline: "Many more questions to practise, new things to read, and a fix for school networks",
     items: [
@@ -41,6 +123,11 @@ export const WHATS_NEW: NewsDay[] = [
         kind: "fixed",
         title: "Lessons no longer get stuck on some school networks",
         body: "On a few school networks, a web filter could block part of the app and leave a child on a loading screen. The app now says plainly that the network blocked something, and Try again works.",
+      },
+      {
+        kind: "new",
+        title: "Free Spanish pages for Grades 3 to 9",
+        body: "Anyone can now look at what a beginner Spanish course covers, grade by grade and unit by unit, with sample questions. The Spanish course in the app itself is not switched on yet.",
       },
     ],
   },

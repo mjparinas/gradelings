@@ -29,12 +29,13 @@ import { TeacherApp } from "./TeacherApp";
 const DAY = 86_400_000;
 const cls = { id: "class-1", name: "Room 3", grade: "3", framework: "ca-on", joinCode: "AB12CD", students: 3 };
 const now = Date.now();
-// Always in the future, so the "Past due" chip never depends on the day the tests run.
-const DUE = (() => { const d = new Date(now + 30 * 86_400_000); d.setHours(23, 59, 0, 0); return d; })();
+// A due date that stays in the future, so the class page never calls it past due.
+const dueDay = new Date(now + 30 * DAY);
+dueDay.setHours(23, 59, 0, 0);
 const detail = {
   class: cls,
   assignments: ["3/math/counting", "3/math/patterns"],
-  due: { "3/math/counting": DUE.getTime() },
+  due: { "3/math/counting": dueDay.getTime() },
   students: [
     { profileId: "p1", name: "Maya", avatar: "otter", grade: "3", lastActive: now, units: [{ key: "3/math/counting", level: 0, attempts: 10, accuracy: 0.3 }, { key: "3/math/patterns", level: 2, attempts: 8, accuracy: 0.9 }] },
     { profileId: "p2", name: "Sam", avatar: "otter", grade: "3", lastActive: now - 10 * DAY, units: [{ key: "3/math/counting", level: 1, attempts: 6, accuracy: 0.5 }, { key: "3/math/patterns", level: -1, attempts: 0, accuracy: 0 }] },
@@ -100,7 +101,7 @@ describe("TeacherApp class page", () => {
     expect(alex.children[1]).toHaveTextContent("100% · 1 question");
     // The saved due date shows in the picker.
     await openTab(user, "Homework");
-    expect(screen.getByRole("button", { name: "Due date for Counting" })).toHaveTextContent(new RegExp(`${DUE.toLocaleString("en-US", { month: "short" })}.*${DUE.getDate()}`));
+    expect(screen.getByRole("button", { name: "Due date for Counting" })).toHaveTextContent(new RegExp(`${dueDay.toLocaleDateString("en-US", { month: "short" })}.*${dueDay.getDate()}`));
   });
 
   it("points out which unit to reteach and which students to check in with", async () => {

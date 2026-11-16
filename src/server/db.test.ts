@@ -55,15 +55,17 @@ describe("databaseConfig", () => {
 describe("db", () => {
   function fakeClient(failFirst: number) {
     let calls = 0;
+    const hop = () => {
+      calls++;
+      if (calls <= failFirst) throw new Error("network down");
+    };
     return {
       execute: vi.fn(async (sql: unknown) => {
-        calls++;
-        if (calls <= failFirst) throw new Error("network down");
-        return { rows: typeof sql === "string" && sql.startsWith("PRAGMA") ? [] : [{ ok: 1 }], rowsAffected: 0 };
+        hop();
+        return { rows: typeof sql === "string" && (sql.startsWith("PRAGMA") || sql.includes("sqlite_master")) ? [] : [{ ok: 1 }], rowsAffected: 0 };
       }),
       batch: vi.fn(async () => {
-        calls++;
-        if (calls <= failFirst) throw new Error("network down");
+        hop();
         return [];
       }),
     };
