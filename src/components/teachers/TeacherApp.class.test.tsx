@@ -403,7 +403,8 @@ describe("TeacherApp class page", () => {
     const writeText = vi.fn().mockResolvedValue(undefined);
     Object.defineProperty(navigator, "clipboard", { configurable: true, value: { writeText } });
     const note = screen.getByRole("textbox", { name: "Note to families" }) as HTMLTextAreaElement;
-    expect(note.value).toContain(`Our class is using ${APP_NAME} for extra Ontario Curriculum practice.`);
+    expect(note.value).toContain(`We are using ${APP_NAME} in class for extra Ontario Curriculum practice.`);
+    expect(note.value).toContain("Nothing about your child is shared until you link.");
     expect(note.value).toContain("enter the class code AB12CD");
     expect(note.value).toContain(`${window.location.origin}/play/`);
     await user.click(screen.getByRole("button", { name: "Copy note" }));
@@ -413,6 +414,21 @@ describe("TeacherApp class page", () => {
     expect(mail.startsWith("mailto:?subject=")).toBe(true);
     expect(decodeURIComponent(mail)).toContain(`Room 3 on ${APP_NAME}`);
     expect(decodeURIComponent(mail.split("&body=")[1])).toBe(note.value);
+  });
+
+  it("shares the note with the device share sheet and prints take-home slips with the class code", async () => {
+    serve(detail);
+    const share = vi.fn().mockResolvedValue(undefined);
+    Object.defineProperty(navigator, "share", { configurable: true, value: share });
+    const user = await openClass();
+    await openTab(user, "Students");
+    const print = vi.fn();
+    window.print = print;
+    await user.click(screen.getByRole("button", { name: "Share…" }));
+    expect(share).toHaveBeenCalledWith(expect.objectContaining({ title: `Room 3 on ${APP_NAME}`, text: expect.stringContaining("AB12CD") }));
+    await user.click(screen.getByRole("button", { name: "Print take-home slips" }));
+    await waitFor(() => expect(print).toHaveBeenCalled());
+    Object.defineProperty(navigator, "share", { configurable: true, value: undefined });
   });
 
   it("prints a login card for each student, then goes back to the normal view", async () => {
