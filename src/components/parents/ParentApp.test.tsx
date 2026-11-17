@@ -102,6 +102,42 @@ describe("ParentApp sign-in link", () => {
   });
 });
 
+describe("ParentApp first child after confirming an email", () => {
+  afterEach(() => window.history.replaceState(null, "", "/"));
+  const arrive = () => {
+    h.kv.family = trial(5, { account });
+    window.history.replaceState(null, "", "/parents/?addchild=1#/children");
+  };
+
+  it("asks for the child before any PIN when the signed-in family has no child and the device has no PIN", async () => {
+    arrive();
+    render(<ParentApp />);
+    expect(await screen.findByRole("heading", { name: "Who’s learning today?" })).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: "Unlock" })).not.toBeInTheDocument();
+  });
+
+  it("still asks for the PIN when the device already has one", async () => {
+    arrive();
+    h.kv.pin = { hash: "x", salt: "y" };
+    render(<ParentApp />);
+    expect(await screen.findByRole("button", { name: "Unlock" })).toBeInTheDocument();
+  });
+
+  it("goes to the usual PIN screen when a child is already there", async () => {
+    arrive();
+    h.kv.profiles = [ava];
+    render(<ParentApp />);
+    expect(await screen.findByRole("button", { name: "Unlock" })).toBeInTheDocument();
+  });
+
+  it("\"I’ll do this later\" falls back to the PIN screen", async () => {
+    arrive();
+    render(<ParentApp />);
+    await userEvent.click(await screen.findByRole("button", { name: "I’ll do this later" }));
+    expect(await screen.findByRole("button", { name: "Unlock" })).toBeInTheDocument();
+  });
+});
+
 describe("ParentApp", () => {
   it("loads the device's data, starts background sync, then asks for the PIN", async () => {
     render(<ParentApp />);
