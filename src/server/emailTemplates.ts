@@ -235,20 +235,25 @@ export function trialRecapEmail(to: string, origin: string, daysLeft: number, ch
 
 export function trialEndingEmail(to: string, origin: string, daysLeft: number, children: TrialChild[] = [], country?: CountryCode): Email {
   const recap = recapLines(children);
+  const days = `${daysLeft} ${daysLeft === 1 ? "day" : "days"}`;
+  const names = children.filter((c) => c.answers > 0).map((c) => c.name);
+  const who = names.length > 1 ? `${names.slice(0, -1).join(", ")} and ${names[names.length - 1]}` : names[0];
   return layout({
     country,
     kind: "trial-ending",
     to,
     origin,
-    subject: `Your ${APP_NAME} free trial ends in ${daysLeft} ${daysLeft === 1 ? "day" : "days"}`,
-    heading: `Your free trial ends in ${daysLeft} ${daysLeft === 1 ? "day" : "days"}`,
+    subject: recap.length ? `${days} left: here's how ${who} did on ${APP_NAME}` : `Your ${APP_NAME} free trial ends in ${days}`,
+    heading: `Your free trial ends in ${days}`,
     body: [
-      ...(recap.length ? ["Here's what the trial has done:", ...recap] : [`Your children haven't had a long session yet. Ten minutes today is enough to see how ${APP_NAME} matches their grade before the trial ends.`]),
+      ...(recap.length
+        ? [`Thanks for trying ${APP_NAME} with ${who}. Here's what the trial has done:`, ...recap, "That's a good start, and regular short sessions are what make it stick."]
+        : [`Your children haven't had a long session yet. Ten minutes today is enough to see how ${APP_NAME} matches their grade before the trial ends.`]),
       WHAT_YOU_GET,
       KEEP_FREE,
-      `Subscribe before the trial ends to keep everything open. You'll be charged at checkout and the paid plan starts that day, with a full refund within ${REFUND_DAYS} days if it isn't right for your family. There's nothing to do if you'd like to stay on the free units. No card was needed to start.`,
+      `If ${recap.length ? "it's been working for your family" : "you'd like to keep going"}, you can subscribe before the trial ends to keep everything open. The plans and prices are on our pricing page. You'll be charged at checkout and the paid plan starts that day, with a full refund within ${REFUND_DAYS} days if it isn't right for your family. There's no rush and nothing to do if you'd like to stay on the free units. No card was needed to start.`,
     ],
-    button: { label: "Keep everything open", url: `${origin}${SUBSCRIBE_HREF}` },
+    button: { label: "See plans and prices", url: `${origin}/pricing/` },
   });
 }
 

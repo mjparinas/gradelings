@@ -175,6 +175,15 @@ describe("conversion copy (owner, November 2026)", () => {
     expect(ending.text).toContain("No card was needed to start");
     expect(t.trialRecapEmail("a@example.com", O, 1, kids).subject).toMatch(/^1 day left/);
   });
+  it("the final notice thanks the family by child, links to pricing and is warm, not pushy", () => {
+    const two = [...kids, { name: "Leo", answers: 10, activeDays: 2, minutes: 9 }];
+    const ending = t.trialEndingEmail("a@example.com", O, 3, two);
+    expect(ending.subject).toBe("3 days left: here's how Maya and Leo did on Gradelings");
+    expect(ending.text).toContain("Thanks for trying Gradelings with Maya and Leo");
+    expect(ending.text).toContain("See plans and prices: " + O + "/pricing/");
+    expect(ending.text).toContain("There's no rush");
+    expect(t.trialEndingEmail("a@example.com", O, 3, []).subject).toBe("Your Gradelings free trial ends in 3 days");
+  });
   it("sends a family with no practice to a first session, not an empty recap", () => {
     expect(t.trialEndingEmail("a@example.com", O, 2, []).text).toContain("Ten minutes today");
   });
