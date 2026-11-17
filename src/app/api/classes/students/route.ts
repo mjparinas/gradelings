@@ -22,7 +22,6 @@ export async function POST(req: Request) {
   const found = await teacherClass(req, typeof body?.classId === "string" ? body.classId : "");
   if (found.fail) return found.fail;
   const { session, cls } = found;
-  if (!session!.verified) return error(403, "Please confirm your email first. Student accounts hold children's practice, so we only allow them for confirmed accounts.");
   if (await rateLimited(`students:${session!.parentId}`, 30, 60 * 60_000)) return error(429, "Too many students added. Try again later.");
   const raw = Array.isArray(body?.names) ? body.names : [];
   const names = raw.slice(0, MAX_BATCH).map(cleanStudentName).filter(Boolean);

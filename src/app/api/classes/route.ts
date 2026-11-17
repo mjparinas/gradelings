@@ -77,9 +77,8 @@ export async function POST(req: Request) {
   if (!sameOrigin(req)) return error(403, "Bad origin");
   const session = await getSession(req);
   if (!session) return error(401, "Sign in to create a class.");
-  // Teachers see children's first names and results, so the account's email has to be confirmed first.
+  // A new teacher can set a class up before confirming their email; students and families can join only once it is confirmed (`classOpenForJoining`).
   if (!(await isFlagOn("new-classes", session.familyId))) return error(503, "New classes can't be created just now. Please try again later.");
-  if (!session.verified) return error(403, "Please confirm your email first. Classes show children's progress, so we only allow them for confirmed accounts.");
   if (await rateLimited(`class:${session.parentId}`, 20, 60 * 60_000)) return error(429, "Too many classes created. Try again later.");
   const body = (await readJson(req)) as { name?: unknown; grade?: unknown; grade2?: unknown; framework?: unknown } | null;
   // One line of plain text: it appears in invitation emails and on printed cards.

@@ -90,7 +90,7 @@ const PROGRESS_REFRESH_MS = 90_000;
 const pct = (v: number) => `${Math.round(v * 100)}%`;
 const btn = "min-h-11 rounded-xl px-4 font-bold";
 
-/** Classes show children's first names and results, so the account's email has to be confirmed first. */
+/** A teacher can set a class up straight away, but students and families can join only once the email is confirmed. */
 function ConfirmEmail({ email }: { email?: string }) {
   const [state, setState] = useState<"idle" | "sending" | "sent">("idle");
   const [err, setErr] = useState("");
@@ -107,9 +107,9 @@ function ConfirmEmail({ email }: { email?: string }) {
   };
   return (
     <section className="mt-4 rounded-2xl border border-line bg-white p-4" aria-label="Confirm your email">
-      <h2 className="text-xl font-bold">Confirm your email to create a class</h2>
+      <h2 className="text-xl font-bold">Confirm your email so students can join</h2>
       <p className="mt-1 font-read text-ink-soft">
-        Classes show students’ first names and practice results, so we ask teachers to confirm their email first. Open the link we sent{email ? ` to ${email}` : ""} (check spam too), then reload this page.
+        Set up your class now. Students and families can sign in or join once you confirm your email, because classes show students’ first names and practice results. Open the link we sent{email ? ` to ${email}` : ""} (check spam too), then reload this page.
       </p>
       <button type="button" disabled={state !== "idle"} className={`${btn} mt-3 border border-line disabled:opacity-50`} onClick={() => void resend()}>
         {state === "sent" ? "Sent. Check your inbox" : "Send the link again"}
@@ -387,7 +387,7 @@ function ClassList({ onOpen, account }: { onOpen: (id: string, welcome?: boolean
             ))}
           </ul>
         )}
-        <button disabled={account.verified === false} className={`${btn} bg-[#25b47e] text-[#0f172a] disabled:opacity-50`}>Create class</button>
+        <button className={`${btn} bg-[#25b47e] text-[#0f172a]`}>Create class</button>
         {isUsClass(getFramework(framework)) && <p className="w-full font-read text-sm text-ink-soft">{US_CLASS_CONSENT}</p>}
       </form>
       {err && (
@@ -1341,7 +1341,7 @@ function Notice({ text, onDone }: { text: string; onDone: () => void }) {
   );
 }
 
-function ClassPage({ id, tab, preselect, welcome, onBack }: { id: string; tab: ClassTab; preselect?: string[]; welcome?: boolean; onBack: () => void }) {
+function ClassPage({ id, tab, preselect, welcome, account, onBack }: { id: string; tab: ClassTab; preselect?: string[]; welcome?: boolean; account?: { email?: string; verified?: boolean }; onBack: () => void }) {
   const [data, setData] = useState<ClassDetail | null>(null);
   const [ready, setReady] = useState(false);
   const [pick, setPick] = useState("");
@@ -1538,6 +1538,7 @@ function ClassPage({ id, tab, preselect, welcome, onBack }: { id: string; tab: C
       <p className="font-read text-ink-soft">
         {classGradeText(cls)} · {getFramework(cls.framework).curriculumName}
       </p>
+      {account?.verified === false && <ConfirmEmail email={account.email} />}
       <FirstUseVideo key={tab} video={videoById(TEACHER_VIDEOS, TEACHER_TAB_VIDEOS[tab])} enabled={isOn("training-videos") && (tab !== "progress" || students.length > 0)} />
       {trying && <TryUnit unitKey={trying} framework={cls.framework} onClose={() => setTrying(null)} />}
 
@@ -2006,7 +2007,7 @@ export function TeacherApp() {
         ) : importId ? (
           <RosterReview key={importId} id={importId} onBack={() => go("/")} onOpenClass={(id) => go(`/class/${encodeURIComponent(id)}/students`)} />
         ) : classId ? (
-          <ClassPage key={classId} id={classId} tab={tab} welcome={query.get("welcome") === "1"} preselect={query.get("students")?.split(",").filter(Boolean)} onBack={() => go("/")} />
+          <ClassPage key={classId} id={classId} tab={tab} welcome={query.get("welcome") === "1"} account={account} preselect={query.get("students")?.split(",").filter(Boolean)} onBack={() => go("/")} />
         ) : (
           <ClassList account={account} onOpen={(id, welcome) => go(welcome ? `/class/${encodeURIComponent(id)}/students?welcome=1` : `/class/${encodeURIComponent(id)}`)} />
         )}
