@@ -42,19 +42,22 @@ describe("curriculum unit page", () => {
     expect(within(screen.getByRole("complementary")).getByRole("button", { name: /Share these questions/ })).toBeInTheDocument();
   });
 
-  it("lets a visitor answer a tap-to-answer sample on the page, then offers the unit in the app", async () => {
+  it("lets a visitor answer tap-to-answer samples on the page, then offers the unit in the app after a few", async () => {
     const f = getFramework("ca-bc");
     const unit = coursesFor(f, "2").find((c) => c.subject === "math")!.units[0];
     render(await UnitPage(props("bc", "grade-2", "math", unit.id)));
     const region = screen.getByRole("region", { name: "Try a few questions" });
-    const card = within(region).getAllByRole("listitem").find((li) => within(li).queryByText("Tap an answer to try it."));
-    expect(card).toBeDefined();
-    const choices = within(within(card!).getByRole("list", { name: "Choices" })).getAllByRole("button");
-    // Two misses (or one right answer) end it with the answer and the app link; pick wrong ones while they last.
-    for (const button of choices.slice(0, 2)) fireEvent.click(button);
-    const link = within(card!).getByRole("link", { name: /Practise this unit/ });
-    expect(link).toHaveAttribute("href", `/play/#/start?framework=ca-bc&grade=2&subject=math&unit=${unit.id}`);
-    expect(within(card!).getByText(/That's right!|The answer is/)).toBeInTheDocument();
+    const cards = within(region).getAllByRole("listitem").filter((li) => within(li).queryByText("Tap an answer to try it."));
+    expect(cards.length).toBeGreaterThan(0);
+    expect(within(region).queryByTestId("session-prompt")).toBeNull();
+    // Two misses (or one right answer) end each one; no app link until enough are done.
+    for (const card of cards) {
+      for (const button of within(within(card).getByRole("list", { name: "Choices" })).getAllByRole("button").slice(0, 2)) fireEvent.click(button);
+      expect(within(card).getByText(/That's right!|The answer is/)).toBeInTheDocument();
+      expect(within(card).queryByRole("link")).toBeNull();
+    }
+    const prompt = within(region).getByTestId("session-prompt");
+    expect(within(prompt).getByRole("link", { name: /Practise this unit/ })).toHaveAttribute("href", `/play/#/start?framework=ca-bc&grade=2&subject=math&unit=${unit.id}`);
   });
 
   it("links the previous and next unit and the grade's other subjects", async () => {
