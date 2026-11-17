@@ -74,6 +74,10 @@ export default async function WorksheetPage({ params }: Props) {
   const items = sheetQuestions(f, course);
   const updated = courseUpdated(f.id, grade, course.subject);
   const path = guidePath.worksheet(f, grade, course.subject);
+  const others = coursesFor(f, grade).filter((c) => c.subject !== course.subject);
+  const grades = gradesWithContent(f);
+  const at = grades.indexOf(grade);
+  const sameSubject = [grades[at - 1], grades[at + 1]].flatMap((g) => (g && coursesFor(f, g).some((c) => c.subject === course.subject) ? [g] : []));
   const crumbs = [
     { label: "Home", href: "/" },
     { label: `${f.shortName} parent guides`, href: guidePath.hub(f) },
@@ -158,6 +162,30 @@ export default async function WorksheetPage({ params }: Props) {
         </b>{" "}
         {absolute(curriculumPath.subject(f, grade, course.subject)).replace(/^https?:\/\//, "")} · Free for {TRIAL_DAYS} days, no card needed.
       </p>
+
+      {others.length + sameSubject.length > 0 && (
+        <nav aria-labelledby="more-sheets" className="mt-10 print:hidden">
+          <h2 id="more-sheets" className="text-2xl font-bold">
+            More free printable sheets
+          </h2>
+          <ul className="mt-3 flex flex-wrap gap-2 font-read text-lg">
+            {others.map((c) => (
+              <li key={c.subject}>
+                <Link href={guidePath.worksheet(f, grade, c.subject)} className="inline-block rounded-full border-2 border-line px-4 py-2 font-semibold text-[#2f6fd6] underline">
+                  {label} {subjectSeoTitle(c.subject)} worksheet
+                </Link>
+              </li>
+            ))}
+            {sameSubject.map((g) => (
+              <li key={g}>
+                <Link href={guidePath.worksheet(f, g, course.subject)} className="inline-block rounded-full border-2 border-line px-4 py-2 font-semibold text-[#2f6fd6] underline">
+                  {gradeLabel(f, g)} {name} worksheet
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
 
       <section className="card mt-10 flex flex-col flex-wrap gap-3 p-6 print:hidden sm:flex-row sm:items-center">
         <div className="flex-1">

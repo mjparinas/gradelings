@@ -98,4 +98,14 @@ describe("printable practice sheet", () => {
     expect(await generateMetadata(props("ontario", "kindergarten", "core-french"))).toEqual({});
     await expect(WorksheetPage(props("ontario", "kindergarten", "core-french"))).rejects.toMatchObject({ digest: expect.stringContaining("404") });
   });
+
+  it("links to the grade's other sheets and the same subject in the next grades", async () => {
+    await sheet("bc", "grade-3", "math");
+    const nav = screen.getByRole("navigation", { name: "More free printable sheets" });
+    const hrefs = within(nav).getAllByRole("link").map((a) => a.getAttribute("href"));
+    expect(hrefs).toContain("/guides/bc/grade-3/language/worksheet/");
+    expect(hrefs).toContain("/guides/bc/grade-2/math/worksheet/");
+    expect(hrefs).toContain("/guides/bc/grade-4/math/worksheet/");
+    expect(hrefs).not.toContain("/guides/bc/grade-3/math/worksheet/");
+  });
 });
