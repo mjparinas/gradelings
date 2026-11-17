@@ -222,13 +222,16 @@ describe("AccountPage signed in", () => {
     render(<AccountPage onBilling={vi.fn()} />);
     const weekly = await screen.findByRole("radio", { name: "Weekly summary" });
     expect(weekly).toHaveAttribute("aria-checked", "true");
-    await userEvent.click(screen.getByRole("radio", { name: "Summary and reminders" }));
-    await waitFor(() => expect(screen.getByRole("radio", { name: "Summary and reminders" })).toHaveAttribute("aria-checked", "true"));
-    expect(bodyOf("POST", "/api/account/prefs/")).toEqual({ weeklyReport: true, practiceReminders: true });
-    expect(screen.getByText(/never to your child/)).toBeInTheDocument();
+    expect(screen.queryByRole("radio", { name: "Summary and reminders" })).not.toBeInTheDocument();
     await userEvent.click(screen.getByRole("radio", { name: "None" }));
     await waitFor(() => expect(screen.getByRole("radio", { name: "None" })).toHaveAttribute("aria-checked", "true"));
     expect(bodyOf("POST", "/api/account/prefs/")).toEqual({ weeklyReport: false, practiceReminders: false });
+  });
+
+  it("still shows Summary and reminders for a parent who already has it", async () => {
+    routes["GET /api/account/prefs/"] = () => json({ weeklyReport: true, practiceReminders: true });
+    render(<AccountPage onBilling={vi.fn()} />);
+    expect(await screen.findByRole("radio", { name: "Summary and reminders" })).toHaveAttribute("aria-checked", "true");
   });
 
   it("turns news and tips off and on", async () => {
@@ -245,7 +248,7 @@ describe("AccountPage signed in", () => {
   it("picks no option for reminders without the weekly summary, which older versions allowed", async () => {
     render(<AccountPage onBilling={vi.fn()} />);
     await screen.findByRole("radiogroup", { name: "Progress emails" });
-    for (const name of ["Weekly summary", "Summary and reminders", "None"]) expect(screen.getByRole("radio", { name })).toHaveAttribute("aria-checked", "false");
+    for (const name of ["Weekly summary", "None"]) expect(screen.getByRole("radio", { name })).toHaveAttribute("aria-checked", "false");
     expect(screen.getByText("Practice reminders only. Pick an option to change it.")).toBeInTheDocument();
   });
 

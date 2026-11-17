@@ -74,3 +74,13 @@ describe("parent emails choice", () => {
     for (const choice of ["weekly", "both", "none"] as const) expect(emailChoice(emailPatch(choice))).toBe(choice);
   });
 });
+
+describe("easier reading", () => {
+  it("is on only for roomy text on a cream page, and the patch round-trips", async () => {
+    const { easierOn, easierPatch } = await import("./settingChoices");
+    expect(easierOn({})).toBe(false);
+    expect(easierOn({ roomyText: true })).toBe(false);
+    expect(easierOn(easierPatch(true))).toBe(true);
+    expect(easierOn(easierPatch(false))).toBe(false);
+  });
+});

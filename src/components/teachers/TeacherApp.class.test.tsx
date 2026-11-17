@@ -29,10 +29,13 @@ import { TeacherApp } from "./TeacherApp";
 const DAY = 86_400_000;
 const cls = { id: "class-1", name: "Room 3", grade: "3", framework: "ca-on", joinCode: "AB12CD", students: 3 };
 const now = Date.now();
+// A due date that stays in the future, so the class page never calls it past due.
+const dueDay = new Date(now + 30 * DAY);
+dueDay.setHours(23, 59, 0, 0);
 const detail = {
   class: cls,
   assignments: ["3/math/counting", "3/math/patterns"],
-  due: { "3/math/counting": new Date(2026, 10, 14, 23, 59).getTime() },
+  due: { "3/math/counting": dueDay.getTime() },
   students: [
     { profileId: "p1", name: "Maya", avatar: "otter", grade: "3", lastActive: now, units: [{ key: "3/math/counting", level: 0, attempts: 10, accuracy: 0.3 }, { key: "3/math/patterns", level: 2, attempts: 8, accuracy: 0.9 }] },
     { profileId: "p2", name: "Sam", avatar: "otter", grade: "3", lastActive: now - 10 * DAY, units: [{ key: "3/math/counting", level: 1, attempts: 6, accuracy: 0.5 }, { key: "3/math/patterns", level: -1, attempts: 0, accuracy: 0 }] },
@@ -98,7 +101,7 @@ describe("TeacherApp class page", () => {
     expect(alex.children[1]).toHaveTextContent("100% · 1 question");
     // The saved due date shows in the picker.
     await openTab(user, "Homework");
-    expect(screen.getByRole("button", { name: "Due date for Counting" })).toHaveTextContent(/Nov.*14/);
+    expect(screen.getByRole("button", { name: "Due date for Counting" })).toHaveTextContent(new RegExp(`${dueDay.toLocaleDateString("en-US", { month: "short" })}.*${dueDay.getDate()}`));
   });
 
   it("points out which unit to reteach and which students to check in with", async () => {
@@ -400,7 +403,8 @@ describe("TeacherApp class page", () => {
     const writeText = vi.fn().mockResolvedValue(undefined);
     Object.defineProperty(navigator, "clipboard", { configurable: true, value: { writeText } });
     const note = screen.getByRole("textbox", { name: "Note to families" }) as HTMLTextAreaElement;
-    expect(note.value).toContain(`Our class is using ${APP_NAME} for extra Ontario Curriculum practice.`);
+    expect(note.value).toContain(`We are using ${APP_NAME} in class for extra Ontario Curriculum practice.`);
+    expect(note.value).toContain("Nothing about your child is shared until you link.");
     expect(note.value).toContain("enter the class code AB12CD");
     expect(note.value).toContain(`${window.location.origin}/play/`);
     await user.click(screen.getByRole("button", { name: "Copy note" }));
@@ -410,6 +414,21 @@ describe("TeacherApp class page", () => {
     expect(mail.startsWith("mailto:?subject=")).toBe(true);
     expect(decodeURIComponent(mail)).toContain(`Room 3 on ${APP_NAME}`);
     expect(decodeURIComponent(mail.split("&body=")[1])).toBe(note.value);
+  });
+
+  it("shares the note with the device share sheet and prints take-home slips with the class code", async () => {
+    serve(detail);
+    const share = vi.fn().mockResolvedValue(undefined);
+    Object.defineProperty(navigator, "share", { configurable: true, value: share });
+    const user = await openClass();
+    await openTab(user, "Students");
+    const print = vi.fn();
+    window.print = print;
+    await user.click(screen.getByRole("button", { name: "Share…" }));
+    expect(share).toHaveBeenCalledWith(expect.objectContaining({ title: `Room 3 on ${APP_NAME}`, text: expect.stringContaining("AB12CD") }));
+    await user.click(screen.getByRole("button", { name: "Print take-home slips" }));
+    await waitFor(() => expect(print).toHaveBeenCalled());
+    Object.defineProperty(navigator, "share", { configurable: true, value: undefined });
   });
 
   it("prints a login card for each student, then goes back to the normal view", async () => {

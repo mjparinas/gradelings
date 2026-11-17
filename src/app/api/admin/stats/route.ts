@@ -3,6 +3,7 @@ import { notTestFamily, notTestFamilyId } from "@/server/testAccounts";
 import { ADMIN_BODY_LIMIT, error, json, readJson } from "@/server/auth";
 import { audit, requireAdmin } from "@/server/admin";
 import { query } from "@/server/db";
+import { cachedStats, clearStatsCache } from "@/server/statsCache";
 import { guestCounts } from "@/server/guests";
 import { getSetting, importPayments, setSetting } from "@/server/payments";
 import { stripeCancellationConfigured } from "@/server/stripe";
@@ -125,14 +126,18 @@ export async function GET(req: Request) {
   const section = new URL(req.url).searchParams.get("section");
   if (section !== null) {
     if (!isMetricSection(section)) return error(400, "Pick money, customers, growth or practice.");
-    const [input, reasons] = await Promise.all([load(now, SECTION_INPUTS[section]), section === "growth" ? cancelReasons(now) : null]);
-    const part = sectionOf(computeMetrics(input), section);
-    if (section === "money") return json({ ...part, stripe: stripeCancellationConfigured() });
-    if (section === "growth") return json({ ...part, cancelReasons: reasons });
-    return json(part);
+    return cachedStats(section, async () => {
+      const [input, reasons] = await Promise.all([load(now, SECTION_INPUTS[section]), section === "growth" ? cancelReasons(now) : null]);
+      const part = sectionOf(computeMetrics(input), section);
+      if (section === "money") return { ...part, stripe: stripeCancellationConfigured() };
+      if (section === "growth") return { ...part, cancelReasons: reasons };
+      return part;
+    });
   }
-  const [input, reasons] = await Promise.all([load(now, Object.keys(loaders(now)) as (keyof Loaders)[]), cancelReasons(now)]);
-  return json({ ...computeMetrics(input), stripe: stripeCancellationConfigured(), cancelReasons: reasons });
+  return cachedStats("all", async () => {
+    const [input, reasons] = await Promise.all([load(now, Object.keys(loaders(now)) as (keyof Loaders)[]), cancelReasons(now)]);
+    return { ...computeMetrics(input), stripe: stripeCancellationConfigured(), cancelReasons: reasons };
+  });
 }
 
 /** Saves the monthly running costs, or copies paid invoices from Stripe. */
@@ -145,6 +150,7 @@ export async function POST(req: Request) {
     if (!Number.isFinite(dollars) || dollars < 0 || dollars > 10_000_000) return error(400, "Enter the monthly costs in dollars, 0 or more.");
     const cents = Math.round(dollars * 100);
     await setSetting(COSTS_KEY, String(cents));
+    clearStatsCache();
     await audit(gate.admin.email, "stats.costs", null, { monthlyCosts: cents });
     return json({ ok: true, monthlyCosts: cents });
   }
@@ -152,6 +158,7 @@ export async function POST(req: Request) {
     if (!stripeCancellationConfigured()) return error(400, "Stripe isn't set up on this server (STRIPE_SECRET_KEY).");
     try {
       const result = await importPayments();
+      clearStatsCache();
       await audit(gate.admin.email, "stats.import", null, result);
       return json(result);
     } catch (e) {

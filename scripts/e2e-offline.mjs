@@ -91,6 +91,7 @@ try {
 
   // Account shows it on and ready, without a parent doing anything.
   await page.goto(BASE + "/parents/#/account");
+  await page.getByText("Read-aloud voice: change or fix").click();
   await page.getByRole("button", { name: "Change voice" }).click();
   const piper = page.getByTestId("piper-en");
   await piper.getByRole("button", { name: "▶ Preview", exact: true }).waitFor({ timeout: 15000 });

@@ -594,7 +594,7 @@
     "overview": "fa71c66a1f",
     "units": [
       "wa-g6-time-sources text=73bc1bdf96 std=d891803a69 q=4c68824bdd",
-      "first-farmers text=eb96dfbdd9 std=fa1dc8f685 q=b3720d7bbf",
+      "first-farmers text=eb96dfbdd9 std=fa1dc8f685 q=814e8ced70",
       "wa-g6-mesopotamia-egypt text=074c2d63a6 std=05fcd1a69b q=232c3963ae",
       "wa-g6-india-china text=cc9a696797 std=bb90fe6748 q=13133eb41e",
       "world-beliefs text=cc74370028 std=8e40dad230 q=eaa6186bca",
@@ -895,7 +895,7 @@
   "9/social": {
     "overview": "c450ab6ab5",
     "units": [
-      "first-farmers text=4979c3fbcf std=5cbb149c83 q=b3720d7bbf",
+      "first-farmers text=4979c3fbcf std=5cbb149c83 q=814e8ced70",
       "where-civilizations-grew text=7faae12117 std=dd940bdea9 q=227eb500ef",
       "ca-g6-greece-rome text=eddbef37e2 std=e183692038 q=66c3129534",
       "trade-networks text=f346b3ae63 std=69fc7c3dfb q=bfbd39ee46",

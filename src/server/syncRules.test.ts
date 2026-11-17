@@ -344,3 +344,38 @@ describe("class accounts", () => {
     expect((res.profiles[0] as unknown as { resetAt: number }).resetAt).toBe(50);
   });
 });
+
+describe("the family's running event count", () => {
+  const stored = async (familyId: string) => (await dbm.query<{ n: number; counted_at: number }>("SELECT n, counted_at FROM family_event_counts WHERE family_id = ?", [familyId]))[0];
+
+  it("is made on the first push, then goes up in the same batch without counting the table", async () => {
+    const a = await account();
+    await go(a.cookie, { profiles: [profile("pc1")], events: [event("ec1", "pc1"), event("ec2", "pc1")] });
+    expect(Number((await stored(a.familyId)).n)).toBe(2);
+    // Plant a number the table doesn't match: a trusted row is used as it is, so it moves by what was pushed.
+    await dbm.run("UPDATE family_event_counts SET n = 100 WHERE family_id = ?", [a.familyId]);
+    await go(a.cookie, { events: [event("ec3", "pc1")] });
+    expect(Number((await stored(a.familyId)).n)).toBe(101);
+  });
+
+  it("is counted again when it is a day old or near the cap", async () => {
+    const a = await account();
+    await go(a.cookie, { profiles: [profile("pc2")], events: [event("ec4", "pc2")] });
+    await dbm.run("UPDATE family_event_counts SET n = 100, counted_at = ? WHERE family_id = ?", [Date.now() - 2 * 86_400_000, a.familyId]);
+    await go(a.cookie, { events: [event("ec5", "pc2")] });
+    expect(Number((await stored(a.familyId)).n)).toBe(2);
+    await dbm.run("UPDATE family_event_counts SET n = 249999 WHERE family_id = ?", [a.familyId]);
+    await go(a.cookie, { events: [event("ec6", "pc2")] });
+    expect(Number((await stored(a.familyId)).n)).toBe(3);
+  });
+
+  it("is dropped when a child is deleted or reset, and with the family", async () => {
+    const a = await account();
+    await go(a.cookie, { profiles: [profile("pc3")], events: [event("ec7", "pc3")] });
+    expect(await stored(a.familyId)).toBeTruthy();
+    await go(a.cookie, { profiles: [profile("pc3", { deleted: true, updatedAt: 2000 })] });
+    expect(await stored(a.familyId)).toBeUndefined();
+    await go(a.cookie, { events: [event("ec8", "pc3")] });
+    expect(await rowCount("SELECT COUNT(*) AS n FROM events WHERE family_id = ?", [a.familyId])).toBe(0);
+  });
+});

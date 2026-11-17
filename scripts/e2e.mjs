@@ -239,6 +239,8 @@ async function eventsWaiting(page) {
     await page.goto(`${BASE}/parents/`);
     await enterPin(page, true);
     await shot(page, "20-parent-overview", true);
+    // The optional tools (goal, notes, focus unit, goal plan, reward) are folded under "Ways to help".
+    await page.getByText("Ways to help (optional)").click();
     // Kind notes: picked from a dropdown, then sent.
     await page.getByRole("combobox", { name: "Note for Maya" }).click();
     await page.getByRole("listbox", { name: "Note for Maya" }).getByRole("option", { name: /Love you lots/ }).click();
@@ -256,13 +258,14 @@ async function eventsWaiting(page) {
     if (!(await vis(goal.getByRole("button", { name: "Set a goal" })))) errors.push("goal plan: removing it didn't bring back Set a goal");
     await page.goto(`${BASE}/parents/#/settings`);
     await page.waitForTimeout(500);
-    await page.getByRole("radio", { name: "Free play" }).click();
-    // One "Calm mode" switch turns on the calm options, and Sounds shows Gentle while it's on.
+    await page.getByRole("switch", { name: /^Arcade games/ }).click();
+    await page.getByRole("switch", { name: /^Arcade games/ }).click();
+    // One "Calm mode" switch turns on the calm options, and the gentle-sounds choice shows On while it's on.
     await page.getByRole("switch", { name: /Calm mode/ }).click();
-    if ((await page.getByRole("radio", { name: "Gentle" }).getAttribute("aria-checked")) !== "true") errors.push("calm mode: sounds didn't switch to Gentle");
-    if ((await page.getByRole("radio", { name: "Hide all" }).getAttribute("aria-checked")) !== "true") errors.push("calm mode: timers weren't hidden");
+    await page.getByText("Customize calm mode").click();
+    if ((await page.getByRole("radiogroup", { name: "Timers in lessons" }).getByRole("radio", { name: "Hide all" }).getAttribute("aria-checked")) !== "true") errors.push("calm mode: timers weren't hidden");
     await page.getByRole("switch", { name: /Calm mode/ }).click();
-    if (await page.getByRole("switch", { name: /Hints count as first try/ }).isVisible()) errors.push("settings: advanced options should start folded");
+    if (await page.getByRole("switch", { name: /Hints count as first try/ }).count()) errors.push("settings: the hints switch should be gone");
     await shot(page, "21-parent-settings", true);
     if ((await page.getByRole("navigation", { name: "Parent sections" }).getByRole("link").count()) !== 6) errors.push("parent nav: expected 6 tabs");
 
@@ -270,7 +273,9 @@ async function eventsWaiting(page) {
     await page.goto(`${BASE}/parents/#/account`);
     await page.waitForTimeout(500);
     if (!(await vis(page.getByRole("heading", { name: /Parent PIN/ })))) errors.push("account: the parent PIN panel is missing");
-    // The voice in use is shown with a sample; the choices are folded under "Change voice".
+    // The whole voice section is folded under "Read-aloud voice: change or fix"; inside, the voice in use is shown
+    // with a sample and the choices are folded under "Change voice".
+    await page.getByText("Read-aloud voice: change or fix").click();
     if (!(await vis(page.getByText(/Reading with:/)))) errors.push("account: the voice in use isn't shown");
     await page.getByRole("button", { name: "Change voice" }).click();
     // The most natural voice comes first, and a parent's choice is used everywhere.
@@ -335,7 +340,27 @@ async function eventsWaiting(page) {
     await page.waitForTimeout(500);
     if (!(await vis(page.getByRole("heading", { name: "Your data, your choice" })))) errors.push("old privacy link: Account didn't show the privacy panels");
 
-    // Arcade with free play on. The newer games start locked.
+    // Arcade with free play on. The newer games start locked. Settings has no free-play switch any more
+    // (November 2026) but a saved value is still honoured, so write it into the device's settings.
+    await page.evaluate(
+      () =>
+        new Promise((res, rej) => {
+          const r = indexedDB.open("gradelings", 1);
+          r.onerror = () => rej(r.error);
+          r.onsuccess = () => {
+            const tx = r.result.transaction("kv", "readwrite");
+            const store = tx.objectStore("kv");
+            const g = store.get("settings");
+            g.onsuccess = () => {
+              const all = g.result ?? {};
+              for (const k of Object.keys(all)) all[k] = { ...all[k], freePlay: true };
+              store.put(all, "settings");
+            };
+            tx.oncomplete = () => res(true);
+            tx.onerror = () => rej(tx.error);
+          };
+        }),
+    );
     await page.goto(`${BASE}/play/#/arcade`);
     await page.waitForTimeout(600);
     await shot(page, "23-arcade", true);

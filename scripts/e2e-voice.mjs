@@ -47,7 +47,6 @@ await newChild(page, "Maya", "Kindergarten");
 // Parent: turn it on and download the model.
 await page.goto(`${BASE}/parents/#/settings`);
 await enterPin(page, true);
-await page.getByText("Advanced options").click();
 const sw = page.getByRole("switch", { name: /Let them answer out loud/ });
 await sw.waitFor();
 await sw.click();

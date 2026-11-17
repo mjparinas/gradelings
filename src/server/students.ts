@@ -35,7 +35,7 @@ async function freshCodes(count: number): Promise<string[]> {
   while (codes.size < count) {
     const batchOf = Array.from({ length: count - codes.size }, newStudentCode).filter((c) => !codes.has(c));
     const taken = new Set(
-      (await query<{ login_code: string }>(`SELECT login_code FROM students WHERE login_code IN (${batchOf.map(() => "?").join(",")})`, batchOf)).map((r) => r.login_code),
+      (await query<{ login_code: string }>(`SELECT login_code FROM students WHERE length(login_code) = ${STUDENT_CODE_LENGTH} AND login_code IN (${batchOf.map(() => "?").join(",")})`, batchOf)).map((r) => r.login_code),
     );
     for (const c of batchOf) if (!taken.has(c)) codes.add(c);
   }
@@ -117,6 +117,7 @@ interface StudentRecord {
 function eraseStatements(s: StudentRecord) {
   return [
     { sql: "DELETE FROM events WHERE family_id = ?", args: [s.family_id] },
+    { sql: "DELETE FROM family_event_counts WHERE family_id = ?", args: [s.family_id] },
     { sql: "DELETE FROM child_settings WHERE family_id = ?", args: [s.family_id] },
     { sql: "DELETE FROM profiles WHERE family_id = ?", args: [s.family_id] },
     { sql: "DELETE FROM report_shares WHERE family_id = ?", args: [s.family_id] },
@@ -158,6 +159,7 @@ export async function deleteInactiveClass(classId: string, cutoff: number, warni
   const guarded = (table: string) => `DELETE FROM ${table} WHERE ${familyIds} AND ${predicate}`;
   await batch([
     { sql: guarded("events"), args: args([classId]) },
+    { sql: guarded("family_event_counts"), args: args([classId]) },
     { sql: guarded("child_settings"), args: args([classId]) },
     { sql: guarded("profiles"), args: args([classId]) },
     { sql: guarded("report_shares"), args: args([classId]) },
