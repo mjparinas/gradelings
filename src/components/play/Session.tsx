@@ -1,6 +1,7 @@
 "use client";
 
 import { questionLabel } from "@/lib/questionLabel";
+import { slipLabel } from "@/lib/slips";
 import { estimateReadingLevel, questionReadingLevel } from "@/lib/readingLevel";
 import { useFlag } from "@/lib/remoteFlags";
 import { ReportQuestion } from "./ReportQuestion";
@@ -201,6 +202,8 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
   // A unit's help video is also offered once, before its first question, the first time a child starts that unit.
   const videoIntroOn = videosOn && !!family && canUse(family, "videoHelp") && plan.retries && !resume;
   const introduced = useRef(new Set<string>());
+  /** What the child picked or typed on the first wrong try of this question (kept for the answer event, so a teacher can see common slips). */
+  const firstWrong = useRef<string | undefined>(undefined);
   const needsIntro = (it: Item | undefined) => {
     if (!videoIntroOn || !it || it.fact || introduced.current.has(it.unitKey)) return false;
     introduced.current.add(it.unitKey);
@@ -290,6 +293,7 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
         revealed,
         ...(hinted ? { hinted: true } : {}),
         ...(q && !q.visual && !item.fact ? { q: questionLabel(q.prompt) } : {}),
+        ...(firstWrong.current && !item.fact ? { w: firstWrong.current } : {}),
         ...(rl !== undefined ? { rl } : {}),
         ms: Date.now() - shownAt,
         mode: plan.mode,
@@ -348,6 +352,7 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
     setItem(nextItem);
     setShownAt(Date.now());
     setStatus("answering");
+    firstWrong.current = undefined;
     setMisses(0);
     setHinted(false);
     setHelpAsked(false);
@@ -376,7 +381,7 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
     if (settings?.autoRead || band === "little") speak(q.hint);
   }
 
-  function onAttempt(correct: boolean, el?: Element | null) {
+  function onAttempt(correct: boolean, el?: Element | null, answer?: string) {
     if (!item || answered) return;
     const fast = plan.feedback === "flash";
     if (correct) {
@@ -402,6 +407,7 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
     }
 
     const n = misses + 1;
+    if (!firstWrong.current && answer) firstWrong.current = slipLabel(answer);
     setMisses(n);
     setRun(0);
     if (fast) {

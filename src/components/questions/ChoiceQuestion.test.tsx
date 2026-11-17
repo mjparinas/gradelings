@@ -39,6 +39,13 @@ describe("ChoiceQuestion", () => {
     expect(onAttempt.mock.calls[0][0]).toBe(true);
   });
 
+  it("says what was picked, so a teacher can see a class's common slips", async () => {
+    const { onAttempt } = setup();
+    await userEvent.click(screen.getByRole("button", { name: "6" }));
+    expect(onAttempt.mock.calls[0][0]).toBe(false);
+    expect(onAttempt.mock.calls[0][2]).toBe("6");
+  });
+
   it("reports a wrong pick and disables that choice only", async () => {
     const { onAttempt } = setup();
     await userEvent.click(screen.getByRole("button", { name: "6" }));

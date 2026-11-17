@@ -10,6 +10,7 @@ import type { FrameworkId, GradeId } from "@/content/types";
 import { DateField } from "@/components/DateField";
 import { SelectMenu } from "@/components/SelectMenu";
 import { APP_NAME } from "@/lib/brand";
+import type { CommonSlip } from "@/lib/slips";
 import { addedMessage, agoText, call, checkNameList, dueChips, type ClassBadge, classInsights, HOMEWORK_GOALS, homeworkOverview, isHomeworkDone, isOneCode, isUsClass, showLoginCode, US_CLASS_CONSENT, type ClassInvite, type MissedQuestion, type ClassSummary, type RosterEntry, type StudentRow, type TeacherEntry } from "@/lib/classroom";
 import { frameworkGroups, frameworkMenu } from "@/lib/frameworkGroups";
 import { classSignInHref } from "@/lib/playLink";
@@ -476,6 +477,8 @@ export interface ClassDetail {
   audience?: Record<string, string[]>;
   /** Questions several students missed on the first try, by unit key (only for answers given since this was added). Older servers omit it. */
   missed?: Record<string, MissedQuestion[]>;
+  /** Wrong answers several students gave to the same question, by unit key. Only sent while the `common-slips` flag is on. */
+  slips?: Record<string, CommonSlip[]>;
   students: StudentRow[];
   roster: RosterEntry[];
   role?: "owner" | "co-teacher";
@@ -975,6 +978,27 @@ function Insights({ data, label }: { data: ClassDetail; label: (key: string) => 
             ))}
           </ul>
           <p className="mt-1 text-sm text-ink-soft">Shown when at least 2 students missed the same question. Questions are only listed for answers given from now on.</p>
+        </div>
+      )}
+      {Object.keys(data.slips ?? {}).length > 0 && (
+        <div className="mt-4">
+          <h3 className="font-bold">Common slips</h3>
+          <ul className="mt-1 font-read">
+            {Object.entries(data.slips ?? {}).map(([key, list]) => (
+              <li key={key} className="mt-1">
+                <b>{label(key)}</b>
+                <ul className="list-disc pl-6">
+                  {list.map((m) => (
+                    <li key={`${m.skill ?? ""}|${m.q}|${m.w}`}>
+                      {m.skill && <span className="text-ink-soft">{getUnitRef(key)?.unit.skills?.find((k) => k.id === m.skill)?.title ?? m.skill}: </span>}
+                      {m.q}: {m.students} students answered “{m.w}”
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-1 text-sm text-ink-soft">The same wrong answer, to the same question, from at least 2 students on their first try: a hint at what to reteach. Only answers given from now on are listed.</p>
         </div>
       )}
       <p className="mt-3 text-sm text-ink-soft">A student is flagged as finding a unit tricky after at least 4 questions with under 60% right on the first try. {say("This reflects practice, not a report-card mark.")}</p>

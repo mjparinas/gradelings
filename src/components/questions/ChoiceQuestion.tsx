@@ -67,7 +67,7 @@ export function ChoiceQuestion({ q, status, onAttempt }: QuestionProps<Q>) {
               onClick={(e) => {
                 setPicked(c.id);
                 if (!isRight) setWrong((w) => [...w, c.id]);
-                onAttempt(isRight, e.currentTarget);
+                onAttempt(isRight, e.currentTarget, c.label || c.emoji);
               }}
               style={status === "revealed" && isRight ? ({ "--c": "#4f8ef7", "--c-dark": "#2f6fd6" } as CSSProperties) : undefined}
               className={`btn w-full ${tone} ${isWrong ? "animate-shake opacity-60" : ""} ${

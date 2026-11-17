@@ -55,6 +55,7 @@ describe("InputQuestion", () => {
     await userEvent.click(screen.getByRole("button", { name: "9" }));
     await userEvent.click(screen.getByRole("button", { name: /check/i }));
     expect(onAttempt.mock.calls[0][0]).toBe(false);
+    expect(onAttempt.mock.calls[0][2]).toBe("9");
     expect(screen.getByLabelText("Your answer: empty")).toBeInTheDocument();
   });
 

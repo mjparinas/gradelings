@@ -37,6 +37,8 @@ export async function GET(req: Request) {
       assignedAt: await assignedAt(cls.id),
       students: progress.students,
       missed: progress.missed,
+      // Behind the `common-slips` flag; the answers themselves are recorded either way.
+      ...((await isFlagOn("common-slips", session.familyId)) ? { slips: progress.slips } : {}),
       roster: await classRoster(cls.id),
     });
   }

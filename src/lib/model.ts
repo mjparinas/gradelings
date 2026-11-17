@@ -143,6 +143,8 @@ export type AppEvent = EventBase &
         hinted?: boolean;
         /** A short version of the question's text (`questionLabel`), so a teacher can see which questions a class misses. Not set for questions that need a picture. */
         q?: string;
+        /** What the child picked or typed on a wrong first try (`slipLabel`), for choice and typed questions, so a teacher can see a class's common slips. */
+        w?: string;
         /** The reading level (grade scale) of the passage the question was about, for passage questions in English. */
         rl?: number;
         ms: number;
