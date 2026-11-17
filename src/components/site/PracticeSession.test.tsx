@@ -2,7 +2,8 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { TRIAL_DAYS } from "@/lib/plan";
-import { PracticeSession, SAMPLE_EVENT } from "./PracticeSession";
+import { PracticeSession } from "./PracticeSession";
+import { SAMPLE_EVENT } from "./sessionConfig";
 import { TryChoices } from "./TryChoices";
 
 vi.stubEnv("__NEXT_TRAILING_SLASH", "1");
@@ -42,5 +43,15 @@ describe("PracticeSession", () => {
     expect(screen.getByTestId("session-prompt")).toHaveTextContent("2 of 3 right on the first try");
     expect(track).toHaveBeenCalledTimes(1);
     expect(track).toHaveBeenCalledWith(SAMPLE_EVENT, { from: "/" });
+  });
+
+  it("never says 0 of 3 when nothing was right first time", () => {
+    setup();
+    for (const i of [0, 1, 2]) {
+      answer(i, "3");
+      answer(i, "5");
+    }
+    expect(screen.getByTestId("session-prompt")).toHaveTextContent("You've tried 3 questions. Good effort!");
+    expect(screen.getByTestId("session-prompt")).not.toHaveTextContent("0 of 3");
   });
 });

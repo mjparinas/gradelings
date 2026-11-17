@@ -4,14 +4,12 @@ import { track } from "@vercel/analytics";
 import { createContext, useCallback, useContext, useEffect, useRef, useState, type ReactNode } from "react";
 import { TRIAL_DAYS } from "@/lib/plan";
 import { AppLink } from "./AppLink";
+import { SAMPLE_EVENT, SESSION_THRESHOLD } from "./sessionConfig";
 
 // The sample questions on a unit's public page, played as a short run: a visitor answers a few with no sign-up,
 // then is asked to carry on in the app, with how they did. Counts live in this component only; nothing is stored
 // or sent about the child. The one analytics event carries no answers (see `SAMPLE_EVENT`).
 
-/** Questions answered before the invitation to carry on shows. */
-export const SESSION_THRESHOLD = 3;
-export const SAMPLE_EVENT = "Sample questions done";
 
 interface Session {
   report: (firstTry: boolean) => void;
@@ -53,7 +51,7 @@ export function PracticeSession({ children, play, playLabel, threshold = SESSION
         {ready && (
           <div className="card flex flex-col gap-3 border-2 border-good-dark p-5" data-testid="session-prompt">
             <p className="text-xl font-bold">
-              {right} of {done} right on the first try. Nicely done! 🎉
+              {right > 0 ? `${right} of ${done} right on the first try. Nicely done! 🎉` : `You've tried ${done} questions. Good effort! 🎉`}
             </p>
             <p className="font-read text-lg">Save your progress and keep going: new questions every time, with hints, read-aloud and rewards.</p>
             <AppLink href={play} className="btn btn-good min-h-12 self-start px-5 text-lg">
