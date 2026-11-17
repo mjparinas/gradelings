@@ -32,6 +32,7 @@ import { SettingsPage } from "./Settings";
 import { SubscriptionPage } from "./Subscription";
 import { UpgradeBanner } from "./UpgradeBanner";
 import { UsConsent } from "./UsConsent";
+import { WhatsNewLink, WhatsNewPage } from "./WhatsNew";
 import { ReportTabs } from "./common";
 import { FeedbackLink } from "@/components/FeedbackLink";
 import { MAIN_ID, SkipLink } from "@/components/SkipLink";
@@ -149,11 +150,10 @@ function Shell({ children, active, pending }: { children: ReactNode; active: str
       </main>
       <div className="print:hidden">
         <FeedbackLink audience="parent" signedIn={Boolean(family.account)} />
-        {videosOn && (
-          <p className="pb-6 text-center">
-            <a href="#/videos" className="text-sm font-semibold text-ink-soft underline">Training videos</a>
-          </p>
-        )}
+        <p className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 pb-6 text-center">
+          <WhatsNewLink />
+          {videosOn && <a href="#/videos" className="text-sm font-semibold text-ink-soft underline">Training videos</a>}
+        </p>
       </div>
     </div>
   );
@@ -199,6 +199,9 @@ const Section = memo(function Section({ hash, billing, onBilling }: { hash: stri
   switch (section) {
     case "videos":
       page = <TrainingLibrary heading="Training videos" intro="Short how-tos for the parent area, under a minute each. They play on their own the first time you open each part, and you can watch any of them again here." videos={PARENT_VIDEOS} />;
+      break;
+    case "whats-new":
+      page = <WhatsNewPage />;
       break;
     case "reports":
       page = <ReportsPage childId={path[1]} />;
