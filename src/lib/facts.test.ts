@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { withSeed } from "@/content/random";
 import { checkQuestion } from "@/content/fairness/question";
 import { GRADE_ORDER } from "@/content/subjects";
-import { FACT_SETS, factGrid, factKnown, factQuestion, factState, hasGrid, factSetsFor, factSummary, factsIn, factText, factWeight, getFactSet, parseFact, pickFact, type FactStat } from "./facts";
+import { FACT_SETS, factGrid, factKnown, factQuestion, factState, hasGrid, factSetsFor, factSummary, factsIn, factText, factWeight, getFactSet, factAutomatic, factDueAt, factQuick, nextBox, FACT_REVIEW_DAYS, parseFact, pickFact, type FactStat } from "./facts";
 
 const stat = (...recent: boolean[]): FactStat => ({ attempts: recent.length, recent, lastT: Date.now() });
 
@@ -166,5 +166,64 @@ describe("the facts chart", () => {
     expect(factState({ attempts: 2, recent: [false, true], lastT: 1 })).toBe("learning");
     expect(factState({ attempts: 2, recent: [true, false], lastT: 1 })).toBe("tricky");
     expect(factState({ attempts: 2, recent: [true, true], lastT: 1 })).toBe("known");
+  });
+});
+
+describe("quick recall and spaced review", () => {
+  const DAY = 86_400_000;
+  const now = Date.now();
+  const timed = (recent: boolean[], quick: boolean[], box: number, ago = 0): FactStat => ({ attempts: recent.length, recent, quick, box, lastT: now - ago });
+
+  it("counts an answer as quick only when right first time and within the pace for its operation", () => {
+    expect(factQuick("mul", true, 4000)).toBe(true);
+    expect(factQuick("mul", true, 7000)).toBe(false);
+    expect(factQuick("add", true, 5500)).toBe(false);
+    expect(factQuick("mul", false, 1000)).toBe(false);
+    // Walking away or a missing time says nothing about speed.
+    expect(factQuick("mul", true, 0)).toBe(false);
+    expect(factQuick("mul", true, 120_000)).toBe(false);
+  });
+
+  it("is automatic only when known and the last two right answers were both quick", () => {
+    expect(factAutomatic(timed([true, true], [true, true], 2))).toBe(true);
+    expect(factAutomatic(timed([true, true], [true, false], 2))).toBe(false);
+    expect(factAutomatic(timed([true, false], [true, false], 0))).toBe(false);
+    // Older stats have no timing: known, never automatic.
+    expect(factAutomatic(stat(true, true))).toBe(false);
+    expect(factState(timed([true, true], [true, true], 2))).toBe("automatic");
+    expect(factState(timed([true, true], [false, true], 2))).toBe("known");
+  });
+
+  it("moves up a box on a quick right answer, stays on a slow one and starts over on a miss", () => {
+    expect(nextBox(2, true, true)).toBe(3);
+    expect(nextBox(2, true, false)).toBe(2);
+    expect(nextBox(0, true, false)).toBe(1);
+    expect(nextBox(6, true, true)).toBe(FACT_REVIEW_DAYS.length - 1);
+    expect(nextBox(5, false, false)).toBe(0);
+  });
+
+  it("is due when its interval has passed", () => {
+    const s = timed([true, true], [true, true], 3, 0);
+    expect(factDueAt(s)).toBe(now + FACT_REVIEW_DAYS[3] * DAY);
+  });
+
+  it("asks automatic facts mostly when they come due, and right-but-slow facts until they are quick", () => {
+    const f = parseFact("mul:6:6")!;
+    const fresh = timed([true, true], [true, true], 3, DAY);
+    const overdue = timed([true, true], [true, true], 3, 10 * DAY);
+    const slow = timed([true, true], [false, false], 1, 2 * DAY);
+    const w = (s: FactStat) => factWeight(f, { [f.id]: s }, 1, now);
+    expect(w(overdue)).toBeGreaterThan(w(fresh));
+    expect(w(fresh)).toBeLessThan(0.5);
+    expect(w(slow)).toBeGreaterThan(w(overdue));
+    expect(w(timed([false], [false], 0))).toBeGreaterThan(w(slow));
+  });
+
+  it("counts quick facts in the summary", () => {
+    const set = getFactSet("mul")!;
+    const facts = { "mul:6:6": timed([true, true], [true, true], 2), "mul:7:7": timed([true, true], [false, true], 2) };
+    const sum = factSummary(set, facts);
+    expect(sum.known).toBe(2);
+    expect(sum.automatic).toBe(1);
   });
 });

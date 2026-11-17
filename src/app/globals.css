@@ -668,6 +668,9 @@ main[tabindex="-1"]:focus {
   .fact-cell[data-state="known"] {
     border: 3px solid Highlight;
   }
+  .fact-cell[data-state="automatic"] {
+    border: 5px double Highlight;
+  }
   .fact-cell[data-state="learning"] {
     border: 2px dashed CanvasText;
   }

@@ -122,7 +122,7 @@ export function FactChart({ id }: { id: string }) {
         </h1>
       </header>
       <p className="font-read text-xl">
-        <b>{summary.known}</b> of {summary.total} known. Each one you know shows its answer.
+        <b>{summary.known}</b> of {summary.total} known, <b>{summary.automatic}</b> of them quick. Each one you know shows its answer.
       </p>
       <table className="mx-auto w-full max-w-xl table-fixed border-separate border-spacing-0.5 text-center font-bold tabular-nums sm:border-spacing-1" data-testid="fact-chart">
         <caption className="sr-only">
@@ -161,6 +161,12 @@ export function FactChart({ id }: { id: string }) {
           Known
         </li>
         <li className="flex items-center gap-2">
+          <span className="fact-cell inline-flex h-7 w-7 items-center justify-center rounded-md border-2 border-good-dark bg-good text-sm font-bold text-ink" data-state="automatic" aria-hidden="true">
+            12
+          </span>
+          Quick
+        </li>
+        <li className="flex items-center gap-2">
           <span className="fact-cell inline-flex h-7 w-7 items-center justify-center rounded-md border-2 border-nudge bg-nudge-soft text-sm font-bold" data-state="learning" aria-hidden="true">
             •
           </span>
@@ -180,15 +186,16 @@ export function FactChart({ id }: { id: string }) {
 
 function ChartCell({ cell }: { cell: FactCell }) {
   if (!cell.fact) return <td aria-hidden="true" />;
-  const known = cell.state === "known";
+  const automatic = cell.state === "automatic";
+  const known = cell.state === "known" || automatic;
   const practising = cell.state === "learning" || cell.state === "tricky";
-  const style = known ? "border-good bg-good-soft" : practising ? "border-nudge bg-nudge-soft" : "border-line bg-white";
-  const label = `${factText(cell.fact)}: ${known ? `${cell.fact.answer}, known` : practising ? "practising" : "not tried yet"}`;
+  const style = automatic ? "border-good-dark bg-good text-ink" : known ? "border-good bg-good-soft" : practising ? "border-nudge bg-nudge-soft" : "border-line bg-white";
+  const label = `${factText(cell.fact)}: ${known ? `${cell.fact.answer}, ${automatic ? "known and quick" : "known"}` : practising ? "practising" : "not tried yet"}`;
   return (
     <td className="p-0">
       <span
         className={`fact-cell flex aspect-square items-center justify-center rounded-md border-2 text-[11px] leading-none sm:text-base ${style}`}
-        data-state={known ? "known" : practising ? "learning" : "new"}
+        data-state={automatic ? "automatic" : known ? "known" : practising ? "learning" : "new"}
         role="img"
         aria-label={label}
       >

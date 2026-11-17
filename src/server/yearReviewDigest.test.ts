@@ -206,7 +206,7 @@ describe("the weekly email for parents", () => {
     expect(mail.text).toContain("Homework: Maya has finished 0 of 1 unit from the teacher.");
     expect(mail.text).toContain("Tens & Ones: 10 of 20 questions, due this week.");
     // "3 + 4" is in both Grade 2 addition sets, and counts once as new.
-    expect(mail.text).toContain("Math facts: Maya knows 1 of 45 adding facts to 10 and 1 of 100 addition facts to 20 (1 new this week).");
+    expect(mail.text).toContain("Math facts: Maya knows 1 of 45 adding facts to 10 and 1 of 100 addition facts to 20 (1 new this week; 1 with quick recall).");
     expect(mail.text).toContain("Stories: Maya read 1 story in the Story Library.");
     expect(mail.text).toMatch(/Try at home: \S/);
   });

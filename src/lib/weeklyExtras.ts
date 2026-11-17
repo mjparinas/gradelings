@@ -1,5 +1,5 @@
 import type { AgeBand, GradeId, SubjectId } from "@/content/types";
-import { factKnown, factsIn, factSetsFor, factSummary, type FactStat } from "./facts";
+import { factAutomatic, factKnown, factsIn, factSetsFor, factSummary, type FactStat } from "./facts";
 
 // More for the weekly email (flag weekly-email-extras): math facts known, stories read and one idea to try at
 // home. Totals only, like the rest of the email: no child's answers, just counts and unit-free ideas.
@@ -20,7 +20,9 @@ export function factsWeekLine(name: string, grade: GradeId, now: Record<string, 
   // Sets share fact ids ("3 + 4" is in Adding to 10 and Addition facts), so new facts are counted once.
   const ids = new Set(sets.flatMap((s) => factsIn(s.set.id).map((f) => f.id)));
   const learned = [...ids].filter((id) => factKnown(now[id]) && !factKnown(weekAgo[id])).length;
-  return `  Math facts: ${name} knows ${list}${learned ? ` (${learned} new this week)` : ""}.`;
+  const quick = [...ids].filter((id) => factAutomatic(now[id])).length;
+  const notes = [learned ? `${learned} new this week` : "", quick ? `${quick} with quick recall` : ""].filter(Boolean);
+  return `  Math facts: ${name} knows ${list}${notes.length ? ` (${notes.join("; ")})` : ""}.`;
 }
 
 /** Stories finished in the last 7 days, re-reads included. */
