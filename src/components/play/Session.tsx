@@ -1,6 +1,6 @@
 "use client";
 
-import { questionLabel } from "@/lib/questionLabel";
+import { answerLabel, questionLabel } from "@/lib/questionLabel";
 import { estimateReadingLevel, questionReadingLevel } from "@/lib/readingLevel";
 import { useFlag } from "@/lib/remoteFlags";
 import { ReportQuestion } from "./ReportQuestion";
@@ -11,7 +11,7 @@ import { LessonBody } from "./LessonScreen";
 import { Suspense, useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { HelpVideoPlayer } from "./lazyScreens";
 import { helpVideoFor } from "@/lib/videoHelp";
-import { workedSolution } from "@/lib/workedSolution";
+import { answerText, workedSolution } from "@/lib/workedSolution";
 import { WorkedSolution } from "./WorkedSolution";
 import { getUnitRef } from "@/content";
 import type { Question } from "@/content/types";
@@ -172,6 +172,11 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
   const log = useStore((s) => s.log);
   const family = useStore((s) => s.family);
   const videosOn = useFlag("video-help");
+  // Keep the right answer and the first wrong one with a missed question, for the parent and teacher problem views.
+  const problemsOn = useFlag("recent-problems");
+  const slipsOn = useFlag("common-slips");
+  const detailsOn = problemsOn || slipsOn;
+  const firstWrong = useRef<string | undefined>(undefined);
   const workedOn = useFlag("worked-solutions");
   const logSoon = useStore((s) => s.logSoon);
   const startDerived = useMemo(() => derivedFor(useStore.getState(), profile.id), [profile.id]);
@@ -290,6 +295,7 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
         revealed,
         ...(hinted ? { hinted: true } : {}),
         ...(q && !q.visual && !item.fact ? { q: questionLabel(q.prompt) } : {}),
+        ...(detailsOn && q && !q.visual && !item.fact && !correct ? detailFields(q, firstWrong.current) : {}),
         ...(rl !== undefined ? { rl } : {}),
         ms: Date.now() - shownAt,
         mode: plan.mode,
@@ -349,6 +355,7 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
     setShownAt(Date.now());
     setStatus("answering");
     setMisses(0);
+    firstWrong.current = undefined;
     setHinted(false);
     setHelpAsked(false);
     setShowLesson(false);
@@ -376,7 +383,7 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
     if (settings?.autoRead || band === "little") speak(q.hint);
   }
 
-  function onAttempt(correct: boolean, el?: Element | null) {
+  function onAttempt(correct: boolean, el?: Element | null, given?: string) {
     if (!item || answered) return;
     const fast = plan.feedback === "flash";
     if (correct) {
@@ -401,6 +408,7 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
       return;
     }
 
+    if (firstWrong.current === undefined && given) firstWrong.current = given;
     const n = misses + 1;
     setMisses(n);
     setRun(0);
@@ -912,4 +920,11 @@ function Summary({ plan, results, startDerived }: { plan: Plan; results: Result[
       </div>
     </Page>
   );
+}
+
+/** The right answer and the child's first wrong answer, for the plain choice and typed questions that have them. */
+function detailFields(q: Question, given: string | undefined): { a?: string; g?: string } {
+  const a = answerLabel(answerText(q));
+  const g = answerLabel(given);
+  return { ...(a ? { a } : {}), ...(g ? { g } : {}) };
 }

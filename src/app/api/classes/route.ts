@@ -23,6 +23,9 @@ export async function GET(req: Request) {
     if (!found) return error(404, "Class not found");
     const { cls, role } = found;
     const progress = await classProgressAndMisses(cls.id);
+    // The common wrong answers show only while flag `common-slips` is on.
+    const slipsOn = await isFlagOn("common-slips", session.familyId);
+    const missed = slipsOn ? progress.missed : Object.fromEntries(Object.entries(progress.missed).map(([k, list]) => [k, list.map((m) => ({ q: m.q, missed: m.missed, tried: m.tried }))]));
     return json({
       class: { id: cls.id, name: cls.name, grade: cls.grade, grade2: cls.grade2, framework: cls.framework, joinCode: cls.join_code },
       role,
@@ -36,7 +39,7 @@ export async function GET(req: Request) {
       audience: await assignmentAudience(cls.id),
       assignedAt: await assignedAt(cls.id),
       students: progress.students,
-      missed: progress.missed,
+      missed,
       roster: await classRoster(cls.id),
     });
   }

@@ -143,6 +143,10 @@ export type AppEvent = EventBase &
         hinted?: boolean;
         /** A short version of the question's text (`questionLabel`), so a teacher can see which questions a class misses. Not set for questions that need a picture. */
         q?: string;
+        /** The question's right answer as text, for plain choice and typed questions (`answerLabel`; flag `recent-problems`). Lets a parent see the answer to a question that was missed. */
+        a?: string;
+        /** What the child answered on a first-try miss (`answerLabel`), so a parent sees the slip and a teacher the common one. Never free text: always one of the question's own choices or a typed number. */
+        g?: string;
         /** The reading level (grade scale) of the passage the question was about, for passage questions in English. */
         rl?: number;
         ms: number;

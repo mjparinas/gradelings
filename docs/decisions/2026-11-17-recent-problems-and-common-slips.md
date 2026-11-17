@@ -1,0 +1,8 @@
+# Recent problems for parents and common slips for teachers (Melvin, November 17, 2026)
+
+Melvin asked for a "recent problems" view for parents and "common slip" for teachers, an idea from a Nobl Kids comparison.
+
+- **Parent view** (`src/lib/recentProblems.ts`, `RecentProblems.tsx` on each child's Overview card, after "asked for help"; flag `recent-problems`, off by default): the questions the child missed on the first try in the last 14 days, grouped by question, still-tricky ones first, with what they answered, the right answer and "got it right since" when they did. "Show me how" opens the step-by-step board (flag `worked-solutions`) for plain arithmetic, only when the stored right answer matches the working. A hint opened early is not a miss. Practice, not a report-card mark; a quiet week shows nothing.
+- **Teacher view** (flag `common-slips`, off by default): under each most-missed question, "Common slip: 3 students answered 75; the answer is 85", shown only when at least 2 students gave the same wrong answer. The server strips it while the flag is off.
+- **New stored data, disclosed on `/privacy/`:** answer events now carry `a` (the right answer) and `g` (the first wrong answer) for plain choice and typed questions, up to 30 characters, never free text (a choice's own label or a typed number). Both are kept only while one of the two flags is on, and only on a miss. Answers before this have neither: the parent list then shows the question alone, and teachers get counts as before. `docs/school/` describes "practice results", which still covers this; keep it true if more is added.
+- Not changed: scoring, levels, reports, exports (events already export whole), the admin panel (it never reads answers).

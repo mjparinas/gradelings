@@ -56,7 +56,7 @@ export default async function PrivacyPage() {
         </p>
         <ul>
           <li>A first name or nickname, grade, an avatar and, if you choose, a birth year (used only to suggest a grade).</li>
-          <li>Practice activity: which questions were answered, whether they were right, when, and how long a lesson took. From this we work out progress, levels, trophies and your reports.</li>
+          <li>Practice activity: which questions were answered, whether they were right, when, and for tap and typed questions a missed one’s right answer and what was answered instead (only when your family’s account has this switched on), and how long a lesson took. From this we work out progress, levels, trophies and your reports.</li>
           <li>Settings you choose, such as daily goal, timers, game time, sound, read-aloud, reading font and colour, a focus unit and calm options, and the name you give a reward (type only what you would say to your own child).</li>
           <li>A note when your child taps “Ask a grown-up to help”: which unit and when. It shows only on your Overview and is deleted with the child.</li>
         </ul>

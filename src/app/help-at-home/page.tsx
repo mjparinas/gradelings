@@ -4,6 +4,7 @@ import { breadcrumbJsonLd, itemListJsonLd } from "@/components/site/jsonld";
 import { activitiesPath } from "@/components/site/activitiesData";
 import { HELP_GRADES, gradeName, helpAtHomePath } from "@/components/site/helpAtHome";
 import { learnPath } from "@/components/site/learn";
+import { readyPath } from "@/components/site/readiness";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { APP_NAME } from "@/lib/brand";
 import { JsonLd } from "@/lib/site";
@@ -38,7 +39,7 @@ export default function HelpAtHomeHub() {
         ))}
       </ul>
       <p className="mt-8 font-read text-lg">
-        Want something to print? Try the <Link href={activitiesPath.hub()} className="font-bold underline">free printable activities</Link>: practice calendars, math games, a reading log and conversation cards. Or read together: <Link href={learnPath.hub()} className="font-bold underline">fun facts and short reading</Link> for kids.
+        Want something to print? Try the <Link href={activitiesPath.hub()} className="font-bold underline">free printable activities</Link>: practice calendars, math games, a reading log and conversation cards. Wondering about the next grade? Take a free <Link href={readyPath.hub()} className="font-bold underline">math readiness check</Link>. Or read together: <Link href={learnPath.hub()} className="font-bold underline">fun facts and short reading</Link> for kids.
       </p>
     </SitePage>
   );
