@@ -335,12 +335,12 @@ describe("daily email job", () => {
     const unconfirmed = await family("trial-unconfirmed@example.com", { verified: false });
     await dbm.run("UPDATE families SET trial_ends_at = ? WHERE id IN (?, ?)", [Date.now() + 2 * 86_400_000, soon.familyId, unconfirmed.familyId]);
     await run();
-    const notices = email.outbox().filter((m) => m.subject.includes("free trial ends"));
+    const notices = email.outbox().filter((m) => /free trial ends|did on/.test(m.subject));
     expect(notices.map((m) => m.to)).toContain("trial-soon@example.com");
     expect(notices.map((m) => m.to)).not.toContain("trial-unconfirmed@example.com");
     const n = notices.length;
     await run();
-    expect(email.outbox().filter((m) => m.subject.includes("free trial ends")).length).toBe(n);
+    expect(email.outbox().filter((m) => /free trial ends|did on/.test(m.subject)).length).toBe(n);
   });
 
   it("sends a trial recap once, about a week before the trial ends, only when a child has practised", async () => {
@@ -365,11 +365,11 @@ describe("daily email job", () => {
     // Closer to the end, the final notice repeats the recap.
     await dbm.run("UPDATE families SET trial_ends_at = ? WHERE id = ?", [Date.now() + 2 * 86_400_000, practised.familyId]);
     await run();
-    const last = email.outbox().filter((m) => m.to === "recap-yes@example.com" && m.subject.includes("free trial ends")).at(-1)!;
+    const last = email.outbox().filter((m) => m.to === "recap-yes@example.com" && m.subject.includes("did on")).at(-1)!;
     expect(last.text).toContain("Here's what the trial has done");
     expect(last.text).toContain("Maya");
-    expect(last.text).toContain("Keep everything open: ");
-    expect(last.text).toContain("/parents/#/subscription");
+    expect(last.text).toContain("See plans and prices: ");
+    expect(last.text).toContain("/pricing/");
   });
 
   it("warns after 11 months and deletes an inactive class after 12 months", async () => {
