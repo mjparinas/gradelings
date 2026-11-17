@@ -24,6 +24,32 @@ export const NEWS_KIND_LABEL: Record<NewsItem["kind"], string> = {
 
 export const WHATS_NEW: NewsDay[] = [
   {
+    day: "2026-11-16",
+    headline: "Simpler parent settings, take-home slips for teachers, and a friendlier weekly email",
+    items: [
+      {
+        kind: "new",
+        title: "Parent settings are simpler",
+        body: "Each child's Settings now shows just the main choices: Subjects, Read aloud, Easier reading, Calm mode, Arcade games and Sounds. The finer options sit under \"More reading options\" and \"Customize calm mode\", and the extra tools on the Overview (weekly goal, focus unit, goal plan and reward) are tucked under \"Ways to help (optional)\". Anything you set before keeps working.",
+      },
+      {
+        kind: "new",
+        title: "A warmer weekly email",
+        body: "The weekly progress email now opens with a friendly line about how many days your child practised, and, for a family with one child, its subject line names them.",
+      },
+      {
+        kind: "teachers",
+        title: "Send home is easier to use",
+        body: "The Send home note now has a share button, a friendlier message, and printable take-home slips you can cut up and send with students.",
+      },
+      {
+        kind: "new",
+        title: "More practice questions",
+        body: "The First Farmers unit in social studies has 28 more questions, so it stays fresh for longer.",
+      },
+    ],
+  },
+  {
     day: "2026-11-13",
     headline: "Gradelings is now an app on Google Play",
     items: [
