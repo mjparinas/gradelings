@@ -95,7 +95,7 @@ describe("curriculum unit page", () => {
     const f = getFramework("ca-pe");
     const unit = coursesFor(f, "1").find((c) => c.subject === "math")!.units[0];
     const meta = await generateMetadata(props("prince-edward-island", "grade-1", "math", unit.id));
-    expect(meta.title).toBe(`${unit.title}: Grade 1 Math practice (PEI)`);
+    expect(meta.title).toBe(`${unit.title}: free Grade 1 Math practice (PEI)`);
     expect(meta.alternates?.canonical).toBe(curriculumPath.unit(f, "1", "math", unit.id));
     expect(meta.description).toContain(unit.parentNote);
     expect(meta.description).toMatch(/^Free .+ practice with answers, matched to the .+\. Try the questions now, no sign-up\./);

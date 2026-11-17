@@ -25,6 +25,7 @@ import { RewardGoal } from "./RewardGoal";
 import { SchoolYearCards } from "./SchoolYear";
 import { YearReviewCard } from "./YearReview";
 import { ShareGradelings } from "./ShareGradelings";
+import { WhatsNewCard } from "./WhatsNew";
 import { TogetherPanel } from "./TogetherPanel";
 import { Avatar, NoChildren, PageTitle, Panel } from "./common";
 
@@ -156,6 +157,7 @@ export function Overview() {
           <YearReviewCard />
           <TogetherPanel />
           <ShareGradelings />
+          <WhatsNewCard />
           <FeedbackCard />
         <div className="grid gap-5 lg:grid-cols-2">
           {profiles.map((p) => (
