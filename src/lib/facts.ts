@@ -37,6 +37,29 @@ export interface FactStat {
   /** First-try results (no hint), most recent last, up to 4. */
   recent: boolean[];
   lastT: number;
+  /** Whether each of `recent` was also quick (a first-try right answer within the pace for its operation). Same length as `recent`. */
+  quick?: boolean[];
+  /** Review box, 0 to 6: moves up on a quick right answer, stays on a slow right one, back to 0 on a miss. Sets when the fact is next due. */
+  box?: number;
+}
+
+const DAY = 86_400_000;
+/** The pace for a quick answer, in ms, from the card showing to the answer typed. Typing on the keypad takes a second or two of it. */
+export const FACT_PACE_MS: Record<FactOp, number> = { add: 5000, sub: 6000, mul: 6000, div: 7000 };
+/** Days until a fact in each review box comes due again. */
+export const FACT_REVIEW_DAYS: readonly number[] = [0, 1, 2, 4, 8, 16, 32];
+/** An answer slower than this probably means the child walked away, so it says nothing about speed. */
+const FACT_IDLE_MS = 60_000;
+
+/** Right the first time, within the pace. A time of 0 or one past a minute (the child stepped away) is never quick. */
+export function factQuick(op: FactOp, correct: boolean, ms: number): boolean {
+  return correct && ms > 0 && ms <= FACT_PACE_MS[op] && ms < FACT_IDLE_MS;
+}
+
+/** The review box after one more try: a miss starts over, a quick right answer climbs, a slow right one stays put (at least box 1). */
+export function nextBox(box: number, correct: boolean, quick: boolean): number {
+  if (!correct) return 0;
+  return quick ? Math.min(FACT_REVIEW_DAYS.length - 1, box + 1) : Math.max(1, box);
 }
 
 /** Questions in one round, or half that with short sessions. */
@@ -223,10 +246,23 @@ export function factKnown(s: FactStat | undefined): boolean {
   return !!s && s.recent.length >= 2 && s.recent[s.recent.length - 1] && s.recent[s.recent.length - 2];
 }
 
+/** Automatic: known, and the last two right answers were both quick. Without timing (older stats) a fact is never automatic. */
+export function factAutomatic(s: FactStat | undefined): boolean {
+  if (!factKnown(s) || !s?.quick) return false;
+  return s.quick[s.quick.length - 1] === true && s.quick[s.quick.length - 2] === true;
+}
+
+/** When the fact is next due for review. */
+export function factDueAt(s: FactStat): number {
+  return s.lastT + (FACT_REVIEW_DAYS[s.box ?? 0] ?? 0) * DAY;
+}
+
 export interface FactSetSummary {
   set: FactSet;
   total: number;
   known: number;
+  /** Known and answered quickly: recall rather than counting. */
+  automatic: number;
   /** Facts tried at least once. */
   tried: number;
   /** Facts missed on the latest try, most recently missed first (up to 5). */
@@ -239,7 +275,14 @@ export function factSummary(set: FactSet, facts: Record<string, FactStat>): Fact
     .filter((f) => facts[f.id] && facts[f.id].recent[facts[f.id].recent.length - 1] === false)
     .sort((x, y) => facts[y.id].lastT - facts[x.id].lastT)
     .slice(0, 5);
-  return { set, total: list.length, known: list.filter((f) => factKnown(facts[f.id])).length, tried: list.filter((f) => facts[f.id]).length, tricky };
+  return {
+    set,
+    total: list.length,
+    known: list.filter((f) => factKnown(facts[f.id])).length,
+    automatic: list.filter((f) => factAutomatic(facts[f.id])).length,
+    tried: list.filter((f) => facts[f.id]).length,
+    tricky,
+  };
 }
 
 /**
@@ -249,7 +292,13 @@ export function factSummary(set: FactSet, facts: Record<string, FactStat>): Fact
 export function factWeight(f: Fact, facts: Record<string, FactStat>, learning: number, now: number): number {
   const s = facts[f.id];
   if (!s) return learning >= WORKING_SET ? 0.5 : 3;
-  if (factKnown(s)) return now - s.lastT >= 3 * 86_400_000 ? 1.5 : 0.4;
+  if (factKnown(s)) {
+    // Stats from before answers were timed: the old rule.
+    if (!s.quick) return now - s.lastT >= 3 * DAY ? 1.5 : 0.4;
+    const due = now >= factDueAt(s);
+    // Right but slow: keep it coming until it is quick. Automatic: back just as it comes due.
+    return factAutomatic(s) ? (due ? 2 : 0.15) : due ? 3 : 0.6;
+  }
   return s.recent[s.recent.length - 1] === false ? 6 : 4;
 }
 
@@ -270,10 +319,11 @@ export function pickFact(set: FactSetId, facts: Record<string, FactStat>, recent
 }
 
 /** Where a child is with one fact: known, missed last time, being learned, or not tried yet. */
-export type FactState = "known" | "tricky" | "learning" | "new";
+export type FactState = "automatic" | "known" | "tricky" | "learning" | "new";
 
 export function factState(s: FactStat | undefined): FactState {
   if (!s) return "new";
+  if (factAutomatic(s)) return "automatic";
   if (factKnown(s)) return "known";
   return s.recent[s.recent.length - 1] === false ? "tricky" : "learning";
 }

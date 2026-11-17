@@ -306,7 +306,7 @@ describe("derive: math facts", () => {
 
   it("tracks each fact on its own, keeping the last four first-try results", () => {
     const d = derive([fact("mul:7:8", false, T0), fact("mul:7:8", true, T0 + 1), fact("mul:7:8", true, T0 + 2), fact("mul:6:9", true, T0 + 3), fact("mul:7:8", true, T0 + 4), fact("mul:7:8", true, T0 + 5)]);
-    expect(d.facts["mul:7:8"]).toEqual({ attempts: 5, recent: [true, true, true, true], lastT: T0 + 5 });
+    expect(d.facts["mul:7:8"]).toEqual({ attempts: 5, recent: [true, true, true, true], quick: [true, true, true, true], box: 4, lastT: T0 + 5 });
     expect(d.facts["mul:6:9"].attempts).toBe(1);
   });
 

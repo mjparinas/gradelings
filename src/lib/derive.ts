@@ -1,6 +1,6 @@
 import { parseUnitKey } from "@/content";
 import type { SubjectId } from "@/content/types";
-import type { FactStat } from "./facts";
+import { factQuick, nextBox, parseFact, type FactStat } from "./facts";
 import { dayKey, type AppEvent, type Mode } from "./model";
 import { unitLevel } from "./proficiency";
 import { READING_SAMPLES_KEPT, type ReadingSample } from "./readingLevel";
@@ -199,10 +199,17 @@ export function derive(events: AppEvent[], now = Date.now()): Derived {
     switch (e.type) {
       case "answer": {
         if (e.fact) {
-          const f = (d.facts[e.fact] ??= { attempts: 0, recent: [], lastT: 0 });
+          const f = (d.facts[e.fact] ??= { attempts: 0, recent: [], quick: [], box: 0, lastT: 0 });
+          const op = parseFact(e.fact)?.op ?? "mul";
+          const quick = factQuick(op, e.correct, e.ms);
           f.attempts++;
           f.recent.push(e.correct);
-          if (f.recent.length > 4) f.recent.shift();
+          f.quick!.push(quick);
+          if (f.recent.length > 4) {
+            f.recent.shift();
+            f.quick!.shift();
+          }
+          f.box = nextBox(f.box ?? 0, e.correct, quick);
           f.lastT = e.t;
         }
         // A fact isn't a unit: it has no level, lesson list entry or report-card row.
