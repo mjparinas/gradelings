@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { gradeSlug } from "@/content/subjects";
-import { allWorksheetPaths, allWorksheetSkills, resolveSkill, sheetQuestions, subjectPages, subjectSlug, worksheetGrades, worksheetPath, worksheetSkills, worksheetSubjects, type WorksheetSkill } from "./worksheets";
+import { allSkillSheets, allWorksheetPaths, allWorksheetSkills, resolveSkill, sheetPath, sheetQuestions, skillSheetsOf, subjectPages, subjectSlug, worksheetGrades, worksheetPath, worksheetSkills, worksheetSubjects, type WorksheetSkill } from "./worksheets";
 
 const addressOf = (s: WorksheetSkill) => worksheetPath.skill(s.grade, s.unit.id, s.subject).split("/").filter(Boolean).slice(1);
 
@@ -75,5 +75,44 @@ describe("skill worksheets", () => {
     }
     const counts = allWorksheetSkills().filter((s) => s.grade !== "pk").map((s) => sheetQuestions(s).length);
     expect(counts.filter((n) => n === 10).length).toBeGreaterThan(counts.length / 2);
+  });
+});
+
+describe("skill sheets (Grade 3 math pilot)", () => {
+  it("make a sheet for each skill with enough printable questions, at /worksheets/{grade}/{unit}/{skill}/", () => {
+    const sheets = allSkillSheets();
+    expect(sheets.length).toBeGreaterThanOrEqual(15);
+    for (const s of sheets) {
+      expect(s.grade).toBe("3");
+      expect(s.subject).toBe("math");
+      expect(sheetPath(s)).toBe(`/worksheets/grade-3/${s.skillOf!.id}/${s.unit.id}/`);
+      expect(sheetQuestions(s).length, sheetPath(s)).toBeGreaterThanOrEqual(8);
+    }
+  });
+
+  it("has one address and one title per sheet, none matching a unit's", () => {
+    const paths = [...allWorksheetSkills().map((s) => worksheetPath.skill(s.grade, s.unit.id, s.subject)), ...allSkillSheets().map(sheetPath)];
+    expect(new Set(paths).size).toBe(paths.length);
+    const grade3 = [...allWorksheetSkills().filter((s) => s.grade === "3"), ...allSkillSheets()].map((s) => s.unit.title);
+    expect(new Set(grade3).size).toBe(grade3.length);
+  });
+
+  it("resolve from their address and are in the sitemap, and a wrong skill is a 404", () => {
+    const s = allSkillSheets()[0];
+    expect(resolveSkill({ grade: "grade-3", skill: s.skillOf!.id, unit: s.unit.id })).toMatchObject({ unit: { id: s.unit.id }, skillOf: { id: s.skillOf!.id } });
+    expect(resolveSkill({ grade: "grade-3", skill: s.skillOf!.id, unit: "no-such-skill" })).toBeUndefined();
+    expect(resolveSkill({ grade: "grade-3", skill: "no-such-unit", unit: s.unit.id })).toBeUndefined();
+    expect(resolveSkill({ grade: "pre-k", skill: s.skillOf!.id, unit: s.unit.id })).toBeUndefined();
+    const paths = allWorksheetPaths().map((p) => p.path);
+    for (const k of allSkillSheets()) expect(paths).toContain(sheetPath(k));
+  });
+
+  it("draw their questions from the skill alone, and are seeded apart from the unit's sheet", () => {
+    const k = allSkillSheets().find((x) => x.unit.id === "subtract-3-digit")!;
+    const unitSheet = worksheetSkills("3").find((x) => x.unit.id === "add-subtract-1000")!;
+    const skillPrompts = sheetQuestions(k).map((q) => q.prompt);
+    expect(skillPrompts).not.toEqual(sheetQuestions(unitSheet).map((q) => q.prompt));
+    expect(skillSheetsOf(unitSheet).map((x) => x.unit.id)).toContain("subtract-3-digit");
+    expect(skillSheetsOf(k)).toEqual([]);
   });
 });

@@ -8,6 +8,7 @@ import type {
   InputQuestion,
   Question,
   ShapeName,
+  Skill,
   Visual,
 } from "../../types";
 
@@ -3435,11 +3436,93 @@ function money(opts?: GenerateOptions): Question[] {
   ]);
 }
 
+
+// =====================================================================
+// Skills: narrower practice inside a unit (answers still count toward the unit)
+// =====================================================================
+
+/** A skill made from a few question makers, cycled to a full set of 8 (repeats are re-rolled by `buildSet`). */
+function skill(id: string, title: string, blurb: string, makers: (d: Level) => Maker[]): Skill {
+  return {
+    id,
+    title,
+    blurb,
+    generate: (opts) => {
+      const list = makers(levelOf(opts));
+      // Cycle the makers, keeping only questions not asked yet, until there are 8 (or the makers run dry).
+      const out: Question[] = [];
+      const seen = new Set<string>();
+      for (let i = 0; out.length < 8 && i < 80; i++) {
+        const q = list[i % list.length]();
+        if (seen.has(questionKey(q))) continue;
+        seen.add(questionKey(q));
+        out.push(q);
+      }
+      return shuffle(out);
+    },
+  };
+}
+
+const SKILLS: Record<string, Skill[]> = {
+  "numbers-to-1000": [
+    skill("place-value", "Hundreds, tens and ones", "What each digit is worth", (d) => [() => buildHundreds(d), () => readBlocks(d), () => digitWorth(d), () => expandedForm(d)]),
+    skill("compare-order", "Comparing and ordering", "Which is more? Put them in order", (d) => [() => compareSign(d), () => orderNumbers(d)]),
+    skill("number-line-more-less", "Number lines and 10 more", "Find a number on a line", (d) => [() => numberLineSpot(d), () => moreOrLess(d)]),
+  ],
+  "facts-to-20": [
+    skill("adding-facts", "Adding facts to 20", "Quick sums", (d) => [() => addFact(d, false), () => addFact(d, true), () => nearDouble(d), () => thinkAddition(d)]),
+    skill("subtracting-facts", "Subtracting facts to 20", "Quick take-aways", (d) => [() => subFact(d, false), () => subFact(d, true), missingPart]),
+    skill("fact-families", "Fact families and stories", "Numbers that belong together", (d) => [() => factFamily(d), () => factStory(d), makeTenSplit]),
+  ],
+  "add-subtract-1000": [
+    skill("add-3-digit", "Adding to 1000", "Adding big numbers", (d) => [() => addQ3(d, false), () => addQ3(d, true), () => addStory3(d)]),
+    skill("subtract-3-digit", "Subtracting to 1000", "Taking away big numbers", (d) => [() => subQ3(d, false), () => subQ3(d, true), () => subStory3(d)]),
+    skill("estimate-and-jump", "Estimating and number-line jumps", "About how many?", (d) => [() => estimateQ(d), () => numberLineJump(d), friendlyAdd]),
+  ],
+  multiplication: [
+    skill("arrays", "Arrays", "Rows and columns", (d) => [() => arrayCount(d, d !== 1), () => arrayMatch(d), () => arrayCount(d, false)]),
+    skill("equal-groups", "Equal groups", "Same-sized groups", (d) => [() => groupsStory(d), () => repeatedAdd(d), () => hopLine(d)]),
+    skill("times-facts", "Times facts", "Multiplying with facts", (d) => [() => multEq(d, false), () => multEq(d, true), () => turnAround(d), timesSpecial]),
+  ],
+  division: [
+    skill("sharing-and-grouping", "Sharing and grouping", "Fair shares", (d) => [() => shareStory(d), () => groupStory(d), () => arrayDivide(d)]),
+    skill("division-facts", "Division facts", "Dividing with facts", (d) => [() => divEq(d, false), () => divEq(d, true), () => relatedFact(d), () => missingFactor(d)]),
+  ],
+  fractions: [
+    skill("name-fractions", "Naming fractions", "Parts of a whole", (d) => [() => shadedChoice(d), () => shadedInput(d), () => shadeIt(d), () => partsMeaning(d), () => wholeParts(d)]),
+    skill("compare-fractions", "Comparing fractions", "Which is bigger?", (d) => [() => compareUnit(d), () => compareSame(d)]),
+    skill("fractions-of-sets", "Fractions of sets and on a line", "Part of a group", (d) => [() => fractionOfSet(d), () => foodStory(d, true), lineFraction, markFraction]),
+  ],
+  "patterns-and-equations": [
+    skill("patterns", "Patterns", "What comes next?", (d) => [() => nextTerm(d), () => missingTerm(d), () => ruleWords(d), patternKind, towersNext]),
+    skill("rules-and-tables", "Pattern rules and tables", "Find the rule", (d) => [() => tableRule(d), useRule]),
+    skill("unknowns", "Missing numbers in equations", "What number fits?", (d) => [() => unknownAdd(d), () => unknownFirst(d), () => unknownSub(d, false), () => storyMatch(d), balance]),
+  ],
+  measuring: [
+    skill("rulers", "Measuring with a ruler", "Read the ruler", (d) => [() => rulerQ(d, true), () => rulerQ(d, false)]),
+    skill("units-and-estimating", "Choosing units and estimating", "Which unit fits?", (d) => [() => chooseUnit("length"), () => chooseUnit("mass"), () => chooseUnit("capacity"), estimateMeasure, () => convertUnits(d)]),
+    skill("compare-and-perimeter", "Comparing measures and perimeter", "Longer, heavier, all the way around", (d) => [() => compareMeasure(d), () => measureStory(d), perimeter]),
+  ],
+  time: [
+    skill("read-clock", "Reading clocks", "What time is it?", (d) => [() => readClock(d), () => minutesPast(d)]),
+    skill("elapsed-time", "How long it takes", "Start, end and in between", (d) => [() => endTime(d), howLong, howLongMinutes, timeLater]),
+    skill("calendar-and-units", "Calendars and units of time", "Days, weeks and months", (d) => [() => calendar(d), bestTimeUnit, () => timeFact(d)]),
+  ],
+  "3d-objects": [
+    skill("name-solids", "Naming 3-D objects", "Cubes, cones and more", (d) => [() => nameSolid(d), realSolid, rollStack]),
+    skill("faces-edges-vertices", "Faces, edges and vertices", "Count the parts", (d) => [() => countFaces(d), countEdges, () => countVertices(d), faceShape, buildFromFaces]),
+  ],
+  "graphs-and-chance": [
+    skill("graphs", "Pictographs and bar graphs", "Read the graph", (d) => [() => pictoCount(false), () => pictoCount(true), () => barRead(d), () => barCompare(d), () => mostLeast(d), () => manyToOne(d)]),
+    skill("chance", "Chance", "Likely or unlikely?", (d) => [() => spinnerQ(d), () => dieEvent(d), () => marbleBag(d)]),
+  ],
+};
+
 // =====================================================================
 // Course
 // =====================================================================
 
-export const course: Course = {
+const base: Course = {
   grade: "3",
   subject: "math",
   bigIdeas: {
@@ -3581,3 +3664,5 @@ export const course: Course = {
     },
   ],
 };
+
+export const course: Course = { ...base, units: base.units.map((u) => (SKILLS[u.id] ? { ...u, skills: SKILLS[u.id] } : u)) };

@@ -112,7 +112,7 @@ interface Result {
   correct: boolean;
 }
 
-export function Session({ mode, scope, resume = false }: { mode: Mode; scope: string; resume?: boolean }) {
+export function Session({ mode, scope, skill, resume = false }: { mode: Mode; scope: string; skill?: string; resume?: boolean }) {
   const profile = useActiveProfile()!;
   const settings = useChildSettings();
   const band = useBand();
@@ -127,6 +127,7 @@ export function Session({ mode, scope, resume = false }: { mode: Mode; scope: st
     makePlan({
       mode,
       scope,
+      skill,
       grade: profile.grade,
       framework: profile.framework,
       subjectGrades,
@@ -236,7 +237,7 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
   }, [done, checkpoint]);
 
   // Keep this lesson's place on the device after each answer, so it can be finished later if the app closes.
-  const keepPlace = resumeOn && isResumable(plan.mode) && plan.total !== undefined;
+  const keepPlace = resumeOn && isResumable(plan.mode) && plan.total !== undefined && !plan.skill;
   useEffect(() => {
     if (!keepPlace || done || results.length === 0) return;
     if (results.length >= plan.total!) return clearUnfinished(profile.id);
@@ -288,6 +289,7 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
         mode: plan.mode,
         difficulty: item.difficulty,
         ...(item.fact ? { fact: item.fact } : {}),
+        ...(item.skill ? { skill: item.skill } : {}),
       },
     ]);
     setResults((r) => [...r, { correct }]);
@@ -884,7 +886,7 @@ function Summary({ plan, results, startDerived }: { plan: Plan; results: Result[
         )}
 
         <div className="mt-2 flex w-full flex-col gap-3 sm:flex-row">
-          <button type="button" className="btn btn-soft min-h-16 flex-1 text-xl" onClick={() => go("/session", { mode: plan.mode, scope: plan.scope, r: Date.now() }, true)}>
+          <button type="button" className="btn btn-soft min-h-16 flex-1 text-xl" onClick={() => go("/session", { mode: plan.mode, scope: plan.scope, ...(plan.skill ? { skill: plan.skill } : {}), r: Date.now() }, true)}>
             ↻ Play again
           </button>
           <button type="button" className="btn btn-good min-h-16 flex-1 text-xl" onClick={() => go(unit ? `/practice/${unit.course.subject}` : factSet ? "/facts" : "/")}>

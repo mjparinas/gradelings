@@ -4,7 +4,7 @@ import { SampleQuestion, answerText } from "@/components/site/SampleQuestion";
 import { ShareButton } from "@/components/site/ShareButton";
 import { articleJsonLd, breadcrumbJsonLd, typicalAgeRange } from "@/components/site/jsonld";
 import { Crumbs, SitePage, SubscribeActions } from "@/components/site/SiteChrome";
-import { sheetQuestions, sourceFramework, subjectAbout, subjectWord, worksheetGradeLabel, worksheetPath, worksheetSkills, type WorksheetSkill } from "@/components/site/worksheets";
+import { sheetPath, sheetQuestions, skillSheetsOf, sourceFramework, subjectAbout, subjectWord, worksheetGradeLabel, worksheetPath, worksheetSkills, type WorksheetSkill } from "@/components/site/worksheets";
 import { unitUpdated } from "@/content/updated";
 import { APP_NAME } from "@/lib/brand";
 import { playHref } from "@/lib/playLink";
@@ -15,15 +15,26 @@ const capital = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
 /** One printable worksheet with its answer key: a skill in any subject, shared by both worksheet routes. */
 export function WorksheetSheet({ s }: { s: WorksheetSkill }) {
-  const { grade, unit, subject } = s;
+  const { grade, unit, subject, skillOf } = s;
   const word = subjectWord(subject);
   const label = worksheetGradeLabel(grade);
   const items = sheetQuestions(s);
-    const path = worksheetPath.skill(grade, unit.id, subject);
-  const updated = unitUpdated(sourceFramework().id, grade, subject, unit.id);
-  const play = playHref({ framework: sourceFramework().id, grade, subject, unit: unit.id });
-  const others = worksheetSkills(grade, subject).filter((o) => o.unit.id !== unit.id);
-  const crumbs = [{ label: "Home", href: "/" }, { label: "Worksheets", href: worksheetPath.hub() }, { label, href: worksheetPath.grade(grade) }, ...(subject === "math" && grade !== "pk" ? [] : [{ label: capital(word), href: worksheetPath.subject(grade, subject) }]), { label: unit.title }];
+  const path = sheetPath(s);
+  const parent = skillOf ?? unit;
+  const updated = unitUpdated(sourceFramework().id, grade, subject, parent.id);
+  const play = playHref({ framework: sourceFramework().id, grade, subject, unit: parent.id });
+  // A skill's sheet lists its unit's other skills; a unit's sheet lists the other units and, below, its own skills.
+  const bySkill = skillOf ? skillSheetsOf({ ...s, unit: skillOf, skillOf: undefined }).filter((o) => o.unit.id !== unit.id) : [];
+  const others = skillOf ? [] : worksheetSkills(grade, subject).filter((o) => o.unit.id !== unit.id);
+  const ownSkills = skillOf ? [] : skillSheetsOf(s);
+  const crumbs = [
+    { label: "Home", href: "/" },
+    { label: "Worksheets", href: worksheetPath.hub() },
+    { label, href: worksheetPath.grade(grade) },
+    ...(subject === "math" && grade !== "pk" ? [] : [{ label: capital(word), href: worksheetPath.subject(grade, subject) }]),
+    ...(skillOf ? [{ label: skillOf.title, href: worksheetPath.skill(grade, skillOf.id, subject) }] : []),
+    { label: unit.title },
+  ];
   return (
     <SitePage lead="trial" play={play}>
       <JsonLd
@@ -114,6 +125,45 @@ export function WorksheetSheet({ s }: { s: WorksheetSkill }) {
         </div>
         <SubscribeActions lead="trial" size="md" play={play} />
       </section>
+
+      {ownSkills.length > 0 && (
+        <section aria-labelledby="by-skill" className="mt-10 print:hidden">
+          <h2 id="by-skill" className="text-2xl font-bold">
+            Worksheets by skill
+          </h2>
+          <ul className="mt-3 flex flex-wrap gap-2">
+            {ownSkills.map((o) => (
+              <li key={o.unit.id}>
+                <Link href={sheetPath(o)} className="inline-flex min-h-11 items-center rounded-xl border-2 border-line bg-white px-3 py-1.5 font-read text-lg hover:border-[#4f8ef7]">
+                  {o.unit.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {skillOf && (
+        <section aria-labelledby="same-unit" className="mt-10 print:hidden">
+          <h2 id="same-unit" className="text-2xl font-bold">
+            More from {skillOf.title}
+          </h2>
+          <ul className="mt-3 flex flex-wrap gap-2">
+            <li>
+              <Link href={worksheetPath.skill(grade, skillOf.id, subject)} className="inline-flex min-h-11 items-center rounded-xl border-2 border-line bg-white px-3 py-1.5 font-read text-lg hover:border-[#4f8ef7]">
+                All of {skillOf.title}
+              </Link>
+            </li>
+            {bySkill.map((o) => (
+              <li key={o.unit.id}>
+                <Link href={sheetPath(o)} className="inline-flex min-h-11 items-center rounded-xl border-2 border-line bg-white px-3 py-1.5 font-read text-lg hover:border-[#4f8ef7]">
+                  {o.unit.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       {others.length > 0 && (
         <section aria-labelledby="more" className="mt-10 print:hidden">

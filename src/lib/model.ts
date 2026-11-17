@@ -150,6 +150,8 @@ export type AppEvent = EventBase &
         difficulty?: number;
         /** A math fact ("mul:7:8", see `facts.ts`), for answers in Math Facts. Tracked per fact, not as a unit. */
         fact?: string;
+        /** The skill id, when the child practised one skill inside the unit (`Unit.skills`). The answer still counts for the unit. */
+        skill?: string;
       }
     | {
         type: "session";

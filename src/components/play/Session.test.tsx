@@ -261,6 +261,27 @@ describe("Session answer flow", () => {
   });
 });
 
+describe("practising one skill", () => {
+  it("tags each answer with the skill, still logged under the unit, and doesn't keep a place to finish later", async () => {
+    h.plan = makePlan({
+      total: 4,
+      skill: "take-away",
+      next: ({ index }) => ({ question: question(index + 1), unitKey: "math-1:u1", difficulty: 2, skill: "take-away" }),
+    });
+    start();
+    await click("Yes");
+    expect(answers()).toHaveLength(1);
+    expect(answers()[0]).toMatchObject({ unit: "math-1:u1", skill: "take-away" });
+    expect(localStorage.getItem("gradelings.resume.p1")).toBeNull();
+  });
+
+  it("leaves skill off answers in an ordinary lesson", async () => {
+    start();
+    await click("Yes");
+    expect(answers()[0]).not.toHaveProperty("skill");
+  });
+});
+
 describe("finishing a lesson later", () => {
   const saved = () => JSON.parse(localStorage.getItem("gradelings.resume.p1") ?? "null");
 

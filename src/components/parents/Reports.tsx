@@ -2,7 +2,7 @@
 
 import { GrowthPanel } from "./GrowthPanel";
 import { Milestones } from "./Milestones";
-import { useMemo, useState } from "react";
+import { Fragment, useMemo, useState } from "react";
 import { getFramework } from "@/content/frameworks";
 import { getSubjectMeta, SUBJECTS } from "@/content/subjects";
 import { gradeLabel } from "@/lib/gradeLabel";
@@ -217,7 +217,8 @@ export function ReportsPage({ childId }: { childId?: string }) {
                     {units.map((u) => {
                       const level = scheme.levels[u.level];
                       return (
-                        <tr key={u.ref.key} className="border-t border-line/60 align-top">
+                        <Fragment key={u.ref.key}>
+                        <tr className="border-t border-line/60 align-top">
                           <td className="py-1.5 pr-3 font-semibold">
                             {u.ref.unit.emoji} {u.ref.unit.title}
                             {u.ref.course.grade !== child.grade && <span className="ml-1 text-xs font-normal text-ink-soft">({gradeLabel(u.ref.course.grade, child.framework)})</span>}
@@ -227,6 +228,20 @@ export function ReportsPage({ childId }: { childId?: string }) {
                           <td className="py-1.5 pr-3 tabular-nums">{u.attempts ? pct(u.accuracy) : "–"}</td>
                           <td className="py-1.5 whitespace-nowrap text-ink-soft">{u.lastT ? new Date(u.lastT).toLocaleDateString("en-CA", { month: "short", day: "numeric" }) : "–"}</td>
                         </tr>
+                        {u.skills.length > 0 && (
+                          <tr>
+                            <td colSpan={5} className="pb-1.5 pl-5 text-xs text-ink-soft">
+                              Skills practised on their own:{" "}
+                              {u.skills.map((sk, i) => (
+                                <span key={sk.id}>
+                                  {i > 0 && "; "}
+                                  {sk.title} ({sk.firstTry} of {sk.attempts} right on the first try)
+                                </span>
+                              ))}
+                            </td>
+                          </tr>
+                        )}
+                        </Fragment>
                       );
                     })}
                   </tbody>

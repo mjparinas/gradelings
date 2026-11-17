@@ -173,3 +173,23 @@ describe("buildReport", () => {
     expect(buildReport([], d, "2", "ca-bc", 7, NOW).trophies).toEqual([{ id: "later", t: START + DAY }, { id: "first", t: START }]);
   });
 });
+
+describe("buildReport: skills", () => {
+  beforeAll(() => loadGrade("3"));
+
+  it("lists the skills practised on their own under the unit, and leaves the unit's own numbers alone", () => {
+    const key = "3/math/add-subtract-1000";
+    const events = [
+      ...Array.from({ length: 6 }, (_, i) => answer(key, i < 5, at(10, 6, 9) + i * 60_000, { skill: "add-3-digit" })),
+      answer(key, true, at(10, 7, 9), { skill: "nope-not-a-skill" }),
+      answer(key, true, at(10, 8, 9)),
+    ];
+    const r = buildReport(events, derive(events, NOW), "3", "ca-bc", 7, NOW);
+    const row = r.units.find((u) => u.ref.key === key)!;
+    expect(row.attempts).toBe(8);
+    expect(row.skills).toEqual([{ id: "add-3-digit", title: "Adding to 1000", attempts: 6, firstTry: 5 }]);
+    // A unit with skills nobody practised, and a unit with none, list nothing.
+    expect(r.units.find((u) => u.ref.key === "3/math/multiplication")!.skills).toEqual([]);
+    expect(r.units.find((u) => u.ref.key === "3/math/money")!.skills).toEqual([]);
+  });
+});

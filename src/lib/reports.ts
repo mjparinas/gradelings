@@ -39,6 +39,8 @@ export interface UnitRow {
   attempts: number;
   accuracy: number;
   lastT: number;
+  /** Skills in the unit the child has practised on their own, with first-try counts (never a level: the unit's level is the report-card row). */
+  skills: { id: string; title: string; attempts: number; firstTry: number }[];
 }
 
 export interface Report {
@@ -137,7 +139,11 @@ export function buildReport(events: AppEvent[], derived: Derived, grade: GradeId
   // A subject set to another grade lists that grade's units, plus any of the child's own grade's units already started.
   const units: UnitRow[] = reportUnitRefs(grade, framework, derived.units, subjectGrades).map((ref) => {
     const s = derived.units[ref.key];
-    return { ref, level: unitLevel(s), attempts: s?.attempts ?? 0, accuracy: s ? recentAccuracy(s) : 0, lastT: s?.lastT ?? 0 };
+    const skills = (ref.unit.skills ?? []).flatMap((sk) => {
+      const n = derived.skills[`${ref.key}/${sk.id}`];
+      return n ? [{ id: sk.id, title: sk.title, attempts: n.attempts, firstTry: n.firstTry }] : [];
+    });
+    return { ref, level: unitLevel(s), attempts: s?.attempts ?? 0, accuracy: s ? recentAccuracy(s) : 0, lastT: s?.lastT ?? 0, skills };
   });
   const started = units.filter((u) => u.attempts > 0);
 
