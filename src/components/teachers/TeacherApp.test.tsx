@@ -158,6 +158,31 @@ describe("TeacherApp", () => {
     expect(await screen.findByText("Students (1)")).toBeInTheDocument();
   });
 
+  it("sets up a first class in one go: pasted names are added and the class opens ready to print", async () => {
+    const base = mocks.call.getMockImplementation()!;
+    mocks.call.mockImplementation((url: string, method = "GET") => {
+      if (url === "/api/classes/" && method === "GET") return Promise.resolve({ classes: [] });
+      return base(url, method);
+    });
+    const user = userEvent.setup();
+    render(<TeacherApp />);
+    expect(await screen.findByRole("form", { name: "Set up your class" })).toBeInTheDocument();
+    await user.type(screen.getByLabelText("Class name"), "Room 3");
+    await user.type(screen.getByLabelText(/Students’ first names/), "Maya{Enter}Sam");
+    await user.click(screen.getByRole("button", { name: "Create class" }));
+    await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/classes/students/", "POST", { classId: "class-1", names: ["Maya", "Sam"] }));
+    expect(await screen.findByRole("region", { name: "Your class is ready" })).toBeInTheDocument();
+    expect(window.location.hash).toContain("/class/class-1/students");
+    expect(within(screen.getByRole("region", { name: "Your class is ready" })).getByRole("button", { name: "Print login cards" })).toBeInTheDocument();
+  });
+
+  it("doesn't offer the names box once a teacher already has a class", async () => {
+    render(<TeacherApp />);
+    await screen.findByRole("button", { name: /^Room 3/ });
+    expect(screen.queryByLabelText(/Students’ first names/)).not.toBeInTheDocument();
+    expect(screen.queryByRole("form", { name: "Set up your class" })).not.toBeInTheDocument();
+  });
+
   it("creates a split class with a second grade next to the first", async () => {
     const user = userEvent.setup();
     render(<TeacherApp />);

@@ -163,9 +163,11 @@ function ClassBadges({ badge, students, now }: { badge?: ClassBadge; students: n
   );
 }
 
-function ClassList({ onOpen, account }: { onOpen: (id: string) => void; account: { email?: string; verified?: boolean } }) {
+function ClassList({ onOpen, account }: { onOpen: (id: string, welcome?: boolean) => void; account: { email?: string; verified?: boolean } }) {
   const [classes, setClasses] = useState<ClassSummary[] | null>(null);
   const [name, setName] = useState("");
+  // A new teacher can paste the class list here, so the first visit ends with login codes in hand.
+  const [firstNames, setFirstNames] = useState("");
   const [grade, setGrade] = useState<GradeId>("3");
   const [grade2, setGrade2] = useState("");
   const [framework, setFramework] = useState<FrameworkId>("ca-bc");
@@ -249,7 +251,11 @@ function ClassList({ onOpen, account }: { onOpen: (id: string) => void; account:
       const { class: c } = await call<{ class: ClassSummary }>("/api/classes/", "POST", { name, grade, ...(grade2 ? { grade2 } : {}), framework });
       setGrade2("");
       setName("");
-      onOpen(c.id);
+      // The first class is the moment a teacher either gets students practising or never comes back: add the pasted names now.
+      const typed = checkNameList(firstNames).names;
+      if (first && typed.length) await call("/api/classes/students/", "POST", { classId: c.id, names: typed }).catch(() => undefined);
+      setFirstNames("");
+      onOpen(c.id, first);
     } catch (x) {
       setErr((x as Error).message);
     }
@@ -261,6 +267,9 @@ function ClassList({ onOpen, account }: { onOpen: (id: string) => void; account:
     if (sort === "recent") return (badges[b.id]?.lastPractice ?? -1) - (badges[a.id]?.lastPractice ?? -1);
     return 0;
   });
+  // No class yet (and nothing to accept): one short form that ends with students and a class code, not an empty list.
+  const first = classes?.length === 0 && invites.length === 0;
+  const typedFirst = checkNameList(firstNames);
   const hiddenNow = sorted.filter((c) => hidden.includes(c.id));
   const visible = sorted.filter((c) => showHidden || !hidden.includes(c.id));
 
@@ -269,7 +278,12 @@ function ClassList({ onOpen, account }: { onOpen: (id: string) => void; account:
       <h1 className="text-3xl font-bold">Your classes</h1>
       <FirstUseVideo video={videoById(TEACHER_VIDEOS, "teacher-class-setup")} enabled={isOn("training-videos")} />
       {account.verified === false && <ConfirmEmail email={account.email} />}
-      {classes?.length === 0 && <p className="mt-2 font-read text-ink-soft">No classes yet. Create one below, then give families the class code.</p>}
+      {first && (
+        <p className="mt-2 font-read text-ink-soft">
+          Set up your class in about a minute: name it, pick the grade, and paste your students’ first names if you have them. You’ll get a code for each student, ready to print, and a note you can send home.
+        </p>
+      )}
+      {classes?.length === 0 && !first && <p className="mt-2 font-read text-ink-soft">No classes yet. Create one below, then give families the class code.</p>}
       {invites.length > 0 && (
         <section className="mt-4 rounded-2xl border border-line bg-white p-4" aria-label="Invitations to co-teach">
           <h2 className="text-xl font-bold">Invitations to co-teach</h2>
@@ -338,7 +352,7 @@ function ClassList({ onOpen, account }: { onOpen: (id: string) => void; account:
         {notice}
       </p>
       <RosterConnect />
-      <form onSubmit={create} className="mt-6 flex flex-wrap items-end gap-3 rounded-2xl border border-line bg-white p-4">
+      <form onSubmit={create} aria-label={first ? "Set up your class" : undefined} className="mt-6 flex flex-wrap items-end gap-3 rounded-2xl border border-line bg-white p-4">
         <label className="flex flex-col text-sm font-semibold">
           Class name
           <input className="mt-1 min-h-11 rounded-xl border border-line px-3" value={name} maxLength={60} onChange={(e) => setName(e.target.value)} required />
@@ -359,6 +373,20 @@ function ClassList({ onOpen, account }: { onOpen: (id: string) => void; account:
           }}
           {...frameworkMenu((f) => f.region)}
         />
+        {first && (
+          <label className="flex w-full flex-col text-sm font-semibold">
+            Students’ first names (optional), one per line
+            <textarea className="mt-1 min-h-24 rounded-xl border border-line px-3 py-2 font-read" value={firstNames} onChange={(e) => setFirstNames(e.target.value)} placeholder={"Maya\nSam\nAlex P."} maxLength={1200} aria-describedby={typedFirst.warnings.length ? "first-name-warnings" : undefined} />
+            <span className="mt-1 font-normal text-ink-soft">Each student signs in with their own code. No email or password, and you can add or change students later.</span>
+          </label>
+        )}
+        {first && typedFirst.warnings.length > 0 && (
+          <ul id="first-name-warnings" className="w-full font-read text-sm text-nudge-dark">
+            {typedFirst.warnings.map((w) => (
+              <li key={w}>{w}</li>
+            ))}
+          </ul>
+        )}
         <button disabled={account.verified === false} className={`${btn} bg-[#25b47e] text-[#0f172a] disabled:opacity-50`}>Create class</button>
         {isUsClass(getFramework(framework)) && <p className="w-full font-read text-sm text-ink-soft">{US_CLASS_CONSENT}</p>}
       </form>
@@ -955,6 +983,42 @@ function Insights({ data, label }: { data: ClassDetail; label: (key: string) => 
 }
 
 /** Words a teacher can paste into a newsletter, a message or an email. */
+/** The end of a new teacher's setup: the code, the students' cards, a note for families and the next step, all in one place. */
+function Ready({ data, onPrintCards, onPrintSlips }: { data: ClassDetail; onPrintCards: () => void; onPrintSlips: () => void }) {
+  const { class: cls, roster } = data;
+  const people = roster.length;
+  return (
+    <section className="mt-4 rounded-2xl border-2 border-[#25b47e] bg-white p-5 print:hidden" aria-label="Your class is ready">
+      <h2 className="text-xl font-bold">🎉 {cls.name} is ready</h2>
+      <ol className="mt-2 list-decimal space-y-2 pl-6 font-read">
+        <li>
+          {people > 0 ? (
+            <>
+              Hand out the login cards. Each of your {people} {people === 1 ? "student" : "students"} signs in at {APP_NAME} with their own code.
+              <span className="mt-1 flex flex-wrap gap-3">
+                <button type="button" className={`${btn} bg-[#25b47e] text-[#0f172a]`} onClick={onPrintCards}>Print login cards</button>
+              </span>
+            </>
+          ) : (
+            <>Add your students’ first names below to get their login cards, or send families the class code <b className="font-mono tracking-widest">{cls.joinCode}</b>.</>
+          )}
+        </li>
+        <li>
+          Families can link their own child with the class code <b className="font-mono tracking-widest">{cls.joinCode}</b>.
+          <span className="mt-1 flex flex-wrap gap-3">
+            <button type="button" className={`${btn} border border-line`} onClick={onPrintSlips}>Print take-home slips</button>
+            <a className={`${btn} inline-flex items-center border border-line`} href="#send-home" onClick={(e) => { e.preventDefault(); document.getElementById("send-home")?.scrollIntoView(); }}>Copy a note for Google Classroom or email</a>
+          </span>
+        </li>
+        <li>
+          Pick a unit to practise, so students have something to start today.{" "}
+          <a href={classHref(cls.id, "homework")} className="font-semibold underline">Open Homework</a>
+        </li>
+      </ol>
+    </section>
+  );
+}
+
 function SendHome({ cls, onPrintSlips }: { cls: ClassDetail["class"]; onPrintSlips: () => void }) {
   const [copied, setCopied] = useState(false);
   const [shared, setShared] = useState(false);
@@ -973,7 +1037,7 @@ function SendHome({ cls, onPrintSlips }: { cls: ClassDetail["class"]; onPrintSli
   );
   const canShare = typeof navigator !== "undefined" && typeof navigator.share === "function";
   return (
-    <section className="mt-4 rounded-2xl border border-line bg-white p-5 print:hidden">
+    <section id="send-home" className="mt-4 rounded-2xl border border-line bg-white p-5 print:hidden">
       <h2 className="text-xl font-bold">Send home</h2>
       <p className="mt-1 font-read text-ink-soft">A ready-made note for families who will link their own child with the class code. Students you add with login codes above don’t need it. Nothing is sent for you.</p>
       <textarea readOnly className="mt-3 min-h-40 w-full rounded-xl border border-line px-3 py-2 font-read" value={text} aria-label="Note to families" onFocus={(e) => e.currentTarget.select()} />
@@ -1277,7 +1341,7 @@ function Notice({ text, onDone }: { text: string; onDone: () => void }) {
   );
 }
 
-function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; preselect?: string[]; onBack: () => void }) {
+function ClassPage({ id, tab, preselect, welcome, onBack }: { id: string; tab: ClassTab; preselect?: string[]; welcome?: boolean; onBack: () => void }) {
   const [data, setData] = useState<ClassDetail | null>(null);
   const [ready, setReady] = useState(false);
   const [pick, setPick] = useState("");
@@ -1706,6 +1770,20 @@ function ClassPage({ id, tab, preselect, onBack }: { id: string; tab: ClassTab; 
               </>
             )}
           </section>
+          {welcome && (
+            <Ready
+              data={data}
+              onPrintCards={() => {
+                setPrintOnly(undefined);
+                setPrintLarge(false);
+                setPrintMode("cards");
+              }}
+              onPrintSlips={() => {
+                setPrintOnly(undefined);
+                setPrintMode("slips");
+              }}
+            />
+          )}
           <Roster
             data={data}
             onChange={change}
@@ -1928,9 +2006,9 @@ export function TeacherApp() {
         ) : importId ? (
           <RosterReview key={importId} id={importId} onBack={() => go("/")} onOpenClass={(id) => go(`/class/${encodeURIComponent(id)}/students`)} />
         ) : classId ? (
-          <ClassPage key={classId} id={classId} tab={tab} preselect={query.get("students")?.split(",").filter(Boolean)} onBack={() => go("/")} />
+          <ClassPage key={classId} id={classId} tab={tab} welcome={query.get("welcome") === "1"} preselect={query.get("students")?.split(",").filter(Boolean)} onBack={() => go("/")} />
         ) : (
-          <ClassList account={account} onOpen={(id) => go(`/class/${encodeURIComponent(id)}`)} />
+          <ClassList account={account} onOpen={(id, welcome) => go(welcome ? `/class/${encodeURIComponent(id)}/students?welcome=1` : `/class/${encodeURIComponent(id)}`)} />
         )}
       </main>
       {signedIn && <FeedbackLink audience="teacher" signedIn />}
