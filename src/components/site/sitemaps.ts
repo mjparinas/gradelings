@@ -6,6 +6,7 @@ import { LEGAL_UPDATED } from "@/lib/brand";
 import { absolute } from "@/lib/site";
 import { allCurriculumPaths, type SitemapPath } from "./curriculum";
 import { MATH_FACTS_PAGES, mathFactsPath } from "./mathFacts";
+import { READY_GRADES, readyPath } from "./readiness";
 import { spanishCourses, spanishPath } from "./spanishPages";
 import { allActivitiesPaths } from "./activities";
 import { allHelpAtHomePaths } from "./helpAtHome";
@@ -39,6 +40,8 @@ function otherPages(): SitemapPath[] {
     ...WHATS_NEW.map((d) => ({ path: `/whats-new/${d.day}/`, updated: d.day })),
     { path: mathFactsPath.hub() },
     ...MATH_FACTS_PAGES.map((p) => ({ path: mathFactsPath.set(p) })),
+    { path: readyPath.hub() },
+    ...READY_GRADES.map((g) => ({ path: readyPath.grade(g) })),
     { path: spanishPath.hub() },
     ...spanishCourses().flatMap((c) => [{ path: spanishPath.grade(c.grade) }, ...c.units.map((u) => ({ path: spanishPath.unit(c.grade, u.id) }))]),
     ...allHelpAtHomePaths(),
