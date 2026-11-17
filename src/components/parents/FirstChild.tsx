@@ -2,10 +2,11 @@
 
 import { useState } from "react";
 import { AVAILABLE_GRADES } from "@/content";
-import { getFramework } from "@/content/frameworks";
+import { FRAMEWORKS, getFramework } from "@/content/frameworks";
 import type { FrameworkId, GradeId } from "@/content/types";
 import { frameworkMenu } from "@/lib/frameworkGroups";
 import { gradeLabel } from "@/lib/gradeLabel";
+import { readRegionHint } from "@/lib/regionHint";
 import { useStore } from "@/lib/store";
 import { AVATAR_COLOURS } from "../play/Start";
 import { SelectMenu } from "../SelectMenu";
@@ -23,8 +24,16 @@ export const FIRST_QUESTION_HREF = "/play/#/session?mode=adventure&scope=mix";
 export function FirstChild({ onSkip }: { onSkip: () => void }) {
   const addProfile = useStore((s) => s.addProfile);
   const [name, setName] = useState("");
-  const [grade, setGrade] = useState<GradeId>("2");
-  const [framework, setFramework] = useState<FrameworkId>("ca-bc");
+  // The province or state (and grade) of the last region page this device read, when there was one.
+  const [hint] = useState(() => {
+    const h = readRegionHint();
+    const f = h && FRAMEWORKS.find((x) => x.id === h.framework);
+    if (!f) return null;
+    const grade = f.grades.find((g) => g === h.grade) ?? (f.grades.includes("2") ? "2" : f.grades[0]);
+    return { framework: f.id as FrameworkId, grade: grade as GradeId };
+  });
+  const [grade, setGrade] = useState<GradeId>(hint?.grade ?? "2");
+  const [framework, setFramework] = useState<FrameworkId>(hint?.framework ?? "ca-bc");
   const [saving, setSaving] = useState(false);
   const chosen = getFramework(framework);
 

@@ -26,7 +26,10 @@ beforeEach(() => {
   Object.defineProperty(window, "location", { configurable: true, value: { ...window.location, assign } });
   useStore.setState({ profiles: [], settings: {}, activeId: null, events: [] });
 });
-afterEach(() => vi.useRealTimers());
+afterEach(() => {
+  vi.useRealTimers();
+  localStorage.clear();
+});
 
 describe("FirstChild", () => {
   it("needs a name, then adds the child, makes them the active player and opens their first question", async () => {
@@ -44,6 +47,18 @@ describe("FirstChild", () => {
     });
     expect(assign).toHaveBeenCalledWith(FIRST_QUESTION_HREF);
     expect(FIRST_QUESTION_HREF).toBe("/play/#/session?mode=adventure&scope=mix");
+  });
+
+  it("starts on the province and grade of the last region page the device read, and falls back to BC and Grade 2", async () => {
+    localStorage.setItem("gradelings.region", JSON.stringify({ framework: "ca-on", grade: "4" }));
+    const { unmount } = render(<FirstChild onSkip={() => {}} />);
+    expect(screen.getByRole("combobox", { name: "Province or state" })).toHaveTextContent("Ontario");
+    expect(screen.getByRole("combobox", { name: "Grade" })).toHaveTextContent("4");
+    unmount();
+    localStorage.setItem("gradelings.region", JSON.stringify({ framework: "nowhere" }));
+    render(<FirstChild onSkip={() => {}} />);
+    expect(screen.getByRole("combobox", { name: "Province or state" })).toHaveTextContent("British Columbia");
+    expect(screen.getByRole("combobox", { name: "Grade" })).toHaveTextContent("2");
   });
 
   it("lets a parent put it off", async () => {

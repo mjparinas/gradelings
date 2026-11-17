@@ -8,7 +8,7 @@ import { MAIN_ID, SkipLink } from "@/components/SkipLink";
 import { HeaderSignIn } from "./HeaderSignIn";
 import { NavLink } from "./NavLink";
 import { PromoBanner } from "./PromoBanner";
-import { RefCapture } from "./ShareButton";
+import { RefCapture, RegionCapture } from "./ShareButton";
 import { countryBrief } from "./provinces";
 import { AppLink } from "./AppLink";
 import { AppBadges } from "./AppBadges";
@@ -271,6 +271,7 @@ export function SitePage({
   return (
     <>
       <RefCapture />
+      <RegionCapture play={play} />
       {/* First, so it is the first thing a keyboard reaches; outside the header, whose blur would anchor it. */}
       <SkipLink />
       <PromoBanner />

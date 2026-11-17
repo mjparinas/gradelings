@@ -1,5 +1,6 @@
 "use client";
 
+import { rememberRegionFromPlayLink } from "@/lib/regionHint";
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { myInviteCode, saveReferralCode, shareLink } from "@/lib/referral";
 import { shareOrCopy } from "@/lib/share";
@@ -55,6 +56,12 @@ export function PinLink({ path, media, description }: { path: string; media: str
 }
 
 /** Opening any public page from a shared link remembers the invite code for sign-up, like /account/invite/. */
+/** Remembers the page's province or state for the first-child step (`src/lib/regionHint.ts`). Renders nothing. */
+export function RegionCapture({ play }: { play?: string }) {
+  useEffect(() => rememberRegionFromPlayLink(play), [play]);
+  return null;
+}
+
 export function RefCapture() {
   useEffect(() => {
     const ref = new URLSearchParams(window.location.search).get("ref");
