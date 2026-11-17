@@ -369,7 +369,7 @@ function build(prompt: string): WorkedSolution | null {
 }
 
 /** The text of a question's right answer, when it has one a number can be compared with. */
-function answerText(q: Question): string | null {
+export function answerText(q: Question): string | null {
   if (q.kind === "input") return q.answer;
   if (q.kind === "choice") return q.choices.find((c) => c.id === q.answer)?.label ?? null;
   return null;

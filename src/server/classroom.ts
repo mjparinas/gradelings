@@ -6,7 +6,7 @@ import type { FrameworkId, GradeId } from "@/content/types";
 import { unitLevel } from "@/lib/proficiency";
 import { GRADE_ORDER } from "@/content/subjects";
 import { batch, query, run } from "./db";
-import { homeworkDone, mostMissed, studentQuestions, type MissedQuestion } from "@/lib/classroom";
+import { homeworkDone, mostMissed, studentQuestions, studentSlips, type MissedQuestion, type StudentSlips } from "@/lib/classroom";
 import { loadChildData } from "./reportData";
 
 // Classroom mode. A teacher owns a class and shares its join code. A parent chooses to link a
@@ -352,6 +352,7 @@ export async function classProgressAndMisses(classId: string, now = Date.now()):
   // A unit scheduled ahead isn't anyone's yet: it counts as not assigned (so insights, badges and the Monday email skip it) until it starts.
   const waiting = new Set(timing.filter((r) => r.starts_at != null && Number(r.starts_at) > now).map((r) => r.unit_key));
   const questions: Record<string, Record<string, boolean>>[] = [];
+  const slips: StudentSlips[] = [];
   const progress = await mapLimit(members, CLASS_LOAD_CONCURRENCY, async (m): Promise<StudentProgress | null> => {
     // One unreadable child record must not take the whole class view down with it.
     const data = await loadChildData(m.family_id, m.profile_id, 90).catch((e) => {
@@ -362,7 +363,9 @@ export async function classProgressAndMisses(classId: string, now = Date.now()):
     const byKey = new Map(data.report.units.map((u) => [u.ref.key, u]));
     // Only units the student was given count toward the class's missed questions.
     const given = keys.filter((key) => !waiting.has(key) && (audience[key] ? audience[key].includes(m.profile_id) : !cls || unitIsForGrade(key, (m.grade ?? cls.grade) as GradeId, cls)));
-    questions.push(studentQuestions(data.events, Object.fromEntries(given.map((k) => [k, since[k] ?? 0]))));
+    const sinceGiven = Object.fromEntries(given.map((k) => [k, since[k] ?? 0]));
+    questions.push(studentQuestions(data.events, sinceGiven));
+    slips.push(studentSlips(data.events, sinceGiven));
     return {
       profileId: m.profile_id,
       name: data.profile.name,
@@ -375,7 +378,7 @@ export async function classProgressAndMisses(classId: string, now = Date.now()):
       }),
     };
   });
-  return { students: progress.filter((p): p is StudentProgress => p !== null), missed: mostMissed(questions) };
+  return { students: progress.filter((p): p is StudentProgress => p !== null), missed: mostMissed(questions, 3, 2, slips) };
 }
 
 /** How many students' histories are read at once: enough to overlap the database round trips without flooding it. */

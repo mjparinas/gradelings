@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { addedMessage, agoText, call, checkNameList, classBadge, classInsights, dueChips, homeworkDone, mostMissed, studentQuestions, homeworkOverview, isHomeworkDone, type StudentRow } from "./classroom";
+import { addedMessage, agoText, call, checkNameList, classBadge, classInsights, dueChips, homeworkDone, mostMissed, studentQuestions, studentSlips, homeworkOverview, isHomeworkDone, type StudentRow } from "./classroom";
 
 const DAY = 86_400_000;
 const NOW = 100 * DAY;
@@ -231,5 +231,30 @@ describe("dueChips", () => {
 
   it("crosses the end of a month and year", () => {
     expect(values(new Date(2026, 11, 31, 10))[0]).toBe("Tomorrow 2027-01-01");
+  });
+});
+
+describe("common slips", () => {
+  const answer = (student: string, g: string | undefined, a = "85", correct = false) => ({ type: "answer", unit: "3/math/x", t: 10, q: "What is 47 + 38?", correct, g, a, student });
+  const slips = (...ev: ReturnType<typeof answer>[]) => ev.map((e) => studentSlips([e], { "3/math/x": 0 }));
+  const missedBy = (...ev: ReturnType<typeof answer>[]) => ev.map((e) => studentQuestions([e], { "3/math/x": 0 }));
+
+  it("reads each student's first-try wrong answer and the right answer", () => {
+    expect(studentSlips([answer("a", "75")], { "3/math/x": 0 })).toEqual({ "3/math/x": { "What is 47 + 38?": { g: "75", a: "85" } } });
+    expect(studentSlips([answer("a", "75", "85", true)], { "3/math/x": 0 })).toEqual({});
+    expect(studentSlips([{ ...answer("a", "75"), t: 1 }], { "3/math/x": 5 })).toEqual({});
+  });
+
+  it("names the wrong answer at least two students gave, with the right answer", () => {
+    const ev = [answer("a", "75"), answer("b", "75"), answer("c", "83")];
+    const out = mostMissed(missedBy(...ev), 3, 2, slips(...ev));
+    expect(out["3/math/x"][0]).toMatchObject({ missed: 3, slip: { text: "75", count: 2 }, answer: "85" });
+  });
+
+  it("names no slip when every wrong answer differs, and still works without any answers kept", () => {
+    const ev = [answer("a", "75"), answer("b", "83")];
+    expect(mostMissed(missedBy(...ev), 3, 2, slips(...ev))["3/math/x"][0].slip).toBeUndefined();
+    const bare = [answer("a", undefined, undefined as unknown as string), answer("b", undefined, undefined as unknown as string)];
+    expect(mostMissed(missedBy(...bare))["3/math/x"][0]).toEqual({ q: "What is 47 + 38?", missed: 2, tried: 2 });
   });
 });
