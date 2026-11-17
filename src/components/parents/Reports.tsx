@@ -291,10 +291,11 @@ export function FactsLine({ name, grade, facts }: { name: string; grade: GradeId
             {s.known} of {s.total}
           </b>{" "}
           {s.set.noun}
+          {s.automatic > 0 && <> ({s.automatic} with quick recall)</>}
         </span>
       ))}
       .{tricky.length > 0 && <> Still practising: {tricky.map(factText).join(", ")}.</>} A fact counts as known after two right answers in a row on the first
-      try. This is practice, not a report-card mark.
+      try, and as quick recall when both were answered within a few seconds. Facts come back for review just before they are likely to fade. This is practice, not a report-card mark.
     </p>
   );
 }

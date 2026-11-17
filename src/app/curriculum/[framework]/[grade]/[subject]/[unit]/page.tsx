@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "@/components/PublicLink";
 import { notFound } from "next/navigation";
 import { breadcrumbJsonLd, typicalAgeRange } from "@/components/site/jsonld";
+import { PracticeSession } from "@/components/site/PracticeSession";
+import { SESSION_THRESHOLD } from "@/components/site/sessionConfig";
 import { SampleQuestion } from "@/components/site/SampleQuestion";
 import { Crumbs, SitePage, SubscribeActions } from "@/components/site/SiteChrome";
 import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle, unitKey, gradeLabel, sampleSeed, say } from "@/components/site/curriculum";
@@ -164,11 +166,13 @@ export default async function UnitPage({ params }: Props) {
           Try a few questions
         </h2>
         <p className="mb-4 font-read text-ink-soft">A taste of this unit. In the app, questions change every time and get easier or harder to match your child.</p>
-        <ol className="grid items-start gap-4 md:grid-cols-2">
-          {questions.map((q, i) => (
-            <SampleQuestion key={i} q={q} n={i + 1} seedText={`${seed}#${i}`} tryIt={{ play, playLabel: say(f, "Practise this unit") }} />
-          ))}
-        </ol>
+        <PracticeSession threshold={Math.max(1, Math.min(SESSION_THRESHOLD, questions.filter((q) => q.kind === "choice").length))} play={play} playLabel={say(f, "Practise this unit")}>
+          <ol className="grid items-start gap-4 md:grid-cols-2">
+            {questions.map((q, i) => (
+              <SampleQuestion key={i} q={q} n={i + 1} seedText={`${seed}#${i}`} tryIt={{ play, playLabel: say(f, "Practise this unit") }} />
+            ))}
+          </ol>
+        </PracticeSession>
       </section>
 
       <section aria-labelledby="in-region" className="card mt-8 p-5">
