@@ -52,6 +52,28 @@ function dailyUnitKeys(profileId: string, when: number, subjects: SubjectId[], a
   });
 }
 
+describe("makePlan: one skill in a unit", () => {
+  const G3 = "3/math/add-subtract-1000";
+  beforeAll(() => loadGrade("3"));
+  const asked = (plan: Plan) => Array.from({ length: plan.total ?? 0 }, (_, index) => plan.next({ index, recent: [], derived: derive([]) }));
+
+  it("asks only that skill's questions, counts them for the unit and tags each with the skill", () => {
+    const plan = makePlan(input({ mode: "practice", scope: G3, grade: "3", skill: "subtract-3-digit" }))!;
+    expect(plan).toMatchObject({ scope: G3, skill: "subtract-3-digit", title: "Subtracting to 1000", retries: true });
+    expect(plan.total).toBeGreaterThanOrEqual(6);
+    for (const item of asked(plan)) expect(item).toMatchObject({ unitKey: G3, skill: "subtract-3-digit" });
+  });
+
+  it("falls back to the whole unit for an unknown skill, and ignores a skill in a Challenge", () => {
+    const unknown = makePlan(input({ mode: "practice", scope: G3, grade: "3", skill: "nope" }))!;
+    expect(unknown.skill).toBeUndefined();
+    expect(unknown.title).toBe("Add & Subtract");
+    const challenge = makePlan(input({ mode: "challenge", scope: G3, grade: "3", skill: "subtract-3-digit" }))!;
+    expect(challenge.skill).toBeUndefined();
+    expect(asked(challenge).every((item) => item && !item.skill)).toBe(true);
+  });
+});
+
 describe("makePlan", () => {
   it("gives a Challenge ten hard questions, no retries, and a longer clock for little kids", () => {
     const older = makePlan(input({ mode: "challenge", scope: UNIT }));

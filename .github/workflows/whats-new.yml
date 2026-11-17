@@ -1,9 +1,9 @@
 name: What's new post
 
 # Writes the daily "What's new" entries for parents and teachers (docs/WHATS_NEW.md, src/lib/whatsNew.ts) from the
-# pull requests merged since the newest day, and opens a pull request into `staging` for the owner to review and
-# merge. It replaced a Claude routine (docs/decisions/2026-11-08-whats-new-github-action.md). Nothing is opened when
-# nothing user-visible merged. It never merges the pull request itself.
+# pull requests merged since the newest day, and opens a pull request into `staging` and turns on auto-merge, so it lands once "CI passed" is green
+# (owner, November 16, 2026). It replaced a Claude routine (docs/decisions/2026-11-08-whats-new-github-action.md). Nothing is opened when
+# nothing user-visible merged. The owner can still edit or revert a post afterwards.
 #
 # One-time setup:
 #   - Repository secret ANTHROPIC_API_KEY (an Anthropic API key; the script calls the Messages API, one request a day).
@@ -68,8 +68,9 @@ jobs:
           <!-- claude-projects-attribution: {"github_login":"mjparinas"} -->
           _Requested by **Melvin** · [project thread]($THREAD)_
 
-          Daily "What's new" post for $DAYS, written by the scheduled What's new workflow from the pull requests merged that day. Please read it for tone and accuracy, edit anything that is off, and merge it yourself.
+          Daily "What's new" post for $DAYS, written by the scheduled What's new workflow from the pull requests merged that day. Auto-merge is on, so it merges into `staging` once CI is green. Edit or revert anything that is off afterwards.
           BODY
           url=$(gh pr create --base staging --head "$branch" --title "$title" --body-file body.md)
           gh pr edit "$url" --add-assignee mjparinas --add-reviewer mjparinas || true
+          gh pr merge "$url" --auto --squash || echo "Could not turn on auto-merge for $url" >> "$GITHUB_STEP_SUMMARY"
           echo "Opened $url" >> "$GITHUB_STEP_SUMMARY"

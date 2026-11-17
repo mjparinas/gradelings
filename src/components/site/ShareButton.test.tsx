@@ -3,7 +3,8 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { savedReferralCode } from "@/lib/referral";
-import { PinLink, RefCapture, ShareButton } from "./ShareButton";
+import { readRegionHint } from "@/lib/regionHint";
+import { PinLink, RefCapture, RegionCapture, ShareButton } from "./ShareButton";
 
 afterEach(() => {
   localStorage.clear();
@@ -50,5 +51,14 @@ describe("RefCapture", () => {
     window.history.replaceState(null, "", "/curriculum/bc/?ref=wxyz6789");
     render(<RefCapture />);
     expect(savedReferralCode()).toBe("WXYZ6789");
+  });
+});
+
+describe("RegionCapture", () => {
+  it("remembers the province and grade of the page's play link for the first-child step", () => {
+    localStorage.clear();
+    render(<RegionCapture play="/play/#/start?framework=ca-ab&grade=5" />);
+    expect(readRegionHint()).toEqual({ framework: "ca-ab", grade: "5" });
+    localStorage.clear();
   });
 });

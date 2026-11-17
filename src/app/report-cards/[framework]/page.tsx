@@ -5,7 +5,7 @@ import { Critter } from "@/components/Critter";
 import { ReportCardGuide } from "@/components/ReportCardGuide";
 import { breadcrumbJsonLd, faqJsonLd } from "@/components/site/jsonld";
 import { Crumbs, SitePage, SubscribeActions } from "@/components/site/SiteChrome";
-import { curriculumPath, frameworkBySlug } from "@/components/site/curriculum";
+import { curriculumPath, frameworkBySlug, gradeLabel, gradesWithContent } from "@/components/site/curriculum";
 import { guidePath } from "@/components/site/guides";
 import { guidesFor } from "@/content/guides";
 import { FRAMEWORKS } from "@/content/frameworks";
@@ -26,8 +26,8 @@ export async function generateMetadata({ params }: PageProps<"/report-cards/[fra
   if (!f) return {};
   const levels = f.scoringFor("3").levels.map((l) => l.label);
   return pageMeta({
-    title: [`${f.shortName} report cards explained: ${levels.join(", ")}`, `${f.shortName} report cards explained for parents`, `${f.shortName} report cards explained`],
-    description: `What ${levels.join(", ")} mean on a ${f.name} report card, in plain words, with what each level looks like at home and how to help your child move up.`,
+    title: [`${f.shortName} report card levels explained: what ${levels.join(", ")} mean`, `${f.shortName} report cards explained: ${levels.join(", ")}`, `${f.shortName} report cards explained for parents`, `${f.shortName} report cards explained`],
+    description: `Decode your child's ${f.name} report card: what ${levels.join(", ")} mean in plain words, what each looks like at home, and how to help your child move up. Free.`,
     path: `/report-cards/${f.slug}/`,
     framework: f,
     type: "article",
@@ -66,6 +66,20 @@ export default async function ReportCardsPage({ params }: PageProps<"/report-car
           </div>
         </aside>
       </div>
+      <section aria-labelledby="by-grade" className="mt-10">
+        <h2 id="by-grade" className="mb-3 text-xl font-bold">
+          {f.shortName} help at home, by grade
+        </h2>
+        <ul className="flex flex-wrap gap-2">
+          {gradesWithContent(f).map((g) => (
+            <li key={g}>
+              <Link href={guidePath.grade(f, g)} className="inline-flex min-h-11 items-center rounded-full bg-white px-3 py-1.5 font-semibold hover:bg-[#e6f0ff]">
+                {gradeLabel(f, g)}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
     </SitePage>
   );
 }

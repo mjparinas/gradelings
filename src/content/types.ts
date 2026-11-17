@@ -301,6 +301,21 @@ export interface Lesson {
   };
 }
 
+/**
+ * A narrower skill inside a unit ("Adding 3-digit numbers" inside "Add and subtract to 1000"). Skills are a finer way to
+ * practise and to read a report: answers still count toward the unit (its key, level and report-card row are unchanged,
+ * so no progress moves), and are also tagged with the skill id so a child's skill totals can be worked out from events.
+ */
+export interface Skill {
+  /** Lower-case words and hyphens, unique inside the unit. Stored on answer events, so never rename one in use. */
+  id: string;
+  title: string;
+  /** One short, kid-facing line. */
+  blurb: string;
+  /** Returns 6–10 questions about this skill alone (same rules as `Unit.generate`). */
+  generate: (opts?: GenerateOptions) => Question[];
+}
+
 export interface Unit {
   id: string;
   title: string;
@@ -318,6 +333,8 @@ export interface Unit {
   standardElsewhere?: string;
   /** An optional short lesson. Added per grade in ./lessons, so it can be shared by every province that uses the unit. */
   lesson?: Lesson;
+  /** Optional narrower skills inside the unit (see `Skill`). The unit still practises and reports as one. */
+  skills?: Skill[];
   /** Returns 6–10 questions. Must only use the helpers in ../random (never Math.random). */
   generate: (opts?: GenerateOptions) => Question[];
 }

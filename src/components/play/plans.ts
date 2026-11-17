@@ -16,6 +16,8 @@ export interface Item {
   difficulty: number;
   /** The math fact asked (Math Facts only), tracked per fact. */
   fact?: string;
+  /** The skill practised inside the unit, when the session is for one skill. */
+  skill?: string;
 }
 
 export interface Plan {
@@ -37,6 +39,8 @@ export interface Plan {
   quickCorrect?: boolean;
   /** The "show me another way" lesson for the whole session, when its questions don't come from a unit. */
   lesson?: Lesson;
+  /** Set when the session practises one skill inside the unit in `scope`. */
+  skill?: string;
   next: (ctx: { index: number; recent: string[]; derived: Derived }) => Item | undefined;
 }
 
@@ -83,6 +87,8 @@ export interface PlanInput {
   short?: boolean;
   /** The child's estimated reading level (grade scale); passages are matched to it when set. */
   readingLevel?: number;
+  /** One skill inside the practised unit (Practice only): the session asks that skill's questions, and answers still count for the unit. */
+  skill?: string;
   /** The unit key a parent picked as this child's focus, if any. */
   focus?: string;
   /** Units up next in a parent's goal plan, picked more often in Adventure. */
@@ -109,8 +115,9 @@ export function makePlan(input: PlanInput): Plan | null {
     const ref = getUnitRef(scope, framework);
     if (!ref) return null;
     const challenge = mode === "challenge";
+    const skill = mode === "practice" && input.skill ? ref.unit.skills?.find((s) => s.id === input.skill) : undefined;
     const difficulty = challenge ? 3 : difficultyFromMastery(derived.units[ref.key]?.mastery);
-    let qs = challenge ? ref.unit.generate({ difficulty }) : generateFor(ref, difficulty, input.readingLevel);
+    let qs = challenge ? ref.unit.generate({ difficulty }) : skill ? skill.generate({ difficulty }) : generateFor(ref, difficulty, input.readingLevel);
     if (challenge) {
       while (qs.length < 10) qs = [...qs, ...ref.unit.generate({ difficulty })];
       qs = qs.slice(0, 10);
@@ -118,14 +125,15 @@ export function makePlan(input: PlanInput): Plan | null {
     return {
       mode,
       scope,
-      title: challenge ? `${ref.unit.title} Challenge` : ref.unit.title,
+      title: challenge ? `${ref.unit.title} Challenge` : skill ? skill.title : ref.unit.title,
       icon: challenge ? "🛡️" : ref.unit.emoji,
       total: qs.length,
       // Pre-K Challenges have no clock: four-year-olds can't read one, and racing it isn't the point.
       timeLimit: challenge && grade !== "pk" ? (band === "little" ? 420 : 300) : undefined,
       retries: !challenge,
       feedback: "bar",
-      next: ({ index }) => (qs[index] ? { question: qs[index], unitKey: ref.key, difficulty } : undefined),
+      skill: skill?.id,
+      next: ({ index }) => (qs[index] ? { question: qs[index], unitKey: ref.key, difficulty, ...(skill ? { skill: skill.id } : {}) } : undefined),
     };
   }
 

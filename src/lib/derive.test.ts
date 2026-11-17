@@ -301,6 +301,21 @@ describe("derive: stories", () => {
   });
 });
 
+describe("derive: skills", () => {
+  it("counts answers by skill without changing how the unit counts", () => {
+    const withSkill = derive([answer(true, T0, { skill: "add-3-digit" }), answer(false, T0 + 1, { skill: "add-3-digit" }), answer(true, T0 + 2, { skill: "subtract-3-digit" }), answer(true, T0 + 3)]);
+    expect(withSkill.skills).toEqual({ [`${UNIT}/add-3-digit`]: { attempts: 2, firstTry: 1 }, [`${UNIT}/subtract-3-digit`]: { attempts: 1, firstTry: 1 } });
+    // Same answers with no skill tags: the unit's own numbers are identical, so no progress depends on skills.
+    const plain = derive([answer(true, T0), answer(false, T0 + 1), answer(true, T0 + 2), answer(true, T0 + 3)]);
+    expect(withSkill.units[UNIT]).toEqual(plain.units[UNIT]);
+    expect(plain.skills).toEqual({});
+  });
+
+  it("ignores a skill tag on a math fact answer", () => {
+    expect(derive([answer(true, T0, { unit: "3/math/facts", mode: "facts", fact: "mul:7:8", skill: "x" })]).skills).toEqual({});
+  });
+});
+
 describe("derive: math facts", () => {
   const fact = (id: string, correct: boolean, t: number) => answer(correct, t, { unit: "3/math/facts", mode: "facts", fact: id });
 

@@ -280,9 +280,18 @@ describe("classroom mode", () => {
     expect((await (await sync.POST(req("/api/sync/", "POST", {}, parent))).json()).classwork).toEqual([]);
   });
 
-  it("needs a confirmed email to create a class, and can replace the join code", async () => {
+  it("lets a teacher with an unconfirmed email set a class up, but nobody can join until it is confirmed", async () => {
     const unconfirmed = await account_("t-unconfirmed@example.com", false);
-    expect((await classes.POST(req("/api/classes/", "POST", { name: "Nope", grade: "2" }, unconfirmed))).status).toBe(403);
+    const made = await classes.POST(req("/api/classes/", "POST", { name: "Early", grade: "2" }, unconfirmed));
+    expect(made.status).toBe(200);
+    const { class: c } = await made.json();
+    const parent = await parentWithChild("p-early@example.com", "kid-early", "2");
+    expect((await join_.POST(req("/api/classes/join/", "POST", { code: c.joinCode, profileId: "kid-early" }, parent))).status).toBe(403);
+    await dbm.run("UPDATE parents SET email_verified_at = ? WHERE email = ?", [Date.now(), "t-unconfirmed@example.com"]);
+    expect((await join_.POST(req("/api/classes/join/", "POST", { code: c.joinCode, profileId: "kid-early" }, parent))).status).toBe(200);
+  });
+
+  it("can replace the join code", async () => {
     const teacher = await account_("t-rotate@example.com");
     const { class: c } = await (await classes.POST(req("/api/classes/", "POST", { name: "Codes", grade: "2" }, teacher))).json();
     const parent = await parentWithChild("p-rotate@example.com", "kid-rotate");

@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const twins = course.units.filter((u) => u.title === unit.title);
   const name = twins.length > 1 && twins[0] !== unit ? `${unit.title}, part ${twins.indexOf(unit) + 1}` : unit.title;
   return pageMeta({
-    title: [`${name}: ${g} ${subjectSeoTitle(course.subject)} practice (${f.shortName})`, `${name}: ${g} ${subjectSeoTitle(course.subject)} (${f.shortName})`, `${name}: ${g} (${f.shortName})`, `${name} (${f.shortName})`, `${name}: ${g}`],
+    title: [`${name}: free ${g} ${subjectSeoTitle(course.subject)} practice (${f.shortName})`, `${name}: ${g} ${subjectSeoTitle(course.subject)} practice (${f.shortName})`, `${name}: ${g} ${subjectSeoTitle(course.subject)} (${f.shortName})`, `${name}: ${g} (${f.shortName})`, `${name} (${f.shortName})`, `${name}: ${g}`],
     // Action and value first, since Google shows about the first 155 characters: what the page offers, the curriculum, no sign-up, then the parent note.
     description: `Free ${g} ${unit.title} practice with answers, matched to the ${f.curriculumName}. Try the questions now, no sign-up. ${unit.parentNote}`,
     path: curriculumPath.unit(f, grade, course.subject, unit.id),
@@ -219,6 +219,25 @@ export default async function UnitPage({ params }: Props) {
           </Link>
         )}
       </nav>
+
+      {course.units.length > 2 && (
+        <section aria-labelledby="siblings" className="mt-8">
+          <h2 id="siblings" className="mb-3 text-xl font-bold">
+            All {gradeLabel(f, grade)} {name} units in {f.shortName}
+          </h2>
+          <ul className="flex flex-wrap gap-2">
+            {course.units
+              .filter((u) => u !== unit && u.standards[f.id])
+              .map((u) => (
+                <li key={u.id}>
+                  <Link href={curriculumPath.unit(f, grade, course.subject, u.id)} className="inline-flex min-h-11 items-center rounded-full bg-white px-3 py-1.5 font-semibold hover:bg-[#e6f0ff]">
+                    {u.title}
+                  </Link>
+                </li>
+              ))}
+          </ul>
+        </section>
+      )}
 
       <section aria-labelledby="related" className="mt-8">
         <h2 id="related" className="mb-3 text-xl font-bold">

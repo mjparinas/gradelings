@@ -394,3 +394,12 @@ export async function mapLimit<T, R>(items: readonly T[], limit: number, fn: (it
   await Promise.all(Array.from({ length: Math.min(limit, items.length) }, worker));
   return out;
 }
+
+/** What a student or family is told when the teacher hasn't confirmed their email yet, so nobody can join their class. */
+export const CLASS_NOT_OPEN_YET = "This class isn’t open yet. Your teacher needs to confirm their email first. Ask them to check their inbox.";
+
+/** A teacher can set a class up straight away, but students and families can join only once the class owner's email is confirmed. */
+export async function classOpenForJoining(classId: string): Promise<boolean> {
+  const rows = await query<{ v: number | null }>("SELECT p.email_verified_at AS v FROM classes c JOIN parents p ON p.id = c.owner_parent_id WHERE c.id = ?", [classId]);
+  return rows.length > 0 && rows[0].v != null;
+}

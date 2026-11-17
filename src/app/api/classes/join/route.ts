@@ -2,7 +2,7 @@ import { getFramework } from "@/content/frameworks";
 import type { FrameworkId, GradeId } from "@/content/types";
 import { regionKind } from "@/content/locale";
 import { error, getSession, json, rateLimited, readJson, sameOrigin } from "@/server/auth";
-import { classGrades, MAX_STUDENTS, normalizeCode } from "@/server/classroom";
+import { CLASS_NOT_OPEN_YET, classGrades, classOpenForJoining, MAX_STUDENTS, normalizeCode } from "@/server/classroom";
 import { query, run } from "@/server/db";
 
 // A parent links one of their children to a class with the teacher's join code. This is the
@@ -32,6 +32,7 @@ export async function POST(req: Request) {
   if (!owns.length) return error(404, "That child isn’t synced to your account yet. Sync, then try again.");
   const cls = (await query<{ id: string; name: string; grade: GradeId; grade2: GradeId | null; framework: string }>("SELECT id, name, grade, grade2, framework FROM classes WHERE join_code = ? AND closed_at IS NULL", [code]))[0];
   if (!cls) return error(404, "We couldn’t find a class with that code. Check it with the teacher.");
+  if (!(await classOpenForJoining(cls.id))) return error(403, CLASS_NOT_OPEN_YET);
   const child = JSON.parse(owns[0].data) as { grade?: string; framework?: string };
   if (!classGrades(cls).includes(child.grade as GradeId)) return error(409, "This class is for a different grade than your child’s profile.");
   if ((child.framework ?? "ca-bc") !== cls.framework) return error(409, `This class follows a different ${regionKind(getFramework(cls.framework as FrameworkId))}’s curriculum than your child’s profile.`);

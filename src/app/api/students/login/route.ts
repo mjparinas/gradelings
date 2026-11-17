@@ -1,6 +1,6 @@
 import { clientIp, createSession, error, json, rateLimited, readJson, refundRateLimit, sameOrigin, sessionCookie } from "@/server/auth";
 import { sendAlert } from "@/server/alerts";
-import { normalizeCode } from "@/server/classroom";
+import { CLASS_NOT_OPEN_YET, classOpenForJoining, normalizeCode } from "@/server/classroom";
 import { query, run } from "@/server/db";
 import { getFamilyRow, toFamilyInfo } from "@/server/family";
 import { CLASS_STUDENT_CODE_LENGTH, normalizeStudentCode, STUDENT_CODE_LENGTH } from "@/server/students";
@@ -92,6 +92,7 @@ export async function POST(req: Request) {
     }
   }
   await Promise.all(refunds.map(refundRateLimit));
+  if (!(await classOpenForJoining(student.class_id))) return error(403, CLASS_NOT_OPEN_YET);
   await run("UPDATE classes SET last_activity_at = ?, inactive_warning_at = NULL WHERE id = ? AND closed_at IS NULL", [Date.now(), student.class_id]);
   const { token, maxAge } = await createSession(student.parent_id, student.family_id, req);
   const family = toFamilyInfo((await getFamilyRow(student.family_id))!, "", false, true);

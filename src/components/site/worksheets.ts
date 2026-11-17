@@ -60,6 +60,11 @@ export interface WorksheetSkill {
   subject: WorksheetSubject;
   course: Course;
   unit: Unit;
+  /**
+   * Set on a sheet for one skill inside a unit (`Unit.skills`; Grade 3 math is the pilot): the unit the skill belongs to.
+   * `unit` is then a stand-in made from the skill (its id, title and questions), so a sheet works like any other.
+   */
+  skillOf?: Unit;
 }
 
 /** Math in Kindergarten to Grade 9 keeps its first addresses; every other sheet has its subject in the address. */
@@ -70,6 +75,8 @@ export const worksheetPath = {
   grade: (g: GradeId) => `/worksheets/${gradeSlug(g)}/`,
   /** The grade's sheets for one subject other than math (and every Pre-K subject). */
   subject: (g: GradeId, subject: WorksheetSubject) => `/worksheets/${gradeSlug(g)}/${subjectSlug(subject)}/`,
+  /** A math skill's sheet: /worksheets/{grade}/{unit}/{skill}/. */
+  skillSheet: (g: GradeId, unitId: string, skillId: string) => `/worksheets/${gradeSlug(g)}/${unitId}/${skillId}/`,
   skill: (g: GradeId, unitId: string, subject: WorksheetSubject = "math") =>
     legacyMath(g, subject) ? `/worksheets/${gradeSlug(g)}/${unitId}/` : `/worksheets/${gradeSlug(g)}/${subjectSlug(subject)}/${unitId}/`,
 };
@@ -84,7 +91,7 @@ const sheets = new Map<string, Question[]>();
 
 /** Up to a sheet's worth of printable questions from the skill, seeded so the sheet is identical on every build, with no repeats. */
 export function sheetQuestions(s: WorksheetSkill): Question[] {
-  const key = unitKey(s.grade, s.subject, s.unit.id);
+  const key = s.skillOf ? `${unitKey(s.grade, s.subject, s.skillOf.id)}/${s.unit.id}` : unitKey(s.grade, s.subject, s.unit.id);
   const cached = sheets.get(key);
   if (cached) return cached;
   const seen = new Set<string>();
@@ -116,6 +123,22 @@ export function worksheetSkills(grade: GradeId, subject: WorksheetSubject = "mat
     .filter((s) => sheetQuestions(s).length >= minQuestions(grade));
 }
 
+/** The address of a sheet, whether it is for a unit or for one skill inside a unit. */
+export const sheetPath = (s: WorksheetSkill) => (s.skillOf ? worksheetPath.skillSheet(s.grade, s.skillOf.id, s.unit.id) : worksheetPath.skill(s.grade, s.unit.id, s.subject));
+
+/** The sheets for the skills inside one unit's worksheet (math in Kindergarten to Grade 9). A skill needs enough printable questions, like any sheet. */
+export function skillSheetsOf(s: WorksheetSkill): WorksheetSkill[] {
+  if (s.skillOf || s.subject !== "math" || s.grade === "pk") return [];
+  return (s.unit.skills ?? [])
+    .map((sk): WorksheetSkill => ({ ...s, skillOf: s.unit, unit: { ...s.unit, id: sk.id, title: sk.title, blurb: sk.blurb, lesson: undefined, skills: undefined, generate: sk.generate } }))
+    .filter((k) => sheetQuestions(k).length >= minQuestions(k.grade));
+}
+
+/** Every skill sheet in every grade. */
+export function allSkillSheets(): WorksheetSkill[] {
+  return worksheetGrades().flatMap((g) => worksheetSkills(g, "math").flatMap(skillSheetsOf));
+}
+
 /** Every skill in a grade, subject by subject. */
 export function gradeSkills(grade: GradeId): WorksheetSkill[] {
   return worksheetSubjects(grade).flatMap((s) => worksheetSkills(grade, s));
@@ -142,6 +165,11 @@ export function resolveSkill(params: { grade: string; skill?: string; unit?: str
   if (!params.skill) return { grade };
   const subject = subjectFromSlug(params.skill);
   if (params.unit) {
+    // /worksheets/{grade}/{unit}/{skill}/: one skill inside a math unit.
+    if (!subject && grade !== "pk") {
+      const parent = worksheetSkills(grade, "math").find((s) => s.unit.id === params.skill);
+      return parent && skillSheetsOf(parent).find((k) => k.unit.id === params.unit);
+    }
     if (!subject || legacyMath(grade, subject)) return undefined;
     return worksheetSkills(grade, subject).find((s) => s.unit.id === params.unit);
   }
@@ -174,5 +202,6 @@ export function allWorksheetPaths(): SitemapPath[] {
     ...worksheetGrades().map((g) => ({ path: worksheetPath.grade(g) })),
     ...subjectPages().map((p) => ({ path: worksheetPath.subject(p.grade, p.subject) })),
     ...allWorksheetSkills().map((s) => ({ path: worksheetPath.skill(s.grade, s.unit.id, s.subject), updated: unitUpdated(f.id, s.grade, s.subject, s.unit.id) })),
+    ...allSkillSheets().map((s) => ({ path: sheetPath(s), updated: unitUpdated(f.id, s.grade, s.subject, s.skillOf!.id) })),
   ];
 }
