@@ -11,6 +11,8 @@ import { LessonBody } from "./LessonScreen";
 import { Suspense, useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { HelpVideoPlayer } from "./lazyScreens";
 import { helpVideoFor } from "@/lib/videoHelp";
+import { workedSolution } from "@/lib/workedSolution";
+import { WorkedSolution } from "./WorkedSolution";
 import { getUnitRef } from "@/content";
 import type { Question } from "@/content/types";
 import { burstFrom, celebrate, floatText, replay } from "@/lib/juice";
@@ -169,6 +171,7 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
   const log = useStore((s) => s.log);
   const family = useStore((s) => s.family);
   const videosOn = useFlag("video-help");
+  const workedOn = useFlag("worked-solutions");
   const logSoon = useStore((s) => s.logSoon);
   const startDerived = useMemo(() => derivedFor(useStore.getState(), profile.id), [profile.id]);
 
@@ -193,6 +196,7 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
   // After two misses a child can tell a grown-up they need help, or look at how the unit works.
   const [helpAsked, setHelpAsked] = useState(false);
   const [showLesson, setShowLesson] = useState(false);
+  const [showSteps, setShowSteps] = useState(false);
   // A unit's help video is also offered once, before its first question, the first time a child starts that unit.
   const videoIntroOn = videosOn && !!family && canUse(family, "videoHelp") && plan.retries && !resume;
   const introduced = useRef(new Set<string>());
@@ -219,6 +223,8 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
   const lesson = plan.lesson ?? unitRef?.unit.lesson;
   // A short video for this unit, for members, when the flag is on (a fact isn't a unit).
   const helpVideo = videosOn && family && canUse(family, "videoHelp") && item && !item.fact ? helpVideoFor(item.unitKey) : undefined;
+  // Plain arithmetic is worked out step by step after a revealed answer (a fact has its own strategy lessons).
+  const worked = useMemo(() => (workedOn && q && !item?.fact && plan.retries ? workedSolution(q) : null), [workedOn, q, item?.fact, plan.retries]);
   const lessonTitle = unitRef ? `${unitRef.unit.emoji} How ${unitRef.unit.title} works` : `${plan.icon} ${plan.title}: how it works`;
   const companion = profile.companion ?? "ollie";
 
@@ -344,6 +350,7 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
     setHinted(false);
     setHelpAsked(false);
     setShowLesson(false);
+    setShowSteps(false);
     const intro = needsIntro(nextItem);
     setShowVideo(intro);
     setVideoIntro(intro);
@@ -570,6 +577,7 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
                         log([{ type: "help", unit: item.unitKey }]);
                       },
                   onLesson: lesson ? () => setShowLesson(true) : undefined,
+                  onSteps: worked ? () => setShowSteps(true) : undefined,
                   onVideo: helpVideo ? () => { setVideoIntro(false); setShowVideo(true); } : undefined,
                 }
               : undefined
@@ -590,6 +598,8 @@ function Runner({ plan, resume, resumeOn = true }: { plan: Plan; resume?: Unfini
           />
         </Suspense>
       )}
+
+      {showSteps && worked && <WorkedSolution solution={worked} onClose={() => setShowSteps(false)} />}
 
       {showLesson && lesson && (
         <div className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-ink/40 p-4 backdrop-blur-[2px]" role="dialog" aria-modal="true" aria-label="How it works" onClick={() => setShowLesson(false)}>
@@ -651,7 +661,7 @@ function FeedbackBar({
   hint: string;
   report?: { unitKey: string; prompt: string; framework?: string; details?: ReportDetails };
   /** After two misses: ask a grown-up for help, or look at the unit's "how it works". */
-  help?: { asked: boolean; onAsk?: () => void; onLesson?: () => void; onVideo?: () => void };
+  help?: { asked: boolean; onAsk?: () => void; onLesson?: () => void; onSteps?: () => void; onVideo?: () => void };
   onNext: () => void;
   onDismiss: () => void;
   last: boolean;
@@ -676,6 +686,11 @@ function FeedbackBar({
                 {help.onVideo && (
                   <button type="button" className="btn btn-soft min-h-12 px-4 text-base" onClick={help.onVideo}>
                     <span aria-hidden="true">🎬</span> Watch a short video
+                  </button>
+                )}
+                {help.onSteps && (
+                  <button type="button" className="btn btn-soft min-h-12 px-4 text-base" onClick={help.onSteps}>
+                    <span aria-hidden="true">✏️</span> Show me step by step
                   </button>
                 )}
                 {help.onLesson && (
