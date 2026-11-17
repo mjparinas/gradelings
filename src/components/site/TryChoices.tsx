@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { TRIAL_DAYS } from "@/lib/plan";
 import { AppLink } from "./AppLink";
+import { useSession } from "./PracticeSession";
 
 // A sample question a visitor can answer on the unit's public page, the way the app asks it: a miss shows the hint
 // and another try, a second miss shows the answer, and either way the next step is the app with this unit open.
@@ -33,6 +34,12 @@ export function TryChoices({
   const [picked, setPicked] = useState<string | null>(null);
   const right = picked === answer;
   const done = right || missed.length >= 2;
+  // Inside a PracticeSession the invitation to carry on comes after a few questions, not after each one.
+  const session = useSession();
+  useEffect(() => {
+    if (done) session?.report(right && missed.length === 0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [done]);
 
   const pick = (id: string) => {
     if (done || missed.includes(id)) return;
@@ -84,12 +91,16 @@ export function TryChoices({
                 </>
               )}
             </p>
-            <AppLink href={play} className="btn btn-good min-h-12 self-start px-5 text-lg">
-              {playLabel}: new questions every time →
-            </AppLink>
-            <p className="font-read text-sm text-ink-soft" data-testid="try-free-note">
-              Free for {TRIAL_DAYS} days with everything open. No card needed.
-            </p>
+            {!session && (
+              <>
+                <AppLink href={play} className="btn btn-good min-h-12 self-start px-5 text-lg">
+                  {playLabel}: new questions every time →
+                </AppLink>
+                <p className="font-read text-sm text-ink-soft" data-testid="try-free-note">
+                  Free for {TRIAL_DAYS} days with everything open. No card needed.
+                </p>
+              </>
+            )}
           </>
         )}
         {!done && missed.length === 0 && <p className="font-read text-sm text-ink-soft">Tap an answer to try it.</p>}
