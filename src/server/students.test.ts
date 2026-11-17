@@ -49,6 +49,16 @@ async function classWith(cookie: string, framework = "ca-bc") {
 }
 
 describe("teacher-made student accounts", () => {
+  it("lets an unconfirmed teacher add students, but they can't sign in until the email is confirmed", async () => {
+    const t = await teacher("st-unconfirmed@example.com", false);
+    const cls = await classWith(t);
+    const added = await (await studentRoutes.POST(req("/api/classes/students/", "POST", { classId: cls.id, names: ["Ivy"] }, t))).json();
+    const [ivy] = added.students as { loginCode: string }[];
+    expect((await studentLogin.POST(req("/api/students/login/", "POST", { code: ivy.loginCode }))).status).toBe(403);
+    await dbm.run("UPDATE parents SET email_verified_at = ? WHERE email = ?", [Date.now(), "st-unconfirmed@example.com"]);
+    expect((await studentLogin.POST(req("/api/students/login/", "POST", { code: ivy.loginCode }))).status).toBe(200);
+  });
+
   it("lets a teacher add students who sign in with codes and play, but nothing else", async () => {
     const t = await teacher("st-teacher@example.com");
     const cls = await classWith(t);

@@ -454,7 +454,7 @@ describe("TeacherApp", () => {
     expect(screen.queryByRole("status")).not.toBeInTheDocument();
   });
 
-  it("asks a teacher with an unconfirmed email to confirm it, and offers the link again, before a class can be made", async () => {
+  it("asks a teacher with an unconfirmed email to confirm it so students can join, and offers the link again", async () => {
     const base = mocks.call.getMockImplementation()!;
     mocks.call.mockImplementation((url: string, method = "GET") => {
       if (url === "/api/auth/me/") return Promise.resolve({ family: { account: { student: false, email: "new@example.com", verified: false } } });
@@ -464,10 +464,24 @@ describe("TeacherApp", () => {
     render(<TeacherApp />);
     const banner = await screen.findByRole("region", { name: "Confirm your email" });
     expect(banner).toHaveTextContent("new@example.com");
-    expect(screen.getByRole("button", { name: "Create class" })).toBeDisabled();
+    // A class can still be set up; students join once the email is confirmed.
+    expect(screen.getByRole("button", { name: "Create class" })).toBeEnabled();
     await user.click(within(banner).getByRole("button", { name: "Send the link again" }));
     await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/auth/resend-verification/", "POST"));
     expect(await within(banner).findByRole("button", { name: /^Sent/ })).toBeDisabled();
+  });
+
+  it("keeps the confirm-your-email reminder on the class page until the email is confirmed", async () => {
+    const base = mocks.call.getMockImplementation()!;
+    mocks.call.mockImplementation((url: string, method = "GET") => {
+      if (url === "/api/auth/me/") return Promise.resolve({ family: { account: { student: false, email: "new@example.com", verified: false } } });
+      return base(url, method);
+    });
+    const user = userEvent.setup();
+    render(<TeacherApp />);
+    await user.click(await screen.findByRole("button", { name: /^Room 3/ }));
+    await screen.findByRole("heading", { name: "Room 3" });
+    expect(screen.getByRole("region", { name: "Confirm your email" })).toHaveTextContent("students can join");
   });
 
   it("shows why the confirmation link couldn't be sent again", async () => {
