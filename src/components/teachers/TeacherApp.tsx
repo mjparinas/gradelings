@@ -968,6 +968,12 @@ function Insights({ data, label }: { data: ClassDetail; label: (key: string) => 
                   {list.map((m) => (
                     <li key={m.q}>
                       {m.q}: {m.missed} of {m.tried} missed it on the first try
+                      {m.slip && (
+                        <span className="block text-sm text-ink-soft">
+                          Common slip: {m.slip.count} students answered <b>{m.slip.text}</b>
+                          {m.answer ? <>; the answer is <b>{m.answer}</b></> : null}.
+                        </span>
+                      )}
                     </li>
                   ))}
                 </ul>

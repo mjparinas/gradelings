@@ -68,7 +68,7 @@ export function InputQuestion({ q, status, onAttempt }: QuestionProps<Q>) {
       replay(box.current, "animate-shake");
       setEntry("");
     }
-    onAttempt(ok, el);
+    onAttempt(ok, el, entry);
   };
 
   // Hardware keyboards.

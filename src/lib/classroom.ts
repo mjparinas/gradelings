@@ -113,6 +113,29 @@ export interface MissedQuestion {
   q: string;
   missed: number;
   tried: number;
+  /** The wrong answer given most often by the students who missed it (at least 2 of them gave it), when their answers kept it (flag `common-slips`). */
+  slip?: { text: string; count: number };
+  /** The right answer, when the answers kept it. */
+  answer?: string;
+}
+
+/** What one student answered wrong on the first try, and the right answer, for each labelled question on the assigned units. */
+export type StudentSlips = Record<string, Record<string, { g?: string; a?: string }>>;
+
+/** The first-try wrong answers (`g`) and right answers (`a`) a student's answer events kept, in the same shape as `studentQuestions`. */
+export function studentSlips(
+  events: readonly { type: string; unit?: string; t: number; q?: string; correct?: boolean | number; g?: string; a?: string }[],
+  since: Record<string, number>,
+): StudentSlips {
+  const out: StudentSlips = {};
+  for (const e of events) {
+    if (e.type !== "answer" || !e.unit || typeof e.q !== "string" || !e.q || !(e.unit in since) || e.t < since[e.unit]) continue;
+    if (e.correct !== false || (!e.g && !e.a)) continue;
+    const row = ((out[e.unit] ??= {})[e.q.slice(0, 80)] ??= {});
+    if (e.g && !row.g) row.g = e.g;
+    if (e.a) row.a = e.a;
+  }
+  return out;
 }
 
 /** What one student did with each labelled question on the assigned units: true when they missed it on the first try at least once. */
@@ -134,7 +157,7 @@ export function studentQuestions(
  * Per unit, the questions the most students missed on the first try (at least `minStudents` of them),
  * worst first. Built from each student's `studentQuestions`; a question counts once per student.
  */
-export function mostMissed(perStudent: readonly Record<string, Record<string, boolean>>[], limit = 3, minStudents = 2): Record<string, MissedQuestion[]> {
+export function mostMissed(perStudent: readonly Record<string, Record<string, boolean>>[], limit = 3, minStudents = 2, slips: readonly StudentSlips[] = []): Record<string, MissedQuestion[]> {
   const tally = new Map<string, Map<string, MissedQuestion>>();
   for (const student of perStudent) {
     for (const [unit, qs] of Object.entries(student)) {
@@ -151,9 +174,23 @@ export function mostMissed(perStudent: readonly Record<string, Record<string, bo
   const out: Record<string, MissedQuestion[]> = {};
   for (const [unit, byQ] of tally) {
     const top = [...byQ.values()].filter((r) => r.missed >= minStudents).sort((a, b) => b.missed - a.missed || b.missed / b.tried - a.missed / a.tried || a.q.localeCompare(b.q)).slice(0, limit);
-    if (top.length) out[unit] = top;
+    if (top.length) out[unit] = top.map((r) => withSlip(r, unit, slips, minStudents));
   }
   return out;
+}
+
+/** Adds the most common wrong answer (given by at least `minStudents` students) and the right answer to a missed question. */
+function withSlip(r: MissedQuestion, unit: string, slips: readonly StudentSlips[], minStudents: number): MissedQuestion {
+  const counts = new Map<string, number>();
+  let answer: string | undefined;
+  for (const s of slips) {
+    const row = s[unit]?.[r.q];
+    if (!row) continue;
+    if (row.a) answer = row.a;
+    if (row.g) counts.set(row.g, (counts.get(row.g) ?? 0) + 1);
+  }
+  const top = [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))[0];
+  return { ...r, ...(answer ? { answer } : {}), ...(top && top[1] >= minStudents ? { slip: { text: top[0], count: top[1] } } : {}) };
 }
 
 export async function call<T>(url: string, method = "GET", body?: unknown): Promise<T> {
