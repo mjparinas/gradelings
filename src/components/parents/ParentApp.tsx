@@ -20,6 +20,7 @@ import { LoadingScreen } from "../ui";
 import { RouteProgress } from "../RouteProgress";
 import { AccountPage, AuthForm } from "./Account";
 import { ChildrenPage } from "./Children";
+import { FirstChild } from "./FirstChild";
 import { Gate } from "./Gate";
 import { Overview } from "./Overview";
 import { PlacementPage } from "./Placement";
@@ -258,6 +259,9 @@ export function ParentApp() {
   // Back from Stripe straight after typing the PIN: don't ask for it again (src/lib/billingReturn.ts).
   const [unlocked, setUnlocked] = useState(() => typeof window !== "undefined" && takeBillingPass(window.location.hash));
   const [billing, setBilling] = useState<BillingInfo | null>(null);
+  // Straight from the email confirmation page (?addchild=1): the first step is the child, not the PIN (see FirstChild).
+  const [firstChild, setFirstChild] = useState(() => typeof window !== "undefined" && new URLSearchParams(window.location.search).get("addchild") === "1");
+  const [accountTaken, setAccountTaken] = useState(false);
   const { path, query } = useRoute();
   const { shown, pending } = useShownHash();
   const profiles = useProfiles();
@@ -280,8 +284,13 @@ export function ParentApp() {
           url.searchParams.delete("google");
           url.searchParams.delete("signedin");
           window.history.replaceState(null, "", url.pathname + url.search + url.hash);
-          void finishGoogleSignIn().then(setBilling);
-        } else if (useStore.getState().family.account) void refreshAccount().then(setBilling);
+          void finishGoogleSignIn()
+            .then(setBilling)
+            .finally(() => setAccountTaken(true));
+        } else {
+          setAccountTaken(true);
+          if (useStore.getState().family.account) void refreshAccount().then(setBilling);
+        }
       });
   }, [ready]);
 
@@ -290,6 +299,12 @@ export function ParentApp() {
   // No PIN has been made on this device yet, so there is nothing to unlock: a returning parent's "Sign in" link goes
   // straight to the form instead of asking them to invent a PIN first. Signing in then leads to the PIN screen as usual.
   if (!unlocked && !hasPin && !signedIn && path[0] === "account" && query.get("mode") === "signin") return <SignInOnly />;
+  // A new parent with no PIN yet and no child: ask for the child first. Wait for the account the server just signed in
+  // (and any children it already has) before deciding.
+  if (!unlocked && !hasPin && firstChild) {
+    if (!accountTaken) return <LoadingScreen />;
+    if (profiles.length === 0 && signedIn) return <FirstChild onSkip={() => setFirstChild(false)} />;
+  }
   if (!unlocked) return <Gate onPass={() => setUnlocked(true)} />;
 
   // The tab lights up at once; its page is drawn in the background while the old one stays up (useShownHash).
