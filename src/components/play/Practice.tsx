@@ -191,6 +191,27 @@ export function UnitDialog({ unitKey: key, onClose, onLocked }: { unitKey: strin
           <button type="button" className="btn btn-good min-h-16 text-2xl" onClick={() => go("/session", { mode: "practice", scope: key })}>
             ▶ Practice
           </button>
+          {ref.unit.skills && ref.unit.skills.length > 0 && (
+            <div className="flex flex-col gap-2" data-testid="unit-skills">
+              <h3 className="text-lg font-bold">Practise one skill</h3>
+              <ul className="flex flex-col gap-2">
+                {ref.unit.skills.map((skill) => {
+                  const sk = d.skills[`${key}/${skill.id}`];
+                  return (
+                    <li key={skill.id}>
+                      <button type="button" className="btn min-h-14 w-full justify-between gap-3 text-left text-lg" onClick={() => go("/session", { mode: "practice", scope: key, skill: skill.id })}>
+                        <span>
+                          {skill.title}
+                          <span className="block text-sm font-normal text-ink-soft">{sk ? `${sk.firstTry} of ${sk.attempts} right on the first try` : skill.blurb}</span>
+                        </span>
+                        <span aria-hidden="true">▶</span>
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          )}
           <button
             type="button"
             className="btn min-h-14 text-xl"

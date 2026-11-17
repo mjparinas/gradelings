@@ -6,15 +6,21 @@ import type { UnitStat } from "@/lib/derive";
 import { BandProvider } from "../band";
 
 const h = vi.hoisted(() => {
-  const unit = (id: string, title: string, lesson = false) => ({
+  const unit = (id: string, title: string, lesson = false, skills = false) => ({
     id,
     title,
     emoji: "🔢",
     blurb: `About ${title}`,
     lesson: lesson ? { steps: ["Look"], example: { question: "Q", work: [], answer: "A" } } : undefined,
+    skills: skills
+      ? [
+          { id: "take-away", title: "Taking away", blurb: "Counting back" },
+          { id: "difference", title: "Finding the difference", blurb: "How far apart" },
+        ]
+      : undefined,
   });
   const courses = [
-    { grade: "2", subject: "math", units: [unit("add", "Adding", true), unit("sub", "Subtracting"), unit("time", "Telling time")] },
+    { grade: "2", subject: "math", units: [unit("add", "Adding", true), unit("sub", "Subtracting", false, true), unit("time", "Telling time")] },
     { grade: "2", subject: "language", units: [unit("rhyme", "Rhymes")] },
     { grade: "2", subject: "science", units: [unit("plants", "Plants")] },
   ];
@@ -22,6 +28,7 @@ const h = vi.hoisted(() => {
     courses,
     go: vi.fn(),
     units: {} as Record<string, unknown>,
+    skills: {} as Record<string, unknown>,
     speedBest: {} as Record<string, number>,
     settings: { enabledSubjects: ["math", "language"] } as Record<string, unknown>,
     premium: true,
@@ -56,7 +63,7 @@ vi.mock("@/lib/store", () => ({
   useActiveProfile: () => ({ id: "p1", name: "Ava", grade: "2", framework: "ca-bc", companion: "ollie" }),
   useChildSettings: () => h.settings,
   useSubjectGrades: () => ({}),
-  useDerived: () => ({ units: h.units, speedBest: h.speedBest, level: 1, dailyDone: h.dailyDone }),
+  useDerived: () => ({ units: h.units, skills: h.skills, speedBest: h.speedBest, level: 1, dailyDone: h.dailyDone }),
 }));
 vi.mock("@/lib/remoteFlags", () => ({ useIsOn: () => (key: string) => !h.off.has(key), useFlag: (key: string) => !h.off.has(key) }));
 vi.mock("@/lib/useNow", () => ({ useNow: () => h.now }));
@@ -79,6 +86,7 @@ const tile = (title: string) => screen.getByText(title).closest("button")!;
 beforeEach(() => {
   vi.clearAllMocks();
   h.units = {};
+  h.skills = {};
   h.speedBest = {};
   h.settings = { enabledSubjects: ["math", "language"] };
   h.premium = true;
@@ -199,6 +207,25 @@ describe("UnitList", () => {
   it("renders nothing for a subject the grade doesn't have", () => {
     const { container } = inBand("middle", <UnitList subject="social" />);
     expect(container).toBeEmptyDOMElement();
+  });
+
+  it("lists a unit's skills in the dialog, with the child's own numbers, and practises one on its own", () => {
+    h.units = { "2/math/sub": stat(10, 8) };
+    h.skills = { "2/math/sub/take-away": { attempts: 6, firstTry: 5 } };
+    inBand("big", <UnitList subject="math" />);
+    fireEvent.click(tile("Subtracting"));
+    const dialog = screen.getByRole("dialog", { name: /Subtracting/ });
+    expect(within(dialog).getByText("Practise one skill")).toBeInTheDocument();
+    expect(within(dialog).getByText("5 of 6 right on the first try")).toBeInTheDocument();
+    expect(within(dialog).getByText("How far apart")).toBeInTheDocument();
+    fireEvent.click(within(dialog).getByRole("button", { name: /Finding the difference/ }));
+    expect(h.go).toHaveBeenCalledWith("/session", { mode: "practice", scope: "2/math/sub", skill: "difference" });
+  });
+
+  it("shows no skills list for a unit without skills", () => {
+    inBand("big", <UnitList subject="math" />);
+    fireEvent.click(tile("Adding"));
+    expect(screen.queryByText("Practise one skill")).not.toBeInTheDocument();
   });
 
   it("older kids see their level and how to grow before choosing Practice", () => {

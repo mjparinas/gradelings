@@ -116,6 +116,8 @@ export interface Derived {
   stories: Record<string, { reads: number; best: number; questions: number; lastT: number }>;
   /** Math facts answered, by fact id ("mul:7:8"). Fact answers count as math practice but never as a unit. */
   facts: Record<string, FactStat>;
+  /** Answers by skill, keyed "<unit key>/<skill id>": how many, and how many were right on the first try. Skills are practice inside a unit, so these never change a unit's level. */
+  skills: Record<string, { attempts: number; firstTry: number }>;
   /** Mystery boxes opened, by the lesson (session event id) they came with, and on which day. */
   mysteries: Record<string, string>;
   /** Surprise stickers found in mystery boxes, by sticker id, with how many of each. */
@@ -183,6 +185,7 @@ export function derive(events: AppEvent[], now = Date.now()): Derived {
     reading: [],
     stories: {},
     facts: {},
+    skills: {},
     secrets: [],
     mysteries: {},
     surprises: {},
@@ -204,6 +207,11 @@ export function derive(events: AppEvent[], now = Date.now()): Derived {
           f.recent.push(e.correct);
           if (f.recent.length > 4) f.recent.shift();
           f.lastT = e.t;
+        }
+        if (e.skill && !e.fact) {
+          const sk = (d.skills[`${e.unit}/${e.skill}`] ??= { attempts: 0, firstTry: 0 });
+          sk.attempts++;
+          if (e.correct) sk.firstTry++;
         }
         // A fact isn't a unit: it has no level, lesson list entry or report-card row.
         const u = e.fact ? newUnitStat(e.unit) : (d.units[e.unit] ??= newUnitStat(e.unit));
