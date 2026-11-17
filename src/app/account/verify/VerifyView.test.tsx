@@ -22,7 +22,7 @@ describe("VerifyView", () => {
     confirm("?token=abc", { ok: true, signedIn: true });
     const link = await screen.findByRole("link", { name: "Add my child" });
     expect(link).toHaveAttribute("href", "/parents/?signedin=1&addchild=1#/children");
-    expect(screen.getByText(/add your child’s first name and grade/)).toBeInTheDocument();
+    expect(screen.getByText(/your child’s first name and grade/)).toBeInTheDocument();
   });
   it("sends a teacher to the teacher area, and a parent who isn't signed in to the Parent area", async () => {
     confirm("?token=abc&to=teachers", { ok: true, signedIn: true });

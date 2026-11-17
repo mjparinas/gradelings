@@ -6,7 +6,9 @@ import { query, run } from "./db";
 // kept. Both are deleted with the family (`deleteFamilyData`).
 
 const DAY = 86_400_000;
-const COLUMN: Record<AppKind, string> = { web: "app_web_at", android: "app_android_at", ios: "app_ios_at" };
+const COLUMN = { web: "app_web_at", android: "app_android_at", ios: "app_ios_at" } as const satisfies Record<AppKind, string>;
+/** The family column that holds when each kind of app last synced. */
+export const APP_COLUMN = COLUMN;
 
 /** The kind of app a request came from; anything unexpected is the web. */
 export function appOf(req: Request): AppKind {
@@ -14,8 +16,12 @@ export function appOf(req: Request): AppKind {
   return v === "android" || v === "ios" ? v : "web";
 }
 
-/** Notes that this family synced from this kind of app, at most twice a day. */
-export async function recordApp(familyId: string, app: AppKind, now = Date.now()): Promise<void> {
+/**
+ * Notes that this family synced from this kind of app, at most twice a day. A caller that already read the family's row
+ * passes the last note (`lastNoted`), so a note made in the last half day costs no query at all.
+ */
+export async function recordApp(familyId: string, app: AppKind, now = Date.now(), lastNoted?: number | null): Promise<void> {
+  if (lastNoted != null && Number(lastNoted) >= now - DAY / 2) return;
   const col = COLUMN[app];
   await run(`UPDATE families SET ${col} = ? WHERE id = ? AND COALESCE(${col}, 0) < ?`, [now, familyId, now - DAY / 2]);
 }

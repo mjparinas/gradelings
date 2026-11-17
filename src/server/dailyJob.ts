@@ -437,6 +437,7 @@ async function weeklyReports(ctx: Ctx): Promise<boolean> {
           month: month && { minutes: Math.round(month.totals.minutes), answers: month.totals.answers, previousAnswers: month.previous.answers, activeDays: month.totals.activeDays },
           minutes: Math.round(t.minutes),
           answers: t.answers,
+          days: t.activeDays,
           accuracy: t.answers ? Math.round((t.correct / t.answers) * 100) : null,
           strength: r.report.strengths[0]?.ref.unit.title,
           next: next?.unit.title,

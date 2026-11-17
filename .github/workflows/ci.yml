@@ -31,7 +31,7 @@ jobs:
   # Every push to main or staging runs everything.
   changes:
     name: What changed
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 5
     permissions:
       contents: read
@@ -74,7 +74,7 @@ jobs:
     name: Types, lint and audit
     needs: changes
     if: needs.changes.outputs.code == 'true'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v7
@@ -115,7 +115,7 @@ jobs:
     name: Unit and content tests · ${{ matrix.shard }}
     needs: changes
     if: needs.changes.outputs.code == 'true'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     strategy:
       fail-fast: false
@@ -145,7 +145,7 @@ jobs:
   coverage:
     name: Unit test coverage
     needs: unit
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     permissions:
       contents: read
@@ -194,7 +194,7 @@ jobs:
     name: Build
     needs: changes
     if: needs.changes.outputs.code == 'true'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     # The build alone took about 14 minutes by late October 2026 (each state adds pages), so 15 cancelled it.
     timeout-minutes: 25
     env:
@@ -259,7 +259,7 @@ jobs:
     # Pull requests only: a merge to main already passed these, so main keeps just types, lint,
     # unit tests and the build (which saves the Next cache) to save Actions minutes.
     if: github.event_name == 'pull_request' && needs.changes.outputs.ui == 'true'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     container:
       image: mcr.microsoft.com/playwright:v1.56.1-noble
@@ -302,7 +302,7 @@ jobs:
     name: Browser · ${{ matrix.name }}
     needs: [changes, build]
     if: github.event_name == 'pull_request' && needs.changes.outputs.ui == 'true'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     strategy:
       fail-fast: false
@@ -362,7 +362,7 @@ jobs:
     name: CI passed
     needs: [changes, static, unit, coverage, build, devices, browser]
     if: always()
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Every job succeeded
         run: |

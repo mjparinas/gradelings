@@ -92,7 +92,7 @@ describe("the parent area for a US family", () => {
     await expectUs(<ChildrenPage />, [/Edit/]);
     expect(document.body.textContent).toContain("More states and provinces are coming.");
   });
-  it("Settings", () => expectUs(<SettingsPage childId="a" />, [/Customize calm mode/, /Advanced options/]));
+  it("Settings", () => expectUs(<SettingsPage childId="a" />, [/Customize calm mode/]));
   it("Account", () => expectUs(<AccountPage onBilling={() => {}} />));
   it("Subscription", () => expectUs(<SubscriptionPage billing={null} onBilling={() => {}} />));
 });

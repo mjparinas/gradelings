@@ -89,10 +89,20 @@ function ChildCard({ p }: { p: Profile }) {
         </div>
       </dl>
       <Homework p={p} />
-      <FamilyGoal p={p} />
-      <FocusUnit p={p} />
-      <GoalPlanCard p={p} />
-      <RewardGoal p={p} />
+      <details className="group mt-4 rounded-xl border-2 border-line">
+        <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-3 px-4 font-semibold">
+          🤝 Ways to help (optional)
+          <span aria-hidden="true" className="transition-transform group-open:rotate-180">
+            ▾
+          </span>
+        </summary>
+        <div className="px-4 pb-4">
+          <FamilyGoal p={p} />
+          <FocusUnit p={p} />
+          <GoalPlanCard p={p} />
+          <RewardGoal p={p} />
+        </div>
+      </details>
       <HelpAsks p={p} />
       <VideoHelpCard p={p} />
       <ul className="mt-4 flex flex-col gap-2">
