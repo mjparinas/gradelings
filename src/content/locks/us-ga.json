@@ -385,7 +385,7 @@
       "sound-4 text=24283223b2 std=f7ca41c8fd q=c739a07614",
       "forces-3 text=0bd2fdec81 std=859e583a58 q=85a9f000a8",
       "motion-4 text=b659c66c13 std=a93bcd426a q=60d6cae08c",
-      "ga-g4-seasons-moon text=7fb41290f3 std=d1341b821f q=cf21140c82",
+      "ga-g4-seasons-moon text=7fb41290f3 std=d1341b821f q=1ce4b96400",
       "ga-g4-weather-climate text=ea09681457 std=d5a66e2105 q=96c61f4474",
       "ga-g4-food-webs text=db36499d76 std=95f3d97d58 q=ce7854172d"
     ]
@@ -461,11 +461,11 @@
       "grouping-living-things text=f53578ada2 std=9d43cf2952 q=6d40145ec2",
       "tx-g5-behavior text=11aae22792 std=6028b67321 q=0fab1a5b73",
       "wa-g3-traits text=a8d47bae91 std=16410a429b q=7f51ce104b",
-      "wa-g6-cells text=dda472f3bf std=740a6e52c0 q=23e69bce93",
+      "wa-g6-cells text=dda472f3bf std=740a6e52c0 q=0b5f935db7",
       "pe-microbes-arthropods-6 text=ac7aef41f7 std=d6fec88568 q=f724e238ca",
       "matter-changes-5 text=3b4d86e7a6 std=280159a727 q=d36ded63b1",
       "changes-of-state-5 text=6362dca38a std=cc8775de45 q=efad7b203d",
-      "tx-g5-circuits text=24da9234dd std=7daad4ce32 q=ba4188b00b",
+      "tx-g5-circuits text=24da9234dd std=7daad4ce32 q=195fd76022",
       "pe-electromagnets-6 text=69a317c164 std=33e1ac8129 q=93f13070e2",
       "ga-g5-landforms text=8050d5e7fc std=e5b869059b q=278b7d80de",
       "ga-g5-static-charge text=c603fb57c3 std=75dff387aa q=98920cefc2"
@@ -549,7 +549,7 @@
       "tx-g6-earth-systems text=9aa0271c8d std=aac7590b44 q=411cb8438d",
       "rock-cycle text=c0862523ac std=5924580da1 q=6a0197b296",
       "tx-g6-resources text=7e5172964d std=50a6b80af4 q=7053aa8394",
-      "ga-g6-seasons-tides text=69acd403c5 std=d107b43c2d q=e9a80a2de6",
+      "ga-g6-seasons-tides text=69acd403c5 std=d107b43c2d q=053f29c39b",
       "ga-g6-water text=92b23adc8d std=f824c319b3 q=df62c80a37",
       "ga-g6-atmosphere text=7858462eff std=68b1ba453c q=6e05e4a328",
       "ga-g6-weather text=7eeaec8985 std=f020a8c92b q=cef5c2419e",
@@ -628,7 +628,7 @@
     "overview": "650a7be9dc",
     "units": [
       "classifying-life-6 text=57a398f1e5 std=4f11cc0154 q=4385a5bcec",
-      "wa-g6-cells text=fa8ea2c4ff std=48ed775b3b q=23e69bce93",
+      "wa-g6-cells text=fa8ea2c4ff std=48ed775b3b q=0b5f935db7",
       "cells-diffusion-ab text=caaea79aff std=04aef524fb q=650ba01e94",
       "body-systems text=982982e155 std=42f43b794a q=aa5f3b59c6",
       "wa-g8-heredity text=023de89543 std=605a0206ea q=0889381c05",
@@ -719,7 +719,7 @@
       "light-and-radiation text=9e640798cf std=2845aaacfb q=9cc1a70761",
       "tx-g6-energy-waves text=be0596c737 std=582691dbcf q=a05cbb60ba",
       "wa-g8-fields text=8fbd720783 std=c7ff381077 q=603f693f54",
-      "circuits-and-static text=b28ece42b0 std=b0a1f79539 q=b84f825935"
+      "circuits-and-static text=b28ece42b0 std=b0a1f79539 q=a01cfadf82"
     ]
   },
   "8/social": {

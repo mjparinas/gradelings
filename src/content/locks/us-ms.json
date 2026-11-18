@@ -391,7 +391,7 @@
       "body-teamwork-5 text=5c2aeae559 std=83a0bb9b22 q=4d7ce7c7fe",
       "life-cycles text=703995c5bc std=12e6cf34df q=d572e2d150",
       "thermal-energy text=516d83db67 std=019677c98a q=81ea9d1783",
-      "tx-g5-circuits text=24da9234dd std=44b949c745 q=ba4188b00b",
+      "tx-g5-circuits text=24da9234dd std=44b949c745 q=195fd76022",
       "light-4 text=0325e91432 std=8e8edd7df8 q=d397d48c7f",
       "sound-4 text=24283223b2 std=2e2c4f2cd8 q=c739a07614",
       "water-world text=95b22346ac std=ac193102b4 q=4d72b823d5",
@@ -563,7 +563,7 @@
       "newtons-laws text=22bc06c840 std=fcb4e7ef7e q=2ebfc6b71c",
       "forces-at-work text=5f5393489c std=fd3a8c55fc q=4430fad17e",
       "solar-system text=6be0e2dfe8 std=d1510f5878 q=ec7758be5b",
-      "wa-g6-cells text=dda472f3bf std=04cdb1c59a q=23e69bce93",
+      "wa-g6-cells text=dda472f3bf std=04cdb1c59a q=0b5f935db7",
       "classifying-life-6 text=f18d17f8bb std=ead0f0d655 q=4385a5bcec",
       "biodiversity-6 text=f70b649728 std=1f15cbe751 q=1a96e551d4",
       "tx-g6-organisms text=b479cc660a std=1a88292ffd q=0aedcfd02b",
@@ -658,7 +658,7 @@
       "chemical-change-ab text=89d7e56152 std=b591ced1e3 q=16a95d55f4",
       "heat-transfer-7 text=ed13580dc2 std=c7ff89edeb q=0a19dcf82f",
       "ms-g7-climate text=530efde9bc std=a730d19609 q=3163c14dd0",
-      "ms-g7-seasons-tides text=69acd403c5 std=37bbb0c9c4 q=36d1c980df"
+      "ms-g7-seasons-tides text=69acd403c5 std=37bbb0c9c4 q=975241c011"
     ]
   },
   "7/social": {

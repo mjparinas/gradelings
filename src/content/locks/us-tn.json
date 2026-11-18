@@ -651,8 +651,8 @@
       "wa-g7-reactions text=ab228d4e77 std=98cee243ae q=cfd3d54d6f",
       "particles-heat-ab text=6901bc2124 std=19afe90026 q=26cfcc3a0f",
       "ca-g7-food-molecules text=e1df7f815c std=3cd6ada069 q=bcca467e71",
-      "cells-and-life text=26001b2c5a std=d29f3cf234 q=fcae7914fa",
-      "wa-g6-cells text=fa8ea2c4ff std=fb2cc09774 q=23e69bce93",
+      "cells-and-life text=26001b2c5a std=d29f3cf234 q=a094ada7e9",
+      "wa-g6-cells text=fa8ea2c4ff std=fb2cc09774 q=0b5f935db7",
       "body-systems text=982982e155 std=4165933e13 q=aa5f3b59c6",
       "wa-g8-heredity text=023de89543 std=4b8d0e733f q=0889381c05",
       "photosynthesis-respiration-9 text=aa7d1dc3bb std=7c272b2f9d q=a8703c2a22",
@@ -837,7 +837,7 @@
       "wa-g9-motion text=322c25c859 std=1757da12b0 q=47e7cd3e9b",
       "ca-g9-energy-systems text=fc350795a3 std=f9bce3840a q=89f3453fe5",
       "ca-g9-waves text=a90a3b2cdf std=47a48746a7 q=5707fc5952",
-      "electric-current text=2c145f84d8 std=0c55dd0a32 q=7692c8ff45",
+      "electric-current text=2c145f84d8 std=0c55dd0a32 q=5b1b6f1973",
       "photosynthesis-respiration-9 text=aa7d1dc3bb std=f5fb539051 q=a8703c2a22",
       "tn-g9-ecosystems text=907d2fde23 std=4627997fd8 q=03b6ca0c3c"
     ]

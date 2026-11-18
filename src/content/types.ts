@@ -2,6 +2,7 @@
 // units carry learning-standard text per framework (e.g. "ca-bc"), and the
 // scoring scheme and report-card language live with the framework.
 
+import type { Diagram } from "./diagrams/types";
 import type { MapVisual } from "./mapVisual";
 import type { Currency } from "./money";
 import type { RegisteredId } from "./registry";
@@ -96,6 +97,8 @@ export type Visual =
   | { type: "grid"; size: number; min?: number; points: { x: number; y: number; label?: string }[] }
   /** An angle drawn with two rays. */
   | { type: "angle"; degrees: number }
+  /** A science drawing (circuit, cell, Moon orbit, seasons, day and night). `label` describes it for screen readers. */
+  | { type: "diagram"; diagram: Diagram; label: string }
   /** A circle graph; each sector's size follows its `value`, and `show` (default: nothing) is a second line written on it. */
   | { type: "circleGraph"; title?: string; sectors: { label: string; value: number; show?: string }[] }
   /** A line plot: a stack of X's above each label on a number line. */

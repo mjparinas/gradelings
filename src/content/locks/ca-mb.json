@@ -566,7 +566,7 @@
     "overview": "b79a9584c3",
     "units": [
       "mb-matter-changes-5 text=093f3bd91e std=aeef605c16 q=362986c134",
-      "mb-cells-5 text=f034106d42 std=2d92693add q=c83c444c93",
+      "mb-cells-5 text=f034106d42 std=2d92693add q=bc4f5c2480",
       "digestion-and-breathing text=bed5d3e98c std=df499d8158 q=54a0769e97",
       "heart-bones-muscles text=f69ade8e4b std=05b97edbd7 q=ba4397e8f6",
       "mb-friction-5 text=4b0e2e03e9 std=9198a6808e q=4931ca8854",
@@ -677,9 +677,9 @@
       "mb-buoyancy text=f72525f4f1 std=a90b329bde q=4e81e75469",
       "flight-6 text=11653360ba std=6ea8c7a58a q=6c940cc325",
       "mb-stored-energy text=964087dd5f std=b46246b492 q=c71f816ca3",
-      "circuits-6 text=27c1c49ae7 std=9e05915866 q=075569a1ba",
+      "circuits-6 text=27c1c49ae7 std=9e05915866 q=b13f95ae26",
       "mb-electrical-safety text=136826cc4f std=8369c6186f q=043d4fa86f",
-      "earth-moon-sun-6 text=c2c46cb4eb std=f6c107be68 q=cdd9a703f4",
+      "earth-moon-sun-6 text=c2c46cb4eb std=f6c107be68 q=e8ec6a4bf9",
       "galaxies-and-space text=a968869b94 std=bf58370b47 q=c47b6e7282",
       "mb-heredity-and-fossils text=c4bf10e43b std=963be9f893 q=5d60368acb",
       "classifying-life-6 text=f18d17f8bb std=51db7f4e40 q=c30b8171b9",
@@ -911,7 +911,7 @@
   "8/science": {
     "overview": "7360f3cfb7",
     "units": [
-      "cells-and-life text=26001b2c5a std=477777c271 q=27792065ca",
+      "cells-and-life text=26001b2c5a std=477777c271 q=b0668a2287",
       "mb-circulatory-8 text=d29cd1bb2f std=793e0edfb8 q=8cc89d8cdb",
       "particles-and-matter text=b03be68ce0 std=8839dd60de q=2a50bf2bae",
       "density-buoyancy-8 text=44abadf5f7 std=6b6e3a1dba q=e8b7d870a3",
@@ -1042,7 +1042,7 @@
       "reproduction text=d702789bd4 std=b81a8766a8 q=c9637838d5",
       "atoms-and-electrons text=5dc2e26422 std=d1f23a88ca q=157481b107",
       "bonding-and-reactions text=8a0ea04bc7 std=b2096f4b0b q=05ec43f844",
-      "electric-current text=2c145f84d8 std=81a4f53470 q=7692c8ff45",
+      "electric-current text=2c145f84d8 std=81a4f53470 q=5b1b6f1973",
       "periodic-table-9 text=d006b85cec std=025a1eb91b q=0f98494808",
       "compounds-9 text=e809c7578c std=c1b1c7ab4f q=799a9bf54a",
       "static-charges-9 text=9a9172f3c2 std=216f50f6e3 q=20a1a92678",

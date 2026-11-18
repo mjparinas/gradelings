@@ -821,7 +821,7 @@
       "density-buoyancy-8 text=44abadf5f7 std=67c0a4c2d9 q=e8b7d870a3",
       "pressure-pascal-8 text=61b1e34882 std=bcd6db5ee5 q=bbd1e7ea70",
       "hydraulics-pneumatics-8 text=fff24439f8 std=d7501573dc q=aa7591aa2a",
-      "cells-and-life text=26001b2c5a std=ee2b109478 q=27792065ca",
+      "cells-and-life text=26001b2c5a std=ee2b109478 q=b0668a2287",
       "cells-organisms-8 text=f2fabcc119 std=b41b865591 q=16a9b7cb2d",
       "cells-diffusion-ab text=caaea79aff std=91fbd3f88f q=650ba01e94",
       "systems-8 text=44122ab3da std=3b78393b3f q=c8b9f9ac62",
@@ -932,7 +932,7 @@
       "chemical-change-ab text=1ca1c45de5 std=1fea341ad6 q=7a00ce3609",
       "environmental-chemistry-ab text=439190f7df std=91067b7d5f q=6313c133fe",
       "static-charges-9 text=9a9172f3c2 std=d8dde43d97 q=20a1a92678",
-      "circuits-9 text=0dda7abf25 std=a6502dcbf4 q=1788d5792b",
+      "circuits-9 text=0dda7abf25 std=a6502dcbf4 q=bf08183eb5",
       "electrical-energy-9 text=eecdad56b2 std=7cd2cd4b0e q=7309de70ac",
       "space-exploration-ab text=08c6f716e8 std=1a083980a5 q=7f91fc8e49"
     ]
