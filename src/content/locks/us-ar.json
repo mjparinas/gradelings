@@ -519,7 +519,7 @@
     "overview": "18b7a5f6ca",
     "units": [
       "body-systems text=c3cee90dd9 std=3e6aa60b5e q=aa5f3b59c6",
-      "wa-g6-cells text=dda472f3bf std=2955b3e7eb q=23e69bce93",
+      "wa-g6-cells text=dda472f3bf std=2955b3e7eb q=0b5f935db7",
       "nb-senses-6 text=d61db8792b std=1de47caa1c q=7e37816267",
       "plant-parts-ab text=394b7ee530 std=7a91c8dff8 q=8526f00423",
       "tx-g7-reproduction text=6239fc4f45 std=b2246214ec q=4d020b17b8",
@@ -689,7 +689,7 @@
       "wa-g8-selection text=9af384fbd6 std=53ca13f231 q=a225d53251",
       "tx-g7-solar-system text=3b62f9c7f1 std=e53d3e6548 q=2473ef744e",
       "ar-g8-earth-history text=24347fc92b std=aabd045da2 q=0ab1d2757b",
-      "ar-g8-seasons-tides text=69acd403c5 std=0d26016466 q=f3c0717bb7"
+      "ar-g8-seasons-tides text=69acd403c5 std=0d26016466 q=6069edf639"
     ]
   },
   "8/social": {

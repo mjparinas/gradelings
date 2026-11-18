@@ -372,7 +372,7 @@
       "particles-and-mass text=b7a56fdf7c std=ae81339517 q=1745c08cfe",
       "phase-changes text=96714d7854 std=e9f8781b78 q=7a4697d639",
       "wind-water-ice text=ff3cee9a99 std=2e61a78eb0 q=504bb4b1a1",
-      "circuits-6 text=27c1c49ae7 std=ef01bb9432 q=075569a1ba",
+      "circuits-6 text=27c1c49ae7 std=ef01bb9432 q=b13f95ae26",
       "mb-adaptations text=cbf3ba863e std=0d9d341c20 q=817498c8a7",
       "habitats-4 text=86e00e93be std=69719d8b0b q=a0f6d1fb4f",
       "wa-g4-energy-motion text=b3e9a355c7 std=548244d6b8 q=1c3f0bf823",
@@ -536,7 +536,7 @@
       "mb-stored-energy text=d781d845f3 std=785804fa87 q=c71f816ca3",
       "wa-g8-energy text=655dfe6f3b std=78191d23e5 q=cdf3dadeb8",
       "tx-g7-motion text=037d86fb35 std=19a0425949 q=e30d827982",
-      "wa-g6-cells text=dda472f3bf std=5dc3973cca q=23e69bce93",
+      "wa-g6-cells text=dda472f3bf std=5dc3973cca q=0b5f935db7",
       "cells-diffusion-ab text=caaea79aff std=a771fa24b0 q=650ba01e94",
       "oh-g6-rock-cycle text=035c7df1ee std=5f99a9bd83 q=c4942c2979"
     ]
@@ -622,7 +622,7 @@
       "ecosystems-7 text=7f94e0036b std=d8935992b7 q=041251a723",
       "oh-g7-weather text=6f4e1fb17e std=83c147c8d6 q=78aec43c84",
       "oh-g7-climate text=bb5e46a94f std=8f463ca3fd q=135482b4c5",
-      "oh-g7-seasons-tides text=e2dbf239b5 std=ee11566394 q=f711b093e0",
+      "oh-g7-seasons-tides text=e2dbf239b5 std=ee11566394 q=df1a6db97c",
       "oh-g7-water text=8eca3bdac2 std=7b01bdf6b0 q=72f8d9c7dc"
     ]
   },
@@ -794,7 +794,7 @@
       "reproduction text=d702789bd4 std=77314dc57b q=c9637838d5",
       "atoms-and-electrons text=5dc2e26422 std=4d0b3d743a q=77c28ee671",
       "bonding-and-reactions text=8a0ea04bc7 std=00a0a10355 q=05ec43f844",
-      "electric-current text=2c145f84d8 std=a3b86fa53f q=7692c8ff45",
+      "electric-current text=2c145f84d8 std=a3b86fa53f q=5b1b6f1973",
       "periodic-table-9 text=d006b85cec std=27e77739c8 q=0f98494808",
       "wa-g9-motion text=322c25c859 std=ecc5988ceb q=47e7cd3e9b",
       "ca-g9-dna-proteins text=84bb9cac1c std=f7020b0c59 q=4575b20e9f",

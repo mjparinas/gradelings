@@ -398,7 +398,7 @@
       "mb-weather-5 text=db26ca3367 std=3aa6e5329f q=9936aa0e30",
       "solar-system text=6be0e2dfe8 std=777a919dda q=a095f63422",
       "space-and-sky-ab text=73ebd57620 std=8b567600de q=54093d0634",
-      "va-g4-seasons-moon text=b77f88a645 std=33e0101988 q=513e56b071",
+      "va-g4-seasons-moon text=b77f88a645 std=33e0101988 q=ea30c08deb",
       "va-g4-ocean text=66cc226d0d std=cab428b19a q=aa45a12c24",
       "va-g4-virginia-resources text=580e8fad08 std=b0f1d774de q=c32cd49ee7"
     ]
@@ -475,7 +475,7 @@
       "forms-of-energy-5 text=e8c7847195 std=ea05df1732 q=14fd59ea5d",
       "mb-friction-5 text=4b0e2e03e9 std=69a22253ae q=ae88ee99eb",
       "wa-g4-energy-motion text=b3e9a355c7 std=b4a95ef3c7 q=1c3f0bf823",
-      "tx-g5-circuits text=24da9234dd std=ab63074375 q=ba4188b00b",
+      "tx-g5-circuits text=24da9234dd std=ab63074375 q=195fd76022",
       "pe-electromagnets-6 text=69a317c164 std=761c7d5ad0 q=93f13070e2",
       "sound-4 text=690c6ddd16 std=f06f289949 q=c739a07614",
       "light-4 text=0325e91432 std=8ecc69403e q=d397d48c7f",
@@ -565,7 +565,7 @@
       "mixtures text=1f68b1ad4d std=103e218b09 q=36dfdadbba",
       "ny-g6-weather text=5d85d818f3 std=9b4795efa6 q=de1b8bf344",
       "tx-g6-resources text=7e5172964d std=059ac83492 q=7053aa8394",
-      "va-g6-seasons-tides text=15918086aa std=834baeeec8 q=d7d337ef1d",
+      "va-g6-seasons-tides text=15918086aa std=834baeeec8 q=fe31a0f5b0",
       "va-g6-watersheds text=ae43596af3 std=143c10bd26 q=8ae461eaa2"
     ]
   },
@@ -639,7 +639,7 @@
   "7/science": {
     "overview": "2ca52f7ef8",
     "units": [
-      "wa-g6-cells text=fa8ea2c4ff std=36c48d1579 q=23e69bce93",
+      "wa-g6-cells text=fa8ea2c4ff std=36c48d1579 q=0b5f935db7",
       "cells-diffusion-ab text=caaea79aff std=4f410d257e q=650ba01e94",
       "body-systems text=982982e155 std=2dc5d44c61 q=aa5f3b59c6",
       "classifying-life-6 text=57a398f1e5 std=ec3fb8d063 q=4385a5bcec",
@@ -731,7 +731,7 @@
       "tx-g7-motion text=037d86fb35 std=7f1ddb8a00 q=e30d827982",
       "newtons-laws text=82d3736748 std=dfa51d9ecb q=de7396dbf8",
       "wa-g8-fields text=8fbd720783 std=2a1e0006c7 q=603f693f54",
-      "circuits-and-static text=b28ece42b0 std=35ebc6fd22 q=b84f825935"
+      "circuits-and-static text=b28ece42b0 std=35ebc6fd22 q=a01cfadf82"
     ]
   },
   "8/social": {

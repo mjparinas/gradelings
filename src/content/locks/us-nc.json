@@ -384,7 +384,7 @@
       "gravity-and-magnets-ab text=96c6e676b6 std=a80a354154 q=7138543197",
       "pe-magnets-static-3 text=529efabca0 std=857b8a88fe q=f510787860",
       "forms-of-energy-5 text=e8c7847195 std=c2ba5b652b q=14fd59ea5d",
-      "tx-g5-circuits text=24da9234dd std=c63fa20e19 q=ba4188b00b",
+      "tx-g5-circuits text=24da9234dd std=c63fa20e19 q=195fd76022",
       "light-4 text=0325e91432 std=43e0d63b30 q=d397d48c7f",
       "pe-adaptations-4 text=36f8c10f05 std=f6b07d57ff q=839db902ab",
       "sense-and-respond text=242c1a356d std=b9c491e8b9 q=3ae7716502",
@@ -396,7 +396,7 @@
       "habitats-4 text=86e00e93be std=2a15a69e91 q=a0f6d1fb4f",
       "tx-g5-conservation text=72bfee10bd std=9383e32fab q=b8c301b7e2",
       "nc-g4-earth-changes text=ba573c3e89 std=95f539458a q=0ce59ba1d6",
-      "nc-g4-earth-and-moon text=7547423830 std=59c5896062 q=534dcb7ffd"
+      "nc-g4-earth-and-moon text=7547423830 std=59c5896062 q=90696faf22"
     ]
   },
   "4/social": {
@@ -567,7 +567,7 @@
       "density-buoyancy-8 text=c2491145a6 std=5d265e44dc q=f407b6c023",
       "heat-transfer-7 text=ed13580dc2 std=4935738a3d q=0a19dcf82f",
       "wa-g6-thermal text=fa4c935e2b std=9a1442c8a3 q=369cdfaaee",
-      "circuits-6 text=27c1c49ae7 std=a3a615df97 q=075569a1ba",
+      "circuits-6 text=27c1c49ae7 std=a3a615df97 q=b13f95ae26",
       "tx-g6-energy-waves text=0b96d9f9a4 std=62aa6ff095 q=a05cbb60ba",
       "light-and-radiation text=9e640798cf std=bf7a90480b q=9cc1a70761",
       "sound-4 text=690c6ddd16 std=9a05398bbe q=c739a07614",
@@ -581,7 +581,7 @@
       "rock-cycle text=c0862523ac std=7bf2a2c61a q=6a0197b296",
       "tx-g6-resources text=7e5172964d std=d8504036f1 q=7053aa8394",
       "nc-g6-plate-tectonics text=1695a6ff41 std=fbec9f016f q=23ab215f23",
-      "nc-g6-earth-moon-sun text=a36c06c44e std=4fce1eec21 q=1b0a0273df"
+      "nc-g6-earth-moon-sun text=a36c06c44e std=4fce1eec21 q=037435478d"
     ]
   },
   "6/social": {
@@ -663,7 +663,7 @@
       "nb-motion-forces-8 text=a3e4ee29f0 std=24e23f5525 q=4f1a481301",
       "wa-g8-energy text=655dfe6f3b std=2b38042336 q=cdf3dadeb8",
       "work-energy-8 text=6af421d21c std=1382826b40 q=db86881bac",
-      "cells-and-life text=26001b2c5a std=0204914cfc q=fcae7914fa",
+      "cells-and-life text=26001b2c5a std=0204914cfc q=a094ada7e9",
       "cells-diffusion-ab text=caaea79aff std=d75114c256 q=650ba01e94",
       "body-systems text=982982e155 std=ad63cd71a0 q=aa5f3b59c6",
       "wa-g8-heredity text=023de89543 std=6f7727efd3 q=0889381c05",
@@ -858,7 +858,7 @@
       "chemical-change-ab text=89d7e56152 std=727bf39756 q=16a95d55f4",
       "ca-g9-nuclear text=ee6db6429d std=f8826f6e06 q=2b8539412b",
       "wa-g9-motion text=322c25c859 std=1a359d5819 q=47e7cd3e9b",
-      "circuits-9 text=0dda7abf25 std=fa03208cc9 q=1788d5792b",
+      "circuits-9 text=0dda7abf25 std=fa03208cc9 q=bf08183eb5",
       "ca-g9-energy-systems text=fc350795a3 std=40404dfffc q=89f3453fe5",
       "ca-g9-structure-materials text=8bf27446b7 std=9c8035365c q=e5eeea39f0",
       "static-charges-9 text=9a9172f3c2 std=2499a6e69d q=20a1a92678",

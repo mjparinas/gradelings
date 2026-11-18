@@ -4,6 +4,7 @@ import type { ShapeName, Visual } from "@/content/types";
 import { Compass, MoveDrawing, PlainFigureDrawing, Protractor, Thermometers } from "./figureVisuals";
 import { CircleGraph, LinePlot, PlotGraph, TreeDiagram } from "./graphVisuals";
 import { MapPicture } from "./mapVisuals";
+import { ScienceDiagram } from "./scienceDiagrams";
 
 const INK = "#253047";
 
@@ -959,6 +960,8 @@ export function QuestionVisual({ visual }: { visual: Visual }) {
       return <Compass facing={visual.facing} />;
     case "figure":
       return <PlainFigureDrawing figure={visual.figure} />;
+    case "diagram":
+      return <ScienceDiagram diagram={visual.diagram} label={visual.label} />;
     case "circleGraph":
       return <CircleGraph title={visual.title} sectors={visual.sectors} />;
     case "linePlot":
