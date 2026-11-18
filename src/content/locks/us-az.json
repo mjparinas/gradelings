@@ -569,7 +569,7 @@
       "central-tendency-ab text=b776821b16 std=7ce52c9f7b q=cc21b8662c",
       "wa-g7-signed-multiply text=61c895d791 std=be93fd1eca q=d7c2440ec8",
       "wa-g7-proportional text=c11cf565b3 std=c0f5c12dfb q=f13197f7aa",
-      "wa-g7-angles text=73a7a5215c std=d2a793137d q=b384ae13b6",
+      "wa-g7-angles text=73a7a5215c std=d2a793137d q=1c4acd8aaa",
       "wa-g7-sampling text=194eb9c3c2 std=efa29880a9 q=d8e6ffaf2a",
       "wa-g7-scale-drawings text=44f1660d4b std=e84de9a3af q=480f217aff"
     ]
@@ -634,12 +634,12 @@
     "units": [
       "squares-and-roots text=0c3411fb05 std=5d43fa0bc6 q=44906b78d6",
       "linear-equations text=1e22122340 std=54c70eeefc q=4ba669b446",
-      "pythagorean-theorem text=014e1086f2 std=32f925a41d q=99835d112c",
+      "pythagorean-theorem text=014e1086f2 std=32f925a41d q=bcc8d87763",
       "surface-area-volume text=96a6eb6597 std=f1e26f962f q=79cdef4798",
       "numbers-8 text=8bc8425026 std=42f95ff00e q=9e9e88cf93",
       "data-8 text=f67cb7cc17 std=9bc2e6b6b9 q=61afebfaea",
       "transformations-8 text=872e7f5b99 std=241555ef0b q=861609ebde",
-      "angles-8 text=899ecf6fe2 std=37fb87d179 q=547f9529ab",
+      "angles-8 text=899ecf6fe2 std=37fb87d179 q=f4e15bb736",
       "linear-relations-ab text=3ef9188889 std=e190fe12eb q=8f11287d9e",
       "bracket-equations-ab text=d802eb7882 std=13b8ed93e1 q=3719a7ef86",
       "congruence-ab text=2124f8bea5 std=8b527638a3 q=03cb70377c",

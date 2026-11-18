@@ -394,7 +394,7 @@
       "equations text=5aa54c6ad3 std=50bf59617f q=9d644407e2",
       "angles-and-area text=270704dc2f std=5117ca09af q=6c57d1d7dc",
       "polygons-and-perimeter text=1f1f7acbfe std=061dbd8aea q=0ca495ff7c",
-      "shapes-angles-ab text=eb5b40ff18 std=146b98e7d3 q=c939206948",
+      "shapes-angles-ab text=eb5b40ff18 std=146b98e7d3 q=14f5ac50bc",
       "metric-4 text=f6a50e7580 std=0853f47202 q=3c0130499c",
       "wa-g4-customary text=634a43f8dd std=15c1eec786 q=41050250e3",
       "wa-g4-line-plots text=ec0f6b9a41 std=5d4cc4e0fe q=87786a4f46",
@@ -669,7 +669,7 @@
       "linear-relations text=8a41482ba7 std=b8218dbee6 q=7b6550dbdf",
       "two-step-equations text=ddaa3cce54 std=8bea5eb30c q=4d67a1e779",
       "algebra-7 text=b1ecf615eb std=056cd9b41d q=775245a3a8",
-      "wa-g7-angles text=73a7a5215c std=674bae05de q=b384ae13b6",
+      "wa-g7-angles text=73a7a5215c std=674bae05de q=1c4acd8aaa",
       "tx-g7-tips-and-discounts text=2cd2dc170e std=93e944c566 q=6e5b656bbe",
       "tx-g7-budget-and-interest text=c7958dc88a std=d5d2ae0447 q=b49fcc8da8"
     ]
@@ -757,8 +757,8 @@
       "data-8 text=f67cb7cc17 std=ef8e3bc3ec q=61afebfaea",
       "wa-g8-round-volume text=46d3a6210c std=669b5fd375 q=7c06cc35b6",
       "surface-area-volume text=96a6eb6597 std=df49d1380a q=79cdef4798",
-      "pythagorean-theorem text=014e1086f2 std=15a8458e7b q=99835d112c",
-      "angles-8 text=899ecf6fe2 std=433c60422b q=547f9529ab",
+      "pythagorean-theorem text=014e1086f2 std=15a8458e7b q=bcc8d87763",
+      "angles-8 text=899ecf6fe2 std=433c60422b q=f4e15bb736",
       "wa-g8-systems text=b290721dd7 std=15ed9d1ee1 q=b5967231f6",
       "tx-g8-both-sides text=1fc7c22b29 std=3bcf181bf2 q=ec32347a59",
       "tx-g8-credit-and-saving text=e546b09fbf std=3b6b68051e q=0a45677d7b"

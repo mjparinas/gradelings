@@ -332,7 +332,7 @@
       "polygons-and-perimeter text=1f1f7acbfe std=b36d30f405 q=0ca495ff7c",
       "fractions-4 text=0e102ed1c5 std=82f2a8d49f q=61419c0a19",
       "angles-and-area text=270704dc2f std=e51e8165f7 q=6c57d1d7dc",
-      "ca-g4-measure-angles text=8423d9e6ff std=6bc7244aa4 q=2bab414715"
+      "ca-g4-measure-angles text=8423d9e6ff std=6bc7244aa4 q=6ab20b2a51"
     ]
   },
   "4/science": {
@@ -551,7 +551,7 @@
       "central-tendency-ab text=b776821b16 std=d070fb1024 q=cc21b8662c",
       "wa-g7-signed-multiply text=61c895d791 std=986847c8ec q=d7c2440ec8",
       "wa-g7-proportional text=c11cf565b3 std=881191afcb q=f13197f7aa",
-      "wa-g7-angles text=73a7a5215c std=fae0317391 q=b384ae13b6",
+      "wa-g7-angles text=73a7a5215c std=fae0317391 q=1c4acd8aaa",
       "wa-g7-sampling text=194eb9c3c2 std=a7be2b8dce q=d8e6ffaf2a",
       "ca-g7-rewrite-expressions text=a0c47c116e std=993505d712 q=f14bbf9812"
     ]
@@ -623,10 +623,10 @@
     "overview": "05ccf33d35",
     "units": [
       "linear-equations text=1e22122340 std=c2d8403fd9 q=4ba669b446",
-      "pythagorean-theorem text=014e1086f2 std=74026662ee q=99835d112c",
+      "pythagorean-theorem text=014e1086f2 std=74026662ee q=bcc8d87763",
       "numbers-8 text=8bc8425026 std=ab9c9b6726 q=9e9e88cf93",
       "transformations-8 text=872e7f5b99 std=d5d3267be1 q=861609ebde",
-      "angles-8 text=899ecf6fe2 std=6ab4c0f115 q=547f9529ab",
+      "angles-8 text=899ecf6fe2 std=6ab4c0f115 q=f4e15bb736",
       "linear-relations-ab text=3ef9188889 std=31763f903e q=8f11287d9e",
       "bracket-equations-ab text=d802eb7882 std=516723f9dc q=3719a7ef86",
       "congruence-ab text=2124f8bea5 std=98ed65ebec q=03cb70377c",
@@ -634,7 +634,7 @@
       "wa-g8-functions text=906e422768 std=8a6462519e q=b704358710",
       "wa-g8-slope text=5956a66b16 std=cb13af6af7 q=c9e5f2a915",
       "wa-g8-two-way-tables text=cfbbd30e3f std=bc158ae416 q=806c0ab1ec",
-      "ca-g8-similar-distance text=dd75991b3f std=b21756262c q=cf92cd38ac",
+      "ca-g8-similar-distance text=dd75991b3f std=b21756262c q=45852a3e03",
       "ca-g8-linear-models text=184aa29541 std=37b997822d q=75e8287d42"
     ]
   },

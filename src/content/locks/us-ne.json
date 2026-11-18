@@ -365,7 +365,7 @@
       "wa-g4-line-plots text=ec0f6b9a41 std=e0cba28717 q=87786a4f46",
       "wa-g4-times-as-many text=417e0833be std=37966b408c q=42781d57e4",
       "ca-g4-tenths-hundredths text=8f100be049 std=782a5591b2 q=d496ce3de8",
-      "ca-g4-measure-angles text=8423d9e6ff std=b7052c8e6c q=2bab414715"
+      "ca-g4-measure-angles text=8423d9e6ff std=b7052c8e6c q=6ab20b2a51"
     ]
   },
   "4/science": {
@@ -609,7 +609,7 @@
       "wa-g7-sampling text=194eb9c3c2 std=3d39918a6d q=d8e6ffaf2a",
       "wa-g7-scale-drawings text=44f1660d4b std=a908526426 q=480f217aff",
       "ca-g7-rewrite-expressions text=a0c47c116e std=acb4c5168d q=f14bbf9812",
-      "wa-g7-angles text=73a7a5215c std=ad32f16f9d q=b384ae13b6",
+      "wa-g7-angles text=73a7a5215c std=ad32f16f9d q=1c4acd8aaa",
       "probability text=7a8574e01b std=bf438b56c8 q=61a293da37"
     ]
   },
@@ -685,16 +685,16 @@
     "units": [
       "squares-and-roots text=0c3411fb05 std=bb2a9712e8 q=44906b78d6",
       "linear-equations text=1e22122340 std=97e588e340 q=4ba669b446",
-      "pythagorean-theorem text=014e1086f2 std=28331b4629 q=99835d112c",
+      "pythagorean-theorem text=014e1086f2 std=28331b4629 q=bcc8d87763",
       "surface-area-volume text=96a6eb6597 std=be7db83532 q=79cdef4798",
       "numbers-8 text=8bc8425026 std=0b8702c325 q=9e9e88cf93",
       "data-8 text=f67cb7cc17 std=27f32edc2a q=61afebfaea",
-      "angles-8 text=899ecf6fe2 std=b0e9196d2e q=547f9529ab",
+      "angles-8 text=899ecf6fe2 std=b0e9196d2e q=f4e15bb736",
       "linear-relations-ab text=3ef9188889 std=510c9c4d91 q=8f11287d9e",
       "bracket-equations-ab text=d802eb7882 std=2905d1b8cf q=3719a7ef86",
       "wa-g8-round-volume text=46d3a6210c std=8372be5a87 q=7c06cc35b6",
       "wa-g8-slope text=5956a66b16 std=7a7d175ddc q=c9e5f2a915",
-      "ca-g8-similar-distance text=dd75991b3f std=a0cb94c284 q=cf92cd38ac",
+      "ca-g8-similar-distance text=dd75991b3f std=a0cb94c284 q=45852a3e03",
       "ca-g8-linear-models text=184aa29541 std=5382909083 q=75e8287d42"
     ]
   },

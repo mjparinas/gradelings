@@ -101,6 +101,34 @@ function checkVisual(v: Visual) {
       expect(v.minute).toBeGreaterThanOrEqual(0);
       expect(v.minute).toBeLessThanOrEqual(59);
       break;
+    case "lineAngles":
+      expect(v.degrees).toBeGreaterThan(0);
+      expect(v.degrees).toBeLessThan(180);
+      expect(v.marks.length).toBeGreaterThanOrEqual(1);
+      expect(v.marks.length).toBeLessThanOrEqual(3);
+      if (v.layout === "cross") for (const m of v.marks) expect(m.pos.startsWith("top-")).toBe(true);
+      break;
+    case "angleSplit":
+      expect(v.parts.length).toBeGreaterThanOrEqual(2);
+      expect(v.parts.length).toBeLessThanOrEqual(3);
+      for (const p of v.parts) expect(p.degrees).toBeGreaterThan(0);
+      expect(v.parts.reduce((t, p) => t + p.degrees, 0)).toBeLessThanOrEqual(180.0001);
+      if (v.whole === "straight") expect(Math.round(v.parts.reduce((t, p) => t + p.degrees, 0))).toBe(180);
+      if (v.whole === "right") expect(Math.round(v.parts.reduce((t, p) => t + p.degrees, 0))).toBe(90);
+      break;
+    case "triangleFigure":
+      expect(Math.round(v.angles.reduce((t, a) => t + a, 0))).toBe(180);
+      for (const a of v.angles) expect(a).toBeGreaterThan(0);
+      break;
+    case "figurePair":
+      expect(v.ratio).toBeGreaterThan(1);
+      expect(v.a.length).toBe(v.shape === "triangle" ? 3 : 2);
+      expect(v.b.length).toBe(v.shape === "triangle" ? 3 : 2);
+      break;
+    case "polygon":
+      expect(v.sides).toBeGreaterThanOrEqual(3);
+      expect(v.sides).toBeLessThanOrEqual(12);
+      break;
     case "array":
       expect(v.rows).toBeGreaterThanOrEqual(1);
       expect(v.cols).toBeGreaterThanOrEqual(1);

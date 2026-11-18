@@ -572,7 +572,7 @@
       "central-tendency-ab text=b776821b16 std=bb14344f89 q=cc21b8662c",
       "wa-g7-signed-multiply text=61c895d791 std=be93fd1eca q=d7c2440ec8",
       "wa-g7-proportional text=c11cf565b3 std=c0f5c12dfb q=f13197f7aa",
-      "wa-g7-angles text=73a7a5215c std=10c57e207a q=b384ae13b6",
+      "wa-g7-angles text=73a7a5215c std=10c57e207a q=1c4acd8aaa",
       "wa-g7-sampling text=194eb9c3c2 std=74599365de q=d8e6ffaf2a",
       "wa-g7-scale-drawings text=44f1660d4b std=ecb6c9b481 q=480f217aff"
     ]
@@ -647,8 +647,8 @@
       "linear-relations-ab text=3ef9188889 std=cb97a93356 q=8f11287d9e",
       "transformations-8 text=872e7f5b99 std=296f6e3d79 q=861609ebde",
       "congruence-ab text=2124f8bea5 std=bea9c3433d q=03cb70377c",
-      "angles-8 text=899ecf6fe2 std=75860005df q=547f9529ab",
-      "pythagorean-theorem text=014e1086f2 std=b4de028e51 q=99835d112c",
+      "angles-8 text=899ecf6fe2 std=75860005df q=f4e15bb736",
+      "pythagorean-theorem text=014e1086f2 std=b4de028e51 q=bcc8d87763",
       "surface-area-volume text=96a6eb6597 std=5cca50fd62 q=79cdef4798",
       "data-8 text=f67cb7cc17 std=9e1496f72b q=61afebfaea",
       "wa-g8-exponent-rules text=c6ea891ad5 std=143d7079a4 q=e041bd810e",
@@ -728,13 +728,13 @@
       "wa-g9-systems text=af9fd1b6dc std=648ca6d2b8 q=abb4800646",
       "wa-g9-sequences text=38d5f69f77 std=a5d2daa885 q=d2a4642ec5",
       "wa-g9-exponential text=500137f8a0 std=85bc344d4e q=5f897e7b41",
-      "similarity-and-scale text=541110d627 std=8bc8bee5ac q=6b0c573164",
-      "geometry-9 text=d3083b3128 std=0e725b4ec9 q=1d23105788",
+      "similarity-and-scale text=541110d627 std=8bc8bee5ac q=f774f576dc",
+      "geometry-9 text=d3083b3128 std=0e725b4ec9 q=b6754b48f4",
       "surface-area-ab text=c4da6bfbc4 std=d2c4f59dd8 q=5db736f014",
       "data-9 text=d107431976 std=5a9a3a4dde q=03d4d4469f",
       "statistics-in-society text=9e4081b498 std=4e652ae0aa q=bae78cb576",
       "wa-g9-two-way-tables text=08e8a9ad61 std=ed1ef7770e q=1d2a6401be",
-      "or-g9-trig text=66898f64a1 std=b13806c2ec q=0c66f82476",
+      "or-g9-trig text=66898f64a1 std=b13806c2ec q=876facce09",
       "or-g9-coordinate-geometry text=1e3bb96519 std=ead113135b q=8171a4b9bd"
     ]
   },

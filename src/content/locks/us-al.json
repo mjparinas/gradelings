@@ -624,10 +624,10 @@
       "central-tendency-ab text=b776821b16 std=3e290d716e q=cc21b8662c",
       "wa-g7-signed-multiply text=61c895d791 std=471d53c6ea q=d7c2440ec8",
       "wa-g7-proportional text=c11cf565b3 std=c0fb5b89a7 q=f13197f7aa",
-      "wa-g7-angles text=73a7a5215c std=e97b5a78c0 q=b384ae13b6",
+      "wa-g7-angles text=73a7a5215c std=e97b5a78c0 q=1c4acd8aaa",
       "wa-g7-sampling text=194eb9c3c2 std=b58b61f920 q=d8e6ffaf2a",
       "wa-g7-scale-drawings text=44f1660d4b std=10fb8765f0 q=480f217aff",
-      "area-constructions-ab text=8f1ce023d1 std=1c01cdeed3 q=b0455b7f90"
+      "area-constructions-ab text=8f1ce023d1 std=1c01cdeed3 q=8e9e18ef3a"
     ]
   },
   "7/science": {
@@ -702,12 +702,12 @@
     "units": [
       "squares-and-roots text=0c3411fb05 std=f23a9edf41 q=44906b78d6",
       "linear-equations text=1e22122340 std=e9dc021469 q=4ba669b446",
-      "pythagorean-theorem text=014e1086f2 std=483e05324e q=99835d112c",
+      "pythagorean-theorem text=014e1086f2 std=483e05324e q=bcc8d87763",
       "surface-area-volume text=96a6eb6597 std=ac519b581c q=79cdef4798",
       "numbers-8 text=8bc8425026 std=dc14346aed q=9e9e88cf93",
       "data-8 text=f67cb7cc17 std=a77ba9cd06 q=61afebfaea",
       "transformations-8 text=872e7f5b99 std=db68d5cfca q=861609ebde",
-      "angles-8 text=899ecf6fe2 std=828084d1f8 q=547f9529ab",
+      "angles-8 text=899ecf6fe2 std=828084d1f8 q=f4e15bb736",
       "linear-relations-ab text=3ef9188889 std=9db06e55cf q=8f11287d9e",
       "bracket-equations-ab text=d802eb7882 std=d961694158 q=3719a7ef86",
       "congruence-ab text=2124f8bea5 std=a259a971bf q=03cb70377c",
@@ -793,9 +793,9 @@
       "lines-9 text=a0d34ff620 std=cbacb57a2f q=952170d895",
       "linear-relations text=d5718915ca std=44f31e3a23 q=1e254a9707",
       "or-g9-coordinate-geometry text=1e3bb96519 std=ede3c41b39 q=8171a4b9bd",
-      "similarity-and-scale text=541110d627 std=afb31268a4 q=6b0c573164",
-      "geometry-9 text=d3083b3128 std=5fd78a2b0e q=1d23105788",
-      "or-g9-trig text=66898f64a1 std=e30f1a1ad5 q=0c66f82476",
+      "similarity-and-scale text=541110d627 std=afb31268a4 q=f774f576dc",
+      "geometry-9 text=d3083b3128 std=5fd78a2b0e q=b6754b48f4",
+      "or-g9-trig text=66898f64a1 std=e30f1a1ad5 q=876facce09",
       "circles-ab text=5fac69b0c1 std=007da65f88 q=d38bdef60a",
       "mb-line-rotation-symmetry text=9f105d7003 std=2f9ab6be24 q=cc2c198ec8",
       "surface-area-ab text=c4da6bfbc4 std=66d8969c4e q=5db736f014",

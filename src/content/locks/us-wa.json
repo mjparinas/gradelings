@@ -561,7 +561,7 @@
       "central-tendency-ab text=b776821b16 std=bdd688f806 q=cc21b8662c",
       "wa-g7-signed-multiply text=61c895d791 std=cc8da4837a q=d7c2440ec8",
       "wa-g7-proportional text=c11cf565b3 std=0cdff4825d q=f13197f7aa",
-      "wa-g7-angles text=73a7a5215c std=f295e4a7f8 q=b384ae13b6",
+      "wa-g7-angles text=73a7a5215c std=f295e4a7f8 q=1c4acd8aaa",
       "wa-g7-sampling text=194eb9c3c2 std=c6c3be5153 q=d8e6ffaf2a",
       "wa-g7-scale-drawings text=44f1660d4b std=becd7e7c7f q=480f217aff"
     ]
@@ -631,8 +631,8 @@
       "linear-relations-ab text=3ef9188889 std=b5dd310887 q=8f11287d9e",
       "transformations-8 text=872e7f5b99 std=a72d7af468 q=861609ebde",
       "congruence-ab text=2124f8bea5 std=57de27fdee q=03cb70377c",
-      "angles-8 text=899ecf6fe2 std=642e07eb4c q=547f9529ab",
-      "pythagorean-theorem text=014e1086f2 std=4871afae26 q=99835d112c",
+      "angles-8 text=899ecf6fe2 std=642e07eb4c q=f4e15bb736",
+      "pythagorean-theorem text=014e1086f2 std=4871afae26 q=bcc8d87763",
       "surface-area-volume text=96a6eb6597 std=185210dd78 q=79cdef4798",
       "data-8 text=f67cb7cc17 std=6ae0176bb3 q=61afebfaea",
       "wa-g8-exponent-rules text=c6ea891ad5 std=eda83f4b78 q=e041bd810e",
