@@ -1,6 +1,7 @@
 import { pick, randInt, sample, shuffle, textChoice } from "../random";
 import type { GenerateOptions, Question, Unit } from "../types";
 import { bankUnit, hq, q, type Item } from "../ontario/g3-4-kit";
+import { drawn, movePicture } from "../figureDrawings";
 import { ab, buildSet, levelOf, numQ, others, range, spaced, times, typeIn } from "./kit";
 
 // Alberta Grade 3 mathematics (2022 K–6 curriculum). The units below cover outcomes the BC and Ontario
@@ -435,7 +436,7 @@ export const units: Unit[] = [
     blurb: "Translations, reflections and rotations of shapes.",
     parentNote: "Telling a slide (translation), a flip (reflection) and a turn (rotation) apart, and knowing the shape stays the same size.",
     standards: ab("3G1.2", "translations, reflections and rotations of polygons"),
-    generate: bankUnit(MOVES),
+    generate: drawn(bankUnit(MOVES), movePicture),
   },
   {
     id: "length-perimeter-ab",

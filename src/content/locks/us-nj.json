@@ -366,7 +366,7 @@
       "wa-g4-line-plots text=ec0f6b9a41 std=96ef9e3423 q=87786a4f46",
       "wa-g4-times-as-many text=417e0833be std=3a85353683 q=42781d57e4",
       "ca-g4-tenths-hundredths text=8f100be049 std=77a9292674 q=d496ce3de8",
-      "ca-g4-measure-angles text=8423d9e6ff std=a2247c31f3 q=2bab414715"
+      "ca-g4-measure-angles text=8423d9e6ff std=a2247c31f3 q=cf6f715f49"
     ]
   },
   "4/science": {
@@ -591,7 +591,7 @@
   "7/math": {
     "overview": "86e46f1bc6",
     "units": [
-      "integer-add-subtract text=0f49d1bba6 std=433ab44f71 q=1e24134b03",
+      "integer-add-subtract text=0f49d1bba6 std=433ab44f71 q=ecc058d9c0",
       "decimal-operations text=56ab979d6a std=7e9c764716 q=7f89d319c6",
       "fractions-decimals-percents text=12d27e2a2e std=1a38b5c03a q=1030c5dd8d",
       "two-step-equations text=ddaa3cce54 std=41df390787 q=4d67a1e779",

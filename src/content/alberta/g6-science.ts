@@ -1,6 +1,7 @@
 import type { SortSet } from "../bank";
 import type { Unit } from "../types";
 import { levelled, withSort, type Item } from "../ontario/g56-bank";
+import { drawn, thermometerPicture } from "../figureDrawings";
 import { ab } from "./kit";
 
 // Alberta Grade 6 Science: Matter (the particle model, heating and cooling) and Energy (forces and
@@ -245,7 +246,7 @@ export const units: Unit[] = [
     blurb: "Thermometers and the Celsius scale",
     standards: ab("6M 1.2", "how liquid thermometers work, the Celsius scale and safe measuring"),
     parentNote: "Degrees Celsius, the freezing and boiling points of water, everyday temperatures, how a liquid thermometer works by expansion and contraction, and safe handling.",
-    generate: ({ difficulty = 2 } = {}) => levelled(THERMOMETERS, 8, difficulty),
+    generate: drawn(({ difficulty = 2 } = {}) => levelled(THERMOMETERS, 8, difficulty), thermometerPicture),
   },
   {
     id: "expansion-water-ab",
