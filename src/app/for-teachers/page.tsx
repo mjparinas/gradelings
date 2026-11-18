@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "@/components/PublicLink";
 import { breadcrumbJsonLd, faqJsonLd } from "@/components/site/jsonld";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
+import { AndroidCta } from "@/components/site/AndroidCta";
 import { TeacherCta } from "@/components/site/TeacherCta";
 import { TeacherDemo } from "@/components/site/TeacherDemo";
 import { byCountry, kidPracticeSteps, regionSummary, regionWord } from "@/components/site/provinces";
@@ -152,6 +153,7 @@ export default function TeachersHub() {
         </p>
       </section>
       <TeacherCta showHub={false} />
+      <AndroidCta />
     </SitePage>
   );
 }

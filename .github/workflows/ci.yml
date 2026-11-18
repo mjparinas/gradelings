@@ -101,7 +101,7 @@ jobs:
       # Reads the lockfile only. Production dependencies are what ship to families, so they gate the build.
       - name: Dependency audit
         if: ${{ !cancelled() }}
-        run: npm audit --omit=dev --audit-level=high
+        run: node scripts/audit-gate.mjs
       # Dev tooling is reported for visibility but does not block a merge.
       - if: ${{ !cancelled() }}
         run: npm audit --audit-level=high
