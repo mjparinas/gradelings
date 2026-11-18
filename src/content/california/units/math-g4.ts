@@ -1,4 +1,5 @@
 import { pick, randInt, shuffle } from "../../random";
+import { protractorBetween, protractorFromZero } from "../../drawings";
 import { eq, num, pickOne, someone, typed, type Maker } from "../../washington/units/math-kit";
 import { mathUnit } from "./math";
 
@@ -100,7 +101,7 @@ const readFromZero: Maker = (d) => {
   const deg = d === 1 ? randInt(2, 17) * 10 : randInt(11, 169);
   const prompt = `One ray of an angle lines up with 0 on a protractor. The other ray points to ${deg} on the same scale. What does the angle measure?`;
   const hint = `Start at 0 and read where the other ray crosses the scale: ${deg}°.`;
-  const visual = { type: "angle" as const, degrees: deg };
+  const visual = protractorFromZero(deg);
   if (d === 3) return typed(prompt, deg, hint, { suffix: "°", visual });
   return num(prompt, deg, hint, { step: 10, min: 1, max: 179, extra: [180 - deg], label: (n) => `${n}°`, visual });
 };
@@ -111,8 +112,9 @@ const readBetween: Maker = (d) => {
   const b = a + size;
   const prompt = `On a protractor, one ray of an angle points to ${a} and the other points to ${b} on the same scale. What does the angle measure?`;
   const hint = `The angle is the space between the rays: ${b} − ${a} = ${size}°.`;
-  if (d === 3) return typed(prompt, size, hint, { suffix: "°" });
-  return num(prompt, size, hint, { step: 10, min: 1, extra: [b, a + b], label: (n) => `${n}°` });
+  const visual = protractorBetween(a, b);
+  if (d === 3) return typed(prompt, size, hint, { suffix: "°", visual });
+  return num(prompt, size, hint, { step: 10, min: 1, extra: [b, a + b], label: (n) => `${n}°`, visual });
 };
 
 const whichScale: Maker = () => {
@@ -124,6 +126,7 @@ const whichScale: Maker = () => {
     `${deg}°`,
     [`${180 - deg}°`, `${deg + 180}°`, "180°"],
     `Read the scale that starts at 0 on your first ray: the ${scale} scale.`,
+    protractorFromZero(deg, scale, true),
   );
 };
 

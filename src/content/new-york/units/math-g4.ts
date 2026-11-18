@@ -1,4 +1,5 @@
 import { pick, randInt, sample } from "../../random";
+import { protractorBetween, protractorFromZero } from "../../drawings";
 import type { Unit } from "../../types";
 import { type Maker, fracChoice, num, pickOne, someone, typed } from "../../washington/units/math-kit";
 import type { Q } from "../own";
@@ -20,7 +21,7 @@ const readZero: Maker = (d) => {
     max: 179,
     extra: [180 - a],
     label: deg,
-    visual: { type: "angle", degrees: a },
+    visual: protractorFromZero(a),
   });
 };
 
@@ -32,7 +33,7 @@ const twoScales: Maker = () => {
     deg(a),
     [deg(180 - a), deg(180), deg(90)],
     `Use the scale that starts at 0 on the first ray. That is the inner scale, so read ${a}.`,
-    { type: "angle", degrees: a },
+    protractorFromZero(a, "inner", true),
   );
 };
 
@@ -41,8 +42,9 @@ const readBetween: Maker = (d) => {
   const lo = randInt(1, 8) * 10 + (d === 3 ? 5 : 0);
   const size = randInt(2, 9) * 10;
   const hi = lo + size;
-  if (d === 3) return typed(`On a protractor, one ray passes ${lo}° and the other passes ${hi}° on the same scale. How big is the angle?`, size, `Subtract the two readings: ${hi} − ${lo}.`, { suffix: "°" });
-  return num(`On a protractor, one ray passes ${lo}° and the other passes ${hi}° on the same scale. How big is the angle?`, size, `Subtract the two readings: ${hi} − ${lo}.`, { step: 10, min: 1, extra: [hi, lo, hi + lo].filter((x) => x < 360), label: deg });
+  const visual = protractorBetween(lo, hi);
+  if (d === 3) return typed(`On a protractor, one ray passes ${lo}° and the other passes ${hi}° on the same scale. How big is the angle?`, size, `Subtract the two readings: ${hi} − ${lo}.`, { suffix: "°", visual });
+  return num(`On a protractor, one ray passes ${lo}° and the other passes ${hi}° on the same scale. How big is the angle?`, size, `Subtract the two readings: ${hi} − ${lo}.`, { step: 10, min: 1, extra: [hi, lo, hi + lo].filter((x) => x < 360), label: deg, visual });
 };
 
 /** Estimate an angle from its picture. */

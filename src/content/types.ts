@@ -91,7 +91,26 @@ export type Visual =
   /** Points on a coordinate grid (first quadrant unless min is negative). */
   | { type: "grid"; size: number; min?: number; points: { x: number; y: number; label?: string }[] }
   /** An angle drawn with two rays. */
-  | { type: "angle"; degrees: number };
+  | { type: "angle"; degrees: number }
+  /**
+   * A protractor with the two rays of an angle. `from` and `to` are where the rays cross the scale that starts at 0 on
+   * the right-hand end (0 to 180); `twoScales` also prints the outer scale, which starts at 0 on the left.
+   */
+  | { type: "protractor"; from: number; to: number; twoScales?: boolean }
+  /** One or more liquid thermometers, each filled to its reading (a shared scale from `min` to `max` degrees). */
+  | { type: "thermometer"; values: number[]; min: number; max: number }
+  /** A figure before (dashed) and after a slide, a flip or a turn. See `src/components/figureVisuals.tsx`. */
+  | { type: "move"; move: "slide" | "flip" | "turn"; figure?: MoveFigure; dx?: number; dy?: number; axis?: "vertical" | "horizontal"; degrees?: number }
+  /** A compass with an arrow showing which way someone faces. */
+  | { type: "compass"; facing: "north" | "east" | "south" | "west" }
+  /** A plain outline of a figure, for symmetry questions. */
+  | { type: "figure"; figure: PlainFigure };
+
+/** The shapes a `move` picture can slide, flip or turn. "boot" is lopsided, so every move shows. */
+export type MoveFigure = "boot" | "triangle" | "square" | "hexagon";
+
+/** The outlines a `figure` picture can draw. */
+export type PlainFigure = "equilateral" | "isosceles" | "scalene" | "square" | "rectangle" | "rhombus" | "parallelogram" | "circle" | "oval" | "plus";
 
 export interface Choice {
   id: string;

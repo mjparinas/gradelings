@@ -246,7 +246,7 @@
       "patterns text=52e71b0b56 std=b1d2e80982 q=c39ccda4ca",
       "mb-calendar text=ba346a606f std=2c310aa3a5 q=8bab2145e7",
       "measuring text=b408a6d5b9 std=685918ddc6 q=50b17c6722",
-      "mb-turn-and-measure text=fa5fe9d6d9 std=9473bfce2a q=c5640a49a8",
+      "mb-turn-and-measure text=fa5fe9d6d9 std=9473bfce2a q=affe72186d",
       "shapes text=4642065056 std=16779f8729 q=147a8385e6",
       "graphs text=6da2cb2f09 std=a02ce21393 q=27f6e96635"
     ]
@@ -774,7 +774,7 @@
     "overview": "dfffbd764d",
     "units": [
       "mb-divisibility text=c9dba11416 std=80d4dcd831 q=0426819aa6",
-      "integer-add-subtract text=0f49d1bba6 std=4cf405eec2 q=1e24134b03",
+      "integer-add-subtract text=0f49d1bba6 std=4cf405eec2 q=ecc058d9c0",
       "decimal-operations text=56ab979d6a std=109a492c67 q=7f89d319c6",
       "fractions-7 text=7c1f63c272 std=fa85d830be q=bacf9d4e33",
       "fractions-decimals-percents text=12d27e2a2e std=09e02b3cec q=1030c5dd8d",

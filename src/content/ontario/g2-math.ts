@@ -1,6 +1,7 @@
 import { COIN_NAMES } from "../money";
 import { chance, pick, randInt, sample, shuffle, textChoice } from "../random";
 import type { BuildQuestion, CoinsQuestion, GenerateOptions, OrderQuestion, Question, ShapeName, SortQuestion, Unit, Visual } from "../types";
+import { drawChoiceShapes, drawn } from "../drawings";
 import { buildSet, eq, levelOf, on, others, numQ, range, THINGS } from "./kit";
 
 // Ontario Grade 2 mathematics (2020 curriculum). Whole numbers go up to 200.
@@ -548,7 +549,7 @@ export const units: Unit[] = [
     blurb: "Sides, symmetry and congruent shapes",
     standards: on("E1.1–E1.3", "sorting 2D shapes by sides and symmetry, putting shapes together, and congruent shapes"),
     parentNote: "Counting sides and right angles, finding lines of symmetry, putting shapes together and apart, and knowing when two shapes match exactly.",
-    generate: shapesAndSymmetry,
+    generate: drawn(shapesAndSymmetry, drawChoiceShapes),
   },
   {
     id: "simple-maps",

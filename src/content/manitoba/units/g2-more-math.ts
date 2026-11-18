@@ -1,3 +1,4 @@
+import { movePicture, withDrawings } from "../../drawings";
 import { bankUnit, type Q } from "../own";
 
 // Grade 2 mathematics: turning an object does not change its measurements (2.SS.5).
@@ -30,7 +31,7 @@ const ORIENT: Q[] = [
   ["A sled is 1 m long. You flip it upside down. How long is it?", "1 m", ["half a metre", "2 m"], "Same sled, same length.", true],
 ];
 
-export const turnAndMeasure = bankUnit({
+export const turnAndMeasure = withDrawings(bankUnit({
   id: "mb-turn-and-measure",
   title: "Turn It, Flip It, Same Size",
   emoji: "🔄",
@@ -38,4 +39,4 @@ export const turnAndMeasure = bankUnit({
   parentNote: "Showing that changing the orientation of an object does not change its measurements or attributes.",
   standards: ["2.SS.5", "changing an object's orientation does not change its measurements"],
   items: ORIENT,
-});
+}), movePicture);
