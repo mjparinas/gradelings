@@ -383,10 +383,22 @@ describe("QuestionVisual", () => {
     const { rerender } = show({ type: "joined", parts: [{ w: 10, h: 8 }], cut: { w: 4, h: 3 }, unit: "m" });
     const cut = screen.getByRole("img", { name: "a 10 m by 8 m rectangle with a 4 m by 3 m corner cut away" });
     expect(cut.querySelector("path")!.getAttribute("d")).toMatch(/^M.* H.* V.* H.* V.* H.* Z$/);
-    expect([...cut.querySelectorAll("text")].map((t) => t.textContent)).toEqual(["10 m", "8 m", "4 m", "3 m"]);
+    expect([...cut.querySelectorAll("text")].map((t) => t.textContent)).toEqual(["4 m", "10 m", "8 m", "3 m"]);
     rerender(<QuestionVisual visual={{ type: "joined", parts: [{ w: 5, h: 4 }, {}], unit: "in", caption: "Total area: 31 sq in" }} />);
     const unknown = screen.getByRole("img", { name: "a floor plan made of rectangles: 5 in by 4 in and an unknown rectangle" });
     expect(unknown).toHaveTextContent("?");
     expect(unknown).toHaveTextContent("Total area: 31 sq in");
+  });
+  it("draws a triangle on top, a triangle cut out, and a semicircle on the end", () => {
+    const { rerender } = show({ type: "joined", parts: [{ w: 8, h: 5 }], cap: { shape: "triangle", h: 3 }, unit: "ft" });
+    let fig = screen.getByRole("img", { name: "a 8 ft by 5 ft rectangle with a triangle on top, 8 ft wide and 3 ft tall" });
+    expect([...fig.querySelectorAll("text")].map((t) => t.textContent)).toEqual(["3 ft", "8 ft", "5 ft"]);
+    rerender(<QuestionVisual visual={{ type: "joined", parts: [{ w: 12, h: 8 }], cutTriangle: { base: 4, h: 3 }, unit: "in" }} />);
+    fig = screen.getByRole("img", { name: "a 12 in by 8 in rectangle with a triangle cut out of the top edge, 4 in wide and 3 in deep" });
+    expect([...fig.querySelectorAll("text")].map((t) => t.textContent)).toEqual(["4 in", "3 in", "12 in", "8 in"]);
+    rerender(<QuestionVisual visual={{ type: "joined", parts: [{ w: 9, h: 6 }], cap: { shape: "semicircle", label: "radius 3" } }} />);
+    fig = screen.getByRole("img", { name: "a 9 by 6 rectangle with a semicircle on one end" });
+    expect(fig.querySelector("path")!.getAttribute("d")).toMatch(/ A.* 0 0 1 /);
+    expect(fig).toHaveTextContent("radius 3");
   });
 });

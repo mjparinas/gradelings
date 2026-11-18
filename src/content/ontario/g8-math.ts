@@ -1,5 +1,5 @@
 import { chance, pick, randInt, sample, shuffle, textChoice } from "../random";
-import { cornerCut } from "../joined";
+import { cornerCut, semicircleOnEnd } from "../joined";
 import type { GenerateOptions, OrderQuestion, Question, Unit, Visual } from "../types";
 import { buildSet, eq, levelOf, on, ordinal, spaced, typeIn } from "./kit";
 
@@ -874,7 +874,7 @@ function measure8(opts?: GenerateOptions): Question[] {
     const r = pick([2, 4, 5, 10]);
     const len = randInt(r + 2, r + 10);
     const area = 2 * r * len + 1.57 * r * r;
-    return typeIn(`A shape is a rectangle ${len} cm long and ${2 * r} cm wide with a semicircle added on one end (the diameter is the ${2 * r} cm side). What is its area, in square centimetres? Use π ≈ 3.14.`, dec(area), `Rectangle: ${len} × ${2 * r} = ${len * 2 * r}. Semicircle: half of 3.14 × ${r}² = ${dec(1.57 * r * r)}. Add them.`, undefined, { keypad: "decimal", suffix: "cm²" });
+    return typeIn(`A shape is a rectangle ${len} cm long and ${2 * r} cm wide with a semicircle added on one end (the diameter is the ${2 * r} cm side). What is its area, in square centimetres? Use π ≈ 3.14.`, dec(area), `Rectangle: ${len} × ${2 * r} = ${len * 2 * r}. Semicircle: half of 3.14 × ${r}² = ${dec(1.57 * r * r)}. Add them.`, semicircleOnEnd(len, 2 * r, undefined, "cm"), { keypad: "decimal", suffix: "cm²" });
   };
   const ring = (): Question => {
     const R = randInt(4, 10);

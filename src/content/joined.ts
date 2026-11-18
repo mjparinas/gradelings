@@ -19,3 +19,18 @@ export function cornerCut(w: number, h: number, cutW: number, cutH: number, unit
 export function oneUnknown(w: number, h: number, unit?: string, caption?: string): Joined {
   return { type: "joined", parts: [{ w, h }, {}], ...(unit ? { unit } : {}), ...(caption ? { caption } : {}) };
 }
+
+/** A rectangle with a triangle on top, as wide as the rectangle. */
+export function triangleOnTop(w: number, h: number, triangleH: number, unit?: string): Joined {
+  return { type: "joined", parts: [{ w, h }], cap: { shape: "triangle", h: triangleH }, ...(unit ? { unit } : {}) };
+}
+
+/** A rectangle with a semicircle on its right end; the semicircle's diameter is the rectangle's height. */
+export function semicircleOnEnd(w: number, h: number, label?: string, unit?: string): Joined {
+  return { type: "joined", parts: [{ w, h }], cap: { shape: "semicircle", ...(label ? { label } : {}) }, ...(unit ? { unit } : {}) };
+}
+
+/** A rectangle with a triangle cut out of the middle of its top edge. */
+export function triangleCutOut(w: number, h: number, base: number, depth: number, unit?: string): Joined {
+  return { type: "joined", parts: [{ w, h }], cutTriangle: { base, h: depth }, ...(unit ? { unit } : {}) };
+}

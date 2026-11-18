@@ -102,6 +102,10 @@ export type Visual =
       parts: { w?: number; h?: number }[];
       /** A rectangle cut away from the top right corner of the single part. */
       cut?: { w: number; h: number };
+      /** A triangle (as wide as the part, `h` tall) on top of the single part, or a semicircle on its right end whose diameter is the part's height. */
+      cap?: { shape: "triangle"; h: number } | { shape: "semicircle"; label?: string };
+      /** A triangle cut out of the top edge of the single part, centred, with this base and depth. */
+      cutTriangle?: { base: number; h: number };
       /** The unit written after each length ("ft"), or none to write bare numbers. */
       unit?: string;
       /** A line under the picture ("Total area: 48 sq in"). */
