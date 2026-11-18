@@ -1,4 +1,5 @@
 import { pick, randInt, sample } from "../../random";
+import { sideBySide, triangleCutOut, triangleOnTop } from "../../joined";
 import type { Unit } from "../../types";
 import { type Maker, fmt, num, pickOne, someone, typed } from "../../washington/units/math-kit";
 import type { Q } from "../own";
@@ -221,8 +222,9 @@ const lShape: Maker = (d) => {
   const area = a * b + c * e;
   const prompt = `${someone()}'s patio is an L shape: a ${a} ft by ${b} ft rectangle joined to a ${c} ft by ${e} ft rectangle. What is its area, in square feet?`;
   const hint = `Add the two rectangles: ${a} × ${b} + ${c} × ${e}.`;
-  if (d === 3) return typed(prompt, area, hint);
-  return num(prompt, area, hint, { min: 1, extra: [2 * (a + b + c + e), a * b, (a + c) * (b + e)] });
+  const visual = sideBySide([[a, b], [c, e]], "ft");
+  if (d === 3) return typed(prompt, area, hint, { visual });
+  return num(prompt, area, hint, { min: 1, extra: [2 * (a + b + c + e), a * b, (a + c) * (b + e)], visual });
 };
 
 /** A house shape: a rectangle with a triangle on top. */
@@ -233,8 +235,9 @@ const houseShape: Maker = (d) => {
   const area = w * h + (w * t) / 2;
   const prompt = `A wall is a ${w} ft by ${h} ft rectangle with a triangle on top. The triangle's base is ${w} ft and its height is ${t} ft. What is the wall's area, in square feet?`;
   const hint = `Rectangle: ${w} × ${h} = ${w * h}. Triangle: ½ × ${w} × ${t} = ${(w * t) / 2}. Add them.`;
-  if (d === 3) return typed(prompt, area, hint);
-  return num(prompt, area, hint, { min: 1, extra: [w * h + w * t, w * (h + t), w * h] });
+  const visual = triangleOnTop(w, h, t, "ft");
+  if (d === 3) return typed(prompt, area, hint, { visual });
+  return num(prompt, area, hint, { min: 1, extra: [w * h + w * t, w * (h + t), w * h], visual });
 };
 
 /** A trapezoid, or a trapezoid split into a rectangle and triangles. */
@@ -259,7 +262,7 @@ const cutOut: Maker = () => {
     `A ${a} in by ${b} in sign has a triangle cut out of one edge. The triangle's base is ${base} in and its height is ${t} in. What area is left, in square inches?`,
     area,
     `Rectangle minus triangle: ${a} × ${b} − ½ × ${base} × ${t}.`,
-    { min: 1, extra: [a * b - base * t, a * b, a * b + (base * t) / 2] },
+    { min: 1, extra: [a * b - base * t, a * b, a * b + (base * t) / 2], visual: triangleCutOut(a, b, base, t, "in") },
   );
 };
 
@@ -273,7 +276,7 @@ const coverCost: Maker = () => {
     `A floor is a ${a} m by ${b} m rectangle plus a ${c} m by ${e} m rectangle. Tile costs $${price} per square meter. What does the tile cost, in dollars?`,
     area * price,
     `Area: ${a * b} + ${c * e} = ${area} m². Then multiply by $${price}.`,
-    { min: 1, extra: [area, (a + b + c + e) * 2 * price, a * b * price] },
+    { min: 1, extra: [area, (a + b + c + e) * 2 * price, a * b * price], visual: sideBySide([[a, b], [c, e]], "m") },
   );
 };
 
