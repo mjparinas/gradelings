@@ -164,7 +164,7 @@
       "different-and-alike text=a8371bb608 std=146df2dc55 q=3685278697",
       "our-land text=9250f303b3 std=82a48be2bf q=c1704cb4f1",
       "ns-needs-wants-1 text=6a43963ba3 std=306adc270e q=465c5c3954",
-      "maps text=0393b6b3b0 std=3a440e653a q=5413590a99",
+      "maps text=0393b6b3b0 std=3a440e653a q=4ce4b133e9",
       "ns-mikmaq-communities-1 text=0f2ba17121 std=c96c3c4446 q=6a09100bf1"
     ]
   },
@@ -296,8 +296,8 @@
   "3/social": {
     "overview": "954d346b6c",
     "units": [
-      "maps-and-globes text=6a6a9ae26b std=d976b35f4c q=fd8314b02c",
-      "ns-atlantic-canada-3 text=f4abd6b02b std=540b1301aa q=a6d84a679e",
+      "maps-and-globes text=6a6a9ae26b std=d976b35f4c q=85d8fa6d9b",
+      "ns-atlantic-canada-3 text=f4abd6b02b std=540b1301aa q=4f9c03d5a0",
       "ns-cultures-3 text=af1856f99e std=b265b765bc q=9eaa0ed489",
       "mb-groups-and-leaders text=990b1bdfbd std=b1e058f94b q=340efa8ad8",
       "ns-democracy-3 text=0d7d64a4e6 std=9859490576 q=61d37902bd"

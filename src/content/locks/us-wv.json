@@ -169,7 +169,7 @@
   "1/social": {
     "overview": "5fb848f164",
     "units": [
-      "maps text=0393b6b3b0 std=cdbeeebfbf q=671d944151",
+      "maps text=0393b6b3b0 std=cdbeeebfbf q=bb8e729a47",
       "our-land text=9250f303b3 std=73ed0c22c7 q=c1704cb4f1",
       "my-community text=f4b6495f7a std=7d588dbe5c q=e0548ab0f6",
       "changes-in-my-life text=d5ee1318f1 std=52ce9df83e q=d9a4ad3785",
@@ -250,7 +250,7 @@
       "ca-g2-work-and-money text=29d8f69f16 std=bad62e96f8 q=3daba19f0f",
       "az-g2-continents-oceans text=3c092e19d9 std=d97bbff015 q=73975f9cd7",
       "wv-g2-west-virginia text=a0e427a6e0 std=cdd53030f0 q=c8c926a885",
-      "wv-g2-reading-maps text=4eb3eae1ec std=7d0588c370 q=d462f2e233"
+      "wv-g2-reading-maps text=4eb3eae1ec std=7d0588c370 q=9434a12f80"
     ]
   },
   "3/language": {
@@ -462,7 +462,7 @@
       "wa-g5-energy-food text=7248a5bf2e std=8c756a6312 q=2c5e9d47f6",
       "or-g5-design text=6302707f88 std=7e0f057528 q=5e2f08597c",
       "wv-g5-energy-resources text=ba18b188b9 std=ea4436be99 q=dab1fdfe0a",
-      "wv-g5-sun-stars text=b771fae2d0 std=0c0d09929f q=ced1749a35",
+      "wv-g5-sun-stars text=b771fae2d0 std=0c0d09929f q=a1b66251a4",
       "wv-g5-earth-water text=fe9a9cd323 std=4327bc21e7 q=04e059cb4d",
       "wv-g5-ecosystems text=edfa357cb9 std=1f354814d7 q=80b97965d3"
     ]

@@ -168,7 +168,7 @@
   "1/social": {
     "overview": "8f303ba9fe",
     "units": [
-      "maps text=0393b6b3b0 std=b866bed2b1 q=671d944151",
+      "maps text=0393b6b3b0 std=b866bed2b1 q=bb8e729a47",
       "our-land text=9250f303b3 std=a2d3b6b58b q=c1704cb4f1",
       "my-community text=f4b6495f7a std=05c8256a79 q=e0548ab0f6",
       "changes-in-my-life text=d5ee1318f1 std=af17941196 q=d9a4ad3785",
@@ -247,7 +247,7 @@
       "ca-g2-citizens-and-leaders text=c362a6e3f6 std=2705bcb4d4 q=deb671fc39",
       "ca-g2-work-and-money text=29d8f69f16 std=0bad172963 q=3daba19f0f",
       "or-g2-world-maps text=5be3d98572 std=efc1be0d2c q=f54db7af64",
-      "nj-g2-reading-maps text=4eb3eae1ec std=211b1ae2ba q=d462f2e233"
+      "nj-g2-reading-maps text=4eb3eae1ec std=211b1ae2ba q=9434a12f80"
     ]
   },
   "3/language": {
@@ -458,7 +458,7 @@
       "mb-weather-5 text=db26ca3367 std=2518b01a09 q=9936aa0e30",
       "wa-g5-energy-food text=7248a5bf2e std=5c71a02c62 q=2c5e9d47f6",
       "or-g5-design text=6302707f88 std=2012268e59 q=5e2f08597c",
-      "nj-g5-sun-stars text=b55ce98804 std=7e139b10aa q=ba52f66340",
+      "nj-g5-sun-stars text=b55ce98804 std=7e139b10aa q=a210efd4ca",
       "nj-g5-earth-water text=c04be914d0 std=73bf8603fe q=71c4208ee4",
       "nj-g5-ecosystems text=cbea549144 std=e7415eb716 q=bab1d7316f"
     ]

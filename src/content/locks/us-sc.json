@@ -162,7 +162,7 @@
     "units": [
       "my-community text=f4b6495f7a std=53188139bc q=e0548ab0f6",
       "respect-and-inclusion text=2f7448bf67 std=a4ed982ba8 q=2bd238d5a9",
-      "maps text=0393b6b3b0 std=9dc454ef8d q=671d944151",
+      "maps text=0393b6b3b0 std=9dc454ef8d q=bb8e729a47",
       "our-land text=9250f303b3 std=9bfa9c0e2a q=c1704cb4f1",
       "community-services text=26d27aa27c std=a0d3fcb1b5 q=22cd5a9649",
       "pe-goods-and-services-1 text=55be22b8f4 std=d408c3223e q=43e8316788",
@@ -441,7 +441,7 @@
       "tx-g5-conservation text=72bfee10bd std=50e1af91df q=b8c301b7e2",
       "sc-g5-ecosystems text=4d0e188ac1 std=250a59f4d5 q=af13102a5d",
       "sc-g5-gravity text=b9a7cba2f8 std=6826833d8f q=b0fcb77599",
-      "sc-g5-day-night text=817529cefd std=5cdaf4a856 q=3e99fd0f92"
+      "sc-g5-day-night text=817529cefd std=5cdaf4a856 q=a10681fb8b"
     ]
   },
   "5/social": {

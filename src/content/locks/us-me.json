@@ -156,7 +156,7 @@
   "1/social": {
     "overview": "f53c6bcf86",
     "units": [
-      "maps text=0393b6b3b0 std=448907027d q=671d944151",
+      "maps text=0393b6b3b0 std=448907027d q=bb8e729a47",
       "our-land text=9250f303b3 std=514fa3e511 q=c1704cb4f1",
       "my-community text=f4b6495f7a std=c882636e7e q=e0548ab0f6",
       "changes-in-my-life text=d5ee1318f1 std=151888dfe2 q=d9a4ad3785",
@@ -227,7 +227,7 @@
       "ns-community-change-2 text=153e1a1ea0 std=f9cb5e0881 q=4a8dbf6467",
       "mb-working-together text=2915a53ce4 std=9495f2bace q=17c9064822",
       "ca-g2-citizens-and-leaders text=c362a6e3f6 std=e9fcb4adc4 q=deb671fc39",
-      "ca-g2-reading-maps text=4eb3eae1ec std=3f7795b8fa q=94e825dc3c",
+      "ca-g2-reading-maps text=4eb3eae1ec std=3f7795b8fa q=f7a9578d23",
       "ca-g2-work-and-money text=29d8f69f16 std=03ef3737f0 q=3daba19f0f",
       "or-g2-world-maps text=5be3d98572 std=4ff90befd9 q=f54db7af64"
     ]

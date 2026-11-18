@@ -167,7 +167,7 @@
   "1/social": {
     "overview": "9dfdc7861c",
     "units": [
-      "maps text=0393b6b3b0 std=55160683a4 q=671d944151",
+      "maps text=0393b6b3b0 std=55160683a4 q=bb8e729a47",
       "our-land text=9250f303b3 std=4d4287e8e0 q=c1704cb4f1",
       "my-community text=f4b6495f7a std=81a631524f q=e0548ab0f6",
       "changes-in-my-life text=d5ee1318f1 std=b36ec745ec q=d9a4ad3785",
@@ -464,7 +464,7 @@
       "mb-weather-5 text=db26ca3367 std=2518b01a09 q=9936aa0e30",
       "wa-g5-energy-food text=7248a5bf2e std=5c71a02c62 q=2c5e9d47f6",
       "or-g5-design text=6302707f88 std=2012268e59 q=5e2f08597c",
-      "ky-g5-sun-stars text=1ca815a07e std=7e139b10aa q=7bee090210",
+      "ky-g5-sun-stars text=1ca815a07e std=7e139b10aa q=6fb267af0d",
       "ky-g5-earth-water text=97d1a756da std=73bf8603fe q=d7568a9881",
       "ky-g5-ecosystems text=ded3014157 std=e7415eb716 q=ac7d585ad1"
     ]

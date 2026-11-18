@@ -157,7 +157,7 @@
   "1/social": {
     "overview": "e5826fc627",
     "units": [
-      "maps text=0393b6b3b0 std=b6ecafe261 q=671d944151",
+      "maps text=0393b6b3b0 std=b6ecafe261 q=bb8e729a47",
       "our-land text=9250f303b3 std=f722ebe913 q=c1704cb4f1",
       "my-community text=f4b6495f7a std=7e7a5ab230 q=e0548ab0f6",
       "changes-in-my-life text=d5ee1318f1 std=dabbdae46b q=d9a4ad3785",
@@ -425,7 +425,7 @@
       "measuring-matter-ab text=46925fbe69 std=1fcd4df8f4 q=df13ae57a0",
       "mb-speed-and-motion text=b7df5a0a7f std=f20b04780d q=44a70ab3dc",
       "ny-g5-gravity text=b9a7cba2f8 std=8666ba7e01 q=3cec214020",
-      "tx-g5-day-night text=817529cefd std=1a6b68d2af q=cfca28c319",
+      "tx-g5-day-night text=817529cefd std=1a6b68d2af q=ddb4abe2ac",
       "wa-g3-traits text=a8d47bae91 std=304a8da1a1 q=7f51ce104b",
       "or-g5-design text=6302707f88 std=510bc4a345 q=5e2f08597c"
     ]

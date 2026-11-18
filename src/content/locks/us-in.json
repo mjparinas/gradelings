@@ -163,7 +163,7 @@
   "1/social": {
     "overview": "5687e33423",
     "units": [
-      "maps text=0393b6b3b0 std=97f25fd6ff q=671d944151",
+      "maps text=0393b6b3b0 std=97f25fd6ff q=bb8e729a47",
       "our-land text=9250f303b3 std=94fcba6732 q=c1704cb4f1",
       "my-community text=f4b6495f7a std=1c04b25370 q=e0548ab0f6",
       "changes-in-my-life text=d5ee1318f1 std=e8b810fab4 q=d9a4ad3785",
@@ -239,7 +239,7 @@
       "ca-g2-citizens-and-leaders text=c362a6e3f6 std=8420b67dd7 q=deb671fc39",
       "ca-g2-work-and-money text=29d8f69f16 std=c28339b69d q=3daba19f0f",
       "or-g2-world-maps text=5be3d98572 std=2c9cda9eb6 q=f54db7af64",
-      "al-g2-reading-maps text=340d8f0737 std=820eaa0fe9 q=d462f2e233",
+      "al-g2-reading-maps text=340d8f0737 std=820eaa0fe9 q=9434a12f80",
       "pe-work-and-prices-2 text=f115b62ac5 std=4d1abaf9fe q=d1ae87d40e",
       "ny-g2-jobs-and-taxes text=1fd11a1219 std=97e6ba2506 q=482e5cb66a",
       "in-g2-pledge-harrison text=6489963e6e std=ff2f89da8c q=af21054530"
@@ -441,7 +441,7 @@
       "mb-weather-5 text=db26ca3367 std=2518b01a09 q=9936aa0e30",
       "wa-g5-energy-food text=7248a5bf2e std=5c71a02c62 q=2c5e9d47f6",
       "or-g5-design text=6302707f88 std=2012268e59 q=5e2f08597c",
-      "in-g5-sun-stars text=e2f6eca589 std=7e139b10aa q=7d626c6f8f",
+      "in-g5-sun-stars text=e2f6eca589 std=7e139b10aa q=2cf87ca8cd",
       "in-g5-earth-water text=5a0b734626 std=73bf8603fe q=b373b3e965",
       "in-g5-ecosystems text=16ef49f63f std=e7415eb716 q=65678fd365"
     ]

@@ -157,7 +157,7 @@
     "units": [
       "my-community text=f4b6495f7a std=a8f495ba5f q=e0548ab0f6",
       "our-land text=9250f303b3 std=171378012a q=c1704cb4f1",
-      "maps text=0393b6b3b0 std=5893a15b3d q=671d944151",
+      "maps text=0393b6b3b0 std=5893a15b3d q=bb8e729a47",
       "changes-in-my-life text=d5ee1318f1 std=81baf698f1 q=d9a4ad3785",
       "respect-and-inclusion text=2f7448bf67 std=41836eb8b0 q=2bd238d5a9",
       "community-services text=26d27aa27c std=d2d6b23acc q=22cd5a9649",
@@ -427,7 +427,7 @@
       "wa-g5-gravity text=8166e3c8ef std=803a5a719c q=577ce5caa4",
       "wa-g5-energy-food text=7248a5bf2e std=2d6afecddc q=2c5e9d47f6",
       "wa-g5-ecosystems text=633496097d std=6df74b1f98 q=23dd6d4d3d",
-      "or-g5-sun-stars text=670213c172 std=b2ec8c76b8 q=85ed1a5127",
+      "or-g5-sun-stars text=670213c172 std=b2ec8c76b8 q=e37af7b490",
       "or-g5-earth-water text=8fc64e219d std=5d62901a85 q=5e3d77d5b4",
       "or-g5-design text=6302707f88 std=8b316c0c10 q=5e2f08597c"
     ]
