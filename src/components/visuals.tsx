@@ -515,6 +515,87 @@ export function Angle({ degrees }: { degrees: number }) {
   );
 }
 
+type JoinedVisual = Extract<Visual, { type: "joined" }>;
+
+const JOIN_FILLS = ["#d6e6fd", "#ffe2c4", "#d3f2e4"];
+
+/** Rectangles joined along a common bottom edge, or one with a corner cut away, drawn to scale with every side labelled. */
+export function JoinedShape({ parts, cut, unit, caption }: Omit<JoinedVisual, "type">) {
+  const len = (n: number) => (unit ? `${n} ${unit}` : String(n));
+  // The unknown part has no sides to show, so it borrows the first part's shape and is drawn dashed.
+  const known = parts.find((p) => p.w !== undefined && p.h !== undefined);
+  const sized = parts.map((p) => ({ ...p, unknown: p.w === undefined, w: p.w ?? Math.max(2, Math.round((known?.w ?? 4) * 0.7)), h: p.h ?? Math.max(2, Math.round((known?.h ?? 4) * 0.7)) }));
+  const totalW = sized.reduce((t, p) => t + p.w, 0);
+  const maxH = Math.max(...sized.map((p) => p.h));
+  const s = Math.min(230 / totalW, 130 / maxH);
+  const left = 54;
+  const top = 26;
+  const drawW = totalW * s;
+  const drawH = maxH * s;
+  const width = left + drawW + 54;
+  const height = top + drawH + 26 + (caption ? 24 : 0);
+  const bottom = top + drawH;
+  const text = { fontFamily: "var(--font-fredoka)", fontWeight: 600, fontSize: 15, fill: INK } as const;
+
+  const named = sized.map((p) => (p.unknown ? "an unknown rectangle" : `${len(p.w)} by ${len(p.h)}`)).join(" and ");
+  const label = cut ? `a ${len(sized[0].w)} by ${len(sized[0].h)} rectangle with a ${len(cut.w)} by ${len(cut.h)} corner cut away` : `a floor plan made of rectangles: ${named}`;
+
+  let x = left;
+  return (
+    <svg viewBox={`0 0 ${width} ${height}`} className="w-full max-w-sm" role="img" aria-label={label}>
+      {cut ? (
+        <>
+          {(() => {
+            const w = sized[0].w * s;
+            const h = sized[0].h * s;
+            const cw = cut.w * s;
+            const ch = cut.h * s;
+            const y0 = bottom - h;
+            return (
+              <g>
+                <path d={`M${left} ${y0} H${left + w - cw} V${y0 + ch} H${left + w} V${bottom} H${left} Z`} fill={JOIN_FILLS[0]} stroke={INK} strokeWidth="3" strokeLinejoin="round" />
+                <rect x={left + w - cw} y={y0} width={cw} height={ch} fill="none" stroke="#7b8499" strokeWidth="2" strokeDasharray="5 4" />
+                <text x={left + w / 2} y={bottom + 19} textAnchor="middle" {...text}>{len(sized[0].w)}</text>
+                <text x={left - 8} y={y0 + h / 2} textAnchor="end" dominantBaseline="central" {...text}>{len(sized[0].h)}</text>
+                <text x={left + w - cw / 2} y={y0 - 7} textAnchor="middle" {...text}>{len(cut.w)}</text>
+                <text x={left + w + 8} y={y0 + ch / 2} textAnchor="start" dominantBaseline="central" {...text}>{len(cut.h)}</text>
+              </g>
+            );
+          })()}
+        </>
+      ) : (
+        sized.map((p, i) => {
+          const w = p.w * s;
+          const h = p.h * s;
+          const x0 = x;
+          x += w;
+          const y0 = bottom - h;
+          return (
+            <g key={i}>
+              <rect x={x0} y={y0} width={w} height={h} fill={p.unknown ? "#ffffff" : JOIN_FILLS[i % JOIN_FILLS.length]} stroke={p.unknown ? "#7b8499" : INK} strokeWidth="3" strokeDasharray={p.unknown ? "6 5" : undefined} strokeLinejoin="round" />
+              {p.unknown ? (
+                <text x={x0 + w / 2} y={y0 + h / 2} textAnchor="middle" dominantBaseline="central" {...text} fontSize={26}>?</text>
+              ) : (
+                <>
+                  <text x={x0 + w / 2} y={bottom + 19} textAnchor="middle" {...text}>{len(p.w)}</text>
+                  {i === 0 && <text x={x0 - 8} y={y0 + h / 2} textAnchor="end" dominantBaseline="central" {...text}>{len(p.h)}</text>}
+                  {i === sized.length - 1 && <text x={x0 + w + 8} y={y0 + h / 2} textAnchor="start" dominantBaseline="central" {...text}>{len(p.h)}</text>}
+                  {i > 0 && i < sized.length - 1 && <text x={x0 + w / 2} y={y0 + h / 2} textAnchor="middle" dominantBaseline="central" {...text}>{len(p.h)}</text>}
+                </>
+              )}
+            </g>
+          );
+        })
+      )}
+      {caption && (
+        <text x={width / 2} y={height - 6} textAnchor="middle" {...text} fontSize={14}>
+          {caption}
+        </text>
+      )}
+    </svg>
+  );
+}
+
 export function CoordinateGrid({ size, min = 0, points }: { size: number; min?: number; points: { x: number; y: number; label?: string }[] }) {
   const span = size - min;
   const W = 260;
@@ -791,6 +872,8 @@ export function QuestionVisual({ visual }: { visual: Visual }) {
       return <CoordinateGrid size={visual.size} min={visual.min} points={visual.points} />;
     case "angle":
       return <Angle degrees={visual.degrees} />;
+    case "joined":
+      return <JoinedShape parts={visual.parts} cut={visual.cut} unit={visual.unit} caption={visual.caption} />;
     case "story":
       return (
         <div className="w-full max-w-2xl rounded-2xl border-[3px] border-[#f3c6dc] bg-[#fff7fb] px-5 py-4">

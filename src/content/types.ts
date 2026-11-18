@@ -91,7 +91,22 @@ export type Visual =
   /** Points on a coordinate grid (first quadrant unless min is negative). */
   | { type: "grid"; size: number; min?: number; points: { x: number; y: number; label?: string }[] }
   /** An angle drawn with two rays. */
-  | { type: "angle"; degrees: number };
+  | { type: "angle"; degrees: number }
+  /**
+   * A floor plan or flat shape made of rectangles that sit side by side along a common bottom edge (drawn to scale,
+   * each side labelled with its own length), or one rectangle with a rectangle cut from its top right corner.
+   * A part with no `w` and `h` is the unknown one: it is drawn dashed with a "?" inside.
+   */
+  | {
+      type: "joined";
+      parts: { w?: number; h?: number }[];
+      /** A rectangle cut away from the top right corner of the single part. */
+      cut?: { w: number; h: number };
+      /** The unit written after each length ("ft"), or none to write bare numbers. */
+      unit?: string;
+      /** A line under the picture ("Total area: 48 sq in"). */
+      caption?: string;
+    };
 
 export interface Choice {
   id: string;

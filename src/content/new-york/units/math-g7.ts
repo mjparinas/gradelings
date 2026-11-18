@@ -1,4 +1,5 @@
 import { pick, randInt, sample } from "../../random";
+import { sideBySide } from "../../joined";
 import type { Unit } from "../../types";
 import { type Maker, fmt, num, pickOne, someone, typed } from "../../washington/units/math-kit";
 import type { Q } from "../own";
@@ -221,8 +222,9 @@ const lShape: Maker = (d) => {
   const area = a * b + c * e;
   const prompt = `${someone()}'s patio is an L shape: a ${a} ft by ${b} ft rectangle joined to a ${c} ft by ${e} ft rectangle. What is its area, in square feet?`;
   const hint = `Add the two rectangles: ${a} × ${b} + ${c} × ${e}.`;
-  if (d === 3) return typed(prompt, area, hint);
-  return num(prompt, area, hint, { min: 1, extra: [2 * (a + b + c + e), a * b, (a + c) * (b + e)] });
+  const visual = sideBySide([[a, b], [c, e]], "ft");
+  if (d === 3) return typed(prompt, area, hint, { visual });
+  return num(prompt, area, hint, { min: 1, extra: [2 * (a + b + c + e), a * b, (a + c) * (b + e)], visual });
 };
 
 /** A house shape: a rectangle with a triangle on top. */
@@ -273,7 +275,7 @@ const coverCost: Maker = () => {
     `A floor is a ${a} m by ${b} m rectangle plus a ${c} m by ${e} m rectangle. Tile costs $${price} per square meter. What does the tile cost, in dollars?`,
     area * price,
     `Area: ${a * b} + ${c * e} = ${area} m². Then multiply by $${price}.`,
-    { min: 1, extra: [area, (a + b + c + e) * 2 * price, a * b * price] },
+    { min: 1, extra: [area, (a + b + c + e) * 2 * price, a * b * price], visual: sideBySide([[a, b], [c, e]], "m") },
   );
 };
 

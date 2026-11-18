@@ -363,4 +363,30 @@ describe("QuestionVisual", () => {
     rerender(<QuestionVisual visual={{ type: "angle", degrees: 270 }} />);
     expect(arc()).toMatch(/A26 26 0 1 0/);
   });
+  it("draws joined rectangles to scale with every side labelled and no answer", () => {
+    show({ type: "joined", parts: [{ w: 6, h: 2 }, { w: 3, h: 3 }], unit: "ft" });
+    const fig = screen.getByRole("img", { name: "a floor plan made of rectangles: 6 ft by 2 ft and 3 ft by 3 ft" });
+    const rects = [...fig.querySelectorAll("rect")];
+    expect(rects).toHaveLength(2);
+    // Same scale both ways: 6 wide by 2 tall is three times as wide as tall, and the 3 by 3 is square.
+    const [a, b] = rects.map((r) => [Number(r.getAttribute("width")), Number(r.getAttribute("height"))]);
+    expect(a[0] / a[1]).toBeCloseTo(3);
+    expect(b[0]).toBeCloseTo(b[1]);
+    // They sit on one bottom edge and touch.
+    const bottom = (r: Element) => Number(r.getAttribute("y")) + Number(r.getAttribute("height"));
+    expect(bottom(rects[0])).toBeCloseTo(bottom(rects[1]));
+    expect(Number(rects[0].getAttribute("x")) + a[0]).toBeCloseTo(Number(rects[1].getAttribute("x")));
+    expect([...fig.querySelectorAll("text")].map((t) => t.textContent)).toEqual(["6 ft", "2 ft", "3 ft", "3 ft"]);
+  });
+
+  it("draws a corner cut away, and an unknown part with a question mark", () => {
+    const { rerender } = show({ type: "joined", parts: [{ w: 10, h: 8 }], cut: { w: 4, h: 3 }, unit: "m" });
+    const cut = screen.getByRole("img", { name: "a 10 m by 8 m rectangle with a 4 m by 3 m corner cut away" });
+    expect(cut.querySelector("path")!.getAttribute("d")).toMatch(/^M.* H.* V.* H.* V.* H.* Z$/);
+    expect([...cut.querySelectorAll("text")].map((t) => t.textContent)).toEqual(["10 m", "8 m", "4 m", "3 m"]);
+    rerender(<QuestionVisual visual={{ type: "joined", parts: [{ w: 5, h: 4 }, {}], unit: "in", caption: "Total area: 31 sq in" }} />);
+    const unknown = screen.getByRole("img", { name: "a floor plan made of rectangles: 5 in by 4 in and an unknown rectangle" });
+    expect(unknown).toHaveTextContent("?");
+    expect(unknown).toHaveTextContent("Total area: 31 sq in");
+  });
 });

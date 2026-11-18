@@ -1,4 +1,5 @@
 import { chance, pick, randInt, sample, shuffle, textChoice } from "../random";
+import { cornerCut } from "../joined";
 import type { GenerateOptions, OrderQuestion, Question, Unit, Visual } from "../types";
 import { buildSet, eq, levelOf, on, ordinal, spaced, typeIn } from "./kit";
 
@@ -865,9 +866,9 @@ function measure8(opts?: GenerateOptions): Question[] {
     const h = randInt(2, H - 3);
     const u = pick(["cm", "m"]);
     if (chance(0.5)) {
-      return typeIn(`An L-shape is made by cutting a ${w} ${u} by ${h} ${u} rectangle from the corner of a ${W} ${u} by ${H} ${u} rectangle. What is its area?`, W * H - w * h, `Subtract the cut-out from the whole rectangle: ${W} × ${H} − ${w} × ${h}.`, undefined, { suffix: `${u}²` });
+      return typeIn(`An L-shape is made by cutting a ${w} ${u} by ${h} ${u} rectangle from the corner of a ${W} ${u} by ${H} ${u} rectangle. What is its area?`, W * H - w * h, `Subtract the cut-out from the whole rectangle: ${W} × ${H} − ${w} × ${h}.`, cornerCut(W, H, w, h, u), { suffix: `${u}²` });
     }
-    return typeIn(`An L-shape is made by cutting a ${w} ${u} by ${h} ${u} rectangle from the corner of a ${W} ${u} by ${H} ${u} rectangle. What is its perimeter?`, 2 * (W + H), "Cutting out a corner does not change the perimeter. It is the same as the perimeter of the whole rectangle.", undefined, { suffix: u });
+    return typeIn(`An L-shape is made by cutting a ${w} ${u} by ${h} ${u} rectangle from the corner of a ${W} ${u} by ${H} ${u} rectangle. What is its perimeter?`, 2 * (W + H), "Cutting out a corner does not change the perimeter. It is the same as the perimeter of the whole rectangle.", cornerCut(W, H, w, h, u), { suffix: u });
   };
   const semicircle = (): Question => {
     const r = pick([2, 4, 5, 10]);
