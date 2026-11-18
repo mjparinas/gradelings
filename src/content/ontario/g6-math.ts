@@ -1,6 +1,7 @@
 import { pick, randInt, sample, shuffle, textChoice } from "../random";
 import type { GenerateOptions, Question, Unit, Visual } from "../types";
 import { buildSet, levelOf, on, others, numQ, range, typeIn } from "./kit";
+import { sideBySide } from "../joined";
 
 // Ontario Grade 6 mathematics (2020 curriculum). Whole numbers go up to a million, decimals to thousandths,
 // and integers appear for the first time.
@@ -631,7 +632,7 @@ function measure6(opts?: GenerateOptions): Question[] {
     const b = randInt(3, 8);
     const c = randInt(2, 5);
     const e = randInt(2, 6);
-    return typeIn(`An L-shape is made of a ${a} cm by ${b} cm rectangle and a ${c} cm by ${e} cm rectangle. What is its total area in square centimetres?`, a * b + c * e, "Find the area of each rectangle, then add.");
+    return typeIn(`An L-shape is made of a ${a} cm by ${b} cm rectangle and a ${c} cm by ${e} cm rectangle. What is its total area in square centimetres?`, a * b + c * e, "Find the area of each rectangle, then add.", sideBySide([[a, b], [c, e]], "cm"));
   };
   const surface = (): Question => {
     const l = randInt(2, 8);
