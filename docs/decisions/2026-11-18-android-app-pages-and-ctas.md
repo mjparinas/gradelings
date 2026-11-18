@@ -5,3 +5,7 @@ Melvin asked for more calls to action for the Android app on the website and mor
 **Why:** the app is live on Google Play (checked November 18, 2026) and parents and teachers should find it from the pages they already visit. The site has no blog; guides and What's new posts are where launch posts go.
 
 **How to apply:** public pages are never opened inside the store apps, so no `isStoreApp` check is needed. Keep the app's own text free of prices and trials (see Store apps sell nothing). When the App Store listing is live, update `android.ts` FAQs and `AppBadges.tsx`.
+
+## Temporary audit exception (Melvin, November 18, 2026)
+
+A new high advisory on `picomatch` (GHSA-fc5q-39xc-vjpf, ReDoS, `<=4.0.7`, reached through `@sentry/nextjs`'s build tooling) has no patched release and failed the production dependency audit for every PR. CI now runs `scripts/audit-gate.mjs`, which still fails on any other high or critical advisory and allows only that one until 2026-12-18 (`ALLOWED` in the script). Remove the entry once a fixed picomatch ships.
