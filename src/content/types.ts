@@ -104,7 +104,26 @@ export type Visual =
   /** A compass with an arrow showing which way someone faces. */
   | { type: "compass"; facing: "north" | "east" | "south" | "west" }
   /** A plain outline of a figure, for symmetry questions. */
-  | { type: "figure"; figure: PlainFigure };
+  | { type: "figure"; figure: PlainFigure }
+  /**
+   * A floor plan or flat shape made of rectangles that sit side by side along a common bottom edge (drawn to scale,
+   * each side labelled with its own length), or one rectangle with a rectangle cut from its top right corner.
+   * A part with no `w` and `h` is the unknown one: it is drawn dashed with a "?" inside.
+   */
+  | {
+      type: "joined";
+      parts: { w?: number; h?: number }[];
+      /** A rectangle cut away from the top right corner of the single part. */
+      cut?: { w: number; h: number };
+      /** A triangle (as wide as the part, `h` tall) on top of the single part, or a semicircle on its right end whose diameter is the part's height. */
+      cap?: { shape: "triangle"; h: number } | { shape: "semicircle"; label?: string };
+      /** A triangle cut out of the top edge of the single part, centred, with this base and depth. */
+      cutTriangle?: { base: number; h: number };
+      /** The unit written after each length ("ft"), or none to write bare numbers. */
+      unit?: string;
+      /** A line under the picture ("Total area: 48 sq in"). */
+      caption?: string;
+    };
 
 /** The shapes a `move` picture can slide, flip or turn. "boot" is lopsided, so every move shows. */
 export type MoveFigure = "boot" | "triangle" | "square" | "hexagon";
