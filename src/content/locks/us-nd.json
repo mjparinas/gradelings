@@ -167,7 +167,7 @@
   "1/social": {
     "overview": "7150b0250e",
     "units": [
-      "maps text=0393b6b3b0 std=fc3c6341fe q=671d944151",
+      "maps text=0393b6b3b0 std=fc3c6341fe q=bb8e729a47",
       "our-land text=9250f303b3 std=e8f18468d1 q=c1704cb4f1",
       "my-community text=f4b6495f7a std=42d087e958 q=e0548ab0f6",
       "changes-in-my-life text=d5ee1318f1 std=6e7b971d35 q=d9a4ad3785",
@@ -460,7 +460,7 @@
       "mb-weather-5 text=db26ca3367 std=2518b01a09 q=9936aa0e30",
       "wa-g5-energy-food text=7248a5bf2e std=5c71a02c62 q=2c5e9d47f6",
       "or-g5-design text=6302707f88 std=0da5c82525 q=5e2f08597c",
-      "nd-g5-sun-stars text=17167f33b0 std=7e139b10aa q=800a926cc1",
+      "nd-g5-sun-stars text=17167f33b0 std=7e139b10aa q=ffb432cd2c",
       "nd-g5-earth-water text=1a74572258 std=73bf8603fe q=18ae0780d9",
       "nd-g5-ecosystems text=075719b804 std=e7415eb716 q=54067537c1"
     ]

@@ -181,7 +181,7 @@
       "my-community text=f4b6495f7a std=d951e46804 q=e0548ab0f6",
       "respect-and-inclusion text=2f7448bf67 std=c327152356 q=2bd238d5a9",
       "my-roles text=6c48ae23b8 std=eb17c56ff2 q=f34e0b2c23",
-      "maps text=0393b6b3b0 std=ad42679974 q=671d944151",
+      "maps text=0393b6b3b0 std=ad42679974 q=bb8e729a47",
       "our-land text=9250f303b3 std=3e5e49f57b q=c1704cb4f1",
       "pe-needs-and-wants-1 text=feb7f0d4f1 std=390b8dcfec q=ab4a4e507f",
       "pe-goods-and-services-1 text=55be22b8f4 std=78234545ab q=43e8316788",
@@ -265,7 +265,7 @@
       "ca-g2-work-and-money text=29d8f69f16 std=59f74aa9d4 q=3daba19f0f",
       "ny-g2-community-types text=1f9302d1b8 std=f8bf610f23 q=3cb7c5ec0a",
       "ny-g2-jobs-and-taxes text=1fd11a1219 std=36ff8c7a4e q=482e5cb66a",
-      "ny-g2-reading-maps text=403a01d278 std=0d7b7223c0 q=b6683cf4cc",
+      "ny-g2-reading-maps text=403a01d278 std=0d7b7223c0 q=b99c9522c4",
       "ny-g2-who-runs-our-town text=dd8c10ea23 std=ca8b8f6349 q=567ef63c5b"
     ]
   },
@@ -496,7 +496,7 @@
       "or-g5-design text=6302707f88 std=2012268e59 q=5e2f08597c",
       "ny-g5-gravity text=b9a7cba2f8 std=efea32cd78 q=3cec214020",
       "ny-g5-ecosystems text=006f5d9c63 std=e7415eb716 q=2e930522bb",
-      "ny-g5-sun-stars text=22bfb76516 std=d92e1eab05 q=fc688f29fa",
+      "ny-g5-sun-stars text=22bfb76516 std=d92e1eab05 q=0a03ab0d06",
       "ny-g5-earth-water text=2f846adb25 std=b7091f4f3e q=ad7791085d"
     ]
   },
@@ -667,7 +667,7 @@
       "ny-g7-rewrite-expressions text=53542b83ec std=c9a45ec57e q=1eec8c5845",
       "ny-g7-triangles text=799eae18ff std=e0c2fe69a2 q=bbafbb717a",
       "ny-g7-slices text=c038ec1cf4 std=532294c749 q=eb1a57ef1b",
-      "ny-g7-composite-area text=3308264c70 std=140481c402 q=245f8af021"
+      "ny-g7-composite-area text=3308264c70 std=140481c402 q=e1e379b4f6"
     ]
   },
   "7/science": {

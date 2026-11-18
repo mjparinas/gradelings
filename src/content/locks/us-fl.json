@@ -202,7 +202,7 @@
       "wa-g1-earn-save-share text=ff3274fdf3 std=dd45b1dc75 q=2bb7ea855e",
       "pe-goods-and-services-1 text=55be22b8f4 std=9d95f24f9b q=43e8316788",
       "pe-needs-and-wants-1 text=feb7f0d4f1 std=c03707ba08 q=ab4a4e507f",
-      "maps text=0393b6b3b0 std=0c0a8b1b6b q=671d944151",
+      "maps text=0393b6b3b0 std=0c0a8b1b6b q=bb8e729a47",
       "our-land text=9250f303b3 std=d20c479279 q=c1704cb4f1",
       "fl-g1-symbols-people text=7581ed10e0 std=37e97d871e q=aec2769c4b",
       "fl-g1-florida-map text=f9e3ccc470 std=a87cd59c9e q=3a738099b2",
@@ -293,7 +293,7 @@
       "ca-g2-work-and-money text=29d8f69f16 std=e03216b9b9 q=3daba19f0f",
       "pe-work-and-prices-2 text=f115b62ac5 std=cc6d65b1d8 q=d1ae87d40e",
       "ny-g3-trade text=fbd8dd742e std=757145002a q=7164350409",
-      "al-g2-reading-maps text=340d8f0737 std=616383e1a4 q=d462f2e233",
+      "al-g2-reading-maps text=340d8f0737 std=616383e1a4 q=9434a12f80",
       "az-g2-continents-oceans text=3c092e19d9 std=d105372b8e q=73975f9cd7",
       "ny-g3-globes-and-maps text=387663e4b1 std=e04b6761dc q=7becb7a790",
       "fl-g2-first-americans text=4be93ad441 std=b3c2029791 q=82d72e9e4d",
@@ -346,7 +346,7 @@
       "polygons-ab text=28ca5a23f0 std=0a6871a3fe q=891aff50f5",
       "fl-g3-even-odd-multiples text=5a4bd3b163 std=b248f08f68 q=bda3162e01",
       "fl-g3-line-symmetry text=e21c0c1ea1 std=0a49e3c838 q=73030459ca",
-      "fl-g3-composite-area text=a293e16f9f std=0cc19905a6 q=9ecaedd887"
+      "fl-g3-composite-area text=a293e16f9f std=0cc19905a6 q=58489a4f7c"
     ]
   },
   "3/science": {
@@ -721,7 +721,7 @@
       "ny-g6-mongols-travelers text=d39841d4bd std=f248595a4a q=302fd11184",
       "tx-g6-world-regions text=b7906c1aab std=d90a2574ce q=9750824f58",
       "tx-g6-economies text=cf80c128fc std=4f389a7a0a q=3a96689cde",
-      "fl-g6-ancient-places text=48010c8ede std=e0124f4152 q=6ebff1a686",
+      "fl-g6-ancient-places text=48010c8ede std=e0124f4152 q=e28bbe1cd7",
       "fl-g6-slavery-early-americas text=2046c8d4da std=09360f0594 q=dde344314d"
     ]
   },
@@ -780,7 +780,7 @@
       "wa-g7-scale-drawings text=44f1660d4b std=1f0b8f0af9 q=480f217aff",
       "wa-g6-nets text=576c671c1a std=de5489d6e5 q=1ee1097036",
       "ca-g7-rewrite-expressions text=a0c47c116e std=e50feca989 q=f14bbf9812",
-      "ny-g7-composite-area text=3308264c70 std=1c507e0e71 q=245f8af021",
+      "ny-g7-composite-area text=3308264c70 std=1c507e0e71 q=e1e379b4f6",
       "area-constructions-ab text=8f1ce023d1 std=7f6fa904b2 q=b0455b7f90",
       "data-7 text=89d3646ea8 std=a340bbc8a4 q=1966996f9f",
       "tx-g7-tips-and-discounts text=2cd2dc170e std=fbbf5392bc q=6e5b656bbe",
@@ -1035,7 +1035,7 @@
       "fl-g9-function-shifts text=d211297401 std=1b9304bb09 q=d117906c9c",
       "fl-g9-quadratics-from-zeros text=9314b92e88 std=c81ff1e798 q=1dfe7141a7",
       "fl-g9-circles-sectors text=0476e48b41 std=b161a4cc77 q=f409abddec",
-      "fl-g9-dilations-area-volume text=bf2e594d05 std=729f66a47f q=362d3015a4",
+      "fl-g9-dilations-area-volume text=bf2e594d05 std=729f66a47f q=62008d0361",
       "fl-g9-segment-ratio text=c8d4dfe66a std=e6dd52fa69 q=2eff8ba99a",
       "fl-g9-cross-sections-constructions text=b365058e7f std=f68b3acae9 q=2256d5de99"
     ]

@@ -159,7 +159,7 @@
   "1/social": {
     "overview": "b21c0c82e4",
     "units": [
-      "maps text=0393b6b3b0 std=6cddd9832d q=671d944151",
+      "maps text=0393b6b3b0 std=6cddd9832d q=bb8e729a47",
       "our-land text=9250f303b3 std=c9a36e50e6 q=c1704cb4f1",
       "my-community text=f4b6495f7a std=9ff861fd59 q=e0548ab0f6",
       "changes-in-my-life text=d5ee1318f1 std=98e9643cd5 q=d9a4ad3785",
@@ -410,7 +410,7 @@
       "matter-changes-5 text=3b4d86e7a6 std=99da441ef3 q=d36ded63b1",
       "wa-g5-energy-food text=7248a5bf2e std=59b72d3fa6 q=2c5e9d47f6",
       "or-g5-design text=6302707f88 std=117f599c5b q=5e2f08597c",
-      "wy-g5-sun-stars text=921798cd3a std=7219da8f9b q=b79467bd4a",
+      "wy-g5-sun-stars text=921798cd3a std=7219da8f9b q=50e3fca1cb",
       "wy-g5-earth-water text=b89a822aef std=1264868fe2 q=7b96833fc9",
       "wy-g5-ecosystems text=229b71ef02 std=e7415eb716 q=dc580c4e87"
     ]

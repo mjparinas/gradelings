@@ -2,6 +2,7 @@
 // units carry learning-standard text per framework (e.g. "ca-bc"), and the
 // scoring scheme and report-card language live with the framework.
 
+import type { MapVisual } from "./mapVisual";
 import type { Currency } from "./money";
 import type { RegisteredId } from "./registry";
 
@@ -36,6 +37,8 @@ export type ShapeName =
 
 /** Pictures drawn above a question to help explain it. */
 export type Visual =
+  /** A town map or a compass rose (`./mapVisual`). */
+  | MapVisual
   /** Big maths or text; each ☐ is drawn as a blank box. */
   | { type: "equation"; text: string }
   | { type: "emoji"; emoji: string; caption?: string }
@@ -115,7 +118,26 @@ export type Visual =
       marks?: { x: number; y: number; label?: string }[];
     }
   /** A tree diagram: every outcome of one stage branches to every outcome of the next (up to 24 ends). */
-  | { type: "tree"; title?: string; stages: string[][] };
+  | { type: "tree"; title?: string; stages: string[][] }
+  /**
+   * A floor plan or flat shape made of rectangles that sit side by side along a common bottom edge (drawn to scale,
+   * each side labelled with its own length), or one rectangle with a rectangle cut from its top right corner.
+   * A part with no `w` and `h` is the unknown one: it is drawn dashed with a "?" inside.
+   */
+  | {
+      type: "joined";
+      parts: { w?: number; h?: number }[];
+      /** A rectangle cut away from the top right corner of the single part. */
+      cut?: { w: number; h: number };
+      /** A triangle (as wide as the part, `h` tall) on top of the single part, or a semicircle on its right end whose diameter is the part's height. */
+      cap?: { shape: "triangle"; h: number } | { shape: "semicircle"; label?: string };
+      /** A triangle cut out of the top edge of the single part, centred, with this base and depth. */
+      cutTriangle?: { base: number; h: number };
+      /** The unit written after each length ("ft"), or none to write bare numbers. */
+      unit?: string;
+      /** A line under the picture ("Total area: 48 sq in"). */
+      caption?: string;
+    };
 
 export interface Choice {
   id: string;

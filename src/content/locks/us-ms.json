@@ -173,7 +173,7 @@
   "1/social": {
     "overview": "ed06ec0dea",
     "units": [
-      "maps text=0393b6b3b0 std=7ed45f00c5 q=671d944151",
+      "maps text=0393b6b3b0 std=7ed45f00c5 q=bb8e729a47",
       "our-land text=9250f303b3 std=6ff2514011 q=c1704cb4f1",
       "my-community text=f4b6495f7a std=0473ed2c99 q=e0548ab0f6",
       "ca-g1-long-ago text=1bee06737a std=9a2ac07670 q=71a2f5957a",
@@ -257,7 +257,7 @@
       "ny-g3-globes-and-maps text=387663e4b1 std=1ec43164a3 q=7becb7a790",
       "communities-compared text=38aa387c10 std=69058c747b q=20e81812b4",
       "then-and-now text=adcb461d8f std=c1e039f50f q=db6aba9849",
-      "ms-g2-reading-maps text=4eb3eae1ec std=e327e2eb6a q=503e87a44d"
+      "ms-g2-reading-maps text=4eb3eae1ec std=e327e2eb6a q=01990c6af1"
     ]
   },
   "3/language": {

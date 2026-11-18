@@ -167,7 +167,7 @@
   "1/social": {
     "overview": "ae25203a3e",
     "units": [
-      "maps text=0393b6b3b0 std=305251ea23 q=671d944151",
+      "maps text=0393b6b3b0 std=305251ea23 q=bb8e729a47",
       "my-community text=f4b6495f7a std=c2918cddd7 q=e0548ab0f6",
       "my-roles text=6c48ae23b8 std=289fa36081 q=f34e0b2c23",
       "ny-g1-rules-and-government text=ec41bb8674 std=c4a0ebbb9d q=94953413c5",
@@ -243,7 +243,7 @@
       "ca-g2-family-journeys text=f0bc6945ac std=12dbff76d0 q=cf88f9fc29",
       "communities-compared text=38aa387c10 std=59df32b647 q=20e81812b4",
       "ny-g3-world-communities text=ed14244948 std=c19dacbad5 q=8268800b99",
-      "ma-g2-reading-maps text=e85919f787 std=70ff739e62 q=7e2b34cb83",
+      "ma-g2-reading-maps text=e85919f787 std=70ff739e62 q=27322f9058",
       "ma-g2-work-and-money text=fcdaf79245 std=4ba1eebf67 q=587fff347b",
       "ma-g2-making-trading text=08e64ae670 std=feb4d91650 q=dd70322ed6"
     ]

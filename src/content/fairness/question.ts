@@ -115,6 +115,21 @@ function checkVisual(v: Visual) {
       expect(v.tens).toBeLessThanOrEqual(19);
       expect(v.ones).toBeLessThanOrEqual(19);
       break;
+    case "map": {
+      expect(v.rows.length).toBeGreaterThanOrEqual(2);
+      expect(v.rows.length).toBeLessThanOrEqual(5);
+      const width = v.rows[0].length;
+      expect(width).toBeLessThanOrEqual(5);
+      for (const row of v.rows) expect(row.length, "every row of a map is as wide as the first").toBe(width);
+      if (v.cols) expect(v.cols.length).toBe(width);
+      if (v.rowLabels) expect(v.rowLabels.length).toBe(v.rows.length);
+      const names = v.rows.flat().flatMap((c) => (c ? [c.label ?? c.emoji] : []));
+      expect(new Set(names).size, "two squares of a map look the same").toBe(names.length);
+      break;
+    }
+    case "compass":
+      for (const a of v.around ?? []) expect(["N", "E", "S", "W"]).toContain(a.at);
+      break;
     case "grid":
       for (const p of v.points) {
         expect(Math.abs(p.x)).toBeLessThanOrEqual(v.size);
@@ -159,6 +174,30 @@ function checkVisual(v: Visual) {
       expect(v.stages.length).toBeGreaterThanOrEqual(2);
       expect(v.stages.reduce((n, st) => n * st.length, 1)).toBeLessThanOrEqual(24);
       for (const st of v.stages) expect(st.length).toBeGreaterThanOrEqual(1);
+      break;
+    case "joined":
+      expect(v.parts.length).toBeGreaterThanOrEqual(1);
+      expect(v.parts.length).toBeLessThanOrEqual(3);
+      for (const part of v.parts) {
+        // Both sides or neither (the unknown part).
+        expect(part.w === undefined).toBe(part.h === undefined);
+        if (part.w !== undefined) expect(part.w).toBeGreaterThan(0);
+        if (part.h !== undefined) expect(part.h).toBeGreaterThan(0);
+      }
+      expect([v.cut, v.cap, v.cutTriangle].filter(Boolean).length).toBeLessThanOrEqual(1);
+      if (v.cap?.shape === "triangle") expect(v.cap.h).toBeGreaterThan(0);
+      if (v.cutTriangle) {
+        expect(v.parts.length).toBe(1);
+        expect(v.cutTriangle.base).toBeLessThan(v.parts[0].w ?? 0);
+        expect(v.cutTriangle.h).toBeLessThan(v.parts[0].h ?? 0);
+      }
+      if (v.cap) expect(v.parts.length).toBe(1);
+      if (v.cut) {
+        expect(v.parts.length).toBe(1);
+        // The cut must leave an L, so it is smaller than the whole in both directions.
+        expect(v.cut.w).toBeLessThan(v.parts[0].w ?? 0);
+        expect(v.cut.h).toBeLessThan(v.parts[0].h ?? 0);
+      }
       break;
   }
 }
