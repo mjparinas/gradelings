@@ -3,6 +3,7 @@ import Link from "@/components/PublicLink";
 import { Section } from "@/components/site/Legal";
 import { regionSummary, regionWord } from "@/components/site/provinces";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
+import { AndroidCta } from "@/components/site/AndroidCta";
 import { FRAMEWORKS } from "@/content/frameworks";
 import { APP_NAME } from "@/lib/brand";
 import { TRIAL_DAYS } from "@/lib/plan";
@@ -82,6 +83,7 @@ export default function AboutPage() {
           </Section>
         </div>
       </article>
+      <AndroidCta />
     </SitePage>
   );
 }

@@ -60,8 +60,16 @@ jobs:
             })).data;
             const merged = await github.rest.pulls.merge({ owner, repo, pull_number: pr.number, merge_method: 'merge', sha: staging, commit_title: `Promote staging to main (${date})` });
             core.notice(`Merged pull request #${pr.number}; main is now ${merged.data.sha.slice(0, 7)}.`);
+            // The repository's "Automatically delete head branches" setting deletes `staging` when the promotion pull
+            // request merges (it did on November 17, 2026), so put it back from main rather than merging into nothing.
             try {
+              await github.rest.repos.getBranch({ owner, repo, branch: 'staging' });
               await github.rest.repos.merge({ owner, repo, base: 'staging', head: 'main', commit_message: 'Bring main back into staging' });
             } catch (e) {
-              core.warning(`Could not merge main back into staging: ${e.message}`);
+              if (e.status === 404) {
+                await github.rest.git.createRef({ owner, repo, ref: 'refs/heads/staging', sha: merged.data.sha });
+                core.warning('staging had been deleted when the promotion merged (turn off "Automatically delete head branches" in Settings > General); recreated it from main.');
+              } else {
+                core.warning(`Could not merge main back into staging: ${e.message}`);
+              }
             }

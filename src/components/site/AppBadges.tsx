@@ -13,18 +13,25 @@ function PlayMark() {
   );
 }
 
+/** The Google Play badge on its own, for call-to-action blocks. */
+export function PlayBadge() {
+  return (
+    <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer" className={BADGE}>
+      <PlayMark />
+      <span className="leading-tight">
+        <span className="block text-[10px] uppercase tracking-wide">Get it on</span>{" "}
+        <span className="block text-base font-semibold">Google Play</span>
+      </span>
+    </a>
+  );
+}
+
 /** Store badges for the footer. Google Play links to the listing; the App Store is not live yet, so it is not a link. */
 export function AppBadges() {
   return (
     <ul className="mt-3 flex flex-wrap gap-2" aria-label={`${APP_NAME} apps`}>
       <li>
-        <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer" className={BADGE}>
-          <PlayMark />
-          <span className="leading-tight">
-            <span className="block text-[10px] uppercase tracking-wide">Get it on</span>{" "}
-            <span className="block text-base font-semibold">Google Play</span>
-          </span>
-        </a>
+        <PlayBadge />
       </li>
       <li>
         <span className={`${BADGE} border-line bg-black/70`}>
