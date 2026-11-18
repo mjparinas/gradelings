@@ -105,7 +105,7 @@ export type Visual =
   /** A figure before (dashed) and after a slide, a flip or a turn. See `src/components/figureVisuals.tsx`. */
   | { type: "move"; move: "slide" | "flip" | "turn"; figure?: MoveFigure; dx?: number; dy?: number; axis?: "vertical" | "horizontal"; degrees?: number }
   /** A compass with an arrow showing which way someone faces. */
-  | { type: "compass"; facing: "north" | "east" | "south" | "west" }
+  | { type: "facing"; facing: "north" | "east" | "south" | "west" }
   /** A plain outline of a figure, for symmetry questions. */
   | { type: "figure"; figure: PlainFigure }
   /**

@@ -946,7 +946,7 @@ export function QuestionVisual({ visual }: { visual: Visual }) {
       return <Thermometers values={visual.values} min={visual.min} max={visual.max} />;
     case "move":
       return <MoveDrawing visual={visual} />;
-    case "compass":
+    case "facing":
       return <Compass facing={visual.facing} />;
     case "figure":
       return <PlainFigureDrawing figure={visual.figure} />;

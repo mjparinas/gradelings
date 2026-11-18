@@ -118,7 +118,7 @@ describe("compass for quarter and half turns", () => {
       const m = /^\w+ faces (north|east|south|west)\./.exec(q.prompt);
       if (!m) continue;
       seen++;
-      expect(visualOf(q), q.prompt).toEqual({ type: "compass", facing: m[1] });
+      expect(visualOf(q), q.prompt).toEqual({ type: "facing", facing: m[1] });
     }
     expect(seen).toBeGreaterThan(5);
   });

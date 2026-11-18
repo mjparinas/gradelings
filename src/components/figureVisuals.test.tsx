@@ -86,7 +86,7 @@ describe("slide, flip and turn", () => {
 
 describe("compass and outlines", () => {
   it("points the arrow the way the person faces", () => {
-    const { container } = show({ type: "compass", facing: "east" });
+    const { container } = show({ type: "facing", facing: "east" });
     expect(screen.getByRole("img", { name: "a compass with someone facing east" })).toBeInTheDocument();
     const arrow = container.querySelector("line[stroke-width='7']")!;
     expect(Number(arrow.getAttribute("x2"))).toBeGreaterThan(Number(arrow.getAttribute("x1")));

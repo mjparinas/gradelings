@@ -91,7 +91,7 @@ const FACING = /^\w+ faces (north|east|south|west)\./;
 /** A compass showing the way the person starts out facing, for the quarter-turn and half-turn questions. */
 export const compassPicture = picture((prompt) => {
   const m = FACING.exec(prompt);
-  return m ? { type: "compass", facing: m[1] as "north" | "east" | "south" | "west" } : undefined;
+  return m ? { type: "facing", facing: m[1] as "north" | "east" | "south" | "west" } : undefined;
 });
 
 // ---------- Lines of symmetry ----------
