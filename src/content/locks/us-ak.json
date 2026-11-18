@@ -163,7 +163,7 @@
   "1/social": {
     "overview": "a7de658c27",
     "units": [
-      "maps text=0393b6b3b0 std=bbc4ef7da6 q=671d944151",
+      "maps text=0393b6b3b0 std=bbc4ef7da6 q=bb8e729a47",
       "our-land text=9250f303b3 std=7dd00d1b11 q=c1704cb4f1",
       "my-community text=f4b6495f7a std=e4a69060cc q=e0548ab0f6",
       "changes-in-my-life text=d5ee1318f1 std=92d4ee9c97 q=d9a4ad3785",
@@ -237,7 +237,7 @@
       "ns-community-change-2 text=153e1a1ea0 std=f7daaf8d8d q=4a8dbf6467",
       "mb-working-together text=2915a53ce4 std=be44ad5552 q=17c9064822",
       "ca-g2-citizens-and-leaders text=c362a6e3f6 std=4e5a43c2c0 q=deb671fc39",
-      "ca-g2-reading-maps text=4eb3eae1ec std=41556e23b9 q=94e825dc3c",
+      "ca-g2-reading-maps text=4eb3eae1ec std=41556e23b9 q=f7a9578d23",
       "ca-g2-work-and-money text=29d8f69f16 std=8ce00d809f q=3daba19f0f",
       "or-g2-world-maps text=5be3d98572 std=31dc1aaf2b q=f54db7af64",
       "ak-g2-alaska-symbols text=e2ffda93cd std=68cb2a455b q=9416b5b45c"
@@ -448,7 +448,7 @@
       "or-g5-design text=6302707f88 std=2012268e59 q=5e2f08597c",
       "ca-g5-earth-water text=5ee0eb1f9c std=73bf8603fe q=f5aa232847",
       "wa-g5-gravity text=8166e3c8ef std=efea32cd78 q=577ce5caa4",
-      "ak-g5-sun-stars text=e2515ba9ea std=7e139b10aa q=4b96d173dd"
+      "ak-g5-sun-stars text=e2515ba9ea std=7e139b10aa q=3d1ff063d0"
     ]
   },
   "5/social": {

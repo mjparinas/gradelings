@@ -169,7 +169,7 @@
   "1/social": {
     "overview": "501aede872",
     "units": [
-      "maps text=0393b6b3b0 std=fa4bf996f8 q=671d944151",
+      "maps text=0393b6b3b0 std=fa4bf996f8 q=bb8e729a47",
       "our-land text=9250f303b3 std=9a49132d5b q=c1704cb4f1",
       "my-community text=f4b6495f7a std=e138acec8e q=e0548ab0f6",
       "changes-in-my-life text=d5ee1318f1 std=e562cd6557 q=d9a4ad3785",
@@ -244,7 +244,7 @@
       "ca-g2-citizens-and-leaders text=c362a6e3f6 std=5a5757b917 q=deb671fc39",
       "ca-g2-work-and-money text=29d8f69f16 std=9b5dc8d6b8 q=3daba19f0f",
       "oh-g2-ohio-regions text=8a6bf313ac std=4af214cbcf q=b548515610",
-      "oh-g2-reading-maps text=4eb3eae1ec std=f2ad4b3eb5 q=d462f2e233"
+      "oh-g2-reading-maps text=4eb3eae1ec std=f2ad4b3eb5 q=9434a12f80"
     ]
   },
   "3/language": {
@@ -454,8 +454,8 @@
       "wa-g5-energy-food text=7248a5bf2e std=26ec344431 q=2c5e9d47f6",
       "oh-g5-gravity text=8166e3c8ef std=11d0510c98 q=f28f2f262e",
       "oh-g5-ecosystems text=a52262dafa std=cac43b20f2 q=e951d33cd6",
-      "oh-g5-sun-stars text=7a55f3815d std=457ceee11e q=c08943f346",
-      "oh-g5-day-night text=9d61750e38 std=aecc458ef9 q=9e97b3c5c6"
+      "oh-g5-sun-stars text=7a55f3815d std=457ceee11e q=80516f1915",
+      "oh-g5-day-night text=9d61750e38 std=aecc458ef9 q=527939e30b"
     ]
   },
   "5/social": {

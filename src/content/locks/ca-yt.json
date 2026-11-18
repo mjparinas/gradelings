@@ -160,7 +160,7 @@
       "my-community text=f4b6495f7a std=303599611c q=75c0262c60",
       "different-and-alike text=a8371bb608 std=2931d23976 q=3685278697",
       "our-land text=9250f303b3 std=3db01e920f q=c1704cb4f1",
-      "maps text=0393b6b3b0 std=e5a9120b50 q=5413590a99",
+      "maps text=0393b6b3b0 std=e5a9120b50 q=4ce4b133e9",
       "then-and-now-1 text=54310cc642 std=ff3bdb6af4 q=68b5370f4c"
     ]
   },
@@ -280,7 +280,7 @@
   "3/social": {
     "overview": "4e1fcf0699",
     "units": [
-      "maps-and-globes text=6a6a9ae26b std=8e6999479f q=fd8314b02c",
+      "maps-and-globes text=6a6a9ae26b std=8e6999479f q=85d8fa6d9b",
       "meeting-needs text=40a76a9522 std=19febb220f q=3ac35931e2",
       "world-cultures text=7b3656a51b std=4bc6ff3064 q=b3c1eb8a42",
       "first-peoples text=52cf17696d std=a04ca6fbaa q=ea44a71396",
