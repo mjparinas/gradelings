@@ -1,5 +1,5 @@
 import { pick, randInt, shuffle } from "../../random";
-import { protractorBetween, protractorFromZero } from "../../drawings";
+import { protractorBetween, protractorFromZero } from "../../figureDrawings";
 import { eq, num, pickOne, someone, typed, type Maker } from "../../washington/units/math-kit";
 import { mathUnit } from "./math";
 

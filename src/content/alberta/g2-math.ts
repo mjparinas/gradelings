@@ -2,7 +2,7 @@ import { chance, pick, randInt, sample, shuffle, textChoice } from "../random";
 import type { BuildQuestion, GenerateOptions, Question, Unit, Visual } from "../types";
 import { ab, buildSet, eq, levelOf, numQ } from "./kit";
 import { q, sorter, unitOf, type Item } from "../ontario/k-g2-kit";
-import { drawn, movePicture } from "../drawings";
+import { drawn, movePicture } from "../figureDrawings";
 
 // Alberta Grade 2 mathematics (2022 K-6 curriculum). New units here cover what BC and Ontario do not teach at
 // Grade 2: numbers to 1000, unit fractions, slides/flips/turns and standard units of time.

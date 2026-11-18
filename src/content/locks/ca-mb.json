@@ -663,7 +663,7 @@
       "angles-and-triangles text=f87da09706 std=6b9414067f q=87011990e1",
       "volume-and-capacity text=57006408db std=23ea87306f q=0c1a7e8d2f",
       "transformations text=94e34ce668 std=20ad606fa9 q=a802fabebb",
-      "mb-line-graphs text=6b8f5f279b std=df597defd4 q=f59eda372e",
+      "mb-line-graphs text=6b8f5f279b std=df597defd4 q=68d4c2ce25",
       "probability text=9e7f91640d std=3079dcd6fa q=2408ca4e6f"
     ]
   },
@@ -786,7 +786,7 @@
       "mb-7-constructions text=a88c16679e std=70755ad639 q=8b22ca3851",
       "circles text=bf81bcea8c std=96f10503fa q=31d74c7b6b",
       "mb-mean-median-mode text=4106920d88 std=2b209e8234 q=42e4f86534",
-      "circle-graphs text=b35255ef1b std=50bdf20392 q=620f317483",
+      "circle-graphs text=b35255ef1b std=50bdf20392 q=118224059d",
       "probability text=f903bf5b77 std=01f957eed0 q=61a293da37"
     ]
   },
@@ -1024,7 +1024,7 @@
     "units": [
       "exponent-laws text=14558089af std=c012bb01c0 q=8fb7aa1d0b",
       "rational-numbers text=023c4c6316 std=b8d1986047 q=29cdd814c4",
-      "linear-relations text=d5718915ca std=7e5a64833b q=1e254a9707",
+      "linear-relations text=d5718915ca std=7e5a64833b q=5737c7d8a8",
       "multi-step-equations text=834b6c0c60 std=c64dbf6d6f q=4823df05ba",
       "polynomials text=608ddf33d1 std=7fa45e1932 q=3a3e17fe5c",
       "similarity-and-scale text=541110d627 std=207464c4ab q=07a8d2770d",
@@ -1032,7 +1032,7 @@
       "mb-composite-surface-area text=284ac1fded std=d44db16c5d q=08e6219366",
       "mb-line-rotation-symmetry text=df26946dea std=18b52cb1ca q=62b6578b32",
       "statistics-in-society text=9e4081b498 std=ceac37c725 q=bae78cb576",
-      "mb-probability-in-society text=bc7c3e695b std=fe62e498a6 q=5438b104c6"
+      "mb-probability-in-society text=bc7c3e695b std=fe62e498a6 q=03d23c7c13"
     ]
   },
   "9/science": {

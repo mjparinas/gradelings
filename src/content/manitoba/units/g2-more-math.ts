@@ -1,4 +1,4 @@
-import { movePicture, withDrawings } from "../../drawings";
+import { movePicture, withDrawings } from "../../figureDrawings";
 import { bankUnit, type Q } from "../own";
 
 // Grade 2 mathematics: turning an object does not change its measurements (2.SS.5).

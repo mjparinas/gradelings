@@ -2,6 +2,7 @@ import { Fragment, type ReactNode } from "react";
 import { coinName, type Currency } from "@/content/money";
 import type { ShapeName, Visual } from "@/content/types";
 import { Compass, MoveDrawing, PlainFigureDrawing, Protractor, Thermometers } from "./figureVisuals";
+import { CircleGraph, LinePlot, PlotGraph, TreeDiagram } from "./graphVisuals";
 import { MapPicture } from "./mapVisuals";
 
 const INK = "#253047";
@@ -803,7 +804,7 @@ export function DataTable({ title, headers, rows }: { title?: string; headers: s
   );
 }
 
-export function Spinner({ segments }: { segments: string[] }) {
+export function Spinner({ segments, labels }: { segments: string[]; labels?: string[] }) {
   const n = segments.length;
   const r = 46;
   const arc = (i: number) => {
@@ -816,6 +817,14 @@ export function Spinner({ segments }: { segments: string[] }) {
       {segments.map((c, i) => (
         <path key={i} d={arc(i)} fill={c} stroke="#fff" strokeWidth="1.5" />
       ))}
+      {labels?.map((t, i) => {
+        const a = ((i + 0.5) / n) * Math.PI * 2 - Math.PI / 2;
+        return (
+          <text key={i} x={50 + 30 * Math.cos(a)} y={50 + 30 * Math.sin(a)} textAnchor="middle" dominantBaseline="central" fontSize="11" fontWeight="700" fill="#0f172a">
+            {t}
+          </text>
+        );
+      })}
       <circle cx="50" cy="50" r="47" fill="none" stroke={INK} strokeWidth="2.5" />
       <g className="animate-spin-slow" style={{ transformOrigin: "50px 50px" }}>
         <path d="M50 50 L50 14" stroke={INK} strokeWidth="3.5" strokeLinecap="round" />
@@ -914,7 +923,7 @@ export function QuestionVisual({ visual }: { visual: Visual }) {
         </div>
       );
     case "spinner":
-      return <Spinner segments={visual.segments} />;
+      return <Spinner segments={visual.segments} labels={visual.labels} />;
     case "towers":
       return <Towers heights={visual.heights} showBlank={visual.showBlank} />;
     case "tenFrame":
@@ -950,6 +959,14 @@ export function QuestionVisual({ visual }: { visual: Visual }) {
       return <Compass facing={visual.facing} />;
     case "figure":
       return <PlainFigureDrawing figure={visual.figure} />;
+    case "circleGraph":
+      return <CircleGraph title={visual.title} sectors={visual.sectors} />;
+    case "linePlot":
+      return <LinePlot title={visual.title} labels={visual.labels} counts={visual.counts} caption={visual.caption} />;
+    case "plot":
+      return <PlotGraph {...visual} />;
+    case "tree":
+      return <TreeDiagram title={visual.title} stages={visual.stages} />;
     case "joined":
       return <JoinedShape {...visual} />;
     case "story":

@@ -62,7 +62,8 @@ export type Visual =
   | { type: "bars"; title: string; bars: { label: string; value: number; emoji?: string }[] }
   | { type: "table"; title?: string; headers: string[]; rows: (string | number)[][] }
   | { type: "shape"; shape: ShapeName }
-  | { type: "spinner"; segments: string[] }
+  /** `labels` (one per segment) are written on the segments, e.g. the numbers 1 to 6. */
+  | { type: "spinner"; segments: string[]; labels?: string[] }
   | { type: "towers"; heights: number[]; showBlank?: boolean }
   /** A short story, one line per sentence. */
   | { type: "story"; lines: string[] }
@@ -95,6 +96,29 @@ export type Visual =
   | { type: "grid"; size: number; min?: number; points: { x: number; y: number; label?: string }[] }
   /** An angle drawn with two rays. */
   | { type: "angle"; degrees: number }
+  /** A circle graph; each sector's size follows its `value`, and `show` (default: nothing) is a second line written on it. */
+  | { type: "circleGraph"; title?: string; sectors: { label: string; value: number; show?: string }[] }
+  /** A line plot: a stack of X's above each label on a number line. */
+  | { type: "linePlot"; title?: string; labels: string[]; counts: number[]; caption?: string }
+  /** Lines or points on a labelled grid (line graphs, a plotted line, a curve). `marks` are open circles for points to find. */
+  | {
+      type: "plot";
+      title?: string;
+      xLabel?: string;
+      yLabel?: string;
+      xMin: number;
+      xMax: number;
+      yMin: number;
+      yMax: number;
+      xStep?: number;
+      yStep?: number;
+      /** Name the marks 1, 2, 3… along the x-axis (times of day, weeks) instead of numbering it. */
+      xLabels?: string[];
+      series: { points: { x: number; y: number }[]; line?: boolean; dots?: boolean; label?: string }[];
+      marks?: { x: number; y: number; label?: string }[];
+    }
+  /** A tree diagram: every outcome of one stage branches to every outcome of the next (up to 24 ends). */
+  | { type: "tree"; title?: string; stages: string[][] }
   /**
    * A protractor with the two rays of an angle. `from` and `to` are where the rays cross the scale that starts at 0 on
    * the right-hand end (0 to 180); `twoScales` also prints the outer scale, which starts at 0 on the left.

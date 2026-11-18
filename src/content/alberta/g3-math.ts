@@ -1,7 +1,7 @@
 import { pick, randInt, sample, shuffle, textChoice } from "../random";
 import type { GenerateOptions, Question, Unit } from "../types";
 import { bankUnit, hq, q, type Item } from "../ontario/g3-4-kit";
-import { drawn, movePicture } from "../drawings";
+import { drawn, movePicture } from "../figureDrawings";
 import { ab, buildSet, levelOf, numQ, others, range, spaced, times, typeIn } from "./kit";
 
 // Alberta Grade 3 mathematics (2022 K–6 curriculum). The units below cover outcomes the BC and Ontario

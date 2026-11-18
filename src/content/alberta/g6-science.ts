@@ -1,7 +1,7 @@
 import type { SortSet } from "../bank";
 import type { Unit } from "../types";
 import { levelled, withSort, type Item } from "../ontario/g56-bank";
-import { drawn, thermometerPicture } from "../drawings";
+import { drawn, thermometerPicture } from "../figureDrawings";
 import { ab } from "./kit";
 
 // Alberta Grade 6 Science: Matter (the particle model, heating and cooling) and Energy (forces and

@@ -1,145 +1,85 @@
 import { describe, expect, it } from "vitest";
-import { COURSES } from "./all";
-import { withSeed } from "./random";
-import type { Question, Visual } from "./types";
+import { drawingFor, withDrawing } from "./drawings";
+import type { Unit } from "./types";
 
-// Measuring tools and moves of shapes are drawn from each question's own words. These sweeps check that the picture
-// is there where the question needs it, that it agrees with the words, and that it never shows the answer.
+const draw = (prompt: string) => drawingFor({ prompt });
 
-function questionsOf(unitId: string): Question[] {
-  const units = COURSES.flatMap((c) => c.units).filter((u) => u.id === unitId);
-  expect(units.length, `unit ${unitId} exists`).toBeGreaterThan(0);
-  const out: Question[] = [];
-  for (const u of units) for (let seed = 1; seed <= 12; seed++) for (const difficulty of [1, 2, 3] as const) out.push(...withSeed(seed * 37 + difficulty, () => u.generate({ difficulty })));
-  return out;
-}
-
-const visualOf = (q: Question): Visual | undefined => ("visual" in q ? q.visual : undefined);
-const answerLabel = (q: Question) => (q.kind === "choice" ? q.choices.find((c) => c.id === q.answer)?.label : q.kind === "input" ? q.answer : undefined);
-
-describe("protractors", () => {
-  for (const id of ["ca-g4-measure-angles", "ny-g4-angle-measure"]) {
-    it(`${id}: every reading question has a protractor that matches its words`, () => {
-      let read = 0;
-      for (const q of questionsOf(id)) {
-        const v = visualOf(q);
-        const zero = /^One ray (?:of the angle |of an angle |is on 0° of )?(?:lines up with 0|the protractor)|One ray is on 0°/.test(q.prompt) || /lines up with 0|on 0° of the protractor|is on 0° of the inner scale/.test(q.prompt);
-        const between = /one ray (?:of an angle )?(?:points to|passes) (\d+)°?.* the other (?:points to|passes) (\d+)/.exec(q.prompt);
-        if (!zero && !between) continue;
-        read++;
-        expect(v?.type, q.prompt).toBe("protractor");
-        if (v?.type !== "protractor") continue;
-        if (between) {
-          expect([v.from, v.to].sort((a, b) => a - b), q.prompt).toEqual([Number(between[1]), Number(between[2])].sort((a, b) => a - b));
-        } else {
-          // One ray on 0 of its scale: the angle between the rays is the answer.
-          expect(Math.abs(v.to - v.from), q.prompt).toBe(Number(String(answerLabel(q)).replace("°", "")));
-          expect(v.twoScales === true, q.prompt).toBe(/two scales|inner scale/.test(q.prompt));
-        }
-      }
-      expect(read).toBeGreaterThan(20);
+describe("drawings made from a question's numbers", () => {
+  it("draws a line plot that is described as given", () => {
+    expect(draw("A line plot has 2 Xs above 1/4 inch, 3 Xs above 1/2 inch and 5 Xs above 3/4 inch. If you move it to a table, how many measurements are there in all?")).toMatchObject({
+      type: "linePlot",
+      labels: ["1/4", "1/2", "3/4"],
+      counts: [2, 3, 5],
     });
-  }
-});
+  });
 
-describe("thermometers", () => {
-  it("Measuring Temperature draws the readings the question names", () => {
-    const qs = questionsOf("thermometers-ab");
-    const reads = qs.filter((q) => /^A thermometer reads|^Which is (hotter|warmer):|^Water is at|^Water's temperature changes|^Which temperature is the coldest/.test(q.prompt));
-    expect(reads.length).toBeGreaterThan(3);
-    for (const q of reads) {
-      const v = visualOf(q);
-      expect(v?.type, q.prompt).toBe("thermometer");
-      if (v?.type !== "thermometer") continue;
-      const named = [...q.prompt.matchAll(/(−?\d+) ?°C/g)].map((m) => Number(m[1].replace("−", "-")));
-      if (named.length) expect(v.values, q.prompt).toEqual(named);
+  it("leaves alone a question that asks the child to make the plot", () => {
+    expect(draw("The class measured some leaves in centimeters: 6, 6, 6, 7, 8, 5. On a line plot, how many X's go above 7?")).toBeUndefined();
+  });
+
+  it("draws a line graph from its values and labels", () => {
+    expect(draw("A line graph shows 30 at 1 p.m., 45 at 2 p.m. and 60 at 3 p.m. What is the pattern?")).toMatchObject({
+      type: "plot",
+      xLabels: ["1 p.m.", "2 p.m.", "3 p.m."],
+      series: [{ points: [{ x: 1, y: 30 }, { x: 2, y: 45 }, { x: 3, y: 60 }] }],
+    });
+    expect(draw("On a line graph, a student reads 36 at 10 a.m. and 24 at noon. By how much did it change?")).toMatchObject({ xLabels: ["10 a.m.", "noon"] });
+  });
+
+  it("draws the line through two named points, with both marked", () => {
+    const v = draw("What is the slope of the line through (5, 0) and (7, 8)?");
+    expect(v).toMatchObject({ type: "plot" });
+    if (v?.type === "plot") expect(v.series[1].points).toEqual([{ x: 5, y: 0 }, { x: 7, y: 8 }]);
+  });
+
+  it("draws a named line, but not when the picture would be the answer", () => {
+    const v = draw("Which ordered pair is on the graph of y = 2x + 6?");
+    if (v?.type !== "plot") throw new Error("no plot");
+    // y = 2x + 6 passes through (0, 6) and (−3, 0).
+    const [a, b] = v.series[0].points;
+    expect(a.y + ((b.y - a.y) / (b.x - a.x)) * (0 - a.x)).toBeCloseTo(6);
+    expect(draw("Which describes the graph of y = −6?")).toBeUndefined();
+  });
+
+  it("draws both lines of a system, in either form", () => {
+    for (const p of ["How many solutions does this system have? y = 3x − 5 and y = −x − 5", "Solve the system: 3x + 3y = 15 and x − 2y = 11"]) {
+      const v = draw(p);
+      expect(v?.type === "plot" && v.series.length).toBe(2);
     }
+    const v = draw("Solve the system: 3x + 3y = 15 and x − 2y = 11");
+    if (v?.type !== "plot") throw new Error("no plot");
+    // The two lines cross at (7, −2): both pass through it.
+    const at = (i: number, x: number) => {
+      const [a, b] = v.series[i].points;
+      return a.y + ((b.y - a.y) / (b.x - a.x)) * (x - a.x);
+    };
+    expect(at(0, 7)).toBeCloseTo(-2);
+    expect(at(1, 7)).toBeCloseTo(-2);
   });
 
-  it("Grade 7 temperature change shows only the starting temperature, with room on the scale for where it goes", () => {
-    let seen = 0;
-    for (const q of questionsOf("integer-add-subtract")) {
-      const v = visualOf(q);
-      if (v?.type !== "thermometer") continue;
-      seen++;
-      expect(v.values).toHaveLength(1);
-      const start = Number(/(-?\d+)°C/.exec(q.prompt.replace("−", "-"))?.[1]);
-      expect(v.values[0]).toBe(start);
-      const end = Number(String(answerLabel(q)).replace("−", "-"));
-      expect(end).toBeGreaterThanOrEqual(v.min - 40);
-    }
-    expect(seen).toBeGreaterThan(0);
-  });
-});
-
-describe("slides, flips and turns", () => {
-  it("Grade 2 and Grade 3 questions about a move show the shape before and after", () => {
-    let seen = 0;
-    for (const id of ["slides-flips-turns-ab", "moves-ab"]) {
-      for (const q of questionsOf(id)) {
-        if (q.kind !== "choice") continue;
-        const expected = /^A shape moves along a line|^Another word for a slide|^When you slide|^A shape slides across|^A tile moves/.test(q.prompt)
-          ? "slide"
-          : /^A shape is flipped over a line|^Another word for a flip|^When you flip|^A shape is flipped and then flipped back/.test(q.prompt)
-            ? "flip"
-            : /^A shape spins around|^Another word for a turn|^A shape turns around|quarter turn around its centre|^A triangle is turned/.test(q.prompt)
-              ? "turn"
-              : undefined;
-        if (!expected) continue;
-        seen++;
-        const v = visualOf(q);
-        expect(v?.type, q.prompt).toBe("move");
-        if (v?.type === "move") expect(v.move, q.prompt).toBe(expected);
-      }
-    }
-    expect(seen).toBeGreaterThan(20);
+  it("draws spinners, tree diagrams and spin results", () => {
+    expect(draw("How likely is this? “You spin a 7 on a spinner numbered 1 to 6.”")).toMatchObject({ type: "spinner", labels: ["1", "2", "3", "4", "5", "6"] });
+    expect(draw("A spinner is half red, a quarter blue and a quarter green. It is spun twice.")).toMatchObject({ type: "spinner" });
+    expect(draw("How many outcomes are in the sample space for using a coin and a spinner with 4 equal parts once each?")).toMatchObject({
+      type: "tree",
+      stages: [["H", "T"], ["1", "2", "3", "4"]],
+    });
+    expect(draw("A tree diagram shows a choice of 2 shirts, then 3 pants, then 2 hats. How many different outfits are there?")).toMatchObject({ type: "tree" });
+    expect(draw("Zoe spun a spinner 10 times and got blue 7 times and green 3 times. Which colour does the spinner most likely have more of?")).toMatchObject({
+      type: "bars",
+      bars: [{ label: "Blue", value: 7 }, { label: "Green", value: 3 }],
+    });
+    // Spin results that don't add up to the spins are not drawn.
+    expect(draw("Zoe spun a spinner 10 times and got blue 7 times and green 2 times. Which colour does the spinner most likely have more of?")).toBeUndefined();
   });
 
-  it("never draws a letter's mirror image, which would be the answer", () => {
-    for (const q of questionsOf("moves-ab")) {
-      const letter = /^A letter “(\w)” is flipped/.exec(q.prompt);
-      if (!letter) continue;
-      const v = visualOf(q);
-      expect(v).toEqual({ type: "letter", text: letter[1] });
-    }
-  });
-
-  it("Grade 2 turn-and-measure questions draw the shape they turn or flip", () => {
-    const qs = questionsOf("mb-turn-and-measure").filter((q) => /^A (triangle has 3 sides\. You turn|square has 4 equal sides\. You turn it to a diamond|hexagon has 6 sides\. You flip)/.test(q.prompt));
-    expect(qs.length).toBeGreaterThan(0);
-    for (const q of qs) expect(visualOf(q)?.type, q.prompt).toBe("move");
-  });
-});
-
-describe("compass for quarter and half turns", () => {
-  it("shows the way the person starts out facing", () => {
-    let seen = 0;
-    for (const q of questionsOf("move-it")) {
-      const m = /^\w+ faces (north|east|south|west)\./.exec(q.prompt);
-      if (!m) continue;
-      seen++;
-      expect(visualOf(q), q.prompt).toEqual({ type: "facing", facing: m[1] });
-    }
-    expect(seen).toBeGreaterThan(5);
-  });
-});
-
-describe("lines of symmetry", () => {
-  it("draws the named figure without any fold lines", () => {
-    let seen = 0;
-    for (const q of questionsOf("fl-g3-line-symmetry")) {
-      if (!/^How many lines of symmetry does (a|an|the) /.test(q.prompt)) continue;
-      const v = visualOf(q);
-      expect(v, q.prompt).toBeDefined();
-      expect(["figure", "letter"], q.prompt).toContain(v?.type);
-      seen++;
-    }
-    expect(seen).toBeGreaterThan(10);
-  });
-
-  it("puts a small drawing on each shape in 'Which shape has no lines of symmetry?'", () => {
-    const qs = questionsOf("shapes-and-symmetry").filter((q) => q.prompt === "Which shape has no lines of symmetry?");
-    expect(qs.length).toBeGreaterThan(0);
-    for (const q of qs) if (q.kind === "choice") for (const c of q.choices) expect(c.shape, c.label).toBe(c.label);
+  it("never replaces a picture a question already has, and wraps a unit once", () => {
+    expect(drawingFor({ prompt: "A line graph shows 1 at 1 p.m. and 2 at 2 p.m.", visual: { type: "equation", text: "1" } })).toBeUndefined();
+    const unit = {
+      generate: () => [{ kind: "input", prompt: "A line graph shows 1 at 1 p.m. and 2 at 2 p.m. Which is more?", hint: "h", answer: "2", keypad: "number" }],
+    } as unknown as Unit;
+    const once = withDrawing(unit);
+    expect(withDrawing(once)).toBe(once);
+    expect(once.generate()[0].visual?.type).toBe("plot");
   });
 });

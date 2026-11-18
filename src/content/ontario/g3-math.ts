@@ -1,6 +1,6 @@
 import { pick, randInt, sample, shuffle, textChoice } from "../random";
 import type { GenerateOptions, Question, Unit, Visual } from "../types";
-import { compassPicture, drawn } from "../drawings";
+import { compassPicture, drawn } from "../figureDrawings";
 import { buildSet, levelOf, on, others, numQ, range, typeIn } from "./kit";
 
 // Ontario Grade 3 mathematics (2020 curriculum). Whole numbers go up to 1000.

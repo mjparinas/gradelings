@@ -1,6 +1,6 @@
 import { pick, randInt, shuffle } from "../../random";
 import type { Unit } from "../../types";
-import { withDrawings, symmetryPicture } from "../../drawings";
+import { withDrawings, symmetryPicture } from "../../figureDrawings";
 import { cornerCut, oneUnknown, sideBySide } from "../../joined";
 import { bankUnit, type Q } from "../own";
 import { mathUnit, num, pickOne, someone, typed, type Maker } from "./math-kit";
