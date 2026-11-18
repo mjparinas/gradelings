@@ -133,6 +133,33 @@ function checkVisual(v: Visual) {
       expect(v.degrees).toBeGreaterThan(0);
       expect(v.degrees).toBeLessThan(360);
       break;
+    case "circleGraph":
+      expect(v.sectors.length).toBeGreaterThanOrEqual(2);
+      expect(v.sectors.length).toBeLessThanOrEqual(8);
+      for (const x of v.sectors) expect(x.value, "a circle graph sector needs a size").toBeGreaterThan(0);
+      break;
+    case "linePlot":
+      expect(v.labels.length).toBe(v.counts.length);
+      expect(v.labels.length).toBeGreaterThanOrEqual(2);
+      expect(v.labels.length).toBeLessThanOrEqual(14);
+      for (const c of v.counts) expect(Number.isInteger(c) && c >= 0 && c <= 12, "line plot stack of 0 to 12").toBe(true);
+      break;
+    case "plot":
+      expect(v.xMax).toBeGreaterThan(v.xMin);
+      expect(v.yMax).toBeGreaterThan(v.yMin);
+      expect(v.series.length).toBeGreaterThanOrEqual(1);
+      for (const s of v.series) {
+        expect(s.points.length).toBeGreaterThanOrEqual(1);
+        for (const p of s.points) {
+          expect(Number.isFinite(p.x) && Number.isFinite(p.y)).toBe(true);
+        }
+      }
+      break;
+    case "tree":
+      expect(v.stages.length).toBeGreaterThanOrEqual(2);
+      expect(v.stages.reduce((n, st) => n * st.length, 1)).toBeLessThanOrEqual(24);
+      for (const st of v.stages) expect(st.length).toBeGreaterThanOrEqual(1);
+      break;
   }
 }
 
