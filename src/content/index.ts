@@ -2,6 +2,7 @@ import { failIfBlocked } from "@/lib/blockedScripts";
 import { DEFAULT_FRAMEWORK, getFramework } from "./frameworks";
 import { localeOf, localizeUnit } from "./locale";
 import { GRADE_ORDER } from "./subjects";
+import { withDiagrams } from "./diagrams";
 import { withLessons, type GradeLessons } from "./lessons";
 import type { GradeModule } from "./manifest";
 import { manifestOf, REGISTRY } from "./registry";
@@ -87,7 +88,7 @@ export function mergeCourses(lists: Course[][]): Course[] {
       order: { ...base.order, ...course.order },
     };
   }
-  return out.map(applyShares).map(applyElsewhere);
+  return out.map(applyShares).map(applyElsewhere).map(withDiagrams);
 }
 
 /** Gives every framework a course's "elsewhere" Big Ideas and unit standards where it names none of its own (Spanish). */

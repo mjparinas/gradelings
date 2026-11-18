@@ -612,10 +612,10 @@
       "biodiversity-6 text=f70b649728 std=a02672af97 q=91b5216610",
       "biodiversity-risks-6 text=77ca5b3ccd std=af16473962 q=27888b268b",
       "static-electricity-6 text=ec58626304 std=5ea1b7f1f3 q=79cb8b85db",
-      "circuits-6 text=27c1c49ae7 std=d8183a0b7a q=075569a1ba",
+      "circuits-6 text=27c1c49ae7 std=d8183a0b7a q=b13f95ae26",
       "electrical-energy-6 text=e2a59e9295 std=70280c5fad q=6d804aacd9",
       "flight-6 text=11653360ba std=89b1b97aac q=6c940cc325",
-      "earth-moon-sun-6 text=c2c46cb4eb std=485f12e999 q=cdd9a703f4",
+      "earth-moon-sun-6 text=c2c46cb4eb std=485f12e999 q=e8ec6a4bf9",
       "solar-system text=6be0e2dfe8 std=46911887cb q=80b6cb3757",
       "weight-and-space-tech-6 text=b331f772e6 std=8acfb4fb6e q=8a90828d65",
       "science-skills-6 text=794b9d1b09 std=5574658ab3 q=ae0ec36880"
@@ -832,7 +832,7 @@
     "units": [
       "stem-skills-8 text=04906a509d std=8cf6ba50af q=576d24e4a0",
       "cells-organisms-8 text=f2fabcc119 std=07df97ccf2 q=16a9b7cb2d",
-      "cells-and-life text=26001b2c5a std=71500f5e69 q=27792065ca",
+      "cells-and-life text=26001b2c5a std=71500f5e69 q=b0668a2287",
       "viscosity-flow-8 text=309af1469c std=60c159e0e4 q=7c31cccec1",
       "density-buoyancy-8 text=44abadf5f7 std=ee2c15a842 q=e8b7d870a3",
       "pressure-pascal-8 text=61b1e34882 std=a3a5d5c9c0 q=bbd1e7ea70",
@@ -951,7 +951,7 @@
       "periodic-table-9 text=d006b85cec std=9bf5ecaa56 q=0f98494808",
       "compounds-9 text=e809c7578c std=552a99b656 q=799a9bf54a",
       "static-charges-9 text=9a9172f3c2 std=d8da6eedbf q=20a1a92678",
-      "circuits-9 text=0dda7abf25 std=213f3e1975 q=1788d5792b",
+      "circuits-9 text=0dda7abf25 std=213f3e1975 q=bf08183eb5",
       "electrical-energy-9 text=eecdad56b2 std=44abc626e7 q=7309de70ac",
       "space-9 text=622e423073 std=e0ae030bcf q=ee991cc122"
     ]

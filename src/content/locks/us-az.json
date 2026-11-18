@@ -348,7 +348,7 @@
     "units": [
       "wa-g4-energy-motion text=b3e9a355c7 std=695c3520f6 q=1c3f0bf823",
       "wa-g4-waves-info text=47dfa456ce std=5e6baa98f7 q=50d5b6604f",
-      "tx-g5-circuits text=24da9234dd std=7be3c9778b q=ba4188b00b",
+      "tx-g5-circuits text=24da9234dd std=7be3c9778b q=195fd76022",
       "or-g3-magnet-design text=4d497317ee std=4d69ca74b9 q=b0eac72564",
       "forces-3 text=0bd2fdec81 std=53d2e991f5 q=85a9f000a8",
       "or-g4-rocks-erosion text=332d3c7067 std=59de9be390 q=89bdf27407",
@@ -501,7 +501,7 @@
       "atoms-and-elements text=e5e0d998b2 std=6b76ca2c42 q=7e2eecbebf",
       "wa-g8-fields text=1371ff764a std=bedd5af41c q=603f693f54",
       "wa-g8-energy text=655dfe6f3b std=f5368aeb80 q=cdf3dadeb8",
-      "tx-g6-seasons-tides text=69acd403c5 std=128226fd79 q=cc7f8f2c62",
+      "tx-g6-seasons-tides text=69acd403c5 std=128226fd79 q=f1a60683ea",
       "tx-g7-solar-system text=3b62f9c7f1 std=42d06f2557 q=2473ef744e",
       "ecosystems-7 text=da82b56903 std=74d2ed0a88 q=041251a723",
       "food-chains-7 text=14036b504e std=31bfeef4b5 q=777910f336",
@@ -577,7 +577,7 @@
   "7/science": {
     "overview": "e2fbf26704",
     "units": [
-      "wa-g6-cells text=fa8ea2c4ff std=40058392ff q=23e69bce93",
+      "wa-g6-cells text=fa8ea2c4ff std=40058392ff q=0b5f935db7",
       "body-systems text=982982e155 std=12602c6c57 q=aa5f3b59c6",
       "nb-senses-6 text=10dc984c4a std=3c921b80c1 q=7e37816267",
       "plant-parts-ab text=394b7ee530 std=ee1226bef6 q=8526f00423",

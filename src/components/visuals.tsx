@@ -1,6 +1,7 @@
 import { Fragment, type ReactNode } from "react";
 import { coinName, type Currency } from "@/content/money";
 import type { ShapeName, Visual } from "@/content/types";
+import { ScienceDiagram } from "./scienceDiagrams";
 
 const INK = "#253047";
 
@@ -791,6 +792,8 @@ export function QuestionVisual({ visual }: { visual: Visual }) {
       return <CoordinateGrid size={visual.size} min={visual.min} points={visual.points} />;
     case "angle":
       return <Angle degrees={visual.degrees} />;
+    case "diagram":
+      return <ScienceDiagram diagram={visual.diagram} label={visual.label} />;
     case "story":
       return (
         <div className="w-full max-w-2xl rounded-2xl border-[3px] border-[#f3c6dc] bg-[#fff7fb] px-5 py-4">
