@@ -1,3 +1,4 @@
+import { net } from "../solids";
 import { fmt, frac, lin, numQ, piAnswer, ROUND_NOTE, textQ, typed } from "../grades/kit";
 import { pick, randInt, sample } from "../random";
 import type { Question, Unit, Visual } from "../types";
@@ -285,18 +286,18 @@ function bracketEquations(opts?: { difficulty?: Level }): Question[] {
 // ---------- Nets and views of 3-D objects (SS2, SS5) ----------
 
 const NETS = [
-  q(1, "A net of a cylinder has two circles and one…", "rectangle", ["triangle", "square", "circle"], "A cylinder's curved side unrolls into a rectangle."),
-  q(1, "A net of a triangular prism has how many triangles?", "2", ["1", "3", "4"], "The two triangular bases are the only triangles."),
-  q(1, "Which 3-D object folds from a net of six identical squares?", "a cube", ["a triangular prism", "a cylinder", "a cone"], "A cube has six square faces that are all the same size."),
+  q(1, "A net of a cylinder has two circles and one…", "rectangle", ["triangle", "square", "circle"], "A cylinder's curved side unrolls into a rectangle.", net("cylinder")),
+  q(1, "A net of a triangular prism has how many triangles?", "2", ["1", "3", "4"], "The two triangular bases are the only triangles.", net("triangular-prism")),
+  q(1, "Which 3-D object folds from this net of six identical squares?", "a cube", ["a triangular prism", "a cylinder", "a cone"], "A cube has six square faces that are all the same size.", net("cube")),
   q(1, "What is a net?", "a flat pattern that folds up to make a 3-D object", ["a picture of an object from above", "a measure of the space inside an object", "a pattern of tiles with no gaps"], "Unfold a box and lay it flat: that flat pattern is a net."),
   q(1, "A cylinder stands on its base. What does its top view look like?", "a circle", ["a rectangle", "a triangle", "a square"], "Looking straight down at a can, you see its round top."),
   q(1, "A cylinder stands on its base. What does its front view look like?", "a rectangle", ["a circle", "a triangle", "an oval"], "From the side, a can looks like a rectangle."),
-  q(2, "A net of a triangular prism has how many rectangles?", "3", ["2", "4", "5"], "One rectangle covers each side of the triangle."),
-  q(2, "In a net of a rectangular prism, opposite rectangles are…", "the same size", ["always squares", "always different sizes", "triangles"], "Opposite faces of a rectangular prism match."),
-  q(2, "In a net of a cylinder, the length of the rectangle matches the…", "circumference of the circle", ["diameter of the circle", "area of the circle", "radius of the circle"], "The rectangle wraps once around the circle's edge."),
-  q(2, "In a net of a cylinder, the width of the rectangle matches the…", "height of the cylinder", ["radius of the circle", "circumference of the circle", "area of the circle"], "The rectangle's other side runs from the bottom to the top of the cylinder."),
+  q(2, "A net of a triangular prism has how many rectangles?", "3", ["2", "4", "5"], "One rectangle covers each side of the triangle.", net("triangular-prism")),
+  q(2, "In a net of a rectangular prism, opposite rectangles are…", "the same size", ["always squares", "always different sizes", "triangles"], "Opposite faces of a rectangular prism match.", net("box")),
+  q(2, "In a net of a cylinder, the length of the rectangle matches the…", "circumference of the circle", ["diameter of the circle", "area of the circle", "radius of the circle"], "The rectangle wraps once around the circle's edge.", net("cylinder", { circumference: "?" })),
+  q(2, "In a net of a cylinder, the width of the rectangle matches the…", "height of the cylinder", ["radius of the circle", "circumference of the circle", "area of the circle"], "The rectangle's other side runs from the bottom to the top of the cylinder.", net("cylinder", { height: "?" })),
   q(2, "How many faces does a rectangular prism have in all?", "6", ["4", "5", "8"], "Top, bottom, front, back and two sides make 6 faces."),
-  q(2, "A square pyramid's net has how many triangles?", "4", ["1", "2", "5"], "One triangle rises from each side of the square base."),
+  q(2, "A square pyramid's net has how many triangles?", "4", ["1", "2", "5"], "One triangle rises from each side of the square base.", net("square-pyramid")),
   q(3, "Three cubes sit in a row, and a fourth cube sits on top of the left end cube. What does the top view look like?", "a row of 3 squares", ["an L-shape of 4 squares", "a single square", "a column of 2 squares"], "From above, the cube on top hides the cube below it, so you still see 3 squares in a row."),
   q(3, "Three cubes sit in a row, and a fourth cube sits on top of the left end cube. What does the front view look like?", "an L-shape: 3 squares along the bottom and 1 above the left end", ["a row of 3 squares", "a single square", "a column of 4 squares"], "From the front you see the row of 3 and the extra cube sitting above the left one."),
   q(3, "Three cubes sit in a row, and a fourth cube sits on top of the left end cube. You look at it from the right-hand side. What do you see?", "a column of 2 squares", ["a column of 4 squares", "a row of 3 squares", "a single square"], "From the end, the rows line up behind each other. The tallest stack is 2 cubes high."),

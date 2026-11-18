@@ -1,3 +1,4 @@
+import { solid } from "../../solids";
 import { chance, pick, randInt, sample, shuffle, textChoice } from "../../random";
 import type { ChoiceQuestion, Course, GenerateOptions, InputQuestion, Question, Visual } from "../../types";
 
@@ -2614,7 +2615,7 @@ function volume(opts?: GenerateOptions): Question[] {
         fmt(V),
         `V = l × w × h = ${fmt(l)} × ${w} × ${h} = ${fmt(l * w)} × ${h} = ${fmt(V)} ${u}³.`,
         "decimal",
-        { suffix: `${u}³`, visual: { type: "shape", shape: "rectangular-prism" } },
+        { suffix: `${u}³`, visual: solid("box", { length: `${fmt(l)} ${u}`, width: `${w} ${u}`, height: `${h} ${u}` }) },
       ),
     );
   }
@@ -2628,7 +2629,7 @@ function volume(opts?: GenerateOptions): Question[] {
         e ** 3,
         [e * e, 6 * e * e, 12 * e, 3 * e],
         `All three dimensions are ${e} cm: V = ${e} × ${e} × ${e} = ${e ** 3} cm³. (${e * e} is the area of one face.)`,
-        { type: "shape", shape: "cube" },
+        solid("cube", { edge: e }),
         { unit: " cm³", min: 1 },
       ),
     );
@@ -2657,7 +2658,7 @@ function volume(opts?: GenerateOptions): Question[] {
         p.answer,
         `${d === 3 ? `Radius = ${2 * r} ÷ 2 = ${r} cm. ` : ""}V = π × r × r × h ≈ 3.14 × ${r} × ${r} × ${h} = 3.14 × ${r * r * h} = ${fmt(p.exact)}. Rounded: ${p.answer} cm³.`,
         "decimal",
-        { accept: p.accept, suffix: "cm³", visual: { type: "shape", shape: "cylinder" } },
+        { accept: p.accept, suffix: "cm³", visual: solid("cylinder", d === 3 ? { diameter: 2 * r, height: h } : { radius: r, height: h }) },
       ),
     );
   }
@@ -2674,7 +2675,7 @@ function volume(opts?: GenerateOptions): Question[] {
         fmt(h),
         `V = l × w × h, so ${V} = ${l} × ${w} × h = ${l * w} × h. Divide: h = ${V} ÷ ${l * w} = ${h} cm.`,
         "decimal",
-        { suffix: "cm", visual: { type: "shape", shape: "rectangular-prism" } },
+        { suffix: "cm", visual: solid("box", { length: l, width: w, height: "?" }) },
       ),
     );
   } else {
@@ -2688,7 +2689,7 @@ function volume(opts?: GenerateOptions): Question[] {
         fmt(h),
         `V = base area × height, so h = V ÷ base area = ${fmt(V)} ÷ ${fmt(B)} = ${h} cm.`,
         "decimal",
-        { suffix: "cm", visual: { type: "shape", shape: "cylinder" } },
+        { suffix: "cm", visual: solid("cylinder", { height: "?" }) },
       ),
     );
   }
@@ -2703,7 +2704,7 @@ function volume(opts?: GenerateOptions): Question[] {
         B * h,
         [B + h, 2 * B * h, B * h * 10],
         `Volume = base area × height = ${B} × ${h} = ${B * h} cm³.`,
-        { type: "shape", shape: "rectangular-prism" },
+        solid("box", { height: h }),
         { unit: " cm³", min: 1 },
       ),
     );
@@ -2718,7 +2719,7 @@ function volume(opts?: GenerateOptions): Question[] {
         V,
         [B + h, roundTo(V * 3.14, 2), V / 2],
         `Volume = base area × height = ${fmt(B)} × ${h} = ${fmt(V)} cm³. The base area already includes π, so don't multiply by 3.14 again.`,
-        { type: "shape", shape: "cylinder" },
+        solid("cylinder", { height: h }),
         { unit: " cm³", min: 1, step: 3.14 },
       ),
     );
@@ -2784,7 +2785,7 @@ function volume(opts?: GenerateOptions): Question[] {
         fmt(V / 1000),
         `Volume: ${l} × ${w} × ${h} = ${V} cm³. Divide by 1000 to change to litres: ${fmt(V / 1000)} L.`,
         "decimal",
-        { suffix: "L", visual: { type: "shape", shape: "rectangular-prism" } },
+        { suffix: "L", visual: solid("box", { length: l, width: w, height: h }) },
       ),
     );
   } else {
@@ -2797,7 +2798,7 @@ function volume(opts?: GenerateOptions): Question[] {
         p.answer,
         `V = 3.14 × ${r} × ${r} × ${h} = ${fmt((314 * r * r * h) / 100)} cm³. Divide by 1000: ${fmt(p.exact)} L, or about ${p.answer} L.`,
         "decimal",
-        { accept: p.accept, suffix: "L", visual: { type: "shape", shape: "cylinder" } },
+        { accept: p.accept, suffix: "L", visual: solid("cylinder", { radius: r, height: h }) },
       ),
     );
   }

@@ -232,11 +232,13 @@ export interface Concept {
   right: string;
   wrong: string[];
   hint: string;
+  /** A picture to show with the question. */
+  visual?: Visual;
 }
 
 export function conceptQ(bank: Concept[], d: Level): ChoiceQuestion {
   const c = pick(bank.filter((b) => b.levels.includes(d)));
-  return textChoice(c.prompt, c.right, c.wrong, c.hint);
+  return textChoice(c.prompt, c.right, c.wrong, c.hint, c.visual);
 }
 
 export const ROUND_NOTE = "Use π ≈ 3.14 and round to 1 decimal place.";

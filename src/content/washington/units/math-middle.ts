@@ -1,3 +1,4 @@
+import { solid } from "../../solids";
 import { chance, pick, randInt, sample, shuffle } from "../../random";
 import type { Visual } from "../../types";
 import { type D, type Maker, eq, frac, fracChoice, fracKey, gcd, mathUnit, mixed, num, pickOne, someone, sp, typed } from "./math-kit";
@@ -635,7 +636,8 @@ const boxVolume: Maker = (d) => {
   const short = u.split(" ")[1].replace("inches", "in").replace("feet", "ft").replace("centimetres", "cm");
   const q = `A box is ${l} ${short} long, ${w} ${short} wide and ${h} ${short} high. What is its volume?`;
   const hint = `Volume = length × width × height = ${l} × ${w} × ${h}.`;
-  return d === 3 ? typed(q, l * w * h, hint, { suffix: u }) : num(q, l * w * h, hint, { extra: [l + w + h, l * w, 2 * (l * w + l * h + w * h)], count: 5, label: (n) => `${n} ${u}` });
+  const visual = solid("box", { length: `${l} ${short}`, width: `${w} ${short}`, height: `${h} ${short}` });
+  return d === 3 ? typed(q, l * w * h, hint, { suffix: u, visual }) : num(q, l * w * h, hint, { extra: [l + w + h, l * w, 2 * (l * w + l * h + w * h)], count: 5, label: (n) => `${n} ${u}`, visual });
 };
 
 const layers: Maker = () => {
@@ -646,7 +648,7 @@ const layers: Maker = () => {
 
 const missingSide: Maker = () => {
   const [l, w, h] = [randInt(2, 9), randInt(2, 6), randInt(2, 8)];
-  return num(`A box has a volume of ${l * w * h} cubic feet. It is ${l} ft long and ${w} ft wide. How high is it?`, h, `Base area = ${l} × ${w} = ${l * w}. Then ${l * w * h} ÷ ${l * w}.`, { extra: [l * w * h - l - w, h * 2, l * w], count: 5, min: 1, label: (n) => `${n} ft` });
+  return num(`A box has a volume of ${l * w * h} cubic feet. It is ${l} ft long and ${w} ft wide. How high is it?`, h, `Base area = ${l} × ${w} = ${l * w}. Then ${l * w * h} ÷ ${l * w}.`, { extra: [l * w * h - l - w, h * 2, l * w], count: 5, min: 1, label: (n) => `${n} ft`, visual: solid("box", { length: `${l} ft`, width: `${w} ft`, height: "?" }) });
 };
 
 const twoBoxes: Maker = () => {
@@ -667,7 +669,7 @@ const volumeUnit: Maker = () =>
 
 const cubeCount: Maker = () => {
   const [l, w, h] = [randInt(2, 4), randInt(2, 4), randInt(2, 3)];
-  return num(`A box is ${l} cubes long, ${w} cubes wide and ${h} cubes high. How many unit cubes fill it?`, l * w * h, `One layer has ${l} × ${w} = ${l * w} cubes. There are ${h} layers.`, { extra: [l + w + h, l * w, l * w * h + l * w], count: 4 });
+  return num(`A box is ${l} cubes long, ${w} cubes wide and ${h} cubes high. How many unit cubes fill it?`, l * w * h, `One layer has ${l} × ${w} = ${l * w} cubes. There are ${h} layers.`, { extra: [l + w + h, l * w, l * w * h + l * w], count: 4, visual: solid("box", { length: `${l} cubes`, width: `${w} cubes`, height: `${h} cubes` }) });
 };
 
 // ---------- Units ----------

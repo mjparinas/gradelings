@@ -91,7 +91,22 @@ export type Visual =
   /** Points on a coordinate grid (first quadrant unless min is negative). */
   | { type: "grid"; size: number; min?: number; points: { x: number; y: number; label?: string }[] }
   /** An angle drawn with two rays. */
-  | { type: "angle"; degrees: number };
+  | { type: "angle"; degrees: number }
+  /** A 3-D solid with its measurements written on the edges ("5 cm", or "?" for the one to find). */
+  | { type: "solid"; solid: SolidKind; labels?: SolidLabels }
+  /** The flat net of a 3-D solid, with measurements on its edges. */
+  | { type: "net"; net: SolidKind; labels?: SolidLabels };
+
+/** The solids that can be drawn (`solid`) or unfolded (`net`). A "stacked" solid is a box with a small cube on top; it has no net. */
+export type SolidKind = "box" | "cube" | "triangular-prism" | "cylinder" | "cone" | "square-pyramid" | "stacked";
+
+/**
+ * Where a measurement is written. `length`, `width` and `height` are a box's edges (a prism's `length` is the way it
+ * runs back); `edge` is a cube's; `base` is the side the solid sits on; `radius` or `diameter` belongs to a cylinder or cone;
+ * `slant` is a pyramid's or cone's sloping height. A net adds `circumference` for the side of a cylinder.
+ */
+export type SolidLabelKey = "length" | "width" | "height" | "edge" | "base" | "radius" | "diameter" | "slant" | "circumference";
+export type SolidLabels = Partial<Record<SolidLabelKey, string>>;
 
 export interface Choice {
   id: string;

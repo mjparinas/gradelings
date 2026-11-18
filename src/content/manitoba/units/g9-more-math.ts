@@ -1,3 +1,4 @@
+import { solid } from "../../solids";
 import { bankUnit, type Q } from "../own";
 
 // More Grade 9 math units written for Manitoba outcomes that the shared BC and Ontario units do not cover:
@@ -33,16 +34,16 @@ const CIRCLES: Q[] = [
 ];
 
 const COMPOSITE: Q[] = [
-  ["What is the surface area of a rectangular prism that is 6 cm by 4 cm by 3 cm?", "108 cm²", ["72 cm²", "54 cm²"], "2(6 × 4 + 6 × 3 + 4 × 3) = 2(24 + 18 + 12)."],
+  ["What is the surface area of a rectangular prism that is 6 cm by 4 cm by 3 cm?", "108 cm²", ["72 cm²", "54 cm²"], "2(6 × 4 + 6 × 3 + 4 × 3) = 2(24 + 18 + 12).", false, solid("box", { length: 6, width: 4, height: 3 })],
   ["Two cubes with 2 cm edges are glued face to face. What is the surface area of the new object?", "40 cm²", ["48 cm²", "24 cm²"], "Two cubes have 48 cm². Subtract the two faces that are now hidden, 4 cm² each."],
   ["Surface area is measured in…", "square units, such as cm²", ["cubic units, such as cm³", "units of length, such as cm"], "Surface area covers a surface, so it is in square units."],
   ["When two solids are glued together, the surface area of the composite object is…", "the total of both, minus the hidden faces", ["the total of both, plus the hidden faces", "the volume of both"], "The faces that touch are no longer on the outside."],
   ["A right triangular prism has a triangle with legs 3 cm and 4 cm and a hypotenuse of 5 cm. Its length is 10 cm. What is its surface area?", "132 cm²", ["120 cm²", "72 cm²"], "Two triangles: 2 × 6 = 12. Rectangles: (3 + 4 + 5) × 10 = 120."],
-  ["A cylinder has a radius of 3 cm and a height of 10 cm. What is its surface area, to the nearest cm²?", "245 cm²", ["188 cm²", "283 cm²"], "2πr² + 2πrh = 18π + 60π = 78π."],
-  ["A closed can has a radius of 4 cm and a height of 9 cm. What is its surface area, to the nearest cm²?", "327 cm²", ["226 cm²", "452 cm²"], "2π(4)² + 2π(4)(9) = 32π + 72π = 104π."],
+  ["A cylinder has a radius of 3 cm and a height of 10 cm. What is its surface area, to the nearest cm²?", "245 cm²", ["188 cm²", "283 cm²"], "2πr² + 2πrh = 18π + 60π = 78π.", false, solid("cylinder", { radius: 3, height: 10 })],
+  ["A closed can has a radius of 4 cm and a height of 9 cm. What is its surface area, to the nearest cm²?", "327 cm²", ["226 cm²", "452 cm²"], "2π(4)² + 2π(4)(9) = 32π + 72π = 104π.", false, solid("cylinder", { radius: 4, height: 9 })],
   ["An open pail has a radius of 10 cm and a height of 24 cm and no lid. What is its outside surface area, to the nearest cm²?", "1822 cm²", ["1885 cm²", "1508 cm²"], "Bottom πr² = 100π plus side 2πrh = 480π, so 580π.", true],
-  ["A 3 cm cube sits in the centre of the top of a 5 cm cube. What is the surface area of the combined object?", "186 cm²", ["150 cm²", "204 cm²"], "Big cube 150 cm². The small cube adds its four sides, 4 × 9 = 36. Its top replaces the covered part of the big cube's top.", true],
-  ["A 2 cm cube sits on top of a box that is 8 cm by 5 cm by 2 cm. What is the surface area of the combined object?", "148 cm²", ["132 cm²", "164 cm²"], "The box is 132 cm². The cube adds its four sides, 4 × 4 = 16.", true],
+  ["A 3 cm cube sits in the centre of the top of a 5 cm cube. What is the surface area of the combined object?", "186 cm²", ["150 cm²", "204 cm²"], "Big cube 150 cm². The small cube adds its four sides, 4 × 9 = 36. Its top replaces the covered part of the big cube's top.", true, solid("stacked", { length: 5, width: 5, height: 5, edge: 3 })],
+  ["A 2 cm cube sits on top of a box that is 8 cm by 5 cm by 2 cm. What is the surface area of the combined object?", "148 cm²", ["132 cm²", "164 cm²"], "The box is 132 cm². The cube adds its four sides, 4 × 4 = 16.", true, solid("stacked", { length: 8, width: 5, height: 2, edge: 2 })],
   ["A house shape has a box 8 m long, 6 m wide and 4 m high with a triangular prism roof. The roof's triangles have a base of 6 m, a height of 4 m and slanted sides of 5 m. What is the surface area to paint (all outside faces except the floor)?", "216 m²", ["264 m²", "312 m²"], "Walls 112 m². Roof triangles 24 m². Roof slopes 2 × 5 × 8 = 80 m². Total 216 m².", true],
   ["A 4 cm cube has a 1 cm cube cut out of one corner. Compared with the full cube, the surface area is…", "the same, 96 cm²", ["smaller by 3 cm²", "larger by 6 cm²"], "Three faces lose 1 cm² each and three new faces of 1 cm² appear.", true],
   ["Three 1 cm cubes are glued in a row. What is the surface area?", "14 cm²", ["18 cm²", "10 cm²"], "Three cubes have 18 cm². Two joins hide 4 faces."],

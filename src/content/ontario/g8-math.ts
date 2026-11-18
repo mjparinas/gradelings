@@ -1,3 +1,4 @@
+import { solid } from "../solids";
 import { chance, pick, randInt, sample, shuffle, textChoice } from "../random";
 import type { GenerateOptions, OrderQuestion, Question, Unit, Visual } from "../types";
 import { buildSet, eq, levelOf, on, ordinal, spaced, typeIn } from "./kit";
@@ -885,7 +886,7 @@ function measure8(opts?: GenerateOptions): Question[] {
     const w = randInt(5, 9);
     const h = randInt(2, 6);
     const e = randInt(2, Math.min(l, w) - 1);
-    return typeIn(`A cube with edges of ${e} cm sits on top of a box that is ${l} cm long, ${w} cm wide and ${h} cm tall. What is the total volume, in cubic centimetres?`, l * w * h + e ** 3, `Find each volume and add: ${l} × ${w} × ${h} + ${e}³.`, undefined, { suffix: "cm³" });
+    return typeIn(`A cube with edges of ${e} cm sits on top of a box that is ${l} cm long, ${w} cm wide and ${h} cm tall. What is the total volume, in cubic centimetres?`, l * w * h + e ** 3, `Find each volume and add: ${l} × ${w} × ${h} + ${e}³.`, solid("stacked", { length: l, width: w, height: h, edge: e }), { suffix: "cm³" });
   };
   const stackSurface = (): Question => {
     const l = randInt(6, 12);
@@ -893,7 +894,7 @@ function measure8(opts?: GenerateOptions): Question[] {
     const h = randInt(2, 6);
     const e = randInt(2, Math.min(l, w) - 1);
     const boxSA = 2 * (l * w + l * h + w * h);
-    return typeIn(`A cube with edges of ${e} cm sits on top of a box that is ${l} cm long, ${w} cm wide and ${h} cm tall. What is the surface area of the whole solid, in square centimetres?`, boxSA + 4 * e * e, `Start with the box: ${boxSA} cm². The cube's bottom covers part of the box's top, but the cube's own top face takes that area back. So just add the cube's 4 side faces: 4 × ${e}².`, undefined, { suffix: "cm²" });
+    return typeIn(`A cube with edges of ${e} cm sits on top of a box that is ${l} cm long, ${w} cm wide and ${h} cm tall. What is the surface area of the whole solid, in square centimetres?`, boxSA + 4 * e * e, `Start with the box: ${boxSA} cm². The cube's bottom covers part of the box's top, but the cube's own top face takes that area back. So just add the cube's 4 side faces: 4 × ${e}².`, solid("stacked", { length: l, width: w, height: h, edge: e }), { suffix: "cm²" });
   };
   return buildSet([prefixExp, d === 1 ? convertDown : pick([convertDown, convertUp]), convertUp, orderUnits, lShape, pick([semicircle, ring]), d === 1 ? lShape : stackVolume, d === 1 ? semicircle : stackSurface]);
 }

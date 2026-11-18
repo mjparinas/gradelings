@@ -1,3 +1,4 @@
+import { net as netPicture, solid } from "../solids";
 import { pick, randInt, sample, shuffle, textChoice } from "../random";
 import type { GenerateOptions, Question, Unit } from "../types";
 import { buildSet, levelOf, on, numQ, range, spaced, typeIn } from "./kit";
@@ -542,8 +543,8 @@ function measure7(opts?: GenerateOptions): Question[] {
     const w = randInt(2, 8);
     const h = randInt(2, 6);
     return pick([
-      () => typeIn(`A box is ${l} cm long, ${w} cm wide and ${h} cm high. How many millilitres of water does it hold when full?`, l * w * h, "1 cm³ holds 1 mL. Find the volume.", { type: "shape", shape: "rectangular-prism" }),
-      () => typeIn("A tank is 50 cm long, 20 cm wide and 30 cm high. How many litres does it hold when full? (1 L = 1000 cm³)", 30, "50 × 20 × 30 = 30 000 cm³. Divide by 1000 for litres.", { type: "shape", shape: "rectangular-prism" }),
+      () => typeIn(`A box is ${l} cm long, ${w} cm wide and ${h} cm high. How many millilitres of water does it hold when full?`, l * w * h, "1 cm³ holds 1 mL. Find the volume.", solid("box", { length: l, width: w, height: h })),
+      () => typeIn("A tank is 50 cm long, 20 cm wide and 30 cm high. How many litres does it hold when full? (1 L = 1000 cm³)", 30, "50 × 20 × 30 = 30 000 cm³. Divide by 1000 for litres.", solid("box", { length: 50, width: 20, height: 30 })),
     ])();
   };
   const idea = (): Question =>
@@ -572,19 +573,19 @@ function measure7(opts?: GenerateOptions): Question[] {
       const sa = 2 * 3.14 * r * r + 2 * 3.14 * r * h;
       const frac = sa - Math.floor(sa);
       if (Math.abs(frac - 0.5) < 0.05) continue;
-      return typeIn(`A cylinder has a radius of ${r} cm and a height of ${h} cm. What is its surface area? Use 3.14 for π and round to the nearest whole number.`, Math.round(sa), "Add the two circles (2 × π × r²) and the curved part (2 × π × r × h).", { type: "shape", shape: "cylinder" });
+      return typeIn(`A cylinder has a radius of ${r} cm and a height of ${h} cm. What is its surface area? Use 3.14 for π and round to the nearest whole number.`, Math.round(sa), "Add the two circles (2 × π × r²) and the curved part (2 × π × r × h).", solid("cylinder", { radius: r, height: h }));
     }
   };
   const net = (): Question =>
     pick([
-      () => textChoice("When the curved surface of a cylinder is laid flat, what shape is it?", "a rectangle", ["a circle", "a triangle"], "Unroll a can's label. It is a rectangle."),
-      () => textChoice("The net of a cylinder has two circles and one…", "rectangle", ["triangle", "pentagon"], "The rectangle wraps around as the curved side."),
-      () => textChoice("The length of the rectangle in a cylinder's net equals the…", "circumference of the circle", ["radius of the circle", "area of the circle"], "The rectangle wraps once around the circle."),
+      () => textChoice("When the curved surface of a cylinder is laid flat, what shape is it?", "a rectangle", ["a circle", "a triangle"], "Unroll a can's label. It is a rectangle.", netPicture("cylinder")),
+      () => textChoice("The net of a cylinder has two circles and one…", "rectangle", ["triangle", "pentagon"], "The rectangle wraps around as the curved side.", netPicture("cylinder")),
+      () => textChoice("The length of the rectangle in a cylinder's net equals the…", "circumference of the circle", ["radius of the circle", "area of the circle"], "The rectangle wraps once around the circle.", netPicture("cylinder", { circumference: "?" })),
     ])();
   const volumePrism = (): Question => {
     const base = randInt(6, 40);
     const h = randInt(3, 12);
-    return typeIn(`A prism has a base with an area of ${base} cm² and a height of ${h} cm. What is its volume in cubic centimetres?`, base * h, "Volume = area of the base × height.", { type: "shape", shape: "rectangular-prism" });
+    return typeIn(`A prism has a base with an area of ${base} cm² and a height of ${h} cm. What is its volume in cubic centimetres?`, base * h, "Volume = area of the base × height.", solid("box", { height: h }));
   };
   return buildSet([mlcm, mlcm, idea, convert, convert, mixedUnits, d === 1 ? volumePrism : cylinderSA, d === 1 ? net : pick([net, cylinderSA])]);
 }
