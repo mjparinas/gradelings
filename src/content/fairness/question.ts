@@ -161,6 +161,30 @@ function checkVisual(v: Visual) {
       expect(v.degrees).toBeGreaterThan(0);
       expect(v.degrees).toBeLessThan(360);
       break;
+    case "joined":
+      expect(v.parts.length).toBeGreaterThanOrEqual(1);
+      expect(v.parts.length).toBeLessThanOrEqual(3);
+      for (const part of v.parts) {
+        // Both sides or neither (the unknown part).
+        expect(part.w === undefined).toBe(part.h === undefined);
+        if (part.w !== undefined) expect(part.w).toBeGreaterThan(0);
+        if (part.h !== undefined) expect(part.h).toBeGreaterThan(0);
+      }
+      expect([v.cut, v.cap, v.cutTriangle].filter(Boolean).length).toBeLessThanOrEqual(1);
+      if (v.cap?.shape === "triangle") expect(v.cap.h).toBeGreaterThan(0);
+      if (v.cutTriangle) {
+        expect(v.parts.length).toBe(1);
+        expect(v.cutTriangle.base).toBeLessThan(v.parts[0].w ?? 0);
+        expect(v.cutTriangle.h).toBeLessThan(v.parts[0].h ?? 0);
+      }
+      if (v.cap) expect(v.parts.length).toBe(1);
+      if (v.cut) {
+        expect(v.parts.length).toBe(1);
+        // The cut must leave an L, so it is smaller than the whole in both directions.
+        expect(v.cut.w).toBeLessThan(v.parts[0].w ?? 0);
+        expect(v.cut.h).toBeLessThan(v.parts[0].h ?? 0);
+      }
+      break;
   }
 }
 
