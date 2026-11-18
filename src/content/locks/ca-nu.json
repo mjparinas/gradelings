@@ -525,7 +525,7 @@
       "angles-and-triangles text=f87da09706 std=e7ca4728ca q=87011990e1",
       "volume-and-capacity text=57006408db std=6ca85bad43 q=0c1a7e8d2f",
       "transformations text=94e34ce668 std=44d6f42783 q=a802fabebb",
-      "mb-line-graphs text=6b8f5f279b std=0f6e331611 q=f59eda372e",
+      "mb-line-graphs text=6b8f5f279b std=0f6e331611 q=68d4c2ce25",
       "probability text=9e7f91640d std=71ecba65cf q=2408ca4e6f"
     ]
   },
@@ -619,7 +619,7 @@
       "area-constructions-ab text=8f1ce023d1 std=22d261910d q=52eb91b8bb",
       "coordinates-transformations text=4061b902e5 std=bf5ddcbdbb q=56537171c2",
       "central-tendency-ab text=b776821b16 std=85575c8c63 q=cc21b8662c",
-      "circle-graphs text=b35255ef1b std=29f38d3a1e q=620f317483",
+      "circle-graphs text=b35255ef1b std=29f38d3a1e q=118224059d",
       "probability text=f903bf5b77 std=3275f41dda q=61a293da37"
     ]
   },
@@ -695,13 +695,13 @@
       "ratios-and-rates text=fe38c24acc std=641a8255d2 q=62d248cf82",
       "fraction-operations text=43b349e643 std=86bc2053a6 q=4755d31e4a",
       "integers-8 text=4840f100ae std=866ebb5c52 q=9c4f44dc17",
-      "linear-relations-ab text=3ef9188889 std=6bc31ced39 q=8f11287d9e",
+      "linear-relations-ab text=3ef9188889 std=6bc31ced39 q=e4d76bdf86",
       "bracket-equations-ab text=d802eb7882 std=96f350273f q=3719a7ef86",
       "pythagorean-theorem text=014e1086f2 std=8546f7f3d2 q=99835d112c",
       "nets-views-ab text=6df5a9626c std=ad0189268f q=27eb75caed",
       "surface-area-volume text=a5298071b5 std=33deb11d98 q=5c73cae8f9",
       "congruence-ab text=2124f8bea5 std=5669f63f10 q=0fa6ddeb25",
-      "independent-events-ab text=1f0907c09b std=f69b8e9ce8 q=3831a864f8"
+      "independent-events-ab text=1f0907c09b std=f69b8e9ce8 q=f60240f344"
     ]
   },
   "8/science": {
@@ -784,7 +784,7 @@
       "square-roots-ab text=9dac6ac303 std=b304c7866e q=20b8564979",
       "polynomials text=608ddf33d1 std=e494406dbf q=3a3e17fe5c",
       "multi-step-equations text=834b6c0c60 std=ab55687ee6 q=4823df05ba",
-      "linear-relations text=d5718915ca std=13bc45502f q=1e254a9707",
+      "linear-relations text=d5718915ca std=13bc45502f q=5737c7d8a8",
       "circles-ab text=0bfecda34b std=02121cc7fe q=92547dc066",
       "surface-area-ab text=c4da6bfbc4 std=bcb255dfac q=5db736f014",
       "statistics-in-society text=9e4081b498 std=ecb4722866 q=bae78cb576"

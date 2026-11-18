@@ -402,3 +402,17 @@ describe("QuestionVisual", () => {
     expect(fig).toHaveTextContent("radius 3");
   });
 });
+
+describe("graph and data drawings", () => {
+  it("draws a circle graph, a line plot, a plotted line and a tree diagram", () => {
+    const { container, rerender } = show({ type: "circleGraph", sectors: [{ label: "A", value: 30, show: "30%" }, { label: "B", value: 70, show: "?" }] });
+    expect(container.querySelectorAll("path")).toHaveLength(2);
+    rerender(<QuestionVisual visual={{ type: "linePlot", labels: ["1", "2"], counts: [2, 3] }} />);
+    expect(container.textContent!.match(/✕/g)).toHaveLength(5);
+    rerender(<QuestionVisual visual={{ type: "plot", xMin: 0, xMax: 4, yMin: 0, yMax: 8, series: [{ points: [{ x: 1, y: 2 }, { x: 3, y: 6 }] }] }} />);
+    expect(container.querySelectorAll("circle")).toHaveLength(2);
+    expect(container.querySelector("polyline")).not.toBeNull();
+    rerender(<QuestionVisual visual={{ type: "tree", stages: [["H", "T"], ["1", "2", "3"]] }} />);
+    expect(container.querySelectorAll("text")).toHaveLength(2 + 6);
+  });
+});

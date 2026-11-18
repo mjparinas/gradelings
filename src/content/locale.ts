@@ -207,6 +207,21 @@ function localizeVisual(v: Visual, t: (s: string) => string): Visual {
       };
     case "spinner":
       return { ...v, segments: v.segments.map(t) };
+    case "circleGraph":
+      return { ...v, title: v.title === undefined ? undefined : t(v.title), sectors: v.sectors.map((x) => ({ ...x, label: t(x.label) })) };
+    case "linePlot":
+      return { ...v, title: v.title === undefined ? undefined : t(v.title), caption: v.caption === undefined ? undefined : t(v.caption) };
+    case "plot":
+      return {
+        ...v,
+        title: v.title === undefined ? undefined : t(v.title),
+        xLabel: v.xLabel === undefined ? undefined : t(v.xLabel),
+        yLabel: v.yLabel === undefined ? undefined : t(v.yLabel),
+        xLabels: v.xLabels?.map(t),
+        series: v.series.map((x) => (x.label === undefined ? x : { ...x, label: t(x.label) })),
+      };
+    case "tree":
+      return { ...v, title: v.title === undefined ? undefined : t(v.title), stages: v.stages.map((st) => st.map(t)) };
     case "story":
       return { ...v, lines: v.lines.map(t) };
     case "passage":
