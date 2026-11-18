@@ -24,6 +24,57 @@ export const NEWS_KIND_LABEL: Record<NewsItem["kind"], string> = {
 
 export const WHATS_NEW: NewsDay[] = [
   {
+    day: "2026-11-17",
+    headline: "Quick-recall Math Facts, skills inside units, and an easier start for new families and classes",
+    items: [
+      {
+        kind: "new",
+        title: "Math Facts now build quick recall",
+        body: "Math Facts now notices which facts your child knows by heart and which they still need a moment for. Quick facts come back now and then to stay sharp, and right-but-slow ones come up until they are quick. There is no timer on screen, and nothing about speed is shown to your child.",
+      },
+      {
+        kind: "new",
+        title: "Practise one skill inside a Grade 3 math unit",
+        body: "In Grade 3 math, a unit now lists smaller skills, such as one kind of fractions question, that your child can practise on their own. It all still counts toward the unit's level, and Reports show how each skill is going. Each skill also has its own free printable worksheet.",
+      },
+      {
+        kind: "new",
+        title: "Ready for the next grade? Free math checks",
+        body: "New free ten-question math checks for Grades 2 to 9 show how ready your child is for the next grade, with a kind result and worksheets for any skills worth a look. No sign-up, and nothing is saved.",
+      },
+      {
+        kind: "new",
+        title: "Try sample questions right on a unit page",
+        body: "On a unit's page you can now answer the sample questions straight away. After a few, you see how it went and a link to keep practising that unit in the app.",
+      },
+      {
+        kind: "new",
+        title: "Adding your first child is quicker",
+        body: "After you confirm your email, Gradelings asks for your child's first name, grade and province or state, then starts their first question straight away. The parent PIN is asked for the next time you open the parent area. The form begins on the province or state of the last curriculum page you read.",
+      },
+      {
+        kind: "new",
+        title: "What's new in the parent area",
+        body: "The parent area now has a What's new page with the last few weeks of updates, so you can see what changed without leaving the app.",
+      },
+      {
+        kind: "teachers",
+        title: "Set up your first class in one step",
+        body: "A new teacher can now create a class and type in students' first names in a single form, then print login cards or copy the note home from a \"Your class is ready\" panel.",
+      },
+      {
+        kind: "teachers",
+        title: "Set up your class before confirming your email",
+        body: "You can create a class and add students before confirming your email. Students can sign in, and parents can join, once the email is confirmed.",
+      },
+      {
+        kind: "new",
+        title: "A warmer 3-days-left trial email",
+        body: "The email sent shortly before a free trial ends now names each child, thanks your family and links to pricing, with no rush.",
+      },
+    ],
+  },
+  {
     day: "2026-11-16",
     headline: "Simpler parent settings, take-home slips for teachers, and a friendlier weekly email",
     items: [
