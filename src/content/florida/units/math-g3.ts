@@ -1,5 +1,6 @@
 import { pick, randInt, shuffle } from "../../random";
 import type { Unit } from "../../types";
+import { withDrawings, symmetryPicture } from "../../figureDrawings";
 import { cornerCut, oneUnknown, sideBySide } from "../../joined";
 import { bankUnit, type Q } from "../own";
 import { mathUnit, num, pickOne, someone, typed, type Maker } from "./math-kit";
@@ -94,7 +95,7 @@ const SYMMETRY: Q[] = [
   ["Which door shape has 2 lines of symmetry?", "a rectangle", ["a leaning parallelogram", "a lightning bolt", "a spiral"], "A rectangle folds both ways.", true],
 ];
 
-const SYMMETRY_UNIT = bankUnit({
+const SYMMETRY_UNIT = withDrawings(bankUnit({
   id: "fl-g3-line-symmetry",
   title: "Line Symmetry",
   emoji: "🦋",
@@ -103,7 +104,7 @@ const SYMMETRY_UNIT = bankUnit({
     "Practises Florida's B.E.S.T. benchmark MA.3.GR.1.3: finding the lines of symmetry in two-dimensional figures and telling which figures are line-symmetric. Fold paper shapes or use a small mirror at home.",
   standards: ["MA.3.GR.1.3", "drawing lines of symmetry and identifying line-symmetric figures"],
   items: SYMMETRY,
-});
+}), symmetryPicture);
 
 const lShape: Maker = (d) => {
   const a = randInt(3, d === 1 ? 6 : 10);

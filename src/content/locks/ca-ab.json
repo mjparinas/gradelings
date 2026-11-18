@@ -225,7 +225,7 @@
       "patterns text=52e71b0b56 std=cfa5646dbb q=c39ccda4ca",
       "measuring text=b408a6d5b9 std=104b2586ab q=50b17c6722",
       "shapes text=4642065056 std=1df47d173f q=147a8385e6",
-      "slides-flips-turns-ab text=94bbcac228 std=a5b5e4fdf8 q=cd56fb0cd1",
+      "slides-flips-turns-ab text=94bbcac228 std=a5b5e4fdf8 q=e3646f86e2",
       "time-ab text=32f86c9fe5 std=d6d25d6d93 q=eceff43070"
     ]
   },
@@ -296,7 +296,7 @@
       "patterns-and-equations text=38e948b1ed std=86d85704c9 q=32db6b6541",
       "polygons-ab text=28ca5a23f0 std=7bf33dba21 q=891aff50f5",
       "angles-ab text=97b79e6a20 std=bb6a10e909 q=5a4fcf852b",
-      "moves-ab text=3ada09a283 std=b0ba35b225 q=daf6019354",
+      "moves-ab text=3ada09a283 std=b0ba35b225 q=145f1fa245",
       "length-perimeter-ab text=1270e4aaa5 std=793584d44e q=ad3314c26d",
       "time text=b4e7404035 std=78609ce336 q=150c2972a2",
       "data-ab text=70784781fd std=71f079f5d1 q=e40eb2ca98"
@@ -606,7 +606,7 @@
     "overview": "440be3cc52",
     "units": [
       "particles-heat-ab text=c634d79608 std=1a94f1db50 q=5d6c15a7d2",
-      "thermometers-ab text=0f22848e26 std=b927c4bbfc q=01797dd27d",
+      "thermometers-ab text=0f22848e26 std=b927c4bbfc q=60a16f9b6c",
       "expansion-water-ab text=17666ec6d6 std=284e00b115 q=88929de76c",
       "forces-interactions-ab text=352d61bb9b std=bea1a69dd0 q=367bca5ede",
       "forces-at-work text=5f5393489c std=5d17e4cc38 q=4430fad17e",
@@ -691,7 +691,7 @@
       "compare-order-ab text=e088a95ec5 std=a2cedfeb9a q=c7441cb4ba",
       "fractions-decimals-percents text=12d27e2a2e std=1cc0bc96cd q=1030c5dd8d",
       "tax-tips-discounts text=89d00189fd std=e7fa9f92da q=9acde90248",
-      "integer-add-subtract text=0f49d1bba6 std=33a580041c q=1e24134b03",
+      "integer-add-subtract text=0f49d1bba6 std=33a580041c q=ecc058d9c0",
       "linear-relations text=8a41482ba7 std=c54a178793 q=52c3309ac5",
       "expressions-ab text=d92f1eb9fb std=4924db9abc q=0a47682054",
       "two-step-equations text=ddaa3cce54 std=ef039ac1ea q=4d67a1e779",

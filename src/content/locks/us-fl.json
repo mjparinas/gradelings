@@ -253,7 +253,7 @@
       "wa-g2-data text=b3e74dbcdd std=c73e1b5754 q=26bb73cac0",
       "ca-g2-estimate text=965701ea66 std=e3a456e858 q=b420f0d7e0",
       "ca-g2-add-four text=36fae6be62 std=5a3da7ca76 q=37ab776500",
-      "shapes-and-symmetry text=c7255b714f std=eb1e334924 q=e038293019",
+      "shapes-and-symmetry text=c7255b714f std=eb1e334924 q=4e970b8d78",
       "balance-the-equation text=a1a7fbc23f std=dc10539272 q=aa56fa55f3",
       "fl-g2-perimeter text=e777a65d83 std=496f4baa71 q=ce656e41b8",
       "fl-g2-equal-parts text=02916f2e99 std=214c3c185e q=cf8d3312c8"
@@ -345,7 +345,7 @@
       "wa-g3-scaled-graphs text=1d69d1621c std=196b723bef q=01f5ae2e8a",
       "polygons-ab text=28ca5a23f0 std=0a6871a3fe q=891aff50f5",
       "fl-g3-even-odd-multiples text=5a4bd3b163 std=b248f08f68 q=bda3162e01",
-      "fl-g3-line-symmetry text=e21c0c1ea1 std=0a49e3c838 q=73030459ca",
+      "fl-g3-line-symmetry text=e21c0c1ea1 std=0a49e3c838 q=1e290af017",
       "fl-g3-composite-area text=a293e16f9f std=0cc19905a6 q=58489a4f7c"
     ]
   },
@@ -440,7 +440,7 @@
       "wa-g4-line-plots text=ec0f6b9a41 std=352da2fb70 q=87786a4f46",
       "wa-g4-times-as-many text=417e0833be std=6bc5514e9d q=42781d57e4",
       "ca-g4-tenths-hundredths text=8f100be049 std=2bdfe92e1c q=d496ce3de8",
-      "ca-g4-measure-angles text=8423d9e6ff std=87cfb1bd2e q=6ab20b2a51",
+      "ca-g4-measure-angles text=8423d9e6ff std=87cfb1bd2e q=4454dbc90f",
       "times-tables text=c3027c0b04 std=b9e12a376a q=8b6bbaf8b4",
       "fl-g4-big-numbers text=6ab728b359 std=762270a0b4 q=0521a9877c",
       "fl-g4-fraction-stories text=966693eee8 std=8e8d24dddc q=fca70d1a1e",
@@ -761,7 +761,7 @@
   "7/math": {
     "overview": "bbe71c85a8",
     "units": [
-      "integer-add-subtract text=0f49d1bba6 std=2f4c8433d9 q=1e24134b03",
+      "integer-add-subtract text=0f49d1bba6 std=2f4c8433d9 q=ecc058d9c0",
       "decimal-operations text=56ab979d6a std=6bbe780461 q=7f89d319c6",
       "fractions-decimals-percents text=12d27e2a2e std=d2838e9f1b q=1030c5dd8d",
       "two-step-equations text=ddaa3cce54 std=c8eb924cfc q=4d67a1e779",

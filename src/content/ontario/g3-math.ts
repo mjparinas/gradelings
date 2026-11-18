@@ -1,5 +1,6 @@
 import { pick, randInt, sample, shuffle, textChoice } from "../random";
 import type { GenerateOptions, Question, Unit, Visual } from "../types";
+import { compassPicture, drawn } from "../figureDrawings";
 import { buildSet, levelOf, on, others, numQ, range, typeIn } from "./kit";
 
 // Ontario Grade 3 mathematics (2020 curriculum). Whole numbers go up to 1000.
@@ -472,7 +473,7 @@ export const units: Unit[] = [
     blurb: "Quarter turns, faces and congruent shapes",
     standards: on("E1.2–E1.4", "putting together and taking apart structures, congruent shapes, and directions with half and quarter turns"),
     parentNote: "Following directions with half and quarter turns, counting the faces of 3D pieces in a structure, and knowing when two shapes are congruent (exactly the same).",
-    generate: moveIt,
+    generate: drawn(moveIt, compassPicture),
   },
   {
     id: "make-change",

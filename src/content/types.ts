@@ -126,6 +126,19 @@ export type Visual =
   /** A tree diagram: every outcome of one stage branches to every outcome of the next (up to 24 ends). */
   | { type: "tree"; title?: string; stages: string[][] }
   /**
+   * A protractor with the two rays of an angle. `from` and `to` are where the rays cross the scale that starts at 0 on
+   * the right-hand end (0 to 180); `twoScales` also prints the outer scale, which starts at 0 on the left.
+   */
+  | { type: "protractor"; from: number; to: number; twoScales?: boolean }
+  /** One or more liquid thermometers, each filled to its reading (a shared scale from `min` to `max` degrees). */
+  | { type: "thermometer"; values: number[]; min: number; max: number }
+  /** A figure before (dashed) and after a slide, a flip or a turn. See `src/components/figureVisuals.tsx`. */
+  | { type: "move"; move: "slide" | "flip" | "turn"; figure?: MoveFigure; dx?: number; dy?: number; axis?: "vertical" | "horizontal"; degrees?: number }
+  /** A compass with an arrow showing which way someone faces. */
+  | { type: "facing"; facing: "north" | "east" | "south" | "west" }
+  /** A plain outline of a figure, for symmetry questions. */
+  | { type: "figure"; figure: PlainFigure }
+  /**
    * A floor plan or flat shape made of rectangles that sit side by side along a common bottom edge (drawn to scale,
    * each side labelled with its own length), or one rectangle with a rectangle cut from its top right corner.
    * A part with no `w` and `h` is the unknown one: it is drawn dashed with a "?" inside.
@@ -144,6 +157,12 @@ export type Visual =
       /** A line under the picture ("Total area: 48 sq in"). */
       caption?: string;
     };
+
+/** The shapes a `move` picture can slide, flip or turn. "boot" is lopsided, so every move shows. */
+export type MoveFigure = "boot" | "triangle" | "square" | "hexagon";
+
+/** The outlines a `figure` picture can draw. */
+export type PlainFigure = "equilateral" | "isosceles" | "scalene" | "square" | "rectangle" | "rhombus" | "parallelogram" | "circle" | "oval" | "plus";
 
 export interface Choice {
   id: string;

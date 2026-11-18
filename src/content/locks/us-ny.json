@@ -396,7 +396,7 @@
       "wa-g4-customary text=634a43f8dd std=5c57bc102d q=41050250e3",
       "wa-g4-line-plots text=ec0f6b9a41 std=62f8b84272 q=87786a4f46",
       "wa-g4-times-as-many text=417e0833be std=84e1ad07a8 q=42781d57e4",
-      "ny-g4-angle-measure text=cc8815a046 std=9b759485a1 q=6098ff4253",
+      "ny-g4-angle-measure text=cc8815a046 std=9b759485a1 q=b474f6b799",
       "ny-g4-tenths-hundredths text=1d1ec0adee std=ab13c0c2f9 q=4f1734e8d7"
     ]
   },
@@ -648,7 +648,7 @@
   "7/math": {
     "overview": "3abe7982e8",
     "units": [
-      "integer-add-subtract text=0f49d1bba6 std=faa99e880e q=1e24134b03",
+      "integer-add-subtract text=0f49d1bba6 std=faa99e880e q=ecc058d9c0",
       "decimal-operations text=56ab979d6a std=44cd35903d q=7f89d319c6",
       "fractions-decimals-percents text=12d27e2a2e std=e7be65d54f q=1030c5dd8d",
       "two-step-equations text=ddaa3cce54 std=29c67fe727 q=4d67a1e779",

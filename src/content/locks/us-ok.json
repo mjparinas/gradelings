@@ -368,7 +368,7 @@
       "wa-g4-line-plots text=ec0f6b9a41 std=91303165ec q=87786a4f46",
       "wa-g4-times-as-many text=417e0833be std=b3b20d6168 q=42781d57e4",
       "ca-g4-tenths-hundredths text=8f100be049 std=ff17535fdd q=d496ce3de8",
-      "ca-g4-measure-angles text=8423d9e6ff std=9242bac06e q=6ab20b2a51"
+      "ca-g4-measure-angles text=8423d9e6ff std=9242bac06e q=4454dbc90f"
     ]
   },
   "4/science": {
@@ -526,7 +526,7 @@
       "wa-g6-statistics text=cd7b87a122 std=8d95c0d91c q=f4a73c2198",
       "wa-g6-coordinate-plane text=6658bd067b std=76c0047551 q=05cf05b0ca",
       "wa-g6-unit-rates text=eea140f4d3 std=a1f2dcd30e q=29c0e209cc",
-      "integer-add-subtract text=0f49d1bba6 std=c6c5581581 q=688da6d68b",
+      "integer-add-subtract text=0f49d1bba6 std=c6c5581581 q=6428cd7e80",
       "ca-g6-expressions text=9aa4712eea std=9bce708f33 q=55d1babe21"
     ]
   },

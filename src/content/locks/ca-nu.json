@@ -209,8 +209,8 @@
       "mb-calendar text=ba346a606f std=1abf363d50 q=8bab2145e7",
       "coins text=23173623fb std=390b7fe0d9 q=9e7de2a026",
       "shapes text=4642065056 std=2bbee9564a q=147a8385e6",
-      "mb-turn-and-measure text=fa5fe9d6d9 std=2985ca5005 q=c5640a49a8",
-      "shapes-and-symmetry text=c7255b714f std=c6860855e4 q=e038293019",
+      "mb-turn-and-measure text=fa5fe9d6d9 std=2985ca5005 q=affe72186d",
+      "shapes-and-symmetry text=c7255b714f std=c6860855e4 q=4e970b8d78",
       "graphs text=6da2cb2f09 std=3e1a470d9c q=27f6e96635"
     ]
   },
@@ -277,7 +277,7 @@
       "time text=b4e7404035 std=abe2d34199 q=150c2972a2",
       "money text=37f270aaea std=0f0e626ead q=2de9dc73e1",
       "3d-objects text=dd8f27d4a7 std=3a693f5399 q=792d73e855",
-      "moves-ab text=3ada09a283 std=de4999f41b q=daf6019354",
+      "moves-ab text=3ada09a283 std=de4999f41b q=145f1fa245",
       "graphs-and-chance text=02580bbb1d std=6ea679f2a1 q=9dd3cba9bb"
     ]
   },
@@ -611,7 +611,7 @@
       "compare-order-ab text=e088a95ec5 std=5d7b7b612e q=c7441cb4ba",
       "fractions-decimals-percents text=12d27e2a2e std=bc351cbb2b q=1030c5dd8d",
       "tax-tips-discounts text=89d00189fd std=529c568268 q=9acde90248",
-      "integer-add-subtract text=0f49d1bba6 std=2ca158593e q=1e24134b03",
+      "integer-add-subtract text=0f49d1bba6 std=2ca158593e q=ecc058d9c0",
       "linear-relations text=8a41482ba7 std=2e437b2e07 q=52c3309ac5",
       "expressions-ab text=d92f1eb9fb std=84ae0ee31c q=0a47682054",
       "two-step-equations text=ddaa3cce54 std=97811ac33a q=4d67a1e779",

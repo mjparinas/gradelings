@@ -332,7 +332,7 @@
       "polygons-and-perimeter text=1f1f7acbfe std=b36d30f405 q=0ca495ff7c",
       "fractions-4 text=0e102ed1c5 std=82f2a8d49f q=61419c0a19",
       "angles-and-area text=270704dc2f std=e51e8165f7 q=6c57d1d7dc",
-      "ca-g4-measure-angles text=8423d9e6ff std=6bc7244aa4 q=6ab20b2a51"
+      "ca-g4-measure-angles text=8423d9e6ff std=6bc7244aa4 q=4454dbc90f"
     ]
   },
   "4/science": {
@@ -538,7 +538,7 @@
   "7/math": {
     "overview": "5fe12b9753",
     "units": [
-      "integer-add-subtract text=0f49d1bba6 std=175e950b35 q=1e24134b03",
+      "integer-add-subtract text=0f49d1bba6 std=175e950b35 q=ecc058d9c0",
       "decimal-operations text=56ab979d6a std=bb7d81a479 q=7f89d319c6",
       "fractions-decimals-percents text=12d27e2a2e std=310505dc07 q=1030c5dd8d",
       "two-step-equations text=ddaa3cce54 std=20cf6f327e q=4d67a1e779",

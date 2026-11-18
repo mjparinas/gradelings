@@ -176,6 +176,25 @@ function checkVisual(v: Visual) {
       expect(v.degrees).toBeGreaterThan(0);
       expect(v.degrees).toBeLessThan(360);
       break;
+    case "protractor":
+      for (const x of [v.from, v.to]) {
+        expect(x).toBeGreaterThanOrEqual(0);
+        expect(x).toBeLessThanOrEqual(180);
+      }
+      expect(v.from === v.to).toBe(false);
+      break;
+    case "thermometer":
+      expect(v.max).toBeGreaterThan(v.min);
+      expect(v.values.length).toBeGreaterThanOrEqual(1);
+      expect(v.values.length).toBeLessThanOrEqual(3);
+      for (const x of v.values) {
+        expect(x).toBeGreaterThanOrEqual(v.min);
+        expect(x).toBeLessThanOrEqual(v.max);
+      }
+      break;
+    case "move":
+      if (v.move === "turn") expect(v.degrees ?? 90).toBeGreaterThan(0);
+      break;
     case "circleGraph":
       expect(v.sectors.length).toBeGreaterThanOrEqual(2);
       expect(v.sectors.length).toBeLessThanOrEqual(8);

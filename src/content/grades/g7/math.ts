@@ -1,4 +1,5 @@
 import { chance, pick, randInt, sample, shuffle, textChoice } from "../../random";
+import { thermometer } from "../../figureDrawings";
 import type { ChoiceQuestion, Course, GenerateOptions, InputQuestion, Question, Visual } from "../../types";
 
 // Grade 7 maths for the "big" age band: direct prompts, real-world contexts and
@@ -287,7 +288,8 @@ function integerAddSub(opts?: GenerateOptions): Question[] {
   {
     const t0 = d === 3 ? signed(1, 15) : -randInt(2, d === 1 ? 10 : 20);
     const rise = randInt(3, d === 1 ? 15 : 25);
-    const visual: Visual = { type: "emoji", emoji: "🌡️", caption: `${t0}°C` };
+    // The scale has room for where the temperature goes, but only the starting temperature is shown.
+    const visual: Visual = { ...thermometer(t0, t0 + rise, t0 + rise - 30), values: [t0] } as Visual;
     if (d < 3) {
       const t1 = t0 + rise;
       qs.push(
