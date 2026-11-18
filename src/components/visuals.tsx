@@ -1,6 +1,7 @@
 import { Fragment, type ReactNode } from "react";
 import { coinName, type Currency } from "@/content/money";
 import type { ShapeName, Visual } from "@/content/types";
+import { MapPicture } from "./mapVisuals";
 
 const INK = "#253047";
 
@@ -708,6 +709,9 @@ export function Towers({ heights, showBlank }: { heights: number[]; showBlank?: 
 
 export function QuestionVisual({ visual }: { visual: Visual }) {
   switch (visual.type) {
+    case "map":
+    case "compass":
+      return <MapPicture visual={visual} />;
     case "equation":
       return (
         <p className="text-center font-read text-5xl font-bold tracking-wide text-ink sm:text-6xl">

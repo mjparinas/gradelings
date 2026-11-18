@@ -178,7 +178,7 @@
   "1/social": {
     "overview": "b61d1cb2b8",
     "units": [
-      "maps text=0393b6b3b0 std=4f797274a4 q=671d944151",
+      "maps text=0393b6b3b0 std=4f797274a4 q=bb8e729a47",
       "our-land text=9250f303b3 std=576971ca46 q=c1704cb4f1",
       "my-community text=f4b6495f7a std=1b2b263b55 q=e0548ab0f6",
       "community-services text=26d27aa27c std=ff0c88c05f q=22cd5a9649",
@@ -270,7 +270,7 @@
       "tx-g2-our-land text=b206dcb42c std=0d10c514e4 q=65c30f4a5c",
       "tx-g2-celebrations text=3cbf33c973 std=fdbeb10035 q=ee9986125e",
       "tx-g2-government text=24ed646f3d std=93ba36a830 q=2a6d62d06a",
-      "tx-g2-reading-maps text=7c6c38b4ac std=e1a0e32d4f q=662b05fadb",
+      "tx-g2-reading-maps text=7c6c38b4ac std=e1a0e32d4f q=a0473937cf",
       "tx-g2-making-trading text=ff25974450 std=2872827e11 q=7aec7a9abe"
     ]
   },
@@ -342,7 +342,7 @@
       "mb-ask-and-find text=5e266ff8ca std=1cc93d0253 q=ed1bb10ee9",
       "tx-g3-community-builders text=5f2ac8e02d std=0bd469c2ad q=9d9e83cc01",
       "tx-g3-heroes-artists text=f84afd2024 std=f192a0612b q=8600599657",
-      "tx-g3-maps text=e026ae1585 std=d22ad83a2b q=a698c18485",
+      "tx-g3-maps text=e026ae1585 std=d22ad83a2b q=ac0394da10",
       "tx-g3-land-and-people text=095636983a std=fa2ab7e840 q=155098f0b8",
       "tx-g3-government text=853263d660 std=724d194ac7 q=d701d74af5",
       "tx-g3-money-and-voting text=b81bd641d4 std=c7d45ccc70 q=010ee7b55a",
@@ -505,7 +505,7 @@
       "mb-adaptations text=cbf3ba863e std=936bf8343e q=817498c8a7",
       "tx-g5-circuits text=24da9234dd std=ad5f472a9f q=ba4188b00b",
       "tx-g5-conservation text=72bfee10bd std=775439683f q=b8c301b7e2",
-      "tx-g5-day-night text=817529cefd std=88fb3fba49 q=cfca28c319",
+      "tx-g5-day-night text=817529cefd std=88fb3fba49 q=ddb4abe2ac",
       "tx-g5-landforms text=73aafd34c3 std=0fe3469bf4 q=ca88bacacf",
       "tx-g5-behavior text=11aae22792 std=18c106b6e9 q=0fab1a5b73"
     ]

@@ -165,7 +165,7 @@
     "units": [
       "ca-g1-long-ago text=1bee06737a std=a3941d7e99 q=71a2f5957a",
       "changes-in-my-life text=d5ee1318f1 std=2a353511ee q=d9a4ad3785",
-      "maps text=0393b6b3b0 std=ccccb8b7ae q=671d944151",
+      "maps text=0393b6b3b0 std=ccccb8b7ae q=bb8e729a47",
       "our-land text=9250f303b3 std=71250609b9 q=c1704cb4f1",
       "ny-g1-rules-and-government text=ec41bb8674 std=133600d53e q=94953413c5",
       "respect-and-inclusion text=2f7448bf67 std=96841af77e q=2bd238d5a9",
@@ -382,7 +382,7 @@
       "light-4 text=0325e91432 std=7872b88ab7 q=d397d48c7f",
       "ut-g4-fossils text=b7fa0829ee std=91aec47c5c q=ddec0bac4f",
       "ut-g4-rock-layers text=6abd8b3693 std=e57cb00436 q=de151fc3f9",
-      "ut-g4-sun-stars text=6f95089e36 std=f2e2afd6f8 q=68c57ab976"
+      "ut-g4-sun-stars text=6f95089e36 std=f2e2afd6f8 q=84f992b339"
     ]
   },
   "4/social": {

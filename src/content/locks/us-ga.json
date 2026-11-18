@@ -171,7 +171,7 @@
   "1/social": {
     "overview": "0d0f44e178",
     "units": [
-      "maps text=0393b6b3b0 std=d723c9c36b q=671d944151",
+      "maps text=0393b6b3b0 std=d723c9c36b q=bb8e729a47",
       "our-land text=9250f303b3 std=1588e07638 q=c1704cb4f1",
       "my-community text=f4b6495f7a std=b0e5c0af29 q=e0548ab0f6",
       "or-g2-world-maps text=5be3d98572 std=b85d51ffe1 q=f54db7af64",
@@ -236,7 +236,7 @@
       "objects-and-structures text=5822e8064b std=18ab4a60a5 q=34e0508611",
       "changing-materials text=f0d800dd59 std=f8e4b7f7a5 q=fcb18017bd",
       "or-g2-design text=8668c19a3e std=f968ac6554 q=ca2b370907",
-      "ga-g2-sun-stars text=2d623a2da4 std=d85137eb69 q=2a779c7d5a"
+      "ga-g2-sun-stars text=2d623a2da4 std=d85137eb69 q=03a51fe7c4"
     ]
   },
   "2/social": {

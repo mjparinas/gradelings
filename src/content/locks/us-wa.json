@@ -155,7 +155,7 @@
     "units": [
       "my-community text=f4b6495f7a std=325c14771a q=e0548ab0f6",
       "our-land text=9250f303b3 std=8e4c6d58d2 q=c1704cb4f1",
-      "maps text=0393b6b3b0 std=252eb36fb2 q=671d944151",
+      "maps text=0393b6b3b0 std=252eb36fb2 q=bb8e729a47",
       "changes-in-my-life text=d5ee1318f1 std=95e7962e30 q=d9a4ad3785",
       "community-services text=26d27aa27c std=f2163c4c56 q=22cd5a9649",
       "respect-and-inclusion text=2f7448bf67 std=eec5d7caf0 q=2bd238d5a9",
@@ -225,7 +225,7 @@
       "ns-community-change-2 text=153e1a1ea0 std=29dd12ec06 q=4a8dbf6467",
       "wa-g2-who-runs-our-town text=af6c3f5d54 std=c40df5b579 q=fe069c47c2",
       "wa-g2-making-trading text=a15f0c21e7 std=76f955aec8 q=a12cf9bd02",
-      "wa-g2-reading-maps text=e85919f787 std=1102039b1e q=851fb9733f"
+      "wa-g2-reading-maps text=e85919f787 std=1102039b1e q=11d5974dad"
     ]
   },
   "3/language": {
@@ -423,7 +423,7 @@
       "wa-g5-gravity text=8166e3c8ef std=efea32cd78 q=577ce5caa4",
       "wa-g5-energy-food text=7248a5bf2e std=5c71a02c62 q=2c5e9d47f6",
       "wa-g5-ecosystems text=633496097d std=e7415eb716 q=23dd6d4d3d",
-      "wa-g5-sun-stars text=7a55f3815d std=7e139b10aa q=a1a5ebf6f0",
+      "wa-g5-sun-stars text=7a55f3815d std=7e139b10aa q=3a07b0aba1",
       "wa-g5-earth-water text=7089a35acf std=73bf8603fe q=2245c1cf5e"
     ]
   },

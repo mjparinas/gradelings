@@ -169,7 +169,7 @@
       "wa-g1-earn-save-share text=ff3274fdf3 std=96eb8aec1f q=2bb7ea855e",
       "pe-goods-and-services-1 text=55be22b8f4 std=b35cf4b2dd q=43e8316788",
       "pe-needs-and-wants-1 text=feb7f0d4f1 std=5e0e2eff4e q=ab4a4e507f",
-      "maps text=0393b6b3b0 std=f557898ead q=671d944151",
+      "maps text=0393b6b3b0 std=f557898ead q=bb8e729a47",
       "our-land text=9250f303b3 std=ac45ce2b03 q=c1704cb4f1",
       "changes-in-my-life text=d5ee1318f1 std=aa152d81ac q=d9a4ad3785",
       "ca-g1-long-ago text=1bee06737a std=4ba1ec47a8 q=71a2f5957a",
@@ -241,7 +241,7 @@
       "then-and-now text=adcb461d8f std=710df7f52e q=db6aba9849",
       "ns-community-change-2 text=153e1a1ea0 std=a4c8f389c4 q=4a8dbf6467",
       "ar-g2-symbols-landmarks text=21e8d2511c std=8eee1456e3 q=ed14b2ac03",
-      "ar-g2-arkansas-maps text=2d0de68dc8 std=be89b3c29e q=9c039a1fb4",
+      "ar-g2-arkansas-maps text=2d0de68dc8 std=be89b3c29e q=6f1b1c1911",
       "ar-g2-making-trading text=f31fd326f0 std=6fd123d2ad q=f0baefc581"
     ]
   },
@@ -449,7 +449,7 @@
       "or-g5-design text=6302707f88 std=233cc1a657 q=5e2f08597c",
       "ar-g5-ecosystems text=935356730c std=250a59f4d5 q=3ac4ade765",
       "ar-g5-gravity text=8175485313 std=6826833d8f q=37ec935a0e",
-      "ar-g5-day-night text=817529cefd std=5cdaf4a856 q=cbd32d848c"
+      "ar-g5-day-night text=817529cefd std=5cdaf4a856 q=66d437d679"
     ]
   },
   "5/social": {

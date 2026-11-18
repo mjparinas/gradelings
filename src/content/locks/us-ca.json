@@ -169,7 +169,7 @@
   "1/social": {
     "overview": "b9720a1670",
     "units": [
-      "maps text=0393b6b3b0 std=c0682ccbdd q=671d944151",
+      "maps text=0393b6b3b0 std=c0682ccbdd q=bb8e729a47",
       "our-land text=9250f303b3 std=c547363898 q=c1704cb4f1",
       "my-community text=f4b6495f7a std=a5cd9bae76 q=e0548ab0f6",
       "respect-and-inclusion text=2f7448bf67 std=08c6331e6b q=2bd238d5a9",
@@ -248,7 +248,7 @@
       "ns-community-change-2 text=153e1a1ea0 std=0a50bb6a8d q=4a8dbf6467",
       "mb-working-together text=2915a53ce4 std=bb3e3fa4e7 q=17c9064822",
       "or-g2-world-maps text=5be3d98572 std=efa9ec2033 q=f54db7af64",
-      "ca-g2-reading-maps text=4eb3eae1ec std=7da58be960 q=94e825dc3c",
+      "ca-g2-reading-maps text=4eb3eae1ec std=7da58be960 q=f7a9578d23",
       "ca-g2-who-runs-our-town text=9a80cca6f2 std=3e2c4707c4 q=72adab06bf",
       "ca-g2-making-trading text=18d9e391fe std=dfd6cf9ff2 q=62dffac2af",
       "ca-g2-work-and-money text=29d8f69f16 std=821f6c98ec q=3daba19f0f",
@@ -469,7 +469,7 @@
       "wa-g5-energy-food text=7248a5bf2e std=5c71a02c62 q=2c5e9d47f6",
       "wa-g5-ecosystems text=633496097d std=e7415eb716 q=23dd6d4d3d",
       "or-g5-design text=6302707f88 std=2012268e59 q=5e2f08597c",
-      "ca-g5-sun-stars text=13d2fa0735 std=7e139b10aa q=f35439b5c1",
+      "ca-g5-sun-stars text=13d2fa0735 std=7e139b10aa q=b90b35d068",
       "ca-g5-earth-water text=5ee0eb1f9c std=73bf8603fe q=f5aa232847"
     ]
   },

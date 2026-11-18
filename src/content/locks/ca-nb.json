@@ -157,7 +157,7 @@
       "my-community text=f4b6495f7a std=61a8fe102c q=75c0262c60",
       "community-services text=26d27aa27c std=cc1d7bef61 q=2755db82e4",
       "our-land text=9250f303b3 std=6d28fd274d q=c1704cb4f1",
-      "maps text=0393b6b3b0 std=abd91d4df2 q=5413590a99"
+      "maps text=0393b6b3b0 std=abd91d4df2 q=4ce4b133e9"
     ]
   },
   "2/immersion": {
@@ -285,7 +285,7 @@
   "3/social": {
     "overview": "b83f7b3a42",
     "units": [
-      "maps-and-globes text=6a6a9ae26b std=fdbc2c92cb q=fd8314b02c",
+      "maps-and-globes text=6a6a9ae26b std=fdbc2c92cb q=85d8fa6d9b",
       "nb-our-province-3 text=f70e65dbe7 std=458d4003ca q=8aca460175",
       "nb-wabanaki-nations-3 text=bcbc180a36 std=ceee311d34 q=f2dbd31e8b",
       "nb-peoples-3 text=a0a6332ab9 std=f29d9753a6 q=ca7f5cfdd2",
