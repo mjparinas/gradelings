@@ -169,7 +169,7 @@
   "1/social": {
     "overview": "5fb848f164",
     "units": [
-      "maps text=0393b6b3b0 std=cdbeeebfbf q=671d944151",
+      "maps text=0393b6b3b0 std=cdbeeebfbf q=bb8e729a47",
       "our-land text=9250f303b3 std=73ed0c22c7 q=c1704cb4f1",
       "my-community text=f4b6495f7a std=7d588dbe5c q=e0548ab0f6",
       "changes-in-my-life text=d5ee1318f1 std=52ce9df83e q=d9a4ad3785",
@@ -250,7 +250,7 @@
       "ca-g2-work-and-money text=29d8f69f16 std=bad62e96f8 q=3daba19f0f",
       "az-g2-continents-oceans text=3c092e19d9 std=d97bbff015 q=73975f9cd7",
       "wv-g2-west-virginia text=a0e427a6e0 std=cdd53030f0 q=c8c926a885",
-      "wv-g2-reading-maps text=4eb3eae1ec std=7d0588c370 q=d462f2e233"
+      "wv-g2-reading-maps text=4eb3eae1ec std=7d0588c370 q=9434a12f80"
     ]
   },
   "3/language": {
@@ -462,7 +462,7 @@
       "wa-g5-energy-food text=7248a5bf2e std=8c756a6312 q=2c5e9d47f6",
       "or-g5-design text=6302707f88 std=7e0f057528 q=5e2f08597c",
       "wv-g5-energy-resources text=ba18b188b9 std=ea4436be99 q=dab1fdfe0a",
-      "wv-g5-sun-stars text=b771fae2d0 std=0c0d09929f q=ced1749a35",
+      "wv-g5-sun-stars text=b771fae2d0 std=0c0d09929f q=a1b66251a4",
       "wv-g5-earth-water text=fe9a9cd323 std=4327bc21e7 q=04e059cb4d",
       "wv-g5-ecosystems text=edfa357cb9 std=1f354814d7 q=80b97965d3"
     ]
@@ -697,13 +697,13 @@
       "data-8 text=f67cb7cc17 std=d5da43f6dc q=61afebfaea",
       "transformations-8 text=872e7f5b99 std=dde7adcb59 q=861609ebde",
       "angles-8 text=899ecf6fe2 std=7a9f62b9d0 q=f4e15bb736",
-      "linear-relations-ab text=3ef9188889 std=3e87ca2fbf q=8f11287d9e",
+      "linear-relations-ab text=3ef9188889 std=3e87ca2fbf q=e4d76bdf86",
       "bracket-equations-ab text=d802eb7882 std=17bcb8bce0 q=3719a7ef86",
       "congruence-ab text=2124f8bea5 std=0fcf34c0be q=03cb70377c",
       "wa-g8-exponent-rules text=c6ea891ad5 std=f05762b9f4 q=e041bd810e",
       "wa-g8-functions text=906e422768 std=ffbe4b4a8c q=b704358710",
       "wa-g8-round-volume text=46d3a6210c std=02116de6d0 q=7c06cc35b6",
-      "wa-g8-slope text=5956a66b16 std=d481b1c52e q=c9e5f2a915",
+      "wa-g8-slope text=5956a66b16 std=d481b1c52e q=2c900999a3",
       "wa-g8-two-way-tables text=cfbbd30e3f std=ace90409cb q=806c0ab1ec",
       "ca-g8-similar-distance text=dd75991b3f std=8446d1edf8 q=45852a3e03",
       "ca-g8-linear-models text=184aa29541 std=87fc666d19 q=75e8287d42"
@@ -775,14 +775,14 @@
       "exponent-laws text=14558089af std=25104a32f5 q=8fb7aa1d0b",
       "polynomials text=608ddf33d1 std=14fb989803 q=3a3e17fe5c",
       "multi-step-equations text=834b6c0c60 std=b0108ef2b4 q=4823df05ba",
-      "linear-relations text=d5718915ca std=d3c8f0e30c q=1e254a9707",
+      "linear-relations text=d5718915ca std=d3c8f0e30c q=5737c7d8a8",
       "statistics-in-society text=9e4081b498 std=1d143f7a8e q=bae78cb576",
       "expressions-9 text=c4cbafb40c std=232cf44f36 q=a48fbbb76c",
       "lines-9 text=a0d34ff620 std=e577d12b4b q=952170d895",
       "data-9 text=d107431976 std=c23a8046b1 q=03d4d4469f",
       "wa-g9-functions text=9916295729 std=d3406f001b q=690ab442e5",
       "wa-g9-inequalities text=838f8a24f5 std=8cc43633ed q=e5b15cfeeb",
-      "wa-g9-systems text=af9fd1b6dc std=68cca199ff q=abb4800646",
+      "wa-g9-systems text=af9fd1b6dc std=68cca199ff q=a14aeddb37",
       "wa-g9-exponential text=500137f8a0 std=be0b4e2459 q=5f897e7b41",
       "wa-g9-quadratics text=9f8fc6709d std=51baef9b07 q=d3022a54a4",
       "wa-g9-sequences text=38d5f69f77 std=1767401461 q=d2a4642ec5",

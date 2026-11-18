@@ -165,7 +165,7 @@
       "my-community text=f4b6495f7a std=6b25f61bbb q=e0548ab0f6",
       "respect-and-inclusion text=2f7448bf67 std=62e693d29f q=2bd238d5a9",
       "my-roles text=6c48ae23b8 std=ad7cd92430 q=f34e0b2c23",
-      "maps text=0393b6b3b0 std=14ab9cb46a q=671d944151",
+      "maps text=0393b6b3b0 std=14ab9cb46a q=bb8e729a47",
       "our-land text=9250f303b3 std=61759cca24 q=c1704cb4f1",
       "pe-needs-and-wants-1 text=feb7f0d4f1 std=97091a1fba q=ab4a4e507f",
       "pe-goods-and-services-1 text=55be22b8f4 std=19ec99122c q=43e8316788",
@@ -419,7 +419,7 @@
       "wa-g5-energy-food text=7248a5bf2e std=961a9db673 q=2c5e9d47f6",
       "mb-energy-senses text=148b39e511 std=cc878d2176 q=57e3d027d5",
       "wa-g4-energy-motion text=b3e9a355c7 std=5736c12fb2 q=1c3f0bf823",
-      "mn-g5-sun-stars text=b0f14bef40 std=ec87c4f7cb q=4d3e275e49"
+      "mn-g5-sun-stars text=b0f14bef40 std=ec87c4f7cb q=e2d7156dfa"
     ]
   },
   "5/social": {
@@ -622,12 +622,12 @@
       "pythagorean-theorem text=014e1086f2 std=2814c0f2ef q=bcc8d87763",
       "numbers-8 text=8bc8425026 std=60743a04e9 q=9e9e88cf93",
       "data-8 text=f67cb7cc17 std=9621ed6718 q=61afebfaea",
-      "linear-relations-ab text=3ef9188889 std=d1773b8e16 q=8f11287d9e",
+      "linear-relations-ab text=3ef9188889 std=d1773b8e16 q=e4d76bdf86",
       "bracket-equations-ab text=d802eb7882 std=dea7baba08 q=3719a7ef86",
       "wa-g8-exponent-rules text=c6ea891ad5 std=8ede6bea31 q=e041bd810e",
-      "wa-g8-systems text=b290721dd7 std=587392113f q=b5967231f6",
+      "wa-g8-systems text=b290721dd7 std=587392113f q=2a17ebc3b0",
       "wa-g8-functions text=906e422768 std=2e7fb34ab4 q=b704358710",
-      "wa-g8-slope text=5956a66b16 std=68cf77d0b9 q=c9e5f2a915"
+      "wa-g8-slope text=5956a66b16 std=68cf77d0b9 q=2c900999a3"
     ]
   },
   "8/science": {
@@ -690,7 +690,7 @@
       "exponent-laws text=14558089af std=18a645cd33 q=8fb7aa1d0b",
       "polynomials text=608ddf33d1 std=aa0a2e38f2 q=3a3e17fe5c",
       "multi-step-equations text=834b6c0c60 std=93e01fc824 q=4823df05ba",
-      "linear-relations text=d5718915ca std=b819f86394 q=1e254a9707",
+      "linear-relations text=d5718915ca std=b819f86394 q=5737c7d8a8",
       "statistics-in-society text=9e4081b498 std=9d45f38c2a q=bae78cb576",
       "number-sets-9 text=2e841b16e4 std=c44bf1a887 q=0bb5534a95",
       "expressions-9 text=c4cbafb40c std=d731838bc9 q=a48fbbb76c",
@@ -698,7 +698,7 @@
       "data-9 text=d107431976 std=056d643eba q=03d4d4469f",
       "wa-g9-functions text=9916295729 std=d9e1bc5e8d q=690ab442e5",
       "wa-g9-inequalities text=838f8a24f5 std=2ac52d64e4 q=e5b15cfeeb",
-      "wa-g9-systems text=af9fd1b6dc std=e5c5a1b10f q=abb4800646",
+      "wa-g9-systems text=af9fd1b6dc std=e5c5a1b10f q=a14aeddb37",
       "wa-g9-exponential text=500137f8a0 std=daf1ef5c66 q=5f897e7b41",
       "wa-g9-quadratics text=9f8fc6709d std=8333c18622 q=d3022a54a4",
       "wa-g9-formulas text=eef04c92bf std=c1d44e098d q=56c094d4f8",

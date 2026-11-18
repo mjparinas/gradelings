@@ -143,6 +143,21 @@ function checkVisual(v: Visual) {
       expect(v.tens).toBeLessThanOrEqual(19);
       expect(v.ones).toBeLessThanOrEqual(19);
       break;
+    case "map": {
+      expect(v.rows.length).toBeGreaterThanOrEqual(2);
+      expect(v.rows.length).toBeLessThanOrEqual(5);
+      const width = v.rows[0].length;
+      expect(width).toBeLessThanOrEqual(5);
+      for (const row of v.rows) expect(row.length, "every row of a map is as wide as the first").toBe(width);
+      if (v.cols) expect(v.cols.length).toBe(width);
+      if (v.rowLabels) expect(v.rowLabels.length).toBe(v.rows.length);
+      const names = v.rows.flat().flatMap((c) => (c ? [c.label ?? c.emoji] : []));
+      expect(new Set(names).size, "two squares of a map look the same").toBe(names.length);
+      break;
+    }
+    case "compass":
+      for (const a of v.around ?? []) expect(["N", "E", "S", "W"]).toContain(a.at);
+      break;
     case "grid":
       for (const p of v.points) {
         expect(Math.abs(p.x)).toBeLessThanOrEqual(v.size);
@@ -160,6 +175,33 @@ function checkVisual(v: Visual) {
     case "angle":
       expect(v.degrees).toBeGreaterThan(0);
       expect(v.degrees).toBeLessThan(360);
+      break;
+    case "circleGraph":
+      expect(v.sectors.length).toBeGreaterThanOrEqual(2);
+      expect(v.sectors.length).toBeLessThanOrEqual(8);
+      for (const x of v.sectors) expect(x.value, "a circle graph sector needs a size").toBeGreaterThan(0);
+      break;
+    case "linePlot":
+      expect(v.labels.length).toBe(v.counts.length);
+      expect(v.labels.length).toBeGreaterThanOrEqual(2);
+      expect(v.labels.length).toBeLessThanOrEqual(14);
+      for (const c of v.counts) expect(Number.isInteger(c) && c >= 0 && c <= 12, "line plot stack of 0 to 12").toBe(true);
+      break;
+    case "plot":
+      expect(v.xMax).toBeGreaterThan(v.xMin);
+      expect(v.yMax).toBeGreaterThan(v.yMin);
+      expect(v.series.length).toBeGreaterThanOrEqual(1);
+      for (const s of v.series) {
+        expect(s.points.length).toBeGreaterThanOrEqual(1);
+        for (const p of s.points) {
+          expect(Number.isFinite(p.x) && Number.isFinite(p.y)).toBe(true);
+        }
+      }
+      break;
+    case "tree":
+      expect(v.stages.length).toBeGreaterThanOrEqual(2);
+      expect(v.stages.reduce((n, st) => n * st.length, 1)).toBeLessThanOrEqual(24);
+      for (const st of v.stages) expect(st.length).toBeGreaterThanOrEqual(1);
       break;
     case "joined":
       expect(v.parts.length).toBeGreaterThanOrEqual(1);

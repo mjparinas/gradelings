@@ -196,7 +196,7 @@
       "mb-g1-needs-wants text=e8e484336d std=d1e612fe68 q=4e20e43b89",
       "our-land text=9250f303b3 std=35da1eb78d q=c1704cb4f1",
       "mb-g1-places-we-care-for text=1ce2dbf4ba std=11b6becb7d q=54e8a01eeb",
-      "maps text=0393b6b3b0 std=e3e0c31a64 q=5413590a99",
+      "maps text=0393b6b3b0 std=e3e0c31a64 q=4ce4b133e9",
       "mb-g1-world-neighbours text=7be3b84b30 std=b266296a22 q=45b66d1a22",
       "mb-g1-thinking-skills text=b440082199 std=672f414529 q=34f3d0ebea"
     ]
@@ -275,13 +275,13 @@
       "communities-in-canada text=85e762a220 std=afd980b9bc q=62daf1b4ed",
       "mb-natural-resources text=ca3c919548 std=fc732e4c45 q=7a076017dc",
       "then-and-now text=adcb461d8f std=357e0c33a3 q=ae17feafab",
-      "globe-and-continents text=1e723efe75 std=ae89e3a020 q=627071c8db",
+      "globe-and-continents text=1e723efe75 std=ae89e3a020 q=0e536ff751",
       "needs-and-wants text=8192b43423 std=39b8a9315c q=619b8574d0",
       "caring-citizens text=774323e412 std=4d7a319dab q=8411a16f0e",
       "mb-what-makes-a-community text=b7005820bb std=4c743fa148 q=4b58e415b2",
       "mb-who-we-are text=9dc2081eaf std=6cd42e86aa q=260551fbce",
       "mb-community-stories text=c51d563c8f std=236cdaa126 q=161f140477",
-      "mb-maps-and-directions text=127a190ce9 std=7e3ab4c82e q=f9b34aee82",
+      "mb-maps-and-directions text=127a190ce9 std=7e3ab4c82e q=ec6ae110ff",
       "mb-diverse-canada text=1111092bcb std=f2590c806c q=d13af8a730",
       "mb-working-together text=2915a53ce4 std=f1cad0a19f q=05df5f425f",
       "mb-finding-out text=9fc10a91f4 std=26f303e751 q=feefc2dc86"
@@ -362,7 +362,7 @@
     "units": [
       "mb-citizenship text=76016c0088 std=aaead6fe63 q=9fddf9a7be",
       "mb-groups-and-leaders text=990b1bdfbd std=ce78b701c5 q=340efa8ad8",
-      "mb-world-maps text=1e325a2118 std=509b3a8799 q=258838d062",
+      "mb-world-maps text=1e325a2118 std=509b3a8799 q=a176ff9a28",
       "mb-global-communities text=c8d53b307e std=5301b95db3 q=137089294c",
       "mb-needs-and-rights text=ad434b6f13 std=e6adf0fe51 q=4df1b40b9f",
       "mb-ancient-egypt text=43b3bd980c std=16058ae7b1 q=c0b0670e31",
@@ -467,7 +467,7 @@
   "4/social": {
     "overview": "b114ad3726",
     "units": [
-      "mb-canada-map text=05ebae4727 std=8eac1c90e4 q=f74314eb17",
+      "mb-canada-map text=05ebae4727 std=8eac1c90e4 q=f753919e8f",
       "mb-canada-regions text=4dac8d9089 std=012a03a445 q=0a1223b38b",
       "mb-canadian-citizens text=1e902e8053 std=a17adffba9 q=89e74bf03a",
       "mb-manitoba-land text=944cc630c4 std=b0a7c4df9e q=d4fd9f777c",
@@ -482,7 +482,7 @@
       "mb-north-names text=f1d5ceec91 std=681ed2000b q=02f38a867e",
       "mb-north-people text=4f9fc5a5d0 std=dacaf83c83 q=66749eba91",
       "mb-north-change text=993ad6b0db std=23b7b7fa11 q=be875d9672",
-      "mb-map-skills text=e674abbe5e std=5bf04e58c7 q=1884b5d04d",
+      "mb-map-skills text=e674abbe5e std=5bf04e58c7 q=09dabb5e0e",
       "mb-research-skills text=3f15f58ccb std=e3ccb4034f q=737783752f"
     ]
   },
@@ -586,8 +586,8 @@
       "mb-confederation-5 text=dcf295ebe0 std=e0e649cdf6 q=7402bd455e",
       "immigration-multiculturalism text=f088c9a62e std=50388dfa1c q=d565473fa8",
       "regions-and-resources text=9753098521 std=22a206f9fe q=b64bb55cc8",
-      "mb-history-skills-5 text=f3324a2d72 std=29586521ae q=3eb55f7c94",
-      "mb-maps-and-land-5 text=0b1fee9aa7 std=d14b0f8b9d q=25039b7430",
+      "mb-history-skills-5 text=f3324a2d72 std=29586521ae q=0f7dc7af7d",
+      "mb-maps-and-land-5 text=0b1fee9aa7 std=d14b0f8b9d q=0e4266f763",
       "mb-history-inquiry-5 text=c2af9ed3b4 std=6c1992ee7d q=c2db9e2339",
       "mb-respectful-talk-5 text=71a00cc969 std=b396b9bebe q=7bc4d74370",
       "mb-citizens-and-values-5 text=97feef0bbf std=7be347c5fd q=435b0dc603"
@@ -663,7 +663,7 @@
       "angles-and-triangles text=f87da09706 std=6b9414067f q=87011990e1",
       "volume-and-capacity text=57006408db std=23ea87306f q=0c1a7e8d2f",
       "transformations text=94e34ce668 std=20ad606fa9 q=a802fabebb",
-      "mb-line-graphs text=6b8f5f279b std=df597defd4 q=f59eda372e",
+      "mb-line-graphs text=6b8f5f279b std=df597defd4 q=68d4c2ce25",
       "probability text=9e7f91640d std=3079dcd6fa q=2408ca4e6f"
     ]
   },
@@ -786,7 +786,7 @@
       "mb-7-constructions text=a88c16679e std=70755ad639 q=8b22ca3851",
       "circles text=bf81bcea8c std=96f10503fa q=31d74c7b6b",
       "mb-mean-median-mode text=4106920d88 std=2b209e8234 q=42e4f86534",
-      "circle-graphs text=b35255ef1b std=50bdf20392 q=620f317483",
+      "circle-graphs text=b35255ef1b std=50bdf20392 q=118224059d",
       "probability text=f903bf5b77 std=01f957eed0 q=61a293da37"
     ]
   },
@@ -816,7 +816,7 @@
     "units": [
       "mb-latitude-longitude text=a1267113ea std=f138e02828 q=4c3d732ce7",
       "mb-world-map text=bf7b99a1e7 std=8187e7893b q=1a2e9155df",
-      "mb-7-reading-the-land text=09e7a49554 std=618307f687 q=3ffa457b10",
+      "mb-7-reading-the-land text=09e7a49554 std=618307f687 q=1d1ab2c42a",
       "mb-human-rights text=a45b086708 std=ab4c6e234c q=a60be3bb12",
       "mb-quality-of-life text=c3038b2626 std=89f7994e7d q=0bb3a3c531",
       "mb-climate-change text=9ebecc73d7 std=759949ce7e q=c3ab3123c9",
@@ -931,7 +931,7 @@
     "units": [
       "mb-history-skills-8 text=972426b6fe std=62fef55873 q=7f13aae257",
       "mb-world-views-8 text=ba39fd0a22 std=ed2e9e7b96 q=1d11818a51",
-      "mb-maps-8 text=41830565c5 std=486c57dd60 q=e6e3f8dd56",
+      "mb-maps-8 text=41830565c5 std=486c57dd60 q=2f86faae82",
       "mb-evidence-8 text=d3ac9b959b std=dd2c3c11a6 q=bb1e47eed7",
       "mb-perspectives-8 text=edc77e5d95 std=2d770cacbf q=0eb603949e",
       "mb-teamwork-8 text=0a8cbf520b std=6975354f34 q=e9b992940d",
@@ -1024,7 +1024,7 @@
     "units": [
       "exponent-laws text=14558089af std=c012bb01c0 q=8fb7aa1d0b",
       "rational-numbers text=023c4c6316 std=b8d1986047 q=29cdd814c4",
-      "linear-relations text=d5718915ca std=7e5a64833b q=1e254a9707",
+      "linear-relations text=d5718915ca std=7e5a64833b q=5737c7d8a8",
       "multi-step-equations text=834b6c0c60 std=c64dbf6d6f q=4823df05ba",
       "polynomials text=608ddf33d1 std=7fa45e1932 q=3a3e17fe5c",
       "similarity-and-scale text=541110d627 std=207464c4ab q=85409fefdf",
@@ -1032,7 +1032,7 @@
       "mb-composite-surface-area text=284ac1fded std=d44db16c5d q=08e6219366",
       "mb-line-rotation-symmetry text=df26946dea std=18b52cb1ca q=62b6578b32",
       "statistics-in-society text=9e4081b498 std=ceac37c725 q=bae78cb576",
-      "mb-probability-in-society text=bc7c3e695b std=fe62e498a6 q=5438b104c6"
+      "mb-probability-in-society text=bc7c3e695b std=fe62e498a6 q=03d23c7c13"
     ]
   },
   "9/science": {

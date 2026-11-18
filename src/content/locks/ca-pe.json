@@ -166,7 +166,7 @@
       "my-roles text=6c48ae23b8 std=76d72fbd60 q=f34e0b2c23",
       "our-land text=9250f303b3 std=cb877603df q=c1704cb4f1",
       "places-in-my-community text=1356595ff7 std=e834846d2d q=760957f148",
-      "maps text=0393b6b3b0 std=3fa023fea0 q=5413590a99",
+      "maps text=0393b6b3b0 std=3fa023fea0 q=4ce4b133e9",
       "measure-and-map text=8532beeb10 std=5e1c76d54a q=aa750bda62",
       "pe-then-and-now-1 text=0e9ae638d9 std=dcc5ff323b q=5f8085517b",
       "pe-first-peoples-place-1 text=17ab6eff37 std=43d6077cbf q=8032152318",
@@ -297,8 +297,8 @@
   "3/social": {
     "overview": "488cee304b",
     "units": [
-      "mb-world-maps text=1e325a2118 std=3e7c6e17dd q=258838d062",
-      "maps-and-globes text=6a6a9ae26b std=89581008dd q=fd8314b02c",
+      "mb-world-maps text=1e325a2118 std=3e7c6e17dd q=a176ff9a28",
+      "maps-and-globes text=6a6a9ae26b std=89581008dd q=85d8fa6d9b",
       "pe-our-province-3 text=141798bf8d std=1103d4a678 q=13f6f69b55",
       "mb-global-communities text=c8d53b307e std=38f368272a q=137089294c",
       "pe-how-people-live-3 text=2516daea2b std=a73b475e60 q=f2fb607ddd",
@@ -489,7 +489,7 @@
   "5/social": {
     "overview": "2f03950b80",
     "units": [
-      "mb-history-skills-5 text=f3324a2d72 std=2add9267f0 q=3eb55f7c94",
+      "mb-history-skills-5 text=f3324a2d72 std=2add9267f0 q=0f7dc7af7d",
       "inquiry-5 text=e3bf1b8910 std=79acfbb24d q=ceaebe5dfd",
       "where-and-when-ab text=f6379aeb82 std=d441672cce q=4ea220bb74",
       "environment-ab text=b5f649bc93 std=fb6bdf753e q=20dddccbb8",
@@ -562,7 +562,7 @@
       "volume-and-capacity text=57006408db std=5cab5403cd q=0c1a7e8d2f",
       "shapes-6 text=d97a7618fe std=72b66fbd06 q=26f8f1c978",
       "transformations text=94e34ce668 std=33f97184c3 q=a802fabebb",
-      "mb-line-graphs text=6b8f5f279b std=4c03805cd7 q=f59eda372e",
+      "mb-line-graphs text=6b8f5f279b std=4c03805cd7 q=68d4c2ce25",
       "data-6 text=169dca7ba6 std=458620ddd5 q=e02081dd94",
       "probability text=9e7f91640d std=1144fd57f3 q=2408ca4e6f"
     ]
@@ -671,7 +671,7 @@
       "mb-7-constructions text=a88c16679e std=44e52bbdb4 q=8b22ca3851",
       "coordinates-transformations text=4061b902e5 std=dd21a614c9 q=56537171c2",
       "central-tendency-ab text=b776821b16 std=dcc3ce59db q=cc21b8662c",
-      "circle-graphs text=b35255ef1b std=eb8c1d2c66 q=620f317483",
+      "circle-graphs text=b35255ef1b std=eb8c1d2c66 q=118224059d",
       "probability text=f903bf5b77 std=388ab7e40a q=61a293da37"
     ]
   },
@@ -755,7 +755,7 @@
       "fraction-operations text=43b349e643 std=503b848c39 q=4755d31e4a",
       "ratios-and-rates text=fe38c24acc std=0caa88c907 q=62d248cf82",
       "linear-equations text=1e22122340 std=b5384eb7b0 q=4ba669b446",
-      "linear-relations-ab text=3ef9188889 std=9769e840ac q=8f11287d9e",
+      "linear-relations-ab text=3ef9188889 std=9769e840ac q=e4d76bdf86",
       "bracket-equations-ab text=d802eb7882 std=83a749eadc q=3719a7ef86",
       "pythagorean-theorem text=014e1086f2 std=e654c89cdc q=bcc8d87763",
       "nets-views-ab text=6df5a9626c std=bbe48f7ad9 q=27eb75caed",
@@ -763,7 +763,7 @@
       "surface-area-volume text=a5298071b5 std=0e77be2317 q=5c73cae8f9",
       "transformations-8 text=872e7f5b99 std=3cb415294e q=d810f846d6",
       "probability-and-data text=49496b876e std=7ac1e0d385 q=6bec01e463",
-      "independent-events-ab text=1f0907c09b std=92d96f9117 q=3831a864f8"
+      "independent-events-ab text=1f0907c09b std=92d96f9117 q=f60240f344"
     ]
   },
   "8/science": {
@@ -847,7 +847,7 @@
       "exponent-laws text=14558089af std=91a2b4fd8a q=8fb7aa1d0b",
       "rational-numbers text=023c4c6316 std=752e7825c7 q=29cdd814c4",
       "square-roots-ab text=9dac6ac303 std=1135d0f0b3 q=20b8564979",
-      "linear-relations text=d5718915ca std=0845b544ca q=1e254a9707",
+      "linear-relations text=d5718915ca std=0845b544ca q=5737c7d8a8",
       "multi-step-equations text=834b6c0c60 std=b157c918cb q=4823df05ba",
       "polynomials text=608ddf33d1 std=519880cf28 q=3a3e17fe5c",
       "geometry-9 text=d3083b3128 std=12cf471458 q=ae0684cada",

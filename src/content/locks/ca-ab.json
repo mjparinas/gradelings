@@ -699,7 +699,7 @@
       "area-constructions-ab text=8f1ce023d1 std=c772de0b2f q=0318953620",
       "coordinates-transformations text=4061b902e5 std=f8d908a1a4 q=56537171c2",
       "central-tendency-ab text=b776821b16 std=0f27f4c23e q=cc21b8662c",
-      "circle-graphs text=b35255ef1b std=ba2152f0a2 q=620f317483",
+      "circle-graphs text=b35255ef1b std=ba2152f0a2 q=118224059d",
       "probability text=f903bf5b77 std=b6f12bb531 q=61a293da37"
     ]
   },
@@ -802,14 +802,14 @@
       "ratios-and-rates text=fe38c24acc std=a5285ba038 q=62d248cf82",
       "fraction-operations text=43b349e643 std=78623d3cae q=4755d31e4a",
       "integers-8 text=4840f100ae std=af4cbd2cb0 q=9c4f44dc17",
-      "linear-relations-ab text=3ef9188889 std=b050c38d68 q=8f11287d9e",
+      "linear-relations-ab text=3ef9188889 std=b050c38d68 q=e4d76bdf86",
       "bracket-equations-ab text=d802eb7882 std=4bdf8bb0a1 q=3719a7ef86",
       "pythagorean-theorem text=014e1086f2 std=6babe88a34 q=bcc8d87763",
       "nets-views-ab text=6df5a9626c std=70b430b6ae q=27eb75caed",
       "surface-area-volume text=a5298071b5 std=dcfc3f15a9 q=5c73cae8f9",
       "congruence-ab text=2124f8bea5 std=124306c4cb q=0fa6ddeb25",
-      "graph-critique-ab text=603cee2a96 std=5050645145 q=c0517f51c4",
-      "independent-events-ab text=1f0907c09b std=b79b2a54d4 q=3831a864f8"
+      "graph-critique-ab text=603cee2a96 std=5050645145 q=2011d04baf",
+      "independent-events-ab text=1f0907c09b std=b79b2a54d4 q=f60240f344"
     ]
   },
   "8/science": {
@@ -915,7 +915,7 @@
       "square-roots-ab text=9dac6ac303 std=85e0221914 q=20b8564979",
       "polynomials text=608ddf33d1 std=b8ba864509 q=3a3e17fe5c",
       "multi-step-equations text=834b6c0c60 std=536c071598 q=4823df05ba",
-      "linear-relations text=d5718915ca std=8015b3add0 q=1e254a9707",
+      "linear-relations text=d5718915ca std=8015b3add0 q=5737c7d8a8",
       "similarity-and-scale text=541110d627 std=f6e3df8496 q=85409fefdf",
       "circles-ab text=0bfecda34b std=e9804bd5e1 q=92547dc066",
       "surface-area-ab text=c4da6bfbc4 std=91bfa2ceb5 q=5db736f014",

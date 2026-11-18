@@ -177,7 +177,7 @@
       "our-land text=9250f303b3 std=67d44bace1 q=c1704cb4f1",
       "places-in-my-community text=1356595ff7 std=fbc91af1e4 q=760957f148",
       "community-services text=26d27aa27c std=eec88903b6 q=2755db82e4",
-      "maps text=0393b6b3b0 std=fdef53e56b q=5413590a99",
+      "maps text=0393b6b3b0 std=fdef53e56b q=4ce4b133e9",
       "measure-and-map text=8532beeb10 std=dee5aa64e7 q=aa750bda62",
       "social-studies-detectives text=4a14dd77f7 std=c552f1461c q=94ae7c005d"
     ]
@@ -252,7 +252,7 @@
       "traditions-and-celebrations text=7933064ad5 std=706c375c35 q=2ef24cb39f",
       "then-and-now text=adcb461d8f std=708f26fc37 q=ae17feafab",
       "groups-in-our-community text=79a3313355 std=0132b24eb0 q=9f245b3885",
-      "globe-and-continents text=1e723efe75 std=730bf7d6c5 q=627071c8db",
+      "globe-and-continents text=1e723efe75 std=730bf7d6c5 q=0e536ff751",
       "climate-and-ways-of-life text=d15048701e std=9b102c14e8 q=d979d1d192",
       "needs-and-wants text=8192b43423 std=0119934d4f q=619b8574d0",
       "communities-compared text=38aa387c10 std=dcc7957ae7 q=f88d3ded2a",
@@ -298,7 +298,7 @@
       "fair-shares-3 text=d6df1e9193 std=4be1a42c00 q=1353378d79",
       "patterns-and-equations text=38e948b1ed std=853a8480c9 q=32db6b6541",
       "data-and-mean text=445b4d7b02 std=e58b335ff9 q=6cce7fb3a1",
-      "likelihood-3 text=43dd790430 std=d4f0dcb72e q=6b98af5dda",
+      "likelihood-3 text=43dd790430 std=d4f0dcb72e q=d79b2e568d",
       "3d-objects text=dd8f27d4a7 std=d04b99f629 q=792d73e855",
       "move-it text=d926d1722c std=17e32342e6 q=d115a75ca5",
       "measuring text=4f82b21dbc std=3c0fcc271f q=257f98b7d7",
@@ -332,8 +332,8 @@
       "regions-on text=2de5dc6492 std=c78185e670 q=79d22b141b",
       "land-use-3 text=8d2be7a987 std=d3045c8c87 q=c68f464457",
       "land-impact-3 text=d54379ae56 std=6f8eef7822 q=71939dfd59",
-      "maps-on text=7b716e2180 std=2cfe1fe9c3 q=123ccf1539",
-      "maps-and-globes text=6a6a9ae26b std=18cefda807 q=fd8314b02c"
+      "maps-on text=7b716e2180 std=2cfe1fe9c3 q=294e9fba47",
+      "maps-and-globes text=6a6a9ae26b std=18cefda807 q=85d8fa6d9b"
     ]
   },
   "3/spanish": {
@@ -398,7 +398,7 @@
       "patterns-and-tables text=223238d646 std=8b460771a3 q=43715233d3",
       "equations-4 text=6cb6394a6c std=86713fdbce q=6716b72d0e",
       "data-4 text=0cbb8798c6 std=4729abb738 q=343a6426a7",
-      "chance-4 text=855e855d93 std=2fcf95a5a4 q=fc2a4cb6a1",
+      "chance-4 text=855e855d93 std=2fcf95a5a4 q=4f6367d189",
       "rectangles-and-grids text=513e57348f std=823a55e69e q=161e0f66f8",
       "angles-and-area text=270704dc2f std=d61282a176 q=8453462612",
       "metric-4 text=aa6167f1c3 std=53f3f79b75 q=d1b2a7cfd0",
@@ -431,7 +431,7 @@
       "physical-regions-4 text=1ffc870280 std=583d14c992 q=c39d7ac652",
       "sectors-4 text=ad17aabf9e std=1ae89de247 q=7b4117e636",
       "industry-env-4 text=f4691e8c2e std=6999540327 q=7de9188559",
-      "political-4 text=06b12ed63a std=7a2aadced1 q=c7cfd797e6",
+      "political-4 text=06b12ed63a std=7a2aadced1 q=2e45c60400",
       "provinces-and-regions text=57d19f24c1 std=f9951b1db6 q=383103dd3d"
     ]
   },
@@ -704,8 +704,8 @@
       "linear-relations text=8a41482ba7 std=aef8c88fc3 q=52c3309ac5",
       "algebra-7 text=b1ecf615eb std=6a379fd587 q=775245a3a8",
       "two-step-equations text=ddaa3cce54 std=625da172fa q=4d67a1e779",
-      "data-7 text=89d3646ea8 std=a08bf6c766 q=7d75c16c00",
-      "circle-graphs text=b35255ef1b std=d1922b4a43 q=620f317483",
+      "data-7 text=89d3646ea8 std=a08bf6c766 q=8c1d0f36fe",
+      "circle-graphs text=b35255ef1b std=d1922b4a43 q=118224059d",
       "probability text=f903bf5b77 std=3b3e32c06c q=61a293da37",
       "dependent-events text=ace44e7502 std=9130f64900 q=bbc6dba981",
       "coordinates-transformations text=4061b902e5 std=893b75ed36 q=56537171c2",
@@ -817,7 +817,7 @@
       "algebra-8 text=50bbd3d3fd std=c2e6547d3a q=118ffccf35",
       "linear-equations text=1e22122340 std=6e88a22fb4 q=4ba669b446",
       "data-8 text=f67cb7cc17 std=bbe387204a q=68d5f0cd99",
-      "chance-8 text=475485675c std=d8b8a1087d q=e2d7736f0d",
+      "chance-8 text=475485675c std=d8b8a1087d q=33f1de94f1",
       "transformations-8 text=872e7f5b99 std=820b188b55 q=d810f846d6",
       "scale-8 text=48a98db8d4 std=c7005b4712 q=ebe2d4d25c",
       "angles-8 text=899ecf6fe2 std=535a930a49 q=f4e15bb736",
@@ -932,7 +932,7 @@
       "polynomials text=608ddf33d1 std=99417a2240 q=3a3e17fe5c",
       "multi-step-equations text=834b6c0c60 std=31900fbd6a q=4823df05ba",
       "coding-9 text=d2b06c6c90 std=0636b8871e q=abc3756092",
-      "linear-relations text=d5718915ca std=34c01dc78c q=1e254a9707",
+      "linear-relations text=d5718915ca std=34c01dc78c q=5737c7d8a8",
       "lines-9 text=a0d34ff620 std=a4f3e7e922 q=952170d895",
       "data-9 text=d107431976 std=427f9aa5d8 q=03d4d4469f",
       "geometry-9 text=d3083b3128 std=4ca190b7aa q=ae0684cada",

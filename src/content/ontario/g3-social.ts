@@ -373,10 +373,11 @@ function gridMap() {
   const features = sample([...FEATURES], 9);
   const cols = ["A", "B", "C"];
   const visual: Visual = {
-    type: "table",
-    title: "Map of Lakeside (north is at the top)",
-    headers: ["", "A", "B", "C"],
-    rows: [1, 2, 3].map((row) => [String(row), ...cols.map((_, c) => `${features[(row - 1) * 3 + c][1]} ${features[(row - 1) * 3 + c][0]}`)]),
+    type: "map",
+    title: "Map of Lakeside",
+    cols,
+    rowLabels: ["1", "2", "3"],
+    rows: [0, 1, 2].map((row) => cols.map((_, c) => ({ emoji: features[row * 3 + c][1], label: features[row * 3 + c][0] }))),
   };
   return { features, cols, visual };
 }

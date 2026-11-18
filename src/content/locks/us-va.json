@@ -182,7 +182,7 @@
   "1/social": {
     "overview": "91d4c47b27",
     "units": [
-      "maps text=0393b6b3b0 std=03b34cb289 q=671d944151",
+      "maps text=0393b6b3b0 std=03b34cb289 q=bb8e729a47",
       "our-land text=9250f303b3 std=22a560ebf3 q=c1704cb4f1",
       "my-community text=f4b6495f7a std=b8f24d85bb q=e0548ab0f6",
       "respect-and-inclusion text=2f7448bf67 std=2426aa37fd q=2bd238d5a9",
@@ -262,7 +262,7 @@
       "ca-g2-work-and-money text=29d8f69f16 std=41d9905a19 q=3daba19f0f",
       "al-g2-american-symbols text=2aa488d75e std=e5b2de72a6 q=2cbff35e4b",
       "az-g2-continents-oceans text=3c092e19d9 std=21f347b0c9 q=73975f9cd7",
-      "al-g2-reading-maps text=340d8f0737 std=864fd96845 q=d462f2e233",
+      "al-g2-reading-maps text=340d8f0737 std=864fd96845 q=9434a12f80",
       "va-g2-first-peoples text=372f7c3a23 std=06b90d6418 q=837596148f",
       "va-g2-explorers-founders text=865c09d7e4 std=ae9cb02457 q=d7396b2830",
       "va-g2-nation-landmarks text=c5f6852415 std=e6f177cbf0 q=b781e7fd27",
@@ -709,11 +709,11 @@
       "pythagorean-theorem text=014e1086f2 std=a838f9574f q=bcc8d87763",
       "numbers-8 text=8bc8425026 std=8b3fe3df24 q=9e9e88cf93",
       "data-8 text=f67cb7cc17 std=152bedcc69 q=61afebfaea",
-      "linear-relations-ab text=3ef9188889 std=c8c0733130 q=8f11287d9e",
+      "linear-relations-ab text=3ef9188889 std=c8c0733130 q=e4d76bdf86",
       "bracket-equations-ab text=d802eb7882 std=505ccc66eb q=3719a7ef86",
       "wa-g8-functions text=906e422768 std=fb75a4e990 q=b704358710",
       "wa-g8-round-volume text=46d3a6210c std=5f0ef6d0ce q=7c06cc35b6",
-      "wa-g8-slope text=5956a66b16 std=9570a596d5 q=c9e5f2a915",
+      "wa-g8-slope text=5956a66b16 std=9570a596d5 q=2c900999a3",
       "ca-g8-linear-models text=184aa29541 std=6101e6a6fe q=75e8287d42"
     ]
   },
@@ -781,14 +781,14 @@
     "overview": "51e11c2f26",
     "units": [
       "polynomials text=608ddf33d1 std=8947fd153c q=3a3e17fe5c",
-      "linear-relations text=d5718915ca std=e0b9740f4e q=1e254a9707",
+      "linear-relations text=d5718915ca std=e0b9740f4e q=5737c7d8a8",
       "statistics-in-society text=9e4081b498 std=4db7b46126 q=bae78cb576",
       "expressions-9 text=c4cbafb40c std=3caee4a01e q=a48fbbb76c",
       "lines-9 text=a0d34ff620 std=04032c9bba q=952170d895",
       "data-9 text=d107431976 std=17580699b5 q=03d4d4469f",
       "wa-g9-functions text=9916295729 std=e7a62897af q=690ab442e5",
       "wa-g9-inequalities text=838f8a24f5 std=43c6002e18 q=e5b15cfeeb",
-      "wa-g9-systems text=af9fd1b6dc std=2a766ec249 q=abb4800646",
+      "wa-g9-systems text=af9fd1b6dc std=2a766ec249 q=a14aeddb37",
       "wa-g9-exponential text=500137f8a0 std=a7ec9bc248 q=5f897e7b41",
       "wa-g9-quadratics text=9f8fc6709d std=42be4a1daa q=d3022a54a4",
       "wa-g9-formulas text=eef04c92bf std=3bc59eb6b2 q=56c094d4f8",

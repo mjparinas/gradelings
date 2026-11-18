@@ -157,7 +157,7 @@
       "my-community text=f4b6495f7a std=61a8fe102c q=75c0262c60",
       "community-services text=26d27aa27c std=cc1d7bef61 q=2755db82e4",
       "our-land text=9250f303b3 std=6d28fd274d q=c1704cb4f1",
-      "maps text=0393b6b3b0 std=abd91d4df2 q=5413590a99"
+      "maps text=0393b6b3b0 std=abd91d4df2 q=4ce4b133e9"
     ]
   },
   "2/immersion": {
@@ -285,7 +285,7 @@
   "3/social": {
     "overview": "b83f7b3a42",
     "units": [
-      "maps-and-globes text=6a6a9ae26b std=fdbc2c92cb q=fd8314b02c",
+      "maps-and-globes text=6a6a9ae26b std=fdbc2c92cb q=85d8fa6d9b",
       "nb-our-province-3 text=f70e65dbe7 std=458d4003ca q=8aca460175",
       "nb-wabanaki-nations-3 text=bcbc180a36 std=ceee311d34 q=f2dbd31e8b",
       "nb-peoples-3 text=a0a6332ab9 std=f29d9753a6 q=ca7f5cfdd2",
@@ -550,7 +550,7 @@
       "volume-and-capacity text=57006408db std=acc59bc3e8 q=0c1a7e8d2f",
       "shapes-6 text=d97a7618fe std=3538571b5b q=26f8f1c978",
       "transformations text=94e34ce668 std=e17fa3c3bd q=a802fabebb",
-      "mb-line-graphs text=6b8f5f279b std=c37d7a6cc0 q=f59eda372e",
+      "mb-line-graphs text=6b8f5f279b std=c37d7a6cc0 q=68d4c2ce25",
       "probability text=9e7f91640d std=3a95903b71 q=2408ca4e6f"
     ]
   },
@@ -649,7 +649,7 @@
       "circles text=bf81bcea8c std=bd1b5ef0b6 q=31d74c7b6b",
       "area-constructions-ab text=8f1ce023d1 std=37195351d6 q=0318953620",
       "coordinates-transformations text=4061b902e5 std=f333df31ed q=56537171c2",
-      "circle-graphs text=b35255ef1b std=9d8155e411 q=620f317483",
+      "circle-graphs text=b35255ef1b std=9d8155e411 q=118224059d",
       "probability text=f903bf5b77 std=379ce48325 q=61a293da37"
     ]
   },
@@ -839,7 +839,7 @@
     "units": [
       "exponent-laws text=14558089af std=0a0e7e9cb0 q=8fb7aa1d0b",
       "rational-numbers text=023c4c6316 std=09743c2ee5 q=29cdd814c4",
-      "linear-relations text=d5718915ca std=009b9c92dd q=1e254a9707",
+      "linear-relations text=d5718915ca std=009b9c92dd q=5737c7d8a8",
       "multi-step-equations text=834b6c0c60 std=8357637e7e q=4823df05ba",
       "polynomials text=608ddf33d1 std=ebc6aff1bb q=3a3e17fe5c",
       "surface-area-ab text=c4da6bfbc4 std=c65fa8998f q=5db736f014",
