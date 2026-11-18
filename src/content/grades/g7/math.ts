@@ -2827,6 +2827,15 @@ function splitPercents(unit: number): number[] {
   return shuffle([10, 20, 30, 40]);
 }
 
+/** A circle graph drawn from a survey's percents (or angles). A `blank` sector shows "?" at its true size. */
+function surveyGraph(title: string, cats: string[], pcts: number[], blank = -1, unit: "%" | "°" = "%"): Visual {
+  return {
+    type: "circleGraph",
+    title,
+    sectors: cats.map((c, i) => ({ label: c, value: pcts[i], show: i === blank ? "?" : `${fmt(unit === "%" ? pcts[i] : (pcts[i] * 360) / 100)}${unit}` })),
+  };
+}
+
 const CIRCLE_GRAPH_CONCEPTS: Concept[] = [
   {
     levels: [1, 2, 3],
@@ -2875,7 +2884,7 @@ function circleGraphs(opts?: GenerateOptions): Question[] {
     const s = pick(SURVEYS);
     const pcts = splitPercents(unit);
     const N = d === 1 ? pick([100, 200]) : 20 * randInt(d === 2 ? 2 : 3, d === 2 ? 15 : 20);
-    const table: Visual = { type: "table", title: `${s.title} (${N} students)`, headers: ["Choice", "Percent"], rows: s.cats.map((c, i) => [c, `${pcts[i]}%`]) };
+    const table: Visual = surveyGraph(`${s.title} (${N} students)`, s.cats, pcts);
     if (d < 3) {
       const i = randInt(0, 3);
       const n = (N * pcts[i]) / 100;
@@ -2945,7 +2954,7 @@ function circleGraphs(opts?: GenerateOptions): Question[] {
           fmt(pcts[blank]),
           `All the sectors add up to 100%. ${known.join(" + ")} = ${known.reduce((a, b) => a + b, 0)}, and 100 − ${known.reduce((a, b) => a + b, 0)} = ${pcts[blank]}%.`,
           "decimal",
-          { suffix: "%", visual: { type: "table", title: s.title, headers: ["Choice", "Percent"], rows: s.cats.map((c, i) => [c, i === blank ? "?" : `${pcts[i]}%`]) } },
+          { suffix: "%", visual: surveyGraph(s.title, s.cats, pcts, blank) },
         ),
       );
     } else {
@@ -2958,7 +2967,7 @@ function circleGraphs(opts?: GenerateOptions): Question[] {
           fmt(degs[blank]),
           `All the sectors make a full turn of 360°. ${known.join(" + ")} = ${sum}, and 360 − ${sum} = ${degs[blank]}°.`,
           "decimal",
-          { suffix: "°", visual: { type: "table", title: s.title, headers: ["Choice", "Angle"], rows: s.cats.map((c, i) => [c, i === blank ? "?" : `${degs[i]}°`]) } },
+          { suffix: "°", visual: surveyGraph(s.title, s.cats, pcts, blank, "°") },
         ),
       );
     }
@@ -3015,7 +3024,7 @@ function circleGraphs(opts?: GenerateOptions): Question[] {
         fmt(diff),
         `${s.cats[i]}: ${pcts[i]}% of ${N} = ${(N * pcts[i]) / 100}. ${s.cats[j]}: ${pcts[j]}% of ${N} = ${(N * pcts[j]) / 100}. Difference: ${fmt(diff)}. (Or ${pcts[i] - pcts[j]}% of ${N}.)`,
         "integer",
-        { visual: { type: "table", title: s.title, headers: ["Choice", "Percent"], rows: s.cats.map((c, k) => [c, `${pcts[k]}%`]) } },
+        { visual: surveyGraph(s.title, s.cats, pcts) },
       ),
     );
   }
