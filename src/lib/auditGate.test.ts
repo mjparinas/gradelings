@@ -1,5 +1,4 @@
 import { describe, expect, it } from "vitest";
-// @ts-expect-error plain .mjs script
 import { blocking } from "../../scripts/audit-gate.mjs";
 
 const report = (url: string, severity = "high") => ({ vulnerabilities: { x: { via: [{ url, title: "t", severity }, "dep"] } } });
