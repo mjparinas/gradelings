@@ -598,8 +598,12 @@ function townMap() {
   return {
     at,
     visual: {
-      type: "story" as const,
-      lines: ["⬆️ North is up", `🟩 ${n.emoji} 🟩`, `${w.emoji} 🏠 ${e.emoji}`, `🟩 ${s.emoji} 🟩`],
+      type: "map" as const,
+      rows: [
+        [null, { emoji: n.emoji }, null],
+        [{ emoji: w.emoji }, { emoji: "🏠" }, { emoji: e.emoji }],
+        [null, { emoji: s.emoji }, null],
+      ],
     },
   };
 }

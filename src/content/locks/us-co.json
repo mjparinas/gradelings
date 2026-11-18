@@ -166,7 +166,7 @@
   "1/social": {
     "overview": "88a5802079",
     "units": [
-      "maps text=0393b6b3b0 std=e650c770cb q=671d944151",
+      "maps text=0393b6b3b0 std=e650c770cb q=bb8e729a47",
       "our-land text=9250f303b3 std=9bca96440a q=c1704cb4f1",
       "my-community text=f4b6495f7a std=a40dacaa5f q=e0548ab0f6",
       "changes-in-my-life text=d5ee1318f1 std=296998d102 q=d9a4ad3785",
@@ -245,7 +245,7 @@
       "ca-g2-citizens-and-leaders text=c362a6e3f6 std=33effbab3f q=deb671fc39",
       "ca-g2-work-and-money text=29d8f69f16 std=ac509cdca9 q=3daba19f0f",
       "or-g2-world-maps text=5be3d98572 std=ed6a1ec56b q=f54db7af64",
-      "co-g2-reading-maps text=4eb3eae1ec std=9f5be48ad3 q=d462f2e233"
+      "co-g2-reading-maps text=4eb3eae1ec std=9f5be48ad3 q=9434a12f80"
     ]
   },
   "3/language": {
@@ -455,7 +455,7 @@
       "measuring-matter-ab text=46925fbe69 std=cd1eb8c6ad q=df13ae57a0",
       "mb-weather-5 text=db26ca3367 std=742e4c043b q=9936aa0e30",
       "wa-g5-energy-food text=7248a5bf2e std=0dcd5d2eae q=2c5e9d47f6",
-      "co-g5-sun-stars text=2be95b5502 std=fb685be439 q=3f9d4d616e",
+      "co-g5-sun-stars text=2be95b5502 std=fb685be439 q=29b9a406f1",
       "co-g5-earth-water text=557960a2cd std=a88bbf2f25 q=e9947fb55d",
       "co-g5-ecosystems text=cbea549144 std=3eb9b4e4af q=e1dd1a1e12"
     ]

@@ -2,6 +2,7 @@
 // units carry learning-standard text per framework (e.g. "ca-bc"), and the
 // scoring scheme and report-card language live with the framework.
 
+import type { MapVisual } from "./mapVisual";
 import type { Currency } from "./money";
 import type { RegisteredId } from "./registry";
 
@@ -36,6 +37,8 @@ export type ShapeName =
 
 /** Pictures drawn above a question to help explain it. */
 export type Visual =
+  /** A town map or a compass rose (`./mapVisual`). */
+  | MapVisual
   /** Big maths or text; each ☐ is drawn as a blank box. */
   | { type: "equation"; text: string }
   | { type: "emoji"; emoji: string; caption?: string }

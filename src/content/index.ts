@@ -3,6 +3,7 @@ import { DEFAULT_FRAMEWORK, getFramework } from "./frameworks";
 import { localeOf, localizeUnit } from "./locale";
 import { GRADE_ORDER } from "./subjects";
 import { withLessons, type GradeLessons } from "./lessons";
+import { plainGenerate, withMapPictures } from "./mapPictures";
 import type { GradeModule } from "./manifest";
 import { manifestOf, REGISTRY } from "./registry";
 import type { Course, FrameworkId, GradeId, SubjectId, Unit } from "./types";
@@ -87,7 +88,7 @@ export function mergeCourses(lists: Course[][]): Course[] {
       order: { ...base.order, ...course.order },
     };
   }
-  return out.map(applyShares).map(applyElsewhere);
+  return withMapPictures(out.map(applyShares).map(applyElsewhere));
 }
 
 /** Gives every framework a course's "elsewhere" Big Ideas and unit standards where it names none of its own (Spanish). */
@@ -113,7 +114,7 @@ function mergeUnits(a: Unit[], b: Unit[]): Unit[] {
       out.push(unit);
       continue;
     }
-    if (out[i].generate !== unit.generate) throw new Error(`Two different units share the id "${unit.id}"`);
+    if (plainGenerate(out[i].generate) !== plainGenerate(unit.generate)) throw new Error(`Two different units share the id "${unit.id}"`);
     out[i] = { ...out[i], standards: { ...out[i].standards, ...unit.standards } };
   }
   return out;

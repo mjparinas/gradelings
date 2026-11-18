@@ -140,7 +140,7 @@
       "my-community text=f4b6495f7a std=31ca73ea60 q=75c0262c60",
       "different-and-alike text=a8371bb608 std=fa31be9f5c q=3685278697",
       "our-land text=9250f303b3 std=b3ef6486ea q=c1704cb4f1",
-      "maps text=0393b6b3b0 std=32f89fabbe q=5413590a99",
+      "maps text=0393b6b3b0 std=32f89fabbe q=4ce4b133e9",
       "respect-and-inclusion text=2f7448bf67 std=c164384d13 q=89b6f79456",
       "community-services text=26d27aa27c std=106b48f0e2 q=2755db82e4"
     ]
@@ -246,7 +246,7 @@
     "overview": "ab9b35999d",
     "units": [
       "nl-province-3 text=cf0c3b9c49 std=44b9b3d0e3 q=3901de764b",
-      "maps-and-globes text=6a6a9ae26b std=4220f55203 q=fd8314b02c",
+      "maps-and-globes text=6a6a9ae26b std=4220f55203 q=85d8fa6d9b",
       "mb-groups-and-leaders text=990b1bdfbd std=d97d0a1de4 q=340efa8ad8",
       "meeting-needs text=40a76a9522 std=1de42e8239 q=3ac35931e2",
       "world-cultures text=7b3656a51b std=6fe99c6540 q=b3c1eb8a42",
@@ -325,7 +325,7 @@
       "nl-peoples-4 text=8450db125b std=dd145f6d19 q=45b9f392c6",
       "nl-exploration-4 text=5654a27c91 std=69228723ce q=5003d29625",
       "nl-explorers-4 text=35b28ef5e0 std=c82331a348 q=9d88b6b20e",
-      "nl-exploration-tools-4 text=91b5ed3a8a std=774736721f q=72a1af80d9",
+      "nl-exploration-tools-4 text=91b5ed3a8a std=774736721f q=d64a83d84f",
       "provinces-and-regions text=57d19f24c1 std=fd172fa2c3 q=383103dd3d",
       "environment-4 text=c995c5d534 std=4be0842053 q=223eb62473"
     ]

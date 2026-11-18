@@ -115,6 +115,21 @@ function checkVisual(v: Visual) {
       expect(v.tens).toBeLessThanOrEqual(19);
       expect(v.ones).toBeLessThanOrEqual(19);
       break;
+    case "map": {
+      expect(v.rows.length).toBeGreaterThanOrEqual(2);
+      expect(v.rows.length).toBeLessThanOrEqual(5);
+      const width = v.rows[0].length;
+      expect(width).toBeLessThanOrEqual(5);
+      for (const row of v.rows) expect(row.length, "every row of a map is as wide as the first").toBe(width);
+      if (v.cols) expect(v.cols.length).toBe(width);
+      if (v.rowLabels) expect(v.rowLabels.length).toBe(v.rows.length);
+      const names = v.rows.flat().flatMap((c) => (c ? [c.label ?? c.emoji] : []));
+      expect(new Set(names).size, "two squares of a map look the same").toBe(names.length);
+      break;
+    }
+    case "compass":
+      for (const a of v.around ?? []) expect(["N", "E", "S", "W"]).toContain(a.at);
+      break;
     case "grid":
       for (const p of v.points) {
         expect(Math.abs(p.x)).toBeLessThanOrEqual(v.size);
