@@ -24,6 +24,17 @@ export const NEWS_KIND_LABEL: Record<NewsItem["kind"], string> = {
 
 export const WHATS_NEW: NewsDay[] = [
   {
+    day: "2026-11-18",
+    headline: "New guides for the Android app",
+    items: [
+      {
+        kind: "new",
+        title: "A home for the Android app on the website",
+        body: "There is now a page about the Gradelings Android app, with a Get it on Google Play button, and short guides on setting it up, learning offline on car rides and flights, and using it with a class. You will also find the Google Play button on the pricing, help and teacher pages.",
+      },
+    ],
+  },
+  {
     day: "2026-11-16",
     headline: "Simpler parent settings, take-home slips for teachers, and a friendlier weekly email",
     items: [

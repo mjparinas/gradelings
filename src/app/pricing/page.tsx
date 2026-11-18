@@ -4,6 +4,7 @@ import { appJsonLd, breadcrumbJsonLd } from "@/components/site/jsonld";
 import { PricingWithCurrency } from "@/components/site/PricingSwitch";
 import { offersUsd, siteCurrencies } from "@/components/site/provinces";
 import { Crumbs, SitePage, SubscribeActions } from "@/components/site/SiteChrome";
+import { AndroidCta } from "@/components/site/AndroidCta";
 import { FRAMEWORKS } from "@/content/frameworks";
 import { APP_NAME } from "@/lib/brand";
 import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES, PRICES_BY_CURRENCY, REFUND_DAYS, TAX_NOTE, TRIAL_DAYS } from "@/lib/plan";
@@ -79,6 +80,7 @@ export default function PricingPage() {
           Billing questions
         </Link>
       </div>
+      <AndroidCta />
     </SitePage>
   );
 }

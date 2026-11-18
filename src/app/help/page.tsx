@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "@/components/PublicLink";
 import { breadcrumbJsonLd, faqJsonLd } from "@/components/site/jsonld";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
+import { AndroidCta } from "@/components/site/AndroidCta";
 import { APP_NAME, CONTACT_EMAIL, REPLY_TIME } from "@/lib/brand";
 import { Disclosure } from "@/components/Disclosure";
 import { JsonLd } from "@/lib/site";
@@ -50,6 +51,7 @@ export default function HelpPage() {
       <p className="mt-10 text-sm text-ink-soft">
         See also our <Link className="underline" href="/privacy/">privacy policy</Link>, <Link className="underline" href="/terms/">terms of use</Link> and <Link className="underline" href="/pricing/">pricing</Link>.
       </p>
+      <AndroidCta />
     </SitePage>
   );
 }

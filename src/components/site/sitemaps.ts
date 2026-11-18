@@ -9,6 +9,7 @@ import { MATH_FACTS_PAGES, mathFactsPath } from "./mathFacts";
 import { READY_GRADES, readyPath } from "./readiness";
 import { spanishCourses, spanishPath } from "./spanishPages";
 import { allActivitiesPaths } from "./activities";
+import { allAndroidPaths } from "./android";
 import { allHelpAtHomePaths } from "./helpAtHome";
 import { allLearnPaths } from "./learn";
 import { allGuidePaths } from "./guides";
@@ -44,6 +45,7 @@ function otherPages(): SitemapPath[] {
     ...READY_GRADES.map((g) => ({ path: readyPath.grade(g) })),
     { path: spanishPath.hub() },
     ...spanishCourses().flatMap((c) => [{ path: spanishPath.grade(c.grade) }, ...c.units.map((u) => ({ path: spanishPath.unit(c.grade, u.id) }))]),
+    ...allAndroidPaths(),
     ...allHelpAtHomePaths(),
     ...allLearnPaths(),
     ...allActivitiesPaths(),

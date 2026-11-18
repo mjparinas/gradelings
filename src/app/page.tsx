@@ -139,7 +139,10 @@ export default function Home() {
         📱 {APP_NAME} is also an Android app.{" "}
         <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer" className="font-semibold text-ink underline">
           Get it on Google Play
-        </a>
+        </a>{" "}
+        <Link href="/android/" className="underline">
+          More about the app
+        </Link>
         . The iPhone and iPad app is coming soon.
       </p>
 
