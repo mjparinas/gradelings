@@ -364,7 +364,7 @@
       "wa-g4-line-plots text=ec0f6b9a41 std=d9817fef39 q=87786a4f46",
       "wa-g4-times-as-many text=417e0833be std=f27b397683 q=42781d57e4",
       "ca-g4-tenths-hundredths text=8f100be049 std=6468629366 q=d496ce3de8",
-      "ca-g4-measure-angles text=8423d9e6ff std=dcbc0f1274 q=cf6f715f49"
+      "ca-g4-measure-angles text=8423d9e6ff std=dcbc0f1274 q=4454dbc90f"
     ]
   },
   "4/science": {
@@ -604,7 +604,7 @@
       "central-tendency-ab text=b776821b16 std=41f30af17c q=cc21b8662c",
       "wa-g7-signed-multiply text=61c895d791 std=018ca045d1 q=d7c2440ec8",
       "wa-g7-proportional text=c11cf565b3 std=0dee291652 q=f13197f7aa",
-      "wa-g7-angles text=73a7a5215c std=8988a9834f q=b384ae13b6",
+      "wa-g7-angles text=73a7a5215c std=8988a9834f q=1c4acd8aaa",
       "wa-g7-sampling text=194eb9c3c2 std=9823e7568e q=d8e6ffaf2a",
       "wa-g7-scale-drawings text=44f1660d4b std=61d67ea69f q=480f217aff",
       "ca-g7-rewrite-expressions text=a0c47c116e std=c415d96e60 q=f14bbf9812",
@@ -680,12 +680,12 @@
     "units": [
       "squares-and-roots text=0c3411fb05 std=0e11acc9a1 q=44906b78d6",
       "linear-equations text=1e22122340 std=33f126537e q=4ba669b446",
-      "pythagorean-theorem text=014e1086f2 std=37475c248b q=99835d112c",
+      "pythagorean-theorem text=014e1086f2 std=37475c248b q=bcc8d87763",
       "surface-area-volume text=96a6eb6597 std=7a7be37570 q=79cdef4798",
       "numbers-8 text=8bc8425026 std=56d7028b5e q=9e9e88cf93",
       "data-8 text=f67cb7cc17 std=31aa4a3273 q=61afebfaea",
       "transformations-8 text=872e7f5b99 std=636bb1e037 q=861609ebde",
-      "angles-8 text=899ecf6fe2 std=510f09d0f7 q=547f9529ab",
+      "angles-8 text=899ecf6fe2 std=510f09d0f7 q=f4e15bb736",
       "linear-relations-ab text=3ef9188889 std=1ec7b5130e q=e4d76bdf86",
       "bracket-equations-ab text=d802eb7882 std=7f178c863e q=3719a7ef86",
       "congruence-ab text=2124f8bea5 std=bc49458c78 q=03cb70377c",
@@ -695,7 +695,7 @@
       "wa-g8-round-volume text=46d3a6210c std=adbc21b277 q=7c06cc35b6",
       "wa-g8-slope text=5956a66b16 std=447b6c6df5 q=2c900999a3",
       "wa-g8-two-way-tables text=cfbbd30e3f std=c7eeb3addc q=806c0ab1ec",
-      "ca-g8-similar-distance text=dd75991b3f std=7fc58e8968 q=cf92cd38ac",
+      "ca-g8-similar-distance text=dd75991b3f std=7fc58e8968 q=45852a3e03",
       "ca-g8-linear-models text=184aa29541 std=3be4613af6 q=75e8287d42"
     ]
   },

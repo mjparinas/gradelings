@@ -679,17 +679,17 @@
     "units": [
       "squares-and-roots text=0c3411fb05 std=0f4091477a q=44906b78d6",
       "linear-equations text=1e22122340 std=c2d8403fd9 q=4ba669b446",
-      "pythagorean-theorem text=014e1086f2 std=b048feaff3 q=99835d112c",
+      "pythagorean-theorem text=014e1086f2 std=b048feaff3 q=bcc8d87763",
       "surface-area-volume text=96a6eb6597 std=c5977a170e q=79cdef4798",
       "numbers-8 text=8bc8425026 std=98adfed48e q=9e9e88cf93",
       "data-8 text=f67cb7cc17 std=946eabec5e q=61afebfaea",
-      "angles-8 text=899ecf6fe2 std=6ab4c0f115 q=547f9529ab",
+      "angles-8 text=899ecf6fe2 std=6ab4c0f115 q=f4e15bb736",
       "linear-relations-ab text=3ef9188889 std=03480e46ee q=e4d76bdf86",
       "bracket-equations-ab text=d802eb7882 std=444431f7cf q=3719a7ef86",
       "wa-g8-functions text=906e422768 std=d96298469f q=b704358710",
       "wa-g8-round-volume text=46d3a6210c std=d06effd5a9 q=7c06cc35b6",
       "wa-g8-slope text=5956a66b16 std=9a2c8f1065 q=2c900999a3",
-      "ca-g8-similar-distance text=dd75991b3f std=5e4090768b q=cf92cd38ac",
+      "ca-g8-similar-distance text=dd75991b3f std=5e4090768b q=45852a3e03",
       "ca-g8-linear-models text=184aa29541 std=37b997822d q=75e8287d42"
     ]
   },

@@ -601,7 +601,7 @@
       "probability-6 text=74ab1e6ceb std=4e085eca79 q=6b1c51ad5d",
       "shapes-6 text=d97a7618fe std=03745dcfae q=26f8f1c978",
       "transformations text=94e34ce668 std=a121f1f486 q=a802fabebb",
-      "measure-6 text=3f6824e0d9 std=61c8637074 q=1a9bf70f88",
+      "measure-6 text=3f6824e0d9 std=61c8637074 q=a1df79b158",
       "money-6 text=b7ecce2a9f std=41058d1216 q=2acd2caf7a"
     ]
   },
@@ -820,8 +820,8 @@
       "chance-8 text=475485675c std=d8b8a1087d q=33f1de94f1",
       "transformations-8 text=872e7f5b99 std=820b188b55 q=d810f846d6",
       "scale-8 text=48a98db8d4 std=c7005b4712 q=ebe2d4d25c",
-      "angles-8 text=899ecf6fe2 std=535a930a49 q=547f9529ab",
-      "pythagorean-theorem text=014e1086f2 std=c99ed9e47f q=99835d112c",
+      "angles-8 text=899ecf6fe2 std=535a930a49 q=f4e15bb736",
+      "pythagorean-theorem text=014e1086f2 std=c99ed9e47f q=bcc8d87763",
       "measure-8 text=06fddecfd2 std=a0617902c6 q=befeda2a5a",
       "surface-area-volume text=a5298071b5 std=b65dc334dd q=5c73cae8f9",
       "money-8 text=2173e29066 std=84e85d108d q=ceff3908c3"
@@ -935,7 +935,7 @@
       "linear-relations text=d5718915ca std=34c01dc78c q=5737c7d8a8",
       "lines-9 text=a0d34ff620 std=a4f3e7e922 q=952170d895",
       "data-9 text=d107431976 std=427f9aa5d8 q=03d4d4469f",
-      "geometry-9 text=d3083b3128 std=4ca190b7aa q=0d88280b03",
+      "geometry-9 text=d3083b3128 std=4ca190b7aa q=ae0684cada",
       "volume-units-9 text=0c128751c1 std=88d0a10aa7 q=c2cc90ca45",
       "finance-9 text=b21d576f3a std=18cdd30dec q=af7a256378"
     ]

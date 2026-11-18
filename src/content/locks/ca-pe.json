@@ -667,7 +667,7 @@
       "linear-relations text=8a41482ba7 std=012ea6447d q=52c3309ac5",
       "two-step-equations text=ddaa3cce54 std=898dfb4938 q=4d67a1e779",
       "circles text=bf81bcea8c std=42756da892 q=31d74c7b6b",
-      "area-constructions-ab text=8f1ce023d1 std=52bda858ca q=52eb91b8bb",
+      "area-constructions-ab text=8f1ce023d1 std=52bda858ca q=0318953620",
       "mb-7-constructions text=a88c16679e std=44e52bbdb4 q=8b22ca3851",
       "coordinates-transformations text=4061b902e5 std=dd21a614c9 q=56537171c2",
       "central-tendency-ab text=b776821b16 std=dcc3ce59db q=cc21b8662c",
@@ -757,7 +757,7 @@
       "linear-equations text=1e22122340 std=b5384eb7b0 q=4ba669b446",
       "linear-relations-ab text=3ef9188889 std=9769e840ac q=e4d76bdf86",
       "bracket-equations-ab text=d802eb7882 std=83a749eadc q=3719a7ef86",
-      "pythagorean-theorem text=014e1086f2 std=e654c89cdc q=99835d112c",
+      "pythagorean-theorem text=014e1086f2 std=e654c89cdc q=bcc8d87763",
       "nets-views-ab text=6df5a9626c std=bbe48f7ad9 q=27eb75caed",
       "mb-views-8 text=a8a1c5ce3a std=e6d8342a4b q=690b083f51",
       "surface-area-volume text=a5298071b5 std=0e77be2317 q=5c73cae8f9",
@@ -850,9 +850,9 @@
       "linear-relations text=d5718915ca std=0845b544ca q=5737c7d8a8",
       "multi-step-equations text=834b6c0c60 std=b157c918cb q=4823df05ba",
       "polynomials text=608ddf33d1 std=519880cf28 q=3a3e17fe5c",
-      "geometry-9 text=d3083b3128 std=12cf471458 q=0d88280b03",
+      "geometry-9 text=d3083b3128 std=12cf471458 q=ae0684cada",
       "surface-area-ab text=c4da6bfbc4 std=d62ecd3cac q=5db736f014",
-      "similarity-and-scale text=541110d627 std=cb817e0138 q=07a8d2770d"
+      "similarity-and-scale text=541110d627 std=cb817e0138 q=85409fefdf"
     ]
   },
   "9/science": {

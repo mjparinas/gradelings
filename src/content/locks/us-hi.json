@@ -367,7 +367,7 @@
       "wa-g4-line-plots text=ec0f6b9a41 std=4aa0841282 q=87786a4f46",
       "wa-g4-times-as-many text=417e0833be std=405a4ed771 q=42781d57e4",
       "ca-g4-tenths-hundredths text=8f100be049 std=d5fa08b98c q=d496ce3de8",
-      "ca-g4-measure-angles text=8423d9e6ff std=c7179dcde7 q=cf6f715f49"
+      "ca-g4-measure-angles text=8423d9e6ff std=c7179dcde7 q=4454dbc90f"
     ]
   },
   "4/science": {
@@ -685,7 +685,7 @@
       "numbers-8 text=8bc8425026 std=742d25fa81 q=9e9e88cf93",
       "data-8 text=f67cb7cc17 std=f1bb745f88 q=61afebfaea",
       "transformations-8 text=872e7f5b99 std=0c78db4dd0 q=861609ebde",
-      "angles-8 text=899ecf6fe2 std=e4ca50eee5 q=547f9529ab",
+      "angles-8 text=899ecf6fe2 std=e4ca50eee5 q=f4e15bb736",
       "linear-relations-ab text=3ef9188889 std=714a9617ad q=e4d76bdf86",
       "bracket-equations-ab text=d802eb7882 std=c7768975c2 q=3719a7ef86",
       "congruence-ab text=2124f8bea5 std=e8e1954a2e q=03cb70377c",
@@ -696,7 +696,7 @@
       "wa-g8-slope text=5956a66b16 std=9d71605f7e q=2c900999a3",
       "wa-g8-two-way-tables text=cfbbd30e3f std=1378313df2 q=806c0ab1ec",
       "ca-g8-linear-models text=184aa29541 std=8668914dce q=75e8287d42",
-      "wa-g7-angles text=73a7a5215c std=d574bcb9c8 q=b384ae13b6"
+      "wa-g7-angles text=73a7a5215c std=d574bcb9c8 q=1c4acd8aaa"
     ]
   },
   "8/science": {
@@ -777,8 +777,8 @@
       "ca-g9-graphs-in-context text=e2d9e480a6 std=2bd8330660 q=6deb0ccb0c",
       "ca-g9-quadratic-models text=e2431655e9 std=e5147eb960 q=e8e0fc2873",
       "ca-g9-correlation text=ed2bf24b1a std=a0f86c7a69 q=540d564248",
-      "pythagorean-theorem text=014e1086f2 std=8fe05220a0 q=901991b35a",
-      "ca-g8-similar-distance text=dd75991b3f std=0dbf6c22aa q=cf92cd38ac"
+      "pythagorean-theorem text=014e1086f2 std=8fe05220a0 q=37c41fda44",
+      "ca-g8-similar-distance text=dd75991b3f std=0dbf6c22aa q=45852a3e03"
     ]
   },
   "9/science": {

@@ -2,6 +2,7 @@
 // units carry learning-standard text per framework (e.g. "ca-bc"), and the
 // scoring scheme and report-card language live with the framework.
 
+import type { DiagramVisual } from "./diagramTypes";
 import type { Diagram } from "./diagrams/types";
 import type { MapVisual } from "./mapVisual";
 import type { Currency } from "./money";
@@ -74,6 +75,8 @@ export type Visual =
    */
   | { type: "passage"; title?: string; paragraphs: string[] }
   | { type: "tenFrame"; filled: number; extra?: number }
+  /** Geometry figures: crossing lines, angles on a line, triangles, similar figures, regular polygons. */
+  | DiagramVisual
   /** An analog clock. */
   | { type: "clock"; hour: number; minute: number }
   /** A number line; `blankAt` shows a "?" at that value, `jumps` draws hops. */

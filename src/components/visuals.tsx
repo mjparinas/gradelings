@@ -1,6 +1,7 @@
 import { Fragment, type ReactNode } from "react";
 import { coinName, type Currency } from "@/content/money";
 import type { ShapeName, Visual } from "@/content/types";
+import { AngleSplit, FigurePair, LineAngles, RegularPolygon, TriangleFigure } from "./Diagrams";
 import { Compass, MoveDrawing, PlainFigureDrawing, Protractor, Thermometers } from "./figureVisuals";
 import { CircleGraph, LinePlot, PlotGraph, TreeDiagram } from "./graphVisuals";
 import { MapPicture } from "./mapVisuals";
@@ -935,6 +936,16 @@ export function QuestionVisual({ visual }: { visual: Visual }) {
       return <NumberLine {...visual} />;
     case "fraction":
       return <FractionModel numerator={visual.numerator} denominator={visual.denominator} shape={visual.shape} />;
+    case "lineAngles":
+      return <LineAngles {...visual} />;
+    case "angleSplit":
+      return <AngleSplit {...visual} />;
+    case "triangleFigure":
+      return <TriangleFigure {...visual} />;
+    case "figurePair":
+      return <FigurePair {...visual} />;
+    case "polygon":
+      return <RegularPolygon {...visual} />;
     case "array":
       return <ArrayGrid rows={visual.rows} cols={visual.cols} emoji={visual.emoji} />;
     case "letter":

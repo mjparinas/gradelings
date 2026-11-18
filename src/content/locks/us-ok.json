@@ -368,7 +368,7 @@
       "wa-g4-line-plots text=ec0f6b9a41 std=91303165ec q=87786a4f46",
       "wa-g4-times-as-many text=417e0833be std=b3b20d6168 q=42781d57e4",
       "ca-g4-tenths-hundredths text=8f100be049 std=ff17535fdd q=d496ce3de8",
-      "ca-g4-measure-angles text=8423d9e6ff std=9242bac06e q=cf6f715f49"
+      "ca-g4-measure-angles text=8423d9e6ff std=9242bac06e q=4454dbc90f"
     ]
   },
   "4/science": {
@@ -678,7 +678,7 @@
     "units": [
       "squares-and-roots text=0c3411fb05 std=b3ca587417 q=44906b78d6",
       "linear-equations text=1e22122340 std=994ff23603 q=4ba669b446",
-      "pythagorean-theorem text=014e1086f2 std=c3befa3c8a q=99835d112c",
+      "pythagorean-theorem text=014e1086f2 std=c3befa3c8a q=bcc8d87763",
       "numbers-8 text=8bc8425026 std=1e7415a25c q=9e9e88cf93",
       "data-8 text=f67cb7cc17 std=0fda318e49 q=61afebfaea",
       "linear-relations-ab text=3ef9188889 std=eb2d71cf1a q=e4d76bdf86",

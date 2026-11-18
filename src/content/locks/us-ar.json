@@ -589,7 +589,7 @@
       "data-7 text=89d3646ea8 std=67c9d0d966 q=1966996f9f",
       "wa-g7-signed-multiply text=61c895d791 std=de3907f5ec q=d7c2440ec8",
       "wa-g7-proportional text=c11cf565b3 std=87b45da22e q=f13197f7aa",
-      "wa-g7-angles text=73a7a5215c std=f314babbf6 q=b384ae13b6",
+      "wa-g7-angles text=73a7a5215c std=f314babbf6 q=1c4acd8aaa",
       "wa-g7-sampling text=194eb9c3c2 std=c164597884 q=d8e6ffaf2a",
       "wa-g7-scale-drawings text=44f1660d4b std=b1d0d4cfad q=480f217aff"
     ]
@@ -660,7 +660,7 @@
     "units": [
       "squares-and-roots text=0c3411fb05 std=f0a78b4608 q=44906b78d6",
       "linear-equations text=1e22122340 std=b6bfd17f0e q=4ba669b446",
-      "pythagorean-theorem text=014e1086f2 std=8c84802a1a q=99835d112c",
+      "pythagorean-theorem text=014e1086f2 std=8c84802a1a q=bcc8d87763",
       "surface-area-volume text=96a6eb6597 std=16b3457d3f q=79cdef4798",
       "numbers-8 text=8bc8425026 std=3b39e1856a q=9e9e88cf93",
       "data-8 text=f67cb7cc17 std=1cd31d3df1 q=61afebfaea",

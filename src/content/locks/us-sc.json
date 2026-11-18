@@ -592,7 +592,7 @@
       "algebra-7 text=b1ecf615eb std=508b779dc1 q=775245a3a8",
       "wa-g7-signed-multiply text=61c895d791 std=8afe254cc0 q=d7c2440ec8",
       "wa-g7-proportional text=c11cf565b3 std=a66efb88ce q=f13197f7aa",
-      "wa-g7-angles text=73a7a5215c std=0a752f2815 q=b384ae13b6",
+      "wa-g7-angles text=73a7a5215c std=0a752f2815 q=1c4acd8aaa",
       "wa-g7-scale-drawings text=44f1660d4b std=e644671d2e q=480f217aff"
     ]
   },
@@ -661,7 +661,7 @@
     "units": [
       "squares-and-roots text=0c3411fb05 std=c5c027916b q=44906b78d6",
       "linear-equations text=1e22122340 std=48c96b4258 q=4ba669b446",
-      "pythagorean-theorem text=014e1086f2 std=b2a4cda1c0 q=99835d112c",
+      "pythagorean-theorem text=014e1086f2 std=b2a4cda1c0 q=bcc8d87763",
       "surface-area-volume text=96a6eb6597 std=3ecda50e4a q=79cdef4798",
       "numbers-8 text=8bc8425026 std=80aa1fd301 q=9e9e88cf93",
       "data-8 text=f67cb7cc17 std=c523ba7fe3 q=61afebfaea",
