@@ -450,7 +450,7 @@
     "units": [
       "nu-midnight-sun-5 text=f499d32818 std=54a7ce3747 q=78c051be84",
       "mb-matter-changes-5 text=093f3bd91e std=8105165d8a q=362986c134",
-      "mb-cells-5 text=f034106d42 std=ab0c23c6eb q=c83c444c93",
+      "mb-cells-5 text=f034106d42 std=ab0c23c6eb q=bc4f5c2480",
       "digestion-and-breathing text=bed5d3e98c std=ab59a00262 q=54a0769e97",
       "heart-bones-muscles text=f69ade8e4b std=9d7c2dc751 q=ba4397e8f6",
       "mb-friction-5 text=4b0e2e03e9 std=91a6f8e360 q=4931ca8854",
@@ -538,9 +538,9 @@
       "mb-buoyancy text=f72525f4f1 std=a3a2e9600c q=4e81e75469",
       "flight-6 text=11653360ba std=9c3706b3db q=6c940cc325",
       "mb-stored-energy text=964087dd5f std=dff7c803b4 q=c71f816ca3",
-      "circuits-6 text=27c1c49ae7 std=07e5ed0afd q=075569a1ba",
+      "circuits-6 text=27c1c49ae7 std=07e5ed0afd q=b13f95ae26",
       "mb-electrical-safety text=136826cc4f std=8a4c4a6046 q=043d4fa86f",
-      "earth-moon-sun-6 text=c2c46cb4eb std=c33924bb9a q=cdd9a703f4",
+      "earth-moon-sun-6 text=c2c46cb4eb std=c33924bb9a q=e8ec6a4bf9",
       "mb-heredity-and-fossils text=c4bf10e43b std=37a25b8a6a q=5d60368acb",
       "classifying-life-6 text=f18d17f8bb std=81613a30b6 q=c30b8171b9",
       "mb-species-and-hybrids text=0c3da1b7db std=1050e4c914 q=3f87d3e3ab"
@@ -713,7 +713,7 @@
       "density-buoyancy-8 text=44abadf5f7 std=5a48debbdd q=e8b7d870a3",
       "pressure-pascal-8 text=61b1e34882 std=cb8aeb9b6d q=bbd1e7ea70",
       "hydraulics-pneumatics-8 text=fff24439f8 std=a2f960b58b q=aa7591aa2a",
-      "cells-and-life text=26001b2c5a std=f74ff7c92d q=27792065ca",
+      "cells-and-life text=26001b2c5a std=f74ff7c92d q=b0668a2287",
       "cells-diffusion-ab text=caaea79aff std=f7cabb668d q=650ba01e94",
       "systems-8 text=44122ab3da std=0d046d4b65 q=c8b9f9ac62",
       "body-systems-ab text=8cf77e1157 std=6872ffbb96 q=75913631d5",
@@ -800,7 +800,7 @@
       "chemical-change-ab text=1ca1c45de5 std=2bd3184420 q=7a00ce3609",
       "environmental-chemistry-ab text=439190f7df std=222a08953e q=6313c133fe",
       "static-charges-9 text=9a9172f3c2 std=bcf2536ba4 q=20a1a92678",
-      "circuits-9 text=0dda7abf25 std=40285dd9b0 q=1788d5792b",
+      "circuits-9 text=0dda7abf25 std=40285dd9b0 q=bf08183eb5",
       "electrical-energy-9 text=eecdad56b2 std=94657538a8 q=7309de70ac",
       "space-exploration-ab text=08c6f716e8 std=dbd56570f2 q=7f91fc8e49"
     ]

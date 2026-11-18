@@ -351,7 +351,7 @@
       "phase-changes text=9e96653308 std=8eaa1c11a3 q=447894da3c",
       "particles-and-mass text=b7a56fdf7c std=1cbf0b0b8e q=74dacf9cd0",
       "energy-changes text=2bb495aca2 std=cf1ac5ca99 q=637b4e4460",
-      "earth-and-moon text=6837c81893 std=160b876c3e q=18be2a02be"
+      "earth-and-moon text=6837c81893 std=160b876c3e q=f444934acf"
     ]
   },
   "4/social": {
@@ -618,7 +618,7 @@
     "units": [
       "natural-selection text=516fbb1811 std=831c0f0785 q=beaf3b1417",
       "atoms-and-elements text=7c83b3e634 std=217abb133b q=00783af555",
-      "circuits-and-static text=b28ece42b0 std=121d9ceb63 q=b84f825935",
+      "circuits-and-static text=b28ece42b0 std=121d9ceb63 q=a01cfadf82",
       "magnets-and-motors text=3fa65cfc41 std=ea29bd5e07 q=d74ab5996f",
       "restless-earth text=eacf7084dc std=b2d2885d2a q=ce71954c06",
       "changing-climate text=19accd6e97 std=ee882c6e34 q=1b405fed91"
@@ -701,7 +701,7 @@
   "8/science": {
     "overview": "88834265b7",
     "units": [
-      "cells-and-life text=26001b2c5a std=749188d278 q=27792065ca",
+      "cells-and-life text=26001b2c5a std=749188d278 q=b0668a2287",
       "microbes-and-immunity text=32d95f5719 std=64bd981bab q=0df44d1c56",
       "particles-and-matter text=b03be68ce0 std=92e67df3e4 q=2a50bf2bae",
       "light-and-radiation text=29b61253cf std=5a8e248f11 q=6d059d1d2d",
@@ -790,7 +790,7 @@
       "reproduction text=d702789bd4 std=373c2a2aeb q=c9637838d5",
       "atoms-and-electrons text=5dc2e26422 std=a527ea9a78 q=157481b107",
       "bonding-and-reactions text=8a0ea04bc7 std=85ce2722db q=05ec43f844",
-      "electric-current text=2c145f84d8 std=d788d90110 q=7692c8ff45",
+      "electric-current text=2c145f84d8 std=d788d90110 q=5b1b6f1973",
       "ecosystems text=6e11cab288 std=8fcbd39f11 q=135b633d91"
     ]
   },

@@ -287,7 +287,7 @@ export function diagramFor(prompt: string): Visual | undefined {
 const drawn = new WeakSet<Unit["generate"]>();
 
 /** Adds a drawing to every question of a Grade 3 to 9 math unit that describes a figure and has no picture yet. */
-export function withDiagrams(courses: Course[]): Course[] {
+export function withGeometryDiagrams(courses: Course[]): Course[] {
   return courses.map((c) => {
     if (c.subject !== "math" || !["3", "4", "5", "6", "7", "8", "9"].includes(c.grade)) return c;
     return {

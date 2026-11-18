@@ -481,9 +481,9 @@
       "classifying-life-6 text=f18d17f8bb std=089687eb40 q=c30b8171b9",
       "biodiversity-6 text=f70b649728 std=b7b3236417 q=91b5216610",
       "static-electricity-6 text=ec58626304 std=d93f382ad9 q=79cb8b85db",
-      "circuits-6 text=27c1c49ae7 std=bfbc7953a2 q=075569a1ba",
+      "circuits-6 text=27c1c49ae7 std=bfbc7953a2 q=b13f95ae26",
       "flight-6 text=11653360ba std=d14cdca6af q=6c940cc325",
-      "earth-moon-sun-6 text=c2c46cb4eb std=47d8783521 q=cdd9a703f4",
+      "earth-moon-sun-6 text=c2c46cb4eb std=47d8783521 q=e8ec6a4bf9",
       "weight-and-space-tech-6 text=b331f772e6 std=b1c1c656c9 q=8a90828d65"
     ]
   },
@@ -638,7 +638,7 @@
   "8/science": {
     "overview": "bd874e932d",
     "units": [
-      "cells-and-life text=26001b2c5a std=ad540df8e4 q=27792065ca",
+      "cells-and-life text=26001b2c5a std=ad540df8e4 q=b0668a2287",
       "particles-and-matter text=b03be68ce0 std=df21468051 q=2a50bf2bae",
       "viscosity-flow-8 text=309af1469c std=c34a0f03c7 q=7c31cccec1",
       "density-buoyancy-8 text=44abadf5f7 std=ff8301006f q=e8b7d870a3",
@@ -717,12 +717,12 @@
       "cells-from-cells text=bf9b3d6d2e std=f76daa08aa q=d8fef1a729",
       "reproduction text=d702789bd4 std=96b7361b3e q=c9637838d5",
       "atoms-and-electrons text=5dc2e26422 std=df3b784b47 q=157481b107",
-      "electric-current text=2c145f84d8 std=e789108936 q=7692c8ff45",
+      "electric-current text=2c145f84d8 std=e789108936 q=5b1b6f1973",
       "atoms-9 text=0fd6c7ecf2 std=be906f7491 q=5412669a33",
       "periodic-table-9 text=d006b85cec std=f263a183cf q=0f98494808",
       "compounds-9 text=e809c7578c std=12a06912d9 q=799a9bf54a",
       "static-charges-9 text=9a9172f3c2 std=bdc2062962 q=20a1a92678",
-      "circuits-9 text=0dda7abf25 std=8aa147c64f q=1788d5792b",
+      "circuits-9 text=0dda7abf25 std=8aa147c64f q=bf08183eb5",
       "electrical-energy-9 text=eecdad56b2 std=cddfd251c2 q=7309de70ac",
       "space-exploration-ab text=08c6f716e8 std=636971f7da q=7f91fc8e49"
     ]

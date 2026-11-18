@@ -633,8 +633,8 @@
   "7/science": {
     "overview": "b6c086613a",
     "units": [
-      "wa-g6-cells text=fa8ea2c4ff std=9ce802b551 q=23e69bce93",
-      "cells-and-life text=26001b2c5a std=785cff1bc1 q=fcae7914fa",
+      "wa-g6-cells text=fa8ea2c4ff std=9ce802b551 q=0b5f935db7",
+      "cells-and-life text=26001b2c5a std=785cff1bc1 q=a094ada7e9",
       "cells-diffusion-ab text=caaea79aff std=1b4623fa7b q=650ba01e94",
       "photosynthesis-respiration-9 text=aa7d1dc3bb std=15733d82f4 q=a8703c2a22",
       "cells-from-cells text=bf9b3d6d2e std=d4c720934a q=17bf1b2a92",
@@ -735,7 +735,7 @@
       "wa-g8-fields text=8fbd720783 std=99e569e5c1 q=603f693f54",
       "wa-g8-energy text=b848db1d45 std=fbc7a419e2 q=cdf3dadeb8",
       "work-energy-8 text=d9f28a6b8f std=2efe171ed4 q=db86881bac",
-      "circuits-and-static text=b28ece42b0 std=3e0697431c q=b84f825935",
+      "circuits-and-static text=b28ece42b0 std=3e0697431c q=a01cfadf82",
       "light-and-radiation text=9e640798cf std=373ce96909 q=9cc1a70761",
       "tx-g6-energy-waves text=be0596c737 std=988149b18f q=a05cbb60ba"
     ]

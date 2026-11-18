@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { COURSES } from "./all";
-import { anglesFromSides, diagramFor } from "./diagrams";
+import { anglesFromSides, diagramFor } from "./geometryDiagrams";
 import type { Question, Visual } from "./types";
 
 const GEOMETRY = ["lineAngles", "angleSplit", "triangleFigure", "figurePair", "polygon"];

@@ -1,6 +1,6 @@
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
-import { diagramFor } from "@/content/diagrams";
+import { diagramFor } from "@/content/geometryDiagrams";
 import { QuestionVisual } from "./visuals";
 
 const PROMPTS = [
