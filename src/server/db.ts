@@ -471,6 +471,23 @@ const SCHEMA = [
     created_at INTEGER
   )`,
   `CREATE INDEX IF NOT EXISTS unsub_tokens_parent ON unsub_tokens (parent_id)`,
+  // Devices that agreed to notifications (Web Push). One row per browser endpoint; `kind` says who it is for: the parent
+  // (a parent's own device) or one child (`profile_id`, switched on by a parent). Only the push address and its keys are
+  // kept, never the child's practice. A dead endpoint (the browser says it is gone) is deleted when a send fails, and
+  // rows go with the family. `last_day` is the last UTC day a notification was sent, so no device gets two in a day.
+  `CREATE TABLE IF NOT EXISTS push_devices (
+    endpoint_hash TEXT PRIMARY KEY,
+    family_id TEXT NOT NULL,
+    parent_id TEXT NOT NULL,
+    kind TEXT NOT NULL,
+    profile_id TEXT,
+    endpoint TEXT NOT NULL,
+    p256dh TEXT NOT NULL,
+    auth TEXT NOT NULL,
+    created_at INTEGER NOT NULL,
+    last_day TEXT
+  )`,
+  `CREATE INDEX IF NOT EXISTS push_devices_family ON push_devices (family_id)`,
   // A family owner's invitation to a second adult. Only the SHA-256 of the token is kept; the invitation names an email, expires and is used once.
   `CREATE TABLE IF NOT EXISTS family_invites (
     token_hash TEXT PRIMARY KEY,
