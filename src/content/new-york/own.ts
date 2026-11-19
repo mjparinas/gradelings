@@ -1,6 +1,6 @@
 import { fromBank, type BankItem } from "../bank";
 import { sample } from "../random";
-import type { GenerateOptions, Question, Unit } from "../types";
+import type { GenerateOptions, Question, Unit, Visual } from "../types";
 import { nys } from "./cite";
 
 // Units written for New York from hand-written multiple-choice banks. The same bank feeds every difficulty: easy
@@ -14,6 +14,8 @@ export type Q = readonly [
   wrong: string[],
   hint: string,
   hard?: true,
+  /** A picture drawn from the numbers in the prompt. */
+  visual?: Visual,
 ];
 
 interface Spec {
@@ -29,11 +31,12 @@ interface Spec {
   size?: number;
 }
 
-const toBank = ([prompt, right, wrong, hint]: Q): BankItem => ({
+const toBank = ([prompt, right, wrong, hint, , visual]: Q): BankItem => ({
   prompt,
   right,
   wrong,
   hint,
+  visual,
 });
 
 export function bankUnit(spec: Spec): Unit {

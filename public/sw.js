@@ -190,3 +190,33 @@ self.addEventListener("fetch", (event) => {
       .catch(() => saved().then((hit) => hit || Response.error())),
   );
 });
+
+// Notifications (src/server/push.ts): a short sentence and a link, sent by the daily job to devices a parent switched on.
+// The message may also carry a number for the app icon; the app itself keeps it in step while it is open (AppBadge).
+self.addEventListener("push", (event) => {
+  let m = {};
+  try {
+    m = event.data ? event.data.json() : {};
+  } catch {
+    m = {};
+  }
+  if (!m.title) return;
+  event.waitUntil(
+    Promise.all([
+      self.registration.showNotification(m.title, { body: m.body || "", tag: m.tag || "gradelings", icon: "/icon-192.png", badge: "/icon-192.png", data: { url: typeof m.url === "string" && m.url.startsWith("/") ? m.url : "/play/" } }),
+      typeof m.badge === "number" && self.navigator.setAppBadge ? (m.badge > 0 ? self.navigator.setAppBadge(m.badge) : self.navigator.clearAppBadge()).catch(() => undefined) : undefined,
+    ]),
+  );
+});
+
+self.addEventListener("notificationclick", (event) => {
+  event.notification.close();
+  const url = (event.notification.data && event.notification.data.url) || "/play/";
+  event.waitUntil(
+    self.clients.matchAll({ type: "window", includeUncontrolled: true }).then((all) => {
+      const open = all.find((c) => new URL(c.url).pathname === new URL(url, self.location.origin).pathname);
+      if (open && "focus" in open) return open.focus();
+      return self.clients.openWindow(url);
+    }),
+  );
+});

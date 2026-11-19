@@ -1,4 +1,6 @@
+import { solid } from "../../solids";
 import { chance, pick, randInt, sample, shuffle, textChoice } from "../../random";
+import { thermometer } from "../../figureDrawings";
 import type { ChoiceQuestion, Course, GenerateOptions, InputQuestion, Question, Visual } from "../../types";
 
 // Grade 7 maths for the "big" age band: direct prompts, real-world contexts and
@@ -287,7 +289,8 @@ function integerAddSub(opts?: GenerateOptions): Question[] {
   {
     const t0 = d === 3 ? signed(1, 15) : -randInt(2, d === 1 ? 10 : 20);
     const rise = randInt(3, d === 1 ? 15 : 25);
-    const visual: Visual = { type: "emoji", emoji: "🌡️", caption: `${t0}°C` };
+    // The scale has room for where the temperature goes, but only the starting temperature is shown.
+    const visual: Visual = { ...thermometer(t0, t0 + rise, t0 + rise - 30), values: [t0] } as Visual;
     if (d < 3) {
       const t1 = t0 + rise;
       qs.push(
@@ -2614,7 +2617,7 @@ function volume(opts?: GenerateOptions): Question[] {
         fmt(V),
         `V = l × w × h = ${fmt(l)} × ${w} × ${h} = ${fmt(l * w)} × ${h} = ${fmt(V)} ${u}³.`,
         "decimal",
-        { suffix: `${u}³`, visual: { type: "shape", shape: "rectangular-prism" } },
+        { suffix: `${u}³`, visual: solid("box", { length: `${fmt(l)} ${u}`, width: `${w} ${u}`, height: `${h} ${u}` }) },
       ),
     );
   }
@@ -2628,7 +2631,7 @@ function volume(opts?: GenerateOptions): Question[] {
         e ** 3,
         [e * e, 6 * e * e, 12 * e, 3 * e],
         `All three dimensions are ${e} cm: V = ${e} × ${e} × ${e} = ${e ** 3} cm³. (${e * e} is the area of one face.)`,
-        { type: "shape", shape: "cube" },
+        solid("cube", { edge: e }),
         { unit: " cm³", min: 1 },
       ),
     );
@@ -2657,7 +2660,7 @@ function volume(opts?: GenerateOptions): Question[] {
         p.answer,
         `${d === 3 ? `Radius = ${2 * r} ÷ 2 = ${r} cm. ` : ""}V = π × r × r × h ≈ 3.14 × ${r} × ${r} × ${h} = 3.14 × ${r * r * h} = ${fmt(p.exact)}. Rounded: ${p.answer} cm³.`,
         "decimal",
-        { accept: p.accept, suffix: "cm³", visual: { type: "shape", shape: "cylinder" } },
+        { accept: p.accept, suffix: "cm³", visual: solid("cylinder", d === 3 ? { diameter: 2 * r, height: h } : { radius: r, height: h }) },
       ),
     );
   }
@@ -2674,7 +2677,7 @@ function volume(opts?: GenerateOptions): Question[] {
         fmt(h),
         `V = l × w × h, so ${V} = ${l} × ${w} × h = ${l * w} × h. Divide: h = ${V} ÷ ${l * w} = ${h} cm.`,
         "decimal",
-        { suffix: "cm", visual: { type: "shape", shape: "rectangular-prism" } },
+        { suffix: "cm", visual: solid("box", { length: l, width: w, height: "?" }) },
       ),
     );
   } else {
@@ -2688,7 +2691,7 @@ function volume(opts?: GenerateOptions): Question[] {
         fmt(h),
         `V = base area × height, so h = V ÷ base area = ${fmt(V)} ÷ ${fmt(B)} = ${h} cm.`,
         "decimal",
-        { suffix: "cm", visual: { type: "shape", shape: "cylinder" } },
+        { suffix: "cm", visual: solid("cylinder", { height: "?" }) },
       ),
     );
   }
@@ -2703,7 +2706,7 @@ function volume(opts?: GenerateOptions): Question[] {
         B * h,
         [B + h, 2 * B * h, B * h * 10],
         `Volume = base area × height = ${B} × ${h} = ${B * h} cm³.`,
-        { type: "shape", shape: "rectangular-prism" },
+        solid("box", { height: h }),
         { unit: " cm³", min: 1 },
       ),
     );
@@ -2718,7 +2721,7 @@ function volume(opts?: GenerateOptions): Question[] {
         V,
         [B + h, roundTo(V * 3.14, 2), V / 2],
         `Volume = base area × height = ${fmt(B)} × ${h} = ${fmt(V)} cm³. The base area already includes π, so don't multiply by 3.14 again.`,
-        { type: "shape", shape: "cylinder" },
+        solid("cylinder", { height: h }),
         { unit: " cm³", min: 1, step: 3.14 },
       ),
     );
@@ -2784,7 +2787,7 @@ function volume(opts?: GenerateOptions): Question[] {
         fmt(V / 1000),
         `Volume: ${l} × ${w} × ${h} = ${V} cm³. Divide by 1000 to change to litres: ${fmt(V / 1000)} L.`,
         "decimal",
-        { suffix: "L", visual: { type: "shape", shape: "rectangular-prism" } },
+        { suffix: "L", visual: solid("box", { length: l, width: w, height: h }) },
       ),
     );
   } else {
@@ -2797,7 +2800,7 @@ function volume(opts?: GenerateOptions): Question[] {
         p.answer,
         `V = 3.14 × ${r} × ${r} × ${h} = ${fmt((314 * r * r * h) / 100)} cm³. Divide by 1000: ${fmt(p.exact)} L, or about ${p.answer} L.`,
         "decimal",
-        { accept: p.accept, suffix: "L", visual: { type: "shape", shape: "cylinder" } },
+        { accept: p.accept, suffix: "L", visual: solid("cylinder", { radius: r, height: h }) },
       ),
     );
   }
@@ -2825,6 +2828,15 @@ function splitPercents(unit: number): number[] {
     if (new Set(parts).size === 4) return parts;
   }
   return shuffle([10, 20, 30, 40]);
+}
+
+/** A circle graph drawn from a survey's percents (or angles). A `blank` sector shows "?" at its true size. */
+function surveyGraph(title: string, cats: string[], pcts: number[], blank = -1, unit: "%" | "°" = "%"): Visual {
+  return {
+    type: "circleGraph",
+    title,
+    sectors: cats.map((c, i) => ({ label: c, value: pcts[i], show: i === blank ? "?" : `${fmt(unit === "%" ? pcts[i] : (pcts[i] * 360) / 100)}${unit}` })),
+  };
 }
 
 const CIRCLE_GRAPH_CONCEPTS: Concept[] = [
@@ -2875,7 +2887,7 @@ function circleGraphs(opts?: GenerateOptions): Question[] {
     const s = pick(SURVEYS);
     const pcts = splitPercents(unit);
     const N = d === 1 ? pick([100, 200]) : 20 * randInt(d === 2 ? 2 : 3, d === 2 ? 15 : 20);
-    const table: Visual = { type: "table", title: `${s.title} (${N} students)`, headers: ["Choice", "Percent"], rows: s.cats.map((c, i) => [c, `${pcts[i]}%`]) };
+    const table: Visual = surveyGraph(`${s.title} (${N} students)`, s.cats, pcts);
     if (d < 3) {
       const i = randInt(0, 3);
       const n = (N * pcts[i]) / 100;
@@ -2945,7 +2957,7 @@ function circleGraphs(opts?: GenerateOptions): Question[] {
           fmt(pcts[blank]),
           `All the sectors add up to 100%. ${known.join(" + ")} = ${known.reduce((a, b) => a + b, 0)}, and 100 − ${known.reduce((a, b) => a + b, 0)} = ${pcts[blank]}%.`,
           "decimal",
-          { suffix: "%", visual: { type: "table", title: s.title, headers: ["Choice", "Percent"], rows: s.cats.map((c, i) => [c, i === blank ? "?" : `${pcts[i]}%`]) } },
+          { suffix: "%", visual: surveyGraph(s.title, s.cats, pcts, blank) },
         ),
       );
     } else {
@@ -2958,7 +2970,7 @@ function circleGraphs(opts?: GenerateOptions): Question[] {
           fmt(degs[blank]),
           `All the sectors make a full turn of 360°. ${known.join(" + ")} = ${sum}, and 360 − ${sum} = ${degs[blank]}°.`,
           "decimal",
-          { suffix: "°", visual: { type: "table", title: s.title, headers: ["Choice", "Angle"], rows: s.cats.map((c, i) => [c, i === blank ? "?" : `${degs[i]}°`]) } },
+          { suffix: "°", visual: surveyGraph(s.title, s.cats, pcts, blank, "°") },
         ),
       );
     }
@@ -3015,7 +3027,7 @@ function circleGraphs(opts?: GenerateOptions): Question[] {
         fmt(diff),
         `${s.cats[i]}: ${pcts[i]}% of ${N} = ${(N * pcts[i]) / 100}. ${s.cats[j]}: ${pcts[j]}% of ${N} = ${(N * pcts[j]) / 100}. Difference: ${fmt(diff)}. (Or ${pcts[i] - pcts[j]}% of ${N}.)`,
         "integer",
-        { visual: { type: "table", title: s.title, headers: ["Choice", "Percent"], rows: s.cats.map((c, k) => [c, `${pcts[k]}%`]) } },
+        { visual: surveyGraph(s.title, s.cats, pcts) },
       ),
     );
   }

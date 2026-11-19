@@ -165,7 +165,7 @@
       "my-community text=f4b6495f7a std=6b25f61bbb q=e0548ab0f6",
       "respect-and-inclusion text=2f7448bf67 std=62e693d29f q=2bd238d5a9",
       "my-roles text=6c48ae23b8 std=ad7cd92430 q=f34e0b2c23",
-      "maps text=0393b6b3b0 std=14ab9cb46a q=671d944151",
+      "maps text=0393b6b3b0 std=14ab9cb46a q=bb8e729a47",
       "our-land text=9250f303b3 std=61759cca24 q=c1704cb4f1",
       "pe-needs-and-wants-1 text=feb7f0d4f1 std=97091a1fba q=ab4a4e507f",
       "pe-goods-and-services-1 text=55be22b8f4 std=19ec99122c q=43e8316788",
@@ -404,7 +404,7 @@
       "wa-g5-coordinates text=1aa95047d3 std=2de8c03854 q=d163d8de21",
       "wa-g5-fraction-multiply text=abe32d522c std=75b13e921d q=6bb8746fbb",
       "wa-g5-add-unlike text=d91aaa636d std=2543096966 q=0e37f49389",
-      "wa-g5-volume text=499dc41e93 std=c9f2d3192a q=f26aa622a4"
+      "wa-g5-volume text=499dc41e93 std=c9f2d3192a q=da1550d472"
     ]
   },
   "5/science": {
@@ -419,7 +419,7 @@
       "wa-g5-energy-food text=7248a5bf2e std=961a9db673 q=2c5e9d47f6",
       "mb-energy-senses text=148b39e511 std=cc878d2176 q=57e3d027d5",
       "wa-g4-energy-motion text=b3e9a355c7 std=5736c12fb2 q=1c3f0bf823",
-      "mn-g5-sun-stars text=b0f14bef40 std=ec87c4f7cb q=4d3e275e49"
+      "mn-g5-sun-stars text=b0f14bef40 std=ec87c4f7cb q=e2d7156dfa"
     ]
   },
   "5/social": {
@@ -472,7 +472,7 @@
       "patterns-and-graphs text=dab33ccdd4 std=96a68dab42 q=dfa60e317e",
       "equations text=5c61d003c6 std=27bb30f463 q=16e4656f8c",
       "perimeter-and-area text=44afdbe788 std=5633afa470 q=a0bb87355d",
-      "volume-and-capacity text=5ad359431d std=c1e0692ed9 q=fa063e47a1",
+      "volume-and-capacity text=5ad359431d std=c1e0692ed9 q=fbbcd2e637",
       "probability text=fcd0522d2d std=39abfeeef4 q=b39d76b364",
       "numbers-6 text=54d144b67b std=52f0ca224d q=e4fdd9f708",
       "algebra-6 text=b1dfde1d22 std=bc3ba9ab5f q=abb19f6abc",
@@ -481,7 +481,7 @@
       "wa-g6-fraction-division text=000030a9c8 std=e58bd0534d q=f29cd90cb8",
       "wa-g6-coordinate-plane text=6658bd067b std=1a191bf658 q=05cf05b0ca",
       "wa-g6-unit-rates text=eea140f4d3 std=715ae91ebf q=29c0e209cc",
-      "wa-g6-nets text=5dc42bacee std=a8c37acc9f q=1ee1097036"
+      "wa-g6-nets text=5dc42bacee std=a8c37acc9f q=39682e1764"
     ]
   },
   "6/science": {
@@ -540,7 +540,7 @@
   "7/math": {
     "overview": "a9088fb66f",
     "units": [
-      "integer-add-subtract text=0f49d1bba6 std=ebecdcfab6 q=1e24134b03",
+      "integer-add-subtract text=0f49d1bba6 std=ebecdcfab6 q=ecc058d9c0",
       "decimal-operations text=56ab979d6a std=c9b434f2db q=7f89d319c6",
       "fractions-decimals-percents text=12d27e2a2e std=7cc1b1f5b1 q=1030c5dd8d",
       "two-step-equations text=ddaa3cce54 std=2c567cf960 q=4d67a1e779",
@@ -561,8 +561,8 @@
     "overview": "712c406b34",
     "units": [
       "natural-selection text=534167e666 std=45f81a0dd7 q=b21ab79763",
-      "wa-g6-cells text=fa8ea2c4ff std=546f397d62 q=23e69bce93",
-      "cells-and-life text=26001b2c5a std=bc7e663bc3 q=fcae7914fa",
+      "wa-g6-cells text=fa8ea2c4ff std=546f397d62 q=0b5f935db7",
+      "cells-and-life text=26001b2c5a std=bc7e663bc3 q=a094ada7e9",
       "body-systems text=982982e155 std=8abe363934 q=aa5f3b59c6",
       "plant-parts-ab text=394b7ee530 std=aea076d85a q=8526f00423",
       "ecosystems-7 text=7f94e0036b std=f0e39ec646 q=041251a723",
@@ -619,15 +619,15 @@
     "units": [
       "squares-and-roots text=0c3411fb05 std=a4a1f32cbe q=44906b78d6",
       "linear-equations text=1e22122340 std=574d0bc75e q=4ba669b446",
-      "pythagorean-theorem text=014e1086f2 std=2814c0f2ef q=99835d112c",
+      "pythagorean-theorem text=014e1086f2 std=2814c0f2ef q=bcc8d87763",
       "numbers-8 text=8bc8425026 std=60743a04e9 q=9e9e88cf93",
       "data-8 text=f67cb7cc17 std=9621ed6718 q=61afebfaea",
-      "linear-relations-ab text=3ef9188889 std=d1773b8e16 q=8f11287d9e",
+      "linear-relations-ab text=3ef9188889 std=d1773b8e16 q=e4d76bdf86",
       "bracket-equations-ab text=d802eb7882 std=dea7baba08 q=3719a7ef86",
       "wa-g8-exponent-rules text=c6ea891ad5 std=8ede6bea31 q=e041bd810e",
-      "wa-g8-systems text=b290721dd7 std=587392113f q=b5967231f6",
+      "wa-g8-systems text=b290721dd7 std=587392113f q=2a17ebc3b0",
       "wa-g8-functions text=906e422768 std=2e7fb34ab4 q=b704358710",
-      "wa-g8-slope text=5956a66b16 std=68cf77d0b9 q=c9e5f2a915"
+      "wa-g8-slope text=5956a66b16 std=68cf77d0b9 q=2c900999a3"
     ]
   },
   "8/science": {
@@ -636,7 +636,7 @@
       "particles-and-matter text=5f907e8fe3 std=06b38d35bc q=0be7609581",
       "light-and-radiation text=9e640798cf std=5e00e92c32 q=9cc1a70761",
       "atoms-and-elements text=7c83b3e634 std=4ff2eb1fd3 q=7e2eecbebf",
-      "circuits-and-static text=b28ece42b0 std=b96fd8241f q=b84f825935",
+      "circuits-and-static text=b28ece42b0 std=b96fd8241f q=a01cfadf82",
       "wa-g8-fields text=8fbd720783 std=b5a194f160 q=603f693f54",
       "newtons-laws text=82d3736748 std=bef0b86ea5 q=de7396dbf8",
       "nb-motion-forces-8 text=a3e4ee29f0 std=6e7f4191d1 q=4f1a481301",
@@ -690,7 +690,7 @@
       "exponent-laws text=14558089af std=18a645cd33 q=8fb7aa1d0b",
       "polynomials text=608ddf33d1 std=aa0a2e38f2 q=3a3e17fe5c",
       "multi-step-equations text=834b6c0c60 std=93e01fc824 q=4823df05ba",
-      "linear-relations text=d5718915ca std=b819f86394 q=1e254a9707",
+      "linear-relations text=d5718915ca std=b819f86394 q=5737c7d8a8",
       "statistics-in-society text=9e4081b498 std=9d45f38c2a q=bae78cb576",
       "number-sets-9 text=2e841b16e4 std=c44bf1a887 q=0bb5534a95",
       "expressions-9 text=c4cbafb40c std=d731838bc9 q=a48fbbb76c",
@@ -698,7 +698,7 @@
       "data-9 text=d107431976 std=056d643eba q=03d4d4469f",
       "wa-g9-functions text=9916295729 std=d9e1bc5e8d q=690ab442e5",
       "wa-g9-inequalities text=838f8a24f5 std=2ac52d64e4 q=e5b15cfeeb",
-      "wa-g9-systems text=af9fd1b6dc std=e5c5a1b10f q=abb4800646",
+      "wa-g9-systems text=af9fd1b6dc std=e5c5a1b10f q=a14aeddb37",
       "wa-g9-exponential text=500137f8a0 std=daf1ef5c66 q=5f897e7b41",
       "wa-g9-quadratics text=9f8fc6709d std=8333c18622 q=d3022a54a4",
       "wa-g9-formulas text=eef04c92bf std=c1d44e098d q=56c094d4f8",
@@ -713,7 +713,7 @@
       "reproduction text=d702789bd4 std=794efd12b3 q=c9637838d5",
       "atoms-and-electrons text=5dc2e26422 std=26c5edb36b q=77c28ee671",
       "bonding-and-reactions text=8a0ea04bc7 std=1e7c947461 q=05ec43f844",
-      "electric-current text=2c145f84d8 std=e6d33f19e3 q=7692c8ff45",
+      "electric-current text=2c145f84d8 std=e6d33f19e3 q=5b1b6f1973",
       "photosynthesis-respiration-9 text=aa7d1dc3bb std=4f37b7130a q=a8703c2a22",
       "mb-evolution-and-selection text=ad74bb913c std=7b580891ce q=2382318afc"
     ]

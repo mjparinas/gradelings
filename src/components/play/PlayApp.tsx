@@ -5,6 +5,7 @@ import { VoicePreload } from "@/components/VoicePreload";
 import { WhisperPreload } from "@/components/WhisperPreload";
 import { StorageFullNotice } from "@/components/StorageFullNotice";
 import { ClassTimerChip } from "./ClassTimer";
+import { AppBadge } from "./AppBadge";
 import type { FlagKey } from "@/lib/flags";
 import { refreshFlags, useIsOn } from "@/lib/remoteFlags";
 import { ageBandFor, gradeNumber } from "@/content/subjects";
@@ -234,6 +235,7 @@ export function PlayApp() {
         <Toasts />
         <StorageFullNotice />
         <ClassTimerChip />
+        <AppBadge />
         {isOn("secrets") && <SecretsListener />}
       </BandProvider>
     </ContentGate>

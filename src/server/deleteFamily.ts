@@ -58,6 +58,7 @@ export async function deleteFamilyData(f: string): Promise<void> {
     { sql: "DELETE FROM flag_overrides WHERE family_id = ?", args: [f] },
     { sql: "DELETE FROM family_notes WHERE family_id = ?", args: [f] },
     { sql: "DELETE FROM family_invites WHERE family_id = ?", args: [f] },
+    { sql: "DELETE FROM push_devices WHERE family_id = ?", args: [f] },
     { sql: "DELETE FROM paywall_seen WHERE family_id = ?", args: [f] },
     { sql: "DELETE FROM experiment_assignments WHERE family_id = ?", args: [f] },
     // Payments stay in the revenue totals but no longer point at anyone.
