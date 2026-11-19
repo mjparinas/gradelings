@@ -414,10 +414,9 @@ function compassQuestion(): Question {
   );
   const names = ["northwest", "north", "northeast", "west", "centre", "east", "southwest", "south", "southeast"];
   const visual: Visual = {
-    type: "table",
-    title: "Map of Fairview (north is at the top)",
-    headers: ["", "West", "Middle", "East"],
-    rows: ["North", "Middle", "South"].map((rowName, r) => [rowName, ...[0, 1, 2].map((c) => `${features[r * 3 + c][1]} ${features[r * 3 + c][0]}`)]),
+    type: "map",
+    title: "Map of Fairview",
+    rows: [0, 1, 2].map((r) => [0, 1, 2].map((c) => ({ emoji: features[r * 3 + c][1], label: features[r * 3 + c][0] }))),
   };
   const dir = pick(["northwest", "northeast", "southwest", "southeast"]);
   const target = features[names.indexOf(dir)];

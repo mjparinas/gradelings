@@ -2,6 +2,9 @@
 // units carry learning-standard text per framework (e.g. "ca-bc"), and the
 // scoring scheme and report-card language live with the framework.
 
+import type { DiagramVisual } from "./diagramTypes";
+import type { Diagram } from "./diagrams/types";
+import type { MapVisual } from "./mapVisual";
 import type { Currency } from "./money";
 import type { RegisteredId } from "./registry";
 
@@ -36,6 +39,8 @@ export type ShapeName =
 
 /** Pictures drawn above a question to help explain it. */
 export type Visual =
+  /** A town map or a compass rose (`./mapVisual`). */
+  | MapVisual
   /** Big maths or text; each ☐ is drawn as a blank box. */
   | { type: "equation"; text: string }
   | { type: "emoji"; emoji: string; caption?: string }
@@ -59,7 +64,8 @@ export type Visual =
   | { type: "bars"; title: string; bars: { label: string; value: number; emoji?: string }[] }
   | { type: "table"; title?: string; headers: string[]; rows: (string | number)[][] }
   | { type: "shape"; shape: ShapeName }
-  | { type: "spinner"; segments: string[] }
+  /** `labels` (one per segment) are written on the segments, e.g. the numbers 1 to 6. */
+  | { type: "spinner"; segments: string[]; labels?: string[] }
   | { type: "towers"; heights: number[]; showBlank?: boolean }
   /** A short story, one line per sentence. */
   | { type: "story"; lines: string[] }
@@ -69,6 +75,8 @@ export type Visual =
    */
   | { type: "passage"; title?: string; paragraphs: string[] }
   | { type: "tenFrame"; filled: number; extra?: number }
+  /** Geometry figures: crossing lines, angles on a line, triangles, similar figures, regular polygons. */
+  | DiagramVisual
   /** An analog clock. */
   | { type: "clock"; hour: number; minute: number }
   /** A number line; `blankAt` shows a "?" at that value, `jumps` draws hops. */
@@ -91,7 +99,88 @@ export type Visual =
   /** Points on a coordinate grid (first quadrant unless min is negative). */
   | { type: "grid"; size: number; min?: number; points: { x: number; y: number; label?: string }[] }
   /** An angle drawn with two rays. */
-  | { type: "angle"; degrees: number };
+  | { type: "angle"; degrees: number }
+  /** A 3-D solid with its measurements written on the edges ("5 cm", or "?" for the one to find). */
+  | { type: "solid"; solid: SolidKind; labels?: SolidLabels; cut?: SolidCut }
+  /** The flat net of a 3-D solid, with measurements on its edges. */
+  | { type: "net"; net: SolidKind; labels?: SolidLabels }
+  /** A science drawing (circuit, cell, Moon orbit, seasons, day and night). `label` describes it for screen readers. */
+  | { type: "diagram"; diagram: Diagram; label: string }
+  /** A circle graph; each sector's size follows its `value`, and `show` (default: nothing) is a second line written on it. */
+  | { type: "circleGraph"; title?: string; sectors: { label: string; value: number; show?: string }[] }
+  /** A line plot: a stack of X's above each label on a number line. */
+  | { type: "linePlot"; title?: string; labels: string[]; counts: number[]; caption?: string }
+  /** Lines or points on a labelled grid (line graphs, a plotted line, a curve). `marks` are open circles for points to find. */
+  | {
+      type: "plot";
+      title?: string;
+      xLabel?: string;
+      yLabel?: string;
+      xMin: number;
+      xMax: number;
+      yMin: number;
+      yMax: number;
+      xStep?: number;
+      yStep?: number;
+      /** Name the marks 1, 2, 3… along the x-axis (times of day, weeks) instead of numbering it. */
+      xLabels?: string[];
+      series: { points: { x: number; y: number }[]; line?: boolean; dots?: boolean; label?: string }[];
+      marks?: { x: number; y: number; label?: string }[];
+    }
+  /** A tree diagram: every outcome of one stage branches to every outcome of the next (up to 24 ends). */
+  | { type: "tree"; title?: string; stages: string[][] }
+  /**
+   * A protractor with the two rays of an angle. `from` and `to` are where the rays cross the scale that starts at 0 on
+   * the right-hand end (0 to 180); `twoScales` also prints the outer scale, which starts at 0 on the left.
+   */
+  | { type: "protractor"; from: number; to: number; twoScales?: boolean }
+  /** One or more liquid thermometers, each filled to its reading (a shared scale from `min` to `max` degrees). */
+  | { type: "thermometer"; values: number[]; min: number; max: number }
+  /** A figure before (dashed) and after a slide, a flip or a turn. See `src/components/figureVisuals.tsx`. */
+  | { type: "move"; move: "slide" | "flip" | "turn"; figure?: MoveFigure; dx?: number; dy?: number; axis?: "vertical" | "horizontal"; degrees?: number }
+  /** A compass with an arrow showing which way someone faces. */
+  | { type: "facing"; facing: "north" | "east" | "south" | "west" }
+  /** A plain outline of a figure, for symmetry questions. */
+  | { type: "figure"; figure: PlainFigure }
+  /**
+   * A floor plan or flat shape made of rectangles that sit side by side along a common bottom edge (drawn to scale,
+   * each side labelled with its own length), or one rectangle with a rectangle cut from its top right corner.
+   * A part with no `w` and `h` is the unknown one: it is drawn dashed with a "?" inside.
+   */
+  | {
+      type: "joined";
+      parts: { w?: number; h?: number }[];
+      /** A rectangle cut away from the top right corner of the single part. */
+      cut?: { w: number; h: number };
+      /** A triangle (as wide as the part, `h` tall) on top of the single part, or a semicircle on its right end whose diameter is the part's height. */
+      cap?: { shape: "triangle"; h: number } | { shape: "semicircle"; label?: string };
+      /** A triangle cut out of the top edge of the single part, centred, with this base and depth. */
+      cutTriangle?: { base: number; h: number };
+      /** The unit written after each length ("ft"), or none to write bare numbers. */
+      unit?: string;
+      /** A line under the picture ("Total area: 48 sq in"). */
+      caption?: string;
+    };
+
+/** The shapes a `move` picture can slide, flip or turn. "boot" is lopsided, so every move shows. */
+export type MoveFigure = "boot" | "triangle" | "square" | "hexagon";
+
+/** The outlines a `figure` picture can draw. */
+export type PlainFigure = "equilateral" | "isosceles" | "scalene" | "square" | "rectangle" | "rhombus" | "parallelogram" | "circle" | "oval" | "plus";
+
+/** A flat cut through a solid: `across` is parallel to its base, `down` is straight down through the middle. */
+export type SolidCut = "across" | "down";
+
+/** The solids that can be drawn (`solid`) or unfolded (`net`). A "stacked" solid is a box with a small cube on top; it has no net. */
+export type SolidKind = "box" | "cube" | "triangular-prism" | "cylinder" | "cone" | "square-pyramid" | "stacked";
+
+/**
+ * Where a measurement is written. `length`, `width` and `height` are a box's edges (a prism's `length` is the way it
+ * runs back); `edge` is a cube's; `base` is the side the solid sits on; `radius` or `diameter` belongs to a cylinder or cone;
+ * `slant` is a pyramid's or cone's sloping height. A net adds `circumference` for the side of a cylinder.
+ */
+export type SolidLabelKey = "length" | "width" | "height" | "edge" | "base" | "radius" | "diameter" | "slant" | "circumference";
+export type SolidLabels = Partial<Record<SolidLabelKey, string>>;
 
 export interface Choice {
   id: string;

@@ -1,3 +1,4 @@
+import { solid } from "../../solids";
 import { bankUnit, type Q } from "../own";
 
 // Grade 5 mathematics: mental math, measurement and shapes (5.N.3, 5.N.4, 5.SS.2 to 5.SS.6).
@@ -62,7 +63,7 @@ const MEASURE: Q[] = [
   ["Which unit measures volume?", "cubic centimetre (cm³)", ["square centimetre (cm²)", "centimetre (cm)"], "Volume uses cubes."],
   ["A cube has sides 1 cm long. Its volume is…", "1 cm³", ["1 cm²", "6 cm"], "That cube is one cubic centimetre."],
   ["A box holds 2 layers of 6 cubes. What is its volume in cubes?", "12", ["8", "6"], "2 layers × 6 cubes = 12 cubes."],
-  ["A box is 3 cubes long, 2 wide and 2 high. How many cubes fill it?", "12", ["7", "10"], "3 × 2 × 2 = 12."],
+  ["A box is 3 cubes long, 2 wide and 2 high. How many cubes fill it?", "12", ["7", "10"], "3 × 2 × 2 = 12.", false, solid("box", { length: "3 cubes", width: "2 cubes", height: "2 cubes" })],
   ["Which is the better unit for the volume of a large moving truck?", "cubic metre (m³)", ["cubic centimetre (cm³)", "millimetre (mm)"], "Use bigger cubes for big spaces."],
   ["Which is the better unit for the volume of a small dice?", "cubic centimetre (cm³)", ["cubic metre (m³)", "litre (L)"], "A dice is about 1 or 2 cm on each side."],
   ["A cubic metre is a cube that is each side…", "1 m long", ["1 cm long", "1 mm long"], "Cubic metres use sides of 1 m."],
@@ -72,7 +73,7 @@ const MEASURE: Q[] = [
   ["Which is a good referent for 1 cm³?", "a small sugar cube", ["a shoebox", "a fridge"], "A sugar cube is about 1 cm on each side."],
   ["A tank holds 4 L. How many 500 mL cups fill it?", "8", ["4", "2"], "1 L is two cups of 500 mL, so 4 L is eight cups.", true],
   ["Which is the same as 4 500 mL?", "4 L 500 mL", ["45 L", "450 mL"], "4 000 mL is 4 L, and 500 mL is left over.", true],
-  ["A box is 5 cm long, 4 cm wide and 3 cm high. Its volume is…", "60 cm³", ["12 cm³", "47 cm³"], "5 × 4 × 3 = 60.", true],
+  ["A box is 5 cm long, 4 cm wide and 3 cm high. Its volume is…", "60 cm³", ["12 cm³", "47 cm³"], "5 × 4 × 3 = 60.", true, solid("box", { length: 5, width: 4, height: 3 })],
   ["A line is 35 mm long. How many centimetres is that?", "3 cm 5 mm", ["35 cm", "3 cm 50 mm"], "30 mm is 3 cm, and 5 mm is left.", true],
   ["Which has the greatest volume?", "5 cm × 5 cm × 5 cm", ["4 cm × 4 cm × 4 cm", "10 cm × 2 cm × 2 cm"], "125, 64 and 40 cubic centimetres.", true],
   ["1.5 L is the same as…", "1 500 mL", ["150 mL", "15 mL"], "Multiply 1.5 by 1 000.", true],

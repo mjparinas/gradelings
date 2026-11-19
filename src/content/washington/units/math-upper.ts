@@ -1,3 +1,4 @@
+import { net, solid } from "../../solids";
 import { chance, pick, randInt, sample, shuffle } from "../../random";
 import type { Visual } from "../../types";
 import { type Maker, eq, fmt, frac, fracChoice, fracKey, gcd, linear, mathUnit, mixed, num, par, pickOne, signed, someone, sup, typed } from "./math-kit";
@@ -220,12 +221,13 @@ const prismSA: Maker = (d) => {
   const sa = 2 * (l * w + l * h + w * h);
   const q = `A box is ${l} cm by ${w} cm by ${h} cm. Use its net to find its surface area.`;
   const hint = `The net has 3 pairs of rectangles: 2 × (${l} × ${w}) + 2 × (${l} × ${h}) + 2 × (${w} × ${h}).`;
-  return d === 3 ? typed(q, sa, hint, { suffix: "cm²" }) : num(q, sa, hint, { extra: [l * w * h, sa / 2, l * w + l * h + w * h + l * w], count: 5, label: (n) => `${n} cm²` });
+  const visual = net("box", { length: l, width: w, height: h });
+  return d === 3 ? typed(q, sa, hint, { suffix: "cm²", visual }) : num(q, sa, hint, { extra: [l * w * h, sa / 2, l * w + l * h + w * h + l * w], count: 5, label: (n) => `${n} cm²`, visual });
 };
 
 const cubeSA: Maker = () => {
   const s = randInt(2, 10);
-  return num(`A cube has edges ${s} in long. What is its surface area?`, 6 * s * s, `A cube's net is 6 squares, each ${s} × ${s} = ${s * s} in².`, { extra: [s * s * s, 4 * s * s, 6 * s], count: 5, label: (n) => `${n} in²` });
+  return num(`A cube has edges ${s} in long. What is its surface area?`, 6 * s * s, `A cube's net is 6 squares, each ${s} × ${s} = ${s * s} in².`, { extra: [s * s * s, 4 * s * s, 6 * s], count: 5, label: (n) => `${n} in²`, visual: net("cube", { edge: `${s} in` }) });
 };
 
 const pyramidSA: Maker = () => {
@@ -236,15 +238,16 @@ const pyramidSA: Maker = () => {
 };
 
 const NETS = [
-  ["a cube", "6 squares", ["4 squares", "5 squares and 1 triangle", "2 circles and 1 rectangle"]],
-  ["a square pyramid", "1 square and 4 triangles", ["2 squares and 4 rectangles", "4 squares", "1 circle and 1 triangle"]],
-  ["a triangular prism", "2 triangles and 3 rectangles", ["3 triangles and 2 rectangles", "4 triangles", "1 square and 4 triangles"]],
-  ["a rectangular prism", "6 rectangles", ["4 rectangles and 2 triangles", "6 triangles", "5 rectangles"]],
-  ["a triangular pyramid", "4 triangles", ["3 triangles and 1 square", "2 triangles and 3 rectangles", "6 triangles"]],
+  ["a cube", "6 squares", ["4 squares", "5 squares and 1 triangle", "2 circles and 1 rectangle"], "cube"],
+  ["a square pyramid", "1 square and 4 triangles", ["2 squares and 4 rectangles", "4 squares", "1 circle and 1 triangle"], "square-pyramid"],
+  ["a triangular prism", "2 triangles and 3 rectangles", ["3 triangles and 2 rectangles", "4 triangles", "1 square and 4 triangles"], "triangular-prism"],
+  ["a rectangular prism", "6 rectangles", ["4 rectangles and 2 triangles", "6 triangles", "5 rectangles"], "box"],
+  ["a triangular pyramid", "4 triangles", ["3 triangles and 1 square", "2 triangles and 3 rectangles", "6 triangles"], undefined],
 ] as const;
 const netFaces: Maker = () => {
-  const [solid, right, wrong] = pick(NETS);
-  return pickOne(`Which shapes make up a net of ${solid}?`, right, [...wrong], "Picture unfolding the solid. Count each face and its shape.");
+  const [name, right, wrong, kind] = pick(NETS);
+  // The solid is drawn without measurements, so the child unfolds it in their head.
+  return pickOne(`Which shapes make up a net of ${name}?`, right, [...wrong], "Picture unfolding the solid. Count each face and its shape.", kind ? solid(kind) : undefined);
 };
 
 // ---------- Grade 7: multiplying and dividing signed numbers ----------
@@ -580,12 +583,12 @@ const evalFunction: Maker = () => {
 const cylinderV: Maker = () => {
   const r = randInt(1, 6);
   const h = randInt(2, 10);
-  return pickOne(`A cylinder has radius ${r} cm and height ${h} cm. What is its volume, in terms of π?`, `${r * r * h}π cm³`, [`${2 * r * h}π cm³`, `${r * h}π cm³`, `${4 * r * r * h}π cm³`], `V = πr²h = π × ${r}² × ${h}.`);
+  return pickOne(`A cylinder has radius ${r} cm and height ${h} cm. What is its volume, in terms of π?`, `${r * r * h}π cm³`, [`${2 * r * h}π cm³`, `${r * h}π cm³`, `${4 * r * r * h}π cm³`], `V = πr²h = π × ${r}² × ${h}.`, solid("cylinder", { radius: r, height: h }));
 };
 const coneV: Maker = () => {
   const r = randInt(1, 6) * 1;
   const h = randInt(1, 4) * 3;
-  return pickOne(`A cone has radius ${r} in and height ${h} in. What is its volume, in terms of π?`, `${(r * r * h) / 3}π in³`, [`${r * r * h}π in³`, `${(2 * r * h) / 3}π in³`, `${(r * r * h) / 3 + r * r}π in³`], `V = ⅓πr²h = ⅓ × π × ${r}² × ${h}.`);
+  return pickOne(`A cone has radius ${r} in and height ${h} in. What is its volume, in terms of π?`, `${(r * r * h) / 3}π in³`, [`${r * r * h}π in³`, `${(2 * r * h) / 3}π in³`, `${(r * r * h) / 3 + r * r}π in³`], `V = ⅓πr²h = ⅓ × π × ${r}² × ${h}.`, solid("cone", { radius: `${r} in`, height: `${h} in` }));
 };
 const sphereV: Maker = () => {
   const r = pick([3, 6, 9]);
@@ -600,7 +603,7 @@ const cylinderDecimal: Maker = () => {
   const r = randInt(1, 5);
   const h = randInt(2, 10);
   const v = Math.round(3.14 * r * r * h * 100) / 100;
-  return typed(`A can has radius ${r} cm and height ${h} cm. Using 3.14 for π, what is its volume in cm³?`, fmt(v), `V = 3.14 × ${r}² × ${h}.`, { keypad: "decimal", suffix: "cm³" });
+  return typed(`A can has radius ${r} cm and height ${h} cm. Using 3.14 for π, what is its volume in cm³?`, fmt(v), `V = 3.14 × ${r}² × ${h}.`, { keypad: "decimal", suffix: "cm³", visual: solid("cylinder", { radius: r, height: h }) });
 };
 
 // ---------- Grade 8: slope ----------

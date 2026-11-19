@@ -1,3 +1,4 @@
+import { solid } from "../solids";
 import { pick, randInt, shuffle, textChoice } from "../random";
 import type { GenerateOptions, Question, Unit } from "../types";
 import { ab, buildSet, levelOf, typeIn, type Maker } from "./kit";
@@ -174,7 +175,7 @@ function surfaceArea(opts?: GenerateOptions): Question[] {
     const l = randInt(2, d === 1 ? 6 : 10);
     const w = randInt(2, 6);
     const h = randInt(2, 6);
-    return typeIn(`What is the surface area of a rectangular prism that is ${l} cm long, ${w} cm wide and ${h} cm high, in cm²?`, 2 * (l * w + l * h + w * h), `Add the area of all 6 faces: 2 × (${l * w} + ${l * h} + ${w * h}) = ${2 * (l * w + l * h + w * h)}.`, undefined, { suffix: "cm²" });
+    return typeIn(`What is the surface area of a rectangular prism that is ${l} cm long, ${w} cm wide and ${h} cm high, in cm²?`, 2 * (l * w + l * h + w * h), `Add the area of all 6 faces: 2 × (${l * w} + ${l * h} + ${w * h}) = ${2 * (l * w + l * h + w * h)}.`, solid("box", { length: l, width: w, height: h }), { suffix: "cm²" });
   };
   const stackedCubes: Maker = () => {
     const small = randInt(1, 4);
@@ -183,7 +184,7 @@ function surfaceArea(opts?: GenerateOptions): Question[] {
       `A cube with edges of ${small} cm sits on top of a cube with edges of ${big} cm, glued face to face. What is the surface area of the whole object, in cm²?`,
       6 * big * big + 4 * small * small,
       `Separately the cubes have 6 × ${big}² + 6 × ${small}² = ${6 * big * big + 6 * small * small} cm². Two faces of ${small}² = ${small * small} cm² each are hidden where they touch: subtract ${2 * small * small}.`,
-      undefined,
+      solid("stacked", { length: big, width: big, height: big, edge: small }),
       { suffix: "cm²" },
     );
   };
@@ -197,7 +198,7 @@ function surfaceArea(opts?: GenerateOptions): Question[] {
       `Two rectangular prisms, ${l1} cm by ${w} cm by ${h} cm and ${l2} cm by ${w} cm by ${h} cm, are joined along their ${w} cm by ${h} cm faces. What is the surface area of the new object, in cm²?`,
       sa(l1) + sa(l2) - 2 * w * h,
       `Add the two surface areas (${sa(l1)} + ${sa(l2)}) and subtract the two hidden faces, 2 × ${w * h} = ${2 * w * h}.`,
-      undefined,
+      solid("box", { length: `${l1} + ${l2} cm`, width: w, height: h }),
       { suffix: "cm²" },
     );
   };
@@ -216,6 +217,7 @@ function surfaceArea(opts?: GenerateOptions): Question[] {
       `${2 * r * h}π cm²`,
       [`${r * h}π cm²`, `${2 * r * (r + h)}π cm²`, `${r * r + 2 * r * h}π cm²`],
       `Unroll the curved side into a rectangle: its width is the circumference (2π × ${r}) and its height is ${h}. Area = 2π × ${r} × ${h} = ${2 * r * h}π.`,
+      solid("cylinder", { radius: r, height: h }),
     );
   };
   const cylinderTotal: Maker = () => {
@@ -226,6 +228,7 @@ function surfaceArea(opts?: GenerateOptions): Question[] {
       `${2 * r * r + 2 * r * h}π cm²`,
       [`${2 * r * h}π cm²`, `${r * r + 2 * r * h}π cm²`, `${2 * r * r * h}π cm²`],
       `Two circular ends: 2 × π × ${r}² = ${2 * r * r}π. Curved side: 2π × ${r} × ${h} = ${2 * r * h}π. Add them.`,
+      solid("cylinder", { radius: r, height: h }),
     );
   };
   const faces: Maker = () => {

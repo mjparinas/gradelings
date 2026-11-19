@@ -1,5 +1,6 @@
 import { chance, pick, randInt, sample, shuffle, textChoice } from "../../random";
 import type { Course, GenerateOptions, Question, Visual } from "../../types";
+import { net, solid } from "../../solids";
 import { NAMES, ROUND_NOTE, conceptQ, fmt, frac, gcd, levelOf, mixed, numQ, piAnswer, roundTo, textQ, typed, type Concept } from "../kit";
 
 // Grade 8 maths for the "big" age band. Anything that needs exact decimal maths is built
@@ -861,10 +862,11 @@ const SOLIDS_CONCEPTS: Concept[] = [
   },
   {
     levels: [2, 3],
-    prompt: "A net of a cylinder is made of…",
+    prompt: "This is a net of a cylinder. What shapes is it made of?",
     right: "2 circles and 1 rectangle",
     wrong: ["1 circle and 2 rectangles", "3 circles", "2 circles and 2 rectangles"],
     hint: "Unroll a can: the label is a rectangle, and the top and bottom are circles.",
+    visual: net("cylinder"),
   },
   {
     levels: [1, 2, 3],
@@ -875,10 +877,43 @@ const SOLIDS_CONCEPTS: Concept[] = [
   },
   {
     levels: [2, 3],
-    prompt: "Which 3D object has a net made of one square and four triangles?",
+    prompt: "This net folds up into which 3D object?",
     right: "a square pyramid",
     wrong: ["a cube", "a triangular prism", "a cone"],
-    hint: "A square pyramid has a square base and four triangular faces that meet at the top.",
+    hint: "One square and four triangles: the square is the base and the four triangles meet at the top, like a pyramid.",
+    visual: net("square-pyramid"),
+  },
+  {
+    levels: [1, 2, 3],
+    prompt: "This net folds up into which 3D object?",
+    right: "a cube",
+    wrong: ["a square pyramid", "a rectangular prism", "a cylinder"],
+    hint: "Six squares of the same size fold into a cube.",
+    visual: net("cube"),
+  },
+  {
+    levels: [1, 2, 3],
+    prompt: "This net folds up into which 3D object?",
+    right: "a rectangular prism",
+    wrong: ["a cube", "a triangular prism", "a square pyramid"],
+    hint: "Six rectangles fold into a box. Opposite faces match, but they are not all squares, so it is not a cube.",
+    visual: net("box"),
+  },
+  {
+    levels: [2, 3],
+    prompt: "This net folds up into which 3D object?",
+    right: "a triangular prism",
+    wrong: ["a square pyramid", "a rectangular prism", "a cone"],
+    hint: "Two triangles (the ends) and three rectangles (the sides) fold into a triangular prism.",
+    visual: net("triangular-prism"),
+  },
+  {
+    levels: [2, 3],
+    prompt: "This net folds up into which 3D object?",
+    right: "a cone",
+    wrong: ["a cylinder", "a square pyramid", "a sphere"],
+    hint: "A circle for the base and a curved sector for the slanted side fold into a cone.",
+    visual: net("cone"),
   },
   {
     levels: [2, 3],
@@ -912,13 +947,13 @@ function surfaceAreaVolume(opts?: GenerateOptions): Question[] {
         String(sa),
         `Add the areas of the 3 pairs of faces: 2 × (${l}×${w} + ${l}×${h} + ${w}×${h}) = 2 × ${l * w + l * h + w * h} = ${sa} cm².`,
         "number",
-        { suffix: "cm²", visual: { type: "shape", shape: "rectangular-prism" } },
+        { suffix: "cm²", visual: solid("box", { length: l, width: w, height: h }) },
       ),
     );
   }
   {
     const e = randInt(2, hi);
-    qs.push(typed(`A cube has edges of ${e} cm. What is its surface area?`, String(6 * e * e), `A cube has 6 identical square faces: 6 × ${e}² = 6 × ${e * e} = ${6 * e * e} cm².`, "number", { suffix: "cm²", visual: { type: "shape", shape: "cube" } }));
+    qs.push(typed(`A cube has edges of ${e} cm. What is its surface area?`, String(6 * e * e), `A cube has 6 identical square faces: 6 × ${e}² = 6 × ${e * e} = ${6 * e * e} cm².`, "number", { suffix: "cm²", visual: solid("cube", { edge: e }) }));
   }
   {
     const b = 2 * randInt(2, hi);
@@ -931,7 +966,7 @@ function surfaceAreaVolume(opts?: GenerateOptions): Question[] {
         String(area * len),
         `Area of the triangle = ½ × ${b} × ${h} = ${area} cm². Volume = base area × length = ${area} × ${len} = ${area * len} cm³.`,
         "number",
-        { suffix: "cm³" },
+        { suffix: "cm³", visual: solid("triangular-prism", { base: b, height: h, length: len }) },
       ),
     );
   }
@@ -945,7 +980,7 @@ function surfaceAreaVolume(opts?: GenerateOptions): Question[] {
         p.answer,
         `V = π × r² × h ≈ 3.14 × ${r * r} × ${h} = ${fmt(p.exact)}. Rounded: ${p.answer} cm³.`,
         "decimal",
-        { accept: p.accept, suffix: "cm³", visual: { type: "shape", shape: "cylinder" } },
+        { accept: p.accept, suffix: "cm³", visual: solid("cylinder", { radius: r, height: h }) },
       ),
     );
   }
@@ -959,7 +994,7 @@ function surfaceAreaVolume(opts?: GenerateOptions): Question[] {
         p.answer,
         `SA = 2πr² + 2πrh = 2π × ${r} × (${r} + ${h}) ≈ 3.14 × ${2 * r * (r + h)} = ${fmt(p.exact)}. Rounded: ${p.answer} cm².`,
         "decimal",
-        { accept: p.accept, suffix: "cm²", visual: { type: "shape", shape: "cylinder" } },
+        { accept: p.accept, suffix: "cm²", visual: solid("cylinder", { radius: r, height: h }) },
       ),
     );
   }
@@ -973,7 +1008,7 @@ function surfaceAreaVolume(opts?: GenerateOptions): Question[] {
         String(h),
         `Volume = l × w × h, so h = ${l * w * h} ÷ (${l} × ${w}) = ${l * w * h} ÷ ${l * w} = ${h} cm.`,
         "number",
-        { suffix: "cm" },
+        { suffix: "cm", visual: solid("box", { length: l, width: w, height: "?" }) },
       ),
     );
   }

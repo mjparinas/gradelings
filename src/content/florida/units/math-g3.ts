@@ -1,7 +1,9 @@
 import { pick, randInt, shuffle } from "../../random";
 import type { Unit } from "../../types";
+import { withDrawings, symmetryPicture } from "../../figureDrawings";
+import { cornerCut, oneUnknown, sideBySide } from "../../joined";
 import { bankUnit, type Q } from "../own";
-import { mathUnit, num, pickOne, someone, typed, eq, type Maker } from "./math-kit";
+import { mathUnit, num, pickOne, someone, typed, type Maker } from "./math-kit";
 
 // Florida's own Grade 3 math units (`fl-` ids): even and odd numbers to 1,000 and multiples (MA.3.AR.3.1, MA.3.AR.3.2),
 // line symmetry (MA.3.GR.1.3) and the area of composite figures made of rectangles (MA.3.GR.2.4).
@@ -93,7 +95,7 @@ const SYMMETRY: Q[] = [
   ["Which door shape has 2 lines of symmetry?", "a rectangle", ["a leaning parallelogram", "a lightning bolt", "a spiral"], "A rectangle folds both ways.", true],
 ];
 
-const SYMMETRY_UNIT = bankUnit({
+const SYMMETRY_UNIT = withDrawings(bankUnit({
   id: "fl-g3-line-symmetry",
   title: "Line Symmetry",
   emoji: "🦋",
@@ -102,7 +104,7 @@ const SYMMETRY_UNIT = bankUnit({
     "Practises Florida's B.E.S.T. benchmark MA.3.GR.1.3: finding the lines of symmetry in two-dimensional figures and telling which figures are line-symmetric. Fold paper shapes or use a small mirror at home.",
   standards: ["MA.3.GR.1.3", "drawing lines of symmetry and identifying line-symmetric figures"],
   items: SYMMETRY,
-});
+}), symmetryPicture);
 
 const lShape: Maker = (d) => {
   const a = randInt(3, d === 1 ? 6 : 10);
@@ -113,7 +115,8 @@ const lShape: Maker = (d) => {
   const who = someone();
   const prompt = `${who}'s garden is two rectangles that don't overlap: ${a} ft by ${b} ft, and ${c} ft by ${e} ft. What is the total area?`;
   const hint = `${a} × ${b} = ${a * b} and ${c} × ${e} = ${c * e}. Add: ${a * b} + ${c * e} = ${total}.`;
-  return d === 3 ? typed(prompt, total, hint, { suffix: "sq ft" }) : num(prompt, total, hint, { min: 4, extra: [a * b, a * b * c * e > 1000 ? total + 3 : a * b * c * e, a + b + c + e] });
+  const visual = sideBySide([[a, b], [c, e]], "ft");
+  return d === 3 ? typed(prompt, total, hint, { suffix: "sq ft", visual }) : num(prompt, total, hint, { min: 4, extra: [a * b, a * b * c * e > 1000 ? total + 3 : a * b * c * e, a + b + c + e], visual });
 };
 
 const tShape: Maker = (d) => {
@@ -122,7 +125,7 @@ const tShape: Maker = (d) => {
   const c = randInt(2, d === 1 ? 4 : 8);
   const e = randInt(2, d === 1 ? 4 : 6);
   const total = a * b + c * e;
-  return num(`A floor plan is split into a ${a} m by ${b} m room and a ${c} m by ${e} m room. What is the total floor area?`, total, `Find each area, then add: ${a * b} + ${c * e}.`, { min: 4, extra: [a * b, c * e, total + 2], visual: eq(`${a} × ${b} + ${c} × ${e}`) });
+  return num(`A floor plan is split into a ${a} m by ${b} m room and a ${c} m by ${e} m room. What is the total floor area?`, total, `Find each area, then add: ${a * b} + ${c * e}.`, { min: 4, extra: [a * b, c * e, total + 2], visual: sideBySide([[a, b], [c, e]], "m") });
 };
 
 const cutOut: Maker = (d) => {
@@ -131,7 +134,7 @@ const cutOut: Maker = (d) => {
   const c = randInt(2, 4);
   const e = randInt(2, 4);
   const total = a * b - c * e;
-  return num(`A ${a} in by ${b} in sheet has a ${c} in by ${e} in corner cut away. What area is left?`, total, `Whole sheet: ${a} × ${b} = ${a * b}. Cut-out: ${c} × ${e} = ${c * e}. Subtract.`, { min: 4, extra: [a * b, a * b + c * e, c * e] });
+  return num(`A ${a} in by ${b} in sheet has a ${c} in by ${e} in corner cut away. What area is left?`, total, `Whole sheet: ${a} × ${b} = ${a * b}. Cut-out: ${c} × ${e} = ${c * e}. Subtract.`, { min: 4, extra: [a * b, a * b + c * e, c * e], visual: cornerCut(a, b, c, e, "in") });
 };
 
 const missingPart: Maker = () => {
@@ -140,7 +143,7 @@ const missingPart: Maker = () => {
   const c = randInt(2, 6);
   const e = randInt(2, 6);
   const total = a * b + c * e;
-  return num(`A shape made of two rectangles has an area of ${total} sq in. One is ${a} by ${b}. What is the area of the other?`, c * e, `${a} × ${b} = ${a * b}. Subtract from ${total}.`, { min: 2, extra: [a * b, total + a * b] });
+  return num(`A shape made of two rectangles has an area of ${total} sq in. One is ${a} by ${b}. What is the area of the other?`, c * e, `${a} × ${b} = ${a * b}. Subtract from ${total}.`, { min: 2, extra: [a * b, total + a * b], visual: oneUnknown(a, b, "in", `Total area: ${total} sq in`) });
 };
 
 const COMPOSITE = mathUnit({

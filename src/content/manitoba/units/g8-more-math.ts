@@ -1,3 +1,4 @@
+import { net, solid } from "../../solids";
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
 
@@ -6,11 +7,11 @@ import { bankUnit, type Q } from "../own";
 
 const NETS: Q[] = [
   ["A net is…", "a flat pattern that folds up into a 3-D object", ["a picture of a solid from above", "a formula for volume", "a line that cuts a solid in half"], "Think of unfolding a cardboard box and laying it flat."],
-  ["How many square faces are in the net of a cube?", "6", ["4", "5", "8"], "A cube has 6 faces."],
-  ["How many rectangles are in the net of a rectangular prism?", "6", ["4", "5", "8"], "Opposite faces match, but there are still 6 faces."],
-  ["Which faces make the net of a triangular prism?", "2 triangles and 3 rectangles", ["3 triangles and 2 rectangles", "2 triangles and 4 rectangles", "5 triangles"], "The two bases are triangles; each side of a triangle gets one rectangle."],
-  ["Which faces make the net of a square pyramid?", "1 square and 4 triangles", ["2 squares and 4 triangles", "1 square and 4 rectangles", "5 squares"], "The base is a square and the sides are triangles that meet at a point."],
-  ["Which faces make the net of a cylinder?", "2 circles and 1 rectangle", ["1 circle and 2 rectangles", "3 circles", "2 circles and 2 rectangles"], "The curved side unrolls into a rectangle."],
+  ["How many square faces are in the net of a cube?", "6", ["4", "5", "8"], "A cube has 6 faces.", false, net("cube")],
+  ["How many rectangles are in the net of a rectangular prism?", "6", ["4", "5", "8"], "Opposite faces match, but there are still 6 faces.", false, net("box")],
+  ["Which faces make the net of a triangular prism?", "2 triangles and 3 rectangles", ["3 triangles and 2 rectangles", "2 triangles and 4 rectangles", "5 triangles"], "The two bases are triangles; each side of a triangle gets one rectangle.", false, solid("triangular-prism")],
+  ["Which faces make the net of a square pyramid?", "1 square and 4 triangles", ["2 squares and 4 triangles", "1 square and 4 rectangles", "5 squares"], "The base is a square and the sides are triangles that meet at a point.", false, solid("square-pyramid")],
+  ["Which faces make the net of a cylinder?", "2 circles and 1 rectangle", ["1 circle and 2 rectangles", "3 circles", "2 circles and 2 rectangles"], "The curved side unrolls into a rectangle.", false, solid("cylinder")],
   ["Which solid has a net made of 4 triangles?", "a triangular pyramid", ["a square pyramid", "a triangular prism", "a cube"], "A triangular pyramid has a triangle base and 3 triangle sides."],
   ["Which solid has a net of 2 pentagons and 5 rectangles?", "a pentagonal prism", ["a pentagonal pyramid", "a hexagonal prism", "a cylinder"], "The bases are the two pentagons."],
   ["Which solid has a net of 2 hexagons and 6 rectangles?", "a hexagonal prism", ["a hexagonal pyramid", "a pentagonal prism", "a cube"], "Six sides on the base means six rectangles."],

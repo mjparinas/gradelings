@@ -1,4 +1,6 @@
 import { pick, randInt } from "../../random";
+import { semicircleOnEnd } from "../../joined";
+import { slice } from "../../solids";
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
 import { fmt, mathUnit, num, pickOne, sup, typed, type Maker } from "./math-kit";
@@ -447,7 +449,7 @@ const composite: Maker = () => {
   const w = randInt(4, 10);
   const r = pick([2, 3, 4]);
   const h = 2 * r;
-  return pickOne(`A ${w} by ${h} rectangle has a semicircle of radius ${r} added on its ${h} side. Which is the total area?`, `${w * h} + ${fmt((r * r) / 2)}π`, [`${w * h} + ${fmt(r * r)}π`, `${w * h} + ${fmt(r)}π`, `${w * h}`], "Add the rectangle to half a circle: (πr²) ÷ 2.");
+  return pickOne(`A ${w} by ${h} rectangle has a semicircle of radius ${r} added on its ${h} side. Which is the total area?`, `${w * h} + ${fmt((r * r) / 2)}π`, [`${w * h} + ${fmt(r * r)}π`, `${w * h} + ${fmt(r)}π`, `${w * h}`], "Add the rectangle to half a circle: (πr²) ÷ 2.", semicircleOnEnd(w, h, `radius ${r}`));
 };
 
 const DILATION_MEASURES = mathUnit({
@@ -493,14 +495,14 @@ const SEGMENT = mathUnit({
 });
 
 const SLICES: Q[] = [
-  ["A plane cuts a cube parallel to one of its faces. The cross-section is a…", "square", ["triangle", "circle", "hexagon"], "It is the same shape as the face."],
+  ["A plane cuts a cube parallel to one of its faces. The cross-section is a…", "square", ["triangle", "circle", "hexagon"], "It is the same shape as the face.", undefined, slice("cube", "across")],
   ["A plane cuts a sphere. The cross-section is always a…", "circle", ["square", "triangle", "ellipse only"], "Every slice of a sphere is a circle."],
-  ["A plane cuts a cylinder parallel to its base. The cross-section is a…", "circle", ["rectangle", "triangle", "oval"], "It matches the base."],
-  ["A plane cuts a cylinder from top to bottom through its axis. The cross-section is a…", "rectangle", ["circle", "triangle", "oval"], "Slicing along the length gives a rectangle."],
-  ["A plane cuts a cone parallel to its base. The cross-section is a…", "circle", ["triangle", "rectangle", "square"], "It matches the base but smaller."],
-  ["A plane cuts a cone straight down through its tip and the middle of the base. The cross-section is a…", "triangle", ["circle", "rectangle", "square"], "Look at the cone from the side."],
-  ["A plane cuts a square pyramid parallel to its base. The cross-section is a…", "square", ["triangle", "circle", "pentagon"], "It matches the base but smaller."],
-  ["A plane cuts a rectangular prism parallel to a face. The cross-section is a…", "rectangle", ["triangle", "circle", "hexagon"], "It matches the face."],
+  ["A plane cuts a cylinder parallel to its base. The cross-section is a…", "circle", ["rectangle", "triangle", "oval"], "It matches the base.", undefined, slice("cylinder", "across")],
+  ["A plane cuts a cylinder from top to bottom through its axis. The cross-section is a…", "rectangle", ["circle", "triangle", "oval"], "Slicing along the length gives a rectangle.", undefined, slice("cylinder", "down")],
+  ["A plane cuts a cone parallel to its base. The cross-section is a…", "circle", ["triangle", "rectangle", "square"], "It matches the base but smaller.", undefined, slice("cone", "across")],
+  ["A plane cuts a cone straight down through its tip and the middle of the base. The cross-section is a…", "triangle", ["circle", "rectangle", "square"], "Look at the cone from the side.", undefined, slice("cone", "down")],
+  ["A plane cuts a square pyramid parallel to its base. The cross-section is a…", "square", ["triangle", "circle", "pentagon"], "It matches the base but smaller.", undefined, slice("square-pyramid", "across")],
+  ["A plane cuts a rectangular prism parallel to a face. The cross-section is a…", "rectangle", ["triangle", "circle", "hexagon"], "It matches the face.", undefined, slice("box", "across")],
   ["Spin a rectangle about one of its sides. You get a…", "cylinder", ["cone", "sphere", "cube"], "A spinning rectangle sweeps out a can shape."],
   ["Spin a right triangle about one of its legs. You get a…", "cone", ["cylinder", "sphere", "pyramid"], "The other leg sweeps out the base."],
   ["Spin a semicircle about its diameter. You get a…", "sphere", ["cylinder", "cone", "cube"], "Half a circle spun around makes a ball."],

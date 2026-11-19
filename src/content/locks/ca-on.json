@@ -177,7 +177,7 @@
       "our-land text=9250f303b3 std=67d44bace1 q=c1704cb4f1",
       "places-in-my-community text=1356595ff7 std=fbc91af1e4 q=760957f148",
       "community-services text=26d27aa27c std=eec88903b6 q=2755db82e4",
-      "maps text=0393b6b3b0 std=fdef53e56b q=5413590a99",
+      "maps text=0393b6b3b0 std=fdef53e56b q=4ce4b133e9",
       "measure-and-map text=8532beeb10 std=dee5aa64e7 q=aa750bda62",
       "social-studies-detectives text=4a14dd77f7 std=c552f1461c q=94ae7c005d"
     ]
@@ -221,7 +221,7 @@
       "patterns text=52e71b0b56 std=f1b083de16 q=c39ccda4ca",
       "graphs-and-mode text=756f6ecdf9 std=b5f96bc30c q=20957518df",
       "chance-2 text=9ad53c7253 std=4971b82a1f q=741296a820",
-      "shapes-and-symmetry text=c7255b714f std=6912483b51 q=e038293019",
+      "shapes-and-symmetry text=c7255b714f std=6912483b51 q=4e970b8d78",
       "simple-maps text=a64b992390 std=f61779429d q=fed2c40c26",
       "measuring text=b408a6d5b9 std=1a1f518623 q=50b17c6722",
       "how-long text=756bbb2d8d std=7347b2a0a5 q=7f3d4c0bb8",
@@ -252,7 +252,7 @@
       "traditions-and-celebrations text=7933064ad5 std=706c375c35 q=2ef24cb39f",
       "then-and-now text=adcb461d8f std=708f26fc37 q=ae17feafab",
       "groups-in-our-community text=79a3313355 std=0132b24eb0 q=9f245b3885",
-      "globe-and-continents text=1e723efe75 std=730bf7d6c5 q=627071c8db",
+      "globe-and-continents text=1e723efe75 std=730bf7d6c5 q=0e536ff751",
       "climate-and-ways-of-life text=d15048701e std=9b102c14e8 q=d979d1d192",
       "needs-and-wants text=8192b43423 std=0119934d4f q=619b8574d0",
       "communities-compared text=38aa387c10 std=dcc7957ae7 q=f88d3ded2a",
@@ -298,9 +298,9 @@
       "fair-shares-3 text=d6df1e9193 std=4be1a42c00 q=1353378d79",
       "patterns-and-equations text=38e948b1ed std=853a8480c9 q=32db6b6541",
       "data-and-mean text=445b4d7b02 std=e58b335ff9 q=6cce7fb3a1",
-      "likelihood-3 text=43dd790430 std=d4f0dcb72e q=6b98af5dda",
+      "likelihood-3 text=43dd790430 std=d4f0dcb72e q=d79b2e568d",
       "3d-objects text=dd8f27d4a7 std=d04b99f629 q=792d73e855",
-      "move-it text=d926d1722c std=17e32342e6 q=d115a75ca5",
+      "move-it text=d926d1722c std=17e32342e6 q=a885489426",
       "measuring text=4f82b21dbc std=3c0fcc271f q=257f98b7d7",
       "area-and-perimeter-3 text=0bf3cb6711 std=8737f1bd24 q=58e06180f9",
       "time text=b4e7404035 std=f6685030db q=150c2972a2",
@@ -332,8 +332,8 @@
       "regions-on text=2de5dc6492 std=c78185e670 q=79d22b141b",
       "land-use-3 text=8d2be7a987 std=d3045c8c87 q=c68f464457",
       "land-impact-3 text=d54379ae56 std=6f8eef7822 q=71939dfd59",
-      "maps-on text=7b716e2180 std=2cfe1fe9c3 q=123ccf1539",
-      "maps-and-globes text=6a6a9ae26b std=18cefda807 q=fd8314b02c"
+      "maps-on text=7b716e2180 std=2cfe1fe9c3 q=294e9fba47",
+      "maps-and-globes text=6a6a9ae26b std=18cefda807 q=85d8fa6d9b"
     ]
   },
   "3/spanish": {
@@ -398,7 +398,7 @@
       "patterns-and-tables text=223238d646 std=8b460771a3 q=43715233d3",
       "equations-4 text=6cb6394a6c std=86713fdbce q=6716b72d0e",
       "data-4 text=0cbb8798c6 std=4729abb738 q=343a6426a7",
-      "chance-4 text=855e855d93 std=2fcf95a5a4 q=fc2a4cb6a1",
+      "chance-4 text=855e855d93 std=2fcf95a5a4 q=4f6367d189",
       "rectangles-and-grids text=513e57348f std=823a55e69e q=161e0f66f8",
       "angles-and-area text=270704dc2f std=d61282a176 q=8453462612",
       "metric-4 text=aa6167f1c3 std=53f3f79b75 q=d1b2a7cfd0",
@@ -431,7 +431,7 @@
       "physical-regions-4 text=1ffc870280 std=583d14c992 q=c39d7ac652",
       "sectors-4 text=ad17aabf9e std=1ae89de247 q=7b4117e636",
       "industry-env-4 text=f4691e8c2e std=6999540327 q=7de9188559",
-      "political-4 text=06b12ed63a std=7a2aadced1 q=c7cfd797e6",
+      "political-4 text=06b12ed63a std=7a2aadced1 q=2e45c60400",
       "provinces-and-regions text=57d19f24c1 std=f9951b1db6 q=383103dd3d"
     ]
   },
@@ -601,7 +601,7 @@
       "probability-6 text=74ab1e6ceb std=4e085eca79 q=6b1c51ad5d",
       "shapes-6 text=d97a7618fe std=03745dcfae q=26f8f1c978",
       "transformations text=94e34ce668 std=a121f1f486 q=a802fabebb",
-      "measure-6 text=3f6824e0d9 std=61c8637074 q=3d0197ec63",
+      "measure-6 text=3f6824e0d9 std=61c8637074 q=a59526878b",
       "money-6 text=b7ecce2a9f std=41058d1216 q=2acd2caf7a"
     ]
   },
@@ -612,10 +612,10 @@
       "biodiversity-6 text=f70b649728 std=a02672af97 q=91b5216610",
       "biodiversity-risks-6 text=77ca5b3ccd std=af16473962 q=27888b268b",
       "static-electricity-6 text=ec58626304 std=5ea1b7f1f3 q=79cb8b85db",
-      "circuits-6 text=27c1c49ae7 std=d8183a0b7a q=075569a1ba",
+      "circuits-6 text=27c1c49ae7 std=d8183a0b7a q=b13f95ae26",
       "electrical-energy-6 text=e2a59e9295 std=70280c5fad q=6d804aacd9",
       "flight-6 text=11653360ba std=89b1b97aac q=6c940cc325",
-      "earth-moon-sun-6 text=c2c46cb4eb std=485f12e999 q=cdd9a703f4",
+      "earth-moon-sun-6 text=c2c46cb4eb std=485f12e999 q=e8ec6a4bf9",
       "solar-system text=6be0e2dfe8 std=46911887cb q=80b6cb3757",
       "weight-and-space-tech-6 text=b331f772e6 std=8acfb4fb6e q=8a90828d65",
       "science-skills-6 text=794b9d1b09 std=5574658ab3 q=ae0ec36880"
@@ -696,7 +696,7 @@
     "units": [
       "numbers-7 text=aa9954670f std=09ad3840ad q=c67d87d9b4",
       "powers-7 text=87b1cf29e3 std=d0ecc433b1 q=0c20b63e65",
-      "integer-add-subtract text=0f49d1bba6 std=32988e4886 q=1e24134b03",
+      "integer-add-subtract text=0f49d1bba6 std=32988e4886 q=ecc058d9c0",
       "decimal-operations text=56ab979d6a std=5ae013552d q=7f89d319c6",
       "fractions-7 text=7c1f63c272 std=aee5a1feb7 q=bacf9d4e33",
       "fractions-decimals-percents text=12d27e2a2e std=7bc2b8ebdc q=1030c5dd8d",
@@ -704,15 +704,15 @@
       "linear-relations text=8a41482ba7 std=aef8c88fc3 q=52c3309ac5",
       "algebra-7 text=b1ecf615eb std=6a379fd587 q=775245a3a8",
       "two-step-equations text=ddaa3cce54 std=625da172fa q=4d67a1e779",
-      "data-7 text=89d3646ea8 std=a08bf6c766 q=7d75c16c00",
-      "circle-graphs text=b35255ef1b std=d1922b4a43 q=620f317483",
+      "data-7 text=89d3646ea8 std=a08bf6c766 q=8c1d0f36fe",
+      "circle-graphs text=b35255ef1b std=d1922b4a43 q=118224059d",
       "probability text=f903bf5b77 std=3b3e32c06c q=61a293da37",
       "dependent-events text=ace44e7502 std=9130f64900 q=bbc6dba981",
       "coordinates-transformations text=4061b902e5 std=893b75ed36 q=56537171c2",
       "circles text=bf81bcea8c std=a41d3ad315 q=31d74c7b6b",
       "solids-7 text=43bd9eeed8 std=c3c99260a6 q=d09edbf5d6",
-      "volume text=fa26627719 std=a902e66ef3 q=e7fbcb7f4d",
-      "measure-7 text=04b16d2908 std=d887049f76 q=58b9904929",
+      "volume text=fa26627719 std=a902e66ef3 q=3693f092f1",
+      "measure-7 text=04b16d2908 std=d887049f76 q=d4b163e533",
       "money-7 text=97b71e8c3a std=fa0db7010d q=1cb048b014"
     ]
   },
@@ -817,13 +817,13 @@
       "algebra-8 text=50bbd3d3fd std=c2e6547d3a q=118ffccf35",
       "linear-equations text=1e22122340 std=6e88a22fb4 q=4ba669b446",
       "data-8 text=f67cb7cc17 std=bbe387204a q=68d5f0cd99",
-      "chance-8 text=475485675c std=d8b8a1087d q=e2d7736f0d",
+      "chance-8 text=475485675c std=d8b8a1087d q=33f1de94f1",
       "transformations-8 text=872e7f5b99 std=820b188b55 q=d810f846d6",
       "scale-8 text=48a98db8d4 std=c7005b4712 q=ebe2d4d25c",
-      "angles-8 text=899ecf6fe2 std=535a930a49 q=547f9529ab",
-      "pythagorean-theorem text=014e1086f2 std=c99ed9e47f q=99835d112c",
-      "measure-8 text=06fddecfd2 std=a0617902c6 q=b1d0530bc4",
-      "surface-area-volume text=a5298071b5 std=b65dc334dd q=5c73cae8f9",
+      "angles-8 text=899ecf6fe2 std=535a930a49 q=f4e15bb736",
+      "pythagorean-theorem text=014e1086f2 std=c99ed9e47f q=bcc8d87763",
+      "measure-8 text=06fddecfd2 std=a0617902c6 q=24120b6a9a",
+      "surface-area-volume text=a5298071b5 std=b65dc334dd q=605671cace",
       "money-8 text=2173e29066 std=84e85d108d q=ceff3908c3"
     ]
   },
@@ -832,7 +832,7 @@
     "units": [
       "stem-skills-8 text=04906a509d std=8cf6ba50af q=576d24e4a0",
       "cells-organisms-8 text=f2fabcc119 std=07df97ccf2 q=16a9b7cb2d",
-      "cells-and-life text=26001b2c5a std=71500f5e69 q=27792065ca",
+      "cells-and-life text=26001b2c5a std=71500f5e69 q=b0668a2287",
       "viscosity-flow-8 text=309af1469c std=60c159e0e4 q=7c31cccec1",
       "density-buoyancy-8 text=44abadf5f7 std=ee2c15a842 q=e8b7d870a3",
       "pressure-pascal-8 text=61b1e34882 std=a3a5d5c9c0 q=bbd1e7ea70",
@@ -932,11 +932,11 @@
       "polynomials text=608ddf33d1 std=99417a2240 q=3a3e17fe5c",
       "multi-step-equations text=834b6c0c60 std=31900fbd6a q=4823df05ba",
       "coding-9 text=d2b06c6c90 std=0636b8871e q=abc3756092",
-      "linear-relations text=d5718915ca std=34c01dc78c q=1e254a9707",
+      "linear-relations text=d5718915ca std=34c01dc78c q=5737c7d8a8",
       "lines-9 text=a0d34ff620 std=a4f3e7e922 q=952170d895",
       "data-9 text=d107431976 std=427f9aa5d8 q=03d4d4469f",
-      "geometry-9 text=d3083b3128 std=4ca190b7aa q=0d88280b03",
-      "volume-units-9 text=0c128751c1 std=88d0a10aa7 q=c2cc90ca45",
+      "geometry-9 text=d3083b3128 std=4ca190b7aa q=ae0684cada",
+      "volume-units-9 text=0c128751c1 std=88d0a10aa7 q=1a1d56eb87",
       "finance-9 text=b21d576f3a std=18cdd30dec q=af7a256378"
     ]
   },
@@ -951,7 +951,7 @@
       "periodic-table-9 text=d006b85cec std=9bf5ecaa56 q=0f98494808",
       "compounds-9 text=e809c7578c std=552a99b656 q=799a9bf54a",
       "static-charges-9 text=9a9172f3c2 std=d8da6eedbf q=20a1a92678",
-      "circuits-9 text=0dda7abf25 std=213f3e1975 q=1788d5792b",
+      "circuits-9 text=0dda7abf25 std=213f3e1975 q=bf08183eb5",
       "electrical-energy-9 text=eecdad56b2 std=44abc626e7 q=7309de70ac",
       "space-9 text=622e423073 std=e0ae030bcf q=ee991cc122"
     ]

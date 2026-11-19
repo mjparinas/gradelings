@@ -1,3 +1,5 @@
+import { solid } from "../../solids";
+
 import { chance, pick, randInt, sample, shuffle, textChoice } from "../../random";
 import type {
   ChoiceQuestion,
@@ -2222,7 +2224,7 @@ function volumeCapacity(opts?: GenerateOptions): Question[] {
         `A rectangular prism is ${str(l)} cm long, ${w} cm wide and ${h} cm high. What is its volume?`,
         l * w * h,
         "Volume = length × width × height. Multiply two of the numbers first, then multiply by the third.",
-        { keypad: "decimal", suffix: "cm³", visual: { type: "shape", shape: "rectangular-prism" } },
+        { keypad: "decimal", suffix: "cm³", visual: solid("box", { length: str(l) + " cm", width: w, height: h }) },
       ),
     );
   }
@@ -2261,7 +2263,7 @@ function volumeCapacity(opts?: GenerateOptions): Question[] {
           `A small box is ${l} cm long, ${w} cm wide and ${h} cm high. 1 cm³ holds 1 mL. How many millilitres of water would fill it?`,
           l * w * h,
           "Find the volume in cm³ (length × width × height). Each cm³ holds 1 mL, so the number is the same.",
-          { suffix: "mL" },
+          { suffix: "mL", visual: solid("box", { length: l, width: w, height: h }) },
         ),
       );
     } else {
@@ -2274,7 +2276,7 @@ function volumeCapacity(opts?: GenerateOptions): Question[] {
           `A fish tank is ${l} cm long, ${w} cm wide and ${h} cm high. 1 cm³ holds 1 mL. How many litres of water does the full tank hold?`,
           V / 1000,
           "Find the volume in cm³, which equals the capacity in mL. Then divide by 1000 to change mL to litres.",
-          { keypad: "decimal", suffix: "L", visual: { type: "shape", shape: "rectangular-prism" } },
+          { keypad: "decimal", suffix: "L", visual: solid("box", { length: l, width: w, height: h }) },
         ),
       );
     }
@@ -2288,7 +2290,7 @@ function volumeCapacity(opts?: GenerateOptions): Question[] {
         `A box has a volume of ${l * w * h} cm³. It is ${l} cm long and ${w} cm wide. How high is it?`,
         h,
         `Volume = length × width × height. The base is ${l} × ${w} = ${l * w} cm², so divide the volume by ${l * w}.`,
-        { suffix: "cm", visual: { type: "shape", shape: "rectangular-prism" } },
+        { suffix: "cm", visual: solid("box", { length: l, width: w, height: "?" }) },
       ),
     );
   }
