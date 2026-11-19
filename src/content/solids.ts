@@ -1,4 +1,4 @@
-import type { SolidKind, SolidLabels, Visual } from "./types";
+import type { SolidCut, SolidKind, SolidLabels, Visual } from "./types";
 
 // Pictures of solids and their nets for volume and surface-area questions. Each is drawn from the numbers the
 // question uses, so the picture can never disagree with the words. Pass a measurement as a number (written with
@@ -23,4 +23,9 @@ export function solid(kind: SolidKind, measures: Measures = {}, unit = "cm"): Vi
 /** The flat net of a solid, with measurements on its edges. */
 export function net(kind: SolidKind, measures: Measures = {}, unit = "cm"): Visual {
   return { type: "net", net: kind, labels: labelled(measures, unit) };
+}
+
+/** A solid with a flat cut through it, for "what shape is the slice?" questions. The picture shows where the cut is, never its shape. */
+export function slice(kind: SolidKind, cut: SolidCut): Visual {
+  return { type: "solid", solid: kind, cut };
 }

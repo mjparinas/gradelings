@@ -963,7 +963,7 @@ export function QuestionVisual({ visual }: { visual: Visual }) {
     case "angle":
       return <Angle degrees={visual.degrees} />;
     case "solid":
-      return <SolidPicture kind={visual.solid} labels={visual.labels} />;
+      return <SolidPicture kind={visual.solid} labels={visual.labels} cut={visual.cut} />;
     case "net":
       return <SolidPicture kind={visual.net} labels={visual.labels} net />;
     case "protractor":

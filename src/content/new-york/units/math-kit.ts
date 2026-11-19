@@ -68,7 +68,7 @@ export const usd = <Q extends ChoiceQuestion>(q: Q): Q => ({ ...q, currency: "US
 export function bank(items: readonly Q[]): Maker {
   const core = items.filter((q) => !q[4]);
   return (d) => {
-    const [prompt, right, wrong, hint] = pick(d === 1 && core.length ? core : items);
-    return pickOne(prompt, right, sample(wrong, Math.min(3, wrong.length)), hint);
+    const [prompt, right, wrong, hint, , visual] = pick(d === 1 && core.length ? core : items);
+    return pickOne(prompt, right, sample(wrong, Math.min(3, wrong.length)), hint, visual);
   };
 }

@@ -44,3 +44,19 @@ describe("solid and net pictures", () => {
     expect(Number(front.getAttribute("width"))).toBeGreaterThan(Number(front.getAttribute("height")) * 1.5);
   });
 });
+
+describe("cutting planes", () => {
+  it.each(["box", "cube", "cylinder", "cone", "square-pyramid"] as const)("draws a cut through a %s and says so", (kind) => {
+    for (const [cut, words] of [["across", /parallel to its base/], ["down", /straight down/]] as const) {
+      const { container, unmount } = render(<QuestionVisual visual={{ type: "solid", solid: kind, cut }} />);
+      expect(screen.getByRole("img").getAttribute("aria-label")).toMatch(words);
+      expect(container.querySelectorAll("svg > polygon[stroke-dasharray], svg > rect[stroke-dasharray]").length).toBe(1);
+      unmount();
+    }
+  });
+
+  it("draws no plane when there is no cut", () => {
+    const { container } = render(<QuestionVisual visual={{ type: "solid", solid: "cone" }} />);
+    expect(container.querySelectorAll("svg > polygon[stroke-dasharray], svg > rect[stroke-dasharray]").length).toBe(0);
+  });
+});

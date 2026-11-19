@@ -1,5 +1,6 @@
 import { pick, randInt, sample } from "../../random";
 import { sideBySide, triangleCutOut, triangleOnTop } from "../../joined";
+import { slice } from "../../solids";
 import type { Unit } from "../../types";
 import { type Maker, fmt, num, pickOne, someone, typed } from "../../washington/units/math-kit";
 import type { Q } from "../own";
@@ -172,14 +173,14 @@ const DRAW: Q[] = [
 // ---------- Slicing solids (NY-7.G.3) ----------
 
 const SLICES: Q[] = [
-  ["A rectangular prism is sliced parallel to its base. What shape is the slice?", "a rectangle the same size as the base", ["a triangle", "a circle", "a smaller rectangle that shrinks as you go up"], "A prism has the same cross-section all the way up."],
-  ["A cube is sliced parallel to one face. What shape is the slice?", "a square", ["a triangle", "a circle", "a hexagon"], "Every slice parallel to a face of a cube is a square the same size as the face."],
-  ["A cylinder is sliced parallel to its base. What shape is the slice?", "a circle", ["a rectangle", "a triangle", "an oval with a point"], "The slice matches the circular base."],
-  ["A cylinder standing up is sliced straight down through its center. What shape is the slice?", "a rectangle", ["a circle", "a triangle", "a square pyramid"], "Straight down through a cylinder cuts a rectangle: its height by its diameter."],
-  ["A cone is sliced parallel to its base. What shape is the slice?", "a circle smaller than the base", ["a triangle", "a rectangle", "a circle bigger than the base"], "Slices of a cone get smaller toward the point."],
-  ["A cone standing up is sliced straight down through its point. What shape is the slice?", "a triangle", ["a circle", "a rectangle", "a square"], "Straight down through the tip cuts a triangle."],
-  ["A square pyramid is sliced parallel to its base. What shape is the slice?", "a square smaller than the base", ["a triangle", "a circle", "a rectangle bigger than the base"], "The slice has the shape of the base but shrinks toward the top."],
-  ["A square pyramid is sliced straight down through its top point. What shape is the slice?", "a triangle", ["a square", "a circle", "a rectangle"], "Straight down through the apex cuts a triangle."],
+  ["A rectangular prism is sliced parallel to its base. What shape is the slice?", "a rectangle the same size as the base", ["a triangle", "a circle", "a smaller rectangle that shrinks as you go up"], "A prism has the same cross-section all the way up.", undefined, slice("box", "across")],
+  ["A cube is sliced parallel to one face. What shape is the slice?", "a square", ["a triangle", "a circle", "a hexagon"], "Every slice parallel to a face of a cube is a square the same size as the face.", undefined, slice("cube", "across")],
+  ["A cylinder is sliced parallel to its base. What shape is the slice?", "a circle", ["a rectangle", "a triangle", "an oval with a point"], "The slice matches the circular base.", undefined, slice("cylinder", "across")],
+  ["A cylinder standing up is sliced straight down through its center. What shape is the slice?", "a rectangle", ["a circle", "a triangle", "a square pyramid"], "Straight down through a cylinder cuts a rectangle: its height by its diameter.", undefined, slice("cylinder", "down")],
+  ["A cone is sliced parallel to its base. What shape is the slice?", "a circle smaller than the base", ["a triangle", "a rectangle", "a circle bigger than the base"], "Slices of a cone get smaller toward the point.", undefined, slice("cone", "across")],
+  ["A cone standing up is sliced straight down through its point. What shape is the slice?", "a triangle", ["a circle", "a rectangle", "a square"], "Straight down through the tip cuts a triangle.", undefined, slice("cone", "down")],
+  ["A square pyramid is sliced parallel to its base. What shape is the slice?", "a square smaller than the base", ["a triangle", "a circle", "a rectangle bigger than the base"], "The slice has the shape of the base but shrinks toward the top.", undefined, slice("square-pyramid", "across")],
+  ["A square pyramid is sliced straight down through its top point. What shape is the slice?", "a triangle", ["a square", "a circle", "a rectangle"], "Straight down through the apex cuts a triangle.", undefined, slice("square-pyramid", "down")],
   ["A triangular prism is sliced parallel to its triangle base. What shape is the slice?", "a triangle", ["a rectangle", "a circle", "a square pyramid"], "A prism's slices parallel to its base match the base."],
   ["A triangular prism lying on a rectangle face is sliced straight down, parallel to its length. What shape is the slice?", "a rectangle", ["a triangle", "a circle", "a hexagon"], "Cutting along the length of a prism gives a rectangle.", true],
   ["A sphere is sliced by a flat cut. What shape is the slice?", "a circle", ["a square", "a triangle", "an oval with corners"], "Any flat slice of a sphere is a circle."],
@@ -190,7 +191,7 @@ const SLICES: Q[] = [
   ["As you slice a pyramid parallel to its base, moving up, the slices…", "keep the same shape and get smaller", ["get bigger", "change shape at each cut", "stay exactly the same size"], "A pyramid narrows to a point."],
   ["As you slice a prism parallel to its base, moving up, the slices…", "stay the same shape and size", ["get smaller", "get bigger", "turn into triangles"], "A prism is the same all the way up."],
   ["A loaf of bread shaped like a rectangular prism is cut into slices. Each slice is a…", "rectangle", ["circle", "triangle", "pentagon"], "Slicing straight across a rectangular prism gives rectangles."],
-  ["A rectangular prism stands on its base and is sliced straight down, parallel to its front face. What is the slice?", "a rectangle the size of the front face", ["a triangle", "a circle", "a trapezoid"], "A slice parallel to a face matches that face.", true],
+  ["A rectangular prism stands on its base and is sliced straight down, parallel to its front face. What is the slice?", "a rectangle the size of the front face", ["a triangle", "a circle", "a trapezoid"], "A slice parallel to a face matches that face.", true, slice("box", "down")],
   ["A cube is sliced straight down from one top edge to the opposite bottom edge. What is the slice?", "a rectangle", ["a triangle", "a circle", "a square smaller than a face"], "The cut runs along two parallel edges, so it is a rectangle longer than a face.", true],
 ];
 

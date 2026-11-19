@@ -571,7 +571,7 @@
       "wa-g6-nets text=5dc42bacee std=08e3c6cb50 q=39682e1764",
       "wa-g7-sampling text=194eb9c3c2 std=fb0b2c1a56 q=d8e6ffaf2a",
       "ny-g6-long-division text=01eba94ee7 std=45305f6fbf q=f95e787f16",
-      "ny-g6-squares-cubes text=c06ff8dd8a std=4715e081b5 q=deabc3a255",
+      "ny-g6-squares-cubes text=c06ff8dd8a std=4715e081b5 q=242f52d32d",
       "ny-g6-data-distributions text=16b09c36e1 std=bdf528cabf q=fb0605546a"
     ]
   },
@@ -666,7 +666,7 @@
       "wa-g7-scale-drawings text=44f1660d4b std=cd1ee42a11 q=480f217aff",
       "ny-g7-rewrite-expressions text=53542b83ec std=c9a45ec57e q=1eec8c5845",
       "ny-g7-triangles text=799eae18ff std=e0c2fe69a2 q=bbafbb717a",
-      "ny-g7-slices text=c038ec1cf4 std=532294c749 q=eb1a57ef1b",
+      "ny-g7-slices text=c038ec1cf4 std=532294c749 q=a1968b3fc3",
       "ny-g7-composite-area text=3308264c70 std=140481c402 q=e1e379b4f6"
     ]
   },
