@@ -1,5 +1,6 @@
 import { pick, randInt, shuffle } from "../../random";
-import type { ShapeName } from "../../types";
+import { slice } from "../../solids";
+import type { ShapeName, Visual } from "../../types";
 import { num, pickOne, typed, type Maker } from "../../washington/units/math-kit";
 import { mathUnit } from "./math";
 
@@ -151,17 +152,17 @@ const howManyTriangles: Maker = () => {
   );
 };
 
-const SLICES: { solid: string; cut: string; shape: ShapeName }[] = [
-  { solid: "rectangular prism (a box)", cut: "parallel to its base", shape: "rectangle" },
-  { solid: "cube", cut: "parallel to one face", shape: "square" },
-  { solid: "cylinder", cut: "parallel to its base", shape: "circle" },
-  { solid: "cylinder", cut: "straight down through its center, perpendicular to the base", shape: "rectangle" },
-  { solid: "cone", cut: "parallel to its base", shape: "circle" },
-  { solid: "cone", cut: "straight down through its tip, perpendicular to the base", shape: "triangle" },
-  { solid: "square pyramid", cut: "parallel to its base", shape: "square" },
-  { solid: "square pyramid", cut: "straight down through its top point, perpendicular to the base", shape: "triangle" },
+const SLICES: { solid: string; cut: string; shape: ShapeName; picture?: Visual }[] = [
+  { solid: "rectangular prism (a box)", cut: "parallel to its base", shape: "rectangle", picture: slice("box", "across") },
+  { solid: "cube", cut: "parallel to one face", shape: "square", picture: slice("cube", "across") },
+  { solid: "cylinder", cut: "parallel to its base", shape: "circle", picture: slice("cylinder", "across") },
+  { solid: "cylinder", cut: "straight down through its center, perpendicular to the base", shape: "rectangle", picture: slice("cylinder", "down") },
+  { solid: "cone", cut: "parallel to its base", shape: "circle", picture: slice("cone", "across") },
+  { solid: "cone", cut: "straight down through its tip, perpendicular to the base", shape: "triangle", picture: slice("cone", "down") },
+  { solid: "square pyramid", cut: "parallel to its base", shape: "square", picture: slice("square-pyramid", "across") },
+  { solid: "square pyramid", cut: "straight down through its top point, perpendicular to the base", shape: "triangle", picture: slice("square-pyramid", "down") },
   { solid: "sphere", cut: "anywhere", shape: "circle" },
-  { solid: "rectangular prism (a box)", cut: "straight down, perpendicular to its base", shape: "rectangle" },
+  { solid: "rectangular prism (a box)", cut: "straight down, perpendicular to its base", shape: "rectangle", picture: slice("box", "down") },
 ];
 
 const sliceShape: Maker = () => {
@@ -172,6 +173,7 @@ const sliceShape: Maker = () => {
     { label: s.shape, shape: s.shape },
     others.map((x) => ({ label: x, shape: x })),
     "Picture the knife going through the solid and look at the cut face.",
+    s.picture,
   );
 };
 
@@ -182,18 +184,21 @@ const sliceSize: Maker = () =>
       "It is a smaller circle",
       ["It is a bigger circle", "It is the same size as the base", "It is a triangle"],
       "A cone gets narrower toward the tip, so slices near the tip are smaller circles.",
+      slice("cone", "across"),
     ),
     pickOne(
       "A cylinder is sliced parallel to its base, halfway up. How does the circle compare with the base?",
       "It is the same size as the base",
       ["It is a smaller circle", "It is a bigger circle", "It is a rectangle"],
       "A cylinder is the same width all the way up, so every slice parallel to the base matches it.",
+      slice("cylinder", "across"),
     ),
     pickOne(
       "A rectangular prism is sliced parallel to its base. How does the slice compare with the base?",
       "It is a rectangle the same size as the base",
       ["It is a smaller rectangle", "It is a triangle", "It is a circle"],
       "A prism has the same cross-section all the way through.",
+      slice("box", "across"),
     ),
   ]);
 

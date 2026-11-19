@@ -49,3 +49,35 @@ describe("solid and net pictures", () => {
     }
   });
 });
+
+describe("slice pictures", () => {
+  // "What shape is the slice?" questions show the solid with the cut, never the shape of the cut face.
+  const cuts = new Map<string, Set<string>>();
+  for (const course of COURSES) {
+    if (course.subject !== "math" || ![7, 9].includes(Number(course.grade))) continue;
+    for (const unit of course.units) {
+      if (!/slice|triangles|dilations|geometry|construct/i.test(unit.id)) continue;
+      for (let s = 0; s < 6; s++)
+        for (const difficulty of [1, 2, 3] as const)
+          for (const q of withSeed(hashSeed(`slice:${unit.id}:${s}:${difficulty}`), () => unit.generate({ difficulty }))) {
+            const v = q.visual;
+            if (v?.type === "solid" && v.cut) {
+              expect(q.prompt.toLowerCase(), q.prompt).toMatch(/slice|cut|cross-section/);
+              expect(v.labels ?? {}, q.prompt).toEqual({});
+              const set = cuts.get(unit.id) ?? new Set<string>();
+              set.add(`${v.solid}:${v.cut}`);
+              cuts.set(unit.id, set);
+            }
+          }
+    }
+  }
+
+  it("appear in the California, New York and Florida slicing units, in both directions", () => {
+    const all = new Set([...cuts.values()].flatMap((s) => [...s]));
+    for (const kind of ["box", "cylinder", "cone", "square-pyramid"]) {
+      expect(all.has(`${kind}:across`), `${kind} across`).toBe(true);
+      expect(all.has(`${kind}:down`), `${kind} down`).toBe(true);
+    }
+    expect(cuts.size).toBeGreaterThanOrEqual(3);
+  });
+});

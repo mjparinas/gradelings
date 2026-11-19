@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import type { SolidKind, SolidLabelKey, SolidLabels } from "@/content/types";
+import type { SolidCut, SolidKind, SolidLabelKey, SolidLabels } from "@/content/types";
 
 // Drawings of 3-D solids and their nets, with measurements on the edges. Everything is drawn from the labels the
 // question hands over, so a picture never says more than its own numbers do.
@@ -35,9 +35,10 @@ const LABEL_WORD: Record<SolidLabelKey, string> = {
 };
 
 /** The text a screen reader gets: the solid, then each measurement. */
-export function solidDescription(kind: SolidKind, labels: SolidLabels | undefined, net: boolean): string {
+export function solidDescription(kind: SolidKind, labels: SolidLabels | undefined, net: boolean, cut?: SolidCut): string {
   const parts = (Object.keys(labels ?? {}) as SolidLabelKey[]).map((k) => `${LABEL_WORD[k]} ${labels?.[k] === "?" ? "unknown" : labels?.[k]}`);
-  return `${net ? "a net of a " : "a "}${KINDS[kind].name}${parts.length ? `, ${parts.join(", ")}` : ""}`;
+  const cutText = cut === "across" ? ", with a flat cut parallel to its base" : cut === "down" ? ", with a flat cut straight down through the middle" : "";
+  return `${net ? "a net of a " : "a "}${KINDS[kind].name}${parts.length ? `, ${parts.join(", ")}` : ""}${cutText}`;
 }
 
 function T({ x, y, anchor = "middle", children }: { x: number; y: number; anchor?: "start" | "middle" | "end"; children: ReactNode }) {
@@ -392,7 +393,33 @@ function ConeNet({ labels }: { labels?: SolidLabels }) {
 }
 
 /** A solid or its net, drawn with the measurements the question gives. */
-export function SolidPicture({ kind, labels, net = false }: { kind: SolidKind; labels?: SolidLabels; net?: boolean }) {
+// ---------- Cutting planes ----------
+
+// Where each solid sits in the picture (see its drawing above): the span the plane covers, the height of a cut
+// parallel to the base, and the top and bottom of a cut straight down. A box and a cube are drawn with no labels,
+// so their default proportions apply. The plane says nothing about the shape of the cut face; the child works that out.
+const PLANE: Partial<Record<SolidKind, { left: number; right: number; level: number; top: number; bottom: number }>> = {
+  box: { left: 44, right: 232, level: 112, top: 30, bottom: 154 },
+  cube: { left: 44, right: 190, level: 100, top: 22, bottom: 154 },
+  cylinder: { left: 28, right: 164, level: 90, top: 24, bottom: 152 },
+  cone: { left: 22, right: 162, level: 100, top: 12, bottom: 152 },
+  "square-pyramid": { left: 20, right: 200, level: 100, top: 14, bottom: 154 },
+};
+
+const PLANE_FILL = "#e9559a";
+
+function CutPlane({ kind, cut }: { kind: SolidKind; cut: SolidCut }) {
+  const b = PLANE[kind];
+  if (!b) return null;
+  const style = { fill: PLANE_FILL, fillOpacity: 0.22, stroke: "#b3225f", strokeWidth: 2, strokeDasharray: "6 4", strokeLinejoin: "round" as const };
+  if (cut === "across") {
+    const skew = 26;
+    return <polygon points={`${b.left},${b.level + 10} ${b.right - skew},${b.level + 10} ${b.right},${b.level - 12} ${b.left + skew},${b.level - 12}`} {...style} />;
+  }
+  return <rect x={b.left} y={b.top} width={b.right - b.left} height={b.bottom - b.top} rx="3" {...style} />;
+}
+
+export function SolidPicture({ kind, labels, net = false, cut }: { kind: SolidKind; labels?: SolidLabels; net?: boolean; cut?: SolidCut }) {
   let body: ReactNode;
   switch (kind) {
     case "box":
@@ -418,8 +445,9 @@ export function SolidPicture({ kind, labels, net = false }: { kind: SolidKind; l
       break;
   }
   return (
-    <svg width="288" height="216" viewBox={`0 0 ${W} ${H}`} role="img" aria-label={solidDescription(kind, labels, net)} className="max-w-full">
+    <svg width="288" height="216" viewBox={`0 0 ${W} ${H}`} role="img" aria-label={solidDescription(kind, labels, net, cut)} className="max-w-full">
       {body}
+      {cut && !net && <CutPlane kind={kind} cut={cut} />}
     </svg>
   );
 }

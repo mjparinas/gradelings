@@ -190,6 +190,8 @@ function checkVisual(v: Visual) {
         stacked: ["length", "width", "height", "edge"],
       };
       if (kind === "stacked") expect(v.type).toBe("solid");
+      // A cut is drawn only on the solids that have a cutting plane.
+      if (v.type === "solid" && v.cut) expect(["box", "cube", "cylinder", "cone", "square-pyramid"]).toContain(kind);
       for (const [key, text] of Object.entries(v.labels ?? {})) {
         expect(allowed[kind]).toContain(key);
         expect(text.length).toBeGreaterThanOrEqual(1);

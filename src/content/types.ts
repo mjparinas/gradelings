@@ -101,7 +101,7 @@ export type Visual =
   /** An angle drawn with two rays. */
   | { type: "angle"; degrees: number }
   /** A 3-D solid with its measurements written on the edges ("5 cm", or "?" for the one to find). */
-  | { type: "solid"; solid: SolidKind; labels?: SolidLabels }
+  | { type: "solid"; solid: SolidKind; labels?: SolidLabels; cut?: SolidCut }
   /** The flat net of a 3-D solid, with measurements on its edges. */
   | { type: "net"; net: SolidKind; labels?: SolidLabels }
   /** A science drawing (circuit, cell, Moon orbit, seasons, day and night). `label` describes it for screen readers. */
@@ -167,6 +167,9 @@ export type MoveFigure = "boot" | "triangle" | "square" | "hexagon";
 
 /** The outlines a `figure` picture can draw. */
 export type PlainFigure = "equilateral" | "isosceles" | "scalene" | "square" | "rectangle" | "rhombus" | "parallelogram" | "circle" | "oval" | "plus";
+
+/** A flat cut through a solid: `across` is parallel to its base, `down` is straight down through the middle. */
+export type SolidCut = "across" | "down";
 
 /** The solids that can be drawn (`solid`) or unfolded (`net`). A "stacked" solid is a box with a small cube on top; it has no net. */
 export type SolidKind = "box" | "cube" | "triangular-prism" | "cylinder" | "cone" | "square-pyramid" | "stacked";
