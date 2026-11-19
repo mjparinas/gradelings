@@ -1,3 +1,4 @@
+import { solid } from "../solids";
 import { pick, randInt, sample, shuffle, textChoice } from "../random";
 import type { GenerateOptions, Question, Unit, Visual } from "../types";
 import { buildSet, levelOf, on, others, numQ, range, typeIn } from "./kit";
@@ -639,9 +640,9 @@ function measure6(opts?: GenerateOptions): Question[] {
     const w = randInt(2, 6);
     const h = randInt(2, 7);
     return pick([
-      () => typeIn(`A box is ${l} cm long, ${w} cm wide and ${h} cm high. What is its surface area in square centimetres?`, 2 * (l * w + l * h + w * h), "Add the areas of all 6 faces: 2 × (lw + lh + wh).", { type: "shape", shape: "rectangular-prism" }),
-      () => typeIn(`A cube has edges of ${l} cm. What is its surface area in square centimetres?`, 6 * l * l, "A cube has 6 equal square faces.", { type: "shape", shape: "cube" }),
-      () => typeIn(`A square pyramid has a base of ${2 * l} cm by ${2 * l} cm. Each triangle face has a base of ${2 * l} cm and a height of ${h + l} cm. What is its surface area in square centimetres?`, 4 * l * l + 4 * l * (h + l), "Add the square base to the four triangle faces.", { type: "shape", shape: "pyramid" }),
+      () => typeIn(`A box is ${l} cm long, ${w} cm wide and ${h} cm high. What is its surface area in square centimetres?`, 2 * (l * w + l * h + w * h), "Add the areas of all 6 faces: 2 × (lw + lh + wh).", solid("box", { length: l, width: w, height: h })),
+      () => typeIn(`A cube has edges of ${l} cm. What is its surface area in square centimetres?`, 6 * l * l, "A cube has 6 equal square faces.", solid("cube", { edge: l })),
+      () => typeIn(`A square pyramid has a base of ${2 * l} cm by ${2 * l} cm. Each triangle face has a base of ${2 * l} cm and a height of ${h + l} cm. What is its surface area in square centimetres?`, 4 * l * l + 4 * l * (h + l), "Add the square base to the four triangle faces.", solid("square-pyramid", { base: 2 * l, slant: h + l })),
     ])();
   };
   return buildSet([convert, convert, clockwise, anglePair, d === 1 ? opposite : pick([exterior, exteriorAngle]), trapezoid, d === 1 ? composite : pick([rhombus, composite]), surface]);

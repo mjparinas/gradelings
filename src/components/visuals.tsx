@@ -1,6 +1,7 @@
 import { Fragment, type ReactNode } from "react";
 import { coinName, type Currency } from "@/content/money";
 import type { ShapeName, Visual } from "@/content/types";
+import { SolidPicture } from "./solids";
 import { AngleSplit, FigurePair, LineAngles, RegularPolygon, TriangleFigure } from "./Diagrams";
 import { Compass, MoveDrawing, PlainFigureDrawing, Protractor, Thermometers } from "./figureVisuals";
 import { CircleGraph, LinePlot, PlotGraph, TreeDiagram } from "./graphVisuals";
@@ -961,6 +962,10 @@ export function QuestionVisual({ visual }: { visual: Visual }) {
       return <CoordinateGrid size={visual.size} min={visual.min} points={visual.points} />;
     case "angle":
       return <Angle degrees={visual.degrees} />;
+    case "solid":
+      return <SolidPicture kind={visual.solid} labels={visual.labels} />;
+    case "net":
+      return <SolidPicture kind={visual.net} labels={visual.labels} net />;
     case "protractor":
       return <Protractor from={visual.from} to={visual.to} twoScales={visual.twoScales} />;
     case "thermometer":

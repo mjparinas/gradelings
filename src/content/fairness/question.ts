@@ -176,6 +176,27 @@ function checkVisual(v: Visual) {
       expect(v.degrees).toBeGreaterThan(0);
       expect(v.degrees).toBeLessThan(360);
       break;
+    case "solid":
+    case "net": {
+      // Every measurement is short enough to fit on its edge, and sits on an edge the solid has.
+      const kind = v.type === "solid" ? v.solid : v.net;
+      const allowed: Record<string, string[]> = {
+        box: ["length", "width", "height"],
+        cube: ["edge"],
+        "triangular-prism": ["base", "height", "length"],
+        cylinder: ["radius", "diameter", "height", ...(v.type === "net" ? ["circumference"] : [])],
+        cone: ["radius", "diameter", "slant", ...(v.type === "solid" ? ["height"] : [])],
+        "square-pyramid": ["base", "slant", ...(v.type === "solid" ? ["height"] : [])],
+        stacked: ["length", "width", "height", "edge"],
+      };
+      if (kind === "stacked") expect(v.type).toBe("solid");
+      for (const [key, text] of Object.entries(v.labels ?? {})) {
+        expect(allowed[kind]).toContain(key);
+        expect(text.length).toBeGreaterThanOrEqual(1);
+        expect(text.length).toBeLessThanOrEqual(14);
+      }
+      break;
+    }
     case "protractor":
       for (const x of [v.from, v.to]) {
         expect(x).toBeGreaterThanOrEqual(0);

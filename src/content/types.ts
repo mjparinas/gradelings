@@ -100,6 +100,10 @@ export type Visual =
   | { type: "grid"; size: number; min?: number; points: { x: number; y: number; label?: string }[] }
   /** An angle drawn with two rays. */
   | { type: "angle"; degrees: number }
+  /** A 3-D solid with its measurements written on the edges ("5 cm", or "?" for the one to find). */
+  | { type: "solid"; solid: SolidKind; labels?: SolidLabels }
+  /** The flat net of a 3-D solid, with measurements on its edges. */
+  | { type: "net"; net: SolidKind; labels?: SolidLabels }
   /** A science drawing (circuit, cell, Moon orbit, seasons, day and night). `label` describes it for screen readers. */
   | { type: "diagram"; diagram: Diagram; label: string }
   /** A circle graph; each sector's size follows its `value`, and `show` (default: nothing) is a second line written on it. */
@@ -163,6 +167,17 @@ export type MoveFigure = "boot" | "triangle" | "square" | "hexagon";
 
 /** The outlines a `figure` picture can draw. */
 export type PlainFigure = "equilateral" | "isosceles" | "scalene" | "square" | "rectangle" | "rhombus" | "parallelogram" | "circle" | "oval" | "plus";
+
+/** The solids that can be drawn (`solid`) or unfolded (`net`). A "stacked" solid is a box with a small cube on top; it has no net. */
+export type SolidKind = "box" | "cube" | "triangular-prism" | "cylinder" | "cone" | "square-pyramid" | "stacked";
+
+/**
+ * Where a measurement is written. `length`, `width` and `height` are a box's edges (a prism's `length` is the way it
+ * runs back); `edge` is a cube's; `base` is the side the solid sits on; `radius` or `diameter` belongs to a cylinder or cone;
+ * `slant` is a pyramid's or cone's sloping height. A net adds `circumference` for the side of a cylinder.
+ */
+export type SolidLabelKey = "length" | "width" | "height" | "edge" | "base" | "radius" | "diameter" | "slant" | "circumference";
+export type SolidLabels = Partial<Record<SolidLabelKey, string>>;
 
 export interface Choice {
   id: string;

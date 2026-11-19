@@ -599,7 +599,7 @@
       "symmetry-ab text=328ae79269 std=2253e9b76f q=55323f8179",
       "transformations text=94e34ce668 std=d15668bb81 q=a802fabebb",
       "perimeter-and-area text=44afdbe788 std=3493fa45ac q=8a2b7b1158",
-      "volume-and-capacity text=57006408db std=f19de34bec q=0c1a7e8d2f"
+      "volume-and-capacity text=57006408db std=f19de34bec q=5a5095ecfd"
     ]
   },
   "6/science": {
@@ -805,8 +805,8 @@
       "linear-relations-ab text=3ef9188889 std=b050c38d68 q=e4d76bdf86",
       "bracket-equations-ab text=d802eb7882 std=4bdf8bb0a1 q=3719a7ef86",
       "pythagorean-theorem text=014e1086f2 std=6babe88a34 q=bcc8d87763",
-      "nets-views-ab text=6df5a9626c std=70b430b6ae q=27eb75caed",
-      "surface-area-volume text=a5298071b5 std=dcfc3f15a9 q=5c73cae8f9",
+      "nets-views-ab text=6df5a9626c std=70b430b6ae q=e097fdbb09",
+      "surface-area-volume text=a5298071b5 std=dcfc3f15a9 q=605671cace",
       "congruence-ab text=2124f8bea5 std=124306c4cb q=0fa6ddeb25",
       "graph-critique-ab text=603cee2a96 std=5050645145 q=2011d04baf",
       "independent-events-ab text=1f0907c09b std=b79b2a54d4 q=f60240f344"
@@ -918,7 +918,7 @@
       "linear-relations text=d5718915ca std=8015b3add0 q=5737c7d8a8",
       "similarity-and-scale text=541110d627 std=f6e3df8496 q=85409fefdf",
       "circles-ab text=0bfecda34b std=e9804bd5e1 q=92547dc066",
-      "surface-area-ab text=c4da6bfbc4 std=91bfa2ceb5 q=5db736f014",
+      "surface-area-ab text=c4da6bfbc4 std=91bfa2ceb5 q=6490b0cb05",
       "statistics-in-society text=9e4081b498 std=8e8148a9ec q=bae78cb576"
     ]
   },

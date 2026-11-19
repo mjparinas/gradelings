@@ -1,13 +1,13 @@
 import { fromBank, type BankItem } from "../bank";
 import { sample } from "../random";
-import type { GenerateOptions, Question, Unit } from "../types";
+import type { GenerateOptions, Question, Unit, Visual } from "../types";
 import { mb } from "./kit";
 
 // Units written for the Manitoba outcomes, from hand-written multiple-choice banks. The same bank feeds every
 // difficulty: easy sets use only the core items, harder sets mix in the stretch items (marked with `true`).
 
 /** prompt, right answer, wrong answers, hint, and `true` for a stretch item. */
-export type Q = readonly [prompt: string, right: string, wrong: string[], hint: string, hard?: true];
+export type Q = readonly [prompt: string, right: string, wrong: string[], hint: string, hard?: boolean, visual?: Visual];
 
 interface Spec {
   id: string;
@@ -22,7 +22,7 @@ interface Spec {
   size?: number;
 }
 
-const toBank = ([prompt, right, wrong, hint]: Q): BankItem => ({ prompt, right, wrong, hint });
+const toBank = ([prompt, right, wrong, hint, , visual]: Q): BankItem => ({ prompt, right, wrong, hint, ...(visual ? { visual } : {}) });
 
 export function bankUnit(spec: Spec): Unit {
   const easy = spec.items.filter((q) => !q[4]).map(toBank);

@@ -1,5 +1,5 @@
 import { sample, shuffle, textChoice } from "./random";
-import type { Choice, Question, SortQuestion } from "./types";
+import type { Choice, Question, SortQuestion, Visual } from "./types";
 
 type Option = Omit<Choice, "id"> | string;
 
@@ -13,6 +13,8 @@ export interface BankItem {
   hint: string;
   emoji?: string;
   caption?: string;
+  /** A picture of its own (a solid, a net). Used in place of `emoji`. */
+  visual?: Visual;
 }
 
 export function fromBank(items: BankItem[], count: number): Question[] {
@@ -22,7 +24,7 @@ export function fromBank(items: BankItem[], count: number): Question[] {
       b.right,
       b.wrong,
       b.hint,
-      b.emoji ? { type: "emoji", emoji: b.emoji, caption: b.caption } : undefined,
+      b.visual ?? (b.emoji ? { type: "emoji", emoji: b.emoji, caption: b.caption } : undefined),
     );
     if (b.speak) q.speak = b.speak;
     return q;
