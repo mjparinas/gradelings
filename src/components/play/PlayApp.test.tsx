@@ -97,6 +97,7 @@ vi.mock("./Start", () => ({
 }));
 vi.mock("./Toasts", () => ({ Toasts: () => null }));
 vi.mock("./ClassTimer", () => ({ ClassTimerChip: () => null }));
+vi.mock("./AppBadge", () => ({ AppBadge: () => null }));
 vi.mock("./LessonScreen", () => ({ LessonScreen: screenStub("LessonScreen") }));
 vi.mock("./StickerBook", () => ({ StickerBook: screenStub("StickerBook") }));
 vi.mock("./Room", () => ({ Room: screenStub("Room") }));

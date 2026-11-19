@@ -17,6 +17,7 @@ import { emailChoice, emailPatch, type EmailChoice, type EmailPrefs } from "@/li
 import { AdultsPanel } from "./Adults";
 import { Choice, PageTitle, Panel } from "./common";
 import { ParentPin } from "./ParentPin";
+import { NotificationsPanel } from "./Notifications";
 import { PrivacyPanels } from "./Privacy";
 import { VoicePicker } from "./VoicePicker";
 
@@ -386,6 +387,7 @@ export function AccountPage({ onBilling }: { onBilling: (b: BillingInfo | null) 
               />
             </Panel>
           )}
+          {account && !account.student && <NotificationsPanel />}
           {account && <SecurityPanel />}
           {account && !account.student && <AdultsPanel />}
           <ParentPin />

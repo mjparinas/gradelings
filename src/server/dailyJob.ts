@@ -28,6 +28,8 @@ import { goalEmailLines, goalProgress } from "@/lib/goalPlan";
 import { goalName } from "@/lib/goalPlanText";
 import { canUse, TRIAL_NOTICE_DAYS, TRIAL_RECAP_DAYS_LEFT } from "@/lib/plan";
 import { getFamilyRow, toFamilyInfo } from "@/server/family";
+import { familiesWithPush, sendPush, subscriptionsOf } from "@/server/push";
+import { childMessage, daysBetween, homeworkWaiting, PUSH_GAP_DAYS, reminderMessage, weeklyMessage } from "@/lib/pushMessages";
 import { atHomeIdea, atHomeLine, factsWeekLine, storiesLine, storiesThisWeek } from "@/lib/weeklyExtras";
 import { derive } from "@/lib/derive";
 import { unitLevel } from "@/lib/proficiency";
@@ -55,7 +57,7 @@ const WEEKLY_CATCH_UP_DAYS = 2;
 /** After this many runs in one day that still left work undone, the admins are told. */
 export const STUCK_AFTER_RUNS = 4;
 
-export const PHASES = ["cleanup", "recaps", "trial-notices", "reminders", "weekly", "year-review", "class-digest", "consent", "automations", "digest"] as const;
+export const PHASES = ["cleanup", "recaps", "trial-notices", "reminders", "weekly", "push", "year-review", "class-digest", "consent", "automations", "digest"] as const;
 export type Phase = (typeof PHASES)[number];
 
 export interface DailyState {
@@ -99,6 +101,7 @@ export interface DailyResult {
   trialNotices: number;
   trialRecaps: number;
   weekly: number;
+  pushes: number;
   reminders: number;
   yearReviews: number;
   classDigests: number;
@@ -148,6 +151,7 @@ export async function runDaily(opts: DailyOptions): Promise<DailyResult> {
     trialNotices: 0,
     trialRecaps: 0,
     weekly: 0,
+    pushes: 0,
     reminders: 0,
     yearReviews: 0,
     classDigests: 0,
@@ -198,6 +202,7 @@ const PHASE_RUNNERS: Record<Phase, (ctx: Ctx) => Promise<boolean>> = {
   "trial-notices": trialNotices,
   reminders: practiceReminders,
   weekly: weeklyReports,
+  push: pushNotifications,
   "year-review": yearReviews,
   "class-digest": classDigests,
   consent: async (ctx) => {
@@ -381,6 +386,59 @@ async function practiceReminders(ctx: Ctx): Promise<boolean> {
       }
     } catch (e) {
       console.error("[reminders] failed for one family", (e as Error).message);
+    }
+  }
+  return true;
+}
+
+// Notifications (flag `push-notifications`): a parent's devices get the weekly summary on Sundays and, if a child has been
+// quiet for 3 days, a reminder; a child's device gets homework waiting. Each device at most once a day, and the gaps in
+// PUSH_GAP_DAYS keep it to a few a week. A family that turned them on is the only one ever looked at.
+async function pushNotifications(ctx: Ctx): Promise<boolean> {
+  const { now, result } = ctx;
+  const day = utcDay(now);
+  const sunday = new Date(now).getUTCDay() === 0;
+  for (const familyId of await familiesWithPush()) {
+    if (ctx.over()) return false;
+    ctx.worked++;
+    try {
+      if (!(await isFlagOn("push-notifications", familyId))) continue;
+      const subs = await subscriptionsOf(familyId);
+      const names: string[] = [];
+      const quiet: { name: string; daysQuiet: number }[] = [];
+      const homework = new Map<string, { waiting: number; title?: string }>();
+      const needsReports = subs.some((s) => s.kind === "parent") && (sunday || subs.some((s) => s.kind === "parent" && daysBetween(s.last_day, day) >= PUSH_GAP_DAYS.reminder));
+      const classwork = subs.some((s) => s.kind === "child") ? await familyClasswork(familyId, now) : [];
+      for (const id of await familyProfileIds(familyId)) {
+        if (needsReports) {
+          const r = await loadChildReport(familyId, id, 30, now);
+          if (r) {
+            names.push(r.profile.name);
+            const days = r.report.days;
+            const last = days.findLastIndex((d) => d.answers > 0);
+            if (last >= 0 && days.length - 1 - last >= 3) quiet.push({ name: r.profile.name, daysQuiet: days.length - 1 - last });
+          }
+        }
+        if (subs.some((s) => s.kind === "child" && s.profile_id === id)) {
+          const r = await loadChildData(familyId, id, 7, now);
+          if (!r) continue;
+          const waiting = homeworkWaiting(childHomework(classwork, id, r.events, (k) => unitLevel(r.derived.units[k]), now), now);
+          if (waiting.length) homework.set(id, { waiting: waiting.length, title: getUnitRef(waiting[0].key, r.profile.framework)?.unit.title });
+        }
+      }
+      for (const sub of subs) {
+        let message;
+        if (sub.kind === "parent") {
+          if (sunday && daysBetween(sub.last_day, day) >= PUSH_GAP_DAYS.weekly && names.length) message = weeklyMessage(names);
+          else if (!sunday && quiet.length && daysBetween(sub.last_day, day) >= PUSH_GAP_DAYS.reminder) message = reminderMessage(quiet);
+        } else if (sub.profile_id && daysBetween(sub.last_day, day) >= PUSH_GAP_DAYS.child) {
+          const h = homework.get(sub.profile_id);
+          if (h) message = childMessage(h.waiting, h.title);
+        }
+        if (message && (await sendPush(sub, message, day)) === "sent") result.pushes++;
+      }
+    } catch (e) {
+      console.error("[push] failed for one family", (e as Error).message);
     }
   }
   return true;
