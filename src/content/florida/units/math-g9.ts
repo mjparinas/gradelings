@@ -1,4 +1,5 @@
 import { pick, randInt } from "../../random";
+import { semicircleOnEnd } from "../../joined";
 import type { Unit } from "../../types";
 import { bankUnit, type Q } from "../own";
 import { fmt, mathUnit, num, pickOne, sup, typed, type Maker } from "./math-kit";
@@ -447,7 +448,7 @@ const composite: Maker = () => {
   const w = randInt(4, 10);
   const r = pick([2, 3, 4]);
   const h = 2 * r;
-  return pickOne(`A ${w} by ${h} rectangle has a semicircle of radius ${r} added on its ${h} side. Which is the total area?`, `${w * h} + ${fmt((r * r) / 2)}π`, [`${w * h} + ${fmt(r * r)}π`, `${w * h} + ${fmt(r)}π`, `${w * h}`], "Add the rectangle to half a circle: (πr²) ÷ 2.");
+  return pickOne(`A ${w} by ${h} rectangle has a semicircle of radius ${r} added on its ${h} side. Which is the total area?`, `${w * h} + ${fmt((r * r) / 2)}π`, [`${w * h} + ${fmt(r * r)}π`, `${w * h} + ${fmt(r)}π`, `${w * h}`], "Add the rectangle to half a circle: (πr²) ÷ 2.", semicircleOnEnd(w, h, `radius ${r}`));
 };
 
 const DILATION_MEASURES = mathUnit({

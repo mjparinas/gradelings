@@ -178,7 +178,7 @@
       "community-services text=26d27aa27c std=fdf7b97d2d q=22cd5a9649",
       "wa-g1-earn-save-share text=ff3274fdf3 std=7013d6b1a4 q=2bb7ea855e",
       "pe-goods-and-services-1 text=55be22b8f4 std=0ba42988be q=43e8316788",
-      "maps text=0393b6b3b0 std=6e3c2a9cef q=671d944151",
+      "maps text=0393b6b3b0 std=6e3c2a9cef q=bb8e729a47",
       "our-land text=9250f303b3 std=503a83c9a5 q=c1704cb4f1",
       "changes-in-my-life text=d5ee1318f1 std=f418e875f5 q=d9a4ad3785",
       "social-studies-detectives text=4a14dd77f7 std=6452d7fcf6 q=de0e216f7f",
@@ -260,7 +260,7 @@
       "al-g2-holidays text=5807c39c0a std=41879559b0 q=592228815f",
       "al-g2-founders text=58ee01329c std=be4d8d3f16 q=7ae396724b",
       "al-g2-american-symbols text=2aa488d75e std=752e987df9 q=2cbff35e4b",
-      "al-g2-reading-maps text=340d8f0737 std=9592b5725c q=d462f2e233",
+      "al-g2-reading-maps text=340d8f0737 std=9592b5725c q=9434a12f80",
       "al-g2-moving text=950b80ba00 std=5b3c5c54c1 q=ff7ead8750",
       "al-g2-stories-songs text=22cfdf4683 std=4f1bd410da q=1c5a5d9148"
     ]
@@ -476,7 +476,7 @@
       "matter-changes-5 text=3b4d86e7a6 std=4454dbd900 q=d36ded63b1",
       "wa-g5-energy-food text=7248a5bf2e std=e7839d7bc5 q=2c5e9d47f6",
       "tx-g5-conservation text=72bfee10bd std=06ab6d4ec2 q=b8c301b7e2",
-      "al-g5-sun-stars text=b4294ab2b4 std=4858dc3558 q=dab62a6ab6",
+      "al-g5-sun-stars text=b4294ab2b4 std=4858dc3558 q=21e315b2a6",
       "al-g5-earth-water text=b80c2c4641 std=130bb4d984 q=c769af7621",
       "al-g5-ecosystems text=3b4a0e3261 std=6901c72ee2 q=9ef76283b0",
       "al-g5-gravity text=2a57f71397 std=6d283fd89b q=ed47423e19"
@@ -610,7 +610,7 @@
   "7/math": {
     "overview": "b7ab1d27fb",
     "units": [
-      "integer-add-subtract text=0f49d1bba6 std=8aabfc8186 q=1e24134b03",
+      "integer-add-subtract text=0f49d1bba6 std=8aabfc8186 q=ecc058d9c0",
       "decimal-operations text=56ab979d6a std=c81e35f120 q=7f89d319c6",
       "fractions-decimals-percents text=12d27e2a2e std=fd36e2deac q=1030c5dd8d",
       "two-step-equations text=ddaa3cce54 std=a3defe376c q=4d67a1e779",
@@ -624,17 +624,17 @@
       "central-tendency-ab text=b776821b16 std=3e290d716e q=cc21b8662c",
       "wa-g7-signed-multiply text=61c895d791 std=471d53c6ea q=d7c2440ec8",
       "wa-g7-proportional text=c11cf565b3 std=c0fb5b89a7 q=f13197f7aa",
-      "wa-g7-angles text=73a7a5215c std=e97b5a78c0 q=b384ae13b6",
+      "wa-g7-angles text=73a7a5215c std=e97b5a78c0 q=1c4acd8aaa",
       "wa-g7-sampling text=194eb9c3c2 std=b58b61f920 q=d8e6ffaf2a",
       "wa-g7-scale-drawings text=44f1660d4b std=10fb8765f0 q=480f217aff",
-      "area-constructions-ab text=8f1ce023d1 std=1c01cdeed3 q=b0455b7f90"
+      "area-constructions-ab text=8f1ce023d1 std=1c01cdeed3 q=8e9e18ef3a"
     ]
   },
   "7/science": {
     "overview": "b6c086613a",
     "units": [
-      "wa-g6-cells text=fa8ea2c4ff std=9ce802b551 q=23e69bce93",
-      "cells-and-life text=26001b2c5a std=785cff1bc1 q=fcae7914fa",
+      "wa-g6-cells text=fa8ea2c4ff std=9ce802b551 q=0b5f935db7",
+      "cells-and-life text=26001b2c5a std=785cff1bc1 q=a094ada7e9",
       "cells-diffusion-ab text=caaea79aff std=1b4623fa7b q=650ba01e94",
       "photosynthesis-respiration-9 text=aa7d1dc3bb std=15733d82f4 q=a8703c2a22",
       "cells-from-cells text=bf9b3d6d2e std=d4c720934a q=17bf1b2a92",
@@ -702,20 +702,20 @@
     "units": [
       "squares-and-roots text=0c3411fb05 std=f23a9edf41 q=44906b78d6",
       "linear-equations text=1e22122340 std=e9dc021469 q=4ba669b446",
-      "pythagorean-theorem text=014e1086f2 std=483e05324e q=99835d112c",
+      "pythagorean-theorem text=014e1086f2 std=483e05324e q=bcc8d87763",
       "surface-area-volume text=96a6eb6597 std=ac519b581c q=4814ba7613",
       "numbers-8 text=8bc8425026 std=dc14346aed q=9e9e88cf93",
       "data-8 text=f67cb7cc17 std=a77ba9cd06 q=61afebfaea",
       "transformations-8 text=872e7f5b99 std=db68d5cfca q=861609ebde",
-      "angles-8 text=899ecf6fe2 std=828084d1f8 q=547f9529ab",
-      "linear-relations-ab text=3ef9188889 std=9db06e55cf q=8f11287d9e",
+      "angles-8 text=899ecf6fe2 std=828084d1f8 q=f4e15bb736",
+      "linear-relations-ab text=3ef9188889 std=9db06e55cf q=e4d76bdf86",
       "bracket-equations-ab text=d802eb7882 std=d961694158 q=3719a7ef86",
       "congruence-ab text=2124f8bea5 std=a259a971bf q=03cb70377c",
       "wa-g8-exponent-rules text=c6ea891ad5 std=8684dcf05a q=e041bd810e",
-      "wa-g8-systems text=b290721dd7 std=3ce0fb50b5 q=b5967231f6",
+      "wa-g8-systems text=b290721dd7 std=3ce0fb50b5 q=2a17ebc3b0",
       "wa-g8-functions text=906e422768 std=feb8893e4c q=b704358710",
       "wa-g8-round-volume text=46d3a6210c std=0b88254b7d q=32ed0fcc91",
-      "wa-g8-slope text=5956a66b16 std=cfcfbf20f3 q=c9e5f2a915",
+      "wa-g8-slope text=5956a66b16 std=cfcfbf20f3 q=2c900999a3",
       "wa-g8-two-way-tables text=cfbbd30e3f std=d5ca0b171b q=806c0ab1ec"
     ]
   },
@@ -735,7 +735,7 @@
       "wa-g8-fields text=8fbd720783 std=99e569e5c1 q=603f693f54",
       "wa-g8-energy text=b848db1d45 std=fbc7a419e2 q=cdf3dadeb8",
       "work-energy-8 text=d9f28a6b8f std=2efe171ed4 q=db86881bac",
-      "circuits-and-static text=b28ece42b0 std=3e0697431c q=b84f825935",
+      "circuits-and-static text=b28ece42b0 std=3e0697431c q=a01cfadf82",
       "light-and-radiation text=9e640798cf std=373ce96909 q=9cc1a70761",
       "tx-g6-energy-waves text=be0596c737 std=988149b18f q=a05cbb60ba"
     ]
@@ -791,11 +791,11 @@
       "number-sets-9 text=2e841b16e4 std=59e5e3b68c q=0bb5534a95",
       "wa-g9-formulas text=eef04c92bf std=8e0131cfdc q=56c094d4f8",
       "lines-9 text=a0d34ff620 std=cbacb57a2f q=952170d895",
-      "linear-relations text=d5718915ca std=44f31e3a23 q=1e254a9707",
+      "linear-relations text=d5718915ca std=44f31e3a23 q=5737c7d8a8",
       "or-g9-coordinate-geometry text=1e3bb96519 std=ede3c41b39 q=8171a4b9bd",
-      "similarity-and-scale text=541110d627 std=afb31268a4 q=6b0c573164",
-      "geometry-9 text=d3083b3128 std=5fd78a2b0e q=1d23105788",
-      "or-g9-trig text=66898f64a1 std=e30f1a1ad5 q=0c66f82476",
+      "similarity-and-scale text=541110d627 std=afb31268a4 q=f774f576dc",
+      "geometry-9 text=d3083b3128 std=5fd78a2b0e q=b6754b48f4",
+      "or-g9-trig text=66898f64a1 std=e30f1a1ad5 q=876facce09",
       "circles-ab text=5fac69b0c1 std=007da65f88 q=d38bdef60a",
       "mb-line-rotation-symmetry text=9f105d7003 std=2f9ab6be24 q=cc2c198ec8",
       "surface-area-ab text=c4da6bfbc4 std=66d8969c4e q=6490b0cb05",
@@ -804,7 +804,7 @@
       "statistics-in-society text=9e4081b498 std=1a1ccacf8b q=bae78cb576",
       "wa-g9-two-way-tables text=08e8a9ad61 std=5791f673dd q=1d2a6401be",
       "wa-g9-functions text=9916295729 std=37fef72cbc q=690ab442e5",
-      "wa-g9-systems text=af9fd1b6dc std=3236a31609 q=abb4800646",
+      "wa-g9-systems text=af9fd1b6dc std=3236a31609 q=a14aeddb37",
       "wa-g9-quadratics text=9f8fc6709d std=aeb31fea2d q=d3022a54a4"
     ]
   },

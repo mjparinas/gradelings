@@ -1,6 +1,6 @@
 import { net as netPicture, solid } from "../solids";
 import { pick, randInt, sample, shuffle, textChoice } from "../random";
-import type { GenerateOptions, Question, Unit } from "../types";
+import type { GenerateOptions, Question, Unit, Visual } from "../types";
 import { buildSet, levelOf, on, numQ, range, spaced, typeIn } from "./kit";
 
 // Ontario Grade 7 mathematics (2020 curriculum). Whole numbers go up to a billion; rational numbers,
@@ -391,11 +391,12 @@ function data7(opts?: GenerateOptions): Question[] {
     const part = (total * pick([5, 10, 15, 20, 25, 30, 40])) / 100;
     return typeIn(`In a survey of ${total} students, ${part} walk to school. What percent walk?`, (part * 100) / total, `Write ${part}/${total} as a fraction out of 100.`, undefined, { suffix: "%" });
   };
+  const oneSector = (pct: number, show: string): Visual => ({ type: "circleGraph", sectors: [{ label: "This sector", value: pct, show }, { label: "", value: 100 - pct }] });
   const sector = (): Question => {
     const pct = pick([5, 10, 15, 20, 25, 30, 40, 50]);
     return pick([
-      () => typeIn(`A sector of a circle graph is ${(pct * 360) / 100}°. What percent of the graph is that?`, pct, "A whole circle is 360°. Divide the angle by 360.", undefined, { suffix: "%" }),
-      () => typeIn(`A sector of a circle graph shows ${pct}%. What is the angle of the sector, in degrees?`, (pct * 360) / 100, "A whole circle is 360°. Find the percent of 360.", undefined, { suffix: "°" }),
+      () => typeIn(`A sector of a circle graph is ${(pct * 360) / 100}°. What percent of the graph is that?`, pct, "A whole circle is 360°. Divide the angle by 360.", oneSector(pct, `${(pct * 360) / 100}°`), { suffix: "%" }),
+      () => typeIn(`A sector of a circle graph shows ${pct}%. What is the angle of the sector, in degrees?`, (pct * 360) / 100, "A whole circle is 360°. Find the percent of 360.", oneSector(pct, `${pct}%`), { suffix: "°" }),
     ])();
   };
   const addData = (): Question => {

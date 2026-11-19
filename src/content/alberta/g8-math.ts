@@ -395,12 +395,17 @@ const graphCritique = fromItems(GRAPHS, [
     const N = pick(l === 1 ? [80, 200] : [80, 120, 200, 500]);
     const p = pick(l === 1 ? [25, 50] : [15, 30, 35, 45]);
     const a = (N * p) / 100;
-    return typed(`In a circle graph of ${N} survey responses, the 'walk to school' sector is ${p}%. How many responses is that?`, fmt(a), `${p}% of ${N} = ${p}/100 × ${N} = ${fmt(a)}.`, "number");
+    return typed(`In a circle graph of ${N} survey responses, the 'walk to school' sector is ${p}%. How many responses is that?`, fmt(a), `${p}% of ${N} = ${p}/100 × ${N} = ${fmt(a)}.`, "number", {
+      visual: { type: "circleGraph", title: `${N} survey responses`, sectors: [{ label: "Walk to school", value: p, show: `${p}%` }, { label: "Other ways", value: 100 - p }] },
+    });
   },
   () => {
     const parts = pick([[40, 25, 20], [35, 30, 15], [50, 20, 10], [45, 25, 5]]);
     const rest = 100 - parts[0] - parts[1] - parts[2];
-    return typed(`A circle graph has three sectors of ${parts[0]}%, ${parts[1]}% and ${parts[2]}%. One sector is left. What percent is it?`, String(rest), `The whole circle is 100%. 100 − ${parts[0]} − ${parts[1]} − ${parts[2]} = ${rest}.`, "number", { suffix: "%" });
+    return typed(`A circle graph has three sectors of ${parts[0]}%, ${parts[1]}% and ${parts[2]}%. One sector is left. What percent is it?`, String(rest), `The whole circle is 100%. 100 − ${parts[0]} − ${parts[1]} − ${parts[2]} = ${rest}.`, "number", {
+      suffix: "%",
+      visual: { type: "circleGraph", sectors: [...parts.map((v, i) => ({ label: "ABC"[i], value: v, show: `${v}%` })), { label: "D", value: rest, show: "?" }] },
+    });
   },
 ]);
 

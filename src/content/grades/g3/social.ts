@@ -61,13 +61,9 @@ function townMap() {
     r >= 0 && r < 3 && c >= 0 && c < 3 ? places[r * 3 + c] : undefined;
   const move = (r: number, c: number, d: Dir): [number, number] => [r + STEP[d][0], c + STEP[d][1]];
   const visual: Visual = {
-    type: "table",
-    title: "Map of Maple Town (north is at the top)",
-    headers: ["", "West", "Middle", "East"],
-    rows: ["North", "Middle", "South"].map((rowName, r) => [
-      rowName,
-      ...[0, 1, 2].map((c) => `${places[r * 3 + c].emoji} ${places[r * 3 + c].name}`),
-    ]),
+    type: "map",
+    title: "Map of Maple Town",
+    rows: [0, 1, 2].map((r) => [0, 1, 2].map((c) => ({ emoji: places[r * 3 + c].emoji, label: places[r * 3 + c].name }))),
   };
   return { places, at, move, visual };
 }

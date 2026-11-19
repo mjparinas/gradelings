@@ -167,7 +167,7 @@
   "1/social": {
     "overview": "50b3401163",
     "units": [
-      "maps text=0393b6b3b0 std=968e3e98ff q=671d944151",
+      "maps text=0393b6b3b0 std=968e3e98ff q=bb8e729a47",
       "our-land text=9250f303b3 std=71c55c71f1 q=c1704cb4f1",
       "my-community text=f4b6495f7a std=c20b14faa6 q=e0548ab0f6",
       "changes-in-my-life text=d5ee1318f1 std=239d832d51 q=d9a4ad3785",
@@ -458,7 +458,7 @@
       "mb-weather-5 text=db26ca3367 std=2518b01a09 q=9936aa0e30",
       "wa-g5-energy-food text=7248a5bf2e std=5c71a02c62 q=2c5e9d47f6",
       "or-g5-design text=6302707f88 std=2012268e59 q=5e2f08597c",
-      "ks-g5-sun-stars text=8120d80f59 std=7e139b10aa q=64e098cb89",
+      "ks-g5-sun-stars text=8120d80f59 std=7e139b10aa q=01b9f4fb77",
       "ks-g5-earth-water text=ec19bc929a std=73bf8603fe q=4bd092ea85",
       "ks-g5-ecosystems text=6b8e5e5b80 std=e7415eb716 q=bdb61aba1d"
     ]
@@ -536,7 +536,7 @@
     "units": [
       "body-systems text=c3cee90dd9 std=228346455d q=aa5f3b59c6",
       "nb-senses-6 text=d61db8792b std=2578a13681 q=7e37816267",
-      "wa-g6-cells text=dda472f3bf std=a6fac6f51f q=23e69bce93",
+      "wa-g6-cells text=dda472f3bf std=a6fac6f51f q=0b5f935db7",
       "wa-g6-thermal text=fa4c935e2b std=9261176860 q=369cdfaaee",
       "work-energy-8 text=6af421d21c std=b0e16c24c1 q=db86881bac",
       "ca-g6-human-impact text=8d04fb23b9 std=a0f6568d2c q=e8e81a8802",
@@ -593,7 +593,7 @@
   "7/math": {
     "overview": "5fe12b9753",
     "units": [
-      "integer-add-subtract text=0f49d1bba6 std=377d56f28f q=1e24134b03",
+      "integer-add-subtract text=0f49d1bba6 std=377d56f28f q=ecc058d9c0",
       "decimal-operations text=56ab979d6a std=c60f0a3536 q=7f89d319c6",
       "fractions-decimals-percents text=12d27e2a2e std=f7c6f7e227 q=1030c5dd8d",
       "two-step-equations text=ddaa3cce54 std=20cf6f327e q=4d67a1e779",
@@ -679,17 +679,17 @@
     "units": [
       "squares-and-roots text=0c3411fb05 std=0f4091477a q=44906b78d6",
       "linear-equations text=1e22122340 std=c2d8403fd9 q=4ba669b446",
-      "pythagorean-theorem text=014e1086f2 std=b048feaff3 q=99835d112c",
+      "pythagorean-theorem text=014e1086f2 std=b048feaff3 q=bcc8d87763",
       "surface-area-volume text=96a6eb6597 std=c5977a170e q=4814ba7613",
       "numbers-8 text=8bc8425026 std=98adfed48e q=9e9e88cf93",
       "data-8 text=f67cb7cc17 std=946eabec5e q=61afebfaea",
-      "angles-8 text=899ecf6fe2 std=6ab4c0f115 q=547f9529ab",
-      "linear-relations-ab text=3ef9188889 std=03480e46ee q=8f11287d9e",
+      "angles-8 text=899ecf6fe2 std=6ab4c0f115 q=f4e15bb736",
+      "linear-relations-ab text=3ef9188889 std=03480e46ee q=e4d76bdf86",
       "bracket-equations-ab text=d802eb7882 std=444431f7cf q=3719a7ef86",
       "wa-g8-functions text=906e422768 std=d96298469f q=b704358710",
       "wa-g8-round-volume text=46d3a6210c std=d06effd5a9 q=32ed0fcc91",
-      "wa-g8-slope text=5956a66b16 std=9a2c8f1065 q=c9e5f2a915",
-      "ca-g8-similar-distance text=dd75991b3f std=5e4090768b q=cf92cd38ac",
+      "wa-g8-slope text=5956a66b16 std=9a2c8f1065 q=2c900999a3",
+      "ca-g8-similar-distance text=dd75991b3f std=5e4090768b q=45852a3e03",
       "ca-g8-linear-models text=184aa29541 std=37b997822d q=75e8287d42"
     ]
   },
@@ -759,14 +759,14 @@
       "exponent-laws text=14558089af std=a49e7a53c5 q=8fb7aa1d0b",
       "polynomials text=608ddf33d1 std=d788501ae3 q=3a3e17fe5c",
       "multi-step-equations text=834b6c0c60 std=252617cb79 q=4823df05ba",
-      "linear-relations text=d5718915ca std=7f41aef2b7 q=1e254a9707",
+      "linear-relations text=d5718915ca std=7f41aef2b7 q=5737c7d8a8",
       "statistics-in-society text=9e4081b498 std=8522783372 q=bae78cb576",
       "expressions-9 text=c4cbafb40c std=8d9fdcd12a q=a48fbbb76c",
       "lines-9 text=a0d34ff620 std=5c8c03a90b q=952170d895",
       "data-9 text=d107431976 std=9dba95a3d1 q=03d4d4469f",
       "wa-g9-functions text=9916295729 std=112eeafe46 q=690ab442e5",
       "wa-g9-inequalities text=838f8a24f5 std=cbebfee0a3 q=e5b15cfeeb",
-      "wa-g9-systems text=af9fd1b6dc std=6f8b08046b q=abb4800646",
+      "wa-g9-systems text=af9fd1b6dc std=6f8b08046b q=a14aeddb37",
       "wa-g9-exponential text=500137f8a0 std=2068576925 q=5f897e7b41",
       "wa-g9-quadratics text=9f8fc6709d std=e24f14b428 q=d3022a54a4",
       "wa-g9-formulas text=eef04c92bf std=6c0d1b22e2 q=56c094d4f8",

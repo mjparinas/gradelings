@@ -101,6 +101,34 @@ function checkVisual(v: Visual) {
       expect(v.minute).toBeGreaterThanOrEqual(0);
       expect(v.minute).toBeLessThanOrEqual(59);
       break;
+    case "lineAngles":
+      expect(v.degrees).toBeGreaterThan(0);
+      expect(v.degrees).toBeLessThan(180);
+      expect(v.marks.length).toBeGreaterThanOrEqual(1);
+      expect(v.marks.length).toBeLessThanOrEqual(3);
+      if (v.layout === "cross") for (const m of v.marks) expect(m.pos.startsWith("top-")).toBe(true);
+      break;
+    case "angleSplit":
+      expect(v.parts.length).toBeGreaterThanOrEqual(2);
+      expect(v.parts.length).toBeLessThanOrEqual(3);
+      for (const p of v.parts) expect(p.degrees).toBeGreaterThan(0);
+      expect(v.parts.reduce((t, p) => t + p.degrees, 0)).toBeLessThanOrEqual(180.0001);
+      if (v.whole === "straight") expect(Math.round(v.parts.reduce((t, p) => t + p.degrees, 0))).toBe(180);
+      if (v.whole === "right") expect(Math.round(v.parts.reduce((t, p) => t + p.degrees, 0))).toBe(90);
+      break;
+    case "triangleFigure":
+      expect(Math.round(v.angles.reduce((t, a) => t + a, 0))).toBe(180);
+      for (const a of v.angles) expect(a).toBeGreaterThan(0);
+      break;
+    case "figurePair":
+      expect(v.ratio).toBeGreaterThan(1);
+      expect(v.a.length).toBe(v.shape === "triangle" ? 3 : 2);
+      expect(v.b.length).toBe(v.shape === "triangle" ? 3 : 2);
+      break;
+    case "polygon":
+      expect(v.sides).toBeGreaterThanOrEqual(3);
+      expect(v.sides).toBeLessThanOrEqual(12);
+      break;
     case "array":
       expect(v.rows).toBeGreaterThanOrEqual(1);
       expect(v.cols).toBeGreaterThanOrEqual(1);
@@ -114,6 +142,21 @@ function checkVisual(v: Visual) {
       expect(v.hundreds ?? 0).toBeLessThanOrEqual(9);
       expect(v.tens).toBeLessThanOrEqual(19);
       expect(v.ones).toBeLessThanOrEqual(19);
+      break;
+    case "map": {
+      expect(v.rows.length).toBeGreaterThanOrEqual(2);
+      expect(v.rows.length).toBeLessThanOrEqual(5);
+      const width = v.rows[0].length;
+      expect(width).toBeLessThanOrEqual(5);
+      for (const row of v.rows) expect(row.length, "every row of a map is as wide as the first").toBe(width);
+      if (v.cols) expect(v.cols.length).toBe(width);
+      if (v.rowLabels) expect(v.rowLabels.length).toBe(v.rows.length);
+      const names = v.rows.flat().flatMap((c) => (c ? [c.label ?? c.emoji] : []));
+      expect(new Set(names).size, "two squares of a map look the same").toBe(names.length);
+      break;
+    }
+    case "compass":
+      for (const a of v.around ?? []) expect(["N", "E", "S", "W"]).toContain(a.at);
       break;
     case "grid":
       for (const p of v.points) {
@@ -154,6 +197,76 @@ function checkVisual(v: Visual) {
       }
       break;
     }
+    case "protractor":
+      for (const x of [v.from, v.to]) {
+        expect(x).toBeGreaterThanOrEqual(0);
+        expect(x).toBeLessThanOrEqual(180);
+      }
+      expect(v.from === v.to).toBe(false);
+      break;
+    case "thermometer":
+      expect(v.max).toBeGreaterThan(v.min);
+      expect(v.values.length).toBeGreaterThanOrEqual(1);
+      expect(v.values.length).toBeLessThanOrEqual(3);
+      for (const x of v.values) {
+        expect(x).toBeGreaterThanOrEqual(v.min);
+        expect(x).toBeLessThanOrEqual(v.max);
+      }
+      break;
+    case "move":
+      if (v.move === "turn") expect(v.degrees ?? 90).toBeGreaterThan(0);
+      break;
+    case "circleGraph":
+      expect(v.sectors.length).toBeGreaterThanOrEqual(2);
+      expect(v.sectors.length).toBeLessThanOrEqual(8);
+      for (const x of v.sectors) expect(x.value, "a circle graph sector needs a size").toBeGreaterThan(0);
+      break;
+    case "linePlot":
+      expect(v.labels.length).toBe(v.counts.length);
+      expect(v.labels.length).toBeGreaterThanOrEqual(2);
+      expect(v.labels.length).toBeLessThanOrEqual(14);
+      for (const c of v.counts) expect(Number.isInteger(c) && c >= 0 && c <= 12, "line plot stack of 0 to 12").toBe(true);
+      break;
+    case "plot":
+      expect(v.xMax).toBeGreaterThan(v.xMin);
+      expect(v.yMax).toBeGreaterThan(v.yMin);
+      expect(v.series.length).toBeGreaterThanOrEqual(1);
+      for (const s of v.series) {
+        expect(s.points.length).toBeGreaterThanOrEqual(1);
+        for (const p of s.points) {
+          expect(Number.isFinite(p.x) && Number.isFinite(p.y)).toBe(true);
+        }
+      }
+      break;
+    case "tree":
+      expect(v.stages.length).toBeGreaterThanOrEqual(2);
+      expect(v.stages.reduce((n, st) => n * st.length, 1)).toBeLessThanOrEqual(24);
+      for (const st of v.stages) expect(st.length).toBeGreaterThanOrEqual(1);
+      break;
+    case "joined":
+      expect(v.parts.length).toBeGreaterThanOrEqual(1);
+      expect(v.parts.length).toBeLessThanOrEqual(3);
+      for (const part of v.parts) {
+        // Both sides or neither (the unknown part).
+        expect(part.w === undefined).toBe(part.h === undefined);
+        if (part.w !== undefined) expect(part.w).toBeGreaterThan(0);
+        if (part.h !== undefined) expect(part.h).toBeGreaterThan(0);
+      }
+      expect([v.cut, v.cap, v.cutTriangle].filter(Boolean).length).toBeLessThanOrEqual(1);
+      if (v.cap?.shape === "triangle") expect(v.cap.h).toBeGreaterThan(0);
+      if (v.cutTriangle) {
+        expect(v.parts.length).toBe(1);
+        expect(v.cutTriangle.base).toBeLessThan(v.parts[0].w ?? 0);
+        expect(v.cutTriangle.h).toBeLessThan(v.parts[0].h ?? 0);
+      }
+      if (v.cap) expect(v.parts.length).toBe(1);
+      if (v.cut) {
+        expect(v.parts.length).toBe(1);
+        // The cut must leave an L, so it is smaller than the whole in both directions.
+        expect(v.cut.w).toBeLessThan(v.parts[0].w ?? 0);
+        expect(v.cut.h).toBeLessThan(v.parts[0].h ?? 0);
+      }
+      break;
   }
 }
 

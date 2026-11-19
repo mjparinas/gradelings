@@ -167,7 +167,7 @@
   "1/social": {
     "overview": "4830abbbda",
     "units": [
-      "maps text=0393b6b3b0 std=825aec2913 q=671d944151",
+      "maps text=0393b6b3b0 std=825aec2913 q=bb8e729a47",
       "our-land text=9250f303b3 std=d0f7629b34 q=c1704cb4f1",
       "my-community text=f4b6495f7a std=db8297f1cd q=e0548ab0f6",
       "changes-in-my-life text=d5ee1318f1 std=5410e903ca q=d9a4ad3785",
@@ -365,7 +365,7 @@
       "wa-g4-line-plots text=ec0f6b9a41 std=e0cba28717 q=87786a4f46",
       "wa-g4-times-as-many text=417e0833be std=37966b408c q=42781d57e4",
       "ca-g4-tenths-hundredths text=8f100be049 std=782a5591b2 q=d496ce3de8",
-      "ca-g4-measure-angles text=8423d9e6ff std=b7052c8e6c q=2bab414715"
+      "ca-g4-measure-angles text=8423d9e6ff std=b7052c8e6c q=4454dbc90f"
     ]
   },
   "4/science": {
@@ -458,7 +458,7 @@
       "mb-weather-5 text=db26ca3367 std=3712f63a2d q=9936aa0e30",
       "wa-g5-energy-food text=7248a5bf2e std=a2cf595fb7 q=2c5e9d47f6",
       "or-g5-design text=6302707f88 std=4672510e22 q=5e2f08597c",
-      "neb-g5-sun-stars text=8dc5c8c65f std=1de976afae q=db7419b8df",
+      "neb-g5-sun-stars text=8dc5c8c65f std=1de976afae q=dc5a6f1a2a",
       "neb-g5-earth-water text=1c1185dbf0 std=0dfe125ebf q=0910dae817",
       "neb-g5-ecosystems text=6b8e5e5b80 std=efbeacd8bc q=d558e42ead"
     ]
@@ -537,7 +537,7 @@
     "units": [
       "body-systems text=c3cee90dd9 std=63f3a00c8e q=aa5f3b59c6",
       "nb-senses-6 text=d61db8792b std=4a93f61ba9 q=7e37816267",
-      "wa-g6-cells text=dda472f3bf std=956f215964 q=23e69bce93",
+      "wa-g6-cells text=dda472f3bf std=956f215964 q=0b5f935db7",
       "wa-g6-thermal text=fa4c935e2b std=481a095706 q=369cdfaaee",
       "work-energy-8 text=6af421d21c std=fab39e8c29 q=db86881bac",
       "neb-g6-weather text=a73689c1e8 std=426022b192 q=efc253221d",
@@ -593,7 +593,7 @@
   "7/math": {
     "overview": "6aa8458d58",
     "units": [
-      "integer-add-subtract text=0f49d1bba6 std=1c463c26b5 q=1e24134b03",
+      "integer-add-subtract text=0f49d1bba6 std=1c463c26b5 q=ecc058d9c0",
       "decimal-operations text=56ab979d6a std=67e209ec9d q=7f89d319c6",
       "fractions-decimals-percents text=12d27e2a2e std=d6bd8c30dd q=1030c5dd8d",
       "two-step-equations text=ddaa3cce54 std=e4fdcc9880 q=4d67a1e779",
@@ -609,7 +609,7 @@
       "wa-g7-sampling text=194eb9c3c2 std=3d39918a6d q=d8e6ffaf2a",
       "wa-g7-scale-drawings text=44f1660d4b std=a908526426 q=480f217aff",
       "ca-g7-rewrite-expressions text=a0c47c116e std=acb4c5168d q=f14bbf9812",
-      "wa-g7-angles text=73a7a5215c std=ad32f16f9d q=b384ae13b6",
+      "wa-g7-angles text=73a7a5215c std=ad32f16f9d q=1c4acd8aaa",
       "probability text=7a8574e01b std=bf438b56c8 q=61a293da37"
     ]
   },
@@ -685,16 +685,16 @@
     "units": [
       "squares-and-roots text=0c3411fb05 std=bb2a9712e8 q=44906b78d6",
       "linear-equations text=1e22122340 std=97e588e340 q=4ba669b446",
-      "pythagorean-theorem text=014e1086f2 std=28331b4629 q=99835d112c",
+      "pythagorean-theorem text=014e1086f2 std=28331b4629 q=bcc8d87763",
       "surface-area-volume text=96a6eb6597 std=be7db83532 q=4814ba7613",
       "numbers-8 text=8bc8425026 std=0b8702c325 q=9e9e88cf93",
       "data-8 text=f67cb7cc17 std=27f32edc2a q=61afebfaea",
-      "angles-8 text=899ecf6fe2 std=b0e9196d2e q=547f9529ab",
-      "linear-relations-ab text=3ef9188889 std=510c9c4d91 q=8f11287d9e",
+      "angles-8 text=899ecf6fe2 std=b0e9196d2e q=f4e15bb736",
+      "linear-relations-ab text=3ef9188889 std=510c9c4d91 q=e4d76bdf86",
       "bracket-equations-ab text=d802eb7882 std=2905d1b8cf q=3719a7ef86",
       "wa-g8-round-volume text=46d3a6210c std=8372be5a87 q=32ed0fcc91",
-      "wa-g8-slope text=5956a66b16 std=7a7d175ddc q=c9e5f2a915",
-      "ca-g8-similar-distance text=dd75991b3f std=a0cb94c284 q=cf92cd38ac",
+      "wa-g8-slope text=5956a66b16 std=7a7d175ddc q=2c900999a3",
+      "ca-g8-similar-distance text=dd75991b3f std=a0cb94c284 q=45852a3e03",
       "ca-g8-linear-models text=184aa29541 std=5382909083 q=75e8287d42"
     ]
   },
@@ -763,14 +763,14 @@
       "exponent-laws text=14558089af std=b00ae6c2e2 q=8fb7aa1d0b",
       "polynomials text=608ddf33d1 std=d2be8ce708 q=3a3e17fe5c",
       "multi-step-equations text=834b6c0c60 std=784d9f0be4 q=4823df05ba",
-      "linear-relations text=d5718915ca std=c8ba1a4532 q=1e254a9707",
+      "linear-relations text=d5718915ca std=c8ba1a4532 q=5737c7d8a8",
       "statistics-in-society text=9e4081b498 std=59263add1a q=bae78cb576",
       "expressions-9 text=c4cbafb40c std=b523b37748 q=a48fbbb76c",
       "lines-9 text=a0d34ff620 std=c6b390bfeb q=952170d895",
       "data-9 text=d107431976 std=fc55652be8 q=03d4d4469f",
       "wa-g9-functions text=9916295729 std=f2f27890c2 q=690ab442e5",
       "wa-g9-inequalities text=838f8a24f5 std=c616e8b4e8 q=e5b15cfeeb",
-      "wa-g9-systems text=af9fd1b6dc std=ef3c24bda5 q=abb4800646",
+      "wa-g9-systems text=af9fd1b6dc std=ef3c24bda5 q=a14aeddb37",
       "wa-g9-exponential text=500137f8a0 std=e1669e56ba q=5f897e7b41",
       "wa-g9-quadratics text=9f8fc6709d std=aefa3face7 q=d3022a54a4",
       "wa-g9-formulas text=eef04c92bf std=87450ad0ff q=56c094d4f8",

@@ -160,7 +160,7 @@
       "my-community text=f4b6495f7a std=303599611c q=75c0262c60",
       "different-and-alike text=a8371bb608 std=2931d23976 q=3685278697",
       "our-land text=9250f303b3 std=3db01e920f q=c1704cb4f1",
-      "maps text=0393b6b3b0 std=e5a9120b50 q=5413590a99",
+      "maps text=0393b6b3b0 std=e5a9120b50 q=4ce4b133e9",
       "then-and-now-1 text=54310cc642 std=ff3bdb6af4 q=68b5370f4c"
     ]
   },
@@ -280,7 +280,7 @@
   "3/social": {
     "overview": "4e1fcf0699",
     "units": [
-      "maps-and-globes text=6a6a9ae26b std=8e6999479f q=fd8314b02c",
+      "maps-and-globes text=6a6a9ae26b std=8e6999479f q=85d8fa6d9b",
       "meeting-needs text=40a76a9522 std=19febb220f q=3ac35931e2",
       "world-cultures text=7b3656a51b std=4bc6ff3064 q=b3c1eb8a42",
       "first-peoples text=52cf17696d std=a04ca6fbaa q=ea44a71396",
@@ -352,7 +352,7 @@
       "phase-changes text=9e96653308 std=8eaa1c11a3 q=447894da3c",
       "particles-and-mass text=b7a56fdf7c std=1cbf0b0b8e q=74dacf9cd0",
       "energy-changes text=2bb495aca2 std=cf1ac5ca99 q=637b4e4460",
-      "earth-and-moon text=6837c81893 std=160b876c3e q=18be2a02be"
+      "earth-and-moon text=6837c81893 std=160b876c3e q=f444934acf"
     ]
   },
   "4/social": {
@@ -599,7 +599,7 @@
   "7/math": {
     "overview": "af29cbb97c",
     "units": [
-      "integer-add-subtract text=0f49d1bba6 std=057ef371e4 q=1e24134b03",
+      "integer-add-subtract text=0f49d1bba6 std=057ef371e4 q=ecc058d9c0",
       "integer-multiply-divide text=cc9f995f0b std=a51a870197 q=bd11105e46",
       "decimal-operations text=56ab979d6a std=ccd1670aba q=7f89d319c6",
       "fractions-decimals-percents text=12d27e2a2e std=b6a40f074e q=1030c5dd8d",
@@ -609,7 +609,7 @@
       "two-step-equations text=ddaa3cce54 std=c17b3ccc1c q=4d67a1e779",
       "circles text=bf81bcea8c std=568ee9e5c9 q=31d74c7b6b",
       "volume text=fa26627719 std=4d4134825f q=3693f092f1",
-      "circle-graphs text=b35255ef1b std=336db42f3f q=620f317483",
+      "circle-graphs text=b35255ef1b std=336db42f3f q=118224059d",
       "probability text=f903bf5b77 std=75f72db21c q=61a293da37"
     ]
   },
@@ -618,7 +618,7 @@
     "units": [
       "natural-selection text=516fbb1811 std=831c0f0785 q=beaf3b1417",
       "atoms-and-elements text=7c83b3e634 std=217abb133b q=00783af555",
-      "circuits-and-static text=b28ece42b0 std=121d9ceb63 q=b84f825935",
+      "circuits-and-static text=b28ece42b0 std=121d9ceb63 q=a01cfadf82",
       "magnets-and-motors text=3fa65cfc41 std=ea29bd5e07 q=d74ab5996f",
       "restless-earth text=eacf7084dc std=b2d2885d2a q=ce71954c06",
       "changing-climate text=19accd6e97 std=ee882c6e34 q=1b405fed91"
@@ -693,7 +693,7 @@
       "ratios-and-rates text=fe38c24acc std=06d47f312c q=62d248cf82",
       "percents-and-money text=99da083c23 std=c1a53a3f22 q=1333637e1e",
       "linear-equations text=1e22122340 std=990d2084b5 q=4ba669b446",
-      "pythagorean-theorem text=014e1086f2 std=3eeb0a1e28 q=99835d112c",
+      "pythagorean-theorem text=014e1086f2 std=3eeb0a1e28 q=bcc8d87763",
       "surface-area-volume text=a5298071b5 std=42f4423702 q=605671cace",
       "probability-and-data text=49496b876e std=049a4934e2 q=6bec01e463"
     ]
@@ -701,7 +701,7 @@
   "8/science": {
     "overview": "88834265b7",
     "units": [
-      "cells-and-life text=26001b2c5a std=749188d278 q=27792065ca",
+      "cells-and-life text=26001b2c5a std=749188d278 q=b0668a2287",
       "microbes-and-immunity text=32d95f5719 std=64bd981bab q=0df44d1c56",
       "particles-and-matter text=b03be68ce0 std=92e67df3e4 q=2a50bf2bae",
       "light-and-radiation text=29b61253cf std=5a8e248f11 q=6d059d1d2d",
@@ -777,8 +777,8 @@
       "exponent-laws text=14558089af std=1c7b9bc730 q=8fb7aa1d0b",
       "polynomials text=608ddf33d1 std=8d74a9e843 q=3a3e17fe5c",
       "multi-step-equations text=834b6c0c60 std=4bf8247e1d q=4823df05ba",
-      "linear-relations text=d5718915ca std=690fa819b8 q=1e254a9707",
-      "similarity-and-scale text=541110d627 std=85d9e62be4 q=07a8d2770d",
+      "linear-relations text=d5718915ca std=690fa819b8 q=5737c7d8a8",
+      "similarity-and-scale text=541110d627 std=85d9e62be4 q=85409fefdf",
       "statistics-in-society text=9e4081b498 std=cbf4dae59a q=bae78cb576",
       "budgets-and-transactions text=b5dce1dca5 std=0f126730ff q=a16fc579b8"
     ]
@@ -790,7 +790,7 @@
       "reproduction text=d702789bd4 std=373c2a2aeb q=c9637838d5",
       "atoms-and-electrons text=5dc2e26422 std=a527ea9a78 q=157481b107",
       "bonding-and-reactions text=8a0ea04bc7 std=85ce2722db q=05ec43f844",
-      "electric-current text=2c145f84d8 std=d788d90110 q=7692c8ff45",
+      "electric-current text=2c145f84d8 std=d788d90110 q=5b1b6f1973",
       "ecosystems text=6e11cab288 std=8fcbd39f11 q=135b633d91"
     ]
   },

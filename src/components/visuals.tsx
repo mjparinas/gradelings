@@ -2,6 +2,11 @@ import { Fragment, type ReactNode } from "react";
 import { coinName, type Currency } from "@/content/money";
 import type { ShapeName, Visual } from "@/content/types";
 import { SolidPicture } from "./solids";
+import { AngleSplit, FigurePair, LineAngles, RegularPolygon, TriangleFigure } from "./Diagrams";
+import { Compass, MoveDrawing, PlainFigureDrawing, Protractor, Thermometers } from "./figureVisuals";
+import { CircleGraph, LinePlot, PlotGraph, TreeDiagram } from "./graphVisuals";
+import { MapPicture } from "./mapVisuals";
+import { ScienceDiagram } from "./scienceDiagrams";
 
 const INK = "#253047";
 
@@ -516,6 +521,150 @@ export function Angle({ degrees }: { degrees: number }) {
   );
 }
 
+type JoinedVisual = Extract<Visual, { type: "joined" }>;
+
+const JOIN_FILLS = ["#d6e6fd", "#ffe2c4", "#d3f2e4"];
+const JOIN_DASH = "#7b8499";
+
+/** Rectangles joined along a common bottom edge, or one with a corner or triangle cut away or a triangle or semicircle added, drawn to scale with every side labelled. */
+export function JoinedShape({ parts, cut, cap, cutTriangle, unit, caption }: Omit<JoinedVisual, "type">) {
+  const len = (n: number) => (unit ? `${n} ${unit}` : String(n));
+  // The unknown part has no sides to show, so it borrows the first part's shape and is drawn dashed.
+  const known = parts.find((p) => p.w !== undefined && p.h !== undefined);
+  const sized = parts.map((p) => ({ unknown: p.w === undefined, w: p.w ?? Math.max(2, Math.round((known?.w ?? 4) * 0.7)), h: p.h ?? Math.max(2, Math.round((known?.h ?? 4) * 0.7)) }));
+  const first = sized[0];
+  const triH = cap?.shape === "triangle" ? cap.h : 0;
+  const semi = cap?.shape === "semicircle";
+  const totalW = sized.reduce((t, p) => t + p.w, 0) + (semi ? first.h / 2 : 0);
+  const maxH = Math.max(...sized.map((p) => p.h)) + triH;
+  const s = Math.min(230 / totalW, 130 / maxH);
+  const left = 54;
+  const top = 26;
+  const drawW = totalW * s;
+  const drawH = maxH * s;
+  const width = left + drawW + 54;
+  const height = top + drawH + 26 + (caption ? 24 : 0);
+  const bottom = top + drawH;
+  const text = { fontFamily: "var(--font-fredoka)", fontWeight: 600, fontSize: 15, fill: INK } as const;
+  const stroke = { stroke: INK, strokeWidth: 3, strokeLinejoin: "round" } as const;
+  const dashed = { fill: "none", stroke: JOIN_DASH, strokeWidth: 2, strokeDasharray: "5 4" } as const;
+
+  const sides = (p: { w: number; h: number }) => `${len(p.w)} by ${len(p.h)}`;
+  const label = cut
+    ? `a ${sides(first)} rectangle with a ${sides(cut)} corner cut away`
+    : cutTriangle
+      ? `a ${sides(first)} rectangle with a triangle cut out of the top edge, ${len(cutTriangle.base)} wide and ${len(cutTriangle.h)} deep`
+      : cap?.shape === "triangle"
+        ? `a ${sides(first)} rectangle with a triangle on top, ${len(first.w)} wide and ${len(cap.h)} tall`
+        : semi
+          ? `a ${sides(first)} rectangle with a semicircle on one end`
+          : `a floor plan made of rectangles: ${sized.map((p) => (p.unknown ? "an unknown rectangle" : sides(p))).join(" and ")}`;
+
+  let body;
+  if (cut || cap || cutTriangle) {
+    const w = first.w * s;
+    const h = first.h * s;
+    const y0 = bottom - h;
+    const right = left + w;
+    let outline: ReactNode;
+    let extras: ReactNode = null;
+    let rightLabel: ReactNode = null;
+    if (cut) {
+      const cw = cut.w * s;
+      const ch = cut.h * s;
+      outline = <path d={`M${left} ${y0} H${right - cw} V${y0 + ch} H${right} V${bottom} H${left} Z`} fill={JOIN_FILLS[0]} {...stroke} />;
+      extras = (
+        <>
+          <rect x={right - cw} y={y0} width={cw} height={ch} {...dashed} />
+          <text x={right - cw / 2} y={y0 - 7} textAnchor="middle" {...text}>{len(cut.w)}</text>
+        </>
+      );
+      rightLabel = (
+        <text x={right + 8} y={y0 + ch / 2} textAnchor="start" dominantBaseline="central" {...text}>{len(cut.h)}</text>
+      );
+    } else if (cutTriangle) {
+      const bw = cutTriangle.base * s;
+      const th = cutTriangle.h * s;
+      const mid = left + w / 2;
+      outline = <path d={`M${left} ${y0} H${mid - bw / 2} L${mid} ${y0 + th} L${mid + bw / 2} ${y0} H${right} V${bottom} H${left} Z`} fill={JOIN_FILLS[0]} {...stroke} />;
+      extras = (
+        <>
+          <path d={`M${mid - bw / 2} ${y0} H${mid + bw / 2}`} {...dashed} />
+          <path d={`M${mid} ${y0} V${y0 + th}`} {...dashed} />
+          <text x={mid} y={y0 - 7} textAnchor="middle" {...text}>{len(cutTriangle.base)}</text>
+          <text x={mid + 7} y={y0 + th / 2 + 6} textAnchor="start" dominantBaseline="central" {...text}>{len(cutTriangle.h)}</text>
+        </>
+      );
+    } else if (cap?.shape === "triangle") {
+      const th = cap.h * s;
+      const mid = left + w / 2;
+      outline = <path d={`M${left} ${bottom} V${y0} L${mid} ${y0 - th} L${right} ${y0} V${bottom} Z`} fill={JOIN_FILLS[0]} {...stroke} />;
+      extras = (
+        <>
+          <path d={`M${left} ${y0} H${right}`} {...dashed} />
+          <path d={`M${mid} ${y0 - th} V${y0}`} {...dashed} />
+          <text x={mid + 7} y={y0 - th / 2} textAnchor="start" dominantBaseline="central" {...text}>{len(cap.h)}</text>
+        </>
+      );
+    } else {
+      const r = h / 2;
+      outline = <path d={`M${left} ${y0} H${right} A${r} ${r} 0 0 1 ${right} ${bottom} H${left} Z`} fill={JOIN_FILLS[0]} {...stroke} />;
+      extras = (
+        <>
+          <path d={`M${right} ${y0} V${bottom}`} {...dashed} />
+          {cap?.shape === "semicircle" && cap.label && (
+            <text x={right + r / 2} y={y0 + r} textAnchor="middle" dominantBaseline="central" {...text} fontSize={13}>{cap.label}</text>
+          )}
+        </>
+      );
+    }
+    body = (
+      <g>
+        {outline}
+        {extras}
+        <text x={left + w / 2} y={bottom + 19} textAnchor="middle" {...text}>{len(first.w)}</text>
+        <text x={left - 8} y={y0 + h / 2} textAnchor="end" dominantBaseline="central" {...text}>{len(first.h)}</text>
+        {rightLabel}
+      </g>
+    );
+  } else {
+    let x = left;
+    body = sized.map((p, i) => {
+      const w = p.w * s;
+      const h = p.h * s;
+      const x0 = x;
+      x += w;
+      const y0 = bottom - h;
+      return (
+        <g key={i}>
+          <rect x={x0} y={y0} width={w} height={h} fill={p.unknown ? "#ffffff" : JOIN_FILLS[i % JOIN_FILLS.length]} {...stroke} stroke={p.unknown ? JOIN_DASH : INK} strokeDasharray={p.unknown ? "6 5" : undefined} />
+          {p.unknown ? (
+            <text x={x0 + w / 2} y={y0 + h / 2} textAnchor="middle" dominantBaseline="central" {...text} fontSize={26}>?</text>
+          ) : (
+            <>
+              <text x={x0 + w / 2} y={bottom + 19} textAnchor="middle" {...text}>{len(p.w)}</text>
+              {i === 0 && <text x={x0 - 8} y={y0 + h / 2} textAnchor="end" dominantBaseline="central" {...text}>{len(p.h)}</text>}
+              {i === sized.length - 1 && <text x={x0 + w + 8} y={y0 + h / 2} textAnchor="start" dominantBaseline="central" {...text}>{len(p.h)}</text>}
+              {i > 0 && i < sized.length - 1 && <text x={x0 + w / 2} y={y0 + h / 2} textAnchor="middle" dominantBaseline="central" {...text}>{len(p.h)}</text>}
+            </>
+          )}
+        </g>
+      );
+    });
+  }
+
+  return (
+    <svg viewBox={`0 0 ${width} ${height}`} className="w-full max-w-sm" role="img" aria-label={label}>
+      {body}
+      {caption && (
+        <text x={width / 2} y={height - 6} textAnchor="middle" {...text} fontSize={14}>
+          {caption}
+        </text>
+      )}
+    </svg>
+  );
+}
+
 export function CoordinateGrid({ size, min = 0, points }: { size: number; min?: number; points: { x: number; y: number; label?: string }[] }) {
   const span = size - min;
   const W = 260;
@@ -658,7 +807,7 @@ export function DataTable({ title, headers, rows }: { title?: string; headers: s
   );
 }
 
-export function Spinner({ segments }: { segments: string[] }) {
+export function Spinner({ segments, labels }: { segments: string[]; labels?: string[] }) {
   const n = segments.length;
   const r = 46;
   const arc = (i: number) => {
@@ -671,6 +820,14 @@ export function Spinner({ segments }: { segments: string[] }) {
       {segments.map((c, i) => (
         <path key={i} d={arc(i)} fill={c} stroke="#fff" strokeWidth="1.5" />
       ))}
+      {labels?.map((t, i) => {
+        const a = ((i + 0.5) / n) * Math.PI * 2 - Math.PI / 2;
+        return (
+          <text key={i} x={50 + 30 * Math.cos(a)} y={50 + 30 * Math.sin(a)} textAnchor="middle" dominantBaseline="central" fontSize="11" fontWeight="700" fill="#0f172a">
+            {t}
+          </text>
+        );
+      })}
       <circle cx="50" cy="50" r="47" fill="none" stroke={INK} strokeWidth="2.5" />
       <g className="animate-spin-slow" style={{ transformOrigin: "50px 50px" }}>
         <path d="M50 50 L50 14" stroke={INK} strokeWidth="3.5" strokeLinecap="round" />
@@ -709,6 +866,9 @@ export function Towers({ heights, showBlank }: { heights: number[]; showBlank?: 
 
 export function QuestionVisual({ visual }: { visual: Visual }) {
   switch (visual.type) {
+    case "map":
+    case "compass":
+      return <MapPicture visual={visual} />;
     case "equation":
       return (
         <p className="text-center font-read text-5xl font-bold tracking-wide text-ink sm:text-6xl">
@@ -766,7 +926,7 @@ export function QuestionVisual({ visual }: { visual: Visual }) {
         </div>
       );
     case "spinner":
-      return <Spinner segments={visual.segments} />;
+      return <Spinner segments={visual.segments} labels={visual.labels} />;
     case "towers":
       return <Towers heights={visual.heights} showBlank={visual.showBlank} />;
     case "tenFrame":
@@ -777,6 +937,16 @@ export function QuestionVisual({ visual }: { visual: Visual }) {
       return <NumberLine {...visual} />;
     case "fraction":
       return <FractionModel numerator={visual.numerator} denominator={visual.denominator} shape={visual.shape} />;
+    case "lineAngles":
+      return <LineAngles {...visual} />;
+    case "angleSplit":
+      return <AngleSplit {...visual} />;
+    case "triangleFigure":
+      return <TriangleFigure {...visual} />;
+    case "figurePair":
+      return <FigurePair {...visual} />;
+    case "polygon":
+      return <RegularPolygon {...visual} />;
     case "array":
       return <ArrayGrid rows={visual.rows} cols={visual.cols} emoji={visual.emoji} />;
     case "letter":
@@ -796,6 +966,28 @@ export function QuestionVisual({ visual }: { visual: Visual }) {
       return <SolidPicture kind={visual.solid} labels={visual.labels} />;
     case "net":
       return <SolidPicture kind={visual.net} labels={visual.labels} net />;
+    case "protractor":
+      return <Protractor from={visual.from} to={visual.to} twoScales={visual.twoScales} />;
+    case "thermometer":
+      return <Thermometers values={visual.values} min={visual.min} max={visual.max} />;
+    case "move":
+      return <MoveDrawing visual={visual} />;
+    case "facing":
+      return <Compass facing={visual.facing} />;
+    case "figure":
+      return <PlainFigureDrawing figure={visual.figure} />;
+    case "diagram":
+      return <ScienceDiagram diagram={visual.diagram} label={visual.label} />;
+    case "circleGraph":
+      return <CircleGraph title={visual.title} sectors={visual.sectors} />;
+    case "linePlot":
+      return <LinePlot title={visual.title} labels={visual.labels} counts={visual.counts} caption={visual.caption} />;
+    case "plot":
+      return <PlotGraph {...visual} />;
+    case "tree":
+      return <TreeDiagram title={visual.title} stages={visual.stages} />;
+    case "joined":
+      return <JoinedShape {...visual} />;
     case "story":
       return (
         <div className="w-full max-w-2xl rounded-2xl border-[3px] border-[#f3c6dc] bg-[#fff7fb] px-5 py-4">

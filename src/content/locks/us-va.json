@@ -182,7 +182,7 @@
   "1/social": {
     "overview": "91d4c47b27",
     "units": [
-      "maps text=0393b6b3b0 std=03b34cb289 q=671d944151",
+      "maps text=0393b6b3b0 std=03b34cb289 q=bb8e729a47",
       "our-land text=9250f303b3 std=22a560ebf3 q=c1704cb4f1",
       "my-community text=f4b6495f7a std=b8f24d85bb q=e0548ab0f6",
       "respect-and-inclusion text=2f7448bf67 std=2426aa37fd q=2bd238d5a9",
@@ -262,7 +262,7 @@
       "ca-g2-work-and-money text=29d8f69f16 std=41d9905a19 q=3daba19f0f",
       "al-g2-american-symbols text=2aa488d75e std=e5b2de72a6 q=2cbff35e4b",
       "az-g2-continents-oceans text=3c092e19d9 std=21f347b0c9 q=73975f9cd7",
-      "al-g2-reading-maps text=340d8f0737 std=864fd96845 q=d462f2e233",
+      "al-g2-reading-maps text=340d8f0737 std=864fd96845 q=9434a12f80",
       "va-g2-first-peoples text=372f7c3a23 std=06b90d6418 q=837596148f",
       "va-g2-explorers-founders text=865c09d7e4 std=ae9cb02457 q=d7396b2830",
       "va-g2-nation-landmarks text=c5f6852415 std=e6f177cbf0 q=b781e7fd27",
@@ -398,7 +398,7 @@
       "mb-weather-5 text=db26ca3367 std=3aa6e5329f q=9936aa0e30",
       "solar-system text=6be0e2dfe8 std=777a919dda q=a095f63422",
       "space-and-sky-ab text=73ebd57620 std=8b567600de q=54093d0634",
-      "va-g4-seasons-moon text=b77f88a645 std=33e0101988 q=513e56b071",
+      "va-g4-seasons-moon text=b77f88a645 std=33e0101988 q=ea30c08deb",
       "va-g4-ocean text=66cc226d0d std=cab428b19a q=aa45a12c24",
       "va-g4-virginia-resources text=580e8fad08 std=b0f1d774de q=c32cd49ee7"
     ]
@@ -475,7 +475,7 @@
       "forms-of-energy-5 text=e8c7847195 std=ea05df1732 q=14fd59ea5d",
       "mb-friction-5 text=4b0e2e03e9 std=69a22253ae q=ae88ee99eb",
       "wa-g4-energy-motion text=b3e9a355c7 std=b4a95ef3c7 q=1c3f0bf823",
-      "tx-g5-circuits text=24da9234dd std=ab63074375 q=ba4188b00b",
+      "tx-g5-circuits text=24da9234dd std=ab63074375 q=195fd76022",
       "pe-electromagnets-6 text=69a317c164 std=761c7d5ad0 q=93f13070e2",
       "sound-4 text=690c6ddd16 std=f06f289949 q=c739a07614",
       "light-4 text=0325e91432 std=8ecc69403e q=d397d48c7f",
@@ -565,7 +565,7 @@
       "mixtures text=1f68b1ad4d std=103e218b09 q=36dfdadbba",
       "ny-g6-weather text=5d85d818f3 std=9b4795efa6 q=de1b8bf344",
       "tx-g6-resources text=7e5172964d std=059ac83492 q=7053aa8394",
-      "va-g6-seasons-tides text=15918086aa std=834baeeec8 q=d7d337ef1d",
+      "va-g6-seasons-tides text=15918086aa std=834baeeec8 q=fe31a0f5b0",
       "va-g6-watersheds text=ae43596af3 std=143c10bd26 q=8ae461eaa2"
     ]
   },
@@ -619,7 +619,7 @@
   "7/math": {
     "overview": "e300b3372b",
     "units": [
-      "integer-add-subtract text=0f49d1bba6 std=4842743fe2 q=1e24134b03",
+      "integer-add-subtract text=0f49d1bba6 std=4842743fe2 q=ecc058d9c0",
       "decimal-operations text=56ab979d6a std=426e090f38 q=7f89d319c6",
       "fractions-decimals-percents text=12d27e2a2e std=67eaba8eed q=1030c5dd8d",
       "two-step-equations text=ddaa3cce54 std=0145c3da3f q=4d67a1e779",
@@ -639,7 +639,7 @@
   "7/science": {
     "overview": "2ca52f7ef8",
     "units": [
-      "wa-g6-cells text=fa8ea2c4ff std=36c48d1579 q=23e69bce93",
+      "wa-g6-cells text=fa8ea2c4ff std=36c48d1579 q=0b5f935db7",
       "cells-diffusion-ab text=caaea79aff std=4f410d257e q=650ba01e94",
       "body-systems text=982982e155 std=2dc5d44c61 q=aa5f3b59c6",
       "classifying-life-6 text=57a398f1e5 std=ec3fb8d063 q=4385a5bcec",
@@ -706,14 +706,14 @@
     "units": [
       "squares-and-roots text=0c3411fb05 std=069686a37e q=44906b78d6",
       "linear-equations text=1e22122340 std=0096269510 q=4ba669b446",
-      "pythagorean-theorem text=014e1086f2 std=a838f9574f q=99835d112c",
+      "pythagorean-theorem text=014e1086f2 std=a838f9574f q=bcc8d87763",
       "numbers-8 text=8bc8425026 std=8b3fe3df24 q=9e9e88cf93",
       "data-8 text=f67cb7cc17 std=152bedcc69 q=61afebfaea",
-      "linear-relations-ab text=3ef9188889 std=c8c0733130 q=8f11287d9e",
+      "linear-relations-ab text=3ef9188889 std=c8c0733130 q=e4d76bdf86",
       "bracket-equations-ab text=d802eb7882 std=505ccc66eb q=3719a7ef86",
       "wa-g8-functions text=906e422768 std=fb75a4e990 q=b704358710",
       "wa-g8-round-volume text=46d3a6210c std=5f0ef6d0ce q=32ed0fcc91",
-      "wa-g8-slope text=5956a66b16 std=9570a596d5 q=c9e5f2a915",
+      "wa-g8-slope text=5956a66b16 std=9570a596d5 q=2c900999a3",
       "ca-g8-linear-models text=184aa29541 std=6101e6a6fe q=75e8287d42"
     ]
   },
@@ -731,7 +731,7 @@
       "tx-g7-motion text=037d86fb35 std=7f1ddb8a00 q=e30d827982",
       "newtons-laws text=82d3736748 std=dfa51d9ecb q=de7396dbf8",
       "wa-g8-fields text=8fbd720783 std=2a1e0006c7 q=603f693f54",
-      "circuits-and-static text=b28ece42b0 std=35ebc6fd22 q=b84f825935"
+      "circuits-and-static text=b28ece42b0 std=35ebc6fd22 q=a01cfadf82"
     ]
   },
   "8/social": {
@@ -781,14 +781,14 @@
     "overview": "51e11c2f26",
     "units": [
       "polynomials text=608ddf33d1 std=8947fd153c q=3a3e17fe5c",
-      "linear-relations text=d5718915ca std=e0b9740f4e q=1e254a9707",
+      "linear-relations text=d5718915ca std=e0b9740f4e q=5737c7d8a8",
       "statistics-in-society text=9e4081b498 std=4db7b46126 q=bae78cb576",
       "expressions-9 text=c4cbafb40c std=3caee4a01e q=a48fbbb76c",
       "lines-9 text=a0d34ff620 std=04032c9bba q=952170d895",
       "data-9 text=d107431976 std=17580699b5 q=03d4d4469f",
       "wa-g9-functions text=9916295729 std=e7a62897af q=690ab442e5",
       "wa-g9-inequalities text=838f8a24f5 std=43c6002e18 q=e5b15cfeeb",
-      "wa-g9-systems text=af9fd1b6dc std=2a766ec249 q=abb4800646",
+      "wa-g9-systems text=af9fd1b6dc std=2a766ec249 q=a14aeddb37",
       "wa-g9-exponential text=500137f8a0 std=a7ec9bc248 q=5f897e7b41",
       "wa-g9-quadratics text=9f8fc6709d std=42be4a1daa q=d3022a54a4",
       "wa-g9-formulas text=eef04c92bf std=3bc59eb6b2 q=56c094d4f8",

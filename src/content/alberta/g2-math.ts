@@ -2,6 +2,7 @@ import { chance, pick, randInt, sample, shuffle, textChoice } from "../random";
 import type { BuildQuestion, GenerateOptions, Question, Unit, Visual } from "../types";
 import { ab, buildSet, eq, levelOf, numQ } from "./kit";
 import { q, sorter, unitOf, type Item } from "../ontario/k-g2-kit";
+import { drawn, movePicture } from "../figureDrawings";
 
 // Alberta Grade 2 mathematics (2022 K-6 curriculum). New units here cover what BC and Ontario do not teach at
 // Grade 2: numbers to 1000, unit fractions, slides/flips/turns and standard units of time.
@@ -281,7 +282,7 @@ export const units: Unit[] = [
     blurb: "How shapes can move",
     standards: ab("2G1.2", "translations (slides), reflections (flips) and rotations (turns) of shapes"),
     parentNote: "Moving a shape by sliding it, flipping it over a line or turning it around a point. The shape stays the same size and form; only its position or direction changes.",
-    generate: unitOf(MOVES, [sorter(MOVES_SORT)]),
+    generate: drawn(unitOf(MOVES, [sorter(MOVES_SORT)]), movePicture),
   },
   {
     id: "time-ab",

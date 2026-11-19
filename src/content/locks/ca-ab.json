@@ -225,7 +225,7 @@
       "patterns text=52e71b0b56 std=cfa5646dbb q=c39ccda4ca",
       "measuring text=b408a6d5b9 std=104b2586ab q=50b17c6722",
       "shapes text=4642065056 std=1df47d173f q=147a8385e6",
-      "slides-flips-turns-ab text=94bbcac228 std=a5b5e4fdf8 q=cd56fb0cd1",
+      "slides-flips-turns-ab text=94bbcac228 std=a5b5e4fdf8 q=e3646f86e2",
       "time-ab text=32f86c9fe5 std=d6d25d6d93 q=eceff43070"
     ]
   },
@@ -296,7 +296,7 @@
       "patterns-and-equations text=38e948b1ed std=86d85704c9 q=32db6b6541",
       "polygons-ab text=28ca5a23f0 std=7bf33dba21 q=891aff50f5",
       "angles-ab text=97b79e6a20 std=bb6a10e909 q=5a4fcf852b",
-      "moves-ab text=3ada09a283 std=b0ba35b225 q=daf6019354",
+      "moves-ab text=3ada09a283 std=b0ba35b225 q=145f1fa245",
       "length-perimeter-ab text=1270e4aaa5 std=793584d44e q=ad3314c26d",
       "time text=b4e7404035 std=78609ce336 q=150c2972a2",
       "data-ab text=70784781fd std=71f079f5d1 q=e40eb2ca98"
@@ -406,7 +406,7 @@
       "fractions-decimals-percent-ab text=7464e7e2e9 std=d14e9db5d2 q=c0ad3c2611",
       "patterns-and-tables text=223238d646 std=0ff1f8f40a q=43715233d3",
       "equations text=5aa54c6ad3 std=4d8316c5f4 q=9d644407e2",
-      "shapes-angles-ab text=eb5b40ff18 std=5eeb12a1e0 q=c939206948",
+      "shapes-angles-ab text=eb5b40ff18 std=5eeb12a1e0 q=14f5ac50bc",
       "polygons-and-perimeter text=1f1f7acbfe std=9192b5e803 q=0ca495ff7c",
       "metric-4 text=aa6167f1c3 std=796b27fb98 q=d1b2a7cfd0",
       "telling-time text=da04fa8ef5 std=d851c4c9cf q=4b7225993f"
@@ -606,7 +606,7 @@
     "overview": "440be3cc52",
     "units": [
       "particles-heat-ab text=c634d79608 std=1a94f1db50 q=5d6c15a7d2",
-      "thermometers-ab text=0f22848e26 std=b927c4bbfc q=01797dd27d",
+      "thermometers-ab text=0f22848e26 std=b927c4bbfc q=60a16f9b6c",
       "expansion-water-ab text=17666ec6d6 std=284e00b115 q=88929de76c",
       "forces-interactions-ab text=352d61bb9b std=bea1a69dd0 q=367bca5ede",
       "forces-at-work text=5f5393489c std=5d17e4cc38 q=4430fad17e",
@@ -691,15 +691,15 @@
       "compare-order-ab text=e088a95ec5 std=a2cedfeb9a q=c7441cb4ba",
       "fractions-decimals-percents text=12d27e2a2e std=1cc0bc96cd q=1030c5dd8d",
       "tax-tips-discounts text=89d00189fd std=e7fa9f92da q=9acde90248",
-      "integer-add-subtract text=0f49d1bba6 std=33a580041c q=1e24134b03",
+      "integer-add-subtract text=0f49d1bba6 std=33a580041c q=ecc058d9c0",
       "linear-relations text=8a41482ba7 std=c54a178793 q=52c3309ac5",
       "expressions-ab text=d92f1eb9fb std=4924db9abc q=0a47682054",
       "two-step-equations text=ddaa3cce54 std=ef039ac1ea q=4d67a1e779",
       "circles text=bf81bcea8c std=354a95e7f3 q=31d74c7b6b",
-      "area-constructions-ab text=8f1ce023d1 std=c772de0b2f q=52eb91b8bb",
+      "area-constructions-ab text=8f1ce023d1 std=c772de0b2f q=0318953620",
       "coordinates-transformations text=4061b902e5 std=f8d908a1a4 q=56537171c2",
       "central-tendency-ab text=b776821b16 std=0f27f4c23e q=cc21b8662c",
-      "circle-graphs text=b35255ef1b std=ba2152f0a2 q=620f317483",
+      "circle-graphs text=b35255ef1b std=ba2152f0a2 q=118224059d",
       "probability text=f903bf5b77 std=b6f12bb531 q=61a293da37"
     ]
   },
@@ -802,14 +802,14 @@
       "ratios-and-rates text=fe38c24acc std=a5285ba038 q=62d248cf82",
       "fraction-operations text=43b349e643 std=78623d3cae q=4755d31e4a",
       "integers-8 text=4840f100ae std=af4cbd2cb0 q=9c4f44dc17",
-      "linear-relations-ab text=3ef9188889 std=b050c38d68 q=8f11287d9e",
+      "linear-relations-ab text=3ef9188889 std=b050c38d68 q=e4d76bdf86",
       "bracket-equations-ab text=d802eb7882 std=4bdf8bb0a1 q=3719a7ef86",
-      "pythagorean-theorem text=014e1086f2 std=6babe88a34 q=99835d112c",
+      "pythagorean-theorem text=014e1086f2 std=6babe88a34 q=bcc8d87763",
       "nets-views-ab text=6df5a9626c std=70b430b6ae q=e097fdbb09",
       "surface-area-volume text=a5298071b5 std=dcfc3f15a9 q=605671cace",
       "congruence-ab text=2124f8bea5 std=124306c4cb q=0fa6ddeb25",
-      "graph-critique-ab text=603cee2a96 std=5050645145 q=c0517f51c4",
-      "independent-events-ab text=1f0907c09b std=b79b2a54d4 q=3831a864f8"
+      "graph-critique-ab text=603cee2a96 std=5050645145 q=2011d04baf",
+      "independent-events-ab text=1f0907c09b std=b79b2a54d4 q=f60240f344"
     ]
   },
   "8/science": {
@@ -821,7 +821,7 @@
       "density-buoyancy-8 text=44abadf5f7 std=67c0a4c2d9 q=e8b7d870a3",
       "pressure-pascal-8 text=61b1e34882 std=bcd6db5ee5 q=bbd1e7ea70",
       "hydraulics-pneumatics-8 text=fff24439f8 std=d7501573dc q=aa7591aa2a",
-      "cells-and-life text=26001b2c5a std=ee2b109478 q=27792065ca",
+      "cells-and-life text=26001b2c5a std=ee2b109478 q=b0668a2287",
       "cells-organisms-8 text=f2fabcc119 std=b41b865591 q=16a9b7cb2d",
       "cells-diffusion-ab text=caaea79aff std=91fbd3f88f q=650ba01e94",
       "systems-8 text=44122ab3da std=3b78393b3f q=c8b9f9ac62",
@@ -915,8 +915,8 @@
       "square-roots-ab text=9dac6ac303 std=85e0221914 q=20b8564979",
       "polynomials text=608ddf33d1 std=b8ba864509 q=3a3e17fe5c",
       "multi-step-equations text=834b6c0c60 std=536c071598 q=4823df05ba",
-      "linear-relations text=d5718915ca std=8015b3add0 q=1e254a9707",
-      "similarity-and-scale text=541110d627 std=f6e3df8496 q=07a8d2770d",
+      "linear-relations text=d5718915ca std=8015b3add0 q=5737c7d8a8",
+      "similarity-and-scale text=541110d627 std=f6e3df8496 q=85409fefdf",
       "circles-ab text=0bfecda34b std=e9804bd5e1 q=92547dc066",
       "surface-area-ab text=c4da6bfbc4 std=91bfa2ceb5 q=6490b0cb05",
       "statistics-in-society text=9e4081b498 std=8e8148a9ec q=bae78cb576"
@@ -932,7 +932,7 @@
       "chemical-change-ab text=1ca1c45de5 std=1fea341ad6 q=7a00ce3609",
       "environmental-chemistry-ab text=439190f7df std=91067b7d5f q=6313c133fe",
       "static-charges-9 text=9a9172f3c2 std=d8dde43d97 q=20a1a92678",
-      "circuits-9 text=0dda7abf25 std=a6502dcbf4 q=1788d5792b",
+      "circuits-9 text=0dda7abf25 std=a6502dcbf4 q=bf08183eb5",
       "electrical-energy-9 text=eecdad56b2 std=7cd2cd4b0e q=7309de70ac",
       "space-exploration-ab text=08c6f716e8 std=1a083980a5 q=7f91fc8e49"
     ]
