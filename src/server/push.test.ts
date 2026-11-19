@@ -12,7 +12,7 @@ process.env.VAPID_PRIVATE_KEY = "privateKeyForTests";
 delete process.env.RESEND_API_KEY;
 
 const sendNotification = vi.fn();
-vi.mock("web-push", () => ({ default: { setVapidDetails: vi.fn(), sendNotification: (...a: unknown[]) => sendNotification(...a) } }));
+vi.mock("web-push", () => ({ setVapidDetails: vi.fn(), sendNotification: (...a: unknown[]) => sendNotification(...a) }));
 
 type Mod = Record<string, (req: Request) => Promise<Response>>;
 let route: Mod, signup: Mod;

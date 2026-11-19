@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import webpush from "web-push";
+import { sendNotification, setVapidDetails } from "web-push";
 import { query, run } from "@/server/db";
 
 // Web Push to a parent's device or to a child's device that a parent switched on. The browser's own push service
@@ -88,8 +88,8 @@ export type SendResult = "sent" | "gone" | "failed" | "skipped";
 export async function sendPush(sub: StoredSubscription, message: PushMessage, day: string): Promise<SendResult> {
   if (!configured() || sub.last_day === day) return "skipped";
   try {
-    webpush.setVapidDetails(process.env.VAPID_SUBJECT || `mailto:${process.env.CONTACT_EMAIL || "hello@gradelings.com"}`, process.env.VAPID_PUBLIC_KEY!, process.env.VAPID_PRIVATE_KEY!);
-    await webpush.sendNotification({ endpoint: sub.endpoint, keys: { p256dh: sub.p256dh, auth: sub.auth } }, JSON.stringify(message), { TTL: 12 * 3600 });
+    setVapidDetails(process.env.VAPID_SUBJECT || `mailto:${process.env.CONTACT_EMAIL || "hello@gradelings.com"}`, process.env.VAPID_PUBLIC_KEY!, process.env.VAPID_PRIVATE_KEY!);
+    await sendNotification({ endpoint: sub.endpoint, keys: { p256dh: sub.p256dh, auth: sub.auth } }, JSON.stringify(message), { TTL: 12 * 3600 });
     await run("UPDATE push_devices SET last_day = ? WHERE endpoint_hash = ?", [day, sub.endpoint_hash]);
     return "sent";
   } catch (e) {
