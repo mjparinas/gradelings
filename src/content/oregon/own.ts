@@ -1,6 +1,6 @@
 import { fromBank, type BankItem } from "../bank";
 import { sample } from "../random";
-import type { GenerateOptions, Question, Unit } from "../types";
+import type { GenerateOptions, Question, Unit, Visual } from "../types";
 import { ore } from "./cite";
 
 // Units written for Oregon from hand-written multiple-choice banks. The same bank feeds every difficulty: easy
@@ -8,7 +8,7 @@ import { ore } from "./cite";
 // 24 distinct items (coverage.test.ts).
 
 /** prompt, right answer, wrong answers, hint, and `true` for a stretch item. */
-export type Q = readonly [prompt: string, right: string, wrong: string[], hint: string, hard?: true];
+export type Q = readonly [prompt: string, right: string, wrong: string[], hint: string, hard?: true, visual?: Visual];
 
 interface Spec {
   id: string;
@@ -23,7 +23,7 @@ interface Spec {
   size?: number;
 }
 
-const toBank = ([prompt, right, wrong, hint]: Q): BankItem => ({ prompt, right, wrong, hint });
+const toBank = ([prompt, right, wrong, hint, , visual]: Q): BankItem => ({ prompt, right, wrong, hint, visual });
 
 export function bankUnit(spec: Spec): Unit {
   const easy = spec.items.filter((q) => !q[4]).map(toBank);

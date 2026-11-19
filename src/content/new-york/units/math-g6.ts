@@ -1,4 +1,5 @@
 import { pick, randInt, sample } from "../../random";
+import { solid } from "../../solids";
 import type { Unit, Visual } from "../../types";
 import { type Maker, eq, num, pickOne, sp, sup, typed } from "../../washington/units/math-kit";
 import type { Q } from "../own";
@@ -110,7 +111,7 @@ const POWERS: Q[] = [
   ["Why is the exponent 2 read as “squared”?", "s × s is the area of a square with side s", ["it means times 2", "a square has 2 sides", "it doubles the number"], "Area of a square = side × side = side²."],
   ["Why is the exponent 3 read as “cubed”?", "e × e × e is the volume of a cube with edge e", ["it means times 3", "a cube has 3 faces", "it triples the number"], "Volume of a cube = edge × edge × edge = edge³."],
   ["Is 12 a perfect square?", "No: no whole number times itself is 12", ["Yes: 3 × 4 = 12", "Yes: 6 × 2 = 12", "Yes: 12 is even"], "3 × 3 = 9 and 4 × 4 = 16, so 12 is between perfect squares."],
-  ["A cube has edges of 3 units. Which is its volume?", "27 cubic units", ["9 cubic units", "18 cubic units", "54 cubic units"], "3 × 3 × 3 = 27.", true],
+  ["A cube has edges of 3 units. Which is its volume?", "27 cubic units", ["9 cubic units", "18 cubic units", "54 cubic units"], "3 × 3 × 3 = 27.", true, solid("cube", { edge: 3 }, "units")],
 ];
 
 // ---------- Distributions: center, spread and shape (NY-6.SP.2, 6.SP.3) ----------

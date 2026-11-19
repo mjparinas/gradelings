@@ -1,6 +1,7 @@
 import { fromBank, type BankItem } from "../bank";
 import { pick, randInt, sample, shuffle, textChoice } from "../random";
 import type { GenerateOptions, Question, Unit, Visual } from "../types";
+import { solid } from "../solids";
 import { buildSet, levelOf, on, spaced, typeIn } from "./kit";
 
 // Ontario Grade 9 mathematics, MTH1W (2021 de-streamed course). BC's rational numbers, exponent laws,
@@ -531,11 +532,11 @@ function volume9(): Question[] {
   };
   const pyramid = (): Question => {
     const b = randInt(3, 9), h = 3 * randInt(1, 4);
-    return typeIn(`A pyramid has a square base ${b} m by ${b} m and a height of ${h} m. What is its volume, in m³?`, (b * b * h) / 3, `V = (base area × height) ÷ 3 = (${b * b} × ${h}) ÷ 3 = ${(b * b * h) / 3}.`, undefined, { suffix: "m³" });
+    return typeIn(`A pyramid has a square base ${b} m by ${b} m and a height of ${h} m. What is its volume, in m³?`, (b * b * h) / 3, `V = (base area × height) ÷ 3 = (${b * b} × ${h}) ÷ 3 = ${(b * b * h) / 3}.`, solid("square-pyramid", { base: b, height: h }, "m"), { suffix: "m³" });
   };
   const cone = (): Question => {
     const r = randInt(2, 6), h = 3 * randInt(1, 4);
-    return typeIn(`A cone has a radius of ${r} cm and a height of ${h} cm. Its volume is how many π cm³? (V = 1/3 × π × r² × h)`, (r * r * h) / 3, `r² × h ÷ 3 = ${r * r} × ${h} ÷ 3 = ${(r * r * h) / 3}.`, undefined, { suffix: "π cm³" });
+    return typeIn(`A cone has a radius of ${r} cm and a height of ${h} cm. Its volume is how many π cm³? (V = 1/3 × π × r² × h)`, (r * r * h) / 3, `r² × h ÷ 3 = ${r * r} × ${h} ÷ 3 = ${(r * r * h) / 3}.`, solid("cone", { radius: r, height: h }), { suffix: "π cm³" });
   };
   const si = (): Question => {
     const rel = pick([
