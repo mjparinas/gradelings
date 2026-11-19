@@ -664,6 +664,7 @@ Details are in the sections above; this list only names features that aren't des
 - **App store badges** (owner, November 13, 2026; `docs/decisions/2026-11-13-app-store-badges.md`): the footer has a Google Play badge (`PLAY_STORE_URL`) and an App Store badge marked "Coming soon" that is not a link; the home page has a short notice that the Android app exists. Make the App Store badge a link once it is live.
 - **Branches** (owner, November 2, 2026, PR #433, to cut Vercel costs): open every pull request against `staging`, not `main`. `main` is production and only takes pull requests; the "Promote staging" workflow moves `staging` into `main` through a pull request.
 - **Bundle ids:** the Android package and the iOS bundle id are both `com.gradelings.app`.
+- **Android 1.0.3 (code 4)** (owner, November 19, 2026): `android/twa-manifest.json` has `enableNotifications: true` so the TWA delegates notifications to Chrome and asks for POST_NOTIFICATIONS, which Web Push (`push-notifications`) and the app icon badge (`app-badge`) need. The build is signed with the Gradelings upload key and uploaded to Play by Melvin; a Play upload needs a higher `appVersionCode` each time. Play Billing stays off.
 - **Play Console answers** (November 3, 2026): the Play store name is `Gradelings: Pre-K to Grade 9` (say "Pre-K to Grade 9", never "Pre-K-9"), and what was entered in each form is recorded in `docs/PLAY_CONSOLE_ANSWERS.md`.
 
 ## Open items
