@@ -28,7 +28,7 @@ describe("solid and net pictures", () => {
   it("appear in volume, surface-area and net questions, in both forms", () => {
     expect(all.some((d) => d.type === "solid")).toBe(true);
     expect(all.some((d) => d.type === "net")).toBe(true);
-    for (const unit of ["6/volume-and-capacity", "7/volume", "8/surface-area-volume"]) expect(all.some((d) => d.path === unit), unit).toBe(true);
+    for (const unit of ["6/volume-and-capacity", "7/volume", "8/surface-area-volume", "9/volume-units-9"]) expect(all.some((d) => d.path === unit), unit).toBe(true);
   });
 
   it("only write numbers the question gives", () => {
