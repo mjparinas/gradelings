@@ -24,9 +24,25 @@ export const NEWS_KIND_LABEL: Record<NewsItem["kind"], string> = {
 
 export const WHATS_NEW: NewsDay[] = [
   {
+    day: "2026-11-19",
+    headline: "A clearer picture for slice questions",
+    items: [
+      {
+        kind: "new",
+        title: "See the cut on \"what shape is the slice?\" questions",
+        body: "When a question asks what shape you get when a solid is cut, your child now sees the solid with the cutting plane drawn on it, so they can picture the slice instead of guessing from words.",
+      },
+    ],
+  },
+  {
     day: "2026-11-18",
     headline: "New guides for the Android app",
     items: [
+      {
+        kind: "new",
+        title: "Pictures for questions that need one",
+        body: "Many math and science questions now come with a drawing made from the question's own numbers: floor plans for area, maps with compass roses, graphs and data, angles, triangles and polygons, protractors, thermometers, slides, flips and turns, solids and nets for volume and surface area, and circuits, cells, the Moon, the seasons and day and night in science. Your child no longer has to picture it from words alone.",
+      },
       {
         kind: "new",
         title: "A home for the Android app on the website",

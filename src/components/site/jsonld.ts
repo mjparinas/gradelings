@@ -4,7 +4,7 @@ import { PRICES_BY_CURRENCY, type Currency } from "@/lib/plan";
 import type { Framework } from "@/content/frameworks";
 import type { GradeId } from "@/content/types";
 import { pageLocale } from "@/lib/pageMeta";
-import { ORG_REF, absolute } from "@/lib/site";
+import { ORG_ID, ORG_REF, absolute } from "@/lib/site";
 
 export function breadcrumbJsonLd(items: { label: string; href?: string }[]) {
   return {
@@ -44,6 +44,31 @@ export function articleJsonLd(a: { headline: string; description: string; path: 
     ...(a.updated ? { dateModified: a.updated } : {}),
     author: ORG_REF,
     publisher: ORG_REF,
+  };
+}
+
+/**
+ * The Contact page: a ContactPage whose main entity is the site's Organization (same @id as the home page's) with the
+ * support address. Only what the page itself says: the email, English, and who it is for.
+ */
+export function contactJsonLd(c: { path: string; email: string; description: string }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: `Contact ${APP_NAME}`,
+    description: c.description,
+    url: absolute(c.path),
+    inLanguage: pageLocale(),
+    mainEntity: {
+      "@type": "Organization",
+      "@id": ORG_ID,
+      name: APP_NAME,
+      url: absolute("/"),
+      email: c.email,
+      contactPoint: [
+        { "@type": "ContactPoint", contactType: "customer support", email: c.email, availableLanguage: "English" },
+      ],
+    },
   };
 }
 
