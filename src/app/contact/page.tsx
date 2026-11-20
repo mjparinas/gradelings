@@ -5,16 +5,26 @@ import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { teacherPath } from "@/components/site/teachers";
 import { APP_NAME, CONTACT_EMAIL, LEGAL_NAME, MAILING_ADDRESS, REPLY_TIME } from "@/lib/brand";
 import { pageMeta } from "@/lib/pageMeta";
+import { JsonLd } from "@/lib/site";
+import { breadcrumbJsonLd, contactJsonLd } from "@/components/site/jsonld";
+
+const DESCRIPTION = `Questions, feedback, a school enquiry or a privacy request? Message the ${APP_NAME} team or email ${CONTACT_EMAIL}. A person replies within ${REPLY_TIME}.`;
 
 export const metadata: Metadata = pageMeta({
-  title: "Contact us",
-  description: `Questions, feedback, a school enquiry or a privacy request? Send the ${APP_NAME} team a message or email us.`,
+  title: [`Contact ${APP_NAME}: support, feedback and school enquiries`, `Contact ${APP_NAME}: we reply in ${REPLY_TIME}`, "Contact us"],
+  description: DESCRIPTION,
   path: "/contact/",
 });
 
 export default function ContactPage() {
   return (
     <SitePage>
+      <JsonLd
+        data={[
+          breadcrumbJsonLd([{ label: "Home", href: "/" }, { label: "Contact" }]),
+          contactJsonLd({ path: "/contact/", email: CONTACT_EMAIL, description: DESCRIPTION }),
+        ]}
+      />
       <Crumbs items={[{ label: "Home", href: "/" }, { label: "Contact" }]} />
       <div className="max-w-3xl">
         <h1 className="text-4xl font-bold">Contact us</h1>
