@@ -5,6 +5,8 @@ import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { APP_NAME } from "@/lib/brand";
 import { pageMeta } from "@/lib/pageMeta";
 import { dayLabel, newsDay, WHATS_NEW } from "@/lib/whatsNew";
+import { JsonLd } from "@/lib/site";
+import { articleJsonLd, breadcrumbJsonLd } from "@/components/site/jsonld";
 
 export const dynamicParams = false;
 
@@ -27,6 +29,12 @@ export default async function WhatsNewDayPage({ params }: { params: Promise<{ da
   if (!entry) notFound();
   return (
     <SitePage cta="short">
+      <JsonLd
+        data={[
+          breadcrumbJsonLd([{ label: "Home", href: "/" }, { label: "What’s new", href: "/whats-new/" }, { label: dayLabel(entry.day) }]),
+          { ...articleJsonLd({ headline: entry.headline, description: entry.items.map((i) => i.title).join("; "), path: `/whats-new/${entry.day}/` }), datePublished: entry.day, dateModified: entry.day },
+        ]}
+      />
       <Crumbs items={[{ label: "Home", href: "/" }, { label: "What’s new", href: "/whats-new/" }, { label: dayLabel(entry.day) }]} />
       <div className="mx-auto max-w-3xl">
         <NewsDayCard entry={entry} />

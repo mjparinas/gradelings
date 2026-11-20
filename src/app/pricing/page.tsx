@@ -14,7 +14,7 @@ import { FaqSection } from "@/components/site/FaqSection";
 import { pricingFaqs } from "@/components/site/pageFaqs";
 
 export const metadata: Metadata = pageMeta({
-  title: "Pricing",
+  title: [`Pricing: free for ${TRIAL_DAYS} days, then ${PRICES.month.label}`, `Pricing: ${TRIAL_DAYS}-day free trial`, "Pricing"],
   description: `${APP_NAME} is free for ${TRIAL_DAYS} days, then ${PRICES.month.label} or ${PRICES.year.label} (CAD) ${TAX_NOTE.CAD.short}${offersUsd(FRAMEWORKS) ? `, or ${PRICES_BY_CURRENCY.USD.month.label} or ${PRICES_BY_CURRENCY.USD.year.label} in the US,` : ""} for up to ${MAX_CHILDREN} children. No ads, and the first ${FREE_UNITS_PER_COURSE} units of every course stay free.`,
   path: "/pricing/",
 });

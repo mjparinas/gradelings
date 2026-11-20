@@ -4,11 +4,13 @@ import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { byCountry, regionWord } from "@/components/site/provinces";
 import { FRAMEWORKS } from "@/content/frameworks";
 import { pageMeta } from "@/lib/pageMeta";
+import { JsonLd } from "@/lib/site";
+import { breadcrumbJsonLd, itemListJsonLd } from "@/components/site/jsonld";
 import { FaqSection } from "@/components/site/FaqSection";
 import { bandLine, reportCardIndexFaqs, reportingBands } from "@/components/site/pageFaqs";
 
 export const metadata: Metadata = pageMeta({
-  title: "Report cards explained",
+  title: ["Report cards explained, by province and state", "Report cards explained"],
   description: "Plain-language guides to elementary report cards: what each proficiency level means and how to help at home.",
   path: "/report-cards/",
 });
@@ -16,6 +18,12 @@ export const metadata: Metadata = pageMeta({
 export default function ReportCardsIndex() {
   return (
     <SitePage cta lead="trial">
+      <JsonLd
+        data={[
+          breadcrumbJsonLd([{ label: "Home", href: "/" }, { label: "Report cards" }]),
+          itemListJsonLd("Report cards explained by province and state", FRAMEWORKS.map((f) => ({ name: f.reportCard.title, path: `/report-cards/${f.slug}/` }))),
+        ]}
+      />
       <Crumbs items={[{ label: "Home", href: "/" }, { label: "Report cards" }]} />
       <h1 className="text-4xl font-bold">Report cards explained</h1>
       <p className="mt-2 max-w-2xl font-read text-lg text-ink-soft">Every province and state reports learning a little differently. Pick yours for a plain-language guide.</p>

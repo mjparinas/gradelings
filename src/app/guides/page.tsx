@@ -5,9 +5,11 @@ import { guidePath } from "@/components/site/guides";
 import { byCountry } from "@/components/site/provinces";
 import { GUIDE_FRAMEWORKS, guidesFor } from "@/content/guides";
 import { pageMeta } from "@/lib/pageMeta";
+import { JsonLd } from "@/lib/site";
+import { breadcrumbJsonLd, itemListJsonLd } from "@/components/site/jsonld";
 
 export const metadata: Metadata = pageMeta({
-  title: "Parent guides",
+  title: ["Parent guides: what each grade learns, by province and state", "Parent guides by province and state", "Parent guides"],
   description: "Free plain-language guides for parents: what each grade learns, how to help at home, report cards, provincial and state tests, and printable practice sheets.",
   path: "/guides/",
 });
@@ -16,6 +18,12 @@ export const metadata: Metadata = pageMeta({
 export default function GuidesIndex() {
   return (
     <SitePage cta lead="trial">
+      <JsonLd
+        data={[
+          breadcrumbJsonLd([{ label: "Home", href: "/" }, { label: "Parent guides" }]),
+          itemListJsonLd("Parent guides by province and state", GUIDE_FRAMEWORKS.map((f) => ({ name: f.name, path: guidePath.hub(f) }))),
+        ]}
+      />
       <Crumbs items={[{ label: "Home", href: "/" }, { label: "Parent guides" }]} />
       <h1 className="text-4xl font-bold">Parent guides</h1>
       <p className="mt-2 max-w-2xl font-read text-lg text-ink-soft">
