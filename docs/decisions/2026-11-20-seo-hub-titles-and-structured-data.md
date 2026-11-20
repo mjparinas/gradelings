@@ -12,3 +12,10 @@ hub pages:
 
 Left for later: the `/curriculum/` hub is about 490 KB of HTML (every region's grades listed); trimming it is a
 separate change.
+
+## Update: slimmer `/curriculum/` hub (2026-11-20, Melvin: "Yes please")
+
+The hub no longer lists every grade of every region (about 800 links). Each region's card shows its grade range, its
+unit count and one "Browse {curriculum} grades" link to its hub, which already links every grade page and carries
+the `ItemList`. Every grade and unit page is still reachable in two clicks and stays in the sitemap, which is
+unchanged. The first-load HTML dropped by about 85% of its links; no pages were removed.

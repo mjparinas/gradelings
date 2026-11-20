@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "@/components/PublicLink";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
-import { coursesFor, curriculumPath, gradesWithContent, gradeLabel } from "@/components/site/curriculum";
+import { coursesFor, curriculumPath, gradesWithContent, gradeSpan } from "@/components/site/curriculum";
 import { byCountry } from "@/components/site/provinces";
 import { FRAMEWORKS } from "@/content/frameworks";
 import { APP_NAME } from "@/lib/brand";
@@ -46,15 +46,12 @@ export default function CurriculumIndex() {
                   </h2>
                 )}
                 <p className="font-read text-ink-soft">{f.name}</p>
-                <ul className="mt-3 flex flex-wrap gap-2">
-                  {gradesWithContent(f).map((g) => (
-                    <li key={g}>
-                      <Link href={curriculumPath.grade(f, g)} className="inline-flex rounded-full bg-paper px-3 py-1.5 font-semibold hover:bg-[#e6f0ff]">
-                        {gradeLabel(f, g)} <span className="ml-1 text-ink-soft">({coursesFor(f, g).reduce((n, c) => n + c.units.length, 0)})</span>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+                <p className="mt-3 text-sm font-semibold text-ink-soft">
+                  {gradeSpan(f)} · {gradesWithContent(f).reduce((n, g) => n + coursesFor(f, g).reduce((m, c) => m + c.units.length, 0), 0).toLocaleString("en-CA")} units
+                </p>
+                <Link href={curriculumPath.framework(f)} className="mt-3 inline-flex rounded-full bg-paper px-4 py-2 font-semibold hover:bg-[#e6f0ff]">
+                  Browse {f.curriculumName} grades
+                </Link>
               </section>
             ))}
           </div>
