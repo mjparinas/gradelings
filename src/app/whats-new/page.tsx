@@ -4,9 +4,11 @@ import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { APP_NAME } from "@/lib/brand";
 import { pageMeta } from "@/lib/pageMeta";
 import { WHATS_NEW } from "@/lib/whatsNew";
+import { JsonLd } from "@/lib/site";
+import { breadcrumbJsonLd } from "@/components/site/jsonld";
 
 export const metadata: Metadata = pageMeta({
-  title: "What’s new",
+  title: `What’s new in ${APP_NAME}: updates and fixes`,
   description: `A day-by-day note for parents and teachers on what’s new and what we fixed in ${APP_NAME}.`,
   path: "/whats-new/",
 });
@@ -14,6 +16,7 @@ export const metadata: Metadata = pageMeta({
 export default function WhatsNewPage() {
   return (
     <SitePage cta="short">
+      <JsonLd data={breadcrumbJsonLd([{ label: "Home", href: "/" }, { label: "What’s new" }])} />
       <Crumbs items={[{ label: "Home", href: "/" }, { label: "What’s new" }]} />
       <div className="mx-auto max-w-3xl">
         <h1 className="text-4xl font-bold">What’s new</h1>

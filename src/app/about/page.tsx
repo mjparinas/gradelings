@@ -10,7 +10,7 @@ import { TRIAL_DAYS } from "@/lib/plan";
 import { pageMeta } from "@/lib/pageMeta";
 
 export const metadata: Metadata = pageMeta({
-  title: "About us",
+  title: `About us: why we made ${APP_NAME}`,
   description: `Why ${APP_NAME} exists, who makes it and what we believe: curriculum-matched practice for Pre-K to Grade 9 that kids enjoy and parents understand.`,
   path: "/about/",
 });
