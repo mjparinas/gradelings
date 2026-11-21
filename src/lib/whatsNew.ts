@@ -24,6 +24,17 @@ export const NEWS_KIND_LABEL: Record<NewsItem["kind"], string> = {
 
 export const WHATS_NEW: NewsDay[] = [
   {
+    day: "2026-11-20",
+    headline: "A lighter, easier curriculum page",
+    items: [
+      {
+        kind: "new",
+        title: "The curriculum page loads faster and is easier to scan",
+        body: "Each region on the curriculum page now shows its grades and how many units it covers, with one link to browse that region's grades. The page is much lighter, so it opens faster, especially on phones and slower connections. Every grade is still just a couple of clicks away.",
+      },
+    ],
+  },
+  {
     day: "2026-11-19",
     headline: "A clearer picture for slice questions",
     items: [
