@@ -57,3 +57,6 @@ next-env.d.ts
 
 # Piper read-aloud files, written by scripts/fetch-piper.mjs
 /public/piper/
+
+# Local pdftotext cache for PEI research (rebuild with build_outcomes.py)
+/docs/research/prince-edward-island/text/

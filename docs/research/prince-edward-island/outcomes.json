@@ -1,0 +1,5062 @@
+{
+ "k/language": [
+  {
+   "idx": "1.2",
+   "kind": "specific",
+   "content": "listen to the ideas and opinions of others"
+  },
+  {
+   "idx": "1.3",
+   "kind": "specific",
+   "content": "begin to ask and respond to questions, seeking help or information (i.e., who? what? why? where? when?)"
+  },
+  {
+   "idx": "1.4",
+   "kind": "specific",
+   "content": "follow and give directions in different contexts"
+  },
+  {
+   "idx": "1.5",
+   "kind": "specific",
+   "content": "participate in conversation and in small- and whole-group discussion"
+  },
+  {
+   "idx": "1.6",
+   "kind": "specific",
+   "content": "begin to use gestures and tone to convey meaning"
+  },
+  {
+   "idx": "1.7",
+   "kind": "specific",
+   "content": "engage in simple oral presentations and respond to oral presentations"
+  },
+  {
+   "idx": "1.8",
+   "kind": "specific",
+   "content": "demonstrate that they are becoming aware of social conventions in group work and cooperative play"
+  },
+  {
+   "idx": "1.9",
+   "kind": "specific",
+   "content": "develop the concepts/vocabulary of feelings and an awareness that some vocabulary choices can hurt people"
+  },
+  {
+   "idx": "2.1",
+   "kind": "specific",
+   "content": "identify how many words are in a spoken sentence"
+  },
+  {
+   "idx": "2.2",
+   "kind": "specific",
+   "content": "begin to segment and blend words into syllables"
+  },
+  {
+   "idx": "2.3",
+   "kind": "specific",
+   "content": "recognize and produce rhyming words in oral language"
+  },
+  {
+   "idx": "2.4",
+   "kind": "specific",
+   "content": "recognize beginning and final phonemes (sounds) in oral language"
+  },
+  {
+   "idx": "3.3",
+   "kind": "specific",
+   "content": "engage in reading or reading-like behaviour as they experience a variety of literature"
+  },
+  {
+   "idx": "3.4",
+   "kind": "specific",
+   "content": "use picture cues and prior knowledge to make sense of unfamiliar text"
+  },
+  {
+   "idx": "3.5",
+   "kind": "specific",
+   "content": "use knowledge of oral language to make sense of unfamiliar text"
+  },
+  {
+   "idx": "3.6",
+   "kind": "specific",
+   "content": "begin to use knowledge of sound/letter relationships to problem- solve unknown words"
+  },
+  {
+   "idx": "3.7",
+   "kind": "specific",
+   "content": "begin to match one-to-one spoken to printed word"
+  },
+  {
+   "idx": "3.8",
+   "kind": "specific",
+   "content": "begin to use some sight words, environmental print, and words that have personal significance to make sense of unfamiliar text"
+  },
+  {
+   "idx": "3.9",
+   "kind": "specific",
+   "content": "name most of the letters of the alphabet in context"
+  },
+  {
+   "idx": "3.10",
+   "kind": "specific",
+   "content": "respond personally to texts in a variety of ways to demonstrate comprehension"
+  },
+  {
+   "idx": "3.11",
+   "kind": "specific",
+   "content": "develop an awareness of different types of text"
+  },
+  {
+   "idx": "3.12",
+   "kind": "specific",
+   "content": "begin to ask questions about a text"
+  },
+  {
+   "idx": "3.13",
+   "kind": "specific",
+   "content": "recognize some basic components of text such as author, illustrator, and title"
+  },
+  {
+   "idx": "4.1",
+   "kind": "specific",
+   "content": "understand that print (illustration/symbols) carries a message"
+  },
+  {
+   "idx": "4.2",
+   "kind": "specific",
+   "content": "begin to demonstrate an awareness of audience and purpose"
+  },
+  {
+   "idx": "4.3",
+   "kind": "specific",
+   "content": "write simple messages"
+  },
+  {
+   "idx": "4.4",
+   "kind": "specific",
+   "content": "begin to develop an awareness of editing strategies"
+  },
+  {
+   "idx": "4.5",
+   "kind": "specific",
+   "content": "develop the concept of directionality"
+  },
+  {
+   "idx": "4.10",
+   "kind": "specific",
+   "content": "experiment with punctuation"
+  },
+  {
+   "idx": "4.11",
+   "kind": "specific",
+   "content": "begin to use spaces between words"
+  }
+ ],
+ "k/math": [
+  {
+   "idx": "1.1",
+   "kind": "specific",
+   "content": "count in a variety of ways"
+  },
+  {
+   "idx": "1.2",
+   "kind": "specific",
+   "content": "explore a variety of physical representations of numbers 1 to 10"
+  },
+  {
+   "idx": "1.3",
+   "kind": "specific",
+   "content": "count to determine the number in a group (0 to 10)"
+  },
+  {
+   "idx": "1.4",
+   "kind": "specific",
+   "content": "create sets of a given number (0 to 10)"
+  },
+  {
+   "idx": "1.5",
+   "kind": "specific",
+   "content": "show a given number as two parts concretely and name the two parts (2 to 10)"
+  },
+  {
+   "idx": "1.6",
+   "kind": "specific",
+   "content": "determine which group has more, which group has less, or which are equivalent"
+  },
+  {
+   "idx": "1.7",
+   "kind": "specific",
+   "content": "use symbols to represent numbers in a variety of meaningful contexts"
+  },
+  {
+   "idx": "2.1",
+   "kind": "specific",
+   "content": "demonstrate an understanding of repeating patterns (two or three"
+  },
+  {
+   "idx": "4.1",
+   "kind": "specific",
+   "content": "sort 3-D objects using a single attribute"
+  },
+  {
+   "idx": "4.2",
+   "kind": "specific",
+   "content": "build and describe 3-D objects"
+  }
+ ],
+ "k/science": [
+  {
+   "idx": "1.1",
+   "kind": "specific",
+   "content": "become aware of the five senses"
+  },
+  {
+   "idx": "1.2",
+   "kind": "specific",
+   "content": "develop and use vocabulary associated with the five senses"
+  }
+ ],
+ "k/social": [
+  {
+   "idx": "2.1",
+   "kind": "specific",
+   "content": "identify and describe their family"
+  },
+  {
+   "idx": "2.2",
+   "kind": "specific",
+   "content": "recognize that families have varied traditions, rituals, and demonstrate an understanding of the celebrations interactions among people, places, and the environment. Community"
+  },
+  {
+   "idx": "3.1",
+   "kind": "specific",
+   "content": "begin to develop an awareness of their community"
+  },
+  {
+   "idx": "3.2",
+   "kind": "specific",
+   "content": "begin to develop an awareness of the connection between their community and other communities"
+  },
+  {
+   "idx": "3.3",
+   "kind": "specific",
+   "content": "begin to develop an awareness of maps"
+  }
+ ],
+ "1/language": [
+  {
+   "idx": "1.1",
+   "kind": "specific",
+   "content": "express feelings and give simple descriptions of past experiences"
+  },
+  {
+   "idx": "1.2",
+   "kind": "specific",
+   "content": "ask and respond to questions to clarify information or gather further information"
+  },
+  {
+   "idx": "1.3",
+   "kind": "specific",
+   "content": "express opinions and give simple explanations for some of their opinions (I like ... because)"
+  },
+  {
+   "idx": "1.4",
+   "kind": "specific",
+   "content": "listen to others’ ideas and opinions"
+  },
+  {
+   "idx": "2.3",
+   "kind": "specific",
+   "content": "respond to and give instructions or directions that include two or three components"
+  },
+  {
+   "idx": "2.4",
+   "kind": "specific",
+   "content": "engage in informal oral presentations and respond to a variety of oral presentations and other texts"
+  },
+  {
+   "idx": "2.1",
+   "kind": "specific",
+   "content": "sustain one-to-one conversations and contribute to small- and large-group interactions"
+  },
+  {
+   "idx": "2.2",
+   "kind": "specific",
+   "content": "use intonation, facial expressions, and gestures to communicate ideas and feelings"
+  },
+  {
+   "idx": "3.2",
+   "kind": "specific",
+   "content": "recognize some examples of unfair and hurtful vocabulary, and begin to make vocabulary choices that affirm rather than hurt people"
+  },
+  {
+   "idx": "3.3",
+   "kind": "specific",
+   "content": "demonstrate a growing awareness that different kinds of language are appropriate to different situations (Early)"
+  },
+  {
+   "idx": "3.1",
+   "kind": "specific",
+   "content": "demonstrate a growing awareness of social conventions such as turn-taking and politeness in conversation and co-operative play"
+  },
+  {
+   "idx": "4.1",
+   "kind": "specific",
+   "content": "regard reading/viewing as sources of interest, enjoyment, and information"
+  },
+  {
+   "idx": "4.4",
+   "kind": "specific",
+   "content": "use some features of written text to determine content, locate topics, and obtain information"
+  },
+  {
+   "idx": "4.5",
+   "kind": "specific",
+   "content": "use, with support, the various cueing systems and a variety of strategies to construct meaning from text - use meaning cues (personal experiences, context, picture cues) to predict, confirm/self-correct - use knowledge of oral language patterns (syntax) to predict and confirm/self-correct - begin to use knowledge of sound symbol relationships as one reading cue (e.g., initial and final consonants)"
+  },
+  {
+   "idx": "4.2",
+   "kind": "specific",
+   "content": "expand their understanding of concepts of print - punctuation in text serves a purpose - upper- and lower-case letters have specific forms and functions (first word in sentences and proper names)"
+  },
+  {
+   "idx": "4.3",
+   "kind": "specific",
+   "content": "select independently, and with teacher assistance, texts appropriate to their interests and learning needs"
+  },
+  {
+   "idx": "4.6",
+   "kind": "specific",
+   "content": "use a variety of strategies to create meaning - identify main idea - predict content using text information along with personal knowledge and experiences - make inferences by drawing on their own experiences and clues in the text - identify character traits from contextual clues - make connections between texts, noticing similarities in"
+  },
+  {
+   "idx": "4.7",
+   "kind": "specific",
+   "content": "consistently match one-to-one"
+  },
+  {
+   "idx": "5.1",
+   "kind": "specific",
+   "content": "engage in research process with assistance - generate questions to guide research - locate appropriate information with assistance (classroom, library, home, community) - interact with the information"
+  },
+  {
+   "idx": "6.2",
+   "kind": "specific",
+   "content": "express and begin to support opinions about texts and the work of authors and illustrators"
+  },
+  {
+   "idx": "6.1",
+   "kind": "specific",
+   "content": "make personal connections to text and share their responses in a variety of ways"
+  },
+  {
+   "idx": "7.3",
+   "kind": "specific",
+   "content": "begin to ask questions of text"
+  },
+  {
+   "idx": "7.4",
+   "kind": "specific",
+   "content": "begin to develop an understanding and respect for diversity"
+  },
+  {
+   "idx": "7.1",
+   "kind": "specific",
+   "content": "use their experiences with a range of texts to identify some different types of print and media texts, recognizing some of their language conventions and text characteristics"
+  },
+  {
+   "idx": "7.2",
+   "kind": "specific",
+   "content": "respond critically to texts - formulate questions as well as understandings - develop an understanding and respect for diversity"
+  },
+  {
+   "idx": "8.2",
+   "kind": "specific",
+   "content": "begin to develop, with assistance, some ways to make their own notes (e.g., webs, story maps, point-form notes)"
+  },
+  {
+   "idx": "8.1",
+   "kind": "specific",
+   "content": "use writing and other forms of representing for a variety of functions - to ask questions - to generate and organize ideas - to express feelings, opinions, and imaginative ideas - to inform/communicate information - to record experiences - to explore learning"
+  },
+  {
+   "idx": "8.3",
+   "kind": "specific",
+   "content": "begin to experiment with language choices in imaginative writing and other ways of representing"
+  },
+  {
+   "idx": "9.2",
+   "kind": "specific",
+   "content": "demonstrate some awareness of audience and purpose - choose particular forms for specific audiences and purposes - realize that work to be shared with an audience needs editing"
+  },
+  {
+   "idx": "9.3",
+   "kind": "specific",
+   "content": "consider their readers’/viewers’/listeners’ questions/comments and begin to use such responses to assess and extend their learning"
+  },
+  {
+   "idx": "9.1",
+   "kind": "specific",
+   "content": "use a variety of familiar text forms and other media (messages, letters, lists, recounts, stories, poems, records of observations, role-plays, Readers Theatre)"
+  },
+  {
+   "idx": "10.2",
+   "kind": "specific",
+   "content": "use some conventions of written language - use conventional spacing between words - use an increasing number of letters to represent sounds (most vowel and consonant sounds represented) - use an increasing number of words spelled conventionally - use simple sentence structures - attempt to use punctuation (periods, question marks, exclamation marks)"
+  },
+  {
+   "idx": "10.3",
+   "kind": "specific",
+   "content": "demonstrate engagement with writing and other forms of representation - choose to write when given a choice of activities - take risks to express self in writing - sustain engagement in writing and other forms of representa- tion (e.g., creating with blocks or paint, role-playing, telling a story through drawing and writing) - write in play situations (e.g., making grocery lists, making"
+  },
+  {
+   "idx": "10.4",
+   "kind": "specific",
+   "content": "with assistance, experiment with technology in writing and other forms of representing - use a tape recorder to record choral readings, dramatizations, retellings, or finished pieces of writing - create illustrations/drawings with a computer graphics/ drawing program - compose simple text (and begin to revise and edit) with a word processing program"
+  },
+  {
+   "idx": "10.5",
+   "kind": "specific",
+   "content": "with assistance, engage in the research process to construct and communicate meaning - interact with a variety of simple texts (e.g., pictures, computer software, videotapes, easy fiction and non- fiction), as well as human and community resources - record information in simple ways (e.g., drawings, labels, predesigned booklets, short pieces of writing) - share information with others in a variety of ways"
+  },
+  {
+   "idx": "10.1",
+   "kind": "specific",
+   "content": "develop strategies for prewriting, drafting, revising, editing/proofreading, and presenting/publishing - use prewriting strategies, such as drawing, talking, and reflecting - use appropriate drafting strategies for getting ideas on paper (taking risks by using temporary spelling or by exploring various forms, writing freely with a focus on getting ideas on paper, composing simple text using a"
+  }
+ ],
+ "1/math": [
+  {
+   "idx": "N1",
+   "kind": "specific",
+   "content": "Say the number sequence, 0 to 100, by:"
+  },
+  {
+   "idx": "N2",
+   "kind": "specific",
+   "content": "Recognize, at a glance, and name familiar arrangements of 1 to 10 objects or dots."
+  },
+  {
+   "idx": "N3",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of counting by: • indicating that the last number said identifies “how many”; • showing that any set has only one count; • using the counting on strategy; • using parts or equal groups to count sets."
+  },
+  {
+   "idx": "N4",
+   "kind": "specific",
+   "content": "Represent and describe numbers to 20 concretely, pictorially, and symbolically."
+  },
+  {
+   "idx": "N5",
+   "kind": "specific",
+   "content": "Compare sets containing up to 20 elements to solve problems using: • referents; • one-to-one correspondence."
+  },
+  {
+   "idx": "N6",
+   "kind": "specific",
+   "content": "Estimate quantities to 20 by using referents."
+  },
+  {
+   "idx": "N7",
+   "kind": "specific",
+   "content": "Demonstrate, concretely and pictorially, how a given number can be represented by a variety of equal groups with and without singles."
+  },
+  {
+   "idx": "N8",
+   "kind": "specific",
+   "content": "Identify the number, up to 20, that is one more, two more, one less, and two less than a given number."
+  },
+  {
+   "idx": "N9",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of addition of numbers with answers to 20 and their corresponding substraction facts, concretely, pictorially, and symbolically by: • using familiar and mathematical language to describe additive and subtractive actions from their experience; • creating and solving problems in context that involve addition and subtraction; • modelling addition and subtraction using a variety of"
+  },
+  {
+   "idx": "N10",
+   "kind": "specific",
+   "content": "Describe and use mental mathematics strategies (memoriza- tion not intended), such as: • counting on and counting back; • making 10; • doubles; • using addition to subtract to determine the basic addition facts to 18 and related subtraction facts."
+  },
+  {
+   "idx": "PR1",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of repeating patterns (two to"
+  },
+  {
+   "idx": "PR2",
+   "kind": "specific",
+   "content": "Translate repeating patterns from one representation to another."
+  },
+  {
+   "idx": "PR3",
+   "kind": "specific",
+   "content": "Describe equality as a balance and inequality as an imbalance, concretely and pictorially (0 to 20)."
+  },
+  {
+   "idx": "PR4",
+   "kind": "specific",
+   "content": "Record equalities using the equal symbol."
+  },
+  {
+   "idx": "SS1",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of measurement as a process of"
+  },
+  {
+   "idx": "SS2",
+   "kind": "specific",
+   "content": "Sort 3-D objects and 2-D shapes using one attribute, and explain the sorting rule."
+  },
+  {
+   "idx": "SS3",
+   "kind": "specific",
+   "content": "Replicate composite 2-D shapes and 3-D objects."
+  },
+  {
+   "idx": "SS4",
+   "kind": "specific",
+   "content": "Compare 2-D shapes to parts of 3-D objects in the environment."
+  }
+ ],
+ "1/science": [
+  {
+   "idx": "SP-1",
+   "kind": "specific",
+   "content": "Share their own observations and ideas in a variety of ways technology, of the relationships between science and technology, and of the social Physical Science - Materials, Objects and our Senses (PS) and environmental contexts of science Students will be expected to and technology. (STSE)"
+  },
+  {
+   "idx": "PS-1",
+   "kind": "specific",
+   "content": "Describe a wide range of materials using their senses"
+  },
+  {
+   "idx": "PS-2",
+   "kind": "specific",
+   "content": "Evaluate the suitability of materials for a specific purpose edge and understandings of concepts in"
+  },
+  {
+   "idx": "PS-3",
+   "kind": "specific",
+   "content": "Create a model or toy from scrap material life science, physical science, and Earth and space science, and apply these un- Life Science (LS): Needs and Characteristics of Living Things derstandings to interpret, integrate, and Students will be expected to extend their knowledge. (Knowledge)"
+  },
+  {
+   "idx": "LS-1",
+   "kind": "specific",
+   "content": "Distinguish between characteristics that make plants and animals Skills unique"
+  },
+  {
+   "idx": "LS-2",
+   "kind": "specific",
+   "content": "Classify the characteristics and needs of living things"
+  },
+  {
+   "idx": "ESS-1",
+   "kind": "specific",
+   "content": "Analyse daily and seasonal changes in the environment for working collaboratively, and for"
+  },
+  {
+   "idx": "ESS-2",
+   "kind": "specific",
+   "content": "Evaluate the characteristics of the four seasons making informed decisions."
+  }
+ ],
+ "1/social": [
+  {
+   "idx": "1.1.1",
+   "kind": "specific",
+   "content": "demonstrate an understanding of the importance of citizenship and the origins, functions, interactions between people and sources of power, authority, and"
+  },
+  {
+   "idx": "1.1.2",
+   "kind": "specific",
+   "content": "demonstrate an understanding of the similarity and governance. diversity of social and cultural groups"
+  },
+  {
+   "idx": "1.1.3",
+   "kind": "specific",
+   "content": "demonstrate an understanding that people within groups Culture and Diversity have rights and responsibilities"
+  },
+  {
+   "idx": "1.2.1",
+   "kind": "specific",
+   "content": "recognize that environments have natural and constructed personal, cultural, racial, and ethnic features perspectives."
+  },
+  {
+   "idx": "1.2.2",
+   "kind": "specific",
+   "content": "describe how people depend upon and interact with different natural environments Individuals, Societies, and Economic"
+  },
+  {
+   "idx": "1.2.3",
+   "kind": "specific",
+   "content": "take age-appropriate action to practise responsible behaviour Decisions in caring for the environment"
+  },
+  {
+   "idx": "1.3.1",
+   "kind": "specific",
+   "content": "demonstrate an understanding that signs, symbols, direction, and scale are used to represent landmarks and locations Interdependence"
+  },
+  {
+   "idx": "1.3.2",
+   "kind": "specific",
+   "content": "demonstrate an understanding that the way people live in their community evolves over time"
+  },
+  {
+   "idx": "1.3.3",
+   "kind": "specific",
+   "content": "demonstrate an understanding that Aboriginal peoples’ to demonstrate an understanding relationship with place has changed over time of the interdependent relationship"
+  },
+  {
+   "idx": "1.3.4",
+   "kind": "specific",
+   "content": "explain how interactions between communities have changed among individuals, societies, and over time the environment - locally, nation- ally, and globally - and the impli- cations for a sustainable future."
+  },
+  {
+   "idx": "1.4.1",
+   "kind": "specific",
+   "content": "recognize that all people have needs and wants"
+  },
+  {
+   "idx": "1.4.2",
+   "kind": "specific",
+   "content": "demonstrate an understanding of the factors that influence demonstrate an understanding of how needs and wants are met the interactions among people,"
+  },
+  {
+   "idx": "1.4.3",
+   "kind": "specific",
+   "content": "demonstrate an understanding of how communities depend places, and the environment. on each other for the exchange of goods and services"
+  }
+ ],
+ "2/language": [
+  {
+   "idx": "1.1",
+   "kind": "specific",
+   "content": "describe, share, and discuss thoughts, feelings, and experiences and consider others’ ideas"
+  },
+  {
+   "idx": "1.4",
+   "kind": "specific",
+   "content": "listen critically to others’ ideas and opinions"
+  },
+  {
+   "idx": "1.2",
+   "kind": "specific",
+   "content": "ask and respond to questions to clarify information and to explore possibilities or solutions to problems"
+  },
+  {
+   "idx": "1.3",
+   "kind": "specific",
+   "content": "express and explain opinions and respond to the questions and reactions of others"
+  },
+  {
+   "idx": "2.3",
+   "kind": "specific",
+   "content": "respond to and give instructions or directions that include two or three components"
+  },
+  {
+   "idx": "2.4",
+   "kind": "specific",
+   "content": "engage in informal oral presentations and respond to a variety of oral presentations and other texts"
+  },
+  {
+   "idx": "2.1",
+   "kind": "specific",
+   "content": "participate in conversation, small-group and whole-group discussion, understanding when to speak and when to listen"
+  },
+  {
+   "idx": "2.2",
+   "kind": "specific",
+   "content": "adapt volume, projection, facial expression, gestures, and tone of voice to the speaking occasion"
+  },
+  {
+   "idx": "3.3",
+   "kind": "specific",
+   "content": "recognize that volume of voice needs to be adjusted according to the situation (e.g., playground, classroom)"
+  },
+  {
+   "idx": "3.1",
+   "kind": "specific",
+   "content": "use basic courtesies and conventions of conversation in group work and co-operative play"
+  },
+  {
+   "idx": "3.2",
+   "kind": "specific",
+   "content": "identify some forms of oral language that are unfair to particular individuals and cultures, and use vocabulary that shows respect for all people"
+  },
+  {
+   "idx": "4.1",
+   "kind": "specific",
+   "content": "select, independently and with teacher assistance, texts appropriate to their interests and learning needs"
+  },
+  {
+   "idx": "4.3",
+   "kind": "specific",
+   "content": "use pictorial, typographical, and organizational features of written text to determine content, locate topics, and obtain information"
+  },
+  {
+   "idx": "4.4",
+   "kind": "specific",
+   "content": "use and integrate, with support, the various cueing systems (pragmatic, semantic, syntactic, and graphophonic) and a range of strategies to construct meaning - predict the basis of what would make sense, what would sound right, and what the print suggests (semantics, syntax, graphophonics) - monitor reading by cross-checking the various cues (i.e., Did that make sense? Did it sound right? If that were “fire” would it have"
+  },
+  {
+   "idx": "4.5",
+   "kind": "specific",
+   "content": "use a combination of cues (semantic, syntactic, graphophonic, and pragmatic) to sample, predict, and monitor/self-correct - predict on the basis of what makes sense, what sounds right, and what the print suggests - make meaningful substitutions - attempt to self-correct predictions that interfere with meaning - begin to monitor their own reading by cross-checking meaning cues with cues from beginning and last letters of the word (i.e.,"
+  },
+  {
+   "idx": "4.6",
+   "kind": "specific",
+   "content": "use a variety of strategies to create meaning - identify main idea - predict content using text information along with personal knowledge and experiences - make inferences by drawing on their own experiences and clues in the text - identify character traits from contextual clues - make connections between texts, noticing similarities in characters,"
+  },
+  {
+   "idx": "4.7",
+   "kind": "specific",
+   "content": "consistently match one-to-one (Transitional)"
+  },
+  {
+   "idx": "4.2",
+   "kind": "specific",
+   "content": "read widely and experience a variety of children’s literature"
+  },
+  {
+   "idx": "5.1",
+   "kind": "specific",
+   "content": "answer, with assistance, their own questions and those of others by seeking information from a variety of texts - identify their own personal and learning needs for information - generate their own questions as a guide for research - use a range of print and non-print materials to meet their needs - use basic reference materials and a database or electronic"
+  },
+  {
+   "idx": "6.2",
+   "kind": "specific",
+   "content": "express and explain opinions about texts and types of texts, and the work of authors and illustrators, demonstrating an increasing awareness of the reasons for their opinions"
+  },
+  {
+   "idx": "6.1",
+   "kind": "specific",
+   "content": "make personal connections to texts and describe, share, and discuss their reactions and emotions"
+  },
+  {
+   "idx": "7.2",
+   "kind": "specific",
+   "content": "identify some different types of print and media texts - recognize some of their language conventions and text characteristics - recognize that these conventions and characteristics help them understand what they read and view"
+  },
+  {
+   "idx": "7.1",
+   "kind": "specific",
+   "content": "question information presented in print and visual texts - use a personal knowledge base as a frame of reference"
+  },
+  {
+   "idx": "7.3",
+   "kind": "specific",
+   "content": "respond critically to texts - formulate questions as well as understandings - identify the point of view in a text and demonstrate an awareness of whose voices/positions are and are not being expressed - discuss the text from the perspective of their own realities and experiences - identify instances of prejudice, bias, and stereotyping"
+  },
+  {
+   "idx": "8.3",
+   "kind": "specific",
+   "content": "begin to experiment with language choices in imaginative writing and other ways of representing"
+  },
+  {
+   "idx": "8.1",
+   "kind": "specific",
+   "content": "use writing and other forms of representation to - formulate questions - generate and organize language and ideas - discover and express personal attitudes and opinions - express feelings and imaginative ideas - record experiences - explore how and what they learn"
+  },
+  {
+   "idx": "8.2",
+   "kind": "specific",
+   "content": "explore, with assistance, ways for making their own notes"
+  },
+  {
+   "idx": "9.2",
+   "kind": "specific",
+   "content": "demonstrate some awareness of audience and purpose - choose particular forms for specific audiences and purposes - realize that work to be shared with an audience needs editing"
+  },
+  {
+   "idx": "9.3",
+   "kind": "specific",
+   "content": "consider their readers’/listeners’/viewers’ questions/comments, and other responses in assessing their work and extending their learning"
+  },
+  {
+   "idx": "9.1",
+   "kind": "specific",
+   "content": "create written and media texts using a variety of forms - experiment with a combination of writing with other media to increase the impact of their presentations"
+  },
+  {
+   "idx": "10.2",
+   "kind": "specific",
+   "content": "use some conventions of written language - punctuation and capitalization • use capitals for proper names, titles, places, days, months, holidays, beginning of sentences • use periods at the ends of sentences and for abbreviations • use commas in a series and in dates • use apostrophes for possessives and contractions • use question marks, exclamation marks, and quotation marks"
+  },
+  {
+   "idx": "10.3",
+   "kind": "specific",
+   "content": "demonstrate engagement with the creation of pieces of writing and other representations - engage in writing and representing activities every day - sustain engagement in writing and other forms of representation (drawing, role-play, plasticine art, collage, etc.) - choose to write independently during free choice time - share writing and other representations with others and seek response"
+  },
+  {
+   "idx": "10.4",
+   "kind": "specific",
+   "content": "with assistance, experiment with technology in writing and other forms of representing - use a tape recorder to record choral readings, dramatizations, retellings, or finished pieces of writing - create illustrations/drawings with a computer graphics/drawing program - compose simple text (and begin to revise and edit) with a word processing program"
+  },
+  {
+   "idx": "10.5",
+   "kind": "specific",
+   "content": "select, organize, and combine, with assistance, relevant information to construct and communicate meaning - interact with resources (print, non-print, or human) to answer their own questions or learning needs - with assistance, develop strategies for making and organizing notes - create a new product - share their information in a variety of simple ways"
+  },
+  {
+   "idx": "10.1",
+   "kind": "specific",
+   "content": "experiment with a range of prewriting, drafting, revising, editing, proofreading, and presentation strategies - use a variety of prewriting strategies for generating and organizing ideas for writing (e.g., brain-storming, webbing, story mapping, reading, researching, interviewing, reflecting) - use appropriate drafting techniques (focusing on getting ideas on paper, taking risks with temporary spelling when necessary, experimenting with new forms/techniques, keeping the audience in"
+  }
+ ],
+ "2/math": [
+  {
+   "idx": "N1",
+   "kind": "specific",
+   "content": "Say the number sequence from 0 to 100 by:"
+  },
+  {
+   "idx": "N2",
+   "kind": "specific",
+   "content": "Demonstrate if a number (up to 100) is even or odd."
+  },
+  {
+   "idx": "N3",
+   "kind": "specific",
+   "content": "Describe order or relative position using ordinal numbers (up to tenth)."
+  },
+  {
+   "idx": "N4",
+   "kind": "specific",
+   "content": "Represent and describe numbers to 100, concretely, pictorially, and symbolically."
+  },
+  {
+   "idx": "N5",
+   "kind": "specific",
+   "content": "Compare and order numbers up to 100."
+  },
+  {
+   "idx": "N6",
+   "kind": "specific",
+   "content": "Estimate quantities to 100 using referents."
+  },
+  {
+   "idx": "N7",
+   "kind": "specific",
+   "content": "Illustrate, concretely and pictorially, the meaning of place value for numerals to 100."
+  },
+  {
+   "idx": "N8",
+   "kind": "specific",
+   "content": "Demonstrate and explain the effect of adding zero to or subtracting zero from any number."
+  },
+  {
+   "idx": "N9",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of addition (limited to 1- and 2- digit numerals) with answers to 100 and the corresponding subtraction by: • using personal strategies for adding and subtracting with and without the support of manipulatives; • creating and solving problems that involve addition and subtraction; • explaining that the order in which numbers are added does"
+  },
+  {
+   "idx": "N10",
+   "kind": "specific",
+   "content": "Apply mental mathematics strategies, such as: • using doubles; • making 10; • one more, one less; • two more, two less; • building on a known double; • addition for subtraction to determine basic addition facts to 18 and related subtraction"
+  },
+  {
+   "idx": "PR1",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of repeating patterns (three to"
+  },
+  {
+   "idx": "PR2",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of increasing patterns by: • describing; • reproducing; • extending; • creating patterns using manipulatives, diagrams, sounds, and actions (numbers to 100)."
+  },
+  {
+   "idx": "PR3",
+   "kind": "specific",
+   "content": "Demonstrate and explain the meaning of equality and inequality by using manipulatives and diagrams (0 to 100)."
+  },
+  {
+   "idx": "PR4",
+   "kind": "specific",
+   "content": "Record equalities and inequalities symbolically using the equal symbol or the not equal symbol."
+  },
+  {
+   "idx": "SS1",
+   "kind": "specific",
+   "content": "Relate the number of days to a week and the number of"
+  },
+  {
+   "idx": "SS2",
+   "kind": "specific",
+   "content": "Relate the size of a unit of measure to the number of units (limited to non-standard units) used to measure length and mass (weight)."
+  },
+  {
+   "idx": "SS3",
+   "kind": "specific",
+   "content": "Compare and order objects by length, height, distance around, and mass (weight) using nonstandard units, and make statements of comparison."
+  },
+  {
+   "idx": "SS4",
+   "kind": "specific",
+   "content": "Measure length to the nearest non-standard unit by: • using multiple copies of a unit; • using a single copy of a unit (iteration process)."
+  },
+  {
+   "idx": "SS5",
+   "kind": "specific",
+   "content": "Demonstrate that changing the orientation of an object does not alter the measurements of its attributes."
+  },
+  {
+   "idx": "SS6",
+   "kind": "specific",
+   "content": "Sort 2-D shapes and 3-D objects using two attributes, and explain the sorting rule."
+  },
+  {
+   "idx": "SS7",
+   "kind": "specific",
+   "content": "Describe, compare and construct 3-D objects, including: • cubes; • spheres; • cones; • cylinders; • pyramids."
+  },
+  {
+   "idx": "SS8",
+   "kind": "specific",
+   "content": "Describe, compare and construct 2-D shapes, including: • triangles; • squares; • rectangles; • circles."
+  },
+  {
+   "idx": "SS9",
+   "kind": "specific",
+   "content": "Identify 2-D shapes as part of 3-D objects in the environment."
+  },
+  {
+   "idx": "SP1",
+   "kind": "specific",
+   "content": "Gather and record data about self and others to answer questions."
+  },
+  {
+   "idx": "SP2",
+   "kind": "specific",
+   "content": "Construct and interpret concrete graphs and pictographs to solve to solve problems. problems."
+  }
+ ],
+ "2/science": [
+  {
+   "idx": "101-7",
+   "kind": "specific",
+   "content": "between science and technology, and of organism as it goes through its life cycle"
+  },
+  {
+   "idx": "200-4",
+   "kind": "specific",
+   "content": "observing the life cycles of an organism"
+  },
+  {
+   "idx": "200-1",
+   "kind": "specific",
+   "content": "Students will construct growth patterns that lead to exploration and investigation"
+  },
+  {
+   "idx": "201-5",
+   "kind": "specific",
+   "content": "and earth and space science, and apply pictures, and/or charts"
+  },
+  {
+   "idx": "102-6",
+   "kind": "specific",
+   "content": "integrate, and extend their knowledge. develop"
+  },
+  {
+   "idx": "203-5",
+   "kind": "specific",
+   "content": "changes in growth patterns"
+  },
+  {
+   "idx": "203-2",
+   "kind": "specific",
+   "content": "Skills terminology and language"
+  },
+  {
+   "idx": "202-7",
+   "kind": "specific",
+   "content": "skills required for scientific and tech- based on observations"
+  },
+  {
+   "idx": "203-3",
+   "kind": "specific",
+   "content": "ideas and results, for working col- and oral descriptions"
+  },
+  {
+   "idx": "202-9",
+   "kind": "specific",
+   "content": "decisions. organisms"
+  },
+  {
+   "idx": "201-7",
+   "kind": "specific",
+   "content": "find out about the life cycles of other organisms"
+  },
+  {
+   "idx": "100-15",
+   "kind": "specific",
+   "content": "the similarities and differences of their life cycles"
+  },
+  {
+   "idx": "202-2",
+   "kind": "specific",
+   "content": "the similarities and differences of their life cycles"
+  },
+  {
+   "idx": "102-7",
+   "kind": "specific",
+   "content": "support the health and growth of some familiar animals"
+  },
+  {
+   "idx": "200-3",
+   "kind": "specific",
+   "content": "on an observed pattern of stages in a similar organism"
+  },
+  {
+   "idx": "100-16",
+   "kind": "specific",
+   "content": "with that of other organisms"
+  },
+  {
+   "idx": "103-5",
+   "kind": "specific",
+   "content": "support a healthy lifestyle"
+  },
+  {
+   "idx": "102-10",
+   "kind": "specific",
+   "content": "space and is felt as wind when it moves"
+  },
+  {
+   "idx": "203-1",
+   "kind": "specific",
+   "content": "explorations"
+  },
+  {
+   "idx": "201-3",
+   "kind": "specific",
+   "content": "and wind direction"
+  },
+  {
+   "idx": "102-9",
+   "kind": "specific",
+   "content": "in living things"
+  },
+  {
+   "idx": "103-7",
+   "kind": "specific",
+   "content": "different weather conditions"
+  },
+  {
+   "idx": "102-11",
+   "kind": "specific",
+   "content": "water is obtained, distributed, and used"
+  },
+  {
+   "idx": "103-8",
+   "kind": "specific",
+   "content": "they could conserve water"
+  },
+  {
+   "idx": "103-6",
+   "kind": "specific",
+   "content": "and predict changes from one state to another"
+  },
+  {
+   "idx": "100-21",
+   "kind": "specific",
+   "content": "identifying and solving a related practical problem"
+  },
+  {
+   "idx": "200-2",
+   "kind": "specific",
+   "content": "identifying and solving a related practical problem"
+  },
+  {
+   "idx": "202-8",
+   "kind": "specific",
+   "content": "sinking and floating"
+  },
+  {
+   "idx": "100-19",
+   "kind": "specific",
+   "content": "materials"
+  },
+  {
+   "idx": "100-20",
+   "kind": "specific",
+   "content": "that are different from the original components"
+  },
+  {
+   "idx": "102-8",
+   "kind": "specific",
+   "content": "liquids to maintain a clean and healthy environment"
+  },
+  {
+   "idx": "100-23",
+   "kind": "specific",
+   "content": "identified position"
+  },
+  {
+   "idx": "100-24",
+   "kind": "specific",
+   "content": "describe the position of objects from different perspectives"
+  },
+  {
+   "idx": "100-22",
+   "kind": "specific",
+   "content": "and orientation relative to other objects"
+  },
+  {
+   "idx": "201-1",
+   "kind": "specific",
+   "content": "person or object in a certain way, or in a specified direction"
+  }
+ ],
+ "2/social": [
+  {
+   "idx": "2.1.1",
+   "kind": "specific",
+   "content": "describe changes in their lives and their reactions to these sources of power, authority, and changes governance."
+  },
+  {
+   "idx": "2.1.2",
+   "kind": "specific",
+   "content": "demonstrate an understanding of how individuals and groups have contributed to change Culture and Diversity"
+  },
+  {
+   "idx": "2.1.3",
+   "kind": "specific",
+   "content": "explain how decisions made by individuals and diverse"
+  },
+  {
+   "idx": "2.1.4",
+   "kind": "specific",
+   "content": "predict ways their community might change in the future, culture, diversity, and world view, and how they can contribute to that future recognizing the similarities and differences reflected in various person- Unit Two: Technology al, cultural, racial, and ethnic perspec- Students will be expected to tives."
+  },
+  {
+   "idx": "2.2.1",
+   "kind": "specific",
+   "content": "describe and evaluate the role of technology in their lives Individuals, Societies, and"
+  },
+  {
+   "idx": "2.2.2",
+   "kind": "specific",
+   "content": "demonstrate an understanding that people have changed Economic Decisions technology over time to meet their needs, wants, and"
+  },
+  {
+   "idx": "2.3.1",
+   "kind": "specific",
+   "content": "give examples of how children and their families use"
+  },
+  {
+   "idx": "2.3.2",
+   "kind": "specific",
+   "content": "explain how supply and demand affects price interdependent relationship among"
+  },
+  {
+   "idx": "2.3.3",
+   "kind": "specific",
+   "content": "demonstrate an understanding of the changing nature of individuals, societies, and the envi- work over time ronment - locally, nationally, and globally - and the implications for a Unit Four: Environments sustainable future. Students will be expected to"
+  },
+  {
+   "idx": "2.4.1",
+   "kind": "specific",
+   "content": "explain how and why physical environments change over"
+  },
+  {
+   "idx": "2.4.2",
+   "kind": "specific",
+   "content": "describe how people’s interactions with their environment interactions among people, places, have changed over time and the environment."
+  },
+  {
+   "idx": "2.4.3",
+   "kind": "specific",
+   "content": "demonstrate an understanding of sustainable development and its importance to our future Time, Continuity, and Change"
+  }
+ ],
+ "3/language": [
+  {
+   "idx": "1.1",
+   "kind": "specific",
+   "content": "describe, share, and discuss thoughts, feelings, and experiences"
+  },
+  {
+   "idx": "1.4",
+   "kind": "specific",
+   "content": "listen critically to others’ ideas and opinions"
+  },
+  {
+   "idx": "2.3",
+   "kind": "specific",
+   "content": "give and follow instructions and respond to questions and directions"
+  },
+  {
+   "idx": "2.4",
+   "kind": "specific",
+   "content": "engage in and respond to a variety of oral presentations and other texts"
+  },
+  {
+   "idx": "3.2",
+   "kind": "specific",
+   "content": "identify some forms of oral language that are unfair to particular individuals and cultures, and use vocabulary that shows respect for all people"
+  },
+  {
+   "idx": "3.3",
+   "kind": "specific",
+   "content": "demonstrate a growing awareness that different kinds of language are appropriate to different situations"
+  },
+  {
+   "idx": "4.1",
+   "kind": "specific",
+   "content": "select, independently and with teacher assistance, texts appropriate"
+  },
+  {
+   "idx": "4.4",
+   "kind": "specific",
+   "content": "use and integrate, with support, the various cueing systems (pragmatic, semantic, syntactic, and graphophonic) and a range of strategies to construct meaning - predict the basis of what would make sense, what would sound right, and what the print suggests (semantics, syntax, graphophonics) - monitor reading by cross-checking the various cues (i.e., Did that make sense? Did it sound right? If that were “fire” would it have a"
+  },
+  {
+   "idx": "4.5",
+   "kind": "specific",
+   "content": "describe their own reading and viewing processes using strategies"
+  },
+  {
+   "idx": "6.2",
+   "kind": "specific",
+   "content": "express and explain opinions about texts and types of texts, and the work of authors and illustrators, demonstrating an increasing awareness of the reasons for their opinions"
+  },
+  {
+   "idx": "7.3",
+   "kind": "specific",
+   "content": "respond critically to texts - formulate questions as well as understandings - identify the point of view in a text and demonstrate an awareness of whose voices/positions are and are not being expressed - discuss the text from the perspective of their own realities and experiences - identify instances of prejudice, bias, and stereotyping"
+  },
+  {
+   "idx": "8.3",
+   "kind": "specific",
+   "content": "experiment with language choices in imaginative writing and other ways of representing"
+  },
+  {
+   "idx": "9.2",
+   "kind": "specific",
+   "content": "demonstrate some awareness of purpose and audience - make choices about form for a specific purpose/audience - realize that work to be shared with an audience needs editing"
+  },
+  {
+   "idx": "9.3",
+   "kind": "specific",
+   "content": "consider their readers’/listeners’/viewers’ questions/comments, and other responses in assessing their work and extending their learning"
+  },
+  {
+   "idx": "10.2",
+   "kind": "specific",
+   "content": "use some conventions of written language - punctuation and capitalization • capitals for proper names, titles, places, days, months, holidays, beginning of sentences • use periods at the ends of sentences and for abbreviations • use commas in a series and in dates • use apostrophes for possessives and contractions • use question marks and quotation marks"
+  },
+  {
+   "idx": "10.3",
+   "kind": "specific",
+   "content": "demonstrate engagement with the creation of pieces of writing and other representation - engage in writing/representing activities for sustained periods of time - work willingly on revising and editing for an audience - demonstrate pride and sense of ownership in writing/ representing efforts"
+  },
+  {
+   "idx": "10.4",
+   "kind": "specific",
+   "content": "experiment with technology in writing and other forms of representing - use a tape recorder to tape dramatic presentations, readings of published work, and retellings - use a simple word processing program to draft, revise, edit, and publish - use a drawing program (computer software) - with assistance, use a database, CD-ROM, and the Internet as"
+  },
+  {
+   "idx": "10.5",
+   "kind": "specific",
+   "content": "select, organize, and combine relevant information, with assistance, from at least two sources, without copying verbatim, to construct and communicate meaning"
+  }
+ ],
+ "3/math": [
+  {
+   "idx": "N1",
+   "kind": "specific",
+   "content": "Say the number sequence forward and backward from 0 to 1000"
+  },
+  {
+   "idx": "N2",
+   "kind": "specific",
+   "content": "Represent and describe numbers to 1000, concretely, pictorially, and symbolically."
+  },
+  {
+   "idx": "N3",
+   "kind": "specific",
+   "content": "Compare and order numbers to 1000."
+  },
+  {
+   "idx": "N4",
+   "kind": "specific",
+   "content": "Estimate quantities less than 1000 using referents."
+  },
+  {
+   "idx": "N5",
+   "kind": "specific",
+   "content": "Illustrate, concretely and pictorially, the meaning of place value for numerals to 1000."
+  },
+  {
+   "idx": "N6",
+   "kind": "specific",
+   "content": "Describe and apply mental mathematics strategies for adding two 2-digit numerals, such as: • adding from left to right; • taking one addend to the nearest multiple of ten and then compensating; • using doubles."
+  },
+  {
+   "idx": "N7",
+   "kind": "specific",
+   "content": "Describe and apply mental mathematics strategies for subtracting two 2-digit numerals, such as: • taking the subtrahend to the nearest multiple of ten and then compensating; • thinking of addition; • using doubles."
+  },
+  {
+   "idx": "N8",
+   "kind": "specific",
+   "content": "Apply estimation strategies to predict sums and differences of two 2-digit numerals in a problem solving context."
+  },
+  {
+   "idx": "N9",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of addition and subtraction of numbers with answers to 1000 (limited to 1, 2, and 3-digit numerals) by: • using personal strategies for adding and subtracting with and without the support of manipulatives; • creating and solving problems in contexts that involve addition and subtraction of numbers concretely, pictorially, and symbolically."
+  },
+  {
+   "idx": "N10",
+   "kind": "specific",
+   "content": "Apply mental mathematics strategies and number properties, such as: • using doubles; • making 10; • using the commutative property; • using the property of zero; • thinking addition for subtraction to recall basic addition facts to 18 and related subtraction facts."
+  },
+  {
+   "idx": "N11",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of multiplication to 5x5 by: • representing and explaining multiplication using equal grouping and arrays; • creating and solving problems in contxt that involve multiplication; 10 PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: GRADE 3"
+  },
+  {
+   "idx": "N12",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of division by: • representing and explaining division using equal sharing and equal grouping; • creating and solving problems in context that involve equal sharing and equal grouping; • modelling equal sharing and equal grouping using concrete and visual representations, and recording the process symbolically; • relating division to repeated subtraction;"
+  },
+  {
+   "idx": "N13",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of fractions by: • explaining that a fraction represents a part of a whole; • describing situations in which fractions are used; • comparing fractions of the same whole with like denominators."
+  },
+  {
+   "idx": "PR1",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of increasing patterns by:"
+  },
+  {
+   "idx": "PR2",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of decreasing patterns by: • describing; • extending; • comparing; • creating patterns using manipulatives, diagrams, sounds, and actions (numbers to 1000)."
+  },
+  {
+   "idx": "PR3",
+   "kind": "specific",
+   "content": "Solve one-step addition and subtraction equations involving symbols representing an unknown number."
+  },
+  {
+   "idx": "SS1",
+   "kind": "specific",
+   "content": "Relate the passage of time to common activities using non-"
+  },
+  {
+   "idx": "SS2",
+   "kind": "specific",
+   "content": "Relate the number of seconds to a minute, the number of minutes to an hour, and the number of days to a month in a problem-solving context."
+  },
+  {
+   "idx": "SS3",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of measuring length (cm, m) by: • selecting and justifying referents for the units cm and m; • modelling and describing the relationship between the units cm and m; • estimating length using referents; • measuring and recording length, width, and height."
+  },
+  {
+   "idx": "SS4",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of measuring mass (g, kg) by: • selecting and justifying referents for the units g and kg; • modelling and describing the relationship between the units g and kg; • estimating mass using referents; • measuring and recording mass."
+  },
+  {
+   "idx": "SS5",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of perimeter of regular and irregular shapes by: • estimating perimeter using referents for centimetre or metre; • measuring and recording perimeter (cm, m); • constructing different shapes for a given perimeter (cm, m) to demonstrate that many shapes are possible for a perimeter."
+  },
+  {
+   "idx": "SS6",
+   "kind": "specific",
+   "content": "Describe 3-D objects according to the shape of the faces, and the number of edges and vertices."
+  },
+  {
+   "idx": "SS7",
+   "kind": "specific",
+   "content": "Sort regular and irregular polygons, including: • triangles; • quadrilaterals; • pentagons; • hexagons; • octagons according to the number of sides."
+  },
+  {
+   "idx": "SP1",
+   "kind": "specific",
+   "content": "Collect first-hand data and organize it using:"
+  },
+  {
+   "idx": "SP2",
+   "kind": "specific",
+   "content": "Construct, label, and interpret bar graphs to solve problems."
+  }
+ ],
+ "3/science": [
+  {
+   "idx": "202-2",
+   "kind": "specific",
+   "content": "science and technology, and of the social • place seeds in groups according to one or more attributes"
+  },
+  {
+   "idx": "200-3",
+   "kind": "specific",
+   "content": "Students will construct knowl- growth"
+  },
+  {
+   "idx": "201-5",
+   "kind": "specific",
+   "content": "life science, physical science, and earth growth during their investigations"
+  },
+  {
+   "idx": "202-4",
+   "kind": "specific",
+   "content": "derstandings to interpret, integrate, and conditions"
+  },
+  {
+   "idx": "100-28",
+   "kind": "specific",
+   "content": "Students will develop the skills"
+  },
+  {
+   "idx": "203-2",
+   "kind": "specific",
+   "content": "Students will develop the skills"
+  },
+  {
+   "idx": "202-5",
+   "kind": "specific",
+   "content": "inquiry, for solving problems, for com- growth rate of similar plants grown in varying conditions"
+  },
+  {
+   "idx": "201-6",
+   "kind": "specific",
+   "content": "Students will be encouraged to • estimate measurements of a plant as it grows"
+  },
+  {
+   "idx": "102-12",
+   "kind": "specific",
+   "content": "environment"
+  },
+  {
+   "idx": "102-13",
+   "kind": "specific",
+   "content": "products and how our supply of useful plants is replenished"
+  },
+  {
+   "idx": "203-5",
+   "kind": "specific",
+   "content": "about the uses and replenishing of plants"
+  },
+  {
+   "idx": "200-1",
+   "kind": "specific",
+   "content": "investigation about the composition of soil"
+  },
+  {
+   "idx": "100-36",
+   "kind": "specific",
+   "content": "differences among them"
+  },
+  {
+   "idx": "100-37",
+   "kind": "specific",
+   "content": "such as spoons, magnifying glasses, jars, and filters"
+  },
+  {
+   "idx": "201-3",
+   "kind": "specific",
+   "content": "such as spoons, magnifying glasses, jars, and filters"
+  },
+  {
+   "idx": "202-7",
+   "kind": "specific",
+   "content": "based on their investigations"
+  },
+  {
+   "idx": "203-3",
+   "kind": "specific",
+   "content": "written and oral descriptions"
+  },
+  {
+   "idx": "100-39",
+   "kind": "specific",
+   "content": "of soils"
+  },
+  {
+   "idx": "100-35",
+   "kind": "specific",
+   "content": "by soils"
+  },
+  {
+   "idx": "101-12",
+   "kind": "specific",
+   "content": "useful objects"
+  },
+  {
+   "idx": "203-1",
+   "kind": "specific",
+   "content": "materials to make useful objects"
+  },
+  {
+   "idx": "100-31",
+   "kind": "specific",
+   "content": "materials that are not attracted to magnets"
+  },
+  {
+   "idx": "201-1",
+   "kind": "specific",
+   "content": "stroking it or storing it next to a stronger magnet"
+  },
+  {
+   "idx": "200-2",
+   "kind": "specific",
+   "content": "identify problems to be solved related to magnetizing materials"
+  },
+  {
+   "idx": "100-33",
+   "kind": "specific",
+   "content": "identify conditions that affect the force of magnets"
+  },
+  {
+   "idx": "102-14",
+   "kind": "specific",
+   "content": "identify familiar uses of magnets"
+  },
+  {
+   "idx": "202-8",
+   "kind": "specific",
+   "content": "attractive or repulsive magnetic forces"
+  },
+  {
+   "idx": "202-9",
+   "kind": "specific",
+   "content": "electricity"
+  },
+  {
+   "idx": "100-34",
+   "kind": "specific",
+   "content": "their suitability for use in building structures"
+  },
+  {
+   "idx": "101-11",
+   "kind": "specific",
+   "content": "methods for the materials to be joined"
+  },
+  {
+   "idx": "200-5",
+   "kind": "specific",
+   "content": "and suggest a plan for how they will be used"
+  },
+  {
+   "idx": "101-10",
+   "kind": "specific",
+   "content": "assembling materials"
+  },
+  {
+   "idx": "201-8",
+   "kind": "specific",
+   "content": "and explain why they are needed"
+  },
+  {
+   "idx": "101-9",
+   "kind": "specific",
+   "content": "stability, form, and function"
+  },
+  {
+   "idx": "102-17",
+   "kind": "specific",
+   "content": "the user and the environment"
+  }
+ ],
+ "3/social": [
+  {
+   "idx": "3.1.1",
+   "kind": "specific",
+   "content": "locate their province in the Altantic region, Canada, North and sources of power, authority, and America, and the world governance."
+  },
+  {
+   "idx": "3.1.2",
+   "kind": "specific",
+   "content": "describe the major physical features, climates, and vegetation of their province and the Atlantic region Culture and Diversity"
+  },
+  {
+   "idx": "3.1.3",
+   "kind": "specific",
+   "content": "examine where people live and how people make a living in their province"
+  },
+  {
+   "idx": "3.2.1",
+   "kind": "specific",
+   "content": "examine the diverse peoples in their province racial, and ethnic perspectives."
+  },
+  {
+   "idx": "3.2.2",
+   "kind": "specific",
+   "content": "examine how diverse peoples in their province express their culture Individuals, Societies, and Economic"
+  },
+  {
+   "idx": "3.2.3",
+   "kind": "specific",
+   "content": "take age-appropriate action to promote positive interactions Decisions among people"
+  },
+  {
+   "idx": "3.3.1",
+   "kind": "specific",
+   "content": "examine the purpose, function, and structure of governments in their province Interdependence"
+  },
+  {
+   "idx": "3.3.2",
+   "kind": "specific",
+   "content": "examine the rights and responsibilities of citizens"
+  },
+  {
+   "idx": "3.3.3",
+   "kind": "specific",
+   "content": "demonstrate an understanding of how citizens participate in"
+  }
+ ],
+ "4/language": [
+  {
+   "idx": "1.4",
+   "kind": "specific",
+   "content": "listen critically to others’ ideas or opinions expressed"
+  },
+  {
+   "idx": "2.3",
+   "kind": "specific",
+   "content": "give and follow instructions and respond to questions and directions"
+  },
+  {
+   "idx": "2.4",
+   "kind": "specific",
+   "content": "engage in and respond to oral presentations (e.g., retell a story, sing a song)"
+  },
+  {
+   "idx": "4.4",
+   "kind": "specific",
+   "content": "use and integrate the pragmatic, semantic, syntactic, and graphophonic cueing systems (including context clues, word order, suffixes, compound words, contractions, and singular and plural words) and a variety of strategies to construct meaning"
+  },
+  {
+   "idx": "4.5",
+   "kind": "specific",
+   "content": "describe their own processes and strategies in reading and viewing"
+  },
+  {
+   "idx": "7.3",
+   "kind": "specific",
+   "content": "respond critically to texts by - asking questions and formulating understandings - discussing texts from the perspective of their own experiences - identifying instances where language is being used, not only to entertain, but to manipulate, persuade, or control them - identifying instances of prejudice and stereotyping"
+  },
+  {
+   "idx": "8.2",
+   "kind": "specific",
+   "content": "experiment with different ways of making their own notes (e.g., webbing, jot notes, matrix)"
+  },
+  {
+   "idx": "8.3",
+   "kind": "specific",
+   "content": "experiment with language appropriate to purpose, audience, and form, that enhances meaning and demonstrates imagination in writing and other ways of representing"
+  },
+  {
+   "idx": "9.2",
+   "kind": "specific",
+   "content": "demonstrate an awareness of purpose and audience"
+  },
+  {
+   "idx": "9.3",
+   "kind": "specific",
+   "content": "invite responses to early drafts of their writing/media productions - use audience reaction to help shape subsequent drafts"
+  },
+  {
+   "idx": "10.3",
+   "kind": "specific",
+   "content": "use technology with increasing proficiency in writing and other forms of representing"
+  },
+  {
+   "idx": "10.4",
+   "kind": "specific",
+   "content": "demonstrate a commitment to shaping pieces of writing and other representations through stages of development"
+  },
+  {
+   "idx": "10.5",
+   "kind": "specific",
+   "content": "select, organize, and combine relevant information from two or more sources to construct and communicate meaning"
+  }
+ ],
+ "4/math": [
+  {
+   "idx": "N1",
+   "kind": "specific",
+   "content": "Represent and describe whole numbers to 10 000, pictorially"
+  },
+  {
+   "idx": "N2",
+   "kind": "specific",
+   "content": "Compare and order numbers to 10 000."
+  },
+  {
+   "idx": "N3",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of addition of numbers with answers to 10 000 and their corresponding subtractions (limited to 3- and 4-digit numerals) by: • using personal strategies for adding and subtracting; • estimating sums and differences; • solving problems involving addition and subtraction."
+  },
+  {
+   "idx": "N4",
+   "kind": "specific",
+   "content": "Explain the properties of 0 and 1 for multiplication and the property of 1 for division."
+  },
+  {
+   "idx": "N5",
+   "kind": "specific",
+   "content": "Describe and apply mental mathematics strategies, such as: • skip counting from a known fact; • using doubling or halving; • using doubling or halving and adding or subtracting one more group; • using patterns in the 9s facts; • determine basic multiplication facts to 9x9 and related division facts."
+  },
+  {
+   "idx": "N6",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of multiplication (2- or 3-digit by 1-digit) to solve problems by: • using personal strategies for multiplication with and without concrete materials; • using arrays to represent multiplications; • connecting concrete representations to symbolic representations; • estimating products."
+  },
+  {
+   "idx": "N7",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of division (1-digit divisor and up to 2-digit dividend) to solve problems by: • using personal strategies for dividing with and without concrete materials; • estimating quotients; • relating division to multiplication."
+  },
+  {
+   "idx": "N8",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of fractions less than or equal to one by using concrete and pictorial representations to: • name and record fractions for the parts of a whole or a set; • compare and order fractions; • model and explain that for different wholes, two identical fractions may not represent the same quantity; • provide examples of where fractions are used."
+  },
+  {
+   "idx": "N9",
+   "kind": "specific",
+   "content": "Describe and represent decimals (tenths and hundredths) concretely, pictorically, and symbolically."
+  },
+  {
+   "idx": "N10",
+   "kind": "specific",
+   "content": "Relate decimals to fractions (to hundredths)."
+  },
+  {
+   "idx": "N11",
+   "kind": "specific",
+   "content": "Demonstrte an understanding of addition and subtraction of decimals (limited to hundredths) by: • using compatible numbers; • estimating sums and differences; • using mental math strategies to solve problems."
+  },
+  {
+   "idx": "PR1",
+   "kind": "specific",
+   "content": "Identify and describe patterns found in tables and charts,"
+  },
+  {
+   "idx": "PR2",
+   "kind": "specific",
+   "content": "Reproduce a pattern shown in a table or chart using concrete materials."
+  },
+  {
+   "idx": "PR3",
+   "kind": "specific",
+   "content": "Represent and describe patterns and relationships using charts and tables to solve problems."
+  },
+  {
+   "idx": "PR4",
+   "kind": "specific",
+   "content": "Identify and explain mathematical relationships using charts and diagrams to solve problems."
+  },
+  {
+   "idx": "PR5",
+   "kind": "specific",
+   "content": "Express a given problem as an equation in which a symbol is used to represent an unknown number."
+  },
+  {
+   "idx": "PR6",
+   "kind": "specific",
+   "content": "Solve one-step equations involving a symbol to represent an unknown number."
+  },
+  {
+   "idx": "SS1",
+   "kind": "specific",
+   "content": "Read and record time using digital and analog clocks,"
+  },
+  {
+   "idx": "SS2",
+   "kind": "specific",
+   "content": "Read and record calendar dates in a variety of formats."
+  },
+  {
+   "idx": "SS3",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of area of regular and irregular 2-D shapes by: • recognizing that area is measured in square units; • selecting and justifying referents for the units cm2 or m2; • estimating area by using referents for cm2 or m2; • determining and recording area (cm2 or m2); • constructing different rectangles for a given area (cm2 or m2) in order to demonstrate that many different"
+  },
+  {
+   "idx": "SS4",
+   "kind": "specific",
+   "content": "Describe and construct rectangular and triangular prisms."
+  },
+  {
+   "idx": "SS5",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of line symmetry by: • identifying symmetrical 2-D shapes; • creating symmetrical 2-D shapes; • drawing one or more lines of symmetry in a 2-D shape."
+  },
+  {
+   "idx": "SS6",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of congruency, concretely and pictorially."
+  },
+  {
+   "idx": "SP1",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of many-to-one"
+  },
+  {
+   "idx": "SP2",
+   "kind": "specific",
+   "content": "Construct and interpret pictographs and bar graphs involving many-to-one correspondence to draw conclusions."
+  }
+ ],
+ "4/science": [
+  {
+   "idx": "104-6",
+   "kind": "specific",
+   "content": "and technology, of the relationships contexts"
+  },
+  {
+   "idx": "204-1",
+   "kind": "specific",
+   "content": "contexts of science and technology."
+  },
+  {
+   "idx": "204-6",
+   "kind": "specific",
+   "content": "their local habitat, and select one that is appropriate"
+  },
+  {
+   "idx": "205-5",
+   "kind": "specific",
+   "content": "and their associated populations of plants and animals"
+  },
+  {
+   "idx": "302-1",
+   "kind": "specific",
+   "content": "and their associated populations of plants and animals"
+  },
+  {
+   "idx": "108-6",
+   "kind": "specific",
+   "content": "skills required for scientific and how personal actions help conserve habitats"
+  },
+  {
+   "idx": "108-3",
+   "kind": "specific",
+   "content": "skills required for scientific and how personal actions help conserve habitats"
+  },
+  {
+   "idx": "206-2",
+   "kind": "specific",
+   "content": "problems, for communicating scien- tallies, tables, and/or bar graphs"
+  },
+  {
+   "idx": "104-4",
+   "kind": "specific",
+   "content": "these discrepancies"
+  },
+  {
+   "idx": "206-3",
+   "kind": "specific",
+   "content": "these discrepancies"
+  },
+  {
+   "idx": "206-6",
+   "kind": "specific",
+   "content": "more realistic and habitable for organisms"
+  },
+  {
+   "idx": "302-2",
+   "kind": "specific",
+   "content": "tion of scientific and technological needs in their natural habitats"
+  },
+  {
+   "idx": "300-1",
+   "kind": "specific",
+   "content": "tion of scientific and technological needs in their natural habitats"
+  },
+  {
+   "idx": "205-1",
+   "kind": "specific",
+   "content": "self, society, and the environment. affects visibility"
+  },
+  {
+   "idx": "204-3",
+   "kind": "specific",
+   "content": "animal to live in a particular habitat, real or imagined"
+  },
+  {
+   "idx": "106-4",
+   "kind": "specific",
+   "content": "agricultural innovations and techniques"
+  },
+  {
+   "idx": "302-3",
+   "kind": "specific",
+   "content": "diagram to illustrate the food chain"
+  },
+  {
+   "idx": "206-1",
+   "kind": "specific",
+   "content": "diagram to illustrate the food chain"
+  },
+  {
+   "idx": "301-1",
+   "kind": "specific",
+   "content": "of the community"
+  },
+  {
+   "idx": "108-1",
+   "kind": "specific",
+   "content": "developments on natural habitats"
+  },
+  {
+   "idx": "107-1",
+   "kind": "specific",
+   "content": "compare how light interacts with a variety of optical devices"
+  },
+  {
+   "idx": "303-8",
+   "kind": "specific",
+   "content": "compare how light interacts with a variety of optical devices"
+  },
+  {
+   "idx": "205-10",
+   "kind": "specific",
+   "content": "construct an optical device that performs a specific function"
+  },
+  {
+   "idx": "107-10",
+   "kind": "specific",
+   "content": "deal directly with lenses, mirrors, and prisms"
+  },
+  {
+   "idx": "303-3",
+   "kind": "specific",
+   "content": "require an external source to be seen"
+  },
+  {
+   "idx": "206-5",
+   "kind": "specific",
+   "content": "on the evidence gathered"
+  },
+  {
+   "idx": "107-4",
+   "kind": "specific",
+   "content": "designed to solve problems in the home and at school"
+  },
+  {
+   "idx": "303-4",
+   "kind": "specific",
+   "content": "or reflect light"
+  },
+  {
+   "idx": "303-5",
+   "kind": "specific",
+   "content": "relative to a light source and screen"
+  },
+  {
+   "idx": "303-6",
+   "kind": "specific",
+   "content": "change the direction of light"
+  },
+  {
+   "idx": "303-7",
+   "kind": "specific",
+   "content": "the term “dispersion” for this process"
+  },
+  {
+   "idx": "205-3",
+   "kind": "specific",
+   "content": "follow a set of procedures to make and use a colour wheel"
+  },
+  {
+   "idx": "303-9",
+   "kind": "specific",
+   "content": "identify objects by the sounds they make"
+  },
+  {
+   "idx": "303-10",
+   "kind": "specific",
+   "content": "relate vibrations to sound production"
+  },
+  {
+   "idx": "303-11",
+   "kind": "specific",
+   "content": "liquids and through air"
+  },
+  {
+   "idx": "204-2",
+   "kind": "specific",
+   "content": "in a testable form"
+  },
+  {
+   "idx": "301-3",
+   "kind": "specific",
+   "content": "modified"
+  },
+  {
+   "idx": "104-1",
+   "kind": "specific",
+   "content": "variable pitch and loudness"
+  },
+  {
+   "idx": "205-2",
+   "kind": "specific",
+   "content": "variable pitch and loudness"
+  },
+  {
+   "idx": "206-7",
+   "kind": "specific",
+   "content": "ability to vary their pitch and loudness"
+  },
+  {
+   "idx": "107-12",
+   "kind": "specific",
+   "content": "technology"
+  },
+  {
+   "idx": "205-8",
+   "kind": "specific",
+   "content": "technology"
+  },
+  {
+   "idx": "300-3",
+   "kind": "specific",
+   "content": "vibrations"
+  },
+  {
+   "idx": "106-1",
+   "kind": "specific",
+   "content": "and ultrasound"
+  },
+  {
+   "idx": "207-6",
+   "kind": "specific",
+   "content": "processes used in investigating noise pollution"
+  },
+  {
+   "idx": "206-9",
+   "kind": "specific",
+   "content": "prevention of hearing loss"
+  },
+  {
+   "idx": "105-1",
+   "kind": "specific",
+   "content": "identify examples of current research related to sound"
+  },
+  {
+   "idx": "205-7",
+   "kind": "specific",
+   "content": "using notes in point form"
+  },
+  {
+   "idx": "300-5",
+   "kind": "specific",
+   "content": "from other places"
+  },
+  {
+   "idx": "207-2",
+   "kind": "specific",
+   "content": "a chart or diagram that show the method of classifying"
+  },
+  {
+   "idx": "300-8",
+   "kind": "specific",
+   "content": "relate the characteristics of rocks and minerals to their uses"
+  },
+  {
+   "idx": "301-5",
+   "kind": "specific",
+   "content": "describe effects of wind, water, and ice on the landscape"
+  },
+  {
+   "idx": "301-6",
+   "kind": "specific",
+   "content": "demonstrate a variety of methods of weathering and erosion"
+  },
+  {
+   "idx": "301-4",
+   "kind": "specific",
+   "content": "describe ways in which soil is formed from rocks"
+  },
+  {
+   "idx": "300-7",
+   "kind": "specific",
+   "content": "identify and describe rocks that contain records of Earth’s history"
+  },
+  {
+   "idx": "301-7",
+   "kind": "specific",
+   "content": "to the landscape"
+  }
+ ],
+ "4/social": [
+  {
+   "idx": "4.1.1",
+   "kind": "specific",
+   "content": "explore the concept of exploration and sources of power, authority, and governance. Unit Two: The Nature of Exploration Culture and Diversity"
+  },
+  {
+   "idx": "4.2.1",
+   "kind": "specific",
+   "content": "examine the stories of various explorers of land, ocean, space, and ideas"
+  },
+  {
+   "idx": "4.2.2",
+   "kind": "specific",
+   "content": "analyse factors that motivate exploration culture, diversity, and world view,"
+  },
+  {
+   "idx": "4.2.3",
+   "kind": "specific",
+   "content": "evaluate the impact of exploration over time recognizing the similarities and differences reflected in various Unit Three: Exploring Our World personal, cultural, racial, and ethnic Students will be expected to perspectives."
+  },
+  {
+   "idx": "4.3.1",
+   "kind": "specific",
+   "content": "examine major physical features of the world"
+  },
+  {
+   "idx": "4.3.2",
+   "kind": "specific",
+   "content": "describe the main characteristics of rivers, islands, mountains, Individuals, Societies, and Economic and oceans Decisions"
+  },
+  {
+   "idx": "4.3.3",
+   "kind": "specific",
+   "content": "examine the relationship between humans and the physical"
+  },
+  {
+   "idx": "4.4.1",
+   "kind": "specific",
+   "content": "describe the physical landscape of Canada"
+  },
+  {
+   "idx": "4.4.2",
+   "kind": "specific",
+   "content": "examine the human landscape of Canada Interdependence"
+  },
+  {
+   "idx": "4.4.3",
+   "kind": "specific",
+   "content": "demonstrate an understanding of the political landscape of Canada"
+  },
+  {
+   "idx": "4.4.4",
+   "kind": "specific",
+   "content": "examine symbols associated with Canada’s landscapes"
+  }
+ ],
+ "5/language": [
+  {
+   "idx": "2.3",
+   "kind": "specific",
+   "content": "give and follow precise instructions and respond to questions and directions"
+  },
+  {
+   "idx": "2.4",
+   "kind": "specific",
+   "content": "engage in, respond to, and evaluate oral presentations"
+  },
+  {
+   "idx": "3.3",
+   "kind": "specific",
+   "content": "consider purpose and the needs and expectations of their audience"
+  },
+  {
+   "idx": "4.4",
+   "kind": "specific",
+   "content": "use and integrate the pragmatic, semantic, syntactic, and graphophonic cueing systems (including context clues; word order; and structural analysis to identify roots, prefixes, and suffixes) and a variety of strategies to construct meaning; use a dictionary to determine word meaning in context"
+  },
+  {
+   "idx": "4.5",
+   "kind": "specific",
+   "content": "describe and discuss their own processes and strategies in reading and viewing"
+  },
+  {
+   "idx": "6.2",
+   "kind": "specific",
+   "content": "support their opinions about texts and features of types of texts"
+  },
+  {
+   "idx": "7.3",
+   "kind": "specific",
+   "content": "respond critically to texts by - applying strategies to analyse a text - demonstrating growing awareness that all texts reflect a purpose and a point of view - identifying instances where language is being used to manipulate, persuade, or control them - identifying instances of opinion, prejudice, bias, and stereotyping"
+  },
+  {
+   "idx": "8.2",
+   "kind": "specific",
+   "content": "expand appropriate note-making strategies from a growing repertoire (e.g., outlines, charts, diagrams)"
+  },
+  {
+   "idx": "8.3",
+   "kind": "specific",
+   "content": "make deliberate language choices, appropriate to purpose, audience, and form, to enhance meaning and achieve interesting effects in imaginative writing and other ways of representing"
+  },
+  {
+   "idx": "9.2",
+   "kind": "specific",
+   "content": "address the demands of a variety of purposes and audiences - make choices of form, style, and content for specific audiences and purposes"
+  },
+  {
+   "idx": "9.3",
+   "kind": "specific",
+   "content": "invite responses to early drafts of their writing/media productions - use audience reaction to help shape subsequent drafts - reflect on their final drafts from a reader’s/viewer’s/listener’s point of view"
+  },
+  {
+   "idx": "10.3",
+   "kind": "specific",
+   "content": "use technology with increasing proficiency to create, revise, edit, and publish texts"
+  },
+  {
+   "idx": "10.4",
+   "kind": "specific",
+   "content": "demonstrate a commitment to shaping and reshaping pieces of writing and other representations through stages of development and refinement"
+  },
+  {
+   "idx": "10.5",
+   "kind": "specific",
+   "content": "select, organize, and combine relevant information, from three or more sources to construct and communicate meaning"
+  }
+ ],
+ "5/math": [
+  {
+   "idx": "N1",
+   "kind": "specific",
+   "content": "Represent and describe whole numbers to 1 000 000."
+  },
+  {
+   "idx": "N2",
+   "kind": "specific",
+   "content": "Use estimation strategies including: • front-end rounding; • compensation; • compatible numbers in problem-solving contexts."
+  },
+  {
+   "idx": "N3",
+   "kind": "specific",
+   "content": "Apply mental mathematics strategies and number properties, such as: • skip counting from a known fact; • using doubling or halving; • using patterns in the 9s facts; • using repeated doubling or halving to determine answers for basic multiplication facts to 81 and related division facts."
+  },
+  {
+   "idx": "N4",
+   "kind": "specific",
+   "content": "Apply mental mathematics strategies for multiplication, such as: • annexing then adding zero; • halving and doubling; • using the distributive property."
+  },
+  {
+   "idx": "N5",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of multiplication (2-digit by 2- digit) to solve problems."
+  },
+  {
+   "idx": "N6",
+   "kind": "specific",
+   "content": "Demonstrate, with and without concrete materials, an understanding of division (3-digit by 1-digit) and interpret remainders to solve problems."
+  },
+  {
+   "idx": "N7",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of fractions by using concrete and pictorial representations to: • create sets of equivalent fractions; • compare fractions with like and unlike denominators."
+  },
+  {
+   "idx": "N8",
+   "kind": "specific",
+   "content": "Describe and represent decimals (tenths, hundredths, thousandths) concretely, pictorially and symbolically."
+  },
+  {
+   "idx": "N9",
+   "kind": "specific",
+   "content": "Relate decimals to fractions (to thousandths)."
+  },
+  {
+   "idx": "N10",
+   "kind": "specific",
+   "content": "Compare and order decimals (to thousandths) by using: • benchmarks; • place value; • equivalent decimals."
+  },
+  {
+   "idx": "N11",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of addition and subtraction of decimals (limited to thousandths)."
+  },
+  {
+   "idx": "PR1",
+   "kind": "specific",
+   "content": "Determine the pattern rule to make predictions about"
+  },
+  {
+   "idx": "PR2",
+   "kind": "specific",
+   "content": "Solve problems involving single-variable, one-step equations with whole number coefficients and whole number solutions."
+  },
+  {
+   "idx": "SS1",
+   "kind": "specific",
+   "content": "Design and construct different rectangles given either"
+  },
+  {
+   "idx": "SS2",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of measuring length (mm) by: • selecting and justifying referents for the unit mm; • modelling and describing the relationship between mm and cm units, and between mm and m units."
+  },
+  {
+   "idx": "SS3",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of volume by; • selecting and justifying referents for cm3 or m3 units; • estimating volume by using referents for cm3 or m3; • measuring and recording volume (cm3 or m3); • constructing rectangular prisms for a given volume."
+  },
+  {
+   "idx": "SS4",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of capacity by: • describing the relationship between mL and L; • selecting and justifying referents for mL or L units; • estimating capacity by using referents for mL or L; • measuring and recording capacity (mL or L)."
+  },
+  {
+   "idx": "SS5",
+   "kind": "specific",
+   "content": "Describe and provide examples of edges and faces of 3-D objects, and sides of 2-D shapes that are: • parallel; • intersecting; • perpendicular; • vertical or horizontal."
+  },
+  {
+   "idx": "SS6",
+   "kind": "specific",
+   "content": "Identify and sort quadrilaterals, including: • rectangles; • squares; • trapezoids; • parallelograms; • rhombi according to their attributes."
+  },
+  {
+   "idx": "SS7",
+   "kind": "specific",
+   "content": "Perform a single transformation (translation, rotation, or reflection) of a 2-D shape (with and without technology) and draw and describe the image."
+  },
+  {
+   "idx": "SS8",
+   "kind": "specific",
+   "content": "Identify a single transformation, including a translation, a rotation, and a reflection of 2-D shapes."
+  },
+  {
+   "idx": "SP1",
+   "kind": "specific",
+   "content": "Differentiate between first-hand and second-hand data."
+  },
+  {
+   "idx": "SP2",
+   "kind": "specific",
+   "content": "Construct and interpret double bar graphs to draw to solve problems. conclusions."
+  },
+  {
+   "idx": "SP3",
+   "kind": "specific",
+   "content": "Describe the likelihood of a single outcome occurring using words, such as: • impossible; • possible; • certain."
+  },
+  {
+   "idx": "SP4",
+   "kind": "specific",
+   "content": "Compare the likelihood of two possible outcomes occurring using words, such as: • less likely; • equally likely; • more likely."
+  }
+ ],
+ "5/science": [
+  {
+   "idx": "204-1",
+   "kind": "specific",
+   "content": "its components are"
+  },
+  {
+   "idx": "205-1",
+   "kind": "specific",
+   "content": "and earth and space science, and apply sugars, and record observations using sentences or charts"
+  },
+  {
+   "idx": "206-2",
+   "kind": "specific",
+   "content": "and earth and space science, and apply sugars, and record observations using sentences or charts"
+  },
+  {
+   "idx": "107-8",
+   "kind": "specific",
+   "content": "containment of excrement"
+  },
+  {
+   "idx": "204-2",
+   "kind": "specific",
+   "content": "informed decisions. and rephrase these questions in a testable form"
+  },
+  {
+   "idx": "104-2",
+   "kind": "specific",
+   "content": "Attitudes the factors that affect breathing and heart rate"
+  },
+  {
+   "idx": "302-6",
+   "kind": "specific",
+   "content": "together to produce movement"
+  },
+  {
+   "idx": "206-3",
+   "kind": "specific",
+   "content": "explanations for patterns and discrepancies in the data collected"
+  },
+  {
+   "idx": "301-9",
+   "kind": "specific",
+   "content": "without producing any new materials"
+  },
+  {
+   "idx": "205-5",
+   "kind": "specific",
+   "content": "without producing any new materials"
+  },
+  {
+   "idx": "301-10",
+   "kind": "specific",
+   "content": "some that are not"
+  },
+  {
+   "idx": "301-12",
+   "kind": "specific",
+   "content": "in the production of a gas"
+  },
+  {
+   "idx": "301-11",
+   "kind": "specific",
+   "content": "in the production of a gas"
+  },
+  {
+   "idx": "104-5",
+   "kind": "specific",
+   "content": "for variations in the results"
+  },
+  {
+   "idx": "205-3",
+   "kind": "specific",
+   "content": "for variations in the results"
+  },
+  {
+   "idx": "300-11",
+   "kind": "specific",
+   "content": "for variations in the results"
+  },
+  {
+   "idx": "303-12",
+   "kind": "specific",
+   "content": "distance to cause objects to move or remain in place"
+  },
+  {
+   "idx": "303-13",
+   "kind": "specific",
+   "content": "distance to cause objects to move or remain in place"
+  },
+  {
+   "idx": "104-7",
+   "kind": "specific",
+   "content": "describe forces as contact or non-contact"
+  },
+  {
+   "idx": "303-14",
+   "kind": "specific",
+   "content": "amount of force applied to an object"
+  },
+  {
+   "idx": "205-4",
+   "kind": "specific",
+   "content": "quantitatively"
+  },
+  {
+   "idx": "205-6",
+   "kind": "specific",
+   "content": "nonstandard units"
+  },
+  {
+   "idx": "204-5",
+   "kind": "specific",
+   "content": "steps to identify factors that affect friction"
+  },
+  {
+   "idx": "204-7",
+   "kind": "specific",
+   "content": "steps to identify factors that affect friction"
+  },
+  {
+   "idx": "303-15",
+   "kind": "specific",
+   "content": "objects over a variety of surfaces"
+  },
+  {
+   "idx": "106-4",
+   "kind": "specific",
+   "content": "development of products that reduce and enhance friction"
+  },
+  {
+   "idx": "107-1",
+   "kind": "specific",
+   "content": "development of products that reduce and enhance friction"
+  },
+  {
+   "idx": "303-17",
+   "kind": "specific",
+   "content": "required to lift it using a simple machine"
+  },
+  {
+   "idx": "206-9",
+   "kind": "specific",
+   "content": "of forces"
+  },
+  {
+   "idx": "303-18",
+   "kind": "specific",
+   "content": "when using a lever to accomplish a particular task"
+  },
+  {
+   "idx": "303-19",
+   "kind": "specific",
+   "content": "design the most efficient lever to accomplish a given task"
+  },
+  {
+   "idx": "303-20",
+   "kind": "specific",
+   "content": "the effect of adding another pulley on load-lifting capacity"
+  },
+  {
+   "idx": "204-3",
+   "kind": "specific",
+   "content": "the effect of adding another pulley on load-lifting capacity"
+  },
+  {
+   "idx": "207-1",
+   "kind": "specific",
+   "content": "students in the class"
+  },
+  {
+   "idx": "206-6",
+   "kind": "specific",
+   "content": "students in the class"
+  },
+  {
+   "idx": "205-8",
+   "kind": "specific",
+   "content": "software packages, and the Internet"
+  },
+  {
+   "idx": "105-5",
+   "kind": "specific",
+   "content": "software packages, and the Internet"
+  },
+  {
+   "idx": "105-2",
+   "kind": "specific",
+   "content": "identify and use weather-related folklore to predict weather"
+  },
+  {
+   "idx": "204-8",
+   "kind": "specific",
+   "content": "information"
+  },
+  {
+   "idx": "205-10",
+   "kind": "specific",
+   "content": "information"
+  },
+  {
+   "idx": "104-4",
+   "kind": "specific",
+   "content": "with others, and recognize that results may vary"
+  },
+  {
+   "idx": "206-1",
+   "kind": "specific",
+   "content": "with others, and recognize that results may vary"
+  },
+  {
+   "idx": "302-11",
+   "kind": "specific",
+   "content": "features of a variety of weather systems"
+  },
+  {
+   "idx": "107-14",
+   "kind": "specific",
+   "content": "conditions"
+  },
+  {
+   "idx": "303-21",
+   "kind": "specific",
+   "content": "relate the transfer of energy from the sun to weather conditions"
+  },
+  {
+   "idx": "206-5",
+   "kind": "specific",
+   "content": "conclusions about the temperature readings"
+  },
+  {
+   "idx": "300-14",
+   "kind": "specific",
+   "content": "mass, and expands when heated"
+  },
+  {
+   "idx": "302-10",
+   "kind": "specific",
+   "content": "identify patterns in indoor and outdoor air movement"
+  },
+  {
+   "idx": "301-13",
+   "kind": "specific",
+   "content": "evaporation, condensation, and precipitation"
+  },
+  {
+   "idx": "107-2",
+   "kind": "specific",
+   "content": "make predictions"
+  },
+  {
+   "idx": "107-10",
+   "kind": "specific",
+   "content": "make predictions"
+  },
+  {
+   "idx": "207-4",
+   "kind": "specific",
+   "content": "make predictions"
+  },
+  {
+   "idx": "107-5",
+   "kind": "specific",
+   "content": "various people in their community"
+  },
+  {
+   "idx": "108-1",
+   "kind": "specific",
+   "content": "and the environment"
+  }
+ ],
+ "5/social": [
+  {
+   "idx": "5.1.1",
+   "kind": "specific",
+   "content": "demonstrate an understanding of how we learn about the past authority, and governance."
+  },
+  {
+   "idx": "5.2.1",
+   "kind": "specific",
+   "content": "explain how environment influenced the development of an"
+  },
+  {
+   "idx": "5.3.1",
+   "kind": "specific",
+   "content": "explain the importance of social structure in a society from the ethnic perspectives. Middle Ages Individuals, Societies, and Economic"
+  },
+  {
+   "idx": "5.4.1",
+   "kind": "specific",
+   "content": "demonstrate an understanding of the diverse societies of First demonstrate the ability to make Nations and Inuit, in what later became Canada responsible economic decisions as"
+  },
+  {
+   "idx": "5.4.2",
+   "kind": "specific",
+   "content": "examine decision-making practices in First Nations and Inuit individuals and as members of society. societies, in what later became Atlantic Canada"
+  },
+  {
+   "idx": "5.5.1",
+   "kind": "specific",
+   "content": "examine interactions between English and French, and First demonstrate an understanding of the Nations and Inuit in what later became Atlantic Canada interdependent relationship among indi- viduals, societies, and the"
+  },
+  {
+   "idx": "5.6.1",
+   "kind": "specific",
+   "content": "illustrate the similarities and differences of past societies and your society People, Place, and Environment"
+  }
+ ],
+ "6/language": [
+  {
+   "idx": "1.3",
+   "kind": "specific",
+   "content": "defend and/or support their opinions with evidence"
+  },
+  {
+   "idx": "1.4",
+   "kind": "specific",
+   "content": "listen critically to others’ ideas or opinions and points of view"
+  },
+  {
+   "idx": "2.3",
+   "kind": "specific",
+   "content": "give and follow instructions and respond to a variety of questions and instructions"
+  },
+  {
+   "idx": "2.4",
+   "kind": "specific",
+   "content": "engage in, respond to, and evaluate a variety of oral presentations and other texts"
+  },
+  {
+   "idx": "3.3",
+   "kind": "specific",
+   "content": "make a conscious attempt to consider the needs and expectations of their audience"
+  },
+  {
+   "idx": "4.3",
+   "kind": "specific",
+   "content": "use a wider range of pictorial, typographical, and organizational features of written texts to obtain, verify, and reinforce their understanding of information"
+  },
+  {
+   "idx": "4.4",
+   "kind": "specific",
+   "content": "use and integrate the various cueing systems and a variety of strategies with increasing independence to construct meaning"
+  },
+  {
+   "idx": "4.5",
+   "kind": "specific",
+   "content": "reflect on and discuss their own processes and strategies in reading and viewing"
+  },
+  {
+   "idx": "6.2",
+   "kind": "specific",
+   "content": "reflect on and give reasons for their interpretations of an increasing variety of texts"
+  },
+  {
+   "idx": "7.3",
+   "kind": "specific",
+   "content": "respond critically to texts by - applying a growing range of strategies to analyse and evaluate texts - demonstrating a growing awareness that all texts reflect a purpose and a perspective - recognizing when language is being used to manipulate, persuade, or control them - detecting prejudice, stereotyping, and bias"
+  },
+  {
+   "idx": "8.2",
+   "kind": "specific",
+   "content": "select appropriate note-making strategies from a growing repertoire"
+  },
+  {
+   "idx": "8.3",
+   "kind": "specific",
+   "content": "make language choices to enhance meaning and achieve interesting effects in imaginative writing and other ways of representing"
+  },
+  {
+   "idx": "9.3",
+   "kind": "specific",
+   "content": "invite responses to early drafts of their writing/media productions - use audience reaction to help shape subsequent drafts - reflect on their final drafts from a reader’s/viewer’s/listener’s point of view"
+  },
+  {
+   "idx": "10.4",
+   "kind": "specific",
+   "content": "demonstrate commitment to shaping pieces of writing and other representations"
+  },
+  {
+   "idx": "10.5",
+   "kind": "specific",
+   "content": "select, organize, and combine relevant information, from three to five sources"
+  }
+ ],
+ "6/math": [
+  {
+   "idx": "N1",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of place value for numbers:"
+  },
+  {
+   "idx": "N2",
+   "kind": "specific",
+   "content": "Solve problems involving large numbers, using technology."
+  },
+  {
+   "idx": "N3",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of factors and multiples by: • determining multiples and factors of numbers less than 100; • identifying prime and composite numbers; • solving problems involving muliples."
+  },
+  {
+   "idx": "N4",
+   "kind": "specific",
+   "content": "Relate improper fractions to mixed numbers."
+  },
+  {
+   "idx": "N5",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of ratio, concretely, pictorially and symbolically."
+  },
+  {
+   "idx": "N6",
+   "kind": "specific",
+   "content": "Demonstrae an understanding of percent (limited to whole numbers) concretely, pictorially, and symbolically."
+  },
+  {
+   "idx": "N7",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of integers, concretely, pictorially, and symbolically."
+  },
+  {
+   "idx": "N8",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of multiplication and division of decimals (1-digit whole number multipliers and 1-digit natural number divisors)."
+  },
+  {
+   "idx": "N9",
+   "kind": "specific",
+   "content": "Explain and apply the order of operations, excluding exponents, with and without technology (limited to whole numbers)."
+  },
+  {
+   "idx": "PR1",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of the relationships within"
+  },
+  {
+   "idx": "PR2",
+   "kind": "specific",
+   "content": "Represent and describe patterns and relationships using graphs and tables."
+  },
+  {
+   "idx": "PR3",
+   "kind": "specific",
+   "content": "Represent generalizations arising from number relationships using equations with letter variables."
+  },
+  {
+   "idx": "PR4",
+   "kind": "specific",
+   "content": "Demonstrate and explain the meaning of preservation of equality concretely, pictorially, and symbolically."
+  },
+  {
+   "idx": "SS1",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of angles by:"
+  },
+  {
+   "idx": "SS2",
+   "kind": "specific",
+   "content": "Demonstrate that the sum of interior angles is: • 1800 in a triangle; • 3600 in a quadrilateral."
+  },
+  {
+   "idx": "SS3",
+   "kind": "specific",
+   "content": "Develop and apply a formula for determining the: • perimeter of polygons; • area of rectangles; • volume of right rectangular prisms."
+  },
+  {
+   "idx": "SS4",
+   "kind": "specific",
+   "content": "Construct and compare triangles, including: • scalene; • isosceles; • equilateral; • right; • obtuse; • acute in different orientations."
+  },
+  {
+   "idx": "SS5",
+   "kind": "specific",
+   "content": "Describe and compare the sides and angles of regular and irregular polygons."
+  },
+  {
+   "idx": "SS6",
+   "kind": "specific",
+   "content": "Perform a combination of translation(s), rotation(s) and/or reflection(s) on a single 2-D shape, with and without technology, and draw and describe the image."
+  },
+  {
+   "idx": "SS7",
+   "kind": "specific",
+   "content": "Perform a combination of successive transformations of 2-D shapes to create a design, and identify and describe the transformations."
+  },
+  {
+   "idx": "SS8",
+   "kind": "specific",
+   "content": "Identify and plot points in the first quadrant of a Cartesian plane using whole number ordered pairs."
+  },
+  {
+   "idx": "SS9",
+   "kind": "specific",
+   "content": "Perform and describe single transformations of a 2-D shape in the first quadrant of a Cartesian plane (limited to whole number vertices)."
+  },
+  {
+   "idx": "SP1",
+   "kind": "specific",
+   "content": "Create, label, and interpret line graphs to draw conclusions."
+  },
+  {
+   "idx": "SP2",
+   "kind": "specific",
+   "content": "Select, justify, and use appropriate methods of collecting to solve problems. data, including: • questionnaires; • experiments; • databases; • electronic media."
+  },
+  {
+   "idx": "SP3",
+   "kind": "specific",
+   "content": "Graph collected data and analyse the graph to solve problems."
+  },
+  {
+   "idx": "SP4",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of probability by: • identifying all possible outcomes of a probability experiment; • differentiating between experimental and theoretical probability; • determining the theoretical probability of outcomes in a probability experiment; • determining the experimental probability of outcomes in"
+  }
+ ],
+ "6/science": [
+  {
+   "idx": "206-1",
+   "kind": "specific",
+   "content": "diagram that shows the method of classifying"
+  },
+  {
+   "idx": "207-2",
+   "kind": "specific",
+   "content": "present a selected classification scheme to others"
+  },
+  {
+   "idx": "104-5",
+   "kind": "specific",
+   "content": "knowledge and understandings of explanations for variations"
+  },
+  {
+   "idx": "206-9",
+   "kind": "specific",
+   "content": "these understandings to interpret, inte- common classification system"
+  },
+  {
+   "idx": "300-15",
+   "kind": "specific",
+   "content": "these understandings to interpret, inte- common classification system"
+  },
+  {
+   "idx": "104-8",
+   "kind": "specific",
+   "content": "Students will develop the skills • classify animals as vertebrates or invertebrates"
+  },
+  {
+   "idx": "300-16",
+   "kind": "specific",
+   "content": "Students will develop the skills • classify animals as vertebrates or invertebrates"
+  },
+  {
+   "idx": "300-17",
+   "kind": "specific",
+   "content": "inquiry, for solving problems, for and fish"
+  },
+  {
+   "idx": "205-7",
+   "kind": "specific",
+   "content": "communicating scientific ideas and results, • record observations while investigating common arthropods"
+  },
+  {
+   "idx": "300-18",
+   "kind": "specific",
+   "content": "for working collaboratively, and for mak- • compare characteristics of common arthropods"
+  },
+  {
+   "idx": "204-8",
+   "kind": "specific",
+   "content": "a variety of microorganisms"
+  },
+  {
+   "idx": "300-19",
+   "kind": "specific",
+   "content": "a variety of microorganisms"
+  },
+  {
+   "idx": "302-12",
+   "kind": "specific",
+   "content": "obtaining food, water, and air, and moving around"
+  },
+  {
+   "idx": "107-6",
+   "kind": "specific",
+   "content": "organisms"
+  },
+  {
+   "idx": "107-1",
+   "kind": "specific",
+   "content": "protect against unwanted microorganism growth"
+  },
+  {
+   "idx": "204-1",
+   "kind": "specific",
+   "content": "sources to gather information about this relationship"
+  },
+  {
+   "idx": "205-8",
+   "kind": "specific",
+   "content": "sources to gather information about this relationship"
+  },
+  {
+   "idx": "310-15",
+   "kind": "specific",
+   "content": "parts of the world, and discuss reasons for any differences"
+  },
+  {
+   "idx": "105-1",
+   "kind": "specific",
+   "content": "existence"
+  },
+  {
+   "idx": "301-16",
+   "kind": "specific",
+   "content": "identify changes in animals over time, using fossils"
+  },
+  {
+   "idx": "105-5",
+   "kind": "specific",
+   "content": "on the gradual accumulation of evidence"
+  },
+  {
+   "idx": "106-3",
+   "kind": "specific",
+   "content": "have resulted in a better understanding of fossil discoveries"
+  },
+  {
+   "idx": "107-11",
+   "kind": "specific",
+   "content": "have resulted in a better understanding of fossil discoveries"
+  },
+  {
+   "idx": "205-9",
+   "kind": "specific",
+   "content": "that ensures personal safety and the safety of others"
+  },
+  {
+   "idx": "303-31",
+   "kind": "specific",
+   "content": "identify and explain the dangers of electricity at work or at play"
+  },
+  {
+   "idx": "106-4",
+   "kind": "specific",
+   "content": "has led to the development of electrical safety features"
+  },
+  {
+   "idx": "206-3",
+   "kind": "specific",
+   "content": "investigations involving static electricity"
+  },
+  {
+   "idx": "205-3",
+   "kind": "specific",
+   "content": "insulators or conductors"
+  },
+  {
+   "idx": "300-20",
+   "kind": "specific",
+   "content": "insulators or conductors"
+  },
+  {
+   "idx": "303-24",
+   "kind": "specific",
+   "content": "that can be used to make a switch"
+  },
+  {
+   "idx": "303-25",
+   "kind": "specific",
+   "content": "compare characteristics of series and parallel circuits"
+  },
+  {
+   "idx": "303-22",
+   "kind": "specific",
+   "content": "compare the characteristics of static and current electricity"
+  },
+  {
+   "idx": "303-27",
+   "kind": "specific",
+   "content": "using an electromagnet"
+  },
+  {
+   "idx": "204-3",
+   "kind": "specific",
+   "content": "factors, and carry out a fair test of these factors"
+  },
+  {
+   "idx": "205-1",
+   "kind": "specific",
+   "content": "factors, and carry out a fair test of these factors"
+  },
+  {
+   "idx": "303-26",
+   "kind": "specific",
+   "content": "motion, and magnetic effects"
+  },
+  {
+   "idx": "204-7",
+   "kind": "specific",
+   "content": "steps to solve them"
+  },
+  {
+   "idx": "107-9",
+   "kind": "specific",
+   "content": "become increasingly dependent on electricity over the years"
+  },
+  {
+   "idx": "303-28",
+   "kind": "specific",
+   "content": "affect the environment"
+  },
+  {
+   "idx": "105-3",
+   "kind": "specific",
+   "content": "affect the environment"
+  },
+  {
+   "idx": "108-8",
+   "kind": "specific",
+   "content": "affect the environment"
+  },
+  {
+   "idx": "108-5",
+   "kind": "specific",
+   "content": "will help protect the environment"
+  },
+  {
+   "idx": "303-30",
+   "kind": "specific",
+   "content": "will help protect the environment"
+  },
+  {
+   "idx": "204-2",
+   "kind": "specific",
+   "content": "of a flying device"
+  },
+  {
+   "idx": "205-5",
+   "kind": "specific",
+   "content": "of a flying device"
+  },
+  {
+   "idx": "206-6",
+   "kind": "specific",
+   "content": "performance"
+  },
+  {
+   "idx": "303-32",
+   "kind": "specific",
+   "content": "living things to fly"
+  },
+  {
+   "idx": "303-33",
+   "kind": "specific",
+   "content": "identify situations which involve Bernoulli’s principle"
+  },
+  {
+   "idx": "300-22",
+   "kind": "specific",
+   "content": "spacecraft"
+  },
+  {
+   "idx": "107-12",
+   "kind": "specific",
+   "content": "technology of aircraft"
+  },
+  {
+   "idx": "301-19",
+   "kind": "specific",
+   "content": "how Earth’s revolution causes the yearly cycle of seasons"
+  },
+  {
+   "idx": "205-2",
+   "kind": "specific",
+   "content": "relative orbits of the planets around the sun"
+  },
+  {
+   "idx": "206-4",
+   "kind": "specific",
+   "content": "information about the components of the solar system"
+  },
+  {
+   "idx": "204-6",
+   "kind": "specific",
+   "content": "information about the components of the solar system"
+  },
+  {
+   "idx": "302-13",
+   "kind": "specific",
+   "content": "the night sky"
+  },
+  {
+   "idx": "107-3",
+   "kind": "specific",
+   "content": "oceans, and/or foretell significant events"
+  }
+ ],
+ "6/social": [
+  {
+   "idx": "6.1.1",
+   "kind": "specific",
+   "content": "identify selected events of the Contemporary/European period on ship and the origins, functions, and a time line sources of power, authority, and Unit Two: People governance. Students will be expected to"
+  },
+  {
+   "idx": "6.2.1",
+   "kind": "specific",
+   "content": "demonstrate an understanding that people from many parts of"
+  },
+  {
+   "idx": "6.2.2",
+   "kind": "specific",
+   "content": "research the historical contributions of one individual associated culture, diversity, and world view, with P.E.I. history recognizing the similarities and Unit Three: Transportation differences reflected in various person- Students will be expected to al, cultural, racial, and ethnic perspec- tives."
+  },
+  {
+   "idx": "6.3.1",
+   "kind": "specific",
+   "content": "examine the development of transportation modes on the Island over time Individuals, Societies, and Unit Four: Government Economic Decisions Students will be expected to"
+  },
+  {
+   "idx": "6.4.1",
+   "kind": "specific",
+   "content": "examine the impact of past political decisions on present day life on responsible economic decisions as P.E.I. individuals and as members of society. Unit Five: Economy Interdependence"
+  },
+  {
+   "idx": "6.5.1",
+   "kind": "specific",
+   "content": "demonstrate an understanding of the economic activities on P.E.I."
+  },
+  {
+   "idx": "6.6.1",
+   "kind": "specific",
+   "content": "identify changing lifestyles of people on P.E.I. over time globally - and the implications for a sustainable future. Unit Seven: Culture and Culmination People, Place, and Environment"
+  },
+  {
+   "idx": "6.7.1",
+   "kind": "specific",
+   "content": "demonstrate an understanding of the influence of P.E.I. cultural"
+  },
+  {
+   "idx": "6.7.2",
+   "kind": "specific",
+   "content": "demonstrate an understanding of a significant event of Island history interactions among people, places, and the environment. Conceptual Organizer: World Cultures (The second half of Grade 6 social studies) Time, Continuity, and Change"
+  },
+  {
+   "idx": "6.1.2",
+   "kind": "specific",
+   "content": "identify major cultural regions of the world using various criteria"
+  },
+  {
+   "idx": "6.1.3",
+   "kind": "specific",
+   "content": "analyse the importance of cross-cultural understanding"
+  },
+  {
+   "idx": "6.1.4",
+   "kind": "specific",
+   "content": "demonstrate an understanding of factors that are creating a more global culture around the world 24 PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: GRADE 6"
+  },
+  {
+   "idx": "6.2.3",
+   "kind": "specific",
+   "content": "explain how economic systems influence cultures"
+  },
+  {
+   "idx": "6.3.2",
+   "kind": "specific",
+   "content": "examine selected examples of human rights issues around the world"
+  }
+ ],
+ "7/language": [
+  {
+   "idx": "1.3",
+   "kind": "specific",
+   "content": "express clearly and with conviction, a personal point of view and be able to support that position"
+  },
+  {
+   "idx": "1.4",
+   "kind": "specific",
+   "content": "listen attentively to grasp the essential elements of a message and recognize and consider supporting details"
+  },
+  {
+   "idx": "2.3",
+   "kind": "specific",
+   "content": "follow instructions and respond to questions and directions"
+  },
+  {
+   "idx": "2.4",
+   "kind": "specific",
+   "content": "evaluate speakers and the effectiveness of their talk in particular contexts; identify the verbal and non-verbal language cues used by speakers (e.g., repetition, volume, and eye contact)"
+  },
+  {
+   "idx": "3.2",
+   "kind": "specific",
+   "content": "demonstrate a respect for others by developing effective ways to express personal opinions such that they reflect sensitivity to others, including differences in culture and language"
+  },
+  {
+   "idx": "3.3",
+   "kind": "specific",
+   "content": "recognize that spoken language reveals values and attitudes such as bias, beliefs, and prejudice; understand how language is used to influence and manipulate"
+  },
+  {
+   "idx": "3.4",
+   "kind": "specific",
+   "content": "recognize that different situations (interviews, speeches, debates, conversation) require different speaking and listening conventions (questioning techniques, persuasive talk, formal language) appropriate to the situation"
+  },
+  {
+   "idx": "4.3",
+   "kind": "specific",
+   "content": "demonstrate an awareness of how authors use pictorial, typographical, and organizational devices such as photos, titles, headings, and bold print to achieve certain purposes in their writing, and use those devices more regularly to construct meaning and enhance understanding"
+  },
+  {
+   "idx": "4.4",
+   "kind": "specific",
+   "content": "develop some independence for recognizing and using various reading and viewing strategies (predicting, questioning, etc.) and in using cueing systems (graphophonic, contextual, syntactic, etc.) to construct meaning; apply and develop these strategies and systems while reading and viewing increasingly complex print and media texts"
+  },
+  {
+   "idx": "4.5",
+   "kind": "specific",
+   "content": "talk and write about the various processes and strategies readers and viewers apply when constructing meaning from various texts; recognize and articulate personal processes and strategies used when reading or viewing various texts"
+  },
+  {
+   "idx": "5.2",
+   "kind": "specific",
+   "content": "become increasingly aware of and use periodically the many print and non-print avenues and sources (Internet, documentaries, interviews) through which information can be assessed and selected"
+  },
+  {
+   "idx": "5.3",
+   "kind": "specific",
+   "content": "use research strategies like issue mapping and webbing to guide research"
+  },
+  {
+   "idx": "6.1",
+   "kind": "specific",
+   "content": "extend personal responses, either orally or in writing, to print and non-print texts by explaining in some detail initial or basic reactions to those texts"
+  },
+  {
+   "idx": "6.2",
+   "kind": "specific",
+   "content": "make evaluations or judgments about texts and learn to express personal points of view"
+  },
+  {
+   "idx": "6.3",
+   "kind": "specific",
+   "content": "while learning to express personal points of view, develop the ability to find evidence and examples in texts to support personal views about themes, issues, and situations"
+  },
+  {
+   "idx": "7.2",
+   "kind": "specific",
+   "content": "recognize that print and media texts are constructed for particular readers and purposes; begin to identify the textual elements used by authors"
+  },
+  {
+   "idx": "7.3",
+   "kind": "specific",
+   "content": "develop an ability to respond critically to various texts in a variety of ways such as identifying, describing, and discussing the form, structure, and content of texts and how they might contribute to meaning construction and understanding - recognize that personal knowledge, ideas, values, perceptions, and points of view influence how writers create text"
+  },
+  {
+   "idx": "8.3",
+   "kind": "specific",
+   "content": "understand that note-making is purposeful and has many purposes (e.g., personal use, gathering information for an assignment, recording what has happened and what others have said) and many forms (e.g., lists, summaries, observations, and descriptions)"
+  },
+  {
+   "idx": "8.4",
+   "kind": "specific",
+   "content": "demonstrate an ability to integrate interesting effects in imaginative writing and other forms of representation, such as consider thoughts and feelings in addition to external descriptions and activities; integrate detail that adds richness and density; identify and correct inconsistencies and avoid extraneous detail; make effective language choices relevant to style and purpose; and select more elaborate and sophisticated vocabulary"
+  },
+  {
+   "idx": "9.3",
+   "kind": "specific",
+   "content": "begin to understand that ideas can be represented in more than one way and experiment with using other forms such as dialogue, posters, and advertisements"
+  },
+  {
+   "idx": "9.4",
+   "kind": "specific",
+   "content": "develop the awareness that content, writing style, tone of voice, language choice, and text organization need to fit the reader and suit the reason for writing"
+  },
+  {
+   "idx": "9.5",
+   "kind": "specific",
+   "content": "ask for reader feedback while writing and use this feedback when shaping subsequent drafts; consider self- generated drafts from a reader’s/viewer’s/listener’s point of view"
+  },
+  {
+   "idx": "10.2",
+   "kind": "specific",
+   "content": "learn to recognize and begin to use more often the specific prewriting, drafting, revising, editing, proofreading, and presentation strategies that most effectively help to produce various texts"
+  },
+  {
+   "idx": "10.3",
+   "kind": "specific",
+   "content": "acquire some exposure to the various technologies used for communicating to a variety of audiences for a range of purposes (video, e-mail, word processing, audiotapes)"
+  },
+  {
+   "idx": "10.4",
+   "kind": "specific",
+   "content": "demonstrate a commitment to crafting pieces of writing and other representations"
+  },
+  {
+   "idx": "10.5",
+   "kind": "specific",
+   "content": "collect information from several sources (interviews, film, CD-ROMs, texts) and combine ideas in communication"
+  }
+ ],
+ "7/math": [
+  {
+   "idx": "N1",
+   "kind": "specific",
+   "content": "Determine and explain why a number is divisible by 2, 3,"
+  },
+  {
+   "idx": "N2",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of the addition, subtraction, multiplication and division of decimals (for more than 1-digit divisors or 2-digit multipliers, the use of technology is expected) to solve problems."
+  },
+  {
+   "idx": "N3",
+   "kind": "specific",
+   "content": "Solve problems involving percents from 1% to 100%."
+  },
+  {
+   "idx": "N4",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of the relationship between positive repeating decimals and positive fractions, and positive terminating decimals and positive fractions."
+  },
+  {
+   "idx": "N5",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of adding and subtracting positive fractions and mixed numbers, with like and unlike denominators, concretely, pictorially and symbolically (limited to positive sums and differences)."
+  },
+  {
+   "idx": "N6",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of addition and subtraction of integers, concretely, pictorially and symbolically."
+  },
+  {
+   "idx": "N7",
+   "kind": "specific",
+   "content": "Compare and order positive fractions, positive decimals (to thousandths) and whole numbers using: • benchmarks; • place value; • equivalent fractions and/or decimals."
+  },
+  {
+   "idx": "PR1",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of oral and written"
+  },
+  {
+   "idx": "PR2",
+   "kind": "specific",
+   "content": "Create a table of values from a linear relation, graph the table of values, and analyse the graph to draw conclusions and solve problems."
+  },
+  {
+   "idx": "PR3",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of preservation of equality multiple ways. by: • modeling preservation of equality, concretely, pictorially, and symbolically; • applying preservation of equality to solve equations."
+  },
+  {
+   "idx": "PR4",
+   "kind": "specific",
+   "content": "Explain the difference between an expression and an equation."
+  },
+  {
+   "idx": "PR5",
+   "kind": "specific",
+   "content": "Evaluate an expression given the value of the variable(s)."
+  },
+  {
+   "idx": "PR6",
+   "kind": "specific",
+   "content": "Model and solve problems that can be represented by one-step linear equations of the form x + a = b, concretely, pictorially, and symbolically, where a and b are integers."
+  },
+  {
+   "idx": "PR7",
+   "kind": "specific",
+   "content": "Model and solve problems that can be represented by linear equations of the form: • ax + b = c; • ax = b; • xa = b, a = 0 concretely, pictorially and symbolically, where a, b and c are whole numbers."
+  },
+  {
+   "idx": "SS1",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of circles by:"
+  },
+  {
+   "idx": "SS2",
+   "kind": "specific",
+   "content": "Develop and apply a formula for determining the area of: • triangles; • parallelograms; • circles."
+  },
+  {
+   "idx": "SS3",
+   "kind": "specific",
+   "content": "Perform geometric constructions, including: 3-D objects and 2-D shapes, and analyse • perpendicular line segments; the relationships among them. • parallel line segments; • perpendicular bisectors; • angle bisectors."
+  },
+  {
+   "idx": "SS4",
+   "kind": "specific",
+   "content": "Identify and plot points in the four quadrants of a motion of objects and shapes. Cartesian plane using integral ordered pairs."
+  },
+  {
+   "idx": "SS5",
+   "kind": "specific",
+   "content": "Perform and describe transformations (translations, rotations or reflections) of a 2-D plane (limited to integral number vertices)."
+  },
+  {
+   "idx": "SP1",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of central tendency and"
+  },
+  {
+   "idx": "SP2",
+   "kind": "specific",
+   "content": "Determine the effect on the mean, median and mode when an outlier is included in a data set."
+  },
+  {
+   "idx": "SP3",
+   "kind": "specific",
+   "content": "Construct, label and interpret circle graphs to solve problems."
+  },
+  {
+   "idx": "SP4",
+   "kind": "specific",
+   "content": "Express probabilities as ratios, fractions and percents. probabilities to represent and solve"
+  },
+  {
+   "idx": "SP5",
+   "kind": "specific",
+   "content": "Identify the sample space (where the combined sample problems involving uncertainty. space has 36 or fewer elements) for a probability experiment involving two independent events."
+  },
+  {
+   "idx": "SP6",
+   "kind": "specific",
+   "content": "Conduct a probability experiment to compare the theoretical probability (determined using a tree diagram, table or another graphic organizer) and experimental probability of two independent events."
+  }
+ ],
+ "7/science": [
+  {
+   "idx": "209-3",
+   "kind": "specific",
+   "content": "between science and technology, and of components of an ecosystem"
+  },
+  {
+   "idx": "209-4",
+   "kind": "specific",
+   "content": "ecosystem"
+  },
+  {
+   "idx": "306-3",
+   "kind": "specific",
+   "content": "ecosystem"
+  },
+  {
+   "idx": "304-2",
+   "kind": "specific",
+   "content": "inquiry, for solving problems, for their interactions"
+  },
+  {
+   "idx": "109-12",
+   "kind": "specific",
+   "content": "these understandings to interpret, - photosynthesis"
+  },
+  {
+   "idx": "304-1",
+   "kind": "specific",
+   "content": "consumer, and decomposer"
+  },
+  {
+   "idx": "109-1",
+   "kind": "specific",
+   "content": "Students will be encouraged characteristics enables classification in an ecosystem"
+  },
+  {
+   "idx": "109-13",
+   "kind": "specific",
+   "content": "ecosystem"
+  },
+  {
+   "idx": "210-2",
+   "kind": "specific",
+   "content": "how it flows through a food web"
+  },
+  {
+   "idx": "306-1",
+   "kind": "specific",
+   "content": "how it flows through a food web"
+  },
+  {
+   "idx": "210-3",
+   "kind": "specific",
+   "content": "the flow of energy in an ecosystem"
+  },
+  {
+   "idx": "111-6",
+   "kind": "specific",
+   "content": "structure and interactions of a natural system"
+  },
+  {
+   "idx": "306-2",
+   "kind": "specific",
+   "content": "microorganisms"
+  },
+  {
+   "idx": "210-12",
+   "kind": "specific",
+   "content": "of matter in an ecosystem"
+  },
+  {
+   "idx": "304-3",
+   "kind": "specific",
+   "content": "moisture"
+  },
+  {
+   "idx": "111-1",
+   "kind": "specific",
+   "content": "preservation techniques"
+  },
+  {
+   "idx": "208-5",
+   "kind": "specific",
+   "content": "observed in the site"
+  },
+  {
+   "idx": "113-11",
+   "kind": "specific",
+   "content": "habitat of a particular organism"
+  },
+  {
+   "idx": "211-5",
+   "kind": "specific",
+   "content": "habitat of a particular organism"
+  },
+  {
+   "idx": "113-10",
+   "kind": "specific",
+   "content": "knowledge"
+  },
+  {
+   "idx": "210-6",
+   "kind": "specific",
+   "content": "determine patterns and trends"
+  },
+  {
+   "idx": "311-5",
+   "kind": "specific",
+   "content": "determine patterns and trends"
+  },
+  {
+   "idx": "110-4",
+   "kind": "specific",
+   "content": "new geological evidence"
+  },
+  {
+   "idx": "110-1",
+   "kind": "specific",
+   "content": "building"
+  },
+  {
+   "idx": "112-12",
+   "kind": "specific",
+   "content": "and global geology"
+  },
+  {
+   "idx": "311-1",
+   "kind": "specific",
+   "content": "and faulting of the Earth’s surface"
+  },
+  {
+   "idx": "311-6",
+   "kind": "specific",
+   "content": "major events in Earth’s history"
+  },
+  {
+   "idx": "211-3",
+   "kind": "specific",
+   "content": "simulated core sampling techniques"
+  },
+  {
+   "idx": "211-4",
+   "kind": "specific",
+   "content": "simulated core sampling in geological models"
+  },
+  {
+   "idx": "208-2",
+   "kind": "specific",
+   "content": "rock cycle"
+  },
+  {
+   "idx": "209-6",
+   "kind": "specific",
+   "content": "the formation of rock types"
+  },
+  {
+   "idx": "112-3",
+   "kind": "specific",
+   "content": "technologies designed to use rocks"
+  },
+  {
+   "idx": "311-12",
+   "kind": "specific",
+   "content": "explain various ways in which rocks can be weathered"
+  },
+  {
+   "idx": "209-1",
+   "kind": "specific",
+   "content": "design and conduct a fair test of soil properties"
+  },
+  {
+   "idx": "310-3",
+   "kind": "specific",
+   "content": "and investigate ways to enrich soils"
+  },
+  {
+   "idx": "311-3",
+   "kind": "specific",
+   "content": "biological processes to the formation of soils"
+  },
+  {
+   "idx": "109-7",
+   "kind": "specific",
+   "content": "geological features in and on the earth’s crust"
+  },
+  {
+   "idx": "111-2",
+   "kind": "specific",
+   "content": "geological features in and on the earth’s crust"
+  },
+  {
+   "idx": "310-1",
+   "kind": "specific",
+   "content": "geological features in and on the earth’s crust"
+  },
+  {
+   "idx": "208-8",
+   "kind": "specific",
+   "content": "and test an air thermometer"
+  },
+  {
+   "idx": "210-13",
+   "kind": "specific",
+   "content": "and test an air thermometer"
+  },
+  {
+   "idx": "110-7",
+   "kind": "specific",
+   "content": "used in the past"
+  },
+  {
+   "idx": "308-3",
+   "kind": "specific",
+   "content": "temperature"
+  },
+  {
+   "idx": "308-2",
+   "kind": "specific",
+   "content": "the particle model of matter"
+  },
+  {
+   "idx": "308-5",
+   "kind": "specific",
+   "content": "and radiation"
+  },
+  {
+   "idx": "111-5",
+   "kind": "specific",
+   "content": "systems and central heating systems in houses"
+  },
+  {
+   "idx": "308-7",
+   "kind": "specific",
+   "content": "common materials"
+  },
+  {
+   "idx": "210-10",
+   "kind": "specific",
+   "content": "how various surfaces absorb radiant heat"
+  },
+  {
+   "idx": "211-2",
+   "kind": "specific",
+   "content": "a variety of tables, charts, and/or graphs"
+  },
+  {
+   "idx": "308-6",
+   "kind": "specific",
+   "content": "describe how various surfaces absorb radiant heat"
+  },
+  {
+   "idx": "112-1",
+   "kind": "specific",
+   "content": "developments in science and technology"
+  },
+  {
+   "idx": "112-9",
+   "kind": "specific",
+   "content": "that are associated with heat and temperature"
+  },
+  {
+   "idx": "109-4",
+   "kind": "specific",
+   "content": "that were developed through trial and error"
+  },
+  {
+   "idx": "307-2",
+   "kind": "specific",
+   "content": "paper chromatography"
+  },
+  {
+   "idx": "210-16",
+   "kind": "specific",
+   "content": "arise from what is learned"
+  },
+  {
+   "idx": "307-1",
+   "kind": "specific",
+   "content": "particle theory"
+  },
+  {
+   "idx": "109-14",
+   "kind": "specific",
+   "content": "soluble"
+  },
+  {
+   "idx": "307-3",
+   "kind": "specific",
+   "content": "soluble"
+  },
+  {
+   "idx": "209-7",
+   "kind": "specific",
+   "content": "recognizing and following warning label symbols"
+  },
+  {
+   "idx": "307-4",
+   "kind": "specific",
+   "content": "describe the concentration of solutions qualitatively"
+  },
+  {
+   "idx": "210-9",
+   "kind": "specific",
+   "content": "calculate concentrations of solutions in g/L"
+  },
+  {
+   "idx": "208-1",
+   "kind": "specific",
+   "content": "clearly define practical problems"
+  },
+  {
+   "idx": "208-6",
+   "kind": "specific",
+   "content": "temperature on solubility"
+  },
+  {
+   "idx": "210-7",
+   "kind": "specific",
+   "content": "temperature on solubility"
+  },
+  {
+   "idx": "210-4",
+   "kind": "specific",
+   "content": "extrapolating from graphical data"
+  },
+  {
+   "idx": "307-5",
+   "kind": "specific",
+   "content": "describe qualitatively the factors that affect solubility"
+  },
+  {
+   "idx": "112-7",
+   "kind": "specific",
+   "content": "mixtures and solutions, affect our lives"
+  }
+ ],
+ "7/social": [
+  {
+   "idx": "7.1.1",
+   "kind": "specific",
+   "content": "Explore the general concept of empowerment demonstrate an understanding of the"
+  },
+  {
+   "idx": "7.2.1",
+   "kind": "specific",
+   "content": "Analyse how commodities that lead to economic in various personal, cultural, racial, and empowerment have changed ethnic perspectives."
+  },
+  {
+   "idx": "7.2.2",
+   "kind": "specific",
+   "content": "Investigate the various ways economic systems to demonstrate an understanding empower or disempower people of the interdependent relationship"
+  },
+  {
+   "idx": "7.2.3",
+   "kind": "specific",
+   "content": "Analyse trends that could impact future economic interactions among people, places, and empowerment the environment."
+  },
+  {
+   "idx": "7.3.1",
+   "kind": "specific",
+   "content": "Evaluate the conditions of everyday life for diverse peoples living in British North America in the mid-1800s, including Aboriginal peoples, African-Canadians, and Acadians"
+  },
+  {
+   "idx": "7.3.2",
+   "kind": "specific",
+   "content": "Analyse how the struggle for responsible government was an issue of political empowerment and disempowerment"
+  },
+  {
+   "idx": "7.3.3",
+   "kind": "specific",
+   "content": "Analyse the internal and external factors that led to Confederation"
+  },
+  {
+   "idx": "7.3.4",
+   "kind": "specific",
+   "content": "Examine the political structure of Canada as a result of Confederation"
+  },
+  {
+   "idx": "7.4.1",
+   "kind": "specific",
+   "content": "Explain how the expansion and development of Canada during the 1870s and early 1880s affected its various peoples and regions"
+  },
+  {
+   "idx": "7.4.2",
+   "kind": "specific",
+   "content": "Analyse the events of the Northwest Rebellion to determine its impact on internal relations in Canada"
+  },
+  {
+   "idx": "7.4.3",
+   "kind": "specific",
+   "content": "Analyse the degree of empowerment and disempowerment for Aboriginal peoples in present-day Atlantic Canada during this period"
+  },
+  {
+   "idx": "7.4.4",
+   "kind": "specific",
+   "content": "Analyse the struggle for empowerment by new cultural groups immigrating to Canada between 1870 and 1914"
+  },
+  {
+   "idx": "7.5.1",
+   "kind": "specific",
+   "content": "Evaluate the conditions of everyday life for the peoples of Canada at the turn of the 20th century"
+  },
+  {
+   "idx": "7.5.2",
+   "kind": "specific",
+   "content": "Describe the impact of the Industrial Revolution on industry and workers in Newfoundland and Labrador, the Maritimes, and across Canada"
+  },
+  {
+   "idx": "7.5.3",
+   "kind": "specific",
+   "content": "Examine how women became more empowered through their role in the social reform movements of the late 19th and early 20th centuries"
+  },
+  {
+   "idx": "7.6.1",
+   "kind": "specific",
+   "content": "Explain how events in the early-20th century led Canada toward independence"
+  },
+  {
+   "idx": "7.7.1",
+   "kind": "specific",
+   "content": "Portray an understanding of the extent of empowerment of individuals, groups, and the nation up to 1920"
+  }
+ ],
+ "8/language": [
+  {
+   "idx": "1.3",
+   "kind": "specific",
+   "content": "state a point of view in a convincing manner, offering relevant information to support that viewpoint"
+  },
+  {
+   "idx": "1.4",
+   "kind": "specific",
+   "content": "listen carefully to identify key points in oral presentations, and evaluate the relevancy of supporting details"
+  },
+  {
+   "idx": "2.3",
+   "kind": "specific",
+   "content": "give instructions and respond appropriately to instructions, directions, and questions"
+  },
+  {
+   "idx": "2.4",
+   "kind": "specific",
+   "content": "evaluate the effectiveness of their own and others’ talk in a variety of contexts; employ and consider the effects of verbal and nonverbal language (e.g., summaries, examples, and body gestures)"
+  },
+  {
+   "idx": "3.2",
+   "kind": "specific",
+   "content": "demonstrate a respect for others by developing effective ways to express personal opinions such that they reflect sensitivity to others including differences in culture and language"
+  },
+  {
+   "idx": "3.3",
+   "kind": "specific",
+   "content": "recognize that spoken language reveals values and attitudes such as bias, beliefs, and prejudice; understand how language is used to influence and manipulate"
+  },
+  {
+   "idx": "3.4",
+   "kind": "specific",
+   "content": "recognize that different situations (interviews, speeches, debates, conversation) require different speaking and listening conventions (questioning techniques, persuasive talk, formal language) appropriate to the situation"
+  },
+  {
+   "idx": "4.3",
+   "kind": "specific",
+   "content": "explain with some regularity how authors use pictorial, typographical, and other organizational devices such as tables and graphs to achieve certain purposes in their writing, and rely on those devices to construct meaning and enhance understanding"
+  },
+  {
+   "idx": "4.4",
+   "kind": "specific",
+   "content": "read with greater fluency, confidence, and comprehension by furthering personal understanding, recognition, and use cueing systems and strategies to read and view increasingly complex texts"
+  },
+  {
+   "idx": "4.5",
+   "kind": "specific",
+   "content": "regularly identify the processes and strategies readers and viewers apply when constructing meaning; develop an understanding of the personal processes and strategies applied when reading and viewing; reflect on personal growth as readers and viewers of texts and use this awareness of personal developments to push reading and viewing ability even further"
+  },
+  {
+   "idx": "5.2",
+   "kind": "specific",
+   "content": "experiment with and rely upon a range of print and non- print sources for accessing and selecting information"
+  },
+  {
+   "idx": "5.3",
+   "kind": "specific",
+   "content": "employ various relevant research strategies like generating questions, drafting an outline, or interviewing peers to determine what questions they would like answered by their research"
+  },
+  {
+   "idx": "6.2",
+   "kind": "specific",
+   "content": "state personal points of view about what is read and viewed and justify views with increasing regularity"
+  },
+  {
+   "idx": "6.3",
+   "kind": "specific",
+   "content": "with increasing confidence and flexibility, find evidence in texts to support personal claims and viewpoints about issues, themes, and situations"
+  },
+  {
+   "idx": "7.2",
+   "kind": "specific",
+   "content": "identify the various features and elements writers use when writing for specific readers for specific purposes; describe how texts are organized to accommodate particular readers’ needs and to contribute to meaning and effect"
+  },
+  {
+   "idx": "7.3",
+   "kind": "specific",
+   "content": "expand on earlier abilities to respond critically to a range of texts in various ways - understand how personal knowledge, ideas, values, perceptions, and points of view influence how writers create texts - recognize how and when personal background influences meaning construction, understanding, and textual response"
+  },
+  {
+   "idx": "8.3",
+   "kind": "specific",
+   "content": "begin to use various forms of note-making appropriate to various purposes and situations"
+  },
+  {
+   "idx": "8.4",
+   "kind": "specific",
+   "content": "demonstrate an awareness of how and when to integrate interesting effects in imaginative writing and other ways of representing; include thoughts and feelings in addition to external descriptions and activities; integrate detail that adds richness and density; identify and correct inconsistencies and avoid extraneous detail; make effective language choices relevant to style and purpose, and when appropriate, select more elaborate and sophisticated vocabulary and"
+  },
+  {
+   "idx": "9.1",
+   "kind": "specific",
+   "content": "continue to develop writing forms previously introduced and expand this range to produce, for example, autobiographies, drama, surveys, graphs, literary responses, biographies, illustrations, and reviews"
+  },
+  {
+   "idx": "9.3",
+   "kind": "specific",
+   "content": "understand that ideas can be represented in more than one way and used with other forms of representing (speeches, demonstrations, plays)"
+  },
+  {
+   "idx": "9.4",
+   "kind": "specific",
+   "content": "keep the reader and purpose for writing in mind when choosing content, writing style, tone of voice, language choice, and text organization"
+  },
+  {
+   "idx": "9.5",
+   "kind": "specific",
+   "content": "know how and when to ask for reader feedback while writing and incorporate appropriate suggestions when revising subsequent drafts from the point of view of a reader, viewer or listener."
+  },
+  {
+   "idx": "10.2",
+   "kind": "specific",
+   "content": "choose, with increasing regularity, the prewriting, drafting, revising, editing, proofreading, and presentation strategies to aid in producing various texts"
+  },
+  {
+   "idx": "10.3",
+   "kind": "specific",
+   "content": "attempt to use various technologies for communicating to a variety of audiences for a range of purposes"
+  },
+  {
+   "idx": "10.4",
+   "kind": "specific",
+   "content": "demonstrate a commitment to crafting pieces of writing and representations"
+  },
+  {
+   "idx": "10.5",
+   "kind": "specific",
+   "content": "gather information from a variety of sources (interviews, film, CD-ROMs, texts) and integrate ideas in communication"
+  }
+ ],
+ "8/math": [
+  {
+   "idx": "N1",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of perfect square and"
+  },
+  {
+   "idx": "N2",
+   "kind": "specific",
+   "content": "Determine the approximate square root of numbers that are not perfect squares (limited to whole numbers)."
+  },
+  {
+   "idx": "N3",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of percents greater than or equal to 0%."
+  },
+  {
+   "idx": "N4",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of ratio and rate."
+  },
+  {
+   "idx": "N5",
+   "kind": "specific",
+   "content": "Solve problems that involve rates, ratios and proportional reasoning."
+  },
+  {
+   "idx": "N6",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of multiplying and dividing positive fractions and mixed numbers, concretely, pictorially and symbolically."
+  },
+  {
+   "idx": "N7",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of multiplication and division of integers, concretely, pictorially and symbolically."
+  },
+  {
+   "idx": "PR1",
+   "kind": "specific",
+   "content": "Graph and analyse two-variable linear relations."
+  },
+  {
+   "idx": "PR2",
+   "kind": "specific",
+   "content": "Model and solve problems using linear equations of the and solve problems. form:"
+  },
+  {
+   "idx": "SS1",
+   "kind": "specific",
+   "content": "Develop and apply the Pythagorean theorm to solve"
+  },
+  {
+   "idx": "SS2",
+   "kind": "specific",
+   "content": "Draw and construct nets for 3-D objects."
+  },
+  {
+   "idx": "SS3",
+   "kind": "specific",
+   "content": "Determine the surface area of: 3-D objects and 2-D shapes, and analyse • right rectangular prisms; the relationships among them. • right triangular prisms; • right cylinders to solve problems."
+  },
+  {
+   "idx": "SS4",
+   "kind": "specific",
+   "content": "Develop and apply formulas for determining the volume motion of objects and shapes. of right prisms and right cylinders."
+  },
+  {
+   "idx": "SS5",
+   "kind": "specific",
+   "content": "Draw and interpret top, front and side views of 3-D objects composed of right rectangular prisms."
+  },
+  {
+   "idx": "SS6",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of tessellation by: • explaining the properties of shapes that make tessellaing possible; • creating tessellations; • identifying tessellations in the environment."
+  },
+  {
+   "idx": "SP1",
+   "kind": "specific",
+   "content": "Critique ways in which data is presented."
+  },
+  {
+   "idx": "SP2",
+   "kind": "specific",
+   "content": "Solve problems involving the probability of independent to solve problems. events."
+  }
+ ],
+ "8/science": [
+  {
+   "idx": "209-1",
+   "kind": "specific",
+   "content": "temperature differences in water cause currents"
+  },
+  {
+   "idx": "209-4",
+   "kind": "specific",
+   "content": "Skills formation of water currents"
+  },
+  {
+   "idx": "210-11",
+   "kind": "specific",
+   "content": "Skills formation of water currents"
+  },
+  {
+   "idx": "311-10",
+   "kind": "specific",
+   "content": "Students will develop the skills • explain how waves and tides are generated"
+  },
+  {
+   "idx": "208-7",
+   "kind": "specific",
+   "content": "Knowledge - trough"
+  },
+  {
+   "idx": "209-5",
+   "kind": "specific",
+   "content": "knowledge."
+  },
+  {
+   "idx": "311-11",
+   "kind": "specific",
+   "content": "knowledge."
+  },
+  {
+   "idx": "112-3",
+   "kind": "specific",
+   "content": "damage due to waves and tides"
+  },
+  {
+   "idx": "211-2",
+   "kind": "specific",
+   "content": "to the mutual benefit of self, society, and"
+  },
+  {
+   "idx": "211-4",
+   "kind": "specific",
+   "content": "to the mutual benefit of self, society, and"
+  },
+  {
+   "idx": "311-7",
+   "kind": "specific",
+   "content": "volcanic action"
+  },
+  {
+   "idx": "110-8",
+   "kind": "specific",
+   "content": "ocean floor have improved over time"
+  },
+  {
+   "idx": "210-3",
+   "kind": "specific",
+   "content": "to investigate the ocean floor"
+  },
+  {
+   "idx": "111-6",
+   "kind": "specific",
+   "content": "components in that system"
+  },
+  {
+   "idx": "311-9",
+   "kind": "specific",
+   "content": "regional climates"
+  },
+  {
+   "idx": "311-8",
+   "kind": "specific",
+   "content": "distribution in marine and fresh water environments"
+  },
+  {
+   "idx": "210-4",
+   "kind": "specific",
+   "content": "extrapolating data"
+  },
+  {
+   "idx": "210-6",
+   "kind": "specific",
+   "content": "extrapolating data"
+  },
+  {
+   "idx": "113-2",
+   "kind": "specific",
+   "content": "technologies in the ocean"
+  },
+  {
+   "idx": "113-10",
+   "kind": "specific",
+   "content": "knowledge"
+  },
+  {
+   "idx": "311-12",
+   "kind": "specific",
+   "content": "describe their consequent effects on the environment"
+  },
+  {
+   "idx": "210-16",
+   "kind": "specific",
+   "content": "and polar icecaps"
+  },
+  {
+   "idx": "308-09",
+   "kind": "specific",
+   "content": "angle of incidence = angle of reflection"
+  },
+  {
+   "idx": "209-2",
+   "kind": "specific",
+   "content": "estimate angles of incidence and reflection"
+  },
+  {
+   "idx": "209-6",
+   "kind": "specific",
+   "content": "and safely construct an optical device using mirrors"
+  },
+  {
+   "idx": "211-1",
+   "kind": "specific",
+   "content": "and safely construct an optical device using mirrors"
+  },
+  {
+   "idx": "210-14",
+   "kind": "specific",
+   "content": "constructed optical device functions"
+  },
+  {
+   "idx": "208-5",
+   "kind": "specific",
+   "content": "on the angle of refraction of light"
+  },
+  {
+   "idx": "308-10",
+   "kind": "specific",
+   "content": "describe qualitatively how visible light is refracted"
+  },
+  {
+   "idx": "109-5",
+   "kind": "specific",
+   "content": "optical properties of the material"
+  },
+  {
+   "idx": "109-10",
+   "kind": "specific",
+   "content": "with such technologies"
+  },
+  {
+   "idx": "111-3",
+   "kind": "specific",
+   "content": "with such technologies"
+  },
+  {
+   "idx": "308-11",
+   "kind": "specific",
+   "content": "radio waves"
+  },
+  {
+   "idx": "308-12",
+   "kind": "specific",
+   "content": "ultraviolet, X-rays, microwaves, and radio waves"
+  },
+  {
+   "idx": "109-13",
+   "kind": "specific",
+   "content": "wavelength correctly"
+  },
+  {
+   "idx": "112-8",
+   "kind": "specific",
+   "content": "and in group settings"
+  },
+  {
+   "idx": "307-8",
+   "kind": "specific",
+   "content": "of matter"
+  },
+  {
+   "idx": "210-7",
+   "kind": "specific",
+   "content": "displacement"
+  },
+  {
+   "idx": "307-11",
+   "kind": "specific",
+   "content": "displacement"
+  },
+  {
+   "idx": "307-9",
+   "kind": "specific",
+   "content": "particle model of matter"
+  },
+  {
+   "idx": "307-10",
+   "kind": "specific",
+   "content": "naturally changes or is intentionally changed"
+  },
+  {
+   "idx": "208-2",
+   "kind": "specific",
+   "content": "problems involving floating, sinking, and density"
+  },
+  {
+   "idx": "208-6",
+   "kind": "specific",
+   "content": "investigate floating, sinking, and density"
+  },
+  {
+   "idx": "211-3",
+   "kind": "specific",
+   "content": "investigate floating, sinking, and density"
+  },
+  {
+   "idx": "309-2",
+   "kind": "specific",
+   "content": "unbalanced forces"
+  },
+  {
+   "idx": "210-13",
+   "kind": "specific",
+   "content": "a commercial dynamometer"
+  },
+  {
+   "idx": "309-3",
+   "kind": "specific",
+   "content": "and pressure"
+  },
+  {
+   "idx": "111-5",
+   "kind": "specific",
+   "content": "describe the science underlying hydraulic technologies"
+  },
+  {
+   "idx": "309-4",
+   "kind": "specific",
+   "content": "compressed or heated"
+  },
+  {
+   "idx": "307-6",
+   "kind": "specific",
+   "content": "compare the viscosity of various liquids"
+  },
+  {
+   "idx": "209-3",
+   "kind": "specific",
+   "content": "investigations"
+  },
+  {
+   "idx": "209-7",
+   "kind": "specific",
+   "content": "oils, for example"
+  },
+  {
+   "idx": "112-7",
+   "kind": "specific",
+   "content": "applications to fluid dynamics"
+  },
+  {
+   "idx": "210-12",
+   "kind": "specific",
+   "content": "applications to fluid dynamics"
+  },
+  {
+   "idx": "304-4",
+   "kind": "specific",
+   "content": "reproduction"
+  },
+  {
+   "idx": "304-6",
+   "kind": "specific",
+   "content": "division"
+  },
+  {
+   "idx": "304-5",
+   "kind": "specific",
+   "content": "distinguish between plant and animal cells"
+  },
+  {
+   "idx": "110-2",
+   "kind": "specific",
+   "content": "air, fire, and water with the modern cell theory"
+  },
+  {
+   "idx": "304-9",
+   "kind": "specific",
+   "content": "excretory, and nervous systems"
+  },
+  {
+   "idx": "110-5",
+   "kind": "specific",
+   "content": "should maintain and/or treat body systems"
+  },
+  {
+   "idx": "208-1",
+   "kind": "specific",
+   "content": "affect physical fitness and health"
+  },
+  {
+   "idx": "304-10",
+   "kind": "specific",
+   "content": "systems of the human body"
+  },
+  {
+   "idx": "112-10",
+   "kind": "specific",
+   "content": "health of body systems"
+  },
+  {
+   "idx": "113-8",
+   "kind": "specific",
+   "content": "disadvantages"
+  }
+ ],
+ "8/social": [
+  {
+   "idx": "8.1.1",
+   "kind": "specific",
+   "content": "Investigate how artistic and literary expression reflects rights and responsibilities of citizenship the following aspects of Canadian identity: landscape, and the origins, functions, and sources of climate, history, people-citizenship, and related power, authority, and governance. challenges and opportunities"
+  },
+  {
+   "idx": "8.2.1",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of the basic features of the similarities and differences reflected Canada’s landscape and climate in various personal, cultural, racial, and ethnic perspectives."
+  },
+  {
+   "idx": "8.2.2",
+   "kind": "specific",
+   "content": "Analyse the effects of selected geographic factors on to demonstrate an understanding Canadian identity of the interdependent relationship among individuals, societies, and the"
+  },
+  {
+   "idx": "8.2.3",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of the nature of Time, Continuity, and Change migration and its impact on post-1920 Canada"
+  },
+  {
+   "idx": "8.2.4",
+   "kind": "specific",
+   "content": "Analyse the effect of geographic features on the development of Canada and of a selected country with similar geographic features"
+  },
+  {
+   "idx": "8.3.1",
+   "kind": "specific",
+   "content": "Analyse the impact of changing technology and socio- economic conditions on differing prosperities and lifestyles in Canada in the 1920s and 1930s"
+  },
+  {
+   "idx": "8.3.2",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of Canada’s participation in WWII"
+  },
+  {
+   "idx": "8.3.3",
+   "kind": "specific",
+   "content": "Analyse the effect of WWII on Canada and its people"
+  },
+  {
+   "idx": "8.3.4",
+   "kind": "specific",
+   "content": "Evaluate Canada’s role in the world since WWII"
+  },
+  {
+   "idx": "8.3.5",
+   "kind": "specific",
+   "content": "Analyse the impact of changing technology and socio- economic conditions on Canada’s prosperity and lifestyles in the 1950s and 1960s"
+  },
+  {
+   "idx": "8.3.6",
+   "kind": "specific",
+   "content": "Compare the social and cultural trends in Canada in the 1950s, 1960s and 1970s"
+  },
+  {
+   "idx": "8.3.7",
+   "kind": "specific",
+   "content": "Analyse how globalization has affected Canada and Canadians since 1980"
+  },
+  {
+   "idx": "8.4.1",
+   "kind": "specific",
+   "content": "Take age-appropriate actions that demonstrate the rights and responsibilities of citizenship (local, national and global)"
+  },
+  {
+   "idx": "8.4.2",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of how citizenship has evolved over time"
+  },
+  {
+   "idx": "8.4.3",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of the structure and operation of government in Canada under a federal system"
+  },
+  {
+   "idx": "8.5.1",
+   "kind": "specific",
+   "content": "Portray personal understanding of Canadian identity"
+  }
+ ],
+ "9/language": [
+  {
+   "idx": "1.3",
+   "kind": "specific",
+   "content": "articulate, advocate, and support points of view, presenting viewpoints in a convincing manner"
+  },
+  {
+   "idx": "1.4",
+   "kind": "specific",
+   "content": "listen critically to assess the adequacy of the evidence speakers give to evaluate the integrity of information presented"
+  },
+  {
+   "idx": "2.2",
+   "kind": "specific",
+   "content": "adapt vocabulary, sentence structure, and rate of speech to the speaking occasion"
+  },
+  {
+   "idx": "2.3",
+   "kind": "specific",
+   "content": "give and follow instructions and respond to questions and directions of increasing complexity"
+  },
+  {
+   "idx": "2.4",
+   "kind": "specific",
+   "content": "evaluate their own and others’ uses of spoken language in a range of contexts, recognizing the effects of significant verbal and non-verbal language features"
+  },
+  {
+   "idx": "3.3",
+   "kind": "specific",
+   "content": "demonstrate an awareness of the power of spoken language to influence and manipulate, and to reveal ideas, values, and attitudes"
+  },
+  {
+   "idx": "3.4",
+   "kind": "specific",
+   "content": "demonstrate an awareness that spoken language has different conventions in different situations and cultures and use language appropriate to the situation"
+  },
+  {
+   "idx": "4.3",
+   "kind": "specific",
+   "content": "demonstrate an understanding that information texts are constructed for particular purposes"
+  },
+  {
+   "idx": "4.4",
+   "kind": "specific",
+   "content": "use cueing systems and a variety of strategies to construct meaning in reading and viewing increasingly complex print and media texts"
+  },
+  {
+   "idx": "4.5",
+   "kind": "specific",
+   "content": "articulate their own processes and strategies for reading and viewing texts of increasing complexity"
+  },
+  {
+   "idx": "5.2",
+   "kind": "specific",
+   "content": "experiment with and rely upon a range of print and non- print sources for accessing and selecting informatin"
+  },
+  {
+   "idx": "5.3",
+   "kind": "specific",
+   "content": "employ various relevant research strategies like generating questions, drafting an outline, or interviewing peers to determine what questions they would like answered by their research"
+  },
+  {
+   "idx": "6.2",
+   "kind": "specific",
+   "content": "express and support points of view about texts and about issues, themes, and situations within texts, citing appropriate evidence"
+  },
+  {
+   "idx": "6.3",
+   "kind": "specific",
+   "content": "with increasing confidence and flexibility, find evidence in texts to support personal claims and viewpoints about issues, themes and situations"
+  },
+  {
+   "idx": "7.2",
+   "kind": "specific",
+   "content": "demonstrate that print and media texts are constructed for particular purposes and particular audiences - describe how specific text and genre characteristics contribute to meaning and effect"
+  },
+  {
+   "idx": "7.3",
+   "kind": "specific",
+   "content": "respond critically to texts of increasing complexity - analyse and evaluate a text in terms of its form, structure, and content - recognize how their own ideas and perceptions are framed by what they read and view"
+  },
+  {
+   "idx": "8.2",
+   "kind": "specific",
+   "content": "identify and reflect upon strategies that are effective in helping them to learn; describe their personal growth as language learners and language users"
+  },
+  {
+   "idx": "8.3",
+   "kind": "specific",
+   "content": "use note making to reconstruct knowledge and select effective strategies approximate to the task"
+  },
+  {
+   "idx": "8.4",
+   "kind": "specific",
+   "content": "make informed choices of language to create a range of interesting effects in imaginative writing and representing"
+  },
+  {
+   "idx": "9.2",
+   "kind": "specific",
+   "content": "consider and choose writing forms that match both the writing purpose (to define, report, persuade, compare) and the reader for whom the text is intended (understand why language choice, organization, and voice used in an essay differs from that used in a media advertisement)"
+  },
+  {
+   "idx": "9.3",
+   "kind": "specific",
+   "content": "understand that ideas can be represented in more than one way and used with other forms of representing (speeches, demonstrations, plays)"
+  },
+  {
+   "idx": "9.4",
+   "kind": "specific",
+   "content": "demonstrate an awareness of the effect of context on writing and other forms of representing"
+  },
+  {
+   "idx": "9.5",
+   "kind": "specific",
+   "content": "analyse and assess responses to their writing and media productions"
+  },
+  {
+   "idx": "10.3",
+   "kind": "specific",
+   "content": "experiment with the use of technology in communicating for a range of purposes with a variety of audiences"
+  },
+  {
+   "idx": "10.4",
+   "kind": "specific",
+   "content": "demonstrate a commitment to crafting pieces of writing and representations"
+  },
+  {
+   "idx": "10.5",
+   "kind": "specific",
+   "content": "integrate information from several sources to construct and communicate meaning"
+  }
+ ],
+ "9/math": [
+  {
+   "idx": "N1",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of powers with integral"
+  },
+  {
+   "idx": "N2",
+   "kind": "specific",
+   "content": "Demonstrate an undertanding of operations on powers with integral bases (excluding base 0) and whole number exponents."
+  },
+  {
+   "idx": "N3",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of rational numbers by: • comparing and ordering rational numbers; • solving problems that involve arithmetic operations on rational numbers."
+  },
+  {
+   "idx": "N4",
+   "kind": "specific",
+   "content": "Explain and apply the order of operations, including exponents, with and without technology."
+  },
+  {
+   "idx": "N5",
+   "kind": "specific",
+   "content": "Determine the square root of positive rational numbers that are non-perfect squares."
+  },
+  {
+   "idx": "PR1",
+   "kind": "specific",
+   "content": "Generalize a pattern arising from a problem-solving"
+  },
+  {
+   "idx": "PR2",
+   "kind": "specific",
+   "content": "Graph linear relations, analyse the graph and interpolate"
+  },
+  {
+   "idx": "PR3",
+   "kind": "specific",
+   "content": "Model and solve problems using linear equations of the form: • ax = b; • x = b; a = 0; a • ax + b = c; • a + b = c, a = 0; x"
+  },
+  {
+   "idx": "PR4",
+   "kind": "specific",
+   "content": "Explain and illustrate strategies to solve single variable linear inequalities with rational coefficients within a problem-solving context."
+  },
+  {
+   "idx": "PR5",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of polynomials (limited to polynomials of degree less than or equal to 2.)"
+  },
+  {
+   "idx": "PR6",
+   "kind": "specific",
+   "content": "Model, record and explain the operations of addition and subtraction of polynomial expressions, concretely, pictorially and symbolically (limited to polynomials of degree less or equal to 2.)"
+  },
+  {
+   "idx": "PR7",
+   "kind": "specific",
+   "content": "Model, record and explain the operations of multiplication and division of polynomial expressions (limited to polynomials of degree less than or equal to 2) by monomials, concretely, pictorially and symbolically."
+  },
+  {
+   "idx": "SS1",
+   "kind": "specific",
+   "content": "Solve problems and justify the solution strategy using circle"
+  },
+  {
+   "idx": "SS2",
+   "kind": "specific",
+   "content": "Determine the surface area of composite 3-D objects to 3-D objects and 2-D shapes, and analyse solve problems. the relationships among them."
+  },
+  {
+   "idx": "SS3",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of similarity of polygons."
+  },
+  {
+   "idx": "SS4",
+   "kind": "specific",
+   "content": "Draw and interpret scale diagrams of 2-D shapes. motion of objects and shapes."
+  },
+  {
+   "idx": "SS5",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of line and rotation symmetry."
+  },
+  {
+   "idx": "SP1",
+   "kind": "specific",
+   "content": "Describe the effect of:"
+  },
+  {
+   "idx": "SP2",
+   "kind": "specific",
+   "content": "Select and defend the choice of using either a population or a sample of a population to answer a question."
+  },
+  {
+   "idx": "SP3",
+   "kind": "specific",
+   "content": "Develop and implement a project plan for the collection, display and analysis of data by: • formulating a question for investigation; • choosing a data collection method that includes social considerations; • selecting a population or a sample; • collecting the data; • displaying the collected data in an appropriate manner;"
+  },
+  {
+   "idx": "SP4",
+   "kind": "specific",
+   "content": "Demonstrate an understanding of the role of probability probabilities to represent and solve in society. problems involving uncertainty."
+  }
+ ],
+ "9/science": [
+  {
+   "idx": "305-1",
+   "kind": "specific",
+   "content": "and technology, of the relationships information and determines cellular processes"
+  },
+  {
+   "idx": "109-14",
+   "kind": "specific",
+   "content": "science and technology. chromosome properly"
+  },
+  {
+   "idx": "304-11",
+   "kind": "specific",
+   "content": "required for scientific and technological meiosis"
+  },
+  {
+   "idx": "210-2",
+   "kind": "specific",
+   "content": "for making informed decisions. graph"
+  },
+  {
+   "idx": "210-4",
+   "kind": "specific",
+   "content": "for making informed decisions. graph"
+  },
+  {
+   "idx": "210-9",
+   "kind": "specific",
+   "content": "for making informed decisions. graph"
+  },
+  {
+   "idx": "305-2",
+   "kind": "specific",
+   "content": "Students will construct representative organisms"
+  },
+  {
+   "idx": "305-3",
+   "kind": "specific",
+   "content": "dvantages and disadvantages"
+  },
+  {
+   "idx": "208-2",
+   "kind": "specific",
+   "content": "integrate, and extend their plants"
+  },
+  {
+   "idx": "211-2",
+   "kind": "specific",
+   "content": "Students will be encouraged structure of flowers"
+  },
+  {
+   "idx": "305-5",
+   "kind": "specific",
+   "content": "mutations caused by human activities"
+  },
+  {
+   "idx": "209-5",
+   "kind": "specific",
+   "content": "genetics and genetic engineering"
+  },
+  {
+   "idx": "210-8",
+   "kind": "specific",
+   "content": "genetics and genetic engineering"
+  },
+  {
+   "idx": "111-1",
+   "kind": "specific",
+   "content": "has resulted in the development of technologies"
+  },
+  {
+   "idx": "112-12",
+   "kind": "specific",
+   "content": "engineering"
+  },
+  {
+   "idx": "110-1",
+   "kind": "specific",
+   "content": "their conceptions"
+  },
+  {
+   "idx": "209-7",
+   "kind": "specific",
+   "content": "materials"
+  },
+  {
+   "idx": "307-12",
+   "kind": "specific",
+   "content": "physical properties"
+  },
+  {
+   "idx": "307-13",
+   "kind": "specific",
+   "content": "new chemical substance formed"
+  },
+  {
+   "idx": "210-16",
+   "kind": "specific",
+   "content": "that arise from investigations"
+  },
+  {
+   "idx": "110-3",
+   "kind": "specific",
+   "content": "the Bohr model"
+  },
+  {
+   "idx": "109-13",
+   "kind": "specific",
+   "content": "given the number of protons and neutrons"
+  },
+  {
+   "idx": "307-14",
+   "kind": "specific",
+   "content": "given the number of protons and neutrons"
+  },
+  {
+   "idx": "112-8",
+   "kind": "specific",
+   "content": "in a variety of individual and group settings"
+  },
+  {
+   "idx": "308-16",
+   "kind": "specific",
+   "content": "resistance"
+  },
+  {
+   "idx": "208-1",
+   "kind": "specific",
+   "content": "parallel circuits"
+  },
+  {
+   "idx": "209-3",
+   "kind": "specific",
+   "content": "voltage in series and parallel circuits"
+  },
+  {
+   "idx": "210-10",
+   "kind": "specific",
+   "content": "readings"
+  },
+  {
+   "idx": "210-7",
+   "kind": "specific",
+   "content": "collected using an ammeter and a voltmeter"
+  },
+  {
+   "idx": "210-5",
+   "kind": "specific",
+   "content": "current, and resistance in series and parallel circuits"
+  },
+  {
+   "idx": "308-17",
+   "kind": "specific",
+   "content": "switch, battery, lamp, resistor, multirange meter"
+  },
+  {
+   "idx": "308-18",
+   "kind": "specific",
+   "content": "watt as a unit of power (1 W = 1 J/s)"
+  },
+  {
+   "idx": "110-9",
+   "kind": "specific",
+   "content": "current electricity to meet similar needs"
+  },
+  {
+   "idx": "308-19",
+   "kind": "specific",
+   "content": "appliance that converts electrical energy to heat energy"
+  },
+  {
+   "idx": "308-20",
+   "kind": "specific",
+   "content": "generating station to the home"
+  },
+  {
+   "idx": "113-6",
+   "kind": "specific",
+   "content": "electrical energy production"
+  },
+  {
+   "idx": "113-9",
+   "kind": "specific",
+   "content": "electrical energy"
+  },
+  {
+   "idx": "113-13",
+   "kind": "specific",
+   "content": "electrical energy"
+  },
+  {
+   "idx": "312-4",
+   "kind": "specific",
+   "content": "asteroids"
+  },
+  {
+   "idx": "312-1",
+   "kind": "specific",
+   "content": "describe theories on the formation of the solar system"
+  },
+  {
+   "idx": "312-5",
+   "kind": "specific",
+   "content": "asteroids/meteors"
+  },
+  {
+   "idx": "110-6",
+   "kind": "specific",
+   "content": "our solar system and galaxies"
+  },
+  {
+   "idx": "210-3",
+   "kind": "specific",
+   "content": "our solar system and galaxies"
+  },
+  {
+   "idx": "112-6",
+   "kind": "specific",
+   "content": "about space"
+  },
+  {
+   "idx": "211-5",
+   "kind": "specific",
+   "content": "exploration"
+  },
+  {
+   "idx": "312-3",
+   "kind": "specific",
+   "content": "oscillating theory"
+  },
+  {
+   "idx": "312-2",
+   "kind": "specific",
+   "content": "black holes"
+  },
+  {
+   "idx": "109-3",
+   "kind": "specific",
+   "content": "knowledge of the universe"
+  },
+  {
+   "idx": "112-11",
+   "kind": "specific",
+   "content": "Canada that are associated with space exploration"
+  },
+  {
+   "idx": "109-11",
+   "kind": "specific",
+   "content": "to explore space"
+  },
+  {
+   "idx": "111-5",
+   "kind": "specific",
+   "content": "to explore space"
+  }
+ ],
+ "9/social": [
+  {
+   "idx": "Social Studies",
+   "kind": "headline",
+   "content": "Identify and demonstrate an understanding of trade and"
+  },
+  {
+   "idx": "Decisions",
+   "kind": "headline",
+   "content": "Assess the individual qualities and attributes Atlantic"
+  },
+  {
+   "idx": "SOCIAL STUDIES",
+   "kind": "headline",
+   "content": "understand the effect of the environment (sea, climate,"
+  },
+  {
+   "idx": "Atlantic Canada",
+   "kind": "headline",
+   "content": "understand the extent to which climate and seasons"
+  },
+  {
+   "idx": "Canada",
+   "kind": "headline",
+   "content": "determine the extent to which climate and seasons"
+  },
+  {
+   "idx": "Economics and Trade",
+   "kind": "headline",
+   "content": "Examine and explain the contribution of the primary,"
+  },
+  {
+   "idx": "Canada in general",
+   "kind": "headline",
+   "content": "understand how technology in the workplace has"
+  },
+  {
+   "idx": "Challenges and Opportunities",
+   "kind": "headline",
+   "content": "Identify and analyse the economic challenges and"
+  }
+ ]
+}
