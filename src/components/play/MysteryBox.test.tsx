@@ -37,7 +37,7 @@ describe("MysteryBox", () => {
     const before = derivedFor(useStore.getState(), "p1").coins;
     fireEvent.click(screen.getByRole("button", { name: "Open the mystery box" }));
     expect(screen.getByRole("status")).toHaveTextContent(`${reward.kind === "coins" ? reward.coins : 0} coins!`);
-    // Trophies (Surprise! among them) and the day's quests (which change by date) add their own coins; the box adds its coins once.
+    // Trophies (Surprise! among them) and the day's quests add their own coins; the box adds its coins once.
     const events = useStore.getState().events;
     expect(derive(events.filter((e) => e.type !== "trophy" && e.type !== "quest")).coins - before).toBe(reward.kind === "coins" ? reward.coins : 0);
     expect(events.some((e) => e.type === "trophy" && e.trophy === "mystery-1")).toBe(true);
