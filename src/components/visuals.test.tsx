@@ -334,7 +334,8 @@ describe("QuestionVisual", () => {
     const { rerender } = show({ type: "array", rows: 3, cols: 4, emoji: "🍪" });
     const grid = screen.getByRole("img", { name: "3 rows of 4" });
     expect(grid.children).toHaveLength(12);
-    expect(grid.style.gridTemplateColumns).toBe("repeat(4, minmax(0, 1fr))");
+    // jsdom 31, like browsers, writes the zero as 0px.
+    expect(grid.style.gridTemplateColumns).toMatch(/^repeat\(4, minmax\(0(px)?, 1fr\)\)$/);
     expect(grid.textContent).toBe("🍪".repeat(12));
     rerender(<QuestionVisual visual={{ type: "array", rows: 2, cols: 2 }} />);
     expect(screen.getByRole("img", { name: "2 rows of 2" }).textContent).toBe("");
