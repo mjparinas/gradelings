@@ -55,6 +55,8 @@ async function family(address: string, opts: { verified?: boolean; children?: nu
     await verify.POST(req("/api/auth/verify/", "POST", { token: tokenIn(mail.text) }, cookie));
   }
   const now = Date.now();
+  // Every event lands today, so a run in the first hour after midnight doesn't count two days of practice.
+  const practisedAt = Math.max(now - 3600_000, new Date(now).setHours(0, 0, 0, 10_000));
   const ids: string[] = [];
   const profiles = Array.from({ length: opts.children ?? 1 }, (_, i) => {
     const id = `${address.split("@")[0]}-kid${i}`;
@@ -66,7 +68,7 @@ async function family(address: string, opts: { verified?: boolean; children?: nu
       id: `${id}-e${i}`,
       profileId: id,
       type: "answer",
-      t: now - 3600_000 - i * 1000,
+      t: practisedAt - i * 1000,
       unit: "2/math/tens-and-ones",
       correct: i % 4 !== 0,
       attempts: 1,
@@ -76,7 +78,7 @@ async function family(address: string, opts: { verified?: boolean; children?: nu
       difficulty: 1,
     })),
     // A broken upload (no unit) must not take reports down.
-    ...ids.map((id) => ({ id: `${id}-bad`, profileId: id, type: "answer", t: now - 5000 })),
+    ...ids.map((id) => ({ id: `${id}-bad`, profileId: id, type: "answer", t: practisedAt })),
   );
   await sync.POST(req("/api/sync/", "POST", { profiles, events }, cookie));
   const familyId = (await dbm.query<{ family_id: string }>("SELECT family_id FROM parents WHERE email = ?", [address]))[0].family_id;

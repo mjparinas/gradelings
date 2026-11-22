@@ -38,6 +38,8 @@ Before you push, run tests, lint and typecheck. For UI or flow changes, also run
 
 Whenever you add a new feature, write a test for it in the same change. When extending an existing feature, add or update tests for the behavior you changed.
 
+Tests must pass on any day and at any hour: daily quests change by date and are claimed when a session is logged, and events stamped "an hour ago" fall on yesterday just after midnight, so fix the clock or leave date-dependent rewards out of the sums.
+
 - **Playwright** is a dev dependency, pinned. Install the browsers once with `npx playwright install chromium webkit` (on Linux add `npx playwright install-deps`).
 - **CI** (`.github/workflows/ci.yml`) runs types, lint and the audit (one machine), unit tests (three machines, dealt out by `scripts/test-shard.mjs` using the weights in `scripts/test-weights.json`; add a heavy new test file there) and the build in parallel, then the browser tests on five machines (device layouts in two shards, and three machines that each run a few e2e scripts one after another with `scripts/ci-each.mjs`). Require the "CI passed" job in branch protection.
   - **Docs-only pull requests skip the heavy jobs:** a `What changed` job lists the pull request's files, and when they are all under `docs/` (except research JSON), `ios/`, `android/` or `*.md`, the types, unit, build and browser jobs are skipped ("CI passed" still reports). Pushes to main always run everything. `.github/workflows/cache-cleanup.yml` deletes a closed pull request's caches and, weekly, pull request caches older than 3 days.
