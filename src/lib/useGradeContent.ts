@@ -4,7 +4,7 @@ import { useEffect, useSyncExternalStore } from "react";
 import { AVAILABLE_GRADES, gradeLoadFailed, isGradeLoaded, lessonsSettled, loadGrade, loadGrades, subscribeToContent, type ContentTarget } from "@/content";
 import type { FrameworkId, GradeId } from "@/content/types";
 import { retryDownloads } from "./blockedScripts";
-import { cacheLoadedScripts } from "./offline";
+import { cacheLoadedScripts, clearStaleBuildReloadFlag, isStaleBuildError, reloadForNewBuild } from "./offline";
 
 export type GradeStatus = "ready" | "loading" | "failed";
 
@@ -22,6 +22,14 @@ function statusOf(targets: ContentTarget[]): GradeStatus {
   return targets.some((t) => gradeLoadFailed(t.grade, t.framework)) ? "failed" : "loading";
 }
 
+function loadOrRecover(targets: ContentTarget[]) {
+  return loadGrades(targets).catch((err: unknown) => {
+    // A deploy mid-session (or a Turbopack dynamic-import race) leaves the runtime
+    // unable to instantiate grade chunks. Retrying the import cannot help; reload.
+    if (isStaleBuildError(err) && reloadForNewBuild()) return;
+  });
+}
+
 /**
  * Loads these grades' content (once) and reports when it's ready. A grade that
  * fails (usually offline before it was ever downloaded, or a file blocked by a school filter) reports "failed";
@@ -35,11 +43,14 @@ export function useGradeContent(targets: ContentTarget[]): { status: GradeStatus
     () => "loading" as const,
   );
   // After a file came back as a web page, only a fresh page load fetches it again (src/lib/blockedScripts.ts).
-  const retry = () => retryDownloads(() => void loadGrades(decode(key)).catch(() => {}));
+  const retry = () => retryDownloads(() => void loadOrRecover(decode(key)));
   useEffect(() => {
     if (!key) return;
-    void loadGrades(decode(key)).catch(() => {});
+    void loadOrRecover(decode(key));
   }, [key]);
+  useEffect(() => {
+    if (status === "ready") clearStaleBuildReloadFlag();
+  }, [status]);
   return { status, retry };
 }
 

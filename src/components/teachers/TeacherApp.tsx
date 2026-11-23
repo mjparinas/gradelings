@@ -16,6 +16,7 @@ import { classSignInHref } from "@/lib/playLink";
 import { classCsv } from "@/lib/classCsv";
 import { countryOf } from "@/lib/country";
 import { gradeLabel } from "@/lib/gradeLabel";
+import { isStaleBuildError, reloadForNewBuild } from "@/lib/offline";
 import { levelInfo } from "@/lib/proficiency";
 import { go, useRoute } from "@/lib/router";
 import { sayFor } from "@/lib/say";
@@ -1416,7 +1417,11 @@ function ClassPage({ id, tab, preselect, welcome, account, onBack }: { id: strin
           setNow(Date.now());
           setLoadedAt(Date.now());
         })
-        .catch((e: Error) => setErr(e.message)),
+        .catch((e: Error) => {
+          // Same deploy-skew recovery as the kids' app (dynamic grade import).
+          if (isStaleBuildError(e) && reloadForNewBuild()) return;
+          setErr(e.message);
+        }),
     [id],
   );
   useEffect(() => {
