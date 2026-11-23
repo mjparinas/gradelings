@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { replay, warmConfetti } from "@/lib/juice";
 import { migrateLegacyCaches, migrateLegacyStorage } from "@/lib/legacyStorage";
-import { cacheLoadedScripts } from "@/lib/offline";
+import { cacheLoadedScripts, onServiceWorkerControllerChange, watchStaleBuildErrors } from "@/lib/offline";
 import { sounds } from "@/lib/sound";
 
 // Before any component reads what is saved on the device: the product used to be called GradeMap, and the
@@ -18,13 +18,18 @@ export function AppEffects() {
 
   useEffect(() => {
     if (process.env.NODE_ENV !== "production" || !("serviceWorker" in navigator)) return;
+    // True when this tab was already controlled before we register. A later
+    // controllerchange then means a new deploy's worker took over mid-session.
+    const hadController = !!navigator.serviceWorker.controller;
     const register = () =>
-      navigator.serviceWorker.register("/sw.js").catch(() => {
+      navigator.serviceWorker.register("/sw.js", { updateViaCache: "none" }).catch(() => {
         // Offline support is a bonus; the site works without it.
       });
     // On a first visit, lessons load before the worker takes control; hand them over once it does.
-    navigator.serviceWorker.addEventListener("controllerchange", cacheLoadedScripts);
+    // After an update, reload so the page never mixes two deploys' Turbopack chunks.
+    navigator.serviceWorker.addEventListener("controllerchange", () => onServiceWorkerControllerChange(hadController));
     cacheLoadedScripts();
+    watchStaleBuildErrors();
     if (isApp(window.location.pathname)) {
       register();
       return;

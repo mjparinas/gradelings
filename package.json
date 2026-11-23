@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "node scripts/fetch-piper.mjs --optional && node scripts/fetch-whisper.mjs && next dev",
     "build": "next build && node scripts/csp-postbuild.mjs",
-    "prebuild": "node scripts/fetch-piper.mjs && node scripts/fetch-whisper.mjs",
+    "prebuild": "node scripts/stamp-sw.mjs && node scripts/fetch-piper.mjs && node scripts/fetch-whisper.mjs",
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
