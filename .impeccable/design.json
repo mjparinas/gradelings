@@ -1,0 +1,296 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-24T22:41:54Z",
+  "title": "Design System: Gradelings",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Notebook Paper",
+        "canonical": "#fffaf1",
+        "tonalRamp": ["#3d3428", "#6b5c4a", "#9a8870", "#c4b49a", "#e6d9c4", "#f5ead8", "#fffaf1", "#fffdf8"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Midnight Slate",
+        "canonical": "#253047",
+        "tonalRamp": ["#0f172a", "#1a2438", "#253047", "#3d4a63", "#5b6680", "#8b93a8", "#c5cad6", "#e8eaef"]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Soft Slate",
+        "canonical": "#5b6680",
+        "tonalRamp": ["#1a2438", "#2b3447", "#3d4a63", "#5b6680", "#7c869a", "#a0a8b8", "#cdd2dc", "#eef0f4"]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Paper Line",
+        "canonical": "#e6e1d6",
+        "tonalRamp": ["#8a8478", "#a9a296", "#c4bdb0", "#d5cfc3", "#e6e1d6", "#efebe3", "#f7f4ee", "#fcfaf6"]
+      },
+      "help": {
+        "role": "primary",
+        "displayName": "Sky Help Blue",
+        "canonical": "#4f8ef7",
+        "tonalRamp": ["#1a3d8f", "#2f6fd6", "#4f8ef7", "#6ba3f9", "#8fbafb", "#b3d0fc", "#e6f0ff", "#f3f8ff"]
+      },
+      "help-dark": {
+        "role": "primary",
+        "displayName": "Sky Help Blue Dark",
+        "canonical": "#2f6fd6",
+        "tonalRamp": ["#152e6b", "#1f4fa8", "#2f6fd6", "#4f8ef7", "#6ba3f9", "#9ec4fb", "#d0e4ff", "#eef5ff"]
+      },
+      "help-soft": {
+        "role": "primary",
+        "displayName": "Sky Help Soft",
+        "canonical": "#e6f0ff",
+        "tonalRamp": ["#2f6fd6", "#4f8ef7", "#8fbafb", "#b3d0fc", "#cfe0ff", "#e6f0ff", "#f3f8ff", "#fafcff"]
+      },
+      "good": {
+        "role": "secondary",
+        "displayName": "Sprout Green",
+        "canonical": "#22b573",
+        "tonalRamp": ["#0a3d26", "#0f6b41", "#16925f", "#22b573", "#4fc98d", "#8fdfb5", "#e3f9ee", "#f3fcf7"]
+      },
+      "good-dark": {
+        "role": "secondary",
+        "displayName": "Sprout Green Dark",
+        "canonical": "#0f6b41",
+        "tonalRamp": ["#062616", "#0a3d26", "#0f6b41", "#16925f", "#22b573", "#5dcea0", "#b8ebcf", "#e3f9ee"]
+      },
+      "good-soft": {
+        "role": "secondary",
+        "displayName": "Sprout Soft",
+        "canonical": "#e3f9ee",
+        "tonalRamp": ["#0f6b41", "#22b573", "#4fc98d", "#8fdfb5", "#b8ebcf", "#e3f9ee", "#f3fcf7", "#fafefc"]
+      },
+      "nudge": {
+        "role": "secondary",
+        "displayName": "Gentle Nudge Orange",
+        "canonical": "#ff9f43",
+        "tonalRamp": ["#7a3a08", "#b45309", "#e57a12", "#ff9f43", "#ffb56e", "#ffd0a0", "#fff1e0", "#fff8f0"]
+      },
+      "nudge-dark": {
+        "role": "secondary",
+        "displayName": "Nudge Dark",
+        "canonical": "#b45309",
+        "tonalRamp": ["#5c2c06", "#7a3a08", "#b45309", "#e57a12", "#ff9f43", "#ffb56e", "#ffe0bd", "#fff1e0"]
+      },
+      "nudge-soft": {
+        "role": "secondary",
+        "displayName": "Nudge Soft",
+        "canonical": "#fff1e0",
+        "tonalRamp": ["#b45309", "#ff9f43", "#ffb56e", "#ffd0a0", "#ffe4c4", "#fff1e0", "#fff8f0", "#fffcf8"]
+      },
+      "star": {
+        "role": "tertiary",
+        "displayName": "Trophy Gold",
+        "canonical": "#ffc233",
+        "tonalRamp": ["#8a6508", "#b8820c", "#d9a312", "#ffc233", "#ffd266", "#ffe399", "#fff5d9", "#fffcf0"]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "canonical": "#ffffff",
+        "tonalRamp": ["#c5cad6", "#d8dce4", "#e8eaef", "#f1f3f6", "#f7f8fa", "#fbfbfc", "#ffffff", "#ffffff"]
+      },
+      "btn-ink": {
+        "role": "neutral",
+        "displayName": "Button Ink",
+        "canonical": "#0f172a",
+        "tonalRamp": ["#020617", "#0f172a", "#1e293b", "#334155", "#64748b", "#94a3b8", "#cbd5e1", "#f1f5f9"]
+      },
+      "wordmark-pink": {
+        "role": "tertiary",
+        "displayName": "Wordmark Pink",
+        "canonical": "#e9559a",
+        "tonalRamp": ["#7a1848", "#c43a7c", "#e9559a", "#f078b0", "#f59ac4", "#ffc2dc", "#ffe8f3", "#fff5fa"]
+      },
+      "wordmark-green": {
+        "role": "tertiary",
+        "displayName": "Wordmark Green",
+        "canonical": "#25b47e",
+        "tonalRamp": ["#0a4d35", "#16925f", "#25b47e", "#4fc99a", "#7dd9b4", "#b3ebcf", "#e2f8ee", "#f3fcf8"]
+      },
+      "wordmark-orange": {
+        "role": "tertiary",
+        "displayName": "Wordmark Orange",
+        "canonical": "#ff9636",
+        "tonalRamp": ["#8a4508", "#e57a12", "#ff9636", "#ffb06a", "#ffc998", "#ffe0c2", "#fff1e2", "#fff8f2"]
+      },
+      "wordmark-violet": {
+        "role": "tertiary",
+        "displayName": "Wordmark Violet",
+        "canonical": "#8b5cf6",
+        "tonalRamp": ["#3b1d8a", "#6d28d9", "#8b5cf6", "#a78bfa", "#c4b5fd", "#ddd6fe", "#efeaff", "#f8f5ff"]
+      },
+      "wordmark-cyan": {
+        "role": "tertiary",
+        "displayName": "Wordmark Cyan",
+        "canonical": "#06b6d4",
+        "tonalRamp": ["#0e4f5c", "#12909e", "#06b6d4", "#22d3ee", "#67e8f9", "#a5f3fc", "#e0f7fa", "#f0fcfd"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Fredoka UI/headlines and brand moments on play and marketing."
+      },
+      "body": {
+        "displayName": "Body / Read",
+        "purpose": "Andika for continuous reading—questions, stories, long parent copy."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Fredoka semibold for buttons, chips, tabs, and short chrome labels."
+      }
+    },
+    "shadows": [
+      {
+        "name": "toy-ledge",
+        "value": "0 6px 0 var(--color-line)",
+        "purpose": "Hard colour ledge under .btn and .card on play/marketing; press shortens to 0 2px 0."
+      },
+      {
+        "name": "flat-border",
+        "value": "border: 1px solid var(--color-line)",
+        "purpose": "Parent and admin resting panels—no diffuse shadow, no ledge."
+      }
+    ],
+    "motion": [
+      {
+        "name": "jelly",
+        "value": "jelly 0.5s cubic-bezier(0.3, 1.5, 0.5, 1)",
+        "purpose": "Play-only squash-and-stretch on button release; never on admin; honour reduced motion / calm mode."
+      },
+      {
+        "name": "press",
+        "value": "transform 0.08s ease, box-shadow 0.08s ease",
+        "purpose": "Toy-ledge press: translateY(4px) and shorter ledge on .btn:active."
+      },
+      {
+        "name": "ease-pop",
+        "value": "cubic-bezier(0.2, 1.4, 0.4, 1)",
+        "purpose": "Play pop-ins and reward moments."
+      }
+    ],
+    "breakpoints": [
+      { "name": "narrow", "value": "359px" },
+      { "name": "short", "value": "500px" },
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Sky Help Blue press-down button for primary actions on play and marketing.",
+      "html": "<button class=\"ds-btn-primary\">Continue</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; font-family: var(--font-display, Fredoka, ui-rounded, system-ui, sans-serif); font-weight: 600; background: var(--color-help, #4f8ef7); color: #0f172a; border: 3px solid var(--color-help-dark, #2f6fd6); border-radius: 1rem; padding: 0.75rem 1.5rem; box-shadow: 0 6px 0 var(--color-help-dark, #2f6fd6); cursor: pointer; transition: transform 0.08s ease, box-shadow 0.08s ease; } .ds-btn-primary:hover { filter: brightness(1.03); } .ds-btn-primary:active { transform: translateY(4px) scale(1.03, 0.95); box-shadow: 0 2px 0 var(--color-help-dark, #2f6fd6); } .ds-btn-primary:focus-visible { outline: 4px solid #4f8ef7; outline-offset: 3px; }"
+    },
+    {
+      "name": "Good Button",
+      "kind": "button",
+      "refersTo": "button-good",
+      "description": "Sprout Green CTA for subscribe / affirmative trial leads.",
+      "html": "<button class=\"ds-btn-good\">Play free</button>",
+      "css": ".ds-btn-good { display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-display, Fredoka, ui-rounded, system-ui, sans-serif); font-weight: 600; background: var(--color-good, #22b573); color: #0f172a; border: 3px solid var(--color-good-dark, #0f6b41); border-radius: 1rem; padding: 0.75rem 1.5rem; box-shadow: 0 6px 0 var(--color-good-dark, #0f6b41); cursor: pointer; transition: transform 0.08s ease, box-shadow 0.08s ease; } .ds-btn-good:active { transform: translateY(4px) scale(1.03, 0.95); box-shadow: 0 2px 0 var(--color-good-dark, #0f6b41); } .ds-btn-good:focus-visible { outline: 4px solid #4f8ef7; outline-offset: 3px; }"
+    },
+    {
+      "name": "Soft Button",
+      "kind": "button",
+      "refersTo": "button-soft",
+      "description": "Secondary soft-fill button with help tint.",
+      "html": "<button class=\"ds-btn-soft\">Not now</button>",
+      "css": ".ds-btn-soft { display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-display, Fredoka, ui-rounded, system-ui, sans-serif); font-weight: 600; background: var(--color-help-soft, #e6f0ff); color: color-mix(in srgb, #2f6fd6 80%, #000); border: 3px solid color-mix(in srgb, #4f8ef7 35%, white); border-radius: 1rem; padding: 0.75rem 1.5rem; box-shadow: 0 6px 0 color-mix(in srgb, #4f8ef7 35%, white); cursor: pointer; transition: transform 0.08s ease, box-shadow 0.08s ease; } .ds-btn-soft:active { transform: translateY(4px); box-shadow: 0 2px 0 color-mix(in srgb, #4f8ef7 35%, white); } .ds-btn-soft:focus-visible { outline: 4px solid #4f8ef7; outline-offset: 3px; }"
+    },
+    {
+      "name": "Admin Button",
+      "kind": "button",
+      "refersTo": "button-admin",
+      "description": "Flat admin primary—no toy ledge, no jelly.",
+      "html": "<button class=\"ds-btn-admin\">Save</button>",
+      "css": ".ds-btn-admin { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; font-family: var(--font-display, Fredoka, ui-rounded, system-ui, sans-serif); font-weight: 700; background: #2f6fd6; color: #ffffff; border: 1px solid transparent; border-radius: 0.75rem; padding: 0.5rem 1rem; box-shadow: none; cursor: pointer; } .ds-btn-admin:hover { filter: brightness(1.05); } .ds-btn-admin:disabled { opacity: 0.5; cursor: default; } .ds-btn-admin:focus-visible { outline: 4px solid #4f8ef7; outline-offset: 3px; }"
+    },
+    {
+      "name": "Play Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "White toy-ledge card for play and marketing.",
+      "html": "<div class=\"ds-card\"><h3 class=\"ds-card-title\">Adventure</h3><p class=\"ds-card-body\">One tap starts a mix of subjects.</p></div>",
+      "css": ".ds-card { background: #ffffff; color: var(--color-ink, #253047); border: 3px solid var(--color-line, #e6e1d6); border-radius: 1.5rem; padding: 1.25rem; box-shadow: 0 6px 0 var(--color-line, #e6e1d6); } .ds-card-title { margin: 0 0 0.5rem; font-family: var(--font-display, Fredoka, ui-rounded, system-ui, sans-serif); font-weight: 700; font-size: 1.25rem; } .ds-card-body { margin: 0; font-family: var(--font-read, Andika, system-ui, sans-serif); color: var(--color-ink-soft, #5b6680); }"
+    },
+    {
+      "name": "Admin Card",
+      "kind": "card",
+      "refersTo": "card-admin",
+      "description": "Flat bordered panel for dense admin tools.",
+      "html": "<section class=\"ds-card-admin\"><h3 class=\"ds-card-admin-title\">Funnel</h3><p class=\"ds-card-admin-body\">Confirmed this week: 12</p></section>",
+      "css": ".ds-card-admin { background: #ffffff; color: var(--color-ink, #253047); border: 1px solid var(--color-line, #e6e1d6); border-radius: 1rem; padding: 1rem; box-shadow: none; } .ds-card-admin-title { margin: 0 0 0.35rem; font-family: var(--font-display, Fredoka, ui-rounded, system-ui, sans-serif); font-weight: 700; font-size: 1rem; } .ds-card-admin-body { margin: 0; font-size: 0.875rem; color: var(--color-ink-soft, #5b6680); }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Shared rounded field used on parents, teachers, and admin.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-field-label\">Email</span><input class=\"ds-input\" type=\"email\" placeholder=\"you@example.com\" /></label>",
+      "css": ".ds-field { display: flex; flex-direction: column; gap: 0.25rem; font-family: var(--font-display, Fredoka, ui-rounded, system-ui, sans-serif); } .ds-field-label { font-weight: 600; color: var(--color-ink, #253047); } .ds-input { min-height: 44px; border: 1px solid var(--color-line, #e6e1d6); border-radius: 0.75rem; background: #ffffff; color: var(--color-ink, #253047); padding: 0.5rem 0.75rem; font: inherit; } .ds-input:focus-visible { outline: 4px solid #4f8ef7; outline-offset: 3px; }"
+    },
+    {
+      "name": "Parent Tab Chip",
+      "kind": "chip",
+      "refersTo": null,
+      "description": "Selected Midnight Slate pill for parent navigation.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip ds-chip-on\">Overview</button><button class=\"ds-chip\">Reports</button></div>",
+      "css": ".ds-chips { display: flex; gap: 0.5rem; flex-wrap: wrap; } .ds-chip { min-height: 44px; border-radius: 9999px; border: 2px solid var(--color-line, #e6e1d6); background: #ffffff; color: var(--color-ink, #253047); padding: 0 1rem; font-family: var(--font-display, Fredoka, ui-rounded, system-ui, sans-serif); font-weight: 600; font-size: 0.875rem; cursor: pointer; } .ds-chip-on { border-color: #253047; background: #253047; color: #ffffff; } .ds-chip:focus-visible { outline: 4px solid #4f8ef7; outline-offset: 3px; }"
+    },
+    {
+      "name": "Wordmark",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Multicolour Gradelings wordmark for play and marketing only—not admin.",
+      "html": "<p class=\"ds-wordmark\" aria-label=\"Gradelings\"><span style=\"color:#4f8ef7\">G</span><span style=\"color:#e9559a\">r</span><span style=\"color:#25b47e\">a</span><span style=\"color:#ff9636\">d</span><span style=\"color:#8b5cf6\">e</span><span style=\"color:#06b6d4\">l</span><span style=\"color:#4f8ef7\">i</span><span style=\"color:#e9559a\">n</span><span style=\"color:#25b47e\">g</span><span style=\"color:#ff9636\">s</span></p>",
+      "css": ".ds-wordmark { margin: 0; font-family: var(--font-display, Fredoka, ui-rounded, system-ui, sans-serif); font-weight: 700; font-size: 2rem; letter-spacing: 0.02em; } .ds-wordmark span { display: inline-block; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Friendly Arcade Classroom",
+    "overview": "Gradelings shares one material kit—warm notebook paper, midnight slate ink, bright subject colours, rounded Fredoka UI type, and Andika for reading—across the product. That kit is applied at three different desks: the kids' arcade classroom (/play/), the parent's calm report desk (/parents/ and marketing), and the operator's flat console (/admin/). Same crayons; different volume.\n\nPersonality is kind, chunky, and clear. Play earns game juice (jelly, squash-and-stretch, critters, confetti). Parents get scanable trust without arcade chrome. Admin gets density and speed with flat controls—no mascots, no jelly. Never shame; never purple-SaaS generic; never sterile gray on play.\n\nVisual anti-references (confirmed): arcade chrome on /parents/ or /admin/; sterile edtech gray on /play/; purple-gradient SaaS everywhere; critters on admin.",
+    "keyCharacteristics": [
+      "One shared token kit; three surface densities (play / parents / admin)",
+      "Warm paper stage with soft pastel corner washes",
+      "Chunky press-down controls with a hard colour ledge (not soft drop shadows by default)",
+      "Jelly and critters only on play (and marketing brand moments); admin stays flat",
+      "Accessibility modes (contrast, roomy, dyslexia font, forced colours) are first-class, not afterthoughts"
+    ],
+    "rules": [
+      { "name": "The Three Desks Rule", "body": "Shared colours; different saturation of expression. Play may flood with subject colour and juice. Parents stay paper + ink + one accent. Admin prefers slate borders, compact fills, and almost no rainbow.", "section": "colors" },
+      { "name": "The Dark-on-Bright Rule", "body": "Bright fills (help, good, nudge) use near-black text (#0f172a), never white.", "section": "colors" },
+      { "name": "The Honest Accent Rule", "body": "Nudge orange is kindness, not error theatre. Don’t invent a harsh error red as a new system primary without product need.", "section": "colors" },
+      { "name": "The Read Font Rule", "body": "Continuous reading (questions, stories, long parent copy) uses Andika (font-read). Fredoka is for chrome and short labels.", "section": "typography" },
+      { "name": "The No Admin Typeface Rule", "body": "/admin/ does not get a separate “ops” font. Density changes size and spacing, not family.", "section": "typography" },
+      { "name": "The Touch Floor Rule", "body": "Interactive targets stay at least 48px for kids and 44px elsewhere; CI device scripts enforce this.", "section": "layout" },
+      { "name": "The Desk Density Rule", "body": "Play = large, few choices. Parents = scannable sections. Admin = dense tables and tools. Same tokens; different packing.", "section": "layout" },
+      { "name": "The Ledge-Not-Blur Rule", "body": "Do not use soft/diffuse drop shadows for depth. Play and marketing sit on the colour ledge; parents and admin use flat borders. Prefer dimming the page behind a dialog over inventing a shadow elevation scale.", "section": "elevation" },
+      { "name": "The Jelly Desk Rule", "body": "Jelly / squash-and-stretch belongs to /play/ (and brief marketing delight). Parents stay calm; admin stays flat. Always respect prefers-reduced-motion and calm mode.", "section": "elevation" },
+      { "name": "The Visible Edge Rule", "body": "Borders are part of the character. Don’t replace ledge + border with shadow-only cards on play/marketing.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do reuse Warm Notebook Paper, Midnight Slate, and the help/good/nudge accents before inventing new greys or purples.",
+      "Do put juice (jelly, confetti, critter idle motion) on /play/ and light brand moments on marketing only.",
+      "Do keep admin flat, dense, and critter-free while still using Fredoka/Andika and the shared palette.",
+      "Do use dark text on bright fills; keep the 4px focus ring.",
+      "Do honour calm mode, reduced motion, contrast, roomy text, and dyslexia font switches."
+    ],
+    "donts": [
+      "Don’t put arcade chrome, jelly, or mascots on /parents/ or /admin/.",
+      "Don’t make /play/ sterile, gray, or “serious SaaS.”",
+      "Don’t default to purple-to-indigo gradient themes or soft neumorphism.",
+      "Don’t use soft drop shadows for elevation—toy ledge or flat border only.",
+      "Don’t hard-code the product name; read APP_NAME from src/lib/brand.ts.",
+      "Don’t invent testimonials or treat sample quotes as real parents (see PRODUCT.md)."
+    ]
+  }
+}

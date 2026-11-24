@@ -75,4 +75,11 @@ describe("header and dynamic policies", () => {
   it("only the development policy is permissive", () => {
     expect(DEV_POLICY).toContain("'unsafe-inline'");
   });
+
+  it("lets Impeccable live mode load in development", () => {
+    expect(DEV_POLICY).toMatch(/script-src[^;]*http:\/\/localhost:8400/);
+    expect(DEV_POLICY).toMatch(/connect-src[^;]*http:\/\/localhost:8400/);
+    expect(HEADER_POLICY).not.toContain("localhost:8400");
+    expect(noncePolicy("abc")).not.toContain("localhost:8400");
+  });
 });

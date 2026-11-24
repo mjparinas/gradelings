@@ -32,11 +32,14 @@ import type { ReportDetails } from "@/lib/questionReport";
 // light and never loads the kids' store or content.
 
 const btn = "min-h-11 rounded-xl px-4 font-bold disabled:opacity-50";
+/** Flat admin primary: Help Blue fill, near-black text (Dark-on-Bright). No toy ledge. */
 const primary = `${btn} bg-[#4f8ef7] text-[#0f172a]`;
 const quiet = `${btn} border border-line bg-white`;
 const danger = `${btn} border border-[#e57a12] bg-white text-nudge-dark`;
 const field = "mt-1 min-h-11 rounded-xl border border-line bg-white px-3";
 const card = "rounded-2xl border border-line bg-white p-5";
+/** Sticky status bar: flat border only (Ledge-Not-Blur). */
+const statusBar = `${card} py-3`;
 
 const day = (t: number | null | undefined) => (t ? new Date(t).toLocaleDateString("en-CA", { year: "numeric", month: "short", day: "numeric" }) : "—");
 const when = (t: number) => new Date(t).toLocaleString("en-CA", { year: "numeric", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" });
@@ -150,12 +153,41 @@ function SignIn({ onDone }: { onDone: () => void }) {
 
 // ---------- Overview ----------
 
-function Overview({ onOpenFamily }: { onOpenFamily: (id: string) => void }) {
+function Overview({
+  onOpenFamily,
+  onToDo,
+  onInbox,
+  todo,
+  waiting,
+}: {
+  onOpenFamily: (id: string) => void;
+  onToDo: () => void;
+  onInbox: () => void;
+  todo: number | null;
+  waiting: number | null;
+}) {
+  const needs = (todo ?? 0) + (waiting ?? 0);
   return (
     <section aria-labelledby="overview-h">
       <h2 id="overview-h" className="text-2xl font-bold">
         Overview
       </h2>
+      <div className={`${card} mt-3`} aria-label="Needs you">
+        <h3 className="text-xl font-bold">Needs you</h3>
+        <p className="mt-1 font-read text-ink-soft">
+          {needs > 0
+            ? `${needs} ${needs === 1 ? "thing waits" : "things wait"} before you dig into the numbers.`
+            : "Nothing is waiting. Charts and totals are below when you want them."}
+        </p>
+        <div className="mt-3 flex flex-wrap gap-2">
+          <button type="button" className={primary} onClick={onToDo}>
+            To Do{todo ? ` (${todo})` : ""}
+          </button>
+          <button type="button" className={quiet} onClick={onInbox}>
+            Inbox{waiting ? ` (${waiting})` : ""}
+          </button>
+        </div>
+      </div>
       <Dashboard onOpenFamily={onOpenFamily} />
     </section>
   );
@@ -333,6 +365,9 @@ function Users({ flags, role, email, initialOpen = null }: { flags: FlagRow[]; r
   );
 }
 
+const DETAIL_TABS = ["Summary", "Access", "Billing", "Flags", "Danger"] as const;
+type DetailTab = (typeof DETAIL_TABS)[number];
+
 function UserDetail({ id, flags, role, email, onBack }: { id: string; flags: FlagRow[]; role: Role; email: string; onBack: () => void }) {
   const [d, setD] = useState<FamilyDetail | null>(null);
   const [loadErr, setLoadErr] = useState("");
@@ -340,12 +375,24 @@ function UserDetail({ id, flags, role, email, onBack }: { id: string; flags: Fla
   const [accessDays, setAccessDays] = useState("365");
   const [confirm, setConfirm] = useState("");
   const [deleted, setDeleted] = useState(false);
+  const [detailTab, setDetailTab] = useState<DetailTab>("Summary");
   const load = useCallback(() => {
-    call<FamilyDetail>(`/api/admin/users/?id=${encodeURIComponent(id)}`).then(setD, (e: Error) => setLoadErr(e.message));
+    call<FamilyDetail>(`/api/admin/users/?id=${encodeURIComponent(id)}`).then(
+      (row) => {
+        setD(row);
+        if (row.family.subscriptionStatus === "past_due") setDetailTab("Billing");
+      },
+      (e: Error) => setLoadErr(e.message),
+    );
   }, [id]);
   useEffect(load, [load]);
   const { act, err, ok, busy } = useAction(load);
   const run = (action: string, extra: Record<string, unknown>, done: string): Promise<boolean> => act("/api/admin/users/", "POST", { familyId: id, action, ...extra }, done);
+  const grantLifetime = (action: "grant-access" | "grant-school", done: string) => {
+    const what = action === "grant-access" ? "lifetime access" : "a lifetime school plan";
+    if (!window.confirm(`Give this family ${what}? You can remove it later from Access.`)) return;
+    void run(action, { days: null }, done);
+  };
 
   if (deleted)
     return (
@@ -366,13 +413,40 @@ function UserDetail({ id, flags, role, email, onBack }: { id: string; flags: Fla
       </section>
     );
   const f = d.family;
+  const show = (t: DetailTab) => role !== "admin" || detailTab === t;
   return (
     <section aria-labelledby="user-h" className="flex flex-col gap-4">
       <button type="button" className="self-start font-semibold underline" onClick={onBack}>
         ← All Users
       </button>
-      <div className={card}>
+      <div className={`sticky top-0 z-10 ${card}`}>
         <h2 id="user-h" className="break-all text-2xl font-bold">{d.parents.map((p) => p.email).join(", ")}</h2>
+        <p className="mt-1 font-read text-ink-soft">
+          {planText(f)}
+          {f.subscriptionStatus ? ` · ${f.subscriptionStatus}` : ""}
+          {` · ${d.parents[0]?.accountType === "teacher" ? "Teacher" : "Parent"}`}
+        </p>
+        {role === "admin" && (
+          <nav aria-label="Family sections" className="mt-3 flex flex-wrap gap-2">
+            {DETAIL_TABS.map((t) => (
+              <button
+                key={t}
+                type="button"
+                aria-current={detailTab === t ? "page" : undefined}
+                className={`${btn} ${detailTab === t ? "bg-[#0f172a] text-white" : "border border-line bg-white"}`}
+                onClick={() => setDetailTab(t)}
+              >
+                {t}
+              </button>
+            ))}
+          </nav>
+        )}
+      </div>
+
+      {show("Summary") && (
+        <>
+      <div className={card}>
+        <h3 className="text-xl font-bold">Account Snapshot</h3>
         <dl className="mt-3 grid gap-x-6 gap-y-1 sm:grid-cols-2">
           <div><dt className="inline font-semibold">Joined: </dt><dd className="inline">{day(f.createdAt)}</dd></div>
           <div><dt className="inline font-semibold">Account type: </dt><dd className="inline">{d.parents[0]?.accountType === "teacher" ? "Teacher" : "Parent"}</dd></div>
@@ -442,8 +516,10 @@ function UserDetail({ id, flags, role, email, onBack }: { id: string; flags: Fla
       <FamilySees d={d} flags={flags} />
 
       <FamilyNotes notes={d.notes} role={role} email={email} run={run} busy={busy} />
+        </>
+      )}
 
-      {role === "admin" && (
+      {role === "admin" && show("Access") && (
         <>
       <div className={card}>
         <h3 className="text-xl font-bold">Account Type</h3>
@@ -484,7 +560,7 @@ function UserDetail({ id, flags, role, email, onBack }: { id: string; flags: Fla
           <button type="button" disabled={busy} className={quiet} onClick={() => void run("grant-access", { days: Number(accessDays) }, "Access added.")}>
             Add Days
           </button>
-          <button type="button" disabled={busy} className={quiet} onClick={() => void run("grant-access", { days: null }, "Lifetime access given.")}>
+          <button type="button" disabled={busy} className={quiet} onClick={() => grantLifetime("grant-access", "Lifetime access given.")}>
             Give Lifetime Access
           </button>
           {f.accessUntil && (
@@ -498,7 +574,7 @@ function UserDetail({ id, flags, role, email, onBack }: { id: string; flags: Fla
           <button type="button" disabled={busy} className={quiet} onClick={() => void run("grant-school", { days: 365 }, "School plan added for a year.")}>
             Add A Year
           </button>
-          <button type="button" disabled={busy} className={quiet} onClick={() => void run("grant-school", { days: null }, "Lifetime school plan given.")}>
+          <button type="button" disabled={busy} className={quiet} onClick={() => grantLifetime("grant-school", "Lifetime school plan given.")}>
             Give Lifetime School Plan
           </button>
           {f.schoolUntil && (
@@ -533,11 +609,17 @@ function UserDetail({ id, flags, role, email, onBack }: { id: string; flags: Fla
           Sign Out Everywhere
         </button>
       </div>
+        </>
+      )}
 
+      {role === "admin" && show("Billing") && (
+        <>
       <FamilyBilling familyId={id} pastDue={d.family.subscriptionStatus === "past_due"} />
-
       <FamilyEmail familyId={id} parent={d.parents[0]} emails={d.emails} />
+        </>
+      )}
 
+      {role === "admin" && show("Flags") && (
       <div className={card}>
         <h3 className="text-xl font-bold">Feature Flags for This Family</h3>
         <p className="text-sm text-ink-soft">An override wins over the site-wide setting and the rollout.</p>
@@ -565,7 +647,9 @@ function UserDetail({ id, flags, role, email, onBack }: { id: string; flags: Fla
           })}
         </ul>
       </div>
+      )}
 
+      {role === "admin" && show("Danger") && (
       <div className={card}>
         <h3 className="text-xl font-bold">Delete This Account</h3>
         <p className="mt-1 font-read text-ink-soft">Cancels any subscription, then deletes the family, its children and all practice data. This can&apos;t be undone.</p>
@@ -586,10 +670,9 @@ function UserDetail({ id, flags, role, email, onBack }: { id: string; flags: Fla
           </button>
         </div>
       </div>
-        </>
       )}
       {(err || ok) && (
-        <div className={`sticky bottom-4 ${card} py-3 shadow-lg`}>
+        <div className={`sticky bottom-4 ${statusBar}`}>
           <Notice err={err} ok={ok} />
         </div>
       )}
@@ -597,7 +680,6 @@ function UserDetail({ id, flags, role, email, onBack }: { id: string; flags: Fla
   );
 }
 
-/** What the family itself sees, worked out the way their own screens do. Support staff use it to answer "why can't I see...?". */
 function FamilySees({ d, flags }: { d: FamilyDetail; flags: FlagRow[] }) {
   const s = d.sees;
   const on = flags.filter((f) => s.flags.includes(f.key));
@@ -883,6 +965,10 @@ function FlagItem({ flag, onSaved }: { flag: FlagRow; onSaved: () => void }) {
   const [rollout, setRollout] = useState(String(flag.rollout));
   const { act, err, ok, busy } = useAction(onSaved);
   const save = (enabled: boolean, r = Number(rollout)) => act("/api/admin/flags/", "PUT", { key: flag.key, enabled, rollout: r }, "Saved.");
+  const toggle = (enabled: boolean) => {
+    if (!enabled && flag.defaultOn && !window.confirm(`Turn off “${flag.label}”? It is on by default for families.`)) return;
+    void save(enabled);
+  };
   return (
     <li className="flex flex-col gap-2 py-3">
       <div className="flex items-center justify-between gap-4">
@@ -897,7 +983,7 @@ function FlagItem({ flag, onSaved }: { flag: FlagRow; onSaved: () => void }) {
           </span>
         </div>
         <label className="ml-auto flex shrink-0 cursor-pointer items-center gap-2 font-semibold">
-          <input type="checkbox" role="switch" className="peer sr-only" checked={flag.enabled} disabled={busy} onChange={(e) => void save(e.target.checked)} />
+          <input type="checkbox" role="switch" className="peer sr-only" checked={flag.enabled} disabled={busy} onChange={(e) => toggle(e.target.checked)} />
           <span
             className={`switch-track relative h-8 w-14 shrink-0 rounded-full transition-colors peer-focus-visible:ring-4 peer-focus-visible:ring-ink/40 peer-disabled:opacity-50 ${flag.enabled ? "bg-good" : "bg-ink/20"}`}
             aria-hidden="true"
@@ -923,21 +1009,46 @@ function FlagItem({ flag, onSaved }: { flag: FlagRow; onSaved: () => void }) {
   );
 }
 
+const FLAG_GROUPS: { title: string; match: (f: FlagRow) => boolean }[] = [
+  { title: "Default on", match: (f) => f.enabled && f.defaultOn },
+  { title: "Rolled out", match: (f) => f.enabled && !f.defaultOn },
+  { title: "Off", match: (f) => !f.enabled },
+];
+
 function Flags({ flags, reload }: { flags: FlagRow[] | null; reload: () => void }) {
+  const [q, setQ] = useState("");
+  const needle = q.trim().toLowerCase();
+  const filtered = flags?.filter((f) => !needle || f.label.toLowerCase().includes(needle) || f.key.toLowerCase().includes(needle) || f.description.toLowerCase().includes(needle));
   return (
     <section aria-labelledby="flags-h">
       <h2 id="flags-h" className="text-2xl font-bold">Feature Flags</h2>
       <p className="mt-1 font-read text-ink-soft">
         Switch a feature off for everyone, or roll it out to a share of families (the same families each time). Devices pick up a change the next time the app opens or comes back into view. To force a flag for one family, open them under Users.
       </p>
+      <label className="mt-3 flex max-w-md flex-col text-sm font-semibold">
+        Search flags
+        <input className={field} type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Name, key or description" />
+      </label>
       {!flags ? (
         <LoadingRows rows={6} />
       ) : (
-        <ul className={`mt-3 divide-y divide-line ${card}`}>
-          {flags.map((f) => (
-            <FlagItem key={`${f.key}:${f.enabled}:${f.rollout}`} flag={f} onSaved={reload} />
-          ))}
-        </ul>
+        <div className="mt-3 flex flex-col gap-4">
+          {FLAG_GROUPS.map(({ title, match }) => {
+            const rows = (filtered ?? []).filter(match);
+            if (!rows.length) return null;
+            return (
+              <div key={title} className={card}>
+                <h3 className="text-lg font-bold">{title}</h3>
+                <ul className="mt-1 divide-y divide-line">
+                  {rows.map((f) => (
+                    <FlagItem key={`${f.key}:${f.enabled}:${f.rollout}`} flag={f} onSaved={reload} />
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
+          {filtered && filtered.length === 0 && <p className="font-read text-ink-soft">No flags match.</p>}
+        </div>
       )}
     </section>
   );
@@ -1314,6 +1425,19 @@ function AuditLog() {
 const TABS = ["Overview", "To Do", "Users", "Funnel", "Traffic", "Emails", "Inbox", "Automations", "Codes", "Sales", "Flags", "A/B Tests", "Feedback", "Reports", "System", "Log"] as const;
 type Tab = (typeof TABS)[number];
 
+/** Five desks so the top bar is not a 16-tab wall. Deep links still use tab names. */
+const NAV_GROUPS: { label: string; tabs: readonly Tab[] }[] = [
+  { label: "Work", tabs: ["To Do", "Inbox", "Users", "Feedback", "Reports"] },
+  { label: "Numbers", tabs: ["Overview"] },
+  { label: "Reach", tabs: ["Funnel", "Traffic", "Emails", "Automations"] },
+  { label: "Money", tabs: ["Codes", "Sales"] },
+  { label: "Configure", tabs: ["Flags", "A/B Tests", "System", "Log"] },
+];
+
+function groupFor(tab: Tab): (typeof NAV_GROUPS)[number] {
+  return NAV_GROUPS.find((g) => (g.tabs as readonly string[]).includes(tab)) ?? NAV_GROUPS[0];
+}
+
 /** `?tab=` and `?family=` from a link in an alert email, read once when the panel opens. */
 function linkTarget(): { tab: Tab; family: string | null } {
   const q = new URLSearchParams(typeof window === "undefined" ? "" : window.location.search);
@@ -1410,7 +1534,15 @@ function Panel({ twoFactor, onSecurityChange, role, email }: { twoFactor: TwoFac
     go("Users", id);
   };
   const body: Record<Tab, ReactNode> = {
-    Overview: <Overview onOpenFamily={openFamily} />,
+    Overview: (
+      <Overview
+        onOpenFamily={openFamily}
+        onToDo={() => go("To Do")}
+        onInbox={() => go("Inbox")}
+        todo={todo}
+        waiting={waiting}
+      />
+    ),
     "To Do": (
       <Queue
         onOpenFamily={openFamily}
@@ -1451,11 +1583,48 @@ function Panel({ twoFactor, onSecurityChange, role, email }: { twoFactor: TwoFac
     ),
     Log: <AuditLog />,
   };
+  const activeGroup = groupFor(tab);
+  const groupTabs = role === "support" ? staffTabs : activeGroup.tabs;
+  const groups = role === "support" ? [{ label: "Work", tabs: staffTabs }] : NAV_GROUPS;
   return (
     <>
       <MaintenanceBanner state={maintenance} onChange={setMaintenance} />
+      <nav aria-label="Admin areas" className="-mx-1 mb-2 flex flex-wrap gap-2">
+        {groups.map((g) => {
+          const on = (g.tabs as readonly string[]).includes(tab) || (role === "support" && g.label === "Work");
+          const hasTodo = (g.tabs as readonly string[]).includes("To Do");
+          const hasInbox = (g.tabs as readonly string[]).includes("Inbox");
+          const waitingInGroup =
+            hasTodo && hasInbox
+              ? todo == null && waiting == null
+                ? null
+                : (todo ?? 0) + (waiting ?? 0)
+              : hasTodo
+                ? todo
+                : hasInbox
+                  ? waiting
+                  : null;
+          return (
+            <button
+              key={g.label}
+              type="button"
+              aria-current={on ? "true" : undefined}
+              onClick={() => {
+                if (on) return;
+                setFamily(null);
+                setInboxId(null);
+                go(g.tabs[0]);
+              }}
+              className={`${btn} ${on ? "bg-[#0f172a] text-white" : "border border-line bg-white"}`}
+            >
+              {g.label}
+              <TabCount n={waitingInGroup} />
+            </button>
+          );
+        })}
+      </nav>
       <nav aria-label="Admin sections" className="-mx-1 mb-5 flex flex-wrap gap-2">
-        {staffTabs.map((t) => (
+        {groupTabs.map((t) => (
           <button
             key={t}
             type="button"
@@ -1465,7 +1634,7 @@ function Panel({ twoFactor, onSecurityChange, role, email }: { twoFactor: TwoFac
               setInboxId(null);
               go(t);
             }}
-            className={`${btn} ${tab === t ? "bg-[#0f172a] text-white" : "border border-line bg-white"}`}
+            className={`${btn} ${tab === t ? "bg-[#4f8ef7] text-[#0f172a]" : "border border-line bg-white"}`}
           >
             {t}
             <TabCount n={t === "To Do" ? todo : t === "Inbox" ? waiting : null} />
