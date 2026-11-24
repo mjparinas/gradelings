@@ -1,0 +1,559 @@
+Specific Curriculum Outcomes
+          Framework
+
+        Kindergarten
+
+
+
+
+             2013
+TABLE OF CONTENTS
+
+
+
+
+Table of Contents
+Introduction....................................................................................................................................... iii
+
+Communication and Information Technology .....................................................................................1
+
+Creative Development..........................................................................................................................3
+
+Early Literacy .......................................................................................................................................4
+
+Early Numeracy ...................................................................................................................................6
+
+Health and Physical Development........................................................................................................7
+
+Physical Education ...............................................................................................................................8
+
+Science ...............................................................................................................................................10
+
+Social Studies .....................................................................................................................................11
+
+
+
+
+ii                                                                  PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: KINDERGARTEN
+                                                                                              INTRODUCTION
+
+
+
+
+Introduction
+This learning outcomes framework comprises a series of specific curriculum outcome statements
+describing what knowledge, skills, and attitudes students are expected to demonstrate as a result of
+their cumulative learning experiences in their public school education. Through an ongoing process,
+the Department of Education and Early Childhood Development is developing a learning outcomes
+framework for each area of the public school program.
+
+This document provides an overview of the learning outcomes framework organized by grade level
+and subject area. It is intended to serve as a brief survey of expected learning outcomes and as a tool to
+assist teachers in program planning. The connections among learning outcomes reflect natural affinities
+among subject areas and facilitate the design of a balanced, integrated program.
+
+In designing appropriate learning experiences that enable students to achieve the expected learning
+outcomes, teachers and administrators are expected to refer to foundation documents and related
+curriculum guides. In planning the appropriate use of information technologies as tools for learning
+and teaching, teachers and administrators should also refer to the Journey On documents, located on
+the Department of Education and Early Childhood Development website http://www.edu.pe.ca/
+journeyon/
+
+Foundation documents provide the framework for general and key-stage curriculum outcomes, outline
+the focus and key features of the curriculum, and describe contexts for learning and teaching. Curricu-
+lum guides elaborate on specific curriculum outcomes and describe other aspects of curriculum, such
+as program design and components, instructional and assessment strategies, and resources.
+
+General curriculum outcomes are statements which identify what students are expected to know and
+be able to do upon completion of study in a curriculum area. Key-stage curriculum outcomes are state-
+ments which identify what students are expected to know and be able to do by the end of Grades 3, 6,
+9, and 12 as a result of their cumulative learning experiences in a curriculum area. Specific curriculum
+outcomes are statements which identify what students are expected to know and be able to do at a
+particular grade level.
+
+The following overview of the learning outcomes framework notes general curriculum outcomes and
+specific curriculum outcomes.
+
+Elementary Program Components
+
+Elementary schools must include, for all children in each year’s program for kindergarten through
+Grades 1-6, health, language arts, mathematics, music, physical education, social studies, science, and
+visual arts. The elementary program does not include technology education as a subject area; however,
+the general and key-stage curriculum outcomes for technology education included in this booklet
+provide a framework for teachers of kindergarten through Grades 1-6 to use in integrating technology
+education within learning experiences across the curriculum.
+
+
+
+
+PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: KINDERGARTEN                                                     iii
+                                                                   COMMUNICATION AND INFORMATION TECHNOLOGY
+
+
+
+
+Communication and Information Technology
+General Technology                        Specific Curriculum Outcomes
+Outcomes                                  Computer System
+                                          Students will be expected to
+GTO A - Technology Problem Solving
+                                          B1.1 (A) login, open and close a program, open, save and manage
+Students will be expected to design,               technolgical solutions close file with a mouse
+develop, evaluate, and articulate         C1.1 (A) identify technologies that are found in everyday life
+technological solutions.
+                                          Social, Ethical, and Health
+GTO B - Technology Systems                Students will be expected to
+
+Students will be expected to operate      A2.1 (A) identify aspects of an ergonomic workstation (lighting,
+and manage technological solutions.                monitor angle, work placement, keyboard height, seat height,
+                                                   posture, etc.)
+GTO C - History and Evolution of          B2.1 (A) demonstrate proper touch keyboarding techniques (i.e., home
+        Technology                                 row, quick key strokes)
+                                          E2.1 (A) respect equipment and other students’ work
+Students will be expected to              E2.2 (A) work co-operatively at work station
+demonstrate an understanding of the       E2.3 (A) adhere to Acceptable Use Agreement for work station/network/
+history and evolution of technology                Internet
+and of its social and cultural            E2.8 (A) demonstrate caution before sending personal information over
+implications.                                      the Internet
+
+GTO D - Technology and Careers            Internet
+                                          Students will be expected to
+Students will be expected to demonstrate
+                                           A3.1 (A) demonstrate awareness of the Internet as a source of
+an understanding of current and evolving
+                                                    information
+careers and of the influence of technology
+on the nature of work.
+                                          Concept Maps
+                                          Students will be expected to
+GTO E - Technological Responsibility
+                                         A4.3 (A) categorize ideas graphically
+Students will be expected to demonstrate A4.4 (A) create links between ideas; re-link or delete links between
+an understanding of the consequences of           ideas
+their technological choices.             A4.5 (A) elaborate on ideas (i.e., adding notes, annotations, etc.)
+
+                                          Graphics
+                                          Students will be expected to
+
+CODES USED IN CONTINUUM                  A5.1 (A) create illustrations or graphics by using the various drawing
+                                                  tools
+(A) AWARENESS LEVEL                      B5.1 (A) demonstrate various object editing features (i.e., select,
+The student is exposed to the technology          unselect, resize, crop, area fill, add colour and pattern, size
+as it is being used by others.                    adjustment using the mouse or scale, various erasing
+                                                  techniques, object orientation, change font and text size,
+                                                  colour or appearanace, create text blocks, change text wrap
+                                                  selection and other text manipulation functions)
+
+
+
+
+PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: KINDERGARTEN                                                        1
+COMMUNICATION AND INFORMATION TECHNOLOGY
+
+
+
+General Technology               Word Processing
+Outcomes                         Students will be expected to
+
+                                 A7.2 (A) identify examples of desktop publishing (i.e., newspaper,
+                                          catalogue, ads, brochure)
+                                 B7.1 (A) use a grade level appropriate word processor to create and edit
+                                          written work
+                                 B7.2 (A) locate characters on a keyboard and identify functions of word
+                                          processing (i.e., cursor, insertion point, enter key, space bar,
+                                          upper case, backspace, shortcut key)
+
+                                 Multimedia
+                                 Students will be expected to
+                                 B8.1 (A) navigate multimedia resources such as slideshows, online
+                                          resources, or CD-ROM interactive educational activities
+
+                                 Database
+                                 Students will be expected to
+                                 A9.1 (A) use an existing database (CD-ROM, Microcat, Dynex,
+                                          Internet search engine) to find information (sign up for
+                                          Provincial Library Card - Abbycat)
+                                 B9.1 (A) enter data into a pre-existing database, edit data, and use
+                                          automated text
+
+                                 Telecommunications
+                                 Students will be expected to
+                                 B10.1 (A) send messages
+                                 B10.2 (A) open messages
+
+
+
+
+                                 Web Authoring
+                                 A11.1 (A) identify web page creation possibilities
+
+
+
+
+2                                           PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: KINDERGARTEN
+                                                                                   CREATIVE DEVELOPMENT
+
+
+
+
+Creative Development
+General Curriculum                   Specific Curriculum Outcomes
+Outcomes                             Creative Development
+GCO 1: Students will explore,        Students will be expected to
+challenge, develop, and express
+ideas, using the skills, language    1.1   express ideas and feelings creatively through music and movement
+techniques, and processes of the     1.2   express ideas and feelings creatively through artistic expression
+arts.                                1.3   represent and express ideas and feelings creatively through play
+
+
+
+
+PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: KINDERGARTEN                                                 3
+EARLY LITERACY
+
+
+
+
+Early Literacy
+General Curriculum                            Specific Curriculum Outcomes
+Outcomes
+GCO 1: Students will speak and listen         Oral Language - Speaking & Listening
+to explore, extend, clairfy, and reflect on   Students will be expected to
+their thoughts, ideas, feelings, and
+experiences.                                  1.1    express feelings and opinions, and describe personal experiences
+                                                     and interests (Health & Physical Development 3.1)
+                                              1.2    listen to the ideas and opinions of others
+                                              1.3    begin to ask and respond to questions, seeking help or
+                                                     information (i.e., who? what? why? where? when?)
+                                              1.4    follow and give directions in different contexts
+                                              1.5    participate in conversation and in small- and whole-group
+                                                     discussion
+                                              1.6    begin to use gestures and tone to convey meaning
+                                              1.7    engage in simple oral presentations and respond to oral
+                                                     presentations
+                                              1.8    demonstrate that they are becoming aware of social
+                                                     conventions in group work and cooperative play
+                                              1.9    develop the concepts/vocabulary of feelings and an awareness
+                                                     that some vocabulary choices can hurt people
+
+                                              Oral Language - Phonological Awareness
+                                              Students will be expected to
+
+                                              2.1    identify how many words are in a spoken sentence
+                                              2.2    begin to segment and blend words into syllables
+                                              2.3    recognize and produce rhyming words in oral language
+                                              2.4    recognize beginning and final phonemes (sounds) in oral
+                                                     language
+
+                                              Reading and Viewing
+                                              Students will be expected to
+GCO 4: Students will be expected to           3.1    regard reading/viewing as sources of interest, enjoyment, and
+select, read, and view with understanding            information
+a range of literature, information, media,    3.2    understand basic concepts of print including directionality,
+and visual texts.                                    word, space, letter, and sound
+                                              3.3    engage in reading or reading-like behaviour as they experience a
+                                                     variety of literature
+                                              3.4    use picture cues and prior knowledge to make sense of
+                                                     unfamiliar text
+
+
+
+
+4                                                   PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: KINDERGARTEN
+                                                                                                    EARLY LITERACY
+
+
+
+General Curriculum                        Specific Curriculum Outcomes
+Outcomes                                  Students will be expected to
+
+                                          3.5    use knowledge of oral language to make sense of unfamiliar text
+                                          3.6    begin to use knowledge of sound/letter relationships to problem-
+                                                 solve unknown words
+                                          3.7    begin to match one-to-one spoken to printed word
+                                          3.8    begin to use some sight words, environmental print, and words
+                                                 that have personal significance to make sense of unfamiliar text
+                                          3.9    name most of the letters of the alphabet in context
+                                          3.10   respond personally to texts in a variety of ways to demonstrate
+                                                 comprehension
+                                          3.11   develop an awareness of different types of text
+                                          3.12   begin to ask questions about a text
+                                          3.13   recognize some basic components of text such as author, illustrator,
+                                                 and title
+
+                                          Writing and Representing
+                                          Students will be expected to
+
+                                          4.1  understand that print (illustration/symbols) carries a message
+                                          4.2  begin to demonstrate an awareness of audience and purpose
+                                          4.3  write simple messages
+                                          4.4  begin to develop an awareness of editing strategies
+                                          4.5  develop the concept of directionality
+GCO 8: Students will be expected          4.6  develop one-to-one correspondence between spoken and written
+to use writing and other forms of              words
+representation to explore, clarify, and   4.7 understand that letters can be written in upper and lower case
+reflect on their thoughts, feelings,           (often use them indiscriminately)
+experiences, and learnings; and to use    4.8 use letters to represent the predominant sounds in words
+their imaginations                        4.9 begin to use some sight words, environmental print, and words that
+                                               have personal significance to support their writing
+                                          4.10 experiment with punctuation
+                                          4.11 begin to use spaces between words
+
+
+
+
+PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: KINDERGARTEN                                                          5
+EARLY NUMERACY
+
+
+
+
+Early Numeracy
+General Curriculum                      Specific Curriculum Outcomes
+Outcomes
+GCO: Develop number sense.              Number Sense
+                                        Students will be expected to
+
+                                        1.1   count in a variety of ways
+                                        1.2   explore a variety of physical representations of numbers 1 to 10
+                                        1.3   count to determine the number in a group (0 to 10)
+                                        1.4   create sets of a given number (0 to 10)
+                                        1.5   show a given number as two parts concretely and name the two
+                                              parts (2 to 10)
+                                        1.6   determine which group has more, which group has less, or which
+                                              are equivalent
+                                        1.7   use symbols to represent numbers in a variety of meaningful
+                                              contexts
+
+                                        Patterns
+                                        Students will be expected to
+
+                                        2.1   demonstrate an understanding of repeating patterns (two or three
+GCO: Use patterns to describe the             elements) by identifying, describing, copying, extending, and
+world and solve problems.                     creating patterns
+
+                                        Measurement
+                                        Students will be expected to
+GCO: Use direct and indirect
+measure to solve problems.              3.1   compare two objects based on a single attribute, such as length
+                                              (height), mass (weight), and volume (capacity)
+
+GCO: Describe the characteristics of    Geometry
+3-D objects and 2-D shapes, and         Students will be expected to
+analyse the relationships among them.
+                                        4.1   sort 3-D objects using a single attribute
+                                        4.2   build and describe 3-D objects
+
+
+
+
+6                                                PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: KINDERGARTEN
+                                                                             HEALTH AND PHYSICAL DEVELOPMENT
+
+
+
+
+Health and Physical Development
+General Curriculum                      Specific Curriculum Outcomes
+Outcomes
+
+GCO: Students will make responsible     Physical Development
+and informed choices to maintain        Students will be expected to
+health and to promote safety for self
+and others.                             1.1   develop control of large muscles *
+                                        1.2   develop control of small muscles *
+                                        1.3   develop spatial sense, including position-in-space, and the
+                                              language associated with it **
+
+                                        Health and Well-Being
+                                        Students will be expected to
+
+                                        2.1   explore and recognize the benefits of healthy food choices
+                                        2.2   practise and discuss positive hygiene and health care habits
+                                        2.3   participate in and explore the benefits of physical activity
+                                        2.4   recognize and discuss safe and unsafe situations
+                                        2.5   apply basic safety rules
+
+                                        Personal Development
+                                        Students will be expected to
+GCO: Students will develop
+effective interpersonal skills that     3.1   understand that feelings and emotions are expressed in words,
+demonstrate responsibility, respect,          actions, and facial/body expressions
+and caring in order to establish and    3.2   demonstrate curiosity and interest in learning
+maintain healthy interactions.          3.3   engage in and complete activities independently; and seek
+                                              assistance as necessary
+
+                                        Notes:
+                                        *     The Physical Education Curriculum: Grades K-6, (p.32)
+                                              Developmental Progression of Movement Skills, indicates:
+                                              “Progressing towards control” for both Gross and Fine Motor
+                                              Movement.”
+
+                                        **    The Physical Education Curriculum goals for K-6 students are
+                                              expected to
+                                              • explore and develop an understanding of skills, tactics, and
+                                                  strategies in a wide variety of movement activities;
+                                              • question, reflect, and make decisions during authentic
+                                                  learning experiences.
+
+
+
+
+PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: KINDERGARTEN                                                       7
+PHYSICAL EDUCATION
+
+
+
+
+Physical Education
+Please note: The three goals, Active Living, Skilful Movement, and Relationships will
+be referred throughout this section as GCO 1, GCO 2, and GCO 3
+GCO 1: Active Living                    GCO 2: Skilful Movement                     GCO 3: Relationships
+Enjoy and engage in healthy levels of   Enhance quality of movement by              Balance self through safe and
+participation in movement activities    understanding, developing, and              respectful personal, social, cultural,
+to support lifelong active living in    transferring movement concepts,             and environmental interactions in a
+the context of self, family, and        skills, tactics, and strategies to a wide   wide variety of movement activites.
+community.                              variety of movement activities.
+
+General Curriculum                       Specific Curriculum Outcomes
+Outcomes
+GCO 1                                    Active Living
+                                         Students will be expected to
+
+                                         K.1    Fitness
+                                                Participate in a variety of moderate to vigorous movement activities
+                                                for short periods of time to increase heart and respiration rates,
+GCO 2                                           flexibility, muscular endurance, and muscular strength
+
+                                         Skilful Movement
+                                         K.2 Locomotor Movement
+                                               Explore and practise ways to move the body through space,
+                                               including at
+                                               • a progressing-towards-control level of skill when
+                                                   - walking
+                                                   - running
+                                                   - jumping forward and sideways
+                                               • an exploration level when
+                                                   - hopping (body moves on one foot as in right foot to right
+                                                       foot)
+                                                   - skipping (combines a step and a hop)
+                                                   - leaping (body “takes off” from one foot, propels through
+                                                       air for distance, then lands on the opposite foot)
+                                                   - sliding (one foot steps and the other moves to meet the
+                                                       first foot, “step-close”)
+                                                   - galloping (one foot steps, body propels upward, other
+NOTE: Kindergarten students might                      foot moves to meet the first foot)
+attempt to roll when they are exploring
+movement, although rolling is not part K.3      Non-Locomotor Movement
+of the kindergarten curriculum. Roll-           Explore and practise ways to move the body in personal space at
+ing is a safety skill that supports future      • a progressing-towards-control level of skills when
+participation in movement activities.              - balancing
+Descriptors of how to roll safely are pro-         - jumping and landing (on the spot)
+vided here as they appear in the Grade 2
+and Grade 3 curricula.
+
+
+
+
+8                                                  PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: KINDERGARTEN
+                                                                                            PHYSICAL EDUCATION
+
+
+
+General Curriculum                      Specific Curriculum Outcomes
+Outcomes                                Students will be expected to
+
+GCO 2                                   K.4   Manipulative Skills
+                                              Explore and practise ways to send and receive objects at
+                                              • an exploration level when
+                                                 - throwing (rolling)
+                                                 - catching (trapping, gathering)
+                                                 - kicking
+
+GCO 1, GCO 2, GCO 3                     Active Living, Skilful Movements, Relationships
+                                        Students will be expected to
+
+                                        K.5   Movement Variables
+                                              Vary, with guidance, the movement of the body through changes in
+                                              • space (personal space, general space, levels, directions, and path-
+                                                  ways)
+                                              • effort (time and speed)
+                                              • relationships (body parts and shapes)
+
+                                        K.6   Rhythmical Movement
+                                              Explore and perform rhythmical movement to different auditory
+                                              events (e.g., beat of a drum, clapping, music) and rhythms (e.g.,
+                                              quick, slow), using a variety of locomotor movements including
+                                              walking, running, balancing, jumping, galloping, hopping, and
+GCO 1, GCO 3                                  skipping.
+(Prince Edward Island Physical          Active Living, Relationships
+Education Safety Guidelines document)   Students will be expected to
+
+                                        K.7   Relationships
+                                              Use respectful behaviours and safe practices while participating in
+                                              co-operative games and physical movement activities
+
+
+
+
+PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: KINDERGARTEN                                                          9
+SCIENCE
+
+
+
+Science
+General Curriculum   Specific Curriculum Outcomes
+Outcomes
+
+GCO 1:               Exploring the World Using Our Senses
+                     Students will be expected to
+
+                     1.1    become aware of the five senses
+                     1.2    develop and use vocabulary associated with the five senses
+
+
+
+
+10                         PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: KINDERGARTEN
+                                                                                                     SOCIAL STUDIES
+
+
+
+
+Social Studies
+General Curriculum                       Specific Curriculum Outcomes
+Outcomes
+Cutlure and Diversity                    I Am Unique
+                                         Students will be expected to
+GCO : Students will be expected to
+demonstrate an understanding of          1.1   recognize and discuss personal interests, characteristics, and
+culture, diversity, and world view,            preferences that make them unique and special
+recognizing the similarities and         1.2   begin to develop an awareness of needs and wants that are
+differences reflected in various               common to all children
+personal, cultural, racial, and ethnic   1.3   demonstrate that cooperation is an important part of being a
+perpectives.                                   member of a group
+
+
+                                         Family
+                                         Students will be expected to
+People, Places, and Environment
+                                         2.1   identify and describe their family
+GCO: Students will be expected to
+                                         2.2   recognize that families have varied traditions, rituals, and
+demonstrate an understanding of the
+                                               celebrations
+interactions among people, places,
+and the environment.
+                                         Community
+                                         Students will be expected to
+
+                                         3.1   begin to develop an awareness of their community
+                                         3.2   begin to develop an awareness of the connection between their
+                                               community and other communities
+                                         3.3   begin to develop an awareness of maps
+
+
+
+
+PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: KINDERGARTEN                                                         11
+

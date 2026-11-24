@@ -1,0 +1,1175 @@
+Specific Curriculum Outcomes
+          Framework
+
+          Grade 1
+
+
+
+
+             2013
+TABLE OF CONTENTS
+
+
+
+
+Table of Contents
+Introduction....................................................................................................................................... iii
+
+Communication and Information Technology ...................................................................................1
+
+English Language Arts ..........................................................................................................................3
+
+Health ................................................................................................................................................10
+
+Mathematics ......................................................................................................................................12
+
+Music .................................................................................................................................................14
+
+Physical Education .............................................................................................................................15
+
+Science ...............................................................................................................................................18
+
+Social Studies .....................................................................................................................................19
+
+Visual Arts..........................................................................................................................................20
+
+
+
+
+ii                                                                        PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: GRADE 1
+                                                                                              INTRODUCTION
+
+
+
+
+Introduction
+This learning outcomes framework comprises a series of specific curriculum outcome statements
+describing what knowledge, skills, and attitudes students are expected to demonstrate as a result of
+their cumulative learning experiences in their public school education. Through an ongoing process,
+the Department of Education and Early Childhood Development is developing a learning outcomes
+framework for each area of the public school program.
+
+This document provides an overview of the learning outcomes framework organized by grade level and
+subject area. It is intended to serve as a brief survey of expected learning outcomes and as a tool to as-
+sist teachers in program planning. The connections among learning outcomes reflect natural affinities
+among subject areas and facilitate the design of a balanced, integrated program.
+
+In designing appropriate learning experiences that enable students to achieve the expected learning
+outcomes, teachers and administrators are expected to refer to foundation documents and related
+curriculum guides. In planning the appropriate use of information technologies as tools for learning
+and teaching, teachers and administrators should also refer to the Journey On documents, located on
+the Department of Education and Early Childhood Development website http://www.edu.pe.ca/
+journeyon/
+
+Foundation documents provide the framework for general and key-stage curriculum outcomes, outline
+the focus and key features of the curriculum, and describe contexts for learning and teaching. Curricu-
+lum guides elaborate on specific curriculum outcomes and describe other aspects of curriculum, such
+as program design and components, instructional and assessment strategies, and resources.
+
+General curriculum outcomes are statements which identify what students are expected to know and
+be able to do upon completion of study in a curriculum area. Key-stage curriculum outcomes are state-
+ments which identify what students are expected to know and be able to do by the end of Grades 3, 6,
+9, and 12 as a result of their cumulative learning experiences in a curriculum area. Specific curriculum
+outcomes are statements which identify what students are expected to know and be able to do at a
+particular grade level.
+
+The following overview of the learning outcomes framework notes general curriculum outcomes and
+specific curriculum outcomes.
+
+Elementary Program Components
+
+Elementary schools must include, for all children in each year’s program for kindergarten through
+Grades 1-6, health, language arts, mathematics, music, physical education, social studies, science, and
+visual arts. The elementary program does not include technology education as a subject area; however,
+the general and key-stage curriculum outcomes for technology education included in this booklet
+provide a framework for teachers of kindergarten through Grades 1-6 to use in integrating technology
+education within learning experiences across the curriculum.
+
+
+
+
+PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: GRADE 1                                                          iii
+                                                                     COMMUNICATION AND INFORMATION TECHNOLOGY
+
+
+
+
+Communication and Information Technology
+General Technology                         Specific Curriculum Outcomes
+Outcomes                                   Computer System
+GTO A - Technology Problem Solving         Students will be expected to
+                                           B1.1 (A) login, open, and close a program, open, save and manage
+Students will be expected to design,                 technolgical solutions; close a file with a mouse
+develop, evaluation, and articulate        B1.13 (A) identify computer viruses, how they are transmitted, and
+technological solutions.                             how anti-virus software is used to protect or clean a
+                                                     computer
+GTO B - Technology Systems                 B1.14 (A) identify SPAM, pop-up ads, spyware, and other invasive
+                                                     software coding
+Students will be expected to operate       C1.1 (A) identify technologies that are found in everyday life
+and manage technological solutions.
+                                           Social, Ethical, and Health
+                                           Students will be expected to
+GTO C - History and Evolution of
+        Technology                         A2.1 (A) identify aspects of an ergonomic workstation (lighting,
+                                                    monitor angle, work placement, keyboard height, seat
+Students will be expected to                        height, posture, etc.)
+demonstrate an understanding of the        B2.1 (A) demonstrate proper touch keyboarding techniques (i.e.,
+history and evolution of technology                 home row, quick key strokes, proper reaches)
+and of its social and cultural             E2.1 (A) respect equipment and other student’s work
+implications.                              E2.2 (A) work cooperatively at work station
+                                           E2.3 (A) adhere to Acceptable Use Agreement for work stations/
+GTO D - Technology and Careers                      network/Internet
+Students will be expected to               E2.8 (A) demonstrate caution before sending personal
+demonstrate an understanding of                     information over the Internet
+current and evolving careers and of the
+influence of technology on the nature      Internet
+of work.                                   Students will be expected to
+                                           A3.1 (A) demonstrate awareness of the Internet as a source of
+                                                    information
+GTO E - Technolgical Responsibility        A3.2 (A) use various tools (search engines and directories) and
+                                                    strategies necessary to carry out research
+Students will be expected to
+demonstrate an understanding of the        Concept Maps
+consequences of their technological        Students will be expected to
+choices.
+                                           A4.3 (A) categorize ideas graphically
+                                           A4.4 (A) create links between ideas; re-link or delete links between ideas
+CODES USED IN CONTINUUM
+                                           A4.5 (A) elaborate on ideas (i.e., adding notes, annotations, etc.)
+(A) AWARENESS LEVEL
+The student is exposed to the technology   Graphics
+as it is being used by others.             Students will be expected to
+                                           A5.1 (A) create illustrations or graphics by using the various
+                                                    drawing tools
+                                           B5.1 (A) demonstrate various object editing features (i.e., select,
+                                                    unselect, resize, crop, area fill, add colour and pattern,
+                                                    size adjustment using the mouse or scale, various erasing
+                                                    techniques, object orientation, change font and text size,
+                                                    colour or appearance, create text blocks, change text
+                                                    wrap selection and other text manipulation functions)
+   PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: GRADE 1                                                            1
+COMMUNICATION AND INFORMATION TECHNOLOGY
+
+
+
+    General Technology                 Specific Curriculum Outcomes
+    Outcomes
+                                       Word Processing
+                                       Students will be expected to
+                                       A7.3 (A) identify examples of desktop publishing (i.e., newspaper,
+                                                catalogue, ads, brochure)
+                                       B7.1 (A) use a grade level appropriate word processor to create and
+                                                edit written work
+                                       B7.2 (A) locate characters on a keyboard and identify functions of
+                                                word processing (i.e., cursor, insertion point, enter key,
+                                                space bar, upper case, backspace, shortcut key)
+
+                                       Multimedia
+                                       Students will be expected to
+                                       B8.1 (A) navigate multimedia resources such as slide shows, on-line
+                                                resources, or CD-ROM interactive educational activities
+
+                                       Database
+                                       Students will be expected to
+                                       A9.1 (A) use an exiting database (CD-ROM, MicroCat, Dynex,
+                                                Internet search engine) to find information (sign up for
+                                                Provincial Library Card - Abbycat)
+                                       B9.1 (A) enter data into a pre-existing database, edit data, and use
+                                                automated text
+
+                                       Telecommunications
+                                       Email:
+                                       Students will be expected to
+                                       B10.1 (A) send messages
+                                       B10.2 (A) open messages
+
+                                       Web Authoring
+                                       Students will be expected to
+                                       A11.1 (A) identify web page creation possibilities
+
+
+
+
+2                                             PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: GRADE 1
+                                                                                         ENGLISH LANGUAGE ARTS
+
+
+
+
+English Language Arts
+General Curriculum                         Specific Curriculum Outcomes
+Outcomes                                   Students will be expected to
+Speaking and Listening                     (Emergent)
+                                           1.1    express feelings and give simple descriptions of past experiences
+GCO 1: Students will speak and listen      1.2    begin to ask and respond to questions, seeking information
+to explore, extend, clarify, and reflect          (i.e., who? what? why? where? when?)
+on their thoughts, ideas, feelings, and    1.3    express opinions (i.e., I like ... ; I don’t like ...)
+experiences.                               1.4    listen to the ideas and opinions of others
+
+                                           (Early)
+                                           1.1     express thoughts and feelings and describe experiences
+                                           1.2     ask and respond to questions to clarify information or gather
+                                                   further information
+                                           1.3     express opinions and give simple explanations for some of
+                                                   their opinions (I like ... because)
+                                           1.4     listen to others’ ideas and opinions
+
+GCO 2: Students will be able to            (Emergent)
+communicate information and ideas          2.1    participate in conversation and in small- and whole-group
+effectively and clearly, and to respond           discussion
+personally and critically.                 2.2    begin to use gestures and tone to convey meaning
+                                           2.3    respond to and give simple directions or instructions
+                                           2.4    engage in simple oral presentations and respond to oral
+                                                  presentations and other texts
+
+                                           (Early)
+                                           2.1     sustain one-to-one conversations and contribute to small- and
+                                                   large-group interactions
+                                           2.2     use intonation, facial expressions, and gestures to communicate
+                                                   ideas and feelings
+                                           2.3     respond to and give instructions or directions that include two
+                                                   or three components
+                                           2.4     engage in informal oral presentations and respond to a variety of
+                                                   oral presentations and other texts
+
+GCO 3: Students will interact with         (Emergent)
+sensitivity and respect, considering the   3.1    demonstrate that they are becoming aware of social conventions
+situation, audience, and purpose.                 in group work and co-operative play
+                                           3.2    develop the concepts/vocabulary of feelings and awareness that
+                                                  some vocabulary choices can hurt people
+                                           3.3    demonstrate a growing awareness that different kinds of
+                                                  language are appropriate to different situations
+                                           (Early)
+                                           3.1     demonstrate a growing awareness of social conventions such as
+                                                   turn-taking and politeness in conversation and co-operative play
+                                           3.2     recognize some examples of unfair and hurtful vocabulary, and
+                                                   begin to make vocabulary choices that affirm rather than hurt
+                                                   people
+                                           3.3     recognize that volume of voice needs to be adjusted according to
+                                                   the situation (e.g., playground, classroom)
+PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: GRADE 1                                                             3
+ENGLISH LANGUAGE ARTS
+
+
+
+General Curriculum                           Specific Curriculum Outcomes
+Outcomes                                     Students will be expected to
+
+Reading & Viewing                            (Emergent)
+                                             4.1    regard reading/viewing as sources of interest, enjoyment,
+GCO 4: Students will be expected to                 and information
+select, read, and view with understanding    4.2    understand basic concepts of print including directionality,
+a range of literature, information, media,          word, space, letter, and sound
+and visual texts.                            4.3    select, with teacher assistance, texts appropriate to their
+                                                    interests and learning needs
+                                             4.4    engage in reading or reading-like behaviour as they
+                                                    experience a variety of literature
+                                             4.5    use, with support, the various cueing systems and a variety
+                                                    of strategies to construct meaning from text
+                                                    - use meaning cues (personal experiences, context, picture
+                                                       cues) to predict, confirm/self-correct
+                                                    - use knowledge of oral language patterns (syntax) to
+                                                       predict and confirm/self-correct
+                                                    - begin to use knowledge of sound symbol relationships as
+                                                       one reading cue (e.g., initial and final consonants)
+                                                    - begin to match one-to-one spoken to printed word
+                                                    - begin to recognize some high frequency sight words
+
+                                             (Early)
+                                             4.1     regard reading/viewing as sources of interest, enjoyment,
+                                                     and information
+                                             4.2     expand their understanding of concepts of print
+                                                     - punctuation in text serves a purpose
+                                                     - upper- and lower-case letters have specific forms and
+                                                       functions (first word in sentences and proper names)
+                                             4.3     select independently, and with teacher assistance, texts
+                                                     appropriate to their interests and learning needs
+                                             4.4     use some features of written text to determine content,
+                                                     locate topics, and obtain information
+                                             4.5     use a combination of cues (semantic, syntactic,
+                                                     graphophonic, and pragmatic) to sample, predict, and
+                                                     monitor/self-correct
+                                                     - predict on the basis of what makes sense, what sounds
+                                                       right, and what the print suggests
+                                                     - make meaningful substitutions
+                                                     - attempt to self-correct predictions that interfere with
+                                                       meaning
+                                                     - begin to monitor their own reading by cross-checking
+                                                       meaning cues with cues from beginning and last letters
+                                                       of the word (i.e., Did it make sense? Did it sound right? If
+                                                       it’s tiger, would it start with “p”?)
+
+
+
+
+4                                                      PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: GRADE 1
+                                                                                        ENGLISH LANGUAGE ARTS
+
+
+
+General Curriculum                        Specific Curriculum Outcomes
+Outcomes                                  Students will be expected to
+
+                                          4.6      use a variety of strategies to create meaning
+                                                   - identify main idea
+                                                   - predict content using text information along with personal
+                                                     knowledge and experiences
+                                                   - make inferences by drawing on their own experiences and
+                                                     clues in the text
+                                                   - identify character traits from contextual clues
+                                                   - make connections between texts, noticing similarities in
+                                                     characters, events, illustrations, and language
+                                                   - follow written directions
+                                          4.7      consistently match one-to-one
+
+GCO 5: Students will be expected to       (Emergent)
+interpret, select, and combine infor-     5.1    with assistance, interact with a variety of simple texts
+mation using a variety of strategies,            (e.g., pictures, computer software, videotapes, non-fiction)
+resources, and technologies.                     as well as human and community resources
+
+                                          (Early)
+                                          5.1      engage in research process with assistance
+                                                  - generate questions to guide research
+                                                  - locate appropriate information with assistance (classroom,
+                                                    library, home, community)
+                                                  - interact with the information
+
+GCO 6: Students will be expected to       (Emergent)
+respond personally to a range of texts.   6.1    respond personally to texts in a variety of ways
+                                          6.2    express opinions about texts and the work of authors and
+                                                 illustrators
+
+                                          (Early)
+                                          6.1     make personal connections to text and share their responses
+                                                  in a variety of ways
+                                          6.2     express and begin to support opinions about texts and the
+                                                  work of authors and illustrators
+
+
+
+GCO 7: Students will be expected to       (Emergent)
+respond critically to a range of texts,   7.1    recognize some basic types of texts (e.g., videos, poems,
+applying their knowledge of language,            posters, letters, true and imaginary texts)
+form, and genre.                          7.2    recognize some basic components of texts such as author,
+                                                 illustrator, and title
+                                          7.3    begin to ask questions of text
+                                          7.4    begin to develop an understanding and respect for diversity
+
+
+
+
+PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: GRADE 1                                                              5
+ENGLISH LANGUAGE ARTS
+
+
+
+General Curriculum                            Specific Curriculum Outcomes
+Outcomes                                      Students will be expected to
+
+                                              (Early)
+                                              7.1     use their experiences with a range of texts to identify
+                                                      some different types of print and media texts, recognizing
+                                                      some of their language conventions and text characteristics
+                                              7.2     respond critically to texts
+                                                      - formulate questions as well as understandings
+                                                      - develop an understanding and respect for diversity
+
+
+Writing and Other Ways of                     (Emergent)
+Representing                                  8.1    understand that print carries a message
+                                              8.2    use writing and other forms of representing to convey
+GCO 8: Students will be expected to use              meaning (communicating messages, recounting
+writing and other forms of representation            experiences, expressing feelings and imaginative ideas,
+to explore, clarify, and reflect on their            exploring learning)
+thoughts, feelings, experiences, and learn-
+ings; and to use their imaginations.          (Early)
+                                              8.1     use writing and other forms of representing for a variety
+                                                      of functions
+                                                      - to ask questions
+                                                      - to generate and organize ideas
+                                                      - to express feelings, opinions, and imaginative ideas
+                                                      - to inform/communicate information
+                                                      - to record experiences
+                                                      - to explore learning
+                                              8.2     begin to develop, with assistance, some ways to make
+                                                      their own notes (e.g., webs, story maps, point-form
+                                                      notes)
+
+                                              8.3      begin to experiment with language choices in imaginative
+                                                       writing and other ways of representing
+
+GCO 9: Students will be expected to cre-      (Emergent)
+ate texts collaboratively and                 9.1    create written and media texts using some familiar forms
+independently, using a variety of forms              (e.g., lists, letters, personal narratives, retellings,
+for a range of audiences and purposes.               messages, finger plays, drawings, puppetry)
+                                              9.2    demonstrate a beginning awareness of audience and
+                                                     purpose
+                                              9.3    begin to consider readers’/listeners’/viewers’ questions/
+                                                     comments about their work
+
+                                              (Early)
+                                              9.1     use a variety of familiar text forms and other media
+                                                      (messages, letters, lists, recounts, stories, poems, records of
+                                                      observations, role-plays, Readers Theatre)
+                                              9.2     demonstrate some awareness of audience and purpose
+                                                      - choose particular forms for specific audiences and purposes
+                                                      - realize that work to be shared with an audience needs
+                                                        editing
+
+
+6                                                        PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: GRADE 1
+                                                                                             ENGLISH LANGUAGE ARTS
+
+
+
+General Curriculum                         Specific Curriculum Outcomes
+Outcomes                                   Students will be expected to
+                                           9.3      consider their readers’/viewers’/listeners’ questions/comments
+                                                    and begin to use such responses to assess and extend their
+                                                    learning
+
+GCO 10: Students will be expected          (Emergent)
+to use a range of strategies to develop    10.1   begin to develop strategies for pre-writing, drafting, revising,
+effective writing and media products              editing, and presenting, e.g.,
+to enhance their clarity, precision, and          - use drawing and talking as ways to rehearse for writing
+effectiveness.                                    - take risks with temporary spelling as a strategy for getting
+                                                     ideas on paper (drafting)
+                                                  - confer with others, respond orally to comments, and begin to
+                                                     add on (simple revision strategies)
+                                                  - use simple editing strategies such as adding more letters to
+                                                     one or two words, or putting in periods
+                                                  - share writing and other representations with others in a
+                                                     variety of ways
+                                           10.2   use some conventions of written language
+                                                  - use drawings, letters, and approximations to record meaning
+                                                  - develop the concept of directionality (left to right; top to
+                                                     bottom)
+                                                  - establish one-to-one correspondence between spoken and
+                                                     written words
+                                                  - begin to use spacing between words
+                                                  - write complete sentences (although they are not always
+                                                     punctuated correctly with periods)
+                                                  - experiment with punctuation (sometimes overgeneralize use
+                                                     of periods - e.g., periods after every word)
+                                                  - understand that letters can be written in upper and lower case
+                                                     forms (but often tend to use them indiscriminately)
+                                                  - use letters to represent the predominate sounds in words
+                                                     (e.g., beginning sound; beginning and final sound;
+                                                     beginning, middle, and ending sound)
+                                                  - begin to spell some words conventionally
+                                           10.3   demonstrate engagement with writing and other forms of
+                                                  representation
+                                                  - choose to write when given a choice of activities
+                                                  - take risks to express self in writing
+                                                  - sustain engagement in writing and other forms of representa-
+                                                     tion (e.g., creating with blocks or paint, role-playing, telling a
+                                                     story through drawing and writing)
+                                                  - write in play situations (e.g., making grocery lists, making
+                                                     signs, playing school, preparing menus)
+                                                  - engage in writing and representing activities every day
+                                                  - share writing and other representations willingly with others
+
+
+
+
+PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: GRADE 1                                                                  7
+ENGLISH LANGUAGE ARTS
+
+
+
+General Curriculum      Specific Curriculum Outcomes
+Outcomes                Students will be expected to
+
+                        10.4     with assistance, begin to use technology in writing and
+                                 other forms of representing
+                                 - use a tape recorder to tape a completed piece of writing,
+                                   an oral retelling, or a dramatization
+                                 - use a drawing program/simple word processing program
+                                   (computer software) to create illustrations for a group
+                                   story or to draw picture and write a caption
+                        10.5     with assistance, engage in the research process to construct
+                                 and communicate meaning
+                                 - interact with a variety of simple texts (e.g., pictures,
+                                   computer software, videotapes, easy fiction and non-
+                                   fiction), as well as human and community resources
+                                 - record information in simple ways (e.g., drawings,
+                                   labels, predesigned booklets, short pieces of writing)
+                                 - share information with others in a variety of ways
+
+                        (Early)
+                        10.1    develop strategies for prewriting, drafting, revising,
+                                editing/proofreading, and presenting/publishing
+                                - use prewriting strategies, such as drawing, talking, and
+                                  reflecting
+                                - use appropriate drafting strategies for getting ideas on
+                                  paper (taking risks by using temporary spelling or by
+                                  exploring various forms, writing freely with a focus on
+                                  getting ideas on paper, composing simple text using a
+                                  word processor)
+                                - use simple revision strategies to create a meaningful
+                                  message (e.g., adding on, crossing out, starting to insert
+                                  information)
+                                - use simple editing strategies (e.g., making some simple
+                                  corrections in spelling and punctuation - capitals,
+                                  periods; circling and correcting a few misspelled words;
+                                  using beginning dictionaries or class-made word lists as
+                                  resources for spelling)
+                                - use a variety of techniques for publishing/presenting
+                                  sharingwriting/representing with the class or another
+                                  class, publishing on-line, submitting work to school/
+                                  district anthology or magazine
+                        10.2    use some conventions of written language
+                                - use conventional spacing between words
+                                - use an increasing number of letters to represent sounds
+                                  (most vowel and consonant sounds represented)
+                                - use an increasing number of words spelled conventionally
+                                - use simple sentence structures
+                                - attempt to use punctuation (periods, question marks,
+                                  exclamation marks)
+                                - use capital letters for proper names, pronoun “I”, and
+                                  sentence beginnings
+
+
+
+8                                   PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: GRADE 1
+                                                                                      ENGLISH LANGUAGE ARTS
+
+
+
+General Curriculum                   Specific Curriculum Outcomes
+Outcomes                             Students will be expected to
+
+                                     10.3     demonstrate engagement with the creation of pieces of writing
+                                              and other representations
+                                              - engage in writing and representing activities every day
+                                              - sustain engagement in writing and other forms of
+                                                representation (drawing, role-play, plasticine art, collage,
+                                                etc.)
+                                              - choose to write independently during free choice time
+                                              - share writing and other representations with others and seek
+                                                response
+                                              - contribute during shared writing activities
+                                              - contribute observations/information to classroom records of
+                                                field trips, science experiments, etc.
+                                     10.4     with assistance, experiment with technology in writing and
+                                              other forms of representing
+                                              - use a tape recorder to record choral readings, dramatizations,
+                                                retellings, or finished pieces of writing
+                                              - create illustrations/drawings with a computer graphics/
+                                                drawing program
+                                              - compose simple text (and begin to revise and edit) with a
+                                                word processing program
+                                              - share writing/representations on-line
+                                     10.5     select, organize, and combine, with assistance, relevant
+                                              information to construct and communicate meaning
+                                              - interact with resources (print, non-print, or human) to
+                                                answer their own questions or learning needs
+                                              - with assistance, develop strategies for making and organizing
+                                                notes
+                                              - create a new product
+                                              - share their information in a variety of simple ways
+
+
+
+
+PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: GRADE 1                                                          9
+HEALTH
+
+
+
+
+Health
+General Curriculum                           Specific Curriculum Outcomes
+Outcomes
+Wellness Choices                             Personal Health
+                                             Students will be expected to
+GCO: Students will make responsible
+and informed choices to maintain health      W-1.1 describe the health benefits of physical activity
+and to promote safety for self and others.   W-1.2 demonstrate positive hygiene and health care habits
+                                             W-1.3 identify the specific physical changes that occur during
+                                                   early childhood
+                                             W-1.4 identify physical characteristics that make themselves
+                                                   both similar to and different from others
+                                             W-1.5 recognize the importance of basic healthy nutritional
+                                                   choices to well-being of self
+
+                                             Safety and Responsibility
+                                             Students will be expected to
+
+                                             W-1.6 identify symbols and safety rules for hazardous household
+                                                    products
+                                             W-1.7 describe actions to use in unsafe or abusive situations
+                                             W-1.8 describe fire safety behaviours and burn injury prevention
+                                             W-1.9 describe appropriate safety behaviours in and around a
+                                                    school building, and on and around a school playground
+                                             W-1.10 demonstrate how to seek emergency help using 911
+                                             W-1.11 describe appropriate behaviour around domestic and
+                                                    wild animals
+                                             W-1.12 demonstrate a beginning understanding of what rabies is
+                                                    and what to do if bitten or scratched by an animal
+                                             W-1.13 give examples of animals that sometimes carry rabies
+                                             W-1.14 describe actions of a responsible pet owner
+
+Relationship Choices                         Understanding and Expressing Feelings
+                                             Students will be expected to
+GCO: Students will develop effective
+interpersonal skills that demonstrate re-    R-1.1    recognize and demonstrate various ways to express feelings
+sponsibility, respect, and caring in order   R-1.2    identify physiological responses to feelings
+to establish and maintain healthy interac-   R-1.3    identify positive and negative feelings associated with
+tions.                                                stress/change
+                                             R-1.4    compare and contrast positive and negative nonverbal
+                                                      communication and associated feelings
+
+                                             Interactions
+                                             Students will be expected to
+
+                                             R-1.5    identify characteristics of being a good friend
+                                             R-1.6    explain how personal behaviours and attitudes can
+                                                      influence the feelings and actions of others
+                                             R-1.7    demonstrate age-appropriate ways to resolve conflict with
+                                                      limited assistance
+
+10                                                     PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: GRADE 1
+                                                                                                            HEALTH
+
+
+
+General Curriculum                       Specific Curriculum Outcomes
+Outcomes
+                                         Group Roles and Processes
+                                         Students will be expected to
+
+                                         R-1.8    work cooperatively with a partner
+                                         R-1.9    recognize and accept individual differences within groups
+                                                  and families
+
+Life Learning Choices                    Interactions
+                                         Students will be expected to
+GCO: Students will use resources
+effectively to manage and explore life   L-1.1    demonstrate age-appropriate independence in completing
+roles and career opportunities and                tasks and activities
+challenges.                              L-1.2    explore different ways to know, or come to know, new things
+                                         L-1.3    identify steps of a decision-making process for an age-
+                                                  appropriate issue
+                                         L-1.4    define a goal, and recognize that setting goals helps
+                                                  accomplish tasks
+
+                                         Life Goals and Career Development
+                                         Students will be expected to
+
+                                         L-1.5    recognize interests, strengths, and skills of self
+                                         L-1.6    demonstrate an awareness of the ways in which people
+                                                  perform responsibilities in the community, including paid
+                                                  and unpaid
+
+                                         Volunteerism
+                                         Students will be expected to
+
+                                         L-1.7    describe ways people volunteer in the school and in the
+                                                  community
+                                         L-1.8    select and perform volunteer tasks in the classroom
+
+
+
+
+PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: GRADE 1                                                             11
+MATHEMATICS
+
+
+
+
+Mathematics
+General Curriculum           Specific Curriculum Outcomes
+Outcomes                     Students will be expected to
+
+Number (N)                   N1       Say the number sequence, 0 to 100, by:
+GCO: Develop number sense.            • 1s forward and backward between any two given
+                                           numbers;
+                                      • 2s to 20, forward starting at 0;
+                                      • 5s and 10s to 100, forward starting at 0.
+                             N2       Recognize, at a glance, and name familiar arrangements
+                                      of 1 to 10 objects or dots.
+                             N3       Demonstrate an understanding of counting by:
+                                      • indicating that the last number said identifies “how
+                                           many”;
+                                      • showing that any set has only one count;
+                                      • using the counting on strategy;
+                                      • using parts or equal groups to count sets.
+                             N4       Represent and describe numbers to 20 concretely,
+                                      pictorially, and symbolically.
+                             N5       Compare sets containing up to 20 elements to solve
+                                      problems using:
+                                      • referents;
+                                      • one-to-one correspondence.
+                             N6       Estimate quantities to 20 by using referents.
+                             N7       Demonstrate, concretely and pictorially, how a given
+                                      number can be represented by a variety of equal groups
+                                      with and without singles.
+                             N8       Identify the number, up to 20, that is one more, two
+                                      more, one less, and two less than a given number.
+                             N9       Demonstrate an understanding of addition of numbers
+                                      with answers to 20 and their corresponding substraction
+                                      facts, concretely, pictorially, and symbolically by:
+                                      • using familiar and mathematical language to describe
+                                           additive and subtractive actions from their experience;
+                                      • creating and solving problems in context that involve
+                                           addition and subtraction;
+                                      • modelling addition and subtraction using a variety of
+                                           concrete and visual representations, and recording the
+                                           process symbolically.
+                             N10      Describe and use mental mathematics strategies (memoriza-
+                                      tion not intended), such as:
+                                      • counting on and counting back;
+                                      • making 10;
+                                      • doubles;
+                                      • using addition to subtract
+                                      to determine the basic addition facts to 18 and related
+                                      subtraction facts.
+
+
+
+
+12                                     PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: GRADE 1
+                                                                                                 MATHEMATICS
+
+
+
+General Curriculum                     Specific Curriculum Outcomes
+Outcomes                               Students will be expected to
+
+Patterns and Relations (PR)            PR1     Demonstrate an understanding of repeating patterns (two to
+GCO: Use patterns to describe the              four elements) by:
+world and solve problems.                      • describing;
+                                               • reproducing;
+                                               • extending;
+                                               • creating
+                                               patterns using manipulatives, diagrams, sounds and actions.
+                                       PR2     Translate repeating patterns from one representation to
+                                               another.
+                                       PR3     Describe equality as a balance and inequality as an imbalance,
+                                               concretely and pictorially (0 to 20).
+                                       PR4     Record equalities using the equal symbol.
+
+Shape and Space (SS)                   SS1     Demonstrate an understanding of measurement as a process of
+GCO: Use direct and indirect measure           comparing by:
+to solve problems.                             • identifying attributes that can be compared;
+                                               • ordering objects;
+                                               • making statements of comparison;
+                                               • filling, covering, or matching.
+                                       SS2     Sort 3-D objects and 2-D shapes using one attribute, and
+                                               explain the sorting rule.
+                                       SS3     Replicate composite 2-D shapes and 3-D objects.
+                                       SS4     Compare 2-D shapes to parts of 3-D objects in the
+                                               environment.
+
+
+
+
+PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: GRADE 1                                                             13
+MUSIC
+
+
+
+
+Music
+General Curriculum                            Specific Curriculum Outcomes
+Outcomes                                      Students will be expected to
+
+Musical Awareness and Appreciation            1.2.1    talk about how music is a source of enjoyment and personal
+                                                       well-being
+GCO 2: Students will be expected to           1.2.2    be aware of the different roles music has in a variety of
+develop an appreciation of the impor-                  private and public contexts, for example, home, school,
+tance of music in daily life and respect               church, and community events
+the role that music plays in their heritage   1.2.3    describe their thoughts and feelings about music and
+and culture.                                           explore ways in which music expresses events and experi-
+                                                       ences in their everyday lives
+                                              1.2.4    demonstrate an awareness of cultural contexts of music,
+                                                       including the music of Atlantic Canada
+                                              1.2.5    explore different and diverse musical cultures of the past
+                                                       and present
+                                              1.2.6    experience artistic, kinesthetic, and social connections
+                                                       between music and the other arts (dance, drama, literature,
+                                                       and visual arts)
+
+
+
+
+14                                                     PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: GRADE 1
+                                                                                                  PHYSICAL EDUCATION
+
+
+
+
+Physical Education
+Please note: The three goals, Active Living, Skilful Movement, and Relationships will
+be referred throughout this section as GCO 1, GCO 2, and GCO 3.
+GCO 1: Active Living                    GCO 2: Skilful Movement                     GCO 3: Relationships
+Enjoy and engage in healthy levels of   Enhance quality of movement by              Balance self through safe and
+participation in movement activities    understanding, developing, and              respectful personal, social, cultural,
+to support lifelong active living in    transferring movement concepts,             and environmental interactions in a
+the context of self, family, and        skills, tactics, and strategies to a wide   wide variety of movement activites.
+community.                              variety of movement activities.
+
+General Curriculum                       Specific Curriculum Outcomes
+Outcomes
+GCO 1                                    Active Living
+                                         Students will be expected to
+
+                                         1.1    Health-Related Fitness
+                                                Build a repertoire of strategies, with guidance, for developing
+                                                components of health-related fitness, including cardiovascular
+                                                endurance, flexibility, muscular endurance, and muscular strength
+
+                                                Cross-curricular link
+                                                Science: Needs and Characteristics of Living Things
+
+                                         1.2    Active Living
+                                                Examine and express what it means to be active each day, and the
+                                                personal benefits of being active
+
+                                                Cross-curricular link
+                                                Health: Wellness Choices - W-1.1
+
+GCO 2                                    Skilful Movement
+                                         Students will be expected to
+
+                                         1.3    Locomotor Skills
+                                                Explore, express, and apply, with guidance, a variety of ways to
+                                                skilfully move the body through space, including at a
+                                                • control level of skill when
+                                                     - walking
+                                                     - running
+                                                     - jumping forward and landing
+                                                     - jumping sideways and landing
+                                                • progressive-toward-control level of skill when:
+                                                     -     jumping backward and landing
+                                                     -     hopping (body moves on one foot as in right foot to
+                                                           right foot)
+                                                     -     skipping (combines a step and a hop)
+                                                     -     leaping (body “takes off” from one foot, propels
+                                                           through air for distance, then lands on the opposite
+                                                           foot)
+PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: GRADE 1                                                                  15
+PHYSICAL EDUCATION
+
+
+
+General Curriculum                             Specific Curriculum Outcomes
+Outcomes                                       Students will be expected to
+NOTE: Rolling is a safety skill that sup-            -    sliding (one foot steps and the other moves to meet
+ports future participation in movement                    the first foot, “step-close”)
+activities. Grade 1 students should be               -    galloping (one foot steps, body propels upward, other foot
+asked to show how they can roll forward                   moves to meet the first foot)
+and not be challenged to go beyond for-              -    rolling forward (see note at the left)
+ward rolls of their own creation. Descrip-           -    rolling sideways
+tors of how to roll safely are provided here
+as they appear in the Grade 2 curriculum.      1.4   Non-Locomotor Skills
+                                                     Explore, express, and apply, with guidance, a variety of
+                                                     ways to skilfully move the body on the spot, including at a
+                                                     • control level of skill when
+                                                        - balancing
+                                                        - jumping and landing on feet on the spot
+                                                     • progressing-towards-control level of skill when
+                                                        - landing on hands from kneeling position
+                                                        - rotating on the spot
+
+                                               1.5   Manipulative Skills
+                                                     Explore, express, and apply, with guidance, a variety of ways to
+                                                     skilfully move objects, including at a progressing-towards-control
+                                                     level when
+                                                     • throwing (rolling)
+                                                     • catching (collecting, gathering)
+                                                     • kicking
+                                                     • dribbling
+                                                     • striking
+
+                                               Active Living, Skilful Movement, Relationships
+GCO 1, GCO 2, GCO 3                            Students will be expected to
+
+                                               1.6   Movement Variables
+                                                     Apply an understanding of how to vary the movement of the
+                                                     body while performing locomotor, non-locomotor, and manipu-
+                                                     lative skills through changes in
+                                                     • space (personal space, general space, levels, directions,
+                                                          pathways)
+                                                     • effort (force, time/speed)
+                                                     • relationships (individually and with objects)
+
+                                               1.7   Rhythmical Movement
+                                                     Explore and demonstrate rhythmical movement in response to
+                                                     different rhythms (e.g., quick, slow, sharp, soft) and dance
+                                                     patterns, using locomotor skills and non-locomotor skills
+                                                          - hopping (body moves on one foot as in right foot to
+                                                              right foot)
+                                                          - skipping (combines a step and a hop)
+                                                          - leaping (body “takes off” from one foot, propels
+                                                              through air for distance, then lands on the opposite
+                                                              foot)
+
+16                                                       PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: GRADE 1
+                                                                                             PHYSICAL EDUCATION
+
+
+
+General Curriculum                         Specific Curriculum Outcomes
+Outcomes                                   Students will be expected to
+
+                                           1.8   Play Strategies and Skills
+                                                 Build a repertoire of strategies and skills, with guidance, for and
+                                                 through active participation in a variety of movement activities
+                                                 including
+                                                 • low-organizational games involving travelling (e.g., tag
+                                                     games, follow-the-leader, hopscotch, long-rope skipping)
+                                                 • target games (e.g., ring or hoop toss, bowling, bocce ball)
+                                                 • alternate environment activities and games (e.g.,
+                                                     snowsnakes, hiking, skating, snowshoeing,
+                                                     aquatics, cycling, tobogganing, cross-country skiing)
+
+GCO 3                                      Relationships
+                                           Students will be expected to
+
+                                           1.9   Safety and Co-operation
+                                                 Demonstrate, with little or no support, safe and co-operative
+                                                 behaviours while participating in physical education activities
+(Prince Edward Island Physical Education
+Safety Guidelines document.)               1.10 Relationships
+                                                Communicate and demonstrate an understanding of self-
+                                                control, a consideration for others, and a respect for differences
+                                                among people (e.g., abilities, interests, likes and dislikes,
+                                                gender, culture) while participating in physical education
+                                                settings
+
+                                                 Cross-curricular link
+                                                 Health: Relationship Choices Outcomes
+
+
+
+
+PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: GRADE 1                                                              17
+SCIENCE
+
+
+
+
+Science
+General Curriculum                           Specific Curriculum Outcomes
+Outcomes
+STSE/Knowledge                               Skills and Process of Science (SP)
+                                             Students will be expected to
+GCO 1: Students will develop an un-
+derstanding of the nature of science and     SP-1 Share their own observations and ideas in a variety of ways
+technology, of the relationships between
+science and technology, and of the social    Physical Science - Materials, Objects and our Senses (PS)
+and environmental contexts of science        Students will be expected to
+and technology. (STSE)
+                                             PS-1 Describe a wide range of materials using their senses
+GCO 3: Students will construct knowl-        PS-2 Evaluate the suitability of materials for a specific purpose
+edge and understandings of concepts in       PS-3 Create a model or toy from scrap material
+life science, physical science, and Earth
+and space science, and apply these un-       Life Science (LS): Needs and Characteristics of Living Things
+derstandings to interpret, integrate, and    Students will be expected to
+extend their knowledge. (Knowledge)
+                                             LS-1 Distinguish between characteristics that make plants and animals
+Skills                                            unique
+                                             LS-2 Classify the characteristics and needs of living things
+GCO 2: Students will develop the skills      Earth and Space Science (ESS): Daily and Seasonal Changes
+required for scientific and technological    Students will be expected to
+inquiry, for solving problems, for com-
+municating scientific ideas and results,     ESS-1 Analyse daily and seasonal changes in the environment
+for working collaboratively, and for         ESS-2 Evaluate the characteristics of the four seasons
+making informed decisions.
+
+
+
+
+Attitudes
+
+GCO 4: Students will be encouraged
+to develop attitudes that support the
+responsible acquisition and
+application of scientific and
+technological knowledge to the mutual
+benefit of self, society, and the environ-
+ment.
+
+
+
+
+18                                                     PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: GRADE 1
+                                                                                                     SOCIAL STUDIES
+
+
+
+
+Social Studies
+General Curriculum                        Specific Curriculum Outcomes
+Outcomes
+Citizenship, Power, and                   Conceptual Organizer: Interactions
+Governance                                Students will be expected to
+
+GCO: Students will be expected to         Unit One: Groups
+demonstrate an understanding of the
+rights and responsibilities of            1.1.1    demonstrate an understanding of the importance of
+citizenship and the origins, functions,            interactions between people
+and sources of power, authority, and      1.1.2    demonstrate an understanding of the similarity and
+governance.                                        diversity of social and cultural groups
+                                          1.1.3    demonstrate an understanding that people within groups
+Culture and Diversity                              have rights and responsibilities
+
+GCO: Students will be expected
+to demonstrate an understand-             Unit Two: Environments
+ing of culture, diversity, and world      Students will be expected to
+view, recognizing the similarities
+and differences reflected in various      1.2.1    recognize that environments have natural and constructed
+personal, cultural, racial, and ethnic             features
+perspectives.                             1.2.2    describe how people depend upon and interact with
+                                                   different natural environments
+Individuals, Societies, and Economic      1.2.3    take age-appropriate action to practise responsible behaviour
+Decisions                                          in caring for the environment
+GCO: Students will expected to
+demonstrate the ability to make        Unit Three: Place and Time
+responsible economic decisions as      Students will be expected to
+individuals and as members of society.
+                                       1.3.1 demonstrate an understanding that signs, symbols, direction,
+                                                and scale are used to represent landmarks and locations
+Interdependence                        1.3.2 demonstrate an understanding that the way people live in their
+                                                community evolves over time
+GCO: Students will be expected         1.3.3 demonstrate an understanding that Aboriginal peoples’
+to demonstrate an understanding                 relationship with place has changed over time
+of the interdependent relationship     1.3.4 explain how interactions between communities have changed
+among individuals, societies, and               over time
+the environment — locally, nation-
+ally, and globally — and the impli-
+cations for a sustainable future.
+                                       Unit Four: Needs and Wants
+People, Place, and Environment
+                                          1.4.1   recognize that all people have needs and wants
+GCO: Students will be expected to         1.4.2   demonstrate an understanding of the factors that influence
+demonstrate an understanding of                   how needs and wants are met
+the interactions among people,            1.4.3   demonstrate an understanding of how communities depend
+places, and the environment.                      on each other for the exchange of goods and services
+
+Time, Continuity, and Change
+
+GCO: Students will be expected
+to demonstrate an understanding
+of the past and how it affects the
+present and the future.
+
+PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: GRADE 1                                                                19
+VISUAL ARTS
+
+
+
+
+Visual Arts
+General Curriculum                         Specific Curriculum Outcomes
+Outcomes
+
+Strand One: Fundamental Concepts           Elements of Art and Design
+                                           Students will be expected to
+Students will be expected to develop an
+understanding of the following concepts    FC1.1 develop an understanding of the elements and principles
+through participation in a variety of            of art and design in creating and viewing artwork
+hands-on, open-ended visual arts experi-         - line: jagged, curved, broken, dashed, spiral, straight,
+ences.                                                wavy, zigzag lines
+                                                 - shape and form: geometric and organic shapes and forms
+                                                      of familiar objects
+                                                 - space and colours: depiction of objects in the distance as
+                                                      smaller and closer to the top of the art paper
+                                                 - colour: mixing of primary colours; identification of warm
+                                                      and cool colours
+                                                 - texture: textures of familiar objects; changes in texture; a
+                                                      pattern of lines to show texture
+                                                 - value: light, dark
+
+                                           Principles of Art and Design
+                                           Students will develop understanding of all principles of design (that is
+                                           contrast, repetition and rhythm, variety, emphasis, proportion,
+                                           balance, unity and harmony, and movement), but the focus in Grade
+                                           1 will be on contrast.
+                                                    - contrast: light/dark; large/small; pure/mixed colours
+
+Strand Two: Creating and Presenting        Students will be expected to
+
+Students will be expected to apply the     CP1.1 create two- and three-dimensional works of art that
+creative process to produce a variety of         express feelings and ideas inspired by personal experiences
+two- and three-dimensional art works,            (e.g., a tempera painting that communicates their feelings
+using elements, principles, and tech-            about a special occasion or event, such as a fair or a parade)
+niques of visual arts to communicate
+feelings, ideas, and understandings.       CP1.2 demonstrate an understanding of composition, using
+                                                 principles of art and design to create narrative art works or
+                                                 art works on a theme or topic
+                                                 (e.g., a drawing of an approaching storm that uses a variety of
+                                                 lines to create contrast [dashed, jagged, curved, spiral])
+
+                                           CP1.3 use the elements of art and design in artworks to communi-
+                                                 cate ideas, messages, and understandings
+                                                 (e.g., a pattern of broken, wavy, and zigzag lines to make the
+                                                 bark of a tree look rough in a drawing)
+
+                                           CP1.4 use a variety of materials, tools, and techniques to respond
+                                                 to design challenges
+                                                 - drawing: use wax crayon or oil pastel lines on coloured
+                                                     paper to express their responses to different kinds of
+                                                     music or rhythm
+20                                                    PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: GRADE 1
+                                                                                                        VISUAL ARTS
+
+
+
+General Curriculum                           Specific Curriculum Outcomes
+Outcomes                                     Students will be expected to
+
+                                                      -   mixed media: use torn paper and textured materials to
+                                                          create a landscape collage of a playground that includes a
+                                                          horizon line
+                                                      -   painting: create *paint resist that are made with wax
+                                                          crayon on paper, using rubbing plates that use a variety
+                                                          of textures (e.g., bumpy, wavy) to create imaginary
+                                                          creatures
+                                                      -   printmaking: use cut sponge or cardboard and paint
+                                                          stamping to make a pattern of geometric and organ shapes
+                                                      -   sculpture: use glued or taped scrap wood to build a wood
+                                                          block sculpture of an imaginary geometric machine
+
+Strand Three: Reflecting, Responding,        RRA1.1 express personal feelings and ideas about art experiences
+and Analysing                                       and images
+                                                    (e.g., use drama to respond to a community art work viewed
+Students will be expected to apply the              during a neighbourhood walk)
+critical analysis process to communicate
+feelings, ideas, and understandings in       RRA1.2 explain how elements and principles of art and design
+response to a variety of art works and art          are used to communicate meaning or understanding in
+experiences.                                        their own and others’ art work
+                                                    (e.g., explain how repeated lines and shapes are used to
+                                                    depict the texture of snake, lizard, leopard, or dinosaur skin)
+
+                                             RRA1.3 demonstrate an awareness of the meaning of signs and
+                                                    symbols encountered in their daily life lives and in
+                                                    works of art
+                                                    (e.g., red is associated with stopping [traffic lights] in PEI,
+                                                    Canada, and United States, luck in China, success in
+                                                    Cherokee culture, mourning in South Africa)
+
+                                             RRA1.4 identify and document their strengths, their interests,
+                                                    and areas for improvement as creators of art
+                                                    (e.g., do a think-pair-share on their favourite part of one of
+                                                    their art works)
+
+Strand Four: Exploring Forms and             EC1.1 identify and describe a variety of visual art forms they see in
+Cultural Contexts                                  their home, at school, in the community, and in visual arts
+                                                   experiences
+Demonstrate an understanding of a                  (illustrations in picture books, designs of various toys,
+variety of art forms, styles, and                  patterns on clothing or other textiles, classroom visits by
+techniques from the past and present,              artists, student displays at their school, visits to galleries)
+and their social and/or community
+contexts.                                    EC1.2 demonstrate an awareness of a variety of works of art and
+                                                   artistic traditions from diverse communities, times, and
+                                                   places
+                                                   (e.g., iconic architecture they have seen either in pictures or
+                                                   in real life, such as the Province House, the Eiffel Tower, the
+                                                   Taj Mahal)
+
+
+PEI SPECIFIC CURRICULUM OUTCOMES FRAMEWORK: GRADE 1                                                               21
+
