@@ -72,7 +72,8 @@ async function get(path: string) {
   return res;
 }
 
-const app = () => storage.open("gradelings-v4");
+/** Must match `CACHE` in public/sw.js (`gradelings-${CACHE_BUILD_ID}`). */
+const app = () => storage.open("gradelings-dev");
 
 describe("service worker build files", () => {
   it("keeps a real script, cache-first", async () => {
