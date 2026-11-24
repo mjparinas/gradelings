@@ -24,6 +24,17 @@ export const NEWS_KIND_LABEL: Record<NewsItem["kind"], string> = {
 
 export const WHATS_NEW: NewsDay[] = [
   {
+    day: "2026-11-23",
+    headline: "Fewer error screens after an update",
+    items: [
+      {
+        kind: "fixed",
+        title: "Grades now load smoothly after an app update",
+        body: "If Gradelings was updated while a tab was left open, opening a grade could sometimes show an error or an offline message. The page now refreshes itself once and carries on, so children can keep playing without having to reload by hand.",
+      },
+    ],
+  },
+  {
     day: "2026-11-20",
     headline: "A lighter, easier curriculum page",
     items: [
