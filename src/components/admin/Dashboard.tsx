@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
+import { Disclosure } from "@/components/Disclosure";
 import { ColumnChart, LineChart, niceMax, RowBars } from "@/components/parents/charts";
 import { call } from "@/lib/classroom";
 import { METRIC_SECTIONS, RETENTION_WEEKS, type MetricSection, type RetentionCell, type SectionMetrics } from "@/lib/adminMetrics";
@@ -101,15 +102,21 @@ function moneyDetail(data: { revenue: SectionMetrics["money"]["revenue"] }, titl
   };
 }
 
-function Section({ id, title, intro, children }: { id: string; title: string; intro?: string; children: ReactNode }) {
+function Section({ id, title, intro, children, open = false }: { id: string; title: string; intro?: string; children: ReactNode; open?: boolean }) {
   return (
-    <section aria-labelledby={id} className="mt-8 first:mt-4">
-      <h3 id={id} className="text-xl font-bold">
-        {title}
-      </h3>
+    <Disclosure
+      className="mt-4 rounded-2xl border border-line bg-white p-4 first:mt-4"
+      titleClassName="text-xl font-bold"
+      title={
+        <h3 id={id} className="text-xl font-bold">
+          {title}
+        </h3>
+      }
+      open={open}
+    >
       {intro && <p className="mt-1 max-w-3xl text-sm text-ink-soft">{intro}</p>}
       {children}
-    </section>
+    </Disclosure>
   );
 }
 
@@ -444,7 +451,7 @@ export function Dashboard({ onOpenFamily }: { onOpenFamily?: (id: string) => voi
         </button>
       </p>
 
-      <Section id="money-h" title="Revenue and Profit" intro="Money is in Canadian dollars; US families' payments in US dollars are shown on their own tile. Revenue is what Stripe collected, less refunds. Fees are estimated at 2.9% + 30¢ a payment. Monthly recurring revenue uses list prices, with yearly plans counted as a twelfth a month. Profit takes off fees and the monthly costs you enter below.">
+      <Section id="money-h" title="Revenue and Profit" open intro="Money is in Canadian dollars; US families' payments in US dollars are shown on their own tile. Revenue is what Stripe collected, less refunds. Fees are estimated at 2.9% + 30¢ a payment. Monthly recurring revenue uses list prices, with yearly plans counted as a twelfth a month. Profit takes off fees and the monthly costs you enter below.">
         {failed("money") ?? (!parts.money ? <SectionLoading tiles={8} charts={3} /> : <Money m={parts.money} show={show} onDetail={(detail) => setOpen({ detail })} reload={load} />)}
       </Section>
 

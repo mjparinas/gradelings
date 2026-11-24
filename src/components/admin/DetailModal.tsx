@@ -107,7 +107,7 @@ export function DetailModal({
         if (e.target === e.currentTarget) onClose();
       }}
     >
-      <div ref={panel} role="dialog" aria-modal="true" aria-labelledby="detail-h" onKeyDown={onKey} className="my-auto w-full max-w-4xl rounded-2xl bg-white p-4 shadow-xl sm:p-6">
+      <div ref={panel} role="dialog" aria-modal="true" aria-labelledby="detail-h" onKeyDown={onKey} className="my-auto w-full max-w-4xl rounded-2xl border border-line bg-white p-4 sm:p-6">
         <div className="flex items-start justify-between gap-3">
           <h2 id="detail-h" className="text-xl font-bold sm:text-2xl">
             {titleCase(title)}

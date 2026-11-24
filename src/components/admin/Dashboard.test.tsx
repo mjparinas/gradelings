@@ -42,7 +42,22 @@ function data(over: Partial<MetricsInput> = {}, stripe = false) {
   return { ...m, customersEver: m.revenue.customersEver, stripe };
 }
 
-const tile = (label: string) => screen.getByText(label, { selector: "span.text-ink-soft" }).closest("li")!;
+/** Prefer a visible tile — closed metric disclosures still leave labels in the DOM. */
+const tile = (label: string) => {
+  const node = screen.getAllByText(label, { selector: "span.text-ink-soft" }).find((n) => !n.closest("[hidden]"));
+  if (!node) throw new Error(`No visible tile labelled ${label}`);
+  return node.closest("li")!;
+};
+
+async function expand(name: string) {
+  const user = userEvent.setup();
+  const btn = screen.getByRole("button", { name });
+  if (btn.getAttribute("aria-expanded") !== "true") await user.click(btn);
+  expect(btn).toHaveAttribute("aria-expanded", "true");
+  const panel = document.getElementById(btn.getAttribute("aria-controls")!);
+  expect(panel).not.toBeNull();
+  expect(panel!.hidden).toBe(false);
+}
 
 beforeEach(() => {
   mocks.call.mockReset();
@@ -57,10 +72,13 @@ describe("admin dashboard", () => {
     expect(within(tile("Revenue this month")).getByText("$14.99")).toBeInTheDocument();
     // $500 of costs a month means June is losing money so far.
     expect(within(tile("Profit this month")).getByText(/^-\$/)).toBeInTheDocument();
+    await expand("Customers");
     expect(within(tile("Paying")).getByText("1")).toBeInTheDocument();
     expect(within(tile("In free trial")).getByText("1")).toBeInTheDocument();
+    await expand("Growth");
     expect(within(tile("Sign-ups this month")).getByText("2")).toBeInTheDocument();
     expect(within(tile("From a referral")).getByText("50% of families")).toBeInTheDocument();
+    await expand("Practice");
     expect(within(tile("Questions answered, 30 days")).getByText("30")).toBeInTheDocument();
     const guests = tile("Guest players, 30 days");
     expect(within(guests).getByText("7")).toBeInTheDocument();
@@ -86,7 +104,8 @@ describe("admin dashboard", () => {
     for (const s of ["money", "customers", "growth", "practice"]) expect(mocks.call).toHaveBeenCalledWith(`/api/admin/stats/?section=${s}`);
     for (const name of ["Revenue and Profit", "Customers", "Growth", "Practice"]) expect(screen.getByRole("heading", { name })).toBeInTheDocument();
     expect(await screen.findByText("Monthly recurring revenue")).toBeInTheDocument();
-    const practice = screen.getByRole("heading", { name: "Practice" }).closest("section")!;
+    await expand("Practice");
+    const practice = screen.getByRole("heading", { name: "Practice" }).closest("div")!;
     expect(practice.querySelector('[aria-busy="true"]')).not.toBeNull();
     expect(within(practice).getByText("Loading…")).toBeInTheDocument();
     expect(screen.queryByText(/^Updated /)).toBeNull();
@@ -134,6 +153,7 @@ describe("admin dashboard", () => {
     const user = userEvent.setup();
     render(<Dashboard onOpenFamily={onOpenFamily} />);
     await screen.findByRole("heading", { name: "Revenue and Profit" });
+    await expand("Customers");
     const opener = within(tile("Paying")).getByRole("button");
     await user.click(opener);
     const dialog = await screen.findByRole("dialog", { name: "Paying Families" });
@@ -163,6 +183,7 @@ describe("admin dashboard", () => {
     });
     const user = userEvent.setup();
     const { unmount } = render(<Dashboard />);
+    await expand("Growth");
     const clicks = await screen.findByText("12", { selector: "span.tabular-nums" });
     expect(within(clicks.closest("li")!).getByText("last 28 days · 3 Subscribe clicks")).toBeInTheDocument();
     expect(mocks.call).toHaveBeenCalledWith("/api/admin/traffic/?days=28&part=visits");
@@ -172,6 +193,7 @@ describe("admin dashboard", () => {
 
     mocks.call.mockImplementation((url: string) => (url.startsWith("/api/admin/traffic/") ? Promise.resolve({ state: "setup", setup: "Set VERCEL_TOKEN" }) : Promise.resolve(data())));
     render(<Dashboard />);
+    await expand("Growth");
     expect(await screen.findByText("needs Vercel Analytics")).toBeInTheDocument();
   });
 
@@ -181,6 +203,7 @@ describe("admin dashboard", () => {
     render(<Dashboard />);
     await screen.findByRole("heading", { name: "Revenue and Profit" });
     // The Try it free tile asks Vercel once the growth tiles are drawn; let that happen before counting calls.
+    await expand("Growth");
     await screen.findByText("Try it free clicks");
     mocks.call.mockClear();
     await user.click(within(tile("Profit this month")).getByRole("button"));
@@ -197,6 +220,7 @@ describe("admin dashboard", () => {
     const user = userEvent.setup();
     render(<Dashboard />);
     await screen.findByRole("heading", { name: "Revenue and Profit" });
+    await expand("Customers");
     await user.click(within(tile("Children")).getByRole("button"));
     expect(await within(screen.getByRole("dialog")).findByRole("alert")).toHaveTextContent("Not allowed");
   });
@@ -204,6 +228,9 @@ describe("admin dashboard", () => {
   it("shows an error when the numbers can't load", async () => {
     mocks.call.mockImplementation(() => Promise.reject(new Error("Stats unavailable")));
     render(<Dashboard />);
+    await expand("Customers");
+    await expand("Growth");
+    await expand("Practice");
     // Each section says so on its own.
     const alerts = await screen.findAllByRole("alert");
     expect(alerts).toHaveLength(4);
@@ -222,6 +249,7 @@ describe("admin dashboard", () => {
       }),
     );
     render(<Dashboard />);
+    await expand("Practice");
     const table = (await screen.findByText("Who Comes Back")).closest("figure")!;
     const rows = within(table).getAllByRole("row");
     // Header, one sign-up week per row that has families, then all weeks together.
