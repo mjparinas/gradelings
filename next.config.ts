@@ -38,8 +38,15 @@ const securityHeaders = [
   { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
 ];
 
+// Pins client asset URLs and navigation to one deploy so a tab open across a
+// rollout reloads instead of mixing Turbopack module graphs (Sentry: "module
+// factory is not available"). Vercel sets VERCEL_GIT_COMMIT_SHA on every build.
+const deploymentId =
+  process.env.NEXT_DEPLOYMENT_ID || process.env.VERCEL_GIT_COMMIT_SHA || process.env.GITHUB_SHA || undefined;
+
 const nextConfig: NextConfig = {
   ...adapter,
+  ...(deploymentId ? { deploymentId } : {}),
   async headers() {
     return [
       // The Inbox's email frame (/api/admin/inbox/view/) sets its own stricter policy and may be framed by the panel,

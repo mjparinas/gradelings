@@ -16,7 +16,11 @@
 // - The Piper voice (/piper/{version}/, /piper-worker.js) lives in its own cache, which only
 //   the app's voice download fills (src/lib/piper.ts), and which is kept across updates
 //   because it is about 100 MB.
-const CACHE = "gradelings-v4";
+// CACHE_BUILD_ID is stamped at build time on Vercel (scripts/stamp-sw.mjs) so each
+// deploy gets a fresh Cache Storage name. Activate then drops the previous deploy's
+// shells and chunks, which stops a long-lived tab mixing two builds' module graphs.
+const CACHE_BUILD_ID = "dev";
+const CACHE = `gradelings-${CACHE_BUILD_ID}`;
 const PIPER_CACHE = "gradelings-piper";
 // The voice practice model (/whisper/{version}/, /whisper-worker.js), about 65 MB, filled only by the app (src/lib/whisper.ts).
 const WHISPER_CACHE = "gradelings-whisper";
