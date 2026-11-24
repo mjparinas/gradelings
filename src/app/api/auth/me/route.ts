@@ -1,4 +1,5 @@
 import { error, getSession, json } from "@/server/auth";
+import { appleIapConfigured } from "@/server/apple";
 import { getFamilyRow, toFamilyInfo } from "@/server/family";
 import { devBillingAllowed, stripeConfigured } from "@/server/stripe";
 
@@ -7,5 +8,8 @@ export async function GET(req: Request) {
   if (!session) return error(401, "Not signed in");
   const row = await getFamilyRow(session.familyId);
   if (!row) return error(401, "Not signed in");
-  return json({ family: toFamilyInfo(row, session.email, session.verified, session.student), billing: { stripe: stripeConfigured(), dev: devBillingAllowed() } });
+  return json({
+    family: toFamilyInfo(row, session.email, session.verified, session.student),
+    billing: { stripe: stripeConfigured(), apple: appleIapConfigured(), dev: devBillingAllowed() },
+  });
 }

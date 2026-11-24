@@ -7,6 +7,7 @@ interface FamilyRow {
   trial_ends_at: number;
   plan: string;
   stripe_customer: string | null;
+  apple_original_transaction_id?: string | null;
   subscription_status: string | null;
   subscription_interval: string | null;
   current_period_end: number | null;
@@ -18,6 +19,7 @@ export async function getFamilyRow(id: string): Promise<FamilyRow | undefined> {
 }
 
 export function toFamilyInfo(row: FamilyRow, email: string, verified = true, student = false): FamilyInfo {
+  const source = row.apple_original_transaction_id ? "apple" : row.stripe_customer ? "stripe" : undefined;
   return {
     account: { email, familyId: row.id, verified, ...(student ? { student: true } : {}) },
     plan: row.plan as FamilyInfo["plan"],
@@ -27,6 +29,7 @@ export function toFamilyInfo(row: FamilyRow, email: string, verified = true, stu
           status: row.subscription_status,
           interval: (row.subscription_interval as "month" | "year" | null) ?? undefined,
           currentPeriodEnd: row.current_period_end ? Number(row.current_period_end) : undefined,
+          ...(source ? { source } : {}),
         }
       : undefined,
     updatedAt: Number(row.updated_at),

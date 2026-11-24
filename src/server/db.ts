@@ -142,6 +142,11 @@ const SCHEMA = [
     created_at INTEGER NOT NULL
   )`,
   `CREATE INDEX IF NOT EXISTS push_subscriptions_parent ON push_subscriptions (parent_id)`,
+  // StoreKit / App Store Server Notifications event ids, so retries are idempotent.
+  `CREATE TABLE IF NOT EXISTS apple_events (
+    id TEXT PRIMARY KEY,
+    created_at INTEGER NOT NULL
+  )`,
 ];
 
 /** Columns added after the first release. SQLite has no "ADD COLUMN IF NOT EXISTS". */
@@ -168,7 +173,11 @@ const CLASS_COLUMNS: [string, string][] = [
 /** A due date a teacher can set on an assigned unit (ms since epoch). */
 const ASSIGNMENT_COLUMNS: [string, string][] = [["due_at", "INTEGER"]];
 const SESSION_COLUMNS: [string, string][] = [["user_agent", "TEXT"]];
-const FAMILY_COLUMNS: [string, string][] = [["billing_event_at", "INTEGER NOT NULL DEFAULT 0"]];
+const FAMILY_COLUMNS: [string, string][] = [
+  ["billing_event_at", "INTEGER NOT NULL DEFAULT 0"],
+  // App Store original transaction id; links renewals and Server Notifications to the family.
+  ["apple_original_transaction_id", "TEXT"],
+];
 
 async function addColumns(c: Client, table: string, columns: [string, string][]) {
   const have = new Set((await c.execute(`PRAGMA table_info(${table})`)).rows.map((r) => String(r.name)));

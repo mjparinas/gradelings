@@ -1,0 +1,38 @@
+# Generate with: brew install xcodegen && cd ios && xcodegen generate
+name: Gradelings
+options:
+  bundleIdPrefix: ca.grademap
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    TARGETED_DEVICE_FAMILY: "1,2"
+    INFOPLIST_KEY_UILaunchScreen_Generation: YES
+    INFOPLIST_KEY_UISupportedInterfaceOrientations: "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+    INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+    SITE_URL: https://gradelings.com
+configs:
+  Debug: debug
+  Release: release
+targets:
+  Gradelings:
+    type: application
+    platform: iOS
+    sources:
+      - path: Gradelings
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: ca.grademap.app
+        PRODUCT_NAME: Gradelings
+        MARKETING_VERSION: "1.0.0"
+        CURRENT_PROJECT_VERSION: 1
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_FILE: Gradelings/Info.plist
+        INFOPLIST_KEY_CFBundleDisplayName: Gradelings
+        INFOPLIST_KEY_LSRequiresIPhoneOS: YES
+        CODE_SIGN_STYLE: Automatic
+        # Turn on In-App Purchase in the App ID; StoreKit 2 needs no extra entitlement file.
+    scheme:
+      storeKitConfiguration: Gradelings/Products.storekit

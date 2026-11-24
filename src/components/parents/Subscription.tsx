@@ -1,7 +1,15 @@
 "use client";
 
 import { useEffect, useState, useSyncExternalStore } from "react";
-import { devBilling, openBillingPortal, refreshAccount, startCheckout, type BillingInfo } from "@/lib/account";
+import {
+  confirmApplePurchase,
+  devBilling,
+  openBillingPortal,
+  refreshAccount,
+  startCheckout,
+  type BillingInfo,
+} from "@/lib/account";
+import { hasIosBridge, iosManageSubscriptions, iosPurchase, iosRestore, isIosApp } from "@/lib/ios";
 import { FREE_UNITS_PER_COURSE, isPremium, MAX_CHILDREN, PRICES, trialDaysLeft } from "@/lib/plan";
 import { useRoute } from "@/lib/router";
 import { useStore } from "@/lib/store";
@@ -26,9 +34,11 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
   const [error, setError] = useState("");
   // The server snapshot is false so the first render matches the static page.
   const inAndroidApp = useSyncExternalStore(noSubscribe, isAndroidApp, () => false);
+  const inIosApp = useSyncExternalStore(noSubscribe, isIosApp, () => false);
   const premium = isPremium(family);
   const subscribed = family.subscription && ["active", "trialing", "past_due"].includes(family.subscription.status);
   const checkout = query.get("checkout");
+  const appleBilled = family.subscription?.source === "apple";
 
   useEffect(() => {
     // Coming back from Stripe: pull the new plan from the server.
@@ -46,6 +56,21 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
       setBusy(false);
     }
   };
+
+  const buyApple = (interval: "month" | "year") =>
+    run(async () => {
+      const purchase = await iosPurchase(interval);
+      await confirmApplePurchase(purchase.signedTransaction);
+      onBilling(await refreshAccount());
+    });
+
+  const restoreApple = () =>
+    run(async () => {
+      const purchases = await iosRestore();
+      if (purchases.length === 0) throw new Error("No App Store membership found for this Apple ID.");
+      for (const p of purchases) await confirmApplePurchase(p.signedTransaction);
+      onBilling(await refreshAccount());
+    });
 
   return (
     <>
@@ -76,6 +101,17 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
         <Panel title={subscribed ? "Manage" : "Choose a plan"}>
           {inAndroidApp ? (
             <p className="font-read">Memberships can&apos;t be changed in this app. Your plan shows here once it is active on your account.</p>
+          ) : inIosApp ? (
+            <IosBilling
+              busy={busy}
+              subscribed={!!subscribed}
+              appleBilled={!!appleBilled}
+              hasAccount={!!family.account}
+              appleReady={!!billing?.apple && hasIosBridge()}
+              onBuy={buyApple}
+              onRestore={restoreApple}
+              onManage={() => run(() => iosManageSubscriptions())}
+            />
           ) : !family.account ? (
             <p className="font-read">
               To subscribe, first <a className="font-bold text-[#2f6fd6] underline" href="#/account">create a free account</a> so your membership works on every device.
@@ -122,5 +158,73 @@ export function SubscriptionPage({ billing, onBilling }: { billing: BillingInfo 
         </Panel>
       </div>
     </>
+  );
+}
+
+function IosBilling({
+  busy,
+  subscribed,
+  appleBilled,
+  hasAccount,
+  appleReady,
+  onBuy,
+  onRestore,
+  onManage,
+}: {
+  busy: boolean;
+  subscribed: boolean;
+  appleBilled: boolean;
+  hasAccount: boolean;
+  appleReady: boolean;
+  onBuy: (interval: "month" | "year") => void;
+  onRestore: () => void;
+  onManage: () => void;
+}) {
+  if (!hasAccount) {
+    return (
+      <p className="font-read">
+        To subscribe, first <a className="font-bold text-[#2f6fd6] underline" href="#/account">create a free account</a> so your membership works on every device.
+      </p>
+    );
+  }
+  if (subscribed) {
+    return (
+      <div className="flex flex-col gap-3">
+        {appleBilled ? (
+          <button type="button" disabled={busy || !appleReady} className="rounded-xl bg-[#253047] px-4 py-3 font-bold text-white disabled:opacity-50" onClick={() => void onManage()}>
+            Manage or cancel in App Store
+          </button>
+        ) : (
+          <p className="font-read">Your membership is active on this account. To change a web membership, use the website on a computer or Android device.</p>
+        )}
+        <button type="button" disabled={busy || !appleReady} className="rounded-xl border border-line px-4 py-3 font-semibold disabled:opacity-50" onClick={() => void onRestore()}>
+          Restore App Store purchase
+        </button>
+      </div>
+    );
+  }
+  return (
+    <div className="flex flex-col gap-3">
+      {(["year", "month"] as const).map((interval) => (
+        <button
+          key={interval}
+          type="button"
+          disabled={busy || !appleReady}
+          onClick={() => void onBuy(interval)}
+          className={`flex items-center justify-between rounded-2xl border-2 px-4 py-3 text-left disabled:opacity-50 ${interval === "year" ? "border-[#25b47e] bg-good-soft" : "border-line"}`}
+        >
+          <span>
+            <span className="block text-lg font-bold">{interval === "year" ? "Yearly" : "Monthly"}</span>
+            <span className="block text-sm text-ink-soft">{interval === "year" ? `${PRICES.year.note} · billed once a year` : "Cancel any time"}</span>
+          </span>
+          <span className="text-xl font-bold">{PRICES[interval].label}</span>
+        </button>
+      ))}
+      <button type="button" disabled={busy || !appleReady} className="rounded-xl border border-line px-4 py-3 font-semibold disabled:opacity-50" onClick={() => void onRestore()}>
+        Restore App Store purchase
+      </button>
+      {!appleReady && <p className="text-sm text-ink-soft">Connecting to the App Store…</p>}
+      <p className="text-sm text-ink-soft">Payment is charged to your Apple ID. Prices in Canadian dollars.</p>
+    </div>
   );
 }

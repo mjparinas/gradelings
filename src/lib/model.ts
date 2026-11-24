@@ -82,7 +82,13 @@ export interface FamilyInfo {
   };
   plan: "trial" | "free" | "premium";
   trialEndsAt: number;
-  subscription?: { status: string; interval?: "month" | "year"; currentPeriodEnd?: number };
+  subscription?: {
+    status: string;
+    interval?: "month" | "year";
+    currentPeriodEnd?: number;
+    /** Who collects payment: App Store, Stripe, or unset (trial / legacy). */
+    source?: "apple" | "stripe";
+  };
   updatedAt: number;
 }
 

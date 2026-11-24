@@ -55,5 +55,11 @@ next-env.d.ts
 /android/*.aab
 /android/*.apk
 
+# iOS XcodeGen output and local build products (docs/IOS.md)
+/ios/Gradelings.xcodeproj/
+/ios/Gradelings.xcworkspace/
+/ios/**/xcuserdata/
+/ios/**/DerivedData/
+
 # Piper read-aloud files, written by scripts/fetch-piper.mjs
 /public/piper/

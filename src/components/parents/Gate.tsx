@@ -1,12 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { hasIosBridge, iosUnlockParent, isIosApp } from "@/lib/ios";
 import { useStore } from "@/lib/store";
 import { Critter } from "../Critter";
 
 // Parent PIN. On first visit the parent sets one; after that the parent area
 // needs it. "Forgot PIN" asks a multiplication question young kids can't do.
+// In the iOS App Store shell, Face ID / device passcode can unlock when a PIN exists.
 
 function Keypad({ value, onChange, onSubmit, max = 6 }: { value: string; onChange: (v: string) => void; onSubmit: () => void; max?: number }) {
   return (
@@ -52,6 +54,17 @@ export function Gate({ onPass }: { onPass: () => void }) {
   const [resetting, setResetting] = useState(false);
 
   const creating = !pin || resetting;
+
+  useEffect(() => {
+    if (creating || forgot || !isIosApp() || !hasIosBridge()) return;
+    let cancelled = false;
+    void iosUnlockParent().then((ok) => {
+      if (!cancelled && ok) onPass();
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [creating, forgot, onPass]);
 
   const submit = async () => {
     setError("");

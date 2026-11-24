@@ -72,7 +72,7 @@ Tests are duplicated across screen sizes only where layout can break:
   - making it as compelling as a good video game.
   - Research is in `docs/research/`.
 - **Name:** "Gradelings" is a working name. It is set once in `src/lib/brand.ts`; never hard-code it elsewhere. The name was chosen because it works across provinces and countries.
-- **Platform:** a web-first installable app (PWA) built with Next.js. Android is a Trusted Web Activity that wraps `/play/` (`android/`, `docs/ANDROID.md`), not Capacitor. Don't add features that only work in a native shell.
+- **Platform:** a web-first installable app (PWA) built with Next.js. Android is a Trusted Web Activity that wraps `/play/` (`android/`, `docs/ANDROID.md`). iOS is a thin Swift `WKWebView` shell (`ios/`, `docs/IOS.md`) with StoreKit, Face ID and haptics — not Capacitor. Don't add native-only features beyond that allowlist; the web app remains the product.
 
 ### Money
 - **No ads, ever. No tracking pixels. Never sell data.** Kids can never buy anything; coins are earned only by learning.

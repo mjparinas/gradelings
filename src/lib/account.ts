@@ -89,6 +89,8 @@ export async function signOut() {
 
 export interface BillingInfo {
   stripe: boolean;
+  /** App Store product ids are configured; the iOS shell can offer StoreKit. */
+  apple: boolean;
   dev: boolean;
 }
 
@@ -111,6 +113,12 @@ export async function refreshAccount(): Promise<BillingInfo | null> {
 export async function startCheckout(interval: "month" | "year") {
   const { url } = await post<{ url: string }>("/api/billing/checkout/", { interval });
   window.location.href = url;
+}
+
+/** Confirm a StoreKit purchase or restore with the server (iOS App Store shell). */
+export async function confirmApplePurchase(signedTransaction: string) {
+  const { family } = await post<{ family: FamilyInfo }>("/api/billing/apple/", { signedTransaction });
+  adopt(family);
 }
 
 export async function openBillingPortal() {
