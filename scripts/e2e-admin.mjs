@@ -63,16 +63,48 @@ async function scan(name) {
   for (const v of violations) fail(`${name}: ${v.id} (${v.impact}) ${v.help}, e.g. ${v.nodes[0]?.target.join(" ")}`);
   if (!violations.length) console.log(`ok   ${name} has no automated accessibility problems`);
 }
+/** Which area owns each tab after the nav was grouped (AdminApp NAV_GROUPS). */
+const TAB_AREA = {
+  "To Do": "Work",
+  Users: "Work",
+  Inbox: "Work",
+  Feedback: "Work",
+  Reports: "Work",
+  Overview: "Numbers",
+  Funnel: "Reach",
+  Traffic: "Reach",
+  Emails: "Reach",
+  Automations: "Reach",
+  Codes: "Money",
+  Sales: "Money",
+  Flags: "Configure",
+  "A/B Tests": "Configure",
+  System: "Configure",
+  Log: "Configure",
+};
 const tab = async (name) => {
+  const area = TAB_AREA[name];
+  if (area) {
+    const areas = page.getByRole("navigation", { name: "Admin areas" });
+    const areaBtn = areas.getByRole("button", { name: new RegExp(`^${area}`) });
+    if ((await areaBtn.getAttribute("aria-current")) !== "true") await areaBtn.click();
+  }
   // "To Do" carries a count after its name.
   await page.getByRole("navigation", { name: "Admin sections" }).getByRole("button", name === "To Do" ? { name: /^To Do/ } : { name, exact: true }).click();
   await page.waitForTimeout(400);
+};
+/** Opens a closed Overview metric disclosure. */
+const expand = async (name) => {
+  const btn = page.getByRole("button", { name, exact: true });
+  if ((await btn.getAttribute("aria-expanded")) !== "true") await btn.click();
 };
 async function signIn(email) {
   await page.getByLabel("Email").fill(email);
   await page.getByLabel("Password").fill(PASSWORD);
   await page.getByRole("button", { name: "Sign In" }).click();
 }
+// Lifetime access and turning off a default-on flag ask the browser to confirm.
+page.on("dialog", (d) => d.accept());
 
 // A parent is not an admin.
 await page.goto(`${BASE}/admin/`);
@@ -85,8 +117,11 @@ await page.getByRole("button", { name: "Sign Out" }).click();
 // The admin gets in.
 await page.getByRole("heading", { name: "Admin Sign In" }).waitFor();
 await signIn(ADMIN);
-check(await page.getByText("Families", { exact: true }).first().waitFor({ timeout: 15000 }).then(() => true, () => false), "the admin sees the overview");
+check(await page.getByRole("heading", { name: "Needs you" }).waitFor({ timeout: 15000 }).then(() => true, () => false), "the admin sees the overview");
 check(await page.getByRole("img", { name: "Revenue by Month" }).first().waitFor({ timeout: 15000 }).then(() => true, () => false), "the overview charts revenue by month");
+await expand("Customers");
+await expand("Growth");
+check(await page.getByText("Families", { exact: true }).first().waitFor({ timeout: 15000 }).then(() => true, () => false), "the overview lists families");
 check(await page.getByRole("img", { name: "Sign-Ups per Week" }).first().waitFor({ timeout: 15000 }).then(() => true, () => false), "the overview charts sign-ups");
 check(await page.getByRole("heading", { name: "Trial to Paid" }).waitFor({ timeout: 8000 }).then(() => true, () => false), "the overview has the trial-to-paid insights");
 check(await page.getByRole("heading", { name: "Where Sign-Ups Come From" }).waitFor({ timeout: 8000 }).then(() => true, () => false), "the overview has the sign-up sources insights");
@@ -115,8 +150,12 @@ check(await vis(page.getByRole("dialog", { name: "Profit by Month" })), "the pro
 await page.getByRole("button", { name: "Close" }).click();
 await page.getByRole("button", { name: /^Families \d/ }).click();
 await list.getByRole("button", { name: parentEmail }).click();
-check(await page.getByRole("button", { name: "Give Lifetime Access" }).waitFor({ timeout: 8000 }).then(() => true, () => false), "an email in the list opens the family in Users");
+check(await page.getByRole("heading", { name: "Account Snapshot" }).waitFor({ timeout: 8000 }).then(() => true, () => false), "an email in the list opens the family in Users");
+await page.getByRole("button", { name: "Access" }).click();
+check(await page.getByRole("button", { name: "Give Lifetime Access" }).waitFor({ timeout: 8000 }).then(() => true, () => false), "the family Access section offers lifetime access");
 await tab("Overview");
+await expand("Customers");
+await expand("Growth");
 
 // Switch the Shop off, and the kids' app hides it. The switch shows the saved state, so it changes
 // once the server has answered.
@@ -191,12 +230,14 @@ await tab("Users");
 await page.getByLabel("Search by email or family id").fill(parentEmail);
 await page.getByRole("button", { name: "Search", exact: true }).click();
 await page.getByRole("button", { name: parentEmail }).click();
+check(await vis(page.getByText(/Last sign-in:/)), "a family's page shows the last sign-in");
+await page.getByRole("button", { name: "Access" }).click();
 await page.getByRole("button", { name: "Give Lifetime Access" }).click();
 check(await page.getByText("Lifetime access given.").waitFor({ timeout: 8000 }).then(() => true, () => false), "the admin gives a family lifetime access");
 // The family reloads after the message, so wait for the new access line.
 check(await page.getByText("Lifetime", { exact: true }).first().waitFor({ timeout: 8000 }).then(() => true, () => false), "the family shows lifetime access");
+await page.getByRole("button", { name: "Billing" }).click();
 check(await vis(page.getByRole("heading", { name: "Email This Family" })), "a family's page offers to email them");
-check(await vis(page.getByText(/Last sign-in:/)), "a family's page shows the last sign-in");
 // With no email keys on the server, sending is refused and nothing goes out.
 await page.getByRole("button", { name: "Send Email" }).click();
 check(await page.getByText("The email couldn't be sent. Check the email settings.").waitFor({ timeout: 8000 }).then(() => true, () => false), "sending without email keys says so");
