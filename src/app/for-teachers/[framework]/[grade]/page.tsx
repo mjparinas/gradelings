@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { breadcrumbJsonLd } from "@/components/site/jsonld";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { TeacherCta } from "@/components/site/TeacherCta";
+import { TeacherPitch } from "@/components/site/TeacherPitch";
 import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle, gradeLabel } from "@/components/site/curriculum";
 import { TEACHER_FRAMEWORKS, teacherPath } from "@/components/site/teachers";
 import { getSubjectMeta, gradeSlug, subjectInSentence } from "@/content/subjects";
@@ -51,7 +52,7 @@ export default async function TeacherGradePage({ params }: Props) {
   const i = grades.indexOf(grade);
 
   return (
-    <SitePage>
+    <SitePage lead="teachers">
       <JsonLd data={breadcrumbJsonLd(crumbs)} />
       <Crumbs items={crumbs} />
       <h1 className="text-4xl font-bold">
@@ -60,6 +61,7 @@ export default async function TeacherGradePage({ params }: Props) {
       <p className="mt-2 max-w-3xl font-read text-lg text-ink-soft">
         Every {gradeLabel(f, grade)} unit in {APP_NAME}, matched to the {f.curriculumName}. Open a unit to read what it covers and try sample questions, then assign it to your class.
       </p>
+      <TeacherPitch gradeLabel={gradeLabel(f, grade)} />
       <div className="mt-6 grid gap-5 lg:grid-cols-2">
         {coursesFor(f, grade).map((c) => {
           const meta = getSubjectMeta(c.subject);
