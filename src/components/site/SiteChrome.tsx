@@ -216,7 +216,8 @@ export function PageCta({ play, lead = "subscribe", short = false }: { play?: st
 }
 
 /**
- * Which button a page puts first. Subscribe leads where people come to look at buying (home, pricing, about).
+ * Which button a page puts first. Subscribe leads where people come to look at buying (home, pricing).
+ * About leads with the free trial so the kindness/trust story ends on try, not pay (November 2026).
  * Pages people find from a search (curriculum, guides, worksheets, report cards) lead with the free trial: a
  * stranger from Google tries before paying (October 2026: 7 Subscribe clicks against about 45 trial clicks there).
  */
