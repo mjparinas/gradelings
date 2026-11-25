@@ -16,8 +16,10 @@ import { AppBadges } from "./AppBadges";
 /**
  * `play` is the "Try it free" link for this page (`playHref`), so the app opens on what the visitor was reading.
  * `lead`: which button comes first (see `Lead`). A page that leads with the trial has no full-width Subscribe bar on phones.
+ * Teacher pages lead with create-account instead of Play free / Subscribe, so the chrome matches “classes are free for now”.
  */
 export function SiteHeader({ play = "/play/", lead = "subscribe" }: { play?: string; lead?: Lead }) {
+  const teachers = lead === "teachers";
   return (
     <header className="print:hidden sticky top-0 z-30 border-b border-line bg-paper/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3">
@@ -44,14 +46,27 @@ export function SiteHeader({ play = "/play/", lead = "subscribe" }: { play?: str
           <NavLink href="/about/" className="hidden rounded-lg px-2 py-1 hover:bg-black/5 lg:inline">
             About
           </NavLink>
-          <a href={SUBSCRIBE_HREF} className="hidden rounded-lg px-2 py-1 font-bold hover:bg-black/5 lg:inline">
-            Subscribe
-          </a>
+          {!teachers && (
+            <a href={SUBSCRIBE_HREF} className="hidden rounded-lg px-2 py-1 font-bold hover:bg-black/5 lg:inline">
+              Subscribe
+            </a>
+          )}
           <HeaderSignIn />
           {/* The apps are big single-page bundles: fetch them on tap, not on every public page view. */}
-          <AppLink href={play} className="btn btn-good h-11 px-4 text-base">
-            Play free
-          </AppLink>
+          {teachers ? (
+            <>
+              <AppLink href={play} className="hidden rounded-lg px-2 py-1 hover:bg-black/5 sm:inline">
+                Play free
+              </AppLink>
+              <AppLink href={TEACHER_SIGNUP} className="btn btn-good h-11 px-4 text-base">
+                Create free account
+              </AppLink>
+            </>
+          ) : (
+            <AppLink href={play} className="btn btn-good h-11 px-4 text-base">
+              Play free
+            </AppLink>
+          )}
         </nav>
       </div>
       {lead === "subscribe" && (
@@ -191,11 +206,23 @@ export function SiteFooter({ build }: { /** A build line such as "Build 3f9a1c2"
 }
 
 /**
+ * Which button a page puts first. Subscribe leads where people come to look at buying (home, pricing).
+ * About leads with the free trial so the kindness/trust story ends on try, not pay (November 2026).
+ * Pages people find from a search (curriculum, guides, worksheets, report cards) lead with the free trial: a
+ * stranger from Google tries before paying (October 2026: 7 Subscribe clicks against about 45 trial clicks there).
+ * Teacher pages (`teachers`) lead with create-account and drop the Subscribe bar / green Play free.
+ */
+export type Lead = "subscribe" | "trial" | "teachers";
+
+/** Family offer buttons only. Teacher pages use `TeacherCta` instead; pass `"subscribe"` or `"trial"` here. */
+export type FamilyLead = Exclude<Lead, "teachers">;
+
+/**
  * The closing call to action for public pages that bring in search visitors. Every page that
  * explains the curriculum or a guide ends with it (`<SitePage cta>`), so a parent who has read
  * enough always has a button to start practising.
  */
-export function PageCta({ play, lead = "subscribe", short = false }: { play?: string; lead?: Lead; short?: boolean }) {
+export function PageCta({ play, lead = "subscribe", short = false }: { play?: string; lead?: FamilyLead; short?: boolean }) {
   const offer = lead === "trial" ? `Try everything free for ${TRIAL_DAYS} days with no card, then subscribe if it helps.` : `Subscribe now, or try everything free for ${TRIAL_DAYS} days with no card.`;
   return (
     <section aria-labelledby="page-cta" className="card mt-10 flex flex-col gap-3 p-6">
@@ -215,14 +242,6 @@ export function PageCta({ play, lead = "subscribe", short = false }: { play?: st
   );
 }
 
-/**
- * Which button a page puts first. Subscribe leads where people come to look at buying (home, pricing).
- * About leads with the free trial so the kindness/trust story ends on try, not pay (November 2026).
- * Pages people find from a search (curriculum, guides, worksheets, report cards) lead with the free trial: a
- * stranger from Google tries before paying (October 2026: 7 Subscribe clicks against about 45 trial clicks there).
- */
-export type Lead = "subscribe" | "trial";
-
 /** Subscribe and the free trial, `lead` first and green. */
 export function SubscribeActions({
   size = "lg",
@@ -236,7 +255,7 @@ export function SubscribeActions({
   className?: string;
   /** The trial link (`playHref`). */
   play?: string;
-  lead?: Lead;
+  lead?: FamilyLead;
 }) {
   const cls = size === "lg" ? "min-h-14 px-8 text-xl" : "min-h-12 px-6 text-lg";
   const subscribe = (
@@ -269,6 +288,8 @@ export function SitePage({
   /** A build line for the footer (`buildLabel`); the home page passes it. */
   build?: string;
 }) {
+  // Teacher pages own their CTA (`TeacherCta`); the family PageCta would push Subscribe / trial.
+  const familyCta = cta && lead !== "teachers";
   return (
     <>
       <RefCapture />
@@ -279,7 +300,7 @@ export function SitePage({
       <SiteHeader play={play} lead={lead} />
       <main id={MAIN_ID} tabIndex={-1} className="mx-auto max-w-6xl px-4 py-8">
         {children}
-        {cta && <PageCta play={play} lead={lead} short={cta === "short"} />}
+        {familyCta && <PageCta play={play} lead={lead === "trial" ? "trial" : "subscribe"} short={cta === "short"} />}
       </main>
       <SiteFooter build={build} />
     </>
