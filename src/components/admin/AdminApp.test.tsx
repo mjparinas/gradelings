@@ -72,8 +72,28 @@ function asAdmin() {
 
 const sent = (url: string, method: string) => mocks.call.mock.calls.find(([u, m]) => u === url && m === method)?.[2];
 
+const TAB_AREA: Record<string, string> = {
+  Users: "Work",
+  Overview: "Numbers",
+  Codes: "Money",
+  Flags: "Configure",
+  "A/B Tests": "Configure",
+  System: "Configure",
+};
+
+async function goTab(user: ReturnType<typeof userEvent.setup>, name: string) {
+  const area = TAB_AREA[name];
+  const areas = await screen.findByRole("navigation", { name: "Admin areas" });
+  if (area) {
+    const areaBtn = within(areas).getByRole("button", { name: new RegExp(`^${area}`) });
+    if (areaBtn.getAttribute("aria-current") !== "true") await user.click(areaBtn);
+  }
+  await user.click(await screen.findByRole("button", { name }));
+}
+
 beforeEach(() => {
   mocks.call.mockReset();
+  vi.spyOn(window, "confirm").mockReturnValue(true);
   // Tab clicks add history entries, so each test starts on the panel's own address.
   window.history.replaceState(null, "", "/admin/");
 });
@@ -103,7 +123,7 @@ describe("AdminApp", () => {
     expect(header.textContent!.startsWith(APP_NAME)).toBe(true);
     // The wordmark goes to the homepage.
     expect(within(header).getByRole("link", { name: APP_NAME })).toHaveAttribute("href", "/");
-    await user.click(screen.getByRole("button", { name: "Flags" }));
+    await goTab(user, "Flags");
     await user.click(await screen.findByRole("switch"));
     expect(sent("/api/admin/flags/", "PUT")).toEqual({ key: "shop", enabled: false, rollout: 100 });
   });
@@ -136,7 +156,7 @@ describe("AdminApp", () => {
     asAdmin();
     const user = userEvent.setup();
     render(<AdminApp />);
-    await user.click(await screen.findByRole("button", { name: "Codes" }));
+    await goTab(user, "Codes");
     await user.click(screen.getByRole("combobox", { name: "Kind" }));
     await user.click(await screen.findByRole("option", { name: "Discount at checkout" }));
     await user.clear(screen.getByLabelText("Percent off"));
@@ -152,7 +172,7 @@ describe("AdminApp", () => {
     asAdmin();
     const user = userEvent.setup();
     render(<AdminApp />);
-    await user.click(await screen.findByRole("button", { name: "A/B Tests" }));
+    await goTab(user, "A/B Tests");
     await user.type(screen.getByLabelText(/^Key/), "home-colours");
     await user.click(screen.getByRole("button", { name: "Save Draft" }));
     await waitFor(() => expect(sent("/api/admin/experiments/", "POST")).toEqual({ key: "home-colours", description: "", variants: [{ name: "control", weight: 50 }, { name: "variant", weight: 50 }] }));
@@ -162,13 +182,15 @@ describe("AdminApp", () => {
     asAdmin();
     const user = userEvent.setup();
     render(<AdminApp />);
-    await user.click(await screen.findByRole("button", { name: "Users" }));
+    await goTab(user, "Users");
     await user.click(await screen.findByRole("button", { name: "pat@example.com" }));
     // An unknown province is shown as saved, not as the default; no province means the default.
     expect(await screen.findByText("Child 1: Grade 3 (Ontario)")).toBeInTheDocument();
     expect(screen.getByText("Child 2: Grade 5 (zz-unknown)")).toBeInTheDocument();
     expect(screen.getByText("Child 3: Grade 1 (British Columbia)")).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Access" }));
     await user.click(screen.getByRole("button", { name: "Give Lifetime Access" }));
+    expect(window.confirm).toHaveBeenCalled();
     expect(sent("/api/admin/users/", "POST")).toEqual({ familyId: "fam-1", action: "grant-access", days: null });
     expect(await screen.findByText("Lifetime access given.")).toBeInTheDocument();
   });
@@ -177,14 +199,17 @@ describe("AdminApp", () => {
     asAdmin();
     const user = userEvent.setup();
     render(<AdminApp />);
+    await screen.findByRole("heading", { name: "Overview" });
+    const customers = screen.getByRole("button", { name: "Customers" });
+    if (customers.getAttribute("aria-expanded") !== "true") await user.click(customers);
     await user.click(await screen.findByRole("button", { name: /^Families 1 / }));
     await user.click(await within(await screen.findByRole("dialog", { name: "Families" })).findByRole("button", { name: "pat@example.com" }));
     expect(screen.queryByRole("dialog")).toBeNull();
     expect(screen.getByRole("button", { name: "Users" })).toHaveAttribute("aria-current", "page");
     expect(await screen.findByText(/Grade 3 \(Ontario\)/)).toBeInTheDocument();
     // Going back to Users from the tabs shows the list again.
-    await user.click(screen.getByRole("button", { name: "Overview" }));
-    await user.click(screen.getByRole("button", { name: "Users" }));
+    await goTab(user, "Overview");
+    await goTab(user, "Users");
     expect(await screen.findByRole("heading", { name: "Users" })).toBeInTheDocument();
   });
 
@@ -200,7 +225,7 @@ describe("AdminApp", () => {
     render(<AdminApp />);
     const banner = await screen.findByRole("region", { name: /Maintenance Mode Is On/ });
     expect(banner).toHaveTextContent("Visitors only see the home page (on since");
-    await user.click(screen.getByRole("button", { name: "Codes" }));
+    await goTab(user, "Codes");
     expect(screen.getByRole("region", { name: /Maintenance Mode Is On/ })).toBeInTheDocument();
     await user.click(within(banner).getByRole("button", { name: "Turn Off Maintenance Mode" }));
     expect(sent("/api/admin/maintenance/", "PUT")).toEqual({ on: false });
@@ -220,7 +245,7 @@ describe("AdminApp", () => {
     render(<AdminApp />);
     await screen.findByText("Families");
     expect(screen.queryByRole("region", { name: /Maintenance Mode Is On/ })).not.toBeInTheDocument();
-    await user.click(screen.getByRole("button", { name: "System" }));
+    await goTab(user, "System");
     const card = await screen.findByRole("region", { name: "Maintenance Mode" });
     expect(within(card).getByText("Off.")).toBeInTheDocument();
     await user.click(within(card).getByRole("button", { name: "Turn On Maintenance Mode…" }));

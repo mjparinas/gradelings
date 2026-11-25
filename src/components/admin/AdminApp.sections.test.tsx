@@ -59,16 +59,48 @@ function asAdmin(extra: Handler = () => undefined) {
 
 const sent = (url: string, method: string) => mocks.call.mock.calls.findLast(([u, m]) => u === url && m === method)?.[2];
 
+/** Which area owns each tab after the nav was grouped. */
+const TAB_AREA: Record<string, string> = {
+  "To Do": "Work",
+  Users: "Work",
+  Inbox: "Work",
+  Feedback: "Work",
+  Reports: "Work",
+  Overview: "Numbers",
+  Funnel: "Reach",
+  Traffic: "Reach",
+  Emails: "Reach",
+  Automations: "Reach",
+  Codes: "Money",
+  Sales: "Money",
+  Flags: "Configure",
+  "A/B Tests": "Configure",
+  System: "Configure",
+  Log: "Configure",
+};
+
+async function goTab(user: ReturnType<typeof userEvent.setup>, name: string) {
+  const area = TAB_AREA[name];
+  const areas = await screen.findByRole("navigation", { name: "Admin areas" });
+  if (area) {
+    const areaBtn = within(areas).getByRole("button", { name: new RegExp(`^${area}`) });
+    if (areaBtn.getAttribute("aria-current") !== "true") await user.click(areaBtn);
+  }
+  const tab = await screen.findByRole("button", { name: new RegExp(`^${name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(\\s|$)`) });
+  await user.click(tab);
+  expect(screen.getByRole("button", { name: new RegExp(`^${name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(\\s|$)`) })).toHaveAttribute("aria-current", "page");
+}
+
 async function openTab(name: string) {
   const user = userEvent.setup();
   render(<AdminApp />);
-  await user.click(await screen.findByRole("button", { name }));
-  expect(screen.getByRole("button", { name })).toHaveAttribute("aria-current", "page");
+  await goTab(user, name);
   return user;
 }
 
 beforeEach(() => {
   mocks.call.mockReset();
+  vi.spyOn(window, "confirm").mockReturnValue(true);
   // Tab clicks add history entries, so each test starts on the panel's own address.
   window.history.replaceState(null, "", "/admin/");
 });
@@ -166,8 +198,8 @@ describe("AdminApp users", () => {
     });
     const user = await openTab("Users");
     await user.click(await screen.findByRole("button", { name: "pat@example.com" }));
-    const heading = await screen.findByRole("heading", { name: "pat@example.com, sam@example.com" });
-    const details = heading.parentElement!;
+    expect(await screen.findByRole("heading", { name: "pat@example.com, sam@example.com" })).toBeInTheDocument();
+    const details = screen.getByRole("heading", { name: "Account Snapshot" }).closest("div")!;
     expect(details).toHaveTextContent(/Subscription: active, yearly, renews /);
     expect(details).toHaveTextContent("Waiting discount: FALL40");
     expect(details).toHaveTextContent("(12,345 events)");
@@ -181,6 +213,7 @@ describe("AdminApp users", () => {
     expect(details).toHaveTextContent("GONE (deleted)");
     expect(details).toHaveTextContent("home-colours: variant");
 
+    await user.click(screen.getByRole("button", { name: "Access" }));
     await user.clear(screen.getByLabelText("Extend trial by (days)"));
     await user.type(screen.getByLabelText("Extend trial by (days)"), "7");
     await user.click(screen.getByRole("button", { name: "Extend Trial" }));
@@ -211,6 +244,7 @@ describe("AdminApp users", () => {
     });
     const user = await openTab("Users");
     await user.click(await screen.findByRole("button", { name: "pat@example.com" }));
+    await user.click(await screen.findByRole("button", { name: "Flags" }));
     const menu = await screen.findByRole("combobox", { name: "Shop for this family" });
     expect(menu).toHaveTextContent("Always off");
     await user.click(menu);
@@ -232,6 +266,7 @@ describe("AdminApp users", () => {
     const user = await openTab("Users");
     await user.click(await screen.findByRole("button", { name: "pat@example.com" }));
     expect(await screen.findByText("None yet.")).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Danger" }));
     expect(screen.queryByRole("button", { name: "Remove Access" })).not.toBeInTheDocument();
     const del = screen.getByRole("button", { name: "Delete Account" });
     expect(del).toBeDisabled();
@@ -251,6 +286,7 @@ describe("AdminApp users", () => {
     });
     const user = await openTab("Users");
     await user.click(await screen.findByRole("button", { name: "pat@example.com" }));
+    await user.click(await screen.findByRole("button", { name: "Danger" }));
     await user.type(await screen.findByLabelText("Type the account's email to confirm"), "wrong@example.com");
     await user.click(screen.getByRole("button", { name: "Delete Account" }));
     expect(await screen.findByRole("alert")).toHaveTextContent("The email doesn't match.");
@@ -344,17 +380,20 @@ describe("AdminApp flags", () => {
       if (url === "/api/admin/flags/" && method === "GET") return { flags: [flag({ overrides: 2 }), flag({ key: "weekly-email", label: "Weekly email", scope: "server", defaultOn: false, enabled: false, overrides: 1 })] };
     });
     const user = await openTab("Flags");
-    const items = within(await screen.findByRole("list")).getAllByRole("listitem");
-    expect(items[0]).toHaveTextContent("Kids' app · default on · 2 family overrides");
-    expect(items[1]).toHaveTextContent("Server · default off · 1 family override");
+    const onGroup = (await screen.findByRole("heading", { name: "Default on" })).closest("div")!;
+    const offGroup = screen.getByRole("heading", { name: "Off" }).closest("div")!;
+    const onItem = within(onGroup).getByRole("listitem");
+    const offItem = within(offGroup).getByRole("listitem");
+    expect(onItem).toHaveTextContent("Kids' app · default on · 2 family overrides");
+    expect(offItem).toHaveTextContent("Server · default off · 1 family override");
     // A switched-off flag has no rollout to set.
-    expect(within(items[1]).queryByLabelText("Rollout (% of families)")).not.toBeInTheDocument();
-    expect(within(items[1]).getByRole("switch")).not.toBeChecked();
+    expect(within(offItem).queryByLabelText("Rollout (% of families)")).not.toBeInTheDocument();
+    expect(within(offItem).getByRole("switch")).not.toBeChecked();
 
-    const save = within(items[0]).getByRole("button", { name: "Save Rollout" });
+    const save = within(onItem).getByRole("button", { name: "Save Rollout" });
     expect(save).toBeDisabled();
-    await user.clear(within(items[0]).getByLabelText("Rollout (% of families)"));
-    await user.type(within(items[0]).getByLabelText("Rollout (% of families)"), "25");
+    await user.clear(within(onItem).getByLabelText("Rollout (% of families)"));
+    await user.type(within(onItem).getByLabelText("Rollout (% of families)"), "25");
     await user.click(save);
     expect(sent("/api/admin/flags/", "PUT")).toEqual({ key: "shop", enabled: true, rollout: 25 });
   });
@@ -549,6 +588,7 @@ describe("AdminApp engagement", () => {
     });
     const user = userEvent.setup();
     render(<AdminApp />);
+    await user.click(await screen.findByRole("button", { name: /^Work\s*2\s*waiting$/ }));
     const todo = await screen.findByRole("button", { name: /^To Do\s*2\s*waiting$/ });
     await user.click(todo);
     await user.click(await screen.findByRole("button", { name: "Read and Reply" }));
@@ -567,6 +607,7 @@ describe("AdminApp engagement", () => {
     });
     const user = userEvent.setup();
     render(<AdminApp />);
+    await user.click(await screen.findByRole("button", { name: /^Work\s*2\s*waiting$/ }));
     const tab = await screen.findByRole("button", { name: /^Inbox\s*2\s*waiting$/ });
     await user.click(tab);
     expect(await screen.findByRole("button", { name: /^Inbox\s*1\s*waiting$/ })).toHaveAttribute("aria-current", "page");
@@ -574,8 +615,10 @@ describe("AdminApp engagement", () => {
 
   it("leaves the Inbox tab plain when nothing waits", async () => {
     asAdmin((url) => (url === "/api/admin/inbox/?count=1" ? { waiting: 0 } : undefined));
+    const user = userEvent.setup();
     render(<AdminApp />);
     await waitFor(() => expect(mocks.call).toHaveBeenCalledWith("/api/admin/inbox/?count=1"));
+    await user.click(await screen.findByRole("button", { name: "Work" }));
     expect(await screen.findByRole("button", { name: "Inbox" })).toBeInTheDocument();
   });
 
@@ -594,9 +637,11 @@ describe("AdminApp engagement", () => {
     const row = within(await screen.findByRole("table")).getAllByRole("row")[1];
     expect([...row.children].slice(5).map((c) => c.textContent)).toEqual(["2 days ago", "Never"]);
     await user.click(screen.getByRole("button", { name: "pat@example.com" }));
+    await user.click(await screen.findByRole("button", { name: "Access" }));
+    expect(await screen.findByText(/news and tips on/)).toBeInTheDocument();
+    await user.click(screen.getByRole("button", { name: "Billing" }));
     expect(await screen.findByRole("heading", { name: "Email This Family" })).toBeInTheDocument();
     expect(screen.getByText(/Last emailed from here 3 days ago/)).toBeInTheDocument();
-    expect(screen.getByText(/news and tips on/)).toBeInTheDocument();
     await user.click(screen.getByRole("button", { name: "Send Email" }));
     expect(sent("/api/admin/email/", "POST")).toMatchObject({ action: "send", familyId: "fam-1" });
   });
@@ -631,12 +676,15 @@ describe("AdminApp engagement", () => {
     asAdmin();
     const user = await openTab("Funnel");
     expect(window.location.search).toBe("?tab=Funnel");
-    await user.click(screen.getByRole("button", { name: "A/B Tests" }));
+    await goTab(user, "A/B Tests");
     expect(window.location.search).toBe("?tab=A%2FB%20Tests");
     // Clicking the tab already open adds no entry.
     const length = window.history.length;
     await user.click(screen.getByRole("button", { name: "A/B Tests" }));
     expect(window.history.length).toBe(length);
+    window.history.back();
+    // Switching area lands on that area's first tab (Flags) before A/B Tests.
+    await waitFor(() => expect(screen.getByRole("button", { name: "Flags" })).toHaveAttribute("aria-current", "page"));
     window.history.back();
     await waitFor(() => expect(screen.getByRole("button", { name: "Funnel" })).toHaveAttribute("aria-current", "page"));
     window.history.back();
@@ -653,7 +701,7 @@ describe("AdminApp engagement", () => {
     expect(await screen.findByRole("button", { name: "Overview" })).toHaveAttribute("aria-current", "page");
     window.history.pushState(null, "", "/admin/?family=fam-1");
     window.dispatchEvent(new PopStateEvent("popstate"));
-    expect(await screen.findByRole("heading", { name: "Billing" })).toBeInTheDocument();
+    expect(await screen.findByRole("heading", { name: "Account Snapshot" })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Users" })).toHaveAttribute("aria-current", "page");
   });
 

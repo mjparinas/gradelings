@@ -28,15 +28,18 @@ const FETCH = [
 // hashed policy and block the inline scripts the hashes allow.
 export const HEADER_POLICY = ["frame-ancestors 'none'", "base-uri 'self'", "form-action 'self'", "object-src 'none'"].join("; ");
 
+// Dev-only allowance so Impeccable live mode can load. Never reaches production (DEV_POLICY only).
+const __impeccableLiveDev = " http://localhost:8400";
+
 /**
  * `next dev` needs eval and inline code for hot reloading. Never used in production. As a header
  * it also reaches the Piper worker, which loads its cached scripts from blob: URLs.
  */
 export const DEV_POLICY = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:",
+  `script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:${__impeccableLiveDev}`,
   "style-src 'self' 'unsafe-inline'",
-  ...FETCH,
+  ...FETCH.map((d) => (d.startsWith("connect-src ") ? `${d}${__impeccableLiveDev}` : d)),
   "frame-ancestors 'none'",
 ].join("; ");
 

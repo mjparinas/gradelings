@@ -2,9 +2,20 @@
 import { fireEvent, render } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-const mocks = vi.hoisted(() => ({ replay: vi.fn(), warmConfetti: vi.fn(), cacheLoadedScripts: vi.fn(), tap: vi.fn() }));
+const mocks = vi.hoisted(() => ({
+  replay: vi.fn(),
+  warmConfetti: vi.fn(),
+  cacheLoadedScripts: vi.fn(),
+  watchStaleBuildErrors: vi.fn(),
+  onServiceWorkerControllerChange: vi.fn(),
+  tap: vi.fn(),
+}));
 vi.mock("@/lib/juice", () => ({ replay: mocks.replay, warmConfetti: mocks.warmConfetti }));
-vi.mock("@/lib/offline", () => ({ cacheLoadedScripts: mocks.cacheLoadedScripts }));
+vi.mock("@/lib/offline", () => ({
+  cacheLoadedScripts: mocks.cacheLoadedScripts,
+  watchStaleBuildErrors: mocks.watchStaleBuildErrors,
+  onServiceWorkerControllerChange: mocks.onServiceWorkerControllerChange,
+}));
 vi.mock("@/lib/sound", () => ({ sounds: { tap: mocks.tap } }));
 
 import { AppEffects, SW_DELAY_MS } from "./AppEffects";
@@ -86,9 +97,10 @@ describe("AppEffects", () => {
     vi.stubEnv("NODE_ENV", "production");
     window.history.replaceState(null, "", "/play/");
     render(<AppEffects />);
-    expect(register).toHaveBeenCalledWith("/sw.js");
-    expect(addEventListener).toHaveBeenCalledWith("controllerchange", mocks.cacheLoadedScripts);
+    expect(register).toHaveBeenCalledWith("/sw.js", { updateViaCache: "none" });
+    expect(addEventListener).toHaveBeenCalledWith("controllerchange", expect.any(Function));
     expect(mocks.cacheLoadedScripts).toHaveBeenCalledOnce();
+    expect(mocks.watchStaleBuildErrors).toHaveBeenCalledOnce();
   });
 
   it("waits until a public page has settled before installing the service worker", () => {
@@ -104,7 +116,7 @@ describe("AppEffects", () => {
       vi.advanceTimersByTime(SW_DELAY_MS - 1);
       expect(register).not.toHaveBeenCalled();
       vi.advanceTimersByTime(SW_DELAY_MS + 1);
-      expect(register).toHaveBeenCalledWith("/sw.js");
+      expect(register).toHaveBeenCalledWith("/sw.js", { updateViaCache: "none" });
     } finally {
       vi.useRealTimers();
     }

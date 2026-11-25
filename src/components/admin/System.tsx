@@ -139,7 +139,7 @@ function RestoreDrillForm({ onSaved }: { onSaved: () => void }) {
         Restore practised on
         <input type="date" value={day} max={today()} onChange={(e) => setDay(e.target.value)} className="min-h-11 rounded-xl border border-line px-3 font-normal" required />
       </label>
-      <button type="submit" disabled={busy || !day} className="min-h-11 rounded-xl bg-[#2a5bd7] px-4 font-semibold text-white disabled:opacity-50">
+      <button type="submit" disabled={busy || !day} className="min-h-11 rounded-xl bg-[#4f8ef7] px-4 font-bold text-[#0f172a] disabled:opacity-50">
         {busy ? "Saving…" : "Record Restore Practice"}
       </button>
       {msg && (
