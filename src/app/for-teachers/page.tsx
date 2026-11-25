@@ -2,16 +2,17 @@ import type { Metadata } from "next";
 import Link from "@/components/PublicLink";
 import { breadcrumbJsonLd, faqJsonLd } from "@/components/site/jsonld";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
-import { AndroidCta } from "@/components/site/AndroidCta";
 import { TeacherCta } from "@/components/site/TeacherCta";
+import { TeacherCurricula } from "@/components/site/TeacherCurricula";
 import { TeacherDemo } from "@/components/site/TeacherDemo";
-import { byCountry, kidPracticeSteps, regionSummary, regionWord } from "@/components/site/provinces";
-import { TEACHER_FRAMEWORKS, TEACHER_SIGNUP, teacherPath } from "@/components/site/teachers";
+import { kidPracticeSteps, regionSummary, regionWord } from "@/components/site/provinces";
+import { TEACHER_FRAMEWORKS, TEACHER_SIGNUP, featuredTeacherFrameworks, teacherPath } from "@/components/site/teachers";
 import { APP_NAME } from "@/lib/brand";
 import { Disclosure } from "@/components/Disclosure";
 import { JsonLd } from "@/lib/site";
 import { pageMeta } from "@/lib/pageMeta";
 import { US_CLASS_CONSENT } from "@/lib/classroom";
+import { AppLink } from "@/components/site/AppLink";
 
 /** e.g. "Canadian provinces and territories and US states": short enough to read as more regions are added. */
 const regions = regionSummary(TEACHER_FRAMEWORKS);
@@ -66,14 +67,20 @@ const FAQS = [
   },
   ...(usClasses ? [{ q: "Do US schools need parent consent?", a: US_CLASS_CONSENT }] : []),
   { q: "Is this a report-card mark?", a: `No. ${APP_NAME} shows how a student is practising. The teacher decides proficiency, as on the report card.` },
-  { q: "Which curriculum does it follow?", a: `Each class follows one ${region}, chosen when you create it, with units matched to its own curriculum from Pre-K to Grade 9. We cover ${regions}, listed under “Find your curriculum” above. Other provinces and states are on the way.` },
+  {
+    q: "Which curriculum does it follow?",
+    a: `Each class follows one ${region}, chosen when you create it, with units matched to its own curriculum from Pre-K to Grade 9. We cover ${regions}, listed under “Find your curriculum” below. Other provinces and states are on the way.`,
+  },
   { q: "Are there ads?", a: "No ads and no selling of data. Kids cannot buy anything." },
 ];
+
+const regionRows = TEACHER_FRAMEWORKS.map((f) => ({ slug: f.slug, region: f.region, country: f.country }));
+const featuredRows = featuredTeacherFrameworks().map((f) => ({ slug: f.slug, region: f.region, country: f.country }));
 
 export default function TeachersHub() {
   const crumbs = [{ label: "Home", href: "/" }, { label: "For teachers" }];
   return (
-    <SitePage>
+    <SitePage lead="teachers">
       <JsonLd data={[breadcrumbJsonLd(crumbs), faqJsonLd(FAQS)]} />
       <Crumbs items={crumbs} />
       <section className="grid items-center gap-8 py-4 md:grid-cols-[1.1fr_1fr]">
@@ -84,11 +91,11 @@ export default function TeachersHub() {
             Assign units matched to your curriculum, see how your students are practising, and let learning games be the reward for focused work. Available in {regions}. No ads, no student passwords, and families stay in control.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <Link prefetch={false} href={TEACHER_SIGNUP} className="btn btn-good min-h-14 px-6 text-xl">
+            <AppLink href={TEACHER_SIGNUP} className="btn btn-good min-h-14 px-6 text-xl">
               Create a free teacher account
-            </Link>
-            <a href="#curricula" className="btn min-h-14 px-6 text-xl">
-              Find your curriculum
+            </AppLink>
+            <a href="#how" className="btn min-h-14 px-6 text-xl">
+              See how it works
             </a>
           </div>
         </div>
@@ -110,27 +117,22 @@ export default function TeachersHub() {
             </li>
           ))}
         </ol>
+        <div className="mt-6 flex flex-wrap items-center gap-3">
+          <AppLink href={TEACHER_SIGNUP} className="btn btn-good min-h-12 px-6 text-lg">
+            Create a free teacher account
+          </AppLink>
+          <p className="font-read text-ink-soft">Classes are free for now. You can pick your curriculum after you sign up.</p>
+        </div>
       </section>
 
       <section aria-labelledby="curricula" className="scroll-mt-24 py-8">
         <h2 id="curricula" className="mb-2 text-3xl font-bold">
           Find your curriculum
         </h2>
-        <p className="mb-6 max-w-2xl font-read text-lg text-ink-soft">Pick your {region} to see the units you can assign in each grade and subject.</p>
-        {byCountry(TEACHER_FRAMEWORKS).map((group, i, groups) => (
-          <div key={group.country} className={i > 0 ? "mt-5" : ""}>
-            {groups.length > 1 && <h3 className="mb-2 text-xl font-bold">{group.heading}</h3>}
-            <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-              {group.frameworks.map((f) => (
-                <li key={f.id} className="flex">
-                  <Link href={teacherPath.framework(f)} className="card flex min-h-12 w-full items-center p-4 text-lg font-bold hover:border-[#4f8ef7]">
-                    {f.region}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        <p className="mb-6 max-w-2xl font-read text-lg text-ink-soft">
+          Optional: preview the units you can assign. Or skip ahead and create an account — you choose the {region} when you make your class.
+        </p>
+        <TeacherCurricula featured={featuredRows} regions={regionRows} regionWord={region} />
       </section>
 
       <section aria-labelledby="faq" className="py-8">
@@ -149,11 +151,18 @@ export default function TeachersHub() {
           <Link href="/privacy/" className="underline">
             privacy policy
           </Link>{" "}
-          and <Link href="/contact/" className="underline">get in touch</Link> first.
+          and{" "}
+          <Link href="/contact/" className="underline">
+            get in touch
+          </Link>{" "}
+          first. For the Android app on phones and tablets, see{" "}
+          <Link href="/android/" className="underline">
+            About the Android app
+          </Link>
+          .
         </p>
       </section>
       <TeacherCta showHub={false} />
-      <AndroidCta />
     </SitePage>
   );
 }

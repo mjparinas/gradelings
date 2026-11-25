@@ -19,10 +19,21 @@ export const TEACHER_FRAMEWORKS: Framework[] = FRAMEWORKS;
 /** Where a teacher creates an account and signs in. */
 export const TEACHER_SIGNUP = "/teachers/";
 
+/**
+ * Regions shown first on the teacher hub before “Browse all”.
+ * Curated for conversion (large / often-searched curricula); every other region stays one search or expand away.
+ */
+export const FEATURED_TEACHER_SLUGS = ["bc", "ontario", "alberta", "california", "texas", "new-york"] as const;
+
+export function featuredTeacherFrameworks(frameworks: readonly Framework[] = TEACHER_FRAMEWORKS): Framework[] {
+  const bySlug = new Map(frameworks.map((f) => [f.slug, f]));
+  return FEATURED_TEACHER_SLUGS.map((slug) => bySlug.get(slug)).filter((f): f is Framework => Boolean(f));
+}
+
 export const teacherPath = {
   hub: () => "/for-teachers/",
-  framework: (f: Framework) => `/for-teachers/${f.slug}/`,
-  grade: (f: Framework, g: GradeId) => `/for-teachers/${f.slug}/${gradeSlug(g)}/`,
+  framework: (f: Pick<Framework, "slug">) => `/for-teachers/${f.slug}/`,
+  grade: (f: Pick<Framework, "slug">, g: GradeId) => `/for-teachers/${f.slug}/${gradeSlug(g)}/`,
 };
 
 export function allTeacherPaths(): SitemapPath[] {
