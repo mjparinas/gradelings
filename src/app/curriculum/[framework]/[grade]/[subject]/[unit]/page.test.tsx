@@ -37,9 +37,13 @@ describe("curriculum unit page", () => {
 
     const samples = within(screen.getByRole("region", { name: "Try a few questions" })).getAllByText(/^Question \d$/);
     expect(samples.map((s) => s.textContent)).toEqual(["Question 1", "Question 2", "Question 3", "Question 4", "Question 5", "Question 6"]);
-    // The side panel's own call to action, besides the header's.
+    // The side panel's own call to action, besides the header's and the closing PageCta.
     expect(within(screen.getByRole("complementary")).getByRole("link", { name: "Play free" })).toHaveAttribute("href", `/play/#/start?framework=ca-bc&grade=3&subject=math&unit=${unit.id}`);
     expect(within(screen.getByRole("complementary")).getByRole("button", { name: /Share these questions/ })).toBeInTheDocument();
+    expect(within(screen.getByRole("region", { name: /Ready to try/ })).getByRole("link", { name: "Try it free" })).toHaveAttribute(
+      "href",
+      `/play/#/start?framework=ca-bc&grade=3&subject=math&unit=${unit.id}`,
+    );
   });
 
   it("lets a visitor answer tap-to-answer samples on the page, then offers the unit in the app after a few", async () => {

@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "@/components/PublicLink";
 import { notFound } from "next/navigation";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
-import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle, subjectTitle, gradeLabel, gradeSpan } from "@/components/site/curriculum";
+import { coursesFor, curriculumPath, gradesWithContent, resolve, subjectSeoTitle, gradeLabel, gradeSpan } from "@/components/site/curriculum";
 import { FRAMEWORKS } from "@/content/frameworks";
 import { GUIDES } from "@/content/guides";
-import { getSubjectMeta, subjectInSentence } from "@/content/subjects";
+import { subjectInSentence } from "@/content/subjects";
 import { APP_NAME } from "@/lib/brand";
 import { pageMeta } from "@/lib/pageMeta";
 import { FaqSection } from "@/components/site/FaqSection";
@@ -47,30 +47,24 @@ export default async function FrameworkPage({ params }: PageProps<"/curriculum/[
       <Crumbs items={[{ label: "Home", href: "/" }, { label: "Curriculum", href: curriculumPath.index() }, { label: f.curriculumName }]} />
       <h1 className="text-4xl font-bold">{f.curriculumName}: {gradeSpan(f, true)}</h1>
       <p className="mt-2 max-w-3xl font-read text-lg text-ink-soft">
-        Every {APP_NAME} unit is matched to a learning standard in the {f.curriculumName}. Choose a grade to see the units and try sample questions.
+        Every {APP_NAME} unit is matched to a learning standard in the {f.curriculumName}. Choose a grade to see subjects, units and sample questions.
       </p>
-      <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {gradesWithContent(f).map((g) => (
-          <section key={g} className="card flex flex-col gap-2 p-5">
-            <h2 className="text-2xl font-bold">
-              <Link href={curriculumPath.grade(f, g)} className="hover:underline">
-                {gradeLabel(f, g)}
+      <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {gradesWithContent(f).map((g) => {
+          const units = coursesFor(f, g).reduce((n, c) => n + c.units.length, 0);
+          return (
+            <li key={g}>
+              <Link
+                href={curriculumPath.grade(f, g)}
+                className="card flex min-h-16 items-center justify-between gap-3 p-5 text-2xl font-bold hover:bg-[#e6f0ff]"
+              >
+                <span>{gradeLabel(f, g)}</span>
+                <span className="text-base font-semibold text-ink-soft">{units} units</span>
               </Link>
-            </h2>
-            <ul className="flex flex-col gap-1">
-              {coursesFor(f, g).map((c) => (
-                <li key={c.subject}>
-                  <Link href={curriculumPath.subject(f, g, c.subject)} className="flex items-center gap-2 font-read hover:underline">
-                    <span aria-hidden="true">{getSubjectMeta(c.subject).emoji}</span>
-                    {subjectTitle(c.subject, g)}
-                    <span className="ml-auto text-sm text-ink-soft">{c.units.length} units</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </section>
-        ))}
-      </div>
+            </li>
+          );
+        })}
+      </ul>
       <section aria-labelledby="reporting" className="mt-10 max-w-3xl">
         <h2 id="reporting" className="text-2xl font-bold">
           How {f.shortName} report cards describe progress
