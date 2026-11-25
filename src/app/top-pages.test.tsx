@@ -33,9 +33,10 @@ describe("top landing pages", () => {
     expect(screen.getByRole("heading", { name: "Common questions" })).toBeInTheDocument();
   });
 
-  it("curriculum index: counts the units and answers questions", () => {
+  it("curriculum index: finds a region and answers questions", () => {
     const { container } = render(<CurriculumIndex />);
-    expect(screen.getByText(new RegExp(`follows ${FRAMEWORKS.length} curricula`))).toBeInTheDocument();
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Where does your child go to school?");
+    expect(screen.getByLabelText(/Find your province or state/)).toBeInTheDocument();
     expect(faqQuestions(container)).toContain("How are units matched to the curriculum?");
   });
 

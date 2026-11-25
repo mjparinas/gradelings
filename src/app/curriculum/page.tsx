@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Link from "@/components/PublicLink";
 import { Crumbs, SitePage } from "@/components/site/SiteChrome";
 import { coursesFor, curriculumPath, gradesWithContent, gradeSpan } from "@/components/site/curriculum";
-import { byCountry } from "@/components/site/provinces";
+import { CurriculumBrowse, type CurriculumBrowseItem } from "@/components/site/CurriculumBrowse";
+import { regionWord } from "@/components/site/provinces";
 import { FRAMEWORKS } from "@/content/frameworks";
 import { APP_NAME } from "@/lib/brand";
 import { pageMeta } from "@/lib/pageMeta";
@@ -15,52 +15,30 @@ export const metadata: Metadata = pageMeta({
   path: curriculumPath.index(),
 });
 
+function browseItems(): CurriculumBrowseItem[] {
+  return FRAMEWORKS.map((f) => ({
+    id: f.id,
+    slug: f.slug,
+    curriculumName: f.curriculumName,
+    name: f.name,
+    region: f.region,
+    country: f.country,
+    span: gradeSpan(f),
+    units: gradesWithContent(f).reduce((n, g) => n + coursesFor(f, g).reduce((m, c) => m + c.units.length, 0), 0),
+    href: curriculumPath.framework(f),
+  }));
+}
+
 export default function CurriculumIndex() {
+  const word = regionWord(FRAMEWORKS);
   return (
     <SitePage cta lead="trial">
       <Crumbs items={[{ label: "Home", href: "/" }, { label: "Curriculum" }]} />
-      <h1 className="text-4xl font-bold">Curriculum</h1>
+      <h1 className="text-4xl font-bold">Where does your child go to school?</h1>
       <p className="mt-2 max-w-2xl font-read text-lg text-ink-soft">
-        {APP_NAME} follows {FRAMEWORKS.length} curricula from Pre-K to Grade 9, with{" "}
-        {FRAMEWORKS.reduce((n, f) => n + gradesWithContent(f).reduce((m, g) => m + coursesFor(f, g).reduce((k, c) => k + c.units.length, 0), 0), 0).toLocaleString("en-CA")} units
-        between them. Pick a curriculum to see the units for each grade and subject, with sample questions and the learning standard each one practises.
+        {APP_NAME} matches practice to the curriculum and report card for your {word}. Pick theirs to see every grade and unit, with sample questions you can try now.
       </p>
-      {byCountry(FRAMEWORKS).map((group, i, groups) => (
-        <section key={group.country} aria-label={groups.length > 1 ? group.heading : undefined} className={i > 0 ? "mt-10" : ""}>
-          {groups.length > 1 && <h2 className="mt-6 text-3xl font-bold">{group.heading}</h2>}
-          <div className="mt-6 grid gap-4 md:grid-cols-2">
-            {group.frameworks.map((f) => (
-              <section key={f.id} className="card p-6">
-                {/* An h3 under a country heading, an h2 when there is only one country. */}
-                {groups.length > 1 ? (
-                  <h3 className="text-2xl font-bold">
-                    <Link href={curriculumPath.framework(f)} className="hover:underline">
-                      {f.curriculumName}
-                    </Link>
-                  </h3>
-                ) : (
-                  <h2 className="text-2xl font-bold">
-                    <Link href={curriculumPath.framework(f)} className="hover:underline">
-                      {f.curriculumName}
-                    </Link>
-                  </h2>
-                )}
-                <p className="font-read text-ink-soft">{f.name}</p>
-                <p className="mt-3 text-sm font-semibold text-ink-soft">
-                  {gradeSpan(f)} · {gradesWithContent(f).reduce((n, g) => n + coursesFor(f, g).reduce((m, c) => m + c.units.length, 0), 0).toLocaleString("en-CA")} units
-                </p>
-                <Link href={curriculumPath.framework(f)} className="mt-3 inline-flex rounded-full bg-paper px-4 py-2 font-semibold hover:bg-[#e6f0ff]">
-                  Browse {f.curriculumName} grades
-                </Link>
-              </section>
-            ))}
-          </div>
-        </section>
-      ))}
-      <section className="mt-6 rounded-3xl border-2 border-dashed border-line p-6">
-        <h2 className="text-2xl font-bold">More coming</h2>
-        <p className="font-read text-ink-soft">Other provinces and US states are on the way. The same lessons, matched to your local curriculum and report card.</p>
-      </section>
+      <CurriculumBrowse items={browseItems()} />
       <FaqSection faqs={curriculumIndexFaqs(FRAMEWORKS)} />
     </SitePage>
   );
