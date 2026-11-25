@@ -151,7 +151,7 @@ await page.getByRole("button", { name: "Close" }).click();
 await page.getByRole("button", { name: /^Families \d/ }).click();
 await list.getByRole("button", { name: parentEmail }).click();
 check(await page.getByRole("heading", { name: "Account Snapshot" }).waitFor({ timeout: 8000 }).then(() => true, () => false), "an email in the list opens the family in Users");
-await page.getByRole("button", { name: "Access" }).click();
+await page.getByRole("navigation", { name: "Family sections" }).getByRole("button", { name: "Access" }).click();
 check(await page.getByRole("button", { name: "Give Lifetime Access" }).waitFor({ timeout: 8000 }).then(() => true, () => false), "the family Access section offers lifetime access");
 await tab("Overview");
 await expand("Customers");
@@ -230,13 +230,16 @@ await tab("Users");
 await page.getByLabel("Search by email or family id").fill(parentEmail);
 await page.getByRole("button", { name: "Search", exact: true }).click();
 await page.getByRole("button", { name: parentEmail }).click();
-check(await vis(page.getByText(/Last sign-in:/)), "a family's page shows the last sign-in");
-await page.getByRole("button", { name: "Access" }).click();
+const familyNav = () => page.getByRole("navigation", { name: "Family sections" });
+check(await page.getByText(/Last sign-in:/).waitFor({ timeout: 8000 }).then(() => true, () => false), "a family's page shows the last sign-in");
+await familyNav().getByRole("button", { name: "Access" }).click();
 await page.getByRole("button", { name: "Give Lifetime Access" }).click();
 check(await page.getByText("Lifetime access given.").waitFor({ timeout: 8000 }).then(() => true, () => false), "the admin gives a family lifetime access");
-// The family reloads after the message, so wait for the new access line.
-check(await page.getByText("Lifetime", { exact: true }).first().waitFor({ timeout: 8000 }).then(() => true, () => false), "the family shows lifetime access");
-await page.getByRole("button", { name: "Billing" }).click();
+// Access reloads on the same tab; Remove Access only appears once accessUntil is set.
+check(await page.getByRole("button", { name: "Remove Access" }).waitFor({ timeout: 8000 }).then(() => true, () => false), "the family shows lifetime access");
+await familyNav().getByRole("button", { name: "Summary" }).click();
+check(await page.getByText("Lifetime", { exact: true }).first().waitFor({ timeout: 8000 }).then(() => true, () => false), "Summary lists lifetime under code or admin access");
+await familyNav().getByRole("button", { name: "Billing" }).click();
 check(await vis(page.getByRole("heading", { name: "Email This Family" })), "a family's page offers to email them");
 // With no email keys on the server, sending is refused and nothing goes out.
 await page.getByRole("button", { name: "Send Email" }).click();
