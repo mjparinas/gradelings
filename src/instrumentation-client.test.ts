@@ -1,7 +1,8 @@
 // @vitest-environment jsdom
+import { BrowserClient, defaultStackParser, eventFiltersIntegration, getDefaultIntegrations, type BrowserOptions } from "@sentry/browser";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-const init = vi.fn();
+const init = vi.fn<(options: BrowserOptions) => void>();
 const captureException = vi.fn();
 vi.mock("@sentry/nextjs", () => ({ init, captureException }));
 
@@ -50,6 +51,28 @@ describe("browser error reporting", () => {
     window.dispatchEvent(new ErrorEvent("error", { cancelable: true, error: new Error("later") }));
     await settle();
     expect(captureException).toHaveBeenCalledTimes(2);
+  });
+
+  it("runs Sentry's ignore rules and keeps application errors", async () => {
+    await import("./instrumentation-client");
+    window.dispatchEvent(new ErrorEvent("error", { cancelable: true, error: new Error("first") }));
+    await settle();
+
+    const [options] = init.mock.calls[0];
+    const defaults = getDefaultIntegrations(options);
+    const { integrations } = options;
+    if (typeof integrations !== "function") throw new Error("Expected a Sentry integration allowlist");
+    const filter = integrations(defaults).find((integration) => integration.name === eventFiltersIntegration().name);
+    if (!filter?.processEvent) throw new Error("Sentry's event filter is missing from the browser integrations");
+
+    const client = new BrowserClient({ ignoreErrors: options.ignoreErrors, integrations: [], stackParser: defaultStackParser, transport: vi.fn() });
+    const ignored = ["Can't find variable: zaloJSV2", "QuotaExceededError", "Encountered disk full", "FILE_ERROR_NO_SPACE"];
+    for (const value of ignored) {
+      const event = { exception: { values: [{ value }] } };
+      expect(await filter.processEvent(event, {}, client)).toBeNull();
+    }
+    const appError = { exception: { values: [{ value: "Could not load a lesson" }] } };
+    expect(await filter.processEvent(appError, {}, client)).toEqual(appError);
   });
 
   it("ignores cross-origin errors that carry no details", async () => {
