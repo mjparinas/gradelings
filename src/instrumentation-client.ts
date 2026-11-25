@@ -23,7 +23,7 @@ if (dsn && typeof window !== "undefined") {
         environment: process.env.NEXT_PUBLIC_VERCEL_ENV ?? process.env.NODE_ENV,
         tracesSampleRate: 0,
         // Only the error handlers: no replay, no profiling, no breadcrumbs of taps.
-        integrations: (defaults) => defaults.filter((i) => ["GlobalHandlers", "Dedupe", "InboundFilters", "FunctionToString", "LinkedErrors"].includes(i.name)),
+        integrations: (defaults) => defaults.filter((i) => ["GlobalHandlers", "Dedupe", "EventFilters", "FunctionToString", "LinkedErrors"].includes(i.name)),
         ignoreErrors: IGNORE_ERRORS,
         beforeSend: (event) => scrubEvent(groupEvent(event)),
       });
