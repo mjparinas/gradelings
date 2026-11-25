@@ -24,6 +24,32 @@ export const NEWS_KIND_LABEL: Record<NewsItem["kind"], string> = {
 
 export const WHATS_NEW: NewsDay[] = [
   {
+    day: "2026-11-24",
+    headline: "Easier to find your curriculum, and a clearer start for teachers",
+    items: [
+      {
+        kind: "new",
+        title: "Find your child's province or state first",
+        body: "The curriculum page now asks where your child goes to school. You can search for a province or state, and Canadian provinces are listed up front. Gradelings remembers where you left off, so you can pick up where you stopped.",
+      },
+      {
+        kind: "new",
+        title: "Grades first, then subjects",
+        body: "Opening a province or state now shows its grades, and each grade then opens its subjects. Unit pages end with a clear \"Ready to try\" button that takes your child straight into play.",
+      },
+      {
+        kind: "teachers",
+        title: "A simpler teachers page",
+        body: "The teachers page now shows a short demo and a clear Create free account button. You can search for your curriculum, look through popular picks, or browse every region. Each grade page also explains how Gradelings can work in your class.",
+      },
+      {
+        kind: "new",
+        title: "A fresh look for the About page",
+        body: "The About page now shows a preview of the app, with example questions and progress levels, so you can see what children will use. It has clear \"Try it free\" buttons, and the story of why Gradelings was made is shorter and gentler.",
+      },
+    ],
+  },
+  {
     day: "2026-11-23",
     headline: "Fewer error screens after an update",
     items: [
