@@ -33,9 +33,10 @@ describe("top landing pages", () => {
     expect(screen.getByRole("heading", { name: "Common questions" })).toBeInTheDocument();
   });
 
-  it("curriculum index: counts the units and answers questions", () => {
+  it("curriculum index: finds a region and answers questions", () => {
     const { container } = render(<CurriculumIndex />);
-    expect(screen.getByText(new RegExp(`follows ${FRAMEWORKS.length} curricula`))).toBeInTheDocument();
+    expect(screen.getByRole("heading", { level: 1 })).toHaveTextContent("Where does your child go to school?");
+    expect(screen.getByLabelText(/Find your province or state/)).toBeInTheDocument();
     expect(faqQuestions(container)).toContain("How are units matched to the curriculum?");
   });
 
@@ -67,15 +68,19 @@ describe("top landing pages", () => {
     expect(qs).toContain("Can I ask the whole class a question at once?");
   });
 
-  it("teacher hub: a short region summary and curriculum links grouped by country", () => {
+  it("teacher hub: a short region summary, featured picks, and every curriculum behind Browse all", () => {
     const { container } = render(<TeachersHub />);
     const intro = container.querySelector("h1 + p")?.textContent ?? "";
     expect(intro).toContain(regionSummary(TEACHER_FRAMEWORKS));
     // The intro no longer names every province and state one by one.
     expect(TEACHER_FRAMEWORKS.filter((f) => intro.includes(f.region)).length).toBeLessThan(5);
     const section = screen.getByRole("heading", { name: "Find your curriculum" }).closest("section")!;
+    expect(within(section).getByRole("heading", { name: "Popular picks" })).toBeInTheDocument();
+    expect(within(section).getByRole("searchbox")).toBeInTheDocument();
+    // Full list lives under Browse all so the hub stays conversion-first, not a region wall.
+    const browse = within(section).getByText("Browse all provinces and states").closest("details")!;
     for (const g of byCountry(TEACHER_FRAMEWORKS)) {
-      const list = within(section).getByRole("heading", { name: g.heading }).nextElementSibling as HTMLElement;
+      const list = within(browse).getByRole("heading", { name: g.heading }).nextElementSibling as HTMLElement;
       expect(within(list).getAllByRole("link").map((a) => a.getAttribute("href"))).toEqual(g.frameworks.map((f) => teacherPath.framework(f)));
     }
     expect(screen.queryByText(/^See .* units$/)).toBeNull();

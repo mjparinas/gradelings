@@ -33,7 +33,11 @@ describe("teacher framework page", () => {
       expect(tile).toHaveTextContent(`${units} units`);
     }
     expect(screen.getByRole("main")).toHaveTextContent(f.country === "US" ? "Practice results describe how a student is practicing, not a report-card mark." : "Practice results describe how a student is practising, not a report-card mark.");
-    expect(screen.getByRole("link", { name: "Create a free teacher account" })).toHaveAttribute("href", "/teachers/");
+    const create = screen.getAllByRole("link", { name: "Create a free teacher account" });
+    expect(create.length).toBeGreaterThanOrEqual(2);
+    expect(create.every((a) => a.getAttribute("href") === "/teachers/")).toBe(true);
+    expect(screen.getByRole("heading", { name: "Assign units in minutes" })).toBeInTheDocument();
+    expect(screen.getByRole("region", { name: "A class in action" })).toBeInTheDocument();
   });
 
   it("builds metadata, and 404s a province classes can't follow", async () => {

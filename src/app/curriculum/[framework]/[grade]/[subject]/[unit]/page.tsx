@@ -79,7 +79,7 @@ export default async function UnitPage({ params }: Props) {
   ];
 
   return (
-    <SitePage lead="trial" play={play}>
+    <SitePage cta lead="trial" play={play}>
       <JsonLd
         data={[
           breadcrumbJsonLd(crumbs),

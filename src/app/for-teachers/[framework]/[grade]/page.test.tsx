@@ -33,7 +33,8 @@ describe("teacher grade page", () => {
     expect(crumbs.map((a) => [a.textContent, a.getAttribute("href")])).toEqual([["Home", "/"], ["For teachers", "/for-teachers/"], [f.region, teacherPath.framework(f)]]);
     const nav = within(screen.getByRole("navigation", { name: "Other grades" })).getAllByRole("link");
     expect(nav.map((a) => a.getAttribute("href"))).toEqual([teacherPath.grade(f, "5"), teacherPath.grade(f, "7")]);
-    // Teacher pages end with the teacher call to action, not the family one.
+    // Pitch + closing teacher CTA; never the family Subscribe bar.
+    expect(screen.getByRole("heading", { name: /units in minutes$/ })).toBeInTheDocument();
     const cta = screen.getByRole("region", { name: /with your class/ });
     expect(within(cta).getByRole("link", { name: "Create a free teacher account" })).toHaveAttribute("href", "/teachers/");
     expect(within(cta).getByRole("link", { name: "How classes work" })).toHaveAttribute("href", "/for-teachers/");

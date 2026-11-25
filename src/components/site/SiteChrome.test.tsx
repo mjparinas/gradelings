@@ -90,6 +90,18 @@ describe("which button leads", () => {
     expect(bar(render(<SiteHeader lead="trial" />).container)).toHaveLength(0);
   });
 
+  it("on teacher pages, leads with create-account and drops Subscribe and the green Play free", () => {
+    const bar = (c: HTMLElement) => [...c.querySelectorAll("header a")].filter((a) => a.textContent === "Subscribe" && a.className.includes("w-full"));
+    const { container } = render(<SiteHeader lead="teachers" />);
+    expect(bar(container)).toHaveLength(0);
+    expect(screen.getByRole("link", { name: "Create free account" })).toHaveAttribute("href", "/teachers/");
+    expect(screen.getByRole("link", { name: "Create free account" })).toHaveClass("btn-good");
+    const play = screen.getByRole("link", { name: "Play free" });
+    expect(play).toHaveAttribute("href", "/play/");
+    expect(play).not.toHaveClass("btn-good");
+    expect(screen.queryByRole("link", { name: "Subscribe" })).toBeNull();
+  });
+
   it("words the closing call to action the same way round", () => {
     render(<PageCta lead="trial" />);
     expect(screen.getByText(new RegExp(`Try everything free for ${TRIAL_DAYS} days with no card, then subscribe if it helps\\.`))).toBeInTheDocument();
