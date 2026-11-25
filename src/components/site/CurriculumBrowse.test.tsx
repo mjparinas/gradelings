@@ -1,5 +1,5 @@
 // @vitest-environment jsdom
-import { act, fireEvent, render, screen, within } from "@testing-library/react";
+import { fireEvent, render, screen, within } from "@testing-library/react";
 import { describe, expect, it, beforeEach, vi } from "vitest";
 import { CurriculumBrowse, type CurriculumBrowseItem } from "./CurriculumBrowse";
 
@@ -66,10 +66,9 @@ describe("CurriculumBrowse", () => {
     expect(screen.queryByRole("heading", { name: "Canada" })).toBeNull();
   });
 
-  it("offers the last region this device read", async () => {
+  it("offers the last region this device read", () => {
     localStorage.setItem("gradelings.region", JSON.stringify({ framework: "us-ca", grade: "4" }));
     render(<CurriculumBrowse items={items} />);
-    await act(async () => {});
     const card = screen.getByRole("region", { name: /Continue where you left off/ });
     expect(card).toHaveTextContent("California");
     expect(within(card).getByRole("link", { name: "Browse California Curriculum" })).toHaveAttribute("href", "/curriculum/california/");

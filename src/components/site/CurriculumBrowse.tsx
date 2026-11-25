@@ -1,9 +1,14 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState, useSyncExternalStore } from "react";
 import Link from "@/components/PublicLink";
 import { readRegionHint } from "@/lib/regionHint";
 import { regionWord } from "@/components/site/provinces";
+
+/** Region hint is local-only and does not emit change events; one read on the client is enough. */
+const subscribeHint = () => () => {};
+const readHintId = () => readRegionHint()?.framework ?? null;
+const hintIdOnServer = () => null;
 
 export interface CurriculumBrowseItem {
   id: string;
@@ -39,13 +44,8 @@ function FrameworkLink({ item }: { item: CurriculumBrowseItem }) {
  */
 export function CurriculumBrowse({ items }: { items: CurriculumBrowseItem[] }) {
   const [query, setQuery] = useState("");
-  const [suggested, setSuggested] = useState<CurriculumBrowseItem | null>(null);
-
-  useEffect(() => {
-    const id = readRegionHint()?.framework;
-    if (!id) return;
-    setSuggested(items.find((item) => item.id === id) ?? null);
-  }, [items]);
+  const hintId = useSyncExternalStore(subscribeHint, readHintId, hintIdOnServer);
+  const suggested = hintId ? (items.find((item) => item.id === hintId) ?? null) : null;
 
   const word = regionWord(items);
   const q = query.trim().toLowerCase();
