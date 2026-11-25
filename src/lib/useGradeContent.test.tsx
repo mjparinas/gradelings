@@ -20,7 +20,12 @@ vi.mock("@/content", () => ({
   loadGrade: vi.fn(async () => undefined),
   lessonsSettled: vi.fn(async () => undefined),
 }));
-vi.mock("./offline", () => ({ cacheLoadedScripts: vi.fn() }));
+vi.mock("./offline", () => ({
+  cacheLoadedScripts: vi.fn(),
+  clearStaleBuildReloadFlag: vi.fn(),
+  isStaleBuildError: vi.fn(() => false),
+  reloadForNewBuild: vi.fn(() => false),
+}));
 
 import * as registry from "@/content";
 import type { ContentTarget } from "@/content";
