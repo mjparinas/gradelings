@@ -39,7 +39,10 @@ export interface Parts {
   button?: { label: string; url: string };
   /** A screenshot of the app, drawn into public/email/shots/ by scripts/email-screenshots.mjs. */
   hero?: EmailShot;
-  spotlight?: Spotlight;
+  /** One callout, or several one after the other (a feature email has a plan note and a "Did you know?"). */
+  spotlight?: Spotlight | Spotlight[];
+  /** The text mail clients show beside the subject; hidden in the email itself. */
+  preheader?: string;
   /** Small print under the button. */
   footnote?: string;
   /** One-click endpoint for the List-Unsubscribe header. */
@@ -151,7 +154,8 @@ export function layout(parts: Parts): Email {
     bullets: parts.bullets?.map(say),
     button: parts.button && { ...parts.button, label: say(parts.button.label) },
     footnote: parts.footnote && say(parts.footnote),
-    spotlight: parts.spotlight && { ...parts.spotlight, title: say(parts.spotlight.title), body: say(parts.spotlight.body) },
+    spotlight: parts.spotlight && [parts.spotlight].flat().map((sp) => ({ ...sp, title: say(sp.title), body: say(sp.body) })),
+    preheader: parts.preheader && say(parts.preheader),
     hero: parts.hero && { ...parts.hero, alt: say(parts.hero.alt) },
   };
   // Dark navy on the bright green, not white: white fails the contrast rules (src/lib/contrast.ts).
@@ -159,6 +163,7 @@ export function layout(parts: Parts): Email {
     ? `<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:22px 0"><tr><td bgcolor="${GREEN}" style="background:${GREEN};border-radius:12px"><a href="${esc(p.button.url)}" style="color:${ON_BRIGHT};text-decoration:none;font-family:${EMAIL_FONTS.wordmark.stack};font-weight:700;font-size:17px;padding:14px 24px;border-radius:12px;display:inline-block">${esc(p.button.label)}</a></td></tr></table>`
     : "";
   const html = `<!doctype html><html lang="${locale.startsWith("en-US") ? "en-US" : "en-CA"}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><style>${fontFaces(p.origin)}</style></head><body style="margin:0;background:#f7f5f0;font-family:${EMAIL_FONTS.text.stack};color:${INK}">
+${p.preheader ? `<div style="display:none;max-height:0;overflow:hidden;opacity:0;font-size:1px;line-height:1px;color:#f7f5f0">${esc(p.preheader)}</div>` : ""}
 <div style="max-width:560px;margin:0 auto;padding:0 16px 24px">
 <div style="padding:16px 0 0">${stripe()}</div>
 <div style="padding:18px 0 0">${header(p.origin)}</div>
@@ -166,7 +171,7 @@ export function layout(parts: Parts): Email {
 <h1 style="font-family:${EMAIL_FONTS.wordmark.stack};font-size:24px;line-height:1.25;margin:0 0 14px;color:${INK}">${esc(p.heading)}</h1>
 ${bodyHtml(p.body)}
 ${p.bullets?.length ? bulletsHtml(p.bullets) : ""}
-${p.spotlight ? spotlightHtml(p.spotlight) : ""}
+${[p.spotlight ?? []].flat().map(spotlightHtml).join("")}
 ${button}
 ${p.hero ? heroHtml(p.origin, p.hero, p.button?.url ?? `${p.origin}/`) : ""}
 ${p.footnote ? `<p style="font-size:13px;color:${MUTED};margin:${p.hero ? "16px" : "0"} 0 0">${linked(p.footnote)}</p>` : ""}
@@ -179,7 +184,7 @@ ${MAILING_ADDRESS ? `<p style="font-size:12px;color:${MUTED};margin:4px 4px 0">$
     "",
     ...p.body.map(plain),
     ...(p.bullets?.length ? ["", ...p.bullets.map((b) => `- ${plain(b)}`)] : []),
-    ...(p.spotlight ? ["", plain(`${p.spotlight.title}${p.spotlight.paid ? " (Family plan)" : ""}: ${p.spotlight.body}`)] : []),
+    ...[p.spotlight ?? []].flat().flatMap((sp) => ["", plain(`${sp.title}${sp.paid ? " (Family plan)" : ""}: ${sp.body}`)]),
     ...(p.button ? ["", `${p.button.label}: ${p.button.url}`] : []),
     ...(p.footnote ? ["", plain(p.footnote)] : []),
     "",

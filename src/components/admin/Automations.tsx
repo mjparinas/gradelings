@@ -6,6 +6,7 @@ import { AUTOMATIONS, MAX_DAILY_CAP, TURN_ON, type AutomationConfig } from "@/li
 import { call } from "@/lib/classroom";
 import { Badge, formatAgo, formatDay, Notice, Preview } from "./Engage";
 import { Bars } from "./Skeleton";
+import { FeatureSeriesCard, type SeriesData } from "./FeatureSeriesCard";
 import { titleCase } from "@/lib/titleCase";
 
 // The Automations tab: the owner's alerts and morning digest, and automatic nudges. Every nudge is off until
@@ -30,6 +31,7 @@ interface Data {
   automations: Status[];
   alerts: { instant: boolean; digest: boolean };
   alertRecipients: number;
+  series: SeriesData;
 }
 
 function Alerts({ data, reload }: { data: Data; reload: () => void }) {
@@ -225,6 +227,7 @@ export function Automations() {
       ) : (
         <>
           <Alerts data={data} reload={load} />
+          <FeatureSeriesCard key={`${data.series.config.on}:${data.series.config.dailyCap}`} s={data.series} reload={load} />
           <div>
             <h3 className="text-xl font-bold">Automatic Nudges</h3>
             <p className="max-w-3xl text-sm text-ink-soft">
