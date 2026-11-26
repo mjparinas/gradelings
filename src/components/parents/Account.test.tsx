@@ -114,6 +114,19 @@ describe("AccountPage signed out", () => {
     expect(h.syncNow).not.toHaveBeenCalled();
   });
 
+  it("offers to add the child while the confirmation email is on its way, only when the device has none", async () => {
+    routes["POST /api/auth/signup/"] = () => json({ ok: true, checkEmail: true });
+    useStore.setState({ profiles: [], activeId: null });
+    const { unmount } = render(<AccountPage onBilling={vi.fn()} />);
+    expect(screen.queryByRole("region", { name: "Add your child" })).not.toBeInTheDocument();
+    fill("Email", "parent@example.com");
+    fill(/^Password/, "longenough");
+    await userEvent.click(screen.getByRole("button", { name: "Create account & sync" }));
+    await waitFor(() => expect(screen.getByRole("region", { name: "Add your child" })).toBeInTheDocument());
+    expect(screen.getByRole("heading", { name: "While you wait, add your child" })).toBeInTheDocument();
+    unmount();
+  });
+
   it("signs in at /api/auth/login/ and downloads the whole history from cursor 0", async () => {
     routes["POST /api/auth/login/"] = () => json({ family: signedIn() });
     render(<AccountPage onBilling={vi.fn()} />);
