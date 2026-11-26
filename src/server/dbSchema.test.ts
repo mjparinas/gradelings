@@ -50,6 +50,8 @@ describe("schema setup", () => {
     expect(await plan("SELECT COUNT(DISTINCT family_id) FROM events WHERE t > ? AND t <= ?")).toContain("events_t");
     expect(await plan("SELECT n, counted_at FROM family_event_counts WHERE family_id = ?")).toContain("sqlite_autoindex_family_event_counts");
     expect(await plan("DELETE FROM sessions WHERE family_id = ?")).toContain("sessions_family");
+    // "Teachers: students haven't started" looks up each student's events by profile.
+    expect(await plan("SELECT 1 FROM students s JOIN events e ON e.profile_id = s.profile_id WHERE s.class_id = ?")).toContain("events_profile");
   });
 
   it("does one read, and no writes, when the database is already current", async () => {

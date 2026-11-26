@@ -105,6 +105,15 @@ export const MESSAGE_PRESETS: MessagePreset[] = [
     button: { label: "Add students", path: "/teachers/" },
   },
   {
+    id: "teacher-first-practice",
+    name: "Get your students started",
+    when: "Teachers whose students haven't practised yet",
+    audience: "teachers",
+    subject: "Your {app} students are ready to start",
+    body: "You've added your students. The next step is getting them to sign in once: print the login cards from the Students tab and hand them out, or scan a card to sign a student in on a shared device.\n\nA short first practice takes a few minutes, and then you can see how it went on the Progress tab.",
+    button: { label: "Print login cards", path: "/teachers/" },
+  },
+  {
     id: "teacher-hello",
     name: "A note for teachers",
     when: "Any message to teachers",
@@ -127,6 +136,7 @@ export const SEGMENTS = {
   cancelled: { audience: "parents", name: "Cancelled", description: "Cancelled a subscription in the last 90 days." },
   "teacher-no-class": { audience: "teachers", name: "Teachers: no class yet", description: "Teacher account made 2 to 60 days ago that hasn't started a class." },
   "teacher-no-students": { audience: "teachers", name: "Teachers: no students yet", description: "Has a class made 3 to 60 days ago with no students in it." },
+  "teacher-no-practice": { audience: "teachers", name: "Teachers: students haven't started", description: "Has a class made 3 to 60 days ago with students added, and none of them has practised yet." },
   teachers: { audience: "teachers", name: "All teachers", description: "Every teacher account that can get news and tips." },
   parents: { audience: "parents", name: "All parents", description: "Every account except teachers that can get news and tips." },
   everyone: { audience: "all", name: "Everyone", description: "Every account that can get news and tips, parents and teachers. Write for both." },
