@@ -2,6 +2,8 @@ import { ADMIN_BODY_LIMIT, error, json, readJson } from "@/server/auth";
 import { audit, requireAdmin } from "@/server/admin";
 import { adminRecipients, alertSettings, saveAlertSettings } from "@/server/alerts";
 import { automationStatuses, getAutomation, saveAutomation } from "@/server/automations";
+import { getSeriesConfig, saveSeriesConfig, seriesStatus } from "@/server/featureSeries";
+import { validSeriesCap } from "@/lib/featureSeriesRules";
 import { messageProblem, type AdminMessage } from "@/lib/adminEmails";
 import { automationDef, TURN_ON, validCap } from "@/lib/automations";
 
@@ -11,8 +13,8 @@ import { automationDef, TURN_ON, validCap } from "@/lib/automations";
 export async function GET(req: Request) {
   const gate = await requireAdmin(req);
   if ("response" in gate) return gate.response;
-  const [automations, alerts, recipients] = await Promise.all([automationStatuses(), alertSettings(), adminRecipients()]);
-  return json({ automations, alerts, alertRecipients: recipients.length });
+  const [automations, alerts, recipients, series] = await Promise.all([automationStatuses(), alertSettings(), adminRecipients(), seriesStatus()]);
+  return json({ automations, alerts, alertRecipients: recipients.length, series });
 }
 
 interface Body {
@@ -40,6 +42,23 @@ export async function POST(req: Request) {
     if (typeof body.instant !== "boolean" || typeof body.digest !== "boolean") return error(400, "Bad request");
     await saveAlertSettings({ instant: body.instant, digest: body.digest });
     await audit(admin, "alerts.save", null, { instant: body.instant, digest: body.digest });
+    return json({ ok: true });
+  }
+
+  // The feature series: `{ action: "series-switch", on, confirm }` and `{ action: "series-save", dailyCap }`.
+  if (body.action === "series-switch" || body.action === "series-save") {
+    const current = await getSeriesConfig();
+    if (body.action === "series-save") {
+      if (!validSeriesCap(body.dailyCap)) return error(400, "The daily limit must be a whole number from 1 to 500.");
+      await saveSeriesConfig({ ...current, dailyCap: body.dailyCap });
+      await audit(admin, "series.save", "feature-series", { dailyCap: body.dailyCap });
+      return json({ ok: true });
+    }
+    if (typeof body.on !== "boolean") return error(400, "Bad request");
+    if (body.on && body.confirm !== TURN_ON) return error(400, `Type ${TURN_ON} to confirm.`);
+    // Switching on again keeps the first time, so families who joined before it aren't dropped from the window.
+    await saveSeriesConfig({ ...current, on: body.on, onBy: body.on ? admin : current.onBy, onAt: body.on ? (current.onAt ?? Date.now()) : current.onAt });
+    await audit(admin, body.on ? "series.on" : "series.off", "feature-series", body.on ? { dailyCap: current.dailyCap } : undefined);
     return json({ ok: true });
   }
 

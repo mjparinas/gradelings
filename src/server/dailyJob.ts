@@ -14,6 +14,7 @@ import { ensureReferralCode } from "@/server/referral";
 import { classDigestEmail, inactiveClassEmail, reminderEmail, yearReviewEmail, trialEndingEmail, trialRecapEmail, weeklyEmail, type ReminderChild, type TrialChild, type WeeklyChild } from "@/server/emailTemplates";
 import { sendDigest } from "@/server/alerts";
 import { runAutomations } from "@/server/automations";
+import { runFeatureSeries, type SeriesRun } from "@/server/featureSeries";
 import { sendConsentFollowUps } from "@/server/consent";
 import { getSetting, setSetting } from "@/server/payments";
 import { deleteInactiveClass, pruneOldCodes } from "@/server/students";
@@ -57,7 +58,7 @@ const WEEKLY_CATCH_UP_DAYS = 2;
 /** After this many runs in one day that still left work undone, the admins are told. */
 export const STUCK_AFTER_RUNS = 4;
 
-export const PHASES = ["cleanup", "recaps", "trial-notices", "reminders", "weekly", "push", "year-review", "class-digest", "consent", "automations", "digest"] as const;
+export const PHASES = ["cleanup", "recaps", "trial-notices", "reminders", "weekly", "push", "year-review", "class-digest", "consent", "automations", "feature-tips", "digest"] as const;
 export type Phase = (typeof PHASES)[number];
 
 export interface DailyState {
@@ -110,6 +111,7 @@ export interface DailyResult {
   studentsDeleted: number;
   consentFollowUps: number;
   automations: Record<string, { sent: number; failed: number }>;
+  featureTips: SeriesRun;
   digest: number;
   /** False when the time ran out first: call again with `resume`. */
   complete: boolean;
@@ -160,6 +162,7 @@ export async function runDaily(opts: DailyOptions): Promise<DailyResult> {
     studentsDeleted: 0,
     consentFollowUps: 0,
     automations: {},
+    featureTips: { sent: 0, failed: 0, finished: 0 },
     digest: 0,
     complete: false,
     remaining: [],
@@ -213,6 +216,11 @@ const PHASE_RUNNERS: Record<Phase, (ctx: Ctx) => Promise<boolean>> = {
   // done once, so a resumed run never sends either twice.
   automations: async (ctx) => {
     ctx.result.automations = await runAutomations(ctx.origin, ctx.now);
+    return true;
+  },
+  // The daily feature email, after every other email so it steps aside for a trial notice, a weekly report or a nudge.
+  "feature-tips": async (ctx) => {
+    ctx.result.featureTips = await runFeatureSeries(ctx.origin, ctx.now).catch((e: Error) => (console.error("[feature-tips] failed", e.message), { sent: 0, failed: 0, finished: 0 }));
     return true;
   },
   digest: async (ctx) => {
