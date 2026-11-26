@@ -44,3 +44,29 @@ export const EMAIL_FONTS: Record<"text" | "wordmark", EmailFont> = {
     files: [{ weight: 700, path: "/email/fonts/fredoka-700-v1" }],
   },
 };
+
+/**
+ * A screenshot of the real app in an email, drawn by `scripts/email-screenshots.mjs` into `public/email/shots/`: the app's own
+ * screens (a demo child with made-up practice) on a coloured card with a phone or tablet frame, saved as a JPEG at 2x. Like
+ * Ollie, the same URL for everyone. Bump the version in the file name when the picture changes, because mail clients cache.
+ * `width` is the CSS width; the picture is 2x that, and its height follows.
+ */
+export interface EmailShot {
+  path: string;
+  width: number;
+  alt: string;
+}
+
+const SHOT_WIDTH = 510;
+
+export const EMAIL_SHOTS = {
+  adventure: { path: "/email/shots/adventure-v1.jpg", width: SHOT_WIDTH, alt: `${APP_NAME} on a tablet and a phone: the home screen with its big Adventure button, and a question being answered` },
+  games: { path: "/email/shots/games-v1.jpg", width: SHOT_WIDTH, alt: `The ${APP_NAME} arcade, with learning games children unlock as they level up` },
+  rewards: { path: "/email/shots/rewards-v1.jpg", width: SHOT_WIDTH, alt: `${APP_NAME}'s trophy shelf and sticker book, filling up as a child learns` },
+  reports: { path: "/email/shots/reports-v1.jpg", width: SHOT_WIDTH, alt: `A ${APP_NAME} parent report on a tablet and a phone, with strengths, next steps and progress charts` },
+  parent: { path: "/email/shots/parent-v1.jpg", width: SHOT_WIDTH, alt: `The ${APP_NAME} parent area, with each child's week at a glance` },
+  calm: { path: "/email/shots/calm-v1.jpg", width: SHOT_WIDTH, alt: `${APP_NAME}'s settings: calm mode, easier reading and read-aloud, one switch each` },
+  facts: { path: "/email/shots/facts-v1.jpg", width: SHOT_WIDTH, alt: `The ${APP_NAME} math facts chart, filling in as each fact becomes automatic` },
+  stories: { path: "/email/shots/stories-v1.jpg", width: SHOT_WIDTH, alt: `The ${APP_NAME} story library: short read-along stories matched to a child's reading level` },
+  teacher: { path: "/email/shots/teacher-v1.jpg", width: SHOT_WIDTH, alt: `The ${APP_NAME} teacher area: a class with homework progress and what to look at next` },
+} as const satisfies Record<string, EmailShot>;

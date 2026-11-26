@@ -3,6 +3,9 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { APP_NAME, WORDMARK_COLOURS } from "@/lib/brand";
 import { EMAIL_FONTS, EMAIL_IMAGES, EMAIL_WORDMARK } from "@/lib/emailImages";
+import { EMAIL_SHOTS } from "@/lib/emailImages";
+import { FEATURE_TIPS, tipForWeek } from "@/lib/emailFeatures";
+import { PLAY_STORE_URL } from "@/lib/brand";
 import * as t from "./emailTemplates";
 
 const O = "https://app.test";
@@ -31,7 +34,8 @@ describe("branding in every email", () => {
     for (const e of every) {
       expect(e.html).toContain(`<img src="${O}${ollie.path}" width="${ollie.size}" height="${ollie.size}" alt="${ollie.alt}"`);
       // Ollie and the name, with no query string: nothing that could tell us who opened it.
-      expect(e.html.match(/<img /g)).toHaveLength(2);
+      expect(e.html.match(/<img /g)!.length).toBeGreaterThanOrEqual(2);
+      for (const src of e.html.matchAll(/<img src="([^"]+)"/g)) expect(src[1]).not.toContain("?");
       expect(ollie.path).not.toContain("?");
       expect(EMAIL_WORDMARK.path).not.toContain("?");
     }
@@ -204,5 +208,75 @@ describe("warm week headline in the weekly email", () => {
     const mail = send(0, 0);
     expect(mail.text).toContain("didn't practise this week");
     expect(mail.text).not.toMatch(/Every bit counts|real habit/);
+  });
+});
+
+describe("the refreshed look (November 2026)", () => {
+  it("has a screenshot file for every shot, as a JPEG, and none are bigger than 300 KB", () => {
+    for (const shot of Object.values(EMAIL_SHOTS)) {
+      const file = join(process.cwd(), "public", shot.path);
+      expect(existsSync(file)).toBe(true);
+      const bytes = readFileSync(file);
+      expect([bytes[0], bytes[1]]).toEqual([0xff, 0xd8]);
+      expect(bytes.length).toBeLessThan(300_000);
+      expect(shot.alt.length).toBeGreaterThan(20);
+    }
+  });
+
+  it("shows the colour stripe, dark text on the green button and a screenshot with alt text", () => {
+    const e = t.verifyEmail("a@example.com", O, "tok");
+    for (const c of WORDMARK_COLOURS) expect(e.html).toContain(`bgcolor="${c}"`);
+    expect(e.html).toMatch(/background:#25b47e[^>]*><a [^>]*color:#0f172a/);
+    expect(e.html).toContain(`<img src="${O}${EMAIL_SHOTS.adventure.path}" width="${EMAIL_SHOTS.adventure.width}" alt="${EMAIL_SHOTS.adventure.alt}"`);
+  });
+
+  it("keeps account-security and billing emails plain: no screenshot", () => {
+    for (const e of [t.resetEmail("a@example.com", O, "x"), t.newSignInEmail("a@example.com", O, "iPad"), t.passwordChangedEmail("a@example.com", O), t.consentEmail("a@example.com", O, "x"), t.paymentProblemEmail("a@example.com", O, "admin")])
+      expect(e.html).not.toContain("/email/shots/");
+  });
+
+  it("points parents to the Android app, says iPhone is coming and never links an iOS store", () => {
+    const e = t.verifyEmail("a@example.com", O, "tok");
+    expect(e.html).toContain(`href="${PLAY_STORE_URL}"`);
+    expect(e.text).toContain(PLAY_STORE_URL);
+    expect(e.text).toMatch(/iPhone and iPad app is on its way/);
+    expect(e.html).not.toContain("apps.apple.com");
+  });
+
+  it("marks family-plan features in words, in the HTML and the plain text, and only those", () => {
+    const recap = t.trialRecapEmail("a@example.com", O, 5, [{ name: "Maya", answers: 40, activeDays: 3, minutes: 30 }]);
+    expect(recap.html).toContain(">Family plan</span>");
+    expect(recap.text).toContain("(Family plan)");
+    for (const tip of FEATURE_TIPS) {
+      const e = t.weeklyEmail("a@example.com", O, [{ name: "Maya", minutes: 30, answers: 40, accuracy: 80 }], "u", "CA", [], undefined, FEATURE_TIPS.indexOf(tip) * 7 * 86_400_000);
+      expect(e.html.includes(">Family plan</span>")).toBe(Boolean(tip.paid));
+      expect(e.text).toContain(tip.title);
+    }
+  });
+
+  it("rotates the weekly tip by week, the same for everyone, and covers every tip", () => {
+    const week = 7 * 86_400_000;
+    const ids = FEATURE_TIPS.map((_, i) => tipForWeek(i * week).id);
+    expect(new Set(ids).size).toBe(FEATURE_TIPS.length);
+    expect(tipForWeek(0).id).toBe(tipForWeek(week - 1).id);
+    expect(FEATURE_TIPS.some((x) => x.paid)).toBe(true);
+    expect(FEATURE_TIPS.some((x) => !x.paid)).toBe(true);
+  });
+
+  it("makes web addresses links, keeps their full stop outside, and indents notes under a line", () => {
+    const e = t.weeklyEmail("a@example.com", O, [{ name: "Maya", minutes: 30, answers: 40, accuracy: 80, strength: "Fractions" }], "u", "CA", [], `${O}/account/invite/?ref=AB`);
+    expect(e.html).toContain(`<a href="${O}/account/invite/?ref=AB" style`);
+    expect(e.html).toContain("border-left:3px solid #e3e2de");
+    expect(e.html).not.toContain("report-card mark");
+  });
+
+  it("reads in US English for a US family, callout and picture text included", () => {
+    const e = t.weeklyEmail("a@example.com", O, [{ name: "Maya", minutes: 30, answers: 40, accuracy: 80 }], "u", "US", [], undefined, 0);
+    expect(`${e.html}${e.text}`).not.toMatch(/practis|colour|favourite/);
+  });
+
+  it("never names a price or the old name in a callout or picture", () => {
+    const all = [...FEATURE_TIPS.map((x) => `${x.title} ${x.body} ${x.shot.alt}`), ...Object.values(EMAIL_SHOTS).map((x) => x.alt)].join("\n");
+    expect(all).not.toMatch(/\$|C\$|US\$|grademap/i);
   });
 });

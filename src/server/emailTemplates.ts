@@ -1,104 +1,22 @@
 import "server-only";
-import { APP_NAME, CONTACT_EMAIL, LEGAL_NAME, MAILING_ADDRESS, WORDMARK_COLOURS } from "@/lib/brand";
-import { EMAIL_FONTS, EMAIL_IMAGES, EMAIL_WORDMARK } from "@/lib/emailImages";
+import { APP_NAME, CONTACT_EMAIL, PLAY_STORE_URL } from "@/lib/brand";
+import { EMAIL_SHOTS } from "@/lib/emailImages";
+import { layout, type Spotlight } from "./emailLayout";
 import { CONSENT_NOTICE } from "@/lib/coppa";
 import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, REFUND_DAYS, SUBSCRIBE_HREF } from "@/lib/plan";
-import { countryOf, type CountryCode } from "@/lib/country";
-import type { EmailKind } from "@/lib/emailKinds";
-import { localizeCopy } from "@/content/locale";
+import type { CountryCode } from "@/lib/country";
 import { stakeLine } from "@/lib/paywall";
+import { tipForWeek } from "@/lib/emailFeatures";
 import type { Email } from "./email";
+
 import { schoolYearName, yearReviewLines, type YearReviewChild } from "@/lib/yearReview";
 
-const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]!);
-
-interface Parts {
-  to: string;
-  /** Logged in the admin panel's email log; left out for mail that isn't to an account (question reports). */
-  kind?: EmailKind;
-  subject: string;
-  heading: string;
-  /** Plain paragraphs. */
-  body: string[];
-  button?: { label: string; url: string };
-  /** Small print under the button. */
-  footnote?: string;
-  /** One-click endpoint for the List-Unsubscribe header. */
-  unsubscribeUrl?: string;
-  /** Page the footer link opens. */
-  unsubscribePage?: string;
-  origin: string;
-  /** The family's country: a US family reads the email in US English ("practiced", "favorite"). Canada when left out. */
-  country?: CountryCode;
-}
-
-/**
- * The name drawn in Fredoka, as on the site. An image, because Gmail and Outlook for Windows ignore web fonts; with
- * images off, the alt text shows in the logo's first colour and in Fredoka where the client has it.
- */
-function wordmark(origin: string): string {
-  const w = EMAIL_WORDMARK;
-  return `<img src="${esc(origin)}${w.path}" width="${w.width}" height="${w.height}" alt="${esc(w.alt)}" style="display:block;border:0;font-family:${EMAIL_FONTS.wordmark.stack};font-size:${w.fontSize}px;font-weight:700;line-height:1;color:${WORDMARK_COLOURS[0]}">`;
-}
-
-/** The logo and Ollie at the top of every email, linking to the site. Tables, because Outlook ignores flexbox. */
-function header(origin: string): string {
-  const ollie = EMAIL_IMAGES.ollie;
-  return `<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:0 0 16px"><tr>
-<td style="vertical-align:middle;padding-right:10px"><a href="${esc(origin)}/" style="text-decoration:none;color:#5b6478"><img src="${esc(origin)}${ollie.path}" width="${ollie.size}" height="${ollie.size}" alt="${esc(ollie.alt)}" style="display:block;border:0;font-size:12px;color:#5b6478"></a></td>
-<td style="vertical-align:middle"><a href="${esc(origin)}/" style="text-decoration:none">${wordmark(origin)}</a></td>
-</tr></table>`;
-}
-
-/** Andika and Fredoka from our own site, for the clients that load web fonts. */
-function fontFaces(origin: string): string {
-  return Object.values(EMAIL_FONTS)
-    .flatMap((font) => font.files.map((f) => ({ ...f, family: font.family })))
-    .map((f) => `@font-face{font-family:${f.family};font-style:normal;font-weight:${f.weight};src:url(${esc(origin)}${f.path}.woff2) format("woff2"),url(${esc(origin)}${f.path}.woff) format("woff")}`)
-    .join("");
-}
-
-/** One simple layout for every email: the logo and Ollie from our own site. */
-function layout(parts: Parts): Email {
-  const locale = countryOf(parts.country).locale;
-  const say = (t: string) => localizeCopy(t, locale);
-  const p: Parts = {
-    ...parts,
-    subject: say(parts.subject),
-    heading: say(parts.heading),
-    body: parts.body.map(say),
-    button: parts.button && { ...parts.button, label: say(parts.button.label) },
-    footnote: parts.footnote && say(parts.footnote),
-  };
-  const button = p.button
-    ? `<p style="margin:24px 0"><a href="${esc(p.button.url)}" style="background:#25b47e;color:#fff;text-decoration:none;font-weight:700;padding:14px 22px;border-radius:12px;display:inline-block">${esc(p.button.label)}</a></p>`
-    : "";
-  const html = `<!doctype html><html><head><meta charset="utf-8"><style>${fontFaces(p.origin)}</style></head><body style="margin:0;background:#f7f5f0;font-family:${EMAIL_FONTS.text.stack};color:#1d2233">
-<div style="max-width:520px;margin:0 auto;padding:24px">
-${header(p.origin)}
-<div style="background:#fff;border-radius:16px;padding:24px;line-height:1.55">
-<h1 style="font-size:22px;margin:0 0 12px">${esc(p.heading)}</h1>
-${p.body.map((t) => `<p style="margin:0 0 12px">${esc(t)}</p>`).join("")}
-${button}
-${p.footnote ? `<p style="font-size:13px;color:#5b6478;margin:0">${esc(p.footnote)}</p>` : ""}
-</div>
-<p style="font-size:12px;color:#5b6478;margin:16px 4px 0">${esc(APP_NAME)} has no ads and never sells your information. <a href="${esc(p.origin)}/privacy/" style="color:#5b6478">Privacy</a> · Questions? ${esc(CONTACT_EMAIL)}${p.unsubscribePage ? ` · <a href="${esc(p.unsubscribePage)}" style="color:#5b6478">Unsubscribe</a>` : ""}</p>
-${MAILING_ADDRESS ? `<p style="font-size:12px;color:#5b6478;margin:4px 4px 0">${esc(LEGAL_NAME)} · ${esc(MAILING_ADDRESS)}</p>` : ""}
-</div></body></html>`;
-  const text = [
-    p.heading,
-    "",
-    ...p.body,
-    ...(p.button ? ["", `${p.button.label}: ${p.button.url}`] : []),
-    ...(p.footnote ? ["", p.footnote] : []),
-    "",
-    `${APP_NAME} has no ads and never sells your information. Privacy: ${p.origin}/privacy/`,
-    ...(p.unsubscribePage ? [`Unsubscribe: ${p.unsubscribePage}`] : []),
-    // CASL requires the sender's postal address in every commercial message.
-    ...(MAILING_ADDRESS ? [`${LEGAL_NAME} · ${MAILING_ADDRESS}`] : []),
-  ].join("\n");
-  return { to: p.to, subject: p.subject, html, text, unsubscribeUrl: p.unsubscribeUrl, kind: p.kind };
-}
+/** The mobile app, for emails where a parent is deciding how to use the product. iPhone and iPad are on their way, so not a link yet. */
+const APP_SPOTLIGHT: Spotlight = {
+  title: "Take it with you",
+  body: `The ${APP_NAME} Android app is on Google Play: [Get it on Google Play](${PLAY_STORE_URL}). Lessons work offline and progress syncs with the website. An iPhone and iPad app is on its way; until then, the website works on any device.`,
+  accent: 2,
+};
 
 /** `reports`: the account was made from an email alone to get the weekly report, so it has no password yet. */
 export function verifyEmail(to: string, origin: string, token: string, reports = false, dest: "parents" | "teachers" = "parents"): Email {
@@ -118,6 +36,8 @@ export function verifyEmail(to: string, origin: string, token: string, reports =
           "Tap the button to confirm your email. It unlocks your weekly progress report and lets you reset your password if you ever forget it.",
           `Next step, about a minute: add your child's first name and grade in the Parent area. ${APP_NAME} picks lessons that match their grade (Pre-K to Grade 9), and your free trial has every lesson, game and report open.`,
         ],
+    hero: EMAIL_SHOTS.adventure,
+    spotlight: APP_SPOTLIGHT,
     button: { label: "Confirm my email", url: `${origin}/account/verify/?token=${encodeURIComponent(token)}${dest === "teachers" ? "&to=teachers" : ""}` },
     footnote: "This link works for 3 days. If you didn't create an account, you can ignore this email.",
   });
@@ -229,6 +149,13 @@ export function trialRecapEmail(to: string, origin: string, daysLeft: number, ch
       KEEP_FREE,
       `You can subscribe now, before the trial ends. You'll be charged at checkout and the paid plan starts that day. If it isn't right for your family, we'll refund any payment in full within ${REFUND_DAYS} days.`,
     ],
+    hero: EMAIL_SHOTS.reports,
+    spotlight: {
+      title: "Full reports",
+      body: "Charts, every unit in your province's own levels, longer date ranges, printing and share links stay open with the family plan. A summary of each child's report stays free.",
+      accent: 2,
+      paid: true,
+    },
     button: { label: "Keep everything open", url: `${origin}${SUBSCRIBE_HREF}` },
   });
 }
@@ -253,6 +180,13 @@ export function trialEndingEmail(to: string, origin: string, daysLeft: number, c
       KEEP_FREE,
       `If ${recap.length ? "it's been working for your family" : "you'd like to keep going"}, you can subscribe before the trial ends to keep everything open. The plans and prices are on our pricing page. You'll be charged at checkout and the paid plan starts that day, with a full refund within ${REFUND_DAYS} days if it isn't right for your family. There's no rush and nothing to do if you'd like to stay on the free units. No card was needed to start.`,
     ],
+    hero: EMAIL_SHOTS.adventure,
+    spotlight: {
+      title: "What the family plan keeps open",
+      body: "Every unit, Adventure, Math Facts, the games and full reports, for up to " + MAX_CHILDREN + " children.",
+      accent: 4,
+      paid: true,
+    },
     button: { label: "See plans and prices", url: `${origin}/pricing/` },
   });
 }
@@ -293,7 +227,8 @@ export function weekHeadline(name: string, days: number): string {
 }
 
 /** `schoolYear`: lines from `schoolYearLines` (src/lib/schoolYear.ts), shown after the children. `inviteLink`: the parent's invite link, for the monthly "share with a friend" line. */
-export function weeklyEmail(to: string, origin: string, children: WeeklyChild[], unsubToken: string, country?: CountryCode, schoolYear: string[] = [], inviteLink?: string): Email {
+export function weeklyEmail(to: string, origin: string, children: WeeklyChild[], unsubToken: string, country?: CountryCode, schoolYear: string[] = [], inviteLink?: string, now = Date.now()): Email {
+  const tip = tipForWeek(now);
   const lines = children.flatMap((c) => [
     ...(c.answers && c.days ? [weekHeadline(c.name, c.days)] : []),
     c.answers
@@ -316,6 +251,8 @@ export function weeklyEmail(to: string, origin: string, children: WeeklyChild[],
     subject: children.length === 1 && children[0].days ? `${children[0].name} practised on ${children[0].days} ${children[0].days === 1 ? "day" : "days"} this week` : `${APP_NAME}: your week in learning`,
     heading: "Your week in learning",
     body: [...lines, ...schoolYear, ...(inviteLink ? [`Know a family who might like ${APP_NAME}? Share your link: ${inviteLink} When they sign up and confirm their email, you get a free month.`] : [])],
+    hero: tip.shot,
+    spotlight: { title: `Did you know? ${tip.title}`, body: tip.body, accent: tip.accent, paid: tip.paid },
     button: { label: "Open full reports", url: `${origin}/parents/#/reports` },
   });
 }
@@ -338,6 +275,7 @@ export function yearReviewEmail(to: string, origin: string, children: YearReview
       ...children.flatMap(yearReviewLines),
       "The parent area has a page for each child with stickers, trophies and every unit that grew, ready to print or keep.",
     ],
+    hero: EMAIL_SHOTS.rewards,
     button: { label: "See the year in review", url: `${origin}/parents/#/year` },
   });
 }
@@ -364,6 +302,8 @@ export function reminderEmail(to: string, origin: string, children: ReminderChil
     subject: `${who} could use ten minutes of ${APP_NAME} today`,
     heading: "A good day for a short session",
     body: [...lines, "Short, regular sessions are what make skills stick, and there's no streak to lose. Their favourite lessons are always waiting."],
+    hero: EMAIL_SHOTS.adventure,
+    spotlight: { title: "Not sure where to start?", body: "Tap Adventure. It mixes subjects and picks questions for your child, a little of what they know and a little of what's new, so there's nothing to choose.", accent: 3 },
     button: { label: `Open ${APP_NAME}`, url: `${origin}/play/` },
     footnote: "You asked for practice reminders. We send at most one a week, and only after a few quiet days.",
   });
@@ -492,6 +432,7 @@ export function classDigestEmail(to: string, origin: string, classes: string[][]
     subject: `${APP_NAME}: your class this week`,
     heading: "Your class this week",
     body: [...classes.flat()],
+    hero: EMAIL_SHOTS.teacher,
     button: { label: classes.length === 1 ? "Open the class" : "Open your classes", url: `${origin}${buttonPath}` },
     footnote: "You turned on the Monday class email in the teacher area. You can turn it off there, or with the unsubscribe link below.",
   });
@@ -508,6 +449,7 @@ export function familyInviteEmail(to: string, origin: string, token: string, own
       `${ownerEmail} invited you to see and manage the children in their ${APP_NAME} family: reports, settings and goals. Billing and deleting the family stay with them.`,
       "Choose the button to make your own sign-in with this email address. The invitation lasts 7 days. If you weren't expecting it, ignore this email and nothing is shared.",
     ],
+    hero: EMAIL_SHOTS.parent,
     button: { label: "Accept the invitation", url: `${origin}/account/join/?token=${encodeURIComponent(token)}` },
   });
 }
@@ -523,6 +465,7 @@ export function classInviteEmail(to: string, origin: string, className: string, 
       `${ownerEmail} invited you to share the class “${className}”. As a co-teacher you can see the class, its students’ first names and practice results on the assigned units, and you can assign units and print login cards.`,
       "Sign in to your teacher page and choose Accept to join. The invitation lasts 14 days. If you weren't expecting it, ignore this email and nothing is shared.",
     ],
+    hero: EMAIL_SHOTS.teacher,
     button: { label: "See the invitation", url: `${origin}/teachers/` },
   });
 }
@@ -605,6 +548,7 @@ export function giftEmail(to: string, origin: string, p: { code: string; days: n
       `Pass it on to the family you're giving it to. They sign in to the Parent area, open Subscription and choose “Have a code?”. One family can use it once, any time before ${p.expires}.`,
       `Changed your mind? Reply to this email within ${REFUND_DAYS} days and we'll refund you in full.`,
     ],
+    hero: EMAIL_SHOTS.adventure,
     button: { label: "How to use the code", url: `${origin}/help/` },
     footnote: "Keep this email: the code is the gift. We don't store who it's for.",
   });
