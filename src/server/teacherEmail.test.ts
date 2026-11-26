@@ -96,6 +96,25 @@ describe("groups", () => {
   });
 });
 
+describe("teacher-no-practice", () => {
+  it("reaches a teacher whose students have not practised, not one whose student has", async () => {
+    const idle = await account("tea-f@example.com", "teachers");
+    await addClass(idle.parentId, "c-idle");
+    await dbm.run("INSERT INTO students (id, class_id, family_id, parent_id, profile_id, login_code, created_at) VALUES ('s-idle', 'c-idle', 'sf-idle', 'sp-idle', 'prof-idle', 'AAAAAAAAAA', 1)");
+    const active = await account("tea-g@example.com", "teachers");
+    await addClass(active.parentId, "c-active");
+    await dbm.run("INSERT INTO students (id, class_id, family_id, parent_id, profile_id, login_code, created_at) VALUES ('s-act', 'c-active', 'sf-act', 'sp-act', 'prof-act', 'BBBBBBBBBB', 1)");
+    await dbm.run("INSERT INTO events (id, family_id, profile_id, seq, t, data) VALUES ('ev-1', 'sf-act', 'prof-act', 1, ?, '{\"type\":\"answer\"}')", [Date.now()]);
+    const noStudents = await account("tea-h@example.com", "teachers");
+    await addClass(noStudents.parentId, "c-none");
+
+    const r = await reaches("teacher-no-practice");
+    expect(r).toContain("tea-f@example.com");
+    expect(r).not.toContain("tea-g@example.com");
+    expect(r).not.toContain("tea-h@example.com");
+  });
+});
+
 describe("content", () => {
   it("every group and automation has a message written for its audience", () => {
     for (const a of AUTOMATIONS) {
