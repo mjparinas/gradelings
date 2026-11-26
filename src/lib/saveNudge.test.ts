@@ -10,11 +10,11 @@ const family = (over: Partial<FamilyInfo> = {}): FamilyInfo => ({ plan: "trial",
 describe("asking a grown-up to save progress", () => {
   it("asks after the first finished lesson", () => {
     expect(askToSaveProgress(family(), 1, 1, NOW)).toBe(true);
-    expect(askToSaveProgress(family(), 2, 1, NOW)).toBe(false);
+    expect(askToSaveProgress(family(), 4, 1, NOW)).toBe(false);
   });
 
-  it("asks again after the third and seventh lessons for a grown-up who missed it, and in between not at all", () => {
-    expect([1, 2, 3, 4, 5, 6, 7, 8].map((n) => askToSaveProgress(family(), n, 1, NOW))).toEqual([true, false, true, false, false, false, true, false]);
+  it("asks again after the second, third, fifth and seventh lessons for a grown-up who missed it, and in between not at all", () => {
+    expect([1, 2, 3, 4, 5, 6, 7, 8].map((n) => askToSaveProgress(family(), n, 1, NOW))).toEqual([true, true, true, false, true, false, true, false]);
   });
 
   it("asks once a day in the last stretch of the trial", () => {

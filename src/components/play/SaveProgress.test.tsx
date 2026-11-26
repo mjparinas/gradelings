@@ -73,8 +73,8 @@ describe("SaveProgress", () => {
     expect(card()).toBeNull();
   });
 
-  it("stays away after the first lesson, and when the flag is off", () => {
-    h.sessions = 2;
+  it("stays away between the lessons it asks after, and when the flag is off", () => {
+    h.sessions = 4;
     const { unmount } = render(<SaveProgress />);
     expect(card()).toBeNull();
     unmount();
