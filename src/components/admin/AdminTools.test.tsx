@@ -168,7 +168,7 @@ describe("Automations", () => {
     lastSentAt: null,
     ...over,
   });
-  const data = (s = status()) => ({ automations: [s], alerts: { instant: true, digest: false }, alertRecipients: 1 });
+  const data = (s = status()) => ({ automations: [s], alerts: { instant: true, digest: false }, alertRecipients: 1, series: { config: { on: false, dailyCap: 100, onBy: null, onAt: null }, nextRun: 0, inWindow: 0, sent7: 0, lastSentAt: null, length: 46, sentTotal: 0 } });
 
   it("shows every card under its name while the settings load", async () => {
     mocks.call.mockImplementation(() => new Promise(() => {}));

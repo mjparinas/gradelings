@@ -8,6 +8,8 @@ describe("Sentry noise", () => {
   it("groups every script that came back as an HTML page into one issue", () => {
     expect(groupEvent(event("SyntaxError", "Unexpected token '<'")).fingerprint).toEqual(["script-served-as-html"]);
     expect(groupEvent(event("SyntaxError", "expected expression, got '<'")).fingerprint).toEqual(["script-served-as-html"]);
+    // Chrome's wording when a filter or proxy rewrites or garbles a script instead of replacing it.
+    expect(groupEvent(event("SyntaxError", "Invalid or unexpected token")).fingerprint).toEqual(["script-served-as-html"]);
   });
 
   it("leaves other errors to Sentry's own grouping", () => {

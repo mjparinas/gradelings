@@ -18,6 +18,7 @@ export const EMAIL_KINDS = {
   "family-invite": "Second adult invitation",
   consent: "US parental consent",
   admin: "Sent from the admin panel",
+  "feature-tip": "Feature tip",
   billing: "Payment problem notice",
   gift: "Gift code",
   alert: "Alert or digest to an admin",
