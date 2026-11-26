@@ -341,6 +341,7 @@ const SEGMENT_PRESET: Record<Segment, string> = {
   cancelled: "feedback",
   "teacher-no-class": "teacher-getting-started",
   "teacher-no-students": "teacher-add-students",
+  "teacher-no-practice": "teacher-first-practice",
   teachers: "teacher-hello",
   parents: "custom",
   everyone: "custom",

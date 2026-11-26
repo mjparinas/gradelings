@@ -55,6 +55,14 @@ function rawWhere(segment: Segment, now: number): { sql: string; args: number[] 
           AND NOT EXISTS (SELECT 1 FROM classes c JOIN class_members m ON m.class_id = c.id WHERE c.closed_at IS NULL AND c.owner_parent_id = p.id)`,
         args: [now - 3 * DAY, now - 60 * DAY],
       };
+    case "teacher-no-practice":
+      // A class made 3 to 60 days ago that has students, none of whom has practised (any event on their profile).
+      return {
+        sql: `p.account_type = 'teacher' AND EXISTS (SELECT 1 FROM classes c WHERE c.closed_at IS NULL AND c.owner_parent_id = p.id AND c.created_at < ? AND c.created_at > ?
+            AND EXISTS (SELECT 1 FROM students s WHERE s.class_id = c.id)
+            AND NOT EXISTS (SELECT 1 FROM students s JOIN events e ON e.profile_id = s.profile_id WHERE s.class_id = c.id))`,
+        args: [now - 3 * DAY, now - 60 * DAY],
+      };
     case "teachers":
       return { sql: "p.account_type = 'teacher'", args: [] };
     case "parents":
