@@ -60,11 +60,22 @@ describe("branding in every email", () => {
   it("sets the text in Andika and the name in Fredoka, as on the site, loaded from our own site", () => {
     const files = Object.values(EMAIL_FONTS).flatMap((font) => font.files);
     for (const e of every) {
-      expect(e.html).toContain(`<body style="margin:0;background:#f7f5f0;font-family:${EMAIL_FONTS.text.stack}`);
+      expect(e.html).toContain(`font-family:${EMAIL_FONTS.text.stack}`);
       for (const f of files) expect(e.html).toContain(`url(${O}${f.path}.woff2)`);
       expect(e.html).not.toContain("fonts.googleapis");
     }
     for (const f of files) for (const ext of ["woff2", "woff"]) expect(existsSync(join(process.cwd(), "public", `${f.path}.${ext}`))).toBe(true);
+  });
+
+  it("holds up in Outlook for Windows and dark modes: cell colours, a 560 px ghost table, padding on the button's cell", () => {
+    for (const e of every) {
+      expect(e.html).toContain('<body bgcolor="#f7f5f0"');
+      expect(e.html).toContain("<!--[if mso]><table");
+      expect(e.html).toContain('<td bgcolor="#ffffff"');
+      expect(e.html).toContain('name="color-scheme" content="light"');
+      // Padding on the link itself is dropped by Outlook, which would draw a thin button.
+      expect(e.html).not.toMatch(/<a [^>]*padding:14px 24px/);
+    }
   });
 
   it("has the image files the emails point to, as PNGs (mail clients don't show SVG)", () => {
