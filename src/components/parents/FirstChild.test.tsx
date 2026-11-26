@@ -67,4 +67,11 @@ describe("FirstChild", () => {
     await userEvent.click(screen.getByRole("button", { name: "I’ll do this later" }));
     expect(onSkip).toHaveBeenCalled();
   });
+
+  it("can sit inline as a card, with no skip link and no page-sized layout", () => {
+    render(<FirstChild inline />);
+    expect(screen.getByRole("region", { name: "Add your child" })).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: /do this later/ })).not.toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "While you wait, add your child" })).toBeInTheDocument();
+  });
 });

@@ -20,8 +20,12 @@ export const FIRST_QUESTION_HREF = "/play/#/session?mode=adventure&scope=mix";
  * into the child's first question. It stands in for the parent PIN screen on a device with no PIN yet (a new PIN
  * would be one more thing to invent before the child has even tried a lesson); the PIN is asked for the next time
  * the parent area opens. Everything else about the child (birth year, avatar, subjects) can wait for Children.
+ *
+ * `inline` (owner, November 25, 2026) shows the same form as a card under "Check your email" right after sign-up, so a
+ * parent can add the child before the confirmation link is opened (7 of 19 confirmed families never added one). The
+ * child is kept on this device and syncs once the link has been opened here.
  */
-export function FirstChild({ onSkip }: { onSkip: () => void }) {
+export function FirstChild({ onSkip, inline = false }: { onSkip?: () => void; inline?: boolean }) {
   const addProfile = useStore((s) => s.addProfile);
   const [name, setName] = useState("");
   // The province or state (and grade) of the last region page this device read, when there was one.
@@ -47,9 +51,13 @@ export function FirstChild({ onSkip }: { onSkip: () => void }) {
     window.setTimeout(() => window.location.assign(FIRST_QUESTION_HREF), 300);
   };
 
+  const Wrap = inline ? "section" : "main";
   return (
-    <main id={MAIN_ID} tabIndex={-1} className="mx-auto flex min-h-dvh max-w-md flex-col justify-center gap-5 px-4 py-6">
-      <h1 className="text-3xl font-bold">Who&rsquo;s learning today?</h1>
+    <Wrap
+      {...(inline ? { "aria-label": "Add your child" } : { id: MAIN_ID, tabIndex: -1 })}
+      className={inline ? "flex flex-col gap-3 rounded-2xl border-2 border-dashed border-line bg-white/70 p-4" : "mx-auto flex min-h-dvh max-w-md flex-col justify-center gap-5 px-4 py-6"}
+    >
+      {inline ? <h2 className="text-xl font-bold">While you wait, add your child</h2> : <h1 className="text-3xl font-bold">Who&rsquo;s learning today?</h1>}
       <p className="font-read text-lg text-ink-soft">Just a first name and a grade, so questions match what they&rsquo;re learning. It takes under a minute, and your trial has everything open.</p>
       <form
         className="flex flex-col gap-4 text-left"
@@ -60,7 +68,7 @@ export function FirstChild({ onSkip }: { onSkip: () => void }) {
       >
         <label className="flex flex-col gap-1">
           <span className="font-semibold">First name or nickname</span>
-          <input value={name} maxLength={20} autoFocus autoComplete="off" onChange={(e) => setName(e.target.value)} className="rounded-xl border-2 border-line px-3 py-2 text-lg" />
+          <input value={name} maxLength={20} autoFocus={!inline} autoComplete="off" onChange={(e) => setName(e.target.value)} className="rounded-xl border-2 border-line px-3 py-2 text-lg" />
         </label>
         <SelectMenu
           label="Grade"
@@ -83,9 +91,11 @@ export function FirstChild({ onSkip }: { onSkip: () => void }) {
           {saving ? "Getting ready…" : "Start the first question"}
         </button>
       </form>
-      <button type="button" className="self-center text-sm font-semibold text-ink-soft underline" onClick={onSkip}>
-        I&rsquo;ll do this later
-      </button>
-    </main>
+      {!inline && onSkip && (
+        <button type="button" className="self-center text-sm font-semibold text-ink-soft underline" onClick={onSkip}>
+          I&rsquo;ll do this later
+        </button>
+      )}
+    </Wrap>
   );
 }
