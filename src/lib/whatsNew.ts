@@ -24,6 +24,22 @@ export const NEWS_KIND_LABEL: Record<NewsItem["kind"], string> = {
 
 export const WHATS_NEW: NewsDay[] = [
   {
+    day: "2026-11-25",
+    headline: "Easier to save progress and get started",
+    items: [
+      {
+        kind: "new",
+        title: "Add your child while you wait for the confirmation email",
+        body: "After you create an account, you no longer have to wait for the email before getting started. A short \"While you wait, add your child\" card asks for a first name and grade, then opens their first Adventure right away. Their progress joins your account once you open the confirmation link on the same device.",
+      },
+      {
+        kind: "new",
+        title: "A gentle reminder to save progress comes a little sooner",
+        body: "If your child plays without an account, a quiet \"For grown-ups\" card now appears after their second and fifth lessons as well. It only asks for an email, so you can save their progress and get the weekly report.",
+      },
+    ],
+  },
+  {
     day: "2026-11-24",
     headline: "Easier to find your curriculum, and a clearer start for teachers",
     items: [
