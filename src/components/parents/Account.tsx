@@ -16,6 +16,7 @@ import { GoogleButton, useGoogleError } from "../GoogleButton";
 import { emailChoice, emailPatch, type EmailChoice, type EmailPrefs } from "@/lib/settingChoices";
 import { AdultsPanel } from "./Adults";
 import { Choice, PageTitle, Panel } from "./common";
+import { FirstChild } from "./FirstChild";
 import { ParentPin } from "./ParentPin";
 import { NotificationsPanel } from "./Notifications";
 import { PrivacyPanels } from "./Privacy";
@@ -31,6 +32,8 @@ export function AuthForm({ onDone, initialMode = "signup" }: { onDone: () => voi
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
+  const [signedUp, setSignedUp] = useState(false);
+  const noChild = useStore((s) => s.profiles.length === 0);
   const googleError = useGoogleError();
   const magicOn = useMagicLinkOn();
   // The server snapshot is false so the first render matches the static page.
@@ -48,6 +51,7 @@ export function AuthForm({ onDone, initialMode = "signup" }: { onDone: () => voi
       if (mode === "signup") {
         // Nobody is signed in yet: the link in the email does that. The answer is the same for every address.
         await signUp(email, password);
+        setSignedUp(true);
         setNotice("Check your email. We've sent a link to open your account. If you already have one, the email says so and tells you how to sign in.");
         return;
       }
@@ -89,6 +93,7 @@ export function AuthForm({ onDone, initialMode = "signup" }: { onDone: () => voi
       </label>
       )}
       {notice && <p role="status" className="rounded-xl bg-[#e8f7f0] p-3 font-semibold">{notice}</p>}
+      {signedUp && noChild && <FirstChild inline />}
       {(error || googleError) && <p className="font-semibold text-nudge-dark">{error || googleError}</p>}
       {mode === "signup" && invited && (
         <p className="rounded-xl bg-[#e8f7f0] p-3 font-semibold">🎁 A friend invited you. When you confirm your email, they get a free month. Thank you!</p>
