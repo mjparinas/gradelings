@@ -17,7 +17,7 @@ export const IGNORE_ERRORS = [/\bzaloJSV2\b/, /QuotaExceededError/, /Encountered
  */
 export function groupEvent(event: ErrorEvent): ErrorEvent {
   const ex = event.exception?.values?.[0];
-  if (ex?.type === "SyntaxError" && /Unexpected token '<'|expected expression, got '<'/.test(ex.value ?? "")) {
+  if (ex?.type === "SyntaxError" && /Unexpected token '<'|expected expression, got '<'|Invalid or unexpected token/.test(ex.value ?? "")) {
     event.fingerprint = ["script-served-as-html"];
   }
   return event;

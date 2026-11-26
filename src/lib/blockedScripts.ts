@@ -31,7 +31,7 @@ export function isBlockedScript(e: { message?: string; filename?: string; error?
   }
   const name = e.error instanceof Error ? e.error.name : "";
   const text = `${e.message ?? ""} ${e.error instanceof Error ? e.error.message : ""}`;
-  return (name === "SyntaxError" || /SyntaxError/.test(text)) && /Unexpected token '<'|expected expression, got '<'/.test(text);
+  return (name === "SyntaxError" || /SyntaxError/.test(text)) && /Unexpected token '<'|expected expression, got '<'|Invalid or unexpected token/.test(text);
 }
 
 /** Called for every window error once `watchScripts` has run (exported for tests). */
