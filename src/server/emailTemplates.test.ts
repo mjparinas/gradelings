@@ -7,6 +7,7 @@ import { EMAIL_SHOTS } from "@/lib/emailImages";
 import { FEATURE_TIPS, tipForWeek } from "@/lib/emailFeatures";
 import { PLAY_STORE_URL } from "@/lib/brand";
 import * as t from "./emailTemplates";
+import { layout } from "./emailLayout";
 
 const O = "https://app.test";
 const every = [
@@ -278,5 +279,12 @@ describe("the refreshed look (November 2026)", () => {
   it("never names a price or the old name in a callout or picture", () => {
     const all = [...FEATURE_TIPS.map((x) => `${x.title} ${x.body} ${x.shot.alt}`), ...Object.values(EMAIL_SHOTS).map((x) => x.alt)].join("\n");
     expect(all).not.toMatch(/\$|C\$|US\$|grademap/i);
+  });
+
+  it("renders bullets as a list in the HTML and as dashes in the text", () => {
+    const e = layout({ to: "a@example.com", origin: O, subject: "s", heading: "h", body: ["Hi"], bullets: ["One", "Two [link](https://x.test/a)"] });
+    expect(e.html).toContain("<li");
+    expect(e.html).toContain('<a href="https://x.test/a"');
+    expect(e.text).toContain("- One\n- Two link: https://x.test/a");
   });
 });

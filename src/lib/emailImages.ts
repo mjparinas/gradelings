@@ -54,6 +54,7 @@ export const EMAIL_FONTS: Record<"text" | "wordmark", EmailFont> = {
 export interface EmailShot {
   path: string;
   width: number;
+  height?: number;
   alt: string;
 }
 

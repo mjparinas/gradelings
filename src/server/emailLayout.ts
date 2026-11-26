@@ -34,6 +34,8 @@ export interface Parts {
   heading: string;
   /** Plain paragraphs. A line that starts with two spaces is a smaller note under the line before it; web addresses become links. */
   body: string[];
+  /** Short points shown as a list after the body (links work as in the body). */
+  bullets?: string[];
   button?: { label: string; url: string };
   /** A screenshot of the app, drawn into public/email/shots/ by scripts/email-screenshots.mjs. */
   hero?: EmailShot;
@@ -118,6 +120,10 @@ function bodyHtml(lines: string[]): string {
     .join("");
 }
 
+function bulletsHtml(items: string[]): string {
+  return `<ul style="margin:0 0 12px;padding-left:22px">${items.map((t) => `<li style="margin:0 0 6px">${linked(t)}</li>`).join("")}</ul>`;
+}
+
 function spotlightHtml(s: Spotlight): string {
   const i = (s.accent ?? 0) % WORDMARK_COLOURS.length;
   const pill = s.paid
@@ -142,6 +148,7 @@ export function layout(parts: Parts): Email {
     subject: say(parts.subject),
     heading: say(parts.heading),
     body: parts.body.map(say),
+    bullets: parts.bullets?.map(say),
     button: parts.button && { ...parts.button, label: say(parts.button.label) },
     footnote: parts.footnote && say(parts.footnote),
     spotlight: parts.spotlight && { ...parts.spotlight, title: say(parts.spotlight.title), body: say(parts.spotlight.body) },
@@ -158,6 +165,7 @@ export function layout(parts: Parts): Email {
 <div style="background:#fff;border:1px solid #ece8df;border-radius:20px;padding:26px 24px;line-height:1.55;font-size:16px">
 <h1 style="font-family:${EMAIL_FONTS.wordmark.stack};font-size:24px;line-height:1.25;margin:0 0 14px;color:${INK}">${esc(p.heading)}</h1>
 ${bodyHtml(p.body)}
+${p.bullets?.length ? bulletsHtml(p.bullets) : ""}
 ${p.spotlight ? spotlightHtml(p.spotlight) : ""}
 ${button}
 ${p.hero ? heroHtml(p.origin, p.hero, p.button?.url ?? `${p.origin}/`) : ""}
@@ -170,6 +178,7 @@ ${MAILING_ADDRESS ? `<p style="font-size:12px;color:${MUTED};margin:4px 4px 0">$
     p.heading,
     "",
     ...p.body.map(plain),
+    ...(p.bullets?.length ? ["", ...p.bullets.map((b) => `- ${plain(b)}`)] : []),
     ...(p.spotlight ? ["", plain(`${p.spotlight.title}${p.spotlight.paid ? " (Family plan)" : ""}: ${p.spotlight.body}`)] : []),
     ...(p.button ? ["", `${p.button.label}: ${p.button.url}`] : []),
     ...(p.footnote ? ["", plain(p.footnote)] : []),
