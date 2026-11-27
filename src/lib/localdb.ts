@@ -87,13 +87,19 @@ function withTimeout(work: Promise<unknown>, ms: number): Promise<unknown> {
   return Promise.race([work.catch(() => undefined), new Promise((r) => setTimeout(r, ms))]);
 }
 
+/** A transaction that is cancelled by the browser (storage full, the app sent to the background, a private tab) has no
+ * `error`; reject with a real one so callers never see null. */
+function txError(t: IDBTransaction): Error {
+  return t.error ?? new DOMException("The device's storage cancelled a save.", "AbortError");
+}
+
 /** Runs a request set on an open database and resolves when its transaction completes. */
 function run(db: IDBDatabase, stores: string[], mode: IDBTransactionMode, fn: (t: IDBTransaction) => void): Promise<void> {
   return new Promise((resolve, reject) => {
     const t = db.transaction(stores, mode);
     t.oncomplete = () => resolve();
-    t.onerror = () => reject(t.error);
-    t.onabort = () => reject(t.error);
+    t.onerror = () => reject(txError(t));
+    t.onabort = () => reject(txError(t));
     fn(t);
   });
 }
@@ -214,8 +220,8 @@ function tx<T>(store: string, mode: IDBTransactionMode, fn: (s: IDBObjectStore) 
         }
         const req = fn(t.objectStore(store));
         t.oncomplete = () => resolve(req ? req.result : undefined);
-        t.onerror = () => reject(t.error);
-        t.onabort = () => reject(t.error);
+        t.onerror = () => reject(txError(t));
+        t.onabort = () => reject(txError(t));
       }),
   );
 }

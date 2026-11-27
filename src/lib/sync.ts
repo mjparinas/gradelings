@@ -7,6 +7,7 @@ import { pingGuestDevice } from "./guestPing";
 import * as localdb from "./localdb";
 import { MAINTENANCE_HEADER, MAINTENANCE_SYNC_MESSAGE } from "./maintenance";
 import type { AppEvent, ChildSettings, FamilyInfo, Profile } from "./model";
+import { reportHandled } from "./reportError";
 import { useStore } from "./store";
 
 // Offline-first sync. Everything is saved on the device first; whenever the
@@ -30,9 +31,15 @@ interface SyncResponse {
 }
 
 export function syncNow(): Promise<void> {
-  running ??= doSync().finally(() => {
-    running = null;
-  });
+  // Never rejects: every caller fires and forgets, and a sync problem must not crash the app.
+  running ??= doSync()
+    .catch((e) => {
+      useStore.getState().setSync({ status: "error", error: syncErrorMessage(e) });
+      reportHandled(e);
+    })
+    .finally(() => {
+      running = null;
+    });
   return running;
 }
 
@@ -93,8 +100,25 @@ async function doSync(): Promise<void> {
     }
     useStore.getState().setSync({ status: "idle" });
   } catch (e) {
-    useStore.getState().setSync({ status: navigator.onLine ? "error" : "offline", error: (e as Error).message });
+    useStore.getState().setSync({ status: navigator.onLine ? "error" : "offline", error: syncErrorMessage(e) });
+    // Offline blips and server errors are routine; a failure of the device's own storage is worth seeing.
+    if (syncErrorMessage(e) === STORAGE_SYNC_MESSAGE) reportHandled(e);
   }
+}
+
+/** Shown when this device's own storage failed, which is not the server's or the network's fault. */
+export const STORAGE_SYNC_MESSAGE =
+  "This device couldn't save to its storage just now. Your child's progress is safe and will upload on the next try. If it keeps happening, free up some space on the device, leave private browsing, or close and reopen the app.";
+
+const STORAGE_ERRORS = new Set(["QuotaExceededError", "AbortError", "InvalidStateError", "UnknownError", "NotFoundError", "SecurityError"]);
+
+/** Turns anything that rejects (even null, or a storage error) into a short, kind message; never throws. */
+export function syncErrorMessage(e: unknown): string {
+  const name = typeof e === "object" && e !== null ? (e as { name?: unknown }).name : undefined;
+  if (typeof name === "string" && STORAGE_ERRORS.has(name)) return STORAGE_SYNC_MESSAGE;
+  if (e instanceof Error) return e.message;
+  if (typeof e === "string" && e) return e;
+  return STORAGE_SYNC_MESSAGE;
 }
 
 let started = false;
