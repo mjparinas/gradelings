@@ -15,7 +15,7 @@ vi.mock("./localdb", () => ({
 }));
 
 import { useStore } from "./store";
-import { startBackgroundSync, syncNow } from "./sync";
+import { STORAGE_SYNC_MESSAGE, startBackgroundSync, syncErrorMessage, syncNow } from "./sync";
 import { MAINTENANCE_SYNC_MESSAGE } from "./maintenance";
 
 const account = { email: "p@example.com", familyId: "fam1" };
@@ -238,6 +238,18 @@ describe("syncNow", () => {
     expect(useStore.getState().sync).toMatchObject({ status: "offline", error: "Failed to fetch" });
   });
 
+  it("shows the storage message, reports it, and does not crash when the device database cancels a save", async () => {
+    const seen = vi.fn();
+    window.addEventListener("error", seen);
+    fetchMock.mockImplementationOnce(async () => {
+      throw new DOMException("cancelled", "AbortError");
+    });
+    await expect(syncNow()).resolves.toBeUndefined();
+    window.removeEventListener("error", seen);
+    expect(useStore.getState().sync).toMatchObject({ status: "error", error: STORAGE_SYNC_MESSAGE });
+    expect(seen).toHaveBeenCalledTimes(1);
+  });
+
   it("shares one request between calls made while a sync is running", async () => {
     let release!: (r: Response) => void;
     fetchMock.mockReturnValueOnce(new Promise((r) => (release = r)));
@@ -344,5 +356,14 @@ describe("startBackgroundSync", () => {
       vis.mockRestore();
       vi.useRealTimers();
     }
+  });
+
+  it("turns anything that rejects, even null, into a message", () => {
+    expect(syncErrorMessage(new Error("boom"))).toBe("boom");
+    expect(syncErrorMessage(null)).toBe(STORAGE_SYNC_MESSAGE);
+    expect(syncErrorMessage(undefined)).toBe(STORAGE_SYNC_MESSAGE);
+    expect(syncErrorMessage(new DOMException("full", "QuotaExceededError"))).toBe(STORAGE_SYNC_MESSAGE);
+    expect(syncErrorMessage(new DOMException("closing", "InvalidStateError"))).toBe(STORAGE_SYNC_MESSAGE);
+    expect(syncErrorMessage("plain")).toBe("plain");
   });
 });
