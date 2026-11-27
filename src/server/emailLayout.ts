@@ -159,15 +159,25 @@ export function layout(parts: Parts): Email {
     hero: parts.hero && { ...parts.hero, alt: say(parts.hero.alt) },
   };
   // Dark navy on the bright green, not white: white fails the contrast rules (src/lib/contrast.ts).
+  // The padding sits on the cell, not the link: Outlook for Windows ignores padding on an inline-block link and
+  // would draw a button as thin as its text.
   const button = p.button
-    ? `<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:22px 0"><tr><td bgcolor="${GREEN}" style="background:${GREEN};border-radius:12px"><a href="${esc(p.button.url)}" style="color:${ON_BRIGHT};text-decoration:none;font-family:${EMAIL_FONTS.wordmark.stack};font-weight:700;font-size:17px;padding:14px 24px;border-radius:12px;display:inline-block">${esc(p.button.label)}</a></td></tr></table>`
+    ? `<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:22px 0"><tr><td bgcolor="${GREEN}" style="background:${GREEN};border-radius:12px;padding:14px 24px"><a href="${esc(p.button.url)}" style="color:${ON_BRIGHT};text-decoration:none;font-family:${EMAIL_FONTS.wordmark.stack};font-weight:700;font-size:17px;line-height:20px;display:inline-block">${esc(p.button.label)}</a></td></tr></table>`
     : "";
-  const html = `<!doctype html><html lang="${locale.startsWith("en-US") ? "en-US" : "en-CA"}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><style>${fontFaces(p.origin)}</style></head><body style="margin:0;background:#f7f5f0;font-family:${EMAIL_FONTS.text.stack};color:${INK}">
+  const footer = `<p style="font-size:12px;color:${MUTED};margin:16px 4px 0">${esc(APP_NAME)} has no ads and never sells your information. <a href="${esc(p.origin)}/privacy/" style="color:${MUTED}">Privacy</a> · Questions? ${esc(CONTACT_EMAIL)}${p.unsubscribePage ? ` · <a href="${esc(p.unsubscribePage)}" style="color:${MUTED}">Unsubscribe</a>` : ""}</p>
+${MAILING_ADDRESS ? `<p style="font-size:12px;color:${MUTED};margin:4px 4px 0">${esc(LEGAL_NAME)} · ${esc(MAILING_ADDRESS)}</p>` : ""}`;
+  // Outlook for Windows ignores max-width on a div, so the column is a 560 px table there (the conditional comments);
+  // the card is a table cell so its colour, border and padding hold in every client. Page and card colours are on
+  // cells too (bgcolor), which Gmail's dark mode keeps better than a body style. "light dark" is not claimed: the
+  // email is designed light, and the meta tags only ask clients not to recolour it where they honour them.
+  const html = `<!doctype html><html lang="${locale.startsWith("en-US") ? "en-US" : "en-CA"}" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light"><meta name="supported-color-schemes" content="light"><meta http-equiv="X-UA-Compatible" content="IE=edge"><!--[if mso]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]--><style>:root{color-scheme:light only}${fontFaces(p.origin)}</style></head><body bgcolor="#f7f5f0" style="margin:0;padding:0;background:#f7f5f0;font-family:${EMAIL_FONTS.text.stack};color:${INK};-webkit-text-size-adjust:100%">
 ${p.preheader ? `<div style="display:none;max-height:0;overflow:hidden;opacity:0;font-size:1px;line-height:1px;color:#f7f5f0">${esc(p.preheader)}</div>` : ""}
-<div style="max-width:560px;margin:0 auto;padding:0 16px 24px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f7f5f0" style="background:#f7f5f0"><tr><td align="center" style="padding:0 16px 24px">
+<!--[if mso]><table role="presentation" width="560" cellpadding="0" cellspacing="0" border="0"><tr><td><![endif]-->
+<div style="max-width:560px;margin:0 auto;text-align:left">
 <div style="padding:16px 0 0">${stripe()}</div>
 <div style="padding:18px 0 0">${header(p.origin)}</div>
-<div style="background:#fff;border:1px solid #ece8df;border-radius:20px;padding:26px 24px;line-height:1.55;font-size:16px">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#ffffff" style="background:#ffffff;border:1px solid #ece8df;border-radius:20px;padding:26px 24px;line-height:1.55;font-size:16px;font-family:${EMAIL_FONTS.text.stack};color:${INK}">
 <h1 style="font-family:${EMAIL_FONTS.wordmark.stack};font-size:24px;line-height:1.25;margin:0 0 14px;color:${INK}">${esc(p.heading)}</h1>
 ${bodyHtml(p.body)}
 ${p.bullets?.length ? bulletsHtml(p.bullets) : ""}
@@ -175,10 +185,11 @@ ${[p.spotlight ?? []].flat().map(spotlightHtml).join("")}
 ${button}
 ${p.hero ? heroHtml(p.origin, p.hero, p.button?.url ?? `${p.origin}/`) : ""}
 ${p.footnote ? `<p style="font-size:13px;color:${MUTED};margin:${p.hero ? "16px" : "0"} 0 0">${linked(p.footnote)}</p>` : ""}
+</td></tr></table>
+${footer}
 </div>
-<p style="font-size:12px;color:${MUTED};margin:16px 4px 0">${esc(APP_NAME)} has no ads and never sells your information. <a href="${esc(p.origin)}/privacy/" style="color:${MUTED}">Privacy</a> · Questions? ${esc(CONTACT_EMAIL)}${p.unsubscribePage ? ` · <a href="${esc(p.unsubscribePage)}" style="color:${MUTED}">Unsubscribe</a>` : ""}</p>
-${MAILING_ADDRESS ? `<p style="font-size:12px;color:${MUTED};margin:4px 4px 0">${esc(LEGAL_NAME)} · ${esc(MAILING_ADDRESS)}</p>` : ""}
-</div></body></html>`;
+<!--[if mso]></td></tr></table><![endif]-->
+</td></tr></table></body></html>`;
   const text = [
     p.heading,
     "",
