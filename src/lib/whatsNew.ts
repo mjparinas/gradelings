@@ -24,6 +24,22 @@ export const NEWS_KIND_LABEL: Record<NewsItem["kind"], string> = {
 
 export const WHATS_NEW: NewsDay[] = [
   {
+    day: "2026-11-26",
+    headline: "Gradelings emails look better everywhere",
+    items: [
+      {
+        kind: "new",
+        title: "Friendlier, more colourful emails",
+        body: "Our emails now have a colourful stripe, app screenshots and short feature highlights, so it is easier to see what Gradelings can do for your child and where to find it.",
+      },
+      {
+        kind: "fixed",
+        title: "Emails hold their look in Outlook and dark mode",
+        body: "Emails no longer come out squashed in Outlook for Windows, buttons keep their full size, and the page and card colours stay put when Gmail switches to dark mode.",
+      },
+    ],
+  },
+  {
     day: "2026-11-25",
     headline: "Easier to save progress and get started",
     items: [
