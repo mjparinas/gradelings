@@ -26,7 +26,8 @@ export async function generateMetadata({ params }: PageProps<"/report-cards/[fra
   if (!f) return {};
   const levels = f.scoringFor("3").levels.map((l) => l.label);
   return pageMeta({
-    title: [`${f.shortName} report card levels explained: what ${levels.join(", ")} mean`, `${f.shortName} report cards explained: ${levels.join(", ")}`, `${f.shortName} report cards explained for parents`, `${f.shortName} report cards explained`],
+    // "report card" (singular) first: it's what parents type ("manitoba report card", "nova scotia report card").
+    title: [`${f.shortName} report card levels: what ${levels.join(", ")} mean`, `${f.shortName} report card: ${levels.join(", ")} explained`, `${f.shortName} report card levels explained for parents`, `${f.shortName} report card explained`],
     description: `Decode your child's ${f.name} report card: what ${levels.join(", ")} mean in plain words, what each looks like at home, and how to help your child move up. Free.`,
     path: `/report-cards/${f.slug}/`,
     framework: f,
