@@ -72,7 +72,36 @@ export interface SitemapPath {
   updated?: string;
 }
 
+/**
+ * A unit that many regions share (one math unit is on the page of every state) is the same practice on each region's
+ * page, apart from the standard it cites. Search Console showed about 30,000 of our 47,000 sitemap URLs as "Discovered,
+ * currently not indexed", most of them copies of one unit. For such a unit the sitemap lists every Canadian province
+ * (a few at most share a unit) and only the first `SHARED_UNIT_US_COPIES` US states that carry it; the other state
+ * pages stay live, linked, canonical to themselves and indexable. Units a region owns, or shares with fewer than
+ * `SHARED_UNIT_MIN` regions, are always listed.
+ */
+export const SHARED_UNIT_MIN = 10;
+export const SHARED_UNIT_US_COPIES = 4;
+
+const sharedKey = (g: GradeId, subject: SubjectId, unitId: string) => `${g}/${subject}/${unitId}`;
+
+/** Which regions carry each unit (grade, subject, id), in registry order. */
+function unitRegions(): Map<string, Framework[]> {
+  const map = new Map<string, Framework[]>();
+  for (const f of FRAMEWORKS)
+    for (const g of gradesWithContent(f))
+      for (const c of coursesFor(f, g))
+        for (const u of c.units) if (u.standards[f.id]) {
+          const k = sharedKey(g, c.subject, u.id);
+          const list = map.get(k);
+          if (list) list.push(f);
+          else map.set(k, [f]);
+        }
+  return map;
+}
+
 export function allCurriculumPaths(): SitemapPath[] {
+  const regions = unitRegions();
   const paths: SitemapPath[] = [{ path: curriculumPath.index(), updated: latest(...FRAMEWORKS.map((f) => curriculumUpdated(f.id))) }];
   for (const f of FRAMEWORKS) {
     paths.push({ path: curriculumPath.framework(f), updated: curriculumUpdated(f.id) });
@@ -80,7 +109,12 @@ export function allCurriculumPaths(): SitemapPath[] {
       paths.push({ path: curriculumPath.grade(f, g), updated: gradeUpdated(f.id, g) });
       for (const c of coursesFor(f, g)) {
         paths.push({ path: curriculumPath.subject(f, g, c.subject), updated: courseUpdated(f.id, g, c.subject) });
-        for (const u of c.units) if (u.standards[f.id]) paths.push({ path: curriculumPath.unit(f, g, c.subject, u.id), updated: unitUpdated(f.id, g, c.subject, u.id) });
+        for (const u of c.units) {
+          if (!u.standards[f.id]) continue;
+          const sharers = regions.get(sharedKey(g, c.subject, u.id)) ?? [f];
+          if (f.country === "US" && sharers.length >= SHARED_UNIT_MIN && !sharers.filter((x) => x.country === "US").slice(0, SHARED_UNIT_US_COPIES).includes(f)) continue;
+          paths.push({ path: curriculumPath.unit(f, g, c.subject, u.id), updated: unitUpdated(f.id, g, c.subject, u.id) });
+        }
       }
     }
   }

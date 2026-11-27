@@ -9,6 +9,7 @@ import { hashSeed, withSeed } from "@/content/random";
 import type { Question } from "@/content/types";
 import type { OgCardText, OgQuestion } from "./ogCard";
 import { critterFor } from "./ogCritter";
+import { theCurriculum } from "@/lib/curriculumName";
 
 // What each public page's share card says. Kept apart from the image routes so it can be tested
 // without rendering. Unit pages get a sample-question card; worksheet pages a tall Pinterest card.
@@ -193,7 +194,7 @@ export function unitMilestoneCard(params: { framework: string; grade: string; su
   return {
     kicker: `A milestone · ${gradeLabel(f, grade)} ${subjectSeoTitle(course.subject)}`,
     title: `${words.verb} in ${unit.title}!`,
-    line: `Practice in ${APP_NAME}, matched to the ${f.curriculumName}`,
+    line: `Practice in ${APP_NAME}, matched to ${theCurriculum(f.curriculumName)}`,
     colour: getSubjectMeta(course.subject).colour,
     critter: critterFor(course.subject),
     badge: words.badge,
