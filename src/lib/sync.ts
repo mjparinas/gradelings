@@ -97,11 +97,19 @@ async function doSync(): Promise<void> {
   }
 }
 
-/** Something can reject with null or a non-Error (an IndexedDB or browser quirk); never throw from the catch itself. */
+/** Shown when this device's own storage failed, which is not the server's or the network's fault. */
+export const STORAGE_SYNC_MESSAGE =
+  "This device couldn't save to its storage just now. Your child's progress is safe and will upload on the next try. If it keeps happening, free up some space on the device, leave private browsing, or close and reopen the app.";
+
+const STORAGE_ERRORS = new Set(["QuotaExceededError", "AbortError", "InvalidStateError", "UnknownError", "NotFoundError", "SecurityError"]);
+
+/** Turns anything that rejects (even null, or a storage error) into a short, kind message; never throws. */
 export function syncErrorMessage(e: unknown): string {
+  const name = typeof e === "object" && e !== null ? (e as { name?: unknown }).name : undefined;
+  if (typeof name === "string" && STORAGE_ERRORS.has(name)) return STORAGE_SYNC_MESSAGE;
   if (e instanceof Error) return e.message;
   if (typeof e === "string" && e) return e;
-  return "Sync failed";
+  return STORAGE_SYNC_MESSAGE;
 }
 
 let started = false;

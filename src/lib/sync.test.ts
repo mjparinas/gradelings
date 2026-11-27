@@ -15,7 +15,7 @@ vi.mock("./localdb", () => ({
 }));
 
 import { useStore } from "./store";
-import { startBackgroundSync, syncErrorMessage, syncNow } from "./sync";
+import { STORAGE_SYNC_MESSAGE, startBackgroundSync, syncErrorMessage, syncNow } from "./sync";
 import { MAINTENANCE_SYNC_MESSAGE } from "./maintenance";
 
 const account = { email: "p@example.com", familyId: "fam1" };
@@ -348,8 +348,10 @@ describe("startBackgroundSync", () => {
 
   it("turns anything that rejects, even null, into a message", () => {
     expect(syncErrorMessage(new Error("boom"))).toBe("boom");
-    expect(syncErrorMessage(null)).toBe("Sync failed");
-    expect(syncErrorMessage(undefined)).toBe("Sync failed");
+    expect(syncErrorMessage(null)).toBe(STORAGE_SYNC_MESSAGE);
+    expect(syncErrorMessage(undefined)).toBe(STORAGE_SYNC_MESSAGE);
+    expect(syncErrorMessage(new DOMException("full", "QuotaExceededError"))).toBe(STORAGE_SYNC_MESSAGE);
+    expect(syncErrorMessage(new DOMException("closing", "InvalidStateError"))).toBe(STORAGE_SYNC_MESSAGE);
     expect(syncErrorMessage("plain")).toBe("plain");
   });
 });
