@@ -14,6 +14,7 @@ import { JsonLd } from "@/lib/site";
 import { ShareButton } from "@/components/site/ShareButton";
 import { pageMeta } from "@/lib/pageMeta";
 import { playHref } from "@/lib/playLink";
+import { theCurriculumCapital } from "@/lib/curriculumName";
 
 export const dynamicParams = false;
 
@@ -56,7 +57,7 @@ export default async function SubjectGuide({ params }: Props) {
     },
     {
       q: `What does my child learn in ${label} ${subjectInSentence(name)} in ${f.shortName}?`,
-      a: `The ${f.curriculumName} ${label} ${subjectInSentence(name)} units include ${course.units
+      a: `${theCurriculumCapital(f.curriculumName)} ${label} ${subjectInSentence(name)} units include ${course.units
         .slice(0, 6)
         .map((u) => u.title)
         .join(", ")}.`,

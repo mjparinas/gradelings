@@ -22,6 +22,7 @@ import { pageMeta } from "@/lib/pageMeta";
 import { FaqSection } from "@/components/site/FaqSection";
 import { guideHubFaqs } from "@/components/site/pageFaqs";
 import { playHref } from "@/lib/playLink";
+import { theCurriculum } from "@/lib/curriculumName";
 
 export const dynamicParams = false;
 
@@ -37,7 +38,7 @@ export async function generateMetadata({
   const f = r.framework;
   return pageMeta({
     title: [`${f.name} parent guides and free printable practice sheets`, `${f.name} parent guides and printable sheets`, `${f.shortName} parent guides and printable sheets`, `${f.shortName} parent guides`],
-    description: `Free guides for ${f.shortName} parents: what each grade learns in the ${f.curriculumName}, how to help at home, ${guidesFor(f.id).competencies.label}, the ${guidesFor(f.id).assessment.short} and printable practice sheets for ${gradeSpan(f)}.`,
+    description: `Free guides for ${f.shortName} parents: what each grade learns in ${theCurriculum(f.curriculumName)}, how to help at home, ${guidesFor(f.id).competencies.label}, the ${guidesFor(f.id).assessment.short} and printable practice sheets for ${gradeSpan(f)}.`,
     path: guidePath.hub(r.framework),
     framework: f,
   });
@@ -58,7 +59,7 @@ export default async function GuidesHub({
     { label: `${f.shortName} parent guides` },
   ];
   const title = `${f.name} parent guides and free practice sheets`;
-  const description = `Plain-language guides for parents following the ${f.curriculumName}, plus free printable practice sheets.`;
+  const description = `Plain-language guides for parents following ${theCurriculum(f.curriculumName)}, plus free printable practice sheets.`;
 
   return (
     <SitePage cta lead="trial" play={playHref({ framework: f.id })}>

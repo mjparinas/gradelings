@@ -7,6 +7,7 @@ import type { GradeId, SubjectId } from "@/content/types";
 import { APP_NAME } from "@/lib/brand";
 import { DEFAULT_GOAL_MINUTES } from "@/lib/model";
 import { FREE_UNITS_PER_COURSE, MAX_CHILDREN, PRICES_BY_CURRENCY, REFUND_DAYS, TAX_NOTE, TRIAL_DAYS, money, perChildMonthly } from "@/lib/plan";
+import { theCurriculum } from "@/lib/curriculumName";
 
 // The questions parents ask on the busiest public pages, answered from content and plan data so every province and
 // state gets its own true answers. Each page shows them and gives them to search engines as FAQ structured data.
@@ -82,7 +83,7 @@ export function curriculumFaqs(f: Framework): Faq[] {
   const units = unitCount(f);
   return [
     {
-      q: `What subjects does ${APP_NAME} cover in the ${f.curriculumName}?`,
+      q: `What subjects does ${APP_NAME} cover in ${theCurriculum(f.curriculumName)}?`,
       a: `${joinAnd(core(f).map((s) => subjectInSentence(subjectSeoTitle(s))))}, from ${gradeSpan(f)}.${french ? ` Parents can also turn on ${french}.` : ""}`,
     },
     {
@@ -177,7 +178,7 @@ export function guideHubFaqs(f: Framework): Faq[] {
       ? [
           {
             q: `When does French start in ${f.region}?`,
-            a: `${APP_NAME} offers ${french}, following the ${f.curriculumName}. Both are optional and parents turn them on per child.`,
+            a: `${APP_NAME} offers ${french}, following ${theCurriculum(f.curriculumName)}. Both are optional and parents turn them on per child.`,
           },
         ]
       : []),

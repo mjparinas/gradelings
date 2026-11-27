@@ -20,6 +20,7 @@ import { PinLink, ShareButton } from "@/components/site/ShareButton";
 import { pageMeta } from "@/lib/pageMeta";
 import { playHref } from "@/lib/playLink";
 import { TRIAL_DAYS } from "@/lib/plan";
+import { theCurriculum } from "@/lib/curriculumName";
 
 export const dynamicParams = false;
 
@@ -40,8 +41,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const name = subjectSeoTitle(course.subject);
   return pageMeta({
     // People search for "worksheet", so the longest title says it; the shorter ones keep the old wording.
-    title: [`Free printable ${gradeLabel(f, grade)} ${name} worksheet (${f.shortName})`, `Free printable ${gradeLabel(f, grade)} ${name} practice sheet (${f.shortName})`, `Printable ${gradeLabel(f, grade)} ${name} practice sheet (${f.shortName})`, `${gradeLabel(f, grade)} ${name} worksheet (${f.shortName})`, `${gradeLabel(f, grade)} ${name} sheets (${f.shortName})`],
-    description: `A free ${gradeLabel(f, grade)} ${subjectInSentence(name)} practice sheet with an answer key, matched to the ${f.curriculumName}. Print it or work through it on screen.`,
+    // Searches are plural and ask for answers ("4th grade math worksheets wisconsin", "grade 8 maths worksheets with answers").
+    title: [`Free ${gradeLabel(f, grade)} ${name} worksheets with answers (${f.shortName})`, `Free printable ${gradeLabel(f, grade)} ${name} worksheet (${f.shortName})`, `Free printable ${gradeLabel(f, grade)} ${name} practice sheet (${f.shortName})`, `Printable ${gradeLabel(f, grade)} ${name} practice sheet (${f.shortName})`, `${gradeLabel(f, grade)} ${name} worksheet (${f.shortName})`, `${gradeLabel(f, grade)} ${name} sheets (${f.shortName})`],
+    description: `Free ${gradeLabel(f, grade)} ${subjectInSentence(name)} worksheet with an answer key, matched to ${theCurriculum(f.curriculumName)}. Print it or work through it on screen.`,
     path: guidePath.worksheet(f, grade, course.subject),
     framework: f,
   });
@@ -95,7 +97,7 @@ export default async function WorksheetPage({ params }: Props) {
             "@context": "https://schema.org",
             "@type": "LearningResource",
             name: `${label} ${name} practice sheet (${f.shortName})`,
-            description: `Free ${label} ${subjectInSentence(name)} practice questions with an answer key, matched to the ${f.curriculumName}.`,
+            description: `Free ${label} ${subjectInSentence(name)} practice questions with an answer key, matched to ${theCurriculum(f.curriculumName)}.`,
             url: absolute(path),
             inLanguage: pageLocale(f),
             learningResourceType: "Worksheet",

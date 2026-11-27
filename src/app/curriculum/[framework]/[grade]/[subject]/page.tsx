@@ -10,6 +10,7 @@ import { JsonLd } from "@/lib/site";
 import { ShareButton } from "@/components/site/ShareButton";
 import { pageMeta } from "@/lib/pageMeta";
 import { playHref } from "@/lib/playLink";
+import { theCurriculum } from "@/lib/curriculumName";
 
 export const dynamicParams = false;
 
@@ -70,7 +71,7 @@ export default async function SubjectPage({ params }: PageProps<"/curriculum/[fr
         {subjectTitle(course.subject, grade) !== name ? `. Kids see this subject as “${subjectTitle(course.subject, grade)}”.` : "."}
       </p>
       <div className="mt-3">
-        <ShareButton path={curriculumPath.subject(f, grade, course.subject)} title={`${gradeLabel(f, grade)} ${name} (${f.shortName})`} text={`Free ${gradeLabel(f, grade)} ${name} practice, matched to the ${f.curriculumName}:`} />
+        <ShareButton path={curriculumPath.subject(f, grade, course.subject)} title={`${gradeLabel(f, grade)} ${name} (${f.shortName})`} text={`Free ${gradeLabel(f, grade)} ${name} practice, matched to ${theCurriculum(f.curriculumName)}:`} />
       </div>
 
       {bigIdeas.length > 0 && (
