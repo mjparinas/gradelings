@@ -182,6 +182,9 @@ async function everyDevice(device, page) {
     const pos = await onScreen(page, page.getByRole("button", { name, exact: true }));
     record(device, `question: ${name} on screen`, pos.ok, pos.detail);
   }
+  // Adventure starts on a random question, so this must cover every kind a child can meet, not just the common few.
+  const ANSWER_KINDS = ["choice", "bin", "sort-item", "pool-item", "shade-part", "place-marker", "multi-choice", "mistake-step", "highlight-word", "fill-blank", "bank-word", "tile", "say-button", "match-left", "match-right"];
+  const anyAnswer = page.locator([...ANSWER_KINDS.map((k) => `[data-testid="${k}"]`), 'main button:has-text("Check")'].join(", "));
   const answers = page.locator('[data-testid="choice"], [data-testid="bin"], [data-testid="sort-item"], [data-testid="pool-item"], main button:has-text("Check")');
   await checkTargets(device, "question: answer buttons", answers, KID_TARGET);
   await shot(page, device, "3-question");
@@ -192,7 +195,7 @@ async function everyDevice(device, page) {
     await checkTargets(device, "question: hint button", hintButton, KID_TARGET);
     await hintButton.click();
     await page.waitForTimeout(150);
-    record(device, "question: hint shows and answers stay reachable", (await vis(page.getByText("💡").first())) && (await vis(answers.first())));
+    record(device, "question: hint shows and answers stay reachable", (await vis(page.getByText("💡").first())) && (await vis(anyAnswer.first())));
     await noSideScroll(device, page, "question with hint");
   }
   const next = await answerUntilFeedback(page);
