@@ -7,6 +7,7 @@ import { pingGuestDevice } from "./guestPing";
 import * as localdb from "./localdb";
 import { MAINTENANCE_HEADER, MAINTENANCE_SYNC_MESSAGE } from "./maintenance";
 import type { AppEvent, ChildSettings, FamilyInfo, Profile } from "./model";
+import { reportHandled } from "./reportError";
 import { useStore } from "./store";
 
 // Offline-first sync. Everything is saved on the device first; whenever the
@@ -30,9 +31,15 @@ interface SyncResponse {
 }
 
 export function syncNow(): Promise<void> {
-  running ??= doSync().finally(() => {
-    running = null;
-  });
+  // Never rejects: every caller fires and forgets, and a sync problem must not crash the app.
+  running ??= doSync()
+    .catch((e) => {
+      useStore.getState().setSync({ status: "error", error: syncErrorMessage(e) });
+      reportHandled(e);
+    })
+    .finally(() => {
+      running = null;
+    });
   return running;
 }
 
@@ -94,6 +101,8 @@ async function doSync(): Promise<void> {
     useStore.getState().setSync({ status: "idle" });
   } catch (e) {
     useStore.getState().setSync({ status: navigator.onLine ? "error" : "offline", error: syncErrorMessage(e) });
+    // Offline blips and server errors are routine; a failure of the device's own storage is worth seeing.
+    if (syncErrorMessage(e) === STORAGE_SYNC_MESSAGE) reportHandled(e);
   }
 }
 
