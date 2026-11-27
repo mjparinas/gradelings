@@ -15,7 +15,7 @@ vi.mock("./localdb", () => ({
 }));
 
 import { useStore } from "./store";
-import { startBackgroundSync, syncNow } from "./sync";
+import { startBackgroundSync, syncErrorMessage, syncNow } from "./sync";
 import { MAINTENANCE_SYNC_MESSAGE } from "./maintenance";
 
 const account = { email: "p@example.com", familyId: "fam1" };
@@ -344,5 +344,12 @@ describe("startBackgroundSync", () => {
       vis.mockRestore();
       vi.useRealTimers();
     }
+  });
+
+  it("turns anything that rejects, even null, into a message", () => {
+    expect(syncErrorMessage(new Error("boom"))).toBe("boom");
+    expect(syncErrorMessage(null)).toBe("Sync failed");
+    expect(syncErrorMessage(undefined)).toBe("Sync failed");
+    expect(syncErrorMessage("plain")).toBe("plain");
   });
 });

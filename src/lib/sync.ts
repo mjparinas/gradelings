@@ -93,8 +93,15 @@ async function doSync(): Promise<void> {
     }
     useStore.getState().setSync({ status: "idle" });
   } catch (e) {
-    useStore.getState().setSync({ status: navigator.onLine ? "error" : "offline", error: (e as Error).message });
+    useStore.getState().setSync({ status: navigator.onLine ? "error" : "offline", error: syncErrorMessage(e) });
   }
+}
+
+/** Something can reject with null or a non-Error (an IndexedDB or browser quirk); never throw from the catch itself. */
+export function syncErrorMessage(e: unknown): string {
+  if (e instanceof Error) return e.message;
+  if (typeof e === "string" && e) return e;
+  return "Sync failed";
 }
 
 let started = false;
