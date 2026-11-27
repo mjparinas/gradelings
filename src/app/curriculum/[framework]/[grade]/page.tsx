@@ -10,6 +10,7 @@ import { APP_NAME } from "@/lib/brand";
 import { JsonLd } from "@/lib/site";
 import { pageMeta } from "@/lib/pageMeta";
 import { playHref } from "@/lib/playLink";
+import { theCurriculum } from "@/lib/curriculumName";
 
 export const dynamicParams = false;
 
@@ -24,7 +25,7 @@ export async function generateMetadata({ params }: PageProps<"/curriculum/[frame
   const subjects = coursesFor(f, grade).map((c) => subjectInSentence(subjectSeoTitle(c.subject)));
   return pageMeta({
     title: [`${gradeLabel(f, grade)} ${f.shortName} curriculum practice`, `${gradeLabel(f, grade)} ${f.shortName} practice`],
-    description: `What kids learn in ${gradeLabel(f, grade)} in ${f.name}: ${subjects.join(", ")}. Every unit explained for parents, with free sample questions matched to the ${f.curriculumName}.`,
+    description: `What kids learn in ${gradeLabel(f, grade)} in ${f.name}: ${subjects.join(", ")}. Every unit explained for parents, with free sample questions matched to ${theCurriculum(f.curriculumName)}.`,
     path: curriculumPath.grade(f, grade),
     framework: f,
   });
@@ -46,7 +47,7 @@ export default async function GradePage({ params }: PageProps<"/curriculum/[fram
 
   return (
     <SitePage cta lead="trial" play={playHref({ framework: f.id, grade })}>
-      <JsonLd data={[breadcrumbJsonLd(crumbs), itemListJsonLd(`${gradeLabel(f, grade)} subjects in the ${f.curriculumName}`, courses.map((c) => ({ name: subjectSeoTitle(c.subject), path: curriculumPath.subject(f, grade, c.subject) })))]} />
+      <JsonLd data={[breadcrumbJsonLd(crumbs), itemListJsonLd(`${gradeLabel(f, grade)} subjects in ${theCurriculum(f.curriculumName)}`, courses.map((c) => ({ name: subjectSeoTitle(c.subject), path: curriculumPath.subject(f, grade, c.subject) })))]} />
       <Crumbs items={crumbs} />
       <h1 className="text-4xl font-bold">
         {gradeLabel(f, grade)} {f.shortName} curriculum

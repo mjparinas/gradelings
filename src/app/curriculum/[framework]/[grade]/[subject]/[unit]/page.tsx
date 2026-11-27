@@ -18,6 +18,7 @@ import { guidePath } from "@/components/site/guides";
 import { APP_NAME } from "@/lib/brand";
 import { pageMeta } from "@/lib/pageMeta";
 import { playHref } from "@/lib/playLink";
+import { theCurriculum } from "@/lib/curriculumName";
 
 export const dynamicParams = false;
 
@@ -44,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return pageMeta({
     title: [`${name}: free ${g} ${subjectSeoTitle(course.subject)} practice (${f.shortName})`, `${name}: ${g} ${subjectSeoTitle(course.subject)} practice (${f.shortName})`, `${name}: ${g} ${subjectSeoTitle(course.subject)} (${f.shortName})`, `${name}: ${g} (${f.shortName})`, `${name} (${f.shortName})`, `${name}: ${g}`],
     // Action and value first, since Google shows about the first 155 characters: what the page offers, the curriculum, no sign-up, then the parent note.
-    description: `Free ${g} ${unit.title} practice with answers, matched to the ${f.curriculumName}. Try the questions now, no sign-up. ${unit.parentNote}`,
+    description: `Free ${g} ${unit.title} practice with answers, matched to ${theCurriculum(f.curriculumName)}. Try the questions now, no sign-up. ${unit.parentNote}`,
     path: curriculumPath.unit(f, grade, course.subject, unit.id),
     framework: f,
   });

@@ -13,6 +13,7 @@ import { bandLine, curriculumFaqs, reportingBands } from "@/components/site/page
 import { playHref } from "@/lib/playLink";
 import { JsonLd } from "@/lib/site";
 import { breadcrumbJsonLd, itemListJsonLd } from "@/components/site/jsonld";
+import { theCurriculum } from "@/lib/curriculumName";
 
 export const dynamicParams = false;
 
@@ -26,7 +27,7 @@ export async function generateMetadata({ params }: PageProps<"/curriculum/[frame
   const f = r.framework;
   return pageMeta({
     title: [`${f.curriculumName} practice, ${gradeSpan(f, true)}`, `${f.shortName} curriculum practice, ${gradeSpan(f, true)}`, `${f.curriculumName} practice`, `${f.shortName} curriculum practice`],
-    description: `Kid-friendly practice for the ${f.curriculumName} (${f.name}): ${f.subjects.map((s) => subjectInSentence(subjectSeoTitle(s))).join(", ")} from ${gradeSpan(f)}, with sample questions for every unit.`,
+    description: `Kid-friendly practice for ${theCurriculum(f.curriculumName)} (${f.name}): ${f.subjects.map((s) => subjectInSentence(subjectSeoTitle(s))).join(", ")} from ${gradeSpan(f)}, with sample questions for every unit.`,
     path: curriculumPath.framework(f),
     framework: f,
   });

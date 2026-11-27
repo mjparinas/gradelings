@@ -87,12 +87,12 @@ describe("printable practice sheet", () => {
     await sheet("bc", "grade-5", "immersion");
     expect(screen.getByRole("link", { name: "See all French Immersion units" })).toHaveAttribute("href", "/curriculum/bc/grade-5/immersion/");
     const meta = await generateMetadata(props("bc", "grade-5", "core-french"));
-    expect(meta.description).toContain("Grade 5 Core French practice sheet");
+    expect(meta.description).toContain("Grade 5 Core French worksheet");
   });
 
   it("builds metadata and 404s a subject that isn't taught", async () => {
     const meta = await generateMetadata(props("yukon", "grade-7", "math"));
-    expect(meta.title).toBe("Free printable Grade 7 Math worksheet (Yukon)");
+    expect(meta.title).toBe("Free Grade 7 Math worksheets with answers (Yukon)");
     expect(meta.alternates?.canonical).toBe("/guides/yukon/grade-7/math/worksheet/");
     expect(meta.description).toContain("Yukon Curriculum");
     expect(await generateMetadata(props("ontario", "kindergarten", "core-french"))).toEqual({});
