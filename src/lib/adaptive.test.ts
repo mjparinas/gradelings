@@ -1,7 +1,7 @@
 import { beforeAll, describe, expect, it } from "vitest";
 import { allUnitRefs, loadGrade, type UnitRef } from "@/content";
 import type { SubjectId } from "@/content/types";
-import { candidates, difficultyFor, pickNext, refresherUnit, REFRESHER_DAYS, unitWeight, weakest, type PickOptions } from "./adaptive";
+import { candidates, difficultyFor, pickNext, refresherUnit, REFRESHER_DAYS, unitWeight, weakest, winUnits, WIN_REPLAY_DAYS, type PickOptions } from "./adaptive";
 import type { Derived, UnitStat } from "./derive";
 
 beforeAll(() => loadGrade("2"));
@@ -153,5 +153,24 @@ describe("refresherUnit", () => {
     const offer = (lastT: number) => refresherUnit({ grade: "2", framework: "ca-bc", derived: derived({ [a.key]: proficient(lastT) }), subjects: ["math"], now: NOW })?.key;
     expect(offer(NOW - REFRESHER_DAYS * DAY)).toBe(a.key);
     expect(offer(NOW - REFRESHER_DAYS * DAY + 1)).toBeUndefined();
+  });
+});
+
+describe("winUnits", () => {
+  const proficient = (lastT: number) => ({ attempts: 10, recent: Array(10).fill(true), challengePassed: false, mastery: 1, lastT });
+  const mathRefs = () => allUnitRefs("2", "ca-bc").filter((r) => r.course.subject === "math");
+  const wins = (stats: Record<string, Partial<UnitStat>>) => winUnits({ grade: "2", framework: "ca-bc", derived: derived(stats), subjects: ["math"], now: NOW }).map((r) => r.key);
+
+  it("lists Proficient units left alone for a week, longest-untouched first, and needs three", () => {
+    const [a, b, c, d] = mathRefs();
+    const old = (days: number) => proficient(NOW - days * DAY);
+    expect(wins({ [a.key]: old(10), [b.key]: old(20) })).toEqual([]);
+    expect(wins({ [a.key]: old(10), [b.key]: old(20), [c.key]: old(8), [d.key]: old(2) })).toEqual([b.key, a.key, c.key]);
+  });
+  it("starts from exactly a week untouched, and skips units not yet Proficient", () => {
+    const [a, b, c, d] = mathRefs();
+    expect(wins({ [a.key]: proficient(NOW - WIN_REPLAY_DAYS * DAY), [b.key]: proficient(NOW - WIN_REPLAY_DAYS * DAY), [c.key]: proficient(NOW - WIN_REPLAY_DAYS * DAY) })).toHaveLength(3);
+    expect(wins({ [a.key]: proficient(NOW - WIN_REPLAY_DAYS * DAY + 1), [b.key]: proficient(NOW - 9 * DAY), [c.key]: proficient(NOW - 9 * DAY), [d.key]: proficient(NOW - 9 * DAY) })).toHaveLength(3);
+    expect(wins({ [a.key]: { attempts: 3, recent: [true, false, false], mastery: 0.3, lastT: NOW - 30 * DAY }, [b.key]: proficient(NOW - 9 * DAY), [c.key]: proficient(NOW - 9 * DAY) })).toEqual([]);
   });
 });

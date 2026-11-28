@@ -2,7 +2,7 @@ import { getUnitRef, practiceUnitRefs, unitKey, type SubjectGrades, type UnitRef
 import { hashSeed, pick, sample, shuffle, withSeed } from "@/content/random";
 import { getSubjectMeta } from "@/content/subjects";
 import type { AgeBand, FrameworkId, GradeId, Lesson, Question, SubjectId } from "@/content/types";
-import { pickNext, type PickOptions } from "@/lib/adaptive";
+import { pickNext, winUnits, type PickOptions } from "@/lib/adaptive";
 import { FACTS_PER_ROUND, FACTS_UNIT_ID, factQuestion, factSetsFor, getFactSet, pickFact } from "@/lib/facts";
 import type { Derived } from "@/lib/derive";
 import { dayKey, type Mode } from "@/lib/model";
@@ -211,6 +211,17 @@ export function makePlan(input: PlanInput): Plan | null {
         return undefined;
       },
     };
+  }
+
+  // "Warm-up": easy questions from units the child already grew in, so coming back starts with a win (flag `win-replay`).
+  if (mode === "review" && scope === "wins") {
+    const refs = winUnits({ grade, framework, subjectGrades: input.subjectGrades, derived, subjects, allowed });
+    if (!refs.length) return null;
+    const items = refs.flatMap((ref) => {
+      const q = oneFrom(ref, 1) ?? ref.unit.generate({ difficulty: 1 })[0];
+      return q ? [{ question: q, unitKey: ref.key, difficulty: 1 as const }] : [];
+    });
+    return { mode, scope, title: "Warm-up", icon: "🌟", total: items.length, retries: true, feedback: "bar", next: ({ index }) => items[index] };
   }
 
   // Adventure (endless, adaptive) and Review (10 from weak spots).

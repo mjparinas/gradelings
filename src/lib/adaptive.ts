@@ -122,3 +122,20 @@ export function refresherUnit(opts: Omit<PickOptions, "recent" | "mode">): UnitR
     })
     .sort((a, b) => opts.derived.units[a.key].lastT - opts.derived.units[b.key].lastT)[0];
 }
+
+/** Past wins worth a quick look again: units reached Proficient or better and left alone for a week. */
+export const WIN_REPLAY_DAYS = 7;
+/** Questions in a warm-up from past wins. */
+export const WIN_REPLAY_QUESTIONS = 5;
+
+/** The units for a warm-up, the longest-untouched first. Needs at least 3, so a warm-up never repeats one unit. */
+export function winUnits(opts: Omit<PickOptions, "recent" | "mode">, n = WIN_REPLAY_QUESTIONS): UnitRef[] {
+  const now = opts.now ?? Date.now();
+  const wins = candidates({ ...opts, recent: [], mode: "review" })
+    .filter((r) => {
+      const stat = opts.derived.units[r.key];
+      return !!stat && unitLevel(stat) >= 2 && now - stat.lastT >= WIN_REPLAY_DAYS * DAY;
+    })
+    .sort((a, b) => opts.derived.units[a.key].lastT - opts.derived.units[b.key].lastT);
+  return wins.length >= 3 ? wins.slice(0, n) : [];
+}
