@@ -276,6 +276,7 @@ describe("PlayApp routes", () => {
     ["session?mode=review", "Session mode=review scope=mix resume=false"],
     ["session?mode=practice&scope=3/math/add", "Session mode=practice scope=3/math/add resume=false"],
     ["session?mode=practice&scope=3/math/add&skill=take-away", "Session mode=practice scope=3/math/add skill=take-away resume=false"],
+    ["session?mode=adventure&scope=mix&quick=1", "Session mode=adventure scope=mix quick=true resume=false"],
     ["session?mode=practice&scope=3/math/add&resume=1", "Session mode=practice scope=3/math/add resume=true"],
     ["placement/math", "PlacementTest subject=math"],
     ["arcade", "Arcade"],

@@ -121,6 +121,26 @@ describe("makePlan", () => {
     }
   });
 
+  it("makes Just 5 an Adventure that ends after five questions, with no checkpoint", () => {
+    const quick = makePlan(input({ mode: "adventure", quick: true }))!;
+    expect(quick).toMatchObject({ mode: "adventure", title: "Just 5", total: 5, retries: true });
+    expect(quick.checkpoint).toBeUndefined();
+    expect(makePlan(input({ mode: "adventure" }))).toMatchObject({ title: "Adventure", checkpoint: 10 });
+    expect(makePlan(input({ mode: "review", quick: true }))?.title).toBe("Review");
+  });
+
+  it("builds a Warm-up of five easy questions from past wins, and none without three", () => {
+    const refs = allUnitRefs("2", "ca-bc").filter((r) => r.course.subject === "math").slice(0, 5);
+    const old = Date.now() - 20 * 86_400_000;
+    const derived = derive([]);
+    for (const r of refs) derived.units[r.key] = { attempts: 10, recent: Array(10).fill(true), challengePassed: false, mastery: 1, lastT: old } as UnitStat;
+    const plan = makePlan(input({ mode: "review", scope: "wins", derived, subjects: ["math"] }))!;
+    expect(plan).toMatchObject({ title: "Warm-up", total: 5, retries: true });
+    const keys = Array.from({ length: 5 }, (_, index) => plan.next({ index, recent: [], derived })?.unitKey);
+    expect(new Set(keys).size).toBe(5);
+    expect(makePlan(input({ mode: "review", scope: "wins" }))).toBeNull();
+  });
+
   it("gives everyone the same Daily Challenge for a day, then a new one the next day", () => {
     const now = vi.spyOn(Date, "now").mockReturnValue(new Date(2026, 9, 10, 12).getTime());
     const first = makePlan(input({ mode: "daily" }))!;

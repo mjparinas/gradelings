@@ -124,6 +124,54 @@ beforeEach(() => {
   window.location.hash = "";
 });
 
+describe("Hub Just 5 button", () => {
+  it("offers five questions to an older child who has not practised today, and starts them", () => {
+    show();
+    fireEvent.click(screen.getByRole("button", { name: /Just 5 questions/ }));
+    expect(window.location.hash).toBe("#/session?mode=adventure&scope=mix&quick=1");
+  });
+  it("is gone once the child has practised today, for little kids and when the flag is off", () => {
+    set({ streak: { current: 1, best: 1, activeToday: true, shields: 0, shieldsUsed: 0, saved: false } });
+    show();
+    expect(screen.queryByRole("button", { name: /Just 5 questions/ })).toBeNull();
+    cleanup();
+    set({});
+    show("little");
+    expect(screen.queryByRole("button", { name: /Just 5 questions/ })).toBeNull();
+    cleanup();
+    h.off = new Set(["quick-five"]);
+    show();
+    expect(screen.queryByRole("button", { name: /Just 5 questions/ })).toBeNull();
+  });
+});
+
+describe("Hub Warm-up button", () => {
+  const winning = () => {
+    const units: Record<string, UnitStat> = {};
+    for (const r of mathRefs().slice(0, 3)) units[r.key] = { ...stat(r.key, 10, 10), lastT: NOW - 10 * DAY };
+    set({ units });
+  };
+  it("offers a warm-up from past wins and starts it", () => {
+    winning();
+    show();
+    fireEvent.click(screen.getByRole("button", { name: /Warm-up/ }));
+    expect(window.location.hash).toBe("#/session?mode=review&scope=wins");
+  });
+  it("is hidden with no past wins, after practice today, for little kids and when the flag is off", () => {
+    show();
+    expect(screen.queryByRole("button", { name: /Warm-up/ })).toBeNull();
+    cleanup();
+    winning();
+    h.off = new Set(["win-replay"]);
+    show();
+    expect(screen.queryByRole("button", { name: /Warm-up/ })).toBeNull();
+    cleanup();
+    h.off = new Set();
+    show("little");
+    expect(screen.queryByRole("button", { name: /Warm-up/ })).toBeNull();
+  });
+});
+
 describe("Hub greeting", () => {
   it("welcomes a brand-new child by name and points at the big button", () => {
     show();

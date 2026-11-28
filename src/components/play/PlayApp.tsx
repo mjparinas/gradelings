@@ -141,7 +141,7 @@ const Routes = memo(function Routes({ hash }: { hash: string }) {
       const scope = query.get("scope") ?? "mix";
       if (!MODES.includes(mode)) return <Hub />;
       // A new key restarts the session cleanly when "Play again" is pressed.
-      return withPeek(<Session key={`${mode}:${scope}:${query.get("skill") ?? ""}:${query.get("r") ?? ""}:${query.get("resume") ?? ""}`} mode={mode} scope={scope} {...(query.get("skill") ? { skill: query.get("skill")! } : {})} resume={query.get("resume") === "1"} />);
+      return withPeek(<Session key={`${mode}:${scope}:${query.get("skill") ?? ""}:${query.get("r") ?? ""}:${query.get("resume") ?? ""}:${query.get("quick") ?? ""}`} mode={mode} scope={scope} {...(query.get("quick") === "1" ? { quick: true } : {})} {...(query.get("skill") ? { skill: query.get("skill")! } : {})} resume={query.get("resume") === "1"} />);
     }
     case "placement":
       if (!PLACEMENT_SUBJECTS.includes(path[1] as SubjectId)) return <Hub />;

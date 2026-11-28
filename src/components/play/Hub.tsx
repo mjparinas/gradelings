@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useState, type CSSProperties } from "react";
 import { getUnitRef, practiceUnitRefs } from "@/content";
 import { getSubjectMeta } from "@/content/subjects";
-import { refresherUnit, weakest } from "@/lib/adaptive";
+import { refresherUnit, weakest, winUnits } from "@/lib/adaptive";
 import { factSetsFor, factSummary } from "@/lib/facts";
 import { gameTime } from "@/lib/gametime";
 import { effectiveGoal } from "@/lib/goal";
@@ -105,6 +105,7 @@ export function Hub() {
   const nextRef = next ? getUnitRef(next.key, profile.framework) : undefined;
   const nextInfo = next ? levelInfo(profile.framework, profile.grade, next.level) : undefined;
   const refresher = refresherUnit({ grade: profile.grade, framework: profile.framework, subjectGrades, derived: d, subjects, allowed, now });
+  const warmUp = isOn("win-replay") && !little && !isStudent && !d.streak.activeToday && winUnits({ grade: profile.grade, framework: profile.framework, subjectGrades, derived: d, subjects, allowed, now }).length > 0;
   const classwork = useClasswork();
   const allEvents = useStore((s) => s.events);
   // Little kids see one quest at a time, the first not yet done, and no weekly goals.
@@ -250,6 +251,26 @@ export function Hub() {
         </span>
         <span className="text-4xl narrow:hidden">▶</span>
       </button>
+
+      {isOn("quick-five") && !little && !isStudent && !d.streak.activeToday && (
+        <button
+          type="button"
+          onClick={() => open({ href: "#/session?mode=adventure&scope=mix&quick=1", feature: "adventure" })}
+          className="btn btn-soft min-h-14 justify-center gap-2 text-lg font-bold"
+        >
+          <span aria-hidden="true">⭐</span> Just 5 questions
+        </button>
+      )}
+
+      {warmUp && (
+        <button
+          type="button"
+          onClick={() => open({ href: "#/session?mode=review&scope=wins", feature: "adventure" })}
+          className="btn btn-soft min-h-14 justify-center gap-2 text-lg font-bold"
+        >
+          <span aria-hidden="true">🌟</span> Warm-up: things you&apos;re great at
+        </button>
+      )}
 
       <GraduationCard />
 

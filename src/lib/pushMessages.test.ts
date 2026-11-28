@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { childMessage, daysBetween, homeworkWaiting, reminderMessage, weeklyMessage } from "./pushMessages";
+import { cheerMessage, cheerStreak, childMessage, daysBetween, homeworkWaiting, reminderMessage, weeklyMessage } from "./pushMessages";
 import type { HomeworkItem } from "./homework";
 
 const DAY = 86_400_000;
@@ -29,5 +29,20 @@ describe("push messages", () => {
     expect(one.body).toContain("Fractions");
     expect(one.badge).toBe(1);
     expect(childMessage(3, undefined).body).toContain("3 things");
+  });
+  it("cheers only on an exact milestone streak that was practised today", () => {
+    expect(cheerStreak({ current: 3, activeToday: true })).toBe(3);
+    expect(cheerStreak({ current: 7, activeToday: true })).toBe(7);
+    expect(cheerStreak({ current: 3, activeToday: false })).toBeUndefined();
+    expect(cheerStreak({ current: 4, activeToday: true })).toBeUndefined();
+    expect(cheerStreak({ current: 0, activeToday: true })).toBeUndefined();
+  });
+  it("words a cheer kindly, names the longest streak and shares no results", () => {
+    const m = cheerMessage([{ name: "Leo", days: 3 }, { name: "Maya", days: 14 }])!;
+    expect(m.title).toContain("Maya");
+    expect(m.title).toContain("14-day");
+    expect(m.body).not.toMatch(/\d+%|missed|behind|score/);
+    expect(m.tag).toBe("cheer");
+    expect(cheerMessage([])).toBeUndefined();
   });
 });
