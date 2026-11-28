@@ -85,6 +85,8 @@ export interface PlanInput {
   allowed: (ref: UnitRef) => boolean;
   /** Five questions at a time in Adventure and Review. */
   short?: boolean;
+  /** "Just 5 questions": an Adventure that ends after five questions (flag `quick-five`). */
+  quick?: boolean;
   /** The child's estimated reading level (grade scale); passages are matched to it when set. */
   readingLevel?: number;
   /** One skill inside the practised unit (Practice only): the session asks that skill's questions, and answers still count for the unit. */
@@ -94,6 +96,9 @@ export interface PlanInput {
   /** Units up next in a parent's goal plan, picked more often in Adventure. */
   goalUnits?: readonly string[];
 }
+
+/** How many questions "Just 5" asks. */
+export const QUICK_FIVE = 5;
 
 export function makePlan(input: PlanInput): Plan | null {
   const { mode, scope, grade, framework, band, subjects, derived, allowed } = input;
@@ -210,15 +215,16 @@ export function makePlan(input: PlanInput): Plan | null {
 
   // Adventure (endless, adaptive) and Review (10 from weak spots).
   const review = mode === "review";
+  const quick = mode === "adventure" && input.quick === true;
   return {
     mode,
     scope: "mix",
-    title: review ? "Review" : "Adventure",
-    icon: review ? "🔍" : "🗺️",
-    total: review ? (input.short ? 5 : 10) : undefined,
+    title: review ? "Review" : quick ? "Just 5" : "Adventure",
+    icon: review ? "🔍" : quick ? "⭐" : "🗺️",
+    total: review ? (input.short ? 5 : 10) : quick ? QUICK_FIVE : undefined,
     retries: true,
     feedback: "bar",
-    checkpoint: review ? undefined : input.short ? 5 : 10,
+    checkpoint: review || quick ? undefined : input.short ? 5 : 10,
     next: ({ recent, derived: d }) => {
       const p = pickNext(pickOpts(review ? "review" : "adventure", recent, d));
       if (!p) return undefined;

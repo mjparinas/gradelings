@@ -251,6 +251,16 @@ export function Hub() {
         <span className="text-4xl narrow:hidden">▶</span>
       </button>
 
+      {isOn("quick-five") && !little && !isStudent && !d.streak.activeToday && (
+        <button
+          type="button"
+          onClick={() => open({ href: "#/session?mode=adventure&scope=mix&quick=1", feature: "adventure" })}
+          className="btn btn-soft min-h-14 justify-center gap-2 text-lg font-bold"
+        >
+          <span aria-hidden="true">⭐</span> Just 5 questions
+        </button>
+      )}
+
       <GraduationCard />
 
       {unfinished && <ResumeCard lesson={unfinished.lesson} onDismiss={unfinished.dismiss} little={little} />}

@@ -85,12 +85,13 @@ export async function familiesWithPush(): Promise<string[]> {
 export type SendResult = "sent" | "gone" | "failed" | "skipped";
 
 /** Sends one message to one device. A subscription the browser reports as gone (404 or 410) is deleted. */
-export async function sendPush(sub: StoredSubscription, message: PushMessage, day: string): Promise<SendResult> {
+export async function sendPush(sub: StoredSubscription, message: PushMessage, day: string, opts: { markDay?: boolean } = {}): Promise<SendResult> {
   if (!configured() || sub.last_day === day) return "skipped";
   try {
     setVapidDetails(process.env.VAPID_SUBJECT || `mailto:${process.env.CONTACT_EMAIL || "hello@gradelings.com"}`, process.env.VAPID_PUBLIC_KEY!, process.env.VAPID_PRIVATE_KEY!);
     await sendNotification({ endpoint: sub.endpoint, keys: { p256dh: sub.p256dh, auth: sub.auth } }, JSON.stringify(message), { TTL: 12 * 3600 });
-    await run("UPDATE push_devices SET last_day = ? WHERE endpoint_hash = ?", [day, sub.endpoint_hash]);
+    // A cheer leaves the day alone so it never uses up the weekly summary or a reminder (those read the gap from it).
+    if (opts.markDay !== false) await run("UPDATE push_devices SET last_day = ? WHERE endpoint_hash = ?", [day, sub.endpoint_hash]);
     return "sent";
   } catch (e) {
     const status = (e as { statusCode?: number }).statusCode;

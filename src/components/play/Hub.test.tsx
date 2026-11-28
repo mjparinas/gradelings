@@ -124,6 +124,27 @@ beforeEach(() => {
   window.location.hash = "";
 });
 
+describe("Hub Just 5 button", () => {
+  it("offers five questions to an older child who has not practised today, and starts them", () => {
+    show();
+    fireEvent.click(screen.getByRole("button", { name: /Just 5 questions/ }));
+    expect(window.location.hash).toBe("#/session?mode=adventure&scope=mix&quick=1");
+  });
+  it("is gone once the child has practised today, for little kids and when the flag is off", () => {
+    set({ streak: { current: 1, best: 1, activeToday: true, shields: 0, shieldsUsed: 0, saved: false } });
+    show();
+    expect(screen.queryByRole("button", { name: /Just 5 questions/ })).toBeNull();
+    cleanup();
+    set({});
+    show("little");
+    expect(screen.queryByRole("button", { name: /Just 5 questions/ })).toBeNull();
+    cleanup();
+    h.off = new Set(["quick-five"]);
+    show();
+    expect(screen.queryByRole("button", { name: /Just 5 questions/ })).toBeNull();
+  });
+});
+
 describe("Hub greeting", () => {
   it("welcomes a brand-new child by name and points at the big button", () => {
     show();

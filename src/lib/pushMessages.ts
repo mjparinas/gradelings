@@ -35,3 +35,18 @@ export function childMessage(waiting: number, unitTitle: string | undefined): Pu
   const body = waiting === 1 && unitTitle ? `Your teacher has ${unitTitle} waiting. Try it when you're ready!` : `Your teacher has ${waiting} things waiting. Try one when you're ready!`;
   return { title: "Homework is waiting", body, url: "/play/", tag: "homework", badge: waiting };
 }
+
+/** Streak lengths a parent hears about. Rare on purpose: a note on a day, never a drumbeat. */
+export const CHEER_STREAKS = [3, 7, 14, 30, 50, 100] as const;
+
+/** The streak to cheer for a child today: exactly a milestone, and practised today (so it is a "well done", never a "keep it up"). */
+export function cheerStreak(streak: { current: number; activeToday: boolean }): number | undefined {
+  return streak.activeToday && (CHEER_STREAKS as readonly number[]).includes(streak.current) ? streak.current : undefined;
+}
+
+/** One kind line to a parent about the child with the longest milestone streak today. */
+export function cheerMessage(cheers: readonly { name: string; days: number }[]): PushMessage | undefined {
+  const top = [...cheers].sort((a, b) => b.days - a.days)[0];
+  if (!top) return undefined;
+  return { title: `${top.name} is on a ${top.days}-day streak 🎉`, body: "A high-five or a kind word goes a long way.", url: "/parents/", tag: "cheer", badge: 0 };
+}

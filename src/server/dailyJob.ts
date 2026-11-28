@@ -30,7 +30,7 @@ import { goalName } from "@/lib/goalPlanText";
 import { canUse, TRIAL_NOTICE_DAYS, TRIAL_RECAP_DAYS_LEFT } from "@/lib/plan";
 import { getFamilyRow, toFamilyInfo } from "@/server/family";
 import { familiesWithPush, sendPush, subscriptionsOf } from "@/server/push";
-import { childMessage, daysBetween, homeworkWaiting, PUSH_GAP_DAYS, reminderMessage, weeklyMessage } from "@/lib/pushMessages";
+import { cheerMessage, cheerStreak, childMessage, daysBetween, homeworkWaiting, PUSH_GAP_DAYS, reminderMessage, weeklyMessage } from "@/lib/pushMessages";
 import { atHomeIdea, atHomeLine, factsWeekLine, storiesLine, storiesThisWeek } from "@/lib/weeklyExtras";
 import { derive } from "@/lib/derive";
 import { unitLevel } from "@/lib/proficiency";
@@ -415,9 +415,16 @@ async function pushNotifications(ctx: Ctx): Promise<boolean> {
       const names: string[] = [];
       const quiet: { name: string; daysQuiet: number }[] = [];
       const homework = new Map<string, { waiting: number; title?: string }>();
+      const cheerOn = subs.some((s) => s.kind === "parent") && (await isFlagOn("parent-cheer", familyId));
+      const cheers: { name: string; days: number }[] = [];
       const needsReports = subs.some((s) => s.kind === "parent") && (sunday || subs.some((s) => s.kind === "parent" && daysBetween(s.last_day, day) >= PUSH_GAP_DAYS.reminder));
       const classwork = subs.some((s) => s.kind === "child") ? await familyClasswork(familyId, now) : [];
       for (const id of await familyProfileIds(familyId)) {
+        if (cheerOn) {
+          const c = await loadChildData(familyId, id, 7, now);
+          const days = c && cheerStreak(c.derived.streak);
+          if (c && days) cheers.push({ name: c.profile.name, days });
+        }
         if (needsReports) {
           const r = await loadChildReport(familyId, id, 30, now);
           if (r) {
@@ -436,14 +443,19 @@ async function pushNotifications(ctx: Ctx): Promise<boolean> {
       }
       for (const sub of subs) {
         let message;
+        let markDay = true;
         if (sub.kind === "parent") {
           if (sunday && daysBetween(sub.last_day, day) >= PUSH_GAP_DAYS.weekly && names.length) message = weeklyMessage(names);
           else if (!sunday && quiet.length && daysBetween(sub.last_day, day) >= PUSH_GAP_DAYS.reminder) message = reminderMessage(quiet);
+          if (!message && cheers.length) {
+            message = cheerMessage(cheers);
+            markDay = false;
+          }
         } else if (sub.profile_id && daysBetween(sub.last_day, day) >= PUSH_GAP_DAYS.child) {
           const h = homework.get(sub.profile_id);
           if (h) message = childMessage(h.waiting, h.title);
         }
-        if (message && (await sendPush(sub, message, day)) === "sent") result.pushes++;
+        if (message && (await sendPush(sub, message, day, { markDay })) === "sent") result.pushes++;
       }
     } catch (e) {
       console.error("[push] failed for one family", (e as Error).message);

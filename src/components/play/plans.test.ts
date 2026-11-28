@@ -121,6 +121,14 @@ describe("makePlan", () => {
     }
   });
 
+  it("makes Just 5 an Adventure that ends after five questions, with no checkpoint", () => {
+    const quick = makePlan(input({ mode: "adventure", quick: true }))!;
+    expect(quick).toMatchObject({ mode: "adventure", title: "Just 5", total: 5, retries: true });
+    expect(quick.checkpoint).toBeUndefined();
+    expect(makePlan(input({ mode: "adventure" }))).toMatchObject({ title: "Adventure", checkpoint: 10 });
+    expect(makePlan(input({ mode: "review", quick: true }))?.title).toBe("Review");
+  });
+
   it("gives everyone the same Daily Challenge for a day, then a new one the next day", () => {
     const now = vi.spyOn(Date, "now").mockReturnValue(new Date(2026, 9, 10, 12).getTime());
     const first = makePlan(input({ mode: "daily" }))!;

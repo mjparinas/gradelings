@@ -114,7 +114,7 @@ interface Result {
   correct: boolean;
 }
 
-export function Session({ mode, scope, skill, resume = false }: { mode: Mode; scope: string; skill?: string; resume?: boolean }) {
+export function Session({ mode, scope, skill, resume = false, quick = false }: { mode: Mode; scope: string; skill?: string; resume?: boolean; quick?: boolean }) {
   const profile = useActiveProfile()!;
   const settings = useChildSettings();
   const band = useBand();
@@ -124,6 +124,7 @@ export function Session({ mode, scope, skill, resume = false }: { mode: Mode; sc
   const subjectGrades = useSubjectGrades();
   const resumeOn = useFlag("resume-lesson");
   const goalsOn = useFlag("goal-plans");
+  const quickOn = useFlag("quick-five");
   const family = useStore((s) => s.family);
   const [plan] = useState<Plan | null>(() =>
     makePlan({
@@ -139,6 +140,7 @@ export function Session({ mode, scope, skill, resume = false }: { mode: Mode; sc
       derived: derivedNow,
       allowed,
       short: settings?.shortSessions,
+      quick: quick && quickOn,
       readingLevel: matchReading ? estimateReadingLevel(derivedNow.reading ?? [], profile.grade) : undefined,
       focus: activeFocus(settings, Date.now())?.unit,
       goalUnits: goalsOn && settings?.goalPlan && family && canUse(family, "goalPlan") ? goalBoostUnits(settings?.goalPlan, (k) => unitLevel(derivedNow.units[k]), Date.now()) : undefined,
@@ -909,7 +911,7 @@ function Summary({ plan, results, startDerived }: { plan: Plan; results: Result[
         )}
 
         <div className="mt-2 flex w-full flex-col gap-3 sm:flex-row">
-          <button type="button" className="btn btn-soft min-h-16 flex-1 text-xl" onClick={() => go("/session", { mode: plan.mode, scope: plan.scope, ...(plan.skill ? { skill: plan.skill } : {}), r: Date.now() }, true)}>
+          <button type="button" className="btn btn-soft min-h-16 flex-1 text-xl" onClick={() => go("/session", { mode: plan.mode, scope: plan.scope, ...(plan.skill ? { skill: plan.skill } : {}), ...(plan.title === "Just 5" ? { quick: "1" } : {}), r: Date.now() }, true)}>
             ↻ Play again
           </button>
           <button type="button" className="btn btn-good min-h-16 flex-1 text-xl" onClick={() => go(unit ? `/practice/${unit.course.subject}` : factSet ? "/facts" : "/")}>
