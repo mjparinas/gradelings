@@ -24,6 +24,22 @@ export const NEWS_KIND_LABEL: Record<NewsItem["kind"], string> = {
 
 export const WHATS_NEW: NewsDay[] = [
   {
+    day: "2026-11-27",
+    headline: "A kinder message when syncing hits a snag",
+    items: [
+      {
+        kind: "fixed",
+        title: "Clearer help when progress can't sync",
+        body: "If syncing ever stalls, Gradelings now explains what happened in plain words instead of an error. Your child's progress is safe on the device, and the message says what to try, such as freeing up some space or leaving a private browsing window.",
+      },
+      {
+        kind: "fixed",
+        title: "Fewer unexpected stops",
+        body: "We made the app steadier when something goes wrong behind the scenes, so a hiccup shows a friendly screen with a way to try again rather than stopping.",
+      },
+    ],
+  },
+  {
     day: "2026-11-26",
     headline: "Gradelings emails look better everywhere",
     items: [
